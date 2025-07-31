@@ -24,3 +24,6 @@ Fachwissenschaftler\:innen validieren und kuratieren die importierten Einträge 
 * Ergänzung/Korrektur bibliografischer Angaben
 * Strukturierung, Verschlagwortung und finale Auswahl
 
+![][image1]
+
+[image1]: deep_research_workflow_diagram.png
