@@ -1,0 +1,74 @@
+TY  - JOUR
+AU  - Shah, S. S.
+PY  - 2025
+TI  - Gender bias in artificial intelligence: Empowering women through digital literacy
+JO  - Premier Journal of Artificial Intelligence
+DO  - 10.70389/PJAI.1000088
+UR  - https://premierscience.com/pjai-24-524/
+AB  - This narrative review examines how systemic gender biases are embedded in AI systems across domains (e.g. hiring, healthcare, finance) and explores digital literacy as a tool to combat these biases. Key findings indicate that biases arise from underrepresentation of women in AI development, biased training data, and algorithmic design choices. Digital literacy programs for women are highlighted as a promising intervention that raises critical awareness of AI bias, encourages women's participation in AI careers, and fosters women-led AI projects.
+N1  - Quality: Medium. Published in a new peer-reviewed journal with external peer review. The Premier Journal of Artificial Intelligence is relatively new (volume 1), so impact and reputation are not yet established. Methodology is a narrative literature review with systematic search and thematic analysis. Comprehensive with 91 references but very recent publication with no citation record yet.
+ER  -
+```
+
+TY  - JOUR
+AU  - Fraile-Rojas, B.
+AU  - De-Pablos-Heredero, C.
+AU  - Méndez-Suárez, M.
+PY  - 2025
+TI  - Female perspectives on algorithmic bias: Implications for AI researchers and practitioners
+JO  - Management Decision
+DO  - 10.1108/MD-04-2024-0884
+UR  - https://colab.ws/articles/10.1108%2Fmd-04-2024-0884
+AB  - This study uses NLP and machine learning to analyze 172,041 tweets from female users discussing gender inequality in AI. It identifies prominent themes including the future of AI technologies and women's active role in ensuring gender-balanced systems. Findings show that algorithmic bias directly affects women's experiences, prompting engagement in online discourse about injustices. Women lead constructive conversations and create entrepreneurial solutions when faced with bias, demonstrating how feminist digital literacies can make AI biases visible and push for their reduction.
+N1  - Quality: High. Published in Management Decision, a well-established peer-reviewed journal (Scopus Q1; Impact Factor ~5.1). Robust methodology combining social media mining, sentiment analysis, and clustering with large dataset. Strong reputation and comprehensive reference list (91 sources) indicate thorough scholarship.
+ER  -
+
+TY  - JOUR
+AU  - Jääskeläinen, P.
+AU  - Sharma, N. K.
+AU  - Pallett, H.
+AU  - Åsberg, C.
+PY  - 2025
+TI  - Intersectional analysis of visual generative AI: The case of Stable Diffusion
+JO  - AI & Society
+DO  - 10.1007/s00146-025-02207-y
+UR  - https://link.springer.com/article/10.1007/s00146-025-02207-y
+AB  - This open-access paper provides a feminist intersectional critique of Stable Diffusion through qualitative visual analysis of 180 AI-generated images. Authors examined how power systems like racism, sexism, heteronormativity, ableism, colonialism, and capitalism are reflected in AI outputs. Found that default outputs frequently perpetuate harmful stereotypes and assume a "white, able-bodied, masculine-presenting" default subject position. Advocates for social justice-oriented approach to AI by acknowledging cultural-aesthetic biases and engaging in reparative strategies.
+N1  - Quality: High. Published in AI & Society, a reputable peer-reviewed Springer journal (Scopus Q2) with established editorial standards. Rigorous qualitative analysis methodology appropriate for uncovering cultural biases. Well-theorized and supported by references to technical and feminist literature. Open access availability enhances reach.
+ER  -
+
+TY  - CONF
+AU  - Skilton, R.
+AU  - Cardinal, A.
+PY  - 2024
+TI  - Inclusive prompt engineering: A methodology for hacking biased AI image generation
+JO  - Proceedings of the 42nd ACM International Conference on Design of Communication (SIGDOC '24)
+DO  - 10.1145/3641237.3691655
+UR  - https://www.researchgate.net/publication/385325948_Inclusive_Prompt_Engineering_A_Methodology_for_Hacking_Biased_AI_Image_Generation
+AB  - This conference paper introduces "inclusive prompt engineering" as a strategy to probe and mitigate biases in generative AI image systems. Authors developed methodology to systematically modify prompts and provide tools for generating more diverse outputs. User studies revealed that when participants encountered stereotypical outputs, they tried adding negative qualifiers but models often failed to obey these negations. Findings underscore need for improved prompt interfaces that actively promote inclusive representation.
+N1  - Quality: Medium. Peer-reviewed ACM conference paper with innovative approach. Conference proceedings ensure baseline scholarly quality with rigorous vetting. Paper has attracted several citations (7 by early 2025) suggesting influence on subsequent research. Limited by short format (5 pages) but methodologically sound for exploring prompt bias.
+ER  -
+
+TY  - CONF
+AU  - Djeffal, C.
+PY  - 2025
+TI  - Reflexive prompt engineering: A framework for responsible prompt engineering and AI interaction design
+JO  - Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency (FAccT '25)
+DO  - 10.1145/3715275.3732118
+AB  - This paper proposes "Reflexive Prompt Engineering" as a comprehensive framework to embed ethical and inclusive principles into prompt crafting for generative AI. Framework consists of five components: prompt design, system selection, system configuration, performance evaluation, and prompt management, each considered from social responsibility perspective. Positions responsible prompt engineering as essential component of AI literacy, bridging gap between AI development and deployment by aligning AI behavior with human rights and diversity values.
+N1  - Quality: High. Peer-reviewed and accepted at ACM FAccT 2025, premier international conference on AI fairness and accountability with rigorous selection process and strong reputation (CORE A rank). Synthesizes interdisciplinary insights from computer science, ethics, and law. High-quality writing and directly relevant to bias mitigation via prompt literacy.
+ER  -
+
+TY  - RPRT
+AU  - Shin, P. W.
+AU  - Ahn, J. J.
+AU  - Yin, W.
+AU  - Sampson, J.
+AU  - Narayanan, V.
+PY  - 2024
+TI  - Can prompt modifiers control bias? A comparative analysis of text-to-image generative models
+JO  - arXiv preprint
+UR  - https://arxiv.org/abs/2406.05602
+AB  - This preprint investigates whether explicit prompt modifiers can reduce societal biases in text-to-image generative AI models. Authors evaluated three models (Stable Diffusion, DALL·E 3, Adobe Firefly) comparing baseline versus bias-mitigating prompts. Analysis revealed notable biases across all models, with inconsistent effectiveness of prompt modifiers. While diversity-reflective prompting can expose hidden biases and sometimes nudge outputs towards inclusivity, it is not a comprehensive fix and must be combined with broader ethical AI development efforts.
+N1  - Quality: Medium. arXiv preprint not yet peer-reviewed, introducing uncertainty about rigor. Nevertheless, methodologically sound comparative experiment with multiple models and bias evaluations, supported by NSF grant. Authors from reputable institution (Penn State) with detailed manuscript. High text quality but lacks formal validation through peer review.
+ER  -
