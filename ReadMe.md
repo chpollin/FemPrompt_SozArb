@@ -75,4 +75,4 @@ Fachwissenschaftler validieren und kuratieren die importierten Einträge manuell
 
 ## Workflow-Diagramm
 
-![Deep Research Workflow](image-url-placeholder)
+![Deep Research Workflow](deep_research_workflow_diagram.png)
