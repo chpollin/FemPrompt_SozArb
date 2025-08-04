@@ -125,7 +125,7 @@ def process_corpus():
             text_or_documents=documents,
             prompt_description=prompt,
             examples=examples,
-            model_id="gemini-1.5-flash",
+            model_id="gemini-2.5-flash",
             max_workers=10, # Process up to 10 documents concurrently.
             api_key=api_key
         )
