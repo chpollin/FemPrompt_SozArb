@@ -66,7 +66,7 @@ This final phase transitions from literature collection to substantive analysis 
   * **Important:** Before running, you must set your API key as an environment variable. Open your terminal and use the appropriate command:
     * **macOS/Linux:** `export GEMINI_API_KEY="YOUR_API_KEY_HERE"`
     * **Windows (PowerShell):** `$env:GEMINI_API_KEY="YOUR_API_KEY_HERE"`
-* **Thematic Extraction:** The script uses an AI model (Gemini 1.5 Flash) to read every paper and extract predefined concepts, such as `bias_type`, `mitigation_strategy`, and `key_finding`.
+* **Thematic Extraction:** The script uses an AI model (Gemini 2.5 Flash) to read every paper and extract predefined concepts, such as `bias_type`, `mitigation_strategy`, and `key_finding`.
 * **Final Outputs:** The script generates two powerful research artifacts:
   1. **`corpus_analysis.jsonl`**: A machine-readable dataset containing all extracted thematic data, perfect for quantitative analysis and data mining.
   2. **`corpus_analysis_visualization.html`**: An interactive HTML file that displays each paper's full text with the extracted terms highlighted, allowing for rapid qualitative review and validation.

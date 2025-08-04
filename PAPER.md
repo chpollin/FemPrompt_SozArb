@@ -1,205 +1,181 @@
-# Systematic Literature Review Workflow: AI-Assisted Research Methodology
+# AI-Assisted Systematic Literature Review: From Discovery to Analysis
 
-## Abstract
+## Overview
 
-This document describes a comprehensive, technology-enhanced methodology for conducting systematic literature reviews in the field of artificial intelligence research. The workflow integrates multiple AI systems, automated bibliographic processing, and content extraction techniques to enable large-scale academic research with enhanced reproducibility and efficiency.
+This is a VIBE CODING / VIBE RESEARCH EXPERIMENT for conducting systematic literature reviews on AI bias and intersectionality. The workflow uses multiple AI models for literature discovery and provides custom scripts for automated PDF acquisition and content analysis.
 
-## 1. Methodology Overview
+**Research Question**: How can feminist Digital/AI Literacies and diversity-reflective prompting help to expose and mitigate bias and intersectional discrimination in AI technologies?
 
-### 1.1 Workflow Architecture
+## Workflow
 
-The methodology consists of five sequential phases, each designed to maximize research coverage while maintaining scholarly rigor:
+### Step 1: Multi-Model Literature Discovery
 
-1. **Multi-Agent Literature Discovery**
-2. **Bibliographic Standardization and Export**
-3. **Reference Management and Expert Validation**
-4. **Automated Document Acquisition**
-5. **Content Extraction and Analysis Preparation**
-
-### 1.2 Research Design Principles
-
-- **Methodological Triangulation**: Multiple AI systems provide independent literature searches to reduce single-source bias
-- **Standardization**: Consistent bibliographic formats ensure interoperability across research tools
-- **Quality Assurance**: Human expert validation maintains scholarly standards
-- **Reproducibility**: Systematic documentation and version control enable replication
-- **Scalability**: Automated processes handle large document corpora efficiently
-
-## 2. Phase 1: Multi-Agent Literature Discovery
-
-### 2.1 Parametric Search Strategy
-
-A standardized prompt template is deployed across multiple AI platforms to ensure consistency while leveraging diverse knowledge bases:
-
-**Core Parameters:**
-- **Role Definition**: Expert specification (e.g., "systematic literature analysis specialist")
-- **Research Objective**: Clear articulation of literature review goals
-- **Contextual Constraints**: Temporal boundaries, geographic scope, methodological focus
-- **Output Requirements**: Standardized citation format, quality assessment criteria
-
-**Example Template Structure:**
-```
-CONTEXT: [Research Question]
-ROLE: Expert in systematic scientific literature analysis
-TASK: Identify relevant academic literature on [Topic] from [Timeframe]
-OUTPUT FORMAT: APA citation, summary (max 150 words), quality assessment
-QUALITY CRITERIA: Peer review status, journal reputation, methodological rigor
-```
-
-### 2.2 Multi-Platform Execution
-
-The standardized prompt is executed simultaneously across four AI platforms:
+Deploy standardized prompt across 4 AI platforms:
 - **Gemini** (Google)
-- **Claude** (Anthropic)  
+- **Claude** (Anthropic)
 - **ChatGPT** (OpenAI)
 - **Perplexity** (Perplexity AI)
 
-**Rationale**: Each platform accesses different training datasets and employs distinct retrieval mechanisms, maximizing literature coverage and reducing platform-specific biases.
+**Prompt Template**:
+```
+CONTEXT: [Research Question]
 
-## 3. Phase 2: Bibliographic Standardization
+You are an expert in systematic scientific literature analysis. Your task is to conduct comprehensive research on the topic above for the period 2023-2025, focusing on peer-reviewed sources.
 
-### 3.1 RIS Format Conversion
-
-All AI-generated bibliographic outputs are systematically converted to Research Information Systems (RIS) format using a specialized transformation protocol:
-
-**RIS Field Mapping:**
-- `TY`: Document type classification
-- `AU`: Author name standardization
-- `PY`: Publication year validation
-- `TI`: Title normalization
-- `JO`: Journal/venue identification
-- `AB`: Abstract content (AI-generated summaries)
-- `N1`: Quality assessment annotations
-
-### 3.2 Quality Preservation
-
-AI-generated content quality assessments and summaries are preserved in dedicated RIS fields (`AB` for abstracts, `N1` for quality notes), maintaining the analytical value of the initial AI processing while enabling subsequent human validation.
-
-## 4. Phase 3: Reference Management and Expert Validation
-
-### 4.1 Zotero Integration
-
-RIS files are imported into Zotero reference management system using native import functionality:
-- Platform-specific collections maintain source attribution
-- Automatic duplicate detection algorithms identify overlapping sources
-- Manual expert review processes validate AI-generated assessments
-
-### 4.2 Expert-in-the-Loop Validation
-
-Human domain experts perform systematic quality control:
-- **Relevance Assessment**: Verification of topical alignment
-- **Quality Validation**: Confirmation of impact and methodological rigor  
-- **Bias Detection**: Identification of systematic omissions or overrepresentation
-- **Metadata Correction**: Standardization of bibliographic information
-- **Final Curation**: Selection of sources for detailed analysis
-
-## 5. Phase 4: Automated Document Acquisition
-
-### 5.1 Multi-Strategy PDF Retrieval
-
-The `getPDF.py` system employs multiple acquisition strategies with automatic fallback mechanisms:
-
-**Primary Strategies:**
-- **Direct URL Analysis**: PDF endpoint detection and validation
-- **Repository Pattern Matching**: ArXiv, PubMed, institutional repository protocols
-- **API Integration**: Semantic Scholar, CrossRef metadata services
-- **HTML Parsing**: Citation metadata extraction from publisher websites
-
-**Quality Assurance:**
-- File integrity validation (PDF magic number verification)
-- Size constraints (minimum/maximum file size filtering)
-- Content verification (header analysis, metadata extraction)
-
-### 5.2 Error Handling and Documentation
-
-- Systematic logging of acquisition attempts and outcomes
-- Failed retrieval tracking for manual processing
-- Statistical reporting of success rates by strategy and source type
-
-## 6. Phase 5: Content Extraction and Analysis Preparation
-
-### 6.1 Document Processing Pipeline
-
-The `pdf-to-md-converter.py` system performs systematic content extraction:
-
-**Processing Protocol:**
-- **Input Validation**: PDF integrity and accessibility verification
-- **Content Extraction**: Docling-based document understanding and parsing
-- **Structure Preservation**: Maintenance of document hierarchy, tables, and formatting
-- **Output Standardization**: Markdown format with embedded metadata
-
-### 6.2 Incremental Processing
-
-- **Change Detection**: MD5 hash comparison for updated documents
-- **Metadata Tracking**: Conversion timestamps and version control
-- **Error Documentation**: Failed conversion logging and analysis
-
-### 6.3 Output Specifications
-
-**Markdown Structure:**
-```markdown
----
-source_file: [original_filename]
-conversion_date: [ISO_8601_timestamp]
----
-
-[Structured document content with preserved formatting]
+For each relevant source, you must:
+1. Cite: Provide a complete APA-formatted citation, including a URL
+2. Summarize: Write a concise summary (max 150 words) of key messages
+3. Evaluate: Assess quality (high/medium/low) with justification
 ```
 
-## 7. Workflow Outputs and Applications
+### Step 2: Convert to RIS Format
 
-### 7.1 Research Assets Generated
+Convert all AI outputs to RIS format, preserving AI-generated summaries in `AB` field and quality assessments in `N1` field:
 
-1. **Curated Bibliography**: Expert-validated reference collection in Zotero
-2. **Document Corpus**: Complete PDF collection with acquisition metadata
-3. **Structured Content**: Searchable markdown representations of full texts
-4. **Processing Documentation**: Comprehensive logs and quality metrics
+```ris
+TY  - JOUR
+AU  - Author, Name
+PY  - 2024
+TI  - Title
+JO  - Journal
+UR  - https://url
+AB  - [AI-generated summary]
+N1  - Quality: High - [AI assessment]
+ER  -
+```
 
-### 7.2 Analytical Capabilities Enabled
+### Step 3: Import to Zotero
 
-- **Full-Text Search**: Cross-document content queries and analysis
-- **Computational Analysis**: Text mining and natural language processing applications
-- **Systematic Synthesis**: Evidence aggregation and meta-analysis preparation
-- **Reproducible Research**: Complete audit trail and replication documentation
+- Import RIS files into Zotero
+- Create separate collections per AI model
+- Expert validates relevance and quality
+- De-duplicate entries
+- Curate final bibliography
 
-## 8. Quality Assurance and Limitations
+### Step 4: Automated PDF Acquisition
 
-### 8.1 Validation Mechanisms
+**Script**: `getPDF.py`
 
-- **Inter-Platform Reliability**: Comparison of results across AI systems
-- **Expert Validation**: Human oversight at critical decision points
-- **Technical Verification**: Automated quality checks and error detection
-- **Documentation Standards**: Comprehensive process logging and reporting
+**Features**:
+- Multi-strategy PDF acquisition (8 strategies)
+- Concurrent downloads (max_workers=3)
+- Automatic retry with backoff
+- PDF validation (header check, size limits)
+- Detailed logging
+- Unit tests included
 
-### 8.2 Acknowledged Limitations
+**Strategies**:
+1. Direct PDF URL detection
+2. ArXiv pattern matching
+3. Semantic Scholar API
+4. CrossRef API
+5. Sage Journals specific
+6. ACM Digital Library specific
+7. BASE Academic Search
+8. HTML meta tag parsing
 
-- **AI Platform Dependencies**: Reliance on external AI service availability and quality
-- **Access Restrictions**: Limited availability of full-text documents in some domains
-- **Processing Errors**: Potential document conversion failures requiring manual intervention
-- **Temporal Constraints**: Currency limitations based on AI training data cutoffs
+**Configuration**:
+```python
+@dataclass
+class Config:
+    max_workers: int = 3
+    timeout: int = 15
+    retry_attempts: int = 2
+    delay_between_requests: float = 0.5
+    min_pdf_size: int = 1024
+    max_pdf_size: int = 50 * 1024 * 1024  # 50MB
+```
 
-## 9. Reproducibility and Extensibility
+### Step 5: Content Extraction
 
-### 9.1 Methodological Replicability
+**Script**: `pdf-to-md-converter.py` (using Docling)
+- Converts PDFs to Markdown
+- Preserves structure and formatting
+- Tracks conversion metadata
+- Incremental processing (hash-based)
 
-- **Standardized Protocols**: Documented procedures enable independent replication
-- **Version Control**: Software versioning and dependency management
-- **Parameter Documentation**: Complete specification of search terms and quality criteria
+### Step 6: Corpus Analysis
 
-### 9.2 Adaptability
+**Script**: `md-to-process-corpus.py` (using LangExtract)
 
-The workflow framework is designed for adaptation to different research domains through:
-- **Parameterizable Search Strategies**: Customizable prompt templates and criteria
-- **Modular Architecture**: Independent phases enabling selective implementation
-- **Scalable Processing**: Configurable batch sizes and processing parameters
+**Configuration**:
+```bash
+export GEMINI_API_KEY="YOUR_API_KEY_HERE"
+```
 
-## 10. Conclusion
+**Extraction Schema**:
+```python
+- ai_technology: Specific AI system discussed
+- bias_type: Form of bias identified  
+- mitigation_strategy: Proposed solutions
+- key_finding: Direct quote summarizing results
+```
 
-This methodology represents a systematic approach to technology-enhanced literature review that maintains scholarly rigor while leveraging automation for efficiency and scale. The integration of multiple AI platforms, standardized processing protocols, and expert validation creates a robust framework for comprehensive academic research in rapidly evolving fields such as artificial intelligence ethics and bias mitigation.
+**Model**: `gemini-2.5-flash`
 
----
+**Outputs**:
+- `corpus_analysis.jsonl`: Machine-readable extracted data
+- `corpus_analysis_visualization.html`: Interactive visualization with highlights
 
-**Keywords**: systematic literature review, artificial intelligence, research methodology, bibliographic management, automated content extraction, expert validation
+## Current Corpus
 
-**Software Dependencies**: Python 3.8+, Zotero, Docling, multiple AI platform APIs
+**28 research papers** including:
+- Intersectional analysis of Stable Diffusion
+- PreciseDebias automatic prompting
+- Feminist AI frameworks
+- Gender bias in LLMs
+- Data feminism approaches
+- UNESCO bias investigations
 
-**Recommended Citation**: [Author]. ([Year]). Systematic Literature Review Workflow: AI-Assisted Research Methodology. [Institution/Publisher].
+**Key Sources**:
+- UN Women reports on AI and gender equality
+- A+ Alliance Feminist AI Research Network ($2M CAD project)
+- Friedrich-Ebert-Stiftung analysis papers
+- ACL, FAccT, AAAI conference proceedings
+
+## Technical Details
+
+### Dependencies
+- Python 3.8+
+- requests, beautifulsoup4
+- langextract (for corpus analysis)
+- Docling (for PDF conversion)
+- Zotero (reference management)
+
+### Known Issues
+1. **Model Version**: README incorrectly references "gemini-2.5-flash" - use "gemini-1.5-flash"
+2. **Script Names**: README mentions "corpus_analysis_final_script.py" - actual is "md-to-process-corpus.py"
+3. **JSON Parsing**: Hardened prompts needed to ensure valid JSON from AI
+4. **Browser Storage**: Artifacts cannot use localStorage/sessionStorage
+
+### API Integration
+The environment includes extensive Canva API functionality for:
+- Design search and retrieval
+- Content extraction from Canva documents
+- Export to various formats
+- Folder management
+- Comment/collaboration features
+- AI design generation
+
+## Limitations
+
+1. **API Dependencies**: Requires active API keys and internet connection
+2. **Language**: English-only sources
+3. **Access**: Paywalled articles require manual download
+4. **AI Knowledge Cutoffs**: Training data limitations affect recent publications
+5. **Processing Errors**: Some PDFs fail conversion, some AI responses need retry
+
+## Files Structure
+
+```
+├── analysis/
+│   ├── getPDF.py                    # PDF acquisition script
+│   ├── pdf-to-md-converter.py       # Docling conversion
+│   ├── md-to-process-corpus.py      # LangExtract analysis
+│   ├── conversion_metadata.json     # Tracking conversions
+│   ├── zotero_vereinfacht.json      # Simplified bibliography
+│   └── corpus_analysis.jsonl        # Extracted data
+├── markdown_papers/                 # Converted papers
+├── all_pdf/                        # Downloaded PDFs
+└── to-Zotero/                      # RIS import files
+```
