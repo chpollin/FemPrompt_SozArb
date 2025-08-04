@@ -1,17 +1,16 @@
 """
-Finales, verbessertes Python-Skript zur dynamischen, strukturierten Informationsextraktion.
+Finales, produktives Python-Skript zur dynamischen, strukturierten Informationsextraktion.
 
-Dieses Skript implementiert den "Best of Both Worlds"-Ansatz:
-1. Es erzeugt eine vollständige JSONL-Datei und eine interaktive HTML-Visualisierung.
-2. Es erzeugt eine zweite, vereinfachte und flache JSONL-Datei für die einfache Datenanalyse.
-3. Es behält alle robusten und dynamischen Merkmale der vorherigen Versionen bei.
+Version 3.0: Beinhaltet die korrekte Methode zur Übergabe von Modell-Parametern
+(language_model_type) an die extract-Funktion.
 """
 import langextract as lx
+from langextract.inference import GeminiLanguageModel
 from pathlib import Path
 import os
 import logging
 import json
-import time
+import re
 
 # --- Schritt 1: Konfiguration des Loggings ---
 logging.basicConfig(
@@ -21,6 +20,20 @@ logging.basicConfig(
 )
 
 
+def preprocess_markdown(text: str) -> str:
+    """Bereinigt den Markdown-Text, um Rauschen für das LLM zu entfernen."""
+    logging.info(f"Starte Vorverarbeitung für Textausschnitt: {text[:70].strip()}...")
+    parts = text.split('---', 2)
+    if len(parts) > 2: text = parts[2]
+    text = re.sub(r'', '', text)
+    lines = text.splitlines()
+    disclaimer_phrases = ["Funded by the European Union.", "Neither the European Union nor EACEA can be held responsible for them."]
+    lines = [line for line in lines if not any(phrase in line for phrase in disclaimer_phrases)]
+    cleaned_text = "\n".join(lines)
+    logging.info("Vorverarbeitung abgeschlossen.")
+    return cleaned_text
+
+
 def load_extraction_schema(schema_path: Path) -> dict | None:
     """Lädt das Extraktionsschema sicher aus einer JSON-Datei."""
     if not schema_path.exists():
@@ -28,9 +41,7 @@ def load_extraction_schema(schema_path: Path) -> dict | None:
         return None
     try:
         with open(schema_path, 'r', encoding='utf-8') as f:
-            schema = json.load(f)
-        logging.info(f"Extraktionsschema erfolgreich aus '{schema_path}' geladen.")
-        return schema
+            return json.load(f)
     except Exception as e:
         logging.error(f"FATAL: Konnte Schema-Datei nicht lesen. Fehler: {e}")
         return None
@@ -43,19 +54,16 @@ def generate_prompt_from_schema(schema: dict) -> str:
     return "\n".join([prompt_intro] + category_descriptions)
 
 
-def run_dual_analysis():
+def run_analysis_pipeline():
     """Führt den gesamten Extraktions-Workflow aus und speichert die Ergebnisse in zwei Formaten."""
-    # --- Konfiguration ---
     schema_file = Path("schema.json")
     markdown_dir = Path("markdown_papers")
     output_dir = Path("analysis_results")
     
-    # Dateinamen für die beiden Ausgabeformate
     full_output_filename = "full_results.jsonl"
     simple_output_filename = "simplified_data.jsonl"
     html_output_filename = "corpus_analysis_visualization.html"
 
-    # Vollständige Pfade
     full_output_path = output_dir / full_output_filename
     simple_output_path = output_dir / simple_output_filename
     html_output_path = output_dir / html_output_filename
@@ -67,35 +75,58 @@ def run_dual_analysis():
         logging.error("FATAL: Umgebungsvariable GEMINI_API_KEY nicht gesetzt.")
         return
 
-    # --- Schritte 2-5: Laden, Vorbereiten und Extrahieren (unverändert) ---
     schema = load_extraction_schema(schema_file)
     if not schema: return
     prompt = generate_prompt_from_schema(schema)
     
-    markdown_file_paths = list(markdown_dir.glob("*.md"))[:2]
+    markdown_file_paths = list(markdown_dir.glob("*.md"))
     if not markdown_file_paths:
         logging.error(f"Keine Markdown-Dateien in '{markdown_dir}' gefunden.")
         return
+        
+    documents = []
+    for file_path in markdown_file_paths:
+        try:
+            raw_content = file_path.read_text(encoding='utf-8')
+            cleaned_content = preprocess_markdown(raw_content)
+            doc = lx.data.Document(document_id=file_path.name, text=cleaned_content)
+            documents.append(doc)
+        except Exception as e:
+            logging.error(f"Lesen/Vorverarbeiten von {file_path.name} fehlgeschlagen: {e}")
 
-    documents = [doc for file_path in markdown_file_paths if (doc := lx.data.Document(document_id=file_path.name, text=file_path.read_text(encoding='utf-8')))]
     if not documents:
         logging.error("Keine Dokumente konnten gelesen werden.")
         return
 
     logging.info(f"{len(documents)} Dokumente werden verarbeitet...")
-    
-    examples = [lx.data.ExampleData(text="Text", extractions=[lx.data.Extraction(extraction_class="class", extraction_text="text")])]
-    
     successful_results = []
     for document in documents:
-        # Hier würde die Wiederholungslogik aus den vorherigen Skripten stehen
         try:
-            result = next(lx.extract(text_or_documents=[document], prompt_description=prompt, examples=examples, model_id="gemini-1.5-flash", api_key=api_key))
-            if hasattr(result, 'error') and result.error: raise RuntimeError(f"Bibliotheksfehler: {result.error}")
+            logging.info(f"Verarbeite Dokument: {document.document_id}...")
+            
+            # *** FINALE, KORREKTE API-AUFRUF-STRUKTUR ***
+            result = next(lx.extract(
+                text_or_documents=[document],
+                prompt_description=prompt,
+                # 1. Spezifiziere den TYP des Modells
+                language_model_type=GeminiLanguageModel,
+                # 2. Übergib alle Konfigurations-Argumente direkt
+                model_id="gemini-1.5-pro",
+                api_key=api_key,
+                safety_settings={
+                    'HARM_CATEGORY_HARASSMENT': 'BLOCK_NONE',
+                    'HARM_CATEGORY_HATE_SPEECH': 'BLOCK_NONE',
+                    'HARM_CATEGORY_SEXUALLY_EXPLICIT': 'BLOCK_NONE',
+                    'HARM_CATEGORY_DANGEROUS_CONTENT': 'BLOCK_NONE',
+                }
+            ))
+
+            if hasattr(result, 'error') and result.error:
+                raise RuntimeError(f"Bibliotheksfehler: {result.error}")
             successful_results.append(result)
             logging.info(f"--> Dokument erfolgreich verarbeitet: {document.document_id}")
         except Exception as e:
-            logging.error(f"Verarbeitung von '{document.document_id}' fehlgeschlagen. Fehler: {e}")
+            logging.error(f"Verarbeitung von '{document.document_id}' fehlgeschlagen. Dokument wird übersprungen. Fehler: {e}")
             
     logging.info("✅ Extraktionsprozess abgeschlossen.")
 
@@ -103,22 +134,18 @@ def run_dual_analysis():
         logging.warning("Keine Ergebnisse zum Speichern vorhanden. Beende.")
         return
 
-    # --- Schritt 6: Ergebnisse in ZWEI Formaten speichern ---
-
-    # 1. Speichere das vollständige Originalformat für die Visualisierung
+    # --- Speichern der Ergebnisse (unverändert) ---
+    # 1. Vollständiges Format für die Visualisierung
     logging.info(f"Speichere vollständige Ergebnisse für die Visualisierung in '{full_output_path}'...")
     try:
         lx.io.save_annotated_documents(annotated_documents=successful_results, output_name=full_output_filename, output_dir=output_dir)
-        logging.info("Vollständige Ergebnisse erfolgreich gespeichert.")
-        
-        # Erzeuge die Visualisierung aus der vollständigen Datei
         html_content = lx.visualize(full_output_path)
         with open(html_output_path, "w", encoding="utf-8") as f: f.write(html_content)
         logging.info(f"Interaktive Visualisierung gespeichert unter '{html_output_path}'")
     except Exception as e:
         logging.error(f"Speichern/Visualisieren der vollständigen Ergebnisse fehlgeschlagen. Fehler: {e}")
 
-    # 2. Speichere das vereinfachte, flache Format für die Datenanalyse
+    # 2. Vereinfachtes Format für die Datenanalyse
     logging.info(f"Speichere Extraktionen im vereinfachten Format in '{simple_output_path}'...")
     try:
         with open(simple_output_path, 'w', encoding='utf-8') as f:
@@ -140,4 +167,4 @@ def run_dual_analysis():
 
 
 if __name__ == "__main__":
-    run_dual_analysis()
+    run_analysis_pipeline()
