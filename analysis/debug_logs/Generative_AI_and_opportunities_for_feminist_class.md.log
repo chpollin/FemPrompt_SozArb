@@ -1,0 +1,24 @@
+# Deterministischer Risiko-Bericht für: Generative_AI_and_opportunities_for_feminist_class.md
+# Analyse-Datum: 2025-08-04T22:54:43.765940
+---
+file_stats:
+  characters: 14324
+  words: 1999
+  lines: 140
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 14325
+  table_lines: 0
+
+content_sensitivity:
+  total_triggers: 3
+  trigger_details:
+    bias: 2
+    inequality: 1
+
+risk_assessment:
+  risk_level: NIEDRIG
+  risk_score: 1
+  risk_factors: ['viele HTML-Kommentare']
+

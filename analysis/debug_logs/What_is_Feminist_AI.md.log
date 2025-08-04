@@ -1,0 +1,28 @@
+# Deterministischer Risiko-Bericht für: What_is_Feminist_AI.md
+# Analyse-Datum: 2025-08-04T22:54:43.902442
+---
+file_stats:
+  characters: 23562
+  words: 3401
+  lines: 217
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 23563
+  table_lines: 13
+
+content_sensitivity:
+  total_triggers: 19
+  trigger_details:
+    bias: 1
+    discrimination: 3
+    inequalities: 8
+    marginalised: 5
+    oppression: 1
+    fairness: 1
+
+risk_assessment:
+  risk_level: MITTEL
+  risk_score: 2
+  risk_factors: ['viele HTML-Kommentare', 'erhöhte Dichte sensibler Schlüsselwörter (>15)']
+

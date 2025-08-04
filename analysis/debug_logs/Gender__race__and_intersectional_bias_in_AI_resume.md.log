@@ -1,0 +1,25 @@
+# Deterministischer Risiko-Bericht für: Gender__race__and_intersectional_bias_in_AI_resume.md
+# Analyse-Datum: 2025-08-04T22:54:43.756078
+---
+file_stats:
+  characters: 61020
+  words: 9172
+  lines: 437
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 61021
+  table_lines: 35
+
+content_sensitivity:
+  total_triggers: 67
+  trigger_details:
+    bias: 48
+    discrimination: 14
+    fairness: 5
+
+risk_assessment:
+  risk_level: HOCH
+  risk_score: 6
+  risk_factors: ['hohe Zeichenanzahl (>40k)', 'viele HTML-Kommentare', 'sehr hohe Dichte sensibler Schlüsselwörter (>50)']
+

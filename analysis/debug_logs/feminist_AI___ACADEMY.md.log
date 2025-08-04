@@ -1,0 +1,27 @@
+# Deterministischer Risiko-Bericht für: feminist_AI___ACADEMY.md
+# Analyse-Datum: 2025-08-04T22:54:43.698316
+---
+file_stats:
+  characters: 54101
+  words: 6990
+  lines: 828
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 54102
+  table_lines: 33
+
+content_sensitivity:
+  total_triggers: 30
+  trigger_details:
+    bias: 4
+    discrimination: 1
+    sexism: 2
+    stereotype: 12
+    fairness: 11
+
+risk_assessment:
+  risk_level: HOCH
+  risk_score: 4
+  risk_factors: ['hohe Zeichenanzahl (>40k)', 'viele HTML-Kommentare', 'erhöhte Dichte sensibler Schlüsselwörter (>15)']
+

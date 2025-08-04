@@ -1,0 +1,29 @@
+# Deterministischer Risiko-Bericht für: AI_Gender_Bias__Disparities__and_Fairness__Does_Tr.md
+# Analyse-Datum: 2025-08-04T22:54:43.595800
+---
+file_stats:
+  characters: 57219
+  words: 8350
+  lines: 330
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 57220
+  table_lines: 17
+
+content_sensitivity:
+  total_triggers: 142
+  trigger_details:
+    bias: 101
+    discrimination: 4
+    sexism: 1
+    inequality: 2
+    inequalities: 2
+    prejudice: 3
+    fairness: 29
+
+risk_assessment:
+  risk_level: HOCH
+  risk_score: 6
+  risk_factors: ['hohe Zeichenanzahl (>40k)', 'viele HTML-Kommentare', 'sehr hohe Dichte sensibler Schlüsselwörter (>50)']
+

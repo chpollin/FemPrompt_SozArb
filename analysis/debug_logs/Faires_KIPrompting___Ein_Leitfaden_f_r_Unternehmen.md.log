@@ -1,0 +1,27 @@
+# Deterministischer Risiko-Bericht für: Faires_KIPrompting___Ein_Leitfaden_f_r_Unternehmen.md
+# Analyse-Datum: 2025-08-04T22:54:43.683031
+---
+file_stats:
+  characters: 54130
+  words: 6993
+  lines: 828
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 54131
+  table_lines: 33
+
+content_sensitivity:
+  total_triggers: 30
+  trigger_details:
+    bias: 4
+    discrimination: 1
+    sexism: 2
+    stereotype: 12
+    fairness: 11
+
+risk_assessment:
+  risk_level: HOCH
+  risk_score: 4
+  risk_factors: ['hohe Zeichenanzahl (>40k)', 'viele HTML-Kommentare', 'erhöhte Dichte sensibler Schlüsselwörter (>15)']
+

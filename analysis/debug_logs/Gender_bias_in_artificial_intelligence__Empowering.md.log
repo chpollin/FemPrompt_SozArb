@@ -1,0 +1,30 @@
+# Deterministischer Risiko-Bericht für: Gender_bias_in_artificial_intelligence__Empowering.md
+# Analyse-Datum: 2025-08-04T22:54:43.738899
+---
+file_stats:
+  characters: 78930
+  words: 11986
+  lines: 522
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 78931
+  table_lines: 35
+
+content_sensitivity:
+  total_triggers: 137
+  trigger_details:
+    bias: 110
+    discrimination: 3
+    inequality: 7
+    inequalities: 3
+    stereotype: 5
+    prejudice: 2
+    oppression: 1
+    fairness: 6
+
+risk_assessment:
+  risk_level: HOCH
+  risk_score: 6
+  risk_factors: ['hohe Zeichenanzahl (>40k)', 'viele HTML-Kommentare', 'sehr hohe Dichte sensibler Schlüsselwörter (>50)']
+

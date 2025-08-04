@@ -1,0 +1,26 @@
+# Deterministischer Risiko-Bericht für: Prompting_fairness__Learning_prompts_for_debiasing.md
+# Analyse-Datum: 2025-08-04T22:54:43.854281
+---
+file_stats:
+  characters: 47520
+  words: 6867
+  lines: 421
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 47521
+  table_lines: 122
+
+content_sensitivity:
+  total_triggers: 59
+  trigger_details:
+    bias: 46
+    discrimination: 1
+    stereotype: 7
+    fairness: 5
+
+risk_assessment:
+  risk_level: HOCH
+  risk_score: 6
+  risk_factors: ['hohe Zeichenanzahl (>40k)', 'viele HTML-Kommentare', 'sehr hohe Dichte sensibler Schlüsselwörter (>50)']
+

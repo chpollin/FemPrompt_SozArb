@@ -1,0 +1,32 @@
+# Deterministischer Risiko-Bericht für: Intersectional_analysis_of_visual_generative_AI__T.md
+# Analyse-Datum: 2025-08-04T22:54:43.798284
+---
+file_stats:
+  characters: 108309
+  words: 15554
+  lines: 743
+
+structural_noise:
+  has_yaml_frontmatter: True
+  image_placeholders: 108310
+  table_lines: 17
+
+content_sensitivity:
+  total_triggers: 106
+  trigger_details:
+    bias: 11
+    discrimination: 19
+    racism: 17
+    sexism: 7
+    ableism: 7
+    colonialism: 10
+    inequalities: 10
+    marginalized: 4
+    oppression: 16
+    fairness: 5
+
+risk_assessment:
+  risk_level: HOCH
+  risk_score: 6
+  risk_factors: ['hohe Zeichenanzahl (>40k)', 'viele HTML-Kommentare', 'sehr hohe Dichte sensibler Schlüsselwörter (>50)']
+
