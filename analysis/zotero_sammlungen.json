@@ -1,0 +1,146 @@
+[
+  {
+    "key": "VTYAS8FA",
+    "version": 67,
+    "library": {
+      "type": "group",
+      "id": 6080294,
+      "name": "FemPrompt_SozArb",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/femprompt_sozarb",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/6080294/collections/VTYAS8FA",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/femprompt_sozarb/collections/VTYAS8FA",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "numCollections": 0,
+      "numItems": 3
+    },
+    "data": {
+      "key": "VTYAS8FA",
+      "version": 67,
+      "name": "Gemini-deep-research-bibliography-1",
+      "parentCollection": false,
+      "relations": {}
+    }
+  },
+  {
+    "key": "AJJ7PB62",
+    "version": 64,
+    "library": {
+      "type": "group",
+      "id": 6080294,
+      "name": "FemPrompt_SozArb",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/femprompt_sozarb",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/6080294/collections/AJJ7PB62",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/femprompt_sozarb/collections/AJJ7PB62",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "numCollections": 0,
+      "numItems": 6
+    },
+    "data": {
+      "key": "AJJ7PB62",
+      "version": 64,
+      "name": "OpenAI-deep-research-bibliography-1",
+      "parentCollection": false,
+      "relations": {}
+    }
+  },
+  {
+    "key": "VH5KFKHH",
+    "version": 61,
+    "library": {
+      "type": "group",
+      "id": 6080294,
+      "name": "FemPrompt_SozArb",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/femprompt_sozarb",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/6080294/collections/VH5KFKHH",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/femprompt_sozarb/collections/VH5KFKHH",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "numCollections": 0,
+      "numItems": 10
+    },
+    "data": {
+      "key": "VH5KFKHH",
+      "version": 61,
+      "name": "perplexity-deep-research-bibliography-1",
+      "parentCollection": false,
+      "relations": {}
+    }
+  },
+  {
+    "key": "UW6T3MBH",
+    "version": 56,
+    "library": {
+      "type": "group",
+      "id": 6080294,
+      "name": "FemPrompt_SozArb",
+      "links": {
+        "alternate": {
+          "href": "https://www.zotero.org/groups/femprompt_sozarb",
+          "type": "text/html"
+        }
+      }
+    },
+    "links": {
+      "self": {
+        "href": "https://api.zotero.org/groups/6080294/collections/UW6T3MBH",
+        "type": "application/json"
+      },
+      "alternate": {
+        "href": "https://www.zotero.org/groups/femprompt_sozarb/collections/UW6T3MBH",
+        "type": "text/html"
+      }
+    },
+    "meta": {
+      "numCollections": 0,
+      "numItems": 15
+    },
+    "data": {
+      "key": "UW6T3MBH",
+      "version": 56,
+      "name": "claude-deep-research-bibliography",
+      "parentCollection": false,
+      "relations": {}
+    }
+  }
+]
