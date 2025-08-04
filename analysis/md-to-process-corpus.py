@@ -1,52 +1,102 @@
+"""
+Perfektes Python-Skript zur dynamischen, strukturierten Informationsextraktion.
+
+Dieses Skript implementiert einen robusten und flexiblen Workflow:
+1. Lädt ein Extraktionsschema aus einer externen `schema.json`-Datei.
+2. Generiert dynamisch einen Prompt für das KI-Modell.
+3. Verarbeitet eine konfigurierbare Anzahl von Markdown-Dateien.
+4. Nutzt einen Wiederholungsmechanismus für Netzwerkstabilität.
+5. Verwendet die korrekte, dokumentierte Speicherfunktion `lx.io.save_annotated_documents`.
+6. Erzeugt eine JSONL-Datei für maschinelle Analysen und eine interaktive HTML-Datei zur visuellen Prüfung.
+"""
+
 import langextract as lx
-import textwrap
 from pathlib import Path
 import os
 import logging
 import json
 import time
 
-# --- Step 1: Logging Setup ---
-# Configures a clear and informative logging system.
+# --- Schritt 1: Konfiguration des Loggings ---
+# Ein klares und informatives Logging-System wird konfiguriert.
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-def analyze_corpus():
-    """
-    Loads multiple markdown files from a directory, processes them sequentially
-    with retries for robustness, and saves the combined results.
-    """
-    # --- Configuration ---
-    markdown_dir = Path("markdown_papers")
-    output_dir = Path("analysis_results_corpus")
-    output_jsonl_file = output_dir / "data.jsonl"
-    output_html_path = "corpus_analysis_visualization.html"
 
-    # --- Create the output directory if it doesn't already exist ---
+def load_extraction_schema(schema_path: Path) -> dict | None:
+    """Lädt das Extraktionsschema sicher aus einer JSON-Datei."""
+    if not schema_path.exists():
+        logging.error(f"FATAL: Schema-Datei nicht gefunden unter '{schema_path}'")
+        return None
+    try:
+        with open(schema_path, 'r', encoding='utf-8') as f:
+            schema = json.load(f)
+        logging.info(f"Extraktionsschema erfolgreich aus '{schema_path}' geladen.")
+        return schema
+    except json.JSONDecodeError:
+        logging.error(f"FATAL: Schema-Datei '{schema_path}' ist kein valides JSON.")
+        return None
+    except Exception as e:
+        logging.error(f"FATAL: Konnte Schema-Datei nicht lesen. Fehler: {e}")
+        return None
+
+
+def generate_prompt_from_schema(schema: dict) -> str:
+    """Generiert dynamisch den Anweisungstext (Prompt) aus dem geladenen Schema."""
+    prompt_intro = "Sie sind ein Forschungsassistent. Extrahieren Sie aus dem folgenden Forschungstext die unten definierten Konzepte:"
+    
+    category_descriptions = []
+    for category in schema.get("extraction_categories", []):
+        category_descriptions.append(
+            f"- {category['name']}: {category['description']}"
+        )
+    
+    return "\n".join([prompt_intro] + category_descriptions)
+
+
+def run_analysis():
+    """Führt den gesamten dynamischen Extraktions-Workflow aus."""
+    # --- Konfiguration ---
+    schema_file = Path("schema.json")
+    markdown_dir = Path("markdown_papers")
+    output_dir = Path("analysis_results")
+    output_filename = "data.jsonl"
+    output_jsonl_file = output_dir / output_filename
+    output_html_path = output_dir / "corpus_analysis_visualization.html"
+
+    # --- Verzeichnis erstellen, falls nicht vorhanden ---
     output_dir.mkdir(exist_ok=True)
 
-    # --- Securely load API key from an environment variable ---
+    # --- API-Schlüssel sicher laden ---
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        logging.error("FATAL: GEMINI_API_KEY environment variable not set.")
+        logging.error("FATAL: Umgebungsvariable GEMINI_API_KEY nicht gesetzt. Bitte setzen Sie den Schlüssel und versuchen Sie es erneut.")
         return
 
-    # --- Step 2: Locate and Read Markdown files ---
-    if not markdown_dir.exists():
-        logging.error(f"The source directory '{markdown_dir}' was not found.")
+    # --- Schritt 2: Schema laden und Prompt generieren ---
+    schema = load_extraction_schema(schema_file)
+    if not schema:
+        return  # Abbruch, wenn das Schema nicht geladen werden konnte
+
+    prompt = generate_prompt_from_schema(schema)
+    logging.info("Dynamischer Prompt für die Extraktion wurde generiert.")
+
+    # --- Schritt 3: Markdown-Dateien finden und einlesen ---
+    if not markdown_dir.is_dir():
+        logging.error(f"Quellverzeichnis '{markdown_dir}' nicht gefunden oder ist kein Verzeichnis.")
         return
 
-    # Find all files ending with .md and limit the list to 5.
-    markdown_file_paths = list(markdown_dir.glob("*.md"))[:5]
+    # Limitiere die Anzahl der Dateien auf 2 für schnelle Tests
+    markdown_file_paths = list(markdown_dir.glob("*.md"))[:2]
     
     if not markdown_file_paths:
-        logging.error(f"No Markdown files found in '{markdown_dir}'.")
+        logging.error(f"Keine Markdown-Dateien in '{markdown_dir}' gefunden.")
         return
 
-    logging.info(f"Found {len(markdown_file_paths)} Markdown files to process.")
+    logging.info(f"{len(markdown_file_paths)} Markdown-Dateien zur Verarbeitung gefunden.")
 
     documents = []
     for file_path in markdown_file_paths:
@@ -55,106 +105,88 @@ def analyze_corpus():
             doc = lx.data.Document(document_id=file_path.name, text=content)
             documents.append(doc)
         except Exception as e:
-            logging.warning(f"Could not read file {file_path}. Skipping. Error: {e}")
+            logging.warning(f"Datei {file_path} konnte nicht gelesen werden. Übersprungen. Fehler: {e}")
     
     if not documents:
-        logging.error("No documents could be read. Exiting.")
+        logging.error("Keine Dokumente konnten gelesen werden. Abbruch.")
         return
         
-    logging.info(f"Successfully created {len(documents)} Document objects.")
+    logging.info(f"{len(documents)} Dokument-Objekte erfolgreich erstellt.")
 
-    # --- Step 3: Define the Extraction Task ---
-    prompt = textwrap.dedent("""\
-        You are a research assistant specializing in AI ethics. From the research paper, extract:
-        - ai_technology: The specific AI system or model discussed.
-        - bias_type: The specific form of bias or discrimination identified.
-        - mitigation_strategy: The technique or framework proposed to reduce bias.
-        - key_finding: A direct, concise quote summarizing a core result or conclusion.
-        """)
-
+    # --- Schritt 4: Few-Shot-Beispiele definieren ---
+    # Diese Beispiele helfen dem Modell, das korrekte Ausgabeformat zu verstehen.
     examples = [
         lx.data.ExampleData(
-            text="This paper introduces 'inclusive prompt engineering' to mitigate biases in generative AI.",
+            text="Diese Arbeit stellt 'inklusives Prompt-Engineering' vor, um Verzerrungen in 'generativer KI' zu mindern.",
             extractions=[
-                lx.data.Extraction(extraction_class="mitigation_strategy", extraction_text="inclusive prompt engineering"),
-                lx.data.Extraction(extraction_class="ai_technology", extraction_text="generative AI"),
+                lx.data.Extraction(extraction_class="mitigation_strategy", extraction_text="inklusives Prompt-Engineering"),
+                lx.data.Extraction(extraction_class="ai_technology", extraction_text="generative KI"),
             ]
         )
     ]
 
-    # --- Step 4: Run the Extraction Sequentially with Retries ---
-    logging.info("Starting extraction sequentially with retries for robustness.")
+    # --- Schritt 5: Sequenzielle Extraktion mit Wiederholungslogik ---
+    logging.info("Starte sequenzielle Extraktion...")
     successful_results = []
-    failed_documents = 0
     max_retries = 3
 
     for document in documents:
-        logging.info(f"Processing document: {document.document_id}...")
-        success = False
+        logging.info(f"Verarbeite Dokument: {document.document_id}...")
         for attempt in range(max_retries):
             try:
-                # Use a more powerful model for better handling of large/complex documents.
                 results_generator = lx.extract(
                     text_or_documents=[document],
                     prompt_description=prompt,
                     examples=examples,
-                    model_id="gemini-1.5-flash",  # Note: Corrected from the non-existent 2.5
+                    model_id="gemini-1.5-flash",
                     api_key=api_key
                 )
                 
                 result = next(results_generator)
 
                 if hasattr(result, 'error') and result.error:
-                    raise RuntimeError(f"Library Error: {result.error}")
+                    raise RuntimeError(f"Bibliotheksfehler: {result.error}")
                 
                 successful_results.append(result)
-                logging.info(f"--> Successfully processed document: {document.document_id}")
-                success = True
-                break # Exit retry loop on success
+                logging.info(f"--> Dokument erfolgreich verarbeitet: {document.document_id}")
+                break  # Erfolgreich, Wiederholungsschleife für dieses Dokument verlassen
 
             except Exception as e:
-                logging.warning(f"Attempt {attempt + 1}/{max_retries} failed for document '{document.document_id}'. Error: {e}")
+                logging.warning(f"Versuch {attempt + 1}/{max_retries} für '{document.document_id}' fehlgeschlagen. Fehler: {e}")
                 if attempt < max_retries - 1:
-                    time.sleep(2) # Wait 2 seconds before retrying
+                    time.sleep(2) # Kurze Pause vor dem nächsten Versuch
                 else:
-                    logging.error(f"All {max_retries} attempts failed for document '{document.document_id}'. Skipping.")
-        
-        if not success:
-            failed_documents += 1
+                    logging.error(f"Alle {max_retries} Versuche für '{document.document_id}' fehlgeschlagen. Dokument wird übersprungen.")
 
-    logging.info("✅ Extraction process finished.")
-    logging.info(f"Successfully processed {len(successful_results)} documents.")
-    if failed_documents > 0:
-        logging.warning(f"Failed to process {failed_documents} documents after all retries. See logs for details.")
+    logging.info("✅ Extraktionsprozess abgeschlossen.")
 
     if not successful_results:
-        logging.warning("No documents were successfully processed. Exiting.")
+        logging.warning("Keine Ergebnisse zum Speichern vorhanden. Beende.")
         return
 
-    # --- Step 5: Save and Visualize the Combined Results ---
-    logging.info(f"Saving {len(successful_results)} results to '{output_jsonl_file}'...")
+    # --- Schritt 6: Ergebnisse speichern und visualisieren ---
+    logging.info(f"Speichere {len(successful_results)} Ergebnis-Dokument(e) in '{output_jsonl_file}'...")
     try:
-        # CORRECTED CODE BLOCK:
-        # Replaced the manual loop and incorrect .to_dict() call
-        # with a dedicated library function for saving.
-        lx.save_annotated_documents(
+        # KORREKTER AUFRUF laut offizieller GitHub-Dokumentation: in lx.io-Submodul
+        lx.io.save_annotated_documents(
             annotated_documents=successful_results,
-            output_path=output_jsonl_file
+            output_name=output_filename, # Der Dateiname
+            output_dir=output_dir         # Das Verzeichnis-Objekt
         )
-        logging.info(f"Combined structured results saved successfully.")
+        logging.info("Strukturierte Ergebnisse erfolgreich gespeichert.")
     except Exception as e:
-        logging.error(f"Failed to save results to file. Error: {e}")
+        logging.error(f"Speichern der Ergebnisse fehlgeschlagen. Fehler: {e}")
         return
 
-    logging.info("Generating final interactive visualization...")
+    logging.info("Generiere interaktive Visualisierung...")
     try:
-        # This step should now work as it can find the file created above.
         html_content = lx.visualize(output_jsonl_file)
         with open(output_html_path, "w", encoding="utf-8") as f:
             f.write(html_content)
-        logging.info(f"Interactive visualization saved to '{output_html_path}'")
+        logging.info(f"Interaktive Visualisierung gespeichert unter '{output_html_path}'")
     except Exception as e:
-        logging.error(f"Failed to generate visualization. Error: {e}")
+        logging.error(f"Generierung der Visualisierung fehlgeschlagen. Fehler: {e}")
+
 
 if __name__ == "__main__":
-    analyze_corpus()
+    run_analysis()
