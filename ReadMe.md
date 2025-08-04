@@ -1,77 +1,75 @@
-# Deep-Research → Literaturverwaltung (Zotero): Workflow-Dokumentation
+# AI-Assisted Research Workflow: From Discovery to Analysis
 
-Der folgende Workflow verbindet KI-gestützte Deep-Research-Prompts mit systematischer Literaturverwaltung in Zotero.
+This document outlines an end-to-end workflow that uses multiple AI models for systematic literature discovery and a custom script for large-scale, automated content analysis.
 
-## Workflow
+## The Workflow
 
-**1. Parametrisierter Deep-Research-Prompt**
+### **Step 1: Parametric Deep Research Prompt**
 
-Ein standardisierter Prompt definiert Fachrolle (z.B. "Experte für systematische Literaturanalyse"), Ziel (z.B. Literaturbericht), Kontext (Forschungsfrage, Zeitrahmen, geografische Eingrenzung), Analyseschritte (Recherche, Bewertung, Synthese) und Ausgabeformat (z.B. APA-Zitation, Qualitätsbewertung). Diese Parameter gewährleisten eine flexible Wiederverwendbarkeit.
+The process begins with a standardized prompt that can be adapted for any research question. It directs an AI to assume the role of an expert, defines the research scope, and specifies the exact output format, ensuring consistent and reusable results.
 
-```
-KONTEXT:
-***
-Wie können feministische Digital- und KI-Kompetenzen (Digital / AI Literacies) und diversitätsreflektierendes Prompting dazu beitragen, Bias und intersektionale Diskriminierungsformen in KI-Technologien sichtbar zu machen und zu reduzieren?
-***
-
-You are an expert in systematic scientific literature analysis. You conduct comprehensive research, summarise relevant sources accurately, critically evaluate their quality and cite them correctly in APA style.
-
-Your task:
-1. Identify relevant academic literature on the topic ‘[Topic]’ from 2023-2025, especially from peer-reviewed sources.
-2. Create a concise summary (max. 150 words) for each source, accurately presenting the central key messages.
-3. Cite each source completely in APA format (with URL)
-4. Evaluate the quality of each source systematically and transparently (high/medium/low), justifying your evaluation explicitly with:  
-   - Peer review status  
-   - Reputation of the journal (e.g. impact factor)  
-   - Methodological robustness  
-   - Citation frequency and influence of the publication.
-   - The quality of the text and the relevance of the topic.
-
-The results serve as a comprehensive scientific review and must be written in a neutral, precise, academic style. Structure of the answer:
-
-1. APA citation  
-2. Concise summary of the key statements  
-3. Critical quality assessment including explicit justification
+**Core Prompt Template:**
 ```
 
-**2. Ausführung mit mehreren KI-Modellen**
+CONTEXT:
 
-Der Prompt wird parallel in mehreren KI-Umgebungen (Gemini, Claude, OpenAI, Perplexity) ausgeführt. Jedes Modell generiert eigenständig Fachliteratur-Recherchen, Zusammenfassungen und Qualitätsbewertungen (Peer-Review-Status, methodische Solidität, Relevanz).
+-----
 
-**3. RIS-Export**
+How can feminist Digital/AI Literacies and diversity-reflective prompting help to expose and mitigate bias and intersectional discrimination in AI technologies?
 
-Die KI-Ergebnisse werden mithilfe eines spezialisierten System-Prompts ins RIS-Format konvertiert, ein standardisiertes, tagbasiertes Format (u.a. Felder: TY, AU, PY, T1). KI-generierte Zusammenfassungen und Qualitätsbewertungen werden in RIS-Notizenfeldern (AB/N1) gespeichert.
+-----
+
+You are an expert in systematic scientific literature analysis. Your task is to conduct comprehensive research on the topic above for the period 2023-2025, focusing on peer-reviewed sources.
+
+For each relevant source, you must:
+
+1.  **Cite**: Provide a complete APA-formatted citation, including a URL.
+2.  **Summarize**: Write a concise summary (max 150 words) of the central key messages.
+3.  **Evaluate**: Assess the quality (high/medium/low) with an explicit justification covering:
+      * Peer-review status
+      * Journal reputation or impact
+      * Methodological robustness
+      * Citation frequency and influence
+
+The output must be in a neutral, precise, academic style.
 
 ```
-You are a precise and efficient RIS formatter. Given any scholarly reference input (title, authors, journal, year, DOI, URL, abstract, and quality notes), your task is to accurately convert it into RIS format, strictly following this template:
 
-TY  - [Entry type: JOUR, CONF, RPRT, etc.]
-AU  - [Author 1 surname, Initial.]
-AU  - [Author 2 surname, Initial.] (Repeat for each author)
-PY  - [Year]
-TI  - [Title]
-JO  - [Journal/Book Title or Conference Name/ or what the document type is]
-DO  - [DOI]
-UR  - [URL]
-AB  - [Concise abstract summarizing key points clearly]
-N1  - Quality: [Concise quality assessment notes]
-ER  -
+### **Step 2: Multi-Model Execution**
 
-Always maintain accuracy and completeness, and do not add fields beyond what's specified.
-```
+To mitigate single-model bias and broaden literature discovery, the prompt is executed in parallel across several major AI platforms (e.g., Gemini, Claude, ChatGPT, Perplexity). Each model independently generates a list of sources, summaries, and quality assessments.
 
-**4. Zotero-Import**
+### **Step 3: Standardize to RIS Format**
 
-Die RIS-Daten werden direkt in Zotero importiert ("File → Import" oder "Import from Clipboard"). Quellen aus unterschiedlichen KI-Modellen werden zur Nachvollziehbarkeit in separaten Sammlungen organisiert.
+All AI-generated outputs are converted into the **RIS format**, a standard for bibliographic data. AI-generated summaries and quality notes are preserved in the abstract (`AB`) and notes (`N1`) fields, respectively. This makes the rich, AI-generated data portable and ready for reference management.
 
-**5. Expert-in-the-Loop**
+### **Step 4: Import and Organize in Zotero**
 
-Fachwissenschaftler validieren und kuratieren die importierten Einträge manuell:
+The standardized `.ris` files are imported into Zotero. To maintain traceability, results from each AI model are organized into separate collections. This allows for easy comparison and source attribution.
 
-- Prüfung von Qualität, Relevanz und Impact
-- Dublettenentfernung (Zotero-unterstützt)
-- Ergänzung/Korrektur bibliografischer Angaben
-- Strukturierung, Verschlagwortung und finale Auswahl
+### **Step 5: Expert-in-the-Loop Validation**
+
+A human expert reviews the aggregated bibliography in Zotero. This critical step involves:
+* **Validating** the relevance and quality of AI-discovered sources.
+* **De-duplicating** entries (using Zotero's built-in tools).
+* **Correcting** any bibliographic inaccuracies.
+* **Curating** the final list of sources for full-text analysis.
+
+### **Step 6: Automated Content Analysis with LangExtract**
+
+This final phase transitions from literature collection to substantive analysis using the full-text articles.
+
+* **Preparation:** Ensure all curated full-text articles are converted to Markdown and placed in the `markdown_papers/` directory.
+* **Execution:** Run the `corpus_analysis_final_script.py` script.
+  * **Important:** Before running, you must set your API key as an environment variable. Open your terminal and use the appropriate command:
+    * **macOS/Linux:** `export GEMINI_API_KEY="YOUR_API_KEY_HERE"`
+    * **Windows (PowerShell):** `$env:GEMINI_API_KEY="YOUR_API_KEY_HERE"`
+* **Thematic Extraction:** The script uses an AI model (Gemini 1.5 Flash) to read every paper and extract predefined concepts, such as `bias_type`, `mitigation_strategy`, and `key_finding`.
+* **Final Outputs:** The script generates two powerful research artifacts:
+  1. **`corpus_analysis.jsonl`**: A machine-readable dataset containing all extracted thematic data, perfect for quantitative analysis and data mining.
+  2. **`corpus_analysis_visualization.html`**: An interactive HTML file that displays each paper's full text with the extracted terms highlighted, allowing for rapid qualitative review and validation.
+
+This step completes the research cycle, transforming a simple literature collection into a structured, queryable knowledge base.
 
 ## Workflow-Diagramm
 
