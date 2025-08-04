@@ -1,3 +1,5 @@
+# THIS IS A VIBE CODING / VIBE RESEARCH EXPERIMENT!
+
 # AI-Assisted Research Workflow: From Discovery to Analysis
 
 This document outlines an end-to-end workflow that uses multiple AI models for systematic literature discovery and a custom script for large-scale, automated content analysis.
