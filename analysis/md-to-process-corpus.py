@@ -5,68 +5,54 @@ import os
 import logging
 import json
 
-# --- Step 1: Setup Logging ---
-# A simple and clean logging setup to track the script's progress and errors.
+# --- Step 1: Logging Setup ---
+# Configures a clear and informative logging system that prints progress
+# and errors to your terminal as the script runs.
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-def process_corpus():
+def analyze_single_paper():
     """
-    Loads markdown files, extracts structured data using LangExtract in parallel,
-    and saves the results. This version is optimized for security and robustness.
+    Loads one markdown file, extracts structured data using the Gemini model
+    via LangExtract, and saves the results as JSONL and an HTML visualization.
     """
     # --- Configuration ---
-    # Define the input directory and the names for the output files.
-    markdown_dir = Path("markdown_papers")
-    output_jsonl_path = "corpus_analysis.jsonl"
-    output_html_path = "corpus_analysis_visualization.html"
+    # Define the single input file and the output files.
+    # >>> CHANGE THIS to the path of your markdown file. <<<
+    markdown_file = Path("markdown_papers/AI___Intersectionality__A_Toolkit_For_Fairness___I.md")
+    
+    # You can customize the output names if you wish.
+    output_jsonl_path = "paper_analysis.jsonl"
+    output_html_path = "paper_analysis_visualization.html"
 
-    # --- BEST PRACTICE: Load API key securely from environment variables ---
-    # This avoids exposing your secret key directly in the code.
+    # --- Securely load API key from an environment variable ---
+    # This is a security best practice to avoid saving secrets in your code.
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         logging.error("FATAL: GEMINI_API_KEY environment variable not set.")
-        logging.error("Please set the environment variable before running the script.")
+        logging.error("Please set this environment variable before running the script.")
         return
 
-    # --- Step 2: Locate and Read all Markdown files ---
-    # Check if the source directory exists before proceeding.
-    if not markdown_dir.exists():
-        logging.error(f"The directory '{markdown_dir}' was not found.")
-        logging.error("Please ensure you have run the pdf-to-md-converter.py script first.")
+    # --- Step 2: Read the single Markdown file ---
+    logging.info(f"Attempting to read file: '{markdown_file}'")
+    if not markdown_file.exists():
+        logging.error(f"The file '{markdown_file}' was not found. Please check the path and filename.")
         return
 
-    # Find all files ending with .md in the specified directory.
-    markdown_file_paths = list(markdown_dir.glob("*.md"))
-    if not markdown_file_paths:
-        logging.error(f"No Markdown files found in '{markdown_dir}'.")
+    try:
+        content = markdown_file.read_text(encoding='utf-8')
+        # The Document object holds the text and an ID for tracking purposes.
+        document = lx.data.Document(document_id=markdown_file.name, text=content)
+        logging.info("Successfully read the file and created a Document object.")
+    except Exception as e:
+        logging.error(f"Could not read or process the file. Error: {e}")
         return
-
-    logging.info(f"Found {len(markdown_file_paths)} Markdown files to process.")
-
-    # Read each file and create a langextract Document object.
-    documents = []
-    for file_path in markdown_file_paths:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                # The document_id helps identify which file the results belong to.
-                doc = lx.data.Document(document_id=file_path.name, text=content)
-                documents.append(doc)
-        except Exception as e:
-            logging.warning(f"Could not read file {file_path}. Skipping. Error: {e}")
-    
-    if not documents:
-        logging.error("No documents could be read. Exiting.")
-        return
-        
-    logging.info("Successfully created Document objects for all readable files.")
 
     # --- Step 3: Define the Extraction Task ---
-    # This detailed prompt instructs the AI on its role, the data to find, and the output format.
+    # A detailed prompt instructs the AI on exactly what to find and how to format it.
     prompt = textwrap.dedent("""\
         You are a research assistant specializing in AI ethics and feminist studies.
         From the research paper, extract the following concepts in order of appearance:
@@ -80,10 +66,10 @@ def process_corpus():
         Ensure your entire output is a single, valid JSON object.
         """)
 
-    # Few-shot examples guide the AI to produce more accurate and consistently formatted results.
+    # Few-shot examples guide the AI for better accuracy and consistent formatting.
     examples = [
         lx.data.ExampleData(
-            text="This paper introduces 'inclusive prompt engineering' as a strategy to probe and mitigate biases in generative AI image systems. Our findings underscore the need for improved prompt interfaces that actively promote inclusive representation.",
+            text="This paper introduces 'inclusive prompt engineering' as a strategy to probe and mitigate biases in generative AI image systems.",
             extractions=[
                 lx.data.Extraction(
                     extraction_class="mitigation_strategy",
@@ -94,97 +80,73 @@ def process_corpus():
                     extraction_class="ai_technology",
                     extraction_text="generative AI image systems",
                 ),
-                lx.data.Extraction(
-                    extraction_class="key_finding",
-                    extraction_text="findings underscore the need for improved prompt interfaces that actively promote inclusive representation",
-                ),
             ]
         ),
         lx.data.ExampleData(
-            text="The study reveals that 44% of AI systems exhibit gender bias, with 25% showing both gender and racial bias.",
+            text="The study reveals that 44% of AI systems exhibit gender bias.",
             extractions=[
                 lx.data.Extraction(
                     extraction_class="bias_type",
                     extraction_text="gender bias",
                     attributes={"prevalence": "44% of AI systems"}
-                ),
-                lx.data.Extraction(
-                    extraction_class="bias_type",
-                    extraction_text="gender and racial bias",
-                    attributes={"prevalence": "25% of AI systems", "nature": "intersectional"}
                 )
             ]
         )
     ]
 
-    # --- Step 4: Run the Extraction in Parallel ---
-    logging.info("Starting extraction with parallel processing.")
-    
+    # --- Step 4: Run the Extraction ---
+    logging.info("Starting data extraction with the Gemini model...")
     try:
-        results_generator = lx.extract(
-            text_or_documents=documents,
+        # The `lx.extract` function expects an iterable (like a list).
+        # FIX: We pass the single `document` object inside a list: `[document]`.
+        results = list(lx.extract(
+            text_or_documents=[document],
             prompt_description=prompt,
             examples=examples,
             model_id="gemini-2.5-flash",
-            max_workers=10, # Process up to 10 documents concurrently.
             api_key=api_key
-        )
-
-        # --- ROBUSTNESS (Corrected): Iterate through results to handle individual failures ---
-        results_list = []
-        error_count = 0
+        ))
         
-        for result in results_generator:
-            # FIX: First check if the 'error' attribute exists before trying to access it.
-            # This correctly handles both successful and failed results.
-            if hasattr(result, 'error') and result.error:
-                logging.error(f"Could not process document '{result.document_id}'. Error: {result.error}")
-                error_count += 1
-                continue  # Skip this failed document and continue with the next.
-            results_list.append(result)
+        if not results:
+            logging.error("Extraction returned no results. The model may have failed to process the input.")
+            return
 
-        logging.info("✅ Extraction process finished.")
-        logging.info(f"Successfully processed {len(results_list)} documents.")
-        if error_count > 0:
-            logging.warning(f"Failed to process {error_count} documents due to errors. See logs above.")
+        # Get the single result object from the list of results.
+        result = results[0]
+
+        # Check if an error occurred for this specific document.
+        if hasattr(result, 'error') and result.error:
+            logging.error(f"Could not process document '{result.document_id}'. Error: {result.error}")
+            return
+            
+        logging.info("✅ Extraction process finished successfully.")
 
     except lx.inference.InferenceOutputError as e:
-        logging.error(f"A critical API error occurred during extraction: {e}")
-        logging.error("This could be due to an invalid API key, lack of permissions, or a temporary service outage.")
+        logging.error(f"A critical API error occurred: {e}")
+        logging.error("This could be an invalid API key, permissions issue, or a temporary service outage.")
         return
     except Exception as e:
-        # This will catch other unexpected errors during the setup of the extraction call.
-        logging.error(f"An unexpected error occurred: {e}")
-        return
-
-    if not results_list:
-        logging.warning("No documents were successfully processed. Exiting without saving results.")
+        logging.error(f"An unexpected error occurred during the extraction process: {e}")
         return
 
     # --- Step 5: Save and Visualize the Results ---
-    # Save the structured data to a JSONL file for machine analysis.
-    lx.io.save_annotated_documents(results_list, output_jsonl_path)
+    # Save the structured data to a machine-readable JSONL file.
+    # The save function also expects a list, so we pass `[result]`.
+    lx.io.save_annotated_documents([result], output_jsonl_path)
     logging.info(f"Structured results have been saved to '{output_jsonl_path}'")
 
-    # Generate the interactive HTML file for human review.
-    visualize_results(output_jsonl_path, output_html_path)
-
-def visualize_results(jsonl_path, html_path):
-    """Generates the HTML visualization from the final JSONL file."""
-    if not os.path.exists(jsonl_path):
-        logging.warning("No results file found to visualize.")
-        return
-        
-    logging.info("Generating final interactive visualization...")
+    # Generate an interactive HTML file for easy human review.
+    logging.info("Generating interactive visualization...")
     try:
-        html_content = lx.visualize(jsonl_path)
-        with open(html_path, "w", encoding="utf-8") as f:
+        html_content = lx.visualize(output_jsonl_path)
+        with open(output_html_path, "w", encoding="utf-8") as f:
             f.write(html_content)
-        logging.info(f"Interactive visualization has been saved to '{html_path}'")
-        logging.info(f"--> Open '{html_path}' in your browser to review the extracted data in context.")
+        logging.info(f"Interactive visualization saved to '{output_html_path}'")
+        logging.info(f"--> Open this HTML file in your browser to see the results in context.")
     except Exception as e:
         logging.error(f"Failed to generate visualization. Error: {e}")
 
-# This ensures the script runs only when executed directly (not when imported).
+# This standard Python construct ensures the `analyze_single_paper` function
+# is called only when the script is executed directly.
 if __name__ == "__main__":
-    process_corpus()
+    analyze_single_paper()
