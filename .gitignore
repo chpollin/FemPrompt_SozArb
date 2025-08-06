@@ -1,2 +1,3 @@
 *.pdf
 /analysis/markdown_papers
+analysis/zotero_backup_*.json
