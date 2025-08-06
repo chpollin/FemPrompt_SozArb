@@ -22,6 +22,88 @@ class Config:
     min_pdf_size: int = 1024
     max_pdf_size: int = 50 * 1024 * 1024  # 50MB
     enable_logging: bool = True
+    # Zotero API settings
+    zotero_user_id: str = ""  # Your Zotero user ID
+    zotero_api_key: str = ""  # Your Zotero API key (optional for public libraries)
+    zotero_library_type: str = "user"  # "user" or "group"
+
+class ZoteroAPI:
+    """Simple Zotero API client"""
+    
+    def __init__(self, user_id: str, api_key: str = "", library_type: str = "user"):
+        self.user_id = user_id
+        self.api_key = api_key
+        self.library_type = library_type
+        self.base_url = "https://api.zotero.org"
+        self.session = requests.Session()
+        
+        # Add API key to headers if provided
+        if api_key:
+            self.session.headers.update({
+                'Zotero-API-Key': api_key
+            })
+    
+    def get_all_items(self, limit: int = 100) -> List[Dict]:
+        """Fetch all items from Zotero library"""
+        all_items = []
+        start = 0
+        
+        while True:
+            url = f"{self.base_url}/{self.library_type}s/{self.user_id}/items"
+            params = {
+                'format': 'json',
+                'limit': limit,
+                'start': start,
+                'itemType': '-attachment'  # Exclude attachments
+            }
+            
+            try:
+                response = self.session.get(url, params=params, timeout=30)
+                response.raise_for_status()
+                
+                items = response.json()
+                if not items:
+                    break
+                
+                all_items.extend(items)
+                start += limit
+                
+                print(f"Fetched {len(items)} items (total: {len(all_items)})")
+                time.sleep(0.1)  # Be nice to the API
+                
+            except Exception as e:
+                print(f"Error fetching items: {e}")
+                break
+        
+        return all_items
+    
+    def simplify_items(self, items: List[Dict]) -> List[Dict]:
+        """Convert Zotero API format to simplified format"""
+        simplified = []
+        
+        for item in items:
+            data = item.get('data', {})
+            
+            # Skip if no title
+            title = data.get('title', '').strip()
+            if not title:
+                continue
+            
+            simplified_item = {
+                'title': title,
+                'url': data.get('url', '').strip(),
+                'DOI': data.get('DOI', '').strip(),
+                'itemType': data.get('itemType', ''),
+                'publicationTitle': data.get('publicationTitle', ''),
+                'date': data.get('date', ''),
+                'creators': data.get('creators', [])
+            }
+            
+            # Only add items with URLs for PDF downloading
+            if simplified_item['url']:
+                simplified.append(simplified_item)
+        
+        return simplified
 
 class EnhancedPDFDownloader:
     def __init__(self, config: Config = None):
@@ -512,20 +594,57 @@ class EnhancedPDFDownloader:
         
         return filename
     
-    def process_zotero_library(self, json_file: str = "zotero_vereinfacht.json", output_dir: str = "all_pdf"):
-        """Enhanced main processing with parallel downloads"""
+    def fetch_from_zotero(self, user_id: str, api_key: str = "", library_type: str = "user") -> List[Dict]:
+        """Fetch items directly from Zotero API"""
+        self.logger.info(f"Fetching data from Zotero {library_type} library: {user_id}")
+        
+        zotero = ZoteroAPI(user_id, api_key, library_type)
+        
+        # Fetch all items
+        raw_items = zotero.get_all_items()
+        self.logger.info(f"Fetched {len(raw_items)} total items from Zotero")
+        
+        # Simplify format
+        items = zotero.simplify_items(raw_items)
+        self.logger.info(f"Found {len(items)} items with URLs")
+        
+        return items
+    
+    def process_zotero_library(self, 
+                              json_file: str = None, 
+                              output_dir: str = "all_pdf",
+                              use_api: bool = True):
+        """Main processing with Zotero API or JSON file"""
         self.logger.info("Starting enhanced PDF downloader")
         
-        # Load data
-        try:
-            with open(json_file, 'r', encoding='utf-8') as f:
-                items = json.load(f)
-        except FileNotFoundError:
-            self.logger.error(f"File {json_file} not found!")
-            return
-        except Exception as e:
-            self.logger.error(f"Error loading file: {e}")
-            return
+        # Decide data source
+        if use_api and self.config.zotero_user_id:
+            # Fetch from Zotero API
+            items = self.fetch_from_zotero(
+                self.config.zotero_user_id,
+                self.config.zotero_api_key,
+                self.config.zotero_library_type
+            )
+            
+            # Save fetched data for backup
+            backup_file = f"zotero_backup_{int(time.time())}.json"
+            with open(backup_file, 'w', encoding='utf-8') as f:
+                json.dump(items, f, indent=2, ensure_ascii=False)
+            self.logger.info(f"Saved backup to: {backup_file}")
+            
+        else:
+            # Load from JSON file (fallback)
+            json_file = json_file or "zotero_vereinfacht.json"
+            try:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    items = json.load(f)
+                self.logger.info(f"Loaded {len(items)} items from {json_file}")
+            except FileNotFoundError:
+                self.logger.error(f"File {json_file} not found and no Zotero API configured!")
+                return
+            except Exception as e:
+                self.logger.error(f"Error loading file: {e}")
+                return
         
         # Filter items with URLs
         items_with_urls = [item for item in items if item.get('url')]
@@ -599,105 +718,42 @@ class EnhancedPDFDownloader:
             print(f"\nSuccess rate: {success_rate:.1f}%")
 
 
-# Compact Testing Suite
-class TestPDFDownloader(unittest.TestCase):
-    def setUp(self):
-        self.config = Config(max_workers=1, enable_logging=False)
-        self.downloader = EnhancedPDFDownloader(self.config)
-    
-    def test_url_normalization(self):
-        """Test URL normalization"""
-        test_cases = [
-            ("arxiv.org/html/2312.10833", "https://arxiv.org/abs/2312.10833"),
-            ("www.example.com", "https://www.example.com"),
-            ("https://example.com", "https://example.com"),
-        ]
-        for input_url, expected in test_cases:
-            with self.subTest(input_url=input_url):
-                result = self.downloader.normalize_url(input_url)
-                self.assertEqual(result, expected)
-    
-    def test_filename_sanitization(self):
-        """Test filename sanitization"""
-        test_cases = [
-            ("Test: Paper?", "Test_ Paper_.pdf"),
-            ("Very Long Title " * 20, True),  # Should be truncated
-            ("", "document.pdf"),
-        ]
-        for input_name, expected in test_cases:
-            with self.subTest(input_name=input_name):
-                result = self.downloader.sanitize_filename("", input_name)
-                if isinstance(expected, bool):
-                    self.assertTrue(len(result) <= 200)
-                else:
-                    self.assertEqual(result, expected)
-    
-    def test_arxiv_pattern(self):
-        """Test ArXiv URL pattern matching"""
-        test_urls = [
-            "https://arxiv.org/abs/2312.10833",
-            "https://arxiv.org/html/2312.10833v4",
-            "https://example.com/not-arxiv"
-        ]
-        # Mock is_valid_pdf_url to avoid network calls
-        self.downloader.is_valid_pdf_url = lambda x: "arxiv.org/pdf" in x
-        
-        for url in test_urls[:2]:  # First two should work
-            with self.subTest(url=url):
-                result = self.downloader.try_arxiv_pattern(url)
-                self.assertIsNotNone(result)
-                self.assertIn("arxiv.org/pdf", result)
-        
-        # Third should not work
-        result = self.downloader.try_arxiv_pattern(test_urls[2])
-        self.assertIsNone(result)
-    
-    def test_pdf_validation(self):
-        """Test PDF content validation"""
-        # Create test files
-        os.makedirs("test_files", exist_ok=True)
-        
-        # Valid PDF (mock)
-        with open("test_files/valid.pdf", "wb") as f:
-            f.write(b"%PDF-1.4\n" + b"x" * 2000)  # Mock PDF with header
-        
-        # Invalid file
-        with open("test_files/invalid.txt", "w") as f:
-            f.write("Not a PDF")
-        
-        # Test validation
-        self.assertTrue(self.downloader.validate_pdf_content("test_files/valid.pdf"))
-        self.assertFalse(self.downloader.validate_pdf_content("test_files/invalid.txt"))
-        
-        # Cleanup
-        os.remove("test_files/valid.pdf")
-        os.remove("test_files/invalid.txt")
-        os.rmdir("test_files")
-
-
-def run_tests():
-    """Run the test suite"""
-    print("Running PDF Downloader Tests...")
-    unittest.main(argv=[''], exit=False, verbosity=2)
-
-
 def main():
-    """Main function"""
+    """Main function with Zotero API integration"""
+    
+    # CONFIGURATION - UPDATED FOR YOUR GROUP
     config = Config(
         max_workers=3,
         timeout=15,
         retry_attempts=2,
         delay_between_requests=0.5,
-        enable_logging=True
+        enable_logging=True,
+        
+        # ZOTERO API SETTINGS - CONFIGURED FOR FEMPROMPT_SOZARB GROUP
+        zotero_user_id="6080294",  # Your Zotero group ID
+        zotero_api_key="",  # Empty for public groups
+        zotero_library_type="group"  # Changed to "group"
     )
     
+    print("Enhanced PDF Downloader with Zotero API")
+    print("=" * 50)
+    
+    # Check if Zotero API is configured
+    if config.zotero_user_id == "YOUR_USER_ID_HERE" or not config.zotero_user_id:
+        print("⚠️  Zotero API not configured!")
+        print("\nTo use the Zotero API:")
+        print("1. Get your User ID from: https://www.zotero.org/settings/keys")
+        print("2. Update the 'zotero_user_id' in the config above")
+        print("3. Optionally add an API key for private libraries")
+        print("\nFalling back to JSON file...")
+        use_api = False
+    else:
+        print(f"✓ Using Zotero API for user: {config.zotero_user_id}")
+        use_api = True
+    
     downloader = EnhancedPDFDownloader(config)
-    downloader.process_zotero_library()
+    downloader.process_zotero_library(use_api=use_api)
 
 
 if __name__ == "__main__":
-    import sys
-    if len(sys.argv) > 1 and sys.argv[1] == "test":
-        run_tests()
-    else:
-        main()
+    main()

@@ -1,5 +1,45 @@
 [
   {
+    "title": "Feminist Data Set",
+    "url": "https://carolinesinders.com/feminist-data-set/"
+  },
+  {
+    "title": "Shaping feminist artificial intelligence",
+    "url": "https://journals.sagepub.com/doi/full/10.1177/14614448221150776"
+  },
+  {
+    "title": "Feministische KI – Künstliche Intelligenz für alle? [Feminis",
+    "url": "https://blogs.fu-berlin.de/toolbox/2024/04/08/feministische-ki-kuenstliche-intelligenz-fuer-alle/"
+  },
+  {
+    "title": "AI tools show biases in ranking job applicants' names accord",
+    "url": "https://ojs.aaai.org/index.php/AIES/article/view/31748"
+  },
+  {
+    "title": "Keynote Summary: The New Jim Code: Reimagining the Default S",
+    "url": "https://dl.acm.org/doi/10.1145/3589139"
+  },
+  {
+    "title": "Feminism Confronts AI: The Gender Relations of Digitalisatio",
+    "url": "https://academic.oup.com/book/55103/chapter/423909956"
+  },
+  {
+    "title": "The Algorithmic Auditing Landscape: A Social Justice Approac",
+    "url": "https://dl.acm.org/doi/10.1145/3630659.3630671"
+  },
+  {
+    "title": "Operationalizing positive-constructive pedagogy to artificia",
+    "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1293235/full"
+  },
+  {
+    "title": "Shaping feminist artificial intelligence",
+    "url": "https://doi.org/10.1177/14614448221150776"
+  },
+  {
+    "title": "Investigating AI systems: examining data and algorithmic bia",
+    "url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1380252/full"
+  },
+  {
     "title": "PreciseDebias: An automatic prompt engineering approach for ",
     "url": "https://openaccess.thecvf.com/content/WACV2024/html/Clemmer_PreciseDebias_An_Automatic_Prompt_Engineering_Approach_for_Generative_AI_WACV_2024_paper.html"
   },
@@ -20,10 +60,6 @@
     "url": "https://www.researchcorridor.org/index.php/jgsi/article/download/330/314"
   },
   {
-    "title": "Artificial Intelligence and gender equality",
-    "url": "https://www.unwomen.org/en/articles/explainer/artificial-intelligence-and-gender-equality"
-  },
-  {
     "title": "Tech workers' perspectives on ethical issues in AI developme",
     "url": "https://doi.org/10.1177/20539517231221780"
   },
@@ -32,12 +68,16 @@
     "url": "https://doi.org/10.1145/3630106.3658543"
   },
   {
-    "title": "Factoring the matrix of domination: A critical review and re",
-    "url": "https://dl.acm.org/doi/abs/10.1145/3600211.3604705"
+    "title": "Artificial Intelligence and gender equality",
+    "url": "https://www.unwomen.org/en/articles/explainer/artificial-intelligence-and-gender-equality"
   },
   {
     "title": "Measuring gender and racial biases in large language models:",
     "url": "https://doi.org/10.1093/pnasnexus/pgaf089"
+  },
+  {
+    "title": "Factoring the matrix of domination: A critical review and re",
+    "url": "https://dl.acm.org/doi/abs/10.1145/3600211.3604705"
   },
   {
     "title": "Feminist AI: Critical Perspectives on Algorithms, Data, and ",
@@ -48,12 +88,12 @@
     "url": "https://doi.org/10.1162/coli_a_00524"
   },
   {
-    "title": "Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder z",
-    "url": "https://www.fh-bielefeld.de/multimedia/Fachbereiche/Wirtschaft+und+Gesundheit/ Forschung/Denkfabrik+Digitalisierte+Arbeitswelt/geki_Abschlussbericht.pdf"
-  },
-  {
     "title": "Shaping feminist artificial intelligence",
     "url": "https://journals.sagepub.com/doi/full/10.1177/14614448221150776"
+  },
+  {
+    "title": "Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder z",
+    "url": "https://www.fh-bielefeld.de/multimedia/Fachbereiche/Wirtschaft+und+Gesundheit/ Forschung/Denkfabrik+Digitalisierte+Arbeitswelt/geki_Abschlussbericht.pdf"
   },
   {
     "title": "Intersektionalität",
@@ -62,5 +102,9 @@
   {
     "title": "ARTIFICIAL INTELLIGENCE and GENDER EQUALITY",
     "url": "unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_ab07646d-c784-4a4e-96a1-3be7855b6f76?_=374174eng.pdf&to=54&from=1"
+  },
+  {
+    "title": "Challenging systematic prejudices: an Investigation into Gen",
+    "url": "https://discovery.ucl.ac.uk/id/eprint/10188772/1/Unesco_results.pdf"
   }
 ]
