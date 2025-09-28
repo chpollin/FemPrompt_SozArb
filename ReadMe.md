@@ -1,8 +1,8 @@
-# THIS IS A VIBE CODING / VIBE RESEARCH EXPERIMENT!
+# FemPrompt Research Pipeline
 
-# AI-Assisted Research Workflow: From Discovery to Analysis
+## AI-Assisted Literature Research System for Bias and Intersectionality Analysis
 
-This document outlines an end-to-end workflow that uses multiple AI models for systematic literature discovery and a custom script for large-scale, automated content analysis.
+An automated, end-to-end research pipeline that leverages multiple AI models for systematic literature discovery, intelligent PDF acquisition, and knowledge graph generation.
 
 ## The Workflow
 

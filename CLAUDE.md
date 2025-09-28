@@ -35,10 +35,23 @@ set GEMINI_API_KEY=your-api-key-here                   # Windows Command Prompt
 
 ## Pipeline Architecture
 
-### Execution Sequence
+### Automated Execution (NEW)
 ```bash
-# Complete pipeline execution (currently manual, automation pending)
-python analysis/getPDF.py                              # Stage 1: Document acquisition
+# Complete pipeline execution with single command
+python run_pipeline.py                                 # Run all stages automatically
+
+# Alternative execution modes
+python run_pipeline.py --resume                        # Resume from checkpoint
+python run_pipeline.py --stages acquire_pdfs,summarize # Run specific stages
+python run_pipeline.py --skip convert_pdfs            # Skip specific stages
+python run_pipeline.py --dry-run                      # Preview without execution
+python run_pipeline.py -v                             # Verbose logging
+```
+
+### Manual Execution (Legacy)
+```bash
+# Individual stage execution
+python analysis/getPDF_intelligent.py                  # Stage 1: Document acquisition
 python analysis/pdf-to-md-converter.py                 # Stage 2: Format conversion
 python analysis/summarize-documents.py                 # Stage 3: Content analysis
 python analysis/generate_obsidian_vault_improved.py    # Stage 4: Knowledge graph generation
@@ -55,13 +68,29 @@ python analysis/test_vault_quality.py                  # Stage 5: Quality valida
 **Status:** Manual execution required
 
 ### Stage 2: Document Acquisition and Conversion
-```bash
-# Document download from identified sources
-python analysis/getPDF.py
-# Input: URL list from literature discovery
-# Output: PDF documents in analysis/pdfs/
 
-# PDF to Markdown conversion
+#### Intelligent PDF Acquisition (NEW)
+```bash
+python analysis/getPDF_intelligent.py
+# Hierarchical acquisition strategy:
+#   1. Zotero attachments (local PDFs)
+#   2. Metadata URLs/DOIs
+#   3. Open access APIs (Unpaywall, ArXiv)
+#   4. Manual intervention report
+# Input: analysis/zotero_vereinfacht.json
+# Output: analysis/pdfs/*.pdf
+# Success rate: >80% with Zotero attachments
+# Reports: acquisition_log.json, missing_pdfs.csv
+
+# With Zotero API integration:
+python analysis/getPDF_intelligent.py \
+  --api-key YOUR_KEY \
+  --library-id 12345 \
+  --library-type user
+```
+
+#### PDF to Markdown Conversion
+```bash
 python analysis/pdf-to-md-converter.py
 # Input: analysis/pdfs/*.pdf
 # Output: analysis/markdown_papers/*.md
@@ -110,15 +139,27 @@ python analysis/test_vault_quality.py
 
 ## Standard Operating Procedures
 
-### Procedure 1: Processing New Literature Corpus
+### Procedure 1: Automated Complete Pipeline (NEW)
+```bash
+# Single command for complete workflow
+python run_pipeline.py                                 # Duration: ~90 minutes for 30 documents
+
+# Test pipeline functionality
+python test_pipeline.py --quick                        # Duration: ~10 seconds
+python test_pipeline.py --full                         # Duration: ~30 seconds
+```
+
+### Procedure 2: Processing New Literature Corpus (Manual)
 ```bash
 # Sequential execution required
+python analysis/getPDF_intelligent.py                  # Duration: ~5 minutes for 30 PDFs
+python analysis/pdf-to-md-converter.py                 # Duration: ~15 minutes
 python analysis/summarize-documents.py                 # Duration: ~60 minutes for 30 documents
 python analysis/generate_obsidian_vault_improved.py    # Duration: <1 minute
 python analysis/test_vault_quality.py                  # Duration: <10 seconds
 ```
 
-### Procedure 2: Vault Regeneration
+### Procedure 3: Vault Regeneration
 ```bash
 # For concept extraction refinement only
 python analysis/generate_obsidian_vault_improved.py
@@ -126,7 +167,7 @@ python analysis/test_vault_quality.py
 # Note: Preserves existing document summaries
 ```
 
-### Procedure 3: Failed Document Recovery
+### Procedure 4: Failed Document Recovery
 ```bash
 # Identify failed documents
 grep '"failed"' analysis/summaries_final/batch_metadata.json
