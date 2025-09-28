@@ -12,17 +12,17 @@ This documentation specifies the operational procedures for an automated literat
 
 ### Python Package Requirements
 ```bash
-# Core dependencies
-pip install requests==2.31.0
-pip install pyyaml==6.0.1
-pip install beautifulsoup4==4.12.2
-pip install PyPDF2==3.0.1
+# Install all dependencies at once
+pip install -r requirements.txt
 
-# Development dependencies (optional)
-pip install pytest==7.4.3
-pip install mypy==1.7.1
-pip install black==23.12.0
-pip install ruff==0.1.7
+# Or install manually:
+pip install requests>=2.31.0 pyyaml>=6.0 PyPDF2>=3.0.0 beautifulsoup4>=4.12.0
+
+# Optional: For Zotero API integration
+pip install pyzotero
+
+# Optional: For advanced PDF conversion
+pip install docling
 ```
 
 ### Environment Configuration
@@ -35,10 +35,20 @@ set GEMINI_API_KEY=your-api-key-here                   # Windows Command Prompt
 
 ## Pipeline Architecture
 
+### Configuration File
+The pipeline uses `pipeline_config.yaml` for customization. A default configuration is provided with sensible defaults. Key settings include:
+- Stage enable/disable flags
+- API rate limiting
+- File paths
+- Performance tuning
+
 ### Automated Execution (NEW)
 ```bash
 # Complete pipeline execution with single command
-python run_pipeline.py                                 # Run all stages automatically
+python run_pipeline.py                                 # Uses default config
+
+# With custom configuration
+python run_pipeline.py --config my_config.yaml
 
 # Alternative execution modes
 python run_pipeline.py --resume                        # Resume from checkpoint

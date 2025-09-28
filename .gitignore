@@ -8,3 +8,24 @@ FemPrompt_Vault/
 
 # Claude configuration
 .claude/
+
+# Pipeline test artifacts
+test_pipeline_data/
+test_pipeline_*.log
+
+# Pipeline runtime files
+.pipeline_status.json
+logs/
+
+# Temporary analysis files
+analysis/acquisition_log.json
+analysis/missing_pdfs.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.venv/
+venv/
