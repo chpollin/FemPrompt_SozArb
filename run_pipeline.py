@@ -61,14 +61,7 @@ class ResearchPipeline:
         # Setup logging
         self._setup_logging(verbose)
 
-        # Initialize status
-        if resume and self.status_file.exists():
-            self.status = self._load_status()
-            self.logger.info(f"Resuming pipeline from checkpoint: {self.status.get('last_checkpoint')}")
-        else:
-            self.status = self._initialize_status()
-
-        # Define pipeline stages
+        # Define pipeline stages (must be before status initialization)
         self.stages = [
             {
                 'name': 'acquire_pdfs',
@@ -106,6 +99,13 @@ class ResearchPipeline:
                 'required': False
             }
         ]
+
+        # Initialize status (after stages are defined)
+        if resume and self.status_file.exists():
+            self.status = self._load_status()
+            self.logger.info(f"Resuming pipeline from checkpoint: {self.status.get('last_checkpoint')}")
+        else:
+            self.status = self._initialize_status()
 
     def _load_config(self) -> Dict:
         """Load configuration from YAML file"""

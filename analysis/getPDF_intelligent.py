@@ -127,9 +127,14 @@ class PDFAcquisitionPipeline:
         with open(json_file, 'r', encoding='utf-8') as f:
             bibliography = json.load(f)
 
-        items = bibliography.get('items', bibliography)
-        if isinstance(items, dict):
-            items = [items]
+        # Handle both formats: direct list or dictionary with 'items' key
+        if isinstance(bibliography, list):
+            items = bibliography
+        elif isinstance(bibliography, dict):
+            items = bibliography.get('items', [bibliography])
+        else:
+            logger.error(f"Unexpected bibliography format: {type(bibliography)}")
+            items = []
 
         self.stats['total'] = len(items)
         logger.info(f"📚 Found {len(items)} papers to process")
