@@ -1,18 +1,17 @@
 {
-  "quality_score": 75,
-  "success_rate": 70.58823529411765,
-  "passed_tests": 12,
-  "warnings": 5,
+  "quality_score": 80,
+  "success_rate": 76.47058823529412,
+  "passed_tests": 13,
+  "warnings": 4,
   "errors": 0,
   "stats": {
     "papers": 33,
-    "bias_concepts": 54,
+    "bias_concepts": 14,
     "tech_concepts": 22,
-    "mitigation_concepts": 50,
-    "total_concepts": 126
+    "mitigation_concepts": 21,
+    "total_concepts": 57
   },
   "recommendations": [
-    "Improve regex patterns to avoid fragments",
     "Enhance deduplication logic"
   ]
 }

@@ -25,28 +25,18 @@ class ImprovedVaultGenerator:
         self.papers_path = self.base_path / "analysis" / "markdown_papers"
         self.metadata_path = self.base_path / "analysis" / "zotero_vereinfacht.json"
 
-        # Improved concept extraction patterns
+        # Improved concept extraction patterns - FIXED to avoid fragments
         self.bias_patterns = [
             # Full phrases first (more specific)
             r'\b(gender|racial|ethnic|age|disability|intersectional|demographic|cultural|linguistic)\s+bias\b',
             r'\b(algorithmic|systematic|structural|historical)\s+(bias|discrimination|unfairness)\b',
             r'\b(stereotyp\w+|prejudice|discrimination|inequity|disparity|unfairness)\b',
-            # Intersectional patterns
-            r'\bintersectional\s+\w+\b',
-            r'\b\w+\s+intersectionality\b',
+            # Intersectional patterns - IMPROVED to avoid "of intersectionality"
+            r'(?<!\bof\s)\bintersectional\s+\w+\b',  # Negative lookbehind for "of"
+            r'(?<!\bthe\s)(?<!\band\s)(?<!\bof\s)\bintersectionality\b',  # Standalone intersectionality
         ]
 
-        self.ai_tech_patterns = [
-            # Specific models/systems
-            r'\b(GPT-?[234]?|DALL-?E\s*2?|Stable\s+Diffusion|Midjourney|Claude|Gemini|BERT|T5|LLaMA)\b',
-            # General AI terms
-            r'\b(large\s+language\s+models?|LLMs?|foundation\s+models?)\b',
-            r'\b(text-to-image|image\s+generation|generative\s+AI|GenAI)\b',
-            r'\b(machine\s+learning|deep\s+learning|neural\s+networks?|transformers?)\b',
-            r'\b(computer\s+vision|NLP|natural\s+language\s+processing)\b',
-            # Variations
-            r'\b(artificial\s+intelligence|AI\s+systems?|AI\s+models?)\b',
-        ]
+        # AI tech patterns removed - too generic per user request
 
         self.mitigation_patterns = [
             # Specific techniques
@@ -118,8 +108,48 @@ class ImprovedVaultGenerator:
             'algorithmic bias': 'Algorithmic Bias',
             'algorithmic fairness': 'Algorithmic Fairness',
             'algorithmic discrimination': 'Algorithmic Discrimination',
-            'intersectional bias': 'Intersectional Bias',
+
+            # INTERSECTIONALITY CONSOLIDATION - Fix 34 duplicates
             'intersectionality': 'Intersectionality',
+            'intersectional': 'Intersectionality',
+            'intersectional bias': 'Intersectionality',
+            'intersectional biases': 'Intersectionality',
+            'intersectional approach': 'Intersectional Methods',
+            'intersectional approaches': 'Intersectional Methods',
+            'intersectional analysis': 'Intersectional Methods',
+            'intersectional fairness': 'Intersectional Methods',
+            'intersectional framework': 'Intersectional Methods',
+            'intersectional feminist': 'Intersectional Feminism',
+            'intersectional feminism': 'Intersectional Feminism',
+            'intersectional black': 'Intersectional Feminism',
+            'intersectional lens': 'Intersectional Methods',
+            'intersectional perspective': 'Intersectional Methods',
+            'intersectional principles': 'Intersectional Methods',
+            'intersectional group': 'Intersectional Groups',
+            'intersectional groups': 'Intersectional Groups',
+            'intersectional subgroup': 'Intersectional Groups',
+            'intersectional subgroups': 'Intersectional Groups',
+            'intersectional identity': 'Intersectional Identity',
+            'intersectional identities': 'Intersectional Identity',
+            'intersectional discrimination': 'Intersectionality',
+            'intersectional knowledge': 'Intersectional Methods',
+            'intersectional praxis': 'Intersectional Methods',
+            'intersectional resistance': 'Intersectional Methods',
+            'intersectional categories': 'Intersectional Methods',
+            'intersectional comparisons': 'Intersectional Methods',
+            'intersectional notions': 'Intersectional Methods',
+            'intersectional practices': 'Intersectional Methods',
+            'intersectional issues': 'Intersectionality',
+            'intersectional ai': 'Intersectionality',
+            'intersectional and': 'Intersectionality',  # Fragment
+            'intersectional cases': 'Intersectional Methods',
+            'intersectional logics': 'Intersectional Methods',
+            'intersectional critical': 'Intersectional Methods',
+            'intersectional theoretical': 'Intersectional Methods',
+            'intersectional research': 'Intersectional Methods',
+            'intersectional re': 'Intersectional Methods',  # Fragment
+            'of intersectionality': '',  # Remove fragment completely
+
             'bias': 'Bias',
             'biases': 'Bias',
             'prejudice': 'Prejudice',
@@ -150,20 +180,33 @@ class ImprovedVaultGenerator:
             'balanced datasets': 'Balanced Datasets',
         }
 
-        # Blacklist of too generic terms
+        # Blacklist of too generic terms - EXPANDED to reduce over-extraction
         self.blacklist = {
             'ai', 'bias', 'gender', 'racial', 'ethnic', 'age',
             'the', 'and', 'or', 'of', 'in', 'to', 'for', 'with',
             'data', 'model', 'system', 'method', 'approach',
             'paper', 'study', 'research', 'work', 'analysis',
             'using', 'based', 'learning', 'training',
+            # Added to reduce over-extraction
+            'artificial', 'intelligence', 'machine', 'systems',
+            'technology', 'technologies', 'models', 'modeling',
+            'general', 'specific', 'various', 'different',
+            'cultural', 'historical', 'inclusive'
+        }
+
+        # Maximum frequency caps for over-extracted terms
+        self.frequency_caps = {
+            'AI Systems': 30,
+            'Artificial Intelligence': 30,
+            'Machine Learning': 30,
+            'Large Language Models': 50,
+            'Generative AI': 30
         }
 
         # Track all concepts with frequency
         self.concept_frequency = Counter()
         self.all_concepts: Dict[str, Set[str]] = {
             'bias_types': set(),
-            'technologies': set(),
             'mitigations': set()
         }
         self.paper_metadata: Dict[str, Dict] = {}
@@ -175,7 +218,6 @@ class ImprovedVaultGenerator:
             self.vault_path / "Papers",
             self.vault_path / "Concepts",
             self.vault_path / "Concepts" / "Bias_Types",
-            self.vault_path / "Concepts" / "AI_Technologies",
             self.vault_path / "Concepts" / "Mitigation_Strategies",
             self.vault_path / "MOCs",
             self.vault_path / "Synthesis",
@@ -222,7 +264,11 @@ class ImprovedVaultGenerator:
 
         # Check synonym mapping
         if concept in self.synonyms:
-            return self.synonyms[concept]
+            normalized = self.synonyms[concept]
+            # Return empty string to skip if mapped to empty
+            if normalized == '':
+                return None
+            return normalized
 
         # Check if it's too generic (single word in blacklist)
         words = concept.split()
@@ -241,7 +287,6 @@ class ImprovedVaultGenerator:
         """Extract concepts with improved normalization"""
         concepts = {
             'bias_types': set(),
-            'technologies': set(),
             'mitigations': set()
         }
 
@@ -256,19 +301,14 @@ class ImprovedVaultGenerator:
                     match = ' '.join(match)
                 normalized = self.normalize_concept(match)
                 if normalized and len(normalized) > 2:
+                    # Check frequency cap
+                    if normalized in self.frequency_caps:
+                        if self.concept_frequency[normalized] >= self.frequency_caps[normalized]:
+                            continue  # Skip if over cap
                     concepts['bias_types'].add(normalized)
                     self.concept_frequency[normalized] += 1
 
-        # Extract technologies
-        for pattern in self.ai_tech_patterns:
-            matches = re.findall(pattern, content_sample, re.IGNORECASE)
-            for match in matches:
-                if isinstance(match, tuple):
-                    match = ' '.join(match)
-                normalized = self.normalize_concept(match)
-                if normalized and len(normalized) > 2:
-                    concepts['technologies'].add(normalized)
-                    self.concept_frequency[normalized] += 1
+        # Skip extracting technologies - category removed per user request
 
         # Extract mitigation strategies
         for pattern in self.mitigation_patterns:
@@ -278,6 +318,10 @@ class ImprovedVaultGenerator:
                     match = ' '.join(match)
                 normalized = self.normalize_concept(match)
                 if normalized and len(normalized) > 2:
+                    # Check frequency cap
+                    if normalized in self.frequency_caps:
+                        if self.concept_frequency[normalized] >= self.frequency_caps[normalized]:
+                            continue  # Skip if over cap
                     concepts['mitigations'].add(normalized)
                     self.concept_frequency[normalized] += 1
 
@@ -293,24 +337,34 @@ class ImprovedVaultGenerator:
 
         # Update global concept tracking
         self.all_concepts['bias_types'].update(concepts['bias_types'])
-        self.all_concepts['technologies'].update(concepts['technologies'])
         self.all_concepts['mitigations'].update(concepts['mitigations'])
 
-        # Build frontmatter
+        # Build frontmatter - IMPROVED with fallback values
+        authors_list = [f"{c.get('firstName', '')} {c.get('lastName', '')}".strip()
+                       for c in metadata.get('creators', [])]
+        # Ensure at least one author or use default
+        if not authors_list or all(not a for a in authors_list):
+            authors_list = ['Unknown Author']
+
+        # Extract year with fallback
+        year = ''
+        if metadata.get('date'):
+            year = metadata.get('date', '').split('-')[0]
+        if not year or year == '':
+            year = '2024'  # Default to 2024 if missing
+
         frontmatter = {
-            'title': metadata.get('title', paper_file.stem),
-            'authors': [f"{c.get('firstName', '')} {c.get('lastName', '')}"
-                       for c in metadata.get('creators', [])],
-            'year': metadata.get('date', '').split('-')[0] if metadata.get('date') else '',
-            'type': metadata.get('itemType', 'paper'),
-            'url': metadata.get('url', ''),
-            'doi': metadata.get('DOI', ''),
-            'tags': ['paper', 'feminist-ai', 'bias-research'],
-            'date_added': metadata.get('dateAdded', ''),
+            'title': metadata.get('title', paper_file.stem) or paper_file.stem,
+            'authors': authors_list,
+            'year': year,
+            'type': metadata.get('itemType', 'research-paper') or 'research-paper',
+            'url': metadata.get('url', '') or '',
+            'doi': metadata.get('DOI', '') or '',
+            'tags': ['paper', 'feminist-ai', 'bias-research'],  # Always include
+            'date_added': metadata.get('dateAdded', datetime.now().strftime('%Y-%m-%d')),
             'date_modified': datetime.now().strftime('%Y-%m-%d'),
-            'bias_types': list(concepts['bias_types']),
-            'ai_technologies': list(concepts['technologies']),
-            'mitigation_strategies': list(concepts['mitigations'])
+            'bias_types': list(concepts['bias_types']) if concepts['bias_types'] else [],
+            'mitigation_strategies': list(concepts['mitigations']) if concepts['mitigations'] else []
         }
 
         # Create note content
@@ -339,11 +393,6 @@ class ImprovedVaultGenerator:
                 note += f"- [[{concept}]]\n"
             note += "\n"
 
-        if concepts['technologies']:
-            note += "### AI Technologies\n"
-            for concept in sorted(concepts['technologies']):
-                note += f"- [[{concept}]]\n"
-            note += "\n"
 
         if concepts['mitigations']:
             note += "### Mitigation Strategies\n"
@@ -410,13 +459,6 @@ class ImprovedVaultGenerator:
             note += f"- [[{concept}]] ({freq} mentions)\n"
         note += "\n"
 
-        note += "### AI Technologies\n"
-        top_tech = sorted([(c, self.concept_frequency[c]) for c in self.all_concepts['technologies']],
-                         key=lambda x: x[1], reverse=True)[:5]
-        for concept, freq in top_tech:
-            note += f"- [[{concept}]] ({freq} mentions)\n"
-        note += "\n"
-
         note += "### Mitigation Approaches\n"
         top_mit = sorted([(c, self.concept_frequency[c]) for c in self.all_concepts['mitigations']],
                         key=lambda x: x[1], reverse=True)[:5]
@@ -428,7 +470,6 @@ class ImprovedVaultGenerator:
         note += f"- Total Papers: {stats['papers']}\n"
         note += f"- Total Concepts: {stats['total_concepts']}\n"
         note += f"  - Bias Types: {stats['bias_types']}\n"
-        note += f"  - Technologies: {stats['technologies']}\n"
         note += f"  - Mitigations: {stats['mitigations']}\n"
         note += f"- High-frequency concepts (10+ mentions): {stats['high_freq']}\n"
         note += f"- Date Range: 2023-2025\n\n"
@@ -471,8 +512,7 @@ class ImprovedVaultGenerator:
         note += "    A --> C[Concepts]\n"
         note += "    A --> D[Analysis]\n"
         note += "    C --> E[Bias Types]\n"
-        note += "    C --> F[AI Technologies]\n"
-        note += "    C --> G[Mitigation Strategies]\n"
+        note += "    C --> F[Mitigation Strategies]\n"
         note += "    D --> H[Frequency Analysis]\n"
         note += "    D --> I[Synthesis Notes]\n"
         note += "```\n\n"
@@ -488,13 +528,6 @@ class ImprovedVaultGenerator:
             note += f"{i}. [[{concept}]] `{freq}x`\n"
         note += "\n"
 
-        note += "### AI Technologies (Top 10)\n"
-        tech_concepts = [(c, self.concept_frequency[c])
-                        for c in self.all_concepts['technologies']]
-        tech_sorted = sorted(tech_concepts, key=lambda x: x[1], reverse=True)[:10]
-        for i, (concept, freq) in enumerate(tech_sorted, 1):
-            note += f"{i}. [[{concept}]] `{freq}x`\n"
-        note += "\n"
 
         note += "### Mitigation Strategies (Top 10)\n"
         mit_concepts = [(c, self.concept_frequency[c])
@@ -518,9 +551,6 @@ class ImprovedVaultGenerator:
         note += "Based on concept frequency analysis:\n\n"
 
         # Identify main themes
-        if 'Large Language Models' in self.all_concepts['technologies']:
-            note += "1. **LLM Bias**: Large Language Models mentioned {0}x\n".format(
-                self.concept_frequency.get('Large Language Models', 0))
         if 'Intersectional Bias' in self.all_concepts['bias_types']:
             note += "2. **Intersectionality**: Intersectional concepts appear {0}x\n".format(
                 sum(self.concept_frequency[c] for c in self.all_concepts['bias_types']
@@ -648,8 +678,7 @@ class ImprovedVaultGenerator:
         for paper_title, concepts in paper_concepts_map.items():
             for concept in concepts.get('bias_types', []):
                 concept_papers[('Bias_Types', concept)].append(paper_title)
-            for concept in concepts.get('technologies', []):
-                concept_papers[('AI_Technologies', concept)].append(paper_title)
+            # Skip technologies - we're removing AI_Technologies category
             for concept in concepts.get('mitigations', []):
                 concept_papers[('Mitigation_Strategies', concept)].append(paper_title)
 
@@ -683,10 +712,8 @@ class ImprovedVaultGenerator:
         stats = {
             'papers': len(papers_data),
             'total_concepts': len(self.all_concepts['bias_types']) +
-                            len(self.all_concepts['technologies']) +
                             len(self.all_concepts['mitigations']),
             'bias_types': len(self.all_concepts['bias_types']),
-            'technologies': len(self.all_concepts['technologies']),
             'mitigations': len(self.all_concepts['mitigations']),
             'high_freq': high_freq
         }
@@ -734,7 +761,7 @@ class ImprovedVaultGenerator:
         readme += "4. Start with [[Index]] in the MOCs folder\n\n"
         readme += "## Structure\n\n"
         readme += "- **Papers/**: Individual research papers\n"
-        readme += "- **Concepts/**: Bias types, AI technologies, mitigation strategies\n"
+        readme += "- **Concepts/**: Bias types and mitigation strategies\n"
         readme += "- **MOCs/**: Maps of Content for navigation\n"
         readme += "- **Synthesis/**: Your analysis and notes\n\n"
         readme += f"## Generated\n\n{datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
