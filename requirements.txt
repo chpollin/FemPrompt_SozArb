@@ -4,10 +4,14 @@
 # Core packages
 requests>=2.31.0
 pyyaml>=6.0
+python-dotenv>=1.0.0  # For environment variable management
 
 # PDF processing
 PyPDF2>=3.0.0
 beautifulsoup4>=4.12.0
+
+# Google Gemini API (required for summarization)
+google-generativeai>=0.3.0
 
 # Optional: Zotero integration
 # Uncomment if using Zotero API features
@@ -16,9 +20,3 @@ beautifulsoup4>=4.12.0
 # Optional: Advanced PDF conversion
 # Requires additional system dependencies
 # docling>=0.1.0
-
-# Development and testing (optional)
-pytest>=7.4.0
-black>=23.0.0
-ruff>=0.1.0
-mypy>=1.7.0

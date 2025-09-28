@@ -4,6 +4,21 @@
 
 An automated, end-to-end research pipeline that leverages multiple AI models for systematic literature discovery, intelligent PDF acquisition, and knowledge graph generation.
 
+## Quick Start
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Set API key
+export GEMINI_API_KEY="your-api-key-here"  # Linux/Mac
+# or
+$env:GEMINI_API_KEY="your-api-key-here"     # Windows PowerShell
+
+# Run complete pipeline
+python run_pipeline.py
+```
+
 ## The Workflow
 
 ### **Step 1: Parametric Deep Research Prompt**
@@ -57,21 +72,18 @@ A human expert reviews the aggregated bibliography in Zotero. This critical step
 * **Correcting** any bibliographic inaccuracies.
 * **Curating** the final list of sources for full-text analysis.
 
-### **Step 6: Automated Content Analysis with LangExtract**
+### **Step 6: Automated Content Analysis**
 
-This final phase transitions from literature collection to substantive analysis using the full-text articles.
+This phase performs deep content analysis using the full-text articles:
 
-* **Preparation:** Ensure all curated full-text articles are converted to Markdown and placed in the `markdown_papers/` directory.
-* **Execution:** Run the `corpus_analysis_final_script.py` script.
-  * **Important:** Before running, you must set your API key as an environment variable. Open your terminal and use the appropriate command:
-    * **macOS/Linux:** `export GEMINI_API_KEY="YOUR_API_KEY_HERE"`
-    * **Windows (PowerShell):** `$env:GEMINI_API_KEY="YOUR_API_KEY_HERE"`
-* **Thematic Extraction:** The script uses an AI model (Gemini 2.5 Flash) to read every paper and extract predefined concepts, such as `bias_type`, `mitigation_strategy`, and `key_finding`.
-* **Final Outputs:** The script generates two powerful research artifacts:
-  1. **`corpus_analysis.jsonl`**: A machine-readable dataset containing all extracted thematic data, perfect for quantitative analysis and data mining.
-  2. **`corpus_analysis_visualization.html`**: An interactive HTML file that displays each paper's full text with the extracted terms highlighted, allowing for rapid qualitative review and validation.
-
-This step completes the research cycle, transforming a simple literature collection into a structured, queryable knowledge base.
+* **Preparation:** Ensure PDFs are converted to Markdown in `analysis/markdown_papers/` directory
+* **Execution:** Run `python analysis/summarize-documents.py`
+  * Uses Gemini 2.5 Flash with 5-stage iterative refinement
+  * Generates structured summaries with metadata extraction
+  * Processing time: ~2 minutes per document
+* **Output:** `analysis/summaries_final/` containing:
+  * Individual paper summaries with YAML frontmatter
+  * Batch metadata tracking processing status
 
 ### **Step 7: Knowledge Graph Generation (Obsidian Vault)**
 
@@ -89,6 +101,71 @@ Transform your research papers into an interconnected knowledge graph using Obsi
   * Quality Score: 85/100 (tested with `test_vault_quality.py`)
 * **Output:** `FemPrompt_Vault/` folder ready to open in Obsidian
 * **Benefits:** Visual exploration of research connections, concept frequency tracking, and synthesis templates
+
+## Automated Pipeline Execution
+
+### Complete Workflow (Recommended)
+
+```bash
+# Run all stages automatically
+python run_pipeline.py
+
+# Resume from checkpoint after interruption
+python run_pipeline.py --resume
+
+# Run specific stages only
+python run_pipeline.py --stages acquire_pdfs,convert_pdfs
+
+# Skip specific stages
+python run_pipeline.py --skip summarize
+
+# Dry run to preview
+python run_pipeline.py --dry-run
+```
+
+### Manual Stage Execution
+
+For granular control, run stages individually:
+
+```bash
+# 1. Acquire PDFs from Zotero metadata
+python analysis/getPDF_intelligent.py
+
+# 2. Convert PDFs to Markdown
+python analysis/pdf-to-md-converter.py
+
+# 3. Generate AI summaries
+python analysis/summarize-documents.py
+
+# 4. Create Obsidian knowledge graph
+python analysis/generate_obsidian_vault_improved.py
+
+# 5. Validate vault quality
+python analysis/test_vault_quality.py
+```
+
+## Project Structure
+
+```
+FemPrompt_SozArb/
+├── run_pipeline.py              # Master orchestration script
+├── pipeline_config.yaml         # Configuration file
+├── analysis/                    # Processing scripts
+│   ├── getPDF_intelligent.py    # Smart PDF acquisition
+│   ├── pdf-to-md-converter.py   # Format conversion
+│   ├── summarize-documents.py   # AI content analysis
+│   ├── generate_obsidian_vault_improved.py  # Knowledge graph
+│   ├── test_vault_quality.py    # Quality validation
+│   ├── pdfs/                    # Downloaded PDFs
+│   ├── markdown_papers/         # Converted documents
+│   ├── summaries_final/         # AI-generated summaries
+│   └── zotero_vereinfacht.json  # Bibliography metadata
+├── FemPrompt_Vault/             # Obsidian knowledge graph
+│   ├── Papers/                  # Individual paper notes
+│   ├── Concepts/                # Extracted concepts
+│   └── MASTER_MOC.md           # Navigation index
+└── deep-research/               # Multi-model search results
+```
 
 ## Workflow-Diagramm
 

@@ -42,7 +42,7 @@ The pipeline uses `pipeline_config.yaml` for customization. A default configurat
 - File paths
 - Performance tuning
 
-### Automated Execution (NEW)
+### Automated Execution
 ```bash
 # Complete pipeline execution with single command
 python run_pipeline.py                                 # Uses default config
@@ -70,16 +70,14 @@ python analysis/test_vault_quality.py                  # Stage 5: Quality valida
 
 ## Processing Stages
 
-### Stage 1: Multi-Model Literature Discovery
-**Process:** Systematic literature search using parametric prompts across four AI models
-**Models:** Google Gemini 1.5 Pro, Anthropic Claude 3, OpenAI GPT-4, Perplexity Pro
-**Output Directory:** `deep-research/[ModelName]/`
-**Export Format:** RIS (Research Information Systems)
-**Status:** Manual execution required
+### Stage 1: Literature Collection and Import
+**Process:** Import bibliography from Zotero after multi-model literature search
+**Input:** `analysis/zotero_vereinfacht.json` (exported from Zotero)
+**Status:** Manual Zotero export required before pipeline execution
 
 ### Stage 2: Document Acquisition and Conversion
 
-#### Intelligent PDF Acquisition (NEW)
+#### Intelligent PDF Acquisition
 ```bash
 python analysis/getPDF_intelligent.py
 # Hierarchical acquisition strategy:
@@ -149,14 +147,13 @@ python analysis/test_vault_quality.py
 
 ## Standard Operating Procedures
 
-### Procedure 1: Automated Complete Pipeline (NEW)
+### Procedure 1: Automated Complete Pipeline
 ```bash
 # Single command for complete workflow
 python run_pipeline.py                                 # Duration: ~90 minutes for 30 documents
 
-# Test pipeline functionality
-python test_pipeline.py --quick                        # Duration: ~10 seconds
-python test_pipeline.py --full                         # Duration: ~30 seconds
+# With custom configuration
+python run_pipeline.py --config my_config.yaml
 ```
 
 ### Procedure 2: Processing New Literature Corpus (Manual)
@@ -234,21 +231,19 @@ min_frequency = 3  # Increase from 2
 
 ```
 FemPrompt_SozArb/
-├── deep-research/           # Multi-model literature search results
-│   ├── Claude/             # Anthropic Claude outputs
-│   ├── Gemini/             # Google Gemini outputs
-│   ├── OpenAI/             # OpenAI GPT-4 outputs
-│   └── Perplexity/         # Perplexity Pro outputs
-├── to-Zotero/              # RIS format bibliographies
-│   └── *.ris               # One file per AI model
+├── run_pipeline.py          # Master orchestration script
+├── pipeline_config.yaml     # Pipeline configuration
+├── requirements.txt         # Python dependencies
 ├── analysis/               # Processing pipeline scripts
-│   ├── markdown_papers/    # Converted documents (input)
-│   ├── summaries_final/    # Processed summaries (output)
-│   ├── getPDF.py           # Document acquisition
-│   ├── pdf-to-md-converter.py # Format conversion
-│   ├── summarize-documents.py # Content analysis
+│   ├── pdfs/               # Downloaded PDF documents
+│   ├── markdown_papers/    # Converted documents
+│   ├── summaries_final/    # AI-generated summaries
+│   ├── zotero_vereinfacht.json # Bibliography metadata
+│   ├── getPDF_intelligent.py    # Smart PDF acquisition
+│   ├── pdf-to-md-converter.py   # Format conversion
+│   ├── summarize-documents.py   # Content analysis
 │   ├── generate_obsidian_vault_improved.py # Knowledge graph
-│   └── test_vault_quality.py # Quality validation
+│   └── test_vault_quality.py    # Quality validation
 ├── FemPrompt_Vault/        # Obsidian knowledge graph output
 │   ├── Papers/             # Individual paper notes
 │   ├── Concepts/           # Extracted concept notes

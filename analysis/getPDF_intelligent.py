@@ -292,7 +292,7 @@ class PDFAcquisitionPipeline:
 
         # Try direct URL
         url = item.get('url')
-        if url and self._download_pdf(url, output_path):
+        if url and self._download_pdf(url, output_path, follow_redirects=True):
             return True
 
         # Try DOI
@@ -349,7 +349,7 @@ class PDFAcquisitionPipeline:
 
         return False
 
-    def _download_pdf(self, url: str, output_path: Path, follow_redirects: bool = False) -> bool:
+    def _download_pdf(self, url: str, output_path: Path, follow_redirects: bool = True) -> bool:
         """Download PDF from URL"""
 
         # Skip if already tried and failed
@@ -378,6 +378,30 @@ class PDFAcquisitionPipeline:
                         return True
                     else:
                         output_path.unlink()
+
+                elif 'html' in content_type.lower():
+                    # Try to find PDF link on HTML page
+                    from bs4 import BeautifulSoup
+                    soup = BeautifulSoup(response.text, 'html.parser')
+
+                    # Strategy 1: Look for PDF links
+                    pdf_links = [a.get('href', '') for a in soup.find_all('a')
+                                if '.pdf' in a.get('href', '')]
+
+                    if pdf_links:
+                        # Try first PDF link
+                        pdf_url = pdf_links[0]
+                        if not pdf_url.startswith('http'):
+                            # Make absolute URL
+                            from urllib.parse import urljoin
+                            pdf_url = urljoin(url, pdf_url)
+                        return self._download_pdf(pdf_url, output_path, follow_redirects=True)
+
+                    # Strategy 2: Try adding .pdf to URL for known repositories
+                    if 'aclanthology.org' in url or 'arxiv.org' in url:
+                        pdf_url = url.rstrip('/') + '.pdf'
+                        if pdf_url != url:  # Avoid infinite recursion
+                            return self._download_pdf(pdf_url, output_path, follow_redirects=True)
 
         except Exception as e:
             logger.debug(f"Download error for {url}: {e}")
