@@ -84,7 +84,7 @@ Transform your research papers into an interconnected knowledge graph using Obsi
   * Builds cross-linked network between papers and concepts
   * Frequency analysis shows most discussed topics
   * MOCs (Maps of Content) for navigation
-* **Output:** `FemPrompt_Vault_Improved/` folder ready to open in Obsidian
+* **Output:** `FemPrompt_Vault/` folder ready to open in Obsidian
 * **Benefits:** Visual exploration of research connections, concept frequency tracking, and synthesis templates
 
 ## Workflow-Diagramm

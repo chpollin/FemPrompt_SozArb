@@ -438,6 +438,128 @@ class ImprovedVaultGenerator:
 
         return note
 
+    def create_master_moc(self, papers_data: List[Dict], stats: Dict, created_concepts: int) -> str:
+        """Create a compact Master MOC with entire vault overview on one page"""
+        note = "---\n"
+        note += "title: MASTER MOC - FemPrompt Research\n"
+        note += "type: master-moc\n"
+        note += "tags: [moc, master, navigation]\n"
+        note += f"generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
+        note += "---\n\n"
+
+        note += "# 🎯 MASTER MOC - Complete Vault Navigation\n\n"
+
+        # Research Question Box
+        note += "```\n"
+        note += "RESEARCH QUESTION:\n"
+        note += "How can feminist Digital/AI Literacies and diversity-reflective\n"
+        note += "prompting help to expose and mitigate bias and intersectional\n"
+        note += "discrimination in AI technologies?\n"
+        note += "```\n\n"
+
+        # Quick Stats Dashboard
+        note += "## 📊 Vault Statistics\n\n"
+        note += f"| Papers | Concepts | High-Freq | Categories |\n"
+        note += f"|:------:|:--------:|:---------:|:----------:|\n"
+        note += f"| **{stats['papers']}** | **{created_concepts}** | **{stats['high_freq']}** | **3** |\n\n"
+
+        # Navigation Structure
+        note += "## 🗺️ Navigation Structure\n\n"
+        note += "```mermaid\n"
+        note += "graph TD\n"
+        note += "    A[Master MOC] --> B[Papers]\n"
+        note += "    A --> C[Concepts]\n"
+        note += "    A --> D[Analysis]\n"
+        note += "    C --> E[Bias Types]\n"
+        note += "    C --> F[AI Technologies]\n"
+        note += "    C --> G[Mitigation Strategies]\n"
+        note += "    D --> H[Frequency Analysis]\n"
+        note += "    D --> I[Synthesis Notes]\n"
+        note += "```\n\n"
+
+        # Top Concepts by Category
+        note += "## 🔥 Top Concepts by Category\n\n"
+
+        note += "### Bias Types (Top 10)\n"
+        bias_concepts = [(c, self.concept_frequency[c])
+                        for c in self.all_concepts['bias_types']]
+        bias_sorted = sorted(bias_concepts, key=lambda x: x[1], reverse=True)[:10]
+        for i, (concept, freq) in enumerate(bias_sorted, 1):
+            note += f"{i}. [[{concept}]] `{freq}x`\n"
+        note += "\n"
+
+        note += "### AI Technologies (Top 10)\n"
+        tech_concepts = [(c, self.concept_frequency[c])
+                        for c in self.all_concepts['technologies']]
+        tech_sorted = sorted(tech_concepts, key=lambda x: x[1], reverse=True)[:10]
+        for i, (concept, freq) in enumerate(tech_sorted, 1):
+            note += f"{i}. [[{concept}]] `{freq}x`\n"
+        note += "\n"
+
+        note += "### Mitigation Strategies (Top 10)\n"
+        mit_concepts = [(c, self.concept_frequency[c])
+                        for c in self.all_concepts['mitigations']]
+        mit_sorted = sorted(mit_concepts, key=lambda x: x[1], reverse=True)[:10]
+        for i, (concept, freq) in enumerate(mit_sorted, 1):
+            note += f"{i}. [[{concept}]] `{freq}x`\n"
+        note += "\n"
+
+        # Recent Papers (2024-2025)
+        note += "## 📚 Recent Papers (2024-2025)\n\n"
+        recent_papers = [p for p in papers_data if p.get('year', '') in ['2024', '2025']]
+        for paper in recent_papers[:10]:
+            note += f"- [[{paper['title']}]] ({paper['year']})\n"
+        if len(recent_papers) > 10:
+            note += f"\n*...and {len(recent_papers) - 10} more recent papers*\n"
+        note += "\n"
+
+        # Key Findings Summary
+        note += "## 💡 Key Research Themes\n\n"
+        note += "Based on concept frequency analysis:\n\n"
+
+        # Identify main themes
+        if 'Large Language Models' in self.all_concepts['technologies']:
+            note += "1. **LLM Bias**: Large Language Models mentioned {0}x\n".format(
+                self.concept_frequency.get('Large Language Models', 0))
+        if 'Intersectional Bias' in self.all_concepts['bias_types']:
+            note += "2. **Intersectionality**: Intersectional concepts appear {0}x\n".format(
+                sum(self.concept_frequency[c] for c in self.all_concepts['bias_types']
+                    if 'intersectional' in c.lower()))
+        if 'Prompt Engineering' in self.all_concepts['mitigations']:
+            note += "3. **Prompting Solutions**: Prompt-based mitigation discussed {0}x\n".format(
+                sum(self.concept_frequency[c] for c in self.all_concepts['mitigations']
+                    if 'prompt' in c.lower()))
+        note += "\n"
+
+        # Quick Links Section
+        note += "## ⚡ Quick Links\n\n"
+        note += "### Core MOCs\n"
+        note += "- [[Index]] - Main navigation index\n"
+        note += "- [[Concept_Frequency]] - Frequency analysis\n"
+        note += "- [[Papers Index]] - All papers by year\n\n"
+
+        note += "### Your Workspace\n"
+        note += "- [[Synthesis/]] - Add your analysis here\n"
+        note += "- [[Research Notes]] - Create your notes\n"
+        note += "- [[Questions]] - Track open questions\n\n"
+
+        # Search Queries
+        note += "## 🔍 Useful Searches\n\n"
+        note += "Copy these into Obsidian search:\n\n"
+        note += "- `tag:#paper` - All research papers\n"
+        note += "- `tag:#concept` - All concepts\n"
+        note += "- `/\\[\\[.*Bias\\]\\]/` - Papers mentioning bias types\n"
+        note += "- `/frequency: [0-9]{2,}/` - High-frequency concepts\n"
+        note += "- `path:Synthesis` - Your synthesis notes\n\n"
+
+        # Footer
+        note += "---\n\n"
+        note += f"*Vault generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}*  \n"
+        note += f"*Total files: {stats['papers'] + created_concepts + 5} | "
+        note += f"Python script: `generate_obsidian_vault_improved.py`*\n"
+
+        return note
+
     def create_frequency_report(self) -> str:
         """Create a frequency analysis report"""
         note = "---\n"
@@ -579,6 +701,11 @@ class ImprovedVaultGenerator:
         with open(self.vault_path / "MOCs" / "Concept_Frequency.md", 'w', encoding='utf-8') as f:
             f.write(freq_report)
 
+        # Master MOC - THE MAIN NAVIGATION HUB
+        master_moc = self.create_master_moc(papers_data, stats, created_concepts)
+        with open(self.vault_path / "MASTER_MOC.md", 'w', encoding='utf-8') as f:
+            f.write(master_moc)
+
         # Create README
         self.create_vault_readme()
 
@@ -621,7 +748,7 @@ def main():
 
     parser = argparse.ArgumentParser(description='Generate improved Obsidian vault')
     parser.add_argument('--path', default=None, help='Base path of the project')
-    parser.add_argument('--vault-name', default='FemPrompt_Vault_Improved', help='Name of the vault folder')
+    parser.add_argument('--vault-name', default='FemPrompt_Vault', help='Name of the vault folder')
     parser.add_argument('--clean', action='store_true', help='Clean existing vault before generation')
 
     args = parser.parse_args()
