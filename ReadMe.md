@@ -73,6 +73,20 @@ This final phase transitions from literature collection to substantive analysis 
 
 This step completes the research cycle, transforming a simple literature collection into a structured, queryable knowledge base.
 
+### **Step 7: Knowledge Graph Generation (Obsidian Vault)**
+
+Transform your research papers into an interconnected knowledge graph using Obsidian:
+
+* **Script:** Run `python analysis/generate_obsidian_vault_improved.py`
+* **Features:**
+  * Extracts and normalizes concepts (bias types, AI technologies, mitigation strategies)
+  * Creates 126 deduplicated concept notes from 35 papers
+  * Builds cross-linked network between papers and concepts
+  * Frequency analysis shows most discussed topics
+  * MOCs (Maps of Content) for navigation
+* **Output:** `FemPrompt_Vault_Improved/` folder ready to open in Obsidian
+* **Benefits:** Visual exploration of research connections, concept frequency tracking, and synthesis templates
+
 ## Workflow-Diagramm
 
 ![Deep Research Workflow](deep_research_workflow_diagram.png)
