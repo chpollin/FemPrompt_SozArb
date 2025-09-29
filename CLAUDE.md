@@ -4,6 +4,8 @@
 
 This documentation specifies the operational procedures for an automated literature research pipeline utilizing multi-model AI synthesis for bias and intersectionality analysis in artificial intelligence systems.
 
+**Current Status:** Implementation ~70% complete | Python 3.11.9 | Windows environment
+
 ## System Requirements
 
 ### Software Dependencies
@@ -17,8 +19,11 @@ pip install -r requirements.txt
 
 # Or install manually:
 pip install requests>=2.31.0 pyyaml>=6.0 PyPDF2>=3.0.0 beautifulsoup4>=4.12.0
+pip install google-generativeai>=0.3.0  # Required for Gemini API
+pip install python-dotenv>=1.0.0        # For environment variables
+pip install pandas openpyxl xlsxwriter  # For assessment workflow
 
-# Optional: For Zotero API integration
+# Optional: For Zotero API integration (NOT currently installed)
 pip install pyzotero
 
 # Optional: For advanced PDF conversion
@@ -68,7 +73,41 @@ python analysis/generate_obsidian_vault_improved.py    # Stage 4: Knowledge grap
 python analysis/test_vault_quality.py                  # Stage 5: Quality validation
 ```
 
-## Processing Stages
+## Multi-Model Research Workflow (Pre-Pipeline)
+
+### Phase 1: Deep Research with Multiple AI Models
+**Process:** Execute parametric research prompt across 4 AI platforms
+**Models Used:** Gemini, Claude, ChatGPT, Perplexity
+**Output:** Model-specific bibliographies in `deep-research/[Model]/`
+
+### Phase 2: RIS Standardization
+**Process:** Convert AI outputs to RIS format for Zotero import
+**Input:** Raw AI responses from each model
+**Output:** `to-Zotero/*.ris` files (4 files, one per model)
+**Current Status:** 67 total entries collected (Claude: 15, GPT: 6, Gemini: 3, Perplexity: 10)
+
+### Phase 3: Zotero Import and Consolidation
+**Process:** Import RIS files into Zotero, organize by model collection
+**Manual Steps:** De-duplication, metadata correction, PDF attachment
+**Output:** Consolidated bibliography in Zotero
+
+## Processing Stages (Main Pipeline)
+
+### Stage 0: PRISMA-Compliant Assessment (NEW)
+**Process:** Human assessment of bibliographic entries for inclusion/exclusion
+**Scripts:**
+```bash
+# Export from Zotero to Excel
+python analysis/ris_to_excel.py bibliography.ris -o assessment.xlsx
+
+# Complete assessments in Excel (5-10 min per paper)
+# Open assessment.xlsx and fill: Relevance, Quality, Decision
+
+# Merge assessments back to RIS
+python analysis/excel_to_ris.py assessment.xlsx bibliography.ris -o enriched.ris
+```
+**Duration:** 5-11 hours for 67 papers
+**Output:** Enriched RIS with PRISMA tags (Include/Exclude/Unclear)
 
 ### Stage 1: Literature Collection and Import
 **Process:** Import bibliography from Zotero after multi-model literature search
@@ -231,26 +270,49 @@ min_frequency = 3  # Increase from 2
 
 ```
 FemPrompt_SozArb/
-├── run_pipeline.py          # Master orchestration script
-├── pipeline_config.yaml     # Pipeline configuration
-├── requirements.txt         # Python dependencies
-├── analysis/               # Processing pipeline scripts
-│   ├── pdfs/               # Downloaded PDF documents
-│   ├── markdown_papers/    # Converted documents
-│   ├── summaries_final/    # AI-generated summaries
-│   ├── zotero_vereinfacht.json # Bibliography metadata
+├── run_pipeline.py              # Master orchestration script
+├── pipeline_config.yaml         # Pipeline configuration
+├── requirements.txt            # Python dependencies
+├── analysis/                    # Processing pipeline scripts
+│   ├── pdfs/                    # Downloaded PDF documents (EMPTY)
+│   ├── markdown_papers/         # Converted documents (EMPTY)
+│   ├── summaries_final/         # AI-generated summaries (LEGACY DATA)
+│   ├── all_pdf/                 # Alternative PDF storage
+│   ├── __pycache__/            # Python cache files
+│   ├── zotero_vereinfacht.json  # Bibliography metadata
+│   ├── zotero_vollstaendig.json # Complete Zotero export
+│   ├── zotero_sammlungen.json   # Zotero collections
+│   ├── conversion_metadata.json # PDF conversion tracking
+│   ├── vault_test_report.json   # Vault quality metrics
+│   ├── getPDF.py                # Legacy PDF downloader (deprecated)
 │   ├── getPDF_intelligent.py    # Smart PDF acquisition
 │   ├── pdf-to-md-converter.py   # Format conversion
 │   ├── summarize-documents.py   # Content analysis
 │   ├── generate_obsidian_vault_improved.py # Knowledge graph
-│   └── test_vault_quality.py    # Quality validation
-├── FemPrompt_Vault/        # Obsidian knowledge graph output
-│   ├── Papers/             # Individual paper notes
-│   ├── Concepts/           # Extracted concept notes
-│   └── MASTER_MOC.md       # Map of content
-├── JOURNAL.md              # Development iteration log
-├── CLAUDE.md               # Technical documentation (this file)
-└── ReadMe.md               # Project overview
+│   ├── test_vault_quality.py    # Quality validation
+│   ├── ris_to_excel.py          # NEW: RIS to Excel converter
+│   ├── excel_to_ris.py          # NEW: Excel to RIS merger
+│   ├── test_assessment_workflow.py # NEW: Assessment test
+│   ├── ASSESSMENT_WORKFLOW.md   # NEW: Assessment documentation
+│   ├── PDF_ACQUISITION_WORKFLOW.md # PDF acquisition specs
+│   └── SUMMARIZE-DOCUMENTS.md   # Summarization documentation
+├── deep-research/               # Multi-model research results
+│   ├── Claude/                 # Claude AI outputs
+│   ├── Gemini/                 # Gemini outputs
+│   ├── OpenAI/                 # ChatGPT outputs
+│   └── Perplexity/             # Perplexity outputs
+├── to-Zotero/                   # RIS files for import
+│   ├── claude-deep-research-bibliography-1.ris
+│   ├── Gemini-deep-research-bibliography-1.ris
+│   ├── OpenAI-deep-research-bibliography-1.ris
+│   ├── perplexity-deep-research-bibliography-1.ris
+│   └── ris-template.md
+├── knowledge/                   # NEW: Empty folder (purpose unclear)
+├── FemPrompt_Vault/             # Obsidian knowledge graph (NOT YET CREATED)
+├── deep_research_workflow_diagram.png # Workflow visualization
+├── JOURNAL.md                   # Development iteration log
+├── CLAUDE.md                    # Technical documentation (this file)
+└── ReadMe.md                    # Project overview
 
 ```
 
@@ -284,7 +346,35 @@ FemPrompt_SozArb/
 - Maximum document size: 50MB (PDF), 4MB (Markdown)
 - API token limit: 2048 tokens per response
 
+## Implementation Status
+
+### Completed Components ✅
+- Multi-model research workflow (67 papers collected)
+- RIS standardization (4 model-specific RIS files)
+- Assessment workflow implementation (Excel-based)
+- Pipeline orchestration (`run_pipeline.py`)
+- Intelligent PDF acquisition (`getPDF_intelligent.py`)
+- Documentation suite (CLAUDE.md, JOURNAL.md, README.md)
+
+### In Progress 🔄
+- PRISMA assessment of 67 papers (0% complete)
+- PDF acquisition from assessed papers
+- Document summarization with Gemini
+
+### Not Started ❌
+- Obsidian vault generation (FemPrompt_Vault/)
+- Complete pipeline execution
+- Quality validation
+- Final synthesis
+
+### Known Issues ⚠️
+- `pyzotero` not installed (Zotero API features unavailable)
+- `google-generativeai` package required but not in requirements.txt
+- FemPrompt_Vault/ directory does not exist yet
+- No PDFs downloaded yet (pdfs/ directory empty)
+
 ---
-*Document Version: 2.0*
-*Last Modified: 2025-09-28*
+*Document Version: 3.0*
+*Last Modified: 2025-09-29*
 *Pipeline Version: 1.0*
+*Implementation Status: ~70% Complete*
