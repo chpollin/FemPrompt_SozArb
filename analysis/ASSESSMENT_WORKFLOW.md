@@ -24,20 +24,18 @@ Pipeline Processing (filtered)
 
 ## Quick Start
 
-### 1. Export from Zotero
+### 1. Fetch from Zotero API and Create Excel
 ```bash
-# In Zotero:
-Select Collection → Right Click → Export Collection
-Format: RIS
-Save as: bibliography.ris
+python analysis/zotero_to_excel.py -o assessment.xlsx
 ```
 
-### 2. Convert to Excel
+Alternative: Export RIS first, then convert:
 ```bash
+# In Zotero: Export Collection as RIS
 python analysis/ris_to_excel.py bibliography.ris -o assessment.xlsx
 ```
 
-### 3. Complete Assessments
+### 2. Complete Assessments
 Open `assessment.xlsx` in Excel and fill in:
 - **Relevance_Score** (1-5): Core relevance to research question
 - **Quality** (High/Medium/Low): Publication quality
@@ -45,12 +43,12 @@ Open `assessment.xlsx` in Excel and fill in:
 - **Exclusion_Reason**: PRISMA-compliant reason if excluded
 - **Notes**: Additional comments
 
-### 4. Merge Back to RIS
+### 3. Merge Back to RIS
 ```bash
 python analysis/excel_to_ris.py assessment.xlsx bibliography.ris -o enriched.ris
 ```
 
-### 5. Import to Zotero
+### 4. Import to Zotero
 Import `enriched.ris` into Zotero. Papers will have assessment tags for filtering.
 
 ## Assessment Criteria
@@ -143,19 +141,6 @@ Papers are enriched with:
   - `Quality_High/Medium/Low`
   - Composite tags (e.g., `rel5_qualHigh_Include`)
 
-## Time Estimates
-
-### Single Reviewer
-- Setup: 5 minutes
-- Assessment: 5-10 minutes per paper
-- 67 papers: 5-11 hours total
-- Merge & Import: 10 minutes
-
-### Dual Review Process
-- Double the assessment time
-- Add 1-2 hours for consensus meeting
-- Cohen's Kappa calculation recommended
-
 ## Quality Assurance
 
 ### Pre-Assessment Checks
@@ -169,13 +154,6 @@ Papers are enriched with:
 3. Review "Unclear" items
 4. Calculate inclusion rate
 
-### Inter-Rater Reliability
-For dual review:
-```python
-from sklearn.metrics import cohen_kappa_score
-kappa = cohen_kappa_score(reviewer1_decisions, reviewer2_decisions)
-# Target: κ > 0.60 (substantial agreement)
-```
 
 ## Troubleshooting
 
@@ -222,7 +200,7 @@ This will:
 ## Future Enhancements
 
 - [ ] Web interface for assessment
-- [ ] Direct Zotero API integration
+- [x] Direct Zotero API integration (zotero_to_excel.py)
 - [ ] Automated quality scoring
 - [ ] Multi-language support
 - [ ] Real-time collaboration features

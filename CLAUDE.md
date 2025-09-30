@@ -23,8 +23,7 @@ pip install google-generativeai>=0.3.0  # Required for Gemini API
 pip install python-dotenv>=1.0.0        # For environment variables
 pip install pandas openpyxl xlsxwriter  # For assessment workflow
 
-# Optional: For Zotero API integration (NOT currently installed)
-pip install pyzotero
+pip install pyzotero  # For Zotero API integration
 
 # Optional: For advanced PDF conversion
 pip install docling
@@ -84,7 +83,6 @@ python analysis/test_vault_quality.py                  # Stage 5: Quality valida
 **Process:** Convert AI outputs to RIS format for Zotero import
 **Input:** Raw AI responses from each model
 **Output:** `to-Zotero/*.ris` files (4 files, one per model)
-**Current Status:** 67 total entries collected (Claude: 15, GPT: 6, Gemini: 3, Perplexity: 10)
 
 ### Phase 3: Zotero Import and Consolidation
 **Process:** Import RIS files into Zotero, organize by model collection
@@ -97,16 +95,15 @@ python analysis/test_vault_quality.py                  # Stage 5: Quality valida
 **Process:** Human assessment of bibliographic entries for inclusion/exclusion
 **Scripts:**
 ```bash
-# Export from Zotero to Excel
-python analysis/ris_to_excel.py bibliography.ris -o assessment.xlsx
+# Fetch directly from Zotero API and create Excel
+python analysis/zotero_to_excel.py -o assessment.xlsx
 
-# Complete assessments in Excel (5-10 min per paper)
+# Complete assessments in Excel
 # Open assessment.xlsx and fill: Relevance, Quality, Decision
 
 # Merge assessments back to RIS
 python analysis/excel_to_ris.py assessment.xlsx bibliography.ris -o enriched.ris
 ```
-**Duration:** 5-11 hours for 67 papers
 **Output:** Enriched RIS with PRISMA tags (Include/Exclude/Unclear)
 
 ### Stage 1: Literature Collection and Import
@@ -349,15 +346,16 @@ FemPrompt_SozArb/
 ## Implementation Status
 
 ### Completed Components ✅
-- Multi-model research workflow (67 papers collected)
+- Multi-model research workflow
 - RIS standardization (4 model-specific RIS files)
-- Assessment workflow implementation (Excel-based)
+- Assessment workflow implementation (Excel-based with Zotero API integration)
 - Pipeline orchestration (`run_pipeline.py`)
 - Intelligent PDF acquisition (`getPDF_intelligent.py`)
+- Zotero API integration (`pyzotero` installed)
 - Documentation suite (CLAUDE.md, JOURNAL.md, README.md)
 
 ### In Progress 🔄
-- PRISMA assessment of 67 papers (0% complete)
+- PRISMA assessment (human review phase)
 - PDF acquisition from assessed papers
 - Document summarization with Gemini
 
@@ -368,7 +366,6 @@ FemPrompt_SozArb/
 - Final synthesis
 
 ### Known Issues ⚠️
-- `pyzotero` not installed (Zotero API features unavailable)
 - `google-generativeai` package required but not in requirements.txt
 - FemPrompt_Vault/ directory does not exist yet
 - No PDFs downloaded yet (pdfs/ directory empty)
