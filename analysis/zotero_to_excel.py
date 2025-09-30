@@ -107,17 +107,16 @@ class ZoteroToExcelConverter:
                 'ID': idx,
                 'Zotero_Key': item.get('key', ''),
                 'Author_Year': f"{self.extract_authors(item).split(';')[0].split(',')[0] if self.extract_authors(item) else 'Unknown'} ({item.get('date', 'n.d.')[:4]})",
-                'Title_Short': item.get('title', 'No title')[:80] + ('...' if len(item.get('title', '')) > 80 else ''),
+                'Title': item.get('title', ''),
                 'DOI': item.get('DOI', ''),
-                'Title_Full': item.get('title', ''),
                 'Item_Type': item.get('itemType', ''),
                 'Abstract': item.get('abstractNote', ''),
                 'URL': item.get('url', ''),
                 'Tags': '; '.join([tag.get('tag', '') for tag in item.get('tags', [])]),
 
                 # Assessment fields (to be filled by human)
-                'Relevance': '',  # 1-5 scale
-                'Quality': '',    # 1-5 scale
+                'Relevance': '',  # Low/Medium/High
+                'Quality': '',    # Low/Medium/High
                 'Decision': '',   # Include/Exclude/Unclear
                 'Notes': '',      # Free text
 
@@ -158,18 +157,17 @@ class ZoteroToExcelConverter:
                 'A': 5,   # ID
                 'B': 12,  # Zotero_Key
                 'C': 20,  # Author_Year
-                'D': 40,  # Title_Short
+                'D': 60,  # Title
                 'E': 15,  # DOI
-                'F': 50,  # Title_Full
-                'G': 12,  # Item_Type
-                'H': 60,  # Abstract
-                'I': 30,  # URL
-                'J': 20,  # Tags
-                'K': 10,  # Relevance (assessment)
-                'L': 10,  # Quality (assessment)
-                'M': 12,  # Decision (assessment)
-                'N': 40,  # Notes (assessment)
-                'O': 18   # Zotero_Tags
+                'F': 12,  # Item_Type
+                'G': 60,  # Abstract
+                'H': 30,  # URL
+                'I': 20,  # Tags
+                'J': 12,  # Relevance (assessment)
+                'K': 12,  # Quality (assessment)
+                'L': 12,  # Decision (assessment)
+                'M': 40,  # Notes (assessment)
+                'N': 18   # Zotero_Tags
             }
 
             for col, width in column_widths.items():
@@ -180,44 +178,40 @@ class ZoteroToExcelConverter:
                 worksheet.write(0, col_num, value, header_format)
 
             # Highlight assessment columns
-            assessment_cols = ['K', 'L', 'M', 'N']  # Relevance, Quality, Decision, Notes
+            assessment_cols = ['J', 'K', 'L', 'M']  # Relevance, Quality, Decision, Notes
             for col in assessment_cols:
                 col_idx = ord(col) - ord('A')
                 for row_idx in range(1, len(df) + 1):
                     worksheet.write(row_idx, col_idx, df.iloc[row_idx-1, col_idx], assessment_format)
 
-            # Add formula for Zotero_Tags column (column O, index 14)
+            # Add formula for Zotero_Tags column (column N, index 13)
             for row_idx in range(1, len(df) + 1):
-                formula = f'=IF(M{row_idx+1}="Include", "PRISMA_Include", IF(M{row_idx+1}="Exclude", "PRISMA_Exclude", IF(M{row_idx+1}="Unclear", "PRISMA_Unclear", "")))'
-                worksheet.write_formula(row_idx, 14, formula)
+                formula = f'=IF(L{row_idx+1}="Include", "PRISMA_Include", IF(L{row_idx+1}="Exclude", "PRISMA_Exclude", IF(L{row_idx+1}="Unclear", "PRISMA_Unclear", "")))'
+                worksheet.write_formula(row_idx, 13, formula)
 
             # Freeze header row and first 4 columns
             worksheet.freeze_panes(1, 4)
 
             # Add data validation for assessment fields
-            worksheet.data_validation(f'K2:K{len(df)+1}', {
-                'validate': 'integer',
-                'criteria': 'between',
-                'minimum': 1,
-                'maximum': 5,
-                'input_title': 'Relevance Score',
-                'input_message': 'Enter a value between 1 (not relevant) and 5 (highly relevant)',
+            worksheet.data_validation(f'J2:J{len(df)+1}', {
+                'validate': 'list',
+                'source': ['Low', 'Medium', 'High'],
+                'input_title': 'Relevance',
+                'input_message': 'Select: Low, Medium, or High relevance to research question',
                 'error_title': 'Invalid Input',
-                'error_message': 'Score must be between 1 and 5'
+                'error_message': 'Must select from dropdown'
+            })
+
+            worksheet.data_validation(f'K2:K{len(df)+1}', {
+                'validate': 'list',
+                'source': ['Low', 'Medium', 'High'],
+                'input_title': 'Quality Assessment',
+                'input_message': 'Select: Low, Medium, or High quality (peer-review, methodology)',
+                'error_title': 'Invalid Input',
+                'error_message': 'Must select from dropdown'
             })
 
             worksheet.data_validation(f'L2:L{len(df)+1}', {
-                'validate': 'integer',
-                'criteria': 'between',
-                'minimum': 1,
-                'maximum': 5,
-                'input_title': 'Quality Score',
-                'input_message': 'Enter a value between 1 (low quality) and 5 (high quality)',
-                'error_title': 'Invalid Input',
-                'error_message': 'Score must be between 1 and 5'
-            })
-
-            worksheet.data_validation(f'M2:M{len(df)+1}', {
                 'validate': 'list',
                 'source': ['Include', 'Exclude', 'Unclear'],
                 'input_title': 'Decision',
