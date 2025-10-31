@@ -12,6 +12,10 @@ import time
 import argparse
 from pathlib import Path
 from typing import List, Dict, Any, Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Logging Setup
 logging.basicConfig(
