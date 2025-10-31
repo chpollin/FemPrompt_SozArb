@@ -30,12 +30,12 @@ except ImportError:
 
 class ClaudeDocumentProcessor:
     def __init__(self, api_key: str, source_dir: str = "analysis/markdown_papers",
-                 output_dir: str = "analysis/summaries_final", model: str = "claude-3-5-haiku-20241022"):
+                 output_dir: str = "analysis/summaries_final", model: str = "claude-haiku-4-5"):
         self.api_key = api_key
         self.source_dir = Path(source_dir)
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(exist_ok=True, parents=True)
-        self.model = model  # claude-3-5-haiku-20241022 or claude-3-5-sonnet-20241022
+        self.model = model  # claude-haiku-4-5 (default) or claude-sonnet-4-5
         self.client = Anthropic(api_key=api_key)
 
     def clean_markdown(self, text: str) -> str:
@@ -461,9 +461,9 @@ def main():
                        help='Output directory for summaries (default: analysis/summaries_final)')
     parser.add_argument('--api-key', default=None,
                        help='Anthropic API key (default: read from ANTHROPIC_API_KEY env var)')
-    parser.add_argument('--model', default='claude-3-5-haiku-20241022',
-                       choices=['claude-3-5-haiku-20241022', 'claude-3-5-sonnet-20241022'],
-                       help='Claude model to use (default: haiku)')
+    parser.add_argument('--model', default='claude-haiku-4-5',
+                       choices=['claude-haiku-4-5', 'claude-sonnet-4-5'],
+                       help='Claude model to use (default: haiku-4-5)')
     args = parser.parse_args()
 
     # API Key check
