@@ -10,9 +10,8 @@ python-dotenv>=1.0.0  # For environment variable management
 PyPDF2>=3.0.0
 beautifulsoup4>=4.12.0
 
-# AI APIs for summarization (choose one or both)
-google-generativeai>=0.3.0  # For Gemini (summarize-documents.py)
-anthropic>=0.68.0            # For Claude Haiku/Sonnet (summarize-documents-claude.py)
+# AI API for summarization
+anthropic>=0.68.0  # Claude Haiku 4.5 (summarize-documents.py)
 
 # Excel workflow (required for assessment)
 pandas>=2.0.0
