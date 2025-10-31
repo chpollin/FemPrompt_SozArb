@@ -22,7 +22,7 @@ class ImprovedVaultGenerator:
             self.base_path = Path(base_path)
 
         self.vault_path = self.base_path / vault_name
-        self.papers_path = self.base_path / "analysis" / "markdown_papers"
+        self.papers_path = self.base_path / "analysis" / "summaries_final"
         self.metadata_path = self.base_path / "analysis" / "zotero_vereinfacht.json"
 
         # Improved concept extraction patterns - FIXED to avoid fragments

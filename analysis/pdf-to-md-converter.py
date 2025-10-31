@@ -106,8 +106,8 @@ conversion_date: {datetime.now().isoformat()}
 def main():
     """Main conversion function"""
     # Setup directories
-    pdf_dir = Path("all_pdf")
-    output_dir = Path("markdown_papers")
+    pdf_dir = Path("analysis/pdfs")
+    output_dir = Path("analysis/markdown_papers")
     
     # Create output directory
     output_dir.mkdir(exist_ok=True)
@@ -115,7 +115,7 @@ def main():
     # Check if PDF directory exists
     if not pdf_dir.exists():
         print(f"❌ PDF directory not found: {pdf_dir}")
-        print("Make sure you have an 'all_pdf' folder with PDF files")
+        print("Make sure you have an 'analysis/pdfs' folder with PDF files")
         return
     
     # Find all PDF files
@@ -214,6 +214,6 @@ def main():
 
 if __name__ == "__main__":
     print("🔄 PDF to Markdown Converter")
-    print("Converting PDFs from 'all_pdf' folder to 'markdown_papers' folder")
+    print("Converting PDFs from 'analysis/pdfs' to 'analysis/markdown_papers'")
     print("-" * 60)
     main()

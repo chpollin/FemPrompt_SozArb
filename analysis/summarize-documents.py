@@ -28,8 +28,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class GeminiDocumentProcessor:
-    def __init__(self, api_key: str, source_dir: str = "markdown_papers", 
-                 output_dir: str = "summaries_final"):
+    def __init__(self, api_key: str, source_dir: str = "analysis/markdown_papers",
+                 output_dir: str = "analysis/summaries_final"):
         self.api_key = api_key
         self.source_dir = Path(source_dir)
         self.output_dir = Path(output_dir)

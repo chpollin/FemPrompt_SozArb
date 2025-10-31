@@ -56,13 +56,6 @@ python analysis/getPDF_intelligent.py --api-key KEY --library-id ID  # Mit Zoter
 
 ---
 
-### getPDF.py
-**Status:** DEPRECATED - Legacy-Version ohne intelligente Fallbacks.
-
-**Empfehlung:** Verwende getPDF_intelligent.py stattdessen.
-
----
-
 ## Dokumentenkonversion
 
 ### pdf-to-md-converter.py

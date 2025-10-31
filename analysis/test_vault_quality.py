@@ -64,7 +64,6 @@ class VaultQualityTester:
             "Papers",
             "Concepts",
             "Concepts/Bias_Types",
-            "Concepts/AI_Technologies",
             "Concepts/Mitigation_Strategies",
             "MOCs",
             "Synthesis"
@@ -96,18 +95,15 @@ class VaultQualityTester:
         # Count files in each category
         paper_count = len(list((self.vault_path / "Papers").glob("*.md")))
         bias_count = len(list((self.vault_path / "Concepts/Bias_Types").glob("*.md")))
-        tech_count = len(list((self.vault_path / "Concepts/AI_Technologies").glob("*.md")))
         mit_count = len(list((self.vault_path / "Concepts/Mitigation_Strategies").glob("*.md")))
 
         self.stats['papers'] = paper_count
         self.stats['bias_concepts'] = bias_count
-        self.stats['tech_concepts'] = tech_count
         self.stats['mitigation_concepts'] = mit_count
-        self.stats['total_concepts'] = bias_count + tech_count + mit_count
+        self.stats['total_concepts'] = bias_count + mit_count
 
         print(f"Papers: {paper_count}")
         print(f"Bias Concepts: {bias_count}")
-        print(f"Tech Concepts: {tech_count}")
         print(f"Mitigation Concepts: {mit_count}")
         print(f"Total Concepts: {self.stats['total_concepts']}")
 
@@ -116,11 +112,12 @@ class VaultQualityTester:
         all_concepts = []
 
         # Collect all concept files
-        for category in ["Bias_Types", "AI_Technologies", "Mitigation_Strategies"]:
+        for category in ["Bias_Types", "Mitigation_Strategies"]:
             concept_path = self.vault_path / "Concepts" / category
-            for file in concept_path.glob("*.md"):
-                concept_name = file.stem
-                all_concepts.append(concept_name)
+            if concept_path.exists():
+                for file in concept_path.glob("*.md"):
+                    concept_name = file.stem
+                    all_concepts.append(concept_name)
 
         # Check for duplicates (case-insensitive)
         concept_lower = [c.lower() for c in all_concepts]
@@ -177,7 +174,7 @@ class VaultQualityTester:
                 # Check if linked file exists
                 # Try in Concepts folders
                 found = False
-                for category in ["Bias_Types", "AI_Technologies", "Mitigation_Strategies"]:
+                for category in ["Bias_Types", "Mitigation_Strategies"]:
                     link_path = self.vault_path / "Concepts" / category / f"{link}.md"
                     if link_path.exists():
                         found = True
@@ -312,7 +309,6 @@ class VaultQualityTester:
         print(f"  Papers: {self.stats.get('papers', 0)}")
         print(f"  Total Concepts: {self.stats.get('total_concepts', 0)}")
         print(f"  - Bias Types: {self.stats.get('bias_concepts', 0)}")
-        print(f"  - Technologies: {self.stats.get('tech_concepts', 0)}")
         print(f"  - Mitigations: {self.stats.get('mitigation_concepts', 0)}")
 
         if self.errors:
