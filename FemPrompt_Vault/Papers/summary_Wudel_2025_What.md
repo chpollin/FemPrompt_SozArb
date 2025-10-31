@@ -13,12 +13,11 @@ date_modified: 2025-10-31
 bias_types:
   - Intersectionality
   - Algorithmic Bias
-  - Intersectional Feminism
 mitigation_strategies:
-  - Equitable Ai
   - Feminist AI
-  - Intersectional Feminism
   - Equitable And
+  - Equitable Ai
+  - Intersectionality
 ---
 
 # summary_Wudel_2025_What
@@ -27,14 +26,13 @@ mitigation_strategies:
 
 ### Bias Types
 - [[Algorithmic Bias]]
-- [[Intersectional Feminism]]
 - [[Intersectionality]]
 
 ### Mitigation Strategies
 - [[Equitable Ai]]
 - [[Equitable And]]
 - [[Feminist AI]]
-- [[Intersectional Feminism]]
+- [[Intersectionality]]
 
 ## Full Text
 

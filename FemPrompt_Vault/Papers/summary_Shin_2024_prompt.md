@@ -14,8 +14,8 @@ bias_types:
   - Systematic Bias
   - Demographic
 mitigation_strategies:
-  - Prompt Engineering
   - Bias Evaluation
+  - Prompt Engineering
   - Bias Mitigation
 ---
 

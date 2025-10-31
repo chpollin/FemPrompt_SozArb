@@ -1,8 +1,8 @@
 ---
 title: Intersectionality
 category: Bias_Types
-frequency: 12
-papers: 3
+frequency: 65
+papers: 4
 tags: [concept, bias_types]
 date_created: 2025-10-31
 ---
@@ -10,10 +10,11 @@ date_created: 2025-10-31
 # Intersectionality
 
 **Category:** Bias_Types  
-**Mentioned:** 12 times across 3 papers
+**Mentioned:** 65 times across 4 papers
 
 ## Papers
 
+- [[summary_Chisca_2024_Prompting]]
 - [[summary_Gohar_2023_Survey]]
 - [[summary_Jääskeläinen_2025_Intersectional]]
 - [[summary_Wudel_2025_What]]

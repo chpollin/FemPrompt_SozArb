@@ -13,10 +13,10 @@ date_modified: 2025-10-31
 bias_types:
   - Discrimination
 mitigation_strategies:
-  - Bias Mitigation
-  - Equitable Outcomes
   - Feminist AI
-  - Inclusive Representation
+  - Equitable Outcomes
+  - Inclusive Ai
+  - Bias Mitigation
 ---
 
 # summary_Gengler_2024_Faires
@@ -30,7 +30,7 @@ mitigation_strategies:
 - [[Bias Mitigation]]
 - [[Equitable Outcomes]]
 - [[Feminist AI]]
-- [[Inclusive Representation]]
+- [[Inclusive Ai]]
 
 ## Full Text
 

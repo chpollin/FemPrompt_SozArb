@@ -18,28 +18,28 @@ date_created: 2025-10-31
 ## Core Topics
 
 ### Bias Types
+- [[Intersectionality]] (65 mentions)
 - [[Discrimination]] (16 mentions)
-- [[Intersectional Methods]] (14 mentions)
-- [[Intersectionality]] (12 mentions)
-- [[Intersectional Groups]] (12 mentions)
-- [[Intersectional Feminism]] (10 mentions)
+- [[Algorithmic Bias]] (5 mentions)
+- [[Stereotyping]] (4 mentions)
+- [[Algorithmic Discrimination]] (2 mentions)
 
 ### Mitigation Approaches
-- [[Prompt Engineering]] (16 mentions)
+- [[Intersectionality]] (65 mentions)
 - [[Feminist AI]] (16 mentions)
-- [[Intersectional Methods]] (14 mentions)
-- [[Intersectionality]] (12 mentions)
-- [[Intersectional Groups]] (12 mentions)
+- [[Prompt Engineering]] (16 mentions)
+- [[Bias Mitigation]] (8 mentions)
+- [[Debiasing]] (7 mentions)
 
 ## Statistics
 
 - Total Papers: 11
-- Total Concepts: 42
-  - Bias Types: 18
-  - Mitigations: 24
-- High-frequency concepts (10+ mentions): 7
+- Total Concepts: 19
+  - Bias Types: 8
+  - Mitigations: 11
+- High-frequency concepts (10+ mentions): 4
 - Date Range: 2023-2025
 
 ## Last Updated
 
-2025-10-31 19:00
+2025-10-31 19:18

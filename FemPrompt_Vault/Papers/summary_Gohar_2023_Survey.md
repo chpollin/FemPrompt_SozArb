@@ -11,23 +11,13 @@ tags:
 date_added: 2025-10-31
 date_modified: 2025-10-31
 bias_types:
-  - Discrimination
-  - Intersectionality
-  - Algorithmic Bias
-  - Intersectional Identity
   - Algorithmic Discrimination
-  - Intersectional Contexts
-  - Intersectional Groups
-  - Intersectional Methods
-  - Intersectional Combinations
-mitigation_strategies:
   - Intersectionality
-  - Intersectional Identity
-  - Fairness Metrics
-  - Intersectional Contexts
-  - Intersectional Groups
-  - Intersectional Methods
-  - Intersectional Combinations
+  - Discrimination
+  - Algorithmic Bias
+mitigation_strategies:
+  - Bias Evaluation
+  - Intersectionality
 ---
 
 # summary_Gohar_2023_Survey
@@ -38,20 +28,10 @@ mitigation_strategies:
 - [[Algorithmic Bias]]
 - [[Algorithmic Discrimination]]
 - [[Discrimination]]
-- [[Intersectional Combinations]]
-- [[Intersectional Contexts]]
-- [[Intersectional Groups]]
-- [[Intersectional Identity]]
-- [[Intersectional Methods]]
 - [[Intersectionality]]
 
 ### Mitigation Strategies
-- [[Fairness Metrics]]
-- [[Intersectional Combinations]]
-- [[Intersectional Contexts]]
-- [[Intersectional Groups]]
-- [[Intersectional Identity]]
-- [[Intersectional Methods]]
+- [[Bias Evaluation]]
 - [[Intersectionality]]
 
 ## Full Text

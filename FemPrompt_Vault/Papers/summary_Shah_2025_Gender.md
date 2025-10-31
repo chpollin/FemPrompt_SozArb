@@ -11,9 +11,9 @@ tags:
 date_added: 2025-10-31
 date_modified: 2025-10-31
 bias_types:
-  - Discrimination
-  - Algorithmic Bias
   - Algorithmic Discrimination
+  - Algorithmic Bias
+  - Discrimination
 mitigation_strategies:
   - Inclusive Ai
 ---

@@ -11,17 +11,10 @@ tags:
 date_added: 2025-10-31
 date_modified: 2025-10-31
 bias_types:
-  - Discrimination
   - Intersectionality
-  - Intersectional Visual
-  - Intersectional Methods
-  - Intersectional Examination
-  - Intersectional Theory
+  - Discrimination
 mitigation_strategies:
-  - Intersectional Methods
-  - Intersectional Theory
-  - Intersectional Visual
-  - Intersectional Examination
+  - Intersectionality
 ---
 
 # summary_Jääskeläinen_2025_Intersectional
@@ -30,17 +23,10 @@ mitigation_strategies:
 
 ### Bias Types
 - [[Discrimination]]
-- [[Intersectional Examination]]
-- [[Intersectional Methods]]
-- [[Intersectional Theory]]
-- [[Intersectional Visual]]
 - [[Intersectionality]]
 
 ### Mitigation Strategies
-- [[Intersectional Examination]]
-- [[Intersectional Methods]]
-- [[Intersectional Theory]]
-- [[Intersectional Visual]]
+- [[Intersectionality]]
 
 ## Full Text
 

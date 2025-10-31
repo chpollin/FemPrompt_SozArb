@@ -11,16 +11,15 @@ tags:
 date_added: 2025-10-31
 date_modified: 2025-10-31
 bias_types:
-  - Discrimination
   - Stereotyping
   - Stereotypical
-  - Intersectional Considerations
+  - Intersectionality
+  - Discrimination
 mitigation_strategies:
+  - Intersectionality
   - Bias Mitigation
   - Fine-tuning
-  - Intersectional Considerations
   - Debiasing
-  - Intersectional Or
 ---
 
 # summary_Chisca_2024_Prompting
@@ -29,7 +28,7 @@ mitigation_strategies:
 
 ### Bias Types
 - [[Discrimination]]
-- [[Intersectional Considerations]]
+- [[Intersectionality]]
 - [[Stereotypical]]
 - [[Stereotyping]]
 
@@ -37,8 +36,7 @@ mitigation_strategies:
 - [[Bias Mitigation]]
 - [[Debiasing]]
 - [[Fine-tuning]]
-- [[Intersectional Considerations]]
-- [[Intersectional Or]]
+- [[Intersectionality]]
 
 ## Full Text
 

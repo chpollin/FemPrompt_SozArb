@@ -26,4 +26,4 @@ An Obsidian knowledge graph for feminist AI and bias research.
 
 ## Generated
 
-2025-10-31 19:00
+2025-10-31 19:18

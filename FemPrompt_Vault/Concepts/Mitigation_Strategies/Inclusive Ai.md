@@ -1,8 +1,8 @@
 ---
 title: Inclusive Ai
 category: Mitigation_Strategies
-frequency: 3
-papers: 1
+frequency: 4
+papers: 2
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
 ---
@@ -10,10 +10,11 @@ date_created: 2025-10-31
 # Inclusive Ai
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 3 times across 1 papers
+**Mentioned:** 4 times across 2 papers
 
 ## Papers
 
+- [[summary_Gengler_2024_Faires]]
 - [[summary_Shah_2025_Gender]]
 
 ## Related Concepts

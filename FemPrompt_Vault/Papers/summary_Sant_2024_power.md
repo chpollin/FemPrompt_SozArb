@@ -14,8 +14,8 @@ bias_types:
   - Stereotyping
   - Stereotypical
 mitigation_strategies:
-  - Prompt Engineering
   - Bias Evaluation
+  - Prompt Engineering
   - Bias Mitigation
   - Fine-tuning
 ---

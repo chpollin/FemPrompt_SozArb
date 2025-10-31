@@ -2,7 +2,7 @@
 title: MASTER MOC - FemPrompt Research
 type: master-moc
 tags: [moc, master, navigation]
-generated: 2025-10-31 19:00
+generated: 2025-10-31 19:18
 ---
 
 # 🎯 MASTER MOC - Complete Vault Navigation
@@ -18,7 +18,7 @@ discrimination in AI technologies?
 
 | Papers | Concepts | High-Freq | Categories |
 |:------:|:--------:|:---------:|:----------:|
-| **11** | **36** | **7** | **3** |
+| **11** | **16** | **4** | **3** |
 
 ## 🗺️ Navigation Structure
 
@@ -36,28 +36,26 @@ graph TD
 ## 🔥 Top Concepts by Category
 
 ### Bias Types (Top 10)
-1. [[Discrimination]] `16x`
-2. [[Intersectional Methods]] `14x`
-3. [[Intersectionality]] `12x`
-4. [[Intersectional Groups]] `12x`
-5. [[Intersectional Feminism]] `10x`
-6. [[Algorithmic Bias]] `5x`
-7. [[Stereotyping]] `4x`
-8. [[Intersectional Identity]] `4x`
-9. [[Stereotypical]] `2x`
-10. [[Intersectional Considerations]] `2x`
+1. [[Intersectionality]] `65x`
+2. [[Discrimination]] `16x`
+3. [[Algorithmic Bias]] `5x`
+4. [[Stereotyping]] `4x`
+5. [[Algorithmic Discrimination]] `2x`
+6. [[Stereotypical]] `2x`
+7. [[Demographic]] `1x`
+8. [[Systematic Bias]] `1x`
 
 ### Mitigation Strategies (Top 10)
-1. [[Prompt Engineering]] `16x`
+1. [[Intersectionality]] `65x`
 2. [[Feminist AI]] `16x`
-3. [[Intersectional Methods]] `14x`
-4. [[Intersectionality]] `12x`
-5. [[Intersectional Groups]] `12x`
-6. [[Intersectional Feminism]] `10x`
-7. [[Bias Mitigation]] `8x`
-8. [[Debiasing]] `7x`
-9. [[Fine-tuning]] `5x`
-10. [[Intersectional Identity]] `4x`
+3. [[Prompt Engineering]] `16x`
+4. [[Bias Mitigation]] `8x`
+5. [[Debiasing]] `7x`
+6. [[Fine-tuning]] `5x`
+7. [[Inclusive Ai]] `4x`
+8. [[Bias Evaluation]] `3x`
+9. [[Equitable Outcomes]] `2x`
+10. [[Equitable Ai]] `2x`
 
 ## 📚 Recent Papers (2024-2025)
 
@@ -92,5 +90,5 @@ Copy these into Obsidian search:
 
 ---
 
-*Vault generated: 2025-10-31 19:00*  
-*Total files: 52 | Python script: `generate_obsidian_vault_improved.py`*
+*Vault generated: 2025-10-31 19:18*  
+*Total files: 32 | Python script: `generate_obsidian_vault_improved.py`*
