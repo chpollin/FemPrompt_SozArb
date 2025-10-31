@@ -286,11 +286,11 @@ class ResearchPipeline:
             checks.append(False)
 
         # Check API keys
-        if os.environ.get('GEMINI_API_KEY'):
-            self._print_progress("GEMINI_API_KEY configured ✓", "success")
+        if os.environ.get('ANTHROPIC_API_KEY'):
+            self._print_progress("ANTHROPIC_API_KEY configured ✓", "success")
             checks.append(True)
         else:
-            self._print_progress("GEMINI_API_KEY not set", "warning")
+            self._print_progress("ANTHROPIC_API_KEY not set", "warning")
 
         # Check required directories
         required_dirs = [
@@ -358,11 +358,11 @@ class ResearchPipeline:
         }
 
     def _stage_summarize(self) -> Dict:
-        """Stage 3: Summarize documents with Gemini"""
+        """Stage 3: Summarize documents with Claude Haiku 4.5"""
         self.logger.info("Starting document summarization")
 
-        if not os.environ.get('GEMINI_API_KEY'):
-            self._print_progress("GEMINI_API_KEY required for summarization", "error")
+        if not os.environ.get('ANTHROPIC_API_KEY'):
+            self._print_progress("ANTHROPIC_API_KEY required for summarization", "error")
             return {'success': False, 'error': 'Missing API key'}
 
         success = self._run_script('analysis/summarize-documents.py')

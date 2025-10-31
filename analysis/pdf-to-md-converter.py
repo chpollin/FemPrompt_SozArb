@@ -56,7 +56,7 @@ conversion_date: {datetime.now().isoformat()}
         return header + markdown_content
         
     except Exception as e:
-        print(f"❌ Failed to convert {pdf_path.name}: {str(e)}")
+        print(f"[ERROR] Failed to convert {pdf_path.name}: {str(e)}")
         return None
 
 
@@ -71,7 +71,7 @@ def main(pdf_dir: str = "analysis/pdfs", output_dir: str = "analysis/markdown_pa
     
     # Check if PDF directory exists
     if not pdf_dir.exists():
-        print(f"❌ PDF directory not found: {pdf_dir}")
+        print(f"[ERROR] PDF directory not found: {pdf_dir}")
         print("Make sure you have an 'analysis/pdfs' folder with PDF files")
         return
     
@@ -79,14 +79,14 @@ def main(pdf_dir: str = "analysis/pdfs", output_dir: str = "analysis/markdown_pa
     pdf_files = list(pdf_dir.glob("*.pdf"))
     
     if not pdf_files:
-        print(f"❌ No PDF files found in {pdf_dir}")
+        print(f"[ERROR] No PDF files found in {pdf_dir}")
         return
     
-    print(f"📁 Found {len(pdf_files)} PDF files")
-    print(f"📂 Output directory: {output_dir}")
+    print(f"[FOUND] Found {len(pdf_files)} PDF files")
+    print(f"[OUTPUT] Output directory: {output_dir}")
     
     # Initialize Docling converter
-    print("🚀 Initializing Docling converter...")
+    print("[INIT] Initializing Docling converter...")
     converter = DocumentConverter()
 
     # Load existing metadata
@@ -103,11 +103,11 @@ def main(pdf_dir: str = "analysis/pdfs", output_dir: str = "analysis/markdown_pa
     
     # Process each PDF
     for i, pdf_path in enumerate(pdf_files, 1):
-        print(f"\n📄 [{i}/{len(pdf_files)}] Processing: {pdf_path.name}")
+        print(f"\n [{i}/{len(pdf_files)}] Processing: {pdf_path.name}")
         
         # Check if conversion needed
         if not should_convert(pdf_path, metadata):
-            print(f"⏭️  Skipping (already converted): {pdf_path.name}")
+            print(f"[SKIP]  Skipping (already converted): {pdf_path.name}")
             stats['skipped'] += 1
             continue
         
@@ -133,10 +133,10 @@ def main(pdf_dir: str = "analysis/pdfs", output_dir: str = "analysis/markdown_pa
                 }
                 
                 stats['converted'] += 1
-                print(f"✅ Converted: {pdf_path.name} → {output_filename}")
+                print(f"[SUCCESS] Converted: {pdf_path.name} → {output_filename}")
                 
             except Exception as e:
-                print(f"❌ Failed to save: {e}")
+                print(f"[ERROR] Failed to save: {e}")
                 stats['failed'] += 1
         else:
             # Mark as failed in metadata
@@ -155,19 +155,19 @@ def main(pdf_dir: str = "analysis/pdfs", output_dir: str = "analysis/markdown_pa
     
     # Print final statistics
     print("\n" + "=" * 50)
-    print("🎉 CONVERSION COMPLETE")
+    print("[COMPLETE] CONVERSION COMPLETE")
     print("=" * 50)
-    print(f"📊 Total PDFs: {stats['total']}")
-    print(f"✅ Successfully converted: {stats['converted']}")
-    print(f"⏭️  Already converted (skipped): {stats['skipped']}")
-    print(f"❌ Failed: {stats['failed']}")
+    print(f"[STATS] Total PDFs: {stats['total']}")
+    print(f"[SUCCESS] Successfully converted: {stats['converted']}")
+    print(f"[SKIP]  Already converted (skipped): {stats['skipped']}")
+    print(f"[ERROR] Failed: {stats['failed']}")
     
     if stats['total'] > 0:
         success_rate = ((stats['converted'] + stats['skipped']) / stats['total']) * 100
-        print(f"📈 Success rate: {success_rate:.1f}%")
+        print(f"[RATE] Success rate: {success_rate:.1f}%")
     
-    print(f"\n📂 Markdown files saved in: {output_dir}")
-    print(f"📋 Metadata saved in: conversion_metadata.json")
+    print(f"\n[OUTPUT] Markdown files saved in: {output_dir}")
+    print(f"[META] Metadata saved in: conversion_metadata.json")
 
 
 if __name__ == "__main__":
@@ -178,7 +178,7 @@ if __name__ == "__main__":
                        help='Output directory for Markdown files (default: analysis/markdown_papers)')
     args = parser.parse_args()
 
-    print("🔄 PDF to Markdown Converter")
+    print("PDF to Markdown Converter")
     print(f"Converting PDFs from '{args.pdf_dir}' to '{args.output_dir}'")
     print("-" * 60)
     main(args.pdf_dir, args.output_dir)
