@@ -1,65 +1,22 @@
 """
 Simple PDF to Markdown Converter for Research Papers
-Converts all PDFs in 'all_pdf' folder to Markdown files in 'markdown_papers' folder
+Converts all PDFs in 'analysis/pdfs' to Markdown files in 'analysis/markdown_papers'
 """
 
 import os
 import json
-import hashlib
+import argparse
 from pathlib import Path
 from datetime import datetime
 import time
+
+from utils import sanitize_filename, get_file_hash, load_json_metadata, save_json_metadata
 
 try:
     from docling.document_converter import DocumentConverter
 except ImportError:
     print("ERROR: docling not installed. Install with: pip install docling")
     exit(1)
-
-
-def get_file_hash(filepath):
-    """Generate MD5 hash of file to detect changes"""
-    hash_md5 = hashlib.md5()
-    try:
-        with open(filepath, "rb") as f:
-            for chunk in iter(lambda: f.read(4096), b""):
-                hash_md5.update(chunk)
-        return hash_md5.hexdigest()
-    except:
-        return ""
-
-
-def sanitize_filename(filename):
-    """Create safe filename for markdown output"""
-    # Remove file extension and problematic characters
-    name = Path(filename).stem
-    # Replace problematic characters with underscores
-    safe_chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_"
-    sanitized = ''.join(c if c in safe_chars else '_' for c in name)
-    # Limit length and ensure it's not empty
-    sanitized = sanitized[:100] if sanitized else "document"
-    return f"{sanitized}.md"
-
-
-def load_metadata():
-    """Load existing conversion metadata"""
-    metadata_file = "conversion_metadata.json"
-    if os.path.exists(metadata_file):
-        try:
-            with open(metadata_file, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except:
-            return {}
-    return {}
-
-
-def save_metadata(metadata):
-    """Save conversion metadata"""
-    try:
-        with open("conversion_metadata.json", 'w', encoding='utf-8') as f:
-            json.dump(metadata, f, indent=2, ensure_ascii=False)
-    except Exception as e:
-        print(f"Could not save metadata: {e}")
 
 
 def should_convert(pdf_path, metadata):
@@ -103,11 +60,11 @@ conversion_date: {datetime.now().isoformat()}
         return None
 
 
-def main():
+def main(pdf_dir: str = "analysis/pdfs", output_dir: str = "analysis/markdown_papers"):
     """Main conversion function"""
     # Setup directories
-    pdf_dir = Path("analysis/pdfs")
-    output_dir = Path("analysis/markdown_papers")
+    pdf_dir = Path(pdf_dir)
+    output_dir = Path(output_dir)
     
     # Create output directory
     output_dir.mkdir(exist_ok=True)
@@ -131,9 +88,10 @@ def main():
     # Initialize Docling converter
     print("🚀 Initializing Docling converter...")
     converter = DocumentConverter()
-    
+
     # Load existing metadata
-    metadata = load_metadata()
+    metadata_file = Path("conversion_metadata.json")
+    metadata = load_json_metadata(metadata_file)
     
     # Statistics
     stats = {
@@ -155,10 +113,10 @@ def main():
         
         # Convert PDF to Markdown
         markdown_content = convert_pdf_to_markdown(pdf_path, converter)
-        
+
         if markdown_content:
             # Save markdown file
-            output_filename = sanitize_filename(pdf_path.name)
+            output_filename = sanitize_filename(pdf_path.name) + ".md"
             output_path = output_dir / output_filename
             
             try:
@@ -191,9 +149,9 @@ def main():
         
         # Small delay between conversions
         time.sleep(0.2)
-    
+
     # Save metadata
-    save_metadata(metadata)
+    save_json_metadata(metadata_file, metadata)
     
     # Print final statistics
     print("\n" + "=" * 50)
@@ -213,7 +171,14 @@ def main():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Convert PDFs to Markdown using Docling')
+    parser.add_argument('--pdf-dir', default='analysis/pdfs',
+                       help='Directory containing PDFs (default: analysis/pdfs)')
+    parser.add_argument('--output-dir', default='analysis/markdown_papers',
+                       help='Output directory for Markdown files (default: analysis/markdown_papers)')
+    args = parser.parse_args()
+
     print("🔄 PDF to Markdown Converter")
-    print("Converting PDFs from 'analysis/pdfs' to 'analysis/markdown_papers'")
+    print(f"Converting PDFs from '{args.pdf_dir}' to '{args.output_dir}'")
     print("-" * 60)
-    main()
+    main(args.pdf_dir, args.output_dir)

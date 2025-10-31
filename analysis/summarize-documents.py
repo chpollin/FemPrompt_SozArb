@@ -472,16 +472,28 @@ language: English
 
 def main():
     """Hauptfunktion"""
+    import argparse
+
+    parser = argparse.ArgumentParser(description='Process documents with Gemini 2.5 Flash')
+    parser.add_argument('--source-dir', default='analysis/markdown_papers',
+                       help='Directory with markdown files (default: analysis/markdown_papers)')
+    parser.add_argument('--output-dir', default='analysis/summaries_final',
+                       help='Output directory for summaries (default: analysis/summaries_final)')
+    parser.add_argument('--api-key', default=None,
+                       help='Gemini API key (default: read from GEMINI_API_KEY env var)')
+    args = parser.parse_args()
+
     # API Key prüfen
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = args.api_key or os.environ.get("GEMINI_API_KEY")
     if not api_key:
         logger.error("❌ GEMINI_API_KEY environment variable not set!")
         logger.info("💡 Set it with: export GEMINI_API_KEY='your-key-here'")
+        logger.info("💡 Or pass --api-key argument")
         return
-    
+
     # Processor starten
     logger.info("🚀 Starting Perfect Gemini Document Processor")
-    processor = GeminiDocumentProcessor(api_key)
+    processor = GeminiDocumentProcessor(api_key, args.source_dir, args.output_dir)
     processor.process_all()
 
 
