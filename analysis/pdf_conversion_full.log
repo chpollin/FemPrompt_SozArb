@@ -1,0 +1,81 @@
+2025-10-31 20:29:22,361 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:29:23,240 - INFO - Going to convert document batch...
+2025-10-31 20:29:23,240 - INFO - Initializing pipeline for StandardPdfPipeline with options hash f9730ffaa6e7f8d4fb0c98c8df3f18cb
+2025-10-31 20:29:23,260 - INFO - Loading plugin 'docling_defaults'
+2025-10-31 20:29:23,272 - INFO - Registered picture descriptions: ['vlm', 'api']
+2025-10-31 20:29:23,281 - INFO - Loading plugin 'docling_defaults'
+2025-10-31 20:29:23,313 - INFO - Registered ocr engines: ['auto', 'easyocr', 'ocrmac', 'rapidocr', 'tesserocr', 'tesseract']
+2025-10-31 20:29:23,313 - INFO - rapidocr cannot be used because onnxruntime is not installed.
+2025-10-31 20:29:23,314 - INFO - easyocr cannot be used because it is not installed.
+2025-10-31 20:29:24,368 - INFO - Accelerator device: 'cpu'
+[32m[INFO] 2025-10-31 20:29:24,385 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2025-10-31 20:29:24,433 [RapidOCR] download_file.py:60: File exists and is valid: C:\Users\Chrisi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rapidocr\models\ch_PP-OCRv4_det_infer.pth[0m
+[32m[INFO] 2025-10-31 20:29:24,434 [RapidOCR] torch.py:54: Using C:\Users\Chrisi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rapidocr\models\ch_PP-OCRv4_det_infer.pth[0m
+[32m[INFO] 2025-10-31 20:29:24,657 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2025-10-31 20:29:24,664 [RapidOCR] download_file.py:60: File exists and is valid: C:\Users\Chrisi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rapidocr\models\ch_ptocr_mobile_v2.0_cls_infer.pth[0m
+[32m[INFO] 2025-10-31 20:29:24,664 [RapidOCR] torch.py:54: Using C:\Users\Chrisi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rapidocr\models\ch_ptocr_mobile_v2.0_cls_infer.pth[0m
+[32m[INFO] 2025-10-31 20:29:24,730 [RapidOCR] base.py:22: Using engine_name: torch[0m
+[32m[INFO] 2025-10-31 20:29:24,752 [RapidOCR] download_file.py:60: File exists and is valid: C:\Users\Chrisi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rapidocr\models\ch_PP-OCRv4_rec_infer.pth[0m
+[32m[INFO] 2025-10-31 20:29:24,752 [RapidOCR] torch.py:54: Using C:\Users\Chrisi\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\rapidocr\models\ch_PP-OCRv4_rec_infer.pth[0m
+2025-10-31 20:29:24,920 - INFO - Auto OCR model selected rapidocr with torch.
+2025-10-31 20:29:24,945 - INFO - Accelerator device: 'cpu'
+2025-10-31 20:29:25,982 - INFO - Accelerator device: 'cpu'
+2025-10-31 20:29:26,266 - INFO - Processing document Alliance_2024_Incubating.pdf
+2025-10-31 20:29:43,834 - INFO - Finished converting document Alliance_2024_Incubating.pdf in 21.47 sec.
+2025-10-31 20:29:44,128 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:29:44,133 - INFO - Going to convert document batch...
+2025-10-31 20:29:44,133 - INFO - Processing document Alvarez_2024_Policy.pdf
+2025-10-31 20:30:06,825 - INFO - Finished converting document Alvarez_2024_Policy.pdf in 22.70 sec.
+2025-10-31 20:30:07,092 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:30:07,104 - INFO - Going to convert document batch...
+2025-10-31 20:30:07,104 - INFO - Processing document Arias_López_2023_Digital.pdf
+2025-10-31 20:30:08,085 - WARNING - RapidOCR returned empty result!
+[33m[WARNING] 2025-10-31 20:30:08,470 [RapidOCR] main.py:123: The text detection result is empty[0m
+2025-10-31 20:30:08,470 - WARNING - RapidOCR returned empty result!
+2025-10-31 20:30:09,874 - WARNING - RapidOCR returned empty result!
+2025-10-31 20:30:41,344 - WARNING - RapidOCR returned empty result!
+[33m[WARNING] 2025-10-31 20:30:41,671 [RapidOCR] main.py:123: The text detection result is empty[0m
+2025-10-31 20:30:41,671 - WARNING - RapidOCR returned empty result!
+2025-10-31 20:30:42,343 - WARNING - RapidOCR returned empty result!
+2025-10-31 20:31:05,386 - INFO - Finished converting document Arias_López_2023_Digital.pdf in 58.30 sec.
+2025-10-31 20:31:05,657 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:31:05,661 - INFO - Going to convert document batch...
+2025-10-31 20:31:05,661 - INFO - Processing document Attard-Frost_2025_Countergovernance.pdf
+2025-10-31 20:31:24,908 - INFO - Finished converting document Attard-Frost_2025_Countergovernance.pdf in 19.25 sec.
+2025-10-31 20:31:25,135 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:31:25,136 - INFO - Going to convert document batch...
+2025-10-31 20:31:25,137 - INFO - Processing document Barman_2024_Beyond.pdf
+[33m[WARNING] 2025-10-31 20:31:27,345 [RapidOCR] main.py:123: The text detection result is empty[0m
+2025-10-31 20:31:27,345 - WARNING - RapidOCR returned empty result!
+2025-10-31 20:31:44,542 - INFO - Finished converting document Barman_2024_Beyond.pdf in 19.41 sec.
+2025-10-31 20:31:44,764 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:31:44,776 - INFO - Going to convert document batch...
+2025-10-31 20:31:44,776 - INFO - Processing document Biegelbauer_2023_Leitfaden.pdf
+2025-10-31 20:32:48,429 - INFO - Finished converting document Biegelbauer_2023_Leitfaden.pdf in 63.66 sec.
+2025-10-31 20:32:48,728 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:32:48,731 - INFO - Going to convert document batch...
+2025-10-31 20:32:48,731 - INFO - Processing document Bisconti_2024_formal.pdf
+2025-10-31 20:32:57,455 - INFO - Finished converting document Bisconti_2024_formal.pdf in 8.72 sec.
+2025-10-31 20:32:57,674 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:32:57,680 - INFO - Going to convert document batch...
+2025-10-31 20:32:57,680 - INFO - Processing document Casal-Otero_2023_literacy.pdf
+2025-10-31 20:33:21,375 - INFO - Finished converting document Casal-Otero_2023_literacy.pdf in 23.70 sec.
+2025-10-31 20:33:21,608 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:33:21,610 - INFO - Going to convert document batch...
+2025-10-31 20:33:21,610 - INFO - Processing document Chen_2025_Social.pdf
+2025-10-31 20:33:30,974 - INFO - Finished converting document Chen_2025_Social.pdf in 9.36 sec.
+2025-10-31 20:33:31,198 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:33:31,200 - INFO - Going to convert document batch...
+2025-10-31 20:33:31,200 - INFO - Processing document Chisca_2024_Prompting.pdf
+2025-10-31 20:33:57,333 - INFO - Finished converting document Chisca_2024_Prompting.pdf in 26.12 sec.
+2025-10-31 20:33:57,578 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:33:57,592 - INFO - Going to convert document batch...
+2025-10-31 20:33:57,592 - INFO - Processing document Colombatto_2025_influence.pdf
+2025-10-31 20:34:10,335 - INFO - Finished converting document Colombatto_2025_influence.pdf in 12.75 sec.
+2025-10-31 20:34:10,563 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:34:10,567 - INFO - Going to convert document batch...
+2025-10-31 20:34:10,568 - INFO - Processing document Cvoelcker_2023_Queer.pdf
+2025-10-31 20:34:23,618 - INFO - Finished converting document Cvoelcker_2023_Queer.pdf in 13.06 sec.
+2025-10-31 20:34:23,860 - INFO - detected formats: [<InputFormat.PDF: 'pdf'>]
+2025-10-31 20:34:23,863 - INFO - Going to convert document batch...
+2025-10-31 20:34:23,863 - INFO - Processing document Debnath_2024_LLMs.pdf

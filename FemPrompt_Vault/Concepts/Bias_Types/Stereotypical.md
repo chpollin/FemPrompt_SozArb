@@ -1,7 +1,7 @@
 ---
 title: Stereotypical
 category: Bias_Types
-frequency: 2
+frequency: 3
 papers: 2
 tags: [concept, bias_types]
 date_created: 2025-10-31
@@ -10,7 +10,7 @@ date_created: 2025-10-31
 # Stereotypical
 
 **Category:** Bias_Types  
-**Mentioned:** 2 times across 2 papers
+**Mentioned:** 3 times across 2 papers
 
 ## Papers
 

@@ -1,7 +1,7 @@
 ---
 title: Fine-tuning
 category: Mitigation_Strategies
-frequency: 5
+frequency: 2
 papers: 2
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
@@ -10,7 +10,7 @@ date_created: 2025-10-31
 # Fine-tuning
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 5 times across 2 papers
+**Mentioned:** 2 times across 2 papers
 
 ## Papers
 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>summary_Chisca_2024_Prompting | Social AI Literature Vault</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="header-title">
+        <a href="../index.html">Social AI Literature Vault</a>
+      </div>
+      <nav class="nav">
+        <a href="../papers/index.html">Papers</a>
+        <a href="../concepts/index.html">Concepts</a>
+        <a href="../graph.html">Graph</a>
+        <a href="../search.html">Search</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="text-muted" style="margin-bottom: 1rem;"><a href="../index.html">Home</a> / <a href="index.html">Papers</a> / summary_Chisca_2024_Prompting</div>
+    
+        <article class="paper-header">
+          <h1>summary_Chisca_2024_Prompting</h1>
+          <div class="paper-metadata">
+            <span class="paper-metadata-item">Published: Unknown</span>
+            <span class="paper-metadata-item">Authors: </span>
+          </div>
+        </article>
+        <div class="paper-content">
+          <h1>summary_Chisca_2024_Prompting</h1>
+<h2>Key Concepts</h2>
+<h3>Bias Types</h3>
+<ul>
+<li><a href="../concepts/stereotypical.html">Stereotypical</a></li>
+<li><a href="../concepts/stereotyping.html">Stereotyping</a></li>
+</ul>
+<h3>Mitigation Strategies</h3>
+<ul>
+<li><a href="../concepts/bias-mitigation.html">Bias Mitigation</a></li>
+<li><a href="../concepts/debiasing.html">Debiasing</a></li>
+<li><a href="../concepts/fine-tuning.html">Fine-tuning</a></li>
+</ul>
+<h2>Full Text</h2>
+<p>---
+title: "Chisca 2024 Prompting"
+original_document: Chisca_2024_Prompting.md
+document_type: Conference Paper
+research_domain: AI Bias & Fairness
+methodology: Experimental
+keywords: prompt-tuning, gender bias, LLM debiasing, encoder models, fairness
+mini_abstract: "This paper proposes a prompt-tuning method for mitigating gender bias in encoder-only language models by training reusable token embeddings with a KL-divergence-based loss function. The approach achieves competitive debiasing performance while maintaining language modeling ability with minimal computational overhead."
+target_audience: Researchers
+key_contributions: "Efficient prompt-tuning debiasing method for encoder models"
+geographic_focus: Europe
+publication_year: Unknown
+related_fields: Natural Language Processing, Machine Learning, AI Ethics
+summary_date: 2025-10-31
+language: English
+ai_model: claude-haiku-4-5
+---</p>
+<h1>Summary: Chisca 2024 Prompting</h1>
+<h2>Overview</h2>
+<p>This research addresses a critical challenge in contemporary NLP: mitigating social biases embedded in Large Language Models (LLMs) such as BERT and RoBERTa. The paper proposes an innovative prompt-tuning approach that efficiently reduces gender bias without requiring computationally expensive full model retraining. By training only small, reusable token embeddings that concatenate to input sequences, the authors present a practical solution to bias mitigation that maintains competitive performance while minimizing computational overhead. This work is particularly timely given the widespread deployment of LLMs in high-stakes applications where bias perpetuation poses significant risks to underrepresented groups.</p>
+<h2>Main Findings</h2>
+<p>The research demonstrates three primary contributions: (1) a prompt-tuning method for encoder-only models that trains only small additional token embeddings rather than modifying full model parameters; (2) a novel KL-divergence-based loss function balancing bias reduction against language modeling performance preservation; and (3) an extensible template framework for gender bias that generalizes to other bias categories. Evaluations on SEAT and StereoSet benchmarks confirm competitive performance with state-of-the-art debiasing methods while maintaining minimal degradation of language modeling ability. The approach requires substantially fewer computational resources than existing alternatives, making it viable for resource-constrained environments. The template-based framework demonstrates extensibility beyond gender bias, suggesting applicability to other demographic and social bias categories, though specific performance metrics on alternative bias types remain to be established.</p>
+<h2>Methodology/Approach</h2>
+<p>The methodology targets encoder-only models (BERT, RoBERTa) through prompt-tuning rather than parameter modification. The approach trains learnable token embeddings functioning as reusable prompts, concatenated to input sequences to guide bias reduction. A custom loss function based on Kullback-Leibler (KL) divergence balances competing objectives: reducing bias while preserving language modeling performance. Training utilizes template-based examples (e.g., "<GenderedWord> is a <Target>") systematically exposing gender stereotypes. Evaluation employs two complementary benchmarks: SEAT measures associations between demographic and target attributes in contextual embeddings, while StereoSet quantifies stereotypical word selection frequency. This dual-benchmark approach ensures comprehensive assessment of both bias reduction efficacy and model utility preservation, with results compared against existing state-of-the-art debiasing methods.</p>
+<h2>Relevant Concepts</h2>
+<strong>Representational Harms</strong>: Disparate system performance, exclusion, or stereotyping disadvantaging specific demographic groups in model outputs.
+<strong>Allocation Harms</strong>: Discriminatory resource distribution resulting from biased model decisions.
+<strong>Encoder-Only Models</strong>: Transformer architectures (BERT, RoBERTa) using bidirectional context without generative capabilities, suitable for classification and embedding tasks.
+<strong>SEAT (Sentence Embedding Association Test)</strong>: Embedding-based metric measuring bias by quantifying associations between demographic attribute groups and target attribute groups in contextual embeddings.
+<strong>StereoSet</strong>: Probability-based benchmark measuring bias frequency through stereotypical word selection in masked token prediction tasks.
+<strong>Prompt-Tuning</strong>: Parameter-efficient fine-tuning approach training only small additional embeddings rather than full model parameters, reducing computational requirements.
+<strong>KL-Divergence</strong>: Information-theoretic measure quantifying distribution divergence; here applied to balance bias reduction objectives against language modeling performance preservation.
+<h2>Significance</h2>
+<p>This work addresses a critical gap between theoretical fairness research and practical implementation constraints. By offering a computationally lightweight debiasing method, it democratizes bias mitigation for practitioners with limited computational resources. The research contributes to three interconnected domains: bias mitigation literature, prompt-learning paradigms, and practical fairness deployment. Most significantly, it demonstrates that competitive debiasing performance need not require substantial computational investment, making fairness considerations accessible across diverse organizational contexts. The extensible template framework provides a foundation for addressing multiple bias categories, advancing toward comprehensive fairness solutions in LLM applications. However, generalization to non-gender biases and scalability across diverse model architectures require further investigation.</p>
+        </div>
+        
+  </main>
+
+  <footer class="footer">
+    <p>
+      Social AI Literature Vault &copy; 2025 |
+      Generated by automated research pipeline
+    </p>
+  </footer>
+</body>
+</html>

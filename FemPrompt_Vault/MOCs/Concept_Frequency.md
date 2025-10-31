@@ -8,28 +8,30 @@ tags: [analysis, frequency]
 
 ## Most Frequent Concepts (All Categories)
 
-1. [[Intersectionality]] - 65 mentions
-1. [[Discrimination]] - 16 mentions
-1. [[Feminist AI]] - 16 mentions
-1. [[Prompt Engineering]] - 16 mentions
-1. [[Bias Mitigation]] - 8 mentions
+1. [[Intersectionality]] - 107 mentions
+1. [[Feminist AI]] - 21 mentions
+1. [[Discrimination]] - 21 mentions
+1. [[Bias Mitigation]] - 19 mentions
+1. [[Prompt Engineering]] - 12 mentions
+1. [[Algorithmic Bias]] - 10 mentions
+1. [[Bias Evaluation]] - 8 mentions
 1. [[Debiasing]] - 7 mentions
-1. [[Fine-tuning]] - 5 mentions
-1. [[Algorithmic Bias]] - 5 mentions
-1. [[Stereotyping]] - 4 mentions
-1. [[Inclusive Ai]] - 4 mentions
-1. [[Bias Evaluation]] - 3 mentions
-1. [[Stereotypical]] - 2 mentions
+1. [[Equitable Ai]] - 5 mentions
+1. [[Intersectional Dimensions]] - 4 mentions
+1. [[Stereotyping]] - 3 mentions
+1. [[Stereotypical]] - 3 mentions
+1. [[Inclusive Outcomes]] - 3 mentions
+1. [[Inclusive Ai]] - 3 mentions
+1. [[Fine-tuning]] - 2 mentions
+1. [[Intersectional Inequalities]] - 2 mentions
+1. [[Prompting Strategies]] - 2 mentions
+1. [[Intersectional Harm]] - 2 mentions
+1. [[Intersectional Social]] - 2 mentions
 1. [[Equitable Outcomes]] - 2 mentions
-1. [[Algorithmic Discrimination]] - 2 mentions
-1. [[Equitable Ai]] - 2 mentions
-1. [[Demographic]] - 1 mentions
-1. [[Systematic Bias]] - 1 mentions
-1. [[Equitable And]] - 1 mentions
 
 ## Frequency Distribution
 
-- Low (2-4): 7 concepts
-- High (10+): 4 concepts
-- Medium (5-9): 4 concepts
-- Rare (1): 3 concepts
+- Rare (1): 15 concepts
+- Low (2-4): 11 concepts
+- High (10+): 6 concepts
+- Medium (5-9): 3 concepts

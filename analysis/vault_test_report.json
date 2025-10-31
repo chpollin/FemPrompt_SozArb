@@ -1,14 +1,16 @@
 {
-  "quality_score": 90,
-  "success_rate": 87.5,
-  "passed_tests": 14,
-  "warnings": 2,
+  "quality_score": 80,
+  "success_rate": 75.0,
+  "passed_tests": 12,
+  "warnings": 4,
   "errors": 0,
   "stats": {
-    "papers": 11,
-    "bias_concepts": 6,
-    "mitigation_concepts": 9,
-    "total_concepts": 15
+    "papers": 16,
+    "bias_concepts": 10,
+    "mitigation_concepts": 16,
+    "total_concepts": 26
   },
-  "recommendations": []
+  "recommendations": [
+    "Enhance deduplication logic"
+  ]
 }

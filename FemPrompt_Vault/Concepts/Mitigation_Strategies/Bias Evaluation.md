@@ -1,8 +1,8 @@
 ---
 title: Bias Evaluation
 category: Mitigation_Strategies
-frequency: 3
-papers: 3
+frequency: 8
+papers: 4
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
 ---
@@ -10,11 +10,12 @@ date_created: 2025-10-31
 # Bias Evaluation
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 3 times across 3 papers
+**Mentioned:** 8 times across 4 papers
 
 ## Papers
 
 - [[summary_Gohar_2023_Survey]]
+- [[summary_Project_2024_Intersectionality]]
 - [[summary_Sant_2024_power]]
 - [[summary_Shin_2024_prompt]]
 

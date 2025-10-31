@@ -4,7 +4,7 @@
 
 This documentation specifies the operational procedures for an automated literature research pipeline utilizing multi-model AI synthesis for bias and intersectionality analysis in artificial intelligence systems.
 
-**Current Status:** Implementation ~70% complete | Python 3.11.9 | Windows environment
+**Current Status:** Full pipeline operational | Python 3.11.9 | Windows environment | 326 publications in Zotero Group
 
 ## System Requirements
 
@@ -107,9 +107,13 @@ python analysis/excel_to_ris.py assessment.xlsx bibliography.ris -o enriched.ris
 **Output:** Enriched RIS with PRISMA tags (Include/Exclude/Unclear)
 
 ### Stage 1: Literature Collection and Import
-**Process:** Import bibliography from Zotero after multi-model literature search
-**Input:** `analysis/zotero_vereinfacht.json` (exported from Zotero)
-**Status:** Manual Zotero export required before pipeline execution
+**Process:** Fetch bibliography directly from Zotero Group via API
+**Script:**
+```bash
+python analysis/fetch_zotero_group.py
+```
+**Output:** `analysis/zotero_vereinfacht.json` (326 publications from Zotero Group 6080294)
+**Status:** Automated via Zotero API (pyzotero)
 
 ### Stage 2: Document Acquisition and Conversion
 

@@ -14,7 +14,7 @@ date_created: 2025-10-31
 
 ## Papers
 
-- [[summary_Gengler_2024_Faires]]
+- [[summary_Smith_2021_When]]
 
 ## Related Concepts
 

@@ -1,8 +1,8 @@
 ---
 title: Equitable Ai
 category: Mitigation_Strategies
-frequency: 2
-papers: 1
+frequency: 5
+papers: 5
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
 ---
@@ -10,10 +10,14 @@ date_created: 2025-10-31
 # Equitable Ai
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 2 times across 1 papers
+**Mentioned:** 5 times across 5 papers
 
 ## Papers
 
+- [[summary_J__skel_inen_2025_Intersectional]]
+- [[summary_Project_2024_Intersectionality]]
+- [[summary_Smith_2021_When]]
+- [[summary_Unknown_XXXX_feminist]]
 - [[summary_Wudel_2025_What]]
 
 ## Related Concepts

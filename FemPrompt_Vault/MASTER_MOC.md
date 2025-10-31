@@ -2,7 +2,7 @@
 title: MASTER MOC - FemPrompt Research
 type: master-moc
 tags: [moc, master, navigation]
-generated: 2025-10-31 19:18
+generated: 2025-10-31 19:50
 ---
 
 # 🎯 MASTER MOC - Complete Vault Navigation
@@ -18,7 +18,7 @@ discrimination in AI technologies?
 
 | Papers | Concepts | High-Freq | Categories |
 |:------:|:--------:|:---------:|:----------:|
-| **11** | **16** | **4** | **3** |
+| **16** | **25** | **6** | **3** |
 
 ## 🗺️ Navigation Structure
 
@@ -36,26 +36,28 @@ graph TD
 ## 🔥 Top Concepts by Category
 
 ### Bias Types (Top 10)
-1. [[Intersectionality]] `65x`
-2. [[Discrimination]] `16x`
-3. [[Algorithmic Bias]] `5x`
-4. [[Stereotyping]] `4x`
-5. [[Algorithmic Discrimination]] `2x`
-6. [[Stereotypical]] `2x`
-7. [[Demographic]] `1x`
-8. [[Systematic Bias]] `1x`
+1. [[Intersectionality]] `107x`
+2. [[Discrimination]] `21x`
+3. [[Algorithmic Bias]] `10x`
+4. [[Intersectional Dimensions]] `4x`
+5. [[Stereotypical]] `3x`
+6. [[Stereotyping]] `3x`
+7. [[Intersectional Social]] `2x`
+8. [[Intersectional Harm]] `2x`
+9. [[Intersectional Inequalities]] `2x`
+10. [[Algorithmic Discrimination]] `1x`
 
 ### Mitigation Strategies (Top 10)
-1. [[Intersectionality]] `65x`
-2. [[Feminist AI]] `16x`
-3. [[Prompt Engineering]] `16x`
-4. [[Bias Mitigation]] `8x`
-5. [[Debiasing]] `7x`
-6. [[Fine-tuning]] `5x`
-7. [[Inclusive Ai]] `4x`
-8. [[Bias Evaluation]] `3x`
-9. [[Equitable Outcomes]] `2x`
-10. [[Equitable Ai]] `2x`
+1. [[Intersectionality]] `107x`
+2. [[Feminist AI]] `21x`
+3. [[Bias Mitigation]] `19x`
+4. [[Prompt Engineering]] `12x`
+5. [[Bias Evaluation]] `8x`
+6. [[Debiasing]] `7x`
+7. [[Equitable Ai]] `5x`
+8. [[Intersectional Dimensions]] `4x`
+9. [[Inclusive Ai]] `3x`
+10. [[Inclusive Outcomes]] `3x`
 
 ## 📚 Recent Papers (2024-2025)
 
@@ -64,7 +66,7 @@ graph TD
 
 Based on concept frequency analysis:
 
-3. **Prompting Solutions**: Prompt-based mitigation discussed 16x
+3. **Prompting Solutions**: Prompt-based mitigation discussed 14x
 
 ## ⚡ Quick Links
 
@@ -90,5 +92,5 @@ Copy these into Obsidian search:
 
 ---
 
-*Vault generated: 2025-10-31 19:18*  
-*Total files: 32 | Python script: `generate_obsidian_vault_improved.py`*
+*Vault generated: 2025-10-31 19:50*  
+*Total files: 46 | Python script: `generate_obsidian_vault_improved.py`*
