@@ -89,7 +89,7 @@ This document certifies that the FemPrompt Literature Research Pipeline implemen
 - ✅ **Validation**: match_log.csv tracks all transformations
 
 #### Synthesis Approach
-- ✅ **AI-Assisted**: Gemini 2.5 Flash for content analysis
+- ✅ **AI-Assisted**: Claude Haiku 4.5 for content analysis
 - ✅ **Structured**: 5-stage iterative refinement
 - ✅ **Knowledge Graph**: Obsidian vault for concept mapping
 

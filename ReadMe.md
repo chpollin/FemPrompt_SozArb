@@ -78,9 +78,9 @@ This phase performs deep content analysis using the full-text articles:
 
 * **Preparation:** Ensure PDFs are converted to Markdown in `analysis/markdown_papers/` directory
 * **Execution:** Run `python analysis/summarize-documents.py`
-  * Uses Gemini 2.5 Flash with 5-stage iterative refinement
+  * Uses Claude Haiku 4.5 with 5-stage iterative refinement
   * Generates structured summaries with metadata extraction
-  * Processing time: ~2 minutes per document
+  * Processing time: ~60 seconds per document (fast and cost-efficient)
 * **Output:** `analysis/summaries_final/` containing:
   * Individual paper summaries with YAML frontmatter
   * Batch metadata tracking processing status

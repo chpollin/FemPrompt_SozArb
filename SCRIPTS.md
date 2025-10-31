@@ -84,7 +84,7 @@ python analysis/pdf-to-md-converter.py
 ## KI-gestützte Analyse
 
 ### summarize-documents.py
-**Funktion:** Generiert strukturierte Zusammenfassungen mit Gemini 2.5 Flash.
+**Funktion:** Generiert strukturierte Zusammenfassungen mit Claude Haiku 4.5.
 
 **5-Stufen-Workflow:**
 1. Akademische Analyse (Forschungsfrage, Methodik, Ergebnisse)
@@ -94,11 +94,13 @@ python analysis/pdf-to-md-converter.py
 5. Metadaten-Extraktion (YAML-Format)
 
 **Features:**
+- Model: `claude-haiku-4-5` (alternative: `claude-sonnet-4-5`)
 - Temperature 0.3 für Konsistenz
-- 10-Sekunden Rate-Limiting (konfigurierbar)
+- 2-Sekunden Rate-Limiting (konfigurierbar)
 - Batch-Metadaten-Tracking
 - Retry-Logik für transiente Fehler
-- Verarbeitungszeit: ~120 Sekunden pro Dokument
+- Verarbeitungszeit: ~60 Sekunden pro Dokument (2x schneller)
+- Kosten: ~$0.03-0.04 pro Dokument
 
 **Output:**
 - Summaries in analysis/summaries_final/
