@@ -7,8 +7,8 @@ analysis/zotero_backup_*.json
 .env
 .env.local
 
-# Obsidian vault (generated content)
-FemPrompt_Vault/
+# Obsidian vault - KEEP IN REPO (for web tool)
+# FemPrompt_Vault/
 
 # Claude configuration
 .claude/
