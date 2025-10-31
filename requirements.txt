@@ -10,8 +10,9 @@ python-dotenv>=1.0.0  # For environment variable management
 PyPDF2>=3.0.0
 beautifulsoup4>=4.12.0
 
-# Google Gemini API (required for summarization)
-google-generativeai>=0.3.0
+# AI APIs for summarization (choose one or both)
+google-generativeai>=0.3.0  # For Gemini (summarize-documents.py)
+anthropic>=0.68.0            # For Claude Haiku/Sonnet (summarize-documents-claude.py)
 
 # Excel workflow (required for assessment)
 pandas>=2.0.0
@@ -21,6 +22,5 @@ xlsxwriter>=3.1.0
 # Zotero integration (required for API features)
 pyzotero>=1.5.0
 
-# Advanced PDF conversion (optional but recommended)
-# Requires additional system dependencies
-# docling>=0.1.0
+# Advanced PDF conversion (INSTALLED - recommended for best quality)
+docling>=2.60.0

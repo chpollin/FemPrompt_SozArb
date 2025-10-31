@@ -1,0 +1,16 @@
+{
+  "quality_score": 90,
+  "success_rate": 86.66666666666667,
+  "passed_tests": 13,
+  "warnings": 2,
+  "errors": 0,
+  "stats": {
+    "papers": 2,
+    "bias_concepts": 3,
+    "mitigation_concepts": 4,
+    "total_concepts": 7
+  },
+  "recommendations": [
+    "Enhance deduplication logic"
+  ]
+}
