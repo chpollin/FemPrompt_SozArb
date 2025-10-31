@@ -3,6 +3,10 @@
 analysis/zotero_backup_*.json
 /analysis/.venv
 
+# Environment variables (contains API keys!)
+.env
+.env.local
+
 # Obsidian vault (generated content)
 FemPrompt_Vault/
 
