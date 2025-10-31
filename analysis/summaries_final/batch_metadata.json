@@ -1,20 +1,20 @@
 {
   "processing_summary": {
-    "total_documents": 2,
-    "successful": 2,
+    "total_documents": 11,
+    "successful": 11,
     "failed": 0,
     "success_rate": "100.0%"
   },
   "timing": {
-    "start_time": "2025-10-31 18:00:08",
-    "end_time": "2025-10-31 18:01:16",
-    "total_time_minutes": "1.1",
-    "avg_time_per_doc": "34.1s"
+    "start_time": "2025-10-31 18:46:49",
+    "end_time": "2025-10-31 18:54:04",
+    "total_time_minutes": "7.3",
+    "avg_time_per_doc": "39.6s"
   },
   "statistics": {
-    "avg_original_length": "2,363 chars",
-    "avg_summary_length": "5,098 chars",
-    "avg_compression": "215.7%"
+    "avg_original_length": "71,202 chars",
+    "avg_summary_length": "5,332 chars",
+    "avg_compression": "7.5%"
   },
   "failed_documents": [],
   "model_used": "claude-haiku-4-5",

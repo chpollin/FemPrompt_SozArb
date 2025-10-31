@@ -1,20 +1,21 @@
 ---
-title: Intersectional Identity
+title: Fine-tuning
 category: Mitigation_Strategies
-frequency: 4
-papers: 1
+frequency: 5
+papers: 2
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
 ---
 
-# Intersectional Identity
+# Fine-tuning
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 4 times across 1 papers
+**Mentioned:** 5 times across 2 papers
 
 ## Papers
 
-- [[summary_Gohar_2023_Survey]]
+- [[summary_Chisca_2024_Prompting]]
+- [[summary_Sant_2024_power]]
 
 ## Related Concepts
 
@@ -22,4 +23,4 @@ date_created: 2025-10-31
 
 ## Notes
 
-*Add your notes about Intersectional Identity here*
+*Add your notes about Fine-tuning here*

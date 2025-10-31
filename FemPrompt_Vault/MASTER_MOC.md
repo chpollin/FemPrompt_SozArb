@@ -2,7 +2,7 @@
 title: MASTER MOC - FemPrompt Research
 type: master-moc
 tags: [moc, master, navigation]
-generated: 2025-10-31 18:34
+generated: 2025-10-31 19:00
 ---
 
 # 🎯 MASTER MOC - Complete Vault Navigation
@@ -18,7 +18,7 @@ discrimination in AI technologies?
 
 | Papers | Concepts | High-Freq | Categories |
 |:------:|:--------:|:---------:|:----------:|
-| **2** | **14** | **2** | **3** |
+| **11** | **36** | **7** | **3** |
 
 ## 🗺️ Navigation Structure
 
@@ -36,26 +36,28 @@ graph TD
 ## 🔥 Top Concepts by Category
 
 ### Bias Types (Top 10)
-1. [[Intersectionality]] `13x`
-2. [[Discrimination]] `4x`
-3. [[Algorithmic Bias]] `3x`
-4. [[Intersectional Identity]] `2x`
-5. [[Intersectional Methods]] `2x`
-6. [[Stereotypical]] `2x`
-7. [[Stereotype]] `1x`
-8. [[Stereotyping]] `1x`
+1. [[Discrimination]] `16x`
+2. [[Intersectional Methods]] `14x`
+3. [[Intersectionality]] `12x`
+4. [[Intersectional Groups]] `12x`
+5. [[Intersectional Feminism]] `10x`
+6. [[Algorithmic Bias]] `5x`
+7. [[Stereotyping]] `4x`
+8. [[Intersectional Identity]] `4x`
+9. [[Stereotypical]] `2x`
+10. [[Intersectional Considerations]] `2x`
 
 ### Mitigation Strategies (Top 10)
-1. [[Intersectionality]] `13x`
-2. [[Prompt Engineering]] `11x`
-3. [[Bias Mitigation]] `4x`
-4. [[Prompt Design]] `3x`
-5. [[Bias Evaluation]] `2x`
-6. [[Intersectional Identity]] `2x`
-7. [[Inclusive Prompt]] `2x`
-8. [[Intersectional Methods]] `2x`
-9. [[Inclusive Framing]] `1x`
-10. [[Inclusive Representation]] `1x`
+1. [[Prompt Engineering]] `16x`
+2. [[Feminist AI]] `16x`
+3. [[Intersectional Methods]] `14x`
+4. [[Intersectionality]] `12x`
+5. [[Intersectional Groups]] `12x`
+6. [[Intersectional Feminism]] `10x`
+7. [[Bias Mitigation]] `8x`
+8. [[Debiasing]] `7x`
+9. [[Fine-tuning]] `5x`
+10. [[Intersectional Identity]] `4x`
 
 ## 📚 Recent Papers (2024-2025)
 
@@ -64,7 +66,7 @@ graph TD
 
 Based on concept frequency analysis:
 
-3. **Prompting Solutions**: Prompt-based mitigation discussed 17x
+3. **Prompting Solutions**: Prompt-based mitigation discussed 16x
 
 ## ⚡ Quick Links
 
@@ -90,5 +92,5 @@ Copy these into Obsidian search:
 
 ---
 
-*Vault generated: 2025-10-31 18:34*  
-*Total files: 21 | Python script: `generate_obsidian_vault_improved.py`*
+*Vault generated: 2025-10-31 19:00*  
+*Total files: 52 | Python script: `generate_obsidian_vault_improved.py`*

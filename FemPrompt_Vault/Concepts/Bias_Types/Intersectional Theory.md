@@ -1,22 +1,20 @@
 ---
-title: Intersectionality
+title: Intersectional Theory
 category: Bias_Types
-frequency: 12
-papers: 3
+frequency: 2
+papers: 1
 tags: [concept, bias_types]
 date_created: 2025-10-31
 ---
 
-# Intersectionality
+# Intersectional Theory
 
 **Category:** Bias_Types  
-**Mentioned:** 12 times across 3 papers
+**Mentioned:** 2 times across 1 papers
 
 ## Papers
 
-- [[summary_Gohar_2023_Survey]]
 - [[summary_Jääskeläinen_2025_Intersectional]]
-- [[summary_Wudel_2025_What]]
 
 ## Related Concepts
 
@@ -24,4 +22,4 @@ date_created: 2025-10-31
 
 ## Notes
 
-*Add your notes about Intersectionality here*
+*Add your notes about Intersectional Theory here*

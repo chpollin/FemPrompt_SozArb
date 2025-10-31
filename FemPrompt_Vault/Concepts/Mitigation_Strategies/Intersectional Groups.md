@@ -1,16 +1,16 @@
 ---
-title: Intersectional Identity
+title: Intersectional Groups
 category: Mitigation_Strategies
-frequency: 4
+frequency: 12
 papers: 1
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
 ---
 
-# Intersectional Identity
+# Intersectional Groups
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 4 times across 1 papers
+**Mentioned:** 12 times across 1 papers
 
 ## Papers
 
@@ -22,4 +22,4 @@ date_created: 2025-10-31
 
 ## Notes
 
-*Add your notes about Intersectional Identity here*
+*Add your notes about Intersectional Groups here*

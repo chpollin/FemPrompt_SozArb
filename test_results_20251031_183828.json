@@ -1,0 +1,126 @@
+{
+  "test_id": "20251031_183828",
+  "start_time": "2025-10-31T18:38:28.059555",
+  "stages": {
+    "Environment Check": {
+      "success": false,
+      "duration": 1.0168769359588623,
+      "details": {
+        "python_version": "3.11.9",
+        "api_key_present": false,
+        "packages": {
+          "anthropic": true,
+          "requests": true,
+          "yaml": true,
+          "pandas": true,
+          "openpyxl": true,
+          "pyzotero": true,
+          "dotenv": true
+        },
+        "directories": {
+          "analysis": true,
+          "analysis/pdfs": true,
+          "analysis/summaries_final": true,
+          "FemPrompt_Vault": true
+        },
+        "input_file": "C:\\Users\\Chrisi\\Documents\\GitHub\\FemPrompt_SozArb\\analysis\\zotero_vereinfacht.json"
+      }
+    },
+    "PDF Acquisition": {
+      "success": true,
+      "duration": 0.54559326171875,
+      "details": {
+        "pdfs_count": 12,
+        "script_loadable": true
+      }
+    },
+    "PDF Conversion": {
+      "success": true,
+      "duration": 0.06107449531555176,
+      "details": {
+        "markdown_count": 2,
+        "script_valid": true
+      }
+    },
+    "Claude Summarization": {
+      "success": true,
+      "duration": 0.00099945068359375,
+      "details": {
+        "batch_metadata": {
+          "processing_summary": {
+            "total_documents": 2,
+            "successful": 2,
+            "failed": 0,
+            "success_rate": "100.0%"
+          },
+          "timing": {
+            "start_time": "2025-10-31 18:00:08",
+            "end_time": "2025-10-31 18:01:16",
+            "total_time_minutes": "1.1",
+            "avg_time_per_doc": "34.1s"
+          },
+          "statistics": {
+            "avg_original_length": "2,363 chars",
+            "avg_summary_length": "5,098 chars",
+            "avg_compression": "215.7%"
+          },
+          "failed_documents": [],
+          "model_used": "claude-haiku-4-5",
+          "workflow_stages": 5
+        },
+        "summaries": {
+          "summary_Gengler_2024_Faires.md": {
+            "has_yaml": true,
+            "has_title": true,
+            "has_model": true,
+            "size": 5816
+          },
+          "summary_Shin_2024_prompt.md": {
+            "has_yaml": true,
+            "has_title": true,
+            "has_model": true,
+            "size": 6222
+          }
+        },
+        "summary_count": 2
+      }
+    },
+    "Vault Generation": {
+      "success": true,
+      "duration": 0.0009999275207519531,
+      "details": {
+        "vault_exists": true,
+        "papers_count": 2,
+        "concepts_count": 14,
+        "has_master_moc": true
+      }
+    },
+    "Quality Validation": {
+      "success": true,
+      "duration": 0.08830523490905762,
+      "details": {
+        "exit_code": 0,
+        "quality_report": {
+          "quality_score": 90,
+          "success_rate": 86.66666666666667,
+          "passed_tests": 13,
+          "warnings": 2,
+          "errors": 0,
+          "stats": {
+            "papers": 2,
+            "bias_concepts": 6,
+            "mitigation_concepts": 8,
+            "total_concepts": 14
+          },
+          "recommendations": [
+            "Enhance deduplication logic"
+          ]
+        },
+        "quality_score": 90
+      }
+    }
+  },
+  "overall_success": false,
+  "end_time": "2025-10-31T18:38:29.775405",
+  "total_duration": 1.71585
+}

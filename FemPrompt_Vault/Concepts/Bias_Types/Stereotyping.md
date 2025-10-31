@@ -1,16 +1,16 @@
 ---
-title: Stereotypical
+title: Stereotyping
 category: Bias_Types
-frequency: 2
+frequency: 4
 papers: 2
 tags: [concept, bias_types]
 date_created: 2025-10-31
 ---
 
-# Stereotypical
+# Stereotyping
 
 **Category:** Bias_Types  
-**Mentioned:** 2 times across 2 papers
+**Mentioned:** 4 times across 2 papers
 
 ## Papers
 
@@ -23,4 +23,4 @@ date_created: 2025-10-31
 
 ## Notes
 
-*Add your notes about Stereotypical here*
+*Add your notes about Stereotyping here*

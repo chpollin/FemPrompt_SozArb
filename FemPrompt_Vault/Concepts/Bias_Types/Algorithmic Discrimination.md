@@ -1,5 +1,5 @@
 ---
-title: Stereotypical
+title: Algorithmic Discrimination
 category: Bias_Types
 frequency: 2
 papers: 2
@@ -7,15 +7,15 @@ tags: [concept, bias_types]
 date_created: 2025-10-31
 ---
 
-# Stereotypical
+# Algorithmic Discrimination
 
 **Category:** Bias_Types  
 **Mentioned:** 2 times across 2 papers
 
 ## Papers
 
-- [[summary_Chisca_2024_Prompting]]
-- [[summary_Sant_2024_power]]
+- [[summary_Gohar_2023_Survey]]
+- [[summary_Shah_2025_Gender]]
 
 ## Related Concepts
 
@@ -23,4 +23,4 @@ date_created: 2025-10-31
 
 ## Notes
 
-*Add your notes about Stereotypical here*
+*Add your notes about Algorithmic Discrimination here*

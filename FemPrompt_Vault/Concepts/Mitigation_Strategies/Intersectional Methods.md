@@ -1,8 +1,8 @@
 ---
 title: Intersectional Methods
 category: Mitigation_Strategies
-frequency: 2
-papers: 1
+frequency: 14
+papers: 2
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
 ---
@@ -10,11 +10,12 @@ date_created: 2025-10-31
 # Intersectional Methods
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 2 times across 1 papers
+**Mentioned:** 14 times across 2 papers
 
 ## Papers
 
-- [[summary_Gengler_2024_Faires]]
+- [[summary_Gohar_2023_Survey]]
+- [[summary_Jääskeläinen_2025_Intersectional]]
 
 ## Related Concepts
 

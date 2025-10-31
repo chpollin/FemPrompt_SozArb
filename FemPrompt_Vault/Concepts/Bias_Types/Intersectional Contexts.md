@@ -1,21 +1,20 @@
 ---
-title: Stereotypical
+title: Intersectional Contexts
 category: Bias_Types
 frequency: 2
-papers: 2
+papers: 1
 tags: [concept, bias_types]
 date_created: 2025-10-31
 ---
 
-# Stereotypical
+# Intersectional Contexts
 
 **Category:** Bias_Types  
-**Mentioned:** 2 times across 2 papers
+**Mentioned:** 2 times across 1 papers
 
 ## Papers
 
-- [[summary_Chisca_2024_Prompting]]
-- [[summary_Sant_2024_power]]
+- [[summary_Gohar_2023_Survey]]
 
 ## Related Concepts
 
@@ -23,4 +22,4 @@ date_created: 2025-10-31
 
 ## Notes
 
-*Add your notes about Stereotypical here*
+*Add your notes about Intersectional Contexts here*

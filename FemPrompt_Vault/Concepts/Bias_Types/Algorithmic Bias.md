@@ -1,8 +1,8 @@
 ---
 title: Algorithmic Bias
 category: Bias_Types
-frequency: 3
-papers: 1
+frequency: 5
+papers: 3
 tags: [concept, bias_types]
 date_created: 2025-10-31
 ---
@@ -10,11 +10,13 @@ date_created: 2025-10-31
 # Algorithmic Bias
 
 **Category:** Bias_Types  
-**Mentioned:** 3 times across 1 papers
+**Mentioned:** 5 times across 3 papers
 
 ## Papers
 
-- [[summary_Shin_2024_prompt]]
+- [[summary_Gohar_2023_Survey]]
+- [[summary_Shah_2025_Gender]]
+- [[summary_Wudel_2025_What]]
 
 ## Related Concepts
 

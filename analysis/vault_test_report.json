@@ -5,10 +5,10 @@
   "warnings": 2,
   "errors": 0,
   "stats": {
-    "papers": 2,
-    "bias_concepts": 6,
-    "mitigation_concepts": 8,
-    "total_concepts": 14
+    "papers": 11,
+    "bias_concepts": 16,
+    "mitigation_concepts": 22,
+    "total_concepts": 38
   },
   "recommendations": [
     "Enhance deduplication logic"

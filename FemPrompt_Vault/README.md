@@ -14,7 +14,7 @@ An Obsidian knowledge graph for feminist AI and bias research.
 
 1. Open Obsidian
 2. Select 'Open folder as vault'
-3. Choose: `C:\Users\Chrisi\Documents\GitHub\FemPrompt_SozArb\FemPrompt_Vault`
+3. Choose: `c:\Users\Chrisi\Documents\GitHub\FemPrompt_SozArb\FemPrompt_Vault`
 4. Start with [[Index]] in the MOCs folder
 
 ## Structure
@@ -26,4 +26,4 @@ An Obsidian knowledge graph for feminist AI and bias research.
 
 ## Generated
 
-2025-10-31 18:34
+2025-10-31 19:00

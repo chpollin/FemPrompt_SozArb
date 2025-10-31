@@ -1,20 +1,20 @@
 ---
-title: Intersectional Identity
+title: Intersectional Feminism
 category: Mitigation_Strategies
-frequency: 4
+frequency: 10
 papers: 1
 tags: [concept, mitigation_strategies]
 date_created: 2025-10-31
 ---
 
-# Intersectional Identity
+# Intersectional Feminism
 
 **Category:** Mitigation_Strategies  
-**Mentioned:** 4 times across 1 papers
+**Mentioned:** 10 times across 1 papers
 
 ## Papers
 
-- [[summary_Gohar_2023_Survey]]
+- [[summary_Wudel_2025_What]]
 
 ## Related Concepts
 
@@ -22,4 +22,4 @@ date_created: 2025-10-31
 
 ## Notes
 
-*Add your notes about Intersectional Identity here*
+*Add your notes about Intersectional Feminism here*
