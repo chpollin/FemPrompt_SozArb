@@ -13,10 +13,14 @@ beautifulsoup4>=4.12.0
 # Google Gemini API (required for summarization)
 google-generativeai>=0.3.0
 
-# Optional: Zotero integration
-# Uncomment if using Zotero API features
-# pyzotero>=1.5.0
+# Excel workflow (required for assessment)
+pandas>=2.0.0
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
 
-# Optional: Advanced PDF conversion
+# Zotero integration (required for API features)
+pyzotero>=1.5.0
+
+# Advanced PDF conversion (optional but recommended)
 # Requires additional system dependencies
 # docling>=0.1.0

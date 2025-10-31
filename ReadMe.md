@@ -164,9 +164,24 @@ FemPrompt_SozArb/
 │   ├── Papers/                  # Individual paper notes
 │   ├── Concepts/                # Extracted concepts
 │   └── MASTER_MOC.md           # Navigation index
-└── deep-research/               # Multi-model search results
+└── knowledge/                   # Project documentation
+    ├── Projekt.md               # Research goals and status
+    ├── Theorie.md               # Feminist theory
+    ├── Methodik.md              # PRISMA methodology
+    ├── Technisch.md             # Technical implementation
+    ├── Prozess.md               # Workflow steps
+    └── Operativ.md              # Prompts and benchmarks
 ```
 
-## Workflow-Diagramm
+## Documentation
 
-![Deep Research Workflow](deep_research_workflow_diagram.png)
+Comprehensive project documentation is available in the `knowledge/` folder:
+
+- **[Projekt.md](knowledge/Projekt.md)** - Research question, objectives, scope, limitations, and current status
+- **[Theorie.md](knowledge/Theorie.md)** - Feminist theoretical framework (Haraway, Crenshaw, Response-Ability)
+- **[Methodik.md](knowledge/Methodik.md)** - PRISMA 2020 methodology, quality criteria, assessment workflow
+- **[Technisch.md](knowledge/Technisch.md)** - Technical implementation, API integration, troubleshooting
+- **[Prozess.md](knowledge/Prozess.md)** - Step-by-step workflow from deep research to knowledge graph
+- **[Operativ.md](knowledge/Operativ.md)** - Prompt templates, benchmarks, Git workflow
+
+For technical details and troubleshooting, see [CLAUDE.md](CLAUDE.md).
