@@ -37,11 +37,11 @@ Die Ausgabe erfolgt als strukturierte Markdown-Dateien im analysis/markdown_pape
 
 ## KI-gestützte Zusammenfassung
 
-Das Skript summarize-documents.py implementiert fünfstufige iterative Refinement mit Gemini 2.5 Flash. Stage 1 extrahiert akademische Kernelemente durch strukturierte Prompts mit Fokus auf Forschungsfrage, Methodik, Hauptergebnisse und theoretischen Rahmen. Stage 2 generiert fünfhundert-Wort-Synthesen durch Verdichtung der Rohextraktion mit Betonung von Kontext und Relevanz.
+Das Skript summarize-documents.py implementiert fünfstufige iterative Refinement mit Claude Haiku 4.5. Stage 1 extrahiert akademische Kernelemente durch strukturierte Prompts mit Fokus auf Forschungsfrage, Methodik, Hauptergebnisse und theoretischen Rahmen. Stage 2 generiert fünfhundert-Wort-Synthesen durch Verdichtung der Rohextraktion mit Betonung von Kontext und Relevanz.
 
 Stage 3 validiert Konsistenz und Vollständigkeit durch kritische Analyse der Stage-2-Ausgabe. Das Modell prüft interne Widersprüche, identifiziert Lücken und bewertet Generalisierbarkeit. Stage 4 produziert bereinigte einhundertfünfzig-Wort-Zusammenfassungen basierend auf der Validierung. Stage 5 extrahiert strukturierte Metadaten im YAML-Format mit Feldern für Keywords, Methods, Theories, Sample Size, Geographic Scope und Temporal Scope.
 
-Die Gemini-API-Konfiguration balanciert Qualität und Kosten. Temperature 0.3 sorgt für Konsistenz bei minimaler Kreativität. MaxOutputTokens 2048 ermöglicht ausführliche Analysen. TopP 0.8 und TopK 40 steuern kontrollierte Variation. Die API-URL referenziert explizit v1beta/models/gemini-2.5-flash für Versionsreproduzierbarkeit.
+Die Gemini-API-Konfiguration balanciert Qualität und Kosten. Temperature 0.3 sorgt für Konsistenz bei minimaler Kreativität. MaxOutputTokens 2048 ermöglicht ausführliche Analysen. TopP 0.8 und TopK 40 steuern kontrollierte Variation. Die API-URL referenziert explizit v1beta/models/claude-haiku-4-5 für Versionsreproduzierbarkeit.
 
 Das Rate-Limiting verhindert API-Throttling durch konfigurierbare Delays zwischen Requests. Der Standard-Delay von zehn Sekunden kann bei Bedarf auf dreißig Sekunden erhöht werden. Die Batch-Metadaten in batch_metadata.json dokumentieren Verarbeitungszeiten, Erfolgsraten und Fehlertypen. Die Fehlerbehandlung mit Retry-Logik fängt transiente API-Probleme ab.
 
@@ -75,7 +75,7 @@ ArXiv API für Preprints implementiert moderate Request-Raten mit drei Sekunden 
 
 Die Zotero API über pyzotero ermöglicht bidirektionale Synchronisation bibliographischer Daten. Die Authentifizierung erfolgt über API-Key aus Umgebungsvariablen. Die Library-ID spezifiziert User-Library oder Group-Library. Die Read-Only-Operationen extrahieren Metadaten und Attachments. Die Write-Operationen ermöglichen Tag-Updates und Notizen.
 
-Gemini API für KI-gestützte Analyse nutzt google-generativeai Python-Client. Die Environment-Variable GEMINI_API_KEY speichert Credentials. Die Model-Spezifikation wählt explizit gemini-2.5-flash. Die Generation-Config setzt Temperature, MaxOutputTokens, TopP und TopK. Die Safety-Settings können optional angepasst werden für unterschiedliche Content-Filter-Level.
+Gemini API für KI-gestützte Analyse nutzt google-generativeai Python-Client. Die Environment-Variable GEMINI_API_KEY speichert Credentials. Die Model-Spezifikation wählt explizit claude-haiku-4-5. Die Generation-Config setzt Temperature, MaxOutputTokens, TopP und TopK. Die Safety-Settings können optional angepasst werden für unterschiedliche Content-Filter-Level.
 
 ## Abhängigkeiten und Installation
 

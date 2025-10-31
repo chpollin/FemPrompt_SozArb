@@ -55,7 +55,7 @@ Inhaltliche Kernelemente erfassen die wissenschaftliche Substanz. Die Forschungs
 
 Kontextuelle Faktoren erfassen Rahmenbedingungen. Der geografische und kulturelle Kontext wird dokumentiert. Der zeitliche Rahmen der Datenerhebung wird notiert. Förderung und potentielle Interessenkonflikte werden erfasst. Limitationen laut Autoren werden übernommen. Diese Kontextualisierung ist zentral für die Interpretation der Befunde unter Perspektive des situierten Wissens.
 
-Die Extraktion erfolgt durch fünfstufige KI-gestützte Zusammenfassung kombiniert mit manueller Validierung. Gemini 2.5 Flash generiert strukturierte Synthesen mit automatischer Metadaten-Extraktion. Die menschliche Validierung prüft Korrektheit, ergänzt fehlende Elemente und korrigiert Fehler. Die bidirektionale Integration von automatisierter und manueller Arbeit optimiert Effizienz unter Beibehaltung von Qualität.
+Die Extraktion erfolgt durch fünfstufige KI-gestützte Zusammenfassung kombiniert mit manueller Validierung. Claude Haiku 4.5 generiert strukturierte Synthesen mit automatischer Metadaten-Extraktion. Die menschliche Validierung prüft Korrektheit, ergänzt fehlende Elemente und korrigiert Fehler. Die bidirektionale Integration von automatisierter und manueller Arbeit optimiert Effizienz unter Beibehaltung von Qualität.
 
 ## Wissenssynthese
 
