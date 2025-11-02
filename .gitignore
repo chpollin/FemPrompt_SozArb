@@ -43,3 +43,11 @@ nul
 *.tmp
 *.backup
 *.bak
+
+# Test files (root directory)
+test_assessment.xlsx
+test_*.xlsx
+test_*.json
+test-pdfs/
+acquisition_log.json
+missing_pdfs.csv

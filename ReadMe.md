@@ -1,187 +1,336 @@
-# FemPrompt Research Pipeline
+# FemPrompt & SozArb Research Pipeline
 
-## AI-Assisted Literature Research System for Bias and Intersectionality Analysis
+**AI-Assisted Literature Research System for Bias and Intersectionality Analysis**
 
-An automated, end-to-end research pipeline that leverages multiple AI models for systematic literature discovery, intelligent PDF acquisition, and knowledge graph generation.
+Automated, end-to-end research pipeline leveraging multiple AI models for systematic literature discovery, intelligent PDF acquisition, and knowledge graph generation.
+
+**Last Updated:** 2025-11-02
+
+---
+
+## Projects
+
+### 1. FemPrompt (326 papers)
+- **Focus:** Feminist Digital/AI Literacies and diversity-reflective prompting
+- **Research Question:** How can feminist AI literacies help expose and mitigate bias in AI?
+- **Status:** Full pipeline operational, Obsidian vault generated
+- **Zotero:** Group library 6080294
+
+### 2. SozArb (325 papers) - Current
+- **Focus:** AI literacy in social work and vulnerable populations
+- **Research Question:** How can social workers develop AI literacy to serve vulnerable populations?
+- **Status:** LLM assessment complete (208 Include, 84 Exclude, 33 Unclear)
+- **Zotero:** Group library 6284300 (socialai-litreview-curated)
+- **Next Steps:** PDF acquisition → Markdown conversion → Summarization
+
+---
 
 ## Quick Start
 
+### Installation
+
 ```bash
+# Clone repository
+git clone <repo-url>
+cd FemPrompt_SozArb
+
 # Install dependencies
 pip install -r requirements.txt
 
 # Set API key
-export GEMINI_API_KEY="your-api-key-here"  # Linux/Mac
-# or
-$env:GEMINI_API_KEY="your-api-key-here"     # Windows PowerShell
-
-# Run complete pipeline
-python run_pipeline.py
+export ANTHROPIC_API_KEY="sk-ant-your-key"  # Linux/Mac
+$env:ANTHROPIC_API_KEY="sk-ant-your-key"    # Windows PowerShell
 ```
 
-## The Workflow
-
-### **Step 1: Parametric Deep Research Prompt**
-
-The process begins with a standardized prompt that can be adapted for any research question. It directs an AI to assume the role of an expert, defines the research scope, and specifies the exact output format, ensuring consistent and reusable results.
-
-**Core Prompt Template:**
-```
-
-CONTEXT:
-
------
-
-How can feminist Digital/AI Literacies and diversity-reflective prompting help to expose and mitigate bias and intersectional discrimination in AI technologies?
-
------
-
-You are an expert in systematic scientific literature analysis. Your task is to conduct comprehensive research on the topic above for the period 2023-2025, focusing on peer-reviewed sources.
-
-For each relevant source, you must:
-
-1.  **Cite**: Provide a complete APA-formatted citation, including a URL.
-2.  **Summarize**: Write a concise summary (max 150 words) of the central key messages.
-3.  **Evaluate**: Assess the quality (high/medium/low) with an explicit justification covering:
-      * Peer-review status
-      * Journal reputation or impact
-      * Methodological robustness
-      * Citation frequency and influence
-
-The output must be in a neutral, precise, academic style.
-
-```
-
-### **Step 2: Multi-Model Execution**
-
-To mitigate single-model bias and broaden literature discovery, the prompt is executed in parallel across several major AI platforms (e.g., Gemini, Claude, ChatGPT, Perplexity). Each model independently generates a list of sources, summaries, and quality assessments.
-
-### **Step 3: Standardize to RIS Format**
-
-All AI-generated outputs are converted into the **RIS format**, a standard for bibliographic data. AI-generated summaries and quality notes are preserved in the abstract (`AB`) and notes (`N1`) fields, respectively. This makes the rich, AI-generated data portable and ready for reference management.
-
-### **Step 4: Import and Organize in Zotero**
-
-The standardized `.ris` files are imported into Zotero. To maintain traceability, results from each AI model are organized into separate collections. This allows for easy comparison and source attribution.
-
-### **Step 5: Expert-in-the-Loop Validation**
-
-A human expert reviews the aggregated bibliography in Zotero. This critical step involves:
-* **Validating** the relevance and quality of AI-discovered sources.
-* **De-duplicating** entries (using Zotero's built-in tools).
-* **Correcting** any bibliographic inaccuracies.
-* **Curating** the final list of sources for full-text analysis.
-
-### **Step 6: Automated Content Analysis**
-
-This phase performs deep content analysis using the full-text articles:
-
-* **Preparation:** Ensure PDFs are converted to Markdown in `analysis/markdown_papers/` directory
-* **Execution:** Run `python analysis/summarize-documents.py`
-  * Uses Claude Haiku 4.5 with 5-stage iterative refinement
-  * Generates structured summaries with metadata extraction
-  * Processing time: ~60 seconds per document (fast and cost-efficient)
-* **Output:** `analysis/summaries_final/` containing:
-  * Individual paper summaries with YAML frontmatter
-  * Batch metadata tracking processing status
-
-### **Step 7: Knowledge Graph Generation (Obsidian Vault)**
-
-Transform your research papers into an interconnected knowledge graph using Obsidian:
-
-* **Script:** Run `python analysis/generate_obsidian_vault_improved.py`
-* **Features:**
-  * Smart concept extraction with deduplication and normalization
-  * Creates 35 focused concept notes from 35 papers (88% reduction from naive approach)
-  * Consolidated intersectional concepts (34 variants → 5 core concepts)
-  * Removed AI Technologies category entirely for cleaner focus on bias and mitigation
-  * Frequency-based filtering and caps to prevent over-extraction
-  * Complete metadata for all papers
-  * Master MOC for complete vault navigation
-  * Quality Score: 85/100 (tested with `test_vault_quality.py`)
-* **Output:** `FemPrompt_Vault/` folder ready to open in Obsidian
-* **Benefits:** Visual exploration of research connections, concept frequency tracking, and synthesis templates
-
-## Automated Pipeline Execution
-
-### Complete Workflow (Recommended)
+### Run Complete Pipeline
 
 ```bash
-# Run all stages automatically
+# Automated execution (recommended)
 python run_pipeline.py
 
-# Resume from checkpoint after interruption
-python run_pipeline.py --resume
-
-# Run specific stages only
-python run_pipeline.py --stages acquire_pdfs,convert_pdfs
-
-# Skip specific stages
-python run_pipeline.py --skip summarize
-
-# Dry run to preview
-python run_pipeline.py --dry-run
+# Advanced options
+python run_pipeline.py --resume              # Resume from checkpoint
+python run_pipeline.py --stages acquire_pdfs,summarize
+python run_pipeline.py --dry-run             # Preview only
 ```
 
 ### Manual Stage Execution
 
-For granular control, run stages individually:
+```bash
+# Step 1: Acquire PDFs (with Excel input and PRISMA filtering)
+python analysis/getPDF_intelligent.py \
+  --input assessment-llm/output/assessment_llm_run5.xlsx \
+  --output analysis/pdfs/ \
+  --filter-decision Include
+
+# Step 2: Convert to Markdown
+python analysis/pdf-to-md-converter.py \
+  --pdf-dir analysis/pdfs/ \
+  --output-dir analysis/markdown_papers/
+
+# Step 3: Generate AI summaries (Claude Haiku 4.5)
+python analysis/summarize-documents.py \
+  --input-dir analysis/markdown_papers/ \
+  --output-dir analysis/summaries_final/
+
+# Step 4: Create knowledge graph
+python analysis/generate_obsidian_vault_improved.py \
+  --input-dir analysis/summaries_final/ \
+  --output-dir FemPrompt_Vault/
+
+# Step 5: Validate quality
+python analysis/test_vault_quality.py --vault-dir FemPrompt_Vault/
+```
+
+---
+
+## The Workflow (7 Steps)
+
+### Step 1: Parametric Deep Research Prompt
+
+Execute a standardized, reusable prompt across 4 AI platforms to discover literature:
+
+**Core Template:**
+```
+You are an expert in systematic scientific literature analysis.
+Conduct comprehensive research on [RESEARCH QUESTION] for [TIME PERIOD].
+
+For each source:
+1. Cite: Complete APA citation with URL
+2. Summarize: 150-word summary of key messages
+3. Evaluate: Quality (high/medium/low) with justification
+
+Output in neutral, precise, academic style.
+```
+
+**Models Used:** Claude, Gemini, ChatGPT, Perplexity
+**Output:** Model-specific bibliographies in `deep-research/[Model]/`
+
+### Step 2: Standardize to RIS Format
+
+Convert AI outputs to RIS format for Zotero import. AI summaries and quality notes preserved in abstract/notes fields.
+
+**Output:** `to-Zotero/*.ris` (4 files, one per model)
+
+### Step 3: Import to Zotero
+
+Import RIS files into Zotero group library, organize by model collection, de-duplicate entries.
+
+**Output:** Consolidated Zotero library (326 papers for FemPrompt, 325 for SozArb)
+
+### Step 4: PRISMA Assessment
+
+**Option A: LLM-Based (NEW - Fully Automated)**
+```bash
+python assessment-llm/assess_papers.py \
+  --input papers_to_assess.xlsx \
+  --output assessment_llm_run6.xlsx
+
+# Results (SozArb Run 5):
+# - 325 papers assessed in 24 minutes
+# - 100% success rate, $0.58 cost
+# - 208 Include, 84 Exclude, 33 Unclear
+# - 5-dimensional relevance scoring (0-3 scale)
+```
+
+**Option B: Manual Excel-Based (Legacy)**
+```bash
+python assessment/zotero_to_excel.py  # Export to Excel
+# [Fill assessment manually in Excel]
+python assessment/excel_to_zotero_tags.py --no-dry-run  # Import tags back
+```
+
+**Output:** Curated library with PRISMA tags
+
+### Step 5: PDF Acquisition (PRISMA-Filtered)
+
+Hierarchical acquisition with 8 fallback strategies:
 
 ```bash
-# 1. Acquire PDFs from Zotero metadata
-python analysis/getPDF_intelligent.py
+python analysis/getPDF_intelligent.py \
+  --input assessment-llm/output/assessment_llm_run5.xlsx \
+  --filter-decision Include \
+  --output analysis/pdfs/
 
-# 2. Convert PDFs to Markdown
+# Strategies: Zotero local → DOI → ArXiv → Unpaywall → Semantic Scholar → etc.
+# Success rate: >70% for included papers
+```
+
+### Step 6: PDF → Markdown → AI Summaries
+
+```bash
+# Convert PDFs to Markdown (Docling)
 python analysis/pdf-to-md-converter.py
 
-# 3. Generate AI summaries
+# Generate summaries (Claude Haiku 4.5, 5-stage iterative refinement)
 python analysis/summarize-documents.py
+# Processing: ~60 seconds/document, ~$0.03-0.04/document
+```
 
-# 4. Create Obsidian knowledge graph
+### Step 7: Knowledge Graph Generation
+
+```bash
 python analysis/generate_obsidian_vault_improved.py
 
-# 5. Validate vault quality
-python analysis/test_vault_quality.py
+# Algorithm:
+# - Pattern-based concept extraction
+# - Synonym mapping (182 terms → canonical forms)
+# - Frequency filtering (≥2 occurrences)
+# - 302 initial concepts → 35 final concepts
+# Output: Obsidian-compatible vault with Papers/ and Concepts/ folders
 ```
+
+---
+
+## Key Features
+
+### Innovations
+
+1. **LLM-Based PRISMA Assessment** - 100% automated, $0.002/paper, 100% success rate
+2. **Excel Input Support** - Direct .xlsx reading, no JSON conversion needed
+3. **5-Dimensional Relevance Scoring** - Parametric, adaptable to other projects
+4. **Hierarchical PDF Acquisition** - 8 fallback strategies for maximum coverage
+5. **Multi-Model Literature Discovery** - Mitigates single-model bias
+
+### Reusability
+
+This pipeline is **fully parametric** and can be adapted for:
+- Different research questions
+- Different assessment dimensions (customize in `prompt_template.md`)
+- Different document types
+- Different knowledge graph structures
+
+**See:** `assessment-llm/prompt_template_EXAMPLE_SOCIAL_WORK.md` for adaptation example
+
+---
+
+## Performance
+
+**For 208 papers (SozArb Include set):**
+- **LLM Assessment:** 24 minutes, $0.58
+- **PDF Acquisition:** ~1-2 hours (70-80% success rate)
+- **Markdown Conversion:** ~2-3 hours (30-40 sec/doc)
+- **AI Summarization:** ~3-4 hours ($6-8 total cost)
+- **Vault Generation:** <1 minute
+- **Total:** ~6-9 hours, ~$7-9 cost
+
+**Model:** Claude Haiku 4.5 (cost-efficient, fast, high-quality)
+
+---
 
 ## Project Structure
 
 ```
 FemPrompt_SozArb/
+├── README.md                    # This file (project overview)
+├── TECHNICAL.md                 # Complete technical documentation
+├── CURRENT_STATUS.md            # Current state and next steps
+├── CLAUDE.md                    # Working rules for Claude AI
+│
 ├── run_pipeline.py              # Master orchestration script
-├── pipeline_config.yaml         # Configuration file
-├── analysis/                    # Processing scripts
-│   ├── getPDF_intelligent.py    # Smart PDF acquisition
-│   ├── pdf-to-md-converter.py   # Format conversion
-│   ├── summarize-documents.py   # AI content analysis
+├── pipeline_config.yaml         # Configuration
+├── requirements.txt             # Dependencies
+│
+├── analysis/                    # Processing pipeline
+│   ├── getPDF_intelligent.py    # PDF acquisition (Excel + JSON input)
+│   ├── pdf-to-md-converter.py   # Docling conversion
+│   ├── summarize-documents.py   # Claude Haiku 4.5 summaries
 │   ├── generate_obsidian_vault_improved.py  # Knowledge graph
-│   ├── test_vault_quality.py    # Quality validation
-│   ├── pdfs/                    # Downloaded PDFs
-│   ├── markdown_papers/         # Converted documents
-│   ├── summaries_final/         # AI-generated summaries
-│   └── zotero_vereinfacht.json  # Bibliography metadata
-├── FemPrompt_Vault/             # Obsidian knowledge graph
+│   ├── test_vault_quality.py    # Vault validation
+│   └── [generated data folders]
+│
+├── assessment-llm/              # LLM-based PRISMA assessment (NEW)
+│   ├── assess_papers.py         # Main assessment script
+│   ├── prompt_template.md       # 5-dimensional assessment prompt
+│   ├── output/
+│   │   ├── assessment_llm_run5.xlsx  # 325 assessed papers
+│   │   └── zotero_tags.csv           # Tag export
+│   ├── write_llm_tags_to_zotero.py   # Zotero API integration
+│   └── README.md                # Assessment system guide
+│
+├── assessment/                  # Manual assessment (LEGACY)
+│   ├── zotero_to_excel.py       # Zotero → Excel
+│   ├── excel_to_zotero_tags.py  # Excel → Zotero tags
+│   └── README.md
+│
+├── deep-research/               # Multi-model research outputs
+│   ├── Claude/, Gemini/, OpenAI/, Perplexity/
+│
+├── to-Zotero/                   # RIS files for import
+│   └── [4 model-specific .ris files]
+│
+├── FemPrompt_Vault/             # Obsidian knowledge graph (FemPrompt)
 │   ├── Papers/                  # Individual paper notes
 │   ├── Concepts/                # Extracted concepts
-│   └── MASTER_MOC.md           # Navigation index
-└── knowledge/                   # Project documentation
-    ├── Projekt.md               # Research goals and status
-    ├── Theorie.md               # Feminist theory
-    ├── Methodik.md              # PRISMA methodology
-    ├── Technisch.md             # Technical implementation
-    ├── Prozess.md               # Workflow steps
-    └── Operativ.md              # Prompts and benchmarks
+│   └── MASTER_MOC.md           # Navigation
+│
+└── knowledge/                   # Project documentation (German)
+    ├── Projekt.md, Theorie.md, Methodik.md, etc.
 ```
+
+---
 
 ## Documentation
 
-Comprehensive project documentation is available in the `knowledge/` folder:
+### For Users
+- **README.md** (this file) - Project overview and quick start
+- **TECHNICAL.md** - Complete technical reference, troubleshooting, API details
+- **CURRENT_STATUS.md** - Current state, pending tasks, decision points
+- **assessment-llm/README.md** - LLM assessment system guide
 
-- **[Projekt.md](knowledge/Projekt.md)** - Research question, objectives, scope, limitations, and current status
-- **[Theorie.md](knowledge/Theorie.md)** - Feminist theoretical framework (Haraway, Crenshaw, Response-Ability)
-- **[Methodik.md](knowledge/Methodik.md)** - PRISMA 2020 methodology, quality criteria, assessment workflow
-- **[Technisch.md](knowledge/Technisch.md)** - Technical implementation, API integration, troubleshooting
-- **[Prozess.md](knowledge/Prozess.md)** - Step-by-step workflow from deep research to knowledge graph
-- **[Operativ.md](knowledge/Operativ.md)** - Prompt templates, benchmarks, Git workflow
+### For Developers
+- **CLAUDE.md** - Working rules for Claude AI assistant
 
-For technical details and troubleshooting, see [CLAUDE.md](CLAUDE.md).
+### German Documentation (knowledge/ folder)
+- **Projekt.md** - Forschungsfrage, Ziele, Status
+- **Theorie.md** - Feministische Epistemologie (Haraway, Crenshaw)
+- **Methodik.md** - PRISMA 2020 Methodik
+- **Prozess.md** - Workflow-Schritte
+- **Operativ.md** - Prompts, Benchmarks
+
+---
+
+## Requirements
+
+**Python:** 3.8 or higher
+**Key Dependencies:**
+- `anthropic` (Claude API)
+- `pandas`, `openpyxl` (Excel handling)
+- `pyzotero` (Zotero API)
+- `docling` (PDF conversion)
+
+**API Keys:**
+- `ANTHROPIC_API_KEY` (required for summarization and assessment)
+- Zotero API key (optional, for tag import)
+
+---
+
+## Current Status
+
+**FemPrompt:** ✅ Complete (vault generated, 35 concepts extracted)
+**SozArb:**
+- ✅ LLM assessment complete (325 papers, 100% success)
+- 🔄 PDF acquisition ready (208 Include papers)
+- ⏳ Markdown conversion pending
+- ⏳ Summarization pending
+- ⏳ Vault generation pending
+
+**Next:** Execute PDF acquisition for SozArb Include papers
+
+See **CURRENT_STATUS.md** for detailed next steps and decision points.
+
+---
+
+## License & Citation
+
+[Add license information here]
+
+**Citation:**
+If you use this pipeline in your research, please cite:
+[Add citation information here]
+
+---
+
+## Contact
+
+[Add contact information here]
