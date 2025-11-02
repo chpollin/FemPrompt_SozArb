@@ -179,6 +179,7 @@ class ZoteroToExcelConverter:
 
         # Prepare data for Excel
         excel_data = []
+        filtered_count = 0
 
         for idx, item in enumerate(self.items, 1):
             # Extract and normalize publication year
@@ -194,6 +195,11 @@ class ZoteroToExcelConverter:
 
             # Extract source tool from collections
             source_tool = self.extract_source_tool(collection_names)
+
+            # FILTER: Only include papers from _DEEPRESEARCH collections (with recognized tool)
+            if source_tool == 'Manual':
+                filtered_count += 1
+                continue  # Skip papers without Deep Research tool
 
             # Extract key metadata
             row = {
@@ -230,8 +236,16 @@ class ZoteroToExcelConverter:
 
             excel_data.append(row)
 
+        # Log filtering results
+        if filtered_count > 0:
+            logger.info(f"  - Filtered out {filtered_count} papers without Deep Research tool")
+            logger.info(f"  - Included {len(excel_data)} papers from Deep Research collections")
+
         # Create DataFrame
         df = pd.DataFrame(excel_data)
+
+        # Renumber IDs sequentially after filtering
+        df['ID'] = range(1, len(df) + 1)
 
         # Save to Excel with formatting
         logger.info(f"Writing Excel file: {output_file}")

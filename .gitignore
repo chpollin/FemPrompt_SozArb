@@ -33,3 +33,13 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
+
+# Windows
+nul
+~$*.xlsx
+~$*.docx
+
+# Temporary files
+*.tmp
+*.backup
+*.bak
