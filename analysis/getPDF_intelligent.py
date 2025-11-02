@@ -30,6 +30,12 @@ try:
 except ImportError:
     PYPDF2_AVAILABLE = False
 
+try:
+    import pandas as pd
+    PANDAS_AVAILABLE = True
+except ImportError:
+    PANDAS_AVAILABLE = False
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -109,12 +115,13 @@ class PDFAcquisitionPipeline:
         logger.warning("⚠ Zotero storage directory not found")
         return None
 
-    def process_bibliography(self, json_file: str) -> Dict:
+    def process_bibliography(self, input_file: str, filter_decision: str = None) -> Dict:
         """
-        Process Zotero bibliography JSON file
+        Process Zotero bibliography from JSON or Excel file
 
         Args:
-            json_file: Path to zotero_vereinfacht.json
+            input_file: Path to zotero_vereinfacht.json or assessment.xlsx
+            filter_decision: Filter by Decision field (e.g., "Include", "Exclude", "Unclear")
 
         Returns:
             Dictionary with acquisition results
@@ -123,18 +130,28 @@ class PDFAcquisitionPipeline:
         logger.info("🚀 Starting Intelligent PDF Acquisition")
         logger.info("="*60)
 
-        # Load bibliography
-        with open(json_file, 'r', encoding='utf-8') as f:
-            bibliography = json.load(f)
+        input_path = Path(input_file)
 
-        # Handle both formats: direct list or dictionary with 'items' key
-        if isinstance(bibliography, list):
-            items = bibliography
-        elif isinstance(bibliography, dict):
-            items = bibliography.get('items', [bibliography])
+        # Load bibliography based on file type
+        if input_path.suffix.lower() in ['.xlsx', '.xls']:
+            items = self._load_from_excel(input_file, filter_decision)
+        elif input_path.suffix.lower() == '.json':
+            items = self._load_from_json(input_file)
         else:
-            logger.error(f"Unexpected bibliography format: {type(bibliography)}")
-            items = []
+            logger.error(f"Unsupported file type: {input_path.suffix}")
+            return {'stats': self.stats, 'results': [], 'missing': []}
+
+        # Apply filtering if specified
+        if filter_decision and not input_path.suffix.lower() in ['.xlsx', '.xls']:
+            # For JSON files, filter by tags if present
+            filtered_items = []
+            for item in items:
+                tags = [t.get('tag', '') for t in item.get('tags', [])]
+                if f'PRISMA_{filter_decision}' in tags:
+                    filtered_items.append(item)
+            if filtered_items:
+                logger.info(f"📋 Filtered to {len(filtered_items)} papers with Decision={filter_decision}")
+                items = filtered_items
 
         self.stats['total'] = len(items)
         logger.info(f"📚 Found {len(items)} papers to process")
@@ -336,6 +353,11 @@ class PDFAcquisitionPipeline:
 
         # Check if URL contains arxiv
         url = item.get('url', '')
+
+        # Handle NaN/None URLs
+        if not url or not isinstance(url, str):
+            url = ''
+
         arxiv_match = re.search(r'arxiv\.org/abs/(\d+\.\d+)', url)
         if not arxiv_match:
             # Try to find in title or other fields
@@ -519,6 +541,79 @@ class PDFAcquisitionPipeline:
                 writer.writerows(missing_papers)
             logger.info(f"📋 Missing papers report: {csv_file}")
 
+    def _load_from_json(self, json_file: str) -> List[Dict]:
+        """Load bibliography from JSON file"""
+        logger.info(f"📖 Loading from JSON: {json_file}")
+
+        with open(json_file, 'r', encoding='utf-8') as f:
+            bibliography = json.load(f)
+
+        # Handle both formats: direct list or dictionary with 'items' key
+        if isinstance(bibliography, list):
+            return bibliography
+        elif isinstance(bibliography, dict):
+            return bibliography.get('items', [bibliography])
+        else:
+            logger.error(f"Unexpected bibliography format: {type(bibliography)}")
+            return []
+
+    def _load_from_excel(self, excel_file: str, filter_decision: str = None) -> List[Dict]:
+        """Load bibliography from Excel file with optional filtering"""
+        try:
+            import pandas as pd
+        except ImportError:
+            logger.error("pandas not installed. Install with: pip install pandas openpyxl")
+            return []
+
+        logger.info(f"📖 Loading from Excel: {excel_file}")
+
+        df = pd.read_excel(excel_file)
+        logger.info(f"   Loaded {len(df)} rows from Excel")
+
+        # Filter by Decision if specified
+        if filter_decision and 'Decision' in df.columns:
+            original_count = len(df)
+            df = df[df['Decision'] == filter_decision]
+            logger.info(f"   Filtered to {len(df)} papers with Decision={filter_decision}")
+
+        # Convert Excel rows to Zotero-like format
+        items = []
+        for _, row in df.iterrows():
+            item = {
+                'key': row.get('Zotero_Key', ''),
+                'title': row.get('Title', ''),
+                'DOI': row.get('DOI', ''),
+                'url': row.get('URL', ''),
+                'itemType': row.get('Item_Type', 'journalArticle'),
+                'creators': self._parse_creators(row.get('Author_Year', '')),
+                'date': self._extract_year(row.get('Author_Year', '')),
+                'abstractNote': row.get('Abstract', ''),
+                'tags': []  # Tags not needed for PDF acquisition
+            }
+            items.append(item)
+
+        return items
+
+    def _parse_creators(self, author_year: str) -> List[Dict]:
+        """Parse Author (Year) format into creators list"""
+        if not author_year or pd.isna(author_year):
+            return []
+
+        # Simple parsing - just extract name before parenthesis
+        name = author_year.split('(')[0].strip()
+        if name:
+            return [{'creatorType': 'author', 'lastName': name}]
+        return []
+
+    def _extract_year(self, author_year: str) -> str:
+        """Extract year from Author (Year) format"""
+        if not author_year or pd.isna(author_year):
+            return ''
+
+        import re
+        match = re.search(r'\((\d{4})\)', str(author_year))
+        return match.group(1) if match else ''
+
     def _print_summary(self):
         """Print acquisition summary"""
         logger.info("="*60)
@@ -545,9 +640,11 @@ def main():
 
     parser = argparse.ArgumentParser(description='Intelligent PDF Acquisition with Zotero Integration')
     parser.add_argument('--input', '-i', default='analysis/zotero_vereinfacht.json',
-                       help='Input JSON file from Zotero')
+                       help='Input JSON or Excel file (supports .json, .xlsx)')
     parser.add_argument('--output', '-o', default='analysis/pdfs',
                        help='Output directory for PDFs')
+    parser.add_argument('--filter-decision', choices=['Include', 'Exclude', 'Unclear'],
+                       help='Filter papers by PRISMA decision (for Excel input)')
     parser.add_argument('--zotero-storage', help='Path to Zotero storage directory')
     parser.add_argument('--api-key', help='Zotero API key')
     parser.add_argument('--library-id', help='Zotero library ID')
@@ -571,7 +668,7 @@ def main():
     )
 
     # Process bibliography
-    results = pipeline.process_bibliography(args.input)
+    results = pipeline.process_bibliography(args.input, filter_decision=args.filter_decision)
 
     # Exit code based on success
     if results['stats']['failed'] == 0:
