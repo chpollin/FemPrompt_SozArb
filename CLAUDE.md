@@ -72,69 +72,124 @@ python analysis/generate_obsidian_vault_improved.py    # Stage 4: Knowledge grap
 python analysis/test_vault_quality.py                  # Stage 5: Quality validation
 ```
 
-## Multi-Model Research Workflow (Pre-Pipeline)
+## Pre-Pipeline Workflow (Manual Curation)
 
-### Phase 1: Deep Research with Multiple AI Models
+This section describes the manual research and assessment process that happens BEFORE the automated pipeline.
+
+### Phase 1: Multi-Model Deep Research
 **Process:** Execute parametric research prompt across 4 AI platforms
-**Models Used:** Gemini, Claude, ChatGPT, Perplexity
+**Models Used:** Claude, Gemini, ChatGPT, Perplexity
 **Output:** Model-specific bibliographies in `deep-research/[Model]/`
+**Duration:** ~2-3 hours per model
 
 ### Phase 2: RIS Standardization
 **Process:** Convert AI outputs to RIS format for Zotero import
 **Input:** Raw AI responses from each model
 **Output:** `to-Zotero/*.ris` files (4 files, one per model)
+**Note:** RIS format enables import into reference management software
 
 ### Phase 3: Zotero Import and Consolidation
 **Process:** Import RIS files into Zotero, organize by model collection
-**Manual Steps:** De-duplication, metadata correction, PDF attachment
-**Output:** Consolidated bibliography in Zotero
+**Manual Steps:**
+- Import 4 RIS files into Zotero
+- Organize into model-specific collections (Claude, Gemini, OpenAI, Perplexity)
+- De-duplicate entries across models
+- Correct metadata (authors, DOIs, dates)
+- Attach PDFs where available
+**Output:** Consolidated bibliography in Zotero Group (326 publications)
+
+### Phase 4: PRISMA Assessment via Excel Workflow
+**Process:** Excel-based assessment with API import back to Zotero
+**Location:** Excel/Google Sheets for bulk assessment
+
+**Workflow:**
+```bash
+# 1. Export from Zotero to Excel
+python assessment/zotero_to_excel.py
+# Output: assessment/assessment.xlsx (325 papers, empty assessment fields)
+
+# 2. Manual Assessment (Excel/Google Sheets)
+# Open assessment/assessment.xlsx, fill for each paper:
+#   - Relevance: High/Medium/Low (dropdown)
+#   - Quality: High/Medium/Low (dropdown)
+#   - Decision: Include/Exclude/Unclear (dropdown)
+#   - Notes: Free text rationale
+# Save as: assessment/assessment_curated.xlsx
+
+# 3. Import tags back to Zotero via API
+python assessment/excel_to_zotero_tags.py \
+  --api-key YOUR_ZOTERO_API_KEY \
+  --no-dry-run
+```
+
+**Assessment Fields:**
+1. **Relevance** (High/Medium/Low): Alignment with research question
+2. **Quality** (High/Medium/Low): Methodological rigor, peer-review status
+3. **Decision** (Include/Exclude/Unclear): PRISMA inclusion decision
+4. **Notes**: Detailed rationale for decision
+
+**Tags written to Zotero:**
+- `PRISMA_Include` / `PRISMA_Exclude` / `PRISMA_Unclear`
+- `Relevance_High` / `Relevance_Medium` / `Relevance_Low`
+- `Quality_High` / `Quality_Medium` / `Quality_Low`
+
+**Why Excel-based?**
+- ✅ Bulk editing faster than Zotero UI (325 papers)
+- ✅ Can use Google Sheets for collaboration
+- ✅ Dropdowns prevent typos
+- ✅ Tags automatically calculated from decisions
+- ✅ API writes tags directly to Zotero
+- ✅ Tag updates supported (change decision, re-import)
+
+**Output:** Curated Zotero library with PRISMA tags
+**Example:** 326 papers → ~85 tagged with "PRISMA_Include"
+
+**Testing:**
+```bash
+# Test with 15 papers first
+python assessment/fill_assessment_demo.py  # Simulates assessment
+python assessment/excel_to_zotero_tags.py  # Dry-run (preview only)
+# Check in Zotero Desktop, then run with --no-dry-run
+```
+
+**Documentation:** See [assessment/README.md](assessment/README.md) for detailed workflow guide
 
 ## Processing Stages (Main Pipeline)
 
-### Stage 0: PRISMA-Compliant Assessment (NEW)
-**Process:** Human assessment of bibliographic entries for inclusion/exclusion
-**Scripts:**
-```bash
-# Fetch directly from Zotero API and create Excel
-python analysis/zotero_to_excel.py -o assessment.xlsx
-
-# Complete assessments in Excel
-# Open assessment.xlsx and fill: Relevance, Quality, Decision
-
-# Merge assessments back to RIS
-python analysis/excel_to_ris.py assessment.xlsx bibliography.ris -o enriched.ris
-```
-**Output:** Enriched RIS with PRISMA tags (Include/Exclude/Unclear)
-
-### Stage 1: Literature Collection and Import
-**Process:** Fetch bibliography directly from Zotero Group via API
+### Stage 1: Filtered Zotero Export
+**Process:** Export ONLY PRISMA-included papers from Zotero for pipeline processing
 **Script:**
 ```bash
 python analysis/fetch_zotero_group.py
 ```
-**Output:** `analysis/zotero_vereinfacht.json` (326 publications from Zotero Group 6080294)
-**Status:** Automated via Zotero API (pyzotero)
+**Input:** Curated Zotero library with PRISMA tags
+**Output:** `analysis/zotero_vereinfacht.json` with tag information
+**Filtering:** Pipeline reads tags and processes only papers with `PRISMA_Include` tag
+**Example:** 326 total papers → ~85 papers with PRISMA_Include tag
 
 ### Stage 2: Document Acquisition and Conversion
 
-#### Intelligent PDF Acquisition
+#### Intelligent PDF Acquisition (PRISMA-filtered)
 ```bash
 python analysis/getPDF_intelligent.py
 # Hierarchical acquisition strategy:
-#   1. Zotero attachments (local PDFs)
-#   2. Metadata URLs/DOIs
-#   3. Open access APIs (Unpaywall, ArXiv)
-#   4. Manual intervention report
-# Input: analysis/zotero_vereinfacht.json
-# Output: analysis/pdfs/*.pdf
-# Success rate: >80% with Zotero attachments
+#   1. Filter: Only papers with PRISMA_Include tag
+#   2. Zotero attachments (local PDFs)
+#   3. Metadata URLs/DOIs
+#   4. Open access APIs (Unpaywall, ArXiv)
+#   5. Manual intervention report
+# Input: analysis/zotero_vereinfacht.json (with tags)
+# Filtering: Reads 'tags' field, processes only PRISMA_Include
+# Output: analysis/pdfs/*.pdf (only included papers)
+# Success rate: >70% for included papers
 # Reports: acquisition_log.json, missing_pdfs.csv
 
 # With Zotero API integration:
 python analysis/getPDF_intelligent.py \
   --api-key YOUR_KEY \
   --library-id 12345 \
-  --library-type user
+  --library-type user \
+  --filter-tag PRISMA_Include
 ```
 
 #### PDF to Markdown Conversion
@@ -293,12 +348,15 @@ FemPrompt_SozArb/
 │   ├── summarize-documents.py   # Content analysis
 │   ├── generate_obsidian_vault_improved.py # Knowledge graph
 │   ├── test_vault_quality.py    # Quality validation
-│   ├── ris_to_excel.py          # NEW: RIS to Excel converter
-│   ├── excel_to_ris.py          # NEW: Excel to RIS merger
-│   ├── test_assessment_workflow.py # NEW: Assessment test
-│   ├── ASSESSMENT_WORKFLOW.md   # NEW: Assessment documentation
 │   ├── PDF_ACQUISITION_WORKFLOW.md # PDF acquisition specs
 │   └── SUMMARIZE-DOCUMENTS.md   # Summarization documentation
+├── assessment/                   # PRISMA assessment workflow
+│   ├── assessment.xlsx           # Zotero export (empty template)
+│   ├── assessment_curated.xlsx   # Filled assessment (with decisions)
+│   ├── zotero_to_excel.py        # Zotero → Excel export
+│   ├── excel_to_zotero_tags.py   # Excel → Zotero tag import (API)
+│   ├── fill_assessment_demo.py   # Demo assessment simulation
+│   └── README.md                 # Assessment workflow guide
 ├── deep-research/               # Multi-model research results
 │   ├── Claude/                 # Claude AI outputs
 │   ├── Gemini/                 # Gemini outputs
@@ -310,7 +368,6 @@ FemPrompt_SozArb/
 │   ├── OpenAI-deep-research-bibliography-1.ris
 │   ├── perplexity-deep-research-bibliography-1.ris
 │   └── ris-template.md
-├── knowledge/                   # NEW: Empty folder (purpose unclear)
 ├── FemPrompt_Vault/             # Obsidian knowledge graph (NOT YET CREATED)
 ├── deep_research_workflow_diagram.png # Workflow visualization
 ├── JOURNAL.md                   # Development iteration log
@@ -353,13 +410,23 @@ FemPrompt_SozArb/
 ## Implementation Status
 
 ### Completed Components ✅
-- Multi-model research workflow
+- Multi-model research workflow (Pre-Pipeline Phase 1-3)
 - RIS standardization (4 model-specific RIS files)
-- Assessment workflow implementation (Excel-based with Zotero API integration)
-- Pipeline orchestration (`run_pipeline.py`)
+- PRISMA assessment workflow (Excel-based with Zotero API integration)
+  - Zotero → Excel export (`zotero_to_excel.py`)
+  - Excel → Zotero tag import via API (`excel_to_zotero_tags.py`)
+  - Tag update support (old tags replaced on re-import)
+  - Tested with 15 papers successfully
+- Pipeline orchestration (`run_pipeline.py`) - 5 automated stages
 - Intelligent PDF acquisition (`getPDF_intelligent.py`)
 - Zotero API integration (`pyzotero` installed)
-- Documentation suite (CLAUDE.md, JOURNAL.md, README.md)
+- Documentation suite (CLAUDE.md, JOURNAL.md, README.md, ZOTERO_ROUNDTRIP.md)
+
+### Important Notes ⚠️
+- PRISMA assessment is a **manual pre-pipeline step**, not an automated pipeline stage
+- Assessment workflow: 15 papers tested, 310 remaining to assess
+- Tags can be updated by changing Excel and re-importing (old tags are replaced)
+- Pipeline will filter by PRISMA_Include tag once assessment is complete
 
 ### In Progress 🔄
 - PRISMA assessment (human review phase)

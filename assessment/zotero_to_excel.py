@@ -253,8 +253,8 @@ def main():
 
     parser.add_argument(
         '-o', '--output',
-        default='analysis/assessment.xlsx',
-        help='Output Excel file (default: analysis/assessment.xlsx)'
+        default='assessment/assessment.xlsx',
+        help='Output Excel file (default: assessment/assessment.xlsx)'
     )
 
     args = parser.parse_args()
