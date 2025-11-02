@@ -117,148 +117,274 @@
 
 **Objective:** Download all PDFs from Zotero library and convert to high-quality Markdown
 
-### Step 1: PDF Acquisition Strategy
+**Status:** PLANNING PHASE (Zotero API key not working)
 
-**Source:** Zotero Group Library (socialai-litreview-curated, 325 papers)
+---
 
-**Methods (in priority order):**
-1. Zotero API attachment download (requires working API key)
-2. Zotero local storage sync (if user has Zotero Desktop)
-3. Intelligent PDF acquisition (DOI/URL-based, like FemPrompt pipeline)
-4. Manual download via Zotero web interface
+### What's Already Implemented
 
-**Target Papers:**
-- **Option A:** All 325 assessed papers
-- **Option B:** Only 208 PRISMA_Include papers
-- **Option C:** High-relevance only (87 papers with Relevance_High)
+#### Script 1: `getPDF_intelligent.py` (READY TO USE)
 
-**Output Directory:** `analysis/pdfs/` or `socialai-pdfs/`
+**Capabilities:**
+- Hierarchical PDF acquisition (8 fallback strategies)
+- Zotero local storage support (if Zotero Desktop synced)
+- Unpaywall API (open access papers)
+- ArXiv support
+- DOI/URL-based downloads
+- Automatic Zotero storage detection
+- Progress tracking & logging
+- Missing papers report (CSV)
 
-### Step 2: PDF to Markdown Conversion
+**Current Limitations:**
+- Input: Only JSON format (expects `zotero_vereinfacht.json`)
+- No tag-based filtering (can't filter by PRISMA_Include)
+- No Excel input support
 
-**Tool:** Docling (already used in FemPrompt pipeline)
-
-**Script:** Adapt `analysis/pdf-to-md-converter.py`
-
-**Process:**
+**Usage (if we had JSON input):**
 ```bash
-# Step 1: Acquire PDFs (method TBD)
-python socialai/acquire_pdfs.py \
+python analysis/getPDF_intelligent.py \
+  --input analysis/zotero_vereinfacht.json \
+  --output analysis/pdfs/ \
   --library-id 6284300 \
-  --filter PRISMA_Include \
-  --output socialai-pdfs/
-
-# Step 2: Convert to Markdown
-python analysis/pdf-to-md-converter.py \
-  --input socialai-pdfs/ \
-  --output socialai-markdown/
-
-# Expected output:
-# - 208-325 .md files
-# - High-quality text extraction
-# - Structure preservation
-# - ~30-40 seconds per PDF
+  --library-type group \
+  --api-key YOUR_KEY  # Optional, only needed for API access
 ```
 
-**Quality Metrics:**
-- Conversion success rate: Target >90%
-- Text extraction quality: Visual inspection of sample
-- Metadata preservation: Title, authors, year
+#### Script 2: `pdf-to-md-converter.py` (READY TO USE)
 
-### Step 3: Quality Validation
+**Capabilities:**
+- Docling integration (high-quality conversion)
+- Batch processing
+- Metadata tracking (hashes, timestamps)
+- Skips already converted files
+- Progress reporting
 
-**Checks:**
-1. PDF count matches expected (208 or 325)
-2. Markdown files created for all successful conversions
-3. No empty/corrupted files
-4. Reasonable file sizes (>5KB for real papers)
+**Usage:**
+```bash
+python analysis/pdf-to-md-converter.py \
+  --pdf-dir analysis/pdfs/ \
+  --output-dir analysis/markdown_papers/
+```
 
-**Script:** Create `socialai/validate_conversion.py`
-
----
-
-## Decision Points
-
-### Decision 1: Which Papers to Process?
-
-**Option A: All 325 assessed papers**
-- Pro: Complete corpus, includes Unclear for later review
-- Con: Includes 84 Exclude papers (wasted processing)
-- Estimated time: ~3-4 hours (PDF acquisition + conversion)
-- Estimated cost: Minimal (Docling is local, no API costs)
-
-**Option B: Only 208 Include papers**
-- Pro: Focused on relevant papers, saves time
-- Con: Loses 33 Unclear papers that might be valuable
-- Estimated time: ~2-2.5 hours
-- Estimated cost: Minimal
-
-**Option C: Only 87 High-relevance papers (Relevance_High)**
-- Pro: Most efficient, highest quality papers
-- Con: Loses 121 Medium-relevance papers (may contain insights)
-- Estimated time: ~1 hour
-- Estimated cost: Minimal
-
-**Recommendation:** Start with Option B (208 Include papers)
-
-### Decision 2: PDF Acquisition Method?
-
-**Option A: Zotero API (requires working key)**
-- Pro: Automated, complete
-- Con: API access currently blocked
-- Action: Need valid API key or run locally
-
-**Option B: Zotero Desktop Sync**
-- Pro: Direct access to PDFs in local storage
-- Con: Requires Zotero Desktop installed and synced
-- Path: Usually `~/Zotero/storage/` (user) or shared location (group)
-
-**Option C: Intelligent acquisition (DOI/URL-based)**
-- Pro: Works without Zotero access, proven in FemPrompt
-- Con: Lower success rate (~70-80%), misses paywalled papers
-- Script: Already exists in `analysis/getPDF_intelligent.py`
-
-**Option D: Manual download**
-- Pro: Most reliable for paywalled papers
-- Con: Time-consuming, not automated
-- Use case: Fallback for failed automated attempts
-
-**Recommendation:** Try Option B first (if user has Zotero Desktop), then Option C
-
-### Decision 3: Zotero Tags Import?
-
-**Deferred:** Focus on PDF acquisition first, handle tags later
-
-**Options:**
-1. Run import script locally on user's machine (when API works)
-2. Manual CSV import via Zotero plugin
-3. Skip for now (tags in Excel file already useful)
+**Performance:**
+- ~30-40 seconds per PDF
+- Success rate: >90% (tested in FemPrompt)
 
 ---
 
-## Immediate Action Items
+### What Needs To Be Built
 
-### TODO 1: Create PDF Acquisition Script
-- [ ] Adapt `analysis/getPDF_intelligent.py` for socialai-litreview
-- [ ] Add filter for PRISMA_Include papers only
-- [ ] Test with 5 papers first
-- [ ] Full run on 208 papers
+#### Missing Piece 1: Excel to JSON Converter
 
-### TODO 2: Verify PDF Count
-- [ ] Check how many PDFs are already in Zotero (web interface)
-- [ ] Identify papers without PDFs (will need manual acquisition)
-- [ ] Create priority list (High-relevance first)
+**Purpose:** Convert `assessment_llm_run5.xlsx` to format compatible with `getPDF_intelligent.py`
 
-### TODO 3: Setup Output Directories
-- [ ] Create `socialai-pdfs/` directory
-- [ ] Create `socialai-markdown/` directory
-- [ ] Add to `.gitignore` (PDFs are large, shouldn't be committed)
+**Input:** `assessment-llm/output/assessment_llm_run5.xlsx`
+**Output:** `analysis/socialai_bibliography.json`
 
-### TODO 4: Test Conversion Pipeline
-- [ ] Download 5 sample PDFs
-- [ ] Run Docling conversion
-- [ ] Validate output quality
-- [ ] Estimate total processing time
+**Required fields:**
+- Zotero_Key
+- Title
+- DOI
+- URL
+- Decision (for filtering)
+- Author_Year
+
+**Filter:** Only include papers with `Decision == "Include"` (208 papers)
+
+**Script to create:** `assessment-llm/excel_to_json.py`
+
+**Estimated effort:** 1-2 hours to build and test
+
+#### Missing Piece 2: Tag-Based Filtering (OPTIONAL)
+
+**Purpose:** Filter papers by PRISMA decision before acquisition
+
+**Implementation:** Add `--filter-decision` flag to getPDF_intelligent.py
+**Estimated effort:** 30 minutes
+
+---
+
+### Step-by-Step Plan (EXECUTION PHASE - when ready)
+
+#### Phase 1: Prepare Input Data
+
+```bash
+# Create JSON from Excel with PRISMA_Include filter
+python assessment-llm/excel_to_json.py \
+  --input assessment-llm/output/assessment_llm_run5.xlsx \
+  --output analysis/socialai_bibliography.json \
+  --filter-decision Include
+
+# Output: 208 papers in JSON format
+```
+
+#### Phase 2: Acquire PDFs
+
+**Option A: With Zotero Desktop (RECOMMENDED if available)**
+```bash
+# If user has Zotero Desktop synced locally
+python analysis/getPDF_intelligent.py \
+  --input analysis/socialai_bibliography.json \
+  --output analysis/socialai-pdfs/ \
+  --zotero-storage ~/Zotero/storage  # Auto-detected if not specified
+```
+
+**Option B: Without Zotero (DOI/URL-based)**
+```bash
+# Uses Unpaywall, ArXiv, DOI resolvers
+python analysis/getPDF_intelligent.py \
+  --input analysis/socialai_bibliography.json \
+  --output analysis/socialai-pdfs/
+```
+
+**Expected Success Rate:**
+- With Zotero Desktop: 90-95%
+- Without Zotero: 70-80%
+
+**Duration:** ~1-2 hours for 208 papers
+
+#### Phase 3: Convert to Markdown
+
+```bash
+python analysis/pdf-to-md-converter.py \
+  --pdf-dir analysis/socialai-pdfs/ \
+  --output-dir analysis/socialai-markdown/
+```
+
+**Duration:** ~2-3 hours for 208 papers (30-40 sec each)
+
+#### Phase 4: Validate Quality
+
+```bash
+# Check conversion success
+ls analysis/socialai-markdown/*.md | wc -l
+
+# Expected: ~190-200 files (90-95% success rate)
+```
+
+**Manual spot-check:** Review 5-10 random markdown files for quality
+
+---
+
+### Resource Requirements
+
+**Storage:**
+- PDFs: ~1-2 GB (208 papers × 5-10 MB average)
+- Markdown: ~200-300 MB
+- Total: ~2-3 GB
+
+**Time:**
+- Excel to JSON: 5 minutes
+- PDF acquisition: 1-2 hours
+- Markdown conversion: 2-3 hours
+- **Total: 3-5 hours**
+
+**Cost:**
+- $0 (all local processing, no API costs)
+
+---
+
+## Decision Points (for User)
+
+### Decision 1: Scope - Which Papers?
+
+| Option | Papers | Time | Pros | Cons |
+|--------|--------|------|------|------|
+| **A: All 325** | 325 (Include+Exclude+Unclear) | 4-5h | Complete corpus | Includes 84 irrelevant papers |
+| **B: Include only** | 208 | 3-4h | Focused, saves time | Loses 33 Unclear papers |
+| **C: High-relevance** | 87 | 1-2h | Fastest, highest quality | Loses 121 Medium papers |
+
+**Recommendation:** Option B (208 Include papers)
+
+### Decision 2: Do You Have Zotero Desktop?
+
+**If YES (synced with socialai-litreview-curated group):**
+- Path to check: `~/Zotero/storage/` or similar
+- Success rate: 90-95%
+- Fastest method
+
+**If NO:**
+- Use DOI/URL-based acquisition
+- Success rate: 70-80%
+- Slower, some papers may be unavailable
+
+**Question:** Is Zotero Desktop installed and synced?
+
+### Decision 3: Priority Order?
+
+**If starting with subset:**
+- High-relevance first (87 papers with Relevance_High)?
+- Or process all Include papers sequentially?
+
+---
+
+## Immediate Next Steps (Actionable)
+
+### Step 1: Build Excel-to-JSON Converter (REQUIRED)
+
+**Task:** Create `assessment-llm/excel_to_json.py`
+
+**Functionality:**
+- Read `assessment_llm_run5.xlsx`
+- Filter by `Decision == "Include"`
+- Convert to JSON format compatible with getPDF_intelligent.py
+- Output: `analysis/socialai_bibliography.json`
+
+**Estimated time:** 30-60 minutes (I can build this now)
+
+**Blocker:** None - can be built immediately
+
+### Step 2: Test PDF Acquisition (5 papers)
+
+**Prerequisites:**
+- Step 1 completed
+- User confirms: Zotero Desktop available? (yes/no)
+
+**Commands:**
+```bash
+# Create test subset (5 papers)
+head -5 analysis/socialai_bibliography.json > test_input.json
+
+# Test acquisition
+python analysis/getPDF_intelligent.py \
+  --input test_input.json \
+  --output test-pdfs/
+```
+
+**Expected outcome:** 3-4 PDFs downloaded successfully
+
+### Step 3: Full PDF Acquisition (208 papers)
+
+**Prerequisites:**
+- Step 2 successful
+- User approval to proceed
+
+**Duration:** 1-2 hours
+
+### Step 4: Markdown Conversion
+
+**Prerequisites:**
+- Step 3 completed
+- PDFs in `analysis/socialai-pdfs/`
+
+**Duration:** 2-3 hours
+
+---
+
+## What Can Be Done NOW (Without User Input)
+
+### Immediately Doable:
+
+1. **Build excel_to_json.py** - No blockers
+2. **Test with sample data** - Can create mock test
+3. **Document workflow** - Already done
+4. **Prepare directory structure** - Can set up
+
+### Waiting on User:
+
+1. **Zotero Desktop confirmation** - Affects acquisition strategy
+2. **Scope decision** - 208 or 87 or 325 papers?
+3. **Execution approval** - Ready to start when you say go
 
 ---
 
@@ -325,35 +451,70 @@ CURRENT_STATUS.md                  # This file
 
 ---
 
-## Questions for User
+## Questions for User (Need Answers)
 
-1. **PDF Acquisition:** Do you have Zotero Desktop synced? (Fastest method)
-2. **Scope:** All 325 papers or only 208 Include papers?
-3. **API Access:** Should we try API again later or skip Zotero tag import for now?
-4. **Priority:** High-relevance papers first (87) or all Include papers (208)?
+### Critical Decisions:
 
----
+1. **Zotero Desktop:** Do you have Zotero Desktop installed and synced with the socialai-litreview-curated group?
+   - **If YES:** Provide path to Zotero storage (e.g., `~/Zotero/storage/`)
+   - **If NO:** We'll use DOI/URL-based acquisition (lower success rate)
 
-## Summary
+2. **Scope:** Which papers to process?
+   - **Option A:** All 325 papers (4-5 hours)
+   - **Option B:** Only 208 Include papers (3-4 hours) ← RECOMMENDED
+   - **Option C:** Only 87 High-relevance papers (1-2 hours)
 
-**What works:**
-- LLM assessment system (100% success, production-ready)
-- PDF/Markdown conversion pipeline (proven in FemPrompt)
-- Documentation and reproducibility
+3. **Execution:** When to start?
+   - **Option 1:** I build excel_to_json.py now, you execute later
+   - **Option 2:** I build and test with sample data now
+   - **Option 3:** Wait for your approval before any action
 
-**What's blocked:**
-- Zotero API access (workaround: CSV export ready)
+### Deferred Decisions:
 
-**Next milestone:**
-- Complete Markdown corpus (208-325 papers)
-- Estimated time: 2-4 hours
-- Estimated cost: Minimal (Docling local, no API)
-
-**End goal:**
-- High-quality text corpus for analysis
-- Evidence base for AI literacy in social work
-- Reusable methodology for future reviews
+4. **Zotero Tag Import:** Skip for now (API not working, CSV export available)
+5. **Priority Order:** Process all papers sequentially (can sort by relevance later)
 
 ---
 
-*Ready to proceed with PDF acquisition when you confirm the approach.*
+## Current Status Summary
+
+### Completed ✅
+- LLM assessment (325 papers, 100% success, $0.58)
+- Assessment results analysis
+- Zotero integration scripts (API blocked)
+- CSV export with all tags
+- Comprehensive planning documentation
+- Repository analysis
+
+### Ready to Execute 🟢
+- Excel-to-JSON converter (can build in 30-60 min)
+- PDF acquisition pipeline (scripts ready)
+- Markdown conversion (scripts ready)
+- Quality validation
+
+### Blocked 🔴
+- Zotero API access (403 errors)
+  - Workaround: CSV export created
+  - Alternative: Run scripts locally (not from server)
+
+### Next Immediate Action 🎯
+**Build `excel_to_json.py`** - No blockers, can start now if approved
+
+---
+
+## Implementation Effort Estimate
+
+| Task | Time | Dependencies |
+|------|------|--------------|
+| Build excel_to_json.py | 30-60 min | None |
+| Test with 5 papers | 10 min | excel_to_json.py |
+| Full PDF acquisition | 1-2 hours | User: Zotero Desktop? |
+| Markdown conversion | 2-3 hours | PDFs acquired |
+| Quality validation | 15 min | Markdown files |
+| **TOTAL** | **3-5 hours** | User decisions |
+
+**Cost:** $0 (all local processing)
+
+---
+
+*Waiting for your decisions to proceed. I can start building excel_to_json.py immediately if you approve.*
