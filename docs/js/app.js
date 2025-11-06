@@ -19,14 +19,37 @@ const app = {
         });
     },
     
+    showLoading() {
+        return `
+            <div class="loading">
+                <div class="spinner"></div>
+                <span>Loading content...</span>
+            </div>
+        `;
+    },
+
+    showError(message) {
+        return `
+            <div class="error">
+                <h3>⚠️ Error Loading Content</h3>
+                <p>${message}</p>
+                <p><small>Please check your internet connection or try again later.</small></p>
+            </div>
+        `;
+    },
+
     async loadHome() {
+        const content = document.getElementById('content');
+        content.innerHTML = this.showLoading();
+
         const url = GITHUB_RAW + '/MASTER_MOC.md';
         try {
             const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             const markdown = await response.text();
-            document.getElementById('content').innerHTML = marked.parse(markdown);
+            content.innerHTML = marked.parse(markdown);
         } catch (e) {
-            document.getElementById('content').innerHTML = '<h1>FemPrompt & SozArb</h1><p>Feminist AI Literacy Research Knowledge Base</p>';
+            content.innerHTML = this.showError(e.message || 'Failed to load MASTER_MOC.md');
         }
     },
     
