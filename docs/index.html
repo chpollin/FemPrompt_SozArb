@@ -1,147 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Social AI Literature Obsidian Vault - AI Bias & Intersectionality Research">
-  <title>Social AI Literature Obsidian Vault</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FemPrompt & SozArb Knowledge Base</title>
+    <meta name="description" content="Systematic literature review on bias in frontier LLMs with feminist epistemology - Interactive knowledge graph">
+
+    <!-- CDN Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+    <script src="https://unpkg.com/vis-network@9.1.6/dist/vis-network.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="header-content">
-      <div class="header-title">
-        <a href="index.html">Social AI Literature Vault</a>
-      </div>
-      <nav class="nav">
-        <a href="papers/index.html">Papers</a>
-        <a href="concepts/index.html">Concepts</a>
-        <a href="graph.html">Graph</a>
-        <a href="search.html">Search</a>
-      </nav>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h1>FemPrompt<br>& SozArb</h1>
+                <p>Feminist AI Literacy Research</p>
+            </div>
+
+            <div class="search">
+                <input type="text" id="search" placeholder="🔍 Search..." />
+            </div>
+
+            <div class="stats">
+                <div class="stat"><strong id="stat-papers">16</strong> Papers</div>
+                <div class="stat"><strong id="stat-concepts">25</strong> Concepts</div>
+            </div>
+
+            <nav class="nav">
+                <button class="nav-btn active" data-page="home">🏠 Home</button>
+                <button class="nav-btn" data-page="papers">📚 Papers</button>
+                <button class="nav-btn" data-page="concepts">💡 Concepts</button>
+                <button class="nav-btn" data-page="graph">🕸️ Graph</button>
+            </nav>
+
+            <div class="file-tree" id="file-tree"></div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <div class="breadcrumbs" id="breadcrumbs"></div>
+            <div id="content" class="content"></div>
+            <div id="graph" class="graph" style="display: none;"></div>
+        </main>
     </div>
-  </header>
 
-  <main class="main">
-    <section class="hero">
-      <h1>AI Bias & Intersectionality Research</h1>
-      <p class="hero-subtitle">
-        A curated knowledge base exploring bias and fairness in artificial intelligence systems
-      </p>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-value" id="stat-papers">16</div>
-          <div class="stat-label">Papers</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" id="stat-concepts">26</div>
-          <div class="stat-label">Concepts</div>
-        </div>
-        <div class="stat">
-          <div class="stat-value" id="stat-connections">45</div>
-          <div class="stat-label">Connections</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>About This Project</h2>
-      <p>
-        The Social AI Literature Vault is an automated research pipeline that analyzes academic literature
-        on bias, fairness, and intersectionality in AI systems. Using multi-model AI synthesis,
-        we extract key concepts and relationships from research papers to build a comprehensive
-        knowledge graph.
-      </p>
-      <p>
-        This site presents the results of our analysis, making it easy to explore research findings,
-        discover conceptual relationships, and identify key themes in the field.
-      </p>
-    </section>
-
-    <section class="mt-lg">
-      <h2>Quick Start</h2>
-      <div class="grid">
-        <div class="card">
-          <h3 class="card-title">Browse Papers</h3>
-          <p class="card-description">
-            Explore AI-generated summaries of academic papers on AI bias, fairness,
-            and intersectionality.
-          </p>
-          <a href="papers/index.html">View Papers &rarr;</a>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Explore Concepts</h3>
-          <p class="card-description">
-            Discover key concepts in bias types and mitigation strategies,
-            with frequency analysis and paper connections.
-          </p>
-          <a href="concepts/index.html">View Concepts &rarr;</a>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Visualize Relationships</h3>
-          <p class="card-description">
-            Interactive force-directed graph showing relationships between
-            papers and concepts.
-          </p>
-          <a href="graph.html">View Graph &rarr;</a>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Search Everything</h3>
-          <p class="card-description">
-            Full-text search across all papers and concepts to find exactly
-            what you're looking for.
-          </p>
-          <a href="search.html">Search Now &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="mt-lg">
-      <h2>Key Research Areas</h2>
-      <div class="grid">
-        <div class="card">
-          <span class="badge badge-bias">Bias Types</span>
-          <h3 class="card-title">Identifying Bias</h3>
-          <p class="card-description">
-            Research on different types of bias in AI systems, including intersectionality,
-            gender bias, racial bias, and algorithmic discrimination.
-          </p>
-        </div>
-        <div class="card">
-          <span class="badge badge-mitigation">Mitigation</span>
-          <h3 class="card-title">Fairness Strategies</h3>
-          <p class="card-description">
-            Techniques and frameworks for mitigating bias, including prompt engineering,
-            inclusive design, and fairness metrics.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>
-      Social AI Literature Vault &copy; 2025 |
-      Generated by automated research pipeline |
-      <a href="https://github.com/yourusername/FemPrompt_SozArb" target="_blank">View on GitHub</a>
-    </p>
-  </footer>
-
-  <script>
-    // Load statistics dynamically
-    async function loadStats() {
-      try {
-        const response = await fetch('data/stats.json');
-        const stats = await response.json();
-        document.getElementById('stat-papers').textContent = stats.papers || 16;
-        document.getElementById('stat-concepts').textContent = stats.concepts || 26;
-        document.getElementById('stat-connections').textContent = stats.connections || 45;
-      } catch (error) {
-        console.log('Using default statistics');
-      }
-    }
-
-    loadStats();
-  </script>
+    <script src="js/app.js"></script>
 </body>
 </html>
