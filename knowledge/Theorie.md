@@ -37,6 +37,48 @@ Diese Integration unterscheidet sich fundamental von automatisierten Reviews. W�
 
 Response-Ability manifestiert sich auch in der transparenten Dokumentation methodischer Grenzen. Die Zirkularität der LLM-gestützten LLM-Kritik wird nicht ignoriert, sondern reflektiert. Die Abhängigkeit von proprietären Systemen wird benannt. Die potenzielle Reproduktion sprachlicher Bias wird diskutiert. Verantwortung bedeutet, zu diesen Limitationen zu stehen und ihre Implikationen zu durchdenken.
 
+## LLM-Ontologie und Alignment-Forschung
+
+Die philosophische und technische Einordnung von Frontier-LLMs erweitert die feministische Epistemologie um Fragen der Modell-Charakteristik und emergenter Eigenschaften.
+
+### Exotic Mind-Like Entities (Shanahan 2024)
+
+Shanahan kategorisiert LLMs als Entitäten, die weder klassische Maschinen noch Minds im herkömmlichen Sinne sind. Diese ontologische Unsicherheit erfordert neue analytische Kategorien jenseits der Dichotomie Werkzeug/Agent. Für die Bias-Forschung bedeutet dies, dass Anthropomorphisierung ("das Modell denkt") ebenso inadäquat ist wie rein mechanistische Beschreibungen ("das Modell berechnet"). LLMs operieren in einem konzeptionellen Zwischenraum mit emergenten Eigenschaften, die weder vollständig durch Training-Daten noch durch Architektur determiniert sind.
+
+Die Implikation für feministische AI-Forschung: Bias kann nicht als simple Input-Output-Relation verstanden werden. Die Situiertheit eines LLMs ist komplexer als die einer menschlichen forschenden Person, weil unklar ist, was "Situiertheit" für ein solches System bedeutet. Haraway's Konzept muss erweitert werden um die Frage: Was konstituiert die epistemische Position eines Systems, das weder Person noch bloße Funktion ist?
+
+### Strange New Minds (Summerfield 2025)
+
+Summerfield beschreibt emergente kognitive Phänomene, bei denen Capabilities ohne explizites Training entstehen. Diese Emergenz – etwa die Fähigkeit zu Chain-of-Thought-Reasoning oder Few-Shot-Learning – erschwert die Vorhersage von Bias-Verhalten. Was in Training-Daten nicht explizit vorhanden war, kann durch kombinatorische Effekte und emergente Strukturen dennoch reproduziert werden.
+
+Für die Prompting-Forschung bedeutet dies: Bias-Mitigation-Strategien müssen mit Unvorhersehbarkeit rechnen. Ein Prompt, der in einem Kontext Stereotypen reduziert, könnte in einem anderen unerwartete Diskriminierungsformen aktivieren. Die feministische Forderung nach Transparenz stößt an Grenzen, wenn selbst die Entwickler:innen emergente Eigenschaften nicht vollständig verstehen.
+
+### Persona-Vektoren im Aktivationsraum (Chen et al. 2025)
+
+Chen et al. weisen messbare Persona-Vektoren nach – Traits wie Sycophancy, Halluzinationsneigung oder Risk-Aversion, die im Aktivationsraum des Modells lokalisierbar sind. Diese Traits können durch Finetuning unbeabsichtigt verschoben werden. Ein Modell, das auf "hilfreicher" zu sein trainiert wird, könnte gleichzeitig sycophantischer werden (mehr Zustimmung zu User-Aussagen, auch wenn falsch).
+
+Die Erkenntnis: Klassische Bias-Diskussionen (Gender Bias, Racial Bias) greifen zu kurz. Neben expliziten Vorurteilen existieren strukturelle Modell-Charakteristika, die Alignment-Konflikte mit professionellen Werten der Sozialarbeit erzeugen können. Sycophancy ist problematisch, wenn Sozialarbeiter:innen kritische Reflexion brauchen, nicht Bestätigung. Halluzinationen sind gefährlich, wenn Falschinformationen über vulnerable Populationen generiert werden.
+
+### Anthropic Constitutional AI und Character Traits
+
+Das "helpful, harmless, honest"-Framework (Anthropic 2023) und Amanda Askells Arbeit zu "good character traits" demonstrieren die Komplexität ethischer Alignment-Prozesse. Die Operationalisierung von Werten in Modell-Training ist selbst normativ und kulturell situiert. Was als "helpful" gilt, reflektiert spezifische Wertehorizonte – oft westlich-liberale Normen.
+
+Feministische Kritik: Wer definiert "harmless"? Für wen ist das Modell "helpful"? Die Constitutional AI-Methodik versucht Transparenz, aber die zugrundeliegenden Werte bleiben partiell. Dies bestätigt Haraway's Kritik des "view from nowhere": Auch vermeintlich universelle ethische Prinzipien sind situiert.
+
+Praktische Implikation für Soziale Arbeit: Ein Modell, das auf westliche Normen von "Hilfe" trainiert wurde, könnte kulturell inadäquate Empfehlungen für nicht-westliche Kontexte generieren. Oder ein Modell, das "harm" primär als physische Gewalt versteht, könnte strukturelle Diskriminierung übersehen.
+
+### Synthese: Bias als emergentes Multi-Level-Phänomen
+
+Diese Arbeiten zeigen: Bias ist nicht nur Daten-Artefakt (biased training data → biased outputs), sondern emergentes Phänomen aus:
+1. **Architektur-Ebene:** Transformer-Design, Attention-Mechanismen
+2. **Training-Ebene:** Daten, Objectives, Curriculum
+3. **Alignment-Ebene:** RLHF, Constitutional AI, Persona-Vektoren
+4. **Nutzungs-Ebene:** Prompt-Formulierung, Kontext, Interaktionsmuster
+
+Die feministische Analyse muss daher über Input-Output-Betrachtung hinausgehen und Modell-Charakteristik selbst als epistemologisches Problem adressieren. Response-Ability bedeutet dann auch: Verantwortung für die Wahl des Modells, für Prompt-Design, für kritische Validierung emergenter Outputs.
+
+Die Verbindung zu situiertem Wissen: Jedes LLM ist situiert nicht nur durch Training-Daten, sondern durch Architektur-Entscheidungen, Alignment-Prozesse und emergente Eigenschaften. Diese Situiertheit ist mehrschichtig und teilweise opak – was neue Herausforderungen für transparente, verantwortungsvolle Forschung schafft.
+
 ## Epistemologische Implikationen
 
 Die Integration feministischer Theorie transformiert die Methodologie fundamental. Die Privilegierung von Kontext über Abstraktion, von Beziehungen über Isolation, von partiellen über universalen Wahrheiten prägt alle Designentscheidungen. Dies ist keine additive Ergänzung traditioneller Methoden, sondern eine strukturelle Neuausrichtung.

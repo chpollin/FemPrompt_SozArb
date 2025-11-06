@@ -33,7 +33,7 @@ Der Workflow kombiniert proprietäre Deep Research-Mechanismen mit etablierten a
 
 Die Bewertung folgt PRISMA 2020 Standards mit Expert-in-the-Loop-Integration. Jede Quelle durchläuft Relevanz- und Qualitätsbewertung anhand expliziter Kriterien. Excel-basierte Assessment-Templates ermöglichen strukturierte Dokumentation. Die Einschlussentscheidungen werden mit Begründungen versehen und sind nachvollziehbar.
 
-Die Synthese erfolgt durch Python-gestützte Dokumentenverarbeitung und Obsidian-Wissensgraph-Generierung. PDFs werden via Docling zu Markdown konvertiert, durch Gemini in fünf Stufen zusammengefasst und als vernetzte Konzepte organisiert. Die Pipeline ist vollständig dokumentiert und reproduzierbar im GitHub-Repository FemPrompt_SozArb.
+Die Synthese erfolgt durch Python-gestützte Dokumentenverarbeitung und Obsidian-Wissensgraph-Generierung. PDFs werden via Docling zu Markdown konvertiert, durch Claude Haiku 4.5 in fünf Stufen zusammengefasst und als vernetzte Konzepte organisiert. Die Pipeline ist vollständig dokumentiert und reproduzierbar im GitHub-Repository FemPrompt_SozArb.
 
 ## Scope und Grenzen
 
@@ -47,22 +47,47 @@ Die methodischen Grenzen umfassen die Zirkularität der LLM-gestützten LLM-Krit
 
 ### Infrastruktur
 
-Die technische Infrastruktur ist vollständig entwickelt und getestet. Der Master-Orchestrator run_pipeline.py koordiniert alle fünf Verarbeitungsstufen mit Checkpoint-Recovery und Stage-Selection. Die pipeline_config.yaml definiert alle operationalen Parameter. Das Skript getPDF_intelligent.py implementiert hierarchische PDF-Akquisition mit acht Fallback-Strategien. Das Skript pdf-to-md-converter.py nutzt Docling für strukturerhaltende Konversion. Das Skript summarize-documents.py führt fünfstufige Gemini-Analyse durch. Das Skript generate_obsidian_vault_improved.py generiert navigierbare Obsidian-Vaults mit Konzeptextraktion. Das Skript test_vault_quality.py validiert Vault-Qualität systematisch.
+Die technische Infrastruktur ist vollständig entwickelt und getestet. Der Master-Orchestrator run_pipeline.py koordiniert alle fünf Verarbeitungsstufen mit Checkpoint-Recovery und Stage-Selection. Die pipeline_config.yaml definiert alle operationalen Parameter. Das Skript getPDF_intelligent.py implementiert hierarchische PDF-Akquisition mit acht Fallback-Strategien. Das Skript pdf-to-md-converter.py nutzt Docling für strukturerhaltende Konversion. Das Skript summarize-documents.py führt fünfstufige Claude Haiku 4.5-Analyse durch. Das Skript generate_obsidian_vault_improved.py generiert navigierbare Obsidian-Vaults mit Konzeptextraktion. Das Skript test_vault_quality.py validiert Vault-Qualität systematisch.
 
 Die Assessment-Infrastruktur verbindet Zotero mit Excel-basierten Bewertungen. Das Skript zotero_to_excel.py extrahiert direkt via Zotero API. Das Skript excel_to_ris.py führt Bewertungen zurück in RIS-Format. Die Roundtrip-Validierung durch test_assessment_workflow.py sichert Datenintegrität. Alle Python-Abhängigkeiten außer google-generativeai sind installiert. Die requirements.txt muss aktualisiert werden.
 
 ### Datensammlung
 
-Die Multi-Modell-Recherche wurde durchgeführt. Vier KI-Modelle produzierten modellspezifische Bibliographien. Die RIS-Standardisierung lieferte vier Dateien im to-Zotero Verzeichnis. Der Zotero-Import konsolidierte siebenundsechzig Einträge in modellspezifischen Collections. Der Export als zotero_vereinfacht.json und zotero_vollstaendig.json ist abgeschlossen. Die Zotero-Sammlungen-Struktur dokumentiert die Herkunft jeder Quelle.
+Die Multi-Modell-Recherche wurde durchgeführt. Vier KI-Modelle (ChatGPT Research Mode, Claude Research, Gemini Deep Think, Perplexity Deep Research) produzierten modellspezifische Bibliographien. Die Ergebnisse wurden in Zotero "_DEEPRESEARCH"-Collections organisiert. Der konsolidierte Export umfasst 326 Einträge in zotero_vereinfacht.json für beide Projekte (FemPrompt und SozArb).
 
-Das Assessment-Template assessment.xlsx wurde generiert. Der Bewertungsstatus dieser Excel-Datei ist unklar. Die Include/Exclude-Entscheidungen müssen durch Expert-Review abgeschlossen werden. Die PRISMA-Flow-Dokumentation erfordert finale Zahlen nach Assessment-Abschluss.
+Das LLM-basierte Assessment wurde mit Claude Haiku 4.5 durchgeführt. Für SozArb wurden 325 Papers bewertet mit 100% Erfolgsrate (24 Minuten, $0.58 Kosten). Die Ergebnisse: 222 Include (68.3%), 83 Exclude (25.5%), 20 Unclear (6.2%). Das 5-dimensionale Bewertungsschema erfasst AI/LLM-Kompetenzen, Vulnerable Gruppen, Bias, praktische Implementation und professionellen Kontext auf einer 0-3 Skala.
 
 ### Pipeline-Execution
 
-Die Pipeline-Execution für den aktuellen Korpus steht aus. Das analysis/pdfs Verzeichnis existiert nicht und enthält keine PDFs. Das analysis/markdown_papers Verzeichnis existiert nicht. Keine aktuellen Markdown-Konversionen wurden durchgeführt. Das analysis/summaries_final Verzeichnis enthält zehn Legacy-Summaries vom August 2025 für ein früheres Korpus. Keine aktuellen Gemini-Summaries für die siebenundsechzig Einträge liegen vor.
+#### FemPrompt (Projekt 1 - Komplett)
+Die vollständige Pipeline wurde End-to-End durchlaufen:
+- **PDFs:** 61 Dateien in analysis/pdfs/ akquiriert
+- **Markdown:** 26 Dateien in analysis/markdown_papers/ konvertiert
+- **Summaries:** 10 Legacy-Summaries in analysis/summaries_final/ vorhanden
+- **Vault:** FemPrompt_Vault/ generiert mit 16 Paper-Notizen, 2 Concept-Notizen
+- **Top-Konzepte:** Intersectionality (107x erwähnt), Feminist AI (21x), Bias Mitigation (19x)
+- **Status:** ✅ Abgeschlossen, Wissensgraph verfügbar
 
-Der Obsidian-Vault FemPrompt_Vault wurde nicht für den aktuellen Korpus generiert. Das Verzeichnis existiert nicht im Repository. Legacy-Daten in summaries_final zeigen, dass die Pipeline früher erfolgreich lief. Die Quality-Scores in vault_test_report.json beziehen sich auf frühere Läufe. Die aktuelle Dokumentation in knowledge/ ersetzt die alten fragmentierten Docs.
+#### SozArb (Projekt 2 - In Progress)
+Die Pipeline befindet sich im Assessment-Stadium mit partieller Execution:
+- **Assessment:** ✅ 325/325 Papers (100% Erfolgsrate)
+- **PDFs:** 47 Dateien in analysis/pdfs_socialai/ (21% Coverage der 222 Include-Papers)
+  - Nur automatisch aus Zotero-Bibliothek verfügbare PDFs verarbeitet
+  - Hierarchische Akquisitionsstrategie implementiert, aber nicht vollständig ausgeschöpft
+- **Markdown:** 47 Dateien in analysis/markdown_papers_socialai/ konvertiert
+- **Summaries:** ⏳ Ausstehend, noch nicht durchgeführt
+- **Vault:** ⏳ Nicht generiert, erfordert vollständigere PDF-Coverage
+- **Status:** ~25% Pipeline-Execution, Fokus auf verfügbaren Ressourcen
 
 ### Nächste Schritte
 
-Die Voraussetzungen für Pipeline-Execution sind geschaffen. Die Environment-Variable GEMINI_API_KEY muss gesetzt werden. Das Paket google-generativeai muss installiert werden. Die assessment.xlsx muss durch Experten-Review finalisiert werden. Nach Assessment-Abschluss erfolgt die vollständige Pipeline-Execution durch Ausführung von run_pipeline.py. Die generierten Summaries und der Obsidian-Vault bilden die Basis für die Wissenssynthese und späteren Prompting-Leitfaden.
+**Für SozArb:**
+1. **PDF-Akquisition erweitern:** Aktivierung der 8 Fallback-Strategien (DOI, ArXiv, Unpaywall, Semantic Scholar, etc.) zur Steigerung der Coverage von 21% auf 70-80%
+2. **Summarization durchführen:** Execution von summarize-documents.py mit Claude Haiku 4.5 für alle verfügbaren Markdown-Dateien
+3. **Vault-Generierung:** Ausführung von generate_obsidian_vault_improved.py zur Erstellung des SozArb-Wissensgraphs
+4. **Konzeptextraktion:** Analyse der Frequenzen und Vernetzung von Schlüsselbegriffen analog zu FemPrompt
+
+**Für Paper-Finalisierung:**
+- Aktualisierung der Zahlen in README.md (222/83/20 statt 208/84/33)
+- Klarstellung des Work-in-Progress-Status für SozArb im Paper
+- Dokumentation der PDF-Coverage-Limitation (21%) als methodische Reflexion

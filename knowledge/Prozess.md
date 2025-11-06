@@ -15,7 +15,7 @@ Der Kontext bettet Forschungsziele ein durch Fokus auf Bias-Mechanismen, Interse
 
 Das Output-Format standardisiert Ergebnisse mit vollständigen bibliographischen Angaben im APA 7 Format, einhundertfünfzig bis zweihundert Wörter strukturierte Zusammenfassung, Relevanz-Score mit Begründung, methodischer Ansatz, Kernbefunde, theoretische Verortung und Verbindungen zu anderen Quellen. Diese Strukturierung ermöglicht direkte Vergleichbarkeit zwischen Modell-Outputs.
 
-Die parallele Ausführung erfolgt manuell durch Copy-Paste des identischen Prompts in vier verschiedene Interfaces. Die Ergebnisse werden separat gespeichert in deep-research/Claude, deep-research/Gemini, deep-research/OpenAI und deep-research/Perplexity. Die modellspezifische Organisation erhält die Zuordnung für spätere Divergenz-Analyse. Jedes Modell produziert typischerweise zwischen drei und fünfzehn Empfehlungen abhängig von Trainingsdaten und Ausgabelängen-Limitationen.
+Die parallele Ausführung erfolgt manuell durch Copy-Paste des identischen Prompts in vier verschiedene Deep Research-Interfaces (ChatGPT Research Mode, Claude Research, Gemini Deep Think, Perplexity Deep Research). Die Ergebnisse werden in Zotero-Collections mit Präfix "_DEEPRESEARCH" organisiert, nicht als Dateisystem-Verzeichnisse im Git-Repository. Die modellspezifische Organisation erhält die Zuordnung für spätere Divergenz-Analyse. Jedes Modell produziert typischerweise zwischen drei und fünfzehn Empfehlungen abhängig von Trainingsdaten und Ausgabelängen-Limitationen.
 
 ## RIS-Standardisierung
 
@@ -23,7 +23,7 @@ Die heterogenen Modell-Outputs werden in bibliographisches RIS-Format konvertier
 
 Die RIS-Konvertierungs-Prompts fordern Beibehaltung aller Metadaten und Ergänzung fehlender Standardfelder. Die Tags umfassen TY für Dokumenttyp, AU für Autoren, TI für Titel, JO für Journal, VL für Volume, IS für Issue, SP und EP für Seitenangaben, PY für Publikationsjahr, DO für DOI, AB für Abstract und KW für Keywords. Die Validierung prüft DOI-Format gegen CrossRef-Muster. Unsichere Angaben werden mit N1-Note-Tag markiert.
 
-Die resultierenden RIS-Dateien werden als claude-deep-research-bibliography-1.ris, Gemini-deep-research-bibliography-1.ris, OpenAI-deep-research-bibliography-1.ris und perplexity-deep-research-bibliography-1.ris im to-Zotero-Verzeichnis gespeichert. Die Dateigröße variiert zwischen drei und vierzehn Kilobyte abhängig von Anzahl und Detailgrad der Einträge. Die Standardisierung ermöglicht aggregierte Verarbeitung im nächsten Schritt.
+Die RIS-Konversion erfolgt temporär via Claude-Projekt-Prompt "to-Zotero" für direkten Zotero-Import, nicht als permanente Dateisystem-Artefakte. Die Standardisierung ermöglicht aggregierte Verarbeitung im nächsten Schritt. Der konsolidierte Export aus Zotero erfolgt als zotero_vereinfacht.json (326 Einträge für FemPrompt und SozArb).
 
 ## Zotero-Integration
 

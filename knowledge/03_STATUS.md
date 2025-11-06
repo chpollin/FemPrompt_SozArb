@@ -1,6 +1,6 @@
 # FemPrompt SozArb - Current Status & Next Steps
 
-**Last Updated:** 2025-11-02
+**Last Updated:** 2025-11-06
 **Session:** Repository Analysis & LLM Assessment Integration
 **Branch:** `claude/analyze-repo-011CUj446onqiYta2ftSj82C`
 
@@ -19,16 +19,18 @@
 - **Model:** Claude Haiku 4.5
 
 **Assessment Breakdown:**
-- Include: 208 papers (64.0%)
-- Exclude: 84 papers (25.8%)
-- Unclear: 33 papers (10.2%)
+- Include: 222 papers (68.3%)
+- Exclude: 83 papers (25.5%)
+- Unclear: 20 papers (6.2%)
 
-**5-Dimensional Relevance Scoring (0-3 scale):**
-- Rel_Bias: 1.74 (strongest dimension)
-- Rel_Vulnerable: 1.54 (vulnerable groups)
-- Rel_Praxis: 1.25 (practical implementation)
-- Rel_Prof: 1.17 (professional/social work context)
-- Rel_AI_Komp: 0.90 (AI literacy - weakest)
+**5-Dimensional Relevance Scoring für Include-Papers (0-3 scale):**
+- Rel_Bias: 2.47 (strongest dimension - Bias-Fokus dominant)
+- Rel_Vulnerable: 2.23 (vulnerable groups - zweitwichtigste Dimension)
+- Rel_Praxis: 1.68 (practical implementation)
+- Rel_Prof: 1.67 (professional/social work context)
+- Rel_AI_Komp: 1.18 (AI literacy - schwächste Dimension)
+
+**Interpretation:** Das Korpus fokussiert stark auf Bias-Thematik und vulnerable Gruppen. AI-Literacy-Kompetenzen sind eher peripher, was eine Forschungslücke im Bereich praktischer Prompting-Strategien für Sozialarbeiter:innen indiziert.
 
 **Files Created:**
 - `assessment-llm/output/assessment_llm_run5.xlsx` (325 assessed papers)
@@ -189,7 +191,7 @@ python analysis/pdf-to-md-converter.py \
 - Decision (for filtering)
 - Author_Year
 
-**Filter:** Only include papers with `Decision == "Include"` (208 papers)
+**Filter:** Only include papers with `Decision == "Include"` (222 papers)
 
 **Script to create:** `assessment-llm/excel_to_json.py`
 
@@ -215,7 +217,7 @@ python assessment-llm/excel_to_json.py \
   --output analysis/socialai_bibliography.json \
   --filter-decision Include
 
-# Output: 208 papers in JSON format
+# Output: 222 papers in JSON format
 ```
 
 #### Phase 2: Acquire PDFs
@@ -241,7 +243,7 @@ python analysis/getPDF_intelligent.py \
 - With Zotero Desktop: 90-95%
 - Without Zotero: 70-80%
 
-**Duration:** ~1-2 hours for 208 papers
+**Duration:** ~1-2 hours for 222 papers
 
 #### Phase 3: Convert to Markdown
 
@@ -251,7 +253,7 @@ python analysis/pdf-to-md-converter.py \
   --output-dir analysis/socialai-markdown/
 ```
 
-**Duration:** ~2-3 hours for 208 papers (30-40 sec each)
+**Duration:** ~2-3 hours for 222 papers (30-40 sec each)
 
 #### Phase 4: Validate Quality
 
@@ -269,7 +271,7 @@ ls analysis/socialai-markdown/*.md | wc -l
 ### Resource Requirements
 
 **Storage:**
-- PDFs: ~1-2 GB (208 papers × 5-10 MB average)
+- PDFs: ~1-2 GB (222 papers × 5-10 MB average)
 - Markdown: ~200-300 MB
 - Total: ~2-3 GB
 
@@ -290,11 +292,11 @@ ls analysis/socialai-markdown/*.md | wc -l
 
 | Option | Papers | Time | Pros | Cons |
 |--------|--------|------|------|------|
-| **A: All 325** | 325 (Include+Exclude+Unclear) | 4-5h | Complete corpus | Includes 84 irrelevant papers |
-| **B: Include only** | 208 | 3-4h | Focused, saves time | Loses 33 Unclear papers |
-| **C: High-relevance** | 87 | 1-2h | Fastest, highest quality | Loses 121 Medium papers |
+| **A: All 325** | 325 (Include+Exclude+Unclear) | 4-5h | Complete corpus | Includes 83 irrelevant papers |
+| **B: Include only** | 222 | 3-4h | Focused, saves time | Loses 20 Unclear papers |
+| **C: High-relevance** | ~90 | 1-2h | Fastest, highest quality | Loses ~130 Medium papers |
 
-**Recommendation:** Option B (208 Include papers)
+**Recommendation:** Option B (222 Include papers)
 
 ### Decision 2: Do You Have Zotero Desktop?
 
@@ -461,8 +463,8 @@ CURRENT_STATUS.md                  # This file
 
 2. **Scope:** Which papers to process?
    - **Option A:** All 325 papers (4-5 hours)
-   - **Option B:** Only 208 Include papers (3-4 hours) ← RECOMMENDED
-   - **Option C:** Only 87 High-relevance papers (1-2 hours)
+   - **Option B:** Only 222 Include papers (3-4 hours) ← RECOMMENDED
+   - **Option C:** Only ~90 High-relevance papers (1-2 hours)
 
 3. **Execution:** When to start?
    - **Option 1:** I build excel_to_json.py now, you execute later
