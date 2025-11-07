@@ -1,0 +1,122 @@
+11:15:57 - INFO - 🚀 Starting Claude Document Processor (claude-haiku-4-5)
+11:15:57 - INFO - 🚀 STARTING CLAUDE BATCH PROCESSING
+11:15:57 - INFO - ============================================================
+11:15:57 - INFO - 📁 Source: analysis\markdown_papers_sozarb
+11:15:57 - INFO - 📁 Output: analysis\summaries_sozarb
+11:15:57 - INFO - 📊 Documents: 58
+11:15:57 - INFO - 🔧 Model: claude-haiku-4-5
+11:15:57 - INFO - ============================================================
+11:15:57 - INFO - 📄 [1/58] Processing: A__Alliance_2024_Incubating.md
+11:15:57 - INFO - Cleaned: 17,029 → 16,873 chars
+11:15:57 - INFO - 🔍 [1/58] Stage 1: Academic Analysis
+11:16:06 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:16:06 - INFO - ✅ [1/58] Stage 1 completed (2959 chars)
+11:16:06 - INFO - 📝 [1/58] Stage 2: Synthesis
+11:16:16 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:16:16 - INFO - ✅ [1/58] Stage 2 completed (4546 chars)
+11:16:16 - INFO - 🔍 [1/58] Stage 3: Validation
+11:16:25 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:16:25 - INFO - ✅ [1/58] Stage 3 completed (6263 chars)
+11:16:25 - INFO - 🧹 [1/58] Stage 4: Clean Summary
+11:16:30 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:16:30 - INFO - ✅ [1/58] Stage 4 completed (5194 chars)
+11:16:30 - INFO - 🏷️ [1/58] Stage 5: Metadata
+11:16:32 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:16:32 - INFO - ✅ [1/58] Stage 5 completed (808 chars)
+11:16:32 - INFO - 💾 [1] Saved: summary_A__Alliance_2024_Incubating.md
+11:16:34 - INFO - 📄 [2/58] Processing: Alvarez_2024_Policy.md
+11:16:34 - INFO - Cleaned: 152,984 → 152,516 chars
+11:16:34 - INFO - 🔍 [2/58] Stage 1: Academic Analysis
+11:16:42 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:16:42 - INFO - ✅ [2/58] Stage 1 completed (2888 chars)
+11:16:42 - INFO - 📝 [2/58] Stage 2: Synthesis
+11:16:51 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:16:51 - INFO - ✅ [2/58] Stage 2 completed (4595 chars)
+11:16:51 - INFO - 🔍 [2/58] Stage 3: Validation
+11:17:02 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:02 - INFO - ✅ [2/58] Stage 3 completed (7047 chars)
+11:17:02 - INFO - 🧹 [2/58] Stage 4: Clean Summary
+11:17:07 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:07 - INFO - ✅ [2/58] Stage 4 completed (5431 chars)
+11:17:07 - INFO - 🏷️ [2/58] Stage 5: Metadata
+11:17:10 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:10 - INFO - ✅ [2/58] Stage 5 completed (686 chars)
+11:17:10 - INFO - 💾 [2] Saved: summary_Alvarez_2024_Policy.md
+11:17:12 - INFO - 📄 [3/58] Processing: Amnesty_International_2024_Coded.md
+11:17:12 - INFO - Cleaned: 345,238 → 344,977 chars
+11:17:12 - INFO - 🔍 [3/58] Stage 1: Academic Analysis
+11:17:20 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:20 - INFO - ✅ [3/58] Stage 1 completed (3239 chars)
+11:17:20 - INFO - 📝 [3/58] Stage 2: Synthesis
+11:17:29 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:29 - INFO - ✅ [3/58] Stage 2 completed (4427 chars)
+11:17:29 - INFO - 🔍 [3/58] Stage 3: Validation
+11:17:40 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:40 - INFO - ✅ [3/58] Stage 3 completed (6203 chars)
+11:17:40 - INFO - 🧹 [3/58] Stage 4: Clean Summary
+11:17:46 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:46 - INFO - ✅ [3/58] Stage 4 completed (4729 chars)
+11:17:46 - INFO - 🏷️ [3/58] Stage 5: Metadata
+11:17:49 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:49 - INFO - ✅ [3/58] Stage 5 completed (734 chars)
+11:17:49 - INFO - 💾 [3] Saved: summary_Amnesty_International_2024_Coded.md
+11:17:51 - INFO - 📄 [4/58] Processing: Barman_2024_Beyond.md
+11:17:51 - INFO - Cleaned: 24,504 → 24,273 chars
+11:17:51 - INFO - 🔍 [4/58] Stage 1: Academic Analysis
+11:17:59 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:17:59 - INFO - ✅ [4/58] Stage 1 completed (2979 chars)
+11:17:59 - INFO - 📝 [4/58] Stage 2: Synthesis
+11:18:08 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:18:08 - INFO - ✅ [4/58] Stage 2 completed (4276 chars)
+11:18:08 - INFO - 🔍 [4/58] Stage 3: Validation
+11:18:19 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:18:19 - INFO - ✅ [4/58] Stage 3 completed (6575 chars)
+11:18:19 - INFO - 🧹 [4/58] Stage 4: Clean Summary
+11:18:23 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:18:23 - INFO - ✅ [4/58] Stage 4 completed (4919 chars)
+11:18:23 - INFO - 🏷️ [4/58] Stage 5: Metadata
+11:18:26 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:18:26 - INFO - ✅ [4/58] Stage 5 completed (812 chars)
+11:18:26 - INFO - 💾 [4] Saved: summary_Barman_2024_Beyond.md
+11:18:28 - INFO - 📄 [5/58] Processing: Biegelbauer_2023_Leitfaden.md
+11:18:28 - INFO - Cleaned: 202,983 → 202,738 chars
+11:18:28 - INFO - 🔍 [5/58] Stage 1: Academic Analysis
+11:18:37 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:18:37 - INFO - ✅ [5/58] Stage 1 completed (3067 chars)
+11:18:37 - INFO - 📝 [5/58] Stage 2: Synthesis
+11:18:48 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:18:48 - INFO - ✅ [5/58] Stage 2 completed (4608 chars)
+11:18:48 - INFO - 🔍 [5/58] Stage 3: Validation
+11:19:05 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:05 - INFO - ✅ [5/58] Stage 3 completed (8112 chars)
+11:19:05 - INFO - 🧹 [5/58] Stage 4: Clean Summary
+11:19:12 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:12 - INFO - ✅ [5/58] Stage 4 completed (6244 chars)
+11:19:12 - INFO - 🏷️ [5/58] Stage 5: Metadata
+11:19:15 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:15 - INFO - ✅ [5/58] Stage 5 completed (752 chars)
+11:19:15 - INFO - 💾 [5] Saved: summary_Biegelbauer_2023_Leitfaden.md
+11:19:17 - INFO - 📄 [6/58] Processing: Chen_2025_Social.md
+11:19:17 - INFO - Cleaned: 35,704 → 35,589 chars
+11:19:17 - INFO - 🔍 [6/58] Stage 1: Academic Analysis
+11:19:25 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:25 - INFO - ✅ [6/58] Stage 1 completed (3080 chars)
+11:19:25 - INFO - 📝 [6/58] Stage 2: Synthesis
+11:19:35 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:35 - INFO - ✅ [6/58] Stage 2 completed (4646 chars)
+11:19:35 - INFO - 🔍 [6/58] Stage 3: Validation
+11:19:45 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:45 - INFO - ✅ [6/58] Stage 3 completed (7017 chars)
+11:19:45 - INFO - 🧹 [6/58] Stage 4: Clean Summary
+11:19:50 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:50 - INFO - ✅ [6/58] Stage 4 completed (5834 chars)
+11:19:50 - INFO - 🏷️ [6/58] Stage 5: Metadata
+11:19:53 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:19:53 - INFO - ✅ [6/58] Stage 5 completed (774 chars)
+11:19:53 - INFO - 💾 [6] Saved: summary_Chen_2025_Social.md
+11:19:55 - INFO - 📄 [7/58] Processing: Colombatto_2025_influence.md
+11:19:55 - INFO - Cleaned: 48,353 → 48,131 chars
+11:19:55 - INFO - 🔍 [7/58] Stage 1: Academic Analysis
+11:20:03 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+11:20:03 - INFO - ✅ [7/58] Stage 1 completed (3251 chars)
+11:20:03 - INFO - 📝 [7/58] Stage 2: Synthesis
