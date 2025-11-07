@@ -4,6 +4,227 @@ Development log for tracking pipeline evolution and implementation decisions.
 
 ---
 
+## 2025-11-07: Web Viewer Development - Professional UI & Data Architecture
+
+### Summary
+Development of vanilla JavaScript web viewer for FemPrompt_Vault with professional design system and strategic planning for data integration.
+
+### Session Goals
+1. Implement professional, aesthetic UI for web viewer
+2. Determine data architecture (Vault vs. Zotero vs. Synthesis)
+3. Decide on next implementation steps
+
+### Changes Implemented
+
+#### 1. Professional UI/UX Design Enhancement
+**Files Modified:**
+- `docs/css/style.css` - Enhanced from 76 to 395 lines
+- `docs/js/app.js` - Added loading states and error handling
+
+**Design System Improvements:**
+- **Visual Depth**: Added CSS custom properties for shadows (sm/md/lg)
+- **Smooth Transitions**: Cubic-bezier timing functions for all interactive elements
+- **Typography Hierarchy**: Improved font weights (H1: 800, H2: 700) and letter-spacing
+- **Interactive Animations**:
+  - Navigation buttons with accent bar animation (coral stripe on hover)
+  - Stats cards with lift effect (translateY + shadow)
+  - Search input with focus ring (teal glow)
+  - Content fade-in animation
+- **Professional Components**:
+  - Loading spinner with primary color
+  - Skeleton screens with shimmer animation
+  - User-friendly error messages
+  - Paper card components (hover effects, shadows)
+  - Concept card components (left accent bar)
+
+**CSS Variables Added:**
+```css
+--shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+--shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+--transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+```
+
+**Responsive Design:**
+- Mobile breakpoint at 768px
+- Sidebar adapts to 50vh on mobile
+- Font sizes scale appropriately
+
+#### 2. Loading & Error States Implementation
+**New JavaScript Functions:**
+```javascript
+showLoading()    // Spinner with "Loading content..." message
+showError(msg)   // User-friendly error display with suggestions
+```
+
+**Features:**
+- HTTP status codes in error messages
+- Retry suggestions for network failures
+- Graceful degradation when content unavailable
+
+#### 3. Strategic Architecture Analysis
+
+**Discovery: Existing Pipeline Infrastructure**
+- **Master Orchestrator**: `run_pipeline.py` (617 lines, 5-stage pipeline)
+- **Pipeline Status**: Functional with 90/100 quality score
+- **Existing Vault**: 11 Papers + 36 Concepts already generated
+- **Test Report**: `knowledge/Pipeline-Test-2025-10-31.md` (586 lines)
+
+**Vault Current State:**
+```
+FemPrompt_Vault/
+├── Papers/ (11 summaries with YAML frontmatter)
+├── Concepts/
+│   ├── Bias_Types/ (16 concepts)
+│   └── Mitigation_Strategies/ (22 concepts)
+├── MOCs/
+│   ├── MASTER_MOC.md ← Web viewer loads this!
+│   ├── Paper_Index.md
+│   └── Concept_Frequency_Map.md
+└── README.md
+```
+
+**Pipeline Stages:**
+1. PDF Acquisition → 91.7% success rate
+2. PDF→Markdown → Docling, structure-preserving
+3. Claude Summarization → 100% success, $0.03/doc
+4. Vault Generation → 11 Papers + 36 Concepts
+5. Quality Testing → 90/100 score
+
+**Known Issues Identified:**
+- Incomplete corpus (11 of ~50-60 papers = 18-22%)
+- Concept duplicates (11 Intersectionality variants)
+- Broken links (3 instances)
+- Assessment data not yet integrated into vault
+
+#### 4. Data Architecture Decision Point
+
+**Three Options Discussed:**
+
+**Option A: Use Current Vault (11 Papers)** ✅ Recommended
+- Pro: Immediate deployment possible
+- Pro: Demonstrates proof-of-concept
+- Con: Limited corpus (only 11 papers)
+
+**Option B: Complete Pipeline First** ⚠️
+- Pro: Full corpus (~50-60 papers)
+- Pro: More representative data
+- Con: Requires ~90 min + $1.80 for processing
+- Con: Delays web viewer launch
+
+**Option C: Zotero Direct Integration** ⚠️
+- Pro: Complete bibliographic metadata
+- Pro: DOI, URLs, full author names
+- Con: Needs assessment integration script
+- Con: More complex architecture
+
+**User Direction Required:**
+- Question raised: "ist diese struktur wirklich alles abbilden was wir brauchen für den literatur review?"
+- Discussed: Vault YAML structure vs. Zotero metadata completeness
+- User revealed: "wir haben auch zotero mir den metaden"
+- Critical insight: "wir brauchen zuerst die Synthese-Pipeline"
+
+#### 5. Synthesis Pipeline Analysis
+
+**What Exists:**
+- ✅ Zotero API integration (`fetch_zotero_group.py`)
+- ✅ Assessment scripts (`excel_to_zotero_tags.py`, `write_llm_tags_to_zotero.py`)
+- ✅ PDF acquisition (`getPDF_intelligent.py`)
+- ✅ PDF→Markdown conversion (`pdf-to-md-converter.py`)
+- ✅ Claude summarization (`summarize-documents.py`)
+- ✅ Vault generation (`generate_obsidian_vault_improved.py`)
+
+**What's Missing:**
+- ❌ Assessment data → Vault integration
+- ❌ Zotero metadata → Vault frontmatter merge
+- ❌ Complete corpus processing (11/50-60 papers)
+
+**Key Files Analyzed:**
+- `run_pipeline.py` (master orchestrator)
+- `archive/SCRIPTS.md` (pipeline documentation)
+- `knowledge/Pipeline-Test-2025-10-31.md` (test results)
+
+### Technical Specifications
+
+#### Web Viewer Stack
+- **Frontend**: Vanilla JavaScript (ES6+)
+- **Markdown Rendering**: marked.js v11.1.1
+- **Graph Visualization**: vis-network v9.1.6
+- **Deployment**: GitHub Pages (`/docs` folder)
+- **Data Source**: GitHub Raw URLs (FemPrompt_Vault/)
+
+#### Design System
+- **Color Palette** (Feminist AI Theme):
+  - Primary: #284b63 (Teal)
+  - Secondary: #84a59d (Sage)
+  - Accent: #f28482 (Coral)
+  - Background: #f6f6f4 (Cream)
+- **Shadows**: 3-level depth system (sm/md/lg)
+- **Transitions**: Cubic-bezier easing (0.4, 0, 0.2, 1)
+- **Typography**: System fonts with enhanced hierarchy
+
+### Git Commits
+1. `feat: enhance UI with professional design improvements` (2 files, 357 insertions)
+   - Visual depth with shadows
+   - Smooth transitions and animations
+   - Enhanced typography hierarchy
+   - Interactive hover states
+   - Loading/error states
+   - Responsive design
+   - Paper/concept card components
+
+### Decisions Made
+1. **UI Quality**: Professional design achieved (shadows, transitions, animations)
+2. **Architecture**: Vault as single source of truth (not direct Zotero integration)
+3. **Next Step**: Document current state, then decide on data completion strategy
+
+### Decisions Pending
+1. **Web Viewer Data Integration**:
+   - Build with current 11 papers? (quick demo)
+   - Wait for full pipeline run? (complete corpus)
+   - Integrate assessment data first? (systematic approach)
+
+2. **Pipeline Completion**:
+   - Run for remaining ~40-50 papers?
+   - Integrate assessment LLM tags into vault?
+   - Merge Zotero metadata into frontmatter?
+
+### User Feedback
+- User emphasized: "der vault alleine ist die datengrundlage für die websansicht"
+- User requested: "analysiere ob soetwas schon existiert" (synthesis pipeline)
+- User approved: Design enhancement implementation
+- User asked: "was müssen wir dort alles nun dokumentieren?" (knowledge vault)
+
+### Next Steps (User Approval Needed)
+1. **Documentation**: ✅ Update all knowledge files (this session)
+2. **Web Viewer**: Implement dynamic Papers/Concepts list from vault
+3. **Pipeline**: Run for complete corpus? (90 min, $1.80)
+4. **Integration**: Merge assessment + Zotero data into vault?
+
+### Performance Metrics
+- **Session Duration**: ~2 hours
+- **Files Modified**: 2 (style.css, app.js)
+- **Lines Added**: 357
+- **Cost**: $0 (local development only)
+
+### Outstanding Questions
+1. Is current UI "sehr professionell und ästhetisch" as required?
+   - Assessment: Good foundation, one iteration better than basic
+   - Components ready: Paper cards, concept cards, animations
+   - Room for improvement: More polish possible
+
+2. What data completeness level needed before web deployment?
+   - Current: 11 papers (proof-of-concept)
+   - Target: 50-60 papers (representative)
+   - Decision: User to determine acceptable scope
+
+### Files for Review
+- `docs/css/style.css` - Professional design system
+- `docs/js/app.js` - Loading states and error handling
+- `docs/index.html` - Unchanged (from previous session)
+
+---
+
 ## 2025-10-31: Claude Haiku 4.5 Migration & Pipeline Consolidation
 
 ### Summary
