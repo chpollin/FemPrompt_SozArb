@@ -8,38 +8,41 @@ Strukturierte Dokumentation für automatisierte Literaturrecherche-Pipeline
 
 Diese Wissensbasis enthält die komplette Dokumentation für die FemPrompt & SozArb Forschungspipeline.
 
-### Englische Dokumentation (für technische Umsetzung)
+### Core Documentation (English)
 
 | Datei | Inhalt | Zielgruppe |
 |-------|--------|------------|
-| 01_QUICKSTART.md | Installation, erste Schritte, Beispiele | Neue Nutzer |
-| 02_TECHNICAL.md | Komplette technische Referenz, alle Scripts, APIs | Entwickler, fortgeschrittene Nutzer |
-| 03_STATUS.md | Aktueller Projektstatus, was erreicht, was offen | Alle |
-| 04_JOURNAL.md | Entwicklungschronologie, Entscheidungen, Learnings | Forschungstransparenz (PRISMA) |
-| 05_CLAUDE_RULES.md | Arbeitsregeln für AI-Assistenten | Claude AI / Entwickler |
+| [QUICKSTART.md](QUICKSTART.md) | Installation, erste Schritte, Beispiele | Neue Nutzer |
+| [TECHNICAL.md](TECHNICAL.md) | Komplette technische Referenz, alle Scripts, APIs | Entwickler |
+| [STATUS.md](STATUS.md) | Aktueller Projektstatus, was erreicht, was offen | Alle |
+| [JOURNAL.md](JOURNAL.md) | Entwicklungschronologie, Entscheidungen, Learnings | Transparenz (PRISMA) |
 
-### Deutsche Dokumentation (für Forschungskontext)
+### Research Documentation (German)
 
 | Datei | Inhalt | Zielgruppe |
 |-------|--------|------------|
-| Projekt.md | Forschungsfrage, Ziele, Scope, Status | Forschungsteam |
-| Theorie.md | Feministische Epistemologie (Haraway, Crenshaw) | Theoretischer Rahmen |
-| Methodik.md | PRISMA 2020 Methodik, Quality Criteria | Systematisches Review |
-| Technisch.md | Technische Implementierung, APIs | Technischer Kontext (Deutsch) |
-| Prozess.md | Workflow-Schritte, Ablauf | Prozessdokumentation |
-| Operativ.md | Prompts, Benchmarks, Git-Workflow | Operative Anleitungen |
+| [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md) | Forschungsfragen, Ziele, Scope | Forschungsteam |
+| [THEORETICAL_FRAMEWORK.md](THEORETICAL_FRAMEWORK.md) | Feministische Epistemologie (Haraway, Crenshaw) | Theoretischer Rahmen |
+| [METHODOLOGY.md](METHODOLOGY.md) | PRISMA 2020 Framework, Quality Criteria | Systematisches Review |
+| [OPERATIONAL_GUIDES.md](OPERATIONAL_GUIDES.md) | Prompts, Benchmarks, Git-Workflow | Operative Anleitungen |
+
+### Specialized Documentation
+
+| Datei | Inhalt | Zielgruppe |
+|-------|--------|------------|
+| [OBSIDIAN_WEB_PUBLISHING.md](OBSIDIAN_WEB_PUBLISHING.md) | Web Viewer Strategy & Implementation | Entwickler |
 
 ---
 
 ## Schnelleinstieg
 
-Neu im Projekt? → Starte mit `01_QUICKSTART.md`
+Neu im Projekt? → [QUICKSTART.md](QUICKSTART.md)
 
-Technische Frage? → Siehe `02_TECHNICAL.md`
+Technische Frage? → [TECHNICAL.md](TECHNICAL.md)
 
-Status wissen? → Siehe `03_STATUS.md`
+Status wissen? → [STATUS.md](STATUS.md)
 
-Forschungskontext verstehen? → Siehe deutsche Docs (`Projekt.md`, `Theorie.md`, `Methodik.md`)
+Forschungskontext verstehen? → [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md), [THEORETICAL_FRAMEWORK.md](THEORETICAL_FRAMEWORK.md), [METHODOLOGY.md](METHODOLOGY.md)
 
 ---
 
@@ -58,18 +61,15 @@ Forschungskontext verstehen? → Siehe deutsche Docs (`Projekt.md`, `Theorie.md`
 
 ---
 
-## Dokumentations-Struktur
+## Dokumentations-Architektur
 
-### Warum nummeriert (01-05)?
+### Warum keine Nummerierung mehr?
 
-Die Nummerierung schafft eine logische Lesereihenfolge:
-
-1. 00_README - Du bist hier (Orientierung)
-2. 01_QUICKSTART - Erste Schritte (praktisch)
-3. 02_TECHNICAL - Technische Tiefe (Referenz)
-4. 03_STATUS - Wo stehen wir? (aktuell)
-5. 04_JOURNAL - Wie kamen wir hierher? (historisch)
-6. 05_CLAUDE_RULES - Wie arbeitet AI? (Entwickler)
+Beschreibende Namen statt Nummerierung für bessere Lesbarkeit und Flexibilität:
+- QUICKSTART → Erste Schritte
+- TECHNICAL → Technische Tiefe
+- STATUS → Aktueller Stand
+- JOURNAL → Entwicklungshistorie
 
 ### Warum Deutsch + Englisch?
 
@@ -80,6 +80,6 @@ Die Nummerierung schafft eine logische Lesereihenfolge:
 
 ## Letzte Aktualisierung
 
-Datum: 2025-11-02
-Version: 2.0 (Wissensbasis-Struktur)
-Status: FemPrompt komplett  | SozArb LLM Assessment komplett  | PDF Acquisition bereit 
+Datum: 2025-11-07
+Version: 2.1 (Struktur-Cleanup: Nummerierungen entfernt, Sessions konsolidiert)
+Status: FemPrompt komplett | SozArb LLM Assessment komplett | PDF Acquisition bereit 
