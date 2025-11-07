@@ -1,56 +1,56 @@
 # FemPrompt SozArb - Current Status & Next Steps
 
-**Last Updated:** 2025-11-07
-**Session:** Web Viewer Development & Synthesis Pipeline Analysis
-**Branch:** `main`
+Last Updated: 2025-11-07
+Session: Web Viewer Development & Synthesis Pipeline Analysis
+Branch: `main`
 
 ---
 
 ## Web Viewer Development (2025-11-07)
 
-### Status: Design Enhancement Complete ✅, Data Integration Pending ⚠️
+### Status: Design Enhancement Complete , Data Integration Pending 
 
-**Completed:**
-- ✅ Professional UI/UX Design (shadows, transitions, animations)
-- ✅ Feminist AI color palette implementation (Teal/Sage/Coral)
-- ✅ Loading states with spinner and skeleton screens
-- ✅ Error handling with user-friendly messages
-- ✅ Responsive design (mobile breakpoint at 768px)
-- ✅ Paper/Concept card components (hover effects, shadows)
-- ✅ Typography hierarchy enhancement (improved weights, spacing)
-- ✅ Interactive navigation (accent bar animations)
+Completed:
+-  Professional UI/UX Design (shadows, transitions, animations)
+-  Feminist AI color palette implementation (Teal/Sage/Coral)
+-  Loading states with spinner and skeleton screens
+-  Error handling with user-friendly messages
+-  Responsive design (mobile breakpoint at 768px)
+-  Paper/Concept card components (hover effects, shadows)
+-  Typography hierarchy enhancement (improved weights, spacing)
+-  Interactive navigation (accent bar animations)
 
-**Pending:**
-- ⚠️ Dynamic Papers list from FemPrompt_Vault
-- ⚠️ Dynamic Concepts list from FemPrompt_Vault
-- ⚠️ Knowledge graph visualization with real vault data
-- ⚠️ Search functionality implementation
-- ⚠️ GitHub Pages activation (manual step required)
+Pending:
+-  Dynamic Papers list from FemPrompt_Vault
+-  Dynamic Concepts list from FemPrompt_Vault
+-  Knowledge graph visualization with real vault data
+-  Search functionality implementation
+-  GitHub Pages activation (manual step required)
 
-**Technical Stack:**
+Technical Stack:
 - Frontend: Vanilla JavaScript (ES6+)
 - Markdown: marked.js v11.1.1
 - Graph: vis-network v9.1.6
 - Deployment: GitHub Pages (`/docs` folder)
 - Data Source: GitHub Raw URLs (FemPrompt_Vault/)
 
-**Files:**
+Files:
 ```
 docs/
-├── index.html (vanilla JS single-page app)
-├── css/
-│   └── style.css (395 lines, professional design system)
-└── js/
-    └── app.js (62 lines, loading/error states)
+ index.html (vanilla JS single-page app)
+ css/
+    style.css (395 lines, professional design system)
+ js/
+     app.js (62 lines, loading/error states)
 ```
 
-**Design Quality Assessment:**
+Design Quality Assessment:
 - Current: "Good foundation, one iteration better than basic"
 - Components: Paper cards, concept cards, animations ready
 - User requirement: "sehr professionell und ästhetisch"
 - Assessment: Solid base, room for further polish
 
-**Blockers:**
+Blockers:
 - Decision needed: Build with 11 papers or wait for full corpus?
 - GitHub Pages: Manual activation required in repository settings
 
@@ -58,61 +58,61 @@ docs/
 
 ## Synthesis Pipeline Analysis (2025-11-07)
 
-### Discovered: Complete Pipeline Already Exists! ✅
+### Discovered: Complete Pipeline Already Exists! 
 
-**Master Orchestrator:** `run_pipeline.py` (617 lines)
+Master Orchestrator: `run_pipeline.py` (617 lines)
 - 5-stage pipeline with checkpoint-based resume
 - Status tracking in `.pipeline_status.json`
 - Quality score: 90/100 (from test run)
 
-**Pipeline Stages:**
-1. **PDF Acquisition** (`getPDF_intelligent.py`)
+Pipeline Stages:
+1. PDF Acquisition (`getPDF_intelligent.py`)
    - 8 fallback strategies (Zotero, DOI, ArXiv, Unpaywall, etc.)
    - Success rate: 91.7% (from test)
 
-2. **PDF→Markdown** (`pdf-to-md-converter.py`)
+2. PDF→Markdown (`pdf-to-md-converter.py`)
    - Docling integration, structure-preserving
    - ~30-40 seconds per PDF
 
-3. **Claude Summarization** (`summarize-documents.py`)
+3. Claude Summarization (`summarize-documents.py`)
    - Claude Haiku 4.5
    - 100% success rate, $0.03-0.04 per doc
    - 5-stage iterative refinement
 
-4. **Vault Generation** (`generate_obsidian_vault_improved.py`)
+4. Vault Generation (`generate_obsidian_vault_improved.py`)
    - Papers + Concepts + MOCs
    - Cross-linking, frequency analysis
 
-5. **Quality Testing** (`test_vault_quality.py`)
+5. Quality Testing (`test_vault_quality.py`)
    - Metrics: uniqueness, completeness, link integrity
 
-**Current Vault State:**
+Current Vault State:
 ```
 FemPrompt_Vault/
-├── Papers/ (11 summaries with YAML frontmatter)
-├── Concepts/
-│   ├── Bias_Types/ (16 concepts)
-│   └── Mitigation_Strategies/ (22 concepts)
-├── MOCs/
-│   ├── MASTER_MOC.md
-│   ├── Paper_Index.md
-│   └── Concept_Frequency_Map.md
-└── README.md
+ Papers/ (11 summaries with YAML frontmatter)
+ Concepts/
+    Bias_Types/ (16 concepts)
+    Mitigation_Strategies/ (22 concepts)
+ MOCs/
+    MASTER_MOC.md
+    Paper_Index.md
+    Concept_Frequency_Map.md
+ README.md
 ```
 
-**Known Issues:**
+Known Issues:
 - Incomplete corpus: 11 of ~50-60 papers (18-22%)
 - Concept duplicates: 11 Intersectionality variants
 - Broken links: 3 instances
 - Assessment data not integrated into vault frontmatter
 - Zotero metadata not merged into vault
 
-**What's Missing for Complete Synthesis:**
-1. ❌ Assessment LLM tags → Vault integration
-2. ❌ Zotero metadata (DOI, URLs, authors) → Vault frontmatter
-3. ❌ Complete corpus processing (~40-50 remaining papers)
+What's Missing for Complete Synthesis:
+1.  Assessment LLM tags → Vault integration
+2.  Zotero metadata (DOI, URLs, authors) → Vault frontmatter
+3.  Complete corpus processing (~40-50 remaining papers)
 
-**Estimated Effort for Full Pipeline:**
+Estimated Effort for Full Pipeline:
 - Time: ~90 minutes
 - Cost: ~$1.80 (Claude API)
 - Success rate: ~90% based on test run
@@ -123,29 +123,29 @@ FemPrompt_Vault/
 
 ### 1. LLM-Based PRISMA Assessment (COMPLETE)
 
-**Achievement:** Fully automated literature screening using Claude Haiku 4.5
+Achievement: Fully automated literature screening using Claude Haiku 4.5
 
-**Results:**
-- **325 papers assessed** (100% success rate)
-- **Processing time:** 24 minutes
-- **Cost:** $0.58
-- **Model:** Claude Haiku 4.5
+Results:
+- 325 papers assessed (100% success rate)
+- Processing time: 24 minutes
+- Cost: $0.58
+- Model: Claude Haiku 4.5
 
-**Assessment Breakdown:**
+Assessment Breakdown:
 - Include: 222 papers (68.3%)
 - Exclude: 83 papers (25.5%)
 - Unclear: 20 papers (6.2%)
 
-**5-Dimensional Relevance Scoring für Include-Papers (0-3 scale):**
+5-Dimensional Relevance Scoring für Include-Papers (0-3 scale):
 - Rel_Bias: 2.47 (strongest dimension - Bias-Fokus dominant)
 - Rel_Vulnerable: 2.23 (vulnerable groups - zweitwichtigste Dimension)
 - Rel_Praxis: 1.68 (practical implementation)
 - Rel_Prof: 1.67 (professional/social work context)
 - Rel_AI_Komp: 1.18 (AI literacy - schwächste Dimension)
 
-**Interpretation:** Das Korpus fokussiert stark auf Bias-Thematik und vulnerable Gruppen. AI-Literacy-Kompetenzen sind eher peripher, was eine Forschungslücke im Bereich praktischer Prompting-Strategien für Sozialarbeiter:innen indiziert.
+Interpretation: Das Korpus fokussiert stark auf Bias-Thematik und vulnerable Gruppen. AI-Literacy-Kompetenzen sind eher peripher, was eine Forschungslücke im Bereich praktischer Prompting-Strategien für Sozialarbeiter:innen indiziert.
 
-**Files Created:**
+Files Created:
 - `assessment-llm/output/assessment_llm_run5.xlsx` (325 assessed papers)
 - `assessment-llm/output/zotero_tags.csv` (tag export for Zotero)
 - `assessment-llm/assess_papers.py` (assessment script)
@@ -157,23 +157,23 @@ FemPrompt_Vault/
 
 ### 2. Zotero Integration Scripts (READY)
 
-**Scripts Created:**
+Scripts Created:
 - `assessment-llm/write_llm_tags_to_zotero.py` (pyzotero-based)
 - `assessment-llm/write_llm_tags_to_zotero_simple.py` (requests-only)
 
-**Target Library:**
+Target Library:
 - Name: socialai-litreview-curated
 - ID: 6284300
 - Type: Group Library
 - URL: https://www.zotero.org/groups/6284300/socialai-litreview-curated
 
-**Tags Generated:**
+Tags Generated:
 - PRISMA tags: `PRISMA_Include`, `PRISMA_Exclude`, `PRISMA_Unclear`
 - Relevance tags: `Relevance_High/Medium/Low`
 - Dimension tags: `Dimension_Bias`, `Dimension_Vulnerable_Groups`, etc.
 - Exclusion tags: `Exclusion_No_full_text`, `Exclusion_Not_relevant_topic`, etc.
 
-**Status:** API connection failed (403 Access Denied)
+Status: API connection failed (403 Access Denied)
 - Issue: API key not working from server environment
 - Workaround: CSV export created for manual import
 - Alternative: Run script locally on user's machine
@@ -182,20 +182,20 @@ FemPrompt_Vault/
 
 ### 3. Repository Analysis (COMPLETE)
 
-**Project Understanding:**
+Project Understanding:
 - Multi-model literature discovery (4 LLMs: Claude, Gemini, ChatGPT, Perplexity)
 - Feminist epistemology framework (Haraway, Crenshaw)
 - PRISMA 2020 compliant methodology
 - Automated pipeline for PDF → Markdown → Summaries → Knowledge Graph
 
-**Technical Stack:**
+Technical Stack:
 - Python 3.11
 - Claude Haiku 4.5 for summarization
 - Docling for PDF conversion
 - Obsidian for knowledge graph
 - Zotero for bibliography management
 
-**Documentation Created:**
+Documentation Created:
 - Repository analysis summary
 - LLM assessment system overview
 - Reusability guide for other projects
@@ -206,20 +206,20 @@ FemPrompt_Vault/
 
 ### Issue 1: Zotero API Access (BLOCKED)
 
-**Problem:** API key returns 403 "Access denied" from server environment
+Problem: API key returns 403 "Access denied" from server environment
 
-**Tested:**
+Tested:
 - 2 different API keys
 - 5 different connection methods
 - Both curl and Python requests
 
-**Possible Causes:**
+Possible Causes:
 1. API keys not activated yet (need 1-2 minutes)
 2. Keys incorrectly configured
 3. Network/firewall restrictions from server
 4. Keys revoked
 
-**Workarounds Available:**
+Workarounds Available:
 - CSV export with all tags (ready for import)
 - Standalone script for local execution
 - Manual tag assignment in Zotero web interface
@@ -230,9 +230,9 @@ FemPrompt_Vault/
 
 ### Goal: Complete Text Corpus for Analysis
 
-**Objective:** Download all PDFs from Zotero library and convert to high-quality Markdown
+Objective: Download all PDFs from Zotero library and convert to high-quality Markdown
 
-**Status:** PLANNING PHASE (Zotero API key not working)
+Status: PLANNING PHASE (Zotero API key not working)
 
 ---
 
@@ -240,7 +240,7 @@ FemPrompt_Vault/
 
 #### Script 1: `getPDF_intelligent.py` (READY TO USE)
 
-**Capabilities:**
+Capabilities:
 - Hierarchical PDF acquisition (8 fallback strategies)
 - Zotero local storage support (if Zotero Desktop synced)
 - Unpaywall API (open access papers)
@@ -250,12 +250,12 @@ FemPrompt_Vault/
 - Progress tracking & logging
 - Missing papers report (CSV)
 
-**Current Limitations:**
+Current Limitations:
 - Input: Only JSON format (expects `zotero_vereinfacht.json`)
 - No tag-based filtering (can't filter by PRISMA_Include)
 - No Excel input support
 
-**Usage (if we had JSON input):**
+Usage (if we had JSON input):
 ```bash
 python analysis/getPDF_intelligent.py \
   --input analysis/zotero_vereinfacht.json \
@@ -267,21 +267,21 @@ python analysis/getPDF_intelligent.py \
 
 #### Script 2: `pdf-to-md-converter.py` (READY TO USE)
 
-**Capabilities:**
+Capabilities:
 - Docling integration (high-quality conversion)
 - Batch processing
 - Metadata tracking (hashes, timestamps)
 - Skips already converted files
 - Progress reporting
 
-**Usage:**
+Usage:
 ```bash
 python analysis/pdf-to-md-converter.py \
   --pdf-dir analysis/pdfs/ \
   --output-dir analysis/markdown_papers/
 ```
 
-**Performance:**
+Performance:
 - ~30-40 seconds per PDF
 - Success rate: >90% (tested in FemPrompt)
 
@@ -291,12 +291,12 @@ python analysis/pdf-to-md-converter.py \
 
 #### Missing Piece 1: Excel to JSON Converter
 
-**Purpose:** Convert `assessment_llm_run5.xlsx` to format compatible with `getPDF_intelligent.py`
+Purpose: Convert `assessment_llm_run5.xlsx` to format compatible with `getPDF_intelligent.py`
 
-**Input:** `assessment-llm/output/assessment_llm_run5.xlsx`
-**Output:** `analysis/socialai_bibliography.json`
+Input: `assessment-llm/output/assessment_llm_run5.xlsx`
+Output: `analysis/socialai_bibliography.json`
 
-**Required fields:**
+Required fields:
 - Zotero_Key
 - Title
 - DOI
@@ -304,18 +304,18 @@ python analysis/pdf-to-md-converter.py \
 - Decision (for filtering)
 - Author_Year
 
-**Filter:** Only include papers with `Decision == "Include"` (222 papers)
+Filter: Only include papers with `Decision == "Include"` (222 papers)
 
-**Script to create:** `assessment-llm/excel_to_json.py`
+Script to create: `assessment-llm/excel_to_json.py`
 
-**Estimated effort:** 1-2 hours to build and test
+Estimated effort: 1-2 hours to build and test
 
 #### Missing Piece 2: Tag-Based Filtering (OPTIONAL)
 
-**Purpose:** Filter papers by PRISMA decision before acquisition
+Purpose: Filter papers by PRISMA decision before acquisition
 
-**Implementation:** Add `--filter-decision` flag to getPDF_intelligent.py
-**Estimated effort:** 30 minutes
+Implementation: Add `--filter-decision` flag to getPDF_intelligent.py
+Estimated effort: 30 minutes
 
 ---
 
@@ -335,7 +335,7 @@ python assessment-llm/excel_to_json.py \
 
 #### Phase 2: Acquire PDFs
 
-**Option A: With Zotero Desktop (RECOMMENDED if available)**
+Option A: With Zotero Desktop (RECOMMENDED if available)
 ```bash
 # If user has Zotero Desktop synced locally
 python analysis/getPDF_intelligent.py \
@@ -344,7 +344,7 @@ python analysis/getPDF_intelligent.py \
   --zotero-storage ~/Zotero/storage  # Auto-detected if not specified
 ```
 
-**Option B: Without Zotero (DOI/URL-based)**
+Option B: Without Zotero (DOI/URL-based)
 ```bash
 # Uses Unpaywall, ArXiv, DOI resolvers
 python analysis/getPDF_intelligent.py \
@@ -352,11 +352,11 @@ python analysis/getPDF_intelligent.py \
   --output analysis/socialai-pdfs/
 ```
 
-**Expected Success Rate:**
+Expected Success Rate:
 - With Zotero Desktop: 90-95%
 - Without Zotero: 70-80%
 
-**Duration:** ~1-2 hours for 222 papers
+Duration: ~1-2 hours for 222 papers
 
 #### Phase 3: Convert to Markdown
 
@@ -366,7 +366,7 @@ python analysis/pdf-to-md-converter.py \
   --output-dir analysis/socialai-markdown/
 ```
 
-**Duration:** ~2-3 hours for 222 papers (30-40 sec each)
+Duration: ~2-3 hours for 222 papers (30-40 sec each)
 
 #### Phase 4: Validate Quality
 
@@ -377,24 +377,24 @@ ls analysis/socialai-markdown/*.md | wc -l
 # Expected: ~190-200 files (90-95% success rate)
 ```
 
-**Manual spot-check:** Review 5-10 random markdown files for quality
+Manual spot-check: Review 5-10 random markdown files for quality
 
 ---
 
 ### Resource Requirements
 
-**Storage:**
+Storage:
 - PDFs: ~1-2 GB (222 papers × 5-10 MB average)
 - Markdown: ~200-300 MB
 - Total: ~2-3 GB
 
-**Time:**
+Time:
 - Excel to JSON: 5 minutes
 - PDF acquisition: 1-2 hours
 - Markdown conversion: 2-3 hours
-- **Total: 3-5 hours**
+- Total: 3-5 hours
 
-**Cost:**
+Cost:
 - $0 (all local processing, no API costs)
 
 ---
@@ -405,29 +405,29 @@ ls analysis/socialai-markdown/*.md | wc -l
 
 | Option | Papers | Time | Pros | Cons |
 |--------|--------|------|------|------|
-| **A: All 325** | 325 (Include+Exclude+Unclear) | 4-5h | Complete corpus | Includes 83 irrelevant papers |
-| **B: Include only** | 222 | 3-4h | Focused, saves time | Loses 20 Unclear papers |
-| **C: High-relevance** | ~90 | 1-2h | Fastest, highest quality | Loses ~130 Medium papers |
+| A: All 325 | 325 (Include+Exclude+Unclear) | 4-5h | Complete corpus | Includes 83 irrelevant papers |
+| B: Include only | 222 | 3-4h | Focused, saves time | Loses 20 Unclear papers |
+| C: High-relevance | ~90 | 1-2h | Fastest, highest quality | Loses ~130 Medium papers |
 
-**Recommendation:** Option B (222 Include papers)
+Recommendation: Option B (222 Include papers)
 
 ### Decision 2: Do You Have Zotero Desktop?
 
-**If YES (synced with socialai-litreview-curated group):**
+If YES (synced with socialai-litreview-curated group):
 - Path to check: `~/Zotero/storage/` or similar
 - Success rate: 90-95%
 - Fastest method
 
-**If NO:**
+If NO:
 - Use DOI/URL-based acquisition
 - Success rate: 70-80%
 - Slower, some papers may be unavailable
 
-**Question:** Is Zotero Desktop installed and synced?
+Question: Is Zotero Desktop installed and synced?
 
 ### Decision 3: Priority Order?
 
-**If starting with subset:**
+If starting with subset:
 - High-relevance first (87 papers with Relevance_High)?
 - Or process all Include papers sequentially?
 
@@ -437,25 +437,25 @@ ls analysis/socialai-markdown/*.md | wc -l
 
 ### Step 1: Build Excel-to-JSON Converter (REQUIRED)
 
-**Task:** Create `assessment-llm/excel_to_json.py`
+Task: Create `assessment-llm/excel_to_json.py`
 
-**Functionality:**
+Functionality:
 - Read `assessment_llm_run5.xlsx`
 - Filter by `Decision == "Include"`
 - Convert to JSON format compatible with getPDF_intelligent.py
 - Output: `analysis/socialai_bibliography.json`
 
-**Estimated time:** 30-60 minutes (I can build this now)
+Estimated time: 30-60 minutes (I can build this now)
 
-**Blocker:** None - can be built immediately
+Blocker: None - can be built immediately
 
 ### Step 2: Test PDF Acquisition (5 papers)
 
-**Prerequisites:**
+Prerequisites:
 - Step 1 completed
 - User confirms: Zotero Desktop available? (yes/no)
 
-**Commands:**
+Commands:
 ```bash
 # Create test subset (5 papers)
 head -5 analysis/socialai_bibliography.json > test_input.json
@@ -466,23 +466,23 @@ python analysis/getPDF_intelligent.py \
   --output test-pdfs/
 ```
 
-**Expected outcome:** 3-4 PDFs downloaded successfully
+Expected outcome: 3-4 PDFs downloaded successfully
 
 ### Step 3: Full PDF Acquisition (208 papers)
 
-**Prerequisites:**
+Prerequisites:
 - Step 2 successful
 - User approval to proceed
 
-**Duration:** 1-2 hours
+Duration: 1-2 hours
 
 ### Step 4: Markdown Conversion
 
-**Prerequisites:**
+Prerequisites:
 - Step 3 completed
 - PDFs in `analysis/socialai-pdfs/`
 
-**Duration:** 2-3 hours
+Duration: 2-3 hours
 
 ---
 
@@ -490,16 +490,16 @@ python analysis/getPDF_intelligent.py \
 
 ### Immediately Doable:
 
-1. **Build excel_to_json.py** - No blockers
-2. **Test with sample data** - Can create mock test
-3. **Document workflow** - Already done
-4. **Prepare directory structure** - Can set up
+1. Build excel_to_json.py - No blockers
+2. Test with sample data - Can create mock test
+3. Document workflow - Already done
+4. Prepare directory structure - Can set up
 
 ### Waiting on User:
 
-1. **Zotero Desktop confirmation** - Affects acquisition strategy
-2. **Scope decision** - 208 or 87 or 325 papers?
-3. **Execution approval** - Ready to start when you say go
+1. Zotero Desktop confirmation - Affects acquisition strategy
+2. Scope decision - 208 or 87 or 325 papers?
+3. Execution approval - Ready to start when you say go
 
 ---
 
@@ -507,22 +507,22 @@ python analysis/getPDF_intelligent.py \
 
 ### Potential Next Steps (Future Planning)
 
-1. **LLM Summarization**
+1. LLM Summarization
    - Use Claude Haiku 4.5 (like FemPrompt pipeline)
    - 5-stage iterative refinement
    - Cost: ~$0.03-0.04 per paper = $6-8 for 208 papers
 
-2. **Knowledge Graph Generation**
+2. Knowledge Graph Generation
    - Extract concepts from summaries
    - Create Obsidian vault
    - Cross-link related papers
 
-3. **Synthesis & Analysis**
+3. Synthesis & Analysis
    - Systematic gap analysis
    - Dimension-based filtering (e.g., all papers with high Bias score)
    - Evidence base for prompting guidelines
 
-4. **Publication**
+4. Publication
    - Methodology paper on LLM-based PRISMA screening
    - Research findings on AI literacy in social work
    - Open-source release of assessment tools
@@ -534,26 +534,26 @@ python analysis/getPDF_intelligent.py \
 ### Key Files in This Branch
 ```
 assessment-llm/
-├── assess_papers.py              # LLM assessment script
-├── prompt_template.md            # Assessment prompt
-├── output/
-│   ├── assessment_llm_run5.xlsx  # 325 assessed papers
-│   └── zotero_tags.csv           # Tag export
-├── write_llm_tags_to_zotero.py   # Zotero API script (pyzotero)
-├── write_llm_tags_to_zotero_simple.py  # Zotero API script (requests)
-├── README.md                     # Assessment documentation
-├── RUN5_FINAL_REPORT.md          # Results report
-└── ASSESSMENT_RESULTS.md         # Quick summary
+ assess_papers.py              # LLM assessment script
+ prompt_template.md            # Assessment prompt
+ output/
+    assessment_llm_run5.xlsx  # 325 assessed papers
+    zotero_tags.csv           # Tag export
+ write_llm_tags_to_zotero.py   # Zotero API script (pyzotero)
+ write_llm_tags_to_zotero_simple.py  # Zotero API script (requests)
+ README.md                     # Assessment documentation
+ RUN5_FINAL_REPORT.md          # Results report
+ ASSESSMENT_RESULTS.md         # Quick summary
 ```
 
 ### Existing Pipeline Scripts (Reusable)
 ```
 analysis/
-├── getPDF_intelligent.py         # PDF acquisition (8 fallback strategies)
-├── pdf-to-md-converter.py        # Docling conversion
-├── summarize-documents.py        # Claude Haiku 4.5 summarization
-├── generate_obsidian_vault_improved.py  # Knowledge graph
-└── test_vault_quality.py         # Quality validation
+ getPDF_intelligent.py         # PDF acquisition (8 fallback strategies)
+ pdf-to-md-converter.py        # Docling conversion
+ summarize-documents.py        # Claude Haiku 4.5 summarization
+ generate_obsidian_vault_improved.py  # Knowledge graph
+ test_vault_quality.py         # Quality validation
 ```
 
 ### Documentation
@@ -570,30 +570,30 @@ CURRENT_STATUS.md                  # This file
 
 ### Critical Decisions:
 
-1. **Zotero Desktop:** Do you have Zotero Desktop installed and synced with the socialai-litreview-curated group?
-   - **If YES:** Provide path to Zotero storage (e.g., `~/Zotero/storage/`)
-   - **If NO:** We'll use DOI/URL-based acquisition (lower success rate)
+1. Zotero Desktop: Do you have Zotero Desktop installed and synced with the socialai-litreview-curated group?
+   - If YES: Provide path to Zotero storage (e.g., `~/Zotero/storage/`)
+   - If NO: We'll use DOI/URL-based acquisition (lower success rate)
 
-2. **Scope:** Which papers to process?
-   - **Option A:** All 325 papers (4-5 hours)
-   - **Option B:** Only 222 Include papers (3-4 hours) ← RECOMMENDED
-   - **Option C:** Only ~90 High-relevance papers (1-2 hours)
+2. Scope: Which papers to process?
+   - Option A: All 325 papers (4-5 hours)
+   - Option B: Only 222 Include papers (3-4 hours) ← RECOMMENDED
+   - Option C: Only ~90 High-relevance papers (1-2 hours)
 
-3. **Execution:** When to start?
-   - **Option 1:** I build excel_to_json.py now, you execute later
-   - **Option 2:** I build and test with sample data now
-   - **Option 3:** Wait for your approval before any action
+3. Execution: When to start?
+   - Option 1: I build excel_to_json.py now, you execute later
+   - Option 2: I build and test with sample data now
+   - Option 3: Wait for your approval before any action
 
 ### Deferred Decisions:
 
-4. **Zotero Tag Import:** Skip for now (API not working, CSV export available)
-5. **Priority Order:** Process all papers sequentially (can sort by relevance later)
+4. Zotero Tag Import: Skip for now (API not working, CSV export available)
+5. Priority Order: Process all papers sequentially (can sort by relevance later)
 
 ---
 
 ## Current Status Summary
 
-### Completed ✅
+### Completed 
 - LLM assessment (325 papers, 100% success, $0.58)
 - Assessment results analysis
 - Zotero integration scripts (API blocked)
@@ -607,13 +607,13 @@ CURRENT_STATUS.md                  # This file
 - Markdown conversion (scripts ready)
 - Quality validation
 
-### Blocked 🔴
+### Blocked 
 - Zotero API access (403 errors)
   - Workaround: CSV export created
   - Alternative: Run scripts locally (not from server)
 
-### Next Immediate Action 🎯
-**Build `excel_to_json.py`** - No blockers, can start now if approved
+### Next Immediate Action 
+Build `excel_to_json.py` - No blockers, can start now if approved
 
 ---
 
@@ -626,9 +626,9 @@ CURRENT_STATUS.md                  # This file
 | Full PDF acquisition | 1-2 hours | User: Zotero Desktop? |
 | Markdown conversion | 2-3 hours | PDFs acquired |
 | Quality validation | 15 min | Markdown files |
-| **TOTAL** | **3-5 hours** | User decisions |
+| TOTAL | 3-5 hours | User decisions |
 
-**Cost:** $0 (all local processing)
+Cost: $0 (all local processing)
 
 ---
 

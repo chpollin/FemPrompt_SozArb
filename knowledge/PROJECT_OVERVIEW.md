@@ -61,33 +61,33 @@ Das LLM-basierte Assessment wurde mit Claude Haiku 4.5 durchgeführt. Für SozAr
 
 #### FemPrompt (Projekt 1 - Komplett)
 Die vollständige Pipeline wurde End-to-End durchlaufen:
-- **PDFs:** 61 Dateien in analysis/pdfs/ akquiriert
-- **Markdown:** 26 Dateien in analysis/markdown_papers/ konvertiert
-- **Summaries:** 10 Legacy-Summaries in analysis/summaries_final/ vorhanden
-- **Vault:** FemPrompt_Vault/ generiert mit 16 Paper-Notizen, 2 Concept-Notizen
-- **Top-Konzepte:** Intersectionality (107x erwähnt), Feminist AI (21x), Bias Mitigation (19x)
-- **Status:** ✅ Abgeschlossen, Wissensgraph verfügbar
+- PDFs: 61 Dateien in analysis/pdfs/ akquiriert
+- Markdown: 26 Dateien in analysis/markdown_papers/ konvertiert
+- Summaries: 10 Legacy-Summaries in analysis/summaries_final/ vorhanden
+- Vault: FemPrompt_Vault/ generiert mit 16 Paper-Notizen, 2 Concept-Notizen
+- Top-Konzepte: Intersectionality (107x erwähnt), Feminist AI (21x), Bias Mitigation (19x)
+- Status:  Abgeschlossen, Wissensgraph verfügbar
 
 #### SozArb (Projekt 2 - In Progress)
 Die Pipeline befindet sich im Assessment-Stadium mit partieller Execution:
-- **Assessment:** ✅ 325/325 Papers (100% Erfolgsrate)
-- **PDFs:** 47 Dateien in analysis/pdfs_socialai/ (21% Coverage der 222 Include-Papers)
+- Assessment:  325/325 Papers (100% Erfolgsrate)
+- PDFs: 47 Dateien in analysis/pdfs_socialai/ (21% Coverage der 222 Include-Papers)
   - Nur automatisch aus Zotero-Bibliothek verfügbare PDFs verarbeitet
   - Hierarchische Akquisitionsstrategie implementiert, aber nicht vollständig ausgeschöpft
-- **Markdown:** 47 Dateien in analysis/markdown_papers_socialai/ konvertiert
-- **Summaries:** ⏳ Ausstehend, noch nicht durchgeführt
-- **Vault:** ⏳ Nicht generiert, erfordert vollständigere PDF-Coverage
-- **Status:** ~25% Pipeline-Execution, Fokus auf verfügbaren Ressourcen
+- Markdown: 47 Dateien in analysis/markdown_papers_socialai/ konvertiert
+- Summaries: ⏳ Ausstehend, noch nicht durchgeführt
+- Vault: ⏳ Nicht generiert, erfordert vollständigere PDF-Coverage
+- Status: ~25% Pipeline-Execution, Fokus auf verfügbaren Ressourcen
 
 ### Nächste Schritte
 
-**Für SozArb:**
-1. **PDF-Akquisition erweitern:** Aktivierung der 8 Fallback-Strategien (DOI, ArXiv, Unpaywall, Semantic Scholar, etc.) zur Steigerung der Coverage von 21% auf 70-80%
-2. **Summarization durchführen:** Execution von summarize-documents.py mit Claude Haiku 4.5 für alle verfügbaren Markdown-Dateien
-3. **Vault-Generierung:** Ausführung von generate_obsidian_vault_improved.py zur Erstellung des SozArb-Wissensgraphs
-4. **Konzeptextraktion:** Analyse der Frequenzen und Vernetzung von Schlüsselbegriffen analog zu FemPrompt
+Für SozArb:
+1. PDF-Akquisition erweitern: Aktivierung der 8 Fallback-Strategien (DOI, ArXiv, Unpaywall, Semantic Scholar, etc.) zur Steigerung der Coverage von 21% auf 70-80%
+2. Summarization durchführen: Execution von summarize-documents.py mit Claude Haiku 4.5 für alle verfügbaren Markdown-Dateien
+3. Vault-Generierung: Ausführung von generate_obsidian_vault_improved.py zur Erstellung des SozArb-Wissensgraphs
+4. Konzeptextraktion: Analyse der Frequenzen und Vernetzung von Schlüsselbegriffen analog zu FemPrompt
 
-**Für Paper-Finalisierung:**
+Für Paper-Finalisierung:
 - Aktualisierung der Zahlen in README.md (222/83/20 statt 208/84/33)
 - Klarstellung des Work-in-Progress-Status für SozArb im Paper
 - Dokumentation der PDF-Coverage-Limitation (21%) als methodische Reflexion

@@ -70,10 +70,10 @@ Praktische Implikation für Soziale Arbeit: Ein Modell, das auf westliche Normen
 ### Synthese: Bias als emergentes Multi-Level-Phänomen
 
 Diese Arbeiten zeigen: Bias ist nicht nur Daten-Artefakt (biased training data → biased outputs), sondern emergentes Phänomen aus:
-1. **Architektur-Ebene:** Transformer-Design, Attention-Mechanismen
-2. **Training-Ebene:** Daten, Objectives, Curriculum
-3. **Alignment-Ebene:** RLHF, Constitutional AI, Persona-Vektoren
-4. **Nutzungs-Ebene:** Prompt-Formulierung, Kontext, Interaktionsmuster
+1. Architektur-Ebene: Transformer-Design, Attention-Mechanismen
+2. Training-Ebene: Daten, Objectives, Curriculum
+3. Alignment-Ebene: RLHF, Constitutional AI, Persona-Vektoren
+4. Nutzungs-Ebene: Prompt-Formulierung, Kontext, Interaktionsmuster
 
 Die feministische Analyse muss daher über Input-Output-Betrachtung hinausgehen und Modell-Charakteristik selbst als epistemologisches Problem adressieren. Response-Ability bedeutet dann auch: Verantwortung für die Wahl des Modells, für Prompt-Design, für kritische Validierung emergenter Outputs.
 

@@ -1,6 +1,6 @@
 # Quick Start - FemPrompt & SozArb Pipeline
 
-**Get started with the literature research pipeline in 10 minutes**
+Get started with the literature research pipeline in 10 minutes
 
 ---
 
@@ -139,23 +139,23 @@ For each source:
 Output in neutral, academic style.
 ```
 
-**Output:** `deep-research/[Model]/` - Model-specific bibliographies
+Output: `deep-research/[Model]/` - Model-specific bibliographies
 
 ### Step 2: Standardize to RIS
 
 Convert AI outputs to RIS format for Zotero import.
 
-**Output:** `to-Zotero/*.ris` (4 files)
+Output: `to-Zotero/*.ris` (4 files)
 
 ### Step 3: Import to Zotero
 
 Import RIS files into Zotero group library, de-duplicate, organize.
 
-**Output:** Consolidated Zotero library (326 FemPrompt, 325 SozArb)
+Output: Consolidated Zotero library (326 FemPrompt, 325 SozArb)
 
 ### Step 4: PRISMA Assessment
 
-**Option A: LLM-Based (Recommended)**
+Option A: LLM-Based (Recommended)
 ```bash
 python assessment-llm/assess_papers.py \
   --input papers.xlsx \
@@ -164,7 +164,7 @@ python assessment-llm/assess_papers.py \
 # 100% automated, $0.002/paper, 5-dimensional scoring
 ```
 
-**Option B: Manual Excel-Based**
+Option B: Manual Excel-Based
 ```bash
 python assessment/zotero_to_excel.py
 # [Fill assessment manually]
@@ -210,7 +210,7 @@ python analysis/generate_obsidian_vault_improved.py
 
 ## Performance Estimates
 
-**For 208 papers (SozArb Include set):**
+For 208 papers (SozArb Include set):
 
 | Stage | Duration | Cost | Success Rate |
 |-------|----------|------|--------------|
@@ -219,9 +219,9 @@ python analysis/generate_obsidian_vault_improved.py
 | Markdown Conversion | 2-3 hours | Free | ~100% |
 | AI Summarization | 3-4 hours | $6-8 | ~100% |
 | Vault Generation | <1 min | Free | 100% |
-| **Total** | **6-9 hours** | **$7-9** | **~75%** |
+| Total | 6-9 hours | $7-9 | ~75% |
 
-**Model:** Claude Haiku 4.5 (cost-efficient, fast, high-quality)
+Model: Claude Haiku 4.5 (cost-efficient, fast, high-quality)
 
 ---
 
@@ -263,47 +263,47 @@ python run_pipeline.py -v
 
 ### Error: API Rate Limit (HTTP 429)
 
-**Solution:** Increase delay in `summarize-documents.py`
+Solution: Increase delay in `summarize-documents.py`
 ```python
 time.sleep(5)  # Instead of time.sleep(2)
 ```
 
 ### Error: Missing PDFs
 
-**Check:** `acquisition_log.json` and `missing_pdfs.csv`
-**Solution:** Manual download from university library
+Check: `acquisition_log.json` and `missing_pdfs.csv`
+Solution: Manual download from university library
 
 ### Error: NaN URL in getPDF_intelligent.py
 
-**Fixed in latest version** - Type checking added
+Fixed in latest version - Type checking added
 
 ### Error: Memory Error During PDF Conversion
 
-**Solution:** Process in smaller batches (5 PDFs at a time)
+Solution: Process in smaller batches (5 PDFs at a time)
 
 ---
 
 ## Next Steps
 
-**After Quick Start:**
+After Quick Start:
 
-1. **Learn more:** Read `02_TECHNICAL.md` for complete technical reference
-2. **Check status:** See `03_STATUS.md` for current project state
-3. **Understand research:** Read German docs (`Projekt.md`, `Theorie.md`, `Methodik.md`)
-4. **Adapt pipeline:** See `assessment-llm/prompt_template_EXAMPLE_SOCIAL_WORK.md`
+1. Learn more: Read `02_TECHNICAL.md` for complete technical reference
+2. Check status: See `03_STATUS.md` for current project state
+3. Understand research: Read German docs (`Projekt.md`, `Theorie.md`, `Methodik.md`)
+4. Adapt pipeline: See `assessment-llm/prompt_template_EXAMPLE_SOCIAL_WORK.md`
 
 ---
 
 ## Key Innovations
 
-1. **LLM-Based PRISMA Assessment** - 100% automated, $0.002/paper
-2. **Excel Input Support** - Direct .xlsx reading, no JSON conversion
-3. **5-Dimensional Relevance Scoring** - Parametric, adaptable
-4. **Hierarchical PDF Acquisition** - 8 fallback strategies
-5. **Multi-Model Literature Discovery** - Mitigates single-model bias
+1. LLM-Based PRISMA Assessment - 100% automated, $0.002/paper
+2. Excel Input Support - Direct .xlsx reading, no JSON conversion
+3. 5-Dimensional Relevance Scoring - Parametric, adaptable
+4. Hierarchical PDF Acquisition - 8 fallback strategies
+5. Multi-Model Literature Discovery - Mitigates single-model bias
 
 ---
 
-**Last Updated:** 2025-11-02
-**Version:** 2.0
-**Status:** FemPrompt complete ✅ | SozArb assessment complete ✅
+Last Updated: 2025-11-02
+Version: 2.0
+Status: FemPrompt complete  | SozArb assessment complete 

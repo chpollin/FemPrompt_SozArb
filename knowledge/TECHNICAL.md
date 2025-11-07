@@ -1,8 +1,8 @@
 # Technical Documentation - FemPrompt & SozArb Literature Research Pipeline
 
-**Last Updated:** 2025-11-02
-**Pipeline Version:** 2.0
-**Implementation Status:** ~85% Complete
+Last Updated: 2025-11-02
+Pipeline Version: 2.0
+Implementation Status: ~85% Complete
 
 ---
 
@@ -13,17 +13,17 @@ Automated literature research pipeline utilizing multi-model AI synthesis for bi
 ### Current Projects
 
 #### 1. **FemPrompt** - Original Project (326 papers)
-- **Focus:** Feminist Digital/AI Literacies and diversity-reflective prompting
-- **Status:** Full pipeline operational
-- **Zotero:** Group library 6080294
-- **Output:** FemPrompt_Vault/ (Obsidian knowledge graph)
+- Focus: Feminist Digital/AI Literacies and diversity-reflective prompting
+- Status: Full pipeline operational
+- Zotero: Group library 6080294
+- Output: FemPrompt_Vault/ (Obsidian knowledge graph)
 
 #### 2. **SozArb (Social Work AI Literacy)** - Current Project (325 papers)
-- **Focus:** AI literacy in social work and vulnerable populations
-- **Status:** LLM assessment complete, PDF acquisition ready
-- **Zotero:** Group library 6284300 (socialai-litreview-curated)
-- **Assessment:** 208 Include, 84 Exclude, 33 Unclear (100% success rate, $0.58)
-- **Output:** Pending markdown corpus generation
+- Focus: AI literacy in social work and vulnerable populations
+- Status: LLM assessment complete, PDF acquisition ready
+- Zotero: Group library 6284300 (socialai-litreview-curated)
+- Assessment: 208 Include, 84 Exclude, 33 Unclear (100% success rate, $0.58)
+- Output: Pending markdown corpus generation
 
 ---
 
@@ -90,51 +90,51 @@ python analysis/test_vault_quality.py                  # Stage 5: Quality valida
 ## Pre-Pipeline Workflow (Manual Curation)
 
 ### Phase 1: Multi-Model Deep Research
-**Process:** Execute parametric research prompt across 4 AI platforms
-**Models Used:** Claude, Gemini, ChatGPT, Perplexity
-**Output:** Model-specific bibliographies in `deep-research/[Model]/`
-**Duration:** ~2-3 hours per model
+Process: Execute parametric research prompt across 4 AI platforms
+Models Used: Claude, Gemini, ChatGPT, Perplexity
+Output: Model-specific bibliographies in `deep-research/[Model]/`
+Duration: ~2-3 hours per model
 
 ### Phase 2: RIS Standardization
-**Process:** Convert AI outputs to RIS format for Zotero import
-**Input:** Raw AI responses from each model
-**Output:** `to-Zotero/*.ris` files (4 files, one per model)
+Process: Convert AI outputs to RIS format for Zotero import
+Input: Raw AI responses from each model
+Output: `to-Zotero/*.ris` files (4 files, one per model)
 
 ### Phase 3: Zotero Import and Consolidation
-**Process:** Import RIS files into Zotero, organize by model collection
-**Manual Steps:**
+Process: Import RIS files into Zotero, organize by model collection
+Manual Steps:
 - Import 4 RIS files into Zotero
 - Organize into model-specific collections
 - De-duplicate entries across models
 - Correct metadata (authors, DOIs, dates)
 - Attach PDFs where available
 
-**Output:** Consolidated bibliography in Zotero Group
+Output: Consolidated bibliography in Zotero Group
 
 ---
 
 ## LLM-Based PRISMA Assessment (NEW)
 
 ### Overview
-**Purpose:** Automated literature screening using Claude Haiku 4.5
-**Location:** `assessment-llm/`
-**Status:** Operational, tested with 325 papers (SozArb project)
+Purpose: Automated literature screening using Claude Haiku 4.5
+Location: `assessment-llm/`
+Status: Operational, tested with 325 papers (SozArb project)
 
 ### Results (SozArb Run 5)
-- **Papers assessed:** 325 (100% success rate)
-- **Processing time:** 24 minutes
-- **Cost:** $0.58 (Claude Haiku 4.5)
-- **Assessment breakdown:**
+- Papers assessed: 325 (100% success rate)
+- Processing time: 24 minutes
+- Cost: $0.58 (Claude Haiku 4.5)
+- Assessment breakdown:
   - Include: 208 papers (64.0%)
   - Exclude: 84 papers (25.8%)
   - Unclear: 33 papers (10.2%)
 
 ### 5-Dimensional Relevance Scoring (0-3 scale)
-- **Rel_Bias:** 1.74 (bias analysis - strongest dimension)
-- **Rel_Vulnerable:** 1.54 (vulnerable groups)
-- **Rel_Praxis:** 1.25 (practical implementation)
-- **Rel_Prof:** 1.17 (professional/social work context)
-- **Rel_AI_Komp:** 0.90 (AI literacy - weakest)
+- Rel_Bias: 1.74 (bias analysis - strongest dimension)
+- Rel_Vulnerable: 1.54 (vulnerable groups)
+- Rel_Praxis: 1.25 (practical implementation)
+- Rel_Prof: 1.17 (professional/social work context)
+- Rel_AI_Komp: 0.90 (AI literacy - weakest)
 
 ### Running LLM Assessment
 
@@ -175,17 +175,17 @@ python assessment-llm/write_llm_tags_to_zotero.py \
 
 The assessment system is fully parametric and can be adapted:
 
-1. **Modify dimensions** in `prompt_template.md`:
+1. Modify dimensions in `prompt_template.md`:
    ```
    Current: Rel_AI_Komp, Rel_Vulnerable, Rel_Bias, Rel_Praxis, Rel_Prof
    Example: Rel_Clinical, Rel_Ethical, Rel_Methodological, etc.
    ```
 
-2. **Adjust inclusion criteria**:
+2. Adjust inclusion criteria:
    - Edit prompt to match your research question
    - Modify exclusion reasons
 
-3. **Change model** (in `assess_papers.py`):
+3. Change model (in `assess_papers.py`):
    ```python
    model = "claude-haiku-4-5"  # or "claude-sonnet-4-5" for better quality
    ```
@@ -197,20 +197,20 @@ See `assessment-llm/prompt_template_EXAMPLE_SOCIAL_WORK.md` for adaptation examp
 ## Processing Stages (Main Pipeline)
 
 ### Stage 1: Filtered Zotero Export
-**Process:** Export ONLY PRISMA-included papers from Zotero
-**Script:**
+Process: Export ONLY PRISMA-included papers from Zotero
+Script:
 ```bash
 python analysis/fetch_zotero_group.py
 ```
-**Input:** Curated Zotero library with PRISMA tags
-**Output:** `analysis/zotero_vereinfacht.json` with tag information
-**Filtering:** Pipeline reads tags and processes only papers with `PRISMA_Include` tag
+Input: Curated Zotero library with PRISMA tags
+Output: `analysis/zotero_vereinfacht.json` with tag information
+Filtering: Pipeline reads tags and processes only papers with `PRISMA_Include` tag
 
 ### Stage 2: Document Acquisition and Conversion
 
 #### Intelligent PDF Acquisition (PRISMA-filtered)
 
-**NEW:** Now supports Excel input directly (no JSON conversion needed)!
+NEW: Now supports Excel input directly (no JSON conversion needed)!
 
 ```bash
 # Option A: From Excel with PRISMA filtering
@@ -233,15 +233,15 @@ python analysis/getPDF_intelligent.py \
   --library-type group
 ```
 
-**Hierarchical acquisition strategy:**
+Hierarchical acquisition strategy:
 1. Filter by Decision column (if Excel input with --filter-decision)
 2. Zotero attachments (local PDFs)
 3. Metadata URLs/DOIs
 4. Open access APIs (Unpaywall, ArXiv)
 5. Manual intervention report
 
-**Success rate:** >70% for included papers
-**Reports:** `acquisition_log.json`, `missing_pdfs.csv`
+Success rate: >70% for included papers
+Reports: `acquisition_log.json`, `missing_pdfs.csv`
 
 #### PDF to Markdown Conversion
 ```bash
@@ -304,9 +304,9 @@ python analysis/test_vault_quality.py --vault-dir SozArb_Vault/
 ### Master Orchestrator
 
 #### run_pipeline.py
-**Function:** Coordinates all five processing stages
+Function: Coordinates all five processing stages
 
-**Features:**
+Features:
 - Checkpoint-based resume after interruptions
 - Selective stage activation
 - Stage skipping
@@ -314,7 +314,7 @@ python analysis/test_vault_quality.py --vault-dir SozArb_Vault/
 - Color-coded console output
 - JSON-based status tracking in `.pipeline_status.json`
 
-**Usage:**
+Usage:
 ```bash
 python run_pipeline.py                    # Complete pipeline
 python run_pipeline.py --resume           # Resume after interruption
@@ -323,16 +323,16 @@ python run_pipeline.py --skip summarize
 python run_pipeline.py --dry-run
 ```
 
-**Requires:** All other scripts, `pipeline_config.yaml`, `ANTHROPIC_API_KEY`
+Requires: All other scripts, `pipeline_config.yaml`, `ANTHROPIC_API_KEY`
 
 ---
 
 ### PDF Acquisition
 
 #### getPDF_intelligent.py
-**Function:** Downloads PDFs through hierarchical fallback strategies
+Function: Downloads PDFs through hierarchical fallback strategies
 
-**Strategies (in order):**
+Strategies (in order):
 1. Zotero local attachments (fastest)
 2. DOI resolution via CrossRef API
 3. ArXiv ID extraction and download
@@ -342,17 +342,17 @@ python run_pipeline.py --dry-run
 7. Publisher-specific parsers
 8. URL-based direct search
 
-**NEW: Excel Input Support**
+NEW: Excel Input Support
 - Reads `.xlsx` files directly (no JSON conversion needed)
 - Supports `--filter-decision` flag for PRISMA filtering
 - Compatible with LLM assessment output format
 
-**Output:**
+Output:
 - PDFs in specified output directory
 - `acquisition_log.json` with success/error tracking
 - `missing_pdfs.csv` for manual follow-up
 
-**Usage:**
+Usage:
 ```bash
 # From Excel with filtering
 python analysis/getPDF_intelligent.py \
@@ -370,50 +370,50 @@ python analysis/getPDF_intelligent.py \
   --api-key KEY --library-id ID --library-type group
 ```
 
-**Requires:** Input file (Excel or JSON), internet connection
+Requires: Input file (Excel or JSON), internet connection
 
 ---
 
 ### Document Conversion
 
 #### pdf-to-md-converter.py
-**Function:** Converts PDFs to structured Markdown with Docling
+Function: Converts PDFs to structured Markdown with Docling
 
-**Features:**
+Features:
 - Structure preservation (headings, lists, tables, citations)
 - MD5 hash-based duplicate detection
 - Metadata tracking in `conversion_metadata.json`
 - Error tolerance (isolates problematic PDFs)
 - Normalized filenames
 
-**Output:**
+Output:
 - Markdown files in specified directory
 - `conversion_metadata.json` with processing status
 
-**Usage:**
+Usage:
 ```bash
 python analysis/pdf-to-md-converter.py \
   --pdf-dir analysis/pdfs/ \
   --output-dir analysis/markdown_papers/
 ```
 
-**Requires:** PDFs in input directory, optional docling installed
+Requires: PDFs in input directory, optional docling installed
 
 ---
 
 ### AI-Assisted Analysis
 
 #### summarize-documents.py
-**Function:** Generates structured summaries with Claude Haiku 4.5
+Function: Generates structured summaries with Claude Haiku 4.5
 
-**5-Stage Workflow:**
+5-Stage Workflow:
 1. Academic analysis (research question, methodology, results)
 2. Structured synthesis (500 words)
 3. Critical validation (consistency check)
 4. Clean summary (150 words)
 5. Metadata extraction (YAML format)
 
-**Features:**
+Features:
 - Model: `claude-haiku-4-5` (alternative: `claude-sonnet-4-5`)
 - Temperature 0.3 for consistency
 - 2-second rate limiting (configurable)
@@ -422,27 +422,27 @@ python analysis/pdf-to-md-converter.py \
 - Processing time: ~60 seconds per document (2x faster than Sonnet)
 - Cost: ~$0.03-0.04 per document
 
-**Output:**
+Output:
 - Summaries in specified directory
 - `batch_metadata.json` with performance metrics
 
-**Usage:**
+Usage:
 ```bash
 python analysis/summarize-documents.py \
   --input-dir analysis/markdown_papers/ \
   --output-dir analysis/summaries_final/
 ```
 
-**Requires:** `ANTHROPIC_API_KEY`, Markdown files in input directory
+Requires: `ANTHROPIC_API_KEY`, Markdown files in input directory
 
 ---
 
 ### Obsidian Vault Generation
 
 #### generate_obsidian_vault_improved.py
-**Function:** Creates navigable Obsidian knowledge base from summaries
+Function: Creates navigable Obsidian knowledge base from summaries
 
-**Features:**
+Features:
 - Pattern-based concept extraction
 - Synonym mapping dictionary (182 entries)
 - Fuzzy-matching deduplication
@@ -451,81 +451,81 @@ python analysis/summarize-documents.py \
 - Intersectional consolidation
 - Categories: Bias Types (14), Mitigation Strategies (21)
 
-**Output:**
+Output:
 - `[VaultName]/Papers/` - Paper notes
 - `[VaultName]/Concepts/` - Concept notes
 - `[VaultName]/MASTER_MOC.md` - Navigation index
 
-**Usage:**
+Usage:
 ```bash
 python analysis/generate_obsidian_vault_improved.py \
   --input-dir analysis/summaries_final/ \
   --output-dir FemPrompt_Vault/
 ```
 
-**Requires:** Summaries in input directory
+Requires: Summaries in input directory
 
 ---
 
 #### test_vault_quality.py
-**Function:** Validates Obsidian vault systematically
+Function: Validates Obsidian vault systematically
 
-**Metrics:**
+Metrics:
 - Concept uniqueness (target: >95%)
 - Metadata completeness (target: 100%)
 - Link integrity (broken links)
 - Network connectivity (isolated components)
 - Overall score calculation
 
-**Output:**
+Output:
 - Color-coded console report
 - `vault_test_report.json` (optional)
 
-**Usage:**
+Usage:
 ```bash
 python analysis/test_vault_quality.py --vault-dir FemPrompt_Vault/
 ```
 
-**Requires:** Vault directory exists
+Requires: Vault directory exists
 
 ---
 
 ## Assessment Workflow (Manual - Legacy)
 
 ### zotero_to_excel.py
-**Function:** Exports Zotero library to Excel assessment template
+Function: Exports Zotero library to Excel assessment template
 
-**Features:**
+Features:
 - Direct Zotero API integration via pyzotero
 - PRISMA-compliant column structure
 - Predefined assessment categories
 - Conditional formatting in Excel
 - Data validation for consistent inputs
 
-**Output:** `assessment.xlsx` with structured assessment columns
+Output: `assessment.xlsx` with structured assessment columns
 
-**Usage:**
+Usage:
 ```bash
 python assessment/zotero_to_excel.py -o assessment.xlsx
 python assessment/zotero_to_excel.py --api-key KEY --library-id ID -o output.xlsx
 ```
 
-**Requires:** `ZOTERO_API_KEY` (optional), `zotero_vereinfacht.json`
+Requires: `ZOTERO_API_KEY` (optional), `zotero_vereinfacht.json`
 
 ---
 
 ### excel_to_zotero_tags.py
-**Function:** Imports assessment tags back to Zotero via API
+Function: Imports assessment tags back to Zotero via API
 
-**Features:**
+Features:
 - DOI/Title-based matching
 - PRISMA tag enrichment (Include/Exclude/Unclear)
 - Exclusion reasons as custom fields
 - Roundtrip validation
 
-**Output:** Zotero items updated with assessment tags
+Output: Zotero items updated with assessment tags
 
-**Usage:**
+Usage:
 ```bash
 python assessment/excel_to_zotero_tags.py \
   --excel assessment_curated.xlsx \
@@ -533,7 +533,7 @@ python assessment/excel_to_zotero_tags.py \
   --no-dry-run
 ```
 
-**Requires:** Filled `assessment.xlsx`, Zotero API key
+Requires: Filled `assessment.xlsx`, Zotero API key
 
 ---
 
@@ -589,38 +589,38 @@ python analysis/generate_obsidian_vault_improved.py \
 ## Error Resolution
 
 ### Error: HTTP 429 (Rate Limit Exceeded)
-**Symptom:** API returns status code 429 during document processing
-**Root Cause:** Exceeding Claude API rate limits
-**Resolution:**
+Symptom: API returns status code 429 during document processing
+Root Cause: Exceeding Claude API rate limits
+Resolution:
 1. Modify `analysis/summarize-documents.py` delay parameter
 2. Increase delay: `time.sleep(2)` → `time.sleep(5)` or higher
 3. Alternative: Implement exponential backoff (2^n seconds)
 4. Check your Anthropic API tier limits at console.anthropic.com
 
 ### Error: MemoryError
-**Symptom:** Process termination during PDF conversion
-**Root Cause:** Insufficient RAM for documents >50MB
-**Resolution:**
+Symptom: Process termination during PDF conversion
+Root Cause: Insufficient RAM for documents >50MB
+Resolution:
 1. Limit batch size: Process maximum 5 PDFs concurrently
 2. Increase heap allocation: `python -Xmx4096m script.py`
 3. Pre-split PDFs: `pdftk input.pdf burst output page_%02d.pdf`
 
 ### Error: Missing Metadata
-**Symptom:** Vault concepts lack bibliographic information
-**Root Cause:** Filename mismatch between input JSON and markdown files
-**Resolution:**
+Symptom: Vault concepts lack bibliographic information
+Root Cause: Filename mismatch between input JSON and markdown files
+Resolution:
 1. Verify file presence: `ls -la analysis/zotero_vereinfacht.json`
 2. Check filename consistency: Paper names must match exactly (case-sensitive)
 3. Fallback mechanism activates automatically
 
 ### Error: Concept Over-Extraction
-**Symptom:** >100 concepts extracted from limited corpus
-**Configuration Points:**
+Symptom: >100 concepts extracted from limited corpus
+Configuration Points:
 - Frequency caps: `generate_obsidian_vault_improved.py:198-203`
 - Blacklist terms: `generate_obsidian_vault_improved.py:184-195`
 - Minimum frequency: `generate_obsidian_vault_improved.py:441`
 
-**Recommended Settings:**
+Recommended Settings:
 ```python
 frequency_caps = {
     'AI Systems': 30,
@@ -631,9 +631,9 @@ min_frequency = 3  # Increase from 2
 ```
 
 ### Error: TypeError in getPDF_intelligent.py (NaN URL)
-**Symptom:** `TypeError: expected string or bytes-like object, got 'float'`
-**Root Cause:** Excel cells with NaN URLs passed as float to regex
-**Resolution:** Fixed in latest version with type checking:
+Symptom: `TypeError: expected string or bytes-like object, got 'float'`
+Root Cause: Excel cells with NaN URLs passed as float to regex
+Resolution: Fixed in latest version with type checking:
 ```python
 if not url or not isinstance(url, str):
     url = ''
@@ -645,79 +645,79 @@ if not url or not isinstance(url, str):
 
 ```
 FemPrompt_SozArb/
-├── run_pipeline.py              # Master orchestration script
-├── pipeline_config.yaml         # Pipeline configuration
-├── requirements.txt            # Python dependencies
-├── .env                        # Environment variables (API keys)
-├── .gitignore                  # Git ignore patterns
-│
-├── analysis/                    # Processing pipeline scripts
-│   ├── getPDF_intelligent.py    # Smart PDF acquisition (Excel + JSON support)
-│   ├── pdf-to-md-converter.py   # Format conversion
-│   ├── summarize-documents.py   # AI content analysis
-│   ├── generate_obsidian_vault_improved.py # Knowledge graph
-│   ├── test_vault_quality.py    # Quality validation
-│   ├── fetch_zotero_group.py    # Zotero API integration
-│   ├── pdfs/                    # Downloaded PDFs (gitignored)
-│   ├── markdown_papers/         # Converted documents (gitignored)
-│   ├── summaries_final/         # AI summaries (legacy data)
-│   ├── zotero_vereinfacht.json  # Bibliography metadata
-│   ├── zotero_vollstaendig.json # Complete Zotero export
-│   ├── conversion_metadata.json # PDF conversion tracking
-│   └── vault_test_report.json   # Vault quality metrics
-│
-├── assessment-llm/              # LLM-based PRISMA assessment (NEW)
-│   ├── assess_papers.py          # Main assessment script
-│   ├── prompt_template.md        # Assessment prompt (5 dimensions)
-│   ├── output/
-│   │   ├── assessment_llm_run5.xlsx  # 325 assessed papers
-│   │   └── zotero_tags.csv           # Tag export
-│   ├── write_llm_tags_to_zotero.py   # Zotero API (pyzotero)
-│   ├── write_llm_tags_to_zotero_simple.py  # Zotero API (requests)
-│   ├── README.md                 # Assessment documentation
-│   ├── RUN5_FINAL_REPORT.md      # Detailed results
-│   └── prompt_template_EXAMPLE_SOCIAL_WORK.md # Adaptation example
-│
-├── assessment/                   # Manual assessment workflow (LEGACY)
-│   ├── zotero_to_excel.py        # Zotero → Excel export
-│   ├── excel_to_zotero_tags.py   # Excel → Zotero tag import
-│   ├── assessment.xlsx           # Empty template
-│   ├── assessment_curated.xlsx   # Filled assessment
-│   └── README.md                 # Assessment workflow guide
-│
-├── deep-research/               # Multi-model research results
-│   ├── Claude/                 # Claude AI outputs
-│   ├── Gemini/                 # Gemini outputs
-│   ├── OpenAI/                 # ChatGPT outputs
-│   └── Perplexity/             # Perplexity outputs
-│
-├── to-Zotero/                   # RIS files for import
-│   ├── claude-deep-research-bibliography-1.ris
-│   ├── Gemini-deep-research-bibliography-1.ris
-│   ├── OpenAI-deep-research-bibliography-1.ris
-│   ├── perplexity-deep-research-bibliography-1.ris
-│   └── ris-template.md
-│
-├── FemPrompt_Vault/             # Obsidian knowledge graph (FemPrompt project)
-│   ├── Papers/                  # Individual paper notes
-│   ├── Concepts/
-│   │   ├── Bias_Types/         # Extracted bias concepts
-│   │   └── Mitigation_Strategies/ # Mitigation approaches
-│   └── MASTER_MOC.md           # Navigation index
-│
-├── knowledge/                   # Project documentation
-│   ├── Projekt.md               # Research goals
-│   ├── Theorie.md               # Feminist theory
-│   ├── Methodik.md              # PRISMA methodology
-│   ├── Technisch.md             # Technical implementation
-│   ├── Prozess.md               # Workflow steps
-│   └── Operativ.md              # Prompts and benchmarks
-│
-├── TECHNICAL.md                 # This file
-├── CLAUDE.md                    # Rules for Claude AI assistant
-├── README.md                    # Project overview
-├── CURRENT_STATUS.md            # Current state and next steps
-└── JOURNAL.md                   # Development iteration log (archived)
+ run_pipeline.py              # Master orchestration script
+ pipeline_config.yaml         # Pipeline configuration
+ requirements.txt            # Python dependencies
+ .env                        # Environment variables (API keys)
+ .gitignore                  # Git ignore patterns
+
+ analysis/                    # Processing pipeline scripts
+    getPDF_intelligent.py    # Smart PDF acquisition (Excel + JSON support)
+    pdf-to-md-converter.py   # Format conversion
+    summarize-documents.py   # AI content analysis
+    generate_obsidian_vault_improved.py # Knowledge graph
+    test_vault_quality.py    # Quality validation
+    fetch_zotero_group.py    # Zotero API integration
+    pdfs/                    # Downloaded PDFs (gitignored)
+    markdown_papers/         # Converted documents (gitignored)
+    summaries_final/         # AI summaries (legacy data)
+    zotero_vereinfacht.json  # Bibliography metadata
+    zotero_vollstaendig.json # Complete Zotero export
+    conversion_metadata.json # PDF conversion tracking
+    vault_test_report.json   # Vault quality metrics
+
+ assessment-llm/              # LLM-based PRISMA assessment (NEW)
+    assess_papers.py          # Main assessment script
+    prompt_template.md        # Assessment prompt (5 dimensions)
+    output/
+       assessment_llm_run5.xlsx  # 325 assessed papers
+       zotero_tags.csv           # Tag export
+    write_llm_tags_to_zotero.py   # Zotero API (pyzotero)
+    write_llm_tags_to_zotero_simple.py  # Zotero API (requests)
+    README.md                 # Assessment documentation
+    RUN5_FINAL_REPORT.md      # Detailed results
+    prompt_template_EXAMPLE_SOCIAL_WORK.md # Adaptation example
+
+ assessment/                   # Manual assessment workflow (LEGACY)
+    zotero_to_excel.py        # Zotero → Excel export
+    excel_to_zotero_tags.py   # Excel → Zotero tag import
+    assessment.xlsx           # Empty template
+    assessment_curated.xlsx   # Filled assessment
+    README.md                 # Assessment workflow guide
+
+ deep-research/               # Multi-model research results
+    Claude/                 # Claude AI outputs
+    Gemini/                 # Gemini outputs
+    OpenAI/                 # ChatGPT outputs
+    Perplexity/             # Perplexity outputs
+
+ to-Zotero/                   # RIS files for import
+    claude-deep-research-bibliography-1.ris
+    Gemini-deep-research-bibliography-1.ris
+    OpenAI-deep-research-bibliography-1.ris
+    perplexity-deep-research-bibliography-1.ris
+    ris-template.md
+
+ FemPrompt_Vault/             # Obsidian knowledge graph (FemPrompt project)
+    Papers/                  # Individual paper notes
+    Concepts/
+       Bias_Types/         # Extracted bias concepts
+       Mitigation_Strategies/ # Mitigation approaches
+    MASTER_MOC.md           # Navigation index
+
+ knowledge/                   # Project documentation
+    Projekt.md               # Research goals
+    Theorie.md               # Feminist theory
+    Methodik.md              # PRISMA methodology
+    Technisch.md             # Technical implementation
+    Prozess.md               # Workflow steps
+    Operativ.md              # Prompts and benchmarks
+
+ TECHNICAL.md                 # This file
+ CLAUDE.md                    # Rules for Claude AI assistant
+ README.md                    # Project overview
+ CURRENT_STATUS.md            # Current state and next steps
+ JOURNAL.md                   # Development iteration log (archived)
 ```
 
 ---
@@ -726,57 +726,57 @@ FemPrompt_SozArb/
 
 ### Critical Code Sections
 
-1. **Concept normalization mapping:** `generate_obsidian_vault_improved.py:54-181`
+1. Concept normalization mapping: `generate_obsidian_vault_improved.py:54-181`
    - Contains 182 synonym mappings
    - Modifications require consistency checks
 
-2. **API workflow stages:** `summarize-documents.py:125-283`
+2. API workflow stages: `summarize-documents.py:125-283`
    - Five-stage sequential processing
    - Each stage depends on previous output
 
-3. **Frequency thresholds:** `generate_obsidian_vault_improved.py:441`
+3. Frequency thresholds: `generate_obsidian_vault_improved.py:441`
    - Default: min_frequency = 2
    - Affects concept inclusion criteria
 
-4. **Excel input handling:** `getPDF_intelligent.py:_load_from_excel()`
+4. Excel input handling: `getPDF_intelligent.py:_load_from_excel()`
    - Converts Excel rows to Zotero-like format
    - Supports Decision-based filtering
 
 ### Performance Characteristics
 
-- **Document summarization:** ~60 seconds per document (Claude Haiku 4.5)
-- **LLM assessment:** ~4.4 seconds per paper (Claude Haiku 4.5)
-- **Vault generation:** <60 seconds for 35 documents
-- **PDF conversion:** ~30 seconds per document (CPU-bound, Docling)
-- **Quality testing:** <10 seconds
-- **API rate limit:** 2-second delay between requests (Claude)
-- **Memory usage:** ~500MB for typical 30-document corpus
-- **Cost (Haiku 4.5):**
+- Document summarization: ~60 seconds per document (Claude Haiku 4.5)
+- LLM assessment: ~4.4 seconds per paper (Claude Haiku 4.5)
+- Vault generation: <60 seconds for 35 documents
+- PDF conversion: ~30 seconds per document (CPU-bound, Docling)
+- Quality testing: <10 seconds
+- API rate limit: 2-second delay between requests (Claude)
+- Memory usage: ~500MB for typical 30-document corpus
+- Cost (Haiku 4.5):
   - Assessment: ~$0.002 per paper ($0.58 for 325 papers)
   - Summarization: ~$0.03-0.04 per document
 
 ### Input/Output Specifications
 
-- **Input formats:** PDF, Markdown (.md), Excel (.xlsx), JSON
-- **Output formats:** Markdown (.md), JSONL, HTML, Excel (.xlsx)
-- **Encoding:** UTF-8 throughout
-- **Maximum document size:** 50MB (PDF), 4MB (Markdown)
-- **API token limit:** 2048 tokens per response (configurable)
+- Input formats: PDF, Markdown (.md), Excel (.xlsx), JSON
+- Output formats: Markdown (.md), JSONL, HTML, Excel (.xlsx)
+- Encoding: UTF-8 throughout
+- Maximum document size: 50MB (PDF), 4MB (Markdown)
+- API token limit: 2048 tokens per response (configurable)
 
 ---
 
 ## Implementation Status
 
-### Completed Components ✅
+### Completed Components 
 
 - Multi-model research workflow (4 AI platforms)
 - RIS standardization (4 model-specific RIS files)
-- **LLM-based PRISMA assessment** (NEW)
+- LLM-based PRISMA assessment (NEW)
   - 100% success rate (325 papers in 24 minutes)
   - 5-dimensional relevance scoring
   - CSV export and Zotero API integration
   - Fully parametric and reusable
-- **Excel input support for getPDF_intelligent.py** (NEW)
+- Excel input support for getPDF_intelligent.py (NEW)
   - Direct .xlsx reading (no JSON conversion needed)
   - PRISMA filtering via --filter-decision flag
 - Manual PRISMA assessment workflow (Excel-based with Zotero API)
@@ -788,39 +788,39 @@ FemPrompt_SozArb/
 - Obsidian vault generation and validation
 - Comprehensive documentation suite
 
-### In Progress 🔄
+### In Progress 
 
-- **SozArb project:**
-  - LLM assessment: COMPLETE ✅
+- SozArb project:
+  - LLM assessment: COMPLETE 
   - PDF acquisition: READY (208 papers with Decision=Include)
   - Markdown conversion: READY (waiting for PDFs)
   - Summarization: READY (waiting for Markdown)
   - Vault generation: READY (waiting for summaries)
 
-### Known Issues ⚠️
+### Known Issues 
 
-- **Zotero API Access (SozArb project):** API keys return 403 errors from server environment
-  - **Workarounds:** CSV export for manual import, run scripts locally
-- None critical - all core functionality operational ✅
+- Zotero API Access (SozArb project): API keys return 403 errors from server environment
+  - Workarounds: CSV export for manual import, run scripts locally
+- None critical - all core functionality operational 
 
 ---
 
 ## References
 
 ### External Documentation
-- **PRISMA 2020:** http://www.prisma-statement.org/
-- **Anthropic API:** https://docs.anthropic.com/
-- **Obsidian:** https://obsidian.md/
-- **Docling:** https://github.com/DS4SD/docling
-- **Zotero API:** https://www.zotero.org/support/dev/web_api/v3/start
+- PRISMA 2020: http://www.prisma-statement.org/
+- Anthropic API: https://docs.anthropic.com/
+- Obsidian: https://obsidian.md/
+- Docling: https://github.com/DS4SD/docling
+- Zotero API: https://www.zotero.org/support/dev/web_api/v3/start
 
 ### Internal Documentation
-- **README.md** - Project overview and quick start
-- **CLAUDE.md** - Working rules for Claude AI assistant
-- **CURRENT_STATUS.md** - Current state and immediate next steps
-- **assessment-llm/README.md** - LLM assessment system guide
-- **assessment-llm/RUN5_FINAL_REPORT.md** - Detailed assessment results
-- **knowledge/** folder - Complete project documentation
+- README.md - Project overview and quick start
+- CLAUDE.md - Working rules for Claude AI assistant
+- CURRENT_STATUS.md - Current state and immediate next steps
+- assessment-llm/README.md - LLM assessment system guide
+- assessment-llm/RUN5_FINAL_REPORT.md - Detailed assessment results
+- knowledge/ folder - Complete project documentation
 
 ---
 
