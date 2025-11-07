@@ -5,6 +5,7 @@ With normalization, deduplication, and synonym mapping
 """
 
 import os
+import sys
 import json
 import re
 import shutil
@@ -13,6 +14,12 @@ from typing import Dict, List, Set, Tuple, Optional
 from datetime import datetime
 from collections import defaultdict, Counter
 import hashlib
+
+# Fix encoding for Windows console
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
 
 class ImprovedVaultGenerator:
     def __init__(self, base_path: str = None, vault_name: str = "FemPrompt_Vault"):

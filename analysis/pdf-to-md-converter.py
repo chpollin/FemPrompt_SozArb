@@ -4,11 +4,18 @@ Converts all PDFs in 'analysis/pdfs' to Markdown files in 'analysis/markdown_pap
 """
 
 import os
+import sys
 import json
 import argparse
 from pathlib import Path
 from datetime import datetime
 import time
+
+# Fix encoding for Windows console
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
 
 from utils import sanitize_filename, get_file_hash, load_json_metadata, save_json_metadata
 
@@ -120,7 +127,7 @@ def main(pdf_dir: str = "analysis/pdfs", output_dir: str = "analysis/markdown_pa
             output_path = output_dir / output_filename
             
             try:
-                with open(output_path, 'w', encoding='utf-8') as f:
+                with open(output_path, 'w', encoding='utf-8', errors='replace') as f:
                     f.write(markdown_content)
                 
                 # Update metadata

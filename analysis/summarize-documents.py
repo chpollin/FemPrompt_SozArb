@@ -5,6 +5,7 @@ Uses Anthropic Claude Haiku 4.5 for fast, cost-efficient AI summarization
 """
 
 import os
+import sys
 import json
 import logging
 import re
@@ -13,6 +14,12 @@ import argparse
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from dotenv import load_dotenv
+
+# Fix encoding for Windows console
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
 
 # Load environment variables from .env file
 load_dotenv()
