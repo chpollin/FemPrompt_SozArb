@@ -242,7 +242,7 @@ Complete design system documentation (6000 bytes):
 ### Technical Decisions
 
 #### Why Neutral Colors?
-Academic context requires professional, distraction-free interface. Blue conveys trust and authority. Initial pink/violet "feminist" theme rejected as unprofessional.
+Academic context requires professional, distraction-free interface. Blue conveys trust and authority.
 
 #### Why FontAwesome?
 - Consistent icon system
