@@ -1,0 +1,22 @@
+{
+  "processing_summary": {
+    "total_documents": 58,
+    "successful": 58,
+    "failed": 0,
+    "success_rate": "100.0%"
+  },
+  "timing": {
+    "start_time": "2025-11-07 11:15:57",
+    "end_time": "2025-11-07 11:57:07",
+    "total_time_minutes": "41.2",
+    "avg_time_per_doc": "42.6s"
+  },
+  "statistics": {
+    "avg_original_length": "109,238 chars",
+    "avg_summary_length": "5,419 chars",
+    "avg_compression": "5.0%"
+  },
+  "failed_documents": [],
+  "model_used": "claude-haiku-4-5",
+  "workflow_stages": 5
+}

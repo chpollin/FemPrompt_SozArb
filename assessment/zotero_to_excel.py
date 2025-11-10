@@ -197,9 +197,10 @@ class ZoteroToExcelConverter:
             source_tool = self.extract_source_tool(collection_names)
 
             # FILTER: Only include papers from _DEEPRESEARCH collections (with recognized tool)
-            if source_tool == 'Manual':
-                filtered_count += 1
-                continue  # Skip papers without Deep Research tool
+            # DISABLED for SocialAI-LitReview-Curated (no collections, all papers should be included)
+            # if source_tool == 'Manual':
+            #     filtered_count += 1
+            #     continue  # Skip papers without Deep Research tool
 
             # Extract key metadata
             row = {

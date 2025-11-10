@@ -1,53 +1,197 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FemPrompt & SozArb Knowledge Base</title>
-    <meta name="description" content="Systematic literature review on bias in frontier LLMs with feminist epistemology - Interactive knowledge graph">
+    <title>SozArb Research Vault - AI Literacy in Social Work</title>
 
-    <!-- CDN Dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
-    <script src="https://unpkg.com/vis-network@9.1.6/dist/vis-network.min.js"></script>
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/dist/vis-network.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/research.css">
 </head>
 <body>
-    <div class="app">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="logo">
-                <h1>FemPrompt<br>& SozArb</h1>
-                <p>Feminist AI Literacy Research</p>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <h1>SozArb Research Vault</h1>
+            <p class="subtitle">AI Literacy in Social Work - Systematic Literature Review</p>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-container" id="stats-container">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading statistics...</p>
             </div>
-
-            <div class="search">
-                <input type="text" id="search" placeholder="🔍 Search..." />
-            </div>
-
-            <div class="stats">
-                <div class="stat"><strong id="stat-papers">16</strong> Papers</div>
-                <div class="stat"><strong id="stat-concepts">25</strong> Concepts</div>
-            </div>
-
-            <nav class="nav">
-                <button class="nav-btn active" data-page="home">🏠 Home</button>
-                <button class="nav-btn" data-page="papers">📚 Papers</button>
-                <button class="nav-btn" data-page="concepts">💡 Concepts</button>
-                <button class="nav-btn" data-page="graph">🕸️ Graph</button>
-            </nav>
-
-            <div class="file-tree" id="file-tree"></div>
-        </aside>
-
-        <!-- Main -->
-        <main class="main">
-            <div class="breadcrumbs" id="breadcrumbs"></div>
-            <div id="content" class="content"></div>
-            <div id="graph" class="graph" style="display: none;"></div>
-        </main>
+        </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+        <div class="nav-tabs-container">
+            <button class="nav-tab active" data-tab="papers">Papers Browser</button>
+            <button class="nav-tab" data-tab="dashboard">Dimensions Dashboard</button>
+            <button class="nav-tab" data-tab="graph">Network Graph</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Papers Tab -->
+        <div class="tab-content active" id="papers-tab">
+            <div class="search-filters">
+                <input type="text" class="search-box" id="search-box" placeholder="Search papers by title, author, or abstract...">
+
+                <div class="filters-grid">
+                    <div class="filter-group">
+                        <label class="filter-label">Decision</label>
+                        <select class="filter-select" id="filter-decision">
+                            <option value="all">All Papers</option>
+                            <option value="Include">Include Only</option>
+                            <option value="Exclude">Exclude Only</option>
+                            <option value="Unclear">Unclear Only</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Relevance</label>
+                        <select class="filter-select" id="filter-relevance">
+                            <option value="all">All Levels</option>
+                            <option value="high">High (≥10)</option>
+                            <option value="medium">Medium (5-9)</option>
+                            <option value="low">Low (<5)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Sort By</label>
+                        <select class="filter-select" id="sort-by">
+                            <option value="relevance">Relevance (High to Low)</option>
+                            <option value="year">Year (Newest First)</option>
+                            <option value="author">Author (A-Z)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Summary Available</label>
+                        <select class="filter-select" id="filter-summary">
+                            <option value="all">All Papers</option>
+                            <option value="yes">With Summary Only</option>
+                            <option value="no">Without Summary</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="papers-grid" id="papers-grid">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading papers...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard Tab -->
+        <div class="tab-content" id="dashboard-tab">
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h3>Papers by Decision</h3>
+                    <div class="chart-container">
+                        <canvas id="decision-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Relevance Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="relevance-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>AI Literacy Dimension</h3>
+                    <div class="chart-container">
+                        <canvas id="ai-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Vulnerable Groups Dimension</h3>
+                    <div class="chart-container">
+                        <canvas id="vulnerable-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Bias Analysis Dimension</h3>
+                    <div class="chart-container">
+                        <canvas id="bias-chart"></canvas>
+                    </div>
+                </div>
+
+                <div class="dashboard-card">
+                    <h3>Practical Implementation</h3>
+                    <div class="chart-container">
+                        <canvas id="praxis-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graph Tab -->
+        <div class="tab-content" id="graph-tab">
+            <div class="graph-controls">
+                <div class="graph-controls-grid">
+                    <div class="filter-group">
+                        <label class="filter-label">Filter by Decision</label>
+                        <select class="filter-select" id="graph-filter-decision">
+                            <option value="all">All Papers</option>
+                            <option value="Include">Include Only</option>
+                            <option value="Exclude">Exclude Only</option>
+                            <option value="Unclear">Unclear Only</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Min Relevance</label>
+                        <select class="filter-select" id="graph-filter-relevance">
+                            <option value="0">All Papers</option>
+                            <option value="5">≥ 5 (Medium+)</option>
+                            <option value="10">≥ 10 (High)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="graph-container"></div>
+        </div>
+    </main>
+
+    <!-- Paper Detail Modal -->
+    <div class="modal" id="paper-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h2 id="modal-title">Paper Title</h2>
+                    <p id="modal-author" style="color: var(--gray-600); margin-top: 0.5rem;"></p>
+                </div>
+                <button class="modal-close" onclick="closePaperModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content loaded dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App Script -->
+    <script src="js/research-app.js"></script>
 </body>
 </html>

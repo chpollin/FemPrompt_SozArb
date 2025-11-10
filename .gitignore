@@ -24,6 +24,18 @@ logs/
 # Temporary analysis files
 analysis/acquisition_log.json
 analysis/missing_pdfs.csv
+analysis/pdf_conversion_full.log
+analysis/vault_test_report.json
+analysis/zotero_test_with_tags.json
+
+# Pipeline logs (root)
+conversion_metadata.json
+markdown_conversion_sozarb.log
+markdown_conversion_sozarb_retry.log
+pdf_acquisition_sozarb.log
+summarization_sozarb.log
+vault_generation_sozarb.log
+*.log
 
 # Python
 __pycache__/

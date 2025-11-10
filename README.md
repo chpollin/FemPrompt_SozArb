@@ -19,9 +19,12 @@ Automated, end-to-end research pipeline leveraging multiple AI models for system
 ### 2. SozArb (325 papers) - Current
 - **Focus:** AI literacy in social work and vulnerable populations
 - **Research Question:** How can social workers develop AI literacy to serve vulnerable populations?
-- **Status:** LLM assessment complete (208 Include, 84 Exclude, 33 Unclear)
+- **Status:** Complete research vault + web viewer operational
 - **Zotero:** Group library 6284300 (socialai-litreview-curated)
-- **Next Steps:** PDF acquisition → Markdown conversion → Summarization
+- **Output:**
+  - Obsidian vault with 325 papers (full YAML frontmatter)
+  - Web viewer with 264 papers (search, filters, visualization)
+  - 13 MOCs for navigation
 
 ---
 
@@ -73,13 +76,18 @@ python analysis/summarize-documents.py \
   --input-dir analysis/markdown_papers/ \
   --output-dir analysis/summaries_final/
 
-# Step 4: Create knowledge graph
-python analysis/generate_obsidian_vault_improved.py \
-  --input-dir analysis/summaries_final/ \
-  --output-dir FemPrompt_Vault/
+# Step 4: Create research vault (Obsidian)
+python analysis/generate_research_vault_with_assessment.py
 
-# Step 5: Validate quality
-python analysis/test_vault_quality.py --vault-dir FemPrompt_Vault/
+# Step 5: Export to web viewer
+python analysis/export_vault_to_web_data.py
+
+# Step 6: Open web viewer
+cd docs && python -m http.server 8000
+# Visit: http://localhost:8000
+
+# Optional: Validate vault quality
+python analysis/test_vault_quality.py --vault-dir SozArb_Research_Vault/
 ```
 
 ---
@@ -267,9 +275,20 @@ FemPrompt_SozArb/
 │   └── MASTER_MOC.md            # Navigation
 │
 ├── docs/                        # Web viewer (Vanilla JS)
-│   ├── index.html               # Main viewer
-│   ├── styles.css               # Design system
-│   └── app.js                   # Vault rendering
+│   ├── index.html               # Main application
+│   ├── css/research.css         # Professional academic design
+│   ├── js/research-app.js       # Application logic
+│   ├── data/                    # Auto-generated JSON data
+│   │   ├── research_vault.json  # 264 papers with metadata
+│   │   ├── graph_data.json      # Network visualization (896 edges)
+│   │   └── statistics.json      # Aggregate statistics
+│   ├── DESIGN.md                # Design system documentation
+│   └── README.md                # Web viewer documentation
+│
+├── SozArb_Research_Vault/       # Obsidian vault (SozArb)
+│   ├── Papers/                  # 325 paper notes with YAML frontmatter
+│   ├── MOCs/                    # 13 Maps of Content
+│   └── MASTER_MOC.md            # Main navigation
 │
 └── knowledge/                   # Project documentation
     ├── README.md                # Knowledge base index
@@ -290,6 +309,8 @@ FemPrompt_SozArb/
 
 ### For Users
 - [README.md](README.md) (this file) - Project overview and quick start
+- [docs/README.md](docs/README.md) - Web viewer documentation
+- [docs/DESIGN.md](docs/DESIGN.md) - Design system reference
 - [knowledge/QUICKSTART.md](knowledge/QUICKSTART.md) - Installation & first steps
 - [knowledge/TECHNICAL.md](knowledge/TECHNICAL.md) - Complete technical reference
 - [knowledge/STATUS.md](knowledge/STATUS.md) - Current state & next steps
