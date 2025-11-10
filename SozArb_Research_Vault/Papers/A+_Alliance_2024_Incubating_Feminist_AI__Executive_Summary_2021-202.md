@@ -31,8 +31,8 @@ top_dimensions: ["Vulnerable Groups", "Practical Implementation"]
 tags: ["paper", "include", "high-relevance", "dim-vulnerable-high", "dim-bias-medium", "dim-praxis-high"]
 
 # Summary
-has_summary: false
-summary_file: ""
+has_summary: true
+summary_file: "summary_Alliance_2024_Incubating.md"
 
 # Metadata
 date_added: 2025-11-10

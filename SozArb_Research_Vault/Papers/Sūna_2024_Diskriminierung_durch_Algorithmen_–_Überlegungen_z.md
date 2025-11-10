@@ -31,8 +31,8 @@ top_dimensions: ["Bias Analysis", "AI Literacy"]
 tags: ["paper", "include", "high-relevance", "dim-ai-komp-medium", "dim-vulnerable-medium", "dim-bias-high", "dim-praxis-medium"]
 
 # Summary
-has_summary: false
-summary_file: ""
+has_summary: true
+summary_file: "summary_S_na_2024_Diskriminierung.md"
 
 # Metadata
 date_added: 2025-11-10

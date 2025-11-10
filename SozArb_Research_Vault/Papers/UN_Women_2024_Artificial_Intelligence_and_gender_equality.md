@@ -32,7 +32,7 @@ tags: ["paper", "include", "high-relevance", "dim-vulnerable-high", "dim-bias-hi
 
 # Summary
 has_summary: true
-summary_file: "summary_UN_Women_2024_Artificial.md"
+summary_file: "summary_Women_2024_Artificial.md"
 
 # Metadata
 date_added: 2025-11-10

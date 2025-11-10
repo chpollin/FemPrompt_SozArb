@@ -32,7 +32,7 @@ tags: ["paper", "exclude", "low-relevance", "has-summary"]
 
 # Summary
 has_summary: true
-summary_file: "summary_Unknown_2025_Artificial.md"
+summary_file: "summary_Unknown_XXXX_feminist.md"
 
 # Metadata
 date_added: 2025-11-10

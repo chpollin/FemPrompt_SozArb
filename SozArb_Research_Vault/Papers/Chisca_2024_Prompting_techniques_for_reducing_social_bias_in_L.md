@@ -31,8 +31,8 @@ top_dimensions: []
 tags: ["paper", "exclude", "low-relevance"]
 
 # Summary
-has_summary: false
-summary_file: ""
+has_summary: true
+summary_file: "summary_Chisca_2024_Prompting.md"
 
 # Metadata
 date_added: 2025-11-10
