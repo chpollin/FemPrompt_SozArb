@@ -44,6 +44,39 @@
     /* Typography */
     --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Typography Scale */
+    --text-xs: 0.6875rem;      /* 11px */
+    --text-sm: 0.75rem;        /* 12px */
+    --text-base: 0.8125rem;    /* 13px */
+    --text-md: 0.875rem;       /* 14px */
+    --text-body: 0.9375rem;    /* 15px */
+    --text-lg: 1rem;           /* 16px */
+    --text-xl: 1.0625rem;      /* 17px */
+    --text-2xl: 1.125rem;      /* 18px */
+    --text-3xl: 1.5rem;        /* 24px */
+    --text-4xl: 2rem;          /* 32px */
+
+    /* Spacing Scale */
+    --space-xs: 0.25rem;       /* 4px */
+    --space-sm: 0.5rem;        /* 8px */
+    --space-md: 0.75rem;       /* 12px */
+    --space-lg: 1rem;          /* 16px */
+    --space-xl: 1.5rem;        /* 24px */
+    --space-2xl: 2rem;         /* 32px */
+
+    /* Border Radius Scale */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+
+    /* Transitions */
+    --transition-fast: all 0.15s ease;
+    --transition-base: all 0.2s ease;
+    --transition-slow: all 0.3s ease;
+
+    /* Focus Ring */
+    --focus-ring: 0 0 0 3px rgba(30, 64, 175, 0.1);
 }
 
 * {
@@ -61,11 +94,38 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* ========================================
+   Base Components (Reusable)
+   ======================================== */
+
+/* Card Component */
+.card {
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gray-200);
+}
+
+.card-padding-sm { padding: var(--space-lg); }
+.card-padding-md { padding: var(--space-xl); }
+.card-padding-lg { padding: 1.75rem; }
+
+/* Focus State Utility */
+.focus-ring:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: var(--focus-ring);
+}
+
+/* ========================================
+   Layout & Structure
+   ======================================== */
+
 /* Header - Professional Dark */
 header {
     background: var(--gray-900);
     color: white;
-    padding: 2rem 0;
+    padding: var(--space-2xl) 0;
     box-shadow: var(--shadow-lg);
     border-bottom: 3px solid var(--primary);
 }
@@ -78,14 +138,14 @@ header {
 
 h1 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: var(--text-4xl);
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     letter-spacing: -0.02em;
 }
 
 .subtitle {
-    font-size: 1rem;
+    font-size: var(--text-lg);
     opacity: 0.85;
     font-weight: 400;
     color: var(--gray-300);
@@ -94,7 +154,7 @@ h1 {
 /* Stats Bar */
 .stats-bar {
     background: white;
-    padding: 1.5rem 0;
+    padding: var(--space-xl) 0;
     border-bottom: 1px solid var(--gray-200);
     box-shadow: var(--shadow-sm);
 }
@@ -110,21 +170,21 @@ h1 {
 
 .stat {
     text-align: center;
-    padding: 0.75rem;
+    padding: var(--space-md);
 }
 
 .stat-value {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: var(--text-4xl);
     font-weight: 700;
     color: var(--primary);
     display: block;
     line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
 }
 
 .stat-label {
-    font-size: 0.75rem;
+    font-size: var(--text-sm);
     color: var(--gray-600);
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -150,16 +210,16 @@ h1 {
 }
 
 .nav-tab {
-    padding: 1rem 2rem;
+    padding: var(--space-lg) var(--space-2xl);
     cursor: pointer;
     border: none;
     background: transparent;
     font-family: var(--font-display);
-    font-size: 0.9375rem;
+    font-size: var(--text-body);
     font-weight: 600;
     color: var(--gray-600);
     border-bottom: 2px solid transparent;
-    transition: all 0.15s ease;
+    transition: var(--transition-fast);
 }
 
 .nav-tab:hover {
@@ -204,20 +264,20 @@ main {
 .search-filters {
     background: white;
     padding: 1.75rem;
-    border-radius: 8px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-2xl);
     border: 1px solid var(--gray-200);
 }
 
 .search-box {
     width: 100%;
     padding: 0.875rem 0.875rem 0.875rem 2.75rem;
-    font-size: 0.9375rem;
+    font-size: var(--text-body);
     border: 1px solid var(--gray-300);
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-    transition: all 0.15s ease;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-xl);
+    transition: var(--transition-fast);
     font-family: var(--font-body);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2378716c'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'%3E%3C/path%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -228,24 +288,24 @@ main {
 .search-box:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    box-shadow: var(--focus-ring);
 }
 
 .filters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: var(--space-lg);
 }
 
 .filter-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--space-sm);
 }
 
 .filter-label {
     font-family: var(--font-display);
-    font-size: 0.6875rem;
+    font-size: var(--text-xs);
     font-weight: 700;
     color: var(--gray-700);
     text-transform: uppercase;
@@ -253,14 +313,14 @@ main {
 }
 
 .filter-select {
-    padding: 0.75rem 0.875rem;
+    padding: var(--space-md) 0.875rem;
     border: 1px solid var(--gray-300);
-    border-radius: 6px;
-    font-size: 0.875rem;
+    border-radius: var(--radius-md);
+    font-size: var(--text-md);
     background: white;
     cursor: pointer;
     font-family: var(--font-body);
-    transition: all 0.15s ease;
+    transition: var(--transition-fast);
 }
 
 .filter-select:hover {
@@ -270,23 +330,23 @@ main {
 .filter-select:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+    box-shadow: var(--focus-ring);
 }
 
 /* Papers Grid */
 .papers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 1.5rem;
+    gap: var(--space-xl);
 }
 
 /* Paper Cards - Academic Style */
 .paper-card {
     background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
     box-shadow: var(--shadow);
-    transition: all 0.2s ease;
+    transition: var(--transition-base);
     cursor: pointer;
     border: 1px solid var(--gray-200);
 }
@@ -307,20 +367,20 @@ main {
     justify-content: space-between;
     align-items: start;
     margin-bottom: 0.875rem;
-    gap: 1rem;
+    gap: var(--space-lg);
 }
 
 .paper-author {
     font-family: var(--font-display);
     font-weight: 600;
     color: var(--gray-700);
-    font-size: 0.8125rem;
+    font-size: var(--text-base);
 }
 
 .decision-badge {
-    padding: 0.25rem 0.75rem;
-    border-radius: 4px;
-    font-size: 0.6875rem;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -350,22 +410,22 @@ main {
 
 .paper-title {
     font-family: var(--font-display);
-    font-size: 1.0625rem;
+    font-size: var(--text-xl);
     font-weight: 600;
     color: var(--gray-900);
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-lg);
     line-height: 1.5;
     letter-spacing: -0.01em;
 }
 
 .relevance-bar {
-    margin: 1rem 0;
+    margin: var(--space-lg) 0;
 }
 
 .relevance-label {
-    font-size: 0.8125rem;
+    font-size: var(--text-base);
     color: var(--gray-600);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--space-sm);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -376,7 +436,7 @@ main {
     font-family: var(--font-display);
     font-weight: 700;
     color: var(--primary);
-    font-size: 0.9375rem;
+    font-size: var(--text-body);
 }
 
 .relevance-progress {
@@ -394,16 +454,16 @@ main {
 
 .dimensions-mini {
     display: flex;
-    gap: 0.5rem;
+    gap: var(--space-sm);
     flex-wrap: wrap;
-    margin-top: 1rem;
+    margin-top: var(--space-lg);
 }
 
 .dimension-pill {
-    padding: 0.25rem 0.625rem;
+    padding: var(--space-xs) 0.625rem;
     background: var(--gray-100);
-    border-radius: 4px;
-    font-size: 0.6875rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
     color: var(--gray-700);
     font-weight: 600;
     border: 1px solid var(--gray-200);
@@ -422,22 +482,22 @@ main {
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-2xl);
 }
 
 .dashboard-card {
     background: white;
     padding: 1.75rem;
-    border-radius: 8px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     border: 1px solid var(--gray-200);
 }
 
 .dashboard-card h3 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-xl);
     color: var(--gray-900);
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -451,7 +511,7 @@ main {
 /* Graph Viz */
 #graph-container {
     background: white;
-    border-radius: 8px;
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     border: 1px solid var(--gray-200);
     height: 700px;
@@ -460,17 +520,17 @@ main {
 
 .graph-controls {
     background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     border: 1px solid var(--gray-200);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-xl);
 }
 
 .graph-controls-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    gap: var(--space-lg);
 }
 
 /* Modal */
@@ -496,14 +556,14 @@ main {
 
 .modal-content {
     background: white;
-    border-radius: 8px;
+    border-radius: var(--radius-lg);
     max-width: 900px;
     width: 100%;
     max-height: 90vh;
     overflow-y: auto;
     box-shadow: var(--shadow-xl);
-    margin: 2rem auto;
-    animation: slideUp 0.3s ease;
+    margin: var(--space-2xl) auto;
+    animation: slideUp var(--transition-slow);
 }
 
 @keyframes slideUp {
@@ -518,7 +578,7 @@ main {
 }
 
 .modal-header {
-    padding: 2rem;
+    padding: var(--space-2xl);
     border-bottom: 1px solid var(--gray-200);
     display: flex;
     justify-content: space-between;
@@ -527,7 +587,7 @@ main {
     top: 0;
     background: white;
     z-index: 10;
-    gap: 2rem;
+    gap: var(--space-2xl);
 }
 
 .modal-header h2 {
@@ -535,7 +595,7 @@ main {
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.3;
-    font-size: 1.5rem;
+    font-size: var(--text-3xl);
 }
 
 .modal-close {
@@ -543,13 +603,13 @@ main {
     border: none;
     width: 36px;
     height: 36px;
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     font-size: 1.25rem;
     cursor: pointer;
     color: var(--gray-600);
     line-height: 1;
     padding: 0;
-    transition: all 0.15s ease;
+    transition: var(--transition-fast);
     flex-shrink: 0;
 }
 
@@ -559,11 +619,11 @@ main {
 }
 
 .modal-body {
-    padding: 2rem;
+    padding: var(--space-2xl);
 }
 
 .detail-section {
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-2xl);
 }
 
 .detail-section:last-child {
@@ -572,8 +632,8 @@ main {
 
 .detail-section h3 {
     font-family: var(--font-display);
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-lg);
     color: var(--gray-900);
     font-weight: 700;
     letter-spacing: -0.01em;
@@ -581,16 +641,16 @@ main {
 
 .dimensions-detail {
     display: grid;
-    gap: 0.75rem;
+    gap: var(--space-md);
 }
 
 .dimension-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: var(--space-lg);
     background: var(--gray-50);
-    border-radius: 6px;
+    border-radius: var(--radius-md);
     border: 1px solid var(--gray-200);
 }
 
@@ -600,7 +660,7 @@ main {
     display: flex;
     align-items: center;
     gap: 0.625rem;
-    font-size: 0.9375rem;
+    font-size: var(--text-body);
 }
 
 .dimension-score {
@@ -641,7 +701,7 @@ main {
 /* Responsive */
 @media (max-width: 768px) {
     h1 {
-        font-size: 1.5rem;
+        font-size: var(--text-3xl);
     }
 
     .papers-grid {
@@ -659,16 +719,16 @@ main {
 
     .nav-tab {
         white-space: nowrap;
-        padding: 0.875rem 1.5rem;
+        padding: 0.875rem var(--space-xl);
     }
 
     .modal-content {
-        margin: 1rem;
+        margin: var(--space-lg);
         max-height: 95vh;
     }
 
     .modal-header,
     .modal-body {
-        padding: 1.5rem;
+        padding: var(--space-xl);
     }
 }
