@@ -31,8 +31,8 @@ top_dimensions: ["Vulnerable Groups", "Bias Analysis"]
 tags: ["paper", "include", "high-relevance", "dim-vulnerable-high", "dim-bias-high", "dim-praxis-medium"]
 
 # Summary
-has_summary: false
-summary_file: ""
+has_summary: true
+summary_file: "summary_Wudel_2025_What.md"
 
 # Metadata
 date_added: 2025-11-10

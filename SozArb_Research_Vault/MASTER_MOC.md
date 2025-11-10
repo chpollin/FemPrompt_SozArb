@@ -20,7 +20,8 @@ Complete navigation for AI Literacy in Social Work research corpus.
 | Metric | Count | Percentage |
 |--------|-------|------------|
 | **Total Papers** | 325 | 100% |
-| Papers with AI Summaries | 83 | 25.5% |
+| Papers with AI Summaries | 67 | 20.6% |
+| Concept Pages | 40 | — |
 | | | |
 | **PRISMA Decisions** | | |
 | ✅ Include | 222 | 68.3% |
@@ -58,8 +59,19 @@ Complete navigation for AI Literacy in Social Work research corpus.
 
 ### Special Collections
 
-- [[MOCs/Papers_with_Summaries|📝 Papers with AI Summaries]] (83)
+- [[MOCs/Papers_with_Summaries|📝 Papers with AI Summaries]] (67)
 - [[MOCs/Top_Papers|🏆 Top 20 Papers by Total Relevance]]
+
+### By Concept
+
+- [[Concepts/INDEX|🔖 Concept Index]] (40 concepts)
+- Key concepts:
+  - [[Concepts/Algorithmic_Fairness|Algorithmic Fairness]] (14 papers)
+  - [[Concepts/Intersectionality|Intersectionality]] (12 papers)
+  - [[Concepts/Algorithmic_Bias|Algorithmic Bias]] (12 papers)
+  - [[Concepts/Responsible_Ai|Responsible AI]] (11 papers)
+  - [[Concepts/Large_Language_Models|Large Language Models]] (10 papers)
+  - [[Concepts/Generative_Ai|Generative AI]] (9 papers)
 
 ---
 
@@ -108,5 +120,6 @@ SORT total_relevance DESC
 ---
 
 *Vault generated: 2025-11-10 07:10*
-*Script: `generate_research_vault_with_assessment.py`*
-*Total files: 325 papers + MOCs*
+*Last updated: 2025-11-10*
+*Scripts: `generate_research_vault_with_assessment.py`, `sync_summary_metadata.py`, `extract_concepts_from_summaries.py`*
+*Total files: 325 papers + 73 summaries + 40 concepts + 13 MOCs*

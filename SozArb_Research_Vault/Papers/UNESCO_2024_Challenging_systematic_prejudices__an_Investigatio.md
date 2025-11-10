@@ -32,7 +32,7 @@ tags: ["paper", "include", "medium-relevance", "dim-vulnerable-medium", "dim-bia
 
 # Summary
 has_summary: true
-summary_file: "summary_UNESCO_2024_Bias.md"
+summary_file: "summary_UNESCO_2024_Challenging.md"
 
 # Metadata
 date_added: 2025-11-10

@@ -31,8 +31,8 @@ top_dimensions: ["Vulnerable Groups", "Bias Analysis"]
 tags: ["paper", "include", "medium-relevance", "dim-vulnerable-high", "dim-bias-high"]
 
 # Summary
-has_summary: false
-summary_file: ""
+has_summary: true
+summary_file: "summary_Jääskeläinen_2025_Intersectional.md"
 
 # Metadata
 date_added: 2025-11-10

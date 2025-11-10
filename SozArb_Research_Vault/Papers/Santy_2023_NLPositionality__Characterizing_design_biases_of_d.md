@@ -31,8 +31,8 @@ top_dimensions: ["Bias Analysis", "Vulnerable Groups"]
 tags: ["paper", "include", "medium-relevance", "dim-vulnerable-medium", "dim-bias-high", "dim-praxis-medium"]
 
 # Summary
-has_summary: false
-summary_file: ""
+has_summary: true
+summary_file: "summary_Santy_2023_NLPositionality.md"
 
 # Metadata
 date_added: 2025-11-10
