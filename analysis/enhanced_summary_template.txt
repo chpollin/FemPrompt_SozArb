@@ -1,0 +1,64 @@
+## ENHANCED SUMMARY STRUCTURE (für summarize-documents.py Stage 2)
+
+Create a comprehensive summary using EXACTLY this structure:
+
+## Overview
+[Context, motivation, research gap. ~200 words]
+
+## Main Findings
+Structure as hierarchical list with subheadings:
+
+### 1. [Finding Title]
+[Brief explanation]
+
+### 2. [Finding Title]
+[Brief explanation]
+
+### 3. [Finding Title]
+[Brief explanation]
+
+## Methodology/Approach
+[How was the research conducted? Theoretical framework? ~150 words]
+
+## Relevant Concepts
+List 5-7 key concepts with definitions in this format:
+
+**[Concept Name]:** [Definition in 1-2 sentences]
+
+## Practical Implications
+
+Structure by stakeholder groups relevant to social work context:
+
+**For Social Workers:**
+- [Actionable recommendation 1]
+- [Actionable recommendation 2]
+
+**For Organizations/Agencies:**
+- [Actionable recommendation 1]
+- [Actionable recommendation 2]
+
+**For Policymakers:**
+- [Actionable recommendation 1]
+- [Actionable recommendation 2]
+
+**For Researchers:**
+- [Actionable recommendation 1]
+- [Actionable recommendation 2]
+
+## Limitations & Open Questions
+
+**Limitations:**
+- [Methodological limitation 1]
+- [Scope limitation 2]
+- [Generalizability concern 3]
+
+**Open Questions:**
+- [Unresolved question 1]
+- [Future research direction 2]
+- [Practical implementation challenge 3]
+
+## Significance
+[Why this matters. Impact. Broader implications. ~200 words]
+
+Max 750 words total. Write substantial, informative content in English.
+Use active voice, direct language, and stakeholder-focused framing where appropriate.
