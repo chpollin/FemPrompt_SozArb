@@ -1,0 +1,668 @@
+{
+  "stats": {
+    "total_processed": 47,
+    "total_api_calls": 563,
+    "total_cost": 1.1260000000000008,
+    "avg_quality_score": 76.0851063829787
+  },
+  "results": [
+    {
+      "file": "Alvarez_2024_Policy.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Amnesty_International_2024_Coded.md",
+      "quality_score": 86,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 85,
+        "completeness_score": 82,
+        "actionability_score": 88,
+        "structure_score": 90,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "A__Alliance_2024_Incubating.md",
+      "quality_score": 88,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 78,
+        "actionability_score": 88,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 16
+      }
+    },
+    {
+      "file": "Barman_2024_Beyond.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Biegelbauer_2023_Leitfaden.md",
+      "quality_score": 51,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 35,
+        "completeness_score": 25,
+        "actionability_score": 40,
+        "structure_score": 60,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Chen_2025_Social.md",
+      "quality_score": 80,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 80,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 23
+      }
+    },
+    {
+      "file": "Colombatto_2025_influence.md",
+      "quality_score": 69,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 60,
+        "actionability_score": 75,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Cvoelcker_2023_Queer.md",
+      "quality_score": 82,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "DIVERSIFAIR_Project_2024_Intersectionality.md",
+      "quality_score": 70,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 65,
+        "completeness_score": 55,
+        "actionability_score": 60,
+        "structure_score": 75,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Djiberou_Mahamadou_2024_Revisiting.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "D_Ignazio_2024_Data.md",
+      "quality_score": 76,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 72,
+        "completeness_score": 65,
+        "actionability_score": 70,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Engelhardt_2025_Voll.md",
+      "quality_score": 59,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 35,
+        "actionability_score": 55,
+        "structure_score": 70,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 24
+      }
+    },
+    {
+      "file": "European_Data_Protection_Supervisor_2023_Explainab.md",
+      "quality_score": 89,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 85,
+        "actionability_score": 88,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Feist-Ortmanns_2025_basiertes.md",
+      "quality_score": 58,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 35,
+        "actionability_score": 50,
+        "structure_score": 70,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 23
+      }
+    },
+    {
+      "file": "Friedrich-Ebert-Stiftung_2025_artificial.md",
+      "quality_score": 80,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 80,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Gaba_2025_Bias.md",
+      "quality_score": 75,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 68,
+        "completeness_score": 72,
+        "actionability_score": 70,
+        "structure_score": 75,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Ghosal_2024_empirical.md",
+      "quality_score": 89,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 85,
+        "actionability_score": 88,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 13
+      }
+    },
+    {
+      "file": "Ghosal_2025_Unequal.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 13
+      }
+    },
+    {
+      "file": "Gohar_2023_Survey.md",
+      "quality_score": 89,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 85,
+        "actionability_score": 88,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Hall_2024_systematic.md",
+      "quality_score": 86,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 85,
+        "completeness_score": 82,
+        "actionability_score": 88,
+        "structure_score": 90,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Hayati_2024_Extract.md",
+      "quality_score": 87,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 85,
+        "completeness_score": 88,
+        "actionability_score": 82,
+        "structure_score": 92,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Himmelreich_2022_Artificial.md",
+      "quality_score": 89,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 85,
+        "actionability_score": 88,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Kamruzzaman_2024_Prompting.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 90,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Karagianni_2025_Gender.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Kattnig_2024_Assessing.md",
+      "quality_score": 59,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 35,
+        "completeness_score": 45,
+        "actionability_score": 60,
+        "structure_score": 70,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Klein_2024_Data.md",
+      "quality_score": 74,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 65,
+        "completeness_score": 60,
+        "actionability_score": 75,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Kutscher_2020_Handbuch.md",
+      "quality_score": 88,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 78,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 16
+      }
+    },
+    {
+      "file": "Lau_2023_Dipper.md",
+      "quality_score": 74,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 65,
+        "completeness_score": 72,
+        "actionability_score": 60,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Linnemann_2023_Bedeutung.md",
+      "quality_score": 60,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 35,
+        "actionability_score": 60,
+        "structure_score": 70,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Lin_2022_Artificial.md",
+      "quality_score": 89,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 85,
+        "actionability_score": 88,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Lund_2025_Algorithms.md",
+      "quality_score": 76,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 65,
+        "completeness_score": 70,
+        "actionability_score": 75,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 23
+      }
+    },
+    {
+      "file": "Ma_2023_Intersectional.md",
+      "quality_score": 83,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 85,
+        "actionability_score": 80,
+        "structure_score": 90,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "McCrory_2024_Avoiding.md",
+      "quality_score": 60,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 35,
+        "actionability_score": 60,
+        "structure_score": 70,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Nuwasiima_2024_role.md",
+      "quality_score": 86,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 85,
+        "completeness_score": 78,
+        "actionability_score": 88,
+        "structure_score": 92,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 23
+      }
+    },
+    {
+      "file": "OECD_2023_Advancing.md",
+      "quality_score": 77,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 72,
+        "completeness_score": 65,
+        "actionability_score": 78,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 13
+      }
+    },
+    {
+      "file": "Ovalle_2023_Factoring.md",
+      "quality_score": 85,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 85,
+        "completeness_score": 78,
+        "actionability_score": 82,
+        "structure_score": 90,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Park_2025_algorithm.md",
+      "quality_score": 46,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 25,
+        "completeness_score": 15,
+        "actionability_score": 40,
+        "structure_score": 60,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Qiu_2025_Mitigating.md",
+      "quality_score": 80,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 80,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 16
+      }
+    },
+    {
+      "file": "Quaid-i-Azam_University_2025_Gender.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 90,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Reamer_2023_Artificial.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 90,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Ricaurte_Quijano_2024_Towards.md",
+      "quality_score": 55,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 25,
+        "completeness_score": 15,
+        "actionability_score": 70,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Sharma_2024_Intersectional.md",
+      "quality_score": 85,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 85,
+        "completeness_score": 78,
+        "actionability_score": 82,
+        "structure_score": 90,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Siapka_2023_Towards.md",
+      "quality_score": 57,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 35,
+        "actionability_score": 40,
+        "structure_score": 70,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Singh_2025_reparative.md",
+      "quality_score": 77,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 65,
+        "completeness_score": 72,
+        "actionability_score": 78,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Slesinger_2024_Training.md",
+      "quality_score": 60,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 35,
+        "completeness_score": 45,
+        "actionability_score": 60,
+        "structure_score": 75,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 13
+      }
+    },
+    {
+      "file": "Studeny_2025_Digitale.md",
+      "quality_score": 60,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 35,
+        "actionability_score": 60,
+        "structure_score": 70,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 24
+      }
+    },
+    {
+      "file": "_CORRUPTED_Debnath_2024_LLMs.md",
+      "quality_score": 22,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 0,
+        "completeness_score": 0,
+        "actionability_score": 0,
+        "structure_score": 0,
+        "limitations_present": false,
+        "implications_present": true,
+        "concepts_count": 1
+      }
+    }
+  ]
+}
