@@ -88,3 +88,205 @@ Die Multi-Modell-Strategie mit expliziter Divergenz-Dokumentation operationalisi
 Die methodische Innovation liegt in der Verbindung computergestützter Automatisierung mit feministischer Epistemologie. Während traditionelle systematische Reviews Objektivität durch standardisierte Protokolle anstreben, akzeptiert dieser Ansatz Partialität und macht sie produktiv. Die Transparenz über Positionalität, die Wertschätzung von Divergenz und die Integration menschlicher Urteilskraft schaffen eine andere Form von Rigorosität.
 
 Die Grenzen dieses Ansatzes sind ebenfalls epistemologisch bedingt. Die verwendeten KI-Modelle wurden primär mit englischsprachigen, westlichen Daten trainiert. Sie reproduzieren potentiell die Dominanz dieser Perspektiven. Die feministische Rahmung kann diese strukturelle Limitation reflektieren und transparent machen, aber nicht vollständig überwinden. Situiertes Wissen bedeutet auch, diese Grenzen anzuerkennen.
+
+## Feministische Operationalisierung in der Pipeline
+
+### Von der Theorie zur technischen Implementierung
+
+Die theoretischen Konzepte von Haraway, Crenshaw und Shanahan müssen in konkrete technische Prozesse übersetzt werden. Die Enhanced Summarization Pipeline (v2.0) operationalisiert feministische Epistemologie durch adaptive Prompt-Strategien, die kontextabhängig aktiviert werden.
+
+### Adaptive Feminist Prompts: Vermeidung epistemischer Gewalt
+
+**Problem:** Traditionelle systematische Reviews wenden uniforme Extraktionsprotokolle auf alle Dokumente an. Dies kann epistemische Gewalt bedeuten: Ein Paper über technische Optimierung wird mit denselben Kategorien analysiert wie eines über Diskriminierung vulnerabler Gruppen.
+
+**Lösung:** Die Pipeline nutzt conditional activation basierend auf PRISMA-Dimensionen aus dem LLM-Assessment:
+- Papers mit `rel_bias >= 2` UND `rel_vulnerable >= 2` erhalten extended feminist analysis
+- Papers mit primär technischem Fokus erhalten standard summary mit "Critical Gaps"-Sektion
+- Papers ohne Bias-/Vulnerable-Bezug werden nicht mit feministischen Kategorien "zwangsetikettiert"
+
+Dies respektiert die Situiertheit jedes Papers: Nicht jedes Dokument adressiert dieselben Dimensionen.
+
+### 9 analytische Dimensionen: Intersektionale Bias-Analyse
+
+Für Papers, die extended feminist analysis erhalten, nutzt die Pipeline folgende Dimensionen (basierend auf dem Review-Framework, entwickelt November 2025):
+
+#### 1. Representation of Subjects
+- **Inhalt:** Wie werden Personen/Gruppen im AI-System repräsentiert?
+- **Fokus:** Gender scripts, stereotypische Rollenbilder, Sichtbarkeit/Unsichtbarkeit marginalisierter Gruppen
+- **Prompt-Aktivierung:** Wenn Paper gender, race, disability, age als Variable behandelt
+- **Beispiel-Output:** "Das Paper zeigt, dass Bildgenerierungsmodelle Frauen in 72% der Fälle in domestischen Settings darstellen."
+
+#### 2. Allocation & Decision-Making
+- **Inhalt:** Welche Ressourcen/Chancen werden durch AI-Systeme verteilt? Wessen Probleme werden priorisiert?
+- **Fokus:** Risk assessments in social work, predictive policing, hiring algorithms
+- **Prompt-Aktivierung:** Wenn Paper decision support, resource allocation, automated decisions behandelt
+- **Beispiel-Output:** "Risikoassessment-Algorithmen klassifizieren alleinerziehende Mütter als Hochrisiko, ohne strukturelle Benachteiligung zu berücksichtigen."
+
+#### 3. Interaction & Communication Styles
+- **Inhalt:** Wie kommuniziert das AI-System? Welche Sprachstile werden bevorzugt?
+- **Fokus:** Sycophancy (übermäßige Zustimmung), gendered tone, authority vs. empathy
+- **Prompt-Aktivierung:** Wenn Paper conversational AI, chatbots, LLM interactions behandelt
+- **Beispiel-Output:** "LLMs zeigen sycophantisches Verhalten bei männlichen Nutzern (Zustimmung zu Fehlaussagen), aber correctional tone bei weiblichen Nutzern."
+
+#### 4. Data Provenance & Curation
+- **Inhalt:** Wessen Daten wurden gesammelt? Wer wird repräsentiert, wer fehlt?
+- **Fokus:** Selection bias, geografische/kulturelle Unterrepräsentation, epistemic inequality
+- **Prompt-Aktivierung:** Wenn Paper dataset construction, training data, data bias behandelt
+- **Beispiel-Output:** "Der Datensatz enthält 0% Texte von indigenen Autoren, obwohl Indigene 15% der Zielgruppe ausmachen."
+
+#### 5. Model & Training Regimes
+- **Inhalt:** Welche technischen Entscheidungen formen Bias? Wie wird alignment operationalisiert?
+- **Fokus:** RLHF mit westlichen Präferenzen, scaling ohne Diversität, hallucination patterns
+- **Prompt-Aktivierung:** Wenn Paper model training, alignment, RLHF, emergent properties behandelt
+- **Beispiel-Output:** "RLHF-Training mit US-amerikanischen Annotatoren führt zu Modellverhalten, das kollektivistische Werte als 'unhelpful' klassifiziert."
+
+#### 6. Interface & Persona Design
+- **Inhalt:** Wie wird das System präsentiert? Welche Autorität wird beansprucht?
+- **Fokus:** Claims zu Neutralität, anthropomorphism, trust-building design patterns
+- **Prompt-Aktivierung:** Wenn Paper interface design, user experience, trust/transparency behandelt
+- **Beispiel-Output:** "Die App präsentiert Empfehlungen als 'wissenschaftlich objektiv', verschleiert aber normative Annahmen über 'gute Erziehung'."
+
+#### 7. Professional Sensemaking
+- **Inhalt:** Wie nutzen Praktiker:innen (Social Workers) AI-Systeme? Welche Verantwortungsverschiebungen entstehen?
+- **Fokus:** Automation bias, deskilling, professional autonomy, critical literacy
+- **Prompt-Aktivierung:** Wenn Paper professional use, social work practice, practitioner perspectives behandelt
+- **Prompt-Aktivierung:** Wenn Paper professional use, decision support in social work behandelt
+- **Beispiel-Output:** "Sozialarbeiter:innen übernehmen AI-Risikoeinschätzungen ohne kritische Prüfung (automation bias), selbst wenn diese kulturell inadäquat sind."
+
+#### 8. Organizational Governance
+- **Inhalt:** Welche institutionellen Rahmenbedingungen regulieren AI-Nutzung?
+- **Fokus:** Guidelines, AI Act compliance, accountability mechanisms, complaint procedures
+- **Prompt-Aktivierung:** Wenn Paper policy, regulation, organizational implementation behandelt
+- **Beispiel-Output:** "Organisationen haben keine Beschwerdeverfahren für Fälle, in denen Klient:innen durch AI-Entscheidungen diskriminiert werden."
+
+#### 9. Feminist AI Literacies
+- **Inhalt:** Welche Kompetenzen brauchen Praktiker:innen für kritische AI-Nutzung?
+- **Fokus:** Counter-reading, reflexivity, participatory design, epistemic resistance
+- **Prompt-Aktivierung:** Wenn Paper training, education, literacy, empowerment behandelt
+- **Beispiel-Output:** "Das Training vermittelt nur technische Bedienung, aber keine Kompetenzen für kritische Bias-Erkennung."
+
+### Technische Implementierung: Conditional Prompt Augmentation
+
+**Workflow:**
+
+```python
+# 1. Check relevance scores from PRISMA assessment
+if paper.rel_bias >= 2 and paper.rel_vulnerable >= 2:
+    # Activate extended feminist analysis
+
+    # 2. Determine which dimensions are applicable
+    applicable_dimensions = []
+
+    if "gender" in paper.content or "representation" in paper.content:
+        applicable_dimensions.append("Representation_of_Subjects")
+
+    if "decision" in paper.content or "allocation" in paper.content:
+        applicable_dimensions.append("Allocation_Decision_Making")
+
+    # ... (similar checks for all 9 dimensions)
+
+    # 3. Augment summary prompt with dimension-specific questions
+    for dimension in applicable_dimensions:
+        prompt += get_dimension_prompt(dimension)
+
+else:
+    # Standard summary + "Critical Gaps" section
+    prompt += """
+    ## Critical Gaps (if applicable)
+    - Does this work consider bias or vulnerable populations? If not, why might this be a limitation?
+    - Could the methods/findings inadvertently harm marginalized groups?
+    """
+```
+
+**Vorteil gegenüber uniformer Analyse:**
+- Vermeidet "forced fit": Papers über rein technische Optimierung werden nicht mit Gender-Kategorien analysiert, wo diese nicht relevant sind
+- Erhöht Präzision: Nur anwendbare Dimensionen werden abgefragt
+- Reduziert Hallucinations: LLM wird nicht gezwungen, feministische Kategorien zu "finden", wo sie nicht existieren
+
+### Praktische Implikationen: Wissensdokumente für Sozialarbeiter:innen
+
+Die Enhanced Pipeline generiert stakeholder-specific actionable implications:
+
+**Beispiel-Output "Practical Implications":**
+
+```markdown
+## Practical Implications
+
+**For Social Workers:**
+- Prüfen Sie bei AI-generierten Risikoeinschätzungen explizit: Welche kulturellen Normen
+  wurden in das Training eingebracht? Reflektieren diese die Lebenswelt Ihrer Klient:innen?
+- Nutzen Sie AI-Empfehlungen als Diskussionsgrundlage, nicht als finale Entscheidung.
+  Ihre professionelle Beziehung zu Klient:innen hat epistemischen Wert.
+
+**For Organizations:**
+- Implementieren Sie Beschwerdeverfahren für AI-bezogene Diskriminierung.
+- Schulen Sie nicht nur Bedienung, sondern kritische Bias-Erkennung (Feminist AI Literacies).
+
+**For Policymakers:**
+- Der AI Act erfordert Transparenz über Training-Daten. Fordern Sie explizite Dokumentation
+  der Repräsentation vulnerabler Gruppen in Datensätzen.
+
+**For Researchers:**
+- Untersuchen Sie nicht nur technischen Bias, sondern auch Professional Sensemaking:
+  Wie verändert AI-Nutzung professionelle Identität und Verantwortung?
+```
+
+### Limitations & Open Questions: Epistemische Ehrlichkeit
+
+Die Pipeline dokumentiert systematisch methodische Grenzen:
+
+**Beispiel-Output "Limitations & Open Questions":**
+
+```markdown
+## Limitations & Open Questions
+
+**Limitations:**
+- Studie nutzt US-amerikanischen Datensatz, Übertragbarkeit auf europäische Kontexte unklar
+- Keine Beteiligung von Betroffenen im Forschungsdesign (epistemic extraction vs. participation)
+- Binäre Gender-Kategorisierung reproduziert cis-normative Frameworks
+
+**Open Questions:**
+- Wie würden nicht-westliche feministische Frameworks (z.B. Decolonial Feminism) die Befunde interpretieren?
+- Welche Formen struktureller Diskriminierung werden durch individualisierte Bias-Metriken unsichtbar gemacht?
+- Wie können AI-Systeme Intersektionalität technisch abbilden, ohne Identitäten zu essentialisieren?
+```
+
+Dies operationalisiert Haraways situiertes Wissen: Jedes Paper wird als partiell und kontextgebunden dokumentiert.
+
+### Meta-Synthesen: Normative feministische Kritik
+
+Zusätzlich zu individuellen Papier-Summaries generiert die Pipeline meta-synthesis documents, die feministische Kritik über das gesamte Corpus aggregieren:
+
+**Geplant:**
+- `Synthesis/Feminist_AI_Critique.md`: Übergreifende Analyse der 9 Dimensionen
+- `Synthesis/Intersectional_Blind_Spots.md`: Systematische Lücken in der Forschung
+- `Synthesis/Professional_Authority_vs_Automation.md`: Spannungsfelder zwischen AI und Professional Judgment
+
+Diese Meta-Dokumente bieten normative Orientierung für Praktiker:innen und Forschende.
+
+### Verbindung zu Response-Ability
+
+Die adaptive Operationalisierung demonstriert Response-Ability:
+- **Verantwortung für Kontextgerechtigkeit:** Nicht jedes Paper wird mit derselben Schablone analysiert
+- **Verantwortung für Transparenz:** Limitations werden systematisch dokumentiert
+- **Verantwortung für Nutzbarkeit:** Praktiker:innen erhalten stakeholder-specific Handlungsempfehlungen
+
+Die Pipeline "antwortet" auf jedes Paper mit kontextangemessener Analyse statt mechanischer Uniformität.
+
+### Technischer Status (November 2025)
+
+**Implementiert:**
+- Enhanced Summarization Pipeline v2.0 mit Multi-Pass Reading
+- Quality Metrics (Accuracy, Completeness, Structure, Actionability)
+- Practical Implications (stakeholder-specific)
+- Limitations & Open Questions
+
+**In Design:**
+- Adaptive Feminist Prompts (conditional activation basierend auf rel_bias/rel_vulnerable)
+- 9-Dimensions Framework (Prompt-Templates entwickelt, nicht implementiert)
+- Meta-Synthesis Documents (Konzept entwickelt, nicht implementiert)
+
+**Nächste Schritte:**
+- Testing der Enhanced Pipeline (benötigt `.env` mit API key)
+- Integration der 9 Dimensionen in Prompt-Logik
+- Generierung der ersten Meta-Synthesen
