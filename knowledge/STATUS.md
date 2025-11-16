@@ -227,14 +227,12 @@ python analysis/validate_markdown_quality.py \
 
 #### 2. **Documentation Updates**
 
-**Files Requiring Updates:**
+**Completed Today (2025-11-16):**
+- ✅ `STATUS.md` - Updated with pipeline status, validation tool, session summary
+- ✅ `TECHNICAL.md` - Added validation tool documentation + Enhanced Pipeline v2.0
+- ✅ `THEORETICAL_FRAMEWORK.md` - Added feminist operationalization (9 dimensions)
 
-**High Priority:**
-- ✅ `STATUS.md` (this file) - Updated 2025-11-16
-- ✅ `TECHNICAL.md` - **UPDATED** with validation tool documentation
-- ⏳ `THEORETICAL_FRAMEWORK.md` - Need feminist operationalization section
-
-**Medium Priority:**
+**Pending (Lower Priority):**
 - ⏳ `METHODOLOGY.md` - Integrate feminist PRISMA extension
 - ⏳ `OPERATIONAL_GUIDES.md` - Workflows for Enhanced Pipeline
 - ⏳ `PROJECT_OVERVIEW.md` - Update 9 dimensions + current status
@@ -435,42 +433,23 @@ python analysis/validate_markdown_quality.py \
 
 ---
 
-## Key Decisions Pending
+## Key Decisions for Future Iterations
 
-### 1. Enhanced Pipeline Testing
+### 1. Feminist Analysis Extension
 
-**Question:** Proceed with testing 3 papers with enhanced pipeline?
-**Requirement:** User must configure `.env` with `ANTHROPIC_API_KEY`
-**Next Action:** User creates `.env`, then run test command
+**Question:** Implement adaptive feminist prompts with 9 dimensions?
+**Status:** Conceptual design complete (THEORETICAL_FRAMEWORK.md)
+**Impact:** ~30-40 papers would get extended intersectional analysis
+**Effort:** Prompt development + testing (~4-6 hours)
+**Decision:** After reviewing Enhanced Pipeline v2.0 results
 
-### 2. Feminist Analysis Scope
-
-**Question:** Activate feminist analysis for all intersectional papers (rel_bias>=2, rel_vulnerable>=2)?
-**Impact:** ~30-40 papers would get extended analysis
-**Effort:** Additional prompt development (~2 hours)
-
-### 3. Full Corpus Processing
+### 2. Full Corpus Processing
 
 **Question:** Pursue full 222-paper corpus or stay with current 47?
 **Pros (full):** Complete research base, higher quality synthesis
 **Cons (full):** +$7.35 cost, +6-8 hours time, manual PDF collection
-**Current:** 47 papers sufficient for testing framework
-
----
-
-## Immediate Blockers
-
-### 1. Missing API Key Configuration
-
-**Issue:** `.env` file not present
-**Impact:** Cannot run enhanced summarization
-**Resolution:** User creates `.env` and adds `ANTHROPIC_API_KEY=sk-ant-...`
-
-### 2. Documentation Lag
-
-**Issue:** TECHNICAL.md, THEORETICAL_FRAMEWORK.md outdated
-**Impact:** Onboarding difficult, feminist operationalization unclear
-**Resolution:** Planned updates this week (5 hours total)
+**Current Status:** 47 papers sufficient for testing Enhanced Pipeline framework
+**Decision:** Pending quality review of 46 enhanced summaries
 
 ---
 
@@ -504,9 +483,9 @@ SozArb_Research_Vault/
 ```
 knowledge/
 ├── STATUS.md (this file) - ✅ Updated 2025-11-16
-├── TECHNICAL.md - ⏳ Needs update (Enhanced Pipeline v2.0)
-├── THEORETICAL_FRAMEWORK.md - ⏳ Needs feminist operationalization
-├── METHODOLOGY.md - ⏳ Needs feminist PRISMA section
+├── TECHNICAL.md - ✅ Updated 2025-11-16 (validation tool + Enhanced Pipeline v2.0)
+├── THEORETICAL_FRAMEWORK.md - ✅ Updated 2025-11-16 (feminist operationalization)
+├── METHODOLOGY.md - ⏳ Needs feminist PRISMA extension
 ├── PROJECT_OVERVIEW.md - ⏳ Needs 9 dimensions + status update
 └── OPERATIONAL_GUIDES.md - ⏳ Needs Enhanced Pipeline workflows
 ```
