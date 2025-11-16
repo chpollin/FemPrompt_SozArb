@@ -252,6 +252,79 @@ python analysis/pdf-to-md-converter.py \
 # Processing time: ~30 seconds per document
 ```
 
+#### Markdown Conversion Quality Validation (NEW)
+
+**Purpose:** Detects PDF-to-Markdown conversion corruption before expensive AI processing
+
+**Location:** `analysis/validate_markdown_quality.py`
+
+**Features:**
+- Detects GLYPH<> placeholders from failed character conversion
+- Measures unicode error density
+- Calculates text-to-noise ratio (readable words vs. total chars)
+- Identifies abnormally large files (>2MB markdown)
+- Exit codes for CI/CD integration: 0 (all pass), 1 (warnings), 2 (failures)
+
+**Quality Thresholds:**
+```python
+MAX_GLYPH_COUNT = 50          # Max GLYPH<> placeholders allowed
+MAX_UNICODE_ERROR_RATIO = 0.05 # Max 5% unicode errors
+MIN_TEXT_NOISE_RATIO = 0.3     # Min 30% readable text
+MAX_FILE_SIZE_MB = 2.0         # Flag files >2MB
+```
+
+**Usage:**
+```bash
+# Validate all markdown files in directory
+python analysis/validate_markdown_quality.py \
+  --input-dir analysis/markdown_papers_socialai/ \
+  --output-csv analysis/markdown_validation_report.csv
+
+# Output:
+# - Console: PASS/WARNING/FAIL summary with details
+# - CSV: Machine-readable validation report
+```
+
+**Example Output:**
+```
+[*] Validating 47 markdown files...
+
+================================================================================
+VALIDATION SUMMARY
+================================================================================
+
+[PASS]     46 files
+[WARNING]   0 files
+[FAIL]      1 files
+[TOTAL]    47 files
+
+================================================================================
+FAILED FILES (Conversion Quality Issues)
+================================================================================
+
+[FILE] Debnath_2024_LLMs.md
+   Size: 1.39MB (1,461,074 chars)
+   Text Ratio: 3.7%
+   GLYPH Count: 2349
+   Unicode Errors: 189095
+   [!] High GLYPH count: 2349 (threshold: 50)
+   [!] High unicode error ratio: 12.94% (threshold: 5%)
+   [!] Low readable text ratio: 3.66% (threshold: 30%)
+```
+
+**When to Use:**
+- **ALWAYS before Enhanced Summarization Pipeline** - Prevents wasted API costs on corrupted files
+- After PDF-to-Markdown conversion batch
+- Before committing markdown corpus to repository
+- As part of CI/CD quality gates
+
+**Cost Savings:**
+- Corrupted paper (Debnath_2024_LLMs.md) would have required 183 API calls (~$7.50)
+- Validation detected corruption in <1 second
+- File renamed to `_CORRUPTED_Debnath_2024_LLMs.md` and excluded from processing
+
+**Requires:** Markdown files in input directory
+
 ### Stage 3: Automated Content Analysis
 
 #### Option A: Enhanced Summarization Pipeline v2.0 (RECOMMENDED)
@@ -532,6 +605,76 @@ python analysis/pdf-to-md-converter.py \
 ```
 
 Requires: PDFs in input directory, optional docling installed
+
+---
+
+### Quality Validation
+
+#### validate_markdown_quality.py (NEW)
+Function: Validates PDF-to-Markdown conversion quality to detect corruption
+
+**Purpose:**
+- Prevents wasted API costs on corrupted markdown files
+- Detects encoding errors, GLYPH placeholders, low text-to-noise ratio
+- Provides systematic quality assessment before expensive processing
+
+**Validation Metrics:**
+
+1. **GLYPH Placeholder Count**
+   - Detects: `GLYPH<123>` patterns from failed character conversion
+   - Threshold: 50 placeholders (configurable)
+   - Indicates: Special characters, mathematical symbols not properly converted
+
+2. **Unicode Error Density**
+   - Detects: Corrupted unicode characters (✗✂✁☎, etc.)
+   - Threshold: 5% of total characters (configurable)
+   - Indicates: Encoding corruption during PDF extraction
+
+3. **Text-to-Noise Ratio**
+   - Measures: Readable words vs. total characters
+   - Threshold: 30% minimum readable text (configurable)
+   - Indicates: Overall conversion quality
+
+4. **File Size Anomalies**
+   - Detects: Files >2MB (abnormally large for markdown)
+   - Threshold: 2MB (configurable)
+   - Indicates: Potential conversion bloat or embedded data
+
+**Output Modes:**
+- **Console:** PASS/WARNING/FAIL summary with detailed issue reports
+- **CSV:** Machine-readable validation report for batch analysis
+- **Exit Codes:** 0 (all pass), 1 (warnings present), 2 (failures present)
+
+**Usage:**
+```bash
+# Validate directory of markdown files
+python analysis/validate_markdown_quality.py \
+  --input-dir analysis/markdown_papers_socialai/ \
+  --output-csv analysis/markdown_validation_report.csv
+
+# Console output shows summary + detailed issue list
+# CSV output contains per-file metrics for analysis
+```
+
+**Requires:** Markdown files in input directory
+
+**Key Classes:**
+- `ValidationMetrics`: Data class for per-file quality metrics
+- `MarkdownValidator`: Main validation logic with configurable thresholds
+
+**Example Use Case (SozArb):**
+- Validated 47 markdown papers
+- Detected 1 severely corrupted file (Debnath_2024_LLMs.md)
+- Corruption metrics: 2349 GLYPH errors, 12.94% unicode errors, 3.7% text ratio
+- File would have required 183 API calls (~$7.50 wasted)
+- Validation took <1 second, file excluded before processing
+- Saved ~70 minutes processing time + $7.50 API costs
+
+**When to Use:**
+- **ALWAYS before Enhanced Summarization Pipeline** - Best practice
+- After PDF-to-Markdown conversion batch
+- Before committing markdown corpus to repository
+- As quality gate in CI/CD pipelines
 
 ---
 
@@ -959,6 +1102,7 @@ FemPrompt_SozArb/
  analysis/                    # Processing pipeline scripts
     getPDF_intelligent.py    # Smart PDF acquisition (Excel + JSON support)
     pdf-to-md-converter.py   # Format conversion
+    validate_markdown_quality.py     # Markdown quality validation (NEW)
     summarize-documents.py   # AI content analysis (v1.0 - legacy)
     summarize_documents_enhanced.py  # Enhanced pipeline (v2.0 - NEW)
     generate_obsidian_vault_improved.py # Knowledge graph
@@ -969,7 +1113,8 @@ FemPrompt_SozArb/
     enhanced_summary_template.txt    # Template docs (NEW)
     pdfs/                    # Downloaded PDFs (gitignored)
     markdown_papers/         # Converted documents (gitignored)
-    markdown_papers_socialai/  # SozArb markdown (47 papers)
+    markdown_papers_socialai/  # SozArb markdown (46 valid papers)
+    markdown_validation_report.csv   # Validation results (NEW)
     summaries_final/         # AI summaries (legacy data)
     zotero_vereinfacht.json  # Bibliography metadata
     zotero_vollstaendig.json # Complete Zotero export
