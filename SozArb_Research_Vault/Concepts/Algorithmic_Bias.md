@@ -1,15 +1,13 @@
 ---
-title: "Algorithmic Bias"
+title: "Algorithmic bias"
 type: concept
-frequency: 12
-related_papers: 9
+related_papers: 3
 tags: [concept, auto-generated]
 ---
 
-# Algorithmic Bias
+# Algorithmic bias
 
-**Frequency:** 12 summaries mention this concept
-**Related papers:** 9
+**Related papers:** 3
 
 ## Definition
 
@@ -17,22 +15,15 @@ tags: [concept, auto-generated]
 
 ## Related Papers
 
-- [[A+_Alliance_2024_Incubating_Feminist_AI__Executive_Summary_2021-202]]
-- [[Hall_2024_A_systematic_review_of_sophisticated_predictive_an]]
-- [[Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice__]]
-- [[Reamer_2023_Artificial_intelligence_in_social_work__Emerging_e]]
-- [[Unknown_2025_Artificial_Intelligence_in_Social_Work__An_EPIC_Mo]]
-- [[Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame__Actionable_]]
-- [[Walgenbach_2023_Intersektionalität]]
-- [[West_2023_Discriminating_Systems__Gender,_Race,_and_Power_in]]
-- [[Wudel_2025_What_is_Feminist_AI_]]
-
+- [[Papers/Gaba_2025_Bias,_accuracy,_and_trust__Gender-diverse_perspect|Gaba_2025_Bias,_accuracy,_and_trust__Gender-diverse_perspect...]]
+- [[Papers/UNESCO_2024_Bias_against_women_and_girls_in_large_language_mod|UNESCO_2024_Bias_against_women_and_girls_in_large_language_m...]]
+- [[Papers/Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame__Actionable_|Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame__Actionab...]]
 
 ## Usage in Research
 
-This concept appears in 12 paper summaries, indicating its relevance to the SozArb research domain.
+This concept appears in 3 paper summaries, indicating its relevance to the SozArb research domain.
 
 ---
 
 *Auto-generated from summary keywords*
-*Last updated: 2025-11-10*
+*Last updated: 2025-11-16*

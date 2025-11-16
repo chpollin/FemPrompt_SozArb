@@ -1,15 +1,13 @@
 ---
 title: "Structural Injustice"
 type: concept
-frequency: 2
-related_papers: 1
+related_papers: 2
 tags: [concept, auto-generated]
 ---
 
 # Structural Injustice
 
-**Frequency:** 2 summaries mention this concept
-**Related papers:** 1
+**Related papers:** 2
 
 ## Definition
 
@@ -17,8 +15,8 @@ tags: [concept, auto-generated]
 
 ## Related Papers
 
-- [[Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice__]]
-
+- [[Papers/Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice__|Himmelreich_2022_Artificial_Intelligence_and_Structural_Inju...]]
+- [[Papers/Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust_S|Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust_S...]]
 
 ## Usage in Research
 
@@ -27,4 +25,4 @@ This concept appears in 2 paper summaries, indicating its relevance to the SozAr
 ---
 
 *Auto-generated from summary keywords*
-*Last updated: 2025-11-10*
+*Last updated: 2025-11-16*
