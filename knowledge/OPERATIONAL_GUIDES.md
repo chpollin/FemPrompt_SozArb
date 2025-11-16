@@ -61,41 +61,28 @@ Markiere unsichere Angaben mit N1 - Note.
 
 ### Dokumenten-Zusammenfassung
 
-Der fünfstufige Gemini-Prompt extrahiert akademische Kernelemente, generiert strukturierte Synthesen, validiert Konsistenz, produziert bereinigte Zusammenfassungen und extrahiert YAML-Metadaten.
+**Enhanced Pipeline v2.0** (Claude Haiku 4.5) mit Multi-Pass-Analyse, Cross-Validation und Quality-Scores:
 
+**Aktuelle Version:** `summarize_documents_enhanced.py`
+**Features:**
+- Intelligente Chunking-Strategie für 100% Dokumentenabdeckung
+- Cross-Validation zur Halluzinations-Detektion
+- 4-dimensionale Quality-Scores (Accuracy, Completeness, Structure, Actionability)
+- Stakeholder-spezifische Implikationen (Social Workers, Organizations, Policymakers, Researchers)
+- Explizite Limitations-Sektion
+
+**Aktuelle Ergebnisse (SozArb, 47 Papers):**
+- Durchschnittliche Quality: 76.1/100
+- Excellent (>80): 21 papers (45%)
+- Good (60-79): 17 papers (36%)
+- Fair (<60): 9 papers (19%)
+
+**Legacy-Prompt (v1.0 - nicht mehr empfohlen):**
 ```markdown
-Analysiere das folgende akademische Dokument in fünf Schritten:
-
-1. AKADEMISCHE ANALYSE
-- Identifiziere Forschungsfrage und Hypothesen
-- Extrahiere methodisches Vorgehen
-- Liste Hauptergebnisse
-- Notiere theoretischen Rahmen
-
-2. STRUKTURIERTE SYNTHESE
-Erstelle eine 200-Wort-Zusammenfassung mit:
-- Kontext und Relevanz
-- Methodik und Sample
-- Kernbefunde
-- Implikationen
-
-3. KRITISCHE VALIDIERUNG
-- Prüfe interne Konsistenz
-- Identifiziere Limitationen
-- Bewerte Generalisierbarkeit
-
-4. BEREINIGTE ZUSAMMENFASSUNG
-Erstelle finale 150-Wort-Version für Datenbank
-
-5. METADATEN-EXTRAKTION
-Format als YAML:
-- keywords: []
-- methods: []
-- theories: []
-- sample_size:
-- geographic_scope:
-- temporal_scope:
+[Alter 5-stufiger Prozess - siehe TECHNICAL.md für Details]
 ```
+
+**Dokumentation:** Siehe `knowledge/TECHNICAL.md` (Enhanced Summarization Pipeline v2.0)
 
 ## Benchmarks und Schwellenwerte
 

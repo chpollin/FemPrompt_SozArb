@@ -55,9 +55,9 @@ Forschungskontext verstehen? → [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md), [TH
 
 ### 2. SozArb (325 Papers) - Aktuell
 - Focus: AI Literacy in Social Work for Vulnerable Populations
-- Status: LLM Assessment abgeschlossen (208 Include, 84 Exclude, 33 Unclear)
+- Status: Enhanced Summaries v2.0 komplett (47 papers, 76.1/100 avg quality)
 - Zotero: Group Library 6284300 (socialai-litreview-curated)
-- Nächste Schritte: PDF Acquisition → Markdown → Summaries → Vault
+- Pipeline: Assessment ✅ → PDFs (47) ✅ → Markdown ✅ → Enhanced Summaries v2.0 ✅ → Vault Integration ⏳
 
 ---
 
@@ -80,6 +80,6 @@ Beschreibende Namen statt Nummerierung für bessere Lesbarkeit und Flexibilität
 
 ## Letzte Aktualisierung
 
-Datum: 2025-11-07
-Version: 2.1 (Struktur-Cleanup: Nummerierungen entfernt, Sessions konsolidiert)
-Status: FemPrompt komplett | SozArb LLM Assessment komplett | PDF Acquisition bereit 
+Datum: 2025-11-16
+Version: 2.2 (Enhanced Pipeline v2.0 + Markdown Quality Validation)
+Status: FemPrompt komplett | SozArb Enhanced Summaries v2.0 komplett (47 papers) | Vault Integration ausstehend 

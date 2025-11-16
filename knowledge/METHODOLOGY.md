@@ -110,7 +110,9 @@ Die technische Verarbeitung beginnt mit PDF-Akquisition durch getPDF_intelligent
 
 Die PDF-zu-Markdown-Konversion erfolgt durch pdf-to-md-converter.py mit Docling. Jedes PDF wird in strukturiertes Markdown transformiert unter Beibehaltung von Überschriften, Listen, Tabellen und Zitationen. Die MD5-Hashes verhindern Duplikat-Verarbeitung bei Pipeline-Reruns. Die Ausgabe-Dateien in analysis/markdown_papers folgen normalisierten Namenskonventionen. Die Metadaten in conversion_metadata.json dokumentieren Erfolge und Fehler.
 
-Die KI-gestützte Zusammenfassung durch summarize-documents.py verarbeitet alle Markdown-Dateien sequenziell. Der fünfstufige Refinement-Prozess mit Claude Haiku 4.5 generiert strukturierte Synthesen. Die akademische Analyse extrahiert Forschungsfrage, Methodik, Ergebnisse und Theorie. Die strukturierte Synthese verdichtet zu fünfhundert Wörtern. Die kritische Validierung prüft Konsistenz. Die bereinigte Zusammenfassung komprimiert auf einhundertfünfzig Wörter. Die Metadaten-Extraktion generiert YAML-Frontmatter.
+Die Markdown-Qualitätsvalidierung durch validate_markdown_quality.py erfolgt vor der teuren KI-Verarbeitung. Das Tool detektiert GLYPH-Platzhalter, misst Unicode-Fehler-Dichte und berechnet Text-zu-Rauschen-Verhältnisse. Korrupte Dateien werden identifiziert und von der Verarbeitung ausgeschlossen. Diese Pre-Processing-Validierung verhindert verschwendete API-Kosten auf unbrauchbaren Eingaben.
+
+Die KI-gestützte Zusammenfassung durch summarize_documents_enhanced.py (v2.0) verarbeitet validierte Markdown-Dateien mit Multi-Pass-Analyse. Der intelligente Chunking-Algorithmus gewährleistet hundertprozentige Dokumentenabdeckung. Die Cross-Validation identifiziert Inkonsistenzen zwischen Summary und Quelltext. Die Quality-Scores bewerten Accuracy, Completeness, Structure und Actionability. Die Stakeholder-spezifischen Implikationen adressieren Social Workers, Organizations, Policymakers und Researchers. Die Limitations-Sektion dokumentiert offene Fragen.
 
 Die generierten Summaries landen in analysis/summaries_final als summary_[normalized_title].md. Die YAML-Frontmatter enthält Felder wie keywords, methods, theories, sample_size, geographic_scope und temporal_scope. Der Markdown-Body präsentiert die bereinigte Zusammenfassung. Die batch_metadata.json aggregiert Verarbeitungsmetriken wie Gesamtzeit, Erfolgsrate und Fehlertypen. Das Rate-Limiting mit zehn Sekunden Delay zwischen Requests verhindert API-Throttling.
 
@@ -124,7 +126,7 @@ Inhaltliche Kernelemente erfassen die wissenschaftliche Substanz. Die Forschungs
 
 Kontextuelle Faktoren erfassen Rahmenbedingungen. Der geografische und kulturelle Kontext wird dokumentiert. Der zeitliche Rahmen der Datenerhebung wird notiert. Förderung und potentielle Interessenkonflikte werden erfasst. Limitationen laut Autoren werden übernommen. Diese Kontextualisierung ist zentral für die Interpretation der Befunde unter Perspektive des situierten Wissens.
 
-Die Extraktion erfolgt durch fünfstufige KI-gestützte Zusammenfassung kombiniert mit manueller Validierung. Claude Haiku 4.5 generiert strukturierte Synthesen mit automatischer Metadaten-Extraktion. Die menschliche Validierung prüft Korrektheit, ergänzt fehlende Elemente und korrigiert Fehler. Die bidirektionale Integration von automatisierter und manueller Arbeit optimiert Effizienz unter Beibehaltung von Qualität.
+Die Extraktion erfolgt durch Enhanced Summarization Pipeline v2.0 kombiniert mit automatischer Quality-Validation. Claude Haiku 4.5 generiert strukturierte Synthesen mit automatischer Metadaten-Extraktion und Quality-Scores. Die Cross-Validation detektiert Halluzinationen und Inkonsistenzen. Die bidirektionale Integration von Multi-Pass-Analyse und Quality-Metrics optimiert Effizienz unter Beibehaltung von Qualität. Aktuelle Ergebnisse (SozArb, 47 Papers): durchschnittliche Quality-Score von 76.1/100 mit 45% excellent-rated Summaries.
 
 ---
 
@@ -160,7 +162,7 @@ Die Vault-Iteration nutzt Qualitätsfeedback für Verbesserungen. Bei niedrigen 
 
 ---
 
-*Dokumentenversion: 1.0 (Zusammenführung von Methodik.md + Prozess.md)*
+*Dokumentenversion: 1.1 (Enhanced Pipeline v2.0 Integration)*
 *Erstellt: 2025-01-31*
-*Letzte Aktualisierung: 2025-11-07*
+*Letzte Aktualisierung: 2025-11-16*
 *Autor: AI-gestützter systematischer Literaturreview*

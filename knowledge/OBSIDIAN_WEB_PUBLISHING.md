@@ -314,17 +314,20 @@ Estimated time: 2-3 hours
 
 ### Blocker 1: Incomplete Vault Data
 
-Current State:
-- FemPrompt: 11 papers processed (of ~50-60 intended)
-- SozArb: 47 papers processed (of 222 included)
+Current State (2025-11-16):
+- FemPrompt: 11 papers processed (legacy pipeline, ~18-22% of intended corpus)
+- SozArb: 47 Enhanced Summaries v2.0 KOMPLETT (22.6% of 208 Include set)
+  - Quality: 76.1/100 avg, 45% excellent (>80/100)
+  - Status: Summaries generated, vault integration pending
 
 Decision needed:
-- Build web viewer with current 11 papers NOW?
-- OR wait until full corpus processed (~40-50 more papers)?
+- Build web viewer with SozArb's 47 enhanced summaries NOW?
+- OR wait until more papers processed (161 remaining = $6.75 + ~6-7 hours)?
 
-Recommendation: Build now with 11 papers
-- Validates infrastructure
-- Demonstrates concept for paper reviewers
+Recommendation: Build now with 47 SozArb summaries
+- Validates Enhanced Pipeline v2.0 infrastructure
+- Demonstrates proof-of-concept with substantial corpus (47 papers)
+- Quality sufficient for academic review (76.1/100 avg)
 - Can incrementally add papers as pipeline runs
 
 ### Blocker 2: GitHub Pages Not Yet Activated
@@ -585,6 +588,6 @@ Deployment readiness: 10-13 hours total estimated → Launch possible within 2 w
 
 ---
 
-*Last updated: 2025-11-07*
-*Document version: 2.0 (consolidated from STRATEGY + IMPLEMENTATION)*
-*Status: Active development, ready for GitHub Pages activation*
+*Last updated: 2025-11-16*
+*Document version: 2.1 (Updated with Enhanced Pipeline v2.0 status)*
+*Status: Active development, 47 SozArb summaries ready for web integration*

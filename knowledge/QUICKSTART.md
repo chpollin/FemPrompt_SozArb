@@ -105,8 +105,13 @@ python analysis/pdf-to-md-converter.py \
   --pdf-dir analysis/pdfs/ \
   --output-dir analysis/markdown_papers/
 
-# Step 3: Generate AI summaries
-python analysis/summarize-documents.py \
+# Step 3a: Validate markdown quality (IMPORTANT - saves API costs!)
+python analysis/validate_markdown_quality.py \
+  --input-dir analysis/markdown_papers/ \
+  --output-csv analysis/markdown_validation_report.csv
+
+# Step 3b: Generate AI summaries (Enhanced v2.0)
+python analysis/summarize_documents_enhanced.py \
   --input-dir analysis/markdown_papers/ \
   --output-dir analysis/summaries_final/
 
@@ -217,11 +222,17 @@ For 208 papers (SozArb Include set):
 | LLM Assessment | 24 min | $0.58 | 100% |
 | PDF Acquisition | 1-2 hours | Free | 70-80% |
 | Markdown Conversion | 2-3 hours | Free | ~100% |
-| AI Summarization | 3-4 hours | $6-8 | ~100% |
+| **Markdown Validation** | **<1 min** | **Free** | **100%** |
+| AI Summarization (v2.0) | 6-7 hours | $8-9 | ~100% |
 | Vault Generation | <1 min | Free | 100% |
-| Total | 6-9 hours | $7-9 | ~75% |
+| Total | 9-12 hours | $9-10 | ~75% |
 
 Model: Claude Haiku 4.5 (cost-efficient, fast, high-quality)
+
+**Actual Results (47 papers processed 2025-11-16):**
+- Markdown Validation: 46 PASS, 1 FAIL (saved $7.50 + 70 min on corrupted file)
+- Enhanced Summarization v2.0: ~100 min, $2.00, 76.1/100 avg quality
+- Per-paper: ~2.1 min, $0.042
 
 ---
 
@@ -304,6 +315,6 @@ After Quick Start:
 
 ---
 
-Last Updated: 2025-11-02
-Version: 2.0
-Status: FemPrompt complete  | SozArb assessment complete 
+Last Updated: 2025-11-16
+Version: 2.1 (Enhanced Pipeline v2.0 + Markdown Validation)
+Status: FemPrompt complete | SozArb Enhanced Summaries v2.0 complete (47 papers) 
