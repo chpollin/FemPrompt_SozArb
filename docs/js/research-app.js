@@ -358,6 +358,11 @@ function showPaperDetail(paper) {
         `;
     }
 
+    // Related Papers (if available)
+    if (typeof addRelatedPapersSection === 'function') {
+        html += addRelatedPapersSection(paper);
+    }
+
     if (paper.doi || paper.url) {
         html += `<div class="detail-section"><h3>Links</h3>`;
         if (paper.doi) {
