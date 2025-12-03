@@ -32,8 +32,8 @@
         "dim-bias-medium",
         "dim-praxis-high"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_Alliance_2024_Incubating.md",
       "abstract": "Documents outcomes from $2 million CAD Feminist AI Research Network project across Latin America, Middle East, and Asia. Developed 12 feminist AI prototypes addressing gender-based violence, transit safety, bias detection in NLP systems, and judicial transparency, demonstrating practical applications of feminist AI principles through community-centered design and intersectional analysis capabilities.",
       "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
       "source_tool": "Manual",
@@ -226,7 +226,7 @@
       "has_summary": true,
       "summary_file": "summary_Alvarez_2024_Policy.md",
       "abstract": "This open-access paper provides a comprehensive overview of fairness in AI, bridging technical bias mitigation methods with legal and policy considerations. Alvarez et al. survey the state-of-the-art in fair AI techniques and review major policy initiatives and standards on algorithmic bias. A key contribution is the NoBIAS architecture introduced in the paper, which comprises a “Legal Layer” (focusing on EU non-discrimination law and human rights requirements) and a “Bias Management Layer” (cov",
-      "summary_section": "![[summary_Alvarez_2024_Policy.md]]",
+      "summary_section": "## Overview\n\nThis 2024 paper, authored by 13 international researchers and published in April 2024, addresses a critical gap in AI governance by providing comprehensive guidance on bias and fairness in artificial intelligence systems. Grounded in the NoBIAS research project—a European initiative exa",
       "source_tool": "Manual",
       "zotero_key": "V3TWQUZC"
     },
@@ -266,7 +266,7 @@
       "has_summary": true,
       "summary_file": "summary_Amnesty_International_2024_Coded.md",
       "abstract": "Critical human rights investigation documenting how Denmark's AI-powered welfare fraud detection systems risk discriminating against people with disabilities, low-income individuals, migrants, refugees, and marginalized racial groups. Report examines up to 60 algorithmic models used to flag individuals for fraud investigations, revealing mass surveillance practices violating privacy rights and creating atmospheres of fear among welfare recipients. Key findings demonstrate how automated systems p",
-      "summary_section": "![[summary_Amnesty_International_2024_Coded.md]]",
+      "summary_section": "## Overview\n\nAmnesty International's 2024 report \"Coded Injustice\" examines Denmark's automated welfare administration system, specifically investigating how Udbetaling Danmark (UDK) deploys fraud-control algorithms that create discriminatory surveillance mechanisms targeting vulnerable populations.",
       "source_tool": "Manual",
       "zotero_key": "C2MFBS5K"
     },
@@ -607,7 +607,7 @@
       "has_summary": true,
       "summary_file": "summary_Barman_2024_Beyond.md",
       "abstract": "Argues for user-centered approach to governing AI systems, contending that transparency alone is insufficient. Proposes contextualized guidelines and training for users including clear instructions on LLM reliability, diversity-sensitive prompting techniques, and iterative query refinement. Emphasizes shifting focus from AI's internal workings to human-AI interaction context.",
-      "summary_section": "![[summary_Barman_2024_Beyond.md]]",
+      "summary_section": "## Overview\n\nThe South Australian Government's Generative AI Guideline establishes a comprehensive governance framework for integrating generative AI and large language model (LLM) tools—including OpenAI's ChatGPT and Google Bard—across all SA Government agencies, personnel, and non-government suppl",
       "source_tool": "Manual",
       "zotero_key": "DMTJNKKH"
     },
@@ -794,7 +794,7 @@
       "has_summary": true,
       "summary_file": "summary_Biegelbauer_2023_Leitfaden.md",
       "abstract": "This guideline defines AI literacy as the ability to understand and use AI, emphasizing that safe, self-determined, and responsible use requires sufficient understanding of the technology's functioning, possibilities, and challenges. It identifies automation bias as a central risk and emphasizes competency building and training as the foundation for all further measures, recommending the creation of educational standards for AI procurement and application.",
-      "summary_section": "![[summary_Biegelbauer_2023_Leitfaden.md]]",
+      "summary_section": "## Overview\n\nThe Austrian government's \"Guide for Digital Administration and Ethics\" (Version 1.0, 2023) represents an institutional policy document establishing frameworks for integrating artificial intelligence and digital technologies into public administration while maintaining ethical standards",
       "source_tool": "Manual",
       "zotero_key": "DI8XTFWR"
     },
@@ -1315,7 +1315,7 @@
       "has_summary": true,
       "summary_file": "summary_Chen_2025_Social.md",
       "abstract": "This qualitative study explores current AI applications in social work through interviews with professionals, AI developers, and policymakers, identifying challenges including insufficient decision-making transparency, gaps in ethical frameworks, and inadequate technical literacy among professionals. The research reveals that while ninety percent of social work professionals acknowledge AI's auxiliary function in daily operations, concerns persist about automation bias and the potential undermin",
-      "summary_section": "![[summary_Chen_2025_Social.md]]",
+      "summary_section": "## Overview\n\nThis peer-reviewed academic study, published in the Journals of Business & Management Studies (Vol. 1, Issue 2, July 2025), examines the integration of artificial intelligence technology within social work practice through qualitative research involving social work professionals, AI dev",
       "source_tool": "Manual",
       "zotero_key": "9I8UUAMQ"
     },
@@ -1388,7 +1388,7 @@
       "has_summary": false,
       "summary_file": "",
       "abstract": "Introduces novel prompt-tuning method for reducing biases in encoder models like BERT and RoBERTa through training small sets of additional reusable token embeddings. Demonstrates state-of-the-art performance while maintaining minimal impact on language modeling capabilities through parameter-efficient approach applicable across different models and tasks.",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\nThis research addresses a critical challenge in contemporary NLP: mitigating social biases embedded in Large Language Models (LLMs) such as BERT and RoBERTa. The paper proposes an innovative prompt-tuning approach that efficiently reduces gender bias without requiring computationally ex",
       "source_tool": "Manual",
       "zotero_key": "MHZTET9D"
     },
@@ -1418,10 +1418,10 @@
         "exclude",
         "low-relevance"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_Chisca_2024_Prompting.md",
       "abstract": "nan",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\nThis research addresses a critical challenge in contemporary NLP: mitigating social biases embedded in Large Language Models (LLMs) such as BERT and RoBERTa. The paper proposes an innovative prompt-tuning approach that efficiently reduces gender bias without requiring computationally ex",
       "source_tool": "Manual",
       "zotero_key": "UDWBF53B"
     },
@@ -1718,7 +1718,7 @@
       "has_summary": true,
       "summary_file": "summary_Cvoelcker_2023_Queer.md",
       "abstract": "Fallstudie zu Queer in AI, dokumentiert Schäden durch KI-Systeme an queeren Menschen und beschreibt community-geleitete Strategien für partizipative, faire KI.",
-      "summary_section": "![[summary_Cvoelcker_2023_Queer.md]]",
+      "summary_section": "## Overview\n\nThe Queer in AI case study documents a globally distributed, community-led participatory initiative addressing systemic underrepresentation of LGBTQ+ professionals within artificial intelligence. Comprising 50+ contributors across 15+ countries embedded in leading research institutions ",
       "source_tool": "Manual",
       "zotero_key": "ZQAKXVE6"
     },
@@ -1753,8 +1753,8 @@
         "dim-vulnerable-high",
         "dim-bias-high"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_D_Ignazio_2024_Data.md",
       "abstract": "Comprehensive feminist framework directly critiques individualized approaches to AI ethics, challenging the \"liberal framework of making algorithms unbiased and inclusive\" in favor of structural \"remediation\" addressing \"systemic and structural dimensions of discrimination.\" Examines how AI research is captured by \"racial, gendered capitalism\" and proposes nine principles focusing on structural power analysis including examining power, challenging power, and making labor visible. Explicitly posi",
       "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
       "source_tool": "Manual",
@@ -2130,7 +2130,7 @@
       "has_summary": true,
       "summary_file": "summary_Djiberou_Mahamadou_2024_Revisiting.md",
       "abstract": "Diese systematische Überprüfung identifiziert praktische Limitationen technischer Bias-Mitigation-Strategien im Gesundheitswesen entlang fünf Schlüsseldimensionen: wer Bias und Fairness definiert, welche Mitigation-Strategie zu verwenden und zu priorisieren ist, wann in den KI-Entwicklungsstadien die Lösungen am effektivsten sind, für welche Populationen und in welchem Kontext die Lösungen entworfen sind. Die Studie zeigt mathematische Inkonsistenzen und Inkompatibilitäten zwischen verschiedenen",
-      "summary_section": "![[summary_Djiberou_Mahamadou_2024_Revisiting.md]]",
+      "summary_section": "## Overview\n\nThis Stanford-based review systematically examines why technical approaches to bias mitigation in healthcare AI frequently fail in real-world implementation despite their theoretical soundness. The authors conduct a critical analysis of practical limitations inherent in current bias mit",
       "source_tool": "Manual",
       "zotero_key": "KQU9D6DL"
     },
@@ -2170,7 +2170,7 @@
       "has_summary": true,
       "summary_file": "summary_Engelhardt_2025_Voll.md",
       "abstract": "Werkstattbericht zur curricularen Integration generativer KI. Positioniert Prompting als metakognitive Schlüsselkompetenz und diskutiert Rollenwandel von Lehr-/Lernakteuren; fordert reflektierte, ethisch eingebettete Nutzung mit Fokus auf kritische Validierung von KI-Ergebnissen.",
-      "summary_section": "![[summary_Engelhardt_2025_Voll.md]]",
+      "summary_section": "## Overview\n\nEngelhardt and Ley's chapter addresses the critical challenge of integrating generative AI into social work higher education while maintaining academic integrity and critical thinking. Published in a 2025 edited volume on digitalization in social work education, this work is explicitly ",
       "source_tool": "Manual",
       "zotero_key": "MCLFUR45"
     },
@@ -2243,7 +2243,7 @@
       "has_summary": true,
       "summary_file": "summary_European_Data_Protection_Supervisor_2023_Explainab.md",
       "abstract": "Emphasizes the necessity of Explainable AI (XAI) to ensure human-centered, transparent, and ethical AI systems. By increasing transparency and comprehensibility of algorithmic decisions, XAI enables individuals—including those from marginalized groups—to participate meaningfully in digital decision-making and challenge unjust outcomes.",
-      "summary_section": "![[summary_European_Data_Protection_Supervisor_2023_Explainab.md]]",
+      "summary_section": "## Overview\n\nThe EDPS TechDispatch addresses a critical governance challenge in contemporary AI deployment: the \"black box\" problem. This regulatory document, issued by the European Data Protection Supervisor, examines why artificial intelligence systems' opacity poses unacceptable risks in automate",
       "source_tool": "Manual",
       "zotero_key": "CE3C2JNF"
     },
@@ -2572,7 +2572,7 @@
       "has_summary": true,
       "summary_file": "summary_Gaba_2025_Bias.md",
       "abstract": "Qualitative study with 25 interviews exploring how users of different gender identities perceive bias and trustworthiness in ChatGPT. Found perceived biases in LLM outputs undermine user trust, with non-binary participants encountering stereotyped responses that eroded confidence. Trust levels varied by group with male participants reporting higher trust. Participants recommended bias mitigation strategies including diversifying training data and implementing clarifying follow-up prompts to chec",
-      "summary_section": "![[summary_Gaba_2025_Bias.md]]",
+      "summary_section": "## Overview\n\nThis empirical study examines how gender-diverse populations perceive bias, accuracy, and trustworthiness in Large Language Models, specifically ChatGPT. Conducted by researchers across multiple institutions and submitted to ACM for publication in the CSCW/HCI field, the work addresses ",
       "source_tool": "Manual",
       "zotero_key": "AGNLCTFB"
     },
@@ -2709,7 +2709,7 @@
       "has_summary": false,
       "summary_file": "",
       "abstract": "This practical guide argues that feminist AI competency results in conscious prompt design to actively reduce stereotypes and discrimination in AI-generated content. It presents the \"KI-FAIRNESS\" framework for diversity-reflective prompting and demonstrates how specific, context-rich prompts lead to fairer and more representative results by compensating for AI's \"blind spots\" through targeted instructions.",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\n\"Faires KI-Prompting\" is a practitioner-oriented guidance document explicitly designed for business leaders and employees in small and medium-sized enterprises (SMEs) implementing generative artificial intelligence responsibly. Published by the Mittelstand-Digital Zentrum Zukunftskultur",
       "source_tool": "Manual",
       "zotero_key": "UWGSYB27"
     },
@@ -2742,7 +2742,7 @@
       "has_summary": false,
       "summary_file": "",
       "abstract": "Der vorliegende Leitfaden möchte Sie auf eine Reise durch die Welt der Generativen KI mitnehmen und Ihnen Werkzeuge an die Hand geben, um diese Technolo- gien verantwortungsvoll und bewusst zu nutzen. Wir möchten Verständnis für die positive wie negative Wirkung von Generativer KI schaffen, zugleich aber auch den Weg für einen diversen und fairen Einsatz ebnen. Dieser Guide kann Ihr Kompass sein, um nicht nur zu navigieren, sondern die digitale Zukunft mitzugestalten",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\n\"Faires KI-Prompting\" is a practitioner-oriented guidance document explicitly designed for business leaders and employees in small and medium-sized enterprises (SMEs) implementing generative artificial intelligence responsibly. Published by the Mittelstand-Digital Zentrum Zukunftskultur",
       "source_tool": "Manual",
       "zotero_key": "Q7SK8TJB"
     },
@@ -2822,7 +2822,7 @@
       "has_summary": true,
       "summary_file": "summary_Ghosal_2025_Unequal.md",
       "abstract": "Investigates how large language models represent queer individuals in generated narratives, uncovering tendencies toward stereotyped and narrow portrayals. Identifies phenomena including narrow topic range, discursive othering, and identity foregrounding. Shows LLMs unconsciously reinforce divide where marginalized groups are not afforded same breadth of narrative roles as others.",
-      "summary_section": "![[summary_Ghosal_2025_Unequal.md]]",
+      "summary_section": "## Overview\n\nThis paper investigates how Large Language Models systematically construct narrower, more identity-constrained narratives about LGBTQ+ individuals compared to non-queer personas in neutral contexts. The research addresses a critical gap in AI ethics by moving beyond traditional toxicity",
       "source_tool": "Manual",
       "zotero_key": "RSMUFA95"
     },
@@ -3398,7 +3398,7 @@
       "has_summary": true,
       "summary_file": "summary_Himmelreich_2022_Artificial.md",
       "abstract": "This work develops a structural injustice approach to AI governance based on Iris Marion Young's theory of structural injustice. The authors argue that structural injustice is a powerful conceptual tool that enables researchers and practitioners to identify, articulate, and potentially even anticipate AI bias. The approach includes both an analytical component (structural explanations) and an evaluative component (justice theory) and provides methodological and normative foundations for diversit",
-      "summary_section": "![[summary_Himmelreich_2022_Artificial.md]]",
+      "summary_section": "## Overview\n\nThis academic work by Himmelreich and Lim presents a philosophical framework for understanding and addressing AI bias through structural injustice theory, derived from philosopher Iris Marion Young's work. The authors argue that AI systems perpetuate pre-existing unjust social structure",
       "source_tool": "Manual",
       "zotero_key": "RCD7NJM2"
     },
@@ -3728,10 +3728,10 @@
         "dim-vulnerable-high",
         "dim-bias-high"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_Jääskeläinen_2025_Intersectional.md",
       "abstract": "This open-access paper provides a feminist intersectional critique of Stable Diffusion through qualitative visual analysis of 180 AI-generated images. Authors examined how power systems like racism, sexism, heteronormativity, ableism, colonialism, and capitalism are reflected in AI outputs. Found that default outputs frequently perpetuate harmful stereotypes and assume a \"white, able-bodied, masculine-presenting\" default subject position. Advocates for social justice-oriented approach to AI by a",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\nThis paper by Jääskeläinen, Sharma, Pallett, and Åsberg presents a critical examination of Stable Diffusion (SD), a widely-adopted open-source visual generative AI tool launched in August 2022 that has generated over 12 billion images with 10 million daily active users. The research fun",
       "source_tool": "Manual",
       "zotero_key": "9G6AQ3AA"
     },
@@ -3810,7 +3810,7 @@
       "has_summary": true,
       "summary_file": "summary_Kamruzzaman_2024_Prompting.md",
       "abstract": "This study evaluates 12 prompt strategies across five LLMs, finding that instructing a model to adopt a System 2 (deliberative) reasoning style and a \"human persona\" most effectively reduces stereotypes. Combining these two strategies yielded up to a 13% reduction in stereotypical responses. Contrary to prior assumptions, Chain-of-Thought (CoT) prompting alone was not as effective, showing bias levels similar to a default prompt. The results suggest that prompts encouraging careful, human-like r",
-      "summary_section": "![[summary_Kamruzzaman_2024_Prompting.md]]",
+      "summary_section": "## Overview\n\nThis research paper addresses social bias mitigation in Large Language Models through psychologically-informed prompting techniques grounded in dual process theory. Authored by Kamruzzaman and Kim (University of South Florida), and accepted at RANLP-2025, the work applies Kahneman's cog",
       "source_tool": "Manual",
       "zotero_key": "FMXXR4DH"
     },
@@ -3915,7 +3915,7 @@
       "has_summary": true,
       "summary_file": "summary_Karagianni_2025_Gender.md",
       "abstract": "This peer-reviewed article offers a feminist critique of the European Union’s AI Act, arguing that the law’s current bias mitigation provisions only superficially address gendered risks and fail to confront deeply embedded structural biases. Using frameworks like hermeneutical injustice and feminist legal theory, Karagianni shows that AI systems can perpetuate historical power imbalances and systemic discrimination against women and marginalized groups. The AI Act’s pre-market and post-market me",
-      "summary_section": "![[summary_Karagianni_2025_Gender.md]]",
+      "summary_section": "## Overview\n\nAnastasia Karagianni's research article, published in 2025, provides a critical feminist examination of the European Union's AI Act (Regulation 2024/1689), questioning whether this landmark regulatory framework adequately protects marginalized communities from gender-based discriminatio",
       "source_tool": "Manual",
       "zotero_key": "F8GURS3C"
     },
@@ -3955,7 +3955,7 @@
       "has_summary": true,
       "summary_file": "summary_Kattnig_2024_Assessing.md",
       "abstract": "Kattnig et al. examine the disconnect between existing AI fairness techniques and the requirements of non-discrimination law, highlighting that many algorithmic bias mitigation methods do not meet legal standards for equality. Focusing on the EU context (with particular attention to the forthcoming AI Act and established non-discrimination directives), the authors review state-of-the-art bias mitigation approaches – from pre-processing data fixes to in-processing algorithms – and evaluate them a",
-      "summary_section": "![[summary_Kattnig_2024_Assessing.md]]",
+      "summary_section": "## Overview\n\nThis academic paper addresses a critical contemporary challenge in artificial intelligence: ensuring fairness and non-discrimination in AI systems through integrated technical and legal analysis. Published in *Computer Law & Security Review*, the work by Kattnig et al. from Graz Univers",
       "source_tool": "Manual",
       "zotero_key": "9A73EE79"
     },
@@ -4074,7 +4074,7 @@
       "has_summary": true,
       "summary_file": "summary_Klein_2024_Data.md",
       "abstract": "Extends the influential \"Data Feminism\" framework to AI research, presenting intersectional feminist principles for conducting equitable, ethical, and sustainable AI research. Rearticulates original seven data feminism principles specifically for AI contexts and introduces two new principles addressing environmental impact and consent, providing concrete methodological guidance.",
-      "summary_section": "![[summary_Klein_2024_Data.md]]",
+      "summary_section": "## Overview\n\nKlein and D'Ignazio's \"Data Feminism for AI\" extends their influential 2020 framework to address contemporary challenges in artificial intelligence development and deployment. Published at the 2024 ACM Conference on Fairness, Accountability, and Transparency, this paper argues that femi",
       "source_tool": "Manual",
       "zotero_key": "IXCQLI27"
     },
@@ -4394,7 +4394,7 @@
       "has_summary": true,
       "summary_file": "summary_Kutscher_2020_Handbuch.md",
       "abstract": "Dieses umfassende Handbuch mit über 50 Beiträgen behandelt erstmals systematisch Digitalisierung in Bezug auf Disziplin und Praxis der Sozialen Arbeit. Das 658-seitige Werk beleuchtet aus verschiedenen disziplinären Perspektiven gesellschaftliche Entwicklungen, Diskurse, digitalisierte Formen der Dienstleistungserbringung, Profession, Organisation und Handlungsfelder sowie neue Herausforderungen für Forschung. Zentrale Themen umfassen Mediatisierung, Akteur-Netzwerk-Theorie, ethische Fragen, inf",
-      "summary_section": "![[summary_Kutscher_2020_Handbuch.md]]",
+      "summary_section": "## Overview\n\nThis German handbook introduction addresses digitalization in social work as a critical scholarly concern requiring systematic theoretical and empirical analysis. The authors argue that while digitalization discussions have existed for decades, recent developments represent qualitative ",
       "source_tool": "Manual",
       "zotero_key": "C8VLMDBK"
     },
@@ -4726,7 +4726,7 @@
       "has_summary": true,
       "summary_file": "summary_Lau_2023_Dipper.md",
       "abstract": "Presents 'Dipper', an LLM prompting ensemble framework that systematically deploys a diverse set of prompts in parallel to improve the breadth of generated perspectives, including those of minority or marginalized groups. This training-free technique enhances demographic and perspective diversity without performance degradation.",
-      "summary_section": "![[summary_Lau_2023_Dipper.md]]",
+      "summary_section": "## Overview\n\n\"Dipper\" addresses the challenge of improving reasoning performance in resource-constrained environments by proposing a training-free LLM ensemble framework that operates at inference time. Rather than requiring multiple distinct models or relying on limited stochastic variation from re",
       "source_tool": "Manual",
       "zotero_key": "I4EY5MX4"
     },
@@ -4766,7 +4766,7 @@
       "has_summary": true,
       "summary_file": "summary_Linnemann_2023_Bedeutung.md",
       "abstract": "Die Bedeutung des Einsatzes von Verfahren, die unter dem Begriff der Künstlichen Intelligenz (KI) zusammenzufassen sind, wird sowohl für gesellschaftliche Prozesse als auch den Auftrag an die Soziale Arbeit zunehmend erkannt und diskutiert. Mit diesem Artikel wird ein Beitrag zum Diskurs geleistet, indem vertieft der Bereich der Sprachverarbeitung durch KI, das Natural Language Processing (NLP), in den Blick genommen wird. Verarbeitung natürlicher Sprache ist aufgrund der hohen Bedeutung kommuni",
-      "summary_section": "![[summary_Linnemann_2023_Bedeutung.md]]",
+      "summary_section": "## Overview\n\nThis German-language academic forum article by Linnemann, Löhe, and Rottkemper (published June 2023, accepted May 2023) addresses the growing importance of Artificial Intelligence in social work, with particular emphasis on Natural Language Processing (NLP) technologies. Published acros",
       "source_tool": "Manual",
       "zotero_key": "678XS28X"
     },
@@ -4846,7 +4846,7 @@
       "has_summary": true,
       "summary_file": "summary_Lin_2022_Artificial.md",
       "abstract": "This study argues that AI bias represents a form of structural injustice that arises when AI systems interact with other social factors to exacerbate existing social inequalities. Using the example of AI in healthcare, the authors show that the goal of AI fairness is to strive for a more just social structure through appropriate development and use of AI systems. They argue that all actors involved in the unjust social structure bear shared responsibility to join collective actions for structura",
-      "summary_section": "![[summary_Lin_2022_Artificial.md]]",
+      "summary_section": "## Overview\n\nThis paper by Lin and Chen presents a philosophical critique of mainstream AI fairness approaches by reframing AI bias as **structural injustice** rather than a technical problem. The authors argue that contemporary efforts—which pursue statistical parity and algorithmic debiasing—funda",
       "source_tool": "Manual",
       "zotero_key": "WC6JF3VD"
     },
@@ -5025,7 +5025,7 @@
       "has_summary": true,
       "summary_file": "summary_Lund_2025_Algorithms.md",
       "abstract": "Dieser norwegische Regierungsbericht überprüft Schlüsselelemente des norwegischen Gleichstellungs- und Antidiskriminierungsgesetzes mit primärem Fokus auf algorithmische Diskriminierung. Der Bericht diskutiert die mögliche Einführung spezifischer Definitionen direkter und indirekter algorithmischer Diskriminierung und schlägt die Schaffung einer spezifischen Bestimmung zu rechtmäßiger algorithmischer Differenzialbehandlung vor. Die Komplexität algorithmischer Systeme erschwert die Unterscheidung",
-      "summary_section": "![[summary_Lund_2025_Algorithms.md]]",
+      "summary_section": "## Overview\n\nThis Norwegian legal report, authored by Professor Vibeke Blaker Strand (University of Oslo) and published by the Equality and Anti-Discrimination Ombud (LDO) in 2024, examines whether existing equality and anti-discrimination legislation adequately protects individuals from discriminat",
       "source_tool": "Manual",
       "zotero_key": "GN5D9A7D"
     },
@@ -5103,7 +5103,7 @@
       "has_summary": true,
       "summary_file": "summary_Ma_2023_Intersectional.md",
       "abstract": "This EMNLP paper introduces a dataset for studying intersectional stereotypes and applies it to three LLMs. Results reveal emergent stereotypes not predictable from single-attribute analysis. Prompt engineering reduces but does not eliminate such patterns, highlighting persistent biases in generated narratives.",
-      "summary_section": "![[summary_Ma_2023_Intersectional.md]]",
+      "summary_section": "## Overview\n\nThis research addresses a critical gap in AI bias scholarship by systematically investigating how Large Language Models propagate stereotypes targeting intersectional demographic groups—individuals defined by multiple overlapping identity categories simultaneously. While extensive prior",
       "source_tool": "Manual",
       "zotero_key": "9YEC6SQ7"
     },
@@ -5142,7 +5142,7 @@
       "has_summary": true,
       "summary_file": "summary_McCrory_2024_Avoiding.md",
       "abstract": "In this working paper, McCrory argues that prevailing global AI governance efforts (especially those focused on “AI safety” and existential risks) lack an adequate intersectional, feminist perspective, which is needed to avert not just hypothetical future catastrophes but ongoing injustices. The paper analyzes seven prominent international AI policy initiatives (e.g. global AI accords and principles) against criteria derived from feminist theory, such as intersectionality, context, and power dyn",
-      "summary_section": "![[summary_McCrory_2024_Avoiding.md]]",
+      "summary_section": "## Overview\n\nThis working paper from CIGI's Digital Policy Hub, supported by Mitacs partnership, addresses a critical gap in artificial intelligence governance by integrating feminist intersectional analysis into AI safety discourse. The research, authored by Laine McCrory, challenges the predominan",
       "source_tool": "Manual",
       "zotero_key": "NMD5P5LN"
     },
@@ -5563,7 +5563,7 @@
       "has_summary": true,
       "summary_file": "summary_OECD_2023_Advancing.md",
       "abstract": "Delivers a multi-level review of AI accountability, focusing on transparency, fairness, and privacy. Discusses trade-offs in adopting explainability and transparency measures while mitigating algorithmic bias and upholding fairness, framed within legal, social, and ethical requirements for inclusive, trustworthy AI.",
-      "summary_section": "![[summary_OECD_2023_Advancing.md]]",
+      "summary_section": "## Overview\n\nThe OECD Digital Economy Paper No. 349 (February 2023, reference: DSTI/CDEP/AIGO(2022)5/FINAL) presents a comprehensive framework for advancing accountability and trustworthiness in artificial intelligence systems through integrated risk management approaches spanning the entire AI life",
       "source_tool": "Manual",
       "zotero_key": "4RTCRZXA"
     },
@@ -5602,7 +5602,7 @@
       "has_summary": true,
       "summary_file": "summary_Ovalle_2023_Factoring.md",
       "abstract": "Critical review examining how intersectionality is conceptualized and operationalized within AI fairness research, analyzing 30 papers from the field. Identifies significant gaps between intersectionality theory and technical applications, proposing six key tenets for properly applying intersectionality in AI research drawn from Patricia Hill Collins and Sirma Bilge's framework.",
-      "summary_section": "![[summary_Ovalle_2023_Factoring.md]]",
+      "summary_section": "## Overview\n\nThis paper by Ovalle, Subramonian, Gee, Gautam, and Chang presents a critical examination of how intersectionality—a foundational framework from critical scholarship—is adopted and operationalized within AI fairness research. The authors argue that contemporary AI fairness literature fu",
       "source_tool": "Manual",
       "zotero_key": "PXQE9GBV"
     },
@@ -6114,7 +6114,7 @@
       "has_summary": true,
       "summary_file": "summary_Quaid-i-Azam_University_2025_Gender.md",
       "abstract": "Purpose This narrative review investigates the interplay between gender bias in artificial intelligence (AI) systems and the potential of digital literacy to empower women in technology. By synthesising research from 2010 to 2024, the study examines how gender bias manifests in AI, its impact on women’s participation in technology, and the effectiveness of digital literacy initiatives in addressing these disparities. Methods A systematic literature search was conducted across major academic data",
-      "summary_section": "![[summary_Quaid-i-Azam_University_2025_Gender.md]]",
+      "summary_section": "## Overview\n\nThis narrative review, published in January 2025, examines the intersection of gender bias in artificial intelligence systems and digital literacy as a mechanism for women's empowerment in technology sectors. Authored by Syed Sibghatullah Shah from Quaid-i-Azam University, the study syn",
       "source_tool": "Manual",
       "zotero_key": "H8TEPVZW"
     },
@@ -6194,7 +6194,7 @@
       "has_summary": true,
       "summary_file": "summary_Reamer_2023_Artificial.md",
       "abstract": "Systematic analysis of ethical challenges in AI use within social work, developing comprehensive framework for ethical AI implementation. Identifies eight central ethical areas including informed consent, data privacy, transparency, misdiagnosis, client neglect, surveillance, scientific misconduct, and algorithmic bias. Emphasizes transparency as fundamental principle requiring social workers to inform clients about AI use. Develops eight-step protocol for ethical AI implementation including eth",
-      "summary_section": "![[summary_Reamer_2023_Artificial.md]]",
+      "summary_section": "## Overview\n\nFrederic G. Reamer's article addresses a critical professional gap: while artificial intelligence applications proliferate across social work practice, systematic ethical examination remains underdeveloped. Published in the International Journal of Social Work Values and Ethics (2023), ",
       "source_tool": "Manual",
       "zotero_key": "JIYZUBLR"
     },
@@ -6273,7 +6273,7 @@
       "has_summary": true,
       "summary_file": "summary_Ricaurte_Quijano_2024_Towards.md",
       "abstract": "This extensive report – developed through the Global Partnership on AI (GPAI) with contributors from academia and policy – sets out a vision for “substantive equality” in AI as opposed to mere formal equality. It recognizes that AI systems can replicate and even amplify societal power imbalances (“algorithmic discrimination”), thus requiring proactive governance to ensure historically marginalized groups are not left behind in the AI era. The report argues that purely technical bias mitigation i",
-      "summary_section": "![[summary_Ricaurte_Quijano_2024_Towards.md]]",
+      "summary_section": "## Overview\n\nThis November 2024 GPAI-endorsed report addresses a critical gap in AI governance by examining how to achieve genuine gender equality and diversity in artificial intelligence systems. Developed through a formal project titled \"Towards Real Diversity and Gender Equality in AI: Evidence-B",
       "source_tool": "Manual",
       "zotero_key": "SXXJ9Y7C"
     },
@@ -6599,10 +6599,10 @@
         "dim-bias-high",
         "dim-praxis-medium"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_Santy_2023_NLPositionality.md",
       "abstract": "This study provides a theoretical and methodological framework for making bias visible in AI models and datasets. It introduces the concept of \"positionality\" - the assumption that developers' social, cultural, and political perspectives inevitably flow into AI artifacts. The authors develop a method to quantify design biases by analyzing which dialects, demographic groups, or social contexts are under- or over-represented in datasets.",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\nThis paper addresses a critical challenge in computational political science: predicting political ideology from text when training data is sparse and systematically biased toward extreme positions. Authored by Chen Chen (CUHK Shenzhen), Dylan Walker (Chapman University), and Venkatesh ",
       "source_tool": "Manual",
       "zotero_key": "9HXBT8YG"
     },
@@ -6907,7 +6907,7 @@
       "has_summary": false,
       "summary_file": "",
       "abstract": "Narrative review examining interplay between gender bias in AI systems and digital literacy potential for empowering women in technology. Synthesizes research from 2010-2024 analyzing systematic gender biases in AI applications across recruitment, healthcare, and financial services. These biases stem from women's underrepresentation in AI development teams (only 22% globally), biased training data, and algorithmic design decisions. Digital literacy programs show promise as intervention fostering",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\nThis narrative review examines the relationship between gender bias in artificial intelligence systems and digital literacy as an empowerment mechanism for women in technology. Published in January 2025 by Syed Sibghatullah Shah from Quaid-i-Azam University (Islamabad, Pakistan), the st",
       "source_tool": "Manual",
       "zotero_key": "XT6XMMWT"
     },
@@ -6946,7 +6946,7 @@
       "has_summary": true,
       "summary_file": "summary_Sharma_2024_Intersectional.md",
       "abstract": "This study conducts a critical intersectional analysis of Stable Diffusion, a widely used visual generative AI tool. The examination of 180 generated images shows how the system perpetuates prevailing power systems such as sexism, racism, heteronormativity, and ableism, assuming white, physically healthy, masculine-presenting individuals as the standard. The study identifies three levels of analysis: (1) the aesthetics of AI images (micro-level), (2) institutional contexts (meso-level), and (3) ",
-      "summary_section": "![[summary_Sharma_2024_Intersectional.md]]",
+      "summary_section": "## Overview\n\nThis theoretical paper by Overbye-Thompson and Rice addresses a critical gap in algorithmic justice research by shifting focus from technical bias documentation to user-level adaptive responses. While extensive literature demonstrates algorithmic bias across healthcare, hiring, criminal",
       "source_tool": "Manual",
       "zotero_key": "8TVALKIV"
     },
@@ -7097,7 +7097,7 @@
       "has_summary": true,
       "summary_file": "summary_Siapka_2023_Towards.md",
       "abstract": "This work develops a research agenda for a feminist metaethics of AI. Unlike traditional metaethics that reflects on moral judgments non-normatively, feminist metaethics expands its scope to ask not only what ethics is, but also how our approach to it should be. The author argues that a feminist metaethics of AI should investigate four areas: (1) continuity between theory and action in AI ethics, (2) real-world impacts of AI ethics, (3) the role and profile of those involved in AI ethics, and (4",
-      "summary_section": "![[summary_Siapka_2023_Towards.md]]",
+      "summary_section": "## Overview\n\nAnastasia Siapka's paper identifies a fundamental paradox in contemporary AI ethics: despite overwhelming proliferation of ethical guidelines, boards, codes of conduct, and dedicated journals across multiple disciplines (law, philosophy, computer science, policy, industry), the field la",
       "source_tool": "Manual",
       "zotero_key": "DSPW44SK"
     },
@@ -7321,7 +7321,7 @@
       "has_summary": true,
       "summary_file": "summary_Slesinger_2024_Training.md",
       "abstract": "This study examines the integration of training components in co-creation processes with vulnerable and marginalized stakeholder groups as part of developing AI bias detection and mitigation tools. The research shows that training on AI definitions, terminology, and socio-technical impacts is necessary to enable non-technical stakeholders to clearly articulate their insights on AI fairness. The authors emphasize the importance of critical reflection on appropriate use of training in co-creation ",
-      "summary_section": "![[summary_Slesinger_2024_Training.md]]",
+      "summary_section": "## Overview\n\nThis academic paper addresses a critical gap in AI fairness governance by examining how training components integrated into co-creation (Co-C) processes can enable meaningful participation of vulnerable and marginalized groups in AI system design. Grounded in practical experience develo",
       "source_tool": "Manual",
       "zotero_key": "FL9N6Q3E"
     },
@@ -7398,7 +7398,7 @@
       "has_summary": false,
       "summary_file": "",
       "abstract": "Seven actions social change leaders and machine learning developers can take to build gender-smart artificial intelligence for a more just world.",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\nThe \"Mitigating Bias in Artificial Intelligence: An Equity Fluent Leadership Playbook\" is a translational research document developed by UC Berkeley's Center for Equity, Gender and Leadership that systematically bridges academic AI ethics research and industry practice. Authored by Gene",
       "source_tool": "Manual",
       "zotero_key": "A484RHDC"
     },
@@ -7763,7 +7763,7 @@
       "has_summary": true,
       "summary_file": "summary_Studeny_2025_Digitale.md",
       "abstract": "Studeny analyzes power asymmetries in digital social work, emphasizing that digital tools and algorithms create new, often invisible forms of power and control. AI decisions remove influence from both professionals and clients while responsibility remains unclear. Algorithms reinforce discrimination as they work with biased data. The author demands that social work critically reflects on digital technologies, demands transparency, and ensures that technology serves people.",
-      "summary_section": "![[summary_Studeny_2025_Digitale.md]]",
+      "summary_section": "## Overview\n\nThis academic document presents a critical examination of digital tools within social work practice, specifically addressing how technology mediates power relationships between practitioners and clients. Prepared for the OGSA conference in Graz (March 2025), the work challenges the prev",
       "source_tool": "Manual",
       "zotero_key": "JIQLZ5E6"
     },
@@ -7800,8 +7800,8 @@
         "dim-bias-high",
         "dim-praxis-medium"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_S_na_2024_Diskriminierung.md",
       "abstract": "Konzeptioneller Beitrag zu Ursachen und Formen algorithmischer Diskriminierung und zur Förderung kritischer KI-Kompetenzen. Plädiert für Aufklärung zu Datenbias, reflexive Nutzung und partizipative Trainings, um Benachteiligungen zu erkennen und digitale Teilhabe zu stärken.",
       "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
       "source_tool": "Manual",
@@ -7993,7 +7993,7 @@
       "has_summary": true,
       "summary_file": "summary_Tint_2025_Guardrails.md",
       "abstract": "Examines how large language models respond to prompts involving LGBTQ+ terminology and how current safety measures handle such content. Finds disparity where LLMs invoke safety guardrails for overtly heteronormative prompts but exhibit subtle biases when handling queer slang or informal LGBTQ+ language, responding with more negative emotional tone without triggering content filters.",
-      "summary_section": "![[summary_Tint_2025_Guardrails.md]]",
+      "summary_section": "## Overview\n\nJoshua Tint's research examines how Large Language Models respond to LGBTQ+ linguistic expression, investigating implicit biases in emotional content of model outputs across six major systems (GPT-3.5, GPT-4o, Llama2, Llama3, Gemma, Mistral). The paper addresses a critical gap in fairne",
       "source_tool": "Manual",
       "zotero_key": "CWBWUWYL"
     },
@@ -8071,7 +8071,7 @@
       "has_summary": true,
       "summary_file": "summary_Tun_2025_Trust.md",
       "abstract": "Systematic review synthesizing 27 studies on clinicians' trust in AI decision-support tools. Identifies eight key factors shaping professional trust, notably system transparency as primary enabler. Lack of transparency was recurring barrier with \"black-box\" algorithms undermining trust. Improving transparency, providing explainable recommendations, and addressing bias/fairness issues recommended to bolster trust. Concludes transparent, explainable AI with proper training and ethical safeguards c",
-      "summary_section": "![[summary_Tun_2025_Trust.md]]",
+      "summary_section": "## Overview\n\nThe PRISMA 2020 Checklist is a **standardized reporting guideline**—not empirical research—that establishes normative requirements for documenting systematic reviews and meta-analyses. Comprising 27 mandatory reporting items distributed across six sections (Title, Abstract, Introduction",
       "source_tool": "Manual",
       "zotero_key": "FFAQTTR8"
     },
@@ -8296,7 +8296,7 @@
       "has_summary": true,
       "summary_file": "summary_UNESCO_2024_Bias.md",
       "abstract": "Die Studie analysiert LLMs (z. B. GPT-3.5, Llama 2) und dokumentiert signifikante Stereotypisierungen gegen Frauen und queere Menschen in generierten Texten. Besondere Auffälligkeit bei Open-Source-Modellen.",
-      "summary_section": "![[summary_UNESCO_2024_Bias.md]]",
+      "summary_section": "## Overview\n\nUNESCO's March 2024 press release presents a significant institutional investigation into systemic gender bias, homophobic content, and racial stereotyping within large language models (LLMs), the foundational technology underlying generative AI applications. The study examines three ma",
       "source_tool": "Manual",
       "zotero_key": "MMF4WBLF"
     },
@@ -8333,9 +8333,9 @@
         "has-summary"
       ],
       "has_summary": true,
-      "summary_file": "summary_UNESCO_2024_Bias.md",
+      "summary_file": "summary_UNESCO_2024_Challenging.md",
       "abstract": "This study explores biases in three significant large language models (LLMs): OpenAI’s GPT-2 and ChatGPT, along with Meta’s Llama 2, highlighting their role in both advanced decision-making systems and as user-facing conversational agents. Across multiple studies, the brief reveals how biases emerge in the text generated by LLMs, through gendered word associations, positive or negative regard for gendered subjects, or diversity in text generated by gender and culture. The research uncovers persi",
-      "summary_section": "![[summary_UNESCO_2024_Bias.md]]",
+      "summary_section": "## Overview\n\nThis UNESCO-IRCAI study, funded by the European Union's Horizon 2020 programme and published in 2024, systematically investigates gender bias within three major large language models: OpenAI's GPT-2 and ChatGPT, and Meta's Llama 2. The research directly addresses UNESCO's Ethics of AI R",
       "source_tool": "Manual",
       "zotero_key": "WD9KQG9J"
     },
@@ -8520,7 +8520,7 @@
       "has_summary": true,
       "summary_file": "summary_Unknown_2025_Artificial.md",
       "abstract": "This review explores the transformative role of artificial intelligence (AI) in the fields of social sciences and social work, with a focus on developments from 2022 to 2025. It examines how AI technologies—such as machine learning, natural language processing—enhance the analysis of complex social phenomena, support real-time forecasting, and inform data-driven policymaking. Within social work and human services, AI-driven tools facilitate case management, mental health interventions, crisis re",
-      "summary_section": "![[summary_Unknown_2025_Artificial.md]]",
+      "summary_section": "## Overview\n\nThis academic review examines the transformative integration of artificial intelligence technologies into social sciences and human services during 2022-2025. The document addresses a critical contemporary question: how can AI be ethically implemented across research methodologies, poli",
       "source_tool": "Manual",
       "zotero_key": "5ML7W6AU"
     },
@@ -8562,7 +8562,7 @@
       "has_summary": true,
       "summary_file": "summary_Unknown_2025_Artificial.md",
       "abstract": "As artificial intelligence (AI) permeates the workplace environments of social workers, there is a need to understand the risks and benefits posed to the mission and values of the profession. This article examines the influence of artificial intelligence on the profession, including opportunities to advance socially just outcomes and challenges that risk ethical practice. A comprehensive review of literature was conducted to examine existing research on the intersection of AI and social work. Dr",
-      "summary_section": "![[summary_Unknown_2025_Artificial.md]]",
+      "summary_section": "## Overview\n\nThis academic review examines the transformative integration of artificial intelligence technologies into social sciences and human services during 2022-2025. The document addresses a critical contemporary question: how can AI be ethically implemented across research methodologies, poli",
       "source_tool": "Manual",
       "zotero_key": "TBLSIEUC"
     },
@@ -8594,7 +8594,7 @@
         "has-summary"
       ],
       "has_summary": true,
-      "summary_file": "summary_Unknown_2025_Artificial.md",
+      "summary_file": "summary_Unknown_XXXX_feminist.md",
       "abstract": "Get ready for transforming power! We enable organizations to create more equitable AI through education. We hold workshops, give training, and provide learning material to raise awareness, build knowledge, and ease your creation of equitable AI.",
       "summary_section": "![[summary_Unknown_2025_Artificial.md]]",
       "source_tool": "Manual",
@@ -8634,9 +8634,9 @@
         "has-summary"
       ],
       "has_summary": true,
-      "summary_file": "summary_UN_Women_2024_Artificial.md",
+      "summary_file": "summary_Women_2024_Artificial.md",
       "abstract": "Comprehensive policy brief series analyzing how AI systems perpetuate gender inequalities while highlighting pathways for more equitable development. Documents that 44% of AI systems show gender bias, with 25% exhibiting both gender and racial bias, and provides evidence-based policy recommendations for addressing systematic underrepresentation and discriminatory outcomes.",
-      "summary_section": "![[summary_UN_Women_2024_Artificial.md]]",
+      "summary_section": "## Overview\n\nThis peer-reviewed paper by researchers at Epoch AI (with affiliations at University of Aberdeen, MIT CSAIL, Centre for the Governance of AI, and University of Tübingen) investigates a fundamental constraint facing artificial intelligence development: the potential exhaustion of publicl",
       "source_tool": "Manual",
       "zotero_key": "A4REJRN2"
     },
@@ -8715,7 +8715,7 @@
       "has_summary": true,
       "summary_file": "summary_Vethman_2025_Fairness.md",
       "abstract": "This study develops actionable recommendations for AI experts to implement intersectional approaches beyond purely technical solutions. The authors criticize the reduction of intersectionality to algorithmic bias measurements between subgroups and develop a framework that emphasizes interdisciplinary teams, community participation, and analysis of power structures in social context. Their approach includes six core recommendations: responsible AI expert role, multidisciplinary team building, ref",
-      "summary_section": "![[summary_Vethman_2025_Fairness.md]]",
+      "summary_section": "## Overview\n\nThis 2025 FAccT conference paper addresses a critical gap in AI fairness research: the reduction of intersectionality—a theoretical framework from Black Feminist scholarship examining interconnected systems of oppression—to narrow algorithmic bias metrics. The authors argue that current",
       "source_tool": "Manual",
       "zotero_key": "Q2HILDPI"
     },
@@ -8928,8 +8928,8 @@
         "exclude",
         "low-relevance"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_Ma_2023_Intersectional.md",
       "abstract": "nan",
       "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
       "source_tool": "Manual",
@@ -9141,7 +9141,7 @@
       "has_summary": true,
       "summary_file": "summary_Washington_2025_Fragile.md",
       "abstract": "Foundation models are the backbone of generative AI and thus central to applications such as ChatGPT, Gemini, or Copilot. However, their use comes with risks: from randomly compiled training data and opaque processes to profit-driven business models. The new report Fragile Foundations: Hidden Risks of Generative AI by the Bertelsmann Stiftung shows why mission-driven organizations in particular should critically question the foundations of AI. It highlights the systemic weaknesses of foundation ",
-      "summary_section": "![[summary_Washington_2025_Fragile.md]]",
+      "summary_section": "## Overview\n\n\"Fragile Foundations: Hidden Risks of Generative AI\" is a critical policy analysis by Dr. Anne L. Washington (Duke University), published by Bertelsmann Stiftung in September 2025. The document systematically examines structural vulnerabilities in foundation models—large-scale AI system",
       "source_tool": "Manual",
       "zotero_key": "BALHXHPD"
     },
@@ -9213,7 +9213,7 @@
       "has_summary": true,
       "summary_file": "summary_West_2023_Discriminating.md",
       "abstract": "Diese einflussreiche Studie argumentiert, dass die Diversitätskrise im KI-Sektor und Bias in KI-Systemen zwei Manifestationen desselben Problems sind und gemeinsam angegangen werden müssen. Die Autoren zeigen, dass rein technische Ansätze zur Bias-Behebung unzureichend sind, da sie die systemischen Machtverhältnisse ignorieren, die sowohl Arbeitsplätze als auch Technologien formen. Das \"Pipeline-Problem\"-Narrativ wird als zu eng kritisiert, da es tieferliegende Probleme mit Arbeitsplatzkultur, M",
-      "summary_section": "![[summary_West_2023_Discriminating.md]]",
+      "summary_section": "## Overview\n\n\"Discriminating Systems: Gender, Race, and Power in AI\" is a 2019 report by West, Whittaker, and Crawford from the AI Now Institute that investigates systemic discrimination within artificial intelligence development and deployment. The document establishes a critical causal relationshi",
       "source_tool": "Manual",
       "zotero_key": "SIXWV7D4"
     },
@@ -9365,10 +9365,10 @@
         "dim-bias-high",
         "dim-praxis-medium"
       ],
-      "has_summary": false,
-      "summary_file": "",
+      "has_summary": true,
+      "summary_file": "summary_Wudel_2025_What.md",
       "abstract": "Defines Feminist AI (FAI) as framework using intersectional feminism to address bias and inequalities in AI systems. Emphasizes interdisciplinary collaboration, systemic power analysis, and iterative theory-practice loops. Embeds feminist values of equality, freedom, and justice to transform AI development. Includes practical applications like FemAI advocacy for feminist perspectives in EU AI Act and MIRA diagnostic platform aligning AI tools with social justice goals. Distinguishes FAI from tra",
-      "summary_section": "*No AI summary available. This paper was assessed but not yet processed through the summarization pipeline.*",
+      "summary_section": "## Overview\n\n\"What is Feminist AI?\" is a policy-oriented academic document published by the Friedrich-Ebert-Stiftung's Competence Centre on the Future of Work in January 2025. Authored by Alexandra Wudel and Anna Ehrenberg, the paper introduces Feminist Artificial Intelligence (FAI) as a comprehensi",
       "source_tool": "Manual",
       "zotero_key": "6F8C5RXW"
     },
@@ -9550,7 +9550,7 @@
       "has_summary": true,
       "summary_file": "summary_Yunusov_2024_MirrorStories.md",
       "abstract": "This empirical study introduces a corpus of 1,500 personalized short stories generated with LLMs, incorporating identity features like gender, ethnicity, and age. Human judges rated these stories higher in engagement, diversity, and personalness. Narrative personalization increased textual diversity without harming moral comprehension. However, biases persist, such as preferential engagement for certain identities. The paper illustrates both potential and limitations of diversity-sensitive promp",
-      "summary_section": "![[summary_Yunusov_2024_MirrorStories.md]]",
+      "summary_section": "## Overview\n\nThis seminal paper presents critical improvements to the Skip-gram model, a neural network architecture for learning distributed word representations from large-scale unstructured text. The authors address two fundamental challenges: optimizing computational efficiency and representatio",
       "source_tool": "Manual",
       "zotero_key": "JEMUIGSX"
     },
@@ -9894,7 +9894,7 @@
         "none": 83
       }
     },
-    "with_summaries": 59,
+    "with_summaries": 67,
     "average_relevance": 6.31
   },
   "generated": "2025-11-10",
