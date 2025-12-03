@@ -1,88 +1,107 @@
-# Wissensbasis - FemPrompt & SozArb Pipeline
+# knowledge base map of content
 
-Strukturierte Dokumentation für automatisierte Literaturrecherche-Pipeline
+zentrale navigation für die femprompt & sozarb pipeline dokumentation
 
----
-
-## Übersicht der Wissensbasis
-
-Diese Wissensbasis enthält die komplette Dokumentation für die FemPrompt & SozArb Forschungspipeline.
-
-### Core Documentation (English)
-
-| Datei | Inhalt | Zielgruppe |
-|-------|--------|------------|
-| [QUICKSTART.md](QUICKSTART.md) | Installation, erste Schritte, Beispiele | Neue Nutzer |
-| [COMPLETE_GUIDE.md](COMPLETE_GUIDE.md) | Vollständiger Pipeline-Guide mit allen Features | Alle |
-| [TECHNICAL.md](TECHNICAL.md) | Komplette technische Referenz, alle Scripts, APIs | Entwickler |
-| [STATUS.md](STATUS.md) | Aktueller Projektstatus, was erreicht, was offen | Alle |
-| [JOURNAL.md](JOURNAL.md) | Entwicklungschronologie, Entscheidungen, Learnings | Transparenz (PRISMA) |
-
-### Research Documentation (German)
-
-| Datei | Inhalt | Zielgruppe |
-|-------|--------|------------|
-| [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md) | Forschungsfragen, Ziele, Scope | Forschungsteam |
-| [THEORETICAL_FRAMEWORK.md](THEORETICAL_FRAMEWORK.md) | Feministische Epistemologie (Haraway, Crenshaw) | Theoretischer Rahmen |
-| [METHODOLOGY.md](METHODOLOGY.md) | PRISMA 2020 Framework, Quality Criteria | Systematisches Review |
-| [OPERATIONAL_GUIDES.md](OPERATIONAL_GUIDES.md) | Prompts, Benchmarks, Git-Workflow | Operative Anleitungen |
-
-### Specialized Documentation
-
-| Datei | Inhalt | Zielgruppe |
-|-------|--------|------------|
-| [ASSESSMENT_LLM.md](ASSESSMENT_LLM.md) | LLM-Based PRISMA Assessment System | Entwickler |
-| [OBSIDIAN_WEB_PUBLISHING.md](OBSIDIAN_WEB_PUBLISHING.md) | Web Viewer Strategy & Implementation | Entwickler |
+letzte aktualisierung: 2025-12-03
 
 ---
 
-## Schnelleinstieg
+## einstieg
 
-Neu im Projekt? → [QUICKSTART.md](QUICKSTART.md)
+neu im projekt: [quickstart.md](quickstart.md)
+installation, erste schritte, beispiele für neue nutzer. 10-minuten-setup mit allen wichtigen befehlen.
 
-Technische Frage? → [TECHNICAL.md](TECHNICAL.md)
+aktueller status: [status.md](status.md)
+wo steht das projekt, was ist erreicht, nächste schritte. zeigt pipeline-fortschritt für beide projekte (femprompt, sozarb).
 
-Status wissen? → [STATUS.md](STATUS.md)
-
-Forschungskontext verstehen? → [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md), [THEORETICAL_FRAMEWORK.md](THEORETICAL_FRAMEWORK.md), [METHODOLOGY.md](METHODOLOGY.md)
-
----
-
-## Projekte
-
-### 1. FemPrompt (326 Papers)
-- Focus: Feminist AI Literacies and Bias Mitigation
-- Status: Pipeline komplett, Obsidian Vault generiert
-- Zotero: Group Library 6080294
-
-### 2. SozArb (325 Papers) - Aktuell
-- Focus: AI Literacy in Social Work for Vulnerable Populations
-- Status: Enhanced Summaries v2.0 komplett (75 summaries, 76.1/100 avg quality)
-- Zotero: Group Library 6284300 (socialai-litreview-curated)
-- Pipeline: Assessment ✅ (222 Include) → PDFs (47) ✅ → Markdown ✅ → Enhanced Summaries v2.0 ✅ (75 summaries) → Vault Integration ⏳
+vollständige analyse: [analysis-report.md](analysis-report.md)
+detaillierte analyse der dokumentationsstruktur, identifikation von redundanzen, optimierungsempfehlungen.
 
 ---
 
-## Dokumentations-Architektur
+## technische dokumentation
 
-### Warum keine Nummerierung mehr?
+technische referenz: [technical.md](technical.md)
+komplette technische dokumentation. system requirements, pipeline architecture (5 stages), api reference, error handling, testing. zentrale referenz für entwickler.
 
-Beschreibende Namen statt Nummerierung für bessere Lesbarkeit und Flexibilität:
-- QUICKSTART → Erste Schritte
-- TECHNICAL → Technische Tiefe
-- STATUS → Aktueller Stand
-- JOURNAL → Entwicklungshistorie
+llm assessment: [assessment-llm.md](assessment-llm.md)
+llm-based prisma assessment system. automatisierte bewertung von 325 papers mit claude haiku 4.5, 5-dimensionale relevanz-scores, 100% erfolgsrate.
 
-### Warum Deutsch + Englisch?
+web viewer: [obsidian-web-publishing.md](obsidian-web-publishing.md)
+web viewer strategie und implementierung. vanilla javascript ansatz, github pages deployment, design system, interaktive visualisierung.
 
-- Englisch: Technische Implementierung (international, Code-nah)
-- Deutsch: Forschungskontext (Projektsprache, theoretischer Rahmen)
+vollständiger guide: [complete-guide.md](complete-guide.md)
+vollständiger pipeline-guide mit allen features (warnung: redundant, siehe analysis-report.md für details).
 
 ---
 
-## Letzte Aktualisierung
+## forschungskontext (deutsch)
 
-Datum: 2025-12-03
-Version: 2.4 (Complete README consolidation)
-Status: FemPrompt komplett | SozArb Enhanced Summaries v2.0 komplett (75 summaries) | Vault Integration ausstehend
-Changes: Only ONE README.md in root, all other documentation in knowledge/, vault READMEs renamed to INDEX.md 
+projekt-übersicht: [project-overview.md](project-overview.md)
+forschungsfragen, zielsetzung, scope und grenzen. deutsche perspektive auf das gesamtprojekt.
+
+theoretischer rahmen: [theoretical-framework.md](theoretical-framework.md)
+feministische epistemologie. situiertes wissen (haraway), intersektionalität (crenshaw), response-ability, llm-ontologie und alignment-forschung.
+
+methodik: [methodology.md](methodology.md)
+prisma 2020 framework, multi-modell-recherche, qualitätsbewertung, alternative review-standards (jbi, cochrane, entreq, mmat).
+
+operative anleitungen: [operational-guides.md](operational-guides.md)
+prompt-templates, benchmarks und schwellenwerte, inter-rater-reliabilität.
+
+---
+
+## entwicklungshistorie
+
+entwicklungs-journal: [journal.md](journal.md)
+chronologische dokumentation aller entwicklungsschritte, technische entscheidungen, learnings. session-logs seit 2025-11-16 mit enhanced pipeline v2.0 entwicklung.
+
+---
+
+## dokument-funktionen
+
+quickstart.md: schnelleinstieg (10 minuten), installation, quick run examples, 7-step workflow kompakt, troubleshooting
+
+technical.md: zentrale technische referenz, system overview, requirements, pipeline architecture, stage-by-stage dokumentation, api reference
+
+status.md: aktueller projektstatus, pipeline-fortschritt beide projekte, enhanced summarization pipeline v2.0, cost & performance estimates, next steps
+
+methodology.md: prisma 2020 framework, multi-modell-recherche prozess, ris-standardisierung, zotero-integration, qualitätsbewertung
+
+theoretical-framework.md: feministische epistemologie, situiertes wissen, intersektionalität, response-ability, llm-ontologie, epistemologische implikationen
+
+project-overview.md: forschungsfrage, zielsetzung, theoretischer rahmen überblick, methodischer ansatz, scope und grenzen
+
+operational-guides.md: prompt-templates (deep research, ris-konvertierung, dokumenten-zusammenfassung), benchmarks und schwellenwerte
+
+assessment-llm.md: llm assessment system, assessment schema, performance results, error handling & auto-repair, quality checks
+
+obsidian-web-publishing.md: web viewer strategie, technische implementierung vanilla js, web viewer features, data export system, deployment
+
+journal.md: entwicklungschronologie, detaillierte session-logs, enhanced summarization pipeline v2.0 entwicklung, quality results, cost analysis
+
+complete-guide.md: vollständiger pipeline-guide (warnung: 100% redundant zu quickstart.md + technical.md, siehe analysis-report.md)
+
+analysis-report.md: dokumentationsstruktur-analyse, redundanzen identifikation, 40% einsparungspotenzial, priorisierte maßnahmenempfehlungen
+
+---
+
+## informationsfluss
+
+einstieg → quickstart.md → technical.md (für details)
+forschung → project-overview.md → theoretical-framework.md (theorie) + methodology.md (methodik)
+entwicklung → journal.md (historie) → status.md (aktuell)
+module → assessment-llm.md (llm assessment) + obsidian-web-publishing.md (web viewer)
+optimierung → analysis-report.md (redundanzen, empfehlungen)
+
+---
+
+## projekte
+
+femprompt (326 papers): feminist ai literacies and bias mitigation. status: pipeline komplett, obsidian vault generiert. zotero group library 6080294.
+
+sozarb (325 papers): ai literacy in social work for vulnerable populations. status: enhanced summaries v2.0 komplett (75 summaries, 76.1/100 avg quality). zotero group library 6284300. pipeline: assessment komplett (222 include), pdfs (47), markdown, enhanced summaries v2.0 (75), vault integration ausstehend.
+
+---
+
+version: 2.5 (map of content structure)
