@@ -55,11 +55,91 @@ Begründung:
 
 ### Aktuelle Architektur
 
-Input: FemPrompt_Vault/ (11 Papers, 36 Concepts via GitHub Raw URLs)
+Input: SozArb_Research_Vault/ (266 Papers, 75 Enhanced Summaries v2.0, 144 Concepts, 13 MOCs)
 Output: GitHub Pages aus `/docs` Ordner
-Technologie: Vanilla JavaScript ES6+, Marked.js, vis-network
+Technologie: Vanilla JavaScript ES6+, vis-network, Chart.js, Fuse.js
 Hosting: GitHub Pages (kostenlos)
 URL: https://chpollin.github.io/FemPrompt_SozArb/ (noch nicht aktiviert)
+
+### Web Viewer Features (Implementiert)
+
+Papers Browser:
+- Browse all 264 research papers
+- Full-text search (title, author, abstract)
+- Multi-dimensional filtering: PRISMA Decision, Relevance Level, Summary Availability
+- Sort by relevance, year, or author
+- Click any paper for detailed view
+
+Dimensions Dashboard:
+- Visual statistics and charts
+- 5 relevance dimensions: AI Literacy, Vulnerable Groups, Bias Analysis, Practical Implementation, Professional Context
+- Decision breakdown (Include/Exclude/Unclear)
+- Relevance distribution
+
+Network Graph:
+- Interactive visualization of paper relationships
+- Papers connected by relevance similarity
+- Filter by decision and relevance
+- Click nodes to view paper details
+- Color-coded by PRISMA decision
+
+Tech Stack:
+- Vanilla JavaScript (ES6+)
+- CSS3 with CSS Variables
+- vis-network 9.1.6 - Graph visualization
+- Chart.js 4.4.0 - Statistics charts
+- Fuse.js 7.0.0 - Fuzzy search
+- FontAwesome 6.5.1 - Icon library
+- No build step - Direct browser execution
+
+### Data Export System
+
+Auto-generated from Obsidian vault via `analysis/export_vault_to_web_data.py`:
+
+Output Files:
+- `docs/data/research_vault.json` - All papers with metadata (442 KB)
+- `docs/data/graph_data.json` - Network graph data (348 KB)
+- `docs/data/statistics.json` - Aggregate statistics (8 KB)
+
+Data Structure per Paper:
+- Identification: Title, authors, year, DOI
+- Assessment: PRISMA decision, exclusion reason
+- Relevance Scores: 5 dimensions (0-3 scale), total (0-15)
+- Categorization: Relevance level, top dimensions
+- Content: Abstract, summary status
+- Tags: Auto-generated from assessment
+
+### Local Development
+
+Using VS Code Live Server:
+```bash
+# Right-click docs/index.html → "Open with Live Server"
+```
+
+Using Python:
+```bash
+cd docs
+python -m http.server 8000
+# Open http://localhost:8000
+```
+
+### Deployment to GitHub Pages
+
+1. Push to GitHub
+2. Go to: Repository Settings → Pages
+3. Source: Deploy from branch `main`, folder `/docs`
+4. Save
+5. Access at: `https://[username].github.io/[repo-name]/`
+
+### Updating Web Viewer Data
+
+To update with new papers/summaries:
+```bash
+# 1. Add/update papers in Obsidian vault
+# 2. Re-export data
+python analysis/export_vault_to_web_data.py
+# 3. Refresh browser (no rebuild needed)
+```
 
 ---
 

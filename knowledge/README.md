@@ -31,6 +31,7 @@ Diese Wissensbasis enthält die komplette Dokumentation für die FemPrompt & Soz
 
 | Datei | Inhalt | Zielgruppe |
 |-------|--------|------------|
+| [ASSESSMENT_LLM.md](ASSESSMENT_LLM.md) | LLM-Based PRISMA Assessment System | Entwickler |
 | [OBSIDIAN_WEB_PUBLISHING.md](OBSIDIAN_WEB_PUBLISHING.md) | Web Viewer Strategy & Implementation | Entwickler |
 
 ---
@@ -82,6 +83,6 @@ Beschreibende Namen statt Nummerierung für bessere Lesbarkeit und Flexibilität
 ## Letzte Aktualisierung
 
 Datum: 2025-12-03
-Version: 2.3 (Documentation consolidation + PRISMA number corrections)
+Version: 2.4 (Complete README consolidation)
 Status: FemPrompt komplett | SozArb Enhanced Summaries v2.0 komplett (75 summaries) | Vault Integration ausstehend
-Changes: ROOT README minimized, alle Doku in knowledge/, legacy assessment/ README gelöscht 
+Changes: Only ONE README.md in root, all other documentation in knowledge/, vault READMEs renamed to INDEX.md 
