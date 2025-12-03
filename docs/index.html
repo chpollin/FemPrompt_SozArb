@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SozArb Research Vault - AI Literacy in Social Work</title>
 
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Interactive research vault with 264 papers on AI literacy in social work, featuring LLM-based PRISMA assessment and enhanced summaries. Systematic literature review covering vulnerable populations, algorithmic bias, and practical implementation.">
+    <meta name="keywords" content="AI literacy, social work, systematic review, PRISMA, vulnerable populations, algorithmic bias, feminist AI, digital equity">
+    <meta name="author" content="Christopher Pollin">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chpollin.github.io/FemPrompt_SozArb/">
+    <meta property="og:title" content="SozArb Research Vault - AI Literacy in Social Work">
+    <meta property="og:description" content="264 papers, 67 AI summaries, interactive network visualization. Systematic literature review on AI literacy for vulnerable populations.">
+    <meta property="og:image" content="https://chpollin.github.io/FemPrompt_SozArb/preview.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://chpollin.github.io/FemPrompt_SozArb/">
+    <meta name="twitter:title" content="SozArb Research Vault - AI Literacy in Social Work">
+    <meta name="twitter:description" content="Interactive systematic literature review: 264 papers, 67 AI summaries, network visualization">
+    <meta name="twitter:image" content="https://chpollin.github.io/FemPrompt_SozArb/preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📚</text></svg>">
+
     <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/dist/vis-network.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -88,7 +111,30 @@
                             <option value="no">Without Summary</option>
                         </select>
                     </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Publication Year</label>
+                        <select class="filter-select" id="filter-year">
+                            <option value="all">All Years</option>
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021 and older</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <button class="export-button" onclick="exportFilteredPapers()" title="Export filtered papers as CSV">
+                            <i class="fas fa-download"></i> Export CSV
+                        </button>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Results Counter -->
+            <div class="results-counter" id="results-counter">
+                <i class="fas fa-filter"></i> Showing <strong id="results-count">0</strong> of <strong id="total-count">0</strong> papers
             </div>
 
             <div class="papers-grid" id="papers-grid">
@@ -193,5 +239,6 @@
 
     <!-- Main App Script -->
     <script src="js/research-app.js"></script>
+    <script src="js/features.js"></script>
 </body>
 </html>

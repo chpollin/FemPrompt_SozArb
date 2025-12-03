@@ -14,17 +14,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log('Initializing Research Vault App...');
 
     try {
+        updateLoadingMessage('Loading papers data... (1/4)');
         await loadData();
+
+        updateLoadingMessage('Initializing interface... (2/4)');
         initializeUI();
+        initializeKeyboardShortcuts();
+
+        updateLoadingMessage('Rendering statistics... (3/4)');
         renderStatistics();
         renderPapers();
+
+        updateLoadingMessage('Loading dashboard charts... (4/4)');
         initializeDashboard();
+
         console.log('App initialized successfully!');
     } catch (error) {
         console.error('Failed to initialize app:', error);
         showError('Failed to load research vault data. Please check console for details.');
     }
 });
+
+// Update loading message
+function updateLoadingMessage(message) {
+    const loadingEls = document.querySelectorAll('.loading p');
+    loadingEls.forEach(el => el.textContent = message);
+}
 
 // Load data from JSON files
 async function loadData() {
@@ -69,6 +84,7 @@ function initializeUI() {
     document.getElementById('filter-decision').addEventListener('change', applyFilters);
     document.getElementById('filter-relevance').addEventListener('change', applyFilters);
     document.getElementById('filter-summary').addEventListener('change', applyFilters);
+    document.getElementById('filter-year').addEventListener('change', applyFilters);
     document.getElementById('sort-by').addEventListener('change', applyFilters);
 
     // Graph filters
@@ -148,6 +164,7 @@ function applyFilters() {
     const decision = document.getElementById('filter-decision').value;
     const relevance = document.getElementById('filter-relevance').value;
     const summary = document.getElementById('filter-summary').value;
+    const year = document.getElementById('filter-year').value;
     const sortBy = document.getElementById('sort-by').value;
 
     // Apply filters
@@ -166,6 +183,14 @@ function applyFilters() {
         filtered = filtered.filter(p => p.has_summary === hasSummary);
     }
 
+    if (year !== 'all') {
+        if (year === '2021') {
+            filtered = filtered.filter(p => p.publication_year <= 2021);
+        } else {
+            filtered = filtered.filter(p => p.publication_year == year);
+        }
+    }
+
     // Apply sorting
     if (sortBy === 'relevance') {
         filtered.sort((a, b) => b.total_relevance - a.total_relevance);
@@ -181,6 +206,12 @@ function applyFilters() {
 // Render papers grid
 function renderPapers(papers = filteredPapers) {
     const container = document.getElementById('papers-grid');
+
+    // Update results counter
+    const resultsCount = document.getElementById('results-count');
+    const totalCount = document.getElementById('total-count');
+    if (resultsCount) resultsCount.textContent = papers.length;
+    if (totalCount) totalCount.textContent = allPapers.length;
 
     if (papers.length === 0) {
         container.innerHTML = '<div class="loading"><p>No papers match your filters.</p></div>';
