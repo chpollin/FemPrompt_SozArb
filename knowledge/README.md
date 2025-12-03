@@ -13,6 +13,7 @@ Diese Wissensbasis enthält die komplette Dokumentation für die FemPrompt & Soz
 | Datei | Inhalt | Zielgruppe |
 |-------|--------|------------|
 | [QUICKSTART.md](QUICKSTART.md) | Installation, erste Schritte, Beispiele | Neue Nutzer |
+| [COMPLETE_GUIDE.md](COMPLETE_GUIDE.md) | Vollständiger Pipeline-Guide mit allen Features | Alle |
 | [TECHNICAL.md](TECHNICAL.md) | Komplette technische Referenz, alle Scripts, APIs | Entwickler |
 | [STATUS.md](STATUS.md) | Aktueller Projektstatus, was erreicht, was offen | Alle |
 | [JOURNAL.md](JOURNAL.md) | Entwicklungschronologie, Entscheidungen, Learnings | Transparenz (PRISMA) |
@@ -55,9 +56,9 @@ Forschungskontext verstehen? → [PROJECT_OVERVIEW.md](PROJECT_OVERVIEW.md), [TH
 
 ### 2. SozArb (325 Papers) - Aktuell
 - Focus: AI Literacy in Social Work for Vulnerable Populations
-- Status: Enhanced Summaries v2.0 komplett (47 papers, 76.1/100 avg quality)
+- Status: Enhanced Summaries v2.0 komplett (75 summaries, 76.1/100 avg quality)
 - Zotero: Group Library 6284300 (socialai-litreview-curated)
-- Pipeline: Assessment ✅ → PDFs (47) ✅ → Markdown ✅ → Enhanced Summaries v2.0 ✅ → Vault Integration ⏳
+- Pipeline: Assessment ✅ (222 Include) → PDFs (47) ✅ → Markdown ✅ → Enhanced Summaries v2.0 ✅ (75 summaries) → Vault Integration ⏳
 
 ---
 
@@ -80,6 +81,7 @@ Beschreibende Namen statt Nummerierung für bessere Lesbarkeit und Flexibilität
 
 ## Letzte Aktualisierung
 
-Datum: 2025-11-16
-Version: 2.2 (Enhanced Pipeline v2.0 + Markdown Quality Validation)
-Status: FemPrompt komplett | SozArb Enhanced Summaries v2.0 komplett (47 papers) | Vault Integration ausstehend 
+Datum: 2025-12-03
+Version: 2.3 (Documentation consolidation + PRISMA number corrections)
+Status: FemPrompt komplett | SozArb Enhanced Summaries v2.0 komplett (75 summaries) | Vault Integration ausstehend
+Changes: ROOT README minimized, alle Doku in knowledge/, legacy assessment/ README gelöscht 
