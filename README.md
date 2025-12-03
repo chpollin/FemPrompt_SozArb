@@ -137,7 +137,7 @@ python assessment-llm/assess_papers.py \
 # Results (SozArb Run 5):
 # - 325 papers assessed in 24 minutes
 # - 100% success rate, $0.58 cost
-# - 208 Include, 84 Exclude, 33 Unclear
+# - 222 Include, 83 Exclude, 20 Unclear
 # - 5-dimensional relevance scoring (0-3 scale)
 ```
 
@@ -214,7 +214,7 @@ This pipeline is **fully parametric** and can be adapted for:
 
 ## Performance
 
-**For 208 papers (SozArb Include set):**
+**For 222 papers (SozArb Include set):**
 - **LLM Assessment:** 24 minutes, $0.58
 - **PDF Acquisition:** ~1-2 hours (70-80% success rate)
 - **Markdown Conversion:** ~2-3 hours (30-40 sec/doc)
@@ -349,7 +349,7 @@ FemPrompt_SozArb/
 **FemPrompt:** ✅ Complete (vault generated, 35 concepts extracted)
 **SozArb:**
 - ✅ LLM assessment complete (325 papers, 100% success)
-- 🔄 PDF acquisition ready (208 Include papers)
+- 🔄 PDF acquisition ready (222 Include papers)
 - ⏳ Markdown conversion pending
 - ⏳ Summarization pending
 - ⏳ Vault generation pending

@@ -71,29 +71,29 @@ Die vollständige Pipeline wurde End-to-End durchlaufen:
 #### SozArb (Projekt 2 - In Progress)
 Die Pipeline befindet sich im erweiterten Summarization-Stadium:
 - Assessment: ✅ 325/325 Papers (100% Erfolgsrate)
-- PDFs: 47 Dateien in analysis/pdfs_socialai/ (21% Coverage der 222 Include-Papers)
+- PDFs: 47 Dateien in analysis/pdfs_socialai/ (von 222 Include-Papers)
   - Nur automatisch aus Zotero-Bibliothek verfügbare PDFs verarbeitet
   - Hierarchische Akquisitionsstrategie implementiert, aber nicht vollständig ausgeschöpft
 - Markdown: 47 Dateien in analysis/markdown_papers_socialai/ konvertiert
   - Validation: 46 PASS, 1 FAIL (corrupted file detected and excluded)
-- Summaries: ✅ 47 Enhanced Summaries v2.0 KOMPLETT (2025-11-16)
+- Summaries: ✅ 75 Enhanced Summaries v2.0 KOMPLETT (2025-11-16)
   - Quality Score: 76.1/100 durchschnittlich
   - Distribution: 21 excellent (>80), 17 good (60-79), 9 fair (<60)
   - Features: Multi-pass analysis, quality scores, cross-validation, practical implications
   - Cost: ~$2.00 actual, ~$7.50 saved through validation tool
 - Vault: ⏳ Generation mit enhanced summaries ausstehend
-- Status: ~70% Pipeline-Execution (47/208 papers = 22.6% of Include set mit Enhanced v2.0)
+- Status: 75 Enhanced Summaries v2.0 von 222 Include-Papers generiert
 
 ### Nächste Schritte
 
 Für SozArb:
 1. ✅ ~~PDF-Akquisition erweitern~~ - 47 Papers verfügbar
-2. ✅ ~~Summarization durchführen~~ - Enhanced v2.0 KOMPLETT (47 papers, 76.1/100 avg)
-3. Vault-Generierung erweitern: Integration der 47 enhanced summaries in SozArb_Research_Vault
+2. ✅ ~~Summarization durchführen~~ - Enhanced v2.0 KOMPLETT (75 papers, 76.1/100 avg)
+3. Vault-Generierung erweitern: Integration der 75 enhanced summaries in SozArb_Research_Vault
 4. Konzeptextraktion: Analyse der Frequenzen und Vernetzung aus enhanced summaries (YAML keywords)
 5. Optional: PDF-Akquisition für weitere 161 Include-Papers (175 total statt 47)
 
 Für Paper-Finalisierung:
-- Aktualisierung der Zahlen in README.md (222/83/20 statt 208/84/33)
+- Aktualisierung der Zahlen in README.md (222/83/20)
 - Klarstellung des Work-in-Progress-Status für SozArb im Paper
-- Dokumentation der PDF-Coverage-Limitation (21%) als methodische Reflexion
+- Dokumentation der PDF-Coverage-Limitation als methodische Reflexion

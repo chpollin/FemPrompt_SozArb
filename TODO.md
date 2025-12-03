@@ -105,7 +105,7 @@
 ## 📅 Normal (Nächste 2 Wochen)
 
 ### 6. Vollständige PDF-Akquisition für SozArb
-**Ziel:** Weitere 161 Include-Papers verarbeiten (von 208 total)
+**Ziel:** Weitere 161 Include-Papers verarbeiten (von 222 total)
 
 **Action Items:**
 - [ ] Aktiviere alle 8 Fallback-Strategien in `getPDF_intelligent.py`
@@ -194,9 +194,9 @@
 
 **Pipeline-Status:**
 - Assessment: ✅ 100% (325/325 papers)
-- PDFs: ✅ 22.6% (47/208 Include-Papers)
-- Markdown: ✅ 22.6% (47/208)
-- Enhanced Summaries v2.0: ✅ 22.6% (47/208)
+- PDFs: ✅ 47 von 222 Include-Papers
+- Markdown: ✅ 47 von 222 Include-Papers
+- Enhanced Summaries v2.0: ✅ 75 summaries (alle vom Nov 16)
 - Vault: ⏳ Integration ausstehend
 - Web Viewer: ⏳ Daten-Integration ausstehend
 
