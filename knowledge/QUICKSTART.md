@@ -1,42 +1,20 @@
-# Quick Start - FemPrompt & SozArb Pipeline
+# quickstart - femprompt & sozarb pipeline
 
-Get started with the literature research pipeline in 10 minutes
+10-minuten-einstieg in die literature research pipeline
 
 ---
 
-## Installation
+## installation
 
-### 1. Clone Repository
+details siehe [technical.md](technical.md#system-requirements)
+
+schnellstart:
 
 ```bash
 git clone <repo-url>
 cd FemPrompt_SozArb
-```
-
-### 2. Install Dependencies
-
-```bash
-# Install all Python packages
 pip install -r requirements.txt
-
-# Key packages installed:
-# - anthropic (Claude API)
-# - pandas, openpyxl (Excel handling)
-# - pyzotero (Zotero API)
-# - docling (PDF conversion)
-```
-
-### 3. Configure API Keys
-
-```bash
-# Linux/Mac
-export ANTHROPIC_API_KEY="sk-ant-your-key-here"
-
-# Windows PowerShell
-$env:ANTHROPIC_API_KEY="sk-ant-your-key-here"
-
-# Or create .env file (recommended):
-echo "ANTHROPIC_API_KEY=sk-ant-your-key-here" > .env
+export ANTHROPIC_API_KEY="sk-ant-your-key"
 ```
 
 ---
@@ -315,6 +293,6 @@ After Quick Start:
 
 ---
 
-Last Updated: 2025-11-16
-Version: 2.1 (Enhanced Pipeline v2.0 + Markdown Validation)
-Status: FemPrompt complete | SozArb Enhanced Summaries v2.0 complete (47 papers) 
+last updated: 2025-12-03
+version: 3.0 (optimiert mit verweisen)
+status: femprompt complete | sozarb enhanced summaries v2.0 complete (75 papers) 
