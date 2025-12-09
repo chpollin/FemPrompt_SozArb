@@ -80,6 +80,58 @@ Die Ausschlussgründe werden standardisiert codiert. Wrong Population markiert S
 
 ---
 
+## FemPrompt Thematisches Assessment-Schema (2024-12)
+
+Ergänzend zum PRISMA-Assessment nutzt das FemPrompt-Projekt ein binäres thematisches Kategorisierungsschema. Dieses Schema wurde von Susi Sackl-Sharif und Sabine Klinger entwickelt und ermöglicht die systematische Erfassung thematischer Überschneidungen zwischen Technik- und Sozial-Dimensionen.
+
+### Forschungsfrage
+
+> Inwiefern kommen die Themen oder die Verknüpfung der Bereiche feministische AI Literacies, generative KI / Prompting und Soziale Arbeit in wissenschaftlicher Literatur vor?
+
+### Bewertungsspalten (binär: Ja/Nein)
+
+**Technik-Dimensionen:**
+
+| Spalte | Beschreibung | Hinweise |
+|--------|--------------|----------|
+| AI_Literacies | AI Literacies / competences | Generell, auch ohne Bezug zu feminist |
+| Generative_KI | Generative KI | ChatGPT, LLMs, Text-zu-Bild, etc. |
+| Prompting | Prompting | Prompt Engineering, Prompt Design |
+| KI_Sonstige | KI undefiniert / regelbasiert / ML | Wenn Hauptfokus → potenzielle Exklusion |
+
+**Feminist / Soziale Ungleichheit / Soziale Arbeit:**
+
+| Spalte | Beschreibung | Hinweise |
+|--------|--------------|----------|
+| Soziale_Arbeit | Soziale Arbeitsbezug | Social Work, Sozialpädagogik |
+| Bias_Ungleichheit | Bias / Soziale Ungleichheit / Inequality | Verzerrung, Diskriminierung |
+| Gender | Gender | Geschlecht, Gender Studies |
+| Diversitaet | Diversität | Diversity, Inklusion |
+| Feministisch | feministisch | Feminismus, feminist theory |
+| Fairness | Fairness | Algorithmic fairness, fair AI |
+
+**Meta-Information:**
+
+| Spalte | Beschreibung | Werte |
+|--------|--------------|-------|
+| Studientyp | Art der Publikation | Empirisch / Theoretisch / Unclear |
+
+### Inklusions-Logik
+
+Ein Paper ist relevant, wenn mindestens eine Technik-Dimension (Spalte 3-5: AI_Literacies, Generative_KI, Prompting) mit mindestens einer Sozial-Dimension (Spalte 7-12) überschneidet:
+
+```
+(AI_Literacies OR Generative_KI OR Prompting) AND (Soziale_Arbeit OR Bias_Ungleichheit OR Gender OR Diversitaet OR Feministisch OR Fairness) → Include
+```
+
+### Bewertungsbasis
+
+- Primär: Abstract
+- Sekundär: Durchscrollen des Beitrags, KI-Unterstützung
+- Alternative Begriffe und Synonyme mitdenken
+
+---
+
 ## Alternative Review-Standards (Methodik)
 
 Neben PRISMA integriert der Workflow komplementäre Frameworks. Das JBI Manual for Evidence Synthesis unterstützt elf Review-Typen mit pluralistischer Evidenzauffassung und pragmatischem Ethos. Die Integration erfolgt primär durch JBI Critical Appraisal Tools für studientypspezifische Qualitätsbewertung. Dreizehn Checklisten decken Analytical Cross Sectional, Case Control, Case Reports, Cohort Studies, Diagnostic Test Accuracy, Economic Evaluations, Prevalence Studies, Qualitative Research, Quasi-Experimental, RCTs, Systematic Reviews und Text and Opinion ab.
