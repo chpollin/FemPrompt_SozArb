@@ -1,164 +1,119 @@
 # project status
 
-last updated: 2025-12-03
+last updated: 2025-12-09
 branch: main
 
 ---
 
 ## current state
 
-beide projekte im femprompt_sozarb repository sind operational mit unterschiedlichen vollständigkeitsgraden.
+das femprompt-projekt befindet sich in der thematischen assessment-phase. susi sackl-sharif und sabine klinger bewerten 303 papers nach neuem binärem schema.
 
 ---
 
-## femprompt (326 papers)
+## femprompt (303 papers) - AKTUELL AKTIV
 
-focus: feminist ai literacies and bias mitigation
+focus: feminist ai literacies, generative ki, prompting und soziale arbeit
 
-status: pipeline komplett durchgelaufen, obsidian vault generiert
-
-vault: femprompt_vault/ mit 16 paper-notizen, 2 concept-notizen
-
-top-konzepte: intersectionality (107x erwähnt), feminist ai (21x), bias mitigation (19x)
+forschungsfrage: inwiefern kommen die themen oder die verknüpfung der bereiche feministische ai literacies, generative ki / prompting und soziale arbeit in wissenschaftlicher literatur vor?
 
 zotero: group library 6080294
 
+### aktueller stand (2025-12-09)
+
+thematisches assessment: IN BEARBEITUNG
+- 303 papers exportiert (254 deepresearch + 49 human 1 collection)
+- neues binäres schema mit 14 spalten (ja/nein)
+- google spreadsheet: https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/
+- bearbeiter: susi sackl-sharif, sabine klinger
+- christina ergänzt metadaten + pdfs in zotero
+
+### thematisches assessment-schema
+
+**technik-dimensionen (ja/nein):**
+- AI_Literacies, Generative_KI, Prompting, KI_Sonstige
+
+**sozial-dimensionen (ja/nein):**
+- Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+
+**inklusions-logik:**
+(AI_Literacies OR Generative_KI OR Prompting) AND (Soziale_Arbeit OR Bias_Ungleichheit OR Gender OR Diversitaet OR Feministisch OR Fairness) → Include
+
+### legacy vault (aus früherer pipeline)
+
+vault: femprompt_vault/ mit 16 paper-notizen, 2 concept-notizen
+top-konzepte: intersectionality (107x erwähnt), feminist ai (21x), bias mitigation (19x)
+
 ---
 
-## sozarb (325 papers)
+## sozarb (325 papers) - PAUSIERT
 
 focus: ai literacy in social work for vulnerable populations
 
-forschungsfrage: wie kann ein systematisches literature review die evidenzbasis für diskriminierungssensibles prompting in der sozialen arbeit schaffen
-
 zotero: group library 6284300 (socialai-litreview-curated)
 
-### pipeline-fortschritt
+### pipeline-fortschritt (stand november 2025)
 
 assessment: komplett (325/325 papers, 100% erfolgsrate)
-- 222 include papers
-- 83 exclude papers
-- 20 unclear papers
-- llm-based mit claude haiku 4.5
-- cost: $0.58, duration: 24 minuten
-- 5-dimensional relevance scoring
-
-pdf acquisition: partiell (47 von 222 include papers)
-- quelle: zotero-synced pdfs
-- hierarchische akquisition implementiert aber nicht vollständig ausgeschöpft
-
-markdown conversion: komplett für akquirierte pdfs (47 papers)
-- tool: docling
-- validation: 46 pass, 1 fail (corrupted file detected and excluded)
-- location: analysis/markdown_papers_socialai/
+- 222 include, 83 exclude, 20 unclear
+- llm-based mit claude haiku 4.5, cost: $0.58
 
 enhanced summarization v2.0: komplett (75 summaries)
-- papers processed: 75 enhanced summaries
 - quality: 76.1/100 durchschnitt
-- distribution: 45% excellent (>80), 36% good (60-79), 19% fair (<60)
-- features: multi-pass analysis, quality scores, cross-validation, stakeholder-specific implications
-- cost: $3.15 actual
-- location: sozarb_research_vault/summaries/
+- cost: $3.15
 
-vault generation: operational
-- papers: 266 files (alle 325 papers mit yaml frontmatter)
-- summaries: 75 enhanced v2.0
-- concepts: 144 files
-- mocs: 13 maps of content
-- location: sozarb_research_vault/
+vault: sozarb_research_vault/ (266 papers, 144 concepts, 13 mocs)
 
-web viewer: implementiert aber nicht deployed
-- papers: 264 exported to json
-- network: 896 edges
-- features: search, filters, interactive visualization
-- location: docs/
-- status: not yet deployed to github pages
+web viewer: docs/ (nicht deployed)
 
 ---
 
 ## nächste schritte
 
-### sozarb kurzfristig
+### femprompt (priorität 1)
 
-vault integration: enhanced summaries in paper-files einbetten
+1. susi & sabine: thematisches assessment im google spreadsheet
+2. christina: metadaten + pdf-links in zotero ergänzen
+3. nach assessment: neuer export mit aktualisierten daten
+4. pipeline: pdf acquisition → markdown → summaries → vault
 
-pdf acquisition: weitere 175 include papers (222 total statt 47)
-- aktivierung aller 8 fallback-strategien
-- erwartete coverage: 70-80%
-- aufwand: 2-3 tage
+### sozarb (pausiert)
 
-enhanced summarization: weitere papers verarbeiten (147 additional)
-- cost estimate: $6.17
-- duration estimate: 6-7 stunden
-
-web viewer deployment: github pages aktivierung
-- aufwand: 5 minuten
-- url: https://chpollin.github.io/femprompt_sozarb/
-
-### beide projekte langfristig
-
-documentation consolidation: complete-guide.md löschen (redundant), status.md aktualisieren, journal.md archivieren
-
-feminist analysis extension: adaptive prompts mit 9 dimensionen für high-relevance papers
-
-meta-synthesis: aggregierte feministische kritik-dokumente
+- weitere 147 papers summarisieren ($6.17)
+- web viewer deployment zu github pages
 
 ---
 
 ## kosten & performance
 
-### tatsächliche kosten (sozarb)
+### femprompt (aktuell)
+- thematisches assessment: $0 (manuell durch team)
+- geschätzt nach assessment: ~$10-15 für pipeline
 
-llm assessment: $0.58 (325 papers)
-enhanced summarization v2.0: $3.15 (75 papers)
-total spent: $3.73
-
-### geschätzte kosten (verbleibend)
-
-pdf acquisition: $0 (keine api costs)
-markdown conversion: $0 (lokal)
-summarization weitere 147 papers: $6.17
-total für full corpus: ca. $9.90
+### sozarb (historisch)
+- llm assessment: $0.58
+- enhanced summarization: $3.15
+- total spent: $3.73
 
 ---
 
-## technische infrastruktur
+## team
 
-pipeline orchestrator: run_pipeline.py (5 stages)
-
-stage 1: getpdf_intelligent.py (8 fallback strategies)
-stage 2: pdf-to-md-converter.py (docling)
-stage 3: summarize_documents_enhanced.py (claude haiku 4.5, multi-pass)
-stage 4: generate_obsidian_vault_improved.py (concept extraction)
-stage 5: test_vault_quality.py (validation)
-
-zusätzliche tools:
-- validate_markdown_quality.py (corruption detection)
-- integrate_summaries_direct.py (vault embedding)
-- create_bidirectional_concept_links.py (concept linking)
-- export_vault_to_web_data.py (web viewer json)
-
-llm assessment: assessment-llm/assess_papers.py (100% automated)
+- christopher pollin: technische infrastruktur, pipeline
+- susi sackl-sharif: thematisches assessment, forschungsleitung
+- sabine klinger: thematisches assessment
+- christina: zotero-kuratierung, metadaten
 
 ---
 
 ## dokumentation
 
-alle dokumentation in knowledge/ folder:
-- map-of-content.md: zentrale navigation
-- quickstart.md: 10-minuten-setup
-- technical.md: vollständige technische referenz
-- methodology.md: prisma 2020 framework
-- theoretical-framework.md: feministische epistemologie
-- assessment-llm.md: llm assessment system
-- obsidian-web-publishing.md: web viewer strategie
-- journal.md: entwicklungshistorie (zu archivieren)
-- analysis-report.md: redundanz-analyse
-
-root dokumentation:
-- readme.md: projekt-übersicht
-- claude.md: arbeitsregeln für claude
+knowledge/ folder:
+- map-of-content.md: navigation
+- methodology.md: prisma + thematisches schema
+- technical.md: pipeline-referenz
+- journal.md: entwicklungshistorie
 
 ---
 
-version: 3.0 (gekürzt auf aktuellen status)
+version: 4.0 (femprompt thematisches assessment)

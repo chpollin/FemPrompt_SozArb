@@ -43,57 +43,33 @@ Das Projekt liefert keine empirische Validierung von Prompting-Strategien. Es be
 
 Die methodischen Grenzen umfassen die Zirkularität der LLM-gestützten LLM-Kritik, die Opazität der verwendeten Modelle, die potenzielle Reproduktion sprachlicher und geografischer Bias durch englischsprachige Modelle und die Abhängigkeit von proprietären Systemen. Diese Limitationen werden transparent dokumentiert und reflektiert, können aber nicht vollständig eliminiert werden.
 
-## Status
+## Status (Stand 2025-12-09)
 
-### Infrastruktur
+### Aktueller Fokus: FemPrompt Thematisches Assessment
 
-Die technische Infrastruktur ist vollständig entwickelt und getestet. Der Master-Orchestrator run_pipeline.py koordiniert alle fünf Verarbeitungsstufen mit Checkpoint-Recovery und Stage-Selection. Die pipeline_config.yaml definiert alle operationalen Parameter. Das Skript getPDF_intelligent.py implementiert hierarchische PDF-Akquisition mit acht Fallback-Strategien. Das Skript pdf-to-md-converter.py nutzt Docling für strukturerhaltende Konversion. Das Skript summarize-documents.py führt fünfstufige Claude Haiku 4.5-Analyse durch. Das Skript generate_obsidian_vault_improved.py generiert navigierbare Obsidian-Vaults mit Konzeptextraktion. Das Skript test_vault_quality.py validiert Vault-Qualität systematisch.
+Das FemPrompt-Projekt befindet sich in der thematischen Assessment-Phase. Susi Sackl-Sharif und Sabine Klinger bewerten 303 Papers nach einem neuen binären Schema.
 
-Die Assessment-Infrastruktur verbindet Zotero mit Excel-basierten Bewertungen. Das Skript zotero_to_excel.py extrahiert direkt via Zotero API. Das Skript excel_to_ris.py führt Bewertungen zurück in RIS-Format. Die Roundtrip-Validierung durch test_assessment_workflow.py sichert Datenintegrität. Alle Python-Abhängigkeiten außer google-generativeai sind installiert. Die requirements.txt muss aktualisiert werden.
+**Thematisches Assessment:**
+- 303 Papers exportiert (254 DeepResearch + 49 Human 1 Collection)
+- Neues binäres Schema mit 14 Spalten (Ja/Nein)
+- Google Spreadsheet aktiv: https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/
+- Christina ergänzt Metadaten + PDFs in Zotero
 
-### Datensammlung
+**Assessment-Schema:**
+- Technik: AI_Literacies, Generative_KI, Prompting, KI_Sonstige
+- Sozial: Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+- Meta: Studientyp (Empirisch/Theoretisch/Unclear)
 
-Die Multi-Modell-Recherche wurde durchgeführt. Vier KI-Modelle (ChatGPT Research Mode, Claude Research, Gemini Deep Think, Perplexity Deep Research) produzierten modellspezifische Bibliographien. Die Ergebnisse wurden in Zotero "_DEEPRESEARCH"-Collections organisiert. Der konsolidierte Export umfasst 326 Einträge in zotero_vereinfacht.json für beide Projekte (FemPrompt und SozArb).
+### SozArb (Pausiert)
 
-Das LLM-basierte Assessment wurde mit Claude Haiku 4.5 durchgeführt. Für SozArb wurden 325 Papers bewertet mit 100% Erfolgsrate (24 Minuten, $0.58 Kosten). Die Ergebnisse: 222 Include (68.3%), 83 Exclude (25.5%), 20 Unclear (6.2%). Das 5-dimensionale Bewertungsschema erfasst AI/LLM-Kompetenzen, Vulnerable Gruppen, Bias, praktische Implementation und professionellen Kontext auf einer 0-3 Skala.
-
-### Pipeline-Execution
-
-#### FemPrompt (Projekt 1 - Komplett)
-Die vollständige Pipeline wurde End-to-End durchlaufen:
-- PDFs: 61 Dateien in analysis/pdfs/ akquiriert
-- Markdown: 26 Dateien in analysis/markdown_papers/ konvertiert
-- Summaries: 10 Legacy-Summaries in analysis/summaries_final/ vorhanden
-- Vault: FemPrompt_Vault/ generiert mit 16 Paper-Notizen, 2 Concept-Notizen
-- Top-Konzepte: Intersectionality (107x erwähnt), Feminist AI (21x), Bias Mitigation (19x)
-- Status:  Abgeschlossen, Wissensgraph verfügbar
-
-#### SozArb (Projekt 2 - In Progress)
-Die Pipeline befindet sich im erweiterten Summarization-Stadium:
-- Assessment: ✅ 325/325 Papers (100% Erfolgsrate)
-- PDFs: 47 Dateien in analysis/pdfs_socialai/ (von 222 Include-Papers)
-  - Nur automatisch aus Zotero-Bibliothek verfügbare PDFs verarbeitet
-  - Hierarchische Akquisitionsstrategie implementiert, aber nicht vollständig ausgeschöpft
-- Markdown: 47 Dateien in analysis/markdown_papers_socialai/ konvertiert
-  - Validation: 46 PASS, 1 FAIL (corrupted file detected and excluded)
-- Summaries: ✅ 75 Enhanced Summaries v2.0 KOMPLETT (2025-11-16)
-  - Quality Score: 76.1/100 durchschnittlich
-  - Distribution: 21 excellent (>80), 17 good (60-79), 9 fair (<60)
-  - Features: Multi-pass analysis, quality scores, cross-validation, practical implications
-  - Cost: ~$2.00 actual, ~$7.50 saved through validation tool
-- Vault: ⏳ Generation mit enhanced summaries ausstehend
-- Status: 75 Enhanced Summaries v2.0 von 222 Include-Papers generiert
+Das SozArb-Projekt ist pausiert. Stand November 2025:
+- Assessment: 325/325 Papers (222 Include, 83 Exclude, 20 Unclear)
+- Enhanced Summaries: 75 von 222 Include-Papers (76.1/100 avg quality)
+- Vault: SozArb_Research_Vault/ (266 papers, 144 concepts)
 
 ### Nächste Schritte
 
-Für SozArb:
-1. ✅ ~~PDF-Akquisition erweitern~~ - 47 Papers verfügbar
-2. ✅ ~~Summarization durchführen~~ - Enhanced v2.0 KOMPLETT (75 papers, 76.1/100 avg)
-3. Vault-Generierung erweitern: Integration der 75 enhanced summaries in SozArb_Research_Vault
-4. Konzeptextraktion: Analyse der Frequenzen und Vernetzung aus enhanced summaries (YAML keywords)
-5. Optional: PDF-Akquisition für weitere 161 Include-Papers (175 total statt 47)
-
-Für Paper-Finalisierung:
-- Aktualisierung der Zahlen in README.md (222/83/20)
-- Klarstellung des Work-in-Progress-Status für SozArb im Paper
-- Dokumentation der PDF-Coverage-Limitation als methodische Reflexion
+1. Susi & Sabine: Thematisches Assessment im Google Spreadsheet abschließen
+2. Christina: Metadaten + PDF-Links in Zotero ergänzen
+3. Nach Assessment: Neuer Export mit aktualisierten Daten
+4. Pipeline: PDF Acquisition → Markdown → Summaries → Vault für inkludierte Papers

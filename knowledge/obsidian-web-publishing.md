@@ -668,6 +668,6 @@ Deployment readiness: 10-13 hours total estimated → Launch possible within 2 w
 
 ---
 
-*Last updated: 2025-11-16*
-*Document version: 2.1 (Updated with Enhanced Pipeline v2.0 status)*
-*Status: Active development, 47 SozArb summaries ready for web integration*
+*Last updated: 2025-12-09*
+*Document version: 2.2 (FemPrompt thematisches assessment)*
+*Status: Pausiert - FemPrompt thematisches assessment hat Priorität*

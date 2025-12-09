@@ -1333,7 +1333,7 @@ FemPrompt_SozArb/
 
 ---
 
-*Document Version: 2.1*
-*Last Modified: 2025-11-16*
-*Major Changes: Enhanced Summarization Pipeline v2.0, Vault Enhancement Scripts*
+*Document Version: 2.2*
+*Last Modified: 2025-12-09*
+*Major Changes: FemPrompt Thematisches Assessment (303 papers, binäres Schema)*
 *Author: AI-assisted systematic literature research pipeline*

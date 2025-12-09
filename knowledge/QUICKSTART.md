@@ -293,6 +293,6 @@ After Quick Start:
 
 ---
 
-last updated: 2025-12-03
-version: 3.0 (optimiert mit verweisen)
-status: femprompt complete | sozarb enhanced summaries v2.0 complete (75 papers) 
+last updated: 2025-12-09
+version: 3.1 (femprompt thematisches assessment)
+status: femprompt thematisches assessment in bearbeitung (303 papers) | sozarb pausiert 
