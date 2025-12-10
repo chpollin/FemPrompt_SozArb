@@ -1,7 +1,7 @@
 # Technical Documentation - FemPrompt & SozArb Literature Research Pipeline
 
-Last Updated: 2025-11-16
-Pipeline Version: 2.1 (Enhanced Summarization)
+Last Updated: 2025-12-10
+Pipeline Version: 2.2 (Thematic Assessment Script)
 Implementation Status: ~90% Complete
 
 ---
@@ -191,6 +191,56 @@ The assessment system is fully parametric and can be adapted:
    ```
 
 See `assessment-llm/prompt_template_EXAMPLE_SOCIAL_WORK.md` for adaptation example.
+
+---
+
+## Thematic Assessment Excel Generator (NEW)
+
+### Overview
+Purpose: Create formatted Excel for manual thematic assessment (FemPrompt project)
+Script: `assessment/create_thematic_assessment.py`
+Status: Operational, tested with 304 papers
+
+### Features
+- Fetches all papers from Zotero API (public group, no API key needed)
+- 14 thematic columns with Ja/Nein dropdowns
+- Color-coded headers:
+  - Blue: Technik-Dimensionen (AI_Literacies, Generative_KI, Prompting, KI_Sonstige)
+  - Green: Sozial-Dimensionen (Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness)
+  - Orange: Meta (Studientyp, Decision, Exclusion_Reason, Notes)
+- Dropdown validations for structured input
+- Frozen header row and first columns
+- Alphabetical sorting by Author_Year
+- Google Sheets compatible
+
+### Running the Script
+
+```bash
+# Default: Create assessment_full.xlsx from FemPrompt library
+python assessment/create_thematic_assessment.py
+
+# Custom output file
+python assessment/create_thematic_assessment.py --output assessment/my_assessment.xlsx
+
+# Different Zotero library
+python assessment/create_thematic_assessment.py --library-id 6284300
+
+# With API key (for private libraries)
+python assessment/create_thematic_assessment.py --api-key YOUR_KEY
+```
+
+### Column Structure (25 columns total)
+1. **Metadata (11)**: ID, Zotero_Key, Author_Year, Title, DOI, Item_Type, Publication_Year, Language, Source_Tool, Abstract, URL
+2. **Technik (4)**: AI_Literacies, Generative_KI, Prompting, KI_Sonstige
+3. **Sozial (6)**: Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+4. **Meta (4)**: Studientyp, Decision, Exclusion_Reason, Notes
+
+### Workflow
+1. Run script → generates `assessment/assessment_full.xlsx`
+2. Upload to Google Sheets
+3. Share with team for collaborative assessment
+4. After assessment complete: export back to Excel
+5. Run pipeline with filtered papers (Decision = Include)
 
 ---
 
