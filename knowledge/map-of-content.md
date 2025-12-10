@@ -55,32 +55,6 @@ chronologische dokumentation aller entwicklungsschritte, technische entscheidung
 
 ---
 
-## dokument-funktionen
-
-quickstart.md: schnelleinstieg (10 minuten), installation, quick run examples, 7-step workflow kompakt, troubleshooting
-
-technical.md: zentrale technische referenz, system overview, requirements, pipeline architecture, stage-by-stage dokumentation, api reference
-
-status.md: aktueller projektstatus, femprompt thematisches assessment, sozarb pausiert, next steps
-
-methodology.md: prisma 2020 framework, thematisches assessment-schema (ja/nein spalten), inklusions-logik
-
-theoretical-framework.md: feministische epistemologie, situiertes wissen, intersektionalität, response-ability, llm-ontologie
-
-project-overview.md: forschungsfrage, zielsetzung, theoretischer rahmen überblick, methodischer ansatz, scope und grenzen
-
-operational-guides.md: prompt-templates (deep research, ris-konvertierung, dokumenten-zusammenfassung), benchmarks und schwellenwerte
-
-assessment-llm.md: llm assessment system, assessment schema, performance results, error handling & auto-repair, quality checks
-
-obsidian-web-publishing.md: web viewer strategie, technische implementierung vanilla js, web viewer features, data export system, deployment
-
-journal.md: entwicklungschronologie, detaillierte session-logs, aktuelle session: femprompt thematisches assessment
-
-analysis-report.md: dokumentationsstruktur-analyse, redundanzen identifikation, 40% einsparungspotenzial, priorisierte maßnahmenempfehlungen
-
----
-
 ## informationsfluss
 
 einstieg → quickstart.md → technical.md (für details)

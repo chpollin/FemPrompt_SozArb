@@ -183,7 +183,7 @@ nachher:
 
 ### nächste schritte (nicht in dieser session)
 
-aus analyse-report.md identifiziert:
+aus [analysis-report.md](analysis-report.md) identifiziert (detaillierte analyse: 6.003 → 3.615 zeilen, 40% reduktion):
 - pipeline_config.yaml in technical.md verlinken
 - 8 undokumentierte python scripts dokumentieren
 - test-scripts-sektion in technical.md hinzufügen
