@@ -1,76 +1,86 @@
-# knowledge base map of content
-
-zentrale navigation für die femprompt & sozarb pipeline dokumentation
-
-letzte aktualisierung: 2025-12-09
-
 ---
-
-## einstieg
-
-neu im projekt: [quickstart.md](quickstart.md)
-installation, erste schritte, beispiele für neue nutzer. 10-minuten-setup mit allen wichtigen befehlen.
-
-aktueller status: [status.md](status.md)
-wo steht das projekt, was ist erreicht, nächste schritte. aktuell: femprompt thematisches assessment (303 papers).
-
-vollständige analyse: [analysis-report.md](analysis-report.md)
-detaillierte analyse der dokumentationsstruktur, identifikation von redundanzen, optimierungsempfehlungen.
-
+type: vault-organisation
+created: 2026-01-05
+tags: [moc, hub, social-work, ai-literacy]
+status: complete
 ---
+# FemPrompt-SozArb - Map of Content
 
-## technische dokumentation
+## Summary
 
-technische referenz: [technical.md](technical.md)
-komplette technische dokumentation. system requirements, pipeline architecture (5 stages), api reference, error handling, testing. zentrale referenz für entwickler.
+Einstiegspunkt für das Literature Review zu feministischem Prompting und AI-Literacy in der Sozialarbeit. Teil des [[SocialAI MOC|SocialAI-Projekts]].
 
-llm assessment: [assessment-llm.md](assessment-llm.md)
-llm-based prisma assessment system. automatisierte bewertung von papers mit claude haiku 4.5, 5-dimensionale relevanz-scores, 100% erfolgsrate.
+## Aktueller Status (Februar 2026)
 
-web viewer: [obsidian-web-publishing.md](obsidian-web-publishing.md)
-web viewer strategie und implementierung. vanilla javascript ansatz, github pages deployment, design system, interaktive visualisierung.
+> [!info] Pipeline-Status
+> - **FemPrompt:** 303 Papers, thematisches Assessment läuft (Susi, Sabine)
+> - **SozArb:** 325 Papers, Vault operativ (266 Papers, 144 Konzepte), pausiert
+> - **Nächster Schritt:** Assessment abschließen → Pipeline ausführen
 
----
+| Phase | FemPrompt | SozArb |
+|-------|-----------|--------|
+| Deep Research | ✅ 303 Papers | ✅ 325 Papers |
+| Human Assessment | 🔄 Läuft | ✅ Abgeschlossen |
+| LLM Assessment | ⏸️ Wartet | ✅ 100% (222 Include) |
+| PDF-Akquise | ⏸️ Wartet | ⏸️ 70% |
+| Vault | ⏸️ Wartet | ✅ Operativ |
 
-## forschungskontext (deutsch)
+## Paper in Arbeit
 
-projekt-übersicht: [project-overview.md](project-overview.md)
-forschungsfragen, zielsetzung, scope und grenzen. deutsche perspektive auf das gesamtprojekt.
+- [[Forum Wissenschaft Paper - Arbeitsplan]]: Deadline 4. Mai 2026, 18.000 Zeichen
 
-theoretischer rahmen: [theoretical-framework.md](theoretical-framework.md)
-feministische epistemologie. situiertes wissen (haraway), intersektionalität (crenshaw), response-ability, llm-ontologie und alignment-forschung.
+## Hauptdokument
 
-methodik: [methodology.md](methodology.md)
-prisma 2020 framework, thematisches assessment-schema (femprompt 2024-12), multi-modell-recherche, qualitätsbewertung.
+- [[Workflow für eine Deep-Research-gestützte Literaturanalyse am Beispiel von feministischem AI-Literacy]]: Methodische Beschreibung des PRISMA-konformen Multi-Model Literature Review Workflows
+- [[Abstract - Deep-Research-gestützte Literature Reviews]]: Konferenzabstract zum methodischen Experiment
 
-operative anleitungen: [operational-guides.md](operational-guides.md)
-prompt-templates, benchmarks und schwellenwerte, inter-rater-reliabilität.
+## Technische Dokumentation
 
----
+- [[Literature Review Pipeline - Technische Dokumentation]]: Detaillierte Pipeline-Beschreibung (Python-Skripte, Stages, Konfiguration)
+- [[Human-LLM Assessment Benchmark]]: Benchmark-Spezifikation für Human-LLM-Vergleich (Kategorien, Datenformate, Metriken)
 
-## entwicklungshistorie
+## Prompts
 
-entwicklungs-journal: [journal.md](journal.md)
-chronologische dokumentation aller entwicklungsschritte, technische entscheidungen, learnings. letzte session: 2025-12-09 (femprompt thematisches assessment).
+- [[Parametrisierbarer Literature-Analysis-Prompt]]: Wiederverwendbarer Prompt-Baukasten für Deep Research
 
----
+## Forschungsfragen
 
-## informationsfluss
+1. Wie manifestiert sich Bias in Frontier-LLMs kontextabhängig?
+2. Welche Prompt-Strategien ermöglichen diskriminierungssensible KI-Nutzung?
+3. Wie können Sozialarbeitende AI-Literacy entwickeln, die der Systemkomplexität gerecht wird?
 
-einstieg → quickstart.md → technical.md (für details)
-forschung → project-overview.md → theoretical-framework.md (theorie) + methodology.md (methodik)
-entwicklung → journal.md (historie) → status.md (aktuell)
-module → assessment-llm.md (llm assessment) + obsidian-web-publishing.md (web viewer)
-optimierung → analysis-report.md (redundanzen, empfehlungen)
+## Repository
 
----
+GitHub: [FemPrompt_SozArb](https://github.com/chpollin/FemPrompt_SozArb) - Transparente Dokumentation aller Prompts, Zwischenergebnisse und Entscheidungsprozesse.
 
-## projekte
+**Verzeichnisstruktur:**
+```
+FemPrompt_SozArb/
+├── analysis/              # 33 Python-Scripts (Kern-Pipeline)
+├── assessment-llm/        # LLM-basiertes PRISMA-Assessment
+├── assessment/            # Manuelles Assessment (FemPrompt)
+├── FemPrompt_Vault/       # Obsidian Vault (in Entwicklung)
+├── SozArb_Research_Vault/ # Operativer Vault (266 Papers)
+├── docs/                  # Web-Viewer (GitHub Pages ready)
+├── knowledge/             # Dokumentation
+└── deep-research/         # Multi-Model Outputs
+```
 
-femprompt (303 papers): feminist ai literacies, generative ki, prompting und soziale arbeit. status: thematisches assessment in bearbeitung. google spreadsheet aktiv. zotero group library 6080294.
+## Offene Aufgaben
 
-sozarb (325 papers): ai literacy in social work for vulnerable populations. status: pausiert. pipeline: assessment komplett (222 include), 75 enhanced summaries v2.0. zotero group library 6284300.
+> [!warning] TODO: Meeting mit Susi
+> Kategoriendefinitionen wurden überarbeitet. Abstimmung vor Assessment-Fortführung nötig.
 
----
+1. ⏳ Meeting mit Susi — Kategorien finalisieren
+2. ⏳ Assessment abschließen — 303 Papers (Susi & Sabine)
+3. ⏳ Metadata in Zotero ergänzen
+4. ⏳ Pipeline ausführen (PDF → Markdown → Summary → Vault)
+5. ⏳ Vergleichsanalyse (LLM vs. Human Assessment)
+6. ⏳ Paper schreiben (Deadline: 4. Mai 2026)
 
-version: 3.0 (femprompt thematisches assessment update)
+## Related
+
+- [[SocialAI MOC]]: Übergeordnetes Projekt
+- [[Framework zur Bias-Evaluierung in KI gestützter Sozialarbeit]]: FAIR-SW-Bench
+- [[Applied-GenerativeAI MOC]]: KI-Grundlagen
+- [[Promptotyping MOC]]: Methodologie

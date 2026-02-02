@@ -1,0 +1,140 @@
+# FemPrompt Assessment Categories
+# Version: 1.0 (Draft - pending review with Susi/Sabine)
+# Synchronized with Human-Assessment Google Sheets schema
+
+metadata:
+  project: FemPrompt Literature Review
+  last_updated: 2026-02-02
+  status: draft
+
+categories:
+  # Technik-Dimensionen
+  - name: AI_Literacies
+    definition: >
+      Das Paper behandelt Kompetenzen, Fähigkeiten oder Wissen im Umgang
+      mit KI-Systemen. Umfasst kritische Reflexion, technisches Verständnis
+      oder praktische Anwendungskompetenz.
+    type: binary
+    group: technik
+    examples_positive:
+      - "Framework für KI-Kompetenzentwicklung"
+      - "Curriculum für AI Literacy in Schulen"
+    examples_negative:
+      - "Rein technische KI-Implementierung ohne Bildungsbezug"
+
+  - name: Generative_KI
+    definition: >
+      Fokus auf generative KI-Modelle wie Large Language Models,
+      Bildgeneratoren oder andere generative Systeme.
+    type: binary
+    group: technik
+    examples_positive:
+      - "ChatGPT in der Beratung"
+      - "Midjourney für kreative Prozesse"
+    examples_negative:
+      - "Klassische ML-Klassifikation ohne generativen Aspekt"
+
+  - name: Prompting
+    definition: >
+      Behandelt Prompt-Engineering, Prompt-Strategien oder die Gestaltung
+      von Eingaben für KI-Systeme.
+    type: binary
+    group: technik
+    examples_positive:
+      - "Chain-of-Thought Prompting für Bias-Reduktion"
+      - "Prompt-Templates für Dokumentation"
+    examples_negative:
+      - "KI-Nutzung ohne Fokus auf Eingabegestaltung"
+
+  - name: KI_Sonstige
+    definition: >
+      Andere KI-Themen, die nicht in die obigen Kategorien fallen
+      (klassisches ML, Robotik, Computer Vision ohne generativen Fokus).
+    type: binary
+    group: technik
+    note: "Wenn Hauptfokus → potenzielle Exklusion"
+
+  # Sozial-Dimensionen
+  - name: Soziale_Arbeit
+    definition: >
+      Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung
+      oder den Zielgruppen Sozialer Arbeit.
+    type: binary
+    group: sozial
+    examples_positive:
+      - "KI in der Jugendhilfe"
+      - "Algorithmische Entscheidungssysteme im Sozialamt"
+    examples_negative:
+      - "Allgemeine KI-Ethik ohne Sozialarbeitsbezug"
+
+  - name: Bias_Ungleichheit
+    definition: >
+      Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit
+      oder strukturelle Benachteiligung im KI-Kontext.
+    type: binary
+    group: sozial
+
+  - name: Gender
+    definition: >
+      Expliziter Gender-Fokus, Geschlechterperspektive oder
+      Analyse von Gender-Bias.
+    type: binary
+    group: sozial
+
+  - name: Diversitaet
+    definition: >
+      Thematisiert Diversität, Inklusion oder Repräsentation
+      verschiedener Gruppen.
+    type: binary
+    group: sozial
+
+  - name: Feministisch
+    definition: >
+      Verwendet explizit feministische Theorie, Methodik oder Perspektive.
+      Bezugnahme auf feministische Autor:innen oder Konzepte.
+    type: binary
+    group: sozial
+    examples_positive:
+      - "Intersektionale Analyse nach Crenshaw"
+      - "Kritik aus feministischer Technikforschung"
+    examples_negative:
+      - "Gender erwähnt, aber ohne feministische Rahmung"
+
+  - name: Fairness
+    definition: >
+      Thematisiert algorithmische Fairness, faire ML-Systeme
+      oder Fairness-Metriken.
+    type: binary
+    group: sozial
+
+decision:
+  field: Decision
+  options:
+    - Include
+    - Exclude
+    - Unclear
+  include_criteria: >
+    Paper wird eingeschlossen, wenn mindestens eine Technik-Dimension
+    (AI_Literacies, Generative_KI, Prompting) UND mindestens eine
+    Sozial-Dimension (Soziale_Arbeit, Bias_Ungleichheit, Gender,
+    Diversitaet, Feministisch, Fairness) zutrifft.
+
+exclusion_reasons:
+  - code: Duplicate
+    description: Identische Publikation aus anderem Source_Tool
+  - code: Not_relevant_topic
+    description: Thematisch nicht passend
+  - code: Wrong_publication_type
+    description: Ungeeigneter Publikationstyp (Blogbeitrag, etc.)
+  - code: No_full_text
+    description: Kein Volltext verfügbar
+  - code: Language
+    description: Sprache nicht zugänglich
+
+study_types:
+  - Empirisch
+  - Experimentell
+  - Theoretisch
+  - Konzept
+  - Literaturreview
+  - Unclear

@@ -128,11 +128,19 @@ web viewer: docs/ (nicht deployed)
 ## dokumentation
 
 knowledge/ folder:
-- map-of-content.md: navigation
+- map-of-content.md: navigation (obsidian-style MOC)
 - methodology.md: prisma + thematisches schema
 - technical.md: pipeline-referenz
 - journal.md: entwicklungshistorie
+- paper/: forum wissenschaft paper + benchmark-spezifikation
+- prompts/: wiederverwendbare prompt-templates
+
+benchmark/ folder:
+- config/categories.yaml: 10 binäre kategorien (identisch mit human-assessment)
+- scripts/: merge, agreement, disagreement-analyse
+- data/: human + llm assessment CSVs
+- results/: metriken + visualisierungen
 
 ---
 
-version: 4.2 (repository aufgeräumt)
+version: 4.3 (knowledge + benchmark struktur)
