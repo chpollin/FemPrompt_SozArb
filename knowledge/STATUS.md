@@ -37,12 +37,12 @@ thematisches assessment: IN BEARBEITUNG
 | imported_url | 1 | url-referenz |
 | linked_url | 1 | externe verlinkung |
 
-**lokaler bestand:**
+**lokaler bestand (konsolidiert 2026-02-02):**
 | verzeichnis | pdfs | größe |
 |-------------|------|-------|
-| analysis/pdfs/ | 95 | 241 MB |
-| analysis/pdfs_socialai/ | 65 | 146 MB |
-| analysis/pdfs_sozarb/ | 65 | 144 MB |
+| analysis/pdfs/ | 97 | ~243 MB |
+
+*Hinweis: Redundante Verzeichnisse `pdfs_socialai/` und `pdfs_sozarb/` wurden aufgeräumt und in `pdfs/` konsolidiert.*
 
 **nächster schritt:** 294 PDFs von Zotero herunterladen mit `getPDF_intelligent.py --source zotero`
 
@@ -90,7 +90,7 @@ web viewer: docs/ (nicht deployed)
 
 ### femprompt (priorität 1)
 
-1. **PDFs von Zotero holen** - 294 PDFs verfügbar, 95 lokal vorhanden → ~200 neue PDFs laden
+1. **PDFs von Zotero holen** - 294 PDFs verfügbar, 97 lokal vorhanden → ~197 neue PDFs laden
 2. susi & sabine: thematisches assessment im google spreadsheet abschließen
 3. christina: metadaten + pdf-links in zotero ergänzen
 4. nach assessment: neuer export mit aktualisierten daten
@@ -135,4 +135,4 @@ knowledge/ folder:
 
 ---
 
-version: 4.1 (pdf-bestand dokumentiert)
+version: 4.2 (repository aufgeräumt)
