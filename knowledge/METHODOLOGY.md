@@ -1,7 +1,7 @@
 ---
 type: knowledge
 created: 2025-01-31
-updated: 2025-11-07
+updated: 2026-02-02
 tags: [prisma, workflow, deep-research, assessment, synthesis, systematic-review]
 status: active
 ---
@@ -80,7 +80,7 @@ Die Ausschlussgründe werden standardisiert codiert. Wrong Population markiert S
 
 ---
 
-## FemPrompt Thematisches Assessment-Schema (2024-12)
+## FemPrompt Thematisches Assessment-Schema (2024-12, aktualisiert 2026-02)
 
 Ergänzend zum PRISMA-Assessment nutzt das FemPrompt-Projekt ein binäres thematisches Kategorisierungsschema. Dieses Schema wurde von Susi Sackl-Sharif und Sabine Klinger entwickelt und ermöglicht die systematische Erfassung thematischer Überschneidungen zwischen Technik- und Sozial-Dimensionen.
 
@@ -88,9 +88,25 @@ Ergänzend zum PRISMA-Assessment nutzt das FemPrompt-Projekt ein binäres themat
 
 > Inwiefern kommen die Themen oder die Verknüpfung der Bereiche feministische AI Literacies, generative KI / Prompting und Soziale Arbeit in wissenschaftlicher Literatur vor?
 
-### Bewertungsspalten (binär: Ja/Nein)
+### Excel-Spaltenstruktur (vollständig)
 
-**Technik-Dimensionen:**
+**Metadaten-Spalten:**
+
+| Spalte | Beschreibung | Beispiel |
+|--------|--------------|----------|
+| ID | Laufende Nummer | 115 |
+| Zotero_Key | Zotero Item Key | Z4YXX9PZ |
+| Author_Year | Autor und Jahr kombiniert | Kamruzzaman (2024) |
+| Title | Titel der Publikation | Prompting techniques... |
+| DOI | Digital Object Identifier | 10.48550/arXiv.2404.17218 |
+| Item_Type | Zotero Item Type | journalArticle, report, conferencePaper |
+| Publication_Year | Publikationsjahr | 2024 |
+| Language | Sprache (optional) | en, de |
+| Source_Tool | Deep Research Modell-Herkunft | Perplexity, ChatGPT, Claude, Gemini, Manual |
+| Abstract | Abstract oder Zusammenfassung | Study evaluates... |
+| URL | URL zur Quelle | https://doi.org/... |
+
+**Technik-Dimensionen (binär: Ja/Nein):**
 
 | Spalte | Beschreibung | Hinweise |
 |--------|--------------|----------|
@@ -99,7 +115,7 @@ Ergänzend zum PRISMA-Assessment nutzt das FemPrompt-Projekt ein binäres themat
 | Prompting | Prompting | Prompt Engineering, Prompt Design |
 | KI_Sonstige | KI undefiniert / regelbasiert / ML | Wenn Hauptfokus → potenzielle Exklusion |
 
-**Feminist / Soziale Ungleichheit / Soziale Arbeit:**
+**Feminist / Soziale Ungleichheit / Soziale Arbeit (binär: Ja/Nein):**
 
 | Spalte | Beschreibung | Hinweise |
 |--------|--------------|----------|
@@ -114,21 +130,36 @@ Ergänzend zum PRISMA-Assessment nutzt das FemPrompt-Projekt ein binäres themat
 
 | Spalte | Beschreibung | Werte |
 |--------|--------------|-------|
-| Studientyp | Art der Publikation | Empirisch / Theoretisch / Unclear |
+| Studientyp | Art der Publikation | Empirisch, Experimentell, Theoretisch, Konzept, Literaturreview, Unclear |
+| Decision | Einschlussentscheidung | Include, Exclude, Unclear |
+| Exclusion_Reason | Grund für Ausschluss | Duplicate, Not relevant topic, Wrong publication type, No full text |
+| Notes | Freitext-Kommentare | DOI fehlt noch, Fehlerhinweise, Nachbearbeitungsbedarf |
 
 ### Inklusions-Logik
 
-Ein Paper ist relevant, wenn mindestens eine Technik-Dimension (Spalte 3-5: AI_Literacies, Generative_KI, Prompting) mit mindestens einer Sozial-Dimension (Spalte 7-12) überschneidet:
+Ein Paper ist relevant, wenn mindestens eine Technik-Dimension (AI_Literacies, Generative_KI, Prompting) mit mindestens einer Sozial-Dimension überschneidet:
 
 ```
 (AI_Literacies OR Generative_KI OR Prompting) AND (Soziale_Arbeit OR Bias_Ungleichheit OR Gender OR Diversitaet OR Feministisch OR Fairness) → Include
 ```
+
+**Hinweis:** KI_Sonstige allein (ohne AI_Literacies, Generative_KI oder Prompting) führt typischerweise zu Exklusion, da der Fokus auf generativer KI liegt.
+
+### Exclusion_Reason Codes
+
+| Code | Beschreibung | Beispiel |
+|------|--------------|----------|
+| Duplicate | Identische Publikation aus anderem Source_Tool | Kamruzzaman 2024 aus ChatGPT (Original aus Perplexity) |
+| Not relevant topic | Thematisch nicht passend | Nur klassische KI ohne Generativ-Bezug |
+| Wrong publication type | Ungeeigneter Publikationstyp | Blogbeitrag, Pressemitteilung |
+| No full text | Kein Volltext verfügbar | Nur Buchvorschau, Paywall |
 
 ### Bewertungsbasis
 
 - Primär: Abstract
 - Sekundär: Durchscrollen des Beitrags, KI-Unterstützung
 - Alternative Begriffe und Synonyme mitdenken
+- Notes-Spalte für Nachbearbeitungshinweise nutzen (z.B. "DOI fehlt noch", "Christopher - vermutlich excludieren")
 
 ---
 
@@ -214,7 +245,7 @@ Die Vault-Iteration nutzt Qualitätsfeedback für Verbesserungen. Bei niedrigen 
 
 ---
 
-*Dokumentenversion: 1.1 (Enhanced Pipeline v2.0 Integration)*
+*Dokumentenversion: 1.2 (FemPrompt Assessment-Schema aktualisiert)*
 *Erstellt: 2025-01-31*
-*Letzte Aktualisierung: 2025-11-16*
+*Letzte Aktualisierung: 2026-02-02*
 *Autor: AI-gestützter systematischer Literaturreview*
