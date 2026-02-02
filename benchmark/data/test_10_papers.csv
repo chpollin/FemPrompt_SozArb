@@ -1,0 +1,102 @@
+ID,Zotero_Key,Title,Author_Year,Authors,Year,DOI,URL,Abstract,ItemType
+1,BHXDU7VM,How People Use ChatGPT,Chatterji et al. (2025),"Chatterji, Aaron et al.",2025,,https://www.nber.org/papers/w34255,"Founded in 1920, the NBER is a private, non-profit, non-partisan organization dedicated to conducting economic research and to disseminating research findings among academics, public policy makers, and business professionals.",report
+2,I78CL6R5,What are artificial intelligence literacy and competency? A comprehensive framework to support them,Chiu et al. (2024),"Chiu, Thomas K.F. et al.",2024,10.1016/j.caeo.2024.100171,https://linkinghub.elsevier.com/retrieve/pii/S2666557324000120,,journalArticle
+3,VP6SXQHY,The AI literacy development canvas: Assessing and building AI literacy in organizations,Benlian & Pinski (2025),"Benlian, Alexander & Pinski, Marc",2025,10.1016/j.bushor.2025.10.001,https://linkinghub.elsevier.com/retrieve/pii/S0007681325001673,,journalArticle
+4,AXEIVEW3,Artificial Intelligence Competence Needs for Youth Workers,Lanzetta et al. (2024),"Lanzetta, Miriam et al.",2024,10.5281/ZENODO.11525357,https://zenodo.org/doi/10.5281/zenodo.11525357,"The rapid developments in AI technology and the rise of accessible AI-powered tools are transforming the way we live, work and learn. While young people have already warmly embraced these solutions, with Gen Z being the most active users and experimenters of Generative AI (Microsoft, 2024), there is a sense of confusion and fear among youth workers about the future of how AI tools are going to be used in the youth sector, mixed with diverse emotions and viewpoints ranging from apprehension, scepticism, resistance to feelings of enthusiasm and recognition of the significance of AI's role in the field (Pawluczuk, 2023).
+
+This study aims to advance knowledge on the specific competencies required by youth workers to effectively integrate AI into their professional activities, as well as picture the current and potential use of AI for youth professionals.  
+
+The publication is part of the Artificial Intelligence for Youth Work (AI4YouthWork)project, a pioneering initiative under the Erasmus+ programme, co-funded by the European Union, dedicated to enhancing the youth sector across Europe through the integration of artificial intelligence (AI). The project unites four organisations - Lascò from Italy, TEAM4Excellence from Romania, Kyttaro Enallaktikon Anazitiseon Neon from Greece, and Contextos from Portugal -, aspiring to contribute to increasing youth professionals' capacity to harness AI's potential to enhance the quality, attractiveness and effectiveness of their work, and prepare young people to thrive in AI-powered environments. 
+
+
+
+
+
+Chapter 1 introduces the project, highlighting the steps and methodological approaches to achieving the main objectives and the expected results.
+
+
+
+
+Chapter 2, dedicated to the research methodology, outlines the approach and techniques used to conduct this study. It includes the research design, data collection methods through systematic review, focus groups and interviews, data analysis procedures, as well as limitations and criteria for ensuring the validity and reliability of the findings.
+
+
+
+
+Chapter 3 presents the results of the desk research conducted by the consortium partners to explore the intersections of artificial intelligence, youth and youth work.  The chapter is divided into four main sections, addressing an introduction to AI, the impact of AI on youth, the role of youth workers in the AI revolution, and practical applications of AI in youth work settings.
+
+
+
+
+Chapter 4 outlines the needs, challenges, and tasks involved in integrating AI into youth work, presenting the results of focus group discussions which have been conducted in each partner country.
+
+
+
+
+Chapter 5 sets out the publication's conclusions, formulating recommendations for the development of an AI Competence Framework for Youth Workers, and enhancing the capacity of youth professionals to harness AI in their work.",journalArticle
+5,UFE85SCV,AI literacy in K-12: a systematic literature review,Casal-Otero et al. (2023),"Casal-Otero, Lorena et al.",2023,10.1186/s40594-023-00418-7,https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00418-7,"Abstract
+            The successful irruption of AI-based technology in our daily lives has led to a growing educational, social, and political interest in training citizens in AI. Education systems now need to train students at the K-12 level to live in a society where they must interact with AI. Thus, AI literacy is a pedagogical and cognitive challenge at the K-12 level. This study aimed to understand how AI is being integrated into K-12 education worldwide. We conducted a search process following the systematic literature review method using Scopus. 179 documents were reviewed, and two broad groups of AI literacy approaches were identified, namely learning experience and theoretical perspective. The first group covered experiences in learning technical, conceptual and applied skills in a particular domain of interest. The second group revealed that significant efforts are being made to design models that frame AI literacy proposals. There were hardly any experiences that assessed whether students understood AI concepts after the learning experience. Little attention has been paid to the undesirable consequences of an indiscriminate and insufficiently thought-out application of AI. A competency framework is required to guide the didactic proposals designed by educational institutions and define a curriculum reflecting the sequence and academic continuity, which should be modular, personalized and adjusted to the conditions of the schools. Finally, AI literacy can be leveraged to enhance the learning of disciplinary core subjects by integrating AI into the teaching process of those subjects, provided the curriculum is co-designed with teachers.",journalArticle
+6,J9IZDVTW,"Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education",Biagini et al. (2024),"Biagini, Gabriele et al.",2024,10.17471/2499-4324/1337,https://doi.org/10.17471/2499-4324/1337,"L'intelligenza artificiale (IA) ha il potenziale per trasformare vari aspetti delle nostre vite, ma il suo sviluppo è stato accompagnato da numerose preoccupazioni sociali ed etiche. Per comprendere le implicazioni e i meccanismi sottostanti, è essenziale acquisire una comprensione ampia dei suoi benefici e svantaggi. A questo scopo, l'alfabetizzazione all'IA è un fattore fondamentale per promuovere atteggiamenti più consapevoli verso lo sviluppo dell'IA e delle sue implicazioni. Tuttavia, la ricerca sulla literacy all'IA è ancora agli esordi. Per contribuire ai progressi del settore, questo articolo presenta i risultati di uno studio volto a valutare l'alfabetizzazione all'IA degli studenti nel contesto dell'istruzione universitaria, concentrandosi su dei dottorandi. L’indagine sulla loro literacy all’IA è stata condotta su quattro dimensioni: cognitiva, operativa, critica ed etica. I risultati mostrano che, sebbene i partecipanti avessero poca conoscenza dell'IA, erano eccessivamente fiduciosi nelle capacità della tecnologia. Lo studio evidenzia la necessità di un approccio più completo all'alfabetizzazione all'IA, che includa una comprensione più profonda delle sue implicazioni etiche, sociali ed economiche.",journalArticle
+7,P82X89Q4,A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway,Chee et al. (2025),"Chee, Hyunkyung et al.",2025,10.1111/bjet.13556,https://bera-journals.onlinelibrary.wiley.com/doi/10.1111/bjet.13556,"This study aims to develop a comprehensive competency framework for artificial intelligence (AI) literacy, delineating essential competencies and sub‐competencies. This framework and its potential variations, tailored to different learner groups (by educational level and discipline), can serve as a crucial reference for designing and implementing AI curricula. However, the research on AI literacy by target learners is still in its infancy, and the findings of several existing studies provide inconsistent guidelines for educational practices. Following the 2020 PRISMA guidelines, we searched the Web of Science, Scopus, and ScienceDirect databases to identify relevant studies published between January 2012 and October 2024. The quality of the included studies was evaluated using QualSyst. A total of 29 studies were identified, and their research findings were synthesized. Results show that at the K‐12 level, the required competencies include basic AI knowledge, device usage, and AI ethics. For higher education, the focus shifts to understanding data and algorithms, problem‐solving, and career‐related competencies. For general workforce, emphasis is placed on the interpretation and utilization of data and AI tools for specific careers, along with error detection and AI‐based decision‐making. This study connects the progression of specific learning objectives, which should be intensively addressed at each stage, to propose an AI literacy education pathway. We discuss the findings, potentials, and limitations of the derived competency framework for AI literacy, including its theoretical and practical implications and future research suggestions.
+            
+            
+              
+              
+                
+                  
+                    Practitioner notes
+                  
+                  
+                    What is already known about this topic
+                    
+                      
+                        AI literacy is becoming increasingly important as AI technologies are integrated into various aspects of life and work.
+                      
+                      
+                        Research on AI literacy competencies across diverse learner groups and disciplines remains fragmented and inconsistent to guide educational practices.
+                      
+                      
+                        Studies providing a coherent pathway for AI literacy development throughout educational and working life are lacking.
+                      
+                    
+                  
+                  
+                    What this paper adds
+                    
+                      
+                        A comprehensive AI literacy competency framework consisting of 8 competencies and 18 sub‐competencies.
+                      
+                      
+                        Variations in AI literacy competencies with tailored configuration and prioritization across different learner groups by school levels and disciplines.
+                      
+                      
+                        A proposed pathway for developing AI literacy from K‐12 to higher education and workforce levels.
+                      
+                    
+                  
+                  
+                    Implications for practice and policy
+                    
+                      
+                        The framework can guide the design and implementation of AI curricula tailored to different learner characteristics and needs.
+                      
+                      
+                        Education should shift focus from teaching how to use AI to fostering competencies for critical, strategic, responsible and ethical integration of AI.
+                      
+                      
+                        Policies are needed to support a systematic pathway for lifelong AI literacy development from K‐12 education to workforce training.",journalArticle
+8,KPSF8EZE,"AI literacy and competency: definitions, frameworks, development and future research directions",Chiu (2025),"Chiu, Thomas K. F.",2025,10.1080/10494820.2025.2514372,https://www.tandfonline.com/doi/full/10.1080/10494820.2025.2514372,,journalArticle
+9,XCS4YCQH,DigComp 2.1: the digital competence framework for citizens with eight proficiency levels and examples of use.,(2017),,2017,,https://data.europa.eu/doi/10.2760/38842,,book
+10,SY8LNID7,Digital literacy as a new determinant of health: A scoping review,Arias López et al. (2023),"Arias López, Maria Del Pilar et al.",2023,10.1371/journal.pdig.0000279,https://dx.plos.org/10.1371/journal.pdig.0000279,"Introduction
+              Harnessing new digital technologies can improve access to health care but can also widen the health divide for those with poor digital literacy. This scoping review aims to assess the current situation of low digital health literacy in terms of its definition, reach, impact on health and interventions for its mitigation.
+            
+            
+              Methods
+              A comprehensive literature search strategy was composed by a qualified medical librarian. Literature databases [Medline (Ovid), Embase (Ovid), Scopus, and Google Scholar] were queried using appropriate natural language and controlled vocabulary terms along with hand-searching and citation chaining. We focused on recent and highly cited references published in English. Reviews were excluded. This scoping review was conducted following the methodological framework of Arksey and O’Malley.
+            
+            
+              Results
+              A total of 268 articles were identified (263 from the initial search and 5 more added from the references of the original papers), 53 of which were finally selected for full text analysis. Digital health literacy is the most frequently used descriptor to refer to the ability to find and use health information with the goal of addressing or solving a health problem using technology. The most utilized tool to assess digital health literacy is the eHealth literacy scale (eHEALS), a self-reported measurement tool that evaluates six core dimensions and is available in various languages. Individuals with higher digital health literacy scores have better self-management and participation in their own medical decisions, mental and psychological state and quality of life. Effective interventions addressing poor digital health literacy included education/training and social support.
+            
+            
+              Conclusions
+              Although there is interest in the study and impact of poor digital health literacy, there is still a long way to go to improve measurement tools and find effective interventions to reduce the digital health divide.",journalArticle

@@ -10,17 +10,18 @@
 ## Übersicht
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         FEMPROMPT PROJEKTPLAN                                │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  PHASE 1: Assessment      →  PHASE 2: Pipeline      →  PHASE 3: Paper       │
-│  ┌───────────────────┐       ┌───────────────────┐     ┌───────────────────┐│
-│  │ Human-Assessment  │       │ PDF-Akquise       │     │ Textbausteine     ││
-│  │ LLM-Assessment    │       │ Markdown-Konv.    │     │ Ergebnisse        ││
-│  │ Benchmark         │       │ Summarisierung    │     │ Finalisierung     ││
-│  └───────────────────┘       │ Vault-Generierung │     └───────────────────┘│
-│                              └───────────────────┘                          │
-└─────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                    FEMPROMPT PROJEKTPLAN                                          │
+├──────────────────────────────────────────────────────────────────────────────────────────────────┤
+│  PHASE 1           →  PHASE 2           →  PHASE 3         →  PHASE 4                            │
+│  Assessment           Pipeline             Paper               Knowledge Explorer                 │
+│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐    ┌──────────────┐                  │
+│  │ Human        │     │ PDF-Akquise  │     │ Textbausteine│    │ Web Interface│                  │
+│  │ LLM          │     │ Markdown     │     │ Ergebnisse   │    │ Suche/Filter │                  │
+│  │ Benchmark    │     │ Summaries    │     │ Finalisierung│    │ Netzwerk     │                  │
+│  └──────────────┘     │ Vault        │     └──────────────┘    │ Export       │                  │
+│                       └──────────────┘                         └──────────────┘                  │
+└──────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -228,32 +229,187 @@ Nach Pipeline-Abschluss:
 
 ---
 
+## Phase 4: Knowledge Explorer (Web Interface)
+
+### 4.1 Zielgruppen (User Personas)
+
+| Persona | Rolle | Ziele |
+|---------|-------|-------|
+| **Forscherin** | Wissenschaftlerin (Soziale Arbeit / Gender Studies) | Literatur finden, Forschungslücken identifizieren |
+| **Praktiker** | Sozialarbeiter:in | Praxisrelevante Erkenntnisse, Handlungsempfehlungen |
+| **Studierende** | Master-Student:in | Überblick, zentrale Autor:innen, Konzepte verstehen |
+| **Lehrender** | Professor:in | Seminarliteratur, thematische Cluster |
+| **Methodikerin** | Forschungsmethodikerin | Benchmark-Ergebnisse, Human-LLM-Vergleich |
+
+→ Vollständige User Stories: [knowledge/user-stories.md](knowledge/user-stories.md)
+
+### 4.2 Existierende Infrastruktur
+
+Das SozArb-Projekt hat bereits ein funktionierendes Web-Interface in `docs/`:
+
+| Komponente | Status | Beschreibung |
+|------------|--------|--------------|
+| `index.html` | ✅ Vorhanden | Responsive Single-Page-App |
+| `css/research.css` | ✅ Vorhanden | Design System (WCAG AA) |
+| `js/research-app.js` | ✅ Vorhanden | Paper-Browser, Filter, Suche |
+| `js/features.js` | ✅ Vorhanden | Dashboard, Charts |
+| `js/advanced-features.js` | ✅ Vorhanden | Network Graph (vis-network) |
+| `data/*.json` | 🔄 Anpassen | Datenformat erweitern |
+
+**Deployment:** GitHub Pages → `https://chpollin.github.io/FemPrompt_SozArb/`
+
+### 4.3 Erweiterungen für FemPrompt
+
+#### Must Have (Launch)
+
+| Feature | User Story | Aufwand |
+|---------|------------|---------|
+| Dashboard mit 10 Kategorien | US-1.1 | Mittel |
+| Suche (Titel, Abstract, Konzepte) | US-1.2 | Gering |
+| Filter nach allen 10 Kategorien | US-1.3 | Mittel |
+| Paper-Detail mit Zusammenfassung | US-2.3 | Gering |
+| Kategorie-Definitionen | US-5.3 | Gering |
+| Export als CSV/BibTeX | US-4.1 | Gering |
+
+#### Should Have (v1.0)
+
+| Feature | User Story | Aufwand |
+|---------|------------|---------|
+| Human-LLM-Vergleich pro Paper | US-2.4 | Mittel |
+| Konzept-Netzwerk | US-3.1 | Vorhanden |
+| Benchmark-Dashboard | US-5.2 | Mittel |
+| Konzept-Glossar | US-2.2 | Mittel |
+| Prozess-Dokumentation | US-5.1 | Gering |
+
+### 4.4 Datenformat-Erweiterung
+
+**research_vault.json (erweitert):**
+```json
+{
+  "papers": [{
+    "id": "Z4YXX9PZ",
+    "title": "...",
+    "author_year": "Kamruzzaman (2024)",
+    "abstract": "...",
+    "doi": "...",
+
+    // NEU: 10-Kategorie-Schema
+    "categories": {
+      "AI_Literacies": true,
+      "Generative_KI": true,
+      "Prompting": false,
+      "KI_Sonstige": false,
+      "Soziale_Arbeit": false,
+      "Bias_Ungleichheit": true,
+      "Gender": false,
+      "Diversitaet": false,
+      "Feministisch": false,
+      "Fairness": true
+    },
+
+    // NEU: Human-LLM Vergleich
+    "human_decision": "Include",
+    "llm_decision": "Include",
+    "agreement": true,
+    "llm_confidence": 0.85,
+    "llm_reasoning": "...",
+
+    // Bestehend
+    "summary": "...",
+    "concepts": ["intersectionality", "bias mitigation"],
+    "studientyp": "Empirisch"
+  }],
+
+  // NEU: Benchmark-Metriken
+  "benchmark": {
+    "cohens_kappa": 0.65,
+    "overall_agreement": 0.78,
+    "by_category": {...}
+  },
+
+  // NEU: Konzept-Glossar
+  "concepts": {
+    "intersectionality": {
+      "definition": "...",
+      "paper_count": 47,
+      "related": ["feminist theory", "bias"]
+    }
+  }
+}
+```
+
+### 4.5 Zu entwickelnde Scripts
+
+| Script | Zweck | Input | Output |
+|--------|-------|-------|--------|
+| `generate_web_data.py` | JSON für Web-Interface | Summaries, Benchmark | `docs/data/*.json` |
+| `generate_concept_glossary.py` | Konzept-Definitionen | Vault, LLM | `concepts.json` |
+
+### 4.6 Deployment
+
+1. **Daten generieren:**
+   ```bash
+   python analysis/generate_web_data.py \
+     --summaries analysis/summaries/ \
+     --benchmark benchmark/results/ \
+     --output docs/data/
+   ```
+
+2. **Lokal testen:**
+   ```bash
+   cd docs && python -m http.server 8000
+   # → http://localhost:8000
+   ```
+
+3. **Deployen:**
+   ```bash
+   git add docs/
+   git commit -m "feat: update web interface with FemPrompt data"
+   git push
+   # → GitHub Pages aktualisiert automatisch
+   ```
+
+---
+
 ## Abhängigkeiten & Kritischer Pfad
 
 ```
-Human-Assessment ──┬──→ LLM-Assessment ──→ Benchmark-Analyse ──┐
+Human-Assessment ──┬──→ LLM-Assessment ──→ Benchmark-Analyse ──┬──→ Paper
                    │                                           │
-                   └──→ PDF-Akquise ──→ Markdown ──→ Summaries │
-                                                      │        │
-                                                      ↓        ↓
-                                                    Vault   Paper
+                   └──→ PDF-Akquise ──→ Markdown ──→ Summaries─┼──→ Vault
+                                                               │
+                                                               └──→ Web Interface (Knowledge Explorer)
 ```
 
 **Blocker:** Human-Assessment muss abgeschlossen sein, bevor:
 - LLM-Assessment starten kann (braucht finalisiertes Schema)
 - PDF-Akquise auf Include-Papers gefiltert werden kann
 
+**Parallel möglich:**
+- Paper-Textbausteine (Phase 3.1) parallel zu Phase 1-2
+- Web-Interface-Anpassungen parallel zu Pipeline
+
 ---
 
 ## Zu entwickelnde Scripts
 
+### Benchmark (Phase 1) - ✅ FERTIG
+
+| Script | Zweck | Status |
+|--------|-------|--------|
+| `benchmark/scripts/run_llm_assessment.py` | LLM-Assessment mit YAML-Schema | ✅ Fertig |
+| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenführen | ✅ Fertig |
+| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa, Metriken | ✅ Fertig |
+| `benchmark/scripts/analyze_disagreements.py` | Qualitative Analyse | ✅ Fertig |
+| `benchmark/prompts/assessment_prompt.md` | Prompt für LLM-Assessment | ✅ Fertig |
+
+### Knowledge Explorer (Phase 4)
+
 | Script | Zweck | Priorität |
 |--------|-------|-----------|
-| `benchmark/scripts/run_llm_assessment.py` | LLM-Assessment mit YAML-Schema | Hoch |
-| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenführen | Hoch |
-| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa, Metriken | Hoch |
-| `benchmark/scripts/analyze_disagreements.py` | Qualitative Analyse | Mittel |
-| `benchmark/prompts/assessment_prompt.md` | Prompt für LLM-Assessment | Hoch |
+| `analysis/generate_web_data.py` | JSON für Web-Interface generieren | Hoch |
+| `analysis/generate_concept_glossary.py` | Konzept-Definitionen mit LLM | Mittel |
+| `docs/js/benchmark-dashboard.js` | Benchmark-Visualisierungen | Mittel |
 
 ---
 
@@ -276,7 +432,10 @@ Human-Assessment ──┬──→ LLM-Assessment ──→ Benchmark-Analyse �
 | LLM-Assessment (303 Papers) | ~$0.60 |
 | Summarisierung (~200 Papers) | ~$5-8 |
 | Vault-Generierung | ~$1-2 |
+| Konzept-Glossar (LLM) | ~$0.50 |
 | **Gesamt** | **~$8-12** |
+
+*Web-Interface: Keine laufenden Kosten (Static Site auf GitHub Pages)*
 
 ---
 
@@ -299,6 +458,13 @@ Nach jeder Phase:
 - [ ] Alle Visualisierungen eingebunden
 - [ ] Co-Autor:innen haben reviewt
 
+**Phase 4:**
+- [ ] `docs/data/research_vault.json` enthält alle Papers mit 10 Kategorien
+- [ ] Web-Interface zeigt Benchmark-Metriken
+- [ ] Filter für alle Kategorien funktionieren
+- [ ] Export-Funktionen testen (CSV, BibTeX)
+- [ ] GitHub Pages Deployment erfolgreich
+
 ---
 
 ## Nächste Aktion
@@ -314,4 +480,16 @@ Nach jeder Phase:
 
 ---
 
-*Version 1.0 | Erstellt: 2026-02-02 | Autor: Christopher Pollin*
+---
+
+## Dokumentation
+
+- [knowledge/user-stories.md](knowledge/user-stories.md) - User Personas und Stories
+- [knowledge/STATUS.md](knowledge/STATUS.md) - Aktueller Projektstatus
+- [knowledge/METHODOLOGY.md](knowledge/METHODOLOGY.md) - PRISMA-Workflow
+- [benchmark/README.md](benchmark/README.md) - Benchmark-Dokumentation
+- [docs/DESIGN.md](docs/DESIGN.md) - Design System für Web Interface
+
+---
+
+*Version 2.0 | Erstellt: 2026-02-02 | Aktualisiert: 2026-02-02 | Autor: Christopher Pollin*

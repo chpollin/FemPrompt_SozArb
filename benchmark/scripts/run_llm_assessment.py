@@ -52,22 +52,32 @@ def build_assessment_prompt(categories: dict) -> str:
     prompt = f"""Du bist ein wissenschaftlicher Reviewer für ein Literature Review zu feministischen AI Literacies in der Sozialen Arbeit.
 
 ## Aufgabe
-Bewerte das folgende Paper anhand der definierten Kategorien. Antworte NUR im angegebenen JSON-Format.
+Bewerte das Paper anhand der Kategorien. Die Decision MUSS logisch konsistent mit den Kategorie-Bewertungen sein!
 
 ## Kategorien (binär: Ja/Nein)
 
 {chr(10).join(category_descriptions)}
 
-## Entscheidungskriterien
+## STRIKTE Entscheidungslogik
 
 {include_criteria}
+
+## WICHTIG - Konsistenzregel
+
+Deine Decision MUSS mathematisch aus den Kategorien folgen:
+- Zähle: Hat das Paper mindestens 1x Ja bei AI_Literacies, Generative_KI, Prompting oder KI_Sonstige? → TECHNIK_OK
+- Zähle: Hat das Paper mindestens 1x Ja bei Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch oder Fairness? → SOZIAL_OK
+- Wenn TECHNIK_OK UND SOZIAL_OK → Decision = "Include"
+- Sonst → Decision = "Exclude"
+
+Du darfst die Logik NICHT mit eigenem Judgment überschreiben!
 
 ## Exclusion Reasons
 Falls Exclude: Duplicate, Not_relevant_topic, Wrong_publication_type, No_full_text, Language
 
 ## Output-Format (JSON)
 
-Antworte NUR mit diesem JSON-Objekt, keine weiteren Erklärungen:
+Antworte NUR mit diesem JSON-Objekt:
 
 ```json
 {{
@@ -157,10 +167,21 @@ def main():
     parser.add_argument('--resume', action='store_true', help='Setze von letztem Checkpoint fort')
     args = parser.parse_args()
 
-    # API Key prüfen
+    # API Key prüfen (Umgebungsvariable oder .env Datei)
     api_key = os.environ.get('ANTHROPIC_API_KEY')
+
+    # Versuche .env zu laden wenn kein Key in Umgebung
     if not api_key:
-        print("Error: ANTHROPIC_API_KEY environment variable not set")
+        env_file = Path(__file__).parent.parent.parent / '.env'
+        if env_file.exists():
+            with open(env_file, 'r') as f:
+                for line in f:
+                    if line.startswith('ANTHROPIC_API_KEY='):
+                        api_key = line.split('=', 1)[1].strip()
+                        break
+
+    if not api_key:
+        print("Error: ANTHROPIC_API_KEY not found in environment or .env file")
         sys.exit(1)
 
     client = anthropic.Anthropic(api_key=api_key)
@@ -258,9 +279,9 @@ def main():
             with open(checkpoint_file, 'w') as f:
                 json.dump({'processed_ids': list(processed_ids)}, f)
 
-            print(f"  → {assessment.get('Decision', 'N/A')} (Confidence: {assessment.get('Confidence', 'N/A')})")
+            print(f"  -> {assessment.get('Decision', 'N/A')} (Confidence: {assessment.get('Confidence', 'N/A')})")
         else:
-            print(f"  → FEHLER bei Bewertung")
+            print(f"  -> FEHLER bei Bewertung")
 
         # Rate limiting
         time.sleep(args.delay)
@@ -274,9 +295,9 @@ def main():
         writer.writeheader()
         writer.writerows(results)
 
-    # Kosten berechnen (Haiku 4.5 Preise: $0.80/MTok input, $4/MTok output)
-    input_cost = (total_input_tokens / 1_000_000) * 0.80
-    output_cost = (total_output_tokens / 1_000_000) * 4.00
+    # Kosten berechnen (Haiku 4.5 Preise: $1/MTok input, $5/MTok output)
+    input_cost = (total_input_tokens / 1_000_000) * 1.00
+    output_cost = (total_output_tokens / 1_000_000) * 5.00
     total_cost = input_cost + output_cost
 
     print(f"\n=== Zusammenfassung ===")
