@@ -1,6 +1,6 @@
 # project status
 
-last updated: 2025-12-09
+last updated: 2026-02-02
 branch: main
 
 ---
@@ -19,7 +19,7 @@ forschungsfrage: inwiefern kommen die themen oder die verknüpfung der bereiche 
 
 zotero: group library 6080294
 
-### aktueller stand (2025-12-09)
+### aktueller stand (2026-02-02)
 
 thematisches assessment: IN BEARBEITUNG
 - 303 papers exportiert (254 deepresearch + 49 human 1 collection)
@@ -27,6 +27,24 @@ thematisches assessment: IN BEARBEITUNG
 - google spreadsheet: https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/
 - bearbeiter: susi sackl-sharif, sabine klinger
 - christina ergänzt metadaten + pdfs in zotero
+
+### pdf-bestand in zotero (2026-02-02)
+
+**zotero group 6080294 enthält 296 pdf-attachments:**
+| typ | anzahl | beschreibung |
+|-----|--------|--------------|
+| imported_file | 294 | direkt herunterladbar via API |
+| imported_url | 1 | url-referenz |
+| linked_url | 1 | externe verlinkung |
+
+**lokaler bestand:**
+| verzeichnis | pdfs | größe |
+|-------------|------|-------|
+| analysis/pdfs/ | 95 | 241 MB |
+| analysis/pdfs_socialai/ | 65 | 146 MB |
+| analysis/pdfs_sozarb/ | 65 | 144 MB |
+
+**nächster schritt:** 294 PDFs von Zotero herunterladen mit `getPDF_intelligent.py --source zotero`
 
 ### thematisches assessment-schema
 
@@ -72,10 +90,11 @@ web viewer: docs/ (nicht deployed)
 
 ### femprompt (priorität 1)
 
-1. susi & sabine: thematisches assessment im google spreadsheet
-2. christina: metadaten + pdf-links in zotero ergänzen
-3. nach assessment: neuer export mit aktualisierten daten
-4. pipeline: pdf acquisition → markdown → summaries → vault
+1. **PDFs von Zotero holen** - 294 PDFs verfügbar, 95 lokal vorhanden → ~200 neue PDFs laden
+2. susi & sabine: thematisches assessment im google spreadsheet abschließen
+3. christina: metadaten + pdf-links in zotero ergänzen
+4. nach assessment: neuer export mit aktualisierten daten
+5. pipeline: pdf acquisition → markdown → summaries → vault
 
 ### sozarb (pausiert)
 
@@ -116,4 +135,4 @@ knowledge/ folder:
 
 ---
 
-version: 4.0 (femprompt thematisches assessment)
+version: 4.1 (pdf-bestand dokumentiert)
