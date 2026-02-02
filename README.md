@@ -1,138 +1,139 @@
-# FemPrompt & SozArb Research Pipeline
+# FemPrompt: Human vs. Agent Literature Review
 
-**AI-Assisted Literature Research System with Feminist Epistemology**
-
-Automated, end-to-end research pipeline for systematic literature discovery, intelligent PDF acquisition, and knowledge graph generation. Combines multi-model deep research with LLM-based PRISMA assessment and enhanced summarization.
+Vergleich zwischen menschlichem Expert:innen-Assessment und LLM-basiertem Agent-Workflow
+für systematische Literature Reviews zu feministischer AI Literacy.
 
 ---
 
-## Projects
+## Forschungsfrage
 
-### 1. FemPrompt (326 papers) ✅
-- **Focus:** Feminist AI literacies and bias mitigation
-- **Status:** Complete (vault generated, 35 concepts)
+> Wie reliabel ist LLM-basiertes Literatur-Assessment im Vergleich zu Expert:innen-Bewertung
+> bei einem interdisziplinären, feministisch-technischen Forschungsfeld?
 
-### 2. SozArb (325 papers) 🔄
-- **Focus:** AI literacy in social work for vulnerable populations
-- **Status:** 75 enhanced summaries (v2.0), 144 concepts, web viewer operational
+**Paper:** Forum Wissenschaft 2/2026 (Deadline: 4. Mai 2026)
+
+---
+
+## Repository-Struktur
+
+```
+FemPrompt_SozArb/
+├── corpus/                    # EIN Korpus (326 Papers)
+│   ├── zotero_export.json
+│   └── papers_metadata.csv
+│
+├── assessment/
+│   ├── human/                 # Track 1: Human Expert
+│   │   ├── schema.yaml
+│   │   └── results/
+│   │
+│   └── agent/                 # Track 2: Agent Workflow
+│       ├── config.yaml
+│       ├── run_assessment.py
+│       └── results/
+│
+├── benchmark/                 # Vergleich Human vs. Agent
+│   ├── scripts/
+│   │   ├── merge_assessments.py
+│   │   ├── calculate_agreement.py
+│   │   └── analyze_disagreements.py
+│   └── results/
+│
+├── pipeline/                  # PDF → Markdown → Summary → Vault
+│   ├── scripts/
+│   ├── pdfs/
+│   ├── markdown/
+│   └── summaries/
+│
+├── vault/                     # EIN Obsidian Vault
+│   └── MOCs/
+│
+└── knowledge/                 # Dokumentation
+```
 
 ---
 
 ## Quick Start
 
+### 1. Human Assessment
+
 ```bash
-# Clone & install
-git clone <repo-url>
-cd FemPrompt_SozArb
-pip install -r requirements.txt
-
-# Set API key
-export ANTHROPIC_API_KEY="sk-ant-your-key"
-
-# Run LLM assessment
-python assessment-llm/assess_papers.py --input papers.xlsx --output assessment.xlsx
-
-# Run complete pipeline
-python run_pipeline.py --project sozarb --stages all
+# Google Sheets exportieren nach:
+assessment/human/results/assessment_YYYYMMDD.csv
 ```
 
-**Results:** 325 papers assessed in 24 min ($0.58), 75 summaries (76.1/100 avg quality), $3.73 total cost.
+### 2. Agent Assessment
 
----
-
-## Documentation
-
-**Complete documentation is in [`knowledge/`](knowledge/)**
-
-📖 **Start here:** [knowledge/README.md](knowledge/README.md) - Documentation index
-
-**Key documents:**
-- [STATUS.md](knowledge/STATUS.md) - Current project status & next steps
-- [QUICKSTART.md](knowledge/QUICKSTART.md) - Detailed setup & first steps
-- [TECHNICAL.md](knowledge/TECHNICAL.md) - Complete technical reference
-- [COMPLETE_GUIDE.md](knowledge/COMPLETE_GUIDE.md) - Full pipeline guide
-- [PROJECT_OVERVIEW.md](knowledge/PROJECT_OVERVIEW.md) - Research questions (German)
-- [THEORETICAL_FRAMEWORK.md](knowledge/THEORETICAL_FRAMEWORK.md) - Feminist epistemology
-
----
-
-## Features
-
-### 🤖 Multi-Model Deep Research
-4 LLMs (Claude, Gemini, ChatGPT, Perplexity) for literature discovery
-
-### 📊 LLM-Based PRISMA Assessment
-100% automated, 5-dimensional relevance scoring (0-3 scale)
-
-### 🔍 Enhanced Summarization v2.0
-- Multi-pass reading (100% paper coverage)
-- Cross-validation with quality metrics (Accuracy, Completeness, Actionability)
-- Stakeholder-specific practical implications
-- Limitations & open questions documented
-
-### 🧠 Knowledge Graph Generation
-Obsidian vaults with bidirectional concept links, MOCs, web viewer
-
-### 🔬 Markdown Quality Validation
-Corruption detection before expensive AI processing (~$7.50 savings/file)
-
----
-
-## Repository Structure
-
+```bash
+python assessment/agent/run_assessment.py \
+  --input corpus/papers_metadata.csv \
+  --output assessment/agent/results/assessment_$(date +%Y%m%d).csv
 ```
-FemPrompt_SozArb/
-├── knowledge/              # 📚 Complete documentation (START HERE!)
-├── analysis/               # Core pipeline scripts
-├── assessment-llm/         # LLM-based PRISMA assessment
-├── SozArb_Research_Vault/  # Generated Obsidian vault (266 papers, 75 summaries)
-├── docs/                   # Web viewer (interactive network visualization)
-└── run_pipeline.py         # Master orchestrator
+
+### 3. Benchmark
+
+```bash
+# Assessments zusammenführen
+python benchmark/scripts/merge_assessments.py \
+  --human assessment/human/results/latest.csv \
+  --agent assessment/agent/results/latest.csv \
+  --output benchmark/data/merged_comparison.csv
+
+# Agreement berechnen
+python benchmark/scripts/calculate_agreement.py \
+  --input benchmark/data/merged_comparison.csv \
+  --output benchmark/results/
+
+# Disagreements analysieren
+python benchmark/scripts/analyze_disagreements.py \
+  --input benchmark/data/merged_comparison.csv \
+  --output benchmark/results/disagreement_cases.csv
 ```
 
 ---
 
-## Performance
+## Assessment-Schema
 
-**For 222 Include papers (SozArb):**
-- LLM Assessment: 24 min, $0.58
-- Enhanced Summarization: ~3 hours, ~$3.15
-- Total: ~6-9 hours, ~$7-9
+Beide Tracks verwenden identisches 10-Kategorien-Schema:
 
-**Model:** Claude Haiku 4.5 (cost-efficient, fast, high-quality)
+| Kategorie | Typ | Gruppe |
+|-----------|-----|--------|
+| AI_Literacies | binär | Technik |
+| Generative_KI | binär | Technik |
+| Prompting | binär | Technik |
+| KI_Sonstige | binär | Technik |
+| Soziale_Arbeit | binär | Sozial |
+| Bias_Ungleichheit | binär | Sozial |
+| Gender | binär | Sozial |
+| Diversitaet | binär | Sozial |
+| Feministisch | binär | Sozial |
+| Fairness | binär | Sozial |
 
----
-
-## Current Status
-
-**FemPrompt:** ✅ Complete
-**SozArb:** 🔄 75/222 papers processed with Enhanced v2.0
-
-See [knowledge/STATUS.md](knowledge/STATUS.md) for detailed status & next steps.
-
----
-
-## Citation
-
-If you use this pipeline in your research, please cite:
-
-```bibtex
-@software{femprompt_sozarb_2025,
-  title = {FemPrompt \& SozArb: AI-Assisted Literature Research Pipeline},
-  author = {[Your Name]},
-  year = {2025},
-  url = {https://github.com/[username]/FemPrompt_SozArb}
-}
-```
+**Inklusions-Logik:** `(Technik >= 1) AND (Sozial >= 1) → Include`
 
 ---
 
-## License
+## Team
 
-[Specify license]
+| Person | Rolle |
+|--------|-------|
+| Susi Sackl-Sharif | Human Expert Assessment |
+| Sabine Klinger | Human Expert Assessment |
+| Christopher Pollin | Technische Umsetzung |
+| Christina | Zotero-Kuratierung |
+| Christian Steiner | Paper-Review |
 
 ---
 
-**Documentation:** [knowledge/README.md](knowledge/README.md)
-**Technical Support:** [knowledge/TECHNICAL.md](knowledge/TECHNICAL.md)
-**Issues:** Report bugs via GitHub Issues
+## Dokumentation
+
+Vollständige Dokumentation: [`knowledge/`](knowledge/)
+
+- [index.md](knowledge/index.md) - Dokumentations-Einstieg
+- [02-methodology.md](knowledge/02-methodology.md) - PRISMA 2020, Assessment-Schema
+- [04-technical.md](knowledge/04-technical.md) - Pipeline-Architektur
+
+---
+
+*Version: 2.0 (Human vs. Agent Restructure)*
+*Erstellt: 2026-02-02*

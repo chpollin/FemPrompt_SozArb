@@ -2,7 +2,7 @@
 """
 Calculate Agreement Metrics
 
-Berechnet Übereinstimmungsmetriken zwischen Human und LLM Assessment:
+Berechnet Übereinstimmungsmetriken zwischen Human und Agent Assessment:
 - Overall Agreement
 - Cohen's Kappa
 - Agreement pro Kategorie
@@ -101,7 +101,7 @@ def main():
         rows = list(reader)
 
     # Nur Rows mit beiden Assessments
-    complete_rows = [r for r in rows if r.get('has_human') == 'Ja' and r.get('has_llm') == 'Ja']
+    complete_rows = [r for r in rows if r.get('has_human') == 'Ja' and r.get('has_agent') == 'Ja']
     print(f"Papers mit beiden Assessments: {len(complete_rows)}")
 
     if len(complete_rows) == 0:
@@ -110,21 +110,21 @@ def main():
 
     # === Decision Agreement ===
     human_decisions = [r['human_decision'] for r in complete_rows if r['human_decision']]
-    llm_decisions = [r['llm_decision'] for r in complete_rows if r['llm_decision']]
+    agent_decisions = [r['agent_decision'] for r in complete_rows if r['agent_decision']]
 
     # Filtern auf Papers mit beiden Decisions
-    decision_pairs = [(r['human_decision'], r['llm_decision'])
+    decision_pairs = [(r['human_decision'], r['agent_decision'])
                       for r in complete_rows
-                      if r['human_decision'] and r['llm_decision']]
+                      if r['human_decision'] and r['agent_decision']]
 
     if decision_pairs:
         human_dec = [p[0] for p in decision_pairs]
-        llm_dec = [p[1] for p in decision_pairs]
+        agent_dec = [p[1] for p in decision_pairs]
 
         decision_agreement = sum(1 for h, l in decision_pairs if h == l) / len(decision_pairs)
-        decision_kappa = calculate_cohens_kappa(human_dec, llm_dec)
+        decision_kappa = calculate_cohens_kappa(human_dec, agent_dec)
         decision_confusion = calculate_confusion_matrix(
-            human_dec, llm_dec,
+            human_dec, agent_dec,
             ['Include', 'Exclude', 'Unclear']
         )
     else:
@@ -137,22 +137,22 @@ def main():
 
     for cat in CATEGORIES:
         human_col = f'human_{cat}'
-        llm_col = f'llm_{cat}'
+        agent_col = f'agent_{cat}'
 
-        pairs = [(r[human_col], r[llm_col])
+        pairs = [(r[human_col], r[agent_col])
                  for r in complete_rows
-                 if r.get(human_col) and r.get(llm_col)]
+                 if r.get(human_col) and r.get(agent_col)]
 
         if pairs:
             human_vals = [p[0] for p in pairs]
-            llm_vals = [p[1] for p in pairs]
+            agent_vals = [p[1] for p in pairs]
 
             agreement = sum(1 for h, l in pairs if h == l) / len(pairs)
-            kappa = calculate_cohens_kappa(human_vals, llm_vals)
+            kappa = calculate_cohens_kappa(human_vals, agent_vals)
 
             # Counts
             human_yes = sum(1 for v in human_vals if v == 'Ja')
-            llm_yes = sum(1 for v in llm_vals if v == 'Ja')
+            agent_yes = sum(1 for v in agent_vals if v == 'Ja')
 
             category_metrics[cat] = {
                 'n': len(pairs),
@@ -161,8 +161,8 @@ def main():
                 'kappa_interpretation': interpret_kappa(kappa),
                 'human_yes_count': human_yes,
                 'human_yes_rate': round(human_yes / len(pairs), 4) if pairs else 0,
-                'llm_yes_count': llm_yes,
-                'llm_yes_rate': round(llm_yes / len(pairs), 4) if pairs else 0
+                'agent_yes_count': agent_yes,
+                'agent_yes_rate': round(agent_yes / len(pairs), 4) if pairs else 0
             }
         else:
             category_metrics[cat] = {
@@ -181,8 +181,8 @@ def main():
         'metadata': {
             'total_papers': len(rows),
             'papers_with_both_assessments': len(complete_rows),
-            'papers_human_only': sum(1 for r in rows if r.get('has_human') == 'Ja' and r.get('has_llm') == 'Nein'),
-            'papers_llm_only': sum(1 for r in rows if r.get('has_human') == 'Nein' and r.get('has_llm') == 'Ja')
+            'papers_human_only': sum(1 for r in rows if r.get('has_human') == 'Ja' and r.get('has_agent') == 'Nein'),
+            'papers_agent_only': sum(1 for r in rows if r.get('has_human') == 'Nein' and r.get('has_agent') == 'Ja')
         },
         'decision': {
             'n': len(decision_pairs),
@@ -223,12 +223,12 @@ def main():
     print(f"   Cohen's Kappa: {results['decision']['cohens_kappa']:.3f} ({results['decision']['kappa_interpretation']})")
 
     print(f"\n📋 Category Agreement")
-    print(f"   {'Category':<20} {'Agreement':>10} {'Kappa':>10} {'Human Ja':>10} {'LLM Ja':>10}")
+    print(f"   {'Category':<20} {'Agreement':>10} {'Kappa':>10} {'Human Ja':>10} {'Agent Ja':>10}")
     print("   " + "-" * 60)
 
     for cat, metrics in category_metrics.items():
         if metrics['agreement'] is not None:
-            print(f"   {cat:<20} {metrics['agreement']:>10.1%} {metrics['kappa']:>10.3f} {metrics['human_yes_rate']:>10.1%} {metrics['llm_yes_rate']:>10.1%}")
+            print(f"   {cat:<20} {metrics['agreement']:>10.1%} {metrics['kappa']:>10.3f} {metrics['human_yes_rate']:>10.1%} {metrics['agent_yes_rate']:>10.1%}")
 
     print(f"\n📈 Summary")
     print(f"   Mean Category Agreement: {results['summary']['mean_category_agreement']:.1%}")
@@ -238,7 +238,7 @@ def main():
     if results['decision']['confusion_matrix']:
         print(f"\n🔢 Confusion Matrix (Decision)")
         cm = results['decision']['confusion_matrix']
-        print(f"   Human\\LLM    Include  Exclude  Unclear")
+        print(f"   Human\\Agent    Include  Exclude  Unclear")
         print(f"   Include      {cm.get('Include_Include', 0):>7}  {cm.get('Include_Exclude', 0):>7}  {cm.get('Include_Unclear', 0):>7}")
         print(f"   Exclude      {cm.get('Exclude_Include', 0):>7}  {cm.get('Exclude_Exclude', 0):>7}  {cm.get('Exclude_Unclear', 0):>7}")
         print(f"   Unclear      {cm.get('Unclear_Include', 0):>7}  {cm.get('Unclear_Exclude', 0):>7}  {cm.get('Unclear_Unclear', 0):>7}")

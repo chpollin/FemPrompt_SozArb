@@ -1,17 +1,19 @@
-# FemPrompt/SozArb - Dokumentations-Index
+# FemPrompt - Dokumentations-Index
 
-Literature Research Pipeline fuer feministisches AI-Literacy und Soziale Arbeit.
+Literature Research Pipeline: Human Expert vs. Agent Workflow Benchmark.
 
 ---
 
 ## Aktuelle Phase (Februar 2026)
 
-| Projekt | Status | Naechster Schritt |
-|---------|--------|-------------------|
-| FemPrompt | Thematisches Assessment | Human-Assessment abschliessen |
-| SozArb | Pausiert | Vault operativ (266 Papers) |
+| Track | Methode | Status |
+|-------|---------|--------|
+| Human Expert | Manuelles Assessment (Susi, Sabine) | In Arbeit |
+| Agent Workflow | LLM-basiert (Claude Haiku 4.5) | Bereit |
+| Benchmark | Vergleich Human vs. Agent | Pending |
 
 **Paper:** Forum Wissenschaft 2/2026 (Deadline: 4. Mai 2026)
+**Korpus:** 326 Papers (Zotero Group 6080294)
 
 ---
 
@@ -49,32 +51,52 @@ Literature Research Pipeline fuer feministisches AI-Literacy und Soziale Arbeit.
 
 ---
 
-## Verzeichnisstruktur
+## Repository-Struktur
 
 ```
-knowledge/
-  index.md                 # Dieser Einstiegspunkt
-  01-project.md            # Projekt + Theorie
-  02-methodology.md        # Methodik + PRISMA
-  03-status.md             # Aktueller Stand
-  04-technical.md          # Technische Referenz
-  guides/                  # Anleitungen
-    quickstart.md
-    llm-assessment.md
-    pdf-acquisition.md
-  paper/                   # Paper-Materialien
-  archive/                 # Historische Dokumente
+FemPrompt_SozArb/
+  corpus/                  # EIN Korpus (326 Papers)
+    zotero_export.json
+    papers_metadata.csv
+  assessment/
+    human/                 # Track 1: Human Expert
+    agent/                 # Track 2: Agent Workflow
+  benchmark/               # Vergleich Human vs. Agent
+    scripts/
+    data/
+    results/
+  pipeline/                # PDF -> Markdown -> Summary -> Vault
+    scripts/
+    pdfs/
+    markdown/
+    summaries/
+  vault/                   # EIN Obsidian Vault
+  knowledge/               # Dokumentation (dieses Verzeichnis)
 ```
 
 ---
 
 ## Quick Links
 
-**Ausfuehrung:**
+**Assessment:**
 ```bash
-python run_pipeline.py                    # Komplette Pipeline
-python assessment-llm/assess_papers.py   # LLM-Assessment
-python analysis/getPDF_intelligent.py    # PDF-Akquise
+python assessment/agent/run_assessment.py   # Agent Assessment
+# Human Assessment: Google Sheets exportieren
+```
+
+**Pipeline:**
+```bash
+python pipeline/scripts/acquire_pdfs.py     # PDF-Akquise
+python pipeline/scripts/convert_to_markdown.py
+python pipeline/scripts/summarize_documents.py
+python pipeline/scripts/generate_vault.py
+```
+
+**Benchmark:**
+```bash
+python benchmark/scripts/merge_assessments.py
+python benchmark/scripts/calculate_agreement.py
+python benchmark/scripts/analyze_disagreements.py
 ```
 
 **Repository:** [github.com/chpollin/FemPrompt_SozArb](https://github.com/chpollin/FemPrompt_SozArb)
@@ -103,4 +125,4 @@ python analysis/getPDF_intelligent.py    # PDF-Akquise
 
 ---
 
-*Version: 1.0 (2026-02-02)*
+*Version: 2.0 (2026-02-02) - Human vs. Agent Restructure*

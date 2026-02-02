@@ -2,7 +2,7 @@
 """
 Analyze Disagreement Cases
 
-Identifiziert und analysiert Fälle, bei denen Human und LLM Assessment
+Identifiziert und analysiert Fälle, bei denen Human und Agent Assessment
 unterschiedliche Entscheidungen getroffen haben. Für qualitative Auswertung im Paper.
 
 Usage:
@@ -31,20 +31,20 @@ def classify_disagreement(row: dict) -> dict:
     - affected_categories: Welche Kategorien unterschiedlich bewertet wurden
     """
     human_dec = row.get('human_decision', '')
-    llm_dec = row.get('llm_decision', '')
+    agent_dec = row.get('agent_decision', '')
 
     # Decision Disagreement Type
-    if human_dec == 'Include' and llm_dec == 'Exclude':
-        dec_type = 'Human_Include_LLM_Exclude'
-        severity = 3  # Kritisch - LLM würde relevantes Paper ausschließen
-    elif human_dec == 'Exclude' and llm_dec == 'Include':
-        dec_type = 'Human_Exclude_LLM_Include'
-        severity = 2  # Mittel - LLM würde irrelevantes Paper einschließen
-    elif human_dec == 'Include' and llm_dec == 'Unclear':
-        dec_type = 'Human_Include_LLM_Unclear'
+    if human_dec == 'Include' and agent_dec == 'Exclude':
+        dec_type = 'Human_Include_Agent_Exclude'
+        severity = 3  # Kritisch - Agent würde relevantes Paper ausschließen
+    elif human_dec == 'Exclude' and agent_dec == 'Include':
+        dec_type = 'Human_Exclude_Agent_Include'
+        severity = 2  # Mittel - Agent würde irrelevantes Paper einschließen
+    elif human_dec == 'Include' and agent_dec == 'Unclear':
+        dec_type = 'Human_Include_Agent_Unclear'
         severity = 2
-    elif human_dec == 'Exclude' and llm_dec == 'Unclear':
-        dec_type = 'Human_Exclude_LLM_Unclear'
+    elif human_dec == 'Exclude' and agent_dec == 'Unclear':
+        dec_type = 'Human_Exclude_Agent_Unclear'
         severity = 1
     elif human_dec == 'Unclear':
         dec_type = 'Human_Unclear'
@@ -57,8 +57,8 @@ def classify_disagreement(row: dict) -> dict:
     affected = []
     for cat in CATEGORIES:
         human_val = row.get(f'human_{cat}', '')
-        llm_val = row.get(f'llm_{cat}', '')
-        if human_val and llm_val and human_val != llm_val:
+        agent_val = row.get(f'agent_{cat}', '')
+        if human_val and agent_val and human_val != agent_val:
             affected.append(cat)
 
     return {
@@ -75,13 +75,13 @@ def generate_annotation_hint(row: dict, classification: dict) -> str:
     hints = []
 
     # Basierend auf Disagreement Type
-    if classification['type'] == 'Human_Include_LLM_Exclude':
-        hints.append("KRITISCH: LLM übersieht Relevanz")
-        if row.get('llm_reasoning'):
-            hints.append(f"LLM-Begründung: {row['llm_reasoning'][:100]}...")
+    if classification['type'] == 'Human_Include_Agent_Exclude':
+        hints.append("KRITISCH: Agent übersieht Relevanz")
+        if row.get('agent_reasoning'):
+            hints.append(f"Agent-Begründung: {row['agent_reasoning'][:100]}...")
 
-    elif classification['type'] == 'Human_Exclude_LLM_Include':
-        hints.append("LLM sieht Relevanz, die Expert:innen nicht sehen")
+    elif classification['type'] == 'Human_Exclude_Agent_Include':
+        hints.append("Agent sieht Relevanz, die Expert:innen nicht sehen")
         if row.get('human_exclusion_reason'):
             hints.append(f"Human-Exclusion: {row['human_exclusion_reason']}")
 
@@ -121,7 +121,7 @@ def main():
         rows = list(reader)
 
     # Nur komplette Rows
-    complete = [r for r in rows if r.get('has_human') == 'Ja' and r.get('has_llm') == 'Ja']
+    complete = [r for r in rows if r.get('has_human') == 'Ja' and r.get('has_agent') == 'Ja']
     print(f"Papers mit beiden Assessments: {len(complete)}")
 
     # Disagreements identifizieren
@@ -136,15 +136,15 @@ def main():
                 'title': row.get('title', ''),
                 'author_year': row.get('author_year', ''),
                 'human_decision': row.get('human_decision', ''),
-                'llm_decision': row.get('llm_decision', ''),
+                'agent_decision': row.get('agent_decision', ''),
                 'disagreement_type': classification['type'],
                 'severity': classification['severity'],
                 'affected_categories': ', '.join(classification['affected_categories']),
                 'n_affected_categories': classification['n_affected'],
                 'human_exclusion_reason': row.get('human_exclusion_reason', ''),
-                'llm_exclusion_reason': row.get('llm_exclusion_reason', ''),
-                'llm_confidence': row.get('llm_confidence', ''),
-                'llm_reasoning': row.get('llm_reasoning', ''),
+                'agent_exclusion_reason': row.get('agent_exclusion_reason', ''),
+                'agent_confidence': row.get('agent_confidence', ''),
+                'agent_reasoning': row.get('agent_reasoning', ''),
                 'annotation_hint': generate_annotation_hint(row, classification),
                 'manual_annotation': ''  # Platzhalter für manuelle Analyse
             }
@@ -152,7 +152,7 @@ def main():
             # Kategorie-Details
             for cat in CATEGORIES:
                 disagreement[f'human_{cat}'] = row.get(f'human_{cat}', '')
-                disagreement[f'llm_{cat}'] = row.get(f'llm_{cat}', '')
+                disagreement[f'agent_{cat}'] = row.get(f'agent_{cat}', '')
 
             disagreements.append(disagreement)
 
@@ -190,16 +190,16 @@ def main():
 
     fieldnames = [
         'paper_id', 'title', 'author_year',
-        'human_decision', 'llm_decision', 'disagreement_type', 'severity',
+        'human_decision', 'agent_decision', 'disagreement_type', 'severity',
         'affected_categories', 'n_affected_categories',
-        'human_exclusion_reason', 'llm_exclusion_reason',
-        'llm_confidence', 'llm_reasoning',
+        'human_exclusion_reason', 'agent_exclusion_reason',
+        'agent_confidence', 'agent_reasoning',
         'annotation_hint', 'manual_annotation'
     ]
 
     # Kategorie-Spalten hinzufügen
     for cat in CATEGORIES:
-        fieldnames.extend([f'human_{cat}', f'llm_{cat}'])
+        fieldnames.extend([f'human_{cat}', f'agent_{cat}'])
 
     with open(args.output, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -216,7 +216,7 @@ def main():
         for i, d in enumerate(disagreements[:args.top], 1):
             print(f"\n{i}. [{d['disagreement_type']}] Severity: {d['severity']}")
             print(f"   Title: {d['title'][:70]}...")
-            print(f"   Human: {d['human_decision']} → LLM: {d['llm_decision']}")
+            print(f"   Human: {d['human_decision']} → Agent: {d['agent_decision']}")
             if d['affected_categories']:
                 print(f"   Affected: {d['affected_categories']}")
             print(f"   Hint: {d['annotation_hint'][:100]}...")
