@@ -179,9 +179,14 @@ def calculate_quality_score(metrics: dict) -> tuple[int, list]:
     return max(0, score), issues
 
 
-def convert_pdf(pdf_path: Path, converter: DocumentConverter) -> tuple[str, dict]:
+def convert_pdf(pdf_path: Path, converter: DocumentConverter, include_page_markers: bool = True) -> tuple[str, dict]:
     """
     Convert a single PDF to Markdown.
+
+    Args:
+        pdf_path: Path to PDF file
+        converter: Docling DocumentConverter instance
+        include_page_markers: If True, include page break markers in output
 
     Returns (markdown_content, conversion_info)
     """
@@ -189,7 +194,21 @@ def convert_pdf(pdf_path: Path, converter: DocumentConverter) -> tuple[str, dict
 
     try:
         result = converter.convert(str(pdf_path))
-        markdown = result.document.export_to_markdown()
+
+        # Export with page break placeholders for page alignment
+        if include_page_markers:
+            raw_markdown = result.document.export_to_markdown(
+                page_break_placeholder="<!-- PAGE_BREAK -->"
+            )
+            # Convert page breaks to numbered page markers
+            pages = raw_markdown.split("<!-- PAGE_BREAK -->")
+            markdown_parts = []
+            for i, page_content in enumerate(pages, 1):
+                if page_content.strip():  # Skip empty pages
+                    markdown_parts.append(f"<!-- PAGE {i} -->\n{page_content}")
+            markdown = "\n".join(markdown_parts)
+        else:
+            markdown = result.document.export_to_markdown()
 
         # Analyze quality
         metrics = analyze_markdown_quality(markdown)
@@ -233,6 +252,7 @@ def main():
     parser.add_argument('--limit', type=int, help='Limit number of files (for testing)')
     parser.add_argument('--skip-existing', action='store_true', help='Skip already converted files')
     parser.add_argument('--min-quality', type=int, default=0, help='Minimum quality score to accept (0-100)')
+    parser.add_argument('--no-page-markers', action='store_true', help='Disable page markers in output')
     args = parser.parse_args()
 
     input_dir = Path(args.input)
@@ -293,7 +313,8 @@ def main():
             continue
 
         # Convert
-        markdown, info = convert_pdf(pdf_path, converter)
+        include_page_markers = not args.no_page_markers
+        markdown, info = convert_pdf(pdf_path, converter, include_page_markers)
         file_result.update(info)
 
         if markdown and info['success']:

@@ -40,7 +40,7 @@ In `.env` Datei (nicht committen):
 | Schritt | Script | Input | Output | Wichtige Parameter |
 |---------|--------|-------|--------|-------------------|
 | 1. PDF-Download | `download_zotero_pdfs.py` | Zotero Group | `pipeline/pdfs/` | `--output` |
-| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | `--input`, `--output` |
+| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | `--input`, `--output`, `--no-page-markers` |
 | 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | `pipeline/validation_reports/` | `--md-dir`, `--pdf-dir`, `--output-dir` |
 | 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | `--input-dir`, `--output-dir` |
 | 5. Human Review | `markdown_reviewer.html` | Markdown + PDFs | JSON-Export | Via Live Server oeffnen |
@@ -58,7 +58,7 @@ Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `
 | Script | Funktion | Status |
 |--------|----------|--------|
 | `download_zotero_pdfs.py` | PDFs von Zotero herunterladen | ✅ Getestet |
-| `convert_to_markdown.py` | PDF→Markdown mit Docling | ✅ Getestet |
+| `convert_to_markdown.py` | PDF→Markdown mit Docling (inkl. Seiten-Marker) | ✅ Getestet |
 | `validate_markdown.py` | Basis-Validierung (GLYPH, Unicode) | ✅ Getestet |
 | `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | ✅ Getestet |
 | `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | ✅ Getestet |
@@ -122,17 +122,22 @@ Konservative Bereinigung:
 Browser-Tool fuer Human-in-the-Loop Review. Oeffnen via Live Server in VS Code.
 
 **Features:**
-- PDF und Markdown nebeneinander
+- **Seiten-Ansicht (Neu):** PDF-Seite und Markdown-Text nebeneinander pro Seite
+- **Split-Ansicht:** Klassische Ansicht mit gesamtem PDF links und Markdown rechts
 - PASS/WARN/FAIL Bewertung
 - Filter: Alle / Offen / Warn
 - Fortschrittsanzeige
-- Export als JSON
+- Export/Import als JSON
 - LocalStorage-Persistenz
 
+**Seiten-Alignment:**
+Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als separaten Block mit dem entsprechenden PDF-Bild daneben. Erfordert Markdown mit Seiten-Markern (siehe convert_to_markdown.py).
+
 **Keyboard-Shortcuts:**
-- `1` PASS | `2` WARN | `3` FAIL
+- `1` PASS | `2` WARN | `3` FAIL | `0` Reset
 - `←` `→` Navigation
 - `L` Liste ein/ausblenden
+- `V` Ansicht wechseln (Seiten/Split)
 
 ---
 
@@ -152,7 +157,7 @@ Browser-Tool fuer Human-in-the-Loop Review. Oeffnen via Live Server in VS Code.
 | `benchmark/data/` | Assessment-Daten | human_assessment.csv, llm_assessment.csv, merged_comparison.csv |
 | `benchmark/results/` | Ergebnisse | agreement_metrics.json, disagreement_cases.csv |
 | `knowledge/` | Dokumentation | Markdown-Dateien |
-| `FemPrompt_Vault/` | Obsidian Vault | Papers, Concepts, MOCs |
+| `vault/` | Obsidian Vault | Papers, Concepts, MOCs |
 
 ---
 
@@ -164,18 +169,19 @@ Browser-Tool fuer Human-in-the-Loop Review. Oeffnen via Live Server in VS Code.
 |-------|----------|-------|
 | PDF-Download | 234/306 PDFs | ~10 min |
 | Markdown-Konversion | 232/234 (99.1%) | ~45 min |
-| Validierung (Enhanced) | 136 PASS, 96 WARNING | ~5 min |
+| Dubletten-Bereinigung | 9 entfernt | - |
+| **Finale Dokumente** | **223 Markdown, 225 PDFs** | - |
 | Post-Processing | 107k Zeichen bereinigt | ~2 min |
 
-### Validierungsergebnisse
+### Human Review (Stichprobe)
 
 | Metrik | Wert |
 |--------|------|
-| Konfidenz-Score (Durchschnitt) | 98.7/100 |
-| Artefakt-Score (Durchschnitt) | 4.5/100 |
-| Character-Ratio (Durchschnitt) | 1.13 |
-| Tabellen-Mismatch | 94 Dokumente (40.5%) |
-| FAIL-Dokumente | 0 |
+| Geprueft | 11/223 (5%) |
+| PASS | 8 (73%) |
+| WARN | 3 (27%) |
+| FAIL | 0 (0%) |
+| Quality-Score (Durchschnitt) | 94.7/100 |
 
 ### API-Kosten
 
@@ -224,4 +230,4 @@ Konfigurationsdatei: `benchmark/config/categories.yaml`
 
 ---
 
-*Version: 2.5 (2026-02-03)*
+*Version: 2.6 (2026-02-03)*

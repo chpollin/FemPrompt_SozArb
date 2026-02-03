@@ -1,0 +1,23 @@
+{
+  "date": "2026-02-03T18:24:21.499Z",
+  "summary": {
+    "pass": 8,
+    "warn": 3,
+    "fail": 0,
+    "pending": 221
+  },
+  "total": 232,
+  "reviews": {
+    "A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024": "pass",
+    "Ahmed_2024_Feminist_perspectives_on_AI_Ethical": "pass",
+    "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social": "warn",
+    "Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment": "pass",
+    "Alam_2025_Social_work_in_the_age_of_artificial_intelligence": "pass",
+    "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and": "warn",
+    "Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination": "warn",
+    "An_2025_Measuring_gender_and_racial_biases_in_large": "pass",
+    "Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A": "pass",
+    "Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to": "pass",
+    "Asseri et al._2023_Prompt_engineering_techniques_for_mitigating": "pass"
+  }
+}

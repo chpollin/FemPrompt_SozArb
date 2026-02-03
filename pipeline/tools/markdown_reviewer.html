@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Markdown Review</title>
+    <title>Markdown Review - Page Aligned</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,8 +35,8 @@
         .btn-fail { background: #f8d7da; border-color: #dc3545; }
         .filter-btn { font-size: 11px; padding: 4px 8px; }
         .filter-btn.active { background: #007bff; color: white; border-color: #007bff; }
-        .sync-btn { font-size: 11px; padding: 4px 8px; }
-        .sync-btn.active { background: #28a745; color: white; border-color: #28a745; }
+        .view-btn { font-size: 11px; padding: 4px 8px; }
+        .view-btn.active { background: #28a745; color: white; border-color: #28a745; }
         .shortcuts { font-size: 10px; color: #999; }
 
         main { flex: 1; display: flex; overflow: hidden; }
@@ -57,20 +57,101 @@
         #fileList div.fail { border-left: 4px solid #dc3545; }
         #fileList div.filtered-out { display: none; }
 
+        /* Page-aligned view */
+        #pageView {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #e8e8e8;
+        }
+
+        .page-container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .page-number {
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .page-pdf {
+            flex: 1;
+            min-width: 0;
+            background: #444;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-pdf img {
+            width: 100%;
+            display: block;
+        }
+
+        .page-md {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page-md-content {
+            padding: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .page-md-content h1 { font-size: 1.5em; margin: 0.8em 0 0.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
+        .page-md-content h2 { font-size: 1.3em; margin: 0.8em 0 0.4em; }
+        .page-md-content h3 { font-size: 1.1em; margin: 0.8em 0 0.4em; }
+        .page-md-content p { margin: 0.5em 0; }
+        .page-md-content ul, .page-md-content ol { margin: 0.5em 0; padding-left: 1.5em; }
+        .page-md-content table { border-collapse: collapse; margin: 1em 0; font-size: 12px; width: 100%; }
+        .page-md-content th, .page-md-content td { border: 1px solid #ccc; padding: 4px 8px; }
+        .page-md-content th { background: #f0f0f0; }
+        .page-md-content blockquote { border-left: 3px solid #ddd; margin: 0.5em 0; padding-left: 1em; color: #666; }
+
+        /* Legacy split view */
+        .split-view {
+            flex: 1;
+            display: none;
+            overflow: hidden;
+        }
+
+        .split-view.active {
+            display: flex;
+        }
+
+        #pageView.active {
+            display: block;
+        }
+
+        #pageView:not(.active) {
+            display: none;
+        }
+
         .panel { flex: 1; display: flex; flex-direction: column; border-right: 1px solid #ddd; min-width: 0; }
         .panel:last-child { border-right: none; }
         .panel-title { padding: 6px 12px; background: #eee; font-weight: bold; font-size: 12px; border-bottom: 1px solid #ddd; }
         .panel-content { flex: 1; overflow-y: auto; padding: 0; }
 
-        /* PDF Images */
         #pdfImages { padding: 10px; background: #333; }
         #pdfImages img { width: 100%; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
         #pdfImages .page-label { color: #888; font-size: 11px; text-align: center; margin-bottom: 5px; }
 
-        /* Fallback iframe */
         #pdfFrame { width: 100%; height: 100%; border: none; }
 
-        /* Markdown */
         #mdRendered { padding: 15px; font-size: 14px; line-height: 1.6; }
         #mdRendered h1 { font-size: 1.5em; margin: 0.8em 0 0.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
         #mdRendered h2 { font-size: 1.3em; margin: 0.8em 0 0.4em; }
@@ -87,6 +168,18 @@
         .panel.status-fail { box-shadow: inset 0 3px 0 #dc3545; }
 
         .loading { text-align: center; padding: 40px; color: #666; }
+
+        /* No page markers warning */
+        .no-pages-warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+        .no-pages-warning h3 { color: #856404; margin-bottom: 10px; }
+        .no-pages-warning p { color: #856404; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -106,7 +199,7 @@
         <button class="filter-btn" onclick="setFilter('pending')">Offen</button>
         <button class="filter-btn" onclick="setFilter('warn')">Warn</button>
 
-        <button class="sync-btn" id="syncBtn" onclick="toggleSync()">Sync</button>
+        <button class="view-btn" id="viewBtn" onclick="toggleView()">Seiten-Ansicht</button>
 
         <span class="spacer"></span>
 
@@ -117,24 +210,30 @@
         <button onclick="exportResults()">Export</button>
         <button onclick="importResults()">Import</button>
 
-        <span class="shortcuts">← → Nav | 1 2 3 Bewertung | 0 Reset | L Liste | S Sync</span>
+        <span class="shortcuts">← → Nav | 1 2 3 Bewertung | 0 Reset | L Liste | V Ansicht</span>
     </header>
 
     <main>
         <div id="fileList"></div>
 
-        <div class="panel" id="pdfPanel">
-            <div class="panel-title">PDF Original</div>
-            <div class="panel-content" id="pdfContent">
-                <div id="pdfImages"></div>
-                <iframe id="pdfFrame" style="display:none;"></iframe>
-            </div>
-        </div>
+        <!-- Page-aligned view (new default) -->
+        <div id="pageView" class="active"></div>
 
-        <div class="panel" id="mdPanel">
-            <div class="panel-title">Markdown (gerendert)</div>
-            <div class="panel-content" id="mdContent">
-                <div id="mdRendered"></div>
+        <!-- Legacy split view -->
+        <div class="split-view" id="splitView">
+            <div class="panel" id="pdfPanel">
+                <div class="panel-title">PDF Original</div>
+                <div class="panel-content" id="pdfContent">
+                    <div id="pdfImages"></div>
+                    <iframe id="pdfFrame" style="display:none;"></iframe>
+                </div>
+            </div>
+
+            <div class="panel" id="mdPanel">
+                <div class="panel-title">Markdown (gerendert)</div>
+                <div class="panel-content" id="mdContent">
+                    <div id="mdRendered"></div>
+                </div>
             </div>
         </div>
     </main>
@@ -142,7 +241,8 @@
     <script>
         const PDF_PATH = '../pdfs/';
         const IMG_PATH = '../pdf_images/';
-        const MD_PATH = '../markdown_clean/';
+        const MD_PATH = '../markdown/';  // Changed to use markdown with page markers
+        const MD_CLEAN_PATH = '../markdown_clean/';
         const CSV_PATH = '../validation_reports/validation_summary_20260203_1056.csv';
 
         let fileNames = [];
@@ -150,8 +250,8 @@
         let reviews = JSON.parse(localStorage.getItem('mdReviews') || '{}');
         let currentFilter = 'all';
         let listVisible = true;
-        let syncScroll = true;
-        let useImages = false; // Will be set based on availability
+        let pageAlignedView = true;  // Default to new page-aligned view
+        let useImages = false;
 
         async function init() {
             try {
@@ -173,45 +273,34 @@
                 }
 
                 console.log('Using images:', useImages);
+                updateViewButton();
 
                 updateFileList();
                 updateStats();
                 if (fileNames.length > 0) loadFile(0);
 
-                // Setup sync scroll
-                if (useImages) {
-                    document.getElementById('pdfContent').addEventListener('scroll', onPdfScroll);
-                    document.getElementById('mdContent').addEventListener('scroll', onMdScroll);
-                }
             } catch (e) {
                 document.getElementById('docName').textContent = 'Fehler: ' + e.message;
             }
         }
 
-        let scrolling = false;
-        function onPdfScroll(e) {
-            if (!syncScroll || scrolling) return;
-            scrolling = true;
-            const pdfEl = e.target;
-            const mdEl = document.getElementById('mdContent');
-            const ratio = pdfEl.scrollTop / (pdfEl.scrollHeight - pdfEl.clientHeight);
-            mdEl.scrollTop = ratio * (mdEl.scrollHeight - mdEl.clientHeight);
-            setTimeout(() => scrolling = false, 50);
+        function updateViewButton() {
+            const btn = document.getElementById('viewBtn');
+            btn.textContent = pageAlignedView ? 'Split-Ansicht' : 'Seiten-Ansicht';
+            btn.classList.toggle('active', pageAlignedView);
         }
 
-        function onMdScroll(e) {
-            if (!syncScroll || scrolling) return;
-            scrolling = true;
-            const mdEl = e.target;
-            const pdfEl = document.getElementById('pdfContent');
-            const ratio = mdEl.scrollTop / (mdEl.scrollHeight - mdEl.clientHeight);
-            pdfEl.scrollTop = ratio * (pdfEl.scrollHeight - pdfEl.clientHeight);
-            setTimeout(() => scrolling = false, 50);
-        }
+        function toggleView() {
+            pageAlignedView = !pageAlignedView;
+            updateViewButton();
 
-        function toggleSync() {
-            syncScroll = !syncScroll;
-            document.getElementById('syncBtn').classList.toggle('active', syncScroll);
+            document.getElementById('pageView').classList.toggle('active', pageAlignedView);
+            document.getElementById('splitView').classList.toggle('active', !pageAlignedView);
+
+            // Reload current file to update display
+            if (currentIndex >= 0) {
+                loadFile(currentIndex);
+            }
         }
 
         function updateStats() {
@@ -263,6 +352,43 @@
             document.getElementById('fileList').classList.toggle('hidden', !listVisible);
         }
 
+        // Parse page markers from markdown
+        function parsePages(markdown) {
+            const pageRegex = /<!--\s*PAGE\s+(\d+)\s*-->/gi;
+            const pages = [];
+            let lastIndex = 0;
+            let match;
+
+            // Find all page markers
+            const markers = [];
+            while ((match = pageRegex.exec(markdown)) !== null) {
+                markers.push({
+                    pageNum: parseInt(match[1]),
+                    index: match.index,
+                    length: match[0].length
+                });
+            }
+
+            if (markers.length === 0) {
+                // No page markers found - return content as single page
+                return null;
+            }
+
+            // Extract content between markers
+            for (let i = 0; i < markers.length; i++) {
+                const startIndex = markers[i].index + markers[i].length;
+                const endIndex = (i < markers.length - 1) ? markers[i + 1].index : markdown.length;
+                const content = markdown.substring(startIndex, endIndex).trim();
+
+                pages.push({
+                    pageNum: markers[i].pageNum,
+                    content: content
+                });
+            }
+
+            return pages;
+        }
+
         async function loadFile(index) {
             if (index < 0 || index >= fileNames.length) return;
             currentIndex = index;
@@ -274,6 +400,108 @@
             const status = reviews[name] || '';
             document.getElementById('mdPanel').className = 'panel' + (status ? ` status-${status}` : '');
 
+            if (pageAlignedView) {
+                await loadPageAlignedView(name);
+            } else {
+                await loadSplitView(name);
+            }
+
+            document.querySelectorAll('#fileList div')[index]?.scrollIntoView({ block: 'nearest' });
+        }
+
+        async function loadPageAlignedView(name) {
+            const container = document.getElementById('pageView');
+            container.innerHTML = '<div class="loading">Lade Dokument...</div>';
+
+            // Load markdown
+            let mdText = '';
+            try {
+                // First try markdown with page markers
+                let response = await fetch(MD_PATH + encodeURIComponent(name) + '.md');
+                if (!response.ok) {
+                    // Fallback to clean markdown
+                    response = await fetch(MD_CLEAN_PATH + encodeURIComponent(name) + '.md');
+                }
+                if (!response.ok) throw new Error('MD nicht gefunden');
+                mdText = await response.text();
+            } catch (e) {
+                container.innerHTML = `<div class="no-pages-warning"><h3>Fehler</h3><p>${e.message}</p></div>`;
+                return;
+            }
+
+            // Parse pages
+            const pages = parsePages(mdText);
+
+            if (!pages) {
+                // No page markers - show warning and fallback
+                container.innerHTML = `
+                    <div class="no-pages-warning">
+                        <h3>Keine Seiten-Marker gefunden</h3>
+                        <p>Dieses Markdown wurde ohne Seiten-Marker konvertiert.</p>
+                        <p>Fuehre <code>convert_to_markdown.py</code> erneut aus, um Seiten-Marker hinzuzufuegen.</p>
+                        <p style="margin-top: 15px;">Wechsle zur <strong>Split-Ansicht</strong> fuer dieses Dokument.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Load PDF images
+            const pdfImages = await loadPdfImageUrls(name);
+
+            // Build page-aligned view
+            let html = '';
+            for (const page of pages) {
+                const imgUrl = pdfImages[page.pageNum] || null;
+                const renderedMd = marked.parse(page.content);
+
+                html += `
+                    <div class="page-container">
+                        <div class="page-pdf">
+                            <div class="page-number">PDF Seite ${page.pageNum}</div>
+                            ${imgUrl
+                                ? `<img src="${imgUrl}" alt="Seite ${page.pageNum}">`
+                                : `<div style="padding: 40px; text-align: center; color: #888;">Bild nicht verfuegbar</div>`
+                            }
+                        </div>
+                        <div class="page-md">
+                            <div class="page-number">Markdown Seite ${page.pageNum}</div>
+                            <div class="page-md-content">${renderedMd}</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            container.innerHTML = html;
+            container.scrollTop = 0;
+        }
+
+        // Encode filename for URL, handling special characters
+        function encodeFilename(name) {
+            // encodeURIComponent encodes + as %2B which may cause issues
+            // We keep + as-is since file system has it literally
+            return encodeURIComponent(name).replace(/%2B/g, '+');
+        }
+
+        async function loadPdfImageUrls(name) {
+            const images = {};
+            let page = 1;
+
+            while (page <= 500) {
+                const imgUrl = IMG_PATH + encodeFilename(name) + `/page_${String(page).padStart(3, '0')}.jpg`;
+                try {
+                    const response = await fetch(imgUrl, { method: 'HEAD' });
+                    if (!response.ok) break;
+                    images[page] = imgUrl;
+                    page++;
+                } catch (e) {
+                    break;
+                }
+            }
+
+            return images;
+        }
+
+        async function loadSplitView(name) {
             // Load PDF (images or iframe)
             if (useImages) {
                 await loadPdfImages(name);
@@ -283,21 +511,24 @@
                 document.getElementById('pdfFrame').src = PDF_PATH + encodeURIComponent(name) + '.pdf';
             }
 
-            // Load MD
+            // Load MD (prefer clean version for split view)
             try {
-                const response = await fetch(MD_PATH + encodeURIComponent(name) + '.md');
+                let response = await fetch(MD_CLEAN_PATH + encodeURIComponent(name) + '.md');
+                if (!response.ok) {
+                    response = await fetch(MD_PATH + encodeURIComponent(name) + '.md');
+                }
                 if (!response.ok) throw new Error('MD nicht gefunden');
                 const text = await response.text();
-                document.getElementById('mdRendered').innerHTML = marked.parse(text);
+
+                // Remove page markers for cleaner display
+                const cleanText = text.replace(/<!--\s*PAGE\s+\d+\s*-->\n?/gi, '');
+                document.getElementById('mdRendered').innerHTML = marked.parse(cleanText);
             } catch (e) {
                 document.getElementById('mdRendered').innerHTML = `<p style="color:red">Fehler: ${e.message}</p>`;
             }
 
-            // Reset scroll
             document.getElementById('pdfContent').scrollTop = 0;
             document.getElementById('mdContent').scrollTop = 0;
-
-            document.querySelectorAll('#fileList div')[index]?.scrollIntoView({ block: 'nearest' });
         }
 
         async function loadPdfImages(name) {
@@ -309,9 +540,8 @@
             const images = [];
             let page = 1;
 
-            // Try to load pages until we get a 404
-            while (page <= 500) { // Safety limit
-                const imgUrl = IMG_PATH + encodeURIComponent(name) + `/page_${String(page).padStart(3, '0')}.jpg`;
+            while (page <= 500) {
+                const imgUrl = IMG_PATH + encodeFilename(name) + `/page_${String(page).padStart(3, '0')}.jpg`;
                 try {
                     const response = await fetch(imgUrl, { method: 'HEAD' });
                     if (!response.ok) break;
@@ -323,7 +553,6 @@
             }
 
             if (images.length === 0) {
-                // Fallback to iframe
                 container.style.display = 'none';
                 document.getElementById('pdfFrame').style.display = 'block';
                 document.getElementById('pdfFrame').src = PDF_PATH + encodeURIComponent(name) + '.pdf';
@@ -345,7 +574,6 @@
             document.getElementById('mdPanel').className = `panel status-${status}`;
             updateStats();
 
-            // Auto-advance only if marking (not clearing)
             let nextIndex = currentIndex + 1;
             while (nextIndex < fileNames.length && shouldFilter(fileNames[nextIndex])) nextIndex++;
             if (nextIndex < fileNames.length) loadFile(nextIndex);
@@ -381,7 +609,6 @@
             a.download = `human_review_${new Date().toISOString().slice(0,10)}.json`;
             a.click();
 
-            // Show save location hint
             alert('Speichere die Datei in: pipeline/validation_reports/\\n\\nDann kann Claude die Ergebnisse nutzen.');
         }
 
@@ -420,7 +647,7 @@
             else if (e.key === '3') mark('fail');
             else if (e.key === '0') clearMark();
             else if (e.key === 'l' || e.key === 'L') toggleList();
-            else if (e.key === 's' || e.key === 'S') toggleSync();
+            else if (e.key === 'v' || e.key === 'V') toggleView();
             else if (e.key === 'ArrowLeft') {
                 let prev = currentIndex - 1;
                 while (prev >= 0 && shouldFilter(fileNames[prev])) prev--;
@@ -432,9 +659,6 @@
                 if (next < fileNames.length) loadFile(next);
             }
         });
-
-        // Init sync button state
-        document.getElementById('syncBtn').classList.add('active');
 
         init();
     </script>
