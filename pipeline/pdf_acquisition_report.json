@@ -1,0 +1,2914 @@
+{
+  "timestamp": "2026-02-03T08:28:24.913894",
+  "total_items": 306,
+  "with_pdf": 293,
+  "without_pdf": 12,
+  "download_errors": 1,
+  "items": [
+    {
+      "key": "WUMNU3W5",
+      "title": "AI literacy and its implications for prompt engineering strategies",
+      "author_year": "Knoth_2024",
+      "filename": "Knoth_2024_AI_literacy_and_its_implications_for_prompt.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "VIKH8BAI",
+      "title": "AI literacy and its implications for prompt engineering strategies",
+      "author_year": "Knoth_2024",
+      "filename": "Knoth_2024_AI_literacy_and_its_implications_for_prompt.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "DWS4KXBW",
+      "title": "Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity",
+      "author_year": "Ricaurte Quijano_2024",
+      "filename": "Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MPCZVZEW",
+      "title": "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room",
+      "author_year": "Hooshyar et al._2025",
+      "filename": "Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "A776TPGG",
+      "title": "The EU artificial intelligence act through a gender lens",
+      "author_year": "Karagianni_2025",
+      "filename": "Karagianni_2025_The_EU_artificial_intelligence_act_through_a.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "UBYTNGNV",
+      "title": "The AI Act, gender equality and non-discrimination: what role for the AI Office?",
+      "author_year": "Lütz_2024",
+      "filename": "Lütz_2024_The_AI_Act,_gender_equality_and.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "5UAHQESQ",
+      "title": "Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models: A Systematic Review",
+      "author_year": "Asseri et al._2025",
+      "filename": "Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "6MJYP7ZX",
+      "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+      "author_year": "Asseri et al._2023",
+      "filename": "Asseri et al._2023_Prompt_engineering_techniques_for_mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "JZ4P8V8S",
+      "title": "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption",
+      "author_year": "Jaakkola_2024",
+      "filename": "Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "UJ7DXK8Y",
+      "title": "Ideology Prediction from Scarce and Biased Supervision:\nLearn to Disregard the “What” and Focus on the “How”!",
+      "author_year": "Chen_2023",
+      "filename": "Chen_2023_Ideology_Prediction_from_Scarce_and_Biased.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "64DQYVVB",
+      "title": "More or less wrong: A benchmark for directional bias in LLM comparative reasoning",
+      "author_year": "Shafie_2025",
+      "filename": "Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "CHJQ52DC",
+      "title": "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?",
+      "author_year": "Latif_2023",
+      "filename": "Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "P285BA5N",
+      "title": "GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models",
+      "author_year": "Zhang_2024",
+      "filename": "Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "EN6GNKL3",
+      "title": "AI literacy in teacher education: Empowering educators through critical co-discovery",
+      "author_year": "Dilek_2025",
+      "filename": "Dilek_2025_AI_literacy_in_teacher_education_Empowering.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "2WHGF83D",
+      "title": "AI for decision support: What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations?",
+      "author_year": "Schneider_2024",
+      "filename": "Schneider_2024_AI_for_decision_support_What_are_possible.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "KQ5A8D6E",
+      "title": "AI competency framework for students",
+      "author_year": "Unknown",
+      "filename": "Unknown_AI_competency_framework_for_students.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "8MDXCTA6",
+      "title": "A systematic review of sophisticated predictive and prescriptive analytics in child welfare: Accuracy, equity, and bias",
+      "author_year": "Hall_2024",
+      "filename": "Hall_2024_A_systematic_review_of_sophisticated_predictive.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "SHJQQTI6",
+      "title": "A Survey on Intersectional Fairness in Machine Learning: Opportunities and Challenges",
+      "author_year": "Gohar_2023",
+      "filename": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "NVZA58ML",
+      "title": "A survey on fairness in large language models",
+      "author_year": "Wang_2024",
+      "filename": "Wang_2024_A_survey_on_fairness_in_large_language_models.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "QD2CXE9I",
+      "title": "Measuring gender and racial biases in large language models",
+      "author_year": "An_2025",
+      "filename": "An_2025_Measuring_gender_and_racial_biases_in_large.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "QG8IAB53",
+      "title": "Who cares about data? Data care arrangements in everyday organisational practice",
+      "author_year": "Jarke_2024",
+      "filename": "Jarke_2024_Who_cares_about_data_Data_care_arrangements_in.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "UHEM78MX",
+      "title": "What is AI Literacy? Competencies and Design Considerations",
+      "author_year": "Long_2020",
+      "filename": "Long_2020_What_is_AI_Literacy_Competencies_and_Design.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "I78CL6R5",
+      "title": "What are artificial intelligence literacy and competency? A comprehensive framework to support them",
+      "author_year": "Chiu_2024",
+      "filename": "Chiu_2024_What_are_artificial_intelligence_literacy_and.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "6JAZXKEB",
+      "title": "Using digital story writing as a pedagogy to develop AI literacy among primary students",
+      "author_year": "Ng_2022",
+      "filename": "Ng_2022_Using_digital_story_writing_as_a_pedagogy_to.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "NFW58AU8",
+      "title": "Transparency enhances positive perceptions of social artificial intelligence",
+      "author_year": "Xu_2023",
+      "filename": "Xu_2023_Transparency_enhances_positive_perceptions_of.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "NUYCHW2T",
+      "title": "Transparency enhances positive perceptions of social artificial intelligence",
+      "author_year": "Xu_2023",
+      "filename": "Xu_2023_Transparency_enhances_positive_perceptions_of.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MT54YHER",
+      "title": "Thinking like a scientist: Can interactive simulations foster critical AI literacy?",
+      "author_year": "Zhao_2025",
+      "filename": "Zhao_2025_Thinking_like_a_scientist_Can_interactive.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "4GYXUS9Y",
+      "title": "The end of the world as we know it? ChatGPT and social work",
+      "author_year": "Goldkind_2024",
+      "filename": "Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "VP6SXQHY",
+      "title": "The AI literacy development canvas: Assessing and building AI literacy in organizations",
+      "author_year": "Benlian_2025",
+      "filename": "Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "49PPZJ7Z",
+      "title": "Tensions in digital welfare states: Three perspectives on care and control",
+      "author_year": "Zakharova_2024",
+      "filename": "Zakharova_2024_Tensions_in_digital_welfare_states_Three.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "ZAU6P4BK",
+      "title": "Shaping feminist artificial intelligence",
+      "author_year": "Toupin_2024",
+      "filename": "Toupin_2024_Shaping_feminist_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "CLKAD87H",
+      "title": "Responsible prompting recommendation: Fostering responsible AI practices in prompting-time",
+      "author_year": "James_2025",
+      "filename": "James_2025_Responsible_prompting_recommendation_Fostering.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "8WBUGXRR",
+      "title": "Reflexive prompt engineering: A framework for responsible prompt engineering and AI interaction design",
+      "author_year": "Djeffal_2025",
+      "filename": "Djeffal_2025_Reflexive_prompt_engineering_A_framework_for.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "TNLGELEQ",
+      "title": "ReflectAI: Design and evaluation of an AI coach to support public servants' self-reflection",
+      "author_year": "Näscher_2025",
+      "filename": "Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "GZ9B3GPD",
+      "title": "Rationalisierung durch Digitalisierung?",
+      "author_year": "Waag_2023",
+      "filename": "Waag_2023_Rationalisierung_durch_Digitalisierung.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "ZLMLP53P",
+      "title": "Queer in AI: A case study in community-led participatory AI",
+      "author_year": "Cvoelcker_2023",
+      "filename": "Cvoelcker_2023_Queer_in_AI_A_case_study_in_community-led.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "2SNYUZG4",
+      "title": "Promises and challenges of generative artificial intelligence for human learning",
+      "author_year": "Yan_2024",
+      "filename": "Yan_2024_Promises_and_challenges_of_generative_artificial.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "6Y5EPQRR",
+      "title": "Positionings, challenges, and ambivalences in children's and parents' perspectives in digitalized familial contexts",
+      "author_year": "Kutscher_2023",
+      "filename": "Kutscher_2023_Positionings,_challenges,_and_ambivalences_in.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "JJLSMEQA",
+      "title": "Opportunities, challenges and school strategies for integrating generative AI in education",
+      "author_year": "Ng_2025",
+      "filename": "Ng_2025_Opportunities,_challenges_and_school_strategies.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "EJEFPZGA",
+      "title": "Navigating the Nexus of Trust: Prompt Engineering, Professional Judgment, and the Integration of Large Language Models in Social Work",
+      "author_year": "[Author not specified]_2025",
+      "filename": "[Author not specified]_2025_Navigating_the_Nexus_of_Trust_Prompt_Engineering,.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "W8DFWR9L",
+      "title": "Mitigating age-related bias in large language models: Strategies for responsible artificial intelligence development",
+      "author_year": "Shin_2025",
+      "filename": "Shin_2025_Mitigating_age-related_bias_in_large_language.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "LPMP8QAY",
+      "title": "Messung von AI Literacy – Empirische Evidenz und Implikationen",
+      "author_year": "Weber_2023",
+      "filename": "Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "23Y3627L",
+      "title": "Measuring user competence in using artificial intelligence: validity and reliability of artificial intelligence literacy scale",
+      "author_year": "Wang_2023",
+      "filename": "Wang_2023_Measuring_user_competence_in_using_artificial.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "KG8JRLRQ",
+      "title": "Measuring and mitigating unintended bias in text data",
+      "author_year": "Dixon_2018",
+      "filename": "Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "H3STST88",
+      "title": "Large language models are zero-shot reasoners",
+      "author_year": "Kojima_2022",
+      "filename": "Kojima_2022_Large_language_models_are_zero-shot_reasoners.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "4JN7NIS4",
+      "title": "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen",
+      "author_year": "Steiner_2022",
+      "filename": "Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "3B87U5LN",
+      "title": "\"It happened to be the perfect thing\": Experiences of generative AI chatbots for mental health",
+      "author_year": "Siddals_2024",
+      "filename": "Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7D3ICY7Z",
+      "title": "Introduction to the digital welfare state: Contestations, considerations and entanglements",
+      "author_year": "van Toorn_2024",
+      "filename": "van Toorn_2024_Introduction_to_the_digital_welfare_state.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "FDR5APIU",
+      "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action",
+      "author_year": "Ulnicane_2024",
+      "filename": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "X7ZGW6CN",
+      "title": "Intersectional Artificial Intelligence Is Essential: Polyvocal, Multimodal, Experimental Methods to Save AI",
+      "author_year": "Ciston_2024",
+      "filename": "Ciston_2024_Intersectional_Artificial_Intelligence_Is.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "LMW8DZ78",
+      "title": "Indecision on the use of artificial intelligence in healthcare: A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS",
+      "author_year": "Schneider_2025",
+      "filename": "Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7U29SIC8",
+      "title": "In search of artificial intelligence (AI) literacy in teacher education: A scoping review",
+      "author_year": "Sperling_2024",
+      "filename": "Sperling_2024_In_search_of_artificial_intelligence_(AI).pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "JC7X3MM7",
+      "title": "Improving human-AI partnerships in child welfare: Understanding worker practices, challenges, and desires for algorithmic decision support",
+      "author_year": "Kawakami_2022",
+      "filename": "Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "YDW5TX8M",
+      "title": "Imagination, Algorithms and News: Developing AI Literacy for Journalism",
+      "author_year": "Deuze_2022",
+      "filename": "Deuze_2022_Imagination,_Algorithms_and_News_Developing_AI.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "JMAWNUEV",
+      "title": "GLAT: The generative AI literacy assessment test",
+      "author_year": "Jin_2025",
+      "filename": "Jin_2025_GLAT_The_generative_AI_literacy_assessment_test.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "9MDIBETZ",
+      "title": "GenderCARE: A Comprehensive Framework for Assessing and Reducing Gender Bias in Large Language Models",
+      "author_year": "Tang_2024",
+      "filename": "Tang_2024_GenderCARE_A_Comprehensive_Framework_for.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "9Y7ZFGI5",
+      "title": "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy",
+      "author_year": "Shah_2025",
+      "filename": "Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "5G2QTZYD",
+      "title": "Feminist perspectives on AI: Ethical considerations in algorithmic decision-making",
+      "author_year": "Ahmed_2024",
+      "filename": "Ahmed_2024_Feminist_perspectives_on_AI_Ethical.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "PI5H2LZ2",
+      "title": "Failing our youngest: On the biases, pitfalls, and risks in a decision support algorithm used for child protection",
+      "author_year": "Moreau_2024",
+      "filename": "Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "M2FYV58I",
+      "title": "Exploring opportunities and risks in decision support technologies for social workers: An empirical study in the field of disabled people's services",
+      "author_year": "Schneider_2022",
+      "filename": "Schneider_2022_Exploring_opportunities_and_risks_in_decision.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "XQM6WRU2",
+      "title": "Exploring machine learning to support decision-making for placement stabilization and preservation in child welfare",
+      "author_year": "Cher_2024",
+      "filename": "Cher_2024_Exploring_machine_learning_to_support.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "VEJBIZRR",
+      "title": "Exploring complex mental health symptoms via classifying social media data with explainable LLMs",
+      "author_year": "Chen_2024",
+      "filename": "Chen_2024_Exploring_complex_mental_health_symptoms_via.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7VFNS5R3",
+      "title": "Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds",
+      "author_year": "Kong_2021",
+      "filename": "Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "9WIGR47Y",
+      "title": "Ethical issues related to the use of technology in social work practice: A systematic review",
+      "author_year": "Rodríguez-Martínez_2024",
+      "filename": "Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "HJ7BHX8J",
+      "title": "Engineers on responsibility: feminist approaches to who's responsible for ethical AI",
+      "author_year": "Browne_2024",
+      "filename": "Browne_2024_Engineers_on_responsibility_feminist_approaches.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MTMU9UPJ",
+      "title": "DR.GAP: Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning",
+      "author_year": "Qiu_2025",
+      "filename": "Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "BKSU66QB",
+      "title": "Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit",
+      "author_year": "Kutscher_2024",
+      "filename": "Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "XCS4YCQH",
+      "title": "DigComp 2.1: the digital competence framework for citizens with eight proficiency levels and examples of use.",
+      "author_year": "European Commission. Joint Research Centre._2017",
+      "filename": "European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "4BRSDIPP",
+      "title": "Development of the “Scale for the assessment of non-experts’ AI literacy” – An exploratory factor analysis",
+      "author_year": "Laupichler_2023",
+      "filename": "Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "BBLJ4RG3",
+      "title": "Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach",
+      "author_year": "Kong_2024",
+      "filename": "Kong_2024_Developing_an_artificial_intelligence_literacy.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "QLXLEUCG",
+      "title": "Der Einfluss der Algorithmen: Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz",
+      "author_year": "Schneider_2018",
+      "filename": "Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "BTLTEA6Y",
+      "title": "Decision support and algorithmic support: The construction of algorithms and professional discretion in social work",
+      "author_year": "Meilvang_2024",
+      "filename": "Meilvang_2024_Decision_support_and_algorithmic_support_The.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "NQEUZQF9",
+      "title": "Datafied ageing futures: Regimes of anticipation and participatory futuring",
+      "author_year": "Jarke_2025",
+      "filename": "Jarke_2025_Datafied_ageing_futures_Regimes_of_anticipation.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "GP4JDSI8",
+      "title": "Data Feminism for AI",
+      "author_year": "Klein_2024",
+      "filename": "Klein_2024_Data_Feminism_for_AI.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "44AA6ETH",
+      "title": "Das verflixte Problem mit Klassifikationen: Zum Einfluss der Digitalisierung auf die Soziale Diagnostik in der Sozialen Arbeit",
+      "author_year": "Schneider_2024",
+      "filename": "Schneider_2024_Das_verflixte_Problem_mit_Klassifikationen_Zum.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "ST9UCTJE",
+      "title": "Counterfactual fairness in text classification through robustness",
+      "author_year": "Garg_2019",
+      "filename": "Garg_2019_Counterfactual_fairness_in_text_classification.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "UENFDPH9",
+      "title": "Considering a unified model of artificial intelligence enhanced social work: A systematic review",
+      "author_year": "Garkisch_2024",
+      "filename": "Garkisch_2024_Considering_a_unified_model_of_artificial.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "R2LPR3VD",
+      "title": "Broadening artificial intelligence education in K-12: where to start?",
+      "author_year": "Wong_2020",
+      "filename": "Wong_2020_Broadening_artificial_intelligence_education_in.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MS3CNU3S",
+      "title": "Bias and fairness in large language models: A survey",
+      "author_year": "Gallegos_2024",
+      "filename": "Gallegos_2024_Bias_and_fairness_in_large_language_models_A.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MA3LBJS6",
+      "title": "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit: Eine exemplarische arbeitsfeldübergreifende Betrachtung des Natural Language Processing (NLP)",
+      "author_year": "Linnemann_2023",
+      "filename": "Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "QY6P4RGQ",
+      "title": "BBQ: A hand-built bias benchmark for question answering",
+      "author_year": "Parrish_2022",
+      "filename": "Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "YPYQ2TCL",
+      "title": "Assessing GPT's bias towards stigmatized social groups: An intersectional case study on nationality prejudice and psychophobia",
+      "author_year": "Mei_2023",
+      "filename": "Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "X2QQ4JH6",
+      "title": "Artificial Intelligence in Social Work: Emerging Ethical Issues",
+      "author_year": "Reamer_2023",
+      "filename": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "AK7K4P97",
+      "title": "Artificial intelligence in social work: An EPIC model for practice",
+      "author_year": "Baker_2025",
+      "filename": "Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "CY5IMM6G",
+      "title": "Artificial Intelligence (AI) literacy for social work: Implications for core competencies",
+      "author_year": "Ahn_2025",
+      "filename": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "JHRVDXSD",
+      "title": "Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies",
+      "author_year": "Ahn_2025",
+      "filename": "Ahn_2025_Artificial_Intelligence_(AI)_Literacy_for_Social.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "FJQ6XYHH",
+      "title": "Artificial Intelligence (AI) literacy – an argument for AI literacy in education",
+      "author_year": "Kong_2025",
+      "filename": "Kong_2025_Artificial_Intelligence_(AI)_literacy_–_an.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "H59BNSX8",
+      "title": "Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma",
+      "author_year": "James_2023",
+      "filename": "James_2023_Algorithmic_decision-making_in_social_work.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "R5QQTD95",
+      "title": "Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit – Eine empirische Untersuchung aus der Perspektive von Berufseinsteiger:innen",
+      "author_year": "Schönauer_2025",
+      "filename": "Schönauer_2025_Akzeptanz_von_KI_und_organisationale.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7G78SADI",
+      "title": "AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects",
+      "author_year": "Pinski_2024",
+      "filename": "Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MQJEES7J",
+      "title": "AI literacy and trust: A multi-method study of Human-GAI team collaboration",
+      "author_year": "Pan_2025",
+      "filename": "Pan_2025_AI_literacy_and_trust_A_multi-method_study_of.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "KPSF8EZE",
+      "title": "AI literacy and competency: definitions, frameworks, development and future research directions",
+      "author_year": "Chiu_2025",
+      "filename": "Chiu_2025_AI_literacy_and_competency_definitions,.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "3K9RDWLY",
+      "title": "AI Literacy - Towards Measuring Human Competency in Artificial Intelligence",
+      "author_year": "Pinski_2023",
+      "filename": "Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "GFXYER4F",
+      "title": "AI implementation science for social issues: Pitfalls and tips",
+      "author_year": "Takaoka_2022",
+      "filename": "Takaoka_2022_AI_implementation_science_for_social_issues.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "SWB86AYC",
+      "title": "Generative AI and the Future of Digital Literacy: Opportunities for Gender Inclusion",
+      "author_year": "Hartshorne_2025",
+      "filename": "Hartshorne_2025_Generative_AI_and_the_Future_of_Digital_Literacy.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "CLADZZKS",
+      "title": "Conceptualizing AI literacy: An exploratory review",
+      "author_year": "Ng_2021",
+      "filename": "Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "3AQ2K3BX",
+      "title": "Conceptualizing AI literacy: An exploratory review",
+      "author_year": "Ng_2021",
+      "filename": "Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "SE579V7B",
+      "title": "Conceptualizing AI literacy: An exploratory review",
+      "author_year": "Ng_2021",
+      "filename": "Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "DZ39L7GC",
+      "title": "Why and What to Teach: AI Curriculum for Elementary School",
+      "author_year": "Kim_2021",
+      "filename": "Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "WGVC7FQ5",
+      "title": "Artificial intelligence and mass personalization of communication content—An ethical and literacy perspective",
+      "author_year": "Hermann_2022",
+      "filename": "Hermann_2022_Artificial_intelligence_and_mass_personalization.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "H8WRNPP7",
+      "title": "AI Literacy for the top management: An upper echelons perspective on corporate AI orientation and implementation ability",
+      "author_year": "Pinski_2024",
+      "filename": "Pinski_2024_AI_Literacy_for_the_top_management_An_upper.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "UY65LIAI",
+      "title": "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy",
+      "author_year": "Quaid-i-Azam University, Islamabad, Pakistan_2025",
+      "filename": "Quaid-i-Azam University, Islamabad, Pakistan_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7WMD5JQ6",
+      "title": "Toward Agency‐Centered <span style=\"font-variant:small-caps;\">AI</span> Literacy: A Scoping Review",
+      "author_year": "Maeda_2025",
+      "filename": "Maeda_2025_Toward_Agency‐Centered_span.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "YUVR5YNQ",
+      "title": "Self-debiasing large language models: Zero-shot recognition and reduction of stereotypes",
+      "author_year": "Parrish_2025",
+      "filename": "Parrish_2025_Self-debiasing_large_language_models_Zero-shot.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "UB9NK8KI",
+      "title": "Scaling implicit bias analysis across transformer-based language models through embedding association test and prompt engineering",
+      "author_year": "Zayed_2024",
+      "filename": "Zayed_2024_Scaling_implicit_bias_analysis_across.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "ACDF4FL9",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "author_year": "Chisca_2024",
+      "filename": "Chisca_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "RM833D5N",
+      "title": "On the steerability of large language models",
+      "author_year": "He_2024",
+      "filename": "He_2024_On_the_steerability_of_large_language_models.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "M7AGB7LI",
+      "title": "Model explanations for gender and ethnicity bias mitigation in AI-generated narratives",
+      "author_year": "Salecha_2025",
+      "filename": "Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "GCN42PAM",
+      "title": "Mitigating age-related bias in large language models: Strategies for responsible artificial intelligence development",
+      "author_year": "Birru_2024",
+      "filename": "Birru_2024_Mitigating_age-related_bias_in_large_language.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "55ZR64VU",
+      "title": "Debiasing prompts for gender bias in large language models",
+      "author_year": "Kaneko_2024",
+      "filename": "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "JGZDWMN3",
+      "title": "Bias in decision-making for AI's ethical dilemmas: A comparative study of ChatGPT and Claude",
+      "author_year": "Wu_2025",
+      "filename": "Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "7IVS7X63",
+      "title": "Assessing GPT's bias towards stigmatized social groups: An intersectional case study on nationality prejudice and psychophobia",
+      "author_year": "Jiang_2022",
+      "filename": "Jiang_2022_Assessing_GPT's_bias_towards_stigmatized_social.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "QIQR449A",
+      "title": "A sociolinguistic approach to stereotype assessment in large language models",
+      "author_year": "Klinge_2024",
+      "filename": "Klinge_2024_A_sociolinguistic_approach_to_stereotype.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "JRG3B3LE",
+      "title": "Homoglyph unlearning: A novel approach to bias mitigation",
+      "author_year": "Struppek_2024",
+      "filename": "Struppek_2024_Homoglyph_unlearning_A_novel_approach_to_bias.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": "\nCode: 404\nURL: https://api.zotero.org/groups/6080294/items/VWMPP255/file?locale=en-US\nMethod: GET\nResponse: Not found"
+    },
+    {
+      "key": "AXEIVEW3",
+      "title": "Artificial Intelligence Competence Needs for Youth Workers",
+      "author_year": "Lanzetta_2024",
+      "filename": "Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "J9IZDVTW",
+      "title": "Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education",
+      "author_year": "Biagini_2024",
+      "filename": "Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "43CRXRRT",
+      "title": "A systematic review on digital literacy",
+      "author_year": "Tinmaz_2022",
+      "filename": "Tinmaz_2022_A_systematic_review_on_digital_literacy.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "P82X89Q4",
+      "title": "A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway",
+      "author_year": "Chee_2025",
+      "filename": "Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "SY8LNID7",
+      "title": "Digital literacy as a new determinant of health: A scoping review",
+      "author_year": "Arias López_2023",
+      "filename": "Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "UFE85SCV",
+      "title": "AI literacy in K-12: a systematic literature review",
+      "author_year": "Casal-Otero_2023",
+      "filename": "Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "HTXCWNQ9",
+      "title": "A Literature Review of Digital Literacy over Two Decades",
+      "author_year": "Peng_2022",
+      "filename": "Peng_2022_A_Literature_Review_of_Digital_Literacy_over_Two.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "S8WGUVQT",
+      "title": "Automated government benefits and welfare surveillance",
+      "author_year": "Dencik_2024",
+      "filename": "Dencik_2024_Automated_government_benefits_and_welfare.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "LXDG4KQK",
+      "title": "Coded injustice: Surveillance and discrimination in Denmark's automated welfare state",
+      "author_year": "Amnesty International_2024",
+      "filename": "Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "E4G328PD",
+      "title": "Clinical trial of an LLM-based conversational AI psychotherapy",
+      "author_year": "Heinz_2025",
+      "filename": "Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "C325Y32P",
+      "title": "AI for impact: The PRISM framework for responsible AI in social innovation",
+      "author_year": "World Economic Forum_2024",
+      "filename": "World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "7QQV7R9S",
+      "title": "Generative AI & social work practice guidance",
+      "author_year": "British Association of Social Workers_2025",
+      "filename": "British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "QKFG72IT",
+      "title": "Bildungsteilhabe - Flucht - Digitalisierung: Eine multilokale Ethnografie im (digitalen) Alltag junger Geflüchteter",
+      "author_year": "Fujii_2024",
+      "filename": "Fujii_2024_Bildungsteilhabe_-_Flucht_-_Digitalisierung_Eine.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "L6PH7GDL",
+      "title": "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis",
+      "author_year": "Linnemann_2025",
+      "filename": "Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "2FUXNFZS",
+      "title": "RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE: OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIVES",
+      "author_year": "Unknown",
+      "filename": "Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "HSQW48VE",
+      "title": "Artificial Intelligence in Social Work: An EPIC Model for Practice",
+      "author_year": "Unknown",
+      "filename": "Unknown_Artificial_Intelligence_in_Social_Work_An_EPIC.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "SS5HTYY6",
+      "title": "Artificial Intelligence in Social Sciences and Social Work: Bridging Technology and Humanity to Revolutionize Research, Policy, and Human Services",
+      "author_year": "Unknown",
+      "filename": "Unknown_Artificial_Intelligence_in_Social_Sciences_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "RAV6DAFQ",
+      "title": "The End of the World as We Know It? ChatGPT and Social Work",
+      "author_year": "Goldkind_2023",
+      "filename": "Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "YRBP6IEJ",
+      "title": "Introducing Generative Artificial Intelligence into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards",
+      "author_year": "Rodriguez_2024",
+      "filename": "Rodriguez_2024_Introducing_Generative_Artificial_Intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "JI24FQPV",
+      "title": "Clinical Social Workers’ Perceptions of Large Language Models in Practice: Resistance to Automation and Prospects for Integration",
+      "author_year": "Creswell Báez_2025",
+      "filename": "Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "LGYFN6JK",
+      "title": "ChatGPT for Social Work Science: Ethical Challenges and Opportunities",
+      "author_year": "Patton_2023",
+      "filename": "Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "GXZWBNJU",
+      "title": "Artificial Intelligence in Social Work: An EPIC Model for Practice",
+      "author_year": "Boetto_2025",
+      "filename": "Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "ZJS2J7E7",
+      "title": "Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies",
+      "author_year": "Ahn_2025",
+      "filename": "Ahn_2025_Artificial_Intelligence_(AI)_Literacy_for_Social.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "Y6M97SWQ",
+      "title": "Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review",
+      "author_year": "Yu_2025",
+      "filename": "Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "VICS443I",
+      "title": "AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice",
+      "author_year": "Singer_2023",
+      "filename": "Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "JNLPSHD5",
+      "title": "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit: Eine exemplarische arbeitsfeldübergreifende Betrachtung des Natural Language Processing (NLP)",
+      "author_year": "Linnemann_2023",
+      "filename": "Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "H7E3N6VR",
+      "title": "Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen",
+      "author_year": "Sūna_2024",
+      "filename": "Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "MITLDF9S",
+      "title": "KI-basiertes Assistenzsystem im Kinderschutzverfahren",
+      "author_year": "Feist-Ortmanns_2025",
+      "filename": "Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "D4FY2S3R",
+      "title": "Künstliche Intelligenz in der Sozialen Arbeit – Zwischen Bedenken und Optionen",
+      "author_year": "Gravelmann_2024",
+      "filename": "Gravelmann_2024_Künstliche_Intelligenz_in_der_Sozialen_Arbeit_–.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "DGLWM93D",
+      "title": "Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit – Curriculare Überlegungen und veränderte Akteurskonstellationen",
+      "author_year": "Engelhardt_2025",
+      "filename": "Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "EB7PZUZZ",
+      "title": "Prompten nach Plan: Das PCRR-Framework als pädagogisches Werkzeug für den Einsatz von Künstlicher Intelligenz.",
+      "author_year": "Freinhofer_2025",
+      "filename": "Freinhofer_2025_Prompten_nach_Plan_Das_PCRR-Framework_als.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "7FBB2KUC",
+      "title": "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit",
+      "author_year": "Linnemann_2023",
+      "filename": "Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "6N2E242K",
+      "title": "Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit",
+      "author_year": "Schönauer_2025",
+      "filename": "Schönauer_2025_Akzeptanz_von_KI_und_organisationale.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "HT9ZSI9U",
+      "title": "Handbuch Soziale Arbeit und Digitalisierung",
+      "author_year": "Kutscher_2020",
+      "filename": "Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "79TL6HSB",
+      "title": "Social work and artificial intelligence: Collaboration and challenges",
+      "author_year": "Chen_2025",
+      "filename": "Chen_2025_Social_work_and_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "PAZJHB8J",
+      "title": "The role of artificial intelligence (AI) and machine learning in social work practice",
+      "author_year": "Nuwasiima_2024",
+      "filename": "Nuwasiima_2024_The_role_of_artificial_intelligence_(AI)_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "YTDMY5W4",
+      "title": "A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1)",
+      "author_year": "Hauck_2025",
+      "filename": "Hauck_2025_A_framework_for_the_learning_and_teaching_of.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "PYN6HB3E",
+      "title": "Social work in the age of artificial intelligence: A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis",
+      "author_year": "Alam_2025",
+      "filename": "Alam_2025_Social_work_in_the_age_of_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "THVKEETD",
+      "title": "Artificial Intelligence (AI) literacy for social work",
+      "author_year": "Ahn_2025",
+      "filename": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "CF6T2RD7",
+      "title": "Artificial intelligence in social work: Emerging ethical issues",
+      "author_year": "Reamer_2023",
+      "filename": "Reamer_2023_Artificial_intelligence_in_social_work_Emerging.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "HZKE8T8I",
+      "title": "Künstliche Intelligenz in der Sozialen Arbeit – Zwischen Bedenken und Optionen",
+      "author_year": "Gravelmann_2024",
+      "filename": "Gravelmann_2024_Künstliche_Intelligenz_in_der_Sozialen_Arbeit_–.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "LXKXPD5H",
+      "title": "Digitale Werkzeuge und Machtasymmetrien?",
+      "author_year": "Studeny_2025",
+      "filename": "Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "9832ZJB7",
+      "title": "Leitfaden Digitale Verwaltung und Ethik: Praxisleitfaden für KI in der Verwaltung, Version 1.0",
+      "author_year": "Biegelbauer_2023",
+      "filename": "Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "DJEVSR8D",
+      "title": "AI FORA – Artificial Intelligence for Assessment: Fairness bei der Verteilung öffentlicher sozialer Leistungen",
+      "author_year": "Ahrweiler_2025",
+      "filename": "Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "QVNJIQJG",
+      "title": "CAIL – Critical AI Literacy: Kritische Technikkompetenz für konstruktiven Umgang mit KI-basierter Technologie in Betrieben",
+      "author_year": "Strauß_2024",
+      "filename": "Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "2MVSL3UV",
+      "title": "Learning About AI: A Systematic Review of Reviews on AI Literacy",
+      "author_year": "Zhang_2025",
+      "filename": "Zhang_2025_Learning_About_AI_A_Systematic_Review_of_Reviews.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "K3YCLBXK",
+      "title": "AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology",
+      "author_year": "Ruiz_2024",
+      "filename": "Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "BFG8VUK3",
+      "title": "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy",
+      "author_year": "Quaid-i-Azam University, Islamabad, Pakistan_2025",
+      "filename": "Quaid-i-Azam University, Islamabad, Pakistan_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "XY2WVKBY",
+      "title": "Governing discriminatory content in conversational AI: A cross-system, cross-lingual, and cross-topic audit",
+      "author_year": "Zeng_2025",
+      "filename": "Zeng_2025_Governing_discriminatory_content_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "JPUCNHNU",
+      "title": "LIBRA: Measuring bias of large language model from a local context",
+      "author_year": "Pan_2025",
+      "filename": "Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "YV53DKI2",
+      "title": "Explainability through systematicity: The hard systematicity challenge",
+      "author_year": "Santos_2024",
+      "filename": "Santos_2024_Explainability_through_systematicity_The_hard.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "BDBYDLVK",
+      "title": "A reparative turn in AI",
+      "author_year": "Singh_2025",
+      "filename": "Singh_2025_A_reparative_turn_in_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "T9KEZN3G",
+      "title": "Governance of generative AI: A comprehensive framework for navigating challenges and opportunities",
+      "author_year": "Taeihagh_2025",
+      "filename": "Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "99QJDBSV",
+      "title": "How large language models judge cooperation",
+      "author_year": "Santos_2025",
+      "filename": "Santos_2025_How_large_language_models_judge_cooperation.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "R3VJVFCE",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "author_year": "Kamruzzaman_2024",
+      "filename": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "GCQ8J9XF",
+      "title": "Beyond transparency and explainability: On the need for adequate and contextualized user guidelines for LLM use",
+      "author_year": "Barman_2024",
+      "filename": "Barman_2024_Beyond_transparency_and_explainability_On_the.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "EMZ33KFH",
+      "title": "Unequal voices: How LLMs construct constrained queer narratives",
+      "author_year": "Ghosal_2025",
+      "filename": "Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "WLV8L8PM",
+      "title": "Guardrails, not guidance: Understanding responses to LGBTQ+ language in large language models",
+      "author_year": "Tint_2025",
+      "filename": "Tint_2025_Guardrails,_not_guidance_Understanding_responses.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "38E5FZDV",
+      "title": "Explicitly unbiased large language models still form biased associations",
+      "author_year": "Bai_2025",
+      "filename": "Bai_2025_Explicitly_unbiased_large_language_models_still.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "WNY526GN",
+      "title": "Bias and fairness in large language models: A survey",
+      "author_year": "Gallegos_2024",
+      "filename": "Gallegos_2024_Bias_and_fairness_in_large_language_models_A.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "22XEFRWP",
+      "title": "Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups",
+      "author_year": "Petzel_2025",
+      "filename": "Petzel_2025_Prejudiced_interactions_with_large_language.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "QDUGSBPC",
+      "title": "Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation",
+      "author_year": "An_2025",
+      "filename": "An_2025_Measuring_gender_and_racial_biases_in_large.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7L78MV2V",
+      "title": "Biases in large language models: Origins, inventory and discussion",
+      "author_year": "Navigli_2023",
+      "filename": "Navigli_2023_Biases_in_large_language_models_Origins,.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "IW32JGWV",
+      "title": "Advancing Accountability in AI",
+      "author_year": "OECD_2023",
+      "filename": "OECD_2023_Advancing_Accountability_in_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "LBLF9BCW",
+      "title": "Dipper: Diversity in Prompts for Producing Large Language Model Outputs",
+      "author_year": "Lau_2023",
+      "filename": "Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "QFPTW4VL",
+      "title": "Explainable Artificial Intelligence",
+      "author_year": "European Data Protection Supervisor_2023",
+      "filename": "European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "DUV4TUG3",
+      "title": "Improving diversity of demographic representation in people entities in Large Language Models",
+      "author_year": "Lahoti_2023",
+      "filename": "Lahoti_2023_Improving_diversity_of_demographic_representation.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "6L6WSDC8",
+      "title": "How Far Can We Extract Diverse Perspectives from Large Language Models?",
+      "author_year": "Hayati_2024",
+      "filename": "Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "3AHQEHDF",
+      "title": "Multilingual Prompting for Improving LLM Generation Diversity",
+      "author_year": "Wang_2024",
+      "filename": "Wang_2024_Multilingual_Prompting_for_Improving_LLM.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "PH7JBBC8",
+      "title": "A formal account of AI trustworthiness: Connecting intrinsic and perceived trustworthiness in an operational schematization",
+      "author_year": "Bisconti_2024",
+      "filename": "Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "7AMRV4DT",
+      "title": "Mitigating trust-induced inappropriate reliance on AI assistance",
+      "author_year": "Srinivasan_2025",
+      "filename": "Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "ZGM7K3H6",
+      "title": "Artificial intelligence in social work: An EPIC model for practice",
+      "author_year": "Goldkind_2024",
+      "filename": "Goldkind_2024_Artificial_intelligence_in_social_work_An_EPIC.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "Y4BMCI2J",
+      "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+      "author_year": "Asseri_2024",
+      "filename": "Asseri_2024_Prompt_engineering_techniques_for_mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "4PK8UN82",
+      "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+      "author_year": "Victor_2023",
+      "filename": "Victor_2023_Recommendations_for_social_work_researchers_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "EXVG7MQR",
+      "title": "Artificial intelligence in social work: Emerging ethical issues",
+      "author_year": "Reamer_2023",
+      "filename": "Reamer_2023_Artificial_intelligence_in_social_work_Emerging.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "BCBWSU3Z",
+      "title": "Can LLMs reason about trust? A pilot study",
+      "author_year": "Debnath_2024",
+      "filename": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "G53MCF3W",
+      "title": "Bias, accuracy, and trust: Gender-diverse perspectives on large language models",
+      "author_year": "Gaba_2025",
+      "filename": "Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "8JFZMD5G",
+      "title": "The influence of mental state attributions on trust in large language models",
+      "author_year": "Colombatto_2025",
+      "filename": "Colombatto_2025_The_influence_of_mental_state_attributions_on.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "ERTJZW5M",
+      "title": "Trust in artificial intelligence–based clinical decision support systems among health care workers: Systematic review",
+      "author_year": "Tun_2025",
+      "filename": "Tun_2025_Trust_in_artificial_intelligence–based_clinical.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "5ERYSQCK",
+      "title": "Measuring and identifying factors of individuals' trust in large language models",
+      "author_year": "De Duro_2025",
+      "filename": "De Duro_2025_Measuring_and_identifying_factors_of_individuals'.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "RXNXJA8W",
+      "title": "What large language models know and what people think they know",
+      "author_year": "Steyvers_2025",
+      "filename": "Steyvers_2025_What_large_language_models_know_and_what_people.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "JKF6VAQB",
+      "title": "AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI",
+      "author_year": "Park_2025",
+      "filename": "Park_2025_AI_algorithm_transparency,_pipelines_for_trust.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "7W3RGSSG",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "author_year": "Kamruzzaman_2024",
+      "filename": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "ED6C8LD2",
+      "title": "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals",
+      "author_year": "Choudhury_2024",
+      "filename": "Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "XJCEMM3D",
+      "title": "A formal account of AI trustworthiness: Connecting intrinsic and perceived trustworthiness in an operational schematization",
+      "author_year": "Bisconti_2024",
+      "filename": "Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "RR5MJRBZ",
+      "title": "Artificial intelligence in social work: An EPIC model for practice",
+      "author_year": "Goldkind_2024",
+      "filename": "Goldkind_2024_Artificial_intelligence_in_social_work_An_EPIC.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "3GB9B4IJ",
+      "title": "Can LLMs reason about trust? A pilot study",
+      "author_year": "Debnath_2024",
+      "filename": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "25XSMXKT",
+      "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+      "author_year": "Asseri_2024",
+      "filename": "Asseri_2024_Prompt_engineering_techniques_for_mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "9YYPYEGY",
+      "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+      "author_year": "Victor_2023",
+      "filename": "Victor_2023_Recommendations_for_social_work_researchers_and.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "Q8YPNNKL",
+      "title": "Mitigating trust-induced inappropriate reliance on AI assistance",
+      "author_year": "Srinivasan_2025",
+      "filename": "Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "IUN7Z56I",
+      "title": "Artificial intelligence in social work: Emerging ethical issues",
+      "author_year": "Reamer_2023",
+      "filename": "Reamer_2023_Artificial_intelligence_in_social_work_Emerging.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "F7WNRWIC",
+      "title": "Measuring and identifying factors of individuals' trust in large language models",
+      "author_year": "De Duro_2025",
+      "filename": "De Duro_2025_Measuring_and_identifying_factors_of_individuals'.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "GFHALQS2",
+      "title": "Trust in artificial intelligence–based clinical decision support systems among health care workers: Systematic review",
+      "author_year": "Tun_2025",
+      "filename": "Tun_2025_Trust_in_artificial_intelligence–based_clinical.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MUBZ8XJL",
+      "title": "Bias, accuracy, and trust: Gender-diverse perspectives on large language models",
+      "author_year": "Gaba_2025",
+      "filename": "Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7IY7AX7D",
+      "title": "The influence of mental state attributions on trust in large language models",
+      "author_year": "Colombatto_2025",
+      "filename": "Colombatto_2025_The_influence_of_mental_state_attributions_on.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "KRUQB7L2",
+      "title": "What large language models know and what people think they know",
+      "author_year": "Steyvers_2025",
+      "filename": "Steyvers_2025_What_large_language_models_know_and_what_people.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "WAYCKUZ8",
+      "title": "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals",
+      "author_year": "Choudhury_2024",
+      "filename": "Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "UIIDCXLB",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "author_year": "Kamruzzaman_2024",
+      "filename": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "ZHQMHHPQ",
+      "title": "AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI",
+      "author_year": "Park_2025",
+      "filename": "Park_2025_AI_algorithm_transparency,_pipelines_for_trust.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7AS5MAU9",
+      "title": "Mitigating trust-induced inappropriate reliance on AI assistance",
+      "author_year": "Srinivasan_2025",
+      "filename": "Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "L48P8FBG",
+      "title": "Artificial intelligence in social work: An EPIC model for practice",
+      "author_year": "Goldkind_2024",
+      "filename": "Goldkind_2024_Artificial_intelligence_in_social_work_An_EPIC.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "U9ACKGB4",
+      "title": "A formal account of AI trustworthiness: Connecting intrinsic and perceived trustworthiness in an operational schematization",
+      "author_year": "Bisconti_2024",
+      "filename": "Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "2YS85B49",
+      "title": "Can LLMs reason about trust? A pilot study",
+      "author_year": "Debnath_2024",
+      "filename": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "Z4YXX9PZ",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "author_year": "Kamruzzaman_2024",
+      "filename": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "GUMWKBN6",
+      "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+      "author_year": "Asseri_2024",
+      "filename": "Asseri_2024_Prompt_engineering_techniques_for_mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "U3AJIXAJ",
+      "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
+      "author_year": "Victor_2023",
+      "filename": "Victor_2023_Recommendations_for_social_work_researchers_and.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "HN7KKNYV",
+      "title": "Artificial intelligence in social work: Emerging ethical issues",
+      "author_year": "Reamer_2023",
+      "filename": "Reamer_2023_Artificial_intelligence_in_social_work_Emerging.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "CYZQ6XPK",
+      "title": "Evaluating gender bias in large language models via chain-of-thought prompting",
+      "author_year": "Kaneko_2024",
+      "filename": "Kaneko_2024_Evaluating_gender_bias_in_large_language_models.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "EHQBHVYV",
+      "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review",
+      "author_year": "Asseri_2025",
+      "filename": "Asseri_2025_Prompt_engineering_techniques_for_mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "22KJL3PC",
+      "title": "The cultural stereotype and cultural bias of ChatGPT",
+      "author_year": "Yuan_2025",
+      "filename": "Yuan_2025_The_cultural_stereotype_and_cultural_bias_of.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "RARE5UFC",
+      "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
+      "author_year": "Kamruzzaman_2024",
+      "filename": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "YMABYPKF",
+      "title": "What’s in a name? Auditing large language models for race and gender bias",
+      "author_year": "Salinas_2025",
+      "filename": "Salinas_2025_What’s_in_a_name_Auditing_large_language_models.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "CSJS9JGH",
+      "title": "AI gender bias, disparities, and fairness: Does training data matter?",
+      "author_year": "Latif_2023",
+      "filename": "Latif_2023_AI_gender_bias,_disparities,_and_fairness_Does.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "4LY3SA4E",
+      "title": "Flexible intersectional stereotype extraction (FISE): Analyzing intersectional biases in large language models",
+      "author_year": "Charlesworth_2024",
+      "filename": "Charlesworth_2024_Flexible_intersectional_stereotype_extraction.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "TSYJ3Y57",
+      "title": "Women4Ethical AI: Global cooperation for gender-inclusive AI",
+      "author_year": "UNESCO_2024",
+      "filename": "UNESCO_2024_Women4Ethical_AI_Global_cooperation_for.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "BR2LG8LD",
+      "title": "How AI hype impacts the LGBTQ+ community",
+      "author_year": "Kumar_2024",
+      "filename": "Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "6QPLNNQK",
+      "title": "Bias against women and girls in large language models: A UNESCO study",
+      "author_year": "UNESCO_2024",
+      "filename": "UNESCO_2024_Bias_against_women_and_girls_in_large_language.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "WS4KQPWN",
+      "title": "Intersectionality in artificial intelligence: Framing concerns and recommendations for action",
+      "author_year": "Ulnicane_2024",
+      "filename": "Ulnicane_2024_Intersectionality_in_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "UDZLIJWX",
+      "title": "MirrorStories: Reflecting Diversity through Personalized Narrative Generation with Large Language Models",
+      "author_year": "Yunusov_2024",
+      "filename": "Yunusov_2024_MirrorStories_Reflecting_Diversity_through.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "6BZ5353S",
+      "title": "Multilingual Prompting for Improving LLM Generation Diversity",
+      "author_year": "Wang_2025",
+      "filename": "Wang_2025_Multilingual_Prompting_for_Improving_LLM.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "HMDFMBV3",
+      "title": "Intersectional Stereotypes in Large Language Models: Dataset and Analysis",
+      "author_year": "Ma_2023",
+      "filename": "Ma_2023_Intersectional_Stereotypes_in_Large_Language.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "Z9BIKVS3",
+      "title": "Avoiding Catastrophe Through Intersectionality in Global AI Governance",
+      "author_year": "Laine_2025",
+      "filename": "Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "SSH3LVN6",
+      "title": "Artificial Intelligence and Intersectionality",
+      "author_year": "Ulnicane_2024",
+      "filename": "Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "QZJL6KBZ",
+      "title": "Algorithms, artificial intelligence and discrimination",
+      "author_year": "Lund_2025",
+      "filename": "Lund_2025_Algorithms,_artificial_intelligence_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "RZ4QFXQI",
+      "title": "Discriminating Systems: Gender, Race, and Power in AI",
+      "author_year": "West_2023",
+      "filename": "West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "K2KL8WH8",
+      "title": "Revisiting Technical Bias Mitigation Strategies",
+      "author_year": "Djiberou Mahamadou_2024",
+      "filename": "Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "K6JQ7SVA",
+      "title": "Intersectional Fairness: A Fractal Approach",
+      "author_year": "Zannone_2023",
+      "filename": "Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "NBYNRKBL",
+      "title": "What is Feminist AI?",
+      "author_year": "Wudel_2025",
+      "filename": "Wudel_2025_What_is_Feminist_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "XK6G84V7",
+      "title": "Algorithmic discrimination: examining its types and regulatory measures with emphasis on US legal practices",
+      "author_year": "Wang_2024",
+      "filename": "Wang_2024_Algorithmic_discrimination_examining_its_types.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "T83KNEQZ",
+      "title": "Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness",
+      "author_year": "Ovalle_2023",
+      "filename": "Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "TRAN2GJU",
+      "title": "How can feminism inform AI governance in practice?",
+      "author_year": "Ricaurte_2024",
+      "filename": "Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "Q4LK53XW",
+      "title": "Are \"Intersectionally Fair\" AI Algorithms Really Fair to Women of Color? A Philosophical Analysis",
+      "author_year": "Kong_2022",
+      "filename": "Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "XIYX5HJS",
+      "title": "Towards substantive equality in artificial intelligence: Transformative AI policy for gender equality and diversity",
+      "author_year": "Ricaurte Quijano_2024",
+      "filename": "Ricaurte Quijano_2024_Towards_substantive_equality_in_artificial.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "3QUWCYVW",
+      "title": "Assessing trustworthy AI: Technical and legal perspectives of fairness in AI",
+      "author_year": "Kattnig_2024",
+      "filename": "Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "5F7D9PEB",
+      "title": "Policy advice and best practices on bias and fairness in AI",
+      "author_year": "Alvarez_2024",
+      "filename": "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "2SLISKSW",
+      "title": "Avoiding catastrophe through intersectionality in global AI governance",
+      "author_year": "McCrory_2024",
+      "filename": "McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "8U23BX2J",
+      "title": "Intersectionality in artificial intelligence: Framing concerns and recommendations for action",
+      "author_year": "Ulnicane_2024",
+      "filename": "Ulnicane_2024_Intersectionality_in_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "7L93JBLR",
+      "title": "Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI Act",
+      "author_year": "Karagianni_2025",
+      "filename": "Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "NUVZI357",
+      "title": "Feministische Netzpolitik und Künstliche Intelligenz in der politischen Bildung [Feminist network politics and artificial intelligence in political education]",
+      "author_year": "Mosene_2023",
+      "filename": "Mosene_2023_Feministische_Netzpolitik_und_Künstliche.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "2565PPJW",
+      "title": "Feminist reflections for the development of artificial intelligence",
+      "author_year": "Guerra_2023",
+      "filename": "Guerra_2023_Feminist_reflections_for_the_development_of.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "DA6T4Z5B",
+      "title": "Feminist Data Set",
+      "author_year": "Sinders_2017",
+      "filename": "Sinders_2017_Feminist_Data_Set.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "UFJ7ERFF",
+      "title": "Data Feminism for AI",
+      "author_year": "D'Ignazio_2024",
+      "filename": "D'Ignazio_2024_Data_Feminism_for_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "BJZYGNEE",
+      "title": "Shaping feminist artificial intelligence",
+      "author_year": "Toupin_2024",
+      "filename": "Toupin_2024_Shaping_feminist_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "N7J2ZRFP",
+      "title": "Algorithmic Governance and the International Politics of Big Tech",
+      "author_year": "Srivastava_2024",
+      "filename": "Srivastava_2024_Algorithmic_Governance_and_the_International.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "VFD9ENG6",
+      "title": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges",
+      "author_year": "Gohar_2023",
+      "filename": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "THGC3PA2",
+      "title": "Feministische KI – Künstliche Intelligenz für alle? [Feminist AI – Artificial intelligence for everyone?]",
+      "author_year": "Kubes_2024",
+      "filename": "Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "T8R8RKX9",
+      "title": "AI tools show biases in ranking job applicants' names according to perceived race and gender",
+      "author_year": "Wilson_2024",
+      "filename": "Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "X54V3JMF",
+      "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action",
+      "author_year": "Ulnicane_2024",
+      "filename": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "PQC9G5EU",
+      "title": "Feminism Confronts AI: The Gender Relations of Digitalisation",
+      "author_year": "Wajcman_2023",
+      "filename": "Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "QUU8QDPQ",
+      "title": "Keynote Summary: The New Jim Code: Reimagining the Default Settings of Technology & Society",
+      "author_year": "Benjamin_2023",
+      "filename": "Benjamin_2023_Keynote_Summary_The_New_Jim_Code_Reimagining_the.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "U75LP6SV",
+      "title": "The Algorithmic Auditing Landscape: A Social Justice Approach",
+      "author_year": "Raji_2024",
+      "filename": "Raji_2024_The_Algorithmic_Auditing_Landscape_A_Social.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "SJLJ2GHC",
+      "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action",
+      "author_year": "Ulnicane_2024",
+      "filename": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "3XMBE43Z",
+      "title": "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?",
+      "author_year": "Voutyrakou_2025",
+      "filename": "Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "SHDNTZJZ",
+      "title": "Shaping feminist artificial intelligence",
+      "author_year": "Toupin_2024",
+      "filename": "Toupin_2024_Shaping_feminist_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "9YCFMPVT",
+      "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action",
+      "author_year": "Ulnicane_2024",
+      "filename": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "C485NKYA",
+      "title": "AI Countergovernance: Lessons Learned from Canada and Paris",
+      "author_year": "Attard-Frost_2025",
+      "filename": "Attard-Frost_2025_AI_Countergovernance_Lessons_Learned_from_Canada.pdf",
+      "has_pdf": false,
+      "downloaded": false,
+      "error": null
+    },
+    {
+      "key": "XZ6Z8A9C",
+      "title": "Trustworthy AI and the Logics of Intersectional Resistance",
+      "author_year": "Knowles_2023",
+      "filename": "Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "GJF776AY",
+      "title": "Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering",
+      "author_year": "Shukla_2025",
+      "filename": "Shukla_2025_Investigating_AI_systems_examining_data_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "PC75954S",
+      "title": "An empirical study of structural social and ethical challenges in AI",
+      "author_year": "Ghosal_2024",
+      "filename": "Ghosal_2024_An_empirical_study_of_structural_social_and.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "Y8J3HI9J",
+      "title": "Artificial Intelligence in a Structurally Unjust Society",
+      "author_year": "Lin_2022",
+      "filename": "Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "VVEEL68I",
+      "title": "Training in Co-Creation as a Methodological Approach to Improve AI Fairness",
+      "author_year": "Slesinger_2024",
+      "filename": "Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "HLBXNWAZ",
+      "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
+      "author_year": "Sharma_2024",
+      "filename": "Sharma_2024_Intersectional_analysis_of_visual_generative_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "Y6SAPNT2",
+      "title": "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach",
+      "author_year": "Vethman_2025",
+      "filename": "Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "XXCDL3A3",
+      "title": "Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness",
+      "author_year": "Ovalle_2023",
+      "filename": "Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "QXDK8Z6I",
+      "title": "Artificial Intelligence and Structural Injustice: Foundations for Equity, Values, and Responsibility",
+      "author_year": "Himmelreich_2022",
+      "filename": "Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "LT3D3ZQ2",
+      "title": "Towards a Feminist Metaethics of AI",
+      "author_year": "Siapka_2023",
+      "filename": "Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "D2EGAVKZ",
+      "title": "Data Feminism for AI",
+      "author_year": "Klein_2024",
+      "filename": "Klein_2024_Data_Feminism_for_AI.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "NHIZN4QJ",
+      "title": "What is Feminist AI?",
+      "author_year": "Wudel_2025",
+      "filename": "Wudel_2025_What_is_Feminist_AI.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "MIT8HTC6",
+      "title": "PreciseDebias: An automatic prompt engineering approach for generative AI to mitigate image demographic biases",
+      "author_year": "Clemmer_2024",
+      "filename": "Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "YN9JAREI",
+      "title": "Faires KI-Prompting – Ein Leitfaden für Unternehmen",
+      "author_year": "Gengler_2024",
+      "filename": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "MJDTRLAI",
+      "title": "Can prompt modifiers control bias? A comparative analysis of text-to-image generative models",
+      "author_year": "Shin_2024",
+      "filename": "Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "6L85PRUW",
+      "title": "Inclusive prompt engineering: A methodology for hacking biased AI image generation",
+      "author_year": "Skilton_2024",
+      "filename": "Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "YLAKP7Z2",
+      "title": "Intersectional analysis of visual generative AI: The case of Stable Diffusion",
+      "author_year": "Jääskeläinen_2025",
+      "filename": "Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "IDW7QSYG",
+      "title": "Female perspectives on algorithmic bias: Implications for AI researchers and practitioners",
+      "author_year": "Fraile-Rojas_2025",
+      "filename": "Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "AIZGTQKG",
+      "title": "Gender bias in artificial intelligence: Empowering women through digital literacy",
+      "author_year": "Shah_2025",
+      "filename": "Shah_2025_Gender_bias_in_artificial_intelligence_Empowering.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "AIGLDZ4C",
+      "title": "How to Create Inclusive AI Images: A Guide to Bias-Free Prompting",
+      "author_year": "Articulate_2025",
+      "filename": "Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "AFDLFCIL",
+      "title": "Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making",
+      "author_year": "Ahmed_2024",
+      "filename": "Ahmed_2024_Feminist_Perspectives_on_AI_Ethical.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "GPSB87RN",
+      "title": "What is Feminist AI?",
+      "author_year": "Wudel_2025",
+      "filename": "Wudel_2025_What_is_Feminist_AI.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "XW8NHCIE",
+      "title": "Gender, race, and intersectional bias in AI resume screening via language model retrieval",
+      "author_year": "Wilson_2024",
+      "filename": "Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "ZLM537Z4",
+      "title": "Feminist AI: Critical Perspectives on Algorithms, Data, and Intelligent Machines",
+      "author_year": "Browne_2023",
+      "filename": "Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "9BDIJE9B",
+      "title": "Artificial Intelligence and gender equality",
+      "author_year": "UN Women_2024",
+      "filename": "UN Women_2024_Artificial_Intelligence_and_gender_equality.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "V4GTLMED",
+      "title": "Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches",
+      "author_year": "Browne_2024",
+      "filename": "Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "YMYHLMFS",
+      "title": "Data feminism for AI",
+      "author_year": "Klein_2024",
+      "filename": "Klein_2024_Data_feminism_for_AI.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "QM6L6XLZ",
+      "title": "Incubating Feminist AI: Executive Summary 2021-2024",
+      "author_year": "A+ Alliance_2024",
+      "filename": "A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "ZNHUCA4B",
+      "title": "Recommendation on the Ethics of Artificial Intelligence",
+      "author_year": "UNESCO_2021",
+      "filename": "UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "SQ38TTWQ",
+      "title": "Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation",
+      "author_year": "An_2025",
+      "filename": "An_2025_Measuring_gender_and_racial_biases_in_large.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "ZMW228P6",
+      "title": "Factoring the matrix of domination: A critical review and reimagination of intersectionality in AI fairness",
+      "author_year": "Ovalle_2023",
+      "filename": "Ovalle_2023_Factoring_the_matrix_of_domination_A_critical.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    },
+    {
+      "key": "JZN2I6J5",
+      "title": "Prompting fairness: Learning prompts for debiasing large language models",
+      "author_year": "Chisca_2024",
+      "filename": "Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "7G73H3KM",
+      "title": "Generative AI and opportunities for feminist classroom assignments",
+      "author_year": "Small_2023",
+      "filename": "Small_2023_Generative_AI_and_opportunities_for_feminist.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "KNQYFQ6B",
+      "title": "The power of prompts: Evaluating and mitigating gender bias in MT with LLMs",
+      "author_year": "Sant_2024",
+      "filename": "Sant_2024_The_power_of_prompts_Evaluating_and_mitigating.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "8BUHU5EP",
+      "title": "Feminist reflections for the development of Artificial Intelligence",
+      "author_year": "Derechos Digitales_2023",
+      "filename": "Derechos Digitales_2023_Feminist_reflections_for_the_development_of.pdf",
+      "has_pdf": true,
+      "downloaded": true,
+      "error": null
+    },
+    {
+      "key": "IGFYSIV8",
+      "title": "Shaping feminist artificial intelligence",
+      "author_year": "Toupin_2024",
+      "filename": "Toupin_2024_Shaping_feminist_artificial_intelligence.pdf",
+      "has_pdf": true,
+      "downloaded": false,
+      "error": null,
+      "note": "Already existed"
+    }
+  ]
+}

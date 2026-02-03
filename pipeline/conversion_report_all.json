@@ -1,0 +1,5447 @@
+{
+  "timestamp": "2026-02-03T08:54:22.577968",
+  "input_dir": "c:\\Users\\Chrisi\\Documents\\GitHub\\FemPrompt_SozArb\\pipeline\\pdfs",
+  "output_dir": "c:\\Users\\Chrisi\\Documents\\GitHub\\FemPrompt_SozArb\\pipeline\\markdown",
+  "total_files": 234,
+  "converted": 183,
+  "skipped": 49,
+  "failed": 2,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.pdf",
+      "output": "A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md",
+      "file_hash": "48954a0fd949238b09a46c7f1aeda122",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Ahmed_2024_Feminist_perspectives_on_AI_Ethical.pdf",
+      "output": "Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md",
+      "file_hash": "89d268b236e1f6e10cbab32e45fa62f0",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.pdf",
+      "output": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md",
+      "file_hash": "c88b5d2da1291932550c02c775d5d8f5",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.pdf",
+      "output": "Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.md",
+      "file_hash": "4c25b866f91c75e4d1fb840409f65708",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Alam_2025_Social_work_in_the_age_of_artificial_intelligence.pdf",
+      "output": "Alam_2025_Social_work_in_the_age_of_artificial_intelligence.md",
+      "file_hash": "b17ff8bc72d0103ddacca5ff48067222",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.pdf",
+      "output": "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.md",
+      "file_hash": "c92e0c15168125000a3fe8741ca48d62",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.pdf",
+      "output": "Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.md",
+      "file_hash": "80627711cb00aa2e05b1e292f501270d",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "An_2025_Measuring_gender_and_racial_biases_in_large.pdf",
+      "output": "An_2025_Measuring_gender_and_racial_biases_in_large.md",
+      "file_hash": "7e813b9e1c24040d3f3074cd02b7c583",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A.pdf",
+      "output": "Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A.md",
+      "file_hash": "5337063dbce00fe990a021026ca4e0fc",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.pdf",
+      "output": "Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md",
+      "file_hash": "47ae5fad3a99871459acc441cce1c2e2",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Asseri et al._2023_Prompt_engineering_techniques_for_mitigating.pdf",
+      "output": "Asseri et al._2023_Prompt_engineering_techniques_for_mitigating.md",
+      "file_hash": "90c179ec8b842340d077b8c2617dbb01",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.pdf",
+      "output": "Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.md",
+      "file_hash": "90c179ec8b842340d077b8c2617dbb01",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Asseri_2024_Prompt_engineering_techniques_for_mitigating.pdf",
+      "output": "Asseri_2024_Prompt_engineering_techniques_for_mitigating.md",
+      "file_hash": "90c179ec8b842340d077b8c2617dbb01",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Asseri_2025_Prompt_engineering_techniques_for_mitigating.pdf",
+      "output": "Asseri_2025_Prompt_engineering_techniques_for_mitigating.md",
+      "file_hash": "90c179ec8b842340d077b8c2617dbb01",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Bai_2025_Explicitly_unbiased_large_language_models_still.pdf",
+      "output": "Bai_2025_Explicitly_unbiased_large_language_models_still.md",
+      "file_hash": "3d47a406293086a16fd34a796983686f",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.pdf",
+      "output": "Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+      "file_hash": "aa2f12ae3d9cf3ca0be4d32e22f4d676",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Barman_2024_Beyond_transparency_and_explainability_On_the.pdf",
+      "output": "Barman_2024_Beyond_transparency_and_explainability_On_the.md",
+      "file_hash": "6e63e2385f6bfdc900cc4def4e1b1fc7",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.pdf",
+      "output": "Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md",
+      "file_hash": "6e3e2fbdc56855c282f27e7a80b158e8",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.pdf",
+      "output": "Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.md",
+      "file_hash": "14725c78cc7faf7fb219799d4752c5bc",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.pdf",
+      "output": "Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.md",
+      "file_hash": "ab8d9495003207a57f34b0b330efad6b",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.pdf",
+      "output": "Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.md",
+      "file_hash": "2f8e195d53fcc61214abcadc9ad4872b",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.pdf",
+      "output": "Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.md",
+      "file_hash": "aa2f12ae3d9cf3ca0be4d32e22f4d676",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.pdf",
+      "output": "British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
+      "file_hash": "45844a4081a3d7e4e4c00037299cc531",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf",
+      "output": "Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.md",
+      "file_hash": "9af21bbb576fe4e4aee7a48779c7a7af",
+      "success": false,
+      "duration_seconds": 12.34,
+      "error": "Conversion failed for: Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf with status: ConversionStatus.FAILURE",
+      "status": "failed"
+    },
+    {
+      "input": "Browne_2024_Engineers_on_responsibility_feminist_approaches.pdf",
+      "output": "Browne_2024_Engineers_on_responsibility_feminist_approaches.md",
+      "file_hash": "0bc53f3742cd955f6ecd2ca83bc17828",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.pdf",
+      "output": "Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.md",
+      "file_hash": "bea90152b871eb66328488bef380981d",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.pdf",
+      "output": "Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.md",
+      "file_hash": "2ed4347036d58ae40a2338e7aa728d77",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Charlesworth_2024_Flexible_intersectional_stereotype_extraction.pdf",
+      "output": "Charlesworth_2024_Flexible_intersectional_stereotype_extraction.md",
+      "file_hash": "41bcc0c87b0f1c68b055885abb7cb084",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.pdf",
+      "output": "Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md",
+      "file_hash": "1fa0325e2868118ba8050befa6972229",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chen_2023_Ideology_Prediction_from_Scarce_and_Biased.pdf",
+      "output": "Chen_2023_Ideology_Prediction_from_Scarce_and_Biased.md",
+      "file_hash": "6ef778ae8a55ef157c91c6812dc841a3",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chen_2024_Exploring_complex_mental_health_symptoms_via.pdf",
+      "output": "Chen_2024_Exploring_complex_mental_health_symptoms_via.md",
+      "file_hash": "fc6930b60daf949076d48600e8fc1f32",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chen_2025_Social_work_and_artificial_intelligence.pdf",
+      "output": "Chen_2025_Social_work_and_artificial_intelligence.md",
+      "file_hash": "0a209ace35f003fef5fcdb376332bd24",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Cher_2024_Exploring_machine_learning_to_support.pdf",
+      "output": "Cher_2024_Exploring_machine_learning_to_support.md",
+      "file_hash": "dd6737ba38f393b6405e1fa17e79ed19",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.pdf",
+      "output": "Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.md",
+      "file_hash": "ab16795dc8e445210d3a0b807f6e48f9",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chisca_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "output": "Chisca_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "file_hash": "d121a549bf27109539e7396b48a66c6d",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chiu_2024_What_are_artificial_intelligence_literacy_and.pdf",
+      "output": "Chiu_2024_What_are_artificial_intelligence_literacy_and.md",
+      "file_hash": "73d56856c8d1965ea304702c77160839",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Chiu_2025_AI_literacy_and_competency_definitions,.pdf",
+      "output": "Chiu_2025_AI_literacy_and_competency_definitions,.md",
+      "file_hash": "327ff23308dbb8c91c67e4ac20c717bd",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.pdf",
+      "output": "Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.md",
+      "file_hash": "1451cfe998e27c3a170b918844bf0949",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Ciston_2024_Intersectional_Artificial_Intelligence_Is.pdf",
+      "output": "Ciston_2024_Intersectional_Artificial_Intelligence_Is.md",
+      "file_hash": "1b221d0e9834edd0e7f1e1ce6d2775c0",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.pdf",
+      "output": "Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.md",
+      "file_hash": "fc451e8424a4ca4adaa42412e419019d",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Colombatto_2025_The_influence_of_mental_state_attributions_on.pdf",
+      "output": "Colombatto_2025_The_influence_of_mental_state_attributions_on.md",
+      "file_hash": "8c29952a0c232f454afbb9091f2e2cb0",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.pdf",
+      "output": "Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.md",
+      "file_hash": "66bee02abcacda65032fb1dd6ce18d00",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Cvoelcker_2023_Queer_in_AI_A_case_study_in_community-led.pdf",
+      "output": "Cvoelcker_2023_Queer_in_AI_A_case_study_in_community-led.md",
+      "file_hash": "af197ca8a529e50c42524ac72ffa7549",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "D'Ignazio_2024_Data_Feminism_for_AI.pdf",
+      "output": "D'Ignazio_2024_Data_Feminism_for_AI.md",
+      "file_hash": "b38d664a9930dec4267575c79ff74464",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "De Duro_2025_Measuring_and_identifying_factors_of_individuals'.pdf",
+      "output": "De Duro_2025_Measuring_and_identifying_factors_of_individuals'.md",
+      "file_hash": "dfe0e86635c7f891e65064ac5273f3ea",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.pdf",
+      "output": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "file_hash": "8b4fe471b01b12002ed4a83e14f7a957",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Dencik_2024_Automated_government_benefits_and_welfare.pdf",
+      "output": "Dencik_2024_Automated_government_benefits_and_welfare.md",
+      "file_hash": "95991a493e59f48a3e8b7a7f73ceb5fa",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Derechos Digitales_2023_Feminist_reflections_for_the_development_of.pdf",
+      "output": "Derechos Digitales_2023_Feminist_reflections_for_the_development_of.md",
+      "file_hash": "75ea08c2c27cf49fb34a5733192eb32b",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Deuze_2022_Imagination,_Algorithms_and_News_Developing_AI.pdf",
+      "output": "Deuze_2022_Imagination,_Algorithms_and_News_Developing_AI.md",
+      "file_hash": "adac49457b2762af0ce9bda08da41c5a",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Dilek_2025_AI_literacy_in_teacher_education_Empowering.pdf",
+      "output": "Dilek_2025_AI_literacy_in_teacher_education_Empowering.md",
+      "file_hash": "e0d5a05f73003b595055837825cbff5d",
+      "status": "skipped",
+      "note": "Already existed"
+    },
+    {
+      "input": "Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.pdf",
+      "output": "Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.md",
+      "file_hash": "b24fc9fd47ee59e614f42e5c1b9e5ed5",
+      "success": true,
+      "duration_seconds": 7.63,
+      "metrics": {
+        "total_chars": 36177,
+        "total_lines": 408,
+        "total_words": 5395,
+        "headings": 31,
+        "heading_levels": {
+          "h2": 31
+        },
+        "tables": 6,
+        "lists": 15,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 172,
+        "avg_line_length": 151.6
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Djeffal_2025_Reflexive_prompt_engineering_A_framework_for.pdf",
+      "output": "Djeffal_2025_Reflexive_prompt_engineering_A_framework_for.md",
+      "file_hash": "4e52fcb95b8f3d13006b82cae151531c",
+      "success": true,
+      "duration_seconds": 4.34,
+      "metrics": {
+        "total_chars": 88141,
+        "total_lines": 415,
+        "total_words": 11508,
+        "headings": 23,
+        "heading_levels": {
+          "h2": 23
+        },
+        "tables": 0,
+        "lists": 145,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 141,
+        "avg_line_length": 320.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.pdf",
+      "output": "Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.md",
+      "file_hash": "e4dc9b7e7a9c68c2fbf42bf51fee6282",
+      "success": true,
+      "duration_seconds": 2.87,
+      "metrics": {
+        "total_chars": 72410,
+        "total_lines": 307,
+        "total_words": 9677,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 1,
+        "lists": 37,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 74,
+        "avg_line_length": 309.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.pdf",
+      "output": "Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.md",
+      "file_hash": "bef9cd9986f2ecca135329ea0f085b59",
+      "success": true,
+      "duration_seconds": 3.83,
+      "metrics": {
+        "total_chars": 41800,
+        "total_lines": 201,
+        "total_words": 5204,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 0,
+        "lists": 20,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 91,
+        "avg_line_length": 378.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.pdf",
+      "output": "European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+      "file_hash": "a474a6f806c18cfbc948919e19bf3eb3",
+      "success": true,
+      "duration_seconds": 23.54,
+      "metrics": {
+        "total_chars": 107730,
+        "total_lines": 2702,
+        "total_words": 16531,
+        "headings": 34,
+        "heading_levels": {
+          "h2": 34
+        },
+        "tables": 4,
+        "lists": 408,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 1212,
+        "avg_line_length": 70.5
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.pdf",
+      "output": "European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
+      "file_hash": "b177124bb6d04159fa3be4b07c9cc3c1",
+      "success": true,
+      "duration_seconds": 5.82,
+      "metrics": {
+        "total_chars": 50436,
+        "total_lines": 409,
+        "total_words": 7367,
+        "headings": 28,
+        "heading_levels": {
+          "h2": 28
+        },
+        "tables": 0,
+        "lists": 28,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 192,
+        "avg_line_length": 230.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.pdf",
+      "output": "Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.md",
+      "file_hash": "86a48a8fadd51533e3cb9121e49be319",
+      "success": true,
+      "duration_seconds": 46.57,
+      "metrics": {
+        "total_chars": 21032,
+        "total_lines": 588,
+        "total_words": 2880,
+        "headings": 70,
+        "heading_levels": {
+          "h2": 70
+        },
+        "tables": 0,
+        "lists": 64,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 275,
+        "avg_line_length": 65.3
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.pdf",
+      "output": "Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.md",
+      "file_hash": "2e8a069e48fb6e7258a2c2b1890242d0",
+      "success": true,
+      "duration_seconds": 12.64,
+      "metrics": {
+        "total_chars": 90124,
+        "total_lines": 538,
+        "total_words": 12637,
+        "headings": 34,
+        "heading_levels": {
+          "h2": 34
+        },
+        "tables": 2,
+        "lists": 152,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 191,
+        "avg_line_length": 258.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Freinhofer_2025_Prompten_nach_Plan_Das_PCRR-Framework_als.pdf",
+      "output": "Freinhofer_2025_Prompten_nach_Plan_Das_PCRR-Framework_als.md",
+      "file_hash": "2d09c49fec766c551e3726c8e70f1940",
+      "success": true,
+      "duration_seconds": 14.44,
+      "metrics": {
+        "total_chars": 79669,
+        "total_lines": 516,
+        "total_words": 9348,
+        "headings": 26,
+        "heading_levels": {
+          "h2": 26
+        },
+        "tables": 3,
+        "lists": 52,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 228,
+        "avg_line_length": 274.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Fujii_2024_Bildungsteilhabe_-_Flucht_-_Digitalisierung_Eine.pdf",
+      "output": "Fujii_2024_Bildungsteilhabe_-_Flucht_-_Digitalisierung_Eine.md",
+      "file_hash": "190773a883f700ccedcdf7c96e274aaa",
+      "success": true,
+      "duration_seconds": 35.54,
+      "metrics": {
+        "total_chars": 764498,
+        "total_lines": 2439,
+        "total_words": 93034,
+        "headings": 138,
+        "heading_levels": {
+          "h2": 138
+        },
+        "tables": 2,
+        "lists": 376,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 1036,
+        "avg_line_length": 543.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.pdf",
+      "output": "Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.md",
+      "file_hash": "498df9708de7e8e68d89757c1cdd44ef",
+      "success": true,
+      "duration_seconds": 8.63,
+      "metrics": {
+        "total_chars": 93860,
+        "total_lines": 396,
+        "total_words": 13306,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 3,
+        "lists": 95,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 153,
+        "avg_line_length": 384.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Gallegos_2024_Bias_and_fairness_in_large_language_models_A.pdf",
+      "output": "Gallegos_2024_Bias_and_fairness_in_large_language_models_A.md",
+      "file_hash": "fd0a3dd031f1e9e264a8e90b51bb9344",
+      "success": true,
+      "duration_seconds": 14.56,
+      "metrics": {
+        "total_chars": 303223,
+        "total_lines": 1403,
+        "total_words": 41490,
+        "headings": 60,
+        "heading_levels": {
+          "h2": 60
+        },
+        "tables": 6,
+        "lists": 408,
+        "figures": 0,
+        "code_blocks": 2,
+        "links": 0,
+        "empty_lines": 488,
+        "avg_line_length": 331.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Garg_2019_Counterfactual_fairness_in_text_classification.pdf",
+      "output": "Garg_2019_Counterfactual_fairness_in_text_classification.md",
+      "file_hash": "04d0a3644c289e03616410ac93c507d7",
+      "success": true,
+      "duration_seconds": 3.28,
+      "metrics": {
+        "total_chars": 40737,
+        "total_lines": 269,
+        "total_words": 6188,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 5,
+        "lists": 28,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 103,
+        "avg_line_length": 243.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Garkisch_2024_Considering_a_unified_model_of_artificial.pdf",
+      "output": "Garkisch_2024_Considering_a_unified_model_of_artificial.md",
+      "file_hash": "f03878014ba4fdfdf493cd2f2c475f43",
+      "success": true,
+      "duration_seconds": 5.41,
+      "metrics": {
+        "total_chars": 108104,
+        "total_lines": 724,
+        "total_words": 15701,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 4,
+        "lists": 96,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 282,
+        "avg_line_length": 242.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.pdf",
+      "output": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+      "file_hash": "e90ffcd43df1aa848aa62a8fdf5ba5ba",
+      "success": true,
+      "duration_seconds": 33.28,
+      "metrics": {
+        "total_chars": 52700,
+        "total_lines": 770,
+        "total_words": 6812,
+        "headings": 86,
+        "heading_levels": {
+          "h2": 86
+        },
+        "tables": 4,
+        "lists": 74,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 344,
+        "avg_line_length": 121.9
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Ghosal_2024_An_empirical_study_of_structural_social_and.pdf",
+      "output": "Ghosal_2024_An_empirical_study_of_structural_social_and.md",
+      "file_hash": "d55d198fb620913fd8f9b579dc758061",
+      "success": true,
+      "duration_seconds": 13.01,
+      "metrics": {
+        "total_chars": 107445,
+        "total_lines": 550,
+        "total_words": 15444,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 1,
+        "lists": 103,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 226,
+        "avg_line_length": 329.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.pdf",
+      "output": "Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.md",
+      "file_hash": "d39533b26fe544dfd4c8c1a1f4d68b01",
+      "success": true,
+      "duration_seconds": 10.54,
+      "metrics": {
+        "total_chars": 81983,
+        "total_lines": 731,
+        "total_words": 12766,
+        "headings": 48,
+        "heading_levels": {
+          "h2": 48
+        },
+        "tables": 9,
+        "lists": 38,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 296,
+        "avg_line_length": 186.8
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.pdf",
+      "output": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md",
+      "file_hash": "a34da663aa238efe460de6d658a915d2",
+      "success": true,
+      "duration_seconds": 1.62,
+      "metrics": {
+        "total_chars": 53477,
+        "total_lines": 313,
+        "total_words": 8040,
+        "headings": 24,
+        "heading_levels": {
+          "h2": 24
+        },
+        "tables": 1,
+        "lists": 73,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 118,
+        "avg_line_length": 272.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.pdf",
+      "output": "Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.md",
+      "file_hash": "3a31bb5046f1670ec2a789f75a0e8b8e",
+      "success": true,
+      "duration_seconds": 2.3,
+      "metrics": {
+        "total_chars": 10147,
+        "total_lines": 59,
+        "total_words": 1484,
+        "headings": 8,
+        "heading_levels": {
+          "h2": 8
+        },
+        "tables": 0,
+        "lists": 5,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 27,
+        "avg_line_length": 315.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Goldkind_2024_Artificial_intelligence_in_social_work_An_EPIC.pdf",
+      "output": "Goldkind_2024_Artificial_intelligence_in_social_work_An_EPIC.md",
+      "file_hash": "aa2f12ae3d9cf3ca0be4d32e22f4d676",
+      "success": true,
+      "duration_seconds": 6.49,
+      "metrics": {
+        "total_chars": 52531,
+        "total_lines": 297,
+        "total_words": 6620,
+        "headings": 22,
+        "heading_levels": {
+          "h2": 22
+        },
+        "tables": 4,
+        "lists": 53,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 118,
+        "avg_line_length": 291.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.pdf",
+      "output": "Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md",
+      "file_hash": "3a31bb5046f1670ec2a789f75a0e8b8e",
+      "success": true,
+      "duration_seconds": 2.02,
+      "metrics": {
+        "total_chars": 10147,
+        "total_lines": 59,
+        "total_words": 1484,
+        "headings": 8,
+        "heading_levels": {
+          "h2": 8
+        },
+        "tables": 0,
+        "lists": 5,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 27,
+        "avg_line_length": 315.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Guerra_2023_Feminist_reflections_for_the_development_of.pdf",
+      "output": "Guerra_2023_Feminist_reflections_for_the_development_of.md",
+      "file_hash": "75ea08c2c27cf49fb34a5733192eb32b",
+      "success": true,
+      "duration_seconds": 3.47,
+      "metrics": {
+        "total_chars": 67404,
+        "total_lines": 484,
+        "total_words": 10335,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 0,
+        "lists": 36,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 225,
+        "avg_line_length": 258.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Hall_2024_A_systematic_review_of_sophisticated_predictive.pdf",
+      "output": "Hall_2024_A_systematic_review_of_sophisticated_predictive.md",
+      "file_hash": "2b02a0a8ae00c2b3610122f52ad03ca4",
+      "success": true,
+      "duration_seconds": 7.6,
+      "metrics": {
+        "total_chars": 100873,
+        "total_lines": 813,
+        "total_words": 13624,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 3,
+        "lists": 65,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 347,
+        "avg_line_length": 214.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Hauck_2025_A_framework_for_the_learning_and_teaching_of.pdf",
+      "output": "Hauck_2025_A_framework_for_the_learning_and_teaching_of.md",
+      "file_hash": "19956e0e6ff798c3adaef9e962b6eb43",
+      "success": true,
+      "duration_seconds": 4.84,
+      "metrics": {
+        "total_chars": 20616,
+        "total_lines": 295,
+        "total_words": 3001,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 1,
+        "lists": 72,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 116,
+        "avg_line_length": 113.5
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from.pdf",
+      "output": "Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from.md",
+      "file_hash": "13482a08cac808f1d8ab513c969930fb",
+      "success": true,
+      "duration_seconds": 15.17,
+      "metrics": {
+        "total_chars": 121272,
+        "total_lines": 901,
+        "total_words": 16393,
+        "headings": 64,
+        "heading_levels": {
+          "h2": 64
+        },
+        "tables": 12,
+        "lists": 7,
+        "figures": 0,
+        "code_blocks": 3,
+        "links": 0,
+        "empty_lines": 405,
+        "avg_line_length": 243.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "He_2024_On_the_steerability_of_large_language_models.pdf",
+      "output": "He_2024_On_the_steerability_of_large_language_models.md",
+      "file_hash": "ff85dd75ddfb0db9f4c09f7cf104d79c",
+      "success": true,
+      "duration_seconds": 13.6,
+      "metrics": {
+        "total_chars": 65221,
+        "total_lines": 414,
+        "total_words": 8878,
+        "headings": 25,
+        "heading_levels": {
+          "h2": 25
+        },
+        "tables": 18,
+        "lists": 21,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 159,
+        "avg_line_length": 254.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.pdf",
+      "output": "Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md",
+      "file_hash": "ab2e9736c1d9432e72aefb2b9bf62aad",
+      "success": true,
+      "duration_seconds": 6.69,
+      "metrics": {
+        "total_chars": 87359,
+        "total_lines": 329,
+        "total_words": 7480,
+        "headings": 30,
+        "heading_levels": {
+          "h2": 30
+        },
+        "tables": 2,
+        "lists": 14,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 115,
+        "avg_line_length": 406.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Hermann_2022_Artificial_intelligence_and_mass_personalization.pdf",
+      "output": "Hermann_2022_Artificial_intelligence_and_mass_personalization.md",
+      "file_hash": "d07c4b44b3d06fdf48ad6529bdf4601c",
+      "success": true,
+      "duration_seconds": 4.07,
+      "metrics": {
+        "total_chars": 64081,
+        "total_lines": 296,
+        "total_words": 8942,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 0,
+        "lists": 113,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 94,
+        "avg_line_length": 315.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.pdf",
+      "output": "Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.md",
+      "file_hash": "6013f9de0769da090ab4d63bb54da6c2",
+      "success": true,
+      "duration_seconds": 3.25,
+      "metrics": {
+        "total_chars": 79801,
+        "total_lines": 350,
+        "total_words": 11953,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 0,
+        "lists": 53,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 152,
+        "avg_line_length": 401.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.pdf",
+      "output": "Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.md",
+      "file_hash": "b79df0fceea04fdf92aa99939288c4d4",
+      "success": true,
+      "duration_seconds": 22.4,
+      "metrics": {
+        "total_chars": 144681,
+        "total_lines": 436,
+        "total_words": 19613,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 0,
+        "lists": 204,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 116,
+        "avg_line_length": 450.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.pdf",
+      "output": "Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md",
+      "file_hash": "827e1ec00da4b9682c5cf8595dd54af7",
+      "success": true,
+      "duration_seconds": 1.78,
+      "metrics": {
+        "total_chars": 34934,
+        "total_lines": 221,
+        "total_words": 4991,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 0,
+        "lists": 3,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 109,
+        "avg_line_length": 309.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "James_2023_Algorithmic_decision-making_in_social_work.pdf",
+      "output": "James_2023_Algorithmic_decision-making_in_social_work.md",
+      "file_hash": "2d6094c6042166a0bf0f63a1c797261c",
+      "success": true,
+      "duration_seconds": 6.34,
+      "metrics": {
+        "total_chars": 65545,
+        "total_lines": 339,
+        "total_words": 9281,
+        "headings": 14,
+        "heading_levels": {
+          "h2": 14
+        },
+        "tables": 0,
+        "lists": 55,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 145,
+        "avg_line_length": 336.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "James_2025_Responsible_prompting_recommendation_Fostering.pdf",
+      "output": "James_2025_Responsible_prompting_recommendation_Fostering.md",
+      "file_hash": "9b525f41dbec088a1cb8103e31a9fe8d",
+      "success": true,
+      "duration_seconds": 27.62,
+      "metrics": {
+        "total_chars": 185689,
+        "total_lines": 1216,
+        "total_words": 24120,
+        "headings": 52,
+        "heading_levels": {
+          "h2": 52
+        },
+        "tables": 13,
+        "lists": 130,
+        "figures": 0,
+        "code_blocks": 1,
+        "links": 0,
+        "empty_lines": 484,
+        "avg_line_length": 246.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Jarke_2024_Who_cares_about_data_Data_care_arrangements_in.pdf",
+      "output": "Jarke_2024_Who_cares_about_data_Data_care_arrangements_in.md",
+      "file_hash": "56d004a4f76fd8902f05764c97781b63",
+      "success": true,
+      "duration_seconds": 6.2,
+      "metrics": {
+        "total_chars": 60202,
+        "total_lines": 368,
+        "total_words": 9427,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 0,
+        "lists": 49,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 161,
+        "avg_line_length": 289.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Jarke_2025_Datafied_ageing_futures_Regimes_of_anticipation.pdf",
+      "output": "Jarke_2025_Datafied_ageing_futures_Regimes_of_anticipation.md",
+      "file_hash": "b169b218488f45f2166b1e1a6b485748",
+      "success": true,
+      "duration_seconds": 6.25,
+      "metrics": {
+        "total_chars": 73434,
+        "total_lines": 348,
+        "total_words": 11421,
+        "headings": 22,
+        "heading_levels": {
+          "h2": 22
+        },
+        "tables": 0,
+        "lists": 58,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 146,
+        "avg_line_length": 361.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Jiang_2022_Assessing_GPT's_bias_towards_stigmatized_social.pdf",
+      "output": "Jiang_2022_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "file_hash": "2820a57a01277a14b100d9bbe16cb1a4",
+      "success": true,
+      "duration_seconds": 14.88,
+      "metrics": {
+        "total_chars": 17045,
+        "total_lines": 237,
+        "total_words": 2498,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 6,
+        "lists": 20,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 87,
+        "avg_line_length": 112.1
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Jin_2025_GLAT_The_generative_AI_literacy_assessment_test.pdf",
+      "output": "Jin_2025_GLAT_The_generative_AI_literacy_assessment_test.md",
+      "file_hash": "5d66664d98c70ecf4bc6a19ce1fab400",
+      "success": true,
+      "duration_seconds": 17.16,
+      "metrics": {
+        "total_chars": 110627,
+        "total_lines": 516,
+        "total_words": 14112,
+        "headings": 43,
+        "heading_levels": {
+          "h2": 43
+        },
+        "tables": 8,
+        "lists": 74,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 183,
+        "avg_line_length": 330.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.pdf",
+      "output": "Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.md",
+      "file_hash": "d55d198fb620913fd8f9b579dc758061",
+      "success": true,
+      "duration_seconds": 12.95,
+      "metrics": {
+        "total_chars": 107445,
+        "total_lines": 550,
+        "total_words": 15444,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 1,
+        "lists": 103,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 226,
+        "avg_line_length": 329.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.pdf",
+      "output": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "file_hash": "06a78c81d33684075b22af9608d74e65",
+      "success": true,
+      "duration_seconds": 7.14,
+      "metrics": {
+        "total_chars": 38591,
+        "total_lines": 214,
+        "total_words": 5654,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 2,
+        "lists": 26,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 84,
+        "avg_line_length": 295.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.pdf",
+      "output": "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md",
+      "file_hash": "ff6886530bec40e79c1042c5c029c532",
+      "success": true,
+      "duration_seconds": 17.97,
+      "metrics": {
+        "total_chars": 74565,
+        "total_lines": 557,
+        "total_words": 10070,
+        "headings": 18,
+        "heading_levels": {
+          "h2": 18
+        },
+        "tables": 15,
+        "lists": 52,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 174,
+        "avg_line_length": 193.2
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Kaneko_2024_Evaluating_gender_bias_in_large_language_models.pdf",
+      "output": "Kaneko_2024_Evaluating_gender_bias_in_large_language_models.md",
+      "file_hash": "ff6886530bec40e79c1042c5c029c532",
+      "success": true,
+      "duration_seconds": 17.38,
+      "metrics": {
+        "total_chars": 74565,
+        "total_lines": 557,
+        "total_words": 10070,
+        "headings": 18,
+        "heading_levels": {
+          "h2": 18
+        },
+        "tables": 15,
+        "lists": 52,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 174,
+        "avg_line_length": 193.2
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.pdf",
+      "output": "Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.md",
+      "file_hash": "12713f151f2317f473d4720475ce995b",
+      "success": true,
+      "duration_seconds": 1.89,
+      "metrics": {
+        "total_chars": 80280,
+        "total_lines": 297,
+        "total_words": 11202,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 0,
+        "lists": 100,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 100,
+        "avg_line_length": 406.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Karagianni_2025_The_EU_artificial_intelligence_act_through_a.pdf",
+      "output": "Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md",
+      "file_hash": "dd3612f21ee921731294828e9359473b",
+      "success": true,
+      "duration_seconds": 3.92,
+      "metrics": {
+        "total_chars": 50049,
+        "total_lines": 311,
+        "total_words": 7153,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 1,
+        "lists": 15,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 143,
+        "avg_line_length": 296.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.pdf",
+      "output": "Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md",
+      "file_hash": "3c80de24c2c078de0c38cd39cde45767",
+      "success": true,
+      "duration_seconds": 3.7,
+      "metrics": {
+        "total_chars": 150830,
+        "total_lines": 568,
+        "total_words": 22051,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 2,
+        "lists": 199,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 182,
+        "avg_line_length": 389.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare.pdf",
+      "output": "Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare.md",
+      "file_hash": "0cc25b6a4ae399fb74f5e7835a8099b0",
+      "success": true,
+      "duration_seconds": 4.79,
+      "metrics": {
+        "total_chars": 118174,
+        "total_lines": 487,
+        "total_words": 17662,
+        "headings": 28,
+        "heading_levels": {
+          "h2": 28
+        },
+        "tables": 1,
+        "lists": 88,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 203,
+        "avg_line_length": 414.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.pdf",
+      "output": "Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.md",
+      "file_hash": "84ab58ebd7cdf9cd69354d0c07532e32",
+      "success": true,
+      "duration_seconds": 5.04,
+      "metrics": {
+        "total_chars": 41707,
+        "total_lines": 269,
+        "total_words": 5495,
+        "headings": 13,
+        "heading_levels": {
+          "h2": 13
+        },
+        "tables": 3,
+        "lists": 17,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 110,
+        "avg_line_length": 260.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Klein_2024_Data_Feminism_for_AI.pdf",
+      "output": "Klein_2024_Data_Feminism_for_AI.md",
+      "file_hash": "b38d664a9930dec4267575c79ff74464",
+      "success": true,
+      "duration_seconds": 2.59,
+      "metrics": {
+        "total_chars": 101780,
+        "total_lines": 471,
+        "total_words": 14618,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 0,
+        "lists": 161,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 158,
+        "avg_line_length": 323.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Klinge_2024_A_sociolinguistic_approach_to_stereotype.pdf",
+      "output": "Klinge_2024_A_sociolinguistic_approach_to_stereotype.md",
+      "file_hash": "037c0438f97e7f058a0fa0ead03a67fa",
+      "success": true,
+      "duration_seconds": 16.19,
+      "metrics": {
+        "total_chars": 138972,
+        "total_lines": 453,
+        "total_words": 13499,
+        "headings": 30,
+        "heading_levels": {
+          "h2": 30
+        },
+        "tables": 6,
+        "lists": 56,
+        "figures": 0,
+        "code_blocks": 3,
+        "links": 0,
+        "empty_lines": 144,
+        "avg_line_length": 451.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional.pdf",
+      "output": "Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional.md",
+      "file_hash": "fdfe9babc7a267920aa44f3f32e55216",
+      "success": true,
+      "duration_seconds": 2.01,
+      "metrics": {
+        "total_chars": 81858,
+        "total_lines": 409,
+        "total_words": 12258,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 0,
+        "lists": 105,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 154,
+        "avg_line_length": 319.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kojima_2022_Large_language_models_are_zero-shot_reasoners.pdf",
+      "output": "Kojima_2022_Large_language_models_are_zero-shot_reasoners.md",
+      "file_hash": "96338c4e629f17f9dd677ee6df748098",
+      "success": true,
+      "duration_seconds": 38.38,
+      "metrics": {
+        "total_chars": 224433,
+        "total_lines": 745,
+        "total_words": 23235,
+        "headings": 30,
+        "heading_levels": {
+          "h2": 30
+        },
+        "tables": 38,
+        "lists": 75,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 205,
+        "avg_line_length": 414.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.pdf",
+      "output": "Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md",
+      "file_hash": "919304e7e36891fd9ae8958bdcc4785f",
+      "success": true,
+      "duration_seconds": 14.52,
+      "metrics": {
+        "total_chars": 77110,
+        "total_lines": 461,
+        "total_words": 10278,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 9,
+        "lists": 49,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 196,
+        "avg_line_length": 289.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.pdf",
+      "output": "Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.md",
+      "file_hash": "31e73f2f007d86f97293f39e1fe3652a",
+      "success": true,
+      "duration_seconds": 39.51,
+      "metrics": {
+        "total_chars": 98049,
+        "total_lines": 635,
+        "total_words": 14516,
+        "headings": 34,
+        "heading_levels": {
+          "h2": 34
+        },
+        "tables": 5,
+        "lists": 152,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 241,
+        "avg_line_length": 247.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kong_2024_Developing_an_artificial_intelligence_literacy.pdf",
+      "output": "Kong_2024_Developing_an_artificial_intelligence_literacy.md",
+      "file_hash": "2346dd238833eb9babe05c6902d845e0",
+      "success": true,
+      "duration_seconds": 6.92,
+      "metrics": {
+        "total_chars": 93149,
+        "total_lines": 512,
+        "total_words": 12747,
+        "headings": 45,
+        "heading_levels": {
+          "h2": 45
+        },
+        "tables": 10,
+        "lists": 116,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 172,
+        "avg_line_length": 272.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kong_2025_Artificial_Intelligence_(AI)_literacy_–_an.pdf",
+      "output": "Kong_2025_Artificial_Intelligence_(AI)_literacy_–_an.md",
+      "file_hash": "81bc5ee57d190ddacb1f235a80c6b536",
+      "success": true,
+      "duration_seconds": 6.42,
+      "metrics": {
+        "total_chars": 20878,
+        "total_lines": 221,
+        "total_words": 2909,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 0,
+        "lists": 18,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 103,
+        "avg_line_length": 175.1
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.pdf",
+      "output": "Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.md",
+      "file_hash": "06f5b9e0ce91686eacef06c951c28abf",
+      "success": true,
+      "duration_seconds": 1.11,
+      "metrics": {
+        "total_chars": 7693,
+        "total_lines": 55,
+        "total_words": 1077,
+        "headings": 7,
+        "heading_levels": {
+          "h2": 7
+        },
+        "tables": 0,
+        "lists": 0,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 27,
+        "avg_line_length": 272.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.pdf",
+      "output": "Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.md",
+      "file_hash": "6e45f78a4a290db91407eb90ff8400a0",
+      "success": true,
+      "duration_seconds": 10.39,
+      "metrics": {
+        "total_chars": 157867,
+        "total_lines": 673,
+        "total_words": 16865,
+        "headings": 36,
+        "heading_levels": {
+          "h2": 36
+        },
+        "tables": 5,
+        "lists": 13,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 212,
+        "avg_line_length": 341.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.pdf",
+      "output": "Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.md",
+      "file_hash": "e69fbd33aca13601aa88eb034a01b830",
+      "success": true,
+      "duration_seconds": 71.39,
+      "metrics": {
+        "total_chars": 1899098,
+        "total_lines": 7350,
+        "total_words": 227179,
+        "headings": 537,
+        "heading_levels": {
+          "h2": 537
+        },
+        "tables": 9,
+        "lists": 1992,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 2716,
+        "avg_line_length": 408.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kutscher_2023_Positionings,_challenges,_and_ambivalences_in.pdf",
+      "output": "Kutscher_2023_Positionings,_challenges,_and_ambivalences_in.md",
+      "file_hash": "c92e0c15168125000a3fe8741ca48d62",
+      "success": true,
+      "duration_seconds": 7.23,
+      "metrics": {
+        "total_chars": 152894,
+        "total_lines": 818,
+        "total_words": 22999,
+        "headings": 48,
+        "heading_levels": {
+          "h2": 48
+        },
+        "tables": 0,
+        "lists": 352,
+        "figures": 0,
+        "code_blocks": 2,
+        "links": 0,
+        "empty_lines": 238,
+        "avg_line_length": 264.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand.pdf",
+      "output": "Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand.md",
+      "file_hash": "69af0b4cb37aecec5a5a7408fb539b69",
+      "success": true,
+      "duration_seconds": 33.88,
+      "metrics": {
+        "total_chars": 795108,
+        "total_lines": 3293,
+        "total_words": 97260,
+        "headings": 179,
+        "heading_levels": {
+          "h2": 179
+        },
+        "tables": 8,
+        "lists": 763,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 1261,
+        "avg_line_length": 389.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Lahoti_2023_Improving_diversity_of_demographic_representation.pdf",
+      "output": "Lahoti_2023_Improving_diversity_of_demographic_representation.md",
+      "file_hash": "09508f2f273fac70510e3bcd87b7bd29",
+      "success": true,
+      "duration_seconds": 15.94,
+      "metrics": {
+        "total_chars": 85875,
+        "total_lines": 783,
+        "total_words": 12521,
+        "headings": 45,
+        "heading_levels": {
+          "h2": 45
+        },
+        "tables": 8,
+        "lists": 97,
+        "figures": 0,
+        "code_blocks": 3,
+        "links": 0,
+        "empty_lines": 314,
+        "avg_line_length": 179.1
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.pdf",
+      "output": "Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.md",
+      "file_hash": "5bbe0911cf0ded9c8417ebc55c98a17c",
+      "success": true,
+      "duration_seconds": 2.72,
+      "metrics": {
+        "total_chars": 39623,
+        "total_lines": 267,
+        "total_words": 5310,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 0,
+        "lists": 35,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 120,
+        "avg_line_length": 267.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.pdf",
+      "output": "Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.md",
+      "file_hash": "fad89c3e3e85dcc98c0f996abc576888",
+      "success": true,
+      "duration_seconds": 60.12,
+      "metrics": {
+        "total_chars": 206127,
+        "total_lines": 1936,
+        "total_words": 25951,
+        "headings": 163,
+        "heading_levels": {
+          "h2": 163
+        },
+        "tables": 19,
+        "lists": 248,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 812,
+        "avg_line_length": 181.7
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.pdf",
+      "output": "Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md",
+      "file_hash": "19d5aa8821d5e77bd7ce2c6b0e33cb15",
+      "success": true,
+      "duration_seconds": 4.1,
+      "metrics": {
+        "total_chars": 42833,
+        "total_lines": 279,
+        "total_words": 6290,
+        "headings": 22,
+        "heading_levels": {
+          "h2": 22
+        },
+        "tables": 1,
+        "lists": 49,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 115,
+        "avg_line_length": 259.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.pdf",
+      "output": "Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.md",
+      "file_hash": "8d537567fc0fab2fc8eef0ff8852fdbb",
+      "success": true,
+      "duration_seconds": 2.11,
+      "metrics": {
+        "total_chars": 37108,
+        "total_lines": 304,
+        "total_words": 5939,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 3,
+        "lists": 34,
+        "figures": 0,
+        "code_blocks": 1,
+        "links": 0,
+        "empty_lines": 127,
+        "avg_line_length": 208.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.pdf",
+      "output": "Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.md",
+      "file_hash": "1bc4c5e54c5c5de57b70a1a988a37f23",
+      "success": true,
+      "duration_seconds": 17.13,
+      "metrics": {
+        "total_chars": 71362,
+        "total_lines": 383,
+        "total_words": 9306,
+        "headings": 36,
+        "heading_levels": {
+          "h2": 36
+        },
+        "tables": 2,
+        "lists": 49,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 143,
+        "avg_line_length": 295.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.pdf",
+      "output": "Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.md",
+      "file_hash": "b59793ec46f7469a3f77bcb929bbb59b",
+      "success": true,
+      "duration_seconds": 4.0,
+      "metrics": {
+        "total_chars": 93488,
+        "total_lines": 340,
+        "total_words": 13108,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 1,
+        "lists": 86,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 128,
+        "avg_line_length": 439.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.pdf",
+      "output": "Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.md",
+      "file_hash": "fa5f54a7ea1694cb3e73d6855a9e7c8e",
+      "success": true,
+      "duration_seconds": 1.59,
+      "metrics": {
+        "total_chars": 51062,
+        "total_lines": 235,
+        "total_words": 6558,
+        "headings": 13,
+        "heading_levels": {
+          "h2": 13
+        },
+        "tables": 0,
+        "lists": 51,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 94,
+        "avg_line_length": 360.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.pdf",
+      "output": "Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md",
+      "file_hash": "d4fc11a284054a38f8f4205f3314b325",
+      "success": true,
+      "duration_seconds": 52.28,
+      "metrics": {
+        "total_chars": 723351,
+        "total_lines": 3387,
+        "total_words": 88210,
+        "headings": 230,
+        "heading_levels": {
+          "h2": 230
+        },
+        "tables": 8,
+        "lists": 821,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 1295,
+        "avg_line_length": 344.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Long_2020_What_is_AI_Literacy_Competencies_and_Design.pdf",
+      "output": "Long_2020_What_is_AI_Literacy_Competencies_and_Design.md",
+      "file_hash": "a26830cc2c74d1e72b43b8e27187d2f8",
+      "success": true,
+      "duration_seconds": 4.08,
+      "metrics": {
+        "total_chars": 86494,
+        "total_lines": 627,
+        "total_words": 12266,
+        "headings": 46,
+        "heading_levels": {
+          "h2": 46
+        },
+        "tables": 1,
+        "lists": 156,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 235,
+        "avg_line_length": 219.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Lund_2025_Algorithms,_artificial_intelligence_and.pdf",
+      "output": "Lund_2025_Algorithms,_artificial_intelligence_and.md",
+      "file_hash": "8e1db6935b6fca6a8d4334ed567a3c4f",
+      "success": true,
+      "duration_seconds": 11.54,
+      "metrics": {
+        "total_chars": 155351,
+        "total_lines": 1009,
+        "total_words": 22448,
+        "headings": 58,
+        "heading_levels": {
+          "h2": 58
+        },
+        "tables": 1,
+        "lists": 89,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 455,
+        "avg_line_length": 278.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Lütz_2024_The_AI_Act,_gender_equality_and.pdf",
+      "output": "Lütz_2024_The_AI_Act,_gender_equality_and.md",
+      "file_hash": "dbb361ad973582b87db77550f95fa1d2",
+      "success": true,
+      "duration_seconds": 1.57,
+      "metrics": {
+        "total_chars": 54983,
+        "total_lines": 404,
+        "total_words": 8325,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 0,
+        "lists": 11,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 177,
+        "avg_line_length": 240.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ma_2023_Intersectional_Stereotypes_in_Large_Language.pdf",
+      "output": "Ma_2023_Intersectional_Stereotypes_in_Large_Language.md",
+      "file_hash": "e13e7073814397350ca74c236b2e011d",
+      "success": true,
+      "duration_seconds": 11.33,
+      "metrics": {
+        "total_chars": 62896,
+        "total_lines": 411,
+        "total_words": 6668,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 6,
+        "lists": 14,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 86,
+        "avg_line_length": 192.3
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Maeda_2025_Toward_Agency‐Centered_span.pdf",
+      "output": "Maeda_2025_Toward_Agency‐Centered_span.md",
+      "file_hash": "959cecadd2a568379c1729b89025e492",
+      "success": true,
+      "duration_seconds": 0.54,
+      "metrics": {
+        "total_chars": 15219,
+        "total_lines": 63,
+        "total_words": 2126,
+        "headings": 11,
+        "heading_levels": {
+          "h2": 11
+        },
+        "tables": 0,
+        "lists": 15,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 24,
+        "avg_line_length": 388.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.pdf",
+      "output": "McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.md",
+      "file_hash": "5bbe0911cf0ded9c8417ebc55c98a17c",
+      "success": true,
+      "duration_seconds": 2.15,
+      "metrics": {
+        "total_chars": 39623,
+        "total_lines": 267,
+        "total_words": 5310,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 0,
+        "lists": 35,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 120,
+        "avg_line_length": 267.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.pdf",
+      "output": "Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "file_hash": "2820a57a01277a14b100d9bbe16cb1a4",
+      "success": true,
+      "duration_seconds": 16.54,
+      "metrics": {
+        "total_chars": 17045,
+        "total_lines": 237,
+        "total_words": 2498,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 6,
+        "lists": 20,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 87,
+        "avg_line_length": 112.1
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Meilvang_2024_Decision_support_and_algorithmic_support_The.pdf",
+      "output": "Meilvang_2024_Decision_support_and_algorithmic_support_The.md",
+      "file_hash": "c4f5990e884553bb2f58895b8e42e8b8",
+      "success": true,
+      "duration_seconds": 7.07,
+      "metrics": {
+        "total_chars": 55705,
+        "total_lines": 282,
+        "total_words": 7817,
+        "headings": 18,
+        "heading_levels": {
+          "h2": 18
+        },
+        "tables": 2,
+        "lists": 30,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 127,
+        "avg_line_length": 357.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and.pdf",
+      "output": "Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and.md",
+      "file_hash": "df2b5abab47f3edbdfd44c044dccdb3b",
+      "success": true,
+      "duration_seconds": 1.95,
+      "metrics": {
+        "total_chars": 58371,
+        "total_lines": 325,
+        "total_words": 8946,
+        "headings": 22,
+        "heading_levels": {
+          "h2": 22
+        },
+        "tables": 1,
+        "lists": 56,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 132,
+        "avg_line_length": 300.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Mosene_2023_Feministische_Netzpolitik_und_Künstliche.pdf",
+      "output": "Mosene_2023_Feministische_Netzpolitik_und_Künstliche.md",
+      "file_hash": "4185ac81bef68447ddc5276234121c78",
+      "success": true,
+      "duration_seconds": 2.09,
+      "metrics": {
+        "total_chars": 13989,
+        "total_lines": 233,
+        "total_words": 1815,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 0,
+        "lists": 8,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 113,
+        "avg_line_length": 114.6
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Navigli_2023_Biases_in_large_language_models_Origins,.pdf",
+      "output": "Navigli_2023_Biases_in_large_language_models_Origins,.md",
+      "file_hash": "6657ddbbdcbf3043a1504783816776e1",
+      "success": true,
+      "duration_seconds": 2.62,
+      "metrics": {
+        "total_chars": 91355,
+        "total_lines": 496,
+        "total_words": 13109,
+        "headings": 26,
+        "heading_levels": {
+          "h2": 26
+        },
+        "tables": 0,
+        "lists": 182,
+        "figures": 0,
+        "code_blocks": 2,
+        "links": 0,
+        "empty_lines": 169,
+        "avg_line_length": 282.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.pdf",
+      "output": "Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.md",
+      "file_hash": "5206436d9c499f057de40c32d6cff0ad",
+      "success": true,
+      "duration_seconds": 8.54,
+      "metrics": {
+        "total_chars": 88581,
+        "total_lines": 438,
+        "total_words": 11488,
+        "headings": 26,
+        "heading_levels": {
+          "h2": 26
+        },
+        "tables": 7,
+        "lists": 92,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 146,
+        "avg_line_length": 301.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ng_2022_Using_digital_story_writing_as_a_pedagogy_to.pdf",
+      "output": "Ng_2022_Using_digital_story_writing_as_a_pedagogy_to.md",
+      "file_hash": "fd7c824232b04de55887458c047e6351",
+      "success": true,
+      "duration_seconds": 12.2,
+      "metrics": {
+        "total_chars": 103932,
+        "total_lines": 461,
+        "total_words": 14373,
+        "headings": 28,
+        "heading_levels": {
+          "h2": 28
+        },
+        "tables": 5,
+        "lists": 67,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 182,
+        "avg_line_length": 370.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ng_2025_Opportunities,_challenges_and_school_strategies.pdf",
+      "output": "Ng_2025_Opportunities,_challenges_and_school_strategies.md",
+      "file_hash": "46e5b151b229c0e1743fbec59f2c9d38",
+      "success": true,
+      "duration_seconds": 6.67,
+      "metrics": {
+        "total_chars": 89904,
+        "total_lines": 382,
+        "total_words": 12588,
+        "headings": 35,
+        "heading_levels": {
+          "h2": 35
+        },
+        "tables": 2,
+        "lists": 60,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 147,
+        "avg_line_length": 380.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Nuwasiima_2024_The_role_of_artificial_intelligence_(AI)_and.pdf",
+      "output": "Nuwasiima_2024_The_role_of_artificial_intelligence_(AI)_and.md",
+      "file_hash": "9a44f9fb6af5be2c4cc06b9429138746",
+      "success": true,
+      "duration_seconds": 6.1,
+      "metrics": {
+        "total_chars": 89285,
+        "total_lines": 401,
+        "total_words": 12198,
+        "headings": 63,
+        "heading_levels": {
+          "h2": 63
+        },
+        "tables": 0,
+        "lists": 56,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 175,
+        "avg_line_length": 393.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.pdf",
+      "output": "Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md",
+      "file_hash": "2a51799458440347d569fe5d5179a079",
+      "success": true,
+      "duration_seconds": 103.91,
+      "metrics": {
+        "total_chars": 1217088,
+        "total_lines": 6109,
+        "total_words": 155523,
+        "headings": 408,
+        "heading_levels": {
+          "h2": 408
+        },
+        "tables": 57,
+        "lists": 279,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 2332,
+        "avg_line_length": 320.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "OECD_2023_Advancing_Accountability_in_AI.pdf",
+      "output": "OECD_2023_Advancing_Accountability_in_AI.md",
+      "file_hash": "a1ac6040e693c3d0e4f0d9861d537155",
+      "success": true,
+      "duration_seconds": 47.84,
+      "metrics": {
+        "total_chars": 304608,
+        "total_lines": 1445,
+        "total_words": 30538,
+        "headings": 87,
+        "heading_levels": {
+          "h2": 87
+        },
+        "tables": 30,
+        "lists": 84,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 445,
+        "avg_line_length": 303.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.pdf",
+      "output": "Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.md",
+      "file_hash": "9b27b0579cc1a16b8f3743669ecf9839",
+      "success": true,
+      "duration_seconds": 7.62,
+      "metrics": {
+        "total_chars": 99609,
+        "total_lines": 586,
+        "total_words": 13614,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 5,
+        "lists": 107,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 193,
+        "avg_line_length": 252.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Pan_2025_AI_literacy_and_trust_A_multi-method_study_of.pdf",
+      "output": "Pan_2025_AI_literacy_and_trust_A_multi-method_study_of.md",
+      "file_hash": "4103b514ef7ad074c98c7ecbb04edc05",
+      "success": true,
+      "duration_seconds": 8.18,
+      "metrics": {
+        "total_chars": 101832,
+        "total_lines": 497,
+        "total_words": 14058,
+        "headings": 33,
+        "heading_levels": {
+          "h2": 33
+        },
+        "tables": 6,
+        "lists": 105,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 176,
+        "avg_line_length": 315.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from.pdf",
+      "output": "Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from.md",
+      "file_hash": "7cade0c73ae1ede95ba835267991aafd",
+      "success": true,
+      "duration_seconds": 3.55,
+      "metrics": {
+        "total_chars": 45727,
+        "total_lines": 214,
+        "total_words": 6910,
+        "headings": 8,
+        "heading_levels": {
+          "h2": 8
+        },
+        "tables": 1,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 78,
+        "avg_line_length": 334.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Park_2025_AI_algorithm_transparency,_pipelines_for_trust.pdf",
+      "output": "Park_2025_AI_algorithm_transparency,_pipelines_for_trust.md",
+      "file_hash": "488df27df0ceddfe5a17ba3fe346d65c",
+      "success": true,
+      "duration_seconds": 10.91,
+      "metrics": {
+        "total_chars": 94634,
+        "total_lines": 443,
+        "total_words": 13186,
+        "headings": 18,
+        "heading_levels": {
+          "h2": 18
+        },
+        "tables": 4,
+        "lists": 24,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 178,
+        "avg_line_length": 355.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.pdf",
+      "output": "Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.md",
+      "file_hash": "a3f76783f7bbc6e18ecac4ae80f70ae6",
+      "success": true,
+      "duration_seconds": 5.95,
+      "metrics": {
+        "total_chars": 90527,
+        "total_lines": 456,
+        "total_words": 13140,
+        "headings": 24,
+        "heading_levels": {
+          "h2": 24
+        },
+        "tables": 6,
+        "lists": 22,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 188,
+        "avg_line_length": 336.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Parrish_2025_Self-debiasing_large_language_models_Zero-shot.pdf",
+      "output": "Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md",
+      "file_hash": "11247053e65f5dc0dc421db08ad7a691",
+      "success": true,
+      "duration_seconds": 12.72,
+      "metrics": {
+        "total_chars": 64596,
+        "total_lines": 589,
+        "total_words": 9163,
+        "headings": 25,
+        "heading_levels": {
+          "h2": 25
+        },
+        "tables": 10,
+        "lists": 21,
+        "figures": 0,
+        "code_blocks": 2,
+        "links": 0,
+        "empty_lines": 194,
+        "avg_line_length": 163.8
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.pdf",
+      "output": "Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+      "file_hash": "8ad76aedebc439247bfed896e677f232",
+      "success": true,
+      "duration_seconds": 1.07,
+      "metrics": {
+        "total_chars": 27858,
+        "total_lines": 169,
+        "total_words": 3985,
+        "headings": 26,
+        "heading_levels": {
+          "h2": 26
+        },
+        "tables": 0,
+        "lists": 24,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 74,
+        "avg_line_length": 291.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Peng_2022_A_Literature_Review_of_Digital_Literacy_over_Two.pdf",
+      "output": "Peng_2022_A_Literature_Review_of_Digital_Literacy_over_Two.md",
+      "file_hash": "8755765d4c010655e5ae7dd484e0a46a",
+      "success": true,
+      "duration_seconds": 2.49,
+      "metrics": {
+        "total_chars": 48257,
+        "total_lines": 232,
+        "total_words": 6651,
+        "headings": 12,
+        "heading_levels": {
+          "h2": 12
+        },
+        "tables": 1,
+        "lists": 61,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 80,
+        "avg_line_length": 316.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Petzel_2025_Prejudiced_interactions_with_large_language.pdf",
+      "output": "Petzel_2025_Prejudiced_interactions_with_large_language.md",
+      "file_hash": "58fd10cdad9683e705243a6d2316dbbb",
+      "success": true,
+      "duration_seconds": 15.26,
+      "metrics": {
+        "total_chars": 139576,
+        "total_lines": 666,
+        "total_words": 19520,
+        "headings": 56,
+        "heading_levels": {
+          "h2": 56
+        },
+        "tables": 3,
+        "lists": 150,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 224,
+        "avg_line_length": 314.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency.pdf",
+      "output": "Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency.md",
+      "file_hash": "c47c40cbdfc4aa4a531b1b85ede6962f",
+      "success": true,
+      "duration_seconds": 41.25,
+      "metrics": {
+        "total_chars": 65475,
+        "total_lines": 312,
+        "total_words": 7942,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 9,
+        "lists": 29,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 107,
+        "avg_line_length": 317.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Pinski_2024_AI_Literacy_for_the_top_management_An_upper.pdf",
+      "output": "Pinski_2024_AI_Literacy_for_the_top_management_An_upper.md",
+      "file_hash": "664101b1edef6beb63ddc482aa97dee7",
+      "success": true,
+      "duration_seconds": 11.48,
+      "metrics": {
+        "total_chars": 127205,
+        "total_lines": 547,
+        "total_words": 18056,
+        "headings": 35,
+        "heading_levels": {
+          "h2": 35
+        },
+        "tables": 4,
+        "lists": 120,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 198,
+        "avg_line_length": 362.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review.pdf",
+      "output": "Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review.md",
+      "file_hash": "0f71ccb634300256ff4525891a3872a0",
+      "success": true,
+      "duration_seconds": 17.4,
+      "metrics": {
+        "total_chars": 186392,
+        "total_lines": 673,
+        "total_words": 23560,
+        "headings": 39,
+        "heading_levels": {
+          "h2": 39
+        },
+        "tables": 10,
+        "lists": 158,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 214,
+        "avg_line_length": 404.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.pdf",
+      "output": "Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.md",
+      "file_hash": "90f045c7c13f7e026fe65f168305f3dd",
+      "success": true,
+      "duration_seconds": 13.71,
+      "metrics": {
+        "total_chars": 69713,
+        "total_lines": 532,
+        "total_words": 10292,
+        "headings": 62,
+        "heading_levels": {
+          "h2": 62
+        },
+        "tables": 3,
+        "lists": 46,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 233,
+        "avg_line_length": 231.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Quaid-i-Azam University, Islamabad, Pakistan_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.pdf",
+      "output": "Quaid-i-Azam University, Islamabad, Pakistan_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md",
+      "file_hash": "44b7b3d1b9ed04164de4d29800bea6d1",
+      "success": true,
+      "duration_seconds": 16.07,
+      "metrics": {
+        "total_chars": 79902,
+        "total_lines": 506,
+        "total_words": 11974,
+        "headings": 54,
+        "heading_levels": {
+          "h2": 54
+        },
+        "tables": 4,
+        "lists": 105,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 187,
+        "avg_line_length": 248.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.pdf",
+      "output": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md",
+      "file_hash": "c33b89deae0ef02022ca064127729099",
+      "success": true,
+      "duration_seconds": 2.76,
+      "metrics": {
+        "total_chars": 38794,
+        "total_lines": 236,
+        "total_words": 5344,
+        "headings": 26,
+        "heading_levels": {
+          "h2": 26
+        },
+        "tables": 0,
+        "lists": 42,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 100,
+        "avg_line_length": 283.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.pdf",
+      "output": "Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+      "file_hash": "52af5f4f984011df485cc85bf39b1367",
+      "success": true,
+      "duration_seconds": 37.34,
+      "metrics": {
+        "total_chars": 206678,
+        "total_lines": 3044,
+        "total_words": 27491,
+        "headings": 244,
+        "heading_levels": {
+          "h2": 243,
+          "h1": 1
+        },
+        "tables": 1,
+        "lists": 145,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 1411,
+        "avg_line_length": 124.7
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.pdf",
+      "output": "Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md",
+      "file_hash": "1eee84539c5992889be4df511b02d91b",
+      "success": true,
+      "duration_seconds": 3.19,
+      "metrics": {
+        "total_chars": 10965,
+        "total_lines": 227,
+        "total_words": 1624,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 0,
+        "lists": 5,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 113,
+        "avg_line_length": 94.2
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Rodriguez_2024_Introducing_Generative_Artificial_Intelligence.pdf",
+      "output": "Rodriguez_2024_Introducing_Generative_Artificial_Intelligence.md",
+      "file_hash": "5722075f381e5da45ecba4091b46fee8",
+      "success": true,
+      "duration_seconds": 5.57,
+      "metrics": {
+        "total_chars": 38273,
+        "total_lines": 257,
+        "total_words": 5464,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 0,
+        "lists": 48,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 106,
+        "avg_line_length": 251.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.pdf",
+      "output": "Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.md",
+      "file_hash": "ce33e9c654b2a166aa4bc15dad2b3eb9",
+      "success": true,
+      "duration_seconds": 5.64,
+      "metrics": {
+        "total_chars": 88063,
+        "total_lines": 366,
+        "total_words": 10311,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 3,
+        "lists": 61,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 131,
+        "avg_line_length": 373.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,.pdf",
+      "output": "Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,.md",
+      "file_hash": "602d1a0e233e2b20d8806d496582f7d8",
+      "success": true,
+      "duration_seconds": 9.0,
+      "metrics": {
+        "total_chars": 90240,
+        "total_lines": 634,
+        "total_words": 12375,
+        "headings": 37,
+        "heading_levels": {
+          "h2": 37
+        },
+        "tables": 10,
+        "lists": 112,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 238,
+        "avg_line_length": 226.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.pdf",
+      "output": "Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
+      "file_hash": "9a0708ec97c89d5e3a172598b8da0bb0",
+      "success": true,
+      "duration_seconds": 58.27,
+      "metrics": {
+        "total_chars": 165993,
+        "total_lines": 1276,
+        "total_words": 21809,
+        "headings": 52,
+        "heading_levels": {
+          "h2": 52
+        },
+        "tables": 8,
+        "lists": 152,
+        "figures": 0,
+        "code_blocks": 3,
+        "links": 0,
+        "empty_lines": 526,
+        "avg_line_length": 221.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Salinas_2025_What’s_in_a_name_Auditing_large_language_models.pdf",
+      "output": "Salinas_2025_What’s_in_a_name_Auditing_large_language_models.md",
+      "file_hash": "fbdad404c2590c6cdfadb6204d3b4344",
+      "success": true,
+      "duration_seconds": 51.52,
+      "metrics": {
+        "total_chars": 161721,
+        "total_lines": 885,
+        "total_words": 20563,
+        "headings": 22,
+        "heading_levels": {
+          "h2": 22
+        },
+        "tables": 37,
+        "lists": 46,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 234,
+        "avg_line_length": 247.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Sant_2024_The_power_of_prompts_Evaluating_and_mitigating.pdf",
+      "output": "Sant_2024_The_power_of_prompts_Evaluating_and_mitigating.md",
+      "file_hash": "e065456aefe81c31ef49d4d2d405d850",
+      "success": true,
+      "duration_seconds": 15.43,
+      "metrics": {
+        "total_chars": 138106,
+        "total_lines": 761,
+        "total_words": 19277,
+        "headings": 47,
+        "heading_levels": {
+          "h2": 47
+        },
+        "tables": 9,
+        "lists": 116,
+        "figures": 0,
+        "code_blocks": 12,
+        "links": 0,
+        "empty_lines": 271,
+        "avg_line_length": 258.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Santos_2024_Explainability_through_systematicity_The_hard.pdf",
+      "output": "Santos_2024_Explainability_through_systematicity_The_hard.md",
+      "file_hash": "70e450c4fd758172ef39149f089a357e",
+      "success": true,
+      "duration_seconds": 4.71,
+      "metrics": {
+        "total_chars": 141097,
+        "total_lines": 740,
+        "total_words": 21148,
+        "headings": 14,
+        "heading_levels": {
+          "h2": 14
+        },
+        "tables": 0,
+        "lists": 234,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 260,
+        "avg_line_length": 292.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Santos_2025_How_large_language_models_judge_cooperation.pdf",
+      "output": "Santos_2025_How_large_language_models_judge_cooperation.md",
+      "file_hash": "8768fb87cb783d5524f1d75dfd8ab298",
+      "success": true,
+      "duration_seconds": 10.95,
+      "metrics": {
+        "total_chars": 105408,
+        "total_lines": 591,
+        "total_words": 14618,
+        "headings": 38,
+        "heading_levels": {
+          "h2": 38
+        },
+        "tables": 5,
+        "lists": 87,
+        "figures": 0,
+        "code_blocks": 1,
+        "links": 0,
+        "empty_lines": 217,
+        "avg_line_length": 282.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten.pdf",
+      "output": "Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten.md",
+      "file_hash": "e5b6f1577015a3980a74c5aa556171b3",
+      "success": true,
+      "duration_seconds": 0.75,
+      "metrics": {
+        "total_chars": 16829,
+        "total_lines": 98,
+        "total_words": 2118,
+        "headings": 9,
+        "heading_levels": {
+          "h2": 9
+        },
+        "tables": 0,
+        "lists": 7,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 46,
+        "avg_line_length": 321.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Schneider_2022_Exploring_opportunities_and_risks_in_decision.pdf",
+      "output": "Schneider_2022_Exploring_opportunities_and_risks_in_decision.md",
+      "file_hash": "a1e75eec1af72d4293f6fdb16bac3c0f",
+      "success": true,
+      "duration_seconds": 4.71,
+      "metrics": {
+        "total_chars": 68370,
+        "total_lines": 229,
+        "total_words": 10577,
+        "headings": 15,
+        "heading_levels": {
+          "h2": 15
+        },
+        "tables": 0,
+        "lists": 56,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 89,
+        "avg_line_length": 486.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Schneider_2024_AI_for_decision_support_What_are_possible.pdf",
+      "output": "Schneider_2024_AI_for_decision_support_What_are_possible.md",
+      "file_hash": "314b6140715a0590080802678c7cddcd",
+      "success": true,
+      "duration_seconds": 33.69,
+      "metrics": {
+        "total_chars": 393513,
+        "total_lines": 2920,
+        "total_words": 53611,
+        "headings": 221,
+        "heading_levels": {
+          "h2": 221
+        },
+        "tables": 7,
+        "lists": 175,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 1372,
+        "avg_line_length": 252.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.pdf",
+      "output": "Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.md",
+      "file_hash": "967f8579d83624e059046d60967ee5b9",
+      "success": true,
+      "duration_seconds": 3.52,
+      "metrics": {
+        "total_chars": 65476,
+        "total_lines": 389,
+        "total_words": 10047,
+        "headings": 23,
+        "heading_levels": {
+          "h2": 23
+        },
+        "tables": 1,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 161,
+        "avg_line_length": 285.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Schönauer_2025_Akzeptanz_von_KI_und_organisationale.pdf",
+      "output": "Schönauer_2025_Akzeptanz_von_KI_und_organisationale.md",
+      "file_hash": "a7784c356da9691746a3081cba55d10e",
+      "success": true,
+      "duration_seconds": 1.07,
+      "metrics": {
+        "total_chars": 26207,
+        "total_lines": 184,
+        "total_words": 3359,
+        "headings": 14,
+        "heading_levels": {
+          "h2": 14
+        },
+        "tables": 0,
+        "lists": 18,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 83,
+        "avg_line_length": 257.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.pdf",
+      "output": "Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md",
+      "file_hash": "885407a53179db05eff7801e9c847a6d",
+      "success": true,
+      "duration_seconds": 140.25,
+      "metrics": {
+        "total_chars": 67799,
+        "total_lines": 650,
+        "total_words": 10402,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 11,
+        "lists": 71,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 233,
+        "avg_line_length": 161.0
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.pdf",
+      "output": "Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md",
+      "file_hash": "44b7b3d1b9ed04164de4d29800bea6d1",
+      "success": true,
+      "duration_seconds": 16.46,
+      "metrics": {
+        "total_chars": 79902,
+        "total_lines": 506,
+        "total_words": 11974,
+        "headings": 54,
+        "heading_levels": {
+          "h2": 54
+        },
+        "tables": 4,
+        "lists": 105,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 187,
+        "avg_line_length": 248.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Sharma_2024_Intersectional_analysis_of_visual_generative_AI.pdf",
+      "output": "Sharma_2024_Intersectional_analysis_of_visual_generative_AI.md",
+      "file_hash": "d55d198fb620913fd8f9b579dc758061",
+      "success": true,
+      "duration_seconds": 15.34,
+      "metrics": {
+        "total_chars": 107445,
+        "total_lines": 550,
+        "total_words": 15444,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 1,
+        "lists": 103,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 226,
+        "avg_line_length": 329.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.pdf",
+      "output": "Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.md",
+      "file_hash": "44eea866cce763191245fce853bae98d",
+      "success": true,
+      "duration_seconds": 18.34,
+      "metrics": {
+        "total_chars": 65544,
+        "total_lines": 402,
+        "total_words": 8573,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 8,
+        "lists": 43,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 124,
+        "avg_line_length": 234.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Shukla_2025_Investigating_AI_systems_examining_data_and.pdf",
+      "output": "Shukla_2025_Investigating_AI_systems_examining_data_and.md",
+      "file_hash": "eb9f75e7c2ed5efe513cef5d7ad249f2",
+      "success": true,
+      "duration_seconds": 0.98,
+      "metrics": {
+        "total_chars": 32126,
+        "total_lines": 189,
+        "total_words": 4640,
+        "headings": 18,
+        "heading_levels": {
+          "h2": 18
+        },
+        "tables": 0,
+        "lists": 0,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 94,
+        "avg_line_length": 336.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.pdf",
+      "output": "Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
+      "file_hash": "934d4147b76dfe050a36952aac239721",
+      "success": true,
+      "duration_seconds": 2.52,
+      "metrics": {
+        "total_chars": 68929,
+        "total_lines": 238,
+        "total_words": 9986,
+        "headings": 15,
+        "heading_levels": {
+          "h2": 15
+        },
+        "tables": 0,
+        "lists": 87,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 76,
+        "avg_line_length": 424.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences.pdf",
+      "output": "Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences.md",
+      "file_hash": "2fa42b79d16eb4952bff3f940822982f",
+      "success": true,
+      "duration_seconds": 2.2,
+      "metrics": {
+        "total_chars": 54437,
+        "total_lines": 367,
+        "total_words": 8447,
+        "headings": 22,
+        "heading_levels": {
+          "h2": 22
+        },
+        "tables": 0,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 150,
+        "avg_line_length": 249.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Sinders_2017_Feminist_Data_Set.pdf",
+      "output": "Sinders_2017_Feminist_Data_Set.md",
+      "file_hash": "b567ec80ae119d94b98bfe345bdd4674",
+      "success": true,
+      "duration_seconds": 6.61,
+      "metrics": {
+        "total_chars": 40023,
+        "total_lines": 272,
+        "total_words": 6041,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 1,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 125,
+        "avg_line_length": 270.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.pdf",
+      "output": "Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.md",
+      "file_hash": "0f5582338287a48e7dcfe5e826a30c22",
+      "success": true,
+      "duration_seconds": 8.66,
+      "metrics": {
+        "total_chars": 29364,
+        "total_lines": 224,
+        "total_words": 4304,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 0,
+        "lists": 40,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 94,
+        "avg_line_length": 224.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Singh_2025_A_reparative_turn_in_AI.pdf",
+      "output": "Singh_2025_A_reparative_turn_in_AI.md",
+      "file_hash": "c0ecfb700f6314c3fc27f02f665a2a83",
+      "success": true,
+      "duration_seconds": 3.89,
+      "metrics": {
+        "total_chars": 80578,
+        "total_lines": 507,
+        "total_words": 11430,
+        "headings": 31,
+        "heading_levels": {
+          "h2": 31
+        },
+        "tables": 4,
+        "lists": 8,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 228,
+        "avg_line_length": 287.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.pdf",
+      "output": "Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.md",
+      "file_hash": "3568156a25273a1c36e9a231a46f95f6",
+      "success": true,
+      "duration_seconds": 2.69,
+      "metrics": {
+        "total_chars": 30725,
+        "total_lines": 224,
+        "total_words": 4618,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 0,
+        "lists": 34,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 95,
+        "avg_line_length": 236.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.pdf",
+      "output": "Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.md",
+      "file_hash": "e1c910c03eb546ca31a772fef54a9e3a",
+      "success": true,
+      "duration_seconds": 5.7,
+      "metrics": {
+        "total_chars": 89712,
+        "total_lines": 459,
+        "total_words": 12981,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 1,
+        "lists": 18,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 194,
+        "avg_line_length": 336.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Small_2023_Generative_AI_and_opportunities_for_feminist.pdf",
+      "output": "Small_2023_Generative_AI_and_opportunities_for_feminist.md",
+      "file_hash": "9f2917335091734363fa09184513dc71",
+      "success": true,
+      "duration_seconds": 8.83,
+      "metrics": {
+        "total_chars": 14228,
+        "total_lines": 114,
+        "total_words": 2010,
+        "headings": 10,
+        "heading_levels": {
+          "h2": 10
+        },
+        "tables": 0,
+        "lists": 24,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 46,
+        "avg_line_length": 207.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Sperling_2024_In_search_of_artificial_intelligence_(AI).pdf",
+      "output": "Sperling_2024_In_search_of_artificial_intelligence_(AI).md",
+      "file_hash": "60d7b3948c658cd973f4ed7a3cc5ea7b",
+      "success": true,
+      "duration_seconds": 10.3,
+      "metrics": {
+        "total_chars": 102735,
+        "total_lines": 493,
+        "total_words": 13552,
+        "headings": 39,
+        "heading_levels": {
+          "h2": 39
+        },
+        "tables": 6,
+        "lists": 116,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 165,
+        "avg_line_length": 311.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.pdf",
+      "output": "Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md",
+      "file_hash": "21de78796a9d464c2f8dcc2a348f50f1",
+      "success": true,
+      "duration_seconds": 28.31,
+      "metrics": {
+        "total_chars": 65548,
+        "total_lines": 390,
+        "total_words": 8902,
+        "headings": 23,
+        "heading_levels": {
+          "h2": 23
+        },
+        "tables": 6,
+        "lists": 44,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 164,
+        "avg_line_length": 288.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Srivastava_2024_Algorithmic_Governance_and_the_International.pdf",
+      "output": "Srivastava_2024_Algorithmic_Governance_and_the_International.md",
+      "file_hash": "094fe22e5d5a0ed8958d118df9a9adde",
+      "success": true,
+      "duration_seconds": 2.51,
+      "metrics": {
+        "total_chars": 63984,
+        "total_lines": 219,
+        "total_words": 9862,
+        "headings": 12,
+        "heading_levels": {
+          "h2": 12
+        },
+        "tables": 0,
+        "lists": 85,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 69,
+        "avg_line_length": 425.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.pdf",
+      "output": "Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md",
+      "file_hash": "d6b615c99d6907eeb71887509b742451",
+      "success": true,
+      "duration_seconds": 1.36,
+      "metrics": {
+        "total_chars": 31937,
+        "total_lines": 199,
+        "total_words": 4031,
+        "headings": 13,
+        "heading_levels": {
+          "h2": 13
+        },
+        "tables": 0,
+        "lists": 5,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 98,
+        "avg_line_length": 314.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Steyvers_2025_What_large_language_models_know_and_what_people.pdf",
+      "output": "Steyvers_2025_What_large_language_models_know_and_what_people.md",
+      "file_hash": "8c1c056dc51cf53733dad19b3b3ad715",
+      "success": true,
+      "duration_seconds": 14.98,
+      "metrics": {
+        "total_chars": 71532,
+        "total_lines": 384,
+        "total_words": 10164,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 3,
+        "lists": 10,
+        "figures": 0,
+        "code_blocks": 2,
+        "links": 0,
+        "empty_lines": 155,
+        "avg_line_length": 316.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische.pdf",
+      "output": "Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische.md",
+      "file_hash": "3e4abc53617af020b9d331224e100508",
+      "success": true,
+      "duration_seconds": 26.98,
+      "metrics": {
+        "total_chars": 257133,
+        "total_lines": 1400,
+        "total_words": 31213,
+        "headings": 53,
+        "heading_levels": {
+          "h2": 53
+        },
+        "tables": 3,
+        "lists": 203,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 592,
+        "avg_line_length": 316.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.pdf",
+      "output": "Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.md",
+      "file_hash": "ef29625f391dd391fc58dbc891a0e86f",
+      "success": true,
+      "duration_seconds": 5.56,
+      "metrics": {
+        "total_chars": 74813,
+        "total_lines": 969,
+        "total_words": 8834,
+        "headings": 106,
+        "heading_levels": {
+          "h2": 106
+        },
+        "tables": 1,
+        "lists": 288,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 362,
+        "avg_line_length": 121.7
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.pdf",
+      "output": "Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.md",
+      "file_hash": "532298c589ea713879aa419a8a1bba24",
+      "success": true,
+      "duration_seconds": 1.83,
+      "metrics": {
+        "total_chars": 45009,
+        "total_lines": 307,
+        "total_words": 5193,
+        "headings": 36,
+        "heading_levels": {
+          "h2": 36
+        },
+        "tables": 1,
+        "lists": 47,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 130,
+        "avg_line_length": 252.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.pdf",
+      "output": "Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.md",
+      "file_hash": "75c3deb7ae5252d805272dc0d7120584",
+      "success": true,
+      "duration_seconds": 5.07,
+      "metrics": {
+        "total_chars": 103846,
+        "total_lines": 454,
+        "total_words": 13233,
+        "headings": 35,
+        "heading_levels": {
+          "h2": 35
+        },
+        "tables": 9,
+        "lists": 92,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 165,
+        "avg_line_length": 357.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Takaoka_2022_AI_implementation_science_for_social_issues.pdf",
+      "output": "Takaoka_2022_AI_implementation_science_for_social_issues.md",
+      "file_hash": "bb4c1f471cebdf59b28f675276405eb2",
+      "success": true,
+      "duration_seconds": 1.99,
+      "metrics": {
+        "total_chars": 40560,
+        "total_lines": 235,
+        "total_words": 6318,
+        "headings": 33,
+        "heading_levels": {
+          "h2": 33
+        },
+        "tables": 0,
+        "lists": 16,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 106,
+        "avg_line_length": 312.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Tang_2024_GenderCARE_A_Comprehensive_Framework_for.pdf",
+      "output": "Tang_2024_GenderCARE_A_Comprehensive_Framework_for.md",
+      "file_hash": "a216f57c56514f519f34c700c2f96430",
+      "success": true,
+      "duration_seconds": 15.12,
+      "metrics": {
+        "total_chars": 104914,
+        "total_lines": 620,
+        "total_words": 14964,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 8,
+        "lists": 101,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 233,
+        "avg_line_length": 269.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Tinmaz_2022_A_systematic_review_on_digital_literacy.pdf",
+      "output": "Tinmaz_2022_A_systematic_review_on_digital_literacy.md",
+      "file_hash": "7379f334c21320db7de51f6277551b24",
+      "success": true,
+      "duration_seconds": 16.83,
+      "metrics": {
+        "total_chars": 143948,
+        "total_lines": 565,
+        "total_words": 9522,
+        "headings": 33,
+        "heading_levels": {
+          "h2": 33
+        },
+        "tables": 10,
+        "lists": 48,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 209,
+        "avg_line_length": 402.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Tint_2025_Guardrails,_not_guidance_Understanding_responses.pdf",
+      "output": "Tint_2025_Guardrails,_not_guidance_Understanding_responses.md",
+      "file_hash": "19400c7c55b113d9e9bac9892c74e45a",
+      "success": true,
+      "duration_seconds": 7.86,
+      "metrics": {
+        "total_chars": 54114,
+        "total_lines": 380,
+        "total_words": 7859,
+        "headings": 28,
+        "heading_levels": {
+          "h2": 28
+        },
+        "tables": 5,
+        "lists": 40,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 99,
+        "avg_line_length": 191.2
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Toupin_2024_Shaping_feminist_artificial_intelligence.pdf",
+      "output": "Toupin_2024_Shaping_feminist_artificial_intelligence.md",
+      "file_hash": "101d5b5aacc74df39e0beda2c518d4b8",
+      "success": true,
+      "duration_seconds": 1.91,
+      "metrics": {
+        "total_chars": 53281,
+        "total_lines": 216,
+        "total_words": 8158,
+        "headings": 18,
+        "heading_levels": {
+          "h2": 18
+        },
+        "tables": 0,
+        "lists": 54,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 82,
+        "avg_line_length": 396.0
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Tun_2025_Trust_in_artificial_intelligence–based_clinical.pdf",
+      "output": "Tun_2025_Trust_in_artificial_intelligence–based_clinical.md",
+      "file_hash": "b99f8fcdc8c9f49ed5fd4d2767de1c64",
+      "success": true,
+      "duration_seconds": 9.87,
+      "metrics": {
+        "total_chars": 111352,
+        "total_lines": 412,
+        "total_words": 11225,
+        "headings": 43,
+        "heading_levels": {
+          "h2": 43
+        },
+        "tables": 3,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 137,
+        "avg_line_length": 403.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.pdf",
+      "output": "Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.md",
+      "file_hash": "5757987b5018449dfaead9ef53fe4302",
+      "success": true,
+      "duration_seconds": 0.49,
+      "metrics": {
+        "total_chars": 5573,
+        "total_lines": 61,
+        "total_words": 884,
+        "headings": 5,
+        "heading_levels": {
+          "h2": 5
+        },
+        "tables": 0,
+        "lists": 1,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 30,
+        "avg_line_length": 177.8
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf",
+      "output": "Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.md",
+      "file_hash": "3b303979af61df61dff4b22698940812",
+      "success": false,
+      "duration_seconds": 0.27,
+      "error": "Conversion failed for: Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf with status: ConversionStatus.FAILURE",
+      "status": "failed"
+    },
+    {
+      "input": "UN Women_2024_Artificial_Intelligence_and_gender_equality.pdf",
+      "output": "UN Women_2024_Artificial_Intelligence_and_gender_equality.md",
+      "file_hash": "c0f85b4bd18dc41432be0636a9a1652d",
+      "success": true,
+      "duration_seconds": 4.0,
+      "metrics": {
+        "total_chars": 8635,
+        "total_lines": 113,
+        "total_words": 1389,
+        "headings": 6,
+        "heading_levels": {
+          "h2": 6
+        },
+        "tables": 0,
+        "lists": 0,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 56,
+        "avg_line_length": 149.5
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.pdf",
+      "output": "UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.md",
+      "file_hash": "504290ef27e6658853885e81c3e365c4",
+      "success": true,
+      "duration_seconds": 3.67,
+      "metrics": {
+        "total_chars": 100928,
+        "total_lines": 464,
+        "total_words": 14316,
+        "headings": 37,
+        "heading_levels": {
+          "h2": 37
+        },
+        "tables": 0,
+        "lists": 43,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 218,
+        "avg_line_length": 408.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "UNESCO_2024_Bias_against_women_and_girls_in_large_language.pdf",
+      "output": "UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+      "file_hash": "07f3401ff59fa753014d90da4fe54205",
+      "success": true,
+      "duration_seconds": 20.23,
+      "metrics": {
+        "total_chars": 51776,
+        "total_lines": 373,
+        "total_words": 7126,
+        "headings": 31,
+        "heading_levels": {
+          "h2": 31
+        },
+        "tables": 0,
+        "lists": 88,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 155,
+        "avg_line_length": 235.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "UNESCO_2024_Women4Ethical_AI_Global_cooperation_for.pdf",
+      "output": "UNESCO_2024_Women4Ethical_AI_Global_cooperation_for.md",
+      "file_hash": "d85123b8c8ed3d58785b7c3392595fef",
+      "success": true,
+      "duration_seconds": 0.52,
+      "metrics": {
+        "total_chars": 8685,
+        "total_lines": 42,
+        "total_words": 1339,
+        "headings": 2,
+        "heading_levels": {
+          "h2": 2
+        },
+        "tables": 0,
+        "lists": 6,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 18,
+        "avg_line_length": 360.2
+      },
+      "quality_score": 90,
+      "quality_issues": [
+        "Few headings (<3)",
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Unknown_AI_competency_framework_for_students.pdf",
+      "output": "Unknown_AI_competency_framework_for_students.md",
+      "file_hash": "01c6faa45b66918c0b72c2631fe42c59",
+      "success": true,
+      "duration_seconds": 46.12,
+      "metrics": {
+        "total_chars": 395235,
+        "total_lines": 904,
+        "total_words": 33805,
+        "headings": 64,
+        "heading_levels": {
+          "h2": 64
+        },
+        "tables": 16,
+        "lists": 66,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 344,
+        "avg_line_length": 704.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Unknown_Artificial_Intelligence_in_Social_Sciences_and.pdf",
+      "output": "Unknown_Artificial_Intelligence_in_Social_Sciences_and.md",
+      "file_hash": "94787764db49707256c35131598903dc",
+      "success": true,
+      "duration_seconds": 4.02,
+      "metrics": {
+        "total_chars": 57525,
+        "total_lines": 264,
+        "total_words": 7481,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 0,
+        "lists": 13,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 105,
+        "avg_line_length": 360.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Unknown_Artificial_Intelligence_in_Social_Work_An_EPIC.pdf",
+      "output": "Unknown_Artificial_Intelligence_in_Social_Work_An_EPIC.md",
+      "file_hash": "aa2f12ae3d9cf3ca0be4d32e22f4d676",
+      "success": true,
+      "duration_seconds": 7.62,
+      "metrics": {
+        "total_chars": 52531,
+        "total_lines": 297,
+        "total_words": 6620,
+        "headings": 22,
+        "heading_levels": {
+          "h2": 22
+        },
+        "tables": 4,
+        "lists": 53,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 118,
+        "avg_line_length": 291.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL.pdf",
+      "output": "Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL.md",
+      "file_hash": "5589e7198c563ad6a544a8f002d9dc96",
+      "success": true,
+      "duration_seconds": 2.09,
+      "metrics": {
+        "total_chars": 30826,
+        "total_lines": 194,
+        "total_words": 4359,
+        "headings": 14,
+        "heading_levels": {
+          "h2": 14
+        },
+        "tables": 0,
+        "lists": 47,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 75,
+        "avg_line_length": 257.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "van Toorn_2024_Introduction_to_the_digital_welfare_state.pdf",
+      "output": "van Toorn_2024_Introduction_to_the_digital_welfare_state.md",
+      "file_hash": "7ce683fe2250719432ccbb9e70f10f3a",
+      "success": true,
+      "duration_seconds": 2.06,
+      "metrics": {
+        "total_chars": 54875,
+        "total_lines": 214,
+        "total_words": 7854,
+        "headings": 14,
+        "heading_levels": {
+          "h2": 14
+        },
+        "tables": 0,
+        "lists": 74,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 72,
+        "avg_line_length": 384.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.pdf",
+      "output": "Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.md",
+      "file_hash": "2207589979f56e88e3b85203b3d9715a",
+      "success": true,
+      "duration_seconds": 4.9,
+      "metrics": {
+        "total_chars": 101896,
+        "total_lines": 563,
+        "total_words": 14457,
+        "headings": 33,
+        "heading_levels": {
+          "h2": 33
+        },
+        "tables": 4,
+        "lists": 145,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 214,
+        "avg_line_length": 290.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Victor_2023_Recommendations_for_social_work_researchers_and.pdf",
+      "output": "Victor_2023_Recommendations_for_social_work_researchers_and.md",
+      "file_hash": "b86f08aabaf175d6adaa1c7db9ae7243",
+      "success": true,
+      "duration_seconds": 1.66,
+      "metrics": {
+        "total_chars": 43205,
+        "total_lines": 244,
+        "total_words": 6296,
+        "headings": 34,
+        "heading_levels": {
+          "h2": 34
+        },
+        "tables": 0,
+        "lists": 33,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 107,
+        "avg_line_length": 313.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.pdf",
+      "output": "Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.md",
+      "file_hash": "d25a5a70bf582d2ba59fada2a9fb7e30",
+      "success": true,
+      "duration_seconds": 76.53,
+      "metrics": {
+        "total_chars": 112678,
+        "total_lines": 1108,
+        "total_words": 14779,
+        "headings": 75,
+        "heading_levels": {
+          "h2": 75
+        },
+        "tables": 1,
+        "lists": 171,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 473,
+        "avg_line_length": 175.7
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Waag_2023_Rationalisierung_durch_Digitalisierung.pdf",
+      "output": "Waag_2023_Rationalisierung_durch_Digitalisierung.md",
+      "file_hash": "1ffbb86e2e7f4ea321e7d5997d197b88",
+      "success": true,
+      "duration_seconds": 1.87,
+      "metrics": {
+        "total_chars": 55132,
+        "total_lines": 246,
+        "total_words": 6979,
+        "headings": 11,
+        "heading_levels": {
+          "h2": 11
+        },
+        "tables": 0,
+        "lists": 68,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 91,
+        "avg_line_length": 354.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.pdf",
+      "output": "Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.md",
+      "file_hash": "ff4c6767ce6451e655153cd98b2cb65e",
+      "success": true,
+      "duration_seconds": 1.77,
+      "metrics": {
+        "total_chars": 52070,
+        "total_lines": 243,
+        "total_words": 7973,
+        "headings": 13,
+        "heading_levels": {
+          "h2": 13
+        },
+        "tables": 0,
+        "lists": 85,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 81,
+        "avg_line_length": 319.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wang_2023_Measuring_user_competence_in_using_artificial.pdf",
+      "output": "Wang_2023_Measuring_user_competence_in_using_artificial.md",
+      "file_hash": "87cc0088b6db33b914b4c2fc7829a324",
+      "success": true,
+      "duration_seconds": 14.93,
+      "metrics": {
+        "total_chars": 82173,
+        "total_lines": 486,
+        "total_words": 12803,
+        "headings": 23,
+        "heading_levels": {
+          "h2": 23
+        },
+        "tables": 8,
+        "lists": 86,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 153,
+        "avg_line_length": 245.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wang_2024_A_survey_on_fairness_in_large_language_models.pdf",
+      "output": "Wang_2024_A_survey_on_fairness_in_large_language_models.md",
+      "file_hash": "2622545ca41584e14cb9b5547a33a4e3",
+      "success": true,
+      "duration_seconds": 5.74,
+      "metrics": {
+        "total_chars": 136568,
+        "total_lines": 676,
+        "total_words": 20110,
+        "headings": 60,
+        "heading_levels": {
+          "h2": 60
+        },
+        "tables": 2,
+        "lists": 180,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 227,
+        "avg_line_length": 302.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wang_2024_Algorithmic_discrimination_examining_its_types.pdf",
+      "output": "Wang_2024_Algorithmic_discrimination_examining_its_types.md",
+      "file_hash": "8738a5006cd8cf0adbf31148851c0f6d",
+      "success": true,
+      "duration_seconds": 2.61,
+      "metrics": {
+        "total_chars": 75637,
+        "total_lines": 492,
+        "total_words": 10366,
+        "headings": 39,
+        "heading_levels": {
+          "h2": 39
+        },
+        "tables": 0,
+        "lists": 13,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 240,
+        "avg_line_length": 298.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wang_2024_Multilingual_Prompting_for_Improving_LLM.pdf",
+      "output": "Wang_2024_Multilingual_Prompting_for_Improving_LLM.md",
+      "file_hash": "ddfcc5df6ddacd627affa0e9895bb39e",
+      "success": true,
+      "duration_seconds": 13.13,
+      "metrics": {
+        "total_chars": 92012,
+        "total_lines": 650,
+        "total_words": 11938,
+        "headings": 36,
+        "heading_levels": {
+          "h2": 36
+        },
+        "tables": 7,
+        "lists": 34,
+        "figures": 0,
+        "code_blocks": 1,
+        "links": 0,
+        "empty_lines": 229,
+        "avg_line_length": 217.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wang_2025_Multilingual_Prompting_for_Improving_LLM.pdf",
+      "output": "Wang_2025_Multilingual_Prompting_for_Improving_LLM.md",
+      "file_hash": "ddfcc5df6ddacd627affa0e9895bb39e",
+      "success": true,
+      "duration_seconds": 12.94,
+      "metrics": {
+        "total_chars": 92012,
+        "total_lines": 650,
+        "total_words": 11938,
+        "headings": 36,
+        "heading_levels": {
+          "h2": 36
+        },
+        "tables": 7,
+        "lists": 34,
+        "figures": 0,
+        "code_blocks": 1,
+        "links": 0,
+        "empty_lines": 229,
+        "avg_line_length": 217.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und.pdf",
+      "output": "Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und.md",
+      "file_hash": "fe0d0bbae51d58178c8f958059dd838b",
+      "success": true,
+      "duration_seconds": 6.71,
+      "metrics": {
+        "total_chars": 25088,
+        "total_lines": 174,
+        "total_words": 3297,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 1,
+        "lists": 38,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 59,
+        "avg_line_length": 216.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.pdf",
+      "output": "West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.md",
+      "file_hash": "94f44c5509afed14cd879dbef3eec107",
+      "success": true,
+      "duration_seconds": 4.87,
+      "metrics": {
+        "total_chars": 123130,
+        "total_lines": 723,
+        "total_words": 17561,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 1,
+        "lists": 23,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 343,
+        "avg_line_length": 322.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'.pdf",
+      "output": "Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'.md",
+      "file_hash": "c03c0dc2beee9f35c468ca71d415c3d9",
+      "success": true,
+      "duration_seconds": 6.14,
+      "metrics": {
+        "total_chars": 60897,
+        "total_lines": 432,
+        "total_words": 9158,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 2,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 195,
+        "avg_line_length": 255.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.pdf",
+      "output": "Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.md",
+      "file_hash": "c03c0dc2beee9f35c468ca71d415c3d9",
+      "success": true,
+      "duration_seconds": 5.6,
+      "metrics": {
+        "total_chars": 60897,
+        "total_lines": 432,
+        "total_words": 9158,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 2,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 195,
+        "avg_line_length": 255.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wong_2020_Broadening_artificial_intelligence_education_in.pdf",
+      "output": "Wong_2020_Broadening_artificial_intelligence_education_in.md",
+      "file_hash": "1be9d3d79c8056d97beeeed9b9261f93",
+      "success": true,
+      "duration_seconds": 4.76,
+      "metrics": {
+        "total_chars": 56111,
+        "total_lines": 229,
+        "total_words": 7598,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 3,
+        "lists": 11,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 92,
+        "avg_line_length": 407.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.pdf",
+      "output": "World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.md",
+      "file_hash": "a991d0cd592bd052322236574e976cb8",
+      "success": true,
+      "duration_seconds": 23.95,
+      "metrics": {
+        "total_chars": 76741,
+        "total_lines": 759,
+        "total_words": 10139,
+        "headings": 92,
+        "heading_levels": {
+          "h2": 92
+        },
+        "tables": 5,
+        "lists": 14,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 346,
+        "avg_line_length": 184.0
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.pdf",
+      "output": "Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md",
+      "file_hash": "fd6c3e6095d0cfbe3484e69770240890",
+      "success": true,
+      "duration_seconds": 11.84,
+      "metrics": {
+        "total_chars": 55799,
+        "total_lines": 408,
+        "total_words": 7848,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 2,
+        "lists": 13,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 190,
+        "avg_line_length": 254.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Wudel_2025_What_is_Feminist_AI.pdf",
+      "output": "Wudel_2025_What_is_Feminist_AI.md",
+      "file_hash": "31db6a4316a88f64bc91d09f007367ad",
+      "success": true,
+      "duration_seconds": 3.4,
+      "metrics": {
+        "total_chars": 23592,
+        "total_lines": 207,
+        "total_words": 3434,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 1,
+        "lists": 6,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 96,
+        "avg_line_length": 210.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Xu_2023_Transparency_enhances_positive_perceptions_of.pdf",
+      "output": "Xu_2023_Transparency_enhances_positive_perceptions_of.md",
+      "file_hash": "c5d2163b0578cec12c8d2b141a394d7a",
+      "success": true,
+      "duration_seconds": 6.99,
+      "metrics": {
+        "total_chars": 95277,
+        "total_lines": 556,
+        "total_words": 13920,
+        "headings": 23,
+        "heading_levels": {
+          "h2": 23
+        },
+        "tables": 5,
+        "lists": 86,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 202,
+        "avg_line_length": 267.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Yan_2024_Promises_and_challenges_of_generative_artificial.pdf",
+      "output": "Yan_2024_Promises_and_challenges_of_generative_artificial.md",
+      "file_hash": "4a749a1c6be7bdb0c34d693dfa2b8077",
+      "success": true,
+      "duration_seconds": 7.25,
+      "metrics": {
+        "total_chars": 75605,
+        "total_lines": 326,
+        "total_words": 10078,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 1,
+        "lists": 114,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 105,
+        "avg_line_length": 340.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.pdf",
+      "output": "Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.md",
+      "file_hash": "0ca39d6d6f1be5572ca1eddfceced4ee",
+      "success": true,
+      "duration_seconds": 7.01,
+      "metrics": {
+        "total_chars": 93499,
+        "total_lines": 365,
+        "total_words": 11715,
+        "headings": 28,
+        "heading_levels": {
+          "h2": 28
+        },
+        "tables": 5,
+        "lists": 54,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 140,
+        "avg_line_length": 413.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Yuan_2025_The_cultural_stereotype_and_cultural_bias_of.pdf",
+      "output": "Yuan_2025_The_cultural_stereotype_and_cultural_bias_of.md",
+      "file_hash": "796a8f4c0157a47ae0ae1eb1b5f6b05c",
+      "success": true,
+      "duration_seconds": 26.28,
+      "metrics": {
+        "total_chars": 89872,
+        "total_lines": 460,
+        "total_words": 12764,
+        "headings": 24,
+        "heading_levels": {
+          "h2": 23,
+          "h1": 1
+        },
+        "tables": 3,
+        "lists": 94,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 151,
+        "avg_line_length": 289.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Yunusov_2024_MirrorStories_Reflecting_Diversity_through.pdf",
+      "output": "Yunusov_2024_MirrorStories_Reflecting_Diversity_through.md",
+      "file_hash": "8d822b370a40f307e3cfdc15e68851b7",
+      "success": true,
+      "duration_seconds": 18.59,
+      "metrics": {
+        "total_chars": 52572,
+        "total_lines": 426,
+        "total_words": 6360,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 7,
+        "lists": 64,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 176,
+        "avg_line_length": 208.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Zakharova_2024_Tensions_in_digital_welfare_states_Three.pdf",
+      "output": "Zakharova_2024_Tensions_in_digital_welfare_states_Three.md",
+      "file_hash": "603a3138a698c79d57ef6e8051ca3e77",
+      "success": true,
+      "duration_seconds": 3.55,
+      "metrics": {
+        "total_chars": 67133,
+        "total_lines": 286,
+        "total_words": 9805,
+        "headings": 24,
+        "heading_levels": {
+          "h2": 24
+        },
+        "tables": 0,
+        "lists": 76,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 107,
+        "avg_line_length": 373.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.pdf",
+      "output": "Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.md",
+      "file_hash": "ba21469de71e1b584899499631f71eed",
+      "success": true,
+      "duration_seconds": 11.28,
+      "metrics": {
+        "total_chars": 48186,
+        "total_lines": 435,
+        "total_words": 8078,
+        "headings": 24,
+        "heading_levels": {
+          "h2": 24
+        },
+        "tables": 4,
+        "lists": 37,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 192,
+        "avg_line_length": 196.5
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Zayed_2024_Scaling_implicit_bias_analysis_across.pdf",
+      "output": "Zayed_2024_Scaling_implicit_bias_analysis_across.md",
+      "file_hash": "504e4b439f8adf4c500d7da55abc4b26",
+      "success": true,
+      "duration_seconds": 39.78,
+      "metrics": {
+        "total_chars": 106398,
+        "total_lines": 603,
+        "total_words": 15088,
+        "headings": 31,
+        "heading_levels": {
+          "h2": 31
+        },
+        "tables": 7,
+        "lists": 13,
+        "figures": 0,
+        "code_blocks": 2,
+        "links": 0,
+        "empty_lines": 242,
+        "avg_line_length": 296.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Zeng_2025_Governing_discriminatory_content_in.pdf",
+      "output": "Zeng_2025_Governing_discriminatory_content_in.md",
+      "file_hash": "09b0c89e88b96ff190076c5f9264fbff",
+      "success": true,
+      "duration_seconds": 12.24,
+      "metrics": {
+        "total_chars": 63083,
+        "total_lines": 449,
+        "total_words": 8689,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 3,
+        "lists": 65,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 183,
+        "avg_line_length": 235.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.pdf",
+      "output": "Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md",
+      "file_hash": "0e4e83c7f9854e2c3b845b933057a5d3",
+      "success": true,
+      "duration_seconds": 15.36,
+      "metrics": {
+        "total_chars": 71713,
+        "total_lines": 595,
+        "total_words": 10424,
+        "headings": 47,
+        "heading_levels": {
+          "h2": 41,
+          "h3": 6
+        },
+        "tables": 6,
+        "lists": 93,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 239,
+        "avg_line_length": 199.8
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "Zhang_2025_Learning_About_AI_A_Systematic_Review_of_Reviews.pdf",
+      "output": "Zhang_2025_Learning_About_AI_A_Systematic_Review_of_Reviews.md",
+      "file_hash": "987e50cf0a9ffea7581c7a3288162cce",
+      "success": true,
+      "duration_seconds": 5.95,
+      "metrics": {
+        "total_chars": 98363,
+        "total_lines": 461,
+        "total_words": 13675,
+        "headings": 34,
+        "heading_levels": {
+          "h2": 34
+        },
+        "tables": 4,
+        "lists": 110,
+        "figures": 0,
+        "code_blocks": 1,
+        "links": 0,
+        "empty_lines": 156,
+        "avg_line_length": 323.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "Zhao_2025_Thinking_like_a_scientist_Can_interactive.pdf",
+      "output": "Zhao_2025_Thinking_like_a_scientist_Can_interactive.md",
+      "file_hash": "294928faddad4c8006683db65cefb654",
+      "success": true,
+      "duration_seconds": 8.85,
+      "metrics": {
+        "total_chars": 42089,
+        "total_lines": 243,
+        "total_words": 5665,
+        "headings": 17,
+        "heading_levels": {
+          "h2": 17
+        },
+        "tables": 1,
+        "lists": 14,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 99,
+        "avg_line_length": 290.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}
