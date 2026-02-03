@@ -8,7 +8,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: system-ui, sans-serif; height: 100vh; display: flex; flex-direction: column; }
 
-        /* Header */
         header {
             padding: 8px 15px;
             background: #f5f5f5;
@@ -18,19 +17,11 @@
             align-items: center;
             flex-wrap: wrap;
         }
-        .toggle-list {
-            background: #666;
-            color: white;
-            border: none;
-            padding: 6px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 12px;
-        }
+        .toggle-list { background: #666; color: white; border: none; padding: 6px 10px; cursor: pointer; border-radius: 4px; font-size: 12px; }
         .toggle-list:hover { background: #444; }
         #docName { font-weight: bold; font-size: 13px; max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .spacer { flex: 1; }
-        .stats { font-size: 12px; color: #666; display: flex; gap: 8px; }
+        .stats { font-size: 12px; display: flex; gap: 8px; }
         .stats span { padding: 2px 6px; border-radius: 3px; }
         .stats .pass { background: #d4edda; color: #155724; }
         .stats .warn { background: #fff3cd; color: #856404; }
@@ -42,36 +33,23 @@
         .btn-pass { background: #d4edda; border-color: #28a745; }
         .btn-warn { background: #fff3cd; border-color: #ffc107; }
         .btn-fail { background: #f8d7da; border-color: #dc3545; }
-
         .filter-btn { font-size: 11px; padding: 4px 8px; }
         .filter-btn.active { background: #007bff; color: white; border-color: #007bff; }
-
+        .sync-btn { font-size: 11px; padding: 4px 8px; }
+        .sync-btn.active { background: #28a745; color: white; border-color: #28a745; }
         .shortcuts { font-size: 10px; color: #999; }
 
-        /* Main */
         main { flex: 1; display: flex; overflow: hidden; }
 
-        /* File List */
         #fileList {
             width: 260px;
             border-right: 1px solid #ddd;
             overflow-y: auto;
             font-size: 11px;
-            transition: width 0.2s, margin-left 0.2s;
+            transition: width 0.2s;
         }
-        #fileList.hidden {
-            width: 0;
-            margin-left: -1px;
-            overflow: hidden;
-        }
-        #fileList div {
-            padding: 5px 8px;
-            cursor: pointer;
-            border-bottom: 1px solid #eee;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+        #fileList.hidden { width: 0; overflow: hidden; }
+        #fileList div { padding: 5px 8px; cursor: pointer; border-bottom: 1px solid #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         #fileList div:hover { background: #f0f0f0; }
         #fileList div.active { background: #e3f2fd; font-weight: bold; }
         #fileList div.pass { border-left: 4px solid #28a745; }
@@ -79,45 +57,36 @@
         #fileList div.fail { border-left: 4px solid #dc3545; }
         #fileList div.filtered-out { display: none; }
 
-        /* Panels */
-        .panel {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            border-right: 1px solid #ddd;
-            min-width: 0;
-        }
+        .panel { flex: 1; display: flex; flex-direction: column; border-right: 1px solid #ddd; min-width: 0; }
         .panel:last-child { border-right: none; }
-        .panel-title {
-            padding: 6px 12px;
-            background: #eee;
-            font-weight: bold;
-            font-size: 12px;
-            border-bottom: 1px solid #ddd;
-        }
-        .panel-content { flex: 1; overflow: auto; padding: 10px; }
+        .panel-title { padding: 6px 12px; background: #eee; font-weight: bold; font-size: 12px; border-bottom: 1px solid #ddd; }
+        .panel-content { flex: 1; overflow-y: auto; padding: 0; }
 
-        /* PDF */
-        #pdfPanel iframe { width: 100%; height: 100%; border: none; }
+        /* PDF Images */
+        #pdfImages { padding: 10px; background: #333; }
+        #pdfImages img { width: 100%; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        #pdfImages .page-label { color: #888; font-size: 11px; text-align: center; margin-bottom: 5px; }
 
-        /* Rendered Markdown */
-        #mdRendered { font-size: 14px; line-height: 1.6; }
+        /* Fallback iframe */
+        #pdfFrame { width: 100%; height: 100%; border: none; }
+
+        /* Markdown */
+        #mdRendered { padding: 15px; font-size: 14px; line-height: 1.6; }
         #mdRendered h1 { font-size: 1.5em; margin: 0.8em 0 0.4em; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
         #mdRendered h2 { font-size: 1.3em; margin: 0.8em 0 0.4em; }
         #mdRendered h3 { font-size: 1.1em; margin: 0.8em 0 0.4em; }
         #mdRendered p { margin: 0.5em 0; }
         #mdRendered ul, #mdRendered ol { margin: 0.5em 0; padding-left: 1.5em; }
         #mdRendered table { border-collapse: collapse; margin: 1em 0; font-size: 12px; width: 100%; }
-        #mdRendered th, #mdRendered td { border: 1px solid #ccc; padding: 4px 8px; text-align: left; }
+        #mdRendered th, #mdRendered td { border: 1px solid #ccc; padding: 4px 8px; }
         #mdRendered th { background: #f0f0f0; }
         #mdRendered blockquote { border-left: 3px solid #ddd; margin: 0.5em 0; padding-left: 1em; color: #666; }
-        #mdRendered code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; font-size: 0.9em; }
-        #mdRendered pre { background: #f4f4f4; padding: 10px; overflow-x: auto; border-radius: 4px; }
 
-        /* Status border */
         .panel.status-pass { box-shadow: inset 0 3px 0 #28a745; }
         .panel.status-warn { box-shadow: inset 0 3px 0 #ffc107; }
         .panel.status-fail { box-shadow: inset 0 3px 0 #dc3545; }
+
+        .loading { text-align: center; padding: 40px; color: #666; }
     </style>
 </head>
 <body>
@@ -137,6 +106,8 @@
         <button class="filter-btn" onclick="setFilter('pending')">Offen</button>
         <button class="filter-btn" onclick="setFilter('warn')">Warn</button>
 
+        <button class="sync-btn" id="syncBtn" onclick="toggleSync()">Sync</button>
+
         <span class="spacer"></span>
 
         <button class="btn-pass" onclick="mark('pass')">PASS (1)</button>
@@ -144,7 +115,7 @@
         <button class="btn-fail" onclick="mark('fail')">FAIL (3)</button>
         <button onclick="exportResults()">Export</button>
 
-        <span class="shortcuts">← → Nav | 1 2 3 Bewertung | L Liste</span>
+        <span class="shortcuts">← → Nav | 1 2 3 Bewertung | L Liste | S Sync</span>
     </header>
 
     <main>
@@ -152,17 +123,23 @@
 
         <div class="panel" id="pdfPanel">
             <div class="panel-title">PDF Original</div>
-            <div class="panel-content"><iframe id="pdfFrame"></iframe></div>
+            <div class="panel-content" id="pdfContent">
+                <div id="pdfImages"></div>
+                <iframe id="pdfFrame" style="display:none;"></iframe>
+            </div>
         </div>
 
         <div class="panel" id="mdPanel">
             <div class="panel-title">Markdown (gerendert)</div>
-            <div class="panel-content"><div id="mdRendered"></div></div>
+            <div class="panel-content" id="mdContent">
+                <div id="mdRendered"></div>
+            </div>
         </div>
     </main>
 
     <script>
         const PDF_PATH = '../pdfs/';
+        const IMG_PATH = '../pdf_images/';
         const MD_PATH = '../markdown_clean/';
         const CSV_PATH = '../validation_reports/validation_summary_20260203_1056.csv';
 
@@ -171,6 +148,8 @@
         let reviews = JSON.parse(localStorage.getItem('mdReviews') || '{}');
         let currentFilter = 'all';
         let listVisible = true;
+        let syncScroll = true;
+        let useImages = false; // Will be set based on availability
 
         async function init() {
             try {
@@ -181,12 +160,56 @@
                 const lines = csv.trim().split('\n').slice(1);
                 fileNames = lines.map(line => line.split(',')[0].replace('.md', '')).filter(Boolean);
 
+                // Check if images are available
+                if (fileNames.length > 0) {
+                    try {
+                        const testImg = await fetch(IMG_PATH + encodeURIComponent(fileNames[0]) + '/page_001.jpg');
+                        useImages = testImg.ok;
+                    } catch (e) {
+                        useImages = false;
+                    }
+                }
+
+                console.log('Using images:', useImages);
+
                 updateFileList();
                 updateStats();
                 if (fileNames.length > 0) loadFile(0);
+
+                // Setup sync scroll
+                if (useImages) {
+                    document.getElementById('pdfContent').addEventListener('scroll', onPdfScroll);
+                    document.getElementById('mdContent').addEventListener('scroll', onMdScroll);
+                }
             } catch (e) {
                 document.getElementById('docName').textContent = 'Fehler: ' + e.message;
             }
+        }
+
+        let scrolling = false;
+        function onPdfScroll(e) {
+            if (!syncScroll || scrolling) return;
+            scrolling = true;
+            const pdfEl = e.target;
+            const mdEl = document.getElementById('mdContent');
+            const ratio = pdfEl.scrollTop / (pdfEl.scrollHeight - pdfEl.clientHeight);
+            mdEl.scrollTop = ratio * (mdEl.scrollHeight - mdEl.clientHeight);
+            setTimeout(() => scrolling = false, 50);
+        }
+
+        function onMdScroll(e) {
+            if (!syncScroll || scrolling) return;
+            scrolling = true;
+            const mdEl = e.target;
+            const pdfEl = document.getElementById('pdfContent');
+            const ratio = mdEl.scrollTop / (mdEl.scrollHeight - mdEl.clientHeight);
+            pdfEl.scrollTop = ratio * (pdfEl.scrollHeight - pdfEl.clientHeight);
+            setTimeout(() => scrolling = false, 50);
+        }
+
+        function toggleSync() {
+            syncScroll = !syncScroll;
+            document.getElementById('syncBtn').classList.toggle('active', syncScroll);
         }
 
         function updateStats() {
@@ -227,11 +250,8 @@
                     (filter === 'pending' && btn.textContent === 'Offen'));
             });
             updateFileList();
-
-            // Jump to first visible item if current is filtered
-            const listItems = document.querySelectorAll('#fileList div:not(.filtered-out)');
-            if (listItems.length > 0 && shouldFilter(fileNames[currentIndex])) {
-                const firstVisible = Array.from(document.querySelectorAll('#fileList div')).findIndex(el => !el.classList.contains('filtered-out'));
+            if (shouldFilter(fileNames[currentIndex])) {
+                const firstVisible = fileNames.findIndex(name => !shouldFilter(name));
                 if (firstVisible >= 0) loadFile(firstVisible);
             }
         }
@@ -246,21 +266,20 @@
             currentIndex = index;
             const name = fileNames[index];
 
-            // Update list
-            document.querySelectorAll('#fileList div').forEach((el, i) => {
-                el.classList.toggle('active', i === index);
-            });
-
-            // Update header
+            document.querySelectorAll('#fileList div').forEach((el, i) => el.classList.toggle('active', i === index));
             document.getElementById('docName').textContent = `${index + 1}/${fileNames.length}: ${name}`;
 
-            // Update panel status border
             const status = reviews[name] || '';
-            const mdPanel = document.getElementById('mdPanel');
-            mdPanel.className = 'panel' + (status ? ` status-${status}` : '');
+            document.getElementById('mdPanel').className = 'panel' + (status ? ` status-${status}` : '');
 
-            // Load PDF
-            document.getElementById('pdfFrame').src = PDF_PATH + encodeURIComponent(name) + '.pdf';
+            // Load PDF (images or iframe)
+            if (useImages) {
+                await loadPdfImages(name);
+            } else {
+                document.getElementById('pdfImages').style.display = 'none';
+                document.getElementById('pdfFrame').style.display = 'block';
+                document.getElementById('pdfFrame').src = PDF_PATH + encodeURIComponent(name) + '.pdf';
+            }
 
             // Load MD
             try {
@@ -272,8 +291,46 @@
                 document.getElementById('mdRendered').innerHTML = `<p style="color:red">Fehler: ${e.message}</p>`;
             }
 
-            // Scroll list
+            // Reset scroll
+            document.getElementById('pdfContent').scrollTop = 0;
+            document.getElementById('mdContent').scrollTop = 0;
+
             document.querySelectorAll('#fileList div')[index]?.scrollIntoView({ block: 'nearest' });
+        }
+
+        async function loadPdfImages(name) {
+            const container = document.getElementById('pdfImages');
+            container.innerHTML = '<div class="loading">Lade Seiten...</div>';
+            container.style.display = 'block';
+            document.getElementById('pdfFrame').style.display = 'none';
+
+            const images = [];
+            let page = 1;
+
+            // Try to load pages until we get a 404
+            while (page <= 500) { // Safety limit
+                const imgUrl = IMG_PATH + encodeURIComponent(name) + `/page_${String(page).padStart(3, '0')}.jpg`;
+                try {
+                    const response = await fetch(imgUrl, { method: 'HEAD' });
+                    if (!response.ok) break;
+                    images.push({ page, url: imgUrl });
+                    page++;
+                } catch (e) {
+                    break;
+                }
+            }
+
+            if (images.length === 0) {
+                // Fallback to iframe
+                container.style.display = 'none';
+                document.getElementById('pdfFrame').style.display = 'block';
+                document.getElementById('pdfFrame').src = PDF_PATH + encodeURIComponent(name) + '.pdf';
+                return;
+            }
+
+            container.innerHTML = images.map(img =>
+                `<div class="page-label">Seite ${img.page}</div><img src="${img.url}" alt="Seite ${img.page}">`
+            ).join('');
         }
 
         function mark(status) {
@@ -282,24 +339,13 @@
             reviews[name] = status;
             localStorage.setItem('mdReviews', JSON.stringify(reviews));
 
-            // Update list item
-            const listItems = document.querySelectorAll('#fileList div');
-            listItems[currentIndex].className = status + ' active';
-
-            // Update panel border
+            document.querySelectorAll('#fileList div')[currentIndex].className = status + ' active';
             document.getElementById('mdPanel').className = `panel status-${status}`;
-
-            // Update stats
             updateStats();
 
-            // Next non-filtered file
             let nextIndex = currentIndex + 1;
-            while (nextIndex < fileNames.length && shouldFilter(fileNames[nextIndex])) {
-                nextIndex++;
-            }
-            if (nextIndex < fileNames.length) {
-                loadFile(nextIndex);
-            }
+            while (nextIndex < fileNames.length && shouldFilter(fileNames[nextIndex])) nextIndex++;
+            if (nextIndex < fileNames.length) loadFile(nextIndex);
         }
 
         function exportResults() {
@@ -319,12 +365,12 @@
             a.click();
         }
 
-        // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') mark('pass');
             else if (e.key === '2') mark('warn');
             else if (e.key === '3') mark('fail');
             else if (e.key === 'l' || e.key === 'L') toggleList();
+            else if (e.key === 's' || e.key === 'S') toggleSync();
             else if (e.key === 'ArrowLeft') {
                 let prev = currentIndex - 1;
                 while (prev >= 0 && shouldFilter(fileNames[prev])) prev--;
@@ -336,6 +382,9 @@
                 if (next < fileNames.length) loadFile(next);
             }
         });
+
+        // Init sync button state
+        document.getElementById('syncBtn').classList.add('active');
 
         init();
     </script>
