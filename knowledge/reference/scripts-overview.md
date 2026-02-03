@@ -2,7 +2,7 @@
 
 Zentrale Dokumentation aller Python-Scripts im Projekt.
 
-**Stand:** 2026-02-03 (nach vollständiger PDF→Markdown Konvertierung)
+**Stand:** 2026-02-03 (nach Validierung und Post-Processing)
 
 ---
 
@@ -11,6 +11,7 @@ Zentrale Dokumentation aller Python-Scripts im Projekt.
 ```
 FemPrompt_SozArb/
 ├── pipeline/scripts/       # Aktive Pipeline-Scripts
+├── pipeline/tools/         # Browser-Tools (HTML)
 ├── benchmark/scripts/      # Benchmark Human vs. Agent
 ├── assessment/             # Assessment-Workflows
 ├── assessment-llm/         # LLM-Assessment (Legacy)
@@ -25,17 +26,81 @@ FemPrompt_SozArb/
 
 **Zweck:** Hauptworkflow PDF → Markdown → Summary → Vault
 
-**Status:** 232/234 PDFs erfolgreich konvertiert (99.1%)
+**Status:** 232/234 PDFs konvertiert, validiert und bereinigt
 
 | Script | Beschreibung | Status | Dependencies |
 |--------|--------------|--------|--------------|
 | `download_zotero_pdfs.py` | PDFs von Zotero Group herunterladen | ✅ Getestet | pyzotero |
 | `convert_to_markdown.py` | PDF→Markdown mit Qualitätsmetriken | ✅ Getestet | docling |
-| `validate_markdown.py` | Artefakt-Erkennung (GLYPH, Unicode) | ✅ Getestet | - |
+| `validate_markdown.py` | Basis-Validierung (GLYPH, Unicode) | ✅ Getestet | - |
+| `validate_markdown_enhanced.py` | **Multi-Layer Validierung mit PDF-Vergleich** | ✅ Getestet | pdfplumber |
+| `postprocess_markdown.py` | **Konservative Artefakt-Bereinigung** | ✅ Getestet | - |
 | `summarize_documents.py` | LLM-Summarisierung | Ausstehend | anthropic |
 | `generate_vault.py` | Obsidian Vault generieren | Ausstehend | - |
-| `acquire_pdfs.py` | Alternative PDF-Akquise (Unpaywall etc.) | Legacy | requests |
-| `utils.py` | Hilfsfunktionen (Hash, Sanitize, JSON) | ✅ Aktiv | - |
+| `utils.py` | Hilfsfunktionen (Hash, Sanitize, JSON, Windows-Encoding) | ✅ Aktiv | - |
+
+### Neue Scripts (2026-02-03)
+
+#### `validate_markdown_enhanced.py`
+
+Multi-Layer Validierungssystem:
+- **Layer 1**: Syntaktisch (GLYPH, Unicode, Dateigröße)
+- **Layer 2**: Strukturell (PDF-Zeichenvergleich, Tabellen-Zählung)
+- **Layer 3**: Semantisch (LLM-Stichproben, optional)
+- **Layer 4**: Manual Review Queue
+
+```bash
+python pipeline/scripts/validate_markdown_enhanced.py \
+  --md-dir pipeline/markdown \
+  --pdf-dir pipeline/pdfs \
+  --output-dir pipeline/validation_reports
+```
+
+**Output:** JSON, CSV, Markdown Reports + Manual Review Queue
+
+#### `postprocess_markdown.py`
+
+Konservative Bereinigung von Konvertierungsartefakten:
+- Silbentrennungen zusammenfügen
+- Verwaiste Seitenzahlen entfernen
+- Wiederholte Journal-Header entfernen (>10x + Pattern-Match)
+- Übermäßige Leerzeilen normalisieren
+
+```bash
+python pipeline/scripts/postprocess_markdown.py \
+  --input-dir pipeline/markdown \
+  --output-dir pipeline/markdown_clean
+```
+
+**Wichtig:** All-Caps-Entfernung ist DEAKTIVIERT (zu riskant für strukturierte Dokumente)
+
+---
+
+## Pipeline Tools (`pipeline/tools/`)
+
+**Zweck:** Browser-basierte Werkzeuge für Human-in-the-Loop
+
+| Tool | Beschreibung | Technologie |
+|------|--------------|-------------|
+| `markdown_reviewer.html` | PDF/Markdown Vergleichs-Tool für manuelle Review | HTML/JS |
+
+### `markdown_reviewer.html`
+
+Öffnen mit Live Server in VS Code.
+
+**Features:**
+- PDF und gerendertes Markdown nebeneinander
+- Dateiliste mit Status-Indikatoren
+- PASS/WARN/FAIL Buttons + Keyboard (1/2/3)
+- Filter: Alle / Offen / Warn
+- Fortschrittsanzeige im Header
+- Export als JSON
+- LocalStorage-Persistenz
+
+**Keyboard-Shortcuts:**
+- `←` `→` Navigation
+- `1` PASS | `2` WARN | `3` FAIL
+- `L` Liste ein/ausblenden
 
 ---
 
@@ -76,62 +141,54 @@ FemPrompt_SozArb/
 | `assess_papers.py` | Papers bewerten |
 | `analyze_results.py` | Ergebnisse analysieren |
 | `write_llm_tags_to_zotero.py` | Tags nach Zotero schreiben |
-| `write_llm_tags_to_zotero_simple.py` | Vereinfachte Version |
-
----
-
-## Corpus Scripts (`corpus/`)
-
-| Script | Beschreibung |
-|--------|--------------|
-| `extract_metadata.py` | Metadaten aus Zotero-JSON extrahieren |
-
----
-
-## Master-Orchestrator
-
-| Script | Beschreibung |
-|--------|--------------|
-| `run_pipeline.py` | Komplette Pipeline orchestrieren |
 
 ---
 
 ## Empfohlener Workflow
 
-### 1. Korpus vorbereiten
-```bash
-python corpus/extract_metadata.py --input corpus/zotero_export.json --output corpus/papers_metadata.csv
-```
-
-### 2. PDFs herunterladen
+### 1. PDFs herunterladen
 ```bash
 python pipeline/scripts/download_zotero_pdfs.py --output pipeline/pdfs/
 ```
 
-### 3. Markdown konvertieren
+### 2. Markdown konvertieren
 ```bash
 python pipeline/scripts/convert_to_markdown.py --input pipeline/pdfs/ --output pipeline/markdown/
 ```
 
-### 4. Qualität validieren
+### 3. Validierung (Enhanced)
 ```bash
-python pipeline/scripts/validate_markdown.py --input pipeline/markdown/
+python pipeline/scripts/validate_markdown_enhanced.py \
+  --md-dir pipeline/markdown \
+  --pdf-dir pipeline/pdfs \
+  --output-dir pipeline/validation_reports
 ```
 
-### 5. Zusammenfassen
+### 4. Post-Processing
 ```bash
-python pipeline/scripts/summarize_documents.py --input pipeline/markdown/ --output pipeline/summaries/
+python pipeline/scripts/postprocess_markdown.py \
+  --input-dir pipeline/markdown \
+  --output-dir pipeline/markdown_clean
 ```
 
-### 6. Vault generieren
+### 5. Human Review (optional)
 ```bash
-python pipeline/scripts/generate_vault.py --input pipeline/summaries/ --output vault/
+# Öffne mit Live Server in VS Code:
+pipeline/tools/markdown_reviewer.html
 ```
 
-### 7. Benchmark (optional)
+### 6. Zusammenfassen
 ```bash
-python benchmark/scripts/run_llm_assessment.py --input corpus/papers_metadata.csv --output benchmark/data/llm_assessment.csv
-python benchmark/scripts/calculate_agreement.py --input benchmark/data/merged_comparison.csv
+python pipeline/scripts/summarize_documents.py \
+  --input pipeline/markdown_clean/ \
+  --output pipeline/summaries/
+```
+
+### 7. Vault generieren
+```bash
+python pipeline/scripts/generate_vault.py \
+  --input pipeline/summaries/ \
+  --output vault/
 ```
 
 ---
@@ -139,12 +196,13 @@ python benchmark/scripts/calculate_agreement.py --input benchmark/data/merged_co
 ## Abhängigkeiten
 
 ```
-pyzotero      # Zotero API
-anthropic     # Claude API
-docling       # PDF→Markdown (aktiv genutzt)
-pandas        # Datenverarbeitung
-PyMuPDF       # PDF-Verarbeitung (Legacy, nur für Validierung)
-pyyaml        # Konfiguration
+pyzotero>=1.5.0      # Zotero API
+anthropic>=0.68.0    # Claude API
+docling>=2.60.0      # PDF→Markdown
+pdfplumber>=0.10.0   # PDF-Analyse für Validierung (NEU)
+pandas               # Datenverarbeitung
+pyyaml               # Konfiguration
+python-dotenv>=1.0.0 # Environment
 ```
 
 ---
@@ -153,10 +211,12 @@ pyyaml        # Konfiguration
 
 | Phase | Status | Ergebnis |
 |-------|--------|----------|
-| PDF-Download | ✅ Abgeschlossen | 234 PDFs (von 306 Zotero-Items) |
-| Markdown-Konvertierung | ✅ Abgeschlossen | 232/234 erfolgreich (99.1%) |
-| Qualitäts-Validierung | 🔄 In Arbeit | Durchschnitt 95.7/100 |
-| LLM-Summarisierung | ⏳ Ausstehend | - |
+| PDF-Download | ✅ Abgeschlossen | 234 PDFs |
+| Markdown-Konvertierung | ✅ Abgeschlossen | 232/234 (99.1%) |
+| Validierung (Enhanced) | ✅ Abgeschlossen | 136 PASS, 96 WARNING, 0 FAIL |
+| Post-Processing | ✅ Abgeschlossen | 107k Zeichen bereinigt |
+| Human Review Tool | ✅ Erstellt | Browser-Tool verfügbar |
+| LLM-Summarisierung | ⏳ Ausstehend | Nächster Schritt |
 | Vault-Generierung | ⏳ Ausstehend | - |
 
 ### Fehlgeschlagene Konvertierungen (2)
