@@ -41,8 +41,12 @@ FemPrompt_SozArb/
 │
 ├── pipeline/                  # PDF → Markdown → Summary → Vault
 │   ├── scripts/
-│   ├── pdfs/
-│   ├── markdown/
+│   ├── tools/                # Browser-Tools (markdown_reviewer.html)
+│   ├── pdfs/                 # 234 PDFs
+│   ├── pdf_images/           # JPG-Seiten fuer Sync-Scroll (~4000 Bilder)
+│   ├── markdown/             # 232 konvertierte Markdown-Dateien
+│   ├── markdown_clean/       # Post-processed Markdown
+│   ├── validation_reports/   # Validierungsberichte
 │   └── summaries/
 │
 ├── vault/                     # EIN Obsidian Vault
@@ -135,5 +139,5 @@ Vollständige Dokumentation: [`knowledge/`](knowledge/)
 
 ---
 
-*Version: 2.0 (Human vs. Agent Restructure)*
-*Erstellt: 2026-02-02*
+*Version: 2.1 (Pipeline-Erweiterung)*
+*Aktualisiert: 2026-02-03*

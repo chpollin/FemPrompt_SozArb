@@ -41,9 +41,19 @@ Die PDF-zu-Markdown-Konvertierung und Validierung ist abgeschlossen. Naechster S
 Browser-basiertes Tool erstellt: `pipeline/tools/markdown_reviewer.html`
 - PDF und Markdown nebeneinander
 - PASS/WARN/FAIL Bewertung
-- Keyboard-Shortcuts (1/2/3, Pfeiltasten)
+- Keyboard-Shortcuts (1/2/3, Pfeiltasten, S fuer Sync)
 - Filter fuer offene/problematische Dokumente
 - Export als JSON
+
+### PDF-zu-JPG Konvertierung ✅
+
+| Aspekt | Stand |
+|--------|-------|
+| PDFs konvertiert | 234 |
+| Seiten generiert | ~4000+ |
+| Output | `pipeline/pdf_images/[pdf-name]/page_001.jpg` |
+
+Ermoeglicht synchrones Scrollen im Review-Tool (Toggle mit 'S').
 
 ### Naechste Schritte
 
@@ -123,7 +133,8 @@ Phase 3: Paper-Entwicklung
 |-------|-------|
 | `pipeline/scripts/validate_markdown_enhanced.py` | Multi-Layer Validierung mit PDF-Vergleich |
 | `pipeline/scripts/postprocess_markdown.py` | Konservative Artefakt-Bereinigung |
-| `pipeline/tools/markdown_reviewer.html` | Human-in-the-Loop Review Tool |
+| `pipeline/tools/markdown_reviewer.html` | Human-in-the-Loop Review Tool mit Sync-Scroll |
+| `pipeline/scripts/pdf_to_images.py` | PDF-zu-JPG Konverter fuer Sync-Scroll |
 | `knowledge/paper/Validation-Methodology.md` | Paper-Dokumentation der Methodik |
 | `knowledge/guides/manual-review-checklist.md` | Strukturierte Review-Checkliste |
 | `pipeline/validation_reports/COMPARISON_REPORT.md` | Post-Processing Transparenz-Report |
@@ -141,4 +152,4 @@ Phase 3: Paper-Entwicklung
 ---
 
 *Aktualisiert: 2026-02-03*
-*Version: 6.0*
+*Version: 6.1*
