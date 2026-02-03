@@ -11,6 +11,11 @@ import argparse
 import sys
 from pathlib import Path
 
+# Fix Windows encoding issues
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+
 try:
     import fitz  # PyMuPDF
 except ImportError:
@@ -31,7 +36,8 @@ def convert_pdf_to_images(pdf_path: Path, output_dir: Path, dpi: int = 150) -> i
         zoom = dpi / 72  # 72 is default PDF DPI
         matrix = fitz.Matrix(zoom, zoom)
 
-        for page_num in range(len(doc)):
+        page_count = len(doc)
+        for page_num in range(page_count):
             page = doc[page_num]
             pix = page.get_pixmap(matrix=matrix)
 
@@ -39,7 +45,7 @@ def convert_pdf_to_images(pdf_path: Path, output_dir: Path, dpi: int = 150) -> i
             pix.save(str(output_path))
 
         doc.close()
-        return len(doc)
+        return page_count
 
     except Exception as e:
         print(f"  ERROR: {e}")
@@ -51,6 +57,7 @@ def main():
     parser.add_argument("--input", "-i", required=True, help="Input directory with PDFs")
     parser.add_argument("--output", "-o", required=True, help="Output directory for images")
     parser.add_argument("--dpi", type=int, default=150, help="Resolution (default: 150)")
+    parser.add_argument("--resume", type=int, default=0, help="Resume from PDF number (1-indexed)")
 
     args = parser.parse_args()
 
@@ -73,11 +80,20 @@ def main():
     print()
 
     total_pages = 0
+    skipped = 0
     for i, pdf_path in enumerate(pdf_files, 1):
+        # Skip if resuming
+        if args.resume > 0 and i < args.resume:
+            skipped += 1
+            continue
+
         print(f"[{i}/{len(pdf_files)}] {pdf_path.name}...", end=" ", flush=True)
         pages = convert_pdf_to_images(pdf_path, output_dir, args.dpi)
         total_pages += pages
         print(f"{pages} pages")
+
+    if skipped > 0:
+        print(f"(Skipped {skipped} already converted PDFs)")
 
     print()
     print(f"Done: {total_pages} total pages from {len(pdf_files)} PDFs")
