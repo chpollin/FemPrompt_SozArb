@@ -11,18 +11,17 @@ Usage:
 
 import argparse
 import json
-import os
 import re
 import sys
 import time
 from pathlib import Path
 from datetime import datetime
 
+# Import shared utilities
+from utils import setup_windows_encoding, load_env_file, get_env_var
+
 # Fix encoding for Windows console
-if hasattr(sys.stdout, 'reconfigure'):
-    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-if hasattr(sys.stderr, 'reconfigure'):
-    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+setup_windows_encoding()
 
 try:
     from pyzotero import zotero
@@ -86,20 +85,10 @@ def main():
 
     # Load credentials from .env
     env_path = Path(__file__).parent.parent.parent / '.env'
-    api_key = None
-    library_id = None
+    load_env_file(env_path)
 
-    if env_path.exists():
-        with open(env_path, 'r') as f:
-            for line in f:
-                if line.startswith('ZOTERO_API_KEY='):
-                    api_key = line.split('=', 1)[1].strip()
-                elif line.startswith('ZOTERO_LIBRARY_ID='):
-                    library_id = line.split('=', 1)[1].strip()
-
-    if not api_key or not library_id:
-        print("Error: ZOTERO_API_KEY and ZOTERO_LIBRARY_ID must be set in .env")
-        sys.exit(1)
+    api_key = get_env_var('ZOTERO_API_KEY', required=True)
+    library_id = get_env_var('ZOTERO_LIBRARY_ID', required=True)
 
     # Setup output directory
     output_dir = Path(args.output)

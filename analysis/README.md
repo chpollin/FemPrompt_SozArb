@@ -1,57 +1,53 @@
 # Analysis Scripts
 
-Legacy-Scripts aus der ursprünglichen Pipeline-Entwicklung.
+Hilfsskripte und Tools für die FemPrompt-Pipeline.
 
-**Empfehlung:** Neue Entwicklung sollte in `pipeline/scripts/` stattfinden.
+**Hinweis:** Die Hauptpipeline-Scripts befinden sich in `pipeline/scripts/`.
 
-## Status
+## Aktive Scripts
 
-| Script | Status | Ersetzt durch | Beschreibung |
-|--------|--------|---------------|--------------|
-| `getPDF_intelligent.py` | Legacy | `pipeline/scripts/download_zotero_pdfs.py` | PDF-Akquise |
-| `pdf-to-md-converter.py` | Legacy | `pipeline/scripts/convert_to_markdown.py` | PDF→Markdown |
-| `summarize_documents_enhanced.py` | Legacy | `pipeline/scripts/summarize_documents.py` | LLM-Summarisierung |
-| `generate_obsidian_vault_improved.py` | Legacy | `pipeline/scripts/generate_vault.py` | Vault-Generierung |
-| `validate_markdown_quality.py` | Aktiv | - | Markdown-Qualitätsprüfung |
-| `validate_vault.py` | Aktiv | - | Vault-Validierung |
-| `test_*.py` | Test | - | Testscripts |
-| `utils.py` | Aktiv | - | Hilfsfunktionen |
+| Script | Funktion |
+|--------|----------|
+| `validate_markdown_quality.py` | Markdown-Qualitätsprüfung |
+| `validate_vault.py` | Vault-Konsistenz prüfen |
+| `utils.py` | Gemeinsame Hilfsfunktionen |
+| `fetch_zotero_group.py` | Zotero API Zugriff |
 
-## Kategorien
+## Konvertierungs-Tools
 
-### PDF-Akquise
-- `getPDF_intelligent.py` - Hierarchische PDF-Beschaffung (Zotero, Unpaywall, etc.)
-- `fetch_zotero_group.py` - Zotero API Zugriff
+| Script | Funktion |
+|--------|----------|
+| `excel_to_ris.py` | Excel → RIS Format |
+| `ris_to_excel.py` | RIS → Excel Format |
 
-### Konvertierung
-- `pdf-to-md-converter.py` - PDF zu Markdown (PyMuPDF)
-- `excel_to_ris.py` - Excel zu RIS Format
-- `ris_to_excel.py` - RIS zu Excel Format
+## Vault-Erweiterungen
 
-### Summarisierung
-- `summarize_documents_enhanced.py` - LLM-basierte Zusammenfassung
+| Script | Funktion |
+|--------|----------|
+| `generate_research_vault_with_assessment.py` | Vault mit Assessment-Daten |
+| `export_vault_to_web_data.py` | Vault für Web-Interface |
+| `export_vault_to_single_file.py` | Vault als einzelne Datei |
+| `extract_concepts_from_summaries.py` | Konzept-Extraktion |
+| `sync_summary_metadata.py` | Metadaten synchronisieren |
+| `create_bidirectional_concept_links.py` | Verlinkungen erstellen |
 
-### Vault-Generierung
-- `generate_obsidian_vault_improved.py` - Obsidian Vault aus Summaries
-- `generate_research_vault_with_assessment.py` - Vault mit Assessment-Daten
-- `export_vault_to_web_data.py` - Vault für Web-Interface exportieren
-- `export_vault_to_single_file.py` - Vault als einzelne Datei
+## Test-Scripts
 
-### Validierung
-- `validate_markdown_quality.py` - Prüft Markdown-Qualität
-- `validate_vault.py` - Prüft Vault-Konsistenz
+| Script | Funktion |
+|--------|----------|
+| `test_assessment_workflow.py` | Assessment-Workflow testen |
+| `test_pipeline_comprehensive.py` | Pipeline-Gesamttest |
+| `test_prisma_filter.py` | PRISMA-Filter testen |
+| `test_vault_quality.py` | Vault-Qualität testen |
 
-### Hilfsfunktionen
-- `utils.py` - Gemeinsam genutzte Funktionen
-- `extract_concepts_from_summaries.py` - Konzept-Extraktion
-- `sync_summary_metadata.py` - Metadaten synchronisieren
-- `create_bidirectional_concept_links.py` - Verlinkungen erstellen
+## Entfernte Scripts (jetzt in pipeline/scripts/)
 
-### Tests
-- `test_assessment_workflow.py`
-- `test_pipeline_comprehensive.py`
-- `test_prisma_filter.py`
-- `test_vault_quality.py`
+Die folgenden Scripts wurden entfernt und durch modernere Versionen in `pipeline/scripts/` ersetzt:
 
-### Legacy (in `_legacy/`)
-- `summarize-documents.py` - Alte Version der Summarisierung
+| Entfernt | Ersetzt durch |
+|----------|---------------|
+| `getPDF_intelligent.py` | `pipeline/scripts/download_zotero_pdfs.py` |
+| `pdf-to-md-converter.py` | `pipeline/scripts/convert_to_markdown.py` |
+| `summarize_documents_enhanced.py` | `pipeline/scripts/summarize_documents.py` |
+| `generate_obsidian_vault_improved.py` | `pipeline/scripts/generate_vault.py` |
+| `_legacy/summarize-documents.py` | `pipeline/scripts/summarize_documents.py` |
