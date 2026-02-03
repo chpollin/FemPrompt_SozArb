@@ -113,9 +113,11 @@
         <button class="btn-pass" onclick="mark('pass')">PASS (1)</button>
         <button class="btn-warn" onclick="mark('warn')">WARN (2)</button>
         <button class="btn-fail" onclick="mark('fail')">FAIL (3)</button>
+        <button onclick="clearMark()" title="Status zuruecksetzen (0)">Reset (0)</button>
         <button onclick="exportResults()">Export</button>
+        <button onclick="importResults()">Import</button>
 
-        <span class="shortcuts">← → Nav | 1 2 3 Bewertung | L Liste | S Sync</span>
+        <span class="shortcuts">← → Nav | 1 2 3 Bewertung | 0 Reset | L Liste | S Sync</span>
     </header>
 
     <main>
@@ -343,32 +345,80 @@
             document.getElementById('mdPanel').className = `panel status-${status}`;
             updateStats();
 
+            // Auto-advance only if marking (not clearing)
             let nextIndex = currentIndex + 1;
             while (nextIndex < fileNames.length && shouldFilter(fileNames[nextIndex])) nextIndex++;
             if (nextIndex < fileNames.length) loadFile(nextIndex);
+        }
+
+        function clearMark() {
+            if (currentIndex < 0) return;
+            const name = fileNames[currentIndex];
+            delete reviews[name];
+            localStorage.setItem('mdReviews', JSON.stringify(reviews));
+
+            document.querySelectorAll('#fileList div')[currentIndex].className = 'active';
+            document.getElementById('mdPanel').className = 'panel';
+            updateStats();
+            updateFileList();
         }
 
         function exportResults() {
             const counts = { pass: 0, warn: 0, fail: 0, pending: 0 };
             fileNames.forEach(name => counts[reviews[name] || 'pending']++);
 
-            const blob = new Blob([JSON.stringify({
+            const data = {
                 date: new Date().toISOString(),
                 summary: counts,
                 total: fileNames.length,
                 reviews
-            }, null, 2)], {type: 'application/json'});
+            };
+
+            const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
 
             const a = document.createElement('a');
             a.href = URL.createObjectURL(blob);
-            a.download = `review_${new Date().toISOString().slice(0,10)}.json`;
+            a.download = `human_review_${new Date().toISOString().slice(0,10)}.json`;
             a.click();
+
+            // Show save location hint
+            alert('Speichere die Datei in: pipeline/validation_reports/\\n\\nDann kann Claude die Ergebnisse nutzen.');
+        }
+
+        function importResults() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = '.json';
+            input.onchange = async (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                try {
+                    const text = await file.text();
+                    const data = JSON.parse(text);
+
+                    if (data.reviews) {
+                        reviews = data.reviews;
+                        localStorage.setItem('mdReviews', JSON.stringify(reviews));
+                        updateFileList();
+                        updateStats();
+                        if (currentIndex >= 0) loadFile(currentIndex);
+                        alert(`Import erfolgreich: ${Object.keys(data.reviews).length} Reviews geladen`);
+                    } else {
+                        alert('Ungueltige Datei: Kein "reviews" Objekt gefunden');
+                    }
+                } catch (err) {
+                    alert('Import fehlgeschlagen: ' + err.message);
+                }
+            };
+            input.click();
         }
 
         document.addEventListener('keydown', (e) => {
             if (e.key === '1') mark('pass');
             else if (e.key === '2') mark('warn');
             else if (e.key === '3') mark('fail');
+            else if (e.key === '0') clearMark();
             else if (e.key === 'l' || e.key === 'L') toggleList();
             else if (e.key === 's' || e.key === 'S') toggleSync();
             else if (e.key === 'ArrowLeft') {

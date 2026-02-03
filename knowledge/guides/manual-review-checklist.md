@@ -169,3 +169,82 @@
 ---
 
 *Checklist Version 1.0 | Erstellt: 2026-02-03*
+
+---
+
+## Anhang: Review-Tool Workflow
+
+### Tool: `pipeline/tools/markdown_reviewer.html`
+
+**Starten:**
+1. VS Code: Rechtsklick auf Datei → "Open with Live Server"
+2. Oder: `npx live-server pipeline/tools/`
+
+### Keyboard-Shortcuts
+
+| Taste | Aktion |
+|-------|--------|
+| `1` | PASS - Dokument OK |
+| `2` | WARN - Dokument mit Issues |
+| `3` | FAIL - Dokument unbrauchbar |
+| `0` | **Reset** - Status zurücksetzen |
+| `←` `→` | Navigation |
+| `L` | Liste ein/ausblenden |
+| `S` | Sync-Scroll toggle |
+
+### Datenpersistenz
+
+| Speicherort | Beschreibung |
+|-------------|--------------|
+| `localStorage` (Browser) | Automatisch, sessionübergreifend |
+| Export (JSON) | Manuell via "Export" Button |
+| Import (JSON) | Manuell via "Import" Button |
+
+### Empfohlener Workflow
+
+1. **Review durchführen:**
+   - Tool öffnen mit Live Server
+   - Dokumente mit 1/2/3 bewerten
+   - Bei Fehler: `0` drücken zum Reset
+
+2. **Ergebnisse sichern:**
+   - "Export" klicken
+   - Speichern als: `pipeline/validation_reports/human_review_YYYY-MM-DD.json`
+
+3. **Session fortsetzen:**
+   - Tool erneut öffnen (LocalStorage bleibt)
+   - Oder: "Import" → vorherige JSON laden
+
+### JSON-Format (Export)
+
+```json
+{
+  "date": "2026-02-03T14:30:00.000Z",
+  "summary": {
+    "pass": 150,
+    "warn": 70,
+    "fail": 12,
+    "pending": 0
+  },
+  "total": 232,
+  "reviews": {
+    "Ahmed_2024_Feminist_perspectives_on_AI_Ethical": "pass",
+    "Browne_2023_Feminist_AI_Critical_Perspectives": "warn",
+    ...
+  }
+}
+```
+
+### Integration mit Claude
+
+Claude kann die exportierte JSON-Datei lesen und analysieren:
+
+```bash
+# Datei muss im Repository liegen:
+pipeline/validation_reports/human_review_2026-02-03.json
+```
+
+Dann kann Claude:
+- Problematische Dokumente identifizieren (WARN/FAIL)
+- Statistiken berechnen
+- Empfehlungen für Rekonvertierung geben
