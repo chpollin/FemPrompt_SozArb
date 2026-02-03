@@ -6,12 +6,12 @@ Hierarchische PDF-Akquise mit 8 Fallback-Strategien.
 
 ## Schnellstart
 
-```bash
-python analysis/getPDF_intelligent.py \
-  --input assessment.xlsx \
-  --output analysis/pdfs/ \
-  --filter-decision Include
-```
+Das Script `analysis/getPDF_intelligent.py` akquiriert PDFs aus verschiedenen Quellen.
+
+**Parameter:**
+- `--input` - Excel oder JSON mit Paper-Metadaten
+- `--output` - Zielverzeichnis fuer PDFs
+- `--filter-decision` - Nur Papers mit bestimmter Decision (Include, Exclude, Unclear)
 
 ---
 
@@ -32,42 +32,15 @@ Das Script versucht die folgenden Quellen in dieser Reihenfolge:
 
 ---
 
-## Parameter
-
-```bash
-python analysis/getPDF_intelligent.py \
-  --input <input-file>           # Excel oder JSON
-  --output <output-dir>          # Zielverzeichnis
-  --filter-decision <decision>   # Include, Exclude, Unclear
-  --limit <n>                    # Nur erste n Papers
-  --skip-existing                # Existierende ueberspringen
-```
-
----
-
 ## Input-Formate
 
 ### Excel (empfohlen)
 
-```
-| Title | Authors | DOI | URL | Decision |
-|-------|---------|-----|-----|----------|
-| ...   | ...     | ... | ... | Include  |
-```
+Spalten: Title, Authors, DOI, URL, Decision
 
 ### JSON
 
-```json
-[
-  {
-    "title": "...",
-    "authors": "...",
-    "doi": "10.1234/...",
-    "url": "https://...",
-    "decision": "Include"
-  }
-]
-```
+Array mit Objekten: title, authors, doi, url, decision
 
 ---
 
@@ -75,19 +48,16 @@ python analysis/getPDF_intelligent.py \
 
 ### Erfolgreiche PDFs
 
-```
-analysis/pdfs/
-  Author2024_TitleKeyword.pdf
-  Smith2023_MachineLearning.pdf
-  ...
-```
+Dateiname-Format: `Author2024_TitleKeyword.pdf`
+
+Speicherort: `analysis/pdfs/`
 
 ### Logs
 
-```
-acquisition_log.json     # Detailliertes Log
-missing_pdfs.csv         # Fehlende PDFs mit DOIs
-```
+| Datei | Inhalt |
+|-------|--------|
+| `acquisition_log.json` | Detailliertes Log aller Versuche |
+| `missing_pdfs.csv` | Fehlende PDFs mit DOIs |
 
 ---
 
@@ -114,26 +84,11 @@ missing_pdfs.csv         # Fehlende PDFs mit DOIs
 
 ## Troubleshooting
 
-### Zotero API 403
-
-```
-Workaround: CSV-Export aus Zotero verwenden
-```
-
-### NaN URL
-
-Bereits gefixt mit Type-Checking:
-```python
-if not url or not isinstance(url, str):
-    url = ''
-```
-
-### Timeout
-
-Rate limiting aktivieren:
-```python
-time.sleep(2)  # Zwischen Requests
-```
+| Problem | Loesung |
+|---------|---------|
+| Zotero API 403 | CSV-Export aus Zotero verwenden |
+| NaN URL | Wird automatisch behandelt (Type-Checking) |
+| Timeout | Rate limiting aktivieren (2 Sekunden zwischen Requests) |
 
 ---
 
@@ -146,4 +101,4 @@ time.sleep(2)  # Zwischen Requests
 
 ---
 
-*Version: 2.0 (2026-02-02)*
+*Version: 3.0 (2026-02-03)*

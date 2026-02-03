@@ -1,6 +1,6 @@
 # Technische Dokumentation
 
-Pipeline Version: 2.4
+Pipeline Version: 2.5
 Letzte Aktualisierung: 2026-02-03
 
 ---
@@ -14,63 +14,40 @@ Letzte Aktualisierung: 2026-02-03
 
 ### Python-Pakete
 
-```bash
-pip install -r requirements.txt
+Installation via `pip install -r requirements.txt`. Kern-Pakete:
 
-# Kern-Pakete:
-pip install anthropic>=0.68.0       # Claude API
-pip install pandas openpyxl         # Excel
-pip install pyzotero>=1.5.0         # Zotero API
-pip install docling>=2.60.0         # PDF-Konversion
-pip install pdfplumber>=0.10.0      # PDF-Analyse (NEU)
-pip install python-dotenv>=1.0.0    # Environment
-```
+| Paket | Version | Zweck |
+|-------|---------|-------|
+| anthropic | >=0.68.0 | Claude API |
+| pandas, openpyxl | - | Excel-Verarbeitung |
+| pyzotero | >=1.5.0 | Zotero API |
+| docling | >=2.60.0 | PDF-Konversion |
+| pdfplumber | >=0.10.0 | PDF-Analyse |
+| python-dotenv | >=1.0.0 | Environment |
 
 ### Umgebungsvariablen
 
-```bash
-# .env Datei (empfohlen):
-ANTHROPIC_API_KEY=sk-ant-your-key
-ZOTERO_API_KEY=your-zotero-key
-```
+In `.env` Datei (nicht committen):
+- `ANTHROPIC_API_KEY` - Claude API-Schluessel
+- `ZOTERO_API_KEY` - Zotero API-Schluessel
 
 ---
 
 ## Pipeline-Architektur
 
-### Empfohlener Workflow (NEU)
+### Empfohlener Workflow
 
-```bash
-# 1. PDFs von Zotero herunterladen
-python pipeline/scripts/download_zotero_pdfs.py --output pipeline/pdfs/
+| Schritt | Script | Input | Output |
+|---------|--------|-------|--------|
+| 1. PDF-Download | `download_zotero_pdfs.py` | Zotero Group | `pipeline/pdfs/` |
+| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` |
+| 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | `pipeline/validation_reports/` |
+| 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` |
+| 5. Human Review | `markdown_reviewer.html` | Markdown + PDFs | JSON-Export |
+| 6. Summarisierung | `summarize_documents.py` | Markdown | `pipeline/summaries/` |
+| 7. Vault | `generate_vault.py` | Summaries | `vault/` |
 
-# 2. Markdown konvertieren
-python pipeline/scripts/convert_to_markdown.py --input pipeline/pdfs/ --output pipeline/markdown/
-
-# 3. Validierung (Enhanced)
-python pipeline/scripts/validate_markdown_enhanced.py \
-  --md-dir pipeline/markdown \
-  --pdf-dir pipeline/pdfs \
-  --output-dir pipeline/validation_reports
-
-# 4. Post-Processing (optional)
-python pipeline/scripts/postprocess_markdown.py \
-  --input-dir pipeline/markdown \
-  --output-dir pipeline/markdown_clean
-
-# 5. Human Review (optional) - Live Server in VS Code
-# Oeffne: pipeline/tools/markdown_reviewer.html
-
-# 6. LLM-Summarisierung
-python pipeline/scripts/summarize_documents.py \
-  --input pipeline/markdown_clean/ \
-  --output pipeline/summaries/
-
-# 7. Vault-Generierung
-python pipeline/scripts/generate_vault.py \
-  --input pipeline/summaries/ \
-  --output vault/
-```
+Alle Scripts befinden sich in `pipeline/scripts/`. Parameter siehe `--help` der jeweiligen Scripts.
 
 ---
 
@@ -95,17 +72,17 @@ python pipeline/scripts/generate_vault.py \
 |------|----------|
 | `markdown_reviewer.html` | Browser-Tool fuer Human-in-the-Loop Review |
 
-### Assessment
+### Assessment Scripts
 
 | Script | Funktion |
 |--------|----------|
-| assessment-llm/assess_papers.py | LLM-basiertes PRISMA-Assessment |
-| assessment/create_thematic_assessment.py | Excel fuer manuelles Assessment |
-| benchmark/scripts/run_llm_assessment.py | Benchmark-Assessment (10 Kategorien) |
+| `assessment-llm/assess_papers.py` | LLM-basiertes PRISMA-Assessment |
+| `assessment/create_thematic_assessment.py` | Excel fuer manuelles Assessment |
+| `benchmark/scripts/run_llm_assessment.py` | Benchmark-Assessment (10 Kategorien) |
 
 ---
 
-## Validierung & Post-Processing (NEU)
+## Validierung & Post-Processing
 
 ### validate_markdown_enhanced.py
 
@@ -142,7 +119,7 @@ Konservative Bereinigung:
 
 ### markdown_reviewer.html
 
-Browser-Tool fuer Human-in-the-Loop Review:
+Browser-Tool fuer Human-in-the-Loop Review. Oeffnen via Live Server in VS Code.
 
 **Features:**
 - PDF und Markdown nebeneinander
@@ -161,42 +138,18 @@ Browser-Tool fuer Human-in-the-Loop Review:
 
 ## Verzeichnisstruktur
 
-```
-FemPrompt_SozArb/
-  pipeline/
-    scripts/                 # Python-Scripts
-      download_zotero_pdfs.py
-      convert_to_markdown.py
-      validate_markdown.py
-      validate_markdown_enhanced.py
-      postprocess_markdown.py
-      summarize_documents.py
-      generate_vault.py
-      utils.py
-    tools/                   # Browser-Tools
-      markdown_reviewer.html
-    pdfs/                    # Downloaded PDFs (234)
-    markdown/                # Konvertierte Dokumente (232)
-    markdown_clean/          # Post-Processed Dokumente
-    validation_reports/      # Validierungsberichte
-    summaries/               # AI Summaries (ausstehend)
-
-  benchmark/                 # Human-LLM Benchmark
-    config/categories.yaml
-    scripts/
-    data/
-
-  knowledge/                 # Dokumentation
-    01-project.md
-    02-methodology.md
-    03-status.md
-    04-technical.md
-    paper/
-    guides/
-    reference/
-
-  FemPrompt_Vault/           # Obsidian Vault
-```
+| Verzeichnis | Inhalt |
+|-------------|--------|
+| `pipeline/scripts/` | Python-Scripts fuer alle Pipeline-Phasen |
+| `pipeline/tools/` | Browser-Tools (markdown_reviewer.html) |
+| `pipeline/pdfs/` | Heruntergeladene PDFs (234) |
+| `pipeline/markdown/` | Konvertierte Dokumente (232) |
+| `pipeline/markdown_clean/` | Post-Processed Dokumente |
+| `pipeline/validation_reports/` | Validierungsberichte |
+| `pipeline/summaries/` | AI Summaries (ausstehend) |
+| `benchmark/` | Human-LLM Benchmark (config, scripts, data) |
+| `knowledge/` | Dokumentation |
+| `FemPrompt_Vault/` | Obsidian Vault |
 
 ---
 
@@ -240,21 +193,15 @@ FemPrompt_SozArb/
 
 ### Windows-Encoding
 
-```python
-# In utils.py:
-def setup_windows_encoding():
-    if sys.platform == 'win32':
-        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-```
+Die Funktion `setup_windows_encoding()` in `utils.py` konfiguriert UTF-8 Encoding fuer Windows-Konsolen.
 
 ### HTTP 429 (Rate Limit)
 
-```python
-time.sleep(5)  # Erhoehen von 2 auf 5
-```
+Bei Rate-Limit-Fehlern den Delay zwischen API-Calls erhoehen (Standard: 2 Sekunden, empfohlen: 5 Sekunden).
 
-### Fehlgeschlagene Konvertierungen (2)
+### Fehlgeschlagene Konvertierungen
 
+2 Dokumente konnten nicht konvertiert werden:
 - `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf`
 - `Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf`
 
@@ -262,26 +209,16 @@ time.sleep(5)  # Erhoehen von 2 auf 5
 
 ## Konfiguration
 
-### categories.yaml (Benchmark)
+### Assessment-Kategorien (categories.yaml)
 
-```yaml
-categories:
-  # Technik (4)
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
+Das Benchmark verwendet 10 binaere Kategorien:
 
-  # Sozial (6)
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
-```
+**Technik (4):** AI_Literacies, Generative_KI, Prompting, KI_Sonstige
+
+**Sozial (6):** Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+
+Konfigurationsdatei: `benchmark/config/categories.yaml`
 
 ---
 
-*Version: 2.4 (2026-02-03)*
-*Aktualisiert: Validierung, Post-Processing, Review-Tool hinzugefuegt*
+*Version: 2.5 (2026-02-03)*

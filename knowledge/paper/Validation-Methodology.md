@@ -38,18 +38,7 @@ Large Language Models (LLMs) haben begrenzte **Context Windows**, die limitieren
 
 #### Semantisches Chunking
 
-```markdown
-## Abstract           <- Klare Abschnittsgrenze
-[Inhalt]
-
-## Introduction       <- Ermöglicht gezieltes Chunking
-[Inhalt]
-
-## Methodology        <- LLM erkennt Dokumentstruktur
-[Inhalt]
-```
-
-Markdown-Header ermöglichen:
+Markdown-Header (z.B. `## Abstract`, `## Introduction`, `## Methodology`) schaffen klare Abschnittsgrenzen. Das ermoeglicht:
 - **Gezieltes Chunking** nach semantischen Einheiten
 - **Selective Processing** einzelner Abschnitte
 - **Hierarchische Navigation** durch das Dokument
@@ -90,20 +79,9 @@ Strukturierte Markdown-Inhalte verbessern:
 
 LLMs sind darauf trainiert, strukturierte Texte zu verarbeiten. Markdown bietet semantische Hinweise, die das Modell nutzt:
 
-```markdown
-## Abstract           <- LLM erkennt: Dies ist eine Zusammenfassung
-Die Studie untersucht...
-
-## Introduction       <- LLM erkennt: Dies liefert Kontext
-Der Hintergrund...
-
-## Methodology        <- LLM erkennt: Dies beschreibt die Methodik
-Wir verwendeten...
-
-| Variable | Wert |   <- LLM erkennt: Tabellenstruktur
-|----------|------|
-| N        | 234  |
-```
+- **Sektions-Header** (Abstract, Introduction, Methodology) signalisieren Inhaltstyp
+- **Tabellen-Syntax** (Pipe-Separator) signalisiert strukturierte Daten
+- **Hierarchische Struktur** (H1 > H2 > H3) spiegelt Dokumentlogik
 
 **Vorteile:**
 1. **Strukturerkennung**: LLM kann Dokumenttyp und -aufbau identifizieren
@@ -130,42 +108,23 @@ Wir verwendeten...
 
 Die Validierung erfolgt in mehreren Schichten:
 
-```
-Layer 1: Syntaktische Validierung
-├── GLYPH-Placeholder zählen
-├── Unicode-Fehler erkennen
-├── Dateigröße prüfen
-└── Text-zu-Noise-Ratio berechnen
-
-Layer 2: Strukturelle Validierung
-├── PDF-Zeichenzahl extrahieren
-├── Char-Ratio berechnen
-├── Tabellen in PDF zählen
-├── Tabellen in MD zählen
-└── Mismatch erkennen
-
-Layer 3: Semantische Validierung (Optional)
-├── LLM-basierte Stichprobe
-├── Sektions-Vollständigkeit prüfen
-└── Kohärenz bewerten
-
-Layer 4: Manuelle Review
-├── Priorisierte Queue
-├── Strukturierte Checkliste
-└── Expert:innen-Bewertung
-```
+| Layer | Pruefungen |
+|-------|------------|
+| 1. Syntaktisch | GLYPH-Placeholder zaehlen, Unicode-Fehler erkennen, Dateigroesse pruefen, Text-zu-Noise-Ratio berechnen |
+| 2. Strukturell | PDF-Zeichenzahl extrahieren, Char-Ratio berechnen, Tabellen in PDF/MD zaehlen, Mismatch erkennen |
+| 3. Semantisch (optional) | LLM-basierte Stichprobe, Sektions-Vollstaendigkeit pruefen, Kohaerenz bewerten |
+| 4. Manuell | Priorisierte Queue, Strukturierte Checkliste, Expert:innen-Bewertung |
 
 ### 2.3 Konfidenz-Scoring
 
-Der **Konfidenz-Score** (0-100) kombiniert alle Metriken:
+Der **Konfidenz-Score** (0-100) kombiniert alle Metriken. Abzuege werden fuer verschiedene Probleme berechnet:
 
-```
-Konfidenz = 100
-         - min(30, GLYPH_count / 2)           # max -30 für Glyphs
-         - min(20, (1 - char_ratio) * 40)     # max -20 für Textverlust
-         - min(20, artifact_score / 5)        # max -20 für Artefakte
-         - min(15, (0.5 - text_ratio) * 30)   # max -15 für Noise
-```
+| Metrik | Maximaler Abzug | Formel |
+|--------|-----------------|--------|
+| GLYPH-Placeholder | -30 | GLYPH_count / 2 |
+| Textverlust | -20 | (1 - char_ratio) * 40 |
+| Artefakte | -20 | artifact_score / 5 |
+| Noise | -15 | (0.5 - text_ratio) * 30 |
 
 **Interpretation:**
 - **90-100**: Hohe Qualität, keine Review nötig
@@ -266,11 +225,11 @@ Kernpunkte:
 
 ### 5.3 Dependencies
 
-```
-pdfplumber>=0.10.0   # PDF-Textextraktion für Vergleich
-docling>=2.60.0      # PDF-zu-Markdown Konvertierung
-anthropic>=0.68.0    # LLM-basierte Spot-Checks (optional)
-```
+| Paket | Version | Zweck |
+|-------|---------|-------|
+| pdfplumber | >=0.10.0 | PDF-Textextraktion fuer Vergleich |
+| docling | >=2.60.0 | PDF-zu-Markdown Konvertierung |
+| anthropic | >=0.68.0 | LLM-basierte Spot-Checks (optional) |
 
 ---
 

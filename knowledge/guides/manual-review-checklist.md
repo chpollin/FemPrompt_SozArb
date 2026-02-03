@@ -162,9 +162,7 @@
 
 *Freitext für spezifische Beobachtungen, Kontext oder Empfehlungen:*
 
-```
-[Notizen hier einfügen]
-```
+---
 
 ---
 
@@ -217,34 +215,19 @@
 
 ### JSON-Format (Export)
 
-```json
-{
-  "date": "2026-02-03T14:30:00.000Z",
-  "summary": {
-    "pass": 150,
-    "warn": 70,
-    "fail": 12,
-    "pending": 0
-  },
-  "total": 232,
-  "reviews": {
-    "Ahmed_2024_Feminist_perspectives_on_AI_Ethical": "pass",
-    "Browne_2023_Feminist_AI_Critical_Perspectives": "warn",
-    ...
-  }
-}
-```
+Das Export-Format enthaelt:
+- **date**: Zeitstempel des Exports
+- **summary**: Zaehler fuer pass, warn, fail, pending
+- **total**: Gesamtanzahl Dokumente
+- **reviews**: Objekt mit Dateiname → Status-Zuordnung
 
 ### Integration mit Claude
 
-Claude kann die exportierte JSON-Datei lesen und analysieren:
+Claude kann die exportierte JSON-Datei lesen und analysieren.
 
-```bash
-# Datei muss im Repository liegen:
-pipeline/validation_reports/human_review_2026-02-03.json
-```
+**Speicherort:** `pipeline/validation_reports/human_review_YYYY-MM-DD.json`
 
-Dann kann Claude:
+**Moegliche Analysen:**
 - Problematische Dokumente identifizieren (WARN/FAIL)
 - Statistiken berechnen
-- Empfehlungen für Rekonvertierung geben
+- Empfehlungen fuer Rekonvertierung geben

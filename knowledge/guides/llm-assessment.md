@@ -6,15 +6,8 @@ Automatisiertes PRISMA-Assessment mit Claude Haiku 4.5.
 
 ## Schnellstart
 
-```bash
-# API Key setzen
-export ANTHROPIC_API_KEY="sk-ant-your-key"
-
-# Assessment ausfuehren
-python assessment-llm/assess_papers.py \
-  -i assessment/papers.xlsx \
-  -o assessment-llm/output/assessment.xlsx
-```
+1. API Key setzen: `ANTHROPIC_API_KEY` in `.env` Datei
+2. Script ausfuehren: `assessment-llm/assess_papers.py` mit Input-Excel und Output-Pfad
 
 ---
 
@@ -26,7 +19,7 @@ python assessment-llm/assess_papers.py \
    - Ruft Claude Haiku 4.5 API auf
    - Parst JSON-Response
    - Validiert Scores
-3. **Schreibt** Ergebnis nach `output/assessment.xlsx`
+3. **Schreibt** Ergebnis nach Output-Excel
 4. **Loggt** API-Calls nach `logs/api_calls.jsonl`
 
 ---
@@ -92,10 +85,10 @@ Excel mit folgenden Spalten:
 ### Layer 1: Auto-Repair
 
 Automatische Reparatur vor Validierung:
-- `scores: null` → `[0, 0, 0, 0, 0]`
-- Array zu kurz → Mit Nullen auffuellen
-- Array zu lang → Auf 5 kuerzen
-- Float → Int konvertieren
+- `scores: null` wird zu `[0, 0, 0, 0, 0]`
+- Array zu kurz wird mit Nullen aufgefuellt
+- Array zu lang wird auf 5 gekuerzt
+- Float wird zu Int konvertiert
 
 ### Layer 2: Retry
 
@@ -116,35 +109,28 @@ Papers ohne Abstract werden automatisch excluded:
 
 Default: 2 Sekunden zwischen API-Calls.
 
-```bash
-# Anpassen:
-python assess_papers.py --delay 5.0
-```
+Der Delay kann via `--delay` Parameter angepasst werden (empfohlen: 5 bei Rate-Limit-Fehlern).
 
 ---
 
 ## Dateien
 
-```
-assessment-llm/
-  assess_papers.py         # Haupt-Script
-  prompt_template.md       # Prompt-Template
-  logs/
-    assessment.log         # Verarbeitungs-Log
-    api_calls.jsonl        # API-Historie
-  output/
-    assessment.xlsx        # Ergebnis
-```
+| Verzeichnis | Inhalt |
+|-------------|--------|
+| `assessment-llm/assess_papers.py` | Haupt-Script |
+| `assessment-llm/prompt_template.md` | Prompt-Template |
+| `assessment-llm/logs/` | assessment.log, api_calls.jsonl |
+| `assessment-llm/output/` | Ergebnis-Excel |
 
 ---
 
 ## Nach dem Assessment
 
-1. Output pruefen: `assessment-llm/output/assessment.xlsx`
-2. Logs reviewen: `logs/assessment.log`
+1. Output pruefen (Excel)
+2. Logs reviewen
 3. Stichprobe validieren (10-20 Papers manuell)
 4. Ggf. nach Zotero exportieren
 
 ---
 
-*Version: 2.0 (2026-02-02)*
+*Version: 3.0 (2026-02-03)*

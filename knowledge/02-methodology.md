@@ -46,12 +46,10 @@ Die Identifikationsphase nutzt KI-gestuetzte Deep Research statt traditioneller 
 
 ### Inklusions-Logik
 
-```
-(AI_Literacies OR Generative_KI OR Prompting OR KI_Sonstige)
-AND
-(Soziale_Arbeit OR Bias_Ungleichheit OR Gender OR Diversitaet OR Feministisch OR Fairness)
--> Include
-```
+Ein Paper wird eingeschlossen, wenn beide Bedingungen erfuellt sind:
+
+1. **Mindestens eine Technik-Dimension:** AI_Literacies ODER Generative_KI ODER Prompting ODER KI_Sonstige
+2. **Mindestens eine Sozial-Dimension:** Soziale_Arbeit ODER Bias_Ungleichheit ODER Gender ODER Diversitaet ODER Feministisch ODER Fairness
 
 **Wichtig:** KI_Sonstige wurde in v1.1 zur Inklusions-Logik hinzugefuegt, da algorithmische Systeme im Sozialbereich (z.B. Risikobewertung in der Jugendhilfe) hochrelevant sind.
 
@@ -120,22 +118,11 @@ Alle 4 Modelle erhalten identische Prompts mit:
 
 ## RIS-Standardisierung
 
-Heterogene Modell-Outputs werden in RIS-Format konvertiert:
+Heterogene Modell-Outputs werden in RIS-Format konvertiert.
 
-```
-TY - Dokumenttyp
-AU - Autoren
-TI - Titel
-JO - Journal
-VL - Volume
-IS - Issue
-SP/EP - Seiten
-PY - Jahr
-DO - DOI
-AB - Abstract
-KW - Keywords
-```
+**Standard-Felder:** Dokumenttyp (TY), Autoren (AU), Titel (TI), Journal (JO), Volume (VL), Issue (IS), Seiten (SP/EP), Jahr (PY), DOI (DO), Abstract (AB), Keywords (KW)
 
+**Qualitaetssicherung:**
 - DOI-Validierung gegen CrossRef-Muster
 - Unsichere Angaben mit N1-Note markiert
 - Temporaere Konversion via Claude-Projekt
@@ -214,15 +201,16 @@ Fuer das Forum Wissenschaft Paper wird ein Vergleich zwischen Human- und LLM-Ass
 
 ### Benchmark-Scripts
 
-```
-benchmark/
-  config/categories.yaml     # 10 Kategorien (synchron mit Human-Assessment)
-  scripts/
-    run_llm_assessment.py    # LLM-Assessment mit YAML-Schema
-    merge_assessments.py     # Human + LLM zusammenfuehren
-    calculate_agreement.py   # Cohen's Kappa berechnen
-    analyze_disagreements.py # Qualitative Analyse
-```
+Scripts in `benchmark/scripts/`:
+
+| Script | Funktion |
+|--------|----------|
+| `run_llm_assessment.py` | LLM-Assessment mit YAML-Schema |
+| `merge_assessments.py` | Human + LLM zusammenfuehren |
+| `calculate_agreement.py` | Cohen's Kappa berechnen |
+| `analyze_disagreements.py` | Qualitative Analyse |
+
+Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit Human-Assessment)
 
 ### V2-Ergebnisse (50 Papers Test)
 

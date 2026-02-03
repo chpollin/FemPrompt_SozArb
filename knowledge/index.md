@@ -106,26 +106,17 @@ FemPrompt_SozArb/
 
 ## Quick Links
 
-**Assessment:**
-```bash
-python assessment/agent/run_assessment.py   # Agent Assessment
-# Human Assessment: Google Sheets exportieren
-```
+**Assessment:** Scripts in `assessment/` und `assessment-llm/`
+- Agent Assessment: `assessment/agent/run_assessment.py`
+- Human Assessment: Export aus Google Sheets
 
-**Pipeline:**
-```bash
-python pipeline/scripts/acquire_pdfs.py
-python pipeline/scripts/convert_to_markdown.py
-python pipeline/scripts/summarize_documents.py
-python pipeline/scripts/generate_vault.py
-```
+**Pipeline:** Scripts in `pipeline/scripts/`
+- PDF-Akquise, Markdown-Konversion, Summarisierung, Vault-Generierung
 
-**Benchmark:**
-```bash
-python benchmark/scripts/merge_assessments.py
-python benchmark/scripts/calculate_agreement.py
-python benchmark/scripts/analyze_disagreements.py
-```
+**Benchmark:** Scripts in `benchmark/scripts/`
+- Assessments zusammenfuehren, Agreement berechnen, Disagreements analysieren
+
+Detaillierte Dokumentation: [04-technical.md](04-technical.md)
 
 ---
 

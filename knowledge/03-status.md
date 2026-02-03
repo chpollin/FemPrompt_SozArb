@@ -104,26 +104,33 @@ Ermoeglicht synchrones Scrollen im Review-Tool (Toggle mit 'S').
 
 ## Pipeline-Phasen
 
-```
-Phase 1: Assessment & Benchmark
-  Human-Assessment (Google Sheets)     [IN BEARBEITUNG]
-  LLM-Assessment (Claude Haiku 4.5)    [BEREIT]
-  Benchmark-Analyse (Cohen's Kappa)    [WARTET]
+### Phase 1: Assessment & Benchmark
 
-Phase 2: Pipeline-Execution
-  PDF-Download (Zotero)                [✅ ABGESCHLOSSEN] 234 PDFs
-  Markdown-Konversion (Docling)        [✅ ABGESCHLOSSEN] 232/234
-  Validierung (Enhanced)               [✅ ABGESCHLOSSEN] 98.7 Konfidenz
-  Post-Processing (Konservativ)        [✅ ABGESCHLOSSEN] 107k Zeichen bereinigt
-  Human Review Tool                    [✅ ERSTELLT]
-  LLM-Summarisierung                   [NAECHSTER SCHRITT]
-  Vault-Generierung (Obsidian)         [WARTET]
+| Schritt | Status | Details |
+|---------|--------|---------|
+| Human-Assessment (Google Sheets) | 🔄 In Bearbeitung | Susi, Sabine |
+| LLM-Assessment (Claude Haiku 4.5) | ⏸️ Bereit | Wartet auf Human |
+| Benchmark-Analyse (Cohen's Kappa) | ⏸️ Wartet | Nach beiden Assessments |
 
-Phase 3: Paper-Entwicklung
-  Textbausteine                        [WARTET]
-  Ergebnisse einarbeiten               [WARTET]
-  Finalisierung                        [WARTET]
-```
+### Phase 2: Pipeline-Execution
+
+| Schritt | Status | Details |
+|---------|--------|---------|
+| PDF-Download (Zotero) | ✅ Abgeschlossen | 234 PDFs |
+| Markdown-Konversion (Docling) | ✅ Abgeschlossen | 232/234 |
+| Validierung (Enhanced) | ✅ Abgeschlossen | 98.7 Konfidenz |
+| Post-Processing | ✅ Abgeschlossen | 107k Zeichen bereinigt |
+| Human Review Tool | ✅ Erstellt | Browser-Tool verfuegbar |
+| LLM-Summarisierung | ⏳ Naechster Schritt | - |
+| Vault-Generierung (Obsidian) | ⏸️ Wartet | - |
+
+### Phase 3: Paper-Entwicklung
+
+| Schritt | Status |
+|---------|--------|
+| Textbausteine | ⏸️ Wartet |
+| Ergebnisse einarbeiten | ⏸️ Wartet |
+| Finalisierung | ⏸️ Wartet |
 
 ---
 

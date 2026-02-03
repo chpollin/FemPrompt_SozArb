@@ -6,100 +6,71 @@
 
 ## Installation
 
-```bash
-git clone <repo-url>
-cd FemPrompt_SozArb
-pip install -r requirements.txt
-```
-
-### Umgebungsvariablen
-
-```bash
-# Unix/Linux/macOS
-export ANTHROPIC_API_KEY="sk-ant-your-key"
-
-# Windows PowerShell
-$env:ANTHROPIC_API_KEY="sk-ant-your-key"
-```
+1. Repository klonen
+2. `pip install -r requirements.txt` ausfuehren
+3. API-Keys in `.env` Datei setzen:
+   - `ANTHROPIC_API_KEY` fuer Claude API
+   - `ZOTERO_API_KEY` fuer Zotero API (optional)
 
 ---
 
-## Quick Run Examples
+## Pipeline-Schritte
 
 ### 1. Komplette Pipeline (automatisiert)
 
-```bash
-python run_pipeline.py
-
-# Stages:
-# 1. PDF-Akquise (Zotero + APIs)
-# 2. PDF → Markdown (Docling)
-# 3. AI-Summarisierung (Claude Haiku 4.5)
-# 4. Knowledge Graph (Obsidian Vault)
-# 5. Qualitaets-Validierung
-```
+Das Script `run_pipeline.py` fuehrt alle Stages sequenziell aus:
+1. PDF-Akquise (Zotero + APIs)
+2. PDF→Markdown (Docling)
+3. AI-Summarisierung (Claude Haiku 4.5)
+4. Knowledge Graph (Obsidian Vault)
+5. Qualitaets-Validierung
 
 ### 2. LLM-basiertes PRISMA-Assessment
 
-```bash
-python assessment-llm/assess_papers.py \
-  --input assessment-llm/input/papers.xlsx \
-  --output assessment-llm/output/assessment.xlsx
+Das Script `assessment-llm/assess_papers.py` bewertet Papers automatisch.
 
-# ~325 Papers in 24 min, $0.58, 100% Erfolgsrate
-```
+**Input:** Excel mit Paper-Metadaten (Titel, Abstract)
+**Output:** Excel mit Decision (Include/Exclude/Unclear) und Scores
 
-### 3. PDF-Akquise (PRISMA-gefiltert)
+Performance: ~325 Papers in 24 min, $0.58, 100% Erfolgsrate
 
-```bash
-python analysis/getPDF_intelligent.py \
-  --input assessment.xlsx \
-  --output analysis/pdfs/ \
-  --filter-decision Include
-```
+### 3. PDF-Akquise
 
-### 4. Manuelle Stage-Ausfuehrung
+Das Script `analysis/getPDF_intelligent.py` laedt PDFs mit 8 Fallback-Strategien:
+- Zotero Attachments
+- DOI via CrossRef
+- ArXiv, Unpaywall, Semantic Scholar, BASE
+- Publisher-Parser
+- URL-Suche
 
-```bash
-# Stage 1: PDFs akquirieren
-python analysis/getPDF_intelligent.py --input assessment.xlsx --output analysis/pdfs/
+Mit `--filter-decision Include` nur relevante Papers herunterladen.
 
-# Stage 2: Markdown konvertieren
-python analysis/pdf-to-md-converter.py --pdf-dir analysis/pdfs/ --output-dir analysis/markdown_papers/
+### 4. Einzelne Stages ausfuehren
 
-# Stage 2b: Qualitaet validieren (spart API-Kosten!)
-python analysis/validate_markdown_quality.py --input-dir analysis/markdown_papers/
+Alle Pipeline-Scripts befinden sich in `pipeline/scripts/`:
 
-# Stage 3: Summaries generieren
-python analysis/summarize_documents_enhanced.py --input-dir analysis/markdown_papers/ --output-dir analysis/summaries_final/
+| Stage | Script | Beschreibung |
+|-------|--------|--------------|
+| 1 | `download_zotero_pdfs.py` | PDFs akquirieren |
+| 2 | `convert_to_markdown.py` | Markdown konvertieren |
+| 2b | `validate_markdown_enhanced.py` | Qualitaet validieren |
+| 3 | `summarize_documents.py` | Summaries generieren |
+| 4 | `generate_vault.py` | Vault erstellen |
+| 5 | `test_vault_quality.py` | Qualitaet pruefen |
 
-# Stage 4: Vault erstellen
-python analysis/generate_obsidian_vault_improved.py --input-dir analysis/summaries_final/ --output-dir FemPrompt_Vault/
-
-# Stage 5: Qualitaet pruefen
-python analysis/test_vault_quality.py --vault-dir FemPrompt_Vault/
-```
+Parameter siehe `--help` der jeweiligen Scripts.
 
 ---
 
 ## Pipeline-Optionen
 
-```bash
-# Nach Unterbrechung fortsetzen
-python run_pipeline.py --resume
-
-# Nur bestimmte Stages
-python run_pipeline.py --stages acquire_pdfs,summarize
-
-# Stages ueberspringen
-python run_pipeline.py --skip convert_pdfs
-
-# Vorschau (ohne Ausfuehrung)
-python run_pipeline.py --dry-run
-
-# Verbose Output
-python run_pipeline.py -v
-```
+| Option | Beschreibung |
+|--------|--------------|
+| `--resume` | Nach Unterbrechung fortsetzen |
+| `--stages` | Nur bestimmte Stages ausfuehren |
+| `--skip` | Stages ueberspringen |
+| `--dry-run` | Vorschau ohne Ausfuehrung |
+| `-v` | Verbose Output |
 
 ---
 
@@ -122,20 +93,11 @@ Fuer ~200 Include-Papers:
 
 ## Troubleshooting
 
-### HTTP 429 (Rate Limit)
-
-```python
-# In summarize-documents.py:
-time.sleep(5)  # von 2 auf 5 erhoehen
-```
-
-### Fehlende PDFs
-
-Logs pruefen: `acquisition_log.json`, `missing_pdfs.csv`
-
-### Memory Error bei PDF-Konversion
-
-Kleinere Batches verarbeiten (5 PDFs pro Durchlauf).
+| Problem | Loesung |
+|---------|---------|
+| HTTP 429 (Rate Limit) | Delay zwischen API-Calls erhoehen (5 statt 2 Sekunden) |
+| Fehlende PDFs | Logs pruefen: `acquisition_log.json`, `missing_pdfs.csv` |
+| Memory Error | Kleinere Batches verarbeiten (5 PDFs pro Durchlauf) |
 
 ---
 
@@ -147,4 +109,4 @@ Kleinere Batches verarbeiten (5 PDFs pro Durchlauf).
 
 ---
 
-*Version: 4.0 (2026-02-02)*
+*Version: 5.0 (2026-02-03)*

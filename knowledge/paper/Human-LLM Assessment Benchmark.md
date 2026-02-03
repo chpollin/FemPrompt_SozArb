@@ -105,28 +105,13 @@ Zusammengeführter Datensatz für Vergleich:
 
 ## Repository-Struktur
 
-```
-FemPrompt_SozArb/
-├── benchmark/
-│   ├── README.md                    # Diese Dokumentation
-│   ├── config/
-│   │   └── categories.yaml          # Kategorie-Definitionen
-│   ├── data/
-│   │   ├── human_assessment.csv     # Export Google Sheets
-│   │   ├── llm_assessment.csv       # LLM-Output
-│   │   └── merged_comparison.csv    # Zusammengeführt
-│   ├── prompts/
-│   │   └── assessment_prompt.md     # LLM-Assessment-Prompt
-│   ├── scripts/
-│   │   ├── run_llm_assessment.py    # LLM-Assessment ausführen
-│   │   ├── merge_assessments.py     # Daten zusammenführen
-│   │   ├── calculate_agreement.py   # Metriken berechnen
-│   │   └── analyze_disagreements.py # Qualitative Analyse
-│   └── results/
-│       ├── agreement_metrics.json   # Quantitative Ergebnisse
-│       ├── disagreement_cases.csv   # Divergenz-Fälle
-│       └── figures/                 # Visualisierungen
-```
+| Verzeichnis | Inhalt |
+|-------------|--------|
+| `benchmark/config/` | Kategorie-Definitionen (categories.yaml) |
+| `benchmark/data/` | Assessment-Daten (human, llm, merged) |
+| `benchmark/prompts/` | LLM-Assessment-Prompt |
+| `benchmark/scripts/` | Python-Scripts (run, merge, calculate, analyze) |
+| `benchmark/results/` | Ergebnisse (metrics, disagreements, figures) |
 
 ## Workflow
 
@@ -138,39 +123,19 @@ FemPrompt_SozArb/
 
 ### Phase 2: LLM-Assessment (nach Human-Abschluss)
 
-1. Kategorie-Definitionen finalisieren → `categories.yaml`
+1. Kategorie-Definitionen finalisieren in `categories.yaml`
 2. Assessment-Prompt generieren aus YAML
-3. LLM-Assessment ausführen:
-   ```bash
-   python benchmark/scripts/run_llm_assessment.py \
-     --input assessment/femprompt_papers.csv \
-     --config benchmark/config/categories.yaml \
-     --output benchmark/data/llm_assessment.csv
-   ```
+3. LLM-Assessment ausfuehren mit `run_llm_assessment.py`
+   - Input: Paper-CSV, Config-YAML
+   - Output: LLM-Assessment-CSV
 
 ### Phase 3: Vergleichsanalyse
 
-1. Daten zusammenführen:
-   ```bash
-   python benchmark/scripts/merge_assessments.py \
-     --human benchmark/data/human_assessment.csv \
-     --llm benchmark/data/llm_assessment.csv \
-     --output benchmark/data/merged_comparison.csv
-   ```
+1. **Daten zusammenfuehren:** `merge_assessments.py` kombiniert Human- und LLM-Assessment
+2. **Metriken berechnen:** `calculate_agreement.py` berechnet Cohen's Kappa und Agreement-Statistiken
+3. **Disagreements analysieren:** `analyze_disagreements.py` identifiziert Divergenz-Faelle
 
-2. Metriken berechnen:
-   ```bash
-   python benchmark/scripts/calculate_agreement.py \
-     --input benchmark/data/merged_comparison.csv \
-     --output benchmark/results/agreement_metrics.json
-   ```
-
-3. Disagreements analysieren:
-   ```bash
-   python benchmark/scripts/analyze_disagreements.py \
-     --input benchmark/data/merged_comparison.csv \
-     --output benchmark/results/disagreement_cases.csv
-   ```
+Alle Scripts in `benchmark/scripts/`, Parameter via `--help`.
 
 ## Metriken
 
@@ -185,26 +150,12 @@ FemPrompt_SozArb/
 
 ### Erwartete Outputs
 
-**agreement_metrics.json:**
-
-```json
-{
-  "n_papers": 303,
-  "overall_agreement": 0.78,
-  "cohens_kappa": 0.65,
-  "by_category": {
-    "AI_Literacies": { "n": 303, "agreement": 0.85 },
-    "Feministisch": { "n": 303, "agreement": 0.62 },
-    "Soziale_Arbeit": { "n": 303, "agreement": 0.71 }
-  },
-  "confusion_matrix": {
-    "human_include_llm_include": 156,
-    "human_include_llm_exclude": 23,
-    "human_exclude_llm_include": 41,
-    "human_exclude_llm_exclude": 83
-  }
-}
-```
+Die Datei `agreement_metrics.json` enthaelt:
+- **n_papers**: Anzahl analysierter Papers (z.B. 303)
+- **overall_agreement**: Prozent Uebereinstimmung (z.B. 0.78)
+- **cohens_kappa**: Zufallskorrigierte Uebereinstimmung (z.B. 0.65)
+- **by_category**: Agreement pro Kategorie (AI_Literacies, Feministisch, Soziale_Arbeit, etc.)
+- **confusion_matrix**: 2x2-Matrix Human x LLM (include/exclude Kombinationen)
 
 ### Qualitative Analyse
 
@@ -229,109 +180,40 @@ Für das Paper: 5-10 Disagreement-Fälle mit Interpretation
 | Include-Kriterien (wie viele Kategorien?) | Offen | Team |
 | LLM-Modell (Claude Haiku oder andere?) | Vorschlag: Haiku 4.5 | Christopher |
 
-## categories.yaml (Entwurf)
+## Kategorie-Definitionen (Entwurf)
 
-```yaml
-# FemPrompt Assessment Categories
-# Version: 1.0 (Draft - pending review with Susi/Sabine)
+Die vollstaendige Konfiguration befindet sich in `benchmark/config/categories.yaml`.
 
-metadata:
-  project: FemPrompt Literature Review
-  last_updated: 2026-02-02
-  status: draft
+### Technik-Kategorien (4)
 
-categories:
-  - name: AI_Literacies
-    definition: >
-      Das Paper behandelt Kompetenzen, Fähigkeiten oder Wissen im Umgang
-      mit KI-Systemen. Umfasst kritische Reflexion, technisches Verständnis
-      oder praktische Anwendungskompetenz.
-    type: binary
-    examples_positive:
-      - "Framework für KI-Kompetenzentwicklung"
-      - "Curriculum für AI Literacy in Schulen"
-    examples_negative:
-      - "Rein technische KI-Implementierung ohne Bildungsbezug"
+| Kategorie | Definition |
+|-----------|------------|
+| AI_Literacies | Kompetenzen im Umgang mit KI-Systemen, kritische Reflexion, Anwendungskompetenz |
+| Generative_KI | Fokus auf LLMs, Bildgeneratoren, generative Systeme |
+| Prompting | Prompt-Engineering, Prompt-Strategien, Eingabegestaltung |
+| KI_Sonstige | Klassisches ML, Robotik, Computer Vision (nicht-generativ) |
 
-  - name: Generative_KI
-    definition: >
-      Fokus auf generative KI-Modelle wie Large Language Models,
-      Bildgeneratoren oder andere generative Systeme.
-    type: binary
+### Sozial-Kategorien (6)
 
-  - name: Prompting
-    definition: >
-      Behandelt Prompt-Engineering, Prompt-Strategien oder die Gestaltung
-      von Eingaben für KI-Systeme.
-    type: binary
+| Kategorie | Definition |
+|-----------|------------|
+| Soziale_Arbeit | Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung |
+| Bias_Ungleichheit | Diskriminierung, algorithmischer Bias, strukturelle Benachteiligung |
+| Gender | Geschlechterperspektive, Gender-Bias |
+| Diversitaet | Diversitaet, Inklusion, Repraesentation |
+| Feministisch | Feministische Theorie, Methodik, Perspektive |
+| Fairness | Algorithmische Fairness, faire ML-Systeme |
 
-  - name: KI_Sonstige
-    definition: >
-      Andere KI-Themen, die nicht in die obigen Kategorien fallen
-      (klassisches ML, Robotik, Computer Vision ohne generativen Fokus).
-    type: binary
+### Inklusions-Kriterien
 
-  - name: Soziale_Arbeit
-    definition: >
-      Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung
-      oder den Zielgruppen Sozialer Arbeit.
-    type: binary
+Paper wird eingeschlossen, wenn mindestens zwei Kriterien erfuellt sind UND Relevanz fuer die Forschungsfrage besteht:
+1. AI_Literacies ODER Generative_KI ODER Prompting
+2. Feministisch ODER Gender ODER Bias_Ungleichheit
+3. Soziale_Arbeit
 
-  - name: Bias_Ungleichheit
-    definition: >
-      Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit
-      oder strukturelle Benachteiligung im KI-Kontext.
-    type: binary
+### Exclusion Reasons
 
-  - name: Gender
-    definition: >
-      Expliziter Gender-Fokus, Geschlechterperspektive oder
-      Analyse von Gender-Bias.
-    type: binary
-
-  - name: Diversitaet
-    definition: >
-      Thematisiert Diversität, Inklusion oder Repräsentation
-      verschiedener Gruppen.
-    type: binary
-
-  - name: Feministisch
-    definition: >
-      Verwendet explizit feministische Theorie, Methodik oder Perspektive.
-      Bezugnahme auf feministische Autor:innen oder Konzepte.
-    type: binary
-    examples_positive:
-      - "Intersektionale Analyse nach Crenshaw"
-      - "Kritik aus feministischer Technikforschung"
-    examples_negative:
-      - "Gender erwähnt, aber ohne feministische Rahmung"
-
-  - name: Fairness
-    definition: >
-      Thematisiert algorithmische Fairness, faire ML-Systeme
-      oder Fairness-Metriken.
-    type: binary
-
-decision:
-  field: Decision
-  options:
-    - Include
-    - Exclude
-    - Unclear
-  include_criteria: >
-    Paper wird eingeschlossen, wenn es mindestens zwei der folgenden
-    Kriterien erfüllt UND für die Forschungsfrage relevant ist:
-    (1) AI_Literacies ODER Generative_KI ODER Prompting
-    (2) Feministisch ODER Gender ODER Bias_Ungleichheit
-    (3) Soziale_Arbeit
-
-exclusion_reasons:
-  - Duplicate
-  - Off-topic
-  - No_full_text
-  - Language_not_accessible
-  - Other
-```
+Duplicate, Off-topic, No_full_text, Language_not_accessible, Other
 
 ## Verbindung zu anderen Dokumenten
 
