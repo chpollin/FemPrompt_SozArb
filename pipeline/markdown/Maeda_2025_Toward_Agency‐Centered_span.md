@@ -1,10 +1,11 @@
 ---
 source_file: Maeda_2025_Toward_Agency‐Centered_span.pdf
-conversion_date: 2026-02-03T09:10:10.880715
+conversion_date: 2026-02-03T18:41:40.677045
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Toward Agency-Centered AI Literacy: A Scoping Review
 
 Maeda, Takuya Anderson, Hillary Quan-Haase, Anabel Willis, Katharine Gignac, Selena
@@ -29,6 +30,10 @@ We conducted a scoping review to identify gaps in existing AI literacy studies. 
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 algorithmic literacy for non-specialist user groups. We then performed a thematic analysis (Braun &amp; Clarke, 2007) and developed a coding framework with six primary themes to classify the definitions of AI, algorithms, and literacy; methods; purposes and goals of the given studies; social contexts; the theoretical foundations; and findings/recommendations. The researchers established intercoder reliability by independently coding 15 papers, achieving more than 90% agreement after two rounds.
 
 ## FINDINGS
@@ -42,6 +47,10 @@ This study suggests that AI literacy is often conceptualized and measured in nar
 ## GENERATIVE AI USE
 
 We confirm that we did not use generative AI tools/services to author this submission.
+
+
+<!-- PAGE 3 -->
+
 
 ## AUTHOR ATTRIBUTION
 

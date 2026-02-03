@@ -1,10 +1,11 @@
 ---
 source_file: Small_2023_Generative_AI_and_opportunities_for_feminist.pdf
-conversion_date: 2026-02-03T09:24:38.031261
+conversion_date: 2026-02-03T18:55:49.115457
 converter: docling
-quality_score: 95
+quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Feminist Pedagogy
 
 Volume 3 Issue 5 Back to School
@@ -31,11 +32,19 @@ This Critical Commentary is brought to you for free and open access by the Journ
 
 Article 10
 
+
+<!-- PAGE 2 -->
+
+
 ## Generative AI and Opportunities for Feminist Classroom Assignments
 
 ## Cover Page Footnote
 
 The author would like to thank the anonymous reviewers for their helpful comments and Dr. Christopher Keyes for regularly discussing AI's development with me.
+
+
+<!-- PAGE 3 -->
+
 
 ## Generative AI and Opportunities for Feminist Classroom Assignments
 
@@ -51,6 +60,10 @@ ChatGPT is not devoid of these issues: it pulls from a multitude of web sources 
 
 For example, an economics instructor may develop an assignment that asks students to use ChatGPT to defines a term or measurement that has competing definitions within the field. For instance, feminist economists, Marxists, and historians of economic thought have indicated that the terms 'work,' 'productivity,' and 'economics' are not straightforward and often biased toward mainstream economic thinking (Backhouse &amp; Medema, 2009, Mohun, 2002, Nelson, 1995). When one asks ChatGPT how economists define 'work,' it replies with a paragraph or two explaining the term (See Figure 1). Students could enter such a prompt, or experiment with rephrased prompts as in Figure 2, then critically examine ChatGPT's generated paragraphs by (1) working to provide appropriate citations, then (2) reflecting on the positionality of the scholars which they cite. More specifically, instructors might challenge students to think about why an
 
+
+<!-- PAGE 4 -->
+
+
 individual economist or group of economists researched this topic: are their social locations relevant? Who else has written on these works and how are their perspectives different? Why might one definition be favored in the mainstream and who benefits from that definition's privileged status?
 
 Relatedly, if such an assignment also prompts instructors to think more deliberately about whose ideas are being presented in class, it may challenge us to introduce plurality and diversify our syllabi (Harris et al., 2020). Ultimately, encouraging students to critically cite ChatGPT's work has the potential to demonstrate the program's imbedded biases and nip amplification of such biases in the bud. Students will use ChatGPT, so it is up to educators to encourage them to use it critically: highlighting data and algorithmic biases within AI is one step toward minimizing reproduction of bias knowledge hierarchies.
@@ -64,6 +77,10 @@ In my time as a student and educator in economics, I have rarely seen assignment
 Instructors might also develop an assignment encouraging learning from community members. For instance, an economics assignment could ask a student to interview a friend, family member, or coworker on their experiences in a specific occupation or industry, then evaluate responses in light of course content. Instructors could encourage the use of ChatGPT to help students develop background knowledge and still make space for hands-on learning community connection (Manicom, 1992). Interviewing may improve learning outcomes (Roulston, 2012), and feminist economists argue that qualitative methods are undervalued in economics (Tejani, 2019), so exposing students to this way of knowing could be transformative for the discipline.
 
 Asking economics students to incorporate lived experiences alongside ChatGPT might challenge them to consider how market institutions have shaped their preferences (Bowles, 1998)
+
+
+<!-- PAGE 5 -->
+
 
 and to consider their role in economic systems that produce inequities (Darity, 2022) in ways that ChatGPT alone cannot do. Generative AI is not able to speak to students' (or students' loved ones) perspectives and experiences. For this reason, privileging individual and community voices as ways of knowing may become central to education the wake of generative AI as it is central to feminist pedagogy (Webb et al., 2002) and provides opportunities for instructors to highlight the clear limits of generative AI.
 
@@ -83,6 +100,10 @@ Given the socioeconomic shifts that will likely occur from generative AI (Felten
 - Bowles, S. (1998). Endogenous preferences: The cultural consequences of markets and other economic institutions. Journal of Economic Literature , 36 (1), 75-111. https://www.jstor.org/stable/2564952.
 - Crawley, S. L., Curry, W. H., Dumois-Sands, J., Tanner, C., &amp; Wyker, C. (2008). Full-contact pedagogy: Lecturing with questions and student-centered assignments as methods
 
+
+<!-- PAGE 6 -->
+
+
 - for inciting self-reflexivity for faculty and students. Feminist Teacher , 19 (1), 13-30. http://www.jstor.org/stable/40546071 .
 - Darity Jr, W. A. (2022). Position and possessions: Stratification economics and intergroup inequality. Journal of Economic Literature , 60 (2), 400-426. https://DOI.org/10.1257/jel.20211690
 - D'ignazio, C., &amp; Klein, L. F. (2020). Data Feminism . MIT press. ISBN: 9780262547185
@@ -97,10 +118,18 @@ Given the socioeconomic shifts that will likely occur from generative AI (Felten
 - OpenAI. (2023). ChatGPT (Mar 14 version) [Large language model]. https://chat.openai.com/chat
 - Pearse, R., Hitchcock, J. N., &amp; Keane, H. (2019). Gender, inter/disciplinarity and marginality in the social sciences and humanities: A comparison of six disciplines. Women's Studies International Forum , 72 , 109-126. https://doi.org/10.1016/j.wsif.2018.05.007
 
+
+<!-- PAGE 7 -->
+
+
 - Prabhakaran, V., Mitchell, M., Gebru, T., &amp; Gabriel, I. (2022). A human rights-based approach to responsible AI. arXiv preprint. https://doi.org/10.48550/arXiv.2210.02667
 - Roulston, K. (2012). The Pedagogy of Interviewing. The SAGE Handbook of Interview Research: The Complexity of the Craft (61-74). Edited by Jaber F. Gubrium, James A. Holstein, Amir B. Marvasti &amp; Karyn D. McKinney. Sage. https://doi.org/10.4135/9781452218403
 - Tejani, S. (2019). What's feminist about feminist economics?. Journal of Economic Methodology , 26 (2), 99-117. https://doi.org/10.1080/1350178X.2018.1556799
 - Webb, L. M., Allen, M. W., &amp; Walker, K. L. (2002). Feminist pedagogy: Identifying basic principles. Academic Exchange , 6 (1), 67-72.
+
+
+<!-- PAGE 8 -->
+
 
 Figure 1. Screen Shot of ChatGPT Responding to Prompt About Economists' Definition of 'Work'
 
@@ -110,11 +139,19 @@ Note: Prompt entered in June 2023 using the open access version of OpenAI's Chat
 
 Source: OpenAI (2023).
 
+
+<!-- PAGE 9 -->
+
+
 Figure 2. Screen Shots of ChatGPT Responding to Varied Prompts About the Definition of 'Work'
 
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 Note: Prompt entered in June 2023 using the open access version of OpenAI's ChatGPT May 24 Version.
 

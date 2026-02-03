@@ -1,10 +1,11 @@
 ---
 source_file: Santos_2025_How_large_language_models_judge_cooperation.pdf
-conversion_date: 2026-02-03T09:20:01.397920
+conversion_date: 2026-02-03T18:51:18.334531
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## How large language models judge and influence human cooperation
 
 Alexandre S. Pires 1* , Laurens Samson 1,2 , Sennay Ghebreab 1 , Fernando P. Santos 1*
@@ -22,6 +23,10 @@ Humans increasingly rely on large language models (LLMs) to support decisions in
 Large language models (LLMs) proliferated throughout society at a remarkable speed. These tools can offer significant benefits, improving productivity, access to information, support for routine tasks, and complementing traditional education [1, 2]. At the same time, LLMs suggest renewed ethical and social challenges [3, 4]. Humans who interact with LLMs reveal different behavioural patterns when compared to facing other people [5-9]. LLMs themselves are susceptible to biases [10], with a vast literature focusing on cultural [11], gender [12], and identity [13] biases. Such biases manifest in the way LLMs judge behaviours, potentially shaping societal norms and reinforcing existing inequalities and cultural stereotypes [14]. There is indication that these systems can influence our political opinions [15, 16], moral judgements [17] and social norms [18]. It is fundamental to understand how such repercussions on human judgements can possibly affect our very own social fabric , particularly our capacity to cooperate with each other on a large scale [19].
 
 Human cooperation is a fundamental aspect of well-functioning societies, and our ability to cooperate is known to also depend on shared norms, interaction observability and reputation spreading
+
+
+<!-- PAGE 2 -->
+
 
 [20, 21]. We assign reputations according to predefined social norms, and they play a central role in deciding with whom to cooperate [22]. This mechanism is known as indirect reciprocity ( IR ) [23-25]. While norms and indirect reciprocity have been extensively studied in human societies [26], their role in human-AI interactions remains less understood [27]. Most importantly, as LLMs can shape beliefs and moral judgements, their influence in IR and human prosociality - and eventually human-AI cooperation [28, 29] - remains unclear.
 
@@ -43,6 +48,10 @@ Fig. 1 An overview of our framework to extract and test LLM-based cooperation no
 
 We measure the social norms of multiple LLMs, following the formalism typically used in indirect reciprocity models [30-32, 36, 37]. We consider 21 LLMs with varying levels of accessibility (openand closed-weights models), parameter sizes, and different price ranges, reflecting both models used by everyday consumers and enterprises (see Methods). To assess these social norms, we generate a dataset of 43200 prompts that ask the model to assign a reputation (good or bad) to an individual (donor), after observing the donor either help or not help another individual (receiver). Importantly, the model is also informed about its own prior opinion about the receiver's reputation, allowing (but not forcing) it to utilize prior reputational information.
 
+
+<!-- PAGE 3 -->
+
+
 Fig. 2 Social norms extracted from different LLM models. Each point corresponds to the average social norm extracted from an LLM, located in a space where axes represents the probability of assigning a good reputation to the donor after cooperation (x-axis) or defection (y-axis). Ellipses indicate one standard deviation of the calculated norm, indicating uncertainty. Models of the same family have identical colours and are connected in order of version and parameter size. A shows the result of judging interactions against opponents with good reputations. The clustered points in the bottom-right area of the plot reveal that most models agree that, when facing good recipients, cooperating is good and defecting is bad. B When judging interactions with bad recipients, models disagree: Several models assign a good reputation to cooperators, but differ in their behaviour towards defectors. Earlier models tend to consider primarily the action done by the donor, while recent model versions consider good any action against a bad individual, and therefore also consider the donor's reputation. This panel also represents the location of norms traditionally studied in indirect reciprocity [23, 30, 31]: Image-score [32], Shunning [33], Simple Standing [34] and Stern-judging [35]. C : Uncertainty region of models that frequently assign a good reputation when observing cooperation with bad individuals ( d BC &gt; 0 . 95, shaded gray).
 
 <!-- image -->
@@ -52,6 +61,10 @@ In Figure 2, we present the average assigned reputation by each LLM when asked t
 When assessing interactions with bad individuals, we observe a large variation in judgements, also echoing the theoretical works indicating that ranking the most cooperative social norms depends on subtle details such as reputation observability and behavioural errors [38, 39]. Most LLMs tested assign a good reputation to those who cooperate with bad recipients, but vary in how they judge defections. This corresponds to a mixture of two social norms known to sustain cooperation [32, 40]: Image Score ( IS , cooperating is good, defection is bad) and Simple Standing ( SS , cooperating is always good, defecting against bad individuals is also good). Notably, IS is a low-complexity norm, as it considers solely the donor's action and not the reputation assigned to the recipient [30]. There are also a variety of models that present different norms, such as Gemma 2 27B IT [41] and Llama 3.1 8B [42], which use a mixture of IS and a different social norm known as Shunning ( SH ), where only cooperating with good people is considered good. SH is, importantly, a strict norm as it labels any individual interacting with a bad recipient as bad, which can lead to a spread of bad reputations [33, 40, 43]. On the other hand, Llama 3.3 70B [44] is the only model tested that employs a norm close to Stern-Judging ( SJ ), where cooperating with good individuals is good, but agents should defect when facing bad individuals, motivating punishments [35]. Finally, Gemini 1.5-Pro [45] and Grok 2 [46] both feature norms with no consistent rule for being considered good or bad when facing bad individuals.
 
 With some exceptions, most LLM families we tested tend to move from IS towards SS as versions and parameter size increases, indicating a shift towards a higher complexity social norm which makes use of more context, specifically assigned reputations. Moreover, different versions of the same family can have vastly distinct social norms, such as Claude 3.5 Haiku [47] and Claude 3.7 Sonnet [48], despite their similar ethical goals [49]. The Llama family [50] presents an interesting example of version differences, as the norms of each model differ significantly. First, Llama 2 7B assigns a good reputation to donors almost independently of the recipient's reputation, making it the simplest social norm. Its larger version, Llama 2 13B, instead uses a SS-IS mixture, while, as previously stated, Llama 3.1 8B and Llama 3.3 70B present entirely different norms. The only other family of models that evolves away from SS is Gemma, where the Gemma 2 9B model uses a SS-IS mixture, yet the
+
+
+<!-- PAGE 4 -->
+
 
 larger 27-billion-parameter model adopts a SH-IS mixture, a similar trajectory to Llama 2 13B and Llama 3.1 8B.
 
@@ -65,11 +78,19 @@ Fig. 3 Cooperation index, I , across the same space of social norms as Figure 2,
 
 <!-- image -->
 
+
+<!-- PAGE 5 -->
+
+
 In Figure 3, we present the prevalence of cooperation (cooperation index, I , see Methods) across the same norm space introduced in Figure 2. We observe that the space around SJ presents the highest level of cooperation ( I ≃ 0 . 96), with cooperation decaying approaching SS ( I ≃ 0 . 75), more so around IS ( I ≃ 0 . 51), and becoming substantially lower closer to SH ( I ≃ 0 . 24). By overlaying the social norms extracted from LLMs on this cooperation map, we observe that most models adopt the SS-IS edge leading to I ∈ [0 . 5 , 0 . 75]. We also find that most of the benchmarked LLM families are evolving towards SS (top-right corner), and the capacity to promote cooperation through the social norm is improving in relation to earlier models. Interestingly, of all tested models, only Llama 3.3 70B IT exhibits a norm capable of maximizing cooperation under this scenario. Furthermore, the models with unclear social norms, such as Grok 2 and Gemini 1.5 Pro, are still capable of promoting high levels of cooperation.
 
 Figure 3 provides an overview of the norms extracted and their connection with cooperation in a setting where reputations are assumed to perfectly spread in the population or be stored in a centralized reputation system. The introduction of LLMs is, however, also likely to impact how information spreads given within- and between-model variation and the existence of decentralized systems (e.g., fine-tuned and applied locally). This variation might lead to disagreements on reputations about the same individual, a phenomenon that is well-known to affect cooperation under indirect reciprocity [39, 52], especially in settings where cooperation is highly costly. In addition, Figure 3 considers solely the norm used by LLMs facing bad individuals. To this end, in Figure 4, we study cooperation under a selection of LLM norms while varying 1) the benefit-cost ratios of cooperation ( b/c ) and 2) the extent to which reputations perfectly spread in the population and are agreed by all; under public reputations, individuals are all assumed to share the same opinion about the same individual; under private reputations, individuals hold personal views about each other and might disagree about their opinion of others. We also show how different LLMs lead to different uncertainty regions regarding cooperation. Under public reputations, we again observe that Llama 3.3 70B IT is capable of maximizing cooperation. Despite GPT-4o being apparently close to Simple Standing , it presents a low level of cooperation as it sometimes assigns a good reputation to donors who defect against good individuals. Notably, Grok 2, which does not follow any of the well-defined social norms, still achieves high levels of cooperation. Importantly, models such as Claude 3.5 Haiku present fairly invariable norms that result in consistent effects in cooperation, while models like GPT-4o and Grok 2 present larger uncertainty regions, highlighting the importance of consistent norms.
 
 We also observe how cooperation is dependent on reputation observability, with the best performing norm under public reputations, that of Llama 3.3 70B, presenting the worst level of cooperation under private reputations. By contrast, norms close to Image Score , common in earlier and smaller models such as Claude 3.5 Haiku, instead show a moderate level of cooperation, but a high resilience to the absence of public and centralized reputation systems.
+
+
+<!-- PAGE 6 -->
+
 
 8
 
@@ -87,6 +108,10 @@ In addition to the impact on the norm, the sensitivity of each model to addition
 
 We conclude that, depending on the model, the interventions tested are effective in shifting the social norm used by an LLM. Notably, motivation and signalling are consistent across most models, and are particularly impactful in incentivising IS , which disregards reputational information about
 
+
+<!-- PAGE 7 -->
+
+
 the receiver and is most successful at promoting cooperation in private reputation environments (see Figure 4).
 
 Fig. 5 The impact of prompt-based interventions in steering LLM-based cooperation norms. The obtained norms are represented in a similar space as Figure 2B. Each point corresponds to the extracted social norm of an LLM, without ( default ) and with additional instructions to guide their reasoning. We see that goal-oriented interventions lead to behaviours that generalize across models: Motivation consistently brings models towards Image Score (IS) , while signalling reduces the assigned reputation of defectors. In contrast, non-objective prompts lead to model-dependent outcomes: Empathising shifts Phi-4 towards Simple Standing (SS) , yet leads Llama 3.1 8B IT to Shunning (SH) , and universalisation influences Gemini 1.5 Pro towards SH , yet Qwen 2.57B IT approaches IS .
@@ -101,6 +126,10 @@ To this end, we have developed a framework and prompt dataset to assess the soci
 
 Using an evolutionary game-theoretical model where a population of individuals repeatedly play a donation game, and attribute reputations using the social norm of a given LLM, we further demonstrate that LLM-inferred norms can be suboptimal at sustaining cooperation, contingent on the level of information sharing in the population. Under public reputations, a common assumption where reputations are centralized and common knowledge, more complex norms closer to Stern-Judging ( SJ , cooperating with good individuals is good, but one should defect against bad individuals) [35] can maximize cooperation by punishing bad individuals. Despite this, of the models tested, only Llama 3.3 70B IT utilized such a norm. Nevertheless, as most families of models are moving towards
 
+
+<!-- PAGE 8 -->
+
+
 Simple Standing , the norms used by LLMs are improving in their capacity to sustain cooperation relative to earlier models. On the other hand, when reputations are private and there is no mechanism for widespread agreement, only norms close to Image Score can maintain moderate levels of cooperation. In this scenario, although less common, earlier models fare better in sustaining cooperation, as they disregard prior receivers' reputations and thus minimize disagreements.
 
 Finally, we examined whether the social norms expressed by LLMs can be guided through prompt interventions. We tested four types of additional instructions: encouraging the model to consider what would happen if all agents judged similarly to it ( universalisation ); prompting it to adopt the perspective of the donor ( empathising ); instructing it to assign a reputation that clearly promotes cooperation and discourages defection ( signalling ); and providing the goal of maximizing cooperation ( motivation ). Among these, signalling and motivation produced the most consistent effects across models, with motivation shifting norms toward Image Score and signalling increasing judgements of defectors as bad. This consistency may be due to the explicit goal present in the prompt, helping models organize their reasoning more coherently, akin to chain-of-thought prompting [60, 61]. In contrast, the empathising and universalisation interventions yielded model-dependent outcomes.
@@ -112,6 +141,10 @@ These results highlight an important concern: LLMs are not explicitly designed w
 The stylized model we develop presents limitations due to our simplifying assumptions. First, we assume that humans will be influenced by the reputation assignment of the LLMs. Prior work suggests that LLMs can, in fact, influence human judgements [15]. It remains however under-explored whether these results extend to individuals assessing social dilemmas of cooperation. Furthermore, we considered scenarios where only one LLM is present and equally accessible to everyone. A deeper analysis could consider inequalities in LLM access and scenarios with multiple distinct LLMs. These limitations suggest future work on theoretical modelling (e.g., allowing for different segments of the population to be influenced by different LLM versions) and experimental works (e.g., testing the extent to which LLM advice on judging cooperative behaviour is followed by users).
 
 Despite these challenges, our work offers means to combine recent LLM tools and prior literature on human cooperation through reciprocity. This answers a call for better integration between (recent) LLM research and (traditional) multi-agent systems literature [68]. Overall, by integrating LLMextracted behaviours and evolutionary dynamics modelling, our framework provides an example to infer long-term behavioural dynamics in societies where LLM-based advice becomes prevalent. This allows us to understand not only current human and AI decisions, but also their impact on
+
+
+<!-- PAGE 9 -->
+
 
 future behaviours and resulting data (an urgent topic to address given effects such as human-AI feedback loops [69] and data poisoning [70]). Crucially, we already show that subtle differences in LLM model versions and prompting leads to variation in the social norms extracted, and such differences significantly affect long-term cooperation dynamics.
 
@@ -134,6 +167,10 @@ At each game, the action picked by the donor is dependent on its strategy. We co
 The assignment of reputations is made individually by each agent, following a social norm common to the entire population. In particular, we consider second-order social norms [30], where the assigned reputation of the donor is dependent on its action and the reputation of the receiver, in the view of the observer. We formalize a social norm as d = ( d G,C , d G,D , d B,C , d B,D ), d ∈ [0 , 1] 4 , where each entry corresponds to the probability of assigning a good reputation given the donor's reputation and the receiver's action. Furthermore, we include assessment errors, where agents incorrectly remember an assigned reputation with a probability e a [74]. Of all the possible social norms, we focus on four key norms known to sustain cooperation [38, 40]: Image Score (IS) [32], d = (1 , 0 , 1 , 0), where cooperation is good and defection is bad; Simple Standing (SS) , d = (1 , 0 , 1 , 1), where only defection against good agents is bad, and any other action is good; Shunning (SH) , d = (1 , 0 , 0 , 0), where it is only good to cooperate with good agents; and Stern-Judging (SJ) [35], d = (1 , 0 , 0 , 1), where it is only good to cooperate with good agents and defect with bad agents. Importantly, norm formulation also accounts for continuous values, d ∈ [0 , 1] 4 , a technical detail that extends current indirect reciprocity models and that will allow us to directly test average norms extracted from LLMs.
 
 Given a social norm d , the probability of an observer effectively assigning a good reputation to a donor who will use action Y ∈ { C, D } against a receiver with reputation X ∈ { G,B } , considering errors, is given by P X,Y [36]:
+
+
+<!-- PAGE 10 -->
+
 
 ## LLM norm adoption
 
@@ -160,6 +197,10 @@ where r ( t ) = ∑ s ∈ S ( n s /Z ) · r s ( t ) is the average reputation in
 In order to study the influence of LLMs under different reputation sharing settings, we vary the presence of gossip. We consider T rounds of gossip, where at each round a randomly picked individual adopts the reputations assigned by another individual [75]. Considering the size of the population, this is normalized as the gossip duration, t = T/Z . At t = 0, reputations are private and disagreements are maximized, as no gossip occurs, and at t = ∞ , reputations are public, and no disagreements are present. After gossip, the probability of agreements and disagreements in the assigned reputations of a focal individual are given by
 
 <!-- formula-not-decoded -->
+
+
+<!-- PAGE 11 -->
+
 
 ## Strategy dynamics
 
@@ -199,6 +240,10 @@ which measures cooperation at each strategy state, weighted by its frequency in 
 
 We next detail the assessment process of the social norm of an LLM. First, we outline the construction of the prompt dataset, followed by the method to process responses and aggregate them to define a social norm. The models we test include: GPT-3.5-Turbo and GPT-4o [78], Qwen 2.5 7B IT and Qwen 2.5 14B IT [79], Gemma 2 9B IT and Gemma 2 27B IT [41], Gemini 1.5 Pro [45] and Gemini 2.0 Flash [80], Mistral Small [81] and Mistral Large [63], Phi-3.5 Mini IT [82] and Phi-4 [83], Llama
 
+
+<!-- PAGE 12 -->
+
+
 2 7B and Llama 2 13B [50], Llama 3.1 8B IT [42] and Llama 3.3 70B IT [44], Claude 3.5 Haiku [47] and Claude 3.7 Sonnet [47], Grok 2 [46], Deepseek V3 [84] and Deepseek R1 [85], where 'B' reflects the parameter size of the model, in billions, and IT refers to an instruction-tuned version of the model. To ensure reproducibility, all models are queried using a temperature of zero. The details of each model are available in the supplementary material.
 
 ## Prompt dataset
@@ -223,9 +268,17 @@ For each dataset D ∈ T , a social norm is composed by evaluating the average v
 
 <!-- formula-not-decoded -->
 
+
+<!-- PAGE 13 -->
+
+
 We present our primary results for d L = d D ′ . However, by defining a single social norm, we omit potential uncertainty. To this end, we model the norm uncertainty using a multivariate Gaussian distribution centred at d D ′ . The covariance matrix for this distribution is estimated as the weighted covariance of d D , D ∈ T \ {D ′ } weighted by |D| . To assess the impact of this uncertainty on cooperation, we evaluate the cooperation index at the points lying one standard deviation away from the mean ( d D ′ ) along each principal axis of this uncertainty distribution, reporting the maximum and minimum cooperation indices at these points.
 
 Acknowledgements. We would like to thank the ELLIS Unit Amsterdam for funding. F.P.S acknowledges funding by the European Union (ERC, RE-LINK, 101116987).
+
+
+<!-- PAGE 14 -->
+
 
 ## Supplementary Material
 
@@ -276,6 +329,10 @@ Overview of the selected LLMs with model identifiers, providers, parameter count
 Our prompt dataset is constructed using a set of templates, which are then populated with all possible combinations of a set of elements, resulting in 43200 unique prompts. Before this replacement, additional instructions are appended for the case of guiding norms (see main paper), as well as instructions for the answer format. We next provide a full overview the dataset construction steps.
 
 Each prompt in our dataset is formed by one of five templates, which place the LLM in the role of observing an interaction, using the same structure, yet varying in phrasing. These templates contain fields, which are then replaced when forming a prompt by using the element dataset detailed ahead. The five templates are as follows:
+
+
+<!-- PAGE 15 -->
+
 
 ## Prompt Template 1
 
@@ -331,6 +388,10 @@ Consider what you would have done if you were in the same situation as [NAME DON
 
 Consider if the opinion you assign to [NAME DONOR] clearly rewards cooperative behaviours and discourages non-cooperative behaviours.
 
+
+<!-- PAGE 16 -->
+
+
 ## Motivation
 
 Consider that the opinion you assign to [NAME DONOR] can affect other people's future choices to help or not help others, and that our goal is to maximize cooperation.
@@ -364,6 +425,10 @@ Table S2 Names used for the actor names in the prompts. Despite the gender and r
 
 Wecategorize topics using two variables: neutrality and explicitness, each with two values. Regarding neutrality, topics can either be neutral, if they mention solely helping the recipient with no concrete task, or non-neutral if the type of help is concrete (e.g. providing money). Topics can also be either explicit, if they state what is the cost incurred by the donor when helping, or non-explicit, if these costs are not stated. Finally, an empty topic is also used (referred to as 'no-topic'). The non-empty topics used are detailed in Table S3.
 
+
+<!-- PAGE 17 -->
+
+
 Table S3 The non-empty topics used in the prompt dataset, ordered by explicitness and neutrality.
 
 | Neutral                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Non-neutral                                                                                                                                                                                                                                                                                                                        |
@@ -389,6 +454,10 @@ Regarding Llama 2 13B, we instead observe that the primary reason for the parsin
 
 "Based on the scenario provided, my opinion of Wei would be 'bad'. By choosing not to help Mei, Wei has demonstrated a lack of compassion and empathy, which are important qualities for a good person to possess. This interaction suggests that Wei may not be a good person, as they have prioritized their own interests over helping someone in need."
 
+
+<!-- PAGE 18 -->
+
+
 Similarly to Claude 3.7 Sonnet, a large portion of prompts trigger Phi-4's ethical barriers, as seen in the example below. We again observe that most of these answers are given when the donor is not helping the recipient, or the prompt is non-explicit.
 
 ```
@@ -405,6 +474,10 @@ Figure S1 Parsing error rate by model and dataset. Claude 3.7 Sonnet, Llama 2 13
 
 <!-- image -->
 
+
+<!-- PAGE 19 -->
+
+
 ## S4 LLM cooperation analysis
 
 We next provide the cooperation analysis for the LLM norms not presented in the main text, both under public and private reputations.
@@ -417,6 +490,10 @@ Figure S2 Cooperation index, I , across the full space of second-order social no
 
 <!-- image -->
 
+
+<!-- PAGE 20 -->
+
+
 Figure S3 Cooperation index, I , using the social norm of given LLMs, under public (left) and private (right) reputations, varying the benefit-to-cost ratio, b/c . Shaded areas represent the level of cooperation under a standard deviation of the norm of a given LLM. Despite achieving the highest level of cooperation of the models presented under public reputations, Gemma 2 27B IT shows substantially lower cooperation due to its high distance to Image Score (IS) . Closer to IS , Deepseek V3 is less affected by changes in reputation spreading. Despite using different norms, Qwen 2.5 14B and Llama 3.1 8B IT perform similarly regarding cooperation. Parameters used: Z = 100 , e e = e a = 0 . 01 , γ = 0 . 01 , β = 1.
 
 <!-- image -->
@@ -425,6 +502,10 @@ Figure S4 Cooperation index, I , using the social norm of given LLMs, under publ
 
 <!-- image -->
 
+
+<!-- PAGE 21 -->
+
+
 Figure S5 Cooperation index, I , using the social norm of given LLMs, under public (left) and private (right) reputations, varying the benefit-to-cost ratio, b/c . Shaded areas represent the level of cooperation under a standard deviation of the norm of a given LLM. Despite not following any particular norm, Gemini 1.5 Pro performs well in public reputations. Yet, its cooperation is close to null under private assessment. Claude 3.7 Sonnet and Gemma 2 9B use similar norms, yet the difference in resulting cooperation is still significant. Finally, close to Image Score , Qwen 2.5 7B performs moderately in both public and private reputations. Parameters used: Z = 100 , e e = e a = 0 . 01 , γ = 0 . 01 , β = 1.
 
 <!-- image -->
@@ -432,6 +513,10 @@ Figure S5 Cooperation index, I , using the social norm of given LLMs, under publ
 Figure S6 Cooperation index, I , using the social norm of given LLMs, under public (left) and private (right) reputations, varying the benefit-to-cost ratio, b/c . Shaded areas represent the level of cooperation under a standard deviation of the norm of a given LLM. GPT 3.5 Turbo and Mistral Large use similar norms between Image Score (IS) and Simple Standing (SS) , resulting in similar levels of cooperation. Although closer to SS , cooperation under Llama 2 13B is lower than GPT-3.5 Turbo and Mistral Large as it has more uncertainty when recipients have a good reputation. As Phi 3.5 Mini IT closely follows IS , it shows little change between public and private reputations. Parameters used: Z = 100 , e e = e a = 0 . 01 , γ = 0 . 01 , β = 1.
 
 <!-- image -->
+
+
+<!-- PAGE 22 -->
+
 
 ## S5 LLM norm analysis
 
@@ -469,6 +554,10 @@ We next present the social norms under each of the sub-datasets, as explained in
 
 The aggregate measurements of biases in LLM norms are presented in Figure S7 for the gender of the agents, Figure S8 for the region of the agents' names, and in Figure S9 for the different topics of interaction (see Section S2). We observe that all these variations in prompts systematically lead to changes in the average probability to be considered a good donor. Across genders or perceived regions of the actors' names, the maximum difference in norms reaches almost 10%, meaning that a single change such as a different recipient or donor name can impact both these aspects and contribute to an even higher distinction in how the LLM judges the donor. These changes are particularly evident when donors defect, yet still affect how LLMs perceive cooperators. More importantly, we find that the context of the interaction is a greater contributor to the way LLMs judge donors, with explicit and non-neutral topics having an almost 40% lower probability to consider defections against bad individuals as good, compared to neutral and non-explicit topics.
 
+
+<!-- PAGE 23 -->
+
+
 Figure S7 Difference between average norm of all LLMs and the average norm of all LLMs under each gender-filtered sub-dataset. The center point corresponds to no deviation between the average norm under the sub-dataset and that of the full dataset. We observe that, on average, models have a greater probability of assigning a good reputation if a female donor defects against a male donor, and a lower probability when these genders are reversed. When the gender of both agents is equal, the cumulative norm across all LLMs does not deviate substantially from the average.
 
 <!-- image -->
@@ -477,9 +566,17 @@ Figure S8 Difference between average norm of all LLMs and the average norm of al
 
 <!-- image -->
 
+
+<!-- PAGE 24 -->
+
+
 Figure S9 Difference between average norm of all LLMs and the average norm of all LLMs under each contextfiltered sub-dataset. The centre point corresponds to no deviation between the average norm under the sub-dataset and that of the full dataset. We observe that models are, on average, highly impacted by the context of the interaction. In particular, a non-neutral interaction context where the benefit and cost of cooperation are explicit lead to higher strictness against defectors yet a slightly higher probability to assign a good reputation to cooperators.
 
 <!-- image -->
+
+
+<!-- PAGE 25 -->
+
 
 ## S5.2 LLM guidance norm analysis
 
@@ -490,6 +587,10 @@ Finally, it is also important to consider the malleability of LLM norms: While L
 Figure S10 Space of social norms when judging a donor interacting with a good recipient. Each point corresponds to the extracted social norm of an LLM, without ( default ) and with additional instructions to guide the norm of the LLMs. Most models remain consistent following the prompt intervention. However, most interventions cause Llama 3.1 8B IT to assign bad reputations to individuals cooperating with good agents.
 
 <!-- image -->
+
+
+<!-- PAGE 26 -->
+
 
 Table S5 Top: Average extracted social norm of each LLM tested, with and without interventions. In parentheses, we show the difference of each norm entry to the pre-intervention baseline, coloured red when the difference is negative, and green when it is positive. Bottom: Average change in social norm after each intervention. We observe a large variation in the effects of each intervention on each model.
 
@@ -517,6 +618,10 @@ Table S5 Top: Average extracted social norm of each LLM tested, with and without
 - [10] Gallegos, I. O. et al. Bias and fairness in large language models: A survey. Computational Linguistics 50 , 1097-1179 (2024).
 - [11] Tao, Y., Viberg, O., Baker, R. S. &amp; Kizilcec, R. F. Cultural bias and cultural alignment of large language models. PNAS nexus 3 , pgae346 (2024).
 
+
+<!-- PAGE 27 -->
+
+
 - [12] Kotek, H., Dockum, R. &amp; Sun, D. Gender bias and stereotypes in large language models. Proceedings of the ACM Collective Intelligence Conference CI '23 , 12-24 (2023). URL https: //doi.org/10.1145/3582269.3615599.
 - [13] Hu, T. et al. Generative language models exhibit social identity biases. Nature Computational Science 5 , 65-75 (2025).
 - [14] Wang, A., Morgenstern, J. &amp; Dickerson, J. P. Large language models that replace human participants can harmfully misportray and flatten identity groups. Nature Machine Intelligence 1-12 (2025).
@@ -539,6 +644,10 @@ Table S5 Top: Average extracted social norm of each LLM tested, with and without
 - [31] Michel-Mata, S. et al. The evolution of private reputations in information-abundant landscapes. Nature 1-7 (2024).
 - [32] Nowak, M. A. &amp; Sigmund, K. Evolution of indirect reciprocity by image scoring. Nature 393 , 573-577 (1998).
 
+
+<!-- PAGE 28 -->
+
+
 - [33] Panchanathan, K. &amp; Boyd, R. Indirect reciprocity can stabilize cooperation without the secondorder free rider problem. Nature 432 , 499-502 (2004).
 - [34] Milinski, M., Semmann, D., Bakker, T. C. &amp; Krambeck, H.-J. Cooperation through indirect reciprocity: image scoring or standing strategy? Proceedings of the Royal Society of London. Series B: Biological Sciences 268 , 2495-2501 (2001).
 - [35] Pacheco, J. M., Santos, F. C. &amp; Chalub, F. A. C. Stern-judging: A simple, successful norm which promotes cooperation under indirect reciprocity. PLoS Computational Biology 2 , e178 (2006).
@@ -559,6 +668,10 @@ Table S5 Top: Average extracted social norm of each LLM tested, with and without
 - [50] Touvron, H. et al. Llama 2: Open foundation and fine-tuned chat models. arXiv preprint arXiv:2307.09288 (2023).
 - [51] Traulsen, A., Nowak, M. A. &amp; Pacheco, J. M. Stochastic dynamics of invasion and fixation. Physical Review E 74 , 011909 (2006).
 
+
+<!-- PAGE 29 -->
+
+
 - [52] Uchida, S. Effect of private information on indirect reciprocity. Physical Review E 82 , 036111 (2010).
 - [53] Piatti, G. et al. Cooperate or collapse: Emergence of sustainable cooperation in a society of llm agents. Advances in Neural Information Processing Systems 37 , 111715-111759 (2024).
 - [54] Sidoti, O. &amp; McClain, C. 34% of u.s. adults have used chatgpt, about double the share in 2023 (2025). URL https://www.pewresearch.org/short-reads/2025/06/25/ 34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/. Accessed: 2025-06-28.
@@ -577,6 +690,10 @@ Table S5 Top: Average extracted social norm of each LLM tested, with and without
 - [67] Goldstein, J. A., Chao, J., Grossman, S., Stamos, A. &amp; Tomz, M. How persuasive is ai-generated propaganda? PNAS nexus 3 , pgae034 (2024).
 - [68] La Malfa, E. et al. Large language models miss the multi-agent mark. arXiv preprint arXiv:2505.21298 (2025).
 - [69] Glickman, M. &amp; Sharot, T. How human-ai feedback loops alter human perceptual, emotional and social judgements. Nature Human Behaviour 9 , 345-359 (2025).
+
+
+<!-- PAGE 30 -->
+
 
 - [70] Shumailov, I. et al. Ai models collapse when trained on recursively generated data. Nature 631 , 755-759 (2024).
 - [71] Santos, F. P., Santos, F. C. &amp; Pacheco, J. M. Social norms of cooperation in small-scale societies. PLoS Computational Biology 12 , e1004709 (2016).

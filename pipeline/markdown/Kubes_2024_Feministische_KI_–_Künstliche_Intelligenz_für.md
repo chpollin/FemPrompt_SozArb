@@ -1,10 +1,11 @@
 ---
 source_file: Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.pdf
-conversion_date: 2026-02-03T09:04:58.417516
+conversion_date: 2026-02-03T18:36:08.486375
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## TOOLBOX - BLOG
@@ -22,6 +23,10 @@ MENÜ
 K ü nstliche Intelligenz ist mittlerweile in nahezu jedem Bereich unseres Lebens pr ä sent. Von Algorithmen die uns Datingpartner*innen vorschlagen,  ü ber Gesichtserkennungsso ft ware, mit der wir unser Smartphone entsperren, bis hin zu intelligenten Chatbots, die wie ChatGPT mit uns kommunizieren und uns bei schri ft lichen Arbeiten unterst ü tzen. KI hat gro ß artiges Potential. Sie kann f ü r uns komplexe Probleme l ö sen und uns in vielen Bereichen das Leben erleichtern, sie kann aber gleichzeitig auch diskriminieren und zum Ausschluss von Personengruppen beitragen und Macht- und Herrscha ft smechanismen verst ä rken. Um KI nicht nur leistungsstark und profitorientiert, sondern auch f ü r m ö glichst viele Menschen gerecht, fair und inklusiv zu gestalten, ist es unerl ä sslich KI nicht als rein technisches Ph ä nomen zu betrachten.
 
 K ü nstliche Intelligenz geht uns alle an! Im vorgestellten Seminar lernen Studierende ihren allt ä glichen Umgang mit KI-Anwendungen wie KI-Assistenzsystemen, DatingApps  &amp;  Chat GPT aus soziotechnischer Perspektive kritisch zu analysieren, Gefahren und Potentiale zu identifizieren, feministisch neu zu denken und aktivistisch zu agieren.
+
+
+<!-- PAGE 2 -->
+
 
 ## Ein feministischer Blick auf KI ist f ü r Studierende aller F ä chergruppen relevant!
 
@@ -42,6 +47,10 @@ Fazit des Seminars ist: KI geht uns alle an! Wir k ö nnen jeden Tag auch im Kle
 Das von Dr. Tanja Kubes angebotene Seminar kann  ü ber das ABV Modul des Margherita-von-Brentano-Zentrums belegt werden und wird mit einem von Claudia Sommer durchgef ü hrten Sensibilisierungstraining kombiniert. Das Seminar richtet sich an Studierende aller F ä chergruppen, die sich kritisch feministisch mit Digitalisierungsprozessen auseinandersetzen m ö chten und zugleich neugierig auf aktivistische Aspekte sind. Vorkenntnisse zu KI sind nicht erforderlich!
 
 Dr .  Tanja Kubes arbeitet als Soziologin und Ethnologin am Fachbereich Physik der FU Berlin und forscht zu Mensch-RoboterBeziehungen und feministischer K ü nstlicher Intelligenz (KI). Als Expertin f ü r sozio-technische Themen und Gender Studies arbeitete sie als Forscherin und Dozentin an der TU M ü nchen, TU Berlin, TU Graz, Universit ä t Vechta und LMU M ü nchen. Sie ist Sprecherin der AG DIG*IT*AL der Fachgesellscha ft  Geschlechterstudien, die sich kritisch mit Digitalisierungsprozessen und k ü nstlicher Intelligenz auseinandersetzt, und Sprecherin der AG Umwelt/Multispecies Anthropology der Deutschen Gesellscha ft  f ü r Sozial- und Kulturanthropologie. Zudem ist sie Mitglied des Editorial Boards der Publikationsreihe LAGENda und Gutachterin und Expertin f ü r zahlreiche internationale Fachzeitschri ft en und Wissenscha ft sorganisationen (DIN, UNESCO).
+
+
+<!-- PAGE 3 -->
+
 
 ## Weiterf ü hrende Literatur
 

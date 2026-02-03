@@ -1,9 +1,9 @@
-# FemPrompt Assessment Categories
+# Assessment Categories
 # Version: 1.1 (Updated inclusion logic based on test results)
 # Synchronized with Human-Assessment Google Sheets schema
 
 metadata:
-  project: FemPrompt Literature Review
+  project: Literature Review (AI Literacy & Bias in Social Work)
   last_updated: 2026-02-02
   status: draft
   changelog:

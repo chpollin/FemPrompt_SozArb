@@ -1,10 +1,11 @@
 ---
 source_file: Xu_2023_Transparency_enhances_positive_perceptions_of.pdf
-conversion_date: 2026-02-03T09:32:10.723296
+conversion_date: 2026-02-03T19:03:03.491340
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Research Article
 
 ## Transparency Enhances Positive Perceptions of Social Artificial Intelligence
@@ -37,6 +38,10 @@ The success of social chatbots hinges on the extent to which people perceive the
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 feeling manipulated or forming inappropriate attachments with the technology, especially when social AI is designed to build long-term bonds with its users [8]. As a response to these ethical risks, the research community has actively advocated for AI transparency and emphasized the value of providing users with su /uniFB03 cient information about how AI works and what it is capable of. In this sense, transparency is connected to the disclosure of information [9]. However, the consensus for transparency has not yet been fully translated into common industrial practices, and technology companies do not always inform their users of how their AI systems engage in social interactions. Instead, these companies sometimes capitalize on users ' anthropomorphism tendencies by framing chatbots as agentic entities, such as Replika ' s promotion of the chatbot as ' a friend who always listens ' ([7], p.3).
 
 The literature has suggested that people ' s perceptions of AI in general are malleable, and designs that promote transparency within AI systems have an impact on people ' s perceptions. However, the current /uniFB01 ndings on this topic are inconclusive and lack clear direction. On the one hand, some studies suggest that opacity actually makes social chatbots more personal and charming to some users, as people tend to treat AI systems more like people when the algorithmic mechanisms are made invisible [2]. This is particularly important in fueling productive ' social ' interactions [10], which can be characterized as mutual understanding, positive relationships, shared ideas, and reciprocal exchanges [11]. On the other hand, some studies support the bene /uniFB01 ts of transparency, suggesting that transparency will not only make people feel more empowered when interacting with AI but also mitigate some of their negative uncanny reactions to AI [12]. These studies, for example, found that if the chatbots ' mechanisms and capacities are unknown to their users, people sometimes perceive these highly personal chatbots as creepy and invasive (e.g., [13]).
@@ -56,6 +61,10 @@ As AI technologies grow increasingly sophisticated and complex, the research com
 2.2. Empirical Evidence on the Perception Outcomes of Transparency. The broader emphasis on AI transparency has motivated empirical work on transparent and explainable interfaces. This line of research evaluates di /uniFB00 erent methods for increasing transparency in a variety of contexts, while more studies have focused on AI systems that are taskoriented (e.g., recommender systems, expert/knowledgebased systems, and virtual assistants) rather than socialoriented (e.g., social chatbots in this study). These studies provide insights into the implications transparency has on people ' s perceptions of AI (e.g., [21 -27]).
 
 In terms of task-oriented systems, there has been strong evidence that transparency enhances people ' s con /uniFB01 dence in the system ' s decision-making as well as their user experience of the system. Wang and Benbasat [28] found that when an hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Lice
+
+
+<!-- PAGE 3 -->
+
 
 online recommendation agent provides users with explanations that outline the logical processes involved in making a particular recommendation, users are more likely to view these systems as competent and benevolent. Rader et al. provided participants with one-time explanations regarding how Facebook ' s algorithms determined what news a user saw in their news feed. These explanations helped participants gain a better understanding of how their behavioral data was collected through user interfaces and thus in /uniFB02 uenced the news feed presented to them [29].
 
@@ -79,6 +88,10 @@ We hypothesized that transparency would lead to reduced perceived creepiness and
 
 5.1. Overview of Study Design. In this study, we used a between-subject design to test the impact that di /uniFB00 erent ways of introducing a chatbot (up-front explanation) have on participants ' perceptions of social chatbots. Participants received di /uniFB00 erent introductions, but all were shown the same conversation exchanges between a hypothetical but realistic hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Lice
 
+
+<!-- PAGE 4 -->
+
+
 user (Casey) and an also hypothetical but realistic chatbot (Neo). After that, participants completed a survey on their perceptions. This approach is an experimental vignette study [42], which ensured equivalence of what participants would be exposed to compared to user studies where participants actually interact with a chatbot, but was more tangible than a general survey without speci /uniFB01 c scenarios. The feasibility of this approach is well-supported by the line of research on vicarious emotional responses (e.g., [43]), which is drawn on the social learning theory [44], indicating that humans are capable of experiencing emotional reactions through observation alone.
 
 The primary factor of interest was whether participants received a brief explanation of how the chatbot worked (i.e., transparency factor). In addition to the transparency factor, we included a secondary factor by framing the social chatbot as either an intelligent entity or as a machine. Prior literature guided our hypothesis that framing the chatbot as an intelligent entity could lead users to appreciate its nearhuman levels of intelligence, and presenting it as a machine might evoke associations with simpler, rule-based mechanisms [45]. In the former scenario, there might be a higher demand for transparency.
@@ -101,6 +114,10 @@ In the control condition, participants were exposed to an introduction saying, '
 A total of three chat scenarios were presented to participants (see Appendix A for the full text), each focusing on a unique topic and perspective. These scenarios were generated in an inductive, iterative process. We started the process by identifying potential chat topics based on both the research on how people tend to converse with chatbots and actual user reviews of Replika and Somisomi. In particular, several papers have identi /uniFB01 ed common topics users engage with social chatbots, including hobbies and interests, advice seeking, and sharing emotions [1, 47, 48]. Based on these broad directions, the research team (one of the authors and two research assistants who were not authors) used Replika and Somisomi every day for a period of three months to elicit conversations around the three areas. The conversation logs were shared with the entire team, and we met once a week to discuss the chat logs, focusing on exchanges where the chatbots ' responses potentially raised interesting issues related to AI ethics.
 
 Based on this process, we selected three chat scenarios for Neo. In the /uniFB01 rst scenario revolving around interests hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Lice
+
+
+<!-- PAGE 5 -->
+
 
 Table 1: The full text of manipulation of each condition.
 
@@ -141,6 +158,10 @@ These chat scenarios were presented as short video clips in a /uniFB01 xed order
 
 5.4. Perception Measures. Four dimensions of perceptions, namely, perceived creepiness, a /uniFB03 nity, perceived social intelligence, and perceived chatbot agency, were surveyed after participants /uniFB01 nished viewing the chat scenarios. Across all dimensions, participants used a four-point scale (i.e., strongly disagree, disagree, agree, and strongly agree) to rate their level of agreement on each of the survey items. This scale did not include a neutral or no opinion option given
 
+
+<!-- PAGE 6 -->
+
+
 that our survey items were written in such a way that participants should have an opinion and that prior research has consistently suggested that neutral responses often re /uniFB02 ect an unwillingness to respond rather than uncertainty [50]. We constructed latent variables for each of the dimensions to consider measurement errors [51], and the path models are displayed in Figure 1. We performed the analysis using these latent variables but also used the means as a robustness check.
 
 5.4.1. Perceived Creepiness. The perceived creepiness scale was based on Wo ź niak et al. [52] and consists of three dimensions: implied malice, undesirability, and unpredictability. The three items in the implied malice dimension focused on whether the users perceived the chatbot as having bad intentions, secretly gathering users ' information, or monitoring users without their consent. The two items in the undesirability dimension focused on whether participants felt uneasy or were disturbed by the chatbot ' s behaviors. The two items in the unpredictability dimension focused on whether the chatbot behaved in an unpredictable manner or whether the purpose of the conversation was dif/uniFB01 cult to identify. This measure was more suitable for the context of our study than the other commonly used measures on uncanniness that primarily captured people ' s automatic reactions to the physical appearance of technologies (e.g., [53]). Con /uniFB01 rmatory factor analysis (CFA) with a three-factor model was carried out and suggested good internal validity among items ( TLI = 0 : 98 , RMSEA=0 : 05 ), and one latent variable of perceived creepiness was then constructed based on the CFA model.
@@ -158,6 +179,10 @@ that our survey items were written in such a way that participants should have a
 In total, 914 participants completed the study, which consisted of our analytic sample. This sample size was predetermined by a power analysis based on a minimal meaningful e /uniFB00 ect size (Cohen f 0.1) given that no reliable prior data was available to allow us to estimate our targeted e /uniFB00 ect size. The mean age of the participants was 36.9 years. The majority of participants were identi /uniFB01 ed as White (82.8%), and over half were male. Over 90% of them completed at least some college or vocational school. Forty/uniFB01 ve percent of the participants had an annual personal income between $50,000 and $99,000, and the other 28% fell into the range of $25,000 to $49,999. Notably, over half of the participants reported that they are in professions related to computer science or AI technologies. About half of them used chatbots at least a few times a week.
 
 As part of the baseline information, participants selfreported their familiarity with nine AI-related terms, namely, sentiment analysis, natural language processing, intent extraction, knowledge engineering, neural network, TensorFlow, and supervised learning. We utilized a fourpoint scale to gauge their understanding with the following options: ' I ' ve never heard of this term, ' ' I ' ve heard of this term but don ' t know what it is or how it works, ' ' I know a little bit about how it works, ' and ' I have a good understanding of how it works. ' The average aggregate score across all terms was 10.1 for the entire sample, indicating that the majority of participants had merely heard of these terms without possessing a deeper knowledge of their hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Lice
+
+
+<!-- PAGE 7 -->
+
 
 <!-- image -->
 
@@ -221,6 +246,10 @@ AG4 - Neo has a personality.
 
 Figure 1: Con /uniFB01 rmatory factor analysis results and actual items used.
 
+
+<!-- PAGE 8 -->
+
+
 workings. An equivalence check was performed and suggested that the random assignment was successful as these groups were not statistically di /uniFB00 erent from each other. Details of participant information across study conditions are available in Table 2.
 
 ## 6. Results
@@ -244,6 +273,10 @@ participants were told that they looked at chat exchanges between humans, while 
 In terms of perceived creepiness, the two groups who received transparent explanation seemed to perceive the chatbot as less creepy (transparent machine framing: -0.02; transparent intelligent framing: -0.10) than the other two groups without explanation (nontransparent machine framing: 0.03, nontransparent intelligent framing: 0.03), as presented in Table 3. The ANCOVA results indicated that the transparency factor was statistically signi /uniFB01 cant ( F = 4 : 99 , p = 0 : 03 , ES = 0 : 01 as calculated by partial eta square), as presented in Table 5. When breaking down to the three subdimensions, transparency signi /uniFB01 cantly reduced participants ' perceived unpredictability ( F = 4 : 59 , p = 0 : 03 , ES = 0 : 003 ), undesirability ( F = 5 : 10 , p = 0 : 02 , ES = 0 : 01 ), and implied malice ( F = 4 : 98 , p = 0 : 03 , ES = 0 : 005 ), yet all at a minimal level. Whether framing the chatbot as a machine or intelligent agent did not a /uniFB00 ect people ' s creepiness perception ( F = 1 : 13 , p = 0 : 29 ), overall, our results indicated that transparency reduced people ' s creepy perception about social chatbots.
 
 In terms of a /uniFB03 nity, descriptively, the two groups with transparent explanations reported a higher a /uniFB03 nity score (transparent machine framing: 0.10; transparent intelligent framing: 0.05) than the other two groups that did not receive explanations (nontransparent machine framing: -0.02, nontransparent intelligent framing: -0.01, presentable in hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Lice
+
+
+<!-- PAGE 9 -->
+
 
 Table 2: Participant background information.
 
@@ -295,6 +328,10 @@ In terms of social intelligence, participants in the two transparent groups were
 
 Lastly, in terms of perceived agency, our analysis suggested that neither transparency nor framing signi /uniFB01 cantly
 
+
+<!-- PAGE 10 -->
+
+
 Table 3: Descriptive statistics of outcome variables.
 
 |                                  | Human control   | Nontransparent intelligent   | Experimental groups Nontransparent machine   | Transparent intelligent   | Transparent machine   |
@@ -340,6 +377,10 @@ To approach these questions, we added two other interaction terms to the ANCOVA,
 
 This study is aimed at understanding the extent to which transparency and framing in /uniFB02 uence people ' s perceptions about social AI. Social AI in the form of chatbots is increasingly present in our daily lives and has played a role in providing companionship for users or supporting their mental health. However, the algorithms behind social AI are complex and opaque, and thus typical users may be blinded by what is happening behind the scenes during their interactions. While some may suggest that not revealing chatbots ' inter working is likely to increase users ' tendency to anthropomorphize the chatbot, thus better simulating natural human-to-human interactions, the research communities have pushed forward the concept and practices of transparent AI, pointing out that it is more ethical to unveil the AI black box so that users can be informed and empowered.
 
+
+<!-- PAGE 11 -->
+
+
 Table 5: E /uniFB00 ects of transparency and framing on perceptions.
 
 |                               | F    | Signi /uniFB01 cance ( p )   | Partial eta square   |
@@ -383,6 +424,10 @@ First, we found that transparency reduced the participants ' perceived creepines
 
 Second, participants in the transparency condition perceived the chatbot as more attractive than those who were not. This result is consistent with other studies focusing on task-oriented AI systems, such as recommender systems and virtual assistants. Numerous studies have suggested that when virtual assistants explain the reasoning for their suggestions or responses, users are better able to assess the reliability of those suggestions and responses. This leads to users being more con /uniFB01 dent in the virtual assistants and in their own decisions based on their interactions with the virtual assistants. It also leads to users interacting with the virtual assistants more readily and frequently. Although our study focused on social AI rather than task-oriented AI, the mechanism above might still explain, at least partially, the positive hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Lice
 
+
+<!-- PAGE 12 -->
+
+
 Figure 2: The impact of transparency on perceived chatbot intelligence modulated by participants ' prior AI knowledge.
 
 <!-- image -->
@@ -398,6 +443,10 @@ Overall, our /uniFB01 ndings suggest that transparency should be considered in t
 ## 8. Limitations and Future Directions
 
 The /uniFB01 ndings of this study should be considered with several caveats in mind, and future research should aim to address these limitations. First, our participants observed hypothetical chat scenarios instead of directly engaging with the chatbot. While this design was appropriate for our study, it is possible that the results might di /uniFB00 er if participants had interacted with the chatbot directly. Second, our study operationalized transparency as the provision of explanatory information to participants; however, it could be argued that perceived transparency may serve as a mediating factor. Although we included measures for participants ' selfreported reception of the explanatory information, this does not directly assess perceived transparency. Future research should incorporate this direct measure. Third, while our hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+
+<!-- PAGE 13 -->
+
 
 study explored both positive and negative perceptions, other outcome variables, such as trust, warrant examination. Moreover, future research should investigate the extent to which participants absorb the information they receive from AI explanations, as it is possible that not all participants accurately digest the provided information, which could in /uniFB02 uence their perceptions. Lastly, our participant pool was sourced from Amazon Mechanical Turk. Although previous studies have suggested that MTurk participants are demographically comparable to those recruited through traditional methods (e.g., students, [64]), this sample may be more experienced and comfortable with technology.
 
@@ -500,6 +549,10 @@ This work is supported by the National Science Foundation under Grant Nos. 21153
 
 hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/5550418 by Karl-Franzens-University Graz, Wiley Online Library on [21/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons Lice
 
+
+<!-- PAGE 14 -->
+
+
 - [5] M. M. van Wezel, E. A. Croes, and M. L. Antheunis, '' I ' mhere for you ' : can social chatbots truly support their users? A literature review, ' in Chatbot research and design: 4th international workshop, CONVERSATIONS 2020, virtual event, November 23 -24, 2020, revised selected papers 4 , pp. 96 -113, Springer international publishing, 2021.
 - [6] P. B. B. Brandtzæg, M. Skjuve, K. K. K. Dysthe, and A. Følstad, ' When the social becomes non-human: young people ' s perception of social support in chatbots, ' in Proceedings of the 2021 CHI conference on human factors in computing systems , pp. 1 -13, May 2021.
 - [7] I. Pentina, T. Hancock, and T. Xie, ' Exploring relationship development with social chatbots: a mixed-method study of replika, ' Computers in Human Behavior , vol. 140, article 107600, 2023.
@@ -530,6 +583,10 @@ hbet, 2023, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2023/
 - [32] R. De Cicco, S. C. L. da Costa e Silva, and R. Palumbo, ' Should a chatbot disclose itself? Implications for an online conversational retailer, ' in Chatbot Research and Design , A. Følstad, T. Araujo, S. Papadopoulos, E. L.-C. Law, E. Luger, M. Goodwin, and P. B. Brandtzaeg, Eds., pp. 3 -15, Springer International Publishing, 2021.
 - [33] X. Li and Y. Sung, ' Anthropomorphism brings us closer: the mediating role of psychological distance in user -AI assistant interactions, ' Computers in Human Behavior , vol. 118, article 106680, 2021.
 - [34] C. L. van Straten, J. Peter, R. Kühne, and A. Barco, ' Transparency about a robot ' s lack of human psychological capacities: e /uniFB00 ects on child-robot perception and relationship formation, ' ACM Transactions on Human-Robot Interaction , vol. 9, no. 2, pp. 1 -22, 2020.
+
+
+<!-- PAGE 15 -->
+
 
 - [35] S. Druga and A. J. Ko, ' How do children ' s perceptions of machine intelligence change when training and coding smart programs?, ' in Interaction Design and Children , pp. 49 -61, Athens, Greece, 2021.
 - [36] C. L. van Straten, J. Peter, and R. Kühne, ' Transparent robots: how children perceive and relate to a social robot that acknowledges its lack of human psychological capacities and machine status, ' International Journal of Human-Computer Studies , vol. 177, article 103063, 2023.

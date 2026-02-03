@@ -1,10 +1,11 @@
 ---
 source_file: Chen_2025_Social_work_and_artificial_intelligence.pdf
-conversion_date: 2026-02-03T08:45:01.382537
+conversion_date: 2026-02-03T18:23:11.603977
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## SOCIAL WORK AND ARTIFICIAL INTELLIGENCE: COLLABORATION AND CHALLENGES
 
 ## 1.1 Research Background
@@ -43,6 +44,10 @@ Social Work, Artificial Intelligence (AI), Decision-making Transparency, Ethical
 
 ## 1. Introduction
 
+
+<!-- PAGE 2 -->
+
+
 ## 1.2 Literature Review and Research Motivation
 
 Previous  research  on  the  integration  of  AI  and  social  work  has  primarily  focused  on  technical applications, such as using AI for risk assessment, case classification, and automated management (Abtahi et al., 2023; Chan &amp; Holosko, 2016; Chatterjee &amp; Chakraborty, 2021; Goldkind et al., 2018; Mishna et al., 2021; Recmanová  et  al.,  2022).  However,  there  has  been  relatively  limited  in-depth  exploration  of  the  specific challenges related to social work ethics, humanistic care, and professional decision-making processes. Given that social work involves sensitive information about clients and requires nuanced contextual understanding and ethical judgment, a purely technology-driven approach to AI may overlook these core professional values (Reamer, 2018; Rodríguez-Martínez et al.,  2024).  Additionally,  social  workers'  acceptance  and trust in AI remain critical issues (Biden, 2023; Chen, 2023; Eubanks, 2018; Holmes et al., 2022; Huang et al., 2022; Raso et al., 2018; Zhang &amp; Zhang, 2023).
@@ -74,6 +79,10 @@ To  ensure  diversity  and  representativeness,  participants  are  recruited  f
 This approach enables a comprehensive examination of AI integration in social work from practical, technical, and policy perspectives.
 
 The overall research process includes:
+
+
+<!-- PAGE 3 -->
+
 
 1. Literature review : Analyzing existing research on AI applications in social work to identify gaps.
 2. Interview  guide  development :  Designing  semi-structured  interview  questions  and  focus  group discussion prompts based on the literature review and research objectives.
@@ -117,6 +126,10 @@ Participants  ranged  in  age  from  28  to  55  years,  with  a  gender  distri
 
 The study employed a two-phase data collection approach consisting of in-depth interviews and focus group discussions.
 
+
+<!-- PAGE 4 -->
+
+
 ## 2.3.1 In-depth Interviews
 
 Each  participant  completed  a  semi-structured,  one-on-one  interview  lasting  60-90  minutes.  The  interview protocol addressed three key domains:
@@ -157,6 +170,10 @@ This  study  employed thematic  analysis (Braun  &amp;  Clarke,  2023;  Braun  &
 5. Defining  and  Naming  Themes: Final  themes  were  precisely  delineated  and  labeled,  with descriptive summaries articulating their essence and relevance to research questions.
 6. Producing  the  Report: Findings  were  structured  around  the  finalized  themes,  supported  by representative  verbatim  excerpts  to  enhance  transparency  and  credibility.  Strategies  to  ensure trustworthiness:
 
+
+<!-- PAGE 5 -->
+
+
 - a. Member Checking : Preliminary findings were shared with select participants for validation.
 - b. Investigator Triangulation interpretations.
 3. :  Multiple researchers independently coded data and cross-verified
@@ -195,6 +212,10 @@ Table 3. Perceptions of AI Applications in Social Work
 ## 2.6.2 Primary Concerns Regarding AI Implementation
 
 - ◼ 85% of social workers expressed strong concerns about client privacy and data protection.
+
+
+<!-- PAGE 6 -->
+
 
 - ◼ 80% of AI developers acknowledged significant deficiencies in decision-making transparency and explainability of current AI systems.
 - ◼ All policymakers (100%) emphasized the need for clear ethical guidelines and legal frameworks.
@@ -242,6 +263,10 @@ This study demonstrates that artificial intelligence (AI) technology significant
 
 The application of AI in resource matching has received particular recognition. Traditional resource allocation relying on manual judgment often suffers from information gaps or human bias. In contrast, AI
 
+
+<!-- PAGE 7 -->
+
+
 systems  can  integrate  data  across  multiple  resource  platforms  in  real-time,  matching  clients  with  optimal service options, thereby improving both service accessibility and resource utilization efficiency.
 
 Furthermore, AI-driven automation of administrative tasks (e.g., case progress tracking, documentation) substantially reduces practitioners' bureaucratic burdens, allowing greater focus on high-level professional  interventions  and  interpersonal  engagement.  Most  participants  reported  that  AI  tools  for  data organization and preliminary screening have effectively liberated significant working hours, contributing to enhanced service quality and job satisfaction.
@@ -269,6 +294,10 @@ This multifaceted approach will foster the trust required for effective human-AI
 ## 3.3 The Critical Importance of AI Ethics and Regulation
 
 This study highlights the fundamental role of ethical frameworks and legal regulations in ensuring the sustainable  development of AI applications within social work. Findings from focus groups and individual interviews reveal unanimous consensus (100%) among policymakers that advancing AI technologies must be accompanied by robust ethical guidelines and legal standards to safeguard client rights and maintain societal trust.
+
+
+<!-- PAGE 8 -->
+
 
 Key concerns emerged regarding current deficiencies in ethical oversight mechanisms for AI implementation in social work practice. Participants particularly emphasized the absence of clear standards governing:
 
@@ -312,6 +341,10 @@ To address these challenges, the study proposes comprehensive educational reform
 - Ethical dilemma exercises
 - Human-AI collaboration drills
 
+
+<!-- PAGE 9 -->
+
+
 - b. Establish  continuing  education  programs  tailored  to  working  professionals'  competency levels
 
 The  study  concludes  that  maintaining  social  work's  professional  relevance  in  the  digital  era necessitates proactive AI competency development. Transforming education and training systems represents the foundational requirement for successful AI-social work integration, ensuring practitioners can critically engage with technological tools while preserving core professional values.
@@ -338,9 +371,17 @@ A  key  contribution  of  this  study  lies  in  elucidating  the  ethical  cons
 
 Furthermore, the study emphasizes the critical need for enhanced AI literacy among social workers. Educational and training systems must evolve to provide relevant curricula and skill development, ensuring
 
+
+<!-- PAGE 10 -->
+
+
 professionals can effectively adapt to technological advancements while integrating humanistic and technical competencies.
 
 These findings bridge theoretical and practical gaps in understanding AI-social work integration while providing  concrete  recommendations  for  practice  and  future  research.  Subsequent  studies  should  employ larger-scale  quantitative  methods  to  validate  these  qualitative  findings  and  further  explore  the  dynamic interplay  between  technology,  humanistic  values,  and  ethical  practice.  Such  continued  examination  will promote the responsible development and harmonious implementation of AI technologies within the social work profession during this digital transformation era.
+
+
+<!-- PAGE 11 -->
+
 
 ## References
 

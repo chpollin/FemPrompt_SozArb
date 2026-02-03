@@ -1,10 +1,11 @@
 ---
 source_file: Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.pdf
-conversion_date: 2026-02-03T08:54:53.791625
+conversion_date: 2026-02-03T18:25:34.475626
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Engelhardt, Emily; Ley, Thomas
@@ -53,6 +54,10 @@ Internet: www.pedocs.de
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## Emily Engelhardt und Thomas Ley
 
 Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit. Curriculare Überlegungen und veränderte Akteurskonstellationen
@@ -63,11 +68,19 @@ Der vorliegende Artikel beleuchtet den Einsatz generativer KI in der Hochschulbi
 
 Die rasante Entwicklung von Künstlicher Intelligenz (KI) hat weitreichende Auswirkungen auf zahlreiche Wissenschafts- und Praxisfelder. Der vorliegende Aufsatz beleuchtet mögliche Einsatzszenarien generativer KI in der Hochschulbildung Sozialer Arbeit und stellt einige curriculare Überlegungen dar; er versteht sich als Werkstattbericht. Nicht nur, weil sich die technischen Entwicklungen förmlich überschlagen, sondern weil auch wir als lernende Lehrende - mit Blick auf die eigene wie auch die didaktische Nutzung - im Modus des Ausprobierens sind. Im November 2022 wurde das Large-Language-Modell (LLM) GPT-3.5 des amerikanischen Konzerns OpenAI veröffentlicht. Innerhalb weniger Monate fand die Anwendung ChatGPT weite Verbreitung, sowohl unter Hochschulmitarbeiter:innen (Hochschulforum Digitalisierung 2023) als auch unter Studierenden (v. Garrel u. a. 2023, für die Soziale Arbeit: Witter u. a. 2024). Durch die öffentlichkeitswirksa-
 
+
+<!-- PAGE 3 -->
+
+
 me Verbreitung von ChatGPT 1 drängte sich auch das Thema KI im Studium der Sozialen Arbeit auf eigentümliche Art und Weise auf. So scheinen sich zwei Pole rund  um  das  Thema  aufzustellen:  Auf  der  einen  Seite  bestehen  Bedenken,  dass Studierende Tools wie ChatGPT zur Erstellung wissenschaftlicher Arbeiten nutzen könnten und somit das Kerngeschäft der Hochschule unterminieren. Dies wirft die Frage nach der Zukunft der wissenschaftlichen Hausarbeit sowie anderer schriftlicher Prüfungsformen auf und führte etwa an der Wirtschaftsuniversität Prag schon zur Abschaffung schriftlicher Bachelor-Arbeiten (vgl. Bager 2023). Die Nutzung einer  KI,  die  komplexe  Schriftstücke  erzeugen  kann,  führt  zu  einer  zunehmend verschwommenen Trennlinie  zwischen  der  studentischen  Eigenleistung  und  der technologisch unterstützten Produktion. Auf der anderen Seite sehen Lehrende das Potenzial von KI-Tools wie ChatGPT als Ergänzung im Lehr-/Lernprozess und der Eröffnung neuer Lehr-/Lern- Arrangements und Ansätzen forschenden Lernens. Sinnvoll eingesetzt können die Technologien die Auseinandersetzung mit wissenschaftlichen Inhalten vertiefen. Die zentrale Herausforderung liegt in der ausgewogenen Anwendung, die die Vorteile der Technik zu nutzen vermag und gleichzeitig die akademische Redlichkeit sicherstellt. Es gilt die Förderung einer eigenständigen kritischen  Denk-  und  Analysefähigkeit  der  Studierenden  in  den  Mittelpunkt  zu stellen und eine zukunftsorientierte Hochschuldbildung zu ermöglichen.
 
 Der vorliegende Beitrag zielt  darauf  ab,  über  den  verkürzten  Chancen-Risiken Diskurs hinauszugehen und mögliche Einsatzszenarien von generativer KI zu diskutieren. Die aktuellen - auch kapitalistisch geprägten - Entwicklungen scheinen unumkehrbar und es ist ratsam, sich diesen auch im Sinne einer kritisch-progressiven, aber nicht affirmativen, Sozialen Arbeit zu widmen. Der Fokus liegt auf den veränderten Akteurskonstellationen in der Hochschulbildung, den neuen Rollen von Lehrenden und Lernenden und den damit verbundenen Lernprozessen sowie der Formierung neuer Aufgaben und Kompetenzen in Studium und Gesellschaft. Zunächst werden die Potenziale und Herausforderungen generativer KI-Systeme im Studium skizziert. Anschließend wird erörtert, welche Rollen generative KI im Studium der Sozialen Arbeit einnehmen kann - etwa als unterstützende Rechenmaschine, dialogische Informationsquelle, akademische Schreibassistenz, methodischem Übungspartner oder Produktivumgebung forschenden Lernens. In einem nächsten Schritt wird verdeutlicht das KI-Tools nicht nur als Werkzeug verstanden werden sollten, sondern sich in ihrer transformativen Funktion als kooperative Agenten bzw. nicht-menschliche Akteure in die Hochschulbildung einschreiben. Darauf folgt eine Diskussion über Prompting, betrachtet als metakognitiver Prozess
 
 1  Aufgrund seiner starken Verbreitung wird in diesem Artikel der Fokus auf ChatGPT gelegt. 2023 entwickelte  zudem  die  HAWK  ein  webbasiertes,  frei  zugängliches  Interface  zur  Nutzung  von ChatGPT, das auch von anderen Hochschulen genutzt werden kann. Eine erste Übersicht unterschiedlicher KI Tools Schreiben bietet das virtuelle Kompetenzzentrum - Schreiben lehren und lernen mit Künstlicher Intelligenz: https://www.vkkiwa.de/ki-ressourcen/.
+
+
+<!-- PAGE 4 -->
+
 
 und grundlegende Fähigkeit, die im Studium entwickelt werden kann. Den Abschluss bildet eine Reflexion über die sich verändernden Rollen von Lehrenden und Lernenden sowie curricularen Konsequenzen für das Studium der Sozialen Arbeit in einer zunehmend digitalisierten und KI-unterstützten Bildungsumgebung.
 
@@ -78,6 +91,10 @@ Generative KI-Technologien besitzen das Potenzial, Lehr-/Lernprozesse zu bereich
 Es würde den Rahmen dieses Artikels sprengen, in die Grundlagen der generativen KI einzuführen 2 , dennoch mag hier zumindest eine kursorische Einordnung hilfreich sein: ChatGPT ist eine generative KI, die auf der Architektur von großen Sprachmodellen ( Large Language Modells, kurz LLM) basiert. Diese Modelle werden mit enormen Mengen an Textdaten trainiert, um Muster und Zusammenhänge in der Sprache zu erkennen. LLM funktionieren, indem sie natürliche Sprache in kleine Einheiten, sogenannte Tokens, zerlegen. Jedes Token kann ein Wort, eine Silbe, ein Satzzeichen oder ein Teil davon darstellen. Auf der Basis des Gelernten trifft ChatGPT Vorhersagen und generiert passende Texte, indem es das wahrscheinlichste nächste Token wählt. So entstehen kohärente und sprachlich  saubere  Antworten  auf  verschiedenartigste  Anfragen,  die  die  Nutzer:innen eingeben (sog. prompts ).  ChatGPT ist also entwickelt worden, um einen menschenähnlichen Dialog zu erschaffen und simuliert folglich eine formelle Sprachkompetenz, die jedoch nicht mit Sinnverstehen gleichzusetzen ist. Es besitzt keine echten Verständnisfähigkeiten, liefert daher nicht immer korrekte Antworten (sog.
 
 2 Neben vielen anderen bietet der KI Campus des Stifterverbandes für die Deutsche Wissenschaft hier einige Einführungskurse: https://www.ki-campus.org/.
+
+
+<!-- PAGE 5 -->
+
 
 Halluzinieren ) und bildet aus der Datenbasis Kategorien und Abstraktionen, die häufig als sehr schlüssig wahrgenommen werden. Die Auswahl der Trainingsdaten kann zu einer systematischen Verzerrung und der Reproduktion von Vorurteilen (sog. bias ) führen. Allein die rapide Veröffentlichung von neuen Versionen von ChatGPT (dieser Artikel entstand in der Zeit, in der die Version GPT-4o verfügbar war), deutet daraufhin das hier erhebliches Entwicklungspotenzial ist, welches wiederum auch Konsequenzen für die untenstehenden Szenarien haben wird.
 
@@ -91,6 +108,10 @@ In der Interaktion zwischen Menschen und KI ist die menschliche Denkleistung fü
 
 Bei der Nutzung von Suchmaschinen musste auch zunächst gelernt werden, dass die Ergebnisse, die etwa bei Google auf der ersten Seite ganz oben stehen, nicht immer die besten und vor allem nicht zwingend die wissenschaftlich relevantesten sind, sondern dass die Anordnung aufgrund von Algorithmen und kommerziellen Inter-
 
+
+<!-- PAGE 6 -->
+
+
 essen sowie Werbestrategien beeinflusst wird. 3 Bei der Nutzung von ChatGPT muss den Nutzer:innen bewusst sein, dass die KI über kein menschliches Verständnis und Sinnverstehen verfügt, auch wenn sie mit den Nutzer:innen in einen menschenähnlichen Dialog eintritt. Gerade durch diesen Dialog entstehen häufig Anthropomorphisierungen, innerhalb derer der KI menschliche Eigenschaften, Emotionen oder Absichten zugeschrieben werden. Dies kann unter anderem dazu führen, dass die Antworten von ChatGPT als Ausdruck menschlicher Intelligenz, Empathie oder Verständnis missinterpretiert und unreflektiert übernommen werden.
 
 ## 4  Vom Werkzeug zum kooperativen Agenten KI als neuer Akteur in der Hochschulbildung?
@@ -101,6 +122,10 @@ In  gegenwärtigen  Debatten  wird  ChatGPT  nicht  nur  als  avancierte  Techni
 
 4  Dies  zeigt  sich  auch  am  üblichen  -  und  verengten  -  Chancen/Risiken  Diskurs  in  der  Sozialen Arbeit. Dabei verbleibt der Mehrwert der digitalen Medien häufig diffus. Er fußt auf einem unreflektierten Verständnis von Medienintegration, reduziert IT in naiver Weise auf bloße Werkzeuge und Arbeitsmittel, verstärkt deterministische Perspektiven und ist fest in der analogen (verbalen) Kultur verhaftet.
 
+
+<!-- PAGE 7 -->
+
+
 men hervor, sondern stellt in pragmatistischer Diktion ein bewusst geschaffenes und soziales (!) Arrangement dar.
 
 ChatGPT kann in diesem Sinne eben auch als ein nicht-menschlicher Akteur (Agent) verstanden werden, der auf Aufforderungen reagiert, sich auf vergangene Konversationsstränge bezieht, auf Konfrontationen in eigentümlicher Weise reagiert und ,eigene' Perspektiven in den Diskurs mit einbringt. Dies zeigt sich zum einen in diversen Zuschreibungen von menschlichen Qualitäten (Anthropomorphisierungen: 'Er [sic!] hat mir ganz freundlich gesagt, dass…'), der Anerkennung von Leistungen ('Darauf wäre ich jetzt so schnell nicht gekommen') und der Annahme einer gleichwertigen (wenn auch nicht gleichberechtigen) Rolle des Akteurs ChatGPT in sozialen Situationen ('Ich habe mal ChatGPT gefragt…'). Diese beschreibt zum einen die ,Sozialität der Technik' und zum anderen aber auch wie sich Handeln auf technisches Wirken und menschliches Verhalten verteilt, in dem wir der KI den Status als pro-aktiven, kontext-sensiblen und kooperativen Agenten zuerkennen müssen (vgl. Rammert 2007).
@@ -108,6 +133,10 @@ ChatGPT kann in diesem Sinne eben auch als ein nicht-menschlicher Akteur (Agent)
 Daran anschließend führen Linnemann, Löhe und Rottkemper den Begriff der quasi-sozialen Beziehung ein, welcher definiert werden kann, als 'die Beziehung zwischen einem Menschen und einem künstlichen Agenten, bei der die Merkmale zwischenmenschlicher Beziehungsbildung (1) Soziale Präsenz, (2) Vertrauen, (3) emotionale Bindung und (4) gegenseitige Beeinflussung gleichzeitig vorhanden sind. Quasisoziale Beziehungen weisen soziale Elemente auf, sind aber dennoch von echten zwischenmenschlichen Beziehungen zu unterscheiden.' (2024, 11). Demzufolge  kann  der  KI-Chatbot  wiederum  verschiedene  Rollen  -  etwa  die einer:s  Beraters:in,  Begleiters:in  oder  Unterstützers:in  -  einnehmen  (ebd.  und weiter unten) und sie wird ihm gleichermaßen eingeräumt.
 
 Neben dieser  (vergleichsweise)  hohen  Handlungsträgerschaft  des  Agenten  und der teilweise stattfindenden Zuschreibung von Verantwortung und Beziehungsqualitäten  ist  es  daher  gerade  im  Hochschulkontext  sinnvoll,  ChatGPT  nicht nur  situativ  in  bestimmten  Handlungssituationen  zu  verorten,  sondern  seinen Beitrag kritisch zu prüfen und mit Blick auf das eigene Handeln zu reflektieren. Gerade für eine Fachwissenschaft Soziale Arbeit ist es von enormer Bedeutung den Beitrag von KI in seinen institutionellen und gesellschaftlichen Gefügen zu betrachten (siehe Kapitel 6). So verweisen Reinmann und Watanabe darauf, dass KI das schon vorher existierende Spannungsfeld akademischer Lehre von (1) Wissenschaft (Wie verändert KI Disziplinen und deren Forschung?), (2) Person (Wie verändert KI Menschen und das Menschsein?) und (3) Praxis (Wie verändert KI das Handeln außerhalb von Hochschule?) noch weiter verstärken wird und damit der Anspruch an eine wertebasierte Diskussion wie auch die didaktische Gestaltung steigt (2023, 35f.).
+
+
+<!-- PAGE 8 -->
+
 
 ## 5  Potenzielle Rollen generativer KI im Studium Sozialer Arbeit
 
@@ -125,11 +154,19 @@ Anna ist im letzten Semester ihres Studiums der Sozialen Arbeit und schreibt ihr
 
 5  Eine Übersicht zu aktuellen Entwicklungen und Leitfäden im Kontext von KI und Bildung bietet die Webseite https://www.unidigital.news/.
 
+
+<!-- PAGE 9 -->
+
+
 Konzepte und Schlüsselbegriffe. Darüber hinaus wird eine erste Gliederung generiert. (2)  Forschungsstand  und  Quellenanalyse:  Anna  verwendet  perplexity.ai  um  sich  den Forschungsstand aufbereiten zu lassen. Das Tool schlägt relevante Studien vor und hilft bei der Analyse der gefundenen Literatur. (3) Datenanalyse: Für die Analyse ihrer Interviews mit Fachkräften der Jugendsozialarbeit nutzt Anna NVivo. Die Software transkribiert die Interviews und identifiziert Schlüsselthemen und Muster, was Anna eine systematische Darstellung ihrer Ergebnisse ermöglicht. (4) T extgenerierung und -überarbeitung: ChatGPT unterstützt Anna bei der Strukturierung und Formulierung ihrer Texte. Sie gibt Gliederungspunkte und Stichworte ein und erhält Rohentwürfe für ihre Kapitel. Das Tool verbessert auch den Stil und korrigiert Grammatikfehler. (5) Plagiatsprüfung: Vor der Abgabe überprüft Anna ihre Arbeit mit Turnitin. Das Tool scannt die Arbeit und vergleicht sie mit einer umfangreichen Datenbank, um unbeabsichtigte Plagiate zu vermeiden.
 
 Im Hinblick auf wissenschaftliches Arbeiten kann generative KI in nahezu allen Phasen der Recherche, Informationsverarbeitung, Datenanalyse, Textproduktion, -überarbeitung und Endredaktion genutzt werden; dennoch ist eine gründliche Überprüfung des Ergebnisses notwendiger denn je. Die Ergebnisse können jedoch als Ausgangspunkt für weitere Überlegungen bzw. als Feedback dienen. Die eigentliche Erarbeitung eines Themas muss weiterhin mit Bezug auf wissenschaftliche Quellen und aktuelle Forschungsliteratur erfolgen. KI-Systeme können den Zugang zu aktuellen Forschungsdaten erleichtern und es ist davon auszugehen, dass zahlreiche spezifische KI-Modelle mit wissenschaftlichem Hintergrund entstehen werden. 6 Gleichwohl spiegeln KI-Tools nicht zwingend die Fachkultur wider - es kann somit auch zu deutlichen Verzerrungen von Problemwahrnehmung und -diskussion kommen, die dem wissenschaftlichen Stand nicht entsprechen. Darüber hinaus bleibt der Anspruch der Eigenständigkeit an die eigene Arbeit bestehen. Die Arbeit mit generativer KI lässt sich faktisch nicht als Plagiat darstellen, weil die Produkte der KI selbst Unikate sind. Und dennoch ist das Thema wissenschaftlicher Redlichkeit damit nicht vom Tisch. Für die Bewertung schriftlicher Studien- und Abschlussarbeiten werden sich neue Ansätze etablieren müssen, die die nicht nur das Endergebnis, sondern auch explizit den Prozess der Entstehung des Dokumentes berücksichtigen. Für diesen prozessualen Aspekt könnten mindestens zwei Kriterien in die Bewertung einfließen: (1) Der inhaltlich/methodische Aufbau im Sinne eines KI-basierten Forschungsdesigns und die Qualität der Forschungsfrage sowie (2) das dazu ausgewählte technische Tool-Design: Wann habe ich was zur Unterstützung meiner Fragestellung genutzt - inklusive einem deklarierten Prompting-Verzeichnis im Anhang, dass den Lern- und Forschungsprozess transparent macht (vgl. Weßels 2022).
 
 6  So entwickelt beispielsweise das Forschungszentrum Jülich mit Partnereinrichtungen der Helmholtz-Gemeinschaft eine neue Generation von KI-Grundlagenmodellen für die Wissenschaft.
+
+
+<!-- PAGE 10 -->
+
 
 ## 5.2  Generative KI als methodischer Übungspartner
 
@@ -140,6 +177,10 @@ Szenario 2: Rollenspiele zum Einüben von Beratungstechniken
 Studierende der Sozialen Arbeit üben die Methoden der Chatberatung durch ein Rollenspiel, bei dem ChatGPT als interaktiver Übungspartner eingesetzt wird. In spezifischen Beratungsszenarien simuliert ChatGPT eine ratsuchende Person, die verschiedene Herausforderungen oder Lebenssituationen präsentiert, während die Studierenden in der Rolle der Beratenden agieren (Es sind auch umgekehrte Szenarien denkbar, in denen Studierende sich in die Rolle von Adressat*innen begeben). Die Übung ermöglicht es den Studierenden in einem künstlichen, aber geschützten, Umfeld ihre kommunikativen Fähigkeiten, empathisches Verstehen und die Anwendung von Beratungstechniken und -methoden zu entwickeln. Durch das direkte Feedback von ChatGPT können  die  Lernenden  ihr  Handeln  in  Echtzeit  reflektieren  und  ggf.  anpassen. Diese Art des Rollenspiels bietet die Möglichkeit, praktische Onlineberatungs-erfahrungen zu sammeln und gleichzeitig die Grenzen und Möglichkeiten von KI in diesem Kontext zu erkunden. Wichtig ist hierbei vor allem, dass die Studierenden, angeleitet durch die Lehrenden, die simulierten Interaktionen kritisch auswerten und mit Erfahrungen in realen Beratungssituationen abgleichen.
 
 Zu  den  Kernkompetenzen  sozialarbeiterischen  Handelns  gehören  Empathie, ethische Urteilsfähigkeit und Kommunikationsfähigkeit. Es muss daher kritisch hinterfragt werden, inwieweit eine KI in der Lage ist, solche tief im menschlichen Erleben und im Interaktionsprozess verwurzelten Erfahrungen realistisch darstellen zu können. So wirken die Antworten von ChatGPT in der Ratsuchendenrolle beispielsweise stets sehr selbstreflektiert und kooperativ, was zu einer sehr eindimensionalen Lernerfahrung führen kann. Außerdem neigt die KI dazu Aussagen der  Beratenden  immer  wieder  zu  paraphrasieren  oder  selbst  in  eine  beratende Rolle zu schlüpfen. Eine Möglichkeit diese Verzerrungen zu verringern, zeichnet sich durch die Gestaltung eigener GPTs ab, denen spezifisches Verhalten antrainiert werden kann und die durch eigene Trainingsdaten (wie z. B. Chatprotokolle
+
+
+<!-- PAGE 11 -->
+
 
 von menschlichen Interaktionspartner:innen einer bestimmten Zielgruppe) den Bedürfnissen bestimmter Übungen angepasst werden können.
 
@@ -155,6 +196,10 @@ Zunächst erstellen die Studierenden ein detailliertes Konzept für den Bot und 
 
 Dieses  projektbasierte  Lernen  ermöglicht  es  den  Studierenden,  einen  virtuellen Prototypen zu entwickeln und umzusetzen. Darüber hinaus lernen Sie durch den gestalterischen Aspekt nicht nur die Chancen und Grenzen generativer KI in der Umsetzung neu kennen, sondern können diesen Entwicklungsprozess auch auf Methoden, Spezifika und Eigenheiten Sozialer Arbeit übertragen (Wie stelle ich Niedrigschwelligkeit her? Mit welchen Voraussetzungen und Bedarfslagen kommen die
 
+
+<!-- PAGE 12 -->
+
+
 Adressat:innen zu meinem Angebot? Wie kann ich den Hilfeprozess koproduktiv denken? etc.) Somit lässt sich auch der Wert von digitalen Zugängen für die Soziale Arbeit diskutieren, die über klassische Beratungssettings hinausgehen und unterschiedliche Hilfesettings und -arrangements in den Blick nehmen können (etwa spezifische Formen der Psychoedukation, der Vor- oder Nachsorge etc.).
 
 Diese drei Szenarien deuten nicht nur unterschiedlich gelagerte Anwendungskontexte an, sondern zeigen auch diverse (idealtypische) Funktions- und Akteurszuschreibungen: Während in der anfangs genannten Metapher des Werkzeuges noch auf die (vermeintliche) Instrumentalität der KI rekurriert wird, bedarf der dialogische Umgang in den o. g. Beispielen schon einer weitreichenderen selbst- und medienreflexiven Einordnung der gelieferten Ergebnisse der KI. Hier gilt es nicht nur die eigenen prompts kritisch zu prüfen, für bessere Ergebnisse anzupassen, sondern auch den Anteil des kooperativen Agenten zu betrachten. So zeigt sich etwa bei der akademischen Schreibassistenz schon ein erheblicher Anteil der KI am Arbeitsergebnis an. Die KI hat mitgeschrieben, korrigiert, inhaltliche Flanken gesetzt. Nicht nur mit Blick auf die Eigenständigkeit in der wissenschaftlichen Bearbeitung stellt sich  hier  die  Frage  nach  der  jeweiligen  Handlungs-  und  Verantwortungsträgerschaft von Mensch und Technik (Rammert 2007). Im Szenario des methodischen Übungspartners wird der KI eine gleichberechtigte (wenn auch nicht gleichwertige) Rolle und damit ein quasi-sozialer Agentenstatus in der Mensch-Technik Interkation zugeschrieben. Bei der Erstellung eigener Chatbots schließlich begeben sich die Studierenden in eine Simulationsumgebung, in der sie konzeptionell und kreativ lernen und durch die Modellierung nicht nur das interaktive Verhältnis von Mensch und Technik neu entdecken, sondern auch die Grenzen der 'sozialarbeitertischen Problembearbeitung' durch die KI identifizieren können.
@@ -162,6 +207,10 @@ Diese drei Szenarien deuten nicht nur unterschiedlich gelagerte Anwendungskontex
 ## 6  Hochschuldidaktische und curriculare Konsequenzen für das wissenschaftliche Studium Sozialer Arbeit
 
 Welche Konsequenzen ergeben sich in hochschuldidaktischer Hinsicht, wenn generative KI immer weiter in Wissenschaft, Studium und Beruf hineinragt? Doris Weßels (2022) fasst dies prägnant zusammen: 'Wir Lehrenden werden zu Architektinnen und Gestaltern des virtuellen […] und analogen Lernraums, wobei die Rolle der Lernbegleitung mit der Navigationsfunktion für die Lernenden und die Gestaltung des sozialen Raums von besonderer Relevanz sein werden' (o. S.). Durch die (Omni)Präsenz von generativer KI wird deutlich, dass die Rolle und auch der Anteil dieser Agenten in der Hochschulbildung nicht nur expliziter aufgegriffen werden muss, sondern dass es für Lehrenden wie Lernende gleichermaßen eines selbst- und medienreflexiven Umgangs bedarf. Auch als Lehrenden kommen wir nicht umhin
+
+
+<!-- PAGE 13 -->
+
 
 mit generativer KI arbeiten, um im Sinne unserer Wissenschaftsdisziplin eine Qualitätsabschätzung der generierten Antworten vornehmen zu können.
 
@@ -172,6 +221,10 @@ Was für curricularen Konsequenzen ergeben sich für ein wissenschaftliches Stud
 - 3) in allen genannten Einsatzbereichen wie auch in den gesellschaftlichen Rahmenbedingungen Sozialer Arbeit im Besonderen ist es wichtig, die Intransparenz generativer KI kritisch zu beleuchten. Dies umfasst sowohl ihre opake Datengrundlage als auch die nicht transparenten generativen Regeln. Zudem müssen das normierende und diskriminierende Potenzial, das zur datengetriebenen  Reproduktion  und  Verschärfung  sozialer  Ungleichheit  führen  kann, hervorgehoben werden. Folglich müssen die ethischen, sozialen und rechtlich problematischen Implikationen der Nutzung von KI in die Hochschuldidaktik und Soziale Arbeit eingebettet werden, um einer isolierten und affirmativen Nutzung entgegenzuwirken.
 
 Verantwortungsvoll mit der KI lernen heißt daher, (a) ihre materielle, ökonomische und rechentechnische Basis zu verstehen, (b) die heterogenen Vorausetzungen und Zugänge Lernender (und Lehrender) didaktisch zu beachten und (c) die Implikationen der Nutzung von generativer KI stetig zu vermitteln.
+
+
+<!-- PAGE 14 -->
+
 
 ## Literatur
 
@@ -192,6 +245,10 @@ Verantwortungsvoll mit der KI lernen heißt daher, (a) ihre materielle, ökonomi
 - Mollick, Ethan R./Mollick, Lilach (2023): Using AI to Implement Effective Teaching Strategies in Classrooms: Five Strategies, Including prompts. The Wharton School Research Paper. Online unter: http://dx.doi.org/10.2139/ssrn.4391243.
 - Weßels, Doris (2022): ChatGPT - ein Meilenstein der KI-Entwicklung. Online unter: https://www. forschung-und-lehre.de/lehre/chatgpt-ein-meilenstein-der-ki-entwicklung-5271 (Abrufdatum: 05.07.2024).
 - Witter, Stefanie/Meinhardt-Injac, Bozana/Siemer, Lutz/Späte, Julius (2024): ChatGPT im Studium der Sozialen Arbeit. Eine quantitative Studie zur Nutzung, Bewertung und Thematisierung in der Hochschule aus Studierendensicht. Potsdam: Fachhochschule Potsdam. Online unter: https://doi. org/10.34678/opus4-3382.
+
+
+<!-- PAGE 15 -->
+
 
 ## Autor:innen
 

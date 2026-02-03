@@ -1,10 +1,11 @@
 ---
 source_file: Mosene_2023_Feministische_Netzpolitik_und_Künstliche.pdf
-conversion_date: 2026-02-03T09:10:40.746588
+conversion_date: 2026-02-03T18:42:10.211465
 converter: docling
-quality_score: 100
+quality_score: 90
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## UNSERE SCHWERPUNKTEDEBATTESERVICE
@@ -23,6 +24,10 @@ Netzpolitik Feminismus, Künstliche Intelligenz
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Autor\_in:
 
 <!-- image -->
@@ -38,6 +43,10 @@ Zudem rückt gerade das Thema tradierter Rassismen, die grundlegender Teil einer
 ## FEMINISTISCHE NETZPOLITIK UND INNOVATIONEN
 
 Unsere Alltagsbegleiter heißen heute Siri und Alexa: eine Frau in der Hosentasche oder im Haushalt, die uns stets gefügig zur Seite steht.
+
+
+<!-- PAGE 3 -->
+
 
 Sprachassistenten sind uns als Künstliche Intelligenzen bekannt; doch die meisten hinterfragen nicht, warum es gerade weibliche Stimmen sind, die
 
@@ -57,6 +66,10 @@ Technik und Geschlecht stehen seit jeher in einem Wechselverhältnis: Technik ka
 
 Denn auch wenn es oberflächlich so aussieht, als erlaube uns die Digitalisierung zunehmend, unsere sozialen Rollen zu de- und neu zu konstruieren, lässt eine intersektionale feministische Perspektive daran zweifeln. Intersektionale Perspektiven nehmen ineinandergreifende, sich teils verstärkende Strukturen von Ungleichheit, Macht und Herrschaft in den Blick, und ein besonderer Fokus liegt dabei auf der wechselseitigen Konstitution von Rassismus und Sexismus in ihren gesellschaftsstrukturierenden Formen. Es geht also klassisch um das Sichtbarmachen und Anerkennen von mehrfach diskriminierten Gruppen. Als (Ausschluss-)Kategorien gelten race, class und gender, die in
 
+
+<!-- PAGE 4 -->
+
+
 Personen und Gruppen nicht selten als Mehrfachidentitäten zusammenfallen und in der Addition strukturelle
 
 Diskriminierungserfahrungen noch potenzieren (oft zusätzlich erweitert
@@ -72,6 +85,10 @@ Diskriminierungserfahrungen noch potenzieren (oft zusätzlich erweitert
 Digitale Assistenzsysteme, Smart-Home-Anwendungen und automatisierte Entscheidungssysteme basieren häufig auf Algorithmen der künstlichen Intelligenz. Wenn von Künstlicher Intelligenz (KI) gesprochen wird, ist meistens maschinelles Lernen (machine learning) gemeint; hierbei geht es um das 'Lernen' von Mustern aus vorgegebenen Datensamples, die auf neue, unbekannte Daten angewendet werden.
 
 Beispielsweise kann ein Algorithmus des maschinellen Lernens aus den als 'Spam' markierten E-Mails Muster zu erkennen lernen, um beim
+
+
+<!-- PAGE 5 -->
+
 
 nächsten Mal Spam-Mails direkt in den dazu passenden Ordner einzuordnen. Oder er kann 'lernen', zwischen Hunden- und Katzenfotos
 
@@ -91,6 +108,10 @@ Algorithmen des maschinellen Lernens werden in unterschiedlichen Bereichen einge
 
 Im Komplex Künstliche Intelligenz ist aber schon länger klar, dass diskriminierende Stereotype sich im Code manifestieren,[12] also mit in
 
+
+<!-- PAGE 6 -->
+
+
 den Bausatz von innovativen Technologien eingeschrieben werden. Es ist hinlänglich bekannt, dass biometrische Gesichtserkennung, die
 
 ##  MENÜ
@@ -106,6 +127,10 @@ und People of Colour zu identifizieren, da sie sich überwiegend auf Trainingsda
 'Machtstrukturen sind schon in der technischen Infrastruktur fest angelegt. Sie führen die Geschichte des Kolonialismus auch in der virtuellen Sphäre fort: in Gestalt des ,digitalen' oder ,elektronischen Kolonialismus'.'[14]
 
 Gebündelt als Big Data werden tradierte Ausschlusssysteme so implizit in den Code übersetzt. Ähnlich verhält es sich mit KI-Trainingsdatensätzen für autonome Fahrzeuge, die Trainingsdaten von nicht-normierten Körpern, etwa von Rollstuhlfahrer\_innen, nicht berücksichtigen.[15]
+
+
+<!-- PAGE 7 -->
+
 
 O-Ton Nushin Yazdani - AI Researcherin &amp; Chris Köver -
 
@@ -126,6 +151,10 @@ Hinzu kommen die Warenkreisläufe, die entlang der alten kolonialen Hierarchien 
 Auch in diesem Kontext aber formen sich Bewegungen und Allianzen, die den oben beschriebenen Entwicklungen entgegenwirken: Caroline
 
 ##  MENÜ
+
+
+<!-- PAGE 8 -->
+
 
 Sinders beschreibt mit ihrem 'Feminist Data Set'[17] die Utopie eines non-biased[18] Internet auf der Grundlage feministischer Datensätze.
 
@@ -150,6 +179,10 @@ Weiterführende Literaturhinweise zu diesem Thema finden Sie im Service-Bereich
 ## QUELLEN
 
 [1] Mehr dazu bei . Gierlinger, Marisa: Warum Tech-Konzerne der Gesic htserkennung abschören, in: sueddeutsche.de, 12.06.2020 [eingesehen a m 16.10.2020] 
+
+
+<!-- PAGE 9 -->
+
 
 [2] Siehe auch
 
@@ -178,6 +211,10 @@ Augenzwinkern verstanden werden müssen. Vgl. Kranzberg, Melvin: T echnology and
 - [8] Die österreichische Datenschutzbehörde stoppte das Projekt im August 2020 und fordert eine gesetzliche Grundlage; . mehr dazu lesen [eingesehen am 27.10.2020] 
 - [9] Zum Beispiel im Projekt hessenData, . mehr Informationen dazu [ein gesehen am 27.10.2020] 
 - [10] . Mehr Informationen zur Dialektanalyse [eingesehen am 27.10.202 0] 
+
+
+<!-- PAGE 10 -->
+
 
 [11] Mehr Informationen über den Einsatz von Gesichtserkennung
 
@@ -210,6 +247,10 @@ Verfahren zur Identifikation von Personen anhand ihres gesprochenen Wortes. . Di
 [17] Mehr zum Feminist Dataset [eingesehen am 27.10.2020]. 
 
 <!-- image -->
+
+
+<!-- PAGE 11 -->
+
 
 <!-- image -->
 

@@ -1,10 +1,11 @@
 ---
 source_file: Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.pdf
-conversion_date: 2026-02-03T08:59:45.499845
+conversion_date: 2026-02-03T18:30:32.392241
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## ORIGINAL ARTICLE
@@ -29,6 +30,10 @@ The author affiliations are listed at the end of the article.
 
 Dr. Heinz can be contacted at michael  .v.heinz@dartmouth  .edu or at the Center for Technology and Behavioral Health, Dartmouth College, 46 Centerra Pkwy, Lebanon, NH 03766.
 
+
+<!-- PAGE 2 -->
+
+
 health interventions at scale, although further research with larger clinical samples is needed to confirm their effectiveness and generalizability. (Funded by Dartmouth College; ClinicalTrials.gov number, NCT06013137.)
 
 ## Introduction
@@ -44,6 +49,10 @@ Recent  advances  in  computing  and  machine  learning now  allow  for  sophist
 Despite  significant  risks,  there  is  potential  benefit  from the  use  of  therapeutic  Gen-AI-powered  chatbots.  Paired with  existing  frameworks  for  DTx,  Gen-AI  chatbots  have unprecedented potential to address existing problems with engagement while powering the development of new and personalized  interventions.  Although  the  literature  supports  the  effectiveness  of  cognitive  behavioral  therapy (CBT)-based DTx and rule-based AI chatbots for depression and anxiety, and Gen-AI chatbots exhibit promise for addressing issues of accessibility, scalability, engagement, and  personalization  in  mental  health  care,  to  our  knowledge,  no  prior  RCTs  have  investigated  the  effectiveness and safety of a Gen-AI chatbot for the treatment of mental health symptoms. Beginning in 2019, we started developing Therabot, a Gen-AI chatbot trained using expertly written therapist-patient dialogues based on third-wave CBT, 23 integrating empirically grounded contextual and functional approaches  to  mental  health  problems.  Developed  with over 100,000 human hours comprising software development, training dialogue creation, and refinement, Therabot is designed to augment and enhance conventional mental health treatment services by delivering personalized, evidenced-based mental health interventions at scale.
 
 In this RCT, we examined Therabot's effectiveness for the treatment of major depressive disorder (MDD) symptoms, generalized  anxiety  disorder  (GAD)  symptoms,  and  clinically  high-risk  feeding  and  eating  disorder  (CHR-FED) symptoms in  a  large,  nationally  representative  sample  of
+
+
+<!-- PAGE 3 -->
+
 
 participants.  We  hypothesized  that  participants  assigned to  a  4-week  intervention  with  Therabot  would  measurably improve in mental health symptoms across all clinical domains relative to patients assigned to the waitlist control (WLC)  condition  at  both  postintervention  (4  weeks)  and follow-up (8 weeks). Furthermore, we hypothesized participants would demonstrate a high level of engagement with Therabot, rate Therabot positively, and develop a therapeutic alliance with Therabot.
 
@@ -69,6 +78,10 @@ Therabot  is  a  text-based  multithread  chat  application  for iOS and Android
 
 For the first 4 weeks, participants in the intervention group were  prompted  daily  to  engage  with  Therabot.  During the  subsequent follow-up phase (weeks 4-8), participants engaged with Therabot as frequently as they desired. The application allowed users to either initiate a session directly in the chat interface or to respond to scheduled notifications. In response to a user prompt, conversation history, and the most recent user message were combined and sent to the LLM.  Common  output  included  empathetic  responses, validation, targeted interventions, or questions prompting
 
+
+<!-- PAGE 4 -->
+
+
 Figure 1.  Key Design Features of the Therabot Application.
 
 <!-- image -->
@@ -84,6 +97,10 @@ Primary  outcome  measures  were  administered  to  both groups at baseline, pos
 The PHQ-9 sum score ranges from 0 to 27, with a decrease of  5  or  more  shown  to  constitute  a  clinically  meaningful change 30  and a score of 10 or more often used as a clinical threshold  for  MDD  screening.  The  GAD-Q-IV,  designed to assess GAD based on DSM-IV and DSM-5 criteria, can be scored via binary criterion method or a total sum score ranging from 0 to 13. The WCS score ranges from 0 to 100 and constitutes a mean of five Likert-style items, normalized from 0 to 100. 29  Although the PHQ-9 has established clinically  meaningful  change  thresholds,  the  GAD-Q-IV and WCS have not; therefore, we use Cohen's d values for primary effect sizes, given their widespread use in evaluating psychiatric trials.
 
 Secondary outcomes included therapeutic alliance (Working Alliance Inventory - Short Revised 31  [WAI-SR]), engagement with Therabot (number of messages sent), and satisfaction  with  Therabot  (self-developed  survey).  Each domain of the WAI-SR (goal, task, and bond) is scored as the
+
+
+<!-- PAGE 5 -->
+
 
 mean of four Likert-style items, resulting in a score range of 1-5. Additional details on the primary and secondary outcomes are presented in the Supplementary Appendix.
 
@@ -106,6 +123,10 @@ To  address  the ordinal, nonequidistant  nature  in the response categories of 
 where  Y  represents  the  ordinal  outcome  (MDD,  GAD,  or WCS  score), j denotes  the  threshold  category, α j are  the threshold parameters, and β 1 , β 2 , and β 3 are the fixed-effect coefficients  for  time,  group,  and  their  interaction,  respectively. The coefficients of primary interest are the β 3 terms representing the differential  change  between  groups  from baseline at each follow-up time point. Here, u ID signifies the random  intercepts  for  the  participants.  Odds  ratios  were calculated from these estimates, and effect sizes were calculated  using  d=log(OR)×sqrt(3)/ π . 32 All  Cohen's  d  effect sizes were calculated between groups representing differential  change. The effect sizes are unbounded. All treatment effects reported in our analyses are marginal effects derived from CLMMs. These models provide predicted probabilities for each possible outcome score under each condition (treatment/control)  at  each  time  point.  To  obtain  interpretable statistics, we drew 10,000 samples from these model-predicted probability distributions, which provided stable estimates of means and standard deviations rather than using raw  scores. 33,34   For  example,  with  depression  symptoms (PHQ-9), the model predicts the probability of each possible score (0-27) for both groups at baseline, postintervention  and  follow-up.  The  change  scores  were  calculated  by comparing these sampled distributions across time points. This approach allows us to honor the ordinal nature of our measures while also providing clinically meaningful statistics,  with  effect  sizes  computed  directly  from  the  model's log-odds ratios and supporting statistics (means, standard deviations  [SDs])  derived  from  the  sampling  procedure. To control for multiple comparisons across our six primary end points (three outcomes measured at two time points), we  implemented  the  Holm-Bonferroni  sequential  procedure for familywise error rate control. Adjusted P values are reported for all primary analyses (see Table 1).
 
 Descriptive results for working alliance and user satisfaction were visualized using box plots. In each plot, the box represents the interquartile range (IQR), with the median presented as a horizontal line. Whiskers extend to the smallest and largest values within 1.5×IQR from the hinges. Data beyond the whiskers are plotted as individual outliers.
+
+
+<!-- PAGE 6 -->
+
 
 | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   | Table 1. Mean Primary Outcomes (Standard Deviation) at Each Observation Time Point across the Study.*   |
 |---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
@@ -147,6 +168,10 @@ Participants receiving the Therabot intervention showed large and greater improv
 ## Generalized Anxiety Disorder Symptoms
 
 Similar  patterns  of  improvement  were  observed  for  anxiety  symptoms  (Table  1),  where  participants  receiving the Therabot intervention showed a large and differential response in anxiety symptoms across both postintervention and follow-up. The mean change (SD) in GAD-Q-IV score from baseline to postintervention was -2.32 (3.55) in the
+
+
+<!-- PAGE 7 -->
+
 
 | Table 2. Baseline Characteristics of the Study Sample (N=210), by Intervention Group (n=106) and Waitlist Control Group (n=104).*   | Table 2. Baseline Characteristics of the Study Sample (N=210), by Intervention Group (n=106) and Waitlist Control Group (n=104).*   | Table 2. Baseline Characteristics of the Study Sample (N=210), by Intervention Group (n=106) and Waitlist Control Group (n=104).*   | Table 2. Baseline Characteristics of the Study Sample (N=210), by Intervention Group (n=106) and Waitlist Control Group (n=104).*   |
 |-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -200,6 +225,10 @@ intervention group and -0.13 (4.00) in the control group. The change from baseli
 
 The intervention group showed significantly greater improvements in weight concerns than the control group, exhibiting  a  large  differential  response  across  both  time points, with comparisons remaining significant after adjusting for multiple comparisons. The mean change (SD) in WCS score from baseline to postintervention was -9.83 (14.37)  in  the  intervention  group  and  -1.66  (14.29)  in the control group. The change from baseline to follow-up was -10.23 (14.70) in the intervention group and -3.70 (14.65) in the control group. (Fig. 3, Row 3).
 
+
+<!-- PAGE 8 -->
+
+
 Figure 2.  CONSORT Flow Diagram Showing Movement of Participants through the Study, with Associated Counts.
 
 <!-- image -->
@@ -220,6 +249,10 @@ mean score for Goal was 3.59 (1.35). Box plots for working alliance scores are d
 
 The user satisfaction survey was offered to all those in the treatment group who used Therabot, with 96 participants completing the survey. Participants rated their experience
 
+
+<!-- PAGE 9 -->
+
+
 Figure 3.  Distributions Representing Smoothed Probability of Changes in Clinical Outcomes (Depression, Anxiety, Weight Concerns, Row-Wise) Postintervention (4 Weeks, Left Column) and at Follow-Up (8 Weeks, Right Column).
 
 <!-- image -->
@@ -236,6 +269,10 @@ Of participants randomly assigned to the Therabot group, 101  (95%)  interacted 
 
 As  the  first  RCT  of  its  kind,  our  study  supports  the  feasibility,  acceptability,  and  effectiveness  of  a  fine-tuned, fully  GenAI-powered chatbot for treating  mental  health
 
+
+<!-- PAGE 10 -->
+
+
 Figure 4.  Box Plots of Aggregate Working Alliance Inventory Subscale Scores with Average Subscale Score (Right).
 
 <!-- image -->
@@ -245,6 +282,10 @@ Box plots display the median (line), interquartile range (IQR) (box), and values
 symptoms.  Users  demonstrated  sustained  engagement and  rated  their  alliance  with  Therabot  as  comparable to  human  therapists  during  the  4-week  trial.  Critically, as  compared  with  the  WLC,  Therabot  users  showed  a greater  reduction  in  depression,  anxiety,  and  CHR-FED symptoms at postintervention (4 weeks) and at follow-up (8  weeks).  We posit that Therabot's success is driven by three main factors. First, akin to effective rule-based conversational agents, 18  Therabot is rooted in evidence-based psychotherapies  for  anxiety, 35   depression, 36   and  weight concerns. 37   Second,  users  had  unrestricted  access  to Therabot,  allowing  for  any  time-anywhere  interactions. Notably,  the  ability  to  access  therapeutic  support  when most needed, regardless of the time or location, may be one  of  the  most  significant  advantages  of  DTx.  Third, unlike  existing  chatbots  for  mental  health  treatment, Therabot  was  powered  by  Gen-AI,  allowing  for  natural, highly personalized, open-ended dialogue. Moreover, we argue that the Gen-AI approach promoted the therapeutic  alliance,  a  critical  nonspecific  mediator  of  change  in psychotherapy. 38  Although some evidence supports developing a therapeutic alliance with rule-based agents, 19  we see such a bond as inherently limited compared with that possible  with  Gen-AI-powered  agents;  Gen-AI  provides greater  capacity  for  personalized  adaptation  and  more closely resembles human-human interaction. Our results suggest  that,  within  4  weeks,  participants  were  able  to develop a working alliance comparable to that shown in an outpatient psychotherapy sample, 32  with use at consistently high rates.
 
 Although  existing  companion  Gen-AI  chatbots  can  be highly engaging, they are not trained or evaluated for treating  clinical-level  mental  health  symptoms.  Such  chatbots may also be compromised by competing interests, such as user engagement or profit, which may be at odds with best practices for treatment. 39  Therefore, Gen-AI conversational agents tailored to integrate both evidence-based techniques and important nonspecific factors contributing to psychotherapy  outcomes  represent  a  significant  opportunity  to provide scalable, on-demand, and effective mental health treatment.  The  nascency  of  Gen-AI  and  associated  risks have likely contributed to the absence of a clinically validated Gen-AI chatbot for mental health treatment. Indeed,
+
+
+<!-- PAGE 11 -->
+
 
 Figure 5.  Box Plots Showing the Distribution of User Ratings across Satisfaction Variables.
 
@@ -257,6 +298,10 @@ We emphasize the need to understand Gen-AI's potential role and risks associated
 Our results have important implications, forming the early foundational  evidence  for  the  use  of  fine-tuned  Gen-AIpowered  chatbots  in  mental  health  treatment.  Therabot shows promise as a means to scale evidence-based therapies in a way that maintains a high degree of personalization and engagement. Furthermore, our approach enables novel  translations  of  therapeutic  techniques  that  are  not possible in rule-based agents. Consider, for instance, detailed and personalized imaginal exposures prompted by Gen-AI agents. Interventions dependent on the therapeutic alliance or specific patient-therapist interactions may also benefit from the integration of Gen-AI chatbots.
 
 Our  study  has  notable  strengths,  including  a  nationally recruited, demographically diverse, moderate sample size. Furthermore, unlike many digital mental health studies, 41 Therabot ran on both Android and iOS devices, increasing generalizability.  However,  we  also  acknowledge  several limitations.  First,  given  our  recruitment  strategy,  there was  potential  for  selection  bias  toward  younger,  more technologically minded participants who were open to AI.
+
+
+<!-- PAGE 12 -->
+
 
 Figure 6.  Heat Map Representing User Engagement across Days in the Study ( x -Axis), by Participant ( y -Axis)
 
@@ -275,6 +320,10 @@ Author  disclosures  and  other  supplementary  materials  are  available  at ai
 Supported by Dartmouth College.
 
 We are  extraordinarily  grateful  for  the  efforts  of  the  many  dedicated people who made Therabot possible. We thank those who contributed
+
+
+<!-- PAGE 13 -->
+
 
 in  meaningful  ways  to  the  creation  and  curation  of  training  data, including  Victor  A.  Moreno,  Chloe  S.  Park,  Jimena  Abejon  Fuertes, Jonathan  J.  Cartwright,  Anna  C.  St.  Jean,  Erica  L.  Simon,  Isabel  R. Hillman,  Enoc  A.  Garza,  Alexandra  N.  Limb,  Dawson  D.  Haddox, Mingyue  Zha,  Camilla  M.  Lee,  Rachita  Batra,  MK  Song,  Cameron M.  Hasund,  Avijit  Singh,  Daniel  W.  Shen,  Rachel  E.  Quist,  Kaitlyn  I. Romanger,  Chaehyun  Lee,  Anjali  G.  Dhar,  Ivy  N.  Mayende,  Eleanor M.  Rodgers,  Rachel  Zhang,  Jenny  Song,  Veronica  E.  Abreu,  Russell T.  Rapaport,  Mary  M.  Basilious,  Sofia  M.  Yawand-Wossen,  Nathan  J. Kung,  Jenny  Y.  Oh,  Ashna  J.  Kumar,  Eda  Naz  Gokdemir,  Janelle  E. Annor,  Ganza,  Belise  Aloysie  Isingizwe,  Chloe  N.  Malave,  Ezinne  E. Anozie,  Tara  L.  Karim,  Nhi  D.  Nguyen,  Krista  E.  Schemitsch,  Helen M.  Young,  Mia  G.  Russo,  Rachel  E.  Quist,  Tonya  I.  Tolino,  Mckenzi B.  Popper,  Daniel  G.  Amoateng,  and  Dr.  Seo  Ho  (Michael)  Song.  We thank those who contributed in meaningful ways to the software development, including Jason Kim, John F. Keane, Dr. George D. Price, Dr. Matthew  D.  Nemesure,  Ore  E.  James,  Caroline  C.  Hall,  Brendan  W. Keane,  Lisa  Aeri  Oh,  Ly  H.  Nguyen,  Dr.  William  R.  Haslett,  Vivian N.  Tran,  Alexander  M.  Ye,  Atziri  Enriquez,  Sarah  M.  Chacko,  Sofia Jayaswal,  D.J.  M.  Matusz,  Jose  Hernandez  Barbosa,  Alyssia  M.  Salas, Ella  J.  Gates,  and  Tianwen  Chen.  We  thank  the  team  from  Amazon Web  Services  (AWS),  especially  Stefan  Mationg  and  Dr.  Jianjun  Xu, who provided valuable technical support for Therabot.
 
@@ -310,6 +359,10 @@ All participants provided informed written consent prior to their participation.
 16.   Breuer J, Freud S. Studies on hysteria. Oxford: Basic Books, 1957.
 17.    Weizenbaum J. ELIZA - a computer program for the study of natural language communication between man and machine. Commun ACM 1966;9:36-45. DOI: 10.1145/365153.365168.
 18.   Fitzpatrick  KK,  Darcy  A,  Vierhile  M.  Delivering  cognitive  behavior  therapy  to  young  adults  with  symptoms  of  depression  and anxiety  using  a  fully  automated  conversational  agent  (Woebot):  a randomized controlled  trial.  JMIR  Ment  Health  2017;4:e19.  DOI: 10.2196/mental.7785.
+
+
+<!-- PAGE 14 -->
+
 
 19.   Darcy  A,  Daniels  J,  Salinger  D,  Wicks  P,  Robinson  A.  Evidence  of human-level bonds established with a digital conversational agent: cross-sectional, retrospective observational study. JMIR Form Res 2021;5:e27868. DOI: 10.2196/27868.
 20.   Gill SS, Kaur R. ChatGPT: vision and challenges. Internet Things Cyber-Phys Syst 2023;3:262-271. DOI: 10.1016/j. iotcps.2023.05.004.

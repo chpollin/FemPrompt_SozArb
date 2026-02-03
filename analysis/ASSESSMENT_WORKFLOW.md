@@ -229,4 +229,4 @@ For issues or questions:
 
 *Version: 1.0*
 *Last Updated: 2025-09-29*
-*Part of: FemPrompt Research Pipeline*
+*Part of: Literature Review Research Pipeline*

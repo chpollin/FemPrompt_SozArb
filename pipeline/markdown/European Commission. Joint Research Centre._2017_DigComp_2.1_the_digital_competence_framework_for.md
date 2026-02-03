@@ -1,10 +1,11 @@
 ---
 source_file: European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.pdf
-conversion_date: 2026-02-03T08:55:17.343213
+conversion_date: 2026-02-03T18:25:59.263239
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 B
 
 5
@@ -23,6 +24,10 @@ Authors: Stephanie Carretero, Riina Vuorikari and Yves Punie
 
 Joint Research Centre
 
+
+<!-- PAGE 2 -->
+
+
 - DigComp 2.1
 
 ## The Digital Competence Framework for Citizens
@@ -30,6 +35,10 @@ Joint Research Centre
 ## With eight proficiency levels and examples of use
 
 Authors: Stephanie Carretero, Riina Vuorikari and Yves Punie
+
+
+<!-- PAGE 3 -->
+
 
 This publication is a Science for Policy report by the Joint Research Centre (JRC), the European Commission's science and knowledge service. It aims to provide evidence-based scientific support to the European policymaking process. The scientific output expressed does not imply a policy position of the European Commission. Neither the European Commission nor any person acting on behalf of the Commission is responsible for the use that might be made of this publication.
 
@@ -82,7 +91,15 @@ DigComp 2.1: The Digital Competence Framework for Citizens with eight proficienc
 
 DigComp 2.1 is a further development of the Digital Competence Framework for Citizens. Based on the reference conceptual model published in DigComp 2.0, we present now eight proficiency levels and examples of use applied to the learning and employment field.
 
+
+<!-- PAGE 4 -->
+
+
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 ## Preface
 
@@ -93,6 +110,10 @@ The European Digital Competence Framework for Citizens 1 ,  also  known  as  Dig
 The current version is labelled DigComp 2.1 and it focuses on expanding the initial three proficiency levels to a more fine-grained eight level description as well as providing ex -amples of use for these eight levels. Its aim is to support stakeholders with the further implementation of DigComp.
 
 Other related JRC works on capacity building for the digital transformation of education and learning and for changing requirements on skills and competences has focussed on the development of:
+
+
+<!-- PAGE 6 -->
+
 
 - digital competence frameworks for educators (DigCompEdu),
 - educational organisations ( DigCompOrg ),
@@ -130,7 +151,15 @@ DG JRC Unit Human Capital and Employment European Commission
 
 -
 
+
+<!-- PAGE 7 -->
+
+
 <!-- image -->
+
+
+<!-- PAGE 8 -->
+
 
 Section 1
 
@@ -162,6 +191,10 @@ Competence area 1: information and data literacy Competence area 2: communicatio
 
 40
 
+
+<!-- PAGE 9 -->
+
+
 ## Introduction Section 1
 
 The report presents the latest version of the Digital Competence Framework for Citizens (DigComp) 2   which was elaborated by the Human Capital and Employment Unit (Joint Research Centre) on behalf of the Directorate General for Employment, Social Affairs and Inclusion of the European Commission.
@@ -185,6 +218,10 @@ Section 2 of this report explains the eight proficiency levels and describes the
 
 4 DigComp 2.1 does not include an update of dimension 4,  we prefer focusing on proving examples of use applied to the field of employment and learning due to their policy relevance.
 
+
+<!-- PAGE 10 -->
+
+
 | DigComp 2.0 (year 2016)            | DigComp 2.0 (year 2016)                                                                                                                                                                                                                                         | DigComp 2.1 (year 2017)                                 | DigComp 2.1 (year 2017)                                                                                           |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
 | Competence areas (dimension 1)     | Competences (dimension 2)                                                                                                                                                                                                                                       | Proficiency levels (dimension 3)                        | Examples of use (dimension 5)                                                                                     |
@@ -192,6 +229,10 @@ Section 2 of this report explains the eight proficiency levels and describes the
 | 2. Communication and collaboration | zenship through digital technologies 2.4 Collaborating through digital technol- ogies 2.5 Netiquette 2.6 Managing digital identity 3.1 Developing digital content 3.2 Integrating and re-elaborating digital content 3.3 Copyright and licences 3.4 Programming | Eight proficiency levels for each of the 21 competences | Examples of use of the eight proficiency levels applied to learning and employment scenario in the 21 competences |
 | 3. Digital content creation        | 4.1 Protecting devices 4.2 Protecting personal data and privacy 4.3 Protecting health and well-being 4.4 Protecting the                                                                                                                                         | Eight proficiency levels for each of the 21 competences | Examples of use of the eight proficiency levels applied to learning and employment scenario in the 21 competences |
 | 4. Safety 5. Problem solving       | environment 5.1 Solving technical problems 5.2 Identifying needs and technological responses 5.3 Creatively using digital technologies 5.4 Identifying digital competence gaps                                                                                  | Eight proficiency levels for each of the 21 competences | Examples of use of the eight proficiency levels applied to learning and employment scenario in the 21 competences |
+
+
+<!-- PAGE 11 -->
+
 
 ## The eight proficiency levels and examples of Section 2
 
@@ -202,6 +243,10 @@ DigComp 1.0 Framework had three proficiency levels in Dimension 3 (foundation, i
 Eight proficiency levels for each competence have been defined through learning out -comes (using action verbs, following Bloom's taxonomy) and inspired by the structure and vocabulary of the European Qualification Framework (EQF). Moreover, each level description contains knowledge, skills and attitudes, described in one single descriptor for each level of each competence; this equals to 168 descriptors (8 x 21 learning out -comes). An online validation survey helped to revise a first version of the levels, and to produce a final version.
 
 As shown in Table 1 on the following page, each level represents a step up in citizens' acquisition of the competence according to its cognitive challenge, the complexity of the tasks they can handle and their autonomy in completing the task. To illustrate this point, we could say that a citizen at level 2 is able to remember and to carry out a simple task with help from somebody with digital competence only when she/he needs it. A citizen at level 5, however, can apply the knowledge, carry out different tasks and solve prob -lems and also helps others to do so. We can also see that the first six proficiency levels of the new Framework are linked to the three levels originally identified in DigComp 1.0. A new highly-specialised level has been added to the latest version of the Framework which includes levels seven and eight. The information in Table 1 (page 13) is graphically represented on the infographics on page 14 and 15.
+
+
+<!-- PAGE 12 -->
+
 
 Table 1: Main keywords that feature the proficiency levels
 
@@ -215,6 +260,10 @@ Table 1: Main keywords that feature the proficiency levels
 | Advanced                | 6 6                     | Most appropriate tasks                                       | Able to adapt to others in a complex context                               | Evaluating         |
 | Highly specialised      | 7 7                     | Resolve complex problems with limited solutions              | Integrate to contribute to the professional prac- tice and to guide others | Creating           |
 | Highly specialised      | 8 8                     | Resolve complex problems with many interacting factors       | Propose new ideas and pro- cesses to the field                             | Creating           |
+
+
+<!-- PAGE 13 -->
+
 
 Level 1
 
@@ -265,6 +314,10 @@ INDEPENDENTAND
 ACCORDINGTOMYNEED
 
 UNDERSTANDING
+
+
+<!-- PAGE 14 -->
+
 
 Advanced
 
@@ -332,6 +385,10 @@ PROCESSESTOTHEFIELD
 
 CREATING
 
+
+<!-- PAGE 15 -->
+
+
 The Figure 1 below gives a detailed explanation of how the competences are presented in the Section 3 of this report.
 
 - The Competence Areas (dimension 1) and their Competence title and Competence descriptor (dimension 2) appear on the vertical banner, which colour changes depending on the Competence area.
@@ -341,6 +398,10 @@ The Figure 1 below gives a detailed explanation of how the competences are prese
 Figure 1: Explanation how the competences are presented
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 The examples of use (dimension 5 of the framework) have also been updated and contextualised in scenarios for two areas of use: employment and learning .  These illustrate the eight proficiency levels to help future implementation of DigComp 2.1.
 
@@ -356,9 +417,17 @@ The progression of the proficiency levels of the competences, their learning out
 
 5 We do not provide examples for all the proficiency levels, because the nature of the framework is descriptive and their aim is to illustrate the proficiency levels.
 
+
+<!-- PAGE 17 -->
+
+
 Here comic strips have been used in order to showcase one example of use for an em -ployment scenario and one example of use for a learning scenario in competence 1.1.
 
 Concretely, the comic strips allow the reader to easily understand the progression in the acquisition of a digital competence, and therefore it is a support for the stakeholders willing to implement the framework.
+
+
+<!-- PAGE 18 -->
+
 
 "
 
@@ -520,6 +589,10 @@ I can create new apps or platforms for browsing, searching and filtering job por
 
 <!-- image -->
 
+
+<!-- PAGE 19 -->
+
+
 ## Proficiency Levels
 
 ## Examples of use
@@ -660,6 +733,10 @@ At highly specialised level, I can:
 
 <!-- image -->
 
+
+<!-- PAGE 20 -->
+
+
 ## Section 3
 
 ## The competences
@@ -704,7 +781,15 @@ This section shows each competence of DigComp 2.1 in a table with four dimension
 
 <!-- image -->
 
+
+<!-- PAGE 21 -->
+
+
 <!-- image -->
+
+
+<!-- PAGE 22 -->
+
 
 "
 
@@ -814,6 +899,10 @@ At the most advanced and specialised level, I can:
 - create solutions to solve complex problems with many interacting factors that are related to browsing, searching and filtering data, information and digital content.
 -  propose new ideas and processes to the field.
 
+
+<!-- PAGE 23 -->
+
+
 Proficiency Levels
 
 Examples of use
@@ -900,6 +989,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 24 -->
+
+
 "
 
 Proficiency Levels
@@ -975,6 +1068,10 @@ At highly specialised level, I can:
 8
 
 At the most advanced and specialised level, I can: · create solutions to solve  complex problems with many interacting factors that are  related to managing data, information, and content for their organisation, storage and retrieval in a structured digital environment. ·  propose new ideas and processes to the field.
+
+
+<!-- PAGE 25 -->
+
 
 Proficiency Levels
 
@@ -1072,6 +1169,10 @@ At the most advanced and specialised level, I can:
 ·  propose new ideas and processes to the field.
 
 "
+
+
+<!-- PAGE 26 -->
+
 
 "
 
@@ -1173,6 +1274,10 @@ At the most advanced and specialised level, I can:
 - create solutions to solve complex problems with many interacting factors that are related to sharing through digital technologies.
 -  propose new ideas and processes to the field.
 
+
+<!-- PAGE 27 -->
+
+
 Proficiency Levels
 
 Examples of use
@@ -1262,6 +1367,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 28 -->
+
+
 "
 
 Proficiency Levels
@@ -1343,6 +1452,10 @@ At the most advanced and specialised level, I can:
 · create solutions to solve  complex problems with many interacting factors that are related to using collaborative processes and co-construction and co-creation of data, resources and knowledge through digital tools and technologies.
 
 ·  propose new ideas and processes to the field.
+
+
+<!-- PAGE 29 -->
+
 
 generational diversity in digital environments.
 
@@ -1441,6 +1554,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 30 -->
+
+
 "
 
 Proficiency Levels
@@ -1529,6 +1646,10 @@ At the most advanced and specialised level, I can:
 I can propose to my boss a new social media procedure that avoids actions which could harm our company's digital reputation (e.g. spam) when promoting the company's events.
 
 I can propose a new procedure to my school that avoids the publication of digital content (texts, pictures, videos), that can harm the students' reputation.
+
+
+<!-- PAGE 31 -->
+
 
 Proficiency Levels
 
@@ -1619,6 +1740,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 32 -->
+
+
 "
 
 Proficiency Levels
@@ -1688,6 +1813,10 @@ At highly specialised level, I can:
 8
 
 At the most advanced and specialised level, I can: · create solutions to solve  complex problems with many interacting factors that are  related to modifying, refining, improving and in -tegrating new content and information into existing knowledge  to create new and original ones. ·  propose new ideas and processes to the field.
+
+
+<!-- PAGE 33 -->
+
 
 Proficiency Levels
 
@@ -1781,6 +1910,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 34 -->
+
+
 "
 
 Proficiency Levels
@@ -1860,6 +1993,10 @@ At highly specialised level, I can:
 At the most advanced and specialised level, I can: · create solutions to solve complex problems with many interacting factors that are related to planning and developing instructions for a computing system and performing a task using a computing system.
 
 ·  propose new ideas and processes to the field.
+
+
+<!-- PAGE 35 -->
+
 
 Proficiency Levels
 
@@ -1966,6 +2103,10 @@ At the most advanced and specialised level, I can:
 -  propose new ideas and processes to the field.
 
 "
+
+
+<!-- PAGE 36 -->
+
 
 "
 
@@ -2074,6 +2215,10 @@ At the most advanced and specialised level, I can:
 - create solutions to solve complex problems with many interacting factors that are related  to protecting personal data and privacy in digital environments, using and sharing personally identifiable information protecting self and others from dangers, and privacy policies to use my personal data.
 -  propose new ideas and processes to the field.
 
+
+<!-- PAGE 37 -->
+
+
 Proficiency Levels
 
 Examples of use
@@ -2164,6 +2309,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 38 -->
+
+
 "
 
 Proficiency Levels
@@ -2229,6 +2378,10 @@ At the most advanced and specialised level, I can:
 I can create an illustrated video which answers questions on the sustaina -ble use of digital devices in organisations of my sector, to be shared on Twitter, and to be used by staff and by other professionals in the sector.
 
 I can create a new eBook to answer questions on the sustainable use of digital devices at school and home, and share it on my school's digital learning platform in order to be used by other schoolmates and their families.
+
+
+<!-- PAGE 39 -->
+
 
 Proficiency Levels
 
@@ -2361,6 +2514,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 40 -->
+
+
 "
 
 Proficiency Levels
@@ -2457,6 +2614,10 @@ At the most advanced and specialised level, I can:
 
 - create solutions to solve complex problems with many interacting factors using digital tools and possible technological responses, and to adapt and customise digital environments to personal needs.
 -  I can propose new ideas and processes to the field.
+
+
+<!-- PAGE 41 -->
+
 
 problem situations in digital environments.
 
@@ -2559,6 +2720,10 @@ At the most advanced and specialised level, I can:
 
 "
 
+
+<!-- PAGE 42 -->
+
+
 "
 
 and to keep up-to-date with the digital evolution.
@@ -2656,6 +2821,10 @@ At the most advanced and specialised level, I can:
 - create solutions to solve  complex problems with many interacting factors that are  related to improving digital competence, and to find opportunities for self-development and to keep up-to-date with the digital evolution.
 -  propose new ideas and processes to the field.
 
+
+<!-- PAGE 43 -->
+
+
 ## Europe Direct is a service to help you find answers to your questions about the European Union.
 
 ## Freephone number (*): 00 800 6 7 8 9 10 11
@@ -2679,6 +2848,10 @@ More information on the European Union is available on the internet (http://euro
 ## Priced publications:
 
 - via EU Bookshop (http://bookshop.europa.eu).
+
+
+<!-- PAGE 44 -->
+
 
 <!-- image -->
 

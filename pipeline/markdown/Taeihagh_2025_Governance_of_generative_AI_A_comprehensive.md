@@ -1,10 +1,11 @@
 ---
 source_file: Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.pdf
-conversion_date: 2026-02-03T09:26:15.061659
+conversion_date: 2026-02-03T18:57:17.732918
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Governance of Generative AI
@@ -23,6 +24,10 @@ Keywords: governance; artificial intelligence; AI; generative AI; GenAI
 
 In 2021, Policy and Society published a special issue on the governance of artificial intelligence (AI) (Taeihagh, 2021). The special issue highlighted the governance challenges related to the rapid development of narrow AI and its increased range of adoption in diverse sectors, highlighting the need for the government to manage the scale and speed of socio-technical transitions occurring because of it (Taeihagh et al., 2021). The 2021 special issue emphasized that, while new applications of AI have the potential to increase quality of life and economic efficiency, they have also triggered changes that are threatening existing markets and social and political orders. This is because the heightened pace of adoption of AI in various domains, such as autonomous vehicles, lethal weapon systems, and robotics, can cause unexpected and unintended consequences that need to be addressed by governments. At the time, the special issue underlined gaps and challenges related to the governance of AI, emerging governance responses, and the need to build policy capacity and address the legal and regulatory challenges of AI.
 
+
+<!-- PAGE 2 -->
+
+
 Since then, there have been significant advancements in generative AI that merit further scrutiny. AI is rapidly penetrating various sectors and is driving some of the most groundbreaking scientific discoveries, as evidenced by the 2024 Nobel Prizes in Physics and Chemistry. Meanwhile, the literature on the governance of AI is-while emerging-still significantly underdeveloped relative to the developments in the field. Building on the success of the previous special issue, this special issue focuses on the governance of generative AI, examining complex and multifaceted challenges related to the development, deployment, and impacts of generative AI. With the successful public release of ChatGPT in November 2022, a new AI spring has begun. Generative AI is transforming industries and has since facilitated content creation and writing, art and synthetic media, data analysis, coding and debugging code, personalized education, product design, game design, scientific discoveries, etc. However, it is important to point out that this technology is not without risks and raises social and ethical concerns around trust, intellectual property rights (IPR), bias, discrimination, and the potential for misuse in creating and spreading deepfakes or disinformation (Abbas &amp; Taeihagh, 2024; Chesterman, 2025; Jaidka et al., 2024). In the longer-term, generative AI can have profound impacts on labor markets and the future of employment, increasing inequality and highlighting the need for reskilling, upskilling, and support from the state (Oder &amp; Béland, 2025). It also affects the creative sector by eroding human creativity and originality, raising questions about the future of creative pursuits (Chesterman, 2025). Additionally, it raises concerns related to individuals, cybersecurity, and national security. Deepfakes can be used for defamation, fraud through impersonation, extortion, non-consensual pornography, and personalized malicious campaigns. Furthermore, generative AI tools can facilitate the automation of malware creation and even the development of weapons of mass destruction and autonomous weapon systems by assisting malicious actors via automation and/or sharing of sensitive information. Lastly, some researchers believe that the current loosely controlled development of these systems can lead to uncontrollable or hostile artificial general intelligence, although others are skeptical about this possibility (Goertzel, 2023; Judge et al., 2025; Russell, 2023).
 
 Given the high levels of technological and economic uncertainty surrounding the development of generative AI, the governance of generative AI is of paramount importance to ensure such systems' ethical and responsible use and to ensure that, while a few companies like OpenAI,  Anthropic, Microsoft, and Google benefit from these technologies the most, the risks are not just transferred to society and governments (Khanal et al., 2025).
@@ -36,6 +41,10 @@ This special issue highlights the complex challenges involved in the governance 
 The early success of AI was primarily due to a focus on symbolic reasoning and rule-based systems, but machine learning (ML) and neural networks have gained prominence more recently. ML is a subfield of AI that focuses on developing algorithms that learn from vast amounts of data and make decisions without reliance on pre-programmed rules to do so for each task. As ML relies more on the data than preprogrammed rules, it is more difficult to predict the decisions of these systems in advance (Mittelstadt et al., 2016).
 
 Generative AI can be defined as a category of AI systems that create new content (text, images, audio, or video) based on inputs, leveraging ML, particularly generative adversarial networks (GANs),
+
+
+<!-- PAGE 3 -->
+
 
 variational autoencoders (VAEs), large language models (LLMs), and diffusion models. GANs use a twopart architecture of generators and discriminators that compete against each other in an adversarial process to generate outputs (Creswell et al., 2018; Goodfellow et al., 2014, 2020). VAEs learn from a compressed probabilistic latent representation of the inputs to generate new outputs (Diederik P. Kingma &amp; Welling, 2019; Kingma &amp; Welling, 2013). LLMs use transformers, a general-purpose deep learning architecture, and train on vast corpora of input data to generate outputs using self-attention mechanisms to process the data in parallel (Chang et al., 2024; Raiaan et al., 2024; Vaswani et al., 2017). Diffusion models create data by progressively adding noise to data and then learn to iteratively de-noise the data in an organized fashion to generate new data (Ho et al., 2020; Yang et al., 2024).
 
@@ -61,6 +70,10 @@ Generative  AI  models  use  vast  amounts  of  data  for  training,  much  of  
 
 These models are heavily influenced by the data used for training them. Therefore,  as the data include biases, the models will also exhibit or even amplify those biases in their outputs. For instance, if a model is trained on data that are not demographically representative, it might disproportionately
 
+
+<!-- PAGE 4 -->
+
+
 4
 
 underperform for those demographics during inference (Rofl et al. 2021; Lim &amp; Taeihagh, 2019). Similarly, if the available training data do not match the deployment setting, this could increase risks and result in poorer performance (Tan et al., 2022). Alternatively, if a benchmark dataset contains systematic labeling errors (Northcutt et al., 2021), or biases are introduced due to annotators' beliefs and backgrounds, these factors will have wide-ranging implications (Sap et al., 2021). Another set of risks for training data arises due to leakage of synthetic and benchmark data into training datasets. This contaminates them, which can reduce model performance, create biases, and compromise the integrity of model evaluation (Xu et al., 2024). Additionally, data poisoning through deliberate manipulation of the training data could introduce vulnerabilities into the system (Dong et al., 2025). Moreover, recent research shows that indiscriminate use of synthetic content from the models in training can eventually cause model collapse (Shumailov et al., 2024).
@@ -85,6 +98,10 @@ In addition, extensive deployment of the system and use of multimodal models cou
 
 Design and implementation choices can have significant consequences in terms of the risks of generative AI systems. For instance, access to diverse expertise and involvement of stakeholders can help in reducing unintended consequences (Tan et al., 2021). Similarly, choices in implementation, such as the use of open-source software, can impact the system. Use of external libraries, application programming
 
+
+<!-- PAGE 5 -->
+
+
 Table 1. Key risks of generative AI.
 
 | Risk                                 | Description                                                                                                                                                                                                                                                                                                           | Example/references                                                                                                                                                                                               |
@@ -107,6 +124,10 @@ interfaces (APIs), and models can have significant benefits but can also increas
 
 Generative AI represents a significant advancement in AI, unlocking new capabilities and outputs that could reshape various sectors and foster innovation. As discussed in the previous section, generative AI also presents unique risks, which need to be addressed. Generative AI raises a diverse set of complex governance challenges that extend well beyond engineering of the systems themselves. Addressing these challenges requires urgent attention and a comprehensive approach to safeguard citizens and ensure society  benefits  from  generative AI  while  mitigating  its  negative  and/or  unintended  consequences. These governance challenges are discussed in the rest of this subsection.
 
+
+<!-- PAGE 6 -->
+
+
 6
 
 Data governance and intellectual property concerns arise because models require large amounts of  data that are often collected from the internet without permission,  raising intellectual property, copyright, and fairness concerns (Chesterman, 2025). Generative AI has created significant legal and ethical concerns for creators, publishers, and consumers. In several high-profile cases, copyright owners have alleged that their work has been included in training datasets without their consent (Coulter, 2024; Gerken, 2023). In addition, there are uncertainties around the copyright of AI-created content, the threshold for copyright for AI co-created content, as well as derivative works (Chesterman, 2025).
@@ -125,6 +146,10 @@ There is also a narrow focus and limited public engagement in relation to the de
 
 The public sector faces a variety of challenges in regard to the governance of generative AI. However, it must play an important role in such governance, not just in the development and enforcement
 
+
+<!-- PAGE 7 -->
+
+
 of comprehensive laws and regulations but also in promoting awareness, collaboration, and partnerships among stakeholders to ensure responsible adoption of the technology (Taeihagh, 2023). The public sector itself faces significant challenges due to technical skills shortages, information asymmetry, and institutional resistance. The pacing problem and the rapid technological development and emergence of new capabilities and applications relative to legislative developments create regulatory gaps (Pande et al.  2023) that have resulted in reactive rather than anticipatory and adaptive governance (Tan &amp; Taeihagh, 2021). The difficulties in attracting and retaining AI talent due to the higher salaries and attractiveness of working in the private sector also compound these difficulties. In addition, the generalpurpose nature of generative AI and its applicability across various sectors and industries makes it difficult to define the scope of regulation and apply it consistently. This problem has often resulted in vague laws that lack the specificity required of effective regulation (Guihot et al., 2017; Larsson, 2020).
 
 Finally, there is a need for international cooperation. The global nature of AI developments demands international collaboration on standard setting, the development of guidelines and best practices, and addressing transboundary concerns given different cultural norms, priorities, and legal frameworks in different jurisdictions. This issue is particularly important for mitigating the risks of the deployment of AI in autonomous weapon systems (Firlej &amp; Taeihagh, 2021) and preventing a race to the bottom given the US-China AI rivalry (Zhang et al., 2024). A collaborative international effort is needed to effectively govern generative AI.
@@ -140,6 +165,10 @@ The governance of generative AI requires an adaptive approach that facilitates i
 ## Improving data governance and IPR
 
 Given the risks and challenges of data governance, developing novel frameworks for data sharing and data protection is crucial to balance the needs for open data for innovation and public safety with individual privacy. Beyond mandatory disclosure requirements related to training data and model capabilities,  an  exploration  of  novel  concepts  regarding  data  ownership  and  investigation  of  the  role  of blockchain technology for data management and privacy are important. With the increased use of generative AI and recent success of multimodal models, questions on ethics and the impacts of the use of these models and biometrics in various applications need more attention (Ng et al., 2023). While some applications such as teleoperation and training of robots and autonomous systems (Cheng et al., 2024; Ding et al., 2024) are groundbreaking and should be encouraged, the ease of use of these models opens the door for abuse and misuse as well.
+
+
+<!-- PAGE 8 -->
+
 
 Similarly, a novel approach to copyright and IPR is needed to ensure the rights of creatives while promoting innovation as well as addressing new concerns around AI-generated content, AI-cogenerated content, and derivatives [see Chesterman (2025) in this issue].
 
@@ -163,6 +192,10 @@ While there are questions about whether the rate of developments in generative A
 
 Governments must prepare for and adapt to significant job displacements and ensure social stability during the transition period, deploying the learning from past technological transitions. Given the significant failures and limitations of universal basic income experiments (Giles, 2024;  Hiilamo, 2020; Miller et al., 2024; Talgo, 2024; Vivalt et al., 2024), options such as windfall taxes and capital gain taxes on AI-generated wealth need to be seriously explored to provide support for those impacted by AI automation and to ensure that the benefits of AI are broadly shared by society rather than just by Big Tech. Governments need to prepare for significant disruptions that may render certain skills and professions obsolete. The education system's priorities need to be shifted toward skills that are less likely to be automated, as well as to reskilling/upskilling individuals to adapt to changes. AI literacy should become foundational in education systems to ensure a broad understanding within society of how these technologies are affecting our lives. This education will ultimately help maintain human agency and
 
+
+<!-- PAGE 9 -->
+
+
 dignity. Mandating efficiency improvements and mitigation strategies is necessary for addressing the environmental impact of generative AI.
 
 ## Reducing power imbalances
@@ -183,6 +216,10 @@ The potential role of generative AI in public service delivery and decision-maki
 
 The establishment of norms and common standards, best practices, and mechanisms for addressing cross-border regulatory challenges and global risks and avoiding regulatory fragmentation is essential for ensuring effective governance of generative AI. Given the global AI race, pursuing diplomatic efforts and international agreements-particularly regarding AI safety, banning the use of fully autonomous weapon systems and preventing the use of AI to trigger nuclear weapons and develop weapons of mass destruction-can help avoid escalations and increase global stability (Egan &amp; Kine, 2024; Firlej &amp; Taeihagh, 2021; Zhang et al., 2024), as well as help governments focus on addressing power imbalances in AI development (Khanal et al., 2025). Ulnicane (2025) suggests moving toward a polycentric system of governance and highlights a number of early efforts toward international coordination on the governance of generative AI, while emphasizing that more needs to be done to increase the inclusivity of such efforts. In addition, in the short term, establishment of Intergovernmental Panel on Climate Change-like efforts can help bring scientific consensus on the risks of AI, while, eventually, the establishment of an intergovernmental organization such as the International Atomic Energy Agency with authority based on legally binding agreements and treaties is necessary. See Table 2 for the summary of generative AI governance strategies.
 
+
+<!-- PAGE 10 -->
+
+
 Table 2. Governance Strategies for generative AI.
 
 | Area                                                       | Key actions and recommendations                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -193,6 +230,10 @@ Table 2. Governance Strategies for generative AI.
 | Reducing neg- ative societal impacts                       | (f) Establish cross-border mechanisms to quickly block illicit activities and recover funds. (a) Prepare for impacts of automation, including job displacement and income disparities. (b) Study and address the environmental impact of generative AI. Mandate efficiency improvements and mitigation strategies for environmental concerns.                                                                                                                                                                                                                                                                                              |
 | Reducing power imbalances                                  | dignity. (a) Empower small and medium-sized enterprises (SMEs) and universities to contribute to AI development. (b) Promote open-source AI initiatives and communities and offer financial support. (c) Recognize Big Tech's influence (Khanal et al., 2025) and establish strong regula- tory oversight for Big Tech to ensure transparency and accountability. Counteract scaremongering tactics by Big Tech that hinder open-source AI progress (Davidson,                                                                                                                                                                             |
 | Enhanc- ing public engagement                              | 2023). (a) Use participatory methods to involve the public in AI policy decisions and ensure that governance frameworks reflect societal values through consensus-building and collaboration. (b) Address deeper societal considerations beyond quick 'governance fixes' (Ulnicane, 2025). (c) Seek continuous public input on the direction and purpose of technological developments. (d) Foster transparent discussions among government, industry, civil society,                                                                                                                                                                      |
+
+
+<!-- PAGE 11 -->
+
 
 Table 2. (Continued)
 
@@ -213,6 +254,10 @@ The rapid advancement of generative AI has raised significant questions regardin
 
 Chesterman (2025) first examines the training of generative AI models. The author highlights the ethical and legal challenges arising from the use of data without permission or compensation for creators. He argues that our current legal frameworks are stressed due to such wholesale use of copyrighted material for training AI models, citing the lawsuit brough by Getty Images against Stability AI (Coulter,
 
+
+<!-- PAGE 12 -->
+
+
 Table 3. The input and output challenges of generative AI in relation to IPR and potential solutions [based on Chesterman (2025)].
 
 |                                 | Challenges                                                           | Solutions                                                                                                                             |
@@ -231,6 +276,10 @@ The author argues that failing to address IPR questions will have serious conseq
 With the increased adoption of generative AI in organizations and their rapid evolution, Janssen (2025) argues that traditional IT governance strategies are often deterministic and focus narrowly on the technology itself without adequately considering the context in which the technology operates. The article addresses the following overarching question regarding the governance of generative AI: How can generative AI be governed responsibly within organizations considering its complex and evolving nature? To address this question, the article explores why traditional IT governance approaches are insufficient for effective governance of generative AI and how alternative frameworks and strategies could improve governance of generative AI.
 
 Janssen critiques different streams of IT governance (centralization/decentralization, contingency strategy, aligning IT with organizational objectives, managing risk/return trade-offs, control mechanisms and procedures, human involvement in AI decisions, and complying with regulations) and how they fail to account for the dynamic and emergent properties of generative AI. The author highlights the opacity and unpredictability of generative AI outputs and points out issues such as lack of transparency, data quality, bias, and hallucinations, along with the rapid pace of technological advancements, necessitating the need for responsible generative AI governance that considers social values and citizens'
+
+
+<!-- PAGE 13 -->
+
 
 Table 4. Traditional IT governance vs. CAS-based AI governance [based on Janssen (2025)].
 
@@ -253,6 +302,10 @@ Given the 'responsibility gap' stemming from the complexity and unpredictability
 With the rapid rate of digitalization, large technology companies (Big Tech)-benefiting from network effects-have accumulated significant wealth and power through their control over digital platforms and infrastructure. With access to top talent, data, and compute power, the current surge of generative AI has acted as a catalyst, further increasing and consolidating their dominance in various domains. Khanal et al. (2025) explore how Big Tech's dominance in the context of generative AI is increasing and reshaping the policymaking process. To examine this overarching issue, they explore how the nature of the relationship between Big Tech and governments is changing, how Big Tech uses its resources to influence the policy landscape, and how the emergence of generative AI is accelerating this process.
 
 Khanal et al. (2025) use and extend Kingdon's multiple streams framework (Kingdon, 1984) to study why and how the power of Big Tech is increasing in the policy process. By introducing the 'Big Techcentric technology stream,' they highlight how Big Tech companies exert influence on all streams and distinguish it from the traditional innovation-centric technology stream, which focuses on technological advancement for the betterment of society (Goyal &amp; Howlett, 2018). The authors posit that, in this new technology stream, the primary objective of Big Tech is maintaining and increasing dominance by shaping the political and regulatory environment, and the expansion and acceleration of the diffusion of technologies that serve its interests, even if it results in stifling innovation, highlighting that when Big Tech gets involved, the technology stream moves away from an innovation-centric model to the one dominated by the self-interest of Big Tech (Khanal et al., 2025). They illustrate that Big Tech, in the problem stream, impacts the epistemic community through their control of the platforms, provision of research funding, and using the media to frame the problems in a favorable way. In the policy stream, they impact instrument constituencies through the provision of digital solutions and influence
+
+
+<!-- PAGE 14 -->
+
 
 Table 5. Differences between the traditional approach of technology companies and Big Tech [based on Khanal et al. (2025].
 
@@ -277,6 +330,10 @@ Ulnicane (2025) examines the efforts in the G7 Hiroshima process, OECD reports, 
 The author highlights the current technocratic approach to generative AI governance and the concomitant limited public participation, drawing attention to the paradox that it is widely used by the public. This suggests that while the use of generative AI is democratized, its governance is imbalanced and dominated by a handful of developed nations and Big Tech (Khanal et al., 2025).
 
 Inspired  by  the  concept  of  'technological  fix,'  whereby  technical  solutions  are  applied  to  societal problems without addressing their underlying issues, Ulnicane (2025) conceptualizes the current approach to generative AI governance as a 'governance fix.' A governance fix involves the application of a technocratic and expert-driven governance approach to manage risks with limited deliberation and
+
+
+<!-- PAGE 15 -->
+
 
 Table 6. Generative AI governance approaches [based on Ulnicane (2025)].
 
@@ -303,6 +360,10 @@ City brains are large-scale AI systems that have been introduced to urban platfo
 
 Cugurullo and Xu (2025) examine the use of generative AI in a technocratic anticipatory urban governance setting by studying the implementation of a city brain project in Haidian, a district in Beijing, China. Haidian collects data extensively, including over 14000 closed-circuit television and 20000 sensors, which is then fed to AI systems including an LLM called WuDao that is used for predicting urban
 
+
+<!-- PAGE 16 -->
+
+
 Table 7. Challenges of regulating generative AI systems based on Judge et al. (2025).
 
 |                                    | Traditional engineered systems                                                                                                       | Generative AI systems                                                                                                                                                                                    |
@@ -325,6 +386,10 @@ They highlight the need to move from technocratic anticipatory governance to par
 Oder and Béland, 2025 focus on the impact of generative AI on labor markets. Through a single in-depth case study, they examine the effects of generative AI on the daily routines of low-skilled workers in call centers in Vienna, Austria. The article examines how generative AI affects the nature of the emotional labor required by the call center workers and their perception regarding the disruption caused by generative AI on their work. The study also explores their coping mechanisms and their social and political imaginaries.
 
 Through interviews and qualitative research, the authors identify that call center workers perform significant emotional labor to meet organizational expectations when interacting with consumers and
+
+
+<!-- PAGE 17 -->
+
 
 Table 8. Technocratic vs. participatory anticipatory governance [based on Cugurullo &amp; Xu [2025)].
 
@@ -351,6 +416,10 @@ This research/project was supported by the Ministry of Education, Singapore, und
 ## Conflict of interest
 
 None declared.
+
+
+<!-- PAGE 18 -->
+
 
 ## Declaration on the use of generative AI
 
@@ -379,6 +448,10 @@ During  the  preparation  of  this  work,  the  author  used  generative AI  to 
 - Decardi-Nelson, B., Alshehri, A. S., Ajagekar, A., and You, F. (2024). Generative AI and process systems engineering: The next frontier. Computers and Chemical Engineering 187 , 108723. 10.1016/j.compchemeng.2024.108723
 - Ding, R., Qin, Y., Zhu, J., Jia, C., Yang, S., Yang, R., Qi, X., &amp; Wang, X. (2024). Bunny-visionpro:  Real-time bimanual dexterous teleoperation for imitation learning. arXiv:2407.03162 .
 
+
+<!-- PAGE 19 -->
+
+
 - Dong, T., Xue, M., Chen, G., Holland, R., Meng, Y., Li, S., Liu, Z., &amp; Zhu, H. (2025). The Philosopher's Stone: Trojaning Plugins of Large Language Models . In the 32nd Annual Network and Distributed System Security Symposium (NDSS), 24-28 February 2025 in San Diego, California.
 - Egan, L., &amp; Kine, P.. (2024). Biden's final meeting with Xi Jinping reaps agreement on AI and nukes, Politico. https://www.politico.com/news/2024/11/16/biden-xi-jinping-ai-00190025 (Accessed November 2024).
 - Eiras, F., Petrov, A., Vidgen, B., Schroeder, C., Pizzati, F., Elkins, K., Mukhopadhyay, S., Bibi, A., Purewal, A., Botos, C., &amp; Steibel, F. (2024). Risks and opportunities of open-source generative AI. arXiv:2405.08597.
@@ -403,6 +476,10 @@ During  the  preparation  of  this  work,  the  author  used  generative AI  to 
 - Judge,  B.,  Nitzberg,  M.,  &amp;  Russell,  S.  (2025).  When  code  isn't  law:  rethinking  regulation  for  artificial intelligence. Policy and Society , 44 (1), 85-97. https://doi.org/10.1093/polsoc/puae020
 - Khanal, S., Zhang, H., &amp; Taeihagh, A. (2025). Why and how is the power of Big Tech increasing in the policy process? The case of generative AI. Policy and Society , 44 (1), 52-69. https://doi.org/10.1093/polsoc/puae012 Kingdon, J. (1984). Agendas, Alternatives, and Public Policies . Pearson.
 - Kingma, D. P., &amp; Welling, M. (2013). Auto-encoding variational Bayes. arXiv:1312.6114
+
+
+<!-- PAGE 20 -->
+
 
 - Kingma, D. P., &amp; Welling, M. (2019). An introduction to variational autoencoders. Foundations and Trends in Machine Learning , 12 (4), 307-392. http://dx.doi.org/10.1561/2200000056
 - Koff,  D.  (2023).  Why  Facebook  shut  down  its  AI,  Bultin.com  https://builtin.com/artificial-intelligence/ facebook-shuts-down-ai (accessed November 2024)
@@ -432,6 +509,10 @@ Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, 
 
 - J., &amp; Krueger, G. (2021). Learning transferable visual models from natural language supervision . In International conference on machine learning (pp. 8748-8763). PMLR.
 
+
+<!-- PAGE 21 -->
+
+
 - Radu, R. (2021). Steering the governance of artificial intelligence: national strategies in perspective. Policy and Society , 40 (2), 178-193. https://doi.org/10.1080/14494035.2021.1929728
 - Raiaan, M. A. K., Mukta, M. S. H., Fatema, K., Fahad, N. M., Sakib, S., Mim, M. M. J., Ahmad, J., Ali, M. E., &amp; Azam, S., (2024). A review on large Language Models: Architectures, applications, taxonomies, open issues and challenges . In IEEE Access.
 - Reuel, A., &amp; Undheim, T. A. (2024). Generative AI needs adaptive governance. arXiv:2406.04554.
@@ -455,6 +536,10 @@ Radford, A., Kim, J. W., Hallacy, C., Ramesh, A., Goh, G., Agarwal, S., Sastry, 
 - Weiser, B. (2023). ChatGPT lawyers are ordered to consider seeking forgiveness, The New York Times. https:// www.nytimes.com/2023/06/22/nyregion/lawyers-chatgpt-schwartz-loduca.html  (Accessed  November 2024).
 - Xu, C., Guan, S., Greene, D., &amp; Kechadi, M. (2024). Benchmark data contamination of large language models: A survey. arXiv:2406.04244.
 - Yang, L., Zhang, Z., Song, Y., Hong, S., Xu, R., Zhao, Y., Zhang, W., Cui, B., &amp; Yang, M. H. (2024). Diffusion models: A comprehensive survey of methods and applications. ACM Computing Surveys , 56 (4), 105. https:// doi.org/10.1145/3626235
+
+
+<!-- PAGE 22 -->
+
 
 - Zaidan, E., &amp; Ibrahim, I. A. (2024). AI governance in a complex and rapidly changing regulatory landscape: A global perspective. Humanities and Social Sciences Communications , 11 , 1121. https://doi.org/10.1057/s41599024-03560-x
 

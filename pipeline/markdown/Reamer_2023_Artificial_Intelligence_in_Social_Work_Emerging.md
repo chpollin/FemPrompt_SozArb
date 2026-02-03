@@ -1,10 +1,11 @@
 ---
 source_file: Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.pdf
-conversion_date: 2026-02-03T09:16:39.544276
+conversion_date: 2026-02-03T18:48:00.046235
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## International Journal of Social Work Values and Ethics
@@ -18,6 +19,10 @@ DOI: 10.55521/10-020-200
 www.jswve.org
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Artificial Intelligence in Social Work: Emerging Ethical Issues
 
@@ -35,6 +40,10 @@ This text may be freely shared among individuals, but it may not be republished 
 
 Artificial intelligence (AI) is becoming increasingly prevalent in social work. AI  is  being  used  to  conduct  risk  assessments,  assist  people  in  crisis, strengthen prevention efforts, identify systemic biases in the delivery of social services, provide social work education, and predict social worker burnout and service outcomes, among other uses. There is now considerable literature on the ways in which social workers and other human service professionals can use AI to assist vulnerable people. Yet social work's literature does not include in-depth examination of the ethical implications of practitioners' use of AI. The purpose of this article is to examine ethical issues related to social workers' use of AI; apply relevant ethical standards; and outline elements of a strategy for social workers' ethical use of AI. Key ethical
 
+
+<!-- PAGE 3 -->
+
+
 issues  addressed include informed consent and client autonomy; privacy and  confidentiality;  transparency;  client  misdiagnosis;  client  abandonment; client surveillance; plagiarism, dishonesty, fraud, and misrepresentation; algorithmic bias and unfairness; and use of evidence-based AI tools.
 
 Keywords: Artificia l intelligence, ethics, machine learning, technology, values
@@ -49,6 +58,10 @@ Based on a comprehensive review of the literature, social work does not yet offe
 
 The term artificial intelligence was coined in 1955 by Stanford University professor John McCarthy. AI combines computer science and datasets to stimulate human intelligence and enable problem-solving in diverse contexts. AI includes what is known as machine learning, which uses historical data to predict and shape new output. The term 'generative AI' refers to the
 
+
+<!-- PAGE 4 -->
+
+
 creation of images, videos, audio, text, and 3D models by using learning patterns from existing data to generate new outputs. The European Commission (2019) has defined AI as follows:
 
 Artificial intelligence (AI) refers to systems that display intelligent behaviour by analysing their environment and taking actions - with some degree of autonomy - to achieve specific goals. AI-based systems can be purely software-based, acting in the virtual world (e.g. voice assistants, image analysis software, search engines, speech and face recognition systems) or AI can be embedded in hardware devices (e.g. advanced robots, autonomous cars, drones or Internet of Things applications). (p. 1)
@@ -61,6 +74,10 @@ More specifically related to social work, the field of affective computing, also
 
 To develop ethics guidelines specifically for social workers, it is important to appreciate the diverse ways in which AI is being used in the profession and
 
+
+<!-- PAGE 5 -->
+
+
 in allied behavioral health professions. This context will inform the development  of  ethics-based  protocols.  In  clinical  social  work,  the  context  in which AI has been especially prominent, this technology is being used to conduct risk assessments, assist people in crisis, strengthen prevention efforts, identify systemic biases in the delivery of social and behavioral health services, provide social work education, and predict social worker burnout and service outcomes (Asakura, et al., 2020; Frackiewicz, 2023; Gillingham, 2019; Grządzielewska, 2021; Jacobi &amp; Christensen, 2023; Keddell, 2019; Lanier, et al., 2020; Liedgren, et al., 2016; Molala &amp; Mbaya, 2023; Rice, et al., 2018; Schneider &amp; Seelmeyer, 2019; Sobjerg, 2022; Tambe &amp; Rice, 2018). For example, the Trevor Project has partnered with Google.org to launch The Crisis  Contact  Simulator,  a  counselor  training  tool  powered  by  AI.  The model simulates digital conversations with LGBTQ youths in crisis and enables counselors to experience realistic practice conversations before taking live ones.
 
 Woebot, a therapeutic chatbot that offers an automated therapist, is another  AI  behavioral  health  tool.  Woebot  uses  natural  language  processing  and  learned  responses  to  simulate  therapeutic  conversation,  remember the content of past sessions, and deliver advice around mood and other struggles.
@@ -68,6 +85,10 @@ Woebot, a therapeutic chatbot that offers an automated therapist, is another  AI
 Wysa is an AI service that responds to the emotions individuals express using  evidence-based  cognitive  behavioral  techniques,  DBT,  meditation, breathing, yoga, and motivational interviewing to assist people. Pyx Health offers an app that is designed to communicate with people who feel chronically lonely. The Heyy app gives users access to self-assessments, researchbacked resources  on  emotional  well-being  as  well  as  links  to  behavioral health professionals for intensive therapy. ChatGPT offers people nearly instant suggestions of ways to address their distress, such as ways to increase relaxation, focus on sleep, reduce caffeine and alcohol consumption, challenge negative thoughts, reduce high-risk behaviors, and seek the support of friends and family.
 
 Social workers who serve military personnel and veterans have access to  AI  tools  designed  specifically  for  these  unique  client  populations.  For
+
+
+<!-- PAGE 6 -->
+
 
 example, the PTSD Coach app is a mobile application designed to help veterans and service members manage symptoms of PTSD. The app provides a variety of tools and resources to assist users in coping with PTSD symptoms associated with military service, including anxiety, depression, and sleep issues. It offers an interactive self-assessment tool that helps users track their symptoms over time, and it provides strategies to manage symptoms when they occur. The app also includes audio-guided relaxation exercises and a virtual  coach  that  can  help  users  develop  coping  skills  and  set  personal goals. In addition, it provides access to resources such as crisis hotlines, support groups, and other helpful websites.
 
@@ -77,6 +98,10 @@ Mindfulness Coach is an app that provides a variety of guided mindfulness exerci
 
 The Department of Veterans Affairs' (VA) Annie mobile app is a Short Message  Service  (SMS)  text  messaging  tool  that  promotes  self-care  for
 
+
+<!-- PAGE 7 -->
+
+
 veterans. Clients using Annie receive automated prompts to track and monitor  their  own health and motivational/educational messages. The Annie App for Clinicians allows social workers and other behavioral health professionals to use and create care protocols that allow clients to submit their health readings back to Annie. Messages and patient data are stored in the Annie system where clinicians can view the texts and readings as needed.
 
 At the programmatic level, predictive analytics, or the use of data for forecasting service successes and challenges, can help agencies understand how best to allocate scarce resources. For example, DataKind, a data science volunteer corps, has worked with food pantries to use historical data and machine learning algorithms to predict a client's level of dependency on the pantry. By mining data, the organization can prioritize resources to avert a crisis of food insecurity before it escalates (Goldkind, 2021). As another example, the Chicago Data Collaborative mines data to understand the inner workings of the criminal justice system by pooling data from participating institutions and organizations in the Chicago metropolitan area. Members and partners seek out data from public agencies to create a public portrait of the criminal justice system, which the collaborative makes available on its Web site (Goldkind, 2021).
@@ -85,11 +110,19 @@ At the programmatic level, predictive analytics, or the use of data for forecast
 
 Several  core  ethics-informed  resources  addressing  social  workers'  use  of technology are available to guide practitioners' use of AI in various workplace contexts. These guidelines focus on three distinct, albeit related, domains: (1) practice standards, (2) regulatory and licensing standards, and (3) code  of  ethics  standards.  In  2013  the  Association  of  Social  Work  Boards (ASWB) board of directors appointed an international task force to develop model regulatory standards for technology and social work practice. ASWB embarked on development of new ethics-related standards in response to demand from regulatory bodies around the globe for guidance concerning social workers' evolving use of technology. The ASWB task force included representatives  from  prominent  social  work  practice,  regulation,  and
 
+
+<!-- PAGE 8 -->
+
+
 education organizations throughout the world. The task force developed standards for social workers who use digital and other electronic technology to provide information to the public, deliver services to clients, communicate with and about clients, manage confidential information and case records, and store and access information about clients. The group developed model standards, including extensive ethics guidelines related to technology use, addressing seven key ethics-related concepts: practitioner competence; informed consent; privacy and confidentiality; boundaries, dual relationships, and conflicts of interest; records and documentation; collegial relationships; and social work practice across jurisdictional boundaries. These model standards, formally adopted in 2015, are now influencing the development of licensing and regulatory laws around the world (López Peláez &amp; Kirwan, 2023), along with various efforts in other nations (British Association of Social Workers, 2018; Diez, 2023; Pascoe, 2023).
 
 In 2017, following unprecedented collaboration among key social work organizations  in  the  U.S.-the  National  Association  of  Social  Workers (NASW), Council on Social Work Education (CSWE), Association of Social Work Boards (ASWB), and Clinical Social Work Association (CSWA)-the profession  formally  adopted  new,  comprehensive  practice  standards,  including extensive ethics guidelines that focused on social workers' and social  work  educators'  use  of  technology  (NASW,  CSWE,  ASWB,  &amp;  CSWA, 2017).  Approved  by  these  respective  organizations'  boards  of  directors, these transformational, comprehensive standards address a wide range of compelling ethical issues related to social workers' use of technology to provide information to the public; design and deliver services; gather, manage, and store information; and educate social workers. Further, in 2017, NASW adopted a  revised  code  that  includes  extensive  technology-related  additions pertaining to informed consent; competent practice; conflicts of interest;  privacy  and  confidentiality;  sexual  relationships;  interruption  of  services; unethical conduct of colleagues; supervision and consultation; education and training; client records; and evaluation and research.
 
 Social workers who use or are contemplating using AI should draw on these prominent guidelines and address a number  of key ethical
+
+
+<!-- PAGE 9 -->
+
 
 considerations related to informed consent and client autonomy; privacy and  confidentiality;  transparency;  client  misdiagnosis;  client  abandonment; client surveillance; plagiarism, dishonesty, fraud, and misrepresentation; algorithmic bias and unfairness; and use of evidence-based AI tools. These key ethics concepts should be reflected in ethics-informed protocols guiding social workers' use of AI.
 
@@ -100,6 +133,10 @@ Social workers have always understood their duty to explain the potential benefi
 ## Privacy and confidentiality
 
 Data gathered from clients by social workers using AI must be protected. Social workers have a duty to ensure that the AI software they are using is properly encrypted and protected from data breaches to the greatest extent possible. Social workers must take steps to prevent inappropriate access to AI-generated data by third-parties, for example, vendors who sponsor the AI software social workers use. According to the NASW Code of Ethics (2021), 'social workers should take reasonable steps to protect the confidentiality of electronic communications, including information provided to clients or third parties. Social workers should use applicable safeguards (such as encryption, firewalls, and passwords) when using electronic communications
+
+
+<!-- PAGE 10 -->
+
 
 such as e-mail, online posts, online chat sessions, mobile communication, and text messages' (standard 1.07[f]).
 
@@ -115,11 +152,19 @@ Clinical  social workers who rely on AI to assess clients' behavioral health cha
 
 Social workers who rely on AI to connect with clients must take steps to respond to their messages and postings in a timely fashion, when warranted.
 
+
+<!-- PAGE 11 -->
+
+
 To use the legal term, social workers must take steps to avoid 'abandoning' clients who use AI to communicate significant distress. In malpractice litigation, abandonment occurs when practitioners do not respond to clients in  a  timely  fashion  or  terminate  services  in  a  manner  inconsistent  with standards in the profession. For example, a client who communicates suicidal ideation via AI, does not receive a timely response from their social worker, and attempts to die by suicide yet lives, may have grounds for a malpractice claim. According to the NASW Cofde of Ethics (2021), 'social workers should take reasonable steps to avoid abandoning clients who are still in need of services. Social workers should withdraw services precipitously only under unusual circumstances, giving careful consideration to all factors in the situation and taking care to minimize possible adverse effects. Social workers should assist in making appropriate arrangements for continuation of services when necessary' (standard 1.17[b]).
 
 ## Client surveillance
 
 One of the inherent risks of AI is the possibility that third parties will use available data inappropriately and without authorization for surveillance purposes. For example, social workers who provide reproductive health services to clients in states where abortion is illegal must be cognizant of the possibility that prosecutors will subpoena electronically stored information (ESI) generated by AI to prosecute pregnant people who seek abortion services and the practitioners who assist them in their decision making. Although ESI in social workers' possession has always been discoverable during legal proceedings, there is a newer challenge when ESI includes information generated by AI (for example, information about reproductive health generated  by  chatbots  used  by  clients  and  social  workers).  A  client  or  social worker who uses AI to search online for abortion-related information services creates a digital trail (Reamer, 2023b). According to the Federal Rules of Civil Procedure, ESI is defined as any documents or information that are stored in electronic form (Yeazell, et al., 2022).
+
+
+<!-- PAGE 12 -->
+
 
 ## Plagiarism, dishonesty, fraud, and misrepresentation
 
@@ -134,6 +179,10 @@ Social workers should honestly acknowledge the work of and the contributions mad
 ## Algorithmic bias and unfairness
 
 AI's dependence on machine learning, which draws from large volumes of available data that may not be entirely representative of social workers' clients, comes with a risk that algorithms used to assess clients and develop interventions and treatment plans will incorporate significant bias related to race, ethnicity, gender, sexual orientation, gender expression, and other vulnerable  or  protected  categories.  Algorithmic  bias  can  manifest  itself when AI is used as part of social service agency recruitment, online marketing, and facial recognition, among other tools. According to Lee, Resnick, and Barton (2019), 'because machines can treat similarly-situated people and objects differently, research is starting to reveal some troubling examples in which the reality of algorithmic decision-making falls short of our
+
+
+<!-- PAGE 13 -->
+
 
 expectations. Given this, some algorithms run the risk of replicating and even  amplifying  human  biases,  particularly  those  affecting  protected groups.'
 
@@ -151,6 +200,10 @@ Artificial  intelligence  initiatives  should  adhere  to  prominent  ethics-inf
 
 - The AI technology does no harm. AI developers should take steps to protect clients and other members of the public they serve.
 - The AI technology is designed and developed using transparent protocols and auditable methodologies.
+
+
+<!-- PAGE 14 -->
+
 
 - That AI tools collect and treat client data to reduce biases against population groups based on race, ethnicity, culture, gender, sexual orientation, gender expression, religion, and other potential sources of bias.
 - Clients are informed of known risks and benefits of AI technologies so they can make informed decisions about its use.
@@ -171,6 +224,10 @@ Rigorous peer review processes can help identify and address blind spots and wea
 
 It can be useful to develop simulation models that test scenarios in which AI tools are susceptible to bias in an effort to reduce risk and address possible
 
+
+<!-- PAGE 15 -->
+
+
 algorithmic bias. Feedback generated by simulations can identify potential ethics-related problems associated with AI.
 
 ## Develop social worker - focused guidance for accessing and using AI results
@@ -189,6 +246,10 @@ Ideally, organizations that employ social workers and use AI will maintain a com
 
 Practitioners in a variety of professions, including social work, are rapidly increasing their use of AI. Along with a wide range of potential benefits of AI in social work come a number of compelling ethics-related challenges and risks, especially related to informed consent and client autonomy; privacy and  confidentiality;  transparency;  client  misdiagnosis;  client  abandon-
 
+
+<!-- PAGE 16 -->
+
+
 ment; client surveillance; plagiarism, dishonesty, fraud, and misrepresentation; algorithmic bias and unfairness; and use of evidence-based AI tools.
 
 To protect clients and themselves, social workers should take a number of proactive steps. First, they should familiarize themselves with AI protocols and the various ways in which they can be used in their social work practice  settings.  Second,  social  workers  should  review  relevant  ethical standards and practice standards pertaining to their use of AI and ensure that their practice settings are in compliance. Third, social workers in positions of authority should design and implement training for staffers regarding the appropriate and ethical use of AI in their work setting. Fourth, social work education programs should incorporate content on AI in their curricula to ensure that the next generation of social workers uses AI responsibly. Social work organizations that sponsor continuing education should also offer workshops and webinars for practitioners who may not have been introduced to this content during their formal social work education. Finally, social  work  educators,  researchers,  and  practitioners  should  take  diligent steps to evaluate the impact of AI in the profession, focusing especially on evidence  of  effectiveness,  limitations,  algorithmic  bias,  and  compliance with pertinent ethical standards.
@@ -199,6 +260,10 @@ The profession's earliest practitioners could not have imagined that today's soc
 
 Asakura, K., Occhiuto, K., Todd, S., Leithead, C., &amp; Clapperton, R. (2020). A call to action on artificial intelligence and social work education: Lessons learned from a simulation project using natural language processing. Journal of Teaching in Social Work, 40, 501-518.
 
+
+<!-- PAGE 17 -->
+
+
 - Barsky, A. (2019). Ethics and values in social work: An integrated approach for a comprehensive curriculum (2nd ed.) . Oxford University Press.
 - British Association of Social Workers. (2018). BASW policy: Social media. Author. https://www.basw.co.uk/system/files/resources/Social%20Media%20Policy.pdf
 - Diez, E. (2023). Artificial intelligence and social work: Contributions to an ethical artificial intelligence at the service of the people. In A. López Peláez &amp; G. Kirwan (Eds.), The Routledge international handbook of digital social work (pp. 368-381) . Routledge.
@@ -208,6 +273,10 @@ Asakura, K., Occhiuto, K., Todd, S., Leithead, C., &amp; Clapperton, R. (2020). 
 - Gillingham, P. (2019). Can predictive algorithms assist decision-making in social work with children and families? Child Abuse Review, 28, 114126. https://doi.org/10.1002/car.2547
 - Goldkind, L. (2021). Social work and artificial intelligence: Into the matrix. Social Work, 66, 372-374. https://doi.org/10.1093/sw/swab028
 
+
+<!-- PAGE 18 -->
+
+
 - Grządzielewska, M. (2021). Using machine learning in burnout prediction: A survey . Child and Adolescent Social Work Journal, 38, 175-180. https://doi.org/10.1007/s10560-020-00733-w
 - Jacobi, C., &amp; Christensen, M. (2023). Functions, utilities, and limitations: A scoping study of decision support algorithms in social work. Journal of Evidence-Based Social Work, 20, 323-341. https://doi.org/10.1080/26408066.2022.2159777
 - Keddell, E. (2019). Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice. Social Sciences, 8, 281. https://doi.org/10.3390/socsci8100281
@@ -216,6 +285,10 @@ Asakura, K., Occhiuto, K., Todd, S., Leithead, C., &amp; Clapperton, R. (2020). 
 - Lee, N., Resnick, P., &amp; Barton, G. (2019). Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms. Brookings. https://www.brookings.edu/articles/algorithmic-biasdetection-and-mitigation-best-practices-and-policies-to-reduceconsumer-harms/
 - Liedgren, P., Elvhage, G., Ehrenberg, A., &amp; Kullberg, C. (2016). The use of decision support systems in social work: A scoping study literature review. Journal of Evidence-Informed Social Work, 13 , 1- 20. https://doi.org/10.1080/15433714.2014.914992
 - López Peláez, A. &amp; Kirwan, G. (Eds.). (2023). The Routledge international handbook of digital social work. Routledge.
+
+
+<!-- PAGE 19 -->
+
 
 - Luxton, D. (Ed.). (2016). Artificial intelligence in behavioral and mental health care. Academic Press.
 - Molala, T., &amp; Mbaya, T. (2023). Social work and artificial intelligence: Towards the electronic social work field of specialisation. International Journal of Social Science Research and Review, 6, 613621 . https://doi.org/10.47814/ijssrr.v6i4.1206
@@ -228,6 +301,10 @@ Asakura, K., Occhiuto, K., Todd, S., Leithead, C., &amp; Clapperton, R. (2020). 
 - Reamer, F. (2018a). Ethical standards in social work: A review of the NASW Code of Ethics. NASW Press
 - Reamer, F. (2018b). Social work values and ethics (5th ed.). Columbia University Press.
 
+
+<!-- PAGE 20 -->
+
+
 - Reamer, F. (2023a). Risk management in the behavioral health professions: A practical guide to preventing malpractice and licensing-board complaints. Columbia University Press.
 - Reamer, F. (2023b). Ethical practice in a postRoe world: A guide for social workers. Social Work, 68, 150-158.
 - Rice, E., Yoshioka-Maxwell, A., Petering, R., Onasch-Vera, L., Craddock, J., Tambe, M., Yadav, A., Wilder, B., Woo, D., Winetrobe, H., &amp; Wilson, N. (2018). Piloting the use of artificial intelligence to enhance HIV prevention interventions for youth experiencing homelessness . Journal of the Society for Social Work and Research, 9, 551-573. https://doi.org/10.1086/701439
@@ -236,6 +313,10 @@ Asakura, K., Occhiuto, K., Todd, S., Leithead, C., &amp; Clapperton, R. (2020). 
 - Rubeis, G. (2022). iHealth: The ethics of artificial intelligence and big data in mental healthcare. Internet Interventions, 28. https://doi.org/10.1016/j.invent.2022.100518
 - Schneider, D., &amp; Seelmeyer, U. (2019). Challenges in using big data to develop decision support systems for social work in Germany. Journal of Technology in Human Services, 37, 113-128. https://doi.org/10.1080/15228835.2019.1614513
 - Søbjerg, L. (2022). Developing a statistical model for assessment of referrals of children at risk . Child Abuse Review, 31, e2749. https://doi.org/10.1002/car.2749
+
+
+<!-- PAGE 21 -->
+
 
 - Tambe, M., &amp; Rice, E. (Eds.). (2018). Artificial intelligence and social work. Cambridge University Press.
 - Terra, M., Baklola, M., Ali, S., &amp; El-Bastawisy, K. (2023). Opportunities, applications, challenges and ethical implications of artificial intelligence in psychiatry: A narrative review. Egyptian Journal of Neurology, Psychiatry, and Neurosurgery, 59. https://doi.org/10.1186/s41983-023-00681-z

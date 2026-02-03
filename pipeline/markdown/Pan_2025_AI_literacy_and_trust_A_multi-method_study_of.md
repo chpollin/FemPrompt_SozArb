@@ -1,10 +1,11 @@
 ---
 source_file: Pan_2025_AI_literacy_and_trust_A_multi-method_study_of.pdf
-conversion_date: 2026-02-03T09:14:04.709579
+conversion_date: 2026-02-03T18:45:28.390367
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Contents lists available at ScienceDirect
@@ -56,6 +57,10 @@ High levels of intrateam trust, in particular, are consistently associated with 
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Fiore  and  Wiltshire  (2016) describe  how  cognition  can  occur  across members, artifacts, and technology that support their efforts, illustrating the potential for technology to function as a teammate. As Fiore and Wiltshire (2016) note, technology can serve as more than just a tool -it can function as a teammate that contributes to team cognitive processes. This perspective is particularly relevant as we examine how GAI systems are perceived within team structures and how trust and literacy influence  these  perceptions.  Similarly,  Kozlowski  and  colleagues  (2015) differentiate  between  taskwork  (what  teams  do)  and  teamwork  processes (how they do it), emphasizing that effective teamwork processes require coordinated knowledge sharing, behavior regulation, and collective adaptability. Such  perspectives highlight how  individuals increasingly apply social norms and expectations to GAI, perceiving GAI as social actors (Demir et al., 2017; Guzman &amp; Lewis, 2019).
 
 Applying these established principles to human-GAI teams requires acknowledging both similarities and distinct challenges posed by an AI teammate. On one hand, trust remains essential for the work of any team (Georganta &amp; Ulfert, 2024) -human or hybrid -and humans working with AI still need confidence in their teammate ' s reliability and integrity. On the other hand, unique challenges arise, as humans typically establish trust through shared experiences and interpersonal familiarity, resources often unavailable in interactions with GAI. Fiore and Wiltshire (2016) argue that technology can serve as a true teammate by contributing to collective cognitive processes, effectively blurring the boundary between human and machine in teamwork.
@@ -76,6 +81,10 @@ Furthermore,  the  rapid  evolution  of  GAI  tools  and  technologies creates c
 
 Given the complex and multifaceted nature of AI literacy, varying levels of AI literacy can significantly influence how individuals perceive AI ' s collaborative role. Individuals with higher AI literacy may view GAI as a valuable teammate, while others with lower literacy may remain skeptical or resistant. Such distrust may stem from concerns regarding job  displacement,  ethical  considerations,  or  doubts  regarding  GAI ' s reliability and decision-making capabilities. Consequently, skepticism toward  GAI  may  negatively  affect  individual  and  team  outcomes, diminishing collaboration and commitment (Brougham &amp; Haar, 2017).
 
+
+<!-- PAGE 3 -->
+
+
 Our research empirically explores the factors influencing perceptions of GAI as a teammate, particularly the role of AI literacy and trust. In doing so, we aim to bridge theoretical discussions on AI teamwork and practical challenges by examining how  AI literacy -specifically, knowledge, perceived value, and concerns -shapes trust in GAI. This work builds upon a socio-technical systems perspective that recognizes the complex interdependence between technical capabilities and social dynamics in collaborative settings (Fiore &amp; Wiltshire, 2016; Jarvenpaa &amp; Selander, 2023).
 
 Moreover,  while  existing  research  indicates  that  individuals ' understanding of and interaction with AI significantly influences their trust in GAI and the effectiveness of human-GAI collaboration (Gillespie et al., 2023), several critical questions remain: Which skills or factors facilitate effective  human-GAI collaboration? What drives individuals ' willingness to collaborate with GAI? Our study addresses these questions by examining the interplay between team dynamics, AI literacy, and individual  perceptions  of  GAI  as  a  teammate.  Various  factors,  including anthropomorphism, autonomy, proactivity, reactivity, and adaptability, also significantly impact human-GAI collaboration (Glikson &amp; Woolley, 2020; Pelau et al., 2021). In this study, we specifically focus on team members ' trust perceptions of GAI as a teammate and the role of AI literacy in fostering this trust. Consequently, we seek to advance the understanding of these perceptions and skills essential for facilitating effective human-GAI collaboration.
@@ -95,6 +104,10 @@ In their comprehensive review, Pinski and Benlian (2024) identify three primary 
 Fig. 1. Conceptual model.
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 We adopt the AI literacy framework developed by Long and Magerko (2020) , which defines AI literacy as the ability to understand fundamental AI concepts, recognize its everyday applications and value in supporting human activities, and assess its societal impact, including benefits  and  concerns.  We  have  selected  this  framework  for  several reasons.  First,  it  provides  a  clear  and  accessible  set  of  components directly relevant to individuals collaborating with GAI in educational settings. Second, it emphasizes both the cognitive understanding of AI technologies and the critical evaluation of their implications, aligning with our focus on how AI literacy enables individuals to make informed decisions, engage effectively in GAI teamwork, and adapt to advancements driven by GAI (Wagner, 2021). Third, this framework addresses the  AI-specific  facets -such  as  autonomy,  inscrutability,  and  learning -that  are  essential  for  distinguishing  AI  literacy  from  general digital literacy (Berente et al., 2021).
 
@@ -127,6 +140,10 @@ The  importance  of  AI-relevant  skills,  particularly  AI  literacy,  has been
 As emphasized by Pinski and Benlian (2024), understanding the effects of AI literacy is crucial.  Research  suggests  that  improved human-GAI collaboration occurs when individuals trust AI, comprehend its nature and purpose, and have the skills to use it effectively (Bankins et al., 2024; Chowdhury et al., 2022). However, prior studies also show that while AI literacy can enhance human-AI collaboration performance, it may reduce future AI use intentions (Pinski et al., 2023). This paradox highlights the need to examine the multifaceted impacts of AI literacy on trust, teamwork dynamics, and attitudes towards GAI in collaborative settings.
 
 Various frameworks have been proposed for AI literacy, focusing on different aspects. Some emphasize learning methods, advocating formal and informal educational initiatives  tailored  to  different  user  groups (Long et al., 2021), while others focus on the components of AI literacy, such  as  individual  AI  skills  and  specific  knowledge  areas  (Ng  et  al., 2021). Such approaches underscore the need to establish a repository of AI literacy components relevant to diverse user groups and teams. For example, software developers working on AI-driven applications may require in-depth technical knowledge of machine learning algorithms,
+
+
+<!-- PAGE 5 -->
+
 
 marketing professionals may need to understand AI ' s role in customer segmentation and predictive analytics, and teachers may need to grasp AI ' s  role  in  enhancing learning experiences and adapting content for diverse student needs (Jorzik et al., 2023; Kim &amp; Kwon, 2023).
 
@@ -164,6 +181,10 @@ Of  the  122  students  invited,  116  consented  to  participate  in  the study
 
 The course spanned the full semester (15 weeks), with classes being held twice a week for 75 min per session. As a core requirement in the College of Business curriculum, the course focused on the study of individual  and  team  behavior  in  organizational  settings.  This  context provides  an  ideal  environment  for  examining  perceptions  of  GAI  in collaborative settings, as students engage in both theoretical learning and applied team-based projects throughout the semester.
 
+
+<!-- PAGE 6 -->
+
+
 ## 2.2. Research context and Human-GAI collaborative project framework
 
 During the first two weeks of the semester, faculty introduced the objectives  of  the  Organizational  Behavior  course,  emphasized  the importance of teamwork for several assignments, and informed students that they were permitted and encouraged, but not required, to use GAI as a teammate in their group projects. Faculty across all Organizational Behavior course sections also introduced ChatGPT-3.5 (OpenAI, 2023) due to its free accessibility and user-friendly interface, which required minimal onboarding for effective use. Moreover, as part of this introductory module, students were given the opportunity to learn how to engage effectively with ChatGPT-3.5. Faculty provided a brief overview of the tool, covering its core functions and offering guidance on how to formulate  effective  prompts.  Students  were  then  invited  to  practice interacting  with  ChatGPT-3.5  by  completing  short,  10 -15-min  tasks related to Organizational Behavior topics.
@@ -193,6 +214,10 @@ Qualitative analysis revealed that participants reflections on their trust could
 Fig. 2. Distribution on Participants ' trust in GAI as a Teammate.
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 The primary rationale expressed by participants who trusted GAI as a teammate was its potential assistance in information generation (see Table 1). One participant mentioned, ' I think it is a very good source to come up with preliminary material, edit existing content, or help you brainstorm ideas. ' Another participant stated, ' I trust generative AI to be a teammate throughout this class because it can help explain difficult concepts so that I can have a clearer understanding. The explanations provided by these programs can give might be clearer than those of my peers, making them particularly useful when concepts are confusing. ' Participants ' who expressed trust also indicated the importance of factchecking GAI responses. As one participant stated, ' We trust it  with basic  questions;  however,  we  know  that  sometimes  it  can  provide inconsistent or untrue information, so we will always review responses before submitting them. ' Such representative quotes revealed participants ' critical and reflective stance, even among those who trusted in GAI.
 
@@ -229,6 +254,10 @@ For Hypothesis 2 (AI literacy and trust predicting perceptions of GAI as  a  tea
 AI Literacy. We adapted Chan and Hu ' s (2023) measure of AI literacy, which consists of three sub-constructs: respondents ' (1) knowledge about GAI, (2) perceived value of GAI, and (3) perceived concerns about GAI. Each sub-construct contains four items, with participants rating statements on a 5-point scale (1 = ' very true ' to 5 = ' not at all true ' ).  Sample  items  from  the  knowledge  about  GAI  sub-construct include: ' I  understand  that  generative  AI  technologies  like  ChatGPT can exhibit biases and unfairness in their output. ' Sample items from the perceived  value  sub-construct  include: ' I  believe  generative  AI  technologies such as ChatGPT can improve my digital competence. ' The overall reliability of the AI literacy measure was acceptable ( α = .75), with high internal consistency for each subscale: knowledge ( α = .89), perceived value ( α = .82), and perceived concerns ( α = .78).
 
 Perception of GAI as a Teammate. Participants ' perceptions of GAI as a teammate were measured using four items adapted from Van den Bossche et al. (2006). Respondents used a 5-point frequency scale (1 = ' never ' to 5 = ' frequently ' ) to evaluate items such as: ' With generative AI as one of my teammates, I am satisfied with our team ' s performance ' and ' I can depend on generative AI as a teammate for information and advice. ' Cronbach ' s alpha for the measure was 0.80., indicating good reliability.
+
+
+<!-- PAGE 8 -->
+
 
 ## 3. Results
 
@@ -318,6 +347,10 @@ Findings indicated that 52 % of the participants trusted GAI during human-GAI co
 
 Zhang  et  al.  (2023) further  showed  that  humans  often  display behavioral trust toward GAI team members, sometimes even preferring GAI-generated decisions over those made by human teammates. One reason that over half of our participants trusted GAI in team projects may be their cautious and rational approach toward using GAI. As one
 
+
+<!-- PAGE 9 -->
+
+
 Table 5 Pearson correlation coefficients among variables in Study 2, Hypothesis 2.
 
 | Variable                         |   n |    M |   SD | 1             | 2              | 3             | 4             | 5               | 6   |
@@ -370,6 +403,10 @@ By situating our research within socio-technical frameworks (Holton &amp; Boyd, 
 
 The findings from this study offer several actionable implications for educators, curriculum designers, and academic institutions aiming to effectively integrate generative AI (GAI) into team-based educational contexts. First, our research demonstrates that AI literacy significantly shapes individuals ' trust formation and perceptions of GAI as a teammate.  Thus,  educators  should  prioritize  comprehensive  AI  literacy training that addresses not only technical proficiency but also valuealignment aspects, as our findings indicate that shared values significantly influence trust in GAI as a teammate. Given that the knowledge
 
+
+<!-- PAGE 10 -->
+
+
 and value components of AI literacy particularly influence trust formation  in  human-GAI  teams,  academic  institutions  should  develop  programs  that  explicitly  demonstrate  practical  GAI  applications  while fostering  critical  understanding  of  how  value  congruence  between humans and GAI systems affects collaborative outcomes (Blackie et al., 2024).  These  educational  approaches  should  be  tailored  to  diverse disciplinary contexts, recognizing that domain-specific literacy plays a pivotal role in trust-building with technological tools in collaborative settings.
 
 Moreover, our findings highlight that trust in GAI as a teammate is nuanced and context-dependent rather than absolute. Individuals typically demonstrate selective trust toward GAI as a teammate, approaching collaboration with critical evaluation mechanisms that align with Mayer et al. ' s (1995) trust framework. This suggests educators should design activities that enhance students ' ability to evaluate GAI ' s trustworthiness across varying collaborative scenarios, particularly focusing on the alignment of values between human teammates and GAI systems. Furthermore, instructors might incorporate team exercises that explicitly address how trust referents operate in human-GAI teams, encouraging  students  to  develop  sophisticated  mental  models  of  GAI  as  a collaborative partner rather than merely a tool.
@@ -389,6 +426,10 @@ This  study extends traditional  trust frameworks  to the innovative context  of
 ## CRediT authorship contribution statement
 
 Zilong Pan: Writing -review &amp; editing, Writing -original draft, Data curation, Conceptualization. Ozias A. Moore: Writing -review &amp; editing, Writing -original draft. Antigoni Papadimitriou: Writing -review &amp; editing, Writing -original draft. Jiayan Zhu: Writing -review
+
+
+<!-- PAGE 11 -->
+
 
 &amp; editing.
 
@@ -450,6 +491,10 @@ Data  and  supplementary  materials  are  available  from  the  corresponding au
 - Kong, S. C., Cheung, W. M. Y., &amp; Zhang, G. (2021). Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds. Computers and Education: Artificial Intelligence, 2 , Article 100026. https://doi.org/10.1016/j. caeai.2021.100026
 - Kozlowski, S. W. J., Grand, J. A., Baard, S. K., &amp; Pearce, M. (2015). Teams, teamwork, and team effectiveness: Implications for human systems integration. In D. BoehmDavis, F. Durso, &amp; J. Lee (Eds.), The handbook of human systems integration . Washington, DC: APA.
 - Laupichler, M. C., Aster, A., Schirch, J., &amp; Raupach, T. (2022). Artificial intelligence literacy in higher and adult education: A scoping literature review. Computers and Education: Artificial Intelligence, 3 , Article 100101. https://doi.org/10.1016/j. caeai.2022.100101
+
+
+<!-- PAGE 12 -->
+
 
 - Lee, M. D., Criss, A. H., Devezer, B., Donkin, C., Etz, A., Leite, F. P., et al. (2019). Robust modeling in cognitive science. Computational Brain &amp; Behavior, 2 , 141 -153. https:// doi.org/10.1007/s42113-019-00029-y
 - Lee, J. D., &amp; See, K. A. (2004). Trust in automation: Designing for appropriate reliance. Human Factors, 46 (1), 50 -80. https://doi.org/10.1518/hfes.46.1.50\_30392

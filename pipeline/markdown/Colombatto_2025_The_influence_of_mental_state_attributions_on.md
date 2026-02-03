@@ -1,10 +1,11 @@
 ---
 source_file: Colombatto_2025_The_influence_of_mental_state_attributions_on.pdf
-conversion_date: 2026-02-03T08:45:53.443879
+conversion_date: 2026-02-03T18:24:01.484748
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 1234567890():,;
 
 1234567890():,;
@@ -30,6 +31,10 @@ https://doi.org/10.1038/s44271-025-00262-1
 ## The in /uniFB02 uence of mental state attributions on trust in large language models
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 dissociation is supported by factor analyses of ratings of a variety of mental states, which reveal two fundamental factors: agency, or the capacity for high-level reasoning and planning, and experience, or the capacity for sensations and emotions 19 (for a review, see ref. 20). These dimensions jointly contribute to our evaluations of various agents, from animals to babies, but their dissociation is especially evident in judgments of AI systems. An LLM may be judged to have high levels of intelligence as per its sophisticated language abilities, while also being judged to have little or no capacity to feel emotions 6 .
 
@@ -57,6 +62,10 @@ Thechoices of the LLM were determined by matching each participant with one of 1
 
 Mental state ratings . Participants were told that they would be asked about their ' opinions about ChatGPT ' . First, they were asked to rate ChatGPT ' s capacity for phenomenal consciousness, on a scale from 1
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -83,6 +92,10 @@ Our primary preregistered analysis focused on the relationship between advice-ta
 
 Given the high positive skew of consciousness attributions in our sample, in an additional exploratory analysis we computed the correlations excluding subjects who rated consciousness as 1 ( ' clearly does not have conscious experiences ' ), revealing a numerically stronger yet still weak negative relationship (Pearson ' s r (232) = -0.14, p =0.028, CI = [ -0.27, -0.02]; Spearman ' s rho = -0.14, p =0.027) with no evidence in Bayesian analyses (BF10 =0.90). A preregistered test for the /uniFB01 t of a second-degree polynomial con /uniFB01 rmed that the linear predictor was a better /uniFB01 t than a quadratic one ( B = -71.93, SE = 35.52, t (406) = -2.03, p =0.044, CI = [ -141.75, -2.11]; vs. B = -12.20, SE = 35.52, t (406) = -0.34, p =0.731, CI = [ -82.02, 57.62]). Similar results were obtained with an exploratory generalized linear model with a logistic link function predicting trial-wise choices to obtain advice (no = 0, yes = 1) from consciousness ratings (rescaled from 0 to 1) with random slopes for subjects ( B = -1.11, SE = 0.50, z = -2.21, p =0.027, CI = [ -2.14, -0.12], BFM=2.87 × 10 + 6 ). Contrary to advice-taking behaviour, impressions of trust were positively correlated with consciousness attributions, with a weak correlation with trust on the current task ( r (407) = 0.11, p =0.023, CI = [0.02, 0.21]) which was not signi /uniFB01 cant in
 
+
+<!-- PAGE 4 -->
+
+
 Fig. 2 | Attributions of mental states to ChatGPT. A Attributions of mental states clustered around two main dimensions -' experience ' (red) and ' intelligence ' (teal). B Rates of advice-taking weakly decreased with higher attributions of
 
 <!-- image -->
@@ -106,6 +119,10 @@ Similar results were obtained with an exploratory generalized linear model predi
 In an additional exploratory analysis, we examined how the advicetaking task may have impacted attributions of intelligence and experience. We considered that participants ' beliefs about the capabilities of ChatGPT may have been in /uniFB02 uenced by exposure to advice, which was not always accurate but rather comparable to human performance. Attributions of intelligence were similar for participants who completed the advice-taking task /uniFB01 rst ( M =60.28, SD = 24.38) compared to those who completed the ratings /uniFB01 rst ( M =58.46, SD=25.63, Welch two-tailed t (405) = -0.74, p =0.463, CI = [ -6.68, 3.04], Cohen ' s d =0.07; BF10 =0.14, error = 0.12%). Attributions of experience were also similar for participants who completed the advice-taking task /uniFB01 rst ( M =13.55, SD = 20.21) compared to those who completed the ratings /uniFB01 rst ( M =10.89, SD=17.74, Welch two-tailed t (405) = -1.42, p =0.157, CI = [ -6.35, 1.03], Cohen ' s d =0.14; BF10 =0.29, error = 0.06%). The mean accuracy of the advice was unrelated to attributions of intelligence ( r (408) = 0.05, p =0.325, CI = [ -0.05, 0.14], BF10 =0.10) and experience ( r (408) = 0.03, p =0.591, CI = [ -0.07, 0.12], BF10 = 0.07) even when only considering participants who completed these ratings after the advice-taking task (intelligence: r (207) = 0.06, p =0.365, CI = [ -0.07, 0.20], BF10 = 0.13; experience r (207) = 0.07, p =0.334, CI = [ -0.07, 0.20], BF10 = 0.14).
 
 The limited impact of exposure to incorrect advice was also clear in exploratory analyses of advice-taking rates. Participants who received more accurate advice on average were not more willing to accept the advice
+
+
+<!-- PAGE 5 -->
+
 
 Fig. 3 | Usage of various AI applications. A Attributions of consciousness to LLMs were positively related to usage of social AI, but not digital assistants or chatbots. B Advice-taking was unrelated to chatbot usage, but was negatively correlated with
 
@@ -134,6 +151,10 @@ Despite common concerns about the consequences of consciousness attributions to 
 Attributions of consciousness were lower in the current survey compared to data from the previous year using the same dependent measure (July 2023 M =25.56; August 2024 M =21.51) 6 . We speculate that this may be due to differences in the samples rather than usage decreasing attributions over time, given evidence that usage is associated with greater consciousness attributions 6 and exposure to ChatGPT increases attributions of mental states 7 . While the current results re /uniFB02 ect a speci /uniFB01 c moment in time (since all participants completed the study in July and August 2024), future work may more directly explore longitudinal changes in attitudes, both in different samples and within the same participants, to explore how attitudes toward AI evolve over time.
 
 Strikingly, attributions of consciousness to ChatGPT were speci /uniFB01 cally related to usage frequency of social AI, rather than ChatGPT itself or other AI systems such as digital assistants. This raises questions about how people reason about different kinds of AI systems, and how their experience with some platforms may generalize to others. While usage of different AI
+
+
+<!-- PAGE 6 -->
+
 
 systems may shape attributions of speci /uniFB01 c mental capacities, users ' beliefs may also depend on characteristics of the users themselves, such as demographics or personality traits 27 -29 . Future work may thus pro /uniFB01 tably examine how exposure to different systems interacts with user characteristics to shape beliefs about AI.
 
@@ -177,6 +198,10 @@ Received: 16 November 2024; Accepted: 5 May 2025;
 12. Cheng, X., Zhang, X., Cohen, J. &amp; Mou, J. Human vs. AI: understanding the impact of anthropomorphism on consumer response to chatbots from the perspective of trust and relationship norms. Inf. Process. Manag. 59 , 102940 (2022).
 13. Jensen, T., Khan, M. M. H., Fahim, M. A. A. &amp; Albayram, Y. Trust and anthropomorphismintandem:theinterrelatednatureofautomatedagent appearance and reliability in trustworthiness perceptions. In Proc. 2021 ACMDesigning Interactive Systems Conference 1470 -1480 (2021).
 14. De Visser, E. J. et al. Almost human: anthropomorphism increases trust resilience in cognitive agents. J. Exp. Psychol.: Appl. 22 , 331 -349 (2016).
+
+
+<!-- PAGE 7 -->
+
 
 15. Waytz, A., Heafner, J. &amp; Epley, N. The mind in the machine: anthropomorphism increases trust in an autonomous vehicle. J. Exp. Soc. Psychol. 52 , 113 -117 (2014).
 16. Forster, Y., Naujoks, F. &amp; Neukum, A. Increasing anthropomorphism and trust in automated driving functions by adding speech output. In 2017 IEEE intelligent vehicles symposium (IV) 365 -372 (2017).

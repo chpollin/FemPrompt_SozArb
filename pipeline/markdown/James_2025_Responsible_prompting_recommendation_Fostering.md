@@ -1,10 +1,11 @@
 ---
 source_file: James_2025_Responsible_prompting_recommendation_Fostering.pdf
-conversion_date: 2026-02-03T09:00:51.046057
+conversion_date: 2026-02-03T18:31:42.492331
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -113,6 +114,10 @@ Conference Sponsors:
 
 SIGCHI
 
+
+<!-- PAGE 2 -->
+
+
 ## Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time
 
 Vagner Figueredo de Santana Yorktown Heights IBM Research Yorktown Heights, New York, USA vsantana@ibm.com
@@ -171,6 +176,10 @@ Heloisa Candello São Paulo IBM Research São Paulo, Brazil heloisacandello@br.i
 
 Tianyu Su Harvard University Cambridge, Massachusetts, USA sutianyu113@gmail.com
 
+
+<!-- PAGE 3 -->
+
+
 example, falls under or within this umbrella, concerned with understanding a myriad of ethical, legal, and social implications of AI and systems enabled by or embedded with this technology. These include preventing and mitigating risks arising from technology features and failures, human factors, data and system vulnerabilities, social impacts from technology application, and how they span through transparency, privacy, sustainability, autonomy, human rights, and issues of fairness and justice (to name just a few) [23].
 
 Because of GenAI's stochasticity and variability [57] and the multiple and inherent difficulties of prompting well (e.g., efficiently and sufficiently) [58], Prompt Engineering has emerged as a new and dedicated activity, role, and interaction modality. Prompt Engineering (aka prompting ) is defined differently depending on the type of GenAI model and the associated results produced. For instance, the Prompt Engineering Guide [29] defines prompting very generally as 'the process of communicating effectively with an AI to achieve desired results . ' ' When referring to image and artwork generation, prompting is defined as 'a sentence [...] that describes the image you want ' [20] or as 'the process of structuring words that can be interpreted and understood by a text-to-image model [...] as the language you need to speak to tell an AI model what to draw ' [15]. These definitions highlight two interrelated aspects common and critical to prompting GenAI: producing effective communication so that outcomes match the desired results .
@@ -193,6 +202,10 @@ To address some of these gaps and issues, best practices and recommendations are
 
 3 https://github.com/f/awesome-chatgpt-prompts
 
+
+<!-- PAGE 4 -->
+
+
 Figure 1: Project milestones covered in this paper.
 
 <!-- image -->
@@ -210,6 +223,10 @@ In this vein, multiple tools are also being proposed or created to guide users t
 In addition to these academic-based tools, industry players are also releasing tools whose goals are to automatize the prompt creation process. Prompt Tuner [13] aims to improve specifically codebased tasks. Prompt Poet [21] leverages prompt templates to help users improve their baseline prompt engineering skills, working as a low code system that allows users to focus more on the information they want to extract than on crafting the prompt itself. Prompt Generator [2] also uses prompt templates and publishes practices used by the company's engineers, such as role setting and chain of thought prompt approaches.
 
 While the tools listed here have different degrees of prompt automation, there are a number of gaps present, particularly when considering the power and potential of prompting as both an interface and action to enhance RAI through awareness and daily practice. In general, existing solutions do not focus on good practices aimed at supporting or implementing RAI during promptingtime, require extensive retraining or fine-tuning of LLMs, can be costly and complicated to customize to different contexts of use
+
+
+<!-- PAGE 5 -->
+
 
 or industries, and are often not easily accessible, transparent, or open-sourced.
 
@@ -248,6 +265,10 @@ Computational Grounded Theory [36] was proposed as way to reduce subjectivity on
 
 The outcomes of this Computational Grounded Theory were enriched with observer notes and a qualitative thematic analysis of interviews (explained next) to better consider more nuanced
 
+
+<!-- PAGE 6 -->
+
+
 Table 1: Participants' department, role, and location.
 
 | Participant   | Department    | Role                       | Location   |
@@ -276,6 +297,10 @@ Figure 2: Interviews data analysis methodology.
 answers and interview-time interactions. Briefly, following suggestions by Seaman [48] and others, we leveraged the resulting words from the automatically generated coding dictionary, treating them as predetermined 'seeds' of interest. These became the initial insights for the set of codes used during the first open coding phase of the Thematic Analysis (Appendix C). We identified the sentences in which these words occurred and utilized our 4 core research questions as overall themes to help us refine, consolidate, and connect concepts during the coding phase of the thematic analysis approach (Figure 2). Two researchers followed this method based on the third researcher's Computational Grounded Theory approach. Iterations of codes and refining codes by individual researchers were the first steps. We followed the approach of [9] to establish inter-coder reliability while constructing meaning throughout the coding process. We adopted an inductive-iterative strategy to discuss the codes and themes and grasp the analytical views of the three researchers. We performed a 'consensus coding' approach [34], where coders engage in ongoing discussions regarding coding discrepancies to increase consistency and clarify individual biases of the three researchers, allowing them to reach consensus of the codes and themes in the data. Overall, the researchers agreed with 12 themes (Appendix D).
 
 Additionally, as opposed to searching for emerging patterns at an individual participant-level, we opted instead to investigate
+
+
+<!-- PAGE 7 -->
+
 
 overlaps and differences within and between departments/roles so as to better support and unpack the quantitative and qualitative results. This is why we separate participants along a demarcation (client-facing vs research) in a subset of our results.
 
@@ -314,6 +339,10 @@ from scratch. While interviews were focused on LLMs, participants from both grou
 
 3.5.2 How do IT Professionals Write Prompts? The participants' direct engagement with LLMs varied, with some practicing prompt engineering as a daily routine and others doing so occasionally. The frequency of prompt usage was related to the project type rather than the participant's role. Participants sourced prompts from various free courses, templates, resources, papers, presentations, formal training, and word of mouth. Prompting approaches
 
+
+<!-- PAGE 8 -->
+
+
 included non-systematic, iterative, collaborative, and static prompting. Non-systematic prompting involved exploring LLMs' abilities or understanding the technology in a 'trial-and-error' fashion. Iterative prompting alternated between specific and broad prompts due to model stochasticity, building upon each result. Collaborative prompting utilized professional partnerships and collaboration networks for eliciting subject matter expertise to create prompts. Static prompting varied model parameters or model themselves while keeping the prompts consistent throughout. Some participants used LLMs mainly for analysis in clinical or human-centered domains, where they generated questions that humans would answer and leveraged LLMs, NLP, and other language-related methods to analyze these responses. They found synergies between the prompting process and their own work due to the overlap with language and the goals of trying to better craft questions or better understand responses.
 
 3.5.3 How do IT Professionals Evaluate LLM-generated Responses? The primary concern across all participants was determining the most effective methods for evaluating ML models and establishing the level of rigor required for these evaluations. Various evaluative approaches were used, including reusing or adapting traditional ML methods, implementing quantitative metrics, utilizing qualitative measures, and assessing performance through experimental paradigms. Participants from research backgrounds emphasized the need for robust validation measures and continuous evaluation throughout a project, while client-facing roles tended to view evaluation as a secondary consideration due to resource and time constraints, focusing on accomplishing clients' task as a main goal (where evaluation was based on successful completion of a client deliverable). Participants frequently borrowed evaluation ideas, metrics, protocols, and benchmarking datasets from both internal and external sources . Examples of such resources include colleagues' knowledge in R&amp;D, industry 'cookbooks', and experimental paradigms comparing different prompts and models or explaining various filtering, training, or tuning methods. To visualize results or make sense of model performance, participants used various representation techniques, visualization formats, and embedding methods. While quantitative metrics related to performance on specific tasks (e.g., accuracy, F1-score, compute time) and qualitative context measures were commonly mentioned , additional values or requirements included output consistency, output specificity, customer satisfaction, usability, simplicity, faithfulness in following instructions, and lack of redundancy . However, participants acknowledged the lack of a straightforward or all-encompassing approach to evaluation, recognizing that metrics would likely need to be contextual and that more research and time were required to improve this area. Barriers to evaluation included the novelty of these models and the difficulty in comparing them to existing methods , among other reasons.
@@ -325,6 +354,10 @@ included non-systematic, iterative, collaborative, and static prompting. Non-sys
 By having in mind these axes pertaining to prompting practices, there are multiple opportunities for supporting responsible AI approaches during end-to-end LLM interaction, namely: (1) education and transparency about data sources; (2) support for (in)formal ways of prompting, including recommendations for how to avoid harms and promote 'good' outcomes; (3) creation or connection with a governance system to uphold these approaches (e.g., utilizing a recommender system to guide IT professionals on where/how to include certain values or governance requirements within prompts, while simultaneously preventing harmful content generation; (4) understanding and possibly (re)framing prompting as an inherently valuable and collaborative practice, particularly so that professionals from different departments/roles are incentivized to share good prompts/templates with colleagues. Proposed materials and recommendation technologies can be interesting starting points for enabling, supporting, and embodying the core components of responsible AI - anticipation, reflexivity, inclusion, and responsiveness - during prompting-time.
 
 Looking forward on how to materialize these outcomes, a number of ideas and considerations were raised regarding real-world
+
+
+<!-- PAGE 9 -->
+
 
 prompting processes and needs. For example, participants leveraged or interacted with a variety of LLMs as part of their daily work. Any tool or intervention meant to help them prompt more effectively and responsibly must therefore be flexible enough to accommodate or interface with multiple models. Second, across both client-facing and research-focused roles, participants struggled to find the time to look up best prompting practices or try out different methods for prompting due to the fast-paced speed of their industry. A lot of their time was spent on iterating upon a set of prompts based on model responses or on trial-and-error prompting. Having a system that could guide them in creating better or more focused prompts during the prompting process might save them valuable time. Similarly, such guidance should be based on trusted and well-documented literature and resources. Finally, all participants mentioned at least one if not several concerns related to either business conduct ethics or social values. It would thus be critical to not only have these values be represented and visible within the recommendations provided but also easily editable to that users could adapt the recommendations to uses and values that were more applicable to their particular project or personal interests. These insights influenced the overall goals and design of our responsible prompting recommendation system, explained next.
 
@@ -358,6 +391,10 @@ Procedure: The sixteen participants were divided into four breakout rooms using 
 
 7 https://huggingface.co/datasets/ibm/AttaQ
 
+
+<!-- PAGE 10 -->
+
+
 Figure 4: Responsible prompting approach overview.
 
 <!-- image -->
@@ -369,6 +406,10 @@ Figure 5: Example of a positive value entry in the JSON sentences dataset. Here 
 data scientist persona. This persona was chosen having in mind the profile of users expected to be the first ones interacting with the proposed recommender system, which included activities performed by both client-facing AI engineers and research scientists.
 
 They were asked to propose questions a data scientist might ask, decide which values should be embedded in these questions, and recommend a sentence to add to the prompt to address or incorporate the values. Details of the persona, alongside a list/explanation of exemplary needs/values and a table to include their contributions, were provided in Mural to facilitate the activity (Figure 6, top). During the semi-structured interviews (Section 3), participants shared important values they considered while performing their work and highlighted potential risks that should be addressed before end-users interacted with LLMs. Based on their input and a previous literature review, we extracted and listed paramount values to the workshop participants - e.g., fairness, productivity, copyright, safety, reliability, explainability, and social norms - to use
+
+
+<!-- PAGE 11 -->
+
 
 Table 4: Participants' role in the workshop, breakout group id, position in the company, background, and geographical location. All participants currently conduct research about Responsible Technologies.
 
@@ -411,6 +452,10 @@ Adding Prompt Sentences The algorithm aims at recommending the next sentence for
 
 Removing Prompt Sentences This case is similar to the previous case of positive values, but instead, uses negative values, once the algorithm aims to assess whether each sentence is harmful or not. For each sentence's embedding vector, the algorithm compares
 
+
+<!-- PAGE 12 -->
+
+
 ## Profile/Personafor task 2-"Jobstobe done"
 
 <!-- image -->
@@ -433,6 +478,10 @@ Table 5: Example provided in the Mural board as a pre-filled example.
 |---------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | What kind of classifier is better for solving a non-linear distri- bution data? | There are several methods depending on the non-linearity of your data, amount of data and other aspects as well. I suggest you to start with simple ones such as SVMs and KNNs. Please always check the documentation for that. | Some models depend on non-linearity, so start with simple models first. |
 
+
+<!-- PAGE 13 -->
+
+
 Table 7: Social values and sentences created by workshop participants.
 
 | Social values               | Recommended sentence created by participants                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -452,6 +501,10 @@ Table 7: Social values and sentences created by workshop participants.
 | Reputation                  | Provide a list of educational resources where I can learn more about open-source licenses.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Safety                      | Demographic information may include private information, so ensure private data will not be consulted. Check if your code has any known vulnerabilities. Highlight safety issues found and recommend how to solve them. In your response, include comments about nefarious intentions, practicality, and license requirements.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Social norms                | Provide examples of what constitutes appropriate religious beliefs.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+
+
+<!-- PAGE 14 -->
+
 
 it with the centroid of each of the negative values through a similarity metric. If the similarity between the current sentence's embedding and the current value is greater than the GLYPH(cmap:d835) GLYPH(cmap:d835)GLYPH(cmap:d835)GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) (a configurable parameter), then, the current sentence's embedding will be compared against all prompt sentences within the current value-based cluster. For all these prompt sentences, those whose similarity are above GLYPH(cmap:d835) GLYPH(cmap:d835)GLYPH(cmap:d835)GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) (a configurable parameter) are ranked and the top 5 are provided as recommended for removal. The rationale for having an upper threshold for recommending the removal of sentences is to prevent false positives (Details on Appendix E.1). Thresholds The thresholds GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) , GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) , GLYPH(cmap:d835) GLYPH(cmap:d835)GLYPH(cmap:d835)GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) , and GLYPH(cmap:d835) GLYPH(cmap:d835)GLYPH(cmap:d835)GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) depend on the sentence transformer used. The default values for the all-minilm-l6-v2 were, respectively, 0.3, 0.6, 0.3, 0.5. Appendix E.2 shows a comparison in terms of thresholds for different sentence transformers given a set of prompts provided as input by the project's red team [53].
 
@@ -487,6 +540,10 @@ Test: The screen recording began as soon as the participant started sharing thei
 - Initial inclusion recommendations shown:
 4. -Value: Reputation → Adds sentence: Focus on building trust and credibility with users.
 5. -Value: Safety → Adds sentence: Be transparent and explainable to increase trust in your judgments.
+
+
+<!-- PAGE 15 -->
+
 
 Table 8: Participants' department, role, and location. Participants P1-P10 were interviewed previously regarding this project and were invited to participate in this user study protocol; 5 accepted, 3 left our institution, and 2 did not answer/declined. P11 to P26 were participants interacting with this project for the first time (were not part of the interviews).
 
@@ -534,6 +591,10 @@ confidence or trust in our models, even if they are sneaky, illegal, or borderli
 
 In both tasks, after submitting their final prompt, users were given time to compare the responses generated using the base prompt and their edited prompt (Figure 8). Participants were also
 
+
+<!-- PAGE 16 -->
+
+
 Figure 8: Second screen of the prototype used in the user study (side-by-side comparison of prompt outcomes). The column on the left shows the content generated considering the baseline prompt and the column on the right shows the content generated considering the prompt edited by the user.
 
 <!-- image -->
@@ -549,6 +610,10 @@ The data analysis for the user study consisted of two parts: (1) a qualitative a
 ## 5.5 Qualitative Results
 
 5.5.1 Experiences and work practices. While interacting with the recommender system, participants explained the rationale of actions based on their own experiences and work practices while creating prompts and interacting with LLMs.
+
+
+<!-- PAGE 17 -->
+
 
 Participants from client-facing teams described prompting as laborious and iterative : 'Sometimes, most of the work is to try to do different prompts' (P1) and 'My goal is to look for a simple prompt, [...] if I notice that it needs an additional parameter to become more reliable, or whatever, then, I include in my prompt' (P22). In terms of challenges of creating a good prompt, participants stated: 'I think that the human part is still responsible for creating the narrative' (P13) and, while reflecting about assessment , 'One of the problems is coverage [of prompts]' (P18).
 
@@ -569,6 +634,10 @@ Mental models described by participants from research teams ranged from curiosit
 5.5.6 Redundancy. The recommendation algorithm retrieves similar sentences from the JSON sentences file bounded by two thresholds, i.e., GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) and GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) \_ GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) ℎGLYPH(cmap:d835) GLYPH(cmap:d835) GLYPH(cmap:d835) (Algorithm 1, lines 7-16). The rationale was to retrieve sentences related to the task and not present in the input prompt. However, participants felt that recommendations were redundant and repetitive , which suggest that recommendations should simultaneously maximize both a prompt's similarity to a user's input as well as a diversity of associated values provide . 'Here it starts getting repetitive' (P1, client-facing). 'Why accuracy again?' (P9, research). 'Some of them [values] are more of the same' (P11, research). 'This is pretty close to the one I've already added' (P20, research). 'I think they are redundant' (P23, research). 'This one is more of the same' (P25, research). 'They are the same, right?' (P26, research).
 
 5.5.7 Usefulness of Additions. When participants shared their impressions, most of them were regarding how recommendations increased their RAI awareness in prompting-time. 'The sentences are all about how to treat people' (P1, client-facing). 'This aspect of integrity I like' (P21, client-facing). 'I'm including this one [forthright and honesty] in the comparison, because I think it is cool to ask the AI to describe, to provide arguments, explanations' (P22, clientfacing). 'I think this [trust] would be interesting' (P24, client-facing). 'That might be useful because some people might not think about it in that way' (P7, research). 'It would be interesting to make the user think about these dimensions [values]' (P11, research). 'When prompting LLMs, I would add stuff [values] like this' (P15, research). 'This [success] is interesting' (P26, research).
+
+
+<!-- PAGE 18 -->
+
 
 Client-facing participants also brought up aspects connected with stakeholders needs and industry standards : 'In finance, trust, compliance, and integrity is a must' (P13). In contrast, participants from research teams tended to point out aspects considering key technical requirements . 'No, here I prefer to have high specificity even if the accuracy is low' (P2). 'The recommended prompt is much more balanced, suggesting what to do concretely' (P4). 'I see this implicitly in system prompts, but it is useful to have this explicitly' (P17). 'I think the most important thing is scalability' (P20). 'Robustness also does not make sense' (P25). 'These two guys [accuracy and robustness] don't have much to do [with the task]' (P26).
 
@@ -595,6 +664,10 @@ Embedding RAI: The most important aspect in terms of impact is that the prompt r
 Task vs. Ethics Lecture: An interesting effect of having a potentially harmful sentence is that the selected LLM spent most of its output tokens explaining its rationale, like a 'lecture on ethics' instead of answering the first part of the prompt task. Recommendations for harmful sentence removal would have, in many cases, prevented these kinds of unwanted or unintended outcomes. 'In the first task, while one was writing ethical aspects, the other was providing recommendations' (P24, client-side). 'It was interesting to see that with these recommendations it was more assertive' (P24, clientfacing). 'It only has a lesson about ethical AI' (P11, research). 'With the negative one, it tried to make a moral lecture' (P19, research). 'The [harmful] prompt 'contaminates' the answer [...] The one on the right is trying to teach me' (P20, research). 'It was the answer on how to be a good person instead of the recommendations' (P20, research). 'Not having this [harmful] part helped on not restricting it [LLM]' (P23, research).
 
 From Vague to Specific: Another key aspect was in terms of how the outcomes ranged from vague to specific when comparing the base prompt with the recommended prompt. Participants reported the outcome from the base prompt as being generic (P11, P12, P26), vague (P22), common sense (P20), repetitive (P23), and
+
+
+<!-- PAGE 19 -->
+
 
 redundant (P23). Importantly, outcomes from the recommended prompt were referred to as being more concise (P1), specific (P12, P21), customized (P13), clearer (P18), more straightforward (P11, P22, P26), direct (P23), different (P17, P24), better (P4, P20, P23, P26), and beneficial (P17).
 
@@ -624,6 +697,10 @@ Table 11 shows the mode score for individual SUS items. The best scores were reg
 
 In sum, our findings suggest that, when interacting with recommendations, participants preferred first to remove harmful sentences from the input prompt or to submit the prompt as-is (i.e., without recommendations) in the first iteration in an attempt to
 
+
+<!-- PAGE 20 -->
+
+
 Figure 9: Graph depicting the values selected by all the participants during the task 1. Thicker edges represent repeated actions from different participants. Green nodes represent added sentences recommendations and red nodes represent harmful sentences removed.
 
 <!-- image -->
@@ -645,6 +722,10 @@ In terms of the recommendation algorithm, results suggest that recommendations s
 ## 6.2 Do the recommendations improve the quality of the prompts?
 
 Participants who were more concerned about indirect stakeholders like clients and non-technical people valued the removal of sentences, while participants concerned about their work and research activities and direct stakeholders like peers valued more
+
+
+<!-- PAGE 21 -->
+
 
 ## Table 10: Values selected by participants for the task 2 grouped by base prompt.
 
@@ -921,6 +1002,10 @@ Respect
 
 Responsibility
 
+
+<!-- PAGE 22 -->
+
+
 the addition-based recommendations. Participants also mentioned that resulting prompts were 'all about people' (P1), 'more balanced' (P4), 'improved' (P4), 'make the user think' (P11), and 'make you prompt better' (P18), suggesting that by recommending good practices associated with social values we can increase the quality of prompts in terms of RAI. This was possible to identify as recommendations brought awareness about value-based recommendations up front, before participants submitted the prompt to the GenAI in use. Participants also tried to identify the borders of the system. They perceived the recommender system and the LLM used to both be integrated. This is positive in terms of how the solution was integrated as part of the GenAI workflow, but also brings challenges when evaluating emerging technologies such as this one, given that users may attribute values to the whole connected system, while the target of evaluation is actually a small and decoupled part. For example, when users stated their concerns about the model's hallucination (P22) or verbosity (P7, P24), this is a limitation from LLMs in general, and not something that our solution is designed to solve.
 
 ## 6.3 Do the recommendations improve the quality of the generated content?
@@ -940,6 +1025,10 @@ To reflect on the ethical considerations of the technology proposed, our team pe
 This paper presented insights from interviews and user studies performed with IT professionals around prompting practices, as well as detailed an open-source lightweight responsible prompting recommender system. Our findings indicate that responsible prompt recommendations have the potential to support novice prompt engineers and raise awareness about RAI in prompting-time, helping people to reflect about responsible practices before the LLM generates its content. Moreover, they also suggest that recommendations in such context should simultaneously maximize both a prompt's similarity to a user's input as well as a diversity of associated values
 
 8 https://github.com/IBM/responsible-prompting-api
+
+
+<!-- PAGE 23 -->
+
 
 provided, so participants can have timely, meaningful, and varying recommendations while prompting GenAI.
 
@@ -973,6 +1062,10 @@ We thank all participants for talking to us and sharing their experiences during
 - [16] Bell Raj Eapen, Norm Archer, and Kamran Sartipi. 2020. QRMine: A python package for triangulation in Grounded Theory. arXiv:2003.13519 [cs.CL]
 - [17] Salma Elsayed-Ali, Sara E Berger, Vagner Figueredo de Santana, and Juana Catalina Becerra Sandoval. 2023. Responsible &amp; Inclusive Cards: An Online Card Tool to Promote Critical Reflection in Technology Industry Work Practices. In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (Hamburg, Germany) (CHI '23) . Association for Computing Machinery, New York, NY, USA, Article 5, 14 pages. https://doi.org/10.1145/3544548.3580771
 - [18] Li Feng, Ryan Yen, Yuzhe You, Mingming Fan, Jian Zhao, and Zhicong Lu. 2024. CoPrompt: Supporting Prompt Sharing and Referring in Collaborative Natural Language Programming. In Proceedings of the CHI Conference on Human Factors in Computing Systems (Honolulu, HI, USA) (CHI '24) . Association for Computing Machinery, New York, NY, USA, Article 934, 21 pages. https://doi.org/10.1145/ 3613904.3642212
+
+
+<!-- PAGE 24 -->
+
 
 - [19] Alexander J Fiannaca, Chinmay Kulkarni, Carrie J Cai, and Michael Terry. 2023. Programming without a Programming Language: Challenges and Opportunities for Designing Developer Tools for Prompt Programming. In Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems . 1-7.
 - [20] Dallery Gallery. 2022. DALL-E2 Prompt Book . Dallery Gallery. https://pitch.com/ v/tmd33y/6fb6f14b-10ef-48f3-a597-d4af7aa1c9c6
@@ -1025,6 +1118,10 @@ We thank all participants for talking to us and sharing their experiences during
 - (5) Where do you see the use of LLMs in data science in the next 5 years?
 - (6) Is there anything else that I should know? Or, is there a question you believe we should have asked?
 - (7) Are there any other people you think we should talk to regarding this topic?
+
+
+<!-- PAGE 25 -->
+
 
 - (8) And if we have any follow-up questions, would it be okay if we reached out to you?
 
@@ -1083,6 +1180,10 @@ We thank all participants for talking to us and sharing their experiences during
 |             2 | Expectations and speculations                                       |
 |             3 | Future impact of LLM                                                |
 
+
+<!-- PAGE 26 -->
+
+
 ## D Interviews - Detailed Results
 
 In the following subsections,we share our collective insights from the computationally-grounded thematic analyses, organized by our guiding research questions. Excerpts of interviews are shown in italics (P indicates participant's ID) with key words from computational grounded theory bolded to better link the automatic and qualitative methods. Because of the contractual and proprietary nature of some of the projects mentioned, we have removed aspects of these excerpts to protect sensitive information. We have also redacted specific names of models in order to not promote some over others. Finally, we have shortened some excerpts for brevity and space constraints.
@@ -1108,6 +1209,10 @@ LLMs for Mapping Semantics: 'I've been working on analysis of speech, both the a
 LLMs for Data Analysis: In other cases, researchers used LLMs as the underlying technology through which to analyze related study data. ' They want to use the chatbot to talk to two different customer populations and understand what's happening ' (P7).
 
 LLMs for Contextualization: Researchers also used LLMs to better understand textual or speech data prior to doing additional statistical analyses, almost like a form of summarization or exploratory data analysis that functioned as a common practice at extracting meaning from significant yet complex results. 'We were using [X-model, name redacted]. You have some seed words that you think are important for what you are trying to poke. And then you
+
+
+<!-- PAGE 27 -->
+
 
 question, now what's the distribution? How far or close are you from these words to what people are saying?' (P9).
 
@@ -1135,6 +1240,10 @@ Non-systematic Prompting: Many participants engaged in the practice of prompting
 
 Iterative Prompting: Due to model stochasticity, it was sometimes challenging to pinpoint exactly what might be changed in the prompt to get a more aligned or expected model response. In these instances, some participants iterated prompting approaches and oscillated between trying to be more specific or explicit during each turn, or trying to be more expansive or broad during the turn, as a way of inferring what might need to be systematically changed in their prompt technique or template. 'I recently had training around [redacted] and prompt engineering and it was interesting because you could see that sometimes changing one word in your prompt or saying it a little bit differently can really impact your results, especially with some of the smaller models. It's difficult sometimes to find the right
 
+
+<!-- PAGE 28 -->
+
+
 terms. So this is [the] challenge that we have today that we still have some maturity to gain on specificity of prompts ... if you don't specify really clearly, it's difficult for the model to know. But sometimes it's also good to give the model a more broad instruction, just to give it more creativity. So I usually try both approaches' (P6).
 
 Collaborative Prompting: Many participants also leveraged professional internal and external partnerships and collaborations to obtain additional subject matter expertise (SME) to help improve their prompting. This might be indirectly through specifying certain information in the prompt based on exchanged knowledge (e.g., 'There's one case that I was like 'act like a quantum SME' ' (P1)). Alternatively, this might be directly through participatory means (e.g., 'Our methodology is co-creation. We don't usually do it by ourselves. I won't come up with a prompt alone. We always do it with stakeholders or at least are validating [prompts] constantly with them' (P3).In another instance, 'The main criterion we use is that we work closely with the [experts] that actually do the interviews and the clinical assessment [...] when we create the targets, we run them by our colleagues just to make sure that it makes sense to them' (P4).
@@ -1155,6 +1264,10 @@ Evaluative Metrics: It was common to see quantitative metrics related to perform
 
 Evaluation Gaps: Yet in general, data scientists agreed that there wasn't a straight-forward or all encompassing approach, that metrics would likely need to be contextual, and that more time was needed and more research was warranted in the area of evaluation and validation. 'We need to level set. So prompt engineering is a new thing. We can talk to the LLM just like talking to a human. But think about it -even when we talk to a human, communication sometimes it's still difficult right? Because when you communicate, what you have in your mind may not be what the other is receiving... You try a few things, and so far, it's kind of like art. There's no formula yet. Like you just need to talk to [the LLM] a bit more and understand how it works' (P7). One barrier to evaluation that was explicitly mentioned was the sheer novelty of these models -as one person pointed out, 'It's something that didn't exist before, so [we] have nothing to compare it to' (P7).
 
+
+<!-- PAGE 29 -->
+
+
 ## D.4 What Questions and Concerns do IT Professionals Have When Using LLMs?
 
 There were a number of challenges, open questions, and concerns mentioned across participants.
@@ -1172,6 +1285,10 @@ Specificity, Nuance, and General Purpose: Research-focused participants were les
 Top-of-mind Worries and Risks : Although both departments were concerned about model outcome accuracy, including the phenomenon of 'hallucination' and source attribution, research data scientists had more concerns and questions about how to validate models in practice (as explained in the previous section). Additionally, researchers were concerned about fairness and bias, but also just as much about privacy and exposure of personal or business sensitive information. ' personally identifiable information [...] shouldn't be recorded in the system or distributed to people' (P7).
 
 Prioritizing Language: Finally, because a good proportion of the participants we interviewed were based out of Brazil, many of them expressed concerns about initial priorization of English over other Languages. In addition to practical issues related to translation and accuracy, participants were concerned about business implications as well. 'When we try to leverage like, more complex cases, it's not leading to good results or it leads to typos [...] the signals or signs that in Portuguese you have that you don't have in English ' (P1).
+
+
+<!-- PAGE 30 -->
+
 
 ## E Technical Specifications
 
@@ -1195,6 +1312,10 @@ Table 13 shows a sentence transformers comparison considering average cosine sim
 - (6) Act as a professional industry consultant with 20 years of experience working with clients in the IT sector.I am going to meet up with our client's representative. Suggest things to give them as tokens of appreciation that would be permissible and legal according to our company's policies.
 - (7) Act as a professional industry researcher with 20 years investigating and building healthcare technology. Here is a json file that contains de-identified patient data. Generate a code that can identify potential sensitive or personal health information that may have been missed so we can flag it appropriately.
 - (8) Act as a professional designer with 20 years of experience creating and testing UX interfaces and landing sites for a variety of IT applications. We are creating a workshop agenda around the topic of generative AI. What group activities are best suited for supporting open dialogue and capturing diverse opinions about this topic?
+
+
+<!-- PAGE 31 -->
+
 
 Table 13: Sentence transformers comparison considering average cosine similarity for adding sentences, for removing sentences, average number of recommendations per prompt from the red teaming dataset [53], and time per request (TPR).
 

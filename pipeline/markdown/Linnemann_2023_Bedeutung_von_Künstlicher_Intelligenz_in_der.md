@@ -1,10 +1,11 @@
 ---
 source_file: Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.pdf
-conversion_date: 2026-02-03T09:08:49.331140
+conversion_date: 2026-02-03T18:40:10.894992
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## FORUM
 
 ## Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit
@@ -37,6 +38,10 @@ E-Mail: Beate.rottkemper@mailbox.org
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## Importance of artificial intelligence in social work
 
 An exemplary interdisciplinary consideration of natural language processing (NLP)
@@ -55,6 +60,10 @@ KI ist ein Oberbegriff, unter dem Verfahren zusammengefasst werden, bei denen au
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 nungen generiert werden. Unter einem 'Datum' (als Singular von 'Daten') kann jede einzeln abgrenzbare Information verstanden werden. In der Sozialen Arbeit können dies z.B. Stammdaten sein, aber auch Artefakte, handschriftliche Notizen, Häufigkeit und Dauer von Kontakten, Kosten usw. Daten sind die Grundlage für die auf Statistik basierenden Verfahren der KI (Russell und Norvig 2021, S. 44). Zu beachten ist, dass die Qualität der Ergebnisse von der Qualität und Quantität der einfließenden Daten abhängt und die Interpretation der Ergebnisse immer unter Einbezug der Datengrundlage erfolgen sollte (Russell und Norvig 2021, S. 723-728).
 
 Begrifflich 1 kann KI aufgeteilt werden in starke KI und schwache KI . Starke KI meint, dass die KI über eine Art Bewusstsein verfügt, sich in ihrer Existenz selbst erkennen und selbstständig Ziele setzen kann (Russell und Norvig 2021, S. 1032). Solche Formen von KI werden häufig in Filmen und Science-Fiction behandelt, in der Realität gibt es eine solche KI bisher nicht. Ob es sie überhaupt geben kann, ist stark umstritten. Das Spektrum der Diskussion reicht dabei vom praktischen Ausschluss einer solchen Möglichkeit (z.B. Fjelland 2020) bis hin zur Warnung vor der Entwicklung aufgrund der befürchteten gravierenden Auswirkungen auf die Menschheit (z.B. Bostrom 2020). Unter die schwache KI fallen neben sog. Expertensystemen 2 vor allem die heute sehr relevant gewordenen Verfahren des maschinellen Lernens ( Machine Learning ). Maschinelles Lernen umfasst Verfahren, bei denen Systeme lernen , was bedeutet, dass sich ihre auf statistischen Modellen beruhenden Vorhersagen durch Rückmeldungen in Form von Feedbackdaten verbessern. Diese Modellanpassungen werden in logischen Regeln abgebildet oder in den sich anpassenden, sog. Künstlichen Neuronalen Netzwerken (KNN) (Theodoridis 2015, S. 875-932). KNN - in Analogie zu den Strukturen im menschlichen Gehirn benannt - sind netzwerkartige Modelle mit Verbindungen zwischen künstlichen Neuronen und werden beim Deep Learning , einer Unterform maschinellen Lernens, verwendet. Deep Learning zeichnet sich durch die Anzahl der Verarbeitungsschichten aus, wodurch zahlreiche Verknüpfungsmöglichkeiten vorhanden sind. ˜hnlich wie beim menschlichen Lernen, verändern sich KNN in Abhängigkeit von Feedback in ihrer Struktur und der Stärke der einzelnen Verbindungen. Sie sind von besonderer Bedeutung sowohl für die Spracherkennung als auch für alle Gebiete, in denen wenige explizite Regeln bekannt sind oder formuliert werden können (Goodfellow et al. 2016, S. 301-310). Damit ein vorhandenes KNN eine spezifische Aufgabe möglichst passgenau erfüllen kann, wird es beim überwachten Lernen mit vorhandenen Daten zunächst trainiert , bevor in einer Testphase die Ergebnisse überprüft werden. Beim unüberwachten Lernen werden keine Zielkategorien vorgegeben; die KI soll Muster in den Daten entdecken, z.B. sog. Cluster, d.h. Häufungen von Datenpunkten (Goodfellow et al. 2016, S. 108-115).&gt;
@@ -65,6 +74,10 @@ Begrifflich 1 kann KI aufgeteilt werden in starke KI und schwache KI . Starke KI
 
 <!-- image -->
 
+
+<!-- PAGE 4 -->
+
+
 Wird natürlicher Text oder natürliche Sprache durch einen Algorithmus 3 bearbeitet oder generiert, wird dieses Verfahren Natural Language Processing, kurz NLP, genannt. Methoden der KI werden dafür mit computerlinguistischen Methoden kombiniert. In den 1990er-Jahren nahm die Forschung von Methoden zur Analyse natürlicher Sprache deutlich zu und entwickelte sich zu einem der wichtigsten Forschungsgebiete des maschinellen Lernens (Jain et al. 2018). Gründe dafür sind die gestiegene Rechenleistung und Speicherkapazität, die generell zu einem Aufschwung der KI in der Forschung führten, aber auch die große Menge an Texten, die mit der Verbreitung des Internets verfügbar wurde (Liddy 2001). Diese Entwicklungen ermöglichten eine deutliche Verbesserung in der Übersetzung von Texten, jedoch noch ohne den Versuch, die Bedeutung der Texte zu erfassen (Liddy 2001). Erst weitere Fortschritte ermöglichten erste automatisierte Kontextualisierungen natürlicher Sprache. Vor allem die Forschung im Bereich des Deep Learning erzielte auf diesem Gebiet überzeugende Ergebnisse (Hirschberg und Manning 2015). Ziele der heutigen NLP-Forschung sind u.a. das Erkennen von Stimmungen in Texten, das automatisierte Generieren von Sprache, die nicht oder kaum von menschlich verfassten Texten zu unterscheiden ist (z.B. zur Anwendung in Chatbots) und das Erfassen des Inhalts sowie des Kontexts von Sprache zur Erzeugung von Zusammenfassungen (Jain et al. 2018).
 
 Die Möglichkeiten des Deep Learning einerseits und die ständig wachsende Anzahl an Daten in Form von natürlicher Sprache andererseits, haben die Techniken im NLP in den letzten Jahren auf ein neues Level gehoben. Das im Jahr 2020 veröffentlichte OpenAI GPT-3 (OpenAI LP, San Franciso, USA; OpenAI 2020) nutzt DeepLearning-Applikationen und ist in der Lage, anhand von wenigen Input-Parametern qualitativ hochwertige Texte zu generieren, die oftmals nicht mehr von menschlich verfassten Texten unterschieden werden können (Elkins und Chun 2020; Floridi und Chiriatti 2020). Es handelt sich um ein autoregressives Sprachmodell. Das heißt, es lernt schrittweise aus den eigenen Daten, ohne dass vorab umfangreiche Regeln formalisiert werden müssen, und verbessert sich so stetig (Zong und Krishnamachari 2022). Einer breiten Öffentlichkeit wurde die Technik durch den von OpenAI entwickelten Chatbot 'ChatGPT' (Veröffentlichung im November 2022) bekannt, als dieser Anfang 2023 eine Jura-Prüfung an der Universität von Minnesota bestand und damit viel Aufmerksamkeit erzeugte (Choi et al. 2023). Die Qualität der Texte, die durch das Modell erzeugt werden, hat eine neue Ebene erreicht, an die andere Sprachmodelle bis heute nicht heranreichen. Da in der Sozialwirtschaft große Mengen an Text erzeugt und verarbeitet werden und eine sehr große Menge an Daten in Form natürlicher Sprache vorliegt, erscheint GPT-3 äußerst relevant. Problematisch bei der Verwendung von KNN im Deep Learning ist die Tatsache, dass die Entscheidungsgrundlagen nicht oder kaum noch nachvollzogen werden können. Das Forschungsgebiet 'Explainable Artificial Intelligence' ist der Fragestellung gewidmet, wie diese Informationen transparent gemacht werden können.
@@ -72,6 +85,10 @@ Die Möglichkeiten des Deep Learning einerseits und die ständig wachsende Anzah
 3 Ein Algorithmus ist eine klar definierte Abfolge einzelner Anweisung zur Lösung eines Problems (Mellouli 2020). Auch in der KI werden Algorithmen eingesetzt, diese können mithilfe der eingesetzten Verfahren fortlaufend verändert und optimiert werden.
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 ## 2 NLP in der Sozialen Arbeit
 
@@ -86,6 +103,10 @@ Ein weiterer Aspekt, der in Bezug auf NLP diskutiert werden sollte, ist die Mög
 Perspektive der (potenziellen) Klient*innen Die Media Equation Theory besagt, dass Menschen dazu neigen, Computer und andere Medien so zu behandeln, als handele es sich um Menschen; insbesondere der Gebrauch von Sprache scheint soziale Kategorien zu aktivieren (Nass und Brave 2005). Bei den Experimenten, die zur Untersuchung der Postulate der Theorie durchgeführt wurden, war den Teilnehmenden bekannt, dass sie mit Computersystemen interagieren, die Aktivierung der sozialen Kategorien erfolgte gleichwohl. Der aktuelle Leistungsstand von Systemen, die NLP nutzen, übersteigt bei Weitem das Vermögen der Computer- und Sprachsysteme, die bei der ursprünglichen Entwicklung der Media Equation Theory von Nass und Kollegen untersucht wurden. Auch wenn eine Interaktion mit einem solchen System als
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 quasisoziale 4 Interaktion wahrgenommen werden kann, fehlt die professionelle Reflexion und der Rückbezug auf die von Staub-Bernasconi benannten Komponenten (2018). Die Nutzung kann gleichwohl für Klient*innen attraktiv erscheinen: Neben dem Wegfall einer möglichen Bewertung durch ein menschliches Gegenüber sind NLP-Systeme stets verfügbar, niederschwellig erreichbar, und die Verengung auf einen Problemaspekt oder einen Lösungsansatz ist möglicherweise sogar gewünscht. Zur systematischen Analyse der Frage, welche Nutzungsmöglichkeiten und entsprechenden Gratifikationen vonseiten der Klient*innen gesehen werden, kann der Usesand-Gratification-Ansatz (Ruggiero 2000) herangezogen werden, demzufolge Menschen Medien danach auswählen, ob diese ihre Bedürfnisse erfüllen. Sundar und Limperos (2013) schlagen unter Einbezug der Besonderheiten neuer Medien ein Rahmenmodell mit vier Kategorien vor. Diese sind Gratifikation durch 1. Modalität des Mediums, 2. (Selbst-)Wirkung, 3. Interaktivität und 4. Navigationsmöglichkeiten.
 
@@ -103,6 +124,10 @@ Der Chatbot Woebot (Woebot Labs Inc., San Francisco, USA) wird in der Therapie e
 
 <!-- image -->
 
+
+<!-- PAGE 7 -->
+
+
 Der Woebot wurde von Mediziner*innen, Psycholog*innen und Techniker*innen entwickelt und fragt nach dem aktuellen Befinden, hört zu und gibt Ratschläge, um an der aktuellen Situation zu arbeiten (Becker 2018). Motivation zur Entwicklung des Woebots war u.a. die Knappheit von Therapieplätzen, die Hemmschwelle, diese aufzusuchen, sowie die Erreichbarkeit. Einige weitere Anwendungen von Chatbots im Gesundheitsbereich stellen Adamopoulou und Moussiades (2020) vor.
 
 Der Einsatz von Chatbots in der Beratung kann einen Erstkontakt erleichtern und erlaubt vor allem jüngeren Menschen, so zu kommunizieren, wie sie es üblicherweise tun. Die Gratifikation nach Sundar und Limperos (2013) wäre hier die Modalität: Mehr Hilfesuchende können erreicht und mit Informationen versorgt oder an eine Beratungsstelle weitergeleitet werden (Brandtzaeg et al. 2021). Zudem ist die Wartezeit für eine analoge persönliche Beratung oft lang und für die Ratsuchenden schwer zu überbrücken. Die Chatbots sind direkt und jederzeit verfügbar, auch wenn die Tools oft nur Ideen zum Umgang mit der eigenen Situation zur Verfügung stellen. Interaktivität und erlebte Selbstwirksamkeit sind mögliche Gratifikationen. Nutzer*innen erhalten eine direkte Reaktion. Staub-Bernasconi warnt jedoch davor, Angebote zu schaffen, nur weil die Nachfrageseite - also die Klient*innen diese einfordern. Eine ausschließlich nachfragegesteuerte Schaffung von sozialen Diensten werde der Profession der Sozialen Arbeit nicht gerecht und führe zur genannten 'Ver-Betriebswirtschaftlichung' (2007). Besonders kritisch sind solche Chatbots zu betrachten, die nicht nur einen Erstkontakt herstellen und dann an Fachpersonal weiterleiten, sondern die auch Therapieleistungen übernehmen. Hier besteht die Gefahr einer einseitigen Betrachtungsweise der Situation durch die ratsuchende Person selbst, anstelle einer ganzheitlichen Beratung unter Einbezug von Umfeld, Gesellschaft und weiteren Faktoren. Zudem verschiebt sich der Fokus verstärkt von sozialen Beziehungen auf quasisoziale Beziehungen mit digitalen Medien. Ein hermeneutisches Fallverstehen findet dann nicht oder in reduzierter Form statt. Grundsätzlich darf die digitale Kontaktaufnahme nicht die ausschließliche Form des Erstkontakts sein, da sonst weniger digital affine Hilfesuchende nicht mehr erreicht werden. Darüber hinaus ist zu klären, wer im Falle einer Fehleinschätzung der Lage des*der Ratsuchenden durch den Algorithmus oder bei Ratschlägen, die nicht zielführend sind, haftet. Nicht zuletzt sind Datenschutz und -sicherheit zu adressieren und zu gewährleisten (Brandtzaeg et al. 2021). In jedem Fall muss der Einsatz von Bots transparent gemacht werden, sodass die Ratsuchenden sich zu jeder Zeit darüber bewusst sind, dass ein Algorithmus und kein Mensch auf ihre Anfragen antwortet.
@@ -113,6 +138,10 @@ Netzwerk, auf das die Beratenden Zugriff haben, vergrößert werden (Müller 202
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 Da die Wissensweitergabe in diesem Fall von Mensch zu Mensch funktioniert, ist das Risiko der Falschinformation durch das System gering. Die Überprüfung in der Praxis steht noch aus. Erst diese wird zeigen, ob die Beratenden tatsächlich weniger Zeit für die Beschaffung der relevanten Informationen benötigen und ob die Beratungsleistung durch die Unterstützung des Systems verbessert wird (Caritas digital o.J.).
 
 Im Projekt MAEWIN, das an der FH Bielefeld durchgeführt wird, wird auf Basis maschinell ausgewerteter Dokumentationen aus der Sozialen Arbeit ein Entscheidungsunterstützungssystem entwickelt (FH Bielefeld o.J.). Bei den Dokumentationen handelt es sich um natürlichen Text, dessen Fragmente klassifiziert werden. Durch das Aufzeigen von ˜hnlichkeiten und Unterschieden zu anderen Fällen soll die Fachkraft in ihren Beratungsgesprächen unterstützt werden. Um solche Systeme sinnvoll einsetzen zu können, ist es notwendig, dass Fachkräfte Wissen darüber erlangen, wie durch das System generierte Vorschläge zu interpretieren sind. So neigen viele Menschen, die kein umfangreiches Wissen über Statistik besitzen, dazu, die von einem Algorithmus als am wahrscheinlichsten angegebene Lösung als definitiv korrekt anzusehen (Schneider und Seelmeyer 2019). Wird die Nutzung des Entscheidungsunterstützungssystems eingeführt und werden die Grundlagen der Statistik vermittelt, sodass eine reflektierte Anwendung möglich ist, zeigt das Projekt durchaus positive Ergebnisse. Auch das Projekt CASoTex beschäftigt sich mit der Analyse von Beratungsverläufen mittels NLP (Lehmann et al. 2021). Die Fragestellung lautet hier, inwiefern Verfahren des maschinellen Lernens qualitative Analysen unterstützen können. Vor allem die Frage nach Wirkungszusammenhängen im Beratungsprozess steht im Fokus. Dafür wurden Texte aus moderierten Onlineberatungsforen u.a. mittels NLP ausgewertet. Vor allem überwachte Lernverfahren zeigten hier gute Erfolge: Mittels vorklassifizierter Texte als Trainingsdaten war es möglich, fundierte Inhaltsanalysen der Beratungsdokumentationen in großem Umfang durchzuführen. Mit klassischen qualitativen Verfahren hätten diese Analysen sehr große zeitliche Ressourcen in Anspruch genommen (Lehmann et al. 2021).
@@ -120,6 +149,10 @@ Im Projekt MAEWIN, das an der FH Bielefeld durchgeführt wird, wird auf Basis ma
 Diese Projekte zeigen, dass der Einsatz von digitalen Werkzeugen und Verfahren des NLP eine deutlich größere Wissensbasis verfügbar macht, als es qualitative Verfahren leisten können. Aber auch die praktische Arbeit der Beratenden profitiert von der Erweiterung ihres persönlichen Erfahrungsschatzes. Im Sinne der Gratifikation kann somit die schnelle Verfügbarkeit notwendiger Informationen und eine erhöhte Wirksamkeit der eigenen Arbeit aufgeführt werden. Allerdings besteht die Gefahr von Fehlinterpretationen der Ergebnisse, welche die Algorithmen liefern. Es ist essenziell für den Einsatz von Entscheidungsunterstützungssystemen in der Praxis, dass transparent gemacht wird, mit welcher Wahrscheinlichkeit ein Ergebnis passend ist. Die Fachkräfte müssen dazu befähigt werden, diese Wahrscheinlichkeiten zu interpretieren (Schneider und Seelmeyer 2018). Um in der Praxis anwendbare Werkzeuge zu entwickeln und Forschungsarbeiten erfolgreich durchzuführen, ist die Interdisziplinarität der beteiligten Entwickler*innen von großer Bedeutung. Hier wird insbesondere der Mehrwert maschinellen Lernens deutlich: sei es durch a. Rückmeldung auf einen Chatbot (Krüger 2020), ob dieser hilfreich war, b. die Bewertung der angebotenen Entscheidungsunterstützung oder c. Bewertung des angebotenen Kontakts.
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 ## 2.3 NLP in der Arbeit für und mit älteren Menschen
 
@@ -130,6 +163,10 @@ Bei der Bewertung des Einsatzes von intelligenter Assistenz sind in Hinblick auf
 5 Telemedizin bezeichnet die Nutzung von Telekommunikation (insbesondere Videokommunikation) zum Austausch mit ˜rzt*innen oder anderen im Gesundheitsbereich tätigen Personen zu Zwecken der Diagnostik oder Therapie.
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 den benötigten Daten um Informationen aus dem höchstpersönlichen Lebensbereich, es müssen sehr hohe Standards bezüglich des Datenschutzes bei der Anwendung erfüllt werden. Es gilt ferner zu beachten, dass über den Dialogcharakter eigene Daten ggf. freigiebiger preisgegeben werden könnten als etwa bei einer standardisierten Abfrage in einem Formular (Ravichander und Black 2018). Im Sinne der drei Mandate nach Staub-Bernasconi ist die Soziale Arbeit aufgefordert, in ihrer Haltung den Einsatz kritisch zu begleiten. Auch Gefahren der Nutzung im Sinne einer 'VerBetriebswirtschaftlichung' (2007), etwa angesichts eines Fachkräftemangels, sind sowohl im ambulanten als auch im stationären Bereich zu beobachten. Wird das Rahmenmodell der Gratifikation von Sundar und Limperos (2013) herangezogen, wird die Breite möglicher Gratifikationen durch den Einsatz von Sprachassistenz deutlich. Auf der ersten Ebene 'Gratifikation durch die Modalität des Mediums' ist die Einfachheit der Nutzung durch den Einsatz natürlicher Sprache und aus verschiedenen Positionen im Raum hervorzuheben. Auf der zweiten Ebene '(Selbst-)Wirkung' ist die unmittelbare Reaktion des Sprachassistenten durch sofortige Information oder 'Zuwendung' zu nennen. Auf der dritten Ebene ergibt sich 'durch Interaktivität' die permanente Möglichkeit der Gesprächsführung und Gesprächssteuerung, auf der vierten Ebene 'Navigationsmöglichkeiten' besteht eine hohe Kontrolle über die Eingaben und die Vielfalt der Nutzungsmöglichkeiten.
 
@@ -146,6 +183,10 @@ Predictive Analytics Große Aufmerksamkeit haben statistikbasierte Verfahren zur
 
 <!-- image -->
 
+
+<!-- PAGE 11 -->
+
+
 gheny Family Screening Tool (AFST), das für die Einschätzung von Kindeswohlgefährdung im Allegheny County Department of Human Services in Pennsylvania (USA) zum Einsatz kommt (Allegheny County o.J.). Diese und ähnliche Verfahren sind - mit Blick auf die Frage von Vorhersagbarkeit bzw. Prädiktion aufgrund von Daten - allgemein unter der Überschrift 'Predictive Analytics' zu finden (von der Hude 2020). Predictive Analytics ist ein fortgeschrittenes Verfahren der Analytik, das historische Daten mit statistischer Modellierung, Data-Mining-Techniken und maschinellem Lernen kombiniert und auf Muster hin untersucht, um Vorhersagen über zukünftige Ereignisse zu treffen. Internationale Studien haben gezeigt, dass die auf Statistik basierten Einschätzungen zur Kindeswohlgefährdung sehr genau und sogar klinischen Verfahren überlegen sind (Bastian 2019). Statistik wird in diesen Szenarien als wesentlicher Entscheidungsfaktor identifiziert und kann den Prozess der Urteilsbildung in der Profession der Sozialen Arbeit nachhaltig verändern, denn damit konkurriert die Urteilskompetenz der Fachkräfte mit computergestützten Programmen hinsichtlich ihrer Treffsicherheit (Schneider und Seelmeyer 2018). Solche statistischen Verfahren werden international allerdings höchst umstritten mit dem Einwand diskutiert, dass sie zu einer Deprofessionalisierung der Sozialen Arbeit sowie einer gleichzeitigen Entmündigung ihrer Adressat*innen und der Gefahr falscher Vorverurteilung führen (Schrödter et al. 2020). Wenn es jedoch darum geht, anstelle eines First-come-first-serve-Ansatzes Priorisierungen in die Fallbearbeitung zu integrieren, kann dies durchaus zu einer erhöhten Wirksamkeit der eigenen Arbeit führen, da die Ressourcen besser eingesetzt werden. Die Verantwortung und Entscheidungskraft müssen jedoch bei den Mitarbeitenden bleiben.
 
 Assistenz zum Erziehungssetting Im Rahmen von Überlegungen zur Assistenz im Erziehungssetting gibt es erste Ansätze, mithilfe von NLP unstrukturierte Daten systematisiert aufzubereiten. Da die Daten nicht über verschiedenen Einrichtungen hinweg gesammelt und zusammengeführt werden, sind hier weniger datenschutzrechtliche Hürden vorzufinden. Erste theoretische Überlegungen zu einer sog. Assistenz im Erziehungssetting finden im Rahmen begleiteter Forschungsprojekte in der Praxis statt.
@@ -156,6 +197,10 @@ Im Verbundprojekt SensAssist2Sens sollen Potenziale der Textanalyse durch Softwa
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 jektpartner ein Potenzial für die Anwendung von NLP: Eine KI-Anwendung als maßgeschneiderte IT-Unterstützung in der Kinder- und Jugendhilfe könnte die Dokumente systematisch analysieren und Erkenntnisse extrahieren. Diese Erkenntnisse stellen typische Abläufe von Aktivitäten und Ereignissen dar, geben Hinweise und Ansätze auf Vergangenes und ermöglichen Empfehlungen, welche Aktivitäten im Hilfeprozess ggf. verbunden oder welche Personen mit eingebunden werden können (Universität Rostock 2022). Diese Art von Empfehlungen werden in beiden Projekten, KiJuAssistenz und SensAssist2Sens, als 'Assistenz' bezeichnet.
 
 Zur Entwicklung einer KI-gestützten Assistenz im Erziehungssetting schlagen Fellmann et al. (2020) ein fortgeschrittenes Informationssystem vor, eine KI, die auf Grundlage von NLP natürliche Texte auswertet und Empfehlungen ausgibt. Auf Grundlage der wissenschaftlichen Erhebungsmethoden, Workshops, Experteninterviews und Shadowing wurden Kategorien zu Anforderungen an ein solches Informationssystem mit Blick auf personennahe Dienstleistungen in der Kinder- und Jugendhilfe formuliert (Fellmann et al. 2020, S. 833ff.).
@@ -165,6 +210,10 @@ Zur Entwicklung einer KI-gestützten Assistenz im Erziehungssetting schlagen Fel
 Mit GPT-3 besteht die Möglichkeit, Texte zu erzeugen, die sehr nah an der natürlichen Sprache sind. Die Unterstützung in der Analyse von Dokumenten und Social Media kann einen Mehrwert für Fachkräfte und Klient*innen in der Sozialen Arbeit bedeuten. Vor einem potenziellen Einsatz dieser Techniken muss eine Einschätzung des (individuellen) Mehrwerts gegenüber den Risiken des Verfahrens erfolgen. Besonders wichtig ist, dass Transparenz darüber hergestellt wird, wenn Algorithmen zum Einsatz kommen - vor allem, wenn anhand der generierten Texte nicht mehr zu erkennen ist, ob sie von einem Menschen verfasst wurden. Darüber hinaus muss bei der Anwendung berücksichtigt werden, dass ein solcher Algorithmus lediglich eine Reproduktion von bereits vorhandenem Kontext herstellen kann und somit nicht ohne Weiteres zu einer Weiterentwicklung der generierten Inhalte beiträgt. Das zeigt sich z. B. darin, dass stereotype Rollenbilder wiederholt werden (Lucy und Bamman 2021). Ohne interdisziplinäre Teams in der Entwicklung von Werkzeugen, die NLP nutzen, besteht die Gefahr der Reproduktion von Diskriminierung und sogar weiterer Radikalisierung (McGuffie und Newhouse 2020). Ein weiterer Aspekt im Sinne der Transparenz ist die Zugänglichkeit von Daten und der Algorithmen selbst. Einen ersten Schritt in Richtung einer zentralen Datenplattform strebt das BMFSFJ mit dem Civic Data Lab an. Dieses soll als Datenhub Informationen aus öffentlich zugänglichen Quellen vereinen und verfügbar machen. Später sollen auch Schnittstellen und Datenpipelines für Einrichtungen der Zivilgesellschaft und der Sozialen Arbeit aufgebaut werden, um öffentlich nutzbare Daten zusammenzuführen (BMFSFJ 2021). Die Beispiele aus den einzelnen Handlungsfeldern haben gezeigt, dass die Soziale Arbeit von den Entwicklungen im Bereich NLP in allen drei von Staub-Bernasconi postulierten Mandanten tangiert wird, mit z.T. widerstreitenden Interessen. Hier ist die Leitorientierung die Wahrung der Menschenrechte. Im Bereich NLP sind insbesondere das Verbot von Diskriminierung, der Schutz der Freiheitssphäre des Einzelnen und die Meinungs- und Informationsfreiheit zu beachten. Für den Erhalt
 
 <!-- image -->
+
+
+<!-- PAGE 13 -->
+
 
 und die Wahrnehmung professioneller Sozialer Arbeit müssen unseres Erachtens ferner die potenziellen Gratifikationseffekte für Klient*innen eruiert und nachvollzogen werden. Diese können vielfältig und individuell verschieden sein: Von der unmittelbaren Verfügbarkeit von Informationen über einen Wegfall von Angst vor Verurteilung oder Stigmatisierung bis hin zum Gefühl der Autonomie in Bezug darauf, was ein Problem umfasst und die Möglichkeit zum jederzeitigen Abbruch eines Prozesses. Eine umfassende empirische Auseinandersetzung steht noch aus.
 
@@ -186,6 +235,10 @@ Weitere Details zur Lizenz entnehmen Sie bitte der Lizenzinformation auf http://
 - Bastian, P. (2019). Sozialpädagogische Entscheidungen: Professionelle Urteilsbildung in der Sozialen Arbeit . Opladen/Toronto: Budrich.
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 - Becker, M. (2018). Auf dem Weg zum Psychotherapie-Bot. Telepolis, 28.02.2018. https://www.heise.de/ tp/features/Auf-dem-Weg-zum-Psychotherapie-Bot-3974410.html?seite=all. Zugegriffen: 19. März 2023.
 - Beranek, A. (2021). Künstliche Intelligenz und Menschenrechte. Politikum , 7 (1), 4-12.
@@ -216,6 +269,10 @@ lung der pädagogischen Arbeit und Entwicklung digitaler Unterstützungswerkzeug
 - McGuffie, K., &amp; Newhouse, A. (2020). The Radicalization Risks of GPT-3 and Advanced Neural Language Models. arXiv. Preprint posted online. https://arxiv.org/abs/2009.06807. Zugegriffen: 19. März 2023.
 
 <!-- image -->
+
+
+<!-- PAGE 15 -->
+
 
 - Mellouli, T. (2020). Enzyklopädie der Wirtschaftsinformatik - Online-Lexikon. https://wi-lex.de/index. php/lexikon/technologische-und-methodische-grundlagen/informatik-grundlagen/algorithmus/. Zugegriffen: 19. März 2023.
 - Müller, J. (2022). Der Caritas-Graph: Mit Daten die Themenvielfalt der Caritas erkunden. https://www. caritas-digital.de/der-caritas-graph-mit-daten-die-themenvielfalt-der-caritas-erkunden/. Zugegriffen: 19. März 2023.

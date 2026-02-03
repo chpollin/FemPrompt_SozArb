@@ -1,10 +1,11 @@
 ---
 source_file: Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.pdf
-conversion_date: 2026-02-03T08:44:41.937718
+conversion_date: 2026-02-03T18:22:52.577236
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 |
 
 DOI: 10.1111/bjet.13556
@@ -57,6 +58,10 @@ This is an open access article under the terms of the Creative Commons Attributi
 
 |
 
+
+<!-- PAGE 2 -->
+
+
 ## Practitioner notes
 
 What is already known about this topic
@@ -89,6 +94,10 @@ the derived competency framework for AI literacy, including its theoretical and 
 
 AI literacy, learner competency framework, learner group, pathway
 
+
+<!-- PAGE 3 -->
+
+
 |
 
 As AI has the potential to revolutionize the way we work, live, and interact with one another by automating repetitive tasks, improving decision making, and facilitating communication, it is widely agreed that the job market and the competencies required of individuals will also change (Frey &amp; Osborne, 2017). Frey and Osborne (2017) found that jobs highly susceptible to computerization include those in the transportation, logistics, and administrative sectors. A study by the World Economic Forum (2018) revealed that jobs requiring skills in areas such as complex problem solving, critical thinking, and creativity are expected to increase while jobs requiring skills in areas such as data entry and processing are expected to  decline.  Meanwhile, a study by the European Commission (2019) highlighted the projected increase in jobs requiring skills in areas such as communication, collaboration, and emotional intelligence.
@@ -99,6 +108,10 @@ As technology advances, research into various forms of literacycomputer literacy
 
 Research on AI literacy emerged in the early 2000s, initially overlapping with digital literacy studies, particularly in areas such as digital transformation, ethics, and responsible  AI  (European Commission, 2019). However, AI literacy, as it is understood today,
 
+
+<!-- PAGE 4 -->
+
+
 |
 
 has gained momentum more recently, particularly after 2020, reflecting the growing prevalence of AI technologies in everyday life (Miao et al., 2021). The concept evolved from focusing on basic AI concepts and technologies to encompassing a broader scope that includes understanding social and ethical implications, as well as using AI across various domains. Ng et al. (2021) define AI literacy as the ability to understand, use, monitor, and critically reflect on AI applications, emphasizing not only comprehension but also application and evaluation in diverse contexts. AI literacy now became to aim to equip individuals with skills for effective interaction with AI systems, informed decision-  making, and understanding AI's broader societal implications, reflecting the increased prevalence and sophistication of AI technologies.
@@ -106,6 +119,10 @@ has gained momentum more recently, particularly after 2020, reflecting the growi
 Given that AI literacy can be defined as a comprehensive set of competencies enabling individuals  to  critically  evaluate  AI  technologies,  effectively  communicate  and  collaborate with AI, and utilize AI as a tool in various settings, such as online, at home, and in the  workplace (Long &amp; Magerko, 2020), research on the competency framework of AI literacy  can  serve  as  a  crucial  reference  for  designing  and  implementing  AI  curricula (Kong et al., 2023). Several efforts have attempted to list relevant competencies. Long and Magerko (2020) proposed 17 AI competencies, which include recognizing AI, understanding the concept of intelligence, identifying the steps involved in machine learning, critically interpreting AI outputs, data literacy, and adhering to ethical standards in AI usage. Almatrafi et al. (2024) identified AI literacy competencies as recognizing, knowing and understanding, using and applying, evaluating, creating, and navigating ethically.  Both studies emphasize a comprehensive approach to AI literacy, focusing on understanding and utilizing AI. In contrast, Huang (2021) identified key AI competencies with a greater emphasis on cognitive and soft skills, categorizing them into knowledge, teamwork, and learning domains, further subdividing them into skill and cultural competence, teamwork and human-  tool collaboration competence, and cognitive and self-  learning competence. This difference in focus underscores the varied perspectives within AI literacy research, with some studies concentrating on the technical understanding and application of AI, while others emphasize the cognitive and interpersonal skills necessary for effective AI engagement. The findings from available studies remain inconsistent and lack a comprehensive framework that integrates these diverse perspectives.
 
 Furthermore, while studies on AI competencies exist for specific learner groups, a comprehensive framework spanning the entire life stage continuum is lacking. Research has focused  on  various  educational  levels,  including  early  childhood  (Su  et  al.,  2023),  K-  12 (Casal-  Otero et al., 2023; Ng et al., 2023; Sanusi et al., 2022), and higher and adult education (Laupichler, Aster, et al., 2022; Ng et al., 2021), often yielding inconsistent results. For instance, Casal-  Otero et al. (2023) emphasized understanding AI operations and using AI tools, while Sanusi et al. (2022) proposed key competencies for students with notable emphasis on team competence, including teamwork and human-  tool collaboration. In contrast, Ng et al. (2023) proposed a broader framework that addresses affective, behavioural, cognitive, and ethical domains. Additionally, studies have explored AI competencies within specific disciplines such as engineering (Cantú-  Ortiz et al., 2020), medicine (Karaca et al., 2021; Wartman &amp; Combs, 2019), nursing (Swan, 2021), and communication (Dergaa et al., 2023). However, comparative analyses across multiple disciplines remain scarce. This fragmented approach highlights critical gaps: the need to systematically examine how AI competencies vary by educational level and discipline, and the absence of research that provides a comprehensive pathway for developing AI literacy competencies throughout one's educational and working life. This study aims to address these caveats and provide a comprehensive overview  of  composing  competencies  for  an  AI  literacy  framework  with  its  variations  by different learner groups and possible pathways towards becoming AI-  literate. We have accordingly posed the following research questions:
+
+
+<!-- PAGE 5 -->
+
 
 |
 
@@ -133,6 +150,10 @@ Three authors initially developed a comprehensive data extraction sheet through 
 
 14678535, 2025, 5, Downloaded from https://bera-journals.onlinelibrary.wiley.com/doi/10.1111/bjet.13556 by Karl-Franzens-University Graz, Wiley Online Library on [07/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
+
+<!-- PAGE 6 -->
+
+
 |
 
 data from the selected studies using this sheet. To ensure efficiency and thoroughness, they divided the studies among themselves. Each author meticulously reviewed their assigned studies, completing the data extraction sheet for each. Before proceeding with the full extraction process, the authors cross-  checked a random sample of 20% of the studies ( n = 5) to verify the accuracy and consistency of the extracted data. Regular meetings were  held  throughout  the  extraction  process  to  maintain  consistency  and  resolve  any discrepancies. During these meetings, they discussed any ambiguities in data interpretation and collectively addressed any issues that arose. In cases of disagreement, all three authors jointly reviewed the study in question and reached a consensus through discussion. The final data extraction sheet included only the data agreed upon by all authors after thorough review and discussion.
@@ -149,6 +170,10 @@ The quantitative and qualitative studies were assessed using QualSyst (Kmet et a
 
 In total, 947 articles were identified from the three academic databases. After the removal of 253 duplicates, 694 potentially relevant articles were retained. Next, 225 articles remained eligible after 469 articles were eliminated based on their titles. In the abstract screening phase, 83 articles remained eligible after removing 142 articles. Then, 29 articles were included after 54 articles were removed during the full text screening phase. Figure 1 presents the exclusion process for article identification following the PRISMA guidelines.
 
+
+<!-- PAGE 7 -->
+
+
 |
 
 FI G U R E  1 Trial flow for a systematic review of the learner competency for AI literacy.
@@ -163,6 +188,10 @@ Based on the analysis of the 29 articles, the most common type of study was quan
 
 AI literacy competencies are defined by the knowledge of AI concepts and processes and the use of AI software, applications, and platforms ( n = 25, 86%); thinking and problem solving using AI technology ( n = 14,  48%);  communicating  and  collaborating  with AI, including human-tool and human-human collaborations ( n = 13,  45%);  awareness of the opportunities and threats of AI and concern about AI ethics ( n = 18,  62%); and having  confidence  and  self-  efficacy  in  using  AI  technology  ( n = 3,  10%).  (For  definitions of the AI literacy compared with digital literacy, see Table A3) We analysed the studies to identify the competencies and sub-  competencies that constitute AI literacy.
 
+
+<!-- PAGE 8 -->
+
+
 |
 
 Based on UNESCO Digital Literacy Global Framework, we analysed and reconstructed the  AI  literacy  competencies  from  the  29  studies  and  obtained  8  competencies  and 18 sub-  competencies. (For a comparison between AI literacy and digital literacy competencies,  see  Table  A4)  The  competencies  are:  (1)  AI  device  and  software/application/platform operations ( n = 12, 41%), (2) data and algorithm literacy ( n = 23, 79%), (3) problem solving ( n = 14, 50%), (4) communication and collaboration ( n = 13, 46%), (5) AI ethics ( n = 18, 62%), (6) career-  related competences ( n = 11, 39%), (7) AI content creation ( n = 7 , 25%), (7) affective competences ( n = 3, 11%). Most studies included multiple competencies and were counted in duplicate. The order of the competencies was determined by importance and difficulty. The final competency framework for AI literacy is presented in Table 1.
@@ -176,6 +205,10 @@ Tables 2 and 3 show the AI literacy competencies by learner group according to s
 The competencies of AI literacy required of K-  12 learners were primarily centered on the AI ethics (26%), data and algorithm literacy (21%), and device and software/application/platform operations (21%). In higher education, the competencies with the highest priority were identified in the areas of data and algorithm literacy (25%), problem solving (18%),  and career-  related  competencies (18%).  The  AI  literacy  demands  for  teachers were primarily centered on data and algorithm literacy (26%), AI content creation (21%) and device and software operations (16%). In the case of organizations, the most prominent  AI  literacy  competencies  were  identified  as data and algorithm literacy , problem solving , and career-  related competencies , each accounting for 33% of the total. For general workforce, the most significant AI competency requirements were in the domains of data and algorithm literacy (21%) and career-  related competencies (21%). Finally, in general public contexts, the most essential AI literacy competencies were AI device and software/application/platform operations , data and algorithm literacy , each accounting for 21% of the total.
 
 Meanwhile, the competencies for AI literacy were drawn by discipline as well. In the field of technology, the highest priority was identified in the areas of data and algorithm literacy (24%) and AI device and software/application/platform operations (20%). In the field of engineering, the most prominent AI literacy competencies were identified as data and algorithm literacy and problem solving at 25% each. In education, the highest priorities were identified for data and algorithm literacy (24%), AI content creation (24%), AI device and software/application/platform operations (18%). In the field of communication, the essential competencies required were AI device and software/application/platform operations , communication and collaboration, AI ethics , and career-  related competencies , each accounting for 25% of
+
+
+<!-- PAGE 9 -->
+
 
 |
 
@@ -201,6 +234,10 @@ TABLE 1 A final competency framework for AI literacy.
 | 5.2 Knowing and being concerned about AI ethics                                 | Understand and consider the ethical issues involved in AI and follow ethical norms and regulations                                                    | 4, 9, 12, 13, 14, 16, 19, 21, 22, 25, 26                            |
 | 6. Career-related competences                                                   | Operate specialized AI technologies and understand, analyse, and evaluate specialized data, information, and AI-based content for a particular field  |                                                                     |
 
+
+<!-- PAGE 10 -->
+
+
 TABLE 1 (Continued)
 
 | Competency frame                                                                            | Description                                                                                                                                                               | Study #                             |
@@ -222,6 +259,10 @@ the total. In medicine, the most significant AI literacy requirements were in th
 Based on the competencies required for K-  12 students, college students, and general workforce depicted in Table 2, Figure 2 illustrates a possible pathway for equipping learners with the competencies for AI literacy that progresses from the K-  12 level to the higher education and general workforce levels. In K-  12 education, AI literacy focuses on acquiring the fundamental concepts and applications of AI. Furthermore, emphasis is placed on fostering awareness and understanding of the moral and social implications of AI, including the issues related to privacy and transparency. At the higher education level, AI literacy competencies tend to be more advanced and specialized. Learners at this stage are expected to possess the ability to solve problems by utilizing their foundational knowledge of AI and their  proficiency  in  data  and  algorithms. These competencies are particularly relevant to career-  related competencies that are of paramount importance in shaping career paths after graduation. Thus, the focus of AI education at the general workforce level is on developing career-  related competencies, with particular emphasis on the ability to analyse information and data generated within a specific field.
 
 |
+
+
+<!-- PAGE 11 -->
+
 
 |
 
@@ -245,6 +286,10 @@ AI  literacy  can  be  compared  to  computer  literacy  in  the  1980s  (eg,  P
 
 .
 
+
+<!-- PAGE 12 -->
+
+
 <!-- image -->
 
 TABLE 3 AI literacy competencies by learner groups (discipline).
@@ -263,6 +308,10 @@ First, understanding and applying knowledge about data and algorithms (2.2) is c
 
 14678535, 2025, 5, Downloaded from https://bera-journals.onlinelibrary.wiley.com/doi/10.1111/bjet.13556 by Karl-Franzens-University Graz, Wiley Online Library on [07/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
+
+<!-- PAGE 13 -->
+
+
 |
 
 FI G U R E  2 A possible pathway for educating competencies for AI literacy.
@@ -276,6 +325,10 @@ The  final  AI  literacy  framework  elucidates  distinct  differences  when  ju
 .
 
 14678535, 2025, 5, Downloaded from https://bera-journals.onlinelibrary.wiley.com/doi/10.1111/bjet.13556 by Karl-Franzens-University Graz, Wiley Online Library on [07/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+
+<!-- PAGE 14 -->
+
 
 |
 
@@ -292,6 +345,10 @@ This competency is generally emphasized at the K-  12 and general public levels 
 ## Data and algorithm literacy
 
 This competency, highlighted as the most important across all learner levels, underscores the need for a deeper understanding of how AI and algorithms work. Dogruel et al. (2022) define algorithmic literacy as 'the ability to understand algorithms, critically evaluate them, and have appropriate skills to cope with algorithmic systems' (p. 5). This competency is significant in
+
+
+<!-- PAGE 15 -->
+
 
 |
 
@@ -311,6 +368,10 @@ This  competency was identified  as  the  most  necessary  across  disciplines, 
 
 This  competency  is  predominantly  observed  among  educators  and  engineering  majors. In  engineering  education,  efforts  are  increasingly  focused  on  nurturing  creativity  among prospective  engineers,  underpinned  by  research  advocating  for  creative  outputs  through programming language activities, which are becoming part of the curriculum for K-  12 and engineering students (Hutchins et al., 2020; Lin et al., 2019). In parallel, AI content creation competency is essential for teachers designing and implementing AI-  incorporated curricula. From the perspective of the Technological Pedagogical Content Knowledge (TPACK) framework, which outlines key knowledge for educators to effectively integrate technology into teaching, AI content creation competency engages with its three core components: technological
 
+
+<!-- PAGE 16 -->
+
+
 |
 
 knowledge (TK), pedagogical knowledge (PK), and content knowledge (CK) (Kim et al., 2021). This competency encompasses understanding and applying AI technologies (TK), integrating these technologies into teaching methodologies (PK), and applying AI within specific subject matter contexts (CK). AI content creation competency is essential for educators to prepare students for a future where technology and education intersect, ensuring teaching strategies are technologically advanced, pedagogically sound, and content-  relevant, fostering an educational environment responsive to the needs of the AI era.
@@ -320,6 +381,10 @@ knowledge (TK), pedagogical knowledge (PK), and content knowledge (CK) (Kim et a
 This study presents an AI literacy competency framework and a developmental pathway for AI education across educational levels and life stages. It emphasizes the importance of implementing a long-  term, strategic approach to provide age-  appropriate AI education to ensure that individuals acquire the necessary knowledge and skills to navigate an AI era. The findings of this study, particularly regarding which competencies are crucial at different stages, warrant discussion in light of human cognitive and moral development theories (eg, Piaget (1952), Kohlberg (1984)), as well as in comparison with previous AI literacy research.
 
 K-  12 education, according to our findings, focuses on developing fundamental AI knowledge, including basic programming concepts and AI systems. More importantly, K-  12 education  prioritizes  AI  ethics  to  address  ethical  issues  and  dilemmas  in  AI  development and deployment, promoting responsible AI usage (Kong et al., 2023; Zhang et al., 2023). These  competencies  correspond  to  Piaget's  (1952)  concrete  operational  stage  and Kohlberg's (1984) conventional level of moral reasoning. This alignment is evident in the emphasis on developing logical thinking about tangible AI concepts and internalizing ethical norms for AI use, as highlighted by Kong et al. (2023) and Zhang et al. (2023). These findings also align with the three core dimensions of AI literacy competencies-AI concepts, AI applications, and AI ethics-presented in the studies by Long and Magerko (2020) and Casal-  Otero et al. (2023). Curriculum designers should align AI education with students' cognitive and moral developmental stages, introducing AI concepts through tangible examples for younger students and progressing to more abstract concepts and complex ethical scenarios  as  students  grow.  AI  ethics  education  should  evolve  from  simple  rules-  based approaches to nuanced discussions of ethical dilemmas, reflecting students' moral reasoning development (Holmes et al., 2019). In higher education, the focus shifts to developing in-  depth AI knowledge, including data and algorithm literacy and AI-  based problem-  solving skills. This shift aligns with Piaget's formal operational stage and the development of abstract reasoning abilities. Students engage in tasks such as developing basic AI algorithms to address specific challenges, which deepens their understanding of AI and its practical applications (Schmohl et al., 2022; Yadav et al., 2012). This progression reflects the maturation of higher-  order thinking skills, specifically computational thinking (Wing, 2006) and algorithmic thinking (Futschek, 2006), enabling students to solve complex problems using AI. The emphasis on problem-  solving and AI content creation in our study underscores the importance of these advanced cognitive skills, which align with the Use and Apply and Evaluate and Create competencies proposed by Ng et al. (2021) in their AI literacy framework. To foster these competencies, Laupichler, Hadizadeh, et al. (2022) advocate for practice-  oriented curricula that cultivate higher-  order thinking skills. Furthermore, collaborations between educational institutions and industry partners can enhance this approach, bridging theoretical knowledge with real-  world applications (Cantú-  Ortiz et al., 2020) and preparing students for the cognitive demands of AI-  driven workplaces.
+
+
+<!-- PAGE 17 -->
+
 
 |
 
@@ -333,6 +398,10 @@ This study also highlights the importance of maintaining general AI literacy for
 
 In  a  society  intertwined  with  AI,  understanding,  interpreting,  and  utilizing  AI  will  be a fundamental life competency. The AI competency framework shows that effective AI utilization necessitates general competencies, such as critical thinking, effective communication, collaboration with people and AI tools, ethical judgement and affective competency such as self-  efficacy in the use of AI. This underscores the critical role of 'human consciousness' as the cornerstone of these competencies. While AI can process data, it  lacks  the  ability  to  make  decisions based on critical considerations (Frick, 2024). AI systems fall short of fully grasping human communication (Baidoo-  Anu &amp; Ansah, 2023; Marcus &amp; Davis, 2020) as they cannot interpret emotional subtleties and human relationships' complexities. Moreover, AI does not possess the capacity for ethical discernment (Damasio, 2019; Swan, 2021), a domain in which humans evaluate values through culture, personal experience, and emotional factors. In modern society, recognizing the limitations of AI and understanding it as a technology shaped by human agency is essential
 
+
+<!-- PAGE 18 -->
+
+
 |
 
 (Cukurova &amp; Miao, 2024). Recent advancements in AI research, particularly the emphasis on human-  centered AI, reveal a growing societal consensus that AI should support and augment human capabilities rather than replace them (Capel &amp; Brereton, 2023; Garibay et al., 2023; Shneiderman et al., 2020). Humans must be central throughout the AI lifecycle-design,  implementation,  evaluation,  operation,  maintenance,  decommissioning, and governance-to ensure high levels of oversight and control (Bond et al., 2019; Shneiderman, 2020). A human consciousness approach is necessary in AI design and use, aligning AI with human values, protecting human agency, and embedding social and ethical responsibility. Critical reflection on the extent to which AI can replace human cognition and decision-  making, along with active participation in creating an AI-  integrated society, is imperative. This emphasizes the need for thoughtful integration of AI in education across all life stages and academic disciplines. This requirement is predicated on the understanding that human consciousness represents the quintessential human attribute in a future society intertwined with AI, denoting the pinnacle of AI literacy essential for navigating a life augmented by AI technologies.
@@ -342,6 +411,10 @@ This  study  has  several  limitations  that  should  be  acknowledged.  First, 
 ## CONCLUSION
 
 The evolution of technology towards increased user-  friendliness and intuitiveness marks a significant shift from an era requiring substantial training for technological proficiency to one in which such extensive preparation is largely unnecessary. This leap in the usability
+
+
+<!-- PAGE 19 -->
+
 
 |
 
@@ -386,6 +459,10 @@ Note: * indicates studies included in the systematic review.
 - Berry, J. W., Poortinga, Y. H., &amp; Pandey, J. (Eds.). (1997). Handbook of Cross-  cultural Psychology: Basic processes and human development (Vol. 2 ).
 - Bond, R. R., Mulvenna, M. D., Wan, H., Finlay, D. D., Wong, A., Koene, A., Brisk, R., Boger, J., &amp; Adel, T. (2019, October). Human centered artificial intelligence: Weaving UX into algorithmic decision making. In RoCHI (pp. 2-9)
 
+
+<!-- PAGE 20 -->
+
+
 |
 
 - *Cantú-  Ortiz, F. J., Galeano Sánchez, N., Garrido, L., Terashima-  Marin, H., &amp; Brena, R. F. (2020). An artificial intelligence educational strategy for the digital transformation. International Journal on Interactive Design and Manufacturing (IJIDeM) , 14 , 1195-1209.
@@ -415,6 +492,10 @@ Note: * indicates studies included in the systematic review.
 - Hopia,  H.,  &amp;  Heikkilä,  J.  (2020).  Nursing  research  priorities  based  on  CINAHL  database:  A  scoping  review. Nursing Open , 7 , 483-494.
 - *Huang, X. (2021). Aims for cultivating students' key competencies based on artificial intelligence education in China. Education and Information Technologies , 26 , 5127-5147.
 - Hutchins, N. M., Biswas, G., Maróti, M., Lédeczi, Á., Grover, S., Wolf, R., Blair, K. P., Chin, D., Conlin, L., Basu, S., &amp; McElhaney, K. (2020). C2STEM: A system for synergistic learning of physics and computational thinking. Journal of Science Education and Technology , 29 , 83-100.
+
+
+<!-- PAGE 21 -->
+
 
 |
 
@@ -450,6 +531,10 @@ Note: * indicates studies included in the systematic review.
 - McLuhan, M. (1964). Understanding media: The extensions of man . New American Library.
 - McCoy, L. G., Nagaraj, S., Morgado, F., Harish, V., Das, S., &amp; Celi, L. A. (2020). What do medical students actually need to know about artificial intelligence? NPJ Digital Medicine , 3 (1), 86.
 
+
+<!-- PAGE 22 -->
+
+
 |
 
 - Miao, F., Holmes, W., Huang, R., &amp; Zhang, H. (2021). AI and education: A guidance for policymakers . UNESCO Publishing.
@@ -481,6 +566,10 @@ Note: * indicates studies included in the systematic review.
 - Wing, J. M. (2006). Computational thinking. Communications of the ACM , 49 (3), 33-35.
 - World Economic Forum. (2018). The future of jobs report 2018 . Centre for the New Economy and Society.
 
+
+<!-- PAGE 23 -->
+
+
 |
 
 .
@@ -508,6 +597,10 @@ TABLE A1 Inclusion and exclusion criteria.
 | Discipline       | Education                                                                                  | Studies from disciplines other than education, such as engineering, math, philosophy, or journalism                                             |
 | Study focus      | Studies in the field of education on AI literacy (education for AI)                        | Studies that mention AI literacy a few times superficially without direct discussion and studies on use of AI for education (education with AI) |
 
+
+<!-- PAGE 24 -->
+
+
 TABLE A2 Data extracted from reviewed studies.
 
 | Target                              | General public education                                                                                                           | K-12 education                                                                                                      | Higher education (engineering)                                                   | Workforce education (communication)                                                                                                                                                                                                                                                        |
@@ -522,6 +615,10 @@ TABLE A2 Data extracted from reviewed studies.
 
 ## (Continues)
 
+
+<!-- PAGE 25 -->
+
+
 TABLE A2 (Continued)
 
 |
@@ -533,6 +630,10 @@ TABLE A2 (Continued)
 | Participants                        |                                                                                                                                                                                                                                                                                                                         | -                                                                                                         | Trainee teachers ( n = 60) Middle school students ( n = 70) Elementary pupils   |
 | Method                              | Review (narrative)                                                                                                                                                                                                                                                                                                      | Review (narrative)                                                                                        | Mixed (Interview, observation)                                                  |
 | Study                               | 5 Chiu et al (2020)                                                                                                                                                                                                                                                                                                     | 6 Eguchi et al. (2021)                                                                                    | 7 Henry et al. (2021)                                                           |
+
+
+<!-- PAGE 26 -->
+
 
 TABLE A2 (Continued)
 
@@ -546,6 +647,10 @@ TABLE A2 (Continued)
 
 |
 
+
+<!-- PAGE 27 -->
+
+
 TABLE A2 (Continued)
 
 |
@@ -557,6 +662,10 @@ TABLE A2 (Continued)
 | Participants                        | -                                                                                                                                                                                                                                               | Elementary school teachers ( n = 67)                                                                                                                   | Students aged 15-18years ( n = 141)                                                                                                                   |
 | Method                              | Review (narrative)                                                                                                                                                                                                                              | Mixed (survey, interview)                                                                                                                              | Quantitative (survey)                                                                                                                                 |
 | Study                               | 11 Kim et al. (2021)                                                                                                                                                                                                                            | 12 Kim and Kwon (2023)                                                                                                                                 | 13 Kong et al. (2023)                                                                                                                                 |
+
+
+<!-- PAGE 28 -->
+
 
 TABLE A2 (Continued)
 
@@ -572,6 +681,10 @@ TABLE A2 (Continued)
 
 (Continues)
 
+
+<!-- PAGE 29 -->
+
+
 TABLE A2 (Continued)
 
 |
@@ -584,6 +697,10 @@ TABLE A2 (Continued)
 | Method                              | Review (systematic)                                                                                                   | Mixed (scale development, score validation) | Quantitative (survey)                                                                                                                                                                |                                                                                                                                                                                                 | Qualitative (curriculum design)                                                                                          |
 | Study                               | Ng et al. (2021)                                                                                                      | Ng et al. (2023)                            | Sanusi et al. (2022)                                                                                                                                                                 |                                                                                                                                                                                                 | Southworth et al. (2023)                                                                                                 |
 |                                     | 17                                                                                                                    | 18                                          | 19                                                                                                                                                                                   |                                                                                                                                                                                                 | 20                                                                                                                       |
+
+
+<!-- PAGE 30 -->
+
 
 (Continued)
 
@@ -602,6 +719,10 @@ meaningfully
 
 (Continues)
 
+
+<!-- PAGE 31 -->
+
+
 TABLE A2 (Continued)
 
 |
@@ -614,6 +735,10 @@ TABLE A2 (Continued)
 | Method                              | Review (narrative)                                                                                                                                                                                      | Qualitative (curriculum design) Mixed (scale development, score validation)                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Study                               | 24 Wiljer and Hakim (2019)                                                                                                                                                                              | 25 Williams et al. (2023) 26 Yuan Tsai, & Chen (2024)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
+
+<!-- PAGE 32 -->
+
+
 TABLE A2 (Continued)
 
 | Target                              | Workforce education (medical physics)                                                                                                                      | K-12 education                                                                                                                                                                                                                                                                                                                              | Teacher education                                                                                                                                                                                                                     |
@@ -625,6 +750,10 @@ TABLE A2 (Continued)
 | Study                               | 27 Zanca et al. (2021)                                                                                                                                     | 28 Zhang et al. (2023)                                                                                                                                                                                                                                                                                                                      | 29 Zhao et al. (2022)                                                                                                                                                                                                                 |
 
 |
+
+
+<!-- PAGE 33 -->
+
 
 |
 
@@ -648,6 +777,10 @@ TABLE A3 Definitions of AI literacy comparing to digital literacy.
 | To operate specialized digital technologies and to understand, analyse, and evaluate specialized data, information, and digital content for a particular field                                                                                                                                   |    | Operate specialized AI technologies and understand, analyse, and evaluate specialized data, information, and AI-based content for a particular field   |
 |                                                                                                                                                                                                                                                                                                  |    | Affective competence                                                                                                                                   |
 |                                                                                                                                                                                                                                                                                                  |    | Have confidence and self-efficacy to develop interest and motivation in AI technologies, along with the ability for self-reflection in learning AI     |
+
+
+<!-- PAGE 34 -->
+
 
 TABLE A4 Competencies of AI literacy compared to ones of digital literacy.
 
@@ -687,6 +820,10 @@ TABLE A4 Competencies of AI literacy compared to ones of digital literacy.
 
 |
 
+
+<!-- PAGE 35 -->
+
+
 |
 
 ## TABLE A4 (Continued)
@@ -702,6 +839,10 @@ TABLE A4 Competencies of AI literacy compared to ones of digital literacy.
 |                                                    | 8.1 Having confidence and self-efficacy to promote interest and motivation in using AI technologies                                                                   |
 |                                                    | 8.2 Having a self-reflective mindset to continuously assess one's understanding of AI, identify one's level of AI literacy, and recognize areas that further learning |
 
+
+<!-- PAGE 36 -->
+
+
 TABLE A5 Comparison of existing and proposed frameworks.
 
 |
@@ -714,6 +855,10 @@ TABLE A5 Comparison of existing and proposed frameworks.
 | Long Magerko                     | K-12                                                     |                                                                                                                                          |                                   | /uni25CF                                                     | /uni25CF |                                                         | /uni25CF                                                       | /uni25CF                            |                                                  | /uni25CF                                  |                                                                         |                       | /uni25CF              |                    |            |
 | This study                       | K-16, teachers, organizations, workforce, general public | /uni25CF                                                                                                                                 | /uni25CF                          | /uni25CF                                                     | /uni25CF |                                                         | /uni25CF                                                       |                                     | /uni25CF                                         | /uni25CF                                  | /uni25CF                                                                |                       | /uni25CF              |                    |            |
 |                                  | Target learner                                           | 1. AI device and software/application/ platform operations 1.1 Building an optimal environment for AI process 1.2 Knowing how to operate | AI software/application/ platform | 2. Data and algorithm 2.1 Understanding data and information | literacy | 2.2 Knowing and applying knowledge about AI/ algorithms | 3. Problem solving 3.1 Identifying and defining that should be | problems solved using AI technology | 3.2 Applying problem- solving processes using AI | technology 3.3 Data-based decision making | 4. Communication and collaboration 4.1 Human-to-tool (AI) collaboration | through AI technology | 4.2 Human-to-human AI | communication with | technology |
+
+
+<!-- PAGE 37 -->
+
 
 TABLE A5 (Continued)
 

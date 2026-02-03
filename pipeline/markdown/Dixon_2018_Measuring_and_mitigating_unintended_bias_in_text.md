@@ -1,10 +1,11 @@
 ---
 source_file: Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.pdf
-conversion_date: 2026-02-03T08:54:42.692038
+conversion_date: 2026-02-03T18:25:22.171382
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -87,6 +88,10 @@ Conference Sponsors:
 
 SIGAI
 
+
+<!-- PAGE 2 -->
+
+
 ## Measuring and Mitigating Unintended Bias in Text Classification
 
 Lucas Dixon Jigsaw ldixon@google.com
@@ -136,6 +141,10 @@ Researchers of fairness in ML have proposed a range of definitions for 'fairness
 Very little prior work has been done on fairness for text classification tasks. [3], [10] and [12] discuss the impact of using unfair natural language processing models for real-world tasks, but do not provide mitigation strategies. [4] demonstrates gender bias in word
 
 Jigsaw
+
+
+<!-- PAGE 3 -->
+
 
 embeddings and provides a technique to 'de-bias' them, allowing these more fair embeddings to be used for any text-based task.
 
@@ -188,6 +197,10 @@ Table 1: Frequency of identity terms in toxic comments and overall.
 In addition to a disproportionate amount of toxicity in comments containing certain identity terms, there is also a relationship between comment length and toxicity, as shown in 1.
 
 The models we are training are known to have the ability to capture contextual dependencies. However, with insufficient data, the model has no error signal that would require these distinctions, so these models are likely to overgeneralize, causing the false positive bias for identity terms.
+
+
+<!-- PAGE 4 -->
+
 
 Figure 1: Percent of comments labeled as toxic at each length containing the given terms.
 
@@ -254,6 +267,10 @@ Using the identity phrase test set, we calculate the false positive rate, FPR an
 
 <!-- formula-not-decoded -->
 
+
+<!-- PAGE 5 -->
+
+
 Figure 2: Distributions of toxicity scores for three groups of data, each containing comments with different identity terms, 'tall', 'average', or 'short'.
 
 <!-- image -->
@@ -289,6 +306,10 @@ The pinned AUC metric tackles this question directly. The pinned AUC metric for 
 Table 3 demonstrates how the pinned AUC is able to quantitatively reveal both the presence and victim of unintended bias. In this example, the 'short' subgroup has a lower pinned AUC than the other subgroups due to the bias in the score distribution for those comments. While this is a simple example, it extends to much larger sets of subgroups, where pinned AUC can reveal unintended bias that would otherwise be hidden.
 
 1 The exact technique for sub-sampling and defining D may vary depending the data. See appendix.
+
+
+<!-- PAGE 6 -->
+
 
 Table 3: AUC results.
 
@@ -347,6 +368,10 @@ Figure 4 shows the per-term false negative rates for the three experiments. The 
 
 We also demonstrate a reduction in unintended bias using the new pinned AUC metric introduced in this work. As with error rates, a more fair model will have similar performance across all terms. Figure 5 show the per-term pinned AUC for each model, and we again see more uniformity in from the bias-mitigated model. This
 
+
+<!-- PAGE 7 -->
+
+
 Figure 4: Per-term false negative rates for the baseline, random control, and bias-mitigated models.
 
 <!-- image -->
@@ -397,6 +422,10 @@ Depending on the exact data in the full set D , there are many options for sub-s
 
 - (1) Replacement: While D t ⊂ D , it may make sense to sample such that D t 1 s ( D ) . The results shown in this work sample this way.
 - (2) Other subgroups: If D contains many subgroups in different amounts, s ( D ) could be sampled to ensure equal representation from each group. In this work, D is synthetically constructed such that each subgroup is equally represented.
+
+
+<!-- PAGE 8 -->
+
 
 ## REFERENCES
 

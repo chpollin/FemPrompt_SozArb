@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Comprehensive Pipeline Test Suite
-Tests all 5 stages of the FemPrompt research pipeline with detailed logging
+Tests all 5 stages of the Literature Review research pipeline with detailed logging
 """
 
 import os
@@ -115,7 +115,7 @@ class PipelineComprehensiveTester:
             # Check directories
             required_dirs = [
                 'analysis', 'analysis/pdfs', 'analysis/summaries_final',
-                'FemPrompt_Vault'
+                'Literature Review_Vault'
             ]
 
             details['directories'] = {}
@@ -294,7 +294,7 @@ class PipelineComprehensiveTester:
 
         try:
             script = self.base_path / "analysis" / "generate_obsidian_vault_improved.py"
-            vault_path = self.base_path / "FemPrompt_Vault"
+            vault_path = self.base_path / "Literature Review_Vault"
 
             if not script.exists():
                 self.logger.error(f"Script not found: {script}")

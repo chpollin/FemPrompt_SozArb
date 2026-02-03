@@ -1,10 +1,11 @@
 ---
 source_file: Zhao_2025_Thinking_like_a_scientist_Can_interactive.pdf
-conversion_date: 2026-02-03T09:34:47.110305
+conversion_date: 2026-02-03T19:05:19.687858
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Thinkingglyph[suppress] Likeglyph[suppress] aglyph[suppress] Scientist:glyph[suppress] Canglyph[suppress] Interactiveglyph[suppress] Simulationsglyph[suppress] Fosterglyph[suppress] Criticalglyph[suppress] AIglyph[suppress] Literacy?glyph[suppress]
@@ -29,6 +30,10 @@ Keywords:glyph[suppress] AI literacy · Education about AI · Critical R eflecti
 
 As artificial intelligence (AI) systems increasingly shape individual and societal experiences, fostering critical AI literacy is essential [25]. This literacy extends beyond a conceptual understanding of AI and necessitates critical thinking skills to assess its limitations and broader implications. For example, a hiring algorithm trained on historical recruitment data may inadvertently perpetuate biases, disadvantaging historically underrepresented groups [27]. Thus, it is crucial to recognize that datasets are not neutral-they are shaped by the choices, assumptions, and limitations of their creators-and that educators and policymakers must critically analyze training data and decision-making processes to identify and mitigate biases before implementation.
 
+
+<!-- PAGE 2 -->
+
+
 Current AI literacy approaches employ diverse content and methods, including tools like Google Teachable Machine [3], structured curricula integrating technical and ethical topics [5], hands-on workshops with interactive activities [15,31], and programming-based frameworks such as block-based e nvironments [16]. These initiatives are often tailored to specific age groups or audiences, offering accessible introductions to AI concepts while fostering engagement through simplified, project-based learning. However, many of these approaches prioritize operational skills , often overlooking the critical thinking required to interrogate biases, evaluate limitations, and understand the societal impacts of AI systems. By emphasizing technical knowledge or modular learning, they may neglect the critical literacy needed to navigate AI's ethical, political, and social complexities in real-world contexts [8,22].
 
 To address this gap, the approach of scientific discovery learning (SDL) offers a promising alternative by e mphasizing active exploration, hypothesis testing, and iterative reasoning [7]. SDL encourages users to 'think like a scientist'to question assumptions, analyze evidence, and draw conclusions-potentially enhancing critical thinking and reasoning skills. For instance, an interactive Explorable such as Google's Datasets Have Worldviews [11] allows people to adjust the parameters of a dataset and observe how differing assumptions, such as changes i n category definitions or sampling biases, impact AI classifications (see Fig. 1). This interactive process could help people understand how the worldviews embedded in datasets shape AI decisions, fostering a deeper understanding of the system's limitations and encouraging critical thinking about the implications of those decisions.
@@ -41,6 +46,10 @@ Building on the theoretical foundation of SDL, our work investigates the potenti
 
 Through a controlled study involving over 600 participants on Prolific [26], we evaluate the effectiveness of four Explorable explanations-focused on datasets and biases, algorithmic decision-making, AI ethics and fairness, and generative AI-compared to traditional static materials for developing a critical understanding of AI systems. Participants manipulated parameters, tested assumptions, and observed real-time outcomes, aligning with the principles of SDL. Results demonstrated that participants in the Explorable condition experienced significant gains in AI literacy, both in objective assessments and self-reported understanding. While learning gains were also observed in the control conditions, participants in the Explorable condition demonstrated patterns of conceptual improvement and broader generalization across topics, suggesting potential
 
+
+<!-- PAGE 3 -->
+
+
 advantages of interactive formats. Furthermore, analysis of interaction patterns revealed that engagement styles varied based on content complexity and topic familiarity. The correlation between interaction quantity and literacy improvement was weak or non-significant, indicating that the quality of engagement, rather than the amount, is crucial. These findings demonstrate the potential of Explorable explanations as an interactive metho d to address the limitations of current AI literacy approaches. They provide a way to equip end users of AI with the critical thinking and reasoning skills needed to understand and assess AI systems they may encounter.
 
 Fig.glyph[suppress] 1.glyph[suppress] Explorable Illustration: Datasets Hav e Worldviews.
@@ -50,6 +59,10 @@ Fig.glyph[suppress] 1.glyph[suppress] Explorable Illustration: Datasets Hav e Wo
 ## 2 Relatedglyph[suppress] Workglyph[suppress]
 
 AI literacy is a set of competencies that enables individuals to critically evaluate AI technologies, communicate and collaborate effectively with AI, a nd use AI as a tool online, at home, and in the workplace [20]. Researchers argue that AI literacy is essential for career development and everyday usage, emphasizing the importance of learning to use AI appropriately while distinguishing between ethical and unethical practices [23]. Cultivating AI literacy equips people with the ability to use AI-driven technologies f or advanced learning and skill development [12]. Furthermore, educating people about AI ethics is critical to promoting the application of AI for societal good [9]. Hidalgo emphasized that AI literacy should thus encompass both technological aspects of how AI wo rks and its impact on people, including ethics and fairness [14]. Recent studies have begun to explore whether training in AI ethics can improve understanding of AI implications. For example, Kasinidou et al. found that attending a brief seminar on Fairness, Accountability, Transparency , and Ethics (FATE) in algorithmic decision-making improved understanding of FATE topics in AI among computer science students [17]. Additionally, Kasperson et al. found that having high school students use a web-based tool to learn about machine learning in societal contexts encouraged an improved understanding of AI implications [18].
+
+
+<!-- PAGE 4 -->
+
 
 In addition to investigating what content to teach for comprehensive AI literacy, researchers have begun testing how to best teach AI literacy. Kim et al. demonstrated that AI education with flipped learning improved academic achievement in students with and without technical backgrounds [19]. Alam proposed gaming as a method to assist in teaching AI and machine learning, leveraging its engaging features [1]. Others have focused on understanding training data to explain how biases in training data can negatively affect the fairness of AI decisions (i.e., Explainable AI) [2]. However, Sneirson et al. noted that while several AI practitioners have developed AI explanations (Explainables), they struggle to evaluate the success of their artifacts, and rigorous quantitative pre- and post-test comparisons have been lacking [30].
 
@@ -62,6 +75,10 @@ glyph[suppress]
 We conducted a controlled study to evaluate how interactive simulations impact AI literacy. Participants engaged with four AI topics across three different instructional formats, and their learning outcomes were assessed using pre- and post-test measures.
 
 Study Design: Participants were randomly assigned to one of three conditions designed to assess the impact of interactivity on AI literacy: (1) Explorable (interactive tutorial) , where participants engaged with a web-based tutorial featuring dynamic visualizations, adjustable parameters, and real-time feedback to explore AI concepts through hands-on experimentation; (2) Static (PDF tutorial) , where participants received a non-interactive, text-based version of the tutorial in PDF format, preserving the explanatory content but removing interactive elements such as simulations and input-based feedback; and (3) Basic Control (no tutorial) , where participants received no instructional material and proceeded directly from the pre-test to the post-test, serving as a baseline for evaluating prior knowledge and incidental learning. The Explorable and Static conditions allowed for a direct comparison of interactive versus static learning materials, while the Basic Control condition provided a measure of how much learning could be attributed to the interventions rather than general exposure to AI-related concepts.
+
+
+<!-- PAGE 5 -->
+
 
 The pre-test included demographic questions (age, gender, ethnicity, education level, and country of residence) and 18 A I literacy items adapted from the Meta AI Literacy Scale [4], rated on a 5-point Likert scale from Strongly Disagree (1) to Strongly Agree (5). These questions covered Use &amp; Apply AI (e.g., 'I can operate AI applications in everyday life'), Know &amp; Understand AI (e.g., 'I can assess the limitations and opportunities of using an AI'), Detect AI (e.g., 'I can distinguish devices that use AI f rom devices that do not'), and AI Ethics (e.g., 'I can analyze AI-based applications for their ethical implications'). Participants also answered two multiple-choice questions based on real-world AI scenarios from the AI Incident Database 1 , assessing their ability to identify risks and propose mitigation strategies corresponding to the AI topic group they were assigned to. F or instance, for the Diversity topic, the case of Incident 37 2 : 'Female Applicants Down-Ranked by Amazon Recruiting Tool' was used to develop a scenario describing how companies use AI to identify the most promising candidates in the resume screening process. The first question asked participants to identify the main poten tial issue caused by the use of AI in the given scenario, while the second question asked participants to select appropriate mitigation strategies for improving equitable usage.
 
@@ -83,6 +100,10 @@ Topic Selection and Justification: This study evaluated the effectiveness of int
 
 7glyph[suppress] https://pair.withgoogle.com/explorables/dataset-worldviews/.
 
+
+<!-- PAGE 6 -->
+
+
 Participants and Recruitment: This study was preregistered 8 , and participants were recruited using the Prolific Platform [26]. They were required to be at least 18 years old, proficient in English, and located in the United States. These criteria helped ensure a broad adult population while controlling for cultural and linguistic variables ( n = 612). Participants in the Explorable and static tutorial control groups were compensated $4 for completing the survey, while those in the basic control groups were compensated $2. The compensation w as determined based on the relative time required to complete the study, calculated to reflect approximately $12 for an hour of effort. Qualified participants were randomly assigned to one AI topic group and could not be selected for any other group.
 
 To ensure data quality, we implemented several measures. Explorable group participants were required to interact with the Explorable for at least 5 min, with submissions below 1 min flagged for review. Control group participants had to enter a password at the end of their static tutorial to proceed. Additionally, all participants faced an attention check question in the post-test survey, with incorrect responses leading to submission flagging. These measures collectively enhanced our confidence in the validity of participant engagement and data quality across both groups.
@@ -96,6 +117,10 @@ Tutorial Effectiveness: We assessed tutorial effectiveness using both withinsubj
 Generalization: To assess knowledge transfer, we compared post-test accuracy between target and non-target topic AI scenario questions using paired t -tests. Effective generalization is indicated by statistically similar performance across target and non-target questions ( p &gt; 0 . 05).
 
 8glyph[suppress] Preregistration available a t https://doi.org/10.17605/OSF.IO/F86GA.
+
+
+<!-- PAGE 7 -->
+
 
 Self-assessed AI Literacy: Changes in self-reported AI literacy and ethics understanding were evaluated using paired t -tests comparing pre- and postinterv ention scores within-subject for each AI topic across all conditions.
 
@@ -117,6 +142,10 @@ Errorbarsrepresent95%confidenceintervals.
 
 Fig.glyph[suppress] 2.glyph[suppress] AI Literacy Learning Gains Across Conditions.
 
+
+<!-- PAGE 8 -->
+
+
 Worldview, there was a significant gain in 'Identify the issue' ( p = 0 . 007). The Diversity topic showed a significant improvement in 'Propose solutions' ( p &lt; 0 . 001), while Fairness improved consistently across all measures (all 0 008).
 
 The Explorable group demonstrated statistically significant pre-to-post improvements in most topics, while gains in the Basic Control group were smaller or non-significant. For example, in the Worldview topic, overall scores improved from 0.53 to 0.67 ( p &lt; 0 . 001) in the Explorable condition, compared to a smaller increase from 0.46 to 0.58 ( p = 0 . 047) in the Basic Control condition. In the Diversity topic, the Explorable group improved significantly from 0.69 to 0.81 ( p &lt; 0 . 001), while the Basic Control group's increase from 0.63 to 0.71 was not statistically significant ( p = 0 . 06). Similarly, for 'Propose Solutions' in Diversity, the Explorable condition improved from 0.65 to 0.86 ( p &lt; 0 . 001), while the Basic Control condition showed minimal change (0.69 to 0.72, p = 0 . 65).
@@ -134,6 +163,10 @@ To account for differences in pre-test ability, we conducted a regression ysis p
 <!-- formula-not-decoded -->
 
 where Static iψ and Basic iψ are dummy variables and Explorable iψ serves as the reference group. The model revealed a strong relationship between pre- and post-test performance ( β 1glyph[suppress] = 0 . 22, SE = 0.03, p &lt; . 001), highlighting the importance of prior knowledge. While post-test scores in the Static ( β 2glyph[suppress] = -0 . 01, SE = 0.03, p = . 642) and Basic ( β 3glyph[suppress] = -0 . 04, SE = 0.03, p = . 127) conditions were slightly lower than in the Explorable condition, these differences were not statistically significant. Overall, the regression results support the pattern observed in the within-group analyses: interactive tutorials are at least as effective as static materials and may offer additional benefits for promoting knowledge generalization and building perceptual confidence, as discussed in the following sections.
+
+
+<!-- PAGE 9 -->
+
 
 ## 4.2 Transfer Task G eneralization
 
@@ -163,6 +196,10 @@ Note: ID = Identify the Issue, Prop. Sol. = Propose Solutions, Gen. AI Lit. = Ge
 
 Within-subject paired t -tests were conducted to compare preand postintervention self-assessed scores for both general AI literacy and ethical AI literacy. In the Explorable condition, participants reported significant improvements in general AI literacy across all topics. For instance, in the LLM group, the mean self-assessed AI literacy increased from 3 . 56 to 3 . 77 ( mean difference =
 
+
+<!-- PAGE 10 -->
+
+
 0.21, p &lt; 0 . 001), and in Diversity, from 3 . 58 to 3 . 74 ( mean difference = 0.16, p = 0 . 001). Regarding AI ethics, the Explorable condition showed a significant increase in the Diversity group ( mean difference = 0.22, p = 0 . 03), while other topics showed more minor or non-significant changes. In contrast, the Basic Control condition showed significant improvement in general AI literacy only for Worldview ( mean difference = 0.09, p = 0 . 01), and the Static Control condition yielded significant improvements in Diversity ( p = 0 . 02), Fairness ( p = 0 . 01), and LLM ( p = 0 . 003). These findings suggest that interactive experiences enhance participants' confidence in their AI literacy more consistently those who do not receive AI tutorials.
 
 ## 4.4 Interactive Engagement P atterns
@@ -174,6 +211,10 @@ Fig.glyph[suppress] 3.glyph[suppress] Different user scroll patterns.
 <!-- image -->
 
 User interactions within the Explorable condition were further categorized into 'Identify Issue' and 'Propose Solutions' activities. As shown in Fig. 4, partial correlation analyses were conducted between activity counts and score improvements while controlling for time-on-task. Most relationships remained weak or non-significant; however, there were notable exceptions: in the Fairness topic, the number of 'Identify Issue' actions correlated moderately with performance improvement ( r = 0 . 36, p = 0 . 011); in the LLM domain, activity counts correlated with both AI ethics understanding ( r = 0 . 28, p = 0 . 033) and
+
+
+<!-- PAGE 11 -->
+
 
 overall AI literacy ( r = 0 . 45, p = 0 . 001); and in the Worldview topic, 'Propose Solutions' activities correlated with topic-specific improvements ( r = 0 . 32, p = 0 . 024). These findings suggest that while o verall engagement does not uniformly predict learning outcomes, the quality and type of engagement in specific tasks is meaningfully related to performance.
 
@@ -193,6 +234,10 @@ ScoreIncrement
 
 Fig.glyph[suppress] 4.glyph[suppress] Correlation: Activity Counts vs Score Increment. Note:glyph[suppress] Abbreviations:glyph[suppress] IDglyph[suppress] =glyph[suppress] Identifyglyph[suppress] Issue,glyph[suppress] PSglyph[suppress] =glyph[suppress] Proposeglyph[suppress] Solution,glyph[suppress] Divglyph[suppress] =glyph[suppress] Diversity,glyph[suppress] Fairglyph[suppress] =glyph[suppress] Fairness,glyph[suppress] WVglyph[suppress] =glyph[suppress] Worldview.glyph[suppress] Greenglyph[suppress] boxesglyph[suppress] indicateglyph[suppress] significantglyph[suppress] correlationsglyph[suppress] (glyph[suppress] pψ ≤ 0 glyph[triangleright] 05 ). (Color figure online)
 
+
+<!-- PAGE 12 -->
+
+
 fosters deeper learning than passive methods. The ability to manipulate parameters, test assumptions, and receive real-time feedback in the Explorable condition likely supported iterative reasoning and reflection, contributing to more durable learning outcomes. However, while the Explorables were generally effective, topic-dependent variations emerged. The LLM topic showed declines, possibly due to the probabilistic and less intuitive nature of language models-unlike Dive rsity and Fairness, which are grounded in more concrete ethical frameworks. These findings suggest that certain AI topics, such as generative models, may require additional scaffolding-such as guided examples or case-based reasoning-to fully support conceptual understanding.
 
 ## 5.2 Engagement Analysis and Learning Outcomes
@@ -206,6 +251,10 @@ The effectiveness of interactive simulations underscores the need for AI educati
 ## 5.4 Limitations and Threats to Validity
 
 While this study offers valuable insights, several limitations should be noted. Our self-selected online sample may introduce biases in engagement and prior AI knowledge, underscoring the need for broader participant diversity. Additionally, reliance on quantitative engagement metrics, such as scrolling behavior,
+
+
+<!-- PAGE 13 -->
+
 
 provides an incomplete view of cognitive engagement; future research should incorporate qualitative methods like think-aloud protocols. Finally, our study focused on short-term learning gains, leaving long-term retention and knowledge transfer unexamined. Future work should explore sustained learning effects and the applicability of AI literacy skills in new contexts.
 
@@ -223,6 +272,10 @@ This study provides compelling evidence for the effectiveness of interactive sim
 6. Chi, M.T., Wylie, R.: The ICAP framework: Linking cognitive engagement to active learning outcomes. Educ. Psychol. 49 (4), 219-243 (2014)
 7. De Jong, T., Van Joolingen, W.R.: Scientific discovery learning with computer simulations o f conceptual domains. Rev. Educ. Res. 68 (2), 179-201 (1998)
 8. De Silva, D., Jayatilleke, S., El-Ayoubi, M., Issadeen, Z., Moraliyage, H., Mills, N.: The human-centred design of a universal module for artificial intelligence literacy in tertiary education institutions. Mach. Learn. Knowl. Extract. 6 (2), 1114-1125 (2024)
+
+
+<!-- PAGE 14 -->
+
 
 9. Dignum, V.: Responsible artificial intelligence: how to develop and use AI in a responsible way, vol. 2156. Springer (2019)
 10. Goeser, P.T., Hamza-Lup, F.G., Johnson, W.M., Scharfer, D.: View: A virtual interactiv e web-based learning environment for engineering (2018)
@@ -243,6 +296,10 @@ This study provides compelling evidence for the effectiveness of interactive sim
 25. Popa, D.M.: Critical exploratory investigation of ai consumption, AI perception and AI literacy requirements. AI perception and A I literacy requirements (November 01, 2024) (2024)
 26. Prolific: Prolific - participant recruitment for online research. https://www.prolific. com/ (2025). Accessed 22 J an 2025
 27. Raub, M.: Bots, bias and big data: artificial intelligence, algorithmic bias and disparate impact liability in hiring practices. Ark. L. Rev. 71 , 529 (2018)
+
+
+<!-- PAGE 15 -->
+
 
 28. Servais, E.L., LaMorte, W.W., Agarwal, S., Moschetti, W., Mallipattu, S.K., Moulton, S.L.: Teaching surgical decision-making: an interactive, web-based approach. J. Surg. Res. 134 (1), 102-106 (2006)
 29. Shved, E., Bumbacher, E., Mejia-Domenzain, P., Kapur, M., K¨ aser, T.: Teaching and measuring multidimensional inquiry skills using interactive simulations. In: International Conference on Artificial Intelligence in Education, pp. 482-496. Springer (2024)

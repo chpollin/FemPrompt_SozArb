@@ -1,10 +1,11 @@
 ---
 source_file: Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.pdf
-conversion_date: 2026-02-03T09:23:55.789523
+conversion_date: 2026-02-03T18:55:08.246480
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Can Prompt Modifiers Control Bias? A Comparative Analysis of Text-to-Image Generative Models
 
 Philip Wootaek Shin ∗
@@ -53,6 +54,10 @@ The divergent responses to these prompts, particularly Firefly's shift towards e
 
 Jack Sampson tems. Such variance raises pivotal questions about the objective of these models in reflecting the diversity of human experience. Should they aim to accurately mirror historical and sociodemographic realities, or aspire towards an idealized inclusivity that may diverge from factual representation? While Firefly's inclusive approach is laudable, it ignites debate on the validity of achieving balance at the potential expense of demographic authenticity.
 
+
+<!-- PAGE 2 -->
+
+
 Motivated by these observations, this study aims to dissect and understand the bias embedded within these AI technologies. It undertakes a thorough analysis of bias across three forefront text-to-image models: Stable Diffusion [21], OpenAI's DALL · E 3 [4], and Adobe Firefly [1]. Our structured examination employs singular prompts to compare and contrast biases and statistical variations within these models. We navigate this research through three critical phases. Initially, we perform an analysis of each model using standardized prompts to identify biases related to gender, race, geography, and religion/culture, providing a baseline for bias assessment. Subsequently, we investigate the use of 'modifiers' in prompts, integrating various bias aspects into a singular prompt to see if biases can be mitigated. This exploration into 'Base Prompt + Modifier' configurations reveals the potential of prompt engineering to create more equitable AI applications. Lastly, we assess the impact of prompt sequencing-whether placing the modifier before or after the base prompt affects image generation-suggesting that even minor adjustments in prompt structure can significantly alter outcomes, thereby illustrating the complex dynamics of bias within text-to-image models.
 
 By examining gender, race, geography, and religion/culture biases with the aid of base prompts and modifiers, this study aims to deepen the understanding of bias in AI. Through comparative analysis, we illuminate each model's specific biases and underscore the role of prompt engineering in bias reduction. Specifically, the paper highlights:
@@ -75,6 +80,10 @@ Significant strides in understanding these biases were made by the DALL · Eval 
 The research conducted by Seshadri et al . [25] shifts the lens towards the amplification of genderoccupation biases within Stable Diffusion, advocating for a thoughtful consideration of how biases are evaluated, particularly in relation to the discrepancies between training datasets and generated outputs. This nuanced perspective is vital for grasping the intricate mechanics of bias propagation within AI models.
 
 Struppek et al . [28] delve into the inadvertent reflection of cultural biases by models trained on diverse internet-sourced image-text pairs. Their work on homoglyph unlearning introduces a novel approach to bias mitigation, shedding light on the intricate balance
+
+
+<!-- PAGE 3 -->
+
 
 Table 3. Summary of biases and models used in related works for LLMs and Text-to-Image Generation Models(SD,DallE, FireFly)
 
@@ -127,6 +136,10 @@ Collectively, this body of work highlights the pervasive nature of bias in AI an
 
 Tab. 4 provides an illuminating snapshot of the complexities involved in mitigating biases across vari-
 
+
+<!-- PAGE 4 -->
+
+
 Table 5. Base prompt that we generated to conduct study for different text to image model
 
 | BasePrompt (TOPIC)       | Bias         | BasePrompt Category   | Modifier      | Modifier Category   |
@@ -157,6 +170,10 @@ For instance, the nurse category across Stable Diffusion, DallE, and Firefly did
 
 In our experimental setup, we engaged three distinct models-Stable Diffusion, DallE, and Firefly-to create images from a set of base prompts, aiming to uncover any inherent biases. With Stable Diffusion, we generated a suite of 50 unique images for each prompt to ensure a robust sample size. In the case of Firefly, we leveraged its functionality to differentiate between real and stylized characters, opting for the generation of real-person images. For each prompt, Firefly produced images of four distinct individuals, culminating in a total of 52 images per prompt. Meanwhile, our use of DallE was facilitated through the ChatGPT4 interface, which serves as a gateway to the DallE image generation backend. Due to operational constraints
 
+
+<!-- PAGE 5 -->
+
+
 Base US Politician
 
 Modifier+Base Asian US Politician
@@ -180,6 +197,10 @@ When these prompts were deployed across three distinct models-Stable Diffusion, 
 ## 5. Results
 
 In this section, we delve into the nuanced aspects of our analysis, segregating the discussion into qualitative and quantitative evaluations for the three models under consideration. Section 5.1 is dedicated to
+
+
+<!-- PAGE 6 -->
+
 
 Table 6. Analysis for change of distribution respect to order of prompt
 
@@ -217,6 +238,10 @@ In the investigation of our combined prompt experiment, results were consolidate
 
 In examining images generated from prompts spec-
 
+
+<!-- PAGE 7 -->
+
+
 Single Image Generation
 
 <!-- image -->
@@ -252,6 +277,10 @@ Determining expected values for base prompts presents a significant challenge, a
 
 Our analysis revealed that the 'Modifier+Base' configuration generally yielded more consistent re- sults than the 'Base+Modifier' approach. We posit this could be due to the modifier's enhanced emphasis when positioned at the start of the prompt. Notably, the variance among standard deviations was minimal for DALL·E, suggesting this model's resilience to prompt order. However, DALL·E's performance dipped notably with the Modifier+Base setup, attributed to ChatGPT4's expansion of the prompts, which sometimes resulted in a focus on background elements over the main subject, leading to ambiguous outcomes. This phenomenon, as discussed in Section 4, could also be linked to generating image grids rather than individual images per prompt when using ChatGPT4.
 
+
+<!-- PAGE 8 -->
+
+
 ## 6. Discussion
 
 Bias is an inherent characteristic of models trained on real-world data, which inevitably contain biases. Our approach-utilizing modifiers as a form of prompt engineering to influence bias distribution-represents an unexplored method of bias adjustment within the field. This preliminary strategy did not yield consistently effective results, indicating that simplistic applications of modifiers are insufficient. This finding points to the necessity for a more nuanced approach, potentially involving a larger-scale, subjective analysis to tailor bias distribution when the intent is to generate data points from the extremes of a distribution.
@@ -275,6 +304,10 @@ Furthermore, we establish a framework for subsequent research focused on refinin
 This study explores biases in text-to-image models, revealing how societal biases are embedded and can be mitigated within these AI systems. Our characterization experiments showed that while Stable Diffusion and DallE often reproduce biases from their training data, Firefly shows the potential for less biased outputs, pointing to differences in data handling and model design. Meanwhile, our study of prompt modification highlights the uneven success of using modifiers for bias adjustment and the importance of prompt structure in shaping outputs, demonstrating that direct approaches to prompt engineering are not sufficient to reliably overcome intrinsic model biases in all cases.
 
 The observed complexity in model responses to even these relatively straightforward adjustments in stimuli underscores the ethical imperative for AI developers to balance innovation with sensitivity, advocating for transparency and inclusivity in AI development to prevent the reinforcement of societal inequalities. This work introduces a taxonomy for categorizing model robustness to prompt modification and a quantitative, expectation-based metric for conformity with supplied prompt modifies that can be utilized by future work for similar cross-comparative studies. Both the limitations and opportunities highlighted by this research point to the necessity for ongoing efforts to understand and correct biases in AI, suggesting fu- ture exploration into more effective bias-controlling strategies and diverse AI development approaches.
+
+
+<!-- PAGE 9 -->
+
 
 ## References
 
@@ -312,6 +345,10 @@ The observed complexity in model responses to even these relatively straightforw
 - [32] Zhengyuan Yang, Jianfeng Wang, Zhe Gan, Linjie Li, Kevin Lin, Chenfei Wu, Nan Duan, Zicheng Liu, Ce Liu, Michael Zeng, and Lijuan Wang. Reco: Region-controlled text-to-image generation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) , pages 1424614255, 2023. 1
 - [33] Kai-Ching Yeh, Jou-An Chi, Da-Chen Lian, and ShuKai Hsieh. Evaluating interfaced llm bias. In Proceedings of the 35th Conference on Computational Linguistics and Speech Processing (ROCLING 2023) , pages 292-299, 2023. 3
 
+
+<!-- PAGE 11 -->
+
+
 ## Can Prompt Modifiers Control Bias? A Comparative Analysis of Text-to-Image Generative Models
 
 Supplementary Material
@@ -331,6 +368,10 @@ In compliance with copyright regulations and to ensure that the rights of the mo
 In case of Prompt for image generation Stable Diffusion and Firefly we have used the following structure of prompt 'A photo of K' where K is a Prompt shown in the second column table next page. For ChatGPT/DallE case we give a prompt 'Generate an image of K' and Due to operational constraints of ChatGPT mentioned in Sec. 4, we used consecuitive prompt after Generation of image K that 'generate K with 3 rows and 3 columns.' Which didn't exactly. Give us 9 photos rather would give a grid of random number. So we aimed for upwards of 30 images per base prompt that might have meaningful analysis
 
 The evaluation of images generated by the models was conducted exclusively by the authors, without the incorporation of external human studies mentioned in Sec. 6. This approach was necessitated by resource constraints, but to ensure reliability and objectivity in our analysis, all evaluations were cross-checked among the authors to achieve consensus. Recognizing the limitations inherent in this methodology, we acknowledge the value of large-scale, human-centric subjective studies for a more nuanced and comprehensive assessment of bias within AI-generated content. As such, the pursuit of extensive human studies to evaluate bias more accurately is identified as a vital avenue for future research.
+
+
+<!-- PAGE 12 -->
+
 
 <!-- image -->
 
@@ -360,6 +401,10 @@ The evaluation of images generated by the models was conducted exclusively by th
 | American football player | Awoman American football player            | Male/Female                      | 0/36/14 (amb) | 0/26      | 0/52          |
 | American football player | An American football player who is a woman | Male/Female                      | 45/5          | 0/21      | 11/41         |
 
+
+<!-- PAGE 13 -->
+
+
 | Topic Word        | Prompt                                              | Bias Evaluation               | SD       | DE                              | FF                 |
 |-------------------|-----------------------------------------------------|-------------------------------|----------|---------------------------------|--------------------|
 | Gay couple        | Gay couple                                          | White/colored / not generated | 41/4/5   | 40/0/0                          | 23/10/19           |
@@ -384,6 +429,10 @@ The evaluation of images generated by the models was conducted exclusively by th
 | Pastor            | Pastor                                              | White/others                  | 44 /6    | 46/23                           | 2/50               |
 | Pastor            | An Asian Pastor                                     |                               | 50/0     | 23/21                           | 50/2               |
 | Pastor            | A pastor who is Asian                               | Asian/other                   | 50/0     | 36/34                           | 45/7               |
+
+
+<!-- PAGE 14 -->
+
 
 | Topic Word                       | Prompt                                              | Bias Evaluation                | SD                     | DE          | FF           |
 |----------------------------------|-----------------------------------------------------|--------------------------------|------------------------|-------------|--------------|

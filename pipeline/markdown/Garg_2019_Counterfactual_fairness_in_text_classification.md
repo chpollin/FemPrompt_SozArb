@@ -1,10 +1,11 @@
 ---
 source_file: Garg_2019_Counterfactual_fairness_in_text_classification.pdf
-conversion_date: 2026-02-03T08:57:39.050488
+conversion_date: 2026-02-03T18:28:15.352179
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Counterfactual Fairness in Text Classification through Robustness
 
 Sahaj Garg, 1* Vincent Perot, 2 Nicole Limtiaco, 2 Ankur Taly, 3 Ed H. Chi, 3 Alex Beutel 2
@@ -37,6 +38,10 @@ To satisfy counterfactual token fairness, we borrow techniques from the robustne
 
 One issue is that the aforementioned methods may only achieve fairness with respect to identity tokens considered by counterfactuals during training. To address this, we evaluate the generalization of the methods on a held-out set of identity tokens. Another concern when optimizing for counterfactual fairness is potential trade-offs with other desirable properties of a classifier, including overall accuracy and group fairness. In practice, we do not find significant harms with respect to accuracy, and varying effects on group fair- ness in the form of tradeoffs between true negatives and true positives.
 
+
+<!-- PAGE 2 -->
+
+
 We make the following contributions:
 
 - Metric: We provide a tractable metric, counterfactual token fairness , for measuring counterfactual fairness in text classification.
@@ -60,6 +65,10 @@ Several papers draw connections between fairness, text generation, and robustnes
 ## Problem Definition
 
 Given text input x ∈ X , where x is a sequence [ x 1 , ..., x n ] of tokens, our task is to predict an outcome y . We consider a classifier f parameterized by θ that produces a prediction ˆ y = f θ ( x ) , where we seek to minimize some notion of error between y and ˆ y . For notational simplicity, we restrict the following definitions to a single binary class, but they can be easily generalized to multi-class classification problems.
+
+
+<!-- PAGE 3 -->
+
 
 The classifier f can be an arbitrary neural network.
 
@@ -103,6 +112,10 @@ Blindness substitutes all identity tokens with a special IDENTITY token, which a
 
 Instead of blinding the model to identity terms, counterfactual augmentation involves augmenting the model's training set with generated counterfactual examples. The additional examples are meant to guide the model to become invariant to perturbing identity terms. This is a standard technique in computer vision for making the model invariant to object location, image orientation, etc. The counterfactual examples are assigned the same label as the original example.
 
+
+<!-- PAGE 4 -->
+
+
 ## Counterfactual Logit Pairing (CLP)
 
 Counterfactual logit pairing (CLP) encourages the model to be robust to identity by adding a robustness term to the training loss. The robustness term is given by logit pairing (Kannan, Kurakin, and Goodfellow 2018), which penalizes the norm of the difference in logits for pairs of training examples and their counterfactuals. Specifically, suppose the classifier f ( x ) = σ ( g ( x )) , where g ( x ) produces a logit and σ ( · ) is the sigmoid function. The additional loss is the average absolute difference in logits between the inputs and their counterfactuals:
@@ -142,6 +155,10 @@ Metrics Wemeasure the counterfactual token fairness gap with respect to a given 
 Over an entire dataset, the gap is the average over all examples that have valid counterfactuals. In this study, we measure the CTF GAP for the counterfactual generation function Φ A , which substitutes all pairs of identity tokens. Because substitution-based counterfactuals over short inputs
 
 3 This is the updated open sourced version of the synthetic test set presented in (Dixon et al. 2018).
+
+
+<!-- PAGE 5 -->
+
 
 Table 1: Conterfactual token fairness gaps for non-toxic examples from evaluation set and all examples from a synthetic test set. All gaps are measure w.r.t. 35 training terms. Smaller gaps are better.
 
@@ -189,6 +206,10 @@ Group Fairness We additionally evaluate the group fairness metrics, TPR and TNR 
 
 We examine the trade-off between CTF gap and TPR. We consider the CLP, λ = 5 model which attains a near zero CTF gap and compare its predictions on toxic comments to those of the baseline. Among examples with identity terms in the test set, there are 83 cases where an example was correctly classified by the baseline and incorrectly classified by the CLP model. Of these, 27 were labeled by an author as having an asymmetric counterfactual. There were 20 cases where the CLP model predicted correctly compared to
 
+
+<!-- PAGE 6 -->
+
+
 Figure 1: Plot of the average CTF gap along with the TPR and TNR over examples that contain identity terms.
 
 <!-- image -->
@@ -220,6 +241,10 @@ Going forward, better heuristics must be designed for identifying cases with asy
 
 A next step would be to improve counterfactual generation by addressing issues of polysemy of identity terms (which can result in illogical substitutions), asymmetric counterfactuals, and multiple references to an identity group. One possible method is to use analogies in word vectors to change multiple tokens used for the same identity group (Madaan et al. 2018). Another approach is defining a generative model over text, as in (Hu et al. 2017), that can modify certain attributes of the text while holding others constant and preserving semantics. One could also use criteria for selecting semantically equivalent adversarial examples as in (Ribeiro, Singh, and Guestrin 2018), to evaluate whether counterfactual examples are logical. Optimizing for general counterfactual fairness will test many of the unique advantages of counterfactual logit pairing.
 
+
+<!-- PAGE 7 -->
+
+
 ## Acknowledgements
 
 We would like to thank Lucy Wasserman, Allison Woodruff, Yoni Halpern, Andrew Smart, Tulsee Doshi, Jilin Chen, Alexander DAmour, Raz Mathias, and Jon Bischof for their feedback leading up to this paper.
@@ -250,6 +275,10 @@ We would like to thank Lucy Wasserman, Allison Woodruff, Yoni Halpern, Andrew Sm
 - [Wachter, Mittelstadt, and Russell 2017] Wachter, S.; Mittelstadt, B. D.; and Russell, C. 2017. Counterfactual explanations without opening the black box: Automated decisions and the GDPR. CoRR abs/1711.00399.
 - [Zemel et al. 2013] Zemel, R.; Wu, Y.; Swersky, K.; Pitassi, T.; and Dwork, C. 2013. Learning fair representations. In Dasgupta, S., and McAllester, D., eds., Proceedings of the 30th International Conference on Machine Learning , volume 28 of Proceedings of Machine Learning Research , 325333. Atlanta, Georgia, USA: PMLR.
 - [Zhao, Dua, and Singh 2017] Zhao, Z.; Dua, D.; and Singh, S. 2017. Generating natural adversarial examples. CoRR abs/1710.11342.
+
+
+<!-- PAGE 8 -->
+
 
 ## Appendix
 

@@ -1,10 +1,11 @@
 ---
 source_file: Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.pdf
-conversion_date: 2026-02-03T08:43:22.324732
+conversion_date: 2026-02-03T18:21:36.279758
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -29,6 +30,10 @@ SOMMARIO L'intelligenza artificiale (IA) ha il potenziale per trasformare vari a
 
 PAROLE CHIAVE Intelligenza Artificiale nell'Educazione; Alfabetizzazione all'IA; Istruzione; Etica.
 
+
+<!-- PAGE 2 -->
+
+
 ## 1. Introduction
 
 In an era where technology's influence is hardly deniable, Artificial Intelligence (AI) stands at the forefront, shaping multiple sectors from business to the arts and, notably, education (Casal-Otero et al., 2023; Laupichler et al., 2023; Liu et al., 2023; JRC &amp; OECD, 2021; UNESCO, 2021; Zawacki-Richter et  al.,  2019).  Our  daily  interactions - from adjusting settings on smart home devices to seeking help from virtual assistants like Siri and Google - highlight AI's ubiquitous presence in modern life. This widespread incorporation of AI amplifies the urgency for a comprehensive understanding, leading to a pressing call for robust AI literacy across the population (Kong et al., 2023 to cultivate a broad awareness  and  comprehension of  both  AI's  potential  benefits  and  drawbacks  (Gašević,  Siemens,  &amp;  Sadiq, 2023; Selwyn, 2022; Perrotta &amp; Selwyn., 2020).
@@ -40,6 +45,10 @@ However, despite the growing consensus on the significance of AI literacy, resea
 ## 2.1. AI Literacy Frameworks and definitions
 
 Even though there is still no consensus on a definitive description of AI literacy, various attempts have been made to frame it within the broader context of digital literacy. The diverse range of defini-
+
+
+<!-- PAGE 3 -->
+
 
 tions, such as Kandlhofer and colleague's (2016) emphasis on grasping basic AI techniques and applications, showcases the foundational aspects of AI literacy. Authors like Druga et al. (2019 &amp; 2022) and Wong et al. (2020) highlighted the importance of AI literacy's ethical aspects and awareness of its societal influence. Long &amp; Magerko (2020) defined AI literacy as a range of skills that enable critical evaluation and productive collaboration with AI technologies. Liu &amp; Xie (2021) expanded AI literacy to include digital literacy and computational thinking. Kim et al. (2021) emphasised knowledge, skill and attitude, while Kong &amp; Zhang (2021) and Cetindamar et al. (2022) discussed AI literacy in the context of career readiness. Yi (2021) discussed AI literacy's cultural and subjective dimensions, implying that AI literacy is more than a set of technical abilities but also includes the ability to navigate and modify one's life  amid AI's transformations. Deuze &amp; Beckett (2022) and Hermann (2022) examined AI literacy's applicability and influence from normative and practical perspectives. Laupichler et al. (2023) and Wang, Rau and Yuan (2022) emphasised informed AI use and implications for decision-making. Finally, Weber and colleagues (Weber, Pinski &amp; Baum, 2023) provided a comprehensive view, encompassing data and algorithm literacy as key components.
 
@@ -55,6 +64,10 @@ These factors work together to create a multifaceted perspective to investigate,
 ## 2.2. Assessment tools
 
 The central focus of our approach to measuring this specific construct lies in the development of a comprehensive framework. This framework is essential to address the multiple components and their interconnections that are fundamental to understanding AI. Such a framework is necessary due to the complexity and multifaceted nature of AI literacy. Several efforts have been made to develop tools to measure different aspects of AI literacy. These tools mostly focus on some components of AI literacy (e.g.,
+
+
+<!-- PAGE 4 -->
+
 
 Table 1. Summary of the AI literacy questionnaires reviewed.
 
@@ -75,6 +88,10 @@ affective factors or collaborative variables), while neglecting its intricate na
 
 The variability in AI education methods and objectives stems from the diverse target demographics, each presenting unique learning needs and challenges. Interestingly, a preliminary scan of the academic
 
+
+<!-- PAGE 5 -->
+
+
 landscape on this topic uncovers two predominant categories of publications. One delves into the practical aspects of AI education, detailing course designs and evaluations for non-experts (Long &amp; Magerko, 2020, Lin et al., 2021; Shih et al., 2021), while the other ventures into the theoretical aspects, exploring definitions and the relationship between AI literacy and other literacies (Kandlhofer et al., 2016; Wienrich &amp; Carolus, 2021). Both research strands, with their distinctive focuses, are essential for a complete grasp of AI literacy. Thus, this research aims to investigate the doctoral students' AI literacy perceptions by measuring their knowledge and understanding of the topic across the cognitive, operational, critical and ethical dimensions. The research questions (RQ) addressed in this study are as follows:
 
 RQ1. What are the levels of self-perceived awareness of doctoral students regarding the dimensions of AI literacy? RQ2. Are there differences in the perceived trustworthiness of AI in relation to the knowledge reported by the students?
@@ -86,6 +103,10 @@ To  address  the  research  questions,  a  validated  questionnaire  (Biagini  e
 ## 3.3. Data analysis: the participants
 
 To understand the demographics of the target students and their academic experiences, we collected  some  broad  information  about  their  profile.  This  article  presents  a  convenience  sample  consisting  of  66  Italian  PhD  students  from  a  socio-educational  background,  aiming  to  investigate  vari-
+
+
+<!-- PAGE 6 -->
+
 
 Table 2. Sample characteristics.
 
@@ -127,6 +148,10 @@ ous factors influencing their academic experiences. The sample included 21 males
 
 In  this  study,  while  we  administered  the  comprehensive  survey  encompassing  all  40  items across the four dimensions of AI literacy, we report results for only 25 items that are relevant for
 
+
+<!-- PAGE 7 -->
+
+
 Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education
 
 Table 3. AI - Knowledge perception.
@@ -141,6 +166,10 @@ Table 3. AI - Knowledge perception.
 | Understanding ethical issues related to AI such as fairness, accountability, transparency, safety (Ethical dimension) | 3 (5.8%)      | 13 (25%)     | 12 (23.1%)10        | (19.2%)14 | (26.9%)        |   3.37 | 1.27 |
 
 the research questions addressed. To gauge the participants' knowledge of AI principles, they were asked to assess their perceptions of the various AI framework sub-dimensions (e.g., ' When it comes to Artificial Intelligence (AI), I feel my knowledge on … would be: 1/None at all, 2/A little, 3/A moderate  amount, 4/A lot, 5/A great deal', where the sentence was differently completed according to the framework dimension considered, e.g., 'Evaluation, appraisal and critical assessment of AI applications ') (Cuomo et al., 2022). Understanding the definitions and theoretical foundations of AI is relatively  well-distributed  among the respondents. A majority, 67%, claim to have at least a moderate understanding, but a significant 33% feel they grasp AI concepts from none to a very little extent. Furthermore, when delving into the basic mathematical functions underpinning AI algorithms, the respondents feel considerably less confident. A significant 38.5% admit they have no understanding at all, and another 20% state they have only a little knowledge. The percentage of those who believe they know a lot, or a great deal drops to 11.5%, when compared to the previous answer. In terms of applying AI knowledge and concepts, the results lean more toward the basic side, with 59.6% having either no or just a little experience. The advanced end of the spectrum remains narrow, with only 19.3% feeling they can use or apply AI knowledge to a considerable extent. Evaluating, appraising and critically assessing AI applications shows a moderate distribution, with 30.8% having a moderate amount of confidence in their capabilities. A combined 25% believe they can evaluate AI applications extensively, while 26.9% have no experience. The ability to create, design and build AI applications  shows  a  distinct  trend:  a  clear  majority,  57.7%,  admit  that  they  have  no  experience  at  all. Combining this with the 19.2% with minimal experience, it's evident that hands-on AI development remains specialised, though 9.6% claim a high degree of proficiency. Finally, ethical issues related to AI show an interesting distribution. While only 5.8% have no understanding of it, a noteworthy 26.9% feel they understand these issues to a great extent. The results hint at a heightened awareness or interest in AI ethics among the group, with 45.1% claiming to understand these issues a lot or a great deal. Table 3 summarises the results.
+
+
+<!-- PAGE 8 -->
+
 
 ## 4.1.2. Operational dimension: Perceptions of AI Task Performances
 
@@ -161,6 +190,10 @@ Table 4. Allowing AI Performance.
 ## 4.1.3. Critical dimension: Analysing AI's Risks and Benefits
 
 The excitement surrounding AI is palpable with 64.59% of respondents feeling that AI is exciting  either  a  lot  or  a  great  deal.  This  enthusiasm  likely  stems  from  AI's  potential  to  revolutionise industries, improve efficiency and solve the complex problems facing society. However, alongside this optimism, apprehensions also surface. When asked whether AI is considered dangerous, a notable 43.75% of  participants  believe  it  is  to  a  moderate  extent,  and  an  additional  20.83%  believe  it  is  a lot,  totalling 64.58%. Reflecting on the error rates of AI systems, a majority of 52.08% feel that AI systems make many errors to a moderate extent, and an additional 25% believe it's a little, totalling 77.08%.  Regarding  AI's  performance  compared  to  humans,  opinions  are  varied,  with  the  highest, 43.75%, believing that AI can perform better than humans. On the topic of AI replacing humans in routine jobs, a significant 35.42% believe this would be a lot better, and an additional 27.08% believe it  to  a  moderate  extent.  This  adds  up  to  62.5%,  a  considerable  majority  recognising  AI's  potential to efficiently handle routine tasks. In the economic context, a significant 41.67% think that AI can provide a lot of new economic opportunities, with an additional 29.17% believing it to a moderate extent, totalling 70.84%. Lastly, when considering the broader societal benefit from AI, a plurality of 45.83% feel that much of society will benefit moderately from a future filled with AI. Table 5 summarises the results.
+
+
+<!-- PAGE 9 -->
+
 
 Table 5. Perception toward AI.
 
@@ -192,6 +225,10 @@ Table 6. Future impact of AI.
 
 The survey responses reveal a mix of positive and cautious attitudes toward the integration of AI in  teaching  (Table  7).  To  aid  accuracy  in  teaching,  a  combined  66.67%  of  respondents  either  somewhat or strongly agree that AI could help teachers be more accurate. However, apprehension is apparent regarding the learning curve associated with AI tools. A total of 66.67% (43.75% somewhat agree and 22.92% strongly agree) acknowledge that a substantial effort would be necessary to learn how to effectively  use  AI  in  teaching.  In  terms  of  pedagogical  tasks  like  reviewing  homework,  a  significant 64.58% believe that AI could help save time. Despite these positives, scepticism and concerns persist. A combined 53.33% of respondents express distrust in AI's ability to execute tasks without errors. Job
 
+
+<!-- PAGE 10 -->
+
+
 security fears are also notable, with 37.5% of respondents expressing concerns that AI could take someone's job. When considering lesson planning, a substantial 56.25% feel that AI could aid in time saving,  again  highlighting  AI's  potential  efficiency  contributions  in  various  teaching  aspects.  Similarly, for content and material sourcing, a 66.67% of respondents see AI as a time-saving tool. Despite these perceived advantages, a considerable 43.75% of respondents either somewhat or strongly believe that teaching fundamentally requires human involvement, which AI cannot replicate.
 
 Table 7. Use of AI in the teaching field.
@@ -210,6 +247,10 @@ Table 7. Use of AI in the teaching field.
 ## 4.2. Are there differences in the perceived trustworthiness of AI in relation to the knowledge reported by the students? (RQ2)
 
 In order to answer this research question, we compared the answers of two clusters, one (Group 1) composed  of  students  who  perceived  a  high  literacy  on  AI,  and  another  (Group  2),  comprising  the remaining students who declared a low knowledge on AI. In our study, the distinction between Group 1 and Group 2 was based on participants' self-reported levels of AI literacy. To categorise participants into these two groups, we employed a mean score calculation derived from responses to the 8 items specifically designed to measure 'AI Knowledge'. This methodological choice was made to quantitatively differentiate between and compare participants exhibiting a high self-reported level of AI literacy ('Moderate', 'A lot', 'A great deal') and those indicating a lower level of knowledge ('None at all', 'A little'). For that task, we used Student's T for a significance check of the two categories, we prioritised the presentation of comparisons between groups based on the presence of statistically significant differences across the items surveyed. Upon reviewing the results (Table 8), a trend emerges that emphasises the significance of AI literacy in shaping individuals' attitudes toward AI's capabilities and limitations. Group 2, with a lower perceived literacy on the knowledge-related dimension, consistently shows higher mean scores across various tasks performed by AI compared to Group 1. This pattern indicates a greater willingness in Group 2 to allow AI to undertake diverse roles, including sensitive ones like performing surgeries or assisting in surgical procedures and providing emotional support. For example, in the task of AI performing surgeries, Group 2's mean score is 3.96, compared to 3.39 in Group 1, highlighting a higher level of trust in AI's capabilities in this critical area. Similarly, for emotional support, Group 2 demonstrates a greater reliance
+
+
+<!-- PAGE 11 -->
+
 
 on AI with a mean score of 3.38 compared to Group 1's 2.66. This consistent trend across various tasks underscores a potential lack of critical assessment of AI's capabilities and limitations by individuals in Group 2, possibly leading to an unjustified elevation in trust and dependence on AI technologies.
 
@@ -243,6 +284,10 @@ Table 9 . Comparison of attitudes toward AI. *p&lt;0.05 **p&lt;0.001.
 
 Examining Table 10, a consistent pattern emerges again with Group 2 showing a generally more optimistic view regarding the impact of increased AI use on various aspects of life compared to Group
 
+
+<!-- PAGE 12 -->
+
+
 1. Regarding personal/individual privacy, both groups have similar mean scores (Group 1: 2.73, Group 2: 2.75), indicating comparable expectations. However, for aspects like workforce/labour displacement, Group 2 anticipates less negative impact with a mean of 2.80, compared to Group 1's mean of 3.25, underscoring their more optimistic outlook. Significantly, Group 2 expects more improvement in relevant risks with a mean of 3.45, contrasting with Group 1's mean of 3.09. This is another reflection of Group 2's potentially unwarranted trust in AI, underlining their expectation that AI will handle relevant risks better, possibly without fully grasping the complexities and challenges involved.
 
 Table 10. Comparison of AI future impact. *p&lt;0.05 **p&lt;0.001.
@@ -262,6 +307,10 @@ In this paper, we explored the perceptions, and the attitudes toward AI among st
 
 In the educational field, the findings emphasise the cautious optimism regarding AI's potential role. The recognition of AI's capabilities to enhance administrative and some pedagogical aspects is promising. However, the persistent reluctance to fully entrust AI with personalised responsibilities highlights the ongoing debate and uncertainty surrounding the balance between technological efficiency and the indispensable human element in education, this balance is crucial, as mentioned by Kim et al. (2021) and Kong &amp; Zhang (2021), in ensuring career readiness and developing essential skills and attitudes. The exploration and understanding of this balance are essential in optimising the integration of AI in educational settings, ensuring the enhancement of educational outcomes while preserving the unique
 
+
+<!-- PAGE 13 -->
+
+
 value of human involvement. The anticipation of positive impacts, as mentioned by Laupichler and colleagues (2023), must be balanced against concerns related to privacy and equity, as noted by Hermann (2022). These findings highlight the need for a measured and ethical approach to AI implementation, aiming to harness its benefits while minimising potential drawbacks. It is worth noting, for example, how Weber et al. (2023)'s insights into data and algorithm literacy could play a crucial role. Such literacy serves as the foundation for building an informed and critically thinking AI user base.
 
 Nevertheless, despite the apparent balance between scepticism and trustworthiness, a deeper analysis  reveals  that  a  significant  proportion  of  respondents  report  only  a  moderate  understanding  of  AI definitions and theoretical foundations. This reflects a baseline level of AI literacy. This gap in knowledge levels might influence the perceived utility and trustworthiness of AI technologies among students.  This  might  show  an  interesting  emerging  pattern:  the  manifestation  of  the  Dunning-Kruger effect within the responses (Kruger &amp; Dunning, 1999). This psychological principle suggests that individuals  with  low  competences  overestimate  their  knowledge  on  the  subject.  Applied  to  the  AI  context,  the  respondents with lower AI literacy, display a higher trust in AI's capabilities across various tasks, reflecting a possible overestimation of their understanding of AI technologies. This reflects the observed data, where, despite demonstrating an uncritical attitude, there is a high level of unjustified trust in AI's capability to manage diverse and sensitive tasks. Such a trend underscores the importance of comprehensive AI literacy education which considers not only technical abilities but also cultural and subjective dimensions (Yi, 2021) and highlights that educational initiatives need to emphasise not only AI's capabilities but also their limitations and potential biases, as suggested by the multidimensional approach to AI literacy (Cuomo et al., 2022).
@@ -273,6 +322,10 @@ One significant limitation of this study lies in the convenience sample and in i
 ## 7. Conclusions
 
 This  study's  comprehensive  analysis  of  student  AI  comprehension  and  attitudes  shows  the  complex relationship between AI literacy and AI technology perception and trust. The report shows that
+
+
+<!-- PAGE 14 -->
+
 
 AI literacy is  essential  in  today's  fast-changing  landscape  of  technology  role  in  society.  This  literacy helps people understand and manage AI's advances, threats and possibilities, enabling them to make educated decisions and participate in relevant discussions. It plays a significant role in contributing to shaping the ethical, societal, and educational dimensions of AI, safeguarding against uninformed and potentially detrimental reliance on AI technologies in diverse and sensitive domains. Despite varying levels  of  understanding showcased in the survey, the participants' anticipation for AI's positive contributions, coupled with concerns regarding privacy, equity and cybersecurity, highlights the critical necessity for promoting AI literacy. The findings from our study underscore the need for an integrative approach to AI literacy, blending technical know-how with ethical, social and humanistic understanding. This essential literacy and awareness can be fostered through robust educational initiatives, professional development programmes and the provision of accessible resources. Such efforts will improve AI literacy and equip people to productively and critically use AI technologies and constructively contribute to the growing narrative of AI integration in diverse areas. Educational and policy stakeholders must emphasise AI literacy programme creation and distribution in the future. The ultimate goal is the balanced and judicious use of AI, where its benefits are exploited, and its negatives are carefully managed to benefit society. This balanced approach will be instrumental in guiding the ethical integration of  AI  into  our  daily  lives  and  societal  structures,  paving  the  way  for  a  future  where  technology and humanity coexist in constructive collaboration.
 
@@ -290,6 +343,10 @@ Although the present work was jointly conceived and carried out by the authors, 
 - Druga, S., Christoph, F. L., &amp; Ko, A. J. (2022, April). Family as a Third Space for AI Literacies: How do children and parents  learn  about  AI  together?. In  Proceedings  of  the  2022  CHI  Conference  on  Human  Factors  in  Computing Systems (pp. 1-17).
 - Druga, S., Vu, S. T., Likhith, E., &amp; Qiu, T. (2019). Inclusive AI literacy for kids around the world. In Proceedings of FabLearn 2019 (pp. 104-111).
 - Joint  Research  Centre  &amp;  Organisation  for  Economic  Co-operation  and  Development  (JRC,  &amp;  OECD).  (2021). AI watch,  national  strategies  on  artificial  intelligence:  a  European  perspective .  Publications  Office  of  the  European Union. https://doi.org/10.2760/069178
+
+
+<!-- PAGE 15 -->
+
 
 - Floridi, L., Cowls, J., Beltrametti, M., Chatila, R., Chazerand, P ., Dignum, V ., Luetge, C., Madelin, R., Pagallo, U., Rossi, F.,  Schafer, B., Valcke, P ., &amp; Vayena, E. (2018). AI4People-An Ethical Framework for a Good AI Society: Opportunities,  Risks,  Principles,  and  Recommendations. Minds and Machines , 28 (4),  689-707.  http://doi.org/10.1007/ s11023-018-9482-5
 - Gašević, D., Siemens, G., &amp; Sadiq, S. (2023). Empowering learners for the age of artificial intelligence. Computers and Education: Artificial Intelligence , 100130. https://doi.org/10.1016/j.caeai.2023.100130
@@ -311,6 +368,10 @@ Although the present work was jointly conceived and carried out by the authors, 
 - Schepman, A., &amp; Rodway, P. (2023). The General Attitudes towards Artificial Intelligence Scale (GAAIS): Confirmatory validation and associations with personality, corporate distrust, and general trust. International Journal of HumanComputer Interaction , 39 (13), 2724-2741.
 - Selwyn, N. (2022). The future of AI and education: Some cautionary notes. European Journal of Education , 57 (4), 620631. https://doi.org/10.1111/ejed.12532
 - Sindermann, C., Sha, P., Zhou, M., Wernicke, J., Schmitt, H. S., Li, M., Sariyska, R., Stavrou, M., Becker, B., &amp; Montag, C. (2021). Assessing the attitude towards artificial intelligence: Introduction of a short measure in German, Chinese, and English language. KI-Künstliche Intelligenz , 35 , 109-118. https://doi.org/10.1007/s13218-020-00689-0
+
+
+<!-- PAGE 16 -->
+
 
 - Su,  J.,  &amp;  Zhong,  Y.  (2022).  Artificial  Intelligence  (AI)  in  early  childhood  education:  Curriculum  design  and  future directions. Computers and Education: Artificial Intelligence , 3 , 100072.
 - United Nations Educational, Scientific and Cultural Organization (UNESCO). (2019). Beijing  consensus  on  artificial intelligence and education . https://unesdoc.unesco.org/ark: /48223/pf0000368303

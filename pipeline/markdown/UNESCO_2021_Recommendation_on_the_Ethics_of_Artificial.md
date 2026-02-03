@@ -1,10 +1,11 @@
 ---
 source_file: UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.pdf
-conversion_date: 2026-02-03T09:27:17.266085
+conversion_date: 2026-02-03T18:58:17.840699
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Recommendation on the ethics of artificial intelligence
@@ -31,6 +32,10 @@ Further recognizing that  AI  technologies  have  the  potential  to  be  benefi
 
 Noting that addressing risks and ethical concerns should not hamper innovation and development but rather provide  new  opportunities  and  stimulate  ethically-conducted  research  and  innovation  that  anchor  AI technologies  in  human  rights  and  fundamental  freedoms,  values  and  principles,  and  moral  and  ethical reflection,
 
+
+<!-- PAGE 2 -->
+
+
 Also recalling that in November 2019, the General Conference of UNESCO, at its 40th session, adopted 40 C/Resolution  37,  by  which  it  mandated  the  Director-General  'to  prepare  an  international  standard-setting instrument on the ethics of artificial intelligence (AI) in the form of a recommendation', which is to be submitted to the General Conference at its 41st session in 2021,
 
 Recognizing that the development of AI technologies necessitates a commensurate increase in data, media and information literacy as well as access to independent, pluralistic, trusted sources of information, including as part of efforts to mitigate risks of misinformation, disinformation and hate speech, and harm caused through the misuse of personal data,
@@ -50,6 +55,10 @@ Emphasizing that specific attention must be paid to LMICs, including but not lim
 Also conscious of the many existing national policies, other frameworks and initiatives elaborated by relevant United Nations entities, intergovernmental organizations, including regional organizations, as well as those by the private sector, professional organizations, non-governmental organizations, and the scientific community, related to the ethics and regulation of AI technologies,
 
 Further convinced that AI technologies can bring important benefits, but that achieving them can also amplify tension around innovation, asymmetric access to knowledge and technologies, including the digital and civic literacy deficit that limits the public's ability to engage in topics related to AI, as well as barriers to access to information  and  gaps  in  capacity,  human  and  institutional  capacities,  barriers  to  access  to  technological
+
+
+<!-- PAGE 3 -->
+
 
 innovation, and a lack of adequate physical and digital infrastructure and regulatory frameworks, including those related to data, all of which need to be addressed,
 
@@ -75,6 +84,10 @@ Taking fully into account that the rapid development  of  AI  technologies  chal
 
 AI systems can be used in cyber-physical systems, including the Internet of things, robotic systems, social robotics, and human-computer interfaces, which involve control, perception, the processing
 
+
+<!-- PAGE 4 -->
+
+
 of data collected by sensors, and the operation of actuators in the environment in which AI systems work.
 
 - (b) Ethical questions regarding AI systems pertain to all stages of the AI system life cycle, understood here  to  range  from  research,  design  and  development  to  deployment  and  use,  including maintenance,  operation,  trade,  financing,  monitoring  and  evaluation,  validation,  end-of-use, disassembly and termination. In addition, AI actors can be defined as any actor involved in at least one stage of the AI system life cycle, and can refer both to natural and legal  persons, such as researchers, programmers, engineers, data scientists, end-users, business enterprises, universities and public and private entities, among others.
@@ -86,6 +99,10 @@ of data collected by sensors, and the operation of actuators in the environment 
 - (d) Communication  and  information,  as  AI  technologies  play  an  increasingly  important  role  in  the processing, structuring and provision of information; the issues of automated journalism and the algorithmic provision of news and moderation and curation of content on social media and search engines are just a few examples raising issues related to access to information, disinformation, misinformation, hate speech, the emergence of new forms of societal narratives, discrimination, freedom of expression, privacy and media and information literacy, among others.
 
 4. This Recommendation is addressed to Member States, both as AI actors and as authorities responsible for developing legal and regulatory frameworks throughout the entire AI system life cycle, and for promoting business  responsibility.  It  also  provides  ethical  guidance  to  all  AI  actors,  including  the  public  and  private sectors, by providing a basis for an ethical impact assessment of AI systems throughout their life cycle.
+
+
+<!-- PAGE 5 -->
+
 
 ## II. AIMS AND OBJECTIVES
 
@@ -111,6 +128,10 @@ of data collected by sensors, and the operation of actuators in the environment 
 11. While all the values and principles outlined below are desirable per se, in any practical contexts, there may be tensions between these values and principles. In any given situation, a contextual assessment will be necessary to manage potential tensions, taking into account the principle of proportionality and in compliance with  human  rights  and  fundamental  freedoms.  In  all  cases,  any  possible  limitations  on  human  rights  and fundamental  freedoms  must  have  a  lawful  basis,  and  be  reasonable,  necessary  and  proportionate,  and consistent with States' obligations under international law. To navigate such scenarios judiciously will typically require engagement with a broad range of appropriate stakeholders, making use of social dialogue, as well as ethical deliberation, due diligence and impact assessment.
 
 12. The trustworthiness and integrity of the life cycle of AI systems is essential to ensure that AI technologies will work for the good of humanity, individuals, societies and the environment and ecosystems, and embody
+
+
+<!-- PAGE 6 -->
+
 
 the values and principles set out in this Recommendation. People should have good reason to trust that AI systems can bring individual and shared benefits, while adequate measures are taken to mitigate risks. An essential requirement for trustworthiness is that, throughout their life cycle, AI systems are subject to thorough monitoring by the relevant stakeholders as appropriate. As  trustworthiness is an outcome  of  the operationalization of the principles in this document, the policy actions proposed in this Recommendation are all directed at promoting trustworthiness in all stages of the AI system life cycle.
 
@@ -138,6 +159,10 @@ the values and principles set out in this Recommendation. People should have goo
 
 20. The scope of lifestyle choices, beliefs, opinions, expressions or personal experiences, including the optional use of AI systems and the co-design of these architectures should not be restricted during any phase of the life cycle of AI systems.
 
+
+<!-- PAGE 7 -->
+
+
 21. Furthermore, efforts, including international cooperation, should be made to overcome, and never take advantage  of,  the  lack  of  necessary  technological  infrastructure,  education  and  skills,  as  well  as  legal frameworks, particularly in LMICs, LDCs, LLDCs and SIDS, affecting communities.
 
 ## Living in peaceful, just and interconnected societies
@@ -164,6 +189,10 @@ the values and principles set out in this Recommendation. People should have goo
 
 28. AI actors should promote social justice and safeguard fairness and non-discrimination of any kind in compliance  with  international  law.  This  implies  an  inclusive  approach  to  ensuring  that  the  benefits  of  AI technologies are available and accessible to all, taking into consideration the specific needs of different age groups,  cultural  systems,  different  language  groups,  persons  with  disabilities,  girls  and  women,  and disadvantaged, marginalized and vulnerable people or people in vulnerable situations. Member States should work to promote inclusive access for all, including local communities, to AI systems with locally relevant content
 
+
+<!-- PAGE 8 -->
+
+
 and services, and with respect for multilingualism and cultural diversity. Member States should work to tackle digital divides and ensure inclusive access to and participation in the development of AI. At the national level, Member States should promote equity between rural and urban areas, and among all persons regardless of race, colour, descent, gender, age, language, religion, political opinion, national origin, ethnic origin, social origin, economic or social condition of birth, or disability and any other grounds, in terms of access to and participation in the AI system life cycle. At the international level, the most technologically advanced countries have a responsibility of solidarity with the least advanced to ensure that the benefits of AI technologies are shared such that access to and participation in the AI system life cycle for the latter contributes to a fairer world order with regard to information, communication, culture, education, research and socio-economic and political stability.
 
 29. AI  actors  should  make  all  reasonable  efforts  to  minimize  and  avoid  reinforcing  or  perpetuating discriminatory or biased applications and outcomes throughout the life cycle of the AI system to ensure fairness of  such  systems.  Effective  remedy  should  be  available  against  discrimination  and  biased  algorithmic determination.
@@ -188,6 +217,10 @@ and services, and with respect for multilingualism and cultural diversity. Membe
 
 36. It may be the case that sometimes humans would choose to rely on AI systems for reasons of efficacy, but the decision to cede control in limited contexts remains that of humans, as humans can resort to AI systems
 
+
+<!-- PAGE 9 -->
+
+
 in  decision-making  and  acting,  but  an  AI  system  can  never  replace  ultimate  human  responsibility  and accountability. As a rule, life and death decisions should not be ceded to AI systems.
 
 ## Transparency and explainability
@@ -207,6 +240,10 @@ in  decision-making  and  acting,  but  an  AI  system  can  never  replace  ult
 42. AI  actors  and  Member  States  should  respect,  protect  and  promote  human  rights  and  fundamental freedoms,  and  should  also  promote  the  protection  of  the  environment  and  ecosystems,  assuming  their respective  ethical  and  legal  responsibility,  in  accordance  with  national  and  international  law,  in  particular Member  States'  human  rights  obligations,  and  ethical  guidance  throughout  the  life  cycle  of  AI  systems, including with respect to AI actors within their effective territory and control. The ethical responsibility and liability for the decisions and actions based in any way on an AI system should always ultimately be attributable to AI actors corresponding to their role in the life cycle of the AI system.
 
 43. Appropriate  oversight,  impact  assessment,  audit  and  due  diligence  mechanisms,  including  whistleblowers' protection, should be developed to ensure accountability for AI systems and their impact throughout their  life  cycle.  Both  technical  and  institutional  designs  should  ensure  auditability  and  traceability  of  (the
+
+
+<!-- PAGE 10 -->
+
 
 working of) AI systems in particular to address any conflicts with human rights norms and standards and threats to environmental and ecosystem well-being.
 
@@ -232,6 +269,10 @@ working of) AI systems in particular to address any conflicts with human rights 
 
 50. Member  States  should  introduce  frameworks  for  impact  assessments,  such  as  ethical  impact assessment, to identify and assess benefits, concerns and risks of AI systems, as well as appropriate risk prevention,  mitigation  and  monitoring  measures,  among  other  assurance  mechanisms.  Such  impact assessments should identify impacts on human rights and fundamental freedoms, in particular but not limited
 
+
+<!-- PAGE 11 -->
+
+
 to  the  rights  of  marginalized  and  vulnerable  people  or  people  in  vulnerable  situations,  labour  rights,  the environment and ecosystems and ethical and social implications, and facilitate citizen participation in line with the values and principles set forth in this Recommendation.
 
 51. Member States and private sector companies should develop due diligence and oversight mechanisms to identify, prevent, mitigate and account for how they address the impact of AI systems on the respect for human rights, rule of law and inclusive societies. Member States should also be able to assess the socioeconomic impact of AI systems on poverty and ensure that the gap between people living  in wealth and poverty, as well as the digital divide among and within countries, are not increased with the massive adoption of  AI  technologies at present and in the future. In order to do this, in particular, enforceable transparency protocols should be implemented, corresponding to the access to information, including information of public interest held by private entities. Member States, private sector companies and civil society should investigate the sociological and psychological effects of AI-based recommendations on humans in their decision-making autonomy. AI systems identified as potential risks to human rights should be broadly tested by AI actors, including in real-world conditions if needed, as part of the Ethical Impact Assessment, before releasing them in the market.
@@ -247,6 +288,10 @@ to  the  rights  of  marginalized  and  vulnerable  people  or  people  in  vuln
 55. Member States should ensure that harms caused through AI systems are investigated and redressed, by enacting strong enforcement mechanisms and remedial actions, to make certain that human rights and fundamental freedoms and the rule of law are respected in the digital world and in the physical world. Such mechanisms  and  actions  should  include  remediation  mechanisms  provided  by  private  and  public  sector companies. The auditability and traceability of AI systems should be promoted to this end. In addition, Member States should strengthen their institutional capacities to deliver on this commitment and should collaborate with researchers and other stakeholders to investigate, prevent and mitigate any potentially malicious uses of AI systems.
 
 56. Member States are encouraged to develop national and regional AI strategies and to consider forms of soft  governance  such  as  a  certification  mechanism  for  AI  systems  and  the  mutual  recognition  of  their certification, according to the sensitivity of the application domain and expected impact on human rights, the environment and ecosystems, and other ethical considerations set forth in this  Recommendation.  Such a mechanism might include different levels of audit of systems, data, and adherence to ethical guidelines and to procedural requirements in view of ethical aspects. At the same time, such a mechanism should not hinder innovation or disadvantage small and medium enterprises or start-ups, civil society as well as research and science organizations, as a result of  an excessive administrative burden. These mechanisms should also include a regular monitoring component to ensure system robustness and continued integrity and adherence to ethical guidelines over the entire life cycle of the AI system, requiring re-certification if necessary.
+
+
+<!-- PAGE 12 -->
+
 
 57. Member States and public authorities should carry out transparent  self-assessment  of  existing  and proposed AI systems, which, in particular, should include the assessment of whether the adoption of AI is appropriate and, if so, should include further assessment to determine what the appropriate method is, as well as assessment as to whether such adoption would result in violations or abuses of Member States' human rights law obligations, and if that is the case, prohibit its use.
 
@@ -266,6 +311,10 @@ to  the  rights  of  marginalized  and  vulnerable  people  or  people  in  vuln
 
 65. Member States should implement policies to ensure that the actions of AI actors are consistent with international human rights law, standards and principles throughout the life cycle of AI systems, while taking into full consideration the current cultural and social diversities, including local customs and religious traditions, with due regard to the precedence and universality of human rights.
 
+
+<!-- PAGE 13 -->
+
+
 66. Member States should put in place mechanisms to require AI actors to disclose and combat any kind of stereotyping in the outcomes of AI systems and data, whether by design or by negligence, and to ensure that training data sets for AI systems do not foster cultural, economic or social inequalities, prejudice, the spreading of  disinformation  and  misinformation,  and  disruption  of  freedom  of  expression  and  access  to  information. Particular attention should be given to regions where the data are scarce.
 
 67. Member States should implement policies to promote and increase diversity and inclusiveness that reflect their populations in AI development teams and training datasets, and to ensure equal access to AI technologies and their benefits, particularly for marginalized groups, both from rural and urban zones.
@@ -283,6 +332,10 @@ to  the  rights  of  marginalized  and  vulnerable  people  or  people  in  vuln
 72. Member States should put in place appropriate safeguards to protect the right to privacy in accordance with international law, including addressing concerns such as surveillance. Member States should, among others, adopt or enforce legislative frameworks that provide appropriate protection, compliant with international law. Member States should strongly encourage all AI actors, including business enterprises, to follow existing international standards and, in particular, to carry out adequate privacy impact assessments, as part of ethical impact  assessments,  which  take  into  account  the  wider  socio-economic  impact  of  the  intended  data processing,  and  to  apply  privacy  by  design  in  their  systems.  Privacy  should  be  respected,  protected  and promoted throughout the life cycle of AI systems.
 
 73. Member States should ensure that individuals retain rights over their personal data and are protected by a framework, which notably foresees: transparency; appropriate safeguards for the processing of sensitive data;  an  appropriate  level  of  data  protection;  effective  and  meaningful  accountability  schemes  and mechanisms; the full enjoyment of the data subjects' rights and the ability to access and erase their personal data in AI systems, except for certain circumstances in compliance with international law; an appropriate level of  protection  in  full  compliance  with  data  protection  legislation  where  data  are  being  used  for  commercial purposes such as enabling micro-targeted advertising, transferred cross-border; and an effective independent oversight as part of a data governance mechanism which keeps individuals in control of their personal data and fosters the benefits of a free flow of information internationally, including access to data.
+
+
+<!-- PAGE 14 -->
+
 
 74. Member States should establish their data policies or equivalent frameworks, or reinforce existing ones, to ensure full security for personal data and sensitive data, which, if disclosed, may cause exceptional damage, injury  or  hardship  to  individuals.  Examples  include  data  relating  to  offences,  criminal  proceedings  and convictions, and related security measures; biometric, genetic and health data; and -personal data such as that relating to race, colour, descent, gender, age, language, religion, political opinion, national origin, ethnic origin, social origin, economic or social condition of birth, or disability and any other characteristics.
 
@@ -310,6 +363,10 @@ to  the  rights  of  marginalized  and  vulnerable  people  or  people  in  vuln
 
 84. Member States and business enterprises should assess the direct and indirect environmental impact throughout the AI system life cycle, including, but not limited to, its carbon footprint, energy consumption and
 
+
+<!-- PAGE 15 -->
+
+
 the environmental impact of raw material extraction for supporting the manufacturing of AI technologies, and reduce  the  environmental  impact  of  AI  systems  and  data  infrastructures.  Member  States  should  ensure compliance of all AI actors with environmental law, policies and practices.
 
 85. Member States should introduce incentives, when needed and appropriate, to ensure the development and  adoption  of  rights-based  and  ethical  AI-powered  solutions  for  disaster  risk  resilience;  the  monitoring, protection and regeneration of the environment and ecosystems; and the preservation of the planet. These AI systems should involve the participation of local and indigenous communities throughout the life cycle of AI systems and should support circular economy type approaches and sustainable consumption and production patterns. Some examples include using AI systems, when needed and appropriate, to:
@@ -332,6 +389,10 @@ the environmental impact of raw material extraction for supporting the manufactu
 89. Member States should ensure that the potential of AI systems to advance the achievement of gender equality is realized. They should ensure that these technologies do not exacerbate the already wide gender gaps existing in several fields in the analogue world, and instead eliminate those gaps. These gaps include: the  gender  wage  gap;  the  unequal  representation  in  certain  professions  and  activities;  the  lack  of representation  at  top  management  positions,  boards  of  directors,  or  research  teams  in  the  AI  field;  the education gap; the digital and AI access, adoption, usage and affordability gap; and the unequal distribution of unpaid work and of the caring responsibilities in our societies.
 
 90. Member States should ensure that gender stereotyping and discriminatory biases are not translated into AI systems, and instead identify and proactively redress these. Efforts are necessary to avoid the compounding negative  effect  of  technological  divides  in  achieving  gender  equality  and  avoiding  violence  such  as harassment, bullying or trafficking of girls and women and under-represented groups, including in the online domain.
+
+
+<!-- PAGE 16 -->
+
 
 91. Member States should encourage female entrepreneurship, participation and engagement in all stages of an AI system life cycle by offering and promoting economic, regulatory incentives, among other incentives and  support  schemes,  as  well  as  policies  that  aim  at  a  balanced  gender  participation  in  AI  research  in academia, gender representation on digital and AI companies' top management positions, boards of directors and  research  teams.  Member  States  should  ensure  that  public  funds  (for  innovation,  research  and technologies) are channelled to inclusive programmes and companies, with clear gender representation, and that private funds are similarly encouraged through affirmative action principles. Policies on harassment-free environments should be developed and enforced, together with the encouragement of the transfer of best practices on how to promote diversity throughout the AI system life cycle.
 
@@ -359,6 +420,10 @@ the environmental impact of raw material extraction for supporting the manufactu
 
 101. Member States should work with international organizations, educational institutions and private and non-governmental entities to provide adequate AI literacy education to the public on all levels in all countries
 
+
+<!-- PAGE 17 -->
+
+
 in order to empower people and reduce the digital divides and digital access inequalities resulting from the wide adoption of AI systems.
 
 102. Member States should promote the acquisition of 'prerequisite skills' for AI education, such as basic literacy, numeracy, coding and digital skills, and media and information literacy, as well as critical and creative thinking, teamwork, communication, socio-emotional and AI ethics skills, especially in countries and in regions or areas within countries where there are notable gaps in the education of these skills.
@@ -379,6 +444,10 @@ in order to empower people and reduce the digital divides and digital access ine
 
 110. To ensure a critical evaluation of AI research and proper monitoring of potential misuses or adverse effects, Member States should ensure that any future developments with regards to AI technologies should be based on rigorous and independent scientific research, and promote interdisciplinary AI research by including disciplines other than science, technology, engineering and mathematics (STEM), such as cultural studies, education,  ethics,  international  relations, law,  linguistics,  philosophy,  political  science,  sociology  and psychology.
 
+
+<!-- PAGE 18 -->
+
+
 111. Recognizing that AI technologies present great opportunities to help advance scientific knowledge and practice,  especially  in  traditionally  model-driven  disciplines,  Member  States  should  encourage  scientific communities to be aware of the benefits, limits and risks of their use; this includes attempting to ensure that conclusions drawn from data-driven approaches, models and treatments are robust and sound. Furthermore, Member States should welcome and support the role of the scientific community in contributing to policy and in cultivating awareness of the strengths and weaknesses of AI technologies.
 
 ## POLICY AREA 9: COMMUNICATION AND INFORMATION
@@ -398,6 +467,10 @@ in order to empower people and reduce the digital divides and digital access ine
 117. Member States should support collaboration agreements among governments, academic institutions, vocational education and training institutions, industry, workers' organizations and civil society to bridge the gap of skillset requirements to align training programmes and strategies with the implications of the future of work and the needs of industry, including small and medium enterprises. Project-based teaching and learning approaches for AI should be promoted, allowing for partnerships between public institutions, private sector companies, universities and research centres.
 
 118. Member  States  should  work  with  private  sector  companies,  civil  society  organizations  and  other stakeholders, including workers and unions to ensure a fair transition for at-risk employees. This includes putting in place upskilling and reskilling programmes, finding effective mechanisms of retaining employees during those transition periods, and exploring 'safety net' programmes for those who cannot be retrained. Member States should develop and implement programmes to research and address the challenges identified that  could  include  upskilling  and  reskilling,  enhanced  social  protection,  proactive  industry  policies  and interventions, tax benefits, new taxation forms, among others. Member States should ensure that there is sufficient public funding to support these programmes. Relevant regulations, such as tax regimes, should be carefully examined and changed if needed to counteract the consequences of unemployment caused by AIbased automation.
+
+
+<!-- PAGE 19 -->
+
 
 119. Member States should encourage and support researchers to analyse the impact of AI systems on the local labour environment in order to anticipate future trends and challenges. These studies should have an interdisciplinary  approach  and  investigate  the  impact  of  AI  systems  on  economic,  social  and  geographic sectors,  as  well  as  on  human-robot  interactions  and  human-human  relationships,  in  order  to  advise  on reskilling and redeployment best practices.
 
@@ -422,6 +495,10 @@ in order to empower people and reduce the digital divides and digital access ine
 
 125. Member States should develop guidelines for human-robot interactions and their impact on humanhuman relationships, based on research and directed at the future development of robots, and with special attention to the mental and physical health of human beings. Particular attention should be given to the use of robots in health care and the care for older persons and persons with disabilities, in education, and robots for
 
+
+<!-- PAGE 20 -->
+
+
 use by children, toy robots, chatbots and companion robots for children and adults. Furthermore, assistance of AI technologies should be applied to increase the safety and ergonomic use of robots, including in a humanrobot working environment. Special attention should be paid to the possibility of using AI to manipulate and abuse human cognitive biases.
 
 126. Member States should ensure that human-robot interactions comply with the same values and principles that  apply  to  any  other  AI  systems,  including  human  rights  and  fundamental  freedoms,  the  promotion  of diversity, and the protection of vulnerable people or people in vulnerable situations. Ethical questions related to AI-powered systems for neurotechnologies and brain-computer interfaces should be considered in order to preserve human dignity and autonomy.
@@ -445,6 +522,10 @@ use by children, toy robots, chatbots and companion robots for children and adul
 - (e) collecting and disseminating progress, innovations, research reports, scientific publications, data and  statistics  regarding  policies  for  AI  ethics,  including  through  existing  initiatives,  to  support sharing  best practices  and  mutual  learning,  and  to advance  the  implementation  of  this Recommendation.
 
 132. Processes for monitoring and evaluation should ensure broad participation of all stakeholders, including, but not limited to, vulnerable people or people in vulnerable situations. Social, cultural and gender diversity should be ensured, with a view to improving learning processes and strengthening the connections between findings, decision-making, transparency and accountability for results.
+
+
+<!-- PAGE 21 -->
+
 
 133. In the interests of promoting best policies and practices related to ethics of AI, appropriate tools and indicators  should  be  developed  for  assessing  the  effectiveness  and  efficiency  thereof  against  agreed standards,  priorities  and  targets,  including  specific  targets  for  persons  belonging  to  disadvantaged, marginalized populations, and vulnerable people or people in vulnerable situations, as well as the impact of AI systems at individual and societal levels. The monitoring and assessment of the impact of AI systems and related AI ethics policies and practices should be carried out continuously in a systematic way proportionate to the relevant risks. This should be based on internationally agreed frameworks and involve evaluations of private and public institutions, providers and programmes, including self-evaluations, as well as tracer studies and the development of sets of indicators. Data collection and processing should be conducted in accordance with international law, national legislation on data protection and data privacy, and the values and principles outlined in this Recommendation.
 

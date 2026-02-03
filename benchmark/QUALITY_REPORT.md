@@ -77,7 +77,7 @@ Du darfst die Logik NICHT mit eigenem Judgment überschreiben!
 
 #### 2. Feministisch = 0%
 
-Kein einziges Paper wurde als "Feministisch" klassifiziert - problematisch für ein "FemPrompt"-Projekt.
+Kein einziges Paper wurde als "Feministisch" klassifiziert - problematisch für das Projekt.
 
 #### 3. KI_Sonstige überrepräsentiert (74%)
 

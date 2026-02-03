@@ -1,10 +1,11 @@
 ---
 source_file: Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.pdf
-conversion_date: 2026-02-03T09:32:25.014651
+conversion_date: 2026-02-03T19:03:16.241087
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review
@@ -47,6 +48,10 @@ Research on Social Work Practice 1 -16 © The Author(s) 2025 Article reuse guide
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 CW system -one tool, for instance, disproportionately /uniFB02 agged Black children for mandatory maltreatment investigations (Ho &amp; Burke, 2022; Leving, 2022). Saxena et al. (2020) found that some predictors in PRM training were selected for availability rather than validity, mirroring traditional risk assessment tools. This suggests that detailed reviews of algorithmic-assisted decision-making tools are needed for their effective deployment and to ensure they enhance decision-making fairly and reliably and actually addressing existing challenges, rather than introducing new risks for families and children (Drake et al., 2020; Glaberson, 2019). To enhance the ethical use of these tools in aiding caseworkers in making high-stakes decisions that impact families involved in the CW system, this study reviews articles reporting the use case of algorithmic-assisted decision-making tools in CW with an adapted implementation science framework.
 
 ## Algorithmic-Assisted Decision-Making Tools in Child Welfare
@@ -60,6 +65,10 @@ Two recent systematic reviews have discussed and compared research articles that
 Moving forward from looking at the model performance, several approaches were proposed to address ethics, equity, and bias. First, two models were proposed to evaluate these tools. First, Russell (2015) proposed a model of four key aspects of performance -validity, equity, reliability, and usefulness. Validity assesses whether the tool measures what it intends to; equity evaluates whether predictions function consistently across subgroups; reliability ensures consistency and stability; and usefulness re /uniFB02 ects its practical value in decisionmaking (Russell, 2015). Later, Drake et al. (2020) expanded Russell ' s framework to include an assessment of ethical considerations (e.g., community engagement and transparency) at each stage of algorithm development and deployment. On the other hand, accuracy, fairness, misuse, quality of data, and privacy concern were raised in other studies (Glaberson, 2019; Redden et al., 2020). In addition to these conceptual models, Hall et al. (2024) developed a scoring system to empirically evaluate how well studies addressed these ethical concerns. Using a 0 to 4 scale, the authors assessed whether studies acknowledged model limitations, involved cross-disciplinary research teams, and took explicit steps to address ethics, equity, and bias. Together, these approaches re /uniFB02 ect an evolving standard in the /uniFB01 eld to ensure algorithmic tools are not only technically sound but also ethically responsible and socially responsive. Nevertheless, there remains an opportunity to synthesize these insights into a more comprehensive and integrative framework that can better support ethical decision-making and enhance the practical utility of PRM tools in frontline practice. This systematic review is intended to /uniFB01 ll this gap.
 
 To advance this integrative approach, we used the Consolidated Framework for Implementation Research (CFIR), developed by Damschroder in 2009 and updated in 2022, which has been widely used in the /uniFB01 eld of implementation science (Damschroder et al., 2022). CFIR consists of /uniFB01 ve domains: (1) innovation: the ' thing ' being implemented, (2) outer setting: the setting in which the inner setting exists, (3) inner setting: the setting in which the innovation is implemented, (4) individuals: the roles and characteristics of individuals in the project, and (5) implementation process: the activities and strategies used to implement the innovation. This framework offers a useful lens for examining how ethical considerations are embedded in the real-world use of algorithmic-assisted decision-making tools. We selected three domains pertinent to PRM implementation:
+
+
+<!-- PAGE 3 -->
+
 
 intervention, inner setting, and implementation process. By aligning the ethical concerns raised in prior studies -such as validity, equity, transparency, and community engagement (Drake et al., 2020; Russell, 2015) -with these selected CFIR domains, we achieve a more holistic evaluation of PRM tools that not only considers their technical soundness but also the organizational context and procedural dynamics that shape their ethical implementation in practice.
 
@@ -89,6 +98,10 @@ The Preferred Reporting Items for Systematic Reviews and Meta-Analysis ([PRISMA]
 Publications eligible for inclusion in this review met the following criteria: (1) studies involving clients engaged with CWor child protective services, (2) studies that used existing service data (e.g., administrative data) to develop algorithmic tools, (3) studies reporting the development and deployment process of algorithmic tools predicting CW-related outcomes, and (4) studies reporting the supports and challenges encountered during the implementation of these algorithms, and (5) English-language articles. Studies were excluded if they (1) were published in languages other than English, (2) did not exclusively focus on clients involved in CW or child protective services, (3) collected primary data to develop the tools, or (4) did not report the development and deployment process. This review focused speci /uniFB01 cally on studies utilizing routinely collected service data (e.g., administrative data) rather than researcher-collected primary data, as a key purpose of implementing algorithmic-assisted decisionmaking tools is to reduce caseworker workload and address resource limitations within CW agencies.
 
 Additionally, gray literature -including government reports and conference papers -can provide critical evidence not found in commercial publications (Paez, 2017). Therefore, this review includes gray literature meeting the /uniFB01 rst four inclusion criteria but not published in peer-reviewed journals. Algorithmic-assisted decision-making tools were de /uniFB01 ned based on Banerjee &amp; Banerjee (2017), as tools that ' predict potential future outcomes and explain drivers of the observed phenomena ' (p. 7). The review also evaluated how studies addressed usefulness, equity, fairness, and ethics during development and implementation, using the framework proposed by Drake et al. (2020). Inclusion and exclusion criteria are detailed in Table 2.
+
+
+<!-- PAGE 4 -->
+
 
 ## Search Process
 
@@ -125,6 +138,10 @@ Guided by the Consolidated Framework for Implementation Research (CFIR), we exam
 
 Qualitative Studies. Jørgensen and Nissen (2022) and Saxena et al. (2021) clearly de /uniFB01 ned aims, applied suitable
 
+
+<!-- PAGE 5 -->
+
+
 Figure 1. PRISMA /uniFB02 ow chart.
 
 <!-- image -->
@@ -141,6 +158,10 @@ Fourth, con /uniFB01 rmability ensures that research /uniFB01 ndings directly re
 
 Quantitative Studies. The six quantitative generally demonstrated strong methodological rigor, clearly stating objectives, reviewing relevant literature, and describing samples adequately using the modi /uniFB01 ed Critical Review Form for Quantitative Studies (Law et al., 1998). While outcome measures appeared reliable, model validation
 
+
+<!-- PAGE 6 -->
+
+
 Table 4. Summary of Included Articles.
 
 | Authors (Year)/ Country/ Tool                                                | Study Purpose/study Design                                                                                              | Data Source/Time Frame/Unit of Analysis                                                       | Predicted Outcome                                                                            | Model Type/Performance/ Analysis                                                                                                                                                                                                                                                    |
@@ -152,6 +173,10 @@ Table 4. Summary of Included Articles.
 | Predict-Align-Prevent (2019) Predict-Align-Prevent (PAP), VA, USA.           | • Describe the development and implementation of the Predict-Align-Prevent model.                                       | • CPS accepted case locations and protective asset dataset. • 1000 by 1000 sq foot grid cells | Child maltreatment occurrence in each 1000 square foot grid cell.                            | • Poisson Generalized Linear Model (Poisson GLM), RF model, Spatial Durbin model, and meta-model. • Model validation: Leave One Group Out Cross Validation (LOGOCV) & Goodness of Fit Metrics (R 2 , Mean Absolute Error, Root Mean Square Error) • Train/test split for validation |
 | Purdy & Glass (2023) OR, USA                                                 | • Present and assess a post-processing fairness correction technique.                                                   | • State ' s data • 2011/08-2020/ 01 • A child ' s placement transition.                       | The probability of a reuni /uniFB01 cation that remains for 1 year.                          | • XGBoost algorithm (AUC/ ROC = 0.73) • 52% of the high-risk groups resulted in a failed reuni /uniFB01 cation, while 7% of the low-risk groups that failed.                                                                                                                        |
 | Putnam-Hornstein et al. (2022). Risk Strati /uniFB01 cation Model, CA, USA.  | • Report the development and implementation of a risk strati /uniFB01 cation model.                                     | • County ' s data (N = 341,428). • 2016/01/ 01-2017/12/31 • A child                           | Child ' s removal and foster care placement within 24 months of a referral.                  | • LASSO regression method. • AUC = 0.83 • Train/test split and 10-fold cross-validation, linking outcomes to child mortality and severe injury.                                                                                                                                     |
+
+
+<!-- PAGE 7 -->
+
 
 Table 4. (continued)
 
@@ -175,6 +200,10 @@ Jørgensen and Nissen (2022) examined a decision support system (DSS) in Copenha
 Saxena et al. (2021) proposed the Algorithmic DecisionMaking Adapted for the Public Sector (ADMAPS) framework applied to CW tools (e.g., the Child and Adolescent Needs and Strengths [CANS] and Anti Sex-Traf /uniFB01 cking algorithm [AST]), highlighting tensions between human discretion, bureaucratic systems, and algorithmic tools, affecting professional autonomy and decision quality. The study emphasized trust, training, and process alignment but lacked performance metrics and community perspectives.
 
 Shroff (2017) explored a data scientist ' s role in designing a CW algorithm for New York City ' s child services. It identi/uniFB01 ed three implementation success factors: ongoing stakeholder communication, organizational resources and constraints, and ethical judgment frameworks. However, the
+
+
+<!-- PAGE 8 -->
+
 
 Table 3. Revised CFIR Framework With Ethical Concern(s).
 
@@ -210,6 +239,10 @@ Putnam-Hornstein et al. (2022) detailed the development and deployment of a risk
 
 Design. The innovation examined in this study -algorithmicassisted decision-making tools -was assessed regarding their
 
+
+<!-- PAGE 9 -->
+
+
 design and packaging, including how they were assembled, bundled, and presented for end users. Figure 2 illustrates the deployment of these tools at different decision-making points within CW services. The Predict-Align-Prevent (2019) model, uniquely within this review, focuses on predicting maltreatment risks at a community level to inform prevention service allocation rather than individual outcomes. Three studies implemented algorithmic tools at the referral screening stage (Chouldechova et al., 2018; Jørgensen &amp; Nissen, 2022; Putnam-Hornstein et al., 2022). Additional studies employed these tools to predict future allegations (Shroff, 2017), substantiation decisions (Parker et al., 2022), placement-related outcomes (Moore et al., 2016; Saxena et al., 2021), and permanency outcomes (Purdy &amp; Glass, 2023). Collectively, these studies highlight the diverse applications of algorithmic tools across multiple decision points, emphasizing the expanding and evolving role of algorithmic-assisted decision-making within CW practice. Second, studies employed various strategies aimed at enhancing the usability of algorithmic tools for agency staff. Chouldechova et al. (2018) translated raw probability estimates of future removals into a simpli /uniFB01 ed 1-to-20 risk scale, making risk levels more accessible to interpret. Similarly, Jørgensen and Nissen (2022) developed a decision-support system incorporating a red-yellow-green visual scheme to indicate varying risk levels, intending to support the accountability of social workers ' assessments. Parker et al. (2022) integrated real-time quality assurance and coaching sessions designed to assist workers in effectively using the tool. Purdy and Glass (2023) concentrated on addressing algorithmic fairness behind the scenes, seeking to foster user trust. Shroff (2017) developed an automated visual dashboard to highlight highrisk cases and notify supervisors. Lastly, Putnam-Hornstein et al. (2022) implemented three tools based on their risk strati /uniFB01 cation model: noti /uniFB01 cations for supervisors monitoring highrisk cases, investigation overview reports to potentially ease caseworkers ' workloads, and racial equity reports to examine racial disproportionality -each providing information tailored to different user roles.
 
 Evidence-Base. Evidence-based assessment focused on whether the algorithmic tools demonstrated predictive validity and reliability -that is, whether they produced accurate, useful predictions based on available data and were transparent about their development and performance. Table 4 summarizes additional details such as sample size, unit of analysis, and model performance. Among the studies reviewed, Chouldechova et al. (2018), Predict-Align-Prevent (2019), and Putnam-Hornstein et al. (2022) offered the most comprehensive documentation, including model types and performance metrics such as AUC/ ROC values. Four other studies provided partial information by naming the algorithms used: Jørgensen and Nissen (2022) applied natural language processing and neural networks; Purdy and Glass (2023) used a binary classi /uniFB01 er, and Shroff (2017) implemented a random forest model. However, two studies -Moore et al. (2016), Parker et al. (2022) and Saxena et al. (2021) -referred generally to using predictive algorithms without specifying the model type or reporting performance metrics, which limited the ability to evaluate their predictive validity.
@@ -222,6 +255,10 @@ Third, validation methods varied across the studies. The most common approach wa
 
 Structural Characteristics. Structural characteristics, encompassing physical infrastructure, information technology, and organizational support, are key factors for the successful implementation of algorithmic-assisted decision-making tools. First, effective development and deployment bene /uniFB01 t signi /uniFB01 cantly from pre-existing integrated data infrastructures and comprehensive management systems that facilitate the use of big data (Chouldechova et al., 2018). In Denmark, the concurrent implementation of policies emphasizing public employee responses to child neglect and the digitization of systems for children and youth were the driving forces of the development of decision-support systems (Jørgensen &amp; Nissen, 2022). However, limited data
 
+
+<!-- PAGE 10 -->
+
+
 Figure 2. Child welfare decision points /uniFB02 ow chart.
 
 <!-- image -->
@@ -231,6 +268,10 @@ availability presents considerable challenges; Predict-AlignPrevent (2019) faced
 Communication. Communication refers to quality formal and informal information-sharing practices within and across Inner Setting boundaries. Five studies underscored the critical importance of stakeholder communication throughout the analytic process (Chouldechova et al., 2018; Purdy &amp; Glass, 2023; Putnam-Hornstein et al., 2022; Saxena et al., 2021; Shroff, 2017). Saxena et al. (2021) particularly highlighted that fostering social workers ' trust in these tools enhances agency and community acceptance, thereby reducing concerns about potential unethical or /uniFB02 awed decisionmaking. To effectively engage primary users, social workers should be involved from the early stages of tool development rather than merely being end-users. Providing social workers with clear, non-technical explanations and ongoing training signi /uniFB01 cantly improves their understanding and practical application of these tools (Saxena et al., 2021). Additionally, the expertise of social workers in child protection is invaluable for ensuring that algorithmic tools effectively address real-world investigative challenges (Jørgensen &amp; Nissen, 2022). Supervisors also have a vital oversight role; for instance, Putnam-Hornstein et al. (2022) demonstrated how daily risk strati /uniFB01 cation reports facilitated data-informed supervision in child maltreatment investigations. Finally, achieving stakeholder consensus is essential in multiple areas, including data selection (Putnam-Hornstein et al., 2022; Saxena et al., 2021), de /uniFB01 ning target populations (Putnam-Hornstein et al., 2022; Shroff, 2017), balancing fairness and accuracy (Purdy &amp; Glass, 2023), and selecting models prioritizing interpretability, transparency, and operational feasibility (Chouldechova et al., 2018; Purdy &amp; Glass, 2023).
 
 Available Resources. This aspect assesses whether resources are available to implement and deliver the algorithmic-assisted decision-making tools (e.g., funding, space, materials, and equipment). Available resources are critical to implementation; however, challenges also stem from the organizational and technical environment. The Uni /uniFB01 ed Theory of Acceptance and Use of Technology (UTAUT) suggests that available resources and institutional support and constraints impact technology adoption (Momani, 2020). Moore et al. (2016) pointed out that beyond algorithmic recommendations, placement decisions
+
+
+<!-- PAGE 11 -->
+
 
 largely depend on service capacity and resource availability. Similarly, although the CANS algorithm provided recommendations for allocating funds to foster parents and determining foster care levels based on children ' s mental health needs, these recommendations were rarely ful /uniFB01 lled due to an insuf /uniFB01 -cient number of quality foster homes within the system (Saxena et al., 2021).
 
@@ -245,6 +286,10 @@ Needs Assessment. Understanding users ' priorities, preferences, and needs is a 
 Context Assessment. Context assessment refers to identifying and appraising the barriers and facilitators to implementation and delivery of the algorithmic-assisted decision-making tools. First, the disconnect between how tools were used and existing administrative procedures created frustration among social workers, especially when organizational constraints hindered their ability to act on the tools ' recommendations. (Saxena et al., 2021). For instance, the CANS assessed children ' s mental health needs and allocated resources to foster parents; however, social workers lacked training to navigate the tension between limited resources and client needs, reducing the tool ' s practical value. Second, discrepancies in expectations between higher-level leadership and frontline decision-makers introduced ambiguity in problem de /uniFB01 nition and caseworker responsibilities. In Jørgensen and Nissen (2022), a municipality sought to enhance the ef /uniFB01 ciency and accountability of its child protection system by developing a digitalized decision-support system (DSS). However, /uniFB01 ndings from the pilot implementation revealed that the tool blurred the lines of responsibility between the DSS and social workers, complicating their respective roles. Understanding these contextual factors is essential for tailoring implementation strategies, promoting buy-in from stakeholders, and ensuring the tools are used effectively in real-world child welfare settings.
 
 Engagement. Engagement refers to whether the implementation process attracts and encourages participation in implementation. Beyond the primary tool users (e.g., staff, caseworkers, screeners, and supervisors in the CW service unit), involving stakeholders such as families, policymakers, agency leaders, specialists, data scientists, service providers, legal experts, and community representatives promote broader acceptance. In developing AFST, Chouldechova et al. (2018) integrated data from multiple departments, excluded biasprone variables after community consultation and built strong support through ongoing dialogue. Similarly, Shroff (2017), Purdy &amp; glass (2023) and Putnam-Hornstein et al. (2022) emphasized transparency of each decision via continuous communication with data scientists, agency leadership, domain experts, service providers, and involved families. On the other hand, Predict-Align-Prevent (2019) was the only study that predicted regional child maltreatment rates to guide service allocation. In this case, agency leadership and project
+
+
+<!-- PAGE 12 -->
+
 
 managers collaborated with community leaders, stakeholders, and local coalitions to align existing prevention efforts with the model ' s /uniFB01 ndings. However, three studies did not address stakeholder communication (Jørgensen &amp; Nissen, 2022; Moore et al., 2016; Parker et al., 2022).
 
@@ -264,6 +309,10 @@ Asynthesisofninestudieshighlightsthe diverse applications of algorithmic tools i
 
 Beyond model performance, it is essential to consider the broader organizational context and implementation factors at the agency level. Chor et al. (2022) emphasized that there is no one-size/uniFB01 ts-all predictive risk model; instead, tools should be tailored to integrate meaningfully into casework practice. Drawing on the CFIR framework from implementation science, this review highlights how organizational structures, available resources, and systemic constraints in /uniFB02 uence
 
+
+<!-- PAGE 13 -->
+
+
 the success of implementation efforts. Effective communication within agencies and ongoing training are also critical to improving transparency, clarifying the purpose and goals of the tools, and fostering user engagement. In addition, organizational constraints like limited resources capacity and the introduction of more administrative burden (Moore et al., 2016; Saxena et al., 2021) should be considered while developing the model, otherwise reducing its practical utility. These strategies can enhance algorithm literacy and support social workers in correctly interpreting the output of the model, thus making informed decisions.
 
 Challenges associated with algorithmic-assisted decisionmaking tools -particularly data-related concerns -emerged as persistent themes across the studies in this review. Common issues included historical bias embedded in administrative records (Chouldechova et al., 2018; Jørgensen &amp; Nissen, 2022), missing or incomplete data (Putnam-Hornstein et al., 2022; Shroff, 2017), and concerns about data privacy. As Gillingham (2021) noted, administrative datasets used to train algorithms often re /uniFB02 ect prior decisions and socially constructed categories, embedding human judgment and systemic bias into the tools themselves. While public agencies have long collected data to manage services and ensure accountability, this practice raises particular concerns in social services, where the client base largely consists of marginalized and vulnerable populations.
@@ -279,6 +328,10 @@ Although resources like the National Associaiton of Social Workers (NASW) Standa
 ## Limitations of the Current Review and Future Directions
 
 This systematic review has several limitations. First, the screening and data extraction processes were primarily conducted by one author and reviewed by another, introducing potential bias. Including additional reviewers in future studies would enhance reliability and rigor. Second, different levels of reporting of the implementation details in some studies limited comparisons and practical recommendations. As the literature grows, future research should conduct metaanalyses to evaluate the effectiveness of these algorithmic tools comprehensively. Third, this review focused on tools already implemented in practice, potentially excluding tools still in development or deployment phases and yet to have released further reports (e.g., Wandalowski &amp; Vaithianathan, 2023), thereby limiting our ability to capture emerging tools. Future research should build upon these /uniFB01 ndings while addressing key gaps identi /uniFB01 ed in this review. One critical gap is the limited application of theoretical frameworks in analyzing implementation. Only two qualitative studies explicitly utilized theory to interpret their data (Jørgensen &amp; Nissen, 2022; Saxena et al., 2021). Incorporating critical theories -
+
+
+<!-- PAGE 14 -->
+
 
 such as transformative, feminist, or postmodern perspectives (Creswell &amp; Poth, 2018) -can enhance understanding of power dynamics among stakeholders. For instance, Jørgensen and Nissen (2022) highlighted the tension between technological solutions and professional discretion, suggesting the need for nuanced tools that accommodate complex practice environments. Moving to the macro level, Redden et al. (2020) utilized the data assemblage as the analytical framework to unpack the political and economic driving forces of the three CW data systems in England. This approach provides a new avenue to investigate the epistemology, political economy, and social context in which CW predictive analytics are embedded (Redden et al., 2020). Additionally, more in-depth qualitative research is needed to examine how caseworkers navigate tensions -such as between child safety and family connectedness -to inform tools that better support decision-making in CW (Ahn et al., 2025).
 
@@ -318,6 +371,10 @@ Chor, K. H. B., Luo, Z., Dworsky, A., Raman, R., Courtney, M. E., &amp; Epstein,
 
 Chouldechova, A., Benavides-Prado, D., Fialko, O., &amp; Vaithianathan, R. (2018). A case study of algorithm-assisted decision making in child maltreatment hotline screening decisions. Proceedings of the 1st Conference on Fairness,
 
+
+<!-- PAGE 15 -->
+
+
 - Accountability and Transparency, in Proceedings of Machine Learning Research , 81 , 134 -148. https://proceedings.mlr. press/v81/chouldechova18a.html
 - Chung, G. (2021). Risk factors of subsequent allegations of child maltreatment . https://doi.org/10.17615/9ca6-g296
 - Covidence (n.d.) Covidence systematic review software, Veritas Health Innovation, Melbourne, Australia. Available at www. covidence.org.
@@ -347,6 +404,10 @@ Chouldechova, A., Benavides-Prado, D., Fialko, O., &amp; Vaithianathan, R. (2018
 - McNellan, C. R., Gibbs, D. J., Knobel, A. S., &amp; Putnam-Hornstein, E. (2022). The evidence base for risk assessment tools used in U.S. child protection investigations: A systematic scoping review. Child Abuse &amp; Neglect , 134 , 105887. https://doi.org/ 10.1016/j.chiabu.2022.105887
 - Momani, A. M. (2020). The uni /uniFB01 ed theory of acceptance and use of technology: A new approach in technology acceptance. International Journal of Sociotechnology and Knowledge Development , 12 (3), 79 -98. https://doi.org/10.4018/IJSKD. 2020070105
 - Moore, T. D., McDonald, T. P., &amp; Cronbaugh-Auld, K. (2016). Assessing risk of placement instability to aid foster care
+
+
+<!-- PAGE 16 -->
+
 
 - placement decision making. Journal of Public Child Welfare , 10 (2), 117 -131. https://doi.org/10.1080/15548732.2016. 1140697
 - National Association of Social Workers. (n.d.). Standards for Technology in Social Work Practice . https://www. socialworkers.org/Practice/NASW-Practice-StandardsGuidelines/Standards-for-Technology-in-Social-Work-Practice

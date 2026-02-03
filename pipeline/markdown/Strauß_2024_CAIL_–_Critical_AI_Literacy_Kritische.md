@@ -1,10 +1,11 @@
 ---
 source_file: Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische.pdf
-conversion_date: 2026-02-03T09:26:02.560994
+conversion_date: 2026-02-03T18:57:07.147657
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 OSTERREICHISCHE AKADEMIEDER WISSENSCHAFTEN
@@ -19,6 +20,10 @@ KRITISCHE TECHNIKKOMPETENZ FÜR KONSTRUKTIVEN UMGANG MIT KI-BASIERTER TECHNOLOGI
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## CAIL - CRITICAL AI LITERACY
 
 KRITISCHE TECHNIKKOMPETENZ FÜR KONSTRUKTIVEN UMGANG MIT KI-BASIERTER TECHNOLOGIE IN BETRIEBEN
@@ -28,6 +33,10 @@ Institut für Technikfolgen-Abschätzung der Österreichischen Akademie der Wiss
 Gefördert im Rahmen des Digitalisierungsfonds der Arbeiterkammer Wien, Projekt-Nr. 5-349 (Unter Mitarbeit von Titus Udrea)
 
 Wien, November 2024
+
+
+<!-- PAGE 3 -->
+
 
 ## Danksagung
 
@@ -54,6 +63,10 @@ ISSN-online: 1818-6556
 epub.oeaw.ac.at/ita/ita-projektberichte/ITA-2024-07.pdf
 
 Dieser Bericht unterliegt der Creative Commons Attribution 4.0 International License: creativecommons.org/licenses/by/4.0/
+
+
+<!-- PAGE 4 -->
+
 
 ## INHALT
 
@@ -113,6 +126,10 @@ LITERATUR
 
 75
 
+
+<!-- PAGE 5 -->
+
+
 21
 
 21
@@ -134,6 +151,10 @@ LITERATUR
 | Abbildung 5: Entscheidungshilfe bei der KI-Einführung          | 67 |
 | TABELLENVERZEICHNIS                                            |    |
 | Tabelle 1: Gründe gegen KI-Nutzung                             | 17 |
+
+
+<!-- PAGE 6 -->
+
 
 ## ZUSAMMENFASSUNG
 
@@ -160,6 +181,10 @@ KI bedeutet vor allem: neue Formen der Automatisierung
 
 Übersicht
 
+
+<!-- PAGE 7 -->
+
+
 ein und zeigt auf, warum (Deep) Automation Bias ein Meta-Risiko des KI-Einsatzes darstellt. In Abschnitt 5 werden zentrale Herausforderungen und Problemfelder identifiziert und diskutiert. Abschnitt 6 geht auf den wesentlichen Aspekt der Handlungsfähigkeit ein, erläutert die Bedeutung von CAIL und zeigt anhand des entwickelten CAIL-Frameworks, wie kritische KI-Kompetenz in Betrieben vermittelt werden kann. Zur Orientierung bei der Planung und Gestaltung des KI-Einsatzes wurden zudem Handlungsempfehlungen für Unternehmen ausgearbeitet (Abschnitt 6.2). In Abschnitt 7 werden wesentliche Ergebnisse kurz zusammenfassend dargestellt.
 
 Die Ergebnisse verdeutlichen eine zentrale Voraussetzung für die konstruktive Nutzung KI-basierter Technologien: Wissen über die Funktionsweisen und Grenzen in konkreten Anwendungskontexten. KI-basierte Automatisierung ist komplexer, dynamischer und volatiler als klassische Automatisierungsformen (Abschnitt 4). Dadurch entstehen neue Herausforderungen und Bedarf nach Strategien zu deren Bewältigung. Entgegen gängiger Narrative führt KI-Einsatz nicht automatisch zu Produktivitäts- und Effizienzgewinnen. Ein Mehrwert ist nur dann realisierbar, wenn die Technologie in Einklang mit Arbeitspraktiken und Arbeitsorganisation in betriebliche Abläufe integrierbar ist. Das setzt auch Klarheit über Anwendungszweck und Ziele des KI-Einsatzes voraus - es braucht daher neben Transparenz der Funktionsweise von KI-Systemen auch eine Nutzungs-Transparenz.
@@ -173,6 +198,10 @@ KI-basierte Automatisierung ist komplexer, dynamischer und volatiler
 KI bringt mehr Arbeitsaufwand für Datenpflege und Qualitätsmanagement
 
 Kluft zwischen KI als Expertensystem und beiläufiger Nutzung
+
+
+<!-- PAGE 8 -->
+
 
 Effizienz der Arbeitsabläufe und damit auch negativ auf die Akzeptanz und Akzeptabilität im Unternehmen auswirken.
 
@@ -188,11 +217,19 @@ KI kann kein neues Wissen generieren, aber bei seiner Entwicklung stimulieren
 
 Kritische KI-Kompetenz wird zum Bestandteil von Wissensarbeit
 
+
+<!-- PAGE 9 -->
+
+
 Bedarf an Wissen verknüpft, um im Sinne einer Critical AI Literacy zu einem breiteren Grundverständnis über Funktionsweise, Eignung und Relevanz KI-basierter Technologien in bestimmten Anwendungskontexten zu gelangen. Das hierzu erarbeitete CAIL-Framework (Abschnitt 6) bietet ein niedrigschwelliges Instrument zur Vermittlung von Basiswissen, das bei der Beurteilung des praktischen Nutzens und der Grenzen von KI-Anwendungen und KI-generierten Ergebnissen unterstützen kann. Die daran anknüpfenden Handlungsempfehlungen können als Unterstützungshilfe für Unternehmen und Betriebsräte dienen, um gemeinsam mit der Belegschaft zu einer konstruktiven, sozialverträglichen Gestaltung und Nutzung KI-basierter Technologien zu gelangen.
 
 Die Transformation der Wissensarbeit durch KI ist in vielerlei Hinsicht noch am Anfang und mit vielen offenen Fragen verbunden. Das derzeitige Entwicklungsstadium lässt sich als Teil eines größeren, institutionellen und gesellschaftlichen Lernprozesses darüber begreifen, ob und wie KI-basierte Technologien konstruktiv und praktikabel einsetzbar sind. Dabei muss zunächst auch in Unternehmen erst geklärt werden, was Technologieeinsatz leisten kann, ob das in der Arbeitspraxis zielführend ist, und welche Folgen sich daraus für die jeweiligen Arbeitsbereiche ergeben. In vielen Unternehmen hat gerade erst eine Art Lern- und Experimentierphase mit KI begonnen, die idealerweise dazu beiträgt, über die Organisation  von  Arbeit,  die  Bedeutung  sozialverträglicher  Arbeitsbedingungen und Mitarbeiterzufriedenheit neu zu reflektieren. Wenn es gelingt, in den nächsten Jahren zu einem tieferen Grundverständnis von KI-basierten Technologien und der Etablierung einer kritischen Kompetenz im Umgang damit zu gelangen, ist ein wesentliches Lernziel für die konstruktive Nutzung dieser Technologien erreicht.
 
 Gesellschaftlicher Lernprozess über die konstruktive KI-Nutzung
+
+
+<!-- PAGE 10 -->
+
 
 ## EXECUTIVE SUMMARY
 
@@ -215,6 +252,10 @@ AI implies new forms of automation
 
 Overview
 
+
+<!-- PAGE 11 -->
+
+
 The results highlight a central prerequisite for the constructive use of AIbased technologies: Knowledge about the modes of operation and limitations in specific application contexts of AI. AI-based automation is more complex, more dynamic and more volatile than traditional forms of automation. This creates new challenges and demand for coping strategies. Contrary to common narratives,  the use of AI does not automatically lead to more productivity and efficiency gains. Added value can only emerge if the technology is integrated into operational processes in line with working practices and the organization of work. This also requires clarity about the purpose and objectives of the use of AI. Hence, not only transparency about how AI systems work is required but also transparency of utilization.
 
 A critical factor of AI usage relates to the process quality and measures to ensure it. AI can produce results quickly, but it cannot provide accuracy or reliability without additional measures. Interpretation and verification thus remain crucial human tasks that becomes even more important. The same applies to data management activities (data preparation, data maintenance, cleansing) as well as quality assurance, failure detection and correction. Thus, also new tasks arise, which implies increasing work load - especially for quality management of AI systems. A process view on the integration of AI in workflows is therefore crucial in order to achieve a proper implementation that effectively relieves workload and does not lead to overload in other working domains.
@@ -229,6 +270,10 @@ AI entails more workload for data maintenance &amp; quality management
 
 Gap between AI as expert system and 'en passant' usage creeping AI integration is an underestimated problem
 
+
+<!-- PAGE 12 -->
+
+
 processes on AI systems as part of the internal critical infrastructure can increase the company's vulnerability. Therefore, considering open source variants for AI applications also play an important role in the operational decision to introduce AI to avoid some of the outlined problems with standard software.
 
 The extent, to which AI usage can create to added value depends largely on usage patterns how applications are integrated into specific activities. Apart from high expectations and high levels of automation, the specific extent of automation of certain activities in the operational work context can be shaped. A fundamentally high degree of AI automation does not yet imply any practical benefit. In other words, a distinction needs to be made between what an AI application can achieve for certain work steps and the extent to which this can be meaningfully integrated  into  existing  workflows  in  operational  work  practice.  In  contrast  to common assumptions, AI is less suitable for complex tasks than for simpler routine activities. The form of knowledge work and the specific activities involved are essential here. As elaborated in section 3, knowledge work usually involves a combination of 'manual' routine activities and complex tasks. The latter cannot be easily automated with AI as they have no formalizable procedures. Moreover, both types cannot be completely distinguished from each other in practice. A prerequisite for a constructive use of AI in knowledge work is that the technology eases from monotonous routine tasks and enables more resources for complex, varying tasks. Provided the results are reliable, AI applications can complement knowledge work and knowledge production in many ways. However, not by generating new knowledge, but only by combining and processing existing information.  Understanding,  interpreting  and  contextualizing  AI-generated  information, i.e. embedding it into specific application contexts, therefore becomes part of the range of tasks involved in knowledge work. In other words, in addition to 'classic' problem-solving skills, knowledge work now also requires the ability to recognize whether and how the use of AI can support an activity or not. This highlights the increasing demand to establish a critical AI Literacy, i.e. knowledge required to understand the functionality, practicability and relevance of AI-based technologies in specific application contexts. The CAIL framework (Section 6) offers a low-threshold instrument for imparting basic knowledge that can support assessing the practical benefits and limitations of AI applications and AI-generated results. The related recommendations aim to support companies and works councils in achieving a constructive, socially acceptable implementation and use of AI-based technologies.
@@ -241,6 +286,10 @@ AI cannot produce new knowledge but stimulate its emergence
 
 Critical AI Literacy becomes part of knowledge work
 
+
+<!-- PAGE 13 -->
+
+
 ## 1 EINLEITUNG
 
 Künstliche Intelligenz (KI) ist in den letzten Jahren zur zentralen Triebfeder der Digitalisierung und des damit verbundenen gesellschaftlichen Wandels geworden. Der anhaltende Hype wurde zuletzt noch weiter verstärkt durch generative KI-Anwendungen  und  intensive  mediale  Berichterstattung  über  mittlerweile auch  in  der  breiten  Öffentlichkeit  bekannte  generative  KI-Tools  mit  ChatbotFunktionalität,  die  auf  Basis  großer  Sprachmodelle  (Large  Language  Models  LLMs) vereinfachte Interaktionsformen zwischen Menschen und Maschinen in natürlicher Sprache ermöglichen. Dieser Hype verstellt jedoch etwas den Blick darauf, dass nicht alles neu ist, was nun KI genannt wird (siehe dazu auch Abschnitt 2). Die Auswirkungen KI-basierter Technologien auf Wirtschaft und Arbeitswelt sind seit längerem Gegenstand einer breiten gesellschaftlichen Debatte in einer fortwährenden Entwicklung. Eine wachsende Zahl an Unternehmen setzt diese Technologien bereits in unterschiedlicher Form ein. Daher sind viele Arbeitnehmer:innen in ihrem betrieblichen Alltag mittelfristig mit deutlichen Veränderungen konfrontiert. Die betroffenen Bereiche sind sehr unterschiedlich und umfassen zusehends auch immer mehr Berufssparten, die bislang kaum von diesem technologischen Wandel berührt waren. Etwa im Bildungsbereich, Mediensektor, Gesundheits-  und  Sozialwesen,  oder  auch  im  Administrationsbereich  unterschiedlicher Arbeitsfelder. Neben bereichsspezifischen Unterschieden wird immer deutlicher sichtbar, dass KI-Einsatz die Wissensarbeit, also nicht-körperliche, geistige  und  soziale  Tätigkeiten  verändert.  Wissensarbeit  gilt  als  wesentlicher Faktor für Innovation in modernen, technisierten Gesellschaften und hat eine stabilisierende Wirkung für betriebliches Management (Drucker 2001). In welcher Ausprägung sich diese Veränderungen auf Arbeitspraktiken und Arbeitsorganisation tatsächlich auswirken, ist dabei weitgehend offen und bedarf daher genauerer Betrachtung.
@@ -250,6 +299,10 @@ Das besondere Novum KI-basierter Technologien sind nicht nur ihre mittlerweile b
 Es ist nicht alles neu im KI-Hype, aber die Auswirkungen werden breiter
 
 KI bringt neue Automatisierungsformen in der Wissensarbeit
+
+
+<!-- PAGE 14 -->
+
 
 Das im Rahmen des Digitalisierungsfonds der Arbeiterkammer Wien geförderte, rund 1,5 Jahre laufende Forschungsprojekt CAIL 2  hat daher untersucht, wie sich Arbeitspraktiken der Wissensarbeit durch den Einsatz KI-basierter Technologien und ihren neuen Automatisierungsformen verändern und welche Herausforderungen damit verbunden sind. Darauf aufbauend wurden Ansätze zur Stärkung einer Critical AI Literacy (CAIL) - also einer kritischen Kompetenz im Umgang  mit  KI  -  ausgearbeitet.  Ausgangspunkt  der  Untersuchung  waren  drei Hauptthesen: 1) Mit dem Einsatz KI-basierter Technologien entstehen neue Automatisierungsformen, die sich zusehends auf Tätigkeiten der Wissensarbeit auswirken, die bislang Menschen vorbehalten waren. 2) Eine Folge dieser Automatisierung ist auch die Zunahme entsprechender Risiken, insbesondere von (Deep) Automation Bias. 3) Zur Bewältigung der damit verbundenen Herausforderungen ist die Etablierung neuer Kompetenzen im Umgang mit KI-basierten Technologien erforderlich.
 
@@ -271,6 +324,10 @@ In Abschnitt 1 wird nach dieser Einleitung kurz auf wesentliche Erwartungen, Nar
 Drei Hauptthesen der Untersuchung
 
 Inhaltlicher Überblick
+
+
+<!-- PAGE 15 -->
+
 
 Kompetenz in Betrieben vermittelt werden kann. Zur Orientierung bei der Planung und Gestaltung des KI-Einsatzes wurden zudem Handlungsempfehlungen für Unternehmen ausgearbeitet (Abschnitt 6.2). In Abschnitt 7 werden wesentliche Ergebnisse zusammenfassend dargestellt.
 
@@ -308,6 +365,10 @@ Zu den Gefahren zählen u. a.:
 
 KI-Einsatz ist mit vielen Erwartungen und Ängsten verknüpft
 
+
+<!-- PAGE 16 -->
+
+
 Unabhängig davon, wie realistisch diese Potenziale und Gefahren sind, zeigt sich eine tendenzielle Polarisierung beim Thema KI. Das betrifft nicht nur den öffentlichen Diskurs, sondern spiegelt sich teils auch auf der betrieblichen Ebene wider, wie auch aus Interviews hervor geht: Arbeitgeber tendieren eher dazu, den erweckten Erwartungen über die Potenziale der Technologien wie Kosteneinsparungen,  Leistungssteigerungen  und  Produktivitätsgewinne  etc.  zu  glauben.  Arbeitnehmer:innen sind dagegen tendenziell besorgter über die negativen Auswirkungen (Interviews a-d, g-i). Dieses Bild bestätigt sich auch in Studien (siehe Abschnitt 1.2). Die Gründe sind vielschichtig: Abseits der hohen öffentlichen Aufmerksamkeit und Erwartungserhaltung besteht wirtschaftlicher Druck zur Digitalisierung. Zugleich herrscht Unwissen und Unsicherheit bezüglich der konkreten Ziele des Technologieeinsatzes und zu wenig Einbindung der Belegschaft bei der Planung und Einführung von KI-Anwendungen.
 
 Polarisierung und unterschiedliche Sichtweisen
@@ -319,6 +380,10 @@ Viele ethische Grundprinzipien aber teils mangelnde Praxistauglichkeit
 ## 1.2 ERWARTETE EFFEKTE UND NUTZUNGSVERHALTEN
 
 Produktivitätssteigerungen, Automatisierung, Optimierung von Prozessen, Effizienz-,  Qualitäts-  und  Flexibilitätsgewinne,  Kostensenkungen  und  Vorteile  bei Komplexitäts- und Wissensmanagement zählen zu den häufigsten Motiven für die Nutzung von KI in Unternehmen (Prem/Ruland 2019; Lane et al. 2023). Einer aktuellen OECD-Untersuchung zufolge ist die Hauptmotivation von Unternehmen für KI-Einsatz primär, Effizienz zu steigern und Personalkosten zu reduzieren. Das beruht auf der Grunderwartung, dass KI-Einsatz sowohl Produktivität als auch Arbeitsbedingungen verbessern kann (Lane et al. 2023). Beschäftigte im Finanz- und Produktionssektor, die bereits mit KI arbeiten, bestätigen positive Effekte für die Effizienz. Rund 30 % der Befragten gaben deutliche Leistungssteigerungen in diesen Bereichen an. Wesentlich differenzierter fällt das Bild bezüglich Auswirkungen auf Arbeitszufriedenheit, Gesundheit und Fairness aus: Hier werden deutlich weniger positive Effekte wahrgenommen und auffallend höhere Werte hinsichtlich Verschlechterungen für Beschäftigte. Die Untersuchung geht nicht näher auf spezifische Anwendungen und Tätigkeiten der KI-Automatisierung ein. Aus der Studie geht auch hervor, dass die Technologie-Einführung mit Sorgen und Unsicherheiten verbunden ist. Die Mehrheit der Beschäftigten gab
+
+
+<!-- PAGE 17 -->
+
 
 etwa an, erhöhten Leistungsdruck durch KI-bedingte Datenerfassungen zu verspüren, äußerten Sorgen vor überbordenden Datensammlungen, Eingriffen in die Privatsphäre, Benachteiligung und Diskriminierung. Die Ergebnisse zeigen auch Anzeichen für Unterschiede in der Einschätzung bezüglich des Bildungsstands: Arbeitnehmer:innen mit geringerem Bildungsniveau nehmen die Effekte von KI auf Leistungssteigerung und Arbeitsbedingungen tendenziell negativer wahr als jene mit höherem Bildungsniveau (Universitätsabschluss). Das kann verschiedene Gründe haben, etwa generelle Unterschiede in den Arbeitsbereichen je nach Qualifikation (ebd.). Es verdeutlicht aber auch, dass Bildung und Expertise eine wesentliche Rolle haben, ob und wie konstruktiver Einsatz von KI-basierten Technologien möglich ist.
 
@@ -333,6 +398,10 @@ Im Vergleich zum Vorjahr erscheint der Anstieg groß. Allerdings relativiert sic
 Hauptmotive: Mehr Produktivität, aber kaum positive Effekte für Arbeitsverbesserung
 
 Steigende Nutzungszahlen …
+
+
+<!-- PAGE 18 -->
+
 
 ## 1.2.2 GRÜNDE GEGEN DIE NUTZUNG
 
@@ -359,6 +428,10 @@ Wie aus diesen Untersuchungen hervor geht, gibt es hohe Erwartungen an den Techn
 
 … aber auch wachsende Bedenken
 
+
+<!-- PAGE 19 -->
+
+
 ## 2 GRUNDLAGEN UND FUNKTIONSWEISE
 
 ## 2.1 ZUM BEGRIFF KI
@@ -381,6 +454,10 @@ Klassische KI-Entwicklung war deterministisch geprägt
 
 Zeitgemäße Definitionen von KI
 
+
+<!-- PAGE 20 -->
+
+
 der EU 8  knüpft hier an, erwähnt jedoch auch explizit Autonomie und Beeinflussung:  'ein  maschinengestütztes  System,  das  für  einen  in  unterschiedlichem Grade autonomen Betrieb ausgelegt ist und das nach seiner Betriebsaufnahme anpassungsfähig sein kann und das aus den erhaltenen Eingaben für explizite oder implizite Ziele ableitet, wie Ausgaben wie etwa Vorhersagen, Inhalte, Empfehlungen oder Entscheidungen erstellt werden, die physische oder virtuelle Umgebungen beeinflussen können' (Art 3 Z 1 EU-KI-VO).
 
 Bevor die Funktionsweise von KI in Abschnitt 2.3 genauer erläutert wird, bietet der nächste Abschnitt einen kurzen Überblick darüber, wie die gesellschaftliche Bedeutung von KI eingeordnet werden kann.
@@ -397,6 +474,10 @@ Dass der Einsatz von KI-Systemen auf längere Sicht erhebliches Transformationsp
 
 KI ist kein neues Phänomen, sondern Teil des digitalen Wandels der Gesellschaft
 
+
+<!-- PAGE 21 -->
+
+
 Ähnliches trifft auf die gesellschaftliche Auseinandersetzung mit KI-basierten Technologien als soziotechnisches Phänomen zu. Die Frage der Formalisierbarkeit gilt umso mehr auch für KI, allerdings mit anderen Automatisierungsgraden (Strauß 2018). Der Begriff KI an sich ist widersprüchlich und suggeriert, es gäbe so etwas wie intelligente Computersysteme, die über vergleichbare oder sogar höhere Intelligenz verfügen könnten wie Menschen. Eine Diskussion über die Realisierbarkeit  dieser  alten  und  immer  noch  weitgehend  ungeklärten  Frage  nach dem  Wesen  von  Intelligenz  würde  den  Rahmen  dieser  Studie  weit  sprengen. Dennoch sei angemerkt, dass die Mystifizierung des Begriffs KI einen seriösen Umgang mit den Auswirkungen KI-basierter Technologien erschweren, die letztlich neue Formen der Automatisierung in allen möglichen Gesellschaftsbereichen und Arbeitsformen implizieren. Im Sinne der Genese der angeführten technologischen Entwicklungen kommt mit KI eine weitere Ebene der Automatisierung hinzu  (siehe  Abschnitt  4).  Das  kann  ein  Teilschritt  in  einem  Arbeitsprozess ebenso  sein,  wie  ein  automatisiertes  System  zur  Entscheidungsunterstützung. Neuartig sind sowohl die Automatisierungsgrade, als auch die davon betroffenen Arbeitsformen. Wie eingangs erwähnt, hat der Einsatz KI-basierter Technologien zusehends Folgen für die Wissensarbeit (siehe Abschnitt 3), hier breit verstanden als Tätigkeiten, die nicht primär körperliche, sondern kognitive, geistige Anstrengungen erfordern. Die Effekte von KI-Systemen auf Arbeitsprozesse hängen wesentlich von ihrer Funktionsweise ab, die im nächsten Abschnitt erläutert wird.
 
 ## 2.3 FUNKTIONSWEISE VON KI
@@ -408,6 +489,10 @@ Neue Fragen zur Formalisierbarkeit von Arbeitspraktiken durch KI-Einsatz
 Die Mystifizierung von KI erschwert einen seriösen Umgang mit der Technologie
 
 Generative KI ist nur eines unter vielen Anwendungsfeldern
+
+
+<!-- PAGE 22 -->
+
 
 dass  es  viele  verschiedene  generative  KI-Anwendungen  gibt. 10   Zudem  ist  das trotz hoher Bekanntheit auch nur eine unter vielen unterschiedlichen Anwendungen (siehe genauer dazu Abschnitt 3).
 
@@ -431,6 +516,10 @@ Zur Veranschaulichung zeigt Abbildung 2 den relativ einfachen Ablauf einer KIAnw
 
 10 Z. B. Mistral, Claude, Perplexity, Huggingface, Gemini, Stable Diffusion oder auch diverse Bildgeneratoren wie Craiyon, Midjourney, Firefly und noch viele mehr.
 
+
+<!-- PAGE 23 -->
+
+
 komplexen ML-Variante basiert (siehe genauer Abschnitt 2.3.1), wobei künstliche neuronale Netzwerke zum Einsatz kommen. Dieses Verfahren zerlegt die InputDaten (hier Katzenbilder) in verschiedene Abstraktionsebenen (am Bild die 'hidden layers'), um daraus schrittweise Muster abzuleiten, die dann im Ergebnis eine  qualitativ  verwertbare  Aufbereitung  der  Daten  ermöglichen.  Am  Beispiel 'lernt' der DL-Algorithmus, verschiedene Katzenrassen voneinander zu unterscheiden.
 
 ## 2.3.1 ÜBERBLICK ZU MACHINE LEARNING VERFAHREN
@@ -447,6 +536,10 @@ Machine Learning Algorithmen sind mathematischstatistische Verfahren
 
 Wichtige Unterschiede, Stärken und Schwächen gängiger ML-Verfahren
 
+
+<!-- PAGE 24 -->
+
+
 biologischen Konzept von Neuronen und imitiert deren Struktur (LeCun et al. 2015; Goodfellow et al. 2016). DL-Verfahren sind eine Variante des unüberwachten Lernens, die u. a. weitgehend selbstständig Merkmale aus Rohdaten ableiten können (wie z. B. oben veranschaulicht, um aus unstrukturierten Katzenbildern, Katzen nach Merkmalen zu sortieren). DL basiert auf modularen Strukturen, die ein hohes Maß an Flexibilität bieten und Vorteile bei der Verarbeitung großer unstrukturierter Datensätze bringen. Dementsprechend dynamisch ist auch das Verhalten von DL-basierten KI-Systemen. DL wird u. a. für Vorhersagen und Klassifikationen eingesetzt. Beispielsweise in der Bild- oder Spracherkennung oder auch für komplexe Vorhersagen wie künftig voraussichtlich auch in der Meteorologie 11  (LeCun 2015; Goodfellow et al. 2016). DL braucht aber sehr große Datenmengen, viel Rechenleistung und hat Nachteile wie hohe Abhängigkeit zu Datenqualität, mangelnde Interpretierbarkeit und hohe Intransparenz, weil DL-Algorithmen aufgrund ihrer Dynamik auch ihre Funktionsweise auf nicht nachvollziehbare Weise verändern können (Goertzel 2015; Strauß 2018/2021a).
 
 Eine weitere gängige ML-Varainte ist das Reinforcement learning (RL). RL bedeutet verstärkendes oder bestärkendes Lernen und ist eine Art semi-überwachter Ansatz. Mit Bestärkung ist gemeint, dass der Algorithmus aus Zustandsbeobachtungen und aus Feedback lernt. D. h., es fließen Daten aus der Umgebung und aus Interaktionsmustern des KI-Systems in den Datenaufbereitungsprozess über Feedbackschleifen ein. Den Rahmen bildet zunächst eine simulierte Umgebung. Diese besteht zwar aus festgelegten Regeln bzw. Parametern, die definieren, welche Aktionen mehr oder weniger vorteilhaft sind, um z. B. ein konkretes Ziel (z. B. Bearbeitung einer Anfrage) zu erreichen. Die Aktionen werden aber vom SoftwareAgenten selbst gesetzt und folgen keinem eindeutigen Schema. Sondern das KISystem 'tastet' sich quasi vor, um aus dem Feedback schrittweise Fehler zu reduzieren und zu besseren Ergebnissen zu kommen. Der Ansatz basiert auf Versuch und Irrtum, d. h. der Output basiert nicht auf vorab klaren Regeln für eine möglichst korrektes Ergebnis. Ein typisches Beispiel sind generative KIs (z. B. ChatGPT oder Perplexity), die über Texteingaben (Prompts) in natürlicher Sprache Anfragen bearbeiten. Hier werden u. a. RL-Verfahren genutzt, um aus Interaktionen mit Nutzer:innen zu lernen. Auch in der Robotik wird RL häufig eingesetzt, ebenso wie beim autonomen Fahren oder in der Logistik. RL-Verfahren bieten Vorteile für Aufgaben mit klarem Ziel, aber mehreren Möglichkeiten zur Erreichung wie etwa Wegoptimierung oder Prozesssteuerung. Sie benötigen in der Reinform wenig Daten, sondern lernen in einer simulierten Umgebung mit klaren Parametern aus Aktion und Reaktion (z. B. Nutzereingaben). Ein simples Beispiel wäre die Suche nach dem Weg aus einem Labyrinth. Nachteile sind u. a. hoher Zeit- und Rechenaufwand sowie Fehleranfälligkeit. Nicht geeignet sind RL-Verfahren u. a. bei sicherheitskritischen Anwendungen, wo Trial-and-Error kaum sinnvoll sind. In der Praxis gibt es unterschiedliche Ansätze (z. B. Q-Learning oder Deep RL) und RL wird meist mit anderen ML-Verfahren kombiniert (bei generativen KIs z. B. u. a. DL und RL). (Russell/Norvig 2010; Sutton/Barto 2015; Chibanguza et al. 2022).
@@ -458,6 +551,10 @@ Jedes ML-Verfahren ist unterschiedlich, auch hinsichtlich der automatisierten Da
 11 www.zamg.ac.at/cms/de/geophysik/news/kuenstliche-intelligenz-verbessert-vorhersage-von-sonnenstuermen .
 
 Jedes ML-Verfahren verarbeitet Daten anders und hat unterschiedliche Automatisierungsgrade
+
+
+<!-- PAGE 25 -->
+
 
 derzeit den höchsten Automatisierungsgrad, da es über selbstoptimierende Algorithmen oder Ähnliches verfügen kann. Reinforcement Learning interagiert in der Regel dynamisch mit der Umgebung, z. B. durch Sensoren und Feedback, um Daten zu sammeln. Deep Learning erfordert meist große Datenmengen und verfügt über höhere Feature-Engineering-Fähigkeiten, d. h. es kann auch mit Rohdaten  arbeiten,  die  auf  unterschiedliche  Weise  integrierbar  sind.  Beide  Ansätze sind sehr dynamisch und können daher dazu neigen, unvorhersehbares Verhalten zu verstärken. Sie sind daher im Vergleich zu Methoden des überwachten Lernens, das auf vorher festgelegten Kriterien und relativ stabilen Trainingsdaten basiert, noch unberechenbarer. Ein zentraler Aspekt ist, dass nicht jeder ML-Ansatz für jeden Anwendungskontext geeignet ist. Dies ist Entwickler:innen und technischen Expert:innen meist klar, jedoch nicht unbedingt Anwender:innen oder Entscheidungsträger:innen, die mit KI-Systemen interagieren oder ihren Einsatz in Unternehmen planen. Um Probleme zu vermeiden, ist es daher auch wichtig, die Entscheidungsträger und Personen, die mit KI-Systemen interagieren, für die generelle Funktionsweise und die Besonderheiten von KI-Systemen und ML-Verfahren und damit verbundene Probleme in bestimmten Kontexten zu sensibilisieren (Strauß 2021a/b).
 
@@ -471,6 +568,10 @@ KI als exploratives Werkzeug zur Problembewältigung
 
 Begrenzte Aussagekraft KI-generierter Ergebnisse
 
+
+<!-- PAGE 26 -->
+
+
 KI-Systemen generierten Ergebnisse unhinterfragt als Entscheidungsgrundlage eingesetzt werden. Fehler oder Unzulänglichkeiten haben daher letztlich auch negative Auswirkungen auf die Entscheidungsfindung, wenn sie zu schlechten oder Fehl-Entscheidungen führen.
 
 Entgegen gängiger Annahmen ist die Korrektheit von Ergebnissen kein Kriterium, das KI-Anwendungen tatsächlich erfüllen können. Denn was als korrekt gilt, hängt wesentlich von Anwendungsfall in bestimmten Kontexten und der Anwendbarkeit der Technologie für konkrete Aufgaben ab. Vereinfacht ausgedrückt produziert  KI  schlicht  Ergebnisse  anhand  komplexer  Berechnungen  auf  Basis von Datenmodellen. Wie brauchbar die Ergebnisse sind, hängt maßgeblich von der Qualität der Daten und ihrer Aussagekraft für den konkreten Anwendungsfall ab. Ein Datenmodell lässt sich als abstrakte Abbildung eines kleinen Auszugs der Wirklichkeit verstehen. Die Abbildung selbst sagt aber noch nichts über die Brauchbarkeit der Daten in einem bestimmten Anwendungskontext aus. Zum Beispiel kann ein Datenmodell, wie oben in Abschnitt 2.3 gezeigt, aus einer großen Menge an rohen Bilddaten verschiedene Kategorien bilden und etwa dazu genutzt werden, Katzen zu erkennen. Wie gut das funktioniert, hängt aber auch davon ab, wie und womit das Datenmodell trainiert wurde, also von der Qualität und Brauchbarkeit der Trainingsdaten. Am Beispiel in Abschnitt 2.3 erklärt bedeutet das: Wenn das KI-System auch mit einer bestimmten Menge an Bildern von Fröschen trainiert wird, dann würde es auch Frösche für Katzen halten und umgekehrt. Denn KI-Systeme können zwar Daten schnell und auswerten und aufbereiten. Zu Qualität und Validität von Ergebnissen führt das aber nicht automatisch. Qualitätsanforderungen wie Korrektheit der Ergebnisse für einen bestimmten Anwendungskontext sind daher rein durch KI-Einsatz nicht erfüllbar. Um überhaupt einen Nutzen aus KI-Technologie ziehen zu können, sind menschliche Kompetenzen, Wissen und Erfahrung wichtiger denn je. Nicht zuletzt, weil die Anforderungen an die Qualitätskontrolle gerade durch KI-Einsatz deutlich erhöht werden (siehe auch Abschnitt 5).
@@ -483,9 +584,17 @@ Probleme der Datenaufbereitung und 'Lost in the Middle'Phänomen
 
 Mangelhafte Kontextualisierung
 
+
+<!-- PAGE 27 -->
+
+
 Die Grenzen und derzeitigen Schwächen von KI-Technologien verdeutlichen, dass ihre Nutzung auch einige neue Anforderungen mit sich bringt, die erfüllt sein müssen, damit die Technologien funktionsfähig und zuverlässig einsetzbar sind. Das wirft auch Fragen hinsichtlich des erzielbaren Mehrwerts durch KIEinsatz auf, insbesondere wenn KI-generierte Ergebnisse fehlerhaft und intransparent sind. Die korrekte Interpretation und Überprüfung von KI-generierten Ergebnissen ist für jede KI-Anwendung, die Output generiert, relevant und gewinnt daher mit wachsendem Technologie-Einsatz künftig noch stärker an Bedeutung.
 
 Interpretation und Überprüfung KI-generierter Ergebnisse immer wichtiger
+
+
+<!-- PAGE 28 -->
+
 
 ## 3 WISSENSARBEIT UND KI: EIN WIDERSPRUCH?
 
@@ -505,6 +614,10 @@ KI eignet sich für repetitive Tätigkeiten, weniger für komplexe
 
 Der Wert menschlichen Erfahrungswissens
 
+
+<!-- PAGE 29 -->
+
+
 Kombination aus einfacheren und komplexeren Tätigkeiten geht (vgl. Albrecht/ Kellermann 2020). Diese Kombination ist nicht trivial  und  auch  ganz  einfache Routinetätigkeiten sind in Arbeitsprozesse und interorganisationale Arbeitspraktiken integriert, die nicht ohne weiteres gänzlich oder teil-automatisierbar sind. Das gilt besonders für die Wissensarbeit, die primär viele komplexere Tätigkeiten umfasst, die eben nicht standardisierbar und damit auch nicht automatisierbar sind. Die dabei auch anfallenden Routinetätigkeiten sind schwer isoliert von anderen Aufgaben trennbar. Auch deshalb, weil hier auch die wertvolle Ressource des  menschlichen  Erfahrungswissens  ein  zentrales  Bindeglied  zwischen  unterschiedlichen Arbeitsabläufen und Arbeitsorganisation darstellt.
 
 Eine  klassische  Herausforderung  von  Wissensarbeit  ist  es,  das  Zusammenspiel von personalem und organisationalem Wissen zu verstehen und auszubalancieren (vgl. Willke 1998). D. h. bislang waren die beiden Hauptakteure in diesem Zusammenspiel zum einen die individuellen Arbeitskräfte und zum anderen die  Arbeitsorganisation.  Der  Einsatz  von  KI  verändert  dieses  Verhältnis  und macht  es  zunächst  komplexer,  weil  eine  Art  soziotechnischer  Entität  dazu kommt, deren Funktion in vielen Fällen noch nicht klar definiert ist. Bei KI-Einsatz ist mittelfristig mit Änderungen und Neustrukturierungen in der Arbeitsorganisation zu rechnen. Das wiederum hängt sehr stark davon ab, ob und wie KI überhaupt in Arbeitsabläufe integrierbar ist (siehe unten). Das kann zu betrieblichen Spannungen führen und der erzielbare Nutzen hängt auch stark davon ab, welche Erwartungen an den KI-Einsatz bestehen. Eine realistische Erwartung ist es, KI als mögliches Unterstützungswerkzeug zu begreifen, dessen Nützlichkeit wesentlich vom  Anwendungsfall  abhängt.  KI-Anwendungen  können  bei  der  Bearbeitung komplexerer Aufgaben z. B. nützlich sein, um etwa alternative Lösungswege bestehender Probleme aufzuzeigen oder auch neue Zusammenhänge und Muster in großen Datenmengen zu entdecken und vieles mehr. Demnach lässt sich die Technologie als Werkzeug für datenbasierte Entscheidungsunterstützung betrachten, dass bei Verknüpfung, Generierung und Bereitstellung von Wissen unterstützen kann. Allerdings als exploratives Werkzeug, das z. B. kreative Stimulanz bieten kann, nicht jedoch unbedingt ein korrektes Ergebnis oder einen optimalen Lösungsweg offenbart. Denn die Produktivität von Wissensarbeit hängt nicht nur vom Output, also den Ergebnissen ab, sondern auch von der Qualität der Ergebnisse (Drucker 1999). Dasselbe gilt für den produktiven Nutzen von KI-basierten Technologien.
@@ -514,6 +627,10 @@ Bei genauerer Betrachtung der Frage, wie KI die Wissensarbeit verändert, offenb
 Knackpunkt: Sinnvolle Integrierbarkeit von KI in Arbeitsabläufe
 
 Widerspruch zwischen Automatisierung und Wissensarbeit
+
+
+<!-- PAGE 30 -->
+
 
 Handlungsfähigkeit 12  führen. Das wirft wiederum neue Fragen zur stabilisierenden und innovationsfördernden Wirkung von Wissensarbeit in Unternehmen auf.
 
@@ -532,6 +649,10 @@ KI verändert die Anforderungen in der Wissensarbeit
 KI kann kein neues Wissen schaffen, nur bestehendes anders aufbereiten
 
 Kritische KIKompetenz wird zum Bestandteil moderner Wissensarbeit
+
+
+<!-- PAGE 31 -->
+
 
 ## 3.1 ÜBERSICHT ZU AUSGEWÄHLTEN ANWENDUNGSBEREICHEN
 
@@ -559,6 +680,10 @@ In Wissenschaft und Forschung wird KI teils seit langem genutzt
 
 Enorme Potenziale in der Medizin
 
+
+<!-- PAGE 32 -->
+
+
 Materialen zu entwickeln (Materialinformatik). 17  In den digitalen Geisteswissenschaften (digital humanities 18 ) werden mittels ML u. a. historische und literarische Dokumente analysiert, Handschriften erfasst, das kulturelle Erbe digital abgebildet 19  sowie in unterschiedlichen Fachbereichen (z. B. Literatur- Sprach- und Musikwissenschaft)  erforscht,  um  neue  wissenschaftliche  Erkenntnisse  zu  gewinnen.  In  der  Archäologie  unterstützt  KI 20   u. a.  bei  der  Analyse  archäologischer Funde wie der Auswertung antiker Schrifttafeln, oder auch von Luftaufnahmen zur Erforschung von Mustern an der Erdoberfläche. Kürzlich wurden damit etwa weitere Nazca-Geolyphen 21  in Peru entdeckt. In Biologie und Medizin hilft KI z. B. bei der Erforschung von Zellstrukturen, Proteinen und der Entwicklung neuer Wirkstoffe. 2020 gelang es z. B. mithilfe eines speziellen KI-Systems, neue Proteinstrukturen zu entdecken. 22  2024 wurde diese Entdeckung mit dem ChemieNobelpreis ausgezeichnet. Zudem gibt es unzählige Forschungsaktivitäten zu KI in  der  Medizin, auch in Österreich. Zum Beispiel wird an der Medizinischen Universität Wien 23  seit vielen Jahren u. a. an der Entwicklung von KI/ML Verfahren  mit  Schwerpunkten  auf  Tumorcharakterisierung,  Radiomics  und  Holomics (speziellen Bildanalyseformen) geforscht. Hierbei werden Daten aus bildgebenden Verfahren (z. B. PET, CT und MRT)  24  mit anderen medizinischen Daten kombiniert, um Vorhersagemodelle für die Präzisionsmedizin zu entwickeln. 2024 hat die österreichische Akademie der Wissenschaften mit AITHYRA ein eigenes Institut für KI in der Biomedizin gegründet, um komplexe biomedizinische Zusammenhänge und Krankheiten zu erforschen, die zur Entwicklung neuer Ansätze für zuverlässigere Diagnosen und Therapieformen dienen. 25  Das sind nur einige Beispiele der vielfältigen Anwendungsformen, wo KI erheblichen Nutzen bringen kann. Im Folgenden werden ausgewählte Anwendungsbereiche näher erläutert.
 
 ## 3.1.1 MEDIZIN UND GESUNDHEIT
@@ -578,6 +703,10 @@ Hier  sind  KI-Anwendungen besonders vielversprechend. Das Spektrum reicht von K
 - 23 www.meduniwien.ac.at/web/forschung/artificial-intelligence-und-machine-learning/ .
 - 24 PET: Positronen-Emissions-Tomografie, CT: Computertomografie, MRT: Magnetresonanztomografie
 - 25 www.oeaw.ac.at/news/oeaw-und-boehringer-ingelheim-stiftung-etablieren-neuesinstitut-fuer-kuenstliche-intelligenz-in-der-biomedizin-in-wien-1 .
+
+
+<!-- PAGE 33 -->
+
 
 al. 2020; Funer 2022; Pfannstiel 2022; Hiltawsky 2024). Erwartet und erhofft werden von KI u. a.: mehr Präzision bei der Diagnose und Behandlung von Krankheiten,  maßgeschneiderte  Medikationen  und  Therapieformen  mit  weniger  Nebenwirkungen, bessere Krankheitsvorsorge und infolge weniger Kosten im Gesundheitswesen (vgl. u. a. Funer 2022; Pfannstiel 2022).
 
@@ -601,6 +730,10 @@ Unterschiede zwischen physischem und virtuellem KI-Einsatz
 
 Arbeitsentlastung und zusätzliche Fachinformation als Ziele
 
+
+<!-- PAGE 34 -->
+
+
 diagnoserelevante Informationen anzeigt, die aus einem klinischen Befund allein nicht ableitbar sind (Interview j).
 
 Besonders vielversprechend sind KI-Anwendungen bei bildgebenden Verfahren als Teil der medizinischen Untersuchung. Diese gibt es bereits seit mehreren Jahren, ursprünglich begonnen in der Radiologie mit Lungenläsionsdetektion. Daraus sind weitere Anwendungen im Bereich Radiomics entstanden, einem Teilgebiet der medizinischen Bildverarbeitung und der Radiologie, das sich mit der Analyse von Bilddaten wie z. B. Röntgenaufnahmen befasst. Der Einsatz von maschinellem Lernen ist hier besonders aussichtsreich (vgl. Kocak et al. 2019; Interview j). Bildgebende Verfahren eignen sich auch als Praxisbeispiel, um zu verdeutlichen, was KI in der Diagnostik leisten kann: Etwa, um Vorgänge wie das Finden und Markieren von Auffälligkeiten in Aufnahmen automatisiert zu unterstützen. Ein KI-System kann dazu genutzt werden, Bilder beim Lungenröntgen effizienter auszuwerten, indem auffällige Muster erkannt und visuell markiert werden. Bislang muss dieser Vorgang noch oftmals händisch durchgeführt werden. D. h. ein Arzt markiert per Hand oder im Bildbearbeitungsprogramm nach eigenem Ermessen eine  Auffälligkeit  (z. B.  bei  Verdacht  auf  Geschwüre  odgl.).  KI kann diesen Vorgang unterstützen und beschleunigen, weil Erkennen und Markieren  damit  automatisierbar  wird.  Mediziner:innen  erhalten  dann  zusätzlich ein vormarkiertes Bild, und werden so in ihrer Expertise unterstützt. Im Idealfall wird die Bildauswertung effizienter gestaltet und damit auch Diagnose und Behandlungsformen. Studien zufolge lässt sich mit KI-Anwendungen bei der Bildanalyse eine relativ hohe Genauigkeit erzielen, vergleichbar mit Fachpersonal, jedoch deutlich schneller (Liu et al. 2019).
@@ -621,6 +754,10 @@ Komplexitätsreduktion möglich, weil Bilddaten mit KI schneller auswertbar
 
 Entscheidung bleibt immer beim Menschen
 
+
+<!-- PAGE 35 -->
+
+
 Zeit für die Interpretation der Diagnoseergebnisse und für Entscheidungen zur weiteren Behandlung gewinnt. Ob das gelingt, hängt wiederum vom Zusammenspiel menschlicher und technischer Einflussfaktoren ab (genauer dazu siehe Abschnitt 4). Die Entscheidung, wie mit den Ergebnissen verfahren wird, und was daraus für die Behandlung folgt, liegt aber auch bei KI-gestützter Auswertung  immer  bei  den  behandelnden  Ärzt:innen.  D. h.  KI-Systeme  entscheiden grundsätzlich  nichts.  Sie  zeigen  nur,  ob  und  was  z. B.  in  Bilddaten  gefunden wurde. D. h. es gibt immer die Möglichkeit, KI-Auswertungen zu hinterfragen und weitere Analysen durchzuführen. Ein wesentlicher Vorteil von bildgebenden Verfahren ist hierbei die visuelle Überprüfbarkeit.
 
 ## 3.1.2 JOURNALISMUS UND MEDIEN
@@ -636,6 +773,10 @@ KI als Variante des Datenjournalismus
 KI-Anwendungen entlang der medialen Wertschöpfungskette
 
 Redaktionelle Arbeit wird zusehends mit KI unterstützt
+
+
+<!-- PAGE 36 -->
+
 
 dere die APA (Austria Presse Agentur) seit 2019 die Implementierung eines breiten Spektrums an automatisierten Tools kontinuierlich ausgebaut. 31  Die Einsatzgebiete  reichen  von  Datenanalysen  bei  der  anlassbezogenen  Berichterstattung, Textassistenten für routinemäßige Aufgaben bei der Inhaltserstellung, automatisierten Textvorschlägen für Kurzmeldungen, bis hin zu datenbasierten Berichten über verschiedene Ereignisse (Schell 2022). Für einen verantwortungsvollen und transparenten Umgang mit KI hat die APA auch eigene Leitlinie ausgearbeitet, die insbesondere auf ethische Grundsätze wie Achtung menschlicher Autonomie, Schadensverhütung,  Fairness  und  Erklärbarkeit  Bezug  nimmt  (APA  2023).  Im ORF (Österreichischer Rundfunk) wurde die kürzlich ausgezeichnete 32  Software AIDitor entwickelt, die verschiedene Funktionen wie Audiotranskriptionen, Zitaterkennung, Optimierung von Audioaufnahmen, und Generierung von Inhalten in andere Medienformate sowie Übersetzung in mehr als 40 Sprachen ermöglicht (Die Presse 2023; ORF 2024). International gibt es viele verschiedene Aktivitäten.  Große  Newsagenturen  und  Medienhäuser  wie  etwa  Thomson  Reuters, BBC, New York Times 33 , Washington Post und weitere erforschen die verschiedenen Einsatzmöglichkeiten von KI im Medienbetrieb und entwickeln auch selbst Anwendungen, um deren Praxistauglichkeit  zu testen. Etwa  für  visuelles  Storytelling, automatisierte Übersetzungen oder KI-gestützte Aufbereitung multimedialer Inhalte in verschiedene Formate (z. B. text-to-audio, audio-to-video), Highlighting von Passagen in Live Streams, aber auch Anwendungen zur Erkennung von 'deepfakes' und manipulativen KI-Inhalten u.v.m. (Springer 2023; BBC 2024; NYT 2024; Frank 2024; Reuters 2024; Newman 2024). Neben KI-Anwendungen zur Unterstützung von Medieninhalten besteht insbesondere bei letzterem großer Bedarf an Werkzeugen im Umgang mit manipulativen KI-Inhalten, auch um KIEinsatz nachvollziehbarer zu machen. Das ist nicht nur für Medienunternehmen, sondern auch für Rezipierende bzw. die Öffentlichkeit relevant (Newman 2021; Krawarik et al. 2021; Anlen/Llorente 2024). In Österreich werden etwa im Forschungsprojekt  defalsif-AI 34   medienforensische  Werkzeuge  auf  KI-Basis  entwickelt,  die  Anwendern eine erste Einschätzung der Glaubwürdigkeit von Text-, Bild-, Video- oder Audiomaterial im Internet erlauben.
 
@@ -654,6 +795,10 @@ Neben journalistischen Anwendungsfeldern gibt es auch in der Werbe- und Marketin
 Umgang mit Deepfakes und manipulativen KIInhalten als wichtige Herausforderung
 
 KI in Werbung und Influencer-Marketing
+
+
+<!-- PAGE 37 -->
+
 
 ## 3.1.3 SCHULE UND BILDUNGSWESEN
 
@@ -676,6 +821,10 @@ Viele offene Fragen im Bildungssektor
 
 Mangel an klaren Strategien im Umgang mit KI in der Bildung
 
+
+<!-- PAGE 38 -->
+
+
 im Bildungsbereich einzusetzen, u. a.: zur Erstellung und Bereitstellung von multimedialen Lehrmaterialien (etwa über KI-basierte Lernplattformen, Edutheken u.dgl.),  als  interaktiver  Lernassistent  zur  individuellen  Unterstützung  bei  verschiedenen Aufgabestellungen und Problemlösungen, Erstellung und Anpassung von Texten und Aufgaben je nach Lern- und Förderbedarf, für Fremdsprachentraining 42 , zur Fehlerkorrektur oder zur Förderung von Kreativität durch Generieren von Ideen, zur Sprachförderung und Abbau von sozialen Ungleichheiten und interkultureller Zusammenarbeit z. B. durch Übersetzungen in unterschiedliche Sprachen etc. Auch zur Fortbildung von Lehrpersonal gibt es viel Potenzial, etwa über Webinare (BMBWF 2023b; Shah 2023).
 
 KI bietet also auch im Bildungsbereich vielfältige Anwendungsmöglichkeiten, die aber auch mehr Klarheit erfordern, um daraus realen Nutzen zu ziehen. Das setzt auch voraus, KI als Werkzeug zu begreifen, dessen Einsatz nicht überall sinnvoll ist. Etwa können KI-Tools zwar Recherchearbeit, analytisches oder wissenschaftliches Arbeiten für manches unterstützen aber nicht ersetzen. Der Umgang mit KI-Werkzeugen wird künftig ein noch stärkerer Teil von Lehrinhalten und  dazu  sind  auch  alternative  Bildungskonzepte  erforderlich  (Garrel  et  al. 2023; Shah 2023). Ein zentraler Aspekt für den Bildungsbereich ist daher nicht primär die Anwendung von KI-Technologie, sondern die Vermittlung von Wissen für einen informierten, kritischen Umgang damit. Das erfordert auch eine interdisziplinäre  Auseinandersetzung  mit  den  Erkenntnissen  aus  Pädagogik,  Didaktik und Entwicklungspsychologie, um Lernprozesse weiterhin - analog und digital - im Sinne des Bildungsauftrags der Schule erfolgreich zu gestalten. Etwa können die Schwächen von KI (siehe Abschnitt 2.2) auch so genutzt werden, um KI-generierte Inhalte gezielt kritisch im Unterricht auf Fehler hin zu analysieren. So könnte auch kritische Medienkompetenz, die immer mehr an Bedeutung gewinnt, mit neuen Ansätzen vermittelt und gestärkt werden.
@@ -696,6 +845,10 @@ Vermittlung von Wissen und 'klassischer' Kernkompetenz gewinnt an Bedeutung
 
 KI hält langsam Einzug in Büroarbeit
 
+
+<!-- PAGE 39 -->
+
+
 mulus zu erhalten, Textbausteine, Bilder oder andere Medienformate zu generieren oder umzugestalten, Dokumente zusammenzufassen, oder sonstige Inhalte KI-unterstützt zu erstellen. Auch hier findet KI-Nutzung also meist nebenbei statt ohne  klare  Bezugspunkte  zu  konkreten  Tätigkeiten  und  mit  unterschiedlichen Kompetenzniveaus. Einer (nicht repräsentativen) Schweizer Studie zufolge nutzen rund 60 % der befragten Angestellten generative KIs im Berufsalltag. 47 % nutzen KI zur Textbearbeitung, 26 % zur Bildbearbeitung und 24 % für Programmiertätigkeiten  (Deloitte 2023). Viele  Unternehmen haben auch hier meist  keine klare Strategie, ob und wie KI-basierte Technologien genutzt werden sollen und für welche Zwecke.
 
 Es gibt viele Möglichkeiten, die Produktion von Inhalten und nicht-spezialisierten  Tätigkeiten  im  Arbeitsalltag  zu  unterstützen.  Seit  längerem  können  diverse Tools automatisiert Transkripte erstellen, etwa zur Dokumentation von Meetings oder Texte und E-Mails zusammenfassen (allerdings meist mit vielen Fehlern und fragwürdiger Qualität). Schon kleine Werkzeuge wie automatisierte Sprachübersetzungsdienste (z. B. Deepl) oder direkt in Anwendungen wie Webbrowser integrierte KI-Features können den Arbeitsalltag erleichtern. Als vielversprechend gelten vor allem unterstützende Tools bei der Inhaltsbearbeitung. Zum Beispiel bei der Erzeugung, Bearbeitung Anpassung von Bildern, wie Formatänderungen und vielem mehr. Das ist insbesondere für Tätigkeiten nützlich, die mit der Gestaltung von Inhalten und Medienformaten arbeiten (z. B. Grafik, Design, Layoutierung etc.). Weit verbreitete Standard-Software zur Bearbeitung und Verwaltung von Dokumenten und Bildern setzt bereits verstärkt auf integrierte KI-Anwendungen (z. B. über die Integration von Adobe-Firefly in Photoshop und PDF-Programme). Zudem bieten einige Anwendungen auch ganz neue Möglichkeiten zur Unterstützung künstlerisch-kreativer Arbeitsschritte, z. B. bei der Bildbearbeitung oder für Videoinhalte, um aus Textprompts und Bildern Videosequenzen zu generieren (Lohmann 2023; Nickel 2024b). Ein Vorteil grafischer Tätigkeiten ist  die  unmittelbare  visuelle  Überprüfbarkeit  KI-generierter  Ergebnisse. Im Gegensatz zu Texten, wo die Überprüfung schon aufgrund des Korrekturlesens deutlich aufwändiger ist.
@@ -714,7 +867,15 @@ Deutliche Schwächen und Fehler im Office-Bereich
 
 KI als kleine Bürohelfer mit Schwächen und geringer Qualität
 
+
+<!-- PAGE 40 -->
+
+
 können vor allem  entstehen,  wenn  es  keinen  bewussten  Umgang  mit  diesen Schwächen gibt  und  unklar  bleibt,  wenn  KI  für  unternehmensrelevante  Entscheidungen eingesetzt wurde. Diese Intransparenz der Nutzung kann insbesondere entstehen und sich verstärken, wenn die Einführung von KI in Unternehmen ohne konkrete Planung und Ziele stattfindet. Das kann gerade bei weit verbreiteten IT-Systemen der Fall sein. Denn oftmals werden KI-Anwendungen über diesen Weg quasi beiläufig in den Arbeitsalltag integriert. Das geschieht meist nicht unbedingt  proaktiv,  sondern  über  Änderungen  in  Standardsoftware  wie  etwa sehr  weit  verbreiteten  Betriebssystemen  und  damit  verbundenen  Softwareprodukten, insbesondere Office-Anwendungen. In den nächsten Jahren ist damit zu rechnen, dass KI noch stärker als bislang zum fixen Bestandteil von StandardSoftware wird. Der Microsoft-Konzern will etwa seine KI-Anwendung MS-Copilot  künftig  stärker  in  seine  Produkte  integrieren  (Cunningham  2023;  Nickel 2024a; Standard 2024a). Der Aspekt der Integration von KI über Standardsoftware wird in Abschnitt 5.4 genauer diskutiert.
+
+
+<!-- PAGE 41 -->
+
 
 ## 4 BESONDERHEITEN KI-BASIERTER AUTOMATION
 
@@ -730,6 +891,10 @@ KI-basierte Automatisierung hat weitreichende Folgen
 
 Unterschiedliche Automatisierungsgrade
 
+
+<!-- PAGE 42 -->
+
+
 nachlässigt. Gerade diese Aspekte sind aber zentral und hängen nicht nur vom grundsätzlichen Automatisierungsgrad, sondern vor allem von der Art und Funktionsweise  eines  KI-Systems  ab.  Wie  in  Abschnitt  2.3  erläutert,  gibt  es  unterschiedliche Machine Learning-Verfahren, deren Funktionsweisen auch die Automatisierbarkeit von Tätigkeiten beeinflussen. Jedes Verfahren hat Besonderheiten hinsichtlich Datenmodellen und Art der Aufbereitung und Analyse von Daten. Unterschiedliche Ansätze können daher unterschiedliche Auswirkungen auf den Automatisierungsgrad und damit auch auf die damit verbundenen Risiken haben. Daher ist es auch für nicht-technische Nutzer:innen wichtig, die Implikationen der Automatisierung zu verstehen, einschließlich des allgemeinen ML-Ansatzes des Systems, mit dem sie interagieren. Gerade aufgrund zunehmender KI-Automatisierung gewinnt die Frage nach menschlicher Kontrolle weiter an Bedeutung. Durch die wachsende Verbreitung von KI-Anwendungen gibt es mehr Bedarf, die grundsätzliche Funktionsweise und Auswirkung von KI-Automatisierung zu verstehen, auch für Menschen ohne technisches Fachwissen.
 
 ## 4.1 HÖHERE DYNAMIK UND VOLATILITÄT IM SYSTEMVERHALTEN
@@ -743,6 +908,10 @@ Menschliche Intervention ist zentral
 KI-Systeme funktionieren nicht nur regelbasiert
 
 Hohe Eigendynamik und Volatilität erschweren Kontrollierbarkeit von KI-Systemen
+
+
+<!-- PAGE 43 -->
+
 
 Gleichzeitig dienen diese Informationen aber nicht primär dem Autopiloten zur autonomen Steuerung, sondern dem Menschen, um den Autopiloten ggfs. zu korrigieren. D. h. menschliche Intervention ist hier ein zentraler Bestandteil des Systems. Autopilotensysteme sind also keine vollständig autonomen Systeme. 44  Ein Autopilotensystem, das mit einem Deep Learning Verfahren laufend neue Rohdaten über Sensoren aus der Umgebung vollautomatisiert verarbeiten würde, um die Flugbahn ohne menschliche Intervention nach unklaren Regeln verändern würde, wäre unvorhersehbar, unkontrollierbar im Verhalten und damit ein enormes Sicherheitsrisiko. Der menschliche Pilot könnte immer nur korrigierend eingreifen und wäre aus Mangel an Kontrollmöglichkeiten letztlich dem System unterlegen, was im schlimmsten Fall zur Eskalation führt, wenn automatisierte KIEntscheidung  und  menschliche  Intervention  miteinander  kollidieren  (Strauß 2021a). Dieses Beispiel verdeutlicht das Risiko, dass KI-basierte Automatisierung menschliche  Autonomie  bzw.  präziser  -  menschliche  Handlungsfähigkeit  beschränken kann. Im nächsten Abschnitt wird dieses Problem als Teilaspekt von Deep Automation Bias als Meta-Risiko genauer erläutert.
 
@@ -762,6 +931,10 @@ In Bezug auf KI-basierte Technologien wird dieses Risiko aufgrund der oben genan
 
 Erhöhtes Risiko durch intransparentes Systemverhalten und falschen Vorstellungen zur Funktionsweise
 
+
+<!-- PAGE 44 -->
+
+
 2021a/b). Wie sich ein KI-System technisch verhält, hängt zunächst maßgeblich von mehreren Faktoren ab, insbesondere von:
 
 - -Qualität der zugrundeliegenden Datenmodelle
@@ -780,6 +953,10 @@ Die Kombination dieser Elemente wirkt sich auf die Zuverlässigkeit, Vorhersehba
 
 Abbildung 3 veranschaulicht die verschiedenen Einflussfaktoren von DAB entlang von zwei miteinander zusammenhängenden Dimensionen: Oben das 'klassische' Risiko des übermäßigen Vertrauens in das Verhalten eines KI-Systems und der Fehlinterpretation. Unten das zusätzliche Risiko der begrenzten Kontrollierbarkeit und der fehlenden Handlungsfähigkeit. Beide Risikodimensionen sind eng miteinander verwoben und werden von verschiedenen, sich gegenseitig beeinflussenden Faktoren bestimmt. Der Schlüsselfaktor, der beide Dimensionen verbindet, ist die Unsicherheit. Diese wird sowohl von technischen als auch von sozialen und organisatorischen Faktoren beeinflusst, die sich wechselseitig verstärken können.
 
+
+<!-- PAGE 45 -->
+
+
 Abbildung 3: Einflussfaktoren von Deep Automation Bias (Quelle: adaptiert von Strauß 2021a)
 
 <!-- image -->
@@ -792,11 +969,19 @@ Zusammenspiel der Faktoren beeinflusst Handlungsfähigkeit
 
 Ausgewogenes Verhältnis zwischen Systemverhalten und Arbeitspraxis entscheidend
 
+
+<!-- PAGE 46 -->
+
+
 hier zu Missverhältnissen zwischen Systemverhalten und Anwendungspraxis, kann das zu Problemen führen. Problematisch ist etwa, wenn die Leistungsfähigkeit des KI-Systems falsch eingeschätzt oder wenn Unklarheit darüber herrscht, welche Funktionalität und welche diesbezüglichen Grenzen das System hat. Diese Problematik kann durch verschiedene Umstände entstehen. Ein grundlegendes Problem ist zum einen die Neigung von Menschen, Technologie tendenziell eher 'blind' zu vertrauen und Ergebnisse nicht zu hinterfragen. Im Zusammenhang mit sprachbasierten Systemen wie Chatbots gibt es hier auch Bezüge zum sogenannten Eliza-Effekt, der die Neigung beschreibt, KI-Systemen menschliche Eigenschaften zuzuschreiben, sie also zu 'vermenschlichen' (vgl. Hofstadter 1996; Strauß 2018). Das macht Fehleinschätzungen über die Funktionalität noch wahrscheinlicher. Zum anderen kann die Komplexität der Technologien dazu führen, dass Anwender:innen nicht mehr die Fähigkeit haben, technologisch-gestützte Prozesse und Ergebnisse zu verstehen und kritisch zu hinterfragen. Das kann neben mangelndem Wissen und Erfahrung auch schlicht ein Problem mangelnder Ressourcen und Zeitmangel sein. Werden keine Maßnahmen zur Verringerung der Risiken getroffen, kann es in betrieblichen Arbeitsabläufen zu einer Art Teufelskreis kommen: Blindes Vertrauen in KI-Systeme, kombiniert mit intransparentem, unkontrollierbarem Systemverhalten. Kommen dann noch hoher Reaktionsdruck  in  Arbeitsabläufen  und  Ressourcenknappheit  dazu  -  im  Sinne  eingeschränkter Möglichkeiten zum Verstehen und Interpretieren KI-generierter Ergebnisse und ggfs. zur Erkennung und Korrektur von Fehlern - dann wird auch das Risiko von unentdeckten Systemfehlern und letztlich von Fehlentscheidungen erhöht.
 
 Auf längere Sicht kann das auch dazu führen, dass etablierte Arbeitspraktiken trotz Schwächen und Problemen an die Vorgaben von KI-Systemen angepasst und ihnen gewissermaßen unterworfen werden. Das kann dann die Entstehung paralleler Arbeitspraktiken und Umgehungsstrategien befördern, weil etablierte betriebliche Abläufe nicht gefährdet werden sollen und zugleich die technischorganisatorischen Vorgaben des KI-Systems erfüllt sein müssen. Das birgt daher erhebliches innerbetriebliches Konfliktpotenzial, das zu Überlastung, Demotivation und sinkender Mitarbeiterzufriedenheit führen kann, weil zusätzlich zur Arbeitsbewältigung auch noch Parallelstrukturen aufrechterhalten werden müssen. So kann im schlimmsten Fall aus dem angestrebten Ziel der Entlastung von Arbeitsabläufen durch KI-Einsatz eine erhebliche Mehrbelastung werden, die sich negativ auf die Belegschaft und den Gesamtbetrieb auswirken kann (Strauß/Udrea 2024). DAB-Risiken können mit KI-Einsatz weiter zunehmen. Die Interviewpartner:innen bestätigten in jeweils unterschiedlichen Bereichen, dass das Problem von Fehleinschätzungen von KI-generierten Ergebnissen besteht (Interviews a-l).  Dieser  Problematik  kann  auf  unterschiedliche  Weise  begegnet werden. Ein wichtiger Faktor zur Risikominderung ist das Problembewusstsein hinsichtlich des realen Nutzens und der Grenzen von KI-Anwendungen in bestimmten Arbeitskontexten als Bestandteil einer Critical AI Literacy. Diesbezügliche Ansätze werden in Abschnitt 6 genauer behandelt. Im folgenden Abschnitt werden zunächst zentrale Herausforderungen und Problemfelder aufgezeigt, die für den Umgang mit KI-basierten Technologien relevant sind.
 
 Missverhältnis erhöht Risiko von Fehlentscheidungen und birgt mittelfristig Konfliktpotenzial
+
+
+<!-- PAGE 47 -->
+
 
 ## 5 ZENTRALE HERAUSFORDERUNGEN UND PROBLEMFELDER
 
@@ -814,6 +999,10 @@ Viele Probleme auf falsche Erwartungen zurückzuführen
 
 Frage nach Mehrwert mit KI auch eine Frage des Mehraufwands durch KI
 
+
+<!-- PAGE 48 -->
+
+
 Naheliegend erscheinen hier Aufgaben in der Softwareentwicklung oder anderen IT-Berufen, in praktisch jeder Branche in irgendeiner Form benötigt werden. Aus einigen Untersuchungen geht auch hervor, dass diverse KI-Tools, auch generative wie ChatGPT zu Arbeitserleichterungen in der Programmierung führen, um z. B. Software-Code zu generieren (Barenkamp 2020; Ozkaya 2023). Betrachtet man aber auch den Mehraufwand, werden negative Effekte auf die Qualität  der  Softwareentwicklung durch den Einsatz von KI-Assistenten sichtbar (Hosbach 2024; Harding/Kloster 2024). KI-Tools können zwar bei der Erzeugung einzelner Softwareelemente wie kleinerer Programmteile helfen und Tätigkeiten der Softwareentwicklung dadurch beschleunigen. Aber weder ist dadurch das automatisierte Generieren vollständig nutzbarer Anwendungen möglich, noch das Erzeugen fehlerfreier Software. Im Gegenteil steigt hierbei der Mehraufwand zur Überprüfung von Ergebnissen, Fehlerkorrektur und Qualitätskontrolle. D. h., die Qualitätsanforderungen steigen selbst in diesem Bereich an, wo grundsätzlich deutlich mehr Nutzen durch KI-Einsatz erzielbar ist (Strauß/Udrea 2024). Wird dieser Aspekt außer Acht gelassen, kann Software zwar schneller entwickelt werden, aber bei sinkender Qualität. Das zeigt sich 'im Kleinen' schon bei den diversen Unzulänglichkeiten generativer KIs, die nur selten tatsächlich valide Ergebnisse generieren. Im größeren Kontext ist KI-Einsatz mit vielen zusätzlichen, nichtautomatisierbaren Aufgaben verbunden. Insbesondere zur Datenpflege, Überprüfung, Systemwartung und Qualitätskontrolle. Um einen Mehrwert zu erzielen, sind insbesondere Fachwissen und Problembewusstsein Grundvoraussetzungen (siehe Abschnitt 4.2). Die Annahme, KI steigere automatisch die Effizienz von Tätigkeiten ist daher ein Trugschluss. Ohne Beachtung des Mehraufwands kann KI-Einsatz  sogar  zu  Qualitätsverschlechterungen  führen.  Die  Berücksichtigung dieser Aspekte ist zentral für Entscheidungen darüber, ob, was (also welche Tätigkeiten) und wie konkret mit KI automatisiert unterstützt werden sollen oder nicht. Zudem müssen im Vorfeld der Einführung die Ziele und Anforderungen klar sein, die der KI-Einsatz erfüllen soll. Das gilt für jede Art von Technologieeinführung in Betrieben, wird in der Praxis aber mitunter verabsäumt (Strauß/Udrea 2024). Das begünstigt Probleme bei der Integration der Technologie in Arbeitsabläufe und in weiterer Folge Probleme bei der Nutzung.
 
 Das lässt sich beispielhaft anhand des Chatbots 'Berufsinfomat' vom österreichischen Arbeitsmarktservice (AMS) verdeutlichen (Proschofsky 2024; Mey 2024). Die Anwendung sollte Arbeitsuchende unterstützen, hatte aber erhebliche Mängel, die schon kurz nach der Veröffentlichung sichtbar wurden. Etwa das Reproduzieren geschlechterspezifischer Stereotype und Vorurteile: Berufsempfehlungen waren nach Geschlecht unterschiedlich aufbereitet. Zudem wurden auch einige technische Probleme der auf ChatGPT basierenden Anwendung deutlich. Im Berufsinfomat wurden somit auch die Schwächen dieses generativen KI-Produkts repliziert wie fehlerhafte oder irreführende Ergebnisse und Datenschutzprobleme. Hier gab es offenbar keine Schutzmaßnahmen in der Entwicklung. Etwa wurde auf der Webseite des 'Infomat' sogar vor der Eingabe personenbezogener Daten gewarnt. Viele Probleme wären bereits in der Anwendungsentwicklung vermeidbar gewesen wie etwa Maßnahmen gegen die Verstärkung von Stereotypen und Genderbias. Das AMS beteuerte, die Probleme beheben und die Anwendung verbessern zu wollen (Proschofsky 2024; Weiss 2024; Strauß/Udrea 2024). Das Beispiel zeigt, welche Probleme mit KI-Anwendungen entstehen können, wenn es an klaren Vorgaben an das Produkt mangelt. Es verdeutlicht, wiedas Missverhältnis zwischen Systemverhalten und Nutzungspraxis zu praktischen Problemen führt:
@@ -821,6 +1010,10 @@ Das lässt sich beispielhaft anhand des Chatbots 'Berufsinfomat' vom österreich
 Arbeitserleichterungen in der Programmierung aber zulasten der Qualität
 
 Ohne Rücksicht auf Mehraufwand kann KI die Qualität sogar verschlechtern
+
+
+<!-- PAGE 49 -->
+
 
 Denn Probleme in der Nutzung liegen nahe, wenn die Funktionalität der Anwendung nicht mit den Anforderungen an den Einsatz in der Praxis konform geht.
 
@@ -836,6 +1029,10 @@ Nutzen bei der Entscheidungsunterstützung bei klar definierten Tätigkeiten
 
 Entscheidend: Welche Aufgaben soll KI-Einsatz unterstützen?
 
+
+<!-- PAGE 50 -->
+
+
 ## 5.2 KLUFT ZWISCHEN KI-NUTZUNG ALS EXPERTENSYSTEM UND 'NEBENBEI'-TECHNOLOGIE
 
 Wenngleich generalisierte Aussagen über verschiedene Branchen hinweg nur eingeschränkt sein können, zeigt sich doch ein klares Bild, dass Anwendungskontext und die Art der Nutzung von KI-Systemen maßgeblich beeinflusst, ob und welchen Mehrwert der Technologie-Einsatz in der Praxis tatsächlich bringt. Hier besteht ein Spannungsverhältnis zwischen der Anwendung von KI als bewusstes Werkzeug eingebettet in ein Expertensystem, und der scheinbar beiläufigen Anwendung für verschiedene, unkonkrete Tätigkeiten. Bei letzterem wird KI oftmals von Softwareanbietern in Standardsoftware wie z. B. weit verbreiteten Betriebssystemen integriert. Dadurch können KI-Anwendungen schrittweise und mitunter auch unbemerkt den Arbeitsalltag verändern (siehe auch Abschnitte 3.1.4 und 5.5). Die Auswirkungen auf die Arbeitsorganisation hängen daher wesentlich von der Art der Nutzung von KI-Anwendungen und ihrer Integration in konkrete Tätigkeiten ab. Hierbei spielt auch die Form der Wissensarbeit und das damit verbundene Tätigkeitsspektrum eine maßgebliche Rolle. Wie In Abschnitt 4.2 aufgezeigt, stehen den technischen Anforderungen an KI-Systeme allem voran: Zuverlässigkeit, Nachvollziehbarkeit und Interpretierbarkeit auch Anforderungen auf Anwender:innenseite gegenüber. Dazu zählen insbesondere auch Fachwissen, Erfahrung und Problembewusstsein. Tendenziell sind diese Faktoren stärker ausgeprägt, wenn KI-Anwendungen als Expertensystem für klar definierte Aufgaben und mit entsprechender Fachexpertise genutzt werden.
@@ -845,6 +1042,10 @@ Die Kluft zwischen der KI-Anwendung als Expertensystem und der Nutzung als Art '
 Spannungsfeld zwischen KI-Einsatz als bewusstes Werkzeug und unkonkreter Nutzung
 
 Klar definierte Aufgaben, Fachexpertise und Verantwortung
+
+
+<!-- PAGE 51 -->
+
 
 Welchen Unterschied die KI-Nutzung als Expertensystem macht, lässt sich am Beispiel Medizin verdeutlichen. Wie in Abschnitt 3.1.1 gezeigt, können KI-Systeme im medizinischen Bereich vielfältig eingesetzt werden, um Arbeitsabläufe zu verbessern und Diagnosen zu unterstützen, vor allem in bildgebenden Verfahren, aber auch in vielen anderen Anwendungsbereichen. Die rechtlichen und technischen Anforderungen 46  für den Einsatz von Technologien in der Medizin und die damit verbundenen Zertifizierungs- und Zulassungsprozesse sind hoch (vgl. VDE 2024). Präzision und Zuverlässigkeit sind wesentliche Grunderfordernisse an die Technologien, nicht zuletzt deshalb, weil sonst auch Menschenleben gefährdet sein können, etwa durch Fehldiagnosen. Das Problembewusstsein für technische Unzulänglichkeiten ist in medizinischen Anwendungsfeldern daher ebenso relativ hoch. Dadurch werden KI-Systeme hier tendenziell eher vorsichtig und nicht leichtfertig eingesetzt, weil die Risiken von Fehldiagnosen eher bekannt sind. Der Grundsatz, dass die Entscheidung immer beim Menschen liegt und nie bei einer Maschine, ist einerseits rechtlich geboten (Pfannstiel 2022) und lässt sich hier auch aus dem Berufsethos 47  ableiten, weil Mediziner:innen dem Patientenwohl verpflichtet  sind  und  diese  Verantwortung  mit  Entscheidungen verbunden ist,  die  nicht  ohne  weiteres  über  Technologien  ausgelagert  werden kann.
 
@@ -862,6 +1063,10 @@ Medizin als Beispiel für relativ stark ausgeprägtes Problembewusstsein
 
 Es braucht auch eine Transparenz der KI-Nutzung
 
+
+<!-- PAGE 52 -->
+
+
 sondern aufgrund von externen Vorgaben wie der Marktkonkurrenz. Die Hoffnung auf mehr Effizienz und Produktivitätsgewinne (siehe Abschnitt 1) wird damit indirekt verstärkt. Zudem findet KI-Einführung auch seitens großer Softwarehersteller mit hoher Marktposition statt, oftmals auch ohne direktes Zutun betroffener Unternehmen oder privater Anwender:innen. Zum Beispiel, wenn KI-Anwendungen über weit verbreitete Betriebssysteme oder Standardsoftware Einzug halten in Arbeitsprozesse. Dadurch entstehen auch neue technologische Abhängigkeiten, derer sich Unternehmen nicht immer bewusst sind (siehe auch Abschnitt 5.5). Diese Art der Technologie-Einführung erschwert auch zusätzlich die konstruktive Einbindung von Arbeitnehmer:innen und Interessensverbänden. Daher bestehen in Folge dann auch weniger Gestaltungsmöglichkeiten für die nutzbringende Integration von KI-Systemen in bestehende Arbeitsabläufe. Insgesamt wird es unter solchen Bedingungen erschwert, spezifische Anwendungszwecke und Ziele festzulegen, die ein konstruktiver KI-Einsatz erfordert. Damit verringert sich auch die Chance, KI-Technologie so in die betriebliche Praxis einzubetten, dass sie zu einem tatsächlichen Mehrwert führt. In diesem Zusammenhang ist laut Arbeitsexpert:innen (u. a. Interviews a, b, g, h) auch wichtig, Mitarbeiter:innen mit niedrigschwelligen Informationen zu sensibilisieren, und mit mehr Transparenz auch die Frage gemeinsam mit der Belegschaft zu behandeln, wie KI-Technologien so eingesetzt werden können, dass sie den Beschäftigten helfen und auch zu Arbeitserleichterungen führen.
 
 ## 5.3 AKZEPTANZ UND AKZEPTABILITÄT
@@ -874,6 +1079,10 @@ Nutzbringende Integration in Arbeitsabläufe wesentlich
 
 KI-Einsatz erzeugt institutionellen und individuellen Handlungsdruck
 
+
+<!-- PAGE 53 -->
+
+
 auf die Belegschaft: KI-Einsatz steht unter dem Primat der Leistungssteigerung. Dabei bleibt aber häufig weitgehend offen, wie diese Erwartung realisiert werden kann (Interviews a, b, d, g, h, i). Zudem erschweren der hohe Abstraktionsgrad von KI-Technologie und Unklarheiten über ihre Funktionsweise den fundierten Umgang damit auf individueller wie institutioneller Ebene. Das Ausschöpfen der Potenziale von KI erfordert aber klare Ziele und Strategien zur Einbettung der Technologie  in  bestehende  Arbeitspraktiken  in  Einklang  mit  organisationalen und sozialen Bedingungen. Daher spielt auch die Vorgehensweise bei der Technologie-Einführung eine zentrale Rolle. Wie konfliktbeladen oder reibungslos der KI-Einsatz erfolgt, hängt nicht nur von der Akzeptanz der Technologie ab, sondern auch von der Akzeptabilität. Beide Faktoren sind eng miteinander verknüpft, haben aber unterschiedliche Bedeutungen. Akzeptanz bedeutet Einverständnis oder  Nicht-Ablehnung,  sagt  als  subjektiver  Faktor  für  sich  genommen  jedoch nichts über die Annehmbarkeit einer Technologie in bestimmten Anwendungskontexten aus (Grunwald 2008; Taebi 2017). Akzeptabilität ist ein Maß für die Angemessenheit des Technologie-Einsatzes in Bezug auf den daraus resultierenden Nutzen und der Sozialverträglichkeit ihrer Anwendung. Eine Technologie kann zwar auf hohe Akzeptanz stoßen, weil sie etwa vielversprechende Potenziale hat oder benutzerfreundlich ist. Aber ihre Nutzung kann dennoch nicht konform mit betrieblichen Anforderungen gehen, keinen praktischen Nutzen bringen, ethische  und  soziale  Probleme  verschärfen,  oder sogar gegen gesetzliche Bestimmungen verstoßen. Zur Vorbeugung dieser Probleme ist daher die nachvollziehbare und sozialverträgliche Gestaltung des Technologieeinsatzes bereits in der Planungsphase entscheidend. Das erleichtert die konstruktive Nutzung der Technologie und die Entwicklung wirksamer Problemlösungsstrategien. Ein weiterer wichtiger Faktor ist hierbei auch die Praktikabilität, also die Eignung des KIEinsatzes in einem bestimmten Anwendungskontext.
 
 Eine damit verbundene große Herausforderung betrifft auch den Faktor Komplexität. Zum einen bieten KI-basierte Technologien Möglichkeiten, die Komplexität von Arbeitsprozessen besser zu bewältigen. Zum Beispiel durch effiziente Unterstützung bei der Datenanalyse und Aufbereitung von Wissen. Zum anderen erhöht KI-Einsatz aber auch die Komplexität (siehe auch Abschnitt 2.3). Das betrifft vor allem auch den unterschätzten zusätzlichen Aufwand bei der Gestaltung und Nutzung von KI, etwa um die Ergebnisqualität zu sichern und Fehler zu vermeiden und ggfs. zu korrigieren. Diese Komplexitätserhöhung kann zu Hindernissen in der effizienten Gestaltung von Arbeitsabläufen führen. Etwa, wenn zusätzliche  Arbeitsschritte  erforderlich  werden,  um  KI-Anwendungen  überhaupt nutzen zu können oder hoher Aufwand zur Fehlerkorrektur von KI-generierten Ergebnissen (siehe Abschnitt 4.2, 5.1). Werden Arbeitsabläufe durch KI-Einsatz ohne ersichtliche Vorteile nur komplexer und komplizierter, wirkt sich das negativ auf die Akzeptanz der Technologie aus. Die Folge können dann Umgehungsstrategien und parallele Arbeitsstrukturen sein und längerfristig Überlastung und Demotivation von Mitarbeiter:innen.
@@ -883,6 +1092,10 @@ Problematisch kann hierbei auch sein, wenn KI-basierte Technologien zu starren  
 Vorgehen bei Technologie-Einführung auch Frage der Akzeptabilität
 
 Zwischen Komplexitätserhöhung und -Bewältigung
+
+
+<!-- PAGE 54 -->
+
 
 Überformalisierung von Abläufen kommt, die zwar kurzfristig mehr Effizienz versprechen, aber  längerfristig zu mehr organisatorischem und prozeduralem Aufwand führen und die Mitarbeiterzufriedenheit senkt. In weiterer Folge hat das auch negative Folgen für die Produktivität von Unternehmen. Es ist daher auch wichtig abzuwägen, ob und inwieweit KI-Einsatz für bestimmte Arbeitsabläufe geeignet ist oder nicht. Andernfalls kann gefühlter oder realer Verlust von Kreativität und Gestaltungsfreiheit auch zu weniger Akzeptanz und Rückgang der Arbeitszufriedenheit führen. Das hat dann auch betriebliche Folgen wie Rückgang von Produktivität.
 
@@ -894,6 +1107,10 @@ Probleme durch zu stark für KI-Einsatz formalisierte Arbeitsabläufe
 
 Erfolgsfaktor transparente und sozialverträgliche Gestaltung
 
+
+<!-- PAGE 55 -->
+
+
 ## 5.4 'VERDECKTE KI': INTRANSPARENZ UND DATENANALYSEN IM HINTERGRUND
 
 Innerbetrieblich entstehen durch Digitalisierung und KI-basierte Anwendungen weitere Herausforderungen. Transparenz ist ein bekanntes Erfordernis an KISysteme und Intransparenz ein vielgenanntes Problem. Neben dem Einsatz zur Unterstützung von Arbeitsprozessen können KI-Systeme auch anderen Zwecken dienen, die nicht ohne weiteres ersichtlich sind. Anwendungen werden immer vernetzter, dadurch werden auch Datenflüsse immer schwerer kontrollierbar. Immer häufiger kommt es zu Formen algorithmischer Erfassung und Auswertung großer Datenmengen im Hintergrund, etwa als Bestandteil von Standardsoftware  wie  großer  Office-Anwendungen  oder  vertriebsunterstützender  Systeme. Problematisch ist insbesondere, wenn personenbezogene Daten automatisiert im Verborgenen mitanalysiert und zur Mitarbeiterkontrolle genutzt werden. Teils gibt es Mikro-Anwendungen in größeren Systemen, die neben ihres Hauptverwendungszwecks scheinbar beiläufig Daten erfassen und auswerten (Interviews a, b, g, h, i). Bereits bestehende Datenschutz-Problematiken können sich so deutlich verschärfen. Expert:innen sehen hier Gefahren unzulässiger Datenerfassungen zur verdeckten Mitarbeiterüberwachung. In manchen Branchen ist das bereits ein evidentes Problem, wie etwa in der Transportlogistik und Lieferdiensten. Studien zeigen zudem wachsende Sorgen und Ängste von Mitarbeiter:innen vor zunehmender  Überwachung  am  Arbeitsplatz  infolge  automatisierter  Datensammlungen im Hintergrund und steigender Nutzung KI-basierter Technologien (Interviews a, b, g, h, i, k; Lane et al. 2023; IFES 2023; Deloitte 2024).
@@ -903,6 +1120,10 @@ Der Einsatz dieser Technologien und der damit verbundene wachsende Bedarf an Dat
 Datenschutzprobleme durch verdeckte Datenauswertungen
 
 Unterschätzter Problembereich: Beiläufige KI-Einführung über Standardsoftware
+
+
+<!-- PAGE 56 -->
+
 
 Der Fall ist beispielhaft für schleichenden Zwang zu proprietären Cloud-Anwendungen und verdeutlicht, welche Probleme damit einher gehen können. Im Fall Office 365 wurde in der Vergangenheit bereits mehrfach (u. a. in Deutschland, den Niederlanden und der EU) behördlich festgestellt, dass die Datensammelpraktiken der Software nicht rechtskonform sind und gegen die Datenschutzgrundverordnung verstoßen (Beiersmann 2018; Dinges 2020; Rosbach 2020; DSK 2022). Im März 2024 zeigte der EU-Datenschutzbeauftragte sogar bei der EU-Kommission Datenschutzverstöße aufgrund rechtswidriger Nutzung von Microsoft 365 auf. 49 Darüber hinaus gibt es erhebliche Datenschutzprobleme in Schulen, wo die Verarbeitung  personenbezogener Daten besonders sensibel ist.  Auch  hier  wurden Datenschutzverletzungen festgestellt und daher Verbote der Software an Schulen gefordert (Rosbach 2020; Krempl 2023; noyb 2024). Mit KI-Einsatz nimmt auch diese Problematik tendenziell noch weiter zu und Lehrerverbände fordern daher Rechtskonformität bei der KI-Nutzung in Schulen (Beer 2024).
 
@@ -921,6 +1142,10 @@ germany.representation.ec.europa.eu/news/eu-kartellvorschriften-kommission-uberm
 Mangelnde Rechtskonformität
 
 Steigende technologische Abhängigkeiten zu KI-Betreibern
+
+
+<!-- PAGE 57 -->
+
 
 speichern und auswerten will. Die Funktion ist als Teil des KI-Assistenten Copilot geplant, der schrittweise in alle Microsoft-Systeme Einzug halten soll. Sicherheitsforschende  äußerten  erhebliche  Bedenken  aufgrund  gravierender  Datenschutzund Sicherheitsprobleme. Dennoch ist derzeit offen, ob die Funktion nicht trotzdem integraler und nicht mehr deaktivierbarer Systembestandteil wird (Standard 2024b; Joos 2024; Warren 2024). In Anbetracht der unterschiedlichen Probleme aufgrund proprietärer Standardsoftware zeichnet sich zudem Bedarf nach OpenSource Alternativen von KI-Systemen ab, die nicht an datengetriebene Geschäftsmodelle gekoppelt sind wie derzeitige marktdominierende Systeme.
 
@@ -944,6 +1169,10 @@ Neue Sicherheitsprobleme und Vulnerabilität kritischer Infrastruktur
 
 Bedarf nach Stärkung innerbetrieblicher Instrumente für Transparenz und Überprüfbarkeit
 
+
+<!-- PAGE 58 -->
+
+
 Grundlagen sind Arbeitgeber:innen dem Betriebsrat gegenüber auskunftspflichtig und müssen Einsicht gewähren. Laut Arbeitsexpert:innen wird diese Bringschuld in der Praxis aber häufig übersehen und muss dann aktiv von Betriebsräten eingefordert werden (Interviews a, b, g, h). Instrumente wie diese sind sehr wichtig, um Transparenz über KI-Einsatz zu schaffen und die Belegschaft klar zu informieren, welche innerbetrieblichen Auswirkungen daraus resultieren. Hier verorten Expert:innen zusätzlichen Bedarf zur Stärkung solcher Instrumente über Regulierungen, die ergänzend zur KI-Verordnung auch die Arbeitsrechte im Umgang mit KI stärken.
 
 ## 5.5 NEUER QUALIFIKATIONSBEDARF ABER UNEINDEUTIGE TÄTIGKEITSBEREICHE
@@ -964,6 +1193,10 @@ Abbau von Arbeitskräften derzeit keine direkte KI-Folge aber Tätigkeiten verla
 
 Neue Qualifikationsprofile aber unkonkrete Aufgabenbereiche
 
+
+<!-- PAGE 59 -->
+
+
 möglichst produktiven Ergebnissen zu kommen. Hier ist allerdings zweifelhaft, ob überlegtere Texteingaben schon ein eigenes Qualifikationsprofil erfordern. Ein Indikator für steigende Nachfrage an Berufen sind einschlägige Stellenausschreibungen. Auf Jobportalen sind aktuell 58  diverse Stellen mit KI-Bezug mit variierenden Schlagworten ausgeschrieben (z. B. AI/Machine Learning Engineer, AI Prompt Engineer, AI/ML Developer, AI Software Engineer, Data Analyst, AI Manager, AI Consultant, KI Enthusiast, Researcher for generative AI usw.). Ob hier AI als Aufhänger für bekannte Jobs in IT und Softwareentwicklung dient oder tatsächlich völlig neue Berufe entstehen, ist dabei nicht direkt ersichtlich. Die Ausschreibungen zeigen aber einen generellen Zuwachs an Fachstellen im IT-Sektor  aufgrund  steigender  Bekanntheit  von  KI-basierten  Technologien.  Welche neuen Qualifikationen und Aufgabenbereiche im Konkreten entstehen, hängt zudem stark von den Anwendungsbereichen und ihren Anforderungen ab. Diese sind wiederum je nach Bereich häufig wage, weil oftmals noch gar nicht klar ist, für  welche  konkreten  Tätigkeiten  KI  tatsächlich  genutzt  wird,  und  wie  sich dadurch die Tätigkeitsbereiche und Qualifikationsprofile mittel- und längerfristig verändern.
 
 Abseits des naheliegend steigenden Bedarfs an technischen Qualifikationen sind auch andere Kompetenzen erforderlich, die aus den neuen Möglichkeiten der Arbeitsgestaltung resultieren (siehe Abschnitt 6). Dabei entstehen auch viele Erleichterungen für Beschäftigte durch neuartige Arbeitsschritte. Etwa neue Möglichkeiten zur Datenauswertung und Qualitätssicherung durch KI-basierte Bilderkennungsverfahren, in der Sprachverarbeitung, der Anlagenverwaltung, oder bei der Instandhaltung und Wartung; z. B. durch die automatisierte Überwachung von Verschleißteilen zur frühzeitigen Wartung und vieles mehr (siehe auch Abschnitt 3). Mit dieser Verschiebung von Arbeitsschritten fallen daher nicht einfach Tätigkeiten weg, sondern es entstehen auch neue Beschäftigungsfelder in anderen Bereichen (Albrecht/Kellermann 2020; OECD 2023; Stowasser 2023). Es deutet daher mittelfristig einiges auf eine weitere Automatisierung und teilweise Reduktion von Routinetätigkeiten und eine Zunahme an Tätigkeiten wie etwa Qualitätsmanagement in KI-gestützten Prozessen hin.
@@ -981,6 +1214,10 @@ Ein Teil von Qualitätssicherungsaufgaben umfasst aber auch in der Öffentlichke
 Arbeitserleichterung führt auch zu neuen Beschäftigungsfeldern
 
 Mittelfristig Zunahme an Aufgaben zur Qualitätssicherung KIgestützter Prozessen
+
+
+<!-- PAGE 60 -->
+
 
 sichten, aussortieren, löschen oder kennzeichnen ('labeling') 61 . Diese weitgehend unsichtbaren, und oftmals prekären Arbeitsformen 62  sind eine Begleiterscheinung der Gig Economy und Plattformökonomie, die mit KI noch weiter zunimmt.
 
@@ -1002,6 +1239,10 @@ Mehr Bedarf nach Kompetenzen zur Analyse und Interpretation
 
 KI kann Arbeit auch zusätzlich belasten
 
+
+<!-- PAGE 61 -->
+
+
 Technologieeinsatz dazu führt, dass Wissensarbeiter:innen zu wenig Freiräume bei der Gestaltung ihrer Arbeit haben und KI-Systemen 'zuarbeiten'. Im Idealfall führt KI-Einsatz zur Entlastung bei Routineaufgaben, wodurch mehr Zeit für qualitative Aufgaben zur Verfügung steht. Dazu braucht es aber unter Einbindung von Betriebsräten auch klare Regeln und ein klares Bekenntnis dazu, dass die Zeitersparnis  konstruktiv  zur  Verbesserung  der  Arbeitsqualität, und  nicht  nur  zu weiteren Kostensenkungen und Personalabbau genutzt wird (Interviews a-d, g-i; von Richthofen et al. 2023).
 
 Es braucht daher neue, alternative Ansätze, wie KI-basierte Technologien konstruktiv und sinnstiftend in Arbeitsabläufe integriert werden können, um einen Mehrwert für Betriebe und Beschäftigte zu schaffen. Damit geht auch eine teilweise Umorganisation von Tätigkeiten und Arbeitsprozessen einher, zu der auch eine Klärung des konkreten Bedarfs an zusätzlichen Fähigkeiten und neuen Qualifikationen zählt. Es entstehen also neue Tätigkeiten und Rollen, die auch neue Fähigkeiten erfordern. Wie in Abschnitt 5.1 ausgeführt, ist eine wesentliche Grundvoraussetzung für den sinnvollen KI-Einsatz zunächst die Klärung des Verwendungszwecks. Also z. B.: Welche Tätigkeit oder die Lösung welches Problems sollen mit KI unterstützt werden?
@@ -1011,6 +1252,10 @@ Das impliziert Analysen des Ist-Zustands und des konkreten Bedarfs nach KI-Unter
 Klares Bekenntnis zur Arbeitsverbesserung erforderlich
 
 Ist-Zustandsanalysen zur Klärung des konkreten KI-Bedarfs
+
+
+<!-- PAGE 62 -->
+
 
 ## 6 HANDLUNGSFÄHIGKEIT MIT CRITICAL AI LITERACY STÄRKEN
 
@@ -1025,6 +1270,10 @@ Neue Fragen der Balance zwischen Handlungsfähigkeit &amp; Arbeitsorganisation
 Der Mensch ist kein 'Zuarbeiter' von KI
 
 Grundbedingung für praktischen Nutzen: KI-Systeme zur Stärkung von Handlungsfähigkeit
+
+
+<!-- PAGE 63 -->
+
 
 die die Fähigkeit beinhaltet, die Grundfunktionalität eines KI-basierten Systems und seiner Eignung oder Nicht-Eignung in bestimmten Anwendungskontexten zu verstehen (Strauß 2021a). Die Entwicklung technischer Fähigkeiten zur KINutzung steht dabei nicht im Vordergrund. Technische Fähigkeiten wie etwa zur Entwicklung oder Anpassung von KI-Systemen nötig, bleiben auch weiterhin Bestandteil technischer Disziplinen wie Informatik oder anderen Berufen mit ITBezug.  Vielmehr  geht  es  darum,  dass  auch  Anwender:innen  und  Entscheidungsträger:innen ohne spezifische technische Fachexpertise befähigt werden, KI-Systeme zu verstehen, zu nutzen und deren Ergebnisse einzuschätzen und hinterfragen zu können. Ein wesentlicher Bestandteil von CAIL ist daher der Aufbau von Bewusstsein, Wissen und Erfahrung im Umgang mit KI-basierten Technologien und den damit verbundenen Möglichkeiten, Grenzen und Herausforderungen. Das sind wichtige Voraussetzungen für den konstruktiven und sozialverträglichen KI-Einsatz für alle betrieblichen Akteure (d. h. Anwender:innen, Entwickler:innen, Entscheidungsträger:innen und  Interessensvertretungen)  und letztlich auch der von KI-Einsatz Betroffenen.
 
@@ -1041,6 +1290,10 @@ Auch Menschen ohne technische Expertise müssen KI-Systeme verstehen und hinterf
 
 Wesentliche Komponenten von Critical AI Literacy
 
+
+<!-- PAGE 64 -->
+
+
 - -Bewältigungsfähigkeit : Problemlösungskompetenz im Umgang mit unklarem Systemverhalten, fehlerhaften, irreführenden oder fragwürdigen Ergebnissen
 - -Beurteilen des praktischen Nutzens und der Akzeptabilität zum  Beispiel:  Ist  KI-Ergebnis  im  konkreten  Anwendungsfall  brauchbar und akzeptabel oder nicht?
 - -Verwenden oder zu verwerfen von Ergebnissen, Korrektur und ggfs. Veranlassung  weiterer  Überprüfung  des  KI-Systems  als  informierte,  bewusste Entscheidung
@@ -1050,6 +1303,10 @@ D. h. im Idealfall werden Anwender:innen darin ermächtigt, zu beurteilen, inwie
 
 
 Ermächtigung von Anwender:innen
+
+
+<!-- PAGE 65 -->
+
 
 ## 6.1 CAIL-FRAMEWORK
 
@@ -1062,6 +1319,10 @@ Um CAIL innerbetrieblich zu stärken, kann der folgende Bewertungsrahmen (Strau�
 Der Ansatz basiert auf drei verschiedenen, miteinander verbundenen analytischen Ebenen, um zwischen technischen, operativen und ethischen Einflussfaktoren der Funktionalität eines KI-Systems differenzieren zu können. Die technische Ebene bezieht sich auf die Beschaffenheit des KI-Systems und seiner technischen Funktionsweise: D. h. die Art des Datenmodells und welche Daten, in welcher Form im KI-System verarbeitet werden. Relevante Aspekte sind hier z. B.: Basiert
 
 Technische Grundfunktionalität beeinflusst Systemverhalten
+
+
+<!-- PAGE 66 -->
+
 
 das Datenmodell auf vortrainierten Trainingsdaten? Woher stammen die Daten aus internen oder externen Quellen? Wie geht das KI-System mit neuen Daten um? Gibt es externe Systeme, die zusätzliche Daten einspeisen? Z. B. über Sensoren andere Anwendungen, die zu einer erhöhten Dynamik des Datenbestands führen. Zudem beeinflusst die Art des Machine Learning-Verfahrens das Systemverhalten. Es macht einen wesentlichen Unterschied, ob das KI-System auf überwachtem, unüberwachtem, verstärkendem oder vertiefendem Lernen basiert (siehe dazu genauer Abschnitt 2). Die technische Grundfunktionalität beeinflusst auch den Eignungsgrad und das Verhalten des Systems im operativen Betrieb, also wie es in bestimmten Anwendungsfällen funktioniert.
 
@@ -1080,6 +1341,10 @@ Hauptindikatoren zur Bewertung des Systemverhaltens
 
 Zusammenspiel der Bewertungsebenen unterstützt differenzierte Analyse
 
+
+<!-- PAGE 67 -->
+
+
 schutz- und Sicherheitsprobleme verursachen oder ethische Probleme verstärken. Die dritte Ebene bezieht sich daher auf rechtliche und ethische Faktoren mit drei Hauptfaktoren Rechtmäßigkeit, Legitimität und Notwendigkeit des KI-Einsatzes.
 
 Diese Unterscheidung zwischen den verschiedenen Ebenen dient auch dazu, eine  differenzierte  Analyse  zu  ermöglichen und  nicht  jeden  Anwendungsfall nach breiten ethischen Kriterien bewerten zu müssen, die zwar wichtig sind, aber nicht immer hilfreich in der Arbeitspraxis für sämtliche Tätigkeiten Relevanz haben. (z. B. sind Fragen zur menschlichen Autonomie bei Beurteilung eines Bilderkennungssystems nicht vordergründig relevant). Es empfiehlt sich, die Bewertung nicht nur einmal, sondern für unterschiedliche Anwendungsfälle mehrfach durchzuführen, um ein genaueres Verständnis zur Funktionsweise eines KI-Systems zu erlangen.
@@ -1087,6 +1352,10 @@ Diese Unterscheidung zwischen den verschiedenen Ebenen dient auch dazu, eine  di
 Dieser Bewertungsrahmen dient hier vor allem als praktikables Werkzeug in Betrieben, um sich rasch einen Überblick zu verschaffen, worauf zu achten ist, wenn ein KI-System eingesetzt wird oder werden soll. Er kann etwa als unterstützendes Instrument für Betriebsräte verwendet werden, um im Unternehmen zu einem besseren Grundverständnis über den KI-Einsatz und den damit verbundenen innerbetrieblichen Herausforderungen zu gelangen. Das kann eine einfache Grundlage für interne Schulungen sein oder auch als Entscheidungshilfe bei der Abwägung, ob und wie KI-Systeme eingesetzt werden sollen - idealerweise im  gemeinsamen  Austausch  zwischen  Arbeitgeber  und  Belegschaft.  Insofern kann es einen Beitrag zur sozialverträglichen Gestaltung und Nutzung KI-basierter Technologien leisten.
 
 CAIL-Framework als Instrument zur Vermittlung kritischer KI-Kompetenz
+
+
+<!-- PAGE 68 -->
+
 
 ## 6.2 HANDLUNGSEMPFEHLUNGEN FÜR BETRIEBE
 
@@ -1099,6 +1368,10 @@ Abbildung 5: Entscheidungshilfe bei der KI-Einführung
 ## MEHRAUFWAND DURCH KI-EINSATZ NICHT UNTERSCHÄTZEN
 
 Die Art und Weise, wie KI-Systeme in betriebliche Abläufe integriert sind, beeinflusst ihren Mehrwert. Unternehmen, die KI-Einsatz anstreben, sollten sich zunächst bewusst machen, dass damit nicht weniger, sondern zunächst deutlich mehr Arbeitsaufwand verbunden ist. Das betrifft nicht nur die Planung, sondern die gesamte Prozesskette von der Planung, Einführung, bis zur Nutzung. Zudem kann aufgrund der Besonderheiten von KI-Systemen auch ein erhöhter Anpassungsbedarf entstehen, damit die Systeme sinnvoll und mit praktischem Nutzen in Arbeitsabläufe integriert werden können.
+
+
+<!-- PAGE 69 -->
+
 
 ## KI-EINSATZ REALISTISCH PLANEN UND BEDARF VORAB KLÄREN
 
@@ -1119,6 +1392,10 @@ KI-Einsatz bringt auch mehr Komplexität und Veränderungsdynamik in Arbeitsproz
 ## BEDARFSANALYSEN, UM ERWARTETE VORTEILE AUF IHRE REALISIERBARKEIT ZU PRÜFEN
 
 Nach erfolgreicher Einführung können KI-Systeme helfen, Komplexität in Arbeitsprozessen im Idealfall besser zu bewältigen, indem sie zum Beispiel: Beschäftigte bei  Routineaufgaben unterstützen und  entlasten,  entlang  der  Wertschöpfungskette Arbeitsprozesse optimieren helfen oder brauchbare Zusatzinformationen für Entscheidungsprozesse generieren. Gelingt das, sind u. a. Effizienz- und Produktivitätsgewinne möglich. Bevor ein KI-System eingeführt wird, sollte aber im
+
+
+<!-- PAGE 70 -->
+
 
 Rahmen von Bedarfsanalysen geklärt werden, inwieweit das auch tatsächlich realisierbar ist in konkreten Arbeitsprozessen.
 
@@ -1142,6 +1419,10 @@ Beim Nutzungsprozess sind menschliche (und teils manuelle) Arbeitsschritte zur D
 
 Es ist klar, dass mittelfristig der Bedarf nach Kompetenzen und Fachwissen im Umgang mit KI weiter zunimmt. Der Kompetenzaufbau sollte aber nicht nur auf technische Skills und Knowhow beschränkt sein. Vielmehr umfasst kritische KIKompetenz  die  Fähigkeit,  KI-generierte  Ergebnisse  und  ihre  Aussagekraft  in
 
+
+<!-- PAGE 71 -->
+
+
 situativen  Kontexten zu  erkennen,  zu  verstehen  sowie  ihre  Brauchbarkeit  und Tauglichkeit in konkreten Arbeitsprozessen zu beurteilen (siehe Abschnitt 6). Die Etablierung und Stärkung kritischer KI-Kompetenzen ist ein zentraler Erfolgsfaktor für den KI-Einsatz.
 
 ## BETRIEBLICHE MITBESTIMMUNG ZULASSEN UND AKTIV FÖRDERN
@@ -1149,6 +1430,10 @@ situativen  Kontexten zu  erkennen,  zu  verstehen  sowie  ihre  Brauchbarkeit  
 Die aktive Einbindung von Betriebsräten und die Berücksichtigung von Mitarbeiterinteressen, Sorgen und Ängsten ist ein zentraler Aspekt zur Förderung von Akzeptanz, Akzeptabilität und Vertrauen bei der KI-Einführung und -Nutzung. Ein gemeinsam mit der Belegschaft erarbeitetes Grundverständnis von KI-Einsatz im Unternehmen unter Beachtung der damit verbundenen Potenziale, Möglichkeiten, Risiken und Grenzen kann erheblich zur Verbesserung der Arbeitsqualität,  Mitarbeiterzufriedenheit und damit auch der Produktivität beitragen. Betriebsräte haben hierbei eine zentrale Funktion, die gerade im Zuge des KI-Einsatzes gestärkt werden sollte, um einen bewussten und konstruktiven Umgang mit diesen Technologien zu etablieren.
 
 Die Berücksichtigung der genannten Faktoren ist wesentlich, um KI-Einsatz so zu gestalten, dass ein praktischer Nutzen entsteht. Andernfalls besteht die Gefahr, dass Komplexität und Aufwand unterschätzt werden. Das kann zu steigender Verunsicherung im Betrieb und zusätzlicher Arbeitsbelastung führen und damit auch wenig Akzeptanz für den Technologieeinsatz. In Summe kann sich das letztlich negativ auf das Vertrauen ins Unternehmen und die Produktivität auswirken. Zentrale Grundvoraussetzung für den konstruktiven Einsatz KI-basierter Technologien ist daher auch die sozialverträgliche Einbindung in die betriebliche Arbeitsorganisation.
+
+
+<!-- PAGE 72 -->
+
 
 ## 7 ZUSAMMENFASSUNG UND AUSBLICK
 
@@ -1160,6 +1445,10 @@ KI kann Arbeit nicht abnehmen, doch sie verändert die Arbeitsorganisation
 
 Mehrwert mit KI braucht Klarheit über Nutzen und Integrierbarkeit in Arbeitspraktiken
 
+
+<!-- PAGE 73 -->
+
+
 Das Bewusstsein für diese Grundanforderungen ist je nach Anwendungsbereich unterschiedlich ausgeprägt. Wie in Abschnitt 5 gezeigt, besteht eine Art Kluft zwischen der Nutzung von KI als bewusstes Werkzeug in einem Expertensystem und als 'Nebenbei'-Technologie ohne klaren Tätigkeitsbezug und klare Qualitätsanforderungen. In ersterem ist tendenziell ein relativ hohes Maß an Fachexpertise  und  Problembewusstsein  gegeben.  Das  begünstigt  die  Einführung und Integration der Technologie in Einklang mit bestehenden Arbeitspraktiken zur Unterstützung konkreter Tätigkeiten. So lässt sich mit dem Einsatz von KISystemen auch ein praktischer Nutzen erzielen. Wird KI ohne bestimmte Expertise und konkrete Planung für die Integration in Arbeitsprozesse einführt, sind Probleme in der praktischen Nutzung deutlich wahrscheinlicher. Zum einen kann mangelhafte Einbeziehung der Arbeitnehmer:innen dazu führen, dass Anwendungsdefizite erst nach Technologie-Einführung sichtbar werden. Erfolgt der KIEinsatz zu vorschnell, können neue technisch-organisatorische Abhängigkeiten entstehen, die sich eher belastend auf die Effizienz der Arbeitsabläufe und damit auch negativ auf die Akzeptanz und Akzeptabilität im Unternehmen auswirken (Abschnitt 5.3).
 
 Ein wachsendes und unterschätztes Problemfeld ist die schleichende Einführung von KI über Standardsoftware wie z. B. weit verbreitete Betriebssysteme, die sukzessive  KI-Funktionen  in  verschiedene  Office-Anwendungen  integrieren (siehe Abschnitt 5.4). Das kann erhebliche Folgen für die Arbeitsorganisation quer durch alle möglichen Branchen haben. Neben dem Einsatz zur Unterstützung von Arbeitsprozessen können KI-Systeme auch anderen Zwecken dienen, die nicht ohne weiteres ersichtlich sind. Anwendungen werden immer vernetzter, dadurch werden auch Datenflüsse immer schwerer kontrollierbar. Generell können verdeckte KI-Systeme zu erheblichen Problemen in Unternehmen führen. Neben  Gefahren  zunehmender  Mitarbeiterüberwachung  und  Datenschutzproblemen (sei es proaktiv durch Arbeitgeber oder verdeckt über zusätzlich in Anwendungen erfasste Daten) können dadurch auch zusätzliche Probleme für die Sicherheit entstehen. Sind etwa zentrale Geschäftsprozesse abhängig von KI-Systemen, kann das die Vulnerabilität des Unternehmens erhöhen. Vor allem, wenn KI-Systeme  zu  einem  Bestandteil  der  unternehmensinternen  kritischen  Infrastruktur werden. Aufgrund der starken Marktmacht einzelner großer Softwareanbieter besteht hier i.d.R. ein hohes Abhängigkeitsverhältnis. Die meisten Betriebe sind auf diese Systeme angewiesen und haben daher oftmals nur wenig Möglichkeiten zur Mitgestaltung, um KI-Anwendungen abgestimmt auf betriebliche Anforderungen nutzbringend einzusetzen. Das kann sich negativ auf die notwendige Kontextualisierung auswirken, also die gezielte Einbindung von KIAnwendungen für bestimmte Nutzungskontexte entsprechend den Anforderungen der betroffenen Arbeitsabläufe. Die Rolle von Standardsoftware bei der KIEinführung verdeutlicht auch den wachsenden Bedarf nach Open-Source KI-Systemen.  Denn  die  Verbreitung  von  KI  ist  letztlich  auch  Bestandteil  neuer  Geschäftsmodelle großer Technologiebetreiber. Unternehmen sollten daher auch bedenken, welche innerbetrieblichen Daten von KI-Systemen verarbeitet werden. Im Zuge der Entscheidung ob KI eingeführt werden soll, empfiehlt sich daher auch, Open-Source Varianten für KI-Anwendungen in Erwägung zu ziehen, um einige der mit Standardanwendungen einher gehenden Probleme zu vermeiden.
@@ -1167,6 +1456,10 @@ Ein wachsendes und unterschätztes Problemfeld ist die schleichende Einführung 
 Fachexpertise und Problembewusstsein begünstigen praktischen Nutzen
 
 Unterschätztes Problemfeld: Schleichende KI-Einführung über Standardsoftware
+
+
+<!-- PAGE 74 -->
+
 
 Der erzielbare Mehrwert (Abschnitt 5.1) und die Auswirkungen auf die Arbeitsorganisation hängen wesentlich von der Art der Nutzung von KI-Anwendungen und ihrer Integration in konkrete Tätigkeiten ab. Abseits hoher Erwartungen and hohe Automationsgrade mit KI ist das konkrete Ausmaß, wie viel einer Tätigkeit im betrieblichen Arbeitskontext mit KI automatisiert werden soll, gestaltbar. Ein grundsätzlich hoher KI-Automationsgrad impliziert noch keinen praktischen Nutzen. D. h. es gilt zu unterscheiden zwischen dem, was eine KIAnwendung für bestimmte Arbeitsschritte leisten kann, und inwieweit das auch in der betrieblichen Arbeitspraxis sinnvoll umsetzbar ist. Also inwieweit die KIAnwendung in bestehende Arbeitsabläufe integrierbar ist. Entgegen gängiger Annahmen eignet sich KI weniger für komplexe Aufgaben, sondern vielmehr für einfachere, aber mitunter aufwändige Routinetätigkeiten. Hierbei ist auch die Form der  Wissensarbeit  und  damit  verbundene  Tätigkeiten  wesentlich.  Wie  in  Abschnitt 3 ausgearbeitet, umfasst Wissensarbeit i.d.R. eine Kombination aus 'manuellen' bzw. repetitiven Routinetätigkeiten und komplexen Aufgaben. Letztere sind nicht ohne weiteres mit KI automatisierbar. Der konstruktive, sinnvolle Einsatz von KI in der Wissensarbeit ist möglich, wenn die Einbettung der Technologie  derart  gelingt,  dass  Routineaufgaben  automatisiert  werden,  sodass  Freiräume für komplexere Aufgaben entstehen. Problematisch wird es, wenn KI-Einsatz dazu führt, dass Wissensarbeit überformalisiert und monotonisiert wird. Das kann zu Demotivation führen und folglich auch zu geringerer Produktivität. Damit stünde dann auch die stabilisierende Funktion von Wissensarbeit in Unternehmen in Frage.
 
@@ -1182,6 +1475,10 @@ Critical AI Literacy wird zur Aufgabe von Wissensarbeit
 
 Grundanforderungen an KI-Systeme und deren Nutzung
 
+
+<!-- PAGE 75 -->
+
+
 Beurteilung  des  praktischen  Nutzens  und  der  Grenzen  von  KI-Anwendungen und KI-generierten Ergebnissen benötigt wird. Die Handlungsempfehlungen in Abschnitt 6.2 richten sich vor allem an Unternehmen und Betriebsräte, die noch wenig Erfahrung mit KI-basierten Technologien haben und einen Überblick zu relevanten Faktoren benötigen, was es bei der Entscheidung, ob und wie ein KISystem eingeführt werden soll, zu bedenken gilt. Diese Instrumente trägen idealerweise auch dazu bei, dass Betriebe gemeinsam mit Belegschaft und Interessensvertretungen zu einer konstruktiven, sozialverträglichen Gestaltung und Nutzung KI-basierter Technologien gelangen.
 
 Es besteht wenig Zweifel, dass KI die Organisation von Arbeit in den nächsten Jahren deutlich verändern wird. Bei genauerer Betrachtung ist das Ausmaß der weitgehend angekündigten Revolution oder Disruption der Arbeitswelt jedoch in vielerlei Hinsicht offen. Zudem gibt es je nach Bereich unterschiedlich ausgeprägte  Diskrepanzen  zwischen  hohen  Erwartungen  und  teils  relativ  geringem Realisierungsgrad. Das zeigt sich auch in den Nutzungszahlen von KI-Technologien, die zwar langsam steigen, aber zugleich wachsen auch die Sorgen vor Verschlechterung der Arbeitsbedingungen. Es ist daher nicht ausgeschlossen, dass auf  die  hohe  Erwartungshaltung mittelfristig  eine  gewisse  Ernüchterung folgt. Denn trotz enormer Potenziale steht der KI-Einsatz in vielen Bereichen erst am Anfang und teils ist noch wenig praktischer Nutzen sichtbar.
@@ -1191,6 +1488,10 @@ Die Transformation der Wissensarbeit mit KI ist in vielerlei Hinsicht noch am An
 Diskrepanz zwischen hohen Erwartungen und unklarem Realisierungsgrad
 
 Gesellschaftlicher Lernprozess über die konstruktive Nutzung von KI im Gange
+
+
+<!-- PAGE 76 -->
+
 
 ## 8 LITERATUR
 
@@ -1216,6 +1517,10 @@ https://www.t-online.de/auto/elektromobilitaet/elektroauto/id\_100046900/systema
 
 0754e419e577/ki\_bildungssystem.pdf .
 
+
+<!-- PAGE 77 -->
+
+
 - Buchanan, B.G. (2005), A (Very) Brief History of Artificial Intelligence. AI Mag., 26, 53-60.
 - Chibanguza K., Kuß, C., Steege, H. (2022), Künstliche Intelligenz: Recht und Praxis automatisierter und autonomer Systeme. 1. Auflage. Nomos: Baden-Baden.
 - Cunnigham, A. (2023), Microsoft 365's AI-powered Copilot is like an omniscient version of Clippy. Ars Techica 16.03., https://arstechnica.com/information-technology/2023/03/microsoft-365s-aipowered-copilot-is-like-an-omniscient-version-of-clippy/ .
@@ -1240,6 +1545,10 @@ https://www.t-online.de/auto/elektromobilitaet/elektroauto/id\_100046900/systema
 - Emmanouilidis, C., Pistofidis, P., Bertoncelj, L., Katsouros, V., Fournaris, A., Koulamas, C., Ruiz-Carcel, C. (2019), Enabling the human in the loop: Linked data and knowledge in industrial cyber-physical systems, Annual Reviews in Control, 47, pp. 249-265.
 - Floridi, L. et al. (2018), AI4People - an ethical framework for a good AI society. Opportunities, risks, principles, and recommendations. In: Minds &amp; Machines 28, pp. 689-707.
 - Frank, N. (2024), Washington Post, Virgina Tech collaborate on AI news search tool. Virgina Tech Sept. 9, https://news.vt.edu/articles/2024/09/washington-post-virgnia-tech-ai-news-climateanswers.html .
+
+
+<!-- PAGE 78 -->
+
 
 - Frohm, J.; Lindström, V.; Winroth, M.; Stahre, J. (2008), Levels of Automation in Manufacturing. Ergon. Int. J. Ergon. Hum. Factors, 30, 181-207.
 - Funer, F. (2022), Accuracy and Interpretability: Struggling with the Epistemic Foundations of Machine Learning-Generated Medical Information and Their Practical Implications for the Doctor-Patient Relationship. Philosophy &amp; Technology (2022) 35: 5, https://doi.org/10.1007/s13347-022-00505-7 .
@@ -1268,6 +1577,10 @@ https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy
 - Hohenwalde, C.E., Wahl, M., Lehmkuhl, L. (2024), Kann ChatGPT komplexe wissenschaftsjournalistische Texte verständlich machen? Fehler bei der automatischen Übersetzung mit ChatGPT in einfache Sprache. Karlsruhe Institut für Technologie. DOI: 10.5445/IR/1000174282 https://publikationen.bibliothek.kit.edu/1000174282 .
 - Hosbach, W. (2024), Schlechte Code-Qualität durch die KI-Assistenten GitHub Copilot und ChatGPT Heise online, 26.01., https://www.heise.de/news/Schlechte-Code-Qualitaet-durch-die-KI-AssistentenGitHub-Copilot-und-ChatGPT-9609271.html .
 
+
+<!-- PAGE 79 -->
+
+
 - Hube, G. (2005), Beitrag zur Beschreibung und Analyse von Wissensarbeit. Heimsheim: Jost Jetter. IAB - Institut für Arbeitsmarkt- und Berufsforschung (2021). Job Futoromat https://job-futuromat.iab.de/ ; Zuletzt abgerufen: 16.03.2022.
 - ifb (2024), Die unsichtbaren Helden der Künstlichen Intelligenz: Wie Klickarbeiter die Grundlage für KI legen und dabei oft vergessen werden. 06.02., https://www.betriebsrat.de/news/kuenstlicheintelligenz/die-unsichtbaren-helden-der-kuenstlichen-intelligenz-3073557 .
 - IFES - Institut für empirische Sozialforschung (2023), Digitalisierung: 74 % befürchten mehr Überwachung am Arbeitsplatz https://www.arbeiterkammer.at/interessenvertretung/wirtschaft/ konsument/Presseunterlage\_20230202.pdf .
@@ -1286,6 +1599,10 @@ https://ec.europa.eu/digital-single-market/en/news/ethics-guidelines-trustworthy
 - LeCun, Y.; Benigo, Y.; Hinton, G. (2015), Deep Learning. Nature, 521, 436-444.
 - Leible, S., Gücük, G-L., Simic, D., von Brackel-Schmidt, C., Lewandowski, T. (2024), Zwischen Forschung und Praxis: Fähigkeiten und Limitationen generativer KI sowie ihre wachsende Bedeutung in der Zukunft. HMD Praxis der Wirtschaftsinformatik (2024) 61:344-370. https://doi.org/10.1365/s40702-024-01050-x .
 - Li, M., Zhang, S., Liu, Y., Chen, K. (2024), NeedleBench: Can LLMs Do Retrieval and Reasoning in 1 Million Context Window? https://arxiv.org/pdf/2407.11963 .
+
+
+<!-- PAGE 80 -->
+
 
 - Liu, N.F., Lin, K., Hewitt, J., Paranjape, A., Bevilacqua, M., Petroni, F., Liang, P. (2023), Lost in the Middle: How Language Models Use Long Contexts, https://arxiv.org/pdf/2307.03172 https://the-
 
@@ -1335,6 +1652,10 @@ https://www.nytco.com/press/introducing-the-a-i-initiatives-team/
 
 - OECD (2018). Automation, skills, use and training. OECD social, employment and migration WP No. 202. OECD (2023), The Impact of AI on the Workplace: Evidence from OECD Case Studies of AI Implementation. OECD social, employment and migration working papers No. 288. JT03533166 https://one.oecd.org/document/DELSA/ELSA/WD/SEM%282023%297/en/pdf .
 
+
+<!-- PAGE 81 -->
+
+
 - ORF (2024), ORF gewinnt mit 'AiDitor' europäischen Technologie- und Innovations-Award. ORF Public Value 07.09., https://zukunft.orf.at/show\_content.php?sid=151&amp;blog\_id=363&amp;blog\_mode=single .
 - Osoba, O.; Welser, (2017), I.V.W. An Intelligence in Our Image: The Risks of Bias and Errors in Artificial Intelligence; RAND Corporation.
 - Ozkaya, I. (2023), The Next Frontier in Software Development: AI-Augmented Software Development Processes. IEEE Software (40)4, pp. 4-9,, doi: 10.1109/MS.2023.3278056.
@@ -1365,6 +1686,10 @@ https://www.axelspringer.com/en/ax-press-release/axel-springer-and-openai-partne
 - Statistik Austria (2024), Nutzung von künstlicher Intelligenz in Unternehmen innerhalb eines Jahres fast verdoppelt https://www.statistik.at/fileadmin/announcement/2024/10/20241016IKTU2024.pdf .
 - Stowasser, S. (2023), Künstliche Intelligenz (KI) und Arbeit: Leitfaden zur soziotechnischen Gestaltung von KI-Systemen. Ifaa-Edition, Institut für angewandte Arbeitswissenschaft, Springer Vieweg.
 
+
+<!-- PAGE 82 -->
+
+
 - Strauß, S. (2018), From big data to deep learning. A leap towards strong AI or 'intelligentia obscura'? In: Big Data and Cognitive Computing 2 (3), 1-19. https://www.mdpi.com/2504-2289/2/3/16 .
 - Strauß, S. (2021a), 'Don't let me be misunderstood': Critical AI literacy for the constructive use of AI technology. TATuP - Zeitschrift für Technikfolgenabschätzung in Theorie und Praxis 30(3), 44-49. https://doi.org/10.14512/tatup.30.3.44 .
 - Strauß, S. (2021b), Deep automation bias. How to tackle a wicked problem of AI? In: Big Data and Cognitive Computing 5(2), 1-14. https://doi.org/10.3390/bdcc5020018 .
@@ -1394,9 +1719,17 @@ https://unesdoc.unesco.org/ark:/48223/pf0000381137 .
 - Weiß, E.M. (2024), Österreichische Arbeitsagentur veröffentlicht fragwürdigen KI-Chatbot. Heise online, 05.01., https://www.heise.de/news/Oesterreichische-Arbeitsagentur-veroeffentlichtfragwuerdigen-KI-Chatbot-9588098.html .
 - Weizenbaum, J. (1976), Computer Power and Human Reason: From Judgement to Calculation; W. H. Freeman: San Francisco, CA, USA, 1976.
 
+
+<!-- PAGE 83 -->
+
+
 Wilhelm, K. (2024), KI und Film - was hat sich seit dem Hollywood-Streik getan? NDR online, 11.06., https://www.ndr.de/kultur/film/KI-und-Film-was-hat-sich-seit-dem-Hollywood-Streikgetan,kiundfilm100.html . Wilkens, A. (2023), Bild-Zeitung: KI soll das Layout machen. Heise 20.06. https://www.heise.de/news/KI-Bild-Zeitung-setzt-auf-Kuenstliche-Intelligenz-9192608.html . Wilkens, U. (2020), Artificial intelligence in the workplace - A double-edged sword. International Journal of Information and Learning Technology, 37(5): 253-265. Willke, H. (1998), Organisierte Wissensarbeit. Zeitschrift für Soziologie, Jg. 27, Heft 3, Juni 1998, S. 161-177. https://ams-forschungsnetzwerk.at/downloadpub/organisierte%20wissensarbeit.pdf . Wu, T-H., Biamby, G., Quenum, J., Gupta, R., Gonzalez, J.E., Darrell, T., Chan, D.M. (2024), Visual Haystacks: Answering Harder Questions About Sets of Images. https://arxiv.org/abs/2407.13766 . Yi; Y. (2021), Establishing the concept of AI literacy: Focusing on competence and purpose. European Journal of Bioethics 12(2):353-368. DOI: 10.21860/j.12.2.8 . Zhang et al. (2024), Multimodal Self-Instruct: Synthetic Abstract Image and Visual Reasoning Instruction Using Language Model. https://arxiv.org/abs/2407.07053 .
 
 Alle URLs zuletzt aufgerufen am 30.10.2024.
+
+
+<!-- PAGE 84 -->
+
 
 ÖAW
 

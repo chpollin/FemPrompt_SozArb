@@ -1,10 +1,11 @@
 ---
 source_file: Schönauer_2025_Akzeptanz_von_KI_und_organisationale.pdf
-conversion_date: 2026-02-03T09:20:45.271857
+conversion_date: 2026-02-03T18:52:01.187389
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Anna-Lena Schönauer Hochschule Emden/Leer, Emden, Deutschland
@@ -42,6 +43,10 @@ Die Technikakzeptanz zeichnet sich durch eine positive Einstellung gegenüber ei
 .
 
 .
+
+
+<!-- PAGE 2 -->
+
 
 .
 
@@ -85,6 +90,10 @@ Artificial intelligence (AI) · Digitalisation · Technology acceptance · Digit
 
 Die Organisationen der Sozialen Arbeit bedingen ihrerseits die Voraussetzungen der Nutzung von KI für die Sozialarbeitenden. Grundsätzlich sehen sich Organisationen mit verschiedenen Umwelterwartungen und damit einem gewissen Legitimationsdruck in einer zunehmend digitalen Welt konfrontiert (vgl. Helbig 2018). Zugleich stehen professionelle Fachkräfte und Organisationen in einem Wechselverhältnis, in welchem die Fachkräfte die organisationalen Strukturen und die Organisationen die Arbeitsabläufe beeinflussen (vgl. Hall 1968). Schein und Schein gehen darüber sogar hinaus, indem sie annehmen, dass die Kultur einer Organisation, sprich die in der Organisation vorherrschenden Werte und Normen, sowohl einen Einfluss auf die Handlungspraktiken als auch auf die Einstellungen ausüben. Eine zentrale Bedeutung bei der Schaffung und Pflege der Werte und Normen wird den Führungskräften beigemessen (vgl. Schein und Schein 2018). Dieser Annahmen folgend hieße dies, dass die Technikakzeptanz und Kompetenz der Führungskräfte zentrale Voraussetzungen für die Akzeptanz und Nutzung von KI durch die Sozialarbeitenden darstellen. Ausdruck verleihen und Einfluss entfalten kann sich diese u. a. in der Auswahl der eingesetzten Technologien und wie die Mitarbeiter:innen mit den Technologien vertraut gemacht wer-
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 den. Eine weitere wichtige Voraussetzung für die Nutzung von KI ist somit das Angebot und die Qualität von Fort- und Weiterbildungen, um Kompetenzen zum Umgang sowie Bedenken und offene Fragen beim Einsatz der Technologie zu klären. In diesem Zusammenhang stellen die finanziellen und personellen Ressourcen einer Organisation insbesondere im Sozialsektor eine weitere zentrale Voraussetzung dar (vgl. Kreidenweis und Wolff 2024, S. 79f.).
@@ -112,6 +121,10 @@ In den Einrichtungen, in denen die Befragten tätig sind, spielt das Thema KI na
 .
 
 .
+
+
+<!-- PAGE 4 -->
+
 
 .
 
@@ -150,6 +163,10 @@ Helbig, C. (2018). Legitimationsdruck in einer Kultur der Digitalität. Eine org
 Initiative D21 (2024). D21-Digital-Index 2023/24. Jährliches Lagebild zur Digital Gesellschaft. Berlin: Initiative D21.
 
 Jones, C. R., &amp; Bergen, B. K. (2024). People cannot distinguish GPT-4 from a human in a Turing test. http://arxiv.org/pdf/2405.08007v1
+
+
+<!-- PAGE 5 -->
+
 
 - Klinger, S., Mayr, A., Sackl-Sharif, S., &amp; Brossmann-Handler, E. (2023). Zur (nicht) selbstverständlichen Nutzung digitaler Technologien in der Sozialen Arbeit. Soziale Arbeit, 72, 202-211. https://doi.org/10.5771/0490-1606-2023-6-202.
 - Kolleck, A., &amp; Orwat, C. (2020). Mögliche Diskriminierung durch algorithmische Entscheidungssysteme und maschinelles Lernen - ein Überblick. TABHintergrundpapier 24.

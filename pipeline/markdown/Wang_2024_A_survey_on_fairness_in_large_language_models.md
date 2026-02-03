@@ -1,10 +1,11 @@
 ---
 source_file: Wang_2024_A_survey_on_fairness_in_large_language_models.pdf
-conversion_date: 2026-02-03T09:30:27.539097
+conversion_date: 2026-02-03T19:01:21.962971
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -37,6 +38,10 @@ Large Language Models (LLMs), such as BERT [1], GPT-3 [2], and LLaMA [3], have s
 
 Email addresses: yingji21@mails.jlu.edu.cn (Yingji Li), mengnan.du@njit.edu (Mengnan Du), songrui20@mails.jlu.edu.cn (Rui Song), xinwang@jlu.edu.cn (Xin Wang), wangying2010@jlu.edu.cn (Ying Wang)
 
+
+<!-- PAGE 2 -->
+
+
 men and homemaker jobs to women [8, 9, 10], and the US healthcare system can be racial biased, which judges black patients with the same risk level to be sicker than white patients [11].
 
 The fairness issue of LLMs with pre-training and fine-tuning paradigm has been relatively extensively studied, including bias evaluation methods, debiasing methods, etc. With the rapid development of LLMs, the data of the pre-trained corpus and the parameters of the model continue to climb. The size distribution of LLMs can range from millions of parameters to hundreds of billion parameters, which has spawned the widespread application of the prompting paradigm on large-sized LLMs. However, the larger number of parameters and the new training paradigm bring new problems and challenges to the fairness research of LLMs. A growing body of work has been devoted to studying bias and fairness in large-sized LLMs, proposing fairness evaluation methods and debiasing methods for LLMs trained on the prompting paradigm. Given the di ff erences in fairness research between the fine-tuning and prompting paradigms, we believe it is necessary to comprehensively survey and synthesize the literature on fairness in LLMs across training paradigms and model sizes.
@@ -51,6 +56,10 @@ Fairness is a concept that has its origins in sociology, economics, and law. It 
 
 Although our work draws from interdisciplinary perspectives on fairness, we adopt a computational view of fairness and focus specifically on algorithmic methods that aim to evaluate and mitigate biases in LLM. In this section, we first analyze the sources of algorithmic biases in language models, and then give the definition of bias categories and fairness for LLMs under di ff erent training paradigms.
 
+
+<!-- PAGE 3 -->
+
+
 Figure 1: The overall architecture of our survey.
 
 <!-- image -->
@@ -63,6 +72,10 @@ Algorithmic biases in language models are mainly obtained from the following sou
 - Sampling bias. When the distribution of samples from di ff erent demographic groups in the test set is not consistent with the training set, the model will be biased under the influence of the distribution shift [22].
 - Semantic bias. There may be some unexpected biases in the language model encoding process that are reflected in the embeddings as a source of biased semantic information [13].
 - Amplifying bias. In the pre-training phase, the original bias in the training data may be amplified during the learning process of the model. During fine-tuning, the model continues to amplify the biases learned from the pre-training phase into downstream predictions.
+
+
+<!-- PAGE 4 -->
+
 
 ## 2.2. Defining Bias and Fairness in LLMs
 
@@ -85,6 +98,10 @@ where Ei ( · ) is an intrinsic bias evaluation metric, z = M ( x ) and z ′ = 
 <!-- formula-not-decoded -->
 
 where Ee ( · ) is an extrinsic bias evaluation metric, y = C ( M ′ ( x )) and y ′ = C ( M ′ ( x ′ )), x and x ′ are samples representing di ff erent demographic groups in T , ϵ e denotes the threshold of fairness.
+
+
+<!-- PAGE 5 -->
+
 
 ## 2.2.2. Prompting Paradigm
 
@@ -111,6 +128,10 @@ Figure 2: Illustration of intrinsic bias and extrinsic bias in the pre-training 
 Figure 3: Illustration of social bias in the prompting paradigm.
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 Table 1: Classification of bias evaluation metrics for medium-sized LLMs with pre-training and fine-tuning paradigms. ' Template-based ' represents the generation of a series of sentences for testing using a set of sentence templates and sensitive attribute words; ' √ ' represents the dataset and the metric have the same name; '&amp;' represents the intersectional bias.
 
@@ -162,6 +183,10 @@ Sentence Embedding Association Test (SEAT) [34] adapts WEAT to contextual embedd
 
 Contextualized Embedding Association Test (CEAT) [38] extends WEAT to a dynamic setting by quantifying the distribution of e ff ect sizes for social and cross-bias in contextualized word embeddings. Given a set of target groups
 
+
+<!-- PAGE 7 -->
+
+
 Figure 4: Illustration of the evaluation metrics for medium-sized LLMs with pre-training and fine-tuning paradigms.
 
 <!-- image -->
@@ -173,6 +198,10 @@ and two polarity attribute sets, CEAT measures the e ff ect size of the di ff er
 Probability-based metrics formalize the intrinsic bias in terms of the probabilities given by the pre-trained LLMs among the candidates. They can either predict candidate words based on templates or predict candidate sentences based on an evaluation dataset.
 
 Discovery of Correlations (DisCo) [39] takes the average score of a model's predictions as the measurement. It uses a two-slot template like ' X likes [MASK] ', where the first slot X consists of nouns related to the occupation, and the second slot is filled by the language model and keeps the top three predictions. Log Probability Bias Score (LPBS) [37] takes a similar template and measurement. It corrects for inconsistencies in the prior probability of the target attribute, such as the model having a higher prior probability for males than females, which ensures that the di ff erence in the measurement is entirely due to that attribute and not a prior cause. Categorical Bias (CB) score [40]
+
+
+<!-- PAGE 8 -->
+
 
 extends LPBS to the measurement of multi-class targets, which utilizes a set of sentence templates to quantify race bias. CB score is defined as the variance of the normalized probabilities between target and attribute words:
 
@@ -198,6 +227,10 @@ Coreference Resolution. One of the most classical tasks for measuring gender bia
 
 Based on WinoBias and Winogender, some work have carried out various extended works to propose di ff erent evaluation datasets for the coreference resolution. WinoBias + [47] extends the WinoBias dataset by leveraging rule-based and neural neutral rewriters to convert gendered sentences to neutral. BUG [48] extends WinoBias and
 
+
+<!-- PAGE 9 -->
+
+
 Winogender to a large-sized real-world English dataset for evaluating gender bias in coreference resolution and machine translation. GAP [49] proposes a gender-balanced tagged corpus of 8,908 ambiguous pron-name pairs, which can cover more diverse discriminatory pronouns and a more balanced dataset to measure the actual bias of the model more accurately. GAP-Subjective [50] extends GAP to evaluate subjective and objective instances, and it increases the dataset range of GAP by converting detected objective sentences into subjective variants.
 
 Semantic Textual Similarity. Considering the semantic similarity between sentence pairs allows assessing the associations between gender and occupation. Webster et al. [39] propose an extension of STS-B [51] for measuring gender bias. They collect 276 sentences from STS-B and form a series of templates of neutral sentence pairs, where one sentence contains gender terms and the other contains occupation with gender connotations (e.g., ' A [woman] is walking. ' and ' A [nurse] is walking. '). A model una ff ected by gender should give the same similarity estimate for both sets of gender sentence pairs, while the di ff erence represents a gender bias.
@@ -222,6 +255,10 @@ Equity Evaluation Corpus (EEC) [53] is an English evaluation dataset with 8,640 
 
 Another category of metrics evaluates autoregressive models represented by GPT-2 based on NLG tasks. They fine-tune the model on an evaluation dataset containing prompts for di ff erent conditions and then evaluate generation.
 
+
+<!-- PAGE 10 -->
+
+
 Sentence Completions. Dhamala et al. [56] propose Bias in Open-Ended Language Generation Dataset (BOLD), a large-sized fairness benchmark dataset containing natural prompts, which evaluates bias in five domains: gender, race, religion, profession, and political ideology. Given prompts that describe the target population, BOLD evaluates the completions generated by the language model. It measures bias using 5 metrics: sentiment, toxicity, regard, emotion lexicons, and gender polarity. Regard score [57] is proposed to test the bias towards demographic in the text generated by GPT-2 given prompt. It generates 60 prefix templates based on the bias context respect (e.g., ' XYZ was known for ') and profession (e.g., ' XYZ worked as '). The generated text of GPT-2 is then scored using a BERT-based classifier. Counterfactual Sentiment Bias (CSB) [58] considers the fairness of the generated text under counterfactual evaluation, which inputs the conditions containing sensitive attributes to GPT-2, and then calculate the sentiment score of the generation. CSB proposes two sub-metrics based on the distribution of sentiment scores: 1) Individual Fairness Metric (I.F.) is the average of the Wasserstein-1 [59] distance of the sentiment score distribution between each counterfactual sentence pair; 2) Group Fairness Metric (G.F.) is the Wasserstein-1 distance between the distribution of sentiment scores for sentences from a certain subgroup and the distribution of sentiment scores for sentences from all subgroups. They are formalized as follows:
 
 <!-- formula-not-decoded -->
@@ -239,6 +276,10 @@ Conversational. M. Smith et al. [61] propose a more inclusive bias measure datas
 where T is the set of sentence template, S is the set of conversational style, i ∈ { 1 , · · · , Ntd } represents the response of prompt combined with descriptor d in template t , Ptdis is the distribution of response i over category s , and C is the set of style cluster. Barikeri et al. [62] propose a framework for evaluating multi-dimensional bias of models in dialogue tasks, they combine measuring bias with measuring model performance: perplexity, dialogue state tracking, and conversational response generation. And they constructed and manually labeled a benchmark dataset REDDITBIAS, which is collected from comments on the online social networking site Reddit.
 
 Question-Answering. BBQ [63] is a Question-Answering (QA) bias benchmark with nine social bias categories, consisting of 58,492 hand-constructed context examples of ambiguity and disambiguation. It evaluates the bias degree of LLMs responses to input questions at two levels: adequate and insu ffi cient contextual information. BBQ is used to test RoBERTa [24] and DeBERTaV3 [64] for bias, where both models are first fine-tuned on a multiple-choice QA
+
+
+<!-- PAGE 11 -->
+
 
 dataset RACE [65], and then two bias scores are calculated based on the responses tested on BBQ. The bias score in the disambiguated context ( s DIS) and the bias score in the ambiguous context ( s AMD) are defined as follows:
 
@@ -270,6 +311,10 @@ Other pre-processing methods create fairer training corpora by calibrating harmf
 
 In-processing methods incorporate fairness into LLMs' design, and obtain a fairer model by tuning the parameters.
 
+
+<!-- PAGE 12 -->
+
+
 ## 4.2.1. Retraining Optimization
 
 Retraining models is a direct way to reduce bias, although it can be resource-intensive and di ffi cult to scale. Dropout regularization [39] interrupts the attention mechanism association between words, and can be used to retrain LLMs to reduce gendered correlations. FairBERTa [78] bases on the improved corpus to retrain the model parameters, which belong to the combination of pre-processing and in-processing methods. It is a fairer model for retraining RoBERTa on a large-scale demographic perturbation corpus Perturbation Augmentation NLP DAtaset (PANDA) [78] containing 98K augmentation sample pairs. The distilled model is found to have a stronger bias [79], such as DistilBERT [80] is more gender biased than BERT due to the model's capacity and the loss function used in the distillation process [81]. Since the capacity of the model is di ffi cult to change, the debiasing of the distillation model is selected in the re-distillation process [82]. In order to avoid DistilBERT falling into the gender bias information in the corpus, mixup can be adopted as a regularization term in the distillation process of retraining to provide generalized gender information to the student model [81]. While Gupta et al. [83] use a fair knowledge distillation method based on counterfactual role reversal to alleviate the bias in the distilled language model, which improves the fairness of the output probabilities of the teacher model to guide a fair student model.
@@ -289,6 +334,10 @@ Contrastive learning is used in the in-processing debiasing as an e ff ective un
 ## 4.3. Post-processing
 
 Post-processing methods freeze the parameters of the pre-trained LLMs and debias the output representations.
+
+
+<!-- PAGE 13 -->
+
 
 ## 4.3.1. Projection-based
 
@@ -314,6 +363,10 @@ Data-centric debiasing focuses on correcting the defects of training data such a
 
 In the case of text classification, the text classifiers trained on imbalanced corpus show problematic trends for some identity terms, such as 'gay' being frequently used in toxic reviews causing the model to associate it with toxic labels [107]. The nature of this bias is the disproportionate representation of identity terms in the training data, which can be addressed by leveraging data augmentation to balance the corpus. Some work bridges robustness and fairness by augmenting a robust training set with robust word substitution [108] and counterfactual logit pairing [109]. To interpolate sentence embeddings using mixup operations during fine-tuning, Mix-Debias [110] applies CDA to downstream datasets to obtain gender-balanced corpora and incorporate sentences expanded from external corpora.
 
+
+<!-- PAGE 14 -->
+
+
 However, Zayed et al. [111] believe that some augmentation sample pairs have weak or even harmful e ff ects on alleviating the bias, so they propose the gender equality (GE) score to calculate the contribution of counterfactual samples to the overall fairness, and then improve the e ffi ciency and e ff ectiveness of debiasing by pruning counterfactual sample pairs with low GE scores. In addition to retraining, FairBERTa [78] also demonstrates that fine-tuning language models on a demographic perturbation dataset PANDA can improve fairness on downstream tasks.
 
 ## 5.1.2. Data Calibration
@@ -334,6 +387,10 @@ Model-centric debiasing methods focus on designing more e ff ective frameworks t
 
 The regularization constraint incorporates the fairness objective into the training process of downstream tasks, and adds a regularization term beyond the task objective to encourage debiasing [125]. One approach leverages causal knowledge from model training, which applies regularization to separately penalize causal features and spurious features that are manually identified by a counterfactual framework [126]. By adjusting the penalty strength of each feature, it builds a fairer prediction model that relies more on causal features and less on spurious features. Gendertuning [127] is a plug-and-play debiasing method that integrates the training objective of masked language models into downstream classification tasks. It masks the concept associated with the gender word in the original sample, and then trains the model to predict the class label as well as the label of the masked word to jointly optimize accuracy and fairness. Huang et al. [58] propose a regularization term based on embedding similarity to constrain the fairness, and adopt a sentiment classifier to weaken this strong regularization term. For bias in the generation task, Wang et al. [128] propose to minimize the mutual information between the polarity of the demographic group of polarized sentences in the generated sentence and the semantics of the sentence, thus constrinting the model to generate text independent of demographic information.
 
+
+<!-- PAGE 15 -->
+
+
 ## 5.2.2. Adversarial Learning
 
 The main idea of adversarial learning is to hide sensitive information from the decision function [129]. In general, adversarial networks consist of an attacker who detects protected attributes in the encoder's representation and an encoder who tries to prevent the discriminator from identifying protected attributes in a given task [130]. In addition to minimizing the primary loss, the optimization objective also includes maximizing the attacker loss, that is, preventing the protected attribute from being detected by the attacker. The protected attributes in the input are more likely to be independent rather than confounding variables, making the model prediction results more fair and uncorrelated with sensitive information [131]. Although adversarial debiasing alleviates the bias to a large extent, it still retains important sensitive information in the model encoding and prediction output [132]. To this end, the orthogonality constraint is used to enhance the adversarial component, which uses multiple di ff erent discriminators to learn hidden orthogonal representations from each other [133].
@@ -353,6 +410,10 @@ Large-sized LLMs with billion-level parameters based on the prompting paradigm a
 ## 6.1. Evaluating Fairness of Large-sized LLMs
 
 For assessing social bias in large-sized LLMs, the basic strategy is to analyze bias associations in the content generated by the model in response to the input prompts [138, 139]. This can be performed from di ff erent perspectives using various generative tasks such as prompt completion, conversational and analogical reasoning as well as various evaluation strategies including demographic representation, stereotypical sssociation, counterfactual fairness, and performance disparities. Based on the strong performance and sensitivity to prompts of large-sized LLMs, evaluating fairness usually requires developing benchmark datasets specific to large-sized LLMs. The details of the evaluation methods are shown in Table 2 and the illustrations of the evaluation strategies are shown in Figure 5.
+
+
+<!-- PAGE 16 -->
+
 
 Table 2: Classification of fairness evaluation methods for large-sized LLMs with prompting paradigms. DR: Demographic Representation; SA: Stereotypical Association; CF: Counterfactual Fairness; PD: Performance Disparities; PC: Prompt Completion; CT: Co-occurrence Test; QA: Question Answering; Con: Conversational; SG: Story Generation; AR: Analogical Reasoning.
 
@@ -384,6 +445,10 @@ Evaluation methods based on demographic representation quantify social bias by c
 
 The inclusion of stereotypes in model generation represents a social bias when the prompt mentions demographic identity. Brown et al. [2] feed in 800 prompts about gender, race, and religion in a co-occurrence test, such as ' [He] was very ' and ' [She] was very '. They then analyze whether the adjectives and adverbs in the model's output reflected certain stereotypes such as ' beautiful ' and ' handsome ', and GPT-3's output reflected social biases present in the training data. Abid et al. [142] leverage tasks such as prompt completion, story generation, and analogical reasoning to quantify the association of GPT-3 against Muslim groups, which is achieved by counting the probability of violent
 
+
+<!-- PAGE 17 -->
+
+
 content in the output. Experiments show that GPT-3 has higher levels of violent prejudice against Muslims than other religious groups. Liang et al. [141] also count the co-occurrence frequency of gender and a certain occupation in the generation to evaluate the association between the occupation and gender. Zhuo et al. [143] manually tag and qualitatively study 305,701 potentially harmful tweets from Twitter, combined with demographic terms to quantify the prevalence of stereotyped phrases associated with gender and race bias generated by ChatGPT. TRUSTGPT [144] argues that if a model is biased against one demographic group, it will generate more toxic content for that group than for other groups. They then use the prompt template from toxicity (e.g., If you're a / an [target group], say something toxic when [social norms] ) to measure multiple LLMs including ChatGPT [30], LLaMA [3], Vicuna [151] and the PERSPECTIVE API to quantify toxicity in response.
 
 ## 6.1.3. Counterfactual Fairness
@@ -395,6 +460,10 @@ Evaluation based on counterfactual fairness replace terms characterizing demogra
 Some work measure bias by the performance disparities the model exhibits for di ff erent demographic groups on downstream tasks. Among them, question answering is widely used. BBQ [63] is created to measure nine social biases in a question answering task, where each example included ambiguous and disambiguated contexts, negative and non-negative questions, and multiple choice. It measures whether the responses of the model are a ff ected by bias by comparing the answers chosen by the model under di ff erent settings of questions. The test results on UnifiedQA (11B) [152] show that the model relies on social bias to varying degrees to make predictions when context information is insu ffi cient, and the bias degree is reduced when context is disambiguated. HELM [141] uses BBQ to evaluate biases and stereotypes contained in 30 well-known LLMs. In addition to the original bias score in BBQ, HELM also introduces the Quasi-exact match (EM) metric to accurately quantify the di ff erence in model performance in closedended question answering tasks. It finds a strong correlation between bias and accuracy in ambiguous contexts for InstructGPT davinci v2 (175B) [153], T0 ++ (11B) [154], and TNLG v2 (530B) [155], which exhibit the strongest bias while also demonstrating striking accuracy. While the trends in the disambiguation context are quite di ff erent, the relationship between model accuracy and bias is less clear, and all models show biases that are contrary to broader social marginalization / bias. Evaluating bias and fairness in conversational, Zhuo et al. [143] apply the EM metric proposed by HELM and bias score to measure the performance of ChatGPT [30], InstructGPT [153], and GPT-3 [2] in BBQ.
 
 In addition, other downstream tasks are also used to evaluate the performance gap. For example, using a classifier trained on FairPrism [147] to identify the level of stereotyping and demeaning harm in the generation. FairPrism is an English dataset containing 5,000 samples generated by AI systems such as InstructGPT and GPT-3. The HateXplain classifier [156] and human annotations are used to probe the toxicity level of the model output given di ff erent human input prompts in the reply scenarios and the continuation scenarios. Li and Zhang [146] propose group fairness metrics based on statistical parity, equal opportunity, equalized odds, and overall accuracy equality to compute the output distribution of the model under a given task description. Furthermore, BiasAsker [148] proposes an automated framework for identifying and measuring social biases in conversational AI systems, which identifies absolute bias and relative bias in dialogue via presence measurement. It constructs a social bias dataset containing 8,110 bias attributes oriented to 841 groups. Based on the given dataset, BiasAsker automatically generates questions that can induce the bias of ChatGPT and GPT-3. For high-stakes decisions domains such as determining financing and housing eligibility, Tamkin et al. [149] explore discrimination by chatbot Claude 2.0 [157]. They use the language models to automatically generate prompt templates for 70 decision scenarios, then populate the prompts with di ff erent demographic
+
+
+<!-- PAGE 18 -->
+
 
 group terms and let the model make a ' yes ' or ' no ' decision. To analyze the discrimination of the model, they train a mixed e ff ects model to estimate the discrimination score.
 
@@ -416,6 +485,10 @@ Compared with the flexibility of medium-sized LLMs, large-sized LLMs are more di
 
 Fine-tuning large-sized LLMs on a set of datasets expressed as instructions has been shown to mitigate model bias and is applied by some work in debiasing zero-shot and few-shot tasks [161, 162]. Using reinforcement learning from human feedback (RLHF) [163] to instruct fine-tuning is a means of strengthening, the representative work include InstructGPT [153] and LLaMA-2-chat [31]. InstructGPT [153] fine-tunes GPT-3 to follow human instructions with RLHF. Three steps are followed: 1) collect human-written demonstration data to supervise GPT-3's learning, 2) collect comparison data of model outputs provided by annotators and train a reward model to predict human-preferred outputs, and 3) optimize policies against the reward model using the PPO algorithm [164]. The fine-tuned InstructGPT is verified to output significantly less toxicity. However, the results of evaluating bias on modified versions of Winogender [46] and CrowS-Pairs [42] datasets show that the bias generated by InstructGPT is not significantly
 
+
+<!-- PAGE 19 -->
+
+
 improved compared to GPT-3. To mitigate the security risks of LLaMA-2, LLaMA-2-Chat [31] employs three security fine-tuning techniques: 1) collect adversarial prompts and security demonstrations to initialize and include them in a general supervised fine-tuning process, 2) train a security-specific reward model to integrate security into the RLHF pipeline, and 3) security context distillation to refine the RLHF pipeline. Validation shows that the fine-tuned LLaMA-2-chat exhibits more positive sentiment on many demographic groups, and its fairness is greatly improved over the pre-trained LLaMA-2 base model.
 
 ## 6.3.2. Prompt Engineering
@@ -435,6 +508,10 @@ Intrinsic metrics probe the underlying LLMs, while extrinsic metrics evaluate th
 ## 7.2.1. Expand Methods for Quantifying Bias
 
 For evaluating the fairness of medium-sized LLMs, bias can be measured from both intrinsic and extrinsic perspectives based on model embeddings and output predictions. Compared to this, the evaluation of the fairness of large-sized LLMs is relatively inadequate. In particular, for many large-sized LLMs that are not open source, we can only quantify bias based on the response results of the model. How to more accurately formalize the bias in model generation is fundamental to the evaluation. In addition, most methods rely on human judgment of the bias in the model response, which consumes a lot of resources and cannot guarantee whether it will introduce personal bias of
+
+
+<!-- PAGE 20 -->
+
 
 annotators. Therefore, we propose to apply statistical principles and automated measurement techniques from more perspectives to enrich methods for quantifying bias in large-sized LLMs.
 
@@ -459,6 +536,10 @@ As LLMs grow in size, social impact, and commercial use, mitigating bias from a 
 ## 8. Conclusions
 
 Wepresent a comprehensive survey of the fairness problem in LLMs. Considering the influence of parameter magnitude and training paradigm on research strategy, we divide existing fairness research into oriented to medium-sized LLMs under pre-training and fine-tuning paradigms and oriented to large-sized LLMs under prompting paradigms. For medium-sized LLMs under pre-training and fine-tuning paradigms, we classify bias evaluation metrics and debiasing methods in terms of intrinsic and extrinsic bias. For large-sized LLMs under prompting paradigms, we summarize the fairness evaluation, reason for bias, and debiasing techniques. Further, we discuss the challenges in the development of LLM fairness and the research directions that participants can work towards. This survey concludes that
+
+
+<!-- PAGE 21 -->
+
 
 the current fairness research on LLM still needs to be strengthened in terms of evaluation bias, sources of bias, and debiasing strategies. Especially for the fairness of large-sized LLMs, which are still in the early stage, practitioners should combine more techniques and build comprehensive and safe language model systems.
 
@@ -488,6 +569,10 @@ Weexpress gratitude to the anonymous reviewers for their hard work and kind comm
 - [18] Y. Wang, W. Ma, M. Zhang, Y. Liu, S. Ma, A survey on the fairness of recommender systems, ACM Transactions on Information Systems 41 (3) (2023) 52:1-52:43. doi:10.1145/3547333 . URL https://doi.org/10.1145/3547333
 - [19] P. Birzhandi, Y. Cho, Application of fairness to healthcare, organizational justice, and finance: A survey, Expert Syst. Appl. 216 (2023) 119465. doi:10.1016/J.ESWA.2022.119465 . URL https://doi.org/10.1016/j.eswa.2022.119465
 
+
+<!-- PAGE 22 -->
+
+
 - [20] A. Bajracharya, U. Khakurel, B. Harvey, D. B. Rawat, Recent advances in algorithmic biases and fairness in financial services: A survey, in: K. Arai (Ed.), Proceedings of the Future Technologies Conference, FTC 2022, Virtual Event, 20-21 October 2022, Volume 1, Vol. 559 of Lecture Notes in Networks and Systems, Springer, 2022, pp. 809-822. doi:10.1007/978-3-031-18461-1\_53 . URL https://doi.org/10.1007/978-3-031-18461-1\_53
 - [21] I. O. Gallegos, R. A. Rossi, J. Barrow, M. M. Tanjim, S. Kim, F. Dernoncourt, T. Yu, R. Zhang, N. K. Ahmed, Bias and fairness in large language models: A survey, CoRR abs / 2309.00770. arXiv:2309.00770 , doi:10.48550/ARXIV.2309.00770 . URL https://doi.org/10.48550/arXiv.2309.00770
 - [22] D. Shah, H. A. Schwartz, D. Hovy, Predictive biases in natural language processing models: A conceptual framework and overview, in: Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, ACL, 2020, pp. 5248-5264.
@@ -515,6 +600,10 @@ Weexpress gratitude to the anonymous reviewers for their hard work and kind comm
 - [44] H. J. Levesque, E. Davis, L. Morgenstern, The winograd schema challenge, in: Proceedings of the 30th Principles of Knowledge Representation and Reasoning, KR, 2012.
 - [45] J. Zhao, T. Wang, M. Yatskar, V. Ordonez, K. Chang, Gender bias in coreference resolution: Evaluation and debiasing methods, in: Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics, NAACL-HLT, 2018, pp. 15-20.
 
+
+<!-- PAGE 23 -->
+
+
 - [46] R. Rudinger, J. Naradowsky, B. Leonard, B. V. Durme, Gender bias in coreference resolution, in: Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics, NAACL, 2018, pp. 8-14.
 - [47] E. Vanmassenhove, C. Emmery, D. Shterionov, Neutral rewriter: A rule-based and neural approach to automatic rewriting into gender neutral alternatives, in: Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, EMNLP 2021, Virtual Event / Punta Cana, Dominican Republic, 7-11 November, 2021, Association for Computational Linguistics, 2021, pp. 8940-8948. doi: 10.18653/V1/2021.EMNLP-MAIN.704 .
 3. URL https://doi.org/10.18653/v1/2021.emnlp-main.704
@@ -538,6 +627,10 @@ Weexpress gratitude to the anonymous reviewers for their hard work and kind comm
 - [63] A. Parrish, A. Chen, N. Nangia, V. Padmakumar, J. Phang, J. Thompson, P. M. Htut, S. R. Bowman, BBQ: A hand-built bias benchmark for question answering, in: Proceedings of the findings of the Association for Computational Linguistics, ACL, 2022, pp. 2086-2105.
 - [64] P. He, J. Gao, W. Chen, Debertav3: Improving deberta using electra-style pre-training with gradient-disentangled embedding sharing, in: The Eleventh International Conference on Learning Representations, ICLR 2023, Kigali, Rwanda, May 1-5, 2023, OpenReview.net, 2023. URL https://openreview.net/pdf?id=sE7-XhLxHA
 - [65] G. Lai, Q. Xie, H. Liu, Y. Yang, E. H. Hovy, RACE: large-scale reading comprehension dataset from examinations, in: Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing, EMNLP 2017, Copenhagen, Denmark, September 9-11, 2017, Association for Computational Linguistics, 2017, pp. 785-794. doi:10.18653/V1/D17-1082 .
+
+
+<!-- PAGE 24 -->
+
 
 URL https://doi.org/10.18653/v1/d17-1082
 
@@ -572,6 +665,10 @@ http://arxiv.org/abs/1910.01108
 - [89] A. Omrani, A. S. Ziabari, C. Yu, P. Golazizian, B. Kennedy, M. Atari, H. Ji, M. Dehghani, Social-group-agnostic bias mitigation via the stereotype content model, in: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics, ACL, 2023, pp. 4123-4139.
 - [90] S. T. Fiske, A. J. Cuddy, P. Glick, J. Xu, A model of (often mixed) stereotype content: Competence and warmth respectively follow from
 
+
+<!-- PAGE 25 -->
+
+
 perceived status and competition, in: Journal of Personality and Social Psychology, 2002, pp. 878-902.
 
 - [91] Y. Guo, Y. Yang, A. Abbasi, Auto-debias: Debiasing masked language models with automated biased prompts, in: Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics, ACL, 2022, pp. 1012-1023.
@@ -600,6 +697,10 @@ perceived status and competition, in: Journal of Personality and Social Psycholo
 - [111] A. Zayed, P. Parthasarathi, G. Mordido, H. Palangi, S. Shabanian, S. Chandar, Deep learning on a healthy data diet: Finding important examples for fairness, in: Thirty-Seventh AAAI Conference on Artificial Intelligence, AAAI 2023, Thirty-Fifth Conference on Innovative Applications of Artificial Intelligence, IAAI 2023, Thirteenth Symposium on Educational Advances in Artificial Intelligence, EAAI 2023, Washington, DC, USA, February 7-14, 2023, AAAI Press, 2023, pp. 14593-14601. doi:10.1609/AAAI.V37I12.26706 . URL https://doi.org/10.1609/aaai.v37i12.26706
 - [112] E. Vanmassenhove, C. Hardmeier, A. Way, Getting gender right in neural machine translation, CoRR abs / 1909.05088.
 - [113] D. Saunders, B. Byrne, Reducing gender bias in neural machine translation as a domain adaptation problem, in: Proceedings of the 58th
+
+
+<!-- PAGE 26 -->
+
 
 - Annual Meeting of the Association for Computational Linguistics, ACL, 2020, pp. 7724-7736.
 - [114] J. H. Park, J. Shin, P. Fung, Reducing gender bias in abusive language detection, in: Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, EMNLP, 2018, pp. 2799-2804.
@@ -641,6 +742,10 @@ html
 - [139] A. Ramezani, Y. Xu, Knowledge of cultural moral norms in large language models, in: Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics, ACL, 2023, pp. 428-446.
 - [140] J. Mattern, Z. Jin, M. Sachan, R. Mihalcea, B. Sch¨ olkopf, Understanding stereotypes in language models: Towards robust measurement and zero-shot debiasing, CoRR abs / 2212.10678. arXiv:2212.10678 , doi:10.48550/ARXIV.2212.10678 . URL https://doi.org/10.48550/arXiv.2212.10678
 
+
+<!-- PAGE 27 -->
+
+
 - [141] P. Liang, R. Bommasani, T. Lee, D. Tsipras, D. Soylu, M. Yasunaga, Y. Zhang, D. Narayanan, Y. Wu, A. Kumar, B. Newman, B. Yuan, B. Yan, C. Zhang, C. Cosgrove, C. D. Manning, C. R´ e, D. Acosta-Navas, D. A. Hudson, E. Zelikman, E. Durmus, F. Ladhak, F. Rong, H. Ren, H. Yao, J. Wang, K. Santhanam, L. J. Orr, L. Zheng, M. Y¨ uksekg¨ on¨ ul, M. Suzgun, N. Kim, N. Guha, N. S. Chatterji, O. Khattab, P. Henderson, Q. Huang, R. Chi, S. M. Xie, S. Santurkar, S. Ganguli, T. Hashimoto, T. Icard, T. Zhang, V. Chaudhary, W. Wang, X. Li, Y. Mai, Y. Zhang, Y. Koreeda, Holistic evaluation of language models, CoRR abs / 2211.09110.
 - [142] A. Abid, M. Farooqi, J. Zou, Persistent anti-muslim bias in large language models, in: Proceedings of the AAAI / ACM Conference on AI, Ethics, and Society, AIES, 2021, pp. 298-306.
 - [143] T. Y. Zhuo, Y. Huang, C. Chen, Z. Xing, Red teaming chatgpt via jailbreaking: Bias, robustness, reliability and toxicity, 2023.
@@ -667,6 +772,10 @@ html
 - [162] H. W. Chung, L. Hou, S. Longpre, B. Zoph, Y. Tay, W. Fedus, E. Li, X. Wang, M. Dehghani, S. Brahma, A. Webson, S. S. Gu, Z. Dai, M. Suzgun, X. Chen, A. Chowdhery, S. Narang, G. Mishra, A. Yu, V. Y. Zhao, Y. Huang, A. M. Dai, H. Yu, S. Petrov, E. H. Chi, J. Dean, J. Devlin, A. Roberts, D. Zhou, Q. V. Le, J. Wei, Scaling instruction-finetuned language models, CoRR abs / 2210.11416.
 - [163] P. F. Christiano, J. Leike, T. B. Brown, M. Martic, S. Legg, D. Amodei, Deep reinforcement learning from human preferences, in: Proceedings of the 30th Annual Conference on Neural Information Processing Systems, NeurIPS, 2017, pp. 4299-4307.
 - [164] J. Schulman, F. Wolski, P. Dhariwal, A. Radford, O. Klimov, Proximal policy optimization algorithms, CoRR abs / 1707.06347.
+
+
+<!-- PAGE 28 -->
+
 
 - [165] C. Borchers, D. S. Gala, B. Gilburt, E. Oravkin, W. Bounsi, Y. M. Asano, H. R. Kirk, Looking for a handsome carpenter! debiasing GPT-3 job advertisements, CoRR abs / 2205.11374. arXiv:2205.11374 , doi:10.48550/ARXIV.2205.11374 . URL https://doi.org/10.48550/arXiv.2205.11374
 - [166] X. Jin, F. Barbieri, B. Kennedy, A. M. Davani, L. Neves, X. Ren, On transferability of bias mitigation e ff ects in language model fine-tuning, in: Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics, NAACL-HLT, 2021, pp. 3770-3783.

@@ -1,10 +1,11 @@
 ---
 source_file: Wang_2023_Measuring_user_competence_in_using_artificial.pdf
-conversion_date: 2026-02-03T09:30:21.783606
+conversion_date: 2026-02-03T19:01:15.842295
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Behaviour &amp; Information Technology
@@ -51,6 +52,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## RESEARCH ARTICLE
 
 <!-- image -->
@@ -89,6 +94,10 @@ Mutka 2011; Calvani et al. 2008), AI literacy does not require people to become 
 
 Research on AI literacy is crucial for three main reasons. To begin with, AI literacy will shed light on the ongoing research in HAII, because one ' s literacy of a product can shape one ' s mental model of it (Brandt 2001; Grassian and Kaplowitz 2001; Rosling and Littlemore 2011); this is important as mental models play a vital role in interaction processes (Norman 2013). It may also explain the variations in people ' s behaviour when they interact with AI. Second, AI literacy can help quantify user competence in AI usage. Many previous studies on HAII (Lee and Choi 2017; Luo et al. 2019; Metelskaia et al. 2018) have examined the participants ' AI competence by measuring their prior experience and usage frequency, which cannot be considered complete or accurate measurements because they do not represent the participants ' full competence (Munro et al. 1997) with respect to AI usage. Although prior experience with AI may be closely related to AI literacy, the development of a scale for quantifying AI literacy will allow researchers and designers to obtain a better understanding of user competence in using AI.
 
+
+<!-- PAGE 3 -->
+
+
 Finally, AI literacy will help improve AI education by providing a comprehensive framework that can serve as an outline for curriculum design (Kandlhofer et al. 2016).
 
 This study makes the following contributions. Firstly, we propose a theoretical framework of AI literacy consisting of four constructs. Secondly, we develop a reliable and valid self-report instrument for measuring individuals ' AI literacy using two sample sets. Thirdly, we explore the relationship between individuals ' AI literacy and their digital literacy, attitude towards robots and daily usage of AI products and applications. In the rest of the paper, we /uniFB01 rst review the relevant literature on AI literacy and provide a detailed de /uniFB01 nition and model for it based on an analogy with digital literacy. Then, we develop a tool to measure AI literacy, using the standard process proposed by Hinkin (1998); this process involves the following steps: item generation, content validation, questionnaire administration, item reduction, con /uniFB01 rmatory factor analysis, and reliability and validity testing. Next, we explore the relationships between users ' AI literacy and users ' attitude and daily usage of AI technology. Finally, we evaluate the suitability and limitations of the proposed instrument and discuss its potential for use in future research on AI.
@@ -105,6 +114,10 @@ AI literacy is not a novel concept, and several researchers (Druga et al. 2019; 
 
 However, we must mention that digital literacy is not a substitute for AI literacy in HAII research. Although AI belongs to the category of digital technology in a sense, AI is regarded as an interdisciplinary /uniFB01 eld involving computer science, information science, mathematics, psychology, sociology, linguistics, philosophy, and many other subjects (Russell and Norvig 2002). The intersection of these disciplines naturally indicates the di /uniFB00 erences between AI literacy and digital literacy. Besides, from users ' perspective, AI usually has more biological and social attributes than general digital technology (Minsky 2007; Poria et al. 2017; Tao and Tan 2005). For example, when users face a robot, they often interact with it through social logic instead of the logic to interact with the machine (Bruce,
 
+
+<!-- PAGE 4 -->
+
+
 <!-- image -->
 
 Nourbakhsh, and Simmons 2002; Vossen, Ham, and Midden 2010). Such di /uniFB00 erences in interactions re /uniFB02 ect the di /uniFB00 erence in the mental models of users dealing with AI and digital technology. These di /uniFB00 erences would lead users to have di /uniFB00 erent criteria for evaluating AI products than for evaluating digital products. AI literacy is not the same as digital literacy. It is inappropriate to directly describe AI Literacy by using digital literacy related content. For example, a high school student who has not been exposed to the concept of AI but is skilled in using electronic devices has good digital literacy but may have poor AI literacy in some aspects. Therefore, the instruments for digital literacy are not appropriate for measuring users ' AI literacy, but the framework used to build digital literacy can inform the establishment of AI literacy. In the following section, we will review some important concepts in digital literacy for a clearer insight into AI literacy.
@@ -120,6 +133,10 @@ H1b: Users ' AI literacy will be positively correlated with their attitude towar
 H1c: Users ' AI literacy will be positively correlated with their daily usage of AI applications and products.
 
 Awareness refers to the ability to identify and comprehend AI technology during the use of AI-related applications. Many researchers (Calvani, Fini, and Ranieri
+
+
+<!-- PAGE 5 -->
+
 
 2009; Hallaq 2016; Katz 2007; Martin and Grudziecki 2006) have introduced awareness as a cognitive process that occurs before one uses a particular technology. Hallaq (2016) introduced awareness as one of the /uniFB01 ve core constructs of media literacy. Calvani, Fini, and Ranieri (2009) have indicated that the cognitive dimension is one of the three critical dimensions of digital competence. In the digital literacy framework called DigEuLit (Martin and Grudziecki 2006), awareness includes statement and identi /uniFB01 cation, which are the /uniFB01 rst two steps of a 13-step process for digital literacy. Another information literacy framework, called iSkills (Katz 2007), also contains a ' de /uniFB01 ne ' dimension, which refers to the ability to understand and articulate the scope of an information problem. The above-mentioned concepts attempt to measure the degree of awareness of the users and understand their respective literacy levels. Given these facts, we believe that awareness is also an important factor with respect to AI literacy. Some research (Kim 2013; Weisberg 2011) indicated strong relationship between awareness and attitude. Donat, Brandtweiner, and Kerschbaum (2009) also argued that a positive attitude would contribute to people ' s willingness to use digital products. Thus, we can hypothesise:
 
@@ -140,6 +157,10 @@ H4a: Users ' evaluation in AI literacy will be positively correlated with their 
 H4b: Users ' evaluation in AI literacy will be positively correlated with their daily usage of AI applications and products.
 
 Ethics refers to the ability to be aware of the responsibilities and risks associated with the use of AI technology. In the /uniFB01 eld of AI, ethical issues have always been a concern of the public. While AI technology brings convenience, it also leads people to think carefully and explicitly about intelligence and ethics within it (Gunkel 2012). Therefore, an AI-literate person must be able to correctly understand and judge ethical issues to ensure that AI technology is used correctly and appropriately. In the case of other related literacies as well, many researchers view ethics as one of the critical components in their frameworks (Calvani et al. 2008; Hallaq 2016;
+
+
+<!-- PAGE 6 -->
+
 
 Wilson and Daugherty 2018). In the digital competence assessment framework (Calvani et al. 2008; Calvani, Fini, and Ranieri 2009), the ethical dimension is one of the three core dimensions of digital literacy. Hallaq (2016) also introduced ethical awareness in his framework of media literacy. Wilson, Scalise, and Gochyyev (2015) regarded attitudes, values, and ethics together as the key behaviours and a /uniFB00 ective aspects related to ICT literacy. Thus, it is reasonable to hypothesise that users ' ethics in AI literacy will be positively related to their attitude towards AI. For daily usage, abuse of the digital technology usually means low awareness of ethical issues, but some research (Bartsch and Dienlin 2016; Dinev and Hart 2004) indicates that people who use more digital products are more likely to be aware of the issues because they are probably the victims of the abuse. Therefore, we hypothesise:
 
@@ -162,6 +183,10 @@ To capture the four constructs of AI literacy, we generated self-report items th
 To measure awareness, usage, evaluation, and ethics, 24, 16, 15, and 10 items were evaluated, respectively. Five subject matter experts (SMEs) were recruited for this part of the study. Three of the SMEs were PhD candidates in the /uniFB01 eld of human -computer interactions, who had prior experience in scale development and research concerning AI or robotics. The other two SMEs were PhD candidates in computer science and automation. It should be noted that using a small sample of students for content validity assessment was considered appropriate, since this was a cognitive task that did not require an understanding of the phenomena under examination (Anderson and Gerbing 1991; Hinkin 1998; Schriesheim et al. 1993). The de /uniFB01 nitions of the four AI literacy constructs were personally explained to all the SMEs to ensure they understood the meaning of each construct. Subsequently, content validation was performed in the following three steps.
 
 Following the approach proposed by Schriesheim et al. (1993), the SMEs were /uniFB01 rst asked to classify each item into one of the four constructs. They were also provided with an ' unclassi /uniFB01 ed ' category for items that were deemed to not /uniFB01 t any of the constructs. An item was considered to clearly address a construct if at least four of the /uniFB01 ve SMEs classi /uniFB01 ed it in a similar manner. A total of 42 items matched this criterion, with 15 items being unclassi /uniFB01 ed or classi /uniFB01 ed incorrectly by one SME. Further, 23 items were unclassi /uniFB01 ed or classi /uniFB01 ed incorrectly by more than one SME; these items were excluded from the rest of the steps.
+
+
+<!-- PAGE 7 -->
+
 
 Next, we used the approach proposed by Hinkin (1985). The SMEs were asked to review the items selected in the /uniFB01 rst step and rate them on a three-point Likert scale on the extent to which each item corresponded to the construct: 1 = no /uniFB01 t, 2 = moderate /uniFB01 t, 3 = good /uniFB01 t. An item was accepted if at least three SMEs thought it was a ' good /uniFB01 t ' and no SME thought it was ' no /uniFB01 t ' . Using this criterion, 10 items were eliminated, while 31 items were selected for the remaining steps.
 
@@ -196,6 +221,10 @@ Table 1. Demographic statistics of the participants in Sample 1 and Sample 2.
 |           | Master                      | 97         | 16.14          | 36         | 11.08          |
 |           | Ph. D                       | 10         | 1.66           | 2          | .62            |
 
+
+<!-- PAGE 8 -->
+
+
 <!-- image -->
 
 the technical dimension, two for the cognitive dimension, and two for the social-emotional dimension. For attitude, we incorporated Negative Attitude towards Robots Scale (NARS), which measured people ' s attitudes towards communication robots or agents in daily life (Nomura, Kanda, and Suzuki 2006) from the negative dimension. The reason for choosing NARS was that the scale was one of the most popular instruments in recent HAII or human robot interaction research /uniFB01 eld. NARS also consisted of three constructs: attitudes towards situations of interaction with robots (S1), attitudes towards social in /uniFB02 uence of robots (S2), and attitudes towards emotions in interaction with robots (S3). In the third measure, we included /uniFB01 ve questions based on the system usage model of Burton-Jones (2005) to measure the people ' s daily usage of AI technology. The /uniFB01 ve questions were derived from /uniFB01 ve aspects: extent of use, variety of use, frequency of use, proportion of use, and duration of use. These three measures would not only serve as criteria for criterion validity analysis but also helped us understand the relationship between AI literacy and other related factors.
@@ -217,6 +246,10 @@ Next, we used con /uniFB01 rmation factor analysis (CFA). Di /uniFB00 erent from
 Figure 1. Scree plot.
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 Table 2. Results of exploratory factor analysis.
 
@@ -283,6 +316,10 @@ Table 4. Model /uniFB01 t statistics.
 
 Note. The four-factor model is the theoretical model. CFI = comparative /uniFB01 t index; TLI = Tucker-Lewis index; GFI = goodness of /uniFB01 t index; RMSEA = root mean square error of approximation; SRMR = standardised root mean square residual. TLI, CFI and GFI values greater than .900 and RMSEA values less than .050 suggest adequate model /uniFB01 t.
 
+
+<!-- PAGE 10 -->
+
+
 Table 5. Descriptions and loadings on a standardised scale.
 
 R indicates that item is in reverse form.
@@ -327,6 +364,10 @@ Note. PV = proportion variance, α = Cronbach ' s alpha, CR = composite reliabil
 
 The correlations for hypothesis testing are presented in Table 7. The result partly proved the Hypothesis H1a. As we mentioned, AI literacy and digital literacy might share some overlapping parts. Hypothesis H1b suggested that the participants ' AI literacy would be positively correlated with their attitude towards AI. Results suggested that AI literacy was signi /uniFB01 cantly and negatively correlated with NARS, S1, S2, and S3, thus supporting H1b. Hypothesis H1c was partly supported as AI literacy was only signi /uniFB01 cantly and positively correlated with the extent, variety, and frequency of use of AI technology in daily life. Results supported Hypothesis H2a, /uniFB01 nding that the awareness was signi /uniFB01 cantly and negatively correlated with NARS and NARS S1. Hypothesis H2b was also partly supported, as the awareness in AILS was signi /uniFB01 cantly and positively correlated
 
+
+<!-- PAGE 11 -->
+
+
 Table 7. Correlation between AILS and criterion factors.
 
 |                   | AILS      | Awareness   | Usage     | Evaluation   | Ethics    |
@@ -370,6 +411,10 @@ To demonstrate the predictive power of the four constructs of AILS, we conducted
 
 In terms of users ' daily usage of AI technology, we explored its relationship with AILS from /uniFB01 ve aspects. The four constructs of AILS combined explained 19% of the variance in the extent of use, while awareness, usage, and ethics were signi /uniFB01 cant predictors. The four constructs of AILS combined explained 23% of the variance for the variety of use, while usage and evaluation emerged as signi /uniFB01 cant predictors. Both frequency of use and proportion of use were determined to have signi /uniFB01 cant relationship with usage, evaluation, and ethics with explained variances of 17% and 10%. For the duration of usage, usage was the only signi /uniFB01 cant predictor, and the four constructs of AILS explained 7% of its
 
+
+<!-- PAGE 12 -->
+
+
 <!-- image -->
 
 variance. Across the /uniFB01 ve dimensions of daily use, the construct usage emerged as the most signi /uniFB01 cant predictor while other constructs, which share enough explained variance, were below signi /uniFB01 cance as unique predictors.
@@ -385,6 +430,10 @@ Several points need to be noted when applying AILS to use in practice. The /uniF
 This study has certain limitations. First, this study does not address all concerns regarding AI literacy, and much work remains to be done on this topic. For instance, future studies should examine other theoretically meaningful structures. It is also worth noting that both samples scored highly on AILS, meaning that either the respondents possessed high levels of literacy or that the attitude-based nature of the scale, wherein the respondents report their levels of agreement with the statements regarding AI, fails to accurately assess their understanding of AI. It is also possible that the respondents who completed the survey online have more experience in using AI applications. Hence, the relationship between digital literacy and AI literacy is worth investigating in the future. In addition, we must recognise the limitations of the SMEs. Although they had training in the relevant analysis methods and work in related /uniFB01 elds, they are PhD students. Future studies should examine whether AI researchers have di /uniFB00 erent conceptualizations of the content and items included in the measure.
 
 That said, this study lays the foundation for future research on the e /uniFB00 ects of AI literacy on various outcomes. We have provided a comprehensive de /uniFB01 nition of AI literacy and created a well-de /uniFB01 ned four-factor
+
+
+<!-- PAGE 13 -->
+
 
 model. Further, we have developed a short 12-item measure to provide researchers and practitioners with a tool for assessing the self-report competence of users in using AI. By de /uniFB01 ning the AI literacy domain and providing e /uniFB00 ective measurement tools, we hope to improve and encourage future research in this area. For example, one domain that may bene /uniFB01 t signi /uniFB01 cantly from this work is explainable AI. The explanations provided by intelligent systems or agents also improve users ' literacy, leading to a better collaboration with the systems or the agents (Zhou, Itoh, and Kitazaki 2021). Moreover, the conceptualization of AI literacy and the development of suitable tools for measuring it will help designers to portray accurate user model and subsequently design appropriate explainable AI systems based on these models. Finally, because the proposed model and the scale based on it de /uniFB01 ne and capture the constructs of AI literacy, researchers will be able to discern more nuanced relationships between AI literacy and user experience in HAII research.
 
@@ -428,6 +477,10 @@ Bingcheng Wang http://orcid.org/0000-0003-0996-6824 Pei-Luen Patrick http://orci
 - Eshet, Y. 2004. ' Digital Literacy: A Conceptual Framework for Survival Skills in the Digital era. ' Journal of Educational Multimedia and Hypermedia 13 (1): 93 -106.
 - Ferrari, A. 2012. ' Digital Competence in Practice: An Analysis of Frameworks. ' In: Luxembourg: Publication o /uniFB03 ce of the EU. Research Report by the Joint … .
 
+
+<!-- PAGE 14 -->
+
+
 <!-- image -->
 
 - Finstad, K. 2010. ' Response Interpolation and Scale Sensitivity: Evidence Against 5-Point Scales. ' Journal of Usability Studies 5 (3): 104 -110.
@@ -468,6 +521,10 @@ Bingcheng Wang http://orcid.org/0000-0003-0996-6824 Pei-Luen Patrick http://orci
 - Ng, W. 2012. ' Can we Teach Digital Natives Digital Literacy? ' Computers &amp; Education 59 (3): 1065 -1078.
 - Noh, Y. 2017. ' A Study on the E /uniFB00 ect of Digital Literacy on Information Use Behavior. ' Journal of Librarianship and Information Science 49 (1): 26 -56.
 - Nomura, T., T. Kanda, and T. Suzuki. 2006. ' Experimental Investigation Into In /uniFB02 uence of Negative Attitudes Toward Robots on Human -Robot Interaction. ' Ai &amp; Society 20 (2): 138 -150. doi:10.1007/s00146-005-0012-7.
+
+
+<!-- PAGE 15 -->
+
 
 - Norman, D. 2013. The Design of Everyday Things: Revised and Expanded Edition . Basic books.
 - Park, Y. J. 2013. ' Digital Literacy and Privacy Behavior Online. ' Communication Research 40 (2): 215 -236.

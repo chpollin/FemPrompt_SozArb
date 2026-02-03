@@ -1,10 +1,11 @@
 ---
 source_file: Garkisch_2024_Considering_a_unified_model_of_artificial.pdf
-conversion_date: 2026-02-03T08:57:44.480813
+conversion_date: 2026-02-03T18:28:21.520551
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Considering a Unified Model of Artificial Intelligence Enhanced Social Work: A Systematic Review
 
 Michael Garkisch 1,3 · Lauri Goldkind 2
@@ -39,6 +40,10 @@ accompanied industrial and social transformation (...).' (Uehara et al., 2013,
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 In social work practice, digital transformations is rising in prominence (Goldkind, 2018; Rafferty &amp; Waldman, 2006; Steiner, 2021), and are sometimes referred to as digital social work (Goldkind, 2018) or e-social work (López Peláez &amp; Marcuello-Servós, 2018; López Peláez et al., 2018). These technologies utilized in social work include social media, virtual reality, and chats (Boddy &amp; Dominelli, 2017; Campbell &amp; McColgan, 2016; Garkisch, 2020; Trahan et al., 2019). Artificial intelligence, a specific constellation of algorithmic and computing strategies, has gained significant attention across industries, often being touted as a game changer (Castellanos, 2020; Davenport &amp; Kalakota, 2019; Ditsche et al., 2023; Lee et al., 2018). Social work has been more conservative in its approach to artificial intelligence. The integration of artificial intelligence and machine learning technology has entered social work and social services over the last few decades (Gamble, 2020; Gillingham, 2006; Goldkind, 2018; Schwartz et al., 2017). The developments are also being intensified by the perennial challenges in social work such as limited resources, increasing caseloads and shortages of skilled social work labor (Berg-Weger &amp; Schroepfer, 2020; Grimwood, 2023; Mänttäri -van der Kuip, 2016) or overarching trends like sustainability (Jayasooria, 2016; Matthies et al., 2020), globalization (Dominelli, 2010), and growing inequality or injustice (Dorling, 2015). Artificial intelligence in social work can be a new approach, because Artificial Intelligence Enhanced Social Work addresses these challenges and can offer for example the following advantages: predictive thinking (Gillingham, 2016b; Grządzielewska, 2021), enhancements in quality controls (Kum et al., 2015; Pan et al., 2017; Santiago &amp; Smith, 2019), tailored services for better client/user-orientation (Bako et al., 2021; Fink &amp; Brito, 2021), and transparency (Coulthard et al., 2020). Nevertheless, careful consideration must be given to integrating of technology in social work to ensure adherence to ethical principles and respect for the human dimensions and rights (Rodriguez &amp; Storer, 2020; Schneider &amp; Seelmeyer, 2019).
 
 While  artificial  intelligence  (AI)  transformations promise  to  'revolutionize'  or  'evolve'  social  work practice, as demonstrated by the development of large language models like ChatGPT (Marquart &amp; Goldkind, 2023), it is crucial to critically assess AI technology implications on the protection of human rights (Livingston &amp; Risse, 2019; Raso et al., 2018; United Nations General Assembly, 2019). The significance of human rights within the context of technological advancements such as AI is particularly crucial in social work, because this profession is recognized by the United Nations as a profession group that strives to enable a humane life (IFSW, IASSW und UN Centre for Human Rights, 1994).
@@ -52,6 +57,10 @@ The intersection of artificial intelligence and social work represents a critica
 We address these gaps in the literature with this systematic review by considering the following: While some research has examined the use of AI in social work, most studies have focused solely on specific sectors, such as child welfare (Gillingham, 2006; Schwartz et al., 2017), youth work (Rice et al., 2018; Ting et al., 2018), or mental health services (Gamble, 2020). However, there are still significant gaps in our understanding of how AI can be best leveraged to enhance social services and improve results for clients (Frey et al., 2020). A comprehensive and unified model, which can serve as a blueprint for an Artificial Intelligence Enhanced Social Work, is currently lacking in the field. Furthermore, there is a dearth of evidence concerning the possibilities and risks of applying artificial intelligence to social work in comparison to other sectors (Lee &amp; Yoon, 2021; Susar &amp; Aquaro, 2019).
 
 The aim of this research is to provide a comprehensive review of the current state of AI and social work research, focusing on its possibilities and risks. Existing findings will be synthesized, and research gaps will be identified. Moreover, this study aims to develop and examine a cohesive model for AI's application in human rights-based social work: the Unified Model for Artificial Intelligence Enhanced Social Work .  Having  already  explained  the importance of human rights in the context of digitalization, the framework aligns with the human rights-based mandate, also known as the 'triple mandate' of social work (Staub-Bernasconi, 2007, 2019).
+
+
+<!-- PAGE 3 -->
+
 
 This article is structured as follows: the 'Method' section outlines the methodology employed and explains how studies were selected. The 'Results' section provides an objective overview of the possibilities and risks associated with Artificial Intelligence Enhanced Social Work. The 'Discussion' section features the Unified Model for Artificial Intelligence Enhanced Social Work. The article concludes with a discussion of the limitations and suggestions for further research.
 
@@ -96,6 +105,10 @@ Following the approach of Maier et al. (2016) in the context of keywords, we di
 
 <!-- image -->
 
+
+<!-- PAGE 4 -->
+
+
 Table 1 Topic and sector related keywords for database search
 
 | Topic-related keywords                                                                                                                                                       | Sector-related keywords                                                |
@@ -121,6 +134,10 @@ The main criteria for inclusion in the review were that studies had to (a) be pu
 We used a multiple stage process for our systematic review and were supported by research colleagues and their valuable peer feedback. We documented our results step by step in an Excel spreadsheet (search protocol - available to the readers upon request to the authors) and at the end in a PRISMA diagram (Moher et al., 2009; Page et al., 2021), see Figure 2.
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 At the second stage, to analyze our article in depth, we used a qualitative content analysis (Macpherson &amp; Holt, 2007; Pittaway &amp; Cope, 2007). The content analysis was undertaken independently by two researchers (Lipsey &amp; Wilson, 2001; Ritz et al., 2014). At the end, results were discussed and refined as a team (Cinar et al., 2019; Garkisch et al., 2017).
 
@@ -193,6 +210,10 @@ Table 2 Summary of the articles in the sample
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 Table 2 (continued)
 
 |                                    | n   |
@@ -246,6 +267,10 @@ Predictive Thinking and Risk Assessment Through the existence and analysis of da
 
 Decision Support As different authors point out AI and machine learning in social work supports in context of decision-making  process:  '(…)  dataism  promises  to improve decision-making (…)' (Devlieghere et al., 2022, p. 328) or 'There is a widespread belief that machine learning tools can be used to improve decision-making in health and social care.' (Keen et al., 2021, p. 57). On the whole, the advantages outweigh the disadvantages (Pan et al., 2017). Employees thus receive digital support in their decision-making process (Gillingham, 2019b) or management decisions can also be supported digitally in this way (Bako et al., 2021; Zetino &amp; Mendoza, 2019). This can enable better strategic decision-making (Zetino &amp; Mendoza, 2019). The consequences are improved and simplified decision-making (Alfandari et al., 2023; Devlieghere et al., 2022), autonomous decisions (Liedgren et al., 2016),
 
+
+<!-- PAGE 7 -->
+
+
 better justification for decisions (Gillingham, 2013), and reduction of the fault susceptibility (Gillingham, 2019a). And to sum it up: '(…) the benefits (…) gained through using this new technology should enable professionals to spend more time working with their clients.' (Schneider &amp; Seelmeyer, 2019, p. 118). In principle, however, AI should only be used to support decisions. It should not replace human decision-making (Victor et al., 2021).
 
 ## Possibilities at the Social Agency Level
@@ -270,6 +295,10 @@ Insufficient  Research,  Professionalization,  and  Standards Social work AI res
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 education and training are missing (Sicora et al., 2021) for example in the context of data science (Cariceo et al., 2018) or statistical methods (Coulthard et al., 2020). The result is ignorance and uncertainty for the use of AI (Gillingham, 2006). There is often a lack of knowledge about how to handle and use data in social work (Gillingham, 2020), whereas organizations are under intense pressure to improve efficiency (Tan, 2022). Standards and regulations are still missing (Cresswell et al., 2020; Gamble, 2020). Furthermore, methodological and reporting standards for AI and big date research and interventions are necessary (Cresswell et al., 2020).
 
 Resistance and Knowledge Gaps As indicated prior, social work is primarily a relational profession, focus on the interpersonal and individual level decision-making (Devlieghere et al., 2022; Fink &amp; Brito, 2021). It is not surprising, therefore, that there is a lack of acceptance of the use of AI among social workers. Some results suggest that social workers are trying to undermine the use of AI (Devlieghere et al., 2018), display 'confusion and frustration' (Gillingham, 2013, p. 440) and skepticism (Schneider &amp; Seelmeyer, 2019), or strike during rollout (Ting et al., 2018). There is also a lack of knowledge about the possible use of AI in social work focusing on the organizational level (Devlieghere et al., 2018; Pan et al., 2017), furthermore, a lack of acceptance among the clients, who are frequently not involved in the AI process (Devlieghere et al., 2018).
@@ -281,6 +310,10 @@ Ethical Issues Closely related to dehumanization are the ethical risks of using 
 Fig. 3 Artificial Intelligence Enhanced Social Work - possibilities and risks
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 ## Risks at the Social Agency Level
 
@@ -311,6 +344,10 @@ This systematic review sought to document the universe of social work research o
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 - Lastly, documenting the social work - an AI research ecosystem is challenging as AI can be considered both a method, for example, using topic modeling to analyze text data and a subject, using chat technologies in mental health services. This conflation of content and method is not a singular social work challenge but adds complexity in how as a field we can shape a uniquely social work perspective on AI.
 
 The study of computer intelligence or the field of artificial intelligence research is now roughly 75 years old; however, recent interest has accelerated dramatically with the increase in computing power and the exponential expansion of data production and collection due largely to internetbased capitalism (Russell &amp; Norvig, 2016). While social work as a practice has existed for roughly double the duration of AI as a field, the social work scholarly literature is considerably more limited given the longer timeline. The lack of a singular focused social work literature has been noted for the last 100 years and was famously captured by Abraham Flexner in his 1915 address to the national social work organization (Flexner, 1905). Indeed, Longhofer and Floersch (2012) describe how as a field there seems to be no center of knowledge production in social work. And, as outlined in the Grand Challenges for Social Work , it is also our task to shape our own work: '(…) social work can and must play a more central, transformative, and collaborative role in society, if the future is to be a bright one for all.' (Uehara et al., 2013, p. 165).
@@ -331,6 +368,10 @@ The Unified Model of Artificial Intelligence Enhanced Social Work hews closely t
 
 For Staub-Bernasconi, this aspect of the framework underscores the primary responsibility of professionals to their clients or service users. It emphasizes that professionals should prioritize the well-being and best interests of the individuals, families, or communities they are serving. This includes ensuring that services provided are of high quality, culturally
 
+
+<!-- PAGE 11 -->
+
+
 Fig. 4 Unified model of artificial intelligence enhanced social work
 
 <!-- image -->
@@ -344,6 +385,10 @@ Accountability Human rights scholars and philosophers of data justice suggest th
 Participation and User-centricity Gatenio Gabel (2016) writes that the participation of all people in decisionmaking, especially those people affected by such decisions, is a key aspect of rights-based approaches to social work practice. In the context of participatory design, a human rights approach emphasizes the primacy of human experience and well-being in evaluating artificial intelligence, positioning the effects on human lives as the central consideration in governance framework (Donahoe &amp; Metzger, 2019). As Aizenberg and van den Hoven (2020) outline in the context of human rights and AI, it is therefore crucial to involve relevant social groups in the development of technology-enabled AI solutions '(...) to translate fundamental human rights into context-dependent design requirements through a structured, inclusive, and transparent process.' (Aizenberg &amp; van den Hoven, 2020, p. 1). This participation is gaining importance, particularly in the context of digital social work (Lyon &amp; Koerner, 2016; Mois &amp; Fortuna, 2020) and therefore in human rights-based Artificial Intelligence Enhanced Social Work, too. This leads to '(...) a higher level of
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 acceptance and trust.' (Aizenberg &amp; van den Hoven, 2020, p. 11).
 
@@ -369,6 +414,10 @@ AI-Future Skills and Continuing Education As early as the 1980s, there have been
 
 → It is imperative to enhance computational thinking, AI, and data literacy and develop skills for evaluating automated systems for social workers. Social workers must receive thorough training and education concerning AI technologies, with a specific emphasis on ethical and privacy concerns, to support the ethical and responsible utilization of AI in their field. Not only is knowledge about AI and its applications
 
+
+<!-- PAGE 13 -->
+
+
 relevant, but also the selection of appropriate tools and integration of AI into social worker lectures are crucial.
 
 Ethical and Responsible Issues Social work is and must continue to be perceived as a face-to-face profession (Baker et al., 2014; Chang et al., 2015). At the same time, social work is ethically grounded, focused on human rights (Boddy &amp; Dominelli, 2017; Sanders &amp; Scanlon, 2021) and social justice  (Boddy &amp; Dominelli, 2017; Chow et al., 2021; Edwards &amp; Hoefer, 2010). Ethics holds a crucial role in the implementation of AI (Bostrom &amp; Yudkowsky, 2018; Etzioni &amp; Etzioni, 2017). Ethical and political guidelines can help to overcome these ethical challenges (Larsson, 2020; Lo Piano, 2020; Smuha, 2019). To design human rightsbased AI systems above all this, dignity, freedom, equality, solidarity, and the right to life are the overriding ethical values (Aizenberg &amp; van den Hoven, 2020). (Local) core principles of social work should also be taken into account. With regard to the USA, for example, the 'Guiding Principles' of the Grand Challenges for Social Work are relevant here: social justice, inclusiveness, diversity, and equity (Barth et al., 2019). Furthermore, it is important to ensure that the human scope for decision-making is not eliminated.
@@ -392,6 +441,10 @@ Resources, Infrastructure, and Data Budget cuts are on the agenda of many organi
 Leadership, Change and Transparency Digital transformation, including the implementation and use of AI technology in organizations, is a process of change (Li, 2020; Mugge et al., 2020). Social work as a caring discipline, characterized by classical structures and traditions (Aasback &amp; Røkkum, 2022). As a result of this, decision-making and change implementation pathways are time consuming (Aasback &amp;
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 Røkkum, 2022; Sullivan-Tibbs et al., 2022). To counteract the traditional structures and the mentioned challenges, agility plays a role within social work (Jeyasingham, 2016, 2020). Furthermore, there is a certain 'aversion' to technology within social work (Baker et al., 2014; Barrera-Algarín et al., 2021). Thus, a transparent and structured change management process is therefore of central importance (Hanelt et al., 2021; Schwarzmüller et al., 2018), although with regard to the specific characteristics of social agency organizations (Schiffhauer &amp; Seelmeyer, 2021).
 
@@ -422,6 +475,10 @@ Aasback, A. W. (2022). Platform social work - A case study of a digital activity
 Aasback, A. W., &amp; Røkkum, N. H. A. (2022). Domesticating technology in pandemic social work. Journal of Comparative Social Work, 16 (2), 172-196. https://  doi.  org/  10.  31265/  JCSW.  V16I2. 387
 
 Ahuja, L., Price, A., Bramwell, C., Briscoe, S., Shaw, L., Nunns, M., O'Rourke, G., Baron, S., &amp; Anderson, R. (2022). Implementation of the making safeguarding personal approach to strengthsbased adult social care: Systematic review of qualitative research
+
+
+<!-- PAGE 15 -->
+
 
 evidence. The British Journal of Social Work, 52 (8), 4640-4663. https://  doi.  org/  10.  1093/  bjsw/  bcac0  76
 
@@ -487,6 +544,10 @@ Dellor, E., Lovato-Hermann, K., Wolf, J. P., Curry, S. R., &amp; Freisthler, B. 
 Denyer, D., &amp; Tranfield, D. (2011). Producing a systematic review. In D. A. Buchanan &amp; A. Bryman (Eds.), The SAGE handbook of organizational research methods (Paperback ed.,1. publ, pp. 671-689). Sage Publications Inc.
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 - Devlieghere, J., Bradt, L., &amp; Roose, R. (2018). Creating transparency through electronic information systems: Opportunities and pitfalls. The British Journal of Social Work, 48 (3), 734-750. https:// doi.  org/  10.  1093/  bjsw/  bcx052
 
@@ -564,6 +625,10 @@ Gillingham, P. (2019a). Can predictive algorithms assist decisionmaking in socia
 
 Gillingham, P. (2019b). Decision support systems, social justice and algorithmic accountability in social work: A new challenge. Practice, 31 (4), 277-290. https://  doi.  org/  10.  1080/  09503  153. 2019.  15759  54
 
+
+<!-- PAGE 17 -->
+
+
 - Gillingham, P. (2020). The development of algorithmically based decision-making systems in children's protective services: Is administrative data good enough? The British Journal of Social Work, 50 (2), 565-580. https://  doi.  org/  10.  1093/  bjsw/  bcz157
 
 Goldkind, L. (2018). Digital social work: Tools for practice with individuals, organizations, and communities .  Oxford University Press Incorporated.
@@ -634,6 +699,10 @@ Li,  F.  (2020).  Leading  digital  transformation:  Three  emerging approaches 
 
 <!-- image -->
 
+
+<!-- PAGE 18 -->
+
+
 - Affairs, 33 (02), 141-158. https://  doi.  org/  10.  1017/  S0892  67941 90001  1X
 - Lo Piano, S. (2020). Ethical principles in machine learning and artificial intelligence: Cases from the field and possible ways forward. Humanities and Social Sciences Communications, 7 (1), 1-7. https://  doi.  org/  10.  1057/  s41599-  020-  0501-9
 - Longhofer, J., &amp; Floersch, J. (2012). The coming crisis in social work. Research on Social Work Practice, 22 (5), 499-519. https://  doi. org/  10.  1177/  10497  31512  445509
@@ -678,6 +747,10 @@ Rafferty, J., &amp; Waldman, J. (2006). Fit for virtual social work practice? Jo
 - Ranerup, A., &amp; Henriksen, H. Z. (2022). Digital discretion: Unpacking human and technological agency in automated decision making in Sweden's social services. Social Science Computer Review, 40 (2), 445-461. https://  doi.  org/  10.  1177/  08944  39320  980434
 - Raso, F., Hilligoss, H., Krishnamurthy, V., Bavitz, C., &amp; Levin, K. (2018). Artificial intelligence and human rights: Opportunities
 
+
+<!-- PAGE 19 -->
+
+
 - and risks. Berkman Klein Center Research , 1-62. https://  doi.  org/ 10.  2139/  ssrn.  32593  44
 - Razzaque, A. (2021). Artificial intelligence and IT governance: A literature review. In A. M. A. M. Al-Sartawi (Ed.), The big-data driven digital economy: Artificial and computational intelligence (pp. 85-97). Springer Nature Switzerland. https://  doi.  org/  10. 1007/  978-3-  030-  73057-4\_7
 - Rice, E., Yoshioka-Maxwell, A., Petering, R., Onasch-Vera, L., Craddock, J., Tambe, M., Yadav, A., Wilder, B., Woo, D., Winetrobe, H., &amp; Wilson, N. (2018). Piloting the use of artificial intelligence to enhance HIV prevention interventions for youth experiencing homelessness. Journal of the Society for Social Work and Research, 9 (4), 551-573. https://  doi.  org/  10.  1086/  701439
@@ -712,6 +785,10 @@ Rafferty, J., &amp; Waldman, J. (2006). Fit for virtual social work practice? Jo
 - Tranfield, D., Denyer, D., &amp; Smart, P. (2003). Towards a methodology  for  developing  evidence-informed  management knowledge by means of systematic review. British Journal of Management, 14 (3), 207-222. https://  doi.  org/  10.  1111/  14678551.  00375
 
 <!-- image -->
+
+
+<!-- PAGE 20 -->
+
 
 - Uehara, E., Flynn, M., Fong, R., Brekke, J., Barth, R. P., Coulton, C., Davis, K., DiNitto, D., Hawkins, J. D., Lubben, J., Manderscheid, R., Padilla, Y., Sherraden, M., &amp; Walters, K. (2013). Grand challenges for social work. Journal of the Society for Social Work and Research, 4 (3), 165-170. https://  doi.  org/  10.  5243/  jsswr.  2013.  11
 - United Nations General Assembly. (2019). Digital welfare states and human rights - Report of the Special Rapporteur on extreme poverty and human rights . https://  digit  allib  rary.  un.  org/  record/ 38341  46?v=  pdf.  Accessed 24 Jul 2024.

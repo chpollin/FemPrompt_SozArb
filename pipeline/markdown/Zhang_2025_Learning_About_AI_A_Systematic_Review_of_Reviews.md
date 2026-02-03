@@ -1,10 +1,11 @@
 ---
 source_file: Zhang_2025_Learning_About_AI_A_Systematic_Review_of_Reviews.pdf
-conversion_date: 2026-02-03T09:34:38.243858
+conversion_date: 2026-02-03T19:05:11.784377
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Learning About AI: A Systematic Review of Reviews on AI Literacy
@@ -31,6 +32,10 @@ Shan Zhang, School of Teaching and Learning, College of Education, University of
 
 Email: zhangshan@u /uniFB02 .com
 
+
+<!-- PAGE 2 -->
+
+
 ## Introduction
 
 With the rapid advancement of arti /uniFB01 cial intelligence (AI), the importance of AI in daily life has become increasingly recognized, leading to a growing emphasis on AI education. AI is now considered as essential as traditional literacy skills, such as reading and writing (Kandlhofer et al., 2016). The concept of literacy has expanded to encompass multiple domains, including digital, scienti /uniFB01 c, computing, media, and data literacies (Long &amp; Magerko, 2020; Park et al., 2021; Pinski &amp; Benlian, 2024), each aimed at identifying critical competencies within speci /uniFB01 c /uniFB01 elds that have the ability to facilitate expression, communication, and access to knowledge.
@@ -47,6 +52,10 @@ Despite the growing body of research on AI literacy, the existing literature re 
 
 Recent scholarship has increasingly focused on developing AI literacy frameworks for future generations, though there remains little consensus on what exactly AI literacy consists of. Early work by Kandlhofer et al. (2016) introduced AI literacy as the ability
 
+
+<!-- PAGE 3 -->
+
+
 to understand the core concepts and functions of AI, primarily emphasizing technical knowledge. Subsequent studies, however, broadened this de /uniFB01 nition to include competencies such as communication and collaboration with AI systems. For example, Long and Magerko (2020) offered a comprehensive framework addressing technical skills along with the abilities necessary to cooperate, communicate, and coexist with AI technologies including /uniFB01 ve core AI topics -concept, functionality, capacity, applications, and perceptions -alongside 17 competencies and 15 design considerations aimed at guiding educational integration.
 
 Similarly, Ng et al. (2021b) extended AI literacy to K-12 and university education, identifying it as a critical 21st-century skill. Their framework, grounded in Bloom ' s Taxonomy and technological pedagogical content knowledge (TPACK) (Koehler &amp; Mishra, 2009), focused on educational models and the challenges of teaching AI concepts, offering strategies that accommodate diverse learning needs. More recently, Kong et al. (2024) advanced the conversation by proposing a multidimensional AI literacy framework, categorizing it into cognitive, metacognitive, emotional, and social dimensions. This approach emphasized not only understanding and using AI but also addressing its ethical and societal implications, re /uniFB02 ecting a holistic view of AI literacy.
@@ -61,6 +70,10 @@ Overall, the evolving /uniFB01 eld of AI literacy has generated a range of frame
 
 In recent years, AI education has increasingly focused on enhancing students ' understanding of AI literacy across different educational levels -from preschool (Su, Ng,
 
+
+<!-- PAGE 4 -->
+
+
 &amp; Chu, 2023), K-12 (Casal-Otero et al., 2023; Su, Guo, et al., 2023; Wang &amp; Lester, 2023), and through higher education (Laupichler et al., 2022) -by developing AI curricula, addressing ethical implications, shaping attitudes toward AI, and tailoring perceived knowledge and skills appropriate for each stage of learning.
 
 At the preschool level, AI education introduces basic machine learning concepts through unplugged and interactive activities, and games that encourage curiosity and exploration, aiming to develop foundational skills such as pattern recognition and problem-solving (Su, Ng, &amp; Chu, 2023). At the K-12 level, programs have emphasized developing fundamental AI skills, understanding AI applications, and exploring ethical considerations appropriate for each grade, often incorporating hands-on projects and real-world examples to engage students (Casal-Otero et al., 2023; Touretzky et al., 2019; Wang &amp; Lester, 2023; Zhang et al., 2024). In higher education, AI literacy becomes more specialized, with institutions creating comprehensive frameworks to guide the integration of AI literacy into curricula, helping faculty and students understand advanced AI concepts, focusing on critical analysis of AI technologies and practical implications within speci /uniFB01 c /uniFB01 elds of study (Laupichler et al., 2022).
@@ -71,6 +84,10 @@ The Landscape of AI Curricula and Policy. With the growing recognition of AI lit
 
 Meanwhile, governments worldwide have adopted AI curricula to prepare students for a future shaped by AI technologies, including China (Song et al., 2022; Wu et al., 2021) the Ministries of Education in Korea, the United Arab Emirates, and India (UNESCO, 2022). The importance of AI literacy is re /uniFB02 ected in policy as
 
+
+<!-- PAGE 5 -->
+
+
 well. More than 30 countries have released national AI policy strategies since 2021, and one of the major themes of the national AI policy strategies is public AI literacy (Schiff, 2022). For example, the European Union published a series of policy documents for its Arti /uniFB01 cial Intelligence Strategy that emphasized the need for ethical considerations and interdisciplinary approaches in teaching AI concepts (European Commission, High-Level Expert Group on AI, 2019; Xiong et al., 2023). These policies re /uniFB02 ect a broader recognition of the necessity to equip students with the skills to navigate the complexities of AI technologies and their societal implications. Similarly, the South Korean government established the ' Arti /uniFB01 cial Intelligence National Strategy, ' which emphasized the importance of AI literacy. This policy integrates AI literacy into various subjects to foster innovation and technological pro /uniFB01 ciency among learners to prepare them for the AI-driven future (Lee &amp; Jeong, 2023). In the United States, the AI4K12 initiative (AI4K12.org) was established to set national curriculum standards for AI education in K-12 and proposed the Five Big Ideas framework (Touretzky et al., 2019), offering a curated directory of instructional resources and fostering a community dedicated to AI education for K-12 learners. The Of /uniFB01 ce of Educational Technology has just launched a new toolkit with guidelines for safe, ethical, and equitable AI integration, which includes AI literacy as an important module (U.S. Department of Education, Of /uniFB01 ce of Educational Technology, 2024). Clearly, AI literacy is of the utmost importance.
 
 ## The Present Study
@@ -78,6 +95,10 @@ well. More than 30 countries have released national AI policy strategies since 2
 Despite the awareness of the positive effects of AI literacy on students ' development, efforts to design curricula that teach aspects of AI literacy, and initiatives from different countries to promote AI literacy, there remains a lack of a comprehensive understanding of what AI literacy truly encompasses (Laupichler et al., 2022; Pinski &amp; Benlian, 2024). This gap creates a challenge in identifying which facets of AI literacy are being adequately addressed and which are being overlooked.
 
 Meanwhile, several reviews have been conducted to explore AI knowledge and concepts, available teaching resources, common instructional strategies, and the experiences of both learners and teachers in AI education (Ng et al., 2023; Rizvi et al., 2023; Yue et al., 2022). Each review presents a distinct focus, making it unclear what commonalities and differences have been identi /uniFB01 ed in the AI literacy /uniFB01 eld, particularly given that AI literacy itself lacks a uni /uniFB01 ed framework (Pinski &amp; Benlian, 2024). Moreover, the abundance of reviews published in recent years raises concerns about the potential for ' research waste ' , where insuf /uniFB01 cient consideration is given to previously published work (Grainger et al., 2020; Robinson et al., 2021). In an effort to address these issues, we conduct a systematic review of systematic reviews (Sutton et al., 2019), also known as an umbrella review (Aromataris et al., 2015), to holistically understand the AI literacy research landscape. Speci /uniFB01 cally, we posed the following research questions:
+
+
+<!-- PAGE 6 -->
+
 
 RQ1: What is AI literacy?
 
@@ -106,6 +127,10 @@ We had two phases of inclusion criteria to help narrow our sample. To initially 
 The study screening was broken into three phases.
 
 Phase I Screening. We /uniFB01 rst sought to identify reviews in the /uniFB01 eld of AI education. As such, in the /uniFB01 rst phase of study screening the titles and abstracts of studies were /uniFB01 rst
+
+
+<!-- PAGE 7 -->
+
 
 Table 1. Overview of the Database Search and Duplicate Removal Process.
 
@@ -137,9 +162,17 @@ One author extracted data from all of the studies.
 
 Variables Extracted. To gain a comprehensive understanding of the /uniFB01 ndings around AI literacy, we extracted various types of data such as context and dataset information, targeted participants, research focus, AI literacy de /uniFB01 nition, age or developmental AI literacy de /uniFB01 nition, implications for research and practice, future directions, and study
 
+
+<!-- PAGE 8 -->
+
+
 Figure 1. PRISMA /uniFB02 owchart adapted from Page et al. (2021).
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 quality (adapted from an existing metric, Aromataris et al., 2015). The details of the coding scheme are described in Table 2.
 
@@ -158,6 +191,10 @@ In terms of context, eleven reviews focused on K-12 education, one on early chil
 ## RQ1: What is AI Literacy?
 
 We questioned if any of the reviews we examined would use an age-speci /uniFB01 c de /uniFB01 nition of AI literacy. However, none of the 17 reviews did so. Interestingly, nine out of 17 studies did not include a de /uniFB01 nition for AI literacy at all (Supplemental Materials 1).
+
+
+<!-- PAGE 10 -->
+
 
 Table 2. The Variables and Coding Scheme Used During Data Extraction.
 
@@ -181,6 +218,10 @@ Table 2. The Variables and Coding Scheme Used During Data Extraction.
 
 (continued)
 
+
+<!-- PAGE 11 -->
+
+
 Table 2. (continued)
 
 | Variable                                  | Description and Coding Scheme                                                                                                              |
@@ -198,6 +239,10 @@ Among the articles that included a de /uniFB01 nition ( n = 8), three reviews (L
 
 We describe the /uniFB01 ndings of these 17 reviews by categorizing them into different educational grade levels and major /uniFB01 elds of study: ECE, K-12 education, higher and adult education, and health professional education.
 
+
+<!-- PAGE 12 -->
+
+
 Early Childhood Education. Only one study examined AI literacy at the ECE level. Su, Ng, and Chu (2023) reviewed AI curriculum designs for young children and found that most studies focused on young children ' s learning of AI or machine learning through intervention studies. They recommended designing a curriculum with six key components: AI knowledge, AI processes, the impact of AI, student relevance, teacherstudent communication, and /uniFB02 exibility, and proposed TPACK may provide a good framework for AI integration. While three methods were used to evaluate children ' s AI literacy: assessments of knowledge and theory of mind skills, questionnaires, and observations, future research should adapt performance-based measurements to better capture children ' s understanding and abilities related to AI. In addition, they also highlighted the lack of standard questionnaires, surveys, or performance-based measurements for assessing young children ' s knowledge and skills.
 
 K-12 Education. Twelve reviews in our sample examined K-12 education, however one (Ng et al., 2023) also examined other age groups. Speci /uniFB01 cally, we found six reviews that focused primarily on curricular and/or teaching approaches (Casal-Otero et al., 2023; Ng et al., 2023; Rizvi et al., 2023; Sanusi et al., 2023; Su, Guo, et al., 2023; Yue et al., 2022), while /uniFB01 ve reviews focused primarily on instructional tools (Fleger et al., 2023; Gennari et al., 2023; Ng et al., 2023; Sanusi et al., 2021; Yim &amp; Su, 2024). Additionally, two reviews were speci /uniFB01 c to locales; one examined the educational approaches for teaching AI at the K-12 levels in the Asia-Paci /uniFB01 c region (Su et al., 2022), while the other looked at pedagogical approaches and instructional materials and tools used to teach AI in Africa (Oyelere et al., 2022).
@@ -208,6 +253,10 @@ Related to Theoretical Frameworks. Findings revealed that few tools or curricula
 
 Regarding Teaching Strategies, Tools, Learning Materials, and Assessments. Popular approaches included project-based learning, problem-based learning, collaborative projects, gami /uniFB01 cation, and interactions with intelligent agents to help students understand AI (Ng et al., 2023; Yim &amp; Su, 2024). Additionally, a variety of tools are now available that help students learn AI without prior programming experience (Yim &amp; Su, 2024). Many tools are free and digitally accessible online for teaching K-12 students machine learning, such as recognition, object detection, and speech synthesis, using a variety of data types (Oyelere et al., 2022; Sanusi et al., 2021). In fact, these areas have been the primary focus of most AI education research (Gennari et al., 2023). Among
 
+
+<!-- PAGE 13 -->
+
+
 machine learning content, classi /uniFB01 cation tasks are the most commonly taught, compared to other topics like decision trees which have not been investigated in this context (Fleger et al., 2023). In addition, Sanusi et al. (2023) also suggested teachers consider embedding machine learning concepts into both STEM and non-STEM content areas as it does not need to be taught in isolation.
 
 To examine the impact of tools used to teach AI, researchers have focused on learning and engagement. These aspects have been measured in different ways, including surveys, observations, and users ' re /uniFB02 ections. Moreover, reviews also showed that collaboration and creativity dimensions of learning and engagement (Gennari et al., 2023), as well as learner ' s backgrounds (Gennari et al., 2023; Su et al., 2022), are relevant to the learning of AI. Thus, it ' s important to ensure the learning materials are appropriate for the learners ' educational levels (Su, Guo, et al., 2023), experience (Yim &amp; Su, 2024), and are culturally relevant to the learners (Su et al., 2022). In addition, while no uni /uniFB01 ed curriculum exists (Ng et al., 2023; Yue et al., 2022), common educational standards should specify what types of AI knowledge are appropriate at different levels of K-12 education (Su et al., 2022). Moreover, studies included in another review found positive effects of most AI teaching units on students ' understanding of AI concepts, their attitudes, and their interest in AI. However, most interventions were synchronous, less than 3 hours, and focused on only one topic (Yue et al., 2022), highlighting the need for longitudinal studies (Rizvi et al., 2023). In addition, reviews also found that students ' programming experience positively correlates with their engagement in learning AI concepts. Students already familiar with programming showed a more positive change in their perception of AI (Rizvi et al., 2023), whereas students without prior programming experience struggled more with learning AI concepts (Su et al., 2022). Lastly, the need for validated assessment methods was also highlighted (Su et al., 2022).
@@ -215,6 +264,10 @@ To examine the impact of tools used to teach AI, researchers have focused on lea
 Regarding Teacher Professional Development. Several challenges have been identi /uniFB01 ed that educators face while teaching AI concepts and skills in their classroom, such as providing cognitive scaffolding, understanding programming syntax for novice programmers, and building teachers ' con /uniFB01 dence and competence with AI (Ng et al., 2023). Consequently, a lot of upskilling may be required through professional development programs and school support (Ng et al., 2023; Su et al., 2022). However, few studies focused on training teachers (Sanusi et al., 2023). Therefore, it ' s crucial for teachers to be actively involved in co-designing AI literacy education to increase their AI literacy and AI literacy training should be integrated into both teacher education and professional development programs (Ng et al., 2023; Oyelere et al., 2022; Rizvi et al., 2023; Yim &amp; Su, 2024).
 
 Higher Education and Beyond. Two reviews focused on AI literacy in higher education and beyond (Laupichler et al., 2022; Ng et al., 2023). Laupichler et al. (2022) mentioned the term AI literacy is not yet precisely de /uniFB01 ned, although Long and
+
+
+<!-- PAGE 14 -->
+
 
 Magerko ' s de /uniFB01 nition (2020) is the most encompassing and best /uniFB01 t for higher and adult education contexts in their opinion. Similar to the /uniFB01 ndings around K-12 education, teacher professional development around AI literacy is necessary (Ng et al., 2023). Most research on AI literacy in higher and adult education has been recent, with the USA and Asian countries leading in publications (Laupichler et al., 2022). However, the quality of these studies varied widely.
 
@@ -225,6 +278,10 @@ Health Professions Education. Three reviews focused on AI literacy in the educat
 Several reviews have identi /uniFB01 ed that many studies on AI literacy lack strong theoretical foundations (Lee et al., 2021; Yim &amp; Su, 2024). Furthermore, these reviews emphasized the necessity for providing reliable and validated evidence of evaluation and standardized assessments (especially performance-based measures) or instrumentations of both AI literacy and AI concepts (Gennari et al., 2023; Laupichler et al., 2022; Su et al., 2022, 2023a; Yim &amp; Su, 2024; Yue et al., 2022). Additionally, teaching machine learning (ML) and AI in non-STEM contexts remains underexplored.
 
 We also found that research evidence is needed regarding the differentiation of existing tools that are most appropriate for speci /uniFB01 c educational levels (Sanusi et al., 2021), how to optimize the tools used to teach AI concepts in K-12 education, what skills are required for one to be considered as having AI literacy (Yue et al., 2022), and context-speci /uniFB01 c resources for teaching AI are needed (Oyelere et al., 2022). Meanwhile, more physical activities and strategies for teaching AI concepts are needed for young kids (Gennari et al., 2023). The importance of co-designing AI curriculum and AI professional development for teachers was also noted (Casal-Otero et al., 2023; Ng et al., 2023; Rizvi et al., 2023; Sanusi et al., 2023; Su, Ng, &amp; Chu, 2023; Yim &amp; Su, 2024),
+
+
+<!-- PAGE 15 -->
+
 
 alongside a notable absence of discussion and focus on AI policy (Rizvi et al., 2023). Overall, the need for more empirical research in different settings (informal vs. formal) and different contexts is highlighted across all studies we reviewed.
 
@@ -238,6 +295,10 @@ Building upon the AI literacy de /uniFB01 nition and 17 competencies introduced 
 
 To summarize the de /uniFB01 nition from Long and Magerko ' s (2020) paper with our /uniFB01 ndings, we refer to AI literacy as encompassing a range of skills that foster a comprehensive understanding of AI and enable individuals to purposefully explore AI technologies and thoughtfully assess their implications for both personal learning gains and social impact. Speci /uniFB01 cally, this process involves several steps: /uniFB01 rst, acquiring knowledge and skills about AI concepts and methods to identify AI-powered tools and platforms; second, gaining insight into the functionality of AI to interact with it intentionality and ef /uniFB01 ciently; and third, critically evaluating the in /uniFB02 uence of AI tools on everyday life, personal learning gains, and social impact. This de /uniFB01 nition also aligned well with the existing six constructs of AI literacy, which are: recognize,
 
+
+<!-- PAGE 16 -->
+
+
 know &amp; understand, use &amp; apply, evaluate, create, and navigate ethically (Almatra /uniFB01 et al., 2024; Ng et al., 2021a), which can be applied in different contexts and populations. It is also worth noting that while our analysis revealed a general consensus on the de /uniFB01 nition of AI literacy, we anticipate that researchers will continue to re /uniFB01 ne this de /uniFB01 nition (Chiu et al., 2024; Pinski &amp; Benlian, 2023), not just based on the ideas of ' literacy ' , such as digital literacy (Wang, Rau, &amp; Yuan, 2023), information literacy (Wang, Li, &amp; Huang, 2023), and other literacy concepts (Kandlhofer et al., 2016; Wienrich &amp; Carolus, 2021), but also for a speci /uniFB01 c age group or user groups, such as workplaces and organizations (Cetindamar et al., 2024).
 
 ## Key Findings and Opportunities for Future Research
@@ -245,6 +306,10 @@ know &amp; understand, use &amp; apply, evaluate, create, and navigate ethically
 Key Findings. Overall, as listed in Table 3, the themes we found across different /uniFB01 elds and educational levels show notable similarities, encouraging developments, and signi /uniFB01 cant progress in AI literacy education. Researchers have identi /uniFB01 ed a variety of freely accessible online tools that help students learn AI concepts without prior programming experience, particularly in areas such as machine learning, recognition, object detection, and speech synthesis (Oyelere et al., 2022; Sanusi et al., 2021). Several effective teaching approaches have also been identi /uniFB01 ed, including projectbased learning, problem-based learning, collaborative projects, and gami /uniFB01 cation (Ng et al., 2023; Yim &amp; Su, 2024). Studies have shown positive effects of AI teaching units on students ' understanding of AI concepts, attitudes, and interest in AI (Yue et al., 2022), with students who have programming experience showing particularly positive engagement (Rizvi et al., 2023).
 
 The reviews also revealed growing momentum in integrating AI literacy across different educational contexts, from early childhood to professional education, with healthcare professionals showing strong motivation to incorporate AI in their practice (Kimiafar et al., 2023). It is interesting to note that most of the reviews in our study focus on K-12 education. While there is an emerging trend and increasing attention to AI education in PreK-12 -partly due to research highlighting the importance of introducing AI concepts early -there are relatively few studies on how to teach AI literacy/AI literacy curriculum to undergraduate and graduate students with diverse academic backgrounds (Kong et al., 2021). Although there is a general consensus on the importance of equipping these populations with AI literacy, particularly in computer science education, direct research on instructional approaches for these groups remains limited. Additionally, researchers have successfully identi /uniFB01 ed key components for curriculum design, such as AI knowledge, processes, impact assessment, and student relevance (Su, Ng, &amp; Chu, 2023), providing a strong foundation for future educational initiatives. The emergence of tools that allow students to learn AI without prior programming experience (Yim &amp; Su, 2024) has democratized access to AI education, while the integration of machine learning concepts into both STEM and nonSTEM areas (Sanusi et al., 2023) demonstrates the /uniFB01 eld ' s adaptability and broad applicability.
+
+
+<!-- PAGE 17 -->
+
 
 Table 3. Summary of Key Findings ( ' What We Know ' ) and Gaps ( ' What We Do Not Know ' ) in AI Literacy.
 
@@ -263,15 +328,27 @@ Future Research Directions. Despite these encouraging developments, several clea
 
 First, reviews have shown that many learning tools or curricular designs lack a solid foundation in theoretical or conceptual frameworks (Lee et al., 2021; Pupic et al., 2023;
 
+
+<!-- PAGE 18 -->
+
+
 Yim &amp; Su, 2024). This gap is also re /uniFB02 ected in the literature about the disconnect between system design and practical classroom integrations. Research has primarily concentrated on creating ef /uniFB01 cient AI systems, placing less attention on their implementation in educational contexts and the practical challenges associated with their use (Heeg &amp; Avraamidou, 2023; Jia et al., 2024, Zhai et al., 2024, Author et al., under review). It is clear that while the /uniFB01 eld is still iterating AI teaching tools and growing as a whole, there is also the need for sound theoretical grounding in these tools ' design and development. Researchers should clearly articulate what theories are guiding the design of their AI teaching tools so that it is clear that pedagogical best practices are being followed. Co-design with teachers may also be essential for this curriculum (Lin &amp; Van Brummelen, 2021; Tatar et al., 2024; Yau et al., 2022) and tool development process (Lawrence et al., 2024).
 
 Similarly, reviews have pointed to a lack of standardized and valid measurement of AI literacy (Su et al., 2022, 2023b). Educators and researchers have given limited attention to the development and comprehension of AI literacy assessment instruments. While this gap remains signi /uniFB01 cant, recent research has shown increasing efforts to develop AI literacy assessments. Researchers synthesized 22 studies validating 16 different AI literacy scales targeting various populations, such as the general public, college students, secondary school students, medical students, and teachers (Lintner, 2024). Among the 16 scales identi /uniFB01 ed, 13 of these scales were self-reported, replying on Likert-scale items (Carolus et al., 2023; Çelebi et al., 2023; Celik, 2023; Chan &amp; Zhou, 2023; Hwang et al., 2023; Karaca et al., 2021; Kim &amp; Lee, 2022; Laupichler et al., 2023a, 2023b, 2024; Lee &amp; Park, 2024; Moodi Ghalibaf et al., 2023; MoralesGarc´ ı a et al., 2024; Ng et al., 2023; Pinski &amp; Benlian, 2023; Polatgil &amp; Güler, 2023; Wang &amp; Chuang, 2024; Wang, Rau, &amp; Yuan, 2023; Yilmaz &amp; Yilmaz, 2023; Çelebi et al., 2023), while only 3 were performance-based scales (Hornberger et al., 2023; Soto-San /uniFB01 el et al., 2024; Zhang et al., 2024). Although these scales demonstrated good structural validity and internal consistency, the authors of this review concluded they lacked comprehensive testing for content validity, reliability, and cross-cultural validity. It ' s worth noting that one of the scales actually took a theory-based approach to develop an AI literacy test which is aligned with Long and Magerko ' s (2020) AI literacy conceptualization (Hornberger et al., 2023). In addition, another recent review focuses on K-12 AI literacy curricula, analyzing the various methods used to assess students ' AI knowledge and perspectives. The assessments are categorized into formative and summative approaches, and the content they assess includes AI concepts, practices, and perspectives. The study revealed that most assessments focus on summative evaluation of AI concepts and psychological beliefs about AI, while formative, activity-based assessments and evaluations of critical AI skills such as communication and ethical understanding are lacking (Williams, 2023). So, while the reviews we examined largely stated that more work around assessment is needed, we can clearly see that the /uniFB01 eld is heading in that direction. However, it is likely that more work will be needed to create psychometrically and theoretically sound instruments for measuring AI literacy (or its components).
+
+
+<!-- PAGE 19 -->
+
 
 Similarly, teaching materials should not be con /uniFB01 ned solely to machine-learning classi /uniFB01 cation tasks (Fleger et al., 2023); they should also be aligned with AI competencies. While no uni /uniFB01 ed curriculum for AI education currently exists (Ng et al., 2023; Yue et al., 2022), it is important to establish common educational standards specifying which AI knowledge is appropriate at different K-12 education levels (Su et al., 2022). Building on recent guidance released by the Education Testing Service on accessing existing AI literacies (Sparks et al., 2024), future studies should explore how to design teaching materials and assessment tools that encompass all dimensions of AI competencies. These should also align with the common core state standards (Council Of Chief State School Of /uniFB01 cers &amp; National Governors ' Association, 2009) (https:// corestandards.org/), and be adapted to various educational levels. Overall, AI literacy requires an interdisciplinary approach that integrates holistic, active, and collaborative learning strategies centered around authentic problem-solving. While efforts, particularly in the US and China, are underway to establish a framework for AI literacy, clear guidelines are still needed to de /uniFB01 ne what K-12 students should learn about AI, including ethical considerations, and how curriculum goals match with AI literacy competencies and state standards.
 
 Researchers have also found there are a variety of tools available to help students learn AI without prior programming experience (Yim &amp; Su, 2024). This /uniFB01 nding aligns well with Long and Magerko ' s argument (2020) that, while understanding programming can aid in comprehension and would be needed in developing AI, most individuals interacting with AI in their daily lives do not need to know how to program. Instead, AI competencies can be developed without a programming background or computational literacy. Furthermore, several factors can in /uniFB02 uence students ' AI learning, including their culture, prior background (Su et al., 2022), collaboration and creativity in learning and engagement (Gennari et al., 2023), and programming experience (Rizvi et al., 2023). However, there is limited research on teaching AI at the K-12 level and few studies have analyzed students ' learning outcomes (Casal-Otero et al., 2023; Rizvi et al., 2023). Therefore, future research should consider AI literacy as a covariate to further explore other factors that impact it, and how that is associated with learning outcomes.
 
 Another issue noted in many reviews we examined was that teachers face many challenges in integrating AI into their teaching. These challenges are consistent, including a lack of school support, children ' s limited comprehensive abilities, insuf /uniFB01 cient teacher knowledge of AI, and a lack of curriculum guidelines (Su, 2024). Thus, codesigning professional development with teachers is crucial, not only to equip them with AI knowledge for discussing AI with students (Ng et al., 2023) but also to help them learn to identify effective tools for classroom use (Oyelere et al., 2022; Sanusi et al., 2021). To better assist teachers in learning the purpose of AI applications and effectively integrate them in their classrooms, AI tools can be conceptualized into two categories: teaching-facing tools, which assist teachers in completing administrative tasks and classroom needs (e.g., generating grade reports, IEPs, materials/worksheets, email creation), and student-facing tools, where students directly interact with AI in the classroom (e.g., intelligent tutors, automated feedback/scoring generators, quizzes/
+
+
+<!-- PAGE 20 -->
+
 
 games, content creation with generative AI). In addition, integration of AI should not be limited to STEM /uniFB01 elds but should also extend to non-STEM subjects such as language arts and social science education (Sanusi et al., 2023; Wang &amp; Lester, 2023).
 
@@ -284,6 +361,10 @@ Overall, our /uniFB01 ndings indicate that most of the reviews emphasize the nee
 ## Implications
 
 Implications for Theory. We found a general consensus on the de /uniFB01 nition of AI literacy, aligning with the framework proposed by Long and Magerko (2020). Their framework highlights the knowledge and skills required for the effective, ethical, and critical use of AI, as well as fostering collaboration between humans and AI. Building on this, we want to draw attention to the comprehensive de /uniFB01 nition of AI literacy that includes a range of skills aimed at fostering a deep understanding of AI, empowering individuals
+
+
+<!-- PAGE 21 -->
+
 
 to purposefully engage with AI technologies, and critically assessing their implications for both personal learning gains and societal impact.
 
@@ -298,6 +379,10 @@ Lastly, there is a need for more attention to AI policy in education. Teachers s
 ## Limitations
 
 The primary limitation of this umbrella review is the methodology itself. While umbrella reviews are essential for synthesizing existing reviews and providing a more cohesive understanding of a /uniFB01 eld, they are inherently dependent on existing systematic reviews and meta-analyses. Given the rapid pace of advancements in AI technologies, particularly in educational contexts, this reliance can present challenges. An umbrella
+
+
+<!-- PAGE 22 -->
+
 
 review depends not only on the publication of primary studies but also on the subsequent publication of systematic reviews or meta-analyses, which means it may not capture the most recent, cutting-edge developments in the /uniFB01 eld. However, we believe this limitation has less impact in the context of our review. Our focus is on AI literacy -its de /uniFB01 nition, key /uniFB01 ndings, and future research directions. While rapid innovations in AI tools and applications are ongoing, these changes are unlikely to fundamentally alter the core components of AI literacy in the near term. Instead, what is more likely to evolve are the tools and curricula used to teach AI literacy. Therefore, we position this review as a foundation for understanding current efforts and initiatives related to AI literacy curricula and policy. We encourage future researchers exploring these spaces to consider more recent primary studies published since the reviews included in this analysis were conducted.
 
@@ -316,6 +401,10 @@ The author(s) declared no potential con /uniFB02 icts of interest with respect t
 ## Funding
 
 The author(s) received no /uniFB01 nancial support for the research, authorship, and/or publication of this article.
+
+
+<!-- PAGE 23 -->
+
 
 ## Ethical Statement
 
@@ -354,6 +443,10 @@ Supplemental material for this article is available online.
 - Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakc ı , ¨ O., &amp; Mariman, R. (2024). Generative AI can harm learning (SSRN Scholarly Paper No. 4895486). Social Science Research Network. https://doi.org/10.2139/ssrn.4895486
 - Bellas, F., Guerreiro-Santalla, S., Naya, M., &amp; Duro, R. J. (2023). AI curriculum for European high schools: An embedded intelligence approach. International Journal of Arti /uniFB01 cial Intelligence in Education , 33 (2), 399 -426. https://doi.org/10.1007/s40593-022-00315-0
 
+
+<!-- PAGE 24 -->
+
+
 - Bewersdorff, A., Zhai, X., Roberts, J., &amp; Nerdel, C. (2023). Myths, mis- and preconceptions of arti /uniFB01 cial intelligence: A review of the literature. Computers and Education: Arti /uniFB01 cial Intelligence , 4 (3), Article 100143. https://doi.org/10.1016/j.caeai.2023.100143
 - Carolus, A., Koch, M. J., Straka, S., Latoschik, M. E., &amp; Wienrich, C. (2023). MAILS - meta AI literacy scale: Development and testing of an AI literacy questionnaire based on wellfounded competency models and psychological change- and meta-competencies. Computers in Human Behavior: Arti /uniFB01 cial Humans , 1 (2), Article 100014. https://doi.org/10. 1016/j.chbah.2023.100014
 * Casal-Otero, L., Catala, A., Fern´ andez-Morante, C., Taboada, M., Cebreiro, B., &amp; Barro, S. (2023). Ai literacy in k-12: A systematic literature review. International Journal of STEM Education , 10 (1), 29. https://doi.org/10.1186/s40594-023-00418-7
@@ -367,6 +460,10 @@ Supplemental material for this article is available online.
 - Council Of Chief State School Of /uniFB01 cers &amp; National Governors ' Association. (2009). Common core state standards initiative . https://www.corestandards.org
 - European Commission, High-Level Expert Group on AI. (2019, June 26). Policy and investment recommendations for trustworthy arti /uniFB01 cial intelligence . European Commission. https:// digital-strategy.ec.europa.eu/en/library/policy-and-investment-recommendationstrustworthy-arti /uniFB01 cial-intelligence
 * Fleger, C.-B., Amanuel, Y., &amp; Krugel, J. (2023). Learning tools using block-based programming for AI education. In 2023 IEEE Global Engineering Education Conference (EDUCON), Kuwait, 01 -04 May 2023, pp. 1 -5. https://doi.org/10.1109/EDUCON54358. 2023.10125154
+
+
+<!-- PAGE 25 -->
+
 
 * Gennari, R., Melonio, A., Pellegrino, M. A., &amp; D ' Angelo, M. (2023). How to playfully teach ai to young learners: A systematic literature review. In Proceedings of the 15th Biannual Conference of the Italian SIGCHI Chapter, Torino Italy, 20 -22 September, 2023, pp. 1 -9. https://doi.org/10.1145/3605390.3605393
 - Ghallab, M. (2019). Responsible AI: Requirements and challenges. AI Perspectives , 1 (1), 3. https://doi.org/10.1186/s42467-019-0003-z
@@ -382,6 +479,10 @@ Supplemental material for this article is available online.
 - Kim, S., Jang, Y., Kim, W., Choi, S., Jung, H., Kim, S., &amp; Kim, H. (2021). Why and what to teach: AI curriculum for elementary school. Proceedings of the AAAI Conference on Arti /uniFB01 cial Intelligence , 35 (17), 15569 -15576. https://doi.org/10.1609/aaai.v35i17.17833
 - Kim, S. W., &amp; Lee, Y. (2022). The arti /uniFB01 cial intelligence literacy scale for middle school students. Journal of the Korea Society of Computer and Information , 27 (3), 225 -238. https://doi.org/ 10.9708/jksci.2022.27.03.225
 
+
+<!-- PAGE 26 -->
+
+
 * Kimiafar, K., Sarbaz, M., Tabatabaei, S. M., Ghaddaripouri, K., Mousavi, A. S., Raei Mehneh, M., &amp; Mousavi Baigi, S. F. (2023). Arti /uniFB01 cial intelligence literacy among healthcare professionals and students: A systematic review. Frontiers in Health Informatics , 12 , 168. https://doi.org/10.30699/fhi.v12i0.524
 - Koehler, M., &amp; Mishra, P. (2009). What is technological pedagogical content knowledge (TPACK)? Contemporary Issues in Technology and Teacher Education , 9 (1), 60 -70. https://citejournal.org/volume-9/issue-1-09/general/what-is-technologicalpedagogicalcontent-knowledge
 - Kong, S.-C., Cheung, M. Y. W., &amp; Tsang, O. (2024). Developing an arti /uniFB01 cial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a projectbased learning approach. Computers and Education: Arti /uniFB01 cial Intelligence , 6 (5), Article 100214. https://doi.org/10.1016/j.caeai.2024.100214
@@ -394,6 +495,10 @@ Supplemental material for this article is available online.
 - Lee, J., &amp; Jeong, H. (2023). Keyword analysis of arti /uniFB01 cial intelligence education policy in South Korea. IEEE Access , 11 , 102408 -102417. https://doi.org/10.1109/ACCESS.2023.3317261
 - Lee, S., &amp; Park, G. (2024). Development and validation of ChatGPT literacy scale. Current Psychology , 43 (21), 18992 -19004. https://doi.org/10.1007/s12144-024-05723-0
 * Lee, J., Wu, A. S., Li, D., &amp; Kulasegaram, K. M. (2021). Arti /uniFB01 cial intelligence in undergraduate medical education: A scoping review. Academic Medicine: Journal of the Association of American Medical Colleges , 96 (11S), S62 -S70. https://doi.org/10.1097/ACM. 0000000000004291
+
+
+<!-- PAGE 27 -->
+
 
 - Lehmann, M., Cornelius, P. B., &amp; Sting, F. J. (2024). AI meets the classroom: When does ChatGPT harm learning? No. arXiv:2409.09047; Version 1. arXiv. https://arxiv.org/abs/ 2409.09047
 - Lin, P., &amp; Van Brummelen, J. (2021). Engaging teachers to co-design integrated AI curriculum for K-12 classrooms. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems, Yokohama, Japan, 8 -13 May, 2021, pp. 1 -12. https://doi.org/10.1145/ 3411764.3445377
@@ -409,6 +514,10 @@ Supplemental material for this article is available online.
 * Oyelere, S. S., Sanusi, I. T., Agbo, F. J., Oyelere, A. S., Omidiora, J. O., Adewumi, A. E., &amp; Ogbebor, C. (2022). Arti /uniFB01 cial intelligence in african schools: Towards a contextualized approach. In 2022 IEEE Global Engineering Education Conference (EDUCON), Tunis, Tunisia, 28 -31 March 2022, pp. 1577 -1582. https://doi.org/10.1109/EDUCON52537. 2022.9766550
 - Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., Chou, R., Glanville, J., Grimshaw, J. M., Hróbjartsson, A., Lalu, M. M., Li, T., Loder, E. W., Mayo-Wilson, E., McDonald,
 
+
+<!-- PAGE 28 -->
+
+
 - S., … Moher, D. (2021). The prisma 2020 statement: An updated guideline for reporting systematic reviews. BMJ , 372 , n71. https://doi.org/10.1136/bmj.n71
 - Park, H., Kim, H. S., &amp; Park, H. W. (2021). A scientometric study of digital literacy, ICT literacy, information literacy, and media literacy. Journal of Data and Information Science , 6 (2), 116 -138. https://doi.org/10.2478/jdis-2021-0001
 - Pinski, M., &amp; Benlian, A. (2023). AI literacy -towards measuring human competency in arti /uniFB01 cial intelligence. In Hawaii International Conference on System Sciences 2023 (HICSS56), Online, 7-1-2023, 3 . https://aisel.aisnet.org/hicss-56/cl/ai\_and\_future\_work/3
@@ -422,6 +531,10 @@ Supplemental material for this article is available online.
 * Sanusi, I. T., Oyelere, S. S., Agbo, F. J., &amp; Suhonen, J. (2021). Survey of resources for introducing machine learning in k-12 context. In 2021 IEEE Frontiers in Education Conference (FIE), Lincoln, NE, USA, 13 -16 October 2021, pp. 1 -9. https://doi.org/10.1109/ FIE49875.2021.9637393
 * Sanusi, I. T., Oyelere, S. S., Vartiainen, H., Suhonen, J., &amp; Tukiainen, M. (2023). A systematic review of teaching and learning machine learning in k-12 education. Education and Information Technologies , 28 (5), 5967 -5997. https://doi.org/10.1007/ s10639-022-11416-7
 - Schiff, D. (2022). Education for AI, not AI for education: The role of education and ethics in national AI policy strategies. International Journal of Arti /uniFB01 cial Intelligence in Education , 32 (3), 527 -563. https://doi.org/10.1007/s40593-021-00270-2
+
+
+<!-- PAGE 29 -->
+
 
 - Song, J., Zhang, L., Yu, J., Peng, Y., Ma, A., &amp; Lu, Y. (2022). Paving the way for novices: How to teach AI for K-12 education in China. Proceedings of the AAAI Conference on Arti /uniFB01 cial Intelligence , 36 (11), 12852 -12857. https://doi.org/10.1609/aaai.v36i11.21565
 - Song, Y., Tian, X., Regatti, N., Katuka, G. A., Boyer, K. E., &amp; Israel, M. (2024). Arti /uniFB01 cial intelligence unplugged: Designing unplugged activities for a conversational AI summer camp. Proceedings of the 55th ACM Technical Symposium on Computer Science Education V , 1 , 1272 -1278. https://doi.org/10.1145/3626252.3630783
@@ -438,6 +551,10 @@ Supplemental material for this article is available online.
 - Torrey, L. (2021). Teaching problem-solving in algorithms and AI. Proceedings of the AAAI Conference on Arti /uniFB01 cial Intelligence , 26 (3), 2363 -2367. https://doi.org/10.1609/aaai.v26i3.18952
 - Touretzky, D., Gardner-McCune, C., Martin, F., &amp; Seehorn, D. (2019). Envisioning AI for K-12: What should every child know about AI? Proceedings of the AAAI Conference on Arti /uniFB01 cial Intelligence , 33 (01), 9795 -9799. https://doi.org/10.1609/aaai.v33i01.33019795
 
+
+<!-- PAGE 30 -->
+
+
 - UNESCO. (2022). K-12 AI curricula: A mapping of government-endorsed AI curricula. https:// unesdoc.unesco.org/ark:/48223/pf0000380602
 - U.S. Department of Education, Of /uniFB01 ce of Educational Technology. (2024). EdTech leaders AI toolkit: Guidelines for safe, ethical, and equitable AI integration . https://tech.ed.gov/ /uniFB01 les/ 2024/10/ED-OET-EdLeaders-AI-Toolkit-10.24.24.pdf
 - Veluru, C. (2024). Responsible arti /uniFB01 cial intelligence on large scale data to prevent misuse, unethical challenges and security breaches. Journal of Arti /uniFB01 cial Intelligence &amp; Cloud Computing , 1 -6. https://doi.org/10.47363/JAICC/2024(3)331
@@ -452,6 +569,10 @@ Supplemental material for this article is available online.
 - Xiong, Y., Ling, Q., &amp; Liu, J. (2023). Educational missions and tactics in the EU arti /uniFB01 cial intelligence strategy in the era of digital transformation: A policy analysis based on EU documents published during 2018 -2022. In C.-H. Chen, A. Scapellato, A. Barbiero, &amp; D. G. Korzun (Eds.), Advances in transdisciplinary engineering . IOS Press. https://doi.org/10. 3233/ATDE230999
 - Yau, K. W., Chai, C. S., Chiu, T. K. F., Meng, H., King, I., Wong, S. W.-H., &amp; Yam, Y. (2022). CoDesigning arti /uniFB01 cial intelligence curriculum for secondary schools: A grounded theory of teachers ' experience. In 2022 International Symposium on Educational Technology (ISET), Hong Kong, 19 -22 July 2022, pp. 58 -62. https://doi.org/10.1109/ISET55194.2022.00020
 - Yilmaz, F. G. K., &amp; Yilmaz, R. (2023). Yapay Zek ˆ a Okuryazarl ı ˘ g ı ¨ Olçe ˘ ginin Türkçeye Uyarlanmas ı . Bilgi ve ˙ Iletis ¸im Teknolojileri Dergisi , 5 (2), Article 2.
+
+
+<!-- PAGE 31 -->
+
 
 - *Yim, I. H. Y., &amp; Su, J. (2024). Arti /uniFB01 cial intelligence (ai) learning tools in k-12 education: A scoping review. Journal of Computers in Education . https://doi.org/10.1007/s40692-02300304-9
 - Yue, M., Jong, M. S.-Y., &amp; Ng, D. T. K. (2024). Understanding K -12 teachers ' technological pedagogical content knowledge readiness and attitudes toward arti /uniFB01 cial intelligence education. Education and Information Technologies , 29 (15), 19505 -19536. https://doi.org/10. 1007/s10639-024-12621-2

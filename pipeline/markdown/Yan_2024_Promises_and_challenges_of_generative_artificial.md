@@ -1,10 +1,11 @@
 ---
 source_file: Yan_2024_Promises_and_challenges_of_generative_artificial.pdf
-conversion_date: 2026-02-03T09:32:17.987220
+conversion_date: 2026-02-03T19:03:09.948462
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Promises and challenges of generative artificial intelligence for human learning
 
 Lixiang Yan 1 , Samuel Greiff 2,3* , Ziwen Teuber 2 , Dragan Gaˇ sevi´ c 1*
@@ -21,6 +22,10 @@ Generative artificial intelligence (GenAI) holds the potential to transform the 
 
 Keywords: Generative Artificial Intelligence, Human Learning, AI Agent, Large Language Models, Diffusion Models
 
+
+<!-- PAGE 2 -->
+
+
 ## 1 Main
 
 Human learning is a journey that shapes minds, fosters innovation, and builds the foundations of society. Beyond merely acquiring knowledge and skills, learning is a path towards fostering critical thinking, creativity, collaboration, and social cohesion. By nurturing the ability to question, analyse, and innovate, learning empowers individuals to navigate complex challenges and contribute to societal progress. While education encompasses formalised systems that structure learning processes, learning represents the dynamic and personal process that occurs within this framework (Table 1).
@@ -35,6 +40,10 @@ Consequently, it is essential to balance technological advancement and humancent
 
 GenAI promises to transform human learning by scaling personalised support, diversifying learning resources, enabling timely feedback, and innovating assessment methods. The realisation of these promises depends on the roles and interactions GenAI has with learners and educators (Fig. 2). Specifically, GenAI technologies can act as cognitive facilitators within learners' Zone of Proximal Development, providing adaptive support at scale. GenAI can also enrich learning experiences by assisting in the creation of diverse multimedia resources. In feedback, GenAI systems offer timely and multimodal insights, surpassing traditional methods in depth and efficiency. For
 
+
+<!-- PAGE 3 -->
+
+
 Fig. 1 Overview of the impacts of generative artificial intelligence on human learning. The left side of the figure lists various learning impacts, which are categorised into promises (green), challenges (red), and needs (blue). The middle column presents key components associated with each learning impact. These components detail specific aspects that need to be addressed or leveraged to use generative AI as a tool for learning. The matrix on the right shows the five main groups involved in implementing these key components: learners, educators, researchers, policymakers, and technologists. The dots in each column indicate that the relevant group needs to make a substantive contribution to achieving the goals of the key component in the corresponding row.
 
 <!-- image -->
@@ -44,6 +53,10 @@ assessment, GenAI enables adaptive and authentic evaluations using generative ag
 ## 2.1 Learning Support
 
 The unique contribution of GenAI, particularly LLMs, to learning support lies in its scalability and adaptability. GenAI can function as a master teacher at scale, providing personalised and adaptive support to a wide range of learners across various subjects and languages. Unlike conventional intelligent tutoring systems that require extensive knowledge engineering to design rule-based responses [11], GenAI can achieve superior and more naturalistic interactions, such as personalised feedback, adaptive questioning, and conversational engagement, with minimal prior training. These enhanced interactions facilitate more effective and intuitive tutoring experiences, making the learning process more engaging and tailored to individual student needs [8]. This capability holds the potential to democratise access to high-quality learning support, making it accessible to learners globally.
+
+
+<!-- PAGE 4 -->
+
 
 GenAI's role aligns with Vygotsky's sociocultural theory of learning, where more knowledgeable others guide learners within their Zone of Proximal Development [12]. By integrating novel technologies like ChatGPT into intelligent tutoring systems, GenAI can offer personalised and adaptive support based on each learner's unique knowledge [13]. These language models have demonstrated remarkable proficiency in processing semantic and contextual information [14], a key aspect of their effectiveness as a tool for learning. By accurately interpreting and responding to the linguistic and contextual nuances in learners' queries, LLMs ensure that the learning experience is interactive and thought-provoking. Rather than merely dispensing solutions, they can be used to encourage learners to engage cognitively with the material. This engagement is achieved by prompting students to think critically, unpack problems, and understand underlying concepts.
 
@@ -55,6 +68,10 @@ Despite the promising design of systems like Khanmigo and students' positive att
 
 Effective learning relies on the quality and diversity of resources, yet developing highquality materials is often time-consuming and resource-intensive. GenAI promises to ease this burden by creating diverse and engaging content, fostering curriculum innovation and enhancing learning experiences. Studies on human-AI collaboration indicate
 
+
+<!-- PAGE 5 -->
+
+
 Fig. 2 Examples of human-AI interactions in human learning. a, Learners receive personalised and adaptive support from generative AI tutors, which are co-designed with educators and have access to prior learner data and domain knowledge. b, Educators use generative AI to create multimodal learning resources, incorporating text, audio, and video content. c, Educators collaborate with generative AI to deliver multimodal feedback to learners. d, Generative AI agents use input requirements from educators, prior learner data, and domain knowledge to create assessment activities that evaluate learners.
 
 <!-- image -->
@@ -62,6 +79,10 @@ Fig. 2 Examples of human-AI interactions in human learning. a, Learners receive 
 that co-creating content with GenAI can meet diverse learning needs, providing students with relevant and accessible materials to support their individual paths efficiently and creatively [21-23]. For instance, early explorations have shown that GPT-4 can automatically generate instructional materials, such as explanations of programming concepts, examples, and quiz questions, thereby boosting learner engagement and satisfaction [24]. Additionally, GPT-4 has demonstrated proficiency in generating college-level biology questions for lower levels of Bloom's Taxonomy (e.g., remember and understand) but struggles with higher levels (e.g., apply and create) [25]. These findings suggest that while GenAI can produce learning resources, educators' expertise remains crucial for ensuring the accuracy, relevance, and pedagogical soundness of the material. This highlights the need for a human-AI collaborative approach to create meaningful resources that meet diverse learning objectives and learner needs.
 
 GenAI can also enrich learning resources by generating interactive activities, multimedia content, and real-world problem-solving scenarios. Text-to-image models like Stable Diffusion, Midjourney, and DALL-E [26, 27] enable educators to create visual learning materials from textual content. These tools can foster students' creative thinking by engaging them in activities such as using AI to generate images. For instance, students can create imaginative visuals with AI and write inspired diaries based on these images, a practice found to reduce gender disparities in interest in art during Science, Technology, Engineering, the Arts and Mathematics (STEAM) classes [28].
+
+
+<!-- PAGE 6 -->
+
 
 This innovative approach has also been shown to enhance primary school students' extrinsic motivation, problem-solving awareness, critical thinking, and learning performance in ancient Chinese poetry [29]. Similarly, text-to-video generation tools like Runway's Gen-3 Aphla and OpenAI's Sora can support educators in creating video narratives from textual content, further diversifying learning modalities. This capability is particularly valuable for teaching students with specific disabilities, such as providing multisensory instruction to students with dyslexia [30]. A preliminary study found no significant differences in learning gains and perceived experiences between GenAI-generated videos with synthetic instructors and traditional recorded instructor videos, suggesting that GenAI could make high-quality learning resources more accessible globally [31].
 
@@ -75,6 +96,10 @@ Emerging studies show similar benefits in various learning contexts, such as for
 
 GenAI could also expand feedback delivery beyond text and graphics to include narrated audio and video, addressing the scalability challenges of these formats and
 
+
+<!-- PAGE 7 -->
+
+
 leveraging their benefits for enhanced feedback efficiency and student engagement [46]. For example, by combining 3D diffusion models [47] and text-to-speech models [48], educators can create digital avatars to convey feedback through a narrated voice rather than text alone. This diversity in feedback modalities can increase engagement and effectiveness [46]. Prior research indicates that audio and video feedback is often perceived as more personal and dynamic, enhancing understanding and engagement compared with traditional written feedback [49-51]. The integration of GenAI technologies promises to facilitate timely and multimodal feedback, providing more informative feedback and fostering improved effectiveness and engagement in the learning process. However, it is essential to evaluate the cost and benefits, as these models, especially video generation models, require high computational power, potentially widening the inequality in learning opportunities.
 
 ## 2.4 Learning Assessment
@@ -84,6 +109,10 @@ GenAI is transforming the assessment of learning, shifting from traditional, oft
 Recent educational technology studies highlight the potential of automated assessments through multi-agent frameworks that leverage multiple LLM agents. These GenAI systems are being used to grade coding assignments in online learning [58], conduct cognitive assessments to identify students' strengths and weaknesses according to Bloom's taxonomy in e-learning environments [59], and assess educators' mathematical content knowledge for professional development programs [60]. These applications demonstrate strong potential for generalisability, precision, and dependability.
 
 GenAI also holds promise for advancing authentic assessments [52]. It can enhance learning tasks in both virtual and physical simulations to more accurately mirror realworld situations, making assessments more meaningful and contextualised. Previous studies have shown the effectiveness of combining LLMs with knowledge graphs to create virtual standard patients, aiding the training and evaluation of medical students' diagnostic skills [61]. Knowledge graphs are structured representations that integrate diverse data sources, providing a comprehensive understanding of a domain [62]. When
+
+
+<!-- PAGE 8 -->
+
 
 used with LLMs, they can simulate complex learning and assessment scenarios requiring critical thinking and problem-solving skills, such as in driving education [63], programming education [64], and laboratory safety courses [65]. Integrating multimodal generative models, such as GPT-4 Vision for text and image generation, Meta's Voicebox for audio creation from text, and generative adversarial networks for digital avatar production, can further enhance the authenticity of simulated assessment environments [66]. These enhancements allow students to interact naturally and perform procedural actions as if they were in real professional settings, a concept proven effective in virtual internships [67] and healthcare simulations [68]. However, much effort is required to develop valid and reliable behavioural and psychological indicators in these novel assessment settings to accurately capture genuine human learning.
 
@@ -97,6 +126,10 @@ As GenAI technologies become increasingly integrated into learning support, reso
 
 Emerging studies indicate that hallucinations in GenAI can occur with nonnegligible frequency, increasing with the complexity and specificity of queries posed to the AI [70]. GenAI may perform reasonably well with generic questions (e.g., What are Newton's laws of motion?) but is more prone to errors with nuanced, contextspecific, time-sensitive, or highly technical information [73]. The lack of transparency in GenAI's decision-making process complicates identifying when and why these hallucinations occur [70, 74]. Relying solely on GenAI for learning content creation and curriculum development without validation could introduce inaccuracies, misleading both educators and students. Similarly, GenAI-generated feedback or assessments based on incorrect information could misguide students' learning processes, leading to misconceptions or a lack of understanding of key concepts.
 
+
+<!-- PAGE 9 -->
+
+
 Addressing these challenges requires an interdisciplinary effort. Educators should adopt a balanced and proactive approach, teaching learners to critically evaluate AIgenerated content by cross-referencing with reliable sources, questioning plausibility, and recognising signs of hallucination. These steps are essential for cultivating AI literacy [75], as discussed further in Section 4.1. Additionally, designing and optimising the interface of educational technologies to highlight potential hallucinations requires collaboration among learning scientists, human-computer interaction researchers, and technology providers [74, 76]. Such a collaborative approach is essential to empower learners to deal with the imperfections of GenAI both intrinsically, by developing critical thinking skills, and extrinsically, by leveraging improved technological interfaces that signal potential inaccuracies.
 
 ## 3.2 Ethical Dilemmas
@@ -106,6 +139,10 @@ Adopting GenAI to support human learning raises several ethical issues, notably 
 To achieve personalisation in learning support, resource generation, feedback, and assessment using GenAI, learners' personal data must be provided to these models. However, privacy concerns can reduce learner participation [80, 81]. These concerns are prominent due to the lack of clear consent strategies and data protection measures surrounding GenAI in supporting human learning [2]. Using learner-generated data without explicit consent or adequate anonymisation raises serious issues about exposing sensitive information [82]. For instance, researchers conducted a divergence attack on ChatGPT, compromising its security and causing it to output original training data containing personally identifiable information [83] (preprint). Although OpenAI has addressed this vulnerability, potential data breaches from unforeseen attacks remain a concern [84, 85]. This issue is particularly troubling given the resources required for GenAI to unlearn information once private data has been used for model training, especially for large, commercial, and proprietary models [84].
 
 Regarding equality, there is an evident disparity in language representation and accessibility of GenAI models. While advancements have been made in non-English languages for LLMs and speech diffusion models [14, 48], the predominance of Englishbased AI solutions perpetuates a bias towards Western, Educated, Industrialized, Rich, and Democratic (WEIRD) societies [2]. This imbalance raises concerns about the
+
+
+<!-- PAGE 10 -->
+
 
 global applicability and fairness of these technologies, potentially intensifying existing inequalities and the digital divide in learning opportunities [86].
 
@@ -120,6 +157,10 @@ A performance paradox arises when tasks are completed with GenAI assistance. A r
 The challenge is further compounded when considering the learning process itself. GenAI's ability to interact with computational systems means even the learning process can be imitated or augmented by AI. Preliminary work on multimodal GenAI agents [95] (preprint) has shown these agents can operate smartphone applications, generating digital trace data while executing user requests. This AI-generated data could impede existing learning analytic methods that rely on such data to model the learning process [96]. This issue blurs the line between human cognition and AIaugmented cognition [97], complicating the assessment of skills traditionally seen as exclusively human, such as critical thinking, problem-solving, and creativity [94].
 
 Consequently, we must reconsider the purpose of learning assessment across different educational stages. Assessing human cognition and metacognition remains essential for K-12 education, as young learners continue developing fundamental skills. In higher
+
+
+<!-- PAGE 11 -->
+
 
 education, prioritising the evaluation of human-AI hybrid cognition and metacognition could be crucial for preparing learners for an AI-integrated workforce [98]. This shift demands rethinking assessment strategies to accommodate the collaborative nature of learning in the presence of AI.
 
@@ -137,6 +178,10 @@ These concerns highlight the critical need to cultivate AI literacy. A recent st
 
 The integration of GenAI into human learning promises to enhance experiences and outcomes (as highlighted in Section 2). However, adopting these technologies requires a commitment to evidence-based decision-making. This necessitates a collaborative
 
+
+<!-- PAGE 12 -->
+
+
 effort among researchers, practitioners, and policymakers to generate robust evidence guiding the effective and responsible use of AI in learning practices. By working together, these stakeholders can ensure GenAI deployment aligns with learning goals and supports the development of essential cognitive and metacognitive skills.
 
 Encouraging the use of GenAI to support human learning requires a nuanced understanding of its benefits and limitations. For instance, while GenAI can improve the efficiency of information processing and retrieval, there is a risk of fluency bias, where learners may overestimate their understanding due to the ease of cognitive information processing [102, 103] (preprint). Similarly, reliance on GenAI for creative and problem-solving tasks could weaken these critical skills, fostering a dependency that may hinder innovation and original thought [104-106].
@@ -149,6 +194,10 @@ Building on discussions of evidence-based decision-making, it is crucial to emph
 
 To address these challenges, it is essential to establish standards for appraising the quality of evidence on GenAI's impact on learning processes, outcomes, and experiences [18]. In the medical field, tools such as the Cochrane Risk of Bias Tool and ROBINS-I are used to assess study quality. Given the distinct methodological requirements introduced by GenAI, including various prompting engineering strategies and retrieval generation techniques, it is crucial to establish specific quality standards and evaluation tools. These requirements go beyond conventional methodologies used in human learning research. For example, using GenAI to generate physics practice questions might involve retrieval methods that limit the AI to sourcing content solely
 
+
+<!-- PAGE 13 -->
+
+
 on Newton's laws of motion and crafting prompts specifying complexity level, target student grade, and desired question format (e.g., multiple-choice, short answer, or problem-solving). By working collaboratively, the human learning research community can create a robust framework for evaluating evidence, ensuring a solid foundation for future policies and practices. This effort will enable researchers, practitioners, and policymakers to build on reliable, valid, and generalisable findings, fostering the responsible and effective integration of GenAI technologies into learning.
 
 ## 5 Conclusion and Future Directions
@@ -158,6 +207,10 @@ As we look toward the next decade, powerful AI tools are set to become integral 
 Understanding the relationship between GenAI and human cognition, metacognition, and creativity is essential for maximising its potential as a learning tool. This understanding will enhance the effectiveness of AI-driven educational tools and ensure human ingenuity is preserved amidst technological advancement. Key research questions include: How can we promote human-AI interaction to maximise learner agency? What behavioural indicators can reliably capture cognitive and metacognitive processes during AI-assisted learning? How can we assess learning to reflect genuine knowledge and skill development rather than an AI-created performance illusion? What strategies can prevent over-reliance on AI, ensuring humans remain primary agents of critical thinking and problem-solving?
 
 Educators are pivotal in integrating AI tools to enhance traditional teaching methods. We anticipate a shift in educators' roles, with GenAI reducing the burden of knowledge dissemination, allowing teachers to focus on deeper connections with students as mentors and facilitators. This transition requires educators to adopt new pedagogical paradigms that leverage AI to foster intellectual and emotional growth. They must become proficient in AI literacy, effectively integrate AI tools into their teaching, and remain vigilant about potential pitfalls, such as GenAI's imperfections and the risk of student over-reliance on AI. Balancing AI use with activities promoting human creativity, critical thinking, and social interaction is crucial to ensure AI augments rather than replaces human educators. Educational institutions must invest in ongoing professional development and support systems to help teachers manage techno-stress and workload burdens from adopting new technologies.
+
+
+<!-- PAGE 14 -->
+
 
 Policymakers and technology companies should consider: How can we ensure accountability for AI tools used in human learning, and who should be responsible for their outcomes? What ethical guidelines should govern AI tools in educational settings? How can we design and implement AI learning tools to promote equality and inclusivity?
 
@@ -174,6 +227,10 @@ We argue that human-centred theories of learning and instruction must be integra
 - [7] Vartiainen H, Tedre M. Using artificial intelligence in craft education: crafting with text-to-image generative models. Digital Creativity. 2023;34(1):1-21.
 - [8] Kasneci E, Seßler K, K¨ uchemann S, Bannert M, Dementieva D, Fischer F, et al. ChatGPT for good? On opportunities and challenges of large language models
 
+
+<!-- PAGE 15 -->
+
+
 Table 1 Defining human learning concepts
 
 | Human learning. Human learning is the process through which individuals acquire new knowledge, skills, attitudes, or values.                                                                                                                                                                                                                                                                                                                                                                         |
@@ -189,6 +246,10 @@ Table 1 Defining human learning concepts
 | It aims to assess learners' abilities in contexts that are relevant and meaningful, providing a more accurate measure of their competencies. Intelligent tutoring system. An intelligent tutoring system is a computer-based system or tool created to mimic human tutoring. It provides learners with immediate,                                                                                                                                                                                    |
 | personalised instruction or feedback, often functioning autonomously without requir- ing direct intervention from a human teacher.                                                                                                                                                                                                                                                                                                                                                                   |
 | Digital twins. Digital twins are virtual replicas of physical entities, such as objects, systems, or processes. In education, digital twins can simulate real-world scenarios, providing learners with immersive and interactive experiences to enhance understand- ing and skill development.                                                                                                                                                                                                       |
+
+
+<!-- PAGE 16 -->
+
 
 Table 2 Glossary of artificial intelligence terms
 
@@ -210,6 +271,10 @@ Divergence attack. A divergence attack is a method used to exploit weaknesses in
 
 Model alignment. Model alignment involves ensuring that AI systems' behaviours and outputs are consistent with human values and intended goals. It includes efforts to make AI systems safe, reliable, and ethical in their operations.
 
+
+<!-- PAGE 17 -->
+
+
 - for education. Learning and individual differences. 2023;103:102274.
 - [9] Pontual Falc˜ ao T, Ferreira Mello R, Lins Rodrigues R.: Applications of learning analytics in Latin America. Wiley Online Library.
 - [10] Darvishi A, Khosravi H, Sadiq S, Gaˇ sevi´ c D, Siemens G. Impact of AI assistance on student agency. Computers &amp; Education. 2023;p. 104967.
@@ -225,6 +290,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [20] Nie A, Chandak Y, Suzara M, Malik A, Woodrow J, Peng M, et al. The GPT Surprise: Offering Large Language Model Chat in a Massive Coding Class Reduced Engagement but Increased Adopters' Exam Performances. Center for Open Science; 2024.
 - [21] Molenaar I. Towards hybrid human-AI learning technologies. European Journal of Education. 2022;57(4):632-645.
 
+
+<!-- PAGE 18 -->
+
+
 - [22] Ji H, Han I, Ko Y. A systematic review of conversational AI in language education: Focusing on the collaboration with human teachers. Journal of Research on Technology in Education. 2023;55(1):48-63.
 - [23] Yang KB, Lawrence L, Echeverria V, Guo B, Rummel N, Aleven V. Surveying teachers' preferences and boundaries regarding human-AI control in dynamic pairing of students for collaborative learning. In: Technology-Enhanced Learning for a Free, Safe, and Sustainable World: 16th European Conference on Technology Enhanced Learning, EC-TEL 2021, Bolzano, Italy, September 20-24, 2021, Proceedings 16. Springer; 2021. p. 260-274.
 - [24] Pesovski I, Santos R, Henriques R, Trajkovik V. Generative ai for customizable learning experiences. Sustainability. 2024;16(7):3034.
@@ -237,6 +306,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [31] Leiker D, Gyllen AR, Eldesouky I, Cukurova M. Generative AI for learning: investigating the potential of learning videos with synthetic virtual instructors. In: International conference on artificial intelligence in education. Springer; 2023. p. 523-529.
 - [32] Bada SO, Olusegun S. Constructivism learning theory: A paradigm for teaching and learning. Journal of Research &amp; Method in Education. 2015;5(6):66-70.
 
+
+<!-- PAGE 19 -->
+
+
 - [33] Tavakoli M, Faraji A, Molavi M, T Mol S, Kismih´ ok G. Hybrid human-AI curriculum development for personalised informal learning environments. In: LAK22: 12th International Learning Analytics and Knowledge Conference; 2022. p. 563-569.
 - [34] Pardo A, Jovanovic J, Dawson S, Gaˇ sevi´ c D, Mirriahi N. Using learning analytics to scale the provision of personalised feedback. British Journal of Educational Technology. 2019;50(1):128-138.
 - [35] Lim LA, Gentili S, Pardo A, Kovanovi´ c V, Whitelock-Wainwright A, Gaˇ sevi´ c D, et al. What changes, and for whom? A study of the impact of learning analytics-based process feedback in a large course. Learning and Instruction. 2021;72:101202.
@@ -248,6 +321,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [41] Liang Z, Sha L, Tsai YS, Gaˇ sevi´ c D, Chen G. Towards the Automated Generation of Readily Applicable Personalised Feedback in Education. In: International Conference on Artificial Intelligence in Education. Springer; 2024. p. 75-88.
 - [42] Wiboolyasarin W, Wiboolyasarin K, Suwanwihok K, Jinowat N, Muenjanchoey R. Synergizing collaborative writing and AI feedback: An investigation into enhancing L2 writing proficiency in wiki-based environments. Computers and Education: Artificial Intelligence. 2024;6:100228.
 - [43] Yan L, Zhao L, Echeverria V, Jin Y, Alfredo R, Li X, et al. VizChat: Enhancing Learning Analytics Dashboards with Contextualised Explanations Using Multimodal Generative AI Chatbots. In: International Conference on Artificial Intelligence in Education. Springer; 2024. p. 180-193.
+
+
+<!-- PAGE 20 -->
+
 
 - [44] Matcha W, Gaˇ sevi´ c D, Pardo A, et al. A systematic review of empirical studies on learning analytics dashboards: A self-regulated learning perspective. IEEE transactions on learning technologies. 2019;13(2):226-245.
 - [45] Yang M, Carless D. The feedback triangle and the enhancement of dialogic feedback processes. Teaching in Higher Education. 2013;18(3):285-297.
@@ -262,6 +339,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [54] Park JS, O'Brien J, Cai CJ, Morris MR, Liang P, Bernstein MS. Generative agents: Interactive simulacra of human behavior. In: Proceedings of the 36th annual acm symposium on user interface software and technology; 2023. p. 1-22.
 - [55] Fan Y, van der Graaf J, Lim L, Rakovi´ c M, Singh S, Kilgour J, et al. Towards investigating the validity of measurement of self-regulated learning based on trace data. Metacognition and Learning. 2022;17(3):949-987.
 
+
+<!-- PAGE 21 -->
+
+
 - [56] Allen LK, Creer SC, ¨ Oncel P. Natural Language Processing as a Tool for Learning Analytics - Towards a Multi-Dimensional View of the Learning Process. In: Lang C, Siemens G, Wise AF, Gaˇ sevi´ c D, Merceron A, editors. The Handbook of Learning Analytics. 2nd ed. SoLAR; 2022. p. 46-53.
 - [57] Gaˇ sevi´ c D, Greiff S, Shaffer DW.: Towards strengthening links between learning analytics and assessment: Challenges and potentials of a promising new bond. Elsevier.
 - [58] Lagakis P, Demetriadis S. EvaAI: A Multi-agent Framework Leveraging Large Language Models for Enhanced Automated Grading. In: International Conference on Intelligent Tutoring Systems. Springer; 2024. p. 378-385.
@@ -273,6 +354,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [64] Jin H, Lee S, Shin H, Kim J. Teach AI How to Code: Using Large Language Models as Teachable Agents for Programming Education. In: Proceedings of the CHI Conference on Human Factors in Computing Systems; 2024. p. 1-28.
 - [65] Yang QF, Lian LW, Zhao JH. Developing a gamified artificial intelligence educational robot to promote learning effectiveness and behavior in laboratory safety courses for undergraduate students. International journal of educational technology in higher education. 2023;20(1):18.
 - [66] Thanh BN, Vo DTH, Nhat MN, Pham TTT, Trung HT, Xuan SH. Race with the machines: Assessing the capability of generative AI in solving authentic assessments. Australasian Journal of Educational Technology. 2023;39(5):59-81.
+
+
+<!-- PAGE 22 -->
+
 
 - [67] Chesler NC, Ruis A, Collier W, Swiecki Z, Arastoopour G, Williamson Shaffer D. A novel paradigm for engineering education: Virtual internships with individualized mentoring and assessment of engineering thinking. Journal of Biomechanical Engineering. 2015;137(2):024701.
 - [68] Cant RP, Cooper SJ. Simulation-based learning in nurse education: systematic review. Journal of advanced nursing. 2010;66(1):3-15.
@@ -286,6 +371,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [76] Leiser F, Eckhardt S, Knaeble M, Maedche A, Schwabe G, Sunyaev A. From ChatGPT to FactGPT: A Participatory Design Study to Mitigate the Effects of Large Language Model Hallucinations on Users. In: Proceedings of Mensch Und Computer 2023. MuC '23. New York, NY, USA: Association for Computing Machinery; 2023. p. 81-90. Available from: https://doi.org/10.1145/3603555. 3603565.
 - [77] Schneider J, Richner R, Riser M. Towards trustworthy autograding of short, multi-lingual, multi-type answers. International Journal of Artificial Intelligence in Education. 2023;33(1):88-118.
 
+
+<!-- PAGE 23 -->
+
+
 - [78] Khosravi H, Shum SB, Chen G, Conati C, Tsai YS, Kay J, et al. Explainable artificial intelligence in education. Computers and Education: Artificial Intelligence. 2022;3:100074.
 - [79] Yang SJ, Ogata H, Matsui T, Chen NS. Human-centered artificial intelligence in education: Seeing the invisible through the visible. Computers and Education: Artificial Intelligence. 2021;2:100008.
 - [80] Short H. A critical evaluation of the contribution of trust to effective T echnology E nhanced L earning in the workplace: A literature review. British Journal of Educational Technology. 2014;45(6):1014-1022.
@@ -297,6 +386,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [86] Pugh SL, Subburaj SK, Rao AR, Stewart AE, Andrews-Todd J, D'Mello SK. Say What? Automatic Modeling of Collaborative Problem Solving Skills from Student Speech in the Wild. International Educational Data Mining Society. 2021;.
 - [87] Sha L, Rakovic M, Whitelock-Wainwright A, Carroll D, Yew VM, Gasevic D, et al. Assessing algorithmic fairness in automatic classifiers of educational forum posts. In: Artificial Intelligence in Education: 22nd International Conference, AIED 2021, Utrecht, The Netherlands, June 14-18, 2021, Proceedings, Part I 22. Springer; 2021. p. 381-394.
 - [88] Merine R, Purkayastha S. Risks and Benefits of AI-generated Text Summarization for Expert Level Content in Graduate Health Informatics. In: 2022 IEEE 10th International Conference on Healthcare Informatics (ICHI). IEEE; 2022. p. 567-574.
+
+
+<!-- PAGE 24 -->
+
 
 - [89] Sha L, Rakovi´ c M, Das A, Gaˇ sevi´ c D, Chen G. Leveraging class balancing techniques to alleviate algorithmic bias for predictive tasks in education. IEEE Transactions on Learning Technologies. 2022;15(4):481-492.
 - [90] Sha L, Li Y, Gasevic D, Chen G. Bigger Data or Fairer Data? Augmenting BERT via Active Sampling for Educational Text Classification. In: Proceedings of the 29th International Conference on Computational Linguistics; 2022. p. 1275-1285.
@@ -311,6 +404,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [99] Long D, Magerko B. What is AI literacy? Competencies and design considerations. In: Proceedings of the 2020 CHI conference on human factors in computing systems; 2020. p. 1-16.
 - [100] Weiser B.: Here's What Happens When Your Lawyer Uses ChatGPT. Accessed on 2023-12-01. Available from: https://www.nytimes.com/2023/05/ 27/nyregion/avianca-airline-lawsuit-chatgpt.html.
 
+
+<!-- PAGE 25 -->
+
+
 - [101] Kabir S, Udo-Imeh DN, Kou B, Zhang T. Is stack overflow obsolete? an empirical study of the characteristics of chatgpt answers to stack overflow questions. In: Proceedings of the CHI Conference on Human Factors in Computing Systems; 2024. p. 1-17.
 - [102] Bjork RA, Dunlosky J, Kornell N. Self-regulated learning: Beliefs, techniques, and illusions. Annual review of psychology. 2013;64:417-444.
 - [103] Kabir S, Udo-Imeh DN, Kou B, Zhang T. Who answers it better? an in-depth analysis of chatgpt and stack overflow answers to software engineering questions. arXiv preprint arXiv:230802312. 2023;.
@@ -323,6 +420,10 @@ Model alignment. Model alignment involves ensuring that AI systems' behaviours a
 - [110] Zhang SJ, Florin S, Lee AN, Niknafs E, Marginean A, Wang A, et al. Exploring the MIT Mathematics and EECS Curriculum Using Large Language Models. arXiv preprint arXiv:230608997. 2023;.
 - [111] Chowdhuri R, Deshmukh N, Koplow D.: No, GPT4 can't ace MIT. Accessed: 2023-12-23. https://bit.ly/No-GPT4-can-t-ace-MIT.
 - [112] Lorenz P, Perset K, Berryhill J.: Initial policy considerations for generative artificial intelligence. Accessed: 2024-07-09. https://www.oecd.org/en/publications/ initial-policy-considerations-for-generative-artificial-intelligence fae2d1e6-en. html.
+
+
+<!-- PAGE 26 -->
+
 
 ## Acknowledgments
 

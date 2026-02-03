@@ -1,10 +1,11 @@
 ---
 source_file: Steyvers_2025_What_large_language_models_know_and_what_people.pdf
-conversion_date: 2026-02-03T09:25:35.568642
+conversion_date: 2026-02-03T18:56:40.821399
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Article
 
 <!-- image -->
@@ -35,6 +36,10 @@ Recent research raises doubts about the reliability of the information that LLMs
 
 e-mail: mark.steyvers@uci.edu
 
+
+<!-- PAGE 2 -->
+
+
 LLM
 
 Fig. 1 | Overview of the evaluation methodology for assessing the calibration gap between model confidence and human confidence in the model. The multiple-choice questions, the approach works as follows: (1) prompt the LLM with a question to obtain the model's internal confidence for each answer choice; (2) select the most likely answer and prompt the model a second time to generate an explanation for the given answer; (3) obtain the human confidence by showing users the question and the LLM's explanation and asking users to indicate the
@@ -56,6 +61,10 @@ Our contributions in this context are twofold. First, we present a set of experi
 ## LLMs
 
 We use three publicly available LLMs in our studies: GPT-3.5 (ref. 20), PaLM2 (ref. 21) and GPT-4o. We apply the GPT-3.5 and PaLM2 models to a subset of multiple-choice questions from the Massive Multitask
+
+
+<!-- PAGE 3 -->
+
 
 ## Table 1 | Overview of experiments
 
@@ -100,6 +109,10 @@ The particular question is: 'A moving 1.5 kg cart collides with and sticks to a 
 
 a low-, medium- and high-confidence explanation when the model has low, medium and high confidence, respectively. The Supplementary Information ('experiment 3') reports the results from an additional experiment with a different prompting approach that alters the default explanations from experiment 1. We use the two metrics to assess the relationship between human and model confidence and model accuracy. See Methods for details.
 
+
+<!-- PAGE 4 -->
+
+
 Fig. 2 | Calibration error and discrimination for model confidence and human confidence across the behavioural experiments and LLMs. Calibration error is assessed by ECE (lower is better), while discrimination is assessed by AUC (higher is better). The vertical dashed lines represent the calibration and discrimination gap between model confidence and human confidence for unmodified
 
 <!-- image -->
@@ -130,6 +143,10 @@ Figure 4 shows that the type of uncertainty language used in the explanations ha
 
 In addition, the length of the explanations also affected the human confidence in the LLM answers. Long explanations led to significantly higher confidence than the short explanations (BF of 25 with data combined across experiments 2a, 2b and 2c), and short explanations led to significantly higher confidence than the responses that contained only the uncertainty expression (BF &gt;100 with data combined across experiments 2a, 2b and 2c). The additional information presented in longer explanations did not enable participants to better discriminate between probably correct and incorrect answers for longer explanations. Across experiments 2a, 2b and 2c, the mean participant AUC is 0.54 and 0.57 for long and uncertainty-only explanations, respectively (BF of 0.23). Therefore, the length of the answer led to an increase in
 
+
+<!-- PAGE 5 -->
+
+
 Fig. 3 | Calibration diagrams for model confidence and human confidence across experiments 1 and 2. The top and middle rows show results for multiplechoice questions with the GPT-3.5 and PaLM2 models, respectively. The bottom row shows results for short-answer questions with the GPT-4o model. The
 
 <!-- image -->
@@ -151,6 +168,10 @@ histograms at the bottom of each plot show the proportion of observations in eac
 The parameters θ 1 and θ 2 determine the ranges where low-, medium- and high-confidence explanations are chosen. The application of this rule to a given parameter setting leads to a participant's estimates being filtered out if the explanation style used for a specific question does not match the selected style. This allowed us to simulate the effect of participants receiving different types of explanations based on model confidence (that is, lower-confidence explanations for low model confidence and higher-confidence explanations for high model confidence). The Supplementary Information ('optimization procedure') provides details on the optimization procedure and also a demonstration that the results are not particularly sensitive to the parameter settings.
 
 Calibration and discrimination results . Figure 2 shows the calibration and discrimination results when the selection rule is applied to the results from experiment 2. The results in Fig. 2 (left, red bars) show that the calibration gap has narrowed substantially. While there is still generally a higher calibration error for human confidence relative to model confidence, the calibration gap has decreased for all three LLMs relative to the baseline explanations in experiment 1. Furthermore, Fig. 2 (right) shows that the discrimination gap (as measured by AUC) has also been narrowed relative to the baseline explanations across LLMs and question types (BF &gt;100, BF 6.48 and BF &gt;100 for experiments 2a, 2b and 2c, respectively). Therefore, the results show that selecting the type of explanation on the basis of LLM model confidence improves both
+
+
+<!-- PAGE 6 -->
+
 
 Fig. 4 | Mean human confidence across LLM explanation styles varying in uncertainty language and length. Data are presented as mean values of participant confidence in experiments 2a ( n = 60), 2b ( n = 60) and 2c ( n = 59). For
 
@@ -186,6 +207,10 @@ Our results showed that users consistently overestimated how accurate LLM output
 
 In addition, the results also showed a length bias where longer explanations led to higher human confidence levels even though they did not contain any additional information to help users to better discriminate between probably correct and incorrect answers. This suggests that users were processing the explanations at a shallow level, relying on simple textual cues such as overall length to predict LLM accuracy. This result is consistent with studies in social psychology and communication research that suggest that longer answers or explanations may be perceived as more persuasive or credible, even when they do not contain more meaningful information 27,28 . This length bias has also been found in domains such as peer reviews, where longer
 
+
+<!-- PAGE 7 -->
+
+
 reviews are perceived as more persuasive and informative even if the information content remains the same 29 .
 
 Although default LLM explanations do not enable users to perceive what the models truly know, this research shows that a simple approach based on tailored explanations can bridge this perception gap. This was achieved by altering the prompts used to generate explanations based on model confidence, allowing better control over how uncertainty was expressed in the responses. Specifically, we designed these prompts to induce varying degrees of certainty in the explanations, ranging from expressions of low confidence (for example, 'I am not sure the answer is [B] because') to high confidence (for example, 'I am confident the answer is [B] because'). By modifying the language of the LLM's responses to better reflect model confidence, users showed improved calibration in their assessment of the LLM's reliability and were better able to discriminate between correct and incorrect answers. This improvement underscores the importance of transparent communication from LLMs, suggesting a need for researchers to investigate how model explanations affect user perception.
@@ -216,6 +241,10 @@ Methods that do not require access to internal model representations have used p
 
 Multiple-choice questions . For the multiple-choice questions, we followed the procedures based on reading out the internal token likelihoods as described in the GPT-4 Technical Report 12 . We used a zero-shot
 
+
+<!-- PAGE 8 -->
+
+
 prompting approach, in which the model was prompted only with the target question and its associated answer options (Extended Data Fig. 1). We first assessed the LLM model confidence of GPT-3.5 and PaLM2 language models to 14,042 MMLU multiple-choice questions. This allowed us to then select questions with (somewhat) evenly distributed confidence levels. We read out the log-probabilities for the top five tokens completed by the model using the APIs for the GPT3.5 (gpt-3.5-turbo-instruct) and the PaLM2 (text-bison@002) models. The temperature parameter was set to 0. The answer was considered complete if the tokens included the single letters A, B, C and D. The log scores were then converted and normalized to probabilities across the four answer options (so that the sum of the scores equalled one). In this research, internal uncertainties, referred to in this Article as model confidence, were represented by these probabilities in all experiments, a common technique in calibration assessment with LLMs 12,13,18,19,23 .
 
 Based on the model confidence levels of each LLM for all MMLU questions, we created a subset separately for each LLM. In total, 35 questions were sampled for each of 10 topics, for a total of 350 questions. For each topic, the 35 questions were sampled to approximately create a uniform distribution over model confidence using the confidence bins 0.2-0.4, 0.4-0.6, 0.6-0.8 and 0.8-1.0. However, owing to the small number of questions that lead to model confidence in the lowest confidence bin, fewer questions were sampled for the 0.2-0.4 confidence range. Supplementary Fig. 1 shows the distribution over model confidence levels for the entire MMLU dataset as well as the question subset sampled for our study. Model accuracy across the 350 questions is 55% and 50% for GPT-3.5 and PaLM2, respectively.
@@ -241,6 +270,10 @@ Furthermore, in experiments 2a, 2b and 2c, we balanced the types of explanation 
 For the multiple-choice questions, the participant's task was divided into two phases for each question (Extended Data Fig. 2). In the first stage, the participants had to provide a probability estimate that the LLM's answer was correct. In the second phase, the participants had to answer the question with the assistance of the LLM. The participants were instructed to use their own knowledge as well as the LLM's response when making their own answer selection for this phase. For the short-answer questions, the participants only had to provide a probability estimate that the LLM's answer was correct. They were instructed not to look up the answer. For the short-answer questions, the question-answering phase was omitted to prevent participants from looking up the answers.
 
 At the end of the experiments, we administered a brief survey in which the participants self-assessed their knowledge of topics associated with the multiple-choice and short-answer questions. The participants were asked to estimate the expected accuracy for each topic if they were presented with questions similar to those they encountered during the experiment.
+
+
+<!-- PAGE 9 -->
+
 
 Creating explanation styles with varying degrees of uncertainty . This section describes how we constructed prompts to elicit explanations with varying levels of uncertainty language in the experiments. Table 2 contains examples of explanations from the two experiments and styles. For additional details on the exact prompts used, see Supplementary Table 3.
 
@@ -289,6 +322,10 @@ The code used for data analysis and extracting LLM model confidence is available
 3. Karelitz, T . M., Dhami, M. K., Budescu, D. V. &amp; Wallsten, T. S. Toward a universal translator of verbal probabilities. In Proc. 15th International Florida Artificial Intelligence Research Society Conference (eds Haller, M. S. &amp; Simmons, G.) 498-502 (AAAI Press, 2002).
 4. Wallsten, T. S., Shlomi, Y. &amp; Ting, H. Final Report for Research Contract 'Expressing Probability in Intelligence Analysis' (2008).
 
+
+<!-- PAGE 10 -->
+
+
 5. O'Brien, B. J. Words or numbers? The evaluation of probability expressions in general practice. J. R. Coll. Gen. Pract. 39 , 98-100 (1989).
 6. Ali, S. R., Dobbs, T. D., Hutchings, H. A. &amp; Whitaker, I. S. Using ChatGPT to write patient clinic letters. Lancet Digit. Health 5 , 179-181 (2023).
 7. Zambrano, A. F. et al. From nCoder to ChatGPT: from automated coding to refining human coding. In Proc. International Conference on Quantitative Ethnography (eds Arastoopour Irgens, G. &amp; Knight, S.) 470-485 (Springer, 2023).
@@ -332,6 +369,10 @@ The code used for data analysis and extracting LLM model confidence is available
 45. Lin, S., Hilton, J. &amp; Evans, O. Teaching models to express their uncertainty in words. Trans. Mach. Learn. Res. (2022).
 46.  Tian, K. et al. Just ask for calibration: strategies for eliciting calibrated confidence scores from language models fine-tuned with human feedback. In Proc. 2023 Conference on Empirical Methods in Natural Language Processing 5433-5442 (Association for Computational Linguistics, 2023).
 
+
+<!-- PAGE 11 -->
+
+
 47. Fleming, S. M. &amp; Lau, H. C. How to measure metacognition. Front. Hum. Neurosci. 8 , 443 (2014).
 48.  Guo, C., Pleiss, G., Sun, Y. &amp; Weinberger, K. Q. On calibration of modern neural networks. In Proc. 34th International Conference on Machine Learning (eds Precup, D. &amp; Teh, Y. W.) vol. 70 of Proceedings of Machine Learning Research 1321-1330 (PMLR, 2017).
 49.  Naeini, M. P., Cooper, G. &amp; Hauskrecht, M. Obtaining well calibrated probabilities using Bayesian binning. In Proc. AAAI Conference on Artificial Intelligence Vol. 29 2901-2907 (AAAI, 2015).
@@ -368,6 +409,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 
 - © The Author(s) 2025
 
+
+<!-- PAGE 12 -->
+
+
 ```
 Ahorizontalspring-block oscillator isin motionwhena secondblock of oscillations? Choosefromthefollowingoptions: [A]Itwillincrease theamplitude. [B] Itwilldecreasetheamplitude. [C] It will have no effect. [D] Itwoulddependonwheretheoriginalblockwasinitscyclewhen the second block fell. Please answer this question.Answer [A]，[B]，[C]，or [D]. The answer therefore is:[
 ```
@@ -377,6 +422,10 @@ Question:whichbird is theinternationalsymbolforhappiness? Proposedanswer:dove Is
 ```
 
 Extended Data Fig. 1 | Example prompts for multiple choice and short-answer questions. Example prompt to elicit model confidence for a multiple-choice question (top) and short-answer question (bottom). For the multiple-choice question, the prompt elicits the answer and model confidence across answer options. Note that for the short-answer question, the LLM answer (dove) was elicited through another prompt.
+
+
+<!-- PAGE 13 -->
+
 
 ## Evaluating LLM Accuracy
 

@@ -1,10 +1,11 @@
 ---
 source_file: Rodriguez_2024_Introducing_Generative_Artificial_Intelligence.pdf
-conversion_date: 2026-02-03T09:17:25.697214
+conversion_date: 2026-02-03T18:48:49.200318
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Journal of Social Work Education
@@ -51,6 +52,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -66,6 +71,10 @@ Building on Singer et al.'s (2023) work detailing how GenAI could support Master
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 3 -->
+
 
 -ompet ency- W Social W Workers W dem onst rat eW the W know ledgeN W skill sW andW understanding W toW responsibly W useW generat i veW artif i ci al W i nt ellige nceW 6'I 8 W toolsJW I n.a.dat a.s at urated .and.dig i t al ly. enhanced.human .enviro nmen t :.social .worker s.ar e.cr i tic al .tra nsl at or s .of .human .need.and.soc i al. jus t iceT .Social .worker s.ar e.knowledgeabl e.about .t he.soc i oJcultural .contex t .of .generati ve.9 I .use. and.its .impact .acr oss.societie sT .Social .worker s.c an.competent l y.and.et hica l l y.deploy.generative. 9 I .too l s .across .pr actice .set tingsT .Soci al .workers .can.crit i cally .eval uat e.outpu t s .of.g ener ative .9 I . too l s .f or .uni ntend ed.consequ ences .and.potenti al .har m T .Social .worker s.under st and.the .log i c.of . the .underlying .auto m ation: .as.well .as.t he.potent i al .f or .bi as .i n.auto m ated .deci s ion .makingT .Social. worker s.develop .and.maintain .di gi t al .and.algo r i t hm i c.litera cy.t o.ens ur e.t hei r .contin ued.ethic al . use.o f .these .t echnologie sT .
 
@@ -92,6 +101,10 @@ LLMs fall within this broader umbrella of GenAI and are arguably the most releva
 
 <!-- image -->
 
+
+<!-- PAGE 4 -->
+
+
 <!-- image -->
 
 GenAI systems.  Yet  GenAI  systems  like  ChatGPT  are  built  on  computer  programming-meaning humans made decisions about the data used to train the model, the features to be emphasized in the data, and the ways output would be generated.
@@ -112,6 +125,10 @@ Beyond concerns about plagiarism and academic integrity (Wang, Akins, et al., 20
 
 1 Red teams work to 'break' systems in an attempt to anticipate the actions of adversarial users who would look to exploit a system weakness, as in the case of hackers.
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 detecting and labeling AI-generated content (charged to the Department of Commerce), among other noteworthy national-level standards. The same administration has also set forth the 'Blueprint for an AI Bill of Rights,' 2 which attempts to lay out the rights citizens have in a marketplace now driven by automated systems and decisions. These two documents help illustrate the well-known harms that can result from AI applied in nonjudicious ways.
@@ -131,6 +148,10 @@ Technology features prominently in the first of the nine EPAS competencies put f
 We argue there are four foundational skills necessary for competent and effective use of GenAI and LLMs  in  social  work  practice,  which  comprise  in  turn  the  assessment  basis  for  our  proposed competency. These skills are:
 
 2 https://www.whitehouse.gov/ostp/ai-bill-of-rights/.
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -159,6 +180,10 @@ In addition, social workers regularly engage with sensitive and often confidenti
 
 Wing (2006) noted that 'computational thinking involves solving problems, designing systems, and understanding  human  behavior,  by  drawing  on  the  concepts  fundamental  to  computer  science' (p.  33).  That  is,  computational  thinking  involves  approaching  problems  in  a  way  that  leverages computational concepts. For social work students, this includes the ability to break complex issues into manageable pieces that can be addressed systematically, creating representations of real-world situations that can be analyzed, and identifying patterns and trends within data, which can lead to evidence-informed  decision  making.  Developing  curricular  resources  to  enhance  MSW  students' computational  thinking  skills  can  help  to  ensure  that  students  gain  an  understanding  of  the
 
+
+<!-- PAGE 7 -->
+
+
 <!-- image -->
 
 capabilities and limitations of GenAI. For example, case studies or scenarios can highlight situations where GenAI technologies could be applied in social work contexts, and used to evaluate whether using a GenAI solution aligns with ethical standards or promotes social justice.
@@ -178,6 +203,10 @@ It  is  incumbent  on  MSW  programs  to  safeguard  the  ethical  value  of  co
 The pace of GenAI technology's evolution is outstripping the current capacity for adaptation in social  work  curricula.  For  instance,  various  applications  now  enable  the  installation  of  small-scale LLMs  that  operate  locally  and  offline.  This  development  presents  new  opportunities  to  address security  concerns  related  to  handling  sensitive  data.  Retrieval-augmented  generation  (RAG), a  recent  development  in  GenAI  technologies  (Gao  et  al.,  2023;  Lewis  et  al.,  2020),  is  particularly applicable  to  social  work.  RAG  improves  the  responses  of  LLMs  by  incorporating  data  from  an external  document  database,  allowing  organizations  and  individuals  to  interact  with  their  local knowledge.  This  method  reduces  inaccuracies  and  ensures  responses  are  contextually  appropriate. Although the most sophisticated RAG methods require programming skills, increasingly available no-
 
 3 https://www.cswe.org/accreditation/standards/2022/.
+
+
+<!-- PAGE 8 -->
+
 
 code tools like Azure Machine Learning (Microsoft, 2023) are making this technology accessible to individuals without technical expertise.
 
@@ -200,6 +229,10 @@ No potential conflict of interest was reported by the author(s).
 ## Notes on contributors
 
 Maria  Y.  Rodriguez is  Assistant  Professor  in  the  School  of  Social  Work  and  Adjunct  Assistant  Professor  in  the Department of Computer Science and Engineering at the University at Buffalo. Lauri Goldkind is Assistant Professor in the Graduate School of Social Service at Fordham University. Bryan G. Victor is Assistant Professor in the School of
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -238,6 +271,10 @@ Bryan G. Victor http://orcid.org/0000-0002-2092-912X
 - Goldkind, L., &amp; Wolf, L. (2020). Selling your soul on the information superhighway: Consenting to services in direct-toconsumer tele-mental health. Families in Society , 101 (1), 6-20. https://doi.org/10.1177/1044389419872125
 - Golensky, M., &amp; Mulder, C. A. (2006). Coping in a constrained economy: Survival strategies of nonprofit human service organizations. Administration in Social Work , 30 (3), 5-24. https://doi.org/10.1300/J147v30n03\_02
 - Heikkilä, M. (2023, March 23). These new tools let you see for yourself how biased AI image models are. MIT Technology Review .  https://www.technologyreview.com/2023/03/22/1070167/these-news-tool-let-you-see-for-yourself-howbiased-ai-image-models-are/
+
+
+<!-- PAGE 10 -->
+
 
 <!-- image -->
 

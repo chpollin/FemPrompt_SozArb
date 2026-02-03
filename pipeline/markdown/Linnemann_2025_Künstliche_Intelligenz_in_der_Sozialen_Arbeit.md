@@ -1,10 +1,11 @@
 ---
 source_file: Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.pdf
-conversion_date: 2026-02-03T09:09:41.644608
+conversion_date: 2026-02-03T18:41:07.468264
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 GesaLinnemannIJulianLohe| Beate Rottkemper(Hrsg.)
@@ -13,13 +14,25 @@ GesaLinnemannIJulianLohe| Beate Rottkemper(Hrsg.)
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Gesa Linnemann Julian Löhe Beate Rottkemper (Hrsg.) Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis
+
+
+<!-- PAGE 3 -->
+
 
 Gesa Linnemann Julian Löhe Beate Rottkemper (Hrsg.)
 
 Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 Die Veröffentlichung wurde gefördert aus dem Open-Access-Publikationsfonds der Katholischen Hochschule Nordrhein-Westfalen.
 
@@ -42,6 +55,10 @@ Dieses Buch ist erhältlich als: ISBN 978-3-7799-8561-7 Print ISBN 978-3-7799-85
 Satz: xerif, le-tex Druck und Bindung: Beltz Grafische Betriebe, Bad Langensalza Beltz Grafische Betriebe ist ein Unternehmen mit finanziellem Klimabeitrag (ID 15985-2104-1001) Printed in Germany
 
 Weitere Informationen zu unseren Autor:innen und Titeln finden Sie unter: www.beltz.de
+
+
+<!-- PAGE 5 -->
+
 
 ## Inhalt
 
@@ -69,6 +86,10 @@ Weitere Informationen zu unseren Autor:innen und Titeln finden Sie unter: www.be
 | Mensch, Maschine und Management: KI im Spannungsfeld von Sozialarbeit und Sozialmanagement Julian Löhe                   |     |
 | Anna Schlomann                                                                                                           | 156 |
 
+
+<!-- PAGE 6 -->
+
+
 | Textanalysetechniken auf Tagesdokumentationen zur                      |     |
 |------------------------------------------------------------------------|-----|
 | Prozessassistenz                                                       |     |
@@ -87,6 +108,10 @@ Weitere Informationen zu unseren Autor:innen und Titeln finden Sie unter: www.be
 | Gesa Linnemann, Julian Löhe, Beate Rottkemper                          | 255 |
 | Verzeichnis der Autor:innen                                            | 267 |
 
+
+<!-- PAGE 7 -->
+
+
 ## Vorwort
 
 'Wir müssen einsehen, dass die Technologie unser Traum ist und dass wir es sind, die schließlich entscheiden, wie er enden wird.' Joseph Weizenbaum (2008)
@@ -96,6 +121,10 @@ Weitere Informationen zu unseren Autor:innen und Titeln finden Sie unter: www.be
 In der Fachwelt waren weitere Entwicklungen Gegenstand der Aufmerksamkeit und in der Öffentlichkeit wurden Gefahren von Künstlicher Intelligenz von prominenten Personen diskutiert: So warnte Steven Hawking 2014 vor der Bedrohung durch KI für die Menschheit ebenso wie Elon Musk, der KI als 'our biggest existential threat' bezeichnete (vgl. Cellan-Jones 2014). In dieser Weise setzte sich die Debatte über Jahre fort. 2023 forderte ein offener Brief zu einem Moratorium auf: Alle großen KI-Experimente sollten zunächst ausgesetzt werden (vgl. Future of Life Institute 2023). Unterzeichner waren u.a. Stuart Russell, Elon Musk, Steve Wozniak und Yuval Noah Harari. Spätestens mit der Veröffentlichung von ChatGPT durch OpenAI im November 2022 war das Thema Künstliche Intelligenz auch in der breiten öffentlichen Debatte angekommen.
 
 Wir als Herausgeber:innen hatten uns in unserer wissenschaftlichen und praktischen Laufbahn aus verschiedenen disziplinären (Soziale Arbeit, Psychologie, Wirtschaftsinformatik) und interdisziplinären Bezügen mit Mensch-Maschine-Interaktion, insbesondere über Sprache, und der Bedeutung von digitalen Technologien für Gesellschaft, Organisationen und Personen auseinandergesetzt und darüber zueinander gefunden. GPT2 und Project Debater waren für uns ein entscheidender Anstoß, die Bedeutung von Natural Language Processing für die Soziale Arbeit zu diskutieren (vgl. Linnemann/Löhe/Rottkemper 2023). Wie die öffentliche Debatte nahm auch die professionelle Auseinandersetzung zu, aus der Praxis erklang der Wunsch nach Orientierung. In Gesprächen und Projekten
+
+
+<!-- PAGE 8 -->
+
 
 mit Kolleg:innen und Vertreter:innen aus der Praxis wurde uns dies auch in unserem persönlichen Umfeld deutlich. Mit der Herausgabe dieses Handbuches führen wir die vorhandene Expertise zusammen, um für den deutschsprachigen Raum ein Grundlagenund Nachschlagewerk vorzulegen. Grundlagen für Theorie und Praxis zu schaffen, ist dabei Wunsch und Anspruch zugleich -im Bewusstsein, dass dies nicht mehr sein kann als ein Anfang, auf dem in Zukunft weiter aufgebaut werden kann.
 
@@ -117,6 +146,10 @@ Dem Beltz-Verlag und dort insbesondere Julia Zubcic danken wir für die freundli
 - Slonim, Noam/Bilu, Yonatan/Alzate, Carlos/Bar-Haim, Roy/Bogin, Ben/Bonin, Francesca/Choshen, Leshem/Cohen-Karlik, Edo/Dankin, Lena/Edelstein, Lilach/Ein-Dor, Liat/FriedmanMelamed, Roni/Gavron, Assaf/Gera, Ariel/Gleize, Martin/Gretz, Shai/Gutfreund, Dan/Halfon, Alon/Hershcovich, Daniel/Hoory, Ron/Hou, Yufang/Hummel Shay […] Aharonov, Ranit (2021): An Autonomous Debating System. Nature 591(7850), S. 379-384. https://doi.org/10.1038/ s41586-021-03215-w
 - Weizenbaum, Joseph (2008, March 13): Alptraum Computer. https://www.zeit.de/1972/03/alptraumcomputer/komplettansicht (Abfrage: 15.06.2025).
 
+
+<!-- PAGE 9 -->
+
+
 ## Einführung 1
 
 ## Gesa A. Linnemann, Julian Löhe, Beate Rottkemper
@@ -131,21 +164,41 @@ Die Gesellschaft befindet sich, ebenso wie einzelne Organisationen, inmitten ein
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_001
 
+
+<!-- PAGE 10 -->
+
+
 Herausforderungen unserer Zeit leisten. Besonders relevant ist das in Fachgebieten wie der Sozialen Arbeit, da es sich hier um personenbezogene soziale Dienstleistungen handelt, für die einerseits sehr sensible Daten notwendig sind und andererseits schutzbedürftige Menschen adressiert werden, die auf die Expertise und die Fachlichkeit von Sozialarbeiter:innen angewiesen sind. Möglich ist in diesem Zusammenhang, dass Personen vulnerabler Gruppen in ihrer aktuellen Situation nicht in einem Maß für sich selbst einstehen können, wie es zur Bewertung von eingesetzten KI-Systemen notwendig wäre. Die Fachkräfte der Sozialen Arbeit haben hier eine besondere Verantwortung gegenüber ihren Klient:innen (vgl. Linnemann/Löhe/Rottkemper 2023b).
 
 Vor allem die aktuell sehr weit diskutierten Modelle zur Textund Sprachverarbeitung sind für die Soziale Arbeit von herausragender Bedeutung. Weil die Soziale Arbeit stark durch Dokumentation in natürlicher Sprache geprägt ist und ein großer Teil der sozialarbeiterischen Tätigkeiten in Form von Gesprächen stattfindet, gewinnen Methoden zur Auswertung, Analyse und Generierung von Text und Sprache besondere Relevanz (vgl. Linnemann/Löhe/Rottkemper 2023a). Spätestens seit der Veröffentlichung von ChatGPT im November 2022 wurde in der breiten Gesellschaft deutlich, dass die Qualität der Sprachmodelle eine neue Dimension eingenommen hat. Darüber hinaus werden die Gestaltungsmöglichkeiten mit KI-Systemen immer umfangreicher und ausgereifter. Damit werden sie auch für den Einsatz in der praktischen Arbeit zunehmend relevant. Der praktische Einsatz von KI-Systemen birgt jedoch zugleich Risiken und stellt viele Organisationen und Fachkräfte vor Herausforderungen. Die fehlende Nachvollziehbarkeit der Modelle und somit ein Mangel an Erklärbarkeit der Ergebnisse führen zu Schwierigkeiten im professionellen Kontext (vgl. Franzoni 2023). Gerade bei der Arbeit mit Menschen, die sich in Krisensituationen befinden, ist eine Überprüfbarkeit der vorgeschlagenen Unterstützungsmaßnahmen auf ihre Korrektheit und Evidenz unerlässlich. Jeder Anwendungsfall muss separat geprüft und auf Basis der Voraussetzungen entschieden werden, ob ein KI-System unterstützen kann und, wenn ja, welche Art von KI-System (siehe den Beitrag von Rottkemper in diesem Band). Ebenso muss die zukünftig weiter steigende Abhängigkeit von Technologien kritisch beleuchtet und bewertet werden. Wenn die Arbeitsprozesse immer stärker von Technologien abhängen, kann das dazu führen, dass bei einem Ausfall der Systeme beispielsweise Leistungen nicht mehr vollständig oder in gleicher Qualität erbracht werden können. Auch das Phänomen Deskilling -also das Verlernen bestimmter Tätigkeiten, weil diese zunehmend von Systemen unterstützt oder vollständig übernommen werden -fällt in diesen Themenkomplex (vgl. Farhan 2023). Das bedeutet keineswegs, dass die Möglichkeiten der Effizienzsteigerung nicht genutzt werden sollen. Jedoch sind Notfallpläne zum Wiederherstellen der zur Arbeitsfähigkeit notwendigen Prozesse einer Organisation bei einem Systemausfall oder das regelmäßige Durchführen von Tätigkeiten zur Sicherstellung des Kompetenzerhalts durch
+
+
+<!-- PAGE 11 -->
+
 
 das Fortschreiten der digitalen Transformation notwendig (siehe den Beitrag von Pelzl in diesem Band). Eine der wohl größten Herausforderungen in Bezug auf den Einsatz von KI in der Sozialen Arbeit ist der Umgang mit Verzerrungen und Voreingenommenheiten verschiedenster Ausprägung. Die Grundlage jedes KI-Systems, das auf Maschinellem Lernen beruht, sind die Trainingsdaten, mit denen der zugrunde liegende Algorithmus trainiert wurde (siehe den Beitrag von Rottkemper in diesem Band). Diese Daten sind zum einen historischer Natur und können somit überholte Gesellschaftsbilder enthalten und zum anderen sind sie menschlich erzeugt und enthalten demnach Vorurteile, die im Mindset der Erzeuger:innen der Daten manifestiert sind (vgl. Yi 2024; Lucy/Bamman 2021). Beispiele für diese Form von Verzerrungen gibt es sehr viele und aus unterschiedlichsten Bereichen der Gesellschaft: von Amazons Tool zur Auswahl von Bewerber:innen, das systematisch weibliche Kandidatinnen abgelehnt hat, weil es in der Historie von Amazon sehr wenige Entwicklerinnen gab 2 (vgl. Varsha 2023), über das systematische Streichen der Kindergeldansprüche für Familien mit Migrationsgeschichte durch ein KI-gestütztes Tool in den Niederlanden (vgl. Damen 2023) bis hin zu verstärkten geschlechterspezifischen oder anderweitig diskriminierenden Zuschreibungen bestimmter Berufsgruppen, Stereotype oder Situationen in KI-generierten Bildern (vgl. UNESCO 2023). Diese Vorurteile und Verzerrungen werden nicht in der KI selbst generiert, sondern sind menschengemacht. Aber sie können durch den Einsatz von KI verstärkt werden. Darüber hinaus führen Entscheidungen, basierend auf historischen Daten, nicht zu einer Weiterentwicklung der Gesellschaft, im Gegenteil: Es werden alte Gesellschaftsbilder und Normen zementiert und für die Zukunft übernommen (vgl. Linnemann/Löhe/Rottkemper 2023a). Die Verzerrung in den Daten tritt schon allein deswegen auf, weil nicht alle Menschen das Internet (die größte Datenquelle für das Training sehr großer KI-Modelle) gleichermaßen nutzen bzw. nutzen können. In der Regel sind hier Daten aus westlichen Gesellschaften stärker vertreten und somit auch in der Datengrundlage für das KI-Training enthalten. Diese Formen der Verzerrung sind in allen Bereichen der Gesellschaft problematisch -jedoch in der Sozialen Arbeit, die für sich explizit den Anspruch erhebt, Menschen gleichermaßen zu unterstützen und Chancengleichheit zu erhöhen oder herzustellen, in besonderem Maße. Hinzu kommt, dass die Adressat:innen Sozialer Arbeit oftmals nicht der ,Norm' entsprechen -also jenem Bild, das in den im Internet verfügbaren Daten vorherrscht und damit die Grundlage für viele KI-Systeme bildet. Von dieser weichen viele Adressat:innen ab -selbst wenn sie in westlichen Gesellschaften leben. Gerade dieses Abweichen von der vermeintlichen Norm ist häufig der Grund für die Inanspruchnahme Sozialer
 
 2 Das Tool ist aufgrund der Verzerrungen, die bereits in den Tests aufgefallen sind, nicht eingesetzt worden, hat aber dennoch eine Diskussion über die Manifestierung von Chancenungleichheit durch KI-Tools angestoßen.
 
+
+<!-- PAGE 12 -->
+
+
 Arbeit. Aufgrund dessen muss dieses Risiko bei der Entwicklung von KI-Systemen für die Sozialarbeit umfangreich Beachtung finden. Eine genaue Analyse der Trainingsdaten mit einem speziellen Fokus auf mögliche Verzerrungen ist daher in der Entwicklung von KI-Modellen erforderlich. Sollte es nicht möglich sein, vorurteilsfreie Daten für das Training zu bekommen, kann es notwendig sein, bestimmte Daten auszuschließen oder synthetische Daten herzustellen (vgl. Shah/Sureja 2025). Auch der Einbezug von Fachlichkeit und Prinzipien der Profession Sozialer Arbeit in der Bewertung der Ergebnisse sorgen für die Minimierung von Diskriminierungen durch KI-Systeme -ebenso wie diverse Entwickler:innenteams, die bereits auf technischer Ebene, etwa bei der Auswahl von Trainingsdaten, der Modellarchitektur und der Testung, Verzerrungen erkennen und gezielt beheben können (vgl. Alvarez et al. 2024). Einen Beitrag für diskriminierungsfreie KI-Systeme kann auch der EU AI Act leisten, indem er Hersteller von KI-Modellen dazu verpflichtet, die zum Training genutzten Daten zu dokumentieren, sodass die Basis der Algorithmen transparent gemacht werden kann (mehr zum EU AI Act siehe im Beitrag von Dötterl in diesem Band). Diesen Ansatz verfolgt ebenfalls der Forschungszweig der 'Erklärbaren KI' (explainable AI, XAI).
 
 Eine weitere Form der Verzerrung ist der sogenannte Automation Bias. Dieser bezeichnet die Tendenz, die Lösung eines Algorithmus oder eines Systems nicht infrage zu stellen (vgl. Goddard/Roudsari/Wyatt 2012). Das ist bei der Funktionsweise von KI-Systemen allerdings hochproblematisch, da diese nicht die eine korrekte Lösung, sondern eine mit einer bestimmten Wahrscheinlichkeit richtige Lösung ausgeben, die in der Folge durch den:die Benutzer:in eingeordnet werden muss. Mangelnde Kompetenzen im Bereich KI bei gleichzeitigem Auftreten des Automation Bias kann somit sehr kritisch in der Sozialen Arbeit sein (siehe den Beitrag von Löhe in diesem Band). Auf der anderen Seite gibt es Fachkräfte, die technischen Innovationen grundsätzlich kritisch gegenüberstehen, auch diese Einstellung basiert oft auf Unwissenheit und damit einhergehender Unsicherheit -in diesem Fall kann durch Kompetenzbildung Vorbehalten begegnet werden. Dabei ist es nicht erforderlich, dass Fachkräfte die exakte Funktionsweise von KI-basierten Algorithmen verstehen, aber wie die Datengrundlage beispielsweise Einfluss auf die Ergebnisse hat und wie die durch eine KI generierte Lösungen zu interpretieren sind, sollten Fachkräfte für den Umgang mit KI-Systemen lernen (vgl. Schneider/Seelmeyer 2019). Dies fordert der EU AI Act ebenso. Ein gewisses Maß an AI Literacy und Daten-Literacy sorgen auch dafür, dass Fachkräfte in der Entwicklung der Systeme mitgestalten können und sie in ihrem Arbeitsalltag sensibel für die Situationen und Prozesse sind, bei denen sie durch KI-Systeme sinnvoll unterstützt werden können (vgl. Yi 2024). Denn Chancen zur Effizienzsteigerung im Arbeitsalltag gibt es zahlreiche. Infrage kommen hier vor allem Tätigkeiten in der Administration, z.B. die Abrechnung von Fällen, die Analyse von abgeschlossenen Fällen nach Anomalien oder ggf. die Dienstplanerstellung.
 
+
+<!-- PAGE 13 -->
+
+
 Teilweise wird auch diskutiert, inwiefern KI bei der Dokumentation oder der Erstellung von Hilfeplänen unterstützen kann, indem z.B. das Berichtswesen nach spezifischen Informationen durchsucht wird (siehe den Beitrag von Holz in diesem Band). In einigen (bisher wenigen) Fällen wird der Einsatz in Kerntätigkeiten der Sozialen Arbeit diskutiert. Überlegungen in dieser Richtung gibt es im Projekt SuchtGPT -'Gestaltung, Programmierung und Testung eines KI-basierten Chatbots für Suchtfragen', das von der delphi Gesellschaft für Forschung, Beratung und Projektentwicklung mbH durchgeführt wird. Auf der Projekthomepage heißt es dazu: 'Kann ein KI-basierter Chatbot Fragen aus dem Bereich der Suchthilfe korrekt beantworten und Ratsuchende angemessen unterstützen? Diese Frage soll im Rahmen des SuchtGPT Projektes beantwortet werden (delphi 2025). Unter der Annahme, dass 'Ratsuchende' Adressat:innen sind, wäre das ein direkter Einsatz von KI in Kerntätigkeiten der Sozialen Arbeit (zur Differenzierung verschiedener Tätigkeiten in der Sozialen Arbeit in Zusammenhang mit dem Einsatz von KI-Systemen siehe den Beitrag von Löhe in diesem Band). KI-Systeme können Fachkräfte der Sozialen Arbeit bei administrativen Routinetätigkeiten entlasten. Das schafft im besten Fall mehr Zeit für die Arbeit mit Klient:innen. Gleichzeitig ist zu beachten, dass der Einsatz von KI im direkten Kontakt mit Adressat:innen an ihre Grenzen stößt: Ihr induktives Vorgehen genügt nicht dem fachlichen Anspruch Sozialer Arbeit, der auf der Achtung der Menschenwürde und dem Verstehen individueller Lebenslagen basiert.
 
 Im besten Fall werden die Prozesse durch den gezielten und fachlich begründeten Einsatz digitaler Tools und KI-gestützter Systeme nicht nur effizienter, sondern führen vor allem zu besseren Ergebnissen -nicht nur weil Ergebnisse durch digitale Technologien noch einmal auf ihre Qualität geprüft werden können, sondern auch, weil ganz neue Angebote geschaffen werden können. Beispielsweise können Chatbots Hilfesuchenden die richtige Anlaufstelle nennen und Sensorik sowie KI können in Form von Tools zur Sturzprognose, zum Messen und Einschätzen von Vitalparametern oder Smart-Home-Technologien dazu beitragen, dass ältere Menschen länger selbstständig in den eigenen vier Wänden leben können und Angehörige sowie Pflegekräfte entlastet werden (siehe den Beitrag von Schlomann in diesem Band). Aber auch Teilhabe kann durch den Einsatz von KI-Technologien erhöht werden, beispielsweise durch die Übersetzung von Texten in Einfache oder Leichte Sprache, durch Smarte Brillen, die sehbehinderte Menschen dabei unterstützen, ihre Umwelt wahrzunehmen, und Texte vorlesen können, oder durch automatisierte Untertitel in Vorträgen oder Videoaufzeichnungen (siehe den Beitrag von Steiner in diesem Band). KI wird ebenfalls eingesetzt, um Menschen (gerade ältere und/oder demenzkranke Menschen) zu unterhalten und emotionale Resonanz zu erzeugen. Die Robbe Paro beispielsweise stammt aus Japan und ist schon seit 2004 auf dem Markt. Studien weisen darauf hin, dass der Einsatz mit einer geringeren Gabe von Schmerzund Beruhigungsmitteln einhergeht. Dennoch kann und
+
+
+<!-- PAGE 14 -->
+
 
 sollte diskutiert werden, ob das die Lebensbereiche sind, in denen ein KI-Einsatz gewollt ist. Über menschliche Empathie oder ein eigenes Bewusstsein verfügt eine KI nicht. Mit Blick auf die Zukunft diskutieren Wissenschaftler:innen unterschiedlicher Disziplinen derweil, ob KI-Systeme in der Lage sind, zukünftig Bewusstsein zu erlangen. Dabei handelt es sich neben technischen Aspekten auch um eine philosophische Fragestellung (vgl. Schneider 2024, S. 38). Den dazugehörigen Diskurs 3 in seiner Breite an dieser Stelle abzubilden, dient nicht der Zielsetzung des vorliegenden Sammelbandes. Gleichwohl wird das Thema KI und Ethik im Beitrag von Wolfgang M. Heffels aufgegriffen und in Bezug zur Sozialen Arbeit diskutiert. Aktuell gehen Wissenschaftler:innen davon aus, dass KI-Systeme kein Bewusstsein haben und menschliche Gefühle nur imitieren (vgl. Butlin et al. 2023) 4. Es handelt sich immer nur um erlernte Reaktionen auf die menschliche Aktion. Und trotzdem bevorzugen erste Menschen den Austausch mit einem:einer KI-generierten 'Freund:in' vor menschlichen Kontakten (siehe den Beitrag von Linnemann in diesem Band). Der Beziehungsaspekt wird in unterschiedlichen Publikationen als entscheidend für den Erfolg Sozialer Arbeit herausgehoben (u. a. Schröder 2022, S. 350; Gödde 2016, S. 19; Urban 2004, S. 194; Flad et al. 2008, S. 104). Insofern scheint der zwischenmenschliche Faktor bei aller digitaler Unterstützung wesentlich -im Übrigen auch aus Sicht von Klient:innen. Abeld (2017, S. 13) verweist dazu auf eine Studie von Lorenz et al. (2007, S. 13), in der 80% der Klient:innen mit einer guten Vertrauensbasis zu ihren Betreuer:innen angegeben haben, dass die Hilfe sie stärkt. Die Frage, an welchen Stellen ein KI-Einsatz gewünscht und sinnvoll ist und an welchen Stellen nicht, muss individuell und auch aus professioneller Perspektive von Fall zu Fall betrachtet werden. In jedem Fall ist es jedoch unerlässlich, dass neben individuellen Bedürfnissen von Klient:innen die Fachlichkeit der Sozialen Arbeit eine übergeordnete Rolle spielen muss, wenn KI-Systeme zunehmend soziale Dienstleistungen durchdringen. Aus diesem Grund ist es essenziell, dass Fachkräfte sich mit der Funktionsweise von KI-Modellen (siehe den Beitrag von Rottkemper in diesem Band), ihren Einsatzmöglichkeiten und Risiken auseinandersetzen. Fehlt diese Auseinandersetzung, wird das Feld den großen Technologieunternehmen überlassen. Diese entscheiden dann, wie die KI-Anwendungen von morgen aussehen. Tritt dieses Szenario ein, bleibt den Fachkräften in der Sozialen Arbeit nur noch die Möglichkeit, das zu nutzen, was ihnen angeboten wird. Und es ist davon auszugehen, dass diese Angebote und Anwendungen ohne hinreichende sozialarbeiterische Expertise entwickelt würden.
 
@@ -153,11 +206,23 @@ sollte diskutiert werden, ob das die Lebensbereiche sind, in denen ein KI-Einsat
 
 4 Wenngleich Butlin et al. in dem Preprint ihrer Untersuchung von 2023 unter Berücksichtigung bestehender Konzepte von Bewusstsein keine offensichtlichen technischen Hindernisse für die Entwicklung von KI-Systemen benennen konnten, die diese Indikatoren erfüllen.
 
+
+<!-- PAGE 15 -->
+
+
 Dabei ist 'Mitmachen' auch für IT-Lai:innen denkbar. Beispielsweise ist das Erstellen von Chatbots auf Grundlage von vorhandenen Anwendungen wie ChatGPT oder Claude ohne jegliche Programmierkenntnisse möglich. Ebenso können Roboter bereits mittels Befehlen in natürlicher Sprache programmiert oder eingerichtet werden. Das führt dazu, dass sie von Fachkräften selbst 'antrainiert' werden können. Dazu erforderliche KI-Kompetenz (oder 'AI Literacy') muss in Zukunft in der Ausbildung und im Studium von Sozialarbeiter:innen vermittelt werden. Die Vorbereitung auf einen immer stärker digitalisierten Arbeitsplatz und auf den Umgang der hier eingesetzten Tools ist essenziell für eine positive Gestaltung der eigenen Arbeitswelt mithilfe von KI. Auch wenn die Veränderungen im Beruf der Sozialen Arbeit verhältnismäßig gering ausfallen werden, da Tätigkeiten direkt am Menschen schwer zu formalisieren und für viele KI-Systeme komplex abzubilden sind, wird es in Zukunft immer wichtiger werden, digitale Tools begründet auswählen, einsetzen und mitgestalten zu können. Dabei sind einige Fragestellungen immer noch ungeklärt, was den Einsatz von KI im professionellen Kontext durchaus herausfordernd gestaltet, beispielsweise die Frage, wer bei Fehlern oder unrechtmäßigen Entscheidungen auf Basis der Ergebnisse des KI-Systems haftet. Beispiele hierfür gibt es bereits einige. Etwa das System, das in den Niederlanden eingesetzt wurde, um Kindergeldansprüche zu prüfen und das Menschen mit Migrationsgeschichte systematisch die Gelder gekürzt hat (vgl. Damen 2023). Haftet in solchen Fällen der Anbieter des Systems, da die Fehler schon im Training oder in der Programmierung manifestiert wurden oder die nutzende Stelle, da diese für die Konfiguration und den Einsatz verantwortlich ist? Eine weitere Schwierigkeit ergibt sich in der mangelnden Nachvollziehbarkeit der Algorithmen. Diese führt dazu, dass der Nachweis der Unrechtmäßigkeit für Geschädigte oftmals nicht durchführbar ist. Der EU AI Act schafft hier neue Maßstäbe der Nachvollziehbarkeit und somit der Haftbarkeit. Noch stehen entsprechende Rechtsurteile jedoch aus. Auch eine Kennzeichnungspflicht, wie u.a. im AI Act gefordert, ist erforderlich, um ethischen Maßstäben im Umgang mit KI gerecht zu werden (mehr zu ethischen Implikationen des KI-Einsatzes in der Sozialen Arbeit siehe den Beitrag von Heffels in diesem Band). Die damit hergestellte Transparenz über den Einsatz von KI-Systemen sorgt dafür, dass Klient:innen ihrer Wahlfreiheit nachkommen können: etwa ob sie mit einem Voicebot kommunizieren wollen oder nicht oder ob sie möchten, dass ihre Diagnose KI-gestützt ermittelt wird. Solche und ähnliche Fragestellungen verändern erneut den beruflichen Alltag und die Anforderungen an Sozialarbeiter:innen, wenn sie beispielsweise Klient:innen im Umgang mit KI-Systemen und entsprechenden Ergebnissen und Entscheidungen unterstützen (müssen).
 
 Dieser Sammelband soll Fachkräften, Studierenden und Interessierten einen fundierten Einblick in das Thema KI in der Sozialen Arbeit geben und dazu beitragen, einen reflektierten und verantwortungsvollen Umgang mit diesen Technolo-
 
+
+<!-- PAGE 16 -->
+
+
 gien zu ermöglichen. Im Beitrag 'Grundlagen der Künstlichen Intelligenz für die Soziale Arbeit' gibt Beate Rottkemper eine Einführung in die historischen Entwicklungen und in die technischen Grundlagen der KI. Dafür werden verschiedene Datentypen betrachtet und ein kurzer Blick auf Möglichkeiten der Datenhaltung geworfen, bevor für die Soziale Arbeit relevante KI-Methoden vorgestellt und eingeordnet werden. Anschließend legt Gesa Linnemann in ihrem Beitrag 'Grundlagen der 'Mensch-KI'-Interaktion -Auswirkungen auf den Einsatz im Kontext der Sozialen Arbeit' ein besonderes Augenmerk auf die Kommunikation mit KI-Systemen im Unterschied zur zwischenmenschlichen Kommunikation und untersucht Implikationen auf der Beziehungsebene. In 'Bedeutung von KI für Disziplin und Profession der Sozialen Arbeit' betrachtet Jörn Dummann die Auswirkungen von KI auf die Profession. Im Beitrag 'KI und Theorie(bildung) Sozialer Arbeit' werden durch Angelika Beranek Implikationen des KI-Einsatzes beleuchtet, bevor Wolfgang M. Heffels in seinem Beitrag 'Künstliche Intelligenz und Ethik -der verantwortliche Umgang mit einer neuen Technik' auf ethische Fragestellungen im Kontext von KI in der Sozialen Arbeit eingeht. Anschließend werden sechs Felder der Sozialen Arbeit in Bezug auf den Einsatz von KI und die damit einhergehenden Chancen und Risiken näher beleuchtet: Im Beitrag 'KI in der Kinderund Jugendhilfe' geben Michael Macsenaere und Monika Feist-Ortmanns einen Überblick zu KI in diesem Handlungsfeld. Eik-Henning Tappe beleuchtet in 'Künstliche Intelligenz als Gestalter von Medienkulturen: eine medienpädagogische Perspektive auf eine sich verändernde Identitätsarbeit und Sozialisierung' das Themenfeld KI in der Jugendarbeit, bevor Robert Lehmann in seinem Beitrag 'KI in der Beratung' die Bedeutung von KI für diesen Bereich gibt, Olivier Steiner diskutiert in 'Künstliche Intelligenz und Inklusion' das entsprechende Spannungsfeld des Einsatzes, im Beitrag 'KI und Alter: Einführung, Potenziale und Herausforderungen' befasst sich Anna Schlomann mit Themen rund um KI und Alter. Julian Löhe widmet sich in 'Mensch, Maschine und Management: KI im Spannungsfeld von Sozialarbeit und Sozialmanagement' insbesondere den für einen erfolgreichen Einsatz von KI-Systemen notwendigen Veränderungen in der Organisation. Felix Holz, Michael Fellmann und Angelina Clara Schmidt erörtern in 'Textanalysetechniken auf Tagesdokumentationen zur Prozessassistenz' KI zur Unterstützung in der Auswertung von Textdokumenten und im Beitrag 'Aktennotizerstellung in der Sozialen Arbeit durch Künstliche Intelligenz -Erkenntnisse aus einem Mixed-Method-Forschungsprojekt' führen Christina S. Plafky, Mitra Purandare, Benjamin Plattner und Svitlana Hrytsai die Ergebnisse ihres Pilotprojektes aus. Die Themen IT-Sicherheit und Datenschutz sowie aktuelle Rahmenbedingungen und rechtliche Implikationen aufgrund des EU AI Act werden durch Jan Pelzl , 'ITSicherheit und Datenschutz im Kontext von KI-Sprachmodellen', bzw. Sebastian Dötterl , 'EU AI Act und Soziale Arbeit: Die KI-Verordnung und ihre Auswirkungen', erläutert. Abschließend greifen Edeltraud Botzum, Madeleine Dörr, Andrea Gergen und Florian Müller das Thema 'Künstliche Intelligenz in der Lehre der Sozialen
+
+
+<!-- PAGE 17 -->
+
 
 Arbeit' auf, bevor im Beitrag 'Künstliche Intelligenz und Soziale Arbeit: Ausblick und Perspektive' zukünftige Blickpunkte durch die Herausgeber:innen gegeben werden.
 
@@ -177,6 +242,10 @@ Arbeit' auf, bevor im Beitrag 'Künstliche Intelligenz und Soziale Arbeit: Ausbl
 - Grunwald, Klaus/Langer, Andreas/Sagmeister, Monika (Hrsg.) (2024): Sozialwirtschaft. Handbuch für Wissenschaft, Studium und Praxis. 2., aktualisierte und erweiterte Auflage. Baden-Baden: Nomos.
 - Linnemann, Gesa/Löhe, Julian/Rottkemper, Beate (2023a): Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit. In: Soziale Passagen 15, S. 197-211. https://doi.org/10.1007/s12592-02300455-7
 
+
+<!-- PAGE 18 -->
+
+
 - Linnemann, Gesa/Löhe, Julian/Rottkemper, Beate (2023b): Der Einsatz von Künstlicher Intelligenz in der Kinderund Jugendhilfe im DACH-Raum. In: Jugendhilfe 61(5), S. 415-421.
 - Lorenz, Annette/Russo, Jasna/Scheibe, Florian (2007): Aus eigener Sicht. Erfahrungen von NutzerInnen mit der Hilfe. Zwischenbericht Phase I. Berlin: Der Paritätische.
 - Lucy, Li/Bamman, David (2021): Gender and Representation Bias in GPT-3 Generated Stories. In: Akoury, Nader/Brahman, Faeze/Chaturvedi, Snigdha/Clark, Elizabeth/Iyyer, Mohit/Martin, Lara J. (Hrsg.): Proceedings of the Third Workshop on Narrative Understanding (NUSE-WNU 2021). Virtual: Association for Computational Linguistics, S. 48-55. https://aclanthology.org/ 2021.nuse-1.5/ (Abfrage: 15.06.2025).
@@ -188,6 +257,10 @@ Arbeit' auf, bevor im Beitrag 'Künstliche Intelligenz und Soziale Arbeit: Ausbl
 - van Oorschot, Frederike (2023): Theologische Positionen zu Transhumanismus und KI -ein Überblick. In: Zeitschrift für Pädagogik und Theologie 75(2), S. 139-151. https://doi.org/10.1515/zpt2023-2003
 - Varsha, P. S. (2023): How can we manage biases in artificial intelligence systems -A systematic literature review. In: International Journal of Information Management Data Insights 3(1), S. 100165.
 - Yi, Yuan (2024): Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work. In: Journal of Artificial Intelligence Practice 7(2), S. 166-172.
+
+
+<!-- PAGE 19 -->
+
 
 ## Grundlagen der Künstlichen Intelligenz für die Soziale Arbeit 1
 
@@ -201,11 +274,19 @@ In diesem Beitrag werden die technischen Grundlagen Künstlicher Intelligenz (KI
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_002
 
+
+<!-- PAGE 20 -->
+
+
 ## 1 Historische Einführung
 
 KI und Sprachverstehen sind kein neues Phänomen, bereits in den 1950er-Jahren haben Wissenschaftler:innen daran gearbeitet, Übersetzungen zu automatisieren, um Geheimdienste im Kalten Krieg zu unterstützen. Der Begriff 'Künstliche Intelligenz' an sich fand erstmals in einem Förderantrag für die interdisziplinäre Dartmouth Conference im Jahr 1956 Verwendung (vgl. McCorduck/Cfe 2004, S. 111 ff.). Die Idee, menschliche Sprache möglichst realistisch nachzubilden und es somit zu ermöglichen, mit Maschinen zu kommunizieren, entstand in den 1960er-Jahren. Mit ELIZA entwickelte Joseph Weizenbaum ein Programm, das therapeutische Gespräche nachahmen sollte (vgl. Weizenbaum 1966). Es wurde allerdings schnell deutlich, dass die Möglichkeiten der Kommunikation aufgrund des fehlenden Kontexts sehr begrenzt waren, und auch Weizenbaum selbst hatte nicht die Idee, dass eine Maschine Therapien umfänglich ersetzen können soll, sondern wollte vor allem die Möglichkeiten der Technologie aufzeigen (vgl. Klopfenstein et al. 2017). In den Folgejahren gab es einen Knick in den Fortschritten der Entwicklungen und die anfängliche Euphorie in Bezug auf die Entwicklung von KI und insbesondere Sprachverstehen nahm ab, als deutlich wurde, dass die menschliche Sprache weitaus komplexer ist als anfänglich angenommen (vgl. Fradkov 2020). Die KI-Entwicklung konzentrierte sich in der Folge auf andere Themengebiete, beispielsweise die Lösung mathematischer Probleme und die Analyse strukturierter Daten mittels regelbasierter Ansätze (vgl. Jones 2015, S. 8ff.).
 
 Erst in den 1990er-Jahren nahm die KI-Forschung zum Textverständnis und zur Textverarbeitung (das sogenannte Natural Language Processing, kurz NLP) wieder Fahrt auf und wurde zu einem der wichtigsten Forschungsgebiete des Maschinellen Lernens (vgl. Torfi et al. 2020). In den frühen 2000er-Jahren ermöglichten neue Dimensionen in den Rechenleistungen und, aufgrund des Internets, sehr stark gestiegene Datenmengen weitere Fortschritte in der Datenverarbeitung und vor allem in der Analyse und im Erzeugen von Sprache bzw. Text (vgl. Liddy 2001). Mit weiteren Fortschritten in der Entwicklung des Deep Learning konnten auch die Kontextualisierungen der Texte verbessert werden (vgl. Hirschberg/Manning 2015). In der Sozialen Arbeit liegen große Mengen der Daten in Form von unstrukturierten Texten vor. Aufgrund dessen sind gerade die Methoden in Bezug auf Sprachverstehen und Kommunikation sehr relevant (vgl. Linnemann/Löhe/Rottkemper 2023) und stehen somit im Fokus dieses Beitrags. Es werden jedoch weitere Methoden kurz eingeführt und erläutert.
+
+
+<!-- PAGE 21 -->
+
 
 ## 2 Daten und Datenspeicherung
 
@@ -214,6 +295,10 @@ Die Basis jeder KI sind Daten. Aus den Daten lernt die KI, Muster zu erkennen, u
 Daten können z.B. Zahlen aus einer Abrechnung oder Messwerte (Zählerstände von Strom, Wasser oder Ergebnisse einer Blutdruckmessung) sein. Aber auch bei natürlichem Text oder bei Bildern handelt es sich um Daten. Grundsätzlich wird zwischen strukturierten und unstrukturierten Daten unterschieden. Dabei sind strukturierte Daten, wie der Name schon sagt, Daten, die in einer fest definierten Struktur vorliegen, beispielsweise die Adressdaten aller Kinder einer Kindertagesstätte, die für die Speicherung in einer Datenbank in ein ganz bestimmtes Format gebracht werden. In der Regel handelt es sich um Tabellen, in denen neue Einträge in Form einer Zeile eingefügt werden, für das Beispiel Kindergartenkinder werden dann etwa Name des Kindes, Name der Erziehungsberechtigten, Adresse, Betreuungszeiten etc. in einer vorab definierten Form gespeichert (siehe Abbildung 1). Diese Art der Datenspeicherung wird als Schema-on-Write bezeichnet. Die Daten werden dabei im Schreibprozess (also im Speicherprozess) in ein gewünschtes Schema gebracht, sodass sie im Anschluss ohne aufwendige weitere Verarbeitung genutzt werden können. In der Regel werden relationale Datenbanken genutzt, um strukturierte Daten auf diese Art und Weise zu speichern. Dies war lange die weitaus gängigste Methode der Datenspeicherung und -nutzung. Die Daten benötigen auf diese Art und Weise weniger Kapazitäten in der Speicherung und können ohne komplexe Methoden für Analysen und Prognosen genutzt werden. Da die Daten jedoch nicht in ihrem Quellformat vorliegen, sondern bestimmte Informationen in ein festes Format gebracht wurden, gehen bereits im Speicherprozess Informationen verloren. Problematisch kann das sein, wenn zum Zeitpunkt der Datenerhebung noch nicht bekannt ist, welche Auswertungen mit den Daten im weiteren Verlauf gemacht werden sollen (vgl. Fasel/Meier 2016).
 
 Diese Form der klassischen Speicherung und Verarbeitung von Daten ist sinnvoll, wenn die Menge der Daten überschaubar ist, von Beginn an bekannt ist, wie die Daten in Zukunft genutzt werden sollen, und wenn die Daten ohne zu große Verluste in ein strukturiertes Format gebracht werden können. Zur Speicherung sehr großer Datenmengen, die oftmals dynamisch auftreten und nicht ohne große Verluste in ein strukturiertes Format überführt werden können, funktioniert das Speichern in relationalen Datenbanken nicht. Vor allem die verbreitete Nutzung des Internets hat dazu geführt, dass in jeder Sekunde große Mengen an Daten erzeugt werden. Hier wird von Big Data gesprochen. 'Big' bezieht sich dabei nicht nur auf die reine Menge der Daten, sondern auch auf Attribute
+
+
+<!-- PAGE 22 -->
+
 
 Abbildung 1: Beispielhafte Tabelle strukturierter Daten
 
@@ -232,6 +317,10 @@ wie die Dynamik im Auftreten und die nicht gleichförmige Struktur. Es handelt s
 
 Eine Mischform aus strukturierten und unstrukturierten Daten sind semistrukturierte Daten. Ein Beispiel für semistrukturierte Daten sind E-Mails. Diese haben strukturierte Elemente wie das Datum, die Empfänger:innen und den:die Absender:in, aber auch unstrukturierte Elemente wie den eigentlichen Textkörper der E-Mail und eventuelle Anhänge (vgl. Fasel/Meier 2016). Ebenso zur Speicherung semistrukturierter Daten gibt es spezielle Formate. Das bekannteste Format ist das sogenannte JSON-Format, das sowohl strukturierte als auch unstrukturierte Elemente erfassen kann. Ein weiteres Beispiel für semistrukturierte Daten in der Sozialen Arbeit sind Antragsformulare. Hier haben die einzelnen Felder eine feste Struktur und oftmals gibt es Anforderungen an die Art der Datenspeicherung in diesen Feldern. Felder mit Erläuterungen oder Ausführungen können jedoch nicht strukturiert abgelegt und demnach nicht mit klassischen Methoden ausgewertet werden.
 
+
+<!-- PAGE 23 -->
+
+
 ## 3 Künstliche Intelligenz
 
 Möglicherweise denken viele Menschen bei dem Begriff 'Künstliche Intelligenz' an Roboter, wie sie in Science-Fiction-Literatur oder Filmen vorkommen. Diese Roboter haben ein eigenes Bewusstsein und können selbstständig Entscheidungen treffen. Diese Form der KI wird 'starke KI' genannt. Aktuell wird davon ausgegangen, dass es eine solche KI nicht gibt und auch in Zukunft nicht geben wird (vgl. Fjelland 2020). Wenn aktuell von KI gesprochen wird, ist die sogenannte 'schwache KI' gemeint. Diese Form der KI erzeugt aus Daten, die ihr zugeführt werden (die sogenannten Trainingsdaten), Vorhersagen oder Prognosen und, im Fall von generativer KI, auch Artefakte wie Bilder, Videos oder Texte. Ein Gebiet innerhalb der schwachen KI ist das Maschinelle Lernen (siehe den Abschnitt über Maschinelles Lernen in diesem Beitrag). Das ist die Form der KI, von der heute in der Regel gesprochen wird. Beim Maschinellen Lernen werden stochastische Verfahren angewendet, um aus den Trainingsdaten Muster bzw. Regeln zu erzeugen, die anschließend auf neue Datensätze angewendet werden können und Prognosen oder Artefakte erzeugen (mehr dazu im weiteren Verlauf dieses Beitrags).
@@ -242,6 +331,10 @@ Wissensbasierte Systeme wurden in den 1960erund 1970er-Jahren intensiv erforscht
 
 Die am häufigsten angewendeten wissensbasierten Systeme sind Expertensysteme und regelbasierte Systeme. Dabei folgern regelbasierte Systeme aus klar definierten Wenn-dann-Regeln und generieren so Ergebnisse für Fragestellungen eines klar abgegrenzten Anwendungsbereichs. Klassische regelbasierte Systeme finden sich beispielsweise in Klimaanlagen wieder, die anhand der Temperatur entweder heizen oder kühlen. Aufbauend auf dieser einfachen Form der Regelformulierung wurden weitere Algorithmen zur Anwendung deduktiver Logik entwickelt. Expertensysteme bilden dagegen hochspezialisiertes Wissen von menschlichen Expert:innen ab, auf dessen Basis sie dann, ebenfalls mittels definierter Regeln Ergebnisse erzeugen. Die Logiken in Expertensystemen können komplexer sein, als das in klassischen regelbasierten Systemen der Fall ist. So können Expertensysteme auch mit Unsicherheiten umgehen. Expertensysteme sind in der Sozialen Arbeit beispielsweise in Form von Chatbots zur Unterstützung der Onlineberatung oder -therapie relevant (vgl. Linnemann/Löhe/Rottkemper
 
+
+<!-- PAGE 24 -->
+
+
 2024). Algorithmen, die zu den Expertensystemen gehören, sind z.B. Heuristiken, Entscheidungsbäume oder wissensbasierte Netzwerke.
 
 Ein Vorteil wissensbasierter Systeme ist ihre Erklärbarkeit. Das heißt, es ist nachvollziehbar, anhand welcher Kriterien welche Lösungen generiert wurden. Die Erklärbarkeit von KI-Systemen ist ein Merkmal, das seit dem Aufkommen von generativen KI-Systemen vielfach diskutiert und gefordert wird. Darüber hinaus fließt in die Lösungen wissensbasierter Systeme eine kuratierte Informationsund Wissensgrundlage. Es kommt also weder zu Halluzinationen (zur Erläuterung des Begriffs siehe Abschnitt Generative KI weiter unten in diesem Beitrag) noch zur Ausgabe falscher Informationen (es sei denn, die Wissensgrundlage ist nicht korrekt oder passend gewählt). Attribute wie Erklärbarkeit und Freiheit von Halluzinationen sind für viele Anwendungen in der Sozialen Arbeit absolute Voraussetzung, beispielsweise für Algorithmen, die direkt mit Hilfesuchenden kommunizieren. Mit wissensbasierten Systemen lassen sich nur eingegrenzte und klar abgesteckte Problemstellungen lösen. Das Modell ist im Nachgang nur mit viel Aufwand für andere Fragestellungen änderbar oder erweiterbar, und die Regeln und Zusammenhänge, die dem System zugrunde liegen, müssen alle explizit formuliert werden können. Demnach darf die Problemstellung nicht zu komplex sein, da die Formulierung des Modells schnell sehr aufwendig wird oder sogar nicht mehr möglich ist.
@@ -249,6 +342,10 @@ Ein Vorteil wissensbasierter Systeme ist ihre Erklärbarkeit. Das heißt, es ist
 ## 5 Maschinelles Lernen
 
 Die Idee des Maschinellen Lernens basiert darauf, das Vorgehen und die Struktur von menschlichem Lernen künstlich nachzubilden (vgl. Fradkov 2020). Methoden des Maschinellen Lernens nutzen im Gegensatz zu wissensbasierten Methoden induktive Logik zum Lernen. Das heißt, sie lernen in der Regel mit stochastischen Methoden aus historischen Daten ohne vorab explizit formulierte Regeln. Bei dieser Art des Lernens wird vom Speziellen auf das Allgemeine geschlossen. Die Algorithmen können somit auch mit Daten arbeiten, die vorab nicht bekannt sind, die Ergebnisse beruhen jedoch auf Wahrscheinlichkeiten und müssen demnach nicht korrekt sein und im Nachgang evaluiert werden. Im Maschinellen Lernen werden statistische Modelle angewendet, um Zusammenhänge zwischen den unabhängigen Variablen und den abhängigen Variablen zu ermitteln. Die abhängigen Variablen sind die Zielgrößen, die mithilfe des Modells untersucht werden sollen, unabhängige Variablen sind die Eingabeoder Einflussgrößen, anhand derer die Vorhersagen (die abhängigen Variablen) ermittelt werden. Es gibt beispielsweise Algorithmen, die prognostizieren sollen, ob ein Kind zukünftig aus einer Familie genommen wird oder nicht (abhängige Variable), und dafür Einflussgrößen wie Vorfälle in der Familie, Vorbestrafung der Eltern etc. (unabhängige Variablen) heranziehen.
+
+
+<!-- PAGE 25 -->
+
 
 Abbildung 2: Übersicht schwache KI
 
@@ -261,6 +358,10 @@ Im Maschinellen Lernen wird zwischen überwachten und unüberwachten Verfahren u
 ## 5.1 Überwachtes und unüberwachtes Lernen
 
 Im Maschinellen Lernen wird zwischen überwachten und unüberwachten Lernverfahren unterschieden. Dabei liegt die Differenz im Umgang mit den Daten, die für das Training der Algorithmen verwendet wird. Im überwachten Lernen werden die Trainingsdaten vorab gelabelt. Das heißt, es ist bekannt, welche Art Ergebnis erwartet wird, und die Daten werden, in der Regel durch einen Menschen, gekennzeichnet. Ein klassisches Beispiel ist das Identifizieren eines Hundes oder einer Katze auf einem Bild. Bei diesem Beispiel können die Trainingsdaten vorab durch einen Menschen gesichtet werden und es kann notiert werden, ob das Bild
+
+
+<!-- PAGE 26 -->
+
 
 einen Hund oder eine Katze zeigt. 2 Der Algorithmus bekommt dann zum Training die gelabelten Bilder zugeführt und ermittelt selbstständig, anhand welcher Kriterien Hunde und Katzen unterschieden werden können (Abbildung 3). Das heißt, das Ergebnis ist festgelegt, aber der Weg dahin bleibt weitestgehend dem Algorithmus überlassen (vgl. Goodfellow/Bengio/Courville 2016, S. 103ff.).
 
@@ -276,6 +377,10 @@ Um zu vermeiden, dass die Modelle nicht zu stark auf die im Training verwendeten
 
 2 Ein Teil dieses Trainings wurde an die breite Gesellschaft ausgelagert, indem die sogenannten Captcha-Abfragen als Identifizierung einer menschlichen Person eingeführt wurden, bei denen angegeben werden muss, ob auf einem Bild ein Bus, eine Ampel oder eine Brücke zu sehen ist. Die Ergebnisse dieses Trainings sind in die Entwicklung selbstfahrender Autos eingeflossen (vgl. Plesner/Vontobel/Wattenhofer 2024).
 
+
+<!-- PAGE 27 -->
+
+
 <!-- image -->
 
 Quelle: Eigene Darstellung nach Sindhu Meena/Suriya 2020
@@ -286,6 +391,10 @@ Im Gegensatz zu wissensbasierten Systemen können Verfahren des Maschinellen Ler
 
 3 Ein prominentes Beispiel für eine Überanpassung an die Trainingsdaten und für eine nicht adäquate Auswahl dieser Trainingsdaten war ein Bilderkennungsalgorithmus, der Kühe nur vor einem grünen Hintergrund erkannt hat, weil die Trainingsdaten ausschließlich Kühe auf grünen Wiesen gezeigt haben. Der Algorithmus hat als Kriterium u.a. den grünen Hintergrund gewählt und nicht tatsächliche Merkmale einer Kuh. Dieses Phänomen nennt sich Shortcut Learning, da der Algorithmus sozusagen eine Abkürzung im Lernen nutzt (vgl. Geirhos et al. 2020).
 
+
+<!-- PAGE 28 -->
+
+
 Beispiele dafür gibt es viele, eines aus der Sozialen Arbeit stammt aus den Niederlanden. Hier wurde ein Algorithmus eingesetzt, um Kindergeldansprüche zu prüfen. Aufgrund der Ergebnisse des Algorithmus wurden Familien mit Migrationsgeschichte systematisch die Kindergeldansprüche gestrichen. Infolgedessen trat eine Regierung zurück und es gab Milliardenstrafen an Schadensersatz (vgl. Hadwick/Lan 2021).
 
 ## 5.2 Neuronale Netze und Deep Learning
@@ -293,6 +402,10 @@ Beispiele dafür gibt es viele, eines aus der Sozialen Arbeit stammt aus den Nie
 Neuronale Netze, manchmal auch Künstliche Neuronale Netze (KNN) genannt, sind Verfahren des maschinellen Lernens. Sie sind in ihrer Struktur dem menschlichen Gehirn und in ihrer Funktionsweise dem menschlichen Denken und Lernen nachempfunden. Die Netze bestehen aus vielen Neuronen, die Input-Signale erhalten und verarbeiten und diese anschließend als Output-Signale weitergeben. Die Neuronen sind in sogenannten Schichten organisiert (siehe Abbildung 5). Es gibt eine Eingabeschicht (Input Layer), eine oder mehrere 'verborgene' Schichten (Hidden Layer) und eine Ausgabeschicht (Output Layer). Die Neuronen einer Schicht sind mit allen oder einigen Neuronen der folgenden Schicht verbunden. Diese Verbindungen sind gewichtet ( w 1 ,...,w n) und bestimmen somit den Einfluss eines bestimmten Signals auf das nachfolgende Neuron (vgl. Theodoridis 2015, S. 904ff.). Die Rohdaten (Texte, Bilder oder ähnliches) gelangen über die Eingabeschicht in das Netz und werden dann in den verschiedenen Neuronen verarbeitet und analysiert (mittels der Funktionen F 1 ,...,F k ). Die Gewichte an den Verbindungen werden sukzessive angepasst (das Modell wird also trainiert), bis das Ergebnis, das über die Ausgabeschicht erzeugt wird, eine zufriedenstellende Qualität erreicht hat. Das Training an sich erfolgt über eine Rückmeldung an das System zur Ergebnisqualität. Ist das Ergebnis nicht korrekt oder die Qualität nicht ausreichend, wird dies 'rückwärts' von der Ausgabeschicht bis zur Eingabeschicht durch das Netzwerk gemeldet und die Gewichte an den Kanten der Verbindungen werden angepasst. Dieser Prozess wird im Englischen Backpropagation genannt. Das Vorgehen ähnelt also, vor allem zu Beginn, einem Trialand-Error-Ansatz, und nur durch die Rückmeldung des Fehlers kann das System seine Ergebnisse verbessern (ebd., S. 913ff.).
 
 Neuronale Netze mit mehr als einer verborgenen Schicht zählen zum Deep Learning. Sie sind besonders gut zur Analyse von sehr komplexen Strukturen geeignet (vgl. Russell/Norvig 2022, S. 750ff.). Dafür sorgt u.a. die Fähigkeit, durch das Zusammenspiel der verschiedenen Hidden Layer relevante Merkmale zum Erkennen gesuchter Muster oder Abhängigkeiten selbstständig zu erlernen. Es gibt zahlreiche Weiterentwicklungen zur Lösung spezifischer Problemstellungen. Beispielsweise sind Rekurrente Neuronale Netze (RNN) oder TransformerModelle besonders geeignet, um Texte zu verarbeiten (vgl. Lin/Tegmark 2016).
+
+
+<!-- PAGE 29 -->
+
 
 ## Abbildung 5: Neuronales Netz
 
@@ -302,17 +415,29 @@ Quelle: Eigene Darstellung nach Choo et al. 2021
 
 Beide Verfahren nutzen Deep-Learning-Technologien. In der Regel werden in einem Neuronalen Netz Informationen sequenziell verarbeitet, Schicht für Schicht werden die Informationen verarbeitet und an die nächste Schicht weitergeleitet. Die jeweiligen Ausgabesignale einer Schicht sind für die nachfolgende Schicht die Inputsignale (vgl. Sherstinsky 2020). Durch diese sequenzielle Verarbeitung der Daten sind Zusammenhänge zwischen einzelnen Teilen einer Sequenz (beispielsweise eines Eingabe-Satzes, der in eine andere Sprache übersetzt werden soll), die weit auseinander liegen, nur mit zusätzlichen Techniken abzubilden. Darüber hinaus ist die Verarbeitungsgeschwindigkeit von Daten mittels RNN verhältnismäßig langsam, da moderne Hardware-Architektur, bestehend aus parallelen Prozessoren, durch die sequenzielle Berechnung nicht optimal genutzt wird (vgl. Mienye/Swart/Obaido 2024). Diese Herausforderungen werden durch die modernen Transformer-Modelle adressiert. Transformer-Modelle verarbeiten die komplette Sequenz parallel anstatt schrittweise, was eine deutlich höhere Performance erlaubt (vgl. Raparthi et al. 2021). Darüber hinaus sind sie in der Lage, mittels eines speziellen Aufmerksamkeitsalgorithmus Zusammenhänge zwischen weit entfernten Teilen der Sequenz zu erfassen und in der Verarbeitung zu berücksichtigen (vgl. Vaswani et al. 2017). Das sorgt dafür, dass auch komplexe Texte und ihr semantischer Zusammenhang erfasst und verarbeitet werden können. Für das Training von Transformer-Modellen werden jedoch sehr große (nicht zwangsweise gelabelte) Datenmengen benötigt (vgl. Rahali/Akhloufi 2023).
 
+
+<!-- PAGE 30 -->
+
+
 ## 5.3 Generative KI
 
 Generative KI basiert auf Verfahren des Deep Learning. Die Besonderheit an generativen Modellen im Gegensatz zu diskriminativen KI-Modellen ist, dass sie neue Inhalte erzeugen können. Diskriminative Modelle gelten oftmals als die klassischen KI-Modelle, die auf Basis der Trainingsdaten mittels stochastischer Zusammenhänge lernen, neue Input-Daten zu kategorisieren (vgl. Jaakkola/ Haussler 1998). Die Modelle rekonstruieren dabei nicht die Verteilung der Daten an sich, sondern versuchen, anhand der Trainingsdaten, die wahrscheinlichsten Input-Output Kombinationen zu ermitteln. Generative Modelle hingegeben lernen auf Basis der Trainingsdaten die Verteilung oder die Funktion kennen und nutzen diese anschließend, um neue Daten einzuordnen (vgl. Jebara 2004). Damit sind diese Algorithmen in der Lage, anhand der ermittelten Funktion auch komplett neue Daten auf Basis der gegebenen Input-Daten zu generieren und nicht nur Kategorisierungen von Daten vorzunehmen (vgl. Bishop/Lasserre 2007). Auf Basis einer -in der Regel sehr großen -Datenbasis, die zum Training der Modelle verwendet wird, werden durch generative Modelle anschließend neue Artefakte generiert. Artefakte können beispielsweise Texte, Bilder oder Videos sein. Lange wurde angenommen, dass die Kreativität den Menschen vorenthalten bliebe und KI zwar Prognosen oder Einordnungen vornehmen kann, nicht aber neue Inhalte erzeugen könne (vgl. Boden 2009). Diese Annahme wurde durch die Verfahren der generativen KI widerlegt. Grundsätzlich ist die Funktionsweise jedoch ähnlich wie bei den vorab beschriebenen Algorithmen: Anhand einer großen Menge an Daten werden Muster erlernt (beispielsweise Muster und Regeln der natürlichen Sprache, wenn es um das Erzeugen von Texten geht) und anhand dieser Muster werden anschließend neue Inhalte generiert. Dabei hat das Modell kein Verständnis für die Bedeutung, beispielsweise von Texten, sondern generiert einfach die am wahrscheinlichsten folgenden nächsten Worte in einem Satz. Aufgrund der überaus großen Menge an Trainingsdaten, die dem Modell zugrunde liegt, ist das Ergebnis oft nicht von einem menschlich generierten Text zu unterscheiden (zu Kreativität im Kontext Künstlicher Intelligenz siehe auch Boden 1998).
 
 Da diese sehr großen generativen Modelle oftmals mit Allgemeinwissen aus dem Internet trainiert wurden und damit nicht spezifischen Domänen entsprechen, kann es passieren, dass sie zu konkreten Expert:innenfragen ungenaue oder falsche Antworten liefern. Darüber hinaus kommt es bei generativen KI-Systemen immer wieder zu sogenannten Halluzinationen. Halluzinationen sind faktisch falsche Ausgaben, die nicht auf den Trainingsdaten beruhen (vgl. Maleki/ Padmanabhan/Dutta 2024). Die Modelle sind derart trainiert, dass sie immer das wahrscheinlichste Ergebnis ausgeben. Sie sind nicht darauf trainiert, Fakten zu prüfen oder im Fall von mangelnden Informationen in den Trainingsdaten kein Ergebnis zu liefern. Aktuell gibt es noch keine zuverlässige Möglichkeit, Halluzi-
 
+
+<!-- PAGE 31 -->
+
+
 nationen in generativen KI-Systemen auszuschließen. Es handelt sich hierbei um ein aktuelles Forschungsgebiet. Problematisch dabei ist vor allem, dass die Ausgaben der Systeme trotz falscher Fakten in der Regel sehr plausibel formuliert sind und die meisten Menschen im Umgang mit einer Software nicht von falschen oder diskriminierenden Ausgaben ausgehen (vgl. ebd.). Die Interpretation der Ergebnisse und der Umgang mit generativen KI-Systemen bedürfen eines bestimmten Maßes an Literacy. Eine Möglichkeit, die Qualität der Ausgaben zu verbessern, ist es, die großen generativen Modelle zu nutzen, um auf ihrer Basis spezifischere Modelle mit Expert:innenwissen zu trainieren. Die sogenannten Pretrained-Modelle bieten sich dafür an, sie mit Domänenwissen anzureichern (dieser Prozess wird Finetuning genannt). Es gibt darüber hinaus Technologien, die Wissensdatenbanken in Kombination mit generativen KI-Modellen nutzen und somit die hohe Qualität der Textverarbeitung und -generierung mit den Vorteilen kuratierter Wissensdatenbanken verbinden (vgl. Lewis 2020). Darüber hinaus ermöglichen vortrainierte Modelle in Kombination mit den Möglichkeiten der automatisierten Verarbeitung natürlicher Sprache das Training von Algorithmen auch ohne weitreichende Kenntnisse des Maschinellen Lernens. Somit können ebenso Fachkräfte der Sozialen Arbeit oder aus anderen Berufszweigen für sie relevante Modelle mitoder weiterentwickeln. Dieses Vorgehen stellt sicher, dass nicht nur Expert:innenwissen von Entwickler:innen in die Modelle einfließt, sondern auch Domänenwissen, ethische Grundsätze und Fachexpertise.
 
 ## 5.4 Large Language Models (Multimodal Large Language Models)
 
 Da sich die Forschung im Bereich der KI schon immer intensiv auf die Textanalyse und Textgenerierung konzentriert hat, bilden die sogenannten Large Language Models (LLM) eine eigene Klasse von KI-Systemen. Einige Verfahren gehen auf das seit den 1950er-Jahren etablierte NLP zurück, die Analyse natürlicher Sprache mittels interdisziplinärer Methoden, u.a. Computertechnologie (vgl. Jones 1994). Erste LLM basierten auf RNN-Technologien, die Entwicklung der TransformerArchitektur hat die Qualität der LLM maßgeblich gesteigert, sodass quasi alle aktuellen LLM, die sich auf Textverstehen und -generierung konzentrieren, auf dieser Technologie basieren. Das erste LLM auf Basis der Transformer-Architektur war BERT von Google. Aber auch das im Jahr 2018 veröffentlichte GPT von OpenAI nutzt Deep Learning und Transformer-Technologien und ist in der Lage, anhand von wenigen Input-Parametern qualitativ hochwertige Texte zu generieren, die oftmals nicht mehr von menschlich verfassten Texten unterschieden werden können (vgl. Elkins/Chun 2020; Floridi/Chiriatti 2020). Es handelt sich um ein autoregressives Sprachmodell. Das heißt, es lernt schrittweise aus den eigenen Daten, ohne dass vorab umfangreiche Regeln formalisiert werden müssen, und verbessert sich so stetig (vgl. Zong/Krishnamachari 2022). Einer breiten Öffentlichkeit
+
+
+<!-- PAGE 32 -->
+
 
 wurde die Technik durch den von OpenAI entwickelten Chatbot 'ChatGPT' (Veröffentlichung im November 2022) bekannt, als dieser Anfang 2023 eine Jura-Prüfung an der Universität von Minnesota bestand und damit viel Aufmerksamkeit erzeugte (vgl. Choi et al. 2021; Katz et al. 2024). Da in der Sozialwirtschaft große Mengen an Text erzeugt und verarbeitet werden und eine sehr große Menge an Daten in Form von natürlicher Sprache vorliegt, erscheinen LLM eine äußerst relevante Technik zu sein. Der Großteil der LLM gehört zum Gebiet der generativen KI, da die Modelle darauf trainiert sind, anhand von (wenigen) Input-Parametern Text zu erzeugen. Es gibt jedoch auch LLM, die für andere Zwecke entwickelt wurden, beispielsweise um Texte zusammenzufassen oder zu kategorisieren (siehe Abbildung 2). Aktuelle Modelle können mit ähnlichen Verfahren nicht nur Texte, sondern ebenso Bilder, Videos etc. erzeugen. Diese Modelle werden Multimodal Large Language Models genannt.
 
@@ -327,6 +452,10 @@ Der vorliegende Text skizziert die Genese der KI-Modelle von den klassischen Ver
 - Elkins, Katherine/Chun, Jon (2020): Can GPT-3 pass a writer's Turing test? In: Journal of Cultural Analytics 5(2).
 - Fasel, Daniel/Meier, Andreas (2016): Was versteht man unter Big Data und NoSQL? In: Fasel, Daniel/Meier, Andreas (Hrsg.): Big Data. Edition HMD. Wiesbaden: Springer Vieweg, S. 316. https://doi.org/10.1007/978-3-658-11589-0\_1
 - Fjelland, Ragnar (2020): Why general artificial intelligence will not be realized. In: Humanity and Social Sciences Commununication 7, 10, S. 1-9. https://www.nature.com/articles/s41599-0200494-4 (Abfrage: 15.06.2025).
+
+
+<!-- PAGE 33 -->
+
 
 - Floridi, Luciano/Chiriatti, Massimo (2020): GPT-3: Its nature, scope, limits, and consequences. In: Minds and Machines 30, S. 681-694.
 - Fradkov, Alexander L. (2020): Early History of Machine Learning. In: IFAC Papers Online 53(2) S. 1385-1390.
@@ -348,6 +477,10 @@ Der vorliegende Text skizziert die Genese der KI-Modelle von den klassischen Ver
 - McCorduck, Pamela/Cfe, Cli (2004): Machines Who Think: A Personal Inquiry into the History and Prospects of Artificial Intelligence. 2. Auflage. San Francisco: A K Peters/CRC Press. https://doi. org/10.1201/9780429258985
 - Mienye, Ibomoiye D./Swart, Theo G./Obaido, George (2024): Recurrent neural networks: A comprehensive review of architectures, variants, and applications. In: Information 15(9), S. 517.
 
+
+<!-- PAGE 34 -->
+
+
 - Plesner, Andreas/Vontobel, Tobias/Wattenhofer, Roger (2024): Breaking reCAPTCHAv2, 2024 IEEE 48th Annual Computers, Software, and Applications Conference (COMPSAC), Osaka, Japan, S. 1047-1056. https://doi.org/10.1109/COMPSAC61105.2024.00142
 - Rahali, Abir/Akhloufi, Moulay A. (2023): End-to-end transformer-based models in textual-based NLP. In: AI 4(1), S. 54-110.
 - Raparthi, Mohan/Dodda, Sarath B./Reddy, Surendranadha R. B./Thunki, Praveen/Maruthi, Srihari/Ravichandran, Prabu (2021): Advancements in Natural Language Processing-A Comprehensive Review of AI Techniques. In: Journal of Bioinformatics and Artificial Intelligence 1(1), S. 1-10.
@@ -358,6 +491,10 @@ Der vorliegende Text skizziert die Genese der KI-Modelle von den klassischen Ver
 - Torfi, Amirsina/Shirvani, Rouzbeh A./Keneshloo, Yaser/Tavaf, Nader/Fox, Edward A. (2020): Natural language processing advancements by deep learning: A survey. arXiv preprint arXiv:2003.01200.
 - Vaswani, Ashish/Shazeer, Noam/Parmar, Niki/Uszkoreit, Jakob/Jones, Llion/Gomez, Aidan N./ Kaiser, Łukasz/Polosukhin, Illia (2017): Attention is all you need. Advances in neural information processing systems, 31st Conference on Neural Information Processing Systems, Long Beach, CA, USA.
 - Zong, Mingyu/Krishnamachari, Bhaskar (2022): A survey on GPT-3. arXiv preprint arXiv:2212.00857.
+
+
+<!-- PAGE 35 -->
+
 
 ## Grundlagen der 'Mensch-KI'-Interaktion -Auswirkungen auf den Einsatz im Kontext der Sozialen Arbeit 1
 
@@ -373,6 +510,10 @@ Die Interaktion von Menschen mit unbelebten Objekten und die Zuschreibung mensch
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_003
 
+
+<!-- PAGE 36 -->
+
+
 Verbreitung einen hohen Einfluss auf kommunikative Prozesse haben, die in der Sozialen Arbeit eine zentrale Rolle spielen. Im Bereich der Robotik 2 und der virtuellen Avatare kann Kommunikation auch mittels künstlicher oder simulierter Gestik und Mimik erfolgen, im Bereich der Generierung gesprochener Sprache spielen zudem Eigenschaften der Stimme, Prosodie, Lautstärke etc. eine Rolle.
 
 Das Thema Kommunikation und KI betrifft erstens KI-Systeme, die die Kommunikation zwischen Menschen vermitteln oder beeinflussen können, darunter auch die Häufigkeit und Qualität der Kommunikation zwischen Menschen (Einfluss von KI auf die Mensch-Mensch-Interaktion), und zweitens die Nutzung von KI als kommunikatives 'Gegenüber' (Mensch-KI-Interaktion im engeren Sinne), bei der die KI die Rolle des Gesprächspartners einnimmt. In diesem Beitrag wird nach einem kurzen Abriss der Entwicklung von Kommunikation und KI in den letzten 60 Jahren die Ausgestaltung dieser beiden 'Rollen' von KI in der Kommunikation anhand verschiedener theoretischer Bezüge und empirischer Ergebnisse beleuchtet, die schließlich hinsichtlich ihrer Bedeutung für die Soziale Arbeit diskutiert werden.
@@ -382,6 +523,10 @@ Das Thema Kommunikation und KI betrifft erstens KI-Systeme, die die Kommunikatio
 Aktuell zeigt sich die zunehmende Ununterscheidbarkeit von Mensch und KI als Gesprächspartner im Turing-Test (Jones/Bergen 2024). Die Auseinandersetzung mit den Möglichkeiten, über natürliche Sprache mit digitalen Entitäten zu interagieren, reicht jedoch bereits weiter zurück. Der Begriff 'Eliza-Effekt', der die Zuschreibung menschlicher Eigenschaften auf digitale Agenten beschreibt (Hofstadter 1995), geht auf den ersten Chatbot 'Eliza' zurück. Dieser wurde Mitte der 1960er-Jahre von Joseph Weizenbaum (1966) ursprünglich in ironisierender Absicht nach dem Vorbild von Rogers klient:innenzentrierter Gesprächstherapie gestaltet; zur Überraschung von Weizenbaum erbat sich seine Sekretärin, mit Eliza ungestört sprechen zu können. Mit 'PARRY' schuf Colby einen als psychiatrischen Patienten gestalteten Chatbot, der einer Gruppe von Ärzten auch als 'realer' Patient erschien (Colby et al. 1972) und der mit Eliza 'sprach'. Gesprochene Dialogsysteme erreichten die Öffentlichkeit zunächst in Form von 'interaktiven' Telefonansagen und ihrer Implementierung in höhere Fahrzeugklassen. Eine neue Qualität der Interaktion und der Anwendungsbreite wurde mit dem sprachbasierten iPhone-Assistenten 'Siri' von Apple im Jahr 2011 und der Einführung von 'Alexa' in Form von 'Smart Speaker' 2014 (2016 in Deutschland) erreicht. Neben kommandobasierten Dialogsystemen entwickelte sich zunehmend eine gesprächsbasierte Form (Dethlefs et al. 2016), die aber noch weit von der 2013 im
 
 2 Für einen aktuellen Überblick zur Rolle von Generativer KI und Mensch-Robotik-Interaktion siehe Obrenovic et al. 2024.
+
+
+<!-- PAGE 37 -->
+
 
 Film 'Her' beschriebenen Version entfernt war. 2014, als ein gewisser 'Eugene Goostman' zum Turing Test antrat, wurde dies zu einem vielbeachteten Ereignis. Beim Turing Test sollen Menschen über Chats entscheiden, ob sie mit einem Menschen oder einem Computerprogramm interagieren. 'Eugene' gab vor, ein 13-jähriger, ukrainischer Teenager zu sein, und konnte einige Personen dahingehend täuschen, dass sie ihn für einen echten Menschen hielten. Das Ergebnis war und ist umstritten, da die vorgebliche Nichtmuttersprachlichkeit und die jugendliche Sprunghaftigkeit als Strategie eingesetzt wurden (Fancher 2016). Wesentlich verheerender allerdings war das Presseecho auf Microsofts Chatbot 'Tay', der via Twitter von Nutzenden lernen sollte, wegen der gelernten unvertretbaren Äußerungen aber schnell wieder abgeschaltet werden musste (Lee 2016). Mit der Entwicklung der Transformer-Architektur (Vaswani et al. 2017) wurde ein entscheidender Schritt für die Ununterscheidbarkeit menschlicher und computergenerierter Aussagen gelegt. Die vorherigen Systeme basierten auf sogenannten Markov-Ketten; erst durch die Transformer-Architektur konnte der hohen Kontextualisierung von Wörtern in spezifischen Zusammenhängen und der unterschiedlichen Bedeutsamkeit einzelner Wörter dergestalt Rechnung getragen werden, dass auch inhaltlich überwiegend kohärente Texte generiert werden können. 2021 konnte GPT-2 so im Debattieren mit menschlichen Profis mithalten (Slonim et al. 2021). Die breite Öffentlichkeit wurde 2023 mit der Veröffentlichung der als ChatGPT bekannten Nachfolgerversion erreicht. Mittlerweile gibt es eine Vielzahl von Large Language Models, 2024 sind auf der Plattform Hugging Face über 400.000 gelistet.
 
@@ -395,11 +540,19 @@ Der Einfluss von KI auf die Kommunikation zwischen Menschen kann auf verschieden
 
 Zu 1.: Der Sprachgebrauch ist zahlreichen kulturellen und medialen Einflüssen unterworfen und in stetigem Wandel begriffen. Dies betrifft bestimmte Vorstellungen, z.B. den Gebrauch neuester Technologien als Metaphern für die Funktionsweise von Gehirn und Geist, oder auch Veränderungen im Kasusgebrauch. Die Ebene des im Sprachlichen reflektierten Umgangs miteinander könnte durch die Interaktion mit Sprachassistenten beeinflusst werden, etwa mittels Schema-
 
+
+<!-- PAGE 38 -->
+
+
 aktivierung, wie Guingrich und Graziano (2024) argumentieren. Die These, dass es ein Rückwirken auf menschliche Kommunikation geben kann, stellten bereits Gambino und Kollegen (2020) für die Kommunikation mit sozialen Agenten auf. Sie fußen auf dem 'Computers are social actors paradigm', das im nachfolgenden Abschnitt näher ausgeführt wird. Vor dem Hintergrund dieser Einflussmöglichkeiten ergibt sich die Notwendigkeit für die Soziale Arbeit, Geschäftspraktiken und Interessen bei der Gestaltung von KI-Sprachsystemen kritisch zu hinterfragen und ihre gesellschaftliche Verantwortung wahrzunehmen (siehe auch Linnemann/Löhe/Rottkemper 2023).
 
 Zu 2.: Die interund intraprofessionelle Kommunikation wird nicht erst durch KI-Einsatz, sondern bereits u.a. durch Standardisierung und Quantifizierungsbemühungen beeinflusst (Ley/Seelmeyer 2014; Will-Zoloch/Hardering 2020), was wiederum die so vermittelte Kommunikation zwischen Fachkräften beeinflusst. Durch KI treten hier aber (potenzielle) neue Funktionalitäten hinzu, z.B. sprachbasierte Dokumentation und Maßnahmenplanung (KiJUAssistenz o.J.). Unter Umständen fallen bestimmte sprachliche Aufgaben für Fachkräfte weg, weil sie KI-basiert schneller oder besser erledigt werden können oder weil Abstimmungsprozesse obsolet werden. In der Kommunikation mit Klient:innen gibt es mit dem Projekt zur KI-gestützten Assistenz des E-Beratungsinstituts (o. J.) einen Ansatz zur Unterstützung des Reflexionsprozesses von Fachkräften im Bereich der Onlineberatung, was sich positiv auf die Qualität der Kommunikation mit Klient:innen auswirken sollte. Die Nutzung von KI kann zu Gesprächen führen, die als empathischer wahrgenommen werden (Sharma et al. 2022). Durch KI ergeben sich auch neue Trainingsmöglichkeiten (siehe Projekt 'Der Virtuelle Klient', E-Beratungsinstitut o.J.). In der Kommunikation mit Klient:innen ist darüber hinaus der Einsatz KI-gestützter Grammatik-, Stilund Übersetzungstools möglich, bis hin zur Unterstützung bei der Überführung von Texten in Leichte Sprache. Dies könnte wiederum Einfluss auf Sprachgebrauch und -gewohnheiten nehmen, den es fachlich zu reflektieren gilt.
 
 Zu 3.: Im lebensweltlichen Einsatz ist je nach Nutzung von KI-Systemen die Entfaltung von Teilhabeund Bildungspotenzial einerseits und problematischen Dynamiken andererseits möglich. Teilhabeund Bildungspotenzial ergibt sich u.a. durch die individualisierbare Erschließung von Informationen, der Zugänglichkeit einer elaborierteren Ausdrucksweise, zumindest in der schriftlichen Kommunikation, und Übungseffekten durch die Interaktion mit KI für die spätere Anwendung in menschlichen Gesprächssituationen (rehearsal hypothesis, Valkenburg/Sumter/Peter 2011). Allerdings kann neben der Möglichkeit der Einflussnahme durch KI-Systeme auf inhaltlicher Ebene die Gestaltung auf eine möglichst extensive Nutzung ausgerichtet sein (Irvine et al. 2023) und die zwischenmenschliche Interaktion indirekt insofern beeinflussen, als dass Gespräche mit
+
+
+<!-- PAGE 39 -->
+
 
 Menschen durch entsprechende KI-Interaktionen ersetzt werden. Für eine Nutzung insbesondere von KI-Systemen, die eine 'Beziehungsgestaltung' ermöglichen, ist Aufklärung über die Funktionsweise von LLM nötig.
 
@@ -409,11 +562,19 @@ Sprachbasierte KI-Systeme können als 'Gesprächspartner' eingesetzt werden, sow
 
 In bestimmten Hinsichten scheinen Personen in der Kommunikation kaum zwischen Mensch und Maschine bzw. KI zu unterscheiden. Die Grundannahme der Media Equation Theory (Reeves/Nass 1996) besagt, dass technische Entitäten und Medien als Soziale Akteure wahrgenommen werden und Menschen ihnen dementsprechend mit Verhaltensweisen begegnen, die sie ebenso gegenüber anderen Menschen zeigen würden. Ein Beispiel ist das Zeigen von Höflichkeit gegenüber Computern (ebd.). Beim Gebrauch von LLM scheint der Einsatz von (moderater bzw. der Kultur angemessener) Höflichkeit sich tatsächlich positiv auf die Ergebnisqualität auszuwirken (Yin et al. 2024), was diese Verhaltenstendenz noch weiter befördern könnte. Ganz abgesehen davon sind gängige LLM so designt, dass sie von sich in der ersten Person sprechen, Verben des Hoffens und Wünschens verwenden und einer gestalteten Persona entsprechen. Der Grad der
 
+
+<!-- PAGE 40 -->
+
+
 Anthropomorphisierung hat also eine andere Ebene erreicht, gerade im Vergleich zu Desktopcomputern oder Druckern, auf die die Media Equation Theory bereits beispielhaft angewendet wurde. Im Rahmen des auf der Media Equation Theory aufbauenden Computers are Social Actors (CASA) Framework (Gambino/Fox/ Raten 2020) wurden die Grundannahmen auch für neuere Technologien wie Chatbots (Ho/Hancock/Miner 2018) und embodied agents (Hoffmann et al. 2019) getestet. Gambino und Kollegen (2020) fanden heraus, dass sich die Interaktion im Zeitverlauf entwickelt und sich dann im Vergleich wieder stärker von zwischenmenschlichen Interaktionen unterscheidet. Nach Heyselaar (2023) ist die Anwendbarkeit von CASA möglicherweise auf aufkommende, neue Technologien begrenzt, und mit der Vertrautheit könnten die Effekte verschwinden. Wie es sich hier mit LLM verhält, ist offen. Dennoch lässt sich feststellen, dass LLM, wie bereits erwähnt, ein höheres Niveau an menschenähnlicher Ausdrucksqualität gewonnen haben, mit der sie sich von anderen 'Tools' unterscheiden, gleichzeitig aber keine vollwertigen Agenten im Sinne eines menschlichen Gesprächspartners darstellen (Sedlakova/Trachsel 2023). Linnemann, Löhe und Rottkemper (2023, 2024) verwenden den Begriff 'quasisoziale Beziehungen' in Abgrenzung zu zwischenmenschlichen Beziehungen einerseits und parasozialen Beziehungen, wie sie etwa zu Charakteren aus Fernsehsendungen geführt werden können (z. B. Hoffner/Bond 2022), andererseits. Sie definieren wie folgt:
 
 'Eine quasisoziale Beziehung beschreibt die Beziehung zwischen einem Menschen und einem künstlichen Agenten, bei der die Merkmale zwischenmenschlicher Beziehungsbildung (1) Soziale Präsenz, (2) Vertrauen, (3) emotionale Bindung und (4) gegenseitige Beeinflussung gleichzeitig vorhanden sind. Quasisoziale Beziehungen weisen soziale Elemente auf, sind aber dennoch von echten zwischenmenschlichen Beziehungen zu unterscheiden.' (Linnemann/Löhe/Rottkemper 2024, S. 11)
 
 Das soziale Gefüge, das sich durch solche Interaktionen ergibt bzw. gestaltet werden kann, nehmen Braedtzag und Team (2024) in den Blick. Sie bauen auf Wellmans Konzept des 'networked individualism' (2001) auf, d.h. die durch Internet und soziale Medien ermöglichte Wendung organisationaler Beziehungen hin zu einem um das Individuum zentrierten und von ihm ausgewählten sozialen Gefüge, und entwickeln das durch soziale KI ermöglichte Konzept des 'AI individualism', mit dem sie die Gestaltung stark individualisierter sozialer Interaktionen mit KI beschreiben. Dies wiederum könne sich auf soziales Kapital, zwischenmenschliche Beziehungen und abnehmender Abhängigkeit von anderen Menschen auswirken. Als drei zentrale Charakteristika des AI Individualism werden 'cocreation and meaning-making', 'tailored interaction and autonomy' und 'support and companionship' identifiziert. Als problematisch führen sie die Rolle der Anbieter an, die Nutzende manipulieren und in den Gestaltungsmöglichkeiten einschränken sowie in einer Abhängigkeit halten
+
+
+<!-- PAGE 41 -->
+
 
 können. Auch Möglichkeiten der Customization könnten beschränkt sein und entsprechend illusionär als 'pseudo-autonomy' beschrieben werden. Braetzag und Kollegen sehen sowohl 'AI capital' als auch 'network capital' als Formen sozialen Kapitals an und vermuten, dass Personen diese Formen integrieren könnten. Ob KI soziale Beziehungen eher ersetzt (displacement hypothesis) oder anregt (stimulation hypothesis) und so Einsamkeit reduziert, ist bei Betrachtung des aktuellen Forschungsstands unklar (siehe hierzu auch relief/practive effect, Guingrich/Graziano 2024).
 
@@ -423,11 +584,19 @@ Im Rahmen der Interviewstudie von Skjuve und Team (2022) wurden die Teilnehmende
 
 In einer Auswertung von auf Erfahrungen mit Replika bezogenen Posts stellten Ma, Mei und Su (2024) sowohl förderliche als auch nachteilige Effekte in Hinblick auf das Wohlergehen der Nutzenden fest: Als positiv identifizierten sie die Verfügbarkeit, die Stärkung des Selbstvertrauens und die Unterstützung in der Selbsterkundung. Allerdings konnte die App Nutzende nicht zuverlässig vor schädlichen Inhalten schützen und funktionierte nicht störungsfrei, wie ebenso in der Studie von Skjuve berichtet. Ferner könnten laut den Autor:innen die Abhängigkeit von Replika und darüber hinaus das mit der Nutzung verbundene Stigma eine soziale Isolation verstärken. Jedoch könnten KI-Bots im professionellen Kontext auch gezielt als Brücke zu zwischenmenschlicher Interaktion
 
+
+<!-- PAGE 42 -->
+
+
 eingesetzt werden (Lee/Yamashita/Huang 2020) und so möglicherweise zu einem niedrigschwelligeren Hilfeangebot führen.
 
 Explizit zur Unterstützung von Wohlbefinden und psychischer Gesundheit wurde u.a. Woebot (Woebot 2024) konzipiert. Dieser Chatbot beruht aus Gründen der Sicherheit nicht auf einem LLM, sondern enthält ausschließlich von Expert:innen kuratierte Aussagen (Woebot Health 2024). Es zeigen sich Hinweise auf seine Wirksamkeit (z. B. Durden et al. 2023), dennoch sind in diesem Feld noch viele Fragen offen (Sedlakova/Trachsel 2023), zumal es sich bei den Nutzenden in der Regel um Personen mit erhöhter Vulnerabilität handelt. Schwieriger zu erfassen ist die Nutzung von 'allgemeinen' LLM für Fragestellungen, die ggf. auch die Soziale Arbeit tangieren. In Sicherheitsuntersuchungen zu ChatGPT4o von OpenAI selbst (OpenAI 2024) wird berichtet, dass sich in der Sprache von Nutzenden ausdrückt, dass sie eine Verbindung ('connection') mit dem Modell eingingen und emotionale Verbundenheit ('emotional reliance') entstünde, deren Auswirkungen weiter erforscht werden müssten.
 
 Angesichts dieser Beispielanwendungen wird die Relevanz einer AI Literacy (deutsch: KI-Kompetenz) deutlich, die es erst erlaubt, eine Entscheidung über die Nutzung von KI als 'Gesprächspartner' informiert zu treffen und ebenso ggf. die Nutzung zu gestalten. Hier müssen weitere Faktoren berücksichtigt werden, etwa der Entwicklungsstand -so zeigten Jugendliche in einer Untersuchung von Brandtzaeg, Skjuve und Følstad (2021) nahezu kein Gefahrenbewusstsein. Aber z.B. ebenso für Menschen mit demenziellen Veränderungen können hier problematische Situationen entstehen -und auch mit Blick auf die Gestaltung einer KI, etwa wenn KI dergestalt agiert, dass Nutzende zu längeren Interaktionen bewegt werden (Irvine et al. 2023). Eine zentrale Rolle für den Beziehungsaufbau stellt die Selbstoffenbarung persönlicher Informationen dar. Gegenüber nichtmenschlichen Entitäten scheint die Selbstoffenbarung bei als schambehaftet empfundenen Themen leichter zu fallen (Weisband/Kiesler 1996; Joinson 2001), auch wenn dafür auf soziale Unterstützung verzichtet wird (Kim et al. 2022). Einer Reziprozitätsnorm folgend geben Menschen mehr von sich preis, wenn das Gegenüber bereits persönliche Informationen geteilt hat, was sich gerade in der Interaktion mit einer generativen KI, die unendlich Informationen von 'sich' berichten kann, stark auswirken kann. Hier ist weitere Erforschung, ggf. Anpassung in der Gestaltung und Aufklärung bei der Nutzung angeraten. Daneben treten weitere noch nicht hinreichend erforschte Effekte wie die Automatisierungsverzerrung auf (Vered et al. 2023), die die Tendenz beschreibt, den von einem technischen System generierten Antworten zuzustimmen.
+
+
+<!-- PAGE 43 -->
+
 
 ## 5 Fazit
 
@@ -447,6 +616,10 @@ In der Sozialen Arbeit sind Kommunikation und Beziehungsgestaltung sowie die Aus
 - Fancher, Patricia (2016): Rhetoric of Embodiment. Present Tense 6(1), S. 1-8.
 - Gambino, Andrew/Fox, Jesse Fox/Ratan, Rabindra A. (2020): Building a Stronger CASA: Extending the Computers Are Social Actors Paradigm. In: Human-Machine Communication 1(1), S. 71-85. https://doi.org/10.30658/hmc.1.5
 
+
+<!-- PAGE 44 -->
+
+
 - Gillath, Omri/Ai, Ting/Branicky, Michael S./Keshmiri, Shawn/Davison, Robert B./Spaulding, Ryan (2021): Attachment and trust in artificial intelligence. In: Computers in Human Behavior 115, S. 106607. https://doi.org/10.1016/J.CHB.2020.106607
 - Guingrich, Rose E./Graziano Michael S. A. (2024): Ascribing Consciousness to Artificial Intelligence: Human-AI Interaction and Its Carry-over Effects on Human-Human Interaction. In: Frontiers in Psychology 15. https://doi.org/10.3389/fpsyg.2024.1322781
 - Heyselaar, Evelien (2023): The CASA theory no longer applies to desktop computers. Scientific Reports 13, 19693. https://doi.org/10.1038/s41598-023-46527-9
@@ -464,6 +637,10 @@ In der Sozialen Arbeit sind Kommunikation und Beziehungsgestaltung sowie die Aus
 - Linnemann, Gesa Alena/Löhe, Julian/Rottkemper, Beate (2024): Bedeutung von Selbstoffenbarungseffekten in quasisozialen Beziehungen mit auf generativer KI basierten Systemen in Settings von Onlineberatung und -therapie. In: e-beratungsjournal.net -Zeitschrift für Onlineberatung und computervermittelte Kommunikation 20(1), Artikel 1, S. 1-21. https://doi.org/10. 48341/9x1s-5y11
 - Lu, Sheng/Bigoulaeva, Irina/Sachdeva, Rachneet/Madabushi, Harish Tayyar/Gurevych, Iryna (2024): Are Emergent Abilities in Large Language Models just In-Context Learning? https:// arxiv.org/abs/2309.01809
 - Ma, Zilin/Mei, Yiyang/Su, Zhaoyuan (o. J.): Understanding the Benefits and Challenges of Using Large Language Model-based Conversational Agents for Mental Well-being Support. https:// arxiv.org/pdf/2307.15810
+
+
+<!-- PAGE 45 -->
+
 
 - Mei, Qiaozhu/Xie, Yutong/Yuan, Walter/Jackson, Matthew O. (2024): A Turing test of whether AI chatbots are behaviorally similar to humans. https://doi.org/10.1073/pnas.2313925121
 - Meng, Jingbo/Dai, Yue N. (2021): Emotional Support from AI Chatbots: Should a Supportive Partner Self-Disclose or Not? In: Journal of Computer-Mediated Communication 26(4), S. 207-222. https://doi.org/10.1093/jcmc/zmab005
@@ -483,6 +660,10 @@ In der Sozialen Arbeit sind Kommunikation und Beziehungsgestaltung sowie die Aus
 - Valkenburg, Patti M./Sumter, Sindy R./Peter, Jochen (2011): Gender differences in online and offline self-disclosure in pre-adolescence and adolescence. British journal of developmental psychology 29(2), S. 253-269.
 - Vaswani, Ashish/Shazeer, Noam/Parmar, Niki/Uszkoreit, Jakob/Jones, Llion/Gomez, Aidan N./ Kaiser, Łukasz/Polosukhin, Illia (2017): Attention is all you need. Advances in neural information processing systems, 31st Conference on Neural Information Processing Systems, Long Beach, CA, USA.
 
+
+<!-- PAGE 46 -->
+
+
 - Vered, Mor/Livni, Tali/Howe, Piers Douglas Lionel/Miller, Tim/Sonenberg, Liz (2023): The effects of explanations on automation bias. Artificial Intelligence 322, 103952. https://doi.org/10.1016/j. artint.2023.103952
 - Weisband, Suzanne/Kiesler, Sara (1996): Self Disclosure on Computer Forms. In: Proceedings of the SIGCHI conference on Human factors in computing systems common ground -CHI '96, the SIGCHI conference, Vancouver, British Columbia, Canada, 13-18 Apr. 1996, S. 3-10, ISBN 0897917774. https://www.cs.cmu.edu/ ∼ kiesler/publications/1996pdfs/1996\_Self-disclosure-computer-forms.pdf (Abfrage: 15.06.2025).
 - Weizenbaum, Joseph (1966): 'ELIZA -A Computer Program for the Study of Natural Language Communication Between Man and Machine.' In: Communications of the ACM 9(1), S. 36-45.
@@ -491,6 +672,10 @@ In der Sozialen Arbeit sind Kommunikation und Beziehungsgestaltung sowie die Aus
 - Woebot Health. https://woebothealth.com/why-generative-ai-is-not-yet-ready-for-mentalhealthcare/ (Abfrage: 15.06.2025).
 - Yin, Yidan/Jia, Nan/Wakslak, Cheryl J. (2024): AI can help people feel heard, but an AI label diminishes this impact. Proceedings of the National Academy of Sciences 121(14). https://www.pnas. org/doi/10.1073/pnas.2319112121
 - Yin, Ziqi/Wang, Hao/Horio, Kaito/Kawahara, Daisuke/Sekine, Satoshi (2024): Should We Respect LLMs? A Cross-Lingual Study on the Influence of Prompt Politeness on LLM Performance. https://arxiv.org/abs/2402.14531#
+
+
+<!-- PAGE 47 -->
+
 
 ## Bedeutung von KI für Disziplin und Profession der Sozialen Arbeit 1
 
@@ -506,6 +691,10 @@ Die rasante Entwicklung von KI beeinflusst zahlreiche Lebensbereiche und konfron
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_004
 
+
+<!-- PAGE 48 -->
+
+
 liche Ausbildung, wohingegen die Profession das Handeln und die methodische Arbeit von Sozialarbeitenden in konkreten Praxisfeldern umfasst (vgl. Mennemann/Dummann 2022, S. 18ff.). Die Integration von KI in die Soziale Arbeit betrifft nicht nur technische Aspekte, sondern zieht auch ethische, methodologische und gesellschaftliche Überlegungen nach sich. Es gilt, die unterschiedlichen Auswirkungen von KI auf die Soziale Arbeit zu beleuchten und dabei die Chancen und zugleich die Herausforderungen wahrzunehmen. Dazu sind die positiven und kritischen Auswirkungen von KI auf die Professionsentwicklung und die disziplinäre Entwicklung der Sozialen Arbeit zu betrachten. Dabei wird in diesem Beitrag der Versuch unternommen, zu verstehen, wie KI-Technologien sowohl die praktische Ausübung der Sozialen Arbeit auf der Professionsebene als auch ihre theoretischen und somit disziplinären (Kern-)Grundlagen beeinflussen können. Die zentrale Frage lautet daher: Wie kann sich KI positiv oder kritisch auf die Professionsentwicklung und die disziplinäre Entwicklung der Sozialen Arbeit auswirken? Diese Frage impliziert eine duale Untersuchung: Einerseits wird der Einfluss von KI auf die berufliche Praxis und die Rollen von Fachkräften in der Sozialen Arbeit analysiert. Andererseits wird damit zusammenhängend betrachtet, wie KI die theoretischen Fundamente und die wissenschaftliche Auseinandersetzung innerhalb der Disziplin beeinflusst.
 
 Die aktuelle Forschungslage weist sowohl Potenziale als auch Herausforderungen der Integration von KI in die Soziale Arbeit auf. Diverse Autor:innen nehmen disziplinäre Aspekte der KI für die Soziale Arbeit auf und bieten wertvolle Einblicke in die komplexe Wechselwirkung zwischen Technologie und sozialer Praxis. Beispielsweise betont Agre (2014, S. 131ff.) die Notwendigkeit einer kritischen Reflexion und Integration von Sozialwissenschaften in die technologische Gestaltung, was für die disziplinäre Entwicklung der Sozialen Arbeit relevant ist. Banks (2020) behandelt in seinem Gesamtwerk grundlegende ethische Prinzipien wie soziale Gerechtigkeit und Kompetenz, die für die disziplinäre Entwicklung von Bedeutung sind. Dignum (2019) unterstreicht ebenfalls in seinem Gesamtwerk die Bedeutung von Verantwortung in der Entwicklung und Nutzung von KI und führt das ART-Konzept (Accountability, Responsibility, Transparency) als Designmethodologie ein, was auf die disziplinären Überlegungen in der Sozialen Arbeit durchaus übertragbar ist.
@@ -513,6 +702,10 @@ Die aktuelle Forschungslage weist sowohl Potenziale als auch Herausforderungen d
 ## 2 KI und Soziale Arbeit: Grundlagen
 
 Die folgenden einführenden Betrachtungen sind wesentlich, um ein Verständnis für die tiefgreifenden Veränderungen und Anpassungsprozesse zu entwickeln, die KI für die disziplinäre und professionelle Entwicklung der Sozialen Arbeit mit sich bringt.
+
+
+<!-- PAGE 49 -->
+
 
 ## 2.1 Begriffsdefinition KI
 
@@ -525,6 +718,10 @@ Die Differenzierung zwischen schwacher und starker KI ermöglicht ferner eine ge
 In diesem Zusammenhang spielt die transdisziplinäre Forschung eine Schlüsselrolle, indem sie aufzeigt, wie KI-Entwicklungen durch gesellschaftliche und industrielle Einflüsse geformt werden. Die Studie von Dwivedi et al. (2021, o. S.) betont die Wichtigkeit, technologischen Fortschritt und Sozialwissenschaften miteinander zu verbinden, was für eine mehrperspektivische Sichtweise der KI in der Sozialen Arbeit spricht.
 
 Hinsichtlich der KI-Komponenten und ihrer Funktionsweisen erweisen sich Methoden des Machine Learning, neuronale Netze und natürliche Sprachverarbeitung als Schlüsseltechnologien. Machine Learning hat dabei das Potenzial, sich auf die Modellierung sozialer Probleme und Verhaltensmuster auszuwirken. Neuronale Netze könnten in der Mustererkennung in Datensätzen, die in der Sozialen Arbeit vorkommen, nützlich sein, während die natürliche Sprachverarbeitung eine zentrale Rolle in der Kommunikation mit Klient:innen spielt. Hierbei gilt es jedoch, methodologische Herausforderungen und ethische Implikationen, wie von Dwivedi et al. (2021, o. S.) angedeutet, zu berücksichtigen.
+
+
+<!-- PAGE 50 -->
+
 
 Die emergenten Eigenschaften von KI, insbesondere in Hinblick auf Foundation Models 2 , bringen neue Fähigkeiten, aber auch Risiken mit sich. Bommasani et al. (2021, o. S.) weisen auf Foundation Models hin, die sowohl im Bildungsbereich als auch im rechtlichen Kontext eingesetzt werden können, und unterstreichen die Notwendigkeit, ethische und rechtliche Aspekte in deren Entwicklung einzubeziehen. Dies zeigt, wie wichtig es ist, KI-Implementierungen in der Sozialen Arbeit kritisch zu reflektieren, um sozialen Nutzen zu maximieren und potenzielle Schäden (insbesondere für vulnerable Klient:innen) zu vermeiden.
 
@@ -540,6 +737,10 @@ Die präventive Kraft von KI-basierten Vorhersagemodellen, wie von Wirtz et al. 
 
 3 Society 5.0 zielt darauf ab, eine Balance zwischen wirtschaftlichem Fortschritt und der Lösung sozialer Probleme durch die Integration von Technologien wie KI, dem Internet der Dinge, Robotik, Big Data und der digitalen Transformation zu schaffen.
 
+
+<!-- PAGE 51 -->
+
+
 In der weiteren Betrachtung sorgt die Automatisierung administrativer Prozesse für eine signifikante Effizienzsteigerung, indem sie Fachkräften in der Sozialen Arbeit erlaubt, sich auf komplexere Fälle zu konzentrieren (vgl. Dignum 2019, o. S.). Die Entlastung von Routinetätigkeiten durch KI-gesteuerte Systeme führt zu einer Freisetzung von Kapazitäten, die für die persönliche Betreuung und den Beziehungsaufbau mit Klient:innen genutzt werden können, ein Aspekt, der auch Kernwerte der Sozialen Arbeit widerspiegelt. Hierzu fehlen allerdings aktuell empirische Daten, die diese Annahme der Arbeitserleichterung durch KI stützen würden. Aktuell kann vielmehr von einer zusätzlichen Arbeitsbelastung ausgegangen werden, indem sich Sozialarbeitende mit den neuen technologischen Möglichkeiten auseinandersetzen (müssen), bevor eine faktische Arbeitserleichterung einsetzen kann.
 
 Ein weiterer essenzieller Vorteil von KI im sozialen Sektor ist ihre Fähigkeit, inklusive und diversitätssensible Ansätze zu unterstützen. Die Entwicklung von KI-Werkzeugen, die Exklusionsmechanismen erkennen und damit die Gerechtigkeit fördern, spiegelt das Streben der Sozialen Arbeit wider, Diskriminierung zu minimieren (vgl. Wirtz et al. 2019, S. 596ff.). Gleichzeitig ist zu konstatieren, dass die Ausgabe von KI-Systemen von den zugrunde liegenden Daten abhängt und diese als Spiegel der Gesellschaft Stereotype reproduzieren und Diskriminierung dadurch sogar verstärkt werden könnte (vgl. Macsenaere 2024, S. 42). Dazu konnte beispielsweise in verschiedenen experimentellen Anwendungen im angloamerikanischen Raum bezüglich Einschätzungshilfe bei Kindeswohlgefährdung nachgewiesen werden, dass die Systeme diskriminierende Verzerrungseffekte aufweisen (vgl. Eubanks 2018, o. S.). In diesem Zusammenhang ist es unumgänglich, ethische Standards in KI-Entscheidungsprozessen zu berücksichtigen und in den Entwicklungsprozess zu integrieren.
@@ -547,6 +748,10 @@ Ein weiterer essenzieller Vorteil von KI im sozialen Sektor ist ihre Fähigkeit,
 Die Implementierung von KI wirft jedoch auch Fragen z.B. hinsichtlich ethischer Standards und deren Einhaltung auf. Die Balance zwischen Effizienz und Ethik ist ein vielschichtiges Thema in der Sozialen Arbeit, das die Prinzipien der Hilfe und der nicht schädigenden Wirkung von Interventionen betrifft. Dies erfordert die Entwicklung von Regelwerken und Governance-Strukturen, die die Werte der Sozialen Arbeit schützen und gleichzeitig die möglichen Vorteile von KI nutzen. Insbesondere die Autonomie von KI-Entscheidungen stellt die Soziale Arbeit vor die Herausforderung, Verantwortung und Transparenz zu gewährleisten. Auch der EU AI Act 4 sieht vor, autonome Entscheidungen von KI über Menschen weitgehend zu untersagen. Diese Regelung dürfte ebenfalls erhebliche Auswirkungen auf die Praxis der Sozialen Arbeit haben.
 
 4 Der EU AI Act ist ein regulatorischer Rahmen der Europäischen Union, der die Entwicklung, den Einsatz und die Kontrolle von KI regelt. Ziel ist es, Risiken zu minimieren, insbesondere in sensiblen Bereichen wie der autonomen Entscheidungsfindung, und den Schutz grundlegender Rechte sicherzustellen.
+
+
+<!-- PAGE 52 -->
+
 
 Letztendlich bietet KI das Potenzial, klientelzentrierte Ansätze zu erweitern, indem personalisierte Dienstleistungen über KI-gestützte Analysemethoden angeboten werden. Diese Entwicklung hat das Potenzial, die Subjektzentrierung der Sozialen Arbeit zu stärken (vgl. Huang/Rust 2018, S. 155ff.). Gleichzeitig muss jedoch die Möglichkeit einer Verstärkung von Machtasymmetrien durch den Einsatz von KI als Überwachungsund Kontrollinstrument kritisch reflektiert werden. Die Implementierung von empathischer KI, die emotionale Intelligenz simuliert, könnte eine unterstützende Funktion in der individuellen Betreuung einnehmen, muss jedoch auf ihre u.a. ethische Vertretbarkeit und praktische Umsetzbarkeit geprüft werden (vgl. ebd.).
 
@@ -557,6 +762,10 @@ Der Einfluss von KI auf die Professionsentwicklung ist multidimensional und ber�
 Die 'komplementäre Beziehung' 5 zwischen Sozialarbeiter:innen und KI-Systemen eröffnet neue Möglichkeiten in der Entscheidungsfindung und Problemlösung, indem sie menschliche Empathie mit präzisen datengesteuerten Analysen verknüpft (vgl. Jarrahi 2018, S. 577ff.). Sozialarbeitende können ihre tiefgreifenden Kenntnisse menschlichen Verhaltens und sozialer Dynamiken nutzen, während KI-Systeme enorme Datenmengen effizient verarbeiten und neue Muster identifizieren. Dies erschließt Potenziale für eine verbesserte Risikoeinschätzung und individualisierte Hilfepläne. Dabei gilt es, das menschlich-personenzentrierte Handeln als Kernkompetenz der Sozialen Arbeit zu bewahren und durch KI zu unterstützen, nicht zu ersetzen. Die interprofessionelle Ausbildung, die auch technologische Kompetenzen einschließt, wird damit zur Notwendigkeit für angehende Sozialarbeitende, um eine erfolgreiche Zusammenarbeit von menschlichen und künstlichen Intelligenzen zu erreichen. Die zunehmende Digitalisierung und Technologisierung erfordern eine Anpassung der Ausbildungsinhalte und Methodiken in der Sozialen Arbeit. Rauschenbach (2020, S. 145ff.) weist darauf hin, dass der Wissenstransfer zwischen Theorie und Praxis entscheidend ist, um die Profession kontinuierlich weiterzuentwickeln. Im Zuge des technologischen Wandels müssen sich Lehrpläne für eine stärkere Betonung von Datenkompetenz und digitalen Fähigkeiten öffnen. Dieses Konzept wird unter dem Begriff
 
 5 Der Begriff 'Beziehung' wird hier in einem erweiterten Sinne verwendet, um die besondere Interaktion zwischen Mensch und KI zu beschreiben, da KI-Systeme durch ihre Interaktionselemente (z. B. Sprachverarbeitung oder personalisierte Rückmeldungen) das Gefühl einer sozialen Verbindung erzeugen können, ohne tatsächlich ein bewusstes Gegenüber zu sein (vgl. Mennemann/Dummann 2022, S. 197ff.).
+
+
+<!-- PAGE 53 -->
+
 
 AI Literacy zusammengefasst, der die Fähigkeit beschreibt, grundlegendes Wissen über KI zu erwerben, deren Funktionsweisen zu verstehen und kritisch reflektieren zu können (vgl. Long/Magerko 2020, S. 1 ff.). Neben diesen technischen und analytischen Skills ist es jedoch ebenso wichtig, dass ethische Fragestellungen im Umgang mit KI Teil der akademischen Ausbildung werden, um eine verantwortungsvolle Anwendung der Technologie sicherzustellen.
 
@@ -570,6 +779,10 @@ Die KI wird die Entwicklung der Profession Soziale Arbeit maßgeblich beeinfluss
 
 KI vermag die Grundlagentheorien der Sozialen Arbeit zu beeinflussen (siehe hierzu auch den Beitrag von Beranek in diesem Band). Dazu ist die Frage aufzuwerfen, inwieweit traditionelle menschenzentrierte Prinzipien mit datengetriebenen Systemen integriert werden können, ohne die ethischen Grundlagen der Disziplin zu kompromittieren. Diese Diskussion ist entscheidend, um die Rolle der Sozialen Arbeit in einer zunehmend digitalisierten Welt zu verorten und aufzuzeigen, wie KI in die bestehende strukturierte und wertorientierte Praxis eingebunden werden kann.
 
+
+<!-- PAGE 54 -->
+
+
 ## 4.1 Veränderung von Grundlagentheorien
 
 Die Einführung von KI in die Disziplin der Sozialen Arbeit ist ein Novum, das sowohl faszinierende Möglichkeiten als auch ernstzunehmende Herausforderungen bietet. Die Grundlagentheorien, die bisher den professionellen Handlungsrahmen abstecken, stehen nun vor der Aufgabe, sich an die neuen Gegebenheiten anzupassen und ggf. neu definiert bzw. modifiziert und weitergedacht zu werden. Bei allen disziplinären Modifikationen der Grundlagentheorien gilt zu beachten, dass das Studium der Sozialen Arbeit zu einem wissenschaftlichen Denken zu qualifizieren hat, um die Wirklichkeit der Klient:innen mittels Theorien wahrnehmen und in ihr begründet handeln zu können (vgl. Mennemann/Dummann 2022, S. 101ff.).
@@ -581,6 +794,10 @@ Die Aushandlung zwischen algorithmischer Objektivität und menschlicher Subjekti
 In Bezug auf gerechtigkeitsorientierte Theorien, wie sie Röh (2013) in seinem Gesamtwerk beschreibt, könnte KI insbesondere in Bezug auf Ressourcenallokation und -nutzung wertvolle Beiträge leisten. Die Nutzung von KI zur Identifikation von Bedürftigkeit und zur effizienten Zuteilung von Ressourcen könnte dazu beitragen, bestehende Barrieren auf dem Weg zu einer daseinsmächtigen Lebensführung zu reduzieren. Gleichzeitig müssen jedoch die Implikationen algorithmischer Entscheidungsprozesse kritisch betrachtet werden, um die sozialarbeiterische Praxis nicht zu technokratisieren und die individuelle Selbstbestimmung und Gerechtigkeit aus dem Blick zu verlieren.
 
 KI-generierte Interventionen könnten Abweichungen von traditionellen Ansätzen bedingen und damit die Rolle von Sozialarbeiter:innen verändern. Diskutabel ist, welche neuen Kompetenzen erforderlich werden und wie sich die Integration von KI in die Professionsentwicklung auf die sozialarbeiterische Rol-
+
+
+<!-- PAGE 55 -->
+
 
 lenauffassung auswirkt. Dabei müssen ökonomische Prinzipien und soziale Teilhabe, wie von Rauschenbach und Züchner (2012, S. 151 ff.) als Herausforderung skizziert, neu verhandelt werden, um das Gleichgewicht zwischen Effizienz und ethischer Verantwortung nicht zu gefährden.
 
@@ -596,6 +813,10 @@ Die Integration ethischer Prinzipien in KI lädt dazu ein, wie oben beschrieben,
 
 Foundation Models als maschinelle Lernmodelle sind in der Lage, die Lebensweltorientierung nach Lothar Böhnisch zu unterstützen, indem sie partizipative und kontextsensitive Interventionen ermöglichen (vgl. Bommasani et al. 2021, o. S.). Gleichzeitig bedarf es einer kritischen Auseinandersetzung mit den Be-
 
+
+<!-- PAGE 56 -->
+
+
 schränkungen von KI, um sicherzustellen, dass die Komplexität sozialer Lebenswelten adäquat repräsentiert wird (vgl. Lambers 2018, S. 501ff.).
 
 Schließlich muss die Verwendung von KI in der Sozialen Arbeit zu einer Reflexion über die berufliche Identität führen. Die Selbstwahrnehmung und das professionelle Handeln von Sozialarbeitenden sind im Licht der Verantwortung für ihre fachliche Entscheidungsautonomie zu betrachten, was durch die Critical Technical Practice nach Agre (2014, S. 131 ff.) und die ethischen Prinzipien nach Banks (2020, o. S.) unterstützt wird.
@@ -610,6 +831,10 @@ Das Potenzial von KI, emotionale und empathische Dienstleistungen zu verbessern,
 
 6 Data Bias beschreibt Verzerrungen, die in den zugrunde liegenden Daten von KI-Systemen enthalten sind und sich auf die Ergebnisse und Entscheidungen solcher Systeme auswirken können. Diese Verzerrungen können beispielsweise durch unrepräsentative Datensätze, fehlerhafte Erhebungsmethoden oder gesellschaftliche Ungleichheiten entstehen, die in den Daten reflektiert werden (vgl. Goram 2024, o. S.). Besonders in der Sozialen Arbeit ist die kritische Prüfung auf Data Bias essenziell, um Diskriminierung zu vermeiden und Gerechtigkeit zu gewährleisten.
 
+
+<!-- PAGE 57 -->
+
+
 Die Rolle von KI in der Sozialen Arbeit führt zu einem Wandel der Rollenerwartungen und Aufgabenprofile. Durch die Unterstützung von KI bei administrativen Routineaufgaben können Zeitressourcen für klient:innenzentrierte Tätigkeiten freigesetzt werden (vgl. Jarrahi 2018, S. 577ff.). Dies könnte zu einer Neudefinition von Rollen in der Sozialen Arbeit führen, wobei die Notwendigkeit lebenslangen Lernens hervorzuheben ist, um mit technologischen Entwicklungen Schritt zu halten. Die Einführung von KI könnte jedoch auch die professionelle Identität beeinträchtigen und zu einer Entfremdung von den eigentlichen sozialarbeiterischen Aufgaben führen. Es ist daher von entscheidender Bedeutung, ein ausgewogenes Verhältnis zwischen der Nutzung von KI und der Aufrechterhaltung der Kernelemente der professionellen Identität zu finden (vgl. Wirtz et al. 2019, S. 696ff.). 7
 
 Die Soziale Arbeit hat sicherzustellen, dass ihre humanistischen und ethischen Grundlagen ebenso in der KI-Ära Bestand haben. Die formale Kodierung von Werten in KI-Systemen stellt eine technische Herausforderung dar, was es umso wichtiger macht, die Grundprinzipien der Sozialen Arbeit zu reflektieren (vgl. Gabriel 2020, S. 411ff.).
@@ -623,6 +848,10 @@ Durch den Einsatz von KI, Routinetätigkeiten zu automatisieren, könnten Sozial
 Die für die Soziale Arbeit als Grundlagentheorien disziplinär verankerte Subjektzentrierung und der systemische Ansatz bieten wichtige Perspektiven, um die
 
 7 Siehe hierzu auch den Beitrag von Löhe zur Einteilung von KI-Anwendungen nach Einsatzfeld in diesem Band.
+
+
+<!-- PAGE 58 -->
+
 
 komplexen Wechselwirkungen zwischen Mensch und Technologie in der Sozialen Arbeit zu reflektieren und zu verstehen. Die kritische Beleuchtung der Grenzen und Potenziale von KI in diesem Kontext erweitert das Verständnis über die Integration von Technologie in soziale Dienstleistungen.
 
@@ -641,6 +870,10 @@ Die fortschreitende Integration von KI in die Soziale Arbeit erfordert eine kont
 - Goram, Mandy (2024): Ethik und Recht in KI-Systemen: Herausforderungen und Lösungen. Informatik Aktuell. https://www.informatik-aktuell.de/betrieb/kuenstliche-intelligenz/ethik-undrecht-in-ki-systemen-herausforderungen-und-loesungen.html (Abfrage: 15.06.2025).
 - Huang, Ming-Hui/Rust, Roland T. (2018): Artificial intelligence in service. Journal of Service Research 21(2), S. 155-172. https://doi.org/10.1177/1094670517752459
 
+
+<!-- PAGE 59 -->
+
+
 - Jarrahi, Mohammad Hossein (2018): Artificial intelligence and the future of work: Human-AI symbiosis in organizational decision making. Business Horizons 61(4), S. 577-586.
 - Lambers, Helmut (2018): Theorien der Sozialen Arbeit: Ein Kompendium und Vergleich. Opladen und Toronto: Barbara Budrich (utb).
 - Long, Duri/Magerko, Brian (2020): What is AI Literacy? Competences and Design Considerations. Proceedings of the 2020 CHI conference on human factors in computing systems, ACM (2020). dl.acm.org/doi/10.1145/3313831.3376727
@@ -653,6 +886,10 @@ Die fortschreitende Integration von KI in die Soziale Arbeit erfordert eine kont
 - Röh, Dieter (2013): Soziale Arbeit, Gerechtigkeit und das gute Leben: Eine Handlungstheorie zur daseinsmächtigen Lebensführung. Wiesbaden: Springer.
 - Staub-Bernasconi, Silvia (2017): The problem with ,social problems' as domain of social work: A critical approach to the Melbourne ,global definition of social work' of 2014 and constructivist theories of social problems. In: European Journal of Social Work 20(6), S. 958-971.
 - Wirtz, Bernd W./Weyerer, Jan C./Geyer, Carolin (2019): Artificial intelligence and the public sector -applications and challenges. In: International Journal of Public Administration 42(7), S. 596-615. https://doi.org/10.1080/01900692.2018.1498103
+
+
+<!-- PAGE 60 -->
+
 
 ## KI und Theorie(bildung) Sozialer Arbeit 1
 
@@ -670,6 +907,10 @@ Um die Bedeutung von KI für Theorien Sozialer Arbeit zu entschlüsseln, lohnt s
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_005
 
+
+<!-- PAGE 61 -->
+
+
 ## 2 KI und die Handlungsebene Sozialer Arbeit
 
 Soziale Arbeit kann als Handlungswissenschaft betrachtet werden (vgl. StaubBernasconi 2018): Theorien der Sozialen Arbeit integrieren häufig Handlungsmethoden und Handlungsprinzipien, die es Praktiker:innen ermöglichen, ihr eigenes Handeln zu reflektieren. Gleichzeitig werden Zielund Wertvorgaben bereitgestellt. Mit Blick auf die Handlungsebene erscheint es naheliegend, dass KI-Systeme eine zunehmend bedeutende Rolle einnehmen. Denn zentrale Fragen betreffen den Einsatz von KI auf der Handlungsebene, etwa zur Früherkennung von Problemen im Kontext der Kindeswohlgefährdung (vgl. Burghardt et al. 2024), den Einsatz von KI im Verwaltungsbereich (vgl. Kreidenweis/Diepold 2024, S. 8) sowie den Einsatz von Chatbots in der Beratung (vgl. Linnemann/ Löhe/Rottkemper 2024).
@@ -684,6 +925,10 @@ Um die Auswirkungen der KI auf die Theorien der Sozialen Arbeit umfassend zu ver
 
 Den Kern der Sozialen Arbeit berührt KI insbesondere dann, wenn es um die Frage des Sozialen an sich geht. KI greift grundlegende Fragen des Mensch-seins auf und stellt diese teilweise infrage: Diskutiert wird eine Dehumanisierung (vgl. Singer 2019; vgl. Beiglböck et al. 2023; vgl. Schiffhauer/Remke 2024) der Menschen auf der einen und eine Anthropomorphisierung (vgl. Złotowski et al. 2018; vgl. Weyer 2022) der Technik auf der anderen Seite. Beide Prozesse verändern soziale Beziehungen grundlegend. Da soziale Beziehungen sowohl Gegenstand als auch Arbeitsweise der Sozialen Arbeit sind, können diese Prozesse nicht unbeachtet
 
+
+<!-- PAGE 62 -->
+
+
 bleiben, wenn KI im Kontext der Theorien der Sozialen Arbeit behandelt wird. Besonders relevant für die Soziale Arbeit ist hierbei die Rolle von KI und Robotern als soziale Akteure in der Gesellschaft. Gemäß der Media Equation Theory neigen Menschen dazu, Computer und andere Medien so zu behandeln, als handle es sich um Menschen. Insbesondere der Gebrauch von Sprache aktiviert soziale Kategorien (vgl. Nass/Brave 2005). Wie Linnemann, Löhe und Rottkemper (2023) in ihrem Beitrag zu Natural Language Processing eindrücklich darlegen, ist dies für die Soziale Arbeit von Bedeutung. Darüber hinaus wirkt sich die Humanisierung von Robotern auf unseren Umgang mit ihnen aus. Menschen sind bereit, Anweisungen von Robotern zu folgen und Verantwortung mit ihnen zu teilen (vgl. Onnasch et al. 2019, S. 37ff.).
 
 Aktuell verändert sich zudem die Art, mit welchen Zielen KI in einer kapitalistischen Gesellschaft eingesetzt wird. Die letzte Generation von KI-Systemen zielte darauf ab, Aufmerksamkeit zu binden ('race for attention'). Die aktuelle Generation hingegen ist darauf ausgerichtet, eine möglichst große Vertrautheit zwischen Mensch und Maschine herzustellen ('race for intimacy'). Sie sollen in Beziehung mit uns treten und Intimität aufbauen. Ein Beispiel hierfür ist die Anwendung My AI in Snapchat.
@@ -695,6 +940,10 @@ So lässt sich festhalten, dass im Bereich der sozialen Beziehungen mit und übe
 Der Abbau von Marginalisierungen und die Förderung von Autonomie und Selbstbestimmung gelten als zentrale Aufgaben der Sozialen Arbeit, um zur Herstellung sozialer Gerechtigkeit beizutragen. Diese Aufgaben werden sowohl in theoretischen Grundlagen der Sozialen Arbeit als auch in berufsethischen, internationalen Abkommen und anerkennungstheoretischen Ansätzen umrissen. KI stellt die Soziale Arbeit hier vor neue Herausforderungen: Big-Data-Analysen (mittels KI) und Scoring sorgen für gläserne Bürger:innen und können so marginalisierte Gruppen gefährden. Beschrieben werden hier beispielsweise negative Folgen für queere Menschen (vgl. Klipphahn et al. 2023).
 
 Doch nicht nur aktuelle Schutzbedürfnisse sind in den Fokus zu nehmen, wenn es um KI und Soziale Arbeit geht -die Soziale Arbeit muss sich angesichts der Entwicklungen auch mit zukünftigen Schutzbedürfnissen auseinandersetzen. KI-Systeme sind beispielsweise bereits in der Lage, aufgrund von Gehirnaktivitäten Gedanken zu reproduzieren (vgl. Takagi/Nishimoto 2022; vgl. Chen et al. 2023; vgl. Tang et al. 2023). Benötigen wir also angesichts dieser Technologien neue Rechte wie ein Recht darauf, dass Gedanken nicht gelesen werden,
+
+
+<!-- PAGE 63 -->
+
 
 und muss sich die Soziale Arbeit für diese einsetzen, um ihrem Auftrag, soziale Gerechtigkeit herzustellen, gerecht zu werden?
 
@@ -714,6 +963,10 @@ Sie sind Bestandteil moderner Gesellschaften und als solche werden sie als Folge
 
 Bei der Betrachtung dieser Merkmale in Bezug auf KI erfolgt eine Anmahnung von politischer Verantwortung in Bezug auf die KI-Entwicklung und Implementierung auf vielen Ebenen. Nicht nur netzpolitische und/oder zivilgesellschaftliche Stimmen von Akteuren wie netzpolitik.org oder der Gesellschaft für Freiheitsrechte e. V. kritisieren den Einsatz von KI zur Überwachung z.B. im Zusam-
 
+
+<!-- PAGE 64 -->
+
+
 menhang mit dem Polizeiaufgabengesetz in Bayern öffentlich. In der öffentlichen Diskussion taucht KI vor allem in Hinblick auf generative KI (siehe den Beitrag von Rottkemper in diesem Band) auf. Seit der Veröffentlichung von ChatGPT im November 2022 ist das Thema in der Presse allgegenwärtig.
 
 Als Vorläufer für spezielle öffentliche Institutionen zur Bearbeitung des Problems können diverse Ethikkommissionen zu diesem Thema gesehen werden. So gibt es lokale Kommissionen wie die Ethikkommission der TUM, deutschlandweite Einrichtungen wie den deutschen Ethikrat sowie länderübergreifende Einrichtungen wie die EUoder UNESCO-Ethikkommission, die sich mit KI beschäftigen. Zudem wurden bereits europäische Gesetze wie der AI Act (Verordnung (EU) 2024/1689) speziell zur Regulierung von KI verabschiedet.
@@ -727,6 +980,10 @@ Um den Einfluss von KI auf bereits vorhandene soziale Probleme zu verdeutlichen,
 - Algorithmische Diskriminierungen können auf verschiedene Art und Weise entstehen (vgl. Zweig 2019, S. 220). Deutlich werden die Folgen dieser Diskriminierungen z.B. in den Forschungen rund um das Thema Gender und KI. Spezielle Algorithmen erkennen weibliche Gesichter schlechter, übersetzen aus geschlechtsneutralen Sprachen in veraltete Rollenbilder (Ärzte sind dann in der Regel männlich) und diskriminieren Bewerbungen von Frauen negativ, wenn es um technische Berufe geht (vgl. Bengler 2024). Zudem kann KI helfen, Diskriminierungen zu erkennen und zu beseitigen.
 - In Bezug auf Armut kann die Ausbeutung von Clickworkern zum Training von KI (vgl. Laux/Stephany/Liefgreen 2023) und die Ausbeutung des Globalen Südens zur Ressourcengewinnung (um entsprechende Hardware
 
+
+<!-- PAGE 65 -->
+
+
 - überhaupt produzieren zu können, auf der KI läuft) genannt werden (vgl. Karlbauer 2023). Umgekehrt könnte KI dazu beitragen, neue Chancen in der Bekämpfung von Armut, z.B. durch verbessertes Ressourcenmanagement, zu ermöglichen.
 - In Bezug auf (digitale) Gewalt sind ebenfalls positive und negative Effekte von KI zu beobachten. KI kommt im militärischen Bereich zum Einsatz (wodurch beispielsweise die Zahl ziviler Opfer erhöht wird) und erhöht Risiken von Kindern und Jugendlichen im Netz, nun stärker durch sexualisierte Gewalt, Mobbing und Extremismus bedroht zu sein. Bei der Strafverfolgung und Früherkennung von Straftaten (Predictive Policing) kann KI jedoch auch hilfreich sein.
 
@@ -739,6 +996,10 @@ Angesichts der Wirkung von KI auf die Handlungsebene, den 'Kern der Sozialen Arb
 ## (I) KI als (neuer) Agent in der Gesellschaft
 
 In einer ersten Analyse werden KI-Systeme, die sich immer mehr in alltägliche Prozesse integrieren, als Agent und Handlungsträger betrachtet. Noch treten sie in der Regel als körperlose, häufig als generative KI in Erscheinung. Jedoch füh-
+
+
+<!-- PAGE 66 -->
+
 
 ren Fortschritte in der Robotik dazu, dass künftig vermehrt physisch präsente KI-Systeme in unserem Alltag zu erwarten sind. Die Forschung zeigt, dass Menschen sowohl körperlose als auch physisch präsente KI-Systeme als Handlungsträger wahrnehmen (Onnasch et al. 2019, S. 32ff.). Dabei werden dieselben etablierten Kategorien verwendet, die traditionell zur Einteilung der Umwelt in Tiere, Menschen und übernatürliche Wesen genutzt werden. Menschen tendieren dazu, KI-Systeme zu anthropomorphisieren, also sie wie Menschen zu betrachten und zu behandeln (vgl. Złotowski et al. 2018). Dies hat Auswirkungen, die über die bereits beschriebenen Wirkungen auf soziale Beziehungen hinausgehen.
 
@@ -761,6 +1022,10 @@ Im Folgenden werden diese Parallelen kurz beschrieben und die sich daraus ergebe
 
 Die Veränderung von Institutionen der Sozialen Arbeit ist angesichts der Digitalisierung bereits vielfältig beschrieben (Kutscher et al. 2020, S. 363ff.). Durch KI verändern sich zunächst insbesondere Verwaltungsstrukturen, aber auch Kern-
 
+
+<!-- PAGE 67 -->
+
+
 prozesse der Sozialen Arbeit wie die Risikoabschätzung (z. B. bei Kindeswohlgefährdung) oder die Beurteilung von Fällen (z. B. im Asylverfahren). Somit sind sowohl Strukturen als auch Aufgaben der Institutionen betroffen. Besonders relevant hierbei ist die Gefahr der Diskriminierung von marginalisierten Gruppen durch KI-Systeme. Die Soziale Arbeit muss dringend selbst an der Entwicklung der in ihrem Bereich eingesetzten Systeme beteiligt sein, um nicht ungewollt digitale Ungleichheiten zu verstärken, anstatt diese zu bekämpfen.
 
 ## (III) Sozialräume
@@ -772,6 +1037,10 @@ Digitale Räume sind als Sozialräume oder als Teil von Sozialräumen zu sehen (
 ## (IV) Beziehungsformen und Verhältnisse
 
 Beziehungsformen und gesellschaftliche Verhältnisse sind durch KI in vielfältiger Weise betroffen. Hier werden exemplarisch die Auswirkungen auf den Arbeitsmarkt und parasoziale Beziehungen herangezogen. Ebenso wie bei anderen Migrationsbewegungen ist durch KI eine Veränderung des Arbeitsmarkts zu bemerken. Substitutionsprozesse lassen auf der einen Seite Arbeitsplätze verschwinden, auf der anderen Seite entstehen neue Arbeitsmöglichkeiten (vgl. Lane/SaintMartin 2021). Dies erfordert von der Sozialen Arbeit zum einen das Auffangen und Betreuen von Personen, die durch diese Veränderungen vom Arbeitsmarkt freige-
+
+
+<!-- PAGE 68 -->
+
 
 setzt werden, zum anderen die Förderung von Kompetenzen, die notwendig sind, damit eine Chancengleichheit auf dem Arbeitsmarkt bestehen bleibt.
 
@@ -786,6 +1055,10 @@ Um diese Ängste zu mindern, wäre beispielsweise die Schaffung von Begegnungsr�
 ## (VI) Interkulturelle Kompetenz
 
 Eine weitere Parallele besteht in der Notwendigkeit von interkultureller Kompetenz. Wenn KI als Migration begriffen wird, begegnet uns mit dieser Migration auch eine eigene Kultur. Um in einer Kultur der Digitalität, wie sie Stalder 2016 beschreibt (vgl. Stalder 2016), zu interagieren, werden spezifische Kompetenzen benötigt. Diese Kultur wird durch KI-Systeme noch einmal verändert und ihre Wirkung verstärkt. Kommunikative Kompetenzen wie Prompting (zum Bedienen von KI) oder Kommunikationsstrategien im Kontext von humanoiden Robotern könnten so zu einem neuen Arbeitsfeld der Sozialen Arbeit werden.
+
+
+<!-- PAGE 69 -->
+
 
 ## (VII) Ethische und rechtliche Fragestellungen
 
@@ -804,6 +1077,10 @@ Diesen Ansatz verfolgen Forschungsprojekte wie KAIMo (vgl. Burghardt et al. 2024
 ## 2. KI als empirisches Tool zur (eigenen) Theorieentwicklung
 
 Die dritte Betrachtungsweise stellt einen gewagten Ausblick auf die Rolle von KI als empirisches Tool zur Theorieentwicklung in der Sozialen Arbeit dar. KI fügt sich als Tool in den Trend der zunehmenden Rolle von empirischer Forschung in der Wissensproduktion der Sozialen Arbeit ein. Eckl und Ghanem widmen sich in ihren Arbeiten Big-Data-Analysen in der Sozialen Arbeit (vgl.
+
+
+<!-- PAGE 70 -->
+
 
 Eckl/Ghanem 2020). Wird dieser Gedanke aufgegriffen und angesichts von KI weitergesponnen, könnte KI auch als Tool eingesetzt werden, um wiederum neue (Kleinst-)Theorien Sozialer Arbeit zu entwickeln.
 
@@ -824,6 +1101,10 @@ Die kurzen Darstellungen zeigen, dass es viele Ansätze gibt, KI im Kontext der 
 - Klipphahn, Michael/Koster, Ann-Kathrin/Santos Bruss, Sara Morais dos (Hrsg.) (2023): Queere KI: zum Coming-out smarter Maschinen. Bielefeld: transcript (= KI-Kritik 3).
 - Kreidenweis, Helmut/Diepold, Maria (2024): Studie Künstliche Intelligenz in der Sozialwirtschaft: Forschungsbericht. Eichstätt: Arbeitsstelle für Sozialinformatik. https://www.
 
+
+<!-- PAGE 71 -->
+
+
 - sozialinformatik.de/fileadmin/1805/pdf\_documents/Forschung\_und\_Entwicklung/Studie-KISozialwirtschaft-2024.pdf (Abfrage: 15.06.2025).
 - Kreissl, Reinhard/von Laufenberg, Roger (2024): Risiken und Gefahren der ,Künstlichen' ,Intelligenz'. In: Heinlein, Michael/Huchler, Norbert (Hrsg.): Künstliche Intelligenz, Mensch und Gesellschaft. Wiesbaden: Springer Fachmedien Wiesbaden, S. 225-261.
 - Kutscher, Nadia/Ley, Thomas/Seelmeyer, Udo/Siller, Friedrike/Tillmann, Angela/Zorn, Isabel (Hrsg.) (2020): Handbuch Soziale Arbeit und Digitalisierung. 1. Auflage. Weinheim: Beltz Juventa.
@@ -841,6 +1122,10 @@ Die kurzen Darstellungen zeigen, dass es viele Ansätze gibt, KI im Kontext der 
 - Schönig, Werner/Breuer, Marc/Gerards, Marion/Löwenstein, Heiko (2024): Wohin denkst Du? Aktuelle Perspektiven der Theorieentwicklung Sozialer Arbeit. In: Schönig, Werner/Breuer, Marc/ Gerards, Marion/Löwenstein, Heiko (Hrsg.): Transdisziplinäre Theorieentwicklung Sozialer Arbeit: Beiträge mit struktureller Perspektive in Zeiten gesellschaftlicher Krisen. Weinheim: Beltz Juventa, S. 7-20.
 - Selke, Stefan (2024): Zukunftseuphorie als Trost. Verheißungserzählungen über Künstliche Intelligenz im Kontext gesellschaftlicher Erschöpfungsdiagnosen. In: Heinlein, Michael/Huchler,
 
+
+<!-- PAGE 72 -->
+
+
 - Norbert (Hrsg.): Künstliche Intelligenz, Mensch und Gesellschaft. Wiesbaden: Springer Fachmedien Wiesbaden, S. 289-317.
 - Singer, Tassilo (2019): Dehumanisierung der Kriegführung: Herausforderungen für das Völkerrecht und die Frage nach der Notwendigkeit menschlicher Kontrolle. Berlin und Heidelberg: Springer Berlin Heidelberg.
 - Stalder, Felix (2016): Kultur der Digitalität. 1. Auflage, Originalausgabe. Berlin: Suhrkamp.
@@ -850,6 +1135,10 @@ Die kurzen Darstellungen zeigen, dass es viele Ansätze gibt, KI im Kontext der 
 - Weyer, Johannes (2022): Vermenschlichung der Technik? Die Interaktion von Menschen und künstlicher Intelligenz in alltäglichen Kontexten. TU Dortmund: Soziologisches Arbeitspapier 60/2022. https://eldorado.tu-dortmund.de/server/api/core/bitstreams/1318af11-d81a42ea-8963-2689583ce2f9/content (Abfrage: 15.06.2025).
 - Złotowski, Jakub/Sumioka, Hidenobu/Eyssel, Friederike/Nishio, Shuichi/Bartneck, Christoph/ Ishiguro, Hiroshi (2018): Model of Dual Anthropomorphism: The Relationship Between the Media Equation Effect and Implicit Anthropomorphism. In: International Journal of Social Robotics 10, S. 701-714.
 - Zweig, Katharina A. (2019): Ein Algorithmus hat kein Taktgefühl: Wo künstliche Intelligenz sich irrt, warum uns das betrifft und was wir dagegen tun können. Originalausgabe. München: Heyne.
+
+
+<!-- PAGE 73 -->
+
 
 ## Künstliche Intelligenz und Ethik -der verantwortliche Umgang mit einer neuen Technik 1
 
@@ -865,6 +1154,10 @@ Innovative Neuerungen, die sich auf das gesellschaftliche und berufliche Leben a
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_006
 
+
+<!-- PAGE 74 -->
+
+
 tung relevanten normativ-ethischen Aspekten intensiv auseinandersetzen.' (Battagilla/Mukerji 2015, S. 290).
 
 Der Beitrag 'Künstliche Intelligenz und Ethik' beginnt mit einer sprachphilosophischen Einführung und nimmt die Analogien Mensch und Maschine kritisch in den Blick. Das Moralische im Umgang mit der Künstlichen Intelligenz (KI) als das in bestimmten Kontexten Gelebte, wird dargestellt, bevor dies ethisch analysiert und bewertet wird. Zum Schluss findet ein konstruktiver Vorschlag zum Umgang mit KI-Systemen aus verantwortungsethischer Sicht statt.
@@ -874,6 +1167,10 @@ Der Beitrag 'Künstliche Intelligenz und Ethik' beginnt mit einer sprachphilosop
 Die Sprachphilosophie ist eine Disziplin der Philosophie, die sich mit Sprache und Bedeutung beschäftigt, vor allem mit dem Verhältnis von Sprache und Wirklichkeit sowie dem Verhältnis von Sprache und Bewusstsein bzw. dem Denken (vgl. Willaschek 1995, S. 164-174). Sprachphilosophisch beinhaltet die Wortkombination 'künstliche Intelligenz' zwei wesentliche Bestimmungen: (a) mit 'künstlich' wird ein nicht menschlicher, sondern technisch konstruierter Vorgang der Datenverarbeitung zum Ausdruck gebracht, der (b) über einen programmierten Vorgang eine Problemlösungsfähigkeit vollzieht, die als Intelligenz bezeichnet wird, aber in Wirklichkeit ein mechanistisches Geschehen darstellt. Faktisch werden durch technische Algorithmen, unabhängig von Menschen, Produkte (wie beispielsweise Text, Bilder, Video, praktisches Vorgehen [autonomes Fahren]) erzeugt. Insofern wird mit dem Begriffspaar 'künstliche Intelligenz' eine Metapher geschaffen, die ein nicht existierendes Verhältnis zwischen Maschine und Mensch herstellt. Analog und wechselseitig umgekehrt wird beispielweise das Kurzzeitgedächtnis des Menschen mit einem Arbeitsspeicher und das Langzeitgedächtnis mit der Festplatte eines Computers verglichen, oder die Arbeitsweise von KI wird mit dem neuronalen Netzwerk eines Menschen sprachlich ins Bild gesetzt. Diese sprachmedialen Analogien oder Metaphern erleichtern und verfälschen das Verstehen. Nach Wittgenstein werden hier Sprachhandlungen vollzogen, die wechselseitig unterschiedliche Dinge und Vorgänge miteinander in Verbindung bringen, um ein besseres Verstehen und Verständnis zu erreichen (vgl. Wittgenstein 2001, §26; Savigny 1995, S. 75-90) -ein Sprachspiel der Komplexitätsreduktion mit einer faktischen Unvergleichbarkeit. Mensch und Maschine sind radikal anders (siehe Tabelle 1).
 
 Die irreführende Sprache, die unserem Verstand eine nicht zutreffende Wirklichkeit vorgaukelt, als ob Maschinen wie Menschen intentional eingestellt, reflexiv und mit einer eigenen Bewusstheit und Wertgebundenheit operieren könn-
+
+
+<!-- PAGE 75 -->
+
 
 Tabelle 1: Mensch und Maschine
 
@@ -895,6 +1192,10 @@ Der Begriff des Moralisch-seins kann in drei Varianten in Erscheinung treten:
 - b) Ich handle moralisch, wenn ich meinen eigenen Werten, Normen, Prinzipien folge.
 - c) Ich handle moralisch, wenn ich von einer anderen Person erwarte, dass sie bestimmte Verhaltensnormen einhalten soll.
 
+
+<!-- PAGE 76 -->
+
+
 Während sich (a) und (c) auf Moral beziehen, also auf die ungeschriebenen und geschriebenen Regelwerke des Miteinanders in kontextualisierten Lebensbereichen, stellt (b) den Bereich der Moralität eines Menschen mit seinen Wertund Sinnbezügen dar. Diese skizzierte Differenzierung soll verdeutlichen, dass -wird vom 'Moralisch-sein' gesprochen -der Blick entweder auf die Moral, die Regelwerke des Miteinanders, oder auf die Art und Weise der individuellen Bewertung und Positionierung (Moralität) gerichtet wird. An einem kleinen Beispiel kann dieser Zusammenhang demonstriert werden: Eine Person, die gerne sauniert (ein innerer Wert -Moralität [b]) und die Saunaregeln als richtig, wichtig und einhaltungspflichtig ansieht (Moral [a]), verhält sich entsprechend den Regeln. Ihre Moralität entspricht der Moral und sie verhält sich moralisch. Spricht diese Person eine andere Person darauf an, dass sie doch bitte die Saunaregel befolgen solle, dann ist sie moralisch, weil sie von einer anderen Person ein bestimmtes Verhalten einfordert (vgl. Heffels/Storm 2021, S. 41-65).
 
 In jedem Lebensbereich, in dem Menschen miteinander kooperieren -in der Schule, am Arbeitsplatz, im Straßenverkehr, in der Familie, beim Einkaufen usw. -gibt es Regeln, die das Miteinander betreffen, um ein störungsfreies Miteinander zu ermöglichen. Neuerungen verändern die Regelwerke des Miteinanders, z.B. die Etablierung von Radwegen oder die Verwendung von Smartphones. Diese Veränderungen führen zum sogenannten Wertewandel (vgl. Koch 2011), d.h., die Moralität von Menschen kann sich durch neue Möglichkeiten und einer sich damit modifizierenden Moral verändern. In demokratischen Gesellschaften besteht eine Pluralität der Werthaltungen mit einer gewünschten Moralbildung der Toleranz. So ist das Telefonieren in einem Bahnabteil zu tolerieren, wenn es nicht im Ruhebereich stattfindet.
@@ -904,6 +1205,10 @@ In der Konkretisierung der moralischen Dimension der Anwendung von Maschinen, di
 ## Das erste Beispiel: KI-unterstützte Entscheidungsfindung zur Früherkennung einer Kindeswohlgefährdung
 
 Ein Forscherteam aus drei Hochschulen führte das KAIMo-Projekt ('Kann ein Algorithmus moralisch kalkulieren?', Burghardt 2024) durch: Zentral geht es darum, ob ein KI-gestütztes Verfahren die Arbeit von Sozialarbeiter:innen zur Erkennung einer Kindeswohlgefährdung (Konflikt zwischen dem Wohl des Kindes und der Freiheit der Erziehung durch die Eltern) erleichtern kann. Im Projekt wurde ein Tool entwickelt, mithilfe dessen Sozialarbeiter:innen reale Verdachtsfälle daraufhin untersuchen können, ob eine Kindeswohlgefährdung vorliegt. 'Die Fach-
+
+
+<!-- PAGE 77 -->
+
 
 kräfte erhielten die Möglichkeit, die Beratung eigenständig mit Unterstützung der KI-Assistenz durchzuführen. Ziel war, die gemeinsame Einschätzung des Gefährdungsrisikos für das im Fall benannte Kind' (ebd., S. 305) durchzuführen. Im Ergebnis beschrieben die Fachkräfte, dass das Tool 'ein sehr gutes Werkzeug [ist], um die eigenen Gedanken zu sortieren und komplexe Zusammenhänge gut zusammenzufassen […] Aber auch die hinweisspezifischen Plausibilitätsprüfungen und Folgenabschätzungen wurden als unterstützend für den Diskussionsprozess beschrieben' (ebd.).
 
@@ -920,6 +1225,10 @@ Der ambulante Pflegesektor ist ein politisch gewollter Innovationsbereich der KI
 Erstens: 'Die KI-Projekte, die aus wettbewerbsbasierten Förderlogik entstehen, sind nur auf die Erprobung ausgerichtet und nicht auf eine nachhaltige Realisierung im pflegerischen Alltag -was neben einsatzbereiter Technik weiterreichende Transformationen im Alltag erfordern würde' […] Zweitens führt die Zerlegung von Pflegepraktiken in Tasks zu einer Dekontextualisierung der ursprünglichen, natürlichen (Pflege)Situation […] die zunächst einmal der Technikgenese dient und (noch) nicht der avisierten Einsatzsituation' (ebd., S. 12f.).
 
 Die Beachtung des Feldes mit seiner pflegerischen Handlungslogik und seinen spezifischen Eigenarten ist für die Autoren die Conditio sine qua non (notwendige Bedingung) für die Entwicklung und Implementierung neuer Technologie im Handlungsfeld Pflege. Der:die zu Pflegende, die Anund Zugehörigen und die
+
+
+<!-- PAGE 78 -->
+
 
 Pflegefachpersonen müssen einen Benefit wahrnehmen, damit KI-Systeme Anwendung finden (vgl. ebd., S. 16f., 19).
 
@@ -940,6 +1249,10 @@ Die Einführung von KI-Systemen in Organisationen verändert das moralische Mite
 
 Die Ethik ist eine Wissenschaft, die sich mit dem Gegenstand der Moral und der Moralität beschäftigt. Moralen beinhalten Ideologien als orientierungsgebende Sinnbilder und Normen, die das Zusammenleben in einer Gruppe und die Art und Weise, wie Gruppen miteinander umgehen, bestimmen. Dieses Miteinander ba-
 
+
+<!-- PAGE 79 -->
+
+
 siert auf gelebten und geschriebenen (beispielsweise Gesetze, Verfahrensanweisungen, Ordnungen) und gelebten und ungeschriebenen (beispielsweise Konventionen, Sitten, Gewohnheiten) Regeln des Miteinanders. Die Moralität hingegen bezieht sich auf den einzelnen Menschen mit seinen Wertund Normsetzungen (Einstellungen, Haltungen, Prinzipien) sowie seinen Orientierungen. Die Disziplin Ethik beinhaltet drei Bereiche:
 
 - a) Die Metaethik ist eine Teildisziplin der Ethik, die sich mit den ethischen Aussagen der ethischen Theorien auseinandersetzt. So beschäftigt sie sich z.B. mit folgenden Fragen: Was ist ethisch richtig oder falsch? Wie kommen die einzelnen ethischen Theorien zu gerechten Entscheidungen? Oder gibt es objektive Werte? Welche Wechselwirkung besteht zwischen Sprache und Denken? (Worüber sprechen wir, wenn wir von 'Künstlicher Intelligenz' reden?)
@@ -949,6 +1262,10 @@ siert auf gelebten und geschriebenen (beispielsweise Gesetze, Verfahrensanweisun
 Das 'Ethische' nimmt Bezug auf die Ethik, also im Bild gesprochen, auf etwas, das oberhalb der Moral und Moralität liegt. Es übersteigt durch Reflexion das moralisch Vorhandene und bezieht sich auf ethische Aussagen. Was heißt und bedeutet das konkret für den Umgang mit KI-Systemen?
 
 So ist jeder Mensch beispielsweise verpflichtet, Hilfe zu leisten, wenn andere Menschen in Not geraten sind. Diese Norm kann moralisch u.a. mit der 'goldenen Regel' beantwortet oder auf eine gesetzliche Bestimmung zurückgeführt werden. Da der Mensch einzigartig und schützenswert ist, er Würde hat, ist die
+
+
+<!-- PAGE 80 -->
+
 
 Unterstützung eines hilfebedürftigen Menschen eine (moralische) Pflicht, die das (Über-)Leben sichert. Diese oberste Pflicht wird durch eine weitere Pflicht, den respektvollen Umgang im sozialen Miteinander, ergänzt.
 
@@ -975,6 +1292,10 @@ Damit ist gemeint, dass der Zweck, also das, was angestrebt wird, einer grundsä
 
 Hans Jonas hat diese von Kant erstellte Reich-der-Zwecke-Formel mit einer neuen Dimension erweitert. Er greift die Problematik des technologischen Fortschritts
 
+
+<!-- PAGE 81 -->
+
+
 mit einem erweiterten ethischen Lösungsansatz unter dem Titel 'Prinzip Verantwortung' (1979) auf. Seine Ausgangspositionen, die ihn bewegten, waren, (a) dass durch die neuen Technologien auch nachfolgende Generationen betroffen sind, (b) die Folgen der Eingriffe ungewiss und nicht gänzlich kalkulierbar sind und (c) eine Revisionsmöglichkeit, wenn überhaupt, nur eingeschränkt vorliegt. Jonas formulierte einen erweiterten Kategorischen Imperativ der Reich-der-ZweckFormel: 'Handle so, dass die Wirkungen deiner Handlung verträglich sind mit der Permanenz echten menschlichen Lebens auf Erden', oder negativ ausgedrückt: 'Handle so, dass die Wirkung deiner Handlungen nicht zerstörerisch sind für die zukünftigen Möglichkeiten solchen Lebens (Jonas 1979, S. 26)
 
 Jonas erweitert mit diesem Imperativ zum einen den Blick vom Zweck, als positive Umschreibung, hin zu den Gefahren und den Risiken, die mit neuen Technologien verbunden sind. Zum anderen führt er das kritische Denken als treibende Kraft ein, indem er von der Notwendigkeit einer 'heuristischen Furcht' spricht. Das heißt: nicht Technikgläubigkeit, dem jeweils Neuen hinterherzulaufen, sondern zum Schutz von Menschheit und Umwelt eine kritische Einstellung einzunehmen, das Neue auf seine Risiken hin zu bewerten. Die ethische Beurteilung neuer Technologien bedarf auch einer 'Heuristik der Furcht', das ist, ein Erkennen-Wollen von Gefahren und Risiken und nicht nur der Nutzen oder Kosten.
@@ -986,6 +1307,10 @@ Konkret, auch unter Berücksichtigung der aufgeführten Praxisbeispiele und ohne
 - Präzisionsfunktion: Maschinen können zur Ausführung von Verrichtungen so programmiert werden, dass sie exakte und sorgfältige Wiederholbarkeit im Verfahren produzieren, Ungenauigkeiten vermieden und Menschen unterstützt werden (beispielsweise computerunterstützte medizinische Eingriffe).
 - Diskursund Entscheidungsgrundlage-Funktion: Mitarbeitende können die Ergebnisse der programmierten Maschinen nutzen, um ihre Entscheidungen zu treffen oder kollaborative Entscheidungsverfahren durchzuführen (vgl. Kindeswohlgefährdung).
 - Bildungsfunktion: Die 'neue Technik' kann auch als Medium in doppelter Hinsicht genutzt werden, (a) um sich mit dem Gegenstand dieser Technik auseinanderzusetzen und (b) um einen kritischen und weiten Blick im Umgang
+
+
+<!-- PAGE 82 -->
+
 
 mit dieser Technik zu entwickeln. Die von Adorno (1959, S. 93-121) beschriebene Halbbildung -d.h. nur die Vermittlung von Fähigkeiten im Umgang mit dieser neuen Technik -gilt es durch die Erweiterung des Gegenstands der gesellschaftlichen, sozialen und historischen Bedeutung sowie durch eine Auseinandersetzung mit epochalen Ereignissen der Technikrevolution (Klafki 1996, S. 43-81) zu vermeiden (Galla 2024, S. 161-187).
 
@@ -1001,6 +1326,10 @@ Insofern lassen sich zwei Bereiche, ein allgemeiner Bereich (1) und ein kontextu
 - 9) Verantwortung: Entwickler und Ingenieure von fortgeschrittenen KIs haben sowohl die Gelegenheit als auch die Verantwortung, die moralischen Folgen von Gebrauch, Missbrauch und eigenständiger Handlungen dieser Systeme mitzubestimmen.
 - 10) Wertausrichtung: Stark autonome KI-Systeme sollten so entwickelt werden, dass ihre Ziele und Verhaltensweisen während des Betriebs unter fester Gewissheit auf menschliche Werte ausgerichtet sind.
 
+
+<!-- PAGE 83 -->
+
+
 - 11) Menschliche Werte: KI-Systeme sollten so entwickelt und bedient werden, dass sie mit den Idealen der Menschenwürde, Menschenrechten, Freiheiten und kultureller Vielfalt kompatibel sind.
 - 12) Privatsphäre: Im Hinblick auf die Fähigkeit von KIs, Daten zu analysieren und weiterzuverarbeiten, sollten Menschen das Recht haben, Zugriff auf ihre generierten Daten zu haben und in der Lage sein, sie zu verwalten und zu kontrollieren.
 - 13) Freiheit und Privatheit: Die Anwendung von KIs auf persönliche Daten darf die tatsächlichen oder wahrgenommenen Freiheiten der Menschen nicht auf unangemessene Weise einschränken.
@@ -1014,6 +1343,10 @@ Insofern lassen sich zwei Bereiche, ein allgemeiner Bereich (1) und ein kontextu
 - Bei der Entwicklung und Verwendung von KI-Systemen sollen über die bestehenden Rechtspflichten Dokumentationspflichten eingefordert werden.
 - Die Notwendigkeit einer reflexiven Plausibilitätsprüfung der jeweiligen Verfahren und Ergebnisse von KI-Systemen soll eingeführt werden.
 - KI-Anwendungen bedürfen einer Integration in die klinische Ausbildung des ärztlichen Fachpersonals.
+
+
+<!-- PAGE 84 -->
+
 
 - Die verstärkte Nutzung von KI-Komponenten in der Versorgung darf nicht zu einer weiteren Abwertung des kommunikativen Miteinanders zwischen Patient:in und Ärzt:in oder einem Abbau von Personal führen.
 
@@ -1033,6 +1366,10 @@ Zusammenfassend für alle Bereiche kommt der Deutsche Ethikrat u.a. zu folgenden
 
 Auffällig hierbei ist, dass der Deutsche Ethikrat eine 'Nicht-Fisch-und-nichtFleisch-Position' eingenommen hat, indem er überwiegend allgemein und nur ansatzweise und rudimentär kontextbezogen argumentiert. Möglicherweise liegt hier der Versuch vor, trotz Kontextualisierungsversuch eine allgemeine und universelle Moral für KI ethisch anzuregen. Dieses Vorhaben kann bei einer
 
+
+<!-- PAGE 85 -->
+
+
 weltweit agierenden Technologie in pluralistischen Gesellschaften mit einer Vielzahl an speziellen Möglichkeiten von KI nicht hinreichend erfolgreich über eine werteethische Normbestimmung funktionieren, werden doch die jeweiligen spezifischen und signifikanten Fragen nicht adäquat einer Antwort zugeführt.
 
 ## Welche Bedeutung könnte der Verantwortungsethik zur Steuerung im Bereich der KI-Technik zukommen?
@@ -1044,6 +1381,10 @@ Aus verantwortungsethischer Sicht können zwei unterschiedliche Ebenen unterschi
 (1) Die gesellschaftliche Ebene umfasst neben dem Politsystem auch das Wissenschaftssystem, in dem die neuen Technologien entwickelt und konstruiert werden. Das Politsystem fördert diese Entwicklungen, und zugleich sind Regelwerke (Gesetze/Verordnungen) -zum Schutz der Bevölkerung -zu verabschieden. Die Europäische Union hat ein KI-Gesetz nach einer Risikobewertung erlassen (vgl. EU-KI 2024; siehe dazu den Beitrag von Dötterl in diesem Band). Der Kerngedanke dieses Gesetzes ist, 'eine vertrauenswürdige KI in Europa und darüber hinaus zu fördern, indem sichergestellt wird, dass KI-Systeme die Grundrechte, die Sicherheit und die ethischen Grundsätze achten, und indem die Risiken sehr leistungsfähiger und wirkungsvoller KI-Modelle angegangen werden'. In der Risikoeinschätzung unterteilt die EU vier Risikobereiche: Verbot, hoher Regelungsbedarf, mittlerer Regelungsbedarf und minimaler Regelungsbedarf.
 
 (2) Neben diesen Regelwerken sind kooperative Verantwortungszuschreibungen zwischen Hersteller:innen, Anwender:innen und Instandhalter:innen notwendig. Faktisch besteht ein konkreter Handlungsbedarf darin, die unterschiedlichsten KI-Anwendungen in ihren jeweiligen Sektoren so zu gestalten, dass die kooperativ zu gestaltenden Verantwortlichkeiten definiert und bestimmt werden, um die Gefahren und Risiken (vgl. Nida-Rümelin 1994, S. 809; Meckel/Steinacker 2024,
+
+
+<!-- PAGE 86 -->
+
 
 S. 319-340) zu minimieren und Verantwortlichkeiten zu klären. Wer trägt welche Verantwortung und in welchem Umfange? Sind es diejenigen,
 
@@ -1061,6 +1402,10 @@ Auf der Handlungsebene ist das einzelne Subjekt im Umgang mit der KI gefordert, 
 'Urteilskraft überhaupt ist das Vermögen, das Besondere als enthalten unter dem Allgemeinen zu denken. Ist das Allgemeine (die Regel, das Prinzip, das Gesetz) gegeben, so ist die Urteilskraft, welche das Besondere darunter subsumiert, […] bestimmend. Ist aber nur das Besondere gegeben, wozu sie das Allgemeine finden soll, so ist die Urteilskraft bloß reflektierend.' (Kant 1790, S. 87)
 
 Das bestimmende Urteil ist ein Entscheiden nach bestimmten Regelwerken, während das reflexive Urteil die Einzelfaktoren, das Spezifische eines Falls in die Urteilsfindung miteinbezieht. Nicht zuletzt ist das Rechtssystem mit der Richterfunktion genau wegen der Reflexivität des Einzelfalls so konstruiert, wie es heute ist (vgl. Rosenmüller 2005, S. 1-14). Während die bestimmenden Urteile von KI-Systemen erfüllt werden können, stellen die reflexiven Urteile aufgrund ihrer vielschichtigen Bewertungsmöglichkeiten das KI-System mindestens vor technische Schwierigkeiten. Insofern kann zunächst festgestellt werden, dass KI-Systeme eine Herstellungstechnik (Poiesis) ohne mitmenschliche Praxis sind. Die leibhaftige mitmenschliche Begegnung innerhalb einer Nutzersituation fehlt, selbst
+
+
+<!-- PAGE 87 -->
+
 
 dann, wenn der Nutzer eine diesbezügliche Attribuierung vornimmt (siehe den Beitrag von Linnemann in diesem Band; vgl. Ebert 1976, S. 12-30). Hier stellt sich erneut die Frage: Wie kann das Verhältnis zwischen Menschen und Maschinen sozial verträglich und verantwortungsvoll gestalten werden?
 
@@ -1080,6 +1425,10 @@ Adorno, Theodor W.: Theorie der Halbbildung (1959). In: Gesammelte Schriften, Ba
 Asilomar-Konferenz (2017): futureoflife.org/open-letter/ai-principles-german/(Abfrage: 15.06.2025).
 
 Burghardt, Jennifer/Lehmann, Robert/Reder, Michael/Koska, Christopher/Kraus, Maximilian/ Müller, Nicholas (2024): Kann Künstliche Intelligenz sozialarbeiterische Entscheidungsprozesse unterstützen? In: unsere jugend 76(7/8), S. 300-310.
+
+
+<!-- PAGE 88 -->
+
 
 - Battagilla, Fiorella/Mukerji, Nikil (2015): Technikethik. In: Nida-Rümelin, Julian/Spiegel, Irina/ Tiedemann, Markus (Hrsg.): Handbuch Philosophie und Ethik, Bd. 2. Paderborn: Schöningh, S. 288-295.
 - Brödner, Peter (2019): Grenzen und Widersprüche der Entwicklung und Anwendung 'Autonomer Systeme'. In: Hirsch-Kreinsen, Hartmut/Karačić, Anemari (Hrsg.) Autonome Systeme und Arbeit. Perspektiven, Herausforderungen und Grenzen der Künstlichen Intelligenz in der Arbeitswelt. Bielefeld: transcript, S. 69-97.
@@ -1104,6 +1453,10 @@ Burghardt, Jennifer/Lehmann, Robert/Reder, Michael/Koska, Christopher/Kraus, Max
 - Maibaum, Arne/Bischof, Andreas/Hergesell, Jannis (2023): Wie kommt die KI in die Pflege? -oder umgekehrt? Drei Probleme bei der Technikgenese von Pflegetechnologien und ein Gegenvorschlag. In: Pflege &amp; Gesellschaft 28(1), S. 7-23.
 - Ministerium für Schule und Bildung des Landes Nordrhein-Westfalen (2023): Umgang mit textgenerierenden KI-Systemen. Düsseldorf.
 
+
+<!-- PAGE 89 -->
+
+
 - Neumaier, Otto (1994): Was hat 'Künstliche Intelligenz' mit Ethik zu tun? In: Conceptus. Zeitschrift für Philosophie 27(70), S. 41-76.
 - Richter, Philipp (2012): Was gebieten Ratschläge? Zur Unterscheidung technischer und pragmatischer Imperative bei Kant. In: Fischer, Peter/Luckner, Andreas/Ramming, Ulrike (Hrsg.): Die Reflexion des Möglichen. Berlin und Münster: Lit, S. 113-125.
 - Rosenmüller, Stefanie (2005): Treffen sich Akteur und Zuschauer? Zur Rolle des Richters in Hannah Arendts Urteilstheorie. https://www.hannaharendt.net/index.php/han/article/view/83/131 (Abfrage: 15.06.2025), S. 1-14.
@@ -1112,6 +1465,10 @@ Burghardt, Jennifer/Lehmann, Robert/Reder, Michael/Koska, Christopher/Kraus, Max
 - Savigny, Eike von (1995): Bedeutung, Sprachspiel, Lebensform. Wittgenstein-Studien 2 (2).
 - Wilaschek, Marcus (1995): Sprachphilosophie. In: Gniffke, Franz/Herold, Norbert (Hrsg.): Philosophie. Münster: Lit, S. 157-177.
 - Wittgenstein, Ludwig (2001): Philosophische Untersuchungen (hrsg. von Joachim Schulte). Frankfurt a.M.: Suhrkamp.
+
+
+<!-- PAGE 90 -->
+
 
 ## KI in der Kinderund Jugendhilfe 1
 
@@ -1129,11 +1486,19 @@ Mit dem vorliegenden Beitrag werden zwei zentrale Ziele verfolgt: Zum einen wird
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_007
 
+
+<!-- PAGE 91 -->
+
+
 ## 2 Anwendungsoptionen von KI in der Kinderund Jugendhilfe
 
 Der gezielte und systematische Einsatz von Künstlicher Intelligenz (KI) ist in der Kinderund Jugendhilfe bislang (Stand September 2024) noch nicht üblich. Angesichts der zu erwartenden tiefgreifenden Veränderungen im Aufwachsen junger Menschen durch KI liegt es in der Verantwortung der Kinderund Jugendhilfe, sich frühzeitig mit den KI-bedingten Herausforderungen und Gestaltungsmöglichkeiten in der Arbeit mit Kindern und Jugendlichen zu befassen. Ziel dabei ist es, eine ähnliche Hilflosigkeit wie im Umgang mit Sozialen Medien zu vermeiden. Die wenigen bereits vorliegenden Erfahrungen und Projekte (siehe Macsenaere 2025) geben Aufschluss darüber, welche Formen der Nutzung von KI im Bereich der Kinderund Jugendhilfe kurzund mittelfristig zu erwarten sind. Dies betrifft verschiedene Anwendungsfelder wie Kinderschutz, Beratung und Coaching/Mentoring, sozialpädagogische Diagnostik und (Hilfe-)Planung, Partizipation und Beschwerdemanagement, Qualitätsentwicklung, Wissensmanagement und Forschung. Unabhängig von den nachfolgend kursorisch dargestellten Anwendungsbereichen ist es von zentraler Bedeutung, dass KI in pädagogischen Prozessen nicht isoliert eingesetzt wird, sondern als Teil eines integrativen Ansatzes betrachtet wird, der Fachkräfte in ihrer Expertise unterstützt und nicht ersetzt. Eine nachhaltige Nutzung von KI in pädagogischen Kontexten erfordert daher integrative Ansätze, die auf die jeweiligen Einsatzbereiche zugeschnitten sind und systematisch geplant, getestet, implementiert und weiterentwickelt werden (siehe 'Implementierung von KI in der Kinderund Jugendhilfe' weiter unten in diesem Beitrag). Hier folgt eine Auswahl von sich abzeichnenden Einsatz-Optionen von KI in der Kinderund Jugendhilfe:
 
 Diagnostik : Eine Kernkompetenz von KI-Modellen entspricht genau der Anforderung an eine gute Diagnosestellung: auf einer möglichst differenzierten und validen Informationsbzw. Datengrundlage spezifische Muster zu erkennen und daraus eine zusammenführende Beurteilung vorzunehmen. In diesem Sinne wurde in der Medizin in den letzten fünf Jahren die Eignung von KI in der Diagnostik untersucht -mit durchaus ermutigenden Ergebnissen: Studien hierzu zeigen, dass KI nicht nur die Genauigkeit von Diagnosen erhöht, sondern auch den Arbeitsaufwand von Fachkräften reduzieren und die Effizienz im Gesundheitswesen steigern kann. Sie belegen jedoch zugleich, dass menschliche Fachkenntnis -insbesondere in komplexen Fällen -weiterhin eine wichtige Rolle bei der Validierung von KI-generierten Ergebnissen spielt (siehe beispielsweise Al-Antari 2023; Kumar et al. 2023; Mirbabaie/Stieglitz/Frick 2021). In Anbetracht dieser Befundlage ist auch im Bereich der Kinderund Jugendhilfe mittelfristig eine KI-Erprobung zu erwarten.
+
+
+<!-- PAGE 92 -->
+
 
 Verbesserung der Indikationsgüte : Eine wichtige Aufgabe des Jugendamtes ist die Sicherstellung einer hohen Indikationsgüte, also die Identifizierung und Gewährung geeigneter Hilfen im Einzelfall (Arnold 2014). Mehrere Studien zeigen, dass dies zwar in über 60% der Fälle gelingt, dass in gut 25% der Fälle jedoch eine kontraindizierte Hilfe gewählt wird (Macsenaere/Paries/Arnold 2009; Macsenaere/Esser 2015; Schmidt et al. 2003). Hier ist zu erwarten, dass in den nächsten drei Jahren KI-Systeme unterstützend zum Einsatz kommen werden, die auf Grundlage großer Datenmengen aus abgeschlossenen Hilfeverläufen rückmelden, welche Hilfearten und -settings die besten Erfolgsaussichten im jeweiligen Einzelfall aufweisen.
 
@@ -1145,17 +1510,29 @@ Risikoerkennung : Auf Grundlage der sogenannten Predictive Analytics können vor
 
 Multimodale Dokumentation : Ein aktueller Trend in der KI-Entwicklung betrifft die sogenannte Multimodalität. Damit ist gemeint, dass der Input für das KI-System nicht nur aus klassischen Textformaten bestehen muss, sondern dass alle denkbaren Quellen einfließen können. Dies macht die KI-Nutzung durch Fachkräfte der Kinderund Jugendhilfe merklich alltagstauglicher. Die Multimodalität betrifft nicht nur den Input für die KI, sondern auch ihren Output, der damit adressat:innengerecht individualisiert gestaltet werden kann. Dies gilt eben-
 
+
+<!-- PAGE 93 -->
+
+
 so für die Outputmedien wie etwa getextete Protokolle, Präsentationen, Tabellenkalkulationen oder Inhalte, die per Stimmgenerator übermittelt werden. FeistOrtmanns/Sauer/Brinkmann (2025) geben Hinweise zur Formung einer solchen KI-Unterstützung im Kinderschutz.
 
 Entscheidungsunterstützung : Aktuell wird die Rolle von KI bei der Unterstützung von Entscheidungen in der Kinderund Jugendhilfe ausgelotet (vgl. FeistOrtmanns/Sauer/Brinkmann 2025; Lehmann/Burghardt 2025). Insbesondere in Kinderschutzverfahren müssen häufig unter Zeitdruck weitreichende Entscheidungen getroffen werden, oft auf der Grundlage einer unsicheren oder mehrdeutigen Informationslage (Culmsee/Gutmann 2021). Hier kann ein KI-basiertes Assistenzsystem helfen, indem es strukturierte und unstrukturierte Daten analysiert und relevante Informationen liefert, um den Entscheidungsprozess zu unterstützen. Erste Erkenntnisse zu den Entwicklungsanforderungen für ein solches Kinderschutz-Assistenzsystem wurden in einem kooperativen Forschungsund Entwicklungsprojekt des Instituts für Kinderund Jugendhilfe mit dem Landkreis Breisgau-Hochschwarzwald und der arf Gesellschaft für Organisationsentwicklung gewonnen (Feist-Ortmanns/Sauer/Brinkmann 2025). Von zentraler Bedeutung hierbei ist, dass KI lediglich im Sinne einer Assistenz eingesetzt wird und die Steuerung und Kontrolle des Prozesses bei der Fachkraft liegt. Dieses Prinzip wird in der Fachliteratur unter 'Human-in-the-Loop' diskutiert (vgl. Tsiakas/Murray-Rust 2022). Die nachhaltige Sicherstellung ist eine zentrale Aufgabe für einen systematischen Implementierungsprozess (siehe 'Implementierung von KI in der Kinderund Jugendhilfe' weiter unten in diesem Beitrag).
 
 Virtuelle Beratung durch Chatbots : In einer Studie von Ayers et al. (2023) wurden die Antworten eines Chatbots mit denen von Ärzt:innen auf Fragen von Patient:innen, die in einem öffentlichen sozialen Medienforum gestellt wurden, verglichen. Die Antworten des Chatbots wurden in 78,5% der Fälle als gut oder sehr gut bewertet, verglichen mit nur 22,1% der Antworten von Ärzt:innen. Zudem wurde der Chatbot in 45,1 % der Fälle als empathisch oder sehr empathisch eingeschätzt, während dies bei den Antworten der Ärzt:innen nur in 4,6% der Fälle zutraf. Diese Befunde legen nahe, dass KI-Tools qualitativ gute, personalisierte Ratschläge geben können, die allerdings von Fachkräften überprüft werden sollten. Ähnliche empirisch überprüfte Erfahrungen liegen auch in anderen Bereichen wie Callcentern und der Psychotherapie vor (Sufyan et al. 2024). Auf dieser Grundlage ist zu erwarten, dass ebenso in der Kinderund Jugendhilfe -zumindest für einfachere Fragestellungen -Chatbots entwickelt, validiert und bei entsprechender Eignung genutzt werden, zumal dies 24/7, und somit auch an Sonnund Feiertagen, möglich wäre.
 
+
+<!-- PAGE 94 -->
+
+
 Bildung und kognitive Entwicklung : Auch im Bildungsbereich ist der Einsatz denkbar. Damit könnten Lernprozesse möglicherweise individueller, interaktiver und inklusiver gestaltet werden (vgl. Gentilin 2020; Hamisch/Kruschel 2022; Macgilchrist 2023; Schirmer et al. 2023). Hier setzt das 'Flipped Classroom'-Konzept an, mit dem die herkömmliche Lehr-Lern-Struktur umgekehrt wird: Der Wissenserwerb würde damit individuell und KI-gestützt größtenteils außerhalb des Schulunterrichts erfolgen, während die Vertiefung des Gelernten im Unterricht stattfände.
 
 Unterstützung bei administrativen Aufgaben: Die größten Hoffnungen, die Fachkräfte der Kinderund Jugendhilfe aktuell mit KI verbinden, beziehen sich auf eine Unterstützung oder gar Automatisierung von zumeist ungeliebten administrativen Aufgaben (siehe hierzu auch den Beitrag von Löhe in diesem Band). So könnte KI genutzt werden, um Sitzungsprotokolle automatisch zu erstellen und zu bearbeiten. Mithilfe von Spracherkennungstechnologien könnten Gespräche und Diskussionen während Meetings transkribiert werden, wodurch eine manuelle Protokollierung überflüssig würde. Anschließend könnte die KI auf der Grundlage von Large Language Models (LLM) diese Transkripte analysieren und prägnante Zusammenfassungen erstellen, die die wichtigsten Punkte und Beschlüsse hervorheben und die Essenzen aufgabenspezifisch und adressat:innengerecht formulieren. Dieser Anwendungsfall kann zudem die Transparenz und die intersubjektive Nachvollziehbarkeit in der Zusammenarbeit mit Adressat:innen fördern, indem beispielsweise Protokolle von Hilfeplangesprächen unmittelbar nach dem Gespräch in Leichter Sprache oder als Fremdsprachenübersetzung bereitgestellt werden. Dadurch können diese gemeinsam überprüft und verabschiedet werden. Erste Organisationen testen bereits diese Optionen. Gerade in Anbetracht der großen und damit verbundenen Hoffnungen ist auch hier die Gewährleistung des Human-in-the-Loop-Konzeptes von hoher Bedeutung.
 
 Wissenschaftliches Arbeiten : Nicht zuletzt kann KI das wissenschaftliche Arbeiten unterstützen. Mit Künstlichen Neuronalen Netzen (KNN) ist es möglich, in großen und stark multivariaten Datensätzen Muster und Besonderheiten zu identifizieren, die mit herkömmlichen statistischen Methoden nicht oder nur eingeschränkt erkennbar wären. So erweisen sich beispielsweise FNNs (Feedforward Neural Network) gegenüber klassischen kausalen Kettenmodellen in vielfacher Hinsicht als überlegen: Sie weisen bei komplexen Klassifikationsaufgaben eine hervorragende Modellgüte (R², Brier-Score, F1-Score) auf, eine theoretisch unendliche Anzahl von Interaktionstermen ist einbeziehbar. Sie benötigen eine extrem kurze Rechenzeit und ermöglichen jederzeit mit minimalem Aufwand Adjustierungen bzw. Aktualisierungen. Als Wermutstropfen muss die geringere Transparenz des Lösungswegs benannt werden, die für KNNs typisch
+
+
+<!-- PAGE 95 -->
+
 
 ist. Mittlerweile gibt es im Rahmen von Explainable AI (XAI) eine Reihe von Strategien, um die Transparenz von KNNs zu erhöhen. Aufgrund dieser insgesamt positiven Erfahrungen ist zu erwarten, dass KNN für weitere wissenschaftliche Fragestellungen angepasst werden.
 
@@ -1166,6 +1543,10 @@ Wie beschrieben, hat KI innerhalb der Kinderund Jugendhilfe eine Vielzahl von Nu
 In der Kinderund Jugendhilfe fallen hochsensible Daten an, die beispielweise die Privatsphäre junger Menschen betreffen können. Daher kommt dem rechtskonformen und systematisch sichergestellten Datenschutz eine herausragende Bedeutung zu. Hierbei sind die Regelungen des EU AI Act zu berücksichtigen. Darüber hinaus ist die prägnante Checkliste vom Hamburgischen Beauftragten für Datenschutz und Informationsfreiheit (2023) sehr empfehlenswert. Thematisiert werden hier beispielweise Richtlinien zur Nutzung von KI-Tools, der Einbezug von Datenschutzbeauftragten, die Bereitstellung beruflicher Accounts, die sichere Authentifizierung, der Schutz von personenbezogenen Daten, das Opt-out des KI-Trainings und der Chatverläufe, das Human-in-the-Loop-Prinzip und schließlich die Sensibilisierung und Schulung der Mitarbeitenden.
 
 Weitere Risiken betreffen Verzerrungen ('Bias') und daraus resultierende Diskriminierungen (Weyerer/Langer 2020), die Gefahr einer Überabhängigkeit von technologischen Lösungen (Passi/Vorvoreanu 2022) und schließlich die sogenannte Anthropomorphisierung (Heil 2024), eine Art von Halo-Effekt, mit der einem KI-System menschliche Eigenschaften zugeschrieben werden. Dies kann das Risiko einer weitreichenden Verantwortungsabgabe an die KI erhöhen. Darüber hinaus ist ein partizipatives Vorgehen bei der Entwicklung von KI-Anwendungen in der Sozialen Arbeit geboten, das die Bedürfnisse und Erwartungen der Nutzer:innen sowohl aufseiten der Fachkräfte als auch der Adressat:innen berücksichtigt. Auf diese Weise kann einem Top-down-Bias bei der Entwicklung potenziell wirkmächtiger KI-Anwendungen in der Sozialen Arbeit entgegenge-
+
+
+<!-- PAGE 96 -->
+
 
 wirkt und zur Demokratisierung des Arbeitsfelds beigetragen werden, anstatt Machtasymmetrien im Zuge der KI-basierten Digitalisierung zu verstärken.
 
@@ -1184,6 +1565,10 @@ Auf Grundlage dieser Dimensionen, der oben beschriebenen Anforderungen und der b
 
 Auf der 1. Stufe werden in einem ersten Teilschritt die Bedarfe der Organisation identifiziert. Auf dieser Grundlage folgt eine Bestandsanalyse, die die aktuell vorhandenen Technolog
 
+
+<!-- PAGE 97 -->
+
+
 Abbildung 1: Stufenmodell zur KI-Implementierung in Sozialen Organisationen
 
 6. Stufe
@@ -1198,6 +1583,10 @@ ien und Daten, aber auch die Prozessabläufe innerhalb der Organisation analysie
 
 Der Mensch steht im Zentrum der 2. Stufe : Hier sollen Kompetenzen im Umgang mit KI aufgebaut, Akzeptanz gefördert und eine einheitliche Haltung zur Nutzung von KI innerhalb der Organisation entwickelt werden. Der Wissensaufbau umfasst die Vermittlung von Grundlagen über die Funktionsweise und den Anwendungsgebieten von KI sowie die Sensibilisierung für die Bedeutung der Datenqualität, potenzielle Verzerrungen (Bias) und das Human-in-the-LoopKonzept. Gemäß dem Technology Acceptance Model (TAM) (vgl. Davis/Granić
 
+
+<!-- PAGE 98 -->
+
+
 2024) sollen Hemmschwellen abgebaut werden, indem die wahrgenommene Nützlichkeit und Benutzerfreundlichkeit von KI-Tools erfahrbar gemacht werden. Darüber hinaus wird in der Organisation eine klare Haltung zu ethischen Fragen entwickelt, indem verbindliche Leitlinien zur Nutzung von KI erstellt, Transparenz gefördert und kontinuierliche Weiterbildung ermöglicht werden.
 
 Auf der 3. Stufe wird der Fokus auf die Planung und Durchführung von Pilotprojekten und die Entwicklung von Prototypen gelegt. Um die Komplexität zu bewältigen, sollten Pilotprojekte systematisch geplant werden. Hierbei empfiehlt es sich, einen begrenzten und klar definierbaren Bereich der Organisation auszuwählen, um erste Erfahrungen mit KI zu sammeln. Die erforderlichen personellen und technischen Ressourcen müssen identifiziert und sichergestellt werden. In der Durchführung gilt es, Prototypen zu entwickeln, die den definierten Anforderungen entsprechen. Nach Testläufen und erforderlichen Anpassungen werden diese Prototypen in den vorgesehenen Bereichen der Organisation eingeführt. Dabei ist ein kontinuierliches Monitoring der Leistung und Wirkung sicherzustellen. Die Ergebnisse der Pilotprojekte sollten kritisch reflektiert werden, um zu bewerten, ob und wie die Prototypen auf weitere Bereiche der Organisation ausgeweitet werden können.
@@ -1207,6 +1596,10 @@ Die schrittweise Integration der Prototypen in den regulären Betrieb erfolgt au
 Nach der Integration steht auf der 5. Stufe die kontinuierliche Überwachung und Evaluation der KI-Lösungen im Mittelpunkt. Es gilt, die Leistung der integrierten Systeme regelmäßig zu überwachen und abhängig vom Feedback der Fachkräfte sowie der betreuten Personen Anpassungen vorzunehmen. Zudem sollte systematisch geprüft werden, inwieweit die auf Stufe 1 definierten Ziele erreicht wurden und welche Bereiche der KI-Lösungen optimiert werden müssen. Dabei ist sicherzustellen, dass alle Optimierungen den ethischen Standards und den rechtlichen Datenschutzvorgaben entsprechen.
 
 Die langfristige Weiterentwicklung und Nachhaltigkeit der KI-Integration werden mit der 6. Stufe begleitet. Um eine nachhaltige Nutzung von KI sicherzustellen, ist die Entwicklung einer umfassenden Strategie unerlässlich. Diese Strategie sollte kontinuierliche Schulungen und Weiterbildungen der Fachkräfte beinhalten, um sicherzustellen, dass alle Beteiligten mit den neuen Technolo-
+
+
+<!-- PAGE 99 -->
+
 
 gien vertraut sind. Ein effektiver Wissenstransfer innerhalb der Organisation ist ebenso notwendig, um Synergien zu schaffen und die Effizienz zu steigern. Zudem müssen regelmäßige Überprüfungen stattfinden, um die KI-Strategie an aktuelle technologische Entwicklungen anzupassen und sicherzustellen, dass die KI-Lösungen auch langfristig den Anforderungen der Organisation und den Bedürfnissen der betreuten Personen gerecht werden.
 
@@ -1223,6 +1616,10 @@ Die in diesem Modell skizzierten sechs Stufen der KI-Implementierung verdeutlich
 - Der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit (2023): Checkliste zum Einsatz LLM-basierter Chatbots. https://datenschutz-hamburg.de/fileadmin/user\_upload/ HmbBfDI/Datenschutz/Informationen/20231113\_Checkliste\_LLM\_Chatbots\_DE.pdf (Abfrage: 15.06.2025).
 - Feist-Ortmanns, Monika/Sauer, Annette/Brinkmann, Martin (2025): KI-basiertes Assistenzsystem im Kinderschutzverfahren. In: Macsenaere, Michael (Hrsg.): Künstliche Intelligenz in der Kinderund Jugendhilfe. München: Ernst Reinhardt, S. 50-66.
 - Fontana, Nicoló/Pierri, Francesco/Aiello, Luca Maria (2024): Nicer Than Humans: How do Large Language Models Behave in the Prisoner's Dilemma? arXiv preprint https://
+
+
+<!-- PAGE 100 -->
+
 
 - Gentilin, Olivetta (2020): KI in der Schule: Digitale Lehrkonzepte und Anwendungsbeispiele für den Fremdsprachenunterricht. In: Information -Wissenschaft &amp; Praxis 71(1), S. 5-16.
 - Hahn, Daniel (2025): Die Stimme aus der Praxis. In: Macsenaere, Michael (Hrsg.): Künstliche Intelligenz in der Kinderund Jugendhilfe. München: Ernst Reinhardt, S. 83-86.
@@ -1243,7 +1640,15 @@ Die in diesem Modell skizzierten sechs Stufen der KI-Implementierung verdeutlich
 - Schmidt, Martin H./Petermann, Franz/Macsenaere, Michael/Knab, Eckhart/Schneider, Karsten/Hölzl, Heinrich/Hohm, Erika/Pickartz, Andrea/Flosdorf, Peter (Hrsg.) (2003): Effekte erzieherischer Hilfen und ihre Hintergründe. Schriftenreihe des BMFSFJ, Band 219. Stuttgart: Kohlhammer.
 - Sufyan, Nabil Saleh/Fadhel, Fahmi H./Alkhathami, Saleh Safeer/Mukhadi, Jubran Y. A. (2024): Artificial intelligence and social intelligence: preliminary compariso n study between AI models and psychologists. In: Frontiers in Psychology 15.
 
+
+<!-- PAGE 101 -->
+
+
 Weyerer, Jan C./Langer, Paul F. (2020): Diskriminierungen und Verzerrungen durch Künstliche Intelligenz. Entstehung und Wirkung im gesellschaftlichen Kontext. In: Oswald, Michael/ Borucki, Isabelle (Hrsg.): Demokratietheorie im Zeitalter der Frühdigitalisierung. Wiesbaden: Springer VS, S. 209-240.
+
+
+<!-- PAGE 102 -->
+
 
 ## Künstliche Intelligenz als Gestalterin von Medienkulturen: eine medienpädagogische Perspektive auf eine sich verändernde Identitätsarbeit und Sozialisierung 1
 
@@ -1259,15 +1664,27 @@ Die fortschreitende Digitalisierung greift tief in technologische, gesellschaftl
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_008
 
+
+<!-- PAGE 103 -->
+
+
 Erscheinung, sondern wirkt aktiv auf soziale Dynamiken und menschliche Interaktionen ein, wodurch sie zunehmend die Art und Weise beeinflusst, wie Menschen handeln, denken und sich gesellschaftlich einbringen. Im vorliegenden Beitrag soll der Versuch unternommen werden, die Relevanz von KI für medienkulturelle Entwicklungen sowie das pädagogische Handeln in der Sozialen Arbeit zu skizzieren. Dazu erscheint es zunächst notwendig, den kulturellen Wandel, den digitale Technologien und Medien mit sich bringen, einleitend zu betrachten.
 
 Der Begriff 'Digitalisierung' verweist auf die breite Umstellung von analogen auf digitale Inhalte(n) und Technologien. Diese Veränderungen umfassen nicht nur eine neue Codierung und Speicherung von Informationen, sondern auch die Entwicklung 'intelligenter' Technologien, die zunehmend eigenständig agieren und damit die Notwendigkeit menschlicher Steuerung und Kontrolle reduzieren (vgl. Düll 2016, S. 6f.; Hoffmann 2019, S. 103f.). Ebenso stellt die Digitalisierung weit mehr als einen rein technischen Wandel dar -sie ist Ausdruck eines tiefgreifenden kulturhistorischen Transformationsprozesses, der auf vielfältigen Entwicklungen aufbaut (wie beispielsweise die Normierung von Maßen, die Algorithmisierung von Wissen oder die systematische Erfassung und Verarbeitung individueller Daten). Vor diesem Hintergrund sollte die Entwicklung des Digitalen nicht primär als radikaler Bruch oder gänzlich neues Zeitalter verstanden werden. Vielmehr gilt es, die Kontinuitäten und kulturhistorischen Voraussetzungen zu betonen, die die Entstehung und Ausbreitung der Digitalisierung überhaupt erst möglich gemacht haben (vgl. Jörissen/Unterberg 2019, S. 12). Gleichzeitig üben digitale Technologien durch ihre inhärenten Eigenschaften, beispielsweise die algorithmische Standardisierung und Vereinfachung von Prozessen und Inhalten, selbst Einfluss auf gesellschaftliche Praktiken aus. Dadurch ergeben sich tiefgreifende Veränderungen kultureller Handlungsweisen, die von der Einführung vernetzter Informationssysteme bis hin zur wachsenden Entkopplung zwischenmenschlicher Interaktionen reichen (vgl. Allert et al. 2019, S. 66; Krotz 2022, S. 207).
 
 Knaus konstatiert (nicht zu Unrecht), dass die Diskussionen über Digitalisierung oft das Digitale betonen, die Bedeutung des Medialen in menschlichtechnischen Kommunikationsprozessen jedoch vernachlässigen. Dabei ermöglicht gerade die mediale Schnittstelle (z. B. über ein Interface, eine Sprachausgabe oder als visuelle Information) nicht nur die Vermittlung von Daten, sondern auch partizipative Eingriffe und (soziale) Interaktionen. Medien bilden somit das zentrale Bindeglied zwischen Menschen und Technologien (wie eben KI) und sind entscheidend für ein Zustandekommen von Mensch-Maschine-Interaktionen (vgl. Knaus 2020, S. 27f.). Ferner stellen digital vermittelte Medien nicht allein reine Kommunikationsmittel dar, sondern waren und sind stets auch Triebfedern von soziokulturellen Umbrüchen. Krotz (2007; 2015) beschreibt eine damit verbundene Mediatisierung als einen langfristigen und umfassenden Prozess, durch den Medien und Kommunikationstechnologien zunehmend alle
 
+
+<!-- PAGE 104 -->
+
+
 gesellschaftlichen Bereiche durchdringen und umgestalten. Solche medialen Umbrüche sind zumeist -und vermehrt im Verlauf der letzten zwei Jahrhunderte -eng mit technischen Innovationen verknüpft. Das Aufkommen einer populären 'Bewegtbildsprache' wäre beispielsweise ohne die Erfindung des Kinematografen, einem der ersten kommerziell erfolgreichen Vorgänger moderner Filmkameras, schwer vorstellbar. Ebenso waren die individuelle Aneignung und Gestaltung moderner Musikgenres wie Rock 'n' Roll, Popmusik oder elektronische Musik der 1980er-Jahre an technologische Innovationen wie Vinylschallplatten oder Kassetten gebunden. Derartige technische Entwicklungen transformieren nicht nur das Medienangebot, sondern prägen zugleich gesellschaftliche, wirtschaftliche und kulturelle Handlungsweisen nachhaltig. Die Mediatisierungsforschung betrachtet in diesem Zuge den Wandel von Kommunikation und Kultur als eine kontinuierliche Entwicklung, die durch die Einführung neuer (technischer) Kommunikationsmittel und sich verändernde mediale Ausdrucksund Handlungsweisen begleitet wird und langfristig die Strukturen des sozialen Lebens verändert (vgl. Hepp/Hasebrink 2017, S. 335; Krotz 2022, S. 208f.). Medien beeinflussen demnach nicht nur die Art und Weise, wie wir kommunizieren, sondern auch, wie wir handeln, wahrnehmen und miteinander in Beziehung treten. In das Zusammenspiel aus Digitalisierung und Mediatisierung, welches gegenwärtig unsere Gesellschaften prägt, setzt Stalder den Begriff der Digitalität (vgl. Stalder 2016). Eine damit verwobene Kultur der Digitalität zeichnet sich durch drei prägnante Eigenschaften aus: Referenzialität, Gemeinschaftlichkeit und Algorithmizität. So fungieren beispielsweise Social-Media-Kanäle nicht bloß als passive Räume für die Rezeption von Inhalten, sondern vielmehr als aktive Foren der Gemeinschaftsbildung. Innerhalb dieser digital vermittelten Gemeinschaften werden medienkulturelle Artefakte (z. B. Memes, YouTube-Videos oder Charaktere aus Videospielen) zu zentralen Referenzpunkten innerhalb der kommunikativen Praxis. Was Nutzer:innen dabei angezeigt oder vorenthalten wird, steuern wiederum Algorithmen, basierend auf den vermuteten Vorlieben, und beeinflussen so das individuelle kulturelle Handeln sowie die Ausgestaltung von gesellschaftlicher Partizipation (vgl. ebd., S. 95f.).
 
 In diesem technologisch-medialen Gefüge aus Digitalisierung, Mediatisierungsprozessen und Digitalität spielen diverse Varianten von KI eine zentrale Rolle, die nicht erst seit der Popularität großer Sprachmodelle wie GPT in der breiten Öffentlichkeit diskutiert werden. KI-Systeme beeinflussen bereits jetzt maßgeblich die Art und Weise, wie Inhalte generiert, gefiltert und verbreitet werden. Sie steuern zunehmend die Kommunikation und Interaktion in digital vermittelten Räumen und formen damit die sozialen Praktiken von Individuen. Ein prägnantes Beispiel dafür ist der Einsatz von KI-gestützten Chatbots und Voicebots, die in der Kund:innenkommunikation automatisierte, dialogorientierte Interaktionen ermöglichen. Unternehmen nutzen diese Systeme, um in Echtzeit auf Anfragen zu reagieren und personalisierte Antworten zu liefern.
+
+
+<!-- PAGE 105 -->
+
 
 Ebenso prägen KI-gestützte Algorithmen in sozialen Netzwerken den digitalen Austausch, indem sie Inhalte auf Grundlage von gesammelten Datenbeständen selektieren und vermeintliche personalisierte Inhalte für die Darstellung priorisieren. Solche Technologien agieren in digitalen Kontexten nicht mehr nur als Werkzeuge, sondern nehmen über mediale Inhalte und Kommunikationswege aktiv Einfluss auf die Wahrnehmung und Interpretation der (sozialen) Umwelt.
 
@@ -1284,11 +1701,19 @@ Medien stellen somit nicht allein Informationen bereit, sondern beeinflussen auc
 
 Diese Prozesse sind nicht losgelöst voneinander zu betrachten, da sie in Wechselwirkung zueinanderstehen und das Verständnis von Medienkulturen als sozial
 
+
+<!-- PAGE 106 -->
+
+
 und politisch geformte Konstrukte komplettieren (vgl. Hepp 2013, S. 66f.). Gegenwärtige Generationen sind somit durch digitale Medien unmittelbar in kulturelle und gesellschaftliche Entwicklungsprozesse eingebunden und erleben deren Auswirkungen direkt und ungefiltert. Sie sind nicht mehr nur passive Rezipient*innen, sondern nehmen durch ihre neuen Nutzungsund Handlungsmuster aktiv Einfluss auf diese Entwicklungen. Der (zumeist) uneingeschränkte mediale Zugang zu nahezu allen Bereichen kulturellen und gesellschaftlichen Lebens eröffnet ihnen kontinuierlich neue, oft unvorhersehbare Erfahrungsund Lernmöglichkeiten, die weder planbar noch kontrollierbar sind (vgl. Spanhel 2017, S. 3). Folglich besitzen Medienkulturen innerhalb einer Kultur der Digitalität eine gewisse Ambivalenz: Einerseits bieten sie völlig neue Möglichkeiten der Artikulation und Ausdrucksformen für Sozialisationsund Bildungsprozesse. Andererseits sind die zugehörigen digitalen Räume (z. B. Social-Mediaund Gamingplattformen) oft stark von ökonomischen Interessen geprägt, die durch kapitalistische Verwertungslogiken bestimmt werden (Bettinger 2020, S. 242f.).
 
 Im Zuge der fortschreitenden Digitalisierung gewinnen KI-Systeme in ebenjenen kulturellen Prozessen zunehmend an Bedeutung. Sie agieren nicht mehr nur als passive Werkzeuge, sondern entwickeln sich zu aktiven medialen Akteuren, die selbst kulturelle Referenzobjekte generieren und diese in die Struktur von Medienkulturen einbetten. Entsprechende KI-generierte Medieninhalte können als Teil eines (medien)kulturellen 'Belief Space' (Reynolds 1994) angesehen werden. Innerhalb von sogenannten kulturellen Algorithmen , in denen kulturelle Praktiken ähnlich wie genetische Informationen über Generationen hinweg weitergegeben werden, fungiert ein Belief Space als Sammlung für kollektive Wissensstrukturen und Werte von Gesellschaften (vgl. ebd., S. 2f.). Mit der zunehmenden Vernetzung in digitalen Räumen entsteht in diesem Zuge ein globales Netzwerk von Interaktionen, das zur Herausbildung spezifischer erzählerischer Muster, sogenannter Narrative , führt (vgl. Rust 2017, S. 22). In digitalisierten Medienkulturen, die stark durch die Präsenz von KI geprägt werden, übernimmt diese bereits jetzt eine zentrale Funktion bei der Strukturierung und Darstellung ebenjener Narrative und wird somit (bewusst oder unbewusst eingesetzt) Mitgestalterin von kulturellen Belief Spaces (vgl. Knaus 2020, S. 40-45; Gapski 2022, S. 695f.). Auf dieser Basis ist anzunehmen, dass KI-Systeme zukünftig zu zentralen Akteuren innerhalb des sozialen und kulturellen Raumes werden und Sozialisationsprozesse nachhaltig mitgestalten. KI würde damit eine Rolle einnehmen, die mit der aktuellen Funktion von Medienkulturen als primäre Sozialisationsinstanzen vergleichbar ist und sich selbst vom Werkzeug zu einem primären Einflussfaktor innerhalb einer mediatisierten Gesellschaft wandeln.
 
 Folgt man dieser Argumentationslinie, ist anzunehmen, dass dies zu einer grundlegenden Verschiebung kultureller Praktiken führt, da die algorithmischen Selektionsprozesse festlegen, welche kulturellen Inhalte überhaupt zur Wahrnehmung gelangen und welche Aspekte ausgeblendet werden. Vor diesem
+
+
+<!-- PAGE 107 -->
+
 
 Hintergrund wird deutlich, dass die kulturelle 'Wirkmacht' von KI-Systemen weit über die reine Verarbeitung von Daten hinausgehen kann. Sie greifen tief in die symbolischen Ordnungen der Alltagskultur ein, indem sie ästhetische Ausdrucksformen umdeuten und ihnen neue Bedeutungszuweisungen verleihen. Somit beeinflussen die durch KI generierten Produkte und Inhalte unsere Weltund Selbstwahrnehmung mit (z. B. durch Filter, über die bildliche Darstellung von Personen und Objekten oder über realistisch anmutende Fälschungen). Dadurch kommt es vermehrt zu Erfahrungen 'zweiter' Ordnung, also Phänomenen, die nicht mehr selbst erfahren, sondern rein (medial) vermittelt werden (vgl. Spanhel 2017, S. 9f.). Die eigene soziokulturelle Verortung und die individuelle Weltaneignung werden demnach vermehrt auch an durch KI-generierte Inhalte geknüpft.
 
@@ -1300,9 +1725,17 @@ Ein Verständnis der Wechselwirkungen zwischen kulturellen Aneignungsräumen, Be
 
 3 Vgl. https://ajs.nrw/wp-content/uploads/2020/04/Discord-in-der-Kinder-und-Jugendarbeit\_ Statement-AJS-NRW-und-FJMK-NRW\_27.04.2020.pdf (Abfrage: 14.01.2025).
 
+
+<!-- PAGE 108 -->
+
+
 sinnvoll in der Jugendarbeit einzusetzen. Diese Entwicklungen unterstreichen die Notwendigkeit, digitale Kommunikationsräume als zentrale Bestandteile jugendlicher Aneignungsprozesse anzuerkennen und ihre Potenziale für sozialpädagogische Konzepte zu nutzen. Die enge Verknüpfung zwischen medialen Kulturen (wie z.B. Gaming), digitalen Kommunikationsräumen und sozialer Interaktion zeigt, dass mediale Umgebungen zunehmend als zentrale Orte der Identitätsaushandlung fungieren. In diesem Zusammenhang lässt sich auch von 'Medienidentitäten' sprechen, da in modernen Medienkulturen ein erheblicher Teil der Identitätsressourcen durch translokale Diskurse und mediale Repräsentationen vermittelt wird. Diese Identitäten entstehen im Zusammenspiel individueller Artikulationen und kollektiver Bedeutungsressourcen, die über mediale Kanäle verhandelt werden. Medienidentitäten spiegeln somit die enge Verknüpfung von persönlichen und kulturellen Bedeutungen wider und verdeutlichen die Rolle medialer Kommunikation als zentraler Bestandteil heutiger Identitätsbildung (vgl. Krönert/Hepp 2015, S. 271).
 
 Obwohl medial erfahrbare Kulturräume eine prägende Wirkung für Identitätsprozesse besitzen, sind Nutzende ihnen nicht per se passiv ausgeliefert. Sie entscheiden aktiv, wie sie entsprechende Räume in ihre alltäglichen Kontexte einbetten, und grenzen sie bewusst von anderen Handlungsoptionen ab, um ihnen eine spezifische Bedeutung zu geben. Dabei orientieren sie sich gezielt an ihren Medienkulturen und wissen, welche Angebote sie für die Umsetzung ihrer Absichten nutzen und welche Handlungsmuster sie dafür einsetzen möchten (vgl. Spanhel 2017, S. 6f.; Brüggen/Wagner 2017, S. 225f.). Entsprechende Entwicklungsmöglichkeiten zeichnen sich durch eine zunehmende Individualisierung und eine Vielzahl an Handlungsmöglichkeiten aus, die für die Identitätsarbeit allgemein sowohl Chancen als auch Spannungsfelder mit sich bringen. Marotzki schlussfolgert, dass die Vielzahl an Wahloptionen in modernen Gesellschaften jedoch zu einer wachsenden Orientierungslosigkeit führt, da jede Entscheidung zur Wahl zwischen vielen Alternativen wird. Dies 'zwingt' Individuen, ihre Identität kontinuierlich neu auszuhandeln und experimentelle Lebensweisen als dauerhafte Strategie zur Bewältigung dieser Unsicherheit zu entwickeln (vgl. Marotzki in Leineweber 2020, S. 39f.). Keupp beschreibt diesen Prozess als 'Identitätsarbeit', bei der Menschen ihre fragmentierten Alltagserfahrungen und Einflüsse kreativ zu einem stimmigen Selbstbild zusammensetzen müssen. Diese Identitätsarbeit, die durch die Metapher des 'Patchworks' veranschaulicht wird, verlangt eine hohe Eigenleistung, da die Subjekte gefordert sind, ein kohärentes Identitätsmuster zu entwickeln, das sowohl innere Authentizität als auch soziale Anerkennung gewährleistet. Dabei betont Keupp, dass diese Prozesse stets in einem spezifischen soziokulturellen Kontext stattfinden, der unterstützend oder hemmend wirken kann. Besonders in Phasen gesellschaftlicher Instabilität, die er als 'Entbettung' bezeichnet, fehlen klare Orientierungsmuster, sodass Indivi-
+
+
+<!-- PAGE 109 -->
+
 
 duen verstärkt auf eigene Lösungen angewiesen sind (vgl. Keupp 2019, S. 44-47; 57f.).
 
@@ -1310,9 +1743,17 @@ In diesem Kontext stellt sich die weitreichende Frage, ob und inwieweit KI eine 
 
 4 Vgl. https://www.milestone-consult.de/articles/ki-chatbot-marie-die-zukunft-der-sozialenarbeit-beim-awo-kreisverband-wesel (Abfrage: 17.01.2025).
 
+
+<!-- PAGE 110 -->
+
+
 mend kooperativ agieren und KI nicht nur als Werkzeug, sondern als gleichwertige:r Partner:in fungiert (vgl. Wesche/Sonderegger 2019, S. 197f.; Hasenbein 2023, S. 61). Es ist anzunehmen, dass durch eine derartige kontinuierliche Anpassung an die persönlichen Interessen, Gewohnheiten und Präferenzen der Nutzer:innen KI-Systeme bestimmte Verhaltensweisen und Selbstbilder verstärken, verändern oder infrage stellen können und so aktiv in den Prozess der Identitätsbildung eingreifen würden. Wie in Abschnitt 2 dieses Beitrages dargelegt wurde, sind algorithmenbasierte KI-Systeme jedoch nicht neutral in ihrer Ausgestaltung. Sie spiegeln die Werte, Normen und kulturellen Leitbilder der jeweiligen Medienkulturen sowie von marktökonomischen Interessen wider, in die sie eingebettet sind.
 
 Eine derartige durch medienkulturelle Aneignungsräume induzierte Einflussnahme durch KI hängt jedoch nicht unbedingt davon ab, ob entsprechende generative Systeme über eine eigenständige Kreativität zur Produktion medialer (und ggf. sinnstiftender) Referenzobjekte verfügen. Vielmehr ist entscheidend, ob die menschlichen Nutzer:innen den von KI gestalteten, auf Wahrscheinlichkeiten basierenden Output als kreativ und bedeutsam anerkennen und wertschätzen (vgl. Ahlborn 2023, S. 77). Nutzer:innen nehmen selbsttätig von KI erzeugte, für sie relevante Inhalte aktiv auf, integrieren sie in ihre eigenen (ästhetischen) Handlungsweisen und verleihen ihnen dadurch neue kulturelle und soziale Bedeutungen innerhalb ihrer individuellen Wahrnehmungsund Erfahrungsprozesse (ebd., S. 88). Gleichzeitig bleibt es für KI-Systeme 'schwierig', den Kontext und die spezifischen Interpretationen von Inhalten zu erfassen, da sie stets mit einer vorgeprägten, algorithmischen Struktur arbeiten, die eine neutrale Analyse nahezu unmöglich macht. Selbst wenn alternative Klassifikationsverfahren genutzt werden, um diese Vorselektion zu umgehen, bleiben die Ergebnisse stark durch die ursprüngliche Zielsetzung der Algorithmen geprägt und würden nicht die ursprüngliche Vielfalt der kulturellen Ausdrucksformen widerspiegeln (vgl. Rust, 2017, S. 20f.). Besonders im sozialpädagogischen Kontext gewinnt die Auseinandersetzung mit KI-generierten Inhalten an Bedeutung, wenn es um die Verhandlung von kultureller Zugehörigkeit, Erinnerung und Identität innerhalb von Gruppen geht. In Migrationsoder Altenhilfeprojekten könnten beispielsweise KI-gestützte visuelle Narrative genutzt werden, um individuelle oder kollektive Herkunftsorte digital zu rekonstruieren und emotionale Bezüge zu vergangenen Lebenswelten herzustellen. Dies könnte durch KI-gesteuerte Personas ergänzt werden, die interaktiv Erinnerungen nachzeichnen oder kulturelle Kontexte simulieren, um lebensgeschichtliche Erfahrungen erfahrbar zu machen. Doch gerade hier bedarf es einer kritischen Reflexion der zugrunde liegenden algorithmischen Prozesse: Da KI-Systeme auf statistischen Wahrscheinlichkeiten basieren, steuern sie aktiv die Auswahl und Darstellung von Bildern und Geschichten. Damit formen sie nicht nur die visuelle Repräsentation vergangener Lebenswelten, sondern beeinflussen auch, welche kulturellen Referenzpunkte sichtbar gemacht oder möglicherweise unsichtbar
+
+
+<!-- PAGE 111 -->
+
 
 bleiben. Dies wirft zentrale Fragen hinsichtlich der Autonomie von Nutzer:innen in der aktiven Mitgestaltung und Interpretation ihrer eigenen Erinnerungsund Identitätsprozesse auf.
 
@@ -1324,9 +1765,17 @@ Hoffmann betont die Dringlichkeit einer verstärkten Zusammenarbeit zwischen Soz
 
 Im Sinne einer dafür notwendigen kritisch-reflexiven medienpädagogischen Arbeit (vgl. Niesyto 2022) ist es entscheidend, den Einsatz von KI sowohl als Teil einer technologischen Entwicklung als auch im Kontext ihrer soziokulturellen
 
+
+<!-- PAGE 112 -->
+
+
 Implikationen sowie vor dem Hintergrund von individuellen, gesellschaftlichen sowie politischen und marktökonomischen Machtverhältnissen zu betrachten. Dabei geht es nicht nur um die Bewältigung individueller Herausforderungen, sondern ebenso um die Schaffung gerechter Rahmenbedingungen, die eine selbstbestimmte und partizipative Lebensführung ermöglichen (vgl. Hoffmann 2020, S. 45f.). Die dargestellten und prognostizierten Einflüsse von KI-Systemen auf das medienkulturelle Handeln und die damit verknüpften Identitätsprozesse von Klient:innen erfordern somit eine verstärkte Reflexion innerhalb der Sozialen Arbeit. Fachkräfte sind zunehmend gefordert, sich mit den veränderten medialen Erfahrungen und Erwartungen ihrer Klient:innen auseinanderzusetzen, da deren Lebenswelten zunehmend durch Interaktionen mit KI durchdrungen und geprägt werden. Bereits jetzt lässt sich beispielsweise beobachten, dass soziale KI-Agenten wie Replika oder Snapchats My AI eine stetig wachsende Nutzungsfrequenz verzeichnen und zunehmend in alltägliche soziale Interaktionen integriert werden. Diese Systeme übernehmen nicht mehr nur eine assistierende Funktion, sondern können Beziehungen simulieren, die von Nutzer:innen als authentisch empfunden werden (vgl. Brandtzaeg 2022; Ofcom 2024). Derartige Entwicklungen werfen zentrale Fragen für die Soziale Arbeit auf: Wie verändern KI-gestützte soziale Interaktionen das Verständnis von Beziehung und Identität? Wie können Fachkräfte sicherstellen, dass diese Technologien die Selbstbestimmung und soziale Teilhabe der Klient:innen fördern, statt sie durch algorithmische Steuerung einzuschränken? Und welche Herausforderungen und Chancen ergeben sich daraus für pädagogische Begleitung und Unterstützung?
 
 Ein möglicher Ansatz zur Bearbeitung dieser und vergleichbarer Herausforderungen liegt in einer ästhetisch-kreativen Auseinandersetzung mit KI-generierten Inhalten. Im Sinne einer handlungsorientierten Medienpädagogik (vgl. Schorb 2022, S. 44) geht es dabei nicht nur um die analytische Reflexion algorithmischer Prozesse, sondern auch um die aktive gestalterische Weiterverarbeitung entsprechender Inhalte. Dadurch wird ein kritischer Umgang mit den Wirkmechanismen von KI gefördert, indem kreative Interventionen genutzt werden, um algorithmische Strukturen zu hinterfragen und neu zu interpretieren. Das Wissen, das in diesen künstlerischen Reflexionen gewonnen wird, kann kulturpädagogische Bildungsprozesse bereichern und in sozialarbeiterischen Kontexten gezielt genutzt werden (vgl. Jörissen/Unterberg 2019, S. 19ff.) . Ästhetisch-gestalterische Prozesse fördern dabei ein hohes Maß an Engagement und motivieren durch sinnliche Beteiligung zur Reflexion. Indem Menschen sich aktiv handelnd mit medialen Zeichensystemen (z. B. Bildund Filmsprache) und den ihnen zugrunde liegenden bedeutungstragenden Codes (z. B. Bildperspektiven in Social Media, Farbgestaltungen in Filmen oder Klangfarben in Werbejingles) auseinandersetzen, erwerben sie nicht nur ein tiefes Verständnis für deren ästhetische Prinzipien, sondern auch für deren spezifischen Wirkungsweisen (vgl. Tappe 2018, S. 146ff.; Jörissen/Unterberg 2019, S. 20). Neben der ästhetisch-gestalte-
+
+
+<!-- PAGE 113 -->
+
 
 rischen Auseinandersetzung ist es entscheidend, ein fundiertes Verständnis der technischen Systeme und Prozesse zu entwickeln, die hinter den Interfaces von KI verborgen sind. Durch diese tiefere Einsicht ist es möglich, Medien und Technologien auf einer kompetenten Ebene zu analysieren, kritisch zu reflektieren und fundierte Urteile zu fällen (vgl. Knaus 2020, S. 49). In diesem Zusammenhang gewinnen digitale Medienkulturen an Bedeutung, da sie (beispielsweise in Onlinecommunitys oder digitalen Spielwelten) nicht nur als Kommunikationsund Begegnungsorte fungieren, sondern auch als lebensweltorientierte Bildungsräume, in denen durch die Vernetzung, Digitalisierung und die Konstruktion virtueller Realitäten neue Bildungsprozesse initiiert werden können (vgl. Spanhel 2017, S. 2). Durch den gezielten Einsatz von Tools, die den Zugang zu den algorithmischen Prozessen erleichtern (etwa offene Datenplattformen oder KI-Sandboxen, die eine sichere Testumgebungen zur Erprobung von KI-Szenarien bieten), könnten Nutzer:innen lernen, wie algorithmische Entscheidungen getroffen werden, welche Datenstrukturen ihnen zugrunde liegen und wie sie die mediale Wirklichkeit beeinflussen. Dies ermöglicht eine kritische Reflexion darüber, wie Algorithmen Inhalte selektieren, filtern und priorisieren -und welche gesellschaftlichen Auswirkungen dies hat (vgl. Knaus 2020, S. 49). Eine entsprechende konzeptionelle Planung könnte beispielsweise folgendermaßen gestaltet werden:
 
@@ -1335,6 +1784,10 @@ rischen Auseinandersetzung ist es entscheidend, ein fundiertes Verständnis der 
 In einem offenen Jugendtreff reflektieren Jugendliche in einem medienpädagogischen Workshop den Einfluss von KI-gestützten Medien auf die Selbstdarstellung in sozialen Medien. Mit Methoden der aktiven Medienarbeit hinterfragen sie bewusst die Funktionsweise dieser Technologien und setzen sich mit dem Spannungsfeld zwischen algorithmischer Steuerung und Selbstbestimmung auseinander. So stellt ein zentraler Bestandteil des Workshops das Remixing von KI-generierten und selbst erstellten Medieninhalten dar. Die Teilnehmenden verwenden KI-gestützte Bildund Textgeneratoren, um alternative Versionen ihrer SocialMedia-Profile zu erzeugen -beispielsweise durch algorithmisch erstellte Selbstporträts oder autobiografische Texte. In der anschließenden Reflexionsphase vergleichen sie diese mit ihren vorhandenen Onlinedarstellungen und analysieren, inwiefern KI-Systeme bestehende Narrative über Identität, Ästhetik und Authentizität verstärken oder verzerren. Dabei diskutieren sie, welche Werte und Stereotype durch algorithmische Prozesse reproduziert werden und inwieweit ihre eigene Mediennutzung von diesen beeinflusst ist.
 
 Parallel dazu erhalten die Teilnehmenden Einblicke in die Funktionsweise von Algorithmen: Die Jugendlichen setzen sich praktisch mit Formen von algorithmischer Steuerung auseinander, indem sie untersuchen, welche Daten für KI-generierte Inhalte verarbeitet werden und wie Filtermechanismen ihre Medienwahrnehmung beeinflussen. Durch gezielte Manipulation von Suchverläufen und die Simulation verschiedener Nutzerprofile erleben sie direkt, wie Algorithmen Vorlieben antizipieren und Inhalte selektieren. Dabei reflektieren sie kritisch die Auswirkungen personalisierter Empfehlungen auf ihre digitalen Routinen und Identitätsentwürfe. Anhand konkreter Beispiele analysieren sie, inwiefern
+
+
+<!-- PAGE 114 -->
+
 
 algorithmische Systeme Stereotype verstärken oder bestimmte Identitätsmodelle bevorzugt darstellen, und entwickeln in interaktiven Gruppenarbeiten alternative Perspektiven auf mediale Vielfalt und Repräsentation.
 
@@ -1345,6 +1798,10 @@ Begleitete, sozialpädagogisch gerahmte Settings besitzen das Potenzial, als kul
 ## Literatur
 
 Adolf, Marian (2017): Zwei Gesichter der Mediatisierung? Ein Beitrag zur theoretischen Fundierung der Mediatisierungsforschung und ihres Verhältnisses zur Mediensozialisationsforschung. In: Hoffmann, Dagmar/Krotz, Friedrich/Reißmann, Wolfgang (Hrsg.): Mediatisierung und Mediensozialisation. Prozesse -Räume -Praktiken, Wiesbaden: Springer VS, S. 41-58.
+
+
+<!-- PAGE 115 -->
+
 
 - Ahlborn, Juliane (2023): Zur (Un-)Berechenbarkeit der Künste. Wie algorithmische Strukturen die Bedingungen für Ästhetik und ästhetische Bildung verändern. In: de Witt, Claudia/Gloerfeld, Christina/Wrede, Silke Elisabeth (Hrsg.): Künstliche Intelligenz in der Bildung. Wiesbaden: Springer, S. 69-88.
 - Allert Heidrun/Ide, Martina/Richter, Christoph/Schröder, Christoph/Thiele, Sabrina (2019): DiKuBi-on: Soziale Medien als kultureller Bildungsraum Das Onlinelabor für Digitale Kulturelle Bildung. In: Jörissen, Benjamin/Kröner, Stephan/Unterberg, Lisa (Hrsg.): Forschung zur Digitalisierung in der Kulturellen Bildung. München: kopaed (Kulturelle Bildung und Digitalität; 1), S. 63-78. https://doi.org/10.25656/01:26963
@@ -1362,6 +1819,10 @@ Adolf, Marian (2017): Zwei Gesichter der Mediatisierung? Ein Beitrag zur theoret
 - Knaus, Thomas (2020): Von medialen und technischen Handlungspotentialen, Interfaces und anderen Schnittstellen. In: Knaus, Thomas/Merz, Olga (Hrsg.): Schnittstellen und Interfaces -Digitaler Wandel in Bildungseinrichtungen (Bd. 7). München: kopaed, S. 15-72.
 - Krönert, Veronika/Hepp, Andreas (2015): Identität und Identifikation. In: Hepp, Andreas/Krotz, Friedrich/Lingenberg, Swantje/Wimmer, Jeffrey (Hrsg.): Handbuch Cultural Studies und Medienanalyse. Wiesbaden: Springer VS, S. 265-273.
 - Krotz, Friedrich (2007): Mediatisierung. Fallstudien zum Wandel von Kommunikation. Wiesbaden: VS.
+
+
+<!-- PAGE 116 -->
+
 
 - Krotz, Friedrich (2015): Medienwandel in der Perspektive der Mediatisierungsforschung: Annäherung an ein Konzept. In: Kinnebrock, Susanne/Schwarzenegger, Christian/Birkner, Thomas (Hrsg.): Theorien des Medienwandels. Köln: Halem, S. 119-141.
 - Krotz, Friedrich (2019): Die Begegnung von Mensch und Roboter. Überlegungen zu ethischen Fragen aus der Perspektive des Mediatisierungsansatzes. In: Rath, Matthias/Krotz, Friedrich/Karmasin, Matthias (Hrsg.): Maschinenethik. Normative Grenzen autonomer Systeme. Wiesbaden: Springer VS, S. 13-34.
@@ -1382,6 +1843,10 @@ Adolf, Marian (2017): Zwei Gesichter der Mediatisierung? Ein Beitrag zur theoret
 - Teich, Irene (2020): Meilensteine der Entwicklung Künstlicher Intelligenz. In: Informatik Spektrum 43, S. 276-284.
 - Wesche, Jenny S./Sonderegger, Andreas (2019): When computers take the lead: The automation of leadership. In: Computers in Human Behavior 101, S. 197-209.
 
+
+<!-- PAGE 117 -->
+
+
 ## KI in der Beratung 1
 
 ## Robert Lehmann
@@ -1396,6 +1861,10 @@ Der Begriff 'Künstliche Intelligenz' (KI) umfasst eine Vielzahl an Methoden und
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_009
 
+
+<!-- PAGE 118 -->
+
+
 die gesamte Kommunikation in Textform erfolgt, ist die Interaktion zwischen Fachkräften und Ratsuchenden technisch problemlos auch zwischen Mensch und KI -beispielsweise in Form von Chatbots -möglich. Vor diesem Hintergrund erscheint es plausibel, dass der Bereich der Beratung innerhalb der Sozialen Arbeit einer der am schnellsten und nachhaltigsten durch KI geprägten Teilbereiche werden könnte (vgl. Engelhardt 2023a).
 
 Es überrascht daher nicht, dass in diesem Feld bereits erste Prototypen von KI-basierten Beratungsanwendungen existieren und die Literatur zu diesem Thema anwächst.
@@ -1407,6 +1876,10 @@ Aufbauend auf eine kurze methodische Differenzierung von Präsenzund Onlineberat
 Die Entwicklung von der klassischen Präsenzberatung hin zur Onlineberatung ist eng verknüpft mit den Fortschritten der Digitalisierung und Mediatisierung (vgl. Reindl 2018). Während psychosoziale Beratungsprozesse früher fast ausschließlich im persönlichen Kontakt stattfanden, eröffnete die Verbreitung neuer Kommunikationstechnologien zunehmend die Möglichkeit, Beratungsangebote auch in digitaler Form anzubieten. Bereits in den 1990er-Jahren nutzte die Telefonseelsorge das Internet, um erste Onlineberatungsdienste anzubieten (vgl. Lehmann 2020). Mit der Jahrtausendwende erweiterten sich diese digitalen Angebote um Mail-, Chatund Forenberatungen, die bis heute als essenzielle Beratungsmethoden etabliert sind (vgl. Engelhardt 2021). Diese Beratungsformate ermöglichen datensicheren Austausch -asynchron in der Mailberatung oder nahezu synchron in der Chatberatung -, während Forenberatungen öffentliche oder geschlossene Räume für den Austausch schaffen (vgl. Brunner/Engelhardt/ Heider 2009; Eichenberg/Kühne 2014). Die COVID-19-Pandemie führte zu einem sprunghaften Anstieg der Onlineberatung, insbesondere die Videoberatung etablierte sich in dieser Zeit (Stieler/Lipot/Lehmann 2022). Dieser Digitalisierungsschub setzte sich nach der Pandemie fort, sodass die Messenger-Beratung, eine zielgruppenorientierte Beratungsform, zunehmend Verbreitung fand (vgl. Zauter/Lehmann 2021).
 
 Sowohl in der Praxis als auch in unterschiedlichen Studien (vgl. Arnold 2012; Eichenberg/Küsel 2016) zeigte sich, dass die verschiedenen Formen der Onlineberatung wirksam und bei bestimmten Konstellationen sogar deutlich niedrig-
+
+
+<!-- PAGE 119 -->
+
 
 schwelliger sind als Präsenzangebote, z.B. bei schambesetzten Themen (vgl. Zizelmann 2023).
 
@@ -1422,6 +1895,10 @@ KI kann im Beratungsbereich relativ einfach als Tool zur Reflexion des professio
 
 Da große Teile der Kommunikation auf Plattformen im Internet nach wie vor schriftbasiert sind, lassen sich mit diesen KI-Technologien schnell Einblicke in die digitalen Lebenswelten der Zielgruppen gewinnen. Dies ist etwa im Digital
 
+
+<!-- PAGE 120 -->
+
+
 Streetwork von Vorteil, da Fachkräfte so Foren effizient analysieren und gezielt entscheiden können, ob und wo sie aktiv werden sollten.
 
 Komplexere Technologien wie sogenannte Transformer-Modelle bieten weiterreichende Möglichkeiten zur inhaltlichen und methodischen Reflexion des Beratungshandelns. Diese Modelle, die auf neuronalen Netzen basieren, können mit vergleichsweise wenig technischem Aufwand darauf trainiert werden, spezifische Inhalte zu erkennen. Der Analyseprozess ähnelt hierbei der qualitativen Inhaltsanalyse (vgl. Albrecht/Rudolph 2023). In einer ersten Anwendung dieser Technologie auf Onlineberatungstexte konnten Grandeit et al. (2020) zeigen, dass eine entsprechend trainierte KI vergleichbare Erkennungsleistungen wie menschliche Kodierer:innen erzielte. Der Aufbau eines solchen Trainingsdatensatzes und die damit verbundene Optimierung der KI sind zwar komplex, jedoch auch mit den Ressourcen durchführbar, die beispielsweise Fachhochschulen oder mittelgroße Träger der freien Wohlfahrtspflege zur Verfügung stehen. Für die Onlineberatung haben Albrecht et al. (2024) einen entsprechenden Trainingsdatensatz erstellt und diesen unter einer Open-Source-Lizenz der Allgemeinheit auf dem Portal huggingface.co zugänglich gemacht.
@@ -1431,6 +1908,10 @@ Wendet man diese Technologien auf Beratungsprotokolle an, sei es aus der Onlineo
 ## 4 KI in der Beratungsausbildung
 
 Basierend auf der Reflexion bisherigen Beratungshandelns eröffnet sich ein weiterer Anwendungsbereich für KI in der Ausbildung von Fachkräften. Wie bereits erwähnt, erfordert die Onlineberatung, ebenso wie die Präsenzberatung, spezifische Kompetenzen, die weder selbstverständlich vorhanden sind noch in herkömmlichen Studiengängen umfassend vermittelt werden (vgl. Engelhardt 2021). In der Praxis greifen Ausbildungsprogramme häufig auf Rollenspiele zurück, um den Lernenden Übungsmöglichkeiten zu bieten (vgl. Lippert et al. 2024). Komplexe Szenarien, die in spezialisierten Beratungslaboren teilweise unter Einsatz von professionellen Schauspieler:innen umgesetzt werden, verbessern die Ausbildungsqualität signifikant (vgl. Weinhardt et al. 2022), sind jedoch aufgrund des
+
+
+<!-- PAGE 121 -->
+
 
 hohen organisatorischen und finanziellen Aufwands flächendeckend schwer umsetzbar. Hier bietet der Einsatz von KI-Systemen neue Möglichkeiten, insbesondere bei der Simulation von Beratungsgesprächen im Rahmen der Onlineberatung (vgl. Engelhardt 2023a).
 
@@ -1444,6 +1925,10 @@ Daher erscheint hier eine Kombination der Technologien sehr naheliegend. Eine KI
 
 Während der Einsatz von KI in der Reflexion und Ausbildung noch keine direkte Interaktion mit Ratsuchenden umfasst, kommt man durch die Unterstützung von KI in der Beratungssituation der Vision einer KI-gestützten Beratung näher. Im Bereich der Prozessunterstützung durch KI sehen Linnemann, Löhe und Rottkemper (2023) Potenziale vor allem im Wissensmanagement und in der Entscheidungsfindung. Dabei lassen sich die bereits beschriebenen Technologien sinnvoll kombinieren. Insbesondere bei der Entscheidungsunterstützung ist jedoch auf potenzielle Risiken wie den 'Automation Bias' zu achten, bei dem es zu
 
+
+<!-- PAGE 122 -->
+
+
 einem übermäßigen Vertrauen in maschinelle Entscheidungsvorschläge kommt (vgl. Gutwald et al. 2021). Zwar existieren erste Ansätze zur Bias-Minimierung bei der KI-gestützten Entscheidungsfindung, diese wurden jedoch noch nicht in umfangreichen Studien getestet (vgl. Burghardt et al. 2024). Weitere Forschungsanstrengungen sollten sich auf die Möglichkeiten der KI-unterstützten Beratung fokussieren, um sicherzustellen, dass die fachliche Perspektive der Sozialen Arbeit im Vordergrund steht (vgl. Reder/Müller/Lehmann 2024).
 
 Im Bereich des Wissensmanagements sind die Potenziale ebenfalls weitreichend. KI-basierte Assistenzsysteme könnten beispielsweise in Echtzeit Beratungsprozesse unterstützen, indem sie längere und komplexere Texte, wie sie in der Mailberatung auftreten, zusammenfassen und klassifizieren (vgl. Grandeit et al. 2020; Park et al. 2019). Zudem zeigen frühe Untersuchungen, dass KI-Systeme thematische Schwerpunkte in der Kommunikation effizient identifizieren können (vgl. Dinakar et al. 2015). Darüber hinaus zeigten internationale Studien, dass KI-Systeme aus Texten belastbare Aussagen zu Persönlichkeitsmerkmalen (vgl. Ren et al. 2021) oder psychischen Erkrankungen (vgl. Alhanai/Ghassemi/ Glass 2018) der Urheber:innen ableiten können.
@@ -1452,6 +1937,10 @@ Für die Onlineberatung werden die Potenziale der verschiedenen KI-Assistenzsyst
 
 Für die Präsenzberatung sind die Potenziale, die in der Onlineberatung bereits sehr real werden, noch etwas ferner. Der Zugriff auf die direkte Beratungsinteraktion, der in der Onlineberatung leicht zu realisieren ist, wäre hier nur durch eine Aufzeichnung und Transkription der Gespräche möglich. Die damit einhergehenden ethischen und rechtlichen Probleme liegen auf der Hand. Daher ist zunächst eher mit der Nutzung allgemeiner Wissensmanagementfunktionen zu rechnen.
 
+
+<!-- PAGE 123 -->
+
+
 ## 6 KI als Assistenz für Ratsuchende
 
 Neben der Unterstützung der Fachkräfte können KI-Anwendungen auch Ratsuchenden neue Teilhabemöglichkeiten erschließen. Die technischen Möglichkeiten liegen zunächst in der Unterstützung bei verschiedenen Sinnesbehinderungen. Bereits unabhängig von KI existierten vielfältige technische Möglichkeiten, um Menschen mit verschiedenen Behinderungen z.B. die schriftliche Kommunikation oder die Audiokommunikation zu ermöglichen (vgl. Beliaev/Ginsburg 2021). Einhergehend mit der sprunghaften Verbreitung von Videokonferenzsystemen in den letzten Jahren liegen bereits KI-basierte Technologien vor, die das gesprochene Wort in Text transkribieren (vgl. Wagner et al. 2023) oder auch die Emotionen der beteiligten Personen erkennen. Zwar weist die Emotionserkennung, die ausschließlich auf Videodaten basiert, nach wie vor Schwierigkeiten auf (vgl. Naga et al. 2023), Ansätze, die Audioinformationen und textuelle Informationen berücksichtigen, sind hier jedoch deutlich weiterentwickelt (vgl. Bayerl et al. 2021). So können Beratungsinhalte, die als Text vorliegen, von LLM sprachlich vereinfacht oder zusammengefasst werden. Damit kann zunächst die Onlineberatung weitere Zugangshürden abbauen. Eine Anwendung in der Präsenzberatung ist ebenfalls denkbar, die Voraussetzung wäre allerdings, dass der Beratungsinhalt digitalisiert wird, also z.B. über eine Audioaufzeichnung, die direkt in die Verarbeitung durch das KI-System weitergeleitet wird. Technisch ist das mit jedem handelsüblichen Smartphone realisierbar, allerdings müssen die Auswirkungen auf den Beratungsprozess entsprechend berücksichtigt werden (vgl. Kieslinger 2024).
@@ -1459,6 +1948,10 @@ Neben der Unterstützung der Fachkräfte können KI-Anwendungen auch Ratsuchende
 ## 7 KI als eigenständige Beratungsinstanz
 
 Es wurde deutlich, dass KI im Feld der Beratung, insbesondere der Onlineberatung, bereits sehr praxisnah erforscht wird und sich vielfältige Unterstützungspotenziale abzeichnen. Daher überrascht es nicht, dass eine vollständig KI-gestützte Beratung z.B. in Form von Beratungsbots als technisch möglich erscheint (vgl. Engelhardt 2023b; Linnemann/Löhe/Rottkemper 2023) und Potenziale für die Beratung insbesondere in der Formulierung der Zielsetzung, konkreter Lösungsfindung und Verabschiedung durch Beratungsbots gesehen werden (vgl. Mai/Rutschmann 2023). Aktuell befinden sich im deutschsprachigen Raum die Entwicklung solcher Beratungsbots noch in der Frühphase (vgl. Kotte/Webers 2023). Internationale Übersichtsarbeiten zeigen jedoch, dass Large Language Model-basierte Chatbots bei der Unterstützung von Menschen mit psychischen Problemen sinnvoll eingesetzt werden können, auch wenn sie aktuell noch zu viele Schwächen aufweisen, um unbesehen in der Breite eingesetzt zu werden (vgl. Casu et al. 2024). Mit dem Woebot liegt außerdem ein Chatbot vor,
+
+
+<!-- PAGE 124 -->
+
 
 der eine andere technische Basis als Large Language Model nutzt. Er wird bereits in der kognitiven Verhaltenstherapie zur Förderung von Selbstreflexion und positivem Denken eingesetzt. Die Evaluationsergebnisse dieses Bots deuten eine hohe Wirksamkeit dieses Ansatzes an (Darcy et al. 2021).
 
@@ -1474,6 +1967,10 @@ Daher ist es wahrscheinlich, dass perspektivisch KI Beratungsaufgaben übernehme
 - Bayerl, Sebastian P./Tammewar, Aniruddha/Riedhammer, Korbinian/Riccardi, Giuseppe (2021): Detecting Emotion Carriers by Combining Acoustic and Lexical Representations (arXiv:2112.06603). arXiv. https://doi.org/10.48550/arXiv.2112.06603
 - Beliaev, Stanislav/Ginsburg, Boris (2021): TalkNet 2: Non-Autoregressive Depth-Wise Separable Convolutional Model for Speech Synthesis with Explicit Pitch and Duration Prediction. (arXiv:2104.08189).arXiv. https://doi.org/10.48550/arXiv.2104.08189
 - Bradl, Marion/Stieler, Mara/Engels, Sylvia (2022): Virtuelle Beratungsstrukturen: Wissenschaftliche Begleitung der Jugendmigrationsdienste (JMD) im Rahmen des Projekts: JMD digital-virtuelle Beratungsstrukturen für ländliche Räume. https://opus4.kobv.de/opus4-ohm/files/917/ EBI\_Virtuelle\_Beratungsstrukturen\_JMD\_2022.pdf (Abfrage: 15.06.2025).
+
+
+<!-- PAGE 125 -->
+
 
 - Brunner, Alexander/Engelhardt, Emily/Heider, Triz (2009): Foren-Beratung. In: Kühne, Stefan/ Hintenberger, Gerhard (Hrsg.): Handbuch Online-Beratung. Göttingen: Vandenhoeck &amp; Ruprecht. S. 79-90.
 - Burghardt, Jennifer/Lehmann, Robert/Reder, Michael/Koska, Christopher/Kraus, Maximilian/ Müller, Nicholas H. (2024): Kann Künstliche Intelligenz sozialarbeiterische Entscheidungsprozesse unterstützen? Ethik und digitale Operationalisierung im Feld der Kindeswohlgefährdung. In: unsere jugend 76(7+8), S. 300-310.
@@ -1494,6 +1991,10 @@ Daher ist es wahrscheinlich, dass perspektivisch KI Beratungsaufgaben übernehme
 - Kieslinger, Daniel (2024): Mit KI-Unterstützung zu einer inklusiven Kinderund Jugendhilfe. In: unsere jugend 76(7+8), S. 338-339.
 - Killian, Stefan/Baumann, Clemens/Delorette, Michael/Freisleben-Teutscher, Christian/Größbacher, Stefanie/Huber, Alois/Husinsky, Matthias/Judmair, Peter/Moser, Thomas/Pflegerl, Johannes/Schlager, Alexander/Schöffer, Lucas/Taurer, Florian/Vogt, Georg (2023): MIRACLE -Mixed Reality und Cooperation im Lehreinsatz: Erfahrungen, Potenziale, Limitationen. In: Wei-
 
+
+<!-- PAGE 126 -->
+
+
 - ßenböck, Josef (Hrsg.): Lernen über den Tellerrand hinaus. Good Practices zu Interdisziplinarität, Internationalisierung und Future Skills, S. 119-126. Wien: Lemberger Publishing.
 - Kotte, Silja/Webers, Thomas (2023): Digitalisierung in der Beratung: Onlineund KI-unterstützte Beratungsformate. Organisationsberatung, Supervision, Coaching 30(1), S. 1-6.
 - Lehmann, Robert (2020): Die Professionalisierung der Onlineberatung. In: FORUM Sexualaufklärung und Familienplanung 2, S. 3-5.
@@ -1511,9 +2012,17 @@ Daher ist es wahrscheinlich, dass perspektivisch KI Beratungsaufgaben übernehme
 - Stieler, Mara/Lipot, Sarah/Lehmann, Robert (2022): Zum Stand der Onlineberatung in Zeiten der Corona-Krise. Entwicklungsund Veränderungsprozesse der Onlineberatungslandschaft. In: e-beratungsjournal.net -Zeitschrift für Onlineberatung und computervermittelte Kommunikation 18(1), Artikel 4, S. 50-65. https://doi.org/10.48341/262p-7t64
 - Wagner, Dominik/Baumann, Ilja/Bayerl, Sebastian P., Riedhammer, Korbinian/Bocklet, Tobias (2023): Speaker Adaptation for End-To-End Speech Recognition Systems in Noisy Environments (arXiv:2211.08774). arXiv. https://doi.org/10.48550/arXiv.2211.08774
 
+
+<!-- PAGE 127 -->
+
+
 - Weinhardt, Marc/Bauer, Petra/Lohner, Eva Maria/Schmitz/Anne-Kathrin/Christiani, Laura/ Eder-Curreli, Carmilla (2022): Beratungslernen im Studium. Ergebnisse einer Pilotstudie zur Umsetzung eines videogestützten Beratungslabors im Horizont pandemiebedingter Digitalität. In: e-beratungsjournal.net -Zeitschrift für Onlineberatung und computervermittelte Kommunikation 18(2), Artikel 3, S. 38-55. https://doi.org/10.48341/kttm-4822
 - Zauter, Sigrid/Lehmann, Robert (2021): Schwer auffindbare Beratungsangebote in der psychosozialen Onlineberatung. In: Freier, Carolin/König, Joachim/Manzeschke, Arne/Städtler-Mach, Barbara (Hrsg.). Gegenwart und Zukunft sozialer Dienstleistungsarbeit: Chancen und Risiken der Digitalisierung in der Sozialwirtschaft. Wiesbaden: Springer Fachmedien, S. 129-140.
 - Zizelmann, Regine (2023): Neue Formate und Onlineberatung. In: Hessische Blätter für Volksbildung 73(4), S. 91-102.
+
+
+<!-- PAGE 128 -->
+
 
 ## Künstliche Intelligenz und Inklusion 1
 
@@ -1531,6 +2040,10 @@ Der Beitrag befasst sich mit den Potenzialen, Herausforderungen und Risiken, die
 
 2 Behinderung entsteht gemäss der WHO (2001) im Zusammenwirken individueller Einschränkungen und gesellschaftlicher Barrieren. Der Begriff 'behinderter Mensch' berücksichtigt hier also immer auch die Formen der gesellschaftlich verursachten 'Behinderung' von Menschen.
 
+
+<!-- PAGE 129 -->
+
+
 derungen und Risiken von KI für die Inklusion marginalisierter und von Behinderung betroffener Menschen diskutiert. Dabei werden technologische, wohlfahrtsstaatliche, individualisierte und gemeinwohlorientierte Ebenen der Analyse der Auswirkungen von KI-Technologien auf Inklusion unterschieden. Im Diskussionsteil werden Empfehlungen für eine ethische, soziale und praxisbezogen sensible Entwicklung und Implementation inklusiver KI-Technologien formuliert.
 
 ## 2 Zur Grundlegung: eine kritische Fassung von Inklusion und Exklusion
@@ -1539,9 +2052,17 @@ Die Inklusion und Exklusion von Menschen in und aus der Gesellschaft ist seit de
 
 Diese Konzeption von Inklusion unterscheidet sich erheblich von in den letzten Jahren vielfach skizzierten Ansätzen, die wir als idealistische Interpretationen von Inklusion charakterisieren können. Inklusion wird hier gewissermaßen voraussetzungslos als Idealzustand einer gesellschaftlichen Verfassung angesehen, in der alle Menschen umfassend am Sozialen teilhaben (Felder 2018; Wilson 1999). Konzeptionen von Inklusion als normative Setzung etwa eines bürger-
 
+
+<!-- PAGE 130 -->
+
+
 lichen Selbstverständnisses oder als disziplinierendes Verfahren zur Integration in (post)industrielle Wirtschaftsorganisationen, werden dabei kaum berücksichtigt (vgl. Rojas 2024). Im idealistischen Verständnis von Inklusion ist die Inklusion von Menschen in Systeme immer positiv -unabhängig davon, in welche Systeme inkludiert werden soll und welche normativen oder disziplinierenden Setzungen damit verbunden sind. Joshi (2014) kommt vor dem Hintergrund unterschiedlicher Definitionen von Inklusion, die Inklusion wahlweise als Strategie, Politik, Wert, Norm, Prinzip, Lebensstil oder Handlung verstehen, zu dem Schluss, dass der Begriff ebenso wie sein Pendant Exklusion wissenschaftlich auffallend unbestimmt ist und unterschiedlich verwendet wird.
 
 Diese hier einleitend kritischen Vorbemerkungen sollen dazu anregen, im weiteren Verlauf der Diskussion um KI und Inklusion auch problematische Setzungen und Entwicklungen in Betracht zu ziehen -ganz im Sinne einer kritischen Theorie, die nicht jeden Einsatz von Technologie für ein oftmals kaum expliziertes Ziel als erstrebenswert ansieht (Park 2023). Damit soll an dieser Stelle natürlich nicht behauptet werden, dass Inklusion ein grundsätzlich problematisches Konzept sei. Es ist anzuerkennen, dass mit der Intensivierung des Inklusionsdiskurses insbesondere der systematische Ausschluss von Menschen mit Behinderungen aus gesellschaftlichen Funktionssystemen wie Wirtschaft, Bildung und Öffentlichkeit deutlich an Aufmerksamkeit gewonnen hat und in westlichen Gesellschaften u.a. mit der Verabschiedung der UN-Behindertenrechtskonvention entscheidende Entwicklungen angestoßen wurden, um die Teilhabe von Menschen mit Behinderungen an gesellschaftlicher Produktion und Kommunikation zu verbessern (Wesselmann 2022). Insofern ist gegenüber idealistischen und wenig kritischen Inklusionskonzepten mit Rojas (2024, S. 162) ein radikaleres Verständnis von Inklusion zu formulieren als 'concept of resistance against injustice, inequity, and social inequality, from an intercultural perspective: respect, tolerance, and positive acceptance of othersʼ differences'. Die Notion von Widerständigkeit im Konzept von Inklusion sensibilisiert für Aspekte der Sozialdisziplinierung, die mitunter auch über Technologien wie KI in als inklusiv verstandene Strategien und Handlungen einfließen können. Eine solche Sensibilisierung ist gerade vor dem Hintergrund der zunehmenden Implementierung managerialistischer Verfahren in der Sozialen Arbeit notwendig, die eine Qualitätssteigerung und Kostensenkung sozialer Dienstleistungen versprechen, letztlich aber 'die Herstellung von Nutzbarmachung von Individuen für den Arbeitsmarkt als oberstes Postulat und […] auf diese Weise neue Selektionsbzw. Ausgrenzungsprozesse' hervorrufen (Seifert 2013). Es bleibt also zu klären, welche Funktionen KI für die Durchsetzung normalisierender und disziplinierender Ansprüche in Inklusionsparadigmen einnimmt -und potenziell einnehmen wird.
+
+
+<!-- PAGE 131 -->
+
 
 ## 3 Potenziale, Herausforderungen und Risiken von KI für Inklusion
 
@@ -1557,6 +2078,10 @@ Im Folgenden werden für die einzelnen Ebenen Potenziale, Herausforderungen, Ris
 
 Eine grundsätzliche Herausforderung KI-basierter Technologien in Hinblick auf Inklusion besteht im Training von Modellen mit Datensätzen, die durch
 
+
+<!-- PAGE 132 -->
+
+
 Selektion und Gewichtung gesellschaftlich-normative Kernbestände soziomaterieller Phänomene, sozialer Handlungen und Werte überrepräsentieren und hierdurch marginalisierte Diskurse oder soziale Gruppen unterrepräsentieren. So sind nach Fosch-Villaronga und Poulsen (2022) u.a. beispielsweise Frauen, LGBTQIA+-Communitys, ältere Menschen und Menschen mit Behinderungen in oder durch KI geprägte(n) Technologien systematisch unterrepräsentiert. Solche Verzerrungen ('Bias') entstehen bereits auf Ebene der Auswahl der Daten, des Designs der Modelle (u. a. auch durch die soziale Zusammensetzung der Forschenden 3 und Entwickelnden begründet), des Modelltrainings sowie der Implementierung und Evaluation der Technologien. Eine Metastudie zur Frage der Berücksichtigung von Inklusion und Diversität in KI-Technologien (Shams/ Zowghi/Bano 2023) zeigt auf, dass die Problematik der Unterrepräsentation marginalisierter Gruppen nicht in der Technologie sui generis begründet ist, sondern durch die Menschen verursacht wird, die die Technologie gestalten. So gibt es derzeit zwar vergleichsweise umfangreiches Wissen über die Problematik der mangelnden Inklusivität und Diversität von KI-Technologien, aber kaum konkrete Lösungsansätze, wie diese Technologien verbessert werden können, um Inklusivität und Diversität zu fördern (ebd.). Als Folge der Monopolisierung und Kommerzialisierung von KI-Technologien durch multinationale Unternehmen ist eher zu befürchten, dass die Unterrepräsentation marginalisierter Gruppen bestehen bleibt (vgl. McQuillan et al. 2024). Dies bedeutet allerdings nicht, dass für spezifische Anwendungsfälle, z.B. die Erkennung von Kindeswohlgefährdungen, die Sprachausgabe für Menschen mit Sehbehinderungen oder das Empowerment sozialer Bewegungen, keine hohen Inklusionspotenziale durch KI-Technologien bestehen.
 
 ## b) KI-Technologien zur staatlichen Verwaltung benachteiligter Bevölkerungsgruppen oder Menschen mit Behinderung
@@ -1565,11 +2090,19 @@ Datenbasierte, algorithmische Vorhersagen zu Gefährdungen oder riskantem Verhal
 
 3 Beispielsweise sind nur 14% der Editor:innen des Journals 'Artificial Intelligence' Frauen, sehr wenige stammen aus sogenannten Schwellenoder Entwicklungsländern (Fosch-Villaronga/ Poulsen 2022: 115).
 
+
+<!-- PAGE 133 -->
+
+
 sie abzubauen. Laut Eubanks führen diese Systeme zu einer intensiveren Überwachung und Stigmatisierung benachteiligter Bevölkerungsgruppen. Während dies für einige der von Eubanks beschriebenen Systeme zutrifft und diese unter anderem aufgrund öffentlichen Widerstands bereits wieder deaktiviert wurden, erscheint es dennoch wichtig, im Einzelfall auch mögliche Potenziale solcher Technologien für wohlfahrtsstaatliche Systeme unvoreingenommen zu prüfen. So stellt beispielsweise das Allegheny Family Screening Tool (AFST), das u.a. auf KI-Technologien basierende Gefährdungserkennungen von Kindern in Familien unterstützt, ein unabhängig evaluiertes Verfahren dar, das bei näherer Betrachtung durchaus Potenziale zur Reduktion des 'Practitioner Bias', also von Fehleinschätzungen durch Fachkräfte, aufweist (Goldhaber-Fiebert/Prince 2019). Ein unerwartetes Ergebnis der Evaluation des Systems ist, dass Benachteiligungen aufgrund der ethnischen Zugehörigkeit der Klient:innen in den Abläufen der Organisation dadurch offenbar reduziert werden konnten. Im Fall des AFST werden KI-Technologien zur Entscheidungsunterstützung eingesetzt und nicht als Ersatz für das professionelle Urteil von Fachkräften (vgl. Seelmeyer 2020). Es stellt sich damit die grundsätzliche Frage: Wenn durch den Einsatz von KI-Technologien Kinder -und insbesondere Kinder, die z.B. aufgrund ihrer ethnischen Herkunft ohnehin schon marginalisiert sind -vor familiärer Gewalt geschützt werden können und damit -auch durch wohlfahrtsstaatliche Institutionen (mit)verursachte -soziale Exklusion verhindert werden kann, wäre es dann nicht ethisch fragwürdig, einen fachlich reflektierten und kontinuierlich evaluierten Einsatz von KI-Technologien in Wohlfahrtssystemen kategorisch auszuschließen?
 
 ## c) KI-Technologien zur Unterstützung von Subjekten, um gesellschaftliche Zugänge oder Teilhabe zu ermöglichen
 
 Vielversprechend erscheinen KI-Technologien beispielsweise für Menschen mit Behinderungen, marginalisierte Menschen oder Menschen in der Rehabilitation, um gesellschaftliche Teilhabe zu ermöglichen oder zu verbessern. So besteht mittlerweile eine Vielzahl von KI-basierten Anwendungen zur Unterstützung von Menschen mit Sehoder Sprachbehinderungen (vgl. Burghardt/Kieslinger 2025; Deka et al. 2022; Griffen et al. 2024; Gupta et al. 2024; Montanha et al. 2022; Wang et al. 2023), Menschen mit psychischen Beeinträchtigungen (vgl. Camp et al. 2022; Lejeune et al. 2022; Lenton-Brym et al. 2024; Prescott/Barnes 2024; Zhou et al. 2022), zur Unterstützung marginalisierter Menschen wie isolierter alter Menschen (vgl. Marziali et al. 2024; Salomé/Monfort 2023), devianter Jugendlicher (vgl. Frey et al. 2020) sowie zur Unterstützung von Menschen in Rehabilitation oder medizinischer Langzeitpflege (vgl. Jiang et al. 2024; Lukkien et al. 2023; Medenica et al. 2024). Ohne an dieser Stelle einen Anspruch auf Vollständigkeit der mittlerweile vielfältigen Forschungsund Entwicklungsarbeiten in unterschiedlichen Disziplinen erheben zu können, verdeutlicht ein
+
+
+<!-- PAGE 134 -->
+
 
 erster Überblick, dass KI-Technologien grundsätzlich ein großes Potenzial in verschiedenen Anwendungsfeldern. u.a. in der psychischen Gesundheitsversorgung, assistiven Technologien für Menschen mit sensorischen, kognitiven oder körperlichen Behinderungen sowie in der neuropsychologischen Rehabilitation, haben. KI-Technologien können die menschliche Unterstützung ergänzend verbessern sowie die Zugänglichkeit zu Angeboten und Dienstleistungen erhöhen. Gleichzeitig bestehen wesentliche Herausforderungen für die Realisierung dieser Potenziale, die in der Diskussion dieses Beitrags zusammenfassend aufgegriffen werden. Bislang wenig diskutiert sind allerdings mögliche Problemfelder wie die durch individualisierte KI-Technologien hervorgerufenen Verzerrungen der Wahrnehmungs-, Erfahrungsund Deutungsleistungen der unterstützten Subjekte aufgrund der Konstruktion und des Trainings der Modelle. Schließlich ist im Rückgriff auf die eingangs formulierte inklusionskritische Perspektive immer auch zu hinterfragen, in welche sozialen Systeme mittels KI-Technologien inkludiert werden soll und in welchen Machtkonstellationen Soziale Arbeit auf Subjekte zielende KI-Technologien einsetzt.
 
@@ -1579,6 +2112,10 @@ Ein bislang wenig diskutiertes Anwendungspotenzial von KI-Technologien für Inkl
 
 Empirische Arbeiten zu den tatsächlichen Nutzungsweisen und Konsequenzen des Einsatzes von KI für solche Organisationen und Bewegungen sind jedoch spärlich. Eine erste Studie legen Ibison et al. (2024) zu der Frage vor, welche Potenziale und Herausforderungen NGOs und Graswurzelbewegungen in KI-Technologien für ihre Arbeit sehen. Die Ergebnisse zeigen, dass insbesondere große NGOs und Bewegungen bereits KI-Technologien nutzen, kleineren Organisationen oder Bewegungen jedoch die Ressourcen und Kompetenzen fehlen, um diese zielgerichtet einzusetzen. Die Anwendungsszenarien liegen vor allem in den Bereichen Marketing, Kommunikation sowie dem Abbau von Barrieren (z. B. Alternativtexte für Bilder). Die befragten Mitarbeiter:innen stehen dem Einsatz von KI in ihrer Arbeit durchaus ambivalent gegenüber: 70% der Befragten sorgen
 
+
+<!-- PAGE 135 -->
+
+
 sich um den Datenschutz der Adressat:innen, 63% sind unsicher bezüglich der Genauigkeit der durch KI erstellten Inhalte. Dementsprechend folgern die Autor:innen, dass KI nicht das Wundermittel für die Herausforderungen darstellt, vor denen NGOs und Graswurzelbewegungen heute stehen. Es muss daher auch festgehalten werden, dass die hohen Ideale des Empowerments lokaler Gruppen durch KI häufig durch den überwiegenden Einsatz von KI zur Rationalisierung der Inhaltsproduktion konterkariert werden. Dennoch verweisen erste Projekte wie beispielsweise die KI-gestützte Interpretation von Luftverschmutzungsdaten, die von betroffenen Gemeinschaften gesammelt werden ('crowd data'), auf das Potenzial von KI, technologisch unterstütztes Empowerment gerade in marginalisierten Gemeinschaften zu etablieren (Hsu et al. 2022). Dazu bedarf es weiterer, insbesondere partizipativ angelegter Forschungsund Entwicklungsprojekte, die die Erfolgsbedingungen solcher Projekte beschreiben und schließlich auch KI-Technologien entwickeln und öffentlich verfügbar machen, um soziale Bewegungen und NGOs weltweit weiter zu ermächtigen.
 
 ## 4 Diskussion
@@ -1586,6 +2123,10 @@ sich um den Datenschutz der Adressat:innen, 63% sind unsicher bezüglich der Gen
 Fragen nach den Auswirkungen von KI auf die Inklusion benachteiligter und von Behinderung betroffener Menschen in die Gesellschaft lassen sich nicht mit einfachen Antworten aufklären. KI steht noch am Anfang ihrer technologischen und gesellschaftlichen Ausgestaltung, wesentliche Fragen zum Verhältnis von Menschen und KI, zu den Auswirkungen auf soziale Systeme und die Umwelt werden in ihrer Tragweite erst erkannt und diskutiert. Inklusion als ein gerade in der Sozialen Arbeit häufig hochgradig normativ verwendeter Begriff kann mit ebenso normativ und machtvoll geprägten KI-Technologien potenziell eine unheilvolle Allianz eingehen. Problematisch wäre der Einsatz von KI-Technologien unter dem Duktus der Inklusion, wenn diese als rationalisierende und effizienzsteigernde Maßnahmen eingesetzt werden, um die Spannungen, die durch bestehende und sich verschärfende Inklusionsund Exklusionsverhältnisse in der Gesellschaft entstehen, zu befrieden. In einem radikalen Verständnis (vgl. Rojas 2024), das Inklusion auch als Widerstand gegen soziale Ungerechtigkeit versteht, ist in der Sozialen Arbeit daher stets zu prüfen, ob ein als inklusiv verstandener Einsatz von KI tatsächlich advokatorisch die Bedürfnisse der Adressat:innen aufgreift und diese ermächtigt, oder ob nicht vielmehr durch bestehende Mandate gesellschaftlicher Funktionssysteme Inklusionsund Exklusionsverhältnisse perpetuiert oder gar verschärft werden (vgl. Lenzen 1999; Meseth 2021).
 
 Auch wenn, wie gezeigt, KI-Technologien durchaus hohe Potenziale für die Inklusion benachteiligter oder behinderter Menschen bieten, sind jeweils ethische, soziale und praxisbezogene Fragestellungen eingehend zu prüfen. Folgende
+
+
+<!-- PAGE 136 -->
+
 
 Anforderungen an zukünftige Entwicklungen im Bereich inklusiver KI-Technologien sind aus fachlicher Perspektive zu stellen:
 
@@ -1596,6 +2137,10 @@ Anforderungen an zukünftige Entwicklungen im Bereich inklusiver KI-Technologien
 - Grundlagenforschung: Trotz vielversprechender Entwicklungen gibt es Herausforderungen, die weitere Forschung zu spezifischen Anwendungen, zur Validierung von KI-Technologien und zur Erschließung neuer Technologien (z. B. Open-Source-Modelle) erfordern. Ein weiterer Schwerpunkt sollte auf der Schaffung flexibler KI-Modelle liegen, die an neue Erkenntnisse angepasst werden können. Darüber hinaus besteht ein dringender Bedarf an Grundlagenforschung zur digitalen Ungleichheit, um den Zugang zu und die Nutzung von KI-Technologien u.a. für Menschen mit Behinderungen zu verbessern.
 
 Verstehen wir Inklusion mit Felder (2018) als aktive Partizipation unterschiedlicher Menschen in einem gemeinsamen Bildungsumfeld, wären KI-Technologien entsprechend zur Unterstützung von Bildungsprozessen für die Ausgestaltung demokratisch-inklusiven Handelns zu entwickeln und einzusetzen (vgl. Rashid et al. 2023). KI könnte damit -im Idealfall -als Teil soziotechnischer Systeme zur Ausgestaltung einer kollektiven und partizipatorischen Form (post)humaner Intelligenz beitragen.
+
+
+<!-- PAGE 137 -->
+
 
 ## Literatur
 
@@ -1614,6 +2159,10 @@ Verstehen wir Inklusion mit Felder (2018) als aktive Partizipation unterschiedli
 - Goldhaber-Fiebert, Jeremy D./Prince, Lea (2019): Impact Evaluation of a Predictive Risk Modeling Tool for Allegheny County's Child Welfare Office. Stanford. Stanford University. https://www.alleghenycounty.us/files/assets/county/v/1/services/dhs/documents/alleghenyfamily-screening-tool/impact-evaluation-from-16-acdhs-26\_predictiverisk\_package\_050119\_ final-6.pdf (Abfrage: 15.06.2025).
 - Griffen, Brenna/Lorah, Elizabeth R./Holyfield, Christine/Caldwell, Nicolette/Nosek, John (2024): Evaluating Artificial Intelligence on the Efficacy of Preference Assessments for Preservice Speech-Language Pathologists. In: Journal of Developmental and Physical Disabilities. https:// doi.org/10.1007/s10882-024-09976-2
 
+
+<!-- PAGE 138 -->
+
+
 - Gupta, Shivani/Gupta, Monika/Bal, Satinder (2024): Analysis of AI-enhanced educational tools developed in India for linguistic minorities and disabled people. In: Information Technologies and Learning Tools 100, S. 199-216. https://doi.org/10.33407/itlt.v100i2.5501
 - Habermas, Jürgen (1996): Strukturwandel der Öffentlichkeit. 5. Auflage. Frankfurt a.M. Suhrkamp. Hsu, Yen-Chia/Huang, Ting-Hao ,Kenneth'/Verma, Himanshu/Mauri, Andrea/Nourbakhsh, Illah/ Bozzon, Alessandro (2022) Empowering local communities using artificial intelligence. Patterns 3(3) 100449. https://doi.org/10.1016/j.patter.2022.100449
 - Ibison, Yasmin/Guler, Gulsen/Remfry, Elizabeth/Garcia, Ismael Kherroubi/Barrow, Nicholas/ Duarte, Tania (2024): Grassroots and non-profit perspectives on generative AI. Joseph Rowntree Foundation. https://www.jrf.org.uk/sites/default/files/pdfs/grassroots-and-non-profitperspectives-on-generative-ai-621d1b4e0d671013a489a8f89fc55a2e.pdf (Abfrage: 15.06.2025).
@@ -1630,6 +2179,10 @@ Verstehen wir Inklusion mit Felder (2018) als aktive Partizipation unterschiedli
 - Lenzen, Manuela (2020): Künstliche Intelligenz: Fakten, Chancen, Risiken (Originalausgabe). München: C.H.Beck.
 - Lukkien, Dirk R. M./Nap, Henk Herman/Buimer, Hendrik P./Peine, Alexander/Boon, Wouter P. C./ Ket, Johannes C. F./Minkman, Mirella M. N./Moors, Ellen H. M. (2023): Toward Responsible Artificial Intelligence in Long-Term Care: A Scoping Review on Practical Approaches. In: The Gerontologist 63(1), S. 155-168. https://doi.org/10.1093/geront/gnab180
 - Macsenaere, Michael (2024): Ausblick und Empfehlungen. In: Macsenaere, Michael (Hrsg.): Künstliche Intelligenz in der Kinderund Jugendhilfe. 1. Auflage. München: Ernst Reinhardt, S. 110-119.
+
+
+<!-- PAGE 139 -->
+
 
 - Markelius, Alva/Wright, Connor/Kuiper, Joahna/Delille, Natalie/Kuo, Yu-Ting (2024): The mechanisms of AI hype and its planetary and social costs. In: AI and Ethics 4. https://doi.org/10.1007/ s43681-024-00461-2
 - Marziali, Rachele Alessandra/Franceschetti, Claudia/Dinculescu, Adrian/Nistorescu, Alexandru/ Kristály, Dominic Mircea/Moșoi, Adrian Alexandru/Broekx, Ronny/Marin, Mihaela/Vizitiu, Cristian/Moraru, Sorin-Aurel/Rossi, Lorena/Di Rosa, Mirko (2024): Reducing Loneliness and Social Isolation of Older Adults Through Voice Assistants: Literature Review and Bibliometric Analysis. Journal of Medical Internet Research 26(1), e50534. https://doi.org/10.2196/50534
@@ -1648,6 +2201,10 @@ Verstehen wir Inklusion mit Felder (2018) als aktive Partizipation unterschiedli
 - Shams, Rifat/Zowghi, Didar/Bano, Muneera (2023): Challenges and Solutions in AI for All.
 - Stichweh, Rudolf (1997): Inklusion/Exklusion und die Theorie der Weltgesellschaft. In: Karl-Siegbert Rehberg (Hrsg.): Differenz und Integration: die Zukunft moderner Gesellschaften; Verhandlungen des 28. Kongresses der Deutschen Gesellschaft für Soziologie im Oktober 1996 in
 
+
+<!-- PAGE 140 -->
+
+
 - Dresden; Band 2: Sektionen, Arbeitsgruppen, Foren, Fedor-Stepun-Tagung. Opladen: Westdeutscher Verlag, S. 601-607.
 - Turing, A. M. (1950): Computing machinery and intelligence. In: Mind LIX(236), S. 433-460. https:// doi.org/10.1093/mind/LIX.236.433
 - Wang, Jiaji/Wang, Shuihua/Zhang, Yudong (2023): Artificial intelligence for visually impaired. In: Displays 77,102391. https://doi.org/10.1016/j.displa.2023.102391
@@ -1655,6 +2212,10 @@ Verstehen wir Inklusion mit Felder (2018) als aktive Partizipation unterschiedli
 - Wilson, John (1999): Some Conceptual Difficulties about ,Inclusion'. In: Support for Learning 14(3), S. 110-112. https://doi.org/10.1111/1467-9604.00114
 - World Health Organization (Hrsg.). (2001). International classification of functioning, disability and health: ICF. Geneva. World Health Organization.
 - Zhou, Sijia/Zhao, Jingping/Zhang, Lulu (2022): Application of Artificial Intelligence on Psychological Interventions and Diagnosis: An Overview. In: Frontiers in Psychiatry 13. https://doi.org/10. 3389/fpsyt.2022.811665
+
+
+<!-- PAGE 141 -->
+
 
 ## KI und Alter: Einführung, Potenziale und Herausforderungen 1
 
@@ -1670,6 +2231,10 @@ Künstliche Intelligenz (KI) hat das Potenzial, Alltagsgewohnheiten, soziale Int
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_011
 
+
+<!-- PAGE 142 -->
+
+
 Mehrheit der Älteren KI als nicht relevant für das eigene Leben (Körber-Stiftung 2024).
 
 Vor dem Hintergrund einer weltweiten Alterung von Bevölkerungen -Prognosen zufolge wird im Jahr 2050 etwa ein Viertel der Menschen in Europa und Nordamerika 65 Jahre oder älter sein (United Nations 2019) -stellt sich die Frage, welche Potenziale und Herausforderungen mit der immer stärkeren Verbreitung von KI-basierten Technologien für die Gruppe der älteren Menschen einhergehen. Insbesondere die stark wachsende Gruppe hochaltriger Menschen über 80 Jahre (Eurostat 2020; Neise et al. 2019) rückt dabei in den Fokus. Hochaltrigkeit ist häufiger mit gesundheitlichen und funktionalen Einschränkungen und mit Pflegebedarfen assoziiert (ebd.), und es muss diskutiert werden, welche Rolle KI-basierte Technologien zukünftig auch in der gesundheitlichen und pflegerischen Versorgung alter und sehr alter Menschen spielen können und sollten.
@@ -1679,6 +2244,10 @@ Die Auseinandersetzung mit KI in gerontologischer Forschung und Praxis steht akt
 Ein konsequent kritisches Begleiten der KI-Entwicklung und deren Implikationen für gerontologische Forschungsund Anwendungsprojekte sowie die Profession der Sozialen Arbeit sind geboten und notwendig, weil eine weitere Verbreitung derartiger Systeme zukünftig zu erwarten ist und diese Entwicklung neue ethische und soziale Fragen entstehen lässt.
 
 Ziel dieses Beitrags ist es, hier anzusetzen und einen Überblick über mögliche Potenziale und Herausforderungen von KI für gerontologische Forschung und in der praktischen Arbeit für und mit älteren Menschen zu geben. Dazu wird zunächst ein konzeptioneller Rahmen beschrieben und die Relevanz von Altersund Kohorteneffekten bei der Nutzung digitaler und KI-basierter Technologien dargestellt. Darauf aufbauend werden beispielhaft für verschiedene Lebensbereiche
+
+
+<!-- PAGE 143 -->
+
 
 mögliche Potenziale von KI in diesen Kontexten näher beleuchtet sowie Herausforderungen aufgezeigt. Der Anspruch dieses Beitrags ist es nicht, alle Facetten von KI und Alter umfassend und abschließend zu bearbeiten, sondern es sollen ein erster Überblick zum Thema gegeben und auf dieser Basis Empfehlungen für zukünftige Forschungsund Anwendungsprojektkontexte abgeleitet werden. Dabei werden auch die Ergebnisse eines kürzlich abgeschlossenen Forschungsprojekts an der Pädagogischen Hochschule Heidelberg und Universität Heidelberg zu KI-basierter Sprachassistenz (Projekt KI-Alter -KI-basierte Sprachassistenz für ältere Menschen mit und ohne geistige(r) Behinderung 2 ; Schlomann et al. 2021a) einbezogen sowie auf weitere aktuelle Forschungsprojekte zu KI und Alter verwiesen.
 
@@ -1692,6 +2261,10 @@ Multimorbidität, chronische Erkrankungen sowie sensorische Defizite nehmen im h
 
 2 Das Projekt KI-Alter wurde von 10/2020 bis 6/2024 von der Baden-Württemberg Stiftung im Rahmen des Forschungsprogramms 'Verantwortliche Künstliche Intelligenz' gefördert.
 
+
+<!-- PAGE 144 -->
+
+
 sen physische, soziale und biologische Aspekte und Anforderungen in Studien zur KI-Nutzung und -Aneignung sowie bei der Entwicklung von KI-basierten Technologien berücksichtigt werden, damit sie auch für Ältere mit Einschränkungen nutzbar sind und akzeptiert werden. Gleichzeitig können KI-basierte Technologien dazu beitragen, altersbedingte Einschränkungen zu kompensieren, beispielsweise indem alltägliche Aufgaben automatisiert oder durch Sprachsteuerung erleichtert werden (siehe auch Abschnitt 3 in diesem Beitrag).
 
 ## 2.2 Kohorteneffekte bei Nutzung digitaler und KI-basierter Technologien
@@ -1701,6 +2274,10 @@ Kohorteneffekte der Technologienutzung wurden im Konzept der Technikgenerationen
 ## 3 Potenziale von KI in zentralen Lebensbereichen älterer Menschen
 
 Der Argumentation des achten Altersberichts folgend können verschiedene Lebensbereiche und Handlungsfelder älterer Menschen differenziert werden, in denen sich eine hohe Relevanz von Digitalisierung zeigt (Deutscher Bundestag 2020). In diesem Abschnitt werden dazu die folgenden drei aufgegriffen, für die aufbauend auf den konzeptionellen Vorüberlegungen mögliche (zukünftige) Potenziale von KI-basierten Technologien für Menschen in hohem und sehr hohem
+
+
+<!-- PAGE 145 -->
+
 
 Lebensalter aufgezeigt werden: (1) Wohnen und Mobilität, (2) Soziale Integration und Einsamkeit, (3) Gesundheit, Versorgung und Pflege.
 
@@ -1714,6 +2291,10 @@ Ebenso werden sich zukünftig die Infrastrukturen von Städten und des Verkehrs 
 
 Mobilität im höheren Alter ist ein relevanter Faktor, um Unabhängigkeit, soziale Teilhabe und Lebensqualität aufrechtzuerhalten. In diesem Kontext könnte KI zukünftig beispielsweise durch autonome Fahrzeuge, eine intelligente Verkehrssteuerung oder die Optimierung von Routenplanungen zu sichereren und umweltfreundlicheren Transportlösungen beitragen. Diese Entwicklungen können sich einerseits positiv auf Komfort und Sicherheit auswirken, andererseits
 
+
+<!-- PAGE 146 -->
+
+
 auch Barrierefreiheit für ältere Menschen und/oder Menschen mit eingeschränkter Mobilität fördern.
 
 Studien zeigen, dass ältere Menschen dem autonomen Fahren grundsätzlich positiv gegenüberstehen und Potenziale für stressfreiere Mobilität, für mehr soziale Interaktion und körperliche Aktivität sehen, wobei auch Bedenken bezüglich der Sicherheit, Kosten und Benutzerfreundlichkeit bestehen (Zandieh/Acheampong 2021). Vor allem in ländlichen Regionen, in denen der öffentliche Personennahverkehr nur eingeschränkt verfügbar ist, könnten KI-basierte Mobilitätslösungen zukünftig positive Effekte für Ältere bieten. Geäußerte Bedenken müssen jedoch ernstgenommen und berücksichtigt werden.
@@ -1726,6 +2307,10 @@ In einer systematischen Literaturauswertung mit Fokus auf ältere Menschen mit u
 
 Eine Analyse der tatsächlichen Nutzung eines kommerziellen Sprachassistenten über vier Wochen im Alltag älterer Menschen im Rahmen des Projekts KI-Alter zeigte in diesem Kontext ebenfalls, dass neben der Nutzung von Informationsund Unterhaltungsangeboten auch die Kommunikation mit dem Sprachassistenten selbst, wozu beispielsweise Begrüßungen und Verabschiedungen, Höflichkeitsrituale oder 'Small Talk' gehören, relativ häufig von älteren Personen genutzt wurden (Schlomann et al. 2024). Diese Befunde deuten darauf hin, dass Sprachassistenten von einem Teil der älteren Nutzer:innen als eine Art Gesprächspartner betrachtet werden und eine Strukturierung und Zeitvertreib im Alltag bieten können (ebd.). Es besteht jedoch zugleich die Gefahr, dass
 
+
+<!-- PAGE 147 -->
+
+
 hierdurch versucht wird, menschliche Interaktionen zu ersetzen und die Technologie vermenschlicht wird (Purington et al. 2017). In der Konsequenz könnte die Nutzung von Sprachassistenten somit auch zu einem verringerten Kontakt zu Angehörigen, Sozialarbeitenden oder Pflegepersonen führen, was Einsamkeitsgefühle letztendlich verschärfen könnte (Linnemann/Löhe/Rottkemper 2023). In diesem Kontext durchgeführte Forschungsund Anwendungsprojekte sollten daher stets so positioniert werden, dass die Technologien als Unterstützung und nicht als Ersatz für menschliche Interaktion, Beratung, Betreuung oder eigene Fähigkeiten eingesetzt werden. Eine kritische Begleitung durch professionelle Akteur:innen in Gerontologie und Sozialer Arbeit ist daher geboten.
 
 ## 3.3 Gesundheit, Versorgung und Pflege
@@ -1735,6 +2320,10 @@ Digitale Angebote können dazu beitragen, gesundheitsbezogene Bedarfe niedrigsch
 Das Projekt KIAFlex entwickelt beispielsweise ein KI-gestütztes Assistenzsystem, um das Entlassungsmanagement in Krankenhäusern zu verbessern. Ziel ist es, den Nachsorgebedarf von Patient:innen schon bei der Aufnahme vorherzusagen und durch interaktive KI-Prozesse anzupassen. Virtuelle Sozialarbeiter:innen sollen die Kommunikation mit Angehörigen und die Dokumentation automatisieren, um das Personal zu entlasten. So sollen flexible Entlassungen und eine nahtlose Nachsorge ermöglicht werden (Bundesministerium für Bildung und Forschung 2024). Komplexe Abläufe sowie Entscheidungsprozesse in der Gesundheitsversorgung könnten somit zukünftig durch den Einsatz von KI optimiert werden.
 
 Im Kontext von Sozialer Arbeit werden Potenziale durch Technologien und KI auf den Funktionsebenen Vermittlung, Verarbeitung und Vernetzung beschrieben (Pottharst et al. 2024). Dabei könnten innovative Technologien wie Sprachmodelle, Text Mining oder Entscheidungsunterstützungssysteme Aufgaben wie Dokumentation, Beratung oder Interventionsplanung zukünftig effizienter gestalten, wobei durch neue technologische Entwicklungen auch nicht standardisierte Aufgabenbereiche potenziell unterstützt oder ersetzt werden können. Gleichzeitig sind die tatsächlichen Effekte der aktuellen Technikund KI-Entwicklung für die Soziale Arbeit jedoch aktuell schwer vorherzusagen (ebd.).
+
+
+<!-- PAGE 148 -->
+
 
 Im Pflegebereich könnte KI zukünftig durch Roboter oder intelligente Assistenzsysteme Pflegekräfte unterstützen, beispielsweise bei körperlich anspruchsvollen Aufgaben oder in der Überwachung von Vitaldaten, indem sie Gesundheitsdaten analysiert und frühzeitig Warnsignale erkennt. Zudem könnten KI-basierte Systeme eine bessere Organisation von Pflegeressourcen ermöglichen, was die Versorgung effizienter und kostengünstiger macht und Fachkräfte entlasten kann. Hierbei erscheint es jedoch essenziell, Fragen von vorhandenen Infrastrukturen, Datenschutz und Akzeptanz der beteiligten Akteur:innen von Anfang an zu berücksichtigen.
 
@@ -1746,6 +2335,10 @@ Den beschriebenen Potenzialen stehen relevante Herausforderungen gegenüber, die
 
 Durch eine starke Dynamik in der Entwicklung KI-basierter Technologien besteht die Gefahr einer zunehmenden digitalen Spaltung der Bevölkerung. Neben den in Abschnitt 2 beschriebenen Altersund Kohorteneffekten wurden weitere Zusammenhänge zwischen personenbezogenen Faktoren und der Nutzung sowie Aneignung neuer Technologien im höheren Lebensalter beschrieben, insbesondere in Bezug auf Geschlecht und Bildung. Studien haben gezeigt, dass ältere Männer häufiger Zugang zum Internet haben und eine größere Bandbreite an Online-Aktivitäten ausüben als ältere Frauen (Joiner/Stewart/Beaney 2015; Seifert/Kamin/Lang 2020). Neue Ergebnisse zeigen zwar, dass genderbezogene Unterschiede der Internetnutzung auch bei Älteren rückläufig sind (Bünning et al. 2023), genderspezifische Präferenzen und mögliche Ängste sollten jedoch ebenfalls in Bezug auf die weitere Entwicklung im Kontext von KI-Technologien im
 
+
+<!-- PAGE 149 -->
+
+
 Blick behalten werden. Ältere Personen mit höherem Bildungsniveau haben oft einen besseren Zugang zu Technologien und nutzen diese häufiger (Seifert/Kamin/Lang 2020). Es besteht die Herausforderung, KI-basierte Systeme für Ältere mit unterschiedlichen Bildungsund Wissenshintergründen zugänglich und erklärbar zu machen, damit alle Personen potenziell von deren Weiterentwicklung profitieren können und für relevante Herausforderungen sensibilisiert sind.
 
 Die digitale Spaltung findet auf verschiedenen Ebenen statt (van Deursen/van Dijk 2019). Die erste Ebene der digitalen Spaltung (First Level Digital Divide; van Deursen/van Dijk 2019) betrifft den Zugang . Insgesamt ist der Anteil der Onliner:innen unter älteren Personen ist in den letzten Jahrzehnten stetig gestiegen, aber eine digitale Kluft zwischen jüngeren und älteren Menschen besteht weiterhin fort (Rathgeb et al. 2021; Pew Research Center 2021). Vor allem Ältere in institutionellen Wohnformen haben oft keinen Zugang zum Internet (Schlomann et al. 2020a), was eine zentrale Voraussetzung auch für die Nutzung KI-basierter Technologien darstellt. Dies muss sich zukünftig für einen gerechten Zugang zu KI ändern. Darüber hinaus sind digitale Kompetenzen (Second Level Digital Divide; van Deursen/van Dijk 2019) für Menschen jeden Alters, einschließlich im höheren Lebensalter, unerlässlich, um aktiv an den heutigen Gesellschaften teilzunehmen und somit auch von möglichen KI-Lösungen zu profitieren. Da ältere Personen in früheren Lebensphasen weniger Gelegenheit hatten, Erfahrungen mit digitalen Technologien zu sammeln (Sackmann/Winkler 2013; siehe ebenso Abschnitt 2.2), sind ihre digitalen Fähigkeiten möglicherweise geringer im Vergleich zu der technologischen Kompetenz jüngerer Menschen.
@@ -1755,6 +2348,10 @@ Verschiedene Projekte adressieren die altersbezogene digitale Spaltung mit Bezug
 ## 4.2 Datenschutz und ethische Aspekte
 
 Mit der weiteren Verbreitung von KI stellen sich auch neue datenschutzbezogene und ethische Fragen (Deutscher Ethikrat 2023). KI-basierte Systeme sammeln
+
+
+<!-- PAGE 150 -->
+
 
 kontinuierlich Daten und benötigen große Datenmengen, oft personenbezogener Art, was Rückschlüsse auf den Alltag und persönliche Vorlieben erlauben kann und potenziell die Gefahr eines Datenmissbrauchs bedeutet. Für (ältere) Menschen mit geringerer digitaler Kompetenz und/oder kognitiven Einschränkungen besteht ein erhöhtes Risiko, die Tragweite und Konsequenzen dieser Datenerhebung und -verarbeitung nicht vollständig zu verstehen. Um einen Schutz sensibler (Gesundheits-)Daten zu realisieren, sollte der Umgang mit entsprechenden Daten durch KI-Systeme streng überwacht und reguliert werden, um Missbrauch zu verhindern (Mennella et al. 2024).
 
@@ -1766,6 +2363,10 @@ Zusätzlich können KI-Anwendungen in Arbeitswelt, Personalauswahl und alltägli
 
 Um diesen Herausforderungen zu begegnen, wurden verschiedene Maßnahmen vorgeschlagen, darunter altersgerechte Datensammlungen und eine stärkere Beteiligung älterer Menschen an der Entwicklung der Technologien (World Health Organization 2022). Im professionellen Kontext müssen Qualifizierungsstrategien entwickelt und Ausbildungsprogramme angepasst werden, um Technikkompetenz und -akzeptanz zu schaffen. Professionell Tätige wie Sozialarbeitende sollten dabei ebenfalls in die Entwicklung und Einführung neuer Technologien einbezogen werden, um diese Prozesse kritisch zu begleiten und einen fachlich und ethisch verantwortungsvollen Einsatz anzustreben (Pottharst/ Neumann/Ostrau/Seelmeyer 2024). Aktuell mangelt es jedoch an umfassenden
 
+
+<!-- PAGE 151 -->
+
+
 gesetzlichen Regelungen, die den sicheren Einsatz von KI im Gesundheitsund Sozialwesen gewährleisten. Mennella und Kolleg:innen (2024) betonen daher die Notwendigkeit eines globalen regulatorischen Rahmens, der Datenschutz, Haftungsfragen und ethische Richtlinien berücksichtigt.
 
 ## 5 Zusammenfassung und Ausblick
@@ -1775,6 +2376,10 @@ Vor dem Hintergrund des demografischen Wandels gewinnen Potenziale und Herausfor
 Der gegebene Überblick im vorliegenden Beitrag zeigt zudem, dass technologische Innovationen eng mit gesellschaftlichen Fragen verknüpft sind. Eine verantwortungsbewusste Entwicklung und Anwendung von KI-Technologien sind notwendig, um langfristig positive Effekte zu erzielen. Es erfordert eine umfassende Betrachtung, wie KI nicht nur entwickelt, sondern auch in der gerontologischen und sozialarbeiterischen Praxis umgesetzt wird, um ihre vollen Potenziale auszuschöpfen und gleichzeitig ethische Aspekte zu berücksichtigen.
 
 Zukünftige Forschung sollte sich verstärkt auf die Verbesserung der Zugänglichkeit, Kompetenzentwicklung und Akzeptanz von KI konzentrieren, um die digitale Spaltung zu verringern. Außerdem müssen Datenschutzund ethische Fragen stärker berücksichtigt werden und dabei professionell Tätige, politische Akteur:innen und Techniker:innen einbezogen werden, um Missbrauch und Diskriminierung zu vermeiden und die Akzeptanz zu steigern. Insgesamt erfordert der verantwortungsvolle Umgang mit KI eine bewusste Bekämpfung von Altersvorurteilen, um Diskriminierung zu verhindern und ein höheres Maß an Aufklärung, um älteren Menschen und weiteren relevanten Stakeholder:innen die Vorteile von KI zugänglich zu machen und gleichzeitig für mögliche Risiken zu sensibilisieren. All dies kann jedoch nur vor dem Hintergrund (neuer) regulatorischer Maßnahmen erfolgen.
+
+
+<!-- PAGE 152 -->
+
 
 ## Acknowledgement
 
@@ -1796,6 +2401,10 @@ Das Projekt 'KI-gestützte Sprachassistenz für ältere Menschen mit und ohne Be
 - Deutscher Ethikrat (2023): Mensch und Maschine -Herausforderungen durch Künstliche Intelligenz. Stellungnahme. https://www.ethikrat.org/publikationen/stellungnahmen/mensch-undmaschine/ (Abfrage: 15.06.2025).
 - DiBiWohn (2024): 'Digitale Bildungsprozesse für ältere Menschen in seniorenspezifischen Wohnformen der institutionalisierten Altenhilfe'. https://dibiwohn.org/ (Abfrage: 15.06.2025).
 
+
+<!-- PAGE 153 -->
+
+
 - Eurostat (2020): 'Ageing Europe -Looking at the lives of older people in the EU -2020 edition'. https://ec.europa.eu/eurostat/web/products-statistical-books/-/ks-02-20-655 (Abfrage: 15.06.2025).
 - Even, Christiane/Hammann, Torsten/Heyl, Vera/Rietz, Christian/Wahl, Hans-Werner/Zentel, Peter/Schlomann, Anna (2022): Benefits and challenges of conversational agents in older adults: A scoping review. In: Zeitschrift für Gerontologie und Geriatrie 55(5), S. 381-387.
 - Fachübergreifender Ausschuss Alter und Technik der DGGG (2024): 'Fachtagung 2024: KI in gerontologischer Forschung und Praxis -Bestandsaufnahme und kritische Diskussion'. https://fa-alter-technik.de/2024-tagung-ki-in-gerontologischer-forschung-und-praxis/ (Abfrage: 15.06.2025).
@@ -1812,6 +2421,10 @@ Das Projekt 'KI-gestützte Sprachassistenz für ältere Menschen mit und ohne Be
 - Polidori, Cristina M./Häussermann, Peter (2019): Körperliche Gesundheit und Altersmedizin. In: Hank, Karsten/Schulz-Nieswandt, Frank/Wagner, Michael/Zank, Susanne (Hrsg.): Alternsforschung. Handbuch für Wissenschaft und Praxis. 1. Auflage. Baden-Baden: Nomos, S. 249-284.
 - Pottharst, Bill/Neumann, Alexander/Ostrau, Christoph/Seelmeyer, Udo (2024): Bewältigung des Fachkräftemangels durch technologische Innovation? In: Sozial Extra 48(3), S. 162-167.
 - Purington, Amanda/Taft, Jessie G./Sannon, Shruti/Bazarova, Natalya N./Taylor, Samuel Hardman (2017): 'Alexa is my new BFF'. In: Mark, Gloria/Fussell, Susan/Lampe, Cliff/schraefel, m.c./ Hourcade, Juan Pablo/Appert, Caroline/Wigdor, Daniel (Hrsg.): Proceedings of the 2017 CHI
+
+
+<!-- PAGE 154 -->
+
 
 - Conference Extended Abstracts on Human Factors in Computing Systems -CHI EA ,17. New York, New York, USA: ACM Press, S. 2853-2859.
 - Rathgeb, Thomas/Doh, Michael/Tremmel, Florian/Jokisch, Mario/Groß, Ann-Kathrin (2021): SIMStudie 2021. Senior*innen, Information, Medien. Basisuntersuchung zum Medienumgang älterer Personen ab 60 Jahren. Stuttgart: Medienpädagogischer Forschungsverbund Südwest (mpfs).
@@ -1832,9 +2445,17 @@ Das Projekt 'KI-gestützte Sprachassistenz für ältere Menschen mit und ohne Be
 - United Nations (2019): World Population Prospects 2019: Highlights. UN.
 - van Deursen, Alexander/van Dijk, Jan (2019): The first-level digital divide shifts from inequalities in physical access to inequalities in material access. In: New Media &amp; Society 21(2), S. 354-375.
 
+
+<!-- PAGE 155 -->
+
+
 - Wahl, Hans-Werner/Gerstorf, Denis (2018): A conceptual framework for studying COntext Dynamics in Aging (CODA). In: Developmental Review 50, S. 155-176.
 - World Health Organization (2022): 'Ensuring artificial intelligence (AI) technologies for health benefit older people'. https://www.who.int/news/item/09-02-2022-ensuring-artificial-intelligence(ai)-technologies-for-health-benefit-older-people (Abfrage: 15.06.2025).
 - Zandieh, Razieh/Acheampong, Ransford A. (2021): Mobility and healthy ageing in the city: Exploring opportunities and challenges of autonomous vehicles for older adultsʼ outdoor mobility. In: Cities 112, S. 103135.
+
+
+<!-- PAGE 156 -->
+
 
 ## Mensch, Maschine und Management: KI im Spannungsfeld von Sozialarbeit und Sozialmanagement 1
 
@@ -1852,9 +2473,17 @@ In der Sozialen Arbeit ist der Einsatz von KI in unterschiedlicher Weise denkbar
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_012
 
+
+<!-- PAGE 157 -->
+
+
 Entscheidungsunterstützung (siehe den Beitrag von Masenaere et al. in diesem Band). Trotz der vielfältig denkbaren Möglichkeiten stellt sich der Einsatz von KI in der Sozialen Arbeit insgesamt bisher sehr übersichtlich dar. Gründe dafür liegen neben ethischen Bedenken (siehe den Beitrag von Heffels in diesem Band) gleichsam im Charakter einer 'menschlich-personenzentrierten' Profession (siehe den Beitrag von Dummann in diesem Band), die sich durch die Interaktion verschiedener Individuen innerhalb komplexer sozialer Prozesse auszeichnet (vgl. Linnemann/Löhe/Rottkemper 2023, S. 206). Hinzu kommt ein Mangel an erforderlicher technologischer Infrastruktur und/oder Fachwissen der Fachkräfte, KI-Lösungen zu implementieren und zu nutzen (vgl. Löhe/Aldendorff 2022, S. 167). Die Situation wird durch den Fachkräftemangel verschärft: Fachkräfte haben in einigen Einrichtungen Not damit, das pädagogische Kerngeschäft abzudecken (vgl. Botzum/Löhe 2022, S. 245f.). Eine Studie von Kahl und Bauknecht (2023, S. 215ff.) attestiert den Fachkräften der Sozialen Arbeit gar eine 'psychisch hohe Belastung im Vergleich aller Beschäftigten'. Vor diesem Hintergrund erscheinen Weiterbildungen zu Technologien (wie KI) inklusive Überlegungen zur kritisch-sinnvollen Einbettung in den pädagogischen Alltag schlicht unrealistisch. Gleichzeitig jedoch -und wohl auch vor dem Hintergrund des Fachkräftemangels -wird der Einsatz von KI als Arbeitshilfe in der Praxis zunehmend diskutiert (vgl. Kühn 2021). Das liegt nicht zuletzt an der fortschreitenden Entwicklung von KI. Der Teilbereich von KI des Natural Language Processing, kurz NLP (deutsch: Verarbeitung natürlicher Sprache), spielt dabei eine besondere Rolle für die Soziale Arbeit (vgl. Linnemann/Löhe/Rottkemper 2023). Eine der Hauptfunktionen von KI ist das Imitieren von menschlicher Intelligenz und menschlichem Verhalten. Im Bereich des NLP gelingt es KI-Modellen wie ChatGPT oder Claude zunehmend und mit zum Teil verblüffenden Ergebnissen, Texte maschinell zu generieren, die sich von menschlichen Texten teilweise nicht mehr unterscheiden lassen. Da Sprache und (Imitation von) Kommunikation als ein wesentliches 'Arbeitswerkzeug' in einer neuen Qualität maschinell nachgeahmt werden kann, verwundert die Feststellung nicht, dass Maschinen heutzutage in der Lage sind, 'eine Reihe von Aktivitäten auszuführen, für die in der Vergangenheit menschliche Sozialintelligenz notwendig war' (Pottharst et al. 2024, S. 163). Obwohl Sprachmodelle wertvolle und persönliche Interaktionen nicht angemessen ersetzen können, werden heute mehr Tätigkeiten, als noch vor einigen Jahren angenommen wurde, für automatisierbar gehalten, sowie auch hochqualifizierte Tätigkeiten stärker von KI betroffen sind. Die Folge ist, dass mittlerweile auch zentrale Aufgaben der Sozialen Arbeit bei der Suche nach Automatisierungspotenzialen stärker in den Fokus rücken (vgl. ebd.; vgl. Frey/ Osborne 2023; vgl. Fregin et al. 2023).
 
 Wie stark die Soziale Arbeit betroffen ist und welche Aufgaben von KI unterstützt werden, stellt sich sehr unterschiedlich dar. Gut zu erkennen ist das z.B. an der Studie zu KI in der Sozialwirtschaft. Führungskräfte wurden hier gefragt,
+
+
+<!-- PAGE 158 -->
+
 
 wie sie ihren persönlichen Kenntnisstand zum Thema KI bezeichnen würden. An der Ergebnisgrafik lässt sich eine Gaußʼsche Glockenkurve der Normalverteilung erkennen: Führungskräfte beurteilen ihren Kenntnisstand mehrheitlich als mittelmäßig.
 
@@ -1870,6 +2499,10 @@ Gleichzeitig ist der tatsächliche Einsatz von KI-gestützten Anwendungen in der
 
 Um die unterschiedlichen Auswirkungen und Herausforderungen des KI-Einsatzes in der Sozialen Arbeit besser einordnen zu können, ist es wichtig, die Begriffe Sozialmanagement und Sozialwirtschaft klar voneinander abzugrenzen. Beide Konzepte spielen eine zentrale Rolle bei der Gestaltung und Steuerung sozialer Dienstleistungen, unterscheiden sich jedoch in ihrem Fokus und ihrer Zielsetzung. Während die Sozialwirtschaft das soziale Versorgungsgeschehen in allen seinen ökonomischen Aspekten und damit die Gesamtheit der Einrichtungen und Dienstleistungen umfasst, die personenbezogene soziale Dienstleistungen erbringen (vgl. Wendt 2024, S. 47), bezieht sich der Begriff Sozialmanagement auf die Techniken und Methoden, die innerhalb dieser Organisationen eingesetzt werden, um deren Abläufe effizient zu gestalten und ihre Zielsetzung strategisch zu steuern (vgl. Löhe/Aldendorff 2022, S. 21; vgl. Kohlhoff 2024). Der Begriff Sozialwirtschaft beschreibt damit eine Branche, während der Begriff Sozialmanagement Methoden und Techniken zur Betriebsführung bezeichnet. Auch wenn der KI-Einsatz für die Sozialwirtschaft insgesamt weit-
 
+
+<!-- PAGE 159 -->
+
+
 reichende Implikationen hat -etwa in Bezug auf Finanzierung, strukturelle Rahmenbedingungen oder gesamtgesellschaftliche Auswirkungen neuer Technologien -, liegt der Fokus dieses Beitrags auf dem Sozialmanagement. Der Grund dafür ist, dass hier die konkreten Steuerungsund Implementationsprozesse des KI-Einsatzes innerhalb Sozialer Organisationen gestaltet werden und somit maßgeblich beeinflussen, wie neue Technologien in der Praxis der Sozialen Arbeit genutzt werden.
 
 In dieser Perspektive ist der Einsatz von KI in der konkreten Sozialen Arbeit mit Fragestellungen des Sozialmanagements verbunden, denn die Steuerung einer Organisation ist nicht nur auf administrative Aspekte beschränkt. Vielmehr ist es insbesondere Aufgabe des Sozialmanagements, vor dem Hintergrund der Realisierung eines ideellen Organisationsziels entsprechende Steuerungsentscheidungen zu treffen (vgl. Löhe/Aldendorff 2022, S. 21). Steht für eine Organisation etwa im Raum, ob/wie KI in den konkreten sozialen Diensten -also nicht nur in der Administration -eingesetzt wird, ergeben sich Folgefragen auf mehreren Ebenen: Wie können KI-basierte Technologien die Interaktion mit Klient:innen verbessern, wie können KI-Anwendung bezüglich Hardund Software sowie Schulung der Mitarbeitenden finanziert und eingeführt werden und wie können Ressourcenallokation oder Entscheidungsprozesse innerhalb von sozialen Einrichtungen optimiert werden, ohne dabei ethische und professionelle Standards der Sozialen Arbeit zu gefährden? Dabei sind diese Fragen nicht nur für die direkte Soziale Arbeit relevant, sondern betreffen auch administrative Prozesse. Dazu wird in diesem Beitrag die Unterscheidung 'pädagogisch-fachliche Tätigkeit' (Kerntätigkeiten der Sozialen Arbeit) und 'administrative Tätigkeit' (Verwaltung und Organisation) eingesetzt. Der Einsatz von KI in der Sozialen Arbeit kann sowohl auf der pädagogisch-fachlichen Ebene als auch auf der Ebene der administrativen Tätigkeit Veränderungen bewirken, weshalb das Sozialmanagement in beiden Bereichen Steuerungsentscheidungen treffen muss.
@@ -1879,6 +2512,10 @@ In vorliegenden Ausführungen wird sich insbesondere auf das Sozialmanagement be
 ## 2 KI im Sozialmanagement -Anwendungsfelder und Risikoabschätzung
 
 Im Kontext der zentralen sozialarbeiterischen Aufgabe der Verwaltung und Dokumentation von Hilfen nehmen Tätigkeiten an Umfang, Aufgabenbreite und
+
+
+<!-- PAGE 160 -->
+
 
 Multifunktionalität zu (Ley/Reichmann 2020). Es ist denkbar, dass KI-gestützte Technologien dabei auf unterschiedliche Art und Weise unterstützen können. Einige bekannte und denkbare Beispiele sind die folgenden:
 
@@ -1896,6 +2533,10 @@ Multifunktionalität zu (Ley/Reichmann 2020). Es ist denkbar, dass KI-gestützte
 
 Wird KI in der Sozialen Arbeit eingesetzt, so ist die 'Professionsnähe' einer KI-Anwendung ein wichtiges Kriterium bei der Frage, was genau zu beachten ist und -ganz im Sinne des EU AI Act -welche möglichen Folgen und Risiken dabei entstehen können (zum EU AI Act siehe den Beitrag von Dötterl in diesem Band). Der EU AI Act definiert dazu in Art. 3 Abs. 2, dass das Risiko die 'Kombination aus der Wahrscheinlichkeit des Eintritts eines Schadens und der Schwere dieses Schadens' ist. Zentrale Aufgaben in den Handlungsfeldern der Sozialen Arbeit sind die Dokumentation, Vermittlung, fachliche Beratung, Begleitung und Unterstützung sowie Konzeption, Planung und Organisation (Graßhoff et al. 2018).
 
+
+<!-- PAGE 161 -->
+
+
 Angesichts dieser Aufgaben und Tätigkeiten erscheint es naheliegend, den Einsatz von KI im Sozialmanagement in einem Kontinuum zwischen pädagogischfachlichen Tätigkeiten (Kerntätigkeiten der Sozialen Arbeit) und administrativen Tätigkeit (Verwaltung und Organisation) zu betrachten. Wichtig ist außerdem, ob KI eine Entscheidung trifft oder nicht. Aus diesen Endpunkten lässt sich folgende Grafik ableiten.
 
 Abbildung 2: KI-Einsatz: Risiko für die Profession Sozialer Arbeit KItrifftEntscheidungen
@@ -1905,6 +2546,10 @@ Abbildung 2: KI-Einsatz: Risiko für die Profession Sozialer Arbeit KItrifftEnts
 Quelle: Eigene Darstellung
 
 Während administrative Tätigkeiten mutmaßlich nur einen mittelbaren Einfluss auf die Arbeit mit Menschen in sozialen Diensten haben, ist die Kerntätigkeit der Sozialen Arbeit in der Regel mit der direkten Arbeit am/mit den Menschen verbunden -ein Fehler der KI würde sich als möglicher Schaden direkt auf die Klient:innen der Sozialen Arbeit auswirken. Zwischen diesen beiden Varianten sind Hybridtätigkeiten in der Sozialen Arbeit zu identifizieren, die administrativer Natur sind, jedoch gleichsam einen deutlichen Bezug zur Fachlichkeit Sozialer Arbeit aufweisen (z. B. Chatbots zur Einarbeitung im Onboarding).
+
+
+<!-- PAGE 162 -->
+
 
 ## 2.1 KI in Kerntätigkeiten der Sozialen Arbeit
 
@@ -1924,6 +2569,10 @@ Quelle: Vgl. Garcia v. Character Technologies, Inc. 2024, S. 40
 
 Zwar sagt der Chatbot später auch 'Das kannst du nicht tun! Denk nicht einmal daran!' (vgl. Garcia v. Character Technologies, Inc. 2024, eigene Übersetzung). Es besteht jedoch Spielraum bei den abgesetzten Nachrichten hinsichtlich der Frage, wie der 14-jährige Jugendliche diese aufgefasst haben könnte. Zudem
 
+
+<!-- PAGE 163 -->
+
+
 ist bei dem Rezipienten in diesem Fall festzuhalten, dass im Alter von 14 Jahren die Fiktions-Realitäts-Unterscheidung ggf. noch nicht hinreichend ausgeprägt ist, was eine zusätzliche Besonderheit gegenüber erwachsenen Rezipient:innen eines KI-Chatbots darstellt (vgl. Althaus 2016, S. 11).
 
 ## 2.2 KI in der Administration und Organisation Sozialer Arbeit
@@ -1936,6 +2585,10 @@ Beispiele zum Einsatz von KI in der Administration und Organisation der Sozialen
 
 4 Damit ist nicht ausschließlich eine 'KI-sensible' Kultur gemeint, vielmehr eine insgesamt innovationsfreundliche Kultur, z.B. agile Organisation, Einbezug von Netzwerkpersonen, Arten der Finanzierung usw. (vgl. Hüttemann/Parpan-Blaser 2022, S. 13).
 
+
+<!-- PAGE 164 -->
+
+
 nisationen zeichnen sich berufsund branchenbedingt nicht unbedingt dadurch aus, dass besonders technikaffines Personal beschäftigt wäre. Unabhängig davon wird bei genauerer Betrachtung deutlich, dass 'rein administrative' Tätigkeiten bzw. Aufgaben nur wenig zu identifizieren sind. In Abhängigkeit davon, wie z.B. dokumentiert wird, werden bei der Aufbereitung oder Einsichtnahme der Informationen fachliche Entscheidungen auch in Abhängigkeit davon getroffen, was und wie dokumentiert wurde. Fachkräfte könnten z.B. über eine spezielle Anwendung die Dokumentation in einem Speech-to-Text (STT)-Verfahren zu einem Fall alltagssprachlich unstrukturiert ('frei Schnauze') einsprechen. Anschließend erfolgt eine KI-gestützte Auswertung, die den eingesprochenen Text in geschliffenes 'Dokumentationsdeutsch' übersetzt und auch entsprechend den Dokumentationsvorgaben systematisiert. Fraglich ist jedoch, nach welchen Regeln von 'frei Schnauze' zu 'Dokumentationsdeutsch' übersetzt wird und welche Informationen bei der Systematisierung ggf. auch ausgelassen und ausgefiltert werden. Wenn die KI-gestützte Tagesdokumentation etwa in Einrichtungen der Jugendhilfe später die Grundlage für einen Entwicklungsbericht des:der Jugendlichen und für die Hilfeplanung ist, wird deutlich, wie der vermeintlich fachfernen Aufgabe der Dokumentation ein hoher fachlicher Stellenwert zukommt. Insofern ist zur Diskussion zu stellen, wie viele Tätigkeiten überhaupt ausschließlich administrativer Bedeutung sind.
 
 ## 2.3 KI in Hybridtätigkeit der Sozialen Arbeit
@@ -1943,6 +2596,10 @@ nisationen zeichnen sich berufsund branchenbedingt nicht unbedingt dadurch aus, 
 Es können auch Hybridtätigkeiten identifiziert werden, die zwar nicht direkt an Klient:innen erbracht werden, gleichwohl offensichtlich pädagogisch bedeutsam sind. Ein Beispiel ist neben dem Chatbot im Onboarding (siehe weiter oben) das Projekt der FH Münster, in dem in Zusammenarbeit mit dem Landschaftsverband (LVR) Köln ein Bot entwickelt wurde, der den LVR als Aufsichtsbehörde für Kindertageseinrichtungen dabei unterstützen sollte, Betriebserlaubnisprüfungen von Kindertageseinrichtungen nach §46 SGB VIII vorzunehmen. Konkret ging es dabei darum, dass ein Bot eine Vorprüfung überehmen sollte, inwiefern eingereichte Konzeptionen von Kindertageseinrichtungen den gesetzlichen Vorgaben entsprechen. Dabei handelt es sich um eine administrative Tätigkeit, die nicht direkt an Klient:innen erbracht wird und sowohl einen hoch repetitiven Anteil als auch einen starken Verwaltungscharakter hat. Obwohl es sich um eine administrative Tätigkeit handelt, ist fachliches Wissen erforderlich -denn das Ergebnis dieser Vorprüfung kann maßgeblich beeinflussen, wie die pädagogische Arbeit in der jeweiligen Kindertageseinrichtung gestaltet werden darf.
 
 Die Einteilung in die drei Felder -Kerntätigkeiten, administrative Tätigkeiten und Hybridtätigkeiten -kann ein hilfreiches Instrument sein, um den Einsatz von KI in der Sozialen Arbeit systematisch zu betrachten und erste Einschät-
+
+
+<!-- PAGE 165 -->
+
 
 <!-- image -->
 
@@ -1956,9 +2613,17 @@ Die Einteilung leistet insofern eine wertvolle Orientierung, indem sie hilft, m�
 
 Unter der Annahme, dass immer eine Detailprüfung vorzunehmen ist, welche Auswirkungen im konkreten Anwendungsszenario auf Klient:innen mit dem Einsatz einer KI-Anwendung zu erwarten sind, wird deutlich: Die professionelle Perspektive von Sozialarbeitenden ist unerlässlich, wenn es um den Einsatz von KI-Anwendungen jeder Art in Organisationen der Sozialen Arbeit geht. Aus Perspektive des Sozialmanagements ist (nicht nur) im Rahmen des Personalmanagements neben dem beschriebenen Spannungsfeld auch das Phänomen einer Anthropomorphisierung zu beachten, wenn Fachkräfte mit technologischen Systemen interagieren. Das Personalmanagement ist ökonomisch betrachtet wichtig, da 70-80% der Gesamtkosten von Organisationen der Sozialen Arbeit allein auf das Personal entfallen. Fachlich ist das Personal besonders bedeutsam, denn die Qualität von Sozialer Arbeit als personenbezogener sozialer Dienstleistung hängt besonders von den Fachkräften ab, weil die Dienstleistung im Uno-
 
+
+<!-- PAGE 166 -->
+
+
 actu-Prinzip erbracht wird 5 (vgl. Löhe/Aldendorff 2022, S. 107). Wegen dieser hervorstechenden Bedeutung des Personals -sowohl fachlich wie auch ökonomisch -ist auch die Frage von Bedeutung, wie sich der Einfluss von KI-basierten Systemen auf die Fachkräfte darstellt. Bereits die Einführung von Software wurde 2010 in der Sozialen Arbeit als neuer Aktant in der soziotechnischen Konstellation diskutiert (vgl. Ley 2010). Als Aktant bezeichnet und behandelt die AkteurNetzwerk-Theorie (ANT) menschliche und nichtmenschliche Akteure, also auch Gegenstände und Maschinen (vgl. Kneer 2009, S. 22). In dieser Betrachtung 'handelt' eine Bodenschwelle in einer Tempo-30-Zone als ein 'schlafender Polizist', wenn diese Autofahrende dazu bringt, im Schritttempo zu fahren (vgl. Rammert 2007, S. 25). In diesem Sinne ist eine Software kein unveränderbares Artefakt, sondern vielmehr ein Aktant, der eigensinnig in den Alltag von Nutzenden eingreift, ihn verändert und die Nutzenden zu Handlungen provoziert. Paradigmatisch erscheint hierzu die Äußerung eines Sozialpädagogen aus dem Allgemeinen Sozialen Dienst: 'Ich mache das nur um sozusagen die Software zu beruhigen' (Kreidenweis 2005, S. 46). Eine Anthropomorphisierung wird erkennbar: Die einen beruhigen Klient:innen, andere den Computer (Ley 2010, S. 225). Unter Beachtung der Entwicklung und des zunehmenden Einsatzes von generativen KI-Systemen ist zu erwarten, dass sich Effekte der Anthropomorphisierung erhöhen. Im Jahr 2024 haben sich Large Language Models (LLM) wie ChatGPT zunehmend zu Large Multimodal Models (LMM) weiterentwickelt, die neben natürlicher Sprache (Natural Language Processing, NLP) beispielweise in Texten auch multimodale Informationen wie Bilder, Videos und andere Inhalte verarbeiten und generieren können. Mit dem Launch von ChatGPT-4o ('o' für omni, lateinisch für 'alles') im Mai 2024 und dem Advanced Voice Mode im Oktober 2024 wurden ein weiteres Modell und ein Sprachmodus ausgerollt, das bzw. der spricht, scherzt, singt und Emotionen erkennen kann (Metzmacher 2024). Zudem bezeichnen sich zunehmend neuere KI-Systeme mit 'Ich'. Eine quasisoziale Beziehung zwischen Fachkraft und KI-System wird mit einer verstärkten Anthropomorphisierung des Systems wahrscheinlicher. Als quasisozial werden Beziehungen zwischen Mensch und Maschine bezeichnet, die Merkmale und Funktionen von sozialen Beziehungen zwischen Mensch und Mensch übernehmen (vgl. Linnemann/Löhe/Rottkemper 2024). Damit haben KI-Systeme das Potenzial, zu real wirkenden 'Ansprechpersonen' als digitale, künstliche Kolleg:innen zu avancieren. Erste Überlegungen in diese Richtung gibt es be-
 
 5 Das 'Uno-actu-Prinzip' kann als konstitutives Merkmal Sozialer Arbeit als Dienstleistung angesehen werden, wenn die Soziale Arbeit als 'Begriff einer spezifischen gesellschaftlichen Handlungsform' aufgefasst wird. Es sei darauf hingewiesen, dass im Unterschied dazu das Verständnis Sozialer Arbeit als 'empirische berufliche Verfasstheit' steht, die z.B. auch infrastrukturelle Tätigkeiten beinhaltet, wie z.B. Planung und Konzeptionierung. Hier ist das Uno-actu-Prinzip nicht kennzeichnend (zum weiteren Studium hierzu Schaarschuch 1998, S. 73).
+
+
+<!-- PAGE 167 -->
+
 
 reits, verbunden mit der Einschätzung, dass sprechende Systeme, die möglichst anthropomorph sind, eine höhere Akzeptanz bei Fachkräften versprechen (vgl. Koska 2022).
 
@@ -1968,11 +2633,19 @@ Weiterhin braucht es also den 'Human-in-the-Loop' (HITL) (Tsiakas/Murray-Rust 20
 
 Dieser Gedanke schließt an das von Kritiker:innen viel bemühte Argument an, dass es bei dem Einsatz von technologischen Assistenzsystemen zu einer technologisch dominierten Manipulation der Profession kommen könnte (Bastian 2019, S. 66): Sozialarbeitenden wird nach diesem Argument die professionelle Entscheidung durch ein System abgenommen oder es gibt eine Tendenz dazu, über die eigene fachliche Einschätzung hinweg der Empfehlung eines (objektiv wir-
 
+
+<!-- PAGE 168 -->
+
+
 kenden) KI-basierten Systems zu folgen. Das dahinterliegende Phänomen wird unter dem Begriff 'Automation Bias' (deutsch: Automatisierungsverzerrungen) über die Soziale Arbeit hinaus diskutiert. Diese treten auf, wenn eine übermäßige Abhängigkeit von Entscheidungsunterstützungssystemen zu einer verringerten Wachsamkeit bei der Suche und Verarbeitung von Informationen führt. Das kann sowohl zu Unterlassungsfehlern (wichtige Hinweise übersehen, weil das System sie nicht hervorhebt) als auch zu aktiven Fehlern (Befolgen falscher Systemempfehlungen 6 ) führen. Daher ist die Verminderung des Automation Bias entscheidend, um die fachliche Sicherheit beim Einsatz von KI-basierten Assistenzsystemen in der Sozialarbeit zu erhalten, wo Entscheidungen oft erhebliche Auswirkungen auf das Leben von Menschen haben (Goddard/Roudsari/Wyatt 2012). Ein wichtiges Prinzip zur Verminderung von fachlichen Fehlern in Zusammenarbeit mit KI-Systemen ist die Betrachtung der Datengrundlage und die (damit verbundene) Möglichkeit zu Kompromittierung und Manipulation eines Systems. Der Leitspruch 'Garbage in -Garbage out' (Rawat 2021) drückt treffend aus, dass ohne eine vernünftige Datengrundlage auch ein System keine guten Ergebnisse wird erzeugen können. Damit die Rolle der Daten und eine angemessene Aufbereitung und Verarbeitung dieser durch KI-Systeme auch von Fachkräften der Sozialen Arbeit beurteilt werden können, bedarf es zumindest einiger Grundkenntnisse der technischen Hintergründe. Denn je nach KI-System (wie z.B. Expertensystem oder generativer KI, s. o.) ist der Einsatz zugleich mit unterschiedlichen Risiken verbunden, die beim Einbezug des Systems in (wichtige) Entscheidungen beachtet werden sollten, um Verzerrungen zu verhindern. Verzerrungen sind systematische Fehler oder einseitige Gewichtungen in den Ergebnissen der KI, die durch unausgewogene Trainingsdaten oder algorithmische Strukturen entstehen können (siehe den einführenden Beitrag von Rottkemper in diesem Band). Hinzu kommen neue Bestimmungen durch den EU AI Act, die u.a. die Frage der möglichen Folgen und Risiken (für Menschen) in den Fokus nehmen. Auch aus rechtlicher Sicht wird KI-Kompetenz daher entscheidend und verbindlich mit dem EU AI Act, damit Sozialarbeitende mögliche Folgen für Klient:innen überhaupt abschätzen können. Hinzu kommen die Etablierung einer KI-sensiblen Organisationskultur, die zum Ziel hat, Sozialarbeitenden die Bedeutung von KI für ihre Tätigkeiten näherzubringen, sowie die Vermittlung von konkretem Wissen über KI-Tools.
 
 Damit potenzielle Effizienzgewinne tatsächlich realisieren werden können, ist es jedoch zunächst erforderlich, in entsprechende Technologien und Infra-
 
 6 'Falsche Systemausgaben' müssen in diesem Zusammenhang auch keine sachlichen Falschaussagen sein, sondern können einfach mit einer Wahrscheinlichkeit berechnete akkurate Lösungen sein, die jedoch zum:zur betreffende:n Klient:in eben nicht passen. Das bedeutet, dass die Fachkraft immer auf Basis der Fachlichkeit die Ergebnisse interpretieren und auf Passgenauigkeit für den speziellen Fall prüfen muss.
+
+
+<!-- PAGE 169 -->
+
 
 strukturen zu investieren. Es sind dazu nicht nur die Implementierung von Technologien, sondern auch deren laufender Betrieb und die damit verbundenen Kosten und Aufwände zu berücksichtigen. Darüber hinaus sind die Technikakzeptanz und Technikkompetenz der Fachkräfte entscheidend, um potenziell positive Effekte des Technologieeinsatzes ausschöpfen zu können. Konkret bedeutet das: Die Investitionen in Technik allein reichen nicht aus, es bedarf zusätzlich flankierender Qualifizierungsstrategien und -maßnahmen, damit Fachkräfte die notwendigen Kompetenzen zur Nutzung von KI-Technik erlangen (vgl. Pottharst et al. 2024, S. 165).
 
@@ -1987,6 +2660,10 @@ Quelle: Eigene Darstellung
 Der Einsatz von KI in der Sozialen Arbeit bietet sowohl Chancen als auch Herausforderungen, die sorgfältig abgewogen werden müssen. KI-Technologien wie Sprachmodelle, Text-Mining-Tools oder Entscheidungsunterstützungssysteme haben das Potenzial, Prozesse zu optimieren, administrative Aufgaben zu erleichtern und Fachkräfte zu entlasten. Insbesondere in Zeiten von Fachkräftemangel könnten solche Innovationen eine entscheidende Rolle spielen, um den Arbeitsalltag effizienter zu gestalten und Freiräume für die direkte Arbeit mit Klient:innen zu schaffen.
 
 Gleichzeitig sind die Risiken zu beachten. Besonders in den Kerntätigkeiten der Sozialen Arbeit, die unmittelbar auf die Klient:innen wirken, birgt der Einsatz von KI erhebliche Gefahren, wenn z.B. Fehler oder Verzerrungen auftreten. Die Praxis zeigt, dass unzureichend ausgebildetes Personal, fehlende technische In-
+
+
+<!-- PAGE 170 -->
+
 
 frastruktur und eine mangelnde KI-Kompetenz der Fachkräfte wesentliche Hindernisse darstellen. Hinzu kommen ethische und rechtliche Herausforderungen, wie die Einhaltung professioneller Standards und der Umgang mit anthropomorphen Systemen, die eine quasisoziale Beziehung zwischen Mensch und Maschine wahrscheinlich(er) machen.
 
@@ -2004,6 +2681,10 @@ Hinzu kommen Sorgen (nicht nur) aus der Praxis, dass gewonnene Zeit durch KI-Unt
 - Althaus, Beat (2016): Zwischen Fiktion und Realität -Auswirkungen von Gewaltspielkonsum auf Kinder und Jugendliche. In: Jusletter, S. 1-24. https://doi.org/10.5167/uzh-129336
 - Bastian, Pascal (2019): Sozialpädagogische Entscheidungen. Professionelle Urteilsbildung in der Sozialen Arbeit. Opladen und Toronto: Barbara Budrich.
 - Botzum, Edeltraud/Löhe, Julian (2022): Fachkräfte(mangel) in der Sozialen Arbeit. Daten Fakten Konsequenzen. In: Jugendhilfe 60(4), S. 255-262.
+
+
+<!-- PAGE 171 -->
+
 
 - de Vries, Alex (2023): The growing energy footprint of artificial intelligence. In: Joule 7(10). https:// doi.org/10.1016/j.joule.2023.09.004
 - Faruqe, Farhana/Watkins, Ryan/Medsker, Larry (2021): Competency model approach to AI literacy: research-based path from initial framework to model. https://arxiv.org/pdf/2108.05809.pdf
@@ -2025,6 +2706,10 @@ Hinzu kommen Sorgen (nicht nur) aus der Praxis, dass gewonnene Zeit durch KI-Unt
 - Lehmann, Robert (2024): Herausforderungen der künstlichen Intelligenz in der Sozialwirtschaft. In: Kohlhoff, Ludger (2024): Aktuelle Diskurse in der Sozialwirtschaft V. Wiesbaden: Springer VS. S. 163-174.
 - Ley, Thomas (2010): 'Unser Schreibzeug arbeitet mit an unseren Gedanken.' Oder: Zur Konstruktion des sozialpädagogischen Falles in computerisierten Arbeitsumgebungen. In: Cleppien, Georg/
 
+
+<!-- PAGE 172 -->
+
+
 - Lerche, Ulrike (Hrsg.): Soziale Arbeit und Medien. Wiesbaden: VS Verlag für Sozialwissenschaften, S. 219-233.
 - Ley, Thomas/Reichmann, Ute (2020): Digitale Dokumentation in Organisationen Sozialer Arbeit. In: Kutscher, Nadia/Ley, Thomas/Seelmeyer, Udo/Siller, Friedericke/Tillmann, Angela/Zorn, Isabel (Hrsg.): Handbuch Soziale Arbeit und Digitalisierung. Weinheim und Basel: Beltz Juventa, S. 241-254.
 - Li, Pengfei/Yang, Jianyi/Islam, Mohammad A./Ren, Shaolei (2024): Making AI Less 'Thirsty': Uncovering and Addressing the Secret Water Footprint of AI Models. Cornell University. https:// doi.org/10.48550/arXiv.2304.03271
@@ -2042,9 +2727,17 @@ Hinzu kommen Sorgen (nicht nur) aus der Praxis, dass gewonnene Zeit durch KI-Unt
 - Siebert, Julien (2024): Halluzinationen von generativer KI und großen Sprachmodellen (LLMs). Blog des Fraunhofer-Institut für Experimentelles Software Engineering. https://www.iese. fraunhofer.de/blog/halluzinationen-generative-ki-llm/ (Abfrage: 15.06.2025).
 - Tsiakas, Konstantinos/Murray-Rust, Dave (2022): Using human-in-the-loop and explainable AI to envisage new future work practices. In: Proceedings of the 15th International Conference on
 
+
+<!-- PAGE 173 -->
+
+
 - PErvasive Technologies Related to Assistive Environments, S. 588-594. https://doi.org/10.1145/ 3529190.3534779
 - Wendt, Wolf Rainer (2024): Geschichte der Sozialwirtschaft. In: Grunwald, Klaus/Langer, Andreas/ Sagmeister, Monika (Hrsg.): Sozialwirtschaft. Handbuch für Wissenschaft, Studium und Praxis. Baden-Baden: Nomos. 2. Auflage, S. 47-100.
 - Wolff, Dietmar (2024): KI im Personalmanagement. In: Kreidenweis, Helmut (Hrsg.): KI in der Sozialwirtschaft. Eine Orientierungshilfe für die Praxis. Baden-Baden: Nomos, S. 101-116.
+
+
+<!-- PAGE 174 -->
+
 
 ## Textanalysetechniken auf Tagesdokumentationen zur Prozessassistenz 1
 
@@ -2058,6 +2751,10 @@ In sozialen Dienstleistungsunternehmen werden Berichte und Tagesdokumentationen 
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_013
 
+
+<!-- PAGE 175 -->
+
+
 Betrachtung konzentriert sich dabei auf klassische Verfahren der Künstlichen Intelligenz (KI) und Sprachverarbeitung (Natural Language Processing, NLP), da diese im Gegensatz zu neueren KI-Techniken wie Large Language Models (LLM) den Nutzenden ein erhöhtes Maß an Kontrolle und Selbstbestimmtheit hinsichtlich der Datennutzung bieten. Der Beitrag beinhaltet die Anwendung von Techniken auf einen von der Realität inspirierten Datensatz, um den Prozess zur Vorbereitung eines Hilfeplangesprächs (HPG) zu unterstützen.
 
 ## 1 Einleitung
@@ -2066,6 +2763,10 @@ Die in sozialen Dienstleistungen durchgeführten Tätigkeiten entsprechen wissen
 
 Potenziale zur Verschlankung der Prozesse liegen in der Unterstützung einzelner Prozessschritte, die die Sozialarbeitenden durchzuführen haben, um mehr Fokus auf die Kernarbeit zu erlauben. Dies wollen wir durch eine übersichtliche und zielgerichtete Darstellung des vorhandenen Wissens in einer Reihe von Tagesdokumentationen erreichen. Da in Bastian (2019, S. 66f.) von Bedenken zur Einschränkung des Ermessensspielraums durch erhöhte Formalisierung berichtet wird, ist zu betonen, dass lediglich Unterstützungsprozesse durch digitale Mittel vereinfacht werden, nicht die Kernprozesse. Dafür werden in diesem Beitrag Textanalysetechniken diskutiert, deren Einsatz Möglichkeiten zur Arbeitsentlastung durch Informationsbereitstellung verspricht. Dies erscheint insofern realistisch, als in der Sozialen Arbeit viele Pflichten existieren, Begegnungen mit Klient:innen zu dokumentieren. Dabei entstehen Textdateien, die wertvolles Wissen zum Termin selbst, zur Arbeitsweise, zum Zustand von Klient:innen sowie zu gewählten Maßnahmen enthalten. Diese können zu einer verbesserten Informationsbereitstellung herangezogen werden. Ein Beispiel hierfür ist es, den Prozess zur 'Vorbereitung eines Hilfeplangesprächs' (HPG) mit technischen Mitteln zu unterstützen. Effektiv besteht dieser Prozess darin, eine Zusammenfassung einer Reihe von Tagesdokumentationen über einen sechsbis neunmonatigen Zeitraum zu erstellen. Dies kann unterstützt werden, indem die Informationen automatisch übersichtlich dargestellt werden, ohne der entspre-
 
+
+<!-- PAGE 176 -->
+
+
 chenden Fachkraft die Entscheidungsgewalt oder den Ermessensspielraum zu entziehen.
 
 Ziel dieses Beitrags ist es, Möglichkeiten aufzuzeigen, wie die Inhalte der Tagesdokumentationen digital genutzt werden können, um in der Sozialen Arbeit Assistenzfunktionen bereitstellen zu können. Dafür werden im folgenden Abschnitt 2 zunächst Texte als Datenobjekte in sozialen Dienstleistungen betrachtet, wobei auf die Besonderheiten von Tagesdokumentationen in sozialen Dienstleistungen eingegangen wird. Im dritten Abschnitt werden einige Anwendungsfälle beleuchtet, die mit den Informationen aus Tagesdokumentationen unterstützt werden können, sowie relevante Textanalysetechniken eingeführt. Im vierten Abschnitt kommen die Techniken anhand eines beispielhaften Anwendungsfalls zur Unterstützung der HPG-Vorbereitung zum Einsatz, um die Nutzungspotenziale aufzuführen. Daraufhin werden limitierende Faktoren benannt und Empfehlungen ausgesprochen, wie durch eine strukturierte Dokumentationskultur die Ergebnisgüte der Textanalysetechniken gesteigert werden kann. Schließlich wird im Fazit auch auf die Vorteile der hier vorgestellten Textanalysetechniken gegenüber den oftmals als 'Black Box' agierenden generativen KI-Systemen, die die Basis für viele Chatbots darstellen, eingegangen.
@@ -2073,6 +2774,10 @@ Ziel dieses Beitrags ist es, Möglichkeiten aufzuzeigen, wie die Inhalte der Tag
 ## 2 Tagesdokumentationen als Datenobjekte in sozialen Dienstleistungen
 
 In den Tagesdokumentationen werden im Regelfall alle aus Sicht der Fachkraft relevanten Vorkommnisse die Klient:innen betreffend von den Sozialarbeitenden dokumentiert. Die Gesamtheit der Tagesdokumentationen zu einem:einer Klient:in ist als Fall zu bezeichnen. Wir unterscheiden bei einem Fall und dessen Dokumentation in interne und externe Dokumentationen. Die interne Dokumentation ist relativ wenigen Reglementierungen unterworfen, da diese der internen Reflexion und auch der Informationsweitergabe der Mitarbeitenden untereinander dient, um sich beispielweise für Vertretungsoder Anschlussdienste vorbereiten zu können. Diese Dokumentationen haben zumeist einen sehr individuellen Charakter und enthalten detailliertes Wissen der entsprechenden Sozialarbeiter:innen über den Fall. Die externen Dokumentationen hingegen unterliegen einer starken Reglementierung und werden an die entsprechenden Ämter geschickt und dort geprüft -es besteht eine Dokumentationspflicht, die je nach Kreis oder SGB unterschiedliche Vorgaben hat, unter Umständen sogar handschriftlich auszufüllen ist. Die externen Dokumentationen beinhalten somit meist diejenigen Informationen, die die Ämter lesen wollen, und sind zumeist kurzgehalten. Insgesamt zeigen sich bestimmte wichtige Eckpunkte bei der Beschreibung eines Klient:innenfalls: sowohl die Situation von Klient:innen als auch die Schilderun-
+
+
+<!-- PAGE 177 -->
+
 
 gen, welche Maßnahmen ergriffen und welche Tätigkeiten durchgeführt wurden. Obwohl nicht in jedem Bericht erwähnt, ist das durch die Klient:innen zu erreichende Ziel ebenfalls ein wichtiger Baustein der Fallrepräsentation. Zudem sind involvierte Personen, Orte oder Organisationen (das Netzwerk des:der Klient:in) ebenfalls zentrale Aspekte, um den Fall zu verstehen (vgl. Holz/Fellmann/Lantow 2022). Dabei können unterschiedliche Themen behandelt werden, die teils der Zielstellung entsprechen, teils aber auch kompensatorischen Aufwand 2 beschreiben (vgl. Holz/Lantow/Fellmann 2021).
 
@@ -2093,6 +2798,10 @@ Darüber hinaus gibt es in der Textanalyse weitere Problembereiche, die auch dom
 
 3 Homonyme sind Worte mit der gleichen Schreibweise, aber unterschiedlicher Bedeutung.
 
+
+<!-- PAGE 178 -->
+
+
 ## 3 KI-gestützte Textanalysetechniken zur Lösung domänenspezifischer Anwendungsfälle
 
 In der Sozialen Arbeit lassen sich etliche Potentiale zur Realisierung von Assistenzfunktionen finden, in denen Texte als Datengrundlage fungieren. Beispielhafte Anwendungsfälle sind die Früherkennung von Krisensituationen, das Vorschlagen von Expert:innen, die bereits ähnliche Fälle betreut haben, oder das Empfehlen von Tätigkeiten, die bereits in der Vergangenheit bei ähnlichen Situationen durchgeführt wurden.
@@ -2105,6 +2814,10 @@ Named Entity Recognition (NER) ist eine Technik, die die Entitäten in Texten er
 
 Mit dem Part-of-Speech (PoS)-Tagging werden die einzelnen Teile eines Satzes (in der Regel Wörter) mit ihrer Wortart bzw. ihrer grammatikalischen Funktion innerhalb des Textes automatisch annotiert (z. B. 'fahren' ist ein Verb). Weiterhin ist es möglich, Verbindungen der Wörter untereinander einzusehen, um grammatikalische Bezüge herauszustellen. Das PoS-Tagging gibt dem Text ein
 
+
+<!-- PAGE 179 -->
+
+
 Format, das durch gezielte Suche nach bestimmten Wortarten oder syntaktischen Abhängigkeiten ausgenutzt werden kann (vgl. Chiche/Yitagesu 2022).
 
 In der Sentimentanalyse werden Texte in Kategorien eingeordnet (klassifiziert), um negativ oder positiv formulierte Texte unterscheiden zu können. Dies wird beispielsweise angewendet, um Hassreden auf sozialen Plattformen zu erkennen (vgl. Subramanian et al. 2023). Die simpelste Form der Sentimentanalyse besteht im Aufrechnen von positiv konnotierten Wörtern (z. B. gut, schön, wunderbar) und negativ konnotierten Wörtern (z. B. schlecht, böse), sodass ein zählbares Endergebnis für den gesamten Text herauskommt. Bei dieser Herangehensweise ist besonders auf verstärkende (sehr, überaus) und verneinende Satzstrukturen zu achten.
@@ -2114,6 +2827,10 @@ Die Themenmodellierung ermöglicht es, zum einen unterschiedliche Themen in eine
 Jede dieser Techniken erfordert eine Reihe unterschiedlicher Vorverarbeitungsschritte, etwa die Stoppwortreduktion (das Herausfiltern von häufigen und inhaltlich unbedeutenden Wörtern wie 'und'), Stammwortbildung (Reduktion von Flexionsformen) oder das generelle Kleinschreiben aller Wörter, damit diese für die Maschine vergleichbar und interpretierbar bleiben (vgl. Kowsari et al. 2019).
 
 Ebenso können diese Techniken entweder mittels Verfahren des Maschinellen Lernens oder mit regelbasierten Verfahren realisiert werden (eine Einführung in die verschiedenen Methoden der KI siehe im Beitrag von Rottkemper in diesem Band). So achten beispielsweise regelbzw. wörterbuchbasierte NER-Systeme auf großgeschriebene Wörter oder vorher bestimmte Buchstabenreihenfolgen, um Namen zu extrahieren, die in einem Glossar vorkommen. NER-Systeme, die auf Maschinellem Lernen basieren, lernen hingegen gewisse Muster zur Erkennung von Namen aus Datensätzen, in welchen die Texte mit Entitäten manuell annotiert wurden. Dabei werden weitere Parameter betrachtet, beispielsweise die Position im Text, die Schreibweise oder gewisse Bezugswörter etc. (vgl. Aggarwal 2018, S. 424ff.). Dies hat einerseits den Vorteil, dass der syntaktische Kontext im Text betrachtet wird und auch ungewöhnliche oder falsch geschriebene Namen erkannt werden können. Andererseits ist die Genauigkeit geringer, wenn sich der zu analysierende Text zu sehr vom Trainingsmaterial unterscheidet (vgl. Schmitt et al. 2019). Um bei regelbasierten Verfahren so viele Ausreißer und Sonderfälle wie möglich abdecken zu können, entstehen mitunter umfangreiche und ggf. komplexe Regelwerke, die mehr Kontrolle ermöglichen, deren Pflege jedoch ma-
+
+
+<!-- PAGE 180 -->
+
 
 nuellen Aufwand bedeutet. Generell ist für eine höhere Genauigkeit der Ergebnisse eine Anpassung der Techniken auf die Domäne notwendig -sei es durch das Trainieren auf domänenspezifische Texte oder das Herleiten domänenspezifischer Regeln. Selbstverständlich ist es für die Anwendung von Textanalysetechniken notwendig, dass die Texte in digitaler Form vorliegen und die Reihenfolge (z. B. anhand der Datumsangaben) nachvollzogen werden kann. Jedoch ist eine Genauigkeit von 100% nicht zu erwarten (vgl. ebd.).
 
@@ -2126,6 +2843,10 @@ Zur Analyse des Falls wird im Folgenden zunächst der gesamte Hilfeverlauf betra
 ## 4.1 Analyse und Repräsentation des Hilfezeitraums
 
 Der gesamte Hilfezeitraum lässt sich auf mehrere Arten darstellen. Eine einfache Vorgehensweise liegt zunächst im Zählen, Gruppieren und Auflisten der vorhan-
+
+
+<!-- PAGE 181 -->
+
 
 denen Wörter, welche mittels des PoS-Taggings und des Tools SpaCy 4 aufbereitet und mit entsprechenden Wortarten versehen wurden. Wenn es Sozialarbeitende interessiert, welche Tätigkeiten in einem Zeitraum durchgeführt wurden, kann man dies grob durch die vorhandenen Verben approximieren. In Tabelle 1 ist die Liste vorhandener Verben in Normalform zu finden, geordnet nach Anzahl der Vorkommnisse (n).
 
@@ -2151,6 +2872,10 @@ Personen ({'Lisa': 39, 'Lisas': 3, 'Lisa Müller': 1, 'Sarah': 1, 'Lisas Medienk
 
 5 https://spacy.io/api/entityrecognizer (Abfrage: 15.06.2025)
 
+
+<!-- PAGE 182 -->
+
+
 Orte ({'Familienkonflikt': 2, 'Schultheatergruppe': 1, 'Familienkommunikation': 1, 'Online-Mobbing': 1, 'Einnahmeplan': 1})
 
 Hier ist zu sehen, dass hauptsächlich die fiktive Klientin in unterschiedlichen Variationen erkannt wurde, ebenso vereinzelt Personen des Umfelds. Mit Blick auf die Orte ist höchstens die 'Schultheatergruppe' als ein solcher anzusehen. In beiden Kategorien lassen sich Terme finden, die durchaus wichtige Aspekte des Falls darstellen können, jedoch fälschlicherweise als Personen oder Orte klassifiziert wurden.
@@ -2166,6 +2891,10 @@ Quelle: Eigene Darstellung)
 Eine weitere Möglichkeit des graphischen Verlaufsüberblicks liegt in der Themenmodellierung, also der automatischen Aufteilung des Textes in verschiedene Themen. Abbildung 2 zeigt anhand eines realen Chatverlaufs zwischen Betreuer:in und Klient:in, welche Themen zu welchem Zeitpunkt des Hilfeverlaufs in welchem Umfang besprochen wurden. Die Themen selbst werden durch die Wörter definiert, die mit der höchsten Wahrscheinlichkeit zu diesem Thema gehören. Zu sehen ist hier, dass bestimmte Themen wie Thema 1, 2 und 3 (Technik, Wahrnehmung, Schule) regelmäßig zu bestimmten Zeitpunkten auftreten, Thema 4 (Praktikum) viele Anteile der Kommunikation in der Mitte der Betreuung in
 
 6 https://textblob-de.readthedocs.io/en/latest/ (Abfrage: 15.06.2025)
+
+
+<!-- PAGE 183 -->
+
 
 Anspruch nahm und Thema 5 (Selbstsorge) 7 konstant behandelt wurde. Wir nennen diese Darstellung Themendrift, um den Wechsel von Themen in einem Zeitraum zu verdeutlichen.
 
@@ -2184,6 +2913,10 @@ Eine Tagesdokumentation lässt sich durch das PoS-Tagging bereits so vorstruktur
 7 Die Themen wurden von den Autor:innen selbst benannt. Der Algorithmus führt lediglich repräsentative Worte des jeweiligen Themas auf.
 
 8 https://spacy.io/api/dependencyparser (Abfrage: 15.06.2025)
+
+
+<!-- PAGE 184 -->
+
 
 Abhängigkeiten zwischen den einzelnen Teilen eines Textes dargestellt. Diese Verbindungen werden genutzt, um die relevanten Informationsträger zu extrahieren. Eine simple Variante der Wissensextraktion liegt in der Subjekt-PrädikatObjekt (SPO)-Tripel-Bildung. Dabei werden ausgehend von einem Verb lediglich die Verbindungen im Abhängigkeitsbaum zum Subjekt (sb) und zum Objekt (oa, oc) des Verbs nachvollzogen und herausgefiltert.
 
@@ -2205,6 +2938,10 @@ Daraus entsteht eine Wissensbasis zur Dokumentation und ggf. des gesamten Falls 
 
 Die aufgeführten Techniken können genutzt werden, um dem:der Sozialarbeiter:in Entlastung bei der Informationssuche zu verschaffen, sofern das HPG vorbereitet wird. Die hier präsentierten Lösungen vereinfachen die Texte im Sinne
 
+
+<!-- PAGE 185 -->
+
+
 der Übersichtlichkeit, weisen auf Besonderheiten hin, bieten die Möglichkeit zur Gesamtbetrachtung des Falls und können als Hilfe zur Navigation in den Inhalten betrachtet werden, beispielweise durch die Aufführung von Visualisierungen oder Schlüsselwörtern. Die Techniken bieten aus einer großen Menge Text eine Vorfilterung an und erlauben den Betreuenden, Muster und Veränderungen zu erkennen und entsprechend dieser gezielt weiterzuarbeiten; Interpretation und Einordnung der Informationen obliegen jedoch stets der Fachkraft.
 
 Die extrahierten Informationen können dementsprechend genutzt werden, um schneller eine Auskunftsfähigkeit über den Fall zu erlangen sowie um Kernpunkte (wie z.B. Meilensteine) des Hilfeplans ausfüllen zu können. Es hilft dem:der Sozialarbeiter:in, sich auf wichtige Teile des Falls zu fokussieren. In Tabelle 2 sind exemplarische Fragestellungen aufgeführt, die der:die Betreuer:in während eines HPG möglicherweise zu beantworten hat. Entsprechend der Fragestellung sind mögliche Ansätze aufgeführt, um dessen Beantwortung zu unterstützen.
@@ -2223,6 +2960,10 @@ Quelle: Eigene Darstellung
 
 Fragestellung (1) in Tabelle 2 ist zusätzlich durch einen manuellen Abgleich mit der Zielstellung zu beantworten. Die Schlüsselwortextraktion erkennt für die Aussage des Satzes relevante Wörter, ist jedoch besonders dann effektiv, wenn Begriffe für z.B. das individuelle Befinden des:der Klient:in vorher von der Fachkraft definiert werden; dies erlaubt die gezielte Suche nach individuell passenden Begriffen. Wichtig ist bei der Beantwortung der Fragen, Veränderungen der Häufigkeiten über den Betreuungszeitraum zu beobachten. So kann es beispielweise
 
+
+<!-- PAGE 186 -->
+
+
 ein Zeichen für gelöste Konflikte sein, wenn bestimmte Entitäten wie schwierige Mitschüler:innen mit der Zeit immer weniger genannt werden.
 
 ## 5 Limitierende Faktoren und domänenspezifische Verfeinerung
@@ -2232,6 +2973,10 @@ Die Nutzung der vorgestellten Techniken ist in einem realen Umfeld abhängig von
 Diese Unzulänglichkeiten könnten durch ein individuelles Training auf Datensätze der Sozialen Arbeit gelöst werden. Die KI-Modelle wären dann auf die Bedürfnisse der Domäne ausgerichtet und könnten die Anwendungsfälle besser unterstützen. Als simples Beispiel kann die Sentimentanalyse in ihrer ursprünglichen Ausrichtung Texte als positiv oder negativ konnotiert anhand basaler Wörter wie 'gut' oder 'schlecht' erkennen. Zum einen kann für die Domäne sozialer Dienstleistungen ein deutlich präziseres Vokabular etabliert werden, das entweder alarmierende Wörter beinhaltet oder solche, die für eine gute Entwicklung stehen. Zum anderen ist die Definition eigener Kategorien wie 'Krisensituation', 'Verbesserung' oder 'Schule' mit entsprechenden Schlüsselund Signalwörtern möglich, um die Techniken an die Bedürfnisse der Anwendenden anzupassen. Ein solches domänenspezifisches Vokabular kann je nach Kategorienanzahl, Teamgröße, Anwendungsfällen oder Worthäufigkeiten zu einem großen, manuellen Aufwand führen. Ebenso hat das Training von domänenspezifischen KI-Modellen hohe Anforderungen an Datenmenge und Datengüte (vgl. Holz/Lantow/ Fellmann 2021; Vogl 2020).
 
 Der erste Schritt zu domänenspezifischem Training liegt daher zunächst in der Definition der Zielstellung durch die Beantwortung von Fragestellungen wie: Welche Anwendungsfälle sollen unterstützt werden? Welche Informationen werden aus den Tagesdokumentationen benötigt, um die Anwendungsfälle zu unterstützen? Daraufhin ist die Annotation der eigenen Tagesdokumentationen notwendig, beispielsweise durch Verschlagwortung. Im Zuge des Trainings er-
+
+
+<!-- PAGE 187 -->
+
 
 lernt das KI-Modell Sprachmuster und repräsentative Worte und ordnet sie dem Schlagwort zu. Dies ermöglicht beispielweise die Suche von Berichten anhand der Schlagworte.
 
@@ -2244,6 +2989,10 @@ Wir sehen Potenziale in der gezielten Extraktion und Strukturierung des Wissens,
 Die Techniken haben ebenfalls das Ziel, das unstrukturierte Medium 'Text' mit Struktur und Format anzureichern, um Weiterverarbeitung zu ermöglichen. Mit der Grundlage eines strukturierten Datenformats ist die Anwendung weiterer Verfahren denkbar und somit auch die Unterstützung komplexerer Anwendungsfälle. So planen wir in Zukunft, die Ähnlichkeit von Texten zu berechnen, um beispielsweise die Nähe von Aussagen zur Zielstellung der Betreuung zu ermitteln oder um bereits durchgeführte und erfolgreiche Lösungen aus der Vergangenheit für ähnliche Probleme vorzuschlagen.
 
 Um Ergebnisse in der Zukunft zu verbessern, ist die Strukturierung von Berichten z.B. durch Verschlagwortung notwendig; allerdings sollten sich dafür niedrigschwellige Konzepte finden, die Sozialarbeitende nicht zusätzlich belasten, sondern die die Arbeit bereichern und Dokumentationsaufwand reduzieren,
+
+
+<!-- PAGE 188 -->
+
 
 sodass mehr Ressourcen für die Arbeit mit den Klient:innen zur Verfügung stehen.
 
@@ -2266,12 +3015,20 @@ sodass mehr Ressourcen für die Arbeit mit den Klient:innen zur Verfügung stehe
 - Isegran, Henry/Kuvene, Mats/Breunig, Karl Joachim (2022): A bibliometric analysis deconstructing research on how digitalisation affects knowledge workers. In: ECKM 23(1), S. 542-551. https:// doi.org/10.34190/eckm.23.1.395
 - Kowsari, Kamran/Meimandi, Jafari/Heidarysafa, Mojtaba/Mendu, Sanjana/Barnes, Laura/ Brown, Donald (2019): Text Classification Algorithms: A Survey. In: Information 10(4), S. 150. https://doi.org/10.3390/info10040150
 
+
+<!-- PAGE 189 -->
+
+
 - Podo, Luca/Ishmal, Muhammad/Angelini, Marco (2024): Vi(E)va LLM! A Conceptual Stack for Evaluating and Interpreting Generative AI-based Visualizations. https://arxiv.org/pdf/2402.02167
 - Rasmussen, Stig Hebbelstrup Rye/Bor, Alexander/Osmundsen, Mathias/Petersen, Michael Bang (2021): Super-unsupervised text classification for labeling online political hostility. https://doi. org/10.31234/osf.io/8m5dc
 - Schmitt, Xavier/Kubler, Sylvain/Robert, Jeremy/Papadakis, Mike/LeTraon, Yves (2019): A Replicable Comparison Study of NER Software: StanfordNLP, NLTK, OpenNLP, SpaCy, Gate. In: Alsmirat, Mohammad/Jararweh, Yaser (Hrsg.): 2019 Sixth International Conference on Social Networks Analysis, Management and Security (SNAMS). Granada, Spain, October 22-25, 2019. 2019 Sixth International Conference on Social Networks Analysis, Management and Security (SNAMS). Granada, Spain, 10/22/2019-10/25/2019. Institute of Electrical and Electronics Engineers. Piscataway, NJ: IEEE, S. 338-343.
 - Siegel, Melanie/Bond, Francis (2021): OdeNet: Compiling a GermanWordNet from other Resources. In: Proceedings of the 11th Global Wordnet Conference. University of South Africa (UNISA): Global Wordnet Association, S. 192-198. https://aclanthology.org/2021.gwc1.22 (Abfrage: 15.06.2025).
 - Subramanian, Malliga/Easwaramoorthy Sathiskumar Veerappampalayam/Deepalakshmi, G./ Cho, Jaehyuk/Manikandan, G. (2023): A survey on hate speech detection and sentiment analysis using machine learning and deep learning models. In: Alexandria Engineering Journal 80, S. 110-121. https://doi.org/10.1016/j.aej.2023.08.038
 - Vogl, Thomas M. (2020): Artificial Intelligence and Organizational Memory in Government: The Experience of Record Duplication in the Child Welfare Sector in Canada. In: ACM International Conference Proceeding Series. https://doi.org/10.1145/3396956.3396971
+
+
+<!-- PAGE 190 -->
+
 
 ## Aktennotizerstellung in der Sozialen Arbeit durch Künstliche Intelligenz -Erkenntnisse aus einem Mixed-Method-Forschungsprojekt 1
 
@@ -2283,6 +3040,10 @@ Keywords: Künstliche Intelligenz (KI), Automatisierung, Aktennotiz, Soziale Arb
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_014
 
+
+<!-- PAGE 191 -->
+
+
 ## 1 Einführung 2
 
 In der praktischen Sozialen Arbeit ist das Schreiben von Berichten und Aktennotizen ein wesentlicher Bestandteil des Berufsalltags. Es dient der Dokumentation von Fallverläufen der Klient:innen, der effektiven Kommunikation zwischen Fachkräften sowie der Rechenschaftspflicht gegenüber Adressat:innen und anderen Institutionen. Aktennotizen dokumentieren Interaktionen, Einschätzungen und Fortschritte der Adressat:innen. Diese Notizen sind unerlässlich für die Erstellung präziser Fallakten, die Ausarbeitung von Unterstützungsplänen und die Sicherstellung einer kontinuierlichen, zielgerichteten Betreuung. Aus rechtlichen, ethischen und praktischen Gründen sind Aktennotizen von großer Bedeutung für die Fachpraxis. Daher sind qualitative hochwertige Aktennotizen äußert wichtig. Mittlerweile sind die Einrichtungen zur digitalen Falldokumentation übergegangen. Das genaue Ausmaß der Arbeitszeit, die für das Schreiben von Aktennotizen aufgewendet wird, und die Bewertung dieses Teils des Arbeitsalltags durch Fachkräfte wurden bisher hauptsächlich im englischsprachigen Raum untersucht (vgl. z.B. Lillis/Leedham/Twiner 2020; MacAlister 2022; Pascoe/Waterhouse-Bradley/McGinn 2022). In einer Studie aus der Schweiz wurde festgestellt, dass die wahrgenommene und tatsächliche Belastung durch administrative Aufgaben je nach Handlungsfeld und Kontext variiert (Plafky et al. 2025).
@@ -2292,6 +3053,10 @@ Die Schwierigkeit, vollständige und qualitativ hochwertige Aktennotizen in der 
 In der EU und der Schweiz gelten seit einigen Jahren strenge Datenschutzbestimmungen. Diese sollen den verfassungsmäßigen, grundrechtlichen Anspruch auf informationelle Selbstbestimmung und den Schutz der Persönlichkeit gewährleisten. Dies spiegelt sich in verschiedenen Verordnungen und Gesetzen
 
 2 Zur sprachlichen Verbesserung des Textes wurden ChatGPT und Microsoft Copilot verwendet.
+
+
+<!-- PAGE 192 -->
+
 
 wider (Europäische Datenschutzkonvention des Europarates, DatenschutzGrundverordnung der EU (DSGVO), Eidgenössisches Datenschutzgesetz (DSG), kantonale Datenschutzgesetze etc.). Die Autonomie der Betroffenen sowie der Schutz vor Missbrauch persönlicher Daten und Diskriminierung durch Datenverarbeitung stehen hierbei im Mittelpunkt (vgl. Mösch Payort/Pärli 2022). (Weitere Details zum Datenschutz in der Sozialen Arbeit finden sich auch im Beitrag 'KI und IT-Sicherheit und Datenschutz' von Jan Pelzl in diesem Band).
 
@@ -2305,6 +3070,10 @@ Im Rahmen des Projekts 'Automatisierte Erstellung von Aktennotizen durch eine KI
 
 Die KI-Anwendung wurde im Prozess mittels Usability-Tests (vgl. Dumas/ Reddish 1992; Barnum 2019) auf Praxistauglichkeit, technische Tauglichkeit, Nutzerfreundlichkeit und Qualität überprüft. Usability-Tests umfassten im Entwicklungsprozess Tests mit drei Fachkräften der Sozialen Arbeit in den Räumlichkeiten der Hochschule. Nach der Fertigstellung der KI, in die die Rückmeldungen der drei Personen aus unterschiedlichen Handlungsfeldern
 
+
+<!-- PAGE 193 -->
+
+
 eingeflossen sind, wurde die KI-Anwendung in einer Einrichtung der Sozialen Arbeit mehrere Tage von acht Personen vor Ort getestet. Im Anschluss wurden durch eine Fokusgruppe per Microsoft Teams die Erfahrungen mit vier Personen reflektiert und mit der Template-Analyse-Methode (vgl. Brooks et al. 2015) ausgewertet. Bei den Usability-Tests wurde auf Einhaltung der forschungsethischen Standards der Sozialen Arbeit (vgl. Franz/Unterkofler 2021) geachtet.
 
 Um den strengen Datenschutzvorgaben gerecht zu werden, wurde diese KI-Anwendung als Stand-Alone-Lösung entwickelt, d.h. ohne Anbindung an Server oder das Internet. Die Schnittstellenproblematik zwischen der KI-Anwendung und einer Fallführungssoftware ist in diesem Proof-of-Concept-Projekt nicht bearbeitet worden und wird durch eine kommerzielle Anwendung gelöst werden müssen, da sehr viele unterschiedliche Fallführungssoftware in den Einrichtungen in Gebrauch sind und für jede Software eine eigene Schnittstellenlösung erarbeitet werden muss. In der aktuellen Version ist es notwendig, die Notizen per Copy-and-Paste zu übertragen.
@@ -2314,6 +3083,10 @@ Während des Projekts kam die Frage auf, ob es möglich wäre, das gesamte Gespr
 Diese Applikation ermöglicht es Fachkräften, unstrukturierte Notizen durch Spracheingabe zu erfassen. Die aufgenommene Sprache wird mittels eines sogenannten Speech-to-Text (STT)-Modells in ein unstrukturiertes Transkript umgewandelt. Dieses Transkript, zusammen mit der gewünschten Struktur für die resultierende Fallnotiz, dient als Eingabe für ein zweites Modell, das allgemein als 'Large Language Model' (LLM) (siehe auch den Beitrag von Rottkemper in diesem Band) bekannt ist. Die Spracheingabe und somit das Transkript können unstrukturiert und in Alltagssprache verfasst sein, da das LLM in der Lage ist, die relevanten Fakten aus dem Transkript zu identifizieren und zusammenzufassen. Im letzten Schritt generiert das LLM daraus die strukturierte Fallnotiz. In Abbildung 1 ist der Ablauf schematisch dargestellt.
 
 Fallnotizen enthalten sensible personenbezogene Daten, die als privat und vertraulich gelten. Entscheidend bei deren Verwendung und Aufbewahrung ist, diese Daten angemessen zu schützen und die Kontrolle über den Daten-
+
+
+<!-- PAGE 194 -->
+
 
 Abbildung 1: Schematische Darstellung der KI-unterstützten Erfassung von Fallnotizen
 
@@ -2327,6 +3100,10 @@ Darüber hinaus ist oft unklar, ob externe LLM-Dienstanbieter die Daten aufbewah
 
 Die für diesen Prototypen verwendete lokale Hardware kann vollständig offline gehalten werden, da die Anwendung keine Verbindung zum Internet benötigt, um die Fallnotizen zu erstellen. Dies bietet eine zusätzliche Sicherheit, indem verhindert wird, dass Daten die Hardware verlassen. Mit diesem Ansatz wird sichergestellt, dass alle sensiblen Daten innerhalb der Organisation bleiben und nicht an externe LLM-Dienste übermittelt werden müssen.
 
+
+<!-- PAGE 195 -->
+
+
 Ein limitierender Faktor beim Einsatz von Sprachmodellen auf eigener Hardware sind die verfügbaren Ressourcen. Bekannte Sprachmodelle stellen sehr hohe Anforderungen an Hardwarekomponenten, insbesondere an Grafikkarten. Für Geräte mit eingeschränkten Ressourcen (z. B. der im Rahmen dieses Projekts verwendete leistungsstarke Laptop) existieren jedoch Möglichkeiten, Sprachmodelle in kleinerer und komprimierter (quantisierter) Form zu betreiben (vgl. Han/Mao/ Dally 2016; Xu et al. 2024). Obwohl die Performanz und die Qualität der Ausgaben dieser Modelle dadurch limitiert sind, generieren sie dennoch ansprechende Resultate. Aktuelle Forschungsarbeiten konzentrieren sich darauf, weitere sogenannte Small Language Models (SLM) zu entwickeln und diese den Endnutzer:innen auf deren Geräten zur Verfügung zu stellen.
 
 Die vorgeschlagene Lösung basiert auf einem weit verbreiteten Open SourceSprachmodell in der Kategorie der SLM mit der Bezeichnung Mistral 7B in einer 5-Bit quantisierten Form, entwickelt von der Firma Mistral (vgl. Jiang et al. 2023). Zusätzlich wird ein Open Source-STT-Modell namens Whisper von OpenAI verwendet (vgl. Radford et al. 2022). Da beide Modelle Open Source sind und aufgrund ihrer kleineren Größe lokal auf der eigenen Hardware bereitgestellt werden können, ermöglicht die vorgeschlagene KI-basierte Lösung eine umfassende Kontrolle über die Modelle und den Datenfluss, von der Eingabe bis zur Ausgabe und der Speicherung, womit die Integrität der Daten und die Privatsphäre der Adressat:innen gewährleistet wird.
@@ -2336,6 +3113,10 @@ Insgesamt wird eine Lösung vorgeschlagen, die darauf abzielt, den Fachkräften 
 ## 3 Ergebnisse der Usability-Tests
 
 Die auf diesen Ansätzen basierende Applikation stieß in den Usability-Tests auf positive Resonanz. Die Fachkräfte schätzen die Möglichkeit, Informationen zum Fall auf unstrukturierte Weise einzugeben, da dies den Aufwand für die Erstellung von Fallnotizen reduziert. Die Qualität der generierten Zusammenfassungen wird als erstaunlich gut, äußerst nützlich und zeitsparend bewertet. Die strukturierten Fallnotizen können sich laut den Testpersonen insbesondere bei internen Übergaben und der Aktenführung als besonders wertvoll erweisen. Dies liegt daran, dass das LLM unscheinbare Zusammenhänge innerhalb einer unstrukturierten Eingabe erkennen und damit Fallnotizen in klar formulierter Form erstellen kann. Gleichzeitig wurde festgestellt, dass die KI-Anwendung Inhalte erfindet, wenn der eingesprochene Text sehr kurz ist. Die KI versucht, die Vorlage der Aktennotiz zu füllen, und erfindet fehlende Inhalte, falls nicht genügend Informationen vorhanden sind (zu einer Einordnung des Themas
+
+
+<!-- PAGE 196 -->
+
 
 Tabelle 1: Strukturvorgabe für die KI-Anwendung
 
@@ -2363,6 +3144,10 @@ Das Einsprechen in den Computer wurde als unproblematisch beschrieben, da alle e
 
 Diese fehlende Möglichkeit wurde als unbedeutend angesehen, solange die KI-Anwendung auf dem eigenen Rechner genutzt werden kann. Das Kopieren und Einfügen von Text werden nicht als hinderlich für die Effizienz angesehen. Es wurde festgestellt, dass die Anwendung einfach und intuitiv funktioniert und nach einer sehr kurzen Einweisung keine Schwierigkeiten bereitet. Allerdings erfordert die Anwendung eine gewisse Lernkurve, da man erst durch Ausprobieren herausfindet, wozu die KI fähig ist und wozu nicht. Zur Effizienzsteigerung wur-
 
+
+<!-- PAGE 197 -->
+
+
 de in den Usability-Tests erwähnt, dass der Arbeitsaufwand aufgrund des Kontrollbedarfs gegenüber der KI nicht geringer ist, als wenn man die Aktennotiz selbst schreibt. Es wurde jedoch eingeräumt, dass man die Aktennotiz bei genügend Vertrauen nicht mehr lesen würde. Begrüßt würde eine Erweiterung, sodass nicht Inhalte eingesprochen, sondern auch Texte aus anderen Quellen hinein kopierbar wäre. Ebenso wichtig wäre die Möglichkeit, das Einsprechen zu unterbrechen und später fortzusetzen, da es im Arbeitsalltag häufig zu Unterbrechungen kommt. Derzeit muss das Einsprechen komplett von vorne begonnen werden. Die Erkennung des schweizerdeutschen Dialekts funktioniert teilweise. Dies ist vom Dialekt abhängig, wobei ein Dialekt, der dem Hochdeutschen ähnlicher ist, besser erkannt wird. Dies wurde aber in diesem Projekt nicht tiefgründig analysiert (vgl. Paonessa et al. 2023).
 
 Die Testpersonen sehen jedoch Potenzial darin, dass die Anwendung zur Qualitätssicherung und -steigerung beitragen kann, da die KI gute Zusammenfassungen liefert und die Vorlagen sinnvoll erscheinen.
@@ -2371,6 +3156,10 @@ Die Testpersonen sehen jedoch Potenzial darin, dass die Anwendung zur Qualitäts
 
 Das Problem von Halluzinationen stellt sowohl bei der Transkription mittels STT als auch bei der Erstellung von Fallnotizen durch LLM eine bedeutende Herausforderung dar. Es gibt jedoch verschiedene Ansätze, um diese Halluzinationen zu minimieren. Eine Möglichkeit besteht in der Anpassung spezifischer Parameter, beispielsweise des Temperaturparameters, der die Kreativität der Modelle steuert. Der Temperaturparameter ist ein Skalierungsfaktor, der die Wahrscheinlichkeitsverteilung der Wortvorhersagen beeinflusst und somit ein Gleichgewicht zwischen der Generierung kreativer (aber potenziell fehleranfälliger) und konservativer (aber möglicherweise weniger interessanter) Ausgaben ermöglicht. Ein weiterer Ansatz zur Verbesserung der Resultate ist die Anwendung von Beam Search, einer Technik, die alternative Resultate erkundet und dadurch die Qualität der Ausgaben erhöhen kann (vgl. Peng/Morton 1988). Darüber hinaus kann das Finetuning eines Sprachmodells auf die Struktur der Aktennotiz oder mit fachspezifischen Begriffen die Genauigkeit weiter steigern. Finetuning verändert die Parameter des Modells so, dass gewünschte Resultate wahrscheinlicher werden (siehe den Beitrag von Rottkemper in diesem Band) (vgl. Wei et al. 2021). Verschiedene Faktenüberprüfungsverfahren, darunter Wissensgraphen (vgl. Hogan et al. 2020), Retrieval-Augmented Generation (RAG) (vgl. Lewis et al. 2021) und Faktenchecks, die von anderen LLM durchgeführt werden (LLM-as-a-Judge, vgl. Zheng et al. 2023), haben das Potenzial, das Risiko von Halluzinationen bei der Erstellung von Fallakten zu senken. Wissensgraphen speichern Beziehungen zwischen Fakten oder Entitäten und können, ähnlich wie der RAG-Ansatz, der verschiedene Dokumente in einer separaten Daten-
 
+
+<!-- PAGE 198 -->
+
+
 bank speichert, das LLM bei der Abfrage von Fakten unterstützen und so zu zuverlässigeren Resultaten führen. Beispielsweise könnte ein Wissensgraph, der fachspezifisches Wissen enthält, verwendet werden, um die Richtigkeit von Diagnosen oder Behandlungsvorschlägen in automatisch generierten Aktennotizen zu überprüfen. Beim LLM-as-a-Judge-Ansatz kann ein weiteres Sprachmodell hinzugezogen werden, um die generierten Resultate zu überprüfen und ggf. korrigierend einzugreifen. Da die Modelle auf Wahrscheinlichkeiten basieren und mit Unsicherheiten behaftet sind, kann eine hundertprozentig korrekte Generierung von Text oder anderen Modalitäten mit heutigem Wissensstand nicht garantiert werden. Das Problem der Halluzinationen ist ein aktuelles Forschungsgebiet, das weiterhin intensiv untersucht wird (vgl. Ji et al. 2023). Eine potenzielle Weiterentwicklung zur verbesserten Identifikation von Halluzinationen könnte die Berücksichtigung des Konfidenzgrades der generierten Wörter oder Wortteile (sogenannte Token) umfassen. Ein vordefinierter, anpassbarer Schwellenwert würde festlegen, ab wann die Konfidenz eines generierten Tokens als eher hoch oder niedrig eingestuft wird. Wörter, bei denen das Modell eine geringe Konfidenz aufweist, könnten auf der Benutzeroberfläche farblich hervorgehoben werden. Dies würde Fachkräften ermöglichen, gezielt jene Stellen zu identifizieren, die wahrscheinlich von einer Überprüfung auf Richtigkeit profitieren würden. Es ist jedoch wichtig zu beachten, dass auch Wörter, die vom Modell mit hoher Sicherheit als korrekt eingestuft werden, fehlerhaft sein können. Daher ist es unerlässlich, dass Fachkräfte die generierte, strukturierte Fallakte vor der Weiterverarbeitung oder dem Einfügen in das Fallaktensystem sorgfältig überprüfen. Aus professionsethischen und rechtlichen Gründen muss die Fachkraft zwingend die Verantwortung für die Aktennotiz übernehmen. Das bedeutet, dass sie auch für potenzielle Fehler, die durch die KI generiert werden, verantwortlich ist, sofern diese nicht vor der Ablage in der Akte korrigiert werden. Dies könnte zur Folge haben, dass die Erstellung einer Notiz durch die KI möglicherweise nicht schneller ist, wenn umfangreiche Korrekturen oder ein abschließendes Durchlesen erforderlich sind. Weitere Forschung ist erforderlich, um diese Fragestellungen genauer zu untersuchen.
 
 Das User-Interface, beispielsweise durch eine Ergänzung der Auswahlmöglichkeiten für unterschiedliche Formen und damit auch Struktur (siehe Tabelle 1) von Aktennotizen (Telefonanruf, Hausbesuch, Meeting etc.), und die Bedienung der Applikation sollten generell nach den Rückmeldungen der Fachkräfte sowie weiteren gezielten Tests mit ausgewählten Fachkräften kontinuierlich erweitert und verbessert werden.
@@ -2378,6 +3167,10 @@ Das User-Interface, beispielsweise durch eine Ergänzung der Auswahlmöglichkeit
 ## Verschlüsselung der Daten
 
 Der Datenschutz ist ein zentraler Aspekt im Umgang mit Daten von Adressat:innen. Daher wurde ein Ansatz gewählt, bei dem die Modelle lokal und vollständig offline auf einer Maschine betrieben werden. Dies gewährleistet mit hoher Wahr-
+
+
+<!-- PAGE 199 -->
+
 
 scheinlichkeit, dass der Datenfluss die Maschine nicht verlässt. Dennoch können Sicherheitslücken im System oder das Übertragen generierter Fallnotizen mittels USB-Stick auf ein unsicheres oder kompromittiertes System zu einem Datenabfluss führen. Ein möglicher Ansatz, um die Daten auch während der Übertragung zu schützen, ist die Verschlüsselung. Insbesondere im Umgang mit Daten von Adressat:innen ist es wichtig, dass die Daten sowohl im Ruhezustand ('at rest') als auch während der Übertragung ('in transit') verschlüsselt werden, um unbefugtes Auslesen zu verhindern. Eine derartige Lösung kann mit dem entsprechenden Fachwissen und angemessenem Aufwand implementiert werden und wird nachdrücklich empfohlen. Insgesamt stellt die Verschlüsselung einen unverzichtbaren, jedoch technisch anspruchsvollen Prozess dar, der sorgfältige Planung und kontinuierliche Überwachung erfordert.
 
@@ -2388,6 +3181,10 @@ Als Alternative zum Betrieb der Applikation auf einem mobilen Endgerät wie eine
 ## Datenschutz und Nutzung auf dem Mobiltelefon
 
 Die Verschlüsselung der Daten wird insbesondere wichtig, wenn die Daten zentral in das Fallaktensystem integriert werden. Ein möglicher Anwendungsfall ist die Aufnahme einer Sprachnotiz von unterwegs in einer ungestörten Umgebung (z. B. im eigenen Auto) nach einem Hausbesuch. Dazu kann das Mikrofon des Mobiltelefons als Aufnahmegerät dienen. Dabei bietet sich eine zentrale Lösung an, bei der die beiden Sprachmodelle (STT sowie SLM respektive LLM) auf einem Server laufen, der über das mobile Endgerät, z.B. via Virtual Private Network (VPN), erreichbar ist. Daneben ist es von zentraler Wichtigkeit, dass die Daten trotz der sicheren Verbindung eines VPN zusätzlich verschlüsselt werden. Die übertragenen sowie die generierten Daten werden zur Verarbeitung auf dem Server gespeichert, was eine sichere Verschlüsselung unumgänglich macht. Grundsätzlich sind mobile Lösungen eine von Fachkräften gewünschte und nutzenbringende Funktion, wobei unklar ist, wie viele Fachkräfte tatsächlich über dienstliche Mobiltelefone verfügen. Die Nutzung von unverschlüsselten, hochsensitiven Daten auf privaten Geräten birgt erhebliche Sicherheitssowie Datenschutzrisiken, ausgehend von Malware oder bei Verlust des Gerätes. Für die Nutzung einer KI-Anwendung zur automatisierten Aktennotizerstellung ist es außerdem wichtig, klare Regeln festzulegen, an welchen Orten diese App verwendet werden darf. Beispielsweise
+
+
+<!-- PAGE 200 -->
+
 
 wäre eine Nutzung in einem Café oder auf einer belebten Straße aus datenschutzrechtlichen Gründen problematisch.
 
@@ -2400,6 +3197,10 @@ Funktionen von Applikationen können über sogenannte 'Application Programming I
 Fragen zu den veränderten Arbeitsprozessen, die sich durch die Nutzung solcher Technologien entwickeln werden, sind noch unbeantwortet. Es lässt sich jedoch festhalten, dass dieses Beispiel einer KI-Anwendung langfristig zu einer effizienteren und qualitativ einheitlicheren Fachpraxis führen könnte. Dennoch werden dadurch neue Herausforderungen entstehen und vor allem andere Fragen an die Fachpraxis gestellt, die derzeit noch schwer abzuschätzen sind, jedoch möglicherweise bereits in ähnlicher Form durch andere Digitalisierungsprozesse aufgetreten sind (vgl. z.B. Kutscher 2024). An dieser Stelle entstehen neue (Forschungs-)Fragen: z.B. Wie werden sich die Rollen und Verantwortlichkeiten der Fachkräfte durch den Einsatz von KI-Anwendungen verändern? Welche neuen Aufgaben und Kompetenzen werden erforderlich sein? Welche Schulungsund Weiterbildungsmaßnahmen sind notwendig, um Fachkräfte auf den Einsatz von KI-Anwendungen vorzubereiten? Wie können diese Maßnahmen effektiv gestaltet werden? Wie kann die Zusammenarbeit zwischen IT-Spezialist:innen und Fachkräften der Sozialen Arbeit verbessert werden, um die Implementierung von KI-Anwendungen zu unterstützen?
 
 Nicht zu unterschätzen sind hier die Anforderungen an die Fachkräfte, sich mit immer neuen IT-Anwendungen konfrontiert zu sehen und kontinuierlich digitale Kompetenzen aufbauen zu müssen. Dies erfordert nicht nur technisches Wissen, sondern auch die Fähigkeit, sich an ständig wechselnde Technologien
+
+
+<!-- PAGE 201 -->
+
 
 und Arbeitsprozesse anzupassen. Gleichzeitig erfordert es von Einrichtungen, neue Handlungsleitlinien zu entwickeln, die die Nutzung und Anwendung solcher Applikationen festlegen. Intuitiv bedienbare und sorgfältig integrierte Applikationen erleichtern dabei die Akzeptanz.
 
@@ -2414,6 +3215,10 @@ Strenge Datenschutzanforderungen bringen für die Anwendung von KI-Technologien 
 Der Einsatz einer solchen KI-Anwendung in der Praxis wurde von den Testpersonen begrüßt und als hilfreich bezeichnet, dies gilt insbesondere für die Zusammenfassungen und die Qualitätssicherung. Konkret ist eine datenschutzkonforme KI-Anwendung eine Möglichkeit für Einrichtungen, zu verhindern, dass Fachkräfte andere, kommerzielle KI-Anwendungen nutzen, die den Datenschutz nicht sicherstellen können.
 
 Gleichzeitig gibt es jedoch noch einige offene Fragen, die für den konkreten Einsatz in der Praxis durch weitere Projekte geklärt werden müssen. Dazu gehören die langfristigen Auswirkungen solcher technischen Lösungen auf den Arbeitsalltag und die Fallarbeit, die konkrete, messbare Effizienzverbesserung, der Schulungsbedarf/die Lernkurve sowie die Bereitschaft, solche Anwendungen in verschiedenen Handlungsfeldern und Arbeitskontexten dauerhaft zu nutzen. Festzuhalten ist, dass bei der Entwicklung solcher KI-Lösungen zwingend Fachkräfte der Sozialen Arbeit von Beginn an beteiligt sein müssen. Die Hürden, die bei der Entwicklung auftauchen, haben einen direkten Bezug zum Arbeitsalltag der Fachkräfte und können nur gemeinsam gelöst werden (Co-Creation). Dies erhöht die Wahrscheinlichkeit signifikant, dass solche Lösungen in der Praxis
+
+
+<!-- PAGE 202 -->
+
 
 nicht nur akzeptiert, sondern auch intensiv genutzt werden, da die Anwendung optimal auf die Bedürfnisse der Fachkräfte vor Ort angepasst ist. Die im Rahmen dieses Projektes initiierte Zusammenarbeit zwischen der Sozialen Arbeit und der Software-Entwicklung ist ein erfolgreiches Beispiel für eine interdisziplinäre Entwicklung von KI-basierten Lösungen für die Praxis.
 
@@ -2432,6 +3237,10 @@ nicht nur akzeptiert, sondern auch intensiv genutzt werden, da die Anwendung opt
 - Ji, Ziwei/Lee, Naeon/Frieske, Rita/Yu, Tiezheng/Su, Dan/Xu, Yan/Ishii, Etsuko/Bang, Yejin/ Madotto, Andrea/Fung, Pascale (2023): Survey of hallucination in natural language generation. ACM Computing Surveys 55(12), S. 1-38. https://doi.org/10.1145/3571730
 - Jiang, Albert Q./Sablayrolles, Alexandre/Mensch, Arthur/Bamford, Chris/Chaplot, Devendra S./de las Casas, Diegro/Bressand, Florian/Lengyel, Gianna/Lample, Guillaume/Saulnier, Lucile/La-
 
+
+<!-- PAGE 203 -->
+
+
 - vaud, Lélio Renard/Lachaux, Marie-Anne/Stock, Pierre/le Scao, Teven/Lavril, Thibaut/Wang, Thomas/Lacroix, Timothée/Sayed, William E. (2023): Mistral 7B. arXiv preprint https://
 - Kutscher, Nadia (2024): Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit. In: Kurtz, Thomas/Meister, Dorothee M./Sander, Uwe (Hrsg.): Digitale Medien und die Produktion von Wissenschaft. Wiesbaden: Springer VS, S. 121-146. https://doi.org/10.1007/978-3-658-42542-5\_8
 - Liang, Percy/Bommasani, Rishi/Lee, Tony/Tsipras, Dimitris/Soylu, Dialara/Yasunaga, Michihiro/ Zhang, Yian/Narayanan, Deepak/Wu/Kumar, Ananya/Newman, Benjamin/Yuan, Binhang/ Yan, Bobby/Zhang, Ce/Cosgrove, Christian/Manning, Christopher D./Ré, Christopher/AcostaNavas, Diana/Hudson, Drew A./Zelikman, Eric/Durmus, Esin […] Koreeda, Yuta (2022): Holistic Evaluation of language models. arXiv preprint https://
@@ -2447,6 +3256,10 @@ nicht nur akzeptiert, sondern auch intensiv genutzt werden, da die Anwendung opt
 - Regalia, Joe (2024): From Briefs to Bytes: How Generative AI is Transforming Legal Writing and Practice. In: Tulsa Law Review 59, 193. https://papers.ssrn.com/sol3/papers.cfm?abstract\_id= 4371460 (Abfrage: 15.06.2025.).
 - Wei, Jason/Bosma, Maartens/Zhao, Vincent Y./Guu, Kelvin/Yu, Adams Wei/Lester, Brian/Du, Nan/Dai, Andrew M./Le, Quoc V. (2021): Finetuned language models are zero-shot learners. arXiv preprint https://
 - Xu, Jiajun/Li, Zhiyuan/Chen, Wei/Wang, Qun/Gao, Xin/Cai, Qi/Ling, Ziyuan (2024): On-Device Language Models: A Comprehensive Review. arXiv preprint https://.
+
+
+<!-- PAGE 204 -->
+
 
 ## IT-Sicherheit und Datenschutz im Kontext von KI-Sprachmodellen 1
 
@@ -2464,6 +3277,10 @@ Neben den vielen Vorteilen birgt KI aber auch Risiken. Um solche Risiken zu mini
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_015
 
+
+<!-- PAGE 205 -->
+
+
 cherheit und ebenso Datenschutz sind gerade in Bezug auf den Einsatz von KI in der Sozialen Arbeit sehr relevant, da in diesem Bereich viele sehr sensible Daten verarbeitet werden. Hierbei ist insbesondere der Faktor Mensch zu betrachten, da die Sensibilisierung der Nutzer:innen bezüglich Risiken der IT häufig nicht weit vorangeschritten und ein tieferes Verständnis technischer Grundlagen der IT oftmals nicht gegeben ist (Kreidenweis 2024, S. 8).
 
 Gängige Vorgehensweisen der IT-Sicherheit können auch auf den Bereich von KI-Anwendungen ausgeweitet werden, um diese datenschutzkonform zu gestalten und zu betreiben. So bieten beispielsweise in der IT etablierte Informationssicherheitsmanagementsysteme (ISMS) einen systematischen Ansatz zum sicheren Managen von Informationen (vgl. Bundesamt für Sicherheit in der Informationstechnik 2017). Durch Anwendung einer Risikomanagementstrategie, die Personen, Prozesse und IT-Systeme umfasst, können Vertraulichkeit, Integrität und Verfügbarkeit von Informationen geschützt werden.
@@ -2474,6 +3291,10 @@ Die folgenden Abschnitte führen zunächst in die Grundzüge der Datenund IT-Sic
 
 Die Sicherstellung der IT-Sicherheit ist eine fundamentale Voraussetzung für den erfolgreichen Einsatz von Informationstechnik. Die Herausforderungen von IT-Sicherheit insbesondere in der Sozialen Arbeit sind vielschichtig. Zu den zentralen Problemen gehören der Schutz sensibler Daten, da in der Sozialen Arbeit häufig mit vertraulichen Informationen über Klient:innen gearbeitet wird. Diese Daten reichen von persönlichen und finanziellen Informationen bis hin zu Gesundheitsdaten, deren Sicherheit nach strengen gesetzlichen und ethischen Standards gewährleistet werden muss (vgl. Goldberg 2021). Ebenfalls herausfordernd ist die Gewährleistung der Datenintegrität, um die Genauigkeit und Zuverlässigkeit der gespeicherten Informationen sicherzustellen, was für
 
+
+<!-- PAGE 206 -->
+
+
 die Planung und Bereitstellung sozialer Dienste unerlässlich ist. Ein weiteres kritisches Element ist die Sensibilisierung und Schulung der Mitarbeiter:innen in sozialen Einrichtungen hinsichtlich potenzieller Cyber-Bedrohungen und sicherer Onlinepraktiken. Angesichts der zunehmenden Digitalisierung der Sozialen Arbeit und der damit verbundenen Nutzung von Informationstechnologie (vgl. Liebsch/Degel 2025, S. 7ff.) erhöht sich das Risiko von Cyberangriffen. Die Diakonie Michaelshofen (o. J.) spricht beispielsweise von einer Entwicklung der Cyberkriminalität, die eine dramatische Dynamik eingenommen hat, 'da die Nutzung digitaler Angebote privat als auch beruflich stark gestiegen ist' (ebd.). Vor allem Soziale Organisationen sind beliebte Ziele für Cyberangriffe, da die hier vorliegenden Daten zu denen mit dem höchsten Schutzbedarf in Deutschland gehören (vgl. ebd.). Dass es sich nicht um Einzelfälle handelt, zeigt, dass z.B. im Herbst 2023 ein Hackerangriff 72 Kommunen in Südwestfalen lahmgelegt hat. Klient:innen der Sozialen Arbeit waren davon konkret betroffen, indem keine Gelder für Wohnen, Asyl oder Unterhaltsvorschuss ausgezahlt werden konnten (vgl. Jonas 2024). Schließlich stellt die Integration von IT-Sicherheitsmaßnahmen in bestehende Arbeitsabläufe ohne Beeinträchtigung der Servicequalität oder Zugänglichkeit der Dienste eine besondere Herausforderung dar. Die Balance zwischen dem Schutz der Privatsphäre der Klient:innen und der Notwendigkeit, offene und effektive soziale Dienste anzubieten, ist dabei ein zentraler Aspekt.
 
 IT-Sicherheit besteht nicht nur aus technischen Maßnahmen wie z.B. Verschlüsselung oder Virenschutz, sondern auch aus organisatorischen Maßnahmen und Prozessen zum Management der IT-Sicherheit, um eine kontinuierliche Anpassung und Verbesserung des Schutzes zu erreichen. Im Folgenden werden die Grundzüge des IT-Sicherheitsmanagements sowie technische und organisatorische Maßnahmen kurz vorgestellt.
@@ -2481,6 +3302,10 @@ IT-Sicherheit besteht nicht nur aus technischen Maßnahmen wie z.B. Verschlüsse
 ## 2.1 IT-Sicherheitsmanagement
 
 Ein ISMS ist ein systematischer Ansatz zum Managen von Informationen, um Sicherheit zu gewährleisten (vgl. Bundesamt für Sicherheit in der Informationstechnik 2017). Es wendet eine Risikomanagementstrategie an, die beteiligte Personen, Prozesse und IT-Systeme berücksichtigt. Basis eines ISMS ist die Identifizierung potenzieller Risiken, die zu Informationsverlusten führen können, sowie die Minimierung von Risiken durch die Implementierung geeigneter Sicherheitsmaßnahmen. Ein effektives ISMS hilft Organisationen, ihre geschäftlichen, rechtlichen, vertraglichen und regulatorischen Verpflichtungen zu erfüllen. Darüber hinaus steigert es das Vertrauen gegenüber Außenstehenden in die Fähigkeit, Informationen zu schützen. Dieser Aspekt ist aufgrund der besonders sensiblen Personendaten in der Sozialen Arbeit von hoher Bedeutung.
+
+
+<!-- PAGE 207 -->
+
 
 Ein ISMS basiert auf dem Prinzip einer kontinuierlichen Verbesserung und wird in der Regel in Übereinstimmung mit international anerkannten Standards wie ISO/IEC 27001 (vgl. International Organization for Standardization 2022) oder auch dem BSI IT-Grundschutz (vgl. Bundesamt für Sicherheit in der Informationstechnik 2017) entwickelt und implementiert. Diese Norm definiert die Anforderungen an eine Einrichtung für die Implementierung, Aufrechterhaltung und kontinuierliche Verbesserung eines Informationssicherheitsmanagementsystems. Die wesentlichen Bestandteile eines ISMS lassen sich in organisatorische und technische Maßnahmen unterteilen (vgl. NIST -National Institute of Standards and Technology 2024).
 
@@ -2497,6 +3322,10 @@ Organisatorische Maßnahmen umfassen Vorgaben, Richtlinien und Prozesse zum Umga
 - Backupund Wiederherstellungspläne: Regelmäßige Backups und detaillierte Pläne zur Wiederherstellung von Daten und Systemen nach einem sicherheitsrelevanten Vorfall.
 - Compliance: Überprüfung und Sicherstellung, dass die Anforderungen aus gesetzlichen Regelungen, Verträgen und eigenen Richtlinien zur Informationssicherheit eingehalten werden.
 
+
+<!-- PAGE 208 -->
+
+
 ## 2.3 Technische Maßnahmen
 
 Technische Maßnahmen spielen eine wichtige Rolle beim Datenschutz und der Datenverarbeitung. Diese Maßnahmen können in physische und informationstechnische Maßnahmen unterteilt werden, um ein umfassendes Sicherheitssystem zu schaffen. Es ist wichtig, sowohl physische als auch informationstechnische Sicherheitsmaßnahmen zu implementieren, um ein umfassendes Sicherheitsnetz für die Verarbeitung und Speicherung von Daten zu schaffen.
@@ -2509,6 +3338,10 @@ Darüber hinaus sollten IT-Systeme regelmäßig auf Sicherheit überprüft werde
 
 - Systeme und Netzwerke sollten auf Schwachstellen überprüft und Sicherheitsupdates zeitnah installiert werden. Dies beinhaltet auch die Schulung der Mitarbeiter:innen in Best Practices der IT-Sicherheit.
 - Penetrationstests: Regelmäßige Tests zur Identifizierung und Behebung von Schwachstellen in den Systemen.
+
+
+<!-- PAGE 209 -->
+
 
 - Schulung und Sensibilisierung: Mitarbeiter:innen sollten regelmäßig geschult werden, um sicherheitsbewusst zu handeln und mögliche Bedrohungen zu erkennen.
 
@@ -2526,6 +3359,10 @@ Kryptografie wird schon seit langem standardmäßig im Internet eingesetzt, beis
 
 - Symmetrische Algorithmen sind die bekannteste und auch intuitivste Form der Kryptografie. Zwei Parteien besitzen eine Chiffre zum Verund Entschlüsseln und haben sich auf einen gemeinsamen geheimen Schlüssel geeinigt. Die gesamte Kryptografie von der Antike bis in das Jahr 1976 folgte ausschließlich diesem Ansatz. Symmetrische Algorithmen wie z.B. der Advanced Encryption Standard (AES) (vgl. NIST -National Institute of Standards and Technology 2001) sind fester Bestandteil nahezu jedes heutigen Kryptosystems (vgl. Paar
 
+
+<!-- PAGE 210 -->
+
+
 - 2024). Sie werden insbesondere für die eigentliche Verschlüsselung von Daten und zum Integritätsschutz, d.h. Schutz gegen Veränderungen, eingesetzt.
 - Asymmetrische (oder Public-Key-)Algorithmen: Im Jahr 1976 wurde von Whitfield Diffie, Martin Hellman und Ralph Merkle eine gänzlich neue Art der Kryptografie eingeführt (vgl. IETF -Internet Engineering Task Force 1999). Diese Algorithmen sind mathematisch etwas aufwendiger und von der Idee her schwieriger zu verstehen. Der wesentliche Unterschied zur symmetrischen Kryptografie besteht darin, dass es zwei statt einem Schlüssel gibt: Ein öffentlicher Schlüssel zum Verschlüsseln und ein privater zum Entschlüsseln. Die mathematische Basis der asymmetrischen Algorithmen besteht aus Einwegfunktionen, welche die Verschlüsselung ohne den privaten Schlüssel praktisch unmöglich gestalten.
 
@@ -2539,6 +3376,10 @@ Aufgrund zukünftiger Entwicklungen im Bereich der Informationstechnologie ist d
 
 Um asymmetrische Verfahren sicher verwenden zu können, muss die Authentizität der öffentlichen Schlüssel geprüft werden. Dies geschieht über Zertifikate, welche neben dem öffentlichen Schlüssel noch Informationen zu der Identität der:des Eigentümer:in wie z.B. einer E-Mail-Adresse enthalten. Zertifikate sind wiederum digital signierte Dokumente, welche von einer vertrauenswürdi-
 
+
+<!-- PAGE 211 -->
+
+
 gen dritten Instanz, der sogenannten Zertifizierungsstelle (englisch: Certificate Authority, kurz CA) erstellt werden (eine ausführliche Abhandlung zur Kryptografie, digitalen Signatur und weiteren Mechanismen findet sich in Paar/Pelzl/ Güneysu (2024)).
 
 ## 2.4 Rolle der IT-Sicherheit zum Schutz von und vor KI
@@ -2551,6 +3392,10 @@ Die Manipulation von KI-Systemen stellt eine erhebliche Bedrohung dar, die durch
 
 Große KI-Sprachmodelle (sogenannte Large Language Models -LLM) basieren auf generativen KI-Systemen (siehe dazu den Beitrag von Rottkemper in diesem Band). Durch LLM generierte Texte lassen sich nicht ohne Weiteres von men-
 
+
+<!-- PAGE 212 -->
+
+
 schengeschriebenen Texten unterscheiden (vgl. Casal/Kessler 2023). Sie werden heute vielfach für Chatbots und persönliche Assistenzsysteme eingesetzt, um die Bedienbarkeit von Systemen zu verbessern (vgl. Kelbert/Siebert/Jöckel 2023). Sie finden jedoch auch Anwendung in anderen Bereichen des heutigen Lebens und der Wissenschaft, z.B. in der Medizin, in der Informatik, im juristischen Bereich sowie in der Sozialen Arbeit. Bei ihrem Einsatz ist die Aufmerksamkeit auf unterschiedliche Kategorien von Risiken zu richten. Nach dem Bundesamt für Sicherheit in der Informationstechnik (BSI 2024) können Risiken von LLM in die drei nachfolgenden Kategorien unterteilt werden:
 
 ## 3.1 Risiken bei der normalen Nutzung
@@ -2560,6 +3405,10 @@ Bei der ordnungsgemäßen Verwendung moderner Technologien stehen Anwender:innen
 ## 3.2 Risiken durch eine missbräuchliche Nutzung
 
 Missbräuchliche Nutzung von Sprachmodellen birgt erhebliche Risiken wie z.B. die Erzeugung und Verbreitung von Falschmeldungen und Unterstützung von Social-Engineering-Methoden, die auf der Manipulation von Personen basieren, um sie zur Preisgabe vertraulicher Informationen oder zur Ausführung bestimmter Handlungen zu bewegen. Darüber hinaus besteht aus Datenschutzsicht die Gefahr der Wiedererkennung von Personen aus zuvor anonymisierten Daten. Zukünftige Modelle werden in der Lage sein, aus verfügbaren Daten noch besser
+
+
+<!-- PAGE 213 -->
+
 
 personenbezogene Daten zu rekonstruieren. Zudem können Kriminelle KI für die Wissenssammlung und -aufbereitung für Cyberangriffe nutzen. Besonders bedenklich sind die Generierung und fortlaufende Verbesserung von bösartiger Software zum Angriff auf Computer und Netzwerke.
 
@@ -2571,6 +3420,10 @@ Im Folgenden werden wesentliche Angriffe auf LLM erläutert.
 - -Durch gezielte Anfragen an das Sprachmodell könnten Angreifende versuchen, Informationen zu extrahieren, die in den zugrunde liegenden Trainingsdaten enthalten sind, beispielsweise Details über Personen, Orte oder spezielle Ereignisse.
 - -Angreifende können über das Ausgabeverhalten des Modells Rückschlüsse auf die Trainingsdaten oder die Struktur des Modells ziehen, die eigentlich vertraulich bleiben sollten.
 - Evasion Attacks bei Sprachmodellen sind Angriffe, bei denen Angreifende die Eingabe an das Modell so manipulieren, dass das Modell eine falsche Ausgabe liefert (vgl. Muthalagu/Mali/Parar 2025). Die Manipulation ist für menschliche Betrachtende oft schwer zu erkennen. Diese Art von Angriff zielt darauf ab, die Funktionsweise eines Sprachmodells zu umgehen. Dabei bleibt das Modell für legitime Anfragen funktional, reagiert jedoch auf manipulierte Eingaben in einer Weise, die Angreifende beabsichtigen. Bei Sprachmodellen kann dies beispielsweise durch das Einfügen, Löschen oder Ersetzen von Wörtern oder Buchstaben in einem Text geschehen, ohne den scheinbaren Sinn oder die Kohärenz des Textes für menschliche Lesende zu stören. Der Angriff könnte darauf abzielen, Zensurmechanismen zu umgehen, unerwünschte
+
+
+<!-- PAGE 214 -->
+
 
 Inhalte in einem System zu platzieren oder eine falsche Klassifizierung oder Interpretation durch das Modell zu erreichen. Evasion Attacks unterstreichen die Notwendigkeit widerstandsfähiger Modelle, die in der Lage sind, auch manipulierte Eingaben korrekt zu verarbeiten oder zu erkennen.
 
@@ -2587,6 +3440,10 @@ Soziale Berufe verarbeiten äußerst sensible persönliche Daten. Der Einsatz vo
 
 Verschiedene Maßnahmen können dazu dienen, KI effektiv vor Manipulationen zu schützen. Die im Folgenden beschriebenen Best Practices skizzieren ein mehrschichtiges Vorgehen, das entlang des gesamten Lebenszyklus eines KI-Modells
 
+
+<!-- PAGE 215 -->
+
+
 angewendet werden sollte. Der Lebenszyklus eines LLM (siehe Abbildung 1) geht von einer Planungsphase aus, an die sich die sogenannte Datenphase anschließt. Die Datenphase umfasst die Sammlung, Aufbereitung und Analyse der relevanten Trainingsdaten. Die darauffolgende Entwicklungsphase schließt die Festlegung von Modellkennwerten wie Architektur und Größe oder die Auswahl eines vortrainierten Modells sowie die Trainingsphase und Validierung ein. Das Modell wird anschließend in Betrieb genommen (vgl. Bundesamt für Sicherheit in der Informationstechnik -BSI 2024).
 
 Abbildung 1: Wesentliche Phasen im Lebenszyklus eines LLM
@@ -2600,11 +3457,19 @@ Sinnvolle Maßnahmen sind demnach insbesondere:
 - Trainingsdaten prüfen und überwachen. Um Verfälschung der Daten zu verhindern, ist es wichtig, die Integrität, den Ursprung und die Qualität der Trainingsdaten sicherzustellen. Mögliche Maßnahmen sind die regelmäßige Überprüfung und Bereinigung der Daten und der Einsatz von Technologien zur Anomalie-Erkennung, um verdächtige Datenmuster zu identifizieren. Ferner kann die Verwendung von digitalen Signaturen zur Echtheitsüberprüfung von Daten genutzt werden.
 - Sicherheitsprotokolle und Zugriffsmanagement. Strenge Sicherheitsprotokolle und ein klares Zugriffsmanagement können den unbefugten Zugriff auf KI-Systeme und Daten verhindern. Hierzu können u.a. Zwei-Faktor-Authentifizierung (2FA), rollenbasierte Zugriffskontrollen und regelmäßige Sicher-
 
+
+<!-- PAGE 216 -->
+
+
 - heitsüberprüfungen und Audits implementiert werden (vgl. NIST -National Institute of Standards and Technology 2024).
 - Verschlüsselung und sichere Datenübertragung. Sensible Daten sollten sowohl im Ruhezustand als auch während der Übertragung verschlüsselt werden, um das Risiko von Abhörversuchen und Datendiebstahl zu minimieren. Hierzu können existierende, starke Verschlüsselungsalgorithmen verwendet werden, mit denen eine sichere Ende-zu-Ende-Verschlüsselung für Kommunikationskanäle erreicht werden kann.
 - Transparenz und Nachvollziehbarkeit. Die Nachvollziehbarkeit von KI-Entscheidungen und die Transparenz der Modelle können dazu beitragen, Manipulationen zu erkennen und zu verhindern. Mögliche Maßnahmen bestehen in der Implementierung von erklärbaren KI-Modellen, der Protokollierung und der Überwachung von Modellentscheidungen sowie in der regelmäßigen Überprüfung und Validierung der Modelle.
 - Notfallpläne und Incident Response. Um im Falle einer Manipulation schnell und effektiv handeln zu können, müssen Notfallpläne und Verfahren zur Reaktion auf Sicherheitsvorfälle existieren. Sinnvoll ist auch die Schaffung eines sogenannten Incident-Response-Teams, das im Fall von Manipulationen unmittelbar reagieren kann (vgl. Bundesamt für Sicherheit in der Informationstechnik 2017). Zu den Maßnahmen zählen regelmäßige Durchführungen von Sicherheitsübungen und Simulationen. Die detaillierte Dokumentation und Analyse von Sicherheitsvorfällen helfen bei der Vermeidung zukünftiger Vorfälle.
 - Schulung der Mitarbeitenden zu AI Literacy (deutsch: KI-Kompetenz). Voraussetzung dafür, dass eine Fachkraft souverän mit KI-Systemen und Sprachmodellen unter Berücksichtigung von Risiken arbeiten kann, ist ein Grundwissen über die Funktionsweise der Technik, die sogenannte AI Literacy (vgl. den Beitrag von Löhe in diesem Band). AI Literacy (deutsch: KI-Kompetenz), wie sie von Long und Magerko (2020) oder Faruqe, Watkins und Medker (2021) definiert wird, umfasst ein breites, allgemeines Set an Wissen und Fähigkeiten oder Kompetenzen, die Personen benötigen, die mit KI-Technologien interagieren (siehe den Beitrag von Löhe in diesem Band). Dabei handelt es sich auch um eine rechtliche Anforderung: Seit Februar 2025 sind Anbieter und Betreiber von KI-Systemen gemäß des EU AI Acts verpflichtet, sicherzustellen, dass alle Personen, die mit dem Betrieb und der Nutzung dieser Systeme befasst sind, über ausreichende KI-Kompetenz verfügen und dass entsprechende Maßnahmen zu deren Qualifizierung ergriffen werden (siehe den Beitrag von Dötterl zur KI-Verordnung in diesem Band).
+
+
+<!-- PAGE 217 -->
+
 
 ## 4 Rechtlicher Rahmen für den Einsatz von KI-Sprachmodellen
 
@@ -2619,6 +3484,10 @@ Die Schaffung und Nutzung von durch KI generierten Inhalten wirft Fragen bezügl
 Der Einsatz von KI steht in einem zunehmend kritischen Verhältnis zum Datenschutz, da KI-Systeme oft auf der Sammlung, Analyse und Verarbeitung großer Mengen von Daten basieren, um zu lernen und Entscheidungen zu treffen. Diese Daten können oft persönliche Informationen enthalten, deren Handhabung durch strenge Datenschutzgesetze wie die Datenschutz-Grundverordnung (DSGVO) in der Europäischen Union reguliert wird. Der Datenschutz fordert daher die Entwicklung und Anwendung von KI in einer Weise, die die Privatsphäre und die Autonomie der Individuen schützt, was den Einsatz von Techniken des datenschutzfreundlichen Maschinellen Lernens und Methoden zur Anonymisierung oder Pseudonymisierung von Daten einschließt.
 
 IT-Sicherheit spielt eine entscheidende Rolle dabei, KI-Anwendungen datenschutzkonform zu gestalten und zu betreiben. Hierbei sind IT-Sicherheitsmaßnahmen Ansätze, die u.a. zur Einhaltung von Datenschutzvorschriften bei der Verwendung von KI unterstützen können. Die Verschlüsselung von Daten sowohl in Ruhe als auch während der Übertragung schützt sensible Informationen vor
+
+
+<!-- PAGE 218 -->
+
 
 unbefugtem Zugriff. Strenge Zugriffskontrollen und Authentifizierungsverfahren gewährleisten, dass nur autorisiertes Personal auf die Daten und KI-Modelle Zugriff hat. Die Anwendung von Techniken zur Anonymisierung oder Pseudonymisierung von Daten hilft, persönliche Informationen unkenntlich zu machen. Dadurch können KI-Systeme für Analysen und Lernprozesse genutzt werden, ohne dass dabei Datenschutzprinzipien verletzt werden.
 
@@ -2636,6 +3505,10 @@ Durch den Nutzen und die zunehmende Integration von KI in sozialen Berufen entst
 - Casal, Elliot J./Kessler, Matt (2023): Can linguists distinguish between ChatGPT/AI and human writing? A study of research ethics and academic publishing. In: Research Methods in Applied Linguistics 2. https://doi.org/10.1016/j.rmal.2023.100068
 - Der Paritätische Gesamtverband (2024): Künstliche Intelligenz in der Sozialen Arbeit. Eine Textsammlung aus der gleichnamigen Veranstaltungsreihe 2023. https://www. der-paritaetische.de/fileadmin/user\_upload/Schwerpunkte/Digitalisierung/doc/ki/KI\_ Textsammlung\_Update2024\_final.pdf (Abfrage 15.06.2025).
 - Diakonie Michaelshofen (o. J.): Bitte auf diesen Link klicken -Warum Cyberkriminalität auch soziale Unternehmen treffen kann. https://www.diakonie-michaelshoven.de/blog?tx\_t3extblog\_ blogsystem%5Baction%5D=show&amp;tx\_t3extblog\_blogsystem%5Bcontroller%5D=Post&amp;tx\_
+
+
+<!-- PAGE 219 -->
+
 
 - t3extblog\_blogsystem%5Bpost%5D=64&amp;cHash=d14fd486539ff90113d8b93eb7ced476 (Abfrage: 15.06.2025).
 - Europäische Kommission (2016): 'Datenschutz-Grundverordnung.' Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten, zum freien Datenverkehr und zur Aufhebung der Richtlinie 95/46/EG. 27. April.
@@ -2656,6 +3529,10 @@ Durch den Nutzen und die zunehmende Integration von KI in sozialen Berufen entst
 - NIST -National Institute of Standards and Technology (2001): Advanced Encryption Standard.
 - NIST -National Institute of Standards and Technology (2023): Artificial Intelligence Risk Management Framework (AI RMF 1.0). Januar. https://doi.org/10.6028/NIST.AI.100-1
 
+
+<!-- PAGE 220 -->
+
+
 - NIST -National Institute of Standards and Technology (2024): Special Publication 800-63. Digital Identity Guidelines. Oktober. https://www.nist.gov/itl/smallbusinesscyber/guidance-topic/ multi-factor-authentication (Abfrage: 15.06.2025).
 - Steiner, Olivier/Tschopp, Dominik (2022): Künstliche Intelligenz in der Sozialen Arbeit. In: Sozial Extra 46, S. 466-471.
 - Open Web Application Security Project. 2025. LLM01: 2025 Prompt Injection. 14. 1. https://genai. owasp.org/llmrisk/llm01-prompt-injection/ (Abfrage: 15.06.2025).
@@ -2663,6 +3540,10 @@ Durch den Nutzen und die zunehmende Integration von KI in sozialen Berufen entst
 - Rawat, Danda B. (2021): Secure and trustworthy machine learning/artificial intelligence for multidomain operations. In: Proceedings 11746. https://doi.org/10.1117/12.2592860
 - Wallace, Eric/Zhao, Tony Z./Feng, Shi/Singh, Sameer (2020): Concealed Data Poisoning Attacks on NLP Models. NAACL 2021. https://doi.org/10.48550/arXiv.2010.12563
 - Weidinger, Laura/Uesato, Jonathan/Rauh, Maribeth/Griffin, Conor/Huang, Po-Sen/Mellor, John/ Glaese, Amelia/Cheng, Myra/Balle, Borja/Kasirzadeh, Atoosa/Biles, Courtney/Brown, Sasha/ Kenton, Zac/Hawkins, Will/Stepleton, Tom/Birhane, Abeba/Hendricks, Lisa Anne/Rimell, Laura/Isaac, Williams […] Claims, Less (2022): Taxonomy of Risks posed by Language Models. FAccT '22: Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency, S. 214-229. https://doi.org/10.1145/3531146.353308
+
+
+<!-- PAGE 221 -->
+
 
 ## EU AI Act und Soziale Arbeit: Die KI-Verordnung und ihre Auswirkungen 1
 
@@ -2684,6 +3565,10 @@ Diese Auswirkungen sollen insbesondere an Anwendungsszenarien gezeigt werden, di
 
 2 Alle im Folgenden genannten Vorschriften und rechtlich nicht verbindlichen Erläuterungen (sogenannte Erwägungsgründe, ErwG) bezeichnen solche der KI-VO. Der Beitrag verweist an unterschiedlichen Stellen auf die Erwägungsgründe der KI-VO, die im Volltext hier einsehbar sind: https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L\_202401689#pbl\_1 (Aufruf: 14.04.2025).
 
+
+<!-- PAGE 222 -->
+
+
 - ratung oder als psychologische Ersthilfe (vgl. Linnemann/Löhe/Rottkemper 2024; Lehmann 2025, Li et al. 2023),
 - KI-Systeme zur Emotionsund Verhaltensanalyse durch Sprachund Texterkennung (vgl. Kapoor/Verma 2024),
 - emergenzbasierte KI-Systeme, die aus der Analyse vielfältiger Einzelfaktoren eine Prognose ableiten, z.B. das Entstehen von Risiken wie Kindeswohlgefährdung (vgl. Plafky/Frischhut 2025),
@@ -2696,6 +3581,10 @@ Die Beispiele zeigen, dass der Einsatz von KI in der Sozialen Arbeit in vielfäl
 Mit der KI-VO hat die Europäische Union einen umfassenden Rechtsrahmen für KI-Systeme geschaffen. Als EU-Verordnung entfaltet sie unmittelbare Rechtswirkung in allen Mitgliedstaaten und regelt einheitlich die Entwicklung, das Inverkehrbringen und die Verwendung von KI-Systemen. Dabei verfolgt sie den doppelten Zweck, den Binnenmarkt zu harmonisieren, indem einheitliche Regeln und Standards geschaffen werden, die in allen Mitgliedsstaaten gleichermaßen gelten. Zugleich ist ein hohes Grundrechtsschutzniveau zu gewährleisten (Art. 1 Abs. 1 und ErwG 1, 7, 8).
 
 Das Kernkonzept der KI-VO ist ein risikobasierter Regelungsansatz (ErwG 26, 27). Je nach Gefährdungspotenzial werden KI-Systeme (dazu unter 2.) unterschiedlichen Anforderungsstufen zugeordnet:
+
+
+<!-- PAGE 223 -->
+
 
 - Bringt der Einsatz von KI-Systemen unannehmbare Risiken mit sich, so ist er verboten (dazu unter 3.)
 - KI-Systeme mit hohem Risiko sind erlaubt, müssen aber strenge Anforderungen erfüllen (dazu unter 4.)
@@ -2710,6 +3599,10 @@ Die nachfolgende Abbildung visualisiert die Regulierungssystematik der KI-VO:
 Quelle: Eigene Darstellung
 
 Außerdem ist zu beachten, dass die KI-VO den bereits bestehenden Rechtsrahmen ergänzt, aber nicht ersetzt. Insbesondere bleiben die Vorgaben der Datenschutz-Grundverordnung (DSGVO) vollumfänglich anwendbar (Art. 2 Abs. 7 KI-VO). Sofern also mittels KI-Systemen personenbezogene Daten verarbeitet werden, sind die Vorgaben der DSGVO zu beachten, die in der Praxis eine weitere große Herausforderung für den KI-Einsatz darstellen werden (vgl. Heidrich 2024). Dies kann an dieser Stelle nicht vertieft werden (zur Vertiefung siehe den Beitrag von Pelzl in diesem Band). Es sei hier nur darauf hingewiesen, dass die Verarbeitung sensibler Daten wie z.B. Gesundheitsdaten besonderen Einschränkungen unterliegen (Art. 9 DSGVO), ebenso die Übermittlung perso-
+
+
+<!-- PAGE 224 -->
+
 
 nenbezogener Daten in Drittländer, z.B. durch eine Eingabe solcher Daten in ein im Ausland gehostetes KI-System wie beispielsweise ChatGPT (Art. 44 DSGVO).
 
@@ -2728,6 +3621,10 @@ Die KI-VO enthält eine sehr weit gefasste Definition eines KI-Systems, der auch
 
 - Das KI-System muss zum einen 'in unterschiedlichem Grade autonom' arbeiten können, d.h. 'bis zu einem gewissen Grad unabhängig von menschlichem Zutun' (ErwG 12). Nach den insoweit von der EU-Kommission veröffentlichten, unverbindlichen Leitlinien reicht bereits ein sehr geringer Grad an Autonomie aus, sodass diesem Merkmal keine eigenständige Bedeutung zukäme (Europäische Kommission 2025a, Punkte 14ff.). Zum anderen soll nach den Erwägungsgründen kein KI-System vorliegen, wenn das System 'auf ausschließlich von natürlichen Personen definierten Regeln für das automatische Ausführen von Operationen' (ErwG 12) beruht. Vorgeschlagen wird daher, zwischen 'autonom' und 'automatisch' zu unterscheiden (vgl. Wachter/Leeb 2024). Ein automatisches System, das rein menschlich definierten Regeln folgt, wäre demnach kein KI-System, auch wenn es einen hohen Komplexitätsgrad erreicht (vgl. Roth-Isigkeit 2024).
 - Die 'Fähigkeit, abzuleiten ' ist das zweite Kernmerkmal von KI-Systemen. Bei diesem Merkmal geht es darum, dass das System aus Eingaben Ausgaben erzeugt, seien es Voraussagen, Inhalte oder Empfehlungen. Es muss sich um mehr handeln als 'einfache Datenverarbeitung'. Als Systeme, die 'ableiten' und daher KI-Systeme sein können, werden ausdrücklich Ansät-
+
+
+<!-- PAGE 225 -->
+
 
 ze des Maschinellen Lernens sowie logikund wissensgestützte Konzepte genannt (ErwG 12). Keine KI-Systeme sollen nach den Leitlinien hingegen folgende Ansätze sein: Systeme zur Verbesserung mathematischer Optimierung, einfache Datenverarbeitung, klassische Heuristik und einfache Vorhersagesysteme (Punkte 40ff.). Eine widerspruchsfreie und rechtssichere Abgrenzung erscheint auf Grundlage der -ohnehin unverbindlichen -Leitlinien nicht möglich, was hier nicht vertieft dargestellt werden kann.
 
@@ -2748,6 +3645,10 @@ Wendet man die genannten Abgrenzungskriterien auf die Eingangsbeispiele an, ergi
 
 Auch emergenzbasierte Prognosesysteme, die auf Maschinellem Lernen beruhen und komplexe Risikoeinschätzungen vornehmen, dürften der Definition eines KI-Systems unterfallen.
 
+
+<!-- PAGE 226 -->
+
+
 ## 3 Verbotene KI-Systeme
 
 Die KI-VO definiert in Art. 5 bestimmte KI-Praktiken als verboten. Diese Verbote gelten absolut und können nicht durch Schutzmaßnahmen oder Einwilligungen der Betroffenen überwunden werden. Die Verbote gelten sowohl für das In-Verkehr-Bringen als auch die Inbetriebnahme und die Verwendung entsprechender KI-Systeme. Für die Soziale Arbeit können folgende Fallgruppen relevant sein:
@@ -2765,6 +3666,10 @@ Kritisch zu prüfen ist beim Umgang mit vulnerablen Gruppen jedoch stets, ob das
 Als verbotene Beispiele nennen die Leitlinien etwa
 
 - 'vermenschlichte' KI-Systeme, die bei Kindern zu einer emotionalen Abhängigkeit und zu einer Behinderung ihrer sozialen und emotionalen Entwicklung führen können (Punkt 116),
+
+
+<!-- PAGE 227 -->
+
 
 - KI-Systeme, die eigentlich zur Unterstützung von älteren Menschen oder von Menschen mit geistiger Behinderung gedacht sind, aber diese auch manipulieren können, indem sie sie dazu bewegen, überteuerte und nutzlose Produkte zu kaufen (Punkte 117/118),
 - KI-gestützte Chatbots, die sozial oder wirtschaftlich benachteiligte Gruppen ansprechen und -etwa durch Angstnarrative oder manipulative Angebote -deren bestehende Vulnerabilität verstärken können, was in bestimmten Fällen zu Angst, Depression oder einem Gefühl der Hilflosigkeit führen kann (Punkt 119).
@@ -2787,6 +3692,10 @@ Die Leitlinien (Punkte 127ff.) versuchen eine Grenze zu ziehen zwischen
 
 In der Sozialen Arbeit ist das Verbot besonders relevant, da die Klient:innen oft vulnerable Personen sind (vgl. bereits oben Ziffer 1) und deshalb anfälliger für Manipulationen sein können. Deshalb sollten z.B. Chatbots kritisch auf mögliches Schadenspotenzial überprüft werden. Als Beispiel kommt etwa ein Chatbot infra-
 
+
+<!-- PAGE 228 -->
+
+
 ge, der selbstverletzendes Verhalten wie Ritzen etc. thematisiert oder abfragt, und -unbeabsichtigt -dadurch neues selbstschädigendes Verhalten triggern könnte.
 
 ## 3.3 Social Scoring
@@ -2799,6 +3708,10 @@ Ebenfalls verboten sind soziale Bewertungen, die zu Benachteiligungen führen, d
 
 Ein KI-System, das sozialrechtliche Ansprüche von Antragsstellenden prüft und darüber entscheidet (wie z.B. bei Jugendhilfeanträge nach dem SGB VIII) oder selbstständig aufgrund von Daten Jugendhilfemaßnahmen für einen Fall bestimmt, würde zunächst vermutlich unter das grundsätzliche Verbot der automatisierten Entscheidung nach Art. 22 DSGVO fallen. Bei der Prüfung, ob zugleich das Verbot des Social Scoring nach der KI-VO eingreift, wäre zum einen zu untersuchen, ob die durch das System herangezogenen Bewertungskriterien in einem Zusammenhang mit der benachteiligenden Entscheidung stehen. Zum anderen wäre zu untersuchen, ob die Benachteiligung verhältnismäßig ist. Werden nur die gesetzlich vorgesehenen Beurteilungskriterien z.B. zur Beurteilung der Bedürftigkeit herangezogen, dürfte das Verbot nicht eingreifen, wie sich auch aus
 
+
+<!-- PAGE 229 -->
+
+
 ähnlichen Beispielen in den Leitlinien (Punkt 177) ableiten lässt (siehe ebenso die Ausführungen zum 'Zugang zu grundlegenden Diensten und Leistungen' im Abschnitt zu Hochrisiko-KI-Systemen weiter unten in diesem Beitrag).
 
 ## 3.4 Emotionserkennung
@@ -2810,6 +3723,10 @@ Hintergrund des Verbots ist, dass sich Gefühlsausdrücke je nach Kultur, Situat
 Eine für die Soziale Arbeit relevante Ausnahme von diesem Verbot gilt für KI-Systeme, die aus Sicherheitsgründen oder aus medizinischen Gründen eingesetzt werden. In den Erwägungsgründen werden als Beispiel für medizinische Gründe 'therapeutische Zwecke' genannt (ErwG 44), was die Leitlinien (Punkt 257) sehr eng so interpretieren wollen, dass es dabei um die Verwendung von Medizinprodukten mit CE-Siegel gehen muss. Zulässige medizinische Zwecke könnten unter dieser Voraussetzung etwa die Diagnose psychischer Erkrankungen sein oder die Krisenintervention bei akuter Selbstoder Fremdgefährdung. Nicht vom medizinischen Ausnahmetatbestand gedeckt und damit am Arbeitsplatz oder in Bildungseinrichtungen verboten wären laut Leitlinie KI-Systeme, die lediglich den Stresslevel oder das allgemeine Wohlbefinden überprüfen sollen.
 
 Auch bei Vorliegen medizinischer Gründe stellt sich ein weiteres Problem, wenn die Emotionserkennung nicht nur Klient:innen, sondern 'am Arbeitsplatz' auch Personal wie etwa Therapeut:innen oder Betreuer:innen betrifft. Laut Leitlinien (Punkt 270) müssen die Arbeitgebenden nach Möglichkeit die Erfassung von Emotionen von Arbeitskräften vermeiden. Eine Einwilligung in eine Emotionserkennung am Arbeitsplatz ist nicht möglich (vgl. Drilling/Musiol 2024). Bei KI-Systemen, die potenziell die Emotionen aller beteiligten Personen erfassen (z. B. Analyse von Gesprächssituationen), sollte daher möglichst sichergestellt werden, dass die Emotionen des Personals nicht erkannt werden. Ist dies nicht möglich, so dürfen daraus jedenfalls keine Nachteile für das Personal erwachsen (Punkt 270).
+
+
+<!-- PAGE 230 -->
+
 
 ## 3.5 Biometrische Kategorisierung
 
@@ -2832,6 +3749,10 @@ Nicht verboten, aber nur unter strengen Voraussetzungen erlaubt, sind KI-Systeme
 
 Die Einstufung als Hochrisiko-KI-System löst umfangreiche Pflichten aus, die hier nur gestreift werden können. Vor allem die Anbieter von Hochrisiko-Systemen (also in erster Linie Softwareanbieter, vgl. Art. 3 Nr. 3) sind stark gefordert.
 
+
+<!-- PAGE 231 -->
+
+
 Aber auch Betreiber (also beruflich Nutzende, vgl. Art. 3 Nr. 4) sollten sich über ihre Pflichten informieren.
 
 Vorgeschrieben sind beispielsweise ein Risikomanagementsystem (Art. 9) sowie eine bestimmte Qualität der Trainings-, Validierungsund Testdatensätze (Art. 10, siehe im Detail Hense/Mustać 2025), es gibt Dokumentationsund Aufzeichnungspflichten (Art. 11, 12) und ein angemessenes Maß an Genauigkeit, Robustheit und Cybersicherheit ist sicherzustellen (Art. 15). Vor der Inbetriebnahme muss zudem eine Konformitätsbewertung durchgeführt werden (Art. 43).
@@ -2849,6 +3770,10 @@ Die Implementierung von Hochrisiko-KI-Systemen erfordert somit erhebliche organi
 Hohes Risiko bergen KI-Systeme, die aufgrund ihrer Zweckbestimmung (vgl. Ebers/Streitbörger 2024; vgl. auch Art. 3 Nr. 12) ein hohes Risiko bergen, die Gesundheit, die Sicherheit und die Grundrechte von Personen zu schädigen (ErwG 52). Die KI-VO bildet zwei Fallgruppen:
 
 (a) Die erste Fallgruppe betrifft KI-Systeme, die bereits nach EU-Produktsicherheitsrecht einer Prüfung durch eine unabhängige Stelle bedürfen. Dies ist der Fall, wenn das KI-System entweder selbst ein solches Produkt ist oder als Sicherheitsbauteil eines solchen Produkts verwendet wird. Solche KI-Systeme gelten zugleich als Hochrisiko-KI-System im Sinne der KI-VO (Art. 6 Abs. 1 i. V. m. Annex I).
+
+
+<!-- PAGE 232 -->
+
 
 Für die Soziale Arbeit könnte die Medizinprodukte-Verordnung (Medical Device Regulation, im Folgenden: MDR) Bedeutung haben. Nach der MDR gilt Software in der Regel als zulassungsbedürftiges Medizinprodukt, wenn sie dazu bestimmt ist, Informationen zu liefern, die zu Entscheidungen für diagnostische oder therapeutische Zwecke herangezogen werden (siehe Art. 2 Nr. 1, Art. 52 i. V. m. Anhang VIII Regel 11 der MDR sowie Hoos 2024).
 
@@ -2868,6 +3793,10 @@ Die Reichweite des Hochrisikobereichs und der Ausnahmen hiervon ist noch vage, w
 
 Ein hohes Risiko bergen KI-Systeme, die den Zugang zu und die Nutzung von grundlegenden privaten und öffentlichen Diensten und Leistungen betreffen (Anhang III Nr. 5). Der EU-Verordnungsgeber begründet dies damit, dass Menschen,
 
+
+<!-- PAGE 233 -->
+
+
 die auf staatliche Unterstützungsleistungen angewiesen sind, sich typischerweise in einer prekären Situation befinden (ErwG 58).
 
 Hochrisiko-KI-Systeme sind insbesondere KI-Systeme, die von oder im Namen von Behörden verwendet werden sollen, um zu beurteilen, ob natürliche Personen Anspruch auf grundlegende öffentliche Unterstützungsleistungen und -dienste haben. Dies umfasst auch die Entscheidung über Gewährung, Einschränkung, Widerruf oder Rückforderung solcher Leistungen (Anhang III Nr. 5 lit. a.). Die Erwägungsgründe nennen als Beispiele u.a. staatliche Unterstützung bei Mutterschaft, Krankheit, Arbeitsunfall, Pflegebedürftigkeit und Arbeitsplatzverlust sowie Sozialhilfe und Wohngeld (ErwG 58).
@@ -2879,6 +3808,10 @@ Für die Schulsozialarbeit und Bildungsberatung ist die Hochrisiko-Einstufung ve
 ## 5.3 Beschäftigung und Personalmanagement
 
 Die KI-VO stuft verschiedene KI-Systeme im Bereich von Beschäftigung und Personalmanagement als hochriskant ein, beispielsweise wenn sie für die Einstellung oder Auswahl von Personen oder für beschäftigungsrelevante Entscheidungen verwendet werden (Anhang III Nr. 4). Der EU-Verordnungsgeber sieht hier besondere Risiken für Diskriminierung und den Schutz von Arbeitnehmerrechten (ErwG 57). Soweit solche Systeme in der Sozialen Arbeit diskutiert werden (vgl. Löhe 2024), unterfallen sie grundsätzlich dem Hochrisiko-Bereich. Die Verordnung erwähnt ausdrücklich die KI-gestützte Erstellung gezielter Stellenanzeigen sowie die Sichtung von Bewerbungsunterlagen und die Beurteilung von Bewerbenden (lit. a.) Ferner unterfällt die KI-gestützte Dienstplanung dem Hochrisikobereich, soweit Aufgaben aufgrund des individuellen Verhaltens oder persönlicher Merkmale oder Eigenschaften zugewiesen werden (lit. b.). Hingegen stellt ein 'Onboarding-Bot' kein Hochrisiko-KI-System dar, soweit er rein zum Wis-
+
+
+<!-- PAGE 234 -->
+
 
 sensmanagement dient und nicht etwa individuell maßgeschneiderte Aufgaben zuweist.
 
@@ -2903,6 +3836,10 @@ Die KI-VO nennt vier Fallgruppen, bei denen eine solche wesentliche Beeinflussun
 
 Diese Ausnahmen gelten aber nie für Systeme, die ein 'Profiling' natürlicher Personen vornehmen (Art. 6 Abs. 3 UAbs. 2). Gemeint sind damit Systeme, die
 
+
+<!-- PAGE 235 -->
+
+
 automatisiert personenbezogene Daten verwenden, um bestimmte persönliche Aspekte, die sich auf eine natürliche Person beziehen, zu bewerten (Art. 3 Nr. 52, der auf Art. 4 Abs. 4 DSGVO verweist). Kurz gesagt scheidet somit eine Ausnahme von der Hochrisikoregulierung aus, sobald es um eine 'Personalisierung' von Dienstleistungen geht (vgl. Hense/Mustać 2025).
 
 Sofern sich der Anbieter des KI-Systems auf eine Ausnahme nach Art. 6 Abs. 3 beruft, sind die Gründe hierfür zu dokumentieren (Art. 6 Abs. 4) und das System in einer EU-Datenbank zu registrieren (Art. 49 Abs. 2, 71).
@@ -2918,6 +3855,10 @@ Zusammenfassend lässt sich sagen, dass die genannten Ausnahmen den Einsatz von 
 - Reine 'First-Level-Support' Chatbots zur Terminvereinbarung oder für FAQ dürften in der Regel hingegen keine Hochrisiko-KI-Systeme sein.
 - KI-Systeme zur Emotionserkennung sind, soweit sie nicht ohnehin verboten sind (vgl. oben III.3), stets als Hochrisiko-KI-Systeme eingestuft (Anhang III Nr. 1 lit. c.).
 - KI-gestützte Dokumentationssysteme zur Erstellung von Aktennotizen oder Protokollen dürften in der Regel nicht als Hochrisiko-KI-Systeme einzustufen sein; jedenfalls liegt eine Ausnahme nahe (siehe oben Ziffer 2 lit. b. ff.). Hierzu muss aber sichergestellt sein, dass durch die KI-gestützte Dokumentation das Ergebnis einer nachgelagerten Entscheidungsfindung nicht wesentlich beeinflusst wird (Art. 6 Abs. 3).
+
+
+<!-- PAGE 236 -->
+
 
 ## 6 Transparenzpflichten
 
@@ -2942,6 +3883,10 @@ Für die Eingangsbeispiele ergibt sich:
 - Chatbots müssen sich als solche zu erkennen geben.
 - Über den Einsatz von KI-Systemen zur Emotionserkennung sind Betroffene vorab zu informieren.
 
+
+<!-- PAGE 237 -->
+
+
 - Die KI-gestützte Erstellung interner Dokumentation wie Aktennotizen oder Protokolle löst für die Nutzer:innen in der Regel keine Transparenzpflichten aus, da diese nicht für die Öffentlichkeit bestimmt sind.
 
 ## 7 KI-Kompetenz
@@ -2961,6 +3906,10 @@ Die Anforderungen an die KI-Kompetenz steigen dabei mit dem Risikopotenzial des 
 ## 8 Sanktionen
 
 Die Mitgliedstaaten müssen nach Art. 99 Abs. 1 wirksame, verhältnismäßige und abschreckende Sanktionen erlassen. Bei Verstößen insbesondere gegen die Verbotstatbestände, Hochrisikooder Transparenzpflichten drohen dann, je nach Art, Schwere und Dauer des Verstoßes, erhebliche Geldbußen. Die nationalen Umsetzungsvorschriften zur KI-VO in Deutschland existieren noch nicht (Stand Januar 2025).
+
+
+<!-- PAGE 238 -->
+
 
 ## 9 Handlungsempfehlungen für die Praxis
 
@@ -2983,6 +3932,10 @@ Braegelmann, Tom (2024): KI-VO und Compliance -aktuelle Brennpunkte. In: Künstl
 
 Drilling, Johannes/Musiol, Philip (2024): KI-Verordnung und interne Ermittlungen. In: Corporate Compliance Zeitschrift (CCZ), H. 10, S. 257-275.
 
+
+<!-- PAGE 239 -->
+
+
 - Ebers, Martin/Streitbörger, Chiara (2024): Die Regulierung von Hochrisiko-KI-Systemen in der KI-Verordnung. In: Recht Digital (RDi), S. 393-400.
 - Engel, Andreas (2024): Generative KI, Foundation Models und KI-Modelle mit allgemeinem Verwendungszweck in der KI-VO. In: Künstliche Intelligenz und Recht (KIR), S. 21-28.
 - Europäische Kommission (2025a): Commission Guidelines on the definition of an artificial intelligence system established by Regulation (EU) 2024/1689 (AI Act) ec.europa.eu/newsroom/dae/ redirection/document/112455 (Abfrage: 15.06.2025).
@@ -3003,10 +3956,18 @@ Drilling, Johannes/Musiol, Philip (2024): KI-Verordnung und interne Ermittlungen
 - Martini, Mario/Wendehorst, Christiane (2024): KI-VO, Verordnung über künstliche Intelligenz. München: C.H.Beck.
 - Merkle, Marieke (2024): Transparenz nach der KI-Verordnung -von der Blackbox zum Open-Book? In: Recht Digital (RDi), S. 414-420.
 
+
+<!-- PAGE 240 -->
+
+
 - Plafky, Christina/Frischhut, Hans (2025): Einsatz von Künstlicher Intelligenz zu Prognosezwecken in der Kinderund Jugendhilfe. In: Macsenaere, Michael (Hrsg.): Künstliche Intelligenz in der Kinderund Jugendhilfe. München: Ernst Reinhardt, S. 74-82.
 - Roth-Isigkeit, David (2024): Der neue Rechtsrahmen für Künstliche Intelligenz in der Europäischen Union. In: Künstliche Intelligenz und Recht (KIR), H. 1, S. 15-20. cdn-assetservice.ecomapi.beck-shop.de/productattachment/readingsample/15428864/37627358\_kir\_2024\_01\_ge-samt.pdf (Abfrage: 15.06.2025).
 - Saam, Daniel/Hermann, Christian (2024): Die Ausnahmeregelung zur Einstufung als HochrisikoKI nach Art. 6 III KI-VO. In: Recht Digital (RDi), S. 608-614.
 - Wachter, Martin/Leeb, Christina-Maria (2024): KI-Systeme in der Rechtspflege. In: Recht Digital (RDi), S. 440-446.
+
+
+<!-- PAGE 241 -->
+
 
 ## Künstliche Intelligenz in der Lehre der Sozialen Arbeit 1
 
@@ -3022,6 +3983,10 @@ Künstliche Intelligenz (KI) wird die hochschulische Lehre auch in Zukunft maßg
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_017
 
+
+<!-- PAGE 242 -->
+
+
 diesem Hintergrund wird im Folgenden ein durch die Stiftung Innovation in der Hochschullehre (StIL) gefördertes Lehrforschungsprojekt der Fakultät für Sozialwissenschaften der Technischen Hochschule (TH) Rosenheim vorgestellt, das auf der Grundlage einer durch Peer-Mentoring gestützten Schreibwerkstatt zur Begleitung von Bachelorarbeiten im Studiengang Soziale Arbeit die Nutzung von KI in der Lehre anwendungsbezogen erforscht (vgl. Botzum/Gergen 2022).
 
 Ausgehend vom Diskurs um die Relevanz digitaler Future Skills für die Nutzung von KI (vgl. 2) wird in Kapitel 3 anhand einer stichprobenartigen Erhebung das KI-Nutzungsverhalten von Studierenden der Sozialen Arbeit an der TH Rosenheim veranschaulicht. Hochschulische Schreibzentren sind durch die KI-gestützte Transformation der Lehre besonders stark betroffen (vgl. Fritze 2024, S. 49). Deshalb wirft der folgende Abschnitt ein Schlaglicht auf einen in Zusammenarbeit mit dem Schreibzentrum der TH Rosenheim entwickelten Zertifikatskurs zum wissenschaftlichen Arbeiten anhand KI-gestützter Tools. Angesichts der Tatsache, dass der Ausbau digitaler Kompetenzen für den digitalen Wandel von der Europäischen Union als aktuelles bildungspolitisches Ziel ihrer Mitgliedsländer ausgerufen wurde, stehen Hochschulen verstärkt in der Verantwortung, ihre Studierenden zum Aufbau von KI-Kompetenzen zu befähigen (vgl. Europäische Kommission 2020, S. 15). Daher gibt Abschnitt 5 einen Ausblick auf die hochschulpolitische Dimension der Diskussion um KI in der Lehre der Sozialen Arbeit. Das abschließende Fazit fasst perspektivische Entwicklungen in der KI-gestützten hochschulischen Lehre der Sozialen Arbeit zusammen.
@@ -3034,6 +3999,10 @@ Die Entwicklung im Bereich generativer KI wirft seit der Veröffentlichung von C
 
 'Methoden, Verfahren und Technologien, die es IT-Systemen, wie Maschinen, Robotern oder Softwaresystemen, ermöglichen, große Mengen von Daten zu interpretieren und aus diesen Daten zu lesen, um bestimmte menschlich-kognitive Fähigkeiten nachzubilden bzw. zu imitieren' (Di Vaio et al. 2020, zitiert nach von Garrel et al. 2023, S. 8).
 
+
+<!-- PAGE 243 -->
+
+
 Aufgaben, die beispielsweise visuelle Wahrnehmung, Sprache oder strategisches Denken und Planen erfordern, können durch IT-Systeme eigenständig und effizient durchgeführt werden (vgl. von Garrel et al. 2023, S. 8). Dies führt zu der Frage, inwiefern wissenschaftliches Lesen und Schreiben in der Lehre ihre Rolle als Kommunikationsinstrumente und Kulturtechniken beibehalten können (vgl. Buck et al. 2024).
 
 KI-Tools dienen als Werkzeuge zur Unterstützung von Literaturrecherche und -auswertung, Lektüreunterstützung, Texterstellung, Datenauswertung und Textüberarbeitung. Schon jetzt können Tools wie ChatGPT wissenschaftliche Texte vorlesen und zusammenfassen oder über mobile Endgeräte im sprachlichen Dialog selbst entwickeln (vgl. ebd.). Der KI-Einsatz an Hochschulen wird in drei Ebenen unterteilt: Mikroebene (einzelne Lehrkontexte), Mesoebene (Fakultäten) und Makroebene (gesamte Hochschule) (vgl. Watanabe 2023). Im vorliegenden Beitrag wird die Nutzung von KI auf allen drei Ebenen der Hochschulbildung untersucht.
@@ -3043,6 +4012,10 @@ KI-Tools dienen als Werkzeuge zur Unterstützung von Literaturrecherche und -aus
 Die Anwendung von KI in der Lehre wird häufig im Kontext der sogenannten Future Skills diskutiert, die vom Stifterverband als Leitmarken im bildungspolitischen Diskurs gefördert werden (vgl. Ehlers et al. 2024). Beispielsweise sollen Lernplattformen Informationen über neue Technologien wie KI bereitstellen (vgl. Stifterverband 2021). Im 'Future Skills Framework 2021' wurden sogenannte 'transformative Kompetenzen' (ebd., S. 4) ausformuliert, die in den nächsten fünf Jahren für Beschäftigte von Relevanz sein werden, darunter technologische, klassische und transformative Kompetenzen sowie digitale Schlüsselkompetenzen (vgl. ebd., S. 5). Diese Kompetenzen beschreiben Fähigkeiten, die erforderlich sind, um an einer digitalisierten Welt aktiv teilzunehmen, darunter Digital Literacy, Digital Ethics, digitale Kollaboration und agiles Arbeiten (vgl. Tabelle 1).
 
 Die Ausdifferenzierung der Future Skills basiert auf den von der OECD 2005 formulierten Schlüsselkompetenzen, die im Zuge der Gründung eines gemeinsamen Europäischen Hochschulraums (Bologna-Prozess) ab 1999 relevant wurden (vgl. OECD 2005; Raber 2012). Die Bologna-Erklärung verpflichtete die Unterzeichnerstaaten zur Einführung vergleichbarer Abschlüsse und zur Qualitätssicherung in der Hochschulbildung (vgl. Bologna-Erklärung 1999). Ziel war die Förderung von 'Schlüsselkompetenzen' für Beschäftigungsfähigkeit, gesellschaftliche Verantwortung und Persönlichkeitsentwicklung im Hochschulstudium (vgl. Raber 2012, S. 5). In der Debatte um die Employability der Absolvent:innen entwickelte sich seit 2010 eine Diskussion über die Freiheit von Forschung und Lehre. Thematisiert wurde das traditionelle Spannungsverhältnis zwischen einem von Interessenträgern der Wirtschaft formulierten Anspruch an die Qualifizierungs-
+
+
+<!-- PAGE 244 -->
+
 
 Tabelle 1: Digitale Schlüsselkompetenzen ( Future Skills )
 
@@ -3058,6 +4031,10 @@ Quelle: Eigene Darstellung in Anlehnung an Stifterverband 2021, S. 6
 pflicht der Hochschulen einerseits und dem humanistischen Bildungsideal nach Wilhelm von Humboldt andererseits, wodurch das Autonomieverständnis deutscher Hochschulen seit dem frühen 19. Jahrhundert bestimmt wurde (vgl. ebd.). Voraussetzung für die Bildung des einzelnen Subjekts durch wissenschaftliches Bemühen um objektive Erkenntnis ist demnach die Unabhängigkeit der Universität von Staat und Wirtschaft (vgl. von Humboldt 1985).
 
 Im Diskurs um die Entwicklung von KI und Future Skills in der hochschulischen Lehre wird dieser Diskurs nun im Kontext des sogenannten Deskillings thematisiert, das den Verlust von Kompetenzen aufgrund technologischer Veränderungen beschreibt (vgl. Deutscher Ethikrat 2023a, b; Reinmann 2023). Deskilling bezieht sich auf Veränderungen am Arbeitsplatz und individuelles Verlernen durch fehlende Praxis (vgl. Reinmann 2023, S. 49). Diese Diskussion wird in den folgenden Abschnitten zur KI-Nutzung in der Hochschullehre thematisiert.
+
+
+<!-- PAGE 245 -->
+
 
 ## 3 KI-Nutzung im Studium der Sozialen Arbeit aus Studierendenperspektive
 
@@ -3077,6 +4054,10 @@ Besonders ChatGPT scheint sich als vielseitiges Tool zu etablieren, das nahezu f
 
 6 Sechs der teilnehmenden Studierenden gaben an, ChatGPT bereits genutzt zu haben oder zu nutzen.
 
+
+<!-- PAGE 246 -->
+
+
 Sozialen Arbeit und der Nutzung von ChatGPT unter Studierenden befasst. In diesem Rahmen wurden deutschlandweit Sozialarbeitsstudierende zu ihrem Nutzungsverhalten, der Bewertung und Auseinandersetzung mit ChatGPT im Studium befragt (vgl. ebd., S. 2). Die Ergebnisse zeigen, dass die Nutzung von ChatGPT weit verbreitet ist: Rund 80% verwenden ChatGPT für studienbezogene Aufgaben, insbesondere für die Klärung von Verständnisfragen und fachspezifischen Konzepten, zur Textanalyse und -erstellung sowie zu Recherchezwecken (vgl. ebd., S. 14, 22). Ähnliche Ergebnisse liefert die bisher umfangreichste quantitative Studie zu KI im Studium, in der 6311 Studierende aus verschiedenen Studiengängen von 395 Hochschulen in Deutschland befragt wurden (vgl. von Garrel 2023, S. 15). Die Studie zeigt, dass 63,4% KI-basierte Tools in ihrem Studium verwenden, während 36,6% keine Tools einsetzen (vgl. ebd., S. 20). Dabei steht die Nutzung in Abhängigkeit zum jeweiligen Studienfach: 7 So liegt die Nutzungsquote in ingenieurwissenschaftlichen Studiengängen bei über 75%, in den Rechts-, Wirtschaftsund Sozialwissenschaften bei rund 58% (vgl. ebd., S. 21). Auch in dieser Studie waren ChatGPT und DeepL die am häufigsten verwendeten KI-Tools, insbesondere für Verständnisfragen, Recherche, Übersetzungen, Textanalyse, Problemlösung und Entscheidungsfindung (vgl. ebd., S. 26f.).
 
 Die Studienergebnisse zeigen, dass KI auch im Studium der Sozialen Arbeit angekommen ist. Dabei scheint der Einsatz von KI im Studium weitgehend als legitim angesehen zu werden, solange die wesentlichen Inhalte eigenständig erarbeitet werden (vgl. Balabdaoui et al. 2023). KI-Tools werden als Unterstützung zur Effizienzund Qualitätssteigerung der eigenen Arbeit wahrgenommen, ersetzen jedoch nicht das eigenständige Denken und Arbeiten (vgl. ebd., 2023). Nach einer Aussage aus der stichprobenartigen Erhebung,
@@ -3089,6 +4070,10 @@ KI-Tools werden nicht als Ersatz, sondern als Ergänzung zu traditionellen Lehrm
 
 7 Für weitere Ergebnisse siehe von Garrel et al. 2023, S. 21.
 
+
+<!-- PAGE 247 -->
+
+
 um damit ein blindes Vertrauen auf KI und die Verbreitung von Fehlinformationen durch Halluzinationen zu verhindern (vgl. von Garrel et al. 2023, S. 11). Zusätzlich bestehen Bedenken mit Blick auf Datenschutz, Urheberrecht und einer möglichen Überabhängigkeit (vgl. Balabdaoui et al. 2023). Studierende sehen es daher als relevant an, dass KI-Tools im Studium nur dann eingesetzt werden, wenn sie wissenschaftliche Standards, Fehlerfreiheit und logische Argumentation gewährleisten (vgl. von Garrel et al. 2023, S. 32f.).
 
 Trotz der Risiken sehen Studierende es nicht als Lösung an, KI im Studium zu verbieten, sondern fordern eine verstärkte Thematisierung in Form von Informationsveranstaltungen sowie eine curriculare Verankerung (siehe Mittmann et al. 2023) von KI-bezogenen Themen in der Ausund Weiterbildung von Studierenden der Sozialen Arbeit (vgl. Witter et al. 2024, S. 23), 'um die erforderliche Reflexionskompetenz mit Blick auf technische Zusammenhänge und Handlungssysteme auszubilden und dabei die spezifischen Herausforderungen und Anforderungen in der Sozialen Arbeit professionell mitzudenken' (Zorn/Seelmeyer 2015, S. 134). Beispielhaft kann hier der Einsatz von ChatGPT in der Beratungsausbildung von angehenden Fachkräften angeführt werden, mit dessen Hilfe komplexe Dialoge inszeniert werden können (siehe Engelhardt 2024). Zudem wird Transparenz in der Nutzung von KI-Tools gefordert, etwa durch Richtlinien und Bereitstellung geeigneter KI-Tools durch die Hochschule, sofern diese den Anforderungen der Transparenz, Zuverlässigkeit, Aktualität und Unvoreingenommenheit gerecht werden (vgl. Balabdaoui et al. 2023).
@@ -3099,11 +4084,19 @@ Trotz der Risiken sehen Studierende es nicht als Lösung an, KI im Studium zu ve
 
 KI-Tools bieten neue Möglichkeiten zu lehren, z.B. durch eine erweiterte Interaktion mit Chatbots oder die Anreicherung der eigenen Lehre mit KI-generierten Inhalten (vgl. Tobor 2024, S. 32). Bei der Implementierung von KI in der Hochschullehre gibt es anscheinend noch zahlreiche Herausforderungen zu bewältigen, wie eine Studierendenbefragung (Wintergerst 2024) zeigt. Nur 37% der Hochschulen haben zentrale -oder zumindest von Lehrenden festgelegte -Regeln für den Umgang mit generativer KI. In der Studie geben Studierende zu 38% an, sie werden an ihrer Hochschule nicht auf die Anforderungen der digitalen Arbeitswelt vorbereitet. 36% sind der Meinung, die Digitalisierung ihrer Hochschule scheitere an mangelnden Kompetenzen des Lehrpersonals. 74% wünschen sich, den richtigen Umgang mit ChatGPT an ihrer Hochschule zu erlernen, und 44% der Befragten geben an, dass der Einsatz an allen Hochschu-
 
+
+<!-- PAGE 248 -->
+
+
 len Standard sein sollte (vgl. ebd., S. 2ff.). Dies deutet aus Perspektive der 506 Befragten auf einen Nachholbedarf an Hochschulen sowie Nachqualifizierungsbedarf der Lehrenden hin. Ihnen kommt eine besondere Bedeutung zu, denn sie werden durch Einsatz von KI im eigenen Vorlesungsgeschehen -im Idealfall -zu Impulsgebenden sowie zentralen Gestaltungspersonen von KI für Lehre und Lernen. Der Anwendungsbezug im Projekt digi.peer (Digitales PeerMentoring im Kontext einer Literaturund Forschungswerkstatt im Bachelor-Studiengang Soziale Arbeit) hilft dabei, Möglichkeiten und Grenzen von generativer KI im Lehrbetrieb zu erörtern, gemeinsam mit Studierenden der Sozialen Arbeit zu reflektieren, um darauf aufbauend sinnvolle Einsatzszenarien zu erproben.
 
 Die Herausforderungen einer sinnvollen Anwendung von KI-gestützter Software im Lehrbetrieb gehen aber weit über die rein technische Umsetzung hinaus. Mit der Einführung von KI-Anwendungen in der Hochschulbildung gehen offenkundig auch Transformationsprozesse innerhalb des Bildungssystems einher, die mit weitreichenden Auswirkungen auf das Bildungsverständnis verbunden sein werden. Im Lehrforschungsprojekt digi.peer erfolgt daher eine kontinuierliche und kritische Reflexion der eingesetzten Technologien, um die akademische Integrität 8 im Forschungsprozess zu gewährleisten. Hochschullehrende nehmen beim Thema KI-Kompetenz gegenwärtig eine Doppelrolle ein. Einerseits bilden sie Studierende zum verantwortungsbewussten Umgang mit neuen Technologien aus. Andererseits werden Hochschulen in Zukunft immer häufiger zum Anwendungsfeld von KI, was einen kompetenten, transparenten und ethisch reflektierten Umgang mit den neuen Programmen voraussetzt (vgl. Renz/Etsiwah 2020, S. 37). Die Implementierung digitaler Tools und KI-gestützter Softwareanwendungen durch das Projekt digi.peer bietet so die Gelegenheit, wichtige anwendungsbezogene Lehrsowie Lernerfahrungen zu sammeln, und orientiert sich dadurch an den Empfehlungen der Ständigen Wissenschaftliche Kommission der Kultusministerkonferenz (SWK). Diese empfiehlt die 'systematische Erprobung von LLM [Large Language Models, Anm. d. Verf.] bei offener Fehlerkultur' (SWK 2024, S. 4). Die Herangehensweise im Lehrforschungsprojekt digi.peer folgt dieser Prämisse und positioniert sich gegenüber gegenwärtigen Problemen lösungsorientiert.
 
 8 Die Leitlinien zur Sicherung guter wissenschaftlicher Praxis der Deutschen Forschungsgemeinschaft (DFG) sind in diesem Zusammenhang besonders relevant. Sie betonen die Bedeutung von Integrität in der Forschung, einschließlich der Vermeidung von Plagiaten, der ordnungsgemäßen Dokumentation von Daten und der Verantwortung gegenüber Kollegium und Gesellschaft.
+
+
+<!-- PAGE 249 -->
+
 
 ## 4.2 Implikation von KI-Anwendungen in der Lehre der Sozialen Arbeit
 
@@ -3115,11 +4108,19 @@ Das Spannungsfeld zwischen technologischer Innovation, professionellem Handeln u
 
 Die rasante Entwicklung und Verbreitung neuer KI-Systeme und LLM stellt Hochschulen und Lehrende vor erhebliche prüfungsrechtliche Herausforderungen. Insbesondere bei der Bewertung von Hausund Abschlussarbeiten muss die Eigenleistung der Studierenden auch mit Nutzung von KI nachvollziehbar und prüfbar bleiben. Diese Entwicklung erfordert eine Anpassung bestehender Prüfungsordnungen und -formate.
 
+
+<!-- PAGE 250 -->
+
+
 Von besonderer Relevanz ist der Umgang mit der 'zwischenschrittigen' Nutzung von KI-Tools. Beispielsweise können Chatbots wie ChatGPT verwendet werden, um im Prüfungsprozess Ideen zu entwickeln, Texte zu überarbeiten oder Informationen zu generieren. Herbold et al. (2023) zeigen in ihrer Studie, dass KI-generierte Texte oft eine höhere durchschnittliche Qualität aufweisen als studentische Arbeiten, insbesondere in Bezug auf linguistische Merkmale, was Fragen nach Fairness und Vergleichbarkeit von Prüfungsleistungen aufwirft. Darüber hinaus werden traditionelle Prüfungsformate durch die Leistungsfähigkeit von KI-Tools infrage gestellt. Diese lösen einfache Wissensabfragen mit hoher Präzision und könnten Leistungen von Studierenden übertreffen, wodurch Prüfungen, die auf bloßer Reproduktion von Faktenwissen beruhen, an Aussagekraft verlieren. Ein möglicher Ansatz, der über reine Wissensabfrage hinausgeht, besteht darin, KI-Tools in die Lehrund Prüfungsgestaltung aktiv zu integrieren, wobei auch ethische Aspekte und mögliche Bedenken von Studierenden berücksichtigt werden sollten. Vorgeschlagen wird, z.B. ChatGPT ähnlich einzusetzen wie Taschenrechner in der Mathematik (vgl. ebd.): Zunächst werden im Sinne des Constructive Alignments , bei dem Lernziele, Lehrmethoden und Prüfungen aufeinander abgestimmt werden, grundlegende Konzepte gelehrt. Anschließend werden KI-Tools verwendet, um komplexere Lernziele zu erreichen. Gleichzeitig sollte sichergestellt werden, dass Studierende, die aus ethischen Gründen den Einsatz von KI-Tools ablehnen, alternative Lernund Prüfungswege wählen können, um Chancengleichheit und akademische Fairness zu gewährleisten. Durch diesen gezielten und flexiblen Einsatz von KI, etwa im Rahmen eines sokratischen Dialogs, 9 können Studierende dazu angeregt werden, tiefer in Themen einzutauchen und eigenständig Lösungen zu entwickeln (vgl. Hochschulforum Digitalisierung 2023).
 
 In Hinblick auf die Anpassung der Allgemeinen Prüfungsordnung zeigen sich auch hochschulpolitische Implikationen. Zunehmend wird gefordert, Prüfungsordnungen flexibler zu gestalten, um den Einsatz von KI-Tools zu regulieren. Eine Möglichkeit bestünde darin, neue Prüfungsformate zu entwickeln, die die Verwendung von KI offenlegen und transparent machen. So könnten etwa Prompts, die Studierende zur Erzeugung von Texten genutzt haben, verpflichtend dokumentiert werden. Zudem bieten kreative und offene Fragestellungen eine Chance,
 
 9 Der sokratische Dialog ist eine Methode, bei der durch gezielte Fragen und Antworten kritisches Denken gefördert wird, um die Nutzenden zu eigenen Erkenntnissen zu führen, ohne direkt Lösungen vorzugeben. Beispielsweise über die Seite https://poe.com/SokratischerDialog\_5 (Abrufdatum: 15.04.2025) wird ermöglicht, mit verschiedenen KI-Modellen in Dialog zu treten. Diese Art von KI-Modell könnte in der Lehre eingesetzt werden, um Lernende dabei zu unterstützen, komplexe Themen eigenständig zu durchdringen und ihre analytischen Fähigkeiten zu schärfen.
+
+
+<!-- PAGE 251 -->
+
 
 die Nutzung von KI sinnvoll in den Prüfungsprozess zu integrieren und gleichzeitig die Eigenleistung der Studierenden zu sichern.
 
@@ -3135,6 +4136,10 @@ Die Richtlinien von derzeit nur etwa 25 weltweit führenden Hochschulen fokussie
 
 Die Integration von KI in die Lehre der Sozialen Arbeit birgt Chancen und Herausforderungen. Hochschulpolitische Entscheidungen spielen eine zentrale Rol-
 
+
+<!-- PAGE 252 -->
+
+
 le, um klare Regelungen und Richtlinien zu schaffen, die akademische Integrität und ethische Standards wahren. Hochschulpolitik muss hier proaktiv handeln, um die zukünftige Bildungslandschaft zu gestalten und Chancen der KI-Integration optimal nutzen zu können, denn KI-Kompetenzen dürfen nicht zum Privileg für wenige werden. Lehrund Lernangebote müssen offen und partizipativ gestaltet sein (vgl. Pinkwart/Rampelt/de Witt 2020, S. 5f.). Die Veränderungen in Lehrund Lernprozessen erfordern zudem eine Anpassung der Hochschuldidaktik und -methodik. Insbesondere ist es wichtig, die Selbstständigkeit der Studierenden zu fördern und eine kritische Auseinandersetzung mit KI-Tools zu ermöglichen.
 
 Aspekte der Ethik und Verantwortung sollten im Mittelpunkt des Diskurses um KI in der Lehre stehen, und es bedarf klarer ethischer Richtlinien, um eine verantwortungsvolle Nutzung von KI gewährleisten zu können. Die Hochschule nimmt in der Vermittlung dieser digitalen Future Skills eine Schlüsselrolle ein. Abschließend lässt sich festhalten, dass eine Balance zwischen technologischer Innovation und der Wahrung akademischer Standards notwendig ist. Hochschulpolitische Maßnahmen sollten darauf abzielen, die Potenziale von KI zu fördern, indem sie Transparenz, Verantwortung und partizipative Ansätze in den Mittelpunkt stellen. Dies erfordert eine kontinuierliche Überprüfung und Anpassung ethischer Standards, um eine faire, verantwortungsvolle und nachhaltige Nutzung zu gewährleisten. Die zukünftige Hochschulpolitik in Bezug auf Nutzung von KI in der Lehre wird die weitere Entwicklung der Studiengänge zur Sozialen Arbeit und die der gesamten Bildungslandschaft maßgeblich prägen.
@@ -3146,6 +4151,10 @@ Aspekte der Ethik und Verantwortung sollten im Mittelpunkt des Diskurses um KI i
 - Benner, Dietrich (2017): Bildung und Kompetenz. Von der kategorialen Bildung zur Kompetenzorientierung unterrichtlichen Lehrens und Lernens? Überlegungen zur Bedeutung von Wolfgang Klafkis Studien zur Bildungstheorie und Didaktik für eine pädagogisch und kompetenztheoretisch ausgewiesene Didaktik, Unterrichtsund Bildungsforschung. In: Braun, KarlHeinz/Stübig, Frauke/Stübig, Heinz (Hrsg.): Erziehungswissenschaftliche Reflexion und pädagogischpolitisches Engagement. Wolfgang Klafki weiterdenken. Wiesbaden: Springer VS, S. 73-91.
 - Bologna-Erklärung (1999): The Bologna Declaration of 19 June 1999: Joint declaration of the European Ministers of Education. ehea.info/media.ehea.info/file/Ministerial\_confer ences/02/8/1999\_Bologna\_Declaration\_English\_553028.pdf (Abfrage: 15.06.2024).
 - Botzum, Edeltraud/Gergen, Andrea (2022): 'Peer-Mentoring als didaktisches Konzept. Umsetzung einer innovativen Lehrmethode im Rahmen des Moduls Literaturund Forschungswerkstatt Soziale Arbeit an der TH Rosenheim'. In: QLS TH Rosenheim: Lehre Aktuell 2, S. 2-3.
+
+
+<!-- PAGE 253 -->
+
 
 - Botzum, Edeltraud/Neumaier, Stefanie (2023): Künstliche Intelligenz und digitale Transformationsprozesse in der Lehre Sozialer Arbeit. In: Jugendhilfe 61(5), S. 388-394.
 - Buck, Isabella/Huemer, Birgit/Limburg, Anika (2024): KI im Schreibzentrum? Ein Plädoyer für offenen Diskurs und Kollaboration. In: Liebetanz, Franziska/Dalesandro, Leonardo/Mackus, Nicole/Alagöz-Bakan, Özlem (Hrsg.): Künstliche Intelligenz in der Schreibzentrumsarbeit: Perspektiven auf die KI-induzierte Transformation. In: JoSch -Journal für Schreibwissenschaft 15(1), S. 4-7.
@@ -3161,6 +4170,10 @@ Aspekte der Ethik und Verantwortung sollten im Mittelpunkt des Diskurses um KI i
 - Hochschulforum Digitalisierung (2023): Im Sokratischen Gespräch mit KI. hochschulforumdigitalisierung.de/im-sokratischen-gespraech-mit-ki/(Abfrage: 15.06.2025).
 - Ifenthaler, Dirk (2023): Ethische Perspektiven auf Künstliche Intelligenz im Kontext der Hochschule. In: Schmohl, Tobias/Watanabe, Alice/Schelling, Kathrin (Hrsg.): Künstliche Intelligenz in der Hochschulbildung. Chancen und Grenzen des KI-gestützten Lernens und Lehrens. Bielefeld: transcript, S. 71-86.
 - Mittmann, Michelle/Roeske, Adrian/Weber, Joshua/Remke, Sara/Schiffhauer, Birte (2023): Studium Soziale Arbeit: Erkenntnisse zur curricularen Verankerung der digitalen Transformation. In: Köttig, Michaela/Kubisch, Sonja/Spatscheck, Christian (Hrsg.): Geteiltes Wissen. Wissens-
+
+
+<!-- PAGE 254 -->
+
 
 - entwicklung in Disziplin und Profession Sozialer Arbeit. Opladen, Berlin und Toronto: Barbara Budrich, S. 237-249.
 - Moorhouse, Benjamin Luke/Yeo, Marie Alina/Wan, Yuwei (2023): Generative AI tools and assessment: Guidelines of the world's top-ranking universities. In: Computers and Education Open 5, S. 100151. https://doi.org/10.1016/j.caeo.2023.100151
@@ -3180,6 +4193,10 @@ Aspekte der Ethik und Verantwortung sollten im Mittelpunkt des Diskurses um KI i
 - Witter, Stefanie/Meinhardt-Injac, Bozana/Siemer, Lutz/Späte, Julius (2024): ChatGPT im Studium der Sozialen Arbeit. Eine quantitative Studie zur Nutzung, Bewertung und Thematisierung in der Hochschule aus Studierendensicht. https://doi.org/10.34678/opus4-3382
 - Zorn, Isabel/Seelmeyer, Udo (2015): Digitale Technologien in der Sozialen Arbeit -Zur Notwendigkeit einer technischen Reflexivität. In: Der pädagogische Blick -Zeitschrift für Wissenschaft und Praxis in pädagogischen Berufen 23(3), S. 134-146.
 
+
+<!-- PAGE 255 -->
+
+
 ## Künstliche Intelligenz und Soziale Arbeit: Ausblick und Perspektiven 1
 
 Gesa Linnemann, Julian Löhe, Beate Rottkemper
@@ -3194,6 +4211,10 @@ Als general purpose technology durchdringt KI unterschiedlichste Lebensbereiche 
 
 1 © Die Autor:innen 2025, veröffentlicht im Verlag Beltz Juventa, Open Access: CC BY 4.0 Gesa Linnemann/Julian Löhe/Beate Rottkemper (Hg.), Künstliche Intelligenz in der Sozialen Arbeit 10.3262/978-3-7799-8562-4\_018
 
+
+<!-- PAGE 256 -->
+
+
 und seine Wahrnehmung verändern und Große Sprachmodelle können anstelle von Freund:innen, Therapeut:innen, Sexualpartner:innen etc. konsultiert werden. Statt sozialer Netzwerke können auch stark oder sogar ausschließlich KI-bespielte 'Netzwerke' genutzt werden, Arbeitsprofile und Aufgabenzuschnitte ändern sich je nach Tätigkeit mit dem Einsatz von KI zum Feinschliff einzelner Aufgaben bis zur Transformation ganzer Berufsbilder, bei Entscheidungen können durch den KI-Einsatz hunderte Kriterien und sehr große Datensätze herangezogen und als Grundlage genutzt werden. Anhand des Problems von Verzerrungen betrachten wir im Folgenden beispielhaft, warum Technik, Gesellschaft und Profession unbedingt zusammen betrachtet werden müssen.
 
 KI-Systeme in der Sozialen Arbeit sind fehleranfällig, weil sie auf Daten basieren, die gesellschaftliche Verzerrungen enthalten. Der sogenannte 'Data Bias' (deutsch: Verzerrungen in Daten) in KI-Systemen entsteht, wenn Trainingsdaten beim Maschinellen Lernen (siehe den Beitrag von Rottkemper in diesem Band) historische Vorurteile abbilden und diese reproduzieren (vgl. Noble 2018; vgl. Ruha 2019; vgl. Eubanks 2018). Ein Beispiel: In Allegheny County (USA) wurde ein Kinderschutz-Algorithmus kritisiert, weil er Familien in Armut systematisch höheren Risiken in Bezug auf Kindeswohlgefährdung zuordnete -nicht aufgrund realer Gefährdung, sondern weil Armut in den Datensätzen mit behördlicher Intervention korrelierte (vgl. Eubanks 2018, S. 163).
@@ -3206,6 +4227,10 @@ Die Mensch-Maschine-Interaktion wird dadurch grundlegend bestimmt. KI kann Fachk
 
 2 BIPoC ist ein zusammengesetztes Initialwort für Black, Indigenous and People of Colour. Es handelt sich um eine politisch motivierte Selbstbezeichnung, die unterschiedliche Erfahrungen mit Rassismus sichtbar machen und gleichzeitig solidarisch verbinden möchte (vgl. Gamgami 2024, S. 7f.).
 
+
+<!-- PAGE 257 -->
+
+
 AI (deutsch: erklärbare KI) ist daher ein entscheidendes Forschungsfeld, damit Fachkräfte Verantwortung übernehmen können (vgl. Floridi et al. 2018, S. 702). Zu konstatieren ist aber auch, dass Explainable AI trotz des zunehmenden Forschungsinteresses (vgl. Ali et al. 2023) in der Praxis noch nicht umfangreich zum verantwortlichen Handeln und Entscheiden mit KI beiträgt. Aufsehen erregte Anthropics Untersuchung der Funktionsweise seines Modells Claude 3.5 Haiku. Die detaillierte Analyse der Modellmechanismen setzt einen Gegenpunkt zur allgemeinen Auffassung, Sprachmodelle wie Claude 3.5 Haiku raten bloß statistisch plausible Wörter. Vielmehr zeigt die Analyse interne 'Denkprozesse' (Zwischenschritte, Zielplanung, Rückwärtsdenken, metakognitive Einschätzungen) auf, die in Ansätzen nachvollziehbar und manipulierbar sind -eine Voraussetzung dafür, dass Mensch-Maschine-Interaktion nicht zur Black Box verkommt, sondern gestaltbar bleibt (vgl. Lindsey et al. 2025). Gleichzeitig ist feststellbar, dass Modelle nicht nur Inhalte, sondern auch eigene Aktionen erfinden -so behauptet z.B. o3 von OpenAI, einen Code auf seinem eigenen Laptop ausgeführt zu haben (vgl. Chowdhury et al. 2025). Absurd, denn dieses Sprachmodell kann nichts außerhalb seiner eigenen Rechenumgebung ausführen und schon gar nicht auf seinem eigenen Gerät. An solchen Beispielen wird deutlich, dass auch das vermeintliche Reasoning großer KI-Modelle nicht die tatsächlichen Entscheidungsgründe offenbart -ein ernüchternder Befund für die Explainable AI: Ihre Rückverfolgung kann bestenfalls wenig nützen, schlimmstenfalls in die Irre führen; denn auch wenn die Ergebnisse häufig plausibel oder kreativ erscheinen, reicht ein oberflächliches menschliches Abnicken bei wichtigen Entscheidungen nicht aus. Es braucht den 'Human-in-the-Loop' auch weiterhin (vgl. Lindsey et al. 2025).
 
 Die Soziale Arbeit muss KI-Systeme kritisch prüfen: Wer wird wie repräsentiert? Welche Annahmen stecken in Daten und Code? Und wie können Bias und Diskriminierung reduziert werden? Möglich wäre das z.B. durch einen Bias-Audit (vgl. Heuer et al. 2021). Praktisch könnte das folgendermaßen aussehen: Ein Träger will ein KI-gestütztes System zur Risikoeinschätzung einführen. Vor dem Einsatz wird ein Bias Audit durchgeführt, das u.a. folgende Fragen beleuchtet:
@@ -3217,6 +4242,10 @@ Die Soziale Arbeit muss KI-Systeme kritisch prüfen: Wer wird wie repräsentiert
 
 Außerdem wird zum Erzeugen von Dependable AI (deutsch: zuverlässiger KI), im Rahmen von Großen Sprachmodellen auch in Projekten, die die Soziale Arbeit be-
 
+
+<!-- PAGE 258 -->
+
+
 treffen, auf Retrieval Augmented Generation (RAG) zurückgegriffen (z. B. Projekt SuchtGPT, Delphi Gesellschaft 2025, ab min 33). RAG ist ein Verfahren, bei dem Große Sprachmodelle (LLM) durch eine externe Wissensquelle ergänzt werden. Statt rein auf das im Modell gespeicherte Wissen zuzugreifen, ruft das System in Echtzeit relevante Informationen aus einer Datenbank oder einem Dokumentenindex ab und integriert diese in die Antwortgenerierung (vgl. Gao et al. 2023, S. 1). RAG ist aber auch keine Garantie dafür, um inhaltliche Fehler und Halluzinationen komplett ausschließen zu können (vgl. Wu/Wu/Zou 2025). Hier zeigt sich beispielhaft die Relevanz für die Soziale Arbeit, sich auch mit den technologischen Entwicklungen ganz konkret auseinanderzusetzen, um den fachlichen Einsatz beurteilen zu können. Ebenso sollte Soziale Arbeit als Menschenrechtsprofession auch weitere Aspekte von KI-Nutzung kritisch beobachten (siehe Linnemann/ Löhe/Rottkemper 2024), die sich gesellschaftlich genauso wie lebensweltlich (siehe Kapitel zu einzelnen Handlungsfeldern in diesem Band, z.B. Schlomann und Steiner) auswirken.
 
 Das betrifft auch den Bereich der öffentlichen Sicherheit und 'digitale Bürgerrechte', zwei Beispiele sind die Diskussion um die 'Chatkontrolle' und die Überwachung des öffentlichen Raumes mittels Gesichtserkennung (diskutiert im Rahmen des 'Sicherheitspakets der Bundesregierung' 2024 und der entsprechend vorbereiteten Gesetzesentwürfe). Globale und geopolitische Auswirkungen hat der Einsatz von KI in der Rüstungsindustrie. Wessen Stimme hier wie gehört wird, stellt sich auch als Frage im internationalen Kontext. Tech-Konzerne wirken hier nicht als reine 'Hersteller', sondern nehmen aktiv Einfluss auf den Diskurs und tragen somit Verantwortung (z. B. Artikel von Anthropic-Chef Amodei 2024) über die Einflussnahme der Gestaltung ihrer Produkte hinaus.
@@ -3226,6 +4255,10 @@ Der vorliegende Band 'Künstliche Intelligenz in der Sozialen Arbeit -Grundlagen
 ## 1. Unterstützungsbedarf bei KI-Nutzung/Auswirkungen
 
 Die Gefahr einer digitalen Spaltung (van Dijk 2017) besteht bei KI ebenso wie bei anderen Technologien, wird jedoch durch die Wirkmächtigkeit der Technologie möglicherweise noch einmal verstärkt. Die Modelle sind in der Regel sehr ressourcenund ggf. kostenintensiv. Das führt dazu, dass nicht alle Menschen gleichermaßen Zugang zu den Modellen und aus ihnen resultierenden Tools haben, geschweige denn sich an der Entwicklung beteiligen können. Nutzungspraktiken können sich auch stark unterscheiden, d.h., der Einsatz von KI kann von Nutzenden so gestaltet werden, dass eine Zunahme an Kompetenzerwerb, Selbstbestimmung und Wohlbefinden erfolgt oder aber im Gegenteil es zu stärkerer Un-
+
+
+<!-- PAGE 259 -->
+
 
 selbständigkeit und Verunsicherung kommt. Klient:innen sind in verschiedenen Bereichen betroffen, etwa bei automatisierter Kreditvergabe oder beim Umgang mit KI-gestützter Diagnostik. Klient:innen müssen genauso wie Fachkräfte (siehe Punkt 8 und die Beiträge von Botzum et al. sowie Dötterl in diesem Band) befähigt werden, mit KI umzugehen.
 
@@ -3245,6 +4278,10 @@ Für das Jahr 2025 haben die Vereinten Nationen das 'Quantenjahr' (https:// quan
 
 Die Integration von KI-Technologien in Robotik oder in das 'Internet der Dinge' wie in die 'AI Glasses' von Meta stellen Gesellschaft, Profession und Klient:in-
 
+
+<!-- PAGE 260 -->
+
+
 nen auch schon zeitnah vor weitere Fragen und Entscheidungen, über die in diesem Band auf KI-Systeme, betrieben auf PCs und mobilen Endgeräten, bezogenen hinaus.
 
 In einem medial vermittelten Dauerstrom an Neuerungen und Überarbeitungen, bei einer wachsenden Zahl an verfügbaren Modellen (siehe https:// huggingface.co, Abrufdatum 15.04.2025), ist die Herausforderung, hier Relevantes von Hype zu trennen und Entwicklungen kritisch zu begleiten, nicht von Einzelnen zu leisten, sondern bedarf der fachlichen Auseinandersetzung, die in der Praxis zugänglich gemacht wird.
@@ -3262,6 +4299,10 @@ Vielfach wird das Potenzial von KI auch aus Effizienzgesichtspunkten diskutiert 
 
 Die Investitionskosten variieren stark in Abhängigkeit davon, welches KI-System benötigt wird. Ein internationales Beratungsunternehmen unterscheidet und beziffert z.B. wie folgt:
 
+
+<!-- PAGE 261 -->
+
+
 Abbildung 1: Wesentliche Phasen im Lebenszyklus eines LLM
 
 | Kategorie                        | Geschätzte Kos- tenspanne   | Beispiele                                                                                                                                                         | Merkmale/Anforderungen                                                                                                                                                                                                                                                                     |
@@ -3274,6 +4315,10 @@ Quelle: Vgl. Coherent Solutions 2025
 
 Eine belastbare Kostenschätzung ist u.a. auch deshalb schwierig, weil Sozialarbeitende oftmals nicht ausreichendes Wissen über KI-Systeme haben, um beurteilen zu können, wie ihnen KI in der täglichen Arbeit helfen könnte und welche Form von KI-Systemen sie benötigen. Klar ist aber, dass es auch beim Einsatz von schon vorhandenen KI-Anwendungen der Schulung von Mitarbeitenden bedarf -die seit kurzen auch Pflicht gemäß KI-Verordnung ist (siehe den Beitrag von Dötterl in diesem Band). Es ist gleich aus zwei Gründen als 'blauäugig' zu beurteilen, wenn im Schwerpunkt die möglichen Vorteile von KI in den Fokus gerückt werden, ohne auch die Kosten seriös zu diskutieren: erstens sind die Kosten mitunter beachtlich, wie die oben genannte Auflistung exemplarisch veranschaulicht, und zweitens gibt es allgemein einen Trend in der Sozialen Arbeit, dass sich öffentliche Leistungsträger zunehmend aus der Finanzierung sozialer Dienstleistungen zurückziehen (vgl. Löhe/Aldendorff 2022, S. 10). Hinzu kommt, was schon aus der Diskussion um Digitalisierung bekannt ist: Fehlende Finanzierungsund Refinanzierungsmöglichkeiten erschweren den Einsatz (vgl. Gillingham/Schiffhauer/Seelmeyer 2020, S. 646; Rösler 2018 et al., S. 37). Das trifft auch für KI in
 
+
+<!-- PAGE 262 -->
+
+
 der Sozialen Arbeit zu: Auch hier gibt es keine standardmäßige Grundfinanzierung, die über Kostenträger abgerufen werden kann. Die immensen Mehrkosten müssen Organisationen der Sozialen Arbeit aus Eigenmitteln stemmen oder anderweitig einwerben -wie z.B. durch Ausschreibungen von Stiftungen oder anderen privaten Geldgebenden. Die Finanzierungssituation macht deutlich, dass darin ein bedeutender Hemmschuh für Innovationen in der Sozialen Arbeit zu identifizieren ist.
 
 Eine frühzeitige aktive Rolle von Sozialarbeitenden in der Entwicklung von KI-Anwendungen ist unabdingbar, um die fachlich-professionelle Sicht in der Technologieentwicklung vertreten zu können. Die dafür nötigen zeitlichen Ressourcen, gerade in Explorationsund Entwicklungsphasen, mögen hier abschreckend wirken. Auch scheiternde Versuche, Prototypen aus der Projektphase hinauszuführen, können demotivierend sein. Dennoch ist die Beteiligung der Profession zentral.
@@ -3285,6 +4330,10 @@ KI-Technologien werfen auf verschiedenen Ebenen ethische Fragen auf und stellen 
 Weitere ethische Fragestellungen tun sich im Rahmen des Trainings von Großen Sprachmodellen auf: von der Nutzung im Internet veröffentlichter Daten ohne Einverständnis der Urheber:innen und damit einhergehender Copyright-Verletzungen bis hin zu einer Verfestigung bestehender Muster in der Gesellschaft, die durch Techniken wie Verstärkerlernen der KI-Systeme durch menschliches Feedback wiederholt oder sogar intensiviert werden können (vgl. George/Baskar/Pandey 2024). Die Frage, wie sich eine Gesellschaft weiterentwickeln soll, wenn Entscheidungsgrundlagen zum Großteil auf Basis historischer Daten und mit teilweise verstärkten Vorurteilen entwickelt werden, bleibt zu diskutieren.
 
 Auch bei der Nutzung Großer Sprachmodelle sind ethische Aspekte zu berücksichtigen, die im Folgenden nicht erschöpfend adressiert werden können, angefangen bei Unterschieden im Zugang zu Technologien zwischen verschiedenen Regionen auf der Welt, aber auch innerhalb von Gesellschaften (vgl. Buccella 2023), über bereits genannte Risiken in der professionellen Nutzung bezüglich
+
+
+<!-- PAGE 263 -->
+
 
 des Automation Bias (vgl. Abdelwanis et al. 2024). Letzterer ist besonders kritisch im Zusammenhang mit den bis heute in Großen Sprachmodellen auftretenden Halluzinationen zu bewerten (vgl. den Beitrag von Rottkemper in diesem Band, vgl. Koenecke et al. 2024). Darüber hinaus ist besonders im professionellen Setting das Risiko von sogenanntem Deskilling zu berücksichtigen. Wenn Entscheidungen im großen Maße durch KI-Systeme vorbereitet und teilweise sogar getroffen werden, führt das zu einer Verstärkung der Technikabhängigkeit, die so weit gehen kann, dass Fachkräfte ihre Aufgaben ohne die entsprechende Technikunterstützung nicht mehr durchführen können. Auch im Rahmen der Fachkräfteausbildung sind diese Gefahren zu adressieren (vgl. Reinmann 2023).
 
@@ -3299,6 +4348,10 @@ Um einerseits möglichst ressourcenschonend zu agieren und die Effizienzgewinne 
 Wie die Befähigung und der Erwerb von KI-Kompetenz oder AI Literacy im Rahmen von Studium und Berufstätigkeit gelingen können, ist zunehmend Gegenstand der Diskussion und findet unter anderem Ausdruck in der Entwicklung der Future Skills (siehe den Beitrag von Botzum in diesem Band). Alles und Kolleginnen (2025) z.B. schlagen ein Kompetenzmodell mit mehreren Stufen vor, das die sogenannte 'AI Leadership' im Zentrum sieht.
 
 Die Skizzierung der Aspekte in den Punkten 1-9 in diesem Kapitel deuten an, wie vielgestaltig die Anforderungen hinsichtlich Kompetenz und Befähigung für die Soziale Arbeit sind. Das vorliegende Buch versteht sich -so der Anspruch der Autor:innen -als Beitrag zur Vermittlung von KI-Kompetenz in der Sozialen Arbeit: Es soll durch seine Verwendung in der Lehre sowie als frei zugängliche OpenAccess-Ressource auch in der Praxis Orientierung bieten und zur Befähigung im Umgang mit Künstlicher Intelligenz beitragen.
+
+
+<!-- PAGE 264 -->
+
 
 ## Literatur
 
@@ -3319,6 +4372,10 @@ Die Skizzierung der Aspekte in den Punkten 1-9 in diesem Kapitel deuten an, wie 
 - Falk, Sophia/van Wynsberghe, Aimee (2024): Challenging AI for Sustainability: what ought it mean? In: AI and Ethics 4(4), S. 1345-1355.
 - Floridi, Luciano/Cowls, Josh/Beltrametti, Monica/Chatila, Raja/Chazerand, Patrice/Dignum, Virginia/Luetge, Christoph/Madelin, Robert/Pagallo, Ugo/Rossi, Francesca/Schafer, Burkhard/ Valcke, Peggy/Vayena, Effy (2018): AI4People -An Ethical Framework for a Good AI Soci-
 
+
+<!-- PAGE 265 -->
+
+
 - ety: Opportunities, Risks, Principles, and Recommendations. In: Minds and Machines 28(4), S. 689-707. https://doi.org/10.1007/s11023-018-9482-5
 - Gamgami, Asmahan (2024): BI\_PoC Diversity Manager*innen in weißen Organisationen: Eine Gratwanderung zwischen Racial Stress &amp; White Fragility. Perspektiven und Handlungsempfehlungen. Wiesbaden: Springer VS.
 - Gao, Yunfan/Xiong, Yun/Gao, Xinyu/Jia, Kangxiang/Pan, Jinliu/Bi, Yuxi/Dai, Yi/Sun, Jiawei/ Wang, Meng/Wang, Haofen (2023): Retrieval-Augmented Generation for Large Language Models: A Survey. Shanghai Research Institute for Intelligent Autonomous Systems, Tongji University/Shanghai Key Laboratory of Data Science, Fudan University/College of Design and Innovation, Tongji University. arXiv preprint. https://arxiv.org/abs/2312.10997
@@ -3335,6 +4392,10 @@ Die Skizzierung der Aspekte in den Punkten 1-9 in diesem Kapitel deuten an, wie 
 - Lindsey, Jack/Gurnee, Wes/Ameisen, Emmanuel/Chen, Brian/Pearce, Adam/Turner, Nicholas L./ Citro, Craig/Abrahams, David/Carter, Shan/Hosmer, Basil/Marcus, Jonathan/Sklar, Michael/ Templeton, Adly/Bricken, Trenton/McDougall, Callum/Cunningham, Hoagy/Henighan, Thomas/Jermyn, Adam/Jones, Andy/Persic, Andrew/Qi, Zhenyi/Thompson, T. Ben/Zimmerman, Sam/Rivoire, Kelley/Conerly, Thomas/Olah, Chris/Batson, Joshua (2025): On the Biology of a Large Language Model. Veröffentlicht am 27. März 2025. https://transformer-circuits.pub/ 2025/attribution-graphs/biology.html (Abfrage: 15.06.2025).
 - Löhe, Julian/Aldendorff, Philipp (2022): Grundlagen zum Sozialmanagement. Zentrale Begriffe und Handlungsansätze. Göttingen: Vandenhoeck &amp; Ruprecht.
 
+
+<!-- PAGE 266 -->
+
+
 - Noble, Safiya Umoja (2018): Algorithms of Oppression: How Search Engines Reinforce Racism. New York: NYU Press.
 - Orwat, Carsten (2020): Diskriminierungsrisiken durch die Verwendung von Algorithmen. Expertise im Auftrag der Antidiskriminierungsstelle des Bundes. Berlin: Antidiskriminierungsstelle des Bundes. Online: https://www.antidiskriminierungsstelle.de/SharedDocs/downloads/DE/ publikationen/Expertisen/studie\_diskriminierungsrisiken\_durch\_verwendung\_von\_ algorithmen.pdf (Abfrage: 15.06.2025).
 - Pottharst, Bill/Neumann, Alexander/Ostrau, Christoph/Seelmeyer, Udo (2024): Bewältigung des Fachkräftemangels durch technologische Innovation? Effekte von Technisierung und Digitalisierung. In: Sozial Extra 48(3), S. 162-167. https://doi.org/10.1007/s12054-024-00694-9
@@ -3344,6 +4405,10 @@ Die Skizzierung der Aspekte in den Punkten 1-9 in diesem Kapitel deuten an, wie 
 - Vered, Mor/Livni, Tali/Howe, Piers D. L./Miller, Tim/Sonenberg, Liz (2023): The effects of explanations on automation bias. In: Artificial Intelligence 322, S. 103952. https://doi.org/10.1016/j. artint.2023.103952
 - Ali, Sajid/Abuhmed, Tamer/El-Sappagh, Shaker/Muhammad, Khan/Alonso-Moral, Jose M./Confalonieri, Roberto/Guidotti, Riccardo/Del Ser, Javier/Díaz-Rodríguez, Natalia/Herrera, Francisco (2023): Explainable Artificial Intelligence (XAI): What we know and what is left to attain Trustworthy Artificial Intelligence. In: Information Fusion 99, S. 101805. https://doi.org/10. 1016/j.inffus.2023.101805
 - Wu, Kevin/Wu, Eric/Zou, James Y. (2024): Clasheval: Quantifying the tug-of-war between an llm's internal prior and external evidence. In: Advances in Neural Information Processing Systems 37, S. 33402-33422.
+
+
+<!-- PAGE 267 -->
+
 
 ## Verzeichnis der Autor:innen
 
@@ -3360,6 +4425,10 @@ Prof. Dr. phil. Jörn Dummann ist seit 2022 Professor für Sport in der Sozialen
 Monika Feist-Ortmanns ist Erziehungswissenschaftlerin B. A. sowie Sozialmanagerin M. A. und geschäftsführende Direktorin am Institut für Kinderund Jugendhilfe (IKJ). Sie lehrt an der Hochschule Niederrhein, der HAW Landshut und der IU Internationale Hochschule.
 
 Dr. Andrea Gergen ist Wissenschaftliche Mitarbeiterin im Lehrforschungsprojekt digi.peer (Digitales Peer-Mentoring) an der TH Rosenheim und Vertretungsprofessorin für Soziale Arbeit an der HSD Hochschule Döpfer. Mail: andrea.gergen@th-rosenheim.de
+
+
+<!-- PAGE 268 -->
+
 
 Prof. Dr. Wolfgang M. Heffels ist Professor für Ethik und Berufspädagogik und Emeritus an der katho (Katholische Hochschule Nordrhein-Westfalen). Seine beruflichen Schwerpunkte in Lehre und Forschung waren Didaktik und Methodik der Berufsbildung Pflege und Gesundheit sowie die ethische Bildung (Individual-, Sozialund Gesellschaftsethik). Mail: wm.heffels@katho-nrw.de
 
@@ -3378,6 +4447,10 @@ Prof. Dr. rer. nat. Michael Macsenaere ist Diplom-Psychologe und wissenschaftlic
 Florian Müller (M. A.) ist Wissenschaftlicher Mitarbeiter in den Lehrforschungsprojekten 'digi.peer' (Digitales Peer-Mentoring) und 'digi.prosa' (Digitale Projekte in der Sozialen Arbeit) an der Technischen Hochschule Rosenheim. Mail: florian.mueller@th-rosenheim.de
 
 Prof. Jan Pelzl ist Professor für IT-Sicherheit. Er ist Autor eines der führenden Lehrbücher für Kryptografie und darüber hinaus freiberuflich im Bereich Cybersecurity als Berater tätig.
+
+
+<!-- PAGE 269 -->
+
 
 Prof. Dr. Christina Plafky ist Professorin für KI und VR im Departement Soziale Arbeit im Institut 'Fachdidaktik, Professionsentwicklung und Digitalisierung' an der BFH Berner Fachhochschule (Schweiz). Mail: christina.plafky@bfh.ch
 

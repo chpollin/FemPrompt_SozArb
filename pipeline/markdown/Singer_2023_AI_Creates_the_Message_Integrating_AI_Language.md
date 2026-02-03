@@ -1,10 +1,11 @@
 ---
 source_file: Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.pdf
-conversion_date: 2026-02-03T09:24:16.849146
+conversion_date: 2026-02-03T18:55:28.565096
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Journal of Social Work Education
@@ -51,6 +52,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## INVITED EDITORIAL
 
 <!-- image -->
@@ -75,6 +80,10 @@ AI  is  a  rapidly  growing  field  involving  the  simulation  of  human-like  
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 Figure 1. Image created by Jonathan Singer with the AI generator, Midjourney (version 4), with the prompt: 'Social workers looking behind a curtain at a massive computer with lots of wires, steampunk, unreal engine, eternal space.'
 
 <!-- image -->
@@ -89,6 +98,10 @@ Picture a world where social work education and practice are revolutionized by t
 
 The Social Work Health Futures Lab has identified AI as one of the top three trends to consider, right alongside climate change and the fight for a just and equitable society (Nissen, 2021; Zaidi, 2020). The importance of technology should come as no surprise. For years, the implicit goal of the Social Work Grand Challenge, 'Harness Technology for Social Good,' has been to convince social workers that  information  and  communication  technologies  are  essential  to  our  practice,  scholarship,  and education (Singer et al., 2022).
 
+
+<!-- PAGE 4 -->
+
+
 Figure 2. Image created by Jonathan Singer with the AI generator, Midjourney (version 4), with the prompt: 'Social worker reading a giant book, open to pages that are made up of large and small words, unreal engine, steampunk, eternal space, circle background.'
 
 <!-- image -->
@@ -100,6 +113,10 @@ The COVID-19 pandemic has only accelerated this trend, making it abundantly clea
 Some institutions have already taken the lead in this regard. The Columbia School of Social Work offers a minor in Emerging Technology, Media and Society (Patton &amp; Cogburn, 2019), while the University of Southern California (USC) has a Center for AI in Society (USC Center for AI in Society, n.d.). Eric Rice, cofounder and director of USC's Center for AI in Society, has coedited a guide to using AI for social good that explores approaches and ethical principles for using AI in social work practice (Tambe &amp; Rice, 2018). And the Brown School at Washington University in St. Louis offers a postmaster's certificate on AI (Brown School, 2021).
 
 The bottom line is this: We believe it is unethical for social workers not to learn and teach about technology-mediated social work. With AI poised to transform the way we approach social work, we must embrace this change and work together to ensure that it is used in ways that are ethical, equitable, and socially just.
+
+
+<!-- PAGE 5 -->
+
 
 ## Embracing ChatGPT as a tool for faculty
 
@@ -123,6 +140,10 @@ The following are some examples and ideas for using AI with social work students
 - (4) Supporting  time  management  and  study  strategies .  Students  can  use  ChatGPT  to  create plans for staying organized and managing stress. ChatGPT could provide a personalized chart for supporting time to study and time to relax.
 - (5) Generating project ideas . Prompts can help assist students with literature review searches, by helping to identify gaps in the research and relevant sources.
 
+
+<!-- PAGE 6 -->
+
+
 <!-- image -->
 
 Figure 3. Screenshot of ChatGPT 3.5 prompt and partial response.
@@ -132,6 +153,10 @@ Figure 3. Screenshot of ChatGPT 3.5 prompt and partial response.
 ## Discussing AI in your syllabus
 
 When integrating or restricting the use of language learning models such as ChatGPT in social work  courses,  it  is  crucial  to  use  openness,  fairness,  and  provide  context  in  the  course  syllabi as  well  as  talking  directly  with  students.  The  syllabi  should  specify  how  the  technology  will  be used  during  the  course,  as  well  as  any  applicable  constraints.  This  transparency  allows students to comprehend what is expected of them and facilitates clear communication between student  and  instructor.  For  instance,  certain  technologies  may  only  be  applicable  during specific  assignments  or  in  class  discussions.  Providing  this  background  can  aid  in  ensuring that  students  know  when  they  are  able  to  access  and  apply  ChatGPT  technology.  In  addition,
+
+
+<!-- PAGE 7 -->
+
 
 <!-- image -->
 
@@ -154,6 +179,10 @@ The following are some examples and ways that AI is limiting in social work educ
 - (5) ChatGPT  does  not  ensure  privacy  and  confidentiality .  Information  that  is  provided  to ChatGPT can be reviewed by OpenAI trainers to improve their system or to ensure compliance with their policies and safety requirements. We need to be thoughtful with the information provided in our prompts to not release confidential student or client information.
 - (6) ChatGPT  needs  ethical  consideration .  This  tool  is  not  intended  to  be  used  to  promote plagiarism.  In  discussing  ChatGPT  with  students,  we  need  to  frame  this  as  a  tool,  not  as a stand-alone text generator for academic work. We can talk with students about how to use this  ethically  following  academic  guidelines,  such  as  updating  information  generated  by ChatGPT with social work references and cross-checking output.
 
+
+<!-- PAGE 8 -->
+
+
 <!-- image -->
 
 ## ChatGPT in social work practice: Technological justice
@@ -175,6 +204,10 @@ The first two images in this editorial were created by Jonathan Singer on his pa
 ## Disclosure statement
 
 No potential conflict of interest was reported by the authors.
+
+
+<!-- PAGE 9 -->
+
 
 ## Notes on contributors
 
@@ -207,6 +240,10 @@ Jonathan B. Singer http://orcid.org/0000-0002-7941-5529 Johanna Creswell Báez h
 - Patton, D. U. (2020). Social work thinking for UX and AI design. Interactions , 27 (2), 86-89. https://doi.org/10.1145/ 3380535
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 <!-- image -->
 

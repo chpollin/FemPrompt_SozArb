@@ -1,10 +1,11 @@
 ---
 source_file: Wang_2024_Algorithmic_discrimination_examining_its_types.pdf
-conversion_date: 2026-02-03T09:30:30.173560
+conversion_date: 2026-02-03T19:01:24.565473
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -55,6 +56,10 @@ algorithmic discrimination, regulatory measures, automated decision-making, comp
 
 The significant influence of big data mining on human existence has emerged in recent years due to the progress of computer and information technologies. The broad application of machine learning-based  algorithms  to  solve  challenging  problems  has  been  made  possible  by  the combination of enormous data streams with sophisticated algorithmic analysis and technological
 
+
+<!-- PAGE 2 -->
+
+
 capabilities (Simmons, 2018). In many fields today, including hiring, law enforcement, education, credit reporting, criminal justice, and stock trading, algorithms are used to make decisions (Mayson, 2019). For example, algorithms are used by judges to estimate the risk of reoffending by ex-offenders (Berk et al., 2021), by education departments to decide whether to rehire teachers (Hous, n.d.), and by schools to choose whether to admit students (Swist and Gulson, 2023).
 
 Algorithmic decision-making has led to the emergence of new and complex types of discrimination, which are frequently hidden within the algorithms,  even  though  it  can  somewhat  lessen  the  subjectivity  of human judgments (Lepri  et  al.,  2018).  The  ubiquity  of  algorithmic prejudice and the possible social, ethical, and legal problems it raises are becoming more widely recognized among academics and governmental bodies  (Selbst  and  Barocas,  2016).  Algorithmic  discrimination  can manifest in various forms, such as bias by the algorithmic agents, biased feature selection, preventive controls, consequential liability regulation, and  big  data  discrimination  (Kim,  2016).  These  different  types  of algorithmic bias can lead to unfair treatment and disparate impacts on protected groups, raising concerns about equal rights, due process, and social justice (Kroll et al., 2017).
@@ -80,6 +85,10 @@ By  combining  a  systematic  literature  review,  legal  document analysis, and
 ## 3 Systematic review of algorithmic discrimination literature
 
 To gain a comprehensive understanding of the current state of research on algorithmic discrimination, we conducted a systematic review of the existing literature. The review aimed to identify the key
+
+
+<!-- PAGE 3 -->
+
 
 themes, findings, and gaps in the scholarly work on the types, causes, consequences, and regulation of algorithmic bias.
 
@@ -116,6 +125,10 @@ Another way biased agents can lead to discrimination is through the use of proxy
 
 Algorithmic discrimination can also arise from the way features are selected and weighted in the decision-making process. This type
 
+
+<!-- PAGE 4 -->
+
+
 of discrimination is closely related to the problem of biased data, but it specifically involves the choices made by algorithm designers in determining which attributes to include and how to prioritize them (Selbst  and  Barocas,  2016).  For  example,  a  college  admissions algorithm that heavily weights standardized test scores  may discriminate against students from disadvantaged backgrounds who had less access to test preparation resources (Todolí-Signes, 2019). Similarly, a predictive policing algorithm that relies on historical crime data may perpetuate biases against communities of color that have been subject to over-policing and disproportionate arrests (Richardson et al., 2019).
 
 Feature selection discrimination can also occur when algorithms use  seemingly  neutral  attributes  that  correlate  with  protected characteristics. For instance, an advertising algorithm that targets users based on their web browsing history may inadvertently exclude certain  demographic  groups  that  have  different  online  behaviors (Sweeney, 2013).
@@ -149,6 +162,10 @@ Monitoring and balancing this kind of 'quasi-public power, ' or algorithmic powe
 ## 5.1 Principled regulation and specific regulation
 
 According to the U.S. government, the traditional equal protection clause's  guiding  principles  can  apply  to  both  algorithmic  and traditional  forms  of  discrimination  (Miller,  2015).  Nonetheless, several ideas in regulation lack clarity and clear applicability. Because of  the  various  forms  of  algorithmic  discrimination  and  intricate internal mechanisms, it is difficult to create consistent institutional arrangements. Therefore, taking into account certain circumstances, targeted restrictions are required. In addition to ethical regulation, the US will create targeted regulatory actions for particular industries to combat algorithmic discrimination.
+
+
+<!-- PAGE 5 -->
+
 
 By evaluating pertinent U.S. laws and state court decisions, it can be  concluded  that  algorithmic  discrimination  is  governed  by  the equality  principle,  which  forbids  discrimination  in  general.  It highlights the need for algorithmic designers to abide by current laws that provide equal protection against discrimination to citizens and consumers (Janssen and Kuk, 2016).
 
@@ -184,6 +201,10 @@ Similarly,  the  Civil  Rights  Act  in  the  United  States  applies  to housi
 
 These cases highlight the role of the post-event regulatory model, which  seeks  justice  and  repair  through  legal  processes  when discriminatory effects occur. This regulatory approach ensures fairness in algorithmic decisions by emphasizing equal rights, while providing a way for those who are unfairly treated to assert their rights.
 
+
+<!-- PAGE 6 -->
+
+
 ## 5.4 Self-regulation and heteronomy regulation
 
 For the purpose of standardizing operational and decisionmaking  procedures,  minimizing  or  eliminating  the  risks  and negative effects of algorithm discrimination, and strengthening the formulation of basic algorithm principles, self-regulation essentially  depends  on  industry  self-control  (Kim,  2017).  The Association for Computing Machinery (ACM) has published seven key principles for algorithmic transparency and auditability, which are as follows:
@@ -216,6 +237,10 @@ The goal of this type of review is to ensure that algorithm users do not  intent
 
 In the absence of obvious intent or entrenched bias, unintentional discrimination review in algorithmic decisions is another approach that focuses on assessing the actual impact of algorithmic discrimination. Although there is no explicit intent or malice, an algorithmic  decision  can  still  be  considered  discrimination  if  it adversely affects a protected group. This approach to review aims to
 
+
+<!-- PAGE 7 -->
+
+
 capture and correct unconscious discrimination that may arise in algorithmic decisions in order to uphold the principles of fairness and equality (Joamets, 2022).
 
 Data  analysis  is  the  first  step  in  unintentional  algorithmic discrimination review. The reviewers conduct a detailed analysis of the data used in algorithmic decisions to determine if there are trends or disparities that disadvantage the protected group (Liu et al., 2023). This may involve the distribution of sensitive characteristics such as gender, race, age of the data and their impact on decision-making. By digging into the data, reviewers can determine if there are potential inequities.  This  is  followed  by  an  impact  assessment,  in  which reviewers assess the actual impact of the algorithmic decision on the protected group. This includes examining the output of algorithms, such as loan approvals or career opportunity allocations, to see if there are unfair or unequal outcomes. If it is found that certain groups are being treated unfavourably, then this may be a sign of unintentional discrimination (Fan and Liu, 2022).
@@ -241,6 +266,10 @@ To address these challenges, a range of regulatory approaches have been  propose
 Another important regulatory tool is impact assessments, which require organizations to proactively assess the potential discriminatory effects of their algorithmic systems and to take steps to mitigate any identified risks (Reisman et al., 2018). This can involve conducting algorithmic audits, as well as engaging with affected communities to understand their concerns and perspectives. The Canadian government's Algorithmic Impact Assessment tool is an example of this approach, providing a standardized framework for assessing the risks and benefits of automated decision systems.
 
 Other regulatory strategies include requiring regular monitoring and reporting on the outcomes of algorithmic systems, mandating the use of bias detection and mitigation techniques in the development process, and providing mechanisms for individuals to challenge or appeal  algorithmic  decisions  that  they  believe  are  discriminatory (Kroll et al., 2017).
+
+
+<!-- PAGE 8 -->
+
 
 There have been some notable examples of effective management of  unintentional  algorithmic  discrimination  in  recent  years.  For instance,  in  2018,  the  U.S.  Department  of  Housing  and  Urban Development  (HUD)  reached  a  settlement  with  Facebook  over allegations  that  its  targeted  advertising  system  allowed  housing providers to discriminate based on protected characteristics like race, gender, and disability (Housing, 2005). As part of the settlement, Facebook agreed to overhaul its ad targeting system to prevent such discrimination, including by no longer allowing housing, employment, or credit ads to be targeted based on protected categories, and by creating  a  separate  portal  for  such  ads  with  additional  antidiscrimination safeguards.
 
@@ -274,6 +303,10 @@ However, the algorithm was found to exhibit significant gender bias,  systematic
 
 The  Amazon  case  also  raised  questions  about  the  legal responsibilities of employers in preventing algorithmic discrimination in hiring. Under Title VII of the Civil Rights Act (Civil Rights Act of 1964, 1964), employers can be held liable for disparate impact discrimination, even if it results from seemingly neutral  practices  or  algorithms.  This  highlights  the  need  for
 
+
+<!-- PAGE 9 -->
+
+
 proactive measures to audit and test algorithmic hiring systems for potential biases and to ensure compliance with anti-discrimination laws. These case studies demonstrate the pervasive and multifaceted nature of algorithmic discrimination and the challenges  it  poses  for  legal  and  regulatory  frameworks.  They underscore the importance of interdisciplinary research, public scrutiny,  and  policy  interventions  to  promote  greater  fairness, transparency, and accountability in algorithmic decisionmaking systems.
 
 ## 7.3 Comparative analysis of algorithmic discrimination regulation
@@ -305,6 +338,10 @@ By incorporating this comparative analysis, our paper provides a  more  comprehe
 This paper has provided a comprehensive overview of the types of algorithmic discrimination and the legal and regulatory approaches to addressing them, with a particular focus on the United States. By drawing on a systematic literature review, legal document analysis, and  comparative  case  studies,  we  have  developed  a  nuanced understanding  of  the  challenges  and  opportunities  for  ensuring fairness and accountability in algorithmic decision-making.
 
 Our analysis has shown that algorithmic discrimination can take many forms, from bias embedded in the data and features used by algorithms  to  more  subtle  and  unintentional  forms  of  disparate impact. We  have identified five main types of algorithmic discrimination: bias by algorithmic agents, discrimination based on feature selection, proxy discrimination, disparate impact, and targeted advertising.  Each  of  these  types  presents  distinct  challenges  for detection, regulation, and remediation.
+
+
+<!-- PAGE 10 -->
+
 
 To address these challenges, we have examined the current legal and regulatory landscape in the United States, including principled and specific regulations, preventive controls, consequential liability, self-regulation, and heteronomy regulation. Our analysis suggests that while  there  are  important  legal  and  regulatory  tools  available  for addressing algorithmic discrimination, there are also significant gaps and  limitations  in  current  approaches.  In  particular,  we  have highlighted the need for more proactive and preventive measures, such as algorithmic impact assessments and audits, as well as stronger transparency and accountability requirements.
 
@@ -361,6 +398,10 @@ Bonsón, E., Bednárová, M., and Perea, D. (2023). Disclosures about algorithmi
 Buolamwini,  J.,  and  Gebru,  T.  (2018).  'Gender  shades:  intersectional  accuracy disparities in commercial gender classification' in Conference on fairness, accountability and transparency (PMLR), 77-91.
 
 Burrell,  J.  (2016).  How  the  machine  'thinks':  understanding  opacity  in  machine learning algorithms. Big Data Soc. 3:205395171562251. doi: 10.1177/2053951715622512
+
+
+<!-- PAGE 11 -->
+
 
 Calo, R. (2013). Digital market manipulation. Geo. Wash. L. Rev. 82:995. doi: 10.2139/ ssrn.2309703
 
@@ -481,6 +522,10 @@ State v. Loomis. 881 N.W .2d 749 Wis. (2016).
 Sweeney, L. (2013). Discrimination in online ad delivery. Commun. ACM 56, 44-54. doi: 10.1145/2447976.2447990
 
 Swist, T., and Gulson, K. N. (2023). School choice algorithms: data infrastructures, automation, and inequality. Postdigit. Sci. Educ. 5, 152-170. doi: 10.1007/ s42438-022-00334-z
+
+
+<!-- PAGE 12 -->
+
 
 Todolí-Signes,  A.  (2019).  Algorithms,  artificial  intelligence  and  automated decisions  concerning  workers  and  the  risks  of  discrimination:  the  necessary collective governance of data protection. Transfer 25, 465-481. doi: 10.1177/1024258919876416
 

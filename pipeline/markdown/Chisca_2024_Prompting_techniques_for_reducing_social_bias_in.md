@@ -1,10 +1,11 @@
 ---
 source_file: Chisca_2024_Prompting_techniques_for_reducing_social_bias_in.pdf
-conversion_date: 2026-02-03T08:45:18.499338
+conversion_date: 2026-02-03T18:23:28.272888
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes
 
 ## Mahammed Kamruzzaman and Gene Louis Kim
@@ -29,6 +30,10 @@ LLMs has been the introduction of CoT prompting (Wei et al., 2022). By simulatin
 
 Despite these advancements, LLMs continue to struggle with embedded social biases, which raises questions regarding the ethical use of LLMs in real-life applications. These biases are difficult to identify and even more challenging to eliminate due to the complex and opaque inner workings of LLMs, the flexible and nuanced nature of human language, and the culturally dependent social rules that accompany language use. This task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven communication and decisions. Applying dual process theory, a well-established psychological framework, to recent AI advancements illuminates possible pathways to enhancing the reliability and ethical footprint of LLMs by identifying where LLM generations align with and diverge from human cognitive processes.
 
+
+<!-- PAGE 2 -->
+
+
 In this paper, we use dual process theory-based prompting strategies, comparing their efficacy across multiple categories of social bias from two bias datasets. Our approach incorporates humanand machine-like personas to examine whether the effects of these cognitive theories in LLMs are dependent on explicit co-modeling of human cognition or always implicitly modeled. We follow-up on this analysis by examining interactions with debiasing prompts designed specifically for social bias reduction. Finally, we compare these results to the use of CoT prompting to test whether this prompting technique aligns with System 2 reasoning in LLMs as some have claimed in the past.
 
 Figure 1 shows an example of how the human persona with System 2 prompting reduces stereotypical engagement over standard prompting. When we use standard zero-shot prompting in Figure 1 (a), we see that Llama 2 responds with a stereotypical answer. When we use human persona with System 2 prompting in Figure 1 (b), it instead responds with an anti-stereotypical answer.
@@ -49,6 +54,10 @@ Coming to the debiasing studies, Furniturewala et al. (2024) investigate the use
 
 Dual Process Theory is a psychological account of how human thinking and decision-making arise from two distinct modes. It distinguishes between fast, automatic (System 1), and slow, effortful (System 2) modes of thinking. System 1 enables quick comprehension through associations and pre- existing knowledge. In contrast, System 2 engages when we encounter complex or novel situations that require careful thought, evaluating logical relations, and conducting explicit reasoning to arrive at conclusions. These systems guide our reasoning, decision-making, and learning processes in various cognitive tasks (Frankish, 2010). The theory illuminates the intricate relation between intuitive, heuristic thinking and analytical, rulebased cognition (Evans and Stanovich, 2013; Ferreira and Huettig, 2023). Our understanding of our own thinking and knowing our mind's state is connected to this two-part idea. System 1 lets us quickly guess what another person is thinking in analogy to our own while System 2 helps us to think more about their state more systematically with less self-attribution to make a metacognitive judgment (Carruthers, 2009). While the Dual Process Theory first suggested that reasoning biases come from relying too heavily on System 1 and that triggering System 2 more frequently can avoid such pitfalls in thinking, newer studies show that logic and probability can be understood intuitively as well (Ferreira and Huettig, 2023). Interestingly, biases are not only caused by System 2 not getting involved. They can also come from a fight between heuristic and logical intuitions that happen at the same time. This shows that logical thinking does not just belong to System 2 (De Neys and Pennycook, 2019). These more recent developments in the theory reveal a more nuanced picture of the ideal cognitive system selection for any given task. Bellini-Leite (2023) discusses how methods such as CoT and tree-of-thought prompting in LLMs are suggestive of System 2 human reasoning, potentially mitigating frequent errors and enhancing reliability in these models. Nighojkar (2024) go on to test this correspondence by comparing against results from human experiments. He finds that CoT prompting does not simply mimic System 2. Rather, it leads to better agreement with human responses in both System 1 and System 2 triggering instructions.
 
+
+<!-- PAGE 3 -->
+
+
 Recent research on LLMs has found that assigning personas to LLMs can notably impact their reasoning and responses. Beck et al. (2024) highlights that sociodemographic prompting can significantly influence model predictions and improve zero-shot learning performance in subjective tasks. But the effectiveness of this approach varies across different models, dataset types, and sociodemographic factors. De Araujo and Roth (2024) explore how different personas, such as roles or identities (e.g., gender, occupation, or cultural background) influence the behavior and outputs of LLMs across various tasks. The research involves giving 162 unique personas to various LLMs and assessing how well they perform on different tasks and it turns out that personas not only affect task performance, bias, and model refusals but also show varied responses depending on the assigned persona. In addition to personas, explicitly debiasing instructions in prompts have been found to effectively reduce gender bias in LLMs (Kaneko et al., 2024).
 
 ## 3 Dataset
@@ -62,6 +71,10 @@ Altogether, we evaluate LLMs over 9 types of social biases. We use the intrasent
 We evaluate five major language models in this paper: 1) GPT-4 (Achiam et al., 2023), using the GPT-4 checkpoint on the OpenAI API; 2 2) GPT-3.5 (Brown et al., 2020), using the GPT-3.5-TURBO-INSTRUCT checkpoint on the OpenAI API; 3) Llama2-13B (Touvron et al., 2023), using
 
 2 Due to the cost of running GPT-4, we use a sample of 2,100 entries from the GenAssocBias dataset to run GPT-4. We ensured that this sample contains an equal number of examples from each bias category.
+
+
+<!-- PAGE 4 -->
+
 
 the TheBloke/Llama-2-13B-chat-GGUF 3 checkpoint on Huggingface; 4) Mistral7B (Jiang et al., 2023), using the TheBloke/Mistral-7B-Instruct-v0.1-GGUF checkpoint on Huggingface; 5) Gemini (Team et al., 2023), using gemini-1.0-pro-latest on the Google Gemini API.
 
@@ -95,6 +108,10 @@ In order to differentiate between the effects of dual process theory prompts on 
 
 We present our main results in terms of stereotypical engagement/response rates, indicating the percentage (%) of responses that aligned with stereotypical judgments.
 
+
+<!-- PAGE 5 -->
+
+
 Table 1: The types of prompts we use in our main experiments. The '...' after each prompt are the common instructions which include 'select the appropriate word from the options provided, without considering the order in which the options come in.' We provide options randomly to eliminate ordering bias and add 'don't add option number as well in your response' to minimize response postprocessing complexity.
 
 | Type                | Prompt                                                                                                                                                                                                                                                                                                     |
@@ -111,6 +128,10 @@ Table 1: The types of prompts we use in our main experiments. The '...' after ea
 | MP + System 2       | Adopt the identity of a machine that answers questions slowly and thought- fully. Its answers are effortful and reliable. Fill in the BLANK while staying in strict accordance with the nature of this identity. Given the context below, ...                                                              |
 | MP + CoT            | Adopt the identity of a machine that answers questions by analyzing them 'step-by-step". Fill in the BLANK while staying in strict accordance with the nature of this identity. Given the context below, ...                                                                                               |
 | MP + System 2 + CoT | Adopt the identity of a machine that answers questions slowly and thought- fully. Its answers are effortful and reliable. It answers questions by analyzing them 'step-by-step". Fill in the BLANK while staying in strict accordance with the nature of this identity. Given the context below, ...       |
+
+
+<!-- PAGE 6 -->
+
 
 Table 2: The types of prompts we use when incorporating debiasing explicitly. The '...' represent the same as in Table 1
 
@@ -137,6 +158,10 @@ Another result is the effect of personas in prompts and how they relate to Syste
 
 When System 1 and System 2 prompts are combined with a human persona, their effects on social bias are amplified. The difference between the System 1 and System 2 responses is greater with the Human Persona + System 2 prompts having the least stereotypical responses overall. This combination results in a reduction of over 3% from the standard zero-shot prompt. While the Machine Persona leads to a reduction in bias, the difference in System 1 and System 2 results remains similar to the no-persona prompts. This suggests that while the LLM independent of a persona differentiates the two systems in dual process theory to some degree, its model of human cognition has an even more exaggerated difference in these cognitive systems.
 
+
+<!-- PAGE 7 -->
+
+
 Figure 4: Results with Standard Prompts and best-performing (in terms of least stereotypical engagement) prompts for each bias category and all the LLMs. Here, MP stands for M achine P ersona, HP stands for H uman P ersona.
 
 <!-- image -->
@@ -150,6 +175,10 @@ From Figure 2, we see that HP System 2 and HP System 2 with CoT prompting techni
 We now turn to specific model-bias category combinations. All of the standard prompting results alongside the best performing prompting technique results for each bias category and model combination are presented in Figure 4. Here we see that the Human Persona with the System 2 (HP System 2) and Human Persona with debias (HP Debias) prompting technique often yields the least stereotypical responses, but that is not universal across models and bias categories. HP Debias outperforms all other prompting techniques in 14 cases. Similarly, the Human Persona in conjunction with System 2 (HP System 2) prompting outperforms other prompting techniques in 11 cases. Only in one case, for profession bias and the GPT-4 model, the standard prompt outperforms any other prompting techniques.
 
 We also see from Figure 4 that the two openweight models, Llama 2 and Mistral 7B, often have similar behaviors and that the two more recent closed-weight models, GPT-4 and Gemini-1.0 have similar behaviors. GPT-4 stands out in having the most cases where prompting variants make minimal improvement from the standard zero-shot prompt. This suggests that OpenAI has done some engineering on this front. Though it is unclear whether this is behind-the-scenes prompt modifications, analogous instruction finetuning of the model, or some other method to make the model robust to prompt variants. Next, we focus on each bias category.
+
+
+<!-- PAGE 8 -->
+
 
 Ageism. We see no consistent prompt setting that performs best on ageism. Stereotypical responses in models are reduced by 2 to 6 percent in the best prompt settings.
 
@@ -187,6 +216,10 @@ Religion. We achieved a reduction in religious bias by up to 13 percent. Additio
 
 Now we further investigate whether CoT prompting is most similar to the way that LLMs model System 2 reasoning. While Figure 2 shows that the stereotyping rate of CoT is most similar to System 1 prompts, these may be from different test items. Here we tackle this question directly by computing the Kendall τ coefficient (Kendall, 1938) between CoT-prompted responses and those of the other variants. We use the Kendall τ ranked correlation because there is a natural order to anti-stereotypical, neutral, and stereotypical categorical values in our datasets. Table 3 lists these results. From this, we find that CoT prompting is most similar to the
 
+
+<!-- PAGE 9 -->
+
+
 Standard zero-shot prompt, followed by System 1 prompting. In fact, it is most dissimilar to System 2 prompting. This pattern holds for the Human Persona and Machine Persona variants, where CoT is least correlated with the System 2 prompt variant.
 
 Our study aligns with Nighojkar's (2024) results showing that CoT does not specifically resemble System 2. Nighojkar (2024) found that CoT prompting leads to LLMs better modeling human behavior, whether that is System 1 or System 2 depending on which cognitive process the setting triggers. While prior work has found that CoT prompting leads to better multi-step mathematical and formal reasoning capabilities (Wei et al., 2022; Yu et al., 2023; Wang et al., 2023), that align with System 2 cognitive processes, the growing body of evidence suggests that this is because the formal reasoning setting contextualizes LLMs to generate text reflecting System 2 reasoning in people.
@@ -212,6 +245,10 @@ Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla 
 Peter Carruthers. 2009. How we know our own minds: The relationship between mindreading and metacognition. Behavioral and Brain Sciences , 32(2):121-138.
 
 Andrei-Victor Chisca, Andrei-Cristian Rad, and Camelia Lemnaru. 2024. Prompting fairness: Learning prompts for debiasing large language models. In Proceedings of the Fourth Workshop on Language Technology for Equality, Diversity, Inclusion , pages 52-62.
+
+
+<!-- PAGE 10 -->
+
 
 - Pedro Henrique Luz de Araujo and Benjamin Roth. 2024. Helpful assistant or fruitful facilitator? investigating how personas affect language model behavior. arXiv preprint arXiv:2407.02099 .
 - Wim De Neys and Gordon Pennycook. 2019. Logic, fast and slow: Advances in dual-process theorizing. Current directions in psychological science , 28(5):503-509.

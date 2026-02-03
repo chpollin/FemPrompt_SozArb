@@ -1,10 +1,11 @@
 ---
 source_file: Tint_2025_Guardrails,_not_guidance_Understanding_responses.pdf
-conversion_date: 2026-02-03T09:26:56.949318
+conversion_date: 2026-02-03T18:57:58.430278
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Guardrails, not Guidance: Understanding Responses to LGBTQ+ Language in Large Language Models
 
 ## Joshua Tint
@@ -40,6 +41,10 @@ To foster truly inclusive NLP systems, future research and development must prio
 
 - We introduce a unique embedding-based clustering approach, using Mahalanobis distance, to
 
+
+<!-- PAGE 2 -->
+
+
 - quantify the presence and influence of LGBTQ+ slang in prompts.
 - Through emotional classification of LLMgenerated outputs, we reveal that queer slang prompts elicit disproportionately negative emotional labels compared to heteronormative or neutral language.
 - We provide evidence that current safety mechanisms in LLMs fail to address deeper systemic biases, highlighting the limitations of existing approaches in achieving inclusivity for marginalized linguistic communities.
@@ -72,6 +77,10 @@ Experiment 1 focuses on understanding the tone and emotional response of languag
 
 In order to obtain high-quality prompts, we used Vasquez's HeteroCorpus, which is a dataset of 7,266 posts from X.com (formerly Twitter) tagged for heteronormativity, which they represent as a boolean variable: 'heteronormative' or 'non-heteronormative' (V´ asquez et al., 2022). From this corpus, we pulled a random sample of 500 posts, including 250 heteronormative posts and 250 non-heteronormative posts, and then fed each of these posts to the language models in the experiment, recording their responses.
 
+
+<!-- PAGE 3 -->
+
+
 Table 1: Examples of heteronormative language and their classifications.
 
 | Example                                                                               | Explanation                                                                                                                                                                                                          |
@@ -91,6 +100,10 @@ Following this, responses were collected and evaluated similarly to Experiment 1
 ## 3.2 Experiment 2
 
 The primary goal of Experiment 2 is to answer RQ2: 'How does the presence of LGBTQ+ slang in prompts influence the emotional content of LLM-generated out-
+
+
+<!-- PAGE 4 -->
+
 
 puts?' In contrast to experiment 1, here we examine the presence of LGBTQ+ slang rather than the absence of heteronormativity. This builds on the results from experiment 1 by examining a broader range of linguistic features, but due to a lack of high-quality hand-tagged data on LGBTQ+ slang, this relies on a more general approach.
 
@@ -123,6 +136,10 @@ Complete scores for each emotion label across each model can be found in Table 3
 In order to measure the relationship between prompt F -score and the emotional content of LLM responses, we measure the ∆ F = F ( q 1 ) -F ( q 2 ) of each question pair ( q 1 , q 2 ) . We then measured the score Emotion e ( r ) which represents the score for the emotional label e of the response r given by the classifier. From that, we compute ∆ Emotion e = Emotion e ( r 1 ) -Emotion e ( r 2 ) of each response pair ( r 1 , r 2 ) . In order to track the correlation between F scores and emotions, we simply calculate the proportion ∆ Emotion / ∆ F for the responses to each question pair.
 
 Similar to experiment 2, we also created the metalabels 'positive' and 'negative,' which had confidence scores equal to the summed confidence scores of the same labels as in the previous experiment. This again
+
+
+<!-- PAGE 5 -->
+
 
 Table 2: The difference-of-means effect size of heteronormativity on emotion scores. Negative figures are highlighted in red and indicate labels more associated with the non-heteronormative responses. Positive figures are highlighted in green and indicate labels more associated with the heteronormative responses.
 
@@ -194,6 +211,10 @@ Table 3: The paired effect size of heteronormativity on emotion scores. Negative
 | NEGATIVE       |      0.43 |    -0.24 |    -0.76 |      -0.66 |   -0.42 |    -0.15 |     -0.37 |     -0.31 |
 | POSITIVE       |     -0.41 |    -0.61 |    -0.85 |      -1.64 |   -0.1  |    -0.78 |     -1.07 |     -0.78 |
 
+
+<!-- PAGE 6 -->
+
+
 allowed us to track a more broad analysis of sentiment in response to queer slang.
 
 Complete results for correlation with each emotion label in each model can be seen in Table 4.
@@ -217,6 +238,10 @@ Interestingly, the results from this experiment were quite different from those 
 Of course, with the sheer number of emotional labels tested, many had very little no correlation with heteronormativity, and some apparent correlations for individual models may be noise. But looking at the average correlation across models, there is a distinct pattern for some emotions. The most inversely correlated label with queer slang was 'approval,' which had a negative correlation in each model studied. The strength of this relationship is verified by the fact that 'disapproval' was among the most correlated labels with queer slang, suggesting a clear connection. This is somewhat unsurprising as 'disapproval' is all-toooften a common reaction to the use of LGBTQ+ language, or the public expression of LGBTQ+ identities. Other labels which were strongly correlated with LGBTQ+ slang include 'curiosity' and 'annoyance.' Labels which were inversely correlated were 'joy' and 'confusion,' which have less clear qualitative meanings independently. These relationships had high average scores but were not as uniformly demonstrated as 'approval' and 'disapproval,' so some of them could be due to noise; relationships such as 'joy' and 'annoyance' track with the broader trend of negative labels being associated with LGBTQ+ language, and positive labels being associated with its absence.
 
 Ultimately, the general trend seems to be that heteronormativity has a much more limited impact on
+
+
+<!-- PAGE 7 -->
+
 
 Table 4: The ∆ Emotion / ∆ F scores for each emotion for each model. High, positive scores are shaded in green and represent labels which were correlated with increased queer slang. Low, negative, scores are shaded in red and represent labels that were inversely correlated with queer slang.
 
@@ -265,6 +290,10 @@ We highlight persistent biases in how LLMs interpret LGBTQ+ slang and respond to
 
 In the first experiment, each subexperiment has potential limitations that the other helps to mitigate. Experiment 1.1 employs social media posts from X.com.
 
+
+<!-- PAGE 8 -->
+
+
 Table 5: Safety responses from three different models on heteronormative questions from the Quora dataset
 
 | Question                                                                                          | Response                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -288,6 +317,10 @@ Paul Baker. 2003. Polari-the lost language of gay men . Routledge.
 Mollie V. Blackburn. 2005. Agency in borderland discourses: Examining language use in a community center with black queer youth. Teachers College Record , 107(1):89-113.
 
 Tolga Bolukbasi, Kai-Wei Chang, James Zou, Venkatesh Saligrama, and Adam Kalai. 2016. Man
+
+
+<!-- PAGE 9 -->
+
 
 - is to computer programmer as woman is to homemaker? debiasing word embeddings. In Proceedings of the 30th International Conference on Neural Information Processing Systems , NIPS'16, page 4356-4364, Red Hook, NY, USA. Curran Associates Inc.
 - Jovelyn M Cantina. 2020. Gay argot: Beyond the coded words and meanings of lavender lexicon. International Review of Humanities and Scientific Research , pages 248-262.
@@ -316,6 +349,10 @@ Greg Jacobs. 1997. Lavender linguistics.
 - Eddie L. Ungless, Bj¨ orn Ross, and Vaishak Belle. 2023. Potential pitfalls with automatic sentiment analysis: The example of queerphobic bias. Social Science Computer Review , 41(6):2211-2229.
 - Juan V´ asquez, Gemma Bel-Enguix, Scott Thomas Andersen, and Sergio-Luis Ojeda-Trueba. 2022. HeteroCorpus: A corpus for heteronormative language detection. In Proceedings of the 4th Workshop on Gender Bias in Natural Language Processing (GeBNLP) , pages 225-234, Seattle, Washington. Association for Computational Linguistics.
 - Nicholas Lo Vecchio. 2021. Updating the oed on the historical lgbtq lexicon. Dictionaries: Journal of the Dictionary Society of North America , 42(1):95-164.
+
+
+<!-- PAGE 10 -->
+
 
 Jieyu Zhao, Tianlu Wang, Mark Yatskar, Ryan Cotterell, Vicente Ordonez, and Kai-Wei Chang. 2019. Gender bias in contextualized word embeddings. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers) , pages 629-634, Minneapolis, Minnesota. Association for Computational Linguistics.
 
@@ -380,6 +417,10 @@ Jieyu Zhao, Tianlu Wang, Mark Yatskar, Ryan Cotterell, Vicente Ordonez, and Kai-
 51. Pinkwashing
 52. QUILTBAG
 53. Enbian
+
+
+<!-- PAGE 11 -->
+
 
 54. T4T
 55. Zhuzh

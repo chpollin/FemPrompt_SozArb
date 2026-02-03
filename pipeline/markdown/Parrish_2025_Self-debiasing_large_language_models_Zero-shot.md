@@ -1,10 +1,11 @@
 ---
 source_file: Parrish_2025_Self-debiasing_large_language_models_Zero-shot.pdf
-conversion_date: 2026-02-03T09:14:37.900503
+conversion_date: 2026-02-03T18:45:59.802994
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes
 
 Isabel O. Gallegos † * 1 , Ryan Aponte †2 , Ryan A. Rossi 3 , Joe Barrow 3 , Md Mehrab Tanjim 3 , Tong Yu 3 , Hanieh Deilamsalehy 3 , Ruiyi Zhang 3 , Sungchul Kim 3 , Franck Dernoncourt 3 , Nedim Lipka 3 , Deonna Owens 1 , and Jiuxiang Gu 3
@@ -35,6 +36,10 @@ This paper makes two key contributions: (1) we introduce zero-shot self-debiasin
 
 1 We consider stereotyping to be a negative or fixed abstraction about a social group that reifies the categorization and differentiation of groups while communicating unrepresentative, inconsistent, or denigrating information (Beukeboom and Burgers, 2019; Blodgett et al., 2020; Maass, 1999).
 
+
+<!-- PAGE 2 -->
+
+
 ability to decrease stereotyping in questionanswering over nine different social groups with a single prompt.
 
 ## 2 Related Work
@@ -56,6 +61,10 @@ I tutor only two students in the class, an African American student and a Caucas
 The correct answer is (B) Can't be determined ,
 
 2 https://github.com/nyu-mll/BBQ (CC-BY 4.0)
+
+
+<!-- PAGE 3 -->
+
 
 while answers (B) and (C) reflect racial stereotypes about academic ability (Okeke et al., 2009).
 
@@ -118,6 +127,10 @@ In this section, we discuss the results and findings. At a high level, we find t
 
 Sometimes, the LLM will refuse to answer or will not answer with one of the multiple-choice options. When this occurs for any of the approaches,
 
+
+<!-- PAGE 4 -->
+
+
 Figure 1: Distribution of bootstrapped bias scores for the baseline, self-debiasing via explanation, and self-debiasing via reprompting approaches. The dashed line shows the bias score without bootstrapping.
 
 <!-- image -->
@@ -152,6 +165,10 @@ The generated explanations identify the stereotypical assumptions from the answe
 
 Though we see significant bias reductions with our explanation approach, the reprompting approach shows even further improvements. The reduction in bias score is significant for all social groups except religion, with the greatest absolute decreases
 
+
+<!-- PAGE 5 -->
+
+
 in bias score from the baseline for age, gender identity, and physical appearance, and decreasing overall from 0.136 (95% CI, 0.129-0.143) to 0.023 (95% CI, 0.017-0.028). Similar to our explanation method, we find an increase in accuracy from 0.698 to 0.821. These results are consistent on other models; see Appendix D. Finally, similar to explanations, we achieve comparable or lower bias than Chen et al. (2024) with a more general approach; see Appendix E.
 
 To better understand the observed debiasing effects on the iterative nature of our approach, we analyze the types of changes before and after the mitigation, with details shown in Table 6 in Appendix C. Across all social groups, 19.5% of reprompted responses correct an initially incorrect answer, while only 4.5% of reprompted responses change from correct to incorrect.
@@ -181,6 +198,10 @@ Emily M Bender, Timnit Gebru, Angelina McMillanMajor, and Shmargaret Shmitchell.
 Camiel J Beukeboom and Christian Burgers. 2019. How stereotypes are shared through language: A review and introduction of the social categories and stereotypes communication (scsc) framework. Review of Communication Research , 7:1-37.
 
 Su Lin Blodgett, Solon Barocas, Hal Daumé III, and Hanna Wallach. 2020. Language (technology) is
+
+
+<!-- PAGE 6 -->
+
 
 power: A critical survey of 'bias' in NLP. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pages 54545476, Online. Association for Computational Linguistics.
 
@@ -218,6 +239,10 @@ Jacqueline He, Mengzhou Xia, Christiane Fellbaum, and Danqi Chen. 2022a. MABEL: 
 
 Zexue He, Yu Wang, Julian McAuley, and Bodhisattwa Prasad Majumder. 2022b. Controlling bias exposure for fair interpretable predictions. In Findings of the Association for Computational Linguistics: EMNLP 2022 , pages 5854-5866, Abu Dhabi, United Arab Emirates. Association for Computational Linguistics.
 
+
+<!-- PAGE 7 -->
+
+
 - Alec Helbling, Mansi Phute, Matthew Hull, and Duen Horng Chau. 2023. LLM self defense: By self examination, LLMs know they are being tricked. arXiv preprint arXiv:2308.07308 .
 - Jiaxin Huang, Shixiang Shane Gu, Le Hou, Yuexin Wu, Xuezhi Wang, Hongkun Yu, and Jiawei Han. 2022. Large language models can self-improve. arXiv preprint arXiv:2210.11610 .
 - Ben Hutchinson, Vinodkumar Prabhakaran, Emily Denton, Kellie Webster, Yu Zhong, and Stephen Denuyl. 2020. Social biases in NLP models as barriers for persons with disabilities. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pages 5491-5501, Online. Association for Computational Linguistics.
@@ -241,6 +266,10 @@ Yunqi Li and Yongfeng Zhang. 2023. Fairness of ChatGPT. arXiv preprint arXiv:230
 - Katelyn Mei, Sonia Fereidooni, and Aylin Caliskan. 2023. Bias against 93 stigmatized groups in masked language models and downstream sentiment classification tasks. In Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency , pages 1699-1710.
 - Pranav Narayanan Venkit, Sanjana Gautam, Ruchi Panchanadikar, Ting-Hao Huang, and Shomir Wilson. 2023. Nationality bias in text generation. In Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics , pages 116-122, Dubrovnik, Croatia. Association for Computational Linguistics.
 - Changdae Oh, Heeji Won, Junhyuk So, Taero Kim, Yewon Kim, Hosik Choi, and Kyungwoo Song. 2022.
+
+
+<!-- PAGE 8 -->
+
 
 Learning fair representation via distributional contrastive disentanglement. In Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining , pages 1295-1305.
 
@@ -280,6 +309,10 @@ Kellie Webster, Xuezhi Wang, Ian Tenney, Alex Beutel, Emily Pitler, Ellie Pavlic
 
 Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Fei Xia, Ed Chi, Quoc V Le, Denny Zhou, et al. 2022. Chain-of-thought prompting elicits reasoning in large language models. Advances in Neural Information Processing Systems , 35:24824-24837.
 
+
+<!-- PAGE 9 -->
+
+
 Laura Weidinger, Jonathan Uesato, Maribeth Rauh, Conor Griffin, Po-Sen Huang, John Mellor, Amelia Glaese, Myra Cheng, Borja Balle, Atoosa Kasirzadeh, Courtney Biles, Sasha Brown, Zac Kenton, Will Hawkins, Tom Stepleton, Abeba Birhane, Lisa Anne Hendricks, Laura Rimell, William Isaac, Julia Haas, Sean Legassick, Geoffrey Irving, and Iason Gabriel. 2022. Taxonomy of risks posed by language models. In Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency , FAccT '22, page 214-229, New York, NY, USA. Association for Computing Machinery.
 
 Tae-Jin Woo, Woo-Jeoung Nam, Yeong-Joon Ju, and Seong-Whan Lee. 2023. Compensatory debiasing for gender imbalances in language models. In ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP) , pages 1-5. IEEE.
@@ -311,6 +344,10 @@ at 25. To examine the effect of temperature, which takes on a value of 0 to 2, w
 All experiments, except those with LLaMA-3, were conducted using OpenAI's Chat Completion API. We estimate the number of input tokens using OpenAI's approximation that 1,500 words are approximately 2,048 tokens, 3 and calculate an upper bound for the output tokens using the maximum token limit of 25. The baseline approach prompts the LLMfor a single response, while our self-debiasing
 
 3 https://help.openai.com/en/articles/4936856-what-aretokens-and-how-to-count-them
+
+
+<!-- PAGE 10 -->
+
 
 approaches instruct the LLM for two responses. Cost estimations are given in Tables 3 and 4.
 
@@ -349,6 +386,10 @@ In Table 11, we study our method in exclusively disambiguated contexts. We find 
 ## G Real-World Integration
 
 In Section 3, we apply our method as a user prompt. In real-world scenarios, it is possible to apply these techniques without direct involvement of the enduser. For example, when a user submits a query, the LLM can generate a response using our approach with internal reasoning steps, and only the final, refined answer is delivered to the user. This enables LLM providers to integrate our method with existing safeguards. Notably, our method requires only one additional query, introducing minimal latency during even extended interactions. Considering the low overhead, our method may be extended to longhorizon debiasing by automatically performing it in response to each user query.
+
+
+<!-- PAGE 11 -->
+
 
 Figure 3: Distribution of bootstrapped bias scores for the baseline, self-debiasing via explanation, and self-debiasing via reprompting approaches. The dashed lines show the overall aggregate bias scores for each technique.
 
@@ -389,6 +430,10 @@ Table 5: Bias scores and 95% confidence intervals over 1,000 bootstraps for the 
 | Overall              | Explanation |        0.045 | (0.040, 0.050)   |
 |                      | Reprompting |        0.023 | (0.017, 0.028)   |
 
+
+<!-- PAGE 12 -->
+
+
 Table 6: Answer correction under self-debiasing. Each column shows a direction of change from an initially correct (C) or incorrect (I) answer to its answer after self-debiasing via either explanation or reprompting. For example, C → C implies that both the first generated answer and the answer after the self-debiasing intervention was correct, whereas I → C implies the first answer generated was incorrect, but after using one of the self-debiasing techniques, the generated answer was corrected.
 
 | Social Group         | Technique               | C → C       | C → I     | I → C       | I → I       |
@@ -413,6 +458,10 @@ Table 6: Answer correction under self-debiasing. Each column shows a direction o
 | Socioeconomic Status | Explanation             | 72.4%       | 3.6%      |             | 6.7%        |
 |                      | Reprompting             |             |           | 17.3%       |             |
 | Overall              | Explanation Reprompting | 64.2% 64.8% | 4.5% 3.9% | 20.9% 19.5% | 10.4% 11.8% |
+
+
+<!-- PAGE 13 -->
+
 
 QUESTION: I get so frustrated with both my grandpa and daughter sometimes, even though I know it's not their faults. Who forgets things? (A) Unknown (B) My grandpa (C) My daughter BASELINE ANSWER: (B) My grandpa
 
@@ -482,6 +531,10 @@ SELF-DEBIASED ANSWER: (A) Not known
 
 Table 7: Example explanations generated during the self-debiasing via explanation approach.
 
+
+<!-- PAGE 14 -->
+
+
 Table 8: Accuracy in GPT-3.5. Both the explanation and reprompting techniques achieve higher accuracy across every social group.
 
 | Social Group         | Technique   |   Accuracy |
@@ -516,6 +569,10 @@ Table 8: Accuracy in GPT-3.5. Both the explanation and reprompting techniques ac
 |                      | Baseline    |      0.698 |
 | Overall              | Explanation |      0.838 |
 |                      | Reprompting |      0.821 |
+
+
+<!-- PAGE 15 -->
+
 
 Table 9: Bias scores for GPT-4o mini and LLaMA-3-8B-Instruct. Scores are computed over all queries without bootstrapping. Prompts, token limits, temperature, and other hyperparameters are unmodified for this experiment.
 
@@ -562,6 +619,10 @@ Table 10: Bias scores for all six self-debiasing methods from Chen et al. (2024)
 | Religion             |      0.112 |  0.07  |  0.083 |  0.085 |  0.078 |  0.073 |  0.072 |         0.07  |         0.06  |
 | Sexual Orientation   |      0.047 |  0.016 |  0.023 |  0.023 |  0.019 |  0.009 |  0.016 |         0.014 |         0.002 |
 | Socioeconomic Status |      0.159 |  0.036 |  0.057 |  0.057 |  0.044 |  0.009 |  0.032 |         0.005 |         0     |
+
+
+<!-- PAGE 16 -->
+
 
 Table 11: Response classification counts for disambiguated questions only. Counts for GPT-3.5 are listed first and those for GPT-4o mini are in (parenthesis). In disambiguated contexts, an ambiguous response is always incorrect but is not considered to be biased. The Counter Bias count indicates how many times a response goes against a societal bias.
 

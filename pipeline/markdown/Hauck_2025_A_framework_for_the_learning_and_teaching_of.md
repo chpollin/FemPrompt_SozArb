@@ -1,10 +1,11 @@
 ---
 source_file: Hauck_2025_A_framework_for_the_learning_and_teaching_of.pdf
-conversion_date: 2026-02-03T08:59:09.987609
+conversion_date: 2026-02-03T18:29:53.172525
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## A framework for the Learning and Teaching of Critical AI Literacy skills
@@ -12,6 +13,10 @@ quality_score: 100
 Spring 2025 version 0.1
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Contents
 
@@ -30,6 +35,10 @@ Spring 2025 version 0.1
 
 6
 
+
+<!-- PAGE 3 -->
+
+
 ## A framework for the Learning and Teaching of Critical AI Literacy skills
 
 ## Background/OU context
@@ -44,6 +53,10 @@ Such dedicated competencies are not only required regarding the challenges artif
 
 <!-- image -->
 
+
+<!-- PAGE 4 -->
+
+
 AI literacy differs from how we currently teach digital literacy. It involves 'a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI; and use AI as a tool online, at home, sch ool, and in the workplace' (Long &amp; Magerko, 2020, p2). These skills help staff and students gain essential transferable abilities in the field of AI.
 
 As educators, we need to keep up with the evolving nature of AI and encourage students to use iterative interactions rather than a simple input -output approach where users instruct it (input) and copy, paste and edit what it generates (output). Engaging with AI-enabled applications that act as assistants will become a way of complementing learning rather than replacing it (Darvishi et al., 2024).
@@ -51,6 +64,10 @@ As educators, we need to keep up with the evolving nature of AI and encourage st
 With rapid advancements in the AI space, staff and students must adapt current ways of working with technology and adopt new approaches to keep up with the pace of change, emphasising the importance of 'learning agility.' Metacognitive skills, particularly awareness of one's role in the learning process, will become increasingly important. Individuals must dedicate time to reflection, engagement with feedback, and the acquisition of new knowledge. Many jobs will require a different skillset, making it vital for students to learn and practise AI competencies. Developing Critical AI Literacy is essential, especially in contexts with many learners from widening participation backgrounds.
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 ## What is Critical AI Literacy?
 
@@ -62,6 +79,10 @@ Critical AI Literacy applies the lens of equality, diversity, inclusion and acce
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 Critical AI Literacy requires 'self -reflective mindsets' (Chiu et al., 2024), which educators increasingly view as essential for lifelong learning about emerging AI technology. Consequently, the latest AI competency definitions emphasise learners' 'confide nce and ability to self-reflect on their AI understanding for further learning' and focus on 'how well individuals use AI in beneficial ways' including for the social or greater good (Chiu et al., 2024, n.p.). It is in this spirit that educators should apply this framework in learning and teaching across the curriculum and at all levels.
 
 ## The framework
@@ -69,6 +90,10 @@ Critical AI Literacy requires 'self -reflective mindsets' (Chiu et al., 2024), w
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 ## AI concepts and applications
 
@@ -94,6 +119,10 @@ Critical AI Literacy requires 'self -reflective mindsets' (Chiu et al., 2024), w
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 - Explore AI case studies informed by EDIA principles, such as the OU's Digital Assistant, which supports students' accessibility needs, or Hull College's AI -powered translation tools that enhance inclusivity.
 - Use AI to explore new and test existing knowledge through an EDIA lens.
 - Conceptualise and verbalise (prompting) topics through an EDIA lens.
@@ -114,6 +143,10 @@ Critical AI Literacy requires 'self -reflective mindsets' (Chiu et al., 2024), w
 - Consciously take account of ethical issues by acting in a way that promotes responsible use of AI, e.g. asking for consent before using personal data, refraining from spreading misinformation.
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 ## AI in society
 
@@ -136,6 +169,10 @@ The framework's structure is based on insights from Sharples' (2024) What to Tea
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 relevant sections of the framework to upskill themselves in Critical AI Literacy. They should also embed Critical AI Literacy skills development into materials and content whenever opportunities arise, across the curriculum and at all levels.
 
 The process will be iterative rather than linear, fostering greater awareness of how AI developments affect education and life, both positively and negatively, especially in the context of EDIA-related challenges.
@@ -155,6 +192,10 @@ The following suggestions are structured to match the sections of the framework.
 - Provide context and explanations related to disciplines and employability to highlight AI's significance.
 
 <!-- image -->
+
+
+<!-- PAGE 11 -->
+
 
 - Provide guidance on resources for finding information about AI.
 - Know where to find information on the latest developments in AI and education such as the JISC Website on Artificial Intelligence and the AdvanceHE Garage Overview.
@@ -182,6 +223,10 @@ The following suggestions are structured to match the sections of the framework.
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 - Encourage students to evaluate the credibility and reliability of online sources.
 - Emphasise the importance of copyright and intellectual property compliance.
 - Survey and take account of student attitudes to their engagement with AIenhanced tools and activities.
@@ -203,6 +248,10 @@ The following suggestions are structured to match the sections of the framework.
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 - Apply AI knowledge to real-world challenges, showcasing its workplace importance and practical use through employer-informed activities.
 - Explore how employers use (or don't use) AI in the recruitment process.
 
@@ -220,6 +269,10 @@ The framework aligns with the OU's Enabling Principles for GenAI in Learning, Te
 
 <!-- image -->
 
+
+<!-- PAGE 14 -->
+
+
 Generative AI in Learning, Teaching and Assessment is anti-racist, antidiscriminatory, accessible and inclusive '. More specifically, the framework embodies actions and ambitions 2 -4 associated with Principle 2 (Inclusive):
 
 1. Ensure our learning and teaching processes enable students to benefit from this technology wherever and whenever possible.
@@ -233,6 +286,10 @@ Finally, the framework also takes account of the five principles agreed on by th
 
 <!-- image -->
 
+
+<!-- PAGE 15 -->
+
+
 1. Universities will support students and staff to become AI-literate.
 2. Staff should be equipped to support students to use Generative AI tools effectively and appropriately in their learning experience.
 3. Universities will adapt teaching and assessment to incorporate the ethical use of Generative AI and support equal access.
@@ -240,6 +297,10 @@ Finally, the framework also takes account of the five principles agreed on by th
 5. Universities will work collaboratively to share best practice as the technology and its application in education evolves.
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 ## References
 
@@ -262,6 +323,10 @@ Miao, F., &amp; Shiohira, K. (2024). AI Competency Framework for Students. UNESC
 Mirra, N., &amp; Garcia, A. (2020). 'I Hesitate but I Do Have Hope': Youth speculative civic literacies for troubled times. Harvard Educational Review , 90 (2), 295 -321. https://doi-org.libezproxy.open.ac.uk/10.17763/1943-5045-90.2.295
 
 <!-- image -->
+
+
+<!-- PAGE 17 -->
+
 
 Sharples, M. (2023). Towards social generative AI for education: theory, practices and ethics, Learning. Research and Practice , 9 (2), 159 -
 
@@ -298,5 +363,9 @@ Professor Mike Sharples (Emeritus, IET)
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 18 -->
+
 
 <!-- image -->

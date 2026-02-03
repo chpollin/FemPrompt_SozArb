@@ -1,10 +1,11 @@
 ---
 source_file: Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.pdf
-conversion_date: 2026-02-03T09:25:16.677293
+conversion_date: 2026-02-03T18:56:24.586480
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Adjust for Trust: Mitigating Trust-Induced Inappropriate Reliance on AI Assistance
 
 Tejas Srinivasan and Jesse Thomason University of Southern California
@@ -25,6 +26,10 @@ Figure 1: User trust in AI systems evolves over a series of decision-making inte
 
 User trust does not always align with AI assistant trustworthiness, i.e. its true capability to help the user (Wright, 2010). Miscalibrated trust (Jacovi et al., 2021) may develop due to recency bias, the user's internal biases towards AI, or the assistant's inability to communicate its reasoning or limitations. Miscalibrated trust acts as a cognitive bias (Lee, 2024) and hinders critical evaluation of AI recommendations, resulting in inappropriate reliance (Parasuraman and Riley, 1997). For example, we find that doctors mistakenly accept 26% of AI misdiagnoses when their trust is high, compared to 8% when trust is lower, indicating over-reliance. Conversely, when user trust is low, doctors reject correct AI diagnoses 68% of the time, up from 40% otherwise, indicating a bias towards under-reliance.
 
+
+<!-- PAGE 2 -->
+
+
 We posit that AI assistants should adapt their behavior in response to users' trust levels in order to mitigate inappropriate reliance caused by extreme (low or high) trust. For instance, when trust is low, the assistant can reduce risk of disuse by providing the user with additional reasoning to support its recommendation (Figure 1). Similarly, when users are too trusting, the assistant can highlight reasons its recommendation may be incorrect, or can simply slow down the interaction. We hypothesize that strategically introducing these trust-adaptive interventions will prompt users to engage more carefully with AI advice, rather than accepting or rejecting advice without due consideration.
 
 We examine the effect of trust-adaptive AI interventions at mitigating inappropriate reliance on two decision-making tasks: answering science trivia questions and making medical diagnoses based on patient symptoms. We first validate our premise that, when interacting with the AI assistant over a sequence of decision-making problems, users' trust level at the start of a given interaction affects their reliance behavior and decision-making performance (§3.2), with extreme levels of user trust (too high or too low) resulting in increased inappropriate reliance. Through controlled studies, we find that strategically providing supporting explanations when user trust is low reduces under-reliance and improves decision-making accuracy (§4.1). Similarly, providing counter-explanations reduces overreliance when trust is high (§4.2). Combining these interventions to mitigate under- and over-reliance yields complementary improvements in decisionmaking accuracy and inappropriate reliance (§4.3). We also evaluate the utility of intervening by decelerating the interaction, finding that it helps reduce over-reliance but not under-reliance (§4.4).
@@ -42,6 +47,10 @@ Trust in Human-AI Interactions. Much work has explored the nature of human trust
 Measuring Trust. Bach et al. (2024) identify a variety of mechanisms for measuring user trust, such as questionnaires (Schaffer et al., 2019), qualitative interviews (Barda et al., 2020), surveys (Lin et al., 2019), and point scales (Gulati et al., 2019). In AI-assisted decision-making, early works measured trust by observing user reliance behavior (Yin et al., 2019; Zhang et al., 2020); however, de Fine Licht and Brülde (2021) distinguish reliance, an observable behavior, from trust, a subjective belief. Self-reported trust levels from users, where users report their confidence in the AI's accuracy for a question, are a reasonable proxy for trust, albeit at a local, interaction level (Pareek et al., 2024; Dhuliawala et al., 2023). Instead, we adopt a more global lens for eliciting trust scores by asking users to report their belief in the AI's helpfulness on a scale of 0 to 10.
 
 Mitigating Inappropriate Reliance. Inappropriate reliance, where users mistakenly accept incorrect AI predictions or reject correct ones (Parasuraman and Riley, 1997), is highly undesirable in highstakes domains, such as healthcare and law (Schemmer et al., 2023). Appropriate reliance can be fostered through various decision aids, such as model confidences (Zhang et al., 2020; Vodrahalli et al., 2022), explanations (Wang and Yin, 2021; Bansal et al., 2021), uncertainty expressions (Zhou et al., 2024; Kim et al., 2024), and providing sources (Feng and Boyd-Graber, 2019). Cognitive forcing functions (Buçinca et al., 2021), which insert friction (Chen and Schmidt, 2024; ˙ Inan et al., 2025) and promote deliberation (Park et al., 2019; Rastogi et al., 2022; Ma et al., 2024a), are effective at mitigating over-reliance. We demonstrate how strategically providing these decision aids to users during moments of low or high trust can mitigate trust-induced inappropriate reliance.
+
+
+<!-- PAGE 3 -->
+
 
 Figure 2: In our user study, each user interacts with an AI for a sequence of 30 decision-making problems. In each problem, the user first makes a decision by themselves, and then receives advice from the AI which they use to make a final decision. The user is then told what the correct decision is, and reports their trust in the AI (out of 10).
 
@@ -77,6 +86,10 @@ We evaluate the impact of users' trust level 2 on their reliance behavior and de
 
 2 Henceforth, 'user trust' refers to the user's trust level at the start of an interaction, i.e. the trust score reported by the user at the end of the previous interaction.
 
+
+<!-- PAGE 4 -->
+
+
 Figure 3: Calibration curves and Expected Calibration Error (ECE) of our simulated AI assistants.
 
 <!-- image -->
@@ -109,6 +122,10 @@ For each task setting, we sample 10 sequences S i = { P i 1 , P i 2 , ..., P i 3
 
 Findings. Figure 4 shows the relationship between user trust and reliance, aggregated across all users in the same task setting. We highlight a few key takeaways ( T ∗ ). T1 : Switch Rate is strongly correlated with user trust, which suggests that users' internal trust influences how likely they are to accept AI advice. T2 : User trust has moderate to strong correlation with Over-Reliance . We further observe that Over-Reliance is highest at high values of user trust ( 9 -10 ). T3 : User trust has a strong negative correlation with Under-Reliance . At lower values of trust ( &lt; 5 ), users exhibit the most Under-Reliance . These findings suggest that extreme values of user trust act as a cognitive bias, resulting in higher inappropriate reliance in subsequent human-AI interactions.
 
+
+<!-- PAGE 5 -->
+
+
 ## 4 Trust-Adaptive AI Interventions Mitigate Inappropriate Reliance
 
 Wehypothesize that AI systems can counterbalance the cognitive bias caused by trust by adapting their behavior according to the user's trust level. 3 We introduce trust-adaptive interventions for reducing inappropriate reliance. Trust-adaptive interventions are designed to correct for trust-induced cognitive bias, and are only applied when the user's trust level is either above or below a certain threshold. We hypothesize that uniformly applying these interventions, rather than only when trust is low or high, will worsen inappropriate reliance.
@@ -137,6 +154,10 @@ We separately evaluated the interventions across interactions where the user's i
 
 Trust-Adaptive Explanations Help. In the Trust-Adaptive condition, users exhibit lower Under-Reliance , lower inappropriate reliance, and higher decision accuracy across all task settings . These improvements are particularly notable when user trust is low and an explanation is provided in the Trust-Adaptive Intervention condition but not in the No Intervention condition. Providing explanations when trust is low results in 13-31% reduction in Under-Reliance , 9-38% reduction in Total Inappropriate Reliance , and 10-19% improvement in Final Decision Accuracy .
 
+
+<!-- PAGE 6 -->
+
+
 Figure 5: Reliance metrics and decision accuracy for users, evaluating the utility of supporting explanations at mitigating under-reliance. n represents the number of user-AI interactions that we aggregate over for the corresponding condition. Showing explanations adaptively reduces Under-Reliance and Total Inappropriate Reliance while boosting Final Decision Accuracy across all task settings, particularly when user trust is low.
 
 <!-- image -->
@@ -154,6 +175,10 @@ Persistent Explanations Can Hurt. The Intervention Always condition does not yie
 Similar to how providing supporting explanations are an effective intervention when user trust is low, we investigate whether providing reasons for why the model prediction might be incorrect can counter-balance the cognitive effect of high trust ( &gt; 8 ). Such counter-explanations have been shown to reduce over-reliance compared to regular supporting explanations (Si et al., 2024).
 
 Similar to the supporting explanations, we generate natural language counter-explanations for each option by prompting GPT-4o to list 1-2 reasons why that option might be incorrect, while not completely rejecting that option (e.g. 'I believe Bronchitis is the correct diagnosis due to ..., but it is possible that...'). The counter-explanations frequently include expressions of uncertainty ('could potentially', 'it may be that'), alternative possibilities, and specific circumstances under which the
+
+
+<!-- PAGE 7 -->
+
 
 ARC Task, Calibrated Al
 
@@ -183,6 +208,10 @@ To mitigate under-reliance by decelerating the interaction, we display a 'The AI
 
 Findings. Figure 8 shows the effect of the above decelerating interventions at mitigating inappropriate reliance in the ArcC task setting. We see that telling users that the AI is thinking is not particularly effective at reducing Total Inappropriate Reliance , even when trust is low. On the other hand, forcing users to consider the AI advice closely when trust is high improves Total Inappropriate Reliance and Final Decision Accuracy . Our findings extend those of Buçinca et al. (2021), showing that cognitive forcing is particularly useful for reducing over-reliance when user trust is high.
 
+
+<!-- PAGE 8 -->
+
+
 Figure 8: Effect of decelerating interventions on reducing inappropriate reliance and improving decision accuracy.
 
 <!-- image -->
@@ -204,6 +233,10 @@ assistant for clinicians may be more wary of clinicians over-relying on their as
 We explore the utility of trust-adaptive interventions for mitigating inappropriate reliance when users have low or high trust in AI assistants. We demonstrate that low and high levels of trust result in increased inappropriate reliance on AI recommendations for laypeople answering science questions and for doctors making medical diagnoses. We conduct controlled between-subjects studies and find that adaptively providing supporting explanations during low trust and counter-explanations during high trust reduces inappropriate reliance and improves users' decision accuracy. These findings generalize to decelerating interventions; forcing users to pause and deliberate before making their final decision helps reduce over-reliance.
 
 Our findings present an initial exploration into adapting AI behaviors based on user trust levels. We adopted a simple thresholding criterion for deciding when to intervene, but more sophisticated criteria that also account for user and AI confidence may have potential. Further, rather than looking at whether user trust is too high or low, we can consider whether the trust is calibrated with the assistant's trustworthiness. High user trust may not be as undesirable when the AI is significantly more accurate than the user on the task. We hope our findings inspire the community to more closely consider the effect of user trust in user-AI interactions and the potential benefits of modeling and adapting to user trust levels.
+
+
+<!-- PAGE 9 -->
+
 
 ## Limitations
 
@@ -239,6 +272,10 @@ Amie J Barda, Christopher M Horvat, and Harry Hochheiser. 2020. A qualitative re
 
 - Zana Buçinca, Maja Barbara Malaya, and Krzysztof Z Gajos. 2021. To Trust or to Think: Cognitive Forcing Functions Can Reduce Overreliance on AI in AIassisted decision-making. Proceedings of the ACM on Human-Computer Interaction .
 
+
+<!-- PAGE 10 -->
+
+
 - Adrian Bussone, Simone Stumpf, and Dympna O'Sullivan. 2015. The role of explanations on trust and reliance in clinical decision support systems. In International Conference on Healthcare Informatics .
 - Carrie J Cai, Samantha Winter, David Steiner, Lauren Wilcox, and Michael Terry. 2019. " Hello AI": uncovering the onboarding needs of medical practitioners for human-AI collaborative decision-making. Proceedings of the ACM on Human-Computer Interaction .
 - Chang Che, Zengyi Huang, Chen Li, Haotian Zheng, and Xinyu Tian. 2024. Integrating generative AI into financial market prediction for improved decision making. Applied and Computational Engineering .
@@ -263,6 +300,10 @@ Amie J Barda, Christopher M Horvat, and Harry Hochheiser. 2020. A qualitative re
 - Xiaolin Lin, Xuequn Wang, and Nick Hajli. 2019. Building e-commerce satisfaction and boosting sales: The role of social commerce trust and its antecedents. International Journal of Electronic Commerce .
 - Shuai Ma, Qiaoyi Chen, Xinru Wang, Chengbo Zheng, Zhenhui Peng, Ming Yin, and Xiaojuan Ma. 2024a. Towards Human-AI Deliberation: Design and Evaluation of LLM-Empowered Deliberative AI for AI-Assisted Decision-Making. arXiv preprint arXiv:2403.16812 .
 
+
+<!-- PAGE 11 -->
+
+
 - Shuai Ma, Xinru Wang, Ying Lei, Chuhan Shi, Ming Yin, and Xiaojuan Ma. 2024b. 'Are You Really Sure?' Understanding the Effects of Human SelfConfidence Calibration in AI-Assisted Decision Making. In CHI Conference on Human Factors in Computing Systems .
 - Joseph E McGrath. 1995. Methodology matters: Doing research in the behavioral and social sciences. In Readings in human-computer interaction . Elsevier.
 - Raja Parasuraman and Victor Riley. 1997. Humans and automation: Use, misuse, disuse, abuse. Human factors .
@@ -280,6 +321,10 @@ Amie J Barda, Christopher M Horvat, and Harry Hochheiser. 2020. A qualitative re
 - Ming Yin, Jennifer Wortman Vaughan, and Hanna Wallach. 2019. Understanding the Effect of Accuracy on Trust in Machine Learning Models. In CHI Conference on Human Factors in Computing Systems .
 - Yunfeng Zhang, Q Vera Liao, and Rachel KE Bellamy. 2020. Effect of Confidence and Explanation on Accuracy and Trust Calibration in AI-Assisted Decision Making. In ACM Conference on Fairness, Accountability, and Transparency (FAccT) .
 - Kaitlyn Zhou, Jena Hwang, Xiang Ren, and Maarten Sap. 2024. Relying on the Unreliable: The Impact of Language Models' Reluctance to Express Uncertainty. In Annual Meeting of the Association for Computational Linguistics (ACL) .
+
+
+<!-- PAGE 12 -->
+
 
 Figure 9: Screenshots of task instructions shown to users.
 
@@ -305,6 +350,10 @@ ARC Task. This task consists of answering science questions. Questions are sourc
 
 Diagnosis Task. This task consists of diagnosing patients based on patient symptoms. Patient symptoms are sourced from the DDXPlus dataset (Fansi Tchango et al., 2022), which contains 1.3 million synthetic patients with a differential diagnosis. The symptoms are presented as either binary, categorical or continuous variables, but each symptom has a corresponding patient intake
 
+
+<!-- PAGE 13 -->
+
+
 Figure 10: Macro-aggregation results for mitigating under- and over-reliance. n represents the number of users who have at least 3 interactions meeting the required criteria.
 
 <!-- image -->
@@ -326,6 +375,10 @@ Wereport macro-aggregation results, where we first compute our metrics for each 
 ̸
 
 In Figure 10, we observe trends similar to those observed in Section 4. However, when looking at the low/high trust subsets, most conditions have fewer than 10 users for calculating Under-Reliance and Over-Reliance , and fewer than 5 users for Total Inappropriate Reliance .
+
+
+<!-- PAGE 14 -->
+
 
 Table 1: Correlation of trust estimation methods with user-reported trust levels, and F1 for detecting moments of low and high trust.
 
@@ -382,6 +435,10 @@ Table 4: Effect of user experience with AI for fact checking on reliance metrics
 | Have used, not regularly                    | 45.4%         | 39.3%             | 29.9%            |
 
 Table 3 and Table 4 show how user experience with AI, and specifically using it for fact checking, affects user reliance on AI assistance, again finding that reliance behavior is similar.
+
+
+<!-- PAGE 15 -->
+
 
 Table 5: Prompts used for generating supporting and counter-explanations for the Diagnosis task. Prompts for ARC task were slightly modified (e.g. replacing 'correct diagnosis' with 'correct answer').
 

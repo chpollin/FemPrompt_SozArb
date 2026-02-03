@@ -1,10 +1,11 @@
 ---
 source_file: Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.pdf
-conversion_date: 2026-02-03T08:46:01.003942
+conversion_date: 2026-02-03T18:24:08.790364
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Journal of Evidence-Based Social Work
@@ -45,6 +46,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -56,6 +61,10 @@ Large language models (LLMs) hold significant promise for improving the practice
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 3 -->
+
 
 <!-- image -->
 
@@ -73,6 +82,10 @@ This study employs a reflexive thematic analysis to co-construct practitioners' 
 
 LLMs have demonstrated utility across several key functions relevant to clinical social work, although  most  existing  examples  come  from  health  care  and  mental  health  rather  than
 
+
+<!-- PAGE 4 -->
+
+
 <!-- image -->
 
 social work itself (Bedi et al., 2024; Hua et al., 2025; Victor &amp; Goldkind, 2025). For example, in  care  coordination,  LLM-assisted tools have been shown to enhance the reliability and completeness  of  care  plans  (Dağci  et  al.,  2024)  and  to  improve  the  appropriateness  of emergency referrals (Barash et al., 2023). In psychoeducational support, LLMs have produced client-friendly materials that may increase understanding of coping strategies and legal rights (Babayiğit et al., 2023). LLMs have also been investigated as decision-support tools,  generating  personalized,  evidence-based  treatment  recommendations  aligned  with established frameworks (Perlis et al., 2024; Wilhelm et al., 2023). In clinical documentation, real-time drafting of session notes can reduce administrative time without compromising accuracy (Kassab et al., 2024). Voice recognition tools that automatically transcribe conversations  between  clinicians  and  clients,  such  as  Nuance's  Dragon  Copilot,  can  reduce documentation  time  by  creating  after-visit  summaries  and  referral  letters  (Bundy  et  al., 2024), yet T. L. Liu et al. (2024) found no significant time savings in a longitudinal study.
@@ -84,6 +97,10 @@ AI-driven LLM tools also have been applied to a range of client-facing mental he
 Although LLM-powered tools offer potential benefits, such as automating documentation and providing psychoeducational support, clinical social work has been cautious in adopting them, reflecting not only resource constraints but also a commitment to core professional  values  (Victor  &amp;  Goldkind,  2025;  Zorn  et  al.,  2011).  Under-resourced  agencies, ethical and legal considerations, and limited training opportunities require careful evaluation to ensure client dignity and equity (Goldkind et al., 2016). The emphasis on face-toface relationships in social work practice also leads some practitioners to question whether algorithms can capture the nuances of human interaction (Wassal et al., 2024).
 
 Moreover, there are concerns that AI chatbots could displace human social workers or create a two-tiered service model, where clients from high-income backgrounds continue receiving in-person support, while individuals from marginalized communities with lower incomes rely on automated, algorithm-driven care, risking a widening of existing inequalities Victor and Goldkind (2025); Lai et al. (2024). At the same time, there are unresolved questions about how LLMs handle sensitive client information, who holds liability if an AIgenerated recommendation leads to harm, and whether automated interactions can sustain the nuanced, trust-based relationship central to social work practice Victor and Goldkind
+
+
+<!-- PAGE 5 -->
+
 
 45
 
@@ -98,6 +115,10 @@ TAM  emerged  in  the  1980s  as  a  foundational  theory  for  understanding  i
 Venkatesh and Davis (2000) extended the original TAM to TAM2 by identifying two broad  categories  of  determinants  that  shape  perceived  usefulness  and  intentions  to  use: social influence processes and cognitive instrumental processes. Social influence processes refer to the ways that professional norms, peer expectations, and organizational pressures affect  individual decision-making around new technologies. These influences include the subjective norm, or the perceived expectations of colleagues, supervisors, and professional organizations; image, or the belief that using a particular technology may enhance one's professional  status;  and  voluntariness,  or  the  degree  to  which  individuals  feel  free  or obligated to adopt a technology (Holden &amp; Karsh, 2010).
 
 Cognitive instrumental processes, by contrast, reflect the user's more pragmatic evaluation of how well a technology fits into the actual demands of their work. These processes involve  assessments  of  job  relevance,  or  how  applicable  a  technology  is  to  one's  clinical tasks; output quality, or whether the system produces accurate, reliable, and useful results; and result demonstrability, or the extent to which the benefits of using the technology are
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -115,6 +136,10 @@ This study offers insights into how social work practitioners are responding to 
 
 A  reflexive  thematic  analysis  method  was  used  to  better  understand  the  experiences of  clinical  social  workers  and  their  work  in  terms  of  the  introduction  and  rapid expansion  of  LLMs  (Braun  &amp;  Clarke,  2022,  2023,  2024,  2025).  Semi-structured  oneon-one  zoom  interviews  lasting  30-45 minutes  were  conducted  in  2024  to  explore the  research  question: How  do  clinical  social  workers  perceive  and  describe  their experiences  of  using  LLMs  in  professional  practice? The  interviewers  (authors  1,  5,
 
+
+<!-- PAGE 7 -->
+
+
 and  a  research  assistant)  also  randomly  selected  participants  for  a  brief  follow-up interview  lasting  15-20 minutes  to  explore  how  their  perspectives  evolved  over  time. The interviewers took a collaborative approach in demonstrating the use of LLMs by inviting  participants  to  provide  a  case  dilemma  from  their  own  practice.  The dilemma  was  entered  into  ChatGPT  (without  any  identifying  information)  to demonstrate  how  the  tool  might  generate  relevant  suggestions.  Interviewers  then showed  participants  a  video  of  a  client  discussing  their  experience  with  LLMs  to support  mental  health.  Through  these  interactions,  participants  and  interviewers negotiated  ways  of  engaging  with  LLMs  and  reflected  on  their  evolving  perspectives. This  study  is  part  of  a  larger  project,  with  previous  findings  on  beliefs  and  emotional  responses already reported (Báez et al., 2025; see for further description of the interview  structure).  The  research  was  approved  by  the  university  human  subjects review  committee.
 
 ## Sample
@@ -124,6 +149,10 @@ Participants were 21 social work practitioners in private practice, with eight p
 ## Researcher positionality
 
 The three interviewers were all social work scholars with advanced practice in using LLMs. Two of the interviewers  were  social  work  professors  and  one  was  a  social  work  student working as a research assistant. The researchers used a constructivist-pragmatic stance that acknowledges  knowledge  as  co-constructed  through  researcher  -  participant  interaction and prioritizes the practical applicability of insights for informing real-world social work practice  (Lincoln  &amp;  Guba,  1985;  Morgan,  2014).  The  researchers  recognized  that,  as facilitators,  our  own  expertise  with  LLMs  shaped  the  conversations  and  influenced  how participants  made  meaning  of  their  experiences.  Reflexivity  was  central  as  researchers critically considered how their experiences, beliefs, and familiarity with LLMs intersected with the participants' interviews. As a research team, we discussed moments of frustration when participants were really resistant to LLM use which we balanced with compassion for their  concerns.  We  also  found  ourselves  feeling  encouraged  when  participants  explored innovative applications or raised ethical concerns.
+
+
+<!-- PAGE 8 -->
+
 
 ## Data analysis
 
@@ -142,6 +171,10 @@ Social  workers'  experiences  of  LLMs  in  social  work  practice  coalesced  
 ## Applications in daily practice
 
 Efficiency and productivity. Participants described discovering new ways to integrate LLMs into  their  daily  practice,  with  many  highlighting  the  tools'  ability  to  save  time  and  boost
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -163,6 +196,10 @@ Synthesis  of  complex  information. In  addition  to  improving  productivity, 
 
 I think just how quickly it can provide some feedback, templates, how quickly it can synthesize all of the information that maybe I have trouble being very concise, and very straightforward with.
 
+
+<!-- PAGE 10 -->
+
+
 <!-- image -->
 
 I find it extremely helpful with that, with being able to just take a whole bunch of information, and then just making it very concise, and I think that's very helpful. (Participant #6)
@@ -179,6 +216,10 @@ Resource development. In addition to streamlining treatment planning, LLMs were 
 
 Expanding  access  to  information  and  brainstorm  partner. Participants  described  how LLMs can serve as  valuable  tools  for  broadening  their  knowledge  base  and  acting  as brainstorming  partners  when  developing  treatment  plans,  designing  workshops,  or
 
+
+<!-- PAGE 11 -->
+
+
 crafting  client  interventions.  For  many  practitioners,  LLMs  were  identified  as  tools to  support  'thinking  of  things  outside  of  the  box'  (Participant  #9)  by  offering  fresh ideas  and  generating  prompts  to  inspire  new  directions  of  thinking.  As  one  practitioner  explained,  'I  love  the  idea  that  it  can  help  refine,  or  flesh  out  maybe a  concept  that  you  have,  but  it  might  help  you  broaden  what  you  were  thinking about'  (Participant  #10).  This  theme  of  refining  initial  ideas  and  generating  new ones  appeared  throughout  the  interviews.  One  social  worker  shared,  'It  gave  me  all these  other  pointers  that  I  hadn't  thought  about'  (Participant  #11),  highlighting  the capacity  of  LLMs  to  introduce  alternative  perspectives  and  surface  previously  overlooked  possibilities.
 
 Participants  also  described  LLMs  as  tools  that  could  enhance  inclusive,  culturally responsive practice. As one practitioner noted, 'It might be helpful around diversity, like working with 90-year-old men or 25-year-old men - it helps bridge those gaps and stay culturally sensitive' (Participant #12). In these cases, LLMs were seen as aligning well with the  culturally  attuned  aspects  of  social  work  by  demonstrating  high job  relevance in supporting  equity-informed  decision-making.  By  providing  insight  into  a  range  of  age groups, identities, and cultural contexts, LLMs offered participants opportunities to tailor their  interventions  more  thoughtfully.  Another  practitioner  highlighted  how  these  tools contributed to richer conversations with clients and families, explaining, 'It gives you so many more ideas as to what to say to clients about certain subjects, so it really opens up the dialogue  for  things  that  I  may  not  have  considered'  (Participant  #11).  These  outcomes reinforced a sense of result demonstrability , as LLMs were credited with directly enriching practitioner-client interactions. Practitioners' reflections emphasized the potential of LLMs to shape their thinking and enhance more responsive, equity-informed decision-making.
@@ -188,6 +229,10 @@ Practitioners also noted that LLMs served as a useful, on-demand knowledge resou
 What is exciting is just the really vast amount of knowledge that it has access to. And so I've had it explore or give me a little bit of a primer on some pretty arcane concepts and psychoanalytic concepts that I run across every once in a while in my reading that are pretty. . . So what I found with it is it does require a little bit more coaching. In other words, it's like you walk it through within the psychoanalytic idea relations. 'Can you tell me about . . . ' I can't remember what I did all that recently and it does a really nice job of explaining things. And so actually I've been able to do some learning on my own that has been. . .I take it with a grain of salt to a certain extent in the sense that it's like, 'Okay, that tracks with what I've been reading in this book,' where the book is kind of at a higher level and then I'm asking ChatGPT to catch me up on the particular concept. (Participant #14)
 
 While participants acknowledged the importance of approaching LLM generated information  with  caution,  many  found  that  LLMs  were  effective  in  bridging  learning  gaps  by simplifying and consolidating complex material. This capacity to make technical information accessible contributed to perceptions of both output quality and result demonstrability . Whether used to deepen clinical knowledge, enhance creative thinking, or promote culturally  responsive  care,  LLMs  were  consistently  described  as  a  valuable  tool  for  increasing access to information and supporting idea generation within social work practice.
+
+
+<!-- PAGE 12 -->
+
 
 <!-- image -->
 
@@ -204,6 +249,10 @@ By offering on-demand information and self-help strategies, LLMs were perceived 
 Additionally,  practitioners  noted  that  LLMs  have  the  potential  to  support  continued learning  outside  of  clinical  sessions.  As  one  practitioner  explained,  'If  a  client  leaves a  session  and  maybe  didn't  feel  safe  asking  about  self-care,  they  can  go  home  and  look that up and start to incorporate it' (Participant #10). This level of accessibility allows clients to take greater ownership of their healing process while promoting independence and selfdirected growth. As another practitioner noted, 'So I think it would add to their feelings of autonomy, add feeling that they can actually have impact and figure things out themselves with a little bit of help, increase their knowledge, increase their sensitivity' (Participant #2). By  providing  on-demand  resources  and  guidance,  participants  shared  that  LLMs  could support clients in building confidence, expanding their understanding, and engaging more proactively in their well-being.
 
 Practitioners also shared that LLMs showed potential for supporting clients who experience challenges with interpersonal interactions, such as individuals on the autism spectrum. One practitioner reflected:
+
+
+<!-- PAGE 13 -->
+
 
 It really did demonstrate to me that there's certainly potential here for it to be a useful tool for people  who  struggle  with  interpersonal  interactions.  I  guess  it  all  depends  on  what  you're feeding into it, and so that would, I can see that there would be ways in which folks would have to be trained to how to make the most of it and how to use it effectively. But I think actually it has a lot of potential, especially I think the autism example is really probably an immediate one where it's of immediate use to people. (Participant #14)
 
@@ -223,6 +272,10 @@ The tool's ability to generate thoughtful, discussion-worthy content was noted a
 
 Practitioners  viewed  LLMs  as  valuable  tools  for  supporting  both  early-career  social workers  and  those  feeling  uncertain  or  'stuck'  (Participant  #15)  in  their  clinical  work.
 
+
+<!-- PAGE 14 -->
+
+
 <!-- image -->
 
 Beyond offering direction and generating new ideas, participants emphasized the role of LLMs  in  enhancing  reflective  and  critical  thinking,  particularly  within  the  context  of supervision.  One  practitioner  shared,  'I've  used  it  before  to  support  a  supervisee  on exploring  self-disclosure.  And  it  came  up  with  some  really  good  reflective  prompts  . . . thinking about self-disclosure and questions to ask' (Participant #1). These prompts were seen as useful for encouraging ethical reflection, deepening consideration of client perspectives, and clarifying professional boundaries. Participants recognized the potential of LLMs as accessible, thought-provoking companions that foster practitioner confidence, promote critical analysis, and support ongoing professional development.
@@ -239,6 +292,10 @@ Some participants emphasized the measures they take to minimize risk, such as us
 
 Ultimately,  these  reflections  highlighted  the  need  for  clear  professional  guidelines and  institutional  safeguards  for  the  use  of  LLMs,  particularly  with  notes  and  documentation.  As  one  practitioner  underscored  this  concern  about  digital  vulnerability, 'There's  huge  vulnerabilities  now  that  didn't  exist  when  all  of  my  case  files  were  in a  metal  box  in  my  office.  Nobody's  going  to  break  and  steal  my  metal  box.  It's  not worthwhile'  (Participant  #17).  While  LLMs  may  offer  efficiencies,  participants'
 
+
+<!-- PAGE 15 -->
+
+
 continued  caution  shows  that  trust  in  the  system's  data  security,  and  by  extension  its compatibility  with  disciplinary norms ,  remains  limited  until  formal  guardrails  are  in place.  Practitioners  emphasized  that  protecting  sensitive  information  and  maintaining confidentiality  remains  a  primary  concern  when  determining  whether  to  use  these tools.
 
 Bias and Equity. Participants expressed significant concerns about the biases that could be  embedded  within  LLMs  and  questioned  the  extent  to  which  these  technologies  are equitable and inclusive. LLMs are trained on vast datasets drawn from preexisting sources, which led participants to question if these tools could inadvertently reproduce and exacerbate systemic inequities. One practitioner asked, 'Who's teaching the AI, and what biases are  being  embedded?'  (Participant  #18).  Another  added,  'We  know  that  [AI]  can  be inherently racist and biased. And so language models are based on the data information that's given to them. Is it encompassing all viewpoints and of all ethnicities, race, language?' (Participant #1). These concerns reflect skepticism about the output quality of LLMs for certain uses, specifically whether the content they generate can meet the ethical and cultural standards required in social work practice. These concerns also highlighted that the effectiveness and inclusiveness of LLMs is limited and unethical if they fail to reflect the diverse realities and identities of the people social workers serve.
@@ -252,6 +309,10 @@ Impact on therapeutic relationship. A key concern among social workers was that 
 Within therapy is just the capacity of having someone who shares, who reflects back with them, empathy for their situation and helps them to create empathy for themselves. So my question is do they feel that empathy from ChatGPT? Do they get all the information . . . accuracy that it's normal grief, how to sit in their grief, how to get used to it, how to do some other things, how to be grateful? A part of what they're also looking for sometimes is a restorative connection with another being who might help them. Just that relationship also helps them. (Participant #15)
 
 Participants noted concern around the potential for LLMs to lack emotional nuance and empathy.  This  limitation  was  perceived  as  a  critical  gap  in output  quality ,  particularly when  compared  to  the  complex  relational  work  at  the  core  of  human  therapy. Participants voiced unease that LLMs might erode the empathic core of psychotherapy. As  Participant  #19  admitted,  'it  is  slightly  terrifying  to  think  of  a  machine  doing  the work that's  done  in  psychotherapy  . . .  that  makes  me  quite  nervous.'  Such  statements reflect broader concerns about maintaining professional image and integrity, particularly in  light  of  growing  automation.  Together,  these  reflections  underscore  participants'
+
+
+<!-- PAGE 16 -->
+
 
 <!-- image -->
 
@@ -275,6 +336,10 @@ Practitioners reflected a growing unease about misinformation and manipulation i
 
 Threat of job replacement. Practitioners  voiced  serious  'concern  about  artificial  intelligence  in  the  therapy  business'  (Participant  #17),  particularly  regarding  the  perceived threat  of  being  replaced.  Some  practitioners worried that they could 'become obsolete' (Participant  #3).  One  practitioner  captured  this,  stating,  'I  could  also  see  clients  not
 
+
+<!-- PAGE 17 -->
+
+
 coming  to  therapy  anymore,  just  using  the  AI.  As  we  see  the  robots  taking  over  the world,  there's  also  the  idea  that  they'll  take  over  the  therapy  too'  (Participant  #20). Others expressed fears that LLMs could be utilized as a cost-cutting measure to reduce the  role  of  human  practitioners  in  favor  of  automated  services.  As  one  participant cautioned,
 
 Yeah.  I  mean,  I  think  it's  kind  of  scary  as  to  what  could  happen.  I  would  think  that  these therapy, these Better Helps and all the places, along with AI, are hurting our profession. And that there's that relationship that you build with a client, that it's becoming more factory-run, with the telehealth stuff and AI. (Participant #11)
@@ -291,6 +356,10 @@ This study explored clinical social workers' reflections on the perceived useful
 
 While  many  of  the  perceived  benefits  of  LLMs  align  with  traditional  TAM constructs  such  as  job  relevance,  ease  of  use,  and  output  quality,  social  work practitioners  also  filtered  these  evaluations  through  the  lens  of  professional  ethics and  relational  values.  Specifically,  participant  reflections  revealed  that  their  willingness  to  adopt  LLMs  was  not  only  shaped  by  the  tools'  efficiency  or  technical capabilities  but  also  by  their  perceived  alignment  with  the  humanistic  commitments
 
+
+<!-- PAGE 18 -->
+
+
 <!-- image -->
 
 of  the  profession.  Values  such  as  empathy,  client  autonomy,  cultural  responsiveness, and  ethical  accountability  influenced  how  participants  assessed  and  engaged  with these  technologies.  These  responses  suggest  that  social  influence  components,  such as  institutional  norms  or  peer  use,  may  not  fully  account  for  the  cautious,  valuedriven  stance  that  many  practitioners  expressed.
@@ -302,6 +371,10 @@ At  the  same  time,  findings  point  to  the  possibility  of  more  targeted,
 These patterns suggest a preference for augmentation over automation, a vision of AI as  a  tool  that  strengthens  professional  insight  rather  than  substitutes  for  it.  Crucially, this  orientation  preserves  the  primacy  of  the  therapeutic  relationship  while  allowing LLMs to offer  practical  support  in  other  areas.  Such  uses  may  align  more  closely  with the  profession's  values,  provided  that  safeguards  for  data  privacy,  cultural  responsiveness,  and  ethical  integrity  are  in  place.  This  nuanced  stance  reflects  a  form  of  conditional  openness:  social  workers  are  not  wholesale  rejecting  LLMs  but  are  instead selectively  integrating  them  in  ways  that  align  with  professional  priorities  and  clientcentered care.
 
 The recent passage of House Bill 1806 by the Illinois legislature provides a policy example that reflects the concerns around LLM use identified in our study. The bill restricts AI use by licensed professionals and bars unlicensed entities, including unregulated AI systems, from providing therapy services. The legislation also prohibits the use of AI for engaging in direct therapeutic communication with clients, making independent therapeutic decisions, or interpreting clients' emotions. AI-generated treatment plans may only be used once they have been reviewed and approved by a licensed professional. Under the bill, AI may be used to assist licensed professionals with administrative tasks, such as scheduling and billing, and with support functions like notetaking and data analysis. Licensed providers must maintain responsibility  for  all  AI  outputs  and  secure  informed  consent  when  AI  involves  session recordings or transcription. While the legislation may be interpreted by some clinicians as a blanket restriction on AI, it is more accurately understood as an effort to promote ethical LLM integration in mental health services, regulating standalone LLM-based therapy apps while preserving space for the supervised use of LLMs by licensed professionals. This overall approach  closely  mirrors  participants'  concerns  about  the  limitations  of  AI  in  clinical relationships  and  their  conditional  openness  to  its  use  in  administrative  and  ideagenerating capacities that assist, rather than replace, human judgment.
+
+
+<!-- PAGE 19 -->
+
 
 ## Limitations
 
@@ -318,6 +391,10 @@ Clinical social workers' perceptions of LLMs reflect both cautious interest and 
 ## Acknowledgments
 
 We would like to thank our research assistant that helped with interviews, Camille Dysart, MSW.
+
+
+<!-- PAGE 20 -->
+
 
 <!-- image -->
 
@@ -358,6 +435,10 @@ http://orcid.org/0000-0002-0967-3960
 - Benda, N., Desai, P., Reza, Z., Zheng, A., Kumar, S., Harkins, S., Hermann, A., Zhang, Y., Joly, R., Kim, J., Pathak, J., &amp; Reading Turchioe, M. (2024). Patient perspectives on AI for mental health care: Cross-sectional survey study. JMIR Mental Health , 11 , e58462. https://doi.org/10.2196/58462 Benjamin, R. (2019). Race after technology: abolitionist tools for the new Jim code . Polity Press.
 - Berrezueta-Guzman, S., Kandil, M., &amp; Wagner, S. (2025). Integrating AI into ADHD therapy: Insights from ChatGPT-4o and robotic assistants. Human-Centric Intelligent Systems , 5 (2), 1-16. https:// doi.org/10.1007/s44230-025-00099-1
 
+
+<!-- PAGE 21 -->
+
+
 <!-- image -->
 
 - Braun, V., Clarke, V. (2021). To saturate or not to saturate? Questioning data saturation as a useful concept for thematic analysis and sample-size rationales. Qualitative Research in Sport, Exercise and Health , 13 (2), 201-216. https://doi.org/10.1080/2159676X.2019.1704846
@@ -379,6 +460,10 @@ http://orcid.org/0000-0002-0967-3960
 - Kourgiantakis, T., Sewell, K. M., &amp; Bogo, M. (2019). The importance of feedback in preparing social work students for field education. Clinical Social Work Journal , 47 (1), 124-133. https://doi.org/10. 1007/s10615-018-0671-8
 - Kuhail,  M.  A.,  Alturki,  N.,  Thomas,  J.,  Alkhalifa,  A.  K.,  Alshardan,  A.  (2025).  Human-human  vs human-AI therapy: An empirical study. International Journal of Human-Computer Interaction , 41 (11), 6841-6852. https://doi.org/10.1080/10447318.2024.2385001
 
+
+<!-- PAGE 22 -->
+
+
 <!-- image -->
 
 - Lai, C. Y., He, L., &amp; Lau, S. M. (2024). The precarious helping hand-a systematic review of precarity faced by social workers. https://doi.org/10.21203/rs.3.rs-5399479/v1
@@ -399,6 +484,10 @@ http://orcid.org/0000-0002-0967-3960
 - Ranerup, A., Henriksen, H. Z. (2022). Digital discretion: Unpacking human and technological agency in automated decision making in Sweden's social services. Social Science Computer Review , 40 (2), 445-461. https://doi.org/10.1177/0894439320980434
 - Rodriguez, M. Y., Goldkind, L., Victor, B. G., Hiltz, B., Perron, B. E. (2024). Introducing generative artificial intelligence into the MSW curriculum: A proposal for the 2029 educational policy and accreditation standards. Journal of Social Work Education , 60 (2), 174-182. https://doi.org/10.1080/ 10437797.2024.2340931
 - Schueller, S. M., Morris, R. R. (2023). Clinical science and practice in the age of large language models and  generative  artificial  intelligence. Journal  of  Consulting  and  Clinical  Psychology , 91 (10), 559-561. https://doi.org/10.1037/ccp0000848
+
+
+<!-- PAGE 23 -->
+
 
 <!-- image -->
 

@@ -1,10 +1,11 @@
 ---
 source_file: Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.pdf
-conversion_date: 2026-02-03T09:13:00.907909
+conversion_date: 2026-02-03T18:44:32.341138
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 Sara Hofmann · Lieselot Danneels · Roel Dobbe · Anna-Sophie Novak · Peter Parycek · Gerhard Schwabe · Vera Spitzer · Jolien Ubacht (Eds.)
 
 ## Electronic Participation
@@ -14,6 +15,10 @@ Sara Hofmann · Lieselot Danneels · Roel Dobbe · Anna-Sophie Novak · Peter Pa
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Lecture  Notes  in  Computer  Science
 
@@ -25,9 +30,17 @@ Elisa  Bertino, Purdue  University,  West  Lafayette,  IN,  USA Wen  Gao, Peking
 
 15978
 
+
+<!-- PAGE 3 -->
+
+
 The  series  Lecture  Notes  in  Computer  Science  (LNCS),  including  its  subseries  Lecture Notes  in  Artificial  Intelligence  (LNAI)  and  Lecture  Notes  in  Bioinformatics  (LNBI), has  established  itself  as  a  medium  for  the  publication  of  new  developments  in  computer science  and  information  technology  research,  teaching,  and  education.
 
 LNCS  enjoys  close  cooperation  with  the  computer  science  R  &amp;  D  community,  the series  counts  many  renowned  academics  among  its  volume  editors  and  paper  authors,  and collaborates  with  prestigious  societies.  Its  mission  is  to  serve  this  international  community  by  providing  an  invaluable  service,  mainly  focused  on  the  publication  of  conference and  workshop  proceedings  and  postproceedings.  LNCS  commenced  publication  in  1973.
+
+
+<!-- PAGE 4 -->
+
 
 Sara  Hofmann  Æ  Lieselot  Danneels  Æ  Roel  Dobbe  Æ Anna-Sophie  Novak  Æ  Peter  Parycek  Æ Gerhard  Schwabe  Æ  Vera  Spitzer  Æ  Jolien  Ubacht Editors
 
@@ -36,6 +49,10 @@ Sara  Hofmann  Æ  Lieselot  Danneels  Æ  Roel  Dobbe  Æ Anna-Sophie  Novak  �
 17th  IFIP  WG  8.5  International  Conference,  ePart  2025 Krems,  Austria,  August  31  -  September  4,  2025 Proceedings
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 <!-- image -->
 
@@ -91,6 +108,10 @@ If  disposing  of  this  product,  please  recycle  the  paper.
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 ## Preface
 
 The  EGOV-CeDEM-ePart  2025  conference,  for  short  EGOV  2025,  was  organized  by the  IFIP  WG  8.5  Information  Systems  in  Public  Administration.  The  conference  is  dedicated  to  digital  or  electronic  government,  open  government,  local  government  (smart cities), smart governance, artificial intelligence (AI), e-democracy, policy informatics,  and  electronic  participation.  With  a  long  tradition  along  its  various  branches,  the EGOV-CeDEM-ePart  conference  has  gained  its  reputation  of  being  the  key  and  leading conference  worldwide  in  the  research  domains  of  digital/electronic,  open,  and  smart government,  as  well  as  electronic  participation.
@@ -105,6 +126,10 @@ Among  the  full  research  paper  submissions,  21  papers  (empirical  and  co
 - Governance,  Digital  Legislation,  and  Policy
 - Digital  Technologies  and  Sustainable  Development
 - Managing  e-Government  Projects
+
+
+<!-- PAGE 7 -->
+
 
 ## · Digital  Society
 
@@ -122,11 +147,19 @@ The  IFIP  EGOV  2025  conference  was  hosted  in  Austria,  at  the  Universit
 
 Many  people  behind  the  scenes  make  large  events  like  this  conference  happen.  We would  like  to  thank  the  members  of  the  Program  Committee,  the  reviewers,  and  the  track chairs  for  their  great  efforts  in  reviewing  the  submitted  papers.  We  would  also  like  to express  our  deep  gratitude  to  Peter  Parycek,  Gabriela  Viale  Pereira,  and  their  local  team at  the  University  for  Continuing  Education  Krems  for  hosting  the  conference.
 
+
+<!-- PAGE 8 -->
+
+
 The  papers  in  these  proceedings  range  from  societal  to  scientific,  and  from  rigorous to  innovative.  We  hope  you  enjoy  reading  them!
 
 September  2025
 
 Sara  Hofmann Lieselot  Danneels Roel  Dobbe Anna-Sophie  Novak Peter  Parycek Gerhard  Schwabe Vera  Spitzer Jolien  Ubacht
+
+
+<!-- PAGE 9 -->
+
 
 ## Conference  Chairs
 
@@ -200,6 +233,10 @@ University  of  South-Eastern  Norway,  Norway
 
 ## Organization
 
+
+<!-- PAGE 10 -->
+
+
 ## x Organization
 
 ## Digital  Technologies  and  Sustainability  Development  Track
@@ -257,6 +294,10 @@ Habin  Lee
 | Csaba Csáki  | Corvinus University of Budapest, Hungary           |
 | Gregor Eibl  | University for Continuing Education Krems, Austria |
 
+
+<!-- PAGE 11 -->
+
+
 ## Smart  Cities  (Government,  Districts,  Communities  and  Regions) Track
 
 | Manuel Pedro Rodríguez Bolívar   | University of Granada, Spain                           |
@@ -296,6 +337,10 @@ Habin  Lee
 xii
 
 Organization
+
+
+<!-- PAGE 12 -->
+
 
 ## PhD  Colloquium  Chairs
 
@@ -359,6 +404,10 @@ Frank  Bannister
 
 Ana  Alice  Baptista
 
+
+<!-- PAGE 13 -->
+
+
 ## Till  Becker
 
 Ramin  Behbehani Peter  Bellström Flavia  Bernardini Lasse  Berntzen Nitesh  Bharosa Nicolas  Bono  Rossello Maria  Booth Karin  Brodén Iván  Cantador Fredrik  Carlsson Luiz  Paulo  Carvalho Cesar  Casiano  Flores Seong  Wook  Chae Youngseok  Choi Vincenzo  Ciancia Antoine  Clarinval Rodrigo  Conde  Jimenez Andreiwid  Correa María  E  Cortés  Cediel Ilaria  Crivellari
@@ -372,6 +421,10 @@ Csaba  Csaki Frank  Danielsen Lieselot  Danneels Todd  Davies Lukas  Da§ler Ros
 Tove  Engvall Shahid  Farooq Fotios  Fitsilis
 
 University  of  Applied  Sciences  Emden/Leer, Germany Brunel  University  London,  UK Karlstad  University,  Sweden Universidade  Federal  Fluminense,  Brazil University  of  South-Eastern  Norway,  Norway TU  Delft,  The  Netherlands University  of  Namur,  Belgium Linköping  University,  Sweden Karlstad  University,  Sweden Universidad  Autónoma  de  Madrid,  Spain University  of  Gothenburg,  Sweden Universidade  Federal  do  Rio  de  Janeiro,  Brazil University  of  Twente,  The  Netherlands Hoseo  University,  South  Korea Kingston  University  London,  UK Consiglio  Nazionale  delle  Ricerche,  Italy Université  de  Namur,  Belgium Austrian  Institute  of  Technology,  Austria Federal  Institute  of  São  Paulo,  Brazil Universidad  Complutense  de  Madrid,  Spain Norwegian  University  of  Science  and  Technology, Norway KU  Leuven,  Belgium Gothenburg  University  and  University  of  Borås, Sweden Corvinus  University  of  Budapest,  Hungary University  of  Agder,  Norway Ghent  University,  Belgium Stanford  University,  USA Technische  Universität  München,  Germany University  of  Naples  Federico  II,  Italy Technical  University  of  Delft,  The  Netherlands Kozminski  University,  Poland University  of  Southern  Denmark,  Denmark University  for  Continuing  Education  Krems, Austria University  for  Continuing  Education  Krems, Austria Mid  Sweden  University,  Sweden Government  of  the  Punjab,  Pakistan Hellenic  Parliament,  Greece
+
+
+<!-- PAGE 14 -->
+
 
 ## Anouk  Fransen Volker  Frehe
 
@@ -403,6 +456,10 @@ Laura  Piscicelli
 
 Utrecht  University,  The  Netherlands
 
+
+<!-- PAGE 16 -->
+
+
 ## Andriana  Prentza Gabriel  Puron-Cid
 
 András  Pünkösty Stephan  Raimer
@@ -420,6 +477,10 @@ Johannes  Scholz Uwe  Serdült Masoud  Shahmanzari Anthony  Simonofski Emyana  S
 Kari  Smolander Carl-Johan  Sommar Vera  Spitzer Leif  Sundberg Anneli  Sundqvist Iryna  Susha Dimitris  Symeonidis Araz  Taeihagh Efthimios  Tambouris Luca  Tangi
 
 University  of  Piraeus,  Greece Centro  de  Investigación  y  Docencia  Económicas, Mexico Ludovika  University  of  Public  Service,  Hungary FHVD  University  of  Applied  Sciences  for Administration  and  Service,  Germany University  of  Camerino,  Italy KU  Leuven,  Belgium DataPower  Consulting,  Italy Linköping  University,  Sweden Gda ń sk  University  of  Technology,  Poland Joint  Research  Centre,  European  Commission, Spain University  of  Granada,  Spain Copenhagen  Business  School,  Denmark Universidad  Politécnica  de  Madrid,  Spain Delft  University  of  Technology,  The  Netherlands Edinburgh  Napier  University,  UK University  at  Albany,  USA University  for  Continuing  Education  Krems, Austria RheinMain  University  of  Applied  Sciences, Germany German  University  of  Administrative  Sciences Speyer,  Germany University  of  Salzburg,  Austria Ritsumeikan  University,  Japan Brunel  University  London,  UK University  of  Namur,  Belgium TU  Delft,  The  Netherlands HU  University  of  Applied  Sciences,  The Netherlands Lappeenranta  University  of  Technology,  Finland Linköping  University,  Sweden University  of  Koblenz,  Germany Mid  Sweden  University,  Sweden Oslo  Metropolitan  University,  Norway Utrecht  University,  The  Netherlands University  of  Tartu,  Estonia Lee  Kuan  Yew  School  of  Public  Policy,  Singapore University  of  Macedonia,  Greece Joint  Research  Centre - European  Commission, Italy
+
+
+<!-- PAGE 17 -->
+
 
 | Lucy Temple            | University for Continuing Education Krems, Austria                |
 |------------------------|-------------------------------------------------------------------|
@@ -457,6 +518,10 @@ University  of  Piraeus,  Greece Centro  de  Investigación  y  Docencia  Econó
 | Stefan Stepanovic    | University of Lausanne, Switzerland |
 | Sangeetha Reji       | Fraunhofer FOKUS, Germany           |
 
+
+<!-- PAGE 18 -->
+
+
 ## Contents
 
 | Foundations and Frameworks of eParticipation                                                                                                                                                                                                     |     |
@@ -470,6 +535,10 @@ University  of  Piraeus,  Greece Centro  de  Investigación  y  Docencia  Econó
 | From Regulation to Implementation: Understanding the Impact of the EU AI Act on Public Sector Institutions in Germany . . . . . . . . . . . . . . . . . . . . . Steffen Weis, Celine Montsch, Tharuni Delpechithrage, and Binh An Patrick Nguyen | 87  |
 | ReflectAI: Design and Evaluation of an AI Coach to Support Public Servants' Self-Reflection . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Hans-Henning Näscher, Jan Schaffner, and Michael Koddebusch        | 102 |
 | Understanding the Affordances and Constraints of Explainable AI in Safety-Critical Contexts: A Case Study in Dutch Social Welfare . . . . . Aleksander Buszydlik, Patrick Altmeyer, Roel Dobbe, and Cynthia C. S. Liem                           | 118 |
+
+
+<!-- PAGE 19 -->
+
 
 Contents
 
@@ -486,6 +555,10 @@ Contents
 | ECoProMD - Towards a Maturity Model and Method for Digital Project Management in Municipalities . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Gunnar Auth and Felix Kroemer                       | 257   |
 | Driving Change Through Interdependent Routines: How Citizen-Centric and Data-Driven Contact Centers Initiate Change Across Intraorganizational Boundaries . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       | 272   |
 
+
+<!-- PAGE 20 -->
+
+
 | Digital Services, Usability, and Citizen Interaction Succeeding in Digital Self-service: Knowledge-Sharing in Citizen-Caseworker Interactions . . . . . . . . . . . . . . . . . . . . . . . . . .                                                             | 291   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
 | Digital Welfare and Women's Ambivalent Lived Experiences: An Interpretative Phenomenological Analysis . . . . . . . . . . . . . . . . Cíntia Ebner Melchiori                                                                                                  | 306   |
@@ -495,7 +568,15 @@ Contents
 
 361
 
+
+<!-- PAGE 21 -->
+
+
 ## Foundations  and  Frameworks of  eParticipation
+
+
+<!-- PAGE 22 -->
+
 
 <!-- image -->
 
@@ -525,6 +606,10 @@ While  the  adoption  of  ICT  can  increase  accountability,  transparency,  an
 
 S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  3-18,  2026.
 
+
+<!-- PAGE 23 -->
+
+
 divide,  barriers  may  persist,  as  some  individuals  may  feel  that  their  voices  are  ignored or  not  equally  valued  throughout  the  participation  processes  [6].  Any  of  these  disparities manifests  unequal  participation,  leaving  underserved  populations  underrepresented  or without  a  meaningful  platform  to  express  their  views  [7].
 
 As  Brabham  [8]  notes,  'any  democratic  model  is  problematic  if  it  is  predicated  on access  to  something  that  not  everyone  has  access  to'  (p.  255).  Citizen  participation  can only  be  considered  meaningful  if  equitable  participation  opportunities  are  guaranteed  for all  individuals  [9].  As  Cornwall  [6]  underlines,  it  is  essential  to  examine  who  participates, who  is  excluded,  and  who  excludes  themselves,  while  developing  strategies  to  mitigate these  disparities.  Similarly,  the  commitment  to  'leaving  no  one  behind',  a  central  principle  of  the  UN  2030  Agenda  for  Sustainable  Development,  demands  explicit  efforts  to meaningfully  and  actively  include  marginalized  groups  in  participatory  processes.
@@ -537,6 +622,10 @@ To  bridge  these  gaps,  it  is  essential  to  first  understand  and  concept
 
 eParticipation  is  a  concept  that  has  emerged  due  to  the  digitalization  of  participatory spaces.  It  comes  from  the  diffusion  of  two  elements - 'e(lectronic)',  implying  the  use of ICT, with 'participation', which  refers to public involvement  in deliberation and decision-making  processes  [10].  Tools  that  can  facilitate  participatory  activities  are  of great  variety,  including  chat  technologies,  discussion  forums,  electronic  voting  systems, web  portals,  social  media,  groupware,  weblogs,  visualization  tools,  and  more  [10,  15, 16].  eParticipation  is  viewed  as  solution  to  growing  political  dissatisfaction  and  declining trust in public institutions [17],  as  it  provides  citizens  with  effective  communication and  informed  decision-making  tools,  while  improving  the  efficiency  and  legitimacy  of political  processes  for  governments  [10].
 
+
+<!-- PAGE 24 -->
+
+
 According  to  United  Nations  [3],  eParticipation  formats  include  eInformation,  eConsultation  and  eDecision-making.  eInformation  refers  to  the  use  of  digital  tools  to  provide  citizens  timely  access  to  public  information.  eConsultation  tools,  on  the  other  hand, enable  citizens  to  engage  in  discussions  through  real-time  interactions,  or  archived  audio and  video  recordings  of  public  meetings.  eDecision-making  goes  a  step  further  by  incorporating  citizen  input  into  the  final  decisions  and  following-up  on  how  these  contributions  have  influenced  the  policymaking  outcomes.  eParticipation  spans  a  wide  range  of areas,  including  polling,  voting,  campaigning,  participatory  law-making,  electioneering, cultural  politics,  urban  and  spatial  planning,  and  more  [15].
 
 While  technologies  that  facilitate  engagement  are  rapidly  evolving,  the  field  of  eParticipation  is  still  at  a  relatively  early  stage  [4,  15,  16].  Research  has  primarily  focused  on the  technological  aspects,  while  the  social  issues  remain  underexplored;  an  imbalance Medaglia  [14]  argues  must  be  addressed.  To  advance  the  field,  it  is  crucial  to  understand and  navigate  these  challenges,  ensuring  that  eParticipation  not  only  leverages  technology effectively,  but  also  balances  the  benefits  and  social  risks  at  play.
@@ -546,6 +635,10 @@ The  concepts  of  inclusion  and  exclusion  were  first  coined  in  European 
 Two  key  areas  of  social  exclusion  are  emphasized  by  Rawal  [18]  to  be  exclusion  from i)  participation  in  civil  society  and  ii)  social  arenas-both  linked  to  eParticipation.  The importance  for  eParticipation  processes  to  be  inclusive  and  fair  to  all  segments  of  society is commonly  underlined  [9,  20]. However,  'inclusion' is a fluid,  multidimensional, ambiguous  concept,  that  adapts  to  different  contexts  and  is  therefore  difficult  to  measure and  operationalize  [18].  Some  eParticipation  literature  links  issues  of  inclusion  to  the digital  divide.  Digital  technologies  are  not  equally  accessible  for  everyone - an  issue amplified  by  differences  in  digital  literacy  and  skills  [20].  Unequal  adoption  and  access to  ICT  deepens  the  gap  between  those  who  can  effectively  use  these  tools  and  benefit  from their  advantages,  and  those  who  cannot  [19].  Beyond  the  digital  divide,  some  studies also  consider  broader  aspects  of  inclusion.  Mariani  et  al.  [21],  for  instance,  highlight  the importance  of  ensuring  diversity,  representativeness,  and  a  balance  of  different  voices  in decision-making  processes.  This  is  echoed  by  Östling  [22],  who  raises  concerns  about the  equality  of  eParticipation,  ensuring  that  no  particular  group  or  interest  dominates the  process,  and  that  there  is  no  discrimination  against  specific  groups.  It  is  therefore not  sufficient  that  access  to  the  participatory  tool  is  granted,  the  public  should  also  feel that  their  voices  matter,  and  that  the  process  is  both  effective  and  fair  [6].  True  inclusion means  that  everyone  has  a  meaningful  opportunity  to  shape  decisions.
 
 Ensuring  equality  and  inclusion  in  eParticipation  is  critical  for  maintaining  democratic  quality,  and  evaluating  these  processes  is  the  only  way  to  address  shortcomings. However,  as  there  is  no  established  understanding  of  what  inclusion  entails,  this  concept
+
+
+<!-- PAGE 25 -->
+
 
 is  difficult  to  measure.  A  conceptual  framework  is  necessary  to  clarify  the  core  dimensions  of  inclusion  in  eParticipation,  while  integrating  findings  from  diverse  disciplines to  create  a  holistic  understanding.
 
@@ -563,6 +656,10 @@ Overall,  1494  articles  were  found,  and  uploaded  on  the  digital  systema
 
 Selection. Firstly,  duplicate  articles  were  automatically  identified  using  Rayyan,  with 24  removed  after  manual  resolution.  The  remaining  1470  articles  underwent  a  two-phase screening:  1)  title  and  abstract screening  and  2)  full-text screening.  Criteria  for their inclusion,  applied  in  both  screening  stages,  were  defined  before  starting  the  process,  and the  reasons  justifying  the  decision  were  documented.  Studies  were  eligible  for  inclusion if  they  i)  were  in  English,  ii)  had  accessible  full-text,  iii)  clearly  focused  on  eParticipation initiatives  and  iv)  addressed  social  aspects  relevant  to  inclusion.  A  quality  check  was additionally  done  to  ensure  that  articles  were  peer-reviewed  and  of  sufficient  standard.
 
+
+<!-- PAGE 26 -->
+
+
 The  lead  author  screened  1470  articles,  with  a  second  reviewer  independently  assessing a sample  at the beginning  of the screening process, to minimize  bias. Results were compared  to  establish a  shared  understanding  of  relevance,  and  disagreements  were resolved  through  discussion.  After  title-and-abstract  screening,  the  number  of  articles was  narrowed  down  to  220.  These  were  taken  forward  for  full-text  review,  resulting  in 27  final  inclusions  (Fig.  1.).
 
 Fig.  1. Selection  process
@@ -574,6 +671,10 @@ Extraction  and  execution. Each  paper«s  general  characteristics  were  init
 ## 4 Findings
 
 Of  the  27  articles  included,  23  are  journal  papers  and  4  are  conference  proceedings.  19 of  the  articles  are  published  between  2020-2025,  7  between  2010-2019,  and  only  one  in 2008.  The  studies  report  from  a  variety  of  countries  including  USA,  Kenya,  South  Africa, Canada,  Australia,  New  Zealand,  Philippines,  but  mostly  European  countries-Estonia, Austria  and  Greece,  Germany,  UK,  Switzerland,  Netherlands,  Czechia,  Slovakia,  France, and  Finland.  The  articles  are  themed  into  6  conceptualizations  of  inclusion  for  eParticipation  with  19  dimensions.  The  concepts  are:  Access,  Knowledge,  Motivation,  Safety, Impact,  and  Empowerment.
+
+
+<!-- PAGE 27 -->
+
 
 ## 4.1 Access
 
@@ -589,6 +690,10 @@ Design-Related. Having  access  to  the  basic  infrastructure-devices,  the  in
 
 A  crucial  consideration  in  tool  design  is  balancing  functionality  and  simplicity.  Highquality deliberation is important, but so is avoiding inequalities in the participation depth of different groups. The technological and functional characteristics of a tool influence  participation,  with  only  a  select  group - often  those  with  higher  educational backgrounds - able  to  navigate  overly  complex  designs  and  utilize  their  deliberative potential [35, 38]. Addressing  these obstacles requires well-designed platforms that combine  accessibility  with  meaningful  deliberation,  along  with  stronger  legal  pressures ensuring  the  technological  needs  and  preferences  of  diverse  demographics  are  met  [39].
 
+
+<!-- PAGE 28 -->
+
+
 ## 4.2 Knowledge
 
 Knowledge  is  the  next  theme  which  stems  from  differences  between  potential  participants'  skills  in  digital  literacy,  discursiveness,  language,  awareness,  or  domain-specific understanding.
@@ -602,6 +707,10 @@ Domain-Specific  Understanding. A  lack  of  or  limited  knowledge  on  the  sp
 Language. Language  presents  another  significant  criterion  for  inclusive  participation. This can impact  migrant  communities,  who  may  not  be  proficient  in  the native  language.  If  they  have  difficulties  in  understanding  or  communicating  effectively,  meaningful  engagement  becomes  unfeasible  [28,  44].  However,  if  the  provided  information is  overly  technical  or  rigid,  it  can  be  difficult  to  understand  and  engage  with,  even  for native  speakers  [28,  32].  This  issue  can  impact  both  the  ability  to  participate  in  discussions,  but  also  the  learnability  of  digital  tools  and  interfaces.  Communication  should  be accessible  to  all,  through  support  mechanisms  such  as  translators,  cultural  mediators,  or multilingual  materials  [44,  45],  as  well  as  clear,  simple  terminology,  free  of  excessive technical  terms  [32].
 
 Awareness. Lack  of  awarenesses  is  a  multifaceted  issue,  stemming  from  a  knowledge gap  about  participation  opportunities,  the  relevance  of  participation  in  daily  life,  or  individuals«  role  in  the  process  [28,  30].  This  can,  for  instance,  impact  immigrants,  who may  not feel included  by the term 'citizen' and assume  they«re  not part of the targeted  participants.  Awareness  gaps  also  include  capability  awareness,  where  individuals
+
+
+<!-- PAGE 29 -->
+
 
 - especially  those  with  low  digital  skills - do  not  see  the  value  of  digital  engagement formats  [28].  Some  forms  of  awareness  can  be  built  through  better  information  dissemination,  while  others  are  linked  to  deeply  rooted  social  issues  and  require  sustained  effort. Therefore,  awareness-building  should  be  a  central  concern,  especially  for  the  inclusion of  low-income  and  low-education  demographics  [30].
 
@@ -617,6 +726,10 @@ Relevance  of  Topic. Participation  requires  emotional,  physical,  and  menta
 
 Temporal  Barriers. Although  ICT  use  aims  to  mitigate  time  constraints,  deliberative activities are tasks that must be balanced with social and economic  responsibilities [28].  Participation  is  often  viewed  as  a  leisure  activity  [28]  making  it  lower  priority  for those  juggling  (multiple)  jobs,  family,  or  personal  commitments.  The  cost  of  time  is particularly  significant  for  certain  social  groups,  like  the  economically  disadvantaged, who  must  prioritize  income-generating  opportunities  [30].  When  gendered  social  norms
 
+
+<!-- PAGE 30 -->
+
+
 intersect  with  economic  and  rural  factors,  these  barriers  become  manifold.  Programs must  therefore  understand  these  dynamics  at  play  and  strive  to  cater  to  the  diverse  needs and  constraints  of  diverse  groups.
 
 Incentives. Another key factor for inclusion is incentives. Gift cards or monetary rewards  can  motivate  those  who  may  otherwise  need  to  prioritize  responsibilities  like work  or  economic  concerns  over  engagement  [28,  41].  Recognition  or  compensation  also helps  make  certain  groups,  such  as  historically  exploited  marginalized  communities,  feel that  their  time  and  effort  are  genuinely  valued  [28].
@@ -628,6 +741,10 @@ Safety  is  a  critical  criterion  for  all  different  social  groups  to  fee
 Privacy  and  Security  Needs. Individuals  need  to  feel  that  their  privacy  is  respected  and that  participating  does  not  negatively  expose  them  [44].  These  concerns  are  amplified  in digital  spaces,  where  the  risks  of  data  leaks  or  hacking  are  more  pronounced  [32].  Beyond external  security  threats,  the  risk  of  being  identified  and  targeted  can  be  a  significant challenge.  If  recognizable  identifiers  are  not  protected,  citizens  are  at  a  risk  of  facing retaliation when  reporting unethical practices or negative feedback  [32].  Vulnerable social  groups,  such  as  people  with  disabilities  [39],  or  asylum-seekers  [44]  are  also  likely to  face  higher  scrutiny  or  discrimination  if  identified.  If  they  are  forced  to  choose  selfprotection  over  engagement  [48],  the  process  can  no  longer  be  considered  inclusive,  as their  voices  will  not  be  represented.  It  is  critical  that  ICT  design  ensure  trust  and  integrity, giving  assurance  that  participants«  information  is  securely  stored  and  safeguarded  [44]. Data  protection  policies  should  be  easily  attainable,  for  everyone  to  be  well  informed of how  their data is handled  [32]. Privacy through  design, such as filter bubbles, or anonymity  control  features  [39,  49],  ensures  the  burden  of  managing  their  security  does not fall solely on individuals  [48]. This can minimize  the  potential  risks of political involvement  and  empower  people  to  engage  without  fear  [48,  50].
 
 Power  Dynamics. Safety is additionally determined by the interactions and  power dynamics  among  different socio-demographic  groups, which can manifest in disrespectful  exchanges  or  discriminatory  language.  Individuals  from  marginalized  backgrounds  are  more  likely  to  experience  harassment  or  personal  attacks,  making  them  feel unwelcome  or  unsafe  in  deliberative  spaces  [39,  44].  These  fears  are  common  among racial  minorities,  who  may  be  exposed  to  discrimination  and  unfair  treatment  in  engagement  activities,  both  on  and  offline  [49].  Exclusionary  communication  can  also  stem from  social  stereotyping  and  elitism  based  on  ethnic,  class,  or  lifestyle  differences  [50]. Power  imbalances  may  not  always  be  overtly  aggressive,  but  still  determine  whose  voices dominate  discussions  and  whose  are  silenced  -  often  evident  in  gender  differences  [42]. Active  efforts  are  necessary  to  ensure  safe  and  respectful  interactions,  where  everyone feels  comfortable  and  open  to  voicing  their  opinions.  The  design  of  the  process  plays a  critical  role  in  ensuring  everyone  can  actively  engage,  rather  than  allowing  a  few  to dominate  the  conversation  [51].  Moderators  should  moreover  follow  established  rules which  help  facilitate  equal  discussions,  free  from  bias  [42,  43].
+
+
+<!-- PAGE 31 -->
+
 
 ## 4.5 Impact
 
@@ -643,6 +760,10 @@ Individuals must  feel that they are capable, supported, and recognized  as legi
 
 Self-belief. People  may  experience  a  lack  of  confidence  as  a  significant  barrier  to  inclusion.  Even  if  other  criteria  for  inclusion  in  eParticipation  are  met,  individuals  may  feel uncomfortable  or  hesitant  to  express  their  views  and  share  their  perspectives  with  others [28].  This  often  stems  from  negative  self-perception,  shaped  by  power  imbalances  [28] and  an  internalized  sense  of  one«s  'place  in  social  hierarchies'  [30].  Such  barriers  are particularly  problematic  for  vulnerable  groups,  like  the  younger  generation,  who  may feel  that  issues  concerning  them  are  often  discussed  without  their  input,  or  that  their engagement  would  make  little  difference  [29].  This  exclusion  reinforces  a  cycle  of  disempowerment.  Similarly,  economically  disadvantaged  individuals  often  experience  low
 
+
+<!-- PAGE 32 -->
+
+
 self-esteem  tied  to  a  sense  of  powerlessness  as  years  of  exclusion  can  create  a  'culture of  silence',  where  individuals  no  longer  see  the  value  of  their  opinions  [30].  When  people  internalize  the  belief  that  their  voices  do  not  matter,  disengagement  is  not  simply a  personal  choice,  but  a  reflection  of  the  structural  inequalities  and  deep-rooted  power hierarchies.
 
 Social  Network. Another  aspect  which  determines  empowerment  is  the  social  capital an  individual  possesses.  Social  networks-including  schools,  marketplaces,  churches, community  centers,  family,  and  friends-form  the  immediate  structures  that  shape  daily interactions  and  provide  essential  support  [35].  A  strong  social  network  has  a  positive effect  on  individuals'  attitudes,  skills,  and  confidence,  empowering  them  to  participate both  online  and  offline  [35,  36].  An  existing  network  lowers  the  threshold  for  engagement  in  eParticipation,  by  fostering  a  sense  of  belonging,  facilitating  opinion-sharing, and  providing  reinforcement  for  individuals'  views.  Without  pre-existing  connections, participation  becomes  more  difficult,  as  individuals  must  put  forth  active  efforts  to  foster a  sense  of  community  on  these  platforms  [49].  Engaging  alone  additionally  comes  with a greater risk of speaking  up  on  an  issue as  an  individual,  whereas  collective  action mitigates  this  [49].
@@ -650,6 +771,10 @@ Social  Network. Another  aspect  which  determines  empowerment  is  the  socia
 Cultural  Needs. Inclusion  cannot  be  a  one-size-fits-all  approach.  Cultural  specificities significantly  shape  how,  and  to  what  extent,  individuals  can  engage  in  eParticipation. These  influences  manifest  in  various  forms.  For  example,  Bickerton  and  Löfgren  [48] show  that  political  engagement  within  New  Zealand«s  social  networks  is  often  perceived negatively, discouraging  individuals from openly expressing their views. To prevent cultural  norms  from  becoming  barriers  to  participation,  it  is  critical  to  recognize  these dynamics  and  actively  mitigate  their  negative  impacts.  Culturally  sensitive  approaches should  be  integrated  to  create  engagement  opportunities  that  are  meaningful  and  relevant to  diverse  demographics  and  their  values  [49],  for  instance  migrant  communities,  who may  struggle  to  navigate  new  social  and  legal  contexts  [44].  A  key  challenge  lies  in  the tendency  to  treat  minority  communities  as  a  homogenous  entity,  overlooking  internal differences.  Many  individuals  do  not  fit  within  one  community,  as  their  sense  of  identity is  created  by  an  interplay  of  cultural,  racial,  religious,  national,  and  social  affiliations [49].  Cultural  distances  should  therefore  be  acknowledged,  and  strategies  should  adopt flexible,  rather  than  standardized  approaches,  to  accommodate  diverse  sensitivities  and needs  [44].
 
 Agency. Inclusion  efforts  require  a  shift  in  how  marginalized  individuals  are  perceived and  integrated  into  eParticipation  [39].  People  with  disabilities,  for  instance,  are  often categorized  as  vulnerable  and  in  need  of  protection,  which  reinforces  a  protective  rather than  empowering  approach.  It  is  critical  to  move  beyond  this  passive  medical  model and  mainstream  inclusivity  by  fostering  agency  in  participants  [39].  Instead  of  creating separate  digital  spaces  custom  to  specific  needs,  which  can  lead  to  isolation,  marginalized users  should  be  involved  in  co-designing  the  participatory  tools  and  programs.  Their perspectives  can  help  shape  digital  spaces  that  are  functional  for  all,  thereby  creating autonomous  digital  citizens  and  legitimate  political  actors,  rather  than  passive  recipients of  support  [39].
+
+
+<!-- PAGE 33 -->
+
 
 ## 5 Discussion
 
@@ -664,6 +789,10 @@ In  this  SLR,  we  asked 'How  can  inclusive  eParticipation  be  conceptualiz
 First  of  all,  determinants  of  eParticipation  in  our  framework  display  an  intersectional character,  meaning  that  different  forms  of  power  structures  and  demographic  variables overlap  in  determining  people's  position.  As  theorized  by  Crenshaw  [53],  intersectionality  involves  the  coincidence  of  different  structures  in  shaping  the  position  of  the  individual:  for  instance,  gender,  ethnicity  and  economic  position  concur  to  shape  a  person's strength  or vulnerability  in  a  given  setting.  The  same  is  observed  in  our  framework, where  concepts  of  accessibility,  knowledge  and  impact  divides  concur,  among  others, to  shape  an  individual's  position.  Recent  works  in  the  IS's  space,  e.g.  [54,  55],  highlight the  importance  of  an  intersectional  lens,  and  illuminate  its  role  as  a  guiding  device  in eGovernance  research.
 
 Secondly,  our  conceptual  framework  identifies  accessibility,  knowledge,  motivation, safety,  impact,  and  empowerment  as  the  shape  for  inclusiveness  in  eParticipation.  This means  that  the  identified  concepts  act  jointly  in  shaping  eParticipation,  and  are  predicated on  each  other  in  such  a  way  that  one  will  affect  the  other  [56].  This  view  of  inclusive eParticipation  problematizes  mono-dimensional  approaches  often  seen  in  the  included corpus  of  literature,  which  mainly  focuses  on  isolated  factors  such  as  technical  or  designrelated  ones.  Our  framework  challenges  this  issue  and  invites  instead  holistic  approaches,
+
+
+<!-- PAGE 34 -->
+
 
 such  as  sociologies  of  governance  [57],  that  capture  the  mutual  and  dynamic  relation among  dimensions.  Developing  this  framework,  we  have  noted  that  a  holistic  approach can make  explanatory sense of eParticipation and be a basis for future  expounding efforts  [58].  Further  research  should  focus  on  empirically  validating  this  framework  and exploring  potential  missing  dimensions  and  the  interplay  among  them.  This  includes examining  perspectives  from  both  citizens  and  experts  involved  in  the  process-an  angle often  overlooked  in  the  reviewed  articles,  which  tend  to  prioritize  one  over  the  other.
 
@@ -683,6 +812,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 2. Coelho, T.R., Cunha, M.A., Pozzebon, M.: EParticipation practices and mechanisms  of influence:  an  investigation  of  public  policymaking.  Gov.  Inf.  Q. 39 ,  101667  (2022)
 3. United  Nations:  UN  Global  E-Government  Readiness  Report  2005:  From  E-Government  to E-Inclusion.  United  Nations  Department  of  Economic  and  Social  Affairs,  New  York  (2005)
 4. Rose,  J.,  Sanford,  C.:  Mapping  eparticipation  research:  four  central  challenges.  CAIS. 20 (2007)
+
+
+<!-- PAGE 35 -->
+
 
 5. Islam, M.S.: Towards a sustainable e-participation implementation model. European J. ePractice. 5 (2008)
 6. Cornwall,  A.:  Unpacking  'Participation':  models,  meanings  and  practices.  Commun.  Develop. J. 43 ,  269-283  (2008)
@@ -710,6 +843,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 28. Sengewald, T., Posselt, T.: A taxonomy  of resident engagement  barriers in public open innovation  (2024)
 29. Leible,  S.,  Ludzay,  M.,  Götz,  S.,  Kaufmann,  T.,  Meyer-Lüters,  K.,  Tran,  M.N.:  ICT  application types  and  equality  of  e-participation - a  systematic  literature  review  (2022)
 
+
+<!-- PAGE 36 -->
+
+
 30. Roberts,  T.,  Hernandez,  K.:  Digital  Access  is  not  Binary:  The  5'A's  of  Technology  Access  in the  Philippines.  Electron.  J.  Inf.  Syst.  Developing  Countries 85 ,  e12084  (2019)
 31. Bastien,  F.,  Koop,  R.,  Small,  T.A.,  Giasson,  T.,  Jansen,  H.:  The  role  of  online  technologies and  digital  skills  in  the  political  participation  of  citizens  with  disabilities.  J.  Inform.  Tech. Polit. 17 ,  218-231  (2020)
 32. Kimemia,  D.,  Ruijer,  E.,  Piotrowski,  S.:  Country  report:  Kenya  county  governments'  websites analysis  report.  Info.  Polity. 27 ,  557-566  (2022)
@@ -732,6 +869,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 49. Wong,  P.N.Y.,  Singh,  A.,  Brumby,  D.P.:  I  just  don't  quite  fit  in:  how  people  of  colour  participate in  online  and  offline  climate  activism.  Proc.  ACM  Hum.-Comput.  Interact. 8 ,  70:1-70:35 (2024)
 50. Smith,  S.:  Local  issues  discussion  forums  in  comparative  perspective:  whose  voices  are  heard? Innov.  Europ.  J.  Soc.  Sci.  Res. 21 ,  371-387  (2008)
 
+
+<!-- PAGE 37 -->
+
+
 51. Hofstra, R., Michels, A., Meijer, A.:  Online  democratic  participation  during  COVID-19: assessing implications for inclusivity of citizen engagement.  Info. Polity 28 (3),  395-410 (2023)
 52. Quittkat,  C.:  The  European  commission's  online  consultations:  a  success  story?  JCMS:  J. Comm.  Mark.  Stud. 49 ,  653-674  (2011)
 53. Crenshaw,  K.:  Demarginalizing  the  intersection  of  race  and  sex:  a  black  feminist  critique  of antidiscrimination  doctrine,  feminist  theory  and  antiracist  politics.  Univ.  Chicago  Legal  Fac., 139-169  (1989)
@@ -740,6 +881,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 56. Kooiman,  J.:  Governing  as  governance.  Palgrave  MacMillan,  London  (2003)
 57. Madon,  S.:  Governance  lessons  from  the  experience  of  telecentres  in  Kerala.  Eur.  J.  Inf.  Syst. 14 (4),  401-416  (2005)
 58. Gregor,  S.:  The  nature  of  theory  in  information  systems.  MIS  Quart. 30 (3),  611-642  (2006)
+
+
+<!-- PAGE 38 -->
+
 
 ## The  Socio-Technical  Factors  That  Influence the  Use  of  E-Participation  in  Rural  Uganda
 
@@ -763,6 +908,10 @@ S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  19-35,  2026.
 
 <!-- image -->
 
+
+<!-- PAGE 39 -->
+
+
 Research  shows  that  to  address  the  limitation  and  increase  the  uptake  and  use  of  eparticipation,  the  factors  that  influence  e-participation  based  on  perspectives  of  diverse stakeholders (e.g., public institutions culture and citizens motivation), socio-cultural contexts  and  ICTs  ecosystems  need  to  be  understood  [21,  23,  39].  Understanding  these factors  is  crucial  to  guide  design  and  implementation  of  e-participation  solutions  and interventions  that  reflect  the  users'  needs  and  contexts.  Some  studies  have  begun  making progress  in  identifying  the  factors  that  influence  e-participation  [2,  3,  19,  24].  However, most  of  these  studies  have  focused  predominantly  on  the  technical  factors  while  ignoring the  non-technical  factors  associated  with  the  user  contexts  [52].  The  establishment  of the  technical  factors  alone  is  arguably  insufficient  to  address  the  issue  of  e-participation uptake  and  usage,  as  it  presents  only  one  of  the  many  contributing  factors  needed  to address  the  problem  holistically  [21].
 
 Technical  factors  are  affected  by  both  internal and  external  factors that  influence stakeholders  to  take  part  in  e-participation  interventions  [15]  and  determine  how  the systems  are  used  [52].  In  the  design  of  e-participation  systems  and  interventions,  both technical  and  non-technical  factors  need  to  be  considered  [12,  21,  39].  For  example, Gibreel  and  Hong  [12]  recommends  identifying  factors  that  influence  e-participation based  on  social, technical, and  cultural aspects  to attain holistic solutions.  Similarly, Nilsson  and  Barbuitu  [20]  recommend  the  identification  of  technology,  social  and  political factors when  identifying  factors that influence e-participation use in  developing countries.  Our  study  contributes  by  identifying  and  discussing  socio-technical  factors that  influence  e-participation  design  and  use  in  a  developing  country  context,  with  a specific focus on Uganda.  Therefore,  the  guiding  research  question  for  this paper is 'What  are  the  perspectives  of  local  government  leaders  and  citizens  on  socio-technical contextual  factors  that  influence  the  use  of  e-participation  in  rural  Uganda?'.
@@ -770,6 +919,10 @@ Technical  factors  are  affected  by  both  internal and  external  factors tha
 The  focus  of  our  study  in  rural  Uganda  is  motivated  by  the  limited  research  on  eparticipation  in  rural  areas  [28]  especially  in  developing  countries  [19].  To  our  knowledge only  one  study  has  explored  factors  that  influence  e-participation  in  rural  Uganda,  focusing  primarily  on  citizens  perspectives  [20].  The  authors  recommend  the  consideration  of local  government  leaders'  perspectives  in  future  research.  While  our  research  addresses this recommendation,  it  takes a  comprehensive  approach  to  identify  and  understand the  socio-technical  factors  that  both  inhibit  and  facilitate  the  use  of  e-participation  in rural  Uganda.  It  focuses  on  two  parishes  in  Isingiro  district  Uganda  where  the  technical and  non-technical  perspectives  including  rural  citizens  and  local  government  leaders' experiences,  socio-cultural  and  institutional  practices  are  captured  through  an  in-depth interview  to  determine  these  factors.  In  all,  while  the  paper  contributes  to  the  gap  in  literature,  it  provides  valuable  insights  into  the  socio-technical  factors  needed  to  successfully leverage  e-participation  systems  in  rural  settings  in  Africa.
 
 The  rest  of  the  paper  is  put  together  as  follows.  Section  2  presents  the  related  work followed  by  the  research  methodology  in  Sect.  3  and  results  in  Sect.  4.  The  last  two sections  discuss  the  research  results  in  Sect.  4  and  conclusion  and  future  work  in  Sect.  6.
+
+
+<!-- PAGE 40 -->
+
 
 ## 2 Related  Work
 
@@ -781,6 +934,10 @@ E-participation  has  divergent  definitions.  For  example  [54]  defines  e-pa
 
 Governments  in  developed  and  developing  countries  are  using  different  forms  of ICTs  to  facilitate  interactions  between  government  leaders  and  citizens.  For  example,  the former  president  Obama  administration  strategically  used  social  media  to  inform  citizens and  collect  feedback  to  draft  policies  that  meet  citizens  expectations  [29].  In  Uganda,  the presidential  candidate  President  Museveni  used  pre-recorded  voice  messages  to  inform citizens  of  his  manifesto,  request  for  votes  and  thank  them  for  their  support  upon  victory [14].  In  both  instances,  the  politicians  aimed  at  the  most  efficient  and  sustainable  way to  communicate  while  empowering  the  citizens  by  involving  them  in  decision-making processes.  Yet,  even  with  these  examples,  recent  research  highlights  that  there  is  still limited  use of  e-participation  [28].  This  has led  researchers  to  advocate  for  the  need to  focus  on  identifying  factors  that  influence  the  uptake  of  e-participation  to  guide  the design  and  implementation  of  e-participation  systems  that  reflect  the  needs  and  contexts of  the  wider  population  [21,  23,  39].
 
+
+<!-- PAGE 41 -->
+
+
 ## 2.2 Factors  that  Influence  E-participation
 
 As stated earlier, e-participation provides  a new  transformative  space  for citizens to engage  actively  in  deliberative  democratic  processes,  extending  traditional  citizen  participation.  However,  the  effectiveness  of  e-participation  depends  on  a  combination  of technical and non-technical factors embodied  in the context in which  the system  is deployed.  The  technical  factors  involve  the  technical  infrastructure  and  digital  tools  that facilitate e-participation [21, 42] while the non-technical  factors relate to the social, institutional  and  political  elements  that  shape  the  uptake  and  use  of  e-participation  [21, 43].
@@ -791,6 +948,10 @@ While  establishing  non-technical  factors  has  emerged  as  essential element
 
 Similarly,  [5]  used  questionnaire  surveys  to  identify  both  technical,  social  and  political factors that influence e-participation in Kuwait. The authors used a  technology acceptance  model  to  determine  factors  that  influence  Kuwait  citizens'  intention  to  use e-participation. The  factors include availability of infrastructure, the use of citizens' preferred  means  of  communication,  the  use  of  clear  and  simple  website  designs  and content,  social  influence,  political  factors  (include  having  trust  in  government,  government's  commitment,  and  citizens  involvement  in  political  parties'  activities),  perceived usefulness  and  perceived  ease  of  use.
 
+
+<!-- PAGE 42 -->
+
+
 ## 2.3 E-participation  Inhibiting  Factors
 
 Along  with  the  facilitating  factors  of  e-participation,  studies  have  also  explored  the  barriers  that  hinder  the  adoption  and  use  of  the  system  [10,  28,  41].  For  example,  [10]  identify technical  challenges  involved  in  the  registration  and  downloading  of  information  as  major problems  for  effective  use  of  e-participation  in  Finland.  [28]  report  socio-technical  and infrastructure  barriers  that  limit  e-participation  adoption  in  Germany.  This  includes  limited  ICT  skills,  inadequate  internet  infrastructure,  citizens'  lack  of  experience  with  digital  political  participation  and  inflexible  structures  that  affect  implementation  of  citizens' feedback.
@@ -798,6 +959,10 @@ Along  with  the  facilitating  factors  of  e-participation,  studies  have  al
 In  Iran,  [25]  look  beyond  technical  factors  to  explore  the  barriers  related  to  leaders  and  citizens'  perspectives  of  e-participation.  They  identify  barriers  such  as  limited public  participation  structures,  problems  with  trust  and  confidence,  limited  knowledge and  awareness  of  e-participation,  lack  of  citizens'  interest,  citizens  and  leaders  conflicting  interests,  limited  infrastructure,  challenges  with  leadership  and  high  costs  involved. The  limitations  in  existing  structures  included  leaders'  poor  attitudes  towards  public participation  and  the  lack  of  open-minded  attitude  in  the  usage  of  information  communication  technologies.  The  trust  and  confidence  factors  include  the  lack  of  citizens and  leaders'  trust  in  e-participation  to  achieve  expected  outcomes  and  the  belief  that e-participation  widen  the  digital  divide  and  does  not  provide  privacy.  The  problem  with interest  includes  leaders'  unwillingness  to  be  transparent  and  to  provide  feedback,  and citizens  and  leaders'  conflicting  interests.
 
 In all, the majority  of the studies on the inhibiting  factors of  e-participation  also primarily  focus  on  non-developing  African  contexts.  To  our  knowledge  a  few  studies have explored the barriers to e-participation adoption in Africa [17, 20, 42, 48]. In Nigeria,  [56]  uses  a  survey  to  establish  that  bureaucratic  government  processes,  limited infrastructure,  limited  funding,  resistance  to  change,  cultural  barriers  and  limited  digital skills  are  factors  that  inhibit  e-participation.  While  in  South  Africa,  [17]  highlights  lack of  awareness  of  e-participation  systems,  costly  mobile  data,  limited  digital  skills  and resistance  to  change  as  the  factors  that  hinder  e-participation.  In  Uganda,  [20]  research identifies  social,  technical,  political,  economic,  cultural  and  organisational  aspects  that hinder  e-participation  use  in  the  rural  areas.  This  includes  citizens'  inability  to  afford broadband  and  internet  enabled  devices,  language  barriers,  illiteracy,  limited  ICT  skills, limited  infrastructure,  gender  inequalities,  leaders'  inability  to  give  feedback  and  citizens lack  of  awareness  of  their  right  to  take  part  in  civic  engagement.  However,  the  research lacks  the  enabling  factors  and  focuses  only  on  the  citizens'  perspective,  which  limits holistic  understanding  of  the  factors  that  influence  effective  use  of  e-participation.  The question remains; What  are the leaders and citizens perspectives on socio-technical contextual  factors  that  influence  e-participation  in  Rural  Uganda?
+
+
+<!-- PAGE 43 -->
+
 
 ## 3 Methodology
 
@@ -810,6 +975,10 @@ The  participants  from  the  leader  and  citizen  categories  were  purposivel
 We  provided  all  participants  with  the  participant  information  sheet  and  informed  consent  forms  to  ensure  voluntary  participation.  Research  ethical  approvals  were  obtained from  Brunel  University  London-36322-MHR-Jan/2023-430440-3,  Mbarara  University of Science and Technology-MUST-2022-712  and  the Uganda National Council of Science  and  Technology-SS1621ES.
 
 The  data  scripts  were  translated  from  Runyankole  to  English  for  analysis.  The  data was  anonymised  and  analysed.  Analysis  followed  [49]  thematic  analytical  approach where  we  inductively  generated  codes,  identified  patterns,  and  analysed  themes  within the data. During  the analysis stage, 23 codes were  generated  and  grouped  into four themes.  The  first  theme  (Individual hindering  factors) was  derived from  the  following codes:  limited  ICT  Skills, illiteracy,  poverty,  mistrust  of  technology  and  leaders,
+
+
+<!-- PAGE 44 -->
+
 
 lack  of  citizens'  confidence  and  citizens  lack  of  interest.  The  second  theme  (Limited infrastructure)  was  emerged  from  the  following  codes:  limited  telecommunication  network,  limited  internet  access,  limited  electricity  and  limited  access  to  devices.  The  third theme;  Society  and  leaders  hindering  culture  merged  from  the  following  codes:  hindering  cultural  beliefs,  gender-based  discrimination,  leaders'  non-inclusiveness  and  leaders not  implementing  meeting  outcomes.  Lastly,  the  enabling  factors  theme  emerged  from these  codes;  existence  of  local  government  structures,  infrastructure  availability,  awareness  of  benefits  of  using  ICTs  and  belief  in  illiterate  making  contributions.  The  details are  presented  in  the  results  section  below.
 
@@ -824,6 +993,10 @@ Analysis  of the data shows  that several factors that hinder the use of e-parti
 Along  with  the  problem  of  illiteracy,  some  participants  express  concerns  about  citizens'  limited  skills  to  operate  mobile  phones  or  social  media.  Such  digital  illiteracy is reported to limit their usage of phones  and  other ICTs  used to facilitate political participation  in  the  rural  areas.  Further  analysis  of  the  data  demonstrates  a  clear  link between  illiteracy and citizens' limited ICT  skills, as both reinforce each  other.  The limited  knowledge  of  English  results  in  the  difficulty  of  affected  participants  to  interact with  the  ICTs  used  to  facilitate  e-participation.  As  some  participants  put  it:  '… I am not educated and have no idea on how to send a message .'  P05.  'I cannot use social media or media because it is in English '  P14.
 
 Poverty  emerges  as  another major  hindrance  to the use of ICTs  in political  participation.  Participants  explain  that  rural  populations  have  limited  income  streams  and as  a  result  lack  the  financial  capacity  to  acquire  ICT  devices  like  mobile  phones  and radios  and  to  maintain  the  usage  of  the  devices.  ' Yes, someone might not have the money to buy it (phone, radio) for themselves but most of us struggle to afford it '  P04.  Data indicates  that  often  the  costs  involved  owning  and  maintaining  digital  devices  such  as
+
+
+<!-- PAGE 45 -->
+
 
 mobile  phones  compete  with  limited  financial  capital  needed  to  sustain  their  livelihood. This  results  in  some  individuals  prioritising  sustenance,  which  in  turn  contributes  to  the limited  use  of  e-participation.
 
@@ -841,6 +1014,10 @@ This theme  deals with limited infrastructure in terms of devices, electricity, 
 
 Analysis  reveals  that  some  areas  do  not  have  internet  while  others  experience  unstable internet  connectivity.  ' Some areas do not have internet '  P07.  ' The internet network is off to post certain information for him .'  P07.  In  addition,  a  majority  of  the  participants
 
+
+<!-- PAGE 46 -->
+
+
 explained  the  lack of electricity as one of the  major  hindrances  to  usage  of ICTs  in political  participation  among  the  rural  population.  The  use  of  ICTs  to  support  public participation  depends  on  the  devices  being  charged,  yet  the  electricity  grid  is  limited  in the  rural  areas. '…Wedon'thaveelectricityinthiscommunityandthetechnologydevices always  work  with  electricity' P09. Participants note that alternative energy sources like  solar  have  been  used,  but  only  a  few  individuals  can  afford  it. 'People use solar for charging' P10.  ' The phones are not charged because many people don't have the capacity to buy solar' P18.
 
 Regarding  limited  telecommunication  networks,  participants  mention  that  the  services  especially  from  MTN  are  either  unreliable  or  usually  off  in  hard-to-reach  rural areas.  One  participant  mentions,  ' …MTN network is unreliable' P10.  This  limitation impacts  on  the  leaders'  ability  to  use  phones  to  communicate  or  receive  information from  citizens.  ' Some don't have good telecommunication networks. You can call the LC1 and other people and you find out that the call is not going through' P07.  Participants  also  mention  that  because  the  areas  are  close  to  the  Tanzania  border,  the  Ugandan  telecommunication  network  is  usually  interfered  with  or  disrupted  by  the  Tanzania telecommunication  networks.  This  is  clearly  articulated  by  this  participant,  ' There is also an issue of poor network because we are very close to Tanzania so the Vodacom masts from Tanzania normally disrupt our network .'  P26.  In  sum,  the  results  reinforce the  perennial  digital  infrastructural  problems  that  hinder  the  effective  and  efficient  use of e-participation in Uganda,  given  its reliant on internet connective  and  accessible, functional  devices  to  the  rural  population.
@@ -850,6 +1027,10 @@ Regarding  limited  telecommunication  networks,  participants  mention  that  t
 The  society  and  leadership  culture  emerge  as  other  critical  factors  that  the  participants reported  to  influence  e-participation.  The  factors  include  gender-based  discrimination, cultural  beliefs,  leaders'  non-inclusiveness  and  leaders  not  implementing  meeting  outcomes.  Like  many  African  countries,  Uganda  practices  a  dominant  patriarchal  culture where  women,  particularly  in  the  rural  areas,  occupy  subordinate  roles  in  society  such as  cooking  and  looking  after  children  while  men  make  livelihood  decisions.  Participants affirm  this  deep-seated  cultural  practice  by  explaining  that  the  women's  role  is  relegated to  household  chores  like  taking  care  of  the  children,  leaving  them  no  time  to  take  part in  decision-making  processes.  ' I think as a woman, I might not attend these meetings since I have to take care of my children … '  P05.  Regarding  digital  technology  use,  the results  of  this  study  show  that  the  dominant  patriarchal  practice  reinforces  gender-based discrimination  by  limiting  women's  access  to  digital  devices  such  as  mobile  phones. In  particular,  married  women  are  seen  to  be  disadvantaged  as  most  husbands  do  not permit  them  to  own  mobile  phones  or  even  participate  in  decision-making  processes. One  participant  succinctly  puts  it  ' Most men do not want their wives to hold phones' P04 .  Clearly,  not  having  ownership  or  access  to  digital  devices  meant  that  women's  use of  e-participation  could  be  limited,  and  thus  impact  on  how  collective  political  decisions are  made  if  the  goal  is  to  implement  e-participatory  systems  in  rural  Uganda.
 
 Furthermore,  cultural  practice  can  be  seen  to  marginalise  young  people's  inclusion in  decision-making  processes  that  affect  them,  which  forms  the  foundation  of  deliberative  democratic  processes.  According  to  the  result,  it  is  common  for  young  people  to  be
+
+
+<!-- PAGE 47 -->
+
 
 excluded  from  decision-making  during  political  meetings.  Young  participants  felt  that even  when  they  are  invited  to  attend  political  meetings,  only  married  people  mostly  deliberate  and  make  key  decisions.  ' In most cases those meetings are attended by old people so they feel that us youngsters shouldn't attend or make any contribution' P09. Considering  the  importance  of  inclusivity  in  deliberative  political  decision-making,  the  results suggest  that  any  e-participatory  systems  developed  should  consider  women  and  young people's  involvement .
 
@@ -862,6 +1043,10 @@ This  theme  includes  factors  such  as  the  existence  of  local  government 
 '… If Local Council 2 - (LC2) wants to disseminate information to LC1, we use LC1 leaders who are made up of 11 committee members. To disseminate the information, they sometimes use mobile phones to call (phone) people including citizens. For the case of LC1, we normally use a market radio or sometimes move door to door to ensure that the information is delivered' P22.
 
 Availability  of  infrastructure  such  as  alternative  solar  energy  sources,  telecommunication  masts,  basic  mobile  phones  and  other  devices  like  smartphones,  radios,  market radios  and  mobile  trumpets  have  made  it  possible  for  the  rural  population  to  own  phones and  the  leaders  to  disseminate  information  to  citizens.  '… sometimes if the leader is not around, I can call or message him on WhatsApp '  P01.  ' In most of those parish development models, I see people collecting data using phones (smartphones)' P25.  Another
+
+
+<!-- PAGE 48 -->
+
 
 participant  comments,  ' Before they told us about it (Parish Development Model), we first heard about it over the radio.' P01.  Further  analysis  shows  the  usefulness  of  the market  radios  in  reaching  out  to  the  wider  community.  As  one  of  the  participants  summarises  ' The Market radios are very good because if someone speaks from it the whole community can hear '  P09.
 
@@ -877,6 +1062,10 @@ The  results of the inhibiting factors align with  the findings  of [20, 25, 51]
 
 On  the  infrastructure  side,  the  research  reveals  how  limited  infrastructure,  such  as the  internet,  telecommunication  networks,  ICT  devices  including  mobile  phones  and radios, electricity grid and public participation structures form essential barriers to e-participation adoption. This finding is  important in the  Uganda  context  where  the application of e-participation systems  particularly in the urban areas have struggled to make  a  significant impact  on  inclusive democratic  processes  [50].  It is  envisaged that  our  study  could  provide  the  much-needed  evidence-based  data  for  policymakers  to
 
+
+<!-- PAGE 49 -->
+
+
 develop  contextually  relevant  policies  and  create  the  enabling  environment  for  developing  e-participation  systems  that  reflect  the  contexts  of  the  rural  areas  where  most  of  the Ugandan  population  resides.
 
 The  research  further  demonstrates  the  impact  of  culture  on  e-participation,  which has  also  received  limited  attention  in  literature  [23].  It  highlights  the  dominant  genderpower  relations  that  contribute  to  the  marginalisation  of  women  from  the  ownership and use of digital devices. The reinforcement  of this cultural-enabled digital divide implies  that  women  in  rural  Uganda  have  limited  ability  to  leverage  digital  devices  to participate  in  mediated  decision-making.  The  implication  of  this  finding  suggests  that effective  implementation  of  e-participation  in  rural  Uganda  requires  lowering  barriers to  women's  access  to  digital  devices  considering  that  they  constitute  critical  elements  of the  family  and  community  social  structure  in  Uganda.
@@ -887,6 +1076,10 @@ Similarly,  the  culture  of  silence  perpetuated  in  the  societal  norms  an
 
 The  findings  on  enabling  factors  as  earlier  reiterate  the  works  of  [5,  25]  and  [28],  who identified  enabling  factors  to  those  analysed  in  the  result  section.  It  highlights  the  role  of structural  transformation  to  shape  political  participation  at  the  local  level  when  mediated through  ICTs.  This  result  aligns  with  [52]  study  where  political  efficacy  combined  with citizens'  trust  in  the  political  structures  emerged  as  key  enablers  of  e-participation  use. However,  the  Uganda  finding  provides  an  interesting  dichotomy.  On  the  one  hand,  the political  culture  practice  perpetuates  unequal  power  relations  and  limits  some  groups of citizens to participate equally in traditional deliberative  political  decision-making (see above).  On  the  other hand,  the  introduction  of ICTs  is perceived  to serve as an enabler  for  citizens'  participation.  Further  analysis  of  the  results  reveals  that  awareness of  the  benefits  of  ICTs  is  a  key  factor  underpinning  their  effectiveness  as  an  enabler for  political  participation.  This  is  shaped  by  the  belief  that  ICTs  such  as  mobile  phones offer  features  that  protect  their  privacy  and  replicate  traditional  forms  of  face-to-face  oral communication. Additionally,  the  participants  mentioned  that  the  mobility  and  timeliness of  mobile  devices  characterise  their  perceived  usefulness  in  facilitating  the  interactions between  citizens  and  political  leaders.
 
+
+<!-- PAGE 50 -->
+
+
 Additionally, participants highlighted that the mobility and timeliness of  mobile devices  enhance  their  perceived  usefulness  in  facilitating  interactions  between  citizens and  political  leaders.  Although  there  is  no  specific  e-participation  system  deployed  in rural  Uganda,  the  perceived  advantages  of  mobile  devices  for  facilitating  political  participation  offers  useful  insights  for  mobile  phone-enabled  e-participation.  In  general, the  findings  corroborate  with  [36]  study  where  time  savings,  location  independence  and cost  reduction  emerged  as  the  advantages  for  e-participation.
 
 Our  study  further  found  that  the  motivation  of  rural  citizens  to  use  ICTs  for  political engagement  is  a  key  factor  in  shaping  the  development  of  e-participation.  However,  considering  that  a  majority  of  the  rural  citizens  are  both  digitally  and  functionally  illiterate, it  is  important  to  recognise  that  harnessing  their  motivations  and  enhancing  their  active engagement  in  e-participation  requires  targeted  training  [21].  In  all,  this  finding  extends the work by [39]  that  a  lack of understanding  of  citizens' motivations  to participate hinders  the  progress  of  e-participation.
@@ -896,6 +1089,10 @@ Our  study  further  found  that  the  motivation  of  rural  citizens  to  use 
 In  general,  the  study  contributes  to  the  limited  empirical  research  on  the  usage  of  information  communication  technologies  in  political  participation  in  rural  areas  [28] by presenting  the  factors  that  influence  e-participation  in  rural  Uganda.  This  research  provides both  technical  and  non-technical  (social,  political)  factors.  It  aims  to  provide  a  holistic  approach  for  establishing  factors  that  influence  e-participation  use,  which  has  been reported  to  be  limited  in  existing  research  [52].  By  drawing  on  citizens  and  government  leaders'  experience  and  socio-technical  context  data,  we  analysed  and  discussed both  the  factors  that  enhance  and  inhibit  the  adoption  and  use  of  e-participation  in  rural Uganda.  The  study  shows  that  a  wide  range  of  individual  factors  and  institutional  and socio-cultural  practices  seem  to  play  a  limited  role  for  the  update  of  ICTs  to  mediate political  participation.  Beyond  the  factors  related  to  the  limited  use  of  e-participation, factors  such  as  local  government  structures,  telecommunication  infrastructure  availability  and  awareness  benefits  of  ICTs  can  be  seen  to  play  an  important  role  in  observed  use of  ICTs  for  political  participation.
 
 In  addition,  as  there  is  limited  research  on  various  stakeholders'  perspectives  on  factors  that  influence  e-participation  [21,  23],  this  research  makes  a  significant  contribution by  providing  technical  and  non-technical  factors  that  are  informed  by  rural  citizens  and local  government  leaders  in  rural  Isingiro,  Uganda,  Africa.  The  study  further  extends research  by  [20]  who  recommended  the  need  to  establish  factors  based  on  local  government  leaders'  perspectives.  Moreover,  the  findings  identify inhibiting factors that contribute  to  advancing  research  on  the  limited  knowledge  of  barriers  to  e-participation implementation  in  developing  countries  [25].  Furthermore,  the  factors  identified  can guide  e-participation  designers  and  implementers  to  consider  different  aspects  like  social, political,  economic  and  technology  during  the  designing  and  implementation  of  effective e-participation systems  and  models  that  align with the users' context [12].Also, the  inhibiting  and  enabling  factors  identified  can  guide  researchers,  designers,  policymakers,  and  governments  to  establish  strategies  to  address  contextual  challenges  during the  planning,  designing,  implementation  and  evaluation  of  e-participation  models  and systems  particularly  in  similar  settings  with  similar  features  and  characteristics.
+
+
+<!-- PAGE 51 -->
+
 
 Overall, the findings provide researchers, governments, policymakers, and eparticipation  designers  evidence-based  information  to  determine  necessary  conditions for  e-participation  models  and  systems  design  and  implementation  in  settings  similar  to rural  Uganda.  However,  the  research  was  based  on  a  case  study  of  only  two  parishes  in a  district  in  Uganda  and  was  carried  out  in  a  limited  time.  This  limits  generalisation  and the  findings  transferability  could  only  be  applicable  to  settings  with  similar  characteristics.  Future  work  will  focus  on  using  these  socio-technical  contextual  factors  to  elicit e-participation  model  and  system  requirements.
 
@@ -915,6 +1112,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 8. Demo.net.  Deliverable  5.1:  Report  on  Current  ICTs  to  enable  Participation  (2006).  Available at:  https://scholar.google.com/scholar?hl=en&amp;as\_sdt=0%2C5&amp;q=Demo.net+2006&amp;btnG = , last  accessed  2022/6/30
 9. Dörflinger,  J.,  Gross,  T.:  Bottom  billion  architecture:  an  extensible  software  architecture  for ICT  access  in  the  rural  developing  world.  In: Proceedings of the 4th ACM/IEEE International Conference on Information and Communication Technologies and Development, pp.  1-10, IEEE  (2010)
 10. Ertiö, T. P., Ruoppila, S., Thiel, S. K.: Motivations to use a mobile participation application. In: Electronic  Participation:  8th  IFIP  WG  8.5  International  Conference,  ePart 2016, Guimarªes, Portugal, September 5-8, 2016, Proceedings 8 ,  pp.  138-150.  Springer International  Publishing  (2016)
+
+
+<!-- PAGE 52 -->
+
 
 11. Feeney,  M.K.,  Brown,  A.:  Are  small  cities  online?  Content,  ranking,  and  variation  of  US municipal  websites.  Gov.  Inf.  Q. 34 (1),  62-74  (2017)
 12. Gibreel,  O.,  Hong,  A.:  A  holistic  analysis  approach  to  social,  technical,  and  socio-technical aspect  of  e-government  development. Sustainability 9 (12)  (2017)
@@ -939,6 +1140,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 31. Toots,  M.:  Why  E-participation  systems  fail:  The  case  of  Estonia's  Osale.  ee. Govern. Info. Quart. 36 (3),  546-559  (2019)
 32. United  Nations  UN  E-Government  Survey  2020.  Available  https://publicadministration.un. org/egovkb/en-us/Reports/UN-E-Government-Survey-2020.  Accessed  27  June  2022  (2020)
 
+
+<!-- PAGE 53 -->
+
+
 33. Venkatesh,  V.,  Brown,  S.  A.,  Bala,  H.:  Bridging  the  qualitative-quantitative  divide:  guidelines for  conducting  mixed  methods  research  in  information  systems. MIS Quart. 21-54  (2013)
 34. Wimmer,  M.  A.  Ontology  for  an  e-participation  virtual  resource  centre.  In: Proceedings of the 1st international conference on Theory and practice of electronic governance, pp.  89-98, (2007)
 35. Letto,  B.,  Ullrich,  A.:  E-participation  initiatives  for  local  government  services:  a  systematic literature  review  on  stakeholder  objectives  and  evaluation  approaches.  JeDEM-eJournal  of eDemocracy  and  Open  Government 17 (1),  104-143  (2025)
@@ -960,10 +1165,18 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 51. Mobini,  P.,  Hansson,  H.:  E-participation  in  higher  education:  the  importance  of  non-technical factors  as  identified  in  the  eU-project  MyUniversity.  In: 2014 IEEE Frontiers in Education Conference (FIE) Proceedings ,  pp.  1-8.  IEEE,  (2014)
 52. Lai, R., Beh, L.S.: The impact of political efficacy on citizens' e-participation in digital government.  Adm.  Sci. 15 (1),  17  (2025)
 
+
+<!-- PAGE 54 -->
+
+
 53. Rawat,  P.:  A:  policy  feedback  and  socio-technical  approach  to  e-participation  (PFSTEP):  a cross-national  analysis  of  technology  and  institutions  to  explain  e-participation.  J.  Inform. Tech.  Polit. 18 (2),  214-229  (2021)
 54. Macintosh,  A.:  Characterising  e-participation  in  policy-making.  In  Proceedings  of  the  37 th Hawaii  International  Conference  on  System  Sciences,  IEEE  (2004)
 55. Gronlund,  A.:  ICT  is  not  participation  is  not  democracy,  eparticipation  development  models revisited.  In:  Macintosh,  A.,  Tambouris,  E  (eds)  Electronic  Participation.ePart  2009.  Lecture Notes  in  Computer  Science,  pp.  12-23.  Springer,  Berlin  (2009)
 56. Adeyinka,  P,  A,  Ugochukwu,  D,  A.:  Digital  Competency  and  public  sector  digital  transformation  in  Nigeria.  In:  the  17 th International  Conference  on  Theory  and  Practice  of  Electronic Governance,  October  1-4,  pp,  55-66  (2024)
+
+
+<!-- PAGE 55 -->
+
 
 <!-- image -->
 
@@ -995,6 +1208,10 @@ Published  by  Springer  Nature  Switzerland  AG  2026
 
 S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  36-51,  2026.
 
+
+<!-- PAGE 56 -->
+
+
 to  expand  democratic  dialogue  and  foster  more  inclusive  governance  [11].  In  the  literature,  e-participation  is  characterized  by  different  levels  of  engagement:  e-informing (digital  provision  of  information  without  active  citizen  participation),  e-consulting  (gathering  opinions  through,  for  example,  surveys  or  forums  without  direct  involvement),  ecollaborating  (active  citizen  participation  in  political  processes),  and  e-empowering  (the highest  level  of  participation  through,  for  example,  binding  referendums  and  citizens deciding  on  policy  matters)  illustrate  the  degree  of  citizen  involvement  in  digital  participation  processes  [8,  12].  Some  publications  mention  a  further  level  of  e-participation: E-Involvement,  which  refers  to  active  participation  and  online  work  with  citizen  [13]. However,  a  key  challenge  is  building  and  maintaining  citizens'  trust  in  the  political  system,  which  is  crucial  for  the  use  of  e-participation  projects  [14,  15].  Factors  influencing trust  have  been  studied  extensively  [14-16].  This  research  extends  that  work  by  investigating  general  knowledge,  awareness  and  use  of  e-participation  in  the  German  regional context  of  the  metropolitan  area  of  Koblenz,  Rhineland-Palatinate.
 
 The  objective  of  our  study  is  to  examine  citizens'  knowledge  of  e-participation  and their  awareness  as  well  as  their  use  of  available  e-participation  offerings  in  their  region. Based  on a literature analysis, we execute a standardized survey to assess citizens' awareness  and  knowledge  of  e-participation  in  the  metropolitan  region.  The  following two  research  questions  guide  our  study:
@@ -1010,6 +1227,10 @@ Through  e-participation  initiatives,  citizens  gain  access  to  additional  
 
 Santamaría-Philco  and  Wimmer  reviewed  a  number  of  factors  that  directly  influence trust  in  e-participation  initiatives,  such  as  the  'quality  of  information',  'trust  in  technology',  'trust  in  the  process/transparency  of  the  process',  'trust  in  contributions/quality of  contribution',  'trust  in  conditions  of  participation',  'trust  in  data  security/protection'
 
+
+<!-- PAGE 57 -->
+
+
 and  'influence  on  decision-making'  [15].  Other  studies  indicate  that,  in  particular,  transparency  of  participation  initiatives  and  their  actual  impact  on  decision-making  processes significantly  affect  the  perceived  benefits  of  and  trust  in  e-participation  [14].  On  the  one hand, e-participation can  provide  transparent  insights  into  political  decision-making; on  the  other  hand,  it  requires  digital  tools  that  facilitate  dialogue  between  citizens  and government  [15,  19].  Furthermore,  research  by  Kim  and  Lee  as  well  as  Choi  and  Song found  that  a  higher  level  of  trust  in  the  government  or  institutions  positively  influences the  use  of  e-participation  channels  [20,  21]-an  observation  also  confirmed  by  Abdulkareem  et  al.  [22].  Their  findings  suggest  that  high-quality  and  user-friendly  digital  public services  have  a  positive  effect  on  participation  levels.  However,  in  countries  with  underdeveloped  digital  administrative  infrastructures,  trust  and  engagement  in  e-participation tend  to  be  lower  [22].  Based  on  the  trust  model  by  Mayer,  Davis  and  Schoorman  [24], Scherer  and  Wimmer  argue  that  people  will  refrain  from  using  e-participation  services if  they  are  uncertain  about  the  risks  associated  with  data  protection  or  IT  security.  Furthermore,  obvious  vulnerabilities  in  ICT  applications  also  lead  to  a  loss  of  trust  on  the part  of  political  actors  and  the  government  as  a  whole  [23].  Considering  user  needs  and inclusivity  is  also  crucial  for  the  acceptance  and  usage  of  digital  participation  platforms. Targeted  functionalities tailored to  specific  user  groups  enhance  citizens'  motivation to  engage  [25,  26].  Different  demographics  require  distinct  approaches:  while  younger users  favor  gamified  applications,  older  citizens  often  require  training  to  participate  in online  formats  [27,  28].  In  general,  the  more  familiar  citizens  are  with  an  application, the  more  likely  they  are  to  engage  with  it.
 
 Technological  advancements  also  play  a  key  role  in  increasing  the  adoption  of  eparticipation  platforms  [25].  Additionally,  the  habitual  use  of  such  applications  fosters a  sense  of  belonging  within  communities,  further  encouraging  consistent  participation [11].  Finally,  studies  have  compared  digital  participation  with  traditional  methods.  A  key insight  is  that  time  efficiency  in  e-participation  encourages  greater  involvement.  Additionally,  the  digital  presence  and  visibility  of  participation  opportunities  significantly influence  their  adoption  [29,  30].
@@ -1019,6 +1240,10 @@ The  literature  review  indicates  that  existing  research  predominantly  foc
 ## 3 Survey  Design  and  Execution
 
 Quantitative social research collects and analyzes numerical data to describe social phenomena,  test  hypotheses,  and  draw  generalizable  conclusions  [35].  It  uses  methods like surveys  and  statistical analysis to  make  inferences  about  larger  populations  and to identify correlations. A key tool is  the  standardized  questionnaire,  which  ensures
+
+
+<!-- PAGE 58 -->
+
 
 comparability  by  asking  the  same  questions  in  the  same  order.  In  our  study,  we  use  a standardized  survey,  following  a  linear  process  from  theory  to  data  analysis  [36].
 
@@ -1039,6 +1264,10 @@ Table  1. Sample  of  people  to  be  surveyed,  broken  down  by  city  and  ad
 | Total population covered                                            |           957.147 | 100,00                                                  |                                 200 |
 
 Data  is  collected  through  a  partially  standardized  survey  using  a  questionnaire  as  the primary  instrument.  The  questionnaire  includes  17  closed  questions,  enabling  the  collection  of  standardized  quantitative  data,  which  allows  for  easy  comparison  and  statistical analysis  of  correlations.  Questions  q1  to  q11  target  the  below  program  questions,  while q14  to  q19  are  demographics  questions.  Two  open-ended  questions  explore  additional influencing  factors  relevant  to  the  study  (q12  assessing  own  media  competency  and  q13 assessing  own  trust  in  local  government  structures).  The  survey  is  internet-based  using
+
+
+<!-- PAGE 59 -->
+
 
 UmfrageOnline 1  .  As  not  all  respondents  can  be  reached  digitally,  paper  versions  are collected  at  public  events  and  highly  frequented  locations.
 
@@ -1064,6 +1293,10 @@ Among  215  respondents,  gender  distribution  was  with  54.42%  male  and  44
 
 1 Www.umfrageonline.de.
 
+
+<!-- PAGE 60 -->
+
+
 One  respondent was under 18. Educational levels varied: 30.70%  held a university degree, 29.77%  a vocational baccalaureate or graduation from high  school,  19.07% vocational  training,  9.30%  a  secondary  school  certificate,  1.86%  a  lower  secondary  certificate,  and  6.51%  a  doctorate.  Employment  status  also  varied:  46.76%  were  employed, 32.87%  students,  7.87%  self-employed,  6.94%  pensioners,  and  4.63%  unemployed.  Two respondents  did  not  specify  their  employment  status.
 
 ## 4.2 Knowledge  of  E-Participation  by  Citizens  in  General  (Q1  and  Q2)
@@ -1077,6 +1310,10 @@ Fig.  1. General  knowledge  of  e-participation  (q1)
 Awareness  of  'e-participation'  varies  by  age.  Among  those  under  45,  55.47%  were unfamiliar  with  the  term,  compared  to  70.69%  of  those  over  45.  This  suggests  younger participants are more  aware  of e-participation. University graduates were  also  more familiar  with  the  term,  while  other  factors  like  gender,  employment,  nationality,  and  residence  had  no  significant  impact.  Regarding  specific  e-participation  levels  (and  exemplary areas)  (q2),  e-information  (e.g.,  official  websites)  was  the  most  recognized  (70.51%,  153 respondents).  E-consultation  (e.g.,  urban  planning  platforms)  was  known  by  41.94% (91  respondents),  e-collaboration  (e.g.,  participatory  budgeting)  by  21.20%  (46  respondents),  and  e-empowerment  (e.g.,  binding  referendums)  by  just  11.98%  (26  respondents). Notably,  29.03%  (63  respondents)  were  unfamiliar  with  any  of  the  levels  of  engagement and  exemplary  applications.  The  results  indicate  that,  while  basic  e-information  services are  widely  known,  more  interactive  forms  and  levels  of  engagement  such  as  consultation, collaboration,  and  empowerment  require  greater  awareness  and  promotion  (see  Fig.  2).
 
 The  response  patterns  across  the  City  of  Koblenz  and  the  Administrative  Districts in  the  metropolitan  area  are  similar,  with e-information and e-consultation being  the most  recognized  levels  of  e-participation.  However,  a  significant  number  of  respondents
+
+
+<!-- PAGE 61 -->
+
 
 Fig.  2. Levels  of  e-participation  offerings  familiar  to  use  (q2,  multiple  answers).
 
@@ -1092,6 +1329,10 @@ When  analyzing  e-participation  initiatives,  the  frequency,  with  which  ci
 
 Question  5  goes  on  to  analyze,  which  specific  applications  these  users  have  engaged with. This question identifies the most used forms of digital civic participation and highlights  usage  gaps.  Among  132  respondents,  94.70%  (125  people)  engaged  with  einformation  services  (e.g.,  official  websites),  confirming  that  passive  information  access is the most widespread  form  of e-participation. In contrast, interactive participation remains  low:  38.64%  (51  people)  used  e-consultation  (e.g.,  participation  platforms),
 
+
+<!-- PAGE 62 -->
+
+
 Fig.  3. Frequency  of  use  of  e-participation  offerings  (q4)
 
 <!-- image -->
@@ -1106,6 +1347,10 @@ To  address  the  third  program  question  on  positive  influencing  factors, 
 
 The  user-friendliness  of  e-participation  tools  received  a  mean  score  of  3.28  and  a standard  deviation  of  1.2,  indicating  some  variability  in  responses.  While  48.35%  of respondents  (65  rated  'high'  and  37  'very  high')  believe  that usability has a strong positive  influence  on  trust,  30.33%  (64  people)  rated  it  low  or  very  low.  About  7%  of respondents  felt  that  usability  had  no  positive  impact  on  their  trust,  suggesting  that  while important,  usability  is  not  the  primary  factor  for  everyone.
 
+
+<!-- PAGE 63 -->
+
+
 In  contrast,  privacy  emerged  as  a  more  consistent  and  influential  factor,  with  a  mean score of 3.89 and a low standard deviation of 0.97, indicating broad agreement  on its  importance.  Nearly  74%  of  participants  (47.39%  rated  'high'  and  27.01%  'very high')  believe  that  strong  data  protection  regulations  significantly  enhance  their  trust  in e-participation  applications  (see  Fig.  4).
 
 Fig.  4. Evaluation  of  positive  influence  factors.
@@ -1116,6 +1361,10 @@ The  security  of  technical  systems  (IT  security)  received  a  high  mean  
 
 Q7  quested  on  non-technical  factors  influencing  trust  positively  (see  Fig.  4).  While 140  people  reported  high  or  very  high  positive  assessment  on  granting  political  impact, 29  argued  no  or  very  low  positive  impact,  the  mean  value  being  7,3.  6  persons  did  not respond  to  this  question.  The  second  aspect,  ensuring  trust  in  the  participation  process, received  a  mean  score  of  3,91,  with  a  standard  deviation  of  1,1.  155  people  reported  a  high
 
+
+<!-- PAGE 64 -->
+
+
 or  very  high  positive  influence  on  trust.  The  third  aspect,  granting  own  anonymity  was assessed  with  higher  importance,  with  a  mean  score  of  4,11  and  a  standard  deviation  of 0,99.  Finally,  protection  against  malicious  use  of  recorded  data  was  rated  as  the  highest important  aspect,  with  4,16  mean  score  and  0,99  standard  deviation.  The  number  of respondents  assessing  a  high  or  very  high  positive  impact  on  trust  is  166  (Fig.  5).
 
 Fig.  5. Evaluation  of  negative  influence  factors
@@ -1124,11 +1373,19 @@ Fig.  5. Evaluation  of  negative  influence  factors
 
 For the fourth program  question, q9 and q10 explored possible negative factors affecting  trust  in  the  use  of  e-participation  initiatives.  Respondents  rated  the  same  factors as  in  questions  six  and  seven,  but  this  time  on  the  negative  impact  of  their  presence  or absence,  using  a  scale  from  1  (no  negative  impact)  to  5  (very  strong  negative  impact). The  means  and  standard  deviations  reveal  the  most  significant  barriers  to  trust  in  digital participation:  The  lack  of  user-friendliness  of  e-participation  tools  received  a  mean  score of 3.02 with a high standard  deviation  of  1.41, indicating  considerable  variability  in responses. 29.58%  of  respondents (63 people) rated the lack of user-friendliness as having  a  very  negative  impact,  while  16.43%  (35  people)  rated  it  as  very  high.  However, 21.13%  (45  people)  felt  it  had  no  negative  impact,  and  17.84%  (38  people)  viewed  it as  having  a  very  low  negative  impact.  These  mixed  ratings  suggest  that,  while  a  lack  of usability  can  negatively  affect  trust,  it  is  not  seen  as  a  critical  factor  by  other  respondents. Non-compliance  with  data  protection  laws  is  seen  as  one  of  the  most  serious  barriers  to trust  in  the  use,  with  a  mean  score  of  3.72  and  a  standard  deviation  of  1.08.  38.5%  of respondents  (82  people)  rated  this  factor  as  having  a  high  negative  impact,  and  26.29% (56  people)  rated  it  as  very  high.  These  results  highlight  that  citizens  develop  significant mistrust towards e-participation initiatives if data protection laws are not respected, making  this  a  critical  barrier  to  trust  in  using  the  offering.  IT  security  vulnerabilities  are also  perceived  as  a  major  negative  factor,  with  a  high  mean  score  of  4.03  and  a  standard deviation  of  0.98.  39.15%  of  respondents  (83  people)  rated  security  flaws  as  having  a very  negative  impact,  and  33.49%  (71  people)  rated  them  as  highly  negative.  Only  1.42% (3  people)  did  not  perceive  IT  security  vulnerabilities  as  having  a  negative  impact.  These
 
+
+<!-- PAGE 65 -->
+
+
 findings  underscore  that  security  flaws  are  a  significant  barrier  to  trust,  likely  deterring potential  users  from  engaging  with  e-participation.  Application  failures  scored  a  mean of  3.08  with  a  standard  deviation  of  1.22,  indicating  a  moderate  negative  impact.  29.86% (63  people)  felt  that  failures  had  a  high  negative  impact,  while  12.32%  (26  people)  rated them  as  very  high.  However,  12.32%  (26  people)  reported  no  negative  impact,  and  21.8% (46  people)  rated  the  impact  as  very  low.  This  suggests  that  while  failures  can  negatively influence  trust,  their  impact  is  seen  as  less  critical  compared  to  factors  like  privacy  and IT  security.  Finally,  the  lack  of  protection  against  misuse  achieved  a  mean  of  3.89  and a  low  standard  deviation  of  0.97,  indicating  a  high  level  of  agreement  on  its  negative impact.  45.75%  of  respondents  (97  people)  rated  the  lack  of  protection  against  misuse  as highly  negative,  and  27.83%  (59  people)  rated  it  as  very  high.  Only  1.89%  (4  people)  felt that  this  factor  did  not  negatively  affect  their  trust.  This  strong  response  highlights  that citizens  place  great  importance  on  the  integrity  and  fairness  of  e-participation  processes, and  a  lack  of  protection  against  misuse  can  severely  damage  trust.
 
 On  the  negative  impact  q10  assessed  the  following  four  aspects:  no  clear  indication on political impact  of initiative (with a mean  score  of  3,3 and standard  deviation  of 1,06  -  93  respondents  assessed  high  or  very  high  negative  impact,  while  44  persons report  very  low  or  no  negative  impact),  intransparency  on  the  participation  process  (with a  mean  score  of  3,73  and  standard  deviation  of  1,18  -  144  persons  assessed  high  or very  high  negative  impact,  while  35  persons  report  very  low  or  no  negative  impact),  no anonymity  (mean  score  3,84,  standard  deviation  of  1,05  -  148  persons  assessed  high  or very  high  negative  impact,  while  26  persons  report  very  low  or  no  negative  impact),  and lack  of  protection  against  misuse  of  recorded  data  (mean  score  3,93,  standard  deviation of  1,04  -  137  persons  assessed  high  or  very  high  negative  impact,  while  24  persons report  very  low  or  no  negative  impact).  The  findings  indicate  that  the  most  influential negative  impact  factors  are  lack  of  transparency,  lack  of  anonymity  and  low  protection against  misuse  of  recorded  data.
 
 The  open  questions  eight  and  eleven  queried  additional  factors  influencing  trust  in e-participation  to  address  the  fifth  program  question.  In  contrast  to  the  closed  questions, the  willingness  to  answer  these  questions  was  significantly  lower,  with  only  24  people answering  question  eight  and  15  people  answering  question  eleven  on  the  influence  of positive  or  negative  factors.  While  on  q8,  8  people  reported  again  user-friendliness,  7 people  reported  again  transparency  of  the  participation  process,  and  one  the  political impact  of  the  initiative,  four  new  aspects  were  reported,  i.e.  personal  benefit  of  the  user (1  mention),  more  awareness  (2),  trust  in  institutions  (4)  and  possibility  of  participating in  planning  processes  (1).  Similarly,  on  q11  (negative  impact  factors),  3  respondents reported  again  lack  of  user  friendliness  of  tools,  3  respondents  reported  again  weaknesses  in  IT  security,  and  5  respondents  reported  again  lack  of  clarity  about  political impact. The  three new  items  reported  were  a) personal  disadvantages  of  the user in participating  (1  -  the  participant  worries  that  e-participation  outcomes  may  negatively affect  him  or  her,  such  as  political  decisions  against  their  interests);  b)  lack  of  awareness, where  2 respondents  feel uninformed  about  the existence and functionality of e-participation  tools,  which  undermines  trust  and  engagement;  and  c)  distrust  in  institutions,  with  1  respondent  indicating  that  credibility  and  transparency  of  the  implementing organizations  are  essential  to  maintaining  trust  in  e-participation  tools.
+
+
+<!-- PAGE 66 -->
+
 
 ## 4.5 Assessment  of  Own  Media  Literacy  and  Trust  in  Local  Administration
 
@@ -1141,6 +1398,10 @@ Fig.  6. Self-assessment  of  digital  media  competencies  by  respondents.
 The  survey  results  show  that  most  participants  positively  assess  their  digital  media competencies.  A  total  of  38.89%  (84  people)  rated  their  skills  as high  (level 4),  and 18.98%  (41  people)  rated them  as very high (level 5).  Another  20.37%  (44  people) considered  their  skills  average  (level  3),  while  17.59%  (38  people)  rated  their  competence as  low  (level  2),  and  4.17%  (9  people)  rated  it  as  very  low  (level  1).  The  mean  score  of  3.51 (standard  deviation:  1.11)  indicates  that  digital  literacy  is  slightly  above  average  overall. Nearly  58%  of  respondents  rated  their  competence  as  high  (levels  4  or  5),  indicating they  are  well  equipped  to  participate  in  e-participation  initiatives.  However,  nearly  22% of  respondents  rated  their  skills  as  low  (levels  1  and  2),  suggesting  that  this  group  may need  additional  support,  such  as  more  user-friendly  interfaces  and  clearer  instructions. Age  differences  are  notable:  67.89%  of  respondents  under  45  rated  their  skills  as  high  or very  high,  while  50%  of  those  45  and  older  reported  low  or  very  low  skills.  This  indicates that  younger  individuals  are  more  confident  with  digital  tools,  while  older  users  may need  more  support  to  engage  effectively  with  e-participation.
 
 Question  13  of  the  survey  assessed  citizens'  trust  in  their  local  government,  which plays  a  key  role  in  the  adoption  of  e-participation  applications.  The  results  show  a  moderate  level  of  trust.  While  43.52%  (94  people)  rated  their  trust  as  high  (level  4),  31.02%  (67 people)  gave  a  neutral  response  (level  3).  Only  9.26%  (20  people)  expressed  very  strong trust  (level  5).  Also,  12.5%  (27  people)  rated  their  trust  as  low  (level  2),  and  3.7%  (8 people)  reported  no  trust  (level  1).  The  average  trust  score  was  3.42  (standard  deviation: 0.95),  indicating  a  slightly  above-average  level  of  trust  but  with  diverse  opinions.  This suggests  that  while  many  citizens  trust  their  local  government,  there  is  still  skepticism
+
+
+<!-- PAGE 67 -->
+
 
 with  some  of  them,  which  may  influence  their  willingness  to  engage  in  e-participation initiatives.  Strengthening  trust  can  encourage  more  citizens  to  participate.
 
@@ -1158,6 +1419,10 @@ The  factors  identified  in  literature  in  Sect.  2  were  largely  confirmed
 
 This study examined  the awareness  and benefits of e-participation initiatives in the metropolitan  area  of  Koblenz,  Germany.  First,  the  concept  of  e-participation  was  introduced,  and  relevant  factors  influencing  the  awareness,  trust  and  benefits  of  such  initiatives
 
+
+<!-- PAGE 68 -->
+
+
 were  explored  through  a  review  of  scientific  literature.  Factors  such  as  trust  in  participation  platforms,  trust  in  institutions,  transparency,  user-friendliness,  and  digital  skills were  identified.  Empirical  research  using  a  questionnaire,  which  was  distributed  in  the city  and  five  administrative  districts  within  the  metropolitan  area  of  Koblenz,  revealed insights  into  the  perception  and  positive  or  negative  influence  of  relevant  trust  factors. A  total  of  217  respondents  completed  the  questionnaire.  The  survey  aimed  to  assess  the actual  awareness  of  the  term  'e-participation'  and  the  utilization  of  related  offerings  in the  region.  The  findings  largely  confirmed  the  factors  identified  in  the  literature  review, with  additional  insights  emerging,  such  as  the  importance  of  increasing  awareness  and promoting  the  use  of  e-participation  applications.  However,  this  also  means  that  greater focus  needs  to  be  put  on  raising  awareness  of  the  benefits  of  participation  opportunities  in  policy-making  [37].  Different  stakeholder  groups  have  different  requirements  for participation  offerings,  and  these  must  be  considered  in  their  design  and  dissemination [38].
 
 Further  exploration  of  the  findings  in  future  studies  would  benefit  from  an  examination  of  factors  influencing  the  use  of  both  e-participation  initiatives  and  trust  in  egovernment  service  provisioning.  For  example,  future  studies  could  explore  similarities and  differences  in  awareness,  perceived  benefits,  and  trust  in  institutions.  The  literature review  could  also  be  expanded  to  include  a  broader  range  of  influencing  factors  related to  e-participation,  covering  as  many  relevant  aspects  as  possible.  These  factors  could then  be  incorporated  into  future  empirical  research.  Since  the  data  was  primarily  collected  through  quantitative  methods,  deeper  understanding  regarding  the  reasons  why e-participation  offerings  are  often  unknown  or  underused  should  complement  the  quantitative  study.  To  address  this  gap,  additional  qualitative  interviews  should  be  conducted in  the  region  based  on  the  results  of  this  study.  This  would  allow  more  precise  criteria for  awareness  and  usefulness  to  be  identified,  including  those  from  different  cities  and regions,  as  well  as  best  practices.  On  this  basis,  it  would  then  be  possible  to  develop  a framework  for  enhancing  the  visibility  and  effectiveness  of  participation  opportunities (physical,  digital  and  hybrid).
@@ -1171,6 +1436,10 @@ Further  exploration  of  the  findings  in  future  studies  would  benefit  fr
 5. Kneuer,  M.:  E-democracy:  a  new  challenge  for  measuring  democracy.  Int.  Polit.  Sci.  Rev. 37 , 666-678  (2016)
 6. OECD:  Promise  and  Problems  of  E-Democracy:  Chellenges  of  Online  Citizen  Engagement. ,  Paris  (2003)
 7. Hacker,  K.L.,  Dijk,  van  J.:  Digital  democracy.  Issues  of  theory  and  practice.  Sage  Publications, London,  UK  (2000)
+
+
+<!-- PAGE 69 -->
+
 
 8. Macintosh,  A.:  Characterizing  e-participation  in  policy-making.  In:  Proceedings  of  the  37th Annual  Hawaii  International  Conference  on  System  Sciences,  p.  10  ff.  IEEE  (2004)
 9. Medaglia,  R.:  EParticipation  research:  moving  characterization  forward  (2006-2011).  Gov. Inf.  Q. 29 ,  346-360  (2012)
@@ -1197,6 +1466,10 @@ Further  exploration  of  the  findings  in  future  studies  would  benefit  fr
 30. Royo,  S.,  Yetano,  A.,  Acerete,  B.:  E-Participation  and  environmental  protection:  are  local governments  really  committed?  Public  Adm.  Rev.  74,  (2014)
 31. Adnan,  M.,  Ghazali,  M.,  Othman,  N.Z.S.:  E-participation  within  the  context  of  e-government initiatives:  a  comprehensive  systematic  review.  Telemat.  Info.  Rep. 8 (2022)
 
+
+<!-- PAGE 70 -->
+
+
 32. Nin č evi ć Pa š ali ć , I., Ć uku š i ć ,  M.:  Understanding  E-participation  adoption:  exploring  technological,  organizational,  and  environmental  factors.  Technol.  Forecast.  Soc.  Change. 207 , 123633  (2024)
 33. Simonofski,  A.,  Fink,  J.,  Burnay,  C.:  Supporting  policy-making  with  social  media  and  eparticipation  platforms  data:  a  policy  analytics  framework.  Gov.  Inf.  Q. 38 (2021)
 34. Wirtz,  B.W.,  Daiser,  P.,  Binkowska,  B.:  E-participation:  a  strategic  framework.  Int.  J.  Public Adm. 41 (2018)
@@ -1204,6 +1477,10 @@ Further  exploration  of  the  findings  in  future  studies  would  benefit  fr
 36. Baur,  N.,  Blasius,  J.:  Methoden  der  empirischen  Sozialforschung.  In:  Handbuch  Methoden der  empirischen  Sozialforschung  (2022)
 37. Khatibi, F.S., Dedekorkut-Howes, A., Howes, M., Torabi, E.: Can public awareness, knowledge  and  engagement  improve  climate  change  adaptation  policies?  (2021)
 38. Malek,  J.A.,  Lim,  S.B.,  Yigitcanlar,  T.:  Social  inclusion  indicators  for  building  citizen-centric smart  cities:  a  systematic  literature  review.  Sustain. 13 (2021)
+
+
+<!-- PAGE 71 -->
+
 
 <!-- image -->
 
@@ -1227,7 +1504,15 @@ Social media has transformed political communication, enabling parties to intera
 
 IFIP  International  Federation  for  Information  Processing  2026
 
+
+<!-- PAGE 72 -->
+
+
 [ 21]. Instagram has gained increasing relevance in social and political communication. As of 2024, 31% of Germans actively use the platform, while the share of Germans consuming political news via social media has risen from 18% in 2013 to 34% [ 13]. This underscores Instagram's rising influence, among younger voters, a demographic often underrepresented in traditional campaign strategies [ 12]. During elections, digital platforms shape public discourse and provide lowcost opportunities for visibility among the electorate and fundraising [ 8]. Given the growing reliance on social media as a primary source of news and political information, political parties must carefully select and frame their content to maximize engagement and mobilization [ 13]. Existing research has examined the role of social media in shaping political discourse, particularly its influence on voter mobilization and campaign strategies [ 20]. Studies indicate that thematic focus significantly influences engagement. Right-wing populist parties, such as the AfD, effectively leverage divisive issues, particularly Euroscepticism and antiimmigration narratives, to maximize online interaction [ 18]. Similarly, emotionally charged content, including negative portrayals of political opponents and crisis-driven messaging, tends to generate higher engagement than neutral policy discussions [ 7]. Additionally, prior research has explored platform-specific engagement behaviors, demonstrating how organizations adapt content strategies to leverage platform-native features [ 19]. However, the dynamics of social media engagement are evolving. Changes in media consumption habits, evolving platform algorithms, and stricter content moderation policies have altered the dynamics of media [ 13]. While earlier studies established that emotionally charged content drives engagement, recent findings suggest that audience fatigue from repetitive negative messaging may reduce its long-term effectiveness [ 9]. While research in marketing and influencer communication has provided valuable insights into social media engagement strategies [ 9], yet their applicability to political communication in electoral contexts remains underexplored. Despite these advancements, a critical gap remains in identifying which political topics drive the highest engagement across different social media platforms. In particular, Instagram remains understudied in the field of political communication [ 16]. To address this gap, this study investigates which political topics are most effective in driving social media engagement for German political parties. This question is explored by analyzing Instagram posts from German political parties in the three months leading up to the 2024 state elections in Saxony, Thuringia, and Brandenburg. Posts are systematically categorized based on their primary topics and engagement metrics, including likes and comments, are evaluated. This study contributes to a deeper understanding of political communication in the digital sphere and provides practical insights for campaign strategists and researchers. By analyzing the interplay between content topics, engagement patterns, and platform-specific characteristics, the findings offer data-driven insights for optimizing social media strategies in political campaigns.
+
+
+<!-- PAGE 73 -->
+
 
 ## 2 Research  Background
 
@@ -1237,7 +1522,15 @@ Empirical studies highlight that engagement levels on social media are influence
 
 Beyond thematic considerations, visual and textual elements further contribute to engagement outcomes. Bakhshi, Shamma, and Gilbert [ 2] have found that posts featuring human faces receive 38% more likes than those without, while content that incorporates textual elements, such as quotes and infographics, can enhance interaction rates. The format and structure of content also play a role in its effectiveness. Simplified, high-contrast images and positive emotional framing have been shown to increase engagement, particularly on visually oriented platforms such as Instagram [ 9]. These insights suggest that engagement is not solely determined by topic selection but also by how political content is visually and textually presented. Platform-specific dynamics further shape engagement levels, as each social media platform rewards different types of content. X, for example, serves as a space for real-time discussions, making it particu-
 
+
+<!-- PAGE 74 -->
+
+
 larly effective for political debates and immediate reactions to current events. Facebook, in contrast, supports long-form discussions and community-building, making it an ideal medium for in-depth policy communication [ 4]. Instagram prioritizes visually driven narratives over text-heavy discourse [ 16]. The posts typically feature an image that contains key textual elements, while additional details are provided in the caption. Since the platform is highly visual, the most critical information is embedded within the image itself to attract attention. [ 21]. YouTube, by contrast, primarily accommodates long-form political speeches and campaign videos, which typically generate lower interaction rates compared to platform-specific viral content [ 18]. Given these distinct engagement mechanisms, political actors must tailor their content strategies to the affordances of each platform to maximize interaction with voters. Audience segmentation further contributes to variations in engagement levels, as demographic factors influence users' interaction patterns with political content. Studies indicate that younger voters, particularly those under the age of 35, engage more frequently with political content on social media due to the interactive and participatory nature of these platforms [ 12]. Politically engaged users are also more likely to interact with highly polarized content, contributing to ideological reinforcement and the formation of echo chambers [ 18]. Differences in engagement behavior have also been observed across demographic groups, with younger users responding more favorably to visually engaging content, particularly on platforms such as Instagram, where aesthetic appeal plays a crucial role in interaction rates [ 9]. By contrast, older users are more likely to engage with policy-driven discussions that provide substantive political analysis, favoring platforms such as Facebook, where long-form content fosters deeper engagement with complex topics [ 12]. These findings highlight the importance of understanding how different audience segments interact with political content and tailoring engagement strategies accordingly. While social media facilitates greater voter engagement, it also presents challenges that may limit its effectiveness as a political communication tool. Not all topics perform equally well in generating interaction, with issues such as security and climate policy consistently attracting higher engagement, while topics such as education policy and agricultural reform often fail to elicit significant public response [ 20]. Moreover, the capacity of social media to amplify political messaging is accompanied by risks related to disinformation, echo chambers, and automated accounts, all of which can distort democratic discourse [ 18]. Another challenge is the saturation effect in digital engagement strategies. Research suggests that while emotionally charged content initially generates high interaction rates, repeated exposure to similar engagement tactics can lead to audience fatigue, ultimately diminishing their effectiveness over time [ 9]. This highlights the need for a balanced approach in political social media strategies, where emotionally compelling narratives are complemented by substantive political messaging to maintain sustained voter interest.
+
+
+<!-- PAGE 75 -->
+
 
 ## 3 Research  Method
 
@@ -1252,6 +1545,10 @@ The analysis focuses on the six major political parties that received the highes
 Engagement was measured as the sum of likes and comments per post, representing active user interactions with content. While shares and reposts could have provided additional insights, they were inaccessible due to Instagram's API restrictions. To mitigate potential distortions in engagement metrics, average engagement was also calculated. This aligns with prior research, which highlights that summing likes and comments might not be the most accurate proxy for engagement, as the ratio and weight between these metrics are unbalanced [ 9]. Future studies should explore alternative measures for engagement that better capture audience interaction [ 9]. Data was collected using Apify Instagram Scraper [ 1], extracting the following key features:
 
 - -Post  content : alt-text (alternative text used for accessibility) and captions
+
+
+<!-- PAGE 76 -->
+
 
 - -Engagement  metrics : number of comments and likes
 - -Post  metadata : timestamp, content type, URL, and sponsorship status
@@ -1268,6 +1565,10 @@ To ensure data consistency, all textual data was preprocessed using the Natural 
 ## 3.3 Topic  Classification  and  Engagement  Analysis
 
 To determine which political topics drive engagement, a topic-based analysis approach was applied, integrating dictionary-based keyword matching with statistical text analysis methods. A Political Topic Dictionary was developed by combining dictionaries from the Bundeszentrale für politische Bildung (bpb) [ 5] to categorize posts. This dictionary was structured hierarchically, consisting of 13 superordinate topics and corresponding subordinate topics to allow for granular classification of political content. The superordinate categories included: Security Policy, Party Politics (including election topics), Social Policy, Environmental and Climate Policy, Financial and Tax Policy, Foreign Policy, Economic Policy, Government Policy, Digitalization and Technology Policy, Regional Policy, Education and Science Policy, Cultural and Media Policy, Agricultural Policy, Transport and Infrastructure Policy, an 'Uncategorized' group for unmatched posts. The dictionary-based classification process matched extracted keywords from the posts against dictionary terms. For example, posts mentioning 'climate change' were categorized under 'Environmental and Climate Policy,' while those with terms like 'tax reduction' were assigned to 'Financial and Tax Policy.' To improve accuracy, Term Frequency-Inverse Document Frequency (TF-IDF) [ 17] measured word relevance, and stemming via the Snowball algorithm [ 15] standardized word forms. Each post was assigned a dominant superordinate topic, ensuring multi-topic posts were classified under their primary theme. Engagement metrics (likes and comments) were then linked to these categories, enabling a quantitative analysis of voter engagement trends across different policy areas. This method highlights which political issues resonate most on social media platforms.
+
+
+<!-- PAGE 77 -->
+
 
 ## 4 Results
 
@@ -1295,6 +1596,10 @@ Fig.  1. Topic Distribution Among Parties
 
 The analysis of topic-specific engagement revealed distinct patterns: The most frequently posted topics include Party Policy (444 posts, including election policy), Security Policy (353 posts), and Social Policy (332 posts), which have the highest number of posts among all categorized policy areas. Additionally, Regional Policy (230 posts) and Environmental and Climate Policy (170 posts) also received a notable amount of attention, indicating a moderate level of discussion. In contrast, the least posted topics include Foreign Policy (68 posts) and Government Policy (64 posts), followed by Cultural and Media Policy (23 posts), Agricultural Policy (19 posts), and Transportation and Infrastructure Policy (7 posts). These topics have the lowest representation in the dataset, with significantly fewer posts compared to the top-ranked categories.
 
+
+<!-- PAGE 78 -->
+
+
 Approximately 19% of the posts were classified as uncategorized, indicating gaps in content alignment with predefined thematic dictionary. These included generic posts such as birthday wishes, announcements or updates that lacked clear political context. The analysis of engagement across different account types reveals notable variations in posting activity. State accounts were the most active, contributing a total of 1,411 posts, highlighting their crucial role in state-level political communication during election campaigns. Lead candidate accounts followed with 810 posts, emphasizing a more personalized approach aimed at fostering direct connections with voters. In contrast, federal government accounts were the least active, with 471 posts, primarily focusing on overarching campaign themes rather than frequent engagement. However, it is important to consider that the dataset includes three state accounts per party, compared to only one federal government account per party. This structural difference in account representation naturally influences the overall post volume, as statelevel communication benefits from a higher number of contributing accounts, which should be taken into account when interpreting the results. The number of subscribers varies significantly among political parties, reflecting differences in audience reach and online presence. The AfD has the highest number of subscribers, with 404,411, followed by the Grüne with 316,578 and Linke with 250,560. The CDU ranks fourth with 220,631 subscribers, while the SPD has a notably lower count at 156,945. The BSW has the smallest subscriber base among the listed parties, with 60,968. This distribution shows a clear variation in audience reach across the parties, with the AfD having more than double the number of subscribers compared to the SPD and significantly more than the BSW. The CDU, SPD, and BSW trailed significantly, indicating differing levels of reach and influence.
 
 Fig.  2. Mean Number of Likes per Post per Topic per Party
@@ -1316,6 +1621,10 @@ Fig.  2. Mean Number of Likes per Post per Topic per Party
 | Social Policy                            | 2007,68 | 52,38   | 485,97  | 955,13   | 1336,38         | 312,46  | 949,67  |
 | Transportation and Infrastructure Policy | 120,00  |         | 303,33  | 79,00    |                 | 114,00  | 191,00  |
 | Uncategorized                            | 3241,86 | 110,15  | 794,77  |          | 2581,33 1017,75 | 300,90  | 1367,33 |
+
+
+<!-- PAGE 79 -->
+
 
 The mean number of likes per post per topic per party is presented in Fig. 2, while the mean number of comments per post per topic per party is illustrated in Fig. 3. The data in these figures provide insights into engagement patterns across various policy areas and political parties. As shown in Fig. 2, topics such as Security Policy and Foreign Policy receive the highest number of likes, indicating strong audience interest in these areas. Conversely, topics like Agricultural Policy and Transportation and Infrastructure Policy generate significantly fewer likes, suggesting lower engagement.
 
@@ -1341,6 +1650,10 @@ Fig.  3. Mean Number of Comments per Post per Topic per Party
 
 Similarly, Fig. 3 highlights that topics with high like counts also tend to receive a greater number of comments. Security Policy, Foreign Policy, and Financial and Tax Policy attract the most discussions, while Agricultural Policy and Cultural and Media Policy see minimal interaction. This correlation suggests that highly liked topics are also those that provoke discussion and user engagement. An analysis was conducted to assess how the presence of text and persons in images affects social media engagement. The results indicate substantial differences in engagement metrics across different image types. Images containing only text recorded the highest interaction levels, with an average of 1,503.91 likes and 76.93 comments per post. This suggests that text-based visuals play a significant role in drawing user engagement. Images featuring both text and persons followed closely, averaging 1,106.76 likes and 62.72 comments, making this the most frequently used format in the dataset. In contrast, images containing only persons had lower engagement levels (902.82 likes, 56.32 comments), but still performed significantly better than images without text or persons (299.89 likes, 6.00 comments). Distinct topic preferences among German political parties
 
+
+<!-- PAGE 80 -->
+
+
 reflected their ideologies and strategic priorities. The AfD emphasized Security and Foreign Policy, aligning with its anti-immigration stance and leveraging public anxieties. Die Grünen focused on Environmental Policy but also engaged strongly in Economic and Foreign Policy, likely due to ministerial roles. The CDU targeted Party, Regional, and Social Policy to appeal broadly, while the SPD balanced Social, Party, and Security Policy but underperformed in engagement despite leading the government. Die Linke prioritized Social and Education Policy, resonating with their base, while the newer BSW concentrated on Party and Financial Policy to establish their identity. The analysis underscores the importance of tailoring content to voter interests. Topics such as Security Policy and Social Policy demonstrated strong engagement potential, while less prominent areas, including Education and Agricultural Policy, suggest room for improvement in communication strategies. The findings also highlight significant differences in posting behavior and topic prioritization across parties, offering valuable insights into the evolving landscape of political communication in the digital age.
 
 ## 5 Discussion
@@ -1353,6 +1666,10 @@ Previous research suggests that emotionally charged and polarizing topics drive 
 
 Prior studies have highlighted that economic topics generally receive lower engagement compared to security and migration-related issues [ 18]. Our results extend this finding by revealing that economic policy discussions generated moderate engagement, suggesting that while economic stability remains a public concern, it lacks the emotional immediacy of security-related discussions. However, economic topics saw higher engagement when framed around taxation and financial policies, indicating that specific economic subtopics resonate more strongly with voters. A novel contribution of this study is the differential engagement patterns observed across policy areas. While previous research noted that education and agriculture often receive lower interaction rates [ 20], our findings
 
+
+<!-- PAGE 81 -->
+
+
 provide further granularity. Environmental and climate policy received significantly higher engagement than education and agriculture, suggesting a growing public interest in sustainability issues. Regional and social policies also generated notable engagement, indicating that voters are drawn to topics that have a direct, tangible impact on their communities. Cultural and media policy, as well as transportation and infrastructure, saw the lowest engagement, reinforcing past findings that not all policy areas attract equal attention on social media. Thus, highlighting the challenge of promoting lower-engagement topics in digital political campaigns.
 
 Instagram's engagement model prioritizes visually compelling and concise content, with text embedded in images emerging as the strongest driver of engagement. While prior research found that posts featuring human faces receive 38% more likes than those without [ 2], our findings reveal that political posts with embedded text consistently outperformed those with a person in the image. Further, the combination of embedded text and a person in the image outperformed general images without both types of elements. This suggests that in the political context, text integration, e.g. slogans within images enhances audience interaction, making it a more effective engagement tool than facial imagery alone. These results align with research indicating that Instagram users respond favorably to visually embedded information rather than relying solely on captions [ 21]. Furthermore, content with an emotional framing proved more effective than neutral policy discussions. Previous research indicates that negatively framed messages drive higher engagement [ 7], a trend that our findings confirm. Posts highlighting crises, conflicts, or pressing issues received the most interaction, whereas neutral policy explanations failed to generate comparable levels of engagement. Normalizing engagement by follower count revealed nuanced insights. While the AfD's raw engagement in their key topics was high, normalization suggested the influence of their large follower base. Conversely, smaller parties like the Grüne and BSW showed higher normalized engagement in their respective focus areas, demonstrating strong resonance within their core audiences. This highlights the importance of considering follower count for accurate engagement interpretation.
@@ -1361,6 +1678,10 @@ Instagram's engagement model prioritizes visually compelling and concise content
 
 While the social media analytics framework provided a structured and systematic approach to our analysis, several methodological limitations should be acknowledged. First, the coverage of the Political Topic Dictionary was limited. Approximately 80% of the analyzed posts could be categorized based on the predefined keyword set, leaving 20% of the content uncategorized. The implementation of stemming, along with keyword optimization and the removal of irrelevant terms, significantly enhanced the classification process, reducing the proportion of uncategorized posts from an initial 48% to 36% with stemming alone and further to 20% after keyword refinement. However, many of the remaining uncategorized posts were generic or lacked a clear thematic context. For instance, posts such as congratulation wishes or natural landscape images of a location
 
+
+<!-- PAGE 82 -->
+
+
 illustrate content that, while relevant for engagement, cannot be directly associated with a political topic. This underscores the need for improved keyword mapping and contextual analysis to enhance classification accuracy. Second, the study exhibits platform-specific bias, as the analysis was restricted to Instagram. The dynamics of political communication vary across platforms, such as Facebook and X, which attract different demographic segments and foster distinct interaction patterns. A cross-platform analysis would be necessary to provide a more comprehensive understanding of digital political engagement across different digital ecosystems. Third, the study's temporal scope was limited to the four-month period between June 1st and October 1st. While this timeframe was sufficient to capture election-related topic trends, it does not allow for an examination of longer-term engagement patterns, such as shifts in audience behavior outside the immediate electoral cycle. Extending the analysis beyond this period could offer deeper insights into shifts in engagement over time. Another limitation pertains to the influence of bots on engagement metrics. Since bot detection was not part of the preprocessing workflow, it was not possible to systematically identify and exclude automated accounts or coordinated campaigns from the dataset. As a result, engagement metrics may have been artificially inflated, potentially distorting the analysis. This issue is particularly relevant for parties with high online mobilization efforts, where engagement metrics may not solely reflect organic interactions. Furthermore, the study did not account for indirect social media amplification, such as content resharing by influential users or broader online discussions. Consequently, the full extent of content virality and its impact on political discourse remains unexplored. While prior research suggests that younger audiences engage more frequently with visually compelling and emotionally framed content, whereas older demographics prefer policy-driven discussions with substantive analysis [ 12], our study does not differentiate engagement patterns by age group. Without user-specific data, it is difficult to determine whether engagement trends are driven by specific voter demographics or broader content appeal. These limitations highlight avenues for future research, including improved keyword classification, cross-platform analyses, extended temporal studies, bot detection, and audience segmentation, to deepen the understanding of digital political engagement.
 
 ## 5.3 Future  Research  Directions
@@ -1368,6 +1689,10 @@ illustrate content that, while relevant for engagement, cannot be directly assoc
 Future research should refine the understanding of social media engagement in political communication by exploring key areas. Expanding keyword dictionaries could enhance topic classification accuracy, especially for complex narratives. Cross-platform comparisons would offer insights into engagement dynamics across Facebook, X, and TikTok, considering their unique demographics, content formats, and algorithms. Analyzing these variations would clarify which political topics and strategies are most effective in different digital ecosystems.
 
 Additionally, sentiment analysis, longitudinal studies, and network amplification analysis could further enhance the understanding of political engagement on social media. Sentiment analysis would clarify whether engagement reflects
+
+
+<!-- PAGE 83 -->
+
 
 support, criticism, or polarization, providing deeper insights beyond quantitative metrics such as likes and comments [ 7]. Longitudinal studies tracking engagement trends across multiple election cycles can provide valuable insights into how voter interactions evolve over time, revealing whether specific topics consistently drive engagement or fluctuate [ 10]. Lastly, network amplification analysis would examine how political content spreads beyond initial interactions, distinguishing between organic reach and coordinated digital mobilization through mechanisms such as resharing, influencer reposts, and automated accounts [ 18].
 
@@ -1378,6 +1703,10 @@ Addressing these research areas can deepen our understanding of political engage
 This study examined the effectiveness of different political topics in driving engagement on Instagram during the 2024 German state elections, providing new insights into topic selection, platform-specific engagement, and audience interaction patterns. By analyzing the content strategies of six major political parties, the findings confirm that emotionally charged and policy-relevant topics, such as security and government policy, drive the highest engagement, while issues like education, culture, and infrastructure receive comparatively lower interaction. Furthermore, the study highlights the critical role of text-embedded visuals, which emerged as the most effective engagement enabler, reinforcing prior research on Instagram's preference for visually compelling content.
 
 Beyond topic effectiveness, the study underscores the importance of platformspecific adaptation. Political actors must tailor their content strategies to align with Instagram's engagement dynamics, prioritizing concise messaging, highimpact visuals, and emotionally resonant narratives. Despite these insights, several open questions remain. The study did not account for demographic segmentation in engagement behavior, limiting the ability to determine whether certain topics resonate differently across age groups or voter ideologies. Additionally, longitudinal trends in engagement could not be analyzed, making it unclear whether certain topics maintain their influence over multiple election cycles or if political engagement on social media is highly event-driven. Moreover, cross-platform comparisons were beyond the study's scope, leaving open the question of how engagement patterns differ on Facebook, X, or TikTok, where user behaviors and content formats vary significantly. Looking forward, future research should address these gaps by incorporating demographic insights, expanding the analysis to additional platforms, and tracking engagement patterns over multiple election cycles. Additionally, integrating sentiment analysis and network amplification studies could provide a more comprehensive view of public reactions and content spread in digital political communication. As social media continues to shape electoral strategies, understanding how to optimize engagement through topic selection and content presentation will be crucial for political actors aiming to connect effectively with voters in the digital age.
+
+
+<!-- PAGE 84 -->
+
 
 ## References
 
@@ -1398,6 +1727,10 @@ Beyond topic effectiveness, the study underscores the importance of platformspec
 15. Porter, M.F.: Snowball: A language for stemming algorithms (2001). http:// snowball.tartarus.org/texts/introduction.html
 16. Russmann, U., Svensson, J.: Interaction on instagram? glimpses from the 2014 swedish elections. Int. J. E-Polit. 8 (1), 50-66 (2017). https://doi.org/10.4018/ IJEP.2017010104
 
+
+<!-- PAGE 85 -->
+
+
 17. Salton, G., Buckley, C.: Term-weighting approaches in automatic text retrieval. Inf. Proc. Manage. 24 (5), 513-523 (1988)
 18. Serrano, J.C.M., Shahrezaye, M., Papakyriakopoulos, O., Hegelich, S.: The rise of germany's afd: A social media analysis. In: Proceedings of the 10th International Conference on Social Media and Society, p. 214-223. SMSociety '19, Association for Computing Machinery, New York, NY, USA (2019).https://doi.org/10.1145/ 3328529.3328562
 19. Shahbaznezhad, H., Dolan, R., Rashidirad, M.: The role of social media content format and platform in users' engagement behavior. J. Interact. Mark. 53 (1), 47-65 (2021).https://doi.org/10.1016/j.intmar.2020.05.001
@@ -1406,7 +1739,15 @@ Beyond topic effectiveness, the study underscores the importance of platformspec
 22. Thomeczek, J.P.: Bündnis Sahra Wagenknecht (BSW): Left-Wing Authoritarianand Populist? An Empirical Anal. Politische Vierteljahresschrift 65 (3), 535-552 (2024). https://doi.org/10.1007/s11615-024-00544-z
 23. Thomson, T., Greenwood, K.: I 'like' that: Exploring the characteristics that promote social media engagement with news photographs. Vis. Commun. Q. 24 (4), 203-218 (2017).https://doi.org/10.1080/15551393.2017.1388701
 
+
+<!-- PAGE 86 -->
+
+
 ## AI  and  Algorithmic  Systems  in  Public Administration
+
+
+<!-- PAGE 87 -->
+
 
 <!-- image -->
 
@@ -1432,6 +1773,10 @@ Keywords: generative  AI · artificial  intelligence · public  sector · survey
 
 Generative  artificial  intelligence  (GenAI)  is  now  readily  and  freely  accessible  online, enabling  anyone  with  internet  access  to  interact  with  tools  that  utilise  it.  Public  servants are  part  of  this  wave  of  enthusiasm  and  opportunity,  increasingly  experimenting  with GenAI  for  tasks  such  as  text  enhancement,  image  creation  and  information  retrieval [1,  2].  These  tools  offer  new  forms  of  interaction,  often  perceived  as  collaborative  or conversational,  that  are  different  from  those  offered  by  earlier  automation  technologies. Platforms  such  as  ChatGPT  introduce  novel  user  experiences  that  can  often  evoke  a sense  of  incredulity  and  amazement  similar  to  the  feeling  of  encountering  a  new  form of  intelligence  [3].
 
+
+<!-- PAGE 88 -->
+
+
 While  GenAI  continues  to  develop  in line with broader trends in AI and -  previously  -  digital  government,  it  also  presents  new  dynamics,  particularly  in  terms  of informal,  individual-driven  use.  In  some  cases,  public  administrations  are  piloting  or adopting  GenAI-based  applications,  such  as  Bürokratt  in Estonia and UrbanistAI  in Helsinki,  Finland  [4].  However,  many  public  servants  are  also  using  GenAI  tools  independently,  without  formal  institutional  frameworks,  oversight  or  guidance.  This  kind  of autonomous  and  often  undocumented  use-which  is  referred  to  as  the  'shadow  use'  of GenAI  [5]  -  is  already  widespread  and  raises  important  questions  for  public  administration.  In  this  paper,  we  focus  on  this  emerging  phenomenon.  Specifically,  we  explore how  public  managers  across  seven  EU  Member  States  engage  with  GenAI  in  practice, what  motivates  or  limits  its  use  and  what  this  means  for  governance,  capacity  building and  future  research.
 
 The  literature  on  GenAI  in  public  administration  is  still  nascent,  with  rather  fragmented  and  scattered  research  [2].  Much  of  the  current  debate  is  primarily  risk  oriented, focusing  on  potential  misuse,  ethical  concerns  and  the  need  for  mitigation  measures, often  articulated  through  common-sense  guidelines  or  high-level  governance  principles [3].  While  these  concerns  are  valid,  the  discussion  tends  to  prioritise  formal  adoption and  top-down  control  mechanisms.  This  overlooks  how  GenAI  is  being  adopted  and implemented  into  public-administration  workflows.
@@ -1446,6 +1791,10 @@ The  adoption  of  GenAI  in  public  administrations  has  accelerated  rapidly
 
 What  distinguishes  GenAI  from  previous  waves  of  digital  innovation  is  not  only  its accessibility,  but  also  the  degree  of  autonomy  it  affords  to  users.  Traditional  technology implementation  in  government  typically  involves  managed  and  controlled  processes,
 
+
+<!-- PAGE 89 -->
+
+
 including  deployment  plans  and  integration  into  existing  systems  as  part  of  a  digital transformation  strategy  [7].  However,  GenAI  can  be  adopted  informally,  without  topdown  approval,  training  or  oversight.  This  contrasts  with  many  technologies,  especially other  AI  solutions,  that  remain  confined  to  pilot  phases  due  to  complexity,  cost  or  risk aversion  [8].
 
 GenAI  bypasses  many  of  these  barriers,  as  it  is  founded  on  individualised  and  independent  integration  into  workloads,  which  can  vary  even  among  individuals  with  identical  responsibilities  [3].  Therefore,  the  potentially  large  breadth  of  public-servant  users and  the  simplicity  of  deployment  make  the  use  of  GenAI  by  administrations  distinctly different  from  the  use  of  earlier  technologies.
@@ -1457,6 +1806,10 @@ While  the  potential  benefits  of  GenAI  technology  are  often  emphasised, 
 Scholars  also  stress  data  leakage  as  a  persistent  concern,  because  most  of  these  tools are  managed  by  external  providers  that  often  give  unclear  information  about  how  user data  are  stored,  processed  or  reused  [9].  Public  administrations  must  navigate  the  tension between  the  commercial  opacity  of  GenAI  providers,  the  need  to  foster  innovation  and  the impossibility  of  fully  controlling  how  these  tools  are  used  across  organisations  [3].  Other frequently  cited  issues  include  hallucinations  and  bias,  especially  the  risk  of  over-reliance on  machine-generated  content  or  uncritical  acceptance  of  discriminatory  behaviours. The core concern  is not merely  the errors themselves, but also the  confidence with which  they  are  presented.  These  errors  challenge  the  mechanistic  view  of  machines,  as GenAI's  probabilistic  nature  does  not  produce  systematic  errors.  Consequently,  GenAI's errors,  akin  to  human  mistakes,  bring  it  closer  to  human-like  behaviour.  If  not  properly understood  and  managed,  this  characteristic  could  lead  to  inappropriate  and  potentially harmful  technology  use  [3].
 
 These drawbacks  are amplified by the fact that GenAI  tools are often not used to  meet  operational  needs.  For  many  public  servants  involved  in  policy  formulation, communication  or  advisory  roles,  interacting  with  GenAI  is  less  about  task  automation and  more  about  cognitive  support  [3,  5].  In  this  context,  GenAI  becomes  embedded  in knowledge  work,  supporting  idea  generation,  drafting  and  reflection.
+
+
+<!-- PAGE 90 -->
+
 
 This  situation  represents  a  new  and  still  evolving  challenge  for  public  administrations,  governments  and  individual  public  servants.  The  widespread  yet  informal  nature  of GenAI  use  creates  a  context  marked  by  experimentation,  learning  by  doing  and  varying levels  of  institutional  oversight.  However,  this  does  not  preclude  public  administrations from  implementing  measures  to  guide  and  shape  the  fair  use  of  GenAI.  Training  sessions and  guidelines  are  already  being  established  to  facilitate  and  regulate  the  use  of  GenAI, aiming  to  enhance  efficiency  and  effectiveness  while  also  addressing  potential  risks  [5].
 
@@ -1475,6 +1828,10 @@ To  ensure  a  broad  perspective,  we  purposely  selected  seven  Member  Stat
 Data  collection  took  place  in  March  2024,  with  the  support  of  an  external  company (for  details,  please  refer  to  [11]).  The  survey  was  conducted  online.  Responses  were screened  for  completeness  to  ensure  data  quality.  Given  the  specific focus  on public managers,  the  survey  yielded  576  complete  responses,  including  53  from  Austria,  110 from  France,  112  from  Germany,  65  from  the  Netherlands,  64  from  Poland,  112  from Spain  and  60  from  Sweden.  The  dataset  has  been  published  as  open  data  in  the  Joint Research  Centre  data  catalogue.
 
 Our  focus  on  the  EU  allowed  an  analysis  to  be  undertaken  within  the  context  of  a shared  regulatory  and  strategic  framework  [5].  Since  2021,  the  EU  has  prioritised  the integration  of  digital  technologies,  including  AI,  into  the  public  sector  [12].  The  recently adopted  AI  Actaims  to  establish  a  common  foundation  for  AI  governance  across  Member States,  emphasising  transparency,  explainability  and  fairness  while  addressing  potential risks. By concentrating on the EU, we aimed to explore the factors influencing  AI
+
+
+<!-- PAGE 91 -->
+
 
 adoption  within  a  structured  policy  environment,  enabling  a  more  nuanced  understanding of  adoption  dynamics.
 
@@ -1498,6 +1855,10 @@ First  and  foremost,  this  exploratory  approach  aims  to  understand  the  e
 
 An  analysis  by  age  group  (Q1.1)  reveals  a  clear  trend  in  anticipated  GenAI  adoption (Fig.  1).  As  expected,  younger  civil  servants  are  at  the  forefront;  however,  a  substantial share of respondents  across  other age brackets also express interest,  suggesting  that
 
+
+<!-- PAGE 92 -->
+
+
 Fig.  1. Use  (%)  of  GenAI  tools  for  work  by  age  group  ( n = 576)
 
 <!-- image -->
@@ -1514,6 +1875,10 @@ Finally,  adoption  rates  vary  considerably  across  sectors  (Q2.1),  potenti
 
 It  is  worth  noting  that  no  clear  differences  in  adoption  rates  were  observed  among government  levels  or  administration  sizes.
 
+
+<!-- PAGE 93 -->
+
+
 Fig.  3. Use  (%)  of  GenAI  tools  for  work  by  sector  (based  on  the  Classification  of  the  Functions of  Government)  ( n = 576)
 
 <!-- image -->
@@ -1527,6 +1892,10 @@ When  examining  the  tasks  for  which  GenAI  is  used  (Q3.5),  the data reve
 Fig.  4. Tasks  performed  with  GenAI  by  frequency  of  usage  (%)  ( n = 171)
 
 <!-- image -->
+
+
+<!-- PAGE 94 -->
+
 
 Regarding  the  perceived  benefits  among  current  users  (Q3.6),  the  data  clearly  show that  the  narrative  around  GenAI  extends  beyond  mere  efficiency  gains  (Fig.  5).  While efficiency  remains  one  of  the  most  frequently  cited  advantages,  many  public  managers also  recognise  GenAI's  potential  to  enhance  creativity  and  support  learning.  As  GenAI tools  are  still  emerging  and  not  yet  fully  integrated  into  most  public-sector  workflows, some  of  the  reported  benefits  may  be  based  on  first  impressions  rather  than  on  sustained use.  Nonetheless,  this  finding  highlights  a  growing  interest  in  how  GenAI  might  augment, not  just  automate,  human  capabilities.
 
@@ -1543,6 +1912,10 @@ Some  differences  emerge  when  examining  the  potential  barriers  by  awaren
 ## 4.4 Overall  Opinion  on  Generative  Artificial  Intelligence
 
 The  final  data  point  concerns  the  survey  respondents'  overall  opinion  on  GenAI  (Q3.7). The  results  can  be  interpreted  in  two  ways  (Fig.  7).  On  the  one  hand,  a  considerable proportion  of  the  respondents  did  not  express  a  clear  opinion,  with  over  25%  selecting  a neutral  response  ('neither  disagree  nor  agree')  for  each  statement.  On  the  other  hand,  the remaining  respondents  appear  polarised  between  positive  and  negative  views.  While  an
+
+
+<!-- PAGE 95 -->
+
 
 <!-- image -->
 
@@ -1569,6 +1942,10 @@ The  data  reveal  some  differences  when  responses  are  compared  across  aw
 
 When  comparing  responses  between  users  and  non-users  (Q3.2)  some  differences emerge  (Fig.  9).  First,  a  clear  difference  emerges  in  the  intention  to  use  GenAI  extensively  (Q3.2  -  second  response):  non-users  tend  to  disagree  with  this  statement,  whereas public  managers  who  are  using  GenAI  or  plan  to  use  it  in  the  future  are  more  likely  to agree.  Conversely,  agreement  with  negative  statements,  such  as  concerns  about  danger or  discrimination  or  a  lack  of  trust,  is  slightly  lower  among  users  than  non-users.
 
+
+<!-- PAGE 96 -->
+
+
 Fig.  8. Public  managers'  opinion  on  GenAI  tools  by  awareness  level  ( n = 576)
 
 <!-- image -->
@@ -1585,6 +1962,10 @@ This  section  reflects  on  how  GenAI  tools  may  be  reshaping  technology  
 
 The  literature  on  AI  has  already  pointed  to  a  shift  from  machines  simply  supporting human  tasks  to  more  collaborative  interactions  between  humans  and  machines  (see,  for example,  [12,  13]).  This  is  often  captured  by  the  concept  of  'augmentation',  in  which AI  enhances  human  capabilities.  Traditionally,  augmentation  has  involved  AI  assisting humans  in  completing  specific  tasks  [14],  for  instance  by  providing  recommendations
 
+
+<!-- PAGE 97 -->
+
+
 or  explanations  to  support  decision-making.  In  such  cases,  humans  might  also  fine-tune the  system  to  observe  changes  in  output,  using  AI  to  improve  efficiency  or  quality.
 
 With  the  advent  of  GenAI,  this  understanding  of  augmentation  warrants  rethinking. While  AI  still  supports  task  completion,  GenAI  increasingly  augments  cognitive  processes.  Findings  from  our  sample  suggest  that  public  managers  experience  GenAI  not only  as a tool for efficiency, but also as a catalyst for  creativity  and  learning.  While efficiency  remains  a  core  perceived  benefit  (consistent  with  dominant  narratives  around digitalisation  in  government),  61%  of  GenAI  users  reported  using  it  weekly  for  learning purposes  and  52%  reported  using  it  weekly  for  creative  tasks.  These  patterns  suggest  a shift  away  from  purely  instrumental  uses  towards  more  intellectual  and  exploratory  interactions  with  AI  (i.e.  AI  enhances  speed  and  quality).  In  light  of  this,  GenAI  becomes  not only  a  tool  for working  with ,  but  also  a  partner  for thinking  with .  As  Cantens  [3]  suggests,  there  is  a  need  to  move  towards  'in-intellectualisation',  which  involves  integrating machines  into  the  cognitive  processes  of  public  servants.
@@ -1598,6 +1979,10 @@ Discussions  on  AI  adoption  in  the  public  sector  often  focus  on  how  t
 These  findings  suggest  that  the  main  challenge  is  no  longer  ensuring  adoption  but rather  understanding  the  diversity  of  use.  In  contrast  with  more  traditional  IT  systems, GenAI  does  not  have  fixed  usage  paths  or  standardised  workflows.  Its  open-ended  and general-purpose  nature  enables  a  high  degree  of  individual  interpretation  and  improvisation.  Two  public  servants  may  approach  the  same  task  with  the  same  tool  and  apply it  in  entirely  different  ways  or  not  at  all.  Moreover,  if  one  public  servant  leaves  and  is replaced,  the  way  they  perform  their  duties  may  be  different  due  to  a  different  use  of GenAI  tools.  There  is  no  one-size-fits-all  instruction  manual.
 
 Moreover,  the  use  of  GenAI  raises  new  concerns.  For  instance,  22%  of  respondents reported  avoiding  these  tools  due  to  data-sharing  concerns,  and,  while  less  prominent in  our  sample,  environmental  impact  was  also  noted.  In  this  context,  the  question  is  no
+
+
+<!-- PAGE 98 -->
+
 
 longer  only  about whether public  servants  use  GenAI,  but how it  is  being  used  and  how to  ensure  that  this  use  is  equitable  and  responsible.
 
@@ -1616,6 +2001,10 @@ These  findings  suggest  that the initial impact  is not only technical or  pro
 The  implementation  of  new  software,  whether  AI  based  or  not,  has  traditionally  been transparent  or  often  formally  codified  within  public  administrations.  With  codification and  mapping,  monitoring  and  accountability  have  been  relatively  straightforward.  When a  tool  is  intended  for  a  specific  task  and  used  in  a  predefined  way,  its  deployment  can  be mapped,  audited  and  assessed  for  compliance.
 
 This  logic,  however,  is  evolving.  First,  the  question  of what GenAI  should  be  used for is now  difficult to define. In our survey, we  provided  a  non-exhaustive  list  of  10 potential  tasks,  and  a  considerable  share  of  respondents  reported  using  GenAI  for  all of  them.  Second,  defining  -  and  therefore  monitoring  -  correct  usage  is  challenging. GenAI  is  emerging  as  a  silent  or  shadow  partner  [5],  often  operating  under  the  radar, and  thus  is  largely  invisible  to  traditional  forms  of  monitoring  and  evaluation.
+
+
+<!-- PAGE 99 -->
+
 
 Its  use  is  shaped  by  individual  preferences,  skills,  levels  of  digital  literacy  and,  as discussed  earlier,  personal  attitudes.  For  instance,  a  public  servant  who  is  confident  in writing  may  never  use  GenAI  for  drafting  or  editing,  while  others  may  rely  on  it  heavily for  the  same  tasks.  This  results  in  widespread  variation  in  use  that  is  neither  standardised nor  easily  trackable.
 
@@ -1642,6 +2031,10 @@ Table  1. Descriptive  statistics  on  public  managers'  responses
 | Older than 60 years                   | 56  | 10  |           |           |        |
 
 ( continued )
+
+
+<!-- PAGE 100 -->
+
 
 Table 1. ( continued )
 
@@ -1682,6 +2075,10 @@ Table 1. ( continued )
 
 ( continued )
 
+
+<!-- PAGE 101 -->
+
+
 Table 1. ( continued )
 
 |                                                                                                                                             | n   | %   | Minimum   | Maximum   | Mean   |
@@ -1718,6 +2115,10 @@ Table 1. ( continued )
 
 ( continued )
 
+
+<!-- PAGE 102 -->
+
+
 Table 1. ( continued )
 
 |                                                                                                                   |   n | %   | Minimum   | Maximum   | Mean   |
@@ -1747,6 +2148,10 @@ Table 1. ( continued )
 | Use only rarely, because the environmental impact is very high                                                    | 576 |     | 1         | 7         | 4.26   |
 | Worried to use them in the public domain, as they are dangerous                                                   | 576 |     | 1         | 7         | 4.26   |
 
+
+<!-- PAGE 103 -->
+
+
 ## References
 
 1. Aryfiyanto, H., Alamsyah,  A.:  Public service with generative AI: exploring features and applications.  In:  Muharram,  A.  T.,  Rosalina,  M.,  Kurniawati,  D.  and  Yulianti,  S.  D.  (eds), 2024 7th International Conference of Computer and Informatics Engineering (IC2IE) ,  IEEE, Bali,  Indonesia,  pp.  1-7  2024.  https://doi.org/10.1109/IC2IE63342.2024.10747963
@@ -1763,6 +2168,10 @@ Table 1. ( continued )
 12. European Commission, Coordinated plan on artificial intelligence 2021 review. European Commission website (2021). https://digital-strategy.ec.europa.eu/en/library/coordi nated-plan-artificial-intelligence-2021-review
 13. European  Commission:  Joint  Research  Centre,  Tangi,  L.,  Combetto,  M.  and  Martin  Bosch,  J., Methodology for the Public Sector Tech Watch use case collection: Taxonomy, data collection, and use case analysis procedures ,  Publications  Office  of  the  European  Union,  Luxembourg (2024).  https://doi.org/10.2760/078522
 
+
+<!-- PAGE 104 -->
+
+
 14. Maragno,  G.,  Tangi,  L.,  Gastaldi,  L.,  Benedetti,  M.:  AI  as  an  organizational  agent  to  nurture: effectively  introducing  ChatBots  in  public  entities.  Public  Manag.  Rev. 25 (11),  1-31  (2022). https://doi.org/10.1080/14719037.2022.2063935
 15. Mikalef,  P.,  Lemmer,  K.,  Schaefer,  C.,  Ylinen,  M.,  Fjłrtoft,  S.O.,  et  al.:  Enabling  AI  capabilities  in  government  agencies:  a  study  of  determinants  for  European  municipalities.  Gov.  Inf. Q. 39 (4),  101596  (2021).  https://doi.org/10.1016/j.giq.2021.101596
 
@@ -1771,6 +2180,10 @@ Open  Access This  chapter  is  licensed  under  the  terms  of  the  Creative  
 The  images  or  other  third  party  material  in  this  chapter  are  included  in  the  chapter's  Creative Commons  license,  unless  indicated  otherwise  in  a  credit  line  to  the  material.  If  material  is  not included  in  the  chapter's  Creative  Commons  license  and  your  intended  use  is  not  permitted  by statutory  regulation  or  exceeds  the  permitted  use,  you  will  need  to  obtain  permission  directly  from the  copyright  holder.
 
 <!-- image -->
+
+
+<!-- PAGE 105 -->
+
 
 ## From  Regulation  to  Implementation: Understanding  the  Impact  of  the  EU  AI  Act on  Public  Sector  Institutions  in  Germany
 
@@ -1796,6 +2209,10 @@ S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  87-101,  2026.
 
 <!-- image -->
 
+
+<!-- PAGE 106 -->
+
+
 making  and  encouraging  the  reformation  of  public  sector  [4].  However,  this  potential must  be  balanced  with  ethical  and  regulatory  concerns,  especially  regarding  the  safety, transparency,  traceability  and  non-discriminatory  nature  of  AI  [5,  6].  To  address  these issues,  the  European  Union  (EU)  has  introduced  the  European  Union  AI  Act  (AIA), which  is  designed  to  regulate  AI  use,  particularly  in  high-stakes  areas  such  as  the  public sector  [7].  The  AIA  introduces  a  fresh  approach  to  assess  AI  solutions  by  focusing  on the  possible  risks  that  are  posed  by  AI  systems,  specifically  for  high-risk  systems  by mandating  stringent  compliance  measures  for  public-sector  use  [8].
 
 Germany's  public  sector  presents  an  interesting  case  study  for  examining  the  implications  of  the  AIA.  The  country  is  one  of  the  first  in  the  EU  to  implement  a  national AI  strategy  in  2018  and  the  German  Federal  Government  has  committed  to  spending a substantial  amount  of e 5 billion on  AI  promotion  by  2025  [9].  Germany  aims  to position  itself  as  a  pioneer  in  AI  research,  development,  and  application,  with  a  particular focus  on  leveraging  AI  in  the  public  sector  to  improve  efficiency  and  service  quality [10].  The  German  AI  strategy  also  specifically  highlights  the  potential  of  AI  to  make 'public  services  more  targeted,  tailored  and  accessible  to  citizens'  [11].  However,  despite having  such  initiatives,  Germany  also  has  limited  digital  infrastructure  [12]  and  highly fragmented  standalone  solutions  used  in  the  public  sector  [13]  which  hinders  the  full potential  of  AI  implementation  in  Germany.
@@ -1807,6 +2224,10 @@ However,  empirical  data  on  the  potential  effects  of  this  legislation  o
 To  bridge  this  gap,  this  paper  addresses  the  central  research  question,  ' How  will  the EU  AI  Act  impact  the  adoption  and  the  use  of  AI  in  the  public  sector  in  Germany? '. By  answering  this  question,  we  aim  to  provide  a  clear  understanding  on  how  the  public institutions  in  Germany  perceive  the  impact  of  the  AI  Act,  and  we  will  also  highlight the  potential  challenges  and  opportunities  that  arise  when  the  institutions  try  to  align  the goals  of  the  public  sector  with  the  provisions  of  the  AIA.
 
 In this paper, Sect. 2 provides an overview  of the AIA  and  the AI landscape  in the German  public  sector.  Section  3 explains the research methodology  used  in  this study.  In  Sect.  4,  we  present  key  findings  from  our  semi-structured  interviews.  Section  5 discusses  the  implications  of  the  AI  Act  for  public  sector  institutions  in  Germany,  and Sect.  6  concludes  with  a  summary  of  insights  and  an  outlook  on  future  developments.
+
+
+<!-- PAGE 107 -->
+
 
 ## 2 Research  Background
 
@@ -1822,6 +2243,10 @@ The  AI  Act  defines  AI  practices  that  are  considered  a  threat  to  EU  
 
 The  Act  imposes  extensive  requirements  on  high-risk  AI  systems,  which  are  considered  to  pose  a  significant  threat  to  fundamental  rights  or  safety.  High-risk  systems
 
+
+<!-- PAGE 108 -->
+
+
 are  listed  in  Annex  III  and  regulated  in  Articles  6-29.  They  include  AI  used  in  critical infrastructure (e.g.,  transport  safety),  education  and  vocational  training,  employment and  worker  management,  law  enforcement  and  migration  control  and  administration  of justice.  Providers  of  high-risk  AI  systems  must  implement  a  risk  management  system (Article  9),  ensure  data  quality  (Article  10),  provide  technical  documentation  (Article 11),  and  ensure  human  oversight  (Article  14)  [17].
 
 Systems  that  fall  under  limited  risk  AI  systems  only  require  transparency  obligations  and  these  include  chatbots,  AI  that  generates  synthetic  content  (e.g.,  deepfakes), and  systems  using  emotion  recognition.  Based  on  Article  50  of  the  AIA,  users  must  be informed  that  they  are  interacting  with  AI  or  that  content  has  been  artificially  generated. Meanwhile,  AI  systems  that  pose  negligible  risks,  such  as  spam  filters  or  recommendation  engines  are  categorized  as  minimal-risk  AI  systems  and  fall  outside  the  scope  of binding  obligations.  However,  based  on  Articles  95-96  the  AI  Act  encourages  voluntary adoption  of  ethical  codes  of  conduct  for  such  systems  [17].
@@ -1832,6 +2257,10 @@ Panigutti  et  al.  [20]  and  Li  [21]  convey  in  their  research  that  tran
 
 Li  [21]  makes  the  argument  that  generative  AI  tools  can  be  classified  as  high-risk  due to  their  generality  and  at  the  same  time  as  limited  risk  if  a  generative  AI  tool  is  perceived as  a  chatbot.  Users  who  use  these  chatbots  must  not  only  know  they  are  interacting  with AI;  they  also  should  be  able  to  judge  the  reliability  of  answers  since  AI  can  generate false  but  convincing  information.  Therefore,  rather  than  focusing  only  on  transparency, legislators  should  also  consider  the  reliability,  explainability  and  trustworthiness  of  the solutions  [20].  This  specific  example  also  brings  the  concern  of  uncertainty  in  key  terms and definitions within the act. The  results of research done  by Holst et al. [19] has discovered that the transparency requirements of the AIA  necessarily don't  impede patentability  of  AI  innovations,  but  the  uncertainties  in  key  terms  and  definitions  within the  Act  can  affect  these  innovations  [19].  In  addition,  the  AI  Act  does  not  address  the  role, rights  or  responsibilities  of  end  users.  As  a  result,  they  have  no  opportunity  to  contest  or complain  about  LLMs.  Moreover,  the  occurrence  and  spread  of  disinformation  is  largely
 
+
+<!-- PAGE 109 -->
+
+
 due  to  deliberate  misuse  by  users,  but  without  imposing  responsibilities  on  the  user  side, it  is  difficult  to  regulate  their  harmful  use  of  AI  [22].
 
 It  was  stated  initially  that  AIA  attempts  to  ensure  that  AI  technologies  respect  fundamental  rights  and  democratic  values  while  mitigating  risks  such  as  bias,  discrimination, and  privacy  violations  [8].  However,  Sillberg  et  al.  [22]  states  that  the  Act  could  inadvertently  reinforce  existing  biases  in  AI  models,  as  the  risk-based  approach  may  not  fully account  for  discriminatory  outcomes  embedded  in  training  data.  Scholars  have  also  raised concerns  about  the  potential  for  regulatory  overreach,  which  could  stifle  innovation  and create compliance  burdens  for  public  institutions [23]. Holst, Mayer  et al. [19] also highlights  the  concern  of  the  impact  the  AIA  can  have  on  AI  innovation  and  patenting that  these  regulations  can  encourage  and  govern  AI  innovation  but  also  hinder  innovation  in  Europe.  Valae  et  al.  [18]  stated  that  the  AI  Act  establishes  broad  principles  but leaves  many  details  to  be  determined  through  subsequent  guidance  and  self-evaluation, potentially  leading  to  legal  uncertainty.  Businesses  may  struggle  to  assess  compliance risks,  while  courts  may  face  difficulties  in  adjudicating  AI-related  disputes  due  to  vague legal  definitions  [21].  However,  the  AIA  represents  a  significant  step  in  AI  regulation, aiming  to  create  a  safer  and  more  ethical  AI  landscape  while  promoting  innovation.  Its implementation  and  impact  will  be  closely  watched  by  policymakers,  businesses,  and researchers  worldwide.
@@ -1841,6 +2270,10 @@ It  was  stated  initially  that  AIA  attempts  to  ensure  that  AI  technolog
 Germany's  National  AI  Strategy,  launched  in  2018,  aims  to  position  Germany  as  a  leader in  AI  innovation  while  ensuring  ethical  and  societal  considerations  [9].This  initiative focuses  on  the  twelve  fields  of  action  including  strengthening  research,  strengthening small  and  medium  sized  businesses  as  well  as  using  AI  for  sovereign  tasks  and  adapt administration  skills  [24].  The  German  AI  strategy  specifically  highlights  the  potential  of  AI  to  make  public  services  'more  targeted,  tailored  and  accessible  to  citizens' [11].  Public  sector  AI  applications  in  Germany  include  smart  city  initiatives,  automated administrative  processes,  and  AI-driven  healthcare  solutions  [10].  However,  the  adoption of  AI  in  the  public  sector  also  faces  unique  challenges  in  Germany.
 
 Based  on  a  detailed  review  of  AI  adoption  in  Germany  released  by  the  Organization for  Economic  Co-operation  and  Development  (OECD)  in  2024  [12],  the  limited  digital  infrastructure  in  the  public  sector  hinders  the  full  potential  of  AI  implementation in  Germany.  Despite  having  a  highly  structured  public  administration,  digitalization  is fragmented  with  organizations  using  standalone  digital  solutions  [13].  This  limits  the potential  of  implementing  AI  solutions  across  different  levels.  There  are  also  coordination  issues  since  many  AI  initiatives  in  the  public  sector  are  standalone  and  lack  cohesive integration  across  different  levels  of  public  administration.  The  OECD  report  also  mentions  the  skill  gap  and  the  need  for  more  civil  servants  with  the  knowledge  and  skillset  to implement  and  maintain  AI  systems  [12].  According  to  Djeffal  [25]  Germany  also  faces unique  challenges  in  aligning  its  public  sector  AI  initiatives  with  the  requirements  of  the AI  Act.  Djeffal's  study  also  highlights  a  lack  of  standardized  governance  frameworks and  the  need  for  greater  investment  in  technical  infrastructure  and  human  capital  [25], which  was  also  highlighted  in  the  OECD  report.
+
+
+<!-- PAGE 110 -->
+
 
 Despite these challenges, there are strengths in German  infrastructure found by the  researchers  that  can  encourage  and  accommodate  the  adoption  of  AI  in  the  public sector.  German  government  actively  promotes  the  opening  of  public  sector  data  and these  open  data  initiatives  can  be  crucial  in  AI  development,  especially  in  government services  [12].  Furthermore,  German  government  is  providing  financial  support  for  data management  in  federal  public  authorities  and  supporting  AI  startups  and  SMEs  through public  contracts  [11].  In  a  report  released  by  the  European  Parliament  in  2021,  it  was stated  that  the  German  government  will  invest  approximately e 5  billion  in  AI  by  2025 [9].  Moreover,  The  government  also  emphasizes  the  importance  of  ethical  standards in  AI  implementation,  ensuring  non-discrimination,  transparency,  and  compliance  with data  protection  and  cybersecurity  rules  [10].
 
@@ -1858,6 +2291,10 @@ The  interviews  were  conducted  in  German  in  order  to  make  the  particip
 
 The public institutions were already informed about the topic beforehand. This ensured  that  the  selected  participant  possessed  the  relevant  knowledge  and  expertise
 
+
+<!-- PAGE 111 -->
+
+
 for  the  interview.  Thus,  the  sample  consists  of  AI  experts  from  different  public  institutions  across  Germany.  We  identified  relevant  public  institutions  through  their  public participation  in  AI  projects.  This  resulted  in  a  total  of  15  interviews  with  AI-experts and  IT-experts  from  several  public  administration  IT-departments  and  private  research institutions.
 
 After conducting  the interviews, the data analysis followed. We  applied the linear  process  of  qualitative  research  proposed  by  Williams  and  Moser  [27]  in  order  to generate  theory  and  create  meaning  out  of  the  collected  data  from  the  interviews  (  \* MERGEFORMAT  Fig.  1).  The  coding  process  starts  with  open  coding,  where  the  different  concepts  and  themes  are  identified  in  order  to  categorize  the  collected  data.  For this,  the  participants'  responses  were  categorized  based  on  similar  words  or  phrases  to identify  broad  themes  that  were  covered  in  the  interviews.  During  the  second  level  of coding,  the  axial  coding,  the  identified  themes  were  further  refined  by  relating  the  open codes  to  one  another.  Selective  coding  is  the  last  step  before  the  theory  development  and the  constructing  of  meaning.  Here,  the  main  thematic  category  was  selected  by  further refining  the  collected  data  and  identified  codes  and  categories  [27].
@@ -1874,6 +2311,10 @@ This  chapter  presents  findings  from  interviews  conducted  with  representa
 
 The interviews revealed varying levels of awareness and understanding of the  AIA among  public  sector  representatives.  Larger  institutions  generally  showed  greater  familiarity  with  the  Act's  requirements.  They  often  pointed  to  specific  efforts  to  prepare  for compliance.  For  example,  one  respondent  from  a  federal  agency  stated,  ' We  are  currently collecting  all  AI  use  cases  to  classify  them  into  risk  categories  as  required  by  the  EU AI  Act. '  Conversely,  many  smaller  municipalities  expressed  uncertainty  and  described their  approach  as  reactive  rather  than  proactive.  One  respondent  noted,  ' We  have  it  on our  radar,  but  it's  too  early  to  act  without  clearer  guidelines. '  Another  respondent  highlighted  the  challenge  of  integrating  the  AI  Act's  requirements  into  existing  workflows, explaining,  ' Our  IT  team  is  aware  of  the  law,  but  without  clear  templates,  we're  reluctant
 
+
+<!-- PAGE 112 -->
+
+
 to  proceed. '  However,  some  municipalities  demonstrated  awareness  of  specific  compliance  requirements,  such  as  training  requirements  for  personnel  working  with  AI  systems. One  respondent  said,  ' We  have  already  trained  our  colleagues.  But  I  know  many  other municipalities  are  hearing  about  this  for  the  first  time. '  Another  respondent  noted  that this  last-minute  approach  to  compliance  felt  familiar,  commenting,  ' It feels a bit like GDPR,  where  we  had  to  start  training  people  three  days  before  the  deadline. '
 
 The  gap  between  municipalities  and  larger  institutions  was  also  evident  in  the  level  of detail  with  which  they  discussed  the  Act's  provisions.  While  federal  agencies  and  larger cities  frequently  mentioned  efforts  to  align  their  processes  with  the  risk  classification system  outlined  in  the  Act,  smaller  municipalities  were  often  still  in  the  information gathering  stage.  As  one  representative  of  a  smaller  city  explained,  ' We  rely  heavily  on our  regional  IT  center  to  guide  us  through  the  compliance  requirements. '  This  reliance echoes  the  challenges  cited  by  smaller  municipalities  interviewed,  who  said  they  often lack  the  resources  to  navigate  such  complex  regulatory  frameworks  on  their  own.
@@ -1888,6 +2329,10 @@ Ethical  concerns  were  particularly  pronounced  in  applications  involving  
 
 Interviewees  emphasized  the  importance  of  building  public  trust  to  ensure  the  successful adoption  of  AI  technologies.  Several  institutions  have  made  efforts  to  make  their  AI systems  more  transparent  and  accessible  to  citizens.  As  one  participant  said,  ' It's  not
 
+
+<!-- PAGE 113 -->
+
+
 enough  for  systems  to  comply  with  the  Act;  they  also  need  to  be  understandable  to  the public  to  avoid  mistrust. '  Another  explained  how  their  institutions  use  citizen  feedback to refine AI applications, stating,  ' We  have held public forums  to  demonstrate  how our  AI  systems  work  and  address  concerns  directly. '  These  initiatives  aim  to  foster  a collaborative relationship between  institutions and citizens, reducing  skepticism  and increasing  acceptance  of  AI  tools.
 
 Public  trust  was  also  discussed  in  the  context  of  improving  citizen  confidence  in  AI systems.  Institutions  emphasized  the  need  for  transparency  tools  tailored  to  explain  AI operations  in  a  way  that  is  understandable  to  non-expert  users.  One  respondent  highlighted  initiatives  to  ensure  clarity,  stating,  ' We  make  sure  that  whenever  citizens  interact with  an  AI  system,  they  understand  how  it  reaches  conclusions  through  simple,  visual explanations. '  Additionally,  efforts  to  proactively  engage  citizens  in  AI-related  decisions  were  noted.  One  respondent  described  their  engagement  efforts  by  stating,  ' We've organized  open  door  events  where  citizens  can  observe  AI  in  action  and  provide  feedback on  its  usage  in  real-time  services. '  These  efforts  also  aim  to  increase  public  understanding  and  foster  a  sense  of  shared  responsibility  in  the  adoption  of  AI.  The  discussions  also highlighted  the  importance  of  feedback  loops  between  institutions  and  citizens.  Several institutions  noted  that  they  regularly  collect  feedback  from  citizens  and  incorporate  it into  the  refinement  of  AI  tools.  For  example,  one  participant  shared,  ' After  implementing an  AI-based  chatbot,  we  conducted  surveys  to  understand  how  users  perceived  its  accuracy  and  accessibility,  which  helped  us  make  targeted  improvements. '  These  ongoing feedback  mechanisms  were  seen  as  critical  to  building  trust  and  ensuring  that  AI  systems meet  public  expectations.
@@ -1897,6 +2342,10 @@ Public  trust  was  also  discussed  in  the  context  of  improving  citizen  c
 Institutions  have  made  various  operational  and  organizational  adjustments  to  comply with  the  AIA.  A  representative  of  a  federal  agency  stated,  ' We  are  developing  internal  policies  and  conducting  training  programs  to  ensure  compliance  across  departments. '  These  efforts  often  involved  interdisciplinary  collaboration,  with  IT,  legal  and policy  experts  working  together.  As  one  interviewee  described,  ' Having  diverse  expertise  ensures  that  our  AI  systems  are  both  compliant  and  operationally  effective. '  Pilot programs  emerged  as  a  key  strategy  for  refining  AI  applications.  As  one  respondent  from a  larger  institution  explained,  ' Pilot  institutions  tested  our  AI  system,  and  their  feedback was  incorporated  iteratively  during  development. '  These  programs  were  described  as helpful  in  identifying  potential  problems  early  and  ensuring  alignment  with  the  requirements  of  the  AI  Act.  In  contrast,  smaller  municipalities  reported  fewer  pilot  initiatives, often  citing  resource  constraints  as  a  limiting  factor.
 
 Some  institutions  highlighted  their  efforts  to  develop  flexibility  in  their  AI  strategies to  adapt  to  new  technologies  and  regulations.  For  example,  one  municipality  shared,  ' We are  built  to  be  language  model  neutral  and  can  switch  to  open  source  systems  such  as Llama  as  needed.  This  approach  minimizes  risk. '  Such  measures  aim  to  reduce  reliance on  a  single  vendor,  while  maintaining  compliance  with  evolving  standards.  In  general, municipalities  described  a  more  limited  range  of  operational  adaptations,  largely  due to  financial  and  staffing  challenges.  As  one  respondent  from  a  smaller  city  shared,  ' We rely  on  external  guidance  because  we  don't  have  the  capacity  to  handle  it  internally. '
+
+
+<!-- PAGE 114 -->
+
 
 Despite  these  limitations,  some  local  governments  have  made  notable  efforts,  particularly in  implementing  AI  for  specific  use  cases,  such  as  citizen  service  chatbots  and  document classification.
 
@@ -1909,6 +2358,10 @@ In  addition,  some  participants  mentioned  the  role  of  collaboration  betw
 ## 4.6 Strategic  Use  of  AI  for  Policy  and  Decision-Making
 
 Some  institutions  expressed  a  growing  interest  in  using  AI  for  strategic  decision-making, in  addition  to  its  use  in  routine  administrative  tasks.  While  many  AI  applications  remain focused  on  operational  efficiency,  such  as  document  processing  or  chatbots,  larger  institutions  have  begun  experimenting  with  predictive  analytics  and  other  advanced  tools  to inform  policy  decisions.  One  participant  shared,  ' We  are  piloting  AI  systems  that  can analyze  demographic  trends  to  predict  future  demand  for  public  services  such  as  healthcare  and  education. '  This  reflects  an  emerging  interest  in  using  AI  to  support  long-term planning  efforts.  Several  interviewees  also  mentioned  AI's  role  in  improving  resource allocation,  with  one  respondent  explaining,  ' We've  developed  a  model  that  helps  us  predict  which  neighborhoods  will  have  the  greatest  need  for  social  services  over  the  next five  years,  so  we  can  allocate  resources  more  effectively. '  These  initiatives  are  examples of  how  institutions  are  exploring  the  potential  of  AI  beyond  day-to-day  efficiency.  At the  same  time,  respondents  highlighted  the  challenges  associated  with  implementing  AI in  strategic  contexts.  Concerns  were  raised  about  the  reliability  and  explainability  of  AI models,  particularly  in  high-stakes  decision-making  scenarios.  As  one  participant  noted, ' When  we  use  AI  for  strategic  decisions,  it's  critical  that  the  underlying  assumptions
+
+
+<!-- PAGE 115 -->
+
 
 are  transparent  and  that  decision  makers  can  understand  the  limitations  of  the  data  and models. '  These  challenges  were  highlighted  as  key  considerations  for  ensuring  that  AI systems  are  not  only  effective,  but  also  consistent  with  the  principles  of  accountability and  fairness  outlined  in  AIA.
 
@@ -1926,6 +2379,10 @@ This  study  explores  how  the  AIA  impacts  the  adoption  and  use  of  AI  
 
 Overall,  our  findings  greatly  correspond  with  our  initial  research.  Most  public  institution in  Germany  are  aware  of  the  AIA.  However,  the  level  of  understanding  and  preparedness vary  significantly.  Larger  institutions  are  more  aware  of  the  specific  requirements  of  the Act  and  are  already  in  the  process  of  meeting  those  requirements,  likely  due  to  their established  digital  transformation  teams  and  dedicated  resources.  Smaller  municipalities
 
+
+<!-- PAGE 116 -->
+
+
 on  the  other  hand,  while  aware  of  the  Act  in  general,  rely  heavily  on  external  guidance and  resources  to  adapt  their  processes,  indicating  a  gap  in  internal  expertise  that  could hinder  compliance  efforts.  Thus,  while  the  need  to  adapt  to  the  regulations  applies  to  all institutions,  especially  the  smaller  ones  confirm  that  they  are  mostly  burdened  by  this because  of  the  lack  of  IT  expertise  and  resources.
 
 All  public  institutions  interviewed  agree  that  transparency  and  accountability  are important  aspects  to  be  considered  when  working  with  AI.  While  Li  [21]  sees  a  lack  of focus  in  the  regulation  on  aspects  such  as  reliability,  explainability  and  trustworthiness  of AI  systems,  many  institutions  already  take  measures  to  strengthen  trust  and  confidence  in these  AI  systems  and  their  results.  However,  ethical  considerations  such  as  unintentional bias  are  still  a  major  challenge  as  they  are  more  difficult  to  deal  with.  The  complexity of  deep  learning  models  also  makes  communicating  this  to  the  end  users  challenging.
@@ -1935,6 +2392,10 @@ Another  major  challenge  identified  by  the  public  institutions  is  legal 
 Despite  the  challenges  that  public  institutions  are  faced  with  when  it  comes  to  adopting  AI,  it  is  commonly  used  to  increase  efficiency  in  routine  tasks  and  reduce  response times  when  interacting  with  citizens.  This  is  also  the  reason  why  most  public  institutions  find  the  AIA  to  be  important.  It  provides  a  framework  for  the  responsible  use  of AI,  which  allows  both  the  institutions  and  the  citizens  to  benefit  from  AI  use  in  public institutions.  Furthermore,  larger  institutions  are  also  considering  going  beyond  everyday  tasks  and  using  AI  in  strategic  decision-making  processes,  although  this  comes  with further  challenges  regarding  transparency  and  accountability.  This  shows  that  the  AIA can  also  promote  innovation,  as  stated  by  Holst  et  al.  [19],  if  enough  necessary  resources are  available.
 
 On  the  other  hand,  there  were  also  discrepancies  between  the  topics  emphasized  in  the literature  and  those  reflected  in  our  interview  findings.  Our  background  research  points out  that  the  AIA  does  not  take  the  role  of  the  end  users  into  consideration,  even  though they  also  take  part  in  the  occurrence  and  spread  of  disinformation  for  example  [22]. While  this  could  pose  an  additional  challenge  in  regulating  the  harmful  use  of  AI,  this was  not  an  aspect  addressed  during  our  interviews,  even  though  AI  is  used  externally (e.g. Chatbots)  as  well  as internally (e.g. AI as  support  systems).  This  indicates  that this  is  not  considered  to  be  one  of  the  major  challenges  that  the  public  institutions  are facing  right  now.  Moreover,  previous  studies  identify  a  back  and  forth  between  the  fear of  regulatory  overreach  [23]  and  the  fear  of  the  regulation  being  too  broad  [18].  Both alternatives  lead  to  issues  for  public  institutions  as  on  the  one  hand  they  could  be  facing compliance  issues  if  the  regulation  is  too  strict,  but  on  the  other  hand,  there  is  the  issue  of
+
+
+<!-- PAGE 117 -->
+
 
 legal  uncertainty  if  it  is  too  broad.  However,  the  regulation  is  likely  formulated  vaguely on  purpose  because  policymakers  would  have  to  be  careful  to  cover  every  existing  case otherwise.  Thus,  the  Act  purposefully  aims  to  regulate  the  use  of  AI  while  still  leaving room  for  interpretation  in  order  to  at  least  cover  the  most  important  aspects.
 
@@ -1949,6 +2410,10 @@ The  public  institutions  themselves  need  to  work  on  broadening  their  IT
 ## 6 Conclusion  and  Outlook
 
 Through  semi-structured  interviews  with  representatives  from  various  German  institutions,  ranging  from  federal  agencies  to  smaller  municipalities,  we  found  that  the  AIA  is viewed  as  both  an  opportunity  to  promote  the  ethical  and  transparent  use  of  AI  and  a  significant  challenge.  Our  findings  highlight  the  impact  that  institutional  size,  resources,  and expertise  have  on  the  ability  of  public  institutions  to  comply  with  the  Act.  Generally, larger  institutions  demonstrated  greater  readiness  and  confidence  in  meeting  compliance  requirements  and  using  AI  for  strategic  purposes.  In  contrast,  smaller  institutions faced  resource  constraints,  regulatory  uncertainty,  and  operational  difficulties  that  hindered  their  ability  to  adapt.  The  lack  of  clear,  centralized  guidance,  in  particular,  has
+
+
+<!-- PAGE 118 -->
+
 
 exacerbated disparities between  institutions and created confusion around the interpretation  and  implementation  of  risk  classification  and  privacy  requirements.  Without targeted  interventions,  such  as  centralized  support  frameworks,  resource-sharing  programs,  and  clearer  communication  of  regulatory  expectations,  smaller  institutions  risk falling  behind  in  AI  adoption  and  innovation.  Therefore,  policymakers  should  prioritize addressing  these  disparities  by  providing  targeted  support  and  clear,  actionable  guidance. Collaboration  between  institutions  of  different  sizes,  combined  with  tiered  compliance strategies,  could  help  bridge  resource  gaps  and  encourage  the  sharing  of  best  practices. By  promoting  a  more  inclusive  approach  to  compliance,  the  AIA  can  foster  public  trust and  support  innovation  across  all  levels  of  the  German  public  sector.
 
@@ -1967,6 +2432,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 5. Iphofen,  R.,  Kritikos,  M.:  Regulating  artificial  intelligence  and  robotics:  ethics  by  design  in a  digital  society.  Contemp.  Soc.  Sci. 16 (2),  170-184  (2021)
 6. Siau,  K.,  Wang,  W.:  Artificial  Intelligence  (AI)  ethics.  J.  Database  Manag. 31 (2),  74-87  (2020)
 7. European  Parliament:  EU  AI  Act:  first  regulation  on  artificial  intelligence (2024).  https:// www.europarl.europa.eu/topics/en/article/20230601STO93804/eu-ai-act-first-regulationon-artificial-intelligence.  Accessed  11  Nov  2024
+
+
+<!-- PAGE 119 -->
+
 
 8. Zhong,  H.:  Implementation  of  the  EU  AI  act  calls  for  interdisciplinary  governance.  AI  Mag. 45 (3),  333-337  (2024)
 9. European  Parliament:  Germany  AI  Strategy  Report  (2021).  https://ai-watch.ec.europa.eu/cou ntries/germany/germany-ai-strategy-report\_en,.  Accessed  12  Dec  2024
@@ -1989,6 +2458,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 26. Doody,  O.,  Noonan,  M.:  Preparing  and  conducting  interviews  to  collect  data.  Nurse  Res. 20 (5),  28-32  (2013)
 27. Williams,  M.,  Moser,  T.:  The  art  of  coding  and  thematic  exploration  in  qualitative  research. Int.  Manag.  Rev. 15 (1),  45-55  (2019)
 
+
+<!-- PAGE 120 -->
+
+
 <!-- image -->
 
 ## ReflectAI:  Design  and  Evaluation  of  an  AI Coach  to  Support  Public  Servants' Self-Reflection
@@ -2007,6 +2480,10 @@ Keywords: AI Coaching ≤← Digital Government ≤← Self-Reflection ≤← De
 
 The digitalization of public organizations has long not been a means in itself but an essential necessity in living up to its value propositions, that is, the efficient provision of (digital) public services [ 33] and the generation of public value [ 38]. However, public organizations are lagging behind in digitally transforming, especially compared to their private sector counterparts [ 8]. For successful digital transformation, there is broad academic agreement on the significance of the public servants working inside these organizations [ 15, 28] and their digitalization competences [ 12] - henceforth referred to as digital government competences
 
+
+<!-- PAGE 121 -->
+
+
 (DGCs). Public servants lacking DGCs, in turn, are a barrier to digital government (DG) success [ 40]. Consequently, a substantial research stream has emerged that considers DGC education and development through, i.e., formalized education [ 19], MOOC-based learning [ 9, 22], or using simulation games [ 18].
 
 These publications, however, focus on a rather restricted competence understanding, especially promoting skills and knowledge, for instance, in artificial intelligence (AI), business process management, or general DG knowledge. This narrow understanding neglects modern conceptions of competence , which not only involve skills and knowledge but also personality-related components [ 6]. In fact, these personality-related competence components are fundamental for DGC acquisition, given their importance in yielding the intent to develop knowledge and skills in the first place [ 6]. Chen and Chang (2010) thereby speak of a 'bottom up causal relationship' [ 6, p. 685] between a hidden layer (personality) and visible layer (abilities, i.e., knowledge and skills) of competence. This relevance of personality has also been confirmed for DG by Distel et al. (2019) [ 12].
@@ -2020,6 +2497,10 @@ Thus, our article aims to explore the potential of AI coaching for developing pe
 Design and evaluation of ReflectAI, an AI coach to support public servants in developing self-reflection competence.
 
 Our results expand the body of knowledge on overcoming digital transformation challenges in public organizations. More specifically, we contribute to the literature on DGCs, with a particular focus on personality-related DGCs and self-reflection. Additionally, we contribute to research on AI applications in the public sector, highlighting their potential for competence development.
+
+
+<!-- PAGE 122 -->
+
 
 The remainder of this article first presents the relevant research background and elaborates on the DSR process, before presenting our artifact and the evaluation results. Afterward, the results are discussed with respect to their contributions before concluding with final remarks.
 
@@ -2035,6 +2516,10 @@ Self-reflection is one of 18 personality-related DGCs Distel et al. (2019) [ 12]
 
 Given this significance, scholars have proposed several models to guide selfreflection competence acquisition, typically in multi-step conceptualizations of competence development [e.g., 13, 23]. Among these, Korthagen's ALACT model [ 24] stands out as the most suitable option for our purposes. The model provides a five-step framework: Action, Looking Back, Awareness of Essential Aspects, Creating Alternative Methods, and Trial. Unlike more general cyclic models such as Kolb's learning cycle, the ALACT model emphasizes systematic learning from action. This focus on continuous self-reflection and improvement makes it particularly well-suited for fostering continuous professional development in practice-oriented settings such as public administration.
 
+
+<!-- PAGE 123 -->
+
+
 ## 2.2 AI  Coaching
 
 Coaching is defined as a 'dyadic helping relationship between a professional coach and client who work jointly along a systematic process of collaborative goal setting' [ 14, p. 107]. Such collaborative means of professional development have proven to be effective in developing rather personality-related competence components like the ones discussed above [ 7]. Coaching has long been a widespread tool for HR development [ 10], but as it occurs in face-to-face settings [ 10], it comes with resource constraints resulting in scalability issues.
@@ -2049,6 +2534,10 @@ Fig.  1. DSR Process
 
 <!-- image -->
 
+
+<!-- PAGE 124 -->
+
+
 Problem Identification and Motivation: Exchange-oriented professional development means, like coaching, bear the potential to enhance DGC development, especially with regard to personality-related competences and self-reflection. However, such approaches are resource-intensive and challenging to scale.
 
 Define Objectives of a Solution: Design and evaluation an AI coach to support public servants in developing self-reflection competence. Concrete solution objectives are (1) positive perceived or expected helpfulness in self-reflection competence development and (2) positive perceived well-being while interacting with the AI coach in terms of usability and security aspects. The artifact development shall be guided by established self-reflection and AI coaching frameworks.
@@ -2060,6 +2549,10 @@ Demonstration and Evaluation: The demonstration and evaluation of ReflectAI was 
 We employed an inductive thematic analysis following Braun and Clarke's [ 4] guidelines. This involved transcription and an initial categorization of results. Similar categories were grouped into themes to highlight the relationships between clusters. To summarize the themes, we identified the emerging key findings, each supported by illustrative quotes.
 
 1 TITLE-ABS-KEY (('conversational agent*' OR 'chatbot') AND ('design framework*' OR 'design principle*' OR 'design pattern*' OR 'design guideline*' OR 'design method*')).
+
+
+<!-- PAGE 125 -->
+
 
 ## 4 Artifact  Description
 
@@ -2081,6 +2574,10 @@ Prior to the introductory interview, participants received comprehensive data pr
 
 The user interface (Fig. 2) follows a clean, minimalist design focused on coaching interactions and familiar chat patterns. Users can customize their experience by selecting the coach's name, voice, and appearance, influencing the perceived humanity level in interactions and potentially enhancing trust [ 31]. While personalization can strengthen user engagement, Krauter [ 25] highlights that excessive realism in AI design can lead to the Uncanny Valley effect, where near-human
 
+
+<!-- PAGE 126 -->
+
+
 features cause discomfort due to subtle inconsistencies, such as mismatched emotional expressions or unnatural behaviors [ 25]. To maintain an appropriate balance of human-like interaction, we restricted customization options in both scope and realism, balancing personalization with user comfort.
 
 The system provides visual feedback through an animated typing indicator during message processing, enhancing credibility and reinforcing perceived intelligence [ 16]. The interface supports both text and voice messaging, with automatic transcription of voice inputs and synthesis of voice outputs, ensuring accessibility and accommodating diverse user preferences.
@@ -2095,6 +2592,10 @@ The evaluation of ReflectAI followed a three-phase approach: First, we conducted
 
 Introductory  Interviews. Self-reflection practices varied widely in terms of frequency and structure. While most participants reported engaging in selfreflection daily or several times a week, these moments were rarely planned or systematic. Rather, self-reflection was primarily triggered by specific events such as meetings with superior officers, conflict situations, receiving feedback, or during commutes after work. The current practice of self-reflection is predominantly informal and unstructured. The most common form of self-reflection was mental self-talk, in which situations and decisions are processed mentally. In
 
+
+<!-- PAGE 127 -->
+
+
 Fig.  2. Exemplary conversation with ReflectAI
 
 <!-- image -->
@@ -2102,6 +2603,10 @@ Fig.  2. Exemplary conversation with ReflectAI
 addition, participants regularly sought an exchange with colleagues, especially after difficult situations or important meetings. It is noteworthy that none of the participants stated that they used special tools or structured methods for selfreflection. Several participants specifically mentioned the lack of a systematic approach in their self-reflective practice as a reason.
 
 Participants' expectations of AI coaching focused on two main aspects. Several participants expressed their interest in receiving support in systematizing their self-reflection processes, with one participant specifically mentioning: 'What would help me the most is to better structure this whole self-reflection mechanism and process [...].' Similar to other studies such as [ 26], the participants had
+
+
+<!-- PAGE 128 -->
+
 
 certain expectations of ReflectAI's ability to process language due to chatbots such as ChatGPT. As one participant noted: 'My expectations of the chatbot are basically that the question-and-answer style is appropriate and that proper language is used. This is standard nowadays and should be no worse here than in other use cases.'
 
@@ -2111,11 +2616,19 @@ Participants particularly valued the specific and tailored suggestions provided 
 
 In the context of human-AI interaction, participants reported a strong sense of trust in ReflectAI. This trust originated primarily from its non-judgmental nature, which made them feel more comfortable discussing personal or sensitive topics than they would with human counterparts: 'I sometimes discussed things with the tool in a way that I would perhaps not talk to people so directly now. That was because it's 'just' a tool that I could actually tell anything to. There is no person behind it who could take offense or be overloaded.' This sense of comfort supports our second solution objective by fostering positive perceived well-being in user interactions. Interestingly, participants also described instances in which the AI aspect of ReflectAI became less apparent, suggesting a seamless integration into the conversation flow: 'There was a moment when I wasn't actively thinking about the fact that I was writing with an AI.' One participant further emphasized this potential for enhanced realism through integration into existing communication systems, noting that it would 'almost immediately feel like you're talking to a real person' if incorporated into internal chat programs.
 
+
+<!-- PAGE 129 -->
+
+
 The participants reported three main qualitative benefits of using ReflectAI. These reflections clearly tie back to our first solution objective, which highlights ReflectAI's effectiveness in fostering a perceived self-reflection competence development. Participants revealed an increased awareness regarding opportunities for self-reflection. One participant shared the growing intentionality in his self-reflective practice: '[...] I would say that, in a broader sense, I am simply thinking more actively about the topic [ed. self-reflection]. [...] I don't know yet whether I'm doing it better now [...]. But I'm definitely doing it more consciously [...].' The structured prompts provided by ReflectAI were considered useful in organizing participants' thoughts. As one participant recounted, the process of composing messages fostered a more objective and structured perspective: 'When I wrote my own message, I initially thought: 'Well, the colleague is a bit to blame'. But as I was formulating it, I thought,'Okay, if you say it like that, it's not really like that'.' Finally, participants valued the ability to revisit prior conversations, allowing them to track their thought processes and reactions over time. One participant noted: 'Unlike human conversations, I can always go back to the conversation and think: What was the situation like again? What was the reaction?'
 
 Despite all these positive perceptions, concerns about data protection emerged as a critical factor that would influence adoption rates. Several participants expressed worries about server locations, even despite the repeated security assurances: 'I did have reservations about its lack of local server [...], despite assurances regarding data protection.' Additionally, different shortcomings were noted in the interaction patterns. ReflectAI's empathetic responses were sometimes perceived as exaggerated, with some participants preferring more direct communication: 'What I noticed is that unlike other chatbots, the AI coach always adds extra sentences that somehow simulate humanity.' The practice of paraphrasing and asking for confirmation received mixed reactions. While some saw it as a way to encourage deeper engagement, others found it unnecessarily time-consuming, noting: ' When I gave a short answer, I still got this huge text.' Finally, the critical feedback also centered on the responses feeling rigid and predictable, with one participant quickly recognizing the repetitive nature of the ALACT model: 'You understand the structure and the response behavior relatively quickly. And that is of course very schematic.' Some participants noted the limitation in providing truly personalized responses, with one stating: "A system like that can't assess my character at all and can't give me an answer that is really tailored to me as a person."
 
 During the two-week test phase, participants used ReflectAI to reflect on past situations, as one participant describes: 'It was always about situations that I had experienced myself, and I looked at how I reacted in the situation and what the coach suggested to me afterwards.' Some also relied on it to prepare for upcoming events: 'I mainly focused on follow-up meetings, but also on preparing for meetings, for example during discussions with head teachers or in the department.' The times of use varied greatly, as some integrated ReflectAI into their daily work routine, while others used it on their way to work or at home in
+
+
+<!-- PAGE 130 -->
+
 
 the evening. Many participants mentioned a lack of time during working hours as a frequent restriction that limited their use of ReflectAI, as this participant highlights: '[...] It's also often a challenge to find the right time slots for application.' Another participant explained: 'I used it once at work when I needed a mental break between tasks... Otherwise, I've used it more privately because I can't find time for it during working hours.'
 
@@ -2124,6 +2637,10 @@ The integration of ReflectAI within the daily work environment faced several cha
 Participants expressed varying interest in regularly using ReflectAI. Many could envision consistent use if it offered long-term benefits, as one participant noted: "I would be really curious to see what it's like when you use the coach over a longer period... whether you eventually feel like you've 'learned everything' or if it continues to provide new impulses." The willingness to use it depended on three main conditions: seamless technical integration into work devices ( "If it were integrated on my work PC, absolutely. As it is now, I would use it regularly, but definitely less frequently. I don't know if I would manage to remember to do it at home in the long term.' ), explicit organizational support for dedicated reflection time ( 'It needs to be wanted that employees develop themselves. To really say: It's okay if you spend an hour a day or week on this âĂŞ be it for self-reflection or other topics." ), and an active reminder system to encourage regular engagement. Some participants felt ReflectAI could not replace face-toface conversations but saw potential in soft-skills development, such as receiving feedback on argument structure: 'That you say: 'Okay, I have an argument here, I'll write it down or speak it, and then the AI will give me feedback on it'.' Trust also emerged as an obstacle, given uncertainty about the coach's 'black box' nature: '[...] you don't know exactly where he [ed. ReflectAI] gets the knowledge from or which language model is being used. For me, there's still a bit of a lack of trust.'
 
 Finally, participants suggested several improvements for ReflectAI, focusing on customization options like adjustable communication styles, response lengths, and self-reflection models. They recommended adding a reminder system to encourage regular usage. Many participants wanted ReflectAI to maintain context across sessions, though this raised privacy concerns that would need to be addressed through transparent data handling practices.
+
+
+<!-- PAGE 131 -->
+
 
 ## 6 Discussion
 
@@ -2139,6 +2656,10 @@ The evaluation findings indicate that the solution objectives have been successf
 
 Our study advances theoretical understanding in three ways. First, we contribute to the theory of digital coaching by demonstrating how organizational context influences the effectiveness of AI coaching implementations, especially in highly regulated environments such as public administration. Our findings demonstrate that successful AI coaching integration requires addressing both technical and organizational dimensions, particularly in public administration. Second, it extends the application of AI coaching beyond the educational context to public administration and shows how the DAIC framework [ 37] can be used for self-reflection competence development in public administration. Third, the study shows how evidence-based theories like Korthagen's ALACT model [ 24] can be integrated into AI coaching to effectively guide users' self-reflection.
 
+
+<!-- PAGE 132 -->
+
+
 ## 6.2 Implications  for  Practice
 
 The results highlight the practical implications of integrating AI coaching into public administration, emphasizing its scalability and cost-effectiveness as an alternative to traditional coaching while identifying key conditions necessary for successful implementation. Key recommendations for successful adoption include organizational support, such as the creation of clear policies for allocating dedicated time for self-reflective practices during work hours. Additionally, seamless integration of AI coaching into existing internal systems is crucial. This may involve the use of locally hosted AI models and features such as active reminders and calendar integration to minimize barriers and ensure consistent engagement. Finally, addressing concerns around data protection and the 'black-box' nature of AI tools highlights the need for transparent communication about underlying language models, self-reflection frameworks, and data handling practices.
@@ -2152,6 +2673,10 @@ Our study highlights both the potential and limitations of AI coaching in foster
 One of the key strengths of AI coaching lies in its ability to provide structured, non-judgmental guidance, which supports users in engaging with self-reflective processes in a consistent and accessible manner. The integration of evidencebased frameworks ensures that ReflectAI follows a structured approach to facilitate meaningful self-reflection. Our findings demonstrate that AI coaching can effectively enhance self-reflective thinking by encouraging users to articulate their thoughts in a structured format, reinforcing prior research on expressive writing and self-reflection in digital environments. At the same time, ReflectAI's limitations highlight the need for continued refinement of AI coaching to improve adaptability and user trust.
 
 Future research should implement long-term studies to evaluate the organizational impact of AI coaching on competence development. Particular attention should be paid to addressing the organizational barriers identified in our study, such as time constraints and technical infrastructure limitations, and to determine how to integrate AI coaching into existing HR development programs. Future research should also explore the application of AI coaching to other competences beyond self-reflection.
+
+
+<!-- PAGE 133 -->
+
 
 Acknowledgements. This research received funding from the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) - FOR 5393, Project No. 462287308 (BE 1422/28-1).
 
@@ -2174,6 +2699,10 @@ Acknowledgements. This research received funding from the Deutsche Forschungsgem
 14. GraSSmann, C., Schermuly, C.C.: Coaching with artificial intelligence: concepts and capabilities. Hum. Resour. Dev. Rev. 20 (1), 106-126 (2021)
 15. Gullmark, P.: Do all roads lead to innovativeness? a study of public sector organizations' innovation capabilities. Am. Rev. Public Adm. 51 (7), 509-525 (2021)
 
+
+<!-- PAGE 134 -->
+
+
 16. Guo, Y., Wang, J., Wu, R., Li, Z., Sun, L.: Designing for trust: a set of design principles to increase trust in chatbot. CCF Trans. Pervasive Comput. Interact. 4 (4), 474-481 (2022)
 17. Halsbenning, S., Koddebusch, M., Niemann, M., Becker, J.: How to foster ecompetence in the public sector? a mixed-method study using the case of BPM. In: Proceedings of Ongoing Research, Practitioners, Posters, Workshops, and Projects at the International Conference EGOV-CeDEM-ePart 2021, pp. 141-151. Granada, ES (2021)
 18. Halsbenning, S., Niemann, M., Distel, B., Becker, J.: Playing (government) seriously: design principles for e-government simulation game platforms. In: Ahlemann, F., Schütte, R., Stieglitz, S. (eds.) Innovation Through Information Systems. WI 2021. Lecture Notes in Information Systems and Organisation, vol. 48, pp. 73-90. Springer (2021)
@@ -2190,6 +2719,10 @@ Acknowledgements. This research received funding from the Deutsche Forschungsgem
 29. Park, S., Thieme, A., Han, J., Lee, S., Rhee, W., Suh, B.: 'i wrote as if i were telling a story to someone i knew.': designing chatbot interactions for expressive writing in mental health. In: Proceedings of the ACM Designing Interactive Systems Conference, pp. 926-941. ACM, New York (2021)
 30. Peffers, K., Tuunanen, T., Rothenberger, M.A., Chatterjee, S.: A design science research methodology for information systems research. J. Manag. Inf. Syst. 24 (3), 45-77 (2007)
 
+
+<!-- PAGE 135 -->
+
+
 31. Rheu, M., Shin, J.Y., Peng, W., Huh-Yoo, J.: Systematic review: trust-building factors and implications for conversational agent design. Int. J. Hum-Comput. Interact. 37 (1), 81-96 (2021)
 32. Sandars, J.: The use of reflection in medical education: AMEE guide no. 44. Med. Teach. 31 (8), pp. 685-695 (2009)
 33. Scholta, H., Lindgren, I.: Proactivity in digital public services: a conceptual analysis. Gov. Inf. Q. 40 (3), 101832 (2023)
@@ -2201,6 +2734,10 @@ Acknowledgements. This research received funding from the Deutsche Forschungsgem
 39. Von Wolff, R.M., Hobert, S., Schumann, M.: Designing process-based chatbots in enterprises: the case of business travel organization considering the users' perspective and business value. AIS Trans. Hum-Comput. Interact. 14 (4), 578-623 (2022)
 40. Wilson, C., Mergel, I.: Overcoming barriers to digital government: mapping the strategies of digital champions. Gov. Inf. Q. 39 (2), 101681 (2022)
 41. Zahn, E.M., Schöbel, S.: Let's chat to negotiate: designing a conversational agent for learning negotiation skills. In: DESRIST 2024. LNCS, vol. 14621, pp. 229-243. Springer Nature Switzerland, Cham, CH (2024)
+
+
+<!-- PAGE 136 -->
+
 
 <!-- image -->
 
@@ -2220,6 +2757,10 @@ Automated decision-making (ADM)-the use of algorithms to make fully automated de
 
 IFIP  International  Federation  for  Information  Processing  2026
 
+
+<!-- PAGE 137 -->
+
+
 improve 'efficiency' or 'objectivity' of decisions in highly consequential domains such as the justice system [ 1], public administration [ 22], or healthcare [ 36]. Although regulatory frameworks, including the European Union's General Data Protection Regulation (GDPR) and the Artificial Intelligence Act (AI Act), or (until recently) the United States' Blueprint for an AI Bill of Rights , propose to ban fully-automated decisions and require mechanisms for human oversight, it is not yet clear what form these should take. Moreover, as observed by [ 46] in the context of GDPR, policy efforts seek to establish the 'right to explanation' rather than the 'right to interpretable decisions' . This distinction is even clearer in newer regulations, such as the AI Act, which does not outlaw black-box decision-making, instead mandating sufficient explanation standards for automated decisions. Therefore, we can reasonably expect post-hoc explainability solutions to become standard, preferred tools in many domains.
 
 However, post-hoc interventions or human oversight procedures were not enough to prevent high-profile failures of ADM solutions. The Netherlands alone has observed the detrimental impacts of several ADM systems, most notably ones developed to detect social welfare fraud. Firstly, an algorithm employed by the Tax and Customs Administration ( Belastingdienst ) resulted in unjustified fraud accusations against tens of thousands of families, driving many households (deeper) into poverty in the childcare benefits scandal ( toeslagenaffaire ) [ 24]. Secondly, the System Risk Indication ( SyRI ) model established by the Ministry of Social Affairs and Employment to detect potential social welfare fraud at the level of neighborhoods [ 4] was outlawed by The Hague District Court on the grounds that it violated the provisions of Article 8 of the European Convention on Human Rights [ 41]. Thirdly, the Dutch Education Executive Service ( DUO ), in charge of student finance grants, used an investigation model that unfairly targeted students from non-European backgrounds [ 25]. Lastly, the municipality of Rotterdam experimented with a risk profiling model that was found to exhibit biases against vulnerable groups such as migrants or single mothers [ 19].
@@ -2227,6 +2768,10 @@ However, post-hoc interventions or human oversight procedures were not enough to
 These cases share three notable characteristics. First, the common goal of detecting fraud in social welfare settings highlights the keen interest of public authorities in making use of algorithms as a surveillance tool. Second, all people who rely on social assistance are in a vulnerable position; algorithms tend to aggravate these social inequalities by disproportionately targeting certain subpopulations. Third, the models were small components of larger sociotechnical decision-making systems . In theory, flawed (e.g., discriminatory) algorithmic predictions could have been filtered out by actors responsible for the operation of these models. However, this did not occur and real-world harms materialized, suggesting the need for a broader lens to describe, understand, and address such 'algorithmic' harms [ 14]. Even though methods have been proposed to conceptualize and analyze AI functions in their sociotechnical contexts [ 15, 44], their applications in social welfare and broader public services are still missing.
 
 The abovelisted failures of ADM systems offer valuable lessons to researchers, practitioners, and policy-makers. Thus, we contribute the first in-depth analysis of a social welfare fraud detection system through a sociotechnical and system-
+
+
+<!-- PAGE 138 -->
+
 
 theoretic lens. We consider the automated fraud detection tool previously used in Rotterdam, looking at the pertinent technical, social, and institutional processes to arrive at a comprehensive description and understanding of possible harms. We pursue desk research (study of existing documents) to inform an empirical analysis of the case and make use of the tools of system safety to identify core harms and their underlying system-theoretic hazard sources [ 28]. Using these insights, we perform a critical analysis of the practical value of XAI solutions in this complex system. In the process, we provide a first-of-its-kind evaluation of the affordances and fundamental limitations of XAI solutions, grounded in a sociotechnical and system-theoretic analysis of an ADM system, within the specific context of social welfare. Our approach showcases how relying on XAI tools is fundamentally incomplete and cannot guarantee their responsible operation. We explain how other forms of interventions are necessary to safeguard vulnerable populations from discrimination when algorithms are employed in high-stakes settings, and point to ways in which similar sociotechnical systemtheoretic analyses can aid in identifying and designing interventions to comprehensively mitigate and eliminate harms. Our contributions are as follows:
 
@@ -2243,6 +2788,10 @@ We begin by delineating the landscape of explainability tools in Sect. 2.1. Then
 
 Explainability solutions can be applied to models that would otherwise be completely opaque, but they still attract many well-founded objections. We highlight three particularly relevant critiques. First, they are 'likely to perpetuate
 
+
+<!-- PAGE 139 -->
+
+
 bad practice' [ 46]. Opaque models offer reasonable performance out-of-the-box; coupled with an XAI method, they may give an impression of a well-designed algorithm, detracting from critical design decisions, such as selecting informative features. Second, an explanation may seem superficially reasonable but insufficiently faithful to the logic of the model [ 5], and thus mislead its recipients and promote unwarranted trust [ 5, 16]. Third, explanations should account for contextual factors, such as normative and legal constraints [ 47], social environment and cognitive processes [ 33], or users' technical proficiency [ 13]. Thus, receiving an explanation, receiving a meaningful explanation, and understanding the meaning of an explanation are three different but intrinsically linked challenges.
 
 Various criteria to classify explainability techniques have been proposed in the literature; an unsystematic review from 2022 found 11 taxonomies developed in the three prior years [ 49]. Other than the stage (ante-hoc interpretability vs post-hoc explainability) distinction, the author identified two further criteria considered in all taxonomies: XAI techniques range in scope from local (i.e., explaining individual instances) to global (i.e., explaining the complete decision logic of the model), and in applicability from model-specific (i.e., suitable for one algorithm class) to completely model-agnostic (i.e., suitable for any algorithm). We adapt the taxonomy proposed in Sect. 4.1 of [ 49], which classifies XAI solutions by the type of a problem, the modality of input data, the manner of acting upon a model, the stage, the scope, and the output format. Operating on the level of a taxonomy allows us to comprehensively look at XAI by mixing the characteristics of solutions, rather than discussing individual techniques.
@@ -2252,6 +2801,10 @@ Various criteria to classify explainability techniques have been proposed in the
 The concept of artificial intelligence as a tool inherently entangled with its social and institutional environment is not new, but many lines of XAI research are yet to (fully) embrace the sociotechnical understanding of AI. Works that already do, draw on a variety of disciplines, including science and technology studies, ethics and philosophy of technology, or system safety [ 27]. A key aspect of this vision of AI is its explicit recognition that the behaviors of any model are the product of the interactions of the components in their environment [ 44]. As an example, generative AI poses the risk of producing misleading or deceptive information, which turns into a hazard only if, e.g., the model is accessible publicly, and in turn produces harms if, e.g., people act on these incorrect outputs [ 55].
 
 This paradigm promises a way to overcome the blind spots of model-oriented analyses. For example, in the context of AI fairness, [ 48] defined five traps of abstracting away the context of a model, such as the 'ripple effect trap' , where researchers fail to recognize that introducing new technologies into an existing system is bound to influence its dynamics. Additionally, it promotes the operationalization of abstract principles and values such as safety [ 14], which is much more difficult to guarantee with 'alternative' approaches such as AI ethics [ 35].
+
+
+<!-- PAGE 140 -->
+
 
 ## 2.3 On Automated Decisions in Public Administration
 
@@ -2265,6 +2818,10 @@ Yet, as recognized by [ 52], all forms of data-driven modeling may discriminate 
 
 Our case study focuses on a machine learning model that was developed to support the municipality of Rotterdam in the implementation of the regulations laid out in the Participation Act ( Participatiewet ), which defines bijstand , a form of long-term assistance for residents of the Netherlands who are able to work but cannot find employment, and are no longer covered by the national unemployment insurance. According to the law, all municipalities must periodically, but no more frequently than once every two years, re-examine the recipients of bijstand to ensure that benefits remain duly granted. As this form of assistance is implemented at the level of individual municipalities, they may employ various tools to nominate residents for reexamination. Historically, these included random and expert-driven selections [ 3], as well as tips from other residents. According to Statistics Netherlands around five million people in the country receive some form of social support, including bijstand [ 10]; specifically in Rotterdam, 6.1% of residents receive bijstand , the highest percentage in the country. It is perhaps unsurprising that the
 
+
+<!-- PAGE 141 -->
+
+
 decision-makers of Rotterdam, a municipality that actively invests in practically oriented research on responsible digitization, most notably through its Creating010 research centre (e.g., [ 37]), looked towards AI as an approach to enable targeted selection for re-examinations.
 
 To conduct the case study, we employ desk research methods to distill information from publicly accessible sources, and carry out system-theoretic analyses to reason about the hazards-unsafe system states-related to the model. To our knowledge, the fraud detection model employed by the Work and Income (W&amp;I) department was first disclosed in the 'Colored Technology' ( Gekleurde Technologie ) report from 2021 by the Rotterdam Court of Audit, which examined the ethical use of algorithms by the city authorities, following principles such as responsibility, transparency, or fairness [ 42]. The report concluded that on the organizational side, the W&amp;I department failed to satisfy multiple ethical standards, including the lack of clearly assigned responsibility for the complete system, unsatisfactory transparency towards benefit recipients affected by the model decisions, and inadequate motivation for decisions related to ethics [ 42].
@@ -2272,6 +2829,10 @@ To conduct the case study, we employ desk research methods to distill informatio
 Later, in 2023, the model became the centerpiece of a journalistic investigation coordinated by Lighthouse Reports that focused on 'suspicion machines' , or fraud detection tools employed across Europe for social welfare purposes [ 19]. As acknowledged by the journalists, 'out of dozens of cities we contacted, [Rotterdam] was the only one willing to share the code behind its algorithm' . Their work not only revealed that the model was characterized by poor technical performance, but also that it was prone to discrimination against people from vulnerable backgrounds, recommending them for re-examination significantly more often than expected [ 7]. This behavior likely stemmed from the fact that expertdriven selection was used to collect the training data. Hence, some groups of residents may have been overrepresented in the dataset. Although the model was used to make predictions outside of the lab-in 2019 it was used to launch 22% of fraud investigations [ 42]-it never officially left the pilot stage; Rotterdam decommissioned the model in 2021, two years prior to the investigation.
 
 We look at this model for three reasons. First, as informed by The Algorithm Register [ 34], the Dutch national database of algorithms, there is notable interest among public administration organizations to use automated data processing for social welfare. We find that 80 out of 674 algorithms (11.8%) registered by the end of 2024 fulfill this criterion and many of them-28, or (35.0%)-are used for fraud detection purposes. Such algorithms impact millions of people, also outside of the Netherlands [ 19], highlighting the need to improve their safe operations and motivating our study. Second, the Rotterdam model was part of a complex decision-making system, allowing us to discuss the value of XAI solutions in the context of real-world social and institutional processes. Third, the available documents enable us to map the complete system, thus enabling comprehensive system-theoretic analyses. In particular, Lighthouse Reports published 'the holy trinity of algorithmic accountability: the training data, the model file and the code for [the] system' in their GitHub repository [ 7]. We can also learn from the entry about the model in The Algorithm Register, reports of (1) the Rotterdam
+
+
+<!-- PAGE 142 -->
+
 
 Court of Audit that discussed the development and operations of the system [ 42], and (2) Algorithm Audit, a normative advice organization, that looked at the quality of features used by the model [ 3], as well as national and local laws. What distinguishes our contribution is that we evaluate the complete system as it could have been if various explainable AI interventions (in their most optimistic, strongest interpretation) had served as risk mitigation strategies.
 
@@ -2291,6 +2852,10 @@ We start by introducing key stakeholders with influence on the daily operations 
 - (d) Team Reinvestigations ( THO ) is responsible for carrying out the reexaminations of benefit recipients [ 42] based on the inputs from Team T&amp;T.
 - (e) Team Research and Business Intelligence ( OBI ) is a research team of the municipality that joined the Accenture team for model development. Later, it took over for the maintenance and operation of the system [ 42].
 
+
+<!-- PAGE 143 -->
+
+
 - (f) Team Complaints is a unit in the W&amp;I department responsible for handling complaints about welfare benefits, e.g., from customers who have not been treated fairly or have not received sufficient information.
 - (g) Privacy Officers and Data Protection Officer oversee the handling and protection of personal data. While the former are employed in one of the departments, the latter is an independent officer of the municipality that focuses, among others, on compliance with the GDPR.
 - (h) Concern Management of W&amp;I, one of six organizational units in the municipality [ 39], oversees all matters related to the department, including ADM systems. However, the model was developed with the support of another department, so the assignment of responsibility was not clear [ 42]. It further includes three independent units; among these, Concern Auditing that performs audits of systems, processes, and programs.
@@ -2306,11 +2871,19 @@ Human Controller: Employees. Three teams in Rotterdam W&amp;I jointly fulfill th
 
 Automated Controller: AI Subsystem. In principle, the automated controller should impact the controlled process only indirectly because its predic-
 
+
+<!-- PAGE 144 -->
+
+
 Fig.  1. Functional control diagram of the operating process in the Rotterdam case. Relationships marked by solid lines are established based on [ 7, 39, 42]; relationships marked by dashed lines are assumed. We focus on the 'daily' operations, omitting parts of the hierarchical control structure; these are highlighted in the thought bubble. The responsibility of an actor is stated on their side of a relationship (arrow).
 
 <!-- image -->
 
 tions are supposed to be filtered by humans. However, the analysis of Lighthouse Reports unveiled that model predictions exhibited biases [ 7] but the city still carried out a large number of re-examinations based on the risk scores assigned by the model. This suggests that the AI subsystem had non-negligible direct impacts. The W&amp;I department developed a gradient boosting machine model [ 18] trained on 315 features. Thus, the model predictions could not be readily interpreted, both due to the opaque algorithm and the complexity of the under-
+
+
+<!-- PAGE 145 -->
+
 
 lying data. The features belong to 14 categories, including appointments with the municipality, barriers to reintegration into the workplace, personal characteristics, or relationships. Rotterdam's data scientists calculated the relative importance of all features compared to the baseline of age at investigation . The top 5 features include (1) the age at investigation , (2) the number of existing cost-sharer relationships , (3) the number of no-show appointments , (4) the number of 'applying expertise' competencies , and (5) the number of contacts on the topic of income [ 7].
 
@@ -2329,6 +2902,10 @@ Requirements for XAI: Improve (e.g., address bias) features on a global scale.
 B. Erroneous interpretation of outcomes. ( Control actions never provided ) Description: (1) domain experts are expected to intervene on the outcomes of the model, but it can be reasonably expected that some interventions cannot be enforced due to the model's complexity; (2) the model does not provide any explanation of its decisions, which may make objections impossible.
 
 Impacts: Employees may be able to apply simple interventions, e.g., exempting (groups of) people from the re-examination. More complex actions, such as identifying and acting on model biases, are difficult without an understanding of the decision logic and model statistics. Additionally, a non-interpretable model does not contribute to organizational knowledge, e.g., by suggesting fraud patterns.
+
+
+<!-- PAGE 146 -->
+
 
 Requirements for XAI: Elucidate the decision logic of the model on both local (as justification for benefit recipients) and global (as explanation for the decisionmakers) scales. The former constrains the output format to explanations that are legible for non-expert users (e.g., natural language rules or descriptions).
 
@@ -2354,6 +2931,10 @@ Description: A negative outcome of an investigation-'no fraud'-should increase t
 
 Impacts: Without external interventions, a sufficiently 'well-trained' model can be expected to target the same individuals multiple times when their features remain relatively stable. Thus, some benefit recipients may be unfairly targeted even after an earlier investigation established no wrongdoing.
 
+
+<!-- PAGE 147 -->
+
+
 Requirements for XAI: Safeguard all individuals (i.e., global scale) from unnecessary repetitious investigations, especially when the features and the decision logic do not change substantially between nomination periods.
 
 ## 4.4 Affordances and Constraints of XAI in Social Welfare
@@ -2367,6 +2948,10 @@ Given that the model already exists, we are looking for post-hoc interventions, 
 ## B. Erroneous interpretation of outcomes
 
 This problem is arguably most directly relevant to the interests of XAI research as it relates to the explanation of the decision logic. Several solutions could meet the needs of decision makers. First, they could simplify the model with global surrogates, but this approach is counterproductive in that an explanation can never be completely faithful to the original model [ 46], bringing into question the utility of a non-explainable model in the first place. Second, they could evaluate the interactions of features with techniques such as partial dependence plots [ 18]; however, with 315 features, they are again only able to consider a small subset of all potential interactions. Third, they could focus on the instances with the strongest influence of the model (e.g., prototypes and criticisms [ 26]). Although such approaches do not explain the decision logic, they may uncover instances that require special attention from model operators, such as vulnerable groups. These three options cover all forms of results described in the taxonomy of [ 49].
+
+
+<!-- PAGE 148 -->
+
 
 We also look at explainability towards benefit recipients. XAI research typically points to counterfactual explanations (CEs) as a way to help non-experts understand the grounds of decisions and act upon them [ 53, 54]. However, when we evaluate the utility of CEs for the Rotterdam model, we observe, e.g., that the algorithm of [ 54] produces highly impractical CEs that impact up to 70 features.
 
@@ -2382,6 +2967,10 @@ Although the handling of complaints is again an organizational process, XAI inte
 
 The requirements for this setting do not fit neatly into the taxonomy of [ 49] because they generally require an intervention on the model rather than an explanation of its decisions, which already suggests that XAI solutions may be unhelpful here. Still, we reason about this scenario more broadly to decide on the value of some related approaches. First, the municipality could further decouple predictions from decisions [ 51] by introducing an alternative, stricter classification threshold for individuals who have been previously re-evaluated, which would discourage the repeated nomination of benefit recipients. Still, moving thresholds does not safeguard individuals whose features spuriously lead to high risk scores, and a more transparent administrative solution would be simpler and preferred for accountability reasons. Second, the municipality could introduce small random perturbations into the dataset to counteract the problem of stable input features leading to the same outputs. However, unless explicitly framed as adversarial examples [ 21], random noise would not predictably impact the predictions. The adversarial examples approach is counterproductive as it entails a situation where decision-makers are attempting to fool their own model. Furthermore, both solutions increase complexity in this scenario, defeating the purpose of an explainable approach. Thus, ultimately, XAI solutions cannot meaningfully address this challenge and the interventions must occur at different stages of the process. For example, decision-makers could evaluate the frequency of investigations as part of human-in-the-loop filtering (which was in
 
+
+<!-- PAGE 149 -->
+
+
 place in Rotterdam). Alternatively, as repeated investigation may remain meaningful if different factors contribute to the two decisions, the municipality could retrain its model on different subsets of features every year. Although feature selection was part of the pipeline, we were unable to establish to what extent the decision-makers modified the features year-to-year.
 
 ## 5 Discussion
@@ -2396,6 +2985,10 @@ We identified five scenarios related to the use of a risk profiling model that c
 
 Our case study empirically demonstrates the need to shift 'from explainable algorithms to explainable processes' and 'from an instrumental to an institutional approach' previously recognized by [ 13]. The authors formulated seven general strategies for policy-makers to improve the acceptance of XAI methods; we postulate that these extend to practitioners who are ultimately responsible for the operations of any system and to researchers who should be aware of the affordances and limitations of their contributions. This work is a step towards operationalizing the strategies of [ 13] through an effective method to reason about the value of XAI interventions in (and tailor them to) specific domains.
 
+
+<!-- PAGE 150 -->
+
+
 ## 5.2 Explainable AI in Other Contexts
 
 Naturally, our findings are context-specific: potential hazards are functions of the actors, technologies, and processes involved in a system. We explain why many hazards related to ADM systems can never be reasonably mitigated with technical XAI interventions, but reliably generalizing these findings requires, e.g., repeated analyses in different decision-making systems. Still, our work showcases the applicability of system-theoretic process analysis (STPA) to reason about the potential hazards, the value of XAI solutions, and their limitations in a granular and systematic manner. Promoting these values makes our approach an effective complement to and extension of simpler (in application) auditing tools such as the Oracle Test [ 11]. Future work may take up these implications to inform sociotechnical and system-theoretic approaches for integrating XAI techniques.
@@ -2407,6 +3000,10 @@ Finally, we recognize that tools of system safety are themselves not neutral [ 1
 ## 5.3 Limitations of the Current Work
 
 We must stress three limitations of this work. First, we evaluate an 'external' case without the involvement of its owners. As our request for an interview with the experts from the Rotterdam W&amp;I department was not accepted, our analyses fully rely on evidence from high-quality publicly available sources. This should not impact the validity of our arguments in a significant way, but it means that the decision-making system depicted in this work may be a simplification of reality. Second, relatedly, our analysis is not fully objective. This is a common shortcoming of STPA-like approaches because they necessitate certain design decisions [ 44]. For example, the analyst must decide on the system boundary, the
+
+
+<!-- PAGE 151 -->
+
 
 relevant interactions between components, or the scenarios of inadequate control. We make our best effort to motivate all of these choices, but it is possible that other authors would arrive at slightly different conclusions. Finally, we decide to follow the taxonomy of [ 49] to reason about XAI interventions because it was developed as a comprehensive reinterpretation of earlier efforts. Nevertheless, as also recognized by the author, different (forms of) analyses may be best served by different taxonomies, and other choices were possible.
 
@@ -2425,6 +3022,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 3. Algorithm Audit: Risk Profiling for Social Welfare Re-examination. Problem statement. Technical report AA:2023:02:P, Algorithm Audit (2023)
 4. AlgorithmWatch: how Dutch activists got an invasive fraud detection algorithm banned (2020). https://algorithmwatch.org/en/syri-netherlands-algorithm/. Accessed 20 Jan 2025
 5. Altmeyer, P., Farmanbar, M., van Deursen, A., Liem, C.C.S.: Faithful model explanations through energy-constrained conformal counterfactuals. In: Proceedings of the AAAI Conference on Artificial Intelligence, vol. 38, no. 10 (2024). https://doi. org/10.1609/aaai.v38i10.28956
+
+
+<!-- PAGE 152 -->
+
 
 6. Araujo, T., Helberger, N., Kruikemeier, S., de Vreese, C.H.: In AI we trust? Perceptions about automated decision-making by artificial intelligence. AI Soc. 35 (3) (2020). https://doi.org/10.1007/s00146-019-00931-w
 7. Braun, J.C., Constantaras, E., Aung, H., Geiger, G., Mehrotra, D., Howden, D.: Suspicion Mach. Methodol. (2023). https://www.lighthousereports.com/ methodology/suspicion-machine/. Accessed 20 Jan 2025
@@ -2446,6 +3047,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 23. Hasan, S.: Governance and public administration. In: Global Encyclopedia of Public Administration, Public Policy, and Governance. Springer, Cham (2018). https:// doi.org/10.1007/978-3-319-31816-5\_1820-1
 24. Heikkilä, M.: Dutch scandal serves as a warning for Europe over risks of using algorithms (2022). https://www.politico.eu/article/dutch-scandal-serves-asa-warning-for-europe-over-risks-of-using-algorithms/. Accessed 20 Jan 2025
 
+
+<!-- PAGE 153 -->
+
+
 25. Hoger Onderwijs Persbureau: Government apologises for discrimination by DUO in fraud detection (2024). https://www.cursor.tue.nl/en/news/2024/maart/week1/government-apologises-for-discrimination-by-duo-in-fraud-detection/. Accessed 20 Jan 2025
 26. Kim, B., Khanna, R., Koyejo, O.: Examples are not enough, learn to criticize! criticism for interpretability. In: Proceedings of the 30th International Conference on Neural Information Processing Systems. Curran Associates Inc., Red Hook, NY, USA (2016)
 27. Kudina, O., van de Poel, I.: A sociotechnical system perspective on AI. Mind. Mach. 34 (3) (2024). https://doi.org/10.1007/s11023-024-09680-2
@@ -2466,6 +3071,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 42. Rekenkamer Rotterdam: gekleurde technologie. verkenning ethisch gebruik algoritmes. Technical report, Rekenkamer Rotterdam (2021)
 43. Rieder, B., Hofmann, J.: Towards platform observability. Internet Policy Rev. 9 (4) (2020). https://doi.org/10.14763/2020.4.1535
 
+
+<!-- PAGE 154 -->
+
+
 44. Rismani, S., Dobbe, R., Moon, A.: From Silos to Systems: Process-Oriented Hazard Analysis for AI Systems (2024). https://arxiv.org/abs/2410.22526
 45. Rizk, A., Lindgren, I.: Automated decision-making in the public sector: a multidisciplinary literature review. In: Electronic Government. Springer, Cham (2024). https://doi.org/10.1007/978-3-031-70274-7\_15
 46. Rudin, C.: Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nat. Mach. Intell. 1 (5) (2019). https://doi.org/10.1038/s42256-019-0048-x
@@ -2480,6 +3089,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 55. Weidinger, L., et al.: Sociotechnical Safety Evaluation of Generative AI Systems (2023). https://arxiv.org/abs/2310.11986
 56. Wieringa, M.: Municipalities Enacting Algorithms: A Typology of Dutch Municipal Strategies for Leveraging Algorithmic Systems, chap. 1, pp. 19-41. Springer, Cham (2025). https://doi.org/10.1007/978-3-031-84748-6\_2
 57. Zacharias, J., von Zahn, M., Chen, J., Hinz, O.: Designing a feature selection method based on explainable artificial intelligence. Electron. Markets 32 (4) (2022). https://doi.org/10.1007/s12525-022-00608-1
+
+
+<!-- PAGE 155 -->
+
 
 <!-- image -->
 
@@ -2503,6 +3116,10 @@ Abstract. The growing  complexity  of  public sector governance  in the digital 
 
 Keywords: co-creation · public  sector · AI · ethics · sustainability · evidence-based  decision-making · competencies
 
+
+<!-- PAGE 156 -->
+
+
 ## 1 Introduction
 
 Digital  technologies  are  reshaping  how  governments  interact  with  citizens  and  deliver services,  creating  new  opportunities  for  responsiveness,  transparency,  and  citizen  participation [1, 2]. Across  Europe  and  beyond,  the public sector is shifting  from  topdown  service  delivery  to  more  collaborative  governance  models,  where  citizens  are  seen not  only  as  recipients  but  as  active  contributors  to  public  service  design  [3].  This  has sparked  growing  interest  in  co-creation  -  multi-actor  processes  that  involve  stakeholders throughout  the  design,  implementation,  and  evaluation  of  public  policies  [4,  5].  However,  in  practice,  co-creation  is  often  fragmented,  and  limited  to  consultation  or  basic communication.  Simultaneously,  there  is  increasing  pressure  for  policy  to  be  evidencebased  and  data-informed  [6].  The  rise  of  digital  data  and  AI-enabled  tools  has  expanded opportunities  for  innovation,  but  also  introduced  challenges,  including  algorithmic  bias, ethical  risks,  and  concerns  about  transparency  and  public  trust  [7].  Addressing  these issues  requires  a  redefinition  of  public  sector  competencies,  with  stronger  emphasis  on inclusiveness,  responsibility,  and  interdisciplinary  skills  [8].
@@ -2517,6 +3134,10 @@ We  conducted  a  qualitative  and  text-mining  analysis  of  public  sector  j
 
 With  growing  societal  complexity,  increasing  citizen  expectations,  and  limited  public resources,  public  sector  organizations  (PSOs)  face  mounting  pressure  to  improve  the quality, inclusiveness, and responsiveness of public services [1, 2]. Traditional topdown  models  of  service  delivery  are  no  longer  sufficient.  Instead,  public  administrations
 
+
+<!-- PAGE 157 -->
+
+
 are  undergoing  a  paradigm  shift  that  views  citizens  not  merely  as  service  recipients, but  as  active  participants  in  shaping  policies  and  co-producing  services  [10-12].  This shift  has  led  to  growing  interest  in co-creation processes  -  multi-actor  collaborations that  span  all  stages  of  policy  and  service  development,  from  co-commissioning  to  codesign,  co-delivery,  and  co-assessment  [3].  While  these  participatory  approaches  are gaining  traction,  they  also  raise  important  ethical  and  social  concerns.  Power  asymmetries,  unequal  access  to  digital  tools,  and  differences  in  stakeholder  capabilities  may  limit who  can  participate  and  how  [13,  14].  Meaningful  inclusion,  particularly  of  vulnerable groups,  remains  a  key  challenge,  as  does  the  need  to  ensure  fairness,  transparency,  and legitimacy  in  collaborative  processes.
 
 At  the  same  time,  policy  decisions  are  increasingly  expected  to  be evidence-based . The  growing  availability  of  data,  from  administrative  records  to  citizen-generated  content,  offers  new  opportunities  to  inform  public  decision-making.  Yet  the  ability  to  analyze  and  meaningfully  interpret  such  data  requires  new  institutional  capacities,  including digital  literacy,  data  governance,  and  analytical  expertise  [6,  15].  Parallel  to  this, sustainability has  become  a  core  public  value.  It  is  no  longer  limited  to  environmental  issues but  encompasses  economic,  institutional,  and  social  dimensions  of  resilience  and  longterm  impact.  In  this  sense,  sustainability  requires  not  only  outcomes  that  endure  over time,  but  also  participatory  and  adaptive  processes  that  align  with  the  needs  of  diverse communities  [16-18].
@@ -2527,6 +3148,10 @@ A  significant  driver  of  transformation  is  the  integration  of  digital  t
 
 Poland  and  Ukraine  were  selected  for  this  analysis  due  to  the  several  reasons:  1)  their active engagement  in  public sector digital transformation, 2) their distinct positions within  the  broader  European  digital  governance  landscape,  and  3)  deep  familiarity  to  the researchers.  While  Poland  operates  within  established  EU  digital  policy  frameworks,
 
+
+<!-- PAGE 158 -->
+
+
 Ukraine  -  an  EU  candidate  country  -  has  rapidly  advanced  its  digital  agenda.  This  contrast  provides  a  meaningful  basis  for  comparing  how  digital  competencies  and  innovation priorities  evolve  in  centralized  versus  reform-driven  public  administrations  [22,  23].
 
 Digital  transformation  has  accelerated  significantly  in  both  countries,  especially  in public  service  delivery  and  institutional  modernization.  In Ukraine ,  the  introduction  of the  Chief  Digital  Transformation  Officer  (CDTO)  role  in  2020  marked  a  pivotal  shift [24]. As of 2024, 18 regions have appointed  official  CDTOs,  overseeing  more  than 250  digital  transformation  projects,  including  40  planned  for  2024.  Moreover,  90%  of territorial  communities  have  access  to  Administrative  Service  Centers,  and  84%  have introduced  electronic  appeals  [24].  These  advances  are  supported  by  Ukraine's  Digital  Transformation  Index  for  Communities,  which  measures  development  in  five  areas: digital  economy,  skills,  infrastructure,  public  services,  and  local  governance.  Notably, digital  skills  and  public  services  receive  the  highest  weighting  (25%  each),  signaling national  priorities.  Ukraine  has  further  aligned  its  digital  governance  with  EU  benchmarks  through  the  adoption  of  DESI  indicators  based  on  EU  methodology  [25].  These reflect  core  areas  such  as  infrastructure,  skills,  business  digitalization,  and  e-government. Ukraine's  global  standing  in  digital  capabilities  has  risen:  according  to  Coursera's  Global Skills  Report  (2023),  94%  of  its  population  possesses  digital  competencies  [26].  In  the 2024  UN  e-Government  Development  Index,  Ukraine  rose  to  30th  place  globally  (a + 16  improvement  since  2022),  highlighting  rapid  progress.  The  'Diya'  portal  provides citizens  with  access  to  over  130  public  services  online,  which  simplifies  interaction  with public  authorities  and  increases  the  transparency  of  processes.  Thus,  despite  the  military operations  in  Ukraine,  the  Ministry  of  Digital  Transformation,  regional  state  administrations  are  working  to  improve  and  expand  the  range  of  digital  services  provided  to citizens.  In  turn,  Ukrainian  citizens  see  the  need  to  acquire/improve  digital  skills  both for  work  and  everyday  life.
@@ -2534,6 +3159,10 @@ Digital  transformation  has  accelerated  significantly  in  both  countries,  
 Poland ,  has  faced  more  persistent  challenges  in  developing  digital  human  capital. In  2022,  it  ranked  24th  out  of  27  EU  countries  in  DESI  [22],  with  only  43%  of  citizens demonstrating  basic  digital  tool  use  and  57%  possessing  content  creation  skills.  ICT specialists  also  comprise  a  slightly  smaller  portion  of  the  workforce  than  the  EU  average.  While  progress  has  been  steady,  Poland  still  trails  in  cloud  services,  big  data,  and  AI adoption.  Its  digital  public  service  provision  in  2022  remained  below  EU  average  levels, limiting  its  readiness  to  meet  the  Digital  Decade  target  of  100%  online  services  by  2030. Nonetheless,  Poland  is  advancing.  The  Ministry  of  Digitalization  resumed  its  activities in  2023,  followed  by  the  release  of  a  Digitalization  Strategy  targeting  2035  [27].  Goals include  equipping  85%  of  citizens  with  basic  digital  skills,  fully  digitizing  administrative workflows,  and  centralizing  digital  services  through  the  mObywatel  application.  Poland also  signed  a  cybersecurity  cooperation  agreement  with  Ukraine  [28]  and  actively  participates  in  the  EU's  'Digital  Europe'  program  [29].  Open  data  remains  a  national  strength: in  2021,  Poland  ranked  4th  in  the  EU  for  Open  Data  Maturity,  scoring  95%  (EU  average: 81%).
 
 Despite  advances  in  digital  governance  and  service  delivery,  one  critical  area  remains underdeveloped  in  both  countries:  co-creation.  While  public  consultation  and  communication  with  citizens  are  increasingly  promoted,  job  profiles  and  strategic  frameworks seldom  reflect  a  systemic  integration  of  co-creation.  Especially  when  it  intersects  with
+
+
+<!-- PAGE 159 -->
+
 
 AI,  data  science,  and  evidence-based  policymaking.  This  gap  underscores  the  importance  of  investigating  the  interdisciplinary  competencies  needed  to  support  AI-enabled co-creation  in  the  evolving  digital  public  sector.
 
@@ -2550,6 +3179,10 @@ Competency Dimensions - Cross-Cutting Areas of Capability. At the second  level,
 ## 3.2 Data С ollection  Strategy
 
 We  conducted  a two-fold search strategy across three key domains  of public sector transformation. First ,  we  conducted  a  targeted  search  of  job  vacancies,  using  thematic
+
+
+<!-- PAGE 160 -->
+
 
 keyword  sets  for  each  competency  category:  (1)  'public/social  consultation,'  'participation,'  'social  dialogue,'  'co-creation,'  'co-decision,'  and  'policy  development'  related to SE category;  (2)  'digital  services,'  'smart  city,'  'sustainable  development,'  'AI  governance,'  and  'e-government'  related  to DT category;  and  (3)  'artificial  intelligence,' 'data  analytics,'  'computer  science,'  'responsible  AI,'  and  'AI  ethics'  related  to AI and DS category.  In Ukraine ,  these  included  municipal  career  pages,  UN  job  boards,  and online  recruitment  platforms 1 . In Poland ,  we  relied  on  national  recruitment  portals 2 . The  data  collection  period  covered  vacancies  posted  between  2023  and  2025.
 
@@ -2571,6 +3204,10 @@ First ,  to  identify  the knowledge areas embedded  in  the  vacancy  descripti
 
 5 Ukraine\_Job\_Market.
 
+
+<!-- PAGE 161 -->
+
+
 identified  a  set  of  core  knowledge  areas  for  each  country. Second ,  the  identified  knowledge  areas  were  grouped  by  three  experts  into  three  overarching competency categories , reflecting  their  role  in  public  sector  transformation.  This  step  ensured  a  coherent  conceptual  structure  while  acknowledging  overlaps  across  domains. Third ,  to  capture  the higher-order  skills  embedded  in  the  vacancies,  we  extended  the  analysis  to  the  next  four levels  of  Bloom's  taxonomy  apply , analyze , evaluate ,  and create [33].  Skill  phrases were  extracted  by  combining  cognitive  verbs  with  domain-relevant  objects.  These  skill expressions  were  contextually  validated  by  four  experts  through  iterative  review  to  ensure consistency  with  the  job's  stated  responsibilities.  The  result  was  a  set  of  skills  reflecting the  cognitive demands  of  public  sector  innovation  roles. Each  skill  was  tagged  with the  corresponding  Bloom  level  to  assess  the  distribution  of  complexity  and  expected autonomy  in  task  performance. Fourth ,  all  extracted  knowledge  areas  and  skills  were mapped  to  a  conceptual  framework  reflecting  six  co-creation-related  cross-cutting  areas of  capability.  This  thematic  mapping  was  CONDUCTED  manually  by  four  domain experts  who  reviewed  the  extracted  content  and  categorized  each  element  accordingly. Ambiguities  were  resolved  through  consensus,  ensuring  alignment  with  the  analytical framework  introduced  by  [9].  Fifth,  a  comparative  analysis  was  conducted  between  the Polish  and  Ukrainian  datasets  to  identify  similarities,  divergences,  and  country-specific emphasis  within  each  of  the  six  themes.  The  comparison  was  structured  at  two  levels: (1)  the  distribution  and  nature  of  knowledge  areas,  and  (2)  the  diversity  and  cognitive complexity  of  skill  requirements.
 
 ## 4 Results
@@ -2580,6 +3217,10 @@ identified  a  set  of  core  knowledge  areas  for  each  country. Second ,  th
 This  section  answers  the  research  question RQ1. What are the knowledge areas required for AI-enabled co-creation in the public sector? We  conducted  a  detailed  mapping  of the  extracted  knowledge  areas  against  (i)  six  interrelated  competency  dimensions , and (ii) across three competency  categories  (innovation  domains).  In  total, we  identified 87  distinct  knowledge  areas  appearing  at  the  remembering  and  understanding  levels  of Bloom's  taxonomy.  Out  of  these,  49  were  considered core ,  appearing  more  than  once and  with  relevance  in  both  countries'  datasets.  These  were  extracted  through  a  combination  of  keyword-based  annotation,  contextual  expert  coding,  and  cross-validation  of job  description  content.
 
 Based  on  our  analysis,  the  following  distinct  patterns  in  three  competency  categories were  revealed. AI &amp; Data Science . In this category, competencies  related  to AI and EBDM  were  the  most  emphasized  in  both  countries.  In Poland ,  31.4%  of  the  competencies  in  this  domain  were  linked  to  these  two  dimensions  (AI:  9.9%,  EBDM:  8.3%,  L&amp;R: 6.6%).  The  majority  of  roles  focused  on  AI  governance,  data  infrastructure,  visualization  tools,  and  risk  analytics,  underpinned  by  strong  references  to  regulatory  frameworks like  GDPR,  ISO  certification,  and  Open  Data  standards.  In  contrast, Ukraine showed  a slightly  broader  distribution,  with  AI  (8.8%),  EBDM  (7.4%),  and  L&amp;R  (5.1%)  together accounting  for  over  21%  of  all  competencies,  but  also  included  a  greater  emphasis  on practical  implementation  and  automation,  such  as  machine  learning  models,  AI-driven governance,  and  administrative  automation.  Notably,  Ukraine  had  explicit  references  to
+
+
+<!-- PAGE 162 -->
+
 
 co-creation-oriented  AI  use,  including  AI-driven  citizen  participation  tools  and  stakeholder workshops,  which  were  not  observed  in  Polish job descriptions. Shared  core knowledge  areas  include:  data  analytics,  AI  governance,  regulatory  frameworks,  and data  protection.
 
@@ -2595,6 +3236,10 @@ Table  1. Core  knowledge  areas  for  AI-enabled  co-creation  in  the  public 
 |       | E     | Responsible AI, ethical data practices | AI ethics and bias mitigation; AI transparency regulations; Fairness and responsible AI practices |
 
 ( continued )
+
+
+<!-- PAGE 163 -->
+
 
 Table 1. ( continued )
 
@@ -2613,6 +3258,10 @@ Table 1. ( continued )
 
 ( continued )
 
+
+<!-- PAGE 164 -->
+
+
 Table 1. ( continued )
 
 | Cat   | Dim     | Poland                                                                                                           | Ukraine                                                                                                                       |
@@ -2630,6 +3279,10 @@ Figure  1  presents  the  distribution  of  core  knowledge  areas  across  the 
 
 7 Co-creation,  AI,  Evidence-based  decision-making,  Ethics,  Sustainability,  and  Legal  &amp;  regulation.
 
+
+<!-- PAGE 165 -->
+
+
 exhibited  a  narrower  internal  structure.  While  competencies  related  to  AI  governance, data  infrastructure,  and  regulatory  compliance  were  common,  the  dimensions  of  Cocreation,  Sustainability,  and  Ethics  were  sparsely  addressed.  This  fragmentation  points to  a  prevailing  disconnect  between  AI  innovation  and  participatory  design:  AI-related roles  tended  to  focus  on  automation,  cybersecurity,  or  compliance,  while  participatory roles  lacked  digital  or  data-driven  components.
 
 Fig.  1. Distribution  of  the  competency  categories  across  countries
@@ -2644,6 +3297,10 @@ The Co-creation dimension  accounted  for  24%  of  all  identified  skills.  Wi
 
 8 Link Skills  Dimensions  Poland  Ukraine.
 
+
+<!-- PAGE 166 -->
+
+
 development. Ethics contributed  10%  of  total  skills.  Most  skills  were  concentrated  at the  Apply  (50%)  and  Analyze  (33.3%)  levels,  dealing  with  fairness,  data  protection,  and inclusive  governance.  Evaluate  (16.7%)  level  tasks,  such  as  assessing  bias  or  ethical  standards  in  AI,  were  more  common  in  Ukrainian  roles. Evidence-based decision-making was  the  most  cognitively  diverse  category,  comprising  22%  of  all  skills.  Nearly  half  of the  tasks  (45.5%)  spanned  all  three  levels  -  Analyze,  Evaluate,  and  Apply  -  including data  reporting,  impact  analysis,  and  performance  monitoring.  Create  skills  (9.1%)  were observed  in  predictive  analytics  and  strategy  design.  The Sustainability category  made up  12%  of  identified  skills.  Most  activities  were  distributed  across  Analyze  (35.7%)  and Evaluate  (35.7%)  levels,  such  as  ESG  assessments,  environmental  planning,  and  compliance  auditing.  Create  (14.3%)  and  Apply  (14.3%)  tasks  were  less  frequent  but  appeared in  climate  policy  development  and  implementation. AI represented  15%  of  skills,  with high-level  cognitive  engagement.  Create-level  competencies  appeared  in  33.3%  of  AIrelated  tasks  (e.g.,  designing  AI  governance  models),  while  Analyze  (33.3%)  and  Evaluate  (22.2%)  covered  system  monitoring,  cybersecurity,  and  compliance.  Apply  level skills  (11.1%)  included  basic  AI  deployment  and  data  management.  Lastly, Legal &amp; Regulation accounted  for  17%  of  all  identified  skills.  The  majority  of  tasks  fell  within the  Analyze  (41.2%)  and  Evaluate  (35.3%)  levels  -  compliance  review,  legal  analysis, and  monitoring.  A  smaller  share  (11.8%)  was  required  to  Apply,  and  only  11.8%  reached the  Create  level,  where  drafting  legal  frameworks  and  policy  documents  was  expected.
 
 Table 2 presents the consolidated  list of skills for AI-enabled  co-creation  in the public  sector,  derived  from  job  vacancies  in  Poland  and  Ukraine  and  categorized  under six  competency  dimensions  (Dim.).  Each  skill  is  mapped  against  four  cognitive  levels from  Bloom's  taxonomy  [33]  to  reflect  the  complexity  of  tasks  associated  with  each competency  [34].  Skills  sharing  identical  combinations  of  cognitive  levels  within  the same  competency  dimension  were  grouped  into  single  cells.
@@ -2656,6 +3313,10 @@ Table  2. AI-enabled  co-creation  in  public  sector  skills
 |             | Designing and conducting participatory processes; Communicating policy and digital strategies; Promoting civic involvement; Facilitating co-decision making; Supporting consultations and community cooperation | x       | x         |            |          |
 
 ( continued )
+
+
+<!-- PAGE 167 -->
+
 
 Table 2. ( continued )
 
@@ -2678,6 +3339,10 @@ Table 2. ( continued )
 |             | Consulting and planning for environmental sustainability in urban development                                                                                                                                                                                       |         | x         | x          | x        |
 
 ( continued )
+
+
+<!-- PAGE 168 -->
+
 
 Table 2. ( continued )
 
@@ -2703,6 +3368,10 @@ Table 2. ( continued )
 
 This  section  answers  the  research  question RQ3. What job roles reflect the demand for interdisciplinary competencies in AI-enabled co-creation? To  complement  the  analysis
 
+
+<!-- PAGE 169 -->
+
+
 of  knowledge  areas  and  skill  dimensions,  we  examined  the  range  and  diversity  of  public  sector  job  positions  associated  with  each  of  the  three  core  competency  categories. Importantly,  the  job  positions  were  derived  using  two  complementary  approaches:  (1) directly advertised  job  vacancies,  collected  from  official  national  and  city-level  recruitment  platforms  in  Poland  and  Ukraine;  (2) inferred roles  based  on  the  functional  mandates  of  relevant  departments,  as  described  on  institutional  websites  and  administrative structures  (e.g.,  departments  dedicated  to  social  participation,  public  consultations  and co-decision  with  residents,  or  cooperation  with  residents).  The  summary  of  job  positions is  part  of  the  supplementary  material 9 .
 
 The distribution of job positions across competency categories reveals distinct country-specific  trends  (see  Fig.  2).  In Poland ,  Societal  Engagement  dominates  (66%), reflecting  an  institutional  emphasis  on  participatory  governance,  civic  dialogue,  and  cocreation.  However,  a  significant  portion  of  roles  within  this  category  were  inferred  from departmental  scopes  and  mandates  rather  than  identified  through  explicitly  advertised job postings. Moreover,  these  departments  are  often concentrated  in  central  municipal  structures,  such  as  city  halls  of  major  urban  areas.  In  contrast, Ukraine presents  a more  balanced  distribution,  with  Societal  Engagement  (42%)  and  Digital  Transformation (40%)  playing  nearly  equal  roles,  and  AI  &amp;  Data  Science  slightly  higher  than  in  Poland (18%).  Notably,  many  of  Ukraine's  Societal Engagement  job  titles, such as  specialists  in  information  support,  citizen  appeals,  and  digital  service  coordination,  emphasize communication,  administrative  processing,  and  technical  facilitation  of  digital  public services.
@@ -2712,6 +3381,10 @@ The  compiled  job  roles  were  grouped  under  three  main  categories,  enabl
 Societal Engagement. This  category  presented  the  broadest  and  most  diverse  spectrum  of  roles  in  both  countries.  Such  roles  ranged  from  public  consultation  and  civic engagement  to sustainable urban development  and  social  communication,  including positions  such  as  Specialist  in  Strengthening  Local  Community,  Participation  and  Dialogue  Specialist,  and  Social  Projects  Specialist.  Many  roles  explicitly  referenced  interdisciplinary  coordination,  citizen  participation,  and  policy-related  cooperation  with  NGOs. In Ukraine ,  job  titles  within  this  domain  focused  more  on  administrative  service  provision,  citizen  information  access,  and  regulatory  monitoring.  Examples  include  Inspector of  the  Appeals  Processing  Department,  Administrator  of  the  Administrative  Services Center,  and  Governance  and  Services  Expert.  A  subset  of  roles,  such  as  Senior  ESG Consulting  Expert  and  Senior  Sustainability  Consultant.
 
 9 Job\_Positions\_Poland\_Ukraine.
+
+
+<!-- PAGE 170 -->
+
 
 Digital Transformation. This  category  exhibited  the  highest  degree  of  overlap  between countries  in  terms  of  both  technical  and  managerial  roles.  In Poland ,  a  variety  of  positions  linked  to  Smart  City  development,  digital  product  management,  and  e-Government systems  were  present.  Examples  included  Smart  City  Projects  Specialist,  Digital  Services  Implementation  Specialist,  and  Coordinator  of  the  Digital  Services  Development Team. Ukraine's job  roles  showed  a  similarly  high  concentration  of  positions  related  to  IT infrastructure,  automation,  and  digital  service  delivery.  Job  titles  such  as  Chief  Specialist of  Digital  Transformation  and  Information  Support,  Head  of  the  Digital  Transformation Department,  and  GovTech  Full  Stack  Developer  indicate  a  national-level  investment  in digital  capacity  building  and  IT  modernization.
 
@@ -2725,6 +3398,10 @@ This  study  aimed  to  explore  how  interdisciplinary  competencies  required 
 
 The  study contributes to the emerging  literature on public sector  transformation and interdisciplinary capacity building by operationalizing the notion of  AI-enabled co-creation  through  a  structured  framework.  Drawing  on  a  previous  conceptual  model [9],  we  advanced  the  understanding  of  how  interconnected  areas  -  such  as  ethics,  legal
 
+
+<!-- PAGE 171 -->
+
+
 compliance,  and  sustainability  -  interact  with  AI  and  citizen  engagement  within  the public  sector  ecosystem.  Responding  to  RQ1  ' What knowledge areas are required for AI-enabled co-creation in the public sector? ',  several  critical  gaps  were  identified:  (1) disjointed  representation  of co-creation competencies,  when  many  postings  referenced tasks  like  communication  or  consultation  but  rarely  used  terms  such  as  'co-creation'  or 'co-decision';  (2)  while  technical AI and  data  roles  were  present,  integration  with  public participation  or  ethics  was  nearly  absent;  (3) legal and ethical competencies  appeared inconsistently  and  were  often  isolated  from  digital  or  AI  contexts,  typically  framed  as compliance  rather  than  proactive  governance  design;  (4) sustainabilityrelated  competencies  were  visible  in  areas  like  energy  efficiency  or  urban  planning,  but  sustainability rarely  appeared  as  an  integrated,  cross-cutting  concern  across  digital  or  participatory roles.
 
 Responding  to  RQ  2  ' What types of interdisciplinary skills are expected, and how are they distributed across cognitive levels? '  this  study  o  offers  a  methodological  contribution  by  proposing  an  approach  to  identifying  interdisciplinary  competencies  required for  AI-enabled  co-creation  in  the  public  sector.  This  study  introduces  a two-dimensional taxonomy for  analyzing  interdisciplinary  public  sector  competencies.  The  first  dimension  reflects  three  transformative  domains  central  to  contemporary  public  administration:  Societal  Engagement,  Digital  Transformation,  and  AI  &amp;  Data  Science.  The  second dimension  draws on the conceptual model  of AI-enabled co-creation, identifying  six  competency  areas  foundational  to  evidence-based  policymaking:  Co-Creation, Ethics,  Evidence-Based  Decision-Making,  Sustainability,  AI,  and  Legal  &amp;  Regulation. Responding  to  RQ  3  ' What job roles reflect the demand for interdisciplinary competencies in AI-enabled co-creation? 'we  applied  a  two-way  data  collection  strategy  that combined  (1) direct analysis  of  job  vacancies  and  (2) interpretive analysis  of  department descriptions  from  public  sector  institutions.  This  allowed  us  to  capture  both  explicitly stated  roles  and  more  latent,  context-embedded  competencies.
@@ -2732,6 +3409,10 @@ Responding  to  RQ  2  ' What types of interdisciplinary skills are expected, an
 Our  research  provides  a practical contribution by  informing  both  recruitment  practices  and  curriculum  development:  (i)  for  public  sector  employers,  the  findings  underscore  the  need  to  move  beyond  task-based  job  descriptions  and  explicitly  articulate  competencies  related  to  co-creation,  such  as  stakeholder  engagement,  participatory  design, and  data-informed  collaboration;  (ii)  for  educational  institutions,  the  study  highlights critical  yet  underrepresented  areas  in  existing  public  administration  and  digital  governance  study  programs.  These  include  the  integration  of  AI  tools  in  participatory  processes,  the  legal  and  ethical  frameworks  for  co-designed  services,  and  the  use  of  data science  to  support  inclusive,  evidence-based  policymaking.
 
 Future  research can expand  this approach  in  several directions: (1) applying  the same  methodology  in  other  EU  countries  could  help  develop  a  more  comprehensive competency  map  for  digital  governance;  (2)  surveys,  interviews  or  workshops  with  hiring departments  would  deepen  understanding  of  why  certain  skills  are  (or  are  not)  featured in  job  postings,  and  how  interdisciplinary  tasks  are  actually  performed  in  practice;  (3) building  on  the  gaps  identified  here,  future  work  could  propose  and  evaluate  educational interventions  that  better  integrate  AI,  ethics,  and  participation  into  public  administration training.
+
+
+<!-- PAGE 172 -->
+
 
 Acknowledgments. This  work  was  supported  by  the  European  Union  through  the  Erasmus+ Programme,  under  the  project  AICOSERV  (AI  Technologies  for  Sustainable  Public  Service  CoCreation).  Project  No.  101180346,  funded  by  the  European  Education  and  Culture  Executive Agency  (EACEA).
 
@@ -2753,6 +3434,10 @@ Acknowledgments. This  work  was  supported  by  the  European  Union  through  
 14. Jobin,  A.,  Ienca,  M.,  Vayena,  E.:  'The  global  landscape  of  AI  ethics  guidelines,' Nat Mach Intell ,  vol.  1,  no.  ,  (2019).  ,  https://doi.org/10.1038/s42256-019-0088-2
 15. Misuraca,  G.,  Barcevicius,  E.,  Codagnone,  C.:  Exploring  Digital  Government  Transformation in  the  EU  -  Understanding  Public  Sector  Innovation  in  a  Data-Driven  Society  (2020)
 
+
+<!-- PAGE 173 -->
+
+
 16. Jaspers,  S.,  Steen,  T.:  The  sustainability  of  outcomes  in  temporary  co-production.  Int.  J.  Public Sect.  Manag. 33 ,  62-77  (2019)
 17. Thomsen,  C.: 'Sustainability (world commission on environment and development definition)', in Encyclopedia  of  Corporate  Social  Responsibility , pp. 2358-2363. Springer, Heidelberg  (2013)
 18. United  Nations,  'THE  17  GOALS  |  Sustainable  Development.  Accessed  13  Feb  (2024). [Online].  Available:  https://sdgs.un.org/goals
@@ -2773,7 +3458,15 @@ Acknowledgments. This  work  was  supported  by  the  European  Union  through  
 33. Bloom,  B.  S.:  'Taxonomy  of  educational  objectives:  The  classification  of  educational  goals. In: New York: Longmans, Green (1956)
 34. Ciesielska,  M.,  Rizun,  N.,  Janowski,  T.:  Interdisciplinarity  in  smart  sustainable  city  education: Exploring  educational  offerings  and  competencies  worldwide.  In: Proceedings of the Annual HawaiiInternational Conference on System Sciences ,  vol.  2020-Janua,  pp.  2434-2443  (2021). https://doi.org/10.24251/hicss.2021.299
 
+
+<!-- PAGE 174 -->
+
+
 ## Governance,  Collaboration,  and  Policy Alignment
+
+
+<!-- PAGE 175 -->
+
 
 ## Untangling  the  Digital  Governance Landscape  of  the  European  Union:  A Framework  and  Application  to  Digital Technologies
 
@@ -2799,6 +3492,10 @@ The mass adoption of digital technologies has expanded the possibilities for the
 
 <!-- image -->
 
+
+<!-- PAGE 176 -->
+
+
 We use the definition of governance as formulated by the United Nations [ 52]: 'the exercise of political and administrative authority at all levels to manage a country's affairs'. Digital  governance , then, refers to the governance of information and communication technologies and their ability to automate control, coordination, incentives and trust, specifically [ 23].
 
 Social media platforms, artificial intelligence, online identity, and the metaverse are recent examples that require us to rethink and (re-)design policy interventions for governance. That is given that the ubiquitous nature of the digital world has 'created new ways in which human societies produce and distribute risk, and introduced new forms of incalculable uncertainties into everyday life' [ 8]. Generative AI is a paradigmatic case in the list of digital technologies that challenges our societies and economies to their core [ 14]. In addition to the emergence of new technologies, complexity in digital policy making has increased as a result of present geo-political pressures.
@@ -2813,6 +3510,10 @@ This paper is structured as follows. Section 2 introduces the state of the art r
 
 In the literature, the term governance gained prominence towards the end of the twentieth century. The common usage of the term comes from its application 'to a wide range of issues, relationships, and institutions' [ 52]. Conceptually, Pierre and Peters [ 42] distinguish between definitions that are society-, State-, and organisation-centric. Within the scope of this work, we take the broad
 
+
+<!-- PAGE 177 -->
+
+
 conceptualisation introduced by the United Nations [ 52] and primarily focus on the State-centric view that asserts the state as playing a 'leading role, making priorities and defining objectives'. Effectively, governance as the notion that the state is 'steering' both society and economy through legislation, financing, standards, diplomacy, stakeholder engagement, etc. [ 41]. In that sense, this paper does not focus on how the government uses technology or how it interacts with citizens using technology.
 
 The digital transformation has brought with it ample opportunities for economic growth. However, and in particular when faced with disruptive technological assemblages, the 'digital' comes with a heightened degree of uncertainty and risk [ 5, 8]. When looking to govern the symptoms caused by disruption, the ability to respond and adapt -both in terms of time and available interventions -is pivotal [ 28]. The State, in the face of continuous waves of technological disruption, may be facing a Sisyphean task. The stakes are high: failure to govern the digital transformation jeopardises public trust, resilience, and societal cohesion [ 9, 34, 50]. As a consequence, scholars have dedicated themselves to the topic of digital governance (DG) at varying levels of analytical depth and in adopting different epistemologies.
@@ -2825,6 +3526,10 @@ Yet both the potential and the risks of digital technologies are subject to inte
 
 Moving away from geopolitics and the actor-centred perspective, Dawes [ 11] take a socio-technical systems approach to DG in order to highlight the dynamic interplay between society, technology, and government. They present a framework that accounts for evolving infrastructures, information management, and
 
+
+<!-- PAGE 178 -->
+
+
 stakeholder interactions, which comes closer to our endeavour than most of the existing work on DG, as their framework is not restricted to just one specific technology. Notably, their work critiques the dominant instrumental focus of DG, which emphasizes efficiency and technical systems, by calling for more normative, value-oriented approaches that address the societal purpose and institutional complexity of digital governance, which similarly aligns with our approach. This paper, however, now over 15 years old, rather predates current developments in EU-level regulation and lacks engagement with the state-led governance efforts that we know in the EU. Our work builds on this foundational perspective by examining how contemporary digital governance strategies in the European context can be understood by taking into account both technological development, democratic values and societal objectives.
 
 As mentioned above, there is also a solid body of academic literature that does take into account the perspectives of technological development, democratic values and societal objectives but rather focuses on one specific technology. For completeness, we will outline some if this work in the following. The first set of literature, for instance, considers AI. Here, Wirtz et al. [ 57] propose a risk-based model to DG that links risks to corresponding mitigation guidelines. Effectively, their view treats DG of AI as a structured risk management process. Attard-Frost et al. [ 3] take a policy-analysis approach and provide a semi-systematic assessment of existing Canadian AI DG initiatives. Their work maps the distribution of DG efforts across different sectors, identifying a focus on innovation, research, and public administration. Their analysis highlights gaps and imbalances in DG priorities, and identifies areas where further interventions are needed.
@@ -2836,6 +3541,10 @@ Existing approaches tend to be narrow in scope focusing on a single digital tech
 ## 2.2 Research  Gap
 
 What our review of related works further revealed to us are two recurring themes in DG that further motivate our research: increasing fragmentation
+
+
+<!-- PAGE 179 -->
+
 
 [ 7, 39], and growing complexity [ 7, 29, 39]. These two themes are complemented with the expectation that additional digital technologies will constantly emerge and require a dynamic take on DG.
 
@@ -2851,6 +3560,10 @@ Phase I (Conceptualisation). As a starting point for our framework, we conceptua
 
 Phase II (Development). The framework development process - and the identification of dimensions plus respective characteristics - parallels that of a typology or taxonomy [ 4]. Three consecutive steps were followed:
 
+
+<!-- PAGE 180 -->
+
+
 1. Generation : The first iteration of the framework was generated in a workshop ( W 1 , January 2025) consisting of eight participants from the Platform Applied ICT Research (PRIO). The basis of the workshop was the policy analysis conducted previously. Workshops are commonly used for inductive research [ 40, 49]. The output of the workshop was consensus on the three dimensions of DG; pillars, intervention levels, and digital technologies.
 2. Iteration : After W 1 , a set of three open-ended interviews [ 43] was conducted with governance and regulation experts of the Dutch Organisation for Applied Scientific Research (TNO). Interviews with experts -considered as agents with implicit and factual knowledge -are typically consulted in inductive research [ 36]. Extensive notes were taken for each of the interviews. The second workshop ( W 2 , February 2025), consisting of five participants from the Dutch Research Council (NWO), was used to identify and agree upon the exact elements (characteristics) of each dimension. In this step, to iterate upon and challenge the framework in-development, amongst authors we repeatedly met until reaching consensus over the final framework [ 32].
 3. Validation : We validated the framework with a second set of open-ended interviews [ 43]. They were conducted with one civil servant from the Dutch Ministry of Education, Culture &amp; Science (OCW) and a policy advisor.
@@ -2864,6 +3577,10 @@ Phase  IV  (Evaluation). The open-ended interviews [ 43] with the civil servant 
 ## 4 Three  Dimensional  Framework
 
 The framework we propose to map DG interventions features three dimensions with respective characteristics. The interventions can be mapped onto a landscape in terms of x-y-z coordinates along three axes such that:
+
+
+<!-- PAGE 181 -->
+
 
 - x: We consider four pillars of DG; values-driven and responsible, sovereignty and strategic autonomy, competitiveness and growth, as well as sustainability.
 - y: We consider three categories of interventions to DG; notably, strategies, legislation, and instruments.
@@ -2881,6 +3598,10 @@ Second, DG can be motivated by desires of increased sovereignty and the need for
 
 Third, and related to the former pillar, DG is tied to innovation, competitiveness, and (regional) development. Robust governance of digitalisation (along with active institutions) acts as stimulus for growth [ 33]. This involves not only regulating the digital market to ensure fair competition but also investing in
 
+
+<!-- PAGE 182 -->
+
+
 skills, human capital, and innovation capacities [ 15]. By doing so, regions can become fertile grounds for entrepreneurship, attracting investments and talent -ultimately, nurturing competitiveness and contributing to regional development [ 35]. Most recently, this aspect of DG was discussed by Mario Draghi [ 12].
 
 Fourth, DG considers sustainability in relation to the digital transformation. As the digital world expands, so does its environmental footprint and the use of natural resources. DG must include strategies for minimizing the ecological impact of technology [ 25]. This could involve promoting energy-efficient data centres, encouraging the recycling and responsible disposal of electronic waste, and supporting the development of green information and communication technologies [ 31, 38]. By addressing these issues, DG can help ensure that the digital transformation is environmentally sustainable.
@@ -2895,6 +3616,10 @@ On the highest level we feature strategies. In the EU, these are set every five 
 
 There are a multitude of digital technologies at which policy interventions are targeted. These can be mapped on the z-axis. For Phase III - Application, we consider AI, DLT, and digital identity.
 
+
+<!-- PAGE 183 -->
+
+
 AI uses algorithms and vast amounts of data to recognize patterns, automate processes, and enhance efficiency in various industries, including healthcare, finance, and customer service [ 13]. Digital identity refers to the online representation of an individual, organization, or device, consisting of unique identifiers such as usernames, biometrics, cryptographic keys, and personal data [ 56]. DLT is a technology that records transactions securely and transparently across multiple nodes. Each block in the chain contains a cryptographic hash of the previous block, making it tamper-resistant and highly secure [ 30]. As digital technologies, each of these are on the agenda of the European Union and part of the digital governance ambitions.
 
 ## 5 Application  to  the  European  Union
@@ -2905,6 +3630,10 @@ We opt to present the visualisations for the three selected technologies on two 
 
 Finally, it is possible to visualise the interventions for the digital technologies in a three dimensional visualisation (Fig. 2). Aside from the three technologies, the visualisation also includes interventions related to data, platforms, and cybersecurity as umbrella domain. We added these as any company subject to the AI Act, such as Meta or Google, is likely affected by regulation on data (i.e., the GDPR or the Data Act) and platforms (i.e., the DMA and DSA). This visualisation emphasises the interconnections between interventions; specifically, showcasing the top down approach taken at the EU, starting at the level of the Digital Decade and respective strategies for technologies, all the way down to legislations and instruments.
 
+
+<!-- PAGE 184 -->
+
+
 Fig.  1. Application of the framework to the three selected technologies.
 
 <!-- image -->
@@ -2914,6 +3643,10 @@ Fig.  1. Application of the framework to the three selected technologies.
 ## 6.1 Findings
 
 The framework we present contributes to practice by opening the 'black box' of digital governance. It opens the black box in terms of dimensions -each of which are supported and discussed in the literature. The framework -characteristically policy-based -we present differs from past works in its simplicity, pragmatism, and orientation towards practical utility. Specifically, the framework is targeted
+
+
+<!-- PAGE 185 -->
+
 
 Fig.  2. DG landscape of the European Union for a selection of technologies.
 
@@ -2929,6 +3662,10 @@ Furthermore, the presented framework enhances practical understanding by making 
 
 In fact, the current framework allows us to draw policy recommendations specifically in the featured technologies on the z-axis.
 
+
+<!-- PAGE 186 -->
+
+
 Firstly, the AI Strategy and the AI Act emphasize values-driven and responsible governance (see Fig. 1a). However, sustainability considerations and tools to enhance Europe's global competitiveness receive little attention. Furthermore, there is a gap in concrete governance instruments to support these legislative efforts. To address this, we recommend aligning legislative ambitions with robust implementation mechanisms. This includes ensuring adequate financial and human resources for risk assessment and enforcement.
 
 Similar gaps can be identified in relation to digital identity (see Fig. 1c), where sustainability and competitiveness are not directly addressed. This was to be expected as these are less relevant factors [ 56]. The key legislative frameworks introduce the European Digital Identity Wallet. However, as usually done on the Member State level, there is no comprehensive strategy to guide governance, implementation, and resource allocation. This gap is evident in the Architecture Reference Framework, which suggests a disconnect between the technicalities and the human rights-based approach needed for the Wallet's design. To address this, one could establish an implementation strategy, including a technical advisory body to bridge the gap between policymakers and engineers, clear accountability mechanisms to ensure compliance with human rights and data protection principles, and targeted funding to support secure, interoperable infrastructure and usability testing.
@@ -2940,6 +3677,10 @@ Not only are these recommendations relevant for the respective technologies and 
 ## 6.3 Limitations
 
 We acknowledge that the generalisability of our contribution is subject to a number of limitations. First, in consideration of the scope of this work, the sample of interviews was small and the validation narrow. The interviews we held, in spite of the individuals' expertise, are subject to biases in the sense that individuals might feel more or less strong about, for example, one or the other pillar of DG (x-axis). The small sample size in turn increases the risk of inducing
+
+
+<!-- PAGE 187 -->
+
 
 that bias. Introducing additional verification strategies -beyond the application (Phase III) and evaluation (Phase IV) steps taken here -would be beneficial to strengthen the validity and reliability of the contributions presented here [ 37].
 
@@ -2954,6 +3695,10 @@ Given the conceptual confusion around digital governance in academic literature,
 To address this complex and fragmented landscape, this paper presents a three-dimensional framework of digital governance. The framework consists of four pillars, three levels of policy interventions, and a non-exclusive list of digital technologies to which respective interventions can be mapped. Ex ante, by evaluation to the digital policy landscape of the European Union and interviews with practitioners, the value of the framework is in its capacity to reduce complexity and identify white spots in the landscape. At the current state of the European landscape, we extrapolated some recommendations for each of the analysed technologies and their respective policy interventions.
 
 To conclude, this works unveils a number of future research directions. First, the framework requires a systematic account of interventions to be mapped as data points in the three dimensional plot. This exercise, though beyond the scope of this paper, provides opportunity for near term research. Second, we foresee the framework to be applicable at the national level. This implies the introduction of a fourth dimension (i.e., interventions at EU, Member State, regional, etc. level) which increases the number of data points exponentially. We foresee this
+
+
+<!-- PAGE 188 -->
+
 
 second stream of research to challenge and grow the framework. At last, and as was highlighted in the evaluation, we foresee the value of the framework also lies in its account for connections and relationships between interventions.
 
@@ -2975,6 +3720,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 10. Codagnone, C., Liva, G., Rodriguez, T.: Identification and assessment of existing and draft eu legislation in the digital field. Study for the special committee on Artificial Intelligence in a Digital Age (AIDA) , Policy Department for Economic, Scientific and Quality of Life Policies (2022). https://www.europarl.europa. eu/thinktank/en/document/IPOL\_STU(2022)703345
 11. Dawes, S.S.: Governance in the digital age: a research and action framework for an uncertain future. Gov. Inf. Q. 26 (2), 257-264 (2009). https://doi.org/10.1016/ j.giq.2008.12.003
 
+
+<!-- PAGE 189 -->
+
+
 12. Draghi, M.: The future of European competitiveness: A competitiveness strategy for Europe. Tech. rep., European Commission (2024). https://commission.europa. eu/topics/strengthening-european-competitiveness/eu-competitiveness-lookingahead%5Fen
 13. Dwivedi, Y.K., Hughes, L., Ismagilova, E., et al.: Artificial Intelligence (AI): Multidisciplinary perspectives on emerging challenges, opportunities, and agenda for research, practice and policy. Int. J. Inf. Manage. 57 , 101994 (2021). https://doi. org/10.1016/j.ijinfomgt.2019.08.002
 14. Dwivedi, Y.K., Kshetri, N., Hughes, L., et al.: 'so, what if ChatGPT wrote it?' multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy. Int. J. Inf. Manage. 71 , 102642 (2023). https://doi.org/10.1016/j.ijinfomgt.2023.102642
@@ -2991,6 +3740,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 25. Huang, C., Liu, W., Iqbal, W., et al.: Does digital governance matter for environmental sustainability? the key challenges and opportunities under the prism of natural resource management. Resources Policy 91 , 104812 (2024-04-01). https:// doi.org/10.1016/j.resourpol.2024.104812
 26. Hurka, S.: The institutional and political roots of complex policies: Evidence from the European union. Eur. J.D Polit Res 62 (4), 1168-1190 (2023). https://doi.org/ 10.1111/1475-6765.12555
 27. Jaakkola, E.: Designing conceptual articles: four approaches. AMS Review 10(1), 18-26 (2020-06). https://doi.org/10.1007/s13162-020-00161-0
+
+
+<!-- PAGE 190 -->
+
 
 28. Janssen, M., van der Voort, H.: Adaptive governance: towards a stable, accountable and responsive government. Gov. Inf. Q. 33 (1), 1-5 (2016). https://doi.org/10. 1016/j.giq.2016.02.003
 29. Jia, K., Chen, S.: Global digital governance: paradigm shift and an analytical framework. Global Public Policy Governance 2 (3), 283-305 (2022). https://doi. org/10.1007/s43508-022-00047-w
@@ -3011,6 +3764,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 44. Rikap, C.: Capitalism. Intellectual Monopoly Capitalism Uncovered, Power and Innovation (2021)978-0-42934148-9, https://doi.org/10.4324/9780429341489
 45. Rikap, C.: Varieties of corporate innovation systems and their interplay with global and national systems: Amazon, Facebook, Google and Microsoft's strategies to
 
+
+<!-- PAGE 191 -->
+
+
 - produce and appropriate artificial intelligence. Rev. Int. Political Econ. (2024). https://doi.org/10.1080/09692290.2024.2365757
 46. Senninger, R.: What makes policy complex? Political Sci. Res. Methods 11 (4), 913-920 (2023-10). https://doi.org/10.1017/psrm.2023.23
 47. Sheikh, H.: European digital sovereignty: a layered approach. Digital Society 1 (3), 25 (2022). https://doi.org/10.1007/s44206-022-00025-z
@@ -3027,6 +3784,10 @@ Disclosure of Interests. The authors have no competing interests to declare that
 58. Zenner, K., Marcus, S., Sekut, K.: A dataset on eu legislation for the digital world. Tech. rep., Bruegel (2024). https://www.bruegel.org/dataset/dataset-eulegislation-digital-world
 59. Zittrain, J.L.: Three Eras of Digital Governance (2019). https://doi.org/10.2139/ ssrn.3458435
 60. Zuboff, S.: The Age of Surveillance Capitalism. Hachette (2019), ISBN 978-1-61039569-4, https://www.hachettebookgroup.com/titles/shoshana-zuboff/ the-age-of-surveillance-capitalism/9781610395694/
+
+
+<!-- PAGE 192 -->
+
 
 <!-- image -->
 
@@ -3056,6 +3817,10 @@ Public  organizations  in  governments  have  to  collaborate  in  organizationa
 
 S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  176-191,  2026.
 
+
+<!-- PAGE 193 -->
+
+
 that  service  delivery  organizations  are  often  part  of  different  ministerial  hierarchies  [4, p.  2,  5,  pp.  17,31].  In  such  cases,  the  governance  of  inter-organizational  collaborations [6,  7]  is  not  always  effective  [5].  Since  many  implementations  fail  in  government  [8, p.  69],  the  specific  challenges  and  complexities  need  to  be  understood.
 
 Figure  1  shows  the  specialized,  executive  agencies  that  governments  have  established to  provide  IT  services  for  the  benefits  of  scale,  for  standardization,  and  to  retain  expertise (a.o.)  in  relation  to  the  principals  who  need  these  services.  These  executive  agencies  are part  of  a  ministerial  hierarchy,  but  also  provide  services  to  policy  departments  of  other ministries.  So,  a  request  from  one  ministry  policy  department  (A)  has  to  compete  with requests  coming  from  other  ministries'  policy  departments  (B  and  X)  or  from  the  policy departments  in  its  own  hierarchy  (within  Ministry  B).
@@ -3067,6 +3832,10 @@ Fig. 1. Policy  executed  by  a  part  of  another  ministry
 These  executive  agencies  weigh  their  own  interests  and  the  interests  of  their  clients, who  act  as  principals,  driven  by  the  objectives  and  concerns  of  the  hierarchy  they  are part  of.  This  can  be  characterized  as  the multiple principals problem in  which  the  agency works  for  many  principals  [9].  Not  surprisingly,  the  interests  of  the  collaborative  partners (agents  and  principal(s))  in  the  public  sector  do  not  always  align  [10, p. 46]. As De Bruijn and Ten  Heuvelhof  [11]  state:  'Getting  what  you  want  -  even  if you  are the boss -isn't  always  easy.  Almost  every  organization,  big  or  small,  works  among  a  network  of competing  interests.'  [11,  p.  1].  Although  this  general  challenge  of  conflicting  interests is  well  recognized,  current  research  remains  at  the  level  of  recognition  of  this  challenge. Still,  deeper  analyses  of  the  typical  challenges  within  the  government  have  not  been conducted  yet.  Understanding  these  challenges  is  needed  as  a  solid  basis  for  improving governance.  Therefore,  our  research  question  is: What challenges inhibit the principal's ability in an intra-governmental collaboration to effectively safeguard its interests when implementing IT-based services?
 
 This  paper  is  structured  as  follows:  We  first  discuss  the  governance  challenges  identified in the literature. Next, we outline the data collection methods,  followed by a detailed  description  of  the  typical  challenges  found  in  our  empirical  research.  After  that, we  discuss  the  findings,  and  draw  conclusions  in  the  last  section.
+
+
+<!-- PAGE 194 -->
+
 
 ## 2 Literature Background
 
@@ -3090,6 +3859,10 @@ Table 1. Overview  of  the  main  governance  challenges  related  to  collabora
 
 Mitnick  [12]  proposes  multiple  ways  to  categorize  challenges,  e.g.,  based  on  ownership  of  the  problem  (principal  or  agent)  or  based  on  the  stage  of  the  process  in  which they  occur.  However,  we  follow  Mitnick's  advice  that  'any  categorization  of  agency problems  would  depend,  of  course,  on  the  purpose  and  setting  of  the  analysis'  [12].
 
+
+<!-- PAGE 195 -->
+
+
 Categorizing  the  challenges  based  on  the  scientific  areas  of  network  governance,  collaborative  governance,  agency  theory,  and  contracting  theory  is  problematic  because  these theories  overlap  and  interact  in  complex  ways.  A  categorization  that  fits  in  well  with  this and  gives  a  better  picture  of  the  types  of  challenges  is  the  breakdown  into  individual  and interpersonal  dynamics,  structural  and  systemic  challenges,  and  contractual  and  riskrelated  challenges.  Still,  these  categories  are  not  mutually  exclusive.  Many  challenges have  elements  that  span  multiple  categories.
 
 Interpersonal and Individual Challenges. The  first  category  concerns  challenges  that originate  from  organizations  being  social  constructs  with  people  interacting  on  a  personal  level.  This  results  in  challenges  due  to  autonomy  preference,  cultural  differences, personality  &amp;  interpersonal  issues,  and  trust.
@@ -3105,6 +3878,10 @@ Structural and Systemic Challenges. The  second  category  contains structural a
 - Conflicting interests :  One  of  the  basic  premises  of  agency  theory  is  that  the  interests of  the  principal  and  agent  do  not  align  [17,  p.  753,  24,  p.  298].  What  may  be  profitable and  in  the  interest  of  one  could  be  an  expense  for  the  other  [23, p. 58,  19, p. 9,  12, p.  21].
 - Multiple principal problems :  An  agent  may  have  multiple  principals,  which  can  cause conflicts  with  other  principals  [19,  p.  13]  and  make  the  principal  compete  with  the
 
+
+<!-- PAGE 196 -->
+
+
 interests  of  the  other  principals,  increasing  the  agent's  autonomy  and  opportunistic behavior  [9,  pp.  671,  676].
 
 - Information asymmetry, communication issues, and monitoring :  Information  asymmetry  occurs  when  the  principal  lacks  the  information  to  govern  the  agent.  This  can be  information  regarding  the  behavior  of  the  agent  or  information  regarding  the  contribution  to  the  principal's  objectives  [12, p. 19,  19,  p.  4].  The  agent  can  capitalize on  this  information  asymmetry  to  pursue  its  own  interests  [17,  p.  753,  24,  p.  298,  19, p.  4].
@@ -3116,6 +3893,10 @@ Contractual and Risk-Related Challenges. The  last  three  challenges  deserve  
 - Risk aversion :  Agents  are  known  to  be  more  risk-averse  than  principals  [24,  p.  298, 23,  p.  58,  30,  p.  839].  This  may  motivate  risk-reducing  action  by  the  agent,  hinder the  governance,  and  undermine  the  interests  of  the  principal.  As  Bendickson  et  al. [19]  tell  us  'governance  mechanisms  are  needed  to  help  align  risk  and  monitor  agent behavior  by  the  agent'  [19, p. 4].
 
 This overview  of challenges demonstrates  the diverse,  interconnected,  and  complex  nature  of  collaboration,  as  seen  through  different  theoretical  lenses.  It  is  therefore important  to  gain  insight  into  how  these  challenges  manifest  in  government  setting.
+
+
+<!-- PAGE 197 -->
+
 
 ## 3 Research Methodology
 
@@ -3136,6 +3917,10 @@ Data  was  collected  through  semi-structured  interviews  and  from  available
 ## 3.4 Interview Protocol
 
 An  interview  protocol  for  the  semi-structured  interviews  was  developed  with  variants adapted  for  the  different  target  groups:  single  case  interviews  with  a  principal,  multicase  interviews  with  a  principal,  short  multi-case  interviews  with  a  principal,  and  interviews  with  an  agent.  The  multi-case  interviews,  focusing  on  the  interviewee's  expertise,
+
+
+<!-- PAGE 198 -->
+
 
 tended  to  be  more  expert  than  case  interviews.  The  interview  questions  addressed  the background  of  the  interviewee,  the  context  and  characteristics  of  the  case,  the  role  of  the interviewee,  and  the  challenges  within  the  case.  Possible  prompts  were  developed  for each  question  to  address  governance  instruments  based  on  the  theoretical  fields  described in  Sect.  2:  Theoretical  Background.  Keeping  a  focus  on  challenges,  the  interviewer  considered  those  prompts  that  could  lead  to  fruitful  and  useful  elaborations  in  each  interview. Since  saturation  on  the  challenges  was  reached,  we  can  be  sure  that  no  essential  themes were  missed.  The  interview  process  was  approved  by  the  ethical  committee  of  Delft University  of  Technology.  The  interviews  were  recorded  and,  if  allowed  by  the  interviewee,  transcribed  and  otherwise  at  least  summarized  in  a  concise  report.  All  confidential, personal,  and,  as  much  as  possible,  organizational  information  was  omitted.  The  interviewee  checked,  edited,  and  approved  the  transcription  and  report.  The  cases  and  roles of  the  civil  servants  interviewed  are  included  in  Table  2.
 
@@ -3160,6 +3945,10 @@ Abbreviations : Int - Internal; Ext - External; EU - European Union government; 
 ## 3.5 Coding
 
 The  initial  coding  was  performed  inductively  using  open  coding,  identifying  recurring patterns  and  assigning  concise  codes  to  statements.  Axial  coding  was  used  to  identify relations  between  codes  and  the  extraction  of  main  themes.  Themes  with  only  one  code were  merged  into  overarching  themes  based  on  conceptual  similarity.  Saturation  was
+
+
+<!-- PAGE 199 -->
+
 
 reached  during  the  coding  process,  however,  all  interviews  were  still  fully  coded.  All final  themes  were  recognized  by  at  least  three  interviewees  and  occurred  in  at  least  three ministries,  demonstrating  their  relevance  across  multiple  cases.
 
@@ -3190,6 +3979,10 @@ Personal  interests  were  mentioned  several  times.  Sometimes,  people  were 
 
 Ministries  are  faced  with  the  problem  that  the  agencies  are  highly  autonomous  (AA.05, AD.07).  For example,  the agencies draw  up their own  portfolio and strategy  which do not always fit the needs of the principal, and the agency feels increasingly free to refuse assignments  if they do not fit their portfolio  (AA.02)  and  then  complicate assignments  to  delay  the  implementation  (AB.03).  Agencies  also  have  a  different  focus
 
+
+<!-- PAGE 200 -->
+
+
 than  the  ministry  and  that  they  'often  feel  the  need  to  account  for  themselves  to  society, stakeholders,  and  clients.'  (AA.01).  This  was  also  noted  by  Van  Thiel  [5, p. 35]. The sense  of  urgency  and  necessity  of  a  ministry  can,  therefore,  differ  significantly  from  that of  an  agency,  particularly  if  this  is  an  external  agency  (AB.03;  AA.01).  Commonly  in  the Dutch  government,  there  is  a  distinction  in  responsibilities  between  ministry  and  agency, in  which  the  ministry  is  only  allowed  to  describe  what  needs  to  be  delivered,  leaving  the agency  free  to  determines  how  to  implement  this.  ' The client is no longer allowed to say anything about the 'how' during implementation, while the agency's choices have an impact on the result or the 'what'.' (AC.06).
 
 ## 3. Information Asymmetry Between Principal and Agent
@@ -3206,6 +3999,10 @@ An  agency  within  the  government  often  has  multiple  client  ministries  [
 
 As  already  mentioned,  political  ambitions  exceed  the  capacity  of  the  ministries  [4, p. 2, 39,  p.  16],  who,  just  as  the  agencies,  must  prioritize  their  work.  As  one  of  the  interviewees mentions,  the  ministries'  focus  is  mainly  on  policy  formulation  and  making  sure  their policy  is  implemented  (AA.02),  and  higher-quality  governance  is  ' only done for the larger programs that involve a lot of money and many political interests. '  (AA.02)  Of
 
+
+<!-- PAGE 201 -->
+
+
 course,  this  reduced  attention  of  the  ministry  to  monitoring  the  collaboration  hinders  the timely  detection  of  the  necessary  intervention  and  the  proper  application  of  instruments. This  workload  of  higher  management  also  means  that  governance  is  often  delegated to levels where  mandate  and  organizational  position  are lacking (AA.05).  This lack of mandate  hinders  the application of instruments. It frequently means  the need for escalation  to  a  higher  level.
 
 ## 6. 'Goldilocks Zone' for Escalation
@@ -3221,6 +4018,10 @@ As  explained  earlier,  the  Dutch  government  and  its  ministries  use  exec
 ## 8. Conflict Aversion of the Principal
 
 As  is  well  known,  managers  in  the  public  sector  are  generally  more  risk-averse  than in  the  private  sector.  The  fear  of  personal  risks  leads  to  conflict  aversion  and  hinders discussions  between  principals  about  prioritization  in  meetings  (AD.07).  Conflict  aversion  also  determines  which  control  instruments  are  used  and  followed  through.  Soft controls  are  preferred  because  they  make  it  easier  to  maintain  relationships  and  relations (AA.05).  Furthermore,  the  agencies'  autonomy  makes  it  possible  to  refuse  instruments
+
+
+<!-- PAGE 202 -->
+
 
 such  as  audits,  and  the  principal  does  not  want  to  enter  a  conflict  about  this  (AA.01). This  also  causes  over  expenditures:  ' We are willing to pay extra millions because we want to maintain a good relationship.' (AA.05).
 
@@ -3239,6 +4040,10 @@ One  interviewee  made  the  especially  interesting  note  that  there may  be 
 A  number  of  the  'challenges  in  practice',  as  shown  in Table 4 , are found  in  the  scientific  literature,  whereas  others  were  only  found  in  the  interviews.  Some  challenges play  a  very  significant  role  in  practice:  conflict  aversion,  information  asymmetry,  and prioritization  across  clients  (ministries).  Four  challenges  are  unique  for  governments:  a 'goldilocks  zone'  for  escalation,  restricted  procurement,  the  inability  to  hold  an  agent ultimately  accountable,  and  the  low  priority  the  principals  give  to  the  implementation. Two  challenges  from  the  literature  did  not  surface  in  our  interviews  as  challenges:  Cultural  differences  were  not  mentioned  explicitly,  possibly  because  they  are  not  commonly considered  in  internal  discussions  or  are  viewed  as  too  vague  or  sensitive,  although  different  underlying  manifestations  were  noted,  such  as  different  risk  appetites  and  priorities. Lack  of trust and a history  of  antagonism  were  identified  only  as  contextual factors,  maybe  because  they  were  not  considered  influenceable  within  the  scope  of  the implementation  case.
 
 We  will  briefly  discuss  the  challenges  from  the  interviewees,  revealing  paradoxically that  the  principals  are  found  to  be  less  powerful  and  highly  dependent  on  agencies,  instead of  the  other  way  around.
+
+
+<!-- PAGE 203 -->
+
 
 Structural &amp;
 
@@ -3271,12 +4076,20 @@ Table 4. Comparison  of  challenges  in  practice  to  theory
 - Agency  independence  (known) :  Several  challenges  arise  from  how  the  government implements  the  agency  model  and  governs  its  agencies.  A  high  failure  rate  of  implementations  causes  reduced  trust,  with  a  need  for  more  monitoring  conflicting  with  the agency«s  independence.  Stewardship  is  proposed  as  a  solution,  however.  Bjurstr¿m tells  us  this  transition  is  difficult  in  a  low-trust  environment  [42,  p.  1073].
 - Information  asymmetry  (large  impact) :  A  prerequisite  for  network  coordination  and one  of  the  foundations  of  agency  theory  is  transparency  in  information.  Ramadass et  al.  [43]  state  that  'Interdependence  between  the  public  sector  agencies  (partners) is  critical  for  interaction  processes  and  information  sharing'  [43,  p.  767].  However, agencies  in  other  hierarchical  lines  with  their  own  political  objectives  and  lack  of enforceable  contracts  make  agencies  highly  independent,  while  the  absence  of  alternative  service  providers  makes  the  principal  highly  dependent.  Further  research  can be  done  on  the  effects  of  introducing  alternative  service  providers.
 
+
+<!-- PAGE 204 -->
+
+
 - Prioritization  across  clients  (large  impact) :  A  high  workload  causes  a  need  for  prioritization.  Despite  a  shared  social  and  national  interest,  coordination  between  principals  is  difficult  due  to  compartmentalization  and  bureaucracy  [5,  p.  33].  The  multiprincipal  problem,  therefore,  causes  prioritization  by  agents.  Further  research  is  warranted  on  whether  this  prioritization  of  (the  implementation  of)  political  commitments by  the  agencies  is  desirable  from  the  perspective  of  the  cabinet.
 - Bounded  rationality  &amp;  incomplete  contracts  (known),  inability  to  hold  accountable (unique) : Contracts  have  limited  value  as  governance  instruments  in  government. They  are not legally binding, and the complexity  and unpredictability of IT and politics  make  contracts  incomplete.  In  our  results,  we  also  found  a  mutual  interest  in avoiding  strict  accountability  and,  thus,  the  need  to  maintain  'escape  routes'  for  both parties.  Literature  suggests  that  behavior-oriented  contracts  (as  opposed  to  outcomeoriented  contracts)  and  relational  governance  (as  opposed  to  contractual  governance) could  be  more  suitable.  Further  research  could  be  based  on  Eisenhardt's  propositions regarding  when  a  behavior  or  outcome-oriented  contract  best  suits  the  collaboration and  how  to  reduce  transaction  costs.
 - Restricted  procurement  (unique) :  Hardly  discussed  in  much  detail  in  the  literature  is that  ministries  for  their  services  are  limited  to  suppliers  within  the  government: 'Of course, we must remain within the government for management of certain software.' (AB.03)  ' Can the central government simply share information with an independent public-law administrative body? '  (AA.02).  This  is  also  mentioned  by  Thiel  [44, p. 4].
 - Conflict  aversion  (large  impact) : Managers  in  the public sector are known  to  be more  risk-averse  than  in  the  private  sector  [30].  Add  to  this  that  for  top  management in  central  government,  the  job  market  is  small,  and  collaboration  roles  can  change or  become  inverted.  Therefore,  we  notice  that  much  attention  is  paid  to  maintaining good  relationships  with  potential  future  collaboration  partners  and/or  higher-ranking colleagues.  Our  findings  show  that  conflicts  are  avoided  as  much  as  possible,  and there  is  a  reluctance  to  challenge  agencies'  fellow  managers,  even  in  cases  of  noncompliance.  Concern  for  self  is  leading  to  the  preferred  conflict  management  style [45,  p.  216]  and  its  effectiveness  [46,  p.  435,  47,  p.  158].
 - Low  prioritization  by  the  principal  (unique) :  Provan  &amp;  Kenis  [6]  distinguish  between three  forms  of  collaboration  networks  in  their  paper  'Modes  of  Network  Governance'. Due  to  the  high  workload,  we  found  that  the  principal  only  governs  programs  himself, acting  like  an  NAO,  if  they  have  a  significant  financial  or  political  impact,  and  leaves other  programs  to  a  lead  agency  that  governs  the  collaboration.  According  to  Provan  &amp; Kenis  [6],  in  our  cases  where  there  is  often  reduced  confidence,  these  collaborations could still be effective in accomplishing  their  goals if the  network  governance  is brokered  and  members  collectively  monitor  decisions.
 - Goldilocks  zone  for  escalation  (unique) :  Due  to  the  many  management  layers  within the  government  [48]  and  the  tendency  to  delegate  downwards  due  to  the  high  workload at  the  top,  it  is  difficult  to  find  a  management  layer  with  sufficient  mandate  to  decide on  the  conflict  and  sufficient  knowledge  to  make  a  good  decision.  Also,  escalating disputes to a hierarchical level above the ministry politicizes the issue, which it inherently often is not. Discussing  issues in interdepartmental  meetings  and  thus broadcasting  them  in  the  presence  of  unrelated  ministries  is  avoided.  This  should  not be  unique  for  governments  but  is  underexposed  in  scientific  literature.
+
+
+<!-- PAGE 205 -->
+
 
 There  are  some  limitations  and  caveats  to  the  research  in  this  paper.  One  of  the  obvious  limitations  of  interview-based  research  is  that  it  is  based  on  subjective  information from  the  personal  worldviews  of  the  interviewees.  This  introduces  bias  in  the  findings, which,  despite  being  triangulated,  could  be  widespread.  Since  there  are  differences  in accountability  styles  per  country,  there  could  also  be  other  differences  that  affect  the unique  challenges.  Future  research  can  be  directed  at  other  national  contexts.  The  causal relations  between  (combinations)  of  contextual  aspects  of  the  government  and  the  unique challenges  could  be  an  area  for  further  research.
 
@@ -3290,6 +4103,10 @@ Disclosure of Interests.. The  authors  have  no  competing  interests  to  decl
 
 1. Janssen,  M.,  Joha,  A.:  Motives  for  establishing  shared  service  centers  in  public  administrations.  Int.  J.  Inf.  Manage. 26 (2),  102-115  (2006)
 2. Bjurstrom,  K.H.:  How  interagency  coordination  is  affected  by  agency  policy  autonomy.  Public Manag.  Rev. 23 (3),  397-421  (2021)
+
+
+<!-- PAGE 206 -->
+
 
 3. Bharosa,  N.:  The  rise  of  GovTech:  Trojan  horse  or  blessing  in  disguise?  A  research  agenda. Gov.  Inf.  Q. 39 (3),  1-10  (2022)
 4. Algemene Rekenkamer, Lessen uit ICT-projecten bij de overheid -deel A, Algemene Rekenkamer,  (2007)
@@ -3317,6 +4134,10 @@ Disclosure of Interests.. The  authors  have  no  competing  interests  to  decl
 26. Poppo,  L.,  Zenger,  T.:  Do  formal  contracts  and  relational  governance  function  as  substitutes or  complements?  Strateg.  Manag.  J. 23 (8),  707-725  (2002)
 27. Grossman,  S.  J.,  Hart,  O.  D.:  The  costs  and  benefits  of  ownership:  a  theory  of  vertical  and lateral  integration.  J.  Polit.  Econ. 94 (4),  691-719  (1986)
 
+
+<!-- PAGE 207 -->
+
+
 28. Ouchi, W.: Conceptual framework  for the design of organizational control  mechanisms. Manage.  Sci. 25 (9),  833-848  (1979)
 29. Hart,  O.,  Moore,  J:  Incomplete  contracts  and  renegotiation.  Econ.  J.  Econom.  Soc.  755-785 (1988)
 30. Chang,  A.:  Risk  aversion  and  public  sector  employment.  Public  Administration  Rev. 84 (5), 833-847  (2024)
@@ -3338,6 +4159,10 @@ Disclosure of Interests.. The  authors  have  no  competing  interests  to  decl
 46. Barbuto,  J.,  Phipps,  K.,  Xu,  Y .:  Testing  relationships  between  personality,  conflict  styles  and effectiveness.  Int.  J.  Conflict  Manag. 21 (4),  434-447  (2010)
 47. Sharma,  S.,  Elfenbein,  H.,  Foster  J.,  Bottom,  W  :  Predicting  negotiation  performance  from personality  traits:  a  field  study  across  multiple  occupations.  Hum.  Perfo. 31 (3),  45-164  (2018)
 48. Campbell,  J.,  McDonald,  C.,  Sethibe,  T.:  Public  and  private  sector  IT  governance:  identifying contextual  differences.  Australas.  J.  Inf.  Syst. 16 (2),  5-18  (2009)
+
+
+<!-- PAGE 208 -->
+
 
 <!-- image -->
 
@@ -3365,6 +4190,10 @@ Published  by  Springer  Nature  Switzerland  AG  2026
 
 S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  192-206,  2026.
 
+
+<!-- PAGE 209 -->
+
+
 aspects  of  public  demand,  the  underlying  strategy,  and  environmental  components  are part  of  a  comprehensive  public  business  model  [6].
 
 Public  value  creation  based  on  this  comprehensive  public  model  cannot  be  achieved in isolation and depends on cross-sector collaboration to deliver sustainable and widespread  benefits  [7]. It  is  a  socio-administrative-organizational-technical  exercise [8]. There  is no doubt that GovTech  has  become  a  fundamental  strategic  aspect  for public  agencies,  sustaining  the  promise  of  creating  public  value  [3].
@@ -3381,6 +4210,10 @@ This  conceptual  model  is  useful  for  understanding  the  determinants  infl
 
 The  literature  on  governance  forms  and  government  technologies  [17]  diverges  from  the New  Public  Management  narrative  based  on  more  efficient  and  effective  governments. New  forms  of  governance  are  characterized  by  co-production  and  co-creation  practices that  are  more  in  tune  with  the  needs  of  citizens  [16].  Public-private  networks  and  partnerships  are  being  reshaped  by  opportunities  provided  by  technologies,  renewed  governance
 
+
+<!-- PAGE 210 -->
+
+
 processes,  and  political  objectives  linked  to  public  value  [17].  Digital  governance  invokes financial,  administrative,  and  managerial  considerations  related  to  the  implementation of  technologies  in  specific  organizational  contexts,  as  well  as  ethical  challenges  [16]. Public  value  theory  provides  a  solid  basis  for  understanding  active  agents  of  public  value creation  committed  to  delivering  public  services  that  better  meet  citizens'  expectations. This  includes  value-creation  processes  that  occur  outside  the  organization  [18].
 
 Public  value  can  be  described  as  the  added  value  that  an  organisation  provides  to society  [16],  as  a  multidimensional  construct  it  reflects  the  different  roles  and  interests  of stakeholder  groups  [19].  Generating  public  value  depends  on  factors  that  shape  forms  of collaboration,  supported  by  a  set  of  resources  and  capabilities  or  standards,  such  as  in  the GovTech  ecosystem.  For  example,  new  services  based  on  predictive  models  facilitated by  rapid  and  real-time  access  to  data  will  also  require  process  optimization  and  resource allocation  with  greater  organizational  efficiency  [16].
@@ -3394,6 +4227,10 @@ The  GovTech  public-private  entanglement  involves  interactions  at  two  lev
 For  GovTech  projects  to  achieve  results,  the  public  sector  needs  to  have  adequate resources  and  implementation  support  for  the  solutions  [20].  This  is  a  strategic  move similar  to  the  new  models  of  data  governance  and  IT  governance  taking  place  in  smart cities  [9].  Therefore,  it  is  necessary  to  align  the  information  technology  strategy  to  ensure that  GovTech  -  government  technologies  -  supports  and  enhances  the  overall  strategy and  objectives  of  the  public  sector's  strategic  management.
 
 Strategic  management  is  a  broad  process  of  managing  an  organization  through  a shared  sense  among  public  managers  to  focus  efforts  and  priorities,  and  guide  decisions
+
+
+<!-- PAGE 211 -->
+
 
 and  actions  [14].  Strategy  creation  involves  realigning  aspirations  and  capabilities  that must  be  achieved  or  need  to  be  changed  [21].  This  means  that  strategy  is  not  limited and  there  are  environmental,  institutional,  and  organizational  factors  that  influence  management  processes  and  results,  producing  actions  or  not  [14].  Strategic  planning  is  the main  element  of  management,  and  both  have  been  a  recurring  research  interest  in  the public  sector  [22],  but  management  focuses  on  continuous  management.  Each  strategic approach  consists  of  concepts,  processes,  procedures,  tools,  techniques,  and  practices to  be  used  or  adapted  selectively.  The  theory  holds  that  if  the  strategy  is  good,  good performance  will  occur  [21].
 
@@ -3409,6 +4246,10 @@ According  to  Poister  [14],  strategic  management  involves  determinants  th
 
 We  propose  a  conceptual  research  model,  as  shown  in  Fig.  1,  based  on  the  previous models  and  updated  to  integrate  the  two  strategic  levels  of  GovTech  management.  The
 
+
+<!-- PAGE 212 -->
+
+
 broader  approach  level  of  public-private  entanglement  interactions  aims  to  understand how  determinants  influence  the  strategic  management  of  public  sector  entities'  information  systems  for  GovTech  (RQ.1).  The  output  level  aims  to  understand  the  degree  of GovTech  alignment  with  broader  strategies  (RQ.2).
 
 Fig.  1. Research  conceptual  model.
@@ -3418,6 +4259,10 @@ Fig.  1. Research  conceptual  model.
 The  institutional  arrangements  refer  to  the  laws,  regulations,  and  digital  government systems  that  can  influence  decision-making  and  the  actions  of  public  entities  [9].  For instance,  data  sharing  between  the  public  and  private  sectors,  along  with  considerations of  consent,  privacy,  and  accountability,  may  necessitate  trust  anchors  within  GovTech [1].  The  operational  environment  addresses  the  factors  influencing  technology  adoption within  the  context  of  the  initiatives,  including  investments,  standardisation,  and  data  [9]. In  this  context,  public-private  interactions  depend  on  data  and  component  standardisation to  enable  GovTech  interoperability,  while  user  engagement  is  crucial  for  experimentation [1]. Organisational  factors refer to the characteristics, processes, resources, and knowledge  within  public  offices  [9].  In  the  case  of  GovTech,  agile  methodologies  and project  management  appear  essential  to  handle  the  discovery  phases,  iterative  cycles,  and feedback  loops  [20].  Furthermore,  technical  knowledge  is  central  for  the  public  sector to  co-create,  assess,  experiment  with,  and  absorb  GovTech  solutions  [1].
 
 Concerning strategic management, strategic alignment, often referred to as 'business-IT  alignment',  when  applied  to  the  public  sector,  is  defined  as  the  achievement  of  information  technology  objectives  following  the  strategic  objectives  of  the  public  agenda,  relying  on  the  commitment  of  IT  stakeholders  and  management  [11].  While there  is  a  plethora  of  models  and  frameworks  identifying  various  factors  related  to  IT alignment  and  overall  organisational  strategies,  one  approach  is  to  examine  the  areas where  IT  alignment  can  assist  organisations  in  their  attempts  to  achieve  success  [12]. That  is,  analysing  the  efforts  made  and  the  concentration  of  those  efforts  on  shared  objectives  [10].  First,  alignment  between  organisational  goals  and  the  use  of  technologies  can enhance  organisational  performance  [11].  In  the  case  of  GovTech,  the  implementation of  a  digital  service  developed  through  prototyping  and  hackathons  can  be  facilitated  by the  standardisation  of  system  architecture  and  software  [1].  Second,  continuous  organisational  adaptation  generates  the  organisational  agility  required  for  IT  alignment  [11]. Internal  capabilities  to  examine,  co-create,  experiment  with,  and  implement  are  drivers of  the  public  sector's  capacity  to  absorb  GovTech  solutions  [1].  Third,  alignment  should facilitate  the  integration  of  new  technologies  into  existing  infrastructures,  organisational structures,  and  business  processes  [11].  The  design  of  GovTech  solutions  should  feature clear  terms  and  user-centered  regulations,  according  to  the  context  and  needs,  so  as  to offer  a  superior  experience  in  comparison  to  existing  public  services  [1].
+
+
+<!-- PAGE 213 -->
+
 
 Regarding  outcomes,  Poister  et  al.  [14]  identified  desired  outcomes  as  outputs  of strategic  management  processes  in  terms  of  capability  and  performance,  such  as  stakeholder  partnerships,  improved  management  capacity,  analytical  capacity,  regulations, or  service-oriented  strategic  planning.  In  practice,  outcomes  complete  the  cycle  of  processes,  relationships,  and  guidelines  that  influence  the  continuity  of  the  strategy.  From this  analytical  perspective,  a  more  useful  approach  is  to  consider  outcomes  through  the lens  of  GovTech  design  and  governance  [1]  to  assess  whether  GovTech  initiatives  align with  the  broader  digital  governance  strategy.  That  is,  to  analyze  desired  outcomes  as  an enabling  framework  for  the  sociotechnical  artifact  derived  from  strategic  management processes  and  strategic  alignment.  As  GovTech  is  an  emerging  field  with  a  lack  of  empirically  grounded  theoretical  studies,  we  draw  on  Bharosa's  [11]  conceptual  framework for  GovTech  design  and  governance.  The  framework  serves  to  evidence  in  practice  an artifact  that  is  the  result  of  technological,  institutional,  human-centered,  and  governance design  processes.  In  summary,  we  propose  a  framework  (Table  1)  to  analyze  GovTech management  and  strategic  alignment.
 
@@ -3435,6 +4280,10 @@ Table  1. GovTech  management  research  framework  and  strategic  alignment
 We  implemented  a  roadmap  for  design  as  a  research  mechanism  in  information  systems: Design Science Research [23]. In the problem  identification stage, we  conducted a literature  review  based  on  the  GovTech  research  agenda  [1,  3];  prioritizing  the  research based  on  digital  collaborative  governance  and  strategic  management  and  alignment  in the  public  sector.
 
 We  focused  on  defining  the  GovTech  management  framework  as  an  artifact  capable of  supporting  governments  in  GovTech  alignment.  In  the  design  and  development  stage, the  functionality  and  architecture  of  the  artifact  were  determined  based  on  theoretical knowledge  about  strategic  management,  strategic  alignment,  and  GovTech  design,  as shown  in  Table  1.  Strategic  management  encompasses  the  determinants  that  influence
+
+
+<!-- PAGE 214 -->
+
 
 management  processes  and  affect  strategic  actions,  while  alignment  refers  to  the  processes  that  provide  coherence,  and  the  output  level  refers  to  the  elements  that  make  up the  design  of  GovTech  sociotechnical  solutions.
 
@@ -3456,6 +4305,10 @@ Madrid  GovTech  encompasses  the  creation  of  a  Digital  Hub  -  a  Digital 
 
 1 The  documents  collected  and  analyzed  related  to  the  Strategy,  Programs,  and  Action  Plans of key sectors and regulations are available in  the  following  repository:  https://www.madrid.es/portales/munimadrid/es/Inicio/El-Ayunta miento/Transformacion-Digital-/?vgnextfmt=default&amp;vgnextchannel=106f7dae756be710Vg nVCM2000001f4a900aRCRDAccessed  in  October  2024.
 
+
+<!-- PAGE 215 -->
+
+
 with  an  innovative  digital  DNA.  A  strategy  and  a  programme  have  been  established. Other  strategic  objectives  supporting  GovTech  include:  strengthening  and  expanding the  publication  of  the  open  data  portal;  promoting  a  culture  of  reuse  specifically  for  the ecosystem  and  the  GovTech  Programme;  and  establishing  an  operational  and  strategic framework  for European  digitalisation measures  for professionals. Additionally, the Digital  Transformation  Strategy  has  a  transparent  and  participatory  governance  structure, consisting  of  an  advisory  board,  an  executive  committee,  and  an  annual  report.
 
 The  Madrid  GovTech  strategy  was  established  with  clear  lines  of  action.  First,  it involves  the  incorporation  of  innovation  into  services  for  citizens  through  the  creation  of testing  and  exploration  spaces  within  public  administration,  addressing  public  needs  and challenges.  Second,  it  aims  to  articulate  and  promote  the  opening  of  a  more  competitive public  supplier  market  by  connecting  startups,  investors,  accelerators,  universities,  and other  stakeholders.  Third,  it  supports  the  development  of  startups  and  small  digital  microenterprises  by  becoming  customers  of  their  solutions.
@@ -3469,6 +4322,10 @@ Regarding  regulations, the City  Council has established decrees and operationa
 About  the  organizational  elements,  the  Digital  Office 2 Is  a  body  subordinated  to the  General  Coordination  of  the  Madrid  City  Hall.  It  coordinates  the  Digital  Transformation  Strategy  and  its  action  plans,  including  Madrid  GovTech.  The  entity  operates in  conjunction  with  the  City  Hall's  digital  directors  and  the  Information  Technology
 
 2 Digital  Office  competencies.  Available  at:  Government  Board  of  the  City  of  Madrid.  BOAM  No. 9419 (05/07/2023). https://sede.ma-drid.es/csvfiles/UnidadesDescentralizadas/UDCBOAM/ Contenidos/Boletin/2023/Julio/Ficheros%20PDF/BOAM\_9419\_04072023143541196.pdf Accessed  in  October  2024.
+
+
+<!-- PAGE 216 -->
+
 
 Department  (IAM).  Digital  Directors  are  positions  established  by  the  digital  transformation  governance  model,  tasked  with  promoting  the  transformation  process  in  each municipal  activity area. The Directors also facilitate the connection  between  digital administration,  citizens,  businesses,  and  internal  management.  IAM  is  an  autonomous body  specialised  in  information  and  communication  technology  matters.
 
@@ -3486,6 +4343,10 @@ The  City  Hall  has  developed  an  open  innovation  methodology  to  convert 
 
 3 The  information  described  and  categorized  in  this  section  was  obtained  from:  Oficina  Digital. (2023).  GovTech  Madrid  Program.  Digital  Capital.  Available  at  https://www.madrid.es/UnidadesDescentralizadas/OficinaDigital/Nav\_OfDigital/ficheros/ProgramaMadridGovtech.pdf Accessed  in  October  2024.
 
+
+<!-- PAGE 217 -->
+
+
 teams  to  lead  an  open  innovation  system.  The  teams  then  integrate  the  business  model into  their  daily  work  based  on  service  design,  which  is  disseminated  in  training  sessions.
 
 Once  a  challenge  is identified and disseminated,  co-creation  sessions  are  held  to discuss  the  problem  with  a  focus  on  knowledge  exchange.  Agile  methodologies  are introduced,  alongside  the  development  of  minimum  viable  products,  strategic  thinking, and  future  scenario  design.  This  collaborative  work  phase  also  receives  training  support to  address  the  differences  in  culture,  resources,  and  working  methods  between  the  public  sector  and  the  entrepreneurial  ecosystem.  Resources  used  to  create  dynamic  spaces between  institutions  interested  in  solving  the  challenges  include  semi-structured  meetings,  pitches,  rounds,  and  interviews.  The  knowledge  generated  in  this  phase  is  converted into  pilot  proposals,  innovation  briefs,  or  work  plans.
@@ -3500,6 +4361,10 @@ As  such,  we  suggest  that  the  proactive  positioning  of  the  public  sect
 
 To  answer  the  first  research  question,  we  proposed  an  analytical  framework,  Table  1, where  the  environmental,  institutional,  and  organisational  determinants  can  influence GovTech's  strategic  management.  Madrid  GovTech  is  a  governmental  strategy  and  a government  programme  influenced  by  the  advancements  in  the  digitalisation  of  public  services  in  Europe.  The  context  of  modernisation  in  procurement  and  technology implementation  by  the  Spanish  government  is  an  environmental  factor  that  impacts  the management  of  digital  transformation  in  the  city  of  Madrid.  The  city  also  benefits  from national  policies,  as  it  is  the  national  capital.  However,  no  concrete  practice  or  inducing approach,  such  as  an  action  plan  or  technical  cooperation  for  GovTech,  was  identified within  the  national  vector  for  the  local  level.  Other  emerging  GovTech  ecosystems  in Europe  have  also  influenced  the  design  of  the  strategy  and  the  programme.  The  Madrid City  Council  is  also  part  of  the  European  consortium  GovTech4all,  which  functions  as a  European  GovTech  incubator.
 
+
+<!-- PAGE 218 -->
+
+
 Regarding  institutional  factors,  Madrid  GovTech  operates  in  a  governmental  system favorable  to  the  implementation  of  public  policies,  as  there  are  district  councils  to  support the  management  of  the  City  Council.  There  is  a  governance  structure  based  on  the  Digital Transformation  Strategy  that  benefits  the  initiative.  Short-term  action  plans  and  interdependent  objectives  with  other  projects  have  been  established.  According  to  Niehaves and  Klassen  [26],  policies  for  entrepreneurship,  active  government  programmes,  and the  regulatory  environment  are  crucial  to  promoting  GovTech  ecosystems.  However, the  lack  of  reference  to  GovTech  and  the  regulation  of  data  protection  and  cybersecurity,  setting  out  recommendations,  milestones,  or  practices,  could  be  a  considerable  gap. From  this  perspective,  it  is  essential  to  consider  the  environmental  determinants,  the regulations  established  within  the  European  Union  framework,  and  those  that  apply  to the  case  study.
 
 With  the  institutional  framework  establishing  actions,  goals,  and  aligning  plans,  the alignment  of  management  objectives  naturally  facilitates  the  strategic  alignment  of  IT. However,  no  progress  measurement  structures  were  identified,  although  this  is  part  of the  announced  objectives  of  the  GovTech  Strategy.  There  are  essential  institutional  factors  for  which  no  documented  evidence  was  found:  policies,  acquisitions,  intergovernmental  agreements,  data  protection  regulation,  and  information  security  structures.  GovTech  policies  could  extend  programmes  beyond  government  programmes,  consolidating GovTech  as  a  facilitator  of  public  policy.
@@ -3511,6 +4376,10 @@ Regulations to simplify public procurement processes that favor business and ent
 With  regard  to  organisational  determinants,  the  regulatory  gap  reveals  a  certain  deficiency  in  the  implementation  of  the  Digital  Office's  competencies.  For  example,  the Office  is  responsible  for  data  governance  and  aspects  of  artificial  intelligence.  However, the  competencies  to  draft  norms  and  recommendations  could  be  better  utilised  to  support the  management  processes  of  the  Programme,  at  least  up  to  this  point.  The  Digital  Office is  empowered  to  lead  the  broader  strategic  management  related  to  digital  transformation  and  the  GovTech  Strategy.  However,  the  leadership  style,  capacities,  and  resources related  to  the  GovTech  Programme  are  unclear,  including  concerning  the  shared  management  with  the  city's  IT  company  and  the  digital  directors.  It  is  not  possible  to  identify the  degree  of  involvement  of  the  Office  in  the  planning  and  strategic  management  of GovTech,  as  there  are  no  indicators  or  evaluation  metrics.
 
 To answer  the second  research  question, which  seeks  to  understand  whether  the GovTech  initiative  is  aligned  with  the  broader  governance  strategy,  we  examined  the alignment  of  objectives,  adaptation,  organisational  agility,  and  integration.  We  proposed
+
+
+<!-- PAGE 219 -->
+
 
 an  analytical  framework,  Table  1,  in  which  the  processes  of  management  and  strategic alignment  impact  GovTech  outcomes.
 
@@ -3526,6 +4395,10 @@ Secondly,  the  integration  of  technologies  must  go  hand  in  hand  with  t
 
 In  this  study,  we  analyse  the  Madrid  GovTech  initiative  by  artefact-framework,  which is  promoted  by  the  Digital  Office,  and  linked  to  the  General  Coordination  of  the  City Council  of  Madrid.  The  GovTech  initiative  in  Madrid  is  aligned  with  the  broader  strategic governance  management,  but  there  are  several  areas  of  concern  related  to  the  outcomes of  management  and  strategic  alignment.  We  have  identified  that  institutional  regulatory factors  are  gaps  in  the  strategy.  There  is  a  lack  of  alignment  between  data  management and  protection,  as  well  as  information  and  telecommunications  security.  This  nascent stage  is  further  compounded  by  the  lack  of  applicability  of  the  common  competencies of  the  managing  body  in  these  areas-data,  cybersecurity,  and  GovTech.  Organisational competence  is  being  underutilised,  as  the  intersection  of  these  areas  could  facilitate  the
 
+
+<!-- PAGE 220 -->
+
+
 organisational  agility  necessary  for  projects  that  increasingly  require  the  use  of  artificial intelligence in the public sector. Consequently,  there  are gaps in legal security, data quality,  system  quality,  and  cybersecurity  that  are  needed  to  enhance  the  reliability  and credibility  of  GovTech  [1].
 
 We  also  found  that  information  asymmetry  between  members  of  the  organisations and  between  the  organisations  themselves  may  be  related  to  the  effectiveness of the GovTech  design  and  governance.  It  is  unclear  what  role  the  public  agency  plays  in  determining  the  management  resources  for  the  GovTech  Programme,  as  ideation,  execution, and  implementation  are  driven  by  external  consultancy.  Bharosa  [1]  suggested  a  solution whereby  public  agencies  can  exert  input,  output,  behavioral,  and  normative  measures over  GovTech  providers.  Again,  the  public  manager  of  the  GovTech  Programme  assumes the  role  of  an  agent,  which  could  be  an  obstacle  to  achieving  common  behavior  with  the principal,  paraphrasing  the  principal-agent  theory  [10].  On  the  other  hand,  the  training activities  within  the  GovTech  Programme  focusing  on  internal  capabilities  in  the  public sector  contribute  to  the  absorption  capacity  needed  to  proactively  shape  GovTech  solutions  [1].  Finally,  we  identified  that  the  Programme  includes  evaluation  and  performance activities  for  GovTech  cases.  However,  it  is  unclear  whether  this  agenda  includes  ethical  parameters  where  human  values  are  infused  into  both  functional  and  non-functional requirements  [1].
@@ -3539,6 +4412,10 @@ Acknowledgments. This  study  was  funded  by  Funded  by  the  European  Union.
 ## References
 
 1. Bharosa,  N.:  The  rise  of  GovTech:  Trojan  horse  or  blessing  in  disguise?  A  research  agenda. Gov.  Inf.  Q. 39 (3),  101692  (2022).  https://doi.org/10.1016/j.giq.2022.101692
+
+
+<!-- PAGE 221 -->
+
 
 2. Hoekstra, M., Van Veenstra, A.F., Bharosa,  N.: Success  factors and barriers  of  GovTech ecosystems:  a  case  study  of  GovTech  ecosystems  in  the  Netherlands  and  Lithuania.  In:  Cid, D.D. (ed.) Proceedings of the 24th Annual  International Conference  on Digital  Government  Research  -  Together  in  the  Unstable  World:  Digital  Government  and  Solidarity,  DGO 2023,  pp.  280-288.  Association  for  Computing  Machinery  (2023).  https://doi.org/10.1145/ 3598469.3598500
 3. Bharosa,  N.,  Janowski,  T.:  The  GovTech  challenge?  GovTech  and  public  value  creation.  In: Proceedings  of  the  25th  Annual  International  Conference  on  Digital  Government  Research (Dg.O  2024),  pp.  1043-1045.  Association  for  Computing  Machinery  (2024).  https://doi.org/ 10.1145/3657054.3659125
@@ -3555,6 +4432,10 @@ Acknowledgments. This  study  was  funded  by  Funded  by  the  European  Union.
 14. Poister,  T.H.,  Pitts,  D.W.,  Hamilton  Edwards,  L.:  Strategic  management  research  in  the  public sector:  a  review,  synthesis,  and  future  directions.  Am.  Rev.  Public  Adm.  (2010).  https://doi. org/10.1177/0275074010370617
 15. Grützner,  L.,  Werth,  O.,  Breitner,  M.H.:  IS  alignment  in  dynamic  environments:  a  comprehensive  framework.  In:  Bui,  T.X.  (ed.)  Proceedings  of  the  57th  Hawaii  International  Conference on  System  Sciences,  pp.  6543-6552  (2024)
 
+
+<!-- PAGE 222 -->
+
+
 16. Tan,  E.,  Crompvoets,  J.:  A  new  era  of  digital  governance.  In:  The  New  Digital  Era  Governance: How  New  Digital  Technologies  are  Shaping  Public  Governance,  pp.  13-49.  Wageningen Academic  Publishers  (2022).  https://doi.org/10.3920/978-90-8686-930-5\_1
 17. Hammerschmid,  G.,  Palaric,  E.,  Rackwitz,  M.,  Wegrich,  K.:  A  shift  in  paradigm?  Collaborative  public  administration  in  the  context  of  national  digitalization  strategies.  Governance 37 (2),  411-430  (2024).  https://doi.org/10.1111/gove.12778
 18. Panagiotopoulos,  P.,  Klievink,  B.,  Cordella,  A.:  Public  value  creation  in  digital  government. Gov.  Inf.  Q. 36 (4),  101421  (2019).  https://doi.org/10.1016/j.giq.2019.101421
@@ -3567,6 +4448,10 @@ Acknowledgments. This  study  was  funded  by  Funded  by  the  European  Union.
 25. Maragno,  G.,  Tangi,  L.,  Gastaldi,  L.,  Benedetti,  M.:  AI  as  an  organizational  agent  to  nurture: effectively  introducing  chatbots  in  public  entities.  Public  Manag.  Rev. 25 (11),  2135-2165 (2022).  https://doi.org/10.1080/14719037.2022.2063935
 26. Niehaves,  B.,  Klassen,  G.:  GovTech:  influencing  factors,  common  requirements  and  recommendations.  In:  Manzoni,  M.  (ed.)  Supporting  the  Development  of  Cross-Border,  Interoperable  GovTech  Practices  in  the  European  Landscape  (JRC139723).  Publications  Office  of  the European  Union  (2024).  https://doi.org/10.2760/1598146
 27. Jonathan,  G.M.,  Rusu,  L.,  Van  Grembergen,  W.:  Business-IT  alignment  and  digital  transformation:  Setting  a  research  agenda.  In:  Insfran,  E.,  et  al.  (eds.)  Information  Systems  Development:  Crossing  Boundaries  between  Development  and  Operations  (DevOps)  in  Information Systems  (ISD2021  Proceedings),  Valencia,  Spain.  Universitat  PolitŁcnica  de  ValŁncia  (2021)
+
+
+<!-- PAGE 223 -->
+
 
 ## Alignment  for  Digital  Transformation in  Government:  A  Design  Perspective
 
@@ -3584,6 +4469,10 @@ Digital transformation - a process  of  organizational  change  that  leverages 
 
 <!-- image -->
 
+
+<!-- PAGE 224 -->
+
+
 Despite  its  importance,  our  current  understanding  of  alignment  in  digital  transformation  remains  limited  in  two  key  areas.  First,  most  research  has  concentrated  on  businessIT  alignment  [29,  36],  while  alignment  for  digital  transformation  also  involves  collaboration  with  external  actors  beyond  the  organization  and  is  more  continuous  in  nature [25,  37].  Second,  while  there  have  been  attempts  to  make  alignment  more  practical  by focusing  on  what  organizations  can  actually  do  [20],  existing  research  provides  little practical  design  knowledge  on  'what  works'  [3,  31].
 
 Therefore,  this  study  adopts  a  design-based  approach  to  explore  strategic  alignment within  digital  transformation.  It  seeks  to  answer  the  question:  'How  can  public  sector organizations  develop  successful  training  programs  that  contribute  to  strategic  alignment for  digital  transformation?'.  The  study  is  based  on  a  four-year  action  design  research (ADR)  project  [7,  33]  for  co-creating  the  Digital  Leaders  Academy,  a  comprehensive vocational  training  initiative  which  has  trained  over  330  high-level  participants,  including  general  directors,  business  and  IT  directors,  and  department  heads  of  regional  and local  governments.  The  research  involved  close  collaboration  with  practitioners  through participant-observation  and  field  notes,  internal  document  inspection,  interviews  and surveys,  allowing  to  not  only  develop  solutions  tailored  to  the  Academy's  specific  goals but  also  generate  broader  insights  through  meta-requirements  and  design  principles.
@@ -3597,6 +4486,10 @@ This  study  makes  two  main  contributions:  (1)  it  provides  design  knowle
 Governments  worldwide  are  undergoing  digital  transformation,  driven  by  increasing data  availability,  emerging  technologies,  shifting  citizen  expectations,  and  external  disruptions  such  as  the  COVID-19  crisis  [34,  37].  Digital  transformation  is  defined  as  'a fundamental  change  of  processes,  enabled  by  the  innovative  use  of  digital  technologies  accompanied  by  the  strategic  leverage  of  key  resources  and  capabilities,  aiming to  radically  improve  an  entity  [i.e.,  an  organisation,  a  business  network,  an  industry,  or society]  and  redefine  its  value  proposition  for  its  stakeholders'  [11].  It  is  not  merely  the adoption  of  new  technologies,  but  a  fundamental  reconfiguration  of  processes,  capabilities,  and  organizational  culture,  and  aims  to  improve  service  delivery,  enhance  crossorganizational  collaboration,  and  make  governments  more  agile  and  responsive  to  change [25].
 
 A  key  challenge  in  this  transformation  is  ensuring  alignment  across  multiple  actors and  organizational  levels  [14].  Unlike  traditional  IT  modernization  efforts,  digital  transformation requires governments  to synchronize  strategies, policies and technologies in a dynamic and often uncertain environment [19, 25]. Misalignment can lead to inefficiencies,  fragmented  digital  services,  and  failed  transformation  initiatives  [22].
+
+
+<!-- PAGE 225 -->
+
 
 ## 2.2 Strategic  Business-IT  Alignment
 
@@ -3614,6 +4507,10 @@ Given  these  broader  challenges,  there  is  a  need  to  rethink  alignment  
 
 Design  science  research  (DSR)  aims  to  develop  innovative  artefacts  while  generating knowledge  about  their design [17, 28]. This study adopts an action design research (ADR)  approach,  a  specific  form  of  DSR  [33].  A  key  aspect  of  ADR  -  distinguishing
 
+
+<!-- PAGE 226 -->
+
+
 it  from  other  DSR  genres  -  is  its  emphasis  on  building  and  evaluating  ensemble  artefacts  within  their  organizational  context.  It  prioritizes  organizational  impact,  continuous learning  and  iterative  feedback  [8,  16].  These  characteristics  make  ADR  particularly suited  for  studying  the  development  of  vocational  training  programs  that  foster  strategic alignment  for  digital  transformation  [23].  Unlike  action  research,  ADR  not  only  focuses on  organizational  impact  but  also  aims  to  create  artefacts  with  broader  applicability  and explicitly  aims  for  generalizability  in  the  form  of  design  principles  [16].
 
 ## 3.1 ADR  Research  Context
@@ -3625,6 +4522,10 @@ The  Flemish  government  has  high  ambitions  for  the  digitalization  policy
 Digital  Flanders  has  always  combined  a  focus  on  data  and  operational  efficiency  with a  customer-oriented  culture.  Over  time,  the  focus  on  geographical  data  -  dating  back  to its  roots  in  the  Geographical  Information  Agency  -  was  supplemented  with  a  focus  on authentic  sources,  open  data  and  standards.  The  customer-oriented  culture,  dating  back to  the  'Info  Line'  (a  Flemish  form  of  311  services)  which  was  also  absorbed  into  the agency,  led  Digital  Flanders  to,  over  time,  focus  more  and  more  on  services.  It  wanted  to relieve  the  burden  on  other  government  entities  [9]  by  providing  platforms  and  solutions 'as  a  service'  that  could  be  plugged  into  business  processes  of  other  agencies,  including  framework  contracts,  identity  and  access  management  (ACM/IDM),  data  exchange infrastructure  (MAGDA),  IT  security  services,  and  My  Citizen  Profile,  'an  ecosystem of  building  blocks  that  aims  to  provide  natural  persons  a  no-wrong  door  access  to  public services  of  all  local  and  regional  public  legal  entities'  [39].
 
 Since  the  start  of  the  previous  government  term,  in  2019,  Digital  Flanders  also  started to  focus  on  digital  transformation  and  on  facilitating  change  in  other  Flemish  and  local entities.  It  is  within  this  focus  area  that  the  Digital  Leaders  Academy  fits.  The  Digital Leaders  Academy  'provides  training  on  digital  strategy and transformation,  collects best  practices  on  these  themes  and  connects  interested  parties  with  each  other  during networking  sessions'.  Since  its  set-up  in  2021,  over  330  participants  (business  and  IT
+
+
+<!-- PAGE 227 -->
+
 
 directors,  leading  officials  of  departments  and  agencies  of  the  Flemish  government  and general  directors  of  Flemish  provinces,  cities  and  municipalities)  took  part  in  the  different programs  of  the  Digital  Leaders  Academy,  see  Table  1.
 
@@ -3655,6 +4556,10 @@ The  core  DLA  program  consists  of  10  half  day  sessions  and  a  final  n
 
 A separate program, referred to as 'top events', is specifically aimed at the administrator-generals  of  Flemish  departments  and  agencies.  Unlike  the  core  DLA  program,  it  is  targeted  at  the  same  participants  every  time  (about  90  administrators-general
 
+
+<!-- PAGE 228 -->
+
+
 and  their  direction  members,  with  around  35  (different)  people  joining  each  event),  but the  content  also  changes  every  time.  Two  events,  each  lasting  for  either  half  a  day  or  a full  day,  are  organized  every  year.  The  first  event  focused  on  a  general  overview  of  the core  DLA  program  in  one  day.  Later  events  focused  on  digital  maturity,  digital  strategy,  cybersecurity,  data  governance,  and  AI.  Each  time,  reputed  speakers  from  outside government  or  renowned  international  governments  are  invited.
 
 A  variant  of  the  top  event  program,  Filbert  goes  digital,  is  organized  specifically  for the  general  directors  of  local  governments.  This  consists  of  a  3-day  condensed  version of  the  core  DLA  program,  adapted  to  the  local  government  context.  A  total  of  65  general managers  took  part  int  first  two  editions.
@@ -3668,6 +4573,10 @@ The  ADR  team  consisted  of  the author, Digital Flanders' director of the Dig
 Fig.  1. ADR  process
 
 <!-- image -->
+
+
+<!-- PAGE 229 -->
+
 
 Table  2. ADR  interventions
 
@@ -3697,6 +4606,10 @@ This  is  also  linked  to  the  broader  problem  that  digital  transformation
 
 During  this  phase,  the  ADR  team  built  and  evaluated  the  artefact  presented  in  Table  4. The  ADR  team  selected  the  OECD  digital  government  policy  framework  [27] as the overarching  framework  for  designing  the  DLA  for  several  reasons.  First,  this  framework aligned  well  with  the  broader  policy  context,  particularly  the  digital  strategy  of  Digital
 
+
+<!-- PAGE 230 -->
+
+
 Table  3. Meta-requirements
 
 | Meta-requirement                                        | Explanation                                                                                                                                                                                                                                                                            |
@@ -3714,6 +4627,10 @@ During the implementation of the program, the ADR  team identified the need to e
 
 1 https://digital-strategy.ec.europa.eu/en/policies/desi.
 
+
+<!-- PAGE 231 -->
+
+
 Table  4. Final  version  of  the  artefact
 
 | Programme              | Audience                                                                                                                                                                  | Objectives                                                                                                                                                                                                                                                                   | Set-up                                                                                                                                                 |
@@ -3728,6 +4645,10 @@ executives. Initially, this seminar  was  structured  as  a  condensed,  one-day
 
 3 https://dynamicforms.crmiv.vlaanderen.be/EventModule/Page/Show/0237cacd-0244-4c5c9f91-0f5e69eadfbe?PreFillIds=bf1f78f7-6cd2-eb11-bacc-000d3adcc953,6f44ae26-6a2def11-840b-000d3ab1c3a6.
 
+
+<!-- PAGE 232 -->
+
+
 approach.  Rather  than  a  broad  introduction  to  digital  transformation,  they  sought  continuous  insights  from  external  developments  on  how  emerging  technologies  could  shape future  operations.  As  a  result,  the  ADR  team  transitioned  the  so-called  'top  events'  to  a model  of  biannual  events,  targeting  a  cohort  of  approximately  90  top  managers  and  their direction  committees.  These  events  were  designed  to  address  pressing,  timely  issues, ensuring  an  externally  driven  and  dynamic  agenda.
 
 In  addition,  a  request  from  local  government  representatives  led  to  the  development of  the  Filbert  goes  digital  training,  a  condensed  three-day  program  tailored  for  general managers  of  local  public  administrations.  This  initiative  further  underscored  the  need  for more  structural  involvement  of  local  government  public  servants  in  digital  leadership training. Beyond  their occasional role as guest speakers, local public servants were subsequently  invited  to  participate  in  DLA  training  sessions,  ultimately  comprising  1020%  of  each  DLA  cohort.  This  broader  inclusion  of  different  government  levels  enriched discussions,  fostering  a  more  integrated  perspective  on  how  various  levels  of  government contribute  to  user-centric  service  development.
@@ -3741,6 +4662,10 @@ We  summarized  what we learned from our four-year ADR  study in formal design p
 The  importance  of  the  OECD  framework  for  structuring  the  DLA  cannot  be  underestimated  (DP1).  It  ensured  a  broad  focus  of  the  DLA  program  and  provided  a  joint language  focused  on  digital by design, data-driven, government  as  a platform,  open by  default,  user-driven  and  proactive  government  organization.  During  the  DLA  program,  participants  work  on  a  case,  an  innovative  public  service  idea  which  they  develop themselves,  in  groups.  This  helps  in  explicitly  bringing  the  different  aspects  of  the  program  together,  in  fostering  better  ties  between  the  participant  by  developing  something together,  and  in  making  the  OECD  framework  actionable  by  applying  it  (DP3).  Participants  testified  that  they  continue  to  use  the  OECD  framework  for  decision-making  on digital  transformation  in  their  own  organizations.  What  also  helped  to  create  a  mutual understanding  in  the  group  was  to  have  them  share  lived  experiences  from  the  COVIDperiod, a  disruption  that  on  the  one  hand  drove  IT-enabled  change,  and  on  the  other hand  led  to  quick  decisions  and  shortcuts  that  did  not  contribute  to  sustainable  digital transformation  (DP4).  In  addition,  this  reflection  on  past  experiences  was  complemented with  new  experiences,  such  as  a  3-day  design  sprint.
 
 The  layered  approach  of  the  DLA,  consisting  of  different  programs,  also  proved to  be  important  (DP2),  since  all  government  levels  and  different  functions  within  each organization  needed  to  be  included,  but  appeared  to  require  a  different  approach.  The trainings  for  the  more  limited  amount  of  regional  government  agency  heads  focused  on bringing  this  entire  population  together  around  emerging  issues  in  the  external  environment.  The  trainings  for  the  IT  and  business  managers  and  policy  advisors  at  the  regional
+
+
+<!-- PAGE 233 -->
+
 
 Table  5. Design  principles
 
@@ -3758,6 +4683,10 @@ and  local  levels  consisted  of  a  longer  program  for  different  cohorts, 
 
 This  article  set  out  to  investigate  how  public  sector  organizations  can  develop  training programs  that  foster  strategic  alignment  for  digital  transformation.  The  four-year  ADR research  at  Digital  Flanders  for  developing  the  DLA  resulted  in  two  types  of  insights: it  generates  design  knowledge  on  how  to  foster  alignment  for  digital  transformation  in vocational  training  programs,  and  it  enhances  our  descriptive  understanding  of  alignment for  digital  transformation  [12,  38].
 
+
+<!-- PAGE 234 -->
+
+
 ## 5.1 Design  Knowledge
 
 Throughout  the  ADR  process,  literature  on  digital  transformation  in  government  and business-IT  alignment  helped  to define the problem  and  explore  potential solutions. However,  there  was  little  existing  guidance  on  the  actual  design  process.  Our  study's primary  contribution  is  design  knowledge,  or  prescriptive  insights  [12,  38].  The  design principles  (DP1-DP5)  in  Table  5  offer  practical  guidelines  for  public  sector  organizations to  develop  training  programs  for  digital  transformation  that  meet  the  meta-requirements from  literature  summarized  in  Table  3.
@@ -3771,6 +4700,10 @@ Compared  to  business-IT alignment literature [1, 20, 29], digital transformati
 Regarding alignment actions, the DLA  program  incorporates  both intended and emergent  alignment  actions,  focusing  on  aligning  both  tools  and  actors.  While  the  design principles  align  with  several  of  the  alignment  activities  identified  by  Karpovsky  and  Galliers  [20],  some  were  less  relevant  in  this  context,  and  additional  actions  specific  to  the public sector and digital transformation  were  necessary.  In  particular,  strengthening, learning,  evaluating,  developing  and  decision-making  emerged  as  key  alignment  activities.  The  DLA  program  placed  significant  emphasis  on  aligning  actors,  while  emergent alignment  with  tools  was  more  prominent  in  the  Top  Events.  A  notable  insight  is  that top  management  primarily  engaged  in  external  alignment  -  integrating  new  disruptions into  the  organization  -  while  business  and  IT  managers  focused  on  internal  alignment between  organizational  units.
 
 A  key  contribution  of  this  research  is  its  emphasis  on  the  importance  of  smaller,  emergent  alignment  actions  in  digital  transformation,  contrasting  with  dominant  narratives that  often  highlight  large-scale,  disruptive  interventions  [14,  25,  37].  Notably,  certain major  alignment  actions  -  reconfiguring,  signaling  and  negotiating  [20]  were  absent. This is significant, as these actions, such as restructuring organizations (reconfiguring)  or  creating  new  roles  (signaling),  are  frequently  discussed  in  digital  transformation debates  [37].  The  absence  of  these  actions  can  be  partly  explained  by  the  scope  of  the program,  which  did  not  focus  on  the  digital  transformation  of  individual  organizations, but  rather  on  providing  organizational  actors  with  the  competences  necessary  to  do  so. However,  the  lack  of  explicit  political  alignment  (negotiating)  in  digital  transformation remains  a  striking  finding,  given  its  relevance  for  achieving  systemic  change.
+
+
+<!-- PAGE 235 -->
+
 
 ## 6 Conclusion
 
@@ -3793,6 +4726,10 @@ The  study  makes  two  contributions:  (1)  it  provides  practical  design  kn
 9. Flemish Parliament. Beleidsnota Bestuurszaken 2014-2019. Door Liesbeth Homans, viceminister-president,  Vlaams  minister  van  Binnenlands  Bestuur,  Inburgering,  Wonen,  Gelijke  Kansen  en  Armoedebestrijding,  139  (2014-2015)  -  Nr  1,  Brussel  (2014).  https://docs.vla amsparlement.be/pfile?id=1052029.  Accessed  4  March  2024
 10. Fountain,  J.E.:  Building  the  Virtual  State:  Information  Technology  and  Institutional  Change. Rowman  &amp;  Littlefield  (2004)
 11. Gong,  C.,  Ribiere,  V .:  Developing  a  unified  definition  of  digital  transformation.  Technovation 102 ,  102217  (2021)
+
+
+<!-- PAGE 236 -->
+
 
 12. Gregor,  S.,  Hevner,  A.R.:  Positioning  and  presenting  design  science  research  for  maximum impact.  MIS  Q.,  337-355  (2013)
 13. Gregor,  S.,  Kruse,  L.C.,  Seidel,  S.:  The  anatomy  of  a  design  principle.  J.  Asssoc.  Inf.  Syst. 21 (6),  1622-1652  (2020)
@@ -3817,6 +4754,10 @@ The  study  makes  two  contributions:  (1)  it  provides  practical  design  kn
 32. Rosenkranz,  C.,  Charaf,  M.C.,  Holten,  R.:  Language  quality  in  requirements  development: tracing  communication  in  the  process  of  information  systems  development.  J.  Inf.  Technol. 28 (3),  198-223  (2013)
 33. Sein,  M.K.,  Henfridsson,  O.,  Purao,  S.,  Rossi,  M.,  Lindgren,  R.:  Action  design  research.  MIS Q. 35 (1),  37-56  (2011)
 
+
+<!-- PAGE 237 -->
+
+
 34. Simonofski,  A.,  Clarinval,  A.,  Vanderose,  B.,  Dumas,  B.,  Snoeck,  M.:  What  influences  citizens'  expectations  towards  digital  government?  An  exploratory  survey.  Digit.  Policy  Regul. Gov. 23 (2),  154-172  (2021).  https://doi.org/10.1108/DPRG-12-2020-0173
 35. Tyre,  M.J.,  Orlikowski,  W.J.:  Windows  of  opportunity:  temporal  patterns  of  technological adaptation  in  organizations.  Organ.  Sci. 5 (1),  98-118  (1994)
 36. Vander  Elst,  S.,  De  Rynck,  F.:  Alignment  processes  in  public  organizations:  an  interpretive approach.  Inf.  Polity 19 (3-4),  195-206  (2014)
@@ -3824,7 +4765,15 @@ The  study  makes  two  contributions:  (1)  it  provides  practical  design  kn
 38. Vom  Brocke,  J.,  Winter,  R.,  Hevner,  A.,  Maedche,  A.:  Special  issue  editorial-accumulation and  evolution  of  design  knowledge  in  design  science  research:  a  journey  through  time  and space.  J.  Assoc.  Inf.  Syst. 21 (3),  9  (2020)
 39. Wouters,  S.,  Janssen,  M.,  Lember,  V .,  Crompvoets,  J.:  Strategies  to  advance  the  dream  of integrated  digital  public  service  delivery  in  inter-organizational  collaboration  networks.  Gov. Inf.  Q. 40 (1),  101779  (2023)
 
+
+<!-- PAGE 238 -->
+
+
 ## Local  Practices,  Implementation, and  Innovation
+
+
+<!-- PAGE 239 -->
+
 
 <!-- image -->
 
@@ -3854,6 +4803,10 @@ S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  225-240,  2026.
 
 green  transition
 
+
+<!-- PAGE 240 -->
+
+
 Green  Deal  as  a  cross-cutting  policy  to  achieve  climate  neutrality  and  promote  a  resourceefficient  and  competitive  economy  in  the  EU  [2].  At  the  same  time,  the  Digital  Agenda 2030  outlines  the  processes  and  regulations  that  will  facilitate  digital  transition  [3].  The connection  and  relationship  between  these  two  parallel  initiatives  in  both  theory  and practice  are  not  clearly  defined  [1].  Technology  is  often  seen  as  one  of  the  key  factors contributing  to negative  environmental  impacts  [4].  At  the  same  time,  it can also be regarded  as  an  essential  enabler  of  a  successful  green  transition  [5].
 
 While  the  twin  transition  is  a  concept  coined  by  the  European  Union  in  order  to manage  the  ongoing  change  processes  in  the  green  and  digital  transition  [6],  there  are existing  ambiguities  between  the  supranational  (EU)  and  local  level  (cities)  [7].  The existing  EU  initiatives  are  created  to  support  twin  transition  in  local  governments,  such as  net-zero  cities  and  100  climate-neutral  and  smart  cities  [8].  Hence,  local  governments play  a  vital  role  in  the  twin  transition  [9,  10].  The  local  governments  in  the  digital  realm are  working  towards  transforming  and  achieving  smart  city  objectives;  in  parallel,  cities are  responsible  for  addressing  the  climate  change  challenges  and  reducing  environmental impact.  However,  there  is  a  limited  understanding  of  how  public  administrations  address twin  transition  initiatives,  both  theoretically  and  empirically,  and  what  capacities  and capabilities  are  required  for  effective  twin  transition  governance  [10-12].
@@ -3868,6 +4821,10 @@ This study is organised  as follows: Sect. 2 offers a  conceptual  overview  of 
 
 With  the  simultaneous  advancements  in  both  digital  and  green  transitions,  there  is  growing  concern  and  interest  in  how  these  developments  affect  each  other  [1,  4,  15].  The  green transition  is  being  pursued  in  response  to  major  challenges  such  as  climate  change,  biodiversity  loss,  and  environmental  degradation.  It  is  understood  as  the  process  that  aims  to mitigate  climate  change  and  preserve  and  restore  nature  through  a  fundamental  shift  in
 
+
+<!-- PAGE 241 -->
+
+
 production  and  consumption  patterns  by  reducing  greenhouse  gas  emissions  and  employing  renewable  energy  sources  [1,  6].  At  the  same  time,  the  digital  transition  is  fueled by  technological  advancements,  which  promise  increased  efficiency  and  improved  quality  of  life.  It  refers  to  a  process  aimed  at  enhancing  prosperity  and  addressing  societal challenges  through  the  use  of  digital  technologies  in  innovations  of  infrastructure,  services,  applications,  and  human  behaviour  [1,  6].  Hence,  [1]  defines  twin  transition  as the  following:  'The  twin  transition  is  about  how  the  dynamics  and  strength  of  the  digital transition  of  society  affect  the  green  transition  of  society,  and  how  these  two  transitions mutually  influence  each  other  and  should  be  combined  in  the  coming  years.'  (p.  12). Additionally,  the  role  of  technology  in  the  green  transition  is  often  viewed  in  two  contrasting  ways:  as  a  necessary  requirement  and  enabler  [16,  17]  or  as  a  negative  influencer, particularly  regarding  concerns  about  energy  footprints  [1,  18].
 
 This  has  led  to  a  diversity  of  perspectives  on  technology's  role  and  purpose  in  promoting  green  and  sustainable  development  transitions  in  public  administration  and  public service  delivery  [10].  [10]  has  categorised  the  role  and  frame  of  technology  into  different  relationships,  including  viewing  technology  as  a  solution  or  a  problem  through different  conceptualisation  and  positions  within  systems,  either  as  an  instrument  or  an institution  (see  Table  1).  In  the  context  of  'technology  as  an  instrument  of  a  solution'  to achieve  a  green  and  sustainable  transition,  the  discussion  centres  around  the  perception of  technological  determinism  as  a  metanarrative  of  technological  progress  and  positive outcomes.  This  narrative  is  exemplified  in  particular  in  the  literature  on  the  smart  city,  in which  the  use  of  technologies  is  perceived  as  a  solution  for  the  realisation  of  sustainable development  goals.  Conversely,  in  the  context  of  'technology  as  an  instrument  of  a  problem',  the  discussion  centres  around  the  characteristics  of  technology  in  energy  resource consumption.  Thus,  the  perspective  emphasises  the  need  to  limit  the  negative  impacts of  using  ICT  in  public  administration,  such  as  data  warehouses  and  data  processing.
@@ -3877,6 +4834,10 @@ While  the previous two perspectives showcase  technology  as an instrument, the
 ## 2.2 Transition  Management:  Spheres  and  Key  Facets
 
 Transition management  plays  a  crucial  role in implementing  the  transition activities and  achieving  transition  goals.  In  the  literature,  transition  management  is  understood as  an  analytical  and  prescriptive  approach  that  supports  the  identification  of  emerging practices  that  shape  long-term  sustainable  goals  [12].
+
+
+<!-- PAGE 242 -->
+
 
 Table  1. Relations  between  technology  (e-governance)  and  sustainable  development  ([10],  p.  39)
 
@@ -3889,6 +4850,10 @@ Table  1. Relations  between  technology  (e-governance)  and  sustainable  deve
 [13] developed a transition management  framework  that  illustrates various  governance  activities  influencing  long-term  sustainable  change  in  societies.  This  analytical  framework  supports  identifying  empirical  practices  through  which  societal  actors address  twin  transitions  at  different  levels.  The  framework  consists  of  three  key  spheres: strategic,  tactical,  and  operational.  The  strategic  sphere  involves  processes  such  as  vision development,  strategic discussions, the establishment  of collective goals,  and  normsetting. In this context, a key focus  is on a strategic  approach  to  norms,  values,  and ethics,  highlighting  sustainability's  relative  importance  for  society.  The  tactical  sphere includes steering  mechanisms  that  include  institutional patterns and structures, rules and  regulations,  organisations  and  networks,  infrastructures,  and  routines.  Here,  actors operate  across different levels  and  domains,  aiming  to  achieve  specific  and  concrete goals.  Operational  activities  include  experiments  and  actions  carried  out  in  the  context of  projects  and  programmes  and  are  often  referred  to  as  innovations  [13].
 
 Although  [13]  identified  activities  associated  with  transitions,  the  framework  did  not explore  the  role  and  capacity  of  public  administration  in  facilitating  these  transitions.  [19] enhances  this  perspective  by  detailing  the  essential  elements  of  public  administration's capacities: roles, resources, and capabilities. Public administration can have various roles,  such  as  promoting  the  visions  of  sustainable  transition,  facilitator  of  green  transformation,  mediator  of  conflicts,  partner  builder  and  leader,  and  encouraging  widespread societal  engagement.  These  roles  align  with  the  overall  purpose  of  organisations,  which is  to  maintain,  change,  or  disrupt  institutions  [19].  Additionally,  [19]  argues  the  importance  of  resources  in  relation  to  the  transformative  capacity,  which  they  define  as  a  set of  material  or  immaterial  assets  available  to  an  organisation,  internally  or  externally. This  includes  inter-alia,  human  resources,  financial  resources,  physical  resources  and political  mandates.  However,  the  existing  roles  and  resources  cannot  be  utilised  without  a  set  of  routines,  practices  and  procedures  or  the  capabilities  of  organisations  [19, 20].  The  capabilities  identified  as  necessary  for  transformative  capacity  are  analytical, operational,  coordination,  learning  and  reflective  abilities  [19].  Additionally,  [21]  argue
+
+
+<!-- PAGE 243 -->
+
 
 that  transformative  and  transition  management  employs  four  key  capabilities:  strategy formulation,  sustainability  measurement,  collaboration  and  reflexive  capabilities.  Last but  not  least,  public  administration  contains  different  transition  tasks  [12]  in  the  form  of giving  direction,  creating  governance,  and  supporting  and  destabilising  or  developing internal  capabilities  and  structures.  Similarly,  [20]  argue  that  there  are  four  key  governance  tasks:  creating  leadership  and  legitimacy,  coordinating  actors  and  instruments, reflexivity,  learning  and  experimenting  and  resolving  conflicts.
 
@@ -3910,6 +4875,10 @@ Table  2. List  of  interviewees
 | F           | IT data city officer                 |
 | G           | Leuven2030 representative            |
 
+
+<!-- PAGE 244 -->
+
+
 In regard to the data collection, this study relies  upon  semi-structured  in-person interviews  of  approximately  45-60  min,  as  well  as  desk  research,  which  included  the relevant  policy  documents  and  official  websites.  The  interviewees  are  the  city  officials responsible  for  the  digital  and  sustainability  domains  (energy,  circularity  and  mobility) (Table  2).  Interview  questions  have  been  developed  by  following  key  spheres  of  strategic, tactical  and  operational  elements  of  the  twin  transition  within  the  city  of  Leuven.  For example,  interviewees  were  asked  to  explain  the  role  of  the  city  in  the  formulation  of the  twin  transition  goals,  or  whether  the  city  has  developed  a  strategic  approach  towards twin  transition  objectives.
 
 For  the  data  analysis,  we  developed  general  codes  representing  the  key  transition spheres,  which  include  general  codes  and  themes  of  Strategic,  Tactical  and  Operational spheres.  Additionally,  we  populated  the  general  codes  with  the  codes  of  public  administration  transition  roles,  resources,  abilities  and  tasks.  More  specifically,  we  followed  a content  analysis  approach  [26]  utilising  NVIVO  qualitative  coding  software.  The  coding procedures  followed  the  relevant  statements  and  sentences  from  the  selected  documents and  the  interviews.  The  coding  was  primarily  done  by  descriptive  coding,  which  includes the  basic  topic  of  a  passage  of  qualitative  data.
@@ -3921,6 +4890,10 @@ This  study  has  some  methodological  limitations  as  well.  Due  to  the  ch
 Leuven  is  in  northwestern  Europe,  about  30  kms  east  of  Brussels,  Belgium,  and  covers an  area  of  56  km 2 .  With  just  over  100,000  residents,  it  is  seen  as  a  mid-sized  city  in Belgium,  and  its  population  continues  to  grow  [27].  The  city  is  well  known  for  its  strong academic  reputation,  mainly  because  it  is  home  to  KU  Leuven,  one  of  the  top  universities in  the  world.  KU  Leuven  has  around  70,000  students,  many  of  whom  come  from  outside the city, making  it an important  academic  centre  that adds to Leuven's  cultural and intellectual  life.  The  university  also  supports  the  local  economy  through  research-based spin-off  companies  [27].  Dutch  is  the  main  language  spoken  in  Leuven,  as  it  is  part  of  the Flemish  region  of  Belgium.  At  the  same  time,  the  city  is  shaped  by  Belgium's  complex political  system,  which  includes  three  regions-Flanders,  Wallonia,  and  Brussels-and three  language  communities-Dutch,  French,  and  German.  These  divisions  affect  how policies  and  decisions  are  made  at  the  local  level.
 
 The  city  has  a  long  history,  with  many  old  buildings  and  narrow  medieval  streets still  visible  today.  Leuven  is  not  only  a  centre  for  education  and  research  but  also  plays a  growing  role  in  areas  like  environmental  planning  and  innovation.  About  42%  of  the
+
+
+<!-- PAGE 245 -->
+
 
 city's  land  is  green  space,  which  is  the  second  highest  in  Flanders  after  Genk  [27].  The city's  work  in  innovation  and  sustainability  has  received  several  awards.  In  2019,  the European  Commission  named  Leuven  the  European  Capital  of  Innovation,  a  prize  given to  the  city  that  best  uses  innovation  to  solve  public  challenges  and  improve  people's lives  [28].  In  2018,  Leuven  also  won  the  European  Green  Leaf  Award,  which  recognises smaller  cities  for  their  efforts  in  sustainability  and  quality  of  life  [29].  More  recently, Leuven  was  chosen  as  one  of  100  European  Mission  cities  aiming  to  become  climateneutral  by  2030.
 
@@ -3935,6 +4908,10 @@ The  strategic  conceptualisation  of  the  twin  transition  does  not  exist  
 'Green transition as a vertical is something of a thematic approach. I would see digital as an enabler in a lot of things, especially focusing on sustainability like renewables, energy, local energy communities, local energy production and these things.' (Interview  A).
 
 Thus,  in  the  context  of  perspectives  of  the  twin  transition  in  public  administration based  on  [10]  the  conceptualisation  of  the  twin  transition  in  Leuven  is  shaped  by  the  city officials'  understanding  of  both  sustainability  and  digital  transitions.  The  green  transition is  framed  as  a  comprehensive  concept  encompassing  key  environmental  objectives,  such as reducing  CO2  emissions,  alongside  targeted,  sustainable  strategies across various sectors,  such  as  mobility  and  circularity  (Interview  C).  These  strategies  include  mobility improvements,  reducing  traffic  congestion,  and  circular  activities.  The  Circularity  Policy Advisor  addressed  the  green  transition  as  follows:
+
+
+<!-- PAGE 246 -->
+
 
 '[..], to me, green means, like everything related to sustainability, you know, both in terms of circular economy, in terms of energy, but also in nature-based solutions, the greening of the city, etc., so in the widest sense.' (Interview  B).
 
@@ -3951,6 +4928,10 @@ Additionally,  the  interviewees  highlighted  that  political  changes  do  not
 ## 4.2 Tactical  Level
 
 Leuven's  approach  towards  the  twin  transition  showcases  prioritisation  within  the  green transition  with  the  support  of  digital  technologies.  The  city  of  Leuven  lacks  a  unified strategic  framework  that  explicitly  addresses  both  transitions  simultaneously.  However, numerous  initiatives  are  driving  progress  in  both  areas  (as  discussed  in  4.3  Operational level).  In  the  context  of  the  twin  transition,  the  city  prioritises  the  sustainability  transition, aiming  to  achieve  climate  neutrality  by  2030  [30].  As  part  of  its  green  transition,  the city  has  expanded  its  green  spaces  to  cover  42.7%  of  its  total  area,  making  it  one  of the  greenest  cities  among  the  Flemish  central  cities  [27].  The  city  is  also  adapting  to the  impacts  of  climate  change,  preparing  for  increased  risks  of  flooding,  droughts,  and heatwaves,  with  the  average  temperature  expected  to  rise  by  6  ¡C  by  2100  [27].  In  tandem with  this,  Leuven  is  also  exploring  innovative  digital  solutions  to  enhance  access  to  public services  and  integrate  information  and  communication  technologies  (ICTs)  into  urban
+
+
+<!-- PAGE 247 -->
+
 
 management,  for  which  the  city  was  awarded  as  the  most  innovative  city  in  Europe  in 2020  [31].
 
@@ -3970,6 +4951,10 @@ Additionally,  Leuven  serves  as  an  implementer  of  the  twin  transition.  
 
 Additionally,  the  interviewees  highlighted  that  political  changes  do  not  influence  the twin  transition  efforts.  As  the  Life  Pact  coordinator  noted:
 
+
+<!-- PAGE 248 -->
+
+
 'So we now have the climate contract signed by Europe, and we've got a lot of projects being set up to scale up. We've signed this contract, and we need to do as much as we can. Fortunately, this contract is not bound to politicians but to the city of Leuven. Even after elections, if there are political changes, the Climate City contract remains an obligation we have committed to' (Interviewee  E).
 
 ## 4.3 Operational  Level
@@ -3984,6 +4969,10 @@ Another  example  of  the  twin  transition  project  is  a  waste  management  
 
 Citizen  participation  is  a  crucial  element  of  Leuven's  twin  transition,  where  local residents  actively  contribute  to  urban  sustainability  projects.  Over  the  last  15  to  20  years, the  city  has  adopted  a  bottom-up  approach,  ensuring  that  citizens'  voices  are  integrated into  decisions  about  public  spaces,  mobility,  and  greening  initiatives  [27]  citizens'  participation can also be noticeable  through  the  quadruple  and  triple helix projects and approaches  of  Leuven2030  and  Leuven  Mindgate.
 
+
+<!-- PAGE 249 -->
+
+
 As  a  Life  Pact  coordinator  (Interview  E)  noted,  while  awareness  of  climate  change is  generally  high,  not  all  citizens  are  equally  involved,  with  some  showing  a  ' lack of interest' or  adopting  a  ' not in my backyard' mentality.  However,  in  areas  like  KesselLo, residents have been highly proactive, asking for greener streets, reduced  traffic, and  participating  in  community-led  projects  that  use  local  budgets  to  transform  public spaces.
 
 Leuven's  Department  of  Participation  plays  a  key  role  in  facilitating  this  engagement, employing  neighbourhood  managers  who  act  as  liaisons  between  the  city  and  residents. These  managers  help  organise  workshops,  events,  and  informal  sessions  where  citizens can  voice  their  concerns  and  propose  ideas  for  improving  their  local  environment.  For instance,  the  city  organised  community  neighbourhood  challenges  to  promote  naturefriendly  gardening  in  private  gardens.  In  some  cases,  as  noted  in  interviews,  resistance to city projects arises due to differing visions among  residents. For example,  while some  neighbourhoods  embraced  greening  initiatives,  others  were  more  resistant  due to concerns  about  changes  in their streets. The  Life  Pact  coordinator  mentioned  the following:
@@ -3995,6 +4984,10 @@ Regarding  resources  evaluation,  human  resources  in  Leuven's  twin  transit
 This reliance on external consultants challenges  the city's capacity to mature  its digital  strategies.  The  IT  data  city  officer  explained,  ' We pay for a consultant… If we hadthat knowledge in-house… we would have maturity.' (Interview  F).  The  city's  ability to  attract  and  retain  highly  skilled  personnel  in  specialised  fields,  such  as  energy  markets and  digital  innovation,  is  further  hindered  by  competition  with  the  private  sector,  where salaries  and  resources  often  exceed  those  of  government  positions.  This  human  capital challenge  extends  to  areas  of  sustainability  and  circular  economy  projects,  where  the  city has  had  difficulty  filling  key  roles  needed  to  drive  forward  the  twin  transition  agenda. Despite  these  challenges,  there  is  recognition  of  the  need  to  build  internal  expertise  to support  long-term,  sustainable  growth  in  both  green  and  digital  domains.
 
 Data  management  presents  a  further  challenge  in  Leuven's  twin  transition  efforts. One interviewee pointed out that the city often lacks ownership over critical data resources,  which  hampers  its  ability  to  fully  leverage  digital  solutions  in  achieving  its sustainability  goals.  As  expressed  in  the  quote  of  the  Sustainability  Policy  Officer,  ' We don't have the data, and we are also not the data owners' (Interview  C);  this  limitation
+
+
+<!-- PAGE 250 -->
+
 
 restricts  the  city's  capacity  to  create  data-driven  strategies  and  innovations.  Ensuring access  to  reliable,  owned  data  and  building  stronger  financial  support  frameworks  will be  key  to  overcoming  these  obstacles  and  advancing  Leuven's  twin  transition.
 
@@ -4008,6 +5001,10 @@ We  also  found  that  the  strategic  governance  orientation  of  the  twin  t
 
 Our  study  highlights  the  key  aspects  of  transition  management,  as  discussed  in  [12, 20,  35].  The  findings  indicate  that  the  city  of  Leuven  plays  a  purposeful  role  in  both maintaining  and  transforming  the  institutions  involved  in  the  two  aspects  of  the  transition  [19].  The  city  administration  in  Leuven  acts  as  a  facilitator  and  partner  builder  in engaging  with  the  internal  and  external  stakeholders  within  the  initiatives  and  projects related  to  digital  support  for  the  green  transition.  Furthermore,  regarding  resources,  the city  primarily  depends  on  human  resources.  However,  due  to  the  size  of  the  government,  managing  these  resources  presents  challenges,  in  addition  to  the  data  and  data
 
+
+<!-- PAGE 251 -->
+
+
 management  requirements  for  a  successful  twin  transition.  In  terms  of  capabilities,  the city  relies  upon  a  necessary  leadership  capability  and,  in  particular,  dynamic  capabilities in  the  forms  of  analytical  capabilities  necessary  for  exploring  new  methods  of  working (in  the  case  of  a  circular  economy),  collaborative  capability  and  reflexive  capability  in forms  of  leadership  for  twin  transition  [12,  21].
 
 Besides  having  the  capabilities  in  terms  of  access  to  technologies  and  the  strategic  orientation  towards  addressing  environmental  sustainability,  the  city  of  Leuven  and similar  local  governments  may  address  the  following.  Local  governments  may  take  into consideration  that  the  twin  transition  objectives  may  require  a  consistent  governance approach  in  the  form  of  a  multi-sectoral  working  group  which  takes  into  account  several important  sectors,  such  as  energy,  mobility,  and  geo-information.  Furthermore,  the  local governments  may  further  work  on  data  and  knowledge  exchange,  as  multiple  interviewees  mentioned  the  lack  of  knowledge  and  information  exchange  on  the  other  projects, which  led  to  multiplicity  of  solutions,  in  particular  when  it  comes  to  digitalising  products or  services.  Therefore,  the  local  governments  could  put  more  efforts  into  establishing interoperability,  which  refers  to  the  abilities  of  the  organisations  to  exchange  and  use knowledge,  information  and  services  for  mutually  beneficial  objectives.
@@ -4017,6 +5014,10 @@ Besides  having  the  capabilities  in  terms  of  access  to  technologies  and
 While  parallel initiatives in the EU  in the  green  and  digital  domains  are  happening, logical questions  arise about  how  these  initiatives influence others.  The  term  coined by  the  European  Union,  twin  transition  [6],  aims  to  address  the  challenges  associated with potential incoherence  between  two  big  objectives.  Twin  transition  is  defined  as ' how the  dynamics  and  strength  of  the  digital  transition  of  society  affect  the  green transition of society, and how these two transitions mutually influence each other and should  be  combined  in  the  coming  years.'  (p.  12) [1]. However,  there are existing dissimilarities  between  the  EU  initiatives  and  local  developments  [34,  35],  and  research on  local  government  practices  in  the  twin  transition  is  currently  lacking.  Thus,  employing an  exploratory  case  study  research  design  aims  to  address  the  mentioned  gap  by  trying to  answer  the  posed  RQ: How does the local city government of Leuven address the twin transition initiative, and what are the key practices?
 
 The  research  findings  indicate  that  the  city  of  Leuven  has  an  asymmetrical  approach towards  twin  transition.  This  indicates  that  disintegrated  management  has  no  particular  focus  on  a  strategic  vision  to  twin  transition  aspects.  Rather,  civil  servants  identify digital  transformation  as  an  instrument  of  a  solution  to  the  green  transition  challenges faced.  Thus,  our  findings  indicate  that  in  the  city  of  Leuven,  the  twin  transition  is  perceived  as  a  technological  support  and  instrument  for  solving  environmental  problems [10]. Additionally,  the strategic orientation  showcases  the  focus  on  the  collaborative management  between  the  internal  (city  departments)  and  external  actors  (Flanders,  EU level)  through  its  quadruple  or  triple  helix  initiatives  (such  as  Leuven  2030).  Moreover, our findings  indicate  that the role of the city often lies  in  maintaining  the  institution and  partner  builder,  which  aims  to  ensure  the  transformations  for  the  citizens'  benefit and  engage  in  co-production  or  collaborative  processes.  Additionally,  resources  are  an important  factor  in  the  twin  transition,  and  in  the  city  of  Leuven,  human  resources  are
+
+
+<!-- PAGE 252 -->
+
 
 often  regarded  as  important  in  addition  to  data  resources.  Regarding  the  necessary  capability,  the  analytical,  collaborative  and  reflexive  capabilities  are  regarded  as  important  to achieving  twin  transition  objectives.  Although  there  are  high  policy  initiatives  on  twin transition,  in  practice  in  the  city  of  Leuven,  the  digital  and  green  transitions  are  governed as  separate  initiatives,  with  the  primary  focus  of  the  digital  transition  in  support  of  the green  transition  and  mitigating  environmental  challenges.
 
@@ -4035,6 +5036,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 5. Faggian,  A.,  Marzucchi,  A.,  Montresor,  S.:  Regions  facing  the  'twin  transition':  combining regional green  and digital innovations.  Reg.  Stud. 59 ,  2398555  (2024).  https://doi.org/10. 1080/00343404.2024.2398555
 6. Muench, S., Stoermer, E., Jensen, K., Asikainen, T., Salvi, M., Scapoo, F.: Towards a green &amp; digital future: key requirements for successful twin transitions in the  European Union.  Publications  Office  of  the  European  Union,  Luxembourg  (2022).  https://doi.org/10. 2760/977331
 7. Sanchez,  L.M.,  Nocentini,  M.G.:  European  strategic  autonomy  for  the  twin  transition:  ambiguities  and  contradictions  from  a  spatial  perspective.  In:  Digital  Technologies  for  Sustainable Futures.  Routledge  (2024)
+
+
+<!-- PAGE 253 -->
+
 
 8. Shabb,  K.,  McCormick,  K.:  Achieving  100  climate  neutral  cities  in  Europe:  investigating climate  city  contracts  in  Sweden.  npj  Clim.  Action 2 ,  1-10  (2023).  https://doi.org/10.1038/ s44168-023-00035-8
 9. Grimm,  N.B.,  et  al.:  Global  change  and  the  ecology  of  cities.  Science 319 ,  756-760  (2008). https://doi.org/10.1126/science.1150195
@@ -4058,6 +5063,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 27. City  of  Leuven:  Leuven  in  Numbers  (2018)
 28. European  Commission  awards  Leuven  title  of  European  Capital  of  Innovation  |  Stad  Leuven. https://leuven.be/en/capital-of-innovation.  Accessed  15  Jan  2025
 
+
+<!-- PAGE 254 -->
+
+
 29. Pierlet, I.: Leuven  wint prestigieuze Europese klimaatprijs. https://pers.leuven.be/leuvenwint-prestigieuze-europese-klimaatprijs.  Accessed  15  Jan  2025
 30. Pierlet,  I.:  Stad  en  Leuven  2030  stellen  Leuvens  Klimaatcontract  voor.  https://pers.leuven.be/ stad-en-leuven-2030-stellen-leuvens-klimaatcontract-voor.  Accessed  12  Jan  2025
 31. Leuven  is  European  Capital  of  Innovation  2020 - European  Commission.  https://researchand-innovation.ec.europa.eu/news/all-research-and-innovation-news/leuven-european-cap ital-innovation-2020-2020-09-24\_en.  Accessed  14  Jan  2025
@@ -4065,6 +5074,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 33. (Sensor)data  beter  verzamelen,  verbinden  en  ontsluiten  |  Stad  Leuven.  https://www.leuven. be/urbansense.  Accessed  14  Jan  2025
 34. Gao,  X.:  The  EU's  twin  transitions  towards  sustainability  and  digital  leadership:  a  coherent or  fragmented  policy  field?  Reg.  Stud.,  1-11  (2024).  https://doi.org/10.1080/00343404.2024. 2360053
 35. Kovacic,  Z.,  et  al.:  The  twin  green  and  digital  transition:  high-level  policy  or  science  fiction? Environ.  Plan. E Nat.  Space 7 ,  2251-2278  (2024).  https://doi.org/10.1177/251484862412 58046
+
+
+<!-- PAGE 255 -->
+
 
 ## From  Promise  to  Practice:  Exploration of  Differences  in  Digital  Citizen  Participation in  a  Municipal  Context
 
@@ -4094,6 +5107,10 @@ S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  241-256,  2026.
 
 <!-- image -->
 
+
+<!-- PAGE 256 -->
+
+
 change  across  the  public  sector  [9].  This  evolution  encompasses  enhancing  service  delivery  to  integration  of  'the  digital'  into  governance  processes  and  leveraging  advanced algorithms  and  AI  [9-11].  The  implementation  of  digital  participation  platforms  is  driven by  the  objective  of  reinforcing  the  democratic  dialogue  and  enhancing  the  level  of  participation  in  decision-making  processes  [12],  increase  the  quality  and  anchoring  of  policies but  also  to  enhance  legitimacy  and  trust  for  the  democratic  processes  [2,  13].
 
 To foster digital participation, a paradigm shift is required from traditional approaches  to  digital  transformation  in  government.  It  means  that  public  organizations need  to  adopt  new  roles,  by  becoming  more  interactive  and  facilitative  ([14,  15],  while also  embracing  greater  openness  and  transparency  [16-18].  For  a  shift  to  happen  in  how participation  is  shaped  and  understood,  technology,  people,  and  processes  need  to  be integrated  [19],  implementing  new  technology  alone  will  not  redefine  the  value  propositions  [20].  When  adopting  participation  in  a  public  organisation  there  needs  to  be  an understanding  of  the  conditions  that  shape  the  digital  transformation  process,  as  well  as the  underlying  democratic  and  political  rules  that  govern  it  [21,  22].
@@ -4107,6 +5124,10 @@ What  are  the  most  significant  differences  between  open  and  guided  digi
 There  are  many  reasons  why  governments  try  to  pursue  digital  citizen  participation,  to foster  trust  and  revitalise  local  democracy  [5,  6],  but  it  is  also  as  a  way  to  develop  digital services  [23]  spur  co-creation  [3]  or  discuss  urban  planning  [24].  The  use  of  platforms for  digital  participation  emerging  in  the  late  2000s  [25]  has  led  to  an  intense  exploration where  governments  try  to  enhance  digital  citizen  participation  [7,  8],  including  hopes for  better  inclusion  of  marginalized  groups  [26],  lowering  barriers  of  participation  [27], driving cost-effective participation and participation of scale [28]. But despite years of  investment  in  digital  transformation  initiatives,  there  are  deep-seated  issues  such  as institutional  readiness  that  hinder  digitalisation  [29,  30]  and  digital  government  adoption is  still  low  [31].
 
 From  the  classical  work  of  Arnstein,  power  and  decision-making  are  central  themes that  constitute  the  target  of  citizen  participation  [32].  Today  many  citizen  participation initiatives  have  a  consultative  role  rather  than  an  impact  on  decisions  [33],  sometimes even  the  consultative  part  is  absent,  and  governments  implement  citizen  participation initiatives  to  legitimise  decisions  [22,  34].  In  this  study  digital  citizen  participation  is aligned  with  the  definition  'the  extension  and  transformation  of  participation  in  societal democratic  and  consultative  processes  mediated  by  information  and  communication
+
+
+<!-- PAGE 257 -->
+
 
 technologies  (ICT),  primarily  the  Internet.  It  aims  to  support  active  citizenship  with  the latest  technology  developments,  increasing  access  to  and  availability  of  participation  in order  to  promote  fair  and  efficient  society  and  government.'  [35].
 
@@ -4123,6 +5144,10 @@ We  conducted  our  study  in  a  medium-sized  Swedish  municipality  with  aro
 ## Case  1  -  Citizen  Dialogue
 
 The  citizen  dialogue  is  held  in  different  parts  of  the  municipality  and  each  dialogue  lasts for  a  period  of  six  weeks  when  citizens  can  meet  civil  servants  and  politicians  in  open forums  or  add  their  proposals  in  the  digital  participation  platform  used  for  the  dialogue. This  hybrid  type  of  dialogue  means  that  several  meetings  are  held  combined  with  the digital platform  open  for  proposals.  The  budget  to  finance  citizens  proposals  is  0,43 MEUR  per  year  and  funding  decisions  are  made  by  a  board  of  politicians.  This  form  of dialogue  originates  from  policies  that  imposes  participatory  decisions  between  elections
+
+
+<!-- PAGE 258 -->
+
 
 [26]  but  also  a  strong  tradition  of  participation  and  the  view  of  citizens  as  active  creators of  their  society  [33].
 
@@ -4144,6 +5169,10 @@ Table  1. Participation  uptake
 
 To  be  able  to  compare  the  two  cases  of  digital  citizen  participation  initiatives,  we  use the  conceptual  framework  called  3A 3 -framework  of  participation  [51].  The  framework builds on Arnstein's seminal  paper  on the participation ladder [32],  to  combine  and unpack  the  concept  of  participation.  The  framework  consists  of  three  components:  the surrounding  context,  the  planning  process  itself  and  third,  the  participation  process.  The participation  process  is  divided  into  three  dimensions  of  participation  (Fig.  1);  actors, who  participates, 'who?',  their roles and how  they are recruited to participate.  The
 
+
+<!-- PAGE 259 -->
+
+
 second  dimension  is  Arenas  which  deals  with  the  structure  of  the  participation  process, 'how?'.  It  tries  to  capture  the  places,  the  form,  and  the  rhythm.  The  third  dimension  is Aims,  'Why?',  and  deals  with  the  issues,  motives  and  outcomes  of  participation.  These should  be  seen  as  a  network  of  interactions  between  the  different  dimensions.  The  3A 3 framework  can  also  be  used  operationally  as  a  tool  to  navigate  the  different  options  and opportunities  for  participation  [51].
 
 When  understanding  how  digital  participation  is  shaped  and  developed,  the  framework  can  be  used  as  an  analytical  tool  to  analyze  similarities  and  differences,  which  this study  aspires  for.  The  framework  was  derived  from  urban  planning  studies,  which  fits well  with  the  digital  participation  initiative  that  we  intend  to  analyse;  both  have  strong focus  on  planning  and  designing  the  urban  space.  Through  the  framework  I  study  the implications  of  actors,  arenas  and  aims  in  shaping  digital  citizen  participation.
@@ -4157,6 +5186,10 @@ Fig.  1. The  dimensions  of  participation  and  their  elements  (from  [51]).
 In  this  theoretically  informed  case  study  [52],  I  draw  on  the  theoretical  concept  developed  by  Hofer  &amp;  Kaufmann  [51].  This  builds  upon  existing  theoretical  frameworks  of participation  which  we  consider  reliable  for  informing  our  research  question.  Theory  is integrated  into  the  case  study  research  to  establish  connections  between  the  findings  and relevant  theoretical  frameworks  and  research  [52,  53].  Case  1  -  Citizen  Dialogue  and Case  2  -  Comprehensive  Plan,  both  aim  to  engage  citizens  to  participate  in  developing their  community.  The  cases  were  selected  because  they  occur  in  the  same  institutional setting,  a  Swedish  municipality  (the  surrounding  context  in  the  framework),  and  target  the same  community.  However,  they  differ  in  how  participation  is  implemented.  Therefore, I  wanted  to  explore  these  cases  more  deeply  to  understand  how  the  differences  manifest.  Numerous  municipalities  implement  digital  participation  in  a  comparable  manner, consequently,  valuable  lessons  can be drawn  from  this study with regard to  broader application.
 
 From  January-June  2023  I  have  collected  archival  data,  performed  interviews  and been  involved  on  the  field  doing  observations,  attending  meetings  and  events  (table  1).
+
+
+<!-- PAGE 260 -->
+
 
 Interviews  were  conducted  online  and  in  physical  meetings,  interviews  were  recorded with  consent,  translated  from  Swedish  to  English,  and  transcribed  for  analysis  (Table  2).
 
@@ -4187,6 +5220,10 @@ In  the  analysis,  I  used  the  3A 3 -framework  of  participation  [51]  and 
 
 The  initial  step  in  the  analysis  was  to  identify  and  comprehend  arenas,  aims  and  actors in  each  case,  followed  by  the  analysis  of  its  constituent  elements.  This  was  achieved  by
 
+
+<!-- PAGE 261 -->
+
+
 employing  a  tabular  representation,  wherein  the  elements  were  systematically  mapped and  then  compared.  This  facilitated  the  identification  of  both  commonalities  and  divergences.  Thereafter,  the  focus  shifted  to  a  more  in-depth  exploration  of  these  divergences in  the  two  cases.  The  next  phase  involved  a  more  detailed  examination  of  the  data  in order  to  analyse  the  components  related  to  the  elements  that  could  clarify  and  advance the  understanding  of  how  the  divergences  manifested  themselves  in  the  cases.
 
 ## 4 Findings
@@ -4205,6 +5242,10 @@ Fig.  2. Remodeled  version  highlighting  differences
 
 There is a clear distinction regarding the rationale for citizen participation. In  Case 1  -  Citizen  Dialogue,  citizen  participation  can  be  regarded  as  an  end  in  itself,  whereas in  Case 2 - Comprehensive  Plan,  citizen  participation  serves  as  a  means  to  create  a
 
+
+<!-- PAGE 262 -->
+
+
 comprehensive  plan  regulated  by  law  [50],  and  from  the  steering  document  one  can read  that  it  is  '…  a  sub-project  within  the  framework  of  the  comprehensive  plan  and will  deliver  results  to  the  process'.  Case  1  -  Citizen  Dialogue  on  the  other  hand,  can be  described  as  a  dialogue  for  the  sake  of  a  dialogue.  The  municipality  perceives  it  as beneficial  to  engage  in  such  discourse  and  to  demonstrate  a  willingness  to  listen  and consider  the  opinions  of  its  citizens.  This  is  reflected  in  their  policy  document  which states: 'It is important to incorporate residents' experience and knowledge  of local conditions  into  decision-making  and  implementation'.  Case 2 - Comprehensive  Plan  is a  component  of  a  larger  process  where  citizens'  opinions  are  collected  in  to  serve  as  one of  several  supporting  elements  in  the  formulation  of  a  comprehensive  plan.  Participation thus  has  a  discernible  objective  and  is  not  an  end  in  itself.
 
 In  Case  1  -  Citizen  Dialogue,  participation  as  an  end  implies  an  openness  for  participants  to  contribute  freely  based  on  their  ideas  and  thoughts.  This  is  reflected  in  the platform's  call  to  action:  'Y ou  can  help  change  your  neighborhood'.  However,  this  openness  also  creates  ambiguity,  that  can  make  it  challenging  for  participants  to  focus  their opinions  or  understand  the  specific  areas  where  input  is  most  valuable.  Consequently, which  is  visible  in  the  reports,  many  of  the  comments  received  are  not  relevant  or  related to  the  municipality's  services  or  areas  of  concern.  This  is  manifested  in  the  platform  as a  simple  form  where  the  user  can  post  whatever  proposal  they  want.  The  starting  point is  a  blank  sheet  without  any  direction  for  the  user.  Few  citizens  use  the  platform  to  post suggestions,  the  usage  statistics  shows  that  the  uptake  is  minimal.  Moreover,  there  is no  particular  reason  to  express  an  opinion  and  no  sense  of  urgency.  This  means  that everyone  can  participate  but  also  (perhaps)  that  no  one  is  necessarily  interested  because there  is  no  issue  that  attracts  attention.
@@ -4212,6 +5253,10 @@ In  Case  1  -  Citizen  Dialogue,  participation  as  an  end  implies  an  ope
 The  fact  that  participation  itself  can  be  said  to  be  the  goal,  makes  it  complicated  to link  what  is  collected  to  something  that  can  be  acted  upon.  The  absence  of  a  defined problem  and  the  focus  on  citizen  expression  complicate  the  establishment  of  a  cohesive link  between  these  diverse  perspectives  and  the  objectives  of  administrations.  It  is  diffuse  how  and  where  the  proposals  should  be  addressed,  who  should  be  responsible  for implementing  them  and  how  it  should  be  done.  There  is  no  clear  timeline  and  for  those involved  it  is  unclear  if  or  when  anything  will  be  acted  upon.  This  is  reinforced  by  the  fact that  those  who  work  with  Case  1  -  Citizen  Dialogue  belong  to  the  central  administration and  that  the  integration  into  the  organisation  is  weak.  Several  civil  servants  involved  in collecting  proposals  mention  that  it  is  challenging  to  find  someone  to  drive  and  realise the  ideas  that  are  submitted.
 
 Case  2  -  Comprehensive  Plan  has  a  clearer  intention  and  purpose  that  can  create motivation  to participate. You  can  only participate right now;  this is your chance  to influence  the  comprehensive  plan,  expressed  in  marketing  as:  'your  thoughts  and  ideas are  important  and  can  contribute  to  the  municipality's  new  comprehensive  plan'.  There is  a  defined  and  limited  purpose  and  a  sense  of  urgency  that  can  attract  and  motivate citizens. This is also reflected in the configuration of the platform, where  there are questions  and  a  definition  of  what  type  of  contribution  that  is  asked  for,  thus  enabling the  creation  of  a  comprehensive  plan.  The  platform  has  an  interactive  map  and  a  set of  themes  and  questions  that  guides  the  user,  creating  clarity  and  simplicity.  This  is  a
+
+
+<!-- PAGE 263 -->
+
 
 deliberate  intention  and  in  project  meetings  there  was  a  consensus  that  questions  should not  be  'to  open'  and  contributions  should  consultative  (Fig.  3).
 
@@ -4225,6 +5270,10 @@ In  both  cases,  the  civil  servants  involved  are  a  relatively  small  num
 
 In  Case  2  -  Comprehensive  Plan,  the  proposals  received  serve  as  a  foundation  for the  urban  planners  to  further  analyse  and  interpret.  They  may  consolidate  similar  proposals,  identify  patterns  in  the  material,  and  develop  principles  and  directions  for  the comprehensive  plan  based  on  the  proposals  submitted.  This  process  involves  utilizing the  expertise  of  the  urban  planners  and  integrating  their  ideas  with  those  of  politicians to  facilitate  a  decision  on  a  new  comprehensive  plan.  The  input  provided  by  citizens represents  one  element  of  the  process,  but  there  are  other  factors  considered.  The  project
 
+
+<!-- PAGE 264 -->
+
+
 manager  means  that  'it  becomes  an  analysis  grid  on  that,  you  pick  out  certain  things and  where  you  analyse  in  a  certain  way  and  compile  in  a  certain  way.  It's  always  very difficult  because  everything  is  possible'.
 
 Politicians  are  involved  in  both  processes,  in  the  dialogue  initiative  they  make  decisions  about  funding  from  a  shortlist  of  proposals  recommended  by  the  project  manager. In  Case  2  -  Comprehensive  Plan  the  politicians  will  eventually  decide  upon  a  comprehensive  plan  for  10-15  years  ahead  where  the  participation  from  citizens  serves  as one  input  among  others.  Urban  planners  do  their  interpretation  of  the  material,  and  they process  it  before  it  becomes  a  document  presented  to  the  politicians.  There  are  several levels  of  interpretations,  and  the  urban  planners  are  expected  to  use  their  expertise  to produce  this  document.  In  Case  1  -  Citizen  Dialogue,  the  level  of  interpretation  is  almost none,  the  proposals  are  evaluated  and  decided  upon  as  they  were  written  by  the  citizens.
@@ -4236,6 +5285,10 @@ The  two  cases  demonstrate  differences  in  the  implementation  of  the  pla
 The  two  cases  differ  in  their  time  horizons.  Case  2  -  Comprehensive  Plan  involves a  focused  effort  to  gather  citizens'  opinions  and  thoughts  on  what  their  neighborhood should  look  like  in  the  future,  the  project  manager  says:  'we  hope  to  discuss  (…)  longterm  development  together  with  our  citizens.  That  is,  how  they  see  the  future  and  the physical  environment  now  and  20  years  ahead'.  It  aspires  to  be  visionary  and  longterm,  in  a  dialogue  that  takes  place  right  now.  Case  1  -  Citizen  Dialogue  is  short-term, focusing  on  the  immediate  desires  of  citizens,  examples  of  proposals  from  the  aggregated list  include:  better  food  in  school,  open  air  cinema  and  seating  for  elderly.
 
 The  discrepancy  between  these  temporalities  means  divergent  outcomes;  Case  1  Citizen  Dialogue  shows  tangible  results  in  proposals  that  are  decided  on,  given  a  budget and  implemented.  There  is  also  an  idea  of  active  citizens,  strengthened  trust  and  relationship  building.  In  the  context  of  the  comprehensive  plan,  the  result  is  intangible,  a plan  is  to  be  formulated  and  the  input  from  citizens,  after  interpreted  by  urban  planners, becomes  an  integral  part of that plan. The  process  is  visualised  and  how  their  opinions  will  be  treated  and  what  the  final  product  will  be  handled,  something  that  creates trust  [55].  There  is  a  timeline,  and  it  will  be  possible  to  follow  the  political  process  and decisions  that  will  be  taken  in  the  future.  It  is  hoped  that  this  is  something  that  can  be realised  in  the  long  term  and  aligned  into  the  municipality's  infrastructure  and  environment.  Once  the  new  comprehensive  plan  is  developed  and  adopted,  it  will  be  accessible and  presented  to  citizens.  Case  2  -  Comprehensive  Plan  has  yielded  a  tangible  outcome in  the  form  of  a  proposal  for  a  comprehensive  plan.  However,  the  absence  of  a  concrete result  until  the  development  of  the  comprehensive  plan  can  also  be  argued.
+
+
+<!-- PAGE 265 -->
+
 
 ## 5 Discussion
 
@@ -4251,6 +5304,10 @@ Fig.  4. Differences  leading  to  participation  as  innovation  or  optimisati
 
 Our  analysis  of  the  differences  and  how  they  manifest  leads  us  to  interpret  Case 2 - Comprehensive  Plan  as  optimisation  of  participation.  In  this  form  of  participation,  citizens are  involved  with  the  aim  of  contributing  to  the  development  of  the  existing  structure in  a  clear  and  well-defined  process.  In  the  platform,  the  user  is  prompted  to  respond  to leading  questions,  generating  the  necessary  information  for  the  process.  The  user  cannot deviate  or  submit  alternative  ideas  What  is  collected  undergoes  an  analysis  and  interpretations  are  made  of  the  compiled  contribution  from  the  participants.  Civil  servants  write a  report  that  is  proposed  to  the  politicians  and  according  to  a  pre-agreed  process,  which is  eventually  approved  in  accordance  with  laws  and  regulations.
 
+
+<!-- PAGE 266 -->
+
+
 Participation  as  optimisation  is  a  form  of  participation  that  the  organisation  is  well positioned  to  implement.  It  is  consistent  with  the  governance  and  structure  that  admits well-defined,  smaller  developments.  This  does  not  pressure  the  organisation  to  be  transparent  or  responsive,  other  than  the  process  that  has  already  been  established.  The  participation  platform  had  a  substantial  uptake  of  citizens  contributing  to  the  comprehensive plan.  The  organisation's  ability  to  manage,  control  and  direct  participation  as  optimisation  ensures  its  potential  in  achieving  the  desired  level  of  participation,  contribution  and results.
 
 ## 5.2 Innovative  and  Creative  Digital  Participation
@@ -4264,6 +5321,10 @@ The  inherent  conflict  is  whether  participation  needs  to  be  guided  and 
 Historically,  Swedish  municipalities  have  engaged  in  initiatives  that  encourage  citizen participation  [33],  characterized  by  an  almost  naive  view  that  all  participation  is  inherently  positive.  There  has  been  a  focus  on  the  potential  benefits,  overshadowing  the  risks of  eroding  trust  that  can  occur  when  citizen  participation  fails  to  produce  tangible  results [2].
 
 This  research  shows  that  there  is  a  need  to  clarify  and  be  able  to  distinguish  different types  of  participation  that  the  municipalities  deploy.  We  have  shown  that  participation, despite  being  characterized  as  open  to  new  ideas,  does  not  have  the  prerequisites  to  create change.  This  is  because  innovative  modus  operandi  is  difficult  and  not  yet  accomplished, although  called  for  [60].  Conversely,  participation  that  is  integrated  into  well-defined projects are better equipped  to  succeed  as  municipalities  know  how  to  manage  and
+
+
+<!-- PAGE 267 -->
+
 
 implement  optimisation.  This  study  has  expanded  our  understanding  and  definition  of participation,  introducing  a  connection  to  optimisation  and  innovation.  Using  Hofer's 3m 3 as  an  analytical  tool  [51]  has  demonstrated  differences  in  participation  and  how they  manifest.
 
@@ -4285,6 +5346,10 @@ Numerous  municipalities  are  implementing  digital  participation in  a  compa
 10. Fountain, J.E.: The  virtual state:  transforming  American  government.  Natl.  Civ.  Rev. 90 , 241-252  (2001)
 11. Margetts,  H.,  Dunleavy,  P.:  The  second  wave  of  digital-era  governance:  a  quasi-paradigm  for government  on  the  Web.  Philos.  Trans.  R.  Soc.  A  Math.  Phys.  Eng.  Sci. 371 ,  20120382  (2013)
 12. Päivärinta,  T.,  Sæb¿,  fl.:  Models  of  e-democracy.pdf.  Commun.  Assoc.  Inf.  Syst. 17 (2006)
+
+
+<!-- PAGE 268 -->
+
 
 13. Edelmann, N., Mergel, I.: Co-production of digital public services in Austrian public administrations.  Adm.  Sci. 11 ,  22  (2021)
 14. Jäntti, A., Paananen, H., Kork, A.-A., Kurkela, K.: Towards interactive governance: embedding  citizen  participation  in  local  government.  Adm.  Soc. 55 ,  1529-1554  (2023)
@@ -4310,6 +5375,10 @@ Numerous  municipalities  are  implementing  digital  participation in  a  compa
 34. Costello,  A.:  Meaningful,  but  effective?  A  critical  evaluation  of  Ireland's  citizens'  dialogues on  the  future  of  Europe.  Politics 42 ,  464-479  (2020)
 35. Sæb¿, fl., Rose, J., Flak, L.S.: The shape of eParticipation: characterizing an emerging research  area.  Gov.  Inf.  Q. 25 ,  400-428  (2008)
 
+
+<!-- PAGE 269 -->
+
+
 36. Lago,  N.,  Durieux,  M.,  Pouleur,  J.-A.,  Scoubeau,  C.,  Elsen,  C.,  Schelings,  C.:  Citizen  participation  through  digital  platforms:  the  challenging  question  of  data  processing  for  cities.  In: SMART  2019:  The  Eighth  International  Conference  on  Smart  Cities,  Systems,  Devices  and Technologies  (2019)
 37. Simonofski,  A.,  Hertoghe,  E.,  Steegmans,  M.,  Snoeck,  M.,  Wautelet,  Y .:  Engaging  citizens  in the  smart  city  through  participation  platforms:  a  framework  for  public  servants  and  developers. Comput.  Hum.  Behav. 124 ,  106901  (2021)
 38. Wilson,  B.,  Chakraborty,  A.:  Planning  smart(er)  cities:  the  promise  of  civic  technology.  J. Urban  Technol. 26 ,  29-51  (2019)
@@ -4333,9 +5402,17 @@ Numerous  municipalities  are  implementing  digital  participation in  a  compa
 56. Janssen, M., van der Voort, H.: Adaptive  governance:  towards a stable, accountable and responsive  government.  Gov.  Inf.  Q. 33 ,  1-5  (2016)
 57. Kurkela,  K.,  Kork,  A., Jäntti,  A.,  Paananen,  H.:  Citizen  participation  as  an  organisational challenge  in  local  government.  Int.  J.  Public  Sect.  Manag. 37 ,  124-140  (2024)
 
+
+<!-- PAGE 270 -->
+
+
 58. Torfing, J., S¿rensen,  E., R¿iseland,  A.: Transforming  the  public  sector  into an arena for co-creation:  barriers,  drivers,  benefits,  and  ways  forward.  Adm.  Soc. 51 ,  795-825  (2019)
 59. Merino,  R.:  Re-politicizing  participation  or  reframing  environmental  governance?  Beyond indigenous'  prior  consultation  and  citizen  participation.  World  Dev. 111 ,  75-83  (2018)
 60. Thapa,  B.E.P.,  Niehaves,  B.,  Seidel,  C.E.,  Plattfaut,  R.:  Citizen  involvement  in  public  sector innovation:  Government  and  citizen  perspectives.  Inf.  Polity 20 ,  3-17  (2015)
+
+
+<!-- PAGE 271 -->
+
 
 <!-- image -->
 
@@ -4369,6 +5446,10 @@ Published  by  Springer  Nature  Switzerland  AG  2026
 
 S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  257-271,  2026.
 
+
+<!-- PAGE 272 -->
+
+
 approach,  is  an  improved  ability  to  manage  project-related  information,  which  enables increased  effectiveness  and  efficiency  in  project  planning,  execution,  and  control  [5,  6] While  digital  PM  can  be  seen  as  an  adaptation  of  PM  to  the  challenges  and  requirements of  digital  transformation,  it  is  also  often  (but  not  only)  applied  for  managing  digitalization projects  [5].
 
 Maturity  assessment  [7]  is  a  well-established  strategy  to  evaluate  an  organization's PM  capability  effectiveness  and  efficiency,  benchmark  it  with  other  organizations,  and improve  it  systematically  [8-10].  Despite  the  many  existing  PM  maturity  models  (PM3), there  is  no  domain-specific  model  yet  that  focuses  on  the  particular  requirements  and challenges  of  municipalities  for  mastering  digital  transformation  [11].  To  close  this  gap, our  research  is  guided  by  the  question:
@@ -4385,6 +5466,10 @@ Facing  the  many  proposed  models,  several  comparative  studies  have  been 
 
 With  a  more  fundamental  view,  Mettler  [12]  discusses  maturity  model  development and  application  based  on  a  design  science  research  (DSR)  perspective.  He  conceptualizes maturity  models  as  hybrid  artifacts  being  'somehow  in-between'  a  model  (state  descriptions,  i.e.,  the  maturity  levels)  and  a  method  (key  practices)  prescribing  the  systematic
 
+
+<!-- PAGE 273 -->
+
+
 use  of  the  model.  The  DSR  perspective  is  also  adopted  by  other  studies  investigating the  procedure  and  principles  of  designing  domain-specific  maturity  models  (e.g.,  [2325]). In their recent article, Stoiber et al.  [26]  draw  on  Mettler  [12]  and  the  method character  of  maturity  models  to  advocate  for  continuous  maturity  assessments,  which they  found  not  supported  by  many  existing  models.  To  extend  and  advance  traditional principles  of  maturity  assessment,  they  propose  the  Continuous  Maturity  Assessment Method  (CMAM)  [26].
 
 Only  a  few  studies  shed  light  on  PM  maturity  in  public  administration.  Irfan  et  al. [3] investigated maturity of PM  as an  antecedent to organizational reputation based on  a  sample  of  425  respondents  from  the  project-based  public  sector  organizations  of Pakistan.  The  reported  findings  indicate  a  significant  positive  relationship  between  PM maturity  and  the  reputation  of  public  sector  organizations.  Bezerra  et  al.  [27]  conducted a  systematic  literature  review  to  identify  barriers  to  maturity  in  PM  in  the  public  sector. Of  the  seven  presented  barrier  dimensions,  'management  methodology',  'human  relations',  'organizational  structure',  and  'alignment  with  the  organization's  business'  are directly  related  to  PM.  Consequently,  the  authors  emphasized  the  need  for  benchmarking  practices  in  the  PM  context  and  the  integration  with  strategic  management.  A  recent literature  study  on  existing  PM3s  in  public  administration  by  De  Rosa  [11]  found  that although  some  of  the  identified  models  basically  could  be  applied  to  public  administration,  'substantial  modifications  are  necessary  to  make  them  operational  and  effective in  the  public  sector'.  Furthermore,  the  maturity  models  discussed  do  not  consider  any specific  characteristics  of  digitalization  projects  in  public  administration.
@@ -4399,6 +5484,10 @@ Given  our  research's  objective,  we  decided  on  a  DSR  approach  [28,  29]
 
 Method  engineering  is  used  in  IS  [31]  as  'the  engineering  discipline  to  design,  construct and  adapt  methods,  techniques  and  tools  for  the  development  of  information  systems' [32].  Based  on  the  design  principle  of  reuse  [33],  the  assembly  of  situational  methods  for
 
+
+<!-- PAGE 274 -->
+
+
 specific  engineering  contexts  by  selecting,  adapting,  and  synthesizing  method  fragments from  existing  method  knowledge  has  become  an  established  practice  under  the  name of  situational  method  engineering  (SME)  [34-37].  SME  incorporates  an  iterative  and incremental  design  process  that  emphasizes  the  evaluation  of  method  modifications  to validate  fitness  for  use  and  value  outcome.
 
 Maturity  assessment  and  improvement  for  digital  PM  in  municipalities  is  a  concrete engineering  scenario  that  requires  situational  customization  of  a  more  general  standard method.  Consequently,  we  aim  to  engineer  a  situational  method  for  the  given  scenario that  integrates  a  conceptual  maturity  model  as  tool  [38]  for  providing  practical  guidance for  assessing  and  improving  the  maturity  level  of  digital  project  management  in  municipalities.  Furthermore,  we  aim  to  contribute  to  the  method  base  of  maturity  models  in support  of  further  developments  of  other  situational  maturity  methods.
@@ -4412,6 +5501,10 @@ Fig. 1. Situational  method  engineering  process  for  constructing  ECoProMD.
 ## 3.2 Literature Review and Interviews
 
 To  gain  a  profound  understanding  of  the  situation,  we  performed  a  narrative  literature review  [39]  with  a  mixed  scope  on  research  outcomes,  methods,  and  practices  or  applications  following  an  iterative  process.  For  the  initial  search  we  used  the  literature  databases Google  Scholar,  Semantic  Scholar,  Bielefeld  Academic  Search  Engine  (BASE),  and  the Open  Research  Knowledge  Graph  (ORKG)  with  the  search  term  '('project  management'  AND  'maturity')  AND  ('municipal'  OR  'local  government'  OR  'public')'.  We
+
+
+<!-- PAGE 275 -->
+
 
 selected  relevant  papers  by  screening  title  and  abstract  and  continued  with  backward and  forward  searches.  From  the  review  results,  we  collected  influencing  or  influenced factors  like  stakeholders,  actor  roles,  organizational  structures,  practices  and  processes, application  systems,  challenges,  and  success  factors  [40].
 
@@ -4430,6 +5523,10 @@ Table 1. Overview  of  expert  interviews.
 | E5  | Project coordinator digital projects             | < 5           | Municipality          | 25,000              |                 3 |
 | E6  | Project manager                                  | 10-15         | Municipal association | 416 muni-cipalities |                 2 |
 | E7  | Coordinator of e-government projects             | > 15          | State government      | -                   |                 3 |
+
+
+<!-- PAGE 276 -->
+
 
 ## 3.3 Iterative Engineering Process
 
@@ -4454,11 +5551,19 @@ For  the  evaluation  of  the  assembled  method,  we  conducted  two  rounds  o
 
 When  developing  the  maturity  model,  the  specific  requirements  of  the  target  group  had to  be  considered  to  ensure  its  practical  applicability  and  effectiveness.  The  following design  premises  emerged  from  the  results  of  the  literature  review  and  the  findings  of  the first  round  of  expert  interviews  regarding  the  specific  framework  conditions,  challenges, and  success  factors  for  digitalization  projects  in  public  administration.
 
+
+<!-- PAGE 277 -->
+
+
 - 1) Low-threshold access and flexibility. Municipalities  in  Germany  vary  greatly  in terms  of  size,  resources,  and  digital  maturity.  The  maturity  model  must  reflect  the  organizational  structures  and  processes  of  the  municipal  administration  and  accommodate the  diverse  starting  conditions  and  capabilities  [E5].  This  includes  clear,  understandable language  [E1],  simple  application  mechanisms,  and  a  flexible  evaluation  system.  The model  is  intended  to  enable  municipalities  with  scarce  resources  to  realistically  assess the  status  quo  of  their  PM  and  derive  concrete,  implementable  development  steps  without  the  need  for  extensive  prior  knowledge  or  specialized  external  support  [E3-6].  The maturity  levels,  criteria,  and  evaluation  scales  must  therefore  be  formulated  in  a  practical and  easily  accessible  manner  to  ensure  broad  application.
 - 2) Time required and complexity. Time  is  a  crucial  factor  [E2].  The  time  required  by organizations  to  apply  the  maturity  model  should  be  as  short  as  possible.  Conducting the  assessment  must  be  efficient  and  time  saving  [E6],  particularly  for  municipalities with  limited  human  resources.  This  requires  a  compact  structure,  clear  questions,  and a  clear  presentation  of  the  results  [E6].  The  model  should  be  'translated  as  practically as  possible  and  must  not  be  overly  complex'  (all  quotations  from  the  interviews  are translated  from  German  and  redacted)  [E4].  The  goal  is  for  municipalities  to  quickly assess  the  maturity  of  their  PM  and  derive  concrete  recommendations  for  action  without having  to  undergo  extensive  analysis  processes.
 - 3) Focus on single project management. The  model  should  consider  the  specific  context of single digitalization projects. These projects are characterized  by  high  complexity,  technological  dynamics,  and  interdisciplinarity.  The  maturity  model  must  be able  to  reflect  these  factors  by  addressing  key  aspects  such  as  stakeholder,  change,  and risk  management,  as  well  as  digital  technologies  and  work  practices.  The  model  should place  strong  emphasis  on  operational  individual  PM,  as  this  enables  low-threshold  entry, especially  for  small  municipalities  [E3],  and  supports  the  successful  implementation  of projects.  The  model  must  therefore  provide  concrete  and  action-oriented  criteria  for  the evaluation  and  further  development  of  individual  projects.
 - 4)  Suitability  for  self-assessment. It should  be possible for the parties involved  to collect the data for maturity assessment  independently,  i.e. without the  involvement of external third parties (e.g., consultants) [E3]. The  main  reasons  cited for this are expected  resource constraints (especially time and staff). For the  implementation  of self-assessments,  standardized  questionnaires  have  proven  their  worth  in  practice  [23]. This  requirement  correlates  with  the  low-threshold  access  and  the  time  required,  as  the maturity  assessment  can  be  conducted  on  this  basis  according  to  a  simple,  generally understandable  scheme,  eliminating  the  need  for  extensive  coordination  with  external stakeholders.
 - 5) Consideration of organizational context. Since  PM  is  embedded  in  an  organizational  context  and  interfaces  exist  between  the  project  organization  and  the  line  organization,  the  model  must  also  take  into  account  corresponding  interactions  between  the projects  and  the  line  organization  in  the  evaluation  criteria  (e.g.,  organizational  framework  conditions  such  as  strategic  specifications  and  goals  of  the  line  organization  as well  as  interfaces)  [E1,  E3].
+
+
+<!-- PAGE 278 -->
+
 
 - 6) Tool support. The  applying  municipal  organizations  should  be  guided  through  maturity  assessment  according  to  a  concrete,  uniform  system.  Therefore,  maturity  level  measurement  and  assessment  should  be  supported  electronically  wherever  possible  [E7]. By  providing  a  digital  tool  (e.g.,  as  a  web-based  application),  a  fast,  automated,  and multi-layered  evaluation  (including  a  dashboard  view)  should  be  realized  [E1].
 - 7)  Continuous  maturity  assessment. Finally, it must be ensured that the maturity model  not  only  allows  for  a  static  assessment  but  also  serves  as  a  tool  for  continuous improvement  [26].  The  model  should  therefore  be  designed  in  such  a  way  that  it  supports the development  of  digitalization projects over time and creates incentives for ongoing  optimization  [E2,  E3,  E6].  For  this  purpose,  basic  specifications  for  the  establishment  of  an  organizational  routine  (e.g.,  definition  of  responsibilities  and  specification of  evaluation  cycles)  must  be  made.
@@ -4480,6 +5585,10 @@ Table 3. ECoProMD  maturity  levels.
 | 1) Initial       | • PM practices are informal, unstructured and ad-hoc. No standardized processes or methods exist • Project success depends heavily on individuals and their individual skills • There is little organizational support for PM • Projects have a limited focus on strategic goals |
 
 ( continued )
+
+
+<!-- PAGE 279 -->
+
 
 Table 3. ( continued )
 
@@ -4503,6 +5612,10 @@ As  part  of  the  questionnaire-based  self-assessment,  the  degree  of  imple
 
 0 - does not apply at all, 1 - applies to a small extent, 2 - partially applies, 3 - largely applies, 4 - fully applies.
 
+
+<!-- PAGE 280 -->
+
+
 Table 4. ECoProMD  dimensions  and  criteria.
 
 | Dimension                    | Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -4512,6 +5625,10 @@ Table 4. ECoProMD  dimensions  and  criteria.
 | 3) Digital competencies      | • Methodological knowledge in digital PM • Basic IT knowledge in the project context • Information security and data privacy in the project context • Understanding of digital technologies and trends • Planning and organizational competencies • Leadership and team management competencies • Further training &competence development • Continuous learning and knowledge sharing                                                                 |
 | 4) Structure &governance     | • Definition of project roles and responsibilities • Establishment and effectiveness of a central PM office (PMO) • Integration of project work into the line organization • Operational risk management and control • Effective resource allocation and control • Budget planning and management • Supplier and contract management • Decision-making structures and escalation channels                                                              |
 | 5) Culture &change           | • Support from higher management level • Acceptance of PM methods • Error culture and willingness to learn • Promotion of innovation and openness to new approaches • Stakeholder management and communication • Dealing with change and resistance • Involving employees in change processes • Promoting teamwork and cross-departmental collaboration (forming interdisciplinary teams)                                                              |
+
+
+<!-- PAGE 281 -->
+
 
 The  five-point  scale  allows  a  differentiated  assessment  by  the  respondents  and  is fully  transferable  in  terms  of  maturity  levels  by  means  of  scoring.  For  this  purpose,  each scale  entry  is  assigned  a  score  from  0  to  4  points  (does  not  apply  at  all = 0  points,  applies to  a  small  extent = 1  point,  etc.).
 
@@ -4527,6 +5644,10 @@ Since  a  static  approach  neglects  the  continuous  development  of  competen
 
 For the initiation, certain decision parameters must be defined by the  organization. These  include  the requirements  of  the target organization  and  the definition of the  assessment  objective.  The  design  objectives  of  the  ECoProMD  model  provide  an initial  orientation.  In  the  second  step  (analyze  &amp;  assign),  the  current  maturity  level  is determined  using  the  questionnaire  provided.  The  result  provides  the  organization  with a  differentiated  overview  of  the  strengths  and  potential  for  improvement  for  each  dimension  or  individual  criterion.  Subsequently,  improvement  measures  can  be  defined  and prioritized  based  on  the  current  maturity  level  and  the  organization's  goals.  ECoProMD is  intended  to  provide  concrete  catalogs  of  measures  and  best  practices  for  this  in  the
 
+
+<!-- PAGE 282 -->
+
+
 Fig. 2. Integrated  perspective  on  the  ECoProMD  model  and  method.
 
 <!-- image -->
@@ -4538,6 +5659,10 @@ future.  In  the  fourth  step,  the  defined  measures  are  implemented.  The 
 The  ECoProM-D  maturity  model  and  method  provide  a  compact  instrument  specifically  tailored  to  the  requirements  of  digital  PM  for  municipals  in  the  context  of  digital transformation.  With  its  integrated  approach  and  the  provision  of  a  standardized  questionnaire  with  a  multi-level  answer  and  evaluation  scale  corresponding  to  the  maturity levels,  the  model  enables  a  differentiated  determination  of  the  maturity  level  of  digital project  management  in  municipal  administrations.
 
 Beyond  the  focus  on  municipalities,  the  model  is  characterized  by  the  integration of the  model  and  the  method  perspective.  The  integrated  model/method  perspective
+
+
+<!-- PAGE 283 -->
+
 
 on maturity assessment  contributes  to  the  design  knowledge  on  maturity  models  by demonstrating  the appropriateness of situational method  engineering  for developing new  domain-specific  maturity  models.  Furthermore,  the  emphasis  of  the  method  character  follows  the  recently  formulated  claim  for  continuous  maturity  assessment  [26]. Since  digital  transformation  is  known  to  inflict  frequent  and  extensive  change  on  organizations,  digital  PM  needs  to  incorporate  continuous  improvement  to  be  capable  of handling  change  successfully.  As  digitalization  projects  adopt  iterative  and  incremental development  processes  like  Scrum,  the  assessment  of  digital  PM  maturity  must  also adapt  to  these  new  requirements  through  a  shift  from  one-time  initiatives  to  a  continuous  process.  This  position  is  also  supported  by  the  concept  of  business  process  maturity based  on  a  lifecycle  view  of  business  processes  [43].
 
@@ -4551,6 +5676,10 @@ In  comparison  to  other  PM3s,  it  stands  out  that  ECoProMD  features  onl
 4. Winter,  R.,  Rohner,  P.,  Kiselev,  C.:  Mission  impossible?  Exploring  the  limits  of  managing large  IT  projects  and  ways  to  cross  the  line.  In:  Proceedings  of  the  52nd  Hawaii  International Conference  on  System  Sciences,  Grand  Wailea,  HI,  USA,  pp.  6388-6397.  Computer  Society Press  (2019).  https://doi.org/10.24251/HICSS.2019.768
 5. Wu,  T.:  Digital  project  management:  rapid  changes  define  new  working  environments.  J.  Bus. Strategy 43 ,  323-331  (2022).  https://doi.org/10.1108/JBS-03-2021-0047
 6. Auth,  G.,  Jokisch,  O.,  Dürk,  C.:  Revisiting  automated  project  management  in  the  digital  age  a  survey  of  AI  approaches.  Online  J.  Appl.  Knowl.  Manag. 7 ,  27-39  (2019).  https://doi.org/ 10.36965/OJAKM.2019.7(1)27-39
+
+
+<!-- PAGE 284 -->
+
 
 7. Proença,  D.,  Borbinha,  J.:  Maturity  models  for  information  systems - a  state  of  the  art.  Procedia Comput.  Sci. 100 ,  1042-1049  (2016).  https://doi.org/10.1016/j.procs.2016.09.279
 8. Ibbs,  C.W.,  Kwak,  Y .H.:  Assessing  project  management  maturity.  Proj.  Manag.  J. 31 ,  32-43 (2000).  https://doi.org/10.1177/875697280003100106
@@ -4573,6 +5702,10 @@ In  comparison  to  other  PM3s,  it  stands  out  that  ECoProMD  features  onl
 25. Pöppelbuß,  J.,  Röglinger,  M.:  What  makes  a  useful  maturity  model?  A  framework  of  general design  principles  for  maturity  models  and  its  demonstration  in  business  process  management. In:  ECIS  2011  Proceedings  (2011)
 26. Stoiber,  C.,  Stöter,  M.,  Englbrecht,  L.,  Schönig,  S.,  Häckel,  B.:  Keeping  your  maturity  assessment  alive:  a  method  for  the  continuous  tracking  and  assessment  of  organizational  capabilities
 
+
+<!-- PAGE 285 -->
+
+
 - and  maturity.  Bus.  Inf.  Syst.  Eng. 65 ,  703-721  (2023).  https://doi.org/10.1007/s12599-02300805-y
 27. Bezerra,  E.C.D.S.,  Amorim,  B.P.,  Melo,  F.J.C.D.:  Barriers  to  maturity  in  project  management in  the  public  sector:  a  systematic  literature  review.  Res.  Soc.  Dev.  10,  e513101019223  (2021). https://doi.org/10.33448/rsd-v10i10.19223
 28. Hevner,  A.R.,  March,  S.T.,  Park,  J.,  Ram,  S.:  Design  science  in  information  systems  research. MIS  Q. 28 ,  75-105  (2004)
@@ -4592,6 +5725,10 @@ In  comparison  to  other  PM3s,  it  stands  out  that  ECoProMD  features  onl
 - Instrumente
 42. Wieringa,  R.:  Design  science  methodology:  principles  and  practice.  In:  Proceedings  of  the 32nd  ACM/IEEE  International  Conference  on  Software  Engineering,  vol.  2,  New  York,  NY , USA,  pp.  493-494.  Association  for  Computing  Machinery  (2010).  https://doi.org/10.1145/ 1810295.1810446
 43. Van  Looy,  A.,  De  Backer,  M.,  Poels,  G.:  Defining  business  process  maturity.  A  journey  towards excellence.  Total  Qual.  Manag.  Bus.  Excell. 22 ,  1119-1137  (2011).  https://doi.org/10.1080/ 14783363.2011.624779
+
+
+<!-- PAGE 286 -->
+
 
 <!-- image -->
 
@@ -4623,6 +5760,10 @@ Published  by  Springer  Nature  Switzerland  AG  2026
 
 S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  272-287,  2026.
 
+
+<!-- PAGE 287 -->
+
+
 The  reasons  why  coordination  of  digital  service  delivery  is  difficult  are  many,  e.g.,  due to  conflicting  legal  frameworks  between  policy  areas,  incompatible  technical  solutions across  and  within  organizations,  and  conflicting  stakeholder  views  and  values  regarding what  services  and  policy  areas  can  and  should  be  digitalized.  Furthermore,  although  citizens  are  considered  the  main  stakeholder  for  digital  government  and  central  to  creating public  value  [1,  28],  the  citizen  perspective  is  often  lacking  in  digital  government  [8].
 
 However,  citizens are not only on the receiving end of public services, they are also  important  actors  in  its  delivery,  as  co-producers  of  the  service  interaction  [27].  In the  Swedish  setting,  the  large  majority  of  citizens  are  digitally  literate  and  use  digital self-services  to  a  large  extent  [42].  Still,  some  citizens  cannot,  or  do  not  want  to,  use digital services as their way  of interacting  with  government.  According  to  Swedish law,  government  organizations  are  obliged  to  offer  help  through  call  centers  or  physical contact  centers  to which  citizens  can  go  in person  to get support.  This  goes  also  for the  local  level  of  government,  where  many  municipalities  have  dedicated  citizen  contact centers  for  this  purpose.  At  these  centers,  citizens  can  use  computers  with  internet  access and printers, and the personnel  have a pronounced  mission  to  help citizens  become digitally  literate,  to  enable  digital  self-service.
@@ -4634,6 +5775,10 @@ After  introducing  the  empirical  background,  we  present  routine  dynamics 
 ## 2 Background
 
 Local  government  in  Sweden  is  organized  in  290  separate  municipalities  that  are,  to  a large  extent,  self-governed,  as  long  as  they  adhere  to  the  Swedish  Local  Government  Act. The  act  regulates  the  relationship  between  the  government  and  the  municipalities,  but also  stipulates  that  all  citizens  in  Sweden,  regardless  of  where  in  Sweden  they  live,  are entitled  to  a  defined  set  of  municipal  services,  such  as  social  services,  schools,  building
+
+
+<!-- PAGE 288 -->
+
 
 permissions,  and  care  for  small  children  and  the  elderly.  How  municipalities  organize these  services  is  largely  up  to  the  local  authorities  themselves,  but  typically  the  operations  are  split  up  into  separate  departments  dealing  with  e.g.  education,  social  services, and  environment  and  urban  planning.  These  departments  are  politically  steered  and  are typically  managed  independently,  with  separate  budgets.  In  addition,  each  municipality has  a  set  of  centrally  organized  support  functions  that  supply  internal  services  to  the departments,  e.g.,  the  IT  department  and  the  HR  and  finance  functions.
 
@@ -4647,6 +5792,10 @@ To overcome these challenges, many municipalities have created digitalization gr
 
 Organizational  routines  have  since  long  been  recognized  as  important  drivers  of  both organizational  stability  and  change  [6,  13,  14,  31].  As  such  they  are  often  targeted  when organizations  try  to  change  [4,  5,  11,  15,  19].  However,  deliberately  changing  routines can  be  difficult,  partly  because  organizations  often  fail  to  recognize  that  when  routines are  performed,  the  actors  are  simultaneously  carrying  out  situated  actions  in  the  here
 
+
+<!-- PAGE 289 -->
+
+
 and  now, as  well  as creating  and  recreating  long  term  structures  and  patterns  [13,  14]. When  the  complex  dynamics  between  the  performing  and  patterning  aspects  of  routines and  their  subsequent  potential  for  endogenous  change  are  overlooked,  change  may  not happen  as  intended  [e.g.  10,  12,  30].  Another  reason  for  why  it  can  be  hard  to  target routines  when  changing  organizations  is  that  routines  do  not  operate  in  isolation  [3]. They  are  often  intertwined  with  a  large  network  of  routines  and  the  interdependencies and  intersections  can  be  hard  to  overview  [17,  29,  35].
 
 Interdependent  routines have, in previous research, been theorized through their boundaries  [20]  and  intersections  [35],  or  as,  e.g.,  clusters  [19]  and  ecologies  [3,  34].  In this  paper  we  explore  interdependencies  between  routines  across  department  boundaries and  define  two,  or  more,  routines  as  being  interdependent  when  the  performance  of  one routine  enables  or  constrains  the  performances  of  the  other  [20].
@@ -4658,6 +5807,10 @@ In  this  study  we  will  build  on  previous  research  by  showing  that  rou
 ## 3 Data  Collection
 
 We  have  carried  out  a  case  study  within  a  bigger-sized  municipality  in  south-eastern Sweden.  This  case  study  is  part  of  a  larger  research  project  studying  digitalization  of public  services  in  Norway,  Sweden  and  Denmark  [18],  funded  by  the  Norwegian  Labor and  Welfare  Administration  (NA V)  and  the  Research  Council  of  Norway.  In  this  particular  case  study,  we  have  focused  on  the  case  handling  process  for  social  assistance  (SA) claims.  We  have  conducted  semi-structured  interviews  with  employees  working  with  SA provision  at  the  municipality  (5  interviewees),  as  well  as  with  employees  working  at  the contact  center  (3  interviewees).  We  have  also  carried  out  a  process  mapping  workshop together  with  managers  and  SA  case  workers  (6  participants).  In  addition,  we  conducted an  interview  survey  with  66  citizens  visiting  the  contact  center.  The  collected  data  was analyzed  based  on  an  interpretive  approach  [25,  39]  to  identify  the  routines  carried  out, by  what  actors,  and  for  what  purposes.  The  main  goal  of  the  analysis  was  to  identify  core routine  characteristics  and  understand  how  changes  in  the  routine  affects  other  parts  of the  organization.
+
+
+<!-- PAGE 290 -->
+
 
 ## 4 Research  Setting
 
@@ -4671,6 +5824,10 @@ At  Municipality  East,  one  of  the  services  that  require  the  most  atten
 
 The  social  assistance  application  and  case  handling  process  typically  starts  by  a  trigger, something  that  changes  in  the  life  situation  of  the  citizen.  This  might  be  a  change  in income  due  to  changes  in  employment  status  or  that  the  citizen  no  longer  qualifies  for e.g.  unemployment  benefits.  It  could  also  be  an  increase  in  costs  due  to  spiking  energy prices  or  a  new  family  member.  The  citizen  then  firstly  has  to  identify  that  support  exists before  they  send  in  the  application.  When  the  department  receives  the  application,  they review  it  and  either  make  a  decision  up-front  or  contact  the  citizen  if  there  is  a  need  for additional  information.  When  a  decision  has  been  made,  the  decision  is  communicated
 
+
+<!-- PAGE 291 -->
+
+
 to  the  citizen.  If  the  application  has  been  approved,  money  is  paid  out  by  the  Department and  the  process  is  over,  at  least  for  this  time.  If  the  application  has  been  rejected,  the citizen  can  decide  to  accept  the  rejection  or  appeal  it.  If  accepted,  the  process  ends.  If appealed,  the  citizen  will  have  to  go  through  the  steps  again.  For  an  overview  of  the social  assistance  application  and  case-handling  process,  see  Fig.  1.
 
 Fig.  1. Social  assistance  application  and  case  handling  process  (based  on  model  by  Lindgren, Madsen  et  al.,  2022).
@@ -4682,6 +5839,10 @@ Fig.  1. Social  assistance  application  and  case  handling  process  (based  
 Citizens of  all  ages  and  backgrounds  can  be  found  among  those  applying  for  social assistance  from  the  municipality,  but  according  to  the  social  workers  handling  the  cases at  the  Department,  the  most  common  applicants  are  single,  unemployed  men,  women of  non-Swedish  background  who  are  aged  55+  and  have  various  health  conditions,  and young  adults  suffering  from  addiction  or  mental  health  issues.  This  means  that  many  of those  applying  are  vulnerable,  finding  themselves  in  a  situation  where  they  have  no  assets and  where  they  are  struggling  to  make  ends  meet.  There  is  also  an  over-representation of  people  with  no  or  very  little  education,  illiteracy,  as  well  as  low  level  of  knowledge of  the  Swedish  language  and/or  the  workings  of  the  Swedish  system.
 
 There  are  many  ways  for  a  citizen  to  find  out  about  the  municipal  social  assistance. According  to  our  respondents,  some  citizens  are  able  to  find  the  information  themselves on  the  municipality's  website,  whereas  others  may  have  been  advised  by  health  care providers  or  other  public  institutions  or  agencies  to  contact  the  municipality.  Some  have also  heard  about  the  social  assistance  support  system  from  their  personal  networks.  A frequently  re-occurring  issue  at  this  stage  is  that  many  believe  that  you  qualify  for  social assistance  support  by  just  being  a  resident  in  the  municipality,  which  is  not  the  case  (as
+
+
+<!-- PAGE 292 -->
+
 
 per  the  requirements  stated  above).The  contact  center  plays  an  important  role  in  guiding citizens  in  these  matters  as  they  are  the  first  point  of  contact  the  citizen  will  have  with the  municipality,  regardless  of  if  the  contact  happens  by  phone,  mail,  or  by  walking  in in  person  to  one  of  the  three  physical  centers  set  up  around  Municipality  East.
 
@@ -4697,6 +5858,10 @@ From  the  perspective  of  the  Department,  it  is  preferrable  if  the  citi
 
 There  are  several  reasons  why  citizens  decide  to  submit  their  application  physically instead  of  using  the  e-service.  Our  interviews  with  citizens  as  well  as  staff  at  the  Contact Center  and  the  Department  show  that  there  are  many  citizens  who  either  don't  have access  to a  computer  or  who  have  very  little  experience  with  digital  technologies  in general.  The  Contact  Center  plays  an  important  role  here  as  citizens  can  come  to  the Contact  Center  and  use  one  of  the  computers  set  up  in  the  public  area  there  to  fill  in  and submit  an  application.  The  staff  at  the  Contact  Center  is  also  available  to  help  out  and explain  how  the  technology  works  and  how  the  application  can  be  filled  in.  As  many who  apply  for  social  assistance  are  recurring  applicants,  by  providing  this  service,  the Contact  Center  is  actively  helping  the  Department  to  increase  the  number  of  applications submitted  digitally  via  the  e-service.
 
+
+<!-- PAGE 293 -->
+
+
 Interestingly  enough,  some  of  the  citizens  we  spoke  to  said  that  the  reason  why  they did  not  use  the  e-service  was  because  their  case  worker  had  told  them  not  to.  As  we could  not  speak  to  the  respective  case  workers,  we  do  not  know  for  sure  that  the  message had  been  interpreted  correctly  by  the  applicant,  but  we  also  had  members  of  staff  both at  the  Contact  Center  and  the  Department  confirming  that  this  happened,  albeit  rarely. The  reasons  for  why  a  case  worker  would  prefer  to  receive  the  application  could  be  for example  that  if  the  application  is  not  filled  in  correctly,  which  is  often  the  case  due  to the  applicant's  poor  knowledge  of  Swedish,  it  is  easier  for  the  case  worker  to  manually correct  the  application  if  it  hasn't  been  logged  digitally.  The  Contact  Center  assisting the  citizens  to  fill  in  the  digital  application  therefore  becomes  even  more  important,  as it  improves  the  reliability  of  the  e-service  also  internally.
 
 In  connection  with  the  application,  the  citizen  has  to  also  submit  a  number  of  documents  to  back  up  the  figures  they  state  in  the  application.  These  documents  could  be, among  others,  copies  of  electricity  bills,  invoices  for  rent,  and  doctor  notes.  When  applying  for  social  assistance  for  the  first  time,  all  claims  have  to  be  supported  by  relevant documentation.  However,  for  recurring  applications, the  requirements  on  supporting documentation  are  not  as  extensive  as  long  as  the  stated  costs  are  recurring  and  don't change.
@@ -4709,6 +5874,10 @@ The application routine provides the Contact Center with a great opportunity to 
 
 During  both  the  identification  and  the  application  routine,  the  Department  has  mainly played  an  indirect  role.  However,  once  the  application  routine  has  been  concluded  and the  application  has  been  submitted,  the  Department  steps  in  to  perform  the case  handling routine. At  this  stage,  the  process  differs  depending  on  the  mode  of  application.  In  the case  of  a  digital  application,  the  application  is  automatically  registered  in  the  system  and assigned  to  the  relevant  case  worker.  All  the  information  provided  in  the  application  is automatically  registered  and  the  system  performs  a  preliminary  calculation  of  whether the  citizen  is  entitled  to  social  assistance  or  not.  However,  according  to  our  respondents  at the  Department,  these  preliminary  calculations  'always'  have  to  be  corrected  manually.
 
+
+<!-- PAGE 294 -->
+
+
 The  system  automatically  accepts  all  stated  costs,  which  is  something  the  case  workers often  have  to  correct  by  manually  going  through  the  provided  documents  to  verify  that the  costs  stated  are  actually  qualifying  for  social  assistance.  If  not,  the  case  worker  has to  change  the  numbers  manually.
 
 In  the  case  of  analog  applications,  the  case  worker  enters  all  the  details  in  the  system manually  and  the  system  then  proceeds  to  do  the  same  calculations  as  above.  The  case worker  registers  the  supporting  documents  and  saves  them  along  with  the  physical  files. Normally,  supporting  documentation  will  not  be  scanned  unless  it  contains  information that  will  help  to  understand  and  follow  the  case  going  forward.  An  important  difference however  between  digital  and  analog  applications  is  the  randomized  controls.  As  mentioned  earlier,  for  recurring  applicants,  the  need  to  provide  supporting  documentation is  not  as  extensive  as  for  new  applicants.  However,  the  system  performs  randomized controls,  implying  that  even  for  recurring  applications  where  nothing  has  changed,  additional  documentation  could  be  requested.  In  that  case,  the  citizen  receives  a  message  on the  application  page  saying  that  they  have  been  randomly  selected  and  that  additional information  is  required.  These  randomized  controls  do  not  happen  when  the  application has  been  submitted  in  physical  form.  However,  case  workers  often  have  to  contact  the applicant  anyway  for  additional  information  even  in  the  case  of  analog  applications. Hence,  according  to  the  staff  at  the  Department,  citizens  have  not  yet  figured  out  that randomized  controls  happen  for  digital  applications  but  not  for  analog,  and  this  should therefore  not  be  influencing  the  citizen's  decision  to  submit  applications  in  digital  or analog  form.
@@ -4716,6 +5885,10 @@ In  the  case  of  analog  applications,  the  case  worker  enters  all  the  d
 During  this  part  of  the  process,  which  should  normally  take  around  ten  days,  the citizen  waits.  It  is  also  during  this  part  of  the  process  that  the  Contact  Center  gets  the most  phone  calls  from  citizens  regarding  the  process,  and  we  have  named  this  part  of the  process  the waiting  and  answering  routine ,  reflecting  the  role  of  the  citizen  and  the Contact  Center  respectively.  Many  call  in  and  want  to  know  the  status  of  their  particular application. Many  are  of course  desperate  and  therefore impatient, but for  some  the handling  of  their  application  could  also  be  delayed  for  a  number  of  reasons.  The  most common  reason  for  delays  is  that  the  case  worker  is  awaiting  additional  information that  has  not  yet  been  provided.  When  digital  applications  have  been  selected  for  random controls,  a  message  pops  up  after  the  application  has  been  submitted,  stating  that  the applicant  needs  to  provide  additional  information.  This  message  then  goes  away  and  is quite  easy  to  miss.  In  those  cases  where  the  citizen  didn't  notice  the  message,  they  might not  find  out  that  their  case  worker  is  waiting  for  them  to  provide  additional  information until  the  time  social  assistance  would  normally  show  up  on  their  bank  account.
 
 If  the  application  has  been  submitted  in  the  e-service,  the  citizen  can  log  in  to  the system  to  check  the  status  of  their  application.  However,  if  the  application  was  sent  in  in analog  form,  the  citizen  will  have  to  call  to  get  the  information  they  require.  As  the  case workers  can  only  be  called  during  set  hours,  30  min  a  day,  the  impatient  citizen  often calls  the  Contact  Center  to  receive  news  on  the  status  of  the  application.  When  receiving a  call  from  a  citizen,  the  staff  at  the  Contact  Center  can  help  by  either  directing  the  citizen to  the  correct  case  worker  (if  the  citizen  doesn't  know  who  their  case  worker  is),  or  by answering  their  questions  according  to  the  previously  mentioned  script.  By  assisting  the citizens  during  this  stage,  the  Contact  Center  can  hopefully  explain  and  clarify  issues  in
+
+
+<!-- PAGE 295 -->
+
 
 a  way  that  prevents  the  same  issues  occurring  the  next  time  the  citizen  applies  for  social assistance.  As  such,  this  stage  also  provides  an  opportunity  for  the  Contact  Center  to both  further  understand  the  challenges  faced  by  the  citizens  regarding  the  process,  as well  as  a  way  of  improving  future  performances  of  the  application  routine.
 
@@ -4733,6 +5906,10 @@ The  main  contribution  in  this  study  lies  in  showing  the  ways  through 
 
 As  can  be  seen  from  the  description  of  the  social  assistance  application  and  case handling  process, the citizen, the Department,  and  the  Contact  Centers  are  involved at  different  degrees  during  the  various  stages  of  the  process.  Regardless  of  who  performs  the  routine  during  each  stage,  throughout  the  process  there  is  also  an  exchange  of information,  guidance  and  instructions  between  the  actors  as  illustrated  by  Fig.  2.
 
+
+<!-- PAGE 296 -->
+
+
 Fig.  2. Routines,  actors  and  interactions  in  social  assistance  application  and  case  handling  process
 
 <!-- image -->
@@ -4742,6 +5919,10 @@ Fig.  2. Routines,  actors  and  interactions  in  social  assistance  applicati
 During  every  stage  of  the  process,  the  Contact  Center  assists  citizens  with  their  interaction with the Department.  By  doing so, the Contact Center doesn't just provide help in the  moment.  They  also  provide  guidance  that  affects  future  iterations  of  the  respective routines,  which  will  in  turn  affect  how  other  routines  in  the  process  are  performed  also going  forward.  The  most  prominent  example  of  this  is  when  citizens  enter  the  Contact Center  to  get  help  with  filling  in  an  application  using  the  e-service.  Firstly,  by  providing access to computers,  the  Contact  Center  ensures that all citizens have the option of submitting  the  application  digitally  in  the  first  place.  For  many  of  the  citizens  applying on-site,  digital  applications  would  not  have  been  an  alternative  unless  they  were  able to  use  the  computers  located  at  the  Contact  Center.  Secondly,  by  providing  guidance and  explaining  every  step  of  the  application,  the  Contact  Center  improves  the  chances of  the  citizen  being  able  to  submit  a  digital  application  on  their  own  the  next  time  they apply. Hence,  the  Contact  Center  improves  the  digital  literacy of the citizens  during the  application  routine,  thereby  affecting  both  how  the  application  routine  is  performed in  the  future  as  well  as  how  the  next  step  in  the  process,  the  case  handling  routine,  is performed  in  both  this  and  future  iterations  of  the  process.  Additionally,  the  Contact Center  provides  guidance  also  later  in  the  process,  during  the  waiting/answering  routine as  well  as  the  communication  routine.  What  the  citizen  learns  during  the  performance of  these  routines  will  also  feed  into  to  the  next  performance  of  the  application  routine, thereby  enhancing  the  effects  even  further.
 
 The  Contact  Centers  are  thus  actively  involved  in  how  routines  largely  performed  by the  citizen  are  performed  and  patterned,  and  subsequently  also  how  it  evolves  over  time [13,  14].  As  the  next  routine  in  the  process  is  dependent  on  how  the  previous  routine has been performed  [20]  this change  is carried through  also to  subsequent  routines, enhancing  the  effects  of  the  Contact  Center's  guidance  even  further.
+
+
+<!-- PAGE 297 -->
+
 
 ## 6.2 Collecting  Data  for  the  Department
 
@@ -4755,6 +5936,10 @@ The  Contact  Center  works  as  the  single  point  of  contact  for  citizens 
 
 They  way  this  has  been  solved  is  that  the  departments,  such  as  the  Department  of integration  and  labor  market  affairs,  have  provided  the  Contact  Center  with  thorough scripts.  The  scripts  describe  each  process  in  great  detail  and  can  be  found  within  the digital  resources  of  the  municipality.  The  staff  at  the  Contact  Center  start  by  performing a  keyword  search  taking  them  to  the  relevant  script.  They  can  then  implement  the  script by  following  a  number  of  if-then  step-by-step  instructions.  From  a  routines'  perspective, the  Department  has  been  forced  to  expose  routines  and  processes  that  have  previously been  performed  quite  automatically,  relying  on  the  competence  and  experience  of  the individual case worker.  This, in itself, has meant  that many  inefficiencies  and  bottle necks  in  routines  have  been  identified  and  improved.
 
+
+<!-- PAGE 298 -->
+
+
 When  the  Department  changes  any  aspect  of  the  social  assistance  application  and case  handling  process  as  a  result  of  the  insights  collected  by  the  Contact  Center,  the change  will  be  communicated  to  the  Contact  Center  as  the  script  is  updated.  Many  of the  processes  in  which  the  Contact  Center  assists  change  regularly,  and  it  is  therefore important  that  Contact  Center  follows  the  scripts  in  each  interaction  with  the  citizens. Changes  to  the  process  are  therefore  both  implemented  and  communicated  through  the script.  As  the  scripts  for  answering  frequently  asked  questions  have  been  continuously developed  and  become  more  sophisticated,  the  Contact  Center  can  do  more  and  reduce the  workload  of  the  Department  even  further.  As  a  result,  routines  have  slowly  changed, both  in  the  Contact  Center  and  in  the  Department.
 
 ## 7 Conclusion
@@ -4764,6 +5949,10 @@ In  our  previous  research,  we  have  observed  prevailing  challenges  with  
 This  paper  has  shown  that  when  routine  interdependencies  are  understood  and  utilized,  they  can  be  used  as  powerful  drivers  of  organizational  change.  When  routines  are interdependent  across  departments  and  actors,  a  seemingly  small  change  in  one  routine, can  have  ripple  effects  on  the  routines  connected  to  it,  thereby  bringing  change  from one  end  of  an  organization  to  another.  By  acknowledging  the  interdependencies  between routines,  we  also  show  that  how  a  routine  is  performed  today  doesn't  only  enable  and  constrain  the  performance  of  the  next  routine  during  the  current  iteration,  but  also  changes how  previous  routines  in  the  process  are  performed  next  time.  When  moving  some  routines  from  one  part  of  the  organization,  while  retaining  others,  the  increased  need  for standardization,  codification  and  interoperability  can  in  turn  also  lead  to  incremental changes  and  improvements  being  implemented  and  aggregated  over  time.
 
 The  introduction  of  a  contact  center  in  Municipality  East  has  therefore  not  just  been a  case  of  moving  a  task  from  one  role  (within  the  departments)  to  another  (at  the  contact center).  The  creation  of  the  cross-departmental  single  point  of  contact  is  continuously forcing  the  municipality  to  map  processes  and  introduce  new  digital  systems,  adapt  to citizens'  need,  and  re-design  existing  routines  -  both  within  the  contact  centers  themselves  and  in  the  departments.  Hence,  we  can  see  that  change  is  pushed  from  the  inside out,  across  intra-organizational  boundaries  through  routine  interdependencies.
+
+
+<!-- PAGE 299 -->
+
 
 ## References
 
@@ -4789,6 +5978,10 @@ The  introduction  of  a  contact  center  in  Municipality  East  has  therefor
 20. Kremser,  W.,  Pentland,  B.T.,  Brunswicker,  S.:  Interdependence  within  and  between  routines: a performative  perspective.  In: Feldman,  M.S.,  et  al.  (eds.)  Routine  Dynamics  in  Action: Replication  and  Transformation  (Research  in  the  Sociology  of  Organizations),  vol.  61,  pp.  7998.  Emerald  Publishing  Limited,  Leeds  (2019)
 21. Lindgren,  I.,  Johansson,  B.,  Söderström,  F.,  Toll,  D.:  Why  is  it  difficult  to  implement  robotic process  automation?  In:  Janssen,  M.,  et  al.  (eds.)  EGOV  2022.  LNCS,  vol.  13391,  pp.  353-368. Springer,  Cham  (2022)  https://doi.org/10.1007/978-3-031-15086-9\_23
 
+
+<!-- PAGE 300 -->
+
+
 22. Lindgren,  I.,  ¯kesson,  M.,  Thomsen,  M.,  Toll,  D.:  Organizing  for  robotic  process  automation  in  local  government:  observations  from  two  case  studies  of  robotic  process  automation implementation  in  Swedish  municipalities.  In:  Juell-Skielse,  G.,  Lindgren,  I.,  ¯kesson,  M. (eds.)  Service  Automation  in  the  Public  Sector.  Progress  in  IS,  pp.  189-203.  Springer,  Cham (2022).  https://doi.org/10.1007/978-3-030-92644-1\_10
 23. Lindgren,  I.,  Madsen,  C.Ø.,  RydØn,  H.H.,  Heggertveit,  I.:  Exploring  citizens'  channel  behavior  in  benefit  application:  empirical  examples  from  Norwegian  welfare  services.  In:  Proceedings  of  the  15th  International  Conference  on  Theory  and  Practice  of  Electronic  Governance, pp.  416-423  (2022)
 24. Madsen,  C.Ø.,  Lindgren,  I.,  Melin,  U.:  The  accidental  caseworker  -  how  digital  self-service influences  citizens'  administrative  burden.  Gov.  Inf.  Q. 39 (1),  101653  (2022)
@@ -4810,10 +6003,22 @@ The  introduction  of  a  contact  center  in  Municipality  East  has  therefor
 40. Wihlborg,  E.,  Lindgren,  I.,  Hedström,  K.,  Gidlund,  K.:  Institutional  re-design  for  a  digital era - learning  from  cases  of  automation.  In:  Edelmann,  N.,  Danneels,  L.,  Novak,  A.S.,  Panagiotopoulos,  P.,  Susha,  I.  (eds.)  ePart  2023.  LNCS,  vol.  14153,  pp.  99-113.  Springer,  Cham (2023).  https://doi.org/10.1007/978-3-031-41617-0\_7
 41. Zbaracki,  M.J.,  Bergen,  M.:  When  truces  collapse:  a  longitudinal  study  of  price-adjustment routines.  Organ.  Sci. 21 (5),  955-972  (2010).  Non-academic  references:
 
+
+<!-- PAGE 301 -->
+
+
 42. Internetstiftelsen:  Svenskarna  och  internet  (The  Swedes  and  internet).  URL:  Svenskarna  och internet  |  Internetstiftelsen  (2024)
 43. Socialstyrelsen:  'Ekonomiskt  bistånd  -  för  privatpersoner,'  Socialstyrelsen.  https://www.soc ialstyrelsen.se/kunskapsstod-och-regler/omraden/ekonomiskt-bistand/ekonomiskt-bistandfor-privatpersoner/.  Accessed  13  Nov.  2024
 
+
+<!-- PAGE 302 -->
+
+
 ## Digital  Services,  Usability,  and  Citizen Interaction
+
+
+<!-- PAGE 303 -->
+
 
 ## Succeeding  in  Digital  Self-service: Knowledge-Sharing  in  Citizen-Caseworker Interactions
 
@@ -4837,6 +6042,10 @@ S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  291-305,  2026.
 
 <!-- image -->
 
+
+<!-- PAGE 304 -->
+
+
 In  the  case  of  welfare  and  social  services,  such  complexity  is  twofold  and  concerns both  citizens'  life  situations  and  service  regulations.  Existing  research  shows  that  many citizens  require  support  in  the  handling  of  digital  self-service  solutions  as  they  struggle  to understand  the  information  provided  and  relate  it  to  their  life  situation  [6,  7].  To  successfully  engage  with  digital  self-service,  citizens  must  have  some  basic  level  of  knowledge regarding  the  public  services  they  are  applying  for.  Such  knowledge  is  embedded  in the  domain  skills  that  citizens  possess,  as  well  as  situational  experience  and  computer skills.  Acquiring  these  skills  is  often  described  as  the  learning  cost  of  self-services  [810].  Public  employees,  such  as  caseworkers,  who  assist  citizens  in  understanding  and using  digital  self-service  solutions,  become  knowledge  intermediaries  as  they  bridge these  knowledge  gaps  [11].  The  engagement  of  both  caseworkers  and  citizens  in  the self-service  procedure  is  therefore  essential  for  successful  public  service  delivery.
 
 Self-service  solutions  pose  not  only  challenges  for  citizens  but  also  for  caseworkers who  should  gather  sufficient  knowledge  about  a  citizen's  situation  to  accurately  process  their  application  despite  not  having  direct  interaction  with  citizens  [12].  Failing  to provide  usable  self-service  may  create  extra  work  for  caseworkers  as  they  must  correct application  errors  and  assist  citizens,  leading  to  additional  organizational  costs.
@@ -4855,6 +6064,10 @@ The  paper  will  proceed  as  follows:  in  Sect.  2,  we  present  the  backgr
 
 Self-service  is  implemented  using  a  wide  range  of  technologies,  including  ATMs  and vending  machines,  online  retail,  and  other  digital  services  provided  by  both  the  private and  public  sectors  [15].  These  technologies  enable  users  to  perform  transactions,  such
 
+
+<!-- PAGE 305 -->
+
+
 as  making  payments  or  submitting  applications,  through  a  digital  system  or  technology artefact  without  human  contact  [16].  The  aim  of  a  self-service  system  is  to  allow  even inexperienced  people  to  perform  sophisticated  tasks  quickly  [3].  Increased  convenience through  greater  accessibility  and  availability  for  the  user,  as  well  as  lower  costs  for  the service  provider,  are  some  of  the  benefits  associated  with  self-service  [17].  However, usability  challenges  are  evident  across  various  self-service  technologies,  such  as  parking meters  and  digital  self-service  portals  [18,  19].
 
 In  the  context  of  public  services,  particularly  social  and  welfare  services,  digital  selfservice  portals  can  enhance  service  accessibility  and  significantly  benefit  individuals  who have  difficulty  visiting  service  providers  or  attending  in-person  meetings  [20].  Despite these  advantages,  several  studies  indicate  that  users  often  struggle  or  fail  to  complete self-service  tasks  when  they  don't  understand  what  is  expected  of  them[8]  or  face  difficult life  situations  that  become  further  complicated  by  self-service  interactions[21].
@@ -4871,6 +6084,10 @@ Intermediaries  figure  in the  digital  government  context  when  citizens  st
 
 We build on this literature by exploring how knowledge-sharing unfolds in caseworker-citizen  interaction  to  improve  the  use  of  digital  self-service  solutions.  Knowledge  can  be  either  explicit  or  tacit.  Explicit  knowledge  can  be  stored  and  retrieved  from
 
+
+<!-- PAGE 306 -->
+
+
 systems  such  as  books,  databases,  or  web  pages.  In  contrast,  tacit  knowledge  is  carried  by people  who,  through  their  experience,  develop  a  deep  understanding  of  complex,  interdependent  systems  [31,  32].  Tacit  knowledge-sharing  is  enabled  through  interaction  and informal  learning  processes  such  as  storytelling,  conversations,  and  coaching.  Digital self-service  solutions  can  pose  challenges  to  the  transfer  and  sharing  of  tacit  knowledge, as  the  nuances  of  tacit  knowledge  are  difficult  to  verbalize  and  put  into  data  [33].
 
 According  to  Wenger  [14],  knowledge  is  often  tied  to  a  specific  practice.  For  instance, caseworkers  acquire  explicit  knowledge  during  their  formal  studies  but  gain  tacit  knowledge  through  practicing  their  profession.  Knowledge  can  also  be  tied  to  private  actors, e.g.,  citizens,  who  are  knowledgeable  in  practices  they  regularly  perform.
@@ -4886,6 +6103,10 @@ In our case of the digital self-service application, caseworkers  and  citizens 
 This  paper  is  based  on  the  case  of  a  digital  self-service  application  for  financial  assistance  at  the  Norwegian  Labour  and  Welfare  Administration  (NA V).  Financial  assistance (FA)  is  short-term  support  to  people  who  cannot  financially  support  themselves.  To  be entitled  to  FA,  one  must  have  legal  residency  in  Norway  [37].  In  2023,  152,500  people  in Norway  received  financial  support  [38].  Citizens  applying  for  FA  are  often  in  vulnerable situations,  such  as  being  unemployed  or  having  health  and  family  issues.  Citizens  can receive  some  degree  of  help  and  guidance  through  various  channels,  including  the  reception  area  at  a  local  NA V  office,  a  call  center,  or  during  a  meeting  with  their  counselor or  caseworker.  The  digital  self-service  was  designed  as  a  supplement  for  face-to-face meetings,  but  in  reality,  it  has  replaced  these  encounters.  This  is  not  unusual  in  the  public sector,  as  technology  is  often  introduced  to  save  public  resources  by  reducing  human interaction  [26].
 
 The  application  can  be  found  on  NA V's  website,  nav.no,  and  requires  a  secure  login with a digital identification device (Bank-ID).  The  digital application is available in Norwegian  and  English,  but  all  guidance  sessions  were  carried  out  in  Norwegian.  The
+
+
+<!-- PAGE 307 -->
+
 
 digital  application  process  consists  of  eight  steps,  throughout  which  the  citizen  provides, confirms, or changes  contact information, relevant information on their  income  and expenses,  and  information  about  their  family  and  living  situation.  In  the  last  step,  the citizen  is  asked  to  upload  all  relevant  documentation,  such  as  a  housing  contract,  bank statements,  and  receipts.
 
@@ -4905,6 +6126,10 @@ Table  1. Overview  of  guidance  sessions  and  participants
 
 The  citizens  who  participated  in  the  sessions  covered  the  age  groups  from  late  teens to early 60s; six were  female,  three  were  male,  and  one  couple.  Nine  out  of  the ten participants  were  immigrants  (holding  legal  residency  in  Norway  while  being  born  in  a country  other  than  Norway).  For  some,  it  was  their  first  time  applying  digitally,  while others  have  used  the  digital  self-service  application  many  times.
 
+
+<!-- PAGE 308 -->
+
+
 All  interviews  were  semi-structured.  In  total,  10  citizens  participated  in  the  interviews and  sessions,  with  three  caseworkers  participating  on  different  days.  All  sessions  and interviews  were  held  in  Norwegian,  with  interpreters  provided  for  non-proficient  citizens.
 
 The  pre-interviews  with  caseworkers  lasted  between  30  and  40  min  and  covered questions about their experience working  with FA  and how  they guide and support citizens  in  the  application  process.  In  the  post-interview,  we  asked  about  caseworkers' reflections  and  experiences  guiding  citizens.  The  pre- and  post-interviews  with  citizens lasted  between  10  and  20  min  each.  We  asked  about  the  citizens'  experience  with  NA V and  the  application  process  for  FA  (on  paper  and  digitally),  as  well  as  their  experience and  reflections  on  receiving  one-on-one  guidance.  The  post-interview  was  further  used to  validate  our  observations  from  the  session.
@@ -4923,6 +6148,10 @@ This section presents our findings from the data analysis, divided into the foll
 
 Successfully  completing  the  digital  self-service  application  requires  a  combination  of knowledge  that  citizens  need  to  possess  or  obtain,  such  as  a)  language  and  regulatory knowledge,  and  b)  ICT  skills.
 
+
+<!-- PAGE 309 -->
+
+
 ## a. Language  and  Regulatory  Knowledge
 
 Understanding  and  responding  to  the  digital  application  requires  familiarity  with bureaucratic  terminology  and  service  regulations.  When  the  language  level  is  not  sufficient,  caseworkers  might  not  motivate  the  self-service  application,  but  rather  pre-fill the  paper  form  for  the  citizens  and  ask  them  to  sign  (CW2).  Terms  such  as  'ytelser' (benefits),  'bostłtte'  (housing  support),  and  'barnebidrag'  (child  support)  are  not  selfexplanatory  for  all  citizens,  and  misunderstandings  can  result  in  incorrect  applications. We  observed  that  some  citizens  rely  on  caseworkers  to  clarify  and  explain  these  terms, while  others  use  Google  Translate,  which  is  not  always  accurate  (S9).  Additionally,  certain  terms  or  phrases  that  have  a  specific  meaning  in  the  context  of  the  application  form were  perceived  as  hard  to  understand:
@@ -4940,6 +6169,10 @@ The  caseworkers  confirm  these  observations,  stating  that  they frequently 
 In  addition  to  lacking  knowledge  of  their  rights,  some  citizens  lack  understanding  of the  service  and  the  information  NA V  requires  to  process  the  application.  Some  citizens questioned  why  NAV  needs  certain  information  about  them  or  stated  that  NA V  should already  have  certain  information  about  them,  e.g.,  their  family  situation.
 
 'You [NAV] know that my children go to kindergarten every month; why do I have to send the invoice every month?' (C2) .
+
+
+<!-- PAGE 310 -->
+
 
 ## b. ICT  knowledge
 
@@ -4963,6 +6196,10 @@ The contextual knowledge that citizens possess needs to be comprehensively trans
 
 '[…] the more information I have from them [the citizen], regardless of what kind of service I can offer, the easier it is for me as a caseworker because then I understand the situation. […] It's always a judgment call. You might have these standard laws or rules. […] But there's so much more to it than that. Leisure activities are not really covered, but we make an individual assessment, and sometimes, they get it covered by us. So, the more we know about the person, the easier it is for us to pick up on things because we have a lot of responsibility. If they're in debt, we're basically the ones who have to pick it up.' (CW3).
 
+
+<!-- PAGE 311 -->
+
+
 As  this  caseworker  tells  us,  FA  requires  individual  assessment  based  on  the  information  provided  by  the  citizens.  Many  citizens  have  complex  life  situations  that  are  not  easy to  explain  in  the  application  form.  We  observed  that  citizens  understand  the  question that  is  asked  in  the  application  form,  but  are  unsure  how  to  answer  it  because  of  their  life situation.  One  citizen  who  owes  rent  explained  that  ' …it can be difficult to describe a complex situation in the digital application form' (C6).  He  prefers  to  discuss  the  matter during  a  physical  meeting  with  his  caseworker.
 
 ## b. Practice  Knowledge
@@ -4980,6 +6217,10 @@ As  shown  above,  citizens  need  certain  knowledge  to  submit  the  digital 
 As  one  caseworker  puts  it, '[…] giving them logic and reason behind the questions, and they will understand. Only that creates mastery' (CW3).  One  possible  channel  that allows  caseworkers  to  give  logic  and  reason  is  physical  meetings.  Additionally,  these meetings  offer  opportunities  to  identify  the  challenges  citizens  experience  and  are  a  good way  to  build  a  better  relationship  with  the  citizens.  This  is  confirmed  by  citizens  who explain  that  it  is  important  to  have  good  guidance  in  the  beginning  to  become  self-serving and  feel  more  confident  when  applying  themselves  later  on  (C3,  C7).  As  caseworkers guide  citizens  through  the  digital  application  form,  they  can  explain  every  step  of  the application,  the  information  NA V  is  asking  for,  why  NA V  is  asking  for  it,  and  how  it connects  to  the  other  steps  in  the  application  (S3).  Caseworkers  motivate  citizens  to  fill in  the  application  as  independently  as  possible,  meaning  they  should  control  the  mouse and  keyboard,  with  the  caseworker  only  helping  when  questions  arise.  Yet,  caseworkers admit  that  time  pressure  and  citizens'  frustration  might  tempt  them  to  take  over  for  the citizen  rather  than  guide  (CW2,  CW3,  S3,  S4).
 
 These  interactions  not  only  allow  caseworkers  to  guide  the  citizens  but  also  to  gain more  insights  into  the  citizens'  cases  and  life  situations.  Examples  range  from  discovering  unpaid  bills  (S4)  to  citizens  explaining  why  they  were  unable  to  pay  rent  (C6),
+
+
+<!-- PAGE 312 -->
+
 
 but  also  more  serious  problems  related  to  the  family  situation.  In  the  interview,  a  caseworker  tells  us  that  face-to-face  meetings  are  very  important  to  discover  such  issues  and explains  that 'the digital application might prevent that [we get a better impression of the citizen]. Because with the paper application, you had to come to us in person. […] and even if they don't say anything, again, someone might show some signs. And the digital world has perhaps made that path longer.' (CW3).
 
@@ -5005,6 +6246,10 @@ The  application  process,  especially  handling  documentation,  looks  differe
 
 When  guiding  citizens  in  downloading  and  submitting  documentation,  caseworkers occasionally  log  in  to  their  personal  banking  apps  to  find  out  how  to  download  bank statements.  However,  as  each  bank  has  its  own  portal,  this  method  has  its  limitations.
 
+
+<!-- PAGE 313 -->
+
+
 Compared  to  face-to-face  guidance,  phone  guidance  gives  fewer  opportunities  to  explain the  whole  application  and  identify  other  areas  in  which  the  citizen  struggles.
 
 To  summarize  our  findings,  knowledge-sharing  in  digital  self-service  is  a  two-way process.  Citizens  need  regulatory,  linguistic,  and  ICT  knowledge  to  navigate  the  system, while  caseworkers  require  contextual  knowledge  that  citizens  hold  about  their  financial situations.  Additionally,  caseworkers  gain  insights  into  citizens'  experiences  when  using the  digital  self-service  solution  in  collaboration.  During  the  sessions,  we  find  that  both citizens  and  caseworkers  learn  from  each  other's  practices  while  engaging  in  shared practices as they interact with self-service solutions and share  knowledge  about  the digital  application.
@@ -5019,6 +6264,10 @@ When  caseworkers  explain  bureaucratic  terms,  regulations,  and  eligibility
 
 Thus,  the  interaction  between  caseworkers  and  citizens  offers  an  opportunity  for caseworkers  to  learn  from  the  citizens'  practice  of  handling  the  self-service  application
 
+
+<!-- PAGE 314 -->
+
+
 and  improving  the  guidance  of  other  citizens.  This  shows  that  filing  self-service  applications  is  a  practice  in  which  one  can  develop'  professional'  knowledge.  Additionally, citizens  can  share  information  on  their  life  situation,  which  is  too  difficult  to  convey  in the  digital  application  form,  yet  highly  relevant  for  caseworkers'  case-handling  practice. This  represents  an  example  of  complexity  in  a  citizen's  life  situation  that  is  difficult  to capture  in  a  digital  application  and  can  be  eased  with  human  interaction  [6].
 
 We  further  found  that  knowledge-sharing  can  be  constrained  by  the  lack  of  interactive  communication  features  such  as  screen  sharing  or  messaging,  especially  when  the interaction  is  not  face-to-face.  This  may  lead  to  misuse  of  the  application  form,  e.g., when  citizens  submit  entirely  new  applications  just  to  communicate  with  NA V .  At  the same  time,  these  constraints  lead  caseworkers  to  create  alternative  strategies,  such  as starting  a  fictive  application  to  support  knowledge-sharing.  Such  workaround  strategies or  'tinkering'  have  been  observed  in  other  research  as  well  [25].  This  underlines  the value  of  physical  meetings  for  more  comprehensive  knowledge-sharing,  as  they  allow caseworkers  and  citizens  to  make  sense  of  and  interact  with  the  self-service  solution together.
@@ -5030,6 +6279,10 @@ This study contributes to the literature on digital self-service, which  often h
 Our  study  presents  implications  for  digital  service  delivery  by  challenging  the  striving  for  purely  'self'-service  delivery,  as  our  findings  point  to  the  value  of  knowledgesharing  between  caseworkers  and  citizens  in  direct  interaction,  to  benefit  both  citizens, caseworkers,  and  the  organization.  As  such,  knowledge-sharing  represents  a  valuable resource  for  organizations  seeking  to  improve  their  services,  as  the  knowledge  generated  can  be  used  in  service  development.  Further,  it  helps  to  gain  realistic  expectations on  what  digital  services  actually  offer  and  what  their  limitations  are.
 
 Our  findings  further  emphasize  the  need  for  organizations  to  integrate  caseworkers' and  citizens'  insights  into  the  development  of  digital  service  delivery,  such  as  self-service
+
+
+<!-- PAGE 315 -->
+
 
 solutions.  By  leveraging  caseworkers'  insights,  public  organizations  can  reduce  learning costs  for  citizens  and  improve  the  overall  use  of  digital  self-service  solutions.  Additionally,  recognizing  caseworkers  as  knowledge  intermediaries  highlights  their  critical  role in  ensuring  equitable  access  to  digital  public  services.
 
@@ -5053,6 +6306,10 @@ Disclosure  of  Interest. The  authors  have  no  competing  interests  to  decl
 6. Schenk,  B.,  Dolata,  M.,  Schwabe,  C.,  Schwabe,  G.:  What  citizens  experience  and  how  omnichannel  could  help-insights  from  a  building  permit  case.  Inf.  Technol.  People 37 (2),  944-965 (2021).  https://doi.org/10.1108/ITP-06-2020-0374
 7. Schou,  J.,  Pors,  A.S.:  Digital  by  default?  A  qualitative  study  of  exclusion  in  digitalised  welfare. Soc.  Policy  Adm. 53 (3),  464-477  (2019).  https://doi.org/10.1111/spol.12470
 
+
+<!-- PAGE 316 -->
+
+
 8. Heggertveit,  I.,  Lindgren,  I.,  Madsen,  C.Ø.,  Hofmann,  S.:  Administrative  burden  in  digital self-service:  an  empirical  study  about  citizens  in  need  of  financial  assistance.  In:  Krimmer, R.,  et  al.  (eds.)  ePart  2022.  LNCS,  vol.  13392,  pp.  173-187.  Springer,  Cham  (2022).  https:// doi.org/10.1007/978-3-031-23213-8\_11
 9. Madsen,  C.Ø.,  Lindgren,  I.,  Melin,  U.:  The  accidental  caseworker  -  how  digital  self-service influences  citizens'  administrative  burden.  Gov.  Inf.  Q. 39 (1),  101653  (2022).  https://doi.org/ 10.1016/j.giq.2021.101653
 10. Skaarup,  S.:  The  role  of  domain-skills  in  bureaucratic  service  encounters.  In:  Viale  Pereira, G.,  et  al.  (eds.)  EGOV  2020.  LNCS,  vol.  12219,  pp.  179-196.  Springer,  Cham  (2020).  https:// doi.org/10.1007/978-3-030-57599-1\_14
@@ -5072,6 +6329,10 @@ Disclosure  of  Interest. The  authors  have  no  competing  interests  to  decl
 24. Wallinder,  Y .,  Seing,  I.:  When  the  client  becomes  her  own  caseworker:  dislocation  of  responsibility through digital self-support in the Swedish public employment  service. Sozialer Fortschr. 6-7 ,  405-423  (2022).  https://doi.org/10.3790/sfo.71.6-7.405v2
 25. Rłhnebæk,  M.:  Standardized  flexibility:  on  the  role  of  ICT  in  the  Norwegian  employment and  welfare  services  (NA V)  (2014)
 
+
+<!-- PAGE 317 -->
+
+
 26. Lindgren,  I.,  Madsen,  C.Ø.,  Hofmann,  S.,  Melin,  U.:  Close  encounters  of  the  digital  kind:  a research  agenda  for  the  digitalization  of  public  services.  Gov.  Inf.  Q. 36 (3),  427-436  (2019). https://doi.org/10.1016/j.giq.2019.03.002
 27. Alvarenga,  A.,  Matos,  F.,  Godina,  R.,  Matias,  J.C.O.:  Digital  transformation  and  knowledge management  in  the  public  sector.  Sustainability 12 (14),  Article  no.  14  (2020).  https://doi.org/ 10.3390/su12145824
 28. RydØn,  H.H.,  Hofmann,  S.,  de  Andrade,  L.H.A.,  Heggertveit,  I.:  Mitigating  administrative burdens:  understanding  the  role  of  intermediaries  in  co-producing  digital  self-services.  In: Johannessen,  M.R.,  et  al.  (eds.)  ePart  2024.  LNCS,  vol.  14891,  pp.  31-46.  Springer,  Cham (2024).  https://doi.org/10.1007/978-3-031-70804-6\_3
@@ -5087,6 +6348,10 @@ Disclosure  of  Interest. The  authors  have  no  competing  interests  to  decl
 38. Ulstein, J.: Stor łkning i utbetalinger av sosialhjelp, SSB.  https://www.ssb.no/sosiale-for hold-og-kriminalitet/trygd-og-stonad/statistikk/okonomisk-sosialhjelp/artikler/stor-okningi-utbetalinger-av-sosialhjelp.  Accessed  11  Mar  2025
 39. Thomas,  D.R.:  A  general  inductive  approach  for  analyzing  qualitative  evaluation  data.  Am. J.  Eval. 27 (2),  237-246  (2006)
 40. Wenger,  E.:  Communities  of  practice  and  social  learning  systems.  Organization 7 (2),  225-246 (2000).  https://doi.org/10.1177/135050840072002
+
+
+<!-- PAGE 318 -->
+
 
 <!-- image -->
 
@@ -5108,6 +6373,10 @@ Digital welfare  is now  a reality in many  parts  of the world,  as  technologi
 
 Research  on  digital  welfare  has  increased  considerably  over  the  last  five  years;  however,  some  crucial  spots  remain  under-investigated,  such  as  the  lived  experience  and
 
+
+<!-- PAGE 319 -->
+
+
 consequences  of  digital  government  on  citizens  [3,  20,  31],  and  specifically  on  women, viewed  through  a  gender  lens  [12].
 
 Citizens  assume  new  roles  in  digital  government  as  their  form  of  interaction  with digital  public  services  has  undergone  a  dramatic  change,  with  new  responsibilities  and normative  expectations  being  placed  upon  them,  such  as  the  concept  of  the  self-serving citizen.  This  new  narrative  of  citizenship  forges  new  patterns  of  exclusion,  especially concerning  those  who  cannot  comply  with  the  new  environment,  creating  new  hierarchies between  citizens  or  second-order  citizens  [32],  also  emphasizing  the  need  to  understand more  deeply  the  consequences  of  these  developments  and  the  risk  of  adverse  effects, such  as  control  over  citizen  behavior  and  privacy  issues  [20].
@@ -5121,6 +6390,10 @@ This  article  contributes  to  addressing  this  gap  by  analyzing  the  exper
 This  explorative  and  inductive  research  [30]  draws  on  interpretative  phenomenological  analysis  (IPA)  [33]  and  intersectionality  [34,  35]  to  unveil  the  experiences  of disadvantaged  women  who  rely  on  welfare  services  that  have  now,  to  varying  degrees, gone  digital.
 
 While  not  accounting  for  generalizable  results,  exploring  women's  experiences  is  a valuable  approach  that  brings  relevant  insights  to  advance  in  understanding  the  consequences  of  digital  welfare  from  a  gender  perspective:  how  it  affects  their  sense  of  citizenship,  how  they  navigate  these  new  roles  attributed  to  them  by  governments,  what  are  the phycological  effects  on  them,  and  especially  how  these  experiences  add  to  their  intersectional  identities,  reinforcing  or  easing  patterns  of  oppression  and  exclusion  to  different women.  Research  from  this  perspective  is  crucial  to  ensure  that  digital  governments  and welfare  systems  are  creating  a  better  world  for  all  [36].
+
+
+<!-- PAGE 320 -->
+
 
 The  following  section  presents  the  literature  background  that  motivated  the  research, informed the inductive research design, and provided a repertoire for interpreting women's  experiences.  Next,  the  study  site  and  IPA  methodology  are  presented.  Results are  structured  in  the  form  of  four  group  experiential  statements  (GETs)  that  emerged  in the  IPA  inductive  analysis.  Finally,  the  discussion  and  final  considerations  are  presented.
 
@@ -5138,6 +6411,10 @@ Women,  however,  are  not  a  unified  category  as  well.  Understanding  the 
 
 Intersectionality  is  concerned  with  understanding  the  complex  dimensions  of  systems of  oppression  and  power  relations  imbricated  with  overlapping  social  identities,  such  as
 
+
+<!-- PAGE 321 -->
+
+
 gender,  race,  class,  sexuality,  and  other  identities  and  social  positions  [34,  35].  Kimberly Crenshaw  [7],  the  first  author  to  explicitly  adopt  the  term  'intersectionality,'  used  the metaphor  of  a  crossroad,  where  different  factors  flow,  configuring  unique  individual  or group  subjectivities  and  experiences  of  oppression,  power,  or  subordination,  to  address the  racialized  experiences  of  women  in  the  United  States.
 
 Intersectionality  considers  how  the  heterogeneity  that  emerges  from  different  intersections  affects  the  understanding  of  social  experiences.  These  social  positions  cannot be  analyzed  separately;  they  shape  social  experience  together  [6].  Intersectional  research faces  the  challenge  of  ' capturing  the  simultaneous  interrelations  between  the  subjective and  the  structural ' [34]  to  tackle  inequalities.  It  relies  on  lived  experience  as  a  criterion of  meaning,  considering  the  analysis  of  more  than  one  category  of  difference  and  the interaction  between  the  individual  and  institutional  levels  in  a  multilevel  approach.
@@ -5151,6 +6428,10 @@ M'Boi  Mirim  is  a  zone  located  on  the  outskirts  of  Sªo  Paulo,  with  
 ## 3.2 Interpretative Phenomenological Analysis (IPA)
 
 The  qualitative  and  inductive  research  design  [30]  followed  Interpretative  Phenomenological  Analysis  (IPA)  [33].  Derived  from  psychology,  IPA  is  committed  to  revealing life experiences  as lived by subjects and interpreted by the researcher. It is  focused ' on  personal  meaning  and  sense-making  in  a  particular  context,  of  people  who  share a  particular  experience ' [33,  p.  39].  Informed  by  phenomenology,  hermeneutics,  and idiography,  IPA  can  be  considered  a  process  of  double  hermeneutics.  First,  the  researcher attempts  to  make  sense  ' of  the  making  sense  of  the  participant ,'  looking  at  things  as  they appear  to  be  to  the  individual,  as  in  idiography.  In  this  sense,  each  participant  is  a  case. Later,  the  researcher  attempts  to  ask  questions  and  interpret  the  experiences,  moving  to more  general  claims  about  the  experience,  noting  that  ' the  specifics  are  unique,  but  they are  hung  on  what  is  shared  and  communal ' [33,  p.  32].
+
+
+<!-- PAGE 322 -->
+
 
 ## 3.3 Sample and Data Collection
 
@@ -5174,6 +6455,10 @@ After  obtaining  ethics  approval,  data  were  collected  through  in-depth  a
 
 The  data analysis followed  IPA  principles, summarized  in  7  steps [33],  which  were implemented  as  follows: (i) The first case (interview) was adapted to a template in Microsoft  Word  containing  three  columns  -  experiential  statements,  original  transcript, and  exploratory  notes.  The  original  interview  was  placed  in  the  second  column  and  read and  re-read.  Second,  (ii)  exploratory  notes  on  the  case  were  written  in  the  third  column. Third, iii)  in  the  first  column,  experiential  statements  were  constructed  based  on  the process  of making  sense  of  what  happened  to  that particular participant. Fourth, iv)
 
+
+<!-- PAGE 323 -->
+
+
 connections  across  experiential  statements  were  searched  to  group  them  under  personal experiential themes  (PET).  Following,  v) the emerging  PETs  for  the particular case were  named  and  consolidated  in  tables  using  Miro  online  software.  After  that,  vi)  the analysis  of  the  other  six  individual  cases  followed  the  same  steps.  Finally,  vii)  after  all the  cases  had  gone  through  the  same  individual  process,  the  PETs  that  emerged  for  each participant  were  analyzed  together  to  develop  group  experiential  themes  (GET)  across cases.  The  GETs  were  also  consolidated  using  Miro.  Regarding  intersectionality,  rather than  selecting  a  few  predetermined  categories  of  difference  to  focus  on,  identities  were left  to  emerge  during  the  research  and  analysis.
 
 ## 4 Results
@@ -5194,6 +6479,10 @@ Table 2. Main  digital  social  services  mentioned  in  interviews.
 | Gov.br            | Federal            | The unified service portal and login access, through which citizens can access all federal services and some state and municipal services integrated into Gov.br              |
 
 ( continued )
+
+
+<!-- PAGE 324 -->
+
 
 Table 2. ( continued )
 
@@ -5217,6 +6506,10 @@ From  the  perspective  of  autonomous  use,  whether  digitally  excluded  wome
 
 Participants'  experiences  with  digital  welfare  are  ambivalent.  On  the  positive  pole,  terms such  as  satisfaction,  being  taken  care  of,  and  support  describe  the  feelings  associated with  digital  social  policies.  Terrible,  complex,  impossible,  and  bureaucratic  are  words employed  to  describe  the  experience  on  the  negative  pole.  Frequently,  both  feelings  are present  in  the  reasoning  of  the  same  participant,  reinforcing  the  ambivalence  of  digital
 
+
+<!-- PAGE 325 -->
+
+
 welfare  in  the  experiences  of  women  in  M'Boi  Mirim.  Larissa's  experience  with  digital welfare  symbolizes  the  middle  of  this  spectrum:
 
 ' At  the  same  time  that  they  help,  at  the  same  time  they  drive  us  crazy,  like,  I  think it's  half,  half,  because  yes,  it  helps  a  lot,  but  also  when  there  is  a  problem,  to  solve it  is  even  more  a  hell  of  a  bureaucracy '  (Larissa)
@@ -5239,6 +6532,10 @@ Intermediation  of  digital  services  also  increases  the  exposure  of  perso
 
 ' I  don't  do  it  ...  They  [sons]  do  it  ...  sometimes  he  [referring  to  one  of  her  sons] looks  at  my  salary,  ...  manages  my  retirement  … '  (Valentina)
 
+
+<!-- PAGE 326 -->
+
+
 However,  satisfaction  with  using  digital  technology  through  intermediaries  differs among  them.  Sofia,  for  example,  was  very  unsatisfied  as  digitalization  undermined  her autonomy  to  solve  her  problems  independently  and  to  interact  with  government  bodies and  private  companies.  This  dependence  is  frustrating  for  her,  while  Valentina,  even  if  it represents  a  loss  of  autonomy,  prefers  someone  to  do  whatever  she  needs  so  she  doesn't have  to  go  to  public  offices  in  person.
 
 ' ...  I'd  rather  he  [son]  makes  it  [appointment  with  the  doctor  using  the  Agenda Fácil  app];  I'm  already  tired,  with  my  old  legs  and  climbing  all  this  …  [reference to the slope near  her house  and  how  it would  be  difficult to  walk  through  it] ' (Valentina)
@@ -5256,6 +6553,10 @@ Juliana,  a  young  woman  with  a  physical  disability,  explained  her  conta
 Digital Welfare as Fight, Anxiety, and Humiliation. Sometimes,  the  experience  is also  described  as  frustrating,  terrible,  and  impossible,  fostering  feelings  of  exclusion  and anxiety.  The  digitalization  of  CRAS  appointment  scheduling  is  a  prominent  example,  and it  is  unanimously  described  as  challenging  and  almost  impossible  by  all  the  interviewees who  needed  it.
 
 CRAS,  along  with  the  INSS,  is  one of Brazil's  most  important  social  protection units.  While  the  INSS  is  responsible  for  retirement,  pensions,  unemployment  security, and  payment  of  BPC  for  people  with  disabilities,  among  others,  the  CRAS  is  accountable
+
+
+<!-- PAGE 327 -->
+
 
 for  the  reception  of  all  other  social  needs,  including  non-contributory  assistance  such as  the  Bolsa  Família,  the  national  conditional  cash  transfer  program  for  people  leaving  in  poverty  or  extreme  poverty.  Similarly,  the  Unified  Registry  for  Social  Programs (CadÚnico)  is  the  most  critical  registration  that  citizens  entitled  to  social  benefits  and cash  transfers  must  fill  in  to  be  eligible  to  access  them,  such  as  the  milk  benefit  (Leve Leite).  The  CRAS  are  the  units  responsible  for  filling  in  these  registries.
 
@@ -5276,6 +6577,10 @@ For all that, attempts to schedule are described by participants as a struggle, 
 - ' …  They  say  that  there  is  no  more  vacancy,  that  it  has  already  been  completed, and  you  are  in  this  agony,  see,  it's  terrible...  You  keep  fighting;  some  people  get up  at  dawn  to  call  to  see  if  they  can  schedule  it '  (Sofia)
 
 It  looks  like  the  traditional  daybreak  queues  in  many  public  services  in  Brazil,  a  symbol  of  precariousness,  have  been  removed  to  people's  homes,  where  they  can  struggle alone,  hidden  from  public  scrutiny,  eliminating  pressure  from  public  service  to  the  individuals  who  need  to  deal  by  themselves  with  an  internet  connection,  devices,  and  virtual public  encounters.  Humiliation  and  begging  are  words  that  appear  in  some  interviews when  the  CRAS  in  Sªo  Paulo  city  is  mentioned.
+
+
+<!-- PAGE 328 -->
+
 
 ' …  I  cried  inside  the  CRAS  …  I  cried  like  a  child  there,  begging,  and  they  said  I couldn't,  that  I  should  …  go  home  and  call  [to  schedule  an  appointment] '  (Sofia)
 
@@ -5303,6 +6608,10 @@ Offline  service,  however,  seems  worse  than  ever  in  the  participants'  s
 
 In  a  scenario  where  information  is  insufficient  and  frontline  workers  are  untrained, inconsistencies  and  malfunctions  become  very  difficult  to  resolve,  generating  new  opacities  in  service  delivery  and  requiring  people  to  embark  on  a  journey  in  search  of  solutions. Gabriela,  for  instance,  whose  child  was  entitled  to  the  milk  benefit,  wasn't  receiving  it. She  took  more  than  nine  months,  peregrinating  with  her  child  from  one  public  agency to  another,  with  no  one  being  able  to  resolve  the  issue,  before  finally  discovering  that
 
+
+<!-- PAGE 329 -->
+
+
 her  file  had  never  been  updated  in  the  system,  a  task  that  school  frontline  workers  were supposed  to  handle.
 
 ## 4.3 Statement 3: Reinforcement of Gender Roles and Burdens
@@ -5322,6 +6631,10 @@ Challenges  in  dealing  with  digital  social  services  seem  like  one  more 
 ' …  [a  digital  service  that  is  difficult  to  perform]  is  one  more  fight  for  your  day, for  your  life,  for  your  year ,…  the  facilitated  is  a  victory  …  because  during  our  life, especially  when  we  have  children,  our  responsibility  is  never  the  same  as  a  man's, never,  no  matter  how  much  the  man  does… '  (Camila)
 
 Larissa's  experience  with  the  School  Kit  Duepay  is  a  good  illustration.  After  general critics  that  school  supplies  and  uniforms  delivered  by  the  city  hall  to  each  student  on the  first  day  of  classes  were  of  low  quality  and  concentrated  on  a  few  providers,  the municipal  government  decided  to  change  the  system  and  created  the  Duepay  app,  where families  now  receive  an  amount  of  money  and  can  freely  choose  the  shop  where  to  buy  it, as  well  as  choose  the  school  supplies  of  their  preference.  The  experience  was  acclaimed for  contributing  to  the  decentralization  of  public  expenditure,  benefiting  many  small entrepreneurs  throughout  the  city.  At  the  same  time,  citizens  were  given  more  autonomy
+
+
+<!-- PAGE 330 -->
+
 
 to choose  their supplies. Larissa recognizes  that the app is easy to use and that the materials  are  improved,  with  higher-quality  shirts  and  trousers,  but  she  would  prefer  the old  way,  as  she  now  has  even  more  work  to  do.
 
@@ -5343,6 +6656,10 @@ Inconsistencies  between  different  service  channels  do  not  go  unnoticed  
 
 Among different  public  services  and  agencies,  the  lack  of  interoperability  and  varying paces of digitalization  combine  to  provide  fragmented  user  experiences.  Juliana,  for example,  attempted  to  renovate  her  special  unified  public  transportation  ticket  for  people with  disabilities  (Bilhete  Único)  but  needed  printed  proof  that  she  was  a  beneficiary  of  the BPC,  as  the  Transportation  office  wouldn't  accept  digital  evidence  despite  her  attempts. So,  she  went  to  an  INSS  agency,  where  she  discovered  that  this  kind  of  service  was  no
 
+
+<!-- PAGE 331 -->
+
+
 longer  available  offline  and  that  she  would  have  to  use  the  Meu  INSS  app  on  her  device and  have  a  4G  connection.  No  computers  or  totems  were  available  for  her  to  print  the document  at  the  INSS  agency.  After  accessing  the  app  and  downloading  the  document, she  had  to  look  for  a  Descomplica  unit  to  print  for  free.  After  printing  it,  she  had  to  hand in  the  paper  in  person  to  the  physical  agency  of  the  Transportation  office  to  have  her ticket  renovated.
 
 When asked about what should be different, the way to improvement is also ambivalent,  pointing  to offline and digital solutions, as  exemplified  by  two  opposite speeches.
@@ -5363,6 +6680,10 @@ Table 3. Summary  of  group  experiential  statements  (GETs)
 
 ( continued )
 
+
+<!-- PAGE 332 -->
+
+
 Table 3. ( continued )
 
 | Group experiential statements                | Main aspects                                                                                                                                                                                                                                                                                                                                                              |
@@ -5378,6 +6699,10 @@ Second,  in digital welfare, feelings of disrespect, anguish, humiliation, fear,
 
 Adding  to  previous  work  [3,  22,  25],  the  first  implication  is  that  the  design,  implementation,  and  evaluation  of  digital  services,  particularly  digital  social  services,  should account  for  the  experiences  of  real  people  in  their  contexts  as  unintended  or  unexpected consequences  and  perceptions  can  only  be  unveiled  in  the subjective experiences  of individuals.  As  stated  by  Almman  &amp;  Radu  [3,  p.  85],  we  need  to  look  into  the  ' mundane
 
+
+<!-- PAGE 333 -->
+
+
 rhythms of everyday life that the mechanisms  of  exclusion operate, only to  become wickedly  complex  patterns  of  marginalisation  at  scale '.
 
 At  the  same  time,  another  implication  is  an  invitation  to  reflection  on  whether  digital exclusion  research,  added  by  the  literature  on  digital  welfare  [e.g.,  2,  11],  has  put  so  much emphasis  on  the  harming  consequences  of  digital  government  -  a  focus  that  is  extremely important  and  justified - that  a  look  into  the  good  consequences  that  live  together  with the bad ones, in  the  context  of  disadvantaged  citizens,  has  been  neglected.  Contrary to  what  the  evidence  in  the  literature  suggested,  some  of  the  disadvantaged  women  in this  research  also  demonstrated  satisfaction  and  embracement  in  their  experiences  with digital  welfare,  not  just  exclusion.  These  positive  experiences  cannot  be  attributed  solely to  young  age,  but  also  to  personal  preferences  and  individual  contexts,  as  in  the  case  of Mrs.  Valentina,  and  may  offer  insights  to  improve  practice.
@@ -5391,6 +6716,10 @@ Finally,  participants  acknowledged  gaining  experience  with  digital  techno
 This  exploratory  and  inductive  research  demonstrated  that  disadvantaged  women  living in  the  M'Boi  Mirim  region,  out  of  necessity,  found  their  way  to  the  internet  and  digital welfare,  even if that  meant  relying  on neighbors,  family, volunteers, or paid helpers to  access  and  use  it.  However,  experiences  dealing  with  digital  welfare  are  ambivalent and influenced by various identity configurations, including age, level of education, capabilities,  family  structure,  personal  circumstances,  and  the  design  of  services.
 
 From  the  theoretical  perspective,  the  study  helps  to  unveil  how  digital  social  services may,  at  the  same  time,  inflict  feelings  of  anxiety,  disablement,  fight,  and  exclusion,  as
+
+
+<!-- PAGE 334 -->
+
 
 also  feelings  of  inclusion,  embracement,  and  citizenship  that  add  to  their  offline  struggles related  to  intersectional  identities.
 
@@ -5409,6 +6738,10 @@ Disclosure of Interests. The  author  has  no  competing  interests  to  declare
 1. Acilar,  A.,  Øystein,  S.:  Towards  understanding  the  gender  digital  divide:  a  systematic  literature  review.  Glob.  Knowl.  Mem.  Commun. 72 (3),  233-249  (2023).  https://doi.org/10.1108/ GKMC-09-2021-0147
 2. Alexopoulou,  S.:  Paradigm  shift:  exploring  the  impact  of  digital  technologies  on  the  welfare state  through  a  systematic  literature  review.  Soc.  Policy  Adm.,  1-23  (2024).  https://doi.org/ 10.1111/spol.13054
 3. Allmann,  K.,  Radu,  R.:  Digital footprints as barriers  to  accessing  e-government  services. Global  Pol. 14 ,  84-94  (2023).  https://doi.org/10.1111/1758-5899.13140
+
+
+<!-- PAGE 335 -->
+
 
 4. Alston,  P.:  Report  of  the  Special  Rapporteur  on  extreme  poverty  and  human  rights  [White paper].  General  Assembly  of  the  United  Nations  (UN),  74th  section  (2019)
 5. A4AI.:  Meaningful  Connectivity:  A  New  Target  to  Raise  the  Bar  for  Internet  Access  [White paper].  Alliance  for  Affordable  Internet  (2020).  https://a4ai.org/wp-content/uploads/2021/02/ Meaningful-Connectivity\_Public-.pdf
@@ -5431,6 +6764,10 @@ Disclosure of Interests. The  author  has  no  competing  interests  to  declare
 22. Macaya, J.F.M.: Smart cities for whom? Intersectionality and women's safety perception and violence experience [Doctoral dissertation,  Fundaçªo  Getulio  Vargas, Escola de Administraçªo  de  Empresas  de  Sªo  Paulo].  Fundaçªo  Getulio  Vargas  Repository  (2023)
 23. McCosker,  A.,  Tucker,  J.:  Bootstrapping  the  digital  divide:  a  situational  analysis  of  digital demands  and  collective  capabilities  in  low-income  households.  Inf.  Commun.  Soc.,  1-19 (2025).  https://doi.org/10.1080/1369118X.2024.2449007
 
+
+<!-- PAGE 336 -->
+
+
 24. Mello,  J.,  Marques,  D.:  Elementos  para  uma  tipologia  de  gŒnero  da  atuaçªo  estatal:  visıes do  estado  sobre  as  mulheres  e  políticas  pœblicas  no  Brasil.  Texto  para  discussªo  2441  Ipea (2019)
 25. Park,  S.,  Humphry,  J.:  Exclusion  by  design:  intersections  of  social,  digital  and  data  exclusion. Inf.  Commun.  Soc. 22 ,  934-953  (2019).  https://doi.org/10.1080/1369118X.2019.1606266
 26. Patton,  M.:  Qualitative  Evaluation  and  Research  Methods,  pp.  169-186.  Sage.  Beverly  Hills (1990)
@@ -5444,6 +6781,10 @@ Disclosure of Interests. The  author  has  no  competing  interests  to  declare
 34. Rodriguez,  J.K.,  Holvino,  E.,  Fletcher,  J.K.,  Nkomo,  S.M.:  The  theory  and  praxis  of  intersectionality  in  work  and  organisations:  where  do  we  go  from  here?  Gend.  Work  Organ. 23 (3), 201-222  (2016).  https://doi.org/10.1111/gwao.12131
 35. Rodriguez,  J.K.:  Intersectionality  and  qualitative  research.  In:  Cassell,  Cunliffe,  Grandy  (eds.) SAGE  Handbook  of  Qualitative  Business  and  Management  Research  Methods.  Sage,  London (2018).  https://doi.org/10.4135/9781526430212
 36. Walsham,  G.:  Are  we  making  a  better  world  with  ICTs?  Reflections  on  a  future  agenda  for the  IS  field.  J.  Inf.  Technol. 27 ,  87-93  (2012).  https://doi.org/10.1057/jit.2012.4
+
+
+<!-- PAGE 337 -->
+
 
 <!-- image -->
 
@@ -5473,6 +6814,10 @@ Digital  Society  Track
 
 '  IFIP  International  Federation  for  Information  Processing  2026
 
+
+<!-- PAGE 338 -->
+
+
 inconsistent  user  experiences.  Addressing  these  inconsistencies  often  requires  structured collaboration  across  levels  of  government.  This  paper  tries  to  understand  the  existence or  absence  of  such  collaboration  across  multi-level  systems.
 
 As  part  of  a  broader  research  project  that  aims  to  map  the  different  approaches  to government  design  standards  and  respective  compliance  models,  this  paper  examines how  federal  systems  navigate  these  challenges,  focusing  on  Australia  and  Canada  as  case studies,  as  well  as  two  regional-level  governments  in  each  of  these  countries:  New  South Wales  and  South  Australia  for  the  first,  Alberta  and  Ontario  for  the  latter.  By  comparing these  systems,  the  paper  seeks  to  answer  a  central  question: How  do  governments  within federal  systems  ensure  a  minimum  level  of  usability  and  consistency  in  public  sector digital  services  across  multiple  levels  of  government? In  doing  so,  it  addresses  a  gap  in the  literature  on  how  user  experience  is  operationalised  to  be  consistent  across  multi-level governance  settings.
@@ -5487,6 +6832,10 @@ Some  research  is concerned  with  accessibility and inclusive design, focusing
 
 A  third  strand  of  research  focuses  on  User  Experience  (UX)  evaluation  and  measurement,  namely  in  assessing  user  satisfaction  and  the  overall  quality  of  web  interactions. Studies  have  explored  various  models  and  metrics  to  evaluate  UX,  such  as  the  Unified Theory  of  Acceptance  and  Use  of  Technology  (UTAUT)  model  [7-11],  which  examines factors  influencing  the  adoption  of  e-government  services;  or  design  thinking  [12,  13],
 
+
+<!-- PAGE 339 -->
+
+
 which  proposes  approaches  (i.e.  processes  and  tools)  to  ensure  that  end-users  are  engaged in  the  design,  development,  testing,  and  production  of  services.  While  these  standards and  approaches  are  internationally  recognised  and  serve  as  benchmarks  for  usability  in system  design,  none  address  language  use,  and  only  indirectly  common  look-and-feel, functionality,  or  reuse  of  components  or  compliance  with  other  standards  or  legislation, e.g.,  privacy  and  data  protection.
 
 Another  research  strand  emphasises  the  importance  of  cultural  and  contextual  factors  in  usability  and  how  they  impact  user  interaction  with  websites  and  online  services [14,  15].  This  strand  investigates  how  cultural  dimensions  influence  usability  perceptions,  including  language  [16],  colours,  aesthetics  [17],  and  their  impact  on  the  level  of perceived  satisfaction  [15].  Research  has  led  to  the  development  of  culturally-oriented usability  evaluation  tools  to  better  cater  to  diverse  user  groups  [17,  18].
@@ -5498,6 +6847,10 @@ Unlike other research strands, design thinking is anchored  in research by Jacob
 By  comparison,  Shneiderman's Universal  Usability [21]  takes  a  more  nuanced  approach.  He  acknowledges  that  knowledge,  skills,  age,  gender,  socio-economic  status,  or cultural  differences  can  affect  online  behaviour  as  these  also  affect  user's  needs.  He  also sees  technology  and  hardware  as  relevant  in  shaping  user  experiences.  These  concerns are  visible  in  his  heuristics,  for  example,  suggesting  that  one  should  design  with  different skill  levels  in  mind,  giving  support  for  less  savvy  and  shortcuts  for  expert  users,  but  also that  interfaces  should  be  tailored  to  specific  user  tasks  and  preferences.
 
 Beyond  Nielsen  and  Shneiderman,  much  of  the  usability  research  tends  to  emphasise  its  importance  for  value  creation,  such  as  return  on  investment  and  digital  inclusion, rather  than  proposing  concrete  solutions,  assessment  frameworks,  or  monitoring  mechanisms  on  the  actual  design  of  services.  From  the  2020s,  the  focus  has  mainly  been  on service  quality,  user-friendliness,  or  usability  [22-28],  which  in  turn  tend  to  be  linked to  trust  [29],  satisfaction,  and  loyalty  [24,  30,  31].  Other  topics  include  accessibility  for specific  groups,  such  as  the  visually  impaired  [32]  and  the  role  of  technology  in  enhancing  usability  [26,  33].  The  service  quality  literature  generally  examines  conceptual  elements  such  as  reliability/fulfilment,  responsiveness,  web  design,  ease  of  use/usability, privacy/security,  and  information  quality/benefit  [23,  24,  28,  32,  34].  These  elements, however,  remain  broad  conceptual  outcomes.  While  these  elements  could  form  the  basis of  assessment  criteria - for  example,  through  Likert  scales - this  is  rarely  attempted.
+
+
+<!-- PAGE 340 -->
+
 
 Adding  to  that,  key  international  and  regional  ICT-related  databases  and  benchmarks like  those  managed  by  the  ITU,  UNDESA,  World  Bank,  or  the  EU  do  not  measure service  use  or  usability  [35-39].
 
@@ -5515,6 +6868,10 @@ Along  with  the  theoretical  recommendations  for  standards  that  primarily 
 
 1 This  framework  is  developed  as  part  of  a  broader  ongoing  research  project  aimed  at  developing a  comprehensive  approach  to  assess  and  compare  digital  government  design  standards.
 
+
+<!-- PAGE 341 -->
+
+
 Each  country's design standards are evaluated across 15 overarching categories, each comprising  varying criteria, on a 0-2 scale, where  zero (0) signifies either no or barely any reference  to the criterion, one (1) indicates that a criterion is partially covered, and two (2) denotes that a criterion is fully or close to fully covered. The 15  overarching  categories  are  'development  process',  'language  use',  'look-and-feel', 'functionality',  'reuse  of  components',  'reuse  of  standards',  'reuse  of  data',  'device independence',  'WCAG  Accessibility  standards',  'monitoring  of  use  and  usability', 'minimum  acceptance  criteria',  'user  testing',  'examples',  'toolkit',  and  'stylesheet'. Table  1  maps  the  process  from  the  theoretical  basis  to  the  final  assessment  framework.
 
 For  each  country,  an  analysis  examines  how  this  information  is  presented,  the  coverage  of  the  standards,  i.e.,  to  which  institutions  and  organisations  it  applies,  and  whether its  adoption  is  voluntary  or  mandatory.  Finally,  the  mechanisms  to  report,  assess,  and ensure  compliance  are  also  analysed.  All  assessments  reflect  the  state  of  the  documents  as of  31  December  2024.  This  cut-off  date  ensures  comparability  across  cases  and  provides a  fixed  point  of  reference  for  analysis.
@@ -5526,6 +6883,10 @@ The  first  step  is  exploratory,  aiming  to  understand  how  the  informatio
 The comparative design facilitates uncovering patterns and divergences in approaches  to  usability  standards  and  respective  governance  models  within  and  between federated  systems.  In  future  research,  this  analysis  could  be  expanded  with  interviews.
 
 Globally,  16  countries  have  published  design  standards  or  similar  [47].  Although several  of  these  countries  have  a  federal  structure  (such  as  Mexico,  India,  or  the  USA), this  paper  focuses  on  the  cases  of  Australia  and  Canada  as  they  are  the  only  two  federal countries with published  design standards at both national (i.e.  federal  government) and regional levels (i.e. state or provincial government),  which  are  the  basis for the case  selection.  For  each,  two  state  or  provincial  approaches  were  chosen.  In  Canada, only  Alberta  and  Ontario  have  published  design  standards.  In  Australia,  Victoria  [53], New  South  Wales  [54],  South  Australia  [55],  and  Queensland  [56]  have  either  design standards  or  design  systems  in  place.  New  South  Wales  and  South  Australia  were  chosen for  having  publicly  available  standards  and  design  systems  and  different  approaches  to implementation.  Denmark  serves  as  a  complementary  reference  case,  as  it  is  the  only
+
+
+<!-- PAGE 342 -->
+
 
 country  where  the  standards  are  developed  and  apply  equally  to  all  levels  of  government [47,  52],  which  could  offer  insights  into  cross-governmental  consistency.
 
@@ -5553,6 +6914,10 @@ When  assessed  against the paper's assessment  framework,  it covers most of th
 
 According  to  the  responsible  authority,  version  2.0  reduced  the  criteria  from  13  to ten,  improving  the  accessibility  and  inclusion  requirements  and  introducing  new  ones for  staff-facing  services.
 
+
+<!-- PAGE 343 -->
+
+
 Table  1. Nielsen's  and  Shneiderman's  as  the  basis  of  the  Assessment  Framework
 
 | Overarching Categories   | Nielsen                                                | Shneiderman                                   | Assessment Framework                                                                 |
@@ -5578,6 +6943,10 @@ Table  1. Nielsen's  and  Shneiderman's  as  the  basis  of  the  Assessment  Fr
 
 ( continued )
 
+
+<!-- PAGE 344 -->
+
+
 Table 1. ( continued )
 
 | Overarching Categories          | Nielsen                                                | Shneiderman                                                                  | Assessment Framework                                                                     |
@@ -5600,6 +6969,10 @@ Table 1. ( continued )
 | Minimum accept criteria         |                                                        |                                                                              | Minimum accept criteria                                                                  |
 
 ( continued )
+
+
+<!-- PAGE 345 -->
+
 
 Table 1. ( continued )
 
@@ -5628,6 +7001,10 @@ Approach  to  Usability
 
 The  Australian  state  of  New  South  Wales  has  established  its  own  Design  Standards.  It is  integrated  into  a  more  extensive  set  of  tools  called  the  Digital  Service  Toolkit  [54].  It was  launched  in  May  2022  and  last  updated  in  July  2022.
 
+
+<!-- PAGE 346 -->
+
+
 The  Design  Standards  are  composed  of  ten  rules,  presented  with  a  brief  explanation and  a  set  of  implementation  measures  in  bullet  points  that  make  each  rule  more  tangible. These  standards  are  integrated  into  the  aforementioned  toolkit,  which  also  includes  a design  system,  resources  for  user  research,  user  experience  and  design,  content  writing,  testing,  and  collaboration  tools.  It  also  includes  templates  and  solutions  previously developed  that  any  agency  can  use.  Examples,  however,  are  rarely,  if  at  all,  provided.
 
 With  respect  to  the  paper's  assessment  framework,  the  Design  Standards  include information  about  the  development  process,  the  reuse  of  components,  relevant  standards and  data,  the  WCAG  accessibility  standards,  minimum  acceptance  criteria,  and  the  need for  user  testing.  It  partially  covers  language  use  and  the  need  to  monitor  use  and  usability. There  is  either  no  or  only  scarce  reference  to  look-and-feel,  functionality,  and  device independence.
@@ -5647,6 +7024,10 @@ The  Online  Accessibility  Toolkit  [55]  was  developed  by  the  Government  
 The  Online  Accessibility  Toolkit  is  organised  as  a  set  of  different  guides  for  specific tasks. Each has a separate page explaining why  it is important, followed by a task description.  It  then  goes  on  to  describe  the  Steps  to  Take,  often  with  several  links  to helpful tools. Sometimes,  there  is  a short video  on  the topic and  a set  of  supporting resources.  It  focuses  more  on  accessibility  and  frames  most  topics  within  that  scope.  It often  refers  to  the  national  standards,  including  in  the  service  design  section,  where  it points  to  the  adoption  of  the  national  process  manual.
 
 With  respect  to  the  paper's  assessment  framework,  the  toolkit  references  to  the  reuse of  components  and  standards,  device  independence,  the  WCAG  accessibility  criteria, and  the  need  for  user  testing.  It  partially  covers  the  development  process,  language  use, look-and-feel,  and  functionality.  There  is  no  reference  to  the  reuse  of  data  nor  the  need for  monitoring  use  and  usability.  There  are  also  no  minimum  acceptance  criteria.  It  also has  a  toolkit  that  adds  important  information,  such  as  a  Website  Design  System  and  an Online  Forms  Platform.  It  also  adopts  the  Federal  style  manual.
+
+
+<!-- PAGE 347 -->
+
 
 ## Governance  and  Compliance  Model
 
@@ -5672,6 +7053,10 @@ Application  of  the  'Canada.ca  Content  and  Information  Architecture  Speci
 
 It  is  clear  which  parts  of  the  extensive  guidelines  and  tools  are  mandatory  and  which are  voluntary.  However,  there  is  no  mention  of  any  mechanisms  to  ensure  compliance. The  departments  and  agencies  responsible  for  government  websites  and  eServices  are urged  to  continuously  improve  usability  by  monitoring  and  measuring  task  success.  This is  based  on  a  recommended  self-assessment  procedure.
 
+
+<!-- PAGE 348 -->
+
+
 All  departments  and  agencies  subject  to  the  Directive  on  the  Management  of  Communications  must  implement  the  GC  Task  Success  Survey  on  their  web  properties  and report  its  results  to  the  Government  of  Canada.  There  is,  however,  no  screening  process detailed  starting  from  there.
 
 ## Alberta
@@ -5696,6 +7081,10 @@ The  web  governance  team  at  the  Ministry  of  Communications  &amp;  Public
 
 Ontario's  Digital  Service  Standard  [67]  is  managed  by  the  Government  of  Ontario  to assist  provincial  agencies  and  ministries  in  building  and  delivering  simpler,  faster,  and better  government  services  and  products.  It  was  first  published  in  January  2021  and  last updated  in  October  2024.
 
+
+<!-- PAGE 349 -->
+
+
 The  standards  include  a  description  of  the  development  process,  including  the  phases of  publishing  and  13  principles  considered  essential  to  good  service  delivery.  Each  has  a short  explanation  of  what  it  is,  a  section  on  why  it  matters,  and  a  final  one  on  how  to  meet it.  In  this  final  section,  the  information  is  organised  by  minimum  requirements  and  what to  consider  in  each  development  phase.  Lastly,  when  applicable,  there  is  a  section  on laws  and  rules  to  follow  within  the  scope  of  that  principle.  The  standards  and  associated manual  acknowledge  their  inspiration  in  several  other  standards,  including  the  Canadian national  one,  as  well  as  Australia,  the  UK  and  the  USA.
 
 The  standards  are  complemented  by  the  Ontario  Design  System  [68],  which  includes a  stylesheet,  components  that  can  be  reused,  and  examples.
@@ -5717,6 +7106,10 @@ The  analysis  finds that  all  six  cases  have  incorporated  the  overarching
 With  respect  to which,  if  any,  governance  models  are  applied  to  report,  assess, and  ensure  compliance? ,  the  analysis  finds  that  both  coverage  and  approaches  vary significantly.  The  Australian  and  the  Canadian  federal  governments,  as  well  as  South Australia,  make  compliance  mandatory,  but  have  no  formal  mechanism  to  ensure  it.  The Australian  federal  government  makes  larger  ICT  investments  subject  to  approval  by  the same  agency  that  oversees  the  standards  but  does  not  have  an  associated  compliance mechanism.  In  this case, full or partial exemptions  can  be  granted  upon  request  for authorities  that  cannot  comply,  for  example,  because  of  legacy  technology  or  excessive financial  burden.
 
 The  Australian  federal government  was  set  to publish  a  self-reporting  and  monitoring mechanism  but  is  yet to do so. In South  Australia,  vendors  must  promise  to comply  and  prove  the  ability  to  do  so  prior  to  the  contract,  but  no  screening  or  reporting mechanisms  are  in  place.  By  comparison,  the  Canadian  federal  government  encourages
+
+
+<!-- PAGE 350 -->
+
 
 Table  2. Assessment  Framework  applied  to  the  six  case  studies.
 
@@ -5747,6 +7140,10 @@ In  Ontario  and  New  South  Wales,  compliance  with  the  regional-level  sta
 
 It  is  also  relevant  to  note  that  both  federal  standards  are  voluntary  to  regional  and local-level  government  entities  and  have  little  reference  to  these  levels.
 
+
+<!-- PAGE 351 -->
+
+
 Lastly,  with  respect  to which,  if  any,  are  the  strategies  used  to  ensure  consistency in  service  delivery  across  different  levels  of  government? ,  the  approaches  analysed vary.  Overall  consistency  is  sought  mainly  at  the  government  level  targeted  by  a  given  set of  design  standards  or  usability  guide.  Consistency  across  levels  of  government  does  not seem  to  be  a  key  priority,  a  surprise  considering  that  emphasis  Nielsen  and  Schneiderman put  on  a  recognisable  and  consistent  user  experience.
 
 In  Australia,  the  federal  and  New  South  Wales  (NSW)  standards  largely  overlook intergovernmental  consistency,  making  only  minimal  references  to  different  government levels. The national policy suggests, but does not require, adoption at lower levels, while  New  South  Wales  acknowledges  national  and  international  influences  (i.e.  UK and Ontario)  for serving  as the basis for the one being  developed  there.  In contrast, South  Australia  actively  integrates  and  mandates  national  guidelines  within  its  regional framework.
@@ -5761,6 +7158,10 @@ Future  work  could  build  on  this  by  incorporating  user-centred  evaluatio
 
 The  analysis  of  online  usability  and  service  standards  in  federal  countries,  with  case studies  from  Australia  and  Canada  and  reference  to  Denmark,  highlights  significant  commonalities  and  challenges  with  respect  to  standardising  digital  service  delivery.  Despite
 
+
+<!-- PAGE 352 -->
+
+
 differences  in  governmental  structures  and  approaches  to  compliance,  all  national  and regional-level  governments  acknowledge  the  importance  of  usability  in  alignment  with Nielsen's  and  Shneiderman's  heuristics.
 
 A  critical  observation  is  the  variation  in  the  enforcement  of  usability  standards,  with some  jurisdictions  opting  for  voluntary  guidelines  (even  if  referred  to  as  standards)  while others  impose  mandatory  compliance  models.  However,  a  recurring  challenge  across all  studied  contexts  is  the  lack  of  alignment  and  coordination  between  different  levels of government.  This  fragmentation  results in inconsistent user experiences, creating potential  obstacles  for  end-users  interacting  with  services  across  multiple  governmental levels.
@@ -5772,6 +7173,10 @@ The  following five  policy  recommendations should  be  considered  to  address
 By implementing  these recommendations,  governments  can  work  towards more cohesive  and  citizen-centric  digital  services,  ensuring  that  design  standards  and  usability principles  are  effectively  integrated  across  all  levels  of  the  public  sector.
 
 Disclosure  of  Interests. The  authors  have  no  competing  interests  to  declare  that  are  relevant  to the  content  of  this  article.
+
+
+<!-- PAGE 353 -->
+
 
 ## References
 
@@ -5795,6 +7200,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 18. Vatrapu,  R.,  PØrez-Quinones,  M.:  Culture  and  international  usability  testing:  the  effects  of culture  in  structured  interviews.  In:  Proceedings  of  ACM  International  Conference  on  HumanComputer  Interaction  (ACM  IHC)  (2004).  https://doi.org/10.48550/arXiv.cs/0405045
 19. Waidelich, L. et al.: Design  thinking process model  review. In: 2018  IEEE  International Conference  on  Engineering,  Technology  and  Innovation  (ICE/ITMC)  (2018).  https://doi.org/ 10.1109/ICE.2018.8436281
 
+
+<!-- PAGE 354 -->
+
+
 20. Nielsen,  J.:  Designing  Web  Usability:  The  Practice  of  Simplicity.  New  Riders  Publishing (1999)
 21. Shneiderman,  B.:  Universal  usability.  Commun.  ACM 43 (5),  84-91  (2000)
 22. Blut,  M.,  et  al.:  E-service  quality:  a  meta-analytic  review.  J.  Retail. 91 (4),  679-700  (2015). https://doi.org/10.1016/J.JRETAI.2015.05.004
@@ -5816,6 +7225,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 38. Nielsen,  M.M.:  Monitoring  and  measurement  of  digital  inclusion:  a  critical  analysis  of  key global  frameworks.  In:  55th  Hawaii  International  Conference  on  System  Sciences  2022,  New York,  pp.  2606-2615,  January  2022
 39. Peters,  R.M.  et  al.:  Measuring  e-government  impact:  existing  practices  and  shortcomings.  In: ACM  International  Conference  Proceeding  Series,  vol.  60,  May  2014,  pp.  480-489.  https:// doi.org/10.1145/1052220.1052281
 40. Government  Digital  Service  (GDS):  Digital  Service  Standard - Service  Manual  (2017)
+
+
+<!-- PAGE 355 -->
+
 
 41. Treasury Board  of Canada  Secretariat: Common  Look  and  Feel  Standards  for the Internet (2000). https://www.canada.ca/en/treasury-board-secretariat/services/government-com munications/guidance-implementing-standard-web-accessibility.html
 42. Norwegian  Ministry  of  Trade  and  Industry:  Forenkling  for  næringslivet  (2007).  https://www. regjeringen.no/no/dokumentarkiv/stoltenberg-ii/nhd/Nyheter-og-pressemeldinger/nyheter/ 2007/forenkling-for-naringslivet/id443349/
@@ -5846,6 +7259,10 @@ Disclosure  of  Interests. The  authors  have  no  competing  interests  to  dec
 67. Digital  Service  Standard.  https://www.ontario.ca/page/digital-service-standard.  Accessed  6 Jan  2025
 68. Ontario  Design  System.  https://designsystem.ontario.ca/.  Accessed  6  Jan  2025
 
+
+<!-- PAGE 356 -->
+
+
 <!-- image -->
 
 ## In  Search  of  Digital  Talent:  Evidence  from Public  Sector  Job  Advertisements in  Germany  Using  LLM-Enabled Competence  Classification
@@ -5870,6 +7287,10 @@ Most administrative systems are rooted in sometimes centuries-old legislative fr
 
 c © IFIP  International  Federation  for  Information  Processing  2026 Published  by  Springer  Nature  Switzerland  AG  2026
 
+
+<!-- PAGE 357 -->
+
+
 such systems must manage not only minor adaptations but significant reconfigurations of their entire operation - scholars refer to these as pre-digital  organizations [ 9]. Unlike born-digital organizations, which possess inherently digital characteristics such as agility practices, platform thinking, and openness to technology [ 46], pre-digital ones struggle to adapt their structures to changing environments [ 9]. Given that organizations are essentially groups of individuals working together to fulfill shared objectives [ 7], this article focuses on one specific organizational function: Human Resource (HR) management.
 
 HR Management is considered one of the most significant challenges for pre-digital organizations striving to enhance their digitalization maturity [ 20]. HR Management primarily serves two purposes: first, internal talent development, and second, external talent acquisition [ 2]. With regard to digital transformation, the first purpose aims at providing the workforce with competence development means. The second purpose seeks to hire digital talent from outside the organization. In the context of digital government, competence development is relatively well researched, e.g., in terms of competence frameworks [ 13, 24], formalized education programs [ 25], platform-based education [ 21, 31], the continuous education landscape [ 32], or even unlearning outdated competences [ 30].
@@ -5881,6 +7302,10 @@ Digital talent and competences have primarily been examined in studies analyzing
 Our article aims to carry this research stream further and answer the following research question: In  how  far  do  job  advertisements  contribute  to  acquiring digital  talent  for  German  public  organizations? Our contribution has three main aspects: First, we provide a detailed overview of digital government competencies currently sought by German public administrations, allowing us to draw conclusions about their HR practices related to digital talent recruitment. Second, we illustrate a novel approach to data collection and analysis.
 
 We conduct a two-stage competence assessment by comparing an individual's competences to those required for a position, based on a competence model [ 15]. We conceptualize job ads as competence profiles for specific roles. We then compare these profiles against DigComp 2.2 [ 48], a widely recognized framework for digital competences [ 15]. We further integrate Large Language Model (LLM)assisted coding of categories to extract and analyze competences from job ads. This allows us to assess how well the competences listed in job ads align with the requirements specified in DigComp 2.2.
+
+
+<!-- PAGE 358 -->
+
 
 ## 2 Research  Background
 
@@ -5904,6 +7329,10 @@ On the highest level -which is also the focus of this article -, DigComp 2.2 pos
 
 Research on digital talent in the public sector is scarce, especially with a focus on recruitment. Given the importance of bringing in external talent for predigital organizations [ 20], this is surprising. Hence, we align with Mankevich et
 
+
+<!-- PAGE 359 -->
+
+
 al. and posit that 'digital transformation entails workforce transformation' [ 36, p. 412]. However, there is no widely accepted method to research competence proficiency across different organizations. To address this gap, we conceptualize job advertisements and the competencies they include as a way to understand the competences that are currently in demand within public organizations. This approach aligns with a recent trend in literature focused on job mining, which we aim to extend. Auth et al. (2021) [ 2] analyzed more than 21,000 German public sector job ads, attesting a vanishingly low share of digital government competences in total. Bellmer and Becker (2024) [ 5] checked 40 job advertisements and supplemented their findings with 13 qualitative interviews. They conclude that while many digital competences are mentioned, there remains a strong emphasis on basic computer operation skills. Mankevich et al. (2023) [ 36] explored a large open data set with Swedish job ads from 2006 to 2020 and determine that, albeit the interest in digital competences in these ads has risen, public organizations still lag behind the private sector's competence demands. We fully acknowledge the contributions of these articles; however, we decided to enhance the stream with an additional study for two main reasons. First, recent advancements in artificial intelligence allow us to utilize innovative methods for data collection and analysis supported by Large Language Models (LLMs). Job mining demonstrates the creative application of new technologies in research. Second, the ongoing developments in digital government continuously evolve, leading to a relatively short half-life for studies in this field. Therefore, our research not only validates previous work but also serves as a way to assess and incorporate new adaptations into the body of knowledge.
 
 ## 3 Research  Method
@@ -5913,6 +7342,10 @@ al. and posit that 'digital transformation entails workforce transformation' [ 3
 Our research methodology is derived from established job mining approaches. Since Internet-based job portals have become the standard tool for recruiting, the major share of public job advertisements is available online in a digital format. This opens up the possibility to investigate large amounts of job advertisements using text mining techniques [ 6]. The analytical process of job mining is derived from the classical data mining process [ 18] and described by Bensberg and Buscher in four steps: extraction, cleansing, linguistic pre-processing, and analysis [ 6]. The two pillars of job mining are therefore (1) the preparation of the text corpus and (2) the definition of the analytical process.
 
 There are various options on how to collect the digital job ad text corpora. Job ads could be provided by the issuer, downloaded from databases, or scraped from online job portals. Cleansing usually involves filtering relevant records from the base population and removing duplicate or incomplete entries. Linguistic preprocessing refers to transforming and annotating parts of the text to make the text processable for traditional natural language processing (NLP) techniques. These techniques mainly rely on a statistical evaluation of text tokens and therefore require, e.g., tokenization, stemming, and part-of-speech tagging. LLMs are
+
+
+<!-- PAGE 360 -->
+
 
 trained to work with natural language and do not require any extensive of preprocessing.
 
@@ -5929,6 +7362,10 @@ The previous section shows that there are various possibilities for approaching 
 We adapt the Bensberg and Buscher job-mining model and update it to reflect our procedure [ 6]. Figure 1 illustrates the workflow of our analysis.
 
 Request  Public  Service  Job  Ads: Public sector job advertisements are scattered across numerous online job portals. We have decided to collect the job ads from the German Federal Employment Agency. The reasons are: other public institutions report their vacancies to the agency, because it is a common public goal to increase the employment rate. In addition, the agency's online job portal has historically had the highest market share in the past in Germany [ 37].
+
+
+<!-- PAGE 361 -->
+
 
 Fig.  1. Job mining workflow: the top stream depicts the data acquisition and preparation part, the bottom stream shows the steps necessary to prepare the qualitative coding. Both parts can be prepared independently. The final steps on the right side describe coding and the final analysis of the results.
 
@@ -5948,6 +7385,10 @@ We introduce an additional measure to address potential categorization quality i
 
 1 Codebook and system prompt download: https://zenodo.org/records/15044643.
 
+
+<!-- PAGE 362 -->
+
+
 Fig.  2. Example JSON output. The German quotes are 'creation of technical construction reports' (first), and 'flexible working hours and the possibility of mobile working' (second).
 
 Perform AI Coding: We send each job ad full text along with system prompt and codebook to the the API of the current version of mistral-largeinstruct (March 2025) hosted on a high performance computing infrastructure [ 14]. Although the analyzed texts are in German language, we designed the codebook and the prompts in English. The selection of the Mistral model was made on the basis of its explicit development as a model with multilingual capabilities, while still being among the top-ranked LLMs [ 26]. We did not observe any language-related problems in the results.
@@ -5964,6 +7405,10 @@ In parallel to the LLM-assisted coding, a researcher manually coded a random sam
 
 The first part of our analysis is an overview of how often each competence category is mentioned in the text corpus of 5,949 job advertisements. Figure 3 illustrates the findings. The bars show the frequency of occurrence for each category. Each bar is divided into three sections representing the confidence level
 
+
+<!-- PAGE 363 -->
+
+
 Fig.  3. Frequency of digital competences identified in job ad requirements by competence area and confidence level.
 
 <!-- image -->
@@ -5973,6 +7418,10 @@ of the category identification. E.g., there are 2,676 hits in the category Infor
 Regarding our research question of how job ads contribute to the acquisition of digital talent, we now focus on job ads as the main object of observation. Therefore, we look at each job ad and determine which DigComp category is required at least once. The reason is that we want to know which digital competences are required at all, not at what intensity. However, the overall picture that emerges from the overall count is similar in percentage terms. The percentage of job advertisements that require a particular digital competence at least once is shown in Fig. 4.
 
 Digital  Content  Creation and Information  and  Data  Literacy are the most requested categories. More than 60% of the job ads ask for competences in Digital  Content  Creation , and approximately 50% ask for competence in Information  and  Data  Literacy . Moreover, these two categories exhibit a dominant share of categorizations at a high confidence level. In contrast, Communication and  Collaboration and Problem  Solving have approximately two thirds of their categorizations at medium or low confidence levels. Interestingly, Safety has only a marginal number of mentions in the job ads. It is also noteworthy that, if we only consider assignments at a high confidence level (thus neglecting competences deduced from statements rather vaguely related to digital topics), 19.4% of the job ads mention no digital competences at all.
+
+
+<!-- PAGE 364 -->
+
 
 Fig.  4. Share of unique digital competences identified in job ad requirements by competence area and confidence level. The gray bars indicate the percentage of job ads that do not mention the specific category. (Color figure online)
 
@@ -5992,6 +7441,10 @@ Table  1. Performance metrics of the LLM classification with manual coding as gr
 
 Table 1 shows multilabel classification performance metrics for the three different cumulative confidence levels with the manual coding assumed as the ground truth. Due to the imbalanced distribution in some categories, the combined metrics F1  score , Area  under  the  Curve  (AUC) , and Cohen's  Kappa can be considered as the most relevant metrics. The F1 score balances precision and recall to provide a single measure of a model's accuracy, while the AUC
 
+
+<!-- PAGE 365 -->
+
+
 Fig.  5. Frequency of digital competencies identified by a human coder in job posting requirements.
 
 <!-- image -->
@@ -6005,6 +7458,10 @@ evaluates the overall ability of the model to discriminate between classes. F1 s
 The discussion is guided by our main research question about the contribution of job advertisements to the acquisition of digital talent for German public organizations. Our results show that digital competences as defined by DigComp 2.2 are present in job ads in the public sector. As one could expect, working with data ( Information  and  Data  Literacy ) and Digital  Content  Creation are the most common. Our interpretation is that these categories are the best fit general need for computer literacy, which can be formulated more in terms of research and information processing (and thus referring to the first category) or in the direction of writing documents and spreadsheets (referring to the latter category).
 
 Despite the perceived transition to online collaboration and remote work after the period of the COVID pandemic, Communication  and  Collaboration does not play a prominent role in the job ads investigated. In fact, if we consider only the high-confidence assignments, the rate is less than 20%. Another striking observation is the extremely low rate for competences in Safety , which is at 3.7%. This raises the question how aware public organizations are of this issues in times of
+
+
+<!-- PAGE 366 -->
+
 
 orchestrated cyber attacks and social engineering attempts on companies, universities, hospitals, and government institutions. The Problem  Solving category has very few mentions as well. However, we hypothesize that this is due to the rather conceptual nature of this competence category and therefore not clearly expressed in job ads.
 
@@ -6020,6 +7477,10 @@ Three components make the LLM-assisted coding versatile, comprehensible, and to 
 
 It is noteworthy that the comparison to a human coder exhibits only mediocre consensus, as documented in Sect. 4.2. However, we do not perceive this as a fundamental problem of the methodology. Instead, we want to highlight LLMassisted coding as an exciting opportunity for human-AI collaboration. In this approach, both the AI agent and the human work together to develop a shared understanding of the data being analyzed. This partnership enables them to provide qualitative analysis of large data sets efficiently and at scale. The machine learning metrics are predicated on the assumption that there is a 'true' category for each job ad, and the metrics demonstrate the extent to which the LLMassisted procedure aligns with this 'true' category. Due to the ambiguity of the job ads with regard to digital competences, both the human coder as well as the
 
+
+<!-- PAGE 367 -->
+
+
 LLM may encounter challenges in assigning the categories. By working together, they will likely identify patterns more easily and continuously enhance the coding process. This is particularly relevant, because two independent human coders can also diverge in their assignment of codes while at the same time the similarity of the overall share of competences (Fig. 4 and Fig. 5, with the exception of Communication  and  Collaboration ) indicates that the LLM and the human coder have a similar perception of the distribution of digital competences in the observed job ads.
 
 ## 6 Limitations  and  Conclusion
@@ -6033,6 +7494,10 @@ Our results confirm previous studies that digital competences are rarely stated 
 From a methodology perspective, we have introduced a novel and streamlined approach to data collection and analysis. The approach has proven to be efficient and useful to boost qualitative research in this field. At the same time we see the need to accompany this automated approach by human expertise in all phases of the process and we emphasize awareness about the challenges that come with the use of Large Language Models. In summary, we have extended the possibilities of established job mining procedures and encourage other researchers to build on this foundation. While our sample was taken from the German labor market, the methodology is universally applicable across all LLM-supported languages, allowing the digital government job mining research domain has the potential to be brought together on a global level.
 
 Acknowledgements. This research has received funding from Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) -FOR 5393, Project No. 462287308 (BE 1422/28-1).
+
+
+<!-- PAGE 368 -->
+
 
 ## References
 
@@ -6054,6 +7519,10 @@ Acknowledgements. This research has received funding from Deutsche Forschungsgem
 16. Eom, S.J., Lee, J.: Digital government transformation in turbulent times: responses, challenges, and future direction. Gov. Inf. Q. 39 (2), 101690 (2022)
 17. Estevez, E., Janowski, T.: Landscaping government chief information officer education. In: Proceedings of the 46th Hawaii International Conference on System Sciences (HICSS13), pp. 1684-1693 (2013)
 
+
+<!-- PAGE 369 -->
+
+
 18. Fayyad, U., Piatetsky-Shapiro, G., Smyth, P.: From data mining to knowledge discovery in databases. AI Mag. 17 (3), 37 (1996). https://doi.org/10.1609/aimag. v17i3.1230
 19. Gavrilescu, M., Leon, F., Minea, A.A.: Techniques for transversal skill classification and relevant keyword extraction from job advertisements. Information 16 (3) (2025). https://www.mdpi.com/2078-2489/16/3/167
 20. Gilch, P.M., Sieweke, J.: Recruiting digital talent: the strategic role of recruitment in organisations' digital transformation. German J. Human Resource Manage. 35 (1), 53-82 (2021)
@@ -6071,6 +7540,10 @@ Acknowledgements. This research has received funding from Deutsche Forschungsgem
 32. Koelmann, H., Koddebusch, M., Bücker, J., Egloffstein, M., Becker, J.: Structuring continuous education offers for e-government-competence acquisition: A morphological box. In: Proceedings of the 15th IFIP WG 8.5 International Conference (EGOV-CeDEM-EPART), pp. 82-98. Springer, Cham, Budapest (2023)
 33. Kuckartz, U., Radiker, S.: Qualitative content analysis: Methods, practice and software. SAGE Publications Ltd (2023)
 34. Li, N., Kang, B., Bie, T.D.: Skillgpt: a restful API service for skill extraction and standardization using a large language model (2023). https://arxiv.org/abs/2304. 11060
+
+
+<!-- PAGE 370 -->
+
 
 35. Lindgren, I., Madsen, C.O., Hofmann, S., Melin, U.: Close encounters of the digital kind: a research agenda for the digitalization of public services. Govern. Inform. Quart. 36 (3), 427-436 (2019). https://doi.org/10.1016/j.giq.2019.03.002
 36. Mankevich, V., Magnusson, J., Svahn, F.: The great wave: the increasing demand for digital competence within the public sector. Inform. Polity 28 (3), 411-434 (2023)
@@ -6090,9 +7563,17 @@ Acknowledgements. This research has received funding from Deutsche Forschungsgem
 50. Wilson, C., Mergel, I.: Overcoming barriers to digital government: Mapping the strategies of digital champions. Gov. Inf. Q. 39 (2), 101681 (2022)
 51. Yin, J., Zhang, W.: Research on talent demand analysis in big data related fields based on text mining. In: Proceedings of the 2023 6th International Conference on Information Management and Management Science, pp. 33-40. IMMS '23, Association for Computing Machinery, New York, NY, USA (2023). https://doi.org/10. 1145/3625469.3625493
 
+
+<!-- PAGE 371 -->
+
+
 52. Yu, J., Wang, J., Shi, Q., Xu, J., Wang, J.: Exploring Job Competency Related to Intelligent Construction in China Using a Text Mining Method. Engineering, Construction and Architectural Management (2024)
 53. Yuan, Y., et al.: Fact-level confidence calibration and self-correction (2024). https://arxiv.org/abs/2411.13343
 54. Zhang, M., van der Goot, R., Plank, B.: Escoxlm-r: Multilingual taxonomy-driven pre-training for the job market domain (2023). https://arxiv.org/abs/2305.12092
+
+
+<!-- PAGE 372 -->
+
 
 ## Author  Index
 
@@ -6109,6 +7590,10 @@ Acknowledgements. This research has received funding from Deutsche Forschungsgem
 '  IFIP  International  Federation  for  Information  Processing  2026 Published  by  Springer  Nature  Switzerland  AG  2026
 
 S.  Hofmann  et  al.  (Eds.):  ePart  2025,  LNCS  15978,  pp.  361-362,  2026.
+
+
+<!-- PAGE 373 -->
+
 
 | T Tangi, Luca 69                                 | W Weigl, Linda 159   |
 |--------------------------------------------------|----------------------|

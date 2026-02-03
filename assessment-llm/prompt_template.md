@@ -1,6 +1,6 @@
-# Paper-Assessment SocialAI
+# Paper-Assessment (LLM)
 
-Bewerte Paper für Literature Review "AI in Sozialer Arbeit":
+Bewerte Paper für Literature Review "AI Literacy & Bias in Social Work":
 
 ## Metadaten
 - **Titel**: {title}

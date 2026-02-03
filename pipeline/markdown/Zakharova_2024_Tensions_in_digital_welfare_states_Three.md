@@ -1,10 +1,11 @@
 ---
 source_file: Zakharova_2024_Tensions_in_digital_welfare_states_Three.pdf
-conversion_date: 2026-02-03T09:33:13.523285
+conversion_date: 2026-02-03T19:03:58.390803
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Tensions in digital welfare states: Three perspectives on care and control
@@ -37,6 +38,10 @@ Email: i.zakharova@ish.uni-hannover.de
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## Introduction
 
 This article follows an observation that national digital policies for social service delivery in Europe are increasingly legitimised through promises of care and /uniFB02 ourishing. For example, a digital strategy of the German federal government (Federal Government of Germany, 2022, p. 4) states that ' harnessing the potential of digitalization [will] improve the cohesion of our society, promote public welfare and increase the performance of industry, the scienti /uniFB01 c and research communities and government ' . The strategy proceeds to state the potential of a digital transformation ' for better education and more equal opportunities ' , to ' ensure self-determination and social inclusion ' of people with disabilities and contribute ' to better and more ef /uniFB01 cient [health]care ' . Scholars have also pointed out the role of care in different domains of welfare service provision (Craig, 2020; Kaun &amp; Forsman, 2022; Knezevic, 2020; Power et al., 2022). With this article, we contribute to such literature by exploring the increasingly digital welfare provision from the conceptual lens of care (Puig de la Bellacasa, 2017).
@@ -47,6 +52,10 @@ Digital transformation, as such, seems to favour a logic of control and disposit
 
 Both logics of care and (paternalistic) control coexist in welfare provision (Held, 2018; Khader, 2011). We argue in this article that digital technologies afford a transformation of the welfare state that privileges logics of control over logics of care and turns care into potentially harmful control practice . It is this relation between ' caring ' for the public good through digital technologies and the modes of control these technologies afford that we discuss in this conceptual article. Following the Care Collective (2020, p. 5),
 
+
+<!-- PAGE 3 -->
+
+
 we understand government care as ' a social capacity and activity involving the nurturing of all that is necessary for the welfare and /uniFB02 ourishing of life ' . By juxtaposing the caring promises and practices of state control exerted through the digital welfare system, we shed light on some of the ambivalences of care in digital welfare, illuminating contingencies and con /uniFB02 icts in public care provision. We also add to the literature concerned with social justice (Dencik et al., 2022; Knezevic, 2020; Taylor, 2017) by shifting attention from big-scale ethics of digital technologies to the everyday lived experiences in-between state control and care.
 
 To do that, we /uniFB01 rst review the concept of care and sketch out how practices of control materialise in the socio-technical arrangements of the digital welfare state. Drawing on each of the authors ' broader empirical research projects conducted in Germany (see Zakharova &amp; Jarke, 2022) and Sweden (Kaun &amp; Löfgren, forthcoming), we illustrate the tensions in the distribution of care and control in socio-technical arrangements of welfare through three empirical vignettes addressing different parts of the population and different types of digital welfare services: demographic ageing, affordable housing, and education. We are not so much interested in the differences between the individual welfare state systems or domains, but in how digital welfare states operate in a tension between care and control. Subsequently, we propose a three-level analytical framework for careful engagement with digital welfare including (1) values, (2) digital infrastructures, and (3) data work required for functioning digital welfare. We contribute to the /uniFB01 eld by integrating theories of care into digital welfare and conceptualising these in relation to state control.
@@ -54,6 +63,10 @@ To do that, we /uniFB01 rst review the concept of care and sketch out how practi
 ## The concept of care
 
 The concept and ethics of care has a long tradition in feminist and sociological thought (Williams, 2018). Developed to draw attention to the gendered, unpaid, and often invisible physical and particularly domestic labour of women, this concept has been applied as a political and ethical instrument for shifting social relations (Sevenhuijsen, 1998; Tronto &amp; Fisher, 1990). Intersectional perspectives further shed light on the multiple ways in which care is not only gendered, but is also provided and received according to other, overlapping socio-demographic and socio-economic categories (Fitts &amp; Soldatic, 2022; Lynch et al., 2021). In this context, care can be understood as an embodied, affective, and often reciprocal practice of recognition of and tending to the needs of others . The recognition of otherness and heterogeneity of lived experiences, needs, and motivations is central to such -often unacknowledged and tedious -practices of care. At the same time, care is neither innocent nor free of power dynamics, but a particular way of con /uniFB01 guring relations between caregivers and care-receivers. In this relational perspective, care ' starts in the middle of things ' (Tronto, 2016, p. 4) and is directed at repair, maintenance, and continuation of various relations making the world as good to live in as possible (Tronto &amp; Fisher, 1990). Closely related works on digital and data justice also concerned with issues of power, in/visibility, and public good are, in turn, attuned to the politics, structures, and accountabilities of digital and automated systems, often on a global scale (Dencik et al., 2022; Taylor, 2017).
+
+
+<!-- PAGE 4 -->
+
 
 The aspiration to create a ' good ' world de /uniFB01 nes care not only as a practice, but also as a normative, ethico-political obligation (Puig de la Bellacasa, 2017). As an obligation, care follows certain teleo-affective dispositions, guiding how exactly practices of caring should be conducted and to whom they should be directed. These con /uniFB02 icting dispositions con /uniFB01 gure how care is provided and present a productive analytical lens for attending not only to the good but also to the ' dark sides ' (Martin et al., 2015) of care. Furthermore, as Power et al. (2022, pp. 1173 -4, original emphasis) argue ' [t]he motives and effects of care are not necessarily benevolent or bene /uniFB01 cial. Put another way, care practices are not always car ing ' . Across empirical domains, examples of careless or even harmful implications of care are abound. Banerjee and colleagues (2022) and Duclos and Criado (2020) conceptualise how, under the guise of care, reactionary politics and practices can be reinforced. Emejulu and Bassel (2018) illustrate paternalistic care and discuss how the withdrawal of state care and shifting of responsibility towards individuals in favour of self-determination and self-suf /uniFB01 ciency does not support but rather hampers the achievement of these qualities. Taking practices and obligations to care as a point of departure in the middle of things, we can follow different kinds of careful or careless relations.
 
@@ -64,6 +77,10 @@ While many of the earlier conceptualisations of care focused on human relations,
 ## Digital welfare states and technologies of control and care
 
 The welfare state is based on the obligation of the state to provide support and assistance to citizens with speci /uniFB01 c needs and risks that emerge in a market-based society (Dencik &amp; Kaun, 2020). It dates back to the last quarter of the 19th century as a response to the deep societal, economic, and political transformations such as the continuing industrialisation
+
+
+<!-- PAGE 5 -->
+
 
 and the rise of capitalism, urbanisation, and population growth (Castles et al., 2010). To meet the emerging hardships public policies were developed to implement new support structures. The responses of states (in particular in the global North) differed in many ways, resulting in a ' remarkable diversity ' of welfare systems, for example with respect to timing, policy goals, or the precise forms of institutional solutions (Castles et al., 2010).
 
@@ -77,6 +94,10 @@ have charted the assembly of complex and hybrid technologies of government, link
 
 Reviewing work on such technologies and control by Deleuze, Foucault, and others, Rose (2000) suggested viewing state control through practices of inclusion into and exclusion from certain socio-technical arrangements and practices. Digital technologies as such have been proven to often prioritise control and surveillance over human /uniFB02 ourishing and their well-being (Eubanks, 2017). In the digital welfare state, an accumulation
 
+
+<!-- PAGE 6 -->
+
+
 and use of digital data serve the goals of state control (Dencik &amp; Kaun, 2020). However, different groups are implicated in diverse ways by the digital welfare state.
 
 This ambivalent relationship between public care provision directed at the public good and the control mechanisms of the state is central to the socio-technical arrangements of digital welfare. While state actors such as public administrations and data teams have a somewhat critical view on their role in con /uniFB01 guring government service provision, recent research shows that they are still guided by top-down and paternalistic views on vulnerable citizens in particular and society at large (Broom /uniFB01 eld &amp; Reutter, 2022). Therefore, as digital technologies co-con /uniFB01 gure the welfare system, the way they are designed and used becomes important. By providing whoever uses technologies with ' perceptual cues that can be performed with ' them (Costanza-Chock, 2020a, p. 8), digital systems ' design nudges people towards performing certain actions and avoiding others, hence materialising the logic of control.
@@ -88,6 +109,10 @@ Such logics and respective values of control can be found in government policies
 To illustrate our conceptual approach and highlight the tensions between state care and control in digital welfare, we provide three empirical vignettes from three research projects conducted by the individual authors of this article. Each of the three vignettes features different groups of citizens, different vulnerabilities, and welfare infrastructures in welfare systems in Germany and Sweden: demographic ageing, social housing, and education. We draw on this variety following our initial observation that digital transformation in many welfare domains is motivated and justi /uniFB01 ed through the promise of care for the populace. Illustrating how this motivation works out empirically we are not so much interested in the differences between welfare systems and domains as we are in the tensions between care and control rendered visible through our analysis.
 
 The /uniFB01 rst vignette is reported by Juliane. It draws on workshops with German health care providers and explores how presumably caring digital welfare technologies to support ageing populations take control over the lives of older adults. The workshops were part of a 12-month government-funded research project in one of Germany ' s federal states to explore the bene /uniFB01 ts, risks, non/use and appropriation of Ambient
+
+
+<!-- PAGE 7 -->
+
 
 Assistive Living (AAL) technologies in care homes and residential housing. In the second vignette, Anne reports /uniFB01 ndings from a research project that aims to explore communal welfare infrastructures that are increasingly integrated with digital and so-called smart technology (see Kaun &amp; Löfgren, forthcoming). The vignette describes digital infrastructures of residential housing in a Swedish town. Similar to the /uniFB01 rst vignette, it shows how an infrastructure for control is introduced through a narrative of care for citizens ' safety and well-being. The /uniFB01 ndings are based on /uniFB01 eld observations and interviews with representatives from the public housing company, the start-up company and a tech incubator that facilitated the collaboration. The third vignette reported by Irina and Juliane is based on the /uniFB01 ndings from the research project DATAFIED (see Zakharova &amp; Jarke, 2022) exploring what role digital data and associated data work play in con /uniFB01 guring ' good ' education in Germany. In the vignette, we draw on over 30 interviews with school personnel who perform data care work maintaining datasets required for the organisation of schooling but who lack control over how these datasets are designed.
 
@@ -101,6 +126,10 @@ Through the ' delegation ' of care obligations and care work to digital welfare 
 
 The tension between control and care becomes visible when considering how such technologies recon /uniFB01 gure how, by whom, and for what purpose care is provided and received.
 
+
+<!-- PAGE 8 -->
+
+
 The narrative about providing better care through digital welfare technologies exempli /uniFB01 ed in the quote above neglects (and hence invisibilises) the work of embedding and maintaining such technologies in existing welfare care arrangements and making them work. In a series of workshops that Juliane conducted with 30 German social and health care providers about their experiences with AAL technologies, many pointed out how their care work suddenly had to extend to caring for digital technologies in order to maintain welfare services.
 
 In particular, they stressed three points: First, more often than not, it is not older adults who decide to install digital welfare technologies in their homes but professional care providers or next of kin. There is a general suspicion and/or refusal of such technologies from many older adults. Participants argued that people who are trusted need to use their ' leap of faith ' (workshop participant) to convince older adults to try/use/trust such technologies to become part of welfare care arrangements. Second, even if digital welfare technologies move into the homes of older adults, a lot of additional ' care work ' for the technologies is required. During the workshop, a health care provider addressed this as long-term support ' so that older adults do not have to fear that they are buying something and are left alone with it ' (workshop participant). Third, in many instances, so-called ' digital ambassadors ' or ' digital guides ' are seen as crucial for facilitating the relation-building between welfare technologies, older adults, and their everyday infrastructures: ' The acceptance of such technologies by older people is not a problem, but rather existing infrastructures and /uniFB01 nancial aspects ' (workshop participant). This also points to the intersectional aspects of using and non-using gerontechnologies. For example, well-educated older men were reported to have much higher rates of digital literacies and access to AAL technologies than migrant older women. In addition, many commercial welfare technologies target those older populations who are understood to drive the ' silver economy ' and have the economic means to selfdetermine which welfare technologies they require (see also Cozza et al., 2019). Overall, such welfare technologies reduce the care work of caregivers to mere observation that is controlling the lives of older adults, rather than appreciating, for example, the emotional and affective labour involved in long-term care work. Care in a digital welfare state then becomes mainly framed as a matter of effectively controlling the lives of older people.
@@ -108,6 +137,10 @@ In particular, they stressed three points: First, more often than not, it is not
 ## Vignette 2: Infrastructures of security and surveillance in social housing constituting care
 
 One important pillar of welfare provision has been access to affordable housing (Meagher &amp; Szebehely, 2013). Consequently, public and social housing has had a historically strong link to the emergence of the welfare state. In the Nordic welfare system for example, the aim to provide affordable and modern housing for all guided the housing policies and subsidies for public housing from the mid-1930s onwards. The following example draws on experiences from the Swedish welfare system as an illustration of how public and affordable housing is increasingly intertwined with digital infrastructures often motivated by providing better conditions for care provision.
+
+
+<!-- PAGE 9 -->
+
 
 Since the 1990s there has been an increased commercialisation of the municipal housing companies and an adaptation to a deepened commercialism.
 
@@ -118,6 +151,10 @@ Initially the sensor collected data for about two weeks. After this initial data
 The systematically registered sensor data are made available to the housing company through a dashboard that highlights hotspot areas. However, the visualisations and datasets are used not only for direct, partly automated safety measures, such as blinking lights or security patrols, but also feed into broader networks, for example, a collaboration with local police and the municipality. The hotspots identi /uniFB01 ed through the datapoints produced with the help of the sensors inform decisions on resources and prioritisations in local police work and the safety work of the municipalities. The involvement of the residents in the introduction process of the digital monitoring infrastructure was low. Initially, it was not clear whether residents should be informed about the smart sensors at all. In the end, they received a note from the housing company informing them about the pilot project.
 
 In this case, the tension between care and control lies in the double aim of providing safe housing while the means to achieve this goal are exclusively focused on monitoring and controlling deviant behaviour. It comes as no surprise that the sensor technology was piloted in residential housing blocks that are primarily homes to populations with migrant background and that are situated in so-called vulnerable areas. The sensor project highlights that vulnerable populations often emerge as testing grounds for new technologies relating to the intersection of class-based racial and citizenship dynamics (Benjamin, 2019). Understandably, these areas emerge as an excellent context for sensors that
+
+
+<!-- PAGE 10 -->
+
 
 supposedly help to ef /uniFB01 ciently /uniFB01 ght vandalism, which in turn -following ideas of the broken window theory (Shapiro, 2018) -potentially leads to more serious crime.
 
@@ -131,6 +168,10 @@ With the ongoing introduction of digital technologies into the educational domai
 
 Elsewhere we have shown how, in German schools, secretaries carry out much of the infrastructural and data work (Zakharova &amp; Jarke, 2022). Only marginally considered as users of such systems and, hence, usually not included in the decision-making about their
 
+
+<!-- PAGE 11 -->
+
+
 design, secretaries do most of the manual data input. They spend days at the beginning of each school year manually updating data about students (e.g. address, parents ' /guardians ' status required for disclosing a child ' s personal information), correcting ' wrong ' automated data entries (e.g. class assignment based on age rather than study track record), creating workarounds when certain data required by the systems is missing from the students ' /uniFB01 les (e.g. birthdays or birthplaces of refugee students, their previous studies record), or eliciting such missing data by personally seeking out students and their guardians. By inputting data into the systems, secretaries make sure that every student is accounted for -assigned to a class, is eligible for any relevant social services, etc.
 
 Remarkably, this work, while being an essential part of secretaries ' jobs, often does not appear in the job descriptions or advertisements, and probably would have required higher wages than the often part-time working women (as they were in our case) receive. The predominantly male and highly educated federal state ' s data team members, on the contrary, belong to the more highly valued and rewarded professional group of data scientists or software designers. Besides this recognition, their work often remains opaque to the school actors, hindering methods of bottom-up control or questioning of the system design and the data it requires.
@@ -143,6 +184,10 @@ The care and maintenance tasks are not the single reason for the misalignment be
 
 In the following, we propose an analytical framework (see Figure 1) for making sense of the tensions between care and control that can be observed in our three empirical vignettes of digital welfare. This framework combines three interrelated layers of how these tensions come to be and play out empirically: the values governing public care provision, the infrastructures for organising care work, and the infrastructural as well as data work to con /uniFB01 gure and maintain care arrangements . We argue that if there is a tension on any one of these levels, this tension affects all levels of the framework, regardless of whether these analytical levels empirically comprise different actors, hierarchies, organisations, and technologies. We demonstrate how the design and maintenance of digital welfare infrastructures connect actors within distributed arrangements of public service provision and mediate care and control according to situated practices of service delivery.
 
+
+<!-- PAGE 12 -->
+
+
 Figure 1. A framework for analysing tensions between care and control in processes of digital transformation.
 
 <!-- image -->
@@ -153,6 +198,10 @@ Welfare state systems have fundamentally been based on the balance between provi
 
 The /uniFB01 rst perspective addresses the kinds of values guiding the introduction and provision of digital welfare services in relation to the values used to justify digital
 
+
+<!-- PAGE 13 -->
+
+
 transformation. This is prominent in all vignettes, when digital welfare technologies promise to make current practices more ef /uniFB01 cient, scalable, objective -hence better -while at the same time normatively positioning the digital care provision above values such as older adults ' , residents ' , and school personnel ' s privacy, autonomy, and agency. All three vignettes illustrate how presumably caring values justify control along the intersecting but visible to different degrees lines of age (Vignette 1), migration background (Vignette 2), and gendered work (Vignette 3).
 
 This has two implications in the socio-technical arrangements of digital welfare. First, by shifting responsibilities to individual people, state care provision can take a patronising turn, placing individuals in the position of having to prove why they need certain care or why some systems they require for /uniFB02 ourishing need to also be cared for and, therefore, require additional resources for maintenance.
@@ -162,6 +211,10 @@ The second implication stems from the design of technologies of digital welfare.
 ## Infrastructures of care
 
 The second framework level considers how digital technologies organise practices of care and control. From this perspective, infrastructures are relational: they de /uniFB01 ne relationships and distribute practices between and across various public and private, communal, as well as technological actors. They often stay invisible and require maintenance work to function (Star &amp; Ruhleder, 1996). Digital infrastructures have also been described as modular -composed of multiple individual systems, and scalable, often transgressing one societal domain or practice (Plantin et al., 2018). As such, infrastructures can be understood as political materialisations of careful or careless values setting teleo-affective dispositions and values which guide practices and de /uniFB01 ne the power relations between various actors. For example, our vignettes 2 and 3 show how digital welfare infrastructures de /uniFB01 ne which individuals will be recognised as ' good ' housing residents or as pivotal members of school administration, or where and for what purpose to allocate resources -for example, for policing the neighbourhood or improving quality of living. At the same time, as these infrastructures become adapted by their users or bene /uniFB01 ciaries, they become mediators of sometimes diverging values and practices. So, school secretaries create informal infrastructures and adapt existing ones to ' /uniFB01 x ' the failures of state care according to their own perspective on what needs to be cared for and how.
+
+
+<!-- PAGE 14 -->
+
 
 ## Care work and data work
 
@@ -175,6 +228,10 @@ It is this data care work that ascribes data meanings and values compliant with 
 
 In this article, we bring the feminist concept and ethics of care together with sociological literature exploring the state functions and services to explicate how the use of digital
 
+
+<!-- PAGE 15 -->
+
+
 technologies recon /uniFB01 gures the welfare system. To analyse the arising tensions between state control and care, we proposed a three-dimensional analytical framework directed at different constitutive elements of the socio-technical arrangements of the digital welfare state: values, digital infrastructures, and data work. Following Power and colleagues (2022) we add to the literature suggesting the care lens to consider the shadows between care and control and to take what occupies these shadows as a starting point of research engagements.
 
 From that standpoint, welfare technologies achieve their caring values of convenience, better health or education, security and safety, or reduced workload differently for different groups of people. In foregrounding one of such presumably caring values, however, they fail to live up to the intersecting and lived realities of people of different genders, ages, migration backgrounds, geographies, and professions. As digital infrastructures prioritise control and standardisation over openness, it is challenging to embrace the open-ended outcomes of care in digital welfare. Such care ' cannot be completed in the measurable time that both bureaucratization and commodi /uniFB01 cation require ' (Lynch et al., 2021, p. 54) and might not be malleable to digitalisation processes. For example, much of the care work described in our empirical vignettes and the subsequent discussion not only is invisible to the state actors but is also dif /uniFB01 cult to quantify and datafy so as to be accounted for or rewarded.
@@ -184,6 +241,10 @@ Furthermore, intersectionally marginalised groups, such as older adults lacking 
 ## Acknowledgements
 
 The research reported in section ' Vignette 1: Demographic ageing and the digital welfare state ' was conducted by Juliane Jarke while she was af /uniFB01 liated with the Institute for Information Management Bremen (i /uniFB01 b). The research reported in section ' Vignette 2: Infrastructures of security and surveillance in social housing constituting care ' was conducted by Anne Kaun and partially funded by the Baltic Sea Foundation (Grant S2-20-0007). The research reported in section ' Vignette 3: Maintaining data as new educational care work ' was conducted by Irina Zakharova and Juliane Jarke while they were af /uniFB01 liated with the Institute for Information Management Bremen (i /uniFB01 b) and funded by the German Federal Ministry of Education and Research (BMBF, research project DATAFIED, funding number 01JD1803A). The authors thank the special issue editors
+
+
+<!-- PAGE 16 -->
+
 
 and the anonymous reviewers for the insightful and helpful comments on the earlier versions of the manuscript.
 
@@ -214,6 +275,10 @@ Irina Zakharova https://orcid.org/0000-0001-7498-5445
 
 <!-- image -->
 
+
+<!-- PAGE 17 -->
+
+
 - Calvaresi, D., Cesarini, D., Sernani, P., Marinoni, M., Dragoni, A.F., &amp; Sturm, A. (2017). Exploring the ambient assisted living domain: A systematic review. Journal of Ambient Intelligence and Humanized Computing , 8 (2), 239 -257. https://doi.org/10.1007/s12652-016-0374-3
 - Castles, F.G., Leibfried, S., Lewis, J., Obinger, H., &amp; Pierson, C. (2010). Introduction. In F.G. Castles, S. Leibfried, J. Lewis, H. Obinger, &amp; C. Pierson (Eds.), The Oxford Handbook of the welfare state (pp. 1 -16). Oxford University Press. https://doi.org/10.1093/ oxfordhb/9780199579396.003.0001
 - Costanza-Chock, S. (2020a). Design values: Hard-coding liberation? In Design Justice . PubPub. https://design-justice.pubpub.org/pub/3h2zq86d/release/1
@@ -235,6 +300,10 @@ Irina Zakharova https://orcid.org/0000-0001-7498-5445
 - Held, V. (2018). The ethics of care. In S. Olsaretti (Ed.), The Oxford handbook of distributive justice (pp. 213 -234). Oxford University Press.
 - Jakobsson, P., Lindell, J., &amp; Stiernstedt, F. (2022). Normative foundations of media welfare: Perspectives from the Nordic countries. Media, Culture &amp; Society , 45 (2), 1 -18. OnlineFirst. https://doi.org/10.1177/01634437221111914
 
+
+<!-- PAGE 18 -->
+
+
 - Jansen, F. (2021). The state: A key actor in shaping data infrastructure space. In B. Herlo, D. Irrgang, G. Joost, &amp; A. Unteidig (Eds.), Practicing sovereignty -Digital involvement in times of crises . transcript Verlag. https://doi.org/10.14361/9783839457603-008
 - Jarke, J., Zakharova, I., &amp; Breiter, A. (2022). Organisational data work and its horizons of sense: On the importance of considering the temporalities and topologies of data movement when researching digital transformation(s). Historische Sozialforschung / Historical Social Research , 47 (3), 142 -170. https://doi.org/10.12759/hsr.47.2022.29
 - Jovanovic, M., Mitrov, G., Zdravevski, E., Lameski, P., Colantonio, S., &amp; Kampel, M. et al. (2022). Ambient assisted living: Scoping review of arti /uniFB01 cial intelligence models, domains, technology, and concerns. Journal of Medical Internet Research , 24 (11), e36553. https://doi.org/ 10.2196/36553
@@ -254,6 +323,10 @@ Irina Zakharova https://orcid.org/0000-0001-7498-5445
 - Mergel, I., Edelmann, N., &amp; Haug, N. (2019). De /uniFB01 ning digital transformation: Results from expert interviews. Government Information Quarterly , 36 (4). https:/ /doi.org/10.1016/j.giq.2019.06.002
 - Pink, S., Ruckenstein, M., Willim, R., &amp; Duque, M. (2018). Broken data: Conceptualising data in an emerging world. Big Data &amp; Society , 5 (1). https://doi.org/10.1177/2053951717753228
 - Plantin, J.-C., Lagoze, C., Edwards, P.N., &amp; Sandvig, C. (2018). Infrastructure studies meet platform studies in the age of Google and Facebook. New Media &amp; Society , 20 (1), 293 -310. https://doi.org/10.1177/1461444816661553
+
+
+<!-- PAGE 19 -->
+
 
 - Poirier, L. (2021). Data(-)based ambivalence regarding NYC 311 data infrastructure. Cultural Studies , 35 (4 -5), 968 -995. https://doi.org/10.1080/09502386.2021.1895256
 - Power, A., &amp; Hall, E. (2018). Placing care in times of austerity. Social &amp; Cultural Geography , 19 (3), 303 -313. https://doi.org/10.1080/14649365.2017.1327612
@@ -276,6 +349,10 @@ Irina Zakharova https://orcid.org/0000-0001-7498-5445
 - Tronto, J.C. (2016). Who cares? How to reshape a democratic politics . Cornell Selects, an imprint of Cornell University Press.
 - Tronto, J.C., &amp; Fisher, B. (1990). Toward a feminist theory of caring. In E. Abel &amp; M. Nelson (Eds.), Circles of care (pp. 36 -54). SUNY Press.
 - United Nations. (2020). World population ageing 2020 highlights: Living arrangements of older persons . United Nations.
+
+
+<!-- PAGE 20 -->
+
 
 - Valencell. (2019, March 20). Arti /uniFB01 cial intelligence powered wearable solutions for senior care: A conversation with CarePredict [Video]. YouTube. https://www.youtube.com/watch?v = tWJiPcRwlk
 - Wilding, R., &amp; Baldassar, L. (2018). Ageing, migration and new media: The signi /uniFB01 cance of transnational care. Journal of Sociology , 54 (2), 226 -235. https://doi.org/10.1177/1440783318766168

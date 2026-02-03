@@ -1,10 +1,11 @@
 ---
 source_file: Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.pdf
-conversion_date: 2026-02-03T09:10:51.935387
+conversion_date: 2026-02-03T18:42:22.790336
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;QGLYPH&lt;0&gt;WGLYPH&lt;0&gt;HGLYPH&lt;0&gt;OGLYPH&lt;0&gt;OGLYPH&lt;0&gt;LGLYPH&lt;0&gt;JGLYPH&lt;0&gt;HGLYPH&lt;0&gt;QGLYPH&lt;0&gt;FGLYPH&lt;0&gt;H
@@ -81,6 +82,10 @@ GLYPH&lt;0&gt;GLYPH&lt;20&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;GLYPH&lt;0&gt;GLYPH&lt
 
 GLYPH&lt;0&gt;RGLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
+
+<!-- PAGE 2 -->
+
+
 term has been extended to new literacies such as media, digital, information, computer and AI literacy (Kong et al., 2021). In the twenty-first century, students who are equipped with these skills could use related technologies  and  computers  in  very  advanced  ways  to  learn  new knowledge and skills with their counterparts (Bell, 2010; Griffin &amp; Care, 2014; Larson &amp; Miller, 2011). Nowadays, AI technology emerges and becomes essential skills to play critical roles across disciplines and industries (Ng et al., 2021; Touretzky et al., 2019). Students need to learn how to use AI technologies judiciously, as well as to discriminate between ethical and unethical practices (Robinson, 2020; Rodríguez-García,  Moreno-Le ´ on,  Rom ´ an-Gonz ´ alez, &amp; Robles,  2020).  AI potentially  becomes  one  of  the  important  technology  skills  in  the twenty-first century. As such, to combine AI and literacy, AI literacy means having the essential abilities that people need to live, learn and work  in  our  digital  world  through  AI-driven  technologies,  and  this should be taught at the K-12 levels (Steinbauer et al., 2021).
 
 AI learning started in university computer science education which required  advanced  programming  competencies  that  were  not  at  an appropriate level for K-12 learners. Educators faced challenges in scaffolding K-12 children to understand AI concepts through syntax-based programming  (e.g.,  McCarthy,  2007;  Wong  et  al.,  2020).  The  emergence of more age-appropriate hardwares and softwares enabled educators to improve the learning process for younger learners in recent years. The access to a wide range of technologies in day-to-day life, such as chatbots and translation apps, presents opportunities for everyone to understand  and  use  AI  in  everyday  life.  This  enables  educators  to leverage on the availability of AI technologies to inculcate AI literacy for young learners. For example, prior studies discussed the potential to incorporate AI learning in K-12 STEAM education via playful experience such as gamified and social media tools to prepare children for future science, technology, engineering, art and mathematics workforces (e.g., Ng, 2021; Ng &amp; Chu, 2021; Zou, Wang, &amp; Zhao, 2019).
@@ -115,6 +120,10 @@ Table 1 Inclusion on and exclusion criteria.
 | (1) the studies had to review articles, empirical papers, articles, case studies or conference proceedings published in the journals indexed by the aforementioned databases. (2) the studies had to be in the field of education which was related to AI literacy. (3) the studies should provide descriptions of the underlying theory and methods. | (1) Editorials and books are excluded due to the lack of peer review. (2) Articles that mention the term ' AI literacy ' are actually about how AI is applying in particular fields and unrelated to education. |
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
+
+
+<!-- PAGE 3 -->
+
 
 ## 2.2. The data coding and analysis processes
 
@@ -186,6 +195,10 @@ Table 3 Research methods.
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
 
+
+<!-- PAGE 4 -->
+
+
 In  succession  to  digital  advancement,  AI  started  to  arise  and  imitate human  intelligence  in  machines  for  computers  to  learn,  reason  and perceive. It was initially used in scientific research and academic environments but had yet become ubiquitous in our daily lives. In summary, four aspects of fostering AI literacy were identified from the review (see Table 4).
 
 ## 3.2. Know and understand AI
@@ -221,6 +234,10 @@ In our review, most studies discussed how to foster learners ' AI literacy in kn
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
 
+
+<!-- PAGE 5 -->
+
+
 Table 5 Interplay between AI and Brennan-Resnick '
 
 s (2012) computational thinking.
@@ -242,6 +259,10 @@ Fig. 2. Bloom ' s Taxonomy and AI literacy.
 Fig. 3. AI literacy TPACK framework.
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
+
+
+<!-- PAGE 6 -->
+
 
 selected AI literacy studies put more emphasis on engaging learners in lower-level thinking activities. However, when students are promoted to secondary  schools  and  universities,  they  become  knowledgeable  to apply their prior knowledge to create their own artefacts and justify decisions with AI applications and algorithms.
 
@@ -273,6 +294,10 @@ Adult learners are categorized as university students and the general public. Si
 To cultivate the general public to understand and use AI applications ethically, free online resources and courses (Robinson; 2020), public art installations and museum exhibits (Rodríguez-García et al., 2020) are viable approaches to establish a collaborative, creative, robust and safe society.
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
+
+
+<!-- PAGE 7 -->
+
 
 ## 3.8. Content knowledge
 
@@ -308,6 +333,10 @@ Table 7 Assessment constructs and tools to evaluate students ' AI learning.
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
 
+
+<!-- PAGE 8 -->
+
+
 coded  in  RQ3  since  this  study  aimed  to  compare  how  trust,  transparency, and openness are defined and explored in AI government policy documents in different countries.
 
 Quantitative methods: To evaluate K-12 students ' AI literacy, one important component is to promote their intention to learn and possess basic knowledge about AI. Thirteen studies used quantitative methods to assess the knowledge acquisition of K-12 and university students via preand post-knowledge tests (e.g., What are the characteristics of depthfirst  search?), and students ' perceived abilities (e.g., How would you rate your knowledge about search algorithms?) (Kandlhofer et al., 2016; Wan et al.,  2020).  Furthermore,  studies  discussed  other  quantitative aspects via surveys to understand students ' perceptions (non-cognitive aspects) towards AI literacy education such as confidence in using AI, motivation and AI for societal good.
@@ -329,6 +358,10 @@ Project  portfolio  analysis  and  artefact-based  interview: Project portfolio 
 Through artefact-based interviews, it is useful to understand which AI  components  students  could  understand  and  use  more  frequently through  communication  and  students ' projects.  Since  AI  learning  is novice to K-12 educators, the application of portfolio assessment and follow-up interviews could capture a holistic view of what extent of
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
+
+
+<!-- PAGE 9 -->
+
 
 knowledge and skills students need to obtain, and how educators design and choose their learning materials and tools in their learning design. In addition, this also encourages educators to use in classrooms and across platforms to formatively assess students to offer them feedback that is potentially beneficial to their future AI learning.
 
@@ -357,6 +390,10 @@ The  findings  of  this  review  present  a  preliminary  overview  of empirical
 - /uni25CF Students  are  not  only  the  end  users  but  potentially  be  problemsolvers to use AI technologies in different scenarios, or even create possible  AI-driven  hardware  and  software  solutions  to  make  our society a better place to live in.
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
+
+
+<!-- PAGE 10 -->
+
 
 - /uni25CF AI  literacy  combines  the  ideas  of  data  science,  computational thinking and multi-disciplinary knowledge to interplay AI literacy and AI thinking.
 - /uni25CF To facilitate educators ' teaching, the technological, pedagogical and content knowledge framework needs to be considered to provide a map for understanding how to integrate AI literacy into classrooms effectively. Age-appropriate learning artefacts and curricula need to be designed to scaffold K-12 students ' AI conceptual understandings and stimulate their motivation and interest in learning AI.
@@ -417,6 +454,10 @@ The authors declare that they have no known competing financial interests or per
 - Ng, T. K., Leung, J. K. L., Chu, K. W. S., &amp; Qiao, M. S. (2021). AI literacy: Definition, teaching, evaluation and ethical issues. Proceedings of the Association for Information Science and Technology, 58 (1), 504 -509.
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;
+
+
+<!-- PAGE 11 -->
+
 
 - Pegrum, M., Dudeney, G., &amp; Hockly, N. (2018). Digital literacies revisited. European Journal of Applied Linguistics and TEFL, 7 (2), 3 -24.
 - Register, Y., &amp; Ko, A. J. (2020, August). Learning machine learning with personal data helps stakeholders ground advocacy arguments in model mechanics. In In Proceedings of the 2020 ACM conference on international computing education research (pp. 67 -78). ACM.

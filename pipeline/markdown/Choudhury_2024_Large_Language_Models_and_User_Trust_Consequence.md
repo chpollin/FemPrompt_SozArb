@@ -1,10 +1,11 @@
 ---
 source_file: Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.pdf
-conversion_date: 2026-02-03T08:45:33.706684
+conversion_date: 2026-02-03T18:23:42.838045
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Viewpoint
 
 ## Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals
@@ -33,6 +34,10 @@ trust; ChatGPT; human factors; healthcare; LLMs; large language models; LLM user
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## Introduction
 
 ## Overview
@@ -58,6 +63,10 @@ In this paper, we conceptually investigate the dynamics between clinicians' grow
 Presently, LLMs are developing at an accelerated pace, heavily reliant on human-generated data sets that are integral to their accuracy and the consequent trust placed in them, particularly in the health care sector. This burgeoning dependency, although seemingly beneficial in terms of efficiency and productivity, may lead to an unintended erosion of clinician skills due to the habitual delegation of tasks to AI-as noted in the academic context [20,21]. This trend raises the possibility of  an overreliance on LLM outputs, potentially diminishing the variety and depth of human insights within these models. The risk is a self-perpetuating cycle where LLMs, learning mostly from their creations, could see a degradation in their effectiveness and a narrowing  of  the  breadth  of  human  knowledge  they  were designed to emulate. Such an outcome would be counterproductive, possibly leading to a decline in both LLM effectiveness and human expertise.
 
 Figure 1 illustrates our core arguments. The first panel reveals a timeline that shows an inverse correlation between clinicians' escalating trust in AI and the preservation of clinical skills over successive time points (T1 to Tn), signaling an increase in AI reliance  and  a  decrease  in  skill  retention.  The  middle  panel demonstrates the shift in training  data  for  LLMs  from predominantly  human-generated  to  a  growing  proportion  of AI-generated data, which in turn affects LLM performance and contributes to the feedback loop. The final panel plots LLM accuracy against time, displaying an initial increase as LLMs leverage  a  mix  of  data  sources.  However,  upon  reaching  a tipping point-marked as the self-referential zone-accuracy declines in tandem with the onset of the user deskilling zone, emphasizing the dilemma of increased AI reliance degrading user capabilities. We underscore the need for strategic measures to address these impending challenges in the health care sector.
+
+
+<!-- PAGE 3 -->
+
 
 Figure 1. The dynamics of user skills, trust, data, and large language models. AI: artificial intelligence; LLM: large language model.
 
@@ -91,6 +100,10 @@ Trust  in  user  engagement  with  LLMs,  particularly  in  health care, is a mu
 
 data
 
+
+<!-- PAGE 4 -->
+
+
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 
 Clinicians  bring  their  own  norms  and  expectations  to  the evaluation of trust in these systems, further complicating the landscape. Individual and cultural perspectives on risk tolerance and acceptance also play pivotal roles. Together, these factors create a complex environment where trust in LLMs is dynamic, varying according to the specific context of use and the interplay of diverse elements. In this section, we focus on user willingness to scrutinize LLM output as a precursor to trust.
@@ -122,6 +135,10 @@ Addressing  this  challenge  requires  a  nuanced  approach  to developing  and 
 As individuals come to rely more on LLMs for routine tasks, such as the synthesis of patient information or the interpretation of medical data, there is a possibility that their skills in these critical areas may diminish over time due to reduced practice [33]. This situation is compounded by the AI's ability to quickly furnish answers to medical inquiries, which might decrease the motivation  for  in-depth  research  and  learning,  consequently affecting  the  professionals' knowledge  depth  and  critical thinking capabilities.
 
 It is crucial to note that the discussion here does not assert that LLMs  will  definitively  lead  to  the  deskilling  of  current practitioners in the health care sector. These professionals have
+
+
+<!-- PAGE 5 -->
+
 
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 
@@ -158,6 +175,10 @@ Health care institutions also play a critical role in mediating the use of LLMs,
 The  Algorithmic  Accountability  Act  of  2023  and  Artificial Intelligence  Accountability  Act  [35,36]  represent  a  critical legislative step toward ensuring the responsible use of algorithms.  The  act  calls  for  the  creation  of  standardized procedures and assessment frameworks to evaluate the effectiveness and consequences of these systems, reflecting an understanding of the complex ethical and regulatory challenges posed by AI in decision-making processes, particularly in health care. The act is in dialogue with the wider conversation on the ethics  of  AI,  advocating  for  an  approach  that  emphasizes response-ability-the  capacity  to  respond  ethically  to  the challenges posed by algorithmic decision-making. This perspective is crucial for developing impact assessments and frameworks  aimed  at  promoting  fairness and preventing discriminatory practices within algorithmic systems.
 
 The implications of this act on the integration of LLMs in health care are profound and ensuring transparency in LLM can further enhance trust in the system. Transparency can allow clinicians to verify errors and review outputs effectively. For example, an LLM providing a diagnostic suggestion would detail the medical literature  and  patient  data  informing  its  analysis,  enhancing clinician trust by making the AI's reasoning processes visible and  understandable.  This  transparency  combats  algorithmic deference by encouraging health care professionals to critically assess LLM outputs against their expertise and patient-specific contexts. Moreover, transparency reduces the perceived infallibility of LLMs by highlighting their reliance on input data
+
+
+<!-- PAGE 6 -->
+
 
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 
@@ -197,6 +218,10 @@ None declared.
 ongoing  evaluation  of  AI-driven  outputs  for  accuracy  and relevance, and clear guidelines on its role as an assistive tool rather than a stand-alone decision-maker.
 
 A thoughtful, deliberate approach to integrating generative AI into health care can mitigate risks associated with overreliance and  deskilling,  ensuring  that  it  complements  rather  than compromises the quality of care. By leveraging AI's strengths and compensating for its limitations through human oversight, health  care  can  harness  the  benefits  of  this  technology  to improve outcomes, enhance patient care, and support health care professionals in their vital work. Thus, the path forward involves embracing generative AI's potential while remaining vigilant  about  its  limitations,  ensuring  that  its  integration enhances rather than diminishes the human element in health care.
+
+
+<!-- PAGE 7 -->
+
 
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 
@@ -240,6 +265,10 @@ Medical Pathways Language Model
 <!-- image -->
 
 J Med Internet Res 2024 | vol. 26 | e56764 | p. 7
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 

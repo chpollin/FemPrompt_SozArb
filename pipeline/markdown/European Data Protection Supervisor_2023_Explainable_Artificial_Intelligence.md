@@ -1,10 +1,11 @@
 ---
 source_file: European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.pdf
-conversion_date: 2026-02-03T08:55:23.186101
+conversion_date: 2026-02-03T18:26:04.705049
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 EDPS TechDispatch on Explainable Artificial Intelligence
 
 ## TECHDISPATCH
@@ -15,9 +16,17 @@ EXPLAINABLE ARTIFICIAL INTELLIGENCE
 
 EUROPEAN DATA PROTTCTION SUPERVISOR
 
+
+<!-- PAGE 2 -->
+
+
 EDPS TechDispatch on Explainable Artificial Intelligence
 
 HTML         ISBN 978-92-9242-715-3        ISSN 2599-932X         doi: 10.2804/132319           QT-AD-23-002-EN-Q PDF ISBN 978-92-9242-716-0        ISSN 2599-932X         doi: 10.2804/802043            QT-AD-23-002-EN-N
+
+
+<!-- PAGE 3 -->
+
 
 <!-- image -->
 
@@ -28,6 +37,10 @@ The adoption of artificial intelligence (AI) is rapidly growing in sectors such 
 However, despite the growing use of AI, many of these systems operate in ways that are opaque to both those providing AI systems ('providers'), those deploying AI systems ('deployers'), and those affected by the use of AI systems. In the complex realm of AI systems, even the providers of these systems are often unable to explain the decisions and outcomes of the systems they have built.
 
 This phenomenon is commonly referred to as the 'black box' effect .
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -44,6 +57,10 @@ It can be argued that, in today's society, users do not need to understand how a
 It is therefore unacceptable to have a 'black box' effect that hides the underlying logic of decisions made by AI.
 
 Another difference, this time from a technological point of view, taking into account the car's automatic transmission,  sometimes,  unlike  the  case  of  the  car's  functioning,  AI  engineers themselves may not have a full understanding of what is going on beneath the surface'.
+
+
+<!-- PAGE 5 -->
+
 
 This opacity not only makes decisions more difficult to understand, but it can also have direct impact on individuals since it can hide deficiencies in AI systems, such as the existence of bias,  inaccuracies, or so-called 'hallucinations'. 6 7
 
@@ -65,6 +82,10 @@ However, many efforts to improve explainability often lead to explanations that 
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 <!-- image -->
 
 tailored  to  the  AI  researchers  themselves,  rather  than  effectively  addressing  the  needs  of the intended users. This places the responsibility for defining a satisfactory explanation for complex decision models in the hands of AI experts who have a detailed understanding of these models (Miller T. H., 2017).
@@ -83,6 +104,10 @@ A transparent AI system enables accountability by allowing stakeholders to valid
 
 - Interpretability refers to the degree of human comprehensibility of a given 'black box' model or decision (Lisboa,  2013)  (Miller  T.  H.,  2017).  Poorly  interpretable models 'are opaque in the sense that when presented with the resulting decision, rarely does one have any concrete sense of how or why a particular classification has been arrived at from inputs (Burrell, 2016).
 
+
+<!-- PAGE 7 -->
+
+
 Interpretable AI models allow humans to estimate what a model will predict given an input, and understand when the model has made a mistake.
 
 - Explainability in AI concentrates on providing clear and coherent explanations for specific model predictions or decisions. It aims to answer questions like 'Why did the AI system make this particular prediction?' by offering human-understandable justifications or reasons for a specific out-come. Explainability requires interpretability as a building block but also looks to other fields and areas, such as human-computer interaction, law, and ethics (Thampi, 2002).
@@ -94,6 +119,10 @@ Explainability is important to build trust in AI systems. However, it may not be
 Rule-based  or  expert  systems,  for  instance,  are  subsets  of  AI  that  use  rules  and  specific expert knowledge to provide advice or diagnosis, and are commonly used in the sectors of healthcare, logistics and finance. When providing sufficient transparency and interpreted by experts with the appropriate do-main knowledge, these systems can obviate the need to implement explainability mechanisms for the users.
 
 However, XAI may be necessary for non-experts in the field to fully understand the systems.
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 
@@ -114,6 +143,10 @@ Two examples of 'white box' models are decision trees, and linear regression. 12
 An example of a decision tree model could be an email classification system that automatically determines whether incoming emails are spam or not. The model is first trained on a dataset of emails labelled as 'spam' and 'not spam', and recursively partitions the data based on features to create a tree-like structure. At each node, the tree selects the feature that provides the most information gain in terms of classifying emails. The resulting decision tree can be visualised  as  a  flowchart  like  structure.  Each  node  represents  a  condition  (e.g.  'Does  the email contain the word 'free'?') and each branch represents a possible outcome based on that condition. The leaves of the tree represent the final classification ('spam' or 'not spam').
 
 However, certain  types  of  AI  present  specific  difficulties  due  to  their  inherent  complexity and lack of interpretability. Examples of more complex architectures include neural networks, which consist of multiple layers of interconnected artificial neurons, with each layer performing computations and passing signals to the next layer. Another example of complex architectures
+
+
+<!-- PAGE 9 -->
+
 
 are deep learning algorithms, which are neural networks consisting of more than three layers. In many situations, the representations needed to illustrate the internals of the model could become as complex to understand as the models themselves (Lipton, 2018).
 
@@ -137,6 +170,10 @@ LIME, which stands for Local Interpretable Model-agnostic Explanations (Ribeiro,
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 data changing the values of only a part of the original attributes and observes the output of the model. From that observation, LIME creates interpretable 'surrogate' models to help explain them. The surrogate models are simpler and more interpretable, allowing users to understand how the input features contribute to the model's decision.
 
 For  example,  LIME  could  be  used  to  determine  whether  an  applicant  would  have  been approved  for  a  loan  based  on  various  characteristics  such  as  income,  credit  score  and employment  history.  In  such  a  scenario,  LIME  could  show  that  the  model  approved  the loan because the applicant's high credit score and stable employment history had the most significant positive impact on the decision. By taking into account the inputs and outputs, LIME would be able to generate a simpler (surrogate) model that could explain which features had more weight in the assessment.
@@ -148,6 +185,10 @@ To illustrate, consider a machine learning model that predicts house prices base
 There  is,  however,  research  that  shows  potential  weaknesses  in  LIME,  SHAP  and  other perturbation-based post-hoc explanation methods (Slack, 2020) (Lakkaraju, 2020). Because the  perturbations  injected  by  these  methods  are  distinguishable  from  normal  input  data, models can tell them apart and a malicious developer could potentially create a highly biased and discriminatory model that would provide seemingly 'unbiased' output when detecting perturbation-based inputs.
 
 In fact, several studies suggest that post-hoc explanatory methods should not be considered reliable.  According  to  (Vale,  2022)  'the  use  of  post-hoc  explanatory  methods  is  useful  in many cases, but these methods have limitations that prohibit reliance as the sole mechanism to guarantee fairness of model outcomes in high-stakes decision-making'. Different research, (Bordt, 2022)refers that 'from a technical and philosophical point of view these explanations can never reveal the 'unique, true reason' why an algorithm came to a certain decision'. It concludes that, 'in the worst case, the explanations may induce us into falsely believing that
+
+
+<!-- PAGE 11 -->
+
 
 a 'justified', or 'objective' decision has been made even when this is not the case'.
 
@@ -173,6 +214,10 @@ Organisations have a responsibility to ensure that the processing of personal da
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 <!-- image -->
 
 that not only comply with the data protection principles, but also enable effective oversight and auditability of processes.
@@ -195,6 +240,10 @@ AI  systems,  such  as  machine  learning  models,  can  identify  correlations 
 
 For example, in some cities there may be a strong correlation between the postcode and the
 
+
+<!-- PAGE 13 -->
+
+
 ethnicity of the population, making the postcode attribute a proxy for ethnicity. An AI system could identify  this  correlation  during  its  training  and  make  decisions  based  on  this  proxy attribute when it is used, for example, to make credit reliability decisions.
 
 However, there is a risk that such inferences about individuals may be completely wrong. XAI can help developers and users to identify proxy attributes that may be linking decisions to particular categories of data.
@@ -214,6 +263,10 @@ Depending on how it is implemented, XAI can lead to explanations that are too co
 Information relating to the processing should be provided to the data subjects in a concise, transparent,  intelligible  and  easily  accessible  manner,  using  clear  and  plain  language. Explanations should therefore, be presented in an understandable way, avoiding jargon and technical complexity.
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 <!-- image -->
 
@@ -237,6 +290,10 @@ Similarly,  XAI  raises  the  issue  of  the  potential  risk  of  loss  of  bus
 
 The principles of accountability and data protection by design and by default are relevant here.
 
+
+<!-- PAGE 15 -->
+
+
 From the moment that the means of processing are determined, organisations should build mechanisms into XAI's implementation to ensure that the explanations are informative, in particular for the individuals possibly affected by the use of these systems. This can be done without  undue  disclosure  of  proprietary  algorithms,  trade  secrets  or  other  commercially sensitive details.
 
 ## Over-reliance on the AI system by deployers
@@ -252,6 +309,10 @@ Clear  communication  about  the  limitations  of  AI  is  needed  to  ensure  t
 In essence,  whilst XAI  offers significant  potential,  it  should  be  accompanied  by  a comprehensive understanding of both its importance in enhancing the trustworthiness of the  AI  and  of  its  limitations.  This  requires  comprehensive  and  in-depth  risk  assessments, continuous  monitoring  of  the  functioning  of  the  AI  systems,  and  collaborative  efforts between data protection authorities and the competent sectorial oversight authorities (e.g., labour inspectorate, health-care oversight body, financial oversight authority, etc.) to ensure responsible and secure implementation.
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 <!-- image -->
 
@@ -281,6 +342,10 @@ XAI systems should be able to explain their capabilities and understandings, how
 
 Explanations are a transfer of knowledge, presented as part of a conversation or interaction, and are thus presented relative to the explainer's beliefs about the explainee's beliefs. They are influenced by individual vs. group behaviour, norms and morals, etc. (Miller T., 2019)
 
+
+<!-- PAGE 17 -->
+
+
 In  addition,  the  'intended  audience'  needs  to  be  taken  into  account  when  providing explanations.
 
 For example, supervisory authorities would probably need more detailed explanations when auditing  the  system  to  verify  compliance  with  the  legislation  applicable  to  the  activity  in relation to which the AI is put into service (e.g., health and safety conditions at work, in the case of an AI work management system).
@@ -299,6 +364,10 @@ The  adoption  of  XAI  contributes  to  a  future  where  AI  should  be  defin
 
 <!-- image -->
 
+
+<!-- PAGE 18 -->
+
+
 <!-- image -->
 
 However,  the  advent  of  XAI  also  presents  a  number  of  potential  challenges  that  require careful attention.
@@ -310,6 +379,10 @@ As the capability (and public demand) of AI systems grows, so does the risk that
 As a society, we have a responsibility to demand and ensure that this development takes place in a way that safeguards fundamental rights, notably the fundamental rights to privacy and to the protection of personal data. 18
 
 As the data protection authority supervising EU Institutions, bodies, offices and agencies, it is our responsibility to ensure that the use of AI systems is in line with data protection principles and complies with the rules laid down in the applicable legislation.
+
+
+<!-- PAGE 19 -->
+
 
 ## References
 
@@ -340,6 +413,10 @@ As the data protection authority supervising EU Institutions, bodies, offices an
 - Xu, H. S. (2018). Deepobfuscation: Securing the structure of convolutional neural networks via knowledge distillation. arXiv preprint arXiv:1806.10313.
 
 <!-- image -->
+
+
+<!-- PAGE 20 -->
+
 
 <!-- image -->
 
@@ -373,6 +450,10 @@ The English version of the decision can be found in https://uitspraken.rechtspra
 
 See the Statement by the Consumer Financial Protection Bureau (CFPB), CFPB Issues Guidance on Credit Denials by Lenders Using Artificial Intelligence. Consumers must receive accurate and specific reasons for credit denials , 19 September 2023, 'Technology marketed as artificial intelligence is expanding the data used for lending decisions, and also growing the list of potential reasons for why credit is denied,' said CFPB Director Rohit Chopra. 'Creditors must be able to specifically explain their reasons for denial. There is no special exemption for artificial intelligence.' 11
 
+
+<!-- PAGE 21 -->
+
+
 12
 
 Decision trees are graphical representations of decision-making processes that resemble a tree structure, where each internal node represents a decision or test on an attribute, and each branch represents a result of the test. Linear  regression  is  a  statistical  and  machine  learning  technique  used  to  model  the  relationship  between  a dependent variable and one or more independent variables. It assumes a linear relationship between the variables, i.e. it tries to find the best fitting straight line (a linear equation) that represents the data.
@@ -388,6 +469,10 @@ On accountability as an essential requirement to ensure the 'alignment' of the d
 On  8  April  2019,  the  High-Level  Expert  Group  on  AI  presented  ethical  guidelines  for  trustworthy  artificial intelligence. Among the seven key requirements that AI systems should meet to be considered trustworthy are transparency, accountability, and fairness. See more in https://digital-strategy.ec.europa.eu/en/library/ethicsguidelines-trustworthy-ai 17
 
 Articles 7 and 8 of the Charter of Fundamental Rights of the European Union. 18
+
+
+<!-- PAGE 22 -->
+
 
 EDPS TechDispatch on Explainable Artificial Intelligence
 
@@ -406,6 +491,10 @@ To subscribe or unsubscribe to TechDispatch publications, please send a mail to 
 © European Union, 2023. Except otherwise noted, the reuse of this document is authorised under a Creative Commons Attribution 4.0 International License (CC BY 4.0) . This means that reuse is allowed provided appropriate credit is given and any changes made are indicated.
 
 For any use or reproduction of photos or other material that is not owned by the European Union, permission must be sought directly from the copyright holders.
+
+
+<!-- PAGE 23 -->
+
 
 EDPS TechDispatch on Explainable Artificial Intelligence
 

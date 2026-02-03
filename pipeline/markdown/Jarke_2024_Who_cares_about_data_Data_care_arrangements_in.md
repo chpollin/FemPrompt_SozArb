@@ -1,10 +1,11 @@
 ---
 source_file: Jarke_2024_Who_cares_about_data_Data_care_arrangements_in.pdf
-conversion_date: 2026-02-03T09:00:57.288668
+conversion_date: 2026-02-03T18:31:48.973947
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Information, Communication &amp; Society
@@ -55,6 +56,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## RESEARCH ARTICLE
 
 <!-- image -->
@@ -101,6 +106,10 @@ Received 12 July 2023 Accepted 1 February 2024
 
 Data care work; data /uniFB01 cation; social work; welfare; education; data work
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 way, is an important step towards ' demystifying how digital data is constituted in situ ' (Pink et al., 2018, p. 1), towards acknowledging that ' all data are local ' (Loukissas, 2019).
@@ -112,6 +121,10 @@ In feminist STS, an interesting body of scholarship has extended research on car
 In this article, we develop the concept of data care arrangements by drawing on both, the literature on data work as well as the literature on care arrangements. We ask: Why and how do people in organisations care for data? We demonstrate that while the concept of data work o /uniFB00 ers an umbrella term for data-related practices, data care arrangements sensitise us to the heterogeneous , situated , and reoccurring ways in which data get produced and tailored. In so doing, we understand the care for data as an accomplishment , as something that cannot be taken for granted, and argue that di /uniFB00 erent data care arrangements in organisations evolve because social actors producing and processing data ascribe di /uniFB00 erent values to data. In this process, data may become matters of care.
 
 The paper is structured as follows. First, we review the current literature on data work in organisations and present our concept of data care arrangements. This includes a presentation of di /uniFB00 erent kinds of values that people may ascribe to data and that guide their orientation towards data and the data work required of them. Subsequently, we present two case studies that demonstrate how -in the context of organisations -managers aim
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -126,6 +139,10 @@ Our case studies counter the widespread perception that data are a by-product of
 The transformation of many workplaces towards a substantial reliance and embedding of digital technologies was something that Shoshana Zubo /uniFB00 pointedly analysed in 1988 in her ground-breaking book ' In the age of the smart machine: The future of work and power ' . In the book, she examined the ways in which information and communication technologies (ICTs) were and would continue to transform work practices and professional identities across industries and domains. A public domain, in which the resulting tensions of this ' informating ' of the workplace could be found relatively early was healthcare. Here the ' messy ' and ' ad hoc ' nature of health care work stood (and stands) in stark contrast with the ' formal, standardized and ' rational ' nature of IT systems ' (Berg, 1999, p. 87). Studies on the data /uniFB01 cation of health (Hoeyer &amp; Wadmann, 2020 Ruckenstein &amp; Schüll, 2017) showed that especially with the increased interest in open or secondary uses of data, data work comes with high expectations on innovating work practices.
 
 In recent years, the data /uniFB01 cation of social life has further accelerated the ' entanglement ' (Orlikowski &amp; Scott, 2008) of data-driven technologies and work practices in organisations. The concept of data work allows researchers to pay attention to the often invisible or underestimated role of labour involved in making data-based technologies work (Beaulieu, 2022 Pine &amp; Bossen, 2020; Pink et al., 2018; Ruppert &amp; Scheel, 2021). Studies
+
+
+<!-- PAGE 5 -->
+
 
 <!-- image -->
 
@@ -146,6 +163,10 @@ Hence, values ascribed to data play a crucial role for how people relate to data
 - . truthiness: truth is a /uniFB00 ectedly assigned to quantitative data, and
 - . discovery: data generate hypotheses and allow theory testing.
 
+
+<!-- PAGE 6 -->
+
+
 <!-- image -->
 
 Medina Perea (2021) showed that vanguard, the possibility to self-identify and position oneself as vanguard through data work, is an additional common expectation towards data. In line with these authors, we understand data valences as an open concept, sensitising us to the heterogeneous meaning makings about data as a matter of care.
@@ -160,6 +181,10 @@ To explore data care work in everyday organising, we present di /uniFB00 erent c
 
 The empirical insights of the /uniFB01 rst case study stem from the ethnographic study ' Digital Cases ' . The data was generated in a multi-sited ethnography over the course of 11 months from 2020 to 2022 in a youth welfare service in a major German city with regional services sharing information and case-processing software: IMPACT. 1 Fieldwork included
 
+
+<!-- PAGE 7 -->
+
+
 <!-- image -->
 
 ethnographic visits to multiple regional teams and frontline workers using IMPACT, visits to in-house teaching about IMPACT, and participation in a leadership workshop on IMPACT data. The empirical insights of the second case study stem from the project ' DATAFIED - Data For and In EDucation ' , which conducted a qualitative study on the digital transformation of the organisation of teaching and learning between 2018 and 2022. 2 It included interviews with school managers, secretaries, timetable planners and teachers in eight German secondary schools, as well as interviews with developers of school information systems and school inspectors in four federal ministries of education. In addition, the project team analysed software documentation and organisational documents such as educational data infrastructure maps and legal documents.
@@ -173,6 +198,10 @@ In this case study, anticipations about the potential of the data /uniFB01 catio
 Although frontline workers participated in IMPACT ' s design, the tool ' s initiative was political, aiming to ' open the black box ' of social work. In Germany, social support and assistance can be provided for parents and young people if it is needed and appropriate for a young person ' s upbringing (Witte et al., 2019). Frontline workers therefore, assess each case individually in consultation with parents and young persons and develop a Care Plan ( ' Hilfeplan ' ) -a roadmap that states the problems that are going to be addressed, the aims of the chosen social support, its duration and the provider that delivers the service (Hitzler &amp; Messmer, 2010). In this process social workers have considerable discretion about the de /uniFB01 nition of problems, needs and forms of support. The latter can range from rather expensive measures like a permanent placement in institutional care to cheaper forms like family counselling for 4 hours per week for up to three months. It is at the discretion of every municipality to decide upon their spending. IMPACT was however an initiative driven at the federal level.
 
 The managerial level ascribed the valences of discovery, truthiness and actionability to IMPACT data. In our /uniFB01 eldwork, this became (amongst others) articulated in a small and
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 
@@ -194,6 +223,10 @@ Hence, the data work to produce the data required for IMPACT was of little prior
 
 This undervaluing and neglecting of the ' petty aspects ' (a.k.a. who is actually taking care that the required data is produced in ' good enough ' quality and through which means) was mirrored in the way IMPACT was introduced at the frontline. Although IMPACT became integrated technically into the digital infrastructure of the social workers, no formal instructions of exactly how the data work was to be done were provided. The values of discovery, truthiness and actionability clearly assigned to IMPACT data at the managerial level were scarcely recognised at the frontline. A social worker who engaged in
 
+
+<!-- PAGE 9 -->
+
+
 peer teaching about IMPACT asserted: ' [w]ith IMPACT data, we want to make visible that our work actually makes a di /uniFB00 erence ' . Several participating social workers reacted annoyed as they saw the increasing workload related to IMPACT in the context of already high formal demands to documentation ( ' another time-consuming procedure ' ). The management ' s demand to care about and for (ever more) data hence stood in con /uniFB02 -ict with other obligations of case work.
 
 In the following, we present how di /uniFB00 erent and incommensurable data care arrangements emerged. In each of them, selections and prioritisations at the frontline level that weighed the care obligations for IMPACT data with competing matters of care can be traced. A common arrangement was a selective and pragmatic approach to IMPACT data. In this arrangement, only data that is ready at hand is entered into the system. In most of the cases, this is simply the evaluation of the social worker, the /uniFB01 elds for the perspectives of the client, parents and the actual providers of social help are often left blank. Here, caring about and for data is restricted to what is feasible visà-vis other (and more established) care work.
@@ -205,6 +238,10 @@ In a third common way social workers deprioritise IMPACT data and distance thems
 ## Data quality and data care practices around impact
 
 Overall, the valences attributed to data on the managerial level anticipated IMPACT data as ' a given ' rather than an accomplishment that has to be created and maintained by
+
+
+<!-- PAGE 10 -->
+
 
 <!-- image -->
 
@@ -219,6 +256,10 @@ In contrast to the heterogenous data work described in case study 1, the second 
 In Germany, K-12 education is under the authority of the federal states ' ministries of education (MoEs). In each of the 16 federal states the MoEs operate their own school management information systems (SMIS). These are usually developed in-house and provide interfaces to other educational technologies such as learning management systems (e.g., itslearning, Moodle) or timetable planning (e.g., Untis). These systems are not only meant to facilitate the organisation of teaching and learning in schools but are an instrument for school governance. Federal ministries of education receive data about school performance which inform their actions. However, far from being a by-product of organisational processes, a substantial amount of additional labour is required to produce the data the MoEs request.
 
 For the purpose of this paper, we focus on data about lesson cancellation. The process of producing, processing, and using data about lesson cancellation is particularly interesting because it involves a wide variety of actors and levels in the individual schools (teachers, secretariats, school management), in the authorities (statistics departments, school inspectorates), but also policymakers and the media. Furthermore, the signi /uniFB01 cance of data concerning lesson cancellations in the education system has been growing, with increasing political implications. The media and the public consider it the state ' s responsibility to provide for the education of pupils, which essentially includes the provision of su /uniFB03 cient subject-speci /uniFB01 c teaching. In light of the growing focus on output performance, the relation between lesson cancellation and poor evaluations of learning outcomes has become ever more important. Policy makers are accountable for the use of public tax money, and state governments regularly have to justify cases of high lesson cancellation numbers. In addition, pressure is also exerted by parents and guardians who have a particularly strong interest in ensuring that their children receive a good education and reliable supervision.
+
+
+<!-- PAGE 11 -->
+
 
 <!-- image -->
 
@@ -237,6 +278,10 @@ And now we have recently introduced that the children also have access [to the d
 Timetable planner, federal state 2
 
 The reason for carefully pseudonymising this data is that it would otherwise provide information about teachers ' absences. The a /uniFB00 ordance of data to discover was used by parents to act upon data and -for example -complain about speci /uniFB01 c teachers. School actors (in particular timetable planners and school management) assumed the responsibility to con /uniFB01 gure the school ' s data entries in a way that only a limited set of actions is
+
+
+<!-- PAGE 12 -->
+
 
 <!-- image -->
 
@@ -266,6 +311,10 @@ This quote encapsulates the idea that data about schooling allow ministries of e
 
 They (the department of quality assurance) issued the quality framework and will have thought long and hard about why they took these quality areas with this data in particular, in order to then recognise how the school should be further developed.
 
+
+<!-- PAGE 13 -->
+
+
 In this line of argument, data need to be produced and processed in a way that allows for desired actionability to unfold (e.g., policy responses) while at the same time suppressing undesired actions (e.g., parents tracking teachers ' absences). Eventually, the publication on data portals is connected to yet another data valence: truthiness . With this valence, ' people expect data to comprise a single, objective representation of a measurable reality ' (Fiore-Gartland &amp; Ne /uniFB00 , 2015) which subsequently allows for discovery .
 
 ## Competing values and their stabilisation in data care arrangements
@@ -280,6 +329,10 @@ Both case studies demonstrate the increasing data /uniFB01 cation of everyday or
 
 The /uniFB01 rst case study (social work) demonstrates that it does not su /uniFB03 ce if the management of an organisation ascribes certain values to data leaving the ' petty aspects ' aside. Even if data valences are shared between management and frontline workers, new data work assignments are still confronted with existing care obligations, e.g., to handle the normal workload and to protect vulnerable interactional settings like Care Planning
 
+
+<!-- PAGE 14 -->
+
+
 <!-- image -->
 
 Conferences. Hence even if data valences are shared, the associated data work stands in competition with other care obligations. This competition is resolved in the /uniFB01 rst case study in various ways, from pragmatic data care work to extensive workarounds and rejections of data care, leading overall to a problematic data quality. The case study demonstrates the burden of the increasing obligation to perform data work without additional resources, specialised expertise or immediate rewards for one ' s own work practice.
@@ -293,6 +346,10 @@ In both cases, our analysis shows that workers do not relate to digital data in 
 ## Conclusion
 
 In this paper, we were interested in mundane data work that takes place as part of everyday organisational practices. We asked why and how people in organisations care for data. On the basis of two case studies, we have demonstrated that by ascribing values to data, data become a matter of care . This is a mandatory but not su /uniFB03 cient condition for the con /uniFB01 guration and stabilisation of data care arrangements. At the managerial level, data valences are mainly mobilised to make frontline workers comply with care demands towards data in order to pursue speci /uniFB01 c organisational or policy goals (e.g., to ensure e /uniFB03 cient use of limited social work resources or to ensure good education). Similarly, frontline workers ascribe values to data that are in line with their main (and potentially
+
+
+<!-- PAGE 15 -->
+
 
 <!-- image -->
 
@@ -314,6 +371,10 @@ The paper hence demonstrates that it is of key importance how visible and valued
 ## Disclosure statement
 
 No potential con /uniFB02 ict of interest was reported by the author(s).
+
+
+<!-- PAGE 16 -->
+
 
 <!-- image -->
 
@@ -341,6 +402,10 @@ Juliane Jarke is Professor of Digital Societies at the University of Graz. Her r
 - Held, V. (2018). The ethics of care. The Oxford Handbook of Distributive Justice , 1 , 213 -234. Hitzler, S., &amp; Messmer, H. (2010). Group decision-making in child welfare and the pursuit of participation. Qualitative Social Work , 9 (2), 205 -226. https://doi.org/10.1177/147332501 0372156
 - Hoeyer, K., &amp; Wadmann, S. (2020). ' Meaningless work ' : How the data /uniFB01 cation of health recon /uniFB01 -gures knowledge about work and erodes professional judgement. Economy and Society , 49 (3), 433 -454. https://doi.org/10.1080/03085147.2020.1733842
 - Jarke, J., Hartong, S., Raabe, T., Dabisch, V., Breiter, A., Lange, A., &amp; Zakharova, I. (2023). Zur Erfassung und Modellierung der "Hinterbühne" von Daten /uniFB02 üssen: Das Beispiel Unterrichtsausfall. In Bock, A., Breiter, A., Hartong, S., Jarke, J., Jornitz, S., Lange, A., &amp;
+
+
+<!-- PAGE 17 -->
+
 
 <!-- image -->
 
@@ -371,5 +436,9 @@ Juliane Jarke is Professor of Digital Societies at the University of Graz. Her r
 - Tronto, J. C. (2013). Caring democracy: Markets, equality, and justice . New York University Press.
 - Winance, M. (2010). Care and disability practices of experimenting, tinkering with, and arranging people and technical aids. In A. Mol, I. Moser, &amp; J. Pols (Eds.), Care in practice. On tinkering in clinics, homes and farms (pp. 93 -118). Transcript Verlag.
 - Witte, S., Miehlbradt, L. S., van Santen, E., &amp; Kindler, H. (2019). Preventing child endangerment: Child Protection in Germany. In L. Merkel-Holguin (Ed.), Child maltreatment. National systems of Child Protection (Vol. 8, 1st ed., pp. 93 -114). Springer.
+
+
+<!-- PAGE 18 -->
+
 
 <!-- image -->

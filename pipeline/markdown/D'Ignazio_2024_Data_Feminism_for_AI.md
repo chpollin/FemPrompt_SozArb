@@ -1,10 +1,11 @@
 ---
 source_file: D'Ignazio_2024_Data_Feminism_for_AI.pdf
-conversion_date: 2026-02-03T08:46:09.412965
+conversion_date: 2026-02-03T18:24:16.633732
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -79,6 +80,10 @@ June 3 - 6, 2024 Rio de Janeiro, Brazil
 
 .
 
+
+<!-- PAGE 2 -->
+
+
 ## ABSTRACT
 
 This paper presents a set of intersectional feminist principles for conducting equitable, ethical, and sustainable AI research. In Data Feminism (2020), we offered seven principles for examining and challenging unequal power in data science. Here, we present a rationale for why feminism remains deeply relevant for AI research, rearticulate the original principles of data feminism with respect to AI, and introduce two potential new principles related to environmental impact and consent. Together, these principles help to 1) account for the unequal, undemocratic, extractive, and exclusionary forces at work in AI research, development, and deployment; 2) identify and mitigate predictable harms in advance of unsafe, discriminatory, or otherwise oppressive systems being released into the world; and 3) inspire creative, joyful, and collective ways to work towards a more equitable, sustainable world in which all of us can thrive.
@@ -127,6 +132,10 @@ Since the publication of the book, the principles of Data Feminism have been tak
 
 Feminism has a long, varied, and often contested history. While it exceeds the scope of this paper to summarize the entirety of this history, it is important to clarify the definition of feminism we mobilize here. At its most basic level, feminism entails a belief in the equality of all genders. This includes women and men, as well as Two Spirit, genderqueer, travesti, nonbinary people, and more. But until gender equality is realized in the world, our feminism also requires organized activity to make this goal of equality a reality. A third aspect of our feminism derives from its intellectual heritage, and a crucial part of this heritage is intersectional feminism , which comes to us from the work of women of color feminists, and Black feminists in the United States in particular. The contributions of
 
+
+<!-- PAGE 3 -->
+
+
 intersectional feminism are twofold: first, to bring additional facets of social difference to the conversation about gender inequality, including but not limited to racial and economic inequality; and second to insist that we concern ourselves with structural power: the reasons why people experience privilege on the one hand, or oppression on the other. Intersectional feminism offers models (in the conceptual sense, not the machine learning sense) that explain the causal mechanisms of complex systems of power and guide action to transform them towards justice. These include the Combahee River Collective's observation about 'interlocking systems of oppression' [33], Patricia Hill Collins's formulation of the 'matrix of domination' [76], and Kimberlé Crenshaw's term 'intersectionality' [36]. Note that these intersectional feminist models of power are not the only models of structural power that exist; others have theorized the workings of structural inequality from the perspective of capitalism, colonialism, and so on. We are drawn to intersectional feminist theories of power because of how they bridge personal experience and structural frameworks, and because they are explicit about their goal: understanding present imbalances of power in the world so that they can be challenged, rebalanced, and changed.
 
 ## 2.2 Feminism Today
@@ -147,6 +156,10 @@ Feminism has also informed a range of applied work, including research on the ha
 
 Looking more broadly, scholarship on feminism and AI stretches back at least to Alison Adam's 1998 book, Artificial Knowing [3], which, as Keyes and Creel [85] remind us, used feminist epistemology to challenge the presumed universality of AI research of the time. One of the most widely-cited scholarly papers in AI ethics
 
+
+<!-- PAGE 4 -->
+
+
 today, by Joy Buolamwini and Timnit Gebru, employed an intersectional feminist perspective to analyze corporate computer vision systems [22]. As the hype surrounding AI has increased, additional work explicitly linking feminism and AI has emerged. Communications scholar Sophie Toupin [147] conducted a critical survey of this literature to create a typology of six ways that feminism and AI have been linked, including feminist ML models, design-based approaches, and feminist influences on AI policy, culture, discourse and science. A recent edited volume, Feminist AI [20], assembled twenty-one chapters ranging in focus from the dearth of women in AI research [151] to Afrofeminist digital futures [110] to the intersection of AI and racial capitalism [69]. In addition, global feminist networks like the Feminist Internet Research Network [112] and the &lt;A+&gt; Alliance [59] have emerged to support action on issues of algorithmic bias, labor and the economy, AI-induced gender violence, and more. Civil society organizations have also contributed to the conversation about feminist, decolonial and emancipatory approaches to AI. These are too numerous to comprehensively list, but some examples include Coding Rights in Brazil [130], IT For Change in India [131], Data Género in Argentina [64], and Pollicy in Uganda [121]. Taken together, these show the wide-ranging relevance and utility of feminism for AI research.
 
 ## 4 DATA FEMINISM FOR AI
@@ -164,6 +177,10 @@ Recent scholarship has also drawn attention to the colonial dynamics of AI resea
 The capitalism at work in the US, the current epicenter of corporate AI research, has been variously named surveillance capitalism [160], oligarchic capitalism [60], and even neofeudalism [44]. Looking back, we can also see its power emerge in the racial capitalism described by Cedric Robinson and others. This is the idea that racialized exploitation has gone hand in hand with capitalist accumulation-indeed that markets are reliant on the production of social hierarchies whereby some groups may own, accumulate, and thrive, and others are excluded, exploited, and marked for premature death. Racial capitalism is also always gendered capitalism , as work by Angela Davis [42], Silvia Federici [57], Verónica Gago [61] and other Marxist feminists have shown. These are systems in which wage gaps, property laws, gender norms, debt structures, and the lack of reproductive rights conspire to maintain women and genderqueer people as a global economic underclass, with additional repercussions for those who are also Black and brown. In short, capitalism is premised upon the preservation of unequal power: of the enforcement of the racial, gendered, and other social hierarchies which enable the extraction of labor, and therefore value, from the many for the profit of the few [35]. These dynamics are clearly visible in the current landscape of AI, in which research agendas are similarly set by the few. It is no surprise, then, that their goal is to maximize corporate profit and to preserve (or even increase) the social and political power that enables it.
 
 The artist Mimi O . nu . o . ha's Library of Missing Datasets [116] underscores this point. For O . nu . o . ha, missing datasets serve as 'cultural and colloquial hints of what is deemed important' and what is not. Whencorporations operate without restrictions or regulations, they determine which issues (or groups of people) are worth collecting data about, and which issues (or people) can be ignored. Shareholder interest and public interest are rarely aligned. Corporate choices determine what research questions can be asked, what analysis can be undertaken, which models can be trained, and which users will ultimately be served by those models. We have seen this play out very visibly with respect to LLMs, where researchers such as Emily Bender, Timnit Gebru, Angelina McMillan-Major, and Margaret Mitchell were quick to point out how the models' training data was far from representative, even if its size was substantial [12]. Subsequent research has documented more specific
+
+
+<!-- PAGE 5 -->
+
 
 biases against women [92], Muslim people [2], racial and ethnic minorities [115, 132], specific social roles [101], and more.
 
@@ -185,6 +202,10 @@ Examples of each of these aspects to challenging the power of AI are already und
 
 Viewed another way, however, the probabilistic basis of these models can be harnessed to challenge and rebalance power. As Wendy Kui Hyong Chun helpfully articulates via the example of models of climate change, these models 'offer us the most probable future, given past and current actions, not so that we will accept their predictions as inevitable, but rather so we will use them to help
 
+
+<!-- PAGE 6 -->
+
+
 change the future ' (emphasis ours) (26). Following Chun, what if we treated the biased output of LLMs not as any ground truth but as but as motivation for intervention so that those biases are no longer experienced in the world?
 
 At the same time, the scope and scale of the corporate capture of AI also requires a commitment to collective visioning and collective action. There is valuable work being done on data trusts as an alternative to standard data repositories, such as the Worker Info Exchange, which pools data from rideshare workers so that they can ask questions about their employers [56]. In the LLM space, we might look to the BLOOM model, an attempt at training a fully-documented large language model in an open, collaborative way [158]. Researchers are also considering how they might form independent research coalitions in order to lobby for access to the data of Big Tech that they need in order to conduct their work [105]. And workers whose livelihoods are being threatened by AI are turning to unions and organizing in order to advocate for the conditions they need in order to thrive [8, 153].
@@ -204,6 +225,10 @@ We also see this power move taking place on a conceptual level, in which consume
 The field of data science-the focus of Data Feminism -has never been known for its exemplary inclusion. But the scope and scale of the conversation around the power and perils of data did lead to an observable change-if not a full recalibration-in inclusivity in the field. In under a decade, Harvey Mudd College, under the leadership of president Maria Klawe, increased the percentage of women computer science majors to over 50%, demonstrating that CS professors and administrators that whine about "the pipeline" have no leg to stand on [87, 157]. But it is not a coincidence that as the broader fields of data science and computer science have grown more inclusive, a subset of researchers from within those fields have begun to pull away in order to reconstitute the field of AI. That this group is WEIRD-Western, educated, industrialized, rich, and (arguably) democratic [138]-and also heavily dominated by white cisgender men, appears to us as evidence of another iteration of a common trend in technical fields: the emergence of new gatekeeping mechanisms in order ensure that those at the top are able to maintain their elite status in the field.
 
 It is also important to recognize the very real ways the gender binary has been operationalized and even weaponized in AI research. Beyond ample evidence of the gender biases against cisgender women, and trans and nonbinary people, that are entrenched in LLMs, AI researchers appear to have an antiquated understanding of gender itself [48, 84, 136, 142]. This lack of understanding of gender, in turn, leads to the inaccurate (at best) and harmful (at worst) research design and applications. And sex fares no better [5]. There is a near-universal failure to understand that neither sex nor gender are essential, "natural", or fixed properties, and they certainly cannot be "detected."
+
+
+<!-- PAGE 7 -->
+
 
 One might extend this gender trouble to other projects that seek to identify, measure, or otherwise quantify complex aspects of social and physical difference. From the entire industry being built around 'Emotion AI,' which seeks to measure emotion in images and in real-time video, to employment screening services that purport to measure employability, to what has been termed neo-phrenology : an attempt to measure emphatically immeasurable qualities such as intelligence or criminality using algorithmic means [143]. In these and any new proposed use cases, we must ask ourselves whether they are reinforcing binaries - gender binaries, patriarchal hierarchies, and paternalistic stereotypes - and if so, instead think otherwise about how to model gender, how to build tools for gender safety, and how to create a world where technologies cease to erase and harm trans and non-binary people.
 
@@ -227,6 +252,10 @@ Data feminism insists that the most complete knowledge comes from synthesizing m
 
 The principle of embracing pluralism builds from the previous principle, which emphasizes alternate forms of knowing. Here, the emphasis is on how we might represent multiple perspectives in our work. Crucially, 'multiple perspectives' does not simply mean multiple opinions. Building on the work of Sandra Harding, and more recently, the Design Justice Network, 'multiple perspectives' has become a beacon for the wide range of experiences, social positions, and places in the world from which people produce knowledge. The central premise of embracing pluralism is that we can gain better, more detailed, more accurate, and ultimately more truthful
 
+
+<!-- PAGE 8 -->
+
+
 knowledge if we pool these perspectives together, paying particular attention to the perspectives of those who are most directly impacted by the issue at hand.
 
 The prospect of embracing pluralism becomes harder in terms of both architecture and access when scaling up to larger models. LLMs must be pre-trained by those with access to both data and compute, introducing barriers to early-stage participation that had previously not existed. While the push for more open-source models (e.g. BLOOM, OLMo) and more transparent models (e.g. the Stanford Transparency Index) are certainly welcome, the technical requirements of training such models make it far more difficult to involve impacted individuals and small groups in their creation. One recent example that suggests a path forward comes from a project led by Maria Antoniak [10] which surveyed both pregnant people and healthcare providers about their ideas and fears about the possibility for an AI-assisted chatbot that might help to navigate the experience of pregnancy. Like the feminicide classifier, Antoniak et al. very crucially did not build the chatbot first and then ask for feedback; instead, they created a study that included people with multiple forms of expertise and that enabled them to share that knowledge. The output of the project was a set of values, distilled from the participants themselves, that might guide future work.
@@ -245,6 +274,10 @@ Data feminism asserts that data are not neutral or objective. They are the produ
 
 The sixth principle, to consider context, is at once universally applicable to AI research and yet (nearly) universally ignored. This principle applies most directly to the issue of training data, which we began to discuss with respect to language models in the principle on power. Related work has shown how additional (human) decisions made during the training and filtering process introduce additional biases into these datasets, such as for text written by those of higher socioeconomic status [67], and those who occupy specific social and professional roles [101]. Related research has explored text-to-image models, with findings related to the reproduction of sexist, racist, and colonial biases [113, 124]. What we learn from feminism is how understanding the contexts in which these datasets are created, and more broadly, a recognition of how all data is shaped by unequal social relations, is essential for identifying any downstream biases or potential harms. It is also necessary
 
+
+<!-- PAGE 9 -->
+
+
 for ensuring that research questions are properly framed, that evidence is properly analyzed, and that any claims that might be made on the basis of that analysis are properly scoped.
 
 A final consideration with respect to context has to do with historical context-and in particular, of the historical context of AI research itself. This history is an uncomfortable one, as it points to the longstanding complicity of the field of computer science with US military research. This dates back to the DARPA-funded creation of ARPANET, the precursor to the internet [4]. It carries through to the construction of OntoNotes, the hand-labeled language model underlying many common NLP libraries, which was another DARPA-funded project [123]; and to specific approaches to language modeling, such as topic modeling, which came about through a government desire to monitor global newswire messages at scale [16]. More recently, news reports have drawn our attention to the role that Amazon has played in cloud storage for the US Immigration and Customs Enforcement agency (ICE) [71]; and how Google developed technology to make drone strikes more accurate, which they then sold to the US government [118]. These developments are no longer theoretical, as evidence emerges that they are being put to use by Israel against Palestine, and with horrific human costs [41]. As advocacy efforts such as #NoTechForApartheid [11] and publications such as Logic(s) Magazine [1] powerfully remind us, these inhumane, destructive, and-in the context of Palestine, genocidal-contexts are those in which far too many technical innovations are put to use. We, as AI researchers, can no longer claim ignorance about these contexts as among the uses for our work.
@@ -260,6 +293,10 @@ This final principle highlights the many people whose labor enables work with da
 The workforce of the Global North is not exempt from the incursion of AI, of course. In the US, we have seen lawsuits by Getty Photography and The New York Times brought against companies peddling generative AI technologies. In addition, the summer and fall of 2023 saw major strikes by the Writers Guild of America [8] and the Screen Actors Guild [153]. These culminated in necessary protections against the use of AI to revise scripts and in the creation of likenesses of human actors. We also celebrate the larger trend towards collective action in the tech sector, and in white collar jobs more broadly, as a counterforce to the relentless individualism championed by capitalism. Graduate students at elite engineering universities in the US are beginning to unionize, joining long-standing unions at public institutions including the University of California system, the Cal State system, and the City University of New York, among others. We must continue to ensure that these efforts at building solidarity cut across lines otherwise drawn by technical expertise. After all, the history of colonialism tells us that those at the lower end of labor hierarchies will be the ones most impacted by any move to increase profit or workplace efficiency. Without solidarity across class, race, gender, and work sector, capitalist power will only continue to accrue.
 
 Because the current configuration of AI research is premised upon the consolidation of significant resources-technical and economic as well as human-this colonial structure has become solidified as the fundamental framework on which AI depends. One need only look at the investigative reporting that followed the initial release of ChatGPT, which showed that this 'artificial' intelligence depended on very human workers in Kenya screening potentially offensive responses in real-time [119]. The location of these workers is not a coincidence. Scholars such as Julian Posada have asserted that companies in the Global North exploit political instability and capitalize on catastrophe to enrich themselves, a familiar and longstanding historical pattern [122]. This joins a long line of research (and evidence in the world) that documents how capitalism is fundamentally dependent upon resource extraction-and on paying as little as possible for those resources, including human labor, in order to maximize profit [35, 127].
+
+
+<!-- PAGE 10 -->
+
 
 ## 5 DISCUSSION: FUTURE PRINCIPLES FOR FEMINIST AI
 
@@ -294,6 +331,10 @@ We would like to thank Nikki Stevens and Isadora Cruxên for their feedback on e
 - [7] "Data-Pop Alliance". 2022. "Data Feminism: Intersectional Data-Driven Advocacy and Policy for Gender Equality". https://datapopalliance.org/ourwork/thematic-programms/program\_data\_feminism/
 - [9] Natasha Ansari. 2024. "Welcome to the Data + Feminism Lab! LAB HANDBOOK". "https://docs.google.com/document/d/1B48\_ Gub2ik6FA7Ly0zxn9q7ioQXLf7htMkFLbKxo\_zE/"
 - [8] Dani Anguiano and Lois Beckett. 2023. "How Hollywood writers triumphed over AI - and why it matters". https://www.theguardian.com/culture/2023/ oct/01/hollywood-writers-strike-artificial-intelligence
+
+
+<!-- PAGE 11 -->
+
 
 - [10] Maria Antoniak, Aakanksha Naik, Carla S. Alvarado, Lucy Lu Wang, and Irene Y. Chen. 2023. "Designing Guiding Principles for NLP for Healthcare: A Case Study of Maternal Health". https://doi.org/10.48550/arXiv.2312.11803 arXiv:2312.11803 [cs].
 - [12] Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. 2021. On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?. In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (FAccT '21) . Association for Computing Machinery, New York, NY, USA, 610-623. https://doi.org/10.1145/3442188.3445922
@@ -354,6 +395,10 @@ We would like to thank Nikki Stevens and Isadora Cruxên for their feedback on e
 - [63] Kathomi Gatwiri, Savia Hasanova, Anna Kapushenko, Lyubava Malysheva, Saide Mobayed Vega, Audrey Mugeni, Rosalind Page, Ivonne Ramírez, Helena Suárez Val, Dawn Wilcox, and Aimee Zambrano Ortiz. 2023. Feminicide Data Activism (1 ed.). Routledge, London, 103-113. https://doi.org/10.4324/
 - [62] Rosemarie Garland-Thomson. 2011. Misfits: A Feminist Materialist Disability Concept. Hypatia 26, 3 (July 2011), 591-609. https://doi.org/10.1111/j.15272001.2011.01206.x
 
+
+<!-- PAGE 12 -->
+
+
 9781003202332-13
 
 - [65] Sharon Goldman. 2023. A free AI image dataset, removed for child sex abuse images, has come under fire before. https://venturebeat.com/ai/a-free-ai-imagedataset-removed-for-child-sex-abuse-images-has-come-under-fire-before/
@@ -403,6 +448,10 @@ We would like to thank Nikki Stevens and Isadora Cruxên for their feedback on e
 - [108] Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, and Timnit Gebru. 2019. Model Cards for Model Reporting. In Proceedings of the Conference on Fairness, Accountability, and Transparency (Atlanta, GA, USA) (FAT* '19) . Association for Computing Machinery, New York, NY, USA, 220-229. https://doi.org/10.1145/3287560.3287596
 - [110] Iyer Neema, Chair Chenai, and Achieng Garnett. 2023. Feminist AI: Critical Perspectives on Algorithms, Data, and Intelligent Machines . Oxford University Press, Oxford, Chapter Afrofeminist Data Futures, 347-388. https://doi.org/10. 1093/oso/9780192889898.003.0020
 - [109] Sebastian Moss. 2023. "Meta begins paying underpaid Irish data center electricity bill after ESB Networks error". https://www.datacenterdynamics. com/en/news/meta-begins-paying-underpaid-irish-data-center-electricitybill-after-esb-networks-error/
+
+
+<!-- PAGE 13 -->
+
 
 - [111] Ashley Nellis. 2021. The Color of Justice: Racial and Ethnic Disparity in State Prisons. https://www.sentencingproject.org/reports/the-color-of-justice-racialand-ethnic-disparity-in-state-prisons-the-sentencing-project/
 - [113] Leonardo Nicoletti and Dina Bass Technology + Equality. 2023. Humans Are Biased. Generative AI Is Even Worse. https://www.bloomberg.com/graphics/ 2023-generative-ai-bias/
@@ -454,6 +503,10 @@ Facial Analysis Services. Proceedings of the ACM on Human-Computer Interaction 3
 - [156] Katianne Williams. 2021. Data Feminism: D'ignazio and Klein Call Out Inequality in Data. IEEE Women in Engineering Magazine 15, 1 (June 2021), 21-23. https: //doi.org/10.1109/MWIE.2021.3062921
 - [155] Meredith Whittaker. 2021. The steep cost of capture. Interactions 28, 6 (Nov. 2021), 50-55. https://doi.org/10.1145/3488666
 - [157] Laura Winig. 2021. "Harvey Mudd College: Promoting Women in Computer Science through Inclusive Education". https://case.hks.harvard.edu/harveymudd-college-promoting-women-in-computer-science-through-inclusiveeducation/
+
+
+<!-- PAGE 14 -->
+
 
 [158] BigScience Workshop, Teven Le Scao, Angela Fan, Christopher Akiki, Ellie Pavlick, Suzana Ilić, Daniel Hesslow, Roman Castagné, Alexandra Sasha Luccioni, François Yvon, Matthias Gallé, Jonathan Tow, Alexander M. Rush, Stella Biderman, Albert Webson, Pawan Sasanka Ammanamanchi, Thomas Wang, Benoît Sagot, Niklas Muennighoff, Albert Villanova del Moral, Olatunji Ruwase, Rachel Bawden, Stas Bekman, Angelina McMillan-Major, Iz Beltagy, Huu Nguyen, Lucile Saulnier, Samson Tan, Pedro Ortiz Suarez, Victor Sanh, Hugo Laurençon, Yacine Jernite, Julien Launay, Margaret Mitchell, Colin Raffel, Aaron Gokaslan, Adi Simhi, Aitor Soroa, Alham Fikri Aji, Amit Alfassy, Anna Rogers, Ariel Kreisberg Nitzav, Canwen Xu, Chenghao Mou, Chris Emezue, Christopher Klamm, Colin Leong, Daniel van Strien, David Ifeoluwa Adelani, Dragomir Radev, Eduardo González Ponferrada, Efrat Levkovizh, Ethan Kim, Eyal Bar Natan, Francesco De Toni, Gérard Dupont, Germán Kruszewski, Giada Pistilli, Hady Elsahar, Hamza Benyamina, Hieu Tran, Ian Yu, Idris Abdulmumin, Isaac Johnson, Itziar Gonzalez-Dios, Javier de la Rosa, Jenny Chim, Jesse Dodge, Jian Zhu, Jonathan Chang, Jörg Frohberg, Joseph Tobing, Joydeep Bhattacharjee, Khalid Almubarak, Kimbo Chen, Kyle Lo, Leandro Von Werra, Leon Weber, Long Phan, Loubna Ben allal, Ludovic Tanguy, Manan Dey, Manuel Romero Muñoz, Maraim Masoud, María Grandury, Mario Šaško, Max Huang, Maximin Coavoux, Mayank Singh, Mike Tian-Jian Jiang, Minh Chien Vu, Mohammad A. Jauhar, Mustafa Ghaleb, Nishant Subramani, Nora Kassner, Nurulaqilla Khamis, Olivier Nguyen, Omar Espejel, Ona de Gibert, Paulo Villegas, Peter Henderson, Pierre Colombo, Priscilla Amuok, Quentin Lhoest, Rheza Harliman, Rishi Bommasani, Roberto Luis López, Rui Ribeiro, Salomey Osei, Sampo Pyysalo, Sebastian Nagel, Shamik Bose, Shamsuddeen Hassan Muhammad, Shanya Sharma, Shayne Longpre, Somaieh Nikpoor, Stanislav Silberberg, Suhas Pai, Sydney Zink, Tiago Timponi Torrent, Timo Schick, Tristan Thrush, Valentin Danchev, Vassilina Nikoulina, Veronika Laippala, Violette Lepercq, Vrinda Prabhu, Zaid Alyafeai, Zeerak Talat, Arun Raja, Benjamin Heinzerling, Chenglei Si, Davut Emre Taşar, Elizabeth Salesky, Sabrina J. Mielke, Wilson Y. Lee, Abheesht Sharma, Andrea Santilli, Antoine Chaffin, Arnaud Stiegler, Debajyoti Datta, Eliza Szczechla, Gunjan Chhablani, Han Wang, Harshit Pandey, Hendrik Strobelt, Jason Alan Fries, Jos Rozen, Leo Gao, Lintang Sutawika, M. Saiful Bari, Maged S. Al-shaibani, Matteo Manica, Nihal Nayak, Ryan Teehan, Samuel Albanie, Sheng Shen, Srulik Ben-David, Stephen H. Bach, Taewoon Kim, Tali Bers, Thibault Fevry, Trishala Neeraj, Urmish Thakker, Vikas Raunak, Xiangru Tang, Zheng-Xin Yong, Zhiqing Sun, Shaked Brody, Yallow Uri, Hadar Tojarieh, Adam Roberts, Hyung Won Chung, Jaesung Tae, Jason Phang, Ofir Press, Conglong Li, Deepak Narayanan, Hatim Bourfoune, Jared Casper, Jeff Rasley, Max Ryabinin, Mayank Mishra, Minjia Zhang, Mohammad Shoeybi, Myriam Peyrounette, Nicolas Patry, Nouamane Tazi, Omar Sanseviero, Patrick von Platen, Pierre Cornette, Pierre François Lavallée, Rémi Lacroix, Samyam Rajbhandari, Sanchit Gandhi, Shaden Smith, Stéphane Requena, Suraj Patil, Tim Dettmers, Ahmed Baruwa, Amanpreet Singh, Anastasia Cheveleva, Anne-Laure Ligozat, Arjun Subramonian, Aurélie Névéol, Charles Lovering, Dan Garrette, Deepak Tunuguntla, Ehud Reiter, Ekaterina Taktasheva, Ekaterina Voloshina, Eli Bogdanov, Genta Indra Winata, Hailey Schoelkopf, Jan-Christoph Kalo, Jekaterina Novikova, Jessica Zosa Forde, Jordan Clive, Jungo Kasai, Ken Kawamura, Liam Hazan, Marine Carpuat, Miruna Clinciu, Najoung Kim, Newton Cheng, Oleg Serikov, Omer Antverg, Oskar van der Wal, Rui Zhang, Ruochen Zhang, Sebastian Gehrmann, Shachar Mirkin, Shani Pais, Tatiana Shavrina, Thomas Scialom, Tian Yun, Tomasz Limisiewicz, Verena Rieser, Vitaly Protasov, Vladislav Mikhailov, Yada Pruksachatkun, Yonatan Belinkov, Zachary Bamberger, Zdeněk Kasner, Alice Rueda, Amanda Pestana, Amir Feizpour, Ammar Khan, Amy Faranak, Ana Santos, Anthony Hevia, Antigona Unldreaj, Arash Aghagol, Arezoo Abdollahi, Aycha Tammour, Azadeh HajiHosseini, Bahareh Behroozi, Benjamin Ajibade, Bharat Saxena, Carlos Muñoz Ferrandis, Daniel McDuff, Danish Contractor, David Lansky, Davis David, Douwe Kiela, Duong A. Nguyen, Edward Tan, Emi Baylor, Ezinwanne Ozoani, Fatima Mirza, Frankline Ononiwu, Habib Rezanejad, Hessie Jones, Indrani Bhattacharya, Irene Solaiman, Irina Sedenko, Isar Nejadgholi, Jesse Passmore, Josh Seltzer, Julio Bonis Sanz, Livia Dutra, Mairon Samagaio, Maraim Elbadri, Margot Mieskes, Marissa Gerchick, Martha Akinlolu, Michael McKenna, Mike Qiu, Muhammed Ghauri, Mykola Burynok, Nafis Abrar, Nazneen Rajani, Nour Elkott, Nour Fahmy, Olanrewaju Samuel, Ran An, Rasmus Kromann, Ryan Hao, Samira Alizadeh, Sarmad Shubber, Silas Wang, Sourav Roy, Sylvain Viguier, Thanh Le, Tobi Oyebade, Trieu Le, Yoyo Yang, Zach Nguyen, Abhinav Ramesh Kashyap, Alfredo Palasciano, Alison Callahan, Anima Shukla, Antonio Miranda-Escalada, Ayush Singh, Benjamin Beilharz, Bo Wang, Caio Brito, Chenxi Zhou, Chirag Jain, Chuxin Xu, Clémentine Fourrier, Daniel León Periñán, Daniel Molano, Dian Yu, Enrique Manjavacas, Fabio Barth, Florian Fuhrimann, Gabriel Altay, Giyaseddin Bayrak, Gully Burns, Helena U. Vrabec, Imane Bello, Ishani Dash, Jihyun Kang, John Giorgi, Jonas Golde, Jose David Posada, Karthik Rangasai Sivaraman, Lokesh Bulchandani, Lu Liu, Luisa Shinzato, Madeleine Hahn de Bykhovetz, Maiko Takeuchi, Marc Pàmies, Maria A. Castillo, Marianna Nezhurina, Mario Sänger, Matthias Samwald, Michael Cullan, Michael Weinberg, Michiel De Wolf, Mina Mihaljcic, Minna Liu, Moritz Freidank, Myungsun Kang, Natasha Seelam, Nathan Dahlberg, Nicholas Michio
 

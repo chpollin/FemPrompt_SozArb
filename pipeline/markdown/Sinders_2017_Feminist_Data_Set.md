@@ -1,13 +1,18 @@
 ---
 source_file: Sinders_2017_Feminist_Data_Set.pdf
-conversion_date: 2026-02-03T09:24:08.160092
+conversion_date: 2026-02-03T18:55:20.268140
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 ## FEMINIST DATA SET
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## ABOUT THE AUTHOR
 
@@ -22,6 +27,10 @@ Sinders has held fellowships with the Harvard Kennedy School, the Mozilla Founda
 This project was sponsored in part by the Clinic for Open Source Arts (COSA) at the University of Denver.
 
 The layout was designed by Kat Coneybear, a graphic designer living and working in New Orleans, Louisiana.
+
+
+<!-- PAGE 3 -->
+
 
 ## TABLE OF CONTENTS
 
@@ -42,6 +51,10 @@ The layout was designed by Kat Coneybear, a graphic designer living and working 
 |      13 | What Does a Feminist Chat Bot Need? Thinking Through Conversational Design                                       | TBD |
 |      14 | Criticial User Interfaces: Using Feminist HCI and UI Design to Create                                            | TBD |
 
+
+<!-- PAGE 4 -->
+
+
 ## WHAT IS FEMINIST DATA? AND WHY DO WE NEED A FEMINIST DATA SET? WHAT IS FEMINIST DATA? AND WHY DO WE NEED A FEMINIST DATA SET?
 
 Feminist Data Set is a multi-year project that interrogates every step of the AI process that includes data collection, data labeling, data training, selecting an algorithm to use, the algorithmic model, and then designing how the model is then placed into a chat bot (and what the chatbot looks like) through intersectional feminism as an investigatory framework. Every step exists to question and analyze the pipeline of creating using machine learning-is each step feminist, is it intersectional, does each step have bias and how can that bias be removed? Really, what does it mean to think through every step slowly and thoughtfully; metaphorically, can we think of this as farm to server table, as slow data and consensual data?
@@ -54,6 +67,10 @@ Feminist Data Set imagines data creation, as well as data sets and archiving, as
 
 Data Set imagines data creation, as well as data sets and archiving, as an act of protest. When users, when people are cut out of the process of deciding what data collection means and how data is collected, the communal and slow process of Feminist Data Set empahsizes this protest. Feminist Data Set is a process-driven art project. In a time where so much personal data is caught and hidden by large technology companies and used for targeted advertising and algorithmic suggestions, what does it mean to make a data set about political ideology, one designed for use as protest, and to make a data set as a community? Feminist Data Set as a multi-year project aims to confront this. In our first workshop in 2017, over three days at SPACE art and technology in London, I and other participants started to conceptualize the greater project by writing our manifesto, featured at the bottom of this worksheet, and thinking through structures of data sets, structures of data collection, and how structure can
 
+
+<!-- PAGE 5 -->
+
+
 be inhibiting and also revolutionary. This idea of the structure inhibiting and/or rendering invisibility while also providing spaces for creation will be explored in a later chapter. In the data collection section, this duality on data will be explored-data as constriction and data as openness.
 
 Politically and artisticially, Feminist Data Set is is inspired by the work of the maker movement, critical design, Arte Útil, Data Feminism, Design Justice, the Critical Engineering Manifesto, Xenofeminism, and the Feminist Principles of the Internet. Pedagogically, Feminist Data Set operates in a similar vein to Thomas Thwaites's 'Toaster Project,' a critical design project in which Thwaites builds a commercial toaster from scratch. Feminist Data Set, however, takes a critical and artistic view on software, particularly machine learning. What does it mean to thoughtfully make machine learning, to carefully consider every angle of making, iterating, and designing? Every step of this process needs to be thoroughly re-examined through a feminist lens.
@@ -61,6 +78,10 @@ Politically and artisticially, Feminist Data Set is is inspired by the work of t
 Currently, the project has just explored data collection and data training and labeling. I've already described, at a high level, the data collection part of Feminist Data Set, and in another chapter, the data training and labeling will be described. In machine learning, once data has been collected, it needs to be labeled and trained for the data model for the algorithm, and this process needs to be analyzed as well. Data labeling and training are done by people, and often done on platforms like Amazon's Mechanical Turk. However,
 
 2 https://www.nytimes.com/interactive/2019/11/15/nyregion/amazon-mechanical-turk.html workers on these platforms are often severely underpaid. A platform that allows for pay inequity, doesn't utilize the governance structures they have in place to benefit workers, 2  and doesn't seem to check tasks for abuse isn't a feminist system. Through workshops, we've started exploring what an intersectionally feminist data modeling and training system would need. Domains that need to be addressed are pay equity, transparency for tasks, working governance systems to ensure safety for workers and ensure quality of tasks, a way to refute abuse or mislabeled tasks, communication between workers on the platform, and a reporting system on clients that can be shared between workers. Currently, for the Feminist Data Set project we've created an open source training tool and a wage calculator to help creators, artists, start ups and people better price tasks for training and labeling data sets to try to create an intervention and more transprency around wage inequity.
+
+
+<!-- PAGE 6 -->
+
 
 ## MAKING CRITICAL ETHICAL SOFTWARE MAKING CRITICAL ETHICAL SOFTWARE
 
@@ -84,6 +105,10 @@ In machine learning, data is what defines the algorithm: it determines what the 
 
 5 Arte Útil, https://www.arte-util.org/.
 
+
+<!-- PAGE 7 -->
+
+
 Rachel Steinberg, image of the artist holding a workshop to create the data taxonomy and matrix for Feminist Data Set, 2018. Image reprinted with permission of SOHO20 gallery.
 
 <!-- image -->
@@ -97,6 +122,10 @@ Feminist Data Set imagines data creation, as well as data sets and archiving, as
 Ethical, communal, 'hackable' design and technology is a start towards an equitable future. It allows for community input, and for a community to drive or change a decision about a product, its technical capability, and its infrastructure. Feminist Principles of the Internet, a manifesto that addresses how to build feminist technology for the internet, builds upon this ethos by recognizing that in the process of making technical infrastructure, who it's built for has political ramifications. Feminist Principles of the Internet pushes open source technology and communities further by demanding space for marginalized groups and intent within technology, and it's this ethos in which Feminist Data Set exists.
 
 Feminist Principles of the Internet, as well as theories like cyborg feminism and Xenofeminism, calls for a change in technology and how it functions, as well as
+
+
+<!-- PAGE 8 -->
+
 
 a change of leadership and ownership for that technology. The manifesto of Feminist Principles of the Internet demands a redefinition and re-purposing of technology and open source: 'Women and queer persons have the right to code, design, adapt and critically and sustainably use ICTs and reclaim technology as a platform for creativity and expression, as well as to challenge the cultures of sexism and discrimination in all spaces.' 6  Within this document, Feminist Principles of the Internet define 'agency' as a necessary form of empowerment. 'We call on the need to build an ethics and politics of consent into the culture, design, policies and terms of service of internet platforms. Women's agency lies in their ability to make informed decisions on what aspects of their public or private lives to share online.' 7 Feminist Data Set exists within those realms of both technology and agency, as a critique on current machine learning infrastructure and practices, as well as a technical framework, critical methodology, and practice-based artwork attempting to address these issues.
 
@@ -120,6 +149,10 @@ Feminist Data Set operates in a similar vein to Thomas Thwaites's Toaster Projec
 
 9 Anthony Dunne and Fiona Raby, Design Noir: The Secret Life of Electronic Objects. Basel: August/Birkhäuser, 2001.
 
+
+<!-- PAGE 9 -->
+
+
 Caroline Sinders, The Feminist Data Set installed at the Victoria and Albert Museum, 2018. Image courtesy of the Victoria and Albert Museum, London.
 
 <!-- image -->
@@ -137,6 +170,10 @@ Originally, Feminist Data Set started as collaborative data set built through a 
 5. questioning whether a new algorithm needs to be created to be 'feminist' in its interpretation or understanding of the data and the models
 6. prototyping the interface
 7. refining
+
+
+<!-- PAGE 10 -->
+
 
 Every step exists to question and analyze the pipeline of creating using machine learning-is each step feminist, is it intersectional, does each step have bias and how can that bias be removed?
 
@@ -170,6 +207,10 @@ MANIFESTO: we are creating a space/thing/data set/capsule/art to question domina
 
 10 https://www.nbcnews.com/think/opinion/google-search-algorithms-are-not-impartial-they-are-biased-just-ncna849886
 
+
+<!-- PAGE 11 -->
+
+
 In 2020, I built, prototyped, and imagined what an ethical mechanical turk system could look like, one created from an intersectional feminist lens that can be used by research groups, individuals, and maybe even companies. Prior to building the system, I imagined and outlined the following in 2018:
 
 <!-- image -->
@@ -198,6 +239,10 @@ Frucci, Adam. 'HP Face-Tracking Webcams Don't Recognise Black People', Gizmodo, 
 
 Malpass, Matt. Critical Design in Context: History, Theory, and Practices. London: Bloomsbury, 2016.
 
+
+<!-- PAGE 12 -->
+
+
 ## THINKING THROUGH FEMINIST DATA COLLECTION AND CREATION: THINKING THROUGH FEMINIST DATA COLLECTION AND CREATION: A FEMINIST DATA SET DESIGN THINKING EXERCISE
 
 This chapter and exerices are designed to help think through what is equitable and feminist data set collection, generally for machine learning, but these principles can be applied to most fields that use data. Below are descriptions and research on feminist data, as well as a few exercises to conduct to better understand bias in data sets, and what 'feminist data' in practice could be.
@@ -222,6 +267,10 @@ intersectional feminism: a form of feminism that acknowledges that different ide
 
 The goal of this exercise is to explore intersectional feminist thinking in data, but also in society. Who
 
+
+<!-- PAGE 13 -->
+
+
 Caroline Sinders leading a Feminist Data Set workshop in Berlin, DE for Z2X gathering.
 
 <!-- image -->
@@ -233,6 +282,10 @@ technology is designed for, and how it acknowledges harms, pains, and pleasures,
 ## Start with data collection. Let's revisit our definition of 'data collection.'
 
 But what does this have to do with data? We need to think about power, context, and privilege in society, and how power, context, and privilege can change and warp technology, and produce unintended consequences. What is a feminist data set? Feminist Data Set is an intersectional, trans-inclusive, feminist art project that is collecting written work to train an artificial intelligence system to create a chatbot. Written work or 'text' is a form of data, just as census information and inputs is data, or images, like groups of dogs, muffins, or bananas, or the selfies of one person, are data. This 'text' that is being collected in Feminist Data Set through workshops can be anything text-based-from poetry, to blog posts, social media posts, podcasts transcripts, academic essays, books, articles, or music lyrics- that is written from a place of intersectional feminism. Similarly, feminist data would be data sets (of images, video, text, audio, you name it) that are created from an intersectional feminist point of view. Creating intersectional feminist data doesn't have to be data 'about feminism' or using the word feminism,
+
+
+<!-- PAGE 14 -->
+
 
 Image by Caroline Sinders from a Feminist Data Set workshop, 2017.
 
@@ -255,6 +308,10 @@ There is a bit of a reveal here when interacting the above exercise of 'finding'
 written texts by femmes, cis women, non-gender binary folx, women and people of color, can be hard to find, especially if those texts, books, or articles are written from a feminist perspective. Marginalized groups and women are under-cited in scholarly articles, books, and press. 12 When holding Feminist Data Set workshops, even if there is access to a library, it's still hard to find this 'data,' the written texts. The searching for this kind of information-of articles written from an intersectional perspective-requires deeper and longer searching; it takes time. Even in multi-day workshops, it takes participants time to unpack, search, and search again for feminist data.
 
 The difficulty beyond lack of citations extends to the design of search tools. The easiest to use and most accessible tool for participants is a web browser search engine, such as Google. But how search engines are designed poses a problem, especially in retrieving and ranking content. These search engines are biased 13 in surfacing content-some of it is from surfacing popular content, 14 and some of it is from misaligned
+
+
+<!-- PAGE 15 -->
+
 
 or improperly trained algorithms. But the popular content feeding the algorithm for results is an interesting one-if marginalized groups are under-cited and their work is underreported, how can that content ever surface up high enough in Google search results? Search results help shape our access to information and content, and search engines create an ouroboros of popularized content, making it hard for new content to permeate through this loop. Feminist Data Set workshops highlight this problem through previously held workshops.
 

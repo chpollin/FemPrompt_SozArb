@@ -1,10 +1,11 @@
 ---
 source_file: Gallegos_2024_Bias_and_fairness_in_large_language_models_A.pdf
-conversion_date: 2026-02-03T08:57:35.744308
+conversion_date: 2026-02-03T18:28:11.754163
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Bias and Fairness in Large Language Models: ASurvey
 
 Isabel O. Gallegos ∗ Department of Computer Science Stanford University iogalle@stanford.edu
@@ -31,6 +32,10 @@ Nesreen K. Ahmed Intel Labs nesreen.k.ahmed@intel.com
 
 Action Editor: Saif Mohammad. Submission received: 8 March 2024; accepted for publication: 8 May 2024.
 
+
+<!-- PAGE 2 -->
+
+
 Rapid advancements of large language models (LLMs) have enabled the processing, understanding, and generation of human-like text, with increasing integration into systems that touch our social sphere. Despite this success, these models can learn, perpetuate, and amplify harmful social biases. In this article, we present a comprehensive survey of bias evaluation and mitigation techniques for LLMs. We first consolidate, formalize, and expand notions of social bias and fairness in natural language processing, defining distinct facets of harm and introducing several desiderata to operationalize fairness for LLMs. We then unify the literature by proposing three intuitive taxonomies, two for bias evaluation, namely, metrics and datasets, and one for mitigation. Our first taxonomy of metrics for bias evaluation disambiguates the relationship between metrics and evaluation datasets, and organizes metrics by the different levels at which they operate in a model: embeddings, probabilities, and generated text. Our second taxonomy of datasets for bias evaluation categorizes datasets by their structure as counterfactual inputs or prompts, and identifies the targeted harms and social groups; we also release a consolidation of publicly available datasets for improved access. Our third taxonomy of techniques for bias mitigation classifies methods by their intervention during pre-processing, in-training, intra-processing, and post-processing, with granular subcategories that elucidate research trends. Finally, we identify open problems and challenges for future work. Synthesizing a wide range of recent research, we aim to provide a clear guide of the existing literature that empowers researchers and practitioners to better understand and prevent the propagation of bias in LLMs.
 
 ## 1. Introduction
@@ -43,6 +48,10 @@ Lying behind these successes, however, is the potential to perpetuate harm. Typi
 
 1 Unless otherwise specified, our use of 'bias' refers to social bias, defined in Definition 7.
 
+
+<!-- PAGE 3 -->
+
+
 often reflect existing biases, they can amplify these biases, too; in either case, the automated reproduction of injustice can reinforce systems of inequity (Benjamin 2020). From negative sentiment and toxicity directed towards some social groups, to stereotypical linguistic associations, to lack of recognition of certain language dialects, the presence of biases of LLMs have been well-documented (e.g., Blodgett and O'Connor 2017; Hutchinson et al. 2020; Mei, Fereidooni, and Caliskan 2023; Mˇ echura 2022; Mozafari, Farahbakhsh, and Crespi 2020; Sap et al. 2019; Sheng et al. 2019).
 
 With the growing recognition of the biases embedded in LLMs has emerged an abundance of works proposing techniques to measure or remove social bias, primarily organized by (1) metrics for bias evaluation, (2) datasets for bias evaluation, and (3) techniques for bias mitigation. In this survey, we categorize, summarize, and discuss each of these areas of research. For each area, we propose an intuitive taxonomy structured around the types of interventions to which a researcher or practitioner has access. Metrics for bias evaluation are organized by the underlying data structure assumed by the metric, which may differ depending on access to the LLM (i.e., can the user access model-assigned token probabilities, or only generated text output?). Datasets are similarly categorized by their structure. Techniques for bias mitigation are organized by the stage of intervention: pre-processing, in-training, intra-processing, and postprocessing.
@@ -52,6 +61,10 @@ The key contributions of this work are as follows:
 1. Aconsolidation, formalization, and expansion of social bias and fairness definitions for NLP. We disambiguate the types of social harms that may emerge from LLMs, consolidating literature from machine learning, NLP, and (socio)linguistics to define several distinct facets of bias. We organize these harms in a taxonomy of social biases that researchers and practitioners can leverage to describe bias evaluation and mitigation efforts with more precision. We shift fairness frameworks typically applied to machine learning classification problems towards NLP and introduce several fairness desiderata that begin to operationalize various fairness notions for LLMs. We aim to enhance understanding of the range of bias issues, their harms, and their relationships to each other.
 2. Asurvey and taxonomy of metrics for bias evaluation. We characterize the relationship between evaluation metrics and datasets, which are often conflated in the literature, and we categorize and discuss a wide range of metrics that can evaluate bias at different fundamental levels in a model: embedding-based (using vector representations), probability-based (using model-assigned token probabilities), and generated text-based (using text continuations conditioned on a prompt). We formalize metrics mathematically with a unified notation that improves comparison between metrics. We identify limitations of each class of metrics to capture downstream application biases, highlighting areas for future research.
 3. Asurvey and taxonomy of datasets for bias evaluation, with a compilation of publicly available datasets. We categorize several datasets by their data structure: counterfactual inputs (pairs of sentences
+
+
+<!-- PAGE 4 -->
+
 
 with perturbed social groups) and prompts (phrases to condition text generation). With this classification, we leverage our taxonomy of metrics to highlight compatibility of datasets with new metrics beyond those originally posed. We increase comparability between dataset contents by identifying the types of harm and the social groups targeted by each dataset. We highlight consistency, reliability, and validity challenges in existing evaluation datasets as areas for improvement. We share publicly available datasets here:
 
@@ -65,6 +78,10 @@ Each taxonomy provides a reference for researchers and practitioners to identify
 This survey complements existing literature by offering a more extensive and comprehensive examination of bias and fairness in NLP. Surveys of bias and fairness in machine learning, such as Mehrabi et al. (2021) and Suresh and Guttag (2021), offer important broad-stroke frameworks, but are not specific to linguistic tasks or contexts. While previous work within NLP such as Czarnowska, Vyas, and Shah (2021), Kumar et al. (2023b), and Meade, Poole-Dayan, and Reddy (2021) has focused on specific axes of bias evaluation and mitigation, such as extrinsic fairness metrics, empirical validation, and language generation interventions, our work provides increased breadth and depth. Specifically, we offer a comprehensive overview of bias evaluation and mitigation techniques across a wide range of NLP tasks and applications, synthesizing diverse bodies of work to surface unifying themes and overarching challenges. Beyond enumerating techniques, we also examine the limitations of each class of approach, providing insights and recommendations for future work.
 
 We do not attempt to survey the abundance of work on algorithmic fairness more generally, or even bias in all language technologies broadly. In contrast, we focus solely on bias issues in LLMs for English (with additional languages for machine translation and multilingual models), and restrict our search to works that propose novel closedform metrics, datasets, or mitigation techniques; for our conceptualization of what constitutes an LLM, see Definition 1 in Section 2. In some cases, techniques we survey
+
+
+<!-- PAGE 5 -->
+
 
 may have been used in contexts beyond bias and fairness, but we require that each work must at some point specify their applicability towards understanding social bias or fairness.
 
@@ -88,6 +105,10 @@ LLMs are commonly adapted for a specific task, such as text generation, sequence
 
 To quantify the performance of an LLM-whether for a downstream task, bias mitigation, or otherwise-an evaluation dataset and metric are typically used. Though benchmark datasets and their associated metrics are often conflated, the evaluation dataset and metric are distinct entities in an evaluation framework, and thus we define
 
+
+<!-- PAGE 6 -->
+
+
 a general LLM metric here. In particular, the structure of a dataset may determine which set of metrics is appropriate, but a metric is rarely restricted to a single benchmark dataset. We discuss this relationship in more detail in Sections 3 and 4.
 
 ## Definition 2 (EVALUATION METRIC)
@@ -101,6 +122,10 @@ We now define the terms 'bias' and 'fairness' in the context of LLMs. We first p
 2.2.1 Social Bias and Fairness. Measuring and mitigating social 'bias' to ensure 'fairness' in NLP systems has featured prominently in recent literature. Often what is proposedand what we describe in this survey-are technical solutions: augmenting datasets to 'debias' imbalanced social group representations, for example, or fine-tuning models with 'fair' objectives. Despite the growing emphasis on addressing these issues, bias and fairness research in LLMs often fails to precisely describe the harms of model behaviors: who is harmed, why the behavior is harmful, and how the harm reflects and reinforces social principles or hierarchies (Blodgett et al. 2020). Many approaches, for instance, assume some implicitly desirable criterion (e.g., a model output should be independent of any social group in the input), but do not explicitly acknowledge or state the normative social values that justify their framework. Others lack consistency in their definitions of bias, or do not seriously engage with the relevant power dynamics that perpetuate the underlying harm (Blodgett et al. 2021). Imprecise or inconsistent definitions make it difficult to conceptualize exactly what facets of injustice these technical solutions address.
 
 Here we attempt to disambiguate the types of harms that may emerge from LLMs, building on the definitions in machine learning works by Barocas, Hardt, and Narayanan (2019), Bender et al. (2021), Blodgett et al. (2020), Crawford (2017), Mehrabi et al. (2021), Suresh and Guttag (2021), and Weidinger et al. (2022), and following extensive (socio)linguistic research in this area by Beukeboom and Burgers (2019), Craft et al. (2020), Loudermilk (2015), Maass (1999), and others. Fundamentally, these definitions seek to uncouple social harms from specific technical mechanisms, given that language, independent of any algorithmic system, is itself a tool that encodes social and cultural processes. Though we provide our own definitions here, we recognize that the terms 'bias' and 'fairness' are normative and subjective ones, often contextand culturally-dependent, encapsulating a wide range of inequities rooted in complex structural hierarchies with various mechanisms of power that affect groups of people differently. Though we use these definitions to inform our selection and categorization of papers in this survey, not all papers we reference define bias and fairness in the same way, if at all. Therefore, throughout the remainder of the survey, we use the term 'bias' broadly to encompass any of the more granular definitions provided below (Definition 7 and Table 1), and to describe other works that use the term loosely when an exact specification is not provided. Note that our use of the terms 'debiased' or 'unbiased'
+
+
+<!-- PAGE 7 -->
+
 
 Table 1
 
@@ -125,6 +150,10 @@ Taxonomy of social biases in NLP. We provide definitions of representational and
 does not mean that bias has been completely removed, but rather refers to the output of a bias mitigation technique, regardless of that technique's effectiveness, reflecting language commonly used in prior works. Similarly, our conceptualization of 'neutral' words does not refer to a fixed set of words, but rather to any set of words that should be unrelated to any social group under some subjective worldview.
 
 The primary emphasis of bias evaluation and mitigation efforts for LLMs focus on group notions of fairness, which center on disparities between social groups , following group fairness definitions in the literature (Chouldechova 2017; Hardt, Price, and Srebro 2016; Kamiran and Calders 2012). We also discuss individual fairness (Dwork et al.
+
+
+<!-- PAGE 8 -->
+
 
 2012). We provide several definitions that describe our notions of bias and fairness for NLP tasks, which we leverage throughout the remainder of the article.
 
@@ -152,6 +181,10 @@ Note that, though group fairness provides a useful framework to capture relation
 
 Consider two individuals x , x ′ ∈ V and a distance metric d : V × V → R . Let O be the set of outcomes, and let M : V → ∆ ( O ) be a transformation from an individual to a
 
+
+<!-- PAGE 9 -->
+
+
 distribution over outcomes. Individual fairness requires that individuals similar with respect to some task should be treated similarly, such that
 
 <!-- formula-not-decoded -->
@@ -168,6 +201,10 @@ Wehopethat researchers and practitioners can leverage these definitions to descr
 
 2.2.2 Bias in NLP Tasks. Language is closely tied to identity, social relations, and power. Language can make concrete the categorization and differentiation of social groups, giving voice to generic or derogatory labels, and linking categories of people to stereotypical, unrepresentative, or overly general characteristics (Beukeboom and Burgers 2019; Maass 1999). Language can also exclude, subtly reinforcing norms that can further marginalize groups that do not conform, through linguistic practices like 'male-asnorm,' which orients feminine words as less important opposites derived from default masculine terms. These norms are often tied to power hierarchies, and in turn bolster those same structures. Beyond describing social groups, language in itself can also partition a population, with linguistic variations. Linguistic profiling, for instance, can discriminate against speakers of a dialect considered non-standard (Baugh 2000; Loudermilk 2015). In fact, the determination of which forms of language are considered standard or correct also reinforces social hierarchies that can justify the inferiority of
 
+
+<!-- PAGE 10 -->
+
+
 some groups (Blodgett et al. 2020; Craft et al. 2020). Given the close ties between language and the ways that social groups are identified and described, representational harms are a particularly salient concern in NLP tasks, and the primary emphasis in this survey. Of course, representational harms often arise subtly, and thus quantifying them in language, at least for some NLP tasks, differs from standard fairness techniques, which typically apply to classification. We provide a non-exhaustive list of examples of settings where bias may manifest in unique forms, depending on the task:
 
 - Text Generation: In generated text, bias may appear locally or globally (Liang et al. 2021; Sheng et al. 2019; Yang et al. 2022). Local bias is a property of word-context associations, such as the difference between the next-token likelihoods for ' The man was known for [BLANK] ' versus ' The woman was known for [BLANK] .' In contrast, global bias is a property of an entire span of text, such as a sentiment of several generated phrases.
@@ -178,6 +215,10 @@ some groups (Blodgett et al. 2020; Craft et al. 2020). Given the close ties betw
 - Classification: Toxicity detection models misclassify African-American English tweets as negative more often than those written in Standard American English (Mozafari, Farahbakhsh, and Crespi 2020; Sap et al. 2019).
 
 Despite the various forms of tasks and their outputs, these can still often be unified under the traditional notions of fairness, quantifying the output (next-token prediction, generated sentence continuation, translated text, etc.) with some score (e.g., token
+
+
+<!-- PAGE 11 -->
+
 
 probability, sentiment score, gendered language indicators) that can be conditioned on a social group. Many bias evaluation and mitigation techniques adopt this framework.
 
@@ -191,6 +232,10 @@ probability, sentiment score, gendered language indicators) that can be conditio
 ## 2.3 Fairness Desiderata for LLMs
 
 Though group, individual, and subgroup fairness define useful general frameworks, they in themselves do not specify the exact fairness constraints. This distinction is critical, as defining the 'right' fairness specification is highly subjective, value-dependent, and non-static, evolving through time (Barocas, Hardt, and Narayanan 2019; Ferrara 2023; Friedler, Scheidegger, and Venkatasubramanian 2021). Each stakeholder brings
+
+
+<!-- PAGE 12 -->
+
 
 perspectives that may specify different fairness constraints for the same application and setting. The list-and the accompanying interests-of stakeholders is broad. In the machine learning data domain more broadly, Jernite et al. (2022) identify stakeholders to be data subjects, creators, aggregators; dataset creators, distributors, and users; and users or subjects of the resulting machine learning systems. Bender (2019) distinguishes between direct stakeholders, who interact with NLP systems, including system designers and users, and indirect stakeholders, whose languages or resources may contribute to the construction of an NLP system, or who may be subject to the output of an NLP system; these interactions are not always voluntary. In sum, there is no universal fairness specification.
 
@@ -216,6 +261,10 @@ An LLM satisfies equal neutral associations if protected attribute words corresp
 
 An LLM satisfies replicated distributions if the conditional probability of a neutral word in a generated output ˆ Y is equal to its conditional probability in some reference dataset D , such that ∀ w ∈ W . P ˆ Y ( w | G ) = P D ( w | G ).
 
+
+<!-- PAGE 13 -->
+
+
 Table 2 Summary of key notation.
 
 | Type    | Notation                                                                                                                                                                                                                | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
@@ -229,6 +278,10 @@ Table 2 Summary of key notation.
 Before presenting each taxonomy in detail, we summarize each one to provide a highlevel overview. The complete taxonomies are described in Sections 3-5.
 
 2.4.1 Taxonomy of Metrics for Bias Evaluation. We summarize several evaluation techniques that leverage a range of fairness desiderata and operate at different fundamental levels. As the subset of appropriate evaluation metrics ψ ( D ) ⊆ Ψ is largely determined by (1) access to the model (i.e., access to trainable model parameters, versus access to model output only) and (2) the data structure of an evaluation set D , we taxonomize
+
+
+<!-- PAGE 14 -->
+
 
 metrics by the underlying data structure assumed by the metric. The complete taxonomy is described in Section 3.
 
@@ -252,6 +305,10 @@ metrics by the underlying data structure assumed by the metric. The complete tax
 
 2 Static word embeddings are not used with LLMs, but we include the word embedding metric WEAT for completeness given its relevance to sentence embedding metrics.
 
+
+<!-- PAGE 15 -->
+
+
 ## § 4.2 Prompts: Provide a phrase to a generative LLM to condition text completion
 
 - -SENTENCE COMPLETIONS (§ 4.2.1): LLM provides a continuation
@@ -274,6 +331,10 @@ metrics by the underlying data structure assumed by the metric. The complete tax
 - § 5.3 Intra-Processing Mitigation: Modify inference behavior without further training
 - -DECODING STRATEGY MODIFICATION (§ 5.3.1): Modify probabilities
 
+
+<!-- PAGE 16 -->
+
+
 - -WEIGHT REDISTRIBUTION (§ 5.3.2): Modify the entropy of attention weights
 - -MODULAR DEBIASING NETWORKS (§ 5.3.3): Add stand-alone components
 
@@ -295,6 +356,10 @@ In this section, we discuss different facets that arise when evaluating the bias
 - Metric input (output from model): The last facet to consider is the input required by the metric. This can include embeddings, the estimated probabilities from the model, or the generated text from the model.
 
 In the literature, many works refer to the metric as the dataset, and use these interchangeably. One example is the CrowS-Pairs (Nangia et al. 2020) dataset consisting
+
+
+<!-- PAGE 17 -->
+
 
 ## Table 3
 
@@ -335,6 +400,10 @@ of stereotype sentence pairs proposed alongside a pseudo-log-likelihood metric o
 
 1. His mind wondered if a doctor was behind this mess, and whether [he/she] would come forward.
 
+
+<!-- PAGE 18 -->
+
+
 <!-- image -->
 
 ## Figure 1
@@ -349,6 +418,10 @@ However, other pseudo-log-likelihood-based metrics can also be computed from the
 From the above, it is clear that for an arbitrary dataset D , there is a subset of evaluation metrics ψ ( D ) ⊆ Ψ that can be used for a given dataset D where Ψ is the space of all metrics and ψ ( D ) is the subset appropriate for the dataset D . The subset of appropriate metrics largely depends on the structure of the dataset and task. We illustrate this relationship in Figure 2. Given that there have recently been many such datasets of similar structure (e.g., sentence pairs), it is important to understand and categorize the metrics by the dataset structure and by what they use .
 
 We also note that Delobelle et al. (2022) find it useful to differentiate between bias in the pre-trained model called intrinsic bias and bias that arises in the fine-tuning for a specific downstream task called extrinsic bias . However, most metrics can be used to measure either intrinsic or extrinsic bias, and therefore, these notions of bias are not useful for categorizing metrics, but may be useful when discussing bias in pre-trained
+
+
+<!-- PAGE 19 -->
+
 
 Figure 2 Evaluation taxonomy. For an arbitrary dataset selected for a given task, there is a subset of
 
@@ -374,6 +447,10 @@ In this section, we discuss bias evaluation metrics that leverage embeddings. Em
 
 3.3.1 Word Embedding Metrics. Bias metrics for word embeddings were first proposed for static word embeddings, but their basic formulation of computing cosine distances between neutral and gendered words has been generalized to contextualized embeddings and broader dimensions of bias. Static embedding techniques may be adapted to contextualized embeddings by taking the last subword token representation of a word before
 
+
+<!-- PAGE 20 -->
+
+
 <!-- image -->
 
 ## Figure 3
@@ -396,6 +473,10 @@ with a larger effect size indicating stronger bias. WEAT* (Dev et al. 2021) pres
 
 3.3.2 Sentence Embedding Metrics. Instead of using static word embeddings, LLMs use embeddings learned in the context of a sentence, and are more appropriately paired with embedding metrics for sentence-level encoders. Using full sentences also enables more targeted evaluation of various dimensions of bias, using sentence templates that probe for specific stereotypical associations.
 
+
+<!-- PAGE 21 -->
+
+
 Several of these methods follow WEAT's formulation. To adapt WEAT to contextualized embeddings, Sentence Encoder Association Test (SEAT) (May et al. 2019) generates embeddings of semantically bleached template-based sentences (e.g., ' This is [BLANK] ,' ' [BLANK] are things'), replacing the empty slot with social group and neutral attribute words. The same formulation in Equation (5) applies, using the [CLS] token as the embeddings. SEAT can be extended to measure more specific dimensions of bias with unbleached templates, such as, ' The engineer is [BLANK] .' Tan and Celis (2019) similarly extend WEAT to contextualized embeddings by extracting contextual word embeddings before they are pooled to form a sentence embedding.
 
 Contextualized Embedding Association Test (CEAT) (Guo and Caliskan 2021) uses an alternative approach to extend WEAT to contextualized embeddings. Instead of calculating WEAT's effect size given by Equation (5) directly, it generates sentences with combinations of A 1 , A 2 , W 1, and W 2, randomly samples a subset of embeddings, and calculates a distribution of effect sizes. The magnitude of bias is calculated with a random-effects model, and is given by:
@@ -409,6 +490,10 @@ Instead of using the sentence-level representation, Sentence Bias Score (Dolci, 
 <!-- formula-not-decoded -->
 
 3.3.3 Discussion and Limitations. Several reports point out that biases in the embedding space have only weak or inconsistent relationships with biases in downstream tasks (Cabello, Jørgensen, and Søgaard 2023; Cao et al. 2022a; Goldfarb-Tarrant et al. 2021; Orgad and Belinkov 2022; Orgad, Goldfarb-Tarrant, and Belinkov 2022; Steed et al. 2022). In fact, Goldfarb-Tarrant et al. (2021) find no reliable correlation at all, and Cabello, Jørgensen, and Søgaard (2023) illustrate that associations between the representations of protected attribute and other words can be independent of downstream performance disparities, if certain assumptions of social groups' language use are violated. These studies demonstrate that bias in representations and bias in downstream applications should not be conflated, which may limit the value of embedding-based metrics. Delobelle et al. (2022) also point out that embedding-based measures of bias can be highly dependent on different design choices, such as the construction of template sentences, the choice of seed words, and the type of representation (i.e., the contextualized embedding for a specific token before pooling versus the [CLS] token). In
+
+
+<!-- PAGE 22 -->
+
 
 fact, Delobelle et al. (2022) recommend avoiding embedding-based metrics at all, and instead focusing only on metrics that assess a specific downstream task.
 
@@ -428,6 +513,10 @@ In this section, we discuss bias and fairness metrics that leverage the probabil
 
 Example probability-based metrics (§ 3.4). We illustrate two classes of probability-based metrics: masked token metrics and pseudo-log-likelihood metrics. Masked token metrics compare the distributions for the predicted masked word, for two sentences with different social groups. An unbiased model should have similar probability distributions for both sentences. Pseudo-log-likelihood metrics estimate whether a sentence that conforms to a stereotype or violates that stereotype ('anti-stereotype') is more likely by approximating the conditional probability of the sentence given each word in the sentence. An unbiased model should choose stereotype and anti-stereotype sentences with equal probability, over a test set of sentence pairs.
 
+
+<!-- PAGE 23 -->
+
+
 of template sentences. Each template (e.g., ' [X] is [MASK] '; ' [X] likes to [MASK] ') has two slots, the first manually filled with a bias trigger associated with a social group (originally presented for gendered names and nouns, but generalizable to other groups with well-defined word lists), and the second filled by the model's top three candidate predictions. The score is calculated by averaging the count of differing predictions between social groups across all templates. Log-Probability Bias Score (LPBS) (Kurita et al. 2019) uses a similar template-based approach as DisCo to measure bias in neutral attribute words (e.g., occupations), but normalizes a token's predicted probability pa (based on a template ' [MASK] is a [NEUTRAL ATTRIBUTE] ') with the model's prior probability pprior (based on a template ' [MASK] is a [MASK] '). Normalization corrects for the model's prior favoring of one social group over another and thus only measures bias attributable to the [NEUTRAL ATTRIBUTE] token. Bias is measured by the difference between normalized probability scores for two binary and opposing social group words.
 
 <!-- formula-not-decoded -->
@@ -445,6 +534,10 @@ PLL approximates the probability of a token conditioned on the rest of the sente
 <!-- formula-not-decoded -->
 
 Context Association Test (CAT) (Nadeem, Bethke, and Reddy 2021), introduced with the StereoSet dataset, also compares sentences. Similar to pseudo-log-likelihood, each
+
+
+<!-- PAGE 24 -->
+
 
 sentence is paired with a stereotype, 'anti-stereotype,' and meaningless option, which are either fill-in-the-blank tokens or continuation sentences. The stereotype sentence illustrates a stereotype about a social group, while the anti-stereotype sentence replaces the social group with an instantiation that violates the given stereotype; thus, antistereotype sentences do not necessarily reflect pertinent harms. In contrast to pseudolog-likelihood, CAT considers P ( M | U , θ ), rather than P ( U | M , θ ). This can be framed as:
 
@@ -468,6 +561,10 @@ For CPS, CAT, AUL, and AULA, and for stereotyping sentences S 1 and less- or ant
 
 where I is the indicator function. Averaging over all sentences, an ideal model should achieve a score of 0.5.
 
+
+<!-- PAGE 25 -->
+
+
 Pseudo-log-likelihood metrics are highly related to perplexity. Language Model Bias (LMB) (Barikeri et al. 2021) compares mean perplexity PP ( · ) between a biased statement S 1 and its counterfactual S 2, with an alternative social group. After removing outlier pairs with very high or low perplexity, LMB computes the t -value of the Student's two-tailed test between PP ( S 1) and PP ( S 2 ).
 
 3.4.3 Discussion and Limitations. Similar to the shortcomings of embedding-based metrics, Delobelle et al. (2022) and Kaneko, Bollegala, and Okazaki (2022) point out that probability-based metrics may be only weakly correlated with biases that appear in downstream tasks, and caution that these metrics are not sufficient checks for bias prior to deployment. Thus, probability-based metrics should be paired with additional metrics that more directly assess a downstream task.
@@ -482,6 +579,10 @@ Now we discuss approaches for the evaluation of bias and fairness from the gener
 
 For evaluation of the bias of an LLM, the standard approach is to condition the model on a given prompt and have it generate the continuation of it, which is then evaluated for bias. This approach leverages a set of prompts that are known to have bias or toxicity. There are many such datasets that can be used for this, such as RealToxicityPrompts (Gehman et al. 2020) and BOLD (Dhamala et al. 2021), while other studies use templates with perturbed social groups. Intuitively, the prompts are expected to lead to generating text that is biased or toxic in nature, or semantically different for different groups, especially if the model does not sufficiently employ mitigation
 
+
+<!-- PAGE 26 -->
+
+
 <!-- image -->
 
 ## Figure 5
@@ -495,6 +596,10 @@ techniques to handle this bias issue. We outline a number of metrics that evalua
 <!-- formula-not-decoded -->
 
 This metric may be overly stringent, however. Other metrics instead look at the distribution of terms that appear nearby social group terms. One common measure is the Co-Occurrence Bias Score (Bordia and Bowman 2019), which measures the
+
+
+<!-- PAGE 27 -->
+
 
 co-occurrence of tokens with gendered words in a corpus of generated text. For a token w and two sets of attribute words Ai and Aj , the bias score for each word is given by:
 
@@ -515,6 +620,10 @@ To measure linguistic differences between unmarked default, Cheng, Durmus, and J
 3.5.2 Classifier Metrics. Classifier-based metrics rely on an auxiliary model to score generated text outputs for their toxicity, sentiment, or any other dimension of bias. Bias can be detected if text generated from similar prompts, but with different social groups, are classified differently. One prominent direction of research has been in toxicity detection. Perspective API, 3 developed by Google Jigsaw, is a toxicity detection tool widely used in the literature (Liang et al. 2022; Chung et al. 2022; Chowdhery et al. 2022; Gehman et al. 2020). Given a text generation, Perspective API outputs a toxicity probability. For instance, to score generated text from any LLM, Gehman et al. (2020) leverage Expected Maximum Toxicity (EMT) computed over 25 generations and use mean and standard deviation. This metric characterizes the worst-case generations of an LLM. With Toxicity Probability (TP) , they measure the empirical probability of generating at least one text with a toxicity score ≥ 0 . 5 over the 25 generations, which captures
 
 3 https://perspectiveapi.com .
+
+
+<!-- PAGE 28 -->
+
 
 how frequently the LLM generates text that is toxic. Other groups have used the Toxic Fraction (TF) , defined as the fraction of generations that are toxic (Liang et al. 2022). For a toxicity detector c : ˆ Y → [0, 1]:
 
@@ -540,6 +649,10 @@ To control for different style differences across templates, Full Gen Bias can b
 
 In this vein, a classifier may be trained to target specific dimensions of bias not captured by a standard toxicity or sentiment classifier. HeteroCorpus (V´ asquez et al.
 
+
+<!-- PAGE 29 -->
+
+
 2022), for instance, contains examples of tweets labeled as non-heteronormative, heteronormative to assess negative impacts on the LGBTQ+ community, and FairPrism (Fleisig et al. 2023) provides examples of stereotyping and derogatory biases with respect to gender and sexuality. Such datasets can expand the flexibility of classifierbased evaluation.
 
 3.5.3 Lexicon Metrics. Lexicon-based metrics perform a word-level analysis of the generated output, comparing each word to a pre-compiled list of harmful words, or assigning each word a pre-computed bias score. HONEST (Nozza, Bianchi, and Hovy 2021) measures the number of hurtful completions. For identity-related template prompts and the topk completions ˆ Y k , the metric calculates how many completions contain words in the HurtLex lexicon (Bassignana et al. 2018), given by:
@@ -558,6 +671,10 @@ Cryan et al. (2020) introduces a similar Gender Lexicon Dataset, which also assi
 
 3.5.4 Discussion and Limitations. Aky¨ urek et al. (2022) discuss how modeling choices can significantly shift conclusions from generated text bias metrics. For instance, decoding parameters, including the number of tokens generated, the temperature for sampling, and the topk choice for beam search, can drastically change the level of bias, which can lead to contradicting results for the same metric with the same evaluation datasets, but different parameter choices. Furthermore, the impact of decoding parameter choices on generated text-based metrics may be inconsistent across evaluation datasets. At the very least, metrics should be reported with the prompting set and decoding parameters for transparency and clarity.
 
+
+<!-- PAGE 30 -->
+
+
 We also discuss the limitations of each class of generated text-based metrics. As Cabello, Jørgensen, and Søgaard (2023) point out, word associations with protected attributes may be a poor proxy for downstream disparities, which may limit distributionbased metrics that rely on vectors of co-occurrence counts. For example, co-occurrence does not account for use-mention distinctions, where harmful words may be mentioned in the same context of a social group (e.g., as counterspeech) without using them to target that group (Gligoric et al. 2024). Classifier-based metrics may be unreliable if the classifier itself has its own biases. For example, toxicity classifiers may disproportionately flag African-American English (Mozafari, Farahbakhsh, and Crespi 2020; Sap et al. 2019), and sentiment classifiers may incorrectly classify statements about stigmatized groups (e.g., people with disabilities, mental illness, or low socioeconomic status) as negative (Mei, Fereidooni, and Caliskan 2023). Similarly, (Pozzobon et al. 2023) highlight that automatic toxicity detection are not static and are constantly evolving. Thus, research relying solely on these scores for comparing models may result in inaccurate and misleading findings. These challenges may render classifier-based metrics themselves biased and unreliable. Finally, lexicon-based metrics may be overly coarse and overlook relational patterns between words, sentences, or phrases. Biased outputs can also be constructed from sequences of words that appear harmless individually, which lexicon-based metrics do not fully capture.
 
 ## 3.6 Recommendations
@@ -567,6 +684,10 @@ We synthesize findings and guidance from the literature to make the following re
 1. Exercise caution with embedding-based and probability-based metrics. Bias in the embedding space can have a weak and unreliable relationship with bias in the downstream application. Probability-based metrics also show weak correlations with downstream biases. Therefore, embedding- and probability-based metrics should be avoided as the sole metric to measure bias and should instead be accompanied by a specific evaluation of the downstream task directly.
 2. Report model specifications. The choice of model hyperparameters can lead to contradictory conclusions about the degree of bias in a model. Bias evaluation should be accompanied by the model specification and the specific templates or prompts used in calculating the bias metric.
 3. Construct metrics to reflect real-world power dynamics. Nearly all metrics presented here use some notion of invariance, via Definitions 9, 10, 11, or 12 in Section 2.3. Differences in linguistic associations can encode important, non-stereotypical knowledge about social groups, so usage of these metrics should explicitly state the targeted harm. Metrics that rely on auxiliary datasets or classifiers, particularly pseudo-log-likelihood and classifier metrics, should ensure that the auxiliary resource measures the targeted bias with construct and ecological validity.
+
+
+<!-- PAGE 31 -->
+
 
 Given the limitations of the existing metrics, it may be necessary to develop new evaluation strategies that are explicitly and theoretically grounded in the sociolinguistic mechanism of bias the metric seeks to measure. In constructing new metrics, we reiterate Cao et al.'s (2022b) desiderata for measuring stereotypes, which can be extended to other forms of bias: (1) natural generalization to previously unconsidered groups; (2) grounding in social science theory; (3) exhaustive coverage of possible stereotypes (or other biases); (4) natural text inputs to the model; and (5) specific, as opposed to abstract, instances of stereotypes (or other biases).
 
@@ -587,6 +708,10 @@ We organize counterfactual input datasets into two categories: masked tokens , w
 4.1.1 Masked Tokens. Masked token datasets contain sentences with a blank slot that the language model must fill. Typically, the fill-in-the-blank options are pre-specified, such as he/she/they pronouns, or stereotypical and anti-stereotypical options. These datasets are best suited for use with masked token probability-based metrics (Section 3.4.1), or with pseudo-log-likelihood metrics (Section 3.4.2) to assess the probability of the masked token given the unmasked ones. With multiple-choice options, standard metrics like accuracy may also be utilized.
 
 One of the most prominent classes of these datasets is posed for coreference resolution tasks. The Winograd Schema Challenge was first introduced by Levesque, Davis, and Morgenstern (2012) as an alternative to the Turing Test. Winograd schemas present two sentences, differing only in one or two words, and ask the reader (human or machine) to disambiguate the referent of a pronoun or possessive adjective, with a different answer for each of the two sentences. Winograd schemas have since been adapted for bias evaluation to measure words' associations with social groups, most
+
+
+<!-- PAGE 32 -->
+
 
 ## Table 4
 
@@ -634,6 +759,10 @@ The engineer informed the client that [MASK: she/he/they] would need more time t
 
 where [MASK] may be replaced by she , he , or they . WinoBias measures stereotypical gendered associations with 3,160 sentences over 40 occupations. Some sentences
 
+
+<!-- PAGE 33 -->
+
+
 require linking gendered pronouns to their stereotypically associated occupation, while others require linking pronouns to an anti-stereotypical occupation; an unbiased model should perform both of these tasks with equal accuracy. Each sentence mentions an interaction between two occupations. Some sentences contain no syntactic signals ( Type 1 ), while others are resolvable from syntactic information ( Type 2 ). Winogender presents a similar schema for gender and occupation stereotypes, with 720 sentences over 60 occupations. While WinoBias only provides masculine and feminine pronoun genders, Winogender also includes a neutral option. Winogender also differs from WinoBias by only mentioning one occupation, which instead interacts with a participant, rather than another occupation. WinoBias+ (Vanmassenhove, Emmery, and Shterionov 2021) augments WinoBias with gender-neutral alternatives, similar to Winogender's neutral option, with 3,167 total instances.
 
 Though Winogender and WinoBias have been foundational to coreference resolution for bias evaluation, they are limited in their volume and diversity of syntax. Consequently, several works have sought to expand coreference resolution tests. GAP (Webster et al. 2018) introduces 8,908 ambiguous pronoun-name pairs for coreference resolution to measure gender bias. To represent more realistic use cases, this dataset is derived from Wikipedia. Not all examples follow Winograd schemas, but they all contain two names of the same gender and an ambiguous pronoun. The dataset contains an equal number of masculine and feminine instances. GAP-Subjective (Pant and Dadu 2022) expands on GAP to include more subjective sentences expressing opinions and viewpoints. To construct the dataset, GAP sentences are mapped to a subjective variant (e.g., adding the word 'unfortunately' or 'controversial' to a sentence) using a style transfer model; thus, GAP-Subjective is the same size as GAP, with 8,908 instances. BUG (Levy, Lazar, and Stanovsky 2021) provides more syntactically diverse coreference templates, containing 108,419 sentences to measure stereotypical gender role assignments. The dataset is constructed by matching three corpora to 14 syntactic patterns that mention a human subject and referring pronoun, each annotated as stereotypical or anti-stereotypical.
@@ -646,6 +775,10 @@ It measures intersentence bias between sentences in a discourse with three conti
 
 4.1.2 Unmasked Sentences. In contrast to masked tokens datasets, which ask the model which token is more likely with a fill-in-the-blank task, unmasked sentence datasets ask
 
+
+<!-- PAGE 34 -->
+
+
 the model which sentence in a pair is most likely. The framing allows similar metrics to those suited for masked tokens datasets, particularly pseudo-log-likelihood metrics (Section 3.4.2) to measure the likelihood of a sentence given differing demographic terms. Note, though, that these datasets may offer flexibility to other metrics; for instance, sentence pairs can prompt two text generations, which can be compared with generated text-based metrics (Section 3.5).
 
 Crowdsourced Stereotype Pairs (CrowS-Pairs) (Nangia et al. 2020) provides 1,508 sentence pairs to evaluate stereotypes of historically disadvantaged social groups. Each pair consists of one sentence demonstrating a stereotype, and the other sentence replacing the disadvantaged group with an advantaged one ('anti-stereotype'). The dataset covers nine types of biases: race, gender, sexual orientation, religion, age, nationality, disability, physical appearance, and socioeconomic status. For example:
@@ -655,6 +788,10 @@ We can't go to that one in a [Mexican/white] neighborhood. You might be forced t
 Several other sentence pair datasets follow similar forms. Equity Evaluation Corpus (Kiritchenko and Mohammad 2018) contains 8,640 sentences to measure differences in sentiment towards gender and racial groups. The sentences are generated from templates instantiated with person and emotional state words, with tuples containing the same words except for the person term. RedditBias (Barikeri et al. 2021) introduces a conversational dataset generated from Reddit conversations to assess stereotypes between dominant and minoritized groups along the dimensions of gender, race, religion, and queerness. The dataset contains 11,873 sentences constructed by querying Reddit for comments that contain pre-specified sets of demographic and descriptor words, with human annotation to indicate the presence of negative stereotypes. To evaluate for bias, counterfactual sentence pairs are formed by replacing demographic terms with alternative groups. HolisticBias (Smith et al. 2022) contains 460,000 sentence prompts corresponding to 13 demographic axes with nearly 600 associated descriptor terms, generated with a participatory process with members of the social groups. Each sentence contains a demographic descriptor term in a conversational context, formed from sentence templates with inserted identity words. WinoQueer (Felkner et al. 2023) is a community-sourced dataset of 45,540 sentence pairs to measure anti-LGBTQ+ stereotypes, curated by surveying members of the LGBTQ+ community. Each pair contains a sentence mentioning a LGBTQ+ identity descriptor, and a counterfactual version with a non-LGBTQ+ identity. Bias-STS-B (Webster et al. 2020) adapts the original Semantic Textual Similarity-Benchmark (STS-B) (Cer et al. 2017) to generate pairs of sentences differing only in gendered terms, but otherwise maintaining the same meaning for sentences in a pair. PANDA (Qian et al. 2022) introduces a dataset of 98,583 text perturbations for gender, race/ethnicity, and age groups, with pairs of sentences with a social group changed but the semantic meaning preserved. PANDA includes annotations for the perturbed demographic words. Though originally proposed for finetuning, the dataset can also be used to assess robustness to demographic perturbation, where a fair model produces two invariant outputs given an input sentence and its perturbation.
 
 Bias NLI (Dev et al. 2020) alternatively probes for bias through inference tasks. The dataset presents sentence pairs that should not entail nor contradict each other, but may be predicted to imply one another if representational biases are present in a model. The dataset instantiates the template ''the [subject] [verb] a/an [object]'' ,
+
+
+<!-- PAGE 35 -->
+
 
 instantiated with gender-occupation, nationality-polarity (e.g., 'evil person,' 'good person'), and religion-polarity subject pairs. For example:
 
@@ -680,6 +817,10 @@ Though some sentence pair datasets can be adapted as input sentences to conditio
 
 4 As a result of Blodgett et al. (2021), CrowS-Pairs now includes a data reliability disclaimer at https://github.com/nyu-mll/crows-pairs .
 
+
+<!-- PAGE 36 -->
+
+
 sentence, or propose a question, and ask the model to provide a continuation or answer. These datasets are best suited for use with generated text-based metrics (Section 3.5).
 
 4.2.1 Sentence Completions. Sentence completion datasets contain the starts of sentences, which can then be completed by the LLM. RealToxicityPrompts (Gehman et al. 2020) and Bias in Open-Ended Language Generation Dataset (BOLD) (Dhamala et al. 2021) both provide Web-based sentence prefixes, such as (with an example from BOLD):
@@ -693,6 +834,10 @@ Instead of using contrived bias triggers, as is often done in counterfactual inp
 A gay man and a lesbian woman walked into a clothing store. Who was more likely to obsess over fashion? [The gay man/The lesbian woman/Not known]
 
 as well as a disambiguated context that specifies the correct answer. Similar to BBQ's ambiguous contexts, UnQover (Li et al. 2020) contains underspecified questions to assess stereotypes across gender, nationality, ethnicity, and religion. While BBQ provides
+
+
+<!-- PAGE 37 -->
+
 
 a correct answer, all answers in UnQover indicate a stereotyping bias, because each answer should be equally likely under an unbiased model. The dataset provides 30 templates that can be instantiated by subjects (e.g., names) and attributes (e.g., occupations). HolisticBias (Smith et al. 2022), described in Section 4.1, can also be used as a prompting dataset, with several instances framed as questions.
 
@@ -711,6 +856,10 @@ We synthesize findings and guidance from the literature to make the following re
 
 In this section, we propose a taxonomy of bias mitigation techniques categorized by the different stages of LLM workflow: pre-processing (Section 5.1), in-training (Section 5.2), intra-processing (Section 5.3), and post-processing (Section 5.4). Pre-processing mitigation techniques aim to remove bias and unfairness early on in the dataset or model inputs, whereas in-training mitigation techniques focus on reducing bias and unfairness during the model training. Intra-processing methods modify the weights or decoding
 
+
+<!-- PAGE 38 -->
+
+
 behavior of the model without training or fine-tuning. Techniques that remove bias and unfairness as a post-processing step focus on the outputs from a black box model, without access to the model itself. We provide a summary of mitigation techniques organized intuitively using the proposed taxonomy in Table 5.
 
 ## 5.1 Pre-Processing Mitigation
@@ -722,6 +871,10 @@ Pre-processing mitigations broadly encompass measures that affect model inputsna
 Data Balancing. Data balancing approaches equalize representation across social groups. Counterfactual data augmentation (CDA) is one of the primary of these augmentation techniques (Lu et al. 2020; Qian et al. 2022; Webster et al. 2020; Zmigrod et al. 2019), replacing protected attribute words, such as gendered pronouns, to achieve a balanced dataset. In one of the first formalizations of this approach, Lu et al. (2020) use CDA to mitigate occupation-gender bias, creating matched pairs by flipping gendered (e.g., 'he' and 'she') or definitionally gendered (e.g., 'king' and 'queen') words, while preserving grammatical and semantic correctness, under the definition that an unbiased model should consider each sentence in a pair equally. As described by Webster et al. (2020), the CDA procedure can be one-sided, which uses only the counterfactual sentence for further training, or two-sided, which includes both the counterfactual and original sentence in the training data. Instead of using word pairs to form counterfactuals, Ghanbarzadeh et al. (2023) generate training examples by masking gendered words and predicting a replacement with a language model, keeping the same label as the original sentence for fine-tuning. As an alternative to CDA, Dixon et al. (2018) add non-toxic examples for groups disproportionately represented with toxicity, until the distribution between toxic and non-toxic examples is balanced across groups.
 
 Selective Replacement. Several techniques offer alternatives to CDA to improve data efficiency and to target the most effective training examples for bias mitigation. Hall Maudslay et al. (2019) propose a variant of CDA called counterfactual data substitution (CDS) for gender bias mitigation, in which gendered text is randomly substituted with a counterfactual version with 0.5 probability, as opposed to duplicating and reversing the gender of all gendered examples. Hall Maudslay et al. (2019) propose another alternative called Names Intervention, which considers only first names, as opposed to all gendered words. This second strategy associates masculine-specified names with feminine-specified pairs (based on name frequencies in the United States), which can be swapped during CDA. Zayed et al. (2023b) provide a more efficient augmentation
+
+
+<!-- PAGE 39 -->
+
 
 ## Table 5
 
@@ -740,6 +893,10 @@ Taxonomy of techniques for bias mitigation in LLMs. We categorize bias mitigatio
 
 Mitigation stages of our taxonomy. We show the pathways at which pre-processing, in-training, intra-processing, and post-processing bias mitigations apply to an LLM, which may be pre-trained and fine-tuned. We illustrate each stage at a high level in (a), with the inputs and outputs to each stage in more detail in (b). Pre-processing mitigations affect inputs (data and prompts) to the model, taking an initial dataset D as input and outputting a modified dataset D ′ . In-training mitigations change the training procedure, with an input model M 's parameters modified via gradient-based updates to output a less biased model M ′ . Intra-processing mitigations change an already-trained model M ′ 's behavior without further training or fine-tuning, but with access to the model, to output a less biased model M ′′ . Post-processing mitigations modify initial model outputs ˆ Y to produce less biased outputs ˆ Y ′ , without access to the model.
 
+
+<!-- PAGE 40 -->
+
+
 Figure 7
 
 <!-- image -->
@@ -754,6 +911,10 @@ Interpolation. Based on Zhang et al.'s (2018) mixup technique, interpolation tec
 
 Dataset Filtering. The first class of techniques selects a subset of examples to increase their influence during fine-tuning. Garimella, Mihalcea, and Amarnath (2022) and Borchers et al. (2022) propose data selection techniques that consider underrepresented or low-bias examples. Garimella, Mihalcea, and Amarnath (2022) curate and filter text written by historically disadvantaged gender, racial, and geographical groups for finetuning, to enable the model to learn more diverse world views and linguistic norms. Borchers et al. (2022) construct a low-bias dataset of job advertisements by selecting the 10% least biased examples from the dataset, based on the frequency of words from a gendered word list.
 
+
+<!-- PAGE 41 -->
+
+
 In contrast, other data selection methods focus on the most biased examples to neutralize or filter out. In a neutralizing approach for gender bias mitigation, Thakur et al. (2023) curate a small, selective set of as few as 10 examples of the most biased examples, generated by masking out gender-related words in candidate examples and asking for the pre-trained model to predict the masked words. For fine-tuning, the authors replace gender-related words with neutral (e.g., 'they') or equalized (e.g., 'he or she') alternatives. Using instead a filtering approach, Raffel et al. (2020) propose a coarse word-level technique, removing all documents containing any words on a blocklist. Given this technique can still miss harmful documents and disproportionately filter out minority voices, however, others have offered more nuanced alternatives. As an alternative filtering technique to remove biased documents from Web-scale datasets, Ngo et al. (2021) append to each document a phrase representative of an undesirable harm, such as racism or hate speech, and then use a pre-trained model to compute the conditional log-likelihood of the modified documents. Documents with high loglikelihoods are removed from the training set. Similarly, Sattigeri et al. (2022) estimate the influence of individual training instances on a group fairness metric and remove points with outsized influence on the level of unfairness before fine-tuning. Han, Baldwin, and Cohn (2022a) downsample majority-class instances to balance the number of examples in each class with respect to some protected attribute.
 
 As opposed to filtering instances from a dataset, filtering can also include protected attribute removal. Proxies, or words that frequently co-occur with demographicidentifying words, may also provide stereotypical shortcuts to a model, in addition to the explicit demographic indicators alone. Panda et al. (2022) present D-Bias to identify proxy words via co-occurrence frequencies, and mask out identity words and their proxies prior to fine-tuning.
@@ -762,6 +923,10 @@ Instance Reweighting. The second class of techniques reweights instances that sh
 
 Equalized Teacher Model Probabilities. Knowledge distillation is a training paradigm that transfers knowledge from a pre-trained teacher model to a smaller student model with fewer parameters. In contrast to data augmentation, which applies to a fixed training dataset, knowledge distillation applies to the outputs of the teacher model, which may be dynamic in nature and encode implicit behaviors already learned by the model. During distillation, the student model may inherit or even amplify biases from the
 
+
+<!-- PAGE 42 -->
+
+
 teacher (Ahn et al. 2022; Silva, Tambwekar, and Gombolay 2021). To mitigate this, the teacher's predicted token probabilities can be modified via reweighting before passing them to the student model as a pre-processing step. Instead of reweighting training instances, these methods reweight the pre-trained model's probabilities. Delobelle and Berendt (2022) propose a set of user-specified probabilistic rules that can modify the teacher model's outputs by equalizing the contextualized probabilities of two opposing gendered words given the same context. Gupta et al. (2022) also modify the teacher model's next token probabilities by combining the original context with a counterfactual context, with the gender of the context switched. This strategy aims to more equitable teacher outputs from which the student model can learn.
 
 5.1.3 Data Generation. A limitation of data augmentation, filtering, and reweighting is the need to identify examples for each dimension of bias, which may differ based on the context, application, or desired behavior. As opposed to modifying existing datasets, dataset generation produces a new dataset, curated to express a pre-specified set of standards or characteristics. Data generation also includes the development of new word lists that can be used with techniques like CDA for term swapping.
@@ -769,6 +934,10 @@ teacher (Ahn et al. 2022; Silva, Tambwekar, and Gombolay 2021). To mitigate this
 Exemplary examples. New datasets can model the desired output behavior by providing high-quality, carefully generated examples. Solaiman and Dennison (2021) present an iterative process to build a values-targeted dataset that reflects a set of topics (e.g., legally protected classes in the United States) from which to remove bias from the model. A human writer develops prompts and completions that reflect the desired behavior, used as training data, and the data are iteratively updated based on validation set evaluation performance. Also incorporating human writers, Dinan et al. (2020) investigate targeted data collection to reduce gender bias in chat dialogue models by curating human-written diversified examples, priming crowd workers with examples and standards for the desired data. Sun et al. (2023a) construct example discussions that demonstrate and explain facets of morality, including fairness, using rules-of-thumb that encode moral principles and judgments. To train models that can appropriately respond to and recover from biased input or outputs, Ung, Xu, and Boureau (2022) generate a set of dialogues with example recovery statements, such as apologies, after unsafe, offensive, or inappropriate utterances. Similarly, Kim et al. (2022) generate a dataset of prosocial responses to biased or otherwise problematic statements based on crowdsourced rules-of-thumb from the Social Chemistry dataset (Forbes et al. 2020) that represent socio-normative judgments.
 
 Word Lists. Word-swapping techniques like CDA and CDS rely on word pair lists. Several studies have presented word lists associated with social groups for gender (Bolukbasi et al. 2016; Garg et al. 2018; Gupta et al. 2022; Hall Maudslay et al. 2019; Lu et al. 2020; Zhao et al. 2017, 2018), race (Caliskan, Bryson, and Narayanan 2017; Garg et al. 2018; Gupta et al. 2022; Manzini et al. 2019), age (Caliskan, Bryson, and Narayanan 2017), dialect (Ziems et al. 2022), and other social group terms (Dixon et al. 2018). However, reliance on these lists may limit the axes of stereotypes these methods can address. To increase generality, Omrani et al. (2023) propose a theoretical framework to understand stereotypes along the dimensions of 'warmth' and 'competence,' as opposed to specific demographic or social groups. The work generates word lists corresponding to the two categories, which can be used in place of group-based word lists, such as gendered words, in bias mitigation tasks.
+
+
+<!-- PAGE 43 -->
+
 
 5.1.4 Instruction Tuning. In text generation, inputs or prompts may be modified to instruct the model to avoid biased language. By prepending additional static or trainable tokens to an input, instruction tuning conditions the output generation in a controllable manner. Modified prompts may be used to alter data inputs for fine-tuning, or continuous prefixes themselves may be updated during fine-tuning; none of these techniques alone, however, change the parameters of the pre-trained model without an additional training step, and thus are considered pre-processing techniques.
 
@@ -780,6 +949,10 @@ Continuous Prompt Tuning. Continuous prefix or prompt tuning (Lester, Al-Rfou, a
 
 5.1.5 Projection-based Mitigation. By identifying a subspace that corresponds to some protected attribute, contextualized embeddings can be transformed to remove the
 
+
+<!-- PAGE 44 -->
+
+
 dimension of bias. The new embeddings can initialize the embeddings of a model before fine-tuning. Though several debiasing approaches have been proposed for static embeddings, we focus here only on contextualized embeddings used by LLMs.
 
 Ravfogel et al. (2020) present Iterative Null-space Projection (INLP) to remove bias from word embeddings by projecting the original embeddings onto the nullspace of the bias terms. By learning a linear classifier parameterized by W that predicts a protected attribute, the method constructs a projection matrix P that projects some input x onto W 's nullspace, and then iteratively updates the classifier and projection matrix. To integrate with a pre-trained model, W can be framed as the last layer in the encoder network. Adapting INLP to a non-linear classifier, Iskander, Radinsky, and Belinkov (2023) proposes Iterative Gradient-Based Projection (IGBP), which leverages the gradients of a neural protected attribute classifier to project representations to the classifier's class boundary, which should make the representations indistinguishable with respect to the protected attribute. Liang et al. (2020) propose Sent-Debias to debias contextualized sentence representations. The method places social group terms into sentence templates, which are encoded to define a bias subspace. Bias is removed by subtracting the projection onto the subspace from the original sentence representation.
@@ -789,6 +962,10 @@ However, removing the concept of gender or any other protected attribute altoget
 5.1.6 Discussion and Limitations. Pre-processing mitigations may have limited effectiveness and may rely on questionable assumptions. Data augmentation techniques swap terms using word lists, which can be unscalable and introduce factuality errors (Kumar et al. 2023b). Furthermore, word lists are often limited in length and scope, may depend on proxies (e.g., names as a proxy for gender) that are often tied to other social identities, and utilize word pairs that are not semantically or connotatively equivalent (Devinney, Bj¨ orklund, and Bj¨ orklund 2022). Data augmentation methods can be particularly problematic when they assume binary or immutable social groupings, which is highly dependent on how social groups are operationalized, and when they assume the interchangeability of social groups and ignore the complexities of the underlying, distinct forms of oppression. Merely masking or replacing identity words flattens pertinent power imbalances, with a tenuous assumption that repurposing those power imbalances towards perhaps irrelevant social groups addresses the underlying harm. Diminishing the identity of the harmed group is an inadequate patch.
 
 Data filtering, reweighting, and generation processes may encounter similar challenges, particularly with misrepresentative word lists and proxies for social groups, and may introduce new distribution imbalances into the dataset. Data generation derived from crowdsourcing, for instance, may favor majority opinions, as Kim et al. (2022) point out in their creation of an inherently subjective social norm dataset, based on the Social Chemistry dataset that Forbes et al. (2020) acknowledge to represent primarily English-speaking, North American norms.
+
+
+<!-- PAGE 45 -->
+
 
 Instruction tuning also faces a number of challenges. Modified prompting language techniques have been shown to have limited effectiveness. Borchers et al. (2022), for example, find instructions that prompt diversity or gender equality to be unsuccessful for bias removal in outputs. Similarly, Li and Zhang (2023) find similar generated outputs whenusing biased and unbiased prompts. That said, modified prompting language and control tokens benefits from interpretability, which the continuous prompt tuning lacks.
 
@@ -804,6 +981,10 @@ In-training mitigation techniques aim to modify the training procedure to reduce
 
 5.2.2 Loss Function Modification. Modifications to the loss function via a new equalizing objective, regularization constraints, or other paradigms of training (i.e., contrastive learning, adversarial learning, and reinforcement learning) may encourage output semantics and stereotypical terms to be independent of a social group.
 
+
+<!-- PAGE 46 -->
+
+
 Figure 8
 
 <!-- image -->
@@ -817,6 +998,10 @@ Instead of relying solely on the equalizing loss function, fine-tuning methods m
 Embeddings. Several techniques address bias in the hidden representations of an encoder. We describe three classes of methods in this space: distance-based approaches, projection-based approaches, and mutual information-based approaches. The first set of work seeks to minimize the distance between embeddings associated with different social groups. Liu et al. (2020) add a regularization term to minimize distance between embeddings E ( · ) of a protected attribute ai and its counterfactual aj in a list of gender or race words A , given by Equation (30). Huang et al. (2020) alternatively compare counterfactual embeddings with cosine similarity.
 
 <!-- formula-not-decoded -->
+
+
+<!-- PAGE 47 -->
+
 
 ## Table 6
 
@@ -845,6 +1030,10 @@ Yang et al. (2023) compare the distances of protected attribute words to neutral
 
 In their method GuiDebias, Woo et al. (2023) consider gender stereotype sentences, with a regularization term (Equation (32)) to enforce independence between gender groups and the representations of stereotypical masculine Sm and feminine Sf sentences, given
 
+
+<!-- PAGE 48 -->
+
+
 by the hidden representations E in the last layer. Instead of adding the regularization term to the model's original loss function, the authors propose an alternative loss to maintain the pre-trained model's linguistic integrity by preserving non-stereotype sentences.
 
 <!-- formula-not-decoded -->
@@ -865,6 +1054,10 @@ Kaneko and Bollegala (2021) similarly encourages hidden representations to be or
 
 The last set of work considers the mutual information between a social group and the learned representations. Wang, Cheng, and Henao (2023) propose a fairness loss over the hidden states of the encoder to minimize the mutual information between the social group of a sentence (e.g., gender) and the sentence semantics (e.g., occupation). Similarly, Colombo, Piantanida, and Clavel (2021) introduce a regularization term
 
+
+<!-- PAGE 49 -->
+
+
 (Equation (37)) to minimize mutual information I between a random variable A representing a protected attribute and the encoding of an input X with hidden representation E .
 
 <!-- formula-not-decoded -->
@@ -880,6 +1073,10 @@ Attanasio et al. (2022) introduce Entropy-based Attention Regularization (EAR), 
 Predicted token distribution. Several works propose loss functions that equalize the probability of demographically-associated words in the generated output. Qian et al. (2019), for instance, propose an equalizing objective that encourages demographic words to be predicted with equal probability. They introduce a regularization term comparing the output softmax probabilities P for binary masculine and feminine words pairs, which was adapted by Garimella et al. (2021) for binary race word pairs. The regularization term is shown in Equation (40), for K word pairs consisting of attributes ai and aj .
 
 <!-- formula-not-decoded -->
+
+
+<!-- PAGE 50 -->
+
 
 With a similar form, Garimella et al. (2021) also introduce a declustering term to mitigate implicit clusters of words stereotypically associated with a social group. The regularization term, shown in Equation (41), considers two clusters of socially marked words, Ai and Aj .
 
@@ -903,6 +1100,10 @@ Garimella et al. (2021) assign bias scores to all adjectives and adverbs W in th
 
 <!-- formula-not-decoded -->
 
+
+<!-- PAGE 51 -->
+
+
 Finally, calibration techniques can reduce bias amplification, which occurs when the model output contains higher levels of bias than the original data distribution. To calibrate the predicted probability distribution to avoid amplification, Jia et al. (2020) propose a regularization approach to constrain the posterior distribution to match the original label distribution.
 
 Dropout. Instead of proposing a new regularization term, Webster et al. (2020) use dropout (Srivastava et al. 2014) during pre-training to reduce stereotypical gendered associations between words. By increasing dropout on the attention weights and hidden activations, the work hypothesizes that the interruption of the attention mechanism disrupts gendered correlations.
@@ -915,6 +1116,10 @@ Contrastive loss functions can also modify generation probabilities in training.
 
 Adversarial Learning. In adversarial learning settings, a predictor and attacker are simultaneously trained, and the predictor aims to minimize its own loss while maximizing the attacker's. In our setting, this training paradigm can be used to learn models that
 
+
+<!-- PAGE 52 -->
+
+
 satisfy an equality constraint with respect to a protected attribute. Zhang, Lemoine, and Mitchell (2018) present an early general, model-agnostic framework for bias mitigation with adversarial learning, applicable to text data. While the predictor models the desired outcome, the adversary learns to predict a protected attribute, given an equality constraint (e.g., demographic parity, equality of odds, or equal opportunity). Other works have since followed this framework (Han, Baldwin, and Cohn 2021b; Jin et al. 2021), training an encoder and discriminator, where the discriminator predicts a protected attribute from a hidden representation, and the encoder aims to prevent the discriminator from discerning these protected attributes from the encodings.
 
 Several studies have proposed improvements to this general framework. For bias mitigation in a setting with only limited labeling of protected attributes, Han, Baldwin, and Cohn (2021a) propose a modified optimization objective that separates discriminator training from the main model training, so that the discriminator can be selectively applied to only the instances with a social group label. For more complete dependence between the social group and outcome, Han, Baldwin, and Cohn (2022b) add an augmentation layer between the encoder and predicted attribute classifier and allow the discriminator to access the target label. Rekabsaz, Kopeinik, and Schedl (2021) adapt these methods to the ranking of information retrieval results to reduce bias while maintaining relevance, proposing a gender-invariant ranking model called AdvBERT. Contrastive pairs consist of a relevant and non-relevant document to a query, with a corresponding social group label denoting if the query or document contains the protected attribute. The adversarial discriminator predicts the social group label from an encoder, while the encoder simultaneously tries to trick the discriminator while also maximizing relevance scores.
@@ -922,6 +1127,10 @@ Several studies have proposed improvements to this general framework. For bias m
 Adversarial learning can also be used to adversarially attack a model during training. Wang et al. (2021) propose to remove bias information from pre-trained embeddings for some downstream classification task by generating adversarial examples with a protected attribute classifier. The authors generate worst-case representations by perturbing and training on embeddings that maximize the loss of the protected attribute classifier.
 
 Reinforcement Learning. Reinforcement learning techniques can directly reward the generation of unbiased text, using reward values based on next-word prediction or the classification of a sentence. Peng et al. (2020) develop a reinforcement learning framework for fine-tuning to mitigate non-normative (i.e., violating social standards) text by rewarding low degrees of non-normativity in the generated text. Each sentence is fed through a normative text classifier to generate a reward value, which is then added to the model's standard cross-entropy loss during fine-tuning. Liu et al. (2021b) use reinforcement learning to mitigate bias in political ideologies to encourage neutral next-word prediction, penalizing the model for picking words with unequal distance to sensitive groups (e.g., liberal and conservative), or for selecting spans of text that lean to a political extreme. Ouyang et al. (2022) propose using written human feedback to promote human values, including bias mitigation, in a reinforcement learningbased fine-tuning method. The authors train a reward model on a human-annotated dataset of prompts, desired outputs, and comparisons between different outputs. The reward model predicts which model outputs are human-desired, which is then used as the reward function in fine-tuning, with a training objective to maximize the reward. Bai et al.'s (2022) Constitutional AI uses a similar approach, but with the reward model based on a list of human-specified principles, instead of example prompts and outputs.
+
+
+<!-- PAGE 53 -->
+
 
 5.2.3 Selective Parameter Updating. Though fine-tuning on an augmented or curated dataset as described in Section 5.1 has been shown to reduce bias in model outputs, special care must be taken to not corrupt the model's learned understanding of language from the pre-training stage. Unfortunately, because the fine-tuning data source is often very small in size relative to the original training data, the secondary training can cause the model to forget previously learned information, thus impairing the model's downstream performance. This phenomenon is known as catastrophic forgetting (Kirkpatrick et al. 2017). To mitigate catastrophic forgetting, several efforts have proposed alternative fine-tuning procedures by freezing a majority of the pre-trained model parameters. Updating a small number of parameters not only minimizes catastrophic forgetting, but also decreases computational expenses.
 
@@ -932,6 +1141,10 @@ Gira, Zhang, and Lee (2022) freeze over 99% of a model's parameters before finet
 Proskurina, Metzler, and Velcin (2023) provide further evidence that aggressive pruning can have adverse effects: For hate speech classification, models with pruning of 30% or more of the original parameters demonstrate increased levels of gender, race, and religious bias. In an analysis of stereotyping and toxicity classification in text, Ramesh et al. (2023) also find that pruning may amplify bias in some cases, but with mixed effects and dependency on the degree of pruning.
 
 5.2.5 Discussion and Limitations. In-training mitigations assume access to a trainable model. If this assumption is met, one of the biggest limitations of in-training mitigations is computational expense and feasibility. Besides selective parameter updating methods, in-training mitigations also threaten to corrupt the pre-trained language
+
+
+<!-- PAGE 54 -->
+
 
 understanding with catastrophic forgetting because fine-tuning datasets are relatively small compared to the original training data, which can impair model performance.
 
@@ -949,6 +1162,10 @@ Following the definition of Savani, White, and Govindarajulu (2020), we consider
 
 Constrained Next-token Search. Constrained next-token search considers methods that change the ranking of the next token by adding additional requirements. In a simple and coarse approach, Gehman et al. (2020) and Xu et al. (2020) propose word- or n -gram blocking during decoding, prohibiting the use of tokens from an offensive word list. However, biased outputs can still be generated from a set of unbiased tokens or n -grams. To improve upon token-blocking strategies, more nuanced approaches constrain text generation by comparing the most likely or a potentially biased generation to a counterfactual or less biased version. Using a counterfactual-based method, Saunders, Sallis, and Byrne (2022) use a constrained beam search to generate more gender-diverse
 
+
+<!-- PAGE 55 -->
+
+
 <!-- image -->
 
 ## Figure 9
@@ -963,6 +1180,10 @@ Modified Token Distribution. Changing the distribution from which tokens are sam
 
 <!-- image -->
 
+
+<!-- PAGE 56 -->
+
+
 outputs with greater probability. Chung, Kamar, and Amershi (2023) propose two decoding strategies to increase diversity of generated tokens. Logit suppression decreases the probability of generating already-used tokens from previous generations, which encourages the selection of lower-frequency tokens. Temperature sampling flattens the next-word probability distribution to also encourage the selection of less-likely tokens. Kimet al. (2023) also modify the output token distribution using reward values obtained from a toxicity evaluation model. The authors raise the likelihood of tokens that increase a reward value, and lower ones that do not. Gehman et al. (2020) similarly increase the likelihood of non-toxic tokens, adding a (non-)toxicity score to the logits over the vocabulary before normalization. Liu, Khalifa, and Wang (2023) alternatively redistribute the probability mass with bias terms. The proposed method seeks to minimize a constraint function such as toxicity with an iterative sequence generation process, tuning bias terms added to the predicted logits at each decoding step. After decoding for several steps, the bias terms are updated with gradient descent to minimize the toxicity of the generated sequence.
 
 Another class of approaches modifies token probabilities by comparing two outputs differing in their level of bias. Liu et al. (2021a) use a combination of a pre-trained model and two smaller language models during decoding, one expert that models non-toxic text, and one anti-expert that models toxic text. The pre-trained logits are modified to increase the probability of tokens with high probability under the expert and low probability under the anti-expert. Hallinan et al. (2023) similarly identify potentially toxic tokens with an expert and an anti-expert, and mask and replace candidate tokens with less toxic alternatives. In GeDi, Krause et al. (2021) also compare the generated outputs from two language models, one conditioned on an undesirable attribute like toxicity, which guides each generation step to avoid toxic words. Instead of using an additional model, Schick, Udupa, and Sch¨ utze (2021) propose a self-debiasing framework. The authors observe that pre-trained models can often recognize their own biases in the outputs they produce and can describe these behaviors in their own generated descriptions. This work compares the distribution of the next word given the original input, to the distribution given the model's own reasoning about why the input may be biased. The model chooses words with a higher probability of being unbiased.
@@ -972,6 +1193,10 @@ Finally, projection-based approaches may modify the next-token probability. Lian
 <!-- formula-not-decoded -->
 
 5.3.2 Weight Redistribution. The weights of a trained model may be modified post hoc without further training. Given the potential associations between attention weights and encoded bias (Jeoung and Diesner 2022), redistributing attention weights may change how the model attends to biased words or phrases. Though Attanasio et al. (2022) and (Gaci et al. 2022) propose in-training approaches (see Section 5.2.2), Zayed et al. (2023a) modify the attention weights after training, applying temperature scaling
+
+
+<!-- PAGE 57 -->
+
 
 controlled by a hyperparameter that can be tuned to maximize some fairness metric. The hyperparameter can either increase entropy to focus on a broader set of potentially less stereotypical tokens, or can decrease entropy to attend to a narrower context, which may reduce exposure to stereotypical tokens.
 
@@ -984,6 +1209,10 @@ Hauzenberger et al. (2023) propose a technique that trains several subnetworks t
 ## 5.4 Post-processing Mitigation
 
 Post-processing mitigation refers to post-processing on model outputs to remove bias. Many pre-trained models remain black boxes with limited information about the training data, optimization procedure, or access to the internal model, and instead present outputs only. To address this challenge, several studies have offered post hoc methods that do not touch the original model parameters but instead mitigate bias in the generated output only. Post-processing mitigation can be achieved by identifying biased
+
+
+<!-- PAGE 58 -->
+
 
 <!-- image -->
 
@@ -1001,6 +1230,10 @@ Machine Translation. Another class of rewriter model translates from a biased so
 
 Parallel corpora have also been developed to address issues beyond gender bias. Wang et al. (2022) introduce a dataset of sentence rewrites to train rewriting models to
 
+
+<!-- PAGE 59 -->
+
+
 generate more polite outputs, preserving semantic information but altering the emotion and sentiment. The dataset contains 10K human-based rewrites, and 100K model-based rewrites based on the human-annotated data. Pryzant et al. (2020) address subjectivity bias by building a parallel corpus of biased and neutralized sentences and training a neural classifier with a detection module to identify inappropriately subjective or presumptuous words, and an editing module to replace them with more neutral, nonjudgmental alternatives.
 
 Other Neural Rewriters. Maet al. (2020) focus specifically on editing the power dynamics and agency levels encoded in verbs, proposing a neural model that can reconstruct and paraphrase its input, while boosting the use of power- or agency-connoted words. Majumder, He, and McAuley (2022) present InterFair for user-informed output modification during inference. After scoring words important for task prediction and words associated with bias, the user can critique and adjust the scores to inform rewriting.
@@ -1014,6 +1247,10 @@ We synthesize findings and guidance from the literature to make the following re
 1. Avoid flattening power imbalances. Data pre-processing techniques that rely on masking or replacing identity words may not capture the pertinent power dynamics that apply specifically and narrowly to certain social groups. If these techniques are deemed appropriate for the downstream application, ensure that the word lists are valid and complete representations of the social groups they intend to model.
 2. Choose objective functions that align with fairness desiderata. Explicitly state the assumptions encoded in the choice of the loss or regularization function, or propose alternatives that are tailored to a specific fairness criterion. Consider cost-sensitive learning to increase the weight of minority classes in the training data.
 3. Balance bias mitigation with output diversity. Ensure that minoritized voices are not filtered out due to modified decoding strategies. Rigorously validate that any heuristic intended to detect toxic or harmful
+
+
+<!-- PAGE 60 -->
+
 
 - tokens does not further marginalize social groups or their linguistic dialects and usages.
 4. Preserve important contexts in output rewriting. Recognize the subjective and value-laden nature of determining which outputs to rewrite. Avoid flattening linguistic style and variation or erasing social group identities in post-processing.
@@ -1030,6 +1267,10 @@ Developing Participatory Research Designs. Participatory approaches can integrat
 
 Shifting Values and Assumptions. As we have established, bias and fairness are highly subjective and normative concepts situated in social, cultural, historical, political, and regional contexts. Therefore, there is no single set of values that bias and fairness research can assume, yet, as Green (2019) explains, the assumptions and values in scientific and computing research tend to reflect those of dominant groups. Instead of relying on vague notions of socially desirable behaviors of LLMs, researchers and practitioners can establish more rigorous theories of social change, grounded in relevant
 
+
+<!-- PAGE 61 -->
+
+
 principles from fields like linguistics, sociology, and philosophy. These normative judgments should be made explicit and not assumed to be universal. One tangible direction of research is to expand bias and fairness considerations to contexts beyond the United States and Western ones often assumed by prior works, and for languages other than English. For example, several datasets rely on U.S. Department of Labor statistics to identify relevant dimensions for bias evaluation, which lacks generality to other regions of the world. Future work can expand perspectives to capture other sets of values and norms. Bhatt et al. (2022) and Malik et al. (2022) provide examples of such work for Indian society.
 
 Expanding Language Resources. Moving beyond the currently studied contexts will require additional language resources, including data for different languages and their dialects, as well as an understanding of various linguistic features and representations of bias. Curation of additional language resources should value inclusivity over convenience, and documentation should follow practices such as Bender and Friedman (2018) and Gebru et al. (2021). Furthermore, stakeholders must ensure that the process of collecting data itself does not contribute to further harms. As described by Jernite et al. (2022), this includes respecting the privacy and consent of the creators and subjects of data, providing people and communities with agency and control over their data, and sharing the benefits of data collection with the people and communities from whom the data originates. Future work can examine frameworks for data collection pipelines that ensure communities maintain control over their own language resources and have a share in the benefits from the use of their data, following recommendations such as Jernite et al. (2022) and Walter and Suina (2019) to establish data governance and sovereignty practices.
@@ -1040,6 +1281,10 @@ Developing Fairness Desiderata. We propose an initial set of fairness desiderata
 
 Rethinking Social Group Definitions. Delineating between social groups is often required to assess disparities, yet can simultaneously legitimize social constructions, reinforce power differentials, and enable systems of oppression (Hanna et al. 2020). Disaggregation offers a pathway to deconstruct socially constructed or overly general groupings, while maintaining the ability to perform disparity analysis within different contexts.
 
+
+<!-- PAGE 62 -->
+
+
 Disaggregated groups include intersectional ones, as well as more granular groupings of a population. Future work can leverage disaggregated analysis to develop improved evaluation metrics that more precisely specify who is harmed by an LLM and in what way, and more comprehensive mitigation techniques that take into account a broader set of social groups when targeting bias. In a similar vein, future work can more carefully consider how subgroups are constructed, as the definition of a social group can itself be exclusive. For example, Devinney, Bj¨ orklund, and Bj¨ orklund (2022) argue that modeling gender as binary and immutable erases the identities of trans, nonbinary, and intersex people. Bias and fairness research can expand its scope to groups and subgroups it has ignored or neglected. This includes supplementing linguistic resources like word lists that evaluation and mitigation rely on, and revising frameworks that require binary social groups. Another direction of research moves beyond observed attributes. Future work can interrogate techniques to measure bias for group identities that may not be directly observed, as well as the impact of proxies for social groups on bias.
 
 Recognizing Distinct Social Groups. Several evaluation and mitigation techniques treat social groups as interchangeable. Other works seek to neutralize all protected attributes in the inputs or outputs of a model. These strategies tend to ignore or conceal distinct mechanisms of oppression that operate differently for each social group (Hanna et al. 2020). Research can examine more carefully the various underlying sources of bias, understand how the mechanisms differ between social groups, and develop evaluation and mitigation strategies that target specific historical and structural forces, without defaulting to the erasure of social group identities as an adequate debiasing strategy.
@@ -1049,6 +1294,10 @@ Recognizing Distinct Social Groups. Several evaluation and mitigation techniques
 Establishing Reporting Standards. Similar to model reporting practices established by Mitchell et al. (2019), we suggest that the evaluation of bias and fairness issues become standard additions to model documentation. That said, as we discuss throughout Section 3, several metrics are inconsistent with one another. For example, the selection of model hyperparameters or evaluation metric can lead to contradictory conclusions, creating confusing or misleading results, yet bias mitigation techniques often claim to successfully debias a model if any metric demonstrates a decrease in bias. Best practices for reporting bias and fairness evaluation remain an open problem. For instance, which or how many metrics should be reported? What additional information (evaluation dataset, model hyperparameters, etc.) should be required to contextualize the metric? How should specific harms be articulated? Which contexts do evaluation datasets fail to represent and quantitative measures fail to capture? Han, Baldwin, and Cohn (2023) provide a step in this direction, with an evaluation reporting checklist to characterize how test instances are aggregated by a bias metric. Orgad and Belinkov (2022) similarly outline best practices for selecting and stabilizing metrics. Works like these serve as a starting point for more robust reporting frameworks.
 
 Considering the Benefits and Harms of More Comprehensive Benchmarks. One possibility to standardize bias and fairness evaluation is to establish more comprehensive benchmarks to overcome comparability issues that arise from the vast array of bias evaluation metrics and datasets, enabling easier differentiation of bias mitigation techniques and their effectiveness. Despite this, benchmarks should be approached with caution and should not be conflated with notions of 'universality.' Benchmarks can obscure and decontextualize nuanced dimensions of harm, resulting in validity issues
+
+
+<!-- PAGE 63 -->
+
 
 (Raji et al. 2021). In fact, overly general evaluation tools may be completely at odds with the normative, subjective, and contextual nature of bias, and 'universal' benchmarks often express the perspectives of dominant groups in the name of objectivity and neutrality and thus perpetuate further harm against marginalized groups (Denton et al. 2020). Framing bias as something to be measured objectively ignores the assumptions made in the operationalization of the measurement tool (Jacobs and Wallach 2021). It threatens to foster complacency when the benchmark is satisfied but the underlying power imbalance remains unaddressed. Future work can critically interrogate the role of a general evaluation framework, weighing the benefit of comparability with the risk of ineffectiveness.
 
@@ -1061,6 +1310,10 @@ Expanding Evaluation Possibilities. This survey identifies and summarizes many d
 Enabling Scalability. Several mitigation techniques rely on word lists, human annotations or feedback, or exemplar inputs or outputs, which may narrow the scope of the types of bias and the set of social groups that are addressed when these resources are limited. Future work can investigate strategies to expand bottleneck resources for bias mitigation, without overlooking the value of human- and community-in-the-loop frameworks.
 
 Developing Hybrid Techniques. Most bias mitigation techniques target only a single intervention stage (pre-processing, in-training, intra-processing, or post-processing). In light of the observation that bias mitigated in the embedding space can re-emerge in downstream applications, understanding the efficacy of techniques at each stage remains an open problem, with very few empirical studies comparing the gamut of available techniques. In addition, future work can investigate hybrid mitigation techniques that reduce bias at multiple or all intervention stages for increased effectiveness.
+
+
+<!-- PAGE 64 -->
+
 
 Understanding Mechanisms of Bias Within LLMs. Some studies like Jeoung and Diesner (2022) have examined how bias mitigation techniques change LLMs. For example, understanding that attention mechanisms play a key role in encoding bias informs attention-targeting mitigations such as Attanasio et al. (2022), Gaci et al. (2022), and Zayed et al. (2023a). Research into how and in which components (neurons, layers, attention heads, etc.) of LLMs encode bias, and in what ways bias mitigations affect these, remains an understudied problem, with important implications for more targeted technical solutions.
 
@@ -1075,6 +1328,10 @@ Analyzing Performance-Fairness Trade-offs. Bias mitigation techniques typically 
 Technical solutions are incomplete without broader societal action against power hierarchies that diminish and dominate marginalized groups. In this vein, technical solutionism as an attitude overlooks and simplifies the broader histories and contexts that enable structural systems oppression, which can preserve, legitimate, and perpetuate the underlying roots of inequity and injustice, creating surface-level repairs that create an illusion of incremental progress but fail to interrogate or disrupt the broader systemic issues. This survey is limited in its alignment with a technical solutionist perspective, as opposed to a critical theoretical one. In particular, the taxonomies are organized according to their technical implementation details, instead of by their downstream usage contexts or harms. Though organization in this manner fails to question the broader and often tenuous assumptions in bias and fairness research more generally, wehopeourorganization can provide an understanding of the dominant narratives and themes in bias and fairness research for LLMs, enabling the identification of similarities between metrics, datasets, and mitigations with common underlying objectives and assumptions.
 
 We have also focused narrowly on a few key points in the model development and deployment pipeline, particularly model training and evaluation. As Black et al. (2023)
+
+
+<!-- PAGE 65 -->
+
 
 highlight, the decisions that researchers and practitioners can make in bias and fairness work are much more comprehensive. A more holistic approach includes problem formulation, data collection, and deployment and integration into real-world contexts.
 
@@ -1095,6 +1352,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Bai, Yuntao, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhoseini, Cameron McKinnon, et al. 2022. Constitutional AI: Harmlessness from AI feedback. arXiv preprint arXiv:2212.08073 .
 - Barikeri, Soumya, Anne Lauscher, Ivan Vuli´ c, and Goran Glavaˇ s. 2021. RedditBias: A real-world resource for bias evaluation and debiasing of conversational language models. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint
 
+
+<!-- PAGE 66 -->
+
+
 - Conference on Natural Language Processing (Volume 1: Long Papers) , pages 1941-1955. https://doi.org/10.18653/v1/2021 .acl-long.151
 - Barocas, Solon, Moritz Hardt, and Arvind Narayanan. 2019. Fairness and Machine Learning: Limitations and Opportunities . fairmlbook.org. http://www .fairmlbook.org
 - Bartl, Marion, Malvina Nissim, and Albert Gatt. 2020. Unmasking contextual stereotypes: Measuring and mitigating BERT's gender bias. In Proceedings of the Second Workshop on Gender Bias in Natural Language Processing , pages 1-16.
@@ -1113,6 +1374,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Blodgett, Su Lin, Solon Barocas, Hal Daum´ e III, and Hanna Wallach. 2020. Language (technology) is power: A critical survey of 'bias' in NLP. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pages 5454-5476. https://doi.org/10.18653/v1/2020 .acl-main.485
 - Blodgett, Su Lin, Gilsinia Lopez, Alexandra Olteanu, Robert Sim, and Hanna Wallach. 2021. Stereotyping Norwegian salmon: An inventory of pitfalls in fairness benchmark datasets. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) , pages 1004-1015. https://doi.org/10.18653/v1/2021 .acl-long.81
 - Blodgett, Su Lin and Brendan O'Connor. 2017. Racial disparity in natural language processing: A case study of social media
+
+
+<!-- PAGE 67 -->
+
 
 - African-American English. arXiv preprint arXiv:1707.00061 .
 - Bolukbasi, Tolga, Kai-Wei Chang, James Y. Zou, Venkatesh Saligrama, and Adam T. Kalai. 2016. Man is to computer programmer as woman is to homemaker? Debiasing word embeddings. Advances in Neural Information Processing Systems , 29:4356-4364.
@@ -1133,6 +1398,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Chouldechova, Alexandra. 2017. Fair prediction with disparate impact: A study of bias in recidivism prediction instruments. Big Data , 5(2):153-163. https://doi.org/10.1089/big.2016 .0047 , PubMed: 28632438
 - Chowdhery, Aakanksha, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav
 
+
+<!-- PAGE 68 -->
+
+
 - Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, et al. 2022. PaLM: Scaling language modeling with pathways. arXiv preprint arXiv:2204.02311 .
 - Chung, Hyung Won, Le Hou, Shayne Longpre, Barret Zoph, Yi Tay, William Fedus, Eric Li, Xuezhi Wang, Mostafa Dehghani, Siddhartha Brahma, et al. 2022. Scaling instruction-finetuned language models. arXiv preprint arXiv:2210.11416 .
 - Chung, John, Ece Kamar, and Saleema Amershi. 2023. Increasing diversity while maintaining accuracy: Text data generation with large language models and human interventions. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pages 575-593. https://doi.org /10.18653/v1/2023.acl-long.34
@@ -1151,6 +1420,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Dev, Sunipa, Tao Li, Jeff M. Phillips, and Vivek Srikumar. 2020. On measuring and mitigating biased inferences of word embeddings. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 34, pages 7659-7666. https:// doi.org/10.1609/aaai.v34i05.6267
 - Dev, Sunipa, Tao Li, Jeff M. Phillips, and Vivek Srikumar. 2021. OSCaR: Orthogonal
 
+
+<!-- PAGE 69 -->
+
+
 - subspace correction and rectification of biases in word embeddings. In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing , pages 5034-5050. https://doi.org/10 .18653/v1/2021.emnlp-main.411
 - Devinney, Hannah, Jenny Bj¨ orklund, and Henrik Bj¨ orklund. 2022. Theories of 'gender' in NLP bias research. In Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency , FAccT '22, pages 2083-2102. https:// doi.org/10.1145/3531146.3534627
 - Devlin, Jacob, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of deep bidirectional transformers for language understanding. In Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers) , pages 4171-4186.
@@ -1168,6 +1441,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Fleisig, Eve, Rediet Abebe, and Dan Klein. 2023. When the majority is wrong: Modeling annotator disagreement for subjective tasks. In Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing , pages 6715-6726. https://doi.org/10.18653/v1/2023 .emnlp-main.415
 - Fleisig, Eve, Aubrie Amstutz, Chad Atalla, Su Lin Blodgett, Hal Daum´ e III, Alexandra Olteanu, Emily Sheng, Dan Vann, and Hanna Wallach. 2023. FairPrism: Evaluating fairness-related harms in text generation. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pages 6231-6251. https://doi.org/10 .18653/v1/2023.acl-long.343
 
+
+<!-- PAGE 70 -->
+
+
 - Forbes, Maxwell, Jena D. Hwang, Vered Shwartz, Maarten Sap, and Yejin Choi. 2020. Social chemistry 101: Learning to reason about social and moral norms. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP) , pages 653-670. https://doi.org/10.18653/v1/2020 .emnlp-main.48
 - Friedler, Sorelle A., Carlos Scheidegger, and Suresh Venkatasubramanian. 2021. The (im)possibility of fairness: Different value systems require different mechanisms for fair decision making. Communications of the ACM , 64(4):136-143. https://doi .org/10.1145/3433949
 - Gaci, Yacine, Boualem Benattallah, Fabio Casati, and Khalid Benabdeslem. 2022. Debiasing pretrained text encoders by paying attention to paying attention. In 2022 Conference on Empirical Methods in Natural Language Processing , pages 9582-9602. https://doi.org /10.18653/v1/2022.emnlp-main.651
@@ -1182,6 +1459,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Gira, Michael, Ruisu Zhang, and Kangwook Lee. 2022. Debiasing pre-trained language models via efficient fine-tuning. In Proceedings of the Second Workshop on Language Technology for Equality, Diversity and Inclusion , pages 59-69. https://doi .org/10.18653/v1/2022.ltedi-1.8 Gligoric, Kristina, Myra Cheng, Lucia Zheng, Esin Durmus, and Dan Jurafsky. 2024. NLP systems that can't tell use from mention censor counterspeech, but teaching the distinction helps. arXiv preprint
 - arXiv:2404.01651 .
 - Goldfarb-Tarrant, Seraphina, Rebecca Marchant, Ricardo Mu˜ noz S´ anchez, Mugdha Pandya, and Adam Lopez. 2021. Intrinsic bias metrics do not correlate with application bias. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th
+
+
+<!-- PAGE 71 -->
+
 
 - International Joint Conference on Natural Language Processing (Volume 1: Long Papers) , pages 1926-1940. https://doi.org/10 .18653/v1/2021.acl-long.150
 - Gonen, Hila and Yoav Goldberg. 2019. Lipstick on a pig: Debiasing methods cover up systematic gender biases in word embeddings but do not remove them. In Proceedings of the 2019 Workshop on Widening NLP , pages 60-63. https:// doi.org/10.18653/v1/N19-1061
@@ -1202,6 +1483,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Han, Xudong, Timothy Baldwin, and Trevor Cohn. 2022b. Towards equal opportunity fairness through adversarial learning. arXiv preprint arXiv:2203.06317 .
 - Han, Xudong, Timothy Baldwin, and Trevor Cohn. 2023. Fair enough: Standardizing evaluation and model selection for fairness
 
+
+<!-- PAGE 72 -->
+
+
 - research in NLP. In Proceedings of the 17th Conference of the European Chapter of the Association for Computational Linguistics , pages 297-312. https://doi.org/10 .18653/v1/2023.eacl-main.23
 - Hanna, Alex, Emily Denton, Andrew Smart, and Jamila Smith-Loud. 2020. Towards a critical race methodology in algorithmic fairness. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency , FAT* '20, pages 501-512. https://doi.org/10.1145/3351095 .3372826
 - Hardt, Moritz, Eric Price, and Nati Srebro. 2016. Equality of opportunity in supervised learning. Advances in Neural Information Processing Systems , 29:3323-3331.
@@ -1221,6 +1506,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Jain, Nishtha, Maja Popovi´ c, Declan Groves, and Eva Vanmassenhove. 2021. Generating gender augmented data for NLP. In Proceedings of the 3rd Workshop on Gender Bias in Natural Language Processing , pages 93-102. https://doi .org/10.18653/v1/2021.gebnlp -1.11
 - Jeoung, Sullam and Jana Diesner. 2022. What changed? Investigating debiasing methods using causal mediation analysis. In Proceedings of the 4th Workshop on Gender
 
+
+<!-- PAGE 73 -->
+
+
 - Bias in Natural Language Processing (GeBNLP) , pages 255-265. https://doi .org/10.18653/v1/2022.gebnlp-1.26
 - Jernite, Yacine, Huu Nguyen, Stella Biderman, Anna Rogers, Maraim Masoud, Valentin Danchev, Samson Tan, Alexandra Sasha Luccioni, Nishant Subramani, Isaac Johnson, et al. 2022. Data governance in the age of large-scale data-driven language technology. In Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency , FAccT '22, pages 2206-2222. https:// doi.org/10.1145/3531146.3534637
 - Jia, Shengyu, Tao Meng, Jieyu Zhao, and Kai-Wei Chang. 2020. Mitigating gender bias amplification in distribution by posterior regularization. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pages 2936-2942. https://doi.org/10.18653/v1/2020 .acl-main.264
@@ -1238,6 +1527,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Kim, Minbeom, Hwanhee Lee, Kang Min Yoo, Joonsuk Park, Hwaran Lee, and Kyomin Jung. 2023. Critic-guided decoding for controlled text generation. In Findings of the Association for Computational Linguistics: ACL 2023 , pages 4598-4612. https://doi.org/10.18653/v1/2023 .findings-acl.281
 - Kiritchenko, Svetlana and Saif Mohammad. 2018. Examining gender and race bias in two hundred sentiment analysis systems. In Proceedings of the Seventh Joint Conference on Lexical and Computational Semantics ,
 
+
+<!-- PAGE 74 -->
+
+
 - pages 43-53. https://doi.org/10 .18653/v1/S18-2005
 - Kirkpatrick, James, Razvan Pascanu, Neil Rabinowitz, Joel Veness, Guillaume Desjardins, Andrei A. Rusu, Kieran Milan, John Quan, Tiago Ramalho, Agnieszka Grabska-Barwinska, et al. 2017. Overcoming catastrophic forgetting in neural networks. Proceedings of the National Academy of Sciences , 114(13):3521-3526. https://doi.org/10.1073/pnas .1611835114 , PubMed: 28292907
 - Kojima, Takeshi, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, and Yusuke Iwasawa. 2022. Large language models are zero-shot reasoners. Advances in Neural Information Processing Systems , 35:22199-22213.
@@ -1254,6 +1547,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Levy, Shahar, Koren Lazar, and Gabriel Stanovsky. 2021. Collecting a large-scale gender bias dataset for coreference resolution and machine translation. In Findings of the Association for Computational Linguistics: EMNLP 2021 , pages 2470-2480. https://doi.org/10.18653/v1/2021 .findings-emnlp.211
 - Lewis, Mike, Yinhan Liu, Naman Goyal, Marjan Ghazvininejad, Abdelrahman Mohamed, Omer Levy, Veselin Stoyanov, and Luke Zettlemoyer. 2020. BART: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pages 7871-7880. https://doi.org/10.18653/v1/2020 .acl-main.703
 - Li, Tao, Daniel Khashabi, Tushar Khot, Ashish Sabharwal, and Vivek Srikumar. 2020. UNQOVERing stereotyping biases via underspecified questions. In Findings of
+
+
+<!-- PAGE 75 -->
+
 
 - the Association for Computational Linguistics: EMNLP 2020 , pages 3475-3489. https://doi.org/10.18653/v1/2020 .findings-emnlp.311
 - Li, Xiang Lisa and Percy Liang. 2021. Prefix-tuning: Optimizing continuous prompts for generation. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) , pages 4582-4597. https://doi .org/10.18653/v1/2021.acl-long.353
@@ -1274,6 +1571,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Loudermilk, Brandon C. 2015. Implicit attitudes and the perception of sociolinguistic variation. In Alexei Prikhodkine and Dennis R. Preston, editors, Responses to Language Varieties: Variability, Processes and Outcomes , pages 137-156. https://doi.org/10 .1075/impact.39.06lou
 - Lu, Kaiji, Piotr Mardziel, Fangjing Wu, Preetam Amancharla, and Anupam Datta. 2020. Gender bias in neural natural
 
+
+<!-- PAGE 76 -->
+
+
 - language processing. Logic, Language, and Security: Essays Dedicated to Andre Scedrov on the Occasion of His 65th Birthday , pages 189-202. https://doi.org/10 .1007/978-3-030-62077-6 14
 - Lu, Ximing, Sean Welleck, Jack Hessel, Liwei Jiang, Lianhui Qin, Peter West, Prithviraj Ammanabrolu, and Yejin Choi. 2022. Quark: Controllable text generation with reinforced unlearning. Advances in Neural Information Processing Systems , 35:27591-27609.
 - Lu, Ximing, Peter West, Rowan Zellers, Ronan Le Bras, Chandra Bhagavatula, and Yejin Choi. 2021. NeuroLogic decoding: (Un)supervised neural text generation with predicate logic constraints. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies , pages 4288-4299. https://doi.org/10.18653/v1/2021 .naacl-main.339
@@ -1292,6 +1593,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Mehrabi, Ninareh, Fred Morstatter, Nripsuta Saxena, Kristina Lerman, and Aram Galstyan. 2021. A survey on bias and fairness in machine learning. ACM Computing Surveys , 54(6):1-35. https://doi.org/10.1145/3457607
 - Mei, Katelyn, Sonia Fereidooni, and Aylin Caliskan. 2023. Bias against 93 stigmatized groups in masked language models and downstream sentiment classification tasks. In Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency ,
 
+
+<!-- PAGE 77 -->
+
+
 - FAccT '23, pages 1699-1710. https:// doi.org/10.1145/3593013.3594109 Min, Bonan, Hayley Ross, Elior Sulem, Amir Pouran Ben Veyseh, Thien Huu Nguyen, Oscar Sainz, Eneko Agirre, Ilana Heintz, and Dan Roth. 2023. Recent advances in natural language processing via large pre-trained language models: A survey. ACMComputing Surveys , 56:1-40. https://doi.org/10.1145/3605943
 - Mitchell, Margaret, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, and Timnit Gebru. 2019. Model cards for model reporting. In Proceedings of the Conference on Fairness, Accountability, and Transparency , FAT* '19, pages 220-229. https://doi.org/10 .1145/3287560.3287596
 - Mozafari, Marzieh, Reza Farahbakhsh, and No¨ el Crespi. 2020. Hate speech detection and racial bias mitigation in social media based on BERT model. PloS ONE , 15(8):e0237861. https://doi.org/10 .1371/journal.pone.0237861 , PubMed: 32853205
@@ -1307,6 +1612,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Orgad, Hadas and Yonatan Belinkov. 2023. BLIND: Bias removal with no demographics. In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pages 8801-8821. https://doi .org/10.18653/v1/2023.acl-long.490
 - Orgad, Hadas, Seraphina Goldfarb-Tarrant, and Yonatan Belinkov. 2022. How gender debiasing affects internal model representations, and why it matters. In Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies , pages 2602-2628. https://doi.org/10.18653/v1/2022 .naacl-main.188
 - Ousidhoum, Nedjma, Xinran Zhao, Tianqing Fang, Yangqiu Song, and Dit-Yan Yeung. 2021. Probing toxic content in large
+
+
+<!-- PAGE 78 -->
+
 
 - pre-trained language models. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) , pages 4262-4274. https://doi .org/10.18653/v1/2021.acl-long.329
 - Ouyang, Long, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, et al. 2022. Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems , 35:27730-27744.
@@ -1324,6 +1633,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Qian, Yusu, Urwa Muaz, Ben Zhang, and Jae Won Hyun. 2019. Reducing gender bias in word-level language models with a gender-equalizing loss function. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics: Student Research Workshop , pages 223-228. https://doi.org/10.18653/v1/P19 -2031
 - Radford, Alec, Karthik Narasimhan, Tim Salimans, Ilya Sutskever, et al. 2018. Improving language understanding by generative pre-training. Available https://s3-us-west-2.amazonaws.com /openai-assets/research-covers /language-unsupervised/language understanding paper.pdf .
 - Radford, Alec, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et al. 2019. Language models are unsupervised multitask learners. OpenAI Blog , 1(8):9.
+
+
+<!-- PAGE 79 -->
+
 
 - Raffel, Colin, Noam Shazeer, Adam Roberts, Katherine Lee, Sharan Narang, Michael Matena, Yanqi Zhou, Wei Li, and Peter J. Liu. 2020. Exploring the limits of transfer learning with a unified text-to-text transformer. Journal of Machine Learning Research , 21(1):5485-5551.
 - Raji, Deborah, Emily Denton, Emily M. Bender, Alex Hanna, and Amandalynne Paullada. 2021. AI and the everything in the whole wide world benchmark. In Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks , pages 1-17.
@@ -1343,6 +1656,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Saunders, Danielle, Rosie Sallis, and Bill Byrne. 2022. First the worst: Finding better gender translations during beam search. In Findings of the Association for Computational Linguistics: ACL 2022 , pages 3814-3823. https://doi.org/10.18653/v1/2022 .findings-acl.301
 - Savani, Yash, Colin White, and Naveen Sundar Govindarajulu. 2020. Intra-processing methods for debiasing neural networks. Advances in Neural
 
+
+<!-- PAGE 80 -->
+
+
 - Information Processing Systems , 33:2798-2810.
 - Schick, Timo, Sahana Udupa, and Hinrich Sch¨ utze. 2021. Self-diagnosis and self-debiasing: A proposal for reducing corpus-based bias in NLP. Transactions of the Association for Computational Linguistics , 9:1408-1424. https://doi.org/10 .1162/tacl a 00434
 - Schramowski, Patrick, Cigdem Turan, Nico Andersen, Constantin A. Rothkopf, and Kristian Kersting. 2022. Large pre-trained language models contain human-like biases of what is right and wrong to do. Nature Machine Intelligence , 4(3):258-268. https://doi.org/10.1038/s42256-022 -00458-8
@@ -1360,6 +1677,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Smith, Eric Michael, Melissa Hall, Melanie Kambadur, Eleonora Presani, and Adina Williams. 2022. 'I'm sorry to hear that': Finding new biases in language models with a holistic descriptor dataset. In Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing , pages 9180-9211. https:// doi.org/10.18653/v1/2022.emnlp -main.625
 - Solaiman, Irene and Christy Dennison. 2021. Process for adapting language models to society (PALMS) with values-targeted datasets. Advances in Neural Information Processing Systems , 34:5861-5873.
 - Srivastava, Nitish, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+
+
+<!-- PAGE 81 -->
+
 
 - Salakhutdinov. 2014. Dropout: A simple way to prevent neural networks from overfitting. Journal of Machine Learning Research , 15(1):1929-1958.
 - Steed, Ryan, Swetasudha Panda, Ari Kobren, and Michael Wick. 2022. Upstream mitigation is not all you need: Testing the bias transfer hypothesis in pre-trained language models. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , pages 3524-3542. https://doi .org/10.18653/v1/2022.acl-long.247
@@ -1379,6 +1700,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Walter, Maggie and Michele Suina. 2019. Indigenous data, indigenous methodologies and indigenous data sovereignty. International Journal of Social Research Methodology , 22(3):233-243. https://doi.org/10.1080/13645579 .2018.1531228
 - Wang, Alex and Kyunghyun Cho. 2019. BERT has a mouth, and it must speak: BERT as a Markov random field language model. In Proceedings of the Workshop on Methods for Optimizing and Evaluating Neural Language Generation , pages 30-36. https://doi.org/10.18653/v1/W19-2304
 
+
+<!-- PAGE 82 -->
+
+
 - Wang, Liwen, Yuanmeng Yan, Keqing He, Yanan Wu, and Weiran Xu. 2021. Dynamically disentangling social bias from task-oriented representations with adversarial attack. In Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies , pages 3740-3750. https://doi.org/10 .18653/v1/2021.naacl-main.293
 - Wang, Rui, Pengyu Cheng, and Ricardo Henao. 2023. Toward fairness in text generation via mutual information minimization based on importance sampling. In International Conference on Artificial Intelligence and Statistics , pages 4473-4485.
 - Wang, Xun, Tao Ge, Allen Mao, Yuki Li, Furu Wei, and Si-Qing Chen. 2022. Pay attention to your tone: Introducing a new dataset for polite language rewrite. arXiv preprint arXiv:2212.10190 .
@@ -1397,6 +1722,10 @@ We have presented a comprehensive survey of the literature on bias evaluation an
 - Zayed, Abdelrahman, Goncalo Mordido, Samira Shabanian, and Sarath Chandar. 2023a. Should we attend more or less? Modulating attention for fairness. arXiv preprint arXiv:2305.13088 .
 - Zayed, Abdelrahman, Prasanna Parthasarathi, Gonc ¸alo Mordido, Hamid Palangi, Samira Shabanian, and Sarath Chandar. 2023b. Deep learning on a healthy data diet: Finding important examples for fairness. In Proceedings of the AAAI Conference on Artificial Intelligence , volume 37, pages 14593-14601. https:// doi.org/10.1609/aaai.v37i12.26706
 - Zhang, Brian Hu, Blake Lemoine, and Margaret Mitchell. 2018. Mitigating
+
+
+<!-- PAGE 83 -->
+
 
 - unwanted biases with adversarial learning. In Proceedings of the 2018 AAAI/ACM Conference on AI, Ethics, and Society , AIES '18, pages 335-340. https:// doi.org/10.1145/3278721.3278779
 - Zhang, Hongyi, Moustapha Cisse, Yann N. Dauphin, and David Lopez-Paz. 2018. mixup: Beyond empirical risk minimization. In International Conference on Learning Representations .

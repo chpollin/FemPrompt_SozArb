@@ -1,10 +1,11 @@
 ---
 source_file: Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.pdf
-conversion_date: 2026-02-03T08:58:53.929723
+conversion_date: 2026-02-03T18:29:36.472510
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## COMMENTARY
 
 ## The End of the World as We Know It? ChatGPT and Social Work
@@ -29,6 +30,10 @@ Public reaction to ChatGPT has emphasized its novelty, describing the tool eithe
 
 Social work education is reckoning with the reality that ChatGPT allows students to generate course assignments or to immediately produce written items in an internship setting by using a simple typed question. Such actions eliminate
 
+
+<!-- PAGE 2 -->
+
+
 ## Figure 1: A Case Note Composed by ChatGPT
 
 <!-- image -->
@@ -44,6 +49,10 @@ Few practitioners have access to training that would position them to interrogat
 ## SOCIAL JUSTICE IMPLICATIONS
 
 AI is a sophisticated set of mechanisms, and even individuals whose access to technology is augmented by a functional knowledge of its workings may lack the skills necessary to navigate machine learning tools or to discern when and how AI is
+
+
+<!-- PAGE 3 -->
+
 
 shaping their experience. As AI tools grow in capacity and complexity, and as they are incorporated, increasingly, into the structures that govern social life, vulnerable populations may face accelerating marginalization. Evidence shows that the existing use of advanced technological tools-in arenas like sentencing or risk assessment in child welfare-has exerted disproportionate impact upon marginalized populations, because the construction and deployment of these technologies amplifies existing bias and discrimination (Gillingham, 2019). Post hoc fixes that control for cumulative bias across AI-driven technologies are in development, but so far offer insufficient redress. Social workers are not uniquely responsible for assessing and remediating the ethical harms associated with AI: An entire global ecosystem is working on new types of regulations, ethics, guidelines, and functional capacities to promote meaningful and life-affirming use of AI. It is, however, critical for individual social workers and the profession to override hesitation, seek information, and enter this dialogue.
 

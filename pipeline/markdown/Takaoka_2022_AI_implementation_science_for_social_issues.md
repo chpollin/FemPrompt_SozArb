@@ -1,10 +1,11 @@
 ---
 source_file: Takaoka_2022_AI_implementation_science_for_social_issues.pdf
-conversion_date: 2026-02-03T09:26:17.079956
+conversion_date: 2026-02-03T18:57:19.677683
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Special Article
@@ -37,6 +38,10 @@ Address for correspondence. Kota Takaoka, Arti /uniFB01 cial Intelligence Resear
 
 J Epidemiol 2022;32(4):155-162
 
+
+<!-- PAGE 2 -->
+
+
 ## Maslow's Hierarchy of Needs
 
 Why? Because there will be no well-being without a solid foundation.
@@ -63,6 +68,10 @@ We describe four di /uniFB00 erent stages of an essential scheme for AI social i
 
 In this paper, we employ the case of AI implantation for responding to child abuse cases by the Child Guidance Centers in Japan as a use case. The main issues of child guidance centers in dealing with child abuse are thought to be improving the quality of decision making, enhancing operational e /uniFB03 ciency, and professional training for practitioners. The most important point to be considered when dealing with child abuse is to prevent serious accidents from occurring and to avoid overlooking them. Once this point is ensured, measures must be taken to deal with the increasing number of reported child abuse cases. To achieve this, the priority is to use AI technology and information communication technology to contribute to improving the quality of decision-making and to support the prevention of serious
 
+
+<!-- PAGE 3 -->
+
+
 accidents. Moreover, it is important to establish a system that is automatically linked to the improvement of operational e /uniFB03 ciency and the development of human resources based on the ameliorated quality of decision-making. The reason for this is that child welfare work has di /uniFB00 erent di /uniFB03 culties from general administration work. For example, in general administration work, an application form is given to a client and the client is asked to /uniFB01 ll out the form correctly, on the assumption that the client has provided correct information. On the other hand, at the Child Guidance Center, the sta /uniFB00 needs to judge ambiguous information about reported families and children. In the context of child abuse cases, caregivers may say ' my kid fell on the slide ' even though the trauma was caused by the guardian hitting the child. Believing what the guardian says can lead to serious accidents. Practitioners may have a normalcy bias, which leads them to believe that ' it ' s probably okay ' when they are unsure of their decisions. By comparing the result of AI simulation with the practitioners ' decision-making, they can calmly adjust their own bias. Even practitioners who have been working with a heuristic approach can use AI using data to back up their experience and senses. AI will become an assistant for practitioners in the /uniFB01 eld and lead to an improvement in the quality of their decisions.
 
 ## Di /uniFB00 erences between AI implementation and traditional epidemiological research
@@ -88,6 +97,10 @@ In areas where people are not accustomed to using data, there is a history of de
 Protecting children and ensuring their safety in the context of child abuse is a social issue that falls under SDG 16.2. In 2012 in Japan, there were two cases of child abuse deaths at one of the child guidance centers in a prefecture, leading to both local practitioners and the governor demanding change in the veri /uniFB01 cation of cases of child abuse deaths to evidence-informed practice. In 2013, after receiving consent for data collection from both parties, the author began collecting digital data on risk assessment items at the time of the report. Even with a small sample, the data were analyzed, and the results were repeatedly fed back to the centers every 3 -6 months. We found that di /uniFB00 erent child guidance centers may have di /uniFB00 erent protection standards with similar risks. This was relayed to the directors of the Child Guidance Centers in the prefecture, who formulated a new work policy in the /uniFB01 eld: ' If the safety of a child is in doubt, protect the child. ' Since then, we have continued to accumulate data and monitor our work regularly, monitoring the outcomes every year. One of the outcomes was the ' reduction in the recurrence rate of abuse. ' The organizational goal is to prevent the recurrence of child abuse cases handled by the child guidance center. If the recurrence rate decreases, the number of child abuse cases as a whole will decrease, implying that our society is closer to eliminating child abuse. Based on this perspective, we built a consensus in the /uniFB01 eld and rede /uniFB01 ned the problem by focusing on the recurrence rate (see Figure 2). After obtaining consensus from the /uniFB01 eld to set the recurrence rate as an outcome, we used prospectively collected data from 2014 to the present to predict the recurrence rate using machine learning and infer what actions should be taken in the /uniFB01 eld to reduce the recurrence rate using probability modelling. As a result, it became clear that providing temporary protection to high-risk abuse cases in the initial response phase would contribute to reducing the recurrence rate. It was also agreed that it would be good if the results could be referred to in real-time (eg, at the site of home visits), and the trial of AI implementation began.
 
 j
+
+
+<!-- PAGE 4 -->
+
 
 ## Redefine social issues as solvable problems.
 
@@ -121,6 +134,10 @@ positive and negative outcomes may be disturbed due to the prevalence of other f
 
 The most e /uniFB00 ective method of building AI is to obtain a large sample size. However, administrative databases sometimes have too many items, including items that are irrelevant to their essence. If AI required all the data to get the output result, the practitioners must bear the burden of tremendous data input. It may lead to missing input values or data fragmentation because of their workload. For this reason, sparse modelling is useful in searching for the minimum number of features required and reduces the workload for /uniFB01 eld sta /uniFB00 by allowing them to preferentially investigate and input data for the selected features in the /uniFB01 eld. Thus, to improve the performance of the model, it is important to design for e /uniFB03 ciency based on the work /uniFB02 ow in the /uniFB01 eld. By focusing on the most important features, the model is simpli /uniFB01 ed, making it easier for people to understand the background that the model explains. At the same time, selecting features that correspond theoretically and rationally to real-world phenomena through domain knowledge will also improve the interpretability of the prediction results. It can also reduce the computational cost and training time, which is useful for feature extraction when using machine learning and Bayesian statistics. The contribution of eXplainable arti /uniFB01 cial intelligence (XAI) Solving social issues is often relevant for judiciary and governmental authorities because it often requires legal intervention. In other words, administrative o /uniFB03 cials may be likely to become stakeholders of the social implementation research, which inevitably makes them accountable for all their actions and decisions. While machine learning and deep learning algorithms are good at predictions and can be reproduced, it is very di /uniFB03 cult to ensure explainability. Thus, the adoption of eXplainable AI
 
+
+<!-- PAGE 5 -->
+
+
 ## Find technical solutions to solvable problems.
 
 Figure 3. Technical solutions to solvable problems
@@ -148,6 +165,10 @@ In the social implementation phase, it is important to explain the concrete oper
 There are two main directions for evaluation through social implementation. The /uniFB01 rst is to measure the degree of achievement of outcomes that have been assumed in advance. This method compares the e /uniFB00 ects before and after implementation using quantitative indicators. The second is the evaluation of the research as a service, which aims to re /uniFB01 ne the implemented services and products and collect users ' quantitative and qualitative feedback in a short trial period. In particular, the second direction requires an agile trial methodology for research and development, in which the research and development goals for social implementation are segmented, trials are conducted on a small scale, and the loop of research, development, improvement of the product, and implementation is completed in a short
 
 j
+
+
+<!-- PAGE 6 -->
+
 
 ## Social implementation based on solutions
 
@@ -194,6 +215,10 @@ We are currently assessing the e /uniFB00 ects of these initiatives in the demon
 
 etc.
 
+
+<!-- PAGE 7 -->
+
+
 ## Expanding the effectiveness of social problem solving
 
 Figure 5. Strategies for increasing e /uniFB00 ectiveness of social problem solving
@@ -228,6 +253,10 @@ Con /uniFB02 icts of interest: This study was conducted with a research fund fro
 14. Ribeiro MT, Singh S, Guestrin C. ' Why should i trust you? ' Explaining the predictions of any classi /uniFB01 er. In Proceedings of the
 
 j
+
+
+<!-- PAGE 8 -->
+
 
 - 22nd ACM SIGKDD international conference on knowledge discovery and data mining. 2016:1135 -1144. https: = = doi.org = 10.1145 = 2939672.2939778.
 15. Lundberg SM, Lee SI. A uni /uniFB01 ed approach to interpreting model predictions. In Proceedings of the 31st international conference on neural information processing systems. 2017:4768 -4777.

@@ -1,10 +1,11 @@
 ---
 source_file: Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.pdf
-conversion_date: 2026-02-03T09:01:48.628135
+conversion_date: 2026-02-03T18:32:44.830262
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## MAIN PAPER
 
 ## Intersectional analysis of visual generative AI: the case of stable diffusion
@@ -38,6 +39,10 @@ Stable Diffusion (SD) by StabilityAI was launched in August 2022, and it swiftly
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 used in the design and creative fields (Totlani 2023; Van Der Maden et al. 2023).
 
 Visual GenAI (vGenAI) is a subset of broader generative AI (GenAI) technologies 1 , and together they face significant scrutiny and critique. These critiques include a lack of transparency and fairness (Ray 2023; Bender et al. 2021), accountability (Weidinger et al. 2022), data protection and privacy (Wang et al. 2023; Golda et al. 2024), environmental sustainability (Jääskeläinen et al. 2022), implications for human creativity (Arielli et al. 2022), copyright infringement and misuse of creatives' work (Samuelson 2023), gender and ethnicity-based discrimination (Almeida et al. 2024; D'Ignazio and Klein 2020), and the generation and spread of misinformation, such as the viral 'Balenciaga Pope' deepfake image (Perrigo 2023). vGenAI, in particular, faces additional criticism related to the inclusion of harmful images in training data (Birhane et al. 2021). Meanwhile, regulators, lawyers, ethics committees, copyright holders, and creatives whose ability to make a living is threatened by these technologies, have struggled to catch up with and adequately respond to the implications of vGenAI. The swift and extensive adoption of vGenAI, coupled with existing concerns in public discourse and academia, underscores the need for critical examination and careful analysis of its images, design, and socio-technical systems around it.
@@ -56,6 +61,10 @@ We organize and present our image analysis in three themes; (1) visual represent
 
 In this section we describe our visual cultural and intersectional theoretical framework. We first (2.1) begin by covering the societal critique that relates to vGenAI, and discuss the theoretical underpinnings of visual culture in relation to vGenAI. In the second Sect. (2.2), we present the three dimensions of our intersectional analysis framework.
 
+
+<!-- PAGE 3 -->
+
+
 ## 2.1    Visual and cultural perspectives on vGenAI
 
 Benjamin (2019) elucidates how digital technologies often mirror and perpetuate existing inequalities, despite being heralded as objective or progressive compared to previous discriminatory systems. The modernist and rationalist pursuit of objectivity, efficiency, profitability, and progress, often underlies these technical endeavors. There is a large body of work that takes similar feminist and critical lenses on AI technologies generally (e.g. Buolamwini 2019; Danielescu 2020; Kapania et al. 2023; Scheuerman et al. 2020; Sparrow 2020; Dray et al. 2014; Bardzell et al. 2011; Snyder 2020; Crawford 2021; Bender et al. 2021), and vGenAI specifically (Luccioni et al. 2023; Offert et al. 2022; Jääskeläinen et al. 2024; Almeida et al. 2024; Anand et al. 2023; Sun et al. 2024). Currently, numerous analyses have addressed the negative stereotyping perpetuated by vGenAI. For instance, a study by Gorska and Jemielniak (2023) revealed that when prompting AI image generators for certain professions such as CEO, heteronormative masculine representations 2 were significantly overrepresented, while heteronormative feminine representations were overrepresented in lower-paying positions, such as primary school teachers. Similarly, an independent analysis by journalists at Bloomberg found that heteronormative masculine representations with lighter skin tones dominated subjects in high-paying jobs (Leonardo and Dina 2023). At the same time studies, such as Clemmer et al. (2024) have aimed to technically address the limitations of these systems. As the applications of these technologies expand into various domains of visual media (Jiang et al. 2023), including virtual reality, AI-generated film, video games, deep-fake political propaganda, and revenge porn, as well as commercial culture, advertising, and digital artwork, it is crucial to interrogate the differential impacts that visual cultural politics can have on various social groups.
@@ -69,6 +78,10 @@ benefits and harms of vGenAI technology are not equitably distributed across all
 As discussed above, while gender- and ethnicity-focused analyses of AI imagery are becoming common, there is also a lack of work examining 'visual political processes of portrayal' (Jääskeläinen et al. 2024) that acknowledges the design political (Fry 2010; Winner 1980) and cultural political nature of vGenAI by bringing together its imagery, technology, and socio-cultural context. This type of work has been generally conducted in feminist and critical media studies, which have argued that examining visual cultural politics opens a space for questioning societal power configurations and systems through examining their materiality in visual representations (particularly Sturken et al. 2017; Evans 1999; Hall 1997). More concretely, these power configurations are maintained through the process of establishing certain visual norms, and excluding representations outside of those norms (Jääskeläinen et al. 2024). Prior visual cultural studies have underscored the active construction of visual norms and culture (Boylan 2020), which also applies to vGenAI imagery with embedded stereotypes that have consequences for certain social groups in the real world. Thus, visual cultural and media studies theories suggest that vGenAI both stems from and actively establishes visual cultural norms, which in turn position people and social groups in relation to each other by constructing privilege and disadvantage (see Fig. 1 for contextualization). While the former argument (that vGenAI stems from these norms) seems more obvious, the latter can also be anticipated by examining the history of visual culture: how each newly introduced visual technology has changed the prevailing cultural landscape, norms, and epistemology of the time. A good example is the advent of photography, and how it built on the conventions of media formats that preceded it, while also bringing a new claim that was not earlier present in the production of visual culture: the concept of photography as evidence of 'truth'
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 Fig. 1 The relation between vGenAI, visual culture, and socio-culture at large
 
@@ -89,6 +102,10 @@ social and political phenomena, eschewing reductionism to singular causes (Colli
 The first lens examines the diversity of representations of individual practices and experiences to counter the dominance of specific social categories vGenAI. It contends that even when diversity in one social category, such as gender, is achieved, there is a risk of fragmenting individuals' experiences related to other social categories like race or physical ability (Collins 2019). Thus, it advocates for approaches facilitating the exploration of the interrelationships between all aspects of lived experience and the socio-technological structures within which they occur (Kennedy 2005). Rejecting the isolation of social categories (Crenshaw 1989), this approach enables us to examine the vGenAI technological artifacts and their underlying development processes, and the impact on individuals, acknowledging the intersecting and dynamic nature of gender, race, and class. By attending to the diversity of individual subjectivities, it recognizes inequalities as interconnected, shifting, and multifaceted, encompassing both penalties and privileges (Collins and Bilge 2020). This perspective thus challenges notions of penalties associated with certain identity markers, and privileges associated with some others, paving the way for emancipatory possibilities for vGenAI users, a dimension often overlooked in current literature (Fehr 2022). It also fosters dialogue across diverse lived experiences, which could lead to the development of a plural ethic (Huang et al. 2021) to evaluate practices, policies, and social institutions related to vGenAI.
 
 The second lens delves into the historical lineage of institutions, including BigTech companies, policymakers, regulatory bodies, and civil society to understand how they establish and perpetuate social hierarchies and influence power dynamics (Benjamin 2019; Noble 2018). It broadens the perspective on vGenAI technologies, envisioning them not just as products of current technical, economic, and sociopolitical forces, but also as products of historical forces
+
+
+<!-- PAGE 5 -->
+
 
 (Hicks 2017). By uncovering processes of institutionalization and their agents, it sheds light on the deliberate actions, broader prejudices, and assumptions about social categories embedded within institutional processes. that shape these technologies. This is achieved by tracing how powerful institutions have historically contributed to injustices such as disembedding, dispossessing, dehumanizing, colonizing, and commodifying individuals (Davis et al. 2021; Williams 2021). Consequently, it prompts analyses to focus on the institutionalization of racism, sexism, classism, and other forms of discrimination, prompting reflection on their embeddedness in institutions and perpetuation of intergenerational marginalization and injustices. Collins and Bilge (2020) have likened this phenomenon to 'old wine in a new bottle', highlighting how old injustices manifest in new technologies. In our analysis, the institution-focused approach is specifically directed towards the policies, practices, and dynamics within developers of vGenAI, such as Stability AI.
 
@@ -117,6 +134,10 @@ At the outset of our analysis, the absence of a standardized methodology for pro
 1. Societal privilege and discrimination: first, we analyzed divergent representational paradigms of societal privilege and disadvantage. These encompassed opposite prompts such as poverty versus wealth, criminality versus law enforcement, immigrant versus citizen, and blue-collar versus white-collar. The rationale was to facilitate an examination of visual depictions pertaining to privilege and discrimination in terms of resources and social status.
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 Fig. 2 Qualitative data collection strategy for surfacing the AI imagery
 
@@ -148,6 +169,10 @@ unpredictable and non-transparent vGenAI tools. While in version SDXL 1.0 there 
 
 In addition to this, we opted for the 'photorealistic' setting for all images, as it offers insights into how individuals are portrayed in highly realistic images that can potentially exert a greater influence on viewers. As briefly discussed in Sect. 2.1, the advent of the photographic image reshaped
 
+
+<!-- PAGE 7 -->
+
+
 the role of images in modernity (Sturken and Cartwright 2017), a transformation that continued with the emergence of cinema in the 1890s, the evolution of electronic imaging in the 1940s, and, more recently, with digital imaging and AI-generated images. This photorealistic style (among other visual styles present in GenAI tools) highlights how each emerging visual medium builds upon and preserves the media that preceded it. It also holds the concept of photography as evidence for the truth-a claim which is also associated with AI-generated images.
 
 As shown in Fig. 2, we generated 20 images for 18 prompts (360 in total), out of which 10 were randomly chosen (180 in total) for subsequent analysis. Our study employs an interpretative qualitative approach, focusing on examining the consistency of the visual aesthetics across the 180 generated images, rather than statistical significance. Thus, the 180 images analyzed are treated not merely as data points but as qualitative material that relates to the broader socio-technical landscape of vGenAI (Niederer and Colomb 2019), and visual culture. Qualitative researchers have argued that case study analyses are never neutral and are not observations from 'nowhere' (Flyvbjerg 2001; Alvesson and Sandberg 2022). It is therefore important to acknowledge positionality-identities and experiences-and how they influence the research process, both in the interest of transparency and to recognize the inherently political nature of knowledge (Moya 2011). To acknowledge this, we briefly disclose our researcher positionality. The first author, with a background in HCI, design, and visual arts, specializes in qualitative aesthetic analysis and critical approaches to vGenAI. The second author brings extensive experience in  applying intersectional lenses to technology studies. The third and fourth authors, European experts in feminist humanities, enriched the analysis with insights from feminist cultural studies and STS. Our team's diverse cultural, socio-economic, gender, and ethnic backgrounds led to specific choices in the research process and might have blinded us from some insights. For instance, we selected the food Fufu (Fig. 15) based on the experiences of our West African colleagues, and included comparisons between nurses (Fig. 14), inspired by our visits to India and observations of its distinct healthcare system. These choices, informed by our lived experiences, led us to examine certain areas where vGenAI may not fully capture the realities we have encountered. Our intent in sharing this account is not to detract from the rigor of our work, but to add transparency to our research approach. 3
@@ -170,6 +195,10 @@ Advancing to  the  portrayals  of  criminality  and  law enforcement (Fig. 4), 
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 Fig. 3 ' A color photograph of a person in poverty' (above) v/s 'A color photograph of a rich person' (below)
 
 <!-- image -->
@@ -183,6 +212,10 @@ Fig. 4 ' A color photograph of a criminal' (above) v/s 'law enforcement official
 Fig. 5 Comparison of the outfit of an 'American police' (Pacific Southwest Region 2011) and the police in the AI imagery
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 portrayed with United States (US) flags on the background and exclusively caucasian masculine faces. The police uniforms also resemble uniforms used in the US (see comparison in Fig. 5). For criminality, the imagery resembled mugshots and portrayed a wider ethnic diversity. This gives an impression that law enforcement is 'white', but criminality is more diverse in terms of social groups. This imagery likely reflects on the cultural setting of the US, which has recently been under critical discussion for the systemic racism that is also deeply integrated in the law enforcement system (e.g. black lives matter)-and apparently even the AI imagery that depicts law enforcement. It is also essential to acknowledge that both criminal and law enforcement depictions lacked feminine representations, thereby excluding other gender representations than the masculine heteronormative norm from the portrayal of law enforcement.
 
@@ -199,6 +232,10 @@ Fig. 7 Outfit from 1800s resembling those of the AI imagery (Acme Newspapers 193
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 Fig. 8 ' A color photograph of a worker' (above) v/s 'an executive' (below)
 
@@ -220,6 +257,10 @@ The imagery also displayed specific age aesthetics. While the majority of the im
 
 <!-- image -->
 
+
+<!-- PAGE 11 -->
+
+
 certain categories, such as environmentalists (see analysis in Sect. 4.3), featured different age representations. These age representations exhibited ageist tendencies by largely excluding both older individuals and younger people, including children. This pattern was consistent across all prompted categories, with the exception of poverty. Regarding physicality, the analyzed imagery predominantly featured adults with typical body sizes, types, and abilities. Notably, there were no representations of disabilities, such as prosthetics, and a notable absence of individuals with larger or smaller body sizes. Consequently, unless specifically prompted for diversity, the AI-generated imagery lacks diversity to a significant extent, perpetuating ableist norms by portraying stereotypical bodies with uniform characteristics as the visual standard, based on what we witnessed with the 180 samples gathered for this study.
 
 ## 4.2    Visual ideological representations
@@ -237,6 +278,10 @@ Fig. 10 ' A color photograph of a conservative' (above) v/s 'liberal' (below)
 Fig. 11 ' A color photograph of an environmentalist'
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 circles (Carson 1962). Many depicted environmentalists also appeared elderly, characterized by white hair and glasses, suggesting an older demographic compared to the previously described imagery.
 
@@ -278,6 +323,10 @@ Through further experimentation with the tool, it became evident that altering t
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 'Indian' nurse or another alternative cultural context resulted in minimal changes to the background of the images, with only the facial features of the individual changing (Fig. 14). Consequently, despite the altered prompt, the underlying aesthetic hegemony persisted, underscoring the superficial nature of the image alterations. This phenomenon arguably intersects with both cultural colonization and cultural appropriation: cultural colonization is evident in how the imagery is molded to conform to the aesthetics of the dominant culture, while cultural appropriation is manifested in the reductionist portrayal of the cultural context.
 
 In many ways, performing this type of analysis of the image aesthetics resembles 'AI archeology' that involves examining the scrambled traces of locations and times through the involved objects and representations. It is therefore essential to involve people who have skill sets in reading historical images in this type of image analysis (historians, art historians, etc.), as also noted by (Jääskeläinen et al. 2024). Some relevant examples that could inform such studies include Forsythe (2001) and Mackenzie (2017). The former is an anthropological study of machine learning system development practices, whereas the latter is an archeology study of historical machine learning data practices.
@@ -298,6 +347,10 @@ Fig. 14 Prompting for 'nurse' and 'Indian nurse' vs. real photographs of nurses 
 
 <!-- image -->
 
+
+<!-- PAGE 14 -->
+
+
 Fig. 15 a An  image  of  the  dish  fufu  (DaSupremo  2020)  in  contrast to prompting 'people eating West-African dish of fufu', which looks more like mashed potatoes. b An image of 'people eating dosa/sushi/
 
 <!-- image -->
@@ -316,6 +369,10 @@ for instance, in one man of color appearing in the images of wealth, or one whit
 
 Institutions and their histories have a central role and influence on social justice (Williams 2021). This also applies to
 
+
+<!-- PAGE 15 -->
+
+
 vGenAI technologies-such as SD-which largely originate from the Global North. SD emerged from the collaboration between Runway, a US-based AI video generator, and researchers at Ludwig Maximilian University in Munich, with computational support from Stability AI, and is trained on the LAION-5B database (Rombach et al. 2022). The BigTech landscape in the US is known for dismissing concerns of gender, race, class, and sexual identity, obstructing efforts aimed at breaking down discriminatory barriers and hindering systemic change (Tacheva and Ramasubramanian 2023). A good example is the industry-based research published by Bender et al. (2021) that highlighted the potential discrimination of AI models and consequently led to the firing of one of the authors from Google's responsible AI team (Guardian 2023). Furthermore, this BigTech culture in which Western vGenAI companies are embedded is also known for ethics-washing, and superficially aligning with social justice concerns while discouraging efforts for deeply reflective and critical practices in reality. Furthermore, Benjamin (2019) highlights how even in attempts to become more inclusive toward various groups of people, it is often done in exploitative ways. Such superficial diversity initiatives fail to address systemic issues, such as algorithmic injustice, and indicate a detachment from the history that underpins discriminatory (racist, sexist, ableist, etc.) practices in technology development (Small 2023).
 
 Contextualizing this general picture with specific examples and criticisms of SD, Stability AI's founder, Emad Mostaque for example has been ' sensationally accused of exaggerating his education, the genesis of AI image generator Stable Diffusion, and links to prestige organizations such as the United Nations' (Growcoot 2023), using similar ethically questionable strategies demonstrated by the AI companies generally. It has also been claimed that Mostaque has obscured the credits of creating SD to the German research group which created it, quickly making a press release and positioning himself as its chief evangelist. Despite these misconducts, Stability AI managed to secure $101 million USD in funding in 2022. This shows a critical problem in how the capital and market steer the technology forward-in the absence of ethical vetting or checks that would prioritize examinations of the technology, its imagery, or the practices of the company. It is also notable that AI technologies often gravitate towards free markets-such as the US-to avoid regulation and accountability (McElroy 2024). It is notable that governmental bodies such as the EU have recently significantly emphasized AI regulation, putting forth for example the new AI act (European Commission, 2023), in an attempt to gain some control over this. Stability AI has also hidden behind not-for-profits such as LAION-5B (which are in turn partly funded by BigTech) to avoid legal scrutiny since databases created for research purposes are given more leniency in courts when it comes to copyright issues (Jiang et al. 2023). SD is a good example of how research becomes privatized and misappropriated for the profit-making intentions of BigTech since research institutes do not have access to the same level of funding. To extend the list of currently reported misconducts in the case of SD, they were also sued by Getty Images for stealing photos for the model training (Korn 2023) and Stanford researchers found that SD was trained with a 1000 images of child sexual abuse (David 2023). Thus, SD has a prior history of overlooking regulation and seems like a textbook example of various unethical practices in the design of vGenAI technology. We can also clearly observe various institutions and systems-such as the tech industry and its practices, education of technologists, regulations set by the government-to come together as an institutional context in which the systemic injustices reside and get reproduced. As our analysis demonstrates, this is observed both in the visual culture and through various evidence of societal practices and organization.
@@ -327,6 +384,10 @@ Scholars emphasize the inadequacy of policy-led regulation alone in holding the 
 In the final analysis, we deal with power systems, exploring how systems of oppression such as racism, capitalism, and colonialism intersect particularly in the case of SD. Power systems are essentially beliefs, cultural norms, and practices (Guillaumin 2002) that reinforce certain ideologies, such as heteronormativity, patriarchy, racism, and ableism. As discussed in the earlier part of the analysis, we can clearly observe how various power systems, such as racism, sexism, capitalism, and digital neocolonialism are intertwined and present in the case of SD, and pierce through both the visual culture and the institutional context. More concretely, through our analysis of the imagery and institutional context of SD, we were able to demonstrate that SD is embedded in
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 and perpetuates power systems that support these specific ideologies; racism, sexism, hetero-normativity, ableism, ageism, and capitalism. We also saw how aesthetics and data embedded in a certain cultural context lead to reproduction of the power systems in that cultural context. While it is nothing new that 'biases' from society get embedded into the technology, we demonstrated  in the case of the specific technology of SD how its aesthetic and visual cultural outcomes work as a vehicle of oppression from an intersectional perspective.
 
@@ -342,6 +403,10 @@ confederate flag as one of the most explicit violent symbols that appeared. We d
 
 In this paper, we have uncovered power configurations that embed particular dynamics of privilege and discrimination in the images produced using SD, and which have the potential to significantly shape the global visual cultural landscape. We began with the empirical image analysis, which surfaced discrimination toward various minority cultures. The imagery of SD most often strengthened binary gender representations while prioritizing white masculine representations at the expense of other social groups. Furthermore, non-binary gender representations were absent due to the strong binary gender aesthetics, lighter skin tones were associated with wealth and societal status, whereas darker skin tones and cultural contexts outside of the Global North were often associated with poverty, criminality, and other negative social judgments. We also discovered a strong tendency towards ableist imagery and witnessed a lack of variety in age representations with young adults as the most common representative group. When it comes to the social and cultural context of the technology, we demonstrated that SD is deeply embedded in and emerging from capitalist profit-seeking motivations that tend to overlook social justice and that the problematic imagery is symptomatic
 
+
+<!-- PAGE 17 -->
+
+
 of the problematic visual culture and power structures at large in the societies that give birth to these technologies. By examining the visual aesthetics of vGenAI, we uncover the complex systemic power structures-and therefore highlight that it is not enough to address the issues superficially in the imagery alone. Instead, a more comprehensive and radical systemic change needs to take place in society at large. If the underlying societal power structures are not reformed, it is inevitable that similar neocolonial technologies keep getting produced to work as vehicles of oppression toward certain social groups. This speaks to the importance of finding ways for radical socio-political approaches to re-imagine and re-configure the society and its AI-aesthetic landscape.
 
 To further highlight these concerns, superficial fixes of the vGenAI aesthetics can lead to 'diversity washing', in which the underlying societal problems are not fixedand the companies providing the technology claim it to be 'diverse' and 'neutral', without fully understanding the aesthetic cultural impact and politics of the very technology they provide for large-scale use. We discussed earlier how the vGenAI images are embedded within and constitutive of broader power systems of racism, capitalism, through the concrete example of the confederate flag. Paradoxically, while symbols such as the confederate flag are present, at the same time some other colonial and oppressive symbolism is censored-such as the symbols used by the Nazis. This showcases a superficial fix to address the problematic visual aesthetics without understanding the visual cultural embeddedness of vGenAI tools, and value-laden cherry-picking which and whose oppression is rendered visible or invisible in the visual culture.
@@ -351,6 +416,10 @@ In our generated SD imagery, we observed several visual 'glitches', such as the 
 Our  intersectional  visual  analysis  (particularly  the insights found through analyzing the institutional embeddedness of SD) also further reinforces the need for appropriate regulation of these rapidly growing and evolving technologies, which pays attention to the social inequalities they mirror and perpetuate, takes seriously the concerns around the use and recreation of harmful and violent images, and assigns criminal culpability when appropriate. It also shows the need to continually fight for more diversity in the teams developing and maintaining such technical systems, in the hope of addressing some of the inequalities and exclusions expressed through these images (Kapania et al. 2023). However, such recommendations do not go far enough given the attention towards institutional dynamics and prevalent power systems like racism, colonialism, and capitalism, which our intersectional approach highlighted. Thus, we structure our recommendations around Davis et al. (2021)'s concept of 'algorithmic reparation' which they propose as 'a foundation for building, evaluating, adjusting, and when necessary, omitting and eradicating machine learning systems' which itself is rooted in intersectional theory and approaches. This reparative approach focuses on the offending parties symbolically and materially mending wrongdoings enacted against individuals and groups (ibid.). This may involve literal reparation payments, but may also be more about acknowledging and seeking to address identified harms. One major harm that we identified in the case of SD was the perpetuation and magnification of stereotypes, prejudices, and exclusions. A reparative approach would advocate for more research on the various impacts of the images on the subjectivities of marginalized individuals who are exposed to this imagery (e.g. Zhou and Nabus 2023) in order to understand both how this can be mitigated but also what support or resources should be given to those affected. It would also advocate for deliberative intervention in vGenAI systems in order to address these inequalities and exclusions, counter to the prevailing 'algorithmic idealism' (Davis et al. 2021) of AI developers which assumes that human intervention must be minimized to retain 'objectivity'. Such interventions could include efforts to curate training data better, and involve designers
 
 <!-- image -->
+
+
+<!-- PAGE 18 -->
+
 
 who have the explicit responsibility to study and identify better ways of designing and configuring the visual aesthetics of these systems, using an intersectional approach and algorithmic reparation. Davis et al. (2021) also describe how in the case of other Machine Learning systems the general approach is to invisibilize social categories such as gender, race, and sexuality in organizing systems on the assumption that this creates more 'neutral' results. However, again, a reparative approach would advocate for a more explicit acknowledgment of these categories to acknowledge, make visible, and address inequalities. Hence, we advocate rendering visible the visual politics of portrayal (Jääskeläinen et al. 2024) to acknowledge the vGenAI imagery's cultural-political embeddedness, and extending this critical outlook into problematizing the very core notions of vGenAI technology.
 
@@ -363,6 +432,10 @@ it comes to various identities of artists; white artists and colored artists, ar
 Lastly, it is notable that AI tools monopolizing available artistic tools can have significant impacts on aesthetics and everyday creative practices. Artists who are using vGenAI need more knowledge and resources that can inform the critical use of these tools. With all the problems embedded in SDXL and other vGenAI tools, artists can easily become vehicles for redistributing the neo-colonizing imagery in society through uncritical creative practice. This further highlights the need for diversifying the visual aesthetics of vGenAI models, but also supporting creatives in taking a critical outlook when using vGenAI technologies. While our study contributes to developing such knowledge, further work can examine how such intersectional and justice-oriented (Costanza-Chock 2018, 2020), and algorithmic reparation perspectives can be brought into the socio-technical and visual cultural-political landscape of vGenAI in everyday practices.
 
 Author Contributions Literature review, material preparation, data collection and analysis were performed by Petra Jääskeläinen and Nickhil Kumar Sharma. The first draft of the manuscript was written by Petra Jääskeläinen and Nickhil Kumar Sharma. All authors commented on, reviewed, and edited the manuscript during the research process.
+
+
+<!-- PAGE 19 -->
+
 
 Funding Open  access  funding  provided  by  Royal  Institute  of Technology. This work was partially supported by the Wallenberg AI, Autonomous Systems and Software Program - Humanities and Society (WASP- HS) funded by the Marianne and Marcus Wallenberg Foundation grant nr. QC 20230614. This research received funding from the European Union's Horizon 2020 Research and Innovation programme under the Marie Skłodowska-Curie grant agreement number 955422.
 
@@ -427,6 +500,10 @@ Crenshaw K (1991) Mapping the margins: intersectionality, identity politics, and
 
 <!-- image -->
 
+
+<!-- PAGE 20 -->
+
+
 - D'Ignazio C, Klein LF (2020) Data feminism. MIT Press. https://  doi. org/  10.  7551/  mitpr  ess/  11805.  001.  0001
 - Danielescu A (2020) Eschewing gender stereotypes in voice assistants to promote inclusion. In Proceedings of the 2nd Conference on Conversational User Interfaces (Bilbao, Spain) (CUI '20). Association for Computing Machinery, New York, NY, USA, Article 46, 3 pages. https://  doi.  org/  10.  1145/  34057  55.  34061  51
 - DaSupremo (2020) File:Wrapped fufu.jpg - Wikimedia Commons. Wikimedia.org. Retrieved Oct 30 2024, https://  commo  ns.  wikim edia.  org/  wiki/  File:  Wrapp  ed\_  fufu.  jpg
@@ -467,6 +544,10 @@ Crenshaw K (1991) Mapping the margins: intersectionality, identity politics, and
 - Kapania S, Taylor AS, Wang D (2023) A hunt for the snark: annotator diversity in data practices. In Proceedings of the 2023 CHI
 
 <!-- image -->
+
+
+<!-- PAGE 21 -->
+
 
 - Conference on Human Factors in Computing Systems (Hamburg, Germany) (CHI '23). Association for Computing Machinery, New York, 1-15. https://  doi.  org/  10.  1145/  35445  48.  35806  45
 
@@ -537,6 +618,10 @@ Small Z (2023) Black artists say a.i. shows bias, with algorithms erasing their 
 - Totlani K (2023) The evolution of generative AI: implications for the media and film industry. In International Journal for Research in Applied Science and Engineering Technology (Vol. 11, Issue
 
 <!-- image -->
+
+
+<!-- PAGE 22 -->
+
 
 - 10, pp. 973-980). International Journal for Research in Applied Science and Engineering Technology (IJRASET). https://  doi.  org/ 10.  22214/  ijras  et.  2023.  56140
 - Van Der Maden W, Van Beek E, Nicenboim I, Van Der Burg V, Kun P, Lomas JD, Kang E (2023) Towards a design (research) framework with generative AI. In Designing Interactive Systems Conference. DIS '23: Designing Interactive Systems Conference. ACM. https://  doi.  org/  10.  1145/  35637  03.  35914  53

@@ -1,15 +1,20 @@
 ---
 source_file: Lund_2025_Algorithms,_artificial_intelligence_and.pdf
-conversion_date: 2026-02-03T09:09:57.409751
+conversion_date: 2026-02-03T18:41:25.073360
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 This report was originally written and published in Norwegian. The English version has been produced with the active involvement of the author. Some minor adjustments have been made to ensure that the English version of the report is up to date at the time of its publication. The author would like to thank John Carville for excellent work on copy-editing the report.
 
@@ -30,6 +35,10 @@ Cover of the report
 Illustration description: Index finger presses graphics on a transparent screen.
 
 Credit: Incept-G
+
+
+<!-- PAGE 3 -->
+
 
 ## Content
 
@@ -59,6 +68,10 @@ Credit: Incept-G
 |           | 4.8 Burden of proof in discrimination law                                                    | 33                                                                                |
 |           | 4.9 Summary and reflections going forward                                                    | 37                                                                                |
 
+
+<!-- PAGE 4 -->
+
+
 | 5          | The actors: Who are protected against discrimination and who may be held                               |   The actors: Who are protected against discrimination and who may be held |
 |------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
 |            | liable?                                                                                                |                                                                         41 |
@@ -76,6 +89,10 @@ Credit: Incept-G
 |            | Works cited                                                                                            |                                                                         55 |
 |            | Legal instruments and cases                                                                            |                                                                         57 |
 
+
+<!-- PAGE 5 -->
+
+
 ## Summary
 
 To ensure effective protection against discrimination in the face of novel technology, it is essential that relevant legislation evolves to encompass new and emerging issues. This report reviews and analyses key elements of the Norwegian Equality and Anti-Discrimination Act (EAD Act), with a primary emphasis on the prohibition against discrimination. The Act implements EU/EEA anti-discrimination directives into Norwegian law. The closer relation between the EAD Act and the EU/EEA antidiscrimination directives is investigated throughout the report. The point of departure for the report's analysis is that the EAD Act is applicable to cases of algorithmic discrimination. At the same time, however, the report highlights a number of challenges for the current legislation.
@@ -92,6 +109,10 @@ Chapter 4 of the report analyses the Equality and AntiDiscrimination Act's prohi
 
 - The chapter discusses how algorithmic systems and artificial intelligence challenge the legal distinction between direct and indirect differential treatment. Discrimination may occur through algorithmic systems' emphasis on proxy factors ( ' proxy discrimination ' ). The use of proxy factors riggers new issues, particularly in relation to the prohibition against indirect discrimination.
 
+
+<!-- PAGE 6 -->
+
+
 Also, through its practice, the Court of Justice of the European Union has expanded the framework for what is to be regarded as direct differential treatment. In the light of these developments, the report discusses the possible introduction of specific definitions of direct and indirect algorithmic differential treatment into the Equality and Anti-Discrimination Act.
 
 - The report suggests that consideration might be given to the creation of a specific provision on lawful algorithmic differential treatment. The current provision on lawful differential treatment in Section 9 of the Equality and AntiDiscrimination Act is constructed around the need to provide particularly strong protection against discrimination in working life, and the distinction between direct and indirect differential treatment has implications for the strictness of review that is carried out when the provision is interpreted. Both of these conditions are challenged by algorithmic differential treatment. Algorithmic systems are now used across all areas of society and contribute in various ways to decisions that may be of considerable importance to the individuals they concern. This means that the premise that working life is of particular importance for the prohibition on discrimination may need to be reassessed. Furthermore, the complexity of algorithmic systems complicates the distinction between direct and indirect differential treatment (see also the previous bullet point). In the light of these challenges, the possibility of introducing into the legislation a separate and more specific provision on lawful algorithmic differential treatment is presented.
@@ -100,6 +121,10 @@ Also, through its practice, the Court of Justice of the European Union has expan
 Chapter 5 focuses on the different actors that may be involved in cases of discrimination.
 
 - The report directs attention to the Equality and AntiDiscrimination Act's reliance on a closed list of discrimination grounds and highlights how algorithmic systems may lead to new individuals and groups being subjected to differential treatment. Factors such as social status, health and level of education, for example, all fall outside the EAD Act's current list of discrimination grounds. The issue of algorithmic discrimination therefore highlights the need for discussion on whether the EAD A ct's approach to discrimination grounds may require increased flexibility. The inclusion of a separate provision banning algorithmic discrimination might include both a positive list of discrimination grounds (as in Section 6 of the EAD Act) and the introduction of an open-ended category.
+
+
+<!-- PAGE 7 -->
+
 
 - It is emphasized that individual claims in cases of alleged discrimination should be directed against the private or public actors that have made a particular decision, issued a particular ruling, etc., regarding the individual(s) concerned and have used an algorithmic system as part of their activities.
 - The report shows how the Equality and AntiDiscrimination Act's prohibition s against instruction and participation in discrimination may make it possible to expand the circle of actors that might be held liable for algorithmic discrimination -for instance, so that developers could also be held liable in some cases. However, the substance of these two prohibitions is currently underdeveloped.
@@ -112,6 +137,10 @@ Chapter 6 discusses issues of enforcement and sanctioning in relation to algorit
 - The roles of the Norwegian Equality and Anti-Discrimination Ombud (LDO) and relevant interest organizations in ensuring that the prohibition on algorithmic discrimination is effectively enforced and sanctioned will be important in the time ahead. For example, they could take an active role in bringing cases of algorithmic discrimination before the courts or the Anti-Discrimination Tribunal, or they could initiate efforts related to the supervision and monitoring of algorithmic systems and their effects, based on the prohibition against discrimination.
 
 In sum, future efforts to address algorithmic discrimination will need to build on the terms of the substantive prohibition against discrimination as currently regulated by Sections 6 -9 of the EAD Act as well as to explore how the formulation of that prohibition might be adjusted to address the new challenges posed by the use of algorithmic systems.
+
+
+<!-- PAGE 8 -->
+
 
 ## 1 Introduction
 
@@ -131,9 +160,17 @@ This statement is apt. The new technologies that are the subject of the current 
 
 3 Gerards and Xenidis (2020) p. 9.
 
+
+<!-- PAGE 9 -->
+
+
 arenas, with a particular focus on workplace discrimination. The complexity surrounding the use of algorithmic systems -including AI systems -means that existing regulations on discrimination are being confronted with a range of entirely new issues. As a result, key regulations and conditions within existing discrimination law must be interpreted in a new context.
 
 This report examines the intersection between the prohibition against discrimination as set out under the Equality and Anti-Discrimination Act and issues of discrimination triggered by the use of algorithms and artificial intelligence.
+
+
+<!-- PAGE 10 -->
+
 
 ## 2 Structure of the report
 
@@ -159,6 +196,10 @@ A distinction can be made between fixed algorithms and learning algorithms. Whil
 
 6  Strümke (2023) p. 18.
 
+
+<!-- PAGE 11 -->
+
+
 predictable, learning algorithms evolve dynamically. Both fixed and learning algorithms are relevant when addressing questions of discrimination.
 
 The term ' artificial intelligence ' (AI) is a broad one and encompasses many forms of algorithms, machine learning, models and statistical methods. Article 3(1) of the EU Artificial Intelligence Act defines 'AI system' as follows :
@@ -181,6 +222,10 @@ In the present report, the term ' algorithmic discrimination ' applies to the en
 
 11 This term is also used by, for example, Gerards and Xenidis (2020).
 
+
+<!-- PAGE 12 -->
+
+
 would exclude fixed algorithms. The term ' AI systems ' is used where the topic under discussion is particularly relevant to those types of algorithmic systems.
 
 When algorithms influence decisions relevant to individuals, the degree of human involvement in the decision-making process can vary. On one hand, there are fully automated decisions that may derive from both fixed and learning algorithms. 12  On the other hand, there are situations where algorithmic systems are used to support a human who makes the ultimate decision (e.g. a doctor, employer or public official). The use of both fully automated and decision-supporting algorithms and AI systems may trigger questions about discrimination -and both types of use are therefore covered by this report. 13
@@ -202,6 +247,10 @@ The report focuses on the right of the individual not to be discriminated agains
 15  See Likestillings- og diskrimineringsombudet [the Equality and Anti-Discrimination Ombud] (2023).
 
 16 See, for example, Gerards and Xenidis (2020) pp. 37ff.; Borgesius (2018) pp. 15ff.
+
+
+<!-- PAGE 13 -->
+
 
 duties established by the EAD Act that require active measures, documentation and reporting, are only briefly touched upon. 17
 
@@ -227,6 +276,10 @@ In the present report, I draw on the case law of the Court of Justice of the Eur
 
 21 I refer to only one case from the Tribunal; see Section 5.4 below.
 
+
+<!-- PAGE 14 -->
+
+
 As part of the report's effort to identify the links between the prohibition against discrimination, personal data regulation and AI regulation, I include a brief discussion of the EU General Data Protection Regulation (GDPR) and the EU AI Act.
 
 ## 2.5 Structure
@@ -245,6 +298,10 @@ At the end of each chapter, the report provides a summary of the central themes 
 
 A list of literature and sources is provided at the end of the report.
 
+
+<!-- PAGE 15 -->
+
+
 ## 3 Lines from the prohibition against discrimination to the regulation of artificial intelligence and the protection of informational privacy
 
 ## 3.1 Introduction
@@ -262,6 +319,10 @@ The European Union's AI Act is the first piece of legislation in the world that 
 22 Borgesius (2018) pp. 31ff. This understanding also forms the basis of the study by Gerards and Xenidis (2020). In its guide 'Innebygd diskrimineringsvern' [Built-In Protection Against Discrimination], the Norwegian Equality and Anti-Discrimination Ombud also comes to the same conclusion and states: 'The Equality and Anti-Discrimination Act is technology neutral. This means that the prohibition against discrimination applies regardless of whether the discriminatory practice or decision is made by a person or follows from an artificially intelligent system'; see Likestillings- og diskrimineringsombudet (2023) (author's translation).
 
 23  European Parliament (2023).
+
+
+<!-- PAGE 16 -->
+
 
 cannot as easily be held liable under existing anti-discrimination legislation. 24  Users of AI systems -for example, enterprises that use AI systems in their daily operations -are also subject to some obligations. 25  These users will typically also be duty-bearers under the Equality and Anti-Discrimination Act. 26
 
@@ -287,6 +348,10 @@ The AI Act will enter into force in a stepwise fashion, with the entirety of the
 
 29 Regjeringen (2024).
 
+
+<!-- PAGE 17 -->
+
+
 ## 3.3 The General Data Protection Regulation (GDPR)
 
 The EU ' s General Data Protection Regulation (GDPR) contains comprehensive legislation on informational privacy and has been implemented within Norwegian law through the Personal Data Act of 2018. 30  Among other things, the GDPR requires that evaluations are carried out prior to the processing of personal data. Under the Regulation, the main duty-bearer is the actor that ' determines the purposes and means of the processing of personal data ' , defined in Article 4(7) of the GDPR as the ' controller ' . In many cases, this will be the actor that is responsible under the Equality and Anti-Discrimination Act -for instance, a public or private employer or a public authority. This actor may also have duties under the AI Act.
@@ -311,6 +376,10 @@ Article 9(2), however, does open for the processing of such data under certain s
 
 34 These conditions will not be considered in the present report.
 
+
+<!-- PAGE 18 -->
+
+
 Discussions have taken place within the legal literature regarding whether the prohibition on the processing of special categories of personal data under Article 9 of the GDPR constitute an obstacle for efforts to address AI-related discrimination. Van Bekkum and Borgesius describe the issue as follows:
 
 To assess whether its AI system harms people with a certain ethnicity, the organisation needs to know the ethnicity of its job applicants. In Europe, however, the organisation may not know the ethnicity because, in principle, the GDPR prohibits the use of 'special categories of data' (article 9). Special categories of data include data on ethnicity, religion, health, and sexual preferences. Hence it appears that the organisation is not allowed to infer, collect, or use the ethnicity of the applicants. 35
@@ -331,6 +400,10 @@ In my view, it will be important that attention continues to be paid to discussi
 
 36 Artificial Intelligence Act, Regulation (EU) 2024/1689, Preamble Recital 70.
 
+
+<!-- PAGE 19 -->
+
+
 contrast, the Equality and Anti-Discrimination Act 's prohibition against discrimination is centred around the substantive protection against discrimination.
 
 - The AI Act specifies that existing EU regulation on discrimination is not impacted by the Act. This means that it will be necessary to analyse and develop the content of the prohibition against discrimination on the basis of the premises of the discrimination legislation itself.
@@ -343,6 +416,10 @@ contrast, the Equality and Anti-Discrimination Act 's prohibition against discri
 - Drawing on the structural measures set out in the GDPR and the AI Act, it might be considered whether it would be appropriate to introduce specific obligations related to activities, documentation and reporting for entities that deploy algorithmic systems. The adoption of such an approach could help ensure that the issue of discrimination is not overlooked by facilitating regular examination and evaluation of the impacts of such systems on groups protected against discrimination within the framework of anti-discrimination legislation.
 
 37 However, see Section 5.4 below on the prohibitions against instruction and participation.
+
+
+<!-- PAGE 20 -->
+
 
 ## 4 The prohibition against direct and indirect discrimination
 
@@ -366,6 +443,10 @@ The prohibition is directed against situations where persons are treated worse t
 
 38 In the work environment, access to direct differential treatment is particularly narrow, as it is restricted to socalled genuine occupational requirements; see Section 9(2) of the EAD Act. For discrimination based on pregnancy and leave, see Section 10 of the EAD Act.
 
+
+<!-- PAGE 21 -->
+
+
 Direct differential treatment that does not have a sufficient justification constitutes direct discrimination and is prohibited. 39
 
 The prohibition against direct discrimination is directed at differential treatment that directly treats one group worse than others. In order for the prohibition on direct discrimination to apply in a situation involving the use of algorithms and AI, direct differential treatment must occur on two levels. First, direct differential treatment of persons from particular protected groups must be something that the algorithm or AI system has been programmed to do or has taught itself. This means that the direct differential treatment must follow from the algorithm or the AI system itself -as a result of making group-based characteristics such as ethnicity, gender or religion criteria that the system weighs unfavourably. Second, this must result in the system presenting recommendations or carrying out actions that cause individuals to be subject to differential treatment precisely ' on the basis of ' their membership of a protected group (e.g. ethnicity, gender, religion).
@@ -384,6 +465,10 @@ Section 8 of the EAD Act defines indirect differential treatment as ' any appare
 
 40 Gerards and Xenidis (2020) p. 67.
 
+
+<!-- PAGE 22 -->
+
+
 practices, etc., that meet the requirements of formal equality can still result in certain groups being worse off than others. In the prohibition against indirect discrimination, the focus is on differentially treating effects .
 
 Not all indirect differential treatment is prohibited. Indirect differential treatment that satisfies the conditions of objectivity, necessity and proportionality set out in Section 9 of the EAD Act may be permissible. If the indirect differential treatment does not have a sufficient justification, however, it constitutes indirect discrimination and is prohibited.
@@ -399,6 +484,10 @@ In the literature and reports reviewed for this report, several authors expresse
 41  The development of methods for so-called explainable AI may aid here.
 
 42 See, for example, Gerards and Xenidis (2020) p. 67; Borgesius (2018) p. 36; Wachter et al. (2021) p. 15.
+
+
+<!-- PAGE 23 -->
+
 
 this discussion, the delineation between direct and indirect discrimination should be further problematized (see Section 4.5 below).
 
@@ -424,6 +513,10 @@ In situations involving more ' traditional ' forms of discrimination, mechanisms
 
 46 Wachter et al. (2021) p. 29.
 
+
+<!-- PAGE 24 -->
+
+
 comparators. 47  In cases of indirect discrimination, there is considerable latitude regarding how a complainant/plaintiff can substantiate a claim of differential treatment. For example, there is no requirement for the complainant/plaintiff to provide statistics to substantiate a claim of indirect differential treatment. Statistics may be used if they exist, but indirect differential treatment may also be substantiated in other ways. 48
 
 However, substantiating claims of direct or indirect differential treatment caused by algorithms or AI systems in individual cases poses a number of challenges. How can individuals gain insight into the criteria these systems use or their effects so that differential treatment can be established? With regard to the prohibition against direct discrimination, Gerards and Xenidis state that:
@@ -439,6 +532,10 @@ We have seen that algorithm- and AI-related disadvantage provides some challenge
 48  Hellum and Strand (2022) p. 383.
 
 49 Gerards and Xenidis (2020) p. 69.
+
+
+<!-- PAGE 25 -->
+
 
 ## 4.5 The connection between the differential treatment and one or more discrimination grounds
 
@@ -458,6 +555,10 @@ In his doctoral thesis, Hauglid examines the European Court of Justice's case la
 
 53 Hauglid (2024) p. 214.
 
+
+<!-- PAGE 26 -->
+
+
 group characteristics in a way that exclusively disadvantages a protected group or results in all individuals from a protected group being excluded from obtaining a benefit. 54
 
 In the joined case of Wabe and Müller , the European Court of Justice declared in relation to the content of the prohibition against direct discrimination that ' unequal treatment resulting from a rule or practice which is based on a criterion that is inextricably linked to a protected ground, in the present case religion or belief, must be regarded as being directly based on that ground ' . 55  The case concerned differential treatment in the workplace due to the use of religious clothing and symbols, and through its reasoning the Curt clarified that regulations that are constructed in such a way that certain religions or religious expressions are subject to a ban while other religious manifestations are not, this will constitute direct differential treatment based on religion. The case thus illustrates that direct differential treatment also can be found to have occurred against a group within a larger protected group. In the context of algorithmic discrimination, this could mean that direct differential treatment may be established where the system has a bias that results in exclusively one or a few ethnic minority groups being subjected to differential treatment while other ethnic minority groups are not. 56
@@ -476,6 +577,10 @@ Section 6 of the Equality and Anti-Discrimination Act 's inclusion of a prohibit
 
 58 Gerards and Xenidis (2020) p. 68.
 
+
+<!-- PAGE 27 -->
+
+
 discrimination law when it comes to redressing intersectional manifestations of algorithmic discrimination ' . 59
 
 <!-- image -->
@@ -485,6 +590,10 @@ discrimination law when it comes to redressing intersectional manifestations of 
 Not all differential treatment that is linked to a protected discrimination ground is prohibited. Sometimes the differential treatment may have a justification that is sufficient for it to be considered permissible. The Equality and Anti-Discrimination Act 's main provision on lawful differential treatment is set out in Section 9(1) of the Act, which states that differential treatment does not violate the prohibition against discrimination when it:
 
 59 Xenidis (2020), particularly pp. 741-745.
+
+
+<!-- PAGE 28 -->
+
 
 - a. has an objective purpose,
 - b. is necessary to achieve the purpose, and
@@ -502,6 +611,10 @@ Section 9 of the EAD Act allows for both lawful direct and lawful indirect diffe
 
 61  Hellum and Strand (2022) p. 255.
 
+
+<!-- PAGE 29 -->
+
+
 is implemented at the national level in Norwegian law through Section 9(2) of the EAD Act. 62
 
 Accordingly, two factors set the outer limits for assessing the scope of lawful differential treatment. One is the societal area in which the differential treatment occurs. The other is whether it entails direct or indirect differential treatment.
@@ -518,6 +631,10 @@ We have seen that the distinction between direct and indirect differential treat
 
 62  Regulations on differential treatment based on genuine and determining occupational requirements are found in Article 4(1) of Directive 2000/78/EC, Article 4 of Directive 2000/43/EC and Article 14(2) of Directive 2006/54/EC.
 
+
+<!-- PAGE 30 -->
+
+
 Consideration should be given to the creation of a specific provision regulating lawful direct and indirect algorithmic differential treatment in the Equality and AntiDiscrimination Act. Such a provision should account for the complexity that may arise, for example, when AI systems emphasize proxy factors. The provision should be more concrete than the main rule in Section 9(1) of the Act, and it should be based on the principle that a particularly strong protection against direct algorithmic discrimination should be established across all sectors of society, not just in the arena of working life.
 
 ## Reflections on the design of a specific provision regulating lawful algorithmic differential treatment
@@ -529,6 +646,10 @@ Furthermore, a requirement might be established that the differential treatment 
 In relation to the requirement that the differential treatment must not have a disproportionate negative impact, it could be specified that the assessment of the differential treatment should pay particular attention to whether it concerns individuals' access to fundamental rights and services such as health, education, banking and insurance services, etc.
 
 In my view, the introduction of a specific provision on lawful algorithmic differential treatment as outlined above would not entail the establishment of a higher threshold for lawful direct and indirect algorithmic differential treatment in Norway than that presumed to apply elsewhere in Europe. The proposed provision is based on a complex body of legal sources on anti-discrimination protection and individuals ' fundamental human rights, which are anchored in, among other things, the EU Charter. A specific provision on lawful algorithmic differential treatment would simply ensure that central elements of the surrounding legal framework are directly reflected in the legislation.
+
+
+<!-- PAGE 31 -->
+
 
 <!-- image -->
 
@@ -544,6 +665,10 @@ Similarly, for indirect discrimination, it is also not a requirement that differ
 
 64 Prop.81 L (2016-2017) [Legislative Proposition] Point 12.9.2.2, p. 111 (author's translation).
 
+
+<!-- PAGE 32 -->
+
+
 disadvantage in comparison with others. 65  Differential treatment effects may, for instance, be embedded in different types of rules and regulations. The Norwegian approach in Section 8 of the EAD Act is in line with the prohibition against indirect discrimination under EU/EEA law.
 
 One may question the significance of the prohibition against content-based discrimination in the face of algorithmic systems. Many data systems go through a long period of testing during which training data are applied and the systems are adjusted and developed before being put into operation. It makes little sense to apply the prohibition against discrimination on algorithms and AI systems while they are undergoing testing, since developers must evaluate and adjust potential negative effects during this phase. However, once a system is operational, the prohibition against discrimination will apply, even before the system has any direct negative effects.
@@ -557,6 +682,10 @@ Such a situation could arise if, for instance, individuals think that they are e
 Section 37 of the EAD Act includes a specific provision regarding the burden of proof in cases of alleged discrimination that aims to contribute to making the protection
 
 65 The English translation of Section 8 of the Act is not as clear as the text of the official Norwegian Act. The English version is therefore not cited here.
+
+
+<!-- PAGE 33 -->
+
 
 against discrimination more effective. 66  The provision implements EU/EEA law into Norwegian law but also applies to more sectors of society and more groups than are covered by the corresponding EU/EEA legislation. In Norway, debate is currently ongoing regarding the actual content of the burden-of-proof rule. I will not go into the Norwegian discussion on the burden of proof here.
 
@@ -578,6 +707,10 @@ According to this rule: 'Member States shall take such measures as are necessary
 
 70  C-109/88 ( Danfoss ) (1989); C-127/92 ( Enderby ) (1993); C-400/93 ( Royal Copenhagen ) (1995).
 
+
+<!-- PAGE 34 -->
+
+
 in terms of pay. The cases thus involved the use of the prohibition against discrimination in the face of opaque systems that resulted in gender-related differential treatment. To protect individuals ' legal positions, the European Court of Justice emphasized the importance of effective enforcement of the prohibition against discrimination in these cases. As a result, the court chose to let doubts about the facts of the three cases weigh against the relevant employers.
 
 The Danfoss case involved questions of discrimination related to pay in a company that operated with an opaque pay-determination system. The claimant had access only to average information that revealed the existence of gender-based differences in pay. The European Court of Justice described the situation as follows:
@@ -596,6 +729,10 @@ In accordance with the case-law of the Court of Justice, Directive 2006/54/EC es
 
 72  C-109/88 ( Danfoss ), Point 1 in the Court's conclusion.
 
+
+<!-- PAGE 35 -->
+
+
 Two central topics are pointed out here. The first concerns the burden of proof's premise that it is normally the responsibility of the plaintiff/complainant to establish a presumption of discrimination ( ' a prima facie case of discrimination ' ). 73 The second concerns pay systems that are ' totally lacking in transparency ' , including situations where an employer is not transparent about pay determination in the way required by the Pay Transparency Directive. 74 In such cases, it is no longer the responsibility of the plaintiff/complainant to establish a presumption of discrimination. Instead, the responsibility to establish that there is no pay discrimination is immediately transferred to the employer/responsible party.
 
 These two evidentiary situations are explicitly mentioned in Article 18(1) and Article 18(2) of the Pay Transparency Directive, which state:
@@ -613,6 +750,10 @@ The Pay Transparency Directive highlights two possibilities regarding the burden
 
 74 Article 18(2) of the Directive points to Article 5 of the Directive on 'Pay transparency prior to employment', Article 6 on 'Transparency of pay setting and pay progression policy', Article 7 on the 'Right to information', Article 9 on 'Reporting on pay gap between female and male workers' and Article 10 on 'Joint pay assessment'.
 
+
+<!-- PAGE 36 -->
+
+
 further by bringing the approach laid out in Article 18(2) of the Pay Transparency Directive to the area of algorithms and AI. As I see it, Article 18(2) of the Pay Transparency Directive contributes to a development and concretization of the approach adopted in the Danfoss case. It involves a kind of procedural shift and form of accountability that subsequently plays into the question of the burden of proof in cases regarding alleged direct or indirect discrimination in relation to pay. If requirements for pre-assessments, transparency and reporting are not followed, the Pay Transparency Directive presumes that pay discrimination exists unless the party accused of discrimination can prove that discrimination has not occurred.
 
 In my view, it can be argued that a regulatory framework that builds on a similar understanding regarding proof should be established in relation to algorithmic discrimination. In the event that such an approach is adopted, it might be appropriate to include a specification of the responsibilities and duties imposed on users of algorithmic systems, both under the existing equality and anti-discrimination legislation and under other regulatory frameworks, such as the AI Act and the GDPR. Further exploration of which structural obligations may be relevant might be conducted. What is required to refute a presumption of algorithmic discrimination would also be an interesting question to explore. Systems for AI auditing and the development of methods that can explain what happens within AI systems ( ' explainable AI methods ' ) may be relevant in this context. 75
@@ -629,6 +770,10 @@ At the same time, case law from the European Court of Justice shows that the pro
 
 75 Strümke et al. (2023).
 
+
+<!-- PAGE 37 -->
+
+
 treatment is explicitly based on a protected discrimination ground. The prohibition also applies if criteria that are inextricably linked to a protected discrimination ground are used.
 
 In the light of the above, consideration should be given to the possible introduction of separate definitions of direct and indirect algorithmic differential treatment into the Equality and Anti-Discrimination Act.
@@ -638,6 +783,10 @@ In the light of the above, consideration should be given to the possible introdu
 - Section 9 of the EAD Act on lawful differential treatment may prove to be challenging in efforts to address algorithmic discrimination as it offers little predictability. Two factors influence the scope of the current justification clause: the social sector in which the differential treatment occurs and whether it involves direct or indirect differential treatment. The report shows how algorithmic differential treatment challenges both of these fundamental premises. Algorithmic systems are now used across all sectors of society and contribute in various ways to decisions that may be of great importance to individuals. This makes the premise that protection against discrimination should be particularly strict in the work sector in need of nuancing. Furthermore, the complexity of algorithmic systems makes it difficult to draw a clear line between direct and indirect discrimination. In the light of these circumstances, the report discusses the possibility that a separate and more detailed provision regulating lawful algorithmic differential treatment might be introduced into the Equality and Anti-Discrimination Act.
 - The report discusses how the prohibition against content-based discrimination may be relevant in cases of algorithmic discrimination.
 - The report shows how rules and decisions related to the burden of proof in discrimination law, particularly as specified under Article 18 of the EU Pay Transparency Directive (Directive 2023/970), may play a crucial role in efforts to address algorithmic discrimination. The relevance of this issue stems from the fact that equal pay cases are characterized by a lack of transparency regarding the basis for pay determination, and there is thus a clear parallel with questions of algorithmic discrimination. Article 18(2) of the Pay Transparency Directive expresses a ' procedural turn ', in that the provision requires those responsible for pay to conduct various assessments and to be transparent about the results of those assessments. If these requirements are not met, it is
+
+
+<!-- PAGE 38 -->
+
 
 this party 's responsibility to prove that discrimination has not occurred if a case is brought regarding alleged direct or indirect discrimination in relation to pay. Such an approach includes elements that might be transferable to the enforcement of individual cases concerning algorithmic discrimination.
 
@@ -653,8 +802,16 @@ Such a specific provision could establish that, in order to be lawful, different
 - o seek to realize an objective purpose, which presumes that the system cannot have purposes contrary to national and international legislation (including Norway's h uman rights obligations); and
 - o be suitable and necessary for the realization of the algorithmic system 's objective(s). It could be further specified that if the differential treatment results from the system directly emphasizing protected group characteristics -or factors inextricably linked to protected group characteristics -the differential treatment must be decisive for the realization of the system's objective s. (Such a specification would entail the establishment of a particularly strong protection against direct algorithmic discrimination.)
 
+
+<!-- PAGE 39 -->
+
+
 - o must not have a disproportionate negative impact on the person or persons subject to the differential treatment. It might be specified that emphasis should be placed on whether the differential treatment concerns individuals' access to fundamental rights and services, such as health, education, work, banking and insurance services, etc.
 - The introduction of a separate provision regarding the burden of proof on cases concerning algorithmic discrimination might be considered, drawing inspiration from Article 18 of the EU Pay Transparency Directive.
+
+
+<!-- PAGE 40 -->
+
 
 ## 5 The actors: Who are protected against discrimination and who may be held liable?
 
@@ -678,6 +835,10 @@ The challenges that may arise at the intersection of algorithmic discrimination 
 
 78  Wachter (2022).
 
+
+<!-- PAGE 41 -->
+
+
 grounds have already been put on the agenda in the European context. 79  Among other things, academic articles and reports have discussed whether Article 21 of the EU Charter (which has a more flexible approach to the issue of discrimination grounds) can be used as a mechanism to address situations of discrimination against groups that are currently not protected by the anti-discrimination directives.
 
 Limitations resulting from the adoption of a closed list of discrimination grounds might to a certain extent be addressed through the inclusion of an open-ended category in the specification of discrimination grounds. As we have seen earlier, Section 6 of the EAD Act builds on an explicit and closed approach to the issue of discrimination grounds. At the same time, the purpose clause in the first paragraph of Section 1 of the Act takes an open-ended approach to groups who are vulnerable to discrimination (see the formulation ' or other significant characteristics of a person ') . 80 Lines can be drawn between the purpose clause in the EAD Act and the open-ended prohibitions against discrimination in international human rights conventions -for example, Article 14 of the European Convention on Human Rights, Article 26 of the International Convention on Civil and Political Rights, and Article 2(2) of the International Covenant on Economic, Social and Cultural Rights.
@@ -698,6 +859,10 @@ As various actors are involved prior to the launch of a system, questions can be
 
 81 Gerards and Xenidis (2020) p. 39.
 
+
+<!-- PAGE 42 -->
+
+
 The clear point of departure must be that a person claiming to have been discriminated against should direct a claim against the private or public actor that is responsible for a particular decision, ruling, resolution, etc., and that uses an algorithmic system as part of its operations. In the AI Act, this is described as ' the deployer ' . 82  This point of departure must hold regardless of whether the case involves a fully automated algorithmic decision or a situation where an AI system is being used in a decision-support role, with the final decision ultimately being made by a human. A public or private employer, educational institution, health institution, etc., cannot circumvent their obligations under the Equality and Anti-Discrimination Act through the use of systems based on algorithms and AI. 83  Such an understanding is also in line with the duty to ensure effective implementation of the prohibition against discrimination.
 
 The European Court of Human Rights case Glukhin v. Russia builds on a similar understanding. 84  Among other things, the case concerned whether an automated facial recognition system in use on the Moscow Metro was in line with the European Convention on Human Rights (ECHR). It was the Russian authorities' actual use of the automated facial recognition system in relation to the applicant that was at the heart of the case, not the question of which actors had potentially contributed to the development of the data system. The court concluded that the use of the system constituted a breach of the individual right to privacy established under Article 8 of the ECHR.
@@ -711,6 +876,10 @@ In situations where an actor using an algorithmic system is found to have subjec
 83 This has a small parallel to the human rights field, where it is well established that a state cannot avoid human rights obligations through leaving certain tasks to private actors.
 
 84  Case no. 11519/20 ( Glukhin v. Russia ) (2023).
+
+
+<!-- PAGE 43 -->
+
 
 ## 5.4 Can the prohibitions against instruction and participation widen the circle of responsible actors?
 
@@ -738,6 +907,10 @@ A current issue concerns the potential significance of the prohibitions against 
 
 89 Ot.prp. no. 35 (2004-2005) [Legislative Proposition] Point 6.1.
 
+
+<!-- PAGE 44 -->
+
+
 development of knowledge-supporting AI systems that provide recommendations and predictions concerning what decision should be made be covered by the prohibition against instruction in cases where the result is a person being exposed to discrimination?
 
 Gerards and Xenidis point out that the prohibition against instruction is not clearly defined either in the EU directives or through the interpretation of the European Court of Justice. They nevertheless think that ' an innovative interpretation of the notion of ' instruction to discriminate ' could effectively mitigate the substantive and procedural hurdles that arise in the context of algorithmic discrimination ' . 90  They do not rule out the possibility that the prohibition against instruction may be legally interpreted to cover situations where knowledge-supporting AI systems form part of the cause of discriminating decisions. They further point out that the prohibition against instruction may be positive in that it can comprise an addition/supplement to the prohibitions against direct and indirect discrimination (and the difficult delineation between these). Finally, they point out that the prohibition against instruction can function as a means to holding different actors in the value chain accountable -for example, by encouraging those who design algorithms used in AI systems to seek certification to avoid accusations of having instructed someone to discriminate. 91
@@ -754,6 +927,10 @@ The Tribunal takes the position that such a tripartite relationship does not mea
 
 92  Anti-Discrimination Tribunal, DIN-2019-115 and DIN-2019-196 (joint hearing).
 
+
+<!-- PAGE 45 -->
+
+
 actions of the lessee. Similarly, the lessee cannot merely point to having a contractual relationship only with the lessor and refer the employee to the lessor as the employer. The discrimination protection stands on its own, and it must be assessed specifically whether the lessee, the lessor or both have acted in a way that means the employee is, in fact, placed in a disadvantaged position compared to employees not covered by the relevant discrimination ground. 93
 
 The Tribunal concluded that the lessee's decision not to extend A's assignment constituted discrimination due to pregnancy and maternity leave contrary to Section 6 of the EAD Act. In considering whether the employment agency had participated in the discrimination, the Tribunal claimed that ' both the employment agency and the lessee have to fulfil their responsibility to prevent the employee from being put in a disadvantaged position due to pregnancy and maternity leave ' . 94 In the Tribunal's view, the employment agency's passivity and failure to act toward the lessee meant that it had contributed to the discrimination in a way that contravened the prohibition against participation set out in Section 16 of the EAD Act. Both the employment agency and the lessee were ordered to pay damages to A. 95
@@ -767,6 +944,10 @@ In my view, the prohibition against participation might potentially be used in s
 94 Author's translation.
 
 95  The damages awarded amounted to NOK 25,000 from the employment agency and NOK 15,000 from the lessee.
+
+
+<!-- PAGE 46 -->
+
 
 ## 5.5 Summary and reflections going forward
 
@@ -783,8 +964,16 @@ This chapter has highlighted the need to consider the way forward for some of th
 
 - It may be necessary to consider the inclusion of an open-ended category in the Act's listing of discrimination grounds. If it is not considered desirable to introduce this at the general level, the inclusion of a specific prohibition against algorithmic discrimination might instead be considered. This prohibition could build on a positive enumeration of protected discrimination grounds while also
 
+
+<!-- PAGE 47 -->
+
+
 - accommodating the need for flexibility through the creation of an open-ended category.
 - The prohibitions against instruction and participation should be examined in terms of their implications in the context of algorithmic discrimination.
+
+
+<!-- PAGE 48 -->
+
 
 ## 6 Enforcement and sanctions
 
@@ -803,6 +992,10 @@ Section 8 of the Equality and Anti-Discrimination Ombud Act states: 'T he Tribun
 96 See Section 4.7 above.
 
 97 In the official Norwegian text of the Act, the relevant passage is as follows: 'Nemnda behandler de sakene som bringes inn for den. En part, ombudet eller andre med rettslig klageinteresse kan bringe en sak inn for nemnda.' In the unofficial English translation of the Act, the second sentence has been translated as 'A party, the Ombud or other persons with legal standing may submit a case to the Tribunal' (emphasis added). The Norwegian phrase 'andre med rettslig klageinteresse', however, does not necessarily refer to persons, and has therefore been rendered here as 'others with legal standing'. See Lov om Likestillings- og diskrimineringsombudet og Diskrimineringsnemnda (diskrimineringsombudsloven) [Act Relating to the Equality and Anti-Discrimination Ombud and the Anti-Discrimination Tribunal (Equality and AntiDiscrimination Ombud Act)], 16 June 2017 no. 50.
+
+
+<!-- PAGE 49 -->
+
 
 provision also opens for interest organizations and NGOs to file a complaint with the Tribunal, provided that they fulfil the requirements for ' legal standing ' . 98
 
@@ -826,6 +1019,10 @@ In the Accept case, which concerned the protection against direct discrimination
 
 102 Similar formulations are found in Article 7(2) of the Racial Discrimination Directive (2000/43), Article 17(2) of the Gender Equality Directive (2006/54) and Article 8(3) of the Gender Equality Directive on Goods and Services (2004/113).
 
+
+<!-- PAGE 50 -->
+
+
 complainant who claims to have been the victim of such discrimination ' . 103  The Court further specified that the Directive in no way precludes a Member State from laying down, in its national law, the right of associations with a legitimate interest in ensuring compliance with that directive to bring legal or administrative proceedings to enforce the obligations resulting therefrom without acting in the name of a specific complainant or in the absence of an identifiable complainant. 104
 
 Section 1-4 of the Dispute Act does not require that specific individuals must be discriminated against and/or involved for the Equality and Anti-Discrimination Ombud or an interest organization to file a lawsuit concerning discrimination. The approach in the Dispute Act therefore corresponds with the signals given by the European Court of Justice in the Accept case.
@@ -843,6 +1040,10 @@ When an actor is considering whether to bring a case of algorithmic discriminati
 103  C-81/12 ( Accept ) (2013), Para. 36.
 
 104  C-81/12 ( Accept ), Para. 37.
+
+
+<!-- PAGE 51 -->
+
 
 According to the EU/EEA anti-discrimination directives, member-states must ensure that violations of the prohibition against discrimination are subject to effective, proportionate and dissuasive sanctions. 105
 
@@ -866,6 +1067,10 @@ The Tribunal has competency to make decisions on breaches of the prohibition aga
 
 107 See the Equality and Anti-Discrimination Ombud Act, Section 12. The unofficial English translation of this section of the Act appears to include a translation error, which has been corrected by the author in the version given here.
 
+
+<!-- PAGE 52 -->
+
+
 substantive competency of the Tribunal, but these are likely of little significance in the context of algorithmic discrimination. 108  This means that if the most important thing is to obtain a finding that discrimination has occurred, the Tribunal could be an important actor. This must also be seen in relation to the T ribunal's role as a free low -threshold enforcement body. At the same time, algorithmic discrimination triggers complicated factual and legal questions, which may lead to questions about whether the current structuring of the Tribunal renders it suitable for handling such cases.
 
 ## 6.4 Summary and reflections going forward
@@ -883,7 +1088,15 @@ substantive competency of the Tribunal, but these are likely of little significa
 
 108 The limitations of the Tribunal's competency are discussed in Hellum and Strand (2022) pp. 665ff.
 
+
+<!-- PAGE 53 -->
+
+
 - Further work should be based on the substantive prohibition against discrimination as it is currently regulated under Sections 6 -9 of the EAD Act and how it might possibly be adjusted in the light of the new challenges posed by the use of algorithmic systems.
+
+
+<!-- PAGE 54 -->
+
 
 ## References
 
@@ -900,6 +1113,10 @@ substantive competency of the Tribunal, but these are likely of little significa
 - Hellum, Anne, and Vibeke Blaker Strand (2022) Likestillings- og diskrimineringsrett [Equality and Non-Discrimination Law]. Oslo: Gyldendal.
 - Hellum, Anne, Ingunn Ikdahl and Vibeke Blaker Strand (2024) ' Between Norms and Institutions: Unlocking the Transformative Potential of Norwegian Equality and AntiDiscrimination Law'. In: Anne Hellum, Ingunn Ikdahl, Vibeke Blaker Strand and EvaMaria Svensson (eds) Nordic Equality and Anti-Discrimination Laws in the Throes of Change: Legal Developments in Sweden, Finland, Norway, and Iceland, pp. 130 -190. Abingdon: Routledge. https://doi.org/10.4324/9781003172840 (open access).
 
+
+<!-- PAGE 55 -->
+
+
 - Likestillings- og diskrimineringsombudet [Equality and Anti-Discrimination Ombud] (2023) 'Innebygd diskrimineringsvern' [Built-In Protection Against Discrimination] . Available at: https://ldo.no/aktuelt/innebygd-diskrimineringsvern/ (accessed 23 January 2025).
 - Naudts, Laurens (2019) ' How Machine Learning Generates Unfair Inequalities and How Data Protection Instruments May Help in Mitigating Them '. I n Ronald Leenes, Rosamunde van Brakel, Serge Gutwirth and Paul de Hert (eds) Data Protection and Privacy: The Internet of Bodies , pp. 71 -92. Oxford: Hart Publishing.
 - Regjeringen [Norwegian Government] (2023) 'Likelønnsdirektivet' [Pay Transparency Directive]. EØS-notatbasen. Available at: https://www.regjeringen.no/no/sub/eosnotatbasen/notatene/2021/mai/eus-likelonnsdirektiv/id2856216/ (accessed 23 January 2025).
@@ -912,6 +1129,10 @@ substantive competency of the Tribunal, but these are likely of little significa
 - Wachter, Sandra (2022) 'The Theory of Artificial Immutability: Protecting Algorithmic Groups Under Anti-Disc rimination Law'. Tulane Law Review 97(2): 149. http://dx.doi.org/10.2139/ssrn.4099100.
 - Wachter, Sandra, Brent Mittelstadt and Chris Russell (2021) ' Why Fairness Cannot Be Automated: Bridging the Gap Between EU Non-Discrimination Law and AI '. Computer Law &amp; Security Review 41: 105567. https://dx.doi.org/10.2139/ssrn.3547922.
 - Xenidis, Raphaële (2020) 'Tuning EU Equality Law to Algorithmic Discrimination: Three Pathways to Resilience'. Maastricht Journal of European and Comparative Law 27(6): 736 -758.
+
+
+<!-- PAGE 56 -->
+
 
 ## Legal instruments and cases
 
@@ -943,6 +1164,10 @@ Charter of Fundamental Rights of the European Union (EU Charter), adopted 7 Dece
 
 Treaty on the Functioning of the European Union (TFEU), adopted 13 December 2007, entry into force 1 December 2009.
 
+
+<!-- PAGE 57 -->
+
+
 - Council Directive 2000/43/EC of 29 June 2000 Implementing the Principle of Equal Treatment Between Persons Irrespective of Racial or Ethnic Origin (EU Racial Discrimination Directive).
 - Council Directive 2000/78/EC of 27 November 2000 Establishing a General Framework for Equal Treatment in Employment and Occupation (EU Framework Directive).
 - Council Directive 2004/113/EC of 13 December 2004 Implementing the Principle of Equal Treatment Between Men and Women in the Access to and Supply of Goods and Services (Gender Equality Directive on Goods and Services).
@@ -956,6 +1181,10 @@ Treaty on the Functioning of the European Union (TFEU), adopted 13 December 2007
 ## National preparatory works
 
 - Prop.81 L (2016 -2017) Lov om likestilling og forbud mot diskriminering (likestillingsog diskrimineringsloven) [Act on Equality and Anti-Discrimination]. Available at: https://lovdata.no/static/PROP/prop-201617-081.pdf.
+
+
+<!-- PAGE 58 -->
+
 
 Ot.prp. nr. 35 (2004 -2005) Om lov om endringer i likestillingsloven mv.
 
@@ -986,6 +1215,10 @@ C-148/22 ( OP ) (2023)
 ## The Norwegian Anti-Discrimination Tribunal
 
 Case DIN-2019-115 and DIN-2019-196 (joint hearing), 29 January 2020
+
+
+<!-- PAGE 59 -->
+
 
 <!-- image -->
 

@@ -1,8 +1,7 @@
-# LLM Assessment Report: SocialAI-LitReview-Curated
+# LLM Assessment Report
 
 **Datum:** 2025-11-02
-**Zotero-Gruppe:** [SocialAI-LitReview-Curated](https://www.zotero.org/groups/6284300/socialai-litreview-curated)
-**Assessment-Datei:** [assessment_socialai_llm.xlsx](output/assessment_socialai_llm.xlsx)
+**Assessment-Datei:** [assessment_llm.xlsx](output/assessment_llm.xlsx)
 
 ---
 
@@ -216,5 +215,4 @@ python analysis/getPDF_intelligent.py \
 ---
 
 **Generiert:** 2025-11-02 16:15 CET
-**Pipeline:** FemPrompt_SozArb
-**Kontakt:** https://github.com/chpollin/FemPrompt_SozArb
+**Repository:** https://github.com/chpollin/FemPrompt_SozArb

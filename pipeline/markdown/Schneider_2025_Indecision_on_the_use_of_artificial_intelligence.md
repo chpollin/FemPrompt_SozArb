@@ -1,10 +1,11 @@
 ---
 source_file: Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.pdf
-conversion_date: 2026-02-03T09:20:44.184141
+conversion_date: 2026-02-03T18:52:00.267363
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Indecision on the use of arti /uniFB01 cial intelligence in healthcare -A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS
 
 <!-- image -->
@@ -99,6 +100,10 @@ Wenke Liedtke, Faculty of Theology, University of Greifswald, Am Rubenowplatz 2-
 
 Email: wenke.liedtke@uni-greifswald.de
 
+
+<!-- PAGE 2 -->
+
+
 ## Introduction
 
 The digital transformation in medicine has raised many hopes, especially as data can now be used to generate new insights that were not possible before. Among these technologies, methods of arti /uniFB01 cial intelligence (AI) such as machine learning have gained increasing prominence. 1
@@ -117,6 +122,10 @@ This explorative study therefore focuses on the patient as part of the professio
 
 In academic discourse responsibility and trust can both be considered as relational concepts of different relata. There are discussions on the differentiation of the relata of responsibility 32,33 and trust. 34,35 Much of the discourse on responsibility in AI technology focuses on the subject, 3 the normative implications and their prerequisites. 36 However, trust is often discussed in terms of its quality of connection due to the understanding of the relationship between humans and machines. In particular, the question arises whether this relationship can be associated with trust 37 or whether it would be more appropriate to speak of reliance in this context. 38 In contrast, the discourse on self-determination, often equated with autonomy, focuses
 
+
+<!-- PAGE 3 -->
+
+
 on the possibilities and abilities to make decisions independently and without coercion for one ' s self. 39,40 Against the backdrop of AI technologies, this appears to be challenging due to an ' AI paternalism. ' 41
 
 While there are different concepts of responsibility, trust and self-determination, our empirical study was not primarily focused on a speci /uniFB01 c concept of these aspects. Rather we want to explore the intuitive patient ' s perception of these three aspects and examine them in relation to the implementation of AI-technology. Our study underscores that the perception of CDSS within professional-patient communication is critical to determining whether this relationship -particularly regarding responsibility, trust and selfdetermination -remains stable or is at risk of being signi /uniFB01 -cantly disrupted by the implementation of CDSS.
@@ -134,6 +143,10 @@ Due to the COVID-19 pandemic and mobility issues of some patients, all focus gro
 Audio recordings were made of the focus groups and these recordings were transcribed ad verbatim and pseudonymized. Field notes were taken during and after the focus groups. The data collection was concluded when theoretical saturation was achieved, meaning that additional focus groups would not yield new information regarding the research question.
 
 The focus groups lasted an average of 114:17 min (range between 110:07 to 123:04 min), including a short break after one hour. 18 people were interviewed (see Table 1): twelve of the interviewees described themselves as women and six as men. 10 people had completed high school and/or college. Respondents ranged in age from 24 to 76 (average 45.5).
+
+
+<!-- PAGE 4 -->
+
 
 Table 1. Sociodemographic data of patients participating in focus groups.
 
@@ -162,6 +175,10 @@ Last but not least, patients vaguely refer to a gut feeling in order to characte
 Only one person describes trust in a professional-patient relationship as having no alternative and emphasizes that patients have to trust the professionals because they are at their mercy in case of doubt: ' Either way, I have to trust my surgeon and there ' s nothing I can do anyway ' (S122).
 
 The characteristics of trusting relationships are transferred by patients to the interaction of professionals with AI-CDSS: Similarly to the specialist knowledge of the professionals, patients emphasize the proven performance of AI-CDSS, e.g., better data analyzes through ' results based on mathematical formulae ' (N85, also H74) and better results when performing surgery: ' as a patient, I am primarily interested in the results ' (S136). By expecting better results using CDSS, patients appear to attribute expertise and practical experience to the system that is similar to that of a competent professional. However, patients also point out that statistical results cannot necessarily be transferred to individual cases (N63), therefore causing uncertainty among them.
+
+
+<!-- PAGE 5 -->
+
 
 When AI-based CDSS are used in practice, patients expect that healthcare professionals are appropriately trained and that they are in favor of using the system:
 
@@ -197,6 +214,10 @@ Thus, individual attribution of responsibility to producers is only presented in
 
 What is particularly important to me is that as soon as the component [the CDSS] /uniFB01 nds its place in healthcare, the question [of liability] is solved in advance, ensuring that the sole responsibility remains with the surgeon and that the patient does not subsequently have to approach the producers of the technology regarding any claims for damages. (S140, also S161, N130)
 
+
+<!-- PAGE 6 -->
+
+
 Consequently, patients express a desire to transfer responsibility to those who act directly on them, knowing this will be dif /uniFB01 cult to implement in practice (S150). Nevertheless, the responsibility should stay with those who have ' the last word. He [the surgeon] gets suggestions from the arti /uniFB01 cial intelligence, but no instructions. And in this respect, the surgeon has the decision and whoever has the decision has the responsibility ' (S153). This individual attribution of responsibility leads one respondent to doubt the assumption of responsibility by healthcare professionals due to their own risk (S148). While reference is made to the dif /uniFB01 culty of refusing the AI-CDSS use due to economic pressures of the healthcare system, ' because [ … ] the clinicians and the clinic administrators, the businesspeople, who are in the clinic, they also want that the clinic has a good reputation ' (S174).
 
 Individual responsibility as a personal responsibility of the patients is stated in the context of noncompliance with corresponding therapies. It is noticeable that a lack of shared decision-making is mentioned in individual cases and that there is a desire for ' that I myself am also integrated into the treatment plan. [ … ] I could also participate actively on the therapy and would not be so left out and I would not have to say: ʻ I okay, the doctor does everything '' (N30).
@@ -227,6 +248,10 @@ Wewant professionals to communicate with us, maybe in a different manner at that
 
 This includes the ability to communicate verbally and non-verbally, and to clarify and explain AI-CDSS
 
+
+<!-- PAGE 7 -->
+
+
 technology. This may be dif /uniFB01 cult due to a lack of ' science communication ' (N144) or a lack of inclusion in the informational transparency of decision-making processes (N75). It is obvious from the patients ' perspective that the rational understanding of such highly complex technological processes is a challenge for self-determination. ' It is a thin line. [ … ] So, I also think that a good ethical, moral standard for behavior needs to be developed, so that it [the device] can be handled well for all sides ' (H135).
 
 The importance of self-determination is re /uniFB02 ected in the interviewees ' statements on the patient ' s will, which is seen as ' the highest good that we have, even if we can no longer express it ourselves ' (H70), and which should not be ignored under any circumstances (H78). Any wishes could cover decisions for or against the use of technology, including the consequences:
@@ -251,6 +276,10 @@ Responsibility and trust can therefore only be comprehensively attributed if kno
 
 Furthermore, responsibility is deeply connected with the assumption and ful /uniFB01 llment of tasks that contribute to a good diagnostic and therapeutic process for patients. With regard to the AI-CDSS application, this concerns the (design) development and maintenance. These qualities play a decisive role with regard to responsibility, as patients see healthcare professionals as being responsible for successful interpersonal communication, even in cases of technical malfunctioning of the AI-CDSS. This correlates to them being the contact person for patients. Patients emphasize the importance of being perceived as a person 14 and of being considered in their speci /uniFB01 c situation by their healthcare professionals. 52 Hence, they wish for their counterpart to be a competent contact person. However, they also expect healthcare professionals to involve them as experts in their situation within a shared decision-making (cf. Figure 1). This expectation and the resulting distribution of responsibilities and tasks can then lead to a basis of trust, because trust only seems possible in interpersonal
 
+
+<!-- PAGE 8 -->
+
+
 Figure 1. Perception of the AI-CDSS from the patients ' perspective and its effects on the aspects of trust, responsibility and self-determination within the relationship between patients and healthcare professionals as a supportive tool (blue, left side) and a second opinion (red, right side) (own illustration).
 
 <!-- image -->
@@ -264,6 +293,10 @@ Firstly, AI-CDSS can be perceived as a supportive tool in the treatment context.
 Secondly, AI-CDSS can be perceived as a second opinion. In this case, specialist knowledge is attributed primarily to the AI-CDSS and less to the professionals; the latter are often only credited with knowledge of the speci /uniFB01 c patient situation, if at all. This is quite contrary to the patients ' demands that professionals have the sole responsibility because they are given the task of subsuming ' the particular case under the generality of the evidence base. ' 52 Perceiving an AI-CDSS as a second opinion means that the professional expertise of the healthcare professional may be called into question -especially if the professional ' s judgment differs from the analysis or recommendation of the AI-CDSS. Similar to what Kerasidou has pointed out, 53 there could be a paradigm shift within the healthcare system, with trustworthiness increasingly associated with greater accuracy and effectiveness of AI-CDSS rather than relational values such as human trust. 14 Patients react to this with indecision and, in cases of doubt, are confronted with a con /uniFB02 ict of loyalty and loss of trust.
 
 While the trusting relationship is the focus of the patients in the outlined perspectives on AI-CDSS, conclusions can also be drawn about the aspects of responsibility and selfdetermination. A trusting relationship develops for the patients interviewed above all when they feel perceived as equal actors in the healthcare-patient setting. However, patients do not see the aspect of trust as exclusively positive, but rather as a necessity, for example, if they have the feeling of being at the mercy of healthcare professionals.
+
+
+<!-- PAGE 9 -->
+
 
 Patients have the impression that it could be dif /uniFB01 cult to maintain their self-determination if AI-CDSS are used. They argue that they want to take on more personal responsibility within the therapy, for example, by taking on disease management independently. In particular, patients see the risk that the AI-CDSS integration could lead to the loss of at least one actor in the healthcare-patient setting, which contradicts previous assumptions that their integration will lead to a ' doctor-computer-patient relationship. ' 54,55
 
@@ -282,6 +315,10 @@ Second, the case studies were limited due to their selected medical specialties.
 ## Conclusion
 
 The AI-CDSS implementation may offer various advantages for patients and healthcare professionals such as ef /uniFB01 -ciency, support or just as a back-up, but may also cause challenges. The latter is particularly evident in the aspects of trust, responsibility, and self-determination, which interact with each other. Patients might have a very different perspective on these technologies, due to their interests, values and educational backgrounds. Therefore, AI-CDSS development and implementation processes need to consider all potential users of these systems, including patients. Our exploratory study is one of the /uniFB01 rst empirical studies to focus primarily on the patients ' perspective and to explore their view on potential changes in the provider-patient
+
+
+<!-- PAGE 10 -->
+
 
 relationship with regard to trust, responsibility and selfdetermination. We concentrated on selected ethical aspects to obtain a more comprehensive picture of patients ' attitudes and acceptance of AI technology.
 
@@ -327,6 +364,10 @@ ML.
 
 Supplemental material for this article is available online.
 
+
+<!-- PAGE 11 -->
+
+
 ## References
 
 1. Topol EJ. High-performance medicine: the convergence of human and arti /uniFB01 cial intelligence. Nat Med 2019; 25: 44 -56.
@@ -362,6 +403,10 @@ Supplemental material for this article is available online.
 30. Vallès-Peris N, Barat-Auleda O and Domènech M. Robots in healthcare? What patients say. Int J Environ Res Public Health 2021; 18: 9933.
 31. Dlugatch R, Georgieva A and Kerasidou A. Trustworthy arti/uniFB01 cial intelligence and ethical design: public perceptions of trustworthiness of an AI-based decision-support tool in the context of intrapartum care. BMC Med Ethics 2023; 24: 42.
 32. Loh J. Responsibility and robot ethics: a critical overview. Philosophies 2019; 4: 58.
+
+
+<!-- PAGE 12 -->
+
 
 33. Langanke M, Liedtke W and Buyx A. Patients ' responsibility for their health. In: Schramme T and Walker M (eds) Handbook of the philosophy of medicine . Dordrecht, Netherlands: Springer, 2025, pp.1 -24.
 34. Domenicucci J and Holton R. Trust as a two-place relation. In: Faulkner P, Simpson T and Simpson TW (eds) The philosophy of trust . 1st ed. Oxford, New York: Oxford University Press, 2017, pp.149 -160.

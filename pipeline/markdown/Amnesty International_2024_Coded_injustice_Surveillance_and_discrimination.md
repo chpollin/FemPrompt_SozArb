@@ -1,10 +1,11 @@
 ---
 source_file: Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.pdf
-conversion_date: 2026-02-03T08:41:06.349896
+conversion_date: 2026-02-03T18:20:08.937471
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## CODED INJUSTICE
@@ -12,6 +13,10 @@ quality_score: 95
 SURVEILLANCE AND DISCRIMINATION IN DENMARK'S AUTOMATED WELFARE STATE
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 Amnesty International is a movement of 10 million people which mobilizes the humanity in everyone and campaigns for change so we can all enjoy our human rights. Our vision is of a world where those in power keep their promises, respect international law and are held to account. We are independent of any government, political ideology, economic interest or religion and are funded mainly by our membership and individual donations. We believe that acting in solidarity and compassion with people everywhere can change our societies for the better.
 
@@ -22,6 +27,10 @@ Index: EUR 18/8709/2024 Original language: English
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 3 -->
+
 
 ## CONTENTS
 
@@ -51,6 +60,10 @@ Index: EUR 18/8709/2024 Original language: English
 | 6.3 RIGHT TO EQUALITY AND NON-DISCRIMINATION                                                         |  35 |
 | 6.4 RIGHTS TO SOCIAL SECURITY                                                                        |  37 |
 | 6.5 RIGHTS OF THE CHILD                                                                              |  38 |
+
+
+<!-- PAGE 4 -->
+
 
 | 6.6 TRANSPARENCY, ACCOUNTABILITY AND THE RIGHT TO REMEDY                                                                                         | 39                                                                                          |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
@@ -83,6 +96,10 @@ Index: EUR 18/8709/2024 Original language: English
 | 12. CONCLUSIONS AND RECOMMENDATIONS                                                                                                              | 79                                                                                          |
 | RECOMMENDATIONS                                                                                                                                  | 79                                                                                          |
 
+
+<!-- PAGE 5 -->
+
+
 ## GLOSSARY
 
 | WORD                                  | DESCRIPTION                                                                                                                                                                                                                                                                                                                        |
@@ -96,6 +113,10 @@ Index: EUR 18/8709/2024 Original language: English
 | SEMI-AUTOMATED DECISION-MAKING SYSTEM | An algorithmic decision-making system where a human is involved in the decision-making process, or the algorithm is used to support the decision- making. Often, these systems are used to select cases for human review or to assist in the decision-making process by providing information and/or suggested outcomes.           |
 | BLACK-BOX ALGORITHM                   | An algorithmic system where the inputs and outputs can be viewed, but the internal workings are unknown to its designer. This terminology most readily applies to more complex ML algorithms.                                                                                                                                      |
 | ACCURACY                              | In the field of AI, accuracy measures are generally used to ascertain the number of 'correct' outputs that a system produces, whether those outputs are predictions, identifications or simpler calculations (as a percentage of the number of total outputs made).                                                                |
+
+
+<!-- PAGE 6 -->
+
 
 ## WORD EXPLAINABILITY
 
@@ -139,6 +160,10 @@ Classification is a supervised ML method where a vast number of data points are 
 
 Clustering is the process of grouping similar objects into categories, or clusters. Clustering is an unsupervised ML technique for identifying and grouping related data points in large datasets without human input as to what that clustering should look like. It groups objects in such a way that objects in the same category, called a cluster, are in some sense more similar to each other than objects in other groups.
 
+
+<!-- PAGE 7 -->
+
+
 ## WORD
 
 ## RISK-SCORING
@@ -163,6 +188,10 @@ In supervised learning, AI is trained from examples consisting of inputs and lab
 
 In unsupervised learning, AI systems discover patterns or relationships in unlabelled data. Humans do not actively indicate to the AI system the target or output of the exercise.
 
+
+<!-- PAGE 8 -->
+
+
 ## EXECUTIVE SUMMARY
 
 Denmark is lauded for having a welfare state that offers an adequate social safety net for its residents, with the government spending 26% of GDP on welfare benefits. With an increase in digitization, Denmark has positioned itself as a model digital welfare state and is often seen as a digitization frontrunner in Europe. The country's transition to a digital welfare state is informed by the government's efforts to streamline administrative tasks and to increase the effectiveness and efficiency with which welfare and other essential public services are delivered.
@@ -178,6 +207,10 @@ Although technology use in the public sector is often presented as objective and
 This report defines and interrogates the ways in which UDK and ATP's use of algorithms to detect fraud in the distribution of social benefits negatively affects the human rights of social security benefits recipients, including their rights to privacy, equality and non-discrimination, dignity, social security and remedy.
 
 The report also demonstrates how social benefits recipients are subjected to mass surveillance through the use of traditional and digital surveillance mechanisms. It highlights the discriminatory effects that result from UDK/ATP's use of algorithmic systems for fraud detection purposes. Amnesty International's research has found how these discriminatory effects are occurring in the context of discriminatory or unequal structures
+
+
+<!-- PAGE 9 -->
+
 
 present in Danish societal institutions - in hostile Danish laws, rules, norms, patterns of attitudes and behaviour that create and promote 'othering' or the differentiation of groups. These are practices that not only encourage discrimination against marginalized groups, but that also allow for mass surveillance of populations in general.
 
@@ -199,6 +232,10 @@ Benefits applicants and recipients are also subjected to 'traditional' or 'analo
 
 These analogue forms of monitoring and surveillance, when coupled with overbroad methods of digital scrutiny, have created a system of pernicious surveillance. Constant surveillance of benefits recipients also has a negative impact on people's mental health, causing significant stress and anxiety.
 
+
+<!-- PAGE 10 -->
+
+
 ## STRUCTURAL DISCRIMINATION, HEIGHTENED RISK OF ALGORITHMIC DISCRIMINATION
 
 In the case of Denmark, its social benefits system exists in an already hostile environment for asylum seekers, people who have been granted refugee status in Denmark, migrants, and racialised communities, which could encourage discrimination against these groups based on their race, ethnicity and religion.
@@ -216,6 +253,10 @@ Amnesty International has found that categorization based on 'othering' or diffe
 ## UNUSUAL HOUSEHOLD, FAMILY AND RESIDENCY PATTERNS
 
 One of the main principles behind UDK/ATP's fraud control models is to identify 'unusual' or 'atypical' living patterns or arrangements; that is, atypical relationships and unusual residency patterns as an indicator of fraud, which warrant further investigation. Despite not clearly defining what constitutes 'unusual' or 'atypical arrangements' in law, leaving the door open to arbitrary decision-making, the algorithms use information such as household size, composition and evidence of co-habitation, and are designed to find 'statistical outliers'; that is, beneficiaries whose circumstances sufficiently deviate from the 'norm'. The algorithms risk discriminating against groups based on their race and ethnicity, class and relationship status because the models are embedded with social norms that reflect the view of dominant groups in Denmark about what a household or a family is. They fail to consider contextual factors such as existing inequalities within Danish society, including class and disability-based inequalities, and differing and evolving cultural norms or differences among different groups that inform living arrangements and household composition. Failure to take into account relevant contextual factors, existing societal inequalities and differing and evolving cultural norms allows the use of these models to disproportionately target low-income groups, people with disabilities, racialised people, migrants, and older people. UDK/ATP should therefore re-examine its fraud detection policies on the use of data relating to 'unusual' residency, family or household patterns.
+
+
+<!-- PAGE 11 -->
+
 
 ## FOREIGN AFFILIATION OR TIES
 
@@ -237,6 +278,10 @@ Amnesty International collaborated with LOKK (Denmark's National Organization of
 
 Amnesty International's research has found that digitization of Denmark's social benefits system has led to people with disabilities being forcibly or unfavourably included in UDK's system. Unfavourable inclusion is defined as 'being forced to be included in deeply unfavourable terms'. People with disabilities are forcibly or
 
+
+<!-- PAGE 12 -->
+
+
 unfavourably included because they have no choice but to share their data with third parties to access the benefits system. This inclusion raises data privacy and security concerns for them because of risks surrounding the misuse of their personal information by government-provided personal assistants who have access to their personal information. Access to systems must, therefore, not be solely and exclusively digital; authorities must provide viable alternatives that are inclusive and accessible for the most disadvantaged and marginalized groups without discrimination, such that all groups in society are able to participate in the social security system without risks to their privacy and data protection.
 
 ## LACK OF STATE OVERSIGHT, LACK OF TRANSPARENCY, AND RISKS TO REMEDY
@@ -252,6 +297,10 @@ Amnesty International believes the evidence gathered for this investigation indi
 Unless UDK and ATP can provide sufficient evidence otherwise, Amnesty International argues that the system in its current formation should be paused until UDK and ATP provide adequate evidence demonstrating that their practices do not constitute social scoring.
 
 Amnesty International wrote to UDK and ATP detailing why we believe that their fraud control models constitute a social scoring system as outlined in the EU AI Act and invited their response. Amnesty International also asked UDK and ATP to provide adequate explanations and evidence if they believe that the models would not fall under the definition of a social scoring system. UDK stated in its response to allegations in our report that its algorithmic practices do not constitute social scoring under Article 5 of the EU AI Act, as the controls have a clearly defined purpose, are proportionate, and are aimed at ensuring the correct payment of social benefits and because its fraud controls comply with applicable EU and national legislation. UDK and ATP have not provided Amnesty International with any detailed evidence or independent assessments that their algorithmic practices are not a social scoring system under Article 5 of
+
+
+<!-- PAGE 13 -->
+
 
 the EU AI Act, nor have they provided us with any evidence that their practices are necessary and proportionate.
 
@@ -279,6 +328,10 @@ The research builds on Amnesty International's previous research publications, i
 
 - ∞ Establish a clear, unambiguous and legally binding ban on the use of data regarding citizenship, 'foreign affiliation', or nationality, or proxies thereof, in risk-scoring for the purposes of fraud control.
 
+
+<!-- PAGE 14 -->
+
+
 - ∞ Review and amend Udbetaling Danmark/ATP's norms, policies and laws that inform risk-profiling through Udbetaling Danmark/ATP's fraud control algorithms that could perpetuate discrimination based on income, race, ethnicity, religion, migration status, gender, disability or age, and ensure that they comply with relevant international human rights standards.
 - ∞ Ensure that Udbetaling Danmark/ATP ends the practice of mass extraction, processing, and exploitation of residents' data for fraud-control purposes, and the use of social media.
 - ∞ Ensure that Udbetaling Danmark/ATP is fully transparent and provides meaningful information to affected individuals about the underlying logic, importance and expected consequences of decisions, even if they are not fully automated, regardless of the level of human involvement in the decisionmaking process.
@@ -295,6 +348,10 @@ The research builds on Amnesty International's previous research publications, i
 - ∞ Review and amend section 2(1)(7) of Executive Order of the Child and Youth Benefit Act LBK no. 724 of 25/05/2022 and section 5(a) of the Executive Order of the Act on Child Allowance and Advance Payment of Child Support (LBK no. 63 of 21/01/2019) to remove excessive and lengthy residency requirements that restrict access to child benefits for people granted refugee status in Denmark.
 - ∞ Review and amend the Danish Public Administration Act to include provisions on automated decision-making that guarantee that benefit applicants and claimants can access their right to an effective remedy.
 - ∞ Enact legislation to establish an independent public authority with oversight over the UDK/ATP and that monitors UDK/ATP's use of AI systems, to strengthen accountability mechanisms and increase human rights protection. This includes establishing an independent authority that has oversight over Udbetaling Danmark/ATP's activities in compliance with Article 70 of the EU AI Act.
+
+
+<!-- PAGE 15 -->
+
 
 ## TO THE DATA PROTECTION AUTHORITY:
 
@@ -319,6 +376,10 @@ The research builds on Amnesty International's previous research publications, i
 - ∞ Undertake proactive, ongoing human rights due diligence throughout the lifecycle of algorithmic technologies, both before and after the roll-out and implementation of new systems, in order that risks can be identified during the development stage and human rights abuses and other harms immediately picked up once the technologies have been implemented.
 
 Publicly disclose the steps it has taken to identify, prevent and mitigate human rights abuses and risks in its business operations, including through its involvement and business relationship with UDK.
+
+
+<!-- PAGE 16 -->
+
 
 ## BACKGROUND
 
@@ -351,6 +412,10 @@ https://bppj.berkeley.edu/2021/02/02/algorithms-and-child-welfare-the-disparate-
 Phillip Alston, 'What the 'digital welfare state' really means for human rights', 8 January 2020, https://www.openglobalrights.org/digitalwelfare-state-and-what-it-means-for-human-rights/
 
 Amnesty International, Xenophobic Machines (previously cited); Amnesty International, 'Trapped by automation: Poverty and discrimination in Serbia's welfare state' (previously cited).
+
+
+<!-- PAGE 17 -->
+
 
 and to hold governments to account for the harms created from their use because of a pervasive lack of transparency. 6
 
@@ -402,6 +467,10 @@ https://www.hrw.org/news/2019/06/10/disastrous-roll-out-uks-digital-welfare-syst
 
 Rikke Frank Jørgensen, 'Data and rights in the digital welfare state: the case of Denmark' (previously cited); Helle Zinner Henriksen, 'One step forward and two steps back: E-government policies in practice', in J. Ramon Gil-Garcia and others (editors), Policy Analytics, Modelling, and Informatics , 2018, https://doi.org/10.1007/978-3-319-61762-6\_4
 
+
+<!-- PAGE 18 -->
+
+
 ## sanctions regimes and a complete reversal of the traditional notion that the State should be accountable to the individual.' 16
 
 Governments are increasingly deploying new technologies and administrative practices for fraud-control purposes in the delivery of welfare. Authorities often use contested claims regarding the scale of social security fraud to justify the implementation of fraud-control measures that drive a reduction in social benefits spending, as well as to justify over-broad and discriminatory surveillance of benefits claimants. 17
@@ -449,6 +518,10 @@ https://automatingsociety.algorithmwatch.org/report2020/denmark/
 
 26 Rikke Frank Jørgensen, 'Data and rights in the digital welfare state: the case of Denmark' (previously cited).
 
+
+<!-- PAGE 19 -->
+
+
 journalist in collaboration with academics from Copenhagen University. After a public discussion in 2019, it was discontinued. 27
 
 Despite such cases, UDK has continued to deploy data-driven solutions in the form of predictive analytics tools. 28 Predictive analytics tools use data, statistical modelling and ML to predict future outcomes and trends. Within the social security context, UDK draws on insights from historical or current data to predict which beneficiaries are at higher risk of committing fraud or error. Previous investigations and studies have highlighted the human rights violations and risks of fraud control algorithms and tools deployed in other countries, for example:
@@ -473,6 +546,10 @@ In the case of Denmark, its social security system exists in an already hostile 
 31 Gabriel Geiger, How Denmark's Welfare State Became a Surveillance Nightmare (previously cited); Rikke Frank Jørgensen, 'Data and rights in the digital welfare state: the case of Denmark' (previously cited); Birgitte Arent Eiriksson, 'Udebetaling Danmark's systematic monitoring' (previously cited).
 
 32 Amnesty International, Xenophobic Machines (previously cited); Amnesty International, 'Trapped by automation: Poverty and discrimination in Serbia's welfare state' (previously cited); Amnesty International, 'India/global: New technologies in automated social protection systems can threaten human rights', 29 April 2024, https://www.amnesty.org/en/latest/news/2024/04/india-global-newtechnologies-in-automated-social-protection-systems-can-threaten-human-rights/
+
+
+<!-- PAGE 20 -->
+
 
 and religion. This hostile environment is reflected in public attitudes about race and cultural superiority, and political discourses or communications by politicians on welfare in Denmark. 33 publicly stated: 'Too many people have come to Denmark and gone around on social welfare for many years without working. We cannot accept this.' 34 Such attitudes and narratives, as academic studies on social welfare and migrant control in Denmark show, often dangerously and falsely pit 'hard-working' Danish families against migrants or migrant families. They do so by contending that the welfare system is too generous towards migrants, creating an incentive for them to come to Denmark, and that migrants are 'lazy', 'undeserving of benefits', and prone to commit welfare fraud. 35
 
@@ -512,6 +589,10 @@ https://www.dst.dk/en/Statistik/dokumentation/documentationofstatistics/immigran
 
 ## CODED INJUSTICE
 
+
+<!-- PAGE 21 -->
+
+
 decisive action, 'to put an end to a misguided tolerance of the intolerance that prevails in parts of the ghettos [where] Danish values are not fully established'. 42
 
 The government has attempted to justify the creation of 'ghetto' policies and the surveillance of groups identified as living in areas classified as 'ghettos' on the alleged grounds that, among other things, so-called 'parallel societies' are a financial burden and a security concern, and that migrants neither participate in the labour market nor integrate into Danish society. 43
@@ -546,6 +627,10 @@ https://www.amnesty.org/en/documents/eur18/3229/2020/en/, p. 6; Section 61a(1-4)
 
 50 UN Committee on Economic, Social and Cultural Rights (CESCR), Concluding Observations: Denmark, 12 November 2019, UN Doc. E/C.12/DNK/CO/6 (2019), para 52(a) and (d).
 
+
+<!-- PAGE 22 -->
+
+
 ## METHODOLOGY
 
 Amnesty International Secretariat collaborated with Amnesty Denmark on the research since 2022. To determine whether the UDK case study was a suitable case for research, Amnesty International Secretariat held consultative meetings with Amnesty Denmark and other local partners in Denmark. The research has been led by the Amnesty International Secretariat's Technology and Human Rights team. Amnesty International worked jointly with Amnesty Denmark throughout the course of the project.
@@ -566,6 +651,10 @@ As part of its qualitative research, Amnesty International conducted interviews 
 The technical research methods employed included a combination of interviews with officials and the filing of FOIs to gather data and documentation on the technical infrastructure and algorithms deployed by UDK (details provided in Table 1). This included scrutiny of any documentation provided, and discussion of statistical approaches taken by UDK data scientists. Through FOIs, Amnesty International also attempted to collect statistics and empirical data to test whether the algorithms in question are discriminatory (known as disparate impact testing).
 
 During the first stage of the research from May 2022 to April 2023, Amnesty International conducted desk research to investigate whether UDK's practices raised human rights concerns. At this stage, Amnesty International reviewed relevant secondary literature including reports, articles and documents on the UDK benefits system and its use of fraud-control algorithms to detect social benefits fraud. These sources were published by various organizations including, among others, the Danish Institute for Human Rights, Lighthouse Reports and Algorithm Watch. Amnesty International also reviewed documentation on UDK's fraud-control algorithms shared by journalists from Lighthouse Reports. Amnesty International then held a total of nine consultative meetings with nine relevant stakeholders including academics, journalists and
+
+
+<!-- PAGE 23 -->
+
 
 leaders of civil society organizations working with marginalized groups in Denmark to understand the human rights impacts of UDK's system. These meetings took place between June and August 2022.
 
@@ -594,6 +683,10 @@ Amnesty International interviewed seven community leaders from civil society gro
 
 Amnesty International also partnered with the LOKK, an umbrella non-profit organization and trade association that represents 46 women's shelters around Denmark, to design a survey to study the impact of UDK's system. LOKK conducted the survey with caseworkers in 45 of their shelters in October 2023 on
 
+
+<!-- PAGE 24 -->
+
+
 behalf of Amnesty International and received responses from 25 caseworkers in 25 shelters. Among other schemes, fraud-control algorithms are used in social security schemes that affect women, such as maternity benefits. Therefore, the survey sought to understand whether women living in crisis shelters because of intimate partner violence:
 
 - a. Have access to the technology required to apply for benefits from UDK (including maternity, child and youth benefits or other benefits). This includes access to the internet, computers, MitID (a digital identity system that residents in Denmark use to identify themselves to access public and private sector services) and NemID (a key card used to access public and private sector digital services, which was discontinued in October 2023); 51
@@ -621,6 +714,10 @@ TABLE 1: FOI REQUESTS SENT BY AMNESTY INTERNATIONAL
 
 51 NemID, 'NemID is closed from 31 October 2023', https://lifeindenmark.borger.dk/apps-and-digital-services/nemid (accessed on 31 July 2024).
 
+
+<!-- PAGE 25 -->
+
+
 On 7 September 2023, Amnesty International obtained from Copenhagen Municipality a template of the letters the municipality sends to people who have been identified for fraud investigations as a result of Denmark's use of fraud-control algorithms, and a copy of a presentation from UDK during an in-person interview with the UDK project team at their offices on 11 January 2024.
 
 To understand the role that private sector entities play in UDK's system, we conducted company searches on private sector companies engaged by UDK to distribute benefits and to design its fraud-control algorithms. In particular, we contacted the Danish Business Authority and the Danish Financial Supervisory Authority to obtain information on ATP, the company that delivers UDK's social benefit distribution remit and oversees the development of its fraud-control algorithms. We also conducted company searches through the Danish Business Authority's website on NNIT, which has been sub-contracted to develop some of UDK/ATP's fraudcontrol algorithms. Chapter 10 analyses the governance structure of ATP and the role of NNIT.
@@ -641,7 +738,15 @@ Furthermore, Amnesty International encountered challenges in identifying affecte
 
 52 In January 2024, Amnesty International requested a collaborative audit to UDK data scientists which was rejected on these grounds in an email dated 2 Feb 2024. Amnesty International subsequently sent an FOI on 25 Mar 2024 requesting data and documentation on the fraud-control models; access to the former was denied and redacted information was provided on the latter.
 
+
+<!-- PAGE 26 -->
+
+
 Despite these challenges and the fear of retribution that many affected people and communities are living with, this research was only possible because of the participation of a huge number of partners and collaborators willing to speak up about UDK's systems. Amnesty International extends its deepest gratitude to everyone who participated in this research, in particular to those willing to share their stories, and to the Danish Institute for Human Rights, Dansk Handicap Foundation, SoS Racisme, Mino Danmark, LOKK, Lighthouse Reports, Refugees Welcome Denmark and the Centre for Muslimers Rettigheder i Danmark, among others.
+
+
+<!-- PAGE 27 -->
+
 
 ## OVERVIEW OF UDBETALING DANMARK'S FRAUD-CONTROL PRACTICES
 
@@ -664,6 +769,10 @@ While some social security schemes in Denmark are means-tested, in that benefici
 of the 4.8 million adult population, https://www.dst.dk/en/Statistik/emner/borgere/befolkning/befolkningstal
 
 54 Information provided by Aarhus Municipality in response to an Amnesty International FOI request dated 12 April 2024.
+
+
+<!-- PAGE 28 -->
+
 
 detection models do not provide a simple database check of beneficiaries against eligibility criteria. Rather, they aim to predict how likely current social security beneficiaries commit fraud or error in their application.
 
@@ -698,6 +807,10 @@ Table 3 below summarizes the kinds of data collected and merged by UDK/ATP from 
 
 60 Interview with UDK officials on 23 November 2023.
 
+
+<!-- PAGE 29 -->
+
+
 ## TABLE 3: GOVERNMENT DATABASES THAT ARE USED BY THE JOINT DATA UNIT FOR REGISTER MERGERS
 
 | CENTRAL CIVIL REGISTRATION SYSTEM (CPR)           | Database that contains information on residence and residence changes, citizenship, place of birth, family relationships and circumstances, including marital status and information about household members   |
@@ -724,6 +837,10 @@ Municipalities and UDK/ATP are also mandated under law to continually exchange i
 
 65 FOI responses from Copenhagen Municipality Control Unit dated 8 April 2024, and Aarhus Municipality Control Unit dated 12 April 2024.
 
+
+<!-- PAGE 30 -->
+
+
 as medical transcripts from health care professionals, and financial information from private actors such as employers and financial institutions, as specified in Section 11a, of the Legal Security Act. 66
 
 After creating an ' undringslisten ' or 'wonderlist' of fraud cases for investigation based on its fraud-control algorithms, 67 UDK/ATP's fraud control unit (the Joint Data Unit) shares the list with municipality fraud control units, where relevant, in order for municipalities to conduct further fraud investigations on the listed individuals. 68 Some municipalities can also access the list via the Joint Data Unit database. 69 To enable municipalities to conduct further fraud investigations, UDK/ATP shares the 'wonderlist' or the predictions made by its algorithms (but not the internal workings of the models) with municipalities. Municipalities use this information to conduct further investigations of benefits applicants and recipients that UDK claims are at risk of committing benefit fraud. 70
@@ -733,6 +850,10 @@ UDK uses a cloud-based infrastructure known as SPARK 71 to process the data and 
 FIGURE 1: A GRAPHICAL REPRESENTATION OF UDK CLOUD, DATABASE AND ALGORITHMIC INFRASTRUCTURE
 
 <!-- image -->
+
+
+<!-- PAGE 31 -->
+
 
 ## FRAUD-CONTROL ALGORITHMS
 
@@ -753,6 +874,10 @@ TABLE 4: DETAILS ON KNOWN UDK FRAUD-CONTROL ALGORITHMS
 73 'Retrospective' in this context, as outlined in section 5.1, highlights how the fraud control algorithms are introduced at control step 3, after an individual has received social benefits.
 
 74 Naive Bayes is a ML classifier, for more information please access https://towardsdatascience.com/naive-bayes-classifier-81d512f50a7c
+
+
+<!-- PAGE 32 -->
+
 
 | 'Unusual sickness absence'   | Retroactive control of sickness allowance                                                          | Unsupervised ML - DBSCAN 75 The model uses a clustering approach to identify unusual or suspicious patterns of sick leave for beneficiaries claiming sick leave benefits.                                                                                      | ∞ Inputs contain too much redaction to be included.                                                                                                                                                                                                                              |
 |------------------------------|----------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -777,6 +902,10 @@ This point was emphasized in 2019 by Privacy International, which noted that, al
 
 81 Privacy International, 'Stage 3 - The policing of social benefits: punishing poverty' (previously cited).
 
+
+<!-- PAGE 33 -->
+
+
 scrutiny of situations that may be labelled as fraud because they may not involve an intentional act of fraud on the part of a beneficiary but may be a result of, for example, automated systems incorrectly processing case files or situations where a person is unable to produce a document. 82
 
 In response to Amnesty International's findings that are contained in this section, UDK stated that it is not making automated decisions to the detriment of the citizens based on its use of algorithmic models. UDK states this would be against the law and that 'any action [by an algorithm] is contingent on a caseworker reviewing and processing the individual case in accordance with legislation, including the Public Administration Act.' 83
@@ -786,6 +915,10 @@ As noted, and described in detail in this chapter, Amnesty International has cle
 82 Privacy International, 'Stage 3 - The policing of social benefits: punishing poverty' (previously cited).
 
 83 Right of Reply response from UDK 302024
+
+
+<!-- PAGE 34 -->
+
 
 ## DENMARK'S HUMAN RIGHTS OBLIGATIONS AND THE RESPONSIBILITY OF CORPORATE ACTORS
 
@@ -810,6 +943,10 @@ The right to data protection is guaranteed by Articles 8(1) and (2) of the Chart
 Convention for the Protection of Individuals with regard to Automatic Processing of Personal Data, https://rm.coe.int/1680078b37
 
 88 General Data Protection Regulation (EU) 2016/679.
+
+
+<!-- PAGE 35 -->
+
 
 Denmark's Data Protection Act largely mirrors the GDPR. The GDPR defines the principles that govern the collection, processing and storage of personal data and applies to the processing of data held by public and private entities. Under Article 5 of the regulation, it requires, among other things, that data be:
 
@@ -852,6 +989,10 @@ States' obligations to respect, protect and promote the rights to equality and n
 
 98 CJEU, Case C-377/98, Netherlands v. European Parliament and Council [2001] ECR I-7079, https://eur-lex.europa.eu/legalcontent/EN/TXT/PDF/?uri=CELEX:61998CJ0377 paras 70-77.
 
+
+<!-- PAGE 36 -->
+
+
 orientation'. 99 Denmark has obligations to respect, protect and promote the right to equality and nondiscrimination. UDK/ATPs use of fraud-control algorithms affects realization of these rights. (See Chapter 8.)
 
 The UN Special Rapporteur on racism has noted that AI systems that classify, differentiate, rank and categorize are 'systems of discrimination' because they 'reproduce bias embedded in large-scale data sets capable of mimicking and reproducing implicit biases of humans, even in the absence of explicit algorithmic rules that stereotype'. 100 The Special Rapporteur stated that 'digital technologies can be combined intentionally and unintentionally to produce racially discriminatory structures that holistically or systematically undermine enjoyment of human rights for certain groups, on account of their race, ethnicity or national origin, in combination with other characteristics [and] digital technologies [are] capable of creating and sustaining racial and ethnic exclusion in systemic or structural terms'. 101 The Special Rapporteur called on states to end 'not only explicit racism and intolerance in the use and design of emerging digital technologies, but also, and just as seriously, indirect and structural forms of racial discrimination that result from the design and use of such technologies'. 102 The Special Rapporteur moreover called for an equality-based approach to human rights governance of emerging digital technologies by moving beyond 'colour-blind' or 'race neutral' strategies because 'a colour-blind analysis of legal, social, economic and political conditions commits to an even-handedness that entails avoiding explicit racial or ethnic analysis in favour of treating all individuals and groups the same, even if these individuals and groups are differently situated, including because of historical structures'. 103
@@ -879,6 +1020,10 @@ Denmark has obligations to guarantee the right to equality and non-discriminatio
 106 Amnesty International, Submission to the UN CERD-CMW Joint General Comment/Recommendation on 'Obligations of State Parties on Addressing and Eradicating Xenophobia and its Impact on the Rights of Migrants, their Families and Other Non-Citizens Affected by Racial Discrimination (Index IOR 40/7898/2024), 4 April 2024, https://www.amnesty.org/en/documents/ior40/7898/2024/en/, p. 3. 107
 
 CESCR, General Comment 19, 4 February 2008, UN Doc. E/C.12/GC/19, paras 36 &amp; 77.
+
+
+<!-- PAGE 37 -->
+
 
 Rights (ICESCR). The Committee has also stated that: 'Non-nationals should be able to access noncontributory schemes for income support, affordable access to health care and family support' and that any 'restrictions, including a qualification period, must be proportionate and reasonable'. 108
 
@@ -918,6 +1063,10 @@ Denmark has an obligation to respect and protect the right to social security of
 
 115 CESCR, General Comment 19 (previously cited), paras 1 and 3.
 
+
+<!-- PAGE 38 -->
+
+
 - d) accessible - that the social security system should cover all persons especially those who are most disadvantaged and marginalized . 116
 
 Convention 102 of the International Labour Organization also provides for minimum standards for social security.
@@ -945,6 +1094,10 @@ Further, Article 16 of CRC expressly protects children's right to privacy. Recit
 116 CESCR, General Comment 19 (previously cited), paras 11, 22, 25 &amp; 23.
 
 117 GDPR, Recital 38, https://gdpr-info.eu/recitals/no-38/
+
+
+<!-- PAGE 39 -->
+
 
 ## TRANSPARENCY, ACCOUNTABILITY AND THE RIGHT TO REMEDY
 
@@ -977,6 +1130,10 @@ At the very minimum, transparency requirements are binding and applicable to the
 https://knowledgehub.transparency.org/helpdesk/algorithmic-transparency-and-accountability
 
 120 UN Special Rapporteur on contemporary forms of racism, racial discrimination, xenophobia and related intolerance, Racial Discrimination and Emerging Digital Technologies: A Human Rights Analysis (previously cited), para. 44.
+
+
+<!-- PAGE 40 -->
+
 
 the instructions of use; (f) the measures to be taken in case of the materialization of these risks, including their arrangements for internal governance and complaint mechanisms.'
 
@@ -1014,6 +1171,10 @@ The Committee on Economic, Social and Cultural Rights has clarified that states 
 
 129 UN Guiding Principles on Business and Human Rights, Principle 3, pp. 5-6.
 
+
+<!-- PAGE 41 -->
+
+
 business entities'. 130 States, including Denmark, must 'adopt legislative, administrative, educational and other appropriate measures, to ensure effective protection against Covenant rights violations linked to business activities, and that they provide victims of such corporate abuses with access to effective remedies'. 131 The obligation also includes requiring that business entities exercise human rights due diligence in order to identify, prevent and mitigate the risks of violations of Covenant rights as a result of the decisions and operations of business entities. Imposition of due diligence requirements to prevent abuses of Covenant rights should be extended to 'a business entity's supply chain and by subcontractors, suppliers, franchisees, or other business partners'. 132
 
 The UN Human Rights Committee and the CERD Committee also note the obligations of states in guarding against discrimination not only by public sector actors but also by private actors. The Human Rights Committee notes that states are required to ensure effective remedies for racial discrimination attributable to private actors, including corporations, by ensuring that they 'take appropriate measures or exercise due diligence to prevent, punish, investigate or redress the harm caused by such acts by private persons or entities'. 133 The CERD Committee has clarified that states must enact special measures to achieve and protect racial equality not only throughout the public but also private spheres. 134
@@ -1043,6 +1204,10 @@ The OECD has provided practical guidance for conducting due diligence in its Due
 
 134 CERD Committee, General Recommendation 32 (previously cited).
 
+
+<!-- PAGE 42 -->
+
+
 ## 'DUVET LIFTING' MONITORING AND SURVEILLANCE OF BENEFITS APPLICANTS, RECIPIENTS AND THEIR AFFILIATES
 
 This chapter details both the digital surveillance methods and the 'traditional' or 'analogue' surveillance approaches deployed for the purposes of fraud control by Danish authorities. It details how digital methods amplify 'traditional' methods to allow for surveillance on a scale not previously possible.
@@ -1056,6 +1221,10 @@ This section provides an overview and analysis of the digital surveillance of be
 Amnesty International has found that the Danish government has implemented privacy-intrusive legislation that allows for the collection of data from residents in receipt of benefits and members of their households without their consent for the purposes of surveilling the population to control for fraud.
 
 The collection and merging of large amounts of personal data contained in various government databases as described in Table 3 in Chapter 5.1 - has effectively forced social benefits recipients to give up their right to privacy and data protection to exercise their right to social security and other social rights. The interoperable databases are used to build a 360-degree profile of welfare beneficiaries, in practice building a
+
+
+<!-- PAGE 43 -->
+
 
 datafied picture of their entire lives including where they live, whom they live with, where they work, when and where they travel and their health records.
 
@@ -1085,6 +1254,10 @@ https://www.ohchr.org/sites/default/files/Documents/Issues/Privacy/DraftLegalIns
 
 139 FOI response from UDK/ATP dated 26 April 2024
 
+
+<!-- PAGE 44 -->
+
+
 TABLE 5: STATISTICS FOR DATA-DRIVEN CONTROLS USED BY UDK IN 2023
 
 |                                                                                | RELEVANT MODEL          |   REQUESTED CASES |   ESTABLISHED CONTROL CASES |   CASES WITH REVENUE |
@@ -1110,6 +1283,10 @@ In terms of the scope of the systems, in an interview the UDK/ATP control team s
 '[In general], we will manage between 5,000 to 6,000 cases per year. And around 1,800 are from these cases that I'm getting. And that's because, you know, from a control point of view, I would actually like more of those cases [from the algorithmic models]. But, you know, in Danish law, you have to make sure that you take all the cases that others [for example, reports from neighbours and public authorities] are sending in.' 140
 
 140 Interview with UDK, officials 11 January 2024.
+
+
+<!-- PAGE 45 -->
+
 
 These figures raise serious concerns around the necessity and proportionality of data processing, given UDK is processing the personal data of millions of social benefits recipients, yet are both only able to inspect a few thousand cases each year for fraud, of which, as the data in Table 5 indicates, a substantial proportion are false negatives and are therefore incorrectly investigated.
 
@@ -1140,6 +1317,10 @@ These practices reveal highly invasive and disproportionate methods to detect fr
 141 Interview with an official at Copenhagen Municipality's control unit, 4 September 2023.
 
 142 FOI Response from Copenhagen Municipality's Fraud Control Unit, 8 April 2024.
+
+
+<!-- PAGE 46 -->
+
 
 ## SOCIAL MEDIA MONITORING AND REPORTED USE OF GEOLOCATION DATA
 
@@ -1172,6 +1353,10 @@ A focus group participant at Dansk Handicap Foundation and an official at SoS Ra
 147 Interview with an official from Aalborg Municipality's Fraud Control Unit 14 September 2023.
 
 148 Focus group participant Gitte Nielsen the Chairman of the Social- and Labor market policy committee at Dansk Handicap Foundation 10 January 2024; interview with an official at SoS Racisime 15 January 2024.
+
+
+<!-- PAGE 47 -->
+
 
 hesitant and afraid of posting photographs of themselves and those affiliated with them or their activities on social media platforms because of how municipalities used these platforms to monitor their behaviour and activities. 149
 
@@ -1209,6 +1394,10 @@ https://politiken.dk/viden/art9846498/Skat-holder-%C3%B8je-med-hvor-tusinder-af-
 
 154 CJEU, Judgment of the Court (Grand Chamber) of 2 March 2021 (request for a preliminary ruling from the Riigikohus - Estonia) Criminal proceedings against H.K. (Case C-746/18), para 35.
 
+
+<!-- PAGE 48 -->
+
+
 orientation, the centralization or interoperability of databases for fraud investigations without residents' consent, and the use of social media are highly invasive and disproportionate methods to detect fraud, as well as being of questionable utility. The Danish authorities should seek less invasive means of detecting fraud.
 
 ## TRADITIONAL OR ANALOGUE FORMS OF MONITORING AND SURVEILLANCE: INTERFERENCE WITH THE RIGHTS TO PRIVACY, HUMAN DIGNITY, SOCIAL SECURITY AND HEALTH
@@ -1232,6 +1421,10 @@ A participant explained how people claiming these benefits are subjected to intr
 156 Focus group participant 'Albert' not his real name at a focus group held at the Dansk Handicap Foundation 10 January 2024; Interview with Gitte Nielson, the Chairman of the Social- and Labor market policy committee at Dansk Handicap Foundation 10 January 2024; Section 6 of the "Executive Order of the Act on Compensation for Disabled Persons in Business.
 
 157 Interview with Gitte Nielson, the Chairman of the Social- and Labor Market Policy Committee at Dansk Handicap Foundation 10 January 2024.
+
+
+<!-- PAGE 49 -->
+
 
 Social workers can use medical records alone to determine people's ability to work and thus do not need to employ these invasive measures. This intrusive line of questioning not only violates the claimant's right to privacy but also their right to human dignity.
 
@@ -1262,6 +1455,10 @@ A municipality social worker explained how the process of regular reassessment w
 'You record every minute, minutes even for second for second. 'What kind of help they are doing? Did they sneeze your nose? What are they doing? Oh, there was half an hour where they didn't help you. You were just sitting. That is not good. We can reduce one half an hour now. Stig, you are not having any help right now. So, you don't need 24 hours.' ( Focus Group participant Gitte Nielson of Dansk Handicap Foundation 10 January 2024)
 
 161 Focus group participant Gitte Nielson of Dansk Handicap Foundation, 10 January 2024.
+
+
+<!-- PAGE 50 -->
+
 
 have to write again: How much was it?… We call them for an interview, and we conduct it, that is, by telephone... We call it a follow-up, but in reality, it is control: 'What are you still going to do... [how] often?... Are you still buying this number of shoes for your child? Does your child still have the challenges they had last summer?' There is absolutely no trust in the system between the system and the citizens, there is a long way to go.' 162
 
@@ -1297,6 +1494,10 @@ UDK/ATP and municipalities receive fraud control cases or reports from other pub
 
 167 Interview with Aalborg Municipality control unit, 14 September 2023; interview with UDK officials, 23 November 2023.
 
+
+<!-- PAGE 51 -->
+
+
 anyone on the grounds that they suspect them of committing benefit fraud because of their living arrangements, residency status and other circumstances. 168
 
 A participant in the Dansk Handicap Foundation focus group stated that it is common knowledge that municipalities conduct fraud investigations of people receiving child and pension benefits to determine whether they are cohabiting. The focus group participant stated that residents report each other to municipalities and that the subsequent investigations by municipalities were highly invasive:
@@ -1308,6 +1509,10 @@ Pervasive surveillance by fellow residents, municipalities and other public auth
 168 Interview with UDK Officials 23 November 2023.
 
 169 Focus group participant Gitte Nielsen of Dansk Handicap Foundation, 10 January 2024.
+
+
+<!-- PAGE 52 -->
+
 
 ## STRUCTURAL DISCRIMINATION AND THE HEIGHTENED RISK OF ALGORITHMIC DISCRIMINATION
 
@@ -1334,6 +1539,10 @@ https://www.ted.com/talks/luiza\_lodder\_understanding\_structural\_racism
 173 OHCHR, 'Structural discrimination: UN expert body to discuss 'the new face of racial discrimination'', 2010,
 
 https://www.ohchr.org/en/press-releases/2010/04/structural-discrimination-un-expert-body-discuss-new-face-racial
+
+
+<!-- PAGE 53 -->
+
 
 For example, section 2(1)(7) of the Executive Order of the Child and Youth Benefit Act 174 and section 5(a) of the Executive Order of the Act on Child Allowance and Advance Payment of Child Support 175 impose lengthy residency requirements for individuals seeking to claim child benefits and allowances. Both provisions state that, in order for a person to claim full child benefits, at least one of the caregivers of the child must have been resident or employed in Denmark for at least six out of the last 10 years.
 
@@ -1371,6 +1580,10 @@ Amnesty International wrote to the Ministry of Employment for a response to alle
 
 183 International Convention on Economic, Social and Cultural Rights 1966. Accessed on 11.10.2024 at: [International Covenant on Economic, Social and Cultural Rights | OHCHR].
 
+
+<!-- PAGE 54 -->
+
+
 regarding the prohibition of discrimination.' 184 They further stated that child and youth benefits and child allowances are supplementary benefits rather than basic welfare benefits. Individuals covered by the accrual rules are entitled to basic welfare benefits and other benefits, including needs-based single benefits under the Act on Active Social Policy, provided that the conditions for these are met.
 
 Regardless of the entitlement of other basic welfare benefits, Amnesty International highlights the findings of the European Committee on Social Rights' 2023 report that finds excessive residency requirements to be disproportionate, particularly in the case of child benefits which are non-contributory. Authorities in Denmark should review these laws and clearly assess the discriminatory impacts arising from the lengthy residency requirements.
@@ -1395,6 +1608,10 @@ For example, when an input such as postcode is included within an algorithm, it 
 
 185 Virginia Eubanks, Automating Inequality (previously cited).
 
+
+<!-- PAGE 55 -->
+
+
 Amnesty International's 2021 report Xenophobic Machines highlighted the risk of discrimination by proxy. 1 An algorithm introduced in the Netherlands for childcare benefits fraud detection included an input of whether the citizen had Dutch nationality, which acted as a proxy for race, ethnicity and social origin. The algorithm systematically assigned higher risk scores to those without Dutch nationality, meaning the system was discriminating on this basis. 1
 
 Amnesty International has found in its research on Denmark that categorization based on 'othering' or difference risks indirectly and directly discriminating against low-income groups, racialized groups, migrants and people who have been granted refugee status in Denmark, ethnic minorities, people with disabilities, and older people. This has negative outcomes for these groups both because their rights to equal treatment and non-discrimination are violated and because there are also risks that they are denied their right to social security.
@@ -1417,6 +1634,10 @@ https://www.ohchr.org/sites/default/files/Documents/Issues/Poverty/Amicusfinalve
 
 189 UN Special Rapporteur on racism, Racial Discrimination and Emerging Digital Technologies (previously cited), para. 48.
 
+
+<!-- PAGE 56 -->
+
+
 arrangements. As a result, these algorithms risk disproportionately targeting low-income groups and groups that have differing family and housing composition, such as people with disabilities, racialized communities, and older people, compared to 'traditional' or 'mainstream' Danish families.
 
 One of the main principles behind UDK/ATP's fraud control models is to identify unusual or atypical living patterns or arrangements, relationship patterns and residency patterns as an indicator of fraud. The 'Really Single' algorithm, which is used to control supplementary pension and child allowance payments made to single people, employs a supervised anomaly detection ML approach which is, by design, an algorithmic model to flag social benefits recipients who are statistical 'outliers'. The core idea is to repeatedly split the data based on a number of inputs (detailed in Chapter 5.2) and to subsequently identify claimants who look substantially different from most other beneficiaries (across the select data points included within the model) based on variables such as the size of and number of people living in a single home, and evidence of cohabitation.
@@ -1430,6 +1651,10 @@ The consequences of incorrectly labelling an application as fraudulent or errone
 190 FOI response from UDK/ATP, 26 April 2024.
 
 191 Documentation provided by UDK officials in response to FOI request by Amnesty International.
+
+
+<!-- PAGE 57 -->
+
 
 FIGURE 2: SHAP VALUES DETAILING THE IMPORTANCE OF INPUTS TO THE 'REALLY SINGLE' MODEL
 
@@ -1456,6 +1681,10 @@ During an in-person interview with UDK/ATP officials in January 2024, officials 
 196 Interview with UDK officials, 11 January 2024.
 
 197 Interview with UDK officials, 11 January 2024.
+
+
+<!-- PAGE 58 -->
+
 
 cases on child, pensions and State Education Fund (or SU grants) benefits fraud from UDK/ATP's 'wonderlist' and cases it receives from public authorities and residents. 198
 
@@ -1491,6 +1720,10 @@ minoritetsældr.' 2022, https://danskgerontologi.dk/wp-content/uploads/2022/06/2
 
 203 Focus group participant 'Charles' (not his real name), at Dansk Handicap Foundation, 10 January 2024.
 
+
+<!-- PAGE 59 -->
+
+
 identified for fraud investigation prior to the setting up of UDK/ATP, which highlighted the complexities of defining a family or household. He stated:
 
 'I had a lot of discussions with my staff about this issue. [For example], we had a couple and they were divorced, he lived on the 4th floor to the right and she lived on the ground floor to the left... They had three children [who spent] time where they wanted to, up and down. They ate together twice a week, and shared an old car - in order to take children to their various activities they needed the car. [This arrangement can be regarded as if these two parents] have a common household but they don't. They have their individual lives and just made a very good arrangement… we cannot [impose] our own morals or our own sense of what a family is... we have much more varied types of families and types of arrangements and people divorcing.' 204
@@ -1516,6 +1749,10 @@ In addition to identifying unusual patterns in household composition, our resear
 207 Amnesty International, Europe: A Human Rights Guide for Researching Racial and Religious Discrimination in Counter-Terrorism (Index: EUR 01/3606/2021), 2019, https://www.amnesty.org/en/documents/eur01/3606/2021/en/ p. 33.
 
 208 ATP, 'Udbetaling Danmark - Internationally', https://www.atp.dk/en/our-tasks/processing-welfare-benefits/udbetaling-danmarkinternationally (accessed 10/10/2024).
+
+
+<!-- PAGE 60 -->
+
 
 uses the 'Model Abroad' algorithm, which acts as a filter to prioritize the investigation of cases where they believe social security beneficiaries have 'strong ties' to countries outside of the EEA.
 
@@ -1545,6 +1782,10 @@ First, the use of citizenship and other foreign affiliation-related criteria exp
 
 212 Interview with UDK Officials 23 November 2023.
 
+
+<!-- PAGE 61 -->
+
+
 status. This violates the right to equality and non-discrimination of racialized groups under Article 2(1)(a) of CERD and various other international human rights instruments (see Chapter 6). Second, the model and metric produced are created in-house at UDK/ATP and the indicators that are seen as markers of foreign ties do not accurately reflect the reality of individuals. In practice, people can have complex relationships with a variety of countries, and indicators such as entries to and exits from a country, or bank accounts opened in other jurisdictions, are not definitive evidence of someone living abroad. Finally, using foreign affiliationrelated inputs are not the least intrusive means available to check whether someone is residing in Denmark; other simpler indicators such as tax residency are easily available.
 
 The use of foreign affiliation within UDK/ATP's algorithmic models as a filter to triage fraud investigations, and therefore as a de facto indicator of fraud, also risks interfering with people's right to social security, specifically migrants and members of racialized communities within Denmark, who could be denied social security on the basis of these markers.
@@ -1567,6 +1808,10 @@ Moreover, by directly including salary as an input, UDK runs the risk of discrim
 
 213 Right of Reply Response from UDK 30 October 2024.
 
+
+<!-- PAGE 62 -->
+
+
 Where models rely on unsupervised ML approaches, such as those within the 'Really Single' model, we cannot determine the effect that the inclusion of income-related inputs will have without further information. The documentation does not provide exact details on the weighting of income-related inputs and their effect on the risk designations the models make. However, it does contain information that the income input is attempting to identify people reporting lower incomes:
 
 ## 'The income feature is used, among other things, to find citizens who have such a small monthly income that it is unlikely that they can manage with their own income.' 214
@@ -1580,6 +1825,10 @@ The evidence presented in this section from Amnesty International's research sho
 214 Documentation obtained in FOI response from UDK/ATP dated 26 April 2024.
 
 215 'Trust a cornerstone of Danish culture', Accessed on 23 April 2024 at: https://denmark.dk/people-and-culture/trust
+
+
+<!-- PAGE 63 -->
+
 
 ## DIGITAL EXCLUSION AND FORCED INCLUSION OF GROUPS
 
@@ -1598,6 +1847,10 @@ Amnesty International's research has found that automation and digitization of t
 216 UN Special Rapporteur on racism, Racial Discrimination and Emerging Digital Technologies (previously cited), paras 7 and 40. 217 OHCHR, 'OHCHR's overview on the right to social security/social protection',
 
 www.ohchr.org/sites/default/files/documents/issues/socialsecurity/2022-10-07/One-pager-social-protection-Socialsecurity.pdf (accessed on 3 October 2024).
+
+
+<!-- PAGE 64 -->
+
 
 Anyone applying for benefits from UDK is required to do so online on the government portal, www.borger.dk, and benefits applicants and recipients are required to communicate with UDK/ATP and municipalities through 'the digital post' or digital e-boxes. When accessing UDK/ATP's system via the government portal, applicants or benefits recipients are also required to use their personal digital ID, known as MitID, to identify themselves, which requires the use of a smart phone. 218
 
@@ -1635,6 +1888,10 @@ http://archive.northsearegion.eu/files/repository/20141216163625\_PO14101602-iAg
 
 228 Act on Digital Post from public senders, (LBK nr 686 of 15/04/2021), https://www.retsinformation.dk/eli/lta/2021/686, section 5.
 
+
+<!-- PAGE 65 -->
+
+
 confirmed by a focus group participant with disabilities who is also the National Chairman of Dansk Handicap Foundation. 229
 
 A social worker in one of Denmark's municipalities also noted during an interview that people with disabilities face access barriers to their right to social security because of the government's general practice policy on the digitization of social benefits for all groups. 230
@@ -1669,6 +1926,10 @@ The Danish government must, therefore, ensure access for women in crisis centres
 
 235 UN Department of Economic and Social Affairs, Leaving No One Behind: The Imperative of Inclusive Development (previously cited), p.18.
 
+
+<!-- PAGE 66 -->
+
+
 ## FORCED INCLUSION OR UNFAVOURABLE INCLUSION, DATA PRIVACY RISKS
 
 Amnesty International also found that, while persons with disabilities are excluded from using the UDK system as a result of digitization, they are also unfavourably included in the benefits system. Some interview and focus group participants stated that the digitization of UDK's social benefits system and their inability to access the system as a result of their disabilities meant that they were forced to share their personal information with third parties - state assigned personal assistants - to access the system, which creates data privacy risks for them. 236
@@ -1695,6 +1956,10 @@ Focus group participants, Gitte Nielsen, Susanne Osen and Stig Langvad at the Da
 
 241 Daniel J. Solove, 'The new vulnerability: data security and personal information', 2008, in Anupam Chander and others (eds), Securing Privacy in the Internet Age pp. 111-136; Helen Nissenbaum, 'Securing trust online: wisdom or oxymoron?', 2001, Boston University Law Review, Volume 81, Issue 3, https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=2573181
 
+
+<!-- PAGE 67 -->
+
+
 ## LACK OF STATE OVERSIGHT AND TRANSPARENCY, AND RISKS TO REMEDY
 
 The Danish government has delegated public authority in the distribution of benefits to the ATP Group (ATP), a private entity established as a self-governing institution under the ATP Act 1964. 242 ATP is Denmark's largest pension and processing company. 243 ATP's activities are regulated by Danish law which gives it the power to administer pensions and other statutory schemes. In addition to this, ATP also provides 'technical and administrative' assistance to UDK for social protection schemes that fall within UDK's responsibilities. 244 ATP is accountable to the state 245 but also has its own human rights responsibilities as a corporate entity. (See Chapter 6 on the Methodology for a discussion of ATP's corporate responsibilities.)
@@ -1717,6 +1982,10 @@ The UN Committee on Economic, Social and Cultural Rights notes that states have 
 245 ATP, 'Corporate governance in the ATP Group' (previously cited).
 
 246 CESCR, General Comment 24 (previously cited).
+
+
+<!-- PAGE 68 -->
+
 
 Additionally, the Committee notes that states should require 'business entities to exercise human rights due diligence in order to identify, prevent and mitigate the risks of violations of Covenant rights'. The imposition of human rights due diligence requirements extends to private actors involved in a 'business entity's supply chain and by subcontractors, suppliers, franchisees, or other business partners'. 247
 
@@ -1752,6 +2021,10 @@ Interview with UDK officials, 22 November 2023.
 
 253 Responses to FOI requests made to the Ministry of Employment dated 4 December 2023.
 
+
+<!-- PAGE 69 -->
+
+
 The Ministry's supervisory role is primarily aimed at ensuring UDK fulfils its objectives under section 19 of the Udbetaling Danmark Act 254 which are: guaranteeing the efficiency of the administration of the benefits system through digitization and ensuring better fraud control by 'preventing cheating and erroneous social benefits payments'. 255
 
 Amnesty International sought to obtain a response to the allegations made in this report about the lack of adequate and independent oversight by the Ministry of Employment and UDK Board of directors over UDK and ATP's algorithmic practices prior to publication of the report. In their written responses dated 1 November 2024, the Ministry of Employment through the Danish Agency for Labour Market and Recruitment (STAR), the agency that supports the Minister for Employment in the work of policy formulation and implementation, rejected the findings in Amnesty International's report.
@@ -1783,6 +2056,10 @@ Responses to FOI requests made to the Ministry of Employment dated 4 December 20
 259 Responses to FOI requests made to the Danish Data Protection Agency dated 7 November 2023.
 
 260 Interview with an official from the Data Protection Authority, 8 October 2023.
+
+
+<!-- PAGE 70 -->
+
 
 The limited powers of the Danish Data Protection Authority under the GDPR and the Danish Data Protection Act further show that there is a lack of adequate and independent oversight over UDK and ATP data and algorithmic practices. The Danish Data Protection Authority should investigate UDK and ATP's data and algorithmic practices in light of the information revealed in this report.
 
@@ -1816,6 +2093,10 @@ ATP, in its FOI response, stated that its caseworkers follow guidelines and stan
 
 263 Responses to FOI requests made to Aarhus, Aalborg and Copenhagen municipalities dated 12 April 2024.
 
+
+<!-- PAGE 71 -->
+
+
 supplier 'does not carry out data-driven control of Udbetaling Danmark's services' despite them developing UDK/ATP's fraud control models.
 
 ## FAILURE TO PROVIDE INFORMATION ON DATA PROTECTION IMPACT ASSESSMENTS
@@ -1844,6 +2125,10 @@ Although there is an ongoing debate within the academic community regarding how 
 
 267 Interview with UDK/ATP officials, 11 January 2024.
 
+
+<!-- PAGE 72 -->
+
+
 drawbacks. The primary concern is that it does not take into account the number of individuals that are wrongly accused of fraud (the false positive rate) as it does not measure this, and second, it neglects other commonly proposed measures of fairness such as demographic parity. In practice, this means UDK is not adequately keeping track of how often its algorithms incorrectly accuse beneficiaries of fraud or error. When Amnesty International requested access to documentation of the evaluations and tests conducted, UDK denied this request on the grounds that it did not keep this information, highlighting the poor internal analytical practice at UDK and a lack of transparency.
 
 As discussed above, the UN Guiding Principles make clear that companies should communicate the human rights impacts of their practices publicly, including how they are addressing these impacts, 268 while 'providing a measure of transparency and accountability to individuals or groups who may be impacted and to other relevant stakeholders'. 269 Similarly, the OECD Due Diligence Guidance also provides guidance on how companies can communicate how their impacts are being addressed. However, UDK has refused to release important information which would allow its algorithms to be scrutinized, thus failing to carry out human rights due diligence in line with international standards. Furthermore, UDK's current approach to fairness testing of deploying one metric is an inadequate measure for assessing and identifying the impacts of its algorithmic systems.
@@ -1869,6 +2154,10 @@ Given the central role that ATP plays in UDK's use of fraud control models, ATP 
 270 Interview with UDK/ATP officials, 11 January 2024.
 
 271 UN Guiding Principles on Business and Human Rights, Principle 15, pp. 15
+
+
+<!-- PAGE 73 -->
+
 
 rights due diligence in line with international human rights standards in order to identify, mitigate and prevent the harmful impacts of the UDK/ATP benefits system and is thus failing to respect human rights.
 
@@ -1898,6 +2187,10 @@ On 7 September 2023, Amnesty International obtained a template of the letter tha
 
 273 UN Special Rapporteur on the promotion and protection of the right to freedom of opinion and expression, 29 August 2018, UN Doc. A/73/348, para. 40.
 
+
+<!-- PAGE 74 -->
+
+
 question about incorrect registration of residence, the Control Unit is obliged to carry out an investigation of this, cf. section 10(1) of the CPR Act. It is on this basis that the residence case has been created…
 
 Registry coordination means that your information in a number of public registers has been combined based on certain criteria. The purpose of register coordination is to ensure that public benefits are paid on a correct basis. The Joint Data Unit carries out register coordination for the municipalities and Udbetaling Danmark in connection with their control work…
@@ -1916,6 +2209,10 @@ Second, Amnesty International has found that the Public Administration Act ( for
 
 275 LBK nr 433 of 22/04/2014.
 
+
+<!-- PAGE 75 -->
+
+
 ## DENMARK'S FORTHCOMING OBLIGATIONS UNDER THE EU AI ACT
 
 As discussed in Chapter 6.6, Denmark will be required to comply with the relevant transparency, accountability and remedial requirements of the EU Artificial Intelligence Regulation (AI Act), 276 which came into force on 1 August 2024. The enforcement of most of its provisions commences in August 2026; however, the enforcement of prohibitions mandated under the AI Act commences in February 2025. 277 The AI Act introduces a uniform framework across all EU countries, implementing a tiered risk-based approach whereby AI systems are categorized into one of the following:
@@ -1930,6 +2227,10 @@ The obligations on UDK/ATP will be dependent on the relevant category the algori
 276 Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence and amending Regulations (previously cited).
 
 277 EU AI Act, Article 113, Entry into force and application.
+
+
+<!-- PAGE 76 -->
+
 
 - (i) detrimental or unfavourable treatment of certain natural persons or whole groups of persons in social contexts that are unrelated to the contexts in which the data was originally generated or collected;
 - (ii) detrimental or unfavourable treatment of certain natural persons or groups of persons that is unjustified or disproportionate to their social behaviour or its gravity'.
@@ -1947,6 +2248,10 @@ Amnesty International wrote to UDK and ATP detailing why we believe that their f
 UDK stated in its response to allegations in our report that its algorithmic practices do not constitute social scoring under Article 5 of the EU AI Act, as the controls have a clearly defined purpose, are proportionate, and are aimed at ensuring the correct payment of social benefits and because its fraud controls comply with applicable EU and national legislation. UDK and ATP have not provided Amnesty International with any detailed evidence or assessments that their algorithmic practices are not a social scoring system under Article 5 of the EU AI Act, nor have they provided us with any evidence that their practices are necessary and proportionate. UDK and ATP did not provide an alternative risk category that they assessed their system would fall under, nor did they provide any detail on the obligations the system would meet and how they planned to meet them. Amnesty calls on the European Commission to issue clear guidelines to clarify what systems ought to be defined as social scoring systems.
 
 278 Human Rights Watch, 'EU: Artificial Intelligence Regulation Should Ban Social Scoring: Strong Social Scoring Ban Needed to Protect Rights', October 19, 2023, available at: https://www.hrw.org/news/2023/10/09/eu-artificial-intelligence-regulation-should-ban-social-scoring
+
+
+<!-- PAGE 77 -->
+
 
 While social scoring systems will be subject to a ban, when using AI systems in the context of welfare provision, Denmark, at a minimum, will be required to comply with the obligations on high-risk AI systems of the EU AI Act. UDK/ATP's algorithms not deemed to fall into the 'unacceptable risk' category would therefore still have to comply with high-risk requirements of the AI Act. According to Annex III, relevant highrisk systems are:
 
@@ -1980,9 +2285,17 @@ Providers of high-risk AI systems are also required to conduct data governance, 
 
 279 EU AI Act, Article 11.
 
+
+<!-- PAGE 78 -->
+
+
 the EU AI Act, any high-risk system will have to undergo a suite of pre-deployment tests in the form of conformity assessments, either conducted internally or by a third party, which will ensure greater transparency and will likely include some form of algorithmic auditing.
 
 The provisions on high-risk systems outlined above will not apply until 2 August 2030. Nevertheless, Amnesty International recommends the Danish authorities ensure these are being implemented as soon as possible. With the AI Act only recently coming into force, and given UDK/ATP's current lack of transparency, Denmark must ensure a strong and rights-respecting implementation of the AI Act at the national level and a strong, effective and Charter-based interpretation of prohibited and risky technologies under the AI Act including the provisions of Article 9, 10, 11, 13, 26, 27, 85, 86, 87 of the AI Act to ensure greater transparency in the use of high-risk systems.
+
+
+<!-- PAGE 79 -->
+
 
 ## CONCLUSIONS AND RECOMMENDATIONS
 
@@ -2005,6 +2318,10 @@ In light of the findings detailed in this report, Amnesty International has the 
 - ∞ Establish a clear, unambiguous and legally binding ban on the use of data regarding citizenship, 'foreign affiliation', or nationality or proxies thereof, in risk-scoring for the purposes of fraud control.
 - ∞ Review and amend Udbetaling Danmark/ATP norms, policies, and laws that inform risk-profiling through Udbetaling Danmark/ATP's fraud control algorithms that could perpetuate discrimination based on income, race, ethnicity, religion, migration status, gender, disability, age, and ensure that they comply with relevant international human rights standards.
 
+
+<!-- PAGE 80 -->
+
+
 - ∞ Ensure that Udbetaling Danmark/ATP ends the practice of mass extraction, processing, and exploitation of residents' data for fraud-control purposes and the use of social media.
 - ∞ Ensure that Udbetaling Danmark/ATP is fully transparent and provides meaningful information to affected individuals about the underlying logic, importance and expected consequences of decisions, even if they are not fully automated, regardless of the level of human involvement in the decisionmaking process.
 - ∞ Ensure that Udbetaling Danmark/ATP and municipalities inform benefits applicants and recipients that that they have been identified for fraud investigations after they are flagged up by fraud control algorithms in a clear, comprehensible, and detailed manner.
@@ -2020,6 +2337,10 @@ In light of the findings detailed in this report, Amnesty International has the 
 - ∞ Review and amend section 2(1)(7) of Executive order of the Child and Youth Benefit Act LBK no. 724 of 25/05/2022 and section 5 (a) of the Executive Order of the Act on Child Allowance and Advance Payment of Child Support (LBK no. 63 of 21/01/2019) to remove excessive and lengthy residency requirements that have discriminatory impacts on people granted refugee status in Denmark.
 - ∞ Review and amend the Danish Public Administration Act to include provisions on automated decision-making that guarantee that benefit applicants and claimants have a right to an effective remedy.
 - ∞ Enact legislation to establish an independent public authority with oversight over the UDK/ATP and that monitors UDK/ATP's use of artificial intelligence systems, to strengthen accountability mechanisms and increase human rights protection. This includes, establishing an independent authority that has oversight over Udbetaling Danmark/ATP's activities in compliance with Article 70 of the EU AI Act.
+
+
+<!-- PAGE 81 -->
+
 
 ## TO THE DATA PROTECTION AUTHORITY:
 
@@ -2049,6 +2370,10 @@ In light of the findings detailed in this report, Amnesty International has the 
 - ∞ Ensure that digital technologies are used in line with human rights law and standards, including on privacy, equality, and non-discrimination, as well as data protection standards, and that they are never used in ways that could lead to people being discriminated against or otherwise harmed. States must draw clear red lines on and prohibit the development, production, sale, and use of digital technologies that are incompatible with human rights.
 - ∞ Critically assess whether automation and deployment of AI is the correct and most appropriate approach to reaching public policy or other stated aims, particularly making sure that AI deployment
 
+
+<!-- PAGE 82 -->
+
+
 does not exacerbate or pose a risk of human rights violations and drawing red lines on technologies incompatible with human rights, identify underlying systemic problems that require attention, acknowledge the limits of proposed technological solutions and explore alternative solutions and approaches.
 
 - ∞ Develop and enact binding and enforceable human rights-based AI regulation, by accounting for intersectional harms of technologies. Address extra-territorial impact and reject differential approaches to protecting 'citizens' versus 'non-citizens'.
@@ -2058,6 +2383,10 @@ does not exacerbate or pose a risk of human rights violations and drawing red li
 - ∞ Require in law that technology companies carry out ongoing and proactive human rights due diligence to identify and address human rights risks and impacts related to their global operations, including by legally requiring human rights impact assessment of any public sector use of automated and algorithmic decision-making systems. This impact assessment must be carried out during the system design, development, use, and evaluation, and - where relevant - retirement phases of automated or algorithmic decision-making systems. The impact on all human rights, including social and economic rights, must be assessed and properly addressed in the human rights due diligence process. The process should involve meaningful engagement with relevant stakeholders, including independent human rights experts, individuals from potentially impacted, marginalized and/or disadvantaged communities, oversight bodies, and technical experts.
 - ∞ Establish comprehensive and independent public oversight mechanisms over the use of automated or semi-automated decision-making systems, to strengthen accountability mechanisms and increase human rights protection, in addition to mechanisms for grievance redressal for individual decisions.
 - ∞ Factor in and address the multiple and intersectional forms of discrimination that many groups, including women, people with disabilities, older people, people living in poverty, children and people belonging to racialized and minoritized communities such as refugees and migrants, face when trying to claim their human rights, and the specific barriers they may face when interacting with automated decision making in social protection systems and/or when trying to appeal against a decision made by these systems.
+
+
+<!-- PAGE 83 -->
+
 
 ## AMNESTY INTERNATIONAL IS A GLOBAL MOVEMENT FOR HUMAN RIGHTS. WHEN INJUSTICE HAPPENS TO ONE PERSON, IT MATTERS TO US ALL.
 
@@ -2080,6 +2409,10 @@ www.facebook.com/AmnestyGlobal
 <!-- image -->
 
 @Amnesty
+
+
+<!-- PAGE 84 -->
+
 
 ## CODED INJUSTICE
 

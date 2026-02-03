@@ -1,6 +1,8 @@
-# FemPrompt: Feminist AI Literacy Literature Review
+# Literature Review: AI Literacy & Bias in Social Work
 
-Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit.
+Systematischer Literature Review zu **AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit.
+
+Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 ---
 
@@ -20,73 +22,46 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 ---
 
-## Zielgruppe
+## Korpus
 
-| Zielgruppe | Nutzen |
-|------------|--------|
-| Forscher:innen (Soziale Arbeit + KI) | Strukturierte Literaturuebersicht |
-| Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung |
-| Lehrende (AI Literacy) | Kursmaterial, Konzepte |
+**326 Papers** aus Zotero, zwei parallele Assessment-Tracks:
 
----
-
-## Erfolgskriterien
-
-| Kriterium | Status |
-|-----------|--------|
-| Literature Review (326 Papers kategorisiert) | 🔄 In Arbeit |
-| Paper eingereicht (Forum Wissenschaft, 4. Mai 2026) | ⏸️ Wartet |
-| Benchmark Human vs. Agent | ⏸️ Wartet |
-| Obsidian Vault nutzbar | ⏸️ Wartet |
-
----
-
-## Nicht-Ziele
-
-- ❌ Fertiger Prompting-Leitfaden (nachgelagerte Phase)
-- ❌ Tool fuer Endnutzer:innen
-- ❌ Vollstaendige Automatisierung
-- ❌ Training eigener Modelle
+| Track | Methode | Schema | Status |
+|-------|---------|--------|--------|
+| **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit |
+| **LLM** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
 
 ---
 
 ## Repository-Struktur
 
 ```
-FemPrompt_SozArb/
-├── corpus/                    # Korpus (326 Papers)
+├── corpus/                    # Korpus-Metadaten
 │   ├── zotero_export.json
 │   └── papers_metadata.csv
 │
-├── assessment/
-│   ├── human/                 # Track 1: Human Expert
-│   │   ├── schema.yaml
-│   │   └── results/
-│   │
-│   └── agent/                 # Track 2: Agent Workflow
-│       ├── config.yaml
-│       ├── run_assessment.py
-│       └── results/
+├── assessment/                # Human Assessment
+│   ├── human/                 # Google Sheets Export
+│   └── agent/                 # Agent-Konfiguration
 │
-├── benchmark/                 # Vergleich Human vs. Agent
-│   ├── scripts/
-│   │   ├── merge_assessments.py
-│   │   ├── calculate_agreement.py
-│   │   └── analyze_disagreements.py
+├── assessment-llm/            # LLM Assessment
+│   ├── assess_papers.py       # Claude Haiku Pipeline
+│   ├── prompt_template.md     # 5-Dimensionen Schema
+│   └── output/                # Ergebnisse
+│
+├── benchmark/                 # Human vs. LLM Vergleich
+│   ├── config/categories.yaml # 10-Kategorien Schema
+│   ├── scripts/               # Analyse-Skripte
 │   └── results/
 │
 ├── pipeline/                  # PDF → Markdown → Summary → Vault
 │   ├── scripts/
-│   ├── tools/                # Browser-Tools (markdown_reviewer.html)
-│   ├── pdfs/                 # 234 PDFs
-│   ├── pdf_images/           # JPG-Seiten fuer Sync-Scroll (~4000 Bilder)
-│   ├── markdown/             # 232 konvertierte Markdown-Dateien
-│   ├── markdown_clean/       # Post-processed Markdown
-│   ├── validation_reports/   # Validierungsberichte
-│   └── summaries/
+│   ├── tools/                 # Browser-Tools
+│   ├── pdfs/                  # 234 PDFs
+│   ├── markdown/              # 232 Markdown-Dateien
+│   └── validation_reports/
 │
-├── vault/                     # Obsidian Vault
-│   └── MOCs/
+├── vault/                     # Obsidian Vault (Output)
 │
 └── knowledge/                 # Dokumentation
 ```
@@ -95,55 +70,32 @@ FemPrompt_SozArb/
 
 ## Aktueller Stand
 
-### Pipeline Phase 1: Datenakquise ✅
+### Assessment
+
+| Track | Status | Details |
+|-------|--------|---------|
+| Human | 🔄 In Arbeit | Google Sheets (Susi, Sabine) |
+| LLM | ✅ Fertig | 325 Papers, 100% Erfolgsrate |
+
+### Pipeline
 
 | Schritt | Status |
 |---------|--------|
-| PDF-Download | 234 PDFs |
-| Markdown-Konversion | 232 (99.1%) |
-| Validierung | 98.7 Konfidenz-Score |
-| Review-Tool | Browser-basiert mit Sync-Scroll |
+| PDF-Download | ✅ 234 PDFs |
+| Markdown-Konversion | ✅ 232 (99.1%) |
+| Validierung | ✅ 98.7 Konfidenz-Score |
+| LLM-Summarisierung | ⏳ Naechster Schritt |
+| Vault-Generierung | ⏸️ Wartet |
 
-### Pipeline Phase 2: Assessment 🔄
-
-| Track | Status |
-|-------|--------|
-| Human (Susi, Sabine) | In Arbeit |
-| Agent (Claude Haiku) | Bereit |
-
-### Pipeline Phase 3-4: Benchmark & Synthese ⏸️
+### Benchmark
 
 Wartet auf Abschluss des Human-Assessments.
 
 ---
 
-## Quick Start
+## Assessment-Schemas
 
-### Assessment
-
-```bash
-# Agent Assessment
-python assessment/agent/run_assessment.py \
-  --input corpus/papers_metadata.csv \
-  --output assessment/agent/results/
-
-# Human Assessment: Google Sheets exportieren nach
-# assessment/human/results/
-```
-
-### Benchmark
-
-```bash
-python benchmark/scripts/merge_assessments.py
-python benchmark/scripts/calculate_agreement.py
-python benchmark/scripts/analyze_disagreements.py
-```
-
----
-
-## Assessment-Schema
-
-10 binaere Kategorien:
+### Human Assessment (10 binaere Kategorien)
 
 | Kategorie | Gruppe |
 |-----------|--------|
@@ -160,6 +112,16 @@ python benchmark/scripts/analyze_disagreements.py
 
 **Inklusions-Logik:** `(Technik >= 1) AND (Sozial >= 1) → Include`
 
+### LLM Assessment (5 Dimensionen, 0-3)
+
+| Dimension | Beschreibung |
+|-----------|--------------|
+| AI_Komp | AI/LLM-Kompetenzen |
+| Vulnerable | Vulnerable Gruppen & Digital Equity |
+| Bias | Algorithmische Verzerrungen |
+| Praxis | Praktische Implementation |
+| Prof | Professioneller Kontext (Soziale Arbeit) |
+
 ---
 
 ## Team
@@ -174,19 +136,6 @@ python benchmark/scripts/analyze_disagreements.py
 
 ---
 
-## Dokumentation
-
-Vollstaendige Dokumentation: [`knowledge/`](knowledge/)
-
-| Dokument | Inhalt |
-|----------|--------|
-| [01-project.md](knowledge/01-project.md) | Projektziel, Zielgruppe, Erfolgskriterien |
-| [02-methodology.md](knowledge/02-methodology.md) | PRISMA 2020, Assessment-Schema |
-| [03-status.md](knowledge/03-status.md) | Aktueller Stand |
-| [04-technical.md](knowledge/04-technical.md) | Pipeline-Architektur |
-
----
-
 ## Paper
 
 **Forum Wissenschaft 2/2026**
@@ -196,4 +145,15 @@ Vollstaendige Dokumentation: [`knowledge/`](knowledge/)
 
 ---
 
-*Version: 3.0 (2026-02-03)*
+## Dokumentation
+
+| Dokument | Inhalt |
+|----------|--------|
+| [01-project.md](knowledge/01-project.md) | Projektziel, Zielgruppe |
+| [02-methodology.md](knowledge/02-methodology.md) | PRISMA, Assessment-Schema |
+| [03-status.md](knowledge/03-status.md) | Aktueller Stand |
+| [04-technical.md](knowledge/04-technical.md) | Pipeline-Architektur |
+
+---
+
+*Version: 4.0 (2026-02-03)*

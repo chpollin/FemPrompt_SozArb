@@ -1,10 +1,11 @@
 ---
 source_file: UNESCO_2024_Women4Ethical_AI_Global_cooperation_for.pdf
-conversion_date: 2026-02-03T09:27:38.035041
+conversion_date: 2026-02-03T18:58:38.014545
 converter: docling
 quality_score: 90
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Statement W4EAI
@@ -19,6 +20,10 @@ Today, more than ever, we are sure that AI, with its ubiqui tous impact in all a
 
 SHS/2024/PI/H/1
 
+
+<!-- PAGE 2 -->
+
+
 (at that �me) 193 Member States, and now covering 194 with the return of the US to UNESCO. This recommenda�on marks  the first  global  effort that  aims  to  serve  as  a  compass  of  ethical pr ac�ces to  govern all phases of an AI system development, from research to deployment and procurement,  while  prot ec� ng  human  rights,  human  dignity,  fundamental  freedoms,  and  the environment. Since  2021,  UNESCO  has  been  building  prac�cal  tools  like  the 'Ethical  Impact Assessment'  and  the  'Readiness  Assessment  Methodology  (RAM)'  that  aim  to  support  the advancement  of  Ethical  frameworks  for  i ns�tu�ons  and  industry  players. We  welcome  the deployment of UNESCO's RAM in 50 countries and look forward to the lessons learned that will be unveiled at the Global Forum on the Ethics of Ar�ficial Intelligence in Slovenia on February 5-6 th , 2024.
 
 At a �me when AI's rapid advancements bring serious risks to humanity, the Women for Ethical AI pla�orm ( W4EAI) is suppor�ng the urgen t call for ethical governance of AI technologies, enhancing safety standards, comprehensive legal frameworks, including liability and security on any AI system, including founda�on models, which have been entering our markets without a clear understanding of all of its impact. We applaud na�ons who have been working to bring AI systems into a wellregulated space.
@@ -30,6 +35,10 @@ AI systems are by nature fluid and changeable as they con�nuously learn, there
 We call on governments to deploy all the instruments at hand and be innova�ve to shape the direc�on of the technological revolu�on. This is not only about regula�ons. They are important, as well as the ins�tu�ons in charge to make them count. But it is also about incen�ves, investments, and policies to direct the developments towards the public good. Only with the establishment of strong frameworks can the posi�ve impact of AI can be harnessed and the downsides controlled.
 
 Confron�ng AI challenges is a journey that has only just started, and it requires mul� -stakeholder collabora�on s  and  diversity  in perspec�ves  to  con�nue  to  ensure that  AI  systems  contribute posi�vely to our lives while safeguarding the values that underpin our socie�es . This is the primary goal of the Women for Ethical AI Group.
+
+
+<!-- PAGE 3 -->
+
 
 This is an invita�on to stand with us !
 

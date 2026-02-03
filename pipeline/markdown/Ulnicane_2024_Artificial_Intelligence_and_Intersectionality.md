@@ -1,10 +1,11 @@
 ---
 source_file: Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.pdf
-conversion_date: 2026-02-03T09:27:09.278206
+conversion_date: 2026-02-03T18:58:10.406050
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Artificial Intelligence and Intersectionality by Inga Ulnicane
 
 Behind the Artificial Intelligence (AI) hype about its numerous benefits, uncomfortable questions concerning the problematic social impacts of AI on issues such as justice, fairness and equality are intensifying. While it has been argued that AI has a potential to eliminate human bias, growing evidence suggests quite the opposite - that AI is amplifying and exacerbating gender, racial, ethnic and other stereotypes. Some widely discussed biased AI applications include hiring algorithms that discriminate against female candidates, facial recognition that performs poorly on black and female faces as well as obedient and subservient digital female voice assistants. At the same time, it is very difficult to find examples where AI has helped to detect, reduce or eliminate human bias.

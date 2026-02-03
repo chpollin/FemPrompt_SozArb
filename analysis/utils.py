@@ -1,5 +1,5 @@
 """
-Shared utilities for FemPrompt pipeline scripts
+Shared utilities for Literature Review pipeline scripts
 Provides common functions for path handling, filename sanitization, and metadata loading
 """
 

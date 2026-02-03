@@ -1,10 +1,11 @@
 ---
 source_file: Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.pdf
-conversion_date: 2026-02-03T09:04:04.375929
+conversion_date: 2026-02-03T18:35:12.185036
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;QGLYPH&lt;0&gt;WGLYPH&lt;0&gt;HGLYPH&lt;0&gt;OGLYPH&lt;0&gt;OGLYPH&lt;0&gt;LGLYPH&lt;0&gt;JGLYPH&lt;0&gt;HGLYPH&lt;0&gt;QGLYPH&lt;0&gt;FGLYPH&lt;0&gt;H
@@ -87,6 +88,10 @@ GLYPH&lt;0&gt;GLYPH&lt;20&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;GLYPH&lt;0&gt;GLYPH&lt
 
 GLYPH&lt;0&gt;RGLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
+
+<!-- PAGE 2 -->
+
+
 society to educate their citizens regarding AI.
 
 ## 2.1. Teaching AI concepts
@@ -121,6 +126,10 @@ As mentioned earlier, this article reports a study in designing and evaluating a
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 3 -->
+
+
 learning was the focus of this first course, due to its widespread use and huge impact on today ' s society. However, the course did not cover the details of mathematical formulae and programming, as most individuals who interact with AI in their daily lives do not need to know the underlying mathematical models or how to do the programming (Long &amp; Magerko, 2020). In evaluating our trial of  this course,  we  sought  to compare the gains in learning AI concepts for the participants with and without programming knowledge.
 
 The course targeted university students from all study backgrounds and both genders. We felt it was critical that participants from different backgrounds and of both genders have equal opportunities to gain the skills they need to operate in an AI-integrated society. Various governments have also launched initiatives to promote AI literacy for participants from differing backgrounds. For instance, the UK government has provided AI and data science conversion courses, with scholarships for participants from underrepresented backgrounds. These courses have helped to tackle skills gaps and to expand the range of choices and opportunities for all participants.
@@ -151,6 +160,10 @@ Fig. 1. Distribution of study backgrounds of the course participants.
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 4 -->
+
+
 models served to classify items among multiple categories.
 
 Unsupervised Learning. The participants were introduced to the concept of unsupervised learning and then received guidance on the application of k-means clustering in a series of case studies. These case studies helped the participants to understand the working principles of unsupervised learning.
@@ -175,6 +188,10 @@ Fig. 2. An example to illustrate the operation of the KNN algorithm in the conte
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 5 -->
+
+
 Fig. 3. An example to illustrate the operation of the KNN algorithm in the context of classifying a new object into one of two categories according to the majority of the labels of the k nearest data points in relation to the two features.
 
 <!-- image -->
@@ -196,6 +213,10 @@ To evaluate the course participants ' progress in developing AI literacy, we des
 We  design  the  instruments  in  four  steps.  Firstly,  we  conduct
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 6 -->
+
 
 literature  review to generate initial ideas of the tests and surveys. A systematic review of the related literature provided ideas on the major concepts for the AI Concepts Test as well as the major components of the AI Literacy Survey. We refer to guides on how to incorporate AI into K12  curricula  (Touretzky  et  al.,  2019)  and  competencies  and  design considerations of AI literacy (Long &amp; Magerko, 2020), together with the major contents covered by the textbook (AI4kids, 2020). They served as the major guidelines in developing the two instruments. Concerning the AI empowerment survey, we initiated the constructs of AI empowerment by  referring  to  the  constructs  of  programming  empowerment  (Kong et  al.,  2018),  which  has  been  elaborated  in  the  background  section. Secondly, we composed items for these three instruments and produced initial drafts of the tests and surveys based on the concepts, components and constructs identified. Thirdly, the instruments were refined collaboratively by the research team, which comprised of a professor in the field of computer science, teaching staff of the AI literacy course and a researcher of the project. Fourthly, after conducting the tests and surveys, we analysed the reliability of the instruments and further refine the instruments based on the statistical results.
 
@@ -240,6 +261,10 @@ N = 120; * p &lt; .05; ** p &lt; .01; *** p &lt; .001.
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 7 -->
+
+
 Fig. 4. Comparison of performance on the AI Concepts Test before and after the course, by participants from computer science-related disciplines and participants from other disciplines.
 
 <!-- image -->
@@ -272,6 +297,10 @@ Like the survey results, the results of the participant interviews also indicate
 Regarding  gender  differences  in  the  participants ' level  of  understanding of AI concepts and related self-perceptions, our findings of the AI Concepts Test and the AI Literacy Survey showed that there were no statistically  significant  differences  in  scores  between  genders,  either
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 8 -->
+
 
 Key  points  that  the  participants  made  during  their  interviews  about  their
 
@@ -317,6 +346,10 @@ The  course  focused  on  conceptual  learning  and  was  delivered through a fl
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 9 -->
+
+
 Table 6
 
 Means, standard deviations and t -test scores on the AI Literacy Survey before and after the course for participants from computer science-related disciplines and those from other disciplines.
@@ -359,6 +392,10 @@ Fig. 7. Results of the AI Literacy Survey before and after the course by partici
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 10 -->
+
+
 Fig.  8. Results  of  the  AI  Literacy  Survey  before  and  after  the  course  by  participants  without  prior  programming  knowledge  and  those  with  prior  programming knowledge.
 
 <!-- image -->
@@ -384,6 +421,10 @@ Fig.  9. Performance on the AI Empowerment Survey before and after the course by
 <!-- image -->
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 11 -->
+
 
 ## Table 9
 
@@ -436,6 +477,10 @@ Anderson, L. W., &amp; Bloom, B. S. (2001). A taxonomy for learning, teaching, a
 - Kong, S. C., Chiu, M. M., &amp; Lai, M. (2018). A study of primary school students ' interest, collaboration attitude, and programming empowerment in computational thinking
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 12 -->
+
 
 education. Computers &amp; Education, 127 , 178 -189. https://doi.org/10.1016/j. compedu.2018.08.026.
 

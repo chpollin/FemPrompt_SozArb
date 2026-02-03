@@ -1,10 +1,11 @@
 ---
 source_file: Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und.pdf
-conversion_date: 2026-02-03T09:31:03.013929
+conversion_date: 2026-02-03T19:01:55.914124
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Association for Information Systems
 
 ## AIS Electronic Library (AISeL)
@@ -39,6 +40,10 @@ This material is brought to you by the Wirtschaftsinformatik at AIS Electronic L
 
 Wirtschaftsinformatik
 
+
+<!-- PAGE 2 -->
+
+
 ## Messung von AI Literacy - Empirische Evidenz und Implikationen
 
 ## Research in Progress
@@ -57,6 +62,10 @@ Der Einsatz disruptiver Technologien wie Künstlicher Intelligenz (KI/AI) nimmt 
 
 Menschliches Wissen kann in objektiver und subjektiver Weise gemessen werden (Nguyen et al., 2017). Dabei bezeichnet objektives Wissen das tatsächlich vorhandene Wissen über ein konkretes Artefakt, während subjektives Wissen lediglich auf das empfundene Wissen darüber abzielt (Brucks, 1985). Diese beiden sind zwar miteinander
 
+
+<!-- PAGE 3 -->
+
+
 korreliert (Carlson et al., 2009), allerdings begehen Menschen systematische Fehler bei der Selbsteinschätzung (Unter- und Überschätzung) (Dunning, 2011; Moore &amp; Healy, 2008). Bisher wurde AIL mittels eines subjektiven Messinstruments gemessen (Pinski &amp; Benlian, 2023), welches lediglich für die Wahrnehmung des eigenen Wissens verwendet werden kann. Es erlaubt folglich keine verlässliche Abschätzung der objektiven AIL, die somit explizit gemessen werden muss. Dieses Phänomen ist aus der LiteracyForschung bekannt (Babiarz &amp; Robb, 2014; Kiechle et al., 2015; Nguyen et al., 2017). Zudem folgen wir mit unserer Studie wissenschaftlichen Aufrufen zur Entwicklung einer objektiven AIL-Messskala (Laupichler et al., 2022; Weber, 2023).
 
 Wir  haben  gemeinsam  mit  n  =  10  Experteninterviews  und  zwei  Runden  CardSorting durch n = 12 Forschende der Wirtschaftsinformatik (WI) ein objektives Messinstrument mit n = 25 Fragen entwickelt. Das Messinstrument haben wir bereits in den drei Studien Onlinestichprobe , Zentralbank und Unikurs (n = 134) vorläufig innerhalb und außerhalb von Bildungseinrichtungen evaluiert. Abb. 1 visualisiert den Zusammenhang zwischen subjektiver (Pinski &amp; Benlian, 2023) und objektiver AIL (Weber et al., 2023) für zwei der drei Studien (Studie Onlinestichprobe und Unikurs). In dem Streudiagramm ist kein eindeutiger Zusammenhang zu erkennen, sodass nicht von der subjektiven  auf  die  objektive  AIL  geschlossen  werden  kann.  Dies  unterstreicht  die Notwendigkeit einer Messung von AIL auf objektive Weise.
@@ -66,6 +75,10 @@ Abbildung 1 . Scatterplot (schwarz) subjektiver und objektiver AIL der durchgef�
 <!-- image -->
 
 Mit diesen drei sowie mit drei weiteren Studien wollen wir dabei die Entwicklung des Messinstruments abschließen und AIL in weiteren Kontexten untersuchen. Dabei stellen wir uns folgende Forschungsfragen: Wie kann objektive AIL gemessen werden? Was sind  Antezedenzien,  Moderatoren,  Mediatoren,  Konsequenzen  objektiver  AIL?  Wie hoch ist die AIL in verschiedenen demographischen Gruppen? Schätzen Menschen ihre AIL richtig ein? Wie beeinflusst AIL die Einstellung (Trust in AI) sowie das Verhalten (Delegationsleistung) von Menschen bei der Zusammenarbeit mit KI-Agenten?
+
+
+<!-- PAGE 4 -->
+
 
 ## 2 Theoretische Grundlagen
 
@@ -83,6 +96,10 @@ Dem etablierten Skalenentwicklungsprozess nach MacKenzie et al. (2011) folgend h
 
 Unser Konzept beinhaltet dabei die folgenden vier AIL-Arten, die sich aus der Kombination der im letzten Kapitel beschriebenen Teile und Arten der Mensch-KI-Interaktion ergeben: Socio User AI Literacy , Socio Creator/Evaluator AI Literacy , Technical
 
+
+<!-- PAGE 5 -->
+
+
 User AI Literacy , Technical Creator/Evaluator AI Literacy (siehe Abb. 3). Anschließend haben wir gemeinsam mit n = 10 Experten aus den Bereichen WI, IT und Management n = 56 Fragen entwickelt, die im Anschluss n = 12 Forschende der WI in zwei Runden in die vier AIL-Arten unseres Konzeptes einsortiert haben (Card-Sorting Methode). Wir haben den Fragenbogen zugunsten internationaler Vergleichbarkeit auf Englisch entwickelt und in drei Studien vorläufig evaluiert (siehe Abb. 3), wobei wir stets  den  vollen  Fragebogen  bestehend  aus  Fragen  aller  Quadranten  verwendeten. Schließlich haben wir eine Auswahl von n = 25 Fragen getroffen, die den Fragebogen bilden. 1 Abb. 3 visualisiert zusätzlich die geplanten Studien, die die einzelnen Quadranten  (fokussiert)  untersuchen,  wobei  der  Positionierung  der  Studien  innerhalb  der Quadranten keine Bedeutung beizumessen ist.
 
 Abbildung 3 . Konzeptualisierung von AIL und Übersicht der durchgeführten (dunkelgrau) sowie geplanten (hellgrau) Studien
@@ -94,6 +111,10 @@ Abbildung 3 . Konzeptualisierung von AIL und Übersicht der durchgeführten (dun
 Wir haben unser Messinstrument in drei verschiedenen Kontexten evaluiert. Tabelle 1 liefert dazu einen passenden Überblick. In einem ersten Schritt haben wir eine repräsentative Stichprobe von Teilnehmenden auf einer Onlineumfrageplattform die Fragen zu AIL beantworten lassen. Dazu haben wir n = 88 Teilnehmende in zwei Gruppen eingeteilt,  wobei  wir  die  Stichprobengröße  mittels  GPower  ermittelt haben  um  eine Trennschärfe &gt; 0,8 zu erreichen. In der ersten Gruppe befanden sich 44 Teilnehmende mit IT-Hintergrund ('Computer Science', 'Computing (IT)') sowie mit einer hohen wöchentlichen Gerätenutzung (Handy, Tablet, Laptop, Desktop) von mindestens einer Nutzung am Tag (Gruppe 1). In der zweiten Gruppe waren die 44 Teilnehmenden mehrheitlich ohne IT-Hintergrund (Gruppe 2) sowie mit einer wöchentlichen Gerätenutzung von höchstens sechs Nutzungen pro Woche. Wir trafen hierbei die Annahme, dass Teil-
 
 1 Aus Platzgründen bilden wir die n = 25 Fragen hier nicht ab. Auf Anfrage teilen wir den Fragebogen gerne. Ein Auszug von n = 16 Fragen findet sich in Weber et al. (2023).
+
+
+<!-- PAGE 6 -->
+
 
 nehmende mit technischem IT-Hintergrund sowie einer höheren, wöchentlichen Gerätenutzung eine höhere AIL haben, als solche ohne. Die Ergebnisse zeigen einen statistisch  signifikanten  Unterschied  (Mann-Whitney  U  =  757;  n1  =  n2  =  44;  p  =  0,076; beidseitig), d. h. unser Messinstrument diskriminiert erfolgreich zwischen den beiden Gruppen mit einer objektiven AIL von 31,3% (Gruppe 1) und 27,5% (Gruppe 2), gemessen als Durchschnitt der Anteile korrekt beantworteter Fragen.
 
@@ -124,6 +145,10 @@ Tabelle 1. Statistische Kennzahlen der drei Studien (n = 134)
 
 OST: Onlinestichprobe; ZB: Zentralbank; UK: Unikurs; G1: Gruppe 1; G2: Gruppe 2; T: Total * Ausschließlich der Option 'Andere'. ** Skala von 1 'Stimme überhaupt nicht zu' ('completely disagree') bis 7 'Stimme voll und ganz zu' ('completely agree').
 
+
+<!-- PAGE 7 -->
+
+
 Im weiteren Verlauf haben wir uns in der dritten  Studie Unikurs auf Teilnehmende ohne technischen Hintergrund aus einer Bildungseinrichtung konzentriert. Dazu haben wir die AIL von n = 29 Teilnehmenden eines KI-Schlüsselkompetenzkurses für nicht-technische Studierende gemessen und ermittelt, dass die Socio AI Literacy für diese Gruppe mit 63% über der Technical AI Literacy mit 51% liegt.
 
 ## 5 Fazit und nächste Forschungsschritte
@@ -141,6 +166,10 @@ Abbildung 4 . Nomologisches Netzwerk für die geplante Studie 3 (n = 330)
 ## Acknowledgements
 
 Gefördert durch die Deutsche Forschungsgemeinschaft (DFG) im Rahmen des Sonderforschungsbereichs (SFB) 1053 MAKI.
+
+
+<!-- PAGE 8 -->
+
 
 ## Referenzen
 
@@ -179,3 +208,4 @@ Gefördert durch die Deutsche Forschungsgemeinschaft (DFG) im Rahmen des Sonderf
 - Weber, P. (2023). Unrealistic Optimism Regarding Artificial Intelligence Opportunities in Human  Resource  Management. International  Journal  of  Knowledge  Management (IJKM) , 19 (1), 1-19. https://doi.org/10.4018/IJKM.317217
 - Weber, P., Pinski, M., &amp; Baum, L. (2023). Towards an Objective Measurement of AI Literacy. PACIS  2023  Proceedings .  Pacific  Asia  Conference  on  Information  Systems  2023, Nanchang, China.
 - World  Economic  Forum:  Firth-Butterfield,  K.,  Toplic,  L.,  Anthony,  A.,  and  Reid,  E.  (2022, March  17). Artificial  Intelligence.  Without  universal  AI  literacy,  AI  will  fail  us . https://www.weforum.org/agenda/2022/03/without-universal-ai-literacy-ai-will-failus/
+

@@ -1,10 +1,11 @@
 ---
 source_file: Cvoelcker_2023_Queer_in_AI_A_case_study_in_community-led.pdf
-conversion_date: 2026-02-03T08:46:06.468239
+conversion_date: 2026-02-03T18:24:13.715060
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Queer In AI: A Case Study in Community-Led Participatory AI
 
 Organizers of QueerInAI Many Countries
@@ -67,6 +68,10 @@ Ruchira Ray Queer in AI USA
 
 St John Queer in AI &amp; Aalto University Finland
 
+
+<!-- PAGE 2 -->
+
+
 | Tanvi Anand                      | Vishakha Agrawal              | William Agnew                    |
 |----------------------------------|-------------------------------|----------------------------------|
 | Queer in AI                      | Queer in AI                   | Queer in AI & University of      |
@@ -109,6 +114,10 @@ organization has fallen short of operationalizing participatory and intersection
 
 Organizers of QueerInAI, Anaelia Ovalle, Arjun Subramonian, Ashwin Singh, Claas Voelcker, Danica J. Sutherland, Davide Locatelli, Eva Breznik, Filip Klubička, Hang Yuan, Hetvi J, Huan Zhang, Jaidev Shriram, Kruno Lehman, Luca Soldaini, Maarten Sap, Marc Peter Deisenroth, Maria Leonor Pacheco, Maria Ryskina, Martin Mundt, Anonymous, Milind Agarwal, Nyx McLean, Pan Xu, A Pranav, Raj Korpan, Ruchira Ray, Sarah Mathew, Sarthak Arora, St John, Tanvi Anand, Vishakha Agrawal, William Agnew, Yanan Long, Zijie J. Wang, Zeerak Talat, Avijit Ghosh, Nathaniel Dennler, Michael
 
+
+<!-- PAGE 3 -->
+
+
 Noseworthy, Sharvani Jha, Emi Baylor, Aditya Joshi, Natalia Y. Bilenko, Andrew McNamara, Raphael Gontijo-Lopes, Alex Markham, Evyn Dˇ ong, Jackie Kay, Manu Saraswat, Nikhil Vytla, and Luke Stark. 2023. Queer In AI: A Case Study in Community-Led Participatory AI. In 2023 ACM Conference on Fairness, Accountability, and Transparency (FAccT '23), June 12-15, 2023, Chicago, IL, USA. ACM, New York, NY, USA, 14 pages. https: //doi.org/10.1145/3593013.3594134
 
 ## 1 INTRODUCTION
@@ -135,6 +144,10 @@ The rest of the paper is organized as follows: §2 documents salient forms of ma
 
 Positionality Statement Most authors of this paper are formally trained as computer scientists, with some also having training in gender theory or related fields. All authors have informal training in queer studies through activism and advocacy. Our backgrounds
 
+
+<!-- PAGE 4 -->
+
+
 Figure 1: Overview of Queer in AI's core principles, community responses, programming outcomes, and tensions and challenges.
 
 <!-- image -->
@@ -157,6 +170,10 @@ There is a dire lack of studies and data on queer scientists' experiences in the
 
 Three governing principles drive Queer in AI's mission to raise awareness of queer issues in AI and foster a community of queer researchers: (i) decentralized organizing, (ii) intersectionality, and (iii) community-led initiatives. Overall, Queer in AI's decentralized operations allow for swift community-led initiatives towards its mission (§3.1), which center on intersectionality as critical inquiry and praxis (§3.2). In doing so, it acknowledges and continuously works to account for 'the complexities of multiple, competing, fluid, and intersecting identities' [57]. Queer in AI's primary approach
 
+
+<!-- PAGE 5 -->
+
+
 consists of including people with diverse lived experiences in participatory schemes (§3.3).
 
 ## 3.1 Participation and Decentralization
@@ -174,6 +191,10 @@ As the queer community consistently experiences discrimination, stigmatization, 
 3.3.1 Research. Various forms of community-engaged research guide the dissemination of knowledge both within and outside of Queer in AI and exist across a continuum, from communityinformed to community-involved to community-led. Communityinformed research consists of researchers inviting the community to incorporate lived experience to guide research questions, data collection, or data interpretation [59]. Towards more communityinvolved research, community members may be more involved in decision-making processes and research planning [59, 104]. At the highest level of engagement, community-driven approaches such as community-based participatory action research (PAR) centers shared collaborative decision-making between researchers and community members across research design, knowledge creation, intervention development, and policy-making [28, 81, 125]. In practice, entities outside of the organization may partner with Queer in AI community members to form relationships designed to help objectives oriented towards investigating and supporting 'the pursuit of answers to the questions of their daily struggle and survival' [120]. Individuals are often members of both other entities as well as of Queer in AI so that members may operate from the role of an external entity (e.g. researcher from a company) and at various depths of community engagement. The resulting knowledge production is such that is 'by the people, for the people' in which research is not only seen as a process to create knowledge but to also educate and mobilize for action [28, 56]. By 'putting community first', the distinction between participant and researcher is removed. Community-based participatory action research thus also serves as a decolonizing epistemological framework which inherently interrogates power and privilege [47].
 
 3.3.2 Response &amp; resilience. Within Queer in AI, community resilience operates across dimensions including but not limited to the social, political, and economic. Advocacy efforts operate across domains, tasks, resources, and activities within the organization [74]. Resources and activities are structural means towards tasks and domains that reflect the Queer in AI mission. Specifically, resources and activities are dedicated to raising awareness of queer issues in AI/ML. Financial, educational, and social avenues are created within the organization as a form of creating resilience and advocacy in the face of oppressive sociotechnical barriers. Operating across 47 countries, Queer in AI primarily organizes through Slack, Zoom, a dedicated mailing list, and social media platforms. Doing so makes room for rapid and adaptive situational awareness within the online community [116]. Besides the 'internal' milieu of an organization, Queer in AI is responsive to events in both reactive and proactive forms. Digital volunteer efforts emerge as self-organizing responses to external factors [24, 42]. This work further details examples of
+
+
+<!-- PAGE 6 -->
+
 
 Figure 2: Country of origin of the respondents to the Queer in AI's 2021-2022 demographic survey.
 
@@ -207,6 +228,10 @@ Akey aspect of Queer in AI's organizing lies in the transparency of its operatio
 
 Many of Queer in AI's initiatives have emerged from conversations and threads on public channels about discriminatory experiences with different institutions. For example, discussion around exclusionary gender collection practices on conference registration forms led to the creation of an inclusive conference guide (covered in more detail in §4.3) and substantial improvements to relevant conferences' practices. Similarly, significant advocacy against deadnaming in citations and conference proceedings (§4.4) began from discourse on public channels. Thus, as a space, Queer in AI's Slack is effective at mobilizing community-led initiatives through decentralized organizing. Moreover, the emergence of these initiatives from diverse yet intersecting shared queer experiences grounds them in global contexts of social inequality and injustice. For instance, Queer in AI's graduate school application financial aid program (§4.1) and workshops and socials (§4.2) target several particular challenges rooted in non-Western contexts, centering otherwisemarginalized experiences. The organizational and volunteer work that constitutes the administration of all these initiatives is thus deeply intersectional.
 
+
+<!-- PAGE 7 -->
+
+
 We now examine four major initiatives in detail; Appendix C further describes efforts in policy advocacy.
 
 ## 4.1 Graduate School Application Financial Aid Program
@@ -228,6 +253,10 @@ Table 2 summarizes the program's financial impact and its funding. The core budg
 Only 17% of recipients described themselves as completely out about their sexual orientation, while over a half were out only to a limited extent or not at all. Among non-cisgender respondents, under 10% reported being completely out about their gender, and over 60% were out only to a limited extent. Even so, about 80% discussed their queer identity in their application materials. Queerfriendliness was a big factor in school choice, with 72% considering the location's queer friendliness and about 40% looking for queer lab members or campus advocacy groups. 56% said the scholarships allowed them to take admissions tests, 54% to avoid skipping essential expenses, and around 40% each to avoid skipping groceries or bills. The vast majority of recipients reported the scholarship enabled them to apply to additional programs (around 6 on average). The survey illustrates widespread deficiencies in existing admissions fee waivers: 67% of applicants said they were not available at all schools, 14% said they were unable to produce the required documentation, and 10% said they were not comfortable outing themselves to the schools to receive waivers.
 
 4.1.3 Critical reflection. While Queer in AI believes that the program provides great value to applicants, it is important to note the context in which it operates and which necessitates its existence.
+
+
+<!-- PAGE 8 -->
+
 
 Table 2: The Queer in AI Graduate School Application Fee Aid Program budget and impact per academic year, in USD.
 
@@ -270,6 +299,10 @@ its very first informal meetup at NeurIPS 2017: as of submission, 13 workshops a
 
 3 An exact count could not be obtained: to maintain attendees' privacy, Queer in AI does not require signups for most events, and deletes names immediately after events when they are required.
 
+
+<!-- PAGE 9 -->
+
+
 Table 4: Workshop and events organized by Queer in AI in 2017-2022 across conferences in AI. Events marked with p were held in person, v indicates virtual-only events, and h refers to events that occurred in a 'hybrid' format.
 
 | Year                      | 2017 2018     | 2019                                    | 2020                                                                                    | 2021                                                                          | 2022                                                   |
@@ -303,6 +336,10 @@ operating at a different domain of power for trans people and the power inherent
 
 6 The guide, originally published as [100], is a living document available at queerinai. com/how-to-make-virtual-conferences-queer-friendly.
 
+
+<!-- PAGE 10 -->
+
+
 erase queer identities, by creating forms with inclusive gender categories and disclosing the data usage [105] (ii) minimize the amount of personal information queer individuals have to disclose [7] (for example, only collecting legal names when absolutely necessary, and using responses about the gender and sexuality of attendees only for statistical purposes and in anonymized form); and (iii) ensure that mechanisms to report disruptive or harmful behaviours are swift and effective. The guide explicitly recommends adopting a code of conduct ( e.g. , [99, 131]) to not only establish communication norms, but also describe how policy violations are handled [39].
 
 Part 2: Diversity Efforts Queer researchers's needs are regularly ignored in many aspects of the research community: challenges include lack of academic support, hostility from colleagues and advisors, inflexible name change policies, lack of representation in the research itself, and more [21]. Stronger inclusion efforts, both for representation and participation, can work towards addressing a lack of queer community and role models [108]. To increase representation, the guide strongly encourages conference organizers to invite queer keynote speakers and panelists, particularly those who are also from marginalized backgrounds ( e.g. , BIPOC or non-cisgender) [40]. The guide also recommends fair compensation for all speakers [102], based on effort rather than seniority or session prestige, which is often discriminatory towards members of marginalized groups [51]. Finally, as noted in §5.2, financial accessibility is a significant barrier that limits conference attendance for queer researchers; to increase participation, the guide recommends ample conference subsidies to cover expenses associated with attending virtual or in-person events.
@@ -331,6 +368,10 @@ Decentralized organizing plays a vital role in minimizing power distance and dis
 
 Despite global participation, Queer in AI's structure and operational design can discourage participation for many queer scientists. First, participation in a volunteer-run community not only requires organizers to have income that allows them to perform
 
+
+<!-- PAGE 11 -->
+
+
 free labor, but also have access to computers, internet, and other resources required to even connect with Queer in AI. Second, while Queer in AI strives to be intersectional, it severely lacks access to queer networks in countries from the Global South. It originated and primarily operated within a Western context during its initial years, which led to the inadvertent creation of barriers that limit its outreach. For example, because Queer in AI organizers are best connected with US and European institutions, its events are often co-located at conferences mostly attended by scientists residing in the Global North. Further, its meetings often occur at times best aligned with European and American time zones, at the expense of much of Asia. Finally, all Queer in AI activities require English proficiency.
 
 While recent efforts from the community and focused outreach have reduced some of these barriers, significant work lies ahead in establishing truly global ways of participation, especially for countries where queerness is criminalized. Third, participation in Queer in AI exerts a toll on mental health and exhaustion of its organizers (Figure ?? ). This is partly due to Queer in AI's lack of formal structure, instead relying on individuals self-coordinating on initiatives of their choice. While efficient, this approach can make joining and keeping track of ongoing efforts challenging for newcomers and neurodivergent members of the community. Past organizers have also shared anecdotes of experiencing exhaustion, fatigue and anxiety due to a lack of accommodation of different working styles, and falling behind on personal schedules while undertaking operational work for Queer in AI (see Figure ?? ). This disproportionately impacts disabled and neurodivergent members, and is compounded for those marginalized based on intersecting identities.
@@ -354,6 +395,10 @@ Participatory methods have the potential to address issues of power and inclusio
 ## ACKNOWLEDGMENTS
 
 This work would not have been possible without the activism and organizing efforts of the Queer in AI community. We would also like to thank Katta Spiel and Os Keyes for their insightful feedback on the earlier versions of the paper.
+
+
+<!-- PAGE 12 -->
+
 
 ## REFERENCES
 
@@ -420,6 +465,10 @@ Participation
 - [52] Timnit Gebru and Emily Denton. 2021. Beyond Fairness. https://neurips.cc/ virtual/2021/tutorial/21889
 - [53] Christine Geeng, Mike Harris, Elissa Redmiles, and Franziska Roesner. 2021. Queer Security Advice in the US. (2021).
 
+
+<!-- PAGE 13 -->
+
+
 - [54] A Gomes, D Antonialli, and T Dias-Oliva. 2019. Drag queens and artificial intelligence. Should computers decide what is toxic on the internet. Internet Lab blog (2019). https://internetlab.org.br/en/news/drag-queens-and-artificialintelligence-should-computers-decide-what-is-toxic-on-the-internet/
 - [55] Mary L Gray and Siddharth Suri. 2019. Ghost work: How to stop Silicon Valley from building a new global underclass . Eamon Dolan Books.
 - [56] LW Green, MA George, et al. 2003. Appendix C: Guidelines for participatory research in health promotion. In Community-based participatory research for health , M. Minkler and N. Wallerstein (Eds.). San Francisco, CA, Jossey-Bass.
@@ -474,6 +523,10 @@ Participation
 - [105] Morgan Klaus Scheuerman, Aaron Jiang, Katta Spiel, and Jed R. Brubaker. 2021. Revisiting Gendered Web Forms: An Evaluation of Gender Inputs with (Non)Binary People. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (Yokohama, Japan) (CHI '21) . Association for Computing Machinery, New York, NY, USA, Article 400, 18 pages. https://doi.org/10.1145/ 3411764.3445742
 - [106] Morgan Klaus Scheuerman, Madeleine Pape, and Alex Hanna. 2021. Autoessentialization: Gender in automated facial analysis as extended colonial project. Big Data &amp; Society 8, 2 (2021), 20539517211053712.
 - [107] Morgan Klaus Scheuerman, Jacob M Paul, and Jed R Brubaker. 2019. How computers see gender: An evaluation of gender classification in commercial facial analysis services. Proceedings of the ACM on Human-Computer Interaction
+
+
+<!-- PAGE 14 -->
+
 
 - 3, CSCW (2019), 1-33.
 - [108] Natalie Schluter. 2018. The glass ceiling in NLP. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing . 2793-2798.

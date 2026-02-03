@@ -1,10 +1,11 @@
 ---
 source_file: Lütz_2024_The_AI_Act,_gender_equality_and.pdf
-conversion_date: 2026-02-03T09:09:58.982182
+conversion_date: 2026-02-03T18:41:26.726426
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## ARTICLE
 
 ## The AI Act, gender equality and non-discrimination: what role for the AI office?
@@ -35,6 +36,10 @@ The EU Artificial Intelligence Act (AI Act) is the first comprehensive framework
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 'biases' makes seventeen appearances 2 and 'gender equality' appears four times. Also, the composition of the AI Office responsible for implementing the AI Act, and which will be advised by a Scientific panel of independent experts, shall be determined respecting gender balance (Art. 68 (2)). The AI Act also acknowledges that AI development teams shall be gender balanced (Recital 165). More importantly, the use cases that are 'high-risk' and that fall under the scope of the AI Act with mandatory requirements to be respected, the enforcement tools and the mission of the AI Office 3 ensure some form of enforcement framework will exist that could be beneficial to addressing gender equality and non-discrimination.
 
 The 'Age of Algorithms' 4 arrived some time ago but since Large Language Models (LLMs) and Generative AI entered the public discussion and legislative proposals, the topic of AI regulation has received increased public attention which has translated into more attempts to create policy and regulation. 5
@@ -54,6 +59,10 @@ This article will outline how the AI Act is designed to address fundamental righ
 6 See Wooldridge [48], p. 291; For similar arguments concerning the lack of diversity among AI developers, see Gufran [23] and Broussard [8]. For datasets, see Bolukbasi [7] and Criado [15] and [16].
 
 <!-- image -->
+
+
+<!-- PAGE 3 -->
+
 
 ## 2 The AI Act and gender equality
 
@@ -76,6 +85,10 @@ While falling within the scope of high-risk systems is certainly relevant for th
 10 Directive 2006/54/EC of the European Parliament and of the Council of 5.7.2006 on the implementation of the principle of equal opportunities and equal treatment of men and women in matters of employment and occupation (recast), OJ L 204, 26.7.2006, p. 23-36.
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 not meant to replace or influence the previously completed human assessment without prior human review; or (d) the AI system is intended to perform a preparatory task to an assessment relevant for the purpose of the use cases listed in Annex III.
 
@@ -103,6 +116,10 @@ The category of high-risk AI systems relies on and refers to Annex III, which li
 
 <!-- image -->
 
+
+<!-- PAGE 5 -->
+
+
 (5) access to and the enjoyment of essential private services and essential public services and benefits - because most examples of gender bias and discrimination have occurred in one of these categories and the likelihood of harm in relation to gender equality seems very high for these areas.
 
 In the area of employment, which is covered by Directive 2006/54 when it comes to the principle of equality between women and men, the use cases foresee (a) 'AI systems intended to be used for recruitment or selection of natural persons, notably to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates'. An often-cited example concerns a recruitment algorithm used by a tech company which potentially had discriminatory effects on women. 13 The second category of use cases concerns (b) 'AI intended to be used to make decisions affecting terms of the work-related relationships, promotion and termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics and to monitor and evaluate performance and behaviour of persons in such relationships.' AI systems are increasingly used in human resources management which entails the risk of gender-based discrimination in relation to promotion, performance evaluation, pay and benefits. 14
@@ -129,6 +146,10 @@ The reference in Art. 7(1) (b) shows the importance of adverse impacts on fundam
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 ## 2.3 The tools of the AI Act relevant to gender equality
 
 If an AI system has been classified as 'High-Risk' and needs to fulfil the abovementioned obligations in line with Art. 6(2), the AI Act foresees several tools to ensure that biases are detected, and that harm to fundamental rights and negative impacts of AI systems are prevented.
@@ -150,6 +171,10 @@ Finally, the individual complaint in Art. 85 is an important complement to publi
 22 Art. 86 (1); AI systems that cause algorithmic discrimination cause also societal harms and not only individual harm, see notably Smuha [45].
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 However, if AI systems are not high-risk, then voluntary rules could be a way to ensure compliance with the help of codes of conduct. The AI Act suggests the following:
 
@@ -175,6 +200,10 @@ Unlike high-risk AI systems, where obligations are imposed under the AI Act, as 
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 diverse design is equally a way to encourage AI developers and deployers to achieve gender equality-friendly AI systems. Following the European Ethics guidelines for trustworthy AI could be a good guide in this respect, but including the mandatory requirements of high-risk AI systems would be even better.
 
 ## 2.4 Conclusion
@@ -192,6 +221,10 @@ The creation of the European Artificial Intelligence Office (AI Office) with Com
 28 Art. 1.
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 The AI Office will be part of the administrative structure of the DirectorateGeneral for Communication Networks, Content and Technology (Art. 1 of the AI Act). Art. 3 (47) also defines the Artificial Intelligence Office as 'the Commission's function of contributing to the implementation, monitoring and supervision of AI systems, general purpose AI models and AI governance.'. This shows that the AI Office could be seen rather as a Commission service than a completely independent body within the European Union. The mission and tasks which consist of enforcing and implementing the AI Act, also include contributing to AI policies within the European Union and at international level, supporting the development of trustworthy AI and monitoring the evolution of AI markets and technologies (Art. 2).
 
@@ -215,6 +248,10 @@ One open question concerns cooperation on matters of gender equality considering
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 Commission. While it seems that the AI Office can deliver expertise on AI systems to relevant Commission services, the question is whether Directorates General will rely on the AI Office for potential cases involving AI systems. In addition, the question of who will take the lead on cases of algorithmic discrimination is not clear. Guidelines on the collaboration would achieve some clarity on the competencies and roles of the respective actors in relation to AI systems and issues of non-discrimination.
 
 Cooperation with stakeholders is central to the AI Office and notably Art. 4 requires 'conducting regular consultation of stakeholders, including experts from the scientific community and the educational sector, citizens, civil society and social partners, where relevant, to collect input for the performance of its tasks under Article 3(2)'. 32
@@ -234,6 +271,10 @@ The scientific panel of independent experts provides technical advice and input 
 33 Art. 5 (2)(a); see also the new site of the AI Office https://digital-strategy.ec.europa.eu/en/policies/aioffice.
 
 <!-- image -->
+
+
+<!-- PAGE 11 -->
+
 
 its tasks in relation to GPAI models. Experts in the scientific panel can also be called upon to conduct evaluations of AI systems (Art. 68(a)).
 
@@ -258,6 +299,10 @@ The mandate of the AI Office to contribute to international cooperation on AI in
 36 Art. 7 (1) (b), (c).
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 international cooperation with third countries and international organisations shows the importance the European Union attaches to a fundamental rights-based approach to AI. The support of Member States regarding the implementation of international agreements shows that the European Union aims for coherence and broad inclusion of its approach to AI regulation across different regulatory proposals. Once the AI Office is operational and has established expertise in AI regulation, the European Union will be able to speak with one voice and share best practices and knowledge of the European Union approach to AI regulation.
 
@@ -290,6 +335,10 @@ The Framework Convention now includes again more gender equality friendly wordin
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 applicable domestic and international human rights obligations, in relation to activities within the lifecycle of artificial intelligence systems .'
 
 From an equality and non-discrimination perspective, it is regrettable that the scope of the Convention does not include private actors (Art. 3(1)), the suggesting wording on gender equality and non-discrimination of the Council of Europe is at least in principle slightly more ambitious than the European Union AI Act.
@@ -318,6 +367,10 @@ More broadly, the United Nations AI Body has given an overview of proposed AI Go
 
 <!-- image -->
 
+
+<!-- PAGE 14 -->
+
+
 gender equality is not guaranteed. 47 The Committee on the Elimination of Discrimination against Women (CEDAW) will publish the draft General Recommendation No 40 on the equal and inclusive representation of women in decision-making systems on 8 March 2024. This also addresses the impacts of AI systems on gender equality and is scheduled for adoption in the 89th session of the CEDAW Committee in October 2024. 48
 
 ## 5 Conclusion
@@ -335,6 +388,10 @@ Regarding the role of the AI Office for ensuring gender equality and nondiscrimi
 49 See for example Gerards/Borgesius [21], p. 55-56; for other avennues to address the issues, see also Xenidis [49].
 
 <!-- image -->
+
+
+<!-- PAGE 15 -->
+
 
 Nevertheless, neither the existing substantive nor the procedural enforcement architecture at European Union level is sufficient to detect, protect against and remedy gender-based algorithmic discrimination. Targeting AI systems directly, with specific requirements for high-risk AI systems and an obligation to conduct bias audits or fundamental rights impact assessments can be a step to detect or mitigate some of the risks of gender biases and algorithmic discrimination, but they are not sufficient. But en attendant an adequate legislative framework and specific enforcement tools for algorithmic discrimination in European Union non-discrimination law, using the available tools and institutions, and bringing cases of algorithmic discrimination before national courts, is currently the best available option to ensure gender equality in the algorithmic age.
 
@@ -361,6 +418,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 
 <!-- image -->
 
+
+<!-- PAGE 16 -->
+
+
 11. Council of Europe: Treaty Series - No. [225] Council of Europe Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law, [Vilnius, 5.IX.2024]. https://rm.coe. int/1680afae3c
 12. Council of Europe: Study on the impact of artificial intelligence systems, their potential for promoting equality, including gender equality, and the risks they may cause in relation to nondiscrimination (2023). https://rm.coe.int/prems-112923-gbr-2530-etude-sur-l-impact-de-ai-web-a51-2788-3289-7544/1680ac7936
 13. Council of the European Union: Final Compromise text, Proposal for a Regulation of the European Parliament and of the Council laying down harmonised rules on Artificial Intelligence (Artificial Intelligence Act) and amending certain Union legislative Acts. 2021/0106(COD). https://data.consilium. europa.eu/doc/document/ST-5662-2024-INIT/en/pdf
@@ -386,6 +447,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 33. Lütz, F.: Discrimination by correlation. Towards eliminating algorithmic biases and achieving gender equality. In: Quadflieg, S., Neuburg, K., Nestler, S. (eds.) (Dis)Obedience in Digital Societies. Perspectives on the Power of Algorithms and Data, pp. 250-294. Transcript Verlag, Bielefeld (2022)
 
 <!-- image -->
+
+
+<!-- PAGE 17 -->
+
 
 34. Lütz, F.: Gender equality and artificial intelligence in Europe. Addressing direct and indirect impacts of algorithms on gender-based discrimination. ERA Forum 23 , 33-52 (2022). https://doi.org/10.1007/ s12027-022-00709-6
 35. Lütz, F.: Artificial intelligence and gender-based discrimination, Chap. 14. In: Alberto, Q., Jeroen, T. (eds.) Human Rights and Artificial Intelligence. Oxford University Press, Oxford (2023)

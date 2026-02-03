@@ -1,10 +1,11 @@
 ---
 source_file: van Toorn_2024_Introduction_to_the_digital_welfare_state.pdf
-conversion_date: 2026-02-03T09:28:40.022881
+conversion_date: 2026-02-03T18:59:38.433558
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Introduction to the digital welfare state: Contestations, considerations and entanglements
@@ -31,6 +32,10 @@ This article introduces a special issue of the Journal of Sociology focused on c
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## Keywords
 
 digital sociology, welfare state, social policy, automated decision-making, digital technology, arti /uniFB01 cial intelligence, data analytics
@@ -41,6 +46,10 @@ In 2019, a United Nations report issued a stark warning, urging the global commu
 
 Understanding and exposing these current realities is an urgent task of critical scholarship. Yet the digital welfare state presents a challenging domain for research as it sits at the intersection of two sizeable bodies of social science investigation -digital technologies and social policy/welfare states -both of which are marginal to mainstream sociology, and involve a broad spectrum of rapidly changing technologies, actors and processes. Broadly speaking, the digital welfare state refers to a particular state formation in which wide-ranging digital technologies, including automated decision-making systems, algorithms, big data analytics and arti /uniFB01 cial intelligence (AI), are integrated into the administration and provision of welfare services by government agencies, which, in some cases, are then delivered through a complex set of contracted providers (see Dencik &amp; Kaun, 2020; Larasati et al., 2023; van Toorn, 2024), which social policy scholars refer to as the mixed economy of welfare (Powell, 2019). These changes are occurring across a range of areas, from social security, public and social housing, healthcare, disability and child protection services, to food aid, border security, law enforcement and justice systems (Dencik et al., 2018; Dencik et al., 2019; Eubanks, 2019; Ferreri &amp; Sanyal, 2022; Gillingham &amp; Graham, 2017; Keddell, 2019; Mann, 2020, Moats &amp; McFall, 2019; Rachovitsa &amp; Johann, 2022; Redden et al., 2020; van Toorn &amp; Cox, 2024; Zavr š nik, 2021). At times, they have extensive overlap spanning various socio-technical systems, despite appearing to lack any clear connection. For example, biometric authentication systems, which verify individuals ' identities through distinct biological traits, such as /uniFB01 ngerprints or facial features, are used in the distribution of welfare services and the securitisation of borders (Madianou, 2019; Magnet, 2011; Marciano, 2019; Singh &amp; Jackson, 2021), while also enabling greater conditionality in social policy (Henman, 2011; Watts &amp; Fitzpatrick, 2018). In various social service
 
+
+<!-- PAGE 3 -->
+
+
 domains, citizens increasingly interact with governments through digital platforms and mobile applications (Henman, 2019; Schou &amp; Hjelholt, 2018). Aiming to improve access and ef /uniFB01 ciency in service delivery, digital welfare states target substantial cost reductions by reducing dependence on manual human interventions and administrative labour, and integrating algorithms to automate decision-making processes related to eligibility, service levels and other aspects of social resource allocation for citizens and their households. Much of the adoption and incorporation of digitalisation has taken place in a context of global moves towards /uniFB01 scal austerity and the criminalisation of poverty, homelessness, border crossing and asylum seeking, disability and mental distress (Dencik et al., 2019; McQuillan, 2022).
 
 Viewed critically, the digital welfare state is seen to amplify these trends, allowing for increased scrutiny and surveillance of welfare recipients, new migrant arrivals and other ' problem ' or ' undeserving ' populations, alongside prioritising administrative labour costsaving measures over meeting social needs (Bielefeld et al., 2021; Eubanks, 2019; Jørgensen, 2023; Mann, 2020; Schou &amp; Hjelholt, 2018; van Toorn &amp; Scully, 2023). This collection of papers aims to contribute to current debates in the area and simultaneously develop a deeper, more empirically nuanced understanding of positionality and relationality vis-à-vis the digital welfare state, particularly in relation to highly marginalised populations that are heavily reliant upon state provisioning to sustain basic levels of social, economic, physical and emotional wellbeing. This introduction to the collection seeks to highlight these important domains requiring closer ongoing sociological investigation and to provide readers with some introductory background understanding of the /uniFB01 eld.
@@ -48,6 +57,10 @@ Viewed critically, the digital welfare state is seen to amplify these trends, al
 ## What is the state and how is it transforming with its digitalisation?
 
 Although not all the papers directly address the nature of the (welfare) state with its digital transformation, all broadly work within a framework which moves away from seeing the state as a distinct, uni /uniFB01 ed entity or actor, toward a conception of the state as a social relation (Jessop, 2002, 2007). The concept of the state as a social relation suggests that the state does not possess an inherent, static nature, such as being a neutral mediator between various social interests (for example, capital and labour), an independent entity with its own bureaucratic aims and interests, nor simply an instrument of the ruling class -as dominant accounts suggest. Instead, as captured across the papers in this special issue, the terrain of the state is shaped by the broader social relations in which it exists, particularly the dynamics of power among different social groups within a given historical moment, entailing processes of continuity yet simultaneously evolving and transforming over time (see Jessop, 2002; Peck, 2001). Given these dynamics, historically it remains clear that the state leans towards certain methods of action and certain types of actors, showing preferences -due to path dependencies long set in train -for particular policy and technological trajectories over others. Thus, analyses of state power should stem from an appreciation of the political struggles and contests unfolding in the state sphere, including practices of governing that aim to manage the external
+
+
+<!-- PAGE 4 -->
+
 
 demands of social movements and political actors, as well as an understanding of the array of institutions existing within and forming the state. This is notably apparent in the body of literature on capitalist welfare state regimes initiated by Gøsta Esping-Andersen (1990). In his analysis of liberal, conservative and social democratic welfare state regimes, he took into account socio-cultural and political histories as well as social policy settings and trajectories. Although each of these distinct worlds of welfare capitalism embody different public values and approaches to citizenship, and evidence points to accompanying different modes of computerisation (Adler &amp; Henman, 2005), there are arguments suggesting more recent convergence, particularly since the rise of neoliberalism and new public management (NPM) (Schmitt &amp; Starke, 2011).
 
@@ -58,6 +71,10 @@ The types of digital transformations that occur within each area are thus imbued
 Carney, 2024) which have only accelerated with machine-learning AI.
 
 As the combined set of papers in this special issue suggest, understanding the digital transformation of the welfare state in relational terms creates opportunities to explore the multiple processes and relationships through which state power is constituted and expressed digitally . It also enables us to understand that, largely, digitalisation tends to
+
+
+<!-- PAGE 5 -->
+
 
 further bed down -even literally encode -long-standing political, economic and social relations of power, enabling only incremental changes in welfare governance rather than bringing about deeper structural transformation. This perspective is embraced within many of the papers within this collection, which provide innovative explorations and methodologies of exploring, explaining and conferring these dynamics.
 
@@ -71,6 +88,10 @@ As technologies of both information and automation (Bellamy &amp; Taylor, 1998),
 
 The welfare state has been intricately tied to the evolution of statistical forms of knowledge, methods and technologies aimed at delineating and managing populations, particularly the poor. Notably, the welfare state arose in the late 19th century and the /uniFB01 rst half of the 20th century by adopting insurance models of public policy to protect against age, disability and unemployment, based on actuarial knowledge. As statistical and computational techniques developed, so too did technologies of classi /uniFB01 cation, social sorting and so on, thereby recon /uniFB01 guring risk-based governmental rationalities. As Henman (2010) noted, ' e-government is leading to a growth in the conceptualisation and conduct of targeted forms of risk government, whereby populations are differentiated and governed differentially ' (p. 11).
 
+
+<!-- PAGE 6 -->
+
+
 These observations beg the question as to what extent digitalisation is simply a tool to project broader socio-political values or whether it shapes those socio-political realities as well. In the public administration literature, it is widely recognised that the 1990s and the /uniFB01 rst decade of the 2000s involved an installation of NPM, a managerial approach inspired by neoliberal principles and adopted from the private sector, which was extensively implemented in government administration (Lane, 2002). Dunleavy et al. (2006) have argued that this mode of governance reached its limits when applied to digitalisation, resulting in a shift towards ' Digital Era Governance ' that combines some elements of NPM with the technical capacities of digitalisation that enable service holism and crossagency partnerships (Margetts &amp; Dunleavy, 2013). While these observations are important in understanding institutional-level modes of administration and governance, they do not engage with the operations of power and the experiences of citizens vis-à-vis the digital welfare state that have been outlined earlier.
 
 The operation of the state has thus changed through digitalisation. Bovens and Zouridis (2002) identify a shift from ' street level bureaucracies ' , whereby citizens transacted face-to-face with government of /uniFB01 cials in bricks-and-mortar buildings, to ' screen level bureaucracies ' , whereby citizens interact in person or on telephones or even via online chat with bureaucrats who are behind screens. The rise of the internet shifted citizen -state mediation from in-person to online. Bovens and Zouridis identify a rapidly emerging ' system level bureaucracy ' , whereby citizens interact with computers and government services and decisions are automated. Such system-level operation underpinned the design of Australia ' s infamous Robodebt Scheme, independent of its illegal algorithm (Whiteford, 2021).
@@ -78,6 +99,10 @@ The operation of the state has thus changed through digitalisation. Bovens and Z
 Behind the legally /uniFB02 awed use of income averaging, Robodebt highlights other key impacts of automation for the operation of the (welfare) state and its relationship with citizen-customers. First, the speed of operations was greatly increased -noti /uniFB01 cations of possible debt increased 50-fold. Second, design shifted towards greater self-service, where citizens are tasked with supplying all necessary data, verifying calculations and presenting evidence to challenge algorithmic decisions. This involved the reversal of the onus of proof, which in the context of alleged debts involved what academic and welfare lawyer Terry Carney (2019) described as a form of extortion. Third, as governmental decision-making transitions from manual decisions made by humans to automated processes, it disrupts established government accountability mechanisms, which traditionally involved scrutinising the accuracy of human decisions, but now require scrutiny of algorithms. Four, Robodebt highlighted how automated decisions are typically more opaque, meaning the black box of government and wider social processes are not understood (O ' Neil, 2017; Pasquale, 2015).
 
 The integration of digital tools, AI and big data analytics into social policy and welfare administration does not merely enhance the capacity for surveillance and control; it also introduces new dimensions of governance that are predictive, pre-emptive and deeply personalised (Henman, 2020; Rouvroy &amp; Stiegler, 2016). These modes of algorithmic judgement are particularly evident in risk pro /uniFB01 ling of the unemployed, which involves sorting people by likelihood of long-term unemployment (Desiere et al., 2019); in the pro /uniFB01 ling of children to assess risk of abuse/harm (Gillingham &amp; Graham, 2017; Sacher, 2022); and in criminal justice systems to determine risk of criminal acts,
+
+
+<!-- PAGE 7 -->
+
 
 threats to the public or recidivism (Brayne, 2020; McKay, 2020). Moreover, such pro /uniFB01 ling is highly prone to bias, reproducing and exacerbating bias in training data and designers, thereby reproducing social inequalities and discrimination with ' objective ' data (Herzog, 2023).
 
@@ -89,11 +114,19 @@ Following the panel, we wanted to /uniFB02 esh out in greater detail the positiv
 
 One prominent theme was the connection of digitalisation with ' the social ' . Digitalisation is not conceptualised as a technical exercise that can be distinctly analysed
 
+
+<!-- PAGE 8 -->
+
+
 separate to social processes. Perhaps this is unsurprising given that the authors are sociologists, but it is important and distinctive given common threads of implicit technological determinism or treating digitalisation as a technical activity dominant in much of the literature and research. In contrast with much public administration or management analytical approaches to digitalisation, whereby digital technologies are neutral tools (simply) implementing policy, political or management imperatives, the papers in this collection highlight the rich entangling of social values (e.g. control, surveillance, ef /uniFB01 ciency), forms of knowing and classifying, operations of power, and histories of relationships in which digital technologies operate and are enacted. This location of the digital welfare state within social and historical dynamics is an important counterweight to much recent scholarship that appears to treat AI and recent digital technology innovations as something completely new and without precedent. If there is a critique to be made, it is that the technical realities and affordances (Davis, 2020) of digital tools -and their diverse abilities -are perhaps given too little attention. One might be forgiven for thinking that adopted digital technologies are simply a re /uniFB02 ection of society, a mirror that has no effect. Indeed, sociology is often only interested in humans, and non-humans become bit players or missing masses (Latour, 1992).
 
 Sleep ' s paper looks across ADM systems used in Australian social services, focusing on impacts of such systems on service users. Contrary to dominant motivators of greater ef /uniFB01 ciency, consistency and service delivery, her research reveals that these systems are often experienced as punitive, extractive, excluding and inhumane, re /uniFB02 ecting anti-welfare ideologies in Australia where ' social security recipients have been historically treated as economic scapegoats and punished for needing to access services ' . For instance, the automation of processes previously handled by human administrators has resulted in the extraction of labour from service users, who are now tasked with navigating complex online systems and updating personal information. The paper also highlights concerns about digital exclusion, arguing that individuals lacking digital literacy or access to digital devices are effectively penalised, as they are unable to claim payments via online systems. Additionally, ADM systems are shown to struggle ' to deal with the complexities of day to day life and the lived realities of being human ' , particularly for people
 
 Van Toorn and Soldatic ́ ' s paper situates modern digital and data practices within a longer historical arc, in this case relating to eugenic social policy. By examining contemporary applications of ADM systems in child protection services, immigration and border management, and social security policy, they reveal how these systems perpetuate discriminatory practices and exclusionary outcomes reminiscent of past projects of eugenic nation-building. The authors argue that although these systems may not explicitly endorse eugenics, they effectively replicate its principles by classifying individuals based on their perceived economic or biological value/risk to society, often through ableist and racialised lenses. Through their analysis, van Toorn and Soldatic ́ shed light on the ways in which automated governance reinforces existing power dynamics and inequalities, with particular impacts on marginalised groups such as disabled people and Black, Indigenous and People of Colour (BIPOC) communities. Their paper underscores the importance of recognising the historical continuities in the use of technology for the governance of poverty, ' problem ' families and national borders, and the need to challenge oppressive systems of governance.
+
+
+<!-- PAGE 9 -->
+
 
 living with disability, whose unique needs and variations in daily functioning pose signi /uniFB01 cant challenges for algorithmic decision-making (see also van Toorn &amp; Scully, 2023). This dif /uniFB01 culty in accommodating individual differences often results in exclusion from statistical calculations, further marginalising already vulnerable populations (Treviranus, 2020). Sleep argues that despite the involvement of humans in decisionmaking processes, the overall system is viewed as inhumane, with professionals often deferring to automated decisions rather than exercising their professional discretion.
 
@@ -102,6 +135,10 @@ Taking a similarly broad and critical view of the welfare state, Hjelholt ' s ar
 Asecond prominent theme evident in the papers in this collection relates to the role of digital technologies in truth-making . A key part of digitalisation is the collection and storage of digital data which are taken as representing the world in an objective manner. Within the digital (welfare) state, modes of identifying individuals and their status are critical in accurately delivering welfare. This necessarily involves the creation of digital versions of selves or so-called digital doppelgangers (Bode, 2005; Cheney-Lippold, 2017). These modes of knowledge are not, however, simply a re /uniFB02 ection of the world. They are created as digital data ontologies that have social histories of standardisation and classi /uniFB01 cation (Bowker &amp; Star, 1999; L. Busch, 2011; Foucault, 1969/ 2013). The data structures embedded in algorithms then shape the world and come to reify ways of perceiving ourselves and others. Digital data are taken as truth and used for governing individuals and populations, reinforced by popular assumptions that such data are objective, and hence accurate. The problematic nature of this is evident in Eubanks ' (2019) account of people being labelled with ' failure to cooperate ' and in risk classi /uniFB01 cation based on biassed algorithmic models (Benjamin, 2019).
 
 Sensor technologies -seek to read the world, enabling the monitoring of bodies, movement and mobility in real time. This makes sensory technologies particularly attractive in welfare systems that rely upon highly racialised, gendered labour regimes, such as the US Medicaid programme. Mateescu ' s paper examines the signi /uniFB01 cant expansion of state surveillance into the everyday lives of disabled care recipients and the care workforce, largely poor women of colour, through the implementation of Electronic Visit
+
+
+<!-- PAGE 10 -->
+
 
 Veri /uniFB01 cation (EVV). EVV is a system mandated by federal legislation for Medicaid-funded in-home care services, aimed at reducing welfare fraud by tracking workers ' activities and locations through a mobile app. Mateescu maps the ways in which digitalisation not only enables new forms of surveillance of care workers against contracted labour time during home visits, but also the multi-functional surveillance it provides to assess Medicaid recipients ' need for services through ongoing care worker data collected on and about the recipient. Digital surveillance thus becomes a ' tool for more /uniFB01 nely tuning classi /uniFB01 cations of different types of paid and unpaid care ' , delineating who is deserving of care and what level of care, with the aim of reducing so-called ' fraud, waste, and abuse ' by both the recipient of care and care workers.
 
@@ -113,9 +150,17 @@ A third theme evident in this collection of papers is the importance of humans i
 
 Singh ' s paper explores how humans and technology are necessarily entwined within contexts marked by extensive digitalisation, growing welfare demand and limited state
 
+
+<!-- PAGE 11 -->
+
+
 resources. His study, centred on Aadhaar, India ' s biometrics-based national identity veri/uniFB01 cation system, illustrates the crucial role of intermediaries in helping citizens navigate complex bureaucratic processes. Using an ethnographic approach, Singh is able to show what macro-level analyses of digital welfare often overlook: that despite advancements in technology, human involvement at the micro-level remains crucial for any implementation -let alone effective implementation -of digital welfare services. This reliance on what Singh terms the ' phatic labour ' of intermediaries re /uniFB02 ects a deeper theme of human enmeshment in technological systems, emphasising that technologies are not standalone entities but are intricately intertwined with human agency and social contexts. His paper also speaks to the self-service logic of these systems, wherein citizens are expected to navigate bureaucratic procedures independently of formal state assistance -a form of outsourcing that relocates certain state functions and forms of ' data work ' into areas of private, work and community life. Singh ' s paper in particular emphasises the nuanced dynamics of technological integration within welfare states, reminding us that human energies and interpersonal relationships bridge the gap between technological design and real-world application.
 
 The paper by Zakharova, Jarke and Kaun critically analyses the dialectics of care and control within digital welfare systems through detailed study of digital technologies as they interact with human dispositions and systems oriented towards care. Digital technologies, they argue, more often than not adhere to a paradigm of control and surveillance, prioritising ef /uniFB01 ciency over nuanced engagement with care. And yet the human effort invested in developing, supporting and maintaining digital infrastructures is often rooted in caring relations -for example, between adult caregivers and their elderly parents or between school administrators and the student body. The paper presents three empirical vignettes, each one illuminating different aspects of this inherent tension. Vignette 1 illustrates how the integration of digital welfare geron-technologies into care arrangements for older adults involves invisible forms of labour to ensure functionality and acceptance, transforming care work to include ' caring for digital technologies in order to maintain welfare services ' . Vignette 2 explores the use of smart sensors in social housing facilities, highlighting the tension between providing safe housing and the focus on monitoring and controlling deviant behaviour. Vignette 3 discusses the digital transformation of German K-12 (kindergarten to grade 12) schools, where the maintenance of datasets becomes essential for school secretaries ' care for their school. This data work reveals disparities in recognition and reward between the predominantly female secretarial staff responsible for data input and the more highly valued data scientists or software designers and the ministries of education to whom secretarial staff report. In proposing an analytical framework for understanding the care -control dialectic in digital welfare, the authors emphasise three interrelated layers: the values guiding public care provision; the infrastructures organising care work; and the work involved in con /uniFB01 guring and maintaining care infrastructures. Welfare technologies, while aiming to ful /uniFB01 l caring values such as convenience, security and safety, often overlook the diverse lived experiences of differently marginalised groups, and the complex, often invisible nature of care work in digital welfare undermines its quanti /uniFB01 cation and integration into bureaucratic systems.
+
+
+<!-- PAGE 12 -->
+
 
 This special issue on the rapidly evolving digital welfare state highlights important themes requiring ongoing critical analysis and contestation. It also highlights how the now inexorable digitalisation of social life requires sociology to take seriously and as a default the inclusion of digital technologies in empirical, analytical and conceptual work, just as ideas of power have infused and animated sociological inquiry for more than a century.
 
@@ -146,6 +191,10 @@ Georgia van Toorn https://orcid.org/0000-0002-6660-8479
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 - Clay, S. (2018). The (neo)tribal nature of Grindr. In A. Hardy, A. Bennett, &amp; B. Robards (Eds.), Neo-tribes (pp. 235 -251). Palgrave Macmillan. https://doi.org/10.1007/978-3-319-68207-5\_15
 - Davis, J. L. (2020). How artifacts afford: The power and politics of everyday things . MIT Press. Dencik, L., Hintz, A., Redden, J., &amp; Warne, H. (2018). Data scores as governance: Investigating uses of citizen scoring in public services. Open Society Foundations, Cardiff University. Accessed 20 September 2022. https://orca.cardiff.ac.uk/id/eprint/117517/1/data-scores-asgovernance-project-report2.pdf
 - Dencik, L., &amp; Kaun, A. (2020). Data /uniFB01 cation and the welfare state. Global Perspectives , 1 (1), 12912. https://doi.org/10.1525/gp.2020.12912
@@ -167,6 +216,10 @@ Georgia van Toorn https://orcid.org/0000-0002-6660-8479
 - Henman, P., &amp; Dean, M. (2010). E-government and the production of standardized individuality. In V. Higgins &amp; W. Larner (Eds.), Calculating the social: Standards and the recon /uniFB01 guration of governing (pp. 77 -93). Palgrave Macmillan UK.
 - Henman, P., &amp; Marston, G. (2008). The social division of welfare surveillance. Journal of Social Policy , 37 (2), 187 -205. https://doi.org/10.1017/S0047279407001705
 
+
+<!-- PAGE 14 -->
+
+
 - Herzog, L. (2023). Algorithmic bias and access to opportunities. In C. Véliz (Ed.), Oxford handbook of digital ethics. Oxford Academic. (2023; online ed., 10 November). https://doi.org/ 10.1093/oxfordhb/9780198857815.013.21.
 - Higgs, E. (2004). The information state in England: The central collection of information on citizens since 1500 . Palgrave Macmillan.
 - Jessop, B. (2002). The future of the capitalist state . Polity Press.
@@ -185,6 +238,10 @@ Georgia van Toorn https://orcid.org/0000-0002-6660-8479
 - McKay, C. (2020). Predicting risk in criminal procedure: Actuarial tools, algorithms, AI and judicial decision-making. Current Issues in Criminal Justice , 32 (1), 22 -39. https://doi.org/ 10.1080/10345329.2019.1658694
 - McQuillan, D. (2022). Resisting AI: An anti-fascist approach to arti /uniFB01 cial intelligence . Bristol University Press.
 - Moats, D., &amp; McFall, L. (2019). In search of a problem: Mapping controversies over NHS (England) patient data with digital tools. Science, Technology, &amp; Human Values , 44 (3), 478 -513. https://doi.org/10.1177/0162243918796274
+
+
+<!-- PAGE 15 -->
+
 
 - O ' Neil, C. (2017). Weapons of math destruction: How big data increases inequality and threatens democracy . Broadway Books.
 - Pasquale, F. (2015). The black box society: The secret algorithms that control money and information . Harvard University Press.
@@ -207,6 +264,10 @@ Georgia van Toorn https://orcid.org/0000-0002-6660-8479
 - van Toorn, G., &amp; Cox, L. (2024). Digital citizenship and disability in the COVID era. New Media &amp; Society , 26 (3), 1249 -1267. https://doi.org/10.1177/14614448231201650
 - van Toorn, G., &amp; Scully, J. L. (2023). Unveiling algorithmic power: Exploring the impact of automated systems on disabled people ' s engagement with social services. Disability &amp; Society , 1 -26. https:/ / doi.org/10.1080/09687599.2023.2233684
 - Watts, B., &amp; Fitzpatrick, S. (2018). Welfare conditionality . Routledge.
+
+
+<!-- PAGE 16 -->
+
 
 - Whiteford, P. (2021). Debt by design: The anatomy of a social policy /uniFB01 asco -or was it something worse? Australian Journal of Public Administration , 80 (2), 340 -360. https://doi.org/10.1111/ 1467-8500.12479
 

@@ -1,10 +1,11 @@
 ---
 source_file: Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.pdf
-conversion_date: 2026-02-03T09:26:09.985437
+conversion_date: 2026-02-03T18:57:13.316738
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Schriften zur Medienpädagogik 60
 
 ## Un|Sichtbarkeiten?
@@ -22,6 +23,10 @@ kopaed (München) www.kopaed.de
 <!-- image -->
 
 1
+
+
+<!-- PAGE 2 -->
+
 
 2
 
@@ -69,6 +74,10 @@ ISBN 978-3-96848-752-6
 
 1 Schriftenzuhfu Md
 
+
+<!-- PAGE 3 -->
+
+
 ## Laura S ū na/Dagmar Hoffmann/Anne Mollen Diskriminierung durch Algorithmen Überlegungen zur Stärkung KI-bezogener Kompetenzen
 
 Algorithmische  Systeme  und  Systeme  Künstlicher  Intelligenz  (KI)  treffen in verschiedensten Lebensbereichen mal mehr mal weniger wichtige Entscheidungen: Sie sortieren Online-Suchergebnisse, kuratieren Inhalte auf Social  Media,  diagnostizieren  (vermeintliche)  Krankheiten  oder  prognostizieren  die  Arbeitsmarktintegrationschancen  von  Geflüchteten.  Wenn solche  automatisierten  und  selbstlernenden  Systeme  eingesetzt  werden, kann das zu Diskriminierungen führen sowie bestehende Diskriminierungsmuster  verstärken.  Aus  der  Forschungsliteratur  wissen  wir,  dass  diverse KI-basierte Systeme oftmals Schieflagen (Bias) (re-)produzieren und somit Ungleichheit und Exklusion verstärken. Lopez (2021) hat herausgearbeitet, dass bestimmte Gruppen aufgrund eines 'racial bias' unsichtbar, übermäßig sichtbar oder verzerrt abgebildet werden. Als Folge werden strukturelle Ungleichheiten von Algorithmen teils sogar überbetont.
@@ -76,6 +85,10 @@ Algorithmische  Systeme  und  Systeme  Künstlicher  Intelligenz  (KI)  treffen 
 Studien zeigen, dass Nutzer*innen Algorithmen und KI insgesamt ambivalent bewerten. Sie nehmen oft die algorithmische Kuratierung diverser Dienste nicht wahr bzw. schätzen sie sie nicht als problematisch oder diskriminierend ein (vgl. MeMo:Ki 2021; Overdiek/Petersen 2022;   Cousseran et al. 2023). Für ein selbstbestimmtes Leben mit digitalen Medien ist jedoch ein informierter, reflektierter, kritischer und kompetenter Umgang mit KI notwendig (vgl. Digitales Deutschland 2021). Dies trifft auf Gruppen zu, die von (digitaler) Ungleichheit besonders betroffen sind, wie beispielsweise Migrant*innen, Frauen, Menschen im höheren Lebensalter oder mit niedrigem Bildungsniveau. Sie sind Risiken ausgesetzt, die durch KI-kuratierte Informationen verursacht werden, wie z.B. datengesteuerte Manipulation, Verbreitung von Falsch- und Desinformation und auch die Verstärkung von Stereotypen und Diskriminierung (vgl. Neag et al. 2022; Wang et al. 2024).
 
 Ziel des Beitrags ist es aufzuzeigen, wie digitaler Ungleichheit ausgesetzte Gruppen für algorithmen-basierte Diskriminierung sensibilisiert und zu einem kompetenten Umgang ermächtigt werden können. Somit soll Menschen im Sinne gesellschaftlicher Teilhabe ermöglicht werden, Algorithmen für das Erreichen ihrer alltagsweltlichen Ziele so zu nutzen, dass ihnen dabei keine Nachteile entstehen (vgl. Gruber/Hargittai 2023). Zuerst soll erläutert werden, welche Formen und Ursachen es für algorithmen-basierte Diskriminierung bzw. Diskriminierung durch KI-Systeme gibt. Dem schließt sich ein Einblick in Studien zur Wahrnehmung von algorithmen-basierter
+
+
+<!-- PAGE 4 -->
+
 
 Diskriminierung der Nutzer*innen an. Abschließend werden Überlegungen präsentiert, wie ein selbstbestimmter und kompetenter Umgang mit KI gewährleistet werden könnte.
 
@@ -87,6 +100,10 @@ Der Begriff KI wird im allgemeinen Sprachgebrauch für sehr unterschiedliche aut
 
 Diskriminierung durch Algorithmen beschreibt, wie Nutzer*innen aufgrund ihrer persönlichen Daten wie Einkommen, Bildung, Geschlecht, Alter,  ethnische  Zugehörigkeit  oder  Religion  über  automatisierte  Entscheidungs-  und  maschinelle  Lernsysteme  ungerecht,  unethisch  oder  einfach
 
+
+<!-- PAGE 5 -->
+
+
 nur anders behandelt werden (vgl. Criado/Such 2019: 82). Mit Diskriminierung werden Personen bestimmte Merkmale zugeschrieben, auf deren Grundlage  sich  wiederum  Gruppen  bilden,  in  die  Personen  eingeordnet werden. Wenn Personen aufgrund dieser Einordnung anders und insbesondere weniger vorteilhaft behandelt werden, wirkt sich dies nachteilig auf Teilhabe, Handlungs- und Selbstbestimmungsmöglichkeiten aus. Algorithmen-basierte Diskriminierung kann, wie jede Form von Diskriminierung, auf der Grundlage von direkten und indirekten Merkmalen erfolgen.
 
 Die  Ursachen  für  algorithmen-basierte  Diskriminierung können  sowohl (1) in den verwendeten Daten, (2) im Algorithmus selbst als auch (3) in der Art und Weise, wie dieser verwendet wird, liegen. Im Folgenden werden diese drei Punkte näher beleuchtet:
@@ -94,10 +111,18 @@ Die  Ursachen  für  algorithmen-basierte  Diskriminierung können  sowohl (1) i
 - (1)   Diskriminierung  auf  der  Ebene  der verwendeten  Trainingsdaten .  Das Phänomen 'Sample Bias'  beschreibt,  dass  die  Ergebnisse  algorithmischer Entscheidungssysteme durch eine unvollständige oder nicht-repräsentative  Zusammensetzung  der  Trainingsdatensätze  verzerrt  sind. Ein Beispiel dafür ist die Gesichtserkennungssoftware, die in der Vergangenheit ► weiße Männer besser als ► Schwarze Frauen erkannt hat. Daten sind in der Regel nicht neutral und spiegeln (Macht-)Verhältnisse der  Gesellschaft  wider  (vgl.  AlgorithmWatch.Ch  2023:  4).  Das  heißt, auch selbst, wenn ein Trainingsdatensatz die soziale Realität gut abbildet, ist er nicht frei von Strukturen sozialer Ungleichheit: Wenn die Input-Daten eines algorithmischen Entscheidungssystems Aussagen über soziale Verhältnisse machen und diese Verhältnisse aber in der Realität von struktureller Ungleichheit geprägt sind, dann werden diese strukturellen Ungleichheiten ebenfalls im Output des Algorithmus reproduziert (vgl.  Rentsch  2023:  31).  Zudem sind Informationen und Wissen von und  über  Minderheiten  oft  seltener  in  Datensätzen  vertreten.  Somit sind Daten über manche Gesellschaftsgruppen verfügbar, über andere jedoch nicht.
 - (2)   Diskriminierung auf der Ebene des algorithmischen Modells .  Der Kern eines algorithmischen Entscheidungssystems besteht in der Berechnung von  Zusammenhängen  zwischen  Input-Daten  und  Output-Variablen. Da diese Entscheidungen in der Regel auf Grundlage statistischer Korrelationen getroffen werden, kann es hier durch die Funktionsweise des algorithmischen  Entscheidungssystems  selbst  dann  zu  diskriminierenden Urteilen  kommen, wenn auf den ersten Blick in den verwendeten Daten gar keine Informationen über das diskriminierungsrelevante Merkmal enthalten sind (vgl. ebd.: 32). Hier werden die sogenannten Proxy-Variablen bedeutsam, Variablen die stellvertretend für andere Va-
 
+
+<!-- PAGE 6 -->
+
+
 - riablen stehen (zum Beispiel, wenn diese nicht direkt beobachtbar oder messbar sind) (vgl. AlgorithmWatch.Ch 2023: 6). So dürfte ein algorithmisches Entscheidungssystem, das in Bewerbungsprozessen genutzt wird, beispielsweise nicht Personen auf Grundlage ihres Alters ablehnen, da Alter nach Allgemeinem Gleichbehandlungsgesetz (AGG) ein geschütztes Merkmal ist. Als Proxy-Variable könnte das System aber die Dauer der bisherigen Berufserfahrung der Person nutzen, um dennoch ältere Menschen zu identifizieren und aus dem Bewerbungsprozess auszuschließen (vgl.  Digital  Autonomy  Hub 2022: 8). Zudem können in der  Modellarchitektur,  und  nicht  nur  in  den  genutzten  Datensätzen, diskriminierende Outputs der Systeme angelegt sein.
 - (3)   Diskriminierung auf der Ebene der Einbettung und Anwendung des algorithmischen  Systems  im  gesellschaftlichen  Kontext .  Algorithmische Systeme liefern Ergebnisse, die zu Lösungen und Entscheidungen beitragen sollen. Inwiefern sie das tun, hängt unter anderem davon ab, wie Anwender*innen und Entscheidungsträger*innen der Systeme die Ergebnisse  interpretieren  und  ggf.  hinterfragen.  Rentsch  (2023:  33) betont, dass trotz der Intransparenz und fehlenden Erklärbarkeit von KI-Systemen  algorithmisch  berechnete  Entscheidungen  grundsätzlich ein großes gesellschaftliches Vertrauen genießen. Menschen tendieren dazu, algorithmen-basierte Systeme in ihrer Leistungsfähigkeit zu überschätzen und sich auf Empfehlungen durch diese zu verlassen. Als Folge dessen passiert es, dass Menschen die Outputs von Algorithmen diskriminierend einsetzen, obwohl die Algorithmen selbst nicht diskriminierend wirken. Diese Tendenz wird als 'Automation Bias' bezeichnet. Dafür benötigen die Beteiligten Kompetenzen, um die Ergebnisse des Systems einschätzen und bewerten sowie die Empfehlungen und Prognosen angemessen hinterfragen zu können (vgl. AlgorithmWatch.Ch 2023: 5).
 
 Einzelne Faktoren der algorithmen-basierten Diskriminierung stehen miteinander in Wechselwirkung und lassen sich nicht immer trennscharf nur einer  der  Ebenen zuordnen (vgl. Rentsch 2023: 30-31). Diskriminierung kann oft auch aus der Kombination unterschiedlicher geschützter Merkmale  entstehen,  beispielsweise,  wenn Menschen gleichzeitig aufgrund ihrer Geschlechtsidentität und ihrer ethnischen oder sozialen Herkunft diskriminiert werden. Zudem können sogenannte 'lernende Systeme', die selbst Muster identifizieren, neue Merkmale mit diskriminierenden Folgen hervorbringen  (vgl.  AlgorithmWatch.Ch  2023:  6).  Des  Weiteren  betont  die Nichtregierungsorganisation  AlgorithmWatch,  dass  Diskriminierungen  in
+
+
+<!-- PAGE 7 -->
+
 
 den  verschiedensten  Anwendungsbereichen  stattfinden  können  und  alle Gruppen betreffen - jene, die durch das bestehende Diskriminierungsverbot geschützt sind, sowie andere, die dies nicht sind, weil das Merkmal, aufgrund  dessen  die  Mitglieder  der  Gruppe  diskriminiert  werden,  nicht rechtlich  aufgeführt  ist  (z.B.  Gewicht,  Rechtsstatus)  (vgl.  ebd.;  Wachter 2022).  Besonders  anfällig  für  algorithmen-basierte  Diskriminierung  sind solche Bereiche wie der Zugang zu Sozialleistungen, der Bildungsbereich, der Arbeits- sowie Gesundheitsbereich, die Justiz und die vorausschauende Polizeiarbeit/predictive policing (vgl. AlgorithmWatch.Ch 2023).
 
@@ -107,11 +132,19 @@ Diskriminierung durch ein algorithmisches System ist oft sowohl für Betroffene 
 
 In einer qualitativen Studie zu Diskriminierungserfahrungen von Menschen mit Migrationsgeschichte, bei der 25 Personen in Gruppendiskussionen befragt wurden, zeigte sich (vgl. S ū na/Hoffmann 2024), dass einige Teilnehmer*innen den Umgang mit algorithmischen Medien als störend, unangenehm  oder  zumindest  irritierend  empfanden.  Als  unerwünscht wurde die algorithmische Klassifizierung auf der Grundlage der kulturellen  Zugehörigkeit  beschrieben  sowie  die  automatische  Zuordnung  der
 
+
+<!-- PAGE 8 -->
+
+
 Nutzer*innen  zu  einem  Mehrheitssprachensystem  (Wörter  und  Namen werden ungefragt angepasst) sowie die Nivellierung und Standardisierung auf  der  Grundlage  von  Kriterien,  die  vom  KI-System  festgelegt  wurden. Zuweilen sind die befragten Nutzer*innen aber auch zufrieden damit, wie sie von Empfehlungsalgorithmen klassifiziert werden, empfinden sie als bequem und praktisch (z.B. wenn ihnen bei den Streamingdiensten bestimmte Filmvorschläge gemacht werden). Obgleich eine gelegentliche Überbewertung ihrer Interessen durch Algorithmen Irritationen hervorruft, haben nur wenige der Befragten der fünf Fokusgruppen von explizit diskriminierenden Auswirkungen auf die Nutzer*innenprofilerstellung berichtet. Algorithmen-basierte Zuschreibungen einer bestimmten kulturellen Zugehörigkeit in  Form  von  Empfehlungsalgorithmen von Streaming- oder Dating-Apps sowie  das  Nicht-dazu-gehören,  was  durch  die  KI-basierte  Autokorrektur ausländisch klingender Namen suggeriert wird, wird eher relativiert.
 
 Nur  wenige  der  Teilnehmer*innen  der  genannten  Studie  von  S ū na und  Hoffmann  (2024)  fühlen  sich  motiviert  und  in  der  Lage,  aktiv  auf KI-Technologien  einzuwirken,  um  eine  Ungleichbehandlung  zu  minimieren resp. zu verhindern. Bei den meisten Nutzer*innen hat sich eine Art digitale Resignation eingestellt (vgl. auch Draper/Turow 2019), sie sehen kaum Interventionsmöglichkeiten. Ferner verfügen sie über begrenzte Fähigkeiten, Einstellungen zu verändern oder Umprogrammierungen vorzunehmen, um KI-Technologie zweckmäßiger und diskriminierungsfreier zu gestalten.  In  den  Fokusgruppen  wurde  deutlich,  dass  es  an  einer  Sensibilisierung  für  Diskriminierungspotenziale  mangelt,  wobei  Menschen mit Migrationsgeschichte ein besonders großes Risiko haben, Ungleichheiten und Ausgrenzungen bei bestimmten digitalen Anwendungen zu erfahren. Grund dafür könnte sein, dass es an vergleichenden Negativbeispielen bei der Nutzung von KI-Systemen fehlt, zu denen sie ihre eigene Nutzungsweise und zugehörige Erfahrungen in Beziehung setzen könnten (auch im Sinne geteilter Betroffenheit). Zudem werden diskriminierende Potenziale von KI-Technologien im öffentlichen Diskurs kaum angesprochen (z.B. das Online-Profiling und Targeting in der öffentlichen Verwaltung, in der Privatwirtschaft oder auf Online-Plattformen) (vgl. S ū na/Hoffmann 2024), bzw. es wird darüber noch zu wenig aufgeklärt.
 
 Aus den wenigen vorliegenden Studien wird deutlich, dass es in der Wahrnehmung algorithmen-basierter Diskriminierung soziodemografische Unterschiede gibt und das unter anderem Jugendliche dafür sensibilisierter sind als ältere Nutzer*innengruppen. So zeigt die Studie von Schober und Kolleg*innen  (2022),  dass  Jugendliche  über  Diskriminierungsrisiken  auf Plattformen  mit  Algorithmischen  Empfehlungssystemen  (AES)  informiert
+
+
+<!-- PAGE 9 -->
+
 
 sind und sie Diskriminierung dabei auf zwei Ebenen wahrnehmen: Einerseits würden - so die Jugendlichen - durch Algorithmen diskriminierende Inhalte wie ► LGBTQIA* -feindliche Videos oder Inhalte, in denen bestimmte  Nationalitäten,  Religionen  oder  Menschen  mit  Behinderung  beleidigt werden, verstärkt zirkulieren. Somit würden solche Inhalte mehr Aufmerksamkeit erlangen. Andererseits würden Algorithmen Inhalte mancher Gesellschaftsgruppen besonders stark verbreiten und somit andere Gruppen ausschließen. Beispielsweise werden nicht-migrantische, traditionell agierende Menschen der Mehrheitsgesellschaft und deren Werte sowie Schönheitsideale durch AES bevorzugt. Darauf verweist auch Bozda ğ (2022) in ihrer Untersuchung und konnte zeigen, dass migrantische Jugendliche in Online-Umgebungen Ungleichbehandlung aufgrund ihrer Herkunft erleben (siehe auch den Beitrag von Bozda ğ in diesem Band).
 
@@ -125,6 +158,10 @@ Um eine Sensibilisierung  für  mögliche  Diskriminierung  zu  erreichen  und D
 - Q die  Fähigkeit,  mit  der  Prägekraft  von  KI-Anwendungen  umzugehen sowie diese ggf. kreativ zu bewältigen und  zu beeinflussen ,  sowie  KIAnwendungen sozial verantwortlich zu nutzen .
 
 Insgesamt werden hier drei Kompetenzdimensionen angesprochen: die kognitive, die affektive und die handlungsbezogene Dimension (siehe Abb. 1).  Der  Umgang mit KI-Technologien betrifft zum Beispiel im kognitiven Bereich die Wahrnehmung und Bedeutungskonstruktion über KI sowie im affektiven Bereich die emotionale und affektive Einordnung des Umgangs
+
+
+<!-- PAGE 10 -->
+
 
 GLYPH&lt;c=3,font=/JPELGB+Calibri&gt;
 
@@ -146,6 +183,10 @@ Medienpädagogische Arbeit kann mit dem Ziel der Stärkung von KI-bezogenen Komp
 
 Folgende,  an  Kalogeropoulos  et  al.  (2021)  angelehnte,  Übersicht  beschreibt die Besonderheiten algorithmen-basierter Diskriminierung, die für die
 
+
+<!-- PAGE 11 -->
+
+
 Wahrnehmung von KI-Systemen in digitalen Medienumgebungen bedeutsam sein  können (siehe Tab. 1).  Dabei  werden vorwiegend kognitive sowie kritisch-reflexive Fähigkeiten angesprochen, zudem gewinnt auch die affektive Dimension an Bedeutung. An diese Kompetenzdimensionen können mögliche Handlungspraktiken anschließen, die weiter unten erläutert werden.
 
 Tab. 1. Besonderheiten algorithmen-basierter Diskriminierung und entsprechender Medienkompetenzdimension (Quelle: Eigene Darstellung in Anlehnung an Kalogeropoulos et al. 2021: 9)
@@ -160,6 +201,10 @@ Tab. 1. Besonderheiten algorithmen-basierter Diskriminierung und entsprechender 
 | Scheinbar objektiv                                       | Entscheidungen algorithmischer Systeme 'wirken' objektiv                                                                                                                                                | Affektive Fähigkeiten                         |
 | Expliziert                                               | Algorithmen-basierte Diskriminierung spie- gelt bestehende, teils versteckte Diskrimi- nierungsstrukturen wider. Letztere werden damit technisch expliziert und für eine öffentliche Debatte zugänglich | Kritisch- reflexive Fähigkeiten               |
 
+
+<!-- PAGE 12 -->
+
+
 Weitere Aspekte  und  Fähigkeiten  für  die  Sensibilisierung  über  mögliche algorithmen-basierte Diskriminierung sind (ohne einen Anspruch auf Vollständigkeit):
 
 - Q Die Beschäftigung mit algorithmischen Systemen, ihren Fallstricken und Besonderheiten, hilft nicht nur verstehen, in welchen Bereichen diese zum Einsatz kommen (können), sondern sensibilisiert darüber hinaus für  Folgewirkungen, die bei ihrer Anwendung auftreten können (vgl. Kalogeropoulos et al. 2021: 4).
@@ -169,6 +214,10 @@ Weitere Aspekte  und  Fähigkeiten  für  die  Sensibilisierung  über  möglich
 - Q Ein kritisches Verständnis über die Beziehung zwischen privaten Daten und algorithmischem Output entwickeln können (vgl. Gruber/Hargittai 2023: 11).
 
 Welche  Handlungsstrategien  können  nun  Nutzer*innen,  aufbauend  auf ihrem  Wissen  über  Algorithmen  und  KI-Systeme,  in  ihrem  alltäglichen Medienhandeln  umsetzen,  damit  algorithmen-basierte  Diskriminierung adressiert werden kann? Auch wenn allgemein die Affordanzen sowie Infrastrukturen  der  meisten  Plattformen  die  Gestaltungsmöglichkeiten  für ,einfache' Nutzer*innen prinzipiell doch eher stark eingrenzen und es den Anschein haben mag, dass die Nutzer*innen einen Teil ihrer Handlungsfähigkeit einbüßen, sobald sie in algorithmische Prozesse involviert sind, so gibt es doch auch Möglichkeiten der aktiven Beteiligung und Steuerung im Umgang mit KI-Technologien. KI-Anwendungen können und werden zuweilen von Nutzer*innen eigensinnig, kreativ und produktiv genutzt. Unter anderem lassen sich folgende Fähigkeiten zum kompetenten Umgang mit Algorithmen und KI-Systemen ausmachen bzw. sind wünschenswert:
+
+
+<!-- PAGE 13 -->
+
 
 - Q Kreativer  Umgang  mit  KI-Technologien  als  Praktiken  des  Austricksens  des  Algorithmus.  Das  sind  auf  alltägliches  Nutzungswissen  basierende  Bemühungen,  die  Online-Ausgabe  so  zu  beeinflussen,  dass Nutzer*innen ihre Ziele erreichen können. Beispielsweise, wenn man bei  der  Online-Suche  unterschiedliche  Webbrowser  verwendet  oder bei einer Dating-App aktiv versucht, die Anzeige zu verändern, indem man bewusst unpassende Vorschläge ablehnt und wegklickt. Studien zeigen, dass einige, insbesondere jüngere Befragte diese Praktik ganz selbstverständlich anwenden (vgl. S ū na/Hoffmann 2024).
 - Q Gezielte  Nutzung  der  plattformeigenen  Gestaltungsmöglichkeiten  im Kontext von Datenschutz. Dies kann sich von bewusster Begrenzung der Zugriffsrechte, beispielsweise bei Facebook oder Instagram, bis hin zur Nutzung des Inkognito-Modus in einem Web-Browser erstrecken.
@@ -181,6 +230,10 @@ Welche  Handlungsstrategien  können  nun  Nutzer*innen,  aufbauend  auf ihrem  
 
 Die Ausführungen haben klar gemacht, dass es sich bei algorithmen-basierter  Diskriminierung um ein vielschichtiges und komplexes Phänomen handelt, dass sowohl bestehende Medienkompetenzansätze als auch Antidiskriminierungsgesetzgebung herausfordert. Die Politik hat wiederholt, beispielsweise durch die Datenethikkommission der Bundesregierung 1 , bescheinigt bekommen, dass das Allgemeine Gleichbehandlungsgesetz (AGG) in Deutschland nicht ausreichend vor Diskriminierung durch Algorithmen schützt. Diese Lücke besteht, obwohl Diskriminierung durch Algorithmen durch die technische Skalierung potenziell massenhaft erfolgen kann und
 
+
+<!-- PAGE 14 -->
+
+
 zugleich  oft  im  Verborgenen  stattfindet,  ohne  dass  sich  die  Betroffenen überhaupt darüber bewusst werden. Genau aus diesem Grund braucht es ein Ineinandergreifen von regulatorischer Anpassung und Weiterentwicklung von Medienkompetenzansätzen. Denn es wäre falsch, die Last gegen algorithmen-basierte Diskriminierung vorzugehen, alleinig auf die Schultern der Betroffenen zu laden. Diese Menschen sind in der Regel bereits besonders schutzbedürftig, so dass es eines starken regulatorischen Rahmens bedarf. Dennoch kann auch ein erfolgreicher Schutz vor Diskriminierung im Rahmen des AGG nur erfolgen, wenn Menschen für algorithmen-basierte Diskriminierung sensibilisiert sind. Mit anderen Worten, sie müssen über entsprechende Kompetenzen verfügen, um überhaupt bei einer Andersbehandlung an Algorithmen als mögliche Verursacher zu denken und diese beispielsweise gezielt versuchen zu überprüfen. Der von offiziellen Stellen geforderte Ausbau von Beratungsstrukturen, um besser gegen algorithmenbasierte Diskriminierung vorzugehen, kann daher nur funktionieren, wenn Menschen mit einem Anfangsverdacht diese Beratungsstellen aufsuchen. Für diese Kompetenzentwicklung braucht es auch den politischen Willen, eine umfassende medienpädagogische Arbeit zu fördern und zu finanzieren, die sich nicht nur auf den Kinder- und Jugendbereich fokussiert. Denn Menschen in allen Lebensbereichen können von algorithmen-basierter Diskriminierung betroffen sein. Durch die entsprechende Sensibilisierung können auch zivilgesellschaftliche Organisationen ihre Unterstützungsangebote deutlich besser koordinieren und ein möglicherweise zu etablierendes Verbandsklagerecht erfolgreich nutzen. Hierfür braucht es aber Präzedenzfälle aus der alltäglichen Lebenswelt von Betroffenen - deren kritisches Reflexionsvermögen Dreh- und Angelpunkt für ein zielgerichtetes Vorgehen gegen algorithmen-basierte Diskriminierung bleibt.
 
 ## Anmerkung
@@ -190,6 +243,10 @@ zugleich  oft  im  Verborgenen  stattfindet,  ohne  dass  sich  die  Betroffenen
 ## Literatur
 
 AlgorithmWatch.Ch (2023): Positionspapier - Schutz vor algorithmischer Diskriminierung. Abrufbar unter: https://algorithmwatch.ch/de/diskriminierende-algorithmen/ [Stand: 01.07 .2024].
+
+
+<!-- PAGE 15 -->
+
 
 - Bozda ğ , Çi ğ dem (2022): Inclusive Media Education in the Diverse Classroom: A Participatory Action Research in Germany. In: Media and Communication, 10(4), 305-316.
 - Cousseran, Laura/Lauber, Achim/Herrmann, Simon/Brüggen, Niels (2023): Kompass: Künstliche Intelligenz und Kompetenz 2023. Einstellungen, Handeln und Kompetenzentwicklung im Kontext von KI. München: kopaed.
@@ -205,6 +262,10 @@ AlgorithmWatch.Ch (2023): Positionspapier - Schutz vor algorithmischer Diskrimin
 - Long, Duri/Magerko, Brian (2020): What is AI literacy? Competencies and design considerations. In: Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems. CHI '20: CHI Conference on Human Factors in Computing Systems. Honolulu HI USA: ACM, 1-16.
 - Lopez, Paola (2021): Diskriminierung durch Data Bias. Künstliche Intelligenz kann soziale Ungleichheiten verstärken. In: WZB Mitteilungen, Heft 171, 26-28.
 
+
+<!-- PAGE 16 -->
+
+
 - MeMo:KI  (2020):  Meinungsmonitor  Künstliche  Intelligenz.  Künstliche  Intelligenz und  Diskriminierung.  Factsheet  Nr.  2.  Abrufbar  unter:  www.cais-research.de/ wp-content/uploads/Factsheet-2-Diskriminierung.pdf [Stand: 01.07.2024].
 - Neag, Annamária/Bozda ğ , Çi ğ dem/Leurs, Koen (2022): Media Literacy Education for Diverse Societies. In: Neag, A./Bozda ğ , Ç./Leurs, K.: Oxford Research Encyclopedia of Communication. Oxford University Press, 1-22.
 - Overdiek,  Markus/Petersen,  Thomas  (2022):  Was  Deutschland  über  Algorithmen und Künstliche Intelligenz weiß und denkt. Ergebnisse einer repräsentativen Bevölkerungsumfrage: Update 2022. Bertelsmann Stiftung. Abrufbar unter: www. bertelsmann-stiftung.de/fileadmin/files/BSt/Publikationen/GrauePublikationen/ DG\_Was\_Deutschland\_ueber\_Algorithmen\_KI.pdf [Stand: 01.07.2024].
@@ -219,11 +280,19 @@ AlgorithmWatch.Ch (2023): Positionspapier - Schutz vor algorithmischer Diskrimin
 
 Die Publikation ist im Rahmen des Projekts Digitales Deutschland | Monitoring zur Digitalkompetenz der Bevölkerung entstanden. Das Projekt wird vom Bundesministerium für Familie, Senioren, Frauen und Jugend gefördert und vom JFF - Institut für Medienpädagogik in Forschung und Praxis in Kooperation mit der Universität Siegen und der PH Ludwigsburg durchgeführt.
 
+
+<!-- PAGE 17 -->
+
+
 ## Lizenz
 
 Der Artikel steht unter der Creative Commons Lizenz CC BY-SA 4.0 . Die Namen der Urheberinnen sollen bei einer Weiterverwendung genannt werden. Wird das Material mit anderen Materialien zu etwas Neuem verbunden oder verschmolzen, sodass das ursprüngliche Material nicht mehr als solches erkennbar ist und die unterschiedlichen Materialien nicht mehr voneinander zu trennen sind, muss die bearbeitete Fassung bzw. das neue Werk unter derselben Lizenz wie das Original stehen. Details zur Lizenz: https://creativecommons.org/licenses/by-sa/4.0/legalcode.
 
 Einzelbeiträge werden unter www.gmk-net.de/publikationen/artikel veröffentlicht.
+
+
+<!-- PAGE 18 -->
+
 
 ## Abled bodied
 
@@ -253,6 +322,10 @@ Cisnormativität ist ein Teil von Heteronormativität. Es wird davon ausgegangen
 
 Der Begriff 'endogeschlechtlich' oder 'endo' (griech. 'éndon': innen, innerhalb) beschreibt Menschen, die nicht inter* sind, das heißt, deren Kör-
 
+
+<!-- PAGE 19 -->
+
+
 per sich nach medizinischen Normen vermeintlich eindeutig als nur weiblich oder nur männlich einordnen lassen.
 
 ## FLINTA/MINTA
@@ -279,6 +352,10 @@ Steht für Lesbian (Lesbisch), Gay (Schwul), Bisexual (Bisexuell), Transgender, 
 
 Bedeutet, über eine Person mit falschen Pronomen oder falsch gegenderten Begriffen zu sprechen oder eine falsche Anrede zu verwenden, die nicht dem Geschlecht der Person entspricht. Das passiert zum Beispiel, wenn eine nichtbinäre Person mit 'Frau' angeredet wird. Personen können absichtlich oder unabsichtlich eine Person misgendern.
 
+
+<!-- PAGE 20 -->
+
+
 ## Nonbinär
 
 Als nonbinär können sich Menschen bezeichnen, die nicht (oder nicht zu 100%) Mann oder Frau sind. Stattdessen ist ihr Geschlecht beispielsweise beides gleichzeitig, zwischen männlich und weiblich, oder weder männlich noch weiblich. Manche nichtbinäre Menschen verorten sich ganz außerhalb des binären Systems, manche haben gar kein Geschlecht (agender) oder haben eine Geschlechtsidentität, die sich immer wieder ändert (genderfluid).
@@ -304,6 +381,10 @@ Ein  breiter  Sammelbegriff  für  Menschen,  die  über  die  traditionellen  G
 Menschen, denen bei der Geburt nicht das männliche Geschlecht zugewiesen wurde, die aber männlich oder teilweise männlich sind, können sich als transmaskulin bezeichnen.
 
 Ein Mann, dem bei der Geburt nicht das männliche Geschlecht zugewiesen wurde, ist ein trans Mann.
+
+
+<!-- PAGE 21 -->
+
 
 ## Quellen des Glossars
 

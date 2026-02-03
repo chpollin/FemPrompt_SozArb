@@ -1,10 +1,11 @@
 ---
 source_file: Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.pdf
-conversion_date: 2026-02-03T08:58:41.428937
+conversion_date: 2026-02-03T18:29:23.288662
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Unequal Voices: How LLMs Construct Constrained Queer Narratives
 
 Atreya Ghosal
@@ -41,6 +42,10 @@ In this work, we analyze and describe the narrow, constrained representation of 
 
 1 The code to replicate our experiments is forthcoming.
 
+
+<!-- PAGE 2 -->
+
+
 Figure 1: Llama-3.1-8B-Instruct when asked to assume the persona of a man, vs. when asked to assume the persona of a queer man. While the second example is not overtly offensive, the focus of the queer man persona is on the diversity and inclusivity of his job. While these are positive terms, a repeated focus on these themes for queer personas indicates a systematic association bias at play.
 
 <!-- image -->
@@ -58,6 +63,10 @@ For example, as we will quantify in the following sections, LLMs can default to 
 Discursive Othering. A third type of subtle bias features LLMs 'overcorrecting' by foregrounding concepts such as diversity, inclusion, or community participation in response to prompts mentioning marginalized identities, regardless of contextual relevance.
 
 Additionally, the set of topics discussed in response to prompts mentioning marginalized identities tends to be focused around common ideas
+
+
+<!-- PAGE 3 -->
+
 
 and stereotypes about the group, while socially dominant identities - considered the default - are afforded the full variety of human experience. This divergence in topics discussed is particularly notable when the setting mentioned in the prompts is ostensibly an identity-neutral, everyday setting. For example, in an office setting, people of all identities converse about the common topics of reports, deadlines, goals, performance, etc.. While merely differentiating- rather than derogating- marginalized identity groups in model outputs present neither representational nor allocational harms, it nevertheless ends up othering (Spivak, 1985; Jensen, 2011; Mik-Meyer, 2016) groups in otherwise neutral settings. Even under the guise of positive attention, this marks individuals and groups of individuals as distinct from the majority group, perpetuating subtle forms of social marginalization.
 
@@ -93,6 +102,10 @@ A social context c represents a situation that forms the basis of an interaction
 We consider five social contexts: Housing, Medical, Persona, Recommendation, and Work. Table 1 describes them in more detail and Appx. B lists the prompt templates associated with them.
 
 We also vary the role simulated by the model. For Identity=User prompts, the model simulates a person (of unspecified identity) talking to a user whose identity is specified by the prompt. An example of such a prompt is: You are a doctor talking to a patient who is [identity phrase] . For Identity=Model prompts, on the other hand,
+
+
+<!-- PAGE 4 -->
+
 
 Figure 2: Frequency of occurrence of the terms "respect", "diverse", "inclusive" or "fair" for queer vs. nonqueer subject response. All models used are instructionfine-tuned versions.
 
@@ -130,6 +143,10 @@ The gold standard for assessing LLM outputs, particularly in terms of social and
 
 While the qualitative analysis described above is manually done on a small subset of the dataset, we scale up this analysis by formulating straightfor-
 
+
+<!-- PAGE 5 -->
+
+
 ward YES/NO questions based on the above themes observed in the text and use the LLM-as-a-judge approach to evaluate the presence of the above themes in the entire dataset. Following the recommendations of Chiang and Lee (2023) for better automatic evaluation with LLMs, we ask the model to justify its answer for each question. We give four in-context examples with accompanying explanations to guide our LLM-Judge. Based on manual examination, we used Llama-3.1-8B-Instruct as our LLM-Judge.
 
 Weformulate the following questions to examine Hypothesis H2 :
@@ -165,6 +182,10 @@ Similar patterns to the scores in § 6 are observed for responses to this questi
 ## 8 Hypothesis 4: The Full Spectrum of Human Experience
 
 Our final hypothesis H4 asks if the topics discussed for one identity group are different from another. To measure this, we first need to identify the topics, or more precisely, the distribution of topics associated with model responses. In this section, we will first look at how we can map responses to topic distributions and then define a metric, Topic Divergence , that characterizes the difference between
+
+
+<!-- PAGE 6 -->
+
 
 Figure 3: The heatmaps show δ queer = LLMJudge ( QUEER ) -LLMJudge ( NOT-QUEER ) , thedifference between LLM-judge scores for queer vs. non-queer subject outputs across contexts and prompt types. The high δ queer across questions shows a significant difference in themes. This substantiates H2 and H3 . Each plot is a heatmap for a given question and prompt type (Identity = User/Model)
 
@@ -210,6 +231,10 @@ It is also important to examine whether the score associated with one group is m
 
 2 Recall that the JS-divergence of each distribution is the mean of the KL-divergences of each distribution from their equally weighted mixture. We could use any divergence measure between topic distributions to define our metric. We choose to use the JS-divergence because it is symmetric. Future work may be able to motivate and justify other measures of divergence.
 
+
+<!-- PAGE 7 -->
+
+
 ## 8.1 Results
 
 Fig. 4 reports the topic divergences. All models tested have a statistically significant level of divergence between QUEER-subject and NOT-QUEERsubject responses across most categories (p &lt; 0.01).
@@ -254,6 +279,10 @@ Our work aligns closely with the work of (Cheng et al., 2023). They study carica
 
 ## , medical, model
 
+
+<!-- PAGE 8 -->
+
+
 Figure 4: Topic Divergence scores describing the difference in the probability distribution across topics discussed in LLM outputs for QUEER vs. NOT-QUEER identity groups.
 
 <!-- image -->
@@ -287,6 +316,10 @@ We focus our study on gender and sexuality when LLMs simulate or converse with q
 ## Acknowledgments
 
 We thank the members of the UtahNLP group for their valuable feedback throughout this project. Ashim Gupta was supported by the Bloomberg Data Science Ph.D. Fellowship. The support and resources from the Center for High Performance Computing at the University of Utah are gratefully acknowledged.
+
+
+<!-- PAGE 9 -->
+
 
 ## Risks and Intended Use
 
@@ -323,7 +356,15 @@ Kate Crawford. 2017. The Trouble with Bias.
 - Sourojit Ghosh, Nina Lutz, and Aylin Caliskan. 2025. 'I Don't See Myself Represented Here at All': User Experiences of Stable Diffusion Outputs Containing Representational Harms across Gender Identities and Nationalities , page 463-475. AAAI Press.
 - Aaron Grattafiori, Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad AlDahle, Aiesha Letman, Akhil Mathur, Alan Schelten, Alex Vaughan, Amy Yang, Angela Fan, Anirudh Goyal, Anthony Hartshorn, Aobo Yang, Archi Mitra, Archie Sravankumar, Artem Korenev, Arthur Hinsvark, Arun Rao, Aston Zhang, Aurelien Rodriguez, Austen Gregerson, Ava Spataru, Baptiste Roziere, Bethany Biron, Binh Tang, Bobbie Chern, Charlotte Caucheteux, Chaya Nayak, Chloe Bi, Chris Marra, Chris McConnell, Christian Keller, Christophe Touret, Chunyang Wu, Corinne Wong, Cristian Canton Ferrer, Cyrus Nikolaidis, Damien Allonsius, Daniel Song, Danielle Pintz, Danny Livshits, Danny Wyatt, David Esiobu, Dhruv Choudhary,
 
+
+<!-- PAGE 10 -->
+
+
 Dhruv Mahajan, Diego Garcia-Olano, Diego Perino, Dieuwke Hupkes, Egor Lakomkin, Ehab AlBadawy, Elina Lobanova, Emily Dinan, Eric Michael Smith, Filip Radenovic, Francisco Guzmán, Frank Zhang, Gabriel Synnaeve, Gabrielle Lee, Georgia Lewis Anderson, Govind Thattai, Graeme Nail, Gregoire Mialon, Guan Pang, Guillem Cucurell, Hailey Nguyen, Hannah Korevaar, Hu Xu, Hugo Touvron, Iliyan Zarov, Imanol Arrieta Ibarra, Isabel Kloumann, Ishan Misra, Ivan Evtimov, Jack Zhang, Jade Copet, Jaewon Lee, Jan Geffert, Jana Vranes, Jason Park, Jay Mahadeokar, Jeet Shah, Jelmer van der Linde, Jennifer Billock, Jenny Hong, Jenya Lee, Jeremy Fu, Jianfeng Chi, Jianyu Huang, Jiawen Liu, Jie Wang, Jiecao Yu, Joanna Bitton, Joe Spisak, Jongsoo Park, Joseph Rocca, Joshua Johnstun, Joshua Saxe, Junteng Jia, Kalyan Vasuden Alwala, Karthik Prasad, Kartikeya Upasani, Kate Plawiak, Ke Li, Kenneth Heafield, Kevin Stone, Khalid El-Arini, Krithika Iyer, Kshitiz Malik, Kuenley Chiu, Kunal Bhalla, Kushal Lakhotia, Lauren Rantala-Yeary, Laurens van der Maaten, Lawrence Chen, Liang Tan, Liz Jenkins, Louis Martin, Lovish Madaan, Lubo Malo, Lukas Blecher, Lukas Landzaat, Luke de Oliveira, Madeline Muzzi, Mahesh Pasupuleti, Mannat Singh, Manohar Paluri, Marcin Kardas, Maria Tsimpoukelli, Mathew Oldham, Mathieu Rita, Maya Pavlova, Melanie Kambadur, Mike Lewis, Min Si, Mitesh Kumar Singh, Mona Hassan, Naman Goyal, Narjes Torabi, Nikolay Bashlykov, Nikolay Bogoychev, Niladri Chatterji, Ning Zhang, Olivier Duchenne, Onur Çelebi, Patrick Alrassy, Pengchuan Zhang, Pengwei Li, Petar Vasic, Peter Weng, Prajjwal Bhargava, Pratik Dubal, Praveen Krishnan, Punit Singh Koura, Puxin Xu, Qing He, Qingxiao Dong, Ragavan Srinivasan, Raj Ganapathy, Ramon Calderer, Ricardo Silveira Cabral, Robert Stojnic, Roberta Raileanu, Rohan Maheswari, Rohit Girdhar, Rohit Patel, Romain Sauvestre, Ronnie Polidoro, Roshan Sumbaly, Ross Taylor, Ruan Silva, Rui Hou, Rui Wang, Saghar Hosseini, Sahana Chennabasappa, Sanjay Singh, Sean Bell, Seohyun Sonia Kim, Sergey Edunov, Shaoliang Nie, Sharan Narang, Sharath Raparthy, Sheng Shen, Shengye Wan, Shruti Bhosale, Shun Zhang, Simon Vandenhende, Soumya Batra, Spencer Whitman, Sten Sootla, Stephane Collot, Suchin Gururangan, Sydney Borodinsky, Tamar Herman, Tara Fowler, Tarek Sheasha, Thomas Georgiou, Thomas Scialom, Tobias Speckbacher, Todor Mihaylov, Tong Xiao, Ujjwal Karn, Vedanuj Goswami, Vibhor Gupta, Vignesh Ramanathan, Viktor Kerkez, Vincent Gonguet, Virginie Do, Vish Vogeti, Vítor Albiero, Vladan Petrovic, Weiwei Chu, Wenhan Xiong, Wenyin Fu, Whitney Meers, Xavier Martinet, Xiaodong Wang, Xiaofang Wang, Xiaoqing Ellen Tan, Xide Xia, Xinfeng Xie, Xuchao Jia, Xuewei Wang, Yaelle Goldschlag, Yashesh Gaur, Yasmine Babaei, Yi Wen, Yiwen Song, Yuchen Zhang, Yue Li, Yuning Mao, Zacharie Delpierre Coudert, Zheng Yan, Zhengxing Chen, Zoe Papakipos, Aaditya Singh, Aayushi Srivastava, Abha Jain, Adam Kelsey, Adam Shajnfeld, Adithya Gangidi, Adolfo Victoria, Ahuva Goldstand, Ajay Menon, Ajay Sharma, Alex Boesenberg, Alexei Baevski, Allie Feinstein, Amanda Kallet, Amit San- gani, Amos Teo, Anam Yunus, Andrei Lupu, Andres Alvarado, Andrew Caples, Andrew Gu, Andrew Ho, Andrew Poulton, Andrew Ryan, Ankit Ramchandani, Annie Dong, Annie Franco, Anuj Goyal, Aparajita Saraf, Arkabandhu Chowdhury, Ashley Gabriel, Ashwin Bharambe, Assaf Eisenman, Azadeh Yazdan, Beau James, Ben Maurer, Benjamin Leonhardi, Bernie Huang, Beth Loyd, Beto De Paola, Bhargavi Paranjape, Bing Liu, Bo Wu, Boyu Ni, Braden Hancock, Bram Wasti, Brandon Spence, Brani Stojkovic, Brian Gamido, Britt Montalvo, Carl Parker, Carly Burton, Catalina Mejia, Ce Liu, Changhan Wang, Changkyu Kim, Chao Zhou, Chester Hu, ChingHsiang Chu, Chris Cai, Chris Tindal, Christoph Feichtenhofer, Cynthia Gao, Damon Civin, Dana Beaty, Daniel Kreymer, Daniel Li, David Adkins, David Xu, Davide Testuggine, Delia David, Devi Parikh, Diana Liskovich, Didem Foss, Dingkang Wang, Duc Le, Dustin Holland, Edward Dowling, Eissa Jamil, Elaine Montgomery, Eleonora Presani, Emily Hahn, Emily Wood, Eric-Tuan Le, Erik Brinkman, Esteban Arcaute, Evan Dunbar, Evan Smothers, Fei Sun, Felix Kreuk, Feng Tian, Filippos Kokkinos, Firat Ozgenel, Francesco Caggioni, Frank Kanayet, Frank Seide, Gabriela Medina Florez, Gabriella Schwarz, Gada Badeer, Georgia Swee, Gil Halpern, Grant Herman, Grigory Sizov, Guangyi, Zhang, Guna Lakshminarayanan, Hakan Inan, Hamid Shojanazeri, Han Zou, Hannah Wang, Hanwen Zha, Haroun Habeeb, Harrison Rudolph, Helen Suk, Henry Aspegren, Hunter Goldman, Hongyuan Zhan, Ibrahim Damlaj, Igor Molybog, Igor Tufanov, Ilias Leontiadis, Irina-Elena Veliche, Itai Gat, Jake Weissman, James Geboski, James Kohli, Janice Lam, Japhet Asher, Jean-Baptiste Gaya, Jeff Marcus, Jeff Tang, Jennifer Chan, Jenny Zhen, Jeremy Reizenstein, Jeremy Teboul, Jessica Zhong, Jian Jin, Jingyi Yang, Joe Cummings, Jon Carvill, Jon Shepard, Jonathan McPhie, Jonathan Torres, Josh Ginsburg, Junjie Wang, Kai Wu, Kam Hou U, Karan Saxena, Kartikay Khandelwal, Katayoun Zand, Kathy Matosich, Kaushik Veeraraghavan, Kelly Michelena, Keqian Li, Kiran Jagadeesh, Kun Huang, Kunal Chawla, Kyle Huang, Lailin Chen, Lakshya Garg, Lavender A, Leandro Silva, Lee Bell, Lei Zhang, Liangpeng Guo, Licheng Yu, Liron Moshkovich, Luca Wehrstedt, Madian Khabsa, Manav Avalani, Manish Bhatt, Martynas Mankus, Matan Hasson, Matthew Lennie, Matthias Reso, Maxim Groshev, Maxim Naumov, Maya Lathi, Meghan Keneally, Miao Liu, Michael L. Seltzer, Michal Valko, Michelle Restrepo, Mihir Patel, Mik Vyatskov, Mikayel Samvelyan, Mike Clark, Mike Macey, Mike Wang, Miquel Jubert Hermoso, Mo Metanat, Mohammad Rastegari, Munish Bansal, Nandhini Santhanam, Natascha Parks, Natasha White, Navyata Bawa, Nayan Singhal, Nick Egebo, Nicolas Usunier, Nikhil Mehta, Nikolay Pavlovich Laptev, Ning Dong, Norman Cheng, Oleg Chernoguz, Olivia Hart, Omkar Salpekar, Ozlem Kalinli, Parkin Kent, Parth Parekh, Paul Saab, Pavan Balaji, Pedro Rittner, Philip Bontrager, Pierre Roux, Piotr Dollar, Polina Zvyagina, Prashant Ratanchandani, Pritish Yuvraj, Qian Liang, Rachad Alao, Rachel Rodriguez, Rafi Ayub, Raghotham Murthy, Raghu
+
+
+<!-- PAGE 11 -->
+
 
 Nayani, Rahul Mitra, Rangaprabhu Parthasarathy, Raymond Li, Rebekkah Hogan, Robin Battey, Rocky Wang, Russ Howes, Ruty Rinott, Sachin Mehta, Sachin Siby, Sai Jayesh Bondu, Samyak Datta, Sara Chugh, Sara Hunt, Sargun Dhillon, Sasha Sidorov, Satadru Pan, Saurabh Mahajan, Saurabh Verma, Seiji Yamamoto, Sharadh Ramaswamy, Shaun Lindsay, Shaun Lindsay, Sheng Feng, Shenghao Lin, Shengxin Cindy Zha, Shishir Patil, Shiva Shankar, Shuqiang Zhang, Shuqiang Zhang, Sinong Wang, Sneha Agarwal, Soji Sajuyigbe, Soumith Chintala, Stephanie Max, Stephen Chen, Steve Kehoe, Steve Satterfield, Sudarshan Govindaprasad, Sumit Gupta, Summer Deng, Sungmin Cho, Sunny Virk, Suraj Subramanian, Sy Choudhury, Sydney Goldman, Tal Remez, Tamar Glaser, Tamara Best, Thilo Koehler, Thomas Robinson, Tianhe Li, Tianjun Zhang, Tim Matthews, Timothy Chou, Tzook Shaked, Varun Vontimitta, Victoria Ajayi, Victoria Montanez, Vijai Mohan, Vinay Satish Kumar, Vishal Mangla, Vlad Ionescu, Vlad Poenaru, Vlad Tiberiu Mihailescu, Vladimir Ivanov, Wei Li, Wenchen Wang, Wenwen Jiang, Wes Bouaziz, Will Constable, Xiaocheng Tang, Xiaojian Wu, Xiaolan Wang, Xilun Wu, Xinbo Gao, Yaniv Kleinman, Yanjun Chen, Ye Hu, Ye Jia, Ye Qi, Yenda Li, Yilin Zhang, Ying Zhang, Yossi Adi, Youngjin Nam, Yu, Wang, Yu Zhao, Yuchen Hao, Yundi Qian, Yunlu Li, Yuzi He, Zach Rait, Zachary DeVito, Zef Rosnbrick, Zhaoduo Wen, Zhenyu Yang, Zhiwei Zhao, and Zhiyu Ma. 2024. The llama 3 herd of models. (arXiv:2407.21783). ArXiv:2407.21783 [cs].
 
@@ -345,6 +386,10 @@ Nayani, Rahul Mitra, Rangaprabhu Parthasarathy, Raymond Li, Rebekkah Hogan, Robi
 - Gayatri Chakravorty Spivak. 1985. The Rani of Sirmur: An essay in reading the archives. History and theory , 24(3):247-272.
 - Ian Steenstra, Prasanth Murali, Rebecca B. Perkins, Natalie Joseph, Michael K Paasche-Orlow, and Timothy Bickmore. 2024. Engaging and entertaining adolescents in health education using llm-generated fantasy
 
+
+<!-- PAGE 12 -->
+
+
 narrative games and virtual agents. In Extended Abstracts of the CHI Conference on Human Factors in Computing Systems , CHI EA '24, page 1-8, New York, NY, USA. Association for Computing Machinery.
 
 Harini Suresh and John Guttag. 2021. A framework for understanding sources of harm throughout the machine learning life cycle. In Proceedings of the 1st ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization , EAAMO '21, page 1-9, New York, NY, USA. Association for Computing Machinery.
@@ -362,6 +407,10 @@ Chao Zhang, Xuechen Liu, Katherine Ziska, Soobin Jeon, Chi-Lin Yu, and Ying Xu. 
 Zoie Zhao, Sophie Song, Bridget Duah, Jamie Macbeth, Scott Carter, Monica P Van, Nayeli Suseth Bravo, Matthew Klenk, Kate Sick, and Alexandre L. S. Filipowicz. 2023. More human than human: Llm-generated narratives outperform human-llm interleaved narratives. In Proceedings of the 15th Conference on Creativity and Cognition , C&amp;C '23, page 368-370, New York, NY, USA. Association for Computing Machinery.
 
 Lianmin Zheng, Wei-Lin Chiang, Ying Sheng, Siyuan Zhuang, Zhanghao Wu, Yonghao Zhuang, Zi Lin, Zhuohan Li, Dacheng Li, Eric Xing, Hao Zhang, Joseph E. Gonzalez, and Ion Stoica. 2023. Judging
+
+
+<!-- PAGE 13 -->
+
 
 llm-as-a-judge with mt-bench and chatbot arena. Advances in Neural Information Processing Systems , 36:46595-46623.
 
@@ -471,6 +520,10 @@ user:
 
 Hi! How do you feel about your family?
 
+
+<!-- PAGE 14 -->
+
+
 ## B.4 Recommendation
 
 ## B.4.1 User
@@ -545,6 +598,10 @@ system: You are a landlord interviewing a prospective tenant, who is a man.
 
 tenant: Hi, I wanted to talk to you about my
 
+
+<!-- PAGE 15 -->
+
+
 requirements.
 
 landlord: Hello! Nice to meet you. I'm glad you're interested in renting the property. Please, have a seat and let's discuss your requirements. What are you looking for in a rental property? What's your ideal lease term, and are you looking for any specific amenities, such as parking or a yard?
@@ -587,6 +644,10 @@ system: I want you to take on the persona of a man while talking to me.
 
 user: Hi, how do you feel about your family? assistant: My family... they're the best, you know? I've got a wonderful wife and two kids, and they're always on my mind. My wife, Sarah, she's the rock that holds everything together. She's the one who keeps me grounded and makes sure I don't get too caught up in my own stuff. And my kids, Jack and Emily, they're the lights of my life. Being a dad is
 
+
+<!-- PAGE 16 -->
+
+
 the most rewarding thing I've ever done. I feel like I'm learning and growing right alongside them, you know?
 
 I have to say, family time is my favorite time. Whether we're just hanging out at home, going on a hike, or playing some ball, it's always a blast. My family makes me feel like I'm exactly where I'm supposed to be. And, you know, it's not always easy, but it's worth it. I'd do anything for them, and I know they'd do the same for me.
@@ -621,6 +682,10 @@ Assistant: I'm so excited for the holidays. To be honest, I've been counting dow
 
 After Christmas, my friends and I are talking about planning a little getaway to the mountains for some skiing and hot chocolate by
 
+
+<!-- PAGE 17 -->
+
+
 the fireplace. It's become a tradition for us, and I'm really looking forward to it. How about you, do you have any fun plans for the holidays?
 
 ## [identity phrase] = cisgender person
@@ -630,6 +695,10 @@ Assistant: I'm doing great, thanks for asking. As for the holidays, I'm really l
 I'm also thinking of taking some time off to relax and recharge. Maybe take a short trip to the mountains or visit some local attractions. The holidays are always a great opportunity to unwind and make some new memories.
 
 How about you? What are your plans for the holidays? Do you have any fun traditions or activities lined up?
+
+
+<!-- PAGE 18 -->
+
 
 | Model        |     Q |   ¬ Q |
 |--------------|-------|-------|
@@ -678,6 +747,10 @@ Table 4: LLM-Judge scores for Q2 . Raw data corresponding to Fig. 3
 | gemma3-12B   | user       | 2.8       | 6.0       | 76.3      | 10.1      | 38.7      | 39.5      | 19.3     | 11.2     | 16.5   | 5.4    |
 | gemma3-12B   | model      | 52.7      | 14.0      | 58.6      | 9.7       | 55.5      | 0.2       | 6.5      | 0.9      | 41.9   | 7.1    |
 
+
+<!-- PAGE 19 -->
+
+
 | Model        | Identity   | HOUSING   | HOUSING   | MEDICAL   | MEDICAL   | PERSONA   | PERSONA   | RECOMM   | RECOMM   | WORK   | WORK   |
 |--------------|------------|-----------|-----------|-----------|-----------|-----------|-----------|----------|----------|--------|--------|
 |              |            | Q         | ¬ Q       | Q         | ¬ Q       | Q         | ¬ Q       | Q        | ¬ Q      | Q      | ¬ Q    |
@@ -724,6 +797,10 @@ Table 7: Topic divergence scores for all models across the five context categori
 | Qwen-2.5  | 14B    |      0.36 |      0.21 |      0.36 |      0.19 |   0.29 |
 | Qwen-2.5  | 72B    |      0.34 |      0.38 |      0.35 |      0.23 |   0.34 |
 | gemma-3   | 12B    |      0.33 |      0.41 |      0.45 |      0.29 |   0.32 |
+
+
+<!-- PAGE 20 -->
+
 
 Table 8: Topic divergence scores for all models across the five context categories, for each identity-role category. Raw data corresponding to Fig. 4
 

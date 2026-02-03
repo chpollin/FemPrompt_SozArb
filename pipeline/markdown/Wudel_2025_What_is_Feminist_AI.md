@@ -1,10 +1,11 @@
 ---
 source_file: Wudel_2025_What_is_Feminist_AI.pdf
-conversion_date: 2026-02-03T09:32:03.724956
+conversion_date: 2026-02-03T19:02:57.127774
 converter: docling
-quality_score: 95
+quality_score: 90
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Alexandra Wudel and Anna Ehrenberg January 2025
@@ -16,6 +17,10 @@ Alexandra Wudel and Anna Ehrenberg January 2025
 Competence Centre on the Future of Work
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Imprint
 
@@ -49,9 +54,17 @@ Further publications of the Friedrich-Ebert-Stiftung can be found here:
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 Alexandra Wudel and Anna Ehrenberg January 2025
 
 ## What is Feminist AI?
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -68,6 +81,10 @@ Alexandra Wudel and Anna Ehrenberg January 2025
 | Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                         |   6 |
 | References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                     |   7 |
 
+
+<!-- PAGE 5 -->
+
+
 ## Summary
 
 This paper explores Feminist Artificial Intelligence (FAI), a framework leveraging intersectional feminism to address biases and inequities in AI systems. FAI emphasises interdisciplinary collaboration, systemic power analysis and iterative theory-practice loops. By embedding feminist values - equity, freedom and justice FAI seeks to transform AI development, ensuring inclusivity and social sustainability. Practical applications include initiatives such as FemAI's advocacy for feminist perspectives in the EU AI Act and the MIRA diagnostic platform, which aligns AI tools with social justice goals. FAI marks a critical departure from traditional AI by tackling structural inequalities and promoting accountable and equitable AI solutions.
@@ -77,6 +94,10 @@ This paper explores Feminist Artificial Intelligence (FAI), a framework leveragi
 The intersection of feminism and artificial intelligence (AI) has emerged as a critical area for ensuring social equity within technological advancements. Feminist Artificial Intelligence (FAI) explores how feminist values, such as freedom, equity and justice, can influence AI development, challenging the male-dominated, Western-centric biases that currently pervade AI systems. This paper investigates FAI's core principles, its role in disrupting power structures, and how it compares to other frameworks such as environmental, social and governance (ESG) criteria.
 
 In this paper, we share FAI's state of the art from both a theoretical and practical viewpoint to stay ahead of the fast-paced AI developments.
+
+
+<!-- PAGE 6 -->
+
 
 ## Background
 
@@ -101,6 +122,10 @@ The existence of the concept FAI implies that the current landscape of AI system
 The present understanding of intelligence in the field of AI is described as mostly rational and masculinist (Atanasoski and Vora, 2019: 195). Additionally, the set of values that shape the design of AI consists of those based on Western cultures (Arora and Chowdhury, 2021: 5). As a result, AI currently leads to a digitised so -ciety embedded into a social system with power inequalities. Subsequently, AI systems may reinforce structural discrimination of marginalised, underrepresented and underprivileged people (MUUP) (Gengler et al., 2023; T oupin, 2024).
 
 This raises the question of how FAI can help shift societal structures from patriarchal foundations toward more equitable futures, and to what extent the concepts of feminism and AI may remain misaligned.
+
+
+<!-- PAGE 7 -->
+
 
 ## How to bridge the gap between theory and practice
 
@@ -127,6 +152,10 @@ Implementing FAI in practice involves both mitigating potential risks and optimi
 A foundational feminist tool, the theory-practice loop, helps identify the real-world effects of implemented measures. While concepts such as equity, freedom and justice are inherently difficult to quantify, the nine principles outlined by D'Ignazio and Klein (2024) provide a framework to evaluate power dynamics and uncover biases within AI systems. For instance:
 
 - → checking if a system relies on binaries and hierarchies , such as binary gender categories, which may introduce gender bias and exclude individuals identifying as non-binary;
+
+
+<!-- PAGE 8 -->
+
 
 - → assessing whether pluralism is embraced by valuing not just logical-mathematical intelligence, but other forms of intelligence such as interpersonal, bodily-kinaesthetic or naturalist intelligence (Onuoha and Nucera, 2023);
 - → ensuring that consent is explicitly obtained for the use of data in specific contexts , thereby preventing the exploitation of marginalised groups.
@@ -158,6 +187,10 @@ These innovations result in lower training costs and faster processing, enabling
 ## Conclusion
 
 FAI offers a critical lens for addressing the social, ethical and structural issues embedded in AI systems. By applying intersectional feminist principles, FAI seeks to ensure that AI systems are not only inclusive, but actively work to dismantle historical power imbalances. This paper underscores the importance of theory-practice feedback loops, continuous development and stakeholder engagement in building AI systems that foster equity and justice. The integration of FAI into both legislative frameworks and business practices will be essential in advancing socially responsible AI and creating a more equitable technological future that provides benefits for humanity.
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -195,6 +228,10 @@ Wudel, A., Wedel, M. and Gengler, E. (2023) 'A Feminist Vision for the EU AI Act
 
 .
 
+
+<!-- PAGE 10 -->
+
+
 ## About the Authors
 
 FemAI is a responsible AI start-up certifying AI systems designed to benefit humanity. Established in 2022 in Berlin, Germany, we started as a research-focused think tank , advising over 25 organisations on their ethi -cal AI policies. Building on these insights, we developed feminist frameworks to evaluate AI tools, companies, courses and workshops - focusing on the people most often overlooked in the AI age. At our core, FemAI uses intersectional feminism as a research method to illuminate the black box of AI, ensuring accuracy and equity in the technologies shaping our future. Co-creation and cross-sector collaboration are at our heart, allowing us to close the gaps between policymaking, businesses, research and civil society.
@@ -202,6 +239,10 @@ FemAI is a responsible AI start-up certifying AI systems designed to benefit hum
 Alexandra Wudel is a tech entrepreneur and researcher focused on shaping an inclusive future for AI. As the CEO of FemAI, she was named 'AI Person of the Year 2024', recognised as one of 25 global experts on ethical considerations for AI, and awarded the title '35 under 35 Young Leaders'. Alexandra has contributed to the development of ethical AI guidelines for the German Federal Foreign Ministry, the UN and the German Parliament. Working with AI tool providers, she supports private organisations in integrating societal and environmental responsibility into AI projects and strategies. Together with her team, Alexandra develops FAI frameworks to bridge the gap between principles and practice.
 
 Anna Ehrenberg is part of the FemAI team. She works as a research assistant at FemAI, actively shaping the organisation's understanding of FAI. With her background in data science and process optimisation, she has co-authored the design of an FAI approach intended to be practically implemented in AI tools from the outset.
+
+
+<!-- PAGE 11 -->
+
 
 ## What is Feminist AI?
 

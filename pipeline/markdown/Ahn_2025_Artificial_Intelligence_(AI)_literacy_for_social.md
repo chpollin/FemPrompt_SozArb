@@ -1,10 +1,11 @@
 ---
 source_file: Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.pdf
-conversion_date: 2026-02-03T08:40:25.201710
+conversion_date: 2026-02-03T18:19:29.482067
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Arti /uniFB01 cial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies
 
 Eunhye Ahn
@@ -77,6 +78,10 @@ Press for
 
 the
 
+
+<!-- PAGE 2 -->
+
+
 academic characteristics to high school graduation -to help identify students who may bene /uniFB01 t from additional support. Unsupervised machine learning, on the other hand, does not use prelabeled outcomes but instead groups individuals based on shared patterns in data, such as recognizing students who may have undiagnosed learning disabilities based on standardized test trends. Neural networks, including large lan­ guage models and generative AI, learn meaningful patterns of associations across multiple layers that represent complex hierarchies similar to the human brain. Recent advances in generative AI offer additional promise for social work applications, includ­ ing innovations in education, research, and practice (Patton et al., 2023; Rodriguez et al., 2024; Singer et al., 2023). Uses span real-time spelling and grammar editing such as Grammarly, software coding autocompletion like Co-Pilot, and AI-powered mental health chatbots. At the same time, AI raises critical concerns about inequalities, ethics, and transparency (Coeckelbergh, 2022; Eubanks, 2019; O ' Neil, 2016). These complexities highlight the importance of equipping social workers with competencies to address these issues effectively, ensuring equitable data and AI practices (Berzin et al., 2015; Coulton et al., 2015).
 
 Although scholars have explored AI applications in social work ( Jung et al., 2024; Lee et al., 2024; Tambe &amp; Rice, 2018) and noted the importance of AI education for social workers (Patton et al., 2023; Rodriguez et al., 2024; Singer et al., 2023), system­ atic strategies for developing an adequate understanding of AI ' s capabilities, biases, and limitations among social workers remain underexplored. Addressing this gap is critical because AI systems potentially deepen inequalities among people relying on social work services (Capraro et al., 2024; Coeckelbergh, 2022). Social workers need to appreciate the potential uses and misuses of AI to advocate effectively for individ­ uals navigating AI-driven systems and services -even when not directly using AI tools (Mathiyazhagan &amp; Patton, 2025). This paper discusses how efforts to build AI literacy can inform social work practice by exploring AI ' s impact on social inequal­ ities across sectors and demonstrating how social work core competencies must evolve in response to AI-driven societal changes. Drawing on Long and Magerko ' s (2020) AI literacy framework, we propose integrating a social-work-speci /uniFB01 c AI liter­ acy framework into the profession ' s core competencies to equip social workers to ad­ dress emerging challenges while upholding professional values.
@@ -84,6 +89,10 @@ Although scholars have explored AI applications in social work ( Jung et al., 20
 ## De /uniFB01 ning Arti /uniFB01 cial Intelligence and Arti /uniFB01 cial Intelligence Literacy
 
 AI refers to computer systems designed to perform tasks that typically require hu­ man intelligence, such as learning from data, solving problems, and making deci­ sions under uncertain conditions (McCarthy et al., 1955; Minsky, 1968; Russell &amp; Norvig, 2010). AI does not refer to a single technology but rather is an umbrella term encompassing various approaches and applications. AI systems vary in complexity and autonomy, handling diverse tasks from language understanding and generation to pattern recognition and recommendation systems (Leist et al., 2022).
+
+
+<!-- PAGE 3 -->
+
 
 Since its emergence in the 1950s (McCarthy et al., 1955), AI has evolved from simple rule-based systems to sophisticated technologies (Brynjolfsson et al., 2018; Fjelland, 2020). Predictive and prescriptive analytics use machine learning to help identify individuals and families who may bene /uniFB01 t from additional support, such as connecting families experiencing complex challenges with child welfare services or recognizing trends in community housing needs (Ahn, An, et al., 2024; Choul­ dechova et al., 2018; Mashiat et al., 2024). Simulation strategies model complex real-world scenarios to guide social workers with resource allocation, optimizing ef­ /uniFB01 ciency and equal access to services (Fowler et al., 2022; Kube et al., 2019).
 
@@ -94,6 +103,10 @@ The rapid advancement of AI technologies following the public release of gen­ e
 ## The Importance of Arti /uniFB01 cial Intelligence Literacy for Social Work
 
 AI literacy among social workers is essential for three reasons: (a) to understand and address AI ' s role in perpetuating and intensifying social inequalities, (b) to con­ tribute meaningfully to the ethical development and governance of AI systems, and (c) to thoughtfully integrate AI applications into practice. Importantly, the /uniFB01 rst two reasons emphasize the need for AI literacy even without direct engagement with AI tools.
+
+
+<!-- PAGE 4 -->
+
 
 Table 1 Arti /uniFB01 cial Intelligence (AI) Literacy Framework
 
@@ -111,6 +124,10 @@ Note . Adapted from D. Long &amp; B. Magerko (2020), ' What is AI literacy? Comp
 
 AI technologies are fundamentally transforming societal systems, in /uniFB02 uencing access to resources, decision-making processes, and policy outcomes (Harris, 2023; Maslej et al., 2024). Although these technologies offer signi /uniFB01 cant potential, they can also exacerbate existing inequalities, particularly when developed predominantly by privileged and homogenous groups (Coeckelbergh, 2022; Joyce et al., 2021). AI sys­ tems can perpetuate and amplify structural biases, disproportionately affecting mar­ ginalized populations such as low-income individuals, communities of color, and people with disabilities (Eubanks, 2019; Frank et al., 2019; McGovern et al., 2022). These deepening disparities are particularly concerning for social workers, whose mission is to serve and advocate for marginalized groups.
 
+
+<!-- PAGE 5 -->
+
+
 Figure 1 highlights the multifaceted ways in which AI affects societal inequali­ ties, categorized into socioeconomic and resource disparities, digital and environ­ mental justice, and governance and global inequality. One critical area of concern is the digital divide, which is a fundamental driver that determines access to AIenhanced technologies. Marginalized communities are often excluded from these tools, widening gaps in resource inequities and access (Eruchalu et al., 2021; Hepo­ niemi et al., 2020).
 
 These inequalities manifest in various ways. Socioeconomic and resource dispar­ ities emerge as AI tools in /uniFB01 nance and education reinforce systemic biases, creating additional barriers to /uniFB01 nancial stability and perpetuating disparities in academic achievement (Holstein &amp; Doroudi, 2022). Digital and environmental justice further illustrates the interconnected nature of these challenges. Limited digital access and literacy exclude marginalized communities from leveraging AI solutions to address climate-related risks, thus widening disparities (McGovern et al., 2022). Governance and global disparities are ampli /uniFB01 ed by concentration of AI development in wealthier nations, leaving marginalized communities excluded from policymaking processes while AI-driven misinformation undermines civic engagement and democratic
@@ -118,6 +135,10 @@ These inequalities manifest in various ways. Socioeconomic and resource dispar­
 Figure 1 . Circle of Transformation: The Impact of Arti /uniFB01 cial Intelligence (AI) on Social Inequalities
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 representation (Coeckelbergh, 2022; Eubanks, 2019). Addressing these intercon­ nected challenges requires that social workers develop AI literacy, enabling them to critically evaluate systems, advocate for equitable governance, and support clients who are navigating technological barriers.
 
@@ -131,6 +152,10 @@ Social workers are well-positioned to contribute to the ethical implementation a
 
 AI presents transformative opportunities to enhance social work practice by improv­ ing operational ef /uniFB01 ciency, generating data-driven insights, and expanding service
 
+
+<!-- PAGE 7 -->
+
+
 access (Rodriguez et al., 2024). At the operational level, automation tools can stream­ line administrative tasks such as scheduling, data entry, and documentation, allow­ ing social workers to focus more on client-centered activities and complex case management. Additionally, AI chatbots can handle basic inquiries, provide imme­ diate information about available resources, and facilitate resource connections (Habicht et al., 2024). By offering 24/7 support, these tools promote informed engage­ ment, reduce workload, and improve service accessibility. Moreover, AI-powered outreach tools can extend services to previously underserved populations, particu­ larly in rural or remote areas where physical access is limited ( Jat &amp; Grønli, 2023).
 
 AI also enhances decision-making and service planning in social work through multiple analytic capabilities. Predictive analytics help identify underserved popu­ lations in need of support (Lee et al., 2024), whereas imaging analysis addresses data gaps in resource-limited regions ( Jung et al., 2024). Natural language processing tools can assist in collecting and analyzing client narratives at scale (Tai et al., 2024), offering insights into culturally responsive interventions. Additionally, AI technolo­ gies can simulate decision-making scenarios, offering social workers a way to explore the potential outcomes of different interventions (Fowler et al., 2022). Thoughtful im­ plementation of these technologies can strengthen social workers ' ability to address structural inequalities and advance social justice through improved community en­ gagement and resource delivery.
@@ -140,6 +165,10 @@ However, social workers must also consider potential legal consequences, as high
 ## Evolving Social Work Competencies in an AI-Driven Landscape
 
 The Council on Social Work Education (CSWE) mandates that both the baccalaureate and master ' s-level social work programs align their curricula with nine core compe­ tencies, as outlined in the Educational Policy and Accreditation Standards (EPAS). These competencies ensure that graduates can address social issues with ethical judgment, cultural sensitivity, policy knowledge, and intervention skills (Council on Social Work Education, 2022). These competencies have evolved over time to re­ /uniFB02 ect shifting priorities, emerging issues, and new educational strategies in social work. Because AI is expected to in /uniFB02 uence social systems and services, CSWE must explicitly incorporate AI literacy into the 2029 EPAS. Building on recent efforts, such as the proposal to add a 10th competency addressing AI for social workers (Rodri­ guez et al., 2024), CSWE must ensure that the nine current competencies and any additions re /uniFB02 ect the challenges and opportunities posed by an AI-driven society. To remain effective and aligned with social work ' s mission, it is also essential to reex­ amine how each of these competencies should evolve in response to emerging AIdriven opportunities and challenges.
+
+
+<!-- PAGE 8 -->
+
 
 Table 2 outlines how the nine competencies can integrate AI considerations, un­ derscoring three reasons why AI literacy is essential for social workers. First, several competencies are directly relevant to understanding AI ' s role in reinforcing inequal­ ities. Social work ' s commitment to advancing human rights and justice (Compe­ tency 2) involves recognizing and addressing how AI can introduce new barriers, such as digital divides that disproportionately affect marginalized communities (Eruchalu et al., 2021; Heponiemi et al., 2020). Similarly, engaging in antiracism, di­ versity, equity, and inclusion (Competency 3) demands confronting biases embedded in AI, such as algorithmic redlining in housing or discriminatory hiring practices (Frank et al., 2019; Safransky, 2020). Assessment (Competency 7) also needs to be adapted, accounting for AI-related vulnerabilities such as inequitable educational opportunities or environmental justice concerns (Holstein &amp; Doroudi, 2022; McGov­ ern et al., 2022). Social workers with AI literacy can critically evaluate these emerg­ ing risks and advocate for just interventions.
 
@@ -151,6 +180,10 @@ Finally, AI also presents opportunities to strengthen social work practice. Rese
 
 To effectively address evolving social work competencies, social workers need a structured approach that supports ethical practice, policy advocacy, and community
 
+
+<!-- PAGE 9 -->
+
+
 Table 2 Evolving Social Work Competencies With Arti /uniFB01 cial Intelligence (AI) Considerations
 
 | Social Work Competency                                                          | Key AI Considerations                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -161,6 +194,10 @@ Table 2 Evolving Social Work Competencies With Arti /uniFB01 cial Intelligence (
 | 4. Engage in practice-informed research and research-informed practice          | Use AI tools with caution, understanding po­ tential systemic inequalities, and apply evidence-based solutions in practice with critical evaluation of AI-informed research.                                                                                                                                                                                                                              |
 | 5. Engage in policy practice                                                    | Evaluate how AI-driven policies and automated systems affect service delivery and human rights across governance levels while advocating for policy frameworks that address algorithmic bias, promote transparency, and center the voices of people most impacted by these technologies in social services.                                                                                              |
 | 6. Engage with individuals, families, groups, organizations, and communities    | BalanceAIintegrationwithauthentichuman engagement, ensuring technological tools enhance rather than replace relationship- building while remaining mindful of how automated systems affect power dynamics and cultural responsiveness in practice settings.                                                                                                                                              |
+
+
+<!-- PAGE 10 -->
+
 
 Table 2 ( continued )
 
@@ -176,6 +213,10 @@ engagement. Long and Magerko ' s (2020) AI literacy framework provides a founda�
 
 This domain focuses on de /uniFB01 ning AI and understanding its boundaries, emphasiz­ ing the importance of distinguishing between different AI technologies when used in practice. Recognizing whether a system is rule-based, is powered by machine learning, or uses generative AI is crucial for ethical and effective application. For
 
+
+<!-- PAGE 11 -->
+
+
 example, in managing a community support program, a rule-based system might automatically sort applicants based on /uniFB01 xed criteria like income level or family size, ensuring consistent but rigid decision-making. A machine learning model, on the other hand, could analyze patterns in client data to predict future resource needs, offering dynamic insights but potentially overlooking unique unrepresented cases (Ahn, Tejeda, et al., 2024). Generative AI, such as text-generation tools, can add an­ other dimension by summarizing case histories or drafting client communications, saving time but requiring human oversight to ensure fairness and accuracy. By un­ derstanding these distinctions, social workers can thoughtfully apply AI tools to en­ hance their practice and better support clients.
 
 ## Area 2: ' What Can AI Do? '
@@ -190,6 +231,10 @@ This topic emphasizes that understanding the processes behind AI -from data sele
 
 This domain examines the ethical implications of integrating AI into decisionmaking processes. Social workers must navigate issues of privacy, accountability, eq­ uity, and client autonomy. For example, in child welfare settings where AI identi /uniFB01 es families that may need support, practitioners must consider protecting privacy, avoiding stereotype reinforcement, establishing fair appeals processes, and aligning identi /uniFB01 ed needs with available service capacity. AI-based identi /uniFB01 cation of needs
 
+
+<!-- PAGE 12 -->
+
+
 must align with available resources, as identifying families without adequate service capacity can delay essential care and potentially affect their eligibility for other sup­ port options (Ahn, An, et al., 2024).
 
 As private companies increasingly develop AI tools without suf /uniFB01 cient consider­ ation of human well-being and rights (Coeckelbergh, 2022), social workers must de­ velop AI literacy to critically evaluate where and how AI should be used in practice settings. AI should be avoided where human judgment is irreplaceable, particularly in building therapeutic relationships and making nuanced clinical decisions based on nonverbal cues and cultural contexts. System limitations that could cause harm must also be considered, as shown by facial recognition systems leading to wrongful arrests of people of color and AI chatbots linked to tragic outcomes like teen suicide (Hill, 2024; Roose, 2024). Similarly, service contexts requiring direct human insight, such as child welfare assessments where understanding family dynamic is crucial, should remain human centered. AI literacy enables social workers to carefully eval­ uate AI recommendations considering systemic biases, service context, and potential impacts on individuals and families. By applying ethical principles and advocating for policies that require human review of AI decisions and informed consent for data use, social workers can ensure that AI augments rather than undermines ethical practice.
@@ -199,6 +244,10 @@ The classroom provides a place to engage in fruitful conversations regarding the
 ## Area 5: ' How Do People Perceive AI? '
 
 This area emphasizes that recognizing and addressing community perceptions and distrust of AI is crucial for ethical implementation. For example, when community members express skepticism toward an AI-driven child welfare referral system, so­ cial workers can foster transparency and trust through community forums and in­ clusive dialogue (Brown et al., 2019). By engaging residents, inviting technologists to explain the system ' s logic, and incorporating community feedback, social workers can ensure that the technology aligns with community values.
+
+
+<!-- PAGE 13 -->
+
 
 Equally important is understanding social workers ' perception of AI. Not all so­ cial workers may feel prepared or con /uniFB01 dent about integrating AI into their practice, with valid concerns about data privacy, algorithmic bias, and ethical challenges posed by technology (Stapleton et al., 2022). Building AI literacy in social work re­ quires directly addressing these concerns. By understanding how social workers per­ ceive AI, organizations can better identify adoption barriers and develop effective training resources.
 
@@ -213,6 +262,10 @@ Our paper demonstrates how AI literacy intersects with and strengthens social wo
 Although recent research has begun addressing the importance of AI education in social work (Patton et al., 2023; Rodriguez et al., 2024; Singer et al., 2023), including proposals to establish AI competency as the 10th element of the profession ' s core competencies, we propose that AI literacy should also be integrated across existing core competencies. This integration would re /uniFB02 ect how AI ' s in /uniFB02 uence permeates var­ ious aspects of social work practice and emphasize the need for practitioners to un­ derstand AI ' s societal impact holistically.
 
 Looking forward, the social work profession must develop systematic approaches to assessing and fostering social-work-speci /uniFB01 c AI literacy among practitioners and re­ searchers. Building on well-established AI literacy literature (e.g., Long &amp; Magerko, 2020), the /uniFB01 eld needs to collectively de /uniFB01 ne what AI literacy means for social work practice. Although recent work has begun this conversation (Patton et al., 2023; Rodriguez et al., 2024; Singer et al., 2023), more comprehensive strategies are needed
+
+
+<!-- PAGE 14 -->
+
 
 to assess and promote AI literacy among social workers. These strategies include in­ tegrating AI literacy into social work education and professional development, en­ gaging social workers in AI policy discussions and ethical guidelines, building bridges between social work practice and AI development, supporting research on AI ' s impact on communities experiencing marginalization, and ensuring that social work values guide AI implementation in social services. Additionally, researchers need to examine the social work AI literacy framework empirically by collecting and analyzing primary data.
 
@@ -239,6 +292,10 @@ Moon Choi was supported by a Korean ARPA-H Project grant through the Korea Healt
 - Berzin, S. C., Singer, J., &amp; Chan, C. (2015). Practice innovation through technology in the digital age (Working Paper No. 12). American Academy of Social Work and Social Welfare. https:// grandchallengesforsocialwork.org/wp-content/uploads/2015/12/WP12-with-cover.pdf
 - Birhane, A., Kasirzadeh, A., Leslie, D., &amp; Wachter, S. (2023). Science in the age of large language models. Nature Reviews Physics , 5 (5), 277 -280. https://doi.org/10.1038/s42254-023-00581-4
 
+
+<!-- PAGE 15 -->
+
+
 - Brown, A., Chouldechova, A., Putnam-Hornstein, E., Tobin, A., &amp; Vaithianathan, R. (2019). Toward algorithmic accountability in public services: A qualitative study of affected community perspectives on algorithmic decision-making in child welfare services. Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems -CHI ' 19 (pp. 1 -12). Association for Computing Machinery. https://doi.org/10.1145/3290605.3300271
 - Brynjolfsson, E., Mitchell, T., &amp; Rock, D. (2018). What can machines learn and what does it mean for occupations and the economy? AEA Papers and Proceedings , 108 , 43 -47. https:// doi.org/10.1257/pandp.20181019
 - Capraro, V., Lentsch, A., Acemoglu, D., Akgun, S., Akhmedova, A., Bilancini, E., Bonnefon, J.-F., Brañas-Garza, P., Butera, L., Douglas, K. M., Everett, J. A. C., Gigerenzer, G., Greenhow, C., Hashimoto, D. A., Holt-Lunstad, J., Jetten, J., Johnson, S., Kunz, W. H., Longoni, C., . . . Viale, R. (2024). The impact of generative arti /uniFB01 cial intelligence on socioeconomic inequalities and policy making. PNAS Nexus , 3 (6), Article pgae191. https://doi.org/10.1093/pnasnexus /pgae191
@@ -253,6 +310,10 @@ Moon Choi was supported by a Korean ARPA-H Project grant through the Korea Healt
 - Eubanks, V. (2019). Automating inequality: How high-tech tools pro /uniFB01 le, police, and punish the poor . St. Martin ' s Press.
 - Fjelland, R. (2020). Why general arti /uniFB01 cial intelligence will not be realized. Humanities and Social Sciences Communications , 7 , Article 10. https://doi.org/10.1057/s41599-020-0494-4
 - Fowler, P. J., Marcal, K. E., &amp; Hovmand, P. S. (2022). Meeting housing needs of child welfareinvolved families: Policy insights from simulation modeling. Child Abuse &amp; Neglect , 132 , Ar­ ticle 105809. https://doi.org/10.1016/j.chiabu.2022.105809
+
+
+<!-- PAGE 16 -->
+
 
 - Frank, M. R., Autor, D., Bessen, J. E., Brynjolfsson, E., Cebrian, M., Deming, D. J., Feldman, M., Groh, M., Lobo, J., Moro, E., Wang, D., Youn, H., &amp; Rahwan, I. (2019). Toward understand­ ing the impact of arti /uniFB01 cial intelligence on labor. Proceedings of the National Academy of Sciences , 116 (14), 6531 -6539. https://doi.org/10.1073/pnas.1900949116
 - Gaya-Morey, F. X., Manresa-Yee, C., &amp; Buades-Rubio, J. M. (2024). Deep learning for computer vision based activity recognition and fall detection of the elderly: A systematic review. Applied Intelligence , 54 (19), 8982 -9007. https://doi.org/10.1007/s10489-024-05645-1
@@ -269,6 +330,10 @@ Moon Choi was supported by a Korean ARPA-H Project grant through the Korea Healt
 - Kube, A., Das, S., &amp; Fowler, P. J. (2019). Allocating interventions based on predicted outcomes: A case study on homelessness services. Proceedings of the AAAI Conference on Arti /uniFB01 cial Intelligence , 33 (1), 622 -629. https://doi.org/10.1609/aaai.v33i01.3301622
 - Lee, J. Y., Ahn, E., Xu, A., Yang, Y., Chang, Y., Cha, H., &amp; Ammari, T. (2024). Arti /uniFB01 cial intelligence in applied family research involving families with young children: A scoping review. Family Relations . Advance online publication. https://doi.org/10.1111/fare.13090
 
+
+<!-- PAGE 17 -->
+
+
 - Leist, A. K., Klee, M., Kim, J. H., Rehkopf, D. H., Bordas, S. P. A., Muniz-Terrera, G., &amp; Wade, S. (2022). Mapping of machine learning approaches for description, prediction, and causal inference in the social and health sciences. Science Advances , 8 (42), Article eabk1942. https://doi.org/10.1126/sciadv.abk1942
 - Long, D., &amp; Magerko, B. (2020). What is AI literacy? Competencies and design considerations. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (pp. 1 -16). Association for Computing Machinery. https://doi.org/10.1145/3313831.3376727
 - Mashiat, T., DiChristofano, A., Fowler, P. J., &amp; Das, S. (2024, June). Beyond eviction prediction: Leveraging local spatiotemporal public records to inform action. In The 2024 ACM Conference on Fairness, Accountability, and Transparency (pp. 1383 -1394). Association for Computing Machinery. https://doi.org/10.1145/3630106.3658978
@@ -284,6 +349,10 @@ Moon Choi was supported by a Korean ARPA-H Project grant through the Korea Healt
 - Pascale, E. (2023). Deeply dehumanizing, degrading, and violating: Deepfake pornography and the path to legal recourse. Syracuse Law Review , 73 , 335 -366.
 - Patton, D. U., Landau, A. Y., &amp; Mathiyazhagan, S. (2023). ChatGPT for social work science: Eth­ ical challenges and opportunities. Journal of the Society for Social Work and Research , 14 (3), 553 -562. https://doi.org/10.1086/726042
 - Reamer, F. G. (2023). Arti /uniFB01 cial intelligence in social work: Emerging ethical issues. International Journal of Social Work Values and Ethics , 20 (2), 52 -71. https://doi.org/10.55521/10-020-205
+
+
+<!-- PAGE 18 -->
+
 
 - Rodriguez, M. Y., Goldkind, L., Victor, B. G., Hiltz, B., &amp; Perron, B. E. (2024). Introducing gener­ ative arti /uniFB01 cial intelligence into the MSW curriculum: A proposal for the 2029 Educational Policy and Accreditation Standards. Journal of Social Work Education , 60 (2), 174 -182. https:// doi.org/10.1080/10437797.2024.2340931
 - Roose, K. (2024, October 23). Can A.I. be blamed for a teen ' s suicide? The New York Times . https://www.nytimes.com/2024/10/23/technology/characterai-lawsuit-teen-suicide.html

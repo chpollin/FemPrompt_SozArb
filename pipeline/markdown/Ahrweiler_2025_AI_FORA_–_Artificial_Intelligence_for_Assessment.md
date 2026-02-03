@@ -1,10 +1,11 @@
 ---
 source_file: Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.pdf
-conversion_date: 2026-02-03T08:40:25.663581
+conversion_date: 2026-02-03T18:19:29.916693
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Pressemitteilung
@@ -32,6 +33,10 @@ Das nun erschienene, rund 300-seitige Buch vergleicht den Status quo und die gew
 wissenschaftliche Ansprechpartner:
 
 Prof. Dr. Petra Ahrweiler
+
+
+<!-- PAGE 2 -->
+
 
 <!-- image -->
 

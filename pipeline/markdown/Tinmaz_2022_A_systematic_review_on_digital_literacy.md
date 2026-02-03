@@ -1,10 +1,11 @@
 ---
 source_file: Tinmaz_2022_A_systematic_review_on_digital_literacy.pdf
-conversion_date: 2026-02-03T09:26:49.064047
+conversion_date: 2026-02-03T18:57:50.702281
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## RESEARCH
 
 ## A systematic review on digital literacy
@@ -47,6 +48,10 @@ Sousa and Rocha (2019) explained that there is a stake of digital skills for dis
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 academic performance, labour market competitiveness, health, civic and political participation. Steps have been successfully taken to address physical access gaps, but skills gaps are still looming (Van Deursen &amp; Van Dijk, 2010a). Moreover, digital inequalities have grown larger due to the COVID-19 pandemic, and they influenced the very state of health of the most vulnerable categories of population or their employability in a time when digital skills are required (Baber et al., 2022; Beaunoyer, Dupéré &amp; Guitton, 2020).
 
 The systematic review the researchers propose is a useful updated instrument of classification and inventory for digital literacy. Considering the latest developments in the economy and in line with current digitalisation needs, digitally literate population may assist policymakers in various fields, e.g., education, administration, healthcare system, and managers of companies and other concerned organisations that need to stay competitive and to employ competitive workforce. Therefore, it is indispensably vital to comprehend the big picture of digital literacy related research.
@@ -62,6 +67,10 @@ Digital literacy, which is one of the challenges of integration of technology in
 ## Digital competencies
 
 The Digital Competence Framework for Citizens (DigComp 2.1.), the most recent framework  proposed  by  the  European  Union,  which  is  currently  under  review  and  undergoing  an  updating  process,  contains  five  competency  areas:  (a)  information  and  data literacy,  (b)  communication  and  collaboration,  (c)  digital  content  creation,  (d)  safety, and (e) problem solving (Carretero, Vuorikari &amp; Punie, 2017). Digital competency had previously been described in a technical fashion by Ferrari (2012) as a set comprising information skills, communication skills, content creation skills, safety skills, and problem-solving skills, which later outlined the areas of competence in DigComp 2.1, too.
+
+
+<!-- PAGE 3 -->
+
 
 ## Digital skills
 
@@ -81,6 +90,10 @@ Research question 1: What is the yearly distribution of digital literacy related
 
 Research question 3: What are the main themes in digital literacy related papers? Research  question  4:  What  are  the  concentrated  categories  (under  revealed  main themes) in digital literacy related papers?
 
+
+<!-- PAGE 4 -->
+
+
 ## Method
 
 This study employed the systematic review method where the authors scrutinized the existing literature around the major research question of digital literacy. As Uman (2011) pointed, in systematic literature review, the findings of the earlier research are examined for the identification of consistent and repetitive themes. The systematic review method differs  from  literature  review  with  its  well  managed  and  highly  organized  qualitative scrutiny processes where researchers tend to cover less materials from fewer number of  databases to write their literature review (Kowalczyk &amp; Truluck, 2013; Robinson &amp; Lowe, 2015).
@@ -96,6 +109,10 @@ A sequential systematic search was made in the five databases mentioned above. T
 ## Data analysis
 
 The  43  papers  selected  after  the  application  of  the  inclusion  and  exclusion  criteria, respectively,  were  reviewed the materials independently by two researchers who were from two different countries. The researchers identified all topics pertaining to digital literacy, as they appeared in the papers. Next, a third researcher independently analysed these findings by excluded duplicates A qualitative content analysis was manually performed by calculating the frequency of major themes in all papers, where the raw data was compared and contrasted (Fraenkel et al., 2012). All three reviewers independently list the words and how the context in which they appeared and then the three reviewers
+
+
+<!-- PAGE 5 -->
+
 
 Table 1 Number of papers identified sequentially after applying all inclusion and exclusion criteria
 
@@ -125,6 +142,10 @@ The authors utilized an overt categorization for the depiction of these major th
 
 Digital  literacy  being  the  major  concern  of  this  paper  was  observed  to  be  blatantly mentioned in five papers out forty-three. One of these articles described digital literacy as the human proficiencies to live, learn and work in the current digital society.
 
+
+<!-- PAGE 6 -->
+
+
 Fig. 1 Yearly distribution of digital literacy related papers
 
 <!-- image -->
@@ -138,6 +159,10 @@ In addition to these five articles, two additional papers used the same term as 
 Computer literacy, media literacy and cultural literacy were the second most common literacy (n = 5).  One of the article branches computer literacy as tool (detailing with software and hardware uses) and resource (focusing on information processing capacity of a computer) literacies. Cultural literacy was emphasized as a vital element for functioning in an intercultural team on a digital project.
 
 Disciplinary literacy (n = 4)  was referring to utilizing different computer programs (n = 2)  or  technical  gadgets  (n = 2)  with  a  specific  emphasis  on  required  cognitive, affective and psychomotor skills to be able to work in any digital context (n = 3), serving for the using (n = 2), creating and applying (n = 2) digital literacy in real life.
+
+
+<!-- PAGE 7 -->
+
 
 Table 2 Categories (more than one occurrence) under 'literacies' major theme
 
@@ -164,6 +189,10 @@ Twenty-four  other  categories  are  unfolded  from  the  results  sections  of 
 While above listed personal literacy was referring to digital identity management, network literacy was explained as someone's social networking ability to manage the digital relationship with other people. Additionally, participatory literacy was defined as the necessary abilities to join an online team working on online content production.
 
 Emerging technology literacy was stipulated as an essential ability to recognize and appreciate  the  most  recent  and  innovative  technologies  in  along  with  smart  choices related to these technologies. Additionally, the critical literacy was added as an ability to make smart judgements on the cost benefit analysis of these recent technologies.
+
+
+<!-- PAGE 8 -->
+
 
 Last of all, basic, intermediate, and advanced digital assessment literacies were specified  for  educational  institutions  that  are  planning  to  integrate  various  digital  tools  to conduct instructional assessments in their bodies.
 
@@ -202,6 +231,10 @@ Table 4 Categories under 'competencies' major theme
 | Digital communication              |   2 | Simulation competencies               |   1 |
 | Intercultural competencies         |   2 | Digital nativity                      |   1 |
 
+
+<!-- PAGE 9 -->
+
+
 Table 5 Categories under 'skills' major theme
 
 | Category                        |   n | Category               |   n |
@@ -238,6 +271,10 @@ The third major observed theme was 'skills' , which was dominantly gathered arou
 
 Table 6 summarizes the sub-categories of the two most frequent categories of 'skills' major theme. The information literacy skills  noticeably  concentrate  on  the  steps  of information processing; evaluation (n = 6), utilization (n = 4), finding (n = 3), locating (n = 2) information. Moreover, the importance of trial/error process, being a lifelong learner, feeling a need for information and so forth were evidently listed under this sub-category. On the other hand, ICT skills were grouped around cognitive and affective domains. For instance, while technical skills in general and use of social media, coding, multimedia, chat or emailing in specific were reported in cognitive domain,
 
+
+<!-- PAGE 10 -->
+
+
 attitude, intention, and belief towards ICT were mentioned as the elements of affective domain.
 
 Communication skills (n = 9) were multi-dimensional for different societies, cultures, and globalized contexts, requiring linguistic skills. Collaboration skills (n = 9)  are  also recurrently cited with an explicit emphasis for virtual platforms.
@@ -265,6 +302,10 @@ Table 7 Categories (one-time occurrence) under 'skills' major theme
 | Re(design) skill           | Internet of Things (IoT)    | Bibliometric analysis               |
 | Digital readiness          | Technology-human adaptation | Mapping                             |
 | Digital commerce           | Information management      |                                     |
+
+
+<!-- PAGE 11 -->
+
 
 Table 8 Categories under 'thinking' major theme
 
@@ -295,6 +336,10 @@ This systematic review on digital literacy concentrated on forty-three articles 
 
 Whereas the mainstream literature describes digital literacy as a set of photo-visual, real-time, information, branching, reproduction and social-emotional thinking (EshetAlkalai, 2012) or as a set of precise specific operations, i.e., finding, consuming, creating,
 
+
+<!-- PAGE 12 -->
+
+
 communicating and sharing digital content (Heitin, 2016), this study reveals that digital literacy  revolves  around  and  is  in  connection  with  the  concepts  of  computer  literacy, media literacy, cultural literacy or disciplinary literacy. In other words, the present systematic review indicates that digital literacy is far broader than specific tasks, englobing the entire sphere of computer operation and media use in a cultural context.
 
 The digital competence yardstick, DigComp (Carretero, Vuorikari &amp; Punie, 2017) suggests that the main digital competencies cover information and data literacy, communication and collaboration, digital content creation, safety, and problem solving. Similarly, the findings of this research place digital competencies in relation to problem solving, safety,  information  processing,  content  creation  and  communication.  Therefore,  the findings of the systematic literature review are, to a large extent, in line with the existing framework used in the European Union.
@@ -314,6 +359,10 @@ By considering the major qualitative research trend, it seems apparent that more
 As digital literacy is an umbrella term for many different technologies, specific case studies need be designed, such as digital literacy for artificial intelligence or digital literacy for drones' usage.
 
 Digital  literacy  affects  different  areas  of  human  lives,  such  as  education,  business, health, governance, and so forth. Therefore, different case studies could be carried out for each of these unique dimensions of our lives. For instance, it is worth investigating
+
+
+<!-- PAGE 13 -->
+
 
 the role of digital literacy on lifelong learning in particular, and on education in general, as well as the digital upskilling effects on the labour market flexibility.
 
@@ -338,6 +387,10 @@ Lastly,  it  is  also  essential  to  state  the  study  limitations.  This  stu
 ## Appendix A
 
 See Table 9.
+
+
+<!-- PAGE 14 -->
+
 
 Table 9 List of papers (n = 43) included in the qualitative analysis-ordered alphabetically by title
 
@@ -461,6 +514,10 @@ Digital literacies: preparing pupils and students for their infor-
 
 - mation journey in the twenty-first century
 
+
+<!-- PAGE 15 -->
+
+
 Table 9 (continued)
 
 | Journal/Book                                | Book: Hacking the Academy: New Approaches to Scholarship and Teaching from Digital Humanities. The University of Michi- gan Press   | Social Inclusion                                                               | Compusoft, An international journal of advanced computer technology   | inter- Profesional de la informacion                                                           | The Electronic Library Process, Purdue                                 | Educational Technology & Society                               | Journal of Documentation Computers in Human Behavior                                                                                                       | Book: Integrating The Library Quarterly Revista de Docencia Universitaria                                                                                 |                                   | Journal of Medical Internet Research                               | study Cogent Education Book: Digital Tools in Urban Schools. Mediating a Remix of Learn-     | ing. The University of Michigan Press English Journal   | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     | International Journal of Advanced Computer Science and                                                     |
@@ -483,6 +540,10 @@ Table 9 (continued)
 |                                             |                                                                                                                                     |                                                                                |                                                                       |                                                                                                |                                                                        |                                                                |                                                                                                                                                            |                                                                                                                                                           |                                   | Fosmire,                                                           |                                                                                              |                                                         |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |
 |                                             |                                                                                                                                     |                                                                                |                                                                       |                                                                                                |                                                                        |                                                                | Bawden,                                                                                                                                                    |                                                                                                                                                           |                                   |                                                                    |                                                                                              |                                                         |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |
 |                                             |                                                                                                                                     |                                                                                |                                                                       |                                                                                                |                                                                        |                                                                |                                                                                                                                                            |                                                                                                                                                           |                                   |                                                                    |                                                                                              |                                                         |                                                                                                            |                                                                                                            | Hicks,                                                                                                     |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |                                                                                                            |
+
+
+<!-- PAGE 16 -->
+
 
 ## Table 9 (continued)
 
@@ -516,6 +577,10 @@ Table 9 (continued)
 |                                                                   |                                                             |                                                                               |                                                                       |                                                                                                                               |                                                         |                                                        |                                                                                                                        |                                                                                                                     |        |            |                          |                 | 42 |                 |     |
 |                                                                   |                                                             |                                                                               |                                                                       |                                                                                                                               |                                                         |                                                        | 38                                                                                                                     |                                                                                                                     |        |            |                          |                 |    |                 |     |
 |                                                                   |                                                             |                                                                               |                                                                       |                                                                                                                               |                                                         |                                                        |                                                                                                                        | 43                                                                                                                  | 37     |            |                          |                 |    |                 |     |
+
+
+<!-- PAGE 17 -->
+
 
 ## Author contributions
 
@@ -564,6 +629,10 @@ Received: 23 February 2022   Accepted: 1 June 2022
 - Van Deursen, A. J. A. M., &amp; van Dijk, J. A. G. M. (2010a). Measuring internet skills. International Journal of Human-Computer Interaction, 26 (10), 891-916. https://  doi.  org/  10.  1080/  10447  318.  2010.  496338
 - Van Deursen, A. J. A. M., &amp; van Dijk, J. A. G. M. (2010b). Internet skills and the digital divide. New Media &amp; Society, 13 (6), 893-911. https://  doi.  org/  10.  1177/  14614  44810  386774
 - van Dijk, J. A. G. M., &amp; Van Deursen, A. J. A. M. (2014). Digital skills, unlocking the information society . Palgrave MacMillan.
+
+
+<!-- PAGE 18 -->
+
 
 van Laar, E., van Deursen, A. J. A. M., van Dijk, J. A. G. M., &amp; de Haan, J. (2017). The relation between 21st-century skills and digital skills: A systematic literature review. Computer in Human Behavior, 72 , 577-588. https://  doi.  org/  10.  1016/j.  chb.  2017. 03.  010
 

@@ -1,10 +1,11 @@
 ---
 source_file: Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional.pdf
-conversion_date: 2026-02-03T09:03:11.435658
+conversion_date: 2026-02-03T18:34:16.633163
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -99,6 +100,10 @@ June 12 - 15, 2023
 
 IL, Chicago, USA
 
+
+<!-- PAGE 2 -->
+
+
 ## Trustworthy AI and the Logics of Intersectional Resistance
 
 ## Bran Knowles
@@ -147,6 +152,10 @@ https://doi.org/10.1145/3593013.3593986
 
 © 2023 Copyright held by the owner/author(s). Publication rights licensed to ACM. ACM ISBN 979-8-4007-0192-4/23/06...$15.00
 
+
+<!-- PAGE 3 -->
+
+
 The case is clearer if we limit the discussion to socially applied AI. For example, systems that make decisions about how to allocate resources/opportunities across a population. If we take the definition of trust offered by Annette Baier, a 'willingness to be or remain within [an entity's] power...and to give them discretionary powers in matters of concern to us,' or more succinctly, 'accept[ing] vulnerability to others' [6], then it is worth asking whether some have more to gain and others more to lose in allowing themselves to be vulnerable to AI. 1 To be clear, vulnerability arises from the potential for betrayal of trust, meaning simply that the trust ends up being shown to be misplaced. In this sense, to trust is to take a risk; but with risk comes the potential for reward [4]. Deciding to trust (to be vulnerable to possible betrayal of trust) allows a person to gain the benefits of reliance on a person or thing, while also gaining the opportunity to explore whether their trust proves to be well-placed and to better calibrate their future trusting. A person with greater resources and stability can more easily afford to take risks in trusting [4]; 2 whereas in the absence of such privilege and stability, an individual may rightly perceive the risks of trust to be prohibitive, or at least to demand greater evidence of trustworthiness to justify their risk-taking (cf. trust motivation theory [97]).
 
 Secondly, we argue that when distrust is understood as a legitimate response to a perceived threat, exploring this conative element is critical for taking seriously the legitimate concerns of those most likely to experience algorithmic harm. In §3 we critique current approaches to fairness, accountability, and transparency as responses to the conative issues animating public distrust of AI and offer initial musings on new aims to guide pursuits of 'trustworthiness'. This contribution helps attend to known shortcomings in the
@@ -168,6 +177,10 @@ Notions of what makes AI 'trustworthy' are typically oriented around high level 
 In the next subsections we explore the intersectional logics of distrust , i.e. the reasons individuals experiencing inequality and marginalization might distrust AI. We contend that AI is particularly prone to cause harm to marginalized groups. And, building from legal scholar and rights activist Kimberlé Crenshaw's concept
 
 3 D'Ignazio and Klein refer to this phenomenon as the 'privilege hazard' [26, p. 29], or the inability of those at the top to recognize oppression of those below.
+
+
+<!-- PAGE 4 -->
+
 
 of intersectionality [22], we further assert that multiply marginalized people are subject to unique harms which can exceed the additive harms inflicted on each group to which multiply marginalized people belong. 4 We argue that existing forms of marginalization have been used to construct, monitor, monetize, and penalize a digital underclass , whose individual and collective experiences of structural violence outside of the digital realm are reproduced and compounded by structural violence within this realm [13, 19, 32, 71]. Longstanding, harmful narratives that frame marginalized people as undeserving (of social protection, of restorative justice, and of empathy) have been directly transferred into the discourse around digital technologies and AI, providing rhetorical cover for harms inflicted on this digital underclass. We bring social science scholarship into dialogue with AI criticism by exploring the positive functions of the construction and maintenance of this 'undeserving' digital underclass for the people and institutions which marginalize people We place this dialogue within a broader discussion on structural violence and trust in AI. As phenomena can simultaneously perform different functions for different groups, we also consider how intersectionality can help us to identify for whom these positive functions operate. We look at the unique, additive harms inflicted upon the digital underclass, and we consider implications of these harms for trust.
 
@@ -191,6 +204,10 @@ Without aiming to provide an exhaustive list, we can identify some of these posi
 
 6 To be clear, we do not use the language of 'positive functions' to defend the construction of the digital underclass in the AI sphere. Just as Gans explains that the existence of positive functions does not justify undeservingness narratives but rather explains the persistence of such narratives, we aim to highlight how the digital underclass selectively benefits-that is, serves positive functions for-specific actors in the AI sphere. A 'positive' function does not mean a function that is morally good.
 
+
+<!-- PAGE 5 -->
+
+
 analog spheres is mirrored and compounded in the digital realm, resulting in structural violence against the many and considerable benefits for the few 7 . In the subsections that follow, we examine some of the negative functions that have been rightly identified as pernicious in previous literature, and we illustratively identify some of the ways that these same functions that are negative for some groups are positive for others (disproportionately for the privileged).
 
 An explanatory note: We do not believe our argument requires us to determine whether positive functions are intentionally produced. Systems need not be designed with the intention to harm in order for them to cause harm. Those who benefit from inequitable systems risk being complicit in structural violence unless they actively work to understand and dismantle oppression.
@@ -211,6 +228,10 @@ Recent applications of AI in the retrenchment of social protection schemes simil
 
 For a privileged person deemed low-risk by algorithmic classification, as well as for the institutions which claim to uphold social order, AI serves a positive function: It decreases the moral panic towards the generalised 'criminal' by promising that this undeserving underclass will be effectively identified and isolated from society, creating the feeling of safety and security. Another positive function which serves broad swathes of the privileged public is norm reinforcement: AI algorithms can heighten the efficiency of identifying (and penalizing) violations of social norms, and likewise of rewarding adherents. On the other hand, for someone who is more likely to be algorithmically classified as high-risk on the basis of their skin tone and other physical characteristics, name, religion, neurodivergence, gender identity, and/or any other markers selected for marginalization, AI carries the very real risk of relegation to the undeserving digital underclass (a negative function to say the least). How or why a rational actor would trust a system that more effectively targets them for structural violence in this manner is unclear. Understanding the positive functions for the privileged helps to highlight why some groups may have 'motivated cognition' [97] in regarding AI as generally trustworthy as much as the negative functions explain this motivated cognition in the other direction.
 
+
+<!-- PAGE 6 -->
+
+
 about single parenthood and stereotypes about laziness and unwillingness of recipients to work 9 ) attached to accessing this program, widespread falsehoods about so-called 'Welfare Queens', who are presumed to have (too many) children in an effort to scam taxpayers and avoid real work, have been used to justify withdrawal of social protection in an act of structural violence. Crucially, the Welfare Queen is racialized as Black, and racist tropes intersect with class and gender norms to make parenting in socially approved ways uniquely impossible for low-income Black women.
 
 While tremendously harmful for recipients of social protection, stigmatizing stereotypes and the rhetoric of undeservingness again facilitates the positive function of norm reinforcement for institutions such as the family and the economy. Norm reinforcement provided by social protection recipients occurs in analog space, but has been supercharged by AI, under the presumption that the 'undeserving', who supposedly abuse the system, can be precisely and efficiently weeded out from among the 'deserving' few who are deemed to be in legitimate receipt of social protection. In this skewed view, the undeserving digital underclass are rendered increasingly incapable of abusing taxpayer money because AI will identify and penalize any malfeasance. Indeed, in direct parallel to Gans's functions, the undeserving digital underclass can be scapegoated, alleviating the need to address social problems.
@@ -226,6 +247,10 @@ opening of 'free' markets is the solution for a failing state is propagated by n
 Wetherefore include in our conception of the undeserving digital underclass not only those who are harmed by implementation of algorithms, but also those who are harmed in their construction, such as 'low-skilled' workers who are devalued for supposedly insufficiently leveling up their skills and qualifications. These essential workers are left to take on emotionally taxing, poorly remunerated, and unrewarding labor with limited job security and prospects for promotion (see for example [21]). The creation of AI training data by low-level employees can generate billions of dollars of wealth, little of which ever flows to their benefit. Much as Gans argued that the undeserving poor provide a reserve labor force and also drive down wages and suppress union activity, so too does the digital underclass fill this role, ironically accepting precarious and low wage work to build the very AI systems that are being used to make them feel replaceable. Laborers also become enfolded in the digital underclass through increasing forms of workplace surveillance, which create a digital panopticon in which workers are assumed to be lazy and ineffective, stealing company time if they are not directly monitored. This highlights how porous the boundaries of the undeserving digital underclass are-marginalization creates a gradient rather than a binary set of categories, so that multiply marginalized people experience the most consistent and severe consequences of marginalization, including bearing the brunt of undeservingness narratives, while less marginalized groups can contextually experience both positive and negative functions.
 
 That AI serves positive functions under a free market state system has clear implications for the economy as an institution. One positive function of the digital underclass under the principles of a capitalist economic system is that the underclass can be exploited to generate revenue. As explored by Safiya Umoja Noble, this operates directly in web search algorithms which, in their ostensible role as neutral purveyors of relevant information, will offer up racist and sexist results because doing so is, as the algorithm has learned, profitable [77]. There is also an indirect pathway linked to revenue generation through the impacts of AI on labor market dynamics. Specifically, the underlying human labor needed to gather and code the data at the heart of AI generates a wide array of jobs. Importantly, however, these are often high quantity but low quality precarious jobs; AI can harness the narrative of 'job creation', which is well-measured through existing metrics, but with less accountability for the quality of these jobs, which are not systematically measured and monitored in the same way.
+
+
+<!-- PAGE 7 -->
+
 
 As the examples above show, the undeserving digital underclass performs a positive function by fostering faith in existing systems: Society can have confidence in a system that perpetuates and amplifies stark inequities because an 'objective' algorithm has identified the 'undeserving'. Under this logic, societal norms are assumed to be beyond reproach because seemingly unbiased systems have confirmed the legitimacy of the existing, inequitable social order. Linked to this, the digital underclass absolves the privileged of the need to examine the morality of phenomena such as the abrogation of social protection and the widening of the carceral net because the assumption is that these systems have efficiently identified those who are inherently undeserving of support and deserving of punishment; absent of messy human error introducing false positives, moral concerns around issuing lengthy prison sentences or withdrawing social support from someone in need are rendered moot. 10 Implicitly, the privileged public can trust unbiased AI to get it right . Unfortunately, in reality, examples of deeply biased AI abound. Moreover, the very notion that anyone is undeserving and must be identified and penalized illustrates a fundamental problem with the entire foundation: Algorithms are being constructed by human beings, who are subject to socially developed biases; AI is not created in a vacuum, but instead hinges on, among other (biased) inputs, human-driven collection and categorization of data. Rather than operating beyond human bias, AI can very efficiently achieve deeply biased human goals. Notably, the marginalized public have no cause for optimism regarding AI's capacity to render unbiased decisions; and in fact they need not have direct experience of betrayal by biased AI to be wary of it. Lived experience of institutional callousness within the inequitable system these technologies are designed to optimize is sufficient cause for distrust.
 
@@ -249,6 +274,10 @@ An important effect of centering vulnerability in this way is to direct accounta
 
 12 For example, distrusting AI 'to make any decisions' about one's life [9].
 
+
+<!-- PAGE 8 -->
+
+
 stewards. 13 Taking inspiration from care ethics literature (e.g. Jean Watson's theory of human caring [102]), a carative approach 14 to AI would de-center statistical modelling within the AI development lifecycle to make room for core practices of accompaniment of and caring for the most vulnerable. Development teams might benefit, therefore, from a facilitated process to help them overcome their 'meta-blindness', or failure to see what they are not seeing from others' perspectives [89, referencing [72]], not just through collaboration within more diverse teams [34], but by those teams 'intentionally and attentively placing themselves in situations in which they will experience epistemic friction' [89] throughout the AI development lifecycle (e.g. [52]). 15 At a minimum, a carative development process would 1) start with real-world problems as experienced by the most vulnerable; 2) listen to them to understand their values, concerns, and constraints; 3) meet them where they are and work toward a solution to their problems all the way to the end; and 4) conduct a grounded assessment of the entire solution by meaningfully engaging with the affected communities both before and after deployment.
 
 ## 3.2 Reconsidering 'Transparency'
@@ -271,6 +300,10 @@ This open posture transforms transparency from backwardfacing (what one has done
 
 17 This openness to input is similar to the stance adopted by the Lean Startup methodology [84] and agile software development [31] more generally. Rather than follow a prescribed path dictated by requirements, these approaches progress through a series of small experiments (cast as Minimal Viable Products in the case of Lean Startup) which progressively reveal answers to what is most unknown about where true value might lie.
 
+
+<!-- PAGE 9 -->
+
+
 ## 3.3 Reconsidering 'Fairness'
 
 The dominant concerns within AI fairness discourse are the measurement and mitigation of bias. Predictions or prescribed outcomes by an AI are considered unfair if different groups (socially constructed categories relating to protected attributes such as race or gender) experience different rates of false positives, false negatives, or favorable/unfavorable decisions; or if individuals who are similar (e.g. similarly qualified) receive different outcomes. Reducing statistical bias often causes a reduction in predictive accuracy, at least with respect to the potentially biased training data (and associated set aside test data) that might have given rise to the bias in the first place. So this might be seen as further evidence of the moral commitment of the party removing that bias to avoid discrimination. Documenting this bias removal in a way that satisfies future audits may also reduce the likelihood of penalties (once guidelines spawn enforceable standards). So this might be viewed as a win all around, except for the fact that systemic discrimination cannot be reduced to the sort of statistical measures offered by the variety of bias toolkits now available (for example [10]). In the bigger picture, what makes AI unfair to marginalized groups is that they bestow an illusory objectivity upon categorizations that reinforce existing social hierarchies and attendant inequities, thus allowing the scaling up and simultaneous sterilization of slow violence done to the supposedly 'undeserving'.
@@ -286,6 +319,10 @@ Even more radically, what if AI systems aimed to empower individuals in ways tha
 There is a risk of Trustworthy AI being used for the purposes of 'trust washing' unless the efforts pursued under its heading meaningfully relate to the concerns underlying expressions of distrustespecially if the evidence of trustworthiness offered is compliance with guidelines and regulations which are themselves only weakly reflecting (as opposed to actively dismantling) structural violence. In focusing on conative trust we are not meaning to suggest that it is productive to consider conation in isolation from cognition and/or affect. These are interlinked, as Baier herself strongly argued [6] and trust motivation theory reiterates [97]. Rather, our point is that ignoring the relational-motivational aspects of trust-following the same pattern of oversimplification of the human experience which underlies much of the harm inflicted by machines [8, 21, 70, 71]-is a convenient way to performatively vet AI's trustworthiness while sidestepping the matter of whether people actually trust AI, or indeed whether they should .
 
 The public is frequently polled by researchers and marketers regarding their level of trust in AI, but the rhetorical intention of their responses is often unclear. Distrust may indicate concerns about AI's reliability, concerns about the trustworthiness of the deploying organization, concerns about the efficacy of regulatory safeguards, or any number of moral concerns about AI [55]. With this paper, we have provided a plausible account of some of the concerns that the public might be conveying with distrust, particularly when a person's distrust of AI is categorical: they are 'seeing through' to how AI is 'connected to larger systems of institutionalized oppression' [83]. Part of our reason for doing so is to distinguish this kind of
+
+
+<!-- PAGE 10 -->
+
 
 distrust from non-reliance, especially given that much more of the focus of Trustworthy AI is on matters of 'reliance' and 'reliability'. As D'Cruz notes, 'To apply the label 'untrustworthy' is to impugn a person's moral character. But to recognize that someone is not to be relied on in a particular domain need not have any moral valence at all' [28]. The distrust we have been describing is about the moral failings of AI. It is a harsh indictment, indeed! We risk eviscerating the important matters being implicated by distrust by conflating them with mundane matters of reliability; and we misunderstand their moral weight by failing to distinguish distrust (an active stance of opposition) from non-trust (a lack of reason to trust).
 
@@ -329,6 +366,10 @@ This work is partially funded by the ESRC funded grant BIAS: Responsible AI for 
 - [27] Joseph Donia. 2022. Normative Logics of Algorithmic Accountability. In 2022 ACM Conference on Fairness, Accountability, and Transparency . 598-598.
 - [26] Catherine D'ignazio and Lauren F Klein. 2020. Data Feminism . MIT press.
 - [28] Jason D'Cruz. 2020. Trust and Distrust. In The Routledge Handbook of Trust and Philosophy . Routledge, 41-51.
+
+
+<!-- PAGE 11 -->
+
 
 - [29] Jason R. D'Cruz, William Kidder, and Kush R. Varshney. 2022. The Empathy Gap: Why AI Can Forecast Behavior But Cannot Assess Trustworthiness. In Proceedings of the AAAI Fall Symposium Series Symposium on Thinking Fast and Slow and Other Cognitive Theories in AI .
 - [31] Kent Beck et. al. 2001. Manifesto for Agile Software Development. https: //agilemanifesto.org/.
@@ -389,6 +430,10 @@ on Fairness, Accountability, and Transparency . 758-771.
 - [81] Onora O'Neill. 2002. Reith Lectures 2002: A Question of Trust. Lecture 3: Called to Account. BBC Reith Lect (2002).
 - [83] Seeta Peña Gangadharan and Jędrzej Niklas. 2019. Decentering technology in discourse on discrimination. Information, Communication &amp; Society 22, 7 (2019), 882-899.
 - [84] Eric Ries. 2011. The Lean startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses . Crown Business.
+
+
+<!-- PAGE 12 -->
+
 
 - [85] Dorothy Roberts. 1997. Killing the Black Body: Race, Reproduction, and the Meaning of Liberty . Pantheon Books.
 - [87] Loretta Ross and Rickie Solinger. 2017. Reproductive Justice: An Introduction . University of California Press.

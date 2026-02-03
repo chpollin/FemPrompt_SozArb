@@ -1,10 +1,11 @@
 ---
 source_file: Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.pdf
-conversion_date: 2026-02-03T08:44:10.147734
+conversion_date: 2026-02-03T18:22:22.690791
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Tech workers ' perspectives on ethical issues in AI development: Foregrounding feminist approaches
@@ -49,6 +50,10 @@ Big Data &amp; Society January -March: 1 -11 © The Author(s) 2024 Article reuse
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 feminist and critical race scholar Sara Ahmed (2012) by permitting interviewees -in our case, tech workers -to tell their own stories about AI ethics, and we draw on feminist political theory and feminist science and technology studies to interpret them. Our feminist approach and our focus on storytelling complicate the assumption that corporations are monolithic entities with singular understandings of AI ethics, and instead emphasise the importance of employees ' disparate ethical views and understandings of what AI can and should do. By exploring the perspectives of tech workers who possess different forms of domain knowledge but support the operation of the same organisation, we show how, even within a single company with a globally recognised brand and a highly developed internal corporate culture, the meaning and signi /uniFB01 cance of AI ethics substantially shifts between individuals and groups. This has serious rami /uniFB01 cations for how the development of ethical AI is perceived and understood across the whole sector.
 
 In allowing tech workers to tell their own stories about AI, three main themes or concerns rose to the surface: what the term ' bias ' meant to tech workers and how they believed the concept /uniFB01 ts into their work; their perceptions of how the development of AI relates to diversity, equality and inclusivity (DEI) issues and corporate diversity initiatives; and the challenges for developing ethical AI posed by integrating new AI systems with existing ' legacy systems ' and successfully maintaining AI systems over time.
@@ -60,6 +65,10 @@ The pressure points we identify from tech workers ' stories at different steps i
 Companies, international organisations, governments, industry, public sector organisations, academic institutions and civil society groups have converged on the concept of ' AI ethics ' as a way of guiding AI development and deployment. In the corporate sector, notable contributions to AI ethics include Google ' s Responsible AI, Microsoft ' s Responsible AI, Rolls-Royce ' s Aletheia Framework (2021), BMW ' s Seven Principles for AI (2020), PwC ' s Practical Guide to Responsible AI (2019) and Digital Catapult ' s Ethics Framework (2022). Meanwhile, over 60 countries worldwide have developed their own AI ethics strategies (OECD, 2021), encouraging the development of just, fair, transparent and accountable AI systems, while simultaneously addressing associated practices such as data collection and management. At the international level, a multitude of AI ethics frameworks have been produced, including NATO ' s Principles of Responsible AI (2021) and the European Parliament ' s Governance Framework for Algorithmic Accountability and Transparency (2019). While different AI ethics projects contain their own distinct political agenda and are aimed at different stakeholder audiences, there are some identi /uniFB01 -able shared concerns. As Jobin et al. (2019) map out in their study of 84 international ethics frameworks, there are 11 common key themes. 2 Of particular interest to this study is the second most prominent theme: ' justice, fairness and equity ' , which Jobin et al. (2019) suggest ' is mainly expressed in terms of fairness, and of prevention, monitoring or mitigation of unwanted bias and discrimination ' (p. 394). We suggest that by listening to tech worker ' s views and stories, a more complex picture emerges of how these generic ethical terms are insuf /uniFB01 cient for effective change.
 
 Existing empirical research already highlights some of the dif /uniFB01 culties that emerge when attempting to implement AI ethics frameworks in industry contexts. Common problems include outsourcing AI ethics to high-level committees; appointing a single individual to be in charge of ethical practice (rather than involving the whole development team); and assuming that ethical approaches will be implemented without systematic guidance, review and oversight (Khan et al., 2023; Vakkuri et al., 2020). Vakkuri et al. (2020) surveyed 249 practitioners at 211 software companies (106 of which were developing AI) about key issues and principles in AI ethics in order to better understand how tech workers were approaching ethical questions on the ground. They conclude that ' the data we collected point to AI ethics implementation still being in its infancy '
+
+
+<!-- PAGE 3 -->
+
 
 (Vakkuri et al., 2020: 54) and highlight that engineers ' perspectives must be included in AI ethics discourse and policy in order for it to be actionable: ' using these guidelines requires additional work from your organization because they do not come in the form of an off-the-shelf method. You need to /uniFB01 rst make them more practical for your developers, project teams, and product owners and customers ' (Vakkuri et al., 2020: 54). Meanwhile, an international survey of 99 tech workers and lawmakers by Khan et al. (2023) explored what these practitioners thought were the most important AI ethics principles and the main challenges they faced in their implementation. The most commonly stated barrier to the implementation of AI ethics principles (as cited by 81.8% of interview participants) was a ' lack of ethical knowledge ' that made it dif /uniFB01 cult to expand and scale AI ethics principles in industry contexts (Khan et al., 2023: 4).
 
@@ -73,6 +82,10 @@ In this article, we draw on the insights of feminist theory and qualitative meth
 
 Our industry partner in this project, TCX, wishes to remain anonymous and accordingly, we have been extremely careful not to include any information that might disclose TCX ' s identity or those employees who took part in our research. In addition to removing the name of the company and any details about interviewees ' identity, we have also excluded geographical locations and references to speci /uniFB01 c AI products. In the spirit of ethical progress, TCX spent a great deal of time working with us on this project. One of our team, the Principal Investigator, established a professional relationship with TCX over several years, which resulted in an invitation to partner on this project. TCX entered the partnership, built on a detailed non-disclosure agreement with the research team to protect anonymity, with a genuine curiosity and willingness to be observed ' from the inside ' . A senior manager of TCX was appointed as the team ' s point-person,
 
+
+<!-- PAGE 4 -->
+
+
 responsible for making the project visible to employees and helping us to seek out interviewees from across its workforce. Senior staff also gave us a detailed presentation on the structure and objectives of TCX, and helped us understand how AI is used, designed, developed, tested and marketed.
 
 To initiate the study and explain our methodological approach, two members of our team gave an online presentation on the project which was open to all employees and recorded for those who could not attend. We were aware that the presentation might deter some interviewees from agreeing to participate. Nevertheless, we thought it was important to emphasise our genuine effort to explore tech worker attitudes towards the ethical issues arising in AI development and deployment. As evidenced by our data, employees were extremely open and candid in their responses, and expressed a very wide range of perspectives.
@@ -84,6 +97,10 @@ Following feminist scholar Sara Ahmed ' s (2012) methodological approach in On B
 However, while we allowed employees to tell their own stories, we did not approach these stories uncritically, nor did we assume that they contained the sole ' truth ' about AI and the challenges tech workers faced in developing AI ethically. Following feminist political theorist Banu Bargu (2013), we took ' neither the dominant narratives of power nor the narratives subjugated by them at their word ' (p. 806). Instead, we approached the stories told by employees generously and sensitively, while simultaneously recognising how their experiences may obscure or occlude the real harms potentially generated by their products. This refractive practice between narrative and theory allowed us to fully honour the narratives of employees at TCX while also recognising how their stories play into the wider gendered and racialised power dynamics that constitute the AI industry.
 
 Our original intention had been to travel to a range of different TCX locations and conduct ethnographic research with our subjects over the course of their usual working days. However, due to the national and international lockdowns prompted by the COVID-19 pandemic, we resorted to Zoom interviews. While this prevented observations and interactions with interviewees in situ, there were nevertheless a number of positive effects. In speaking to us from home, participants had more privacy from their colleagues when discussing their views and perspectives. There were also far fewer logistical challenges in organising face-to-face interviews, which we believe gave rise to a higher number of interviewees agreeing to join us for a substantial discussion (Gray et al., 2020: 1292).
+
+
+<!-- PAGE 5 -->
+
 
 We recorded the interviews in 2021, saved them locally to our computers and used Otter AI to begin the transcription process. The generated transcripts were then checked and amended against the original audio by our research team. The documents were read multiple times by our research team so that they became familiar with the texts and key themes raised. NVivo was used for coding and to assist with data analysis. A great many issues were discussed surrounding AI at TCX; however, for the purposes of this article we have concentrated on three central themes that emerged from the data: understandings of bias, the relationship between DEI and AI development, and the practical challenges to developing ethical AI that arise from integrating new AI systems into older technological infrastructures.
 
@@ -110,6 +127,10 @@ Bias can be good, right! In my /uniFB01 eld, in terms of trying to /uniFB01 nd a
 These responses demonstrate that interpretations of bias are strongly contingent on an employee ' s disciplinary specialism, an issue which is rarely raised in public and policy discourse on AI ethics. Additionally, the fact that the interpretation of bias in AI ethics discourse is not as familiar to engineers is likely to re /uniFB02 ect how computer science education and tech companies put less emphasis on bias de /uniFB01 ned as unfairness than they do the kinds of bias that engineers alluded to: #41 is referring to bias as the attempt to direct a model towards identifying possible threats, and #62 is discussing bias as a feature of the model that helps it learn and improve performance. Both responses show a primary concern for product performance: in the /uniFB01 rst case by seeking to eradicate threats to the product, and in the second by focusing on the improvement of functionality.
 
 Furthermore, both give insight into how engineers perceive AI ethics attempts to debias systems. By contrasting their own de /uniFB01 nition of bias to ' being fair ' , #41 gives insight into the common engineering perspective that the eradication of bias as part of AI ethics initiatives means making the system ' equal ' or ' neutral ' . However, implicit in his response is the fact that AI models are always ' skewed ' in their visions of the world -because you have to bias ' towards ' a given output. This points towards the impossibility of rendering a system neutral through debiasing techniques. As we explore in this article, it is crucial that AI ethics discourse learns from engineers ' understanding of
+
+
+<!-- PAGE 6 -->
+
 
 AI systems as always limited, in that they fundamentally take a partial, biased perspective.
 
@@ -143,6 +164,10 @@ Others emphasised the challenges of managing legacy systems, and believed that t
 
 [What is important] is making sure that you ' ve got the ability to monitor … over time as the data changes or as
 
+
+<!-- PAGE 7 -->
+
+
 the machine learning model evolves … and that ultimately we switch things off if and when they ' re not needed anymore … How are these things going to be maintained over a long lifespan? Because organisations are typically quite bad at keeping on top of legacy. At some point AI will be legacy. (#25)
 
 It emerged that one of the data feeds the model was expecting to receive had been turned off and had been … broken for some time. And that was causing the model to make misdiagnoses. When it was caught, it was like, how did we not see this sooner? (#39)
@@ -165,6 +190,10 @@ We argue that AI partiality can remind tech workers as well as users that AI (an
 
 As a myriad of AI ethics frameworks have suggested (Jobin et al., 2019), a product team ' s diversity (or lack thereof) affects AI design, development and deployment. The demographics of the AI sector are still, however, notoriously homogeneous, to the extent that West et al. (2019: 3) note
 
+
+<!-- PAGE 8 -->
+
+
 that AI is suffering from a ' diversity crisis ' . In the US context, for example, only 26% of AI workers are women (Wodeki, 2021), and in the United Kingdom only 20%, leading Young et al. (2021) to argue that the /uniFB01 eld is characterised by structural inequality. In an attempt to correct the lack of women in AI, AI ethics initiatives emphasise the need for increased diversity and representation in design teams. For example, IBM ' s Coercive Control Resistant Design principles insist that ' having a diverse design team broadens the understanding of user habits, enabling greater exploration of use cases, both the positive and the negative ' (Nuttall, n.d.: 2). We found in our data however that while DEI was an important priority for TCX, most of our interviewees did not see any relationship between attempts to ' diversify ' the workforce and the development of AI ethics. Indeed, some interviewees wondered if TCX ' s desire for a digitally skilled workforce would undermine its ambitious DEI targets because of the limited diversity of the AI talent pool. While TCX has put a great deal of effort and resources into its DEI policies, we /uniFB01 nd the work of feminist and critical race scholars such as Ahmed (2012) and Walcott (2019) informative here as they have problematised the way that ' diversity ' language can fail to perform the structural shifts necessary to achieve meaningful change (Ahmed, 2012: 117). In these cases ' diversity ' loses its transformative intent and can instead function as a discourse of ' benign variation ' from the norm (Mohanty, 1989: 18), while ' inclusion ' incorporates marginalised people into existing structures that have not been designed with their inclusion in mind (Ahmed, 2012: 163). This may be why some interviewees saw DEI initiatives as a potential barrier to hiring AI engineers. When diversity is seen as a tick-box exercise, rather than as an ongoing process, tech workers may struggle to understand why diversity matters in the /uniFB01 rst place and its central role in creating ethical AI. For example, in our dataset only a small subset of tech workers believed that a team ' s diverse perspectives impacted the character of technology development. In a similar way to those tech workers at TCX who thought data not explicitly ' about people ' was inherently bias-free, some of our interviewees did not see the products they made as re /uniFB02 ective of themselves or the teams that made them.
 
 We suggest that DEI initiatives and AI ethics goals need to be brought into direct conversation with one another so that companies, policymakers and AI ethicists can draw on different methodologies and approaches to gender, race and other social characteristics in such a way that they are not understood as merely ' personal attributes ' or ' identity categories ' , but rather as a set of relations that shape how institutions and the individuals within them operate (Ahmed, 2012: 13; Drage and Mackereth, 2022). By approaching the problem of diversity not solely as an issue of the underrepresentation of speci /uniFB01 c individuals but also as an occlusion of different forms of situated knowledge, governments and other institutions can move beyond the narrative of the ' diversity crisis ' in AI talent and start to better contextualise the development, function and social impact of AI. Such an approach may also involve ultimately moving beyond the language of diversity itself. For example, Costanza-Chock (2020: 6) pushes not just for improved diversity in design teams but for a fully realised vision of ' design justice ' that centres the voices of those who are usually marginalised in technology design and development processes. Similarly, Browne (2023, 2024) argues for new regulatory models for AI that include diverse lay-members of the public with different sets of interests.
@@ -176,6 +205,10 @@ Our data suggests that legacy systems are one of the principal obstacles to deve
 The ethical oversight of legacy systems might entail, for example, an investigation of potential ethical issues associated with the dispersal or reconstitution of data within an organisation or sector. This is particularly challenging when data becomes detached from its original context over time. Temporal separation -the time that passes between the collection and use of data -can result in engineers, down the line, being less familiar with the context in which the data was gathered. Meanwhile, spatial separation -when data is moved across domains -can result in a loss of contextual information. Feminist scholars D ' Ignazio and Klein (2020) use the term ' strangers in the dataset ' to describe data scientists who are estranged from the context and provenance of the data they are working with (p. 130). They argue that the levels of remove between data scientists and data collection and maintenance -whether temporal or spatial -increase the risk of creating AI that is unrepresentative of the communities and contexts from which the data was collected. This sort of data detachment also increases the likelihood that data scientists will not be aware that a given dataset might not be representative of other excluded communities.
 
 These concerns highlight the fact that AI ethics is necessarily a long-term and complex endeavour. It cannot simply be achieved through one-off ' bias checks ' in the development process. Maintenance is a
+
+
+<!-- PAGE 9 -->
+
 
 neglected area of AI study; as Pendergrast and Pendergrast (2021, np.) argue, ' to think about AI through the lens of maintenance practices is one way to acknowledge the long life of technological systems and their impacts on people and the environment ' . Feminist studies of political economy have long demonstrated the importance of maintenance work, and how this work tends to be both undervalued and yet also critical for societal functioning (see, e.g. Baraitser, 2017; Boyer, 2015; Fraser, 2016; Peterson, 2003). The same, we argue, applies to technical systems: maintenance work such as debugging was seen by some of our interviewees as boring and undesirable work. Nonetheless, they emphasised how monitoring and calibrating AI systems to ensure their fair and consistent performance over time is vital to the longterm practice of AI ethics. In light of these observations, we suggest that the practice of maintenance be prioritised in AI ethics strategies going forward.
 
@@ -216,6 +249,10 @@ https://orcid.org/0000-0002-0053-4657
 3. At this point the interviews had begun to offer repetitive responses, what Bryant and Charmaz (2007: 611) call ' the saturation point ' whereby no new perspectives or codes are generated.
 4. See note 4.
 5. (#54 #35 #50 #39 #13 #40).
+
+
+<!-- PAGE 10 -->
+
 
 6. We shall return to this speci /uniFB01 c point on Wikipedia and others in our general discussion of evidence later in the article.
 7. (#41 #62 #36).
@@ -264,6 +301,10 @@ https://orcid.org/0000-0002-0053-4657
 - Haraway D (1988) Situated knowledges: The science question in feminism and the privilege of partial perspective. Feminist Studies 14(3): 575 -599. Autumn.
 - Haslanger S (2015) What is a (Social) Structural Explanation? Philosophical Studies 9 January. Available at: https://dspace. mit.edu/bitstream/handle/1721.1/97040/HaslangerWISSEFINAL.pdf?sequence = 1&amp;isAllowed = y (accessed 1 November 2022).
 
+
+<!-- PAGE 11 -->
+
+
 - Institute for the Future and Omidyar Network (2018) Ethical OS. Available at: https://omidyar.com/news/omidyar-networkpartners-with-institute-for-the-future-to-launch-the-ethicaloperating-system-a-guide-to-anticipating-the-future-impact-oftodays-technology/ (accessed 16 November 2022).
 - Jobin A, Ienca M and Vayena E (2019) The global landscape of AI ethics guidelines. Nature Machine Intelligence 1(9): 389 -399.
 - Jugov T and Ypi L (2019) Structural injustice, epistemic opacity, and the responsibilities of the oppressed. Journal of Social Philosophy 50(1): 7 -27.
@@ -290,9 +331,7 @@ https://orcid.org/0000-0002-0053-4657
 - Tripodi F (2021) Ms. categorized: Gender, notability, and inequality on Wikipedia. New Media &amp; Society 25(7): 1 -21.
 - UNESCO (2021) General Conference, 41st. Report of the Social and Human Sciences Commission (SHS). Available at: https://unesdoc.unesco.org/ark:/48223/pf0000379920.page = 14 (accessed 1 November 2022).
 - Ustek-Spilda F, Powell A and Nemorin S (2019) Engaging with ethics in Internet of things: Imaginaries in the social milieu of technology developers. Big Data &amp; Society 6(2): 1-12. DOI: 10.1177/2053951719879468.
-
-Vakkuri V, Kemell K-K and Abrahamsson P (2020) AI Ethics in Industry: A Research Framework. CEUR Workshop Proceedings. Available at: http://ceur-ws.org/Vol-2505/ paper06.pdf (accessed 1 November 2022).
-
+- Vakkuri V, Kemell K-K and Abrahamsson P (2020) AI Ethics in Industry: A Research Framework. CEUR Workshop Proceedings. Available at: http://ceur-ws.org/Vol-2505/ paper06.pdf (accessed 1 November 2022).
 - Walcott R (2019) The end of diversity. Public Culture 31(2): 393 -408.
 - West SM, Whittaker M and Crawford K (2019) Discriminating Systems: Gender, Race and Power in AI. AI Now Institute. Available at: https://ainowinstitute.org/publication/ discriminating-systems-
 - gender-race-and-power-in-ai-2 (accessed 16 November 2023).

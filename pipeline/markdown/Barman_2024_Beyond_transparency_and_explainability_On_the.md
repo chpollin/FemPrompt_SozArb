@@ -1,10 +1,11 @@
 ---
 source_file: Barman_2024_Beyond_transparency_and_explainability_On_the.pdf
-conversion_date: 2026-02-03T08:43:06.845690
+conversion_date: 2026-02-03T18:21:21.262086
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## ORIGINAL PAPER
 
 ## Beyond transparency and explainability: on the need for adequate and contextualized user guidelines for LLM use
@@ -47,6 +48,10 @@ However, the more these models are used, the more we see the risks which attend 
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 misunderstanding, potentially across whole societies. Part of the problem is simply that most people do not understand these tools, and also do not know what the tools can and can't  do  or  how  to  use  them  properly.  Underlying  this former point is the fact that LLMs often come across as mysterious 'black boxes', where a prompt is introduced to get a response, without the user having any understanding of what's happening inside. And if the output looks good-e.g., reads like proper English and makes sense on the surfacepeople tend to use it even if it might not ultimately be correct.
 
 One popular suggestion for addressing these issues is to increase the transparency and explainability of AI systems like large language models. In this article, we argue that this may not be the best or even the right sort of strategy regarding the use of LLMs. We argue that the focal point should be providing users with adequate guidelines such as specific statements regarding which (types of) tasks can be delegated to LLMs, which prompts are apt to lead to errors, misinformation, or unhelpful outputs, and what areas allow for collaborative use of LLMs in conjunction with human input and revision. The emphasis of such guidelines should not just (or even primarily) be about explaining LLMs or explaining how LLMs work, but rather about teaching people how to use them responsibly, ethically, and effectively, even if they do not (or cannot) understand the model or why it gave a certain output. More importantly, even when users are not properly 'taught' how to effectively or responsibly use LLMs, rudimentary guidelines can help everyday users to avoid common mistakes by simply providing them with a list of dos-and-don'ts for LLM use. As an example, one may think of using an LLM as analogous in some respects to driving a car; one does not need to be a mechanic who understands every detail about how the engine works in order to be a responsible driver. However, one should know the rules of the road and how to drive safely and effectively. The same is true for large language models (as well as many other opaque systems) (Wood, 2024). Understanding the theory behind them, or the reasons for why they fail is one thing, but knowing how to use them efficiently, effectively, or without causing harm is another.
@@ -60,6 +65,10 @@ To be clear at the outset, we are not arguing that XAI is not useful (to some de
 The key gain provided by this user-centric approach is the enhancement of user competence and confidence in utilizing LLMs responsibly and effectively. By focusing on practical guidelines, users are equipped with actionable knowledge, enabling them to better harness the potential of LLMs in various applications while reducing risks like biases and misinformation. This approach democratizes the use of advanced AI technologies, making them more accessible to a broader audience, irrespective of their technical background, thereby fostering a safer, more ethical, and more efficient use of LLMs.
 
 The paper is structured as follows. Sect. 'LLM use in education, the workplace, and expert advice' explores practical use cases of LLMs in contexts like education, the workplace, and expert seeking advice. This section highlights the need for policies, guidelines, and training tailored to different disciplines and domains where lack of reliability can have serious negative consequences. Sect. 'Shortcomings and potential pitfalls of LLMs in practical applications'
+
+
+<!-- PAGE 3 -->
+
 
 discusses the strengths and weaknesses of LLMs with an eye to potential pitfalls of using LLMs without proper guidelines. Sect. 'The challenges of XAI for LLMs' considers XAI as an approach to enable key desiderata in LLM use, arguing that it has several shortfalls and issues. Sect. 'Charting a user-centric path: the case for tailored guidelines in a user-centric-approach (UCA).' advocates for a user-centric approach centered on the notion of guidelines and their strategic importance. Sect. 'Meta criteria for guidelines' considers some meta-criteria for guidelines, considerations related to who should be administering said guidelines and how they should be implemented, and Sect. 'Conclusion' concludes.
 
@@ -80,6 +89,10 @@ The integration of large language models like GPT, Claude Llama, and Bard Bing C
 1 For  example,  Harvard,  the  University  of  California,  Berkeley, and  the  University  of  Missouri  have  spearheaded  efforts  to  codify guidelines  on  responsible  and  ethical  use  of  LLMs  within  the university  context.  See  https://  provo  st.  harva  rd.  edu/  guide  lines-  usingchatg  pt-  and-  other-  gener  ative-  ai-  tools-  harva  rd, https://  ethics.  berke  ley. edu/  priva  cy/  appro  priate-  use-  chatg  pt-  and-  simil  ar-  ai-  tools, https://  oai. misso  uri.  edu/  chatg  pt-  artifi  cial-  intel  ligen  ce-  and-  acade  mic-  integ  rity/.
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 In teaching, ChatGPT and similar LLMs offer significant potential benefits. They can enhance digital literacy and critical thinking, enabling students to analyze these tools' strengths and limitations (Essel et al., 2024; Guo &amp; Lee, 2023). Innovative pedagogical methods like 'Think-PairChatGPT-Share' utilize ChatGPT to foster deeper engagement with course materials (Yell, 2023). To prevent misuse, instructors can design assignments that demand specific references or personalization, underscoring the importance of original thought and the writing process. Importantly, instructors also can (and arguably should) design assignments which allow students to demonstrate for themselves the limits of these AI tools, showing the need for students to recognize these as tools , and ones which can be used well or poorly. For example, an instructor might assign students a text to analyze and then provide a short summary of the same text from ChatGPT (or similar) and, taking these together, require students to identify points or ideas which the LLM overlooked.
 
@@ -104,6 +117,10 @@ LLMs also offer tailored solutions to specific organizational challenges. In cus
 A final area worth mention is elderly care and mental health, where LLMs can offer support by providing companionship and preliminary wellness advice (Fear &amp; Gleber, 2023). However, it is imperative to educate users and provide basic guidelines and warnings regarding the limitations of LLMs in these sensitive areas, and to stress the importance of supplementing AI interactions with professional care.
 
 Overall, the clear trend is for broader and more pointed use of LLMs across a host of domains. This can represent a positive development for individuals, organizations, and whole societies, with this new technology being leveraged for substantive gains of both an economic and human sort. However, as with any technology, LLMs can be used well or poorly, and in order for these tools to foster human
+
+
+<!-- PAGE 5 -->
+
 
 development and flourishing, it is critical that we are attentive to not just their positive aspects, but also their shortcomings and limitations. Most importantly, we must be vigilant in ensuring that users are using these technologies for their intended purposes, and that misuses of the system are minimized to the extent possible. 2
 
@@ -131,6 +148,10 @@ It is important to stress that a significant portion of the risks associated wit
 
 4 For examples of such problems arising in real-world contexts, see, e.g., Gallegos et al. (2023), Li et al. (2023) and Salinas et al. (2023).
 
+
+<!-- PAGE 6 -->
+
+
 in practical applications of LLMs can be traced back to basic level gaps in knowledge about certain system's limitations or to misconceptions about the capabilities and limitations of these technologies in general.
 
 To navigate these pitfalls, it is essential to adopt guidelines for responsible LLM usage, which include ethical considerations, bias mitigation strategies, and regular accuracy checks. Educating users on the capabilities and limitations of LLMs is also paramount, ensuring that they are leveraged as tools that augment human abilities rather than replace them. Training programs and educational resources can play a significant role in enhancing the understanding and effective utilization of LLMs.
@@ -150,6 +171,10 @@ Supposing that one can adequately establish that certain nouns and phrases of th
 The broader question that arises is whether these explanations are the 'right' sort of thing for addressing the challenges posed by LLMs. While model-agnostic techniques can provide a snapshot of how an LLM might be processing and responding to specific inputs, they may fall short of conveying the broader context and inherent uncertainties of LLM functioning.
 
 Implementing effective XAI solutions is not only technically challenging but also resource-intensive, often requiring additional computational power and specialized expertise. But even if these obstacles proved trivial, practical implementations of XAI with LLMs also encounter substantial issues. First of all, there is a risk of user misunderstanding, where the explanations provided by XAI tools might lead users to overestimate their understanding or make incorrect assumptions about the LLM's outputs (that is, assuming users can understand the explanations in the first place). Real-world examples further illustrate these challenges. For instance, an LLM used in a legal context might provide a decision rationale that seems plausible to a layperson but misses critical legal nuances, leading to misinterpretation of its advice. Conversely, there are scenarios where XAI
+
+
+<!-- PAGE 7 -->
+
 
 successfully sheds light on certain aspects of an LLM's decision process but still leaves a gap in comprehensive understanding, particularly in cases involving nuanced or abstract concepts.
 
@@ -177,6 +202,10 @@ For the average user, simple heuristics to detect potential errors or misinforma
 
 8 More broadly, emphasis on XAI, assuming it can be fully achieved, may undermine more institutional and human-centric approaches. See Wood (2024).
 
+
+<!-- PAGE 8 -->
+
+
 with LLM outputs and to use these tools effectively. Additionally, this approach places emphasis on the core points at stake, namely responsible and reliable use of LLMs, and does not allow for undue attention on technical achievements like explainability which may not always foster responsible and reliable use in all contexts.
 
 Creation of structured protocols and best practices can further prevent unintentional misuse and mitigate risks even without explainability. Educational and regulatory institutions can (and arguably should) collaborate to develop appropriate regulations tailored to different disciplines, as detailed protocols with specific use cases, limitations, and oversight can constrain the risks of LLMs irrespective of explainability. These protocols and practices can be tested and regimented through benchmarks (see e.g., Barman et al., 2024a, 2024b).
@@ -199,6 +228,10 @@ First and foremost, guidelines must be evidence-based. They should be testable a
 
 10 For  candidate  approaches  in  this  direction,  see,  e.g.,  Wang  et  al. (2024a, 2024b and Watkins (2023) as well as https://  www.  dpc.  sa.  gov. au/\_\_  data/  assets/  pdf\_  file/  0007/  936745/  Guide  line-  13.1-  Use-  of-  LargeLangu  age-  Model-  AI-  Tools-  Utili  ties.  pdf and https://  www.  isc.  upenn. edu/  secur  ity/  LLM-  guide. See Johri et al. (2023) for more meta-level guidelines embedded within a specific context, i.e., LLM use in the field of medicine.
 
+
+<!-- PAGE 9 -->
+
+
 nature. In this sense, it is important that guidelines not only minimize the number of mistakes, but also the magnitude of these mistakes.
 
 It is also important to acknowledge that the potential use cases where LLMs are limited or prone to errors do not necessarily preclude their general or overall utility. Guidelines should be directed at specific users employing LLMs for specific purposes, and in some cases, the occasional inaccuracies of LLMs might be acceptable, provided the user is aware of these limitations and responds accordingly.
@@ -220,6 +253,10 @@ When it comes to dealing with failures or misuses of LLMs, these instances shoul
 In workplace settings, similar principles are essential. Initially, well-defined guidelines can significantly enhance workforce productivity and it has already been demonstrated that the use of LLMs positively affects productivity (Eloundou et al., 2023). Enhancing these effects further can be achieved through a robust set of guidelines for effective prompting. In the case of legal settings, clear guidelines help delineate the type of information that can be legally shared with LLMs, ensuring ethical compliance and the protection of sensitive data. These guidelines are particularly crucial for employees who are less technologically savvy and might otherwise hesitate to utilize LLMs in their professional roles.
 
 When it comes to expert advice, such as seeking legal or health guidance from LLMs, the guidelines should primarily
+
+
+<!-- PAGE 10 -->
+
 
 aim at mitigating the potential impact of inaccuracies. This involves emphasizing the importance of treating the information provided as a starting point rather than a definitive solution. Users should be encouraged to verify critical details with qualified professionals. Additionally, the guidelines should highlight the importance of discretion when dealing with sensitive or personal issues, and clearly state the limitations of LLMs in understanding and interpreting complex, nuanced situations. By doing so, the guidelines can help to maintain a realistic expectation of the assistance LLMs can provide, while underscoring the importance of professional judgment and expertise in these specialized areas.
 
@@ -253,6 +290,10 @@ Conflict of interest The authors declare no conflicts of interest.
 - Barman, K. G., Caron, S., Claassen, T., &amp; De Regt, H. (2024b). Towards a benchmark for scientific understanding in humans and machines. Minds and Machines, 34 (1), 1-16.
 - Bender, E. M., Gebru, T., McMillan-Major, A., &amp; Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency ( FAccT '21 ), 610-623. https:// doi.  org/  10.  1145/  34421  88.  34459  22
 - Bills, S., Cammarata, N., Mossing, D., Tillman, H., Gao, L., Goh, G., Sutskever, I., Leike, J., Wu, J., &amp; Saunders, W. (2023) Language
+
+
+<!-- PAGE 11 -->
+
 
 - models can explain neurons in language models. https://  opena ipubl  ic.  blob.  core.  windo  ws.  net/  neuron-  expla  iner/  paper/  index.  Html
 - Boge, F. J. (2022). Two dimensions of opacity and the deep learning predicament. Minds and Machines, 32 (1), 43-75.
@@ -293,6 +334,10 @@ Conflict of interest The authors declare no conflicts of interest.
 - Mittelstadt, B., Wachter, S., &amp; Russell, C. (2023). To protect science, we must use LLMs as zero-shot translators. Nature Human Behaviour, 7 (11), 1830-1832.
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 - Noy,  S.,  &amp;  Zhang,  W.  (2023).  Experimental  evidence  on  the productivity effects of generative artificial intelligence. Available at SSRN 4375283.
 - OpenAI, R. (2023). Gpt-4 technical report. Preprint retrieved from arxiv:  2303.  08774. View in Article, 2.

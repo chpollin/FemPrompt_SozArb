@@ -1,10 +1,11 @@
 ---
 source_file: Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten.pdf
-conversion_date: 2026-02-03T09:20:02.163213
+conversion_date: 2026-02-03T18:51:18.931654
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Der Einfluss der Algorithmen
 
 Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz
@@ -48,6 +49,10 @@ Denn Software ist - so der Informatiker Rolf - Ergebnis ei nes Prozesses der Tra
 
 Je besser eine Software auf die spezifischen Arbeitsweisen einer Einrichtung angepasst werden soll, desto aufwendi-
 
+
+<!-- PAGE 2 -->
+
+
 ## Durchblick Veränderte Fachlichkeit durch Digitalisierung?
 
 ger ist der Prozess einer solchen Formalisierung - egal, ob für die Neuentwicklung von Software oder das ,Customi zing' von Standardsoftware, also die Anpassung auf der Ebene der Konfiguration. Viele Einrichtungen kennen das aus ei -gener Erfahrung.
@@ -66,6 +71,10 @@ Abb.1.: Nichtlineare Klassifikation (Stecker 1997, S. 4)
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 teres offenlegbar, weshalb diese Verfahren mittlerweile vermehrt in die Kritik geraten: so werden etwa Kreditvergaben auf der Basis von Scorings, die unterschiedlichste, im Netz verfügbare Daten zu einer Person, nutzen, wegen der Intransparenz ihrer Bewertungskriterien kritisiert.
 
 Durch Big Data und KI schließt sich die von Rolf beschrie ben ,vorläufige Formalisierungslücke' in rasanter Weise, wie nicht zuletzt die Fortschritte etwa in den Bereichen der Spra -cherkennung und Sprachsteuerung oder des autonomen Fahrens zeigen. Welche ,notwendigen Formalisierungslücken' am Ende der Entwicklung von Künstlicher Intelligenz noch verbleiben werden, ist derzeit wohl kaum seriös einzuschätzen.
@@ -83,6 +92,10 @@ Die klassifikatorisch-statistischen Verfahren verdeutlichen bereits sehr gut, da
 So lohnenswert dieses Vorhaben klingt - wird mit einer verbesserten Prognosefähigkeit doch stets auch eine bessere Versorgung der Bedürftigen versprochen - so birgt es gleichsam nicht zu vernachlässigende Herausforderungen. Denn mit einer Formalisierung wird häufig eine vermeintliche Ob -jektivierung assoziiert. Dabei muss die Rede von Objektivität schon daran scheitern, dass sich innerhalb unstrukturierter Daten versteckte Verzerrungen finden lassen. Da ein Algorithmus die in ihm enthaltenden Daten nur kristallisieren und verschärfen kann, besteht stets die Gefahr, hier Vorurteile zu reproduzieren bzw. zu verstärken (u.a. Dat ta et al. 2015).
 
 Zugleich machen Gillingham und Graham darauf aufmerksam, dass es nicht nur durch die Generierung der Daten zu einer subjektiven Einfärbung kommt, sondern auch durch Forscher\_innen und Entwickler\_innen: Im Rahmen der Datenextraktion müssen Daten in entsprechende Formate umgewandelt, gefiltert und gereinigt werden, um sie für statistische Analysen und algorithmische Berechnungen nutzbar zu machen. Hierbei wird entschieden, welche Variablen oder Merkmale die ein- und auszuschließenden Daten enthalten und wie mit unvollständigen Datensätzen umgegangen werden soll (Gillingham/Graham 2016).
+
+
+<!-- PAGE 4 -->
+
 
 ## Durchblick Veränderte Fachlichkeit durch Digitalisierung?
 

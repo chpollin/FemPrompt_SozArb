@@ -1,10 +1,11 @@
 ---
 source_file: Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.pdf
-conversion_date: 2026-02-03T09:17:16.891793
+conversion_date: 2026-02-03T18:48:39.160009
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Towards Substantive Equality in Artificial Intelligence:
 
 Transformative AI Policy for Gender Equality and Diversity
@@ -12,6 +13,10 @@ Transformative AI Policy for Gender Equality and Diversity
 November 2024
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Acknowledgements
 
@@ -31,6 +36,10 @@ The  report  was  prepared  by Isadora  Hellegren  Létourneau ‡ ,  Mila,  wit
 
 We want to thank the members of the Project Advisory Group for their dedicated support throughout the project: Lucia Velasco * , School of Transnational Governance, European University Institute; Ricardo Baeza-Yates * , Institute for Experiential AI of Northeastern University; Hawa Bi Khan † , Healthcare Consultant (Digital Health, AI and Sustainability); Karen de Brouwer Vásquez † , Secretaría de Relaciones Exteriores, Mexico; Caroline M. Coward † , Jet Propulsion Laboratory/Caltech; Kudakwashe Dandajena * , African Institute for Mathematical Sciences (AIMS) and University of the Western Cape; Gillian Dowie † , IDRC; Laurent Elder † , IDRC; Golnoosh Farnadi † , McGill University and Mila; Dafna Feinzhold ** , UNESCO; Jessica Fjeld † , De|Center, and Berkman Klein Center for Internet &amp; Society, Harvard University; Karine Gentelet † , Université du Québec en Outaouais (UQO) &amp; International  Observatory  on  the  Societal  Impacts  of AI  and  Digital  Technology  (OBVIA); Alison Gillwald ‡ , Research ICT Africa; Gloria Guerrero ‡ , ILDA; Toshiya Jitsuzumi * , Chuo University; Nicole Kaniki † , Senomi  Solutions  Inc; Ching-Yi  Liu * ,  National  Taiwan  University; Nicole  Osayande † , Mila; Michael O'Sullivan * , University of Auckland Inese Podgaiska * ;  Association of Nordic Engineers; Catherine Régis * , Université de Montréal and Mila; Michael Running Wolf † , Indigenous AI and Mila; Juliana Sakai * , Transparência Brasil; Patricia  Shaw † ,  Beyond  Reach  Consulting  Limited; Prateek  Sibal † ,  UNESCO; Andrew  Spoprle † , iNZight Analytics  Ltd; Anupama Srikonda † ,  Indian  School  of  Business; Ruhiya Kristine Steward † ,  IDRC; Elissa Strome † ,  Canadian  Institute  for  Advanced  Research  (CIFAR); Jaco du Toit ** ,  UNESCO; Eliane Ubalijoro † , CIFOR-ICRAF; Jamila Venturi † , Derechos Digitales; and Jeff Ward * , Animikii Indigenous Technology.
 
+
+<!-- PAGE 3 -->
+
+
 We also want to express our sincerest appreciation to the members of the Consultation Expert Group, for presenting key perspectives and providing their expertise and experience to inform the formative stages of the report.  Thank you, Anaelia Altagracia Ovalle ‡ ,  University of  California Los  Angeles; Jake Okechukwu Effoduh ‡ , Lincoln Alexander School of Law of Toronto Metropolitan University; Maui Hudson (Whakatōhea) ‡ , Te Kotahi Research Institute, University of Waikato; Petra Molnar ‡ , Berkman Klein Center for Internet &amp; Society, Harvard University, Refugee Law Lab, York University; Rosario Patricia Galarza Meza ‡ , International Disability Alliance (IDA); and Umut Pajaro Velasquez ‡ , independent IA and Internet Governance Consultant and Researcher. We also thank Carolina Botero Cabrera † , Karisma Foundation, and Mathieu Marcotte † , CEIMIA, for sharing their expertise.
 
 We want to extend our thanks to Ana Gabriela Ayala Núñez ‡ , Tecnológico de Monterrey; Ivanna Martínez Polo ‡ , Tecnológico de Monterrey; Leslie Evelin Salgado Arzuaga ‡ , University of Calgary; Shazade Jameson ‡ , Tilburg University; Shamira Ahmed ‡ , Data Economy Policy Hub, Tilburg University; Florian Lebret ‡ , Université Laval; Gargi Sharma ‡ , CLIMA Fund; Selene Yang ‡ , Feminist AI Research Network &amp; Geochicas; and Razieh Shirzadkhani ‡ , Mila, for their meaningful contributions as research consultants at various stages of the project.
@@ -42,6 +51,10 @@ We extend our appreciation to the representatives of civil society organisations
 The results of this project could not have been realised without the efforts of the project's initial proposers: Wanda Muñoz ‡ ,  Feminist AI  Research  Network; Paola  Ricaurte  Quijano * ,  T ecnológico  de  Monterrey  and Berkman Klein Center for Internet &amp; Society, Harvard University; Catherine Régis * ,  Université de Montréal and Mila; Inese Podgaiska * , Association of Nordic Engineers; Juliana Sakai * , Transparência Brasil; Toshiya Jitsuzumi * ,  Chuo University; Ricardo Baeza-Yates * ,  Institute  for  Experiential AI of Northeastern University; Celine Caira ** and Luis Aranda ** ,  OECD; Prateek Sibal † and Vanessa Dreier † ,  UNESCO; and Benjamin Prud'homme † , Mila.
 
 We would  like  to  thank Ekua  Quansah ‡ ,  Quansah  Consulting  for  her  work  on  inclusive  language  review, Zofia Laubitz ‡ for her proofreading work and Leonardo Studio Design ‡ for the report's graphic design.
+
+
+<!-- PAGE 4 -->
+
 
 GPAI  wishes  to  acknowledge  the  tireless  efforts  of  colleagues  from  Mila,  from  the  International  Centre  of Expertise in Montréal on Artificial Intelligence (CEIMIA) and from GPAI's Responsible AI Working Group. We are grateful, in particular, for the dedicated work of Niobe Haitas ‡ , Mila, Senior Project Manager during the initial phase of the project. We are deeply thankful to Laëtitia Vu , Camille Seguin , and Stephanie King , CEIMIA, and Anna Jahn ‡ , Mila, for their committed support throughout the project. Finally, we place great value in the dedication  of  the  Working  Group  Co-Chairs Amir Banifatemi * ,  AI  Commons,  and Francesca Rossi * ,  IBM Research, as well as previous Co-Chairs Catherine Régis * , Université de Montréal and Mila, and Raja Chatila * , Sorbonne University.
 
@@ -61,6 +74,10 @@ GPAI 2024. Towards Substantive Equality in Artificial Intelligence: Transformati
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 ## Table of Contents
 
@@ -92,6 +109,10 @@ GPAI 2024. Towards Substantive Equality in Artificial Intelligence: Transformati
 | The Transformative AI Policy Framework                                        |           40 |
 | Key Dimensions                                                                |           40 |
 
+
+<!-- PAGE 6 -->
+
+
 | PART III. Promising Practices and Recommendations                  |   43 |
 |--------------------------------------------------------------------|------|
 | Promising Practices Towards Substantive Equality in AI             |   44 |
@@ -121,6 +142,10 @@ GPAI 2024. Towards Substantive Equality in Artificial Intelligence: Transformati
 | Endnotes                                                           |   71 |
 | References                                                         |   73 |
 | Appendix: List of Regional Consultation Participants               |   81 |
+
+
+<!-- PAGE 7 -->
+
 
 ## Foreword
 
@@ -160,6 +185,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 ## Executive Summary
 
 The rapid advancement of artificial intelligence (AI) is transforming societies and driving economic growth, hold -ing great potential to improve lives and livelihoods globally. However, it risks exacerbating existing inequalities by mirroring and magnifying societal biases, particularly those affecting historically marginalised groups. Challenges such as discrimination, unfairness, bias and harmful stereotypes persist throughout the AI lifecycle, impacting many aspects of human life. Robust regulatory frameworks are urgently needed to mitigate these disparities, prevent harm and work towards substantive equality and diversity in AI ecosystems.
@@ -191,9 +220,17 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 ## Summary of Key Recommendations for Transformative AI Policy
 
@@ -234,6 +271,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 11 -->
+
+
 ## Meaningful Participation in AI Governance
 
 ## 5. Promote Effective Public Engagement and Community Participation
@@ -271,6 +312,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 ## Transparency and Accountability for Harm Prevention
 
@@ -314,6 +359,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 ## Introduction
 
 The rapid advancement of artificial intelligence (AI) is transforming industries and driving economic growth; it holds great potential to improve lives and livelihoods across the world. It also risks exacerbating existing inequalities. AI systems can mirror and magnify societal biases and reproduce societal inequalities, particularly those affecting historically marginalised groups. As AI systems and processes are increasingly employed in critical areas such as criminal justice, education, health care and employment, addressing growing inequalities and a lack of diversity in AI ecosystems and related policy making becomes imperative.
@@ -343,6 +392,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 <!-- image -->
 
@@ -374,6 +427,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 15 -->
+
+
 <!-- image -->
 
 The intersectionality of the identities of individuals who are part of historically marginalised groups can result in compounded disadvantages, as negative impacts from AI systems intersect with broader social inequalities (Buolamwini and Gebru, 2018; Forster, 2022; Kong, 2022; Ricaurte, 2022; Ricaurte and Zasso, 2023; UNCTAD, 2021; UNHRC, 2020). AI systems have, for instance, mistakenly identified crutches as weapons, exposing people with disabilities to increased risk of harm in situations where they are already at risk (UNHRC, 2021). Similarly, the deployment of surveillance technologies and predictive analytics in migration contexts often targets marginalised communities, exacerbating existing tensions and contributing to human rights violations (Dumbrava, 2021; McGregor and Molnar, 2023). These examples highlight deep-rooted inequalities and critical challenges to gender equality and diversity in AI ecosystems and processes that require concerted policy efforts.
@@ -404,6 +461,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 16 -->
+
+
 ؚ
 
 <!-- image -->
@@ -433,6 +494,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 ٪
 
 rǾɅƲǳǳǛǍƲǾƤƲ
+
+
+<!-- PAGE 17 -->
+
 
 ## Report Outline
 
@@ -479,6 +544,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 18 -->
+
+
 ## PART I.
 
 ## Consultations, Critical Challenges and Potential Pathways
@@ -500,6 +569,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ٪ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 19 -->
+
 
 ## Regional and Group-Specific Consultations
 
@@ -536,6 +609,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ٪
 
 <!-- image -->
+
+
+<!-- PAGE 20 -->
+
 
 ## Unequal representation
 
@@ -577,6 +654,10 @@ Consultations were virtual, requiring access to an Internet-connected  device  a
 
 GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 
+
+<!-- PAGE 21 -->
+
+
 ǛǾ
 
 ٪
@@ -614,6 +695,10 @@ GLYPH&lt;c=1,font=/QUGBVW+Arial-BoldMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 22 -->
+
 
 <!-- image -->
 
@@ -661,6 +746,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 23 -->
+
+
 <!-- image -->
 
 ## Knowledge Exclusion and Invisibilisation
@@ -699,6 +788,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 24 -->
+
+
 ## Epistemic Injustice
 
 Epistemic injustice refers to the unfair treatment of individuals or groups in their capacity as knowers or contributors to knowledge (Fricker, 2007; Hull, 2023). This concept highlights how biases and prejudices can undermine or disregard the knowledge, experiences, and perspectives of marginalised individuals or groups.
@@ -727,6 +820,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 25 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -750,6 +847,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 26 -->
+
 
 ؚ
 
@@ -790,6 +891,10 @@ GLYPH&lt;c=1,font=/QUGBVW+Arial-BoldMT&gt;ȯɅǛ˚ƤǛƇǳ
 ٪
 
 rǾɅƲǳǳǛǍƲǾƤƲ
+
+
+<!-- PAGE 27 -->
+
 
 <!-- image -->
 
@@ -833,6 +938,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ٪
 
+
+<!-- PAGE 28 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -875,6 +984,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 29 -->
+
+
 <!-- image -->
 
 ## Ensure the Accountability of Developers, Providers and Operators
@@ -912,6 +1025,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 30 -->
+
 
 <!-- image -->
 
@@ -953,6 +1070,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 31 -->
+
+
 ## A Brief Summary of Challenges and Pathways
 
 The regional and group-specific consultations revealed three major challenges to implementing gender equality and diversity in AI ecosystems: 1) conflation of access with inclusion; 2) knowledge exclusion and invisibilisation; and 3) unequal distribution of resources.
@@ -977,6 +1098,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 32 -->
+
+
 ## PART II.
 
 ## Conceptual Framework
@@ -996,6 +1121,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ٪ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 33 -->
+
 
 ## A Transformative Approach Towards Substantive Equality
 
@@ -1028,6 +1157,10 @@ GLYPH&lt;c=1,font=/QUGBVW+Arial-BoldMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 34 -->
+
 
 ## Substantive equality in international human rights law
 
@@ -1062,6 +1195,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 35 -->
+
 
 Substantive equality is based on the principle that the human right to equality should be responsive to people who are disadvantaged, demeaned, excluded or ignored. It is the responsibility of all states as duty bearers to protect, promote and ensure the realisation of human rights. Human  rights  based  approaches  to  policies,  projects, programmes and systems generally include the following key activities:
 
@@ -1102,6 +1239,10 @@ UǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 36 -->
+
+
 ## A Socio-Technical Approach to AI
 
 Working towards gender equality and diversity in AI requires one to consider the full AI lifecycle from a sociotechnical perspective. A socio-technical approach to AI systems and lifecycle recognises that the performance and impacts of AI systems stem from the interaction between technical design, infrastructure, and social dynamics and incentives. AI systems are commonly referred to in terms of machine-based systems or a set of computer techniques that may have an impact on their environments. Anchored definitions of AI systems in such terms describe them as 'machine-based systems that can influence their environments (OECD, 2024b). These descriptions recognise the crucial role that AI systems can or will have in impacting the environment, societal practices, norms, rights and structures (UNESCO, 2024c). Model-based approaches to AI policy typically adopt this understanding of AI systems and lifecycle.
@@ -1131,6 +1272,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 37 -->
+
 
 ## The AI Lifecycle
 
@@ -1168,6 +1313,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 38 -->
+
+
 ## Tests, verification and validation
 
 Testing, evaluation, verifying and validating are key activities during the AI system lifecycle. This includes using evaluation benchmarks to identify errors, biases or limitations in the AI models. Other activities involve validating the models with techniques such as A/B testing (a method of comparison) to ensure accuracy and reliability
@@ -1202,6 +1351,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 39 -->
+
+
 ## Transparency, interpretability and explainability in AI systems and processes
 
 Transparency involves system developers documenting the selection process for datasets, variables and models used in AI development, training, validation and testing. They should detail the measures ensuring data and output quality and indicate the confidence level of system outputs, with human intervention required for low-confidence outputs. Transparency also includes documenting methods for detecting potential biases. Independent verification and validation should be mandatory for systems with significant impacts on life and well-being.
@@ -1227,6 +1380,10 @@ GLYPH&lt;c=1,font=/QUGBVW+Arial-BoldMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 40 -->
+
 
 ## The Transformative AI Policy Framework
 
@@ -1268,6 +1425,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 41 -->
+
+
 - ■ Protecting the data commons and open AI innovation from private capture through appropriate IP frameworks grounded in the principle of open science to democratise the benefits of scientific progress (Krishna, 2020).
 
 ## 2.  Redressing the Democratic Deficit: The Right to Participation
@@ -1305,6 +1466,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ٪
 
+
+<!-- PAGE 42 -->
+
+
 Machine-human loops in AI development and deployment formalise forms of discrimination and act to reify and amplify existing forms of social inequality. This is  recognised  as  algorithmic  oppression  by  feminist scholars (Benjamin, 2019; Eubanks, 2017; Noble and Roberts, 2019; West, 2020). Such algorithmic oppression manifests not only in the unjust denial of opportunities for marginalised groups (discussed in Dimension 1) but also as representational injustice (such as AI image generators sexualising racialised women or social media algorithms amplifying sexism and misogyny).
 
 A transformative policy framework for gender equality and diversity needs to reverse such misrecognition and acknowledge the moral struggle of marginalised groups to have their personhood recognised by protecting  and  promoting  the  right  to  dignity.  Dignity  is foundational to any society that truly embraces diversity. The right to dignity in human rights jurisprudence requires that states recognise the need and pave the way for concerted action against any discrediting process that stigmatises an individual or a group on any kind of ground and the institutional mechanisms that perpetuate it.
@@ -1330,6 +1495,10 @@ UǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 43 -->
+
+
 ## Promising Practices and
 
 ## PART III. Recommendations
@@ -1351,6 +1520,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ٪ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 44 -->
+
 
 <!-- image -->
 
@@ -1391,6 +1564,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 45 -->
+
 
 ## Resources for Capacity Development and Public Education
 
@@ -1444,6 +1621,10 @@ The  initiative  promotes  interventions  for  transformative  gender  equality.
 
 <!-- image -->
 
+
+<!-- PAGE 46 -->
+
+
 ## Data Justice Policy Brief
 
 Initiative:
@@ -1491,6 +1672,10 @@ Global Partnership on Artificial Intelligence (GPAI)
 GPAI's Data Justice Policy Brief addresses systemic disadvantage by promoting fair and transparent AI policies that are based on principles of inclusion, equity and economic justice, and redress of harms. It bridges the democratic deficit by advocating for inclusive pol -icy-making processes that involve diverse stakeholders,  thereby  enhancing  representation  and  accountability.  In  addition,  by  recognising  and  ensuring  that marginalised communities are involved by design and by promoting transparency and accountability in data and AI practices and systems, it works to uphold the right to dignity, reversing misrecognition.
 
 <!-- image -->
+
+
+<!-- PAGE 47 -->
+
 
 ## AI &amp; Equality Human Rights Toolbox
 
@@ -1540,6 +1725,10 @@ In  promoting  a  human  rights-based  approach  to AI, the Toolbox addresses sy
 
 <!-- image -->
 
+
+<!-- PAGE 48 -->
+
+
 ## Indigenous Pathfinders in AI
 
 Initiative:
@@ -1587,6 +1776,10 @@ Mila - Quebec AI Institute and Indspire
 ## How the initiative advances substantive equality
 
 Systemic barriers, including financial challenges, lim -ited  access  to  training  opportunities  and  inadequate digital  infrastructure,  restrict  both  skill  development and  awareness  of  AI  career  opportunities.  Indigenous Pathfinders  in AI  advances  substantive  equali -ty  as  a  targeted  initiative  that  dismantles  barriers  to democratic innovation and meaningful participation in AI  governance. The programme aims to foster early and meaningful inclusion  in AI  ecosystems,  empowering Indigenous talent and perspectives to shape AI systems and processes from their inception, addressing  epistemic  exclusions.  By  addressing  these  gaps proactively, the programme ensures a more equitable and diverse future. This approach addresses systemic  disadvantages rooted in historical inequalities and strengthens capacity for meaningful participation, redressing the democratic deficit.
+
+
+<!-- PAGE 49 -->
+
 
 ## Inclusive Technology Design and Democratic Innovation Practices
 
@@ -1638,6 +1831,10 @@ DFM focuses on harm reduction and aims to transform technology tools to prevent 
 
 <!-- image -->
 
+
+<!-- PAGE 50 -->
+
+
 ## The Feminist AI Research Network (f&lt;A+i&gt;r)
 
 Initiative:
@@ -1686,6 +1883,10 @@ Organisation:
 
 The f&lt;A+i&gt;r initiative furthers the goals of addressing systemic  disadvantage  by  actively  combating  gender,  racial  and  intersectional  biases  in  AI  technologies. It seeks to correct future harms with new data, algorithms, models, policies and systems that can be researched and piloted  for  transformative  change.  It redresses  the  democratic  deficit  by  fostering  the  in -clusion  of  and  supporting  the  capacity  development of  feminist  innovation  teams  from  the  Global  Majority.  The  initiative  reverses  misrecognition  by  producing effective, innovative, interdisciplinary models that harness emerging technologies, correcting for real-life bias and barriers to women's and other marginalised groups' rights, representation and equality.
 
+
+<!-- PAGE 51 -->
+
+
 ## Fixing the bAIs Initiative
 
 Initiative:
@@ -1731,6 +1932,10 @@ MullenLowe MENA for Aurora 50
 The  Fixing  the  bAIs  campaign  addresses  systemic  disadvantage  by  seeking  to  reduce  discrimination and  promoting  fair  treatment  across  demographics through bias correction in AI systems. It redresses the democratic deficit by enhancing transparency and ac -countability in AI development, ensuring participation by marginalised communities. The campaign also reverses misrecognition by intentionally designing gender-inclusive  AI  systems:  providing  open-licensed, gender-diverse  training  datasets;  challenging  dominant  gender  scripts;  and  ensuring  that  marginalised groups are better represented and their contributions recognised.
 
 <!-- image -->
+
+
+<!-- PAGE 52 -->
+
 
 ## Indigenous Jobs Map
 
@@ -1778,6 +1983,10 @@ The  Indigenous  Jobs  Map  enhances  access  to  employment  opportunities  for
 
 <!-- image -->
 
+
+<!-- PAGE 53 -->
+
+
 ## Accountability Measures
 
 ## The Global Index on Responsible AI
@@ -1824,6 +2033,10 @@ Global Center on AI Governance (GCG)
 
 The index encourages countries to adopt policies that reduce biases and discrimination in AI systems, ensuring that marginalised groups benefit from AI technolo -gies, addressing systemic disadvantage. It measures country-level commitments and practices ensuring that AI promotes, rather than harms, gender equality and women's  empowerment.  Redressing  the  democratic deficit,  the  index  was  developed  in  consultation  with affected parties and is based on principles of accessibility and openness, inclusion and participation, and the ambition to fairly reflect local contexts and realities. Reversing  misrecognition,  the  index  highlights  best practices that ensure fair representation of all societal groups in AI development and deployment, combating stereotypes and promoting inclusion.
 
+
+<!-- PAGE 54 -->
+
+
 ## Policy insights
 
 ## ■ Benchmarks for regulations
@@ -1849,6 +2062,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 55 -->
+
 
 ## The Migration and Technology Monitor
 
@@ -1896,6 +2113,10 @@ MTM addresses systemic disadvantage by including people on the move, such as ref
 
 <!-- image -->
 
+
+<!-- PAGE 56 -->
+
+
 ## The Algorithmic Justice League
 
 Initiative:
@@ -1941,6 +2162,10 @@ The Algorithmic Justice League
 By advocating for fair and equitable AI, the AJL works to reduce systemic discrimination against marginalised communities. It addresses systemic disadvantage and reverses misrecognition by uncovering and mitigating biases in AI technologies, ensuring that these systems do not perpetuate existing inequalities. Through audits and advocacy campaigns that highlight racism, sexism, ableism and other forms of discrimination, it brings to the fore core concerns about the violations of the right to autonomy and dignity. It promotes transparency and accountability in AI development, fostering public dialogue and participation. This helps to democratise AI policy making, ensuring that diverse voices are included in discussions about technology's role in society.
 
 <!-- image -->
+
+
+<!-- PAGE 57 -->
+
 
 ## Meaningful Inclusion and Participation Initiatives
 
@@ -1992,6 +2217,10 @@ The initiative promotes data sovereignty, ensuring that Māori communities contr
 
 <!-- image -->
 
+
+<!-- PAGE 58 -->
+
+
 ## The RIADIS Workshop
 
 ## Initiative:
@@ -2042,6 +2271,10 @@ The  RIADIS  initiative  demonstrates  practical  strategies to centre the needs
 
 <!-- image -->
 
+
+<!-- PAGE 59 -->
+
+
 ## The Gender and Responsible Artificial Intelligence Network (GRAIN)
 
 ## Initiative:
@@ -2090,6 +2323,10 @@ GRAIN reduces systemic disadvantages by connecting organisations, universities a
 
 <!-- image -->
 
+
+<!-- PAGE 60 -->
+
+
 <!-- image -->
 
 ## Key Recommendations for Transformative AI Policy
@@ -2121,6 +2358,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 61 -->
+
+
 <!-- image -->
 
 The recommendations are meant to be considered and applied in context. To successfully implement these recommendations, policy makers must therefore take into account contextual considerations - geographical, social, cultural, historical, economic, legal and political - that shape AI ecosystems in different regions and adapt the recommendations accordingly. This also includes considering variations in legal and regulatory frameworks, technical capacities, resource availability and stakeholder co-operation, and identifying and addressing obstacles for implementation. For guidance in implementation, please see the Policy Guide for Implementing Transformative AI Policy Recommendations. By committing to transformative AI policies for gender equality and diversity, we can move towards substantive equality in AI ecosystems and related policy making.
@@ -2148,6 +2389,10 @@ GLYPH&lt;c=1,font=/QUGBVW+Arial-BoldMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 62 -->
+
 
 ## 2.   Invest in Capacity Building for Institutional Inclusion
 
@@ -2180,6 +2425,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 63 -->
+
 
 ## Feminist technology design principles in AI innovation include:
 
@@ -2219,6 +2468,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 64 -->
+
+
 ## Meaningful Participation in AI Governance
 
 Ensuring meaningful participation in AI governance redresses the democratic deficit and upholds the right to par -ticipation - leading to better policies for everyone. Access is often mistaken for inclusion, but access alone does not guarantee meaningful participation or inclusion. When policy makers listen to and engage with the people most affected by AI systems and processes and those experienced in identifying and addressing its harmful impacts, policies, laws and regulations can more effectively prevent and mitigate harm. Recommendations include promoting effective public engagement and community participation, investing in capacity development among marginalised groups, legislating for public participation rights and safeguarding collective rights relating to data and AI.
@@ -2248,6 +2501,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 65 -->
+
 
 ## 8. Protect Collective Data and AI Rights
 
@@ -2291,6 +2548,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 66 -->
+
+
 ## Transparency and Accountability for Harm Prevention
 
 Transparency and accountability are essential for harm prevention, redressing the democratic deficit and revers -ing misrecognition. They allow stakeholders to scrutinise AI systems and processes, detect biases, and hold private and public providers and deployers accountable for harmful or discriminatory impacts. They empower marginalised groups to challenge discriminatory practices and foster public trust by ensuring that decision-making processes are open and understandable. The following recommendations ensure the right to information, enhance algorithmic transparency, and establish clear accountability among all actors involved in the AI ecosystems through human rights impacts assessments and public procurement guidelines.
@@ -2320,6 +2581,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 67 -->
+
 
 ## 10. Enable and Conduct Obligatory Human Rights Impact Assessments (HRIAs)
 
@@ -2359,6 +2624,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 68 -->
+
+
 ## Effective Access to Justice
 
 Ensuring effective access to justice is seminal for achieving substantive equality. It requires accountability, reverses misrecognition and upholds the right to dignity. By strengthening contextual liability, empowering equality bodies and easing the burden of proof, policy makers can improve access to justice for individuals and groups facing discrimination and harms in relation to AI systems and processes.
@@ -2397,6 +2666,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 69 -->
+
+
 <!-- image -->
 
 ## Easing the burden of proof for discrimination and damages in AI - Insights from the proposed AI Liability Directive, EU
@@ -2427,6 +2700,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 70 -->
+
+
 ## Conclusions and Exploring Paths Forward
 
 The key recommendations for transformative AI policy presented in this report provide a comprehensive pathway for achieving substantive equality within AI ecosystems and related policy making. Categorised to reflect key dimensions of the Transformative AI Policy Framework, the recommendations focus on four categories: inclusive design and democratic innovation, meaningful participation in AI governance, transparency and accountability for harm prevention, and effective access to justice. Together, these pillars create a robust foundation for AI ecosystems and related policy making that advances substantive equality.
@@ -2452,6 +2729,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 71 -->
+
 
 ## Endnotes
 
@@ -2480,6 +2761,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 72 -->
+
+
 <!-- image -->
 
 - 11 The descriptions in this section draw on the OECD's visualisation of the AI system lifecycle and are further informed by UNESCO's description of the AI lifecycle and its various stages, from research and inception to disassembly and termination (UNESCO, 2024c, p. 10). However, it places additional emphasis on data collection, data preprocessing and statistical modelling (Ovalle et al., 2023b). The key dimensions of the OECD Framework for the Classification of AI Systems further inform the description of social systems (OECD, 2022).
@@ -2502,6 +2787,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 73 -->
+
 
 ## References
 
@@ -2547,6 +2836,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 <!-- image -->
 
+
+<!-- PAGE 74 -->
+
+
 <!-- image -->
 
 Cheong, M.C.Y. K. Leins and S. Coghlan (2021), 'Computer science communities: Who is speaking, and who is listening to the women? Using an ethics of care to promote diverse voices', in FAccT '21: Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency , Association for Computing Machinery, New York, https://api.semanticscholar.org/CorpusID:231639365.
@@ -2590,6 +2883,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 75 -->
+
 
 <!-- image -->
 
@@ -2637,6 +2934,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 76 -->
+
+
 <!-- image -->
 
 IWRAW (n.d.), Substantive equality, https://cedaw.iwraw-ap.org/cedaw/cedaw-principles/cedaw-principles-overview/substantive-equality/.
@@ -2681,6 +2982,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 77 -->
+
+
 <!-- image -->
 
 OECD  (2021),  Open  government  and  citizen  participation, https://www.oecd.org/en/topics/open-government-and-citizen-participation.html.
@@ -2722,6 +3027,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 78 -->
+
 
 <!-- image -->
 
@@ -2768,6 +3077,10 @@ GLYPH&lt;c=1,font=/QUGBVW+ArialMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 79 -->
+
 
 <!-- image -->
 
@@ -2817,6 +3130,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
 
+
+<!-- PAGE 80 -->
+
+
 <!-- image -->
 
 United Nations (2021), Report of the Secretary-General's Task Force on Addressing Racism and Promoting Dignity for All in the United Nations Secretariat , United Nations, New York, https://hr.un.org/sites/hr.un.org/files/ sap\_final\_report\_0.pdf .
@@ -2860,6 +3177,10 @@ GLYPH&lt;c=1,font=/QUGBVW+Arial-ItalicMT&gt;ȯɅǛ˚ƤǛƇǳ
 rǾɅƲǳǳǛǍƲǾƤƲ
 
 ؚ
+
+
+<!-- PAGE 81 -->
+
 
 ǛǾ
 
@@ -2917,6 +3238,10 @@ GLYPH&lt;c=1,font=/QUGBVW+Arial-BoldMT&gt;ȯɅǛ˚ƤǛƇǳ
 
 rǾɅƲǳǳǛǍƲǾƤƲ
 
+
+<!-- PAGE 82 -->
+
+
 ## Regional consultations for the following region was led by Derechos Digiatales.
 
 ## Latin America and Caribbean (LAC)
@@ -2973,6 +3298,10 @@ rǾɅƲǳǳǛǍƲǾƤƲ
 ؚ
 
 <!-- image -->
+
+
+<!-- PAGE 83 -->
+
 
 ## Regional consultations for the following region was led by Paola Ricaurte Quijano.
 

@@ -1,10 +1,11 @@
 ---
 source_file: Pinski_2024_AI_Literacy_for_the_top_management_An_upper.pdf
-conversion_date: 2026-02-03T09:15:49.522866
+conversion_date: 2026-02-03T18:47:10.635209
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## RESEARCH PAPER
 
 ## AI Literacy for the top management: An upper echelons perspective on corporate AI orientation and implementation ability
@@ -47,6 +48,10 @@ Despite the importance of AI for firms, there is a lack of research and directio
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 development and adoption of AI that ensures continuous value generation and averts critical threats to their businesses. Upper echelons theory (UET) suggests that executives' personal characteristics have a significant influence on corporate strategy and, ultimately, how effectively firms create value (Hambrick &amp; Mason, 1984). For instance, IS research showed that executives' willingness to challenge IT concerns depends on their IT skills (Bassellier et al., 2003). Drawing on UET, this paper investigates the promising concept of AI literacy at the level of the top management team (TMT) as a predictor for key firm characteristics that ensure value-generating AI adoption, as well as their respective firm type as a critical moderator of these relationships.
 
 AI literacy refers to a human's holistic proficiency concerning AI that enables critical usage and evaluation of AI, as well as effective communication and collaboration with AI (Cetindamar et al., 2022; Dai et al., 2020; Long &amp; Magerko, 2020). The share of executives within the TMT that possess AI literacy then describes the TMT AI literacy of the respective firm. Practitioners underscore the relevance of such a novel concept by urgently calling for more 'Board Directors AI Literacy' (Gordon, 2022) and 'empowering AI leadership' (World Economic Forum, 2022). Also, initial IS research identified executives' lack of AI literacy as one crucial inhibiting factor to the development and adoption of AI in firms (Yang et al., 2021). At the same time, we already know that technology, in general, is no longer a fringe topic for specific executives (Baesens et al., 2016; Bassellier et al., 2015). All executives, including the more business-oriented ones, must have a minimum level of technology literacy -it has been true for a while now that 'business cannot afford technology-illiterate managers anymore' (Keen, 1991, p. 121). Despite this imperative, prior upper echelons research in the IS literature predominantly investigated the effects of the presence of individual executive roles, for example, how the presence of a chief information officer (CIO) on a firm's board affects strategic orientation toward AI (Li et al., 2021). Moreover, particularly IS-related executive roles, such as a CIO, can have significantly different responsibilities, making their role designations ambiguous (Benlian &amp; Haffke, 2016; Haffke et al., 2016; Peppard et al., 2011). Together, this raises the question of whether the role-oriented perspective that IS research has taken so far to study (AI-related) firm characteristics for value generation is sufficient to describe adequately how top management affects these. In contrast to this predominant role-oriented perspective, this study takes a skill-oriented view by examining the AI literacy of each member in a firm's TMT-thus also shifting from the individual perspective to a team perspective.
@@ -60,6 +65,10 @@ to implement an AI solution that enables customer service agents to handle calls
 Moreover, it is crucial to note that TMTs do not act in a vacuum. When Hambrick (2007) revisited his originally proposed UET, he noted that the relationship between executives' characteristics and how firms behave could be significantly impacted (i.e., moderated) by different factors, such as the firm's type . Firm type can be seen as a common configuration of organizational resources. Therefore, this research also investigates firm type as a potential moderator of the relationship stated in RQ1 to provide a richer understanding of the proposed mechanism.
 
 Different firm types tend to be endowed with varying configurations of organizational resources relevant to how effectively TMTs can affect AI orientation and implementation (Criscuolo et al., 2012). For example, established firms (i.e., incumbents) pursuing AI projects (e.g., FedEx Corporation, 2022) tend to have access to more (IT) resources or distribution opportunities, among other factors (Kohler, 2016). Such substantial resource endowment could help incumbents' TMTs present a more convincing AI strategy to the company owners, suggesting a high AI orientation (Baker &amp; Nelson, 2005). Newer firms (i.e., startups) pursuing such projects (e.g., Uptake Technologies Inc., 2023) tend to have a more agile, experimental, and data-driven organizational culture as well as greater adaptability, among other factors (Davenport &amp; Bean, 2018; Steiber &amp; Alänge, 2020).
+
+
+<!-- PAGE 3 -->
+
 
 Such a culture might enhance the TMT's influence on firm operations because their decisions to attract AI talent spread quickly throughout the company, promoting HR-related AI implementation ability (Weber et al., 2022).
 
@@ -78,6 +87,10 @@ In the following subsection, we elaborate on the UET and the attention-based vie
 According to the UET, firms' decisions reflect how their executives ('upper echelons') perceive their environment and how much attention they pay to specific matters in their environment (Hambrick &amp; Mason, 1984). UET's strong emphasis on managerial attention is closely related to the ABV of the firm, thus specifying the ABV for executives (Ocasio, 1997, 2011). The ABV's fundamental presumption is that a firm's behavior is determined by how it divides and channels its attention. Therefore, the ABV assumes that the more management focuses on an issue, the more resources and support it will receive, resulting in the desired outcomes for the firm. According to UET, these outcomes can be attributed to the decisions of executives and reflect their characteristics (Carpenter et al., 2016; Hambrick &amp; Mason,
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 Table 1 Overview of used and delineated constructs
 
@@ -110,6 +123,10 @@ While UET emphasizes the individual attributes of executives, many upper echelon
 
 Electronic Markets (2024) 34:24
 
+
+<!-- PAGE 5 -->
+
+
 decision-making and business outcomes, such as educational background, through specific leadership roles. For example, studies associated the presence of a chief sustainability officer with more corporate social responsibility activities (Fu et al., 2019) or the presence of administrative executive roles generally (e.g., HR, finance, legal) with greater IT investments (Guadalupe et al., 2014). In the IS field, many UET-based studies focused on the roles of the chief technology officer (CTO) and chief information officer (CIO) (Benlian &amp; Haffke, 2016). For instance, studies linked the presence of a CTO to an increase in profitability (Cetindamar &amp; Pala, 2011) or the presence of a CIO to an improvement in information quality (Ding et al., 2014). The CIO and CTO responsibilities are often not distinct in organizations. However, if they are separated, CIOs tend to be more inwardly focused (e.g., on internal information flow), whereas CTOs tend to be more outwardly oriented (e.g., on customer information flow) (Hunts, 2021).
 
 While the operationalization of UET via executive roles is purposeful, such a role-oriented perspective also has inevitable drawbacks (Scuik &amp; Hess, 2022). Executive roles reflect what a firm wants to focus its attention on. However, focusing on roles neglects the unique person who assumes the respective executive role. How qualified or skilled a person is for the executive role, or how the person interprets the purpose of the executive role, might direct the intended attention in a different direction. IS-related executive roles, in particular, such as the CIO or CTO, are often ambiguously defined (Haffke et al., 2016; Peppard et al., 2011). Researchers called the CIO role 'riddled with ambiguity' because they found multiple (sub)roles with significantly diverging foci of attention, such as an 'Innovator CIO,' a 'Utility IT Director,' or a 'Facilitator CIO' (Peppard et al., 2011). Furthermore, some themes within the TMT relate to multiple executive roles, which diminishes the explanatory value of a single executive role.
@@ -124,6 +141,10 @@ Furthermore, the emergent literature emphasizes that AI literacy is a highly sta
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 Diverse groups, for example, developers, nontechnical employees, or executives, need AI literacy tailored to their specific function. The discourse is currently dominated by user- (Wang et al., 2022), student- (Steinbauer et al., 2021), or developer-oriented (Sambasivan et al., 2021) research, while executives have been largely overlooked. However, the potential impact of executives on strategic decisions and outcomes for their firms and beyond is enormous. The mandate of executives is to ensure that their  firm  continues  to  create  value  by  extending  or securing its competitive position. Such a mandate equips executives with the ability to change a firm's strategic orientation  and  ways  of  creating  value,  affecting  not only business outcomes but also outcomes relevant to employees, customers, and society.
 
 Assessing how AI can create value should be a top priority of an executive (Shollo et al., 2022; Wamba-Taguimdje et al., 2020). Therefore, executives' tasks include continuously assessing a firm's AI orientation and AI implementation ability, contributing to value creation (Li et al., 2021; Weber et al., 2022). Executives' tasks differ from those of other positions, requiring executives to have their own AI literacy. Among other things, executives must have a broad understanding of the entire AI process to make purposeful decisions; they do not need to know every (technical) aspect (Peifer et al., 2022). For instance, they could make decisions on the distribution of organizational tasks between human employees and AI. Making such a decision requires knowledge of the advantages and disadvantages of AI and humans in the context of specific use cases (Adam et al., 2022; Peifer et al., 2022). In summary, AI literacy of executives-and TMT AI literacy as the collective construct-has the potential to significantly affect crucial firm characteristics (e.g., AI orientation or AI implementation ability) but received little attention from IS researchers thus far.
@@ -137,6 +158,10 @@ Adopting AI for successful value creation demands TMTs to perform various tasks.
 AI will eventually replace human workers in jobs ranging from the stock exchange to the factory floor, expectation and change management are crucial (Kelly, 2020). As a result, TMTs are urged to develop their firm's strategic AI orientation to manage this value identification and strategy stage (Li et al., 2021). AI orientation refers to a ' firm's overall strategic direction and goals associated with introducing and applying AI technology ' (Li et al., 2021) and thus guides AI-related strategic decisions, including AIrelated investments and management practices (Ding et al., 2014; Li et al., 2010). By clearly identifying the value of AI for a firm and defining shared objectives, AI orientation helps TMTs decide on investments and communicate the logic of a firm's AI usage to different stakeholders (Li et al., 2021).
 
 Second, once TMTs have successfully established AI orientation, they need to manage the realization of the identified value potentials through the formulated strategy. When moving from the strategy stage to the implementation stage, firms must ensure they possess a range of resources, such as IT, intangible, and human resources (Weber et al., 2022). Among the resources required to successfully implement AI, human resources have been identified as critical (Roepke et al., 2000; Weber et al., 2022). Gaining new talent necessary for AI implementation will require firms to establish policies governing HR-related processes (Rana &amp; Sharma, 2019). Such new policies demand executive attention due to the significant risks associated with the structural adjustments necessary to build and maintain AI-specific human resources (Rana &amp; Sharma, 2019). Consequently, executives should develop their firm's HR-related AI implementation ability to manage the HR-specific aspect of the AI implementation stage (Mikalef et al., 2019). HR-related AI implementation ability is defined as a firm's HR-related ability to implement IT systems with an AI component (Weber et al., 2022). For example, quickly attracting and assembling an AI development team or knowing which AI-related positions to recruit and which AI skills to require are part of a firm's HR-related AI implementation ability. To guarantee that the firms have access to the appropriate human talent, they might use internal and external modes of employment (Lepak &amp; Snell, 1999). Internal employment modes include 'developing' and 'acquiring' human resources, whereas external employment modes comprise 'alliancing' and 'contracting' human resources (Lepak &amp; Snell, 1999). Each mode has advantages and disadvantages that depend on the use case and context. AI is a continuously evolving topic that necessitates high-value human resources and demands the immediate deployment of relevant skills (Berente et al., 2021). As such, the internal mode of 'acquisition' (i.e., employing new personnel) is particularly appropriate and a viable focus when investigating HR-related AI implementation ability (Lepak &amp; Snell, 1999).
+
+
+<!-- PAGE 7 -->
+
 
 ## Research model and hypotheses
 
@@ -159,6 +184,10 @@ How a strategic direction (e.g., AI orientation) is decided in the TMT also depe
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 8 -->
+
 
 executives within the TMT make it easier to find support for AI orientation. Furthermore, Hambrick (2007) notes in his more recent extension of UET that an executive's power has the potential to amplify the effect of their individual characteristics on strategic decisions. Together, based on the influence of expertise on the TMT, decision scrutiny of the TMT, and power within the TMT, we hypothesize the following:
 
@@ -190,6 +219,10 @@ H4: AI orientation partially mediates the effect of TMT AI literacy on a firm's 
 
 While we presume that TMT AI literacy affects AI orientation (H1) and HR-related AI implementation ability (H2), executives do not act in a vacuum. They operate within the environment of their firm and its customers, partners, and competitors. This environment might affect how effectively executives and TMTs can influence their firms, as noted by Hambrick (2007) in their extension of the basic mechanism of UET. The firm type characterizes typical configurations of different organizational resources in this environment. A
 
+
+<!-- PAGE 9 -->
+
+
 segmentation of organizational resource configurations with the potential to affect AI adoption is the distinction between startup firms and incumbent firms (Kohler, 2016). Both types have different resources that might help TMTs utilize their AI literacy to establish AI orientation and HR-related AI implementation ability.
 
 Startup firms are more flexible and faster than incumbent firms (Leppänen et al., 2023). Startups regularly operate in a fast-paced environment that requires quick adaption to avoid being outcompeted (Pigola et al., 2022). Therefore, they are widely recognized for being agile, adaptable, and innovative, leading to more rapid innovation processes (Benlian, 2022; Criscuolo et al., 2012). According to previous research, the differences between the innovation processes of startup and incumbent firms can be attributed to various factors, such as the ability to explore multiple business models in the absence of an established customer base and legitimacy (Andries et al., 2013). Concerning AI orientation, startups' TMTs could benefit from not being constrained by an existing customer base to formulate their AI strategy due to less risk involved in pivoting their strategy (Andries et al., 2013). Regarding HR-related AI implementation ability, a startup's agile and innovative culture might enhance the TMT's influence because their decisions spread quickly through the company to attract AI talent (Weber et al., 2022).
@@ -211,6 +244,10 @@ The following section provides detailed information on the methodology employed 
 The first step in our data retrieval process was to select a suitable sample of firms for our research questions. We aimed to include a broad mix of industries to ensure our findings are generalizable. Since we explicitly sought to uncover the differences between incumbent and startup firms with RQ2, we aimed to include a representative subsample of both groups in our overall sample. Therefore, we leveraged two sources: We used the standard stock index S&amp;P500 to select our subsample of incumbent firms (list retrieved in July 2022). To choose our subsample of startup firms, we used an up-to-date list of so-called 'unicorns' (privately held firms with a valuation above 1 billion USD, which are not older than ten years) also retrieved in July 2022 from CB Insights (2022).
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 ## Executive data
 
@@ -236,6 +273,10 @@ To measure the TMT AI literacy of a firm, we first determined which individual e
 
 We followed prior research in operationalizing our measurement of AI orientation (Li et al., 2021). AI orientation refers to a firm's overall strategic direction and goals associated with introducing and applying AI technology. To measure such an association with AI, we leveraged the AI skill and competencies taxonomy (Appendix A) as a detailed set of AI-related keywords and analyzed their occurrence in the firm's communication. Research has shown that the MD&amp;A from a firm's 10-K statement reflects its strategy and is a valuable predictor of such firm characteristics (Bochkay &amp; Levine, 2017). Hence, we leverage the MD&amp;A of incumbent
 
+
+<!-- PAGE 11 -->
+
+
 firms to measure their AI orientation. As private firms are not obliged to disclose an MD&amp;A, we used the firm's communication via their posts on the professional social network to measure the AI orientation of startup firms (Mattke et al., 2019). Subsequently, we determined the relative frequency of all AI-related keywords within all words of each firm's communication. To make the AI orientation measurement of incumbent and startup firms comparable due to different average document lengths, we standardized the relative frequency of AI-related keywords by each firm type (incumbent and startup) based on the firm with the highest frequency within each type. As a result, we get a score ranging between 0 and 1, where '1' refers to the firm(s) with the highest AI orientation and '0' to the firm(s) with no AI orientation.
 
 ## Alternative operationalization of AI orientation (for robustness checks)
@@ -253,6 +294,10 @@ reflect the current status in the labour market' (Anton et al., 2020, p. 5). Fu
 ## Alternative operationalization of HR-related AI implementation ability (for robustness checks)
 
 Similar to AI orientation, we argue for HR-related AI implementation ability that the more AI skills a firm possesses, the better it will be able to implement IT systems with an AI component. However, one might argue that different business models necessitate different optimal levels of AI skills in a firm's workforce, which means that more is not always better. Therefore, we construct two alternative operationalizations. First, we construct a binary measurement indicating whether a firm demands AI skills at all ('HAIIA-binary'). Hence, the alternative binary operationalization accounts for different business models. Second, we construct an indicator measuring the presence of AI skills and the breadth of AI skills. Therefore, we compute for each job posting not only if the firm demands AI skills but also how many different AI skills it demands. We describe each job posting with an 'AI skills breadth,' defined as the unique demanded AI skills in the posting divided by the number of all AI skills searched for (see Appendix A). Then, we construct the firm's overall AI skill breadth ('HAIIA-breadth') as the sum of all job
+
+
+<!-- PAGE 12 -->
+
 
 postings' AI skill breadths divided by the number of job postings. Hence, the HAIIA-breadth ranges between 0 and 1.
 
@@ -284,6 +329,10 @@ The second hypothesis (H2) stated that a high (vs. low) TMT AI literacy increase
 
 Electronic Markets (2024) 34:24
 
+
+<!-- PAGE 13 -->
+
+
 Table 2 Regression results
 
 | (7)              | s.e. 0.073 0.140             | 0.070 0.029 0.148                      | 0.017 0.016 0.002 < 0.001 < 0.001 < 0.001 0.082                                                                             | 0.112 0.100 0.074 0.080 0.097 0.072 0.081 0.074 0.079 0.079 0.078 0.087 0.087                                                                             |
@@ -305,6 +354,10 @@ Table 2 Regression results
 
 <!-- image -->
 
+
+<!-- PAGE 14 -->
+
+
 Table 2 (continued)
 
 | HAIIA (6) HAIIA (7)   | (7) (8) (9) (10) (11)   |
@@ -313,6 +366,10 @@ Table 2 (continued)
 <!-- image -->
 
 Electronic Markets (2024) 34:24
+
+
+<!-- PAGE 15 -->
+
 
 Fig. 2 Research model with results
 
@@ -344,6 +401,10 @@ Hypotheses H5a and H5b propose moderation effects of firm type on the effects of
 
 <!-- image -->
 
+
+<!-- PAGE 16 -->
+
+
 Fig. 3 Moderation  effect  of  firm  type  on  the  relationship  between TMT AI literacy and HR-related AI implementation ability
 
 <!-- image -->
@@ -362,6 +423,10 @@ We introduced TMT AI literacy as a skill-oriented construct and found that it is
 
 Electronic Markets (2024) 34:24
 
+
+<!-- PAGE 17 -->
+
+
 requirement to drive their attention. Therefore, we argue that TMTs should be diverse regarding domain experience and background but universally AI-literate to balance the executive attention (in the sense of the ABV) appropriately in the age of AI.
 
 Despite recognizing AI value via AI orientation, many firms still struggle to realize the identified value potential (Herper, 2017; Williams, 2021). As such, it is crucial to better understand how to improve AI implementation ability to realize such value. We introduced HR-related AI implementation ability and found that it is positively affected by TMT AI literacy and AI orientation. Through these results, we emphasize the critical role of AI implementation factors, notably human resources (e.g., Mikalef &amp; Gupta, 2021; Pumplun et al., 2019; Weber et al., 2022), and offer guidance on enhancing HR-driven AI implementation. On the one hand, the positive effect of TMT AI literacy on HR-related AI implementation ability indicates that AI-literate TMTs have an impact beyond AI strategy. When TMTs possess AI literacy, their attention on the topic brings not only strategic insights but also the ability to navigate the complexities of AI-driven projects, effectively communicate their vision, and lead their organizations toward successful AI adoption. This qualifies prior research identifying general TMT support as decisive for IT innovation adoption (Rai et al., 2014; Ramamurthy et al., 2008). Furthermore, it aligns with prior research on executive IT literacy, which has demonstrated that executives with higher IT skills tend to exhibit a greater propensity for engaging with IT initiatives (Bassellier et al., 2003; Bassellier et al., 2015). On the other hand, AI orientation's impact on HR-related AI implementation ability shows that AI orientation, which also includes communicating the AI strategy (e.g., via 10-K statements), is not a goal in itself or only for external purposes but that it facilitates HR-related AI implementation ability. Therefore, we support the claim that AI orientation is central to adopting AI because it also promotes implementation beyond defining the target picture (Li et al., 2021). In addition, we showed that TMT AI literacy's effect on HR-related AI implementation ability is partially mediated by AI orientation. This finding shows that TMT AI literacy's effect on HR-related AI implementation ability cannot fully be attributed to TMT AI literacy's effect on AI orientation. Rather, TMT AI literacy seems to affect HR-related AI implementation ability directly and indirectly through AI orientation. As such, this partial mediation also supports the claims made above and potential explanations mentioned in prior literature that executives directly affect implementation ability, for example, through hiring policies (Rana &amp; Sharma, 2019).
@@ -375,6 +440,10 @@ This study makes three main contributions to upper echelons and AI literacy lite
 Second, we introduce HR-related AI implementation ability in the upper echelons context and bridge the gap between AI value identification (achieved through AI strategy) and AI value realization (achieved through AI implementation). Past research has predominantly focused on
 
 <!-- image -->
+
+
+<!-- PAGE 18 -->
+
 
 either AI strategy (e.g., Li et al., 2021) or AI implementation (e.g., Mikalef &amp; Gupta, 2021; Weber et al., 2022). The relevance of AI strategy development to AI implementation has been underexplored. We shed light on this link from an upper echelons' perspective by specifying how HR-related AI implementation ability is-directly and indirectly-affected by TMT AI literacy and AI orientation. We uncover AI orientation's positive effect on HR-related AI implementation ability and its partially mediating function for TMT AI literacy's effect.
 
@@ -397,6 +466,10 @@ Like any study, this study has several limitations that suggest potential paths 
 For this study, we leveraged an established taxonomy of 71 AI skills and competencies (Alekseeva et al., 2021) (Appendix A). However, the taxonomy also includes broad terms, such as 'artificial intelligence' or 'machine learning.' One limitation of the analysis is that one cannot know what an executive refers to when they list 'artificial intelligence' in their online profile. Therefore, we encourage future research to explore the breadth and depth of AI literacy of executives with more qualitative research designs. An executive-specific AI literacy taxonomy might pose a promising research direction with high practical relevance. Furthermore, such research could combine the role-oriented and skill-oriented perspectives on executives. Even though we emphasize the importance of the skill-oriented perspective in this study, executive roles are certainly still purposeful and will not vanish. Hence, it is of great interest how executive AI literacies for different executive roles should be composed.
 
 This study used firm type as a moderating factor. Firm type contains valuable information on typical organizational resource configurations of firms that are rather established compared to rather new ventures (e.g., Andries et al.,
+
+
+<!-- PAGE 19 -->
+
 
 2013). Such a distinction is of great practical relevance to executives because it can give concrete advice based on the firm they manage. However, firm type also simplifies the different organizational resources by assuming typical resource configurations, such as agile culture and fewer available financial resources within startups. Future research could investigate these relationships more explicitly by collecting individual information on the organizational resources of interest. Recent management research started using methods such as qualitative comparative analysis (e.g., Leppänen et al., 2023), which can identify specific configurations of variables that lead to certain outcomes. We urge further research to explore such methods in this context.
 
@@ -427,6 +500,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 - Baumers, M., Dickens, P., Tuck, C., &amp; Hague, R. (2016). The cost of additive manufacturing: machine productivity, economies of scale and technology-push. Technological Forecasting and Social Change, 102 , 193-201. https://  doi.  org/  10.  1016/j.  techf  ore.  2015. 02.  015
 
 <!-- image -->
+
+
+<!-- PAGE 20 -->
+
 
 - Benlian, A. (2022). Sprint zeal or sprint fatigue? The benefits and burdens of agile ISD practices use for developer well-being. Information Systems Research, 33 (2), 557-578. https://  doi.  org/ 10.  1287/  isre.  2021.  1069
 - Benlian, A., &amp; Haffke, I. (2016). Does mutuality matter? Examining the bilateral nature and effects of CEO-CIO mutual understanding. The Journal of Strategic Information Systems, 25 (2), 104126. https://  doi.  org/  10.  1016/j.  jsis.  2016.  01.  001
@@ -466,6 +543,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 
 <!-- image -->
 
+
+<!-- PAGE 21 -->
+
+
 - New Media &amp; Society, 24 (5), 1258-1277. https://  doi.  org/  10. 1177/  14614  44821  10227  02
 - Herper, M. (2017). MD Anderson benches IBM Watson in setback for artificial intelligence in medicine . Forbes Magazine. https:// www.  forbes.  com/  sites/  matth  ewher  per/  2017/  02/  19/  md-  ander son-  bench  es-  ibm-  watson-  in-  setba  ck-  for-  artifi  cial-  intel  ligen  cein-  medic  ine/?  sh=  48f49  dd137  74 (visited on 2 February 2023)
 - Heyder, T., &amp; Posegga, O. (2021). Extending the foundations of AI literacy. In International Conference on Information Systems, Austin, USA. https://  aisel.  aisnet.  org/  icis2  021/  is\_  future\_  work/ is\_  future\_  work/9
@@ -504,6 +585,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 
 <!-- image -->
 
+
+<!-- PAGE 22 -->
+
+
 - Peifer, Y., Jeske, T., &amp; Hille, S. (2022). Artificial intelligence and its impact on leaders and leadership. Procedia computer science, 200 , 1024-1030. https://  doi.  org/  10.  1016/j.  procs.  2022.  01.  301
 - Peng, S., Kalliamvakou, E., Cihon, P., &amp; Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv . https://  doi.  org/  10.  48550/  arXiv.  2302.  06590
 - Peppard, J., Edwards, C., &amp; Lambert, R. (2011). Clarifying the ambiguous role of the CIO. MIS Quarterly Executive , 10 (1). https://  aisel. aisnet.  org/  misqe/  vol10/  iss1/3
@@ -541,6 +626,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 - Yaniv, I. (2011). Group diversity and decision quality: Amplification and attenuation of the framing effect. International Journal of
 
 <!-- image -->
+
+
+<!-- PAGE 23 -->
+
 
 Forecasting, 27 (1), 41-49. https://  doi.  org/  10.  1016/j.  ijfor  ecast. 2010.  05.  009
 

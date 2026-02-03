@@ -1,10 +1,11 @@
 ---
 source_file: Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.pdf
-conversion_date: 2026-02-03T08:45:11.369978
+conversion_date: 2026-02-03T18:23:21.226678
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Prompting Fairness: Learning Prompts for Debiasing Large Language Models
 
 ## Andrei-Victor Chisca
@@ -47,6 +48,10 @@ Embedding-based metrics, such as Word Embeddings Association Test ( WEAT ) (Cali
 
 Probability-based methods, such as StereoSet (Nadeem et al., 2021), quantify bias by measuring how frequently a model chooses a stereotypical word to fill in a masked token. In StereoSet, the
 
+
+<!-- PAGE 2 -->
+
+
 Table 1: Some examples of templates used for reducing gender bias. Slot names are enclosed by angle brackets.
 
 |   Nr. | Template                                                                         |
@@ -84,6 +89,10 @@ It has been shown that concatenating prompts to the input of a pretrained langua
 where the model implicitly infers a latent concept C based on the given prompt P .
 
 We argue that a similar approach can be used for debiasing encoder-only LLMs. During pretraining, the model learns to maximize the likelihood of the training data. This behaviour might not always be desirable, especially if, due to the characteristics of the training data, maximizing its likelihood involves relying on various stereotypes. As opposed to removing or hiding information from the model, either at training or at inference time, we aim to give the model additional information at inference,
+
+
+<!-- PAGE 3 -->
+
 
 in the form of compact prompt embeddings, which could enable it to implicitly infer a latent concept encompassing the desired behaviour: generating a fair and unbiased output.
 
@@ -126,6 +135,10 @@ Then, the total loss for a set T of templates is obtained by instantiating each 
 
 <!-- formula-not-decoded -->
 
+
+<!-- PAGE 4 -->
+
+
 Table 2: Gender bias slots used in templates
 
 | BiasSlotName   | Male Variant   | Female Variant   |
@@ -166,6 +179,10 @@ Training is done using an AdamW (Loshchilov and Hutter, 2019) optimizer with an 
 We evaluate our method for mitigating gender bias in BERT and RoBERTa on the gender tests from SEAT (May et al., 2019) and StereoSet (Nadeem et al., 2021). For StereoSet, a stereotype score (SS) closer to 50% indicates a less biased model. In case of SEAT, we average the last layer's hidden representations and normalize the resulting vector, as May et al. (2019); Meade et al. (2022), but exclude the representations corresponding to the prompt tokens from this computation. For analyzing the loss in language modeling performance, we use the language modeling (LM) score from StereoSet and the pseudo-perplexity (Salazar et al., 2020) on the test split of WikiText-2 (Merity et al., 2017). For computing the pseudo-perplexity, we first sentencize each text in the dataset, using Spacy (Honnibal et al., 2020).
 
 Initialization method In preliminary experiments with BERT, using random initialization for the prompt's parameters, we observed, similarly to Lester et al. (2021), that the prompts learned and the performance depend to a large extent on the initialization. We also examined for each
+
+
+<!-- PAGE 5 -->
+
 
 Table 3: Results of gender debiased models with different initialization types compared with results reported by Meade et al. (2022) for CDA, Dropout, INLP, SentenceDebias and Self-Debias. Our results are averaged across all trials, with a 95% confidence interval ( ± ) and with the standard deviation in parentheses. For SEAT, we report the mean absolute effect sizes across all 6 gender tests. For StereoSet, we report the Stereotype Score (SS) for gender test and Language Modeling Score (LM) across all tests.
 
@@ -211,6 +228,10 @@ word, and one is initialized with the embedding of a word related to the female 
 Words used for each type of initialization are listed in Tables 9,10.
 
 For this experiment, we use bert-base-uncased and roberta-base as base models and don't use any names in the bias slots of the templates (the &lt;GenderedWord&gt; slots are filled only with "he" or "she"). Given each base model, we train 10 models using Random , 5 with Neutral initialization, 5 with Gender Balanced initialization and 5 with female Biased initialization. Each model is trained for 250 epochs, with batches of 16 templates. In Table 3, we report the mean and standard deviation across each type of initialization and compare the results with those reported by Meade et al. (2022) for gender debiasing using CDA, DROPOUT, INLP,SENTENCEDEBIAS and SELF-
+
+
+<!-- PAGE 6 -->
+
 
 |                         | Profession SS ( % )       | Race SS ( % )             | Religion SS ( % )         |
 |-------------------------|---------------------------|---------------------------|---------------------------|
@@ -261,6 +282,10 @@ In case of BERT , we remark that among the different initialization methods, the
 
 In case of RoBERTa , we notice that the neutral initialization achieves better results than the other initialization types. While this achieves sig-
 
+
+<!-- PAGE 7 -->
+
+
 nificantly better results on SEAT compared to all other debiasing techniques, its results on StereoSet are surpassed by both INLP and SENTENCEDEBIAS. As for BERT, results show that our method generally succeeds in maintaining the language modelling ability of the base model.
 
 Effect on other types of biases Besides mitigating the targeted bias and the impact on language modeling performance, the side effects on other biases should also be considered. We evaluate our gender debiased models on the profession , race and religion tests in StereoSet and report the stereotype scores in Table 4.
@@ -280,6 +305,10 @@ In addition to these benchmarks, we analyzed the predictions of the debiased mod
 Weproposed and investigated a method of reducing social biases in pretrained LLMs based on prompt tuning, which involves training the prompt embeddings on a small set of templates. In addition to debiasing, this method is also designed to prevent the model from 'forgetting' the identity of the social groups targeted during debiasing.
 
 We experimented with this method for reducing gender bias in BERT and RoBERTa models. Results show that it achieves debiasing performance on par with state-of-the-art while maintaining information about the social group's identity and with a low impact on general language modeling performance. While we focused our experiments on mitigating a single type of social bias in BERT and RoBERTa, the method can be adapted to other types of biases and LLMs.
+
+
+<!-- PAGE 8 -->
+
 
 Table 7: Results of gender debiased models with and without using group specific options in training. Female biased initialization is used. Results are averaged over all 5 different initializations, with standard deviation in parentheses.
 
@@ -313,6 +342,10 @@ In this paper, we focused our experiments only on mitigating gender bias. Our th
 Experiments have shown that the performance of models debiased using our approach depends to a large extent on the used initialization method. Results show that for gender debiasing BERT, initializing with terms related to the female gender gives better results on average than random initialization and other approaches, while in the case of RoBERTa the neutral initialization achieves the best results. However, other initialisation methods might be more suitable, and this approach is not directly usable for other biases. Further investigation into robust initialization methods is needed.
 
 The loss function of our method considers the reference probability distribution as the average of
+
+
+<!-- PAGE 9 -->
+
 
 distributions predicted by the original model for each social group considered. While this approach is reasonable, it might prove limiting in some cases. For example, an exceedingly biased or toxic model could predict unfair probability distributions for some social groups, which would skew the average.
 
@@ -356,6 +389,10 @@ Julian Salazar, Davis Liang, Toan Q. Nguyen, and Katrin Kirchhoff. 2020. Masked 
 
 Kellie Webster, Xuezhi Wang, Ian Tenney, Alex Beutel, Emily Pitler, Ellie Pavlick, Jilin Chen, Ed H. Chi, and Slav Petrov. 2020. Measuring and reducing gendered correlations in pre-trained models. Technical report.
 
+
+<!-- PAGE 10 -->
+
+
 Thomas Wolf, Lysandre Debut, Victor Sanh, Julien Chaumond, Clement Delangue, Anthony Moi, Pierric Cistac, Tim Rault, Remi Louf, Morgan Funtowicz, Joe Davison, Sam Shleifer, Patrick von Platen, Clara Ma, Yacine Jernite, Julien Plu, Canwen Xu, Teven Le Scao, Sylvain Gugger, Mariama Drame, Quentin Lhoest, and Alexander Rush. 2020. Transformers: State-of-the-art natural language processing. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations , pages 38-45, Online. Association for Computational Linguistics.
 
 Sang Michael Xie, Aditi Raghunathan, Percy Liang, and Tengyu Ma. 2022. An explanation of in-context learning as implicit bayesian inference. In International Conference on Learning Representations .
@@ -389,6 +426,10 @@ Table 10: Words used as initialization for RoBERTa prompts in each trial, for ou
 | women female wife woamn           | Female Biased queen her feminist miss          | girl feminine mothers female     |
 
 .
+
+
+<!-- PAGE 11 -->
+
 
 Table 11: Examples of general options used for gender debiasing
 

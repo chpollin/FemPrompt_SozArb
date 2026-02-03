@@ -1,10 +1,11 @@
 ---
 source_file: Schneider_2024_AI_for_decision_support_What_are_possible.pdf
-conversion_date: 2026-02-03T09:20:40.624002
+conversion_date: 2026-02-03T18:51:56.555729
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 www.tatup.de
 
 <!-- image -->
@@ -22,6 +23,10 @@ peer reviewed &amp; open access
 Special topic AI for decision support: What are possible futures, social impacts,   regulatory options, ethical conundrums and agency constellations?
 
 Research Dekarbonisierung des Verkehrssektors in Berlin Interview mit Karl von Wendt: Künstliche Intelligenz außer Kontrolle?
+
+
+<!-- PAGE 2 -->
+
 
 - Zeitschrift für Technikfolgenabschätzung in Theorie und Praxis ist die begutachtete Open-Access-Zeitschrift für das inter  disziplinäre Feld der Technikfolgenabschätzung und angrenzende Forschungsgebiete. Die Zeitschrift richtet sich an eine inter- und transdisziplinäre Leserschaft.
 
@@ -127,6 +132,10 @@ Erfüllungsort  /  Gerichtsstand: München, Deutschland Place of fulfillment  / 
 
 oekom kompensiert bereits seit 2008 seine unvermeidlichen CO₂-Emissionen. / Since 2008 oekom offsets its   unavoidable CO₂ emissions. At oekom verlag, ecology and sustainability are not just words on paper; they form the foundation of our   corporate philosophy. Cooperation instead of egoism,   environmentally friendly production instead of maximum sales figures, diversity instead of monotony. We want to highlight alternatives with our publications and be an alternative ourselves. Find more information on oekom, naturally www.natürlich-oekom.de and #natürlichoekom
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 ## Editorial
@@ -152,6 +161,10 @@ In 2023, the German Ethics Council took a stand and stated as a criterion for a 
 Armin Grunwald
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 ## Inhalt / Content 33/1 (2024)
 
@@ -204,6 +217,10 @@ Ergebnisse einer szenariobasierten Interviewstudie zur Erklärbar  keit von KI i
 
 - 48 J.  C.  ZOELLICK, H. DREXLER  , K. DREXLER Artificial intelligence in melanoma diagnosis: Three scenarios, shifts in competencies, need for   regulation, and reconciling dissent between humans and AI
 
+
+<!-- PAGE 5 -->
+
+
 - 55
 
 ## RESEARCH
@@ -243,6 +260,10 @@ of rapid digital and climate change'. Conference, 2023, Chennai, IN (hybrid)
 - 74 S. ALBRECHT, R. GRÜNWALD Meeting report: 'Generative artificial   intelligence Opportunities, risks and policy challenges'. EPTA Conference, 2023, Barcelona, ES
 - 76 B. BROHMANN, R. RHODIUS  , M. MBAH Meeting report: 'PartWiss23'. Conference, 2023, Chemnitz, DE
 - 78 TATuPDates
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -290,6 +311,10 @@ Almost twenty years to the day after its foundation, the Network Technology Asse
 
 <!-- image -->
 
+
+<!-- PAGE 7 -->
+
+
 Quelle: Öko-Institut e.V.
 
 Quelle: Thomas Lehmann vided in a precise and informed manner in times of extreme urgency? And what organizational  structures  and  networks are needed to develop options for action for  more  resilient,  sustainable  futures? Answers  to  these  questions  will  be  discussed at the conference from a TA perspective,  but  also  from  a  social  and  political  point  of  view.  The  conference  is being organized by the Institute for Technology   Assessment and Systems Analysis (ITAS), one of the initiators of the NTA. The call for ab  stracts has recently gone online. Abstracts can be submitted until 15 June 2024.
@@ -336,6 +361,10 @@ Eigentlich Optimismus. Ich finde neue Techno  logien spannend und probiere gerne
 
 AUSFÜHRLICHE VIDEO-INTERVIEWS UNTER  www.tatup.de/youtube
 
+
+<!-- PAGE 8 -->
+
+
 SPECIAL TOPIC
 
 ## AI for decision support :
@@ -347,6 +376,10 @@ KI zur Entscheidungsunterstützung: Was sind mögliche Zukünfte, soziale Auswir
 Edited by D. Schneider and K. Weber
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -402,6 +435,10 @@ SPECIAL TOPIC · AI fOr dECISIOn SuPPOrT
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 ling them the work of the devil. However, Manichean thinking will hardly help to achieve plausible and realistic impact assessments of AI that can help to minimize or even prevent negative consequences and strengthen positive effects of this potentially disruptive technology.
 
 One  fundamental  problem  with  referring  to  such  extreme scenarios is that the actual opportunities and risks of using AI tend to be obscured. In reality, there exists a huge continuum of effects between saving the world and destroying it, the assessment of  which  will  also  depend  on  point  of  view;  what  benefits  one  stakeholder  may  have  negative  consequences for another. In addition, the narrative of 'becoming a victim of tech- ulatory issues could only be dealt with marginally or not at all; therefore, at least a few comments on this should be made.
@@ -424,6 +461,10 @@ The measures proposed in the AIA are primarily aimed at preventing  potential  r
 
 Yet, the AIA was and is on no account the only attempt to regulate the use of AI (Butcher and Beridze 2019; Schiff et al. 2022; Schmitt 2022; Ulnicane et al. 2021). An arbitrary and by no means comprehensive selection shows the range of types of actors and approaches to regulation: For instance, the OECD has formulated the Recommendation of the Council on Artificial Intelligence , the EU the Ethics Guidelines for Trustworthy AI and the Future of Life Institute the Asilomar AI Principles . These and many other documents appear to propose ethical guidelines and codes of ethics for regulation - at least that is what an initial review suggests. However, the binding force of ethical guidelines and codes of ethics is based on voluntary commitment; there is therefore no enforceability that only laws could offer. Moreover, Schiff et al. (2022) emphasize that most of these documents offer little indication of how requirements, recommendations and/ or claims they propose can be translated into actionable instructions for the practice of AI development and use, and instead remain at the rather abstract level of moral imperatives.
 
+
+<!-- PAGE 11 -->
+
+
 It can only be assumed that, in view of competing regulatory approaches, the AIA is rather not the last word on the regulation of AI, even more so as criticism of the AIA has not been long in coming. Furthermore, it is currently impossible to predict whether and what effects the proposed EU regulation will have on other countries and within the international discourse. How the application of AI will be regulated in, say, ten years' time in the areas covered in this Special topic as well as in other areas is therefore difficult to predict today.
 
 ## Human decisions and artificial intelligence
@@ -439,6 +480,10 @@ However, analyzing large data sets opens up the possibility of contributing to e
 employers (Schneider et al. 2022 b). On the one hand, the use of DSS is expected to reduce the workload and the potential time saved is associated with a more empathetic approach to patients (Topol 2019) - expectations that appear questionable given the increasing costs of purchasing and maintaining technology and educating  personnel  as  well  as  labor  shortages.  On  the  other hand, there are concerns that computer paternalism could undermine the essential relationship of trust between healthcare professionals and patients (Čartolovni et al. 2022; Heyen and Salloch 2021) - or, to put it in more general terms, between professionals and clients. Studies already indicate that time and again automation bias occurs (Sujan et al. 2019), i. e., recommendations from AI-based decision-making systems are adopted without question. In view of the frequent lack of data literacy, this poses an enormous challenge, as the AI-generated recommenda-
 
 These short comments can only highlight a few aspects regarding the use of AI systems for decision support. For instance, the differentiation between systems for automatic decision-making (human-out-of-the-loop) and for decision support (humanin-the-loop, human-on-the-loop) should certainly be dealt with in much more detail, as different questions are raised depending on how AI systems are actually employed. It would also be worth to examine whether and how transitions from decision support systems to automatic decision-making systems might take place; this is less a technical issue than an organizational and practical one, because if AI systems suggest decisions but users routinely adopt them, it is not the technology that has changed but the way it is used. Such transitions in modes of use can in turn lead to far-reaching changes in the respective understanding of the profession and this in turn can again change modes of use
+
+
+<!-- PAGE 12 -->
+
 
 (Schneider et al. 2022 b). In other words: When talking about AI, this must always be done in terms of a socio-technical system.
 
@@ -465,6 +510,10 @@ Funding · This work received no external funding. Competing interests · Karste
 ## Acknowledgement
 
 The Special topic editors would like to thank the authors and reviewers for the professional and most cooperative collaboration.
+
+
+<!-- PAGE 13 -->
+
 
 ## References
 
@@ -522,6 +571,10 @@ is research associate at the Competence Center Emerging Technologies at the Frau
 
 is research professor for Technology Assessment and AI-based Mobility at OTH Regensburg since 2022 and has been working there as senior researcher since 2013. His research is focused on impacts of technology on individuals, groups, society, and environment, namely information and communication technology, particularly in healthcare, mobility, and energy.
 
+
+<!-- PAGE 14 -->
+
+
 <!-- image -->
 
 ## RESEARCH ARTICLE
@@ -568,6 +621,10 @@ While significant strides have been made in the exploration of AI's impact on va
 
 <!-- image -->
 
+
+<!-- PAGE 15 -->
+
+
 both  in  the  context  of  Germany,  and  in  comparison  with  other nations. Notably for the German-speaking region, Hartung et  al.  (2022)  examined  the  future  of  digital  justice,  involving interviews with judges, and a publication by IBM compiles insights garnered from discussions with (vice-)presidents of various courts (IBM Deutschland 2022).
 
 Judges provide unique insights into the current state of the art regarding technology use within courts, and they are the target group of the AI systems under consideration. Therefore, their perspectives serve as a critical touchstone for understanding the potential implications arising from AI's integration into legal proceedings. Building on this premise, through the conduct of 20 in-depth interviews with German judges, this explorative research aims to shed light on the following research questions:
@@ -589,6 +646,10 @@ decision-making to machines, perceiving it as both inconceivable and worrisome. 
 ## AI in the judiciary: state of the art
 
 In  many countries, it is  expected  that  AI  use  in  legal  proceedings will increase in the future. This sentiment is exemplified in China, where an extensive network of AI applications is set mited,  outdated,  and  not  sufficiently  aligned  with  user  requirements.  They  estimate  that  the  digitalization  of  the  German judiciary lags behind leading countries by approximately 10-15 years. Dreyer and Schmees (2019) conclude that the feasibility of AI in the judiciary fails solely due to the insufficient availability of training data. Despite this lag in digitalization, the use of algorithms in courts is subject of a critical debate among legal scholars. This encompasses discussions on how algorithms could be deployed within the judiciary to address the shortcomings of human decision-making (Nink 2021), the legal evaluation of so-called 'robot judges' (Greco 2021), or the implications of AI deployment on human rights (Završnik 2020). In the field of information systems, the topic has received less attention thus far. Some studies examine the recidivism prediction algorithms already in use in the United States, focusing on aspects such as fairness and reliability (Berk 2019), or the effects of human-machine interaction in this context (Grgić-Hlača et al. 2019). The
+
+
+<!-- PAGE 16 -->
+
 
 target audience of AI systems in the judiciary is predominantly not directly involved in these studies.
 
@@ -635,6 +696,10 @@ The judges were asked how a court proceeding might look in the year 2040. The qu
 
 - Advanced  digitalization  (17): It  was  mentioned  that  'improved technology', 'no more paper files', and the ability
 
+
+<!-- PAGE 17 -->
+
+
 to 'better process documents with computers' are anticipated.  Moreover,  parties  are  expected  to  'communicate  electronically with each other', 'submit a relatively significant amount electronically', and 'hopefully, we will indeed have an electronic case file'. Digital documentation is expected to increase, for example, due to the recording of hearings, and it is anticipated that evidence will be technologically processed and digitally accessible.
 
 - Video hearing (14): The judges are confident that video conferencing for hearings will continue to expand, anticipating increased opportunities in this regard.
@@ -675,6 +740,10 @@ Tab. 2: Categorization of potential changes of the judge's role by 2040.
 
 Source: interviews conducted by the authors
 
+
+<!-- PAGE 18 -->
+
+
 Tab. 3: Categorization of responses to the question of whether AI machines should render judgments instead of humans. Source: interviews conducted by the authors
 
 | Perspective                     | Argument                                             |   ∑ |
@@ -712,6 +781,10 @@ As evident from the frequency of mentions, it is apparent that not only were the
 
 Judges  operate  with  autonomy,  determining  their  operational methodologies, and hold accountability for each procedural facet, as articulated in Art. 97 Abs. 1 GG, which underscores their independence and subordination solely to the law. They typically lack dedicated secretarial support or personally assigned assistants, exemplifying the self-directed nature of their role. Consequently, this engenders, on the one hand, the fundamental latitude for judges to exercise discretion in adopting technologi-
 
+
+<!-- PAGE 19 -->
+
+
 cal aids, unless statutory provisions dictate otherwise. On the other hand, it underscores the challenge of seamlessly integrating AI-based assistance systems into existing judicial processes.
 
 It is to be noted that the interviews do not reveal a consistent consensus; a multitude of diverse viewpoints were expressed. However, it is noticeable that there is a general tendency towards a more favorable outlook rather than a critical one regarding the future possibilities of AI application, such as its potential use as a helpful tool in mass proceedings or as an assistance system for case processing. At the same time, critical topics such as IT security or data for such systems and the associated potential for discrimination  were  scarcely  addressed.  The  slightly  positive view held by judges could be attributed to their potential lack of AI expertise compared to members of, for instance, the informa- bias, as they hold an interest in AI. Finally, different interpretations and confusion regarding AI and digitalization were observed. Despite the predominantly descriptive nature of the analysis, it might serve as a valuable resource for future research endeavors, particularly for theory building.
@@ -747,6 +820,10 @@ Dressel, Julia; Farid, Hany (2018): The accuracy, fairness, and limits of predic
 Dreyer, Stephan; Schmees, Johannes (2019): Künstliche Intelligenz als Richter?
 
 Wo keine Trainingsdaten, da kein Richter. Hindernisse, Risiken und Chancen
+
+
+<!-- PAGE 20 -->
+
 
 der Automatisierung gerichtlicher Entscheidungen. In: Computer und Recht 35 (11), pp. 758-764. https://doi.org/10.9785/cr-2019-351120
 
@@ -801,6 +878,10 @@ holds a Master's degree in International Politics and International Law, as well
 ## PROF. DR. MOREEN HEINE
 
 has been a professor of E-Government and Open Data Ecosystems at the University of Lübeck and scientific director of the Joint Innovation Lab since 2019. Previously, she was an assistant professor of business information systems at the University of Potsdam. She is a National E-Government Competence Centre (NEGZ) board member.
+
+
+<!-- PAGE 21 -->
+
 
 <!-- image -->
 
@@ -860,6 +941,10 @@ SPECIAL TOPIC · AI fOr dECISIOn SuPPOrT
 
 <!-- image -->
 
+
+<!-- PAGE 22 -->
+
+
 (AI LAs) can reduce economic and shame-based cultural barriers to the information-gathering stage of pursuing justice.
 
 By AI LA we have in mind a system that provides potential litigants with reliable legal information that is specific and intelligible to allow them to make informed decisions whether to formally contract a lawyer and/or formally pursue their claims in court. Several similar legal AI platforms already exist (AI Lawyer 2023; Rattray 2023; Casetext 2022) and will likely only improve over time. In one London-based law firm from November 2022 to February 2023, Harvey AI was used by 3,500 of their lawyers to ask 40,000 legal questions during their day-to-day work (Rattray 2023). Specialized AI models can already give advice for specific domains of law. For example, JusticeBot (Tribunal administratif du logement 2023), a free tool for Quebec housing law, takes case facts into account in giving legal advice, asks pertinent questions, and cites similar cases for each relevant legal claim.
@@ -883,6 +968,10 @@ Financial barriers influence whether people pursue justice through the legal sys
 2013, p. 2, 2015, pp. 1-4). This impact is manifested through job creation, reduced absences at work due to legal problems (Task  Force  on  Justice  2019,  p. 45),  improved  housing  stability, resolution of debt, and stimulating growth by instilling confidence  in  assurance  (Stolper  et  al.  2007,  pp. 8-9).  Equal  access to justice may also foster economic growth by establishing a level playing field (Task Force on Justice 2019, pp. 39-41), especially for small or medium economic participants (OECD 2015, pp. 3-4). It also facilitates enforcement of contracts, encourages fair competition, and instills confidence in regulatory frameworks (OECD 2015, pp. 9-10). Thus, supporting access to justice can play a role in assisting individuals to overcome severe forms of social exclusion and ensuring equal opportunities for economic advancement.
 
 decision to financial considerations, whether real or perceived (OECD 2015, p. 5). Further, for 92 % of legal problems low-income Americans face, they do not receive any or enough legal aid (Legal Services Corporation 2022, pp. 47-48). Moreover, education and accessible information are also barriers to the justice system -53 % of low-income Americans do not know if they are able to find an affordable lawyer if needed (Legal Services Corporation 2022, pp. 51-52). These and other barriers lead them to pursue litigation at lower rates than higher SES groups. For example, in medical contexts, lower SES groups pursue litigation at lower rates when compared to other groups because of a lack of access to legal resources and the nature of the contingency fee system in medical malpractice claims (McClellan et al. 2012; Viser 2022).
+
+
+<!-- PAGE 23 -->
+
 
 ## Overcoming economic barriers with publicly funded AI legal advisors
 
@@ -921,6 +1010,10 @@ Shame  is  often  a  function  of  cultural  norms.  Groups  use shame to reinfo
 
 The justice system and social norms can leverage the power of  shame  through  stigmatization  to  prevent  certain  behaviors and incentivize others. This is neither good nor bad, but rather depends on the nature of the norms being supported. Stigma-
 
+
+<!-- PAGE 24 -->
+
+
 tizing  theft  or  domestic  violence  isn't  a  bad  cultural  practice. However, we suggest shame and shame-inducing norms that impede the legitimate pursuit of justice are prima facie bad and should be eliminated. These include norms against litigation due to group membership and norms against disclosing information that stigmatizes or shames.
 
 In the cases below, we show how AI LAs can mitigate shamebased  barriers  to  justice  due  to  the  human  propensity  not  to feel  judged  when  interacting  with  AI  (Bartneck  et  al.  2010; Holthöwer and Van Doorn 2023).
@@ -951,6 +1044,10 @@ This is how our model can mitigate cultural barriers to justice in the informati
 
 Third case: Shame as a barrier to justice for victims of fraud Disclosing to others that one has been a victim of fraud brings about acute shame that can prevent victims from pursuing justice.  In  the  U.S.,  for  example,  fraud is an enormous problem, as consumers lost nearly $ 9 billion in 2022 (Fair 2023). However,  victims  rarely  come  forward  and  pursue  justice.  A  sur-
 
+
+<!-- PAGE 25 -->
+
+
 vey conducted by The American Association of Retired Persons (AARP) found an estimated 15 % contacted  authorities  (Williams 2023). Another report found that 30 % of respondents indicated they would be embarrassed to admit to being a victim of a financial scam, whether to friends, family, or authorities (Aviva 2021, p. 11).
 
 Shame may lead such victims to forgo information-gathering since they can only identify costs (shame) without the benefit. Hence, such victims frequently do not pursue legal claims because they never acquire the information to evaluate benefits.
@@ -980,6 +1077,10 @@ A common concern with many AI systems is that they can inherit and reproduce bia
 First,  the  question  of  biases  will  always  be  comparative. There is unlikely ever to exist any human-developed system free of all biases. The question, therefore, is whether an AI LA could have fewer biases than the current system. We believe the answer is 'yes' because it is much easier to alter the biases of an AI than it is of the individuals and institutions that compose the entire legal system.
 
 Bias  inhabits  AI  systems  within  their  training  data,  algorithms, and outputs. We know that biased data leads to biased algorithms. Therefore, it's possible to mitigate bias through debiasing the training set or through careful selection of training data. Where this isn't possible, it's possible to adjust algorithms that we know were developed using biased data. Finally, if we know in advance that an AI's outputs are biased, it's possible to have the AI correct in the other direction (Fazelpour and Danks 2021). While these correction measures are not easy or foolproof, they are easier and more likely to succeed than attempting to correct the implicit and systemic biases of every individual and institution that compose current justice systems. Finally, addressing biases in a legal system can happen concurrently while addressing biased AI LAs in the ways we have mentioned.
+
+
+<!-- PAGE 26 -->
+
 
 ## Responsibility
 
@@ -1017,6 +1118,10 @@ fession. In: Stanford Law School Blog. Available online at https://law.stanford.
 - Farrell, Amy (2011): Fat shame. Stigma and the fat body in American culture. New York, NY: New York University Press.
 - Fazelpour, Sina; Danks, David (2021): Algorithmic bias. Senses, sources, solutions. In: Philosophy Compass 16 (8), p. e12 760. https://doi.org/10.1111/phc3.12760
 - Gill, Nick et al. (2021): The tribunal atmosphere. On qualitative barriers to access to justice. In: Geoforum 119, pp. 61-71. https://doi.org/10.1016/j. geoforum.2020.11.002
+
+
+<!-- PAGE 27 -->
+
 
 - Goffman, Erving (1986): Stigma. Notes on the management of spoiled identity. New York, NY: Simon &amp; Schuster.
 
@@ -1080,6 +1185,10 @@ AMITABHA PALMER, PHD
 
 holds a PhD in Philosophy and is a HEC-C   certified Clinical Ethicist. He is an Instructor and Clinical Ethicist at the University of Texas MD Anderson Cancer Center. His primary areas of research include the ethics of AI, medical ethics, political philosophy, and the effects of medical misinformation on   clinical interactions.
 
+
+<!-- PAGE 28 -->
+
+
 <!-- image -->
 
 ## RESEARCH ARTICLE
@@ -1124,6 +1233,10 @@ Several  cognitive  and  social  psychology  studies  suggest  that judges are s
 
 <!-- image -->
 
+
+<!-- PAGE 29 -->
+
+
 ing from such use; and second, it will evaluate the possibility of using AI for helping to detect and counteract judges' implicit biases, recommending which extralegal factors should be considered when doing so. It is a theoretical and bibliographic research, drawing on direct and indirect sources for a comprehensive analysis of the theme. The article will proceed as follows: I will first provide an overview of how implicit biases affect judicial decision-making, consequently giving rise to arguments favoring the adoption of algorithms to promote more accurate and objective decisions. Subsequently, I will explore their current use in judicial settings, focusing on decision-support tools that are adopted to promote risk assessments. The implications of using automated procedures in the judicial process will be eval- such  as  criminal  history  and  past  pretrial  misconduct  (Arnold et al. 2020). In a virtual reality courtroom, minority defendants were treated more harshly by evaluators - including judges - during conviction (Bielen et al. 2021).
 
 The idea that judicial decision-making can be influenced by extralegal factors is problematic considering judges' duty of impartiality and the right to a fair trial. Article 6 of the European Convention on Human Rights (ECHR) establishes the right to a fair trial by an independent and impartial tribunal. Impartiality  requires  that  judicial  decisions  are  based  on  the  objective circumstances of the case, in accordance with the law, and free from external influences. Moreover, it excludes the existence of
@@ -1149,6 +1262,10 @@ One way to do so is through the implementation of debiasing techniques, which se
 
 2 ECHR, Kyprianou v. Cyprus, Judgment of 15 December 2005, Application No. 73797/01.
 
+
+<!-- PAGE 30 -->
+
+
 p. 3). However, and at least for the time being, not only do these systems also have several limitations that can further deepen the problem of bias in adjudication, but there is also a risk-magnifying potential associated with AI that is not present with human decision-making (Dietterich 2019). In the following session, I will examine how AI has been adopted in judicial systems, specifically as decision-aid tools for assessing risk, and the challenges posed by this use.
 
 ## AI in judicial systems
@@ -1162,6 +1279,10 @@ First, it is worth highlighting that the use of the tools mapped by CEPEJ by jud
 Second, not all the applications listed at the Resource Centre can technically be categorized as AI, as is the case for many of the risk assessment tools, mainly used for assessing the risk of recidivism. These make up for the majority of 'decision-support and decision-making' tools that have been listed by CEPEJ as being currently used in the public sector, namely by judges. Examples  include  OASys,  the  Offender  Assessment  System used by the prison and probation services in England and Wales (  Justice Data Lab 2016), RITA, the Finish Risk and Needs Assessment  Form  (Salo  et  al.  2019),  or  RISC,  the  Recidivism Assessment Scale adopted in the Netherlands (van Essen et al. n.d.). Risk assessments are perceived and often marketed as an objective  means  of  overcoming  human  bias  in  decision-making and have been adopted to assist with several decision points throughout the criminal justice system, from pretrial release to post-conviction sentencing, probation, and parole. These tools do not use new statistical methods commonly associated with AI, such as machine learning (ML), but are rather overwhelmingly  based  on  regression  models  (Barabas  et  al.  2018).  The main goal of regression is to identify a set  of  variables  (e.g., prior  arrest)  that  are  predictive  of  a  given  outcome  variable (e.g., risk of reoffending). This process can be automatized and improved using ML methods (Ghasemi et al. 2021), but still constitute  an  incremental  innovation  in  the  way  risk  assessments have historically worked, instead of being truly transformational.
 
 One example of a risk assessment tool that incorporates a machine learning approach is the Correctional Offender Management Profiling for Alternative Sanctions, or COMPAS, used
+
+
+<!-- PAGE 31 -->
+
 
 by  some  United  States'  courts  to  assess  the  likelihood  of  recidivism (van Dijck 2022). Ever since an exposé by the news outlet ProPublica revealed that the software was biased against blacks (Angwin et al. 2016), it has become the primary example of the risks posed by algorithmic crime prediction overall. The controversy surrounding its use revolves around what the models measure and intend to measure, the accuracy of the predictions, and whether they might increase inequality and discrimination or otherwise compromise fairness (Mayson 2019; Rudin et al. 2020). The question of (un)fairness is of particular concern, given that risk assessment tools can lead to discriminatory outcomes based on race or ethnicity (Jordan and Bowman 2022). Furthermore, since the software is proprietary, the data and algorithms are not transparent, neither for the suspect nor for the judge (van Dijck 2022), a problem that was addressed in the case of Loomis v. Wisconsin 3 (2016). In this case, while admitting the system's flaws, the Court claimed that it is up to judges to exercise discretion when assessing a risk score.
 
@@ -1178,6 +1299,10 @@ After examining how AI has been used for decision-support in judicial settings, 
 'If a judge can be predicted prior to observing the case facts, one might worry about the use of snap or pre-determined judgements, or judicial indifference. To put it differently, the preferences of judges over the legally relevant covariates may affect the influence of irrelevant features. A judge could be said to have weak preferences, meaning that there was a relatively low cost in departing from the legally   optimal outcome. In such cases of legal indifference, irrelevant factors can be expected to have greater influence. Behavioral bias reveals when decision-makers are indifferent' (Chen 2019 b, p. 16).
 
 The accuracy of predictions depends on the number of judicial attributes or characteristics of the case that are analyzed by the system. In a study conducted by Dunn et al. (2017) on asylum courts, using only data available at the case opening (i. e., information on the judge's identity and the nationality of the asylum seeker), researchers were able to predict case outcomes with an accuracy of 78 %. Through this notion of 'early predictability', ML could be used to automatically detect judicial indifference, alerting  to  situations  where  extralegal  factors  are  more  likely to influence a decision. This raises the question of which other sets of data could be incorporated into the legally irrelevant covariates to improve predictive accuracy, requiring an analysis of which are the main extralegal factors that influence judges when deciding. Based on an examination of the literature on social biases, initial contenders include race, gender, and ethnicity of the defendant and of the judge, the latter for the assessment of ingroup favoritism. And based on findings on cognitive biases, the number of (un)favorable previous decisions by the court, the comparison of caseloads between judges, and whether it is a spe-
+
+
+<!-- PAGE 32 -->
+
 
 cialized court (all being indicative of contrast effects) are variables likely to influence the way judges decide. Other factors besides biases include the time of day at which a decision is made (Shroff and Vamvourellis 2022; Danziger et al. 2011), and temperature (Chen and Loecher 2019; Heyes and Saberian 2019). These are of course only initial suggestions and do not fully encompass all the irrelevant covariates that can affect a decision. But the advantage of using machine learning techniques for this purpose is precisely that any sort of data can be used to feed the model, enabling patterns and trends to emerge without necessarily requiring a theoretical explanation for such.
 
@@ -1208,6 +1333,10 @@ Danziger, Shai; Levav, Jonathan; Avnaim-Pesso, Liora (2011): Extraneous factors 
 Dunn, Matt; Sagun, Levent; Şirin, Hale; Chen, Daniel (2017 a): Early predictability of asylum court decisions. In: ICAIL '17. Proceedings of the 16th edition of the International Conference on Artificial Intelligence and Law. New York, NY: Association for Computing Machinery, pp. 233-236. https:// doi.org/10.1145/3086512.3086537
 
 European Commission (2021): Proposal for a regulation of the European Parliament and the Council laying down harmonised rules on artificial
+
+
+<!-- PAGE 33 -->
+
 
 intelligence (Artificial Intelligence Act) and amending certain union legislative acts.   Brussels: European Commission. Available online at https://eur-lex. europa.eu/legal-content/EN/TXT/?uri=celex:52021PC0206, last accessed on 22. 01. 2024.
 
@@ -1271,6 +1400,10 @@ Zenker, Frank (2021): De-biasing legal factfinders. In: Christian Dahlman, Alex 
 
 is a doctoral candidate in 'Law, Science and Technology' at the University of Bologna and KU Leuven and an affiliated research fellow at the Centre for IT &amp; IP Law (CiTiP).
 
+
+<!-- PAGE 34 -->
+
+
 <!-- image -->
 
 ## RESEARCH ARTICLE
@@ -1321,6 +1454,10 @@ https://doi.org/10.14512/tatup.33.1.34
 
 <!-- image -->
 
+
+<!-- PAGE 35 -->
+
+
 Against this background, in this paper, we bring together epistemological, technological, and social science arguments in order to contribute to an informed assessment of the technology.
 
 After giving a more in-depth description of ADDS, its purpose  and  theoretical  basis,  we  focus  on  two  interlinked  questions:
@@ -1350,6 +1487,10 @@ Deception consists of or involves mental states, especially intentions, while mi
 
 Ekman became famous for his cross-cultural studies of emotional expression. In the 1960s, for instance, he asked indigenous people in New Guinea, at that time largely isolated from the Western world, to assign terms like 'sad' to pictures of Europeans  expressing  different  emotions.  Experiments  with  various  cultures  as  well  as  later  studies  (Elfenbein  and  Ambady
 
+
+<!-- PAGE 36 -->
+
+
 2002) resulted in relatively high accuracy rates, leading to the assumption of universal emotional expression. Regarding universal microexpressions, Ekman analyzed video recordings of proven liars frame by frame, finding that subjects with deceptive intentions could not consciously control all facial muscle movements while experiencing a particular emotion (Ekman 1985, p. 133).
 
 Ekman's theory indicates, therefore, that some unconscious and uncontrollable facial expressions can provide evidence of deception.  However,  this  idea  is  controversial;  in  the  coming chapter,  we  will  explore  criticisms  of  microexpression  analysis and ADDS.
@@ -1378,6 +1519,10 @@ The concern is that in the case of ST this condition is not met: Its accuracy ra
 
 2 The studies and texts describing ST do not address such risks (Rothwell et al. 2006, O'Shea et al. 2018, iBorderCtrl 2018) but focus on advantages (e.g. compared to conventional polygraphs) and limitations from a technological perspective.
 
+
+<!-- PAGE 37 -->
+
+
 ings suggest that while human performance is below these values for untrained subjects, ST's performance does not exceed human  experts.  According  to  a  meta-analysis,  subjects  without  special  training  perform  only  slightly  better  than  chance (54 %) when attempting to distinguish deceptive from truthful statements (Bond and DePaulo 2006). However, the mean accuracy of trained parole officers has been found to be 76.7 % (Porter et al. 2000) and thus beyond the highest values found for ST.
 
 A second empirical problem is that ST was trained and tested on a surprisingly small number of subjects under controlled experimental conditions. Rothwell et al. worked with 39 subjects and O'Shea et al. with 30, with most of them being male Europeans. Since the aim of this system is to control non-EU citizens, Rothwell et al. openly admit this could lead to data bias (Rothwell 2006, p. 768): Underrepresenting certain groups - such as people of color or women - in AI training datasets can lead to unreliable assessments regarding individuals belonging to these groups and therefore to discriminatory outcomes (Brandner and Hirsbrunner 2023; Selbst 2017). The results of the real-life tests in Hungary, Latvia, and Greece have not been publicly disclosed, and it is thus so far unclear whether they show biases.
@@ -1399,6 +1544,10 @@ Public  trust  is  fundamental  for  the  societal  acceptance  of AI-based syst
 While ADDS is meant to control non-EU nationals and therefore poses no immediate personal risk to EU citizens, based on the qualitative studies just mentioned it seems plausible to assume that many would fundamentally oppose the use of deception detection in a high-risk setting such as border control. Particularly  persons with a general 'anti-surveillance' viewpoint (Ezzeddine  et  al.  2023,  p. 869)  emphasize  the  importance  of personal freedom over security and oppose all police AI that might flag individuals as suspicious, regardless of who the system is used on. Those generally critical and distrustful of AI policing might perceive the use of ADDS at European borders as threatening to human agency rather than as a trustworthy security measure. Given the already uneven trust in the police within the EU, deploying ADDS might further erode this shaky ground, leading to increased dissonance between nations and political unrest.
 
 The perceived transparency of systems impacts trust, with higher transparency entailing more trust (Aysolmaz et al. 2023). As has been shown in TA studies, trust-building communication cannot only consist of conveying technical aspects such as reliability  (Weydner-Volkmann 2021). Meaningful transparency should also include justifying the logic, reasoning, and legality of (semi-)automated decisions (Malgieri 2020). In the case of ADDS, this would inevitably include disclosing and explaining the  technology's  contentious  theoretical  basis  and  potentially
+
+
+<!-- PAGE 38 -->
+
 
 underwhelming  accuracy;  given  the  described  criticisms  that question both if and how the system works, a sufficient justification of its use to the public would thus be challenging.
 
@@ -1427,6 +1576,10 @@ Competing interests · The authors declare no competing interests.
 ## References
 
 Ammicht Quinn, Regina (2015): Trust generating security generating trust. An ethical perspective on a secularized dicourse. In: Behemoth. A Journal on Civilisation 8 (1), pp. 109-125. https:/ /doi.org/10.6094/behemoth.2015.8.1.855 Andalibi, Nazanin; Buss, Justin (2020): The human in emotion recognition on social media. Attitudes, outcomes, risks. In: Regina Bernhaupt et al. (eds.): Proceedings of the 2020 CHI Conference on Human Factors in   Computing Systems (CHI '20). New York, NY: Association for Computing Machinery, pp. 1-16. https://doi.org/10.1145/3313831.3376680
+
+
+<!-- PAGE 39 -->
+
 
 - Araujo, Theo; Helberger, Natali; Kruikemeier, Sanne; de Vreese, Claes (2020): In AI we trust? Perceptions about automated decision-making by   artificial intelligence. In: AI &amp; Society 35 (3), pp. 611-623. https:/ /doi.org/10.1007/ s00146-019-00931-w
 - Aysolmaz, Banu; Müller, Rudolf; Meacham, Darian (2023): The public   perceptions of algorithmic decision-making systems. Results from a large-scale   survey. In: Telematics and Informatics 79, p. 101 954. https://doi.org/10.1016/j.tele. 2023.101954
@@ -1458,6 +1611,10 @@ Ammicht Quinn, Regina (2015): Trust generating security generating trust. An eth
 - Podoletz, Lena (2023): We have to talk about emotional AI and crime. In: AI &amp; Society 38 (3), pp. 1067-1082. https://doi.org/10.1007/s00146-022-01435-w
 - Porter, Stephen; Woodworth, Mike; Birt, Angela (2000): Truth, lies, and videotape. An investigation of the ability of federal parole officers to detect deception. In: Law and Human Behavior 24 (6), pp. 643-658. https://doi.org/ 10.1023/a:1005500219657
 - Reinhardt, Karoline (2023): Trust and trustworthiness in AI ethics. In: AI Ethics 3 (3), pp. 735-744. https:/ /doi.org/10.1007/s43681-022-00200-5
+
+
+<!-- PAGE 40 -->
+
 
 Rhue, Lauren (2018): Racial influence on automated perceptions of emotions. In: SSRN Journal. https://dx.doi.org/10.2139/ssrn.3281765
 
@@ -1494,6 +1651,10 @@ is substitute professor at Bergische University Wuppertal and research associate
 is a research associate at the International Center for Ethics in Sciences and Humanities (IZEW) at the University of Tübingen. She received her PhD in   Sociology from La Sapienza University in Rome. Her research focuses on AI and data ethics, digital capitalism, and spatial issues.
 
 <!-- image -->
+
+
+<!-- PAGE 41 -->
+
 
 <!-- image -->
 
@@ -1558,6 +1719,10 @@ SPECIAL TOPIC · AI fOr dECISIOn SuPPOrT
 
 <!-- image -->
 
+
+<!-- PAGE 42 -->
+
+
 heit bis hin zu diagnostischen Systemen wird KI in vielfältigen Formen angewandt (Becker 2019). Dabei rücken nicht nur die Verarbeitung größerer Datensätze, sondern auch die Diskussion um sensible Entscheidungsprozesse als mögliche Anwendungsfälle in den Fokus (Heil et al. 2021). Auch ,weiche' KI-Systeme, wie dialogbasierte Assistenzsysteme, die keine expliziten Entscheidungen treffen, üben durch die Selektion und Darstellung von Informationen (Gupta et al. 2022), insbesondere durch deren Wortwahl (Mahmood und Huang 2022), einen impliziten Einfluss  auf  das  Entscheidungsverhalten  der  mit  ihnen  interagierenden Personen aus.
 
 Um eine sichere und ethisch vertretbare Anwendung eines KI-Systems im medizinischen Bereich zu ermöglichen, besteht die Forderung, die Funktionsweise der KI transparent und nachvollziehbar zu gestalten (Markus et al. 2021; Samhammer et al. 2023). Ein vielversprechender Ansatz ist die Entwicklung von Explainable Artifical  Intelligence  (XAI)  Systemen.  Erklärbarkeit wird in Anlehnung an Miller (2019, S. 5) als 'an active characteristic of a model, denoting any action or procedure taken by a model with the intent of clarifying or detailing its internal functions'  definiert.  Um  das  Ziel  der  Nachvollziehbarkeit  zu erreichen, müssen Inhalt und Form der Erklärung an den Adressat*innen orientiert sein (Barredo Arrieta et al. 2020). Eine sprachvermittelte  Interaktion  zwischen  Nutzenden  und  dem KI-System bietet das Potenzial zur Bildung von Vertrauen mittels XAI (Hillmann et al. 2021). Auch wenn natürlichsprachliche Erklärungen im Rahmen von XAI noch nicht im Stand der Technik angekommen sind, zeigen erste Forschungsergebnisse ihre Machbarkeit in Form von Dialogen (Feldhus et al. 2023).
@@ -1575,6 +1740,10 @@ Abb. 1: Übersicht über die Konstruktion der Szenarien.
 <!-- image -->
 
 Quelle: eigene Darstellung
+
+
+<!-- PAGE 43 -->
+
 
 Für diese Studie entwickelten wir zwei Baseline-Szenarien mit je drei Fallvignetten. Die Vignetten variieren im Einfluss auf  die  Entscheidung,  die  ein  KI-System  mittels  des  Interaktionsdesigns sowie des Umfangs der verarbeiteten Daten nimmt (siehe Abb. 1).
 
@@ -1599,6 +1768,10 @@ und die Verkörperung des KI-Systems besonders relevant werden. Die prozessuale 
 ## Interaktionale Ebene
 
 Der erste Faktor  auf  interaktionaler  Ebene,  der  von  den  Teilnehmenden als Einflussfaktor auf die Erklärbarkeit von KI-Systemen referenziert  wurde,  ist  das  Behandlungsgespräch  (BG). Hier  wird  die  Institution  der  professionellen  ärztlichen  Rolle wirkmächtig, die mit einem Vertrauensvorschuss, der Entscheidungshoheit  und  der  Haftbarkeit  für  Behandlungsfehler  verknüpft ist. Obwohl ein KI-Einsatz im BG nicht Teil der Fallvignetten des ersten Szenarios war, reflektierte die Mehrheit der Interviewten in ihren Einschätzungen darüber. Innerhalb eines BG ist eine Interaktion mit einer ,pro-aktiven' KI tendenziell nicht  erwünscht  -  hier  sollte  die  'KI  nicht  interferieren'  (3). Während die passive Nutzung von KI als reines Werkzeug, das auf Zuruf arbeitet, in Einzelfällen akzeptiert wird, stellt das Erklären von Sachverhalten für die meisten Behandler*innen eine Grenze dar, die die ärztliche Integrität untergräbt: 'Das ist wie wenn ein Kollege ungefragt bei mir reinquatscht' (3). Die von der KI abgegebene Erklärung oder gar das Aufdecken von 'Fehlern'  (13)  empfinden  die  Interviewten  als  unpassende  Zweitmeinung, die die Fachkompetenz infrage stellt und das Vertrauensverhältnis gefährdet (10). Zudem dürfen Diagnosen nicht in einem BG verhandelt werden, 'um den Patienten nicht zu verunsichern' (14). Als vertrauensbildend wurde die Möglichkeit der Bezugnahme auf KI genannt - nämlich als 'Zusatz, dass die KI das auch gesagt hat' (15). Die KI kann als Statussymbol für eine hohe technische Ausstattung (2) eine vertrauensfördernd positive Wirkung haben.
+
+
+<!-- PAGE 44 -->
+
 
 Die  befragten  Behandler*innen  stellten  allerdings  die  notwendige  Kompetenz infrage, da KI 'nicht empathisch genug' sei und daher 'nicht mitreden' solle (3). Dies betrifft insbesondere das Erklären persönlicher Einzelfalldiagnosen, die bei schwerwiegenden Fällen emotionaler Arbeit bedürfen (15, 12). Eine Ausnahme davon  stellt  das  Vermitteln  von  'Lehrbuchwissen' (9) dar: Die direkte Interaktion zwischen KI und Patient*in könnte Entlastung schaffen und ein zusätzliches Informationsangebot sein (3).
 
@@ -1638,6 +1811,10 @@ Der dritte und letzte Faktor ist die Verkörperung einer KI im Hinblick auf Erkl
 
 Als ersten Bewertungsfaktor auf prozessualer Ebene im Hinblick auf die Erklärbarkeit von KI-Systemen identifizierten wir den Aufbau von Vertrauen. Erklärbarkeit stellt eine Bedingung für eine 'Vertrauensbasis' dar, 'die aufgebaut werden [muss]' (9), wie folgendes Zitat verdeutlicht: 'Feedback hätte ich schon gerne, warum das System auf die Diagnose kommt, ansonsten würde ich dem System nicht vertrauen' (6, auch 9, 14). Dabei ist es wichtig, 'aus dem Schwarz-Weiß [raus zu gehen] - es muss eine Graustufe haben und auf die reagieren können' (9). Eine differenzierte Einschätzung mit Angabe des Grades der Unsicherheit
 
+
+<!-- PAGE 45 -->
+
+
 rege zu einem eigenen Kontrollprozess an: 'Gleichzeitig kritisiert es sich noch selber, was es glaubwürdiger macht, […] das heißt, es sagt dem Betrachter selber, ich bin nicht 100 % genau, das heißt, du musst selber noch mal gucken - das ist super' (10). Als weitere 'vertrauensbildende Maßnahme' nannte eine Ärztin, 'dass man am Anfang, vielleicht im ersten halben Jahr, viel kontrolliert - so wie wenn ich mit einem Assistenzarzt arbeite' (6). Später reiche es, nur noch bei schweren Diagnosen zu kontrollieren. Der Aufbau von Vertrauen kann also den Bedarf an Erklärbarkeit zum Teil ersetzen, dennoch muss die Möglichkeit der Nachvollziehbarkeit immer gegeben bleiben. Eine besondere Stellung nimmt der Zugriff und der Bezug in den Erklärungen auf die Rohdaten (8, 11, 14) ein. Erklärbarkeit und Vertrauen in die Reliabilität dieser Erklärungen sind diejenigen Aspekte, die aus dem ,Werkzeug KI' eine 'Zweitmeinung' (13) werden lassen und eine 'Kommunikation auf Augenhöhe' (6) ermöglichen: 'Man hat die Möglichkeit nachzufragen und bekommt Infos. Das wäre, als ob sich zwei Ärzte unterhalten' (13).
 
 Vertrauen  kann  durch  fachspezifische  Standards,  etwa  im Sinne von 'Datenbankstandards' (10), sowie der Absicherung durch medizinische Fachgesellschaften oder Verbände mittels Zertifikaten externalisiert werden, 'ähnlich wie bei einem neuen Medikament' (5). Von besonderem Interesse für die Befragten war, wer in welchem Umfang welche Daten für das Training der KI berücksichtigt hat (5, 6, 9, 10, 16) und welche Verantwortlichkeit daraus resultiert (9). Sollten sich bestimmte KI-Systeme als 'Goldstandard' (11) durchsetzen, würde dies den Bedarf an Erklärbarkeit des allgemeinen Funktionierens reduzieren.
@@ -1659,6 +1836,10 @@ Unter den Aspekt der Situativität fällt die Frage, wann und wie eine  Erkläru
 ## Funktionalität
 
 Der Aspekt der Funktionalität umfasst die Bandbreite von Fähigkeiten und Aufgaben, die einer KI zugewiesen werden können, welche Erwartungen im medizinischen Alltag an sie gerichtet sind und inwiefern Erklärbarkeit hier interferiert. Während
+
+
+<!-- PAGE 46 -->
+
 
 einerseits  akkurate  Erklärungen  die  Genauigkeit  und  Reflexionsleistung steigern können, besteht zugleich Skepsis hinsichtlich der Frage, wie diese zusätzlichen Informationen konkret in bestehende Arbeitsabläufe integriert werden können (Stichwort Zweitmeinung und Kompetenzerweiterung) und welche Konsequenzen sich daraus mittelfristig ergeben (Stichwort Patient*innenkontakt und Deskilling).  Entgegen  der  von  den  Befragten geäußerten Vision KI als Zweitmeinung zu nutzen, finden sich in der Literatur empirische Hinweise, die eine bloße Assistenzfunktion von KI plausibler erscheinen lassen. KI zeigt sich hier als  'unreliable  in  predictable  ways'  (Bossen  und  Pine  2023, S. 16), die eine stetige Kontrolle nötig macht. Erklärbarkeit kann helfen, diese Lücke zu schließen, birgt aber ebenso das Risiko, zu Fehlern zu führen, die ein Mensch nicht machen würde. Eine einheitliche soziale Rolle für eine KI findet sich in unseren Ergebnissen noch nicht. Vielmehr oszilliert diese zwischen einer assistierenden Funktion und einem Agenten mit gleich- oder höherwertiger Kompetenz. Konkrete Rollenerwartungen an ein je spezifisches KI-System dürften sich erst durch wiederholt bewährte Interaktionen verfestigen.
 
@@ -1687,6 +1868,10 @@ Barredo-Arrieta, Alejandro et al. (2020): Explainable artificial intelligence (
 - Hillmann, Stefan; Möller, Sebastian; Michael, Thilo (2021): Towards speech-based interactive post hoc explanations in explainable AI. In: Astrid   Carolus, Carolin Wienrich und Ingo Siegert (Hg.): Proceedings of the 1 st AI-  Debate Workshop. Magdeburg: Universität Magdeburg, pp. 13-15. http://dx.doi.org/ 10.25673/38473
 - Hughes, Rhidian; Huby, Meg (2004): The construction and interpretation of vignettes in social research. In: Social Work and Social Sciences Review 11 (1), S. 36-51. https://doi.org/10.1921/swssr.v11i1.428
 - Jenkins, Nicholas; Bloor, Michael; Fischer, Jan; Berney, Lee; Neale, Joanne (2010): Putting it in context. The use of vignettes in qualitative interviewing. In: Qualitative Research 10 (2), S. 175-198. https://doi.org/10.1177/1468794109356737
+
+
+<!-- PAGE 47 -->
+
 
 Kinar, Yaron et al. (2017): Performance analysis of a machine learning flagging system used to identify a group of individuals at a high risk for   colorectal cancer. In: PLoS One 12 (2), S. e0171759. https://doi.org/10.1371/journal.pone. 0171759
 
@@ -1742,6 +1927,10 @@ PROF. DR. JAN-NIKLAS VOIGT-ANTONS
 
 ist seit 2021 Professor für Angewandte   Informatik mit dem Schwerpunkt immersive Medien an der Hochschule Hamm-Lippstadt. Er leitet das Immersive Reality Lab, welches sich auf die Erforschung von immersiven Anwendungen sowie auf Schnittstellen zwischen Menschen und Technik fokussiert.
 
+
+<!-- PAGE 48 -->
+
+
 <!-- image -->
 
 ## RESEARCH ARTICLE
@@ -1792,6 +1981,10 @@ Malignant melanoma is a skin tumour that accounts for 80 % of deaths from skin c
 
 <!-- image -->
 
+
+<!-- PAGE 49 -->
+
+
 tion, and dermatoscopy (examination of a skin lesion by using an epiluminescence microscope). In cases where there is suspicion, the mole is surgically removed and sent for histopathological testing to a specialist laboratory to determine malignancy. This standardized procedure with clear diagnostic outcomes in suspicious cases is an ideal dataset for training and utilizing machine learning tools (so-called artificial intelligence, AI). AI in our understanding is a computational approach that uses knowledge gained from training cases to identify patterns and make predictions from input data. Specialized AI for dermatological image recognition  has  surpassed  the  performance  in  identifying skin cancer compared to human dermatologists (Esteva et al. 2017; Pham et al. 2021). In their review of 272 studies Jones et al. (2022) found solid performance of AI systems (89 % accuracy; 95 % Confidence Intervals: 60 %-100 %), which suggests that patients and clinicians can expect AI to be an asset for diagnosing melanoma. However, none of the studies included acceptance measures on the part of clinicians or patients demonstrating a limitation in the current approach towards technology assessment of AI in diagnostics. The controlled experimental findings should additionally be validated in medical practice to arrive at a realistic assessment of performance and practical fit. This is particularly relevant for a stringent technology assessment that evaluates AI in diagnostics in practical settings. While technology assessment studies for AI diagnostics exist (Schreier et al. 2020; Schwendicke et al. 2021), their underlying frameworks oftentimes neglect categories specific for AI technologies such as cybersecurity and explainability (Farah et al. 2023).
 
 With this conceptual contribution we aim to shed light on four dimensions of AI employment in melanoma diagnosis, i. e., possible futures, social impacts, regulatory options, and ethical conundrums and agency constellations to inform technology assessment researchers about further areas for assessing AI systems in (melanoma) diagnostics along relative axes of analyses. We aim to provide insights for the following questions, framing our discussions within the German healthcare and regulatory system:
@@ -1821,6 +2014,10 @@ In this scenario, dermatologists upload pictures of suspicious moles to an AI da
 
 In  this  scenario,  the  AI  system  extends  the  process  of  prioritizing  patients  in  a  dermatology  clinic.  When  patients  arrive for skin examinations, images of their moles are captured and fed into the AI system. The algorithm compares the images to a  database  of  annotated  melanoma  cases  and  provides  a  risk
 
+
+<!-- PAGE 50 -->
+
+
 assessment score for each mole. Based on this score, the system  prioritizes  patients,  flagging  those  with  higher  risks  for immediate attention by dermatologists. The specialist doctors can  then  disregard  those  moles  deemed  benign  by  the  AI  focusing on the prioritized cases. This generates efficiency gains needed in a strained system: Already today, waiting times for outpatient dermatological appointments last 4.9 weeks with urban-rural variations (Krensel et al. 2015). Until 2035, the number  of  German  regions  underserved  or  without  any  dermatological specialists are expected to increase by 129 % and 700 %, respectively, in a forecast with moderate demographic changes (Kis et al. 2017).
 
 ## Scenario 3: Patient self-monitoring
@@ -1846,6 +2043,10 @@ The three possible futures answer in varying constellations current debates in h
 Three conditions seem to be necessary for successful implementation. First, all scenarios assume acceptance for AI tools primarily used as tools expanding the diagnostic repertoire of medical professionals. Within this history, AI serves as a continuation of established procedures integrating technology into diagnostics.
 
 However, the distinction between AI systems and other technologies lies in the attribution of expertise. Traditional imaging techniques do not offer diagnoses directly, but provide data to be interpreted by a human expert . AI instead offers its own diagnosis usually accompanied by a reliability or confidence score. Yet, human actors - medical professionals and IT experts alike are usually unable to retrace the AI analyses, as the weights of the different nodes or the dataset used for training the model are mostly unavailable. This necessitates trust in the outcome and the accuracy of the reliability score. As in Ellul's self-perpetuating,  efficiency-driven  technological  society,  dermatologists will 'be confined to the role of a recording device; [they] will note the effects of techniques upon one another, and register the results' (Ellul 1964, p. 93). As in scenario 1, this trajectory does not displace human actors from the process of diag-
+
+
+<!-- PAGE 51 -->
+
 
 nosis, but it shifts the competencies needed - '[h]uman beings are, indeed, always necessary. But literally anyone can do the job, provided he is trained to it. Henceforth, men will be able to act only in virtue of their commonest and lowest nature, and not in virtue of what they possess of superiority and individuality' (Ellul 1964, pp. 92-93).
 
@@ -1877,6 +2078,10 @@ As a social impact, competencies potentially shift in several directions. The co
 
 In current regulatory practice, the two principles of harmlessness and effectiveness are used to assess the impact of novel interventions, e.g., in form of devices or medication. Regulations on medical devices (e.g., the EU Regulation 2017/745, or the German Medizinproduktegesetz ) generally require producers to demonstrate the harmlessness of their products for patients or in case of expected harm (e.g., in radiation therapy) a risk miti-
 
+
+<!-- PAGE 52 -->
+
+
 gation and reduction strategy. In contrast, licensing for medication follows the framework of effectiveness in a series of medical studies determining a safe clinical dose (phase I), assessing side effects and efficacy (phase II), and ultimately demonstrating effectiveness (phase III) (Müllner 2005). Substances not demonstrating effectiveness can still be marketed, but under different legal frameworks as cosmetics or foods, not as medications.
 
 With diverse pathways to choose, it is not surprising that AI companies pursue different legal strategies. Some AI tools for dermatological diagnosis already underwent the medical devices path of demonstrating harmlessness (e.g., A.S.S.I.S.T. (OnlineDoctor 2022)). Others are marketing their products as providing simple non-medical services 'not intended to perform diagnosis, but rather to provide users the ability to image, track, and better understand their moles' (AI Dermatologist 2023). These are  strategies  rather  common  in  emerging  markets.  However, regulators  should  be  aware  of  potential  impacts  applying  the principles of harmlessness vs. effectiveness. When assessing AI performance, established parameters such as sensitivity, specificity, and precision should be complemented by a critical appraisal of biases and risks of the respective learning cycles and databases (Wehkamp et al. 2023). In this crucial moment regulators  should  align  themselves  with  these  developments  and shape the legal landscape concerning safe and effective AI technology.
@@ -1904,6 +2109,10 @@ Fig. 1: Contingency table with human dermatologist and AI system as actors diag
 | Diagnosis     | Melanoma                                         | Harmless mole                               |
 | Melanoma      | Concordance melanoma                             | Dissent Initially: melanoma Later: melanoma |
 | Harmless mole | Dissent Initially: melanoma Later: harmless mole | Concordance harmless mole                   |
+
+
+<!-- PAGE 53 -->
+
 
 competence is depreciated, they are 'confined to the role of a recording  device'  (Ellul  1964,  p. 93),  however,  whilst  assuming responsibility, liability, and accountability for the decision. Ethical  conundrums  arise  challenging  the  agency  of  the  dermatologists who do not fully understand the AI 'decision-making' process. Explainability and critical reflection of AI tools are necessary for the dermatologists to experience self-efficacy and interpret the results adequately (Bjerring and Busch 2021). This is particularly the case, as many profit-oriented companies might sense a chance in this emerging market by conveying the appearance of a functioning and accurate system.
 
@@ -1948,6 +2157,10 @@ Ellul, Jacques (1964): The technological society. New York, NY: Knopf. Esteva, A
 - OECD - Organization for Economic Co-operation and Development (2023): Doctors' consultations (indicator). https://doi.org/10.1787/173dcf26-en OnlineDoctor (2022): OnlineDoctor übernimmt KI-Startup A.S.S.I.S.T. Available online at https://www.onlinedoctor.de/pressemitteilung/onlinedoctoruebernahme-ki-startup/, last accessed on 03. 01. 2024.
 - Petty, Amy et al. (2020): Meta-analysis of number needed to treat for diagnosis of melanoma by clinical setting. In: Journal of the American
 
+
+<!-- PAGE 54 -->
+
+
 Academy of Dermatology 82 (5), pp. 1158-1165. https://doi.org/10.1016/j.jaad. 2019.12.063
 
 Pham, Tri-Cong; Luong, Chi-Mai; Hoang, Van-Dung; Doucet, Antoine (2021): AI   outperformed every dermatologist in dermoscopic melanoma diagnosis, using an optimized deep-CNN architecture with custom mini-batch logic and loss function. In: Scientific Reports 11 (1), p. 17 485. https://doi.org/10. 1038/s41598-021-96707-8
@@ -1989,6 +2202,10 @@ DR. KONSTANTIN DREXLER
 has been working as a physician at the Clinic and Polyclinic for Dermatology at the University   Hospital Regensburg since 2016. His professional and scientific focus is on the diagnosis and treatment of   various skin tumors.
 
 <!-- image -->
+
+
+<!-- PAGE 55 -->
+
 
 <!-- image -->
 
@@ -2042,6 +2259,10 @@ Kommunale Klimabürger:innenräte haben sich in den letzten Jahren als deliberat
 
 <!-- image -->
 
+
+<!-- PAGE 56 -->
+
+
 das Berliner nexus Institut, an dessen Leitung Autor H.-L. Dienel beteiligt ist. Im Rahmen von zehn Sitzungen, zwei davon zum Thema Mobilität, wurden mit zufällig ausgewählten Bürger:innen 47 Empfehlungen an die Politik ausgearbeitet und formuliert, von denen der Senat 42 im Klimaschutzprogramm aufgriff. Die Mobilitätsempfehlungen thematisieren sowohl die Stärkung des Umweltverbunds als auch die Abschwächung des Autoverkehrs. Konkrete Maßnahmenvorschläge umfassen niedrige ÖPNV-Ticketpreise, Radinfrastrukturausbau, Verknüpfung verschiedener Verkehrsformen und Preiserhöhung für das Parken von Autos (SenUVK 2023). Simulationsbasierte Ansätze zeigen allerdings, dass die gewählten Maßnahmen für eine vollständige Dekarbonisierung des Verkehrssystems nicht ausreichend sind.
 
 rat: Pro Verkehrssegment gab es zunächst fachlichen Input, dann diskutierten die Bürgergutachter:innen in Gruppen, gefolgt von einer Schnellumfrage, die dann im Plenum diskutiert wurde. Daraus wurden im Nachgang zusammenfassende Aussagen generiert, welche den Bürgergutachter:innen zur Entscheidung vorgelegt wurden.
@@ -2065,6 +2286,10 @@ Ansatz des Bürger:innenrats integriert. Aus der Integration beider Ansätze erg
 ## Projektvorhaben und Ziel
 
 Partizipative  Methoden werden unter anderem eingesetzt, um Ideen zu sammeln und die Wahrnehmung der Bürger:innen zu analysieren. Partizipative Methoden umfassen eine Reihe von Aktivitäten mit einem gemeinsamen Nenner: Sie ermöglichen es den Menschen, aktiv und einflussreich an Entscheidungen mitzuwirken, die ihr Leben betreffen. Innerhalb des Projekts ,Bürgerschaftliche Resonanz auf nachhaltige Mobilitäts- und Infrastrukturszenarien für Berlin' haben wir, basierend auf unseren Simulationen, Transformationsszenarien mit konkreten Maßnahmen für eine Dekarbonisierung der zuvor genannten vier Verkehrssegmente erstellt. Hierfür wurden unter anderem browserbasierte, interaktive Dashboards entwickelt und verwendet (siehe Abb. 2). Die unterschiedlichen Maßnahmen wurden in Workshops mit Bürger:innen  aus  Berlin  und  Brandenburg,  die  als  Bürgergutachter:innen agieren, kontrovers und alternativ diskutiert und darüber abgestimmt. Auf diese Weise werden nicht nur Informationen zu Akzeptanz und Widerstand bestimmter Maßnahmen eingeholt, sondern die Szenarien erhalten auch ein partizipatives
+
+
+<!-- PAGE 57 -->
+
 
 und demokratisches Gewicht, was ihre Durchsetzungschancen erhöht. Mit dem Projekt wurde das Vorhaben eines bürgerschaftlichen Sounding Boards (oder auch einer bürgerschaftlichen Resonanz) für wissenschaftliche Erkenntnisse und politische Diskussionen erprobt. Zudem ist dies eine wertvolle Ergänzung der wissenschaftlichen Arbeiten rund um die Verkehrssimulationen, um eine gesellschaftliche Resonanz zu erhalten.
 
@@ -2096,6 +2321,10 @@ Bock und Reimann (2021) diskutieren die Zufallsauswahl bei Beteiligungsverfahren
 
 Die politische Legitimationskraft partizipativer Technikfolgeabschätzung hängt von der verbindlichen Einbindung in den politischen Prozess ab (Grunwald 2000). Im vorliegenden Projekt geht es allerdings erst in einem zweiten Schritt um die Einbindung in den politischen Prozess und zunächst um die bürgerschaftliche Rückmeldung an die Wissenschaft und die von Bürger:innen erarbeiteten Szenarien und damit um Antworten
 
+
+<!-- PAGE 58 -->
+
+
 auf die Frage, welche Maßnahmenpakete unter  welchen  Voraussetzungen  breite Unterstützung erfahren könnten.
 
 Im  gewählten  Format  geht  der  Beschlussfassung  wissenschaft  licher    Input und Diskussion zwischen den sehr unterschiedlichen Teilnehmenden voraus. Wir gehen davon aus, dass dies  zu  einer  Erweiterung der Perspektiven von Beteiligten und zu einer Berücksichtigung anderer Interessen als der eigenen führt. Im Sinne der Suche nach Maßnahmenpaketen mit breiter Unterstützung werden im Folgenden nur Voten mit mehr als 70 % Unterstützung  thematisiert.  Somit  hat  unsere Studie zwei primäre Ziele:
@@ -2125,6 +2354,10 @@ Informationseingang: Zunächst haben Wissenschaftler:innen im Plenum Maßnahmen 
 Diskussion in Kleingruppen: Bevor Teilnehmende um eine Bewertung  der  Maßnahmen  gebeten  wurden,  fand  eine  Diskussionsrunde statt. Hierfür wurden die Teilnehmenden in fünf Kleingruppen mit unterschiedlichen demographischen Profilen nach Alter, Geschlecht und Einkommen aufgeteilt, um sicherzustellen, dass in den Gruppendiskussionen ein Austausch verschiedener  Perspektiven  unterschiedlicher  Lebenslagen  stattfindet. Für die Segmente Güterverkehr und privater Personenverkehr  wurden  die  von  Wissenschaftler:innen  präsentierten Maßnahmen und deren abgeschätzte Auswirkungen in Form von interaktiven Dashboards unterstützend illustriert (siehe Abb. 2). Das Dashboard wurde in den Diskussionen zur Verfügung gestellt. Es wurde hier ähnlich dem Konzept des Decision Theatre vorgegangen (Wolf et al. 2023). Die Diskussionen wurden von Moderator:innen geleitet. Hierbei wurde insbesondere die finanzielle Machbarkeit, die individuelle und gesellschaftliche Akzeptanz und die Vor- und Nachteile fokussiert.
 
 Bewertung  der  vorgestellten  Maßnahmen :  Nach  der  Diskussion haben die Teilnehmenden über die zuvor diskutierten Maßnahmen abgestimmt. Die Umfrage enthielt Single-ChoiceFragen  mit  fünf-stufigen  Likert-Skalen  und  offene  Fragen  zu beispielsweise  Vor-  und  Nachteilen  der  Maßnahmen  und  ein Kommentarfeld für weitere Anregungen.
+
+
+<!-- PAGE 59 -->
+
 
 Abschlussergebnis und finale Abstimmung: Nach den Workshops  wurden  die  Daten  und  Meinungen  der  Teilnehmenden ausgewertet  und  in  21  Hauptaussagen  zusammengefasst.  Den Teilnehmenden wurden die Hauptaussagen im Nachgang zugeschickt und sie haben final über die Aussagen in Form von Zustimmung oder Ablehnung abgestimmt.
 
@@ -2163,6 +2396,10 @@ Tab. 1: Klassifizierung der Unterstützung von Maßnahmen(-paketen).
 
 Quelle: eigene Darstellung
 
+
+<!-- PAGE 60 -->
+
+
 ## Umfrage während der Workshops
 
 Die Resultate der Umfragen während der Workshops lassen sich wie folgt zusammenfassen; für Details siehe Research data:
@@ -2199,6 +2436,10 @@ Bei der Auswertung der Abstimmung über die Hauptaussagen  stellte  sich  heraus
 - Breite Unterstützung für Pull-Maßnahmen: starker Ausbau des Öffentlichen Personennahverkehrs (ÖPNV) (100 % Zustimmung), starker Ausbau der Radwege (75 %), starker Ausbau von stadtweiten Car-Sharing-Angeboten (knapp 80 %), Erweiterung des ÖPNV durch Rufbusse in den Außenbezirken (85 %), alternative Konzepte wie Lastenfahrräder oder Regionalität (knapp 80 %).
 - Breite Unterstützung für klare Ansagen und langfristige Planbarkeit: Klar definierte Maßnahmenpakete und deren Kommunikation (knapp 90 %), Sondervermögen Klimaschutz (gut
 
+
+<!-- PAGE 61 -->
+
+
 - 80 %); Institutionen des Landes Berlin sollen  verpflichtet  werden,  nicht-fossile Fahrzeuge zu erproben und nach Probephasen keine fossilen Fahrzeuge mehr  anzuschaffen  (gut  80 %).  Hingegen gibt es eine deutliche Mehrheit (gut  70  %) gegen eine  sofortige  deutliche Erhöhung der Benzinpreise.
 - Verursacherprinzip  wird  breit  unterstützt, aber in Bezug auf konkrete Maßnahmen kein eindeutiges Bild: Mehr als  80  %  sprechen  sich  für  eine  Anwendung des Verursacherprinzips aus. Die Zustimmung sinkt auf ca. 50 % ab, wenn es konkret um Maut oder deutlich höhere Preise für Anwohnerparkauswei  se geht (siehe Abb. 3).
 
@@ -2231,6 +2472,10 @@ Competing interests · The authors declare no competing interests.
 ## Research data
 
 Kreuschner, Moritz; Nagel, Kai; Schlenther, Tilmann; Bonatz, Nora; Mostofi, Hamid; Dienel, Hans-Liudger (2023): Ergänzendes Material Dekarbonisierung des Verkehrssektors in Berlin - Bürger:innengutachten zu wissenschaftlich   erstellten Szenarien. Berlin: Technische Universität Berlin. https://doi.org/10.14279/ depositonce-19472
+
+
+<!-- PAGE 62 -->
+
 
 ## Literatur
 
@@ -2292,6 +2537,10 @@ PROF. DR. KAI NAGEL
 
 ist Leiter des Fachgebietes ,Verkehrssystemplanung und Verkehrstelematik' an der Technischen Universität Berlin und befasst sich mit der Modellierung und Simulation von Verkehr mit einem Fokus auf Dekarbonisierung des Verkehrssystems.
 
+
+<!-- PAGE 63 -->
+
+
 ## RESEARCH. PUBLISH. TRANSFORM.
 
 Your publication at oekom science
@@ -2320,6 +2569,10 @@ English German www.oekom-science.de
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 64 -->
+
 
 <!-- image -->
 
@@ -2357,6 +2610,10 @@ In  der  Tat  meinte  ich  die  gravierenden, sogar existenziellen Risiken einer
 
 <!-- image -->
 
+
+<!-- PAGE 65 -->
+
+
 wie Sascha Lobo solche Leute als ,nützliche  Idioten'  bezeichnet,  ist  das  schon ziemlich arrogant und vermessen, finde ich. Mir wäre es am liebsten, wir würden im  öffentlichen  Diskurs  nicht  über  die möglichen Motive dieser Leute spekulieren,  sondern  uns  mit  den  konkreten  Argumenten und Fakten auseinandersetzen, die für oder gegen ein existenzielles Risiko durch unkontrollierbare KI sprechen.
 
 ## Was verstehst Du genau unter einer unkontrollierbaren KI?
@@ -2381,6 +2638,10 @@ Du  hast  zuvor  von  unkontrollierbarer KI als existenziellem Risiko gesprochen
 
 Die  Begründung  dafür,  dass  unkontrollierbare  KI  ein  reales  Problem  ist,  liegt nicht in der Technik, sondern ergibt sich aus theoretischen Überlegungen, die auch in der Ökonomie in der so genannten  Prinzipal-Agent-Theorie  und  in  der Entscheidungstheorie  zum  Tragen  kommen. Es ist prinzipiell äußerst schwierig, einem Agenten, also zum Beispiel einem Dienstleister,  einen  Auftrag  so  zu  stel-
 
+
+<!-- PAGE 66 -->
+
+
 len, dass sichergestellt ist, dass dieser genau das tut, was man möchte. Jeder, der schon mal ein Haus gebaut hat, weiß das. Einerseits  ist  das  ein  Kommunikationsproblem - wie sage ich dem anderen, was ich genau will? Andererseits ein Problem des Interessenkonflikts - der Dienstleister  will  vielleicht  möglichst  wenig  Leistung  für  das  zugesagte  Geld  erbringen, um seinen eigenen Profit zu maximieren. Dann  gibt  es  noch  das  Messproblem  - nicht abgeschaltet zu werden. Wenn wir das Ziel der KI ändern, kann sie ihr ursprüngliches  Ziel  ebenfalls  nicht  mehr erreichen, also ist es ein instrumentelles Teilziel  dieses  Ziels,  nicht  geändert  zu werden. Auch Macht und Einfluss zu erhöhen sind instrumentelle Ziele. Und die stehen unserem Wunsch entgegen, die KI kontrollieren, ihr Ziel ändern und sie notfalls abschalten zu können. Heutige KIs wie GPT-4 oder Gemini sind noch keine
 
 ## Der ,optimale Weltzustand', den die KI auf Basis ihres Ziels anstrebt, ist höchstwahrscheinlich nicht mit unseren Wünschen und oft auch nicht mit unserem Überleben vereinbar.
@@ -2400,6 +2661,10 @@ Vielleicht  führt  der  Begriff  allgemeine KI hier auch in die Irre. Ist allge
 In der Tat ist es ein Problem, dass wir den Menschen als Maßstab nehmen, um die Leistungsfähigkeit  einer  KI  und  damit auch  ihre  potenzielle  Gefährlichkeit  zu beurteilen. KI funktioniert völlig anders als unsere eigene Intelligenz. So, wie ein Flugzeug  nicht  mit  den  Flügeln  schlägt und  keine  Federn  hat,  ,denkt'  KI  nicht wie wir.
 
 Schon jetzt sind KIs Menschen in vieler Hinsicht überlegen, nicht nur in Spielen  wie  Schach  oder  Go,  sondern  auch zum  Beispiel  in  der  schieren  Menge des Wissens, das sie verarbeiten können und in der Geschwindigkeit. Wer spricht schon wie GPT-4 dutzende Sprachen fließend und kann ein Essay in 30 Sekunden schreiben? Die agentische Planungsfähigkeit, die ich beschrieben habe, verbunden mit einer übermenschlichen Fähigkeit zur Manipulation  von  Menschen  oder  technischen  Systemen  könnten  Eigenschaften einer potenziell unkontrollierbaren KI sein.  Die  KI  könnte  dann  vielleicht  immer noch vieles nicht,  was  ein  Mensch kann, zum Beispiel ein Spiegelei braten. Aber wenn die KI geschickt genug wäre, könnte  sie  uns  Menschen  dazu  bringen, zu tun, was ihrem Ziel nützt, so wie ein menschlicher  Diktator  die  Massen  manipulieren und ihnen seinen Willen aufzwingen  kann.  Es  sind  auch  Szenarien denkbar, bei denen die KI sich selbst im Internet  verbreitet  und  technische  Systeme manipuliert, oder ein militärisches System  könnte  außer  Kontrolle  geraten und einen Weltkrieg verursachen (Future of  Life  Institute  2023).  Das  größte  Problem dabei ist, dass wir bereits heutige
+
+
+<!-- PAGE 67 -->
+
 
 KI kaum verstehen und deswegen extrem schwer  vorhersagen  können,  wann  und wie  zukünftige,  noch  leistungsfähigere Systeme außer Kontrolle geraten könnten.
 
@@ -2424,6 +2689,10 @@ Bostrom, Nick (2014); Superintelligence. Paths, dangers, strategies. Oxford: Oxf
 Center for AI Safety (2023): Statement on AI risk. Available online at https://www.safe.ai/ statement-on-ai-risk, last accessed on 09. 01. 2024.
 
 Future of Life Institute (2023): Artificial escalation. (Video) Available online at https://www.youtube. com/watch?v=w9npWiTOHX0, last accessed on 09. 01. 2024.
+
+
+<!-- PAGE 68 -->
+
 
 <!-- image -->
 
@@ -2475,6 +2744,10 @@ https://doi.org/10.14512/tatup.33.1.68
 
 <!-- image -->
 
+
+<!-- PAGE 69 -->
+
+
 debates from political philosophy for the reflection on AI, but also presents a considerable variety of theoretical approaches in a well-informed and accessible way. These include the systems of thinkers such as Hegel, Marx, Arendt or Foucault, varieties of liberalism, libertarianism, critical theory, radical or agonistic theories of democracy, as well as identity-based approaches and post-colonialism.
 
 Of course, some aspects are open to criticism. Chapter 4 focuses intensively on social media. However, it is not easy to identify the degree to which AI or rather other features of current social media, like the for-profit orientation, are responsible for the formation of filter bubbles and echo chambers. More attention ingly consist of complex socio-technical systems. Correspondingly, there is a recent trend to call for political philosophy or normative inquiries in collective action - as Maarten Franssen framed it at the Forum for Philosophy, Engineering, and Technology 2023 in Delft (Mitcham forthcoming) - in philosophy of technology and engineering as well as in technology ethics (Himmelreich 2019).
@@ -2512,6 +2785,10 @@ Mitcham, Carl (in press): Brief for the political philosophy of engineering and 
 NIST - National Institute of Standards and Technology (2019): NIST study evaluates effects of race, age, sex on face recognition software. Gaithersburg, MD: NIST. Available online at https://www.nist.gov/news-events/news/2019/ 12/nist-study-evaluates-effects-race-age-sex-face-recognition-software, last   accessed on 23. 01. 2024.
 
 Winner, Langdon (1980): Do artifacts have politics? In: Daedalus 109 (1), pp. 121-136.
+
+
+<!-- PAGE 70 -->
+
 
 <!-- image -->
 
@@ -2567,6 +2844,10 @@ https://doi.org/10.14512/tatup.33.1.70
 
 <!-- image -->
 
+
+<!-- PAGE 71 -->
+
+
 provement; adapting governance approaches in responds to local contexts. While those insights are sound and provide an overarching framework for how NbS should aim for, they remain broad and high level, catering primarily to the science policy community. However, they may not offer sufficient guidance for practitioners seeking more actionable approaches.
 
 ## Society, technology, and the environment
@@ -2596,6 +2877,10 @@ Kyttä, Marketta; Fagerholm, Nora; Hausner, Vera; Broberg Anna (2023): Maptionna
 Son, Jaewon; Saha, Somidh (2022): Digitalization of urban trees in   Karlsruhe, Germany. Poster presented at the 5 th  European Technology   Assessment 25.-27. 07. 2022, Karlsruhe, Germany. https://doi.org/10.13140/RG.2.2.30271. 79520
 
 USDA - U.S. Department of Agriculture et al. (2023): i-Tree software. Available online at https://www.itreetools.org/tools, last accessed on 23. 02. 2024.
+
+
+<!-- PAGE 72 -->
+
 
 <!-- image -->
 
@@ -2641,6 +2926,10 @@ https://doi.org/10.14512/tatup.33.1.72
 
 <!-- image -->
 
+
+<!-- PAGE 73 -->
+
+
 Third, conference papers showed how the representation of subaltern groups in Indian society and their practices of selfhood vary through the acceptance of technologies. For example, their role changes significantly through access to the digital allowing them to explore secularism as well as Islam, Hinduism, or Christian faith. Media become a means of creating new options and changes the self-understanding.
 
 Fourth, conference papers emphasized that there is a mutually dependent and strong interrelation between religion, nature, and humans. There is an interreligious understanding of nature as creation and of a human-nature relation to be respected and itself,  (2)  to  construct  narratives  of  human  becoming through the  coexistence  with  (invisible)  machinery  processes,  and  (3) to open up new ways of creating meaning. This can be helped by the use of audio-video recording and broadcasting, platform technology for climate mitigation, or other emergent technologies still to be designed. In this way, the era of rapid digital transformation and climate change is grounded in transcendent ideas that switch between secular and religious spheres. We need to be sensitive to the intrinsic and unavoidable effect that this era of transformation and change is exercising on worldviews as well as to the influences of faith and religions in TA.
@@ -2670,6 +2959,10 @@ Thomas, Renny (2022): Science and religion in India: Beyond disenchantment. Lond
 ## Further information
 
 Conference program:  https://hss.iitm.ac.in/conferencesworkshops/#ratirdacc2023
+
+
+<!-- PAGE 74 -->
+
 
 <!-- image -->
 
@@ -2713,6 +3006,10 @@ Generative KI kann sich sehr grundlegend auf unsere Gesellschaft auswirken und w
 
 <!-- image -->
 
+
+<!-- PAGE 75 -->
+
+
 tat Politècnica de Catalunya, wie diese Systeme zur Unterstützung der parlamentarischen Alltagsarbeit eingesetzt werden können, etwa bei der Recherche in Dokumentendatenbanken und bei der Zusammenfassung längerer Texte. Auch Marta R. CostaJussà, KI-Forscherin bei Meta AI, verwies auf die Potenziale generativer KI, mit der die Übersetzung gesprochener Sprachen, gerade auch von weniger stark verbreiteten Sprachen, erleichtert wird.
 
 Doch solchen Potenzialen stehen die enormen Herausforderungen der Demokratie durch generative KI entgegen. Mehrere Vortragende betonten die Verantwortung der Entwickler*innen von KI-Systemen, deren Ausbildung durch ethische Leitlinien und einen stärkeren Austausch mit gesellschaftlichen Gruppierungen verbessert werden könnte. Die Auswahl der Datenquellen  müsse  bewusster  und  nachvollziehbar  erfolgen  und  etwa Nutzungsrechte berücksichtigen,  auch  wenn  dies  zulasten  der Geschwindigkeit der technischen Entwicklung gehe. Jerome Duberry, Managing Director des Albert Hirschman Centre on Democracy, empfahl eine Beobachtung durch staatliche Einrichtungen, wie sie in der EU bereits im Rahmen von 'AI Watch' durch  das  Joint  Research  Centre  der  Europäischen  Kommission erfolgt. Nur so ließe sich die Anwendung von KI in vielen Fällen sichtbar und damit einer öffentlichen Kritik zugänglich machen.
@@ -2738,6 +3035,10 @@ https://eptanetwork.org/news/epta-news/24-publication/ 136-epta-report-2023.
 Aufzeichnung der Konferenz:
 
 https://www.parlament.cat/ext/f.p=700:3:::::P3\_ID\_ CATEGORIA:17491.
+
+
+<!-- PAGE 76 -->
+
 
 <!-- image -->
 
@@ -2779,6 +3080,10 @@ Britta Oertel (IZT Berlin) verdeutlichte in ihrem Vortrag die teils  parallele, 
 
 <!-- image -->
 
+
+<!-- PAGE 77 -->
+
+
 sucht,  eine  frühzeitige  Teilhabe  zu  realisieren,  sei  dies  in  der td- Forschung die Organisation von Co-Design. Auch analytisch sei  man hier nah beieinander, was beispielsweise die Anwendung gleicher Methoden zeige. Britta Röseners Vortrag (RWTH Aachen) ergänzte mit Blick auf Beteiligungsprojekte aus dem Klimaschutz die Wichtigkeit von Kontextbedingungen und der Abfrage von Zielen, Akteuren und lokalen Rahmenbedingungen, wie man sie aus der Stadtentwicklungsplanung bereits kenne. Sowohl in diesen Beteiligungsprozessen der Stadtentwicklung als auch in der Phase der transdisziplinären Co-Produktion seien die wissenschaftlichen Akteure vor allem in der fachlichen Integration gefordert, die auch einer besonderen Qualifikation bedürfen. Daniel Lang, Claire Grauer und Farina Tolksdorf (KIT/ ITAS, Karlsruhe) schlugen in ihrem Vortrag vor, für den Blick auf  individuelle  Kompetenzen und Kapazitäten auch den Begriff des ,Kontextes' heranzuziehen und zu berücksichtigen, um mehr Klarheit über die jeweiligen Anforderungen und Rollen der Akteure zu gewinnen. Ein gutes Verständnis der Kontextfaktoren  helfe  bei  der  erfolgreichen  gemeinsamen  Gestaltung von Prozessen.
 
 ## Reflexion, Anpassung und Wirkungen
@@ -2800,6 +3105,10 @@ Auf  der  PartWiss23-Konferenz  konnten  einige  Unterschiede zwischen Partizipa
 https://partizipation-wissenschaft.de/index.php/konferenz2023-tu-chemnitz/
 
 Graphic recording: Stephanie Brittnacher
+
+
+<!-- PAGE 78 -->
+
 
 ## TA  TuPDates 33/1 (2024)
 
@@ -2855,6 +3164,10 @@ This  Special  topic  will  address  questions,  such  as:  What  are  the reper
 
 Special topic editors are Georg Plattner, Octavia Madeira, Christian Büscher, Alexandros Gazos, Tim Röller (all Institute for Technology Assessment  and  Systems  Analysis  (ITAS),  Karlsruhe  Institute  of  Technology (KIT).
 
+
+<!-- PAGE 79 -->
+
+
 AIA
 
 <!-- image -->
@@ -2900,6 +3213,10 @@ SOCIETAL CHANGE: MAKING ALTERNATIVE PLACES TRANSDISZIPLINARITÄT UND SOLUTIONISM
 18.03.22   14:35
 
 <!-- image -->
+
+
+<!-- PAGE 80 -->
+
 
 ist die weltweit einzige interdisziplinäre Zeitschrift für Technikfolgenabschätzung. Wir fördern Debatten über technologische Innovation, Politik, Gesellschaft und Nachhaltigkeit. In TATuP finden Sie…
 

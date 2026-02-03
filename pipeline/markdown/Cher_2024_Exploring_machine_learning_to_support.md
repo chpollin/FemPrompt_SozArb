@@ -1,10 +1,11 @@
 ---
 source_file: Cher_2024_Exploring_machine_learning_to_support.pdf
-conversion_date: 2026-02-03T08:45:06.326347
+conversion_date: 2026-02-03T18:23:16.172616
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 1234567890();,:
 
 1234567890();,:
@@ -48,6 +49,10 @@ The U.S. child welfare system is founded on the ' least restrictive setting ' pr
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 intensive treatments and services from professional staff, as well as education and other ancillary supports (American Academy of Pediatrics &amp; Chapin Hall at the University of Chicago, 2023).
 
 ## Policy Context for Levels of Care in Child Welfare
@@ -66,6 +71,10 @@ Applications of decision support algorithms in child welfare have continued to e
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 in proof-of-concept predictive model applications to predict youth running away from care (Chor et al., 2022) or entering residential care (Chor et al., 2023). Yet, administrative burdens to care for in-care youth are substantial because understaffed and underfunded caseworkers have large caseloads but limited time to make objective and quality decisions (Pecora et al., 2018). High turnover rates also stymy transfer of experience and knowledge within the volatile child welfare workforce (Kim &amp; Kao, 2014).
 
 Decision support tools and algorithms in child welfare have evolved from consensus-based assessments, decision rule-based checklists, to more recently predictive models using regression and machine learning (Russell, 2015; Saxena et al., 2020). Machine learning (ML) consists of a family of methods that ' learn ' from complex data over time and detect underlying or unobserved patterns associated with an outcome or prediction of interest (Ghani &amp; Schierholz, 2020). MLlearns from experience (e.g., historical child welfare data) regarding a task (e.g., predicting child maltreatment) and performance measure (e.g., prediction accuracy), and task performance improvement with experience. Although the speci /uniFB01 c methods might range from regression to random forest to deep learning, most ML applications allow the freedom to learn complex, non-linear data patterns. When a child welfare outcome such as service use or placement disruption exhibits complex relationships with many predictors operating in a non-linear fashion (Janczewski &amp; Nitkowski, 2023; Negriff et al., 2022), ML predictive models that have been validated to predict behaviors of unseen observations often have greater predictive utility than explanatory models that focus on explaining the underlying cause of a behavior to generate theories (Yarkoni &amp; Westfall, 2017).
@@ -81,6 +90,10 @@ Under these child welfare policy, research, and practice contexts, this study ta
 Second, we addressed the research gaps in developing, comparing, and re /uniFB01 ning ML models as applied in the child welfare context for youth in foster care. Empirical studies in this area often focus on the child protective service investigation stage (Cuccaro-Alamin et al., 2017; Schwartz et al., 2017) or identifying the ' best ' performing model (e.g., most accurate) while overlooking more nuanced model comparisons regarding fairness, equity, and their tradeoffs (Chouldechova et al., 2018; Hall et al., 2023). Child welfare agencies that contemplate using ML for quality improvement need guidance on ' how ' to conduct this work. For these reasons, we situated our case study within a conceptual framework for integrating ML to support child welfare decisions (Chor, Rodolfa, et al., 2022).
 
 Third, we compared ML models with an unregularized, multivariate regression model, which represents a proxy for a priori predictive models based on empirical literature on placement disruption or placement in residential care. Empirical studies often rely on regression-based predictions from a small pre-de /uniFB01 ned set of predictors -demographic characteristics (e.g., age, gender), child welfare history (e.g., out-of-home placement type, prior abuse/neglect type, number of prior child welfare spells and placements), and clinical/functioning characteristics (e.g., internalizing needs) -that are associated with youth ' s risk of running away from care, placement in residential care, or placement disruption (Chor et al., 2023; Chor et al., 2022; Courtney &amp; Zinn, 2009; Epstein et al., 2015). Our study compared
+
+
+<!-- PAGE 4 -->
+
 
 bottom-up, ' atheoretical ' ML approaches using a comprehensive set of available predictors with a top-down, theorydriven regression model that was more commonly found in the literature to expand the decision support options for child welfare agencies to consider. We used ML to predict whether youth in care will receive a placement stabilization and preservation program ( ' the program ' ) in the next 6 months. The models re /uniFB02 ected how caseworkers identi /uniFB01 ed youth ' s need for the program based on caseworkers ' assessment of placement disruption or need for residential care, but through the prediction provided an early detection of these needs so that caseworkers could intervene more proactively and effectively.
 
@@ -107,6 +120,10 @@ Although the program has been operational for over 10 years, consistent data col
 We chose our prediction outcome as a binary classi /uniFB01 cation of program receipt in the next 6 months for the 12,621 spells for youth in the sample between January 20, 2017, and January 2, 2020. We de /uniFB01 ned the prediction period for the outcome (i.e., program receipt) as within 6 months of the time of prediction (Table 1). Thus, each model in each temporal cohort predicted whether program receipt occurred in the next 6 months (from prediction time) and whether this prediction was accurate using the prediction accuracy metric of precision (also known as positive predictive value), as de /uniFB01 ned below in the ' Model
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 Table 1 Temporal cohorts for training set and testing set
 
@@ -138,6 +155,10 @@ presence of one or more type of developmental disability; binary indicators on t
 
 3. Clinical characteristics: Youth ' s Child and Adolescent Needs and Strengths (CANS) assessment is administered periodically per child welfare agency policies and procedures to all youth to inform service and treatment planning. The CANS uses a scale from ' 0 ' to ' 3 ' for each item. All CANS users must be certi /uniFB01 ed with respect to standards set by the CANS-using child welfare agency and are trained to integrate youth and caregiver voices in this collaborative assessment of needs and strengths (Lyons, 2009). Ratings of ' 0 ' or ' 1 ' indicate no evidence of need or intervention necessary. ' Actionable ' needs and strengths are items that are rated as a ' 2 ' or ' 3 ' and require direct action
 
+
+<!-- PAGE 6 -->
+
+
 to address those needs and strengths in treatment. In this study, we focused on /uniFB01 ve CANS domains -School Achievement (one item), Traumatic Stress Symptoms ( /uniFB01 ve items), Emotional/Behavioral needs (13 items), Risk Behaviors (10 items), and Social Functional Behavior (three items) -as indicators of youth ' s needs. Item scores in each CANS domain were averaged based on prior use of the CANS in other predictive modeling studies (Chor et al., 2023; Chor et al., 2022) on the same state child welfare agency as this study ' s. Averaged CANS domain scores also facilitated interpretation across domains using the same rating scale of the CANS (i.e., ' 0 ' , ' 1 ' , ' 2 ' , ' 3 ' ). For each CANS domain for each youth, we examined the prior (within 3 years, 1 year, 3 months, or 30 days) number of CANS administered, average prior average CANS domain scores, smallest prior average CANS domain scores, and largest prior average CANS domain scores. We also examined a binary indicator of whether youth had a most recent CANS, how long ago (days) the most recent CANS was, and the average most recent CANS domain scores. Although state child welfare agency policies and procedures require periodic administration of the CANS to all youth in care (e.g., in administrative case reviews), in practice the CANS is not always administered or administered in a timely fashion for many reasons (e.g., heavy caseloads). Thus, in addition to average most recent CANS scores, by domain, a missing CANS binary indicator was also included to denote missing prior CANS (within 3 years, 1 year, 3 months, or 30 days) and missed opportunities to detect youth ' s needs.
 
 The above predictors were further divided into a small set (60 predictors resembling conventional model building) and the full set (all 154 predictors). Each level in a predictor category (e.g., race = Black) constituted one predictor. This small set vs. full set contrast allowed the models to explore whether the relative gains of using more predictors would come at the cost of diminishing return or over /uniFB01 tting the models (Yarkoni &amp; Westfall, 2017).
@@ -155,6 +176,10 @@ Within each training set, we sampled predictors and outcomes monthly to provide 
 We used a rolling, temporal validation process to train and test the predictive models. Each predictive model was trained using monthly prediction dates for each temporal cohort in Table 1. For example, in the training set of temporal Cohort #1, each model used eligible spells observed on 1/2/17, 2/2/17, 3/2/17, and 4/2/17 to learn its model parameters (e.g., coef /uniFB01 cients in a regression model). Each trained model was then tested once per temporal cohort on a validation set to evaluate its ability to be generalized to unseen future data. For example, in the testing set of
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 Table 2 Predictive Model Grid
 
@@ -188,6 +213,10 @@ We developed an unregularized logistic regression model (Table 2) to represent a
 
 We operationalized model performance based on the ef /uniFB01 -ciency of program referrals, which depended on
 
+
+<!-- PAGE 8 -->
+
+
 caseworkers ' caseload sizes and program capacity. Ideally, every non-residential care youth at any moment at risk of placement disruption should be identi /uniFB01 ed and could be referred to the program. However, caseworkers might have large caseloads (e.g., &gt;20 cases) and the program might only have a limited capacity (e.g., 100 youth). This means ef /uniFB01 ciency of the program can be optimized by proactively identifying youth who need this program in advance.
 
 To focus our model selection on the speci /uniFB01 cation that performed best under these capacity constraints, we used precision (also known as positive predictive value) among the 100 highest-need youth (i.e., precision at top 100) to evaluate the global prediction accuracy of each model for each of the eight testing sets -that is, among youth not in residential care predicted to receive the program in the next 6 months, precision among the top 100 highest-need youth measures the percent of youth who actually received the program in the next 6 months. This metric re /uniFB02 ected how ef /uniFB01 ciently resources (e.g., caseworker time, preventive services) used to assist those 100 youth would be allocated relative to their needs for the program. The top 100 threshold was commensurate with the average caseload and bandwidth of the program to prioritize youth ' s needs in a 6-month period. Because we were most interested in identifying model speci /uniFB01 cation whose performance was robust over time, we examined precision at each time point in the testing set from eight predictions made at 3-month intervals between 10/2/17 and 7/2/19 (Table 1).
@@ -207,6 +236,10 @@ Focusing on the program capacity for 100 youth, we examined TPR when the top 100
 The model grid search in Table 2 and the a priori focus on consistent precision in the eight temporal periods identi /uniFB01 ed candidate models for each model type. Table 3 summarizes key model results focusing on three model types: (1) ML random forest; (2) ML regularized regression; and (3) Unregularized regression, by small vs. full predictor set used to build the models. Decision tree and dummy classi /uniFB01 er models provided baseline or business-as-usual
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -242,6 +275,10 @@ c
 
 d Inverse regularization c-parameter: 2; Regularization penalty: L1 (Lasso)
 
+
+<!-- PAGE 10 -->
+
+
 comparisons for the three model types and are referenced as appropriate.
 
 ## Model Accuracy: Precision of Predicted Top 100 Highest-Need Youth
@@ -270,6 +307,10 @@ Appendix 4 shows model fairness (TPR) and equity (TPR disparity) across youth ' 
 
 <!-- image -->
 
+
+<!-- PAGE 11 -->
+
+
 TPR disparity above or below 1.00 indicates inequality. All candidate models except for regularized regression and unregularized regression using the small predictor set had higher TPRs for White youth than for Black youth (TPR disparity range: 1.48 -2.12). Random forest using the small predictor set, regularized regression using the small predictor set, and unregularized regression using the full predictor set indicated lower TPRs for male youth than for female youth (TPR disparity range: 0.45 -0.82), while the other models indicated relatively equal TPRs.
 
 Regarding youth ' s most serious allegation prior to each placement within a child welfare agency spell, all models were generally less sensitive to detecting youth with different types of allegations compared to sexual abuse (TPR disparity range: 0.00 -0.74), though random forest using the small or full predictor set was more sensitive to detecting emotional abuse (TPR disparity: 1.33). Regarding prior child welfare involvement, all models except for unregularized regression using the full predictor set were more sensitive to detecting youth with prior entry to the child welfare system than those with no prior history (TPR disparity range: 1.05 -2.74). All models except for unregularized regression were more sensitive to detecting youth at the time of prediction who were not in a placement (i.e., interruption) than youth placed in home-based settings (TPR disparity range: 1.99 -6.58); but were less sensitive to detecting youth who were placed with a sibling than those without a sibling or in different placements than their siblings (TPR disparity range: 0.13 -0.44).
@@ -290,6 +331,10 @@ Speci /uniFB01 cally, we answered the question, ' Can we identify and support yo
 
 Results highlighted the superior performance of random forest in prediction accuracy and accuracy stability over time relative to the other model types, whose performance was subpar or degraded over time. The random forest model ' s prediction accuracy further bene /uniFB01 ted from using the full set rather than a small set of predictors, which suggested an outcome such as child welfare program need likely has complex relationships with its predictors operating at multiple levels and therefore is better predicted using non-parametric ML models such as random forest (Janczewski &amp; Nitkowski, 2023; Negriff et al., 2022). On the other hand, as a counterpoint to ML models, traditional unregularized regression consistently underperformed in prediction accuracy and stability and could not converge when using the full set of predictors likely due to multicollinearity. The contrasting /uniFB01 ndings between ML models and unregularized regression in this study show that when conceptualized, designed, and evaluated with care -using
 
+
+<!-- PAGE 12 -->
+
+
 multiple temporal cross-validation sets, different indices of prediction accuracy, and many literature-informed predictors (Negriff et al., 2022; Yarkoni &amp; Westfall, 2017) -ML models can augment prediction in ways that traditional statistical methods cannot achieve due to constraints such as statistical assumptions.
 
 Our use case focused on the top 100 youth identi /uniFB01 ed by each model monthly as having the highest need for the program. We also compared models based on the overlap in these identi /uniFB01 ed youth across models over time, even when model accuracy was comparable. The most accurate model -random forest using the full predictor set -tended to identify similar youth as those identi /uniFB01 ed by random forest using the small predictor set or regularized regression using the full predictor set. In contrast, regularized regression and unregularized regression tended to identify the same youth. By identifying the target, need-based populations, these model comparisons operationalized the potential impact of the models for practitioners and policymakers to consider. Whereas existing studies often only prioritize prediction accuracy or predict for the sake of prediction (Yarkoni &amp; Westfall, 2017), this study offers alternative, meaningful ways to evaluate and compare predictive models that may have been overlooked in child welfare research but is critical for supporting human decision-makers in making better decisions that can lead to better outcomes.
@@ -304,6 +349,10 @@ This study has direct implications on casework practice. In addition to explorin
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 missing the CANS, which was consistently at 7 -8% (Appendix 5). However, the state child welfare system in question struggles with caseworker shortage as evidenced by nearly a 25% vacancy and high caseloads as evidenced by consistently falling short of capping the average caseload of no more than 12 -15 new cases per month as required by a consent decree (State of Illinois Of /uniFB01 ce of the Auditor General, 2022). These systemic challenges trickle down to individual caseworkers who have more information they can process and more case management decisions they must make for more youth assigned to their caseloads. Considering placement disruption is a hallmark predictor of prolonging youth ' s length of stay in the child welfare system and delaying their exit to permanency (Stott &amp; Gustavsson, 2010), equipping caseworkers with tools and empirical information about youth with a high need for placement stabilization has potential to improve both the ef /uniFB01 ciency and quality of casework decision-making. For example, within a 6-month window (i.e., the study ' s prediction timeframe), caseworkers could prioritize youth with a high ' need ' score and preempt placement disruption by proactively coordinating community-based services and treatments that address individual youth ' s need factors, whether that be age-speci /uniFB01 c services or evidence-based treatments that target speci /uniFB01 c emotional/behavioral needs. This practice shift from the way the program is currently deployed, at times ' too late ' or reactive when youth might have already experienced precipitating placement disruption, could alleviate the time, personnel, and resource constraints placed on caseworkers. This type of ML predictive model-supported preventive service planning for youth who are in foster care is understudied but sorely needed (Chor et al., 2023; Chor et al., 2022) when its potential is often overshadowed by the /uniFB01 eld ' s focus on the perils of predictive model-assisted punitive decision-making such as screening in a maltreatment report for a child protective service investigation (Chouldechova et al., 2018) or removing a child from their home (Centre for Social Data Analytics, 2019). It also presents opportunities for caseworkers to conduct mid-course corrections to the systemic disparities inherited from decisions made upstream (i.e., to screen in an investigation or to remove a child) by allocating services and resources to overrepresented but underserved youth in the child welfare system.
 
 ## Policy Implications
@@ -315,6 +364,10 @@ As state child welfare agencies implement the Family First Prevention Services A
 resources to high-need youth, streamlining needs-based placement in family-based settings, and adaptive case assignment to caseworkers not only in terms of quantity but also complexity of the cases. The state child welfare agency in this study offers speci /uniFB01 c placement stabilization services. Eligibility, referral, and allocation for these services can be anchored to the predictive models ' identi /uniFB01 -cation of high-need youth. Similarly, specialized or therapeutic foster home capacity (supply) can be calibrated with the volume of these high-need youth (demand) who are likely to experience placement disruption and step-up to residential care (Chor et al., 2023). Based on the cost-bene /uniFB01 t of therapeutic foster care compared to residential care in this state (Chor &amp; Oltmans, 2023), our predictive models can facilitate identi /uniFB01 cation of appropriate candidates for therapeutic foster care. Finally, to address systemic challenges in recruitment and retention of the child welfare workforce, it is possible to use predictive models such as those in this study to inform case assignment. Rather than capping caseloads by the absolute number of cases, it might be more meaningful to ensure equitable distribution of case needs (derived from the models) across caseworkers. In doing so, some caseworkers might have more cases on their caseloads made up of lower-need cases while others might have fewer cases on their caseloads made up of higher-need cases. In both scenarios, the cases assigned are need-adjusted or weighted despite the unequal number of cases assigned. This kind of systemic workforce change, however, is best tested in a pilot or a feasibility study /uniFB01 rst before taking it to scale statewide.
 
 Ongoing monitoring and evaluation of predictive models as well as the downstream actions taken using it is necessary to inform their long-term implementation in the child welfare system. Although a selected model might meet a state child welfare agency ' s standards for accuracy, fairness, equity, and interpretability for deployment, it must be evaluated for its usage by caseworkers and impact on youth ' s outcomes. How, when, and why caseworkers use the model (e.g., innovation adoption, human-computer interactions) must be studied to examine the value-add of the model to the existing case work /uniFB02 ow. How, if, and for whom the model impact outcomes relevant to the model use (e.g., placement stability, time until permanency) must also be evaluated to understand how the target population (e.g., youth at risk of placement disruption) might bene /uniFB01 t from the model. The Centre for Social Data Analytics (2019) demonstrates how a predictive model can be rigorously evaluated for its use by child protection workers and supervisors, and its impact on key outcomes such as substantiation of an investigation and repeat maltreatment report. This evaluation framework can be applied to other types of predictive models and use cases such as ours.
+
+
+<!-- PAGE 14 -->
+
 
 ## Limitations
 
@@ -349,6 +402,10 @@ Ackermann, K., Walsh, J., Unánue, A. D., Naveed, H., Rivera, A. N., Lee, S.-J.,
 Ahn, E., Gil, Y., &amp; Putnam-Hornstein, E. (2021). Predicting youth at high risk of aging out of foster care using machine learning
 
 <!-- image -->
+
+
+<!-- PAGE 15 -->
+
 
 - methods. Child Abuse &amp; Neglect , 117 , 105059. https://doi.org/10. 1016/j.chiabu.2021.105059.
 - Allegheny County Department of Human Services. (2017). Developing predictive risk models to support child maltreatment hotline screening decisions . Allegheny County Department of Human Services.
@@ -391,6 +448,10 @@ Chor, K. H. B., Rodolfa, K. T., &amp; Ghani, R. (2022). A conceptual framework f
 - Jenkins, B. Q. (2021). Measuring the equity of risk assessment instruments used in child protection. Children and Youth Services Review , 131 , 106266. https://doi.org/10.1016/j.childyouth.2021. 106266.
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 - Keddell, E. (2019). Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice. Social Sciences , 8 (10), 281. https://doi.org/10.3390/socsci8100281.
 - Kiani, S., Barton, J., Sushinsky, J., Heimbach, L., &amp; Luo, B. (2023). Counterfactual prediction under selective confounding. Frontiers in Arti /uniFB01 cial Intelligence and Applications , 372 , 1256 -1263. https://doi.org/10.3233/FAIA230403.

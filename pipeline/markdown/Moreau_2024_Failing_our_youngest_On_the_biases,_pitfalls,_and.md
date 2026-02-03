@@ -1,10 +1,11 @@
 ---
 source_file: Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and.pdf
-conversion_date: 2026-02-03T09:10:38.641121
+conversion_date: 2026-02-03T18:42:07.758618
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -77,6 +78,10 @@ June 3 - 6, 2024 Rio de Janeiro, Brazil
 
 .
 
+
+<!-- PAGE 2 -->
+
+
 ## Failing Our Youngest: On the Biases, Pitfalls, and Risks in a Decision Support Algorithm Used for Child Protection
 
 Therese Moreau Hansen Networks, Data, and Society (NERDS) group, IT University of Copenhagen Copenhagen, Denmark
@@ -117,6 +122,10 @@ Algorithmic decision-making systems are increasingly being adopted by government
 
 Child maltreatment is a serious issue with severe and long-lasting consequences [29]. In Denmark, a study done in 2009-2010 interviewed a randomly selected sample of individuals born in 1984 and reported that, during childhood, 3.0% had experienced physical neglect, 5.2% emotional abuse, 5.4% physical abuse, and 3.4% sexual abuse [13]. In response, Danish social services have adopted a policy of being proactive rather than reactive regarding cases of child maltreatment. The primary method for child and family welfare services to identify abuse is by receiving notifications, which are legally mandated from a variety of sources, including public institutions and non-governmental organizations, whenever there are concerns about a child's well-being. In the period 2015-2019, the number of notifications regarding child or adolescent distress, neglect, or maltreatment received by Danish municipalities has
 
+
+<!-- PAGE 3 -->
+
+
 risen by 41.8% [39], due to legislative changes adopted in late 2013 in the area of child protection. In 2019 alone, the municipalities received a total of 138,088 notifications of concern regarding 79,024 children or adolescents [39, 40], which corresponds to roughly 6% of the total child and adolescent population in the country.
 
 Since the introduction of the 2013 legal mandates, social workers are required to perform initial assessments within 24 hours of receiving a notification. This regulation, aimed at promptly aiding children in immediate danger, has significantly intensified the workload on Child Protective Services, surpassing the limits of their available human resources. It is against this backdrop that algorithms have been suggested as a possible solution for performing the required initial assessment within the first 24 hours. The assumption is that a predictive risk model can not only assist social workers in assessing the growing number of notifications in a timely manner, but it will also provide consistent risk assessment for the children being referred to Child Protective Services [2].
@@ -147,6 +156,10 @@ Toconstruct the labeled dataset, data from approximately 120 , 000 notifications
 
 Based on the email correspondence with the PI of the DSS project [32], these were the steps for the pre-processing and training of the algorithm, undertaken in the following chronological order: 1) delimitation of the data set, 2) standardization of variables, 3) randomized train-test (70/30%) split of the data, 4) estimation of model parameters using the training sample, 5) prediction and validation using the test sample. For the case of post-Lasso, feature selection was carried out on half of the training set while OLS was used to estimate the model coefficients on the other half.
 
+
+<!-- PAGE 4 -->
+
+
 ## 2.3 Feature selection and model training
 
 As model features, the developers of DSS initially included four kinds of information, namely about the notification (who reported it, the type of report, when it was reported), the child itself (age, gender, past history, place of residence), the parents (age, gender, origin, marital status), and information about siblings or other children living in the household (whether authorities have received notifications for them, how many, which types). Approximately 300 features were initially selected based on the notion that they are easily accessible and understandable to caseworkers.
@@ -166,6 +179,10 @@ As DSS is a linear regression used for a classification problem, it runs into th
 
 
 Equations (1) and (2) are the machine learning model which was pilot tested in two municipalities on 208 cases. Taken together, 𝑟𝑠 is the prediction from the regression model Eq. (1), while 𝑅𝑆 is the integer risk score, constructed based on binning 𝑟𝑠 into 10 classes (Eq. 2). During the pilot test it was 𝑅𝑆 that was presented to social workers. More specifically, a child with a predicted risk score of e.g. 0.24 will get a bounded risk score of 10 due to the transformation in equation (2). Why a predicted value of 0.24 should be indicative of high-risk is unclear, as the transformation has no direct intuitive interpretation. As explained in the documentation of the algorithm: 'The cut-off values are simply the empirical decile limits for the predicted values (so that each risk score corresponds to one decile). " [32]. The bounds of the transformation function lead to bins of different lengths (Fig. 2B), such that predicted risk scores are evenly distributed, with 10% of the predictions falling within each bin on the 1-10 scale. In the model documentation, no evidence or sources are presented suggesting that the risk of maltreatment should be uniformly distributed. On the contrary, during the pilot test of DSS, the final risk scores provided by social workers followed a normal distribution with approximately 50% of the scores being 5, 6, and 7, and much fewer receiving values 1-2 and 9-10 (exact numbers are not provided in the documentation). As such, the predicted outcome of DSS, 𝑅𝑆 , does not represent the probability for a child to be at risk of maltreatment, rather it is a relative measurement. Yet, humans and, in particular, social workers could interpret a risk score as a probability of being maltreated, leading to undesired consequences for the screening based on 𝑅𝑆 only. Based on the above, the bounded predicted outcome of DSS cannot be recognized as a genuine risk score, although it is presented as an objective measure of risk in the documentation. Nonetheless, our audit will continue to use the term risk score when referring to 𝑅𝑆 . We do this to be consistent with the language used in the model documentation, and other documents that have been presented to the public, the DSS reference group, the DSS academic advisory board, and pilot municipalities.
+
+
+<!-- PAGE 5 -->
+
 
 Figure 1: Overview of the Decision Support (DSS) model. Data from Statistics Denmarks' databases were merged to form a large dataset containing almost 300 variables. Nine variables were selected for the final model, based on a post-Lasso framework. The model outputs unbounded risk scores which are transformed to a 1-10 scale, where 1 denotes low risk of maltreatment, and 10 denotes high risk. The green-yellow-red color scale was used in the pilot test of the model, during which social workers were presented with model predictions encoded on this scale.
 
@@ -197,6 +214,10 @@ DSS for constructing the algorithm. This examination includes scrutinizing the d
 
 Our approach is unfortunately limited by the available information, critically precluding a direct evaluation of how predictions can
 
+
+<!-- PAGE 6 -->
+
+
 propagate and potentially create feedback loops that self-validate the DSS model. Nonetheless, we discuss later the potential issues self-validation might introduce.
 
 ## 3.2 Methodological pitfalls of DSS
@@ -215,6 +236,10 @@ DSS is a mathematically simple white-box model. Still, the transformation to bou
 
 Fig. 4 shows simulated risk scores for children aged 0-18 years, where we study how the risk score changes as a function of the type of notification received, and the number of notifications received. We compare this to a base risk profile (black line) estimated by setting all model variables except age to zero. The base risk indicates the score that all well-treated children (or children with no past history with social services) will have according to the DSS algorithm. We find, that depending on age alone, DSS scores children differently. For example, a well-treated 17-year-old (without any notifications, etc.) will have a base risk score of 8, while a 0-year-old
 
+
+<!-- PAGE 7 -->
+
+
 Figure 2: The Decision Support (DSS) model. A, Feature weights of the model, sorted according to magnitude. The weight for 𝑥 placements past year is too small to be visually observed. B, Bounds used to transform unbounded risk scores ( 𝑟𝑠 ) to bounded risk scores ( 𝑅𝑆 ). Open circles indicate half-open intervals.
 
 <!-- image -->
@@ -226,6 +251,10 @@ Figure 3: Examples of inconsistent risk scores for three simulated cases. A 17-y
 will have a risk score of 1. This behavior stems from the intercept and age components in Eqs. (1-2) and results in younger children systematically receiving lower risk scores, while older children get higher scores. Overall, DSS suggests that older children are at substantially higher risk of maltreatment. Any child above the age of 13, receives a risk score of a minimum of 6 solely because of their age. The magnitude of these predictions could perhaps be justifiable if there were a general welfare crisis among teenagers. However, no prior research or evidence suggests that to be the case. We believe this is an unintended and unmitigated consequence of the model, with potential age discrimination consequences if screening decisions are based on 𝑅𝑆 alone.
 
 Assuming only one notification has been received, Fig. 4A shows the effect of receiving a Type 2 (crime committed by child), 7 (child has suffered physical or sexual abuse), and 9 (substance abuse by a parent) notification. Again, we find that age has a dramatic effect on estimated risk. For instance, well-treated 17- and 18-year-olds (about whom authorities have never received any notifications) are evaluated to be at equal risk as 1-year-olds who have been physically or sexually abused (type 7 notification). Similar issues appear for Type 2 and 9 notifications, with age playing a disproportionately large factor in estimating risk. Unfortunately, similar issues occur when it comes to the number of notifications received by authorities (Fig. 4B). Here well-treated 17-year-olds are ranked to be at equal risk as 1-year-olds about whom the authorities have received 4 notifications. The transformation in Eq. (2) amplifies the issues, but even without bounding risk scores, the algorithm will predict older children to be at higher risk than younger ones. This issue is present for all other features in the model, including the number
+
+
+<!-- PAGE 8 -->
+
 
 of placements and interventions. Fig. 3 provides examples of child profiles and intuitive inconsistencies in the risk scores 𝑅𝑆 .
 
@@ -239,6 +268,10 @@ It is noteworthy that two out of the three proxies used to indicate maltreatment
 
 The DSS model was developed to be used by caseworkers of the Danish Child Protective Services. To convince caseworkers of the usability of the tool, DSS was presented as being (i) faster than humans at evaluating cases, (ii) more knowledge-based since it is based on thousands of previous cases, and (iii) able to streamline assessments by removing the 'bias' of individual caseworkers. However, this algorithm is unsafe to use, as we discuss below, and we urge all local governments, municipalities, and child protection organizations not to use the DSS algorithm or other similarly designed and validated algorithms. The primary and most important reason behind our recommendation is that the algorithm discriminates with respect to age, since it scores otherwise identical cases completely differently just based on the age of the child. Age is a protected attribute [10] and globally recognized as a ground for discrimination [26]. As such, avoiding automated discrimination based on protected attributes should be a prime concern, as DSS influences the lives of human beings, many of whom are vulnerable children. Secondly, the algorithm is trained using a flawed methodology, where its performance has been over-estimated, and where its target variables and features are based on questionable, and self-fulfilling, proxy values. Further, some of the indicators of neglect are direct proxies of poverty. For example, §52 interventions include families getting practical help from social services, however, wealthier individuals who might get the same support, just bought through a private entity, do not end up in the data. From the available model documentation it is unclear which §52 measures have been included in the training dataset by the DSS developers, or if there has been any selection at all. Further, there is some ambiguity on when these offers are initiated. The law states that the municipal board must decide to initiate a preventive measure when it is considered to be of significant value for a child's needs. The board must choose the measure(s) that can best solve the problems and needs that have been uncovered through a child welfare investigation. There is a correlation between the poverty levels of a municipality and the number of preventive measures that have been implemented by municipal boards (rank correlation 𝑟 = 0 . 48, 𝑝 &lt; 10 -6 ), and while we cannot establish a causal link with the data we have access to, we expect this correlation to be reflected in the risk scores, with poorer families getting higher risk scores. Lastly, the ethical values encoded in the algorithm are dubious. For example, when it comes to Type 9 notifications (whether parents have issues with substance abuse), it is indisputable that no child, no matter their age, should grow up with parents suffering from substance abuse. However, is it reasonable that the immediate risk connected to parental substance abuse is lower for a one-year-old child who is deeply dependent on their parents, than for a seventeen-year-old child who has some prerequisites for managing themselves if their parents are not sober? We believe it is not. A similar questionable ethical concern arises from the fact that parents and children, during the pilot trial, were never notified that their case was evaluated by an algorithm, nor were they offered the option to opt-out ?? . This opt-out option is never discussed in the documentation; yet, we assume a lack of informed consent and opt-out because the documentation specifically states that 'The parents do not have to give consent if the tool is to be used, because
 
+
+<!-- PAGE 9 -->
+
+
 Figure 4: Simulated risk scores for individuals where one variables is changed. A, Difference between risk score for different notification types. Base risk is estimated by setting all features, except age, to zero. To calculate risk for type 2, 7 and 9 notifications we set the respective features to 1, and also assume that the number of received notifications (past 90 and 180 days) is 1. B, Risk scores for an increasing number of notifications. Here we set the number of received notifications in 90 and 180 to the same value.
 
 <!-- image -->
@@ -250,6 +283,10 @@ Figure 5: Correlation between age and model features. A, Number of notifications
 then it is not usable. And it is no different than today. If we have to ask for consent, then it doesn't make sense. The legislation says that we must assess the notification.' (translated from Danish).
 
 Nevertheless, DSS was piloted in 2018 and 2019 on approximately 200 cases in two municipalities, during which the model's predictions were compared to risk evaluations provided by social workers. One researcher from the DSS research team observed and later
+
+
+<!-- PAGE 10 -->
+
 
 interviewed the social workers who tested the algorithm, detailing different instances of how social workers handled assessments provided by the DSS risk scores. We report here a summary of these evaluations [25]. One example of evaluation comparison involves a sixteen-year-old referred with a type 2 notification (the child has committed a crime). According to DSS, the child got a risk score of 10. The initial risk score of the social worker on the case was 4, but the social worker chose to raise their score to 8 after being presented with the risk score of DSS. We do not know the true circumstances of the case, but we can reasonably assume that the social worker in this case was influenced by DSS's prediction. The most striking of DSS's predictions was the risk score of 1 given to a two-year-old child who was referred due to suspicion of neglect. The social worker initially assessed the risk score to be 9, indicating a high risk of vulnerability. After having been presented with the DSS score the social worker chose to maintain their initial assessment. No other information about the child or the notification is known to us. Yet, we can conclude that this DSS risk score was predicted solely based on the child's age as setting any other variable or combinations of variables to exceed a value of zero would have resulted in at least a risk score of 2. Even so, if the child's true conditions in any way resembled the risk assessment of the social worker, then DSS grossly underestimated the risk. In general, social workers adjusted their final risk score in 21% of cases [25] after being presented with risk scores of DSS, which points to some degree of trust in the model.
 
@@ -266,6 +303,10 @@ Werecommendthat the new version of DSS should not be piloted on any pending noti
 DSS is one of many algorithms currently being tested on issues relating to social aspects, especially for children's welfare. In addition to general recommendations about algorithmic systems being transparent, ethical, and respecting basic human rights [46], our recommendations are:
 
 - It is vital to incorporate algorithmic audits during the development stage of models. One should not wait to do an audit until after model deployment when the system has already negatively impacted users. Once deployed, issues in the algorithm can become difficult or impossible to trace back to the original source.
+
+
+<!-- PAGE 11 -->
+
 
 - The training, testing, and implementation of high-risk systems should not be left to one team of researchers or practitioners. In the academic world, we have peer-review systems that are used to evaluate quality and pinpoint any issues. A similar system could have avoided the methodological pitfalls and other shortcomings of the DSS model.
 - It is crucial to assess algorithms on all grounds of discrimination (or protected characteristics), even those that might not, at first, seem relevant. Even in the absence of explicit elements in the data, datasets may contain proxies that enable models to infer discriminatory grounds, e.g. gender, age, ethnicity, or socio-economic status, through these proxies.
@@ -316,6 +357,10 @@ R.S. acknowledges support from Villum Fonden through the Villum Young Investigat
 - [35] Bénédicte Rouland and Rhema Vaithianathan. 2018. Cumulative prevalence of maltreatment among New Zealand children, 1998-2015. American journal of public health 108, 4 (2018), 511-513.
 - [36] Takaya Saito and Marc Rehmsmeier. 2015. The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. PloS one 10, 3 (2015), e0118432.
 - [37] Matthew J Salganik, Ian Lundberg, Alexander T Kindel, Caitlin E Ahearn, Khaled Al-Ghoneim, Abdullah Almaatouq, Drew M Altschul, Jennie E Brand, Nicole Bohme Carnegie, Ryan James Compton, et al. 2020. Measuring the predictability of life outcomes with a scientific mass collaboration. Proceedings of the National Academy of Sciences 117, 15 (2020), 8398-8403.
+
+
+<!-- PAGE 12 -->
+
 
 - [38] Devansh Saxena, Karla Badillo-Urquiola, Pamela J Wisniewski, and Shion Guha. 2020. A human-centered review of algorithms used within the US child welfare system. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems . 1-15.
 - [39] Statistics Denmark. [n. d.]. UND1: Notifications of concern for children by administrative municipality, reporter (who is notifying), age and sex . https: //www.statistikbanken.dk/UND1 [Last accessed 2022-04-19].

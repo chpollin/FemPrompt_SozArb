@@ -1,10 +1,11 @@
 ---
 source_file: Srivastava_2024_Algorithmic_Governance_and_the_International.pdf
-conversion_date: 2026-02-03T09:25:19.198096
+conversion_date: 2026-02-03T18:56:26.596182
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Algorithmic Governance and the International Politics of Big Tech
 
 Swati Srivastava
@@ -25,6 +26,10 @@ September 2023 | Vol. 21/No. 3 989
 
 ©The Author(s), 2021. Published by Cambridge University Press on behalf of the American Political Science Association. This is an Open Access article, distributed under the terms of the Creative Commons Attribution licence (https://creativecommons.org/licenses/by/4.0/), which permits unrestricted re-use, distribution, and reproduction in any medium, provided the original work is properly cited.
 
+
+<!-- PAGE 2 -->
+
+
 ## Re /uniFB02 ection | Algorithmic Governance &amp; Politics of Big Tech
 
 by YouTube (21%; Shearer and Matsa 2018). When Facebook-owned Instagram and WhatsApp are included, Facebook constitutes 53% of social news pathways. Amazon Web Services (AWS), the largest cloud storage and web-hosting platform, subsidizes its Prime membership used by 64% of US households (Weise 2019). Algorithms thus manifest Big Tech ' s centralization (Atal 2020, 338) into ' highly organized capital backed by vast systems of extraction and logistics ' (Crawford 2021, 18 -19). Their control of critical bottlenecks transforms Big Tech into arbiters of knowledge, connection, and desire (Zubo /uniFB00 2019, 127).
@@ -39,6 +44,10 @@ In this agenda-setting article, I urge IR scholars to learn from and contribute 
 
 Global relations are increasingly undergirded by proprietary and opaque algorithms that organize the world ' s information and connections. Classi /uniFB01 cation algorithms, in particular, govern by ' generating knowledge systems to execute or inform decisions ' (Yeung 2018, 507) through automated pro /uniFB01 ling and predictions. Risk-assessment algorithms related to credit, terrorism, or crime ' construct people ' s identities and reputations by classifying them as risky, associating them with undesirable traits or correlations, or placing them in the same categories as other people who are risky or have undesirable characteristics ' (Balkin 2018, 1167). Algorithms use increasingly granular behavioral data that contain not ' only what you post online, but whether you use exclamation points or the color saturation of your photos; not just where you walk but the stoop of your shoulders; not just the identity of your face but the emotional states conveyed by your ' microexpressions ' ; not just what you like but the pattern of likes across engagements ' (Zubo /uniFB00 2020). Classifying individual users as possible spammers or extremists may rely on ' high rate of declined friend requests, genderunbalanced networks, or using certain phrases ' (Schwarz 2019, 7). Algorithms are thus comparable to previous technologies, like cartography, that make us more legible and governable (Scott 1998).
 
+
+<!-- PAGE 3 -->
+
+
 But algorithms also di /uniFB00 er from what has come before. First, ' the speed, scale and ubiquity of the technologies that make algorithmic governance possible are grander ' (Danaher et al. 2017, 2). Computer processors are faster and cheaper, as evident when comparing smartphones to the mainframes of decades ago. Moreover, data are nonperishable and nonexcludable, meaning data can be shared many times without ' loss of quality or utility ' (Yeung and Lodge 2019, 11), unlike oil or other resources. Second, algorithms have shifted from ' top-down ' designs, ' in which a programmer or team of programmers exhaustively de /uniFB01 nes the ruleset for the algorithm, ' to ' bottom-up ' machine-learning designs ' in which the algorithm is given a learning rule and trained on large datasets in order to develop its own rules ' (Danaher et al. 2017, 3). Machinelearning algorithms have the ' capacity to identify patterns and correlations that cannot be detected by human cognition ' (Yeung 2018, 505). Neural networks used for speech recognition by Amazon ' s Echo (Alexa) or Google ' s automatic translations /uniFB01 nd patterns in data that humans are unable to discern.
 
 Classi /uniFB01 cation algorithms thus ' lower the costs of judgment and therefore increase the amount, rapidity, and spread of judgment, a /uniFB00 ecting more lives and reputations more quickly, more cheaply, and more pervasively ' (Balkin 2018, 1168). As a result, ' authority is increasingly expressed algorithmically ' (Pasquale 2015, 8). For example, governments use algorithms to ostensibly allocate welfare bene /uniFB01 ts, combat tax fraud, secure the border, police communities, and prevent terrorism (Katzenbach and Ulbricht 2019, 5). But algorithms themselves are becoming authoritative as a form of rule, becoming ' the necessary antidote to subjective decision-making … within largescale and complex systems ' (Caplan and Boyd 2018, 4). Rule by algorithms aims ' to pre-empt agency, spontaneity, and risk: to map out possible futures before they happen so objectionable ones can be foreclosed and desirable ones selected ' (Andrejevic 2020, 9). Predictive analytics is trusted by ordinary people for organizing contemporary a /uniFB00 airs such as hiring employees and identifying romantic partners. Thus, algorithmic governance re /uniFB02 ects both the use of algorithms by authorities and algorithms as authorities.
@@ -52,6 +61,10 @@ Surveillance is not just limited to users. Facebook ' s Like and Share buttons p
 Algorithmic governance may also exacerbate bias and discrimination based on protected categories like race or gender. Ruha Benjamin (2019, 12 -13) identi /uniFB01 es a ' New Jim Code ' through which developers ' encode judgments into technical systems but claim that the racist results of their designs are entirely exterior to the encoding process. ' Studies /uniFB01 nd that Google displays more negative image results, including pornographic images, for Black women and girls than for white counterparts (Noble 2018) and shows ads for highly paid jobs to men more than women (Ananny and Crawford 2018, 977). Amazon ' s recruitment algorithm scored applicants based on resumes of men ' over a ten-year period and downgraded applications that listed women ' s colleges or terms such as ' women ' s chess club '' (Benjamin 2019, 143). Facebook ' s contentmoderation algorithms are said to ' protect white men from hate speech but not Black children ' (Angwin and Grassegger 2017). YouTube algorithms had problematic ' autocomplete results or racist image tagging systems ' (Gorwa 2019, 859).
 
 In addition to having a discriminatory impact based on protected categories, algorithmic governance may ' lead to di /uniFB00 erentiation among nonprotected groups in a way that
+
+
+<!-- PAGE 4 -->
+
 
 ## Re /uniFB02 ection | Algorithmic Governance &amp; Politics of Big Tech
 
@@ -69,6 +82,10 @@ Broadly, Big Tech rules by herding billions of users into arti /uniFB01 cially c
 
 Big Tech rulemaking is also evident in content moderation. It took Facebook 18 months to make ' its /uniFB01 rst permanent hire for content moderation ' (Gillespie 2018, 118). Eventually, a short ' community standards '
 
+
+<!-- PAGE 5 -->
+
+
 document emerged: '' Like, Hitler ? We ' re against it. Pants, you need to wear them '' (Levy 2020, 249). The length of these standards has since ballooned to more than 10,000 words. For Gillespie (2018, 22), ' how platforms are designed and governed not only makes possible social activity, it calls it into being, gives it shape, and a /uniFB03 rms its basic legitimacy as a public contribution. ' In addition to monitoring explicit images and violent content, Facebook was forced to deal with online harassment of women and racial minorities, who argued ' that the abuses have become so unbearable that platforms have an obligation to intervene ' (39). YouTube ' s content moderation followed a similar path ' from an early system of standards to an intricate system of rules due to (1) the rapid increase in both users and volume of content; (2) the globalization and diversity of the online community; and (3) increased reliance on teams of human moderators with diverse backgrounds ' (Klonick 2018, 1635). Facebook and YouTube have since ' created private bureaucracies to govern their end-user communities ' (Balkin 2018, 1180 -81).
 
 Yet critics argue that Big Tech ' s algorithmic governance incentivizes ' information pollution ' (Vaidhyanathan 2018, 6) as content providers optimize for the algorithm. In 2014, Facebook introduced ' Trending Topics, ' using algorithms to promote viral stories on News Feed. Facebook had initially contracted with a group of journalists to oversee Trending Topics. In spring 2016, after pressure from conservatives who accused Facebook of suppressing right-wing content, Facebook /uniFB01 red the human moderators and turned over Trending Topics to algorithms entirely (Levy 2020, 340 -42). By August 2016, Trending Topics was boosting visibility without accounting for its reliability. Three days before the 2016 election, BuzzFeed reported that 140 pro-Trump fake news websites, all registered in Macedonia, were trending on Facebook and generated ' more engagement than those from mainstream media sources ' (Marwick and Lewis 2017, 21). After the election, the ' fake news ' problem entered mainstream discourse (and was weaponized by Trump against critical press).
@@ -81,6 +98,10 @@ Big Tech is assuming greater entrepreneurial private authority, but its degree o
 
 IR can play an important role in specifying what Big Tech ' s broader responsibility should look like. Big Tech /uniFB01 ts uneasily within international corporate responsibility frameworks. The landmark 2011 United Nations Guiding Principles on Business and Human Rights assert that companies have obligations to conduct human rights due
 
+
+<!-- PAGE 6 -->
+
+
 ## Re /uniFB02 ection | Algorithmic Governance &amp; Politics of Big Tech
 
 diligence and enact relevant remedies (Srivastava 2020). But the extent of due diligence and remedies remains underspeci /uniFB01 ed. Furthermore, the Guiding Principles assume that ' while corporations may be considered ' organs of society, ' they are specialized economic organs, not democratic public interest institutions. As such, their responsibilities cannot and should not simply mirror the duties of states ' (A/HRC/8/5, Section 3, para 53). In domestic contexts, legal scholars have challenged the state/ nonstate distinction to model algorithmic accountability on ' public utility regulation, ' which considers Big Tech as a vital public infrastructure providing ' foundational goods and services on which the rest of society depend[s] ' ; these scholars instead describe the need to impose special obligations on Big Tech to ensure access and nondiscrimination (Rahman 2018, 1639). Another ' state action ' approach proposes that companies who contract with the state could be deemed accountable for constitutional violations, as has been acknowledged for private physicians in prisons (Crawford and Schultz 2019, 1962). International conceptions of corporate responsibility must similarly evolve to reckon with the global scale and scope of Big Tech authority.
@@ -92,6 +113,10 @@ One example of Big Tech-initiated regulation is Facebook ' s Content Oversight B
 Even if private governors provide clear rules and due process, algorithmic governance complicates the legitimation process in three ways by. First, the opacity of algorithms makes it di /uniFB03 cult to know precisely when one is being in /uniFB02 uenced by algorithms and then to identify speci /uniFB01 c harms. Welfare claimants have ' very little understanding of exactly how and why the AI system had reduced their bene /uniFB01 ts, and even less of an opportunity to hold accountable the private technology vendors who were primarily responsible for the harm ' (Crawford and Schultz 2019, 1951 -52). Government agencies that contract algorithms are similarly clueless about ' how the AI software code had been written, where the mistakes were made, what data had been used to train and test it, or what means were required to mitigate concerns ' (1968). The surveilled and manipulated ' lack any realistic prospect of peering into, let alone comprehending, the algorithmic black boxes ' (Yeung 2018, 518). When users are unaware that they are being governed, any deference from them is not based on proper internalization, which is key to legitimation.
 
 Second, algorithms may also be opaque to their designers, thereby complicating human rights due diligence assessments recommended by those advocating corporate-initiated regulation (Kaye 2018). Unsupervised machine-learning algorithms are ' not able to tell programmers exactly why they produce the outputs they do ' (Donaher 2016, 255). In AI systems, there are distinctions between ' human-in-the-loop ' with full human command, ' human-on-the-loop ' with possible human override, and ' human-out-of-the-loop ' with no human oversight (Citron and Pasquale 2014). These distinctions collapse as more deference to algorithms leads to ' systems that are far more complex and outside the upper limits of
+
+
+<!-- PAGE 7 -->
+
 
 human reason ' (Donaher 2016, 253). There are ' almost limitless domains in which algorithmic systems may be shown to ' outperform ' humans on a very wide range of tasks across multiple social domains ' (Yeung and Lodge 2019, 12). Thus, algorithms represent a ' black box ' in two ways: as ' a recording device, like the data-monitoring systems in planes, trains, and cars ' and ' a system whose workings are mysterious; we can observe its inputs and outputs, but we cannot tell how one becomes the other ' (Pasquale 2015, 3).
 
@@ -107,6 +132,10 @@ In interdependent relationships, states delegate internet governance to corporat
 
 Algorithmic governance is also used for national security purposes, contributing to the post -Cold War trend of privatization in international politics (Avant 2005). In 2013, Edward Snowden revealed that Facebook and Google were sharing user data with intelligence agencies in the United States, the United Kingdom, and the Five Eyes alliance comprising those two countries plus Australia, New Zealand, and Canada. Amazon reportedly has more than 2,000 partnerships with US law enforcement agencies, allowing them to use its Ring video doorbell data (Lyon 2021). Google ' s image recognition algorithms have helped inform target selection for US drone strikes in the ' War on Terror ' (Amoore 2020). Facebook helps Pakistan identify blasphemy, Norway police communities, and Russia block pages supporting Putin ' s critics. In 2016, Rodrigo Duterte became president of the Philippines after using Facebook to ' manufacture and spread false stories, and undermine trust in professional journalists ' (Vaidhyanathan 2018, 191). Since then, Duterte ' s Facebook vigilantism against suspected drug tra /uniFB03 ckers has led to the deaths of more than 1,400 people. Apple maintains
 
+
+<!-- PAGE 8 -->
+
+
 ## Re /uniFB02 ection | Algorithmic Governance &amp; Politics of Big Tech
 
 data servers for Chinese users in China with no way of stopping the state from accessing them. Amnesty International (2019, 6) warns that ' the opportunity to access such data has created a powerful disincentive for governments to regulate corporate surveillance. ' IR scholars are concerned about privacy trade-o /uniFB00 s in Big Tech solutions to reduce the spread of COVID-19, such as Google and Apple ' s contact tracing app for health bureaucracies (Wong 2020). Thus, one outcome of state -Big Tech interdependence is that algorithmic governance may usher in ' a world in which large, global, privately-owned platforms become the regulatory agents of nation states ' (Balkin 2018, 1207).
@@ -118,6 +147,10 @@ Pushback from Big Tech against states is also evident in the development of ' te
 Finally, Big Tech ' s algorithmic prowess has mobilized states to curtail corporate power, especially in actions related to antitrust, privacy, and speech. In July 2020, a US congressional hearing presented Big Tech as an existential threat: ' Their ability to dictate terms, call the shots, upend entire sectors, and inspire fear, represent the powers of a private government. Our founders would not bow before a king, nor should we bow before the emperors of the online economy ' (Cicilline 2020). The Department of Justice has since brought antitrust suits against Google and Facebook while investigating Apple and Amazon. After the Cambridge Analytica scandal, the Federal Trade Commission /uniFB01 ned Facebook $5 billion, the largest amount it ever levied for a privacy violation. The European Union implemented the General Data Protection Regulation (GDPR) in 2018, under which maximum /uniFB01 nes for privacy violations can be up to 4% of a company ' s global revenue. The GDPR has led to more disclosure in privacy policies and foregrounded opt-out messaging for tracking cookies across the web. In the United States, Big Tech is shielded from speech regulation, because Section 230 of the 1996 Communications Decency Act regards internet platforms as distinct from publishers. But this ' intermediary immunity ' is currently under threat. Elsewhere, Germany ' s 2017 ' Network Enforcement ' law ' makes companies liable for illegal speech propagated via their services ' (Gorwa 2019, 855).
 
 Civil society has also launched initiatives to promote ' digital rights ' : a ' range of protections regarding access to the Internet, privacy, transparency regarding how data is used, control over how data is used, democratic
+
+
+<!-- PAGE 9 -->
+
 
 participation in municipal technology decisions and more ' (Wylie 2019). The 2018 Toronto Declaration, spearheaded by Amnesty International and Access Now, calls on governments and companies to protect the right to equality and nondiscrimination in AI systems. These activists have allies in Europe, where the GDPR articulates an individual ' s ' right not to be subject to a decision based solely on automated processing, including pro /uniFB01 ling ' (Article 22.1). This right has broad exceptions for algorithmic governance, including if ' necessary for entering into, or performance of, a contract between the data subject and a data controller ' ; if authorized by law; or if based on ' explicit consent. ' Still, the framework shifts the burden of algorithmic harm reduction from individuals to companies, rendering it more ' e /uniFB00 ective in practice ' (Lynskey 2018, 197). The European Commission also proposed a Digital Services Act in 2020 that would impose additional corporate liability for content moderation and force disclosures of algorithms.
 
@@ -147,6 +180,10 @@ accessed February 2, 2021.
 - Bucher, Taina. 2018. If … Then: Algorithmic Power and Politics . Oxford: Oxford University Press.
 - Büthe, Tim, and Walter Mattli. 2011. The New Global Rulers: The Privatization of Regulation in the World Economy . Princeton: Princeton University Press.
 - Caplan, Robyn, and danah boyd. 2018. ' Isomorphism through Algorithms: Institutional Dependencies in the Case of Facebook. ' Big Data &amp; Society 5 (1): 1 -12.
+
+
+<!-- PAGE 10 -->
+
 
 ## Re /uniFB02 ection | Algorithmic Governance &amp; Politics of Big Tech
 
@@ -184,6 +221,10 @@ accessed February 2, 2021.
 - Klonick, Kate. 2021. ' Inside the Making of Facebook ' s Supreme Court. ' New Yorker , February 12.
 - Lake, David. 2013. ' Legitimating Power: The Domestic Politics of U.S. International Hierarchy. ' International Security 38 (2): 74 -111.
 
+
+<!-- PAGE 11 -->
+
+
 - Levy, Steven. 2020. Facebook: The Inside Story . New York: Blue Rider Press.
 - Lynskey, Orla. 2018. ' The Power of Providence: The Role of Platforms in Leveraging the Legibility of Users to Accentuate Inequality. ' In Digital Dominance: The Power of Google, Amazon, Facebook, and Apple , eds. Martin Moore and Damien Tambini, 176 -201. Oxford: Oxford University Press.
 - Lyon, Kim. 2021. ' Amazon ' s Ring Now Reportedly Partners with More than 2,000 U.S. Police and Fire Departments. ' The Verge , January 31.
@@ -216,6 +257,10 @@ accessed February 2, 2021.
 - Weise, Karen. 2019. ' Prime Power: How Amazon Squeezes the Businesses behind Its Store. ' New York Times , December 20.
 - Wong, Wendy. 2020. ' Technology Threatens Human Rights in the Coronavirus Fight. ' The Conversation , May 7.
 - Wylie, Bianca. 2019. ' Why We Need Data Rights: ' Not Everything about Us Should Be for Sale. '' Financial Post, February 1.
+
+
+<!-- PAGE 12 -->
+
 
 ## Re /uniFB02 ection | Algorithmic Governance &amp; Politics of Big Tech
 

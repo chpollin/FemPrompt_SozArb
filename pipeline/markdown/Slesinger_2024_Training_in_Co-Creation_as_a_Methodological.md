@@ -1,10 +1,11 @@
 ---
 source_file: Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.pdf
-conversion_date: 2026-02-03T09:24:29.176837
+conversion_date: 2026-02-03T18:55:40.669124
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Article
@@ -48,6 +49,10 @@ Copyright: © 2024 by the authors. Licensee MDPI, Basel, Switzerland. This artic
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 who are not knowledgeable about AI and how it works remains a challenging task. This paper focuses on one approach to tackle these challenges by incorporating training on defining AI and how its use can impact participants from identified vulnerable groups in the co-creation process as a way to engage them with the socio-technical complexity inherent to the problem of AI fairness.
 
 Work to develop and implement AI fairness starts at the design phase of AI applications. This requires adapting existing PD and Co-C approaches that are frequently used in Human-Computer Interaction (HCI) and technology design. PD can be seen as a precursor to Co-C, whereby PD obtains input from end users to test and modify a prototype design that has been formulated by the design team, whereas Co-C is a process that works to incorporate users' requirements iteratively through cyclical consultation throughout the design process since its early phase [5]. This paper primarily draws from Co-C, although the term PD is also used throughout, particularly in relation to discussions of the existing literature, and there is significant overlap between the concerns and findings for both PD and Co-C.
@@ -59,6 +64,10 @@ The primary causes of AI biases are socio-technical in nature and often result f
 MAMMOth tackles AI bias through an approach that is multi-modal-meaning it accounts for bias in a range of digital file types and formats, e.g., text, datasets, images, and audio files-and multi-attribute-which means it accounts for intersecting forms of bias that AI data processing can exacerbate based on multiple characteristics of vulnerability or marginalization, e.g., gender, age, ethnic origin, and sexual orientation. In the Co-C process for MAMMOth, training on AI definitions, terminology, and the project's socio-technical implications was carried out to empower non-technical stakeholders to articulate their insights on AI fairness clearly in evidence-gathering activities. In the Co-C workshops, data collection was carried out based on participants' evaluation of three use cases in which AI bias can have a significant impact-financial decisions, e.g., loan applications; biometric identity verification, e.g., automated passport control gates based on facial recognition; and bias in academic citation searches.
 
 The next section will present a literature review that examines several aspects of PD with vulnerable groups and AI relevant to this paper. This is followed by a discussion of the legal and ethical aspects relevant to AI bias and the role of Co-C, and incorporating training in it. The remainder of the article will provide an empirical description of the role of training in the MAMMOth Co-C process and a reflective discussion of the benefits of incorporating training in AI, as well as its limitations and lessons learned.
+
+
+<!-- PAGE 3 -->
+
 
 ## 2. Literature Review
 
@@ -74,6 +83,10 @@ PD/Co-C projects might involve a wide range of vulnerable groups. A systematic l
 
 Reaching out to vulnerable groups and enabling their participation in PD/Co-C requires careful consideration. There might be various barriers to including vulnerable groups in PD and Co-C projects [24]. Such populations might be hard to reach because of their geographical or social locations (e.g., rural populations living in remote places) because they are hidden, stigmatized, or live in legal limbo (e.g., LGBT people or undocumented migrants), or because they lack necessary resources and skills (e.g., older people, children, those with poor literacy). There might be several solutions to overcome these participation barriers. The first strategy would be identifying the key vulnerabilities and devising the recruitment strategy accordingly rather than engaging in convenience sampling. Snowball sampling and its variations can be effective in recruiting traditionally underserved and vulnerable groups [25]. Building rapport and trust and following ethical engagement
 
+
+<!-- PAGE 4 -->
+
+
 principles are other important factors facilitating the inclusion of vulnerable groups in PD/Co-C.
 
 The methods of involving vulnerable groups in PD/Co-C need to be tailored according to research objectives and participants' needs [23]. Hands-on activities such as workshops are the most frequently used methods in PD projects with vulnerable groups [17]. While workshops with children often include playful activities, workshops with older adults might include pre-workshop support with technology. In addition to workshops, individual interviews and observations are other methods of involving vulnerable participants in PD. These methods can be accompanied by different toolkits (such as photo-elicitation, daily journals, and different workshop materials) to enrich the participatory process.
@@ -88,6 +101,10 @@ Several approaches encourage bringing AI into public spaces to broaden AI litera
 
 Zicari et al. suggest involving interdisciplinary experts in PD processes who can exert agency in designing, implementing, and regulating AI systems-such as healthcare professionals, technology designers, ethicists, legal experts, and social scientists-can arbitrate AI fairness in a 'neutral' way to achieve fairer outcomes [38]. The expertise these interdisciplinary actors bring can help identify technical issues affecting fairness that would likely be opaque to laypersons, as well as identify and negotiate conflicts of interest between both direct and indirect stakeholder groups; however, as studies in the sociology of science have shown, the political neutrality of scientific knowledge is contestable. Each discipline is, in fact, an outcome and a reproduction of a certain way of producing knowledge and seeing the world, which evolves over time and is linked to the social context and power dynamics in which it develops [39].
 
+
+<!-- PAGE 5 -->
+
+
 Critical perspectives to PD/Co-C for social good are more circumspect about defining what social good entails and whose values and principles should be prioritized, particularly for minoritized or marginalized groups who are outliers in a utilitarian conception of social good. This includes challenging a perceived absence in general of participatory design and deliberative engagement with affected stakeholders of unfair machine learning algorithms, whoare not necessarily the system end users with whom UX designers typically work in PD processes [40]. Other perspectives critique the assumption that when diverse stakeholder engagement in PD does take place, it automatically leads to greater fairness without reflexive engagement in the power relations implicated in the design and conduct of the PD or Co-C process [41,42]. Such perspectives also express concern about PD becoming a weak 'box-ticking' exercise rather than a genuine socially transformative process that empowers users and enables greater social equality [43,44]. Delgado et al. provide a framework for critical evaluation of the purpose, value, and efficacy of PD and similar approaches that consider the form that a particular design process takes, including how decisions are made and articulated, whom it includes and excludes, the scope and remit of the PD process, the extent to which it engages and empowers stakeholders [45]. Other methodologies for redressing this power imbalance that prioritize the voices of those individuals or groups disproportionately likely to face harm from poorly designed AI applications include a capabilities approach [46] and an iterative agile participatory design approach to designing technology objectives and user requirements with marginalized user groups [47].
 
 Several recent empirical studies using PD and Co-C to address AI fairness in situated contexts with minorities, marginalized groups, and civil society actors provide new understandings and a range of methodological strategies for mitigating bias and harm from unfair algorithms, e.g., [48-50]. Suresh et al. highlight the need to design with communities of diverse and potentially marginalized stakeholders (including civil society activists) to ensure that systems 'work not only for the mainstream, majority use case, but also for those on the margins' [48]. Katell et al. demonstrate how such work can benefit from incorporating non-technical interventions as part of a socio-technical approach to mitigating unfairness in Co-C [49]. In addition, approaches and resources that prioritize localized and context-specific issues pertinent to a particular application are often highly effective [26,49], although these can sometimes come into tension with the desire to achieve broadly applicable solutions through design.
@@ -99,6 +116,10 @@ Several studies add 'skills development' as the first step of PD/Co-C processes 
 ## 3. How Training in Co-Creation Relates to EU Legal and Ethical Approaches to AI Bias
 
 AI systems creators (including engineers, developers, and auditors) address the issue of achieving systems' compliance with evolving regulatory requirements from a technical perspective [51]. This first involves the identification of the applicable legislation based on its context and then its practical implementation [52], which both affect the technology design. Yet, the impact of training in the Co-C process extends beyond the technical de-
+
+
+<!-- PAGE 6 -->
+
 
 velopment of an AI system, as it also has implications for how compliance regimes evolve in relation to the dynamic state of AI legislation. This is notable in the EU environment, namely with reference to the Ethics Guidelines for Trustworthy AI [3] and the AI Act [1], particularly concerning AI bias. This requires thoughtful engagement from training designers and facilitators to ensure that the training meaningfully contributes to fairer and safer AI design rather than becoming an instrumental vehicle for demonstrating compliance in a hollow way.
 
@@ -116,6 +137,10 @@ The AI Act [1] is one of the first and most comprehensive legally binding instru
 
 The involvement of stakeholders and the endorsement of training in Co-C can be applied as mechanisms for implementing the regulation. First, at the level of the deployer's obligations, the AI Act introduces a risk management approach for high-risk AI systems
 
+
+<!-- PAGE 7 -->
+
+
 by organizations that includes a set of measures (including education and training) as factors that can mitigate the high-risk systems' risks (Article 9 par. 5, subpar. 3). At the level of supporting the enforcement and implementation of the regulation, the AI Office is expected to include involvement with relevant stakeholders (as defined in Article 4 of the Commission decision (Brussels, 24 January 2024, C (2024) 390 final)) within its criteria for compliance in its guidance and compliance monitoring activities [55]. The following section will describe the methodology applied to implement engagement with vulnerable and marginalized stakeholders through training in the MAMMOth Co-C process.
 
 ## 4. The Use of Training in Co-C to Support the Design of an AI Bias Mitigation Toolkit
@@ -132,6 +157,10 @@ Aseries of Co-C workshops were carried out alongside the other design activities
 
 - Participants' opinions on the use of AI in the specific use cases of finance decisions, identity verification, and academic citations and collaborations;
 - What they considered a fair outcome when using these systems in real life;
+
+
+<!-- PAGE 8 -->
+
 
 - Their concerns about the use of AI in the use cases and the expected benefits;
 - Their previous experiences, if any, with the use of AI in specific use cases;
@@ -152,6 +181,10 @@ The workshops all shared a similar structure. They started with a brief introduc
 
 The training material was prepared previously as educational materials designed for public engagement with laypersons on issues concerning AI bias and subsequently adapted for the MAMMOth Co-C workshops. These materials were based on research gathered from focus groups, interviews, and informal conversations with very different audiences about how laypeople use AI and their attitudes and feelings toward it. The material focused
 
+
+<!-- PAGE 9 -->
+
+
 on the non-technical aspects of AI and specifically on its socio-cultural implications. The technicalities were intentionally avoided so as not to overwhelm participants with aspects not considered useful for the discussion. The training phase followed an inquiry-based teaching and learning approach [56] aimed at first exploring laypersons' misconceptions about AI-mainly its association with robots and the idea that AI is a neutral and objective technology-providing daily life examples, adding new knowledge that also questions these misconceptions and then checking the level of understanding of participants and the effectiveness of the training. These steps were followed in an iterative manner. The training, due to its interactive nature with the participants, acted as a 'workshop in the workshop'. The rationale for incorporating training into the Co-C of the MAMMOth tool was to empower representatives from marginalized groups with knowledge of how AI bias in decision-making can impact them and create a common frame of reference by ensuring that every participant had a basic understanding of the topic.
 
 Prior to conducting the workshops, the training developers from RUG conducted a session with the workshop facilitators to familiarize them with the training materials and share knowledge on best practices for delivering the training modules. The material was first prepared in English and then translated into the languages used in the workshops. The training material was intended as a tool that facilitators could then adapt to their purpose and audiences. In this regard, Donna Activa Forum (DAF), the civil society partner of the MAMMOth project working with under-served women, adapted the material to include examples related to gender biases-something the participants of the workshop could relate to. These training components explained in an accessible way how AI decisionmaking algorithms work and ways in which they can reproduce discrimination, including demonstrating real-life examples.
@@ -161,6 +194,10 @@ The second half of the workshops focused on discussing participants' perspective
 ## 4.2. Workshop Outcomes
 
 The findings from the individual workshops were varied. In the workshop conducted by DAF, only three participants affirmed that they had previous knowledge about AI. In the workshops conducted by IASIS, most of the participants had little to average knowledge of the topic. When asked to provide a definition of AI, they mentioned robots with human
+
+
+<!-- PAGE 10 -->
+
 
 behavior, computer systems, ChatGPT, something complex, algorithms, and something related to math and data. During the workshop, once shown some examples of everyday use of AI systems, they realized that they make use of some form of AI regularly in daily activities. The participants of the workshop organized by the Diversity Development Group (DDG) were, on average, familiar with AI. In particular, they unanimously reported daily interactions with AI through digital tools (Google Maps, Translate, Spotify, etc.), reflecting the pervasive role of AI in modern life.
 
@@ -173,6 +210,10 @@ Participants exhibited nuanced perspectives on the objectivity of AI; some argue
 User requirements gathered a set of expectations for what the MAMMOth bias toolkit should be capable of and the parameters of how it should work from the standpoint of end users. The primary end users targeted through the project's methodology were the data scientists whose systems ended up affecting under-represented groups, among others; however, it was also recognized that affected stakeholders, including members of such groups, are also indirectly affected, and their input was also considered. User requirements were shaped based on the amalgamated results of the Co-C workshops with a pilot survey with under-represented groups, and the expert user needs analysis, which included both data scientists and social scientists. This combined approach aimed at capturing both the suggestions received from experts and the concerns identified by the affected stakeholders that could arise when the toolkit is deployed. The construction of the list of Research requirements followed a similar process. Research requirements refer to additional input, mainly coming from the opinions and concerns of under-represented groups, that should guide the research on biases and mitigation conducted by technical partners of the project.
 
 Each partner conducting a workshop provided the research team with an English language summary of the workshop contents with key points, which were then collated by
+
+
+<!-- PAGE 11 -->
+
 
 Societies
 
@@ -288,6 +329,10 @@ technical and
 
 thus have
 
+
+<!-- PAGE 12 -->
+
+
 to understand the material and that the amount of technical content included was kept as minimal as possible. The rationale for this approach is that a socio-technical approach would be relatable to participants, whereas an emphasis on technical knowledge would likely alienate participants and cause them to 'switch off' and thus have the opposite effect on the training's goal of encouraging engagement and inclusion.
 
 Upon reflecting on the training, designers did question whether they underestimated participants' capacity for engaging with more technical content and what different outcomes or understandings this might enable. At the same time, it was clear that some workshop target communities, e.g., a group of older unemployed women in their 40s and 50s, struggled more with understanding the content than other groups. This leads to two recommendations: (1) additional research should be conducted on the relationship between greater technical knowledge and enhanced socio-technical understanding of systemic factors contributing to AI bias by training participants; (2) provided the increased inclusion of technical content can contribute to greater understanding and empowerment of contributing factors to AI bias, the extent of the inclusion of technical content should be reflected upon and calibrated in relation to both the participants needs and capacities and the objectives of the Co-C process.
@@ -299,6 +344,10 @@ There was also critical engagement from the facilitators on the representation o
 ## 5.2. The Methodological Value of Incorporating Training in Co-C
 
 As discussed in Section 4.2, the purpose of incorporating training in the Co-C workshops was to empower participants from marginalized communities with knowledge of what AI is, how it affects their lives, and how AI bias in decision-making can cause them harm. As commonly agreed by the workshop facilitators, the training module provided a smooth kick-start for the co-creation process by ensuring that all participants had a shared understanding of the topic. In this way, the training module democratized the Co-C process by enabling the participation of the most disadvantaged participants in the discussion.
+
+
+<!-- PAGE 13 -->
+
 
 Societies
 
@@ -354,6 +403,10 @@ vulnerable processing.
 
 groups that
 
+
+<!-- PAGE 14 -->
+
+
 ## 5.3. Challenges and Complexities of Integrating Training in Co-C
 
 Incorporating training into Co-C processes raises a number of methodological and epistemological questions. The most crucial is whether incorporating training to impart specific sets of knowledge or empower social outcomes based on notions of empowerment or social justice influences the responses, findings, and outcomes of the Co-C process. This also has implications for debates around the boundaries between research and activism [57-59] and whether the deliberate merging of the two is desirable or problematic [60-62]. In the case of the Co-C process for MAMMOth, civil society partners with defined activist missions were responsible for delivering the training and the Co-C workshops that fed into the production of user and research requirements. Here, the justification for merging research with activism is a deliberate and direct strategy to attain the MAMMOth project's goal of mitigating discrimination and adverse social outcomes for vulnerable groups that result from the perpetuation of biases in AI data training and processing.
@@ -366,6 +419,10 @@ Another related aspect that requires reflective consideration in planning and ex
 
 Reflective analysis also requires engaging with both the limitations of incorporating training in AI Co-C with vulnerable groups and other stakeholder categories, as well as the way it was implemented in the MAMMOth Co-C design. Due to the comparatively small sample size of the MAMMOth CO-C process, it was not possible for researchers to collect statistically significant or reliable quantitative data to support their analysis. In addition, in the MAMMOth Co-C, the workshops were conducted on a one-off basis with each stakeholder group. As a result, the potential for further dialogue and iterative development was missed. Both workshop participants and other stakeholders (facilitators
 
+
+<!-- PAGE 15 -->
+
+
 and researchers) expressed a desire to learn more about the topic of AI bias and to remain engaged in the design process to see the impact of their input on the research and technology design outcomes from the project. This demonstrates that to achieve better integration, researchers and facilitators should integrate training as an ongoing process-within-a-process in technology Co-C. This entails planning for multiple workshops or sessions throughout the design process, starting from an early stage, and at each stage modifying the design and adapting the Co-C approach in response to participants' input in a way that demonstrates to participants that their voices are being listened to and are contributing to meaningful social change.
 
 Onabroader scale, it is reasonable to question the extent to which training within Co-C activities for AI technology development actually disrupts inherent power dynamics or whether training risks adding an additional layer of ostensible credibility to 'ethics-washing' practices [63] or 'thin' compliance tick-box exercise that fails to influence meaningful change in identifying and mitigating vectors of discrimination and other forms of social inequality. This can be addressed in the process of how the training material is prepared, whereby it is produced through participatory methods in which potential groups to be trained have an opportunity to shape the material. In the case of MAMMOth, to address this challenge, training material was prepared along with a consultation process with a wide range of stakeholders, which included a number of interviews and focus groups. This counteracts the pitfall of material being produced in a top-down way where mainly technology developers' interests are reflected.
@@ -375,6 +432,10 @@ Using training in Co-C can also support the implementation of EU ethical and leg
 ## 6. Conclusions
 
 This paper draws from both applied and critical approaches to PD and Co-C to argue for the inclusion of training on AI bias in co-creation processes with non-expert stakeholder groups whose input would otherwise be excluded from AI design and integration decisions, particularly those from vulnerable or marginalized groups. Incorporating training can enhance the Co-C process in several ways: it supports participants with the conceptual frameworks and lexicon that can allow them better to articulate their opinions, observations, questions, and concerns; it injects both shared understandings and specific examples that problematize abstract concepts and controversies in a concrete way to stimulate active discussion and engagement in Co-C activities; it empowers end-users to be more aware of how AI bias can impact them and to recognize (often obfuscated) sites where AI is being used and where there is a risk of discrimination occurring. Training in Co-C can also provide a mechanism in conjunction with other technology design and implementation
+
+
+<!-- PAGE 16 -->
+
 
 ## References
 
@@ -398,6 +459,10 @@ Data Availability Statement: MAMMOth Deliverable D1.1 User Requirements and Arch
 Acknowledgments: The authors would like to acknowledge the contribution of Dagmar Heeg from the University of Groningen, who produced the AI bias training materials that were adapted for the MAMMOth co-creation workshops, and who shared her insights on producing and adapting the training materials. The authors also wish to thank Anna Pujol-Ferran and Virginia Carreras from Donna Activa Forum and Elli Nikolakopoulou from IASIS, who facilitated some of the co-creation workshops, for their engaged reflections on the MAMMOth co-creation process.
 
 Conflicts of Interest: The authors declare no conflicts of interest.
+
+
+<!-- PAGE 17 -->
+
 
 3. Directorate-General for Communications Networks, Content and Technology (European Commission). High-Level Expert Group on Artificial Intelligence Ethics Guidelines for Trustworthy AI ; Publications Office of the European Union: Luxembourg, 2019; ISBN 978-92-76-11998-2. Available online: https://data.europa.eu/doi/10.2759/346720 (accessed on 16 July 2024).
 4. OECD. Recommendation of the Council on Artificial Intelligence. 2024. Available online: https://legalinstruments.oecd.org/en/ instruments/OECD-LEGAL-0449 (accessed on 18 November 2024).
@@ -425,6 +490,10 @@ Conflicts of Interest: The authors declare no conflicts of interest.
 26. Lee, M.K.; Kim, J.T.; Lizarondo, L. A Human-Centered Approach to Algorithmic Services: Considerations for Fair and Motivating Smart Community Service Management That Allocates Donations to Non-Profit Organizations. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems, Denver, CO, USA, 6-11 May 2017; ACM: Denver, CO, USA, 2017; pp. 3365-3376.
 27. Park, H.; Ahn, D.; Hosanagar, K.; Lee, J. Designing Fair AI in Human Resource Management: Understanding Tensions Surrounding Algorithmic Evaluation and Envisioning Stakeholder-Centered Solutions. In Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems, New Orleans, LA, USA, 29 April-5 May 2022; Association for Computing Machinery: New York, NY, USA, 2022; pp. 1-22.
 
+
+<!-- PAGE 18 -->
+
+
 28. Koene, A.; Perez, E.; Ceppi, S.; Rovatsos, M.; Webb, H.; Patel, M.; Jirotka, M.; Lane, G. Algorithmic Fairness in Online Information Mediating Systems. In Proceedings of the 2017 ACM on Web Science Conference, Troy, NY, USA, 25-28 June 2017; ACM: Troy, NY, USA, 2017; pp. 391-392.
 29. Starke, C.; Baleis, J.; Keller, B.; Marcinkowski, F. Fairness Perceptions of Algorithmic Decision-Making: A Systematic Review of the Empirical Literature. Big Data Soc. 2022 , 9 , 20539517221115189. [CrossRef]
 30. Zhang, A.; Walker, O.; Nguyen, K.; Dai, J.; Chen, A.; Lee, M.K. Deliberating with AI: Improving Decision-Making for the Future through Participatory AI Design and Stakeholder Deliberation. Proc. ACM Hum. Comput. Interact. 2023 , 7 , 1-32. [CrossRef]
@@ -447,6 +516,10 @@ Conflicts of Interest: The authors declare no conflicts of interest.
 47. Hossain, S.; Ahmed, S.I. Towards a New Participatory Approach for Designing Artificial Intelligence and Data-Driven Technologies. 2021. Available online: https://arxiv.org/abs/2104.04072 (accessed on 27 November 2024).
 48. Suresh, H.; Movva, R.; Dogan, A.L.; Bhargava, R.; Cruxen, I.; Cuba, A.M.; Taurino, G.; So, W.; D'Ignazio, C. Towards Intersectional Feminist and Participatory ML: A Case Study in Supporting Feminicide Counterdata Collection. In Proceedings of the 2022 ACM Conference on Fairness, Accountability, and Transparency, Seoul, Republic of Korea, 21-24 June 2022; ACM: Seoul, Republic of Korea, 2022; pp. 667-678.
 49. Katell, M.; Young, M.; Dailey, D.; Herman, B.; Guetler, V.; Tam, A.; Bintz, C.; Raz, D.; Krafft, P.M. Toward Situated Interventions for Algorithmic Equity: Lessons from the Field. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency, Barcelona, Spain, 27-30 January 2020; ACM: Barcelona, Spain, 2020; pp. 45-55.
+
+
+<!-- PAGE 19 -->
+
 
 50. Hornung, D.; Müller, C.; Shklovski, I.; Jakobi, T.; Wulf, V. Navigating Relationships and Boundaries: Concerns around ICT-Uptake for Elderly People. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems, Denver, CO, USA, 6-11 May 2017; Association for Computing Machinery: New York, NY, USA, 2017; pp. 7057-7069.
 51. Otto, P.N.; Anton, A.I. Addressing Legal Requirements in Requirements Engineering. In Proceedings of the 15th IEEE International Requirements Engineering Conference (RE 2007), New Delhi, India, 15-19 October 2007; pp. 5-14.

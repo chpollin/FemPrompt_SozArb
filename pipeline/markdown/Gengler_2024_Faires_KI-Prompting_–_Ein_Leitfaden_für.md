@@ -1,10 +1,11 @@
 ---
 source_file: Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.pdf
-conversion_date: 2026-02-03T08:58:17.835156
+conversion_date: 2026-02-03T18:28:57.801469
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -20,6 +21,10 @@ aufgrundeinesBeschlusses
 1
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Vorwort
 
@@ -38,6 +43,10 @@ Dieser  Guide  vermittelt  Ihnen  nicht  nur  das 'Was' und 'Wie', sondern auch 
 Lassen Sie uns gemeinsam einen Blick in die Welt der Generativen KI werfen und verstehen, wie sie unsere Arbeit und Gesellschaft bereichern kann - wenn wir sie richtig einsetzen.
 
 Kristina Bodrožić-Brnić, KI-Trainerin Mittelstand-Digital Zentrum Zukunftskultur
+
+
+<!-- PAGE 3 -->
+
 
 Quelle: DALL-E 2
 
@@ -77,6 +86,10 @@ BSP Business and Law School Projekt Mittelstand-Digital Zentrum Zukunftskultur K
 
 Gengler, E., Kraus, A., Bodrožić-Brnić, K. (2024). Faires KI-Prompting - Ein Leitfaden für Unternehmen. BSP Business and Law School - Hochschule für Management und Recht. (1 - 28).
 
+
+<!-- PAGE 4 -->
+
+
 Quelle: DALL-E 2
 
 ## Inhaltsverzeichnis
@@ -88,6 +101,10 @@ Quelle: DALL-E 2
 |    4 | Weichenstellung innerhalb der Organisation    |  12 |
 |    5 | Promptingstrategien                           |  19 |
 |    6 | Abschließende Empfehlungen und Ausblick       |  25 |
+
+
+<!-- PAGE 5 -->
+
 
 ## 1. Grundlagen: KI, Generative KI und KI-Prompting
 
@@ -109,6 +126,10 @@ Generative KI bezieht sich auf KI-Systeme, die basierend auf trainierten Modelle
 KI-Prompting ist  die  Eingabe  spezifischer  Anweisungen oder Daten in ein Generatives KI-System, um damit eine gewünschte Reaktion oder ein bestimmtes  Ergebnis  zu  erzeugen.  Es  dient  als direkter  Kommunikationskanal,  der  es  den  Nutzer*innen  ermöglicht,  KI-Ergebnisse  zu  steuern, sei  es  in  Form  von  geschriebenem  Text,  Bildern oder anderen Mechanismen.
 
 5
+
+
+<!-- PAGE 6 -->
+
 
 ## 2. Generative KI: Status quo, Grenzen und Tools
 
@@ -147,6 +168,10 @@ hersagen zu treffen, was in den nächsten Jahren möglich  sein  wird.  Wir  kö
 
 Lebenslanges Lernen wird ein essenzieller Future Skill,  um das Potenzial Generativer KI für unsere Unternehmen und unsere Arbeit zu nutzen.
 
+
+<!-- PAGE 7 -->
+
+
 ## 2.2 Grenzen aktueller Generativer KI-Systeme - Halluzinationen und mehr
 
 ## Herausforderung des Halluzinierens und der mangelnden Aktualität
@@ -162,6 +187,10 @@ Quelle: DALL-E 2
 ## Datenschutz, Unternehmensspezifika und Zweckmäßigkeit
 
 Beim  Einsatz  Generativer  KI-Systeme  ergeben sich auch Datenschutzbedenken, z.B. wenn persönliche  Daten  wie  vollständige  Namen  für  die Erstellung von Inhalten verwendet werden. Dies könnte  zu  unbeabsichtigten  Datenschutzverletzungen  führen,  etwa  wenn  Empfehlungsschreiben  oder  andere  sensible  Dokumente  generiert werden. Darüber hinaus besteht das Risiko, dass Firmengeheimnisse versehentlich offengelegt werden.  Für  Fragen  rund  um  Cybersecurity  im Mittelstand  hat  das  BMWK  eine  Transferstelle eingerichtet.  Generative  KI-Systeme  sind  standardmäßig nicht mit firmenspezifischen Informationen  trainiert,  es  sei  denn,  sie  werden  intern weiterentwickelt  und  trainiert.  Schließlich  sind Generative KI-Modelle in der Regel für spezifische Anwendungen konzipiert. Ein Tool wie ChatGPT etwa ist hervorragend in der Lage, fließende und kohärente Sprache zu erzeugen, aber die 'Wahrheitstreue' solcher generierten Inhalte beruht allein  auf  Wahrscheinlichkeiten  und  muss  daher kritisch hinterfragt werden. Deswegen ist es entscheidend, dass Unternehmen diese Tools für den beabsichtigten Zweck einsetzen und ihre Einschränkungen verstehen und abwägen.
+
+
+<!-- PAGE 8 -->
+
 
 ## 2.3 Ein Überblick über ausgewählte Generative KI-Tools
 
@@ -227,6 +256,10 @@ Artbreeder lösende Bilder Generierung von Menschen und Tieren
 
 Hochauf-
 
+
+<!-- PAGE 9 -->
+
+
 ## 3. Problemstellung: Warum Faires KI-Prompting?
 
 ## 3.1 Probleme Generativer KI
@@ -277,6 +310,10 @@ Menschen, die in den Daten nicht oder zu wenig vorkommen
 
 Menschen, die nicht 'der Norm' (einem Schönheitsideal oder Ähnlichem) entsprechen
 
+
+<!-- PAGE 10 -->
+
+
 ## 3.2 Beispiele problematischer KI-Outcomes
 
 <!-- image -->
@@ -321,6 +358,10 @@ KI für die Generierung von Bildern  reproduzierte verschiedenste Vorurteile und
 
 Quelle: THE CONVERSATION
 
+
+<!-- PAGE 11 -->
+
+
 ## 3.3 Gründe für problematische KI-Outcomes
 
 <!-- image -->
@@ -361,11 +402,19 @@ Algorithmus : Der Algorithmus selbst kann ebenfalls zu Diskriminierung führen, 
 
 Priorisierung  von  Eigenschaften  und  Ressourcen : Oftmals werden Features, welche die Performance der KI verbessern, priorisiert vor Features, die z.B. Diskriminierungsfreiheit im Fokus haben. Dies kann zu unfairen Ergebnissen führen.
 
+
+<!-- PAGE 12 -->
+
+
 <!-- image -->
 
 ## Wie können wir das ändern?
 
 4. Weichenstellung innerhalb der Organisation
+
+
+<!-- PAGE 13 -->
+
 
 Quelle: DALL-E 2
 
@@ -403,6 +452,10 @@ Rechenschaftspflicht: Die  Entwickler*innen und Betreiber*innen von KI-Systemen 
 
 Fairness ist eine wichtige, aber nicht die einzige Prämisse,  die  bei  der  Entwicklung  und  Nutzung von KI berücksichtigt werden sollte.
 
+
+<!-- PAGE 14 -->
+
+
 ## 4.1 Überblick der Weichenstellung innerhalb der Organisation
 
 Quelle: DALL-E 2
@@ -439,6 +492,10 @@ KI-Zielsetzung
 
 <!-- image -->
 
+
+<!-- PAGE 15 -->
+
+
 ## 4.2 Mindset-Entwicklung auf Organisationsebene
 
 Die  Nutzung  von  Generativer  KI  erfordert  eine Weiterentwicklung  des  Mindsets  auf  Organisationsebene. Um die Potenziale dieser Technologie auszuschöpfen  und  gleichzeitig  Diskriminierung zu vermeiden, sind folgende Punkte zu beachten:
@@ -469,6 +526,10 @@ Auch die Entwicklung eines verantwortungsvollen Mindsets auf Mitarbeiter*inneneb
 
 Die Entwicklung eines kritischen, offenen und reflektiven Mindsets auf Mitarbeiter*innenebene ist ein  wichtiger  Baustein  für  einen  sinnvollen  und fairen Einsatz Generativer KI.
 
+
+<!-- PAGE 16 -->
+
+
 ## 4.4 KI-Strategie auf Führungsebene
 
 Eine klar definierte KI-Strategie auf Führungsebene ist entscheidend, um das Potenzial von KI für Unternehmen zu nutzen. Die Strategie sollte die Vision, Ziele, Anwendungsbereiche, Ressourcen, Risiken, Fairness und Compliance der KI-Entwicklung und -Nutzung beinhalten. Die Entscheidung, ob KI eine integrale Rolle in der Wertschöpfung des Unternehmens spielen soll, wird idealerweise auf Führungsebene getroffen. Ansonsten besteht das Risiko eines unwissentlichen und unerwünschten Einsatzes von KI, was Datenschutzrisiken, Diskriminierungspotenzial  und  Qualitätsprobleme  mit sich bringt. KI sollte daher nicht nur im Bereich der IT, sondern in der Führung priorisiert und strategisch angegangen werden.
@@ -496,6 +557,10 @@ Es  ist  besonders  wichtig,  die  Perspektiven  von marginalisierten  Menschen 
 Quelle: DALL-E 2
 
 <!-- image -->
+
+
+<!-- PAGE 17 -->
+
 
 ## 4.6 KI-Governance: Prinzipien, Prozesse und Strukturen für KI
 
@@ -531,6 +596,10 @@ Quelle: DALL-E 2
 
 KI-Governance ist ein wichtiger Baustein für den fairen und sinnvollen Einsatz von KI. KI-Governance wird im besten Fall zusammen mit der KI-Strategie  auf  Führungsebene  getrieben  und  in  Abstimmung  mit  der  Teamebene  entwickelt  sowie umgesetzt.
 
+
+<!-- PAGE 18 -->
+
+
 ## 4.7 Bedeutung einer klaren Zielsetzung für die Nutzung von KI
 
 Quelle: DALL-E 2
@@ -555,11 +624,19 @@ Im Beispiel der Generierung von Texten für Stellenausschreibungen  könnte  ein
 
 Der Zweck und die Zielsetzung der Anwendung von KI sind für einen fairen Einsatz und eine sinnvolle Entwicklung entscheidend.
 
+
+<!-- PAGE 19 -->
+
+
 <!-- image -->
 
 ## Wie können wir den Umgang mit Generativer KI fair gestalten?
 
 5. Promptingstrategien
+
+
+<!-- PAGE 20 -->
+
 
 ## 5.1 Erkenntnisse beim Prompting von Bildern - mit simplen Beispielen
 
@@ -591,6 +668,10 @@ Deutsch: Google zieht Geminis Funktion KI-Bilder von Menschen zu generieren nach
 
 Quelle: TheVerge
 
+
+<!-- PAGE 21 -->
+
+
 ## Erkenntnisse beim Prompting von Bildern - mit simplen Beispielen
 
 Prompt: 'Erstelle ein Bild von Mitarbeitenden eines deutschen Unternehmens.'
@@ -612,6 +693,10 @@ sehr  begrenzte  Anzahl  an  Mitarbeitenden  aus deutschen Unternehmen dar.
 ## Erkenntnisse:
 
 Wird der Kontext (etwas) ausführlicher beschrieben, dann werden in den KI-Ergebnissen Stereotype häufig verstärkt. Dies trifft insbesondere auf Beschreibungen zu, die traditionell mit Vorurteilen behaftet sind. So werden beispielsweise 'Macht' und 'Erfolg' besonders stark mit weißen Männern assoziiert,  während  'Schönheit'  vor  allem  mit weißen und teils sexualisierten Frauen assoziiert wird.  Auch  Schiedsrichter*innen  werden  häufig, selbst wenn explizit auch Frauen im Prompt gefordert werden, rein männlich abgebildet. Besonders sichtbar sind Stereotype in Bezug auf Gender,  Hautfarbe  und  Alter.  In  den  KI-Ergebnissen existieren  aber  viele  weitere  Stereotype,  u.a.  in Bezug auf Klasse, Behinderung, Gewicht, kulturelle Herkunft und Religion.
+
+
+<!-- PAGE 22 -->
+
 
 ## Erkenntnisse beim Prompting von Bildern - mit simplen Beispielen
 
@@ -635,6 +720,10 @@ In  einem Prompt das Wort 'divers' zu ergänzen ist  in  den  wenigsten Fällen 
 
 Doch  auch  eine  sehr  detaillierte  Beschreibung im Prompt birgt ein Risiko: So kann der Bildaufbau  komplexer  und  teils  unsinnig  werden.  Hier bietet  es  sich  an,  die  Elemente  eines  Prompts, wie  zu  Beginn  beschrieben,  gezielt  einzusetzen und nicht nur einen langen komplizierten Text zu schreiben.
 
+
+<!-- PAGE 23 -->
+
+
 ## 5.2 Faire KI-Prompting Strategien: das KI-FAIRNESS-Framework
 
 | K   | Kontext     | Der gewählte Kontext des Prompts hat einen Einfluss auf die generier - te Diversität und Fairness. Wählen Sie den Kontext mit Bedacht. Tes- ten Sie verschiedene Ausgaben und vergleichen Sie die Ergebnisse.   |
@@ -649,6 +738,10 @@ Doch  auch  eine  sehr  detaillierte  Beschreibung im Prompt birgt ein Risiko: S
 | S   | Sprache     | Wenn möglich, schreiben Sie englische Prompts, um Überset- zungs- und Verständnisfehler der Tools zu vermeiden. Wählen Sie gezielt sprachliche Neutralität vs. Diversität. Anonymisieren Sie.                   |
 | S   | Sinn        | Der wohl wichtigste Punkt: Das WARUMIhres Prompts. Sie müs- sen wissen, was das Ziel Ihres Prompts ist. Wenn Sie dabei Fair- ness priorisieren wollen, dann bauen Sie diese in den Prozess ein.                 |
 
+
+<!-- PAGE 24 -->
+
+
 Quelle: DALL-E 2
 
 ## Im Fokus: Sprache ist Macht
@@ -661,6 +754,10 @@ Der Sprache des Prompts kommt eine große Bedeutung in Bezug auf die generierten
 - Neutralität vs. Diversität: Es kann sinnvoll sein, sowohl in der Sprache auf eine Neutralität zu achten als auch explizit Diversität in die Prompts einzubauen. So ist Diversität in Bezug auf u.a. Gender in KI-generierten Bildern z.B. für das Werben für Veranstaltungen oft wünschenswert und kann explizit im Prompt gefordert werden. Wenn jedoch ein Empfehlungsschreiben für eine Mitarbeiterin generiert werden soll, dann ist es meist gerade nicht empfehlenswert, ihr Gender anzugeben, denn dies birgt die Gefahr von genderstereotypischen Beschreibungen ihrer Leistung und Aufgaben. Hier würde sich eine Neutralität anbieten, welche weder den Namen, noch das Geschlecht der Person im Prompt einschließt. Es könnte auch eine 'Verwirrungstaktik' gewählt werden, damit die KI weder stereotypische Beschreibungen für Männern, noch für Frauen einbaut. Dies kann die Nennung beider Gender in der Beschreibung eines Prompts umfassen, um die KI zu verwirren. So könnte man schreiben 'Erstelle ein Empfehlungsschreiben für einen unserer Mitarbeiter. Sie arbeitet bei uns in der IT und ist eine sehr geschätze Kollegin.' In jedem Fall sollte ein solches Emfpehlungsschreiben von Menschen gelesen, auf Vorurteile und Fehler hin überprüft und korrigiert werden. Besser wäre es, selbst einen Text mit allen relevanten Punkte zu verfassen und Generative KI lediglich für eine schönere Formulierung und zum Testen auf Stereotype zu nutzen. 2
 - Anonymisierung: Es ist sehr wichtig, dass bei der Nutzung von Generativer KI keine personenbezogenen Daten preisgegeben werden. Das gilt besonders,wenn diese nicht für ein Unternehmen gezielt betrieben und trainiert worden ist. In dem Beispiel des Empfehlungsschreibens sollten weder der Name noch das Geburtsdatum oder der Wohnort der Person in den Prompt eingegeben werden. 3
 - Tonalität: Die Tonalität in der Sprache des Prompts hat einen Einfluss auf das Ergebnis. Hier sollten Sie auf eine klare und direkte Sprache achten. Zynismus, Sarkasmus und Humor werden im Zweifel nicht verstanden. Ein gewisser Befehlston kann im Umgang mit aktuellen Generativen KI-Systemen nicht schaden. 4
+
+
+<!-- PAGE 25 -->
+
 
 ## 8. Abschließende Empfehlungen und Ausblick
 
@@ -694,6 +791,10 @@ Mehr zu Vorurteilen in der KI:
 - Das Buch von Catherine D'Ignazio und Lauren F. Klein rund um mehr Feminismus in den Daten: Data Feminism
 - Der Beitrag Diversität bei KI-generierten Bildinhalten I - Wie divers sind KIs wirklich? vom Mittelstand-Digital Zentrum Fokus Mensch
 
+
+<!-- PAGE 26 -->
+
+
 ## Ausblick: Was kann faires KI-Prompting bewirken?
 
 ## Ein positives KI-Narrativ
@@ -709,6 +810,10 @@ Quelle: Midjourney
 <!-- image -->
 
 Eva Gengler ,  die  Erstautorin unseres Leitfadens zu fairem KI-Prompting, ist Expertin im Bereich feministischer KI. Sie beschäftigt sich mit KI und deren gerechterem Einsatz seit 2018. Heute forscht sie, gefördert vom Bayerischen Elitenetzwerk, an einer gerechteren Entwicklung und einem faireren Einsatz von KI als Doktorandin in der Wirtschaftsinformatik an der Friedrich-Alexander-Universität Erlangen-Nürnberg am Schöller-Stiftungslehrstuhl und als Mitglied des Internationalen Doktorand*innenprogramms Business and Human Rights am Menschenrechtsinstitut ihrer Universität. Zudem ist sie Co-Founderin von enableYou und feminist AI, Speakerin und Ex-Vorständin von erfolgsfaktor FRAU e.V.
+
+
+<!-- PAGE 27 -->
+
 
 Quelle: DALL-E 2
 
@@ -733,6 +838,10 @@ Kristina Bodrožić-Brnić Mittelstand-Digital Zentrum Zukunftskultur kristina.b
 Eva Gengler
 
 enableYou Consulting GmbH &amp; feminist AI E-Mail: eva.gengler@enableYou.de Telefon: +49 157 70250777
+
+
+<!-- PAGE 28 -->
+
 
 ## Verwendete Links
 
@@ -763,6 +872,10 @@ enableYou Consulting GmbH &amp; feminist AI E-Mail: eva.gengler@enableYou.de Tel
 - Unsichtbare Frauen (Penguin): https://www.penguin.de/Paperback/Unsichtbare-Frauen/CarolineCriado-Perez/btb/e561586.rhd
 - Data Feminism (MIT): https://data-feminism.mitpress.mit.edu/
 - Diversität bei KI-generierten Bildinhalten I - Wie divers sind KIs wirklich? (Mittelstand-Digital Zentrum Fokus Mensch): https://www.digitalzentrum-fokus-mensch.de/kos/WNetz?art=News. show&amp;id=2164
+
+
+<!-- PAGE 29 -->
+
 
 <!-- image -->
 

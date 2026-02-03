@@ -1,10 +1,11 @@
 ---
 source_file: Dilek_2025_AI_literacy_in_teacher_education_Empowering.pdf
-conversion_date: 2026-02-03T08:47:08.828144
+conversion_date: 2026-02-03T18:25:14.311518
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 research-article
 
 2025
@@ -47,6 +48,10 @@ https://doi.org/10.1177/00224871251325083 Journal of Teacher Education 2025, Vol
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 instance, educators' voices are often disqualified due to their perceived lack of technical expertise, and technological determinism  positions AI  as  an  inevitable  driver  of  educational progress, sidelining pedagogical considerations  (Aleman, 2024; Markham, 2021). These mechanisms restrict nuanced explorations of AI's role, reinforcing false dilemmas, such as choosing  between  protecting  student  agency  and  adopting data-driven assessment tools. As such, generative AI's potential  for  pedagogical  transformation  remains  limited  unless teachers are empowered to critically engage with these technologies and challenge their embedded assumptions.
 
 Generative AI  is  frequently  conceptualized  in  multiple, often conflicting, ways. One perspective sees it as a transformative  tool  that  drives  personalized  learning  and  fosters innovation  in  educational  practices  (Moya  &amp;  Camacho, 2024), while another critiques it as a socio-technical system that reinforces existing power structures and deepens social inequities  (Joyce  &amp;  Cruz,  2024).  Limiting  its  description solely as a tool for pedagogical innovation or exclusively as a system embedded within existing power structures fails to capture its inherent complexity. These differing perspectives create a tension between viewing generative AI as an enabler of efficient, tailored teaching practices and understanding it as a manifestation of systems that perpetuate inequalities and biases.  Consequently,  addressing  this  duality  demands  a nuanced analysis of how these technologies are both shaped by-and actively  shape-the  sociocultural,  economic,  and political contexts of education (Williamson &amp; Eynon, 2020).
@@ -66,6 +71,10 @@ Critical  co-discovery  encourages  educators  to  uncover preexisting  knowledg
 ## Collective Inquiry
 
 Collective  inquiry  refers  to  a  process  where  individuals engage in reflection and collaborative activities to generate new knowledge and improve practice. It involves integrating individual  and  collective  knowledge-building  processes. Collective  inquiry  emphasizes  collaboration  and  sharing ideas to build learning communities that foster both individual  growth  and  collective  innovation  in  teaching  practices (Michos &amp; Hernández-Leo, 2020). In the context of AIEd, it may refer to bringing educators together to inquire into the implementation and implications of AI technologies in education. This collaborative process helps educators to share their  opinions,  examine AI technologies' potential benefits
+
+
+<!-- PAGE 3 -->
+
 
 Figure 1. Critical Co-Discovery Components.
 
@@ -93,6 +102,10 @@ To address the need for AI literacy in education, several frameworks have been d
 
 In this study, we conceptualize AI literacy for educators as an evolving set of knowledge, skills, and critical awareness that  empowers  them  to  progressively  understand,  evaluate, and  teach  with AI  in  an  informed,  reflective,  and  ethically grounded manner (Laupichler et al., 2022). Drawing on existing AI literacy frameworks and definitions (e.g., Bali, 2023; Miao &amp; Cukurova, 2024; Ng et al., 2021), we synthesized a set of core components that capture this developmental process. These synthesized components, detailed in Table 1, reflects educators' growing proficiency and nuanced understanding of
 
+
+<!-- PAGE 4 -->
+
+
 Table 1. AI Literacy Components in the Literature.
 
 | Components                               | Descriptions                                                                                                                                                                                                                                                                                                                                       | Related literature                                                      |
@@ -115,6 +128,10 @@ A substantial body of research highlights the risks associated with AI in educat
 
 This illustrative case presents a comprehensive depiction of the  critical  co-discovery  approach  implemented  within  a newly designed online course titled 'Introduction to Artificial Intelligence in Education,,' the first course on AIEd offered in the  Fall  2023  within  the  Learning  Technologies  minor  program  at  a  research  university  in  Midwest  U.S.  The  course aimed to encourage learners to critically examine the role of AIEd and create a space for them to explore and reflect on its implications. This four-module, one-credit online course was delivered through Canvas learning management system and included both synchronous and asynchronous components. In total, two synchronous sessions were held within the scope of the course in the first and the last week of the course. In synchronous sessions, educators engaged in hands-on collaborative  activities  and  discussions  with  their  peers.  Discussions were  facilitated  through  critical  co-discovery  activities.  In addition, the course instructor shared weekly videos to guide
 
+
+<!-- PAGE 5 -->
+
+
 Figure 2. Course Module Content and Activities.
 
 <!-- image -->
@@ -128,6 +145,10 @@ Getting the underpinnings from critical co-discovery approach, we designed the f
 (b) Teachable Machine, focusing on training algorithms; (c) Polarity  Management,  examining  controversies  in AI  integration; (d) Experimenting with Algorithmic Bias, analyzing biases present in generative AI tools; and (e) The Hype Cycle of AI, categorizing AI applications using the Gartner Hype Cycle model. These activities were facilitated through online tools such as Padlet, DALL-E, and Jamboard and were further  enriched  with  online  discussions  to  promote  deeper engagement and critical dialogue. Figure 2 provides an overview of the course module content and activities.
 
 Collaborative Collage: The Future of AIEd. This activity aims to engage educators in a collaborative and imaginative process by using an AI image generator to create visual representations (collages), envisioning the future of AIEd (Figure 3 provides the  instructions  of  the  activity). While  educators  share  their individual  perspectives  about  how  they  envision  the  future educational setting, they also engage in a collective inquiry process  by  interacting  with  each  other's  alternative  futures. These AI-generated collages catalyze discussions on educators' perspectives regarding the role of AIEd, focusing on topics such as how AI might transform teaching and learning, its impact on the role of teachers, and broader societal
+
+
+<!-- PAGE 6 -->
+
 
 ## Discussion: Visual Collage - The Future of Al A
 
@@ -153,6 +174,10 @@ The  activity  begins  with  an  online  discussion  board, where each educator 
 
 Experimenting With Algorithmic Bias. In this activity, educators explore the concept of algorithmic bias in generative AI tools by conducting experiments with AI image generators. The activity can build on prior discussions about how AI can reflect  cultural  biases,  particularly  in  language  and  image generation. Educators first select a generative AI tool, such as ChatGPT (40), Padlet, Bing Image Creator, or Adobe Firefly,  allowing  them  to  engage  with  different  platforms  and
 
+
+<!-- PAGE 7 -->
+
+
 Figure 4. Teachable Machine Example Artifact.
 
 <!-- image -->
@@ -162,6 +187,10 @@ Figure 5. Activity Page for Polarity Management.
 <!-- image -->
 
 observe how each handles image generation. They then generate images based on prompts like 'a person,' 'a woman,' 'a  house,'  'a  street,'  and  'a  plate  of  food,'  incorporating variations  with  cultural  or  geographical  descriptors.  This step aims to uncover how the AI interprets these prompts and whether  it  introduces  cultural  biases. After  generating  the images, educators collaboratively analyze how AI systems interpret human input, fostering a deeper understanding of inherent biases and enabling them to critique AI-generated speculations in light of their own lived experiences. The collaborative  and  investigative  nature  of  this  activity  invites participants to co-create knowledge about algorithmic bias
+
+
+<!-- PAGE 8 -->
+
 
 Figure 6. Experimenting With AI Bias Discussion Board Example.
 
@@ -180,6 +209,10 @@ Nine educators consented to participate in the study ( N = 9). Participants were
 ## Data Sources and Analysis
 
 Data sources for the study included various artifacts created by students during critical co-discovery activities: Collaborative  Collage  images  ( n = 27),  reflections  on  a
+
+
+<!-- PAGE 9 -->
+
 
 Figure 7. The Hype Cycle Example.
 
@@ -202,6 +235,10 @@ Course  artifacts,  including  images  and  assignment  reflections were analyze
 Critical co-discovery activities, particularly 'Teachable Machine' and 'Experimenting with AI Bias,' aimed to facilitate educators' critical engagement with the fundamentals of AI. Apart from merely training the algorithms, all educators reflected on how machine learning produces adverse impacts by questioning the underlying reasons for these biases and its broader implications. For example, in the Teachable Machine activity, educators engaged in hands-on learning to deepen their understanding of how AI systems function. Once each educator  had  trained  their  algorithms,  they  reflected  on which  limitations  they  encountered  while  they  trained  the algorithms.
 
 One  educator  reflected,  'I  learned  that  the  quality  of machine learning is dependent on the quality of the
+
+
+<!-- PAGE 10 -->
+
 
 Figure 8. Activity Alignment.
 
@@ -226,6 +263,10 @@ information and the variety of information that is input into the machine. Your 
 
 These  findings  suggest  that  while  critical  co-discovery activities  were  helpful  in  helping  educators  engage  with foundational AI concepts, they also highlighted challenges in addressing biases within AI systems. Educators were able to
 
+
+<!-- PAGE 11 -->
+
+
 Figure 10. Educator Artifact Illustrating Students From Different Countries.
 
 <!-- image -->
@@ -246,6 +287,10 @@ The AI  pedagogy  component  was  also  addressed  through various  activities. 
 
 One  educator,  reflecting  on  her  Hype  Cycle,  noted,  'I have heard and expect to hear more success stories that come
 
+
+<!-- PAGE 12 -->
+
+
 Figure 11. Educator Hype Cycle Artifact.
 
 <!-- image -->
@@ -257,6 +302,10 @@ One educator noted,  'I  believe  we  are  making  positive advancements with AI
 This activity helped educators to evaluate the pedagogical value of various AI tools and their potential impact on their educational settings. It also helped them distinguish between overhyped tools and those with genuine educational benefits. However, the findings also revealed that educators might still face challenges in assessing the real pedagogical benefits of these  technologies,  as  reflected  in  their  demand  for  more excellent knowledge about how to use them effectively. The Polarity  Management  activity  provided  educators  with  an opportunity to collaboratively assess both the positive and negative aspects of integrating AI in the classroom and to find a balanced approach to using these tools in their educational settings. In this activity, educators evaluated the benefits  and  potential  unintended  consequences  of  AI  and worked to identify a more balanced strategy for incorporating AI into their  pedagogy. See Figure 12 for the Polarity Management artifact that was created out of educators' discussion posts.
 
 Discussion posts for Polarity Management activity revealed a spectrum of perspectives on how AI can influence pedagogy. One of the perceived advantages of AI integration was  its  ability  to  handle  administrative  and  instructional tasks, allowing educators to dedicate more time to providing emotional support for students and engaging in the creative aspects of teaching. For example, one educator shared, referring to the characters in the polarity map, 'David's Positives: 'He has more free time to prepare the class for the lesson and focus  on  ways  to  support  struggling  students.'  The  same educator  also  reflected  negatives  as:  'David's  Negatives: Too much trust in the system. He may ignore checking facts, biases, and fake information because the result he is getting looks just perfect.' Another concern regarding the AI usage was a need for a human-centered approach while integrating AI in the classrooms. One educator noted that while AI could save  time,  it  could  also  reduce  the  human  aspect  of  the teacher. The Polarity Management activity helped educators pause and reflect on both the positive and negative consequences of AI integration, allowing them to carefully consider its pedagogical implications without fully rejecting or embracing  AI  in  their  teaching  practices.  These  findings
+
+
+<!-- PAGE 13 -->
+
 
 Figure 12. The Polarity Management Activity Artifact.
 
@@ -274,6 +323,10 @@ Critical  co-discovery  activities  offer  educators  a  way  to reflect on thei
 
 Findings  revealed  a  tension  between  integrating  AI  in educational settings and the potential for AI to diminish their roles in the classroom. In their discussion board reflections, one  educator  remarked,  'There  is  also  a  common  thread between our ideas when it comes to AI taking over jobs. It's interesting to ponder the idea of AI being in a teacher role
 
+
+<!-- PAGE 14 -->
+
+
 Figure 14. Educator Artifact Examples: (A) Images Depicting the United States, India, and Canada, (B) Christmas Shopping in Different Countries.
 
 <!-- image -->
@@ -287,6 +340,10 @@ Throughout  the critical co-discovery sessions provided opportunities for inquir
 ## Discussion and Implications for Teacher Educators
 
 In  this  study,  we  examined  how  the  critical  co-discovery approach-integrating inquiry-based, reflective, and critical activities-can  facilitate  key  components  of AI  literacy  in teacher education contexts. Our goal was to empower educators to build agency, critically analyze prevailing AI structures and discourses, and navigate the multifaceted impacts of AI on education. By creating a reflective space through
+
+
+<!-- PAGE 15 -->
+
 
 co-discovery, we investigated what aspects of AI literacy can be  effectively  addressed  and  how  this  approach  can  foster active, critical engagement with AI in educational settings.
 
@@ -303,6 +360,10 @@ Another highlight of the findings was educators' perception of AI as primarily w
 To alleviate these concerns, it is essential to develop AI literacy curricula specifically tailored to educators, making them directly relevant to their professional contexts. While emerging curricula for students, particularly in K-12 settings (e.g., Su &amp; Zhong, 2022), address AI, there is still a significant need for professional development programs designed with educators in mind. Approaches such as co-design can help  create  a  community  of  practice  where  educators  can share  their  experiences  and  deepen  their  understanding beyond just the technological aspects of AI. By continuously questioning AI's affordances, limitations, and broader societal implications, educators can engage in ongoing critique and dialogue, ultimately fostering greater confidence in their role within an AI-integrated educational landscape.
 
 Incorporating AI training into the curriculum for pre-service teachers is also essential for preparing future educators for this complex AI environment. This need can be addressed in  several  ways. Integrating hands-on AI literacy activities into existing in-pre-service courses can ensure new teachers enter the profession with a strong foundation in AI literacy. These experiences can enable them to engage with AI, aligning  with  their  pedagogical  goals  and  enhancing  student learning. As Lan (2024) suggested, a balanced approach to AI literacy, being open to AI technologies while remaining critical  of  their  potential  limitations  and  impacts,  can  help
+
+
+<!-- PAGE 16 -->
+
 
 teachers  become  autonomous  agents  in  AI  integration. Building  on  Mishra  et  al.'s  (2023)  reconceptualization  of TPACK, GenAI is more than an automation tool; it can act as a  collaborative partner for tasks like building counterarguments, analyzing data, and generating analogies. As teachers enact  their  agency,  they  can  reimagine  their  pedagogical approaches, viewing AI as an aid rather than a source of pressure or obligation. The critical co-discovery approach used in this study acknowledges that AI integration is not merely a  pedagogical tool but a socio-technical system embedded within existing power structures. This duality, as we emphasized,  both  calls  for  alternative  approaches  to  engagement and necessitates more spaces where educators can express their emotions, vulnerabilities, and fears-an essential factor in  fostering  their  agency  and  professional  development (Nazari &amp; Hu, 2024).
 
@@ -354,6 +415,10 @@ https://orcid.org/0000-0002-0912-2210
 
 <!-- image -->
 
+
+<!-- PAGE 17 -->
+
+
 - Bali, M. (2023, April 1). What I mean when I say critical AI literacy. Reflecting Allowed . https://blog.mahabali.me/educationaltechnology-2/what-i-mean-when-i-say-critical-ai-literacy/
 - Bali, M. (2024, February 26). Where are the crescents in AI? LSE Higher  Education  Blog .  https://blogs.lse.ac.uk/highereducation/2024/02/26/where-are-the-crescents-in-ai/
 - Campolo,  A., &amp;  Crawford,  K. (2020). Enchanted  determinism:  Power  without  responsibility  in  artificial  intelligence. Engaging Science, Technology, and Society , 6 , 1-19.
@@ -386,6 +451,10 @@ https://orcid.org/0000-0002-0912-2210
 - Nazari, M., &amp; Hu, G. (2024). Novice language teachers steer their emotional  vulnerabilities  toward  exercising  agency:  A  dialogical-community  of  practice  study. Teaching  and  Teacher Education , 152 , 104759.
 - Ng,  D.  T.  K.,  Leung,  J.  K.  L.,  Chu,  S.  K.  W.,  &amp;  Qiao,  M.  S. (2021).  Conceptualizing  AI  literacy:  An  exploratory  review. Computers and Education: Artificial Intelligence , 2 ,  100041. https://doi.org/10.1016/j.caeai.2021.100041
 - Nguyen,  A.,  Ngo,  H.  N.,  Hong,  Y.,  Dang,  B.,  &amp;  Nguyen,  B.  P. T. (2023).  Ethical principles for artificial intelligence in
+
+
+<!-- PAGE 18 -->
+
 
 - education. Education  and  Information  Technologies , 28 (4), 4221-4241.
 - Schiff, D., Rakova, B., Ayesh, A., Fanti, A., &amp; Lennon, M. (2020). Principles  to  practices  for  responsible  AI:  Closing  the  gap . arXiv Preprint. arXiv: 2006 .04707

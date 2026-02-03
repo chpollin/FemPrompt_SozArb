@@ -1,10 +1,11 @@
 ---
 source_file: Chiu_2024_What_are_artificial_intelligence_literacy_and.pdf
-conversion_date: 2026-02-03T08:45:24.849415
+conversion_date: 2026-02-03T18:23:34.246213
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
@@ -64,6 +65,10 @@ GLYPH&lt;0&gt;GLYPH&lt;25&gt;
 
 GLYPH&lt;0&gt;GLYPH&lt;11&gt;GLYPH&lt;0&gt;GLYPH&lt;21&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;GLYPH&lt;0&gt;GLYPH&lt;21&gt;GLYPH&lt;0&gt;GLYPH&lt;23&gt;GLYPH&lt;0&gt;GLYPH&lt;12&gt;
 
+
+<!-- PAGE 2 -->
+
+
 T.K.F. Chiu et al.
 
 and Margerko [31] stated that their definition needs to be reviewed in the future as research on AI education is still in its early stages. The technologies are emerging and disruptive, such as ChatGPT and Sora. These  generative  AI  tools  keep  humans  learning  [9].  Therefore,  this study argues that (i) the concepts of self-reflective mindsets should be included  in  the  definition  of  AI  literacy  (i.e.,  AI  competency),  and practitioner perspectives should be taken into account for designing and developing  K -12  AI  education.  Moreover,  the  two  basic  curriculum design approaches -process and praxis -describe how to nurture student  literacy  [20].  Accordingly,  the  primary  goal  of  this  study  is  to propose  a  framework  for  K -12  teachers  to  promote  AI  literacy  and competency. This comprehensive framework explains core knowledge (the content) and pedagogy (the process of learning) that help students improve their AI literacy and competency (learning outcomes). In order to  accomplish  this  goal,  we  defined  AI  literacy  and  competency  and co-designed the framework with teachers. Since the learning needs of adults who have not received AI education are comparable to those of K -12  students,  the  framework  can  be  applied  to  both  non-AI  professionals and K -12 students, i.e., AI for All and AI for K -12. The findings  of  this  study  will  contribute  to  AI  education  by  enhancing  our knowledge of AI literacy and competency for K -12 students. Researchers and practitioners would use the definition and theoretical framework suggested  by  the  findings  to  design  research  and  learning  activities related to AI literacy and competency.
@@ -94,6 +99,10 @@ GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
 GLYPH&lt;0&gt;
 
+
+<!-- PAGE 3 -->
+
+
 T.K.F. Chiu et al.
 
 research in the past 5 years. One of the first frameworks, known as ' Five Big Ideas in AI, ' was suggested by Touretzky et al. [43]. In 2018, there was little external guidance from the literature on the content and scope of AI education for K -12 students [42]. The AI4K12 Steering Committee, which  consists  of  David  Touretzky,  Christina  Gardner-McCune,  Fred Martin, and Deborah Seehorn, began their work by coming up with a list.  This  list  serves  as  the  organizing  framework  for  the  guidelines, which are developed based on the CSTA Computing Standards. Those standards are structured around the same five core ideas [11]. The five big ideas are:
@@ -117,6 +126,10 @@ Fig. 1. Infographic for AI curriculum for K-12 [4].
 GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
 GLYPH&lt;0&gt;
+
+
+<!-- PAGE 4 -->
+
 
 T.K.F. Chiu et al.
 
@@ -165,6 +178,10 @@ GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
 GLYPH&lt;0&gt;
 
+
+<!-- PAGE 5 -->
+
+
 T.K.F. Chiu et al.
 
 15-minute break. Thus, the researcher and the participants jointly proposed  how  AI  education  should  be  designed  and  delivered,  and  the teachers used the materials as evidence to support their ideas.
@@ -208,6 +225,10 @@ GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
 GLYPH&lt;0&gt;
 
+
+<!-- PAGE 6 -->
+
+
 T.K.F. Chiu et al.
 
 technical audiences. The teachers finally used IBM AI ethical principles as a starting point and reached a consensus on what to include in this topic. They chose five of them because they are more relevant to school students:  fairness  and  biases;  trust  and  transparency;  accountability; social benefit; and privacy and security [18].
@@ -237,6 +258,10 @@ Overall, the teachers ' recommendations for five essential learning experiences 
 GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
 GLYPH&lt;0&gt;
+
+
+<!-- PAGE 7 -->
+
 
 T.K.F. Chiu et al.
 
@@ -273,6 +298,10 @@ Fig. 2. A framework for designing a holistic approach for K-12 AI education (ado
 GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
 GLYPH&lt;0&gt;
+
+
+<!-- PAGE 8 -->
+
 
 T.K.F. Chiu et al.
 
@@ -318,6 +347,10 @@ The authors thank you for the school teachers for participate this study
 GLYPH&lt;0&gt;2GLYPH&lt;0&gt;SGLYPH&lt;0&gt;HGLYPH&lt;0&gt;Q
 
 GLYPH&lt;0&gt;
+
+
+<!-- PAGE 9 -->
+
 
 T.K.F. Chiu et al.
 

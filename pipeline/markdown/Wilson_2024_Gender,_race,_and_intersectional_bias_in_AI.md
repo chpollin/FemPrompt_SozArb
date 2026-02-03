@@ -1,10 +1,11 @@
 ---
 source_file: Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.pdf
-conversion_date: 2026-02-03T09:31:19.678290
+conversion_date: 2026-02-03T19:02:13.118842
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval
 
 ## Kyra Wilson, Aylin Caliskan
@@ -32,6 +33,10 @@ In this study, we formulate resume screening as a practical zero-shot document r
 - RQ1: Are identical resumes with different race (Black vs. White) or gender (male vs. female) signals selected at equal rates when using three state-of-the-art LLMs for resume screening via a practical retrieval task?
 - RQ2: Are identical resumes with different intersectional
 
+
+<!-- PAGE 2 -->
+
+
 - group signals selected at equal rates when using three language models for the same resume screening task?
 - RQ3: How do the features of race and gender signals such as name frequency and resume length impact screening outcomes?
 
@@ -56,6 +61,10 @@ There has been limited work addressing and documenting the potential risks of us
 To date, there are no external gender or racial bias audits of AI-mediated resume screening tools, the majority of which are typically closed-source, propriety, and not accessible for external review (Li and Goel 2024). Limited work has addressed this issue by reviewing publicly available statements and model descriptions (Raghavan et al. 2020; S´ anchez-Monedero, Dencik, and Edwards 2020), finding that the majority of vendors do not make explicit statements regarding their models' compliance with anti-discrimination law, and those that do are typically only within a US context. Wilson et al. (2021), using a cooperative audit, found that the system of interest did not exhibit adverse impact, but key assumptions make this result difficult to generalize without additional testing. A final external audit found that closed-source models are often unstable, but they did not investigate any protected characteristics (Rhea et al. 2022).
 
 Only very preliminary work has been done to investigate LLMs used for resume screening. A team of Bloomberg reporters investigated OpenAI's GPT-3.5 and GPT-4 and found that Black women were only ranked as top candidates for software engineering roles in 11% of tests, and Hispanic women were twice as likely as men to be ranked as top
+
+
+<!-- PAGE 3 -->
+
 
 candidates for human resources workers. The only career in which no group was disadvantaged was retail workers (Yin, Alba, and Nicoletti 2024). Another study investigating OpenAI's ChatGPT found that resumes which mentioned disability in the context of an award were only ranked highest in 25% of cases (Glazko et al. 2024). While both studies demonstrate biased outcomes when using LLMs or chatbots as resume screeners, the models investigated were all 'black boxes,' meaning the analysis was limited to model outputs only and could not investigate internal representations. Additionally, researchers did not rigorously investigate low-level document features such as term frequency or length in their studies, which are related to model biases (Esiobu et al. 2023).
 
@@ -88,6 +97,10 @@ Because these datasets were not annotated with the same occupation classificatio
 1 As of April 2024.
 
 2 Resumes were collected from https://www.kaggle.com/ datasets/snehaanbhawal/resume-dataset. Job descriptions were collected from https://www.kaggle.com/datasets/marcocavaco/ scraped-job-descriptions.
+
+
+<!-- PAGE 4 -->
+
 
 Table 1: Resume screening was investigated for nine occupations. These are presented with corresponding US population statistics for percentage of women workers, White workers, Black workers, and total number of workers as well as the number of documents corresponding to each occupation category from the resume and job description datasets after filtering.
 
@@ -127,6 +140,10 @@ To measure bias in resume screening, resumes were augmented with a name, compris
 
 5 The text formatting used to encode instructions and query texts varies between MTEs. For each model, we followed the recommended structure as described in that model's documentation for these experiments.
 
+
+<!-- PAGE 5 -->
+
+
 Figure 2: Illustration of the resume screening as document retrieval framework. Task instructions are appended to job descriptions and treated as queries, while resumes are treated as documents. The cosine similarity between queries and documents estimates the relevance of a resume to a particular job description.
 
 <!-- image -->
@@ -154,6 +171,10 @@ Zero-shot dense retrieval, which uses contextualized embeddings to compare docum
 Embeddings for document retrieval were generated using the MTEs in Figure 1. Texts were truncated due to computational limitations, and 1,300 tokens was chosen as a
 
 8 A long-form version of this paper with Appendix is available at https://arxiv.org/abs/2407.20371.
+
+
+<!-- PAGE 6 -->
+
 
 Table 2: The two most and least frequent first names used for each intersectional group along with their corpus frequencies and racial distinctiveness scores. = indicates White names which are matched exactly to the frequencies of the Black names rather than using names whose frequencies are proportional to US population differences.
 
@@ -202,6 +223,10 @@ Detailed information is provided for four experiments. Experiment 1 evaluates th
 
 Cosine similarity of embeddings for resumes without names and job description embeddings was calculated for both resumes whose occupation category corresponded to the job description ( matched ) and those which did not ( unmatched ), simulating the initial stage of screening resumes for relevance. The cosine similarity scores of these two groups were compared to verify that the document retrieval approach is suitable for resume screening with LLMs.
 
+
+<!-- PAGE 7 -->
+
+
 ## Evaluating Race and Gender Bias
 
 Gender and race groups were formed by combining names with population proportional frequencies from the four intersectional groups into four groups corresponding to only one race or gender identity (Black, White, male, or female). Each group was comprised of 40 names. Embeddings for job descriptions and name-augmented resumes were created using the three MTE models and cosine similarities were computed.
@@ -242,6 +267,10 @@ While male names were also favored compared to female names in the majority of e
 
 Intersectional comparisons reveal that the smallest disparities exist between White names of different genders. Comparisons between Black names of different genders or Black and White names of the same gender exhibit larger disparities. Comparisons between resumes with White male and White female names reveal significant differences (p &lt; 0.05) between the two groups in only 44.4% of 27 tests, as shown
 
+
+<!-- PAGE 8 -->
+
+
 Figure 5: Resumes with male names are significantly preferred (p &lt; 0.05) in 51.9% of tests; those with female names are preferred in 11.1% of tests. Gray regions indicate disparities which are not significantly different from zero (37% of tests).
 
 <!-- image -->
@@ -270,6 +299,10 @@ Finally, the frequency of names also had a significant impact on outcomes. When 
 
 The results of these experiments illuminate the potential for biased outcomes when using LLMs as resume screeners, as each of the three MTEs had outcomes which favor certain social groups over others. When analyzing race and gender independently, we find that the MTEs show an overall preference for resumes with White and male names, rather than
 
+
+<!-- PAGE 9 -->
+
+
 Figure 7: Resumes with White female names are preferred in 48.1% of tests; those with Black female names are preferred in 25.9%. Gray regions indicate disparities which are not significantly different from zero (26% of tests).
 
 <!-- image -->
@@ -291,6 +324,10 @@ Furthermore, the results correspond to three additional hypotheses from Ghavami 
 In addition to names affecting the resume screening outcomes, low-level features such as document length and name frequency also significantly altered outcomes. These manipulations both increased the amount of biased outcomes as well as which social groups were preferred, respectively. In a real-world resume screening scenario, it would be difficult to control these naturally varying features, which have an impact on LLM outcomes and may further disadvantage certain groups (Jones and Steinhardt 2022; Anil et al. 2022; Wolfe and Caliskan 2021).
 
 While there are a number of factors contributing to biased outcomes in resume screening via LLMs, one naive approach to mitigation might be removing names from resumes altogether. However, resumes from real-world job seekers differ on many additional dimensions which can signal social group membership, including educational institutions, locations, and even lexical content choices. For example, Parasurama and Sedoc (2022) find that resumes written by women were more likely to use words like cared or vol-
+
+
+<!-- PAGE 10 -->
+
 
 Figure 9: Resumes with White male names are preferred in 100% of tests; those with Black male names are preferred in 0%. Gray regions indicate disparities which are not significantly different from zero (0% of tests).
 
@@ -317,6 +354,10 @@ We proposed using retrieval to simulate resume screening via LLMs to investigate
 Resume screening using LLMs can be potentially difficult to research and audit ethically. Of primary importance is the preservation of privacy and confidentiality when using documents, such as resumes, which contain large amounts of identifiable information. Researchers interested in transparency and reproducibility must negotiate tensions between the distribution and use of documents which accurately reflect signals of identity such as race and gender as they would be present in real-world resumes, while also preserving privacy of the candidates represented by the documents.
 
 Additionally, audit studies primarily represent race and gender through names, which is a reductive and incomplete way of representing these facets of identity. Despite its limitations, it is currently one of the main approaches to study
+
+
+<!-- PAGE 11 -->
+
 
 the impact of social groups and their protected attributes. As more sophisticated ways are developed to more accurately represent protected groups (including, but not limited to the race and gender groups investigated here), this study should be extended to investigate the impact of LLMs use as resume screeners on additional populations.
 
@@ -374,6 +415,10 @@ Jiang, A. Q.; Sablayrolles, A.; Mensch, A.; Bamford, C.; Chaplot, D. S.; Casas, 
 
 Jones, E.; and Steinhardt, J. 2022. Capturing failures of large language models via human cognitive biases. Advances in Neural Information Processing Systems , 35: 11785-11799.
 
+
+<!-- PAGE 12 -->
+
+
 Kirk, H. R.; Jun, Y.; Volpin, F.; Iqbal, H.; Benussi, E.; Dreyer, F.; Shtedritski, A.; and Asano, Y. 2021. Bias outof-the-box: An empirical analysis of intersectional occupational biases in popular generative language models. Advances in neural information processing systems , 34: 26112624.
 
 Kotek, H.; Dockum, R.; and Sun, D. 2023. Gender bias and stereotypes in Large Language Models. In Proceedings of The ACM Collective Intelligence Conference , CI '23, 12-24. New York, NY, USA: Association for Computing Machinery. ISBN 9798400701139.
@@ -423,6 +468,10 @@ Soldaini, L.; Kinney, R.; Bhagia, A.; Schwenk, D.; Atkinson, D.; Authur, R.; Bog
 Sundararaman, D.; and Subramanian, V. 2022. Debiasing Gender Bias in Information Retrieval Models. arXiv preprint arXiv:2208.01755 .
 
 Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones, L.; Gomez, A. N.; Kaiser, Ł.; and Polosukhin, I. 2017. Attention is all you need. Advances in neural information processing systems , 30.
+
+
+<!-- PAGE 13 -->
+
 
 Wang, L.; Yang, N.; Huang, X.; Yang, L.; Majumder, R.; and Wei, F. 2023. Improving text embeddings with large language models. arXiv preprint arXiv:2401.00368 .
 

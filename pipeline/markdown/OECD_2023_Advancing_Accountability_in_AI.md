@@ -1,10 +1,11 @@
 ---
 source_file: OECD_2023_Advancing_Accountability_in_AI.pdf
-conversion_date: 2026-02-03T09:13:48.863167
+conversion_date: 2026-02-03T18:45:14.700010
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## ADVANCING ACCOUNTABILITY IN AI
@@ -18,6 +19,10 @@ February 2023 No. 349
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Foreword
 
@@ -43,6 +48,10 @@ This document, as well as any data and map included herein, are without prejudic
 
 The use of this work, whether digital or print, is governed by the Terms and Conditions to be found at http://www.oecd.org/termsandconditions.
 
+
+<!-- PAGE 3 -->
+
+
 ## Acknowledgements
 
 This  report  is  based  on  the  work  of  the  OECD.AI  Expert  Groups  on  Tools  &amp;  Accountability  and Classification &amp; Risk.  It was prepared under the aegis of the OECD Working Party on AI Governance (AIGO). The expert group on Tools &amp; Accountability was co-chaired by Nozha Boujemaa (IKEA); Andrea Renda (Centre for European Policy Studies); and Barry O'Brien (IBM). The group on Cl assification &amp; Risk  was  co-chaired  by  Marko  Grobelnik  (Slovenian  Jozef  Stefan  Institute -JSI);  Dewey  Murdick (Center for Security and Emerging Technology - CSET); and Sebastian Hallensleben (CEN-CENELEC). Luis Aranda and Karine Perset, OECD Digital Economy Policy Division, led the report development and drafting.
@@ -60,6 +69,10 @@ ADVANCING ACCOUNTABILITY IN AI
 
 
 3
+
+
+<!-- PAGE 4 -->
+
 
 ## Table of contents
 
@@ -113,6 +126,10 @@ ADVANCING ACCOUNTABILITY IN AI
 
 34
 
+
+<!-- PAGE 5 -->
+
+
 ## ADVANCING ACCOUNTABILITY IN AI  5
 
 | 4. TREAT: Prevent, mitigate, or cease AI risks                                                                                                                                  | 4. TREAT: Prevent, mitigate, or cease AI risks                                                                                                                                  | 36   |
@@ -148,6 +165,10 @@ ADVANCING ACCOUNTABILITY IN AI
 | Table 4.6. Approaches to treating risks to robustness, security, and safety                                                                                                     | Table 4.6. Approaches to treating risks to robustness, security, and safety                                                                                                     | 42   |
 | Table 5.1. Characteristics of AI auditing and review access levels                                                                                                              | Table 5.1. Characteristics of AI auditing and review access levels                                                                                                              | 47   |
 
+
+<!-- PAGE 6 -->
+
+
 ## Abstract
 
 Trustworthy  AI  calls  for  AI  actors  to  be  accountable  for  the  proper  functioning  of  their  AI  systems  in accordance with their role, context, and ability to act.
@@ -155,6 +176,10 @@ Trustworthy  AI  calls  for  AI  actors  to  be  accountable  for  the  proper  
 This  report  presents  research  and  findings  on  accountability  and  risk  in  AI  systems  by  providing  an overview of how risk-management frameworks and the AI system lifecycle can be integrated to promote trustworthy AI. It also explores processes and technical attributes that can facilitate the implementation of values-based principles for trustworthy AI and identifies tools and mechanisms to define, assess, treat, and govern risks at each stage of the AI system lifecycle.
 
 This report leverages OECD frameworks -including the OECD AI Principles, the AI system lifecycle, and the OECD framework for classifying AI systems -and recognised risk-management and due-diligence frameworks  like  the  ISO  31000  risk-management  framework,  the  OECD  Due  Diligence  Guidance  for Responsible Business Conduct, and the US National Institute of Standards and Technology's AI risk -management framework.
+
+
+<!-- PAGE 7 -->
+
 
 ## Résumé
 
@@ -166,6 +191,10 @@ Il explore également les processus et les attributs techniques qui peuvent faci
 
 Ce rapport s'appuie sur les cadres de l'OCDE dans le domaine de l'IA - notamment les Principes de l'OCDE relatifs à l'IA, le cycle de vie des systèmes d'IA et le cadre de l'OCDE pour la classification des systèmes d'IA - et sur des cadres reconnus de gestion des risques et de diligence raisonnable, tels que le cadre de gestion des risques ISO 31000, le Guide de l'OCDE sur la diligence raisonnable pour un comportement responsable des entreprises et le cadre de gestion des risques liés à l'IA du l'Institut national des normes et de la technologie (NIST) des États-Unis.
 
+
+<!-- PAGE 8 -->
+
+
 ## Übersicht
 
 Vertrauenswürdige  KI  erfordert,  dass  KI-Akteure  für  das  ordnungsgemäße  Funktionieren  ihrer  KISysteme entsprechend ihrer Rolle, ihrem Kontext und ihrer Handlungsfähigkeit verantwortlich sind.
@@ -173,6 +202,10 @@ Vertrauenswürdige  KI  erfordert,  dass  KI-Akteure  für  das  ordnungsgemäß
 Dieser Bericht präsentiert Forschungsprojekte und Ergebnisse zu Verantwortlichkeit und Risiko in KISystemen, und gibt einen Überblick darüber, wie  Risikomanagement-Rahmenwerke  und  der Lebenszyklus von KI-Systemen integriert werden können, um vertrauenswürdige KI zu fördern. Dieser Bericht  untersucht  außerdem  Prozesse  und  technische  Eigenschaften,  die  die  Umsetzung  von wertebasierten Prinzipien für vertrauenswürdige KI erleichtern können, und identifiziert Werkzeuge und Mechanismen zur Definition, Bewertung, Behandlung und Steuerung von Risiken in jeder Phase des Lebenszyklus von KI-Systemen.
 
 Dieser Bericht  nutzt  die  OECD-Rahmenwerke  -  einschließlich  der  OECD-KI-Grundsätze,  des Lebenszyklus von KI-Systemen und des OECD-Rahmenwerks für die Klassifizierung von KI-Systemen -  sowie  anerkannte  Rahmenwerke  für  Risikomanagement  und  Sorgfaltspflicht  wie  das  ISO  31000Risikomanagement-Rahmenwerk, die OECD-Leitlinien für die Sorgfaltspflicht bei verantwortungsvollem Geschäftsgebaren und das KI-Risikomanagement-Rahmenwerk des US National Institute of Standards and Technology.
+
+
+<!-- PAGE 9 -->
+
 
 ## Background and objectives
 
@@ -183,6 +216,10 @@ This report does not provide precise guidance to assess AI risks and impacts, wh
 1. Provides  a  comprehensive  overview  of  how  risk-management  frameworks  and  the  AI  system lifecycle can be integrated to promote trustworthy AI;
 2. Explores processes and technical attributes that can facilitate the implementation of values-based principles for trustworthy AI (such as the OECD AI Principles); and
 3. Identifies tools and mechanisms to define, assess, treat, and govern risks at each stage of the AI system lifecycle.
+
+
+<!-- PAGE 10 -->
+
 
 ## Executive summary
 
@@ -200,12 +237,20 @@ Governance underpins the AI risk management process in two ways. First, it provi
 
 -  Monitoring and reviewing is an continual process taking into account the evolving nature of some AI systems and the environments in which they operate. It includes technical components such as
 
+
+<!-- PAGE 11 -->
+
+
 verifying  that  training  data  is  not  out-ofdate to avoid 'data drift'. It also includes non-technical components such as monitoring AI incidents, i.e. cases where AI risks materialised into harm.
 
 -  Documenting the steps, decisions, and actions conducted during risk management and explaining their rationale can bolster accountability if it enhances transparency and enables human review. It means keeping a log or audit trail that informs functions like auditing, certification, and insurance. Whether the AI system is built inhouse or by a third party, documentation and logs should 'follow the sy stem' throughout the AI system lifecycle. That is, each party or actor AI developer, data processor AI vendor and AI deployer -might need to conduct its own assessment and document actions taken to manage risks.
 -  Communicating that  an  AI  system meets regulatory, governance, and ethical standards is also crucial since the core objective of AI risk management is to ensure AI systems are trustworthy and safe and protect human rights and democratic values. Where appropriate, it is important to verify and communicate that an AI system conforms to and is interoperable with national and international regulations and standards.
 -  Consultation about processes and results is a core element of trustworthy AI because everyone directly or indirectly involved in or affected by the development or use of an AI system plays a role in ensuring accountability in the AI ecosystem. All actors should manage risks based on their roles, the context, and following the state-of-the-art. Actors in the AI ecosystem include: (1) the suppliers of AI knowledge and resources providing the inputs (i.e. 'from whom?'); (2) the actors actively involved in the design, development, deployment and operation of the AI system (i.e. 'by whom?'); (3) the users of the AI system (i.e. 'for whom?'); and (4) the stakeholders affected by the AI system, including vulnerable groups (i.e. 'to whom?').
 -  Embedding a  culture of risk management in policies and management systems is needed both across organisations operating AI systems and the AI value chain. A culture of risk management requires strong commitment by organisations' leadership teams.
+
+
+<!-- PAGE 12 -->
+
 
 12
 
@@ -227,6 +272,10 @@ Le traitement des risques doit être proportionné aux conséquences négatives 
 
 La gouvernance sous-tend le processus de gestion de s risques liés à l'IA de deux façons. D'une part, elle ajoute une couche de contrôle au processus de gestion des risques inhérents à l'IA, par le biais notamment d'une surveillance et d'un  examen continus, et d'activités de documentation, de communication et  de consultation sur les actions et les résultats. D'autre part, elle offre divers mécanismes permettant d'intégrer le  processus  de  gestion  des  risques  liés  à  l'IA  à  la  gouvernance  organisationnelle  de  plus  grande
 
+
+<!-- PAGE 13 -->
+
+
 envergure, favorisant par là même l'instauration d'une culture de la gestion des risques à la fois au sein des organisations et à l'échelle de l'ensemble de la chaîne de valeur de l'IA.
 
 -  La surveillance et l' examen s'inscrivent dans le cadre d'un processus continu tenant compte du caractère évo lutif de certains systèmes d'IA et des environnements dans lesquels ils évoluent. Ce volet comprend des aspects techniques, tels que la vérification effectuée pour s'assurer que les données  d'entraînement  ne  sont  pas  obsolètes  afin  d'éviter  une  « dérive  des  données ».  Il comporte également des éléments non techniques, comme la surveillance des incidents liés à l'IA, à savoir les cas dans lesquels les risques se sont concrétisés et ont causé des préjudices.
@@ -234,6 +283,10 @@ envergure, favorisant par là même l'instauration d'une culture de la gestion d
 -  La communication quant  à  la  conformité  d'un  système  d'IA  au  regard  des  normes  de réglementation, de gouvernance et d'éthique est également essentielle dans la mesure où l'objectif premier de la gestion des risques en matière d' IA est de garantir que les systèmes sont dignes de confiance, sûrs, et respectent les droits humains et les valeurs démocratiques. Le cas échéant, il importe  de  vérifier  et  de  faire  savoir  qu'un  système  d'IA  est  conforme  aux  réglementations  et normes nationales et internationales et interopérable avec elles.
 -  La consultation sur les processus et les résultats est un élément fondamental d'une IA digne de confiance car toute personne qui, directement ou indirectement, intervient dans le développement ou l'utilisation d'un système d'IA ou est concernée par ces étapes, joue un rôle dans l'exercice des responsabilités au sein de l'écosystème de l'IA. Tous les acteurs devraient participer à la gestion des risques en fonction de leur rôle, du contexte et de l'état actuel des connaissances. Les acteurs de l'écosystème de l'IA comprennent :  (1) les  pourvoyeurs de connaissances et de ressources liées à l'IA, qui en fournissent les intrants (« de qui ? ») ; (2) les acteurs qui participent activement à  la  conception,  au développement,  au  déploiement  et  à  l'exploitation  du  système  d'IA  (« par qui ? ») ; (3) les utilisateurs du système d'IA (« pour qui ? ») ; et (4) les parties prenantes affectées par le système d'IA, notamment les groupes vulnérables (« à qui ? »).
 -  Il est nécessaire d' intégrer une culture de la gestion des risques dans les politiques et les systèmes de gestion, à la fois à l'échelle des organisations qui exploitent les systèmes d'IA et à celle de la chaîne de valeur de l'IA. Une telle culture exige un enga gement fort de la part des équipes de direction des organisations.
+
+
+<!-- PAGE 14 -->
+
 
 ## Zusammenfassung
 
@@ -249,6 +302,10 @@ Die  Behandlung  der  Risiken  sollte  ihren  potenziellen  negativen  Auswirkun
 
 Governance untermauert den KI-Risikomanagementprozess in zweierlei Hinsicht. Erstens bietet sie eine Kontrollebene  für  den  KI-Risikomanagementprozess,  u.  a.  durch  kontinuierliche  Überwachung  und Überprüfung  sowie  durch  Dokumentation,  Kommunikation  und  Konsultation  zu  Maßnahmen  und
 
+
+<!-- PAGE 15 -->
+
+
 Ergebnissen. Zweitens bietet sie eine Reihe von Mechanismen zur Einbettung des KIRisikomanagementprozesses in eine umfassendere organisatorische Governance, die eine  Kultur des Risikomanagements sowohl innerhalb von Organisationen als auch in der gesamten KIWertschöpfungskette fördert.
 
 -  Die Überwachung und Überprüfung ist ein fortlaufender Prozess, der die evolvierende Art einiger KI-Systeme und die Umgebungen, in denen sie arbeiten, berücksichtigt. Er umfasst technische Komponenten  wie  die  Verifizierung,  dass  die  Trainingsdaten  nicht  veraltet  sind,  um  eine "Datendrift" zu vermeiden. Es umfasst auch nicht-technische Komponenten wie die Überwachung von KI-Zwischenfällen, d. h. von Fällen, in denen sich KI-Risiken in Schäden niederschlagen.
@@ -256,6 +313,10 @@ Ergebnissen. Zweitens bietet sie eine Reihe von Mechanismen zur Einbettung des K
 -  Die Mitteilung, dass ein KI-System regulatorische, Governance- und ethische Standards erfüllt, ist ebenfalls  von  entscheidender Bedeutung,  da  das  Kernziel  des  KI-Risikomanagements  ja darin besteht, sicherzustellen, dass KI-Systeme vertrauenswürdig und sicher sind und die Menschenrechte  und  demokratischen  Werte  schützen.  Gegebenenfalls  ist  es  wichtig,  zu überprüfen  und  zu  kommunizieren,  dass  ein  KI-System  mit  nationalen  und  internationalen Vorschriften und Standards konform und interoperabel ist.
 -  Die Konsultation über Prozesse und Ergebnisse ist ein Kernelement vertrauenswürdiger KI, da jeder, der direkt oder indirekt an der Entwicklung oder Nutzung eines KI-Systems beteiligt oder davon betroffen ist, eine Rolle bei der Gewährleistung der Verantwortlichkeit im KI-Ökosystem spielt. Alle Akteure sollten Risiken auf der Grundlage ihrer Rollen, des Kontexts und nach dem Stand der Technik managen. Zu den Akteuren im KI-Ökosystem gehören: (1) die Anbieter von KIWissen und -Ressourcen, die die Inputs liefern  (d.  h.  "woher?");  (2)  die  Akteure,  die  aktiv  am Entwurf, der Entwicklung, dem Einsatz und dem Betrieb des KI-Systems beteiligt sind (d. h. "von wem?"); (3) die Nutzer des KI-Systems (d. h. "für wen?"); und (4) die vom KI-System betroffenen Interessengruppen, einschließlich gefährdeter Gruppen (d. h. "an wen?").
 -  Die Verankerung einer Kultur des Risikomanagements in Strategien und Managementsystemen ist sowohl in Organisationen, die KI-Systeme betreiben, als auch in der KI-Wertschöpfungskette erforderlich. Eine Kultur des Risikomanagements  erfordert ein starkes  Engagement  der Führungsteams von Organisationen.
+
+
+<!-- PAGE 16 -->
+
 
 ## 1. Introduction
 
@@ -276,6 +337,10 @@ Source: OECD (2022[1]).
 The research challenges of identifying, prioritising, and satisfying the attributes that make an AI system trustworthy remain open (NSF, 2022[2]). Several organisations have principles on how to develop AI that benefits all stakeholders (Fjeld et al., 2020[3]; Jobin, Ienca and Vayena, 2019[4]). For example, the valuesbased OECD AI Principles promote AI that is innovative and trustworthy, and respects human rights and democratic values. These Principles focus on how governments and other actors can shape a humancentric approach to trustworthy AI (Box 1.2).
 
 <!-- image -->
+
+
+<!-- PAGE 17 -->
+
 
 ## Box 1.2. Trustworthy AI per the OECD AI Principles
 
@@ -299,6 +364,10 @@ The OECD AI Principles state that 'AI actors should be accountable for the prope
 
 Demand is growing in the public and private sectors for tools and processes to help document AI system decisions and to facilitate accountability throughout the AI system lifecycle. The field includes major AI standardisation initiatives, including by the International Organization for Standardization (ISO), Institute of  Electrical  and  Electronics  Engineers  (IEEE),  International  Telecommunication  Union  (ITU),  National Institute of Standards and Technology (NIST), European Telecommunications Standards Institute (ETSI), Internet Engineering Task Force (IETF), and European Committee for Electrotechnical Standardization (CEN-CENELEC), with specific strands focusing on AI design (e.g. trustworthiness by design); AI impact, conformity, and risk assessments; and risk-management frameworks for AI. It also includes governmental and intergovernmental initiatives such as the EU's proposal for a horizontal AI Regulation, the UK's AI Standards Hub, the European AI Alliance, the Council of Europe's Committee on Artificial Intelligence (CAI),  and  the  EU-US  Trade  and  Technology  Council;  certification  schemes  such  as  that  of  the
 
+
+<!-- PAGE 18 -->
+
+
 ## 18  ADVANCING ACCOUNTABILITY IN AI
 
 Responsible AI Institute (RAII), the IEEE CertifAIEd , and Denmark's D -Seal; and risk-management work to provide assurances for trustworthy AI through verification, validation, and auditing.
@@ -316,6 +385,10 @@ Risk-management approaches applied throughout the AI system lifecycle can identi
 
 Providing accountability for trustworthy AI requires that actors leverage processes, indicators, standards, certification schemes, auditing, and other mechanisms to follow these steps at each phase of the AI system lifecycle  (Figure 1.1).  This  should  be  an  iterative  process  where  the  findings  and  outputs  of  one  riskmanagement stage feed into the others.
 
+
+<!-- PAGE 19 -->
+
+
 Figure 1.1. High-level AI risk-management interoperability framework
 
 Governing and managing risks throughout the lifecycle for trustworthy AI.
@@ -326,6 +399,10 @@ Governing and managing risks throughout the lifecycle for trustworthy AI.
 
 The high-level AI risk management framework offers a systematic way to govern and manage risks to trustworthy AI at e ach phase of the AI system lifecycle. The framework's graphical representation enables the users to situate themselves visually at different steps of the process. For example, treating risks to human rights, values, and fairness (e.g. bias and discrimination) during deployment, or monitoring risks to robustness, security, and safety (e.g. adversarial attacks) during data collection and processing would each receive a different graphical representation (Figure 1.2).
 
+
+<!-- PAGE 20 -->
+
+
 ## Figure 1.2. Sample uses of the high-level AI risk management interoperability framework
 
 - a) Treating risks to human rights and fairness during deployment
@@ -334,6 +411,10 @@ The high-level AI risk management framework offers a systematic way to govern an
 <!-- image -->
 
 The following sections illustrate the use of the high-level AI risk management interoperability framework to define (Section 2), assess (Section 3), treat (Section 4), and govern (Section 5) AI risks. Section 6 presents next steps.
+
+
+<!-- PAGE 21 -->
+
 
 ## 2. DEFINE: Scope, context, actors, and criteria
 
@@ -363,6 +444,10 @@ Source: OECD (2022[1]).
 
 Risk management practices differ by context and use case. The context of an AI system represents its socioeconomic environment -including its natural and physical environment. Context is more relevant to
 
+
+<!-- PAGE 22 -->
+
+
 the specific application of an AI system than to an AI system in general. Context is observable and can be influenced by actions that result from an AI system's outputs (OECD, 2019[6]).
 
 The OECD Framework for the Classification of AI Systems could be useful to define a system's context and scope. For instance, according to this Framework, core characteristics of the economic context include the sector in which an AI system is deployed, its business function, its critical (or non-critical) nature, and its deployment scale and impact on critical functions and activities. The system operator plays a role in determining and analysing the context of an AI system (OECD, 2022[1]). Using an AI system in ways that differ from its intended use (e.g. secondary uses or misuses) might require a re-assessment of the context and risks.
@@ -382,6 +467,10 @@ Taking a balanced approach to managing risks without violating human rights or s
 ## 2.3 Actors
 
 Accountability in the AI ecosystem should be shared by everyone directly and indirectly involved in or affected by the development or use of an AI system. All actors should manage risks based on their roles, the context, and following the state-of-the-art (OECD, 2019[5]). Four questions help identify the actors in the AI ecosystem (Figure 2.1): (1) From whom? -the suppliers of AI knowledge providing the inputs; (2)
+
+
+<!-- PAGE 23 -->
+
 
 By whom -the actors actively involved in the design, development, deployment, and operation; (3) For whom? -the users of the AI system; and (4) Unto whom? -the stakeholders affected by the AI system. An analysis of the actors that should be involved in the risk management process -as well as their roles and responsibilities -should be undertaken during the define stage. 5
 
@@ -403,6 +492,10 @@ AI  a ctors  in  the  'Plan and design'  phase  are  managers,  end -users,  and
 
 A ctors in the 'Collect and process data' phase include data collectors and data processors involved in gathering and cleaning data, labelling, performing checks for completeness and quality, and documenting the characteristics of the dataset. Dataset characteristics include information on how a dataset is created, its composition, intended uses, and how it is maintained over time (OECD, 2019[13]). Data collection and
 
+
+<!-- PAGE 24 -->
+
+
 processing currently involve expertise from actors such as data scientists, domain experts, data engineers, and data providers (OECD, 2022[1]).
 
 A ctors in the 'Build and use the model' phase include developers and modellers involved in creating or selecting algorithms and models, their calibration, training, and inferencing or use. Model building and inferencing involve human experts such as modellers, developers, model engineers, data scientists, and domain experts (OECD, 2022[1]).
@@ -420,6 +513,10 @@ The users of an AI system or application are individuals or organisations that u
 ## Stakeholders ('u nto whom')
 
 Stakeholders encompass all organisations and individuals affected by AI systems, directly or indirectly. Stakeholders do not necessarily interact with the system (OECD, 2022[1]) and may include 'bystanders' (e.g. pedestrians affected by self-driving cars). This broad group encompasses civil society, the technical and  academic  communities,  industry,  governments,  labour  representatives  and  trade  unions,  and  as workers or data subjects. AI suppliers, actors and users can in some cases also be affected by the AI system and thus belong to the stakeholders group (OECD, 2019[5]). Incident-reporting mechanisms and
+
+
+<!-- PAGE 25 -->
+
 
 awareness-raising campaigns can help stakeholders monitor downstream risks, negative externalities, and risks that materialise despite a system working as intended. They can also identify secondary uses or misuses of an AI system -or parts of it -for malicious purposes. Regulators play a key role in protecting stakeholders' rights.
 
@@ -441,6 +538,10 @@ Table 2.1. Sample processes and technical attributes per OECD AI Principle
 
 The next section describes some of these processes and technical attributes in detail and explores illustrative tools to assess risks in AI systems.
 
+
+<!-- PAGE 26 -->
+
+
 ## 3. ASSESS: Identify and measure AI risks
 
 Once the scope, context, actors and criteria for an AI system are defined,  it  is  important  to  assess  the  risks  it  poses  and  which could result in the AI system failing to meet its trustworthiness objectives.  This  process  consists  of  identifying  or  discovering risks, analysing the mechanisms by which those risks may occur, and  evaluating  their  likelihood  of  occurring  as  well  as  their severity.
@@ -461,6 +562,10 @@ Ensuring that AI systems benefit people and the planet entails assessing and imp
 
 -  Accuracy : a n AI system's ability to perform the task for which is was developed, such as classifying information  into  correct  categories  or  making  predictions  and  recommendations  that  are  then verified. Accuracy can be quantified by estimating how well the system works through error rates or metrics like the 'expected generalisation performance' (Arlot and Celisse, 2010[17]). Improving systems' accuracy and performance can enhance productivity and economic growth, and could thus enhance well-being (e.g. by improving health-related outcomes) and decrease financial and environmental costs. 7
 -  Sustainability: t he computing power ('compute') used to train AI models has grown exponentially in recent years, affecting workloads and energy consumption at data centres. On the one hand, advances in data science and AI chips manufacturing as well as novel computing architectures are enabling more efficient AI models that leverage smaller training datasets and perform fewer training runs. This leads to a more sustainable use of computational resources, also aided by growth in clean energy to power data centres (Strier, Clark and Khareghani, 2022[18]).
+
+
+<!-- PAGE 27 -->
+
 
 On  the  other  hand,  there  is  ongoing  debate  about  the  trade-off  between  general-purpose  AI, including large language models (LLMs), and purpose-specific AI. LLMs require large volumes of training data and computational power, and consume more energy than purpose-specific AI. Higher energy consumption should thus be weighed against the benefits of these systems (Bender et al., 2021[19]).
 
@@ -485,6 +590,10 @@ Identifying biases is a challenge for actors throughout the AI system lifecycle 
 -  Measurement bias: Omission (or  inclusion)  of  variables  that  should  (or  not)  be  in  the  model, including proxies for protected attributes or groups (e.g. neighbourhood as a proxy for race).
 -  Methodological  and  evaluation  bias :  Errors  in  the  definition  of  metrics  (e.g.  erroneous assumptions about a target population), model validation and calibration, and evaluation of results.
 
+
+<!-- PAGE 28 -->
+
+
 -  Monitoring bias and skewed samples : Inappropriate interpretation of a system's results during monitoring, initial biases that compound over time and skew training data, or temporary changes in the way data is captured.
 -  Feedback loops and popularity bias : Recommendation algorithms suffer from popularity bias, where a few popular items are recommended frequently to users. This creates a feedback loop where frequent recommendations get more reactions and are thus recommended more frequently.
 
@@ -508,6 +617,10 @@ The decision about which AI fairness metric to use should consider the context, 
 
 Unless they are consistent with human rights, and fundamental and democratic values, AI systems can cause  or  exacerbate  impacts  of  asymmetries  in  power  and  access  to  information,  such  as  between employers and employees, businesses and consumers, or governments and citizens (EU-HLEG, 2019[28]).
 
+
+<!-- PAGE 29 -->
+
+
 When an AI system includes intellectual property, the rights to the model and its parameters must be preserved. In addition, in cases such as medical applications and others, the privacy of the training data needs to be preserved. Data protection in AI systems relates to preventing the exposure of the model and its training data (De Cristofaro, 2020[29]). Data-governance mechanisms should be in place to ensure the quality and integrity of the data used to train t he model; its relevance in the system's deployment context; its  access  protocols;  and  the  model's  capacity  to  process  data  in  a  manner  that  protects  privacy  and sensitive information. Issues include:
 
 -  Privacy and data protection: AI systems should respect privacy and data protection throughout their  lifecycle  (OECD,  2019[5]).  This  includes  information  provided  by  users  and  user  data generated through interaction with the system. Data access and disposal protocols outlining who can  access  and  delete  data,  and  under  which  circumstances,  should  also  be  put  in  place (Butterworth, 2018[30]).
@@ -519,6 +632,10 @@ Risks to privacy and data governance can arise at the data and the model levels,
 -  At the model level: Risks to privacy and data protection at the model level include attempts to infer model parameters and build ' knockoff ' versions or copies of the model. Techniques that aim to extract a full copy or equivalent version of a model, or to copy some of its functionalities could help  AI  actors  assess  vulnerability  at  the  model  level  (Ateniese  et al.,  2015[33];  Tramèr  et al., 2016[34]; Orekondy, Schiele and Fritz, 2019[35]).
 -  At the intersection of data and model levels: Risks include making inferences about certain members  of  the  population  or  of  the  training  dataset  through  its  interactions  with  the  model. Techniques to assess vulnerability levels include: statistical disclosure (Dwork and Naor, 2010[36]); model inversion (Fredrikson, Jha and Ristenpart, 2015[37]); inferring class representatives (Hitaj, Ateniese and Perez-Cruz, 2017[38]); and membership and property inference (Shokri et al., 2017[39]; Ganju et al., 2018[40]; Melis et al., 2019[41]).
 -  At the human-AI interaction: Training, checklists and verification processes could help identify risks  to  privacy  and  data  governance  arising  from  the  interaction  between  the  human  and  the system (e.g. unintentional actions -or lack of action -by developers or users that compromise the privacy or data governance of an AI system).
+
+
+<!-- PAGE 30 -->
+
 
 Figure 3.1. UK Information Commissioner's Office (ICO) qualitative rating for data protection
 
@@ -541,6 +658,10 @@ AI 'may have disparate effects within and between societies and economies, notab
 
 AI can support the fulfilment of human rights or create new risks that human rights might be deliberately or accidently violated. Human rights law, together with other legal and institutional structures, could serve as a tool to help ensure human-centred AI (Box 3.2).
 
+
+<!-- PAGE 31 -->
+
+
 ## Box 3.2. Human rights and AI
 
 International human rights refer to a body of international laws, including the International Bill of Rights, and regional human rights systems developed around the world over the past 70 years. Human rights set universal minimum standards based on, among other things, values of human dignity, autonomy, equality, and the rule of law. These standards and the legal mechanisms linked to them create legally enforceable obligations for countries to respect, protect, and fulfil human rights. They also require that those whose rights have been denied or violated be able to obtain remedy.
@@ -558,6 +679,10 @@ Examples of HRIAs include Canada's Algorithmic Impact Assessment (AIA), a mandat
 HRIAs should also assess risks arising from data labelling and enrichment practices. Multiple studies (Gray and Suri, 2019[48]; PAI, 2021[49]) highlight that the conditions under which data-enrichment labour is sourced and performed are often non-transparent, enabling poor treatment of workers. This is an issue with direct relevance to the accountability of AI actors and one that impacts training data quality. The guidance and toolbox  from  the  Danish  Institute  for  Human  Rights  illustrates  the  use  of  HRIAs  for  assessing  and addressing the adverse impacts of business activities on human rights.
 
 Other  risks  related  to  human  rights  and  democratic  values  to  consider  include  how  an  AI  system's deployment affects the distribution and balance of power across stakeholder groups, and its impacts on human  agency  through,  for  instance,  manipulation  and  polarisation  of  opinions  at  scale.  Although identification of such macro-level risks can be challenging, it is key to accountability in the AI ecosystem.
+
+
+<!-- PAGE 32 -->
+
 
 Trade-offs might exist between different human rights. To reconcile them, international human rights law allows restrictions on different rights and freedoms if these pass the 'three -part test' of legality, legitimacy, and  proportionality  and  necessity.  HRIAs  could  facilitate  balancing  such  trade-offs  in  the  design  and development stages of an AI system. For example, they could examine if a design choice is in compliance with applicable legislation and proportionate and necessary given its potential impacts on various human rights and the interests of different stakeholders (Arai-Takahashi, 2002[50]; Greer, 2004[51]).
 
@@ -579,6 +704,10 @@ There are multiple ways to generate and provide interpretations and explanations
 
 -  Model-specific vs. model-agnostic tools: model-specific techniques can be applied to a single class or type of algorithm (e.g. p-values in a linear model), while model-agnostic techniques apply to multiple types of algorithms (e.g. local interpretable modelagnostic explanations 'LIME') .
 -  Local vs. global techniques: local  interpretability  techniques  detail  how  a  model  arrived  at  a specific  prediction,  such  as  showing  the  subset  of  pixels  that  had  the  biggest  impact  on  the classification  of  an  image  (e.g.  using  techniques  such  as ' Shapley values ' );  global  techniques detail what features are important to the model overall (e.g. using techniques to assess feature or variable importance).
+
+
+<!-- PAGE 33 -->
+
 
 ## Transparency and traceability
 
@@ -607,6 +736,10 @@ Source: adapted from IDB-OECD (2021[21]).
 
 Addressing the safety and security challenges of AI systems is critical to fostering trust in AI. In this context, robustness means the ability to endure or overcome adverse conditions, including digital security risks, and maintain its level of performance. AI systems should also not generate unreasonable safety risks, including to physical security, in conditions of either normal use or foreseeable misuse throughout their lifecycle.  Laws  and  regulations  in  areas  such  as  consumer  protection  identify  what  constitutes unreasonable safety risks. Governments, in consultation with stakeholders, must determine to what extent these laws and regulations apply to AI systems (OECD, 2022[57]).
 
+
+<!-- PAGE 34 -->
+
+
 Issues of robustness, security, and safety of AI are interlinked. For example, digital security can affect the safety of connected products such as automobiles and home appliances when risks are not appropriately managed.
 
 Technical concepts related to AI robustness, security, and safety include:
@@ -625,6 +758,10 @@ Some  of  the  most  common  trade-offs  and  interactions  between  procedural 
 
 -  Explainability vs. performance :  The  trade-off  between  explainability  and  performance  of  the model 10  has been explored extensively (Goethals, Martens and Evgeniou, 2022[61]; Koshiyama, Firoozye and Treleaven, 2020[62]; ICO-Alan Turing Institute, 2020[63]; Babic et al., 2019[64]; OECD, 2022[1]) . 'Explainability -bydesign' tools and methods are being developed to address this trade -off.  Figure 3.2  maps  algorithms  by  their  expected  explainability  and  performance  levels. Exceptions exist, such as when the explainability of a linear model suffers when the data is preprocessed and includes non-linear features.
 
+
+<!-- PAGE 35 -->
+
+
 Figure 3.2. Illustrative mapping of algorithms by explainability and performance
 
 <!-- image -->
@@ -638,6 +775,10 @@ Note: Approximation based on literature. For illustrative purposes only.
 -  Sustainability vs performance: large AI models (in terms of parameters and computational load) generally perform better than smaller 11  ones but require more energy.
 
 Mapping trade-offs between all the procedural and technical attributes associated with the AI Principles is often difficult and not always desirable. Trade-off analysis aims to optimise the balance for an application, its use-case, and its legal and ethical contexts.
+
+
+<!-- PAGE 36 -->
+
 
 ## 4. TREAT: Prevent, mitigate, or cease AI risks
 
@@ -661,6 +802,10 @@ Table 4.1. Approaches to treating risks to people and the planet
 
 <!-- image -->
 
+
+<!-- PAGE 37 -->
+
+
 | Build and use the model   |  Select appropriate model architecture: e.g. sparse vs dense models (Patterson et al., 2021 [77] ).  Transfer learning to re-use pre-trained weights from other tasks (Kocmi, 2020 [78] )  Code reuse: assess tasks that can be accomplished with existing open-source code (Paleyes, Urma and Lawrence, 2020 [79] )                                                                                                                                                                                        |  Decide on the model to be used according to its environmental impact (Patterson et al., 2021 [77] )                                                                                                                                                                                                                                                                      |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Verify and validate       |  Cross-validate to assure model robustness and reduce the risk of overfitting on training data: K-fold- CV; leave-one-out (Arlot and Celisse, 2010 [17] )  Use combination of covariance-penalty methods and cross-validation to estimate error prediction (Efron and Hastie, 2016 [80] )  Avoid concept drift: develop methodologies and techniques for drift detection, understanding and adaptation, e.g. gradual mitigation, abrupt correction, and pre-emptive detection (Escovedo et al., 2018 [81] ) |  Compare overall carbon emissions of the proposed model vis-à-vis 'green' algorithms (Patterson et al., 2021 [77] )  Bridge the gap between 'in the lab' and 'in the field' validations; that is, validate taking into account the environment in which the system will be deployed.                                                                                     |
@@ -679,6 +824,10 @@ Table 4.2. Approaches to treating bias and discrimination
 |-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Plan and design             |  Establish a plan to mitigate proxy discrimination of all stakeholders involved: e.g. prohibit the use of proxies that can lead to discrimination, mandate the collection and disclosure of data about impacted, legally protected classes, without violating privacy rights (Prince and Schwarcz, 2020 [84] ) |  Define protected and non-protected subgroups, and consider possible impacts on them; analyse tool capabilities of mitigating intrinsic data bias (Schwartz et al., 2021 [54] )  Employ statistical models that isolate only the predictive power of non-suspect variables (Prince and Schwarcz, 2020 [84] ) |
 
+
+<!-- PAGE 38 -->
+
+
 | Collect and process data   |  Reweigh subjects: remove discrimination without relabeling instances (Kamiran and Calders, 2012 [85] )  Oversample minority group and undersample major classes (Iosifidis and Ntoutsi, 2018 [86] ; Tripathi et al., 2021 [87] )  Learn fair representations: encoding the data as well as possible, concealing any information about membership in the protected groups (Zemel et al., 2013 [88] )                                                                                                                                                                                                                                                                                                                                                               |  Understand the sources of bias throughout the AI system lifecycle, such as group attribution, historical, omitted-variable and, selection bias (Suresh and Guttag, 2021 [89] )  Data enrichment: incorporate impact on worker well-being into decision-making processes about data enrichment (PAI, 2021 [49] )   |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Build and use the model    |  Adversarial debiasing: e.g. include a variable for the subject of interest and simultaneously learn a predictor and an adversary (Zhang, Lemoine and Mitchell, 2018 [90] )  Fairness constraint: e.g. create a measure of decision- boundary unfairness as a proxy for bias (Zafar et al., 2019 [67] ; Donini et al., 2018 [91] )  Counterfactual fairness: e.g. define that a decision is fair towards an individual if it is the same both in the actual world and in a counterfactual world where the individual belonged to a different demographic group (Kusner et al., 2017 [92] )  Remove of disparate impact when a selection process has widely different outcomes for different groups, even as it appears to be neutral (Feldman et al., 2015 [66] ) |  Prioritise context over optimisation: selecting models based solely on accuracy is not the best approach for bias reduction as context should be considered (Schwartz et al., 2021 [54] )                                                                                                                          |
@@ -689,6 +838,10 @@ Table 4.2. Approaches to treating bias and discrimination
 ## Privacy and data-governance risks
 
 There are several technical and process-related approaches to treating privacy and data-governance risks (Table 4.3). In particular, privacy-enhancing techniques to mitigate risks to personal or sensitive data can be applied at different phases of the AI system lifecycle, for example, during data collection and processing (e.g.  emerging  data  governance models, feature selection  and  dataset pseudo-anonymisation); during model  building  and  use  (e.g.  federated  learning  and  differential  privacy);  and  during  deployment, monitoring and operation (e.g. rate-limiti ng and users' queries management). As stated in section 3.5,
+
+
+<!-- PAGE 39 -->
+
 
 trade-offs  exist  and  privacy-preserving  approaches  might  come  at  the  expense  of  explainability, transparency, and fairness.
 
@@ -702,6 +855,10 @@ Table 4.3. Approaches to treating risks to privacy and data governance
 | Verify and validate         |  Analyse the privacy of Python machine-learning frameworks: Privacy Lint (Meta)  Model inversion mitigation to prevent malicious users from attempting to recover the private dataset used to train a model (Fredrikson, Jha and Ristenpart, 2015 [37] )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |  Ensure the PPML is as accurate as the standard model without using privacy-preserving settings (Xu, Baracaldo and Joshi, 2021 [71] )                                                                                                                                                                                                                              |
 | Deploy                      |  Rate-limiting: use strategies for limiting network traffic (Google, 2019 [107] )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |  Ensure the PPML is communicating and computing as effectively as the standard machine learning system (Xu, Baracaldo and Joshi, 2021 [71] )                                                                                                                                                                                                                       |
 | Operate and monitor         |  Automate compliance-verification and auditability (Chhetri et al., 2022 [108] )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |  Monitor the storage and privacy of sensitive information (U.S. Department of Health and Human Services, 2020 [109] )                                                                                                                                                                                                                                              |
+
+
+<!-- PAGE 40 -->
+
 
 ## Risks to human rights and democratic values
 
@@ -727,6 +884,10 @@ Table 4.5. Approaches to treating risks to transparency and explainability
 | AI system lifecycle phase   | Technical approaches   | Process-related approaches   |
 |-----------------------------|------------------------|------------------------------|
 
+
+<!-- PAGE 41 -->
+
+
 ## ADVANCING ACCOUNTABILITY IN AI  41
 
 | Plan and design          |  Design an end-to-end explainable AI (XAI) framework, from DataOps to inference: XAI provides information to help users to de-bug models, improve decision-making, and improve trust in automation (Palacio et al., 2021 [113] )                                                                                                                                                                                                                                                                                                                                                    |  Establish processes to document the entire AI system lifecycle to enhance transparency (Raji et al., 2020 [114] )  Consider using existing documentation tools, which may be relevant to one or several lifecycle phases: e.g. Google Model Cards, Microsoft Datasheets for Datasets, Meta System Cards, etc.  Consider documenting use cases (including foreseeable misuses of the system) to mitigate 'by-design' use- related risks (Hupont and Gomez, 2022 [115] ; Hupont et al., 2022 [116] )   |
@@ -736,6 +897,10 @@ Table 4.5. Approaches to treating risks to transparency and explainability
 | Verify and validate      |  Local surrogate explanations: explain individual predictions of black box machine learning models, e.g. LIME (Ribeiro, Singh and Guestrin, 2016 [124] )  Apply perturbation techniques: e.g. gradient-based attribution methods (Ancona et al., 2017 [125] ); permutation importance (Breiman, 2001 [126] ); SHAP (Lundberg and Lee, 2017 [127] )                                                                                                                                                                                                                                 |  Assess trade-offs based on model choice, e.g. between accuracy and explainability, according to the application domain and end-users (Veer et al., 2021 [128] )                                                                                                                                                                                                                                                                                                                                        |
 | Deploy                   |  Perform simulation (what-if?) analysis: recourse through minimal interventions, moving the focus from explanations to recommendations, e.g. counterfactual explanations and algorithmic recourse (Wachter, Mittelstadt and Russell, 2017 [129] ; Karimi, Schölkopf and Valera, 2020 [130] )                                                                                                                                                                                                                                                                                        |  Ensure that model explanations include, at a minimum, the type and source of model input data, the high-level data transformation process, the decision- making criteria and rationale, risks and mitigation measures, and a disclosure about using AI.                                                                                                                                                                                                                                                |
 | Operate and monitor      |  SHAP plots: understand feature importance and feature effects, e.g. using summary and force plots  Provide technical documentation and user manuals for operators and users of the system                                                                                                                                                                                                                                                                                                                                                                                         |  Ensure that insights and disclosures are directed to the end-users affected by the model, and not only to machine-learning engineers who use explainability for de- bugging purposes (Bhatt et al., 2019 [131] )                                                                                                                                                                                                                                                                                       |
+
+
+<!-- PAGE 42 -->
+
 
 ## 4.4 Risks to robustness, security, and safety
 
@@ -750,6 +915,10 @@ Table 4.6. Approaches to treating risks to robustness, security, and safety
 | Build and use the model     |  Satisfiability modulo theories: determine whether a first-order formula is satisfiable with respect to some logical theory (Bunel et al., 2018 [140] )  Evasion attacks: generate adversarial examples and quantify the robustness of the models, e.g., fast gradient sign method (Huang et al., 2017 [141] ) and DeepFool (Moosavi-Dezfooli, Fawzi and Frossard, 2016 [142] )  Mixed integer programming: verify piecewise-linear neural networks as a mixed integer program for model robustness evaluation (Tjeng and Tedrake, 2017 [143] )  Variance minimisation: remove adversarial perturbations via a compressed sensing approach (Rudin, Osher and Fatemi, 1992 [144] ; Guo et al., 2017 [145] ) |  Propose a provable guarantee of robustness as an alternative to heuristic defences: e.g., GloRo Nets (Leino, Wang and Fredrikson, 2021 [146] )  Review vendor documentation and rigorously scan for vulnerabilities (U.S. Department of Health & Human Services, 2021 [139] ) |
 | Verify and validate         |  Lagrangian relaxation: obtain provable guarantees that neural networks satisfy specifications relating their inputs and outputs  Dataset shift: analyse model robustness keeping the original data (Subbaswamy, 2020 [147] )  Area under the receiver operating characteristic (ROC) curve: chart the performance of a binary classifier system as its discrimination threshold is changed (Hanley and Mcneil, 1982 [148] )  Reliability metrics: consider the cost of errors or inaccurate predictions (Lhoest et al., 2021 [149] )  Dataset shift monitoring: detect unexpected inputs and firing off warnings (Rabanser, Gunnemann and Lipton, 2018 [150] )                                           |  Decide on the preferred visualisation of the system's outputs, as well as the corresponding validation metrics (Goodfellow, Bengio and Courville, 2016 [151] )                                                                                                                 |
 
+
+<!-- PAGE 43 -->
+
+
 | Deploy              |  Monitor situations of possible AI service misuse by costumers (Javadi et al., 2020 [152] )                                                                                                                                                                                                                                                                                                                                                               |  Obtain an Authority to Operate (ATO), a formal declaration by a Designated Approving Authority (DAA) that authorises operation of a Business Product and explicitly accepts the risk to agency operations (U.S. Department of Health & Human Services, 2012 [153] )   |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Operate and monitor |  Code versioning: e.g., Git (Github); Mercurial (BitBucket).  Reproducibility: tools that allow reproducibility of models, e.g., Binder; Docker; Kubernetes.  Automated testing: e.g., Travis CI; Scrutinizer CI.  Trap-based monitoring sensors: an efficient way to infer Internet threat activities (Fachkha, 2016 [154] ).  EFK stack using Kubernetes: monitoring of system logs, performance and storage, e.g., Elasticsearch, Fluentd, Kibana. |  Use of dashboards to monitor performance, errors and suggest courses of action.                                                                                                                                                                                       |
@@ -763,6 +932,10 @@ Both known and unknown AI risks should be anticipated to prevent harm. Unknown r
 Risk and impact assessments can be conducted to identify risks and design mitigation strategies before, during, and after deployment. One approach to identifying unknown risks is known as 'red teaming', which refers to systematic and controlled attempts to probe and expose flaws and weaknesses in a system, process,  or  organisation  to  identify  and  mitigate  unknown  risks  (Brundage  et al.,  2020[155]).  Another approach  to  identify  unknown  risks  is  to  engage  'challengers'  stakeholders  likely  to  oppose  the development, operation, or use of the AI system -to  provide  insights  at  early  phases  of  the  lifecycle regarding potential risks, harmful impacts, or negative effects. Additionally, incident databases (such as the OECD AI Incidents Monitor and the Responsible AI Collaborative 's AI Incident Database) are being developed to identify previously unknown risks posed by one system as realised by similar systems.
 
 Contingency plans should be in place explaining the steps to reduce negative impacts after identified risks occur. Their aim is to lessen the damage of the risk when it materialises. Contingency plans are usually the last line of defence against a risk.
+
+
+<!-- PAGE 44 -->
+
 
 ## 5. GOVERN: Monitor, document, communicate, consult and embed
 
@@ -787,6 +960,10 @@ Monitoring and reviewing a model in operation (i.e. once it is live or 'in produ
 -  Data drift: The environment in which an AI system is deployed will likely evolve over the system's lifespan (Babic et al., 2019[64]) and cause the data distribution to drift. Data drift might decrease the quality (accuracy, fairness, etc.) of a model's predictions. The two main categories of data drift are covariate  shift and label  shift .  Covariate  shift  happens  when  the  distribution  of  the  input  data changes between the training environment and the live environment. For example, when an AIbased medical exam is run on a group of patients who exhibit symptoms the AI system has not previously  encountered.  In  contrast,  label  shift  in  supervised  learning  models  means  that  the distribution of labels in the training set is different from the distribution of labels in deployment. For example, when a significantly higher proportion of patients with a certain condition is encountered by a deployed AI system compared to the proportion in the training data. Data drift can be detected by statistical methods and addressed through domain adaptation. 13
 -  Prediction  drift: In  addition  to  data  drift,  changes  in  the  environment  in  which  the  AI  system operates  can  alter  the  conditional  distribution  between  inputs  and  outputs  that  the  model  has learned. Prediction drift, or concept shift , means that the model's representations of the world are outdated. This can be addressed by re-training the model or ensuring it learns continuously over
 
+
+<!-- PAGE 45 -->
+
+
 its lifespan (Lu et al., 2019[157]). Continuous re-training and learning can, however, make auditing and certification more challenging. Therefore some regulators, such as the US Food and Drug Administration, have only approved 'locked' AI systems AI models that do not change with use and provide the same result given the same input (Babic et al., 2019[64]). Software applications for managing regulatory compliance in an automated manner (i.e. 'RegTech') are also being explored. Finding  the  right  balance  between  continuous  learning  and  ensuring  AI  systems  behave  as designed and/or approved (e.g. by a company or a regulator) is key.
 
 -  Input  data  quality: Issues  related  to  the  input  data  of  an  AI  model  include  changes  in  data schemes, increased frequency of outliers, missing data or corrupted data. Data quality deterioration can be assessed by checking for data completeness, establishing appropriate data governance mechanisms and verifying statistical properties such  as variance, quantiles or the presence of extreme values in the data. Additionally, data generated from the operations and use of AI systems may become input to the system, introducing possible feedback loops that should to be addressed.
@@ -800,6 +977,10 @@ In addition to technical tools and quantitative tests, non-statistical processes
 -  Continuous re-skilling and up-skilling: The monitoring and review of AI systems requires that users,  operators  and  stakeholders  be knowledgeable  and  aware  of  the  systems'  objectives, potential benefits and risks, and their legitimate usage.
 
 Incident reporting, human-in-the-loop approaches, sandboxes, and continuous re-skilling and up-skilling can  help  monitor  risks,  negative  externalities,  and  risks  that  materialise  despite  a  system  working  as intended  (e.g.  AI  systems  measuring  employee  performance,  which  may  work  properly  but  result  in
+
+
+<!-- PAGE 46 -->
+
 
 unintended risks to workers, including their physical or mental health). They can also identify secondary uses or misuses of an AI system or its parts for malicious purposes.
 
@@ -829,6 +1010,10 @@ Ways to present metrics from an AI system's monitoring and review process includ
 - Logs: basic  logging  of  metrics  helps  create  conditional  workflows,  for  example,  by  setting thresholds for accuracy or fairness outside of which alerts are triggered and automated or manual actions taken, such as retraining a model.
 - Visual reports: logs can be represented visually through tables, charts or diagrams. Visual reports provide a user-friendly approach to inspect the health of an AI model and detect malfunctions. Visual reports can go beyond plotting. For example, they can provide explanations.
 
+
+<!-- PAGE 47 -->
+
+
 - Live dashboards: visual reports can be automated into live or real-time dashboards to enable users to interactively explore model capabilities and shortcomings. Live monitoring dashboards typically allow manual editing of specific variables or data points to assess the influence of changes on a model's outputs.
 
 Colour coding can be used in monitoring and review to indicate that a system is 'high -performing/compliant' (e.g. green), 'low -performing/compliant' (amber), or 'non -compliant' (red).
@@ -852,6 +1037,10 @@ Source: adapted from Koshiyama et al., 2021.
 
 Different  access  levels  could  allow  for  auditing  and  review  tailored  to  a  specific  AI  application  and  its context, including commercial sensitivities and legal and ethical requirements. Oversight mechanisms for the access levels include guidelines, certifications, and internal or external assessments and audits. The accuracy and completeness of auditing and review processes depends on the access level: higher access levels to information enable greater auditing detail and accuracy (Figure 5.1).
 
+
+<!-- PAGE 48 -->
+
+
 Figure 5.1. Trade-off between information concealed and auditing detail by access level
 
 <!-- image -->
@@ -871,6 +1060,10 @@ In model access ('black box'), the reviewer has access to some input data metada
 This level of access entails the least amount of information disclosed to the reviewer, since no data-sharing agreements are needed. A high level of automation can be achieved, since only API access is needed to perform the analyses. Analyses that can be performed with this access level include adversarial attacks, statistical disclosure, adversarial evaluation of bias and discrimination, feature relevance extraction, and partial dependency explanations.
 
 Auditing detail
+
+
+<!-- PAGE 49 -->
+
 
 ## Level 3: Input data access
 
@@ -902,6 +1095,10 @@ In  the  learning  objective  level,  the  reviewer  can  run  a  model  and  di
 
 The reviewer is allowed to re-train the model using the actual objective function that the model was initially trained on. However, the reviewer has no access to the model's type (e.g . kernel method) or components (e.g. number of neurons).
 
+
+<!-- PAGE 50 -->
+
+
 This access level allows the reviewer to investigate an almost complete picture of the system, without infringing on its intellectual property. Feedback from the review or auditing process has the potential to be very detailed, including information about the model 's complexity and robustness to stress-testing. This access level  is  enough  to  perform  automated  internal  and  external  review  and  auditing,  since  human involvement after setting up the relevant APIs is considerably low.
 
 ## Level 7: Development access
@@ -924,6 +1121,10 @@ The broader outcome of a risk assessment and management process is to protect hu
 
 -  How the AI system is assured in accordance with general and sector-specific regulations and  standards  to  enable  interoperability: this  includes  compliance  with  broad  national  or regional  regulation  and  standards,  provided  by  agents  such  as  the  US  National  Institute  of Standards  and  Technology  (NIST),  the  UK  Information  Commis sioner's  Office (ICO),  and European Union regulations; and with sector-specific standards, such as in financial services and healthcare, which can help assess and manage AI risks in different contexts and applications. Specific  standards  for  AI  are  also  being  developed  by  the  International  Organization  for Standardization (ISO), European Committee for Electrotechnical Standardization (CENCENELEC), and the Institute of Electrical and Electronics Engineers (IEEE), among others, to help develop and implement systems that are trustworthy and comply with legal and ethical frameworks.
 
+
+<!-- PAGE 51 -->
+
+
 Regulation and standards can be general (e.g. set by organisations or government agencies with remits  not  sector-specific,  and  encompassing  broad  areas  like  privacy,  explainability,  fairness, robustness, safety, and security) or sector-specific (e.g. specific to the use of AI systems in an industrial  sector  or  policy  area,  such  as  financial  services  or  defence).  Application-specific standards -e.g. facial recognition -are also being developed (NIST, 2022[14]).
 
 Communicating  about  the  system's compliance  with  national  and  international  standards  and regulation is key as cross-border product ecosystems emerge. Governments are exploring ways to facilitate interoperability assessments with existing legal frameworks and standards, including using regulatory experimentation frameworks such as sandboxes.
@@ -941,6 +1142,10 @@ Consultation with internal and external stakeholders -including civil society an
 
 Adapting communications to enable understanding by external stakeholders -including those without a technical background -will facilitate meaningful dialogue and consultation. The format, cost, and frequency of communications and consultations should be assessed based on the context.
 
+
+<!-- PAGE 52 -->
+
+
 ## 5.2 Embed a culture of risk management
 
 A culture of risk management should be cultivated and embedded at all levels of organisations and across the  AI  value  chain,  with  strong  commitment by  organisations' leadership teams (NIST, 2022[14]);  (ISO, 2018[7]). The risk management process should be integrated into organisational quality and management systems and policies.
@@ -948,6 +1153,10 @@ A culture of risk management should be cultivated and embedded at all levels of 
 Organisations  should  devise,  adopt  and  disseminate  a  combination  of  risk  management  policies  that articulate an organisation 's commitments to trustworthy AI. These policies should be embedded into an organisation 's oversight bodies.
 
 Risk management expectations and policies should be incorporated into engagement with suppliers and other stakeholders along the value chain (OECD, 2018[8]).
+
+
+<!-- PAGE 53 -->
+
 
 ## 6. Next steps and discussion
 
@@ -958,6 +1167,10 @@ The report is a first step towards defining key components of the AI accountabil
 In parallel, the OECD.AI expert group on risk and accountability developed a catalogue of tools and metrics for trustworthy AI to provide an interactive collection of resources to develop and implement AI systems that respect human rights and are fair, transparent, explainable, robust, secure, and safe. These tools, mapped to the OECD AI Principles and the phases of the AI system lifecycle, are expected to facilitate accountability in AI, from documenting and monitoring risks to certification and assurance.
 
 Finally, there is growing demand for risk-assessment tools to calibrate treatment and mitigation strategies to the level of risk of an AI system. In this context, the OECD.AI expert group on risk and accountability is developing a risk-assessment framework, building on the criteria outlined in the classification framework (OECD, 2022[1]) , to facilitate global interoperability for assessing and reporting risk. A 'global AI incidents monitor' under development is expected to provide the evidence -base to inform this framework. The riskassessment framework and the AI incidents monitor will be informed by the findings in this report.
+
+
+<!-- PAGE 54 -->
+
 
 ## Annex A. Presentations relevant to accountability in AI from the OECD.AI network of experts
 
@@ -983,6 +1196,10 @@ a) OECD.AI Expert Group on Tools &amp; Accountability, June 2021 - September 202
 | Yordanka Ivanova, 12 July 2022 (18 th meeting)                                   | DG CONNECT, European Commission                                                                                                                  | An update on the EU AI Act                                                                                                                                                                                |
 | Yeong Zee Kin, 12 July 2022 (18 th meeting)                                      | Infocomm Media Development Authority of Singapore                                                                                                | An overview of Singapore's AI Verify initiative                                                                                                                                                           |
 
+
+<!-- PAGE 55 -->
+
+
 | Mikael Jansen, 16 September 2022 (19 th meeting)   | D-Seal - Danish Industry Foundation   | D-Seal - a labelling program for IT security and responsible use of data in the EU      |
 |----------------------------------------------------|---------------------------------------|-----------------------------------------------------------------------------------------|
 | Kolja Verhage, 16 September 2022 (19 th meeting)   | Deloitte Risk Advisory                | Lessons learned from implementation of values-based AI principles in the private sector |
@@ -998,6 +1215,10 @@ a) OECD.AI Expert Group on Tools &amp; Accountability, June 2021 - September 202
 | Sebastian Hallensleben, 2 February 2022 (19th meeting)          | CEN-CENELEC                                           | Current European regulation/standardization aspects on AI risk assessment.                                                                                                                     |
 | Kai Zenner, 24 March 2022 (20th meeting)                        | European Parliament                                   | Overview of the JURI report's key proposed amendments to the EU AI Act.                                                                                                                        |
 | Peter Deussen, 24 March 2022 (20th meeting)                     | ISO                                                   | Overview of ISO/IEC 23894's relevance for Artificial Intelligence risk management.                                                                                                             |
+
+
+<!-- PAGE 56 -->
+
 
 ## Annex B. Participation in the OECD.AI Expert Group on Classification and Risk
 
@@ -1043,6 +1264,10 @@ Table B.1. Participation in the OECD.AI Expert Group on Classification &amp; Ris
 | Kathleen Walch          | Managing partner and principal analyst Managing Director                                                                                                                   | Cognilytica                                                  | Business             |
 | Kuansan Wang            |                                                                                                                                                                            | Microsoft Research Outreach Academic Services                | Business             |
 
+
+<!-- PAGE 57 -->
+
+
 ## ADVANCING ACCOUNTABILITY IN AI  57
 
 | Nicole Primmer         | Senior Policy Director                                 | BIAC                                                                      | Business     |
@@ -1083,6 +1308,10 @@ Table B.1. Participation in the OECD.AI Expert Group on Classification &amp; Ris
 | Annelore Verhagen      | Secretariat                                            | OECD                                                                      | OECD         |
 | Orsolya Dobe           | Secretariat                                            | OECD                                                                      | OECD         |
 
+
+<!-- PAGE 58 -->
+
+
 ## Annex C. Participation in the OECD.AI Expert Group on Tools and Accountability
 
 Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountability (as of December 2022)
@@ -1122,6 +1351,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Michael Birtwistle        | Policy Adviser                                                                       | Centre for Data Ethics and Innovation (CDEI)                                                                    | United Kingdom       |
 | Farahnaaz H Khakoo        | Assistant Director                                                                   | US Government Accountability Office                                                                             | United States        |
 | Grace Abuhamad            | Chief of Staff                                                                       | U.S. Department of Commerce's National Telecommunications and Information Administration (NTIA)                 | United States        |
+
+
+<!-- PAGE 59 -->
+
 
 ## ADVANCING ACCOUNTABILITY IN AI  59
 
@@ -1180,6 +1413,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Eva                           | Researcher                                                                                                                                                                |                                                                                                                 |                           |
 | Thelisson                     |                                                                                                                                                                           |                                                                                                                 |                           |
 
+
+<!-- PAGE 60 -->
+
+
 ## 60  ADVANCING ACCOUNTABILITY IN AI
 
 | Guillaume Chevillon      | Professor - Co Director ESSEC                                                                               | ESSEC Business School, Paris                                                                | CSO/academia   |
@@ -1216,6 +1453,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Luis Aranda              | Secretariat                                                                                                 | OECD                                                                                        | OECD           |
 | Francesca Sheeka         | Secretariat                                                                                                 | OECD                                                                                        | OECD           |
 
+
+<!-- PAGE 61 -->
+
+
 ## References
 
 | Abadi, M. et al. (2016), Deep learning with differential privacy .                                                                                                                                                 | [103]   |
@@ -1235,6 +1476,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Bieker, F. et al. (2016), A process for data protection impact assessment under the european general data protection regulation , Springer, Cham.                                                                  | [31]    |
 
 [103]
+
+
+<!-- PAGE 62 -->
+
 
 | Breiman, L. (2001), 'Random forests', Machine learning , Vol. 45(1), pp. 5-32.                                                                                                                                                                 | [126]   |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
@@ -1256,6 +1501,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Deogun, D., D. Johnsson and D. Sawano (2019), Secure by Design , Manning Publications.                                                                                                                                                         | [134]   |
 | Donini, M. et al. (2018), 'Empirical Risk Minimization Under Fairness Constraints', Advances in Neural Information Processing Systems , pp. 2791-2801, https://papers.nips.cc/paper/2018/file/83cdcec08fbf90370fcf53bdd56604ff-Paper.pdf.      | [91]    |
 | Dwork, C. and M. Naor (2010), 'On the difficulties of disclosure prevention in statistical databases or the case for differential privacy', Journal of Privacy and Confidentiality , Vol. 2/1.                                                 | [36]    |
+
+
+<!-- PAGE 63 -->
+
 
 [80]
 
@@ -1280,6 +1529,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Gray, M. and S. Suri (2019), Ghost work: How to stop Silicon Valley from building a new                                                                                                                                             | [48]   |
 | Greer (2004), ''Balancing' and the European court of Human Rights: a contribution to the                                                                                                                                            | [51]   |
 
+
+<!-- PAGE 64 -->
+
+
 | Habermass- Alexy debate', The Cambridge Law Journal , Vol. 63/2.                                                                                                                                                                      |       |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
 | Guo, C. et al. (2017), Countering adversarial images using input transformations .                                                                                                                                                    | [145] |
@@ -1299,6 +1552,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Iosifidis, V. and E. Ntoutsi (2018), 'Dealing with bias via data augmentation in supervised learning senarios', Jo Bates Paul D. Clough Robert Jäschke , https://www.bibsonomy.org/bibtex/2631924ce7d73cd8e3bb6477e84d408fa/entoutsi. | [86]  |
 | ISO (2018), ISO 31000 - Risk Management , https://doi.org/[online] Available at: <https://www.iso.org/obp/ui#iso:std:iso:31000:ed-2:v1:en>.                                                                                           | [7]   |
 | Javadi, S. et al. (2020), Monitoring Misuse for Accountable 'Artificial Intelligence as a Service'                                                                                                                                    | [152] |
+
+
+<!-- PAGE 65 -->
+
 
 ## https://doi.org/10.1145/3375627.3375873.
 
@@ -1322,6 +1579,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 
 [4]
 
+
+<!-- PAGE 66 -->
+
+
 | Leino, K., Z. Wang and M. Fredrikson (2021), Globally-Robust Neural Networks , https://doi.org/10.48550/arXiv.2102.08452.                                                                                                                                             | [146]   |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
 | Lhoest, Q. et al. (2021), Datasets: A Community Library for Natural Language Processing .                                                                                                                                                                             | [149]   |
@@ -1341,6 +1602,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Newman, J. (2023), A Taxonomy of Trustworthiness for Artificial Intelligence: Connecting Properties of Trustworthiness with Risk Managment and the Lifecycle , UC Berkeley, https://cltc.berkeley.edu/wp- content/uploads/2023/01/Taxonomy_of_AI_Trustworthiness.pdf. | [15]    |
 | NIST (2022), AI Risk Management Framework: Second Draft , https://www.nist.gov/system/files/documents/2022/08/18/AI_RMF_2nd_draft.pdf (accessed on 18 August 2022).                                                                                                   | [14]    |
 | Nori, H. et al. (2019), 'Interpretml: A unified framework for machine learning interpretability', arXiv preprint , https://doi.org/arXiv:1909.09223.                                                                                                                  | [122]   |
+
+
+<!-- PAGE 67 -->
+
 
 [2]
 
@@ -1362,6 +1627,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | OECD (2019), 'Scoping the OECD AI principles: Deliberations of the Expert Group on Artificial Intelligence at the OECD (AIGO)' , OECD Digital Economy Papers , No. 291, OECD Publishing, Paris, https://doi.org/10.1787/d62f618a-en.                          | [6]   |
 | OECD (2018), OECD Due Diligence Guidance for Responsible Business Conduct , http://mneguidelines.oecd.org/OECD-Due-Diligence-Guidance-for-Responsible-Business- Conduct.pdf.                                                                                  | [8]   |
 
+
+<!-- PAGE 68 -->
+
+
 [45]
 
 | OECD (2011), 'OECD Guidelines for Multinational Enterprises', https://dx.doi.org/10.1787/9789264115415-en.                                                                                                                                                                              | [45]   |
@@ -1382,6 +1651,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | Raji, D. et al. (2020), Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing , https://doi.org/10.48550/arXiv.2001.00973.                                                                                                              | [114]  |
 | Reisman, D. et al. (2019), Algorithmic impact assessment: a practical framework for public agency accountability , AI Now Institute.                                                                                                                                                    | [159]  |
 | Ribeiro, M., S. Singh and C. Guestrin (2016), 'Why should I trust you?' Explaining the                                                                                                                                                                                                  | [124]  |
+
+
+<!-- PAGE 69 -->
+
 
 ## predictions of any classifier .
 
@@ -1406,6 +1679,10 @@ Table C.1. Participation in the OECD.AI Expert Group on Tools &amp; Accountabili
 | U.S. Department of Health & Human Services (2012), Enterprise Performance Life Cycle Framework .                                                                                                                                                                           | [153]   |
 | U.S. Department of Health and Human Services (2020), HHS Policy for Preparing for and Responding to a Breach of Personally Identifiable Information (PII), Version 2.0 ,                                                                                                   | [109]   |
 
+
+<!-- PAGE 70 -->
+
+
 https://www.hhs.gov/web/governance/digital-strategy/it-policy-archive/hhs-policy-preparingand-responding-breach.html.
 
 | U.S. Government Accountability Office (2021), Artificial Intelligence: An Accountability Framework for Federal Agencies and Other Entities .                                                          | [121]   |
@@ -1418,6 +1695,10 @@ https://www.hhs.gov/web/governance/digital-strategy/it-policy-archive/hhs-policy
 | Zafar, M. et al. (2019), 'Fairness Constraints: A Flexible Approach for Fair Classification', Journal of Machine Learning Research , Vol. 20/75, pp. 1-42, https://jmlr.org/papers/v20/18- 262.html.  | [67]    |
 | Zemel, R. et al. (2013), Learning fair representations , https://proceedings.mlr.press/v28/zemel13.html.                                                                                              | [88]    |
 | Zhang, B., B. Lemoine and M. Mitchell (2018), Mitigating Unwanted Biases with Adversarial Learning , https://arxiv.org/abs/1801.07593.                                                                | [90]    |
+
+
+<!-- PAGE 71 -->
+
 
 ## Notes
 
@@ -1442,6 +1723,10 @@ https://www.hhs.gov/web/governance/digital-strategy/it-policy-archive/hhs-policy
 10 Some research argues that the explainability vs. performance trade-off is not so relevant in cases where the objective function is explainable. A well-defined objective function (e.g. in symbolic terms) would result in better model performance (Aliman et al., 2019).
 
 11 The term "lightweight models" is increasingly being used to refer to models with less parameters.
+
+
+<!-- PAGE 72 -->
+
 
 ## 72  ADVANCING ACCOUNTABILITY IN AI
 

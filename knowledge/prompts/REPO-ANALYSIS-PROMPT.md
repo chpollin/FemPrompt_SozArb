@@ -1,8 +1,8 @@
-# Repository-Analyse: FemPrompt_SozArb
+# Repository-Analyse: Literature Review
 
 ## Aufgabe
 
-Analysiere das Repository `https://github.com/chpollin/FemPrompt_SozArb` vollständig und erstelle einen strukturierten Bericht.
+Analysiere das Repository `https://github.com/chpollin/Literature Review` vollständig und erstelle einen strukturierten Bericht.
 
 ## Analyse-Dimensionen
 
@@ -49,7 +49,7 @@ Liste alle Prompts mit:
 ## Output-Format
 
 ```markdown
-# FemPrompt_SozArb Repository Analysis
+# Literature Review Repository Analysis
 
 ## Verzeichnisstruktur
 [Tree-Darstellung]

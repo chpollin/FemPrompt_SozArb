@@ -1,10 +1,11 @@
 ---
 source_file: West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.pdf
-conversion_date: 2026-02-03T09:31:07.909059
+conversion_date: 2026-02-03T19:02:00.930261
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 ## DISCRIMINATING SYSTEMS
 
 ## Gender, Race, and Power in AI
@@ -16,6 +17,10 @@ Sarah Myers West , AI Now Institute, New York University Meredith Whittaker , AI
 Cite as: West, S.M., Whittaker, M. and Crawford, K. (2019). Discriminating Systems: Gender, Race and Power in AI. AI Now Institute. Retrieved from https://ainowinstitute.org/ discriminatingsystems.html.
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## CONTENTS
 
@@ -38,6 +43,10 @@ Cite as: West, S.M., Whittaker, M. and Crawford, K. (2019). Discriminating Syste
 <!-- image -->
 
 8
+
+
+<!-- PAGE 3 -->
+
 
 ## RESEARCH FINDINGS
 
@@ -63,6 +72,10 @@ v. Wu, X. and Zhang, X. (2016). Automated Inference on Criminality using Face Im
 
 vi. Rhue, L. (2018). Racial Influence on Automated Perceptions of Emotions. Retrieved from https://papers.ssrn.com/sol3/papers.cfm?abstract\_ id=3281765.
 
+
+<!-- PAGE 4 -->
+
+
 ## RECOMMENDATIONS
 
 ## Recommendations for Improving Workplace Diversity
@@ -82,6 +95,10 @@ vi. Rhue, L. (2018). Racial Influence on Automated Perceptions of Emotions. Retr
 10. Rigorous testing should be required across the lifecycle of AI systems in sensitive domains. Pre-release trials, independent auditing, and ongoing monitoring are necessary to test for bias, discrimination, and other harms.
 11. The field of research on bias and fairness needs to go beyond technical debiasing to include a wider social analysis of how AI is used in context. This necessitates including a wider range of disciplinary expertise.
 12. The methods for addressing bias and discrimination in AI need to expand to include assessments of whether certain systems should be designed at all, based on a thorough risk assessment.
+
+
+<!-- PAGE 5 -->
+
 
 ## INTRODUCTION
 
@@ -113,6 +130,10 @@ This report is the culmination of a year-long pilot study examining the scale of
 
 10 As authors of this report, we feel it's important to acknowledge that, as white women, we don't experience the intersections of oppression in the same way that people of color and gender minorities, among others, do. But the silence of those who experience privilege in this space is the problem: this is in part why progress on diversity issues moves so slowly. It is important that those of us who do work in this space address these issues openly, and act to center the communities most affected.
 
+
+<!-- PAGE 6 -->
+
+
 To date, the diversity problems of the AI industry and the issues of bias in the systems it builds have tended to be considered separately. But we suggest that these are two versions of the same problem: issues of discrimination in the workforce and in system building are deeply intertwined. Moreover, tackling the challenges of bias within technical systems requires addressing workforce diversity, and vice versa. Our research suggests new ways of understanding the relationships between these complex problems, which can open up new pathways to redressing the current imbalances and harms.
 
 From a high-level view, AI systems function as systems of discrimination: they are classification technologies that differentiate, rank, and categorize. But discrimination is not evenly distributed. A steady stream of examples in recent years have demonstrated a persistent problem of gender and race-based discrimination (among other attributes and forms of identity). Image recognition technologies miscategorize black faces, 11  sentencing algorithms discriminate against black defendants, 12  chatbots easily adopt racist and misogynistic language when trained on online discourse, 13 and Uber's facial recognition doesn't work for trans drivers. 14  In most cases, such bias mirrors and replicates existing structures of inequality in society.
@@ -137,6 +158,10 @@ Currently, large scale AI systems are developed almost exclusively in a handful 
 
 17 Crawford, K. (2016, June 25). Artificial Intelligence's White Guy Problem. The New York Times . Retrieved from https://www.nytimes. com/2016/06/26/opinion/sunday/artificial-intelligences-white-guy-problem.html.
 
+
+<!-- PAGE 7 -->
+
+
 their influence and investment can make or break a career. The asymmetry of power is ripe for abuse.' 18  Or as machine learning researcher Stephen Merity noted at the end of 2017, 'Bias is not just in our datasets, it's in our conferences and community.' 19
 
 Both within the spaces where AI is being created, and in the logic of how AI systems are designed, the costs of bias, harassment, and discrimination are borne by the same people: gender minorities, people of color, and other under-represented groups. Similarly, the benefits of such systems, from profit to efficiency, accrue primarily to those already in positions of power, who again tend to be white, educated, and male. This is much more than an issue of one or two bad actors: it points to a systematic relationship between patterns of exclusion within the field of AI and the industry driving its production on the one hand, and the biases that manifest in the logics and application of AI technologies on the other.
@@ -156,6 +181,10 @@ It is critical that we not only seek to understand how AI disadvantages some, bu
 22 While race and gender are key axes of identity, and are most commonly considered in discussions of AI bias, it is important to emphasize that they are far from the only identity categories that shape AI systems. For example, as the work of Virginia Eubanks makes clear, class-based discrimination is a particularly thorny challenge, highlighting the ways in which AI systems are entwined with surveillance of the poor. See: Eubanks, V. (2018). Automating Inequality: How High-Tech Tools Profile, Punish and Police the Poor . London: St. Martin's Press. In addition, in partnership with the NYU Center for Disability Studies and Microsoft, AI Now recently hosted a one-day workshop on Disability and Bias in AI. We will be releasing a report summarizing our discussion and examining the ways in which disability studies expand and complicate our notions of AI bias. An examination of disability in the context of AI bias is particularly productive in that it requires us to scrutinize what (and who) constitutes a 'normal' body, how aberrance and normalcy are themselves defined (and by whom), how such normative classifications may be mapped onto bodies in different ways at different times throughout an individual's lifetime, and what the consequences of such classifications may be.
 
 23 For thoughtful treatments of what a justice-oriented data science might look like, and how it differs from data ethics, see: Green, B. (2018). Data Science as Political Action: Grounding Data Science in a Politics of Justice, Retrieved from https://scholar.harvard.edu/files/bgreen/files/ data\_science\_as\_political\_action.pdf, and Klein, L. and D'Ignazio, C. (2019). Data Feminism . Cambridge: MIT Press. Retrieved from https://bookbook. pubpub.org/pub/dgv16l22.
+
+
+<!-- PAGE 8 -->
+
 
 ## WHICH HUMANS ARE IN THE LOOP? HOW WORKFORCES AND AI SYSTEMS INTERACT
 
@@ -180,6 +209,10 @@ The Amazon resume scanning example is just one of many that show how the functio
 29 Raji, I &amp; Buolamwini, J. (2019). Actionable Auditing: Investigating the Impact of Publicly Naming Biased Performance Results of Commercial AI Products. Conference on Artificial Intelligence, Ethics, and Society . Retrieved from https://www.media.mit.edu/projects/actionable-auditingcoordinated-bias-disclosure-study/publications/.
 
 30 Buolamwini, J. (2019, Jan. 25). Response: Racial and Gender bias in Amazon Rekognition - Commercial AI System for Analyzing Faces. Medium . Retrieved from https://medium.com/@Joy.Buolamwini/response-racial-and-gender-bias-in-amazon-rekognition-commercial-ai-system-foranalyzing-faces-a289222eeced.
+
+
+<!-- PAGE 9 -->
+
 
 These problems are not inevitable, nor are they natural: history shows us that they are a product of the distribution of power in society. 31  For example, the work of historian Mar Hicks meticulously documents how structural discrimination shifted the gender makeup of Britain's computing industry, marginalizing the work of female technical experts by molding them into a technical underclass. As Hicks describes, 'throughout history, it has often not been the content of the work but the identity of the worker performing it that determined its status'. 32
 
@@ -212,6 +245,10 @@ These examples suggest that inequity and bias are not to be found in a single pl
 
 39 Kolhatkar, S. (2017, Nov. 13). The Tech Industry's Gender-Discrimination Problem. The New Yorker . Retrieved from https://www.newyorker.com/ magazine/2017/11/20/the-tech-industrys-gender-discrimination-problem.
 
+
+<!-- PAGE 10 -->
+
+
 From this perspective, locating individual biases within a given technical system-and attempting to fix them by tweaking the system-becomes an exercise in futility. Only by examining discrimination through the lens of its social logics (who it benefits, who it harms, and how) can we see the workings of these systems in the context of existing power relationships.
 
 In addition to asking when and how AI systems favor some identities over others we might also ask: what is the logic through which artificial intelligence 'sees' and constructs gender and race to begin with? How does it engage in the production and enactment of new classifications and identities? 40  And how do AI systems replicate historical hierarchies by rendering people along a continuum of least to most 'valuable'?
@@ -233,6 +270,10 @@ The current data on the state of gender diversity in the AI field is dire, in bo
 43 Element AI. (2019). Global AI Talent Report 2019. Retrieved from https://jfgagne.ai/talent-2019/.
 
 44 AI Index 2018. (2018). Artificial Intelligence Index 2018. Retrieved from http://cdn.aiindex.org/2018/AI%20Index%202018%20Annual%20Report.pdf.
+
+
+<!-- PAGE 11 -->
+
 
 even greater imbalances, with women comprising only 15% and 10% of their AI research staff, respectively. 45,46  There is no reported data on trans workers or other gender minorities.
 
@@ -262,6 +303,10 @@ Of course, artificial intelligence is a sub-field of computer science, and the b
 
 55 Hayes, C.C. (2006). Computer Science: The Incredible Shrinking Woman, in Misa, T. (Ed.) Gender Codes: Why Women Are Leaving Computing . Hoboken: IEEE Computer Society.
 
+
+<!-- PAGE 12 -->
+
+
 Collectively, these statistics paint a grim picture. As Freda Kapor Klein has described it, 'It's sobering to see the lack of progress...We have a problem, and we need to work together to solve it'. 56
 
 ## Diversity Statistics in the AI Industry: Knowns and Unknowns
@@ -285,6 +330,10 @@ For example, the 2019 email thread by women at Microsoft exposed how dozens of w
 60 The Elephant in the Valley project has played a critical role in filling in these gaps, collecting anonymous stories from workers who have experienced discrimination and harassment in the workplace. For more see: https://www.elephantinthevalley.com/.
 
 61 Gershgorn, D. (2019, Apr. 4). Amid employee uproar, Microsoft is investigating sexual harassment claims overlooked by HR. Quartz . Retrieved from https://qz.com/1587477/microsoft-investigating-sexual-harassment-claims-overlooked-by-hr/.
+
+
+<!-- PAGE 13 -->
+
 
 the company concluded only one was 'founded'. 62,63  The existence of these employees would certainly be accounted for in corporate diversity and inclusion statistics, but their experiences tell a radically different story about what it means to be included. These are precisely the accounts that most need to be listened to. As Kristian Lum put it in her own account of harassment and discrimination at the machine learning conference NeurIPs, 'It is time for us to be publicly and openly appalled, not just attempting to tactfully deflect inappropriate advances and privately warning other women.' 64
 
@@ -312,6 +361,10 @@ The ways in which such data can be massaged to reflect company positions was on 
 
 70 Wakabayashi, D. (2019, Mar. 4). Google Finds It's Underpaying Many Men as It Addresses Wage Equity. New York Times . Retrieved from https:// www.nytimes.com/2019/03/04/technology/google-gender-pay-gap.html.
 
+
+<!-- PAGE 14 -->
+
+
 made is extremely narrow, focusing on one level of one job category, and not taking into account equity and bonus, which at senior levels of the company often comprise the majority of employee compensation. 71  It is also significant that Google made this information publicly available in early 2019. This comes at a time when Google is being investigated by the US Department of Labor, facing a lawsuit by women employees, and is still grappling with the ramifications of the protest where 20,000 of its workers walked out to protest discrimination, sexual harassment, and a hostile workplace culture. 72,73
 
 In the past, when the US Department of Labor sought to look into allegations that Google systematically underpaid women, the company reported it would be 'financially burdensome and logistically challenging' to provide its salary records to the government. It released the company's internal pay equity analyses for the first time in 2016, asserting that there was no statistically significant difference between the compensation received by men and women at the company. 74  However, the report's methodology noted that 11% of the company's employees were left off of the analysis because the company limited its findings to job categories with 30 or more employees with at least five men and five women, thus excluding all employees with a rank above vice president. The company's highest-paying jobs, most of which are held by men, were not included in the report. 75
@@ -336,6 +389,10 @@ Such phenomena aren't new. Margaret Rossiter documents similar problems for wome
 
 78 Rossiter, M. (1986). Women Scientists in America: Struggles and Strategies to 1940, in Harding, S. (1986). The Science Question in Feminism . Ithaca: Cornell University Press, p. 60-62.
 
+
+<!-- PAGE 15 -->
+
+
 Many tech companies do publicly advocate for diversity, have corporate diversity officers, and fund initiatives to encourage more young girls to take up coding (although this excludes others who experience identity-based discrimination, such as the trans community). However, there are multiple examples where Silicon Valley's largest tech firms have privately hindered efforts by employees to advocate for diversity within the company. One recent report highlighted that employees at Google have expressed concerns that they will face consequences for voicing support for diversity initiatives 79  - concerns reinforced by studies that show that women are frequently penalized for advocating for diversity in the workplace. 80
 
 ## FROM WORKFORCES TO AI SYSTEMS: THE DISCRIMINATION FEEDBACK LOOP
@@ -355,6 +412,10 @@ A 2019 study found significant racial bias in a widely used commercial algorithm
 82 Noble, S.U. (2018) Algorithms of Oppression: How Search Engines Reinforce Racism . New York: NYU Press.
 
 83 Sweeney, L. (2013). Discrimination in Online Ad Delivery. arXiv. Retrieved May 20, 2018 from https://arxiv.org/abs/1301.6822.
+
+
+<!-- PAGE 16 -->
+
 
 program and to benefit from its resources than black patients in a comparable state of health. 84 The forensic examination of individual systems for bias and discrimination is an important area of research, and more studies like these are sorely needed.
 
@@ -378,6 +439,10 @@ For example, according to Han and Jain, while the popular Labeled Faces in the W
 
 90 Han, H. and Jain, A.K. (2014). Age, Gender and Race Estimation from Unconstrained Face Images. MSU Technical Report. Retrieved from http:// biometrics.cse.msu.edu/Publications/Face/HanJain\_UnconstrainedAgeGenderRaceEstimation\_MSUTechReport2014.pdf.
 
+
+<!-- PAGE 17 -->
+
+
 are especially likely to suffer from a lack of representation and to replicate masculine hegemonic norms due to limited access to technology among women and the poor, leading them to be excluded from such datasets, and thereby unaccounted for in AI systems. 91  A recent paper from the AI Now Institute examines the data used in algorithmic predictive policing systems, and finds that in many cases such data is fraudulent, created through practices of racially biased law enforcement, thus embedding bias into the logics of such systems. 92  In all of these cases, understanding 'bias' in data (and arguably fixing such bias) requires a thorough accounting of the social context through which the data was produced - in other words, how humans make data in context.
 
 Second, many studies on bias and discrimination operate on a single axis rather than examining the intersections of multiple identity categories. This is likely to produce what Erica Joy Baker, a Senior Engineering Manager at Patreon, calls colorless diversity: without acknowledging the ways in which different forms of oppression intersect, diversity efforts that target women without acknowledging the role of race and other forms of identity (let alone the broader spectrum of gendered identity) will implicitly privilege white women. 93
@@ -397,6 +462,10 @@ Third, many of the studies examining bias within AI systems adopt a binary view 
 94 Buolamwini, J. and Gebru, T. (2018). Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification. Proceedings of Machine Learning Research 81:1-15.
 
 95 See: Keyes, O. (2018). The Misgendering Machines: Trans/HCI Implications of Automatic Gender Recognition. Proceedings of the ACM on HumanComputer Interaction - CSCW. Retrieved from https://dl.acm.org/citation.cfm?doid=3290265.3274357 and Hamid, F., Scheuerman, M.K. and Branham, S.M. (2018). Gender Recognition or Gender Reductionism? The Social Implications of Automatic Gender Recognition Systems. CHI 2018 . Retrieved from https://docs.wixstatic.com/ugd/eb2cd9\_ff211774807946099e7e1dcd0023497d.pdf.
+
+
+<!-- PAGE 18 -->
+
 
 Acknowledging the fluid nature of gender in studies of bias is not only necessary for accuracy, it will prevent use cases that will result in a systematic erasure of trans people and their experiences. 96
 
@@ -420,6 +489,10 @@ These harms should be balanced against remedies that rely on unethical practices
 
 101 Vincent, J. (2017, Aug. 22). Transgender YouTubers had their videos grabbed to train facial recognition software. The Verge . Retrieved from https:// www.theverge.com/2017/8/22/16180080/transgender-youtubers-ai-facial-recognition-dataset.
 
+
+<!-- PAGE 19 -->
+
+
 A growing number of scholars and advocates argue that some biased systems are undeserving of being 'fixed' and may need to be removed or reconsidered altogether. 102  Repeated efforts to develop machine learning methods to detect sexual orientation, for example, are illustrative of why 'diversifying' the dataset is not a de facto solution and may in fact exacerbate the problem by legitimizing harmful technologies. 103  Some systems should not be built at all.
 
 Making AI systems more cognizant of race, gender, and other identity categories is often presented as a sign that those producing such systems embrace diversity and inclusion. However, such an expansion of classification also enables the monetization of identity as 'market segments' for corporate profit. This can create new harms while driving ad tech. For example, Jacob Gaboury argues that by expanding the gender categories available in Facebook profiles from two to 58 options, Facebook is not just embracing a more inclusive view of gender, it is creating flattened and instrumentalized identity categories that can be used for the purpose of value extraction through targeted ads. 104
@@ -441,6 +514,10 @@ The lack of diversity in the AI sector and in tech more broadly has received wid
 105 Bivens, R. (2017) The gender binary will not be deprogrammed: Ten years of coding gender on Facebook. New Media &amp; Society, 19(6): 880-898.
 
 106 Advancing this approach to research will likely face significant challenges due to access and legal barriers. Without greater transparency and more robust protections for academic researchers, it will be difficult for future empirical studies to make much headway - the ongoing Sandvig vs. Sessions case is critical to this effort.
+
+
+<!-- PAGE 20 -->
+
 
 AI sector. Given the lack of progress in the face of persistent efforts, we need to scrutinize the means by which the AI industry understands and contends with its lack of diversity. What might need to change to ensure real improvement?
 
@@ -468,6 +545,10 @@ Companies that are challenged on their lack of diversity frequently cite pipelin
 110 Williams, M. (2016, July 14). Facebook Diversity Update: Positive Hiring Trends Show Progress. Facebook . Retrieved from https://newsroom.fb.com/ news/2016/07/facebook-diversity-update-positive-hiring-trends-show-progress/.
 
 111 Rangarajan, S. (2018, June 25). Here's the clearest picture of Silicon Valley's diversity yet: It's bad. But some companies are doing less bad. The Center for Investigative Reporting . Retrieved from https://www.revealnews.org/article/heres-the-clearest-picture-of-silicon-valleys-diversity-yet/.
+
+
+<!-- PAGE 21 -->
+
 
 This view is particularly prevalent among the male entrepreneurs who make up much of the top leadership in the AI industry: one survey of founders of venture-backed companies found that men were over twice as likely to blame the pipeline for the diversity problem in the tech industry than women. 112  But there has been no real change in diversity within tech companies, despite the volume of studies and their relatively consistent findings. Thus, the role pipeline research plays in justifying the diversity status quo within large companies and elite university programs deserves closer scrutiny.
 
@@ -499,6 +580,10 @@ Other studies suggest that gender is correlated with a person's motivations for 
 
 121 Ibid.
 
+
+<!-- PAGE 22 -->
+
+
 Stereotypes may be introduced at many different junctures: the interpersonal relationships and competition among computer science students is an important factor, but so is the program curricula. The kinds of examples used in problem sets and the physical educational environment can shape whether a student develops a sense of belonging and interest in computer science. Often, researchers observed that these influences served both to convey geek stereotypes and to code them as masculine. 122  However, these stereotypes are not universally held: one study of Malaysian computer science students observed that women constitute half of all computer science students in higher education in the country, and espouse a unique, though nevertheless gendered, perspective on the field. In contrast to the West, computer science is seen among Malaysian students as a suitable career path for women because it involves office work which keeps them indoors. 123
 
 Some studies also examine deeper structural factors influencing gender-based discrimination, such as influences shaping the technical competency of male and female computer science students. Male students are more likely to enter computer science programs with existing programming skills, creating a sense among female computer science students that they are constantly behind. The source of this discrepancy starts at an early age: researchers have found that access to computers both in the home and in school settings is gendered - female students have a harder time gaining access to computers than their male counterparts, so they are at a disadvantage when trying to acquire these skills. Students interested in learning about computing but who lack parental instruction, resources at home, and a peer computing community are likely to lose the most when school resources are inadequate. 124  These challenges have understandable effects on female students' confidence in their skills in computer science. Many female students underestimate their own capabilities, and both male and female students tend to incorrectly believe that male computer science majors have higher GPAs. 125
@@ -519,6 +604,10 @@ Sometimes these injuries are not so small: a study by the National Academies of 
 
 127 Margolis, J. and Fisher, A. (2001). Unlocking the Clubhouse: Women in Computing . Cambridge: MIT Press.
 
+
+<!-- PAGE 23 -->
+
+
 were more likely than straight or white women to have been harassed. 128  A study that focused specifically on populations of computer science students in minority-serving institutions found that hostility directed at students by male peers and faculty was a prominent factor in computer science students' decision to change majors for all groups surveyed except white males. 129 Institutions can account for these forms of discrimination and harassment: for example, CMU dropped its admissions requirements for prior programming experience in favor of leadership experience, and found this alone increased its enrollment of female students dramatically. Importantly, doing so did not result in compromising the quality of the students as measured by key indicators like GPA or scores on standardized tests.
 
 ## Limitations of Pipeline Research
@@ -535,6 +624,10 @@ Roli Varma's work illustrates why it's so important to expand whose perspectives
 
 130 See, for example, research by Richard Kerby that indicates 40% of venture investors went to Stanford or Harvard. Kerby, R. (2018, Jul. 30). Where did you go to school? Medium , retrieved from https://blog.usejournal.com/where-did-you-go-to-school-bde54d846188?stream=top.
 
+
+<!-- PAGE 24 -->
+
+
 as computer scientists. 131,132  More work that addresses the nuances of how identity shapes students' relationship to computer science is sorely needed, as is more work that interrogates the construction of privileged identities (male, white, etc.). We also need to re-examine the dominant culture of tech as the subject of study, connecting these questions to the current incentives and power relationships that undergird the industry and the field as a whole. Such studies could look not only at who is underserved within the current tech ecology, but who benefits from its present construction and how these dynamics might be untangled to more clearly understand the state of diversity.
 
 In focusing overwhelmingly on university settings, these studies also rely on samples of convenience, though there are other critical juncture points in the pipeline that would be of value to examine in more detail. For example, Wynn &amp; Correll studied the recruitment sessions from tech companies at a prominent university on the West Coast, finding several indicators of gender bias in the recruiting process (they did not look at race or other identities): presenters at the sessions were overwhelmingly male, and in the cases where a female engineer was present, she would rarely talk, or only talk about company culture. Technical material was presented as a male domain, as were the perks emphasized, like foosball tables and beer fridges. By and large, these gendered patterns were reflected in students' engagement in the sessions; presentations that were gender-neutral often led to increased participation by female students. 133  More studies examining recruitment, promotion, and workplace environment would provide a fuller view into the influences shaping the experiences of women and gender non-conforming people in technology.
@@ -546,6 +639,10 @@ It is worth considering the scope of these studies' recommendations and context 
 132 Varma, R. (2010). Why so few women enroll in computing? Gender and ethnic differences in students' perception. Computer Science Education , 20(4): 301-316.
 
 133 Wynn, A. and Correll, S. (2018). Puncturing the pipeline: Do technology companies alienate women in recruiting sessions? Social Studies of Science , 48(1) 149-164.
+
+
+<!-- PAGE 25 -->
+
 
 ## Pipeline Dreams: After Years of Research, The Picture Worsens
 
@@ -568,6 +665,10 @@ The emphasis on diversity and inclusion can also serve to distract from dealing 
 138 Jessie Daniels lays out a compelling argument against the growing interest in adopting 'race-neutral' or 'colorblind' strategies to addressing algorithmic bias, illustrating the importance of racial literacy among industry leaders in order to adequately participate in discussions of racial inequality. See: Daniels, J. (2019, Apr. 3). 'Color-blindness' is a bad approach to solving bias in algorithms. Quartz . Retrieved from https:// qz.com/1585645/color-blindness-is-a-bad-approach-to-solving-bias-in-algorithms/.
 
 139 Banet-Weiser, S. (2018). Empowered: Popular Feminism and Popular Misogyny . Durham: Duke University Press, p. 12.
+
+
+<!-- PAGE 26 -->
+
 
 This problem was called out recently in a memo by former Facebook employee Mark S. Luckie outlining systemic failures by the company that impact both black employees and black users. Luckie observed that in some Facebook buildings, there are more 'Black Lives Matter' posters than actual black people - a vivid illustration of Sara Ahmed's claim that diversity initiatives often act as a way of rebranding organizations that allow inequalities to be concealed behind a veneer of marketing, and thus reproduced. 140,141
 
@@ -593,6 +694,10 @@ Google has been a prominent home for such worker-led efforts. In October 2018 th
 
 145 O'Brien, S.A. (2016). Apple's board calls diversity proposal 'unduly burdensome and not necessary'. CNN . Retrieved from https://money.cnn. com/2016/01/15/technology/apple-diversity/index.html.
 
+
+<!-- PAGE 27 -->
+
+
 accused of this behavior with millions of dollars in exit pay. 146 The article served as a catalyst for workers at the company, and precipitated the Google Walkout for Real Change, in which 20,000 Google employees in 50+ cities around the world walked out of work in protest of the company's actions.
 
 Initially conceived as a women's march, the organizers of the walkout quickly acknowledged that at the core of sexual harassment and discrimination are entrenched abuses of power. 147,148  The movement took on an intersectional and worker-driven agenda that acknowledged that race, class, and sexuality are intertwined with the forms of gender-based discrimination foregrounded in the news reporting on the walkout. Participants made explicit choices to center the needs of the company's temps, vendors and contractors - employees who lack the job security and benefits of more privileged tech workers.
@@ -617,6 +722,10 @@ Google is not alone as the home for such efforts, however. In 2019, Microsoft em
 
 152 Tiku, N. (2019, Apr. 4). Microsoft Employees Protest Treatment of Women to CEO Nadella. WIRED . Retrieved from https://www.wired.com/story/ microsoft-employees-protest-treatment-women-ceo-nadella/.
 
+
+<!-- PAGE 28 -->
+
+
 Google workers that their company create a 'Sexual Harassment Transparency Report'. And both Microsoft and Amazon employees issued letters to corporate management demanding that the companies discontinue contracts that support US Immigration and Customs Enforcement after it was revealed the agency was separating migrant parents and children at the border with Mexico. 153,154  These are a handful of the many examples of tech worker-led organizing that have emerged over the past year and a half. Through them we see clearly the ways in which organizing around issues of power and inequity within the tech industry directly relates to issues of power and inequity expressed in and through the technologies the industry is engaged in building.
 
 At the same time, it is worth considering what it means that workers who experience a great deal of privilege are driving protests at AI companies. They have a responsibility to center the voices of those who are most at risk of harm from AI systems and are largely excluded from conversations about AI ethics, including the temps, vendors and contractors who make up an ever growing part of the workforce at these companies. 155
@@ -636,6 +745,10 @@ Those questioning and even rejecting the idea that racism, misogyny, and harassm
 155 Google Walkout For Real Change. (2018, Dec. 5). Invisible no longer: Google's shadow workforce speaks up. Medium . Retrieved from https:// medium.com/@GoogleWalkout/invisible-no-longer-googles-shadow-workforce-speaks-up-9ea04b7bcc41.
 
 156 For examples, see: Keyes, O. (2018). The Misgendering Machines: Trans/HCI Implications of Automatic Gender Recognition. Retrieved from https:// ironholds.org/resources/papers/agr\_paper.pdf, Costanza-Chock, S. (2018, Jul. 27). Design Justice, A.I. and Escape from the Matrix of Domination. Journal of Design and Science . Retrieved from https://jods.mitpress.mit.edu/pub/costanza-chock.
+
+
+<!-- PAGE 29 -->
+
 
 AI researchers greeted the announcement of the Black in AI workshop at NeurIPS, a leading machine learning conference, by questioning whether the event was necessary and arguing that it would be discriminatory. 157,158
 
@@ -658,6 +771,10 @@ Instead of looking at historical patterns of marginalization, calls for cognitiv
 162 Googlers Against Transphobia and Hate. (2019, Apr. 1). Retrieved from https://medium.com/@against.transphobia/googlers-against-transphobiaand-hate-b1b0a5dbf76.
 
 163 AI Now co-founder Meredith Whittaker was one of the organizers of the Googlers Against Transphobia and Hate letter
+
+
+<!-- PAGE 30 -->
+
 
 The idea of cognitive diversity is mobilized by some to support the conclusion that the AI field and the tech industry are already diverse, even going so far as to support claims that not including identities like 'white' and 'male' constitutes discrimination. A July 2017 memo written by James Damore, a Software Engineer at Google, is illustrative of such pushback. 164  Titled 'Google's Ideological Echo Chamber' and published on an internal mailing list, the memo critiqued the company's diversity policies, arguing that biological differences between men and women (rather than bias and discrimination) help explain gender disparities at the company. Damore's objective in writing the memo was to make a case that policies designed to achieve equal representation are 'unfair, divisive, and bad for business.' 165  Supporters of Damore's point of view at times even drew on the rhetoric of the pipeline to make the case that diversity initiatives are in fact discriminatory: they argue, incorrectly, that if there aren't qualified candidates in the pipeline, then hiring those who are unqualified on the basis of identity discriminates against those who are qualified. 166  Damore went on to file an unsuccessful complaint with the National Labor Relations Board asserting wrongful termination, 167  and sued Google in a class action lawsuit for alleged discrimination against white conservative men. 168,169
 
@@ -682,6 +799,10 @@ This quote illustrates the effect of flattening diversity and inclusion discours
 Damore, J. (2017, July).Google's Ideological Echo Chamber: How bias clouds our thinking about diversity and inclusion. Retrieved from https:// assets.documentcloud.org/documents/3914586/Googles-Ideological-Echo-Chamber.pdf.
 
 171 Shablamo. (2017, Aug. 4). Any googlers wanna talk about this manifesto? Blind . Retrieved from https://www.teamblind.com/article/any-googlerswanna-talk-about-this-manifesto-gEa43hGg.
+
+
+<!-- PAGE 31 -->
+
 
 the claims in the memo began, with a particular focus on queer and trans workers. 172,173  Google's Vice President of Diversity even locked down her Twitter account shortly after Damore's firing, responding to a barrage of threats describing her as a 'police Nazi'. 174
 
@@ -709,6 +830,10 @@ So it is notable that similar determinist logics are currently emerging within A
 
 180 See: https://azure.microsoft.com/en-us/services/cognitive-services/face/.
 
+
+<!-- PAGE 32 -->
+
+
 Biological determinism has now re-emerged both as a pushback against calls for equity and inclusion, and as a foundational idea within AI system design. Given the work that biological determinism has done historically - justifying the 'superiority' of white people over black people, men over women, and extant social hierarchies as a product of biological destiny, it is urgent that these ideas are rejected as spurious. Most importantly, we need to consider who benefits and who bears the cost of the widespread automation of such logics.
 
 ## CONCLUSION
@@ -722,6 +847,10 @@ Our analysis surfaced two prominent responses to the diversity crisis: on the on
 This is a critical moment for the AI industry to decide what it will do. As AI systems are embedded in more social domains, they are playing a powerful role in the most intimate aspects of our lives: our health, our safety, our education, and our opportunities. It's essential that we are able to see and assess the ways that these systems treat some people differently than others, because they already influence the lives of millions.
 
 In the initial findings and recommendations from our multi-year research project, we seek to trace out a positive path forward. Our objective should not be to simply diversify the privileged class of technical workers engaged in developing AI systems in the hope that this will result in greater equity. Nor should it be to develop bespoke technical approaches to systemic problems of bias and error, hoping that others won't come along. Instead, by broadening our frame of reference and integrating both social and technical approaches, we can begin to chart a better path forward.
+
+
+<!-- PAGE 33 -->
+
 
 ## ACKNOWLEDGMENTS
 

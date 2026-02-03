@@ -1,10 +1,11 @@
 ---
 source_file: Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.pdf
-conversion_date: 2026-02-03T08:43:48.102170
+conversion_date: 2026-02-03T18:22:01.522589
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Australian Social Work
@@ -55,6 +56,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -95,6 +100,10 @@ Received 22 September 2024 Accepted 30 March 2025
 
 Artificial  Intelligence; AI; Generative AI, Ethics; Technology; Social Work; Ethics; Social Justice; Community Engagement; Empowerment; Policy Development; Advocacy; Collaboration; First Nations; Australia; Safety; Future; Structural Bias
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 spread of false, manipulated, and fabricated information through online media networks. Further, the United Nations (UN, 2024) adopted a landmark resolution to promote the development  of  secure  and  trustworthy  AI  systems,  referring  to  the  need  to  address associated racial discrimination, bias, and human rights issues. This evidence highlights the paradoxical and complex nature of AI, requiring an articulated and collective global social work approach.
@@ -107,6 +116,10 @@ The term AI refers to computer technologies that have the capacity to mimic or s
 
 The development of AI in healthcare has grown rapidly with applications available in a range of areas, including early disease detection, medical imaging, drug development, personalised care, and administration (Alowais et al., 2023). A particularly relevant area for social  work  is  AI's  application  in  mental  health  and  predictive  risk  assessment.  AIpowered chatbots, for example, are increasingly used in clinical and therapeutic settings to improve individual mental health and wellbeing (Balan et al., 2024; Xue et al., 2023). These  chatbots,  designed  to  simulate  human  conversation,  allow  users  to  interact  with digital  devices,  offering  support  for  mental  health,  physical  activity,  and  behaviour change (Coghlan et al., 2023; Xue et al., 2023). In addition, AI plays a significant role in predictive risk modelling for suicide (e.g., Nordin et al., 2022; Walsh et al., 2017), domestic violence (Hui et al., 2023; Petering et al., 2018), and child protection (Field et al., 2023).
 
+
+<!-- PAGE 4 -->
+
+
 By  analysing  large  datasets,  AI  systems  are  used  to  predict  individuals  at  higher  risk, enabling the implementation of early interventions to reduce the likelihood of harm.
 
 Research outcomes on the use of AI in healthcare are mixed. On the one hand, some research on the effectiveness and diagnostic accuracy of AI is promising. For example, a review of research using AI-learning machines to predict domestic violence using online social  media  data  found  exceptional  potential  for  identifying  at-risk  individuals  (Hui et  al.,  2023).  However,  research  indicates  challenges  relating  to  risks  of  misdiagnosis and  a  lack  of  clinical  tests  on  the  effectiveness  and  validity  of  AI.  For  example,  a scoping review of AI-powered chatbots found limited evidence supporting the efficacy of chatbots for improving mental health in young people (Balan et al., 2024). Another scoping review, found that just 44% of chatbots effectively addressed suicidal thoughts, causing  concern  for  their  capacity  to  respond  to  crisis  situations  (Xue  et  al.,  2023). Further, the use of ChatGPT in child protection settings has yielded inaccurate output data  and  breached  privacy  principles  involving  third-party  access  to  service  user  data (Victorian  Government,  2024).  This  evidence  suggested  that  without  rigorous  testing and validation, there is risk of overestimating the effectiveness of AI and potentially compromising the quality of healthcare.
@@ -117,6 +130,10 @@ AI has the potential to transform the profession's capacity and effectiveness fo
 
 As pointed out by Gough and Spencer (2019), technologies, however, 'are not neutral, independent and non-invasive' instruments (p. 252). Rather, AI-generated data may be algorithmically biased and not representative of marginalised groups due to its reliance on large volumes of historical datasets (Dankwa-Mullan et al., 2021; Khawaja &amp; BélislePipon, 2023; Reamer, 2023). This reliance on historical datasets means that the dominance of colonial knowledges in AI algorithms are reinforced, and the ongoing colonisation and oppression of First Nations Peoples perpetuated (Cave &amp; Dihal, 2020). Further, considerations of gender, race, ethnicity, and sexual orientation may be nonexistent or significantly prejudiced and discriminative. Research pioneered by computer scientists Buolamwini  and  Gebru  (2018)  found  that  gender  classification  systems  produced  an error rate up to 34.7% for darker-skinned females. The 'black box' problem further complicates this situation when complex AI decision-making algorithms are not interpretable
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 or  understandable  by  AI  users,  service  providers,  and  AI  developers  (Wadden,  2021). These issues are further exacerbated by a lack of community involvement in AI development (Cave &amp; Dihal, 2020; Dankwa-Mullan et al., 2021), which means that algorithms supporting AI rarely consider diverse perspectives.
@@ -126,6 +143,10 @@ AI significantly influences various aspects of interaction between service users
 AI has the capacity to influence politics and social policy decisions relevant to social work services. Meilvang and Dahler (2024) drew attention to the propensity for political actors  to  favour  positivist  approaches  to  social  policy,  including  efforts  to  standardise casework and promote objectivity, to avoid politically damaging high-profile cases leveraged  by  the  media.  In  addition,  there  is  potential  for  the  public  to  persuade  political actors to implement positivist AI approaches to decision-making processes in contested areas, such as child protection, which has the effect of negating professional discretion (Meilvang &amp; Dahler, 2024). The politics of AI is further accentuated by the spreading of misinformation and disinformation across online media networks that has the effect of shifting public opinion towards distrust, and causing civil unrest, political instability, and conflict (WEF, 2024). For example, the creation of deepfake content in election campaigns  has  altered  public  perceptions  and  influenced  voter  preferences  in  many countries,  including  the  United  States,  India,  and  Slovakia  (Garimella  &amp;  Chauchard, 2024). There are concerns that AI may become the platform for new public management strategies in welfare state administration (James &amp; Whelan, 2022) and as the solution for addressing  an  overloaded  health  and  social  services  system  (Meilvang,  2023).  These issues have potential to usher in a new wave of AI-generated politics that could undermine social work's mission and values.
 
 While professional policy documents consider the ethical use of technology, there is little guidance for social workers operating in the context of contemporary AI environments. The International Federation of Social Workers (IFSW, 2018) affirmed the ethical use  of  technology  and  social  media  as  an  ethical  principle  with  specific  reference  to privacy and confidentiality, conflicts of interest, competence, and knowledge to safeguard
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -143,6 +164,10 @@ Figure 1. The EPIC model.
 
 <!-- image -->
 
+
+<!-- PAGE 7 -->
+
+
 6
 
 <!-- image -->
@@ -156,6 +181,10 @@ Respecting the service user-practitioner relationship is crucial for ethical pra
 ## Policy Development and Advocacy
 
 Enhancing social worker capabilities in AI requires leadership from professional governing  bodies  to  guide  and  empower  social  workers  to  use  AI.  While  international  and national  policy  documents affirm the ethical  use of  technology and social media (e.g., IFSW, 2018; CASW, 2014; NASW, 2017), locating AI more explicitly within professional social work policy documents is lacking. Rather, inclusion of AI content in course accreditation  requirements  and  practice  standards  is  critical  for  ensuring  practitioners  can appropriately  navigate  this  new  era  of  frontier  technologies  (Dali  &amp;  Caidi,  2023).  At
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 
@@ -178,6 +207,10 @@ Table 2 Strategies for Promoting Policy Development and Advocacy
 | Professional social work policy | . Inclusion of AI content in relevant professional documents . Implementation of AI policies in social work organisations                                                                                                                                            |
 | Policy advocacy                 | . Increase community awareness of primary profit motive of AI companies and associated power imbalances . Advocacy promoting legal protection and self-governance of personal data . Advocacy for international and national collaborative governance and regulation |
 
+
+<!-- PAGE 9 -->
+
+
 <!-- image -->
 
 ## Intersectoral Collaboration
@@ -197,6 +230,10 @@ Table 3 Practice Strategies for Promoting Intersectoral Collaboration
 | Interdisciplinary partnerships | . Increase interdisciplinary collaboration between social workers, computer scientists, governments, and the private sector . Contribution of social work expertise in contextual, interactional, and situational knowledge                                                   |
 | Interdisciplinary research     | . Increase in social work AI research, involving social work researchers, educators, and practitioners . Research collaboration with computer scientists, governments, and the private sector . Research to include social worker involvement in AI design and implementation |
 
+
+<!-- PAGE 10 -->
+
+
 <!-- image -->
 
 Table 4 Practice Strategies for Promoting Community Engagement and Empowerment
@@ -214,6 +251,10 @@ In addition, building community knowledge and skills in AI, including recognisin
 
 The EPIC model introduces a multidimensional approach to integrating AI into social work. The model's core components-ethics and justice, policy development and advocacy,  intersectoral  collaboration,  and  community  engagement  and  empowermentprovide  a  guide  for  ensuring  that  the  implementation  of  AI  aligns  with  the  mission and values of the profession. However, the integration of AI into social work practice raises  significant ethical challenges. At the core of these challenges is AI's dependence
 
+
+<!-- PAGE 11 -->
+
+
 <!-- image -->
 
 on historical datasets that are not representative of First Nations' perspectives and marginalised groups, posing significant harm via misdiagnosis, exclusion, and discriminatory outcomes  (Dankwa-Mullan  et  al.,  2021;  Khawaja  &amp;  Bélisle-Pipon,  2023;  Reamer,  2023). Further,  the  balance  between  human  judgement  and  technological  decision  making  is crucial to ensure that AI enhances rather than replaces the nuanced understanding that social  workers  bring  to  practice  (Grant,  2018;  Reamer,  2023).  When  used  responsibly, AI can support social workers in decision-making processes and potentially enhance the quality-of-service  delivery  (Meilvang,  2023,  p.  12;  Meilvang  &amp;  Dahler,  2024).  However, this  balance  requires  ongoing  vigilance  to  prevent  overreliance  on  AI  systems  and  to ensure that the service user-practitioner relationship remains central to practice.
@@ -227,6 +268,10 @@ The model emphasises the need for community engagement and empowerment in the de
 ## Limitations
 
 Although community engagement is emphasised, the model assumes that service users and  communities  will  have  the  resources  and  access  to  actively  participate  in  AI
+
+
+<!-- PAGE 12 -->
+
 
 <!-- image -->
 
@@ -251,6 +296,10 @@ Heather Boetto http://orcid.org/0000-0002-3606-7878
 - Balan, R., Dobrean, A., &amp; Poetar, C. R. (2024). Use of automated conversational agents in improving  young  population  mental  health:  A  scoping  review. NPJ  Digital  Medicine , 7 (1),  75-75. https://doi.org/10.1038/s41746-024-01072-1
 - Benzie, A., &amp; Montasari, R. (2022). Artificial intelligence and the spread of mis- and disinformation.  In  R.  Montasari  (Ed.), Artificial  intelligence  and  national  security (pp.  1-18).  Springer. https://doi.org/10.1007/978-3-031-06709-9\_1
 
+
+<!-- PAGE 13 -->
+
+
 <!-- image -->
 
 - Black, E., Williams, J., Madaio, M. A., &amp; Donti, P. L. (2020, April). A call for universities to develop requirements  for  community  engagement  in  AI  research.  In The  Fair  and  Responsible  AI Workshop at the 2020 CHI Conference on Human Factors in Computing Systems .  https://fairai.academicwebsite.com/publications/1480-a-call-for-universities-to-develop-requirementsfor-community-engagement-in-ai-research
@@ -271,6 +320,10 @@ Heather Boetto http://orcid.org/0000-0002-3606-7878
 - Hodgson, D., Goldingay, S., Boddy, J., Nipperess, S., &amp; Watts, L. (2022). Problematising artificial intelligence in social work education: Challenges, issues and possibilities. The British Journal of Social Work , 52 (4), 1878-1895. https://doi.org/10.1093/bjsw/bcab168
 - Huang, K., Joshi, A., Dun, S., &amp; Hamilton, N. (2024). AI regulations. In K. Huang, Y. Wang, B. Goertzel, Y. Li, S. Wright, &amp; J. Ponnapalli (Eds.), Generative AI security: Theories and practices (pp. 61-98). Springer. https://doi.org/10.1007/978-3-031-54252-7\_3
 
+
+<!-- PAGE 14 -->
+
+
 - Hui, V., Constantino, R. E., &amp; Lee, Y. J. (2023). Harnessing machine learning in tackling domestic violence - An integrative review. International Journal of Environmental Research and Public Health , 20 (6), 4984. https://doi.org/10.3390/ijerph20064984
 - International Federation of Social Workers. (2018). Global social work statement of ethical principles. https://www.ifsw.org/global-social-work-statement-of-ethical-principles/
 - Jacobi, C. B., &amp; Christensen, M. (2023). Functions, utilities and limitations: A scoping study of decision  support  algorithms  in  social  work. Journal  of  Evidence-Based  Social  Work , 20 (3), 323-341. https://doi.org/10.1080/26408066.2022.2159777
@@ -290,6 +343,10 @@ Heather Boetto http://orcid.org/0000-0002-3606-7878
 - Petering, R., Um, M., Alipourfard, N., Tavabi, N., Kumari, R., &amp; Gilani, S. N. (2018). Artificial intelligence to predict intimate partner violence. In M. Tambe, &amp; E. Rice (Eds.), Artificial intelligence  and  social  work (pp.  195-210).  Cambridge  University  Press.  https://doi.org/10.1017/ 9781108669016.002
 - Reamer, F. G. (2023). Artificial intelligence in social work: Emerging ethical issues. International Journal of Social Work Values and Ethics , 20 (2), 52-71. https://doi.org/10.55521/10-020-205
 - Rice, E., &amp; Tambe, M. (2018). Merging social work science and computer science for social good. In  M.  Tambe,  &amp;  E.  Rice  (Eds.), Artificial  intelligence  and  social  work (pp.  3-15).  Cambridge University Press. https://doi.org/10.1017/9781108669016.002
+
+
+<!-- PAGE 15 -->
+
 
 <!-- image -->
 

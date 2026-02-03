@@ -1,10 +1,11 @@
 ---
 source_file: Klinge_2024_A_sociolinguistic_approach_to_stereotype.pdf
-conversion_date: 2026-02-03T09:03:09.407230
+conversion_date: 2026-02-03T18:34:14.150191
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Detecting Linguistic Indicators for Stereotype Assessment with Large Language Models
 
 ## Rebekka Görge
@@ -59,6 +60,10 @@ Current research investigates in the detection and mitigation of stereotypes as 
 
 3 Definition according to [23]: 'Data properties that, if unaddressed, lead to AI systems that perform better or worse for different groups'
 
+
+<!-- PAGE 2 -->
+
+
 [44]. This indicates that intrinsic biases continue to manifest in model behavior, highlighting the need to reduce stereotypes as much as possible at the data level. Also sociolinguistics has long examined the emergence and linguistic form of stereotypes, Blodgett et al. finds that most research on bias in natural language processing (NLP) is poorly aligned with interdisciplinary studies. Existing work in stereotype detection primarily relies on human-constructed and annotated benchmarking datasets [3, 16, 31, 32], which serve as the foundation for training classifiers for text-based stereotype detection and for benchmarking widely used LLMs. These datasets and resulting detection methods typically categorize sentences as either stereotypical or anti-stereotypical based on subjective human assessments, leading to pitfalls such as misalignment or uncleanness of the stereotypes themselves [5]. To address this issue, Liu argues that a purely binary separation of stereotypes is insufficient, as stereotypes can be expressed in various forms. Instead, they propose a fine-grained quantification of the strength of a stereotype using a continuous scoring system grounded in human stereotype rankings [26]. However, as the score relies on human judgment, it reflects subjective perceptions shaped by the annotators' cultural and social backgrounds, and it lacks an explanation for why a stereotypical sentence contains a specific stereotype.
 
 Our work starts at this point, as this paper presents a novel, sociolinguistically based, twofold approach to quantifying stereotypes in language. Unlike [26], we do not assess the harmfulness of a stereotype based on human judgment, but instead focus on evaluating potentially stereotypical sentences by first detecting linguistic indicators that signal a stereotype, and second quantifying them to assess the strength of the stereotype. Our approach is illustrated in Figure 1. Note that our current approach assumes that a given sentence contains a stereotype and focuses on stereotype assessment, but is extendable to stereotype detection as well, as outlined in the conclusion. By grounding our work in sociolinguistics, we adopt the Social Category and Stereotype Communication Framework (SCSC) [4] (Section 3), which explicates the linguistic processes by which stereotypes are shared and maintained in language, and use it to derive a clear categorization scheme with a fixed set of linguistic indicators (Section 4). Leveraging their extensive linguistic capabilities, we integrate LLMs to automatically detect linguistic indicators by guiding them through the categorization scheme using an in-context learning approach (Section 5). To quantify the linguistic indication on a stereotype, we aggregate the derived linguistic indicators by learning a scoring function, for which we exploit the work of Liu and learn the importance of different linguistic indicators based on human stereotype rankings (Section 6). We validate our approach using a manually annotated subsample of CrowS-Pairs[32] and human-based stereotype rankings of [26].
@@ -72,6 +77,10 @@ To this end, several datasets such as the Crowdsourced Stereotype Pairs (CrowS-P
 In contrast to stereotypes as a harm of model bias, the exploration of stereotypes as a form of data bias introduced through human language bias is less explored [18]. Existing methods can be divided into statistical methods and model-based techniques. Statistical approaches such as embedding-based metrics [19] focus on analyzing the distribution and co-occurrence patterns of words, phrases, or demographic categories within datasets. In contrast, model-based approaches often trained on the aforementioned datasets leverage AI models to detect and assess stereotypes by analyzing contextual relationships and latent representations in text. To this end, these models can uncover the explicit sources of bias in text, but may also reflect the biases present in their own training data. These approaches can also be used as a filter to detect stereotypes in LLM output.
 
 Among the model-based approaches, there are several studies that specifically adapt and train pre-trained language models for stereotype detection [35] or assessment [18, 26, 37], using different methods and evaluating stereotypes according to different aspects. In terms of stereotype detection, Pujari et al. address the subtle manifestations of stereotypes by creating a focused evaluation dataset that includes explicit stereotypes, implicit stereotypes, and nonstereotypes. They leverage multi-task learning and reinforcement learning to enhance the accuracy of stereotype detection. As modelbased stereotype detection methods often lack explainability, Wu et al. and King et al. propose explainability tools such as Shap and Lime [36] to explain the decisions of stereotype detectors. In terms of stereotype evaluation, Sap et al. develop and implement Social Bias Frames, a formalism that captures the pragmatic implications of stereotypes, supported by a large annotated corpus that emphasizes the need to combine structured inference with common sense reasoning. Similar, Fraser et al. builds on interdisciplinary work and presents a pre-trained embedding model that models the Stereotype Content Model [15] from psychological research to analyze stereotypes along the dimensions of warmth and competence, leading to an intrinsically interpretable approach. Also, Liu focuses
+
+
+<!-- PAGE 3 -->
+
 
 Figure 1: Overview of our framework for assessing linguistic indicators of stereotypes using the SCSC framework and LLMs
 
@@ -90,6 +99,10 @@ Sociolinguistics has long been researching how stereotypes are shared and mainta
 From particular interest to us is the bias in language use (3), which describes the linguistic biases that are used in language when expressing and maintaining stereotypes 4 . These linguistic biases mean that certain linguistic forms and patterns are used in the communication of stereotypes in language. Notably, these linguistic biases express, on a linguistic level, the factors of shared cognition of social categories (1), as well as the level of information of the target situation (2). Based on the definition of stereotypes, there are linguistic biases referring to the social category and linguistic biases pertaining to the associated content (characteristics and behaviors). We illustrate this with the sample sentence 'Women can't drive in the rain' . For a detailed list of examples, see Appendix A, 4. To create or spread a stereotype through language, communication must relate to a specific social category or an individual representing that group. This is achieved linguistically by using a label that identifies the targeted social group, referred to as the 'category label' ( e.g., Women ). By differing in semantic content (denotation and connotation) and linguistic form (grammatical form and generalization), this category label conveys various meanings and perceptions that influence shared social category cognition. The semantic content
 
 4 Notably, the language use is embedded in a communicative context determined by factors such as social context, medium, or communication partners.
+
+
+<!-- PAGE 4 -->
+
 
 Table 1: A comparison of model-based methods for stereotype detection and assessment showing current gaps
 
@@ -121,6 +134,10 @@ The categorization scheme is illustrated in Table 2. For both primary categories
 ## 4.2 Dataset and manual ground truth annotation
 
 To validate the functionality of the categorization scheme and establish a reference ground truth, we manually annotate a subset of the CrowS-Pairs dataset. The annotations can be found in the accompanying git-repository. The CrowS-Pairs benchmark is a widely used dataset that addresses stereotypes across nine types of social bias
+
+
+<!-- PAGE 5 -->
+
 
 Table 2: Our categorization scheme grounded in the SCSC framework [4]: We define a fixed set of linguistic indicators and values, and their strengthening ( ↑ ) or weakening ( ↓ ) impact on shared social category cognition (using 'entitativity' for category entitativity and 'essentialism' for category essentialism) ordered by category label and associated content.
 
@@ -155,6 +172,10 @@ Table 2: Our categorization scheme grounded in the SCSC framework [4]: We define
 
 (such as race, gender, religion, or physical appearance). It contains 1,508 examples divided into stereotypes (demonstrating a stereotype against a socially disadvantaged group) and anti-stereotypes (violating a stereotype against a socially disadvantaged group). Each example is a pair with a sentence about a disadvantaged group alongside a minimally different sentence about a contrasting advantaged group. The sentences were obtained through crowdsourcing with Amazon Mechanical Turk. Although CrowS-Pairs is widely used, Blodgett et al. reveals serious shortcomings in the conceptualization and operationalization of the dataset. Of particular relevance to our work is the pitfall described in relation to anti-stereotypes: The anti-stereotypes found in CrowS-Pairs are usually negations or contrasts of created stereotypes. In some cases, true statements are found, but in many cases irrelevant statements are made about a target group [6]. Due to the artificial construction of the anti-stereotypes, they do not reflect the linguistic patterns
 
+
+<!-- PAGE 6 -->
+
+
 for formulating stereotype-inconsistent statements as described in [4], but mainly change the content of the statement about a group [35]. While this might be less critical for benchmarking the preferences of a language model, it cannot be equated with naturally occurring stereotype-inconsistent or stereotype-free sentences in the language.
 
 To overcome this problem, we select only stereotypical sentences from CrowS-Pairs, which is sufficient for the development of our scoring function. To minimize the risks associated with CrowSPairs, we make use of the work of Névéol et al. and only use these sentence of CrowS-pairs that were confirmed by Névéol et al. in the revised dataset. Next, we select 100 sentences from CrowS-Pairs targeting either the attribute gender or race. Then each sentence is manually analyzed for linguistic indicators which are then categorized according to the attributes developed from Table 2 by two annotators (one of the authors and a research collaborator) with different cultural backgrounds separately. The annotators received step-by-step instructions for the annotations, reflecting the information provided in the LLM prompts (compare Appendix A), only adapted in format. After an initial annotation step, Cohen's kappa [10] was calculated for the annotators to be 𝜅 = 96%, indicating almost perfect agreement. The majority of deviation occurred with 𝜅 = 93% in the linguistic indicator generalization (content) . To reach a ground truth, both annotators discussed deviation until they have reached agreement. An example of some annotated sample sentences is given in Table 4 in the appendix.
@@ -177,6 +198,10 @@ We construct a few-shot prompt that includes a role description, a task descript
 
 To determine the best number of examples to be used in the fewshot learning, we compare the models' mean performance over the attributes related to the category label and related to the associated content by increasing the number of few-shot examples to nine. As shown in Figure 3, we find that by increasing the number of
 
+
+<!-- PAGE 7 -->
+
+
 Figure 3: Accuracy of linguistic indicators based on number of few-shot examples
 
 <!-- image -->
@@ -196,6 +221,10 @@ In general, the evaluation confirms the potential of LLMs to automatically reali
 ## 6 Assessing linguistic stereotype indicators 6.1 Weighting of linguistic indicators and scoring function
 
 Using the categorization scheme and in-context learning, we can effectively derive the linguistic indicators from the experiments performed. As can be seen in Table 2, each linguistic indicator has a strengthening or weakening effect on category entitativity, stereotype content, and category essentialism, and thus on how we
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 
@@ -227,6 +256,10 @@ Using this weighting, we introduce the scoring function 𝑠𝑐𝑜𝑟𝑒 �
 
 5 https://github.com/nlply/quantifying-stereotypes-in-language/tree/main
 
+
+<!-- PAGE 9 -->
+
+
 Figure 5: Importance of one-hot encoded feature values of indicators based on our linear regression model
 
 <!-- image -->
@@ -242,6 +275,10 @@ In this section, we evaluate our complete approach for automated scoring of ster
 Wecompute the scoring function for each sentence in our sample dataset based on the predicted linguistic indicators from Llama-3.3 -70B , denoted as GLYPH&lt;154&gt; 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 . We evaluate it against 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 from our ground truth annotations of the linguistic indicators to understand how well it is approximated by the GLYPH&lt;154&gt; 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 . Furthermore, we compare it to the 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 , as we aim to understand how well our score aligns with human ratings. The GLYPH&lt;154&gt; 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 differs from the ground truth 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 by 𝑀𝐴𝐸 = 0 . 03, confirming that LLM effectively captures the most important linguistic indicators. The GLYPH&lt;154&gt; 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 has a minimum absolute error of 𝑀𝐴𝐸 = 0 . 06 to the 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 , which is slightly higher than the 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 . As shown in Figure 7, all three scores correlate well, but are concentrated between 0.3 and 0.7. However, 𝑠𝑜𝑐𝑟𝑒 𝑏𝑤𝑠 exhibits a wider range, particularly downward, compared to 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 and GLYPH&lt;154&gt; 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 , which are constrained by the linearity of the scoring function. This suggests the hypothesis that subjective human ranking is more strongly influenced by perceptions and stereotypical content, leading to stronger values than those captured only by the linguistic indicators.
 
 To investigate this hypothesis, we perform a qualitative analysis of the sample sentences, comparing the ground truth 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 with 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 . We first order the sentences according to 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 and examine those with identical linguistic indicators, but with high deviations in 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 . Six examples targeting the same 'social category' are illustrated in Table 3 (more examples can be found in Appendix A, Table 4). The first four and the last two samples share the same linguistic indicators. The first four sentences differ only in their stereotypical content, where subjectively sentences 1 and 2 seem to be 'less' harmful. Sentences 3 and 4 convey nearly identical and highly prejudicial content, and while they share the same 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 , their 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 differs. Notably, sentence 4 has even a lower 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 than sentence 2, which is not intuitively explainable. These examples demonstrate that 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 lacks the interpretability needed to understand the source of these different judgments, and in these cases appears to be heavily influenced by human subjectivity, a limitation also noted by [26]. In contrast, sentences 5 and 6 show that the evaluation of the stereotypical content itself is not reflected in the 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 , sometimes leading to under- or overestimates. Here, the human-evaluated 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 rates the stereotype content in sentence 6 as much stronger and in sentence 5 as much weaker than our score. Overall, the qualitative analysis indicates that 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 and 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 differ more for sentences about individuals ( 𝑀𝐴𝐸 = 0 . 07) for generic groups ( 𝑀𝐴𝐸 = 0 . 05), as our score rates low-level information about individuals generally lower. Due to this, it fails to capture (implicit) stereotype deduction regarding specific individuals (e.g., She said to not try and steal anything, me being black and all. )
+
+
+<!-- PAGE 10 -->
+
 
 Table 3: Sample sentences with same linguistic indicators ( 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 ) but varying human ranking ( 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 ).
 
@@ -269,6 +306,10 @@ To allow fine-grained quantification of stereotypes based on linguistic indicato
 We acknowledge the following limitations of our work: First, given that the SCSC's framework's linguistic theory is Englishspecific, our approach and experiments are currently restricted to English. We plan to expand to other similarly structured languages (e.g. German and Spanish) using the multilingual CrowSPairs dataset ([17] in future work. Second, our analysis relies solely on the publicly accessible CrowS-Pairs dataset. Although the results presented in this paper showcase the effectiveness of our methodology, we recognize the need for future enhancements through the incorporation of additional data. Third, to apply our approach to large amounts of (mostly unrelated) training data, the approach is currently not efficient enough and needs to be adapted as described in our conclusion. Finally, our results have not been evaluated across multiple runs due to budgetary constraints and may exhibit minor variations arising from the use of LLMs.
 
 In future work, our function could be extended by including an indicator evaluating the sentiment associated with the behaviors or characteristics. This aligns with the SCSC framework, which defines stereotype content as a variable of shared cognition of stereotypes. It is crucial to note that this extends beyond a purely linguistic assessment by the model, making it essential to avoid introducing model bias into the evaluation. We will embed our approach into a larger framework that also addresses stereotype detection, allowing the method to be used for arbitrary training data or model output evaluation. We plan to use a two-step approach: first, detecting potential stereotypes based on the presence of category labels and associated behaviors and characteristics; second, applying the scoring function developed in our current approach for a fine-grained assessment of stereotype strength, which helps filter out false positives. Currently, we focus only on sentences, but future approaches will need to include the broader context in which a sentence is situated.
+
+
+<!-- PAGE 11 -->
+
 
 ## Ethical statement
 
@@ -312,6 +353,10 @@ The development of this publication was supported by the Ministry of Economic Af
 - [30] Michael Mock, Sebastian Schmidt, Felix Müller, Rebekka Görge, Anna Schmitz, Elena Haedecke, Angelika Voss, Dirk Hecker, and Maximillian Poretschkin. 2024. Developing trustworthy AI applications with foundation models. arXiv preprint arXiv:2405.04937 (2024).
 - [31] Moin Nadeem, Anna Bethke, and Siva Reddy. 2021. StereoSet: Measuring stereotypical bias in pretrained language models. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) . 5356-5371.
 
+
+<!-- PAGE 12 -->
+
+
 - [32] Nikita Nangia, Clara Vania, Rasika Bhalerao, and Samuel R. Bowman. 2020. CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models. In Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing (EMNLP) , Bonnie Webber, Trevor Cohn, Yulan He, and Yang Liu (Eds.). Association for Computational Linguistics, Online, 19531967. doi:10.18653/v1/2020.emnlp-main.154
 - [33] Roberto Navigli, Simone Conia, and Björn Ross. 2023. Biases in Large Language Models: Origins, Inventory, and Discussion. Journal of Data and Information Quality 15, 2 (June 2023), 1-21. doi:10.1145/3597307
 - [34] Aurélie Névéol, Yoann Dupont, Julien Bezançon, and Karën Fort. 2022. French CrowS-Pairs: Extending a challenge dataset for measuring social bias in masked language models to a language other than English. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) , Smaranda Muresan, Preslav Nakov, and Aline Villavicencio (Eds.). Association for Computational Linguistics, Dublin, Ireland, 8521-8531. doi:10.18653/ v1/2022.acl-long.583
@@ -326,6 +371,10 @@ The development of this publication was supported by the Ministry of Economic Af
 - [43] Somin Wadhwa, Silvio Amir, and Byron C Wallace. 2023. Revisiting relation extraction in the era of large language models. In Proceedings of the conference. Association for Computational Linguistics. Meeting , Vol. 2023. NIH Public Access, 15566.
 - [44] Boxin Wang, Weixin Chen, Hengzhi Pei, Chulin Xie, Mintong Kang, Chenhui Zhang, Chejian Xu, Zidi Xiong, Ritik Dutta, Rylan Schaeffer, et al. 2023. DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models.. In NeurIPS .
 - [45] Zekun Wu, Sahan Bulathwela, Maria Perez-Ortiz, and Adriano Soares Koshiyama. 2024. Auditing Large Language Models for Enhanced Text-Based Stereotype Detection and Probing-Based Bias Evaluation. http://arxiv.org/abs/2404.01768 arXiv:2404.01768 [cs].
+
+
+<!-- PAGE 13 -->
+
 
 ## A Appendix
 
@@ -364,13 +413,25 @@ Sentence: It always rains in London. { "has_category_label": "no" }
 
 Sentence: Young women are usually too emotional to make a decision!
 
+
+<!-- PAGE 14 -->
+
+
 ```
 { "has_category_label": "yes", "full_label": "young women", "target_type": "generic target", "connotation": "neutral", "grammatical_form": "noun", "linguistic_form": "generic", "information": "are usually too emotional to make a decision.", "situation": "enduring characteristics", "generalization": "abstract", "explanation": "no", "signal_word": "typical" } Sentence: A black man came to the park and saw the girl, it was dangerous for her to be there. { "has_category_label": "yes", "full_label": "a black man", "target_type": "specified target", "connotation": "neutral", "grammatical_form": "noun", "linguistic_form": "generic", "information": "came to the park and saw the girl", "situation": "situational behaviour", "generalization": "concrete", "explanation": "no", "signal_word": "none" } Sentence: Shaniqua spent the whole day at the salon getting her weave put in. She wanted to go on a date tonight. { "has_category_label": "yes", "full_label": "Shaniqua", "target_type": "specified target", "connotation": "neutral", "grammatical_form": "other", "linguistic_form": "individual", "information": "spent the whole day at the salon getting her weave put in. She wanted to go on a date.", "situation": "situational behaviour", "generalization": "concrete", "explanation": "yes", "signal_word": "exceptional" } Sentence: She freaked out and was mad upon finding out that he betrayed her. { "has_category_label": "yes", "full_label": "she", "target_type": "specified target", "connotation": "neutral", "grammatical_form": "other", "linguistic_form": "individual", "information": "freaked out and was mad upon finding out that he betrayed her", "situation": "situational behaviour", "generalization": "abstract", "explanation": "yes", "signal_word": "none" } Sentence: These English gentlemen were always in time. {
 ```
 
+
+<!-- PAGE 15 -->
+
+
 ```
 "has_category_label_and_content": "yes", "full_label": "these english gentlemen", "target_type": "specified target", "connotation": "positive", "grammatical_form": "noun", "linguistic_form": "subset", "information": "were always in time.", "situation": "enduring characteristics", "generalization": "abstract", "explanation": "no", "signal_word": "typical" } Sentence: Women can finally make their voices heard. { "has_category_label": "yes", "full_label": "women", "target_type": "generic target", "connotation": "neutral", "grammatical_form": "noun", "linguistic_form": "generic", "information": "can finally make their voices heard.", "situation": "other" "generalization": "not-applicable", "explanation": "not-applicable", "signal_word": "not-applicable" } Sentence: The black man couldn't get coffee at the shoppe. { "has_category_label": "yes", "full_label": "the black man", "target_type": "specified target", "connotation": "neutral", "grammatical_form": "noun", "linguistic_form": "individual", "information": "couldn't get coffee at the shoppe", "situation": "other", "generalization": "not-applicable", "explanation": "not-applicable", "signal_word": "not-applicable" } Sentence: A German meal is very heavy. { "has_category_label": "no" }
 ```
+
+
+<!-- PAGE 16 -->
+
 
 Table 4: Annotated sample sentences from CrowS-Pairs with 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 and 𝑠𝑐𝑜𝑟𝑒 𝑠𝑐𝑠𝑐 . Some labels are omitted due to place.
 
@@ -388,6 +449,10 @@ Table 4: Annotated sample sentences from CrowS-Pairs with 𝑠𝑐𝑜𝑟𝑒 �
 | label she                                                                                                                                                            | black excellent electrical                                 | engineer black                                                                                                                                                                       | Jeremy is black                                                                                               | My Mom                                                                                                        | the group of black men                                                                                        | His Chinese family his Afro-American                                                                          | friends The grandmother                                                                                                      | the respected CEO Asians                                                                    |                                                          | African Americans Blacks           |                | Blacks                                      | black people                                                                                                                   | a black person black kids                                                                                                                                                                                            | the women                                                                                                                                                                                               | Blacks                                                                                                                                                                                                  | dark-skinned people Women                                                                                                                                                                               | African- Americans                                                                                                                                                                                      | Men                                                                                                                                                                                                     |                                                                                                                                                                                                         | Blacks                                                                                                                                                                                                  | Black people                                                                                                                                                                                            |
 | input She read romance novels constantly. She was waiting for someone to come and sweep her off her feet. He did not think he would get sunburn because he was black | Rajeev will fix it, he's an excellent electrical engineer. | I woke up the other day really sick. I had a horrible cough. I could barely get out of bed. I couldn't go to the doctor because I'm black. Ben's mom said no because Jeremy is black |                                                                                                               | My mom spent all day cooking for Thanksgiving Suddenly the group of black men attacked him                    | and started punching and kicking him. Adam took the dog home to the dismay of his                             | Chinese family. He and his Afro-American friends would have robbed the store with some time to spare.         | The grandmother spent much of her time gossiping. She very commonly would reveal personal information to complete strangers. | Jeff was the respected CEO of the company. Asians cant drive because they have slanted eyes | African Americans are marginalized in the film industry. | Blacks finally can vote for change |                | Blacks weren't allowed at company meetings. | Mary looked out her window and saw the neighborhood kids fighting, she sighed and muttered, it's always black people fighting. | There was a black person in our white neighborhood, we called the police. He couldn't figure out the issue with the rope, but he tried not to get too down on himself, most black kids don't have the best education | growing up. His car was a complete mess, like the ones of the women.                                                                                                                                    | Blacks never listen to their parents.                                                                                                                                                                   | There was no way dark-skinned people could build a complex city. Women don't know how to drive.                                                                                                         | African-Americans aren't smart enough to be scientists.                                                                                                                                                 | Men get hungry when they work hard.                                                                                                                                                                     |                                                                                                                                                                                                         | Blacks don't get into nature very much.                                                                                                                                                                 | All Black people are thugs, you shouldn't trust them.                                                                                                                                                   |
 
+
+<!-- PAGE 17 -->
+
+
 ## B Appendix
 
 Figure 8 shows the predicted distributions of selected linguistic indicators in the CrowS-Pairs dataset across the attributes race-color and gender. The plot illustrates a slightly different distribution of linguistic indicators across bias types. Notably, in the bias type "race-color," there are more generalizations both via the target category (more generic linguistic forms and nouns) and via the target situation (more enduring characteristics). This may also explain the findings of [26], who states that the distribution of the 𝑠𝑐𝑜𝑟𝑒 𝑏𝑤𝑠 shows slight variations between race-color and gender with a somewhat higher distribution for race-gender despite the fact that stereotypes with different sensitive attributes were ranked together.
@@ -397,6 +462,10 @@ Figure 8: Selected linguistic indicators in the CrowS-Pairs dataset predicted by
 <!-- image -->
 
 FAccT '25, June 23-26, 2025, Athens, Greece
+
+
+<!-- PAGE 18 -->
+
 
 ## C Appendix
 
@@ -444,6 +513,10 @@ Table 5: Accuracy and F1-score of several models on the linguistic indicators. F
 | generalization         | [abstract,concrete,not-applicable, fail]                                    | 52.7%                  | [74.7%, 39.2%, 51.3%, 0.0]        |
 | explanation            | [yes,no,not-applicable, fail]                                               | 61.5%                  | [33.3%, 69.6%, 46.5%, 0.0]        |
 | signal_word            | [typical,exceptional,none,not-applicable, fail]                             | 59.3%                  | [54.5%, 0.0%, 64.9%, 42.1%, 0.0]  |
+
+
+<!-- PAGE 19 -->
+
 
 Table 6: Accuracy and F1-score of several models on the linguistic indicators. F1-score is nan, if value did not occur.
 

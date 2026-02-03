@@ -1,10 +1,11 @@
 ---
 source_file: Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.pdf
-conversion_date: 2026-02-03T09:02:50.606693
+conversion_date: 2026-02-03T18:33:53.446621
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Why and What to Teach: AI Curriculum for Elementary School
 
 ## Seonghun Kim 1 , Yeonju Jang 1 , Woojin Kim 1 , Seongyune Choi 1 , Heeseok Jung 1 , Soohwan Kim 2 , Hyeoncheol. Kim 1*
@@ -41,6 +42,10 @@ AI literacy is a set of competencies that enable an individual to function in AI
 
 The AI for K-12 working group established guidelines
 
+
+<!-- PAGE 2 -->
+
+
 Table 1: Three AI competencies and its subcategories.
 
 | AI Competencies   | Competency Subcategories                                                                                                             |
@@ -70,6 +75,10 @@ AI Knowledge The AI Knowledge aims for the ability to comprehend the core concep
 'Definition and Types of AI' refers to the knowledge to identify what properties separate AI-based systems and algorithm-based systems. 'Problem-Solving and Search' indicates the knowledge of search algorithms. 'Reasoning' is knowledge on simulation of human logical reasoning process with a computing model. 'Data and Machine Learning' is understanding machine learning algorithms that finds patterns from data. 'Applications' refers to knowledge in various AI applications domains, such as computer vision, speech recognition, and machine translation.
 
 The contents of 'Applications' subcategory are substantially associated with the curriculum's goal of developing AI literacy. The activities of 'Applications' aim to experience and learn everyday AI technologies such as voice recognition and optical text recognition. Experiencing AI applications in real-world situations allow students to utilize AI ap-
+
+
+<!-- PAGE 3 -->
+
 
 Table 2: Associations between CS2013 Intelligent System topics and subcategories of the AI Knowledge competency.
 
@@ -105,6 +114,10 @@ An AI literate citizen should possess the ability to use AI for the benefit of h
 
 1 edu.readyai.org/wp-content/uploads/2020/05/summer camp lesson plans demo.pdf
 
+
+<!-- PAGE 4 -->
+
+
 Table 3: The content structure of the proposed AI Curriculum. Each capital letters of AI competencies indicate the competency subcategories of Table 1. For example, 'K1' denotes 'Definition and Types of AI'.
 
 | Module                                                 | Lesson   | Activities                                                                                                                                                     | AI Competencies   | AI Competencies   | AI Competencies   |
@@ -139,6 +152,10 @@ Table 3: The content structure of the proposed AI Curriculum. Each capital lette
 
 A full content structure of the proposed AI curriculum is demonstrated in Table 3. The curriculum is most suitable for the K5-6 grade band. The only required prerequisite for the curriculum is programming skills on constructing a sequence of commands using block-coding programming languages.
 
+
+<!-- PAGE 5 -->
+
+
 Module Design Considerations Wedesign all modules of the AI curriculum on following considerations. Each module is constructed for even development of the three competencies to foster AI literacy of elementary school students. The content for enhancing AI Knowledge competency is built to uniformly address the core concepts of AI without emphasizing one particular knowledge. The activities to develop AI Skill competency are constructed to experience using AI technologies in students' day-to-day activities. Further, the curriculum includes programming activities to strengthen the student's computational thinking and creativity. The curriculum content for developing AI Attitude competency presents various ethical issues and dilemmas caused by AI integration into society.
 
 The Structure of the Curriculum Each module of the curriculum consists of four consecutive lessons, where each of the lessons in the module is designed to incorporate at least one more AI competencies. Activities to develop AI Skill competency are included in all modules. Although each module covers different topics of AI, the flow of the lessons are similar. In the first lesson, students experience AI technologies present in their everyday lives. The second and third lessons include programming activities using the Entry (Han, Kim, and Wohn 2015). Entry is a platform for the block-based programming language that supports various coding blocks with high-level AI functionalities, such as video detection, machine translation, and speech recognition. The last lesson includes a review of previous topics and discussions on the social impact of AI with peers.
@@ -158,6 +175,10 @@ Module 6: Image Classification The sixth module covers the concepts of supervise
 Module 7: Text Classification The seventh module explores text classification, centered explicitly on toxic online comments. The programming activity for the module is to build a toxic comment blocker. Students are further presented with the topic of biased data and discuss the consequences of data bias. Students are also introduced to the concept of classification and regression. Through the course of activities, students learn the importance of using quality data by experiencing imbalanced and biased training data and how it affects machine learning models' decision-making. With the module, students develop AI Knowledge competency of 'Data and Machine Learning' and AI Attitude of 'Social Impact'.
 
 Module 8: Self-Driving Cars The final module is on selfdriving cars. Based on previous modules, students classify technologies in self-driving cars according to AI concepts that they have learned. The programming activity for the module is to build a self-driving robot with computer vision technology. The module's learning objective is to understand the importance and necessity of AI and how AI transforms daily lives, society, and future careers. Competencies for the module are AI Knowledge of 'Applications' and AI Attitude of 'Social Impact'.
+
+
+<!-- PAGE 6 -->
+
 
 Programming Activities Students acquire essential programming skills and basics of computer science through the programming activities of the curriculum. The programming activities are designed to incorporate basic object-oriented programming concepts and knowledge of data structures such as variables, data types, and lists. The programming activities also cover topics on functions and control flow commands.
 
@@ -195,6 +216,10 @@ The instructor's guide further reduces the burden of teachers who might not be f
 
 Weimplemented the first module of our curriculum as a pilot test, 'Introduction to AI', and analyzed students' learning outcomes. We evaluate the validity of our curriculum with a focus on enhancing the AI literacy of students. The first module is selected with the consideration that students have
 
+
+<!-- PAGE 7 -->
+
+
 Figure 4: The t-test analysis of the student survey on the 'Introduction to AI' module.
 
 <!-- image -->
@@ -226,6 +251,10 @@ We propose to establish AI literacy as the main objective of elementary school A
 Based on three core competencies, we build a curriculum accompanying teaching and learning resources for elementary school students on AI education to equip students with AI literacy. Our implemented AI curriculum enhances AI literacy for elementary school students with statistically significant differences. We expect that our curriculum successfully satisfies the goal of empowering students to prosper in the world of AI.
 
 For future work, we aim to evaluate all modules' validity. We also hope to develop an AI education curriculum for the entire K-12, expanding from this AI elementary school curriculum.
+
+
+<!-- PAGE 8 -->
+
 
 ## Acknowledgements
 

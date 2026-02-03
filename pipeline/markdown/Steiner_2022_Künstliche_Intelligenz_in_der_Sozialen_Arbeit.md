@@ -1,10 +1,11 @@
 ---
 source_file: Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.pdf
-conversion_date: 2026-02-03T09:25:20.568972
+conversion_date: 2026-02-03T18:56:27.704053
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Künstliche Intelligenz in der Sozialen Arbeit
@@ -48,6 +49,10 @@ Um einen groben Einblick in die Funktionsweise aktueller KI-Technologien zu gebe
 - Algorithmus : Die öffentliche Debatte um KI hat insbesondere den Begriff des Algorithmus bekannt gemacht. Algorithmen  sind  generell  Gegenstand  der Informatik und nicht exklusiv im Bereich der KI verortet. Ein Algorithmus ist eine (programmierte) Anleitung, die beschreibt, wie man Schritt für Schritt ein Ziel erreicht. Die Absicht dahinter ist, einen Problemlösungsprozess digital zu automatisieren (Lenzen 2020).
 - Machine  Learning/Maschinelles  Lernen :  Das  Forschungs- und Anwendungsfeld der Künstlichen Intelligenz hat in den letzten Jahrzehnten eine ganze Bandbreite an methodischen Verfahren hervorgebracht. In jüngster Zeit erhalten vor allem maschinelle Lernverfahren viel Aufmerksamkeit, wobei das maschinelle Lernen keine Kopie der Vorgänge im menschlichen
 
+
+<!-- PAGE 2 -->
+
+
 Gehirn darstellt, sich allenfalls grob daran orientiert (Lenzen 2020). Beim maschinellen Lernen kommen Algorithmen zum Einsatz, mit denen Computer eigenständig lernen, ohne dass in den laufenden Prozess eingegriffen werden muss (Kreutzer und Sirrenberg 2019). Der Algorithmus lernt dabei durch Beispiele und Versuche, ein Problem möglichst gut zu lösen (Lenzen 2020). Maschinelles Lernen kommt dort zum Einsatz, wo keine Regel bekannt ist, mit der sich die vorliegende Problemstellung lösen ließe. Im Gegenzug bedarf es für diesen Prozess meist große Datenmengen bzw. qualitativ hochwertiges Trainingsmaterial, anhand dessen ein KI-System lernen kann. Der maschinelle Lernprozess zielt auf Optimierung ab: Die Lernverfahren liefern eine möglichst gute Annäherung, keine perfekte Lösung. Es liegt in der Aufgabe der Programmierer\_innen oder der Anwender\_in-nen, zu entscheiden, welche Fehlerquote bzw. welcher Grenzwert für einen konkreten Anwendungsfall akzeptabel ist (Lenzen 2020).
 
 - Künstliche neuronale Netzwerke : Im Kontext des maschinellen Lernens haben sich einige gängige Lernverfahren entwickelt. Besondere Aufmerksamkeit kommt aktuell dem Deep Learning auf Basis von künstlichen neuronalen Netzwerken zu. Der Begriff neuronales Netzwerk stammt ursprünglich aus den Neurowissenschaften. Er bezeichnet dort die Verbindung zwischen Neuronen, welche als Teil des Nervensystems bestimmte Funktionen ausüben (Kreutzer und Sirrenberg 2019). In der Informatik versteht man unter einem künstlichen neuronalen Netzwerk ein System von Hard- und Software, welche bestimmte Eigenschaften  natürlicher  neuronaler  Netzwerke  simuliert (Lenzen 2020). In der Regel verfügt ein künstliches neuronales Netzwerk über eine große Anzahl von Prozessoren, die parallel arbeiten und in mehreren Schichten angeordnet sind (Kreutzer und Sirrenberg 2019). Die Verbindungen bzw. die Signalstärke zwischen den künstlichen Neuronen können unterschiedlich gewichtet sein. Im Trainingsprozess wird diese Feinstruktur des Netzwerks optimiert (Lenzen 2020). Das System lernt selbstständig dazu und emanzipiert sich auf Basis der gewonnenen Erfahrungen zunehmend von den ursprünglichen Eingaben, um auf diesem Weg bessere Ergebnisse zu erzielen (Kreutzer und Sirrenberg 2019).
@@ -60,6 +65,10 @@ Im Folgenden werden am Beispiel von zwei Anwendungsszenarien von KI in der Sozia
 ## Predictive Risk Modeling in der Sozialen Arbeit
 
 Predictive Modelling soll im sozialen Bereich datenbasierte Vorhersagen mittels Algorithmen über menschliches  Verhalten und Entwicklung treffen (hierbei kommen nicht ausschließlich KI-Technologien zur Anwendung, sondern auch 'klassische' statistische Berechnungen). Predictive Modelling existiert bereits seit den 1980erJahren insbesondere im Gesundheitsbereich, um bspw. rückfallgefährdete Patient\_innen zu identifizieren. Predictive Risk Modelling (PRM) hat letztlich zum Ziel, ein Big Data basiertes Expert\_innensystem zur Entscheidungsunterstützung in wohlfahrtsstaatlichen Organisationen zu schaffen (Gillingham 2016). Es sollen risikobehaftete Lebenssituationen oder riskantes Verhalten von Personen unter Einbezug von elektronischen Datenbeständen algorithmisch analysiert und Voraussagen über zukünftiges Verhalten oder die Entwicklung sozialer Verhältnisse getroffen werden.
+
+
+<!-- PAGE 3 -->
+
 
 ## Anwendungen von PRM-Anwendungen in der Sozialen Arbeit
 
@@ -79,6 +88,10 @@ Eine grundsätzliche Herausforderung besteht für die KI-basierte Entscheidungsu
 
 Technologien des Predictive Risk Modelling können professionelle Beurteilungen im Idealfall unterstützen, indem der Bias Professioneller (practitioner bias) vermindert und damit Dienstleistungsverfahren standardisiert  und  gerechter  werden  (Oak  2016).  Potenziell können solche Technologien also dazu beitragen, dass Benachteiligungen früh erkannt und professionelle Un-
 
+
+<!-- PAGE 4 -->
+
+
 terstützung sowie Förderung frühzeitig angeboten werden (de Haan und Connolly 2014). Mit Blick auf den aktuellen Stand der Entwicklung stellt sich jedoch weiterhin  die  Frage,  inwiefern  die Anwendung  von  KISystemen überhaupt eine individuellen Problemlagen angemessene Fallbearbeitung in der Sozialen Arbeit ermöglichen kann.
 
 ## KI-gestützte Chatbots in der Sozialen Arbeit
@@ -96,6 +109,10 @@ Gabrielli et al. (2020) beschreiben den Einsatz und die Evaluation eines Chatbo
 ## Herausforderungen, Risiken und Potenziale von Chatbots in der Sozialen Arbeit
 
 Der Einsatz von Chatbots in der Sozialen Arbeit verheißt vielversprechende Potenziale für Beratungssettings sowie die Fallanamnese. Es sind allerdings gegenwärtige Limitationen von Chatbots zu berücksichtigen, die spezifische Problematiken in Praxiskontexten evozieren können. Chatbots können Personen nicht zur Kommunikation animieren, die nicht an Hilfe interessiert sind und damit - falls keine alternativen Zielgruppenerreichungsformen verfügbar oder vorgesehen sind - tech-
+
+
+<!-- PAGE 5 -->
+
 
 ## Sozial Extra 6 2022 Einblick
 
@@ -124,6 +141,10 @@ Funding. Open access funding provided by FHNW University of Applied Sciences and
 Open Access. Dieser Artikel wird unter der Creative Commons Namensnennung 4.0 International Lizenz veröffentlicht, welche die Nutzung, Vervielfältigung, Bearbeitung, Verbreitung und Wiedergabe in jeglichem Medium und Format erlaubt, sofern Sie den/die ursprünglichen Autor(en) und die Quelle ordnungsgemäß nennen, einen Link zur Creative Commons Lizenz beifügen und angeben, ob Änderungen vorgenommen wurden.
 
 Die in diesem Artikel enthaltenen Bilder und sonstiges   Drittmaterial unterliegen ebenfalls der genannten Creative Commons Lizenz, sofern sich aus der Abbildungslegende nichts anderes ergibt. Sofern das betreffende Material nicht unter der genannten Creative Commons Lizenz steht und die betreffende Handlung nicht nach gesetzlichen Vorschriften erlaubt ist, ist für die oben aufgeführten
+
+
+<!-- PAGE 6 -->
+
 
 Weiterverwendungen des Materials die Einwilligung des jeweiligen Rechteinhabers einzuholen.
 

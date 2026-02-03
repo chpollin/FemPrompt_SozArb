@@ -1,10 +1,11 @@
 ---
 source_file: Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.pdf
-conversion_date: 2026-02-03T09:05:08.819500
+conversion_date: 2026-02-03T18:36:19.034761
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## ORIGINAL RESEARCH
 
 ## How AI hype impacts the LGBTQ + community
@@ -43,6 +44,10 @@ Hype is also a means to obfuscate real issues of bias, harm, and exploitation fe
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 the question of power imbalances as a feature of AI technologies as we currently know them. This paper will study the relationship of AI hype and marginalised communities, particularly the LGBTQ+ community, and the role which marketing communications plays in enhancing this hype and its impacts on the LGBTQ+ community.
 
 Section 2 of this paper will discuss marginalisation and its origins. Section 3 will examine some of the key theoretical underpinnings of this paper. Section 4 looks specifically at power and AI, and some of the real-world impacts experienced by marginalised communities. Section 5 examines how hype impacts on the LGBTQ+ communities experience of AI. Section 6 then moves on to look exclusively at the Queer experience of AI. The paper then moves on to discuss these elements in Section 7, before offering recommendations for future research in Section 8.
@@ -77,6 +82,10 @@ The LGBTQ+ community has encountered numerous challenges when it comes to the in
 
 Much of the marginalisation of the LGBTQ+ community comes from the acceptance of heterosexuality, and the
 
+
+<!-- PAGE 3 -->
+
+
 characteristics and values that entail, as the dominant paradigm for understanding gender and sexuality. Queer theory challenges the dominant paradigm of using heterosexuality as the standard for comparison [21]. Coined by Teresa de Lauretis in 1991 [22], there are at least three interconnected concepts in queer theory [23]:
 
 Disregarding heterosexuality as the default state for sexuality.
@@ -108,6 +117,10 @@ In Western Europe and North America, there has been a notable increase in the no
 The recent repeal of Roe v Wade in the United States has created opportunities to challenge rulings on marriage equality and laws concerning private sexual activities. This shift in legal precedent is reflected in the introduction of bills like the 'Don't Say Gay' bill, reminiscent of UK's s.28, which prohibits any discussion or promotion of gender and sexuality (currently enacted only in Florida but with plans for implementation in 11 other states). In December 2023, the UK government Department for Education released its guidance for a 'parent first approach' to transgender and non-binary children in school [30], and guidance which has been widely criticised as transphobic and in violation of children's privacy [31]. Furthermore, the Eastern European queer community faces increasing discrimination and social isolation from the anti-LGBTQ+ political ideologies currently asserting dominance in nations, such as Poland and Hungary [32, 33], in stark juxtaposition to the more permissive political landscape of the 1960s and 70s and the social values of many citizens [34].
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 ## 4    Power and AI
 
@@ -149,6 +162,10 @@ Hype is often a catalyst in the implementation and adoption of emergent technolo
 
 Perhaps, the most prevalent model of emergent technology hype is the Gartner Hype Cycle, which provides a visual representation of the hype surrounding various technologies over time [86]. The Gartner Hype Cycle is a graphical representation that illustrates the evolution of technologies, their adoption rates, and social impact over time. It consists of five
 
+
+<!-- PAGE 5 -->
+
+
 Table 1 Technology implementation impact on marginalised communities across social categories
 
 | Employment                  | Credit scoring algorithm Data classification schemes                                                                                                                   | Use of statistical models deemed to violate anti- Misclassification of protected characteristics in interview- ing, hiring and promotion   | decision-making [63] Credit scoring algorithm Video interview systems Classification bias of people Centring of dominant charac- teristics as normative nega- tively impacting disabled   |
@@ -178,6 +195,10 @@ Throughout the history of artificial intelligence, there has been a persistent p
 Artificial Intelligence encompasses various technologies, such as machine learning, natural language processing, natural language generation, deep learning, and neural networks. While the term 'Artificial Intelligence' serves as a broad concept that simplifies complex technological processes for lay audiences, computer scientists and developers are starting to view it as a marketing hype term [95-97]. This is due to its continuous use to mask the true capabilities of different technologies behind an illusion of a singular magical technology.
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 Hype has been a significant aspect of artificial intelligence research and development since the 1950s. While there have been notable advancements in the field of artificial intelligence in recent years, much of this progress can be attributed to the availability of Big Data and increased computing power rather than substantial strides in what is commonly understood as 'intelligence' by the general public [98-100].
 
@@ -209,6 +230,10 @@ It is argued by Gitelman (2013) that an interpretative process of the imaginatio
 
 Closely related to perceived objectivity is the fallacy of inscrutability [116]. This fallacy of inscrutability is a category error: when critics argue that the actions of a system cannot be comprehended, they are attributing values to mechanical technologies rather than to the humans who created and implemented them [116]. The fallacy of inscrutability is highlighted as one of 18 key issues with AI journalism which contributes to AI hype set out by Kapoor and Narayanan [117]. This can be seen in media which claims
 
+
+<!-- PAGE 7 -->
+
+
 that it is impossible to understand how models work, and as such they cannot be used in a non-discriminatory way.
 
 The remainder of the 18 common pitfalls most often seen in AI journalism, include utilising flawed human-AI comparisons, hyperbolic, incorrect, or non-falsifiable claims about AI, uncritically platforming those with self-interest, and failure to address limitations [117]. These common issues with media representation of AI contribute to the perpetuation of unrealistic expectations and the culture of hype surrounding AI technologies.
@@ -239,6 +264,10 @@ The LGBTQ + community faces various forms of harm in the digital realm, even out
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 sex offences, terror acts, and crimes like murder. As a result, their careers suffered significant damage [132]. In 2023, the programme was revised to cover a broader range of crimes eligible for pardon. For the first time, this now includes pardons for women convicted of any past same-sex activity offences that have since been repealed or abolished [133].
 
 ## 6.2    The modern experience: a history of the present
@@ -258,6 +287,10 @@ This is in spite of evidence that even highly efficient moderation systems could
 These examples represent just a small fraction of the reported cases of algorithmic bias targeting the LGBTQ+ community on various social media platforms. It is evident that marginalised groups face stricter content moderation regulations and are subject to disproportionate account suspensions, especially when their content challenges the dominant group [152].
 
 The LGBTQ+ community has also faced the algorithmic promotion of content that is harmful and discriminatory. TikTok, for instance, has been accused of actively promoting homophobic and anti-LGBTQ+ content to its users [153]. The cyclical nature of misinformation and the viral spread of content on social media platforms, combined with intentional promotion to boost user engagement, have played a significant role in amplifying narratives such as the 'groomer' accusation against LGBTQ+ individuals. This type of narrative has garnered substantial attention on social media platforms, with the top 500 influential tweets containing hateful 'grooming' allegations being viewed over 72 million times [154].
+
+
+<!-- PAGE 9 -->
+
 
 Table 2 A review of AI implementation impacts on LGBTQ + community
 
@@ -301,6 +334,10 @@ Impact
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 ## 7    Discussion
 
 ## 7.1    Introduction
@@ -335,6 +372,10 @@ One does not need to look far to find key elements of hype, such as techno-solut
 
 AI and Ethics (2024) 4:771-790
 
+
+<!-- PAGE 11 -->
+
+
 make use of the same technology to defend ourselves and our values' [171].
 
 Overstatement of the effects of AI systems may also be seen as a means to secure funding or set funding agendas, in the public sector, in research, and in commercial enterprises [174]. Indeed, this is not only seen as a particular phase in the Gartner Hype Cycle as depicted in Appendix 1, but is also a defining factor in the concept of 'AI Summers' and 'AI Winters' whereby government funding of AI projects along with commercial investment go through periods of boom and bust, predicated largely on overstatement of AI capabilities thus leading to a reduced capacity for exploration and innovation in the field [175].
@@ -364,6 +405,10 @@ This 'cishet baseline' is arguably the main driver for the exclusion of the LGBT
 To combat this issue, it is crucial to actively question and dismantle heteronormative and cisnormative prejudices in AI systems. It is vital to diversify data sources by integrating LGBTQ+ experiences to guarantee equitable and inclusive
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 AI algorithms. This involves incorporating diverse perspectives and experiences, specifically those of LGBTQ+ individuals, into data collection processes for the development of more accurate and inclusive AI systems.
 
@@ -397,6 +442,10 @@ The AI ecosystem can be seen as a prevailing dominant discourse that functions a
 
 Individuals who are not fluent in the dominant discourse often face marginalisation, ridicule, or exclusion. However, it is worth considering that AI has only been widely recognised for less than half a century. This raises the question of whether there is potential to alter the prevailing discourse surrounding AI. Can regimes of truth be reconstructed and modified by challenging perspectives that may seem unconventional or irrational? Such an inquiry would highlight the
 
+
+<!-- PAGE 13 -->
+
+
 inherent contradictions between knowledge about AI, how this knowledge is acquired, and the decision-making processes within the field.
 
 ## 8.2    Accountability
@@ -425,6 +474,10 @@ The findings of this paper point to several driving factors at play in encouragi
 | 1                           | Technology trigger          | Potential breakthrough in technology. Stories and media attention highlight- ing initial proof-of- concept generate sig- nificant publicity. At this stage, there may not be any practical products available, and the commercial feasibility remains uncertain |
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 | Gartner hype cycle stages   | Gartner hype cycle stages     | Gartner hype cycle stages                                                                                                                                                                                                                                                                          |
 |-----------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -455,6 +508,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 5.  Krakowski, A., Greenwald, E., Hurt, T., Nonnecke, B., Cannady, M.: Authentic integration of ethics and AI through sociotechnical, problem-based learning. Proc. AAAI Conf. Artif. Intell. 36 (11),  12774-12782  (2022).  https://  doi.  org/  10.  1609/  aaai. v36i11.  21556
 
 AI and Ethics (2024) 4:771-790
+
+
+<!-- PAGE 15 -->
+
 
 6. Baird,  A.,  Schuller,  B.:  Considerations  for  a  more  ethical approach to data in AI: on data representation and infrastructure. Front. Big Data. 3 , 25 (2020). https://  doi.  org/  10.  3389/  fdata.  2020. 00025
 7.  Park, R.E.: Human migration and the marginal man. Am. J. Sociol. Sociol. 33 (6), 881-893 (1928). https://  doi.  org/  10.  1086/ 214592
@@ -496,6 +553,10 @@ AI and Ethics (2024) 4:771-790
 43.  Burger, M.: The risk to population health equity posed by automated decision systems: a narrative review. arXiv preprint arXiv: 2001.  06615. https://  doi.  org/  10.  48550/  arXiv.  2001.  06615(2020)
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 44.  Birhane, A. [@Abebab]: Let's ditch the common narrative that 'AI is a tool that promotes and enhances human […]'. [Tweet]. Retrieved from https://  twitt  er.  com/  Abebab/  status/  15265  30264 71700  4802 (2022).
 45.  Buolamwini, J., Gebru, T.: Gender shades: Intersectional accuracy disparities in commercial gender classification. In: Proceedings of the Conference on Fairness, Accountability, and Transparency, pp. 77-91. PMLR (2018)
@@ -541,6 +602,10 @@ AI and Ethics (2024) 4:771-790
 
 AI and Ethics (2024) 4:771-790
 
+
+<!-- PAGE 17 -->
+
+
 - industrial IoT Approach for Pharmaceutical Industry Growth, pp. 191-230. Academic Press (2020)
 83.  Michelman, P.: Seeing beyond the blockchain hype. MIT Sloan Manag. Rev. 58 (4), 17 (2017)
 84.  Notheisen, B., Hawlitschek, F., &amp; Weinhardt, C.: Breaking down the blockchain hype-towards a blockchain market engineering approach. https://  core.  ac.  uk/  downl  oad/  pdf/  30137  2336. pdf (2017)
@@ -583,6 +648,10 @@ AI and Ethics (2024) 4:771-790
 
 <!-- image -->
 
+
+<!-- PAGE 18 -->
+
+
 - um.  org/  agenda/  2021/  07/  tech-  focus-  needs-  margi  naliz  ed-  groups/ (2022)
 121.  Williams, D.P.: Belief, Values, Bias, and Agency: Development of and Entanglement with 'Artificial Intelligence' . PhD Diss. Virginia Polytechnic Institute and State University. https://  vtech works.  lib.  vt.  edu/  server/  api/  core/  bitst  reams/  51b1e  215-  744c45ae-  817f-  f39bf  d677b  e0/  conte  nt (2022)
 122.  Kaltheuner, F.: Fake AI. Meatspace Press (2021)
@@ -623,6 +692,10 @@ AI and Ethics (2024) 4:771-790
 
 AI and Ethics (2024) 4:771-790
 
+
+<!-- PAGE 19 -->
+
+
 154.  Center for Countering Digital Hate.: Digital Hate: Social Media's Role in Amplifying Dangerous Lies About LGBTQ+ People. https://  count  erhate.  com/  resea  rch/  digit  al-  hate-  lgbtq/ (2023)
 155.  Mahalingam, G., Ricanek, K.: Is the eye region more reliable than the face? A preliminary study of face-based recognition on a transgender dataset. In: 2013 IEEE Sixth International Conference on Biometrics: Theory, Applications and Systems (BTAS), pp. 1-7. IEEE (2013)
 156.  Ovalle, A., Liang, D., &amp; Boyd, A. Should they? Mobile Biometrics and Technopolicy Meet Queer Community Considerations. In Proceedings of the 3rd ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO '23) (Article 32, pp. 1-10). Association for Computing Machinery. https://  doi.  org/  10.  1145/  36176  94.  36232  55 (2023)
@@ -656,6 +729,10 @@ AI and Ethics (2024) 4:771-790
 184.  Walters, L.: 10 AI-Powered Tools for reducing Bias in Recruitment. PharmiWeb.jobs. Retrieved from https://  www.  pharm iweb.  jobs/  artic  le/  10-  ai-  power  ed-  tools-  for-  reduc  ing-  bias-  inrecru  itment (2023)
 
 <!-- image -->
+
+
+<!-- PAGE 20 -->
+
 
 185.  Drage, E., &amp; Mackereth, K.: Does AI Debias Recruitment? Race, Gender, and AI's 'Eradication of Difference. Philos. Technol. 35: 89. https://  doi.  org/  10.  1007/  s13347-  022-  00543-1 (2022)
 186.  Chen, Z.: Ethics and discrimination in artificial intelligenceenabled recruitment practices. Humanit. Soc. Sci. Commun. 10 , 567 (2023). https://  doi.  org/  10.  1057/  s41599-  023-  02079-x

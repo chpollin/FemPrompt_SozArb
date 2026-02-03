@@ -1,10 +1,11 @@
 ---
 source_file: Ng_2025_Opportunities,_challenges_and_school_strategies.pdf
-conversion_date: 2026-02-03T09:11:10.836217
+conversion_date: 2026-02-03T18:42:43.830731
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Contents lists available at ScienceDirect
@@ -48,6 +49,10 @@ davyngtk@eduhk.hk (D.T.K. Ng), kcechan@connect.ust.hk (E.K.C. Chan), chungkwanlo
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 necessitate  a  deeper  understanding  of  AI  concepts  and  programming skills,  along  with  upfront  configuration,  including  data  labeling  and model  training.  GenAI  requires  other  competencies  such  as  critical thinking skills and prompt engineering techniques to fine-tune its responses,  allowing  for  more  accessible  setup  and  engagement  (O ' Dea et  al.,  2024).  As  such,  unlike  traditional  AI,  GenAI  learns  from user-inputted responses (e.g., data and prompt), and adapts its behavior based on discovered patterns, creating content that resembles human-generated  outputs  (Borah  et  al.,  2024).  Table  1 displays  the differences between traditional AI and GenAI.
 
 The  literature  review  section  first  reviews  the  opportunities  and challenges  associated  with  GenAI  in  education,  and  discusses  how teachers apply GenAI for teaching/learning purposes. Second, schools consist of diverse stakeholders (e.g., school leaders, teachers) who hold varying views towards GenAI. The second part will review the perceptions of these stakeholders regarding the impact of GenAI technologies on  education  based  on  prior  research.  Finally,  the  third  section  will examine existing school strategies that can promote the development of AI-ready schools.
@@ -79,6 +84,10 @@ The  integration  of  GenAI  in  education  has  garnered  increasing attention 
 
 Educational leaders, including principals and school directors, play a
 
+
+<!-- PAGE 3 -->
+
+
 critical role in driving educational change and fostering a supportive environment  for  technological  integration  (Roth &amp; Price,  2016,  pp. 195 -213).  To  implement  AI  in  education,  their  perceptions  towards GenAI  are  instrumental  in  shaping  school  policies,  fostering  teacher basic competencies, and creating a culture of innovation (Chan &amp; Hu, 2023). Studies indicate that educational leaders perceive GenAI as a transformative force that can enhance student engagement, personalized learning, and instructional effectiveness. They recognize the potential  of  AI  tools  to  support  teachers  in  delivering  differentiated instruction, facilitating data-driven decision-making, and making policies (Wang, 2021). However, concerns related to accessibility of GenAI infrastructure,  and  related  school  policies,  and  teacher  professional development in GenAI implementation have also been raised (Knight et al., 2023).
 
 Teachers, as frontline implementers of educational practices, hold valuable  insights  into  perceptions  of  GenAI.  Research  suggests  that teachers ' perceptions of GenAI are diverse and influenced by various factors. Some teachers view GenAI as a tool that can enhance instructional delivery, automate their routine administrative tasks, and provide personalized learning experiences. They recognize the potential of AI in adapting  instruction  to  individual  student  needs,  promoting  critical thinking skills, and facilitating real-time feedback (Chen et al., 2020; Kohnke et al., 2023). Moreover, GenAI can enhance learning assessments by enabling self-assessments, automated grading and providing instant feedback, enabling teachers to focus more on individual student growth (Yang et al., 2024). Additionally, it can analyze student performance data to identify learning gaps and patterns, helping educators tailor their interventions more effectively (Jaboob et al., 2024). However, other teachers may express concerns about the impact of GenAI on their professional autonomy, the potential for replacing human interaction, and the need for adequate training and support in integrating AI tools effectively (Rudolph et al., 2024). Teachers ' perceptions of GenAI are shaped by their pedagogical beliefs, technological readiness, professional development opportunities, and the alignment of AI integration  with their instructional goals (Moorhouse &amp; Kohnke, 2024; Yan et al., 2024).
@@ -106,6 +115,10 @@ RQ3.  What  school  strategies  do  teachers  suggest  to  embrace  the integrat
 Recent scholars have started developing preliminary frameworks for integrating GenAI in education. For example, Chiu (2023) proposed an initial  framework  consisting  of  four  dimensions  (learning,  teaching, assessment,  and  administration)  to  examine  the  impact  of  GenAI  on practices, policies, and research directions in education. The framework employed ChatGPT and Midjourney as case studies. In this study, RQ1 adopts this Chiu (2023) ' s model to examine Canadian teachers ' thoughts and perceptions towards GenAI usage in terms of perceived opportunities and concerns. After that, RQ1 also presents teachers ' perceptions according  to  their  subject  disciplines.  Regarding  RQ2,  this  study employed the socio-ecological model (Singh et al., 2023) to investigate the challenges and concerns encountered by teachers during the integration of GenAI in their schools. The model inspires us to highlight three themes, which encompass meso and micro perspectives. Furthermore, RQ3 investigates effective school strategies for integrating GenAI. As for RQ3, drawing inspiration from Sigh (2023) ' s Teach AI Global, this study adopts the framework to inform how schools should be prepared to become AI-ready. The framework encompasses three dimensions: (1) developing guidance and policies that address the specific needs of the school,  (2)  facilitating  organizational  learning,  and  (3)  promoting continuous improvement and transformative practices to enhance both teachers ' and students ' AI literacy.
 
 To summarize, this study designed an initial framework based on three frameworks: Chiu ' s (2023) four-dimensional model, the socio-ecological  model,  and  the  Teach  AI  Global  Initiative  Guidance (2024).  These  frameworks  introduced  three  major  themes  and  nine sub-themes  that  corresponded  to  the  three  RQs  in  a  coding  table (Appendix 1). They provided an initial framework for data collection and analysis in this study (Fig. 1).
+
+
+<!-- PAGE 4 -->
+
 
 ## 3. Research methods
 
@@ -157,6 +170,10 @@ The instrument in this study was designed to address specific aspects related to
 
 In  the  second  section  (RQ1),  teachers  shared  their  perceptions  of GenAI in their daily work in terms of perceived opportunities and concerns. They responded to questions such as what aspect of AI in education  has  caught  their  attention  or  raised  concerns  in  their  daily teaching practice. Furthermore, they provided insights on the challenges and concerns they perceive when integrating GenAI in their schools. In the third section (RQ2), they were asked about their foresight regarding the future role of AI in education and how they think it will impact teaching and learning. They were also prompted to express any concerns they have regarding the integration of AI in education. In the fourth section (RQ3), the study focused on investigating the school strategies that teachers suggested for embracing the integration of GenAI in their schools.  The  questions  aimed  to  elicit  teachers ' insights  and  recommendations on effective approaches for incorporating GenAI into their
 
+
+<!-- PAGE 5 -->
+
+
 educational institutions. This helps gather teachers ' perspectives on how schools can successfully integrate GenAI into their daily practices.
 
 ## 3.3. Data analysis
@@ -184,6 +201,10 @@ Regarding the perceived opportunities of using GenAI in education, teachers ' qu
 Fig. 2. Concerns raised by educators regarding the use of GenAI in education.
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 ## assessment (P3).
 
@@ -213,6 +234,10 @@ School ' s readiness (C1). In terms of school policy and management, teacher  tr
 
 Teachers ' readiness and AI competency (C2). Teachers ' readiness could be a great concern. One challenge teachers may face is a lack of professional  development  programmes  and  training.  Acquiring  the necessary skills and knowledge to integrate AI tools into their teaching practices  effectively  can  be  difficult  without  proper  support  and training. A teacher said, ' Teachers may face challenges in acquiring the necessary practical applications and knowledge to integrate AI tools into their teaching practices effectively. ' Another teacher noted, ' The technical support from the school is insufficient. Teachers may have challenges when using this new technology and choosing appropriate tools. ' Additionally, adapting to new teaching methods required for integrating AI  can  be  challenging  for  educators  accustomed  to  traditional  approaches.  A  teacher  claimed, ' Integrating  AI  may  require  a  shift  in teaching methodologies, which can be challenging for educators who are accustomed to traditional approaches even if they know what AI is. '
 
+
+<!-- PAGE 7 -->
+
+
 Some teachers may be resistant to adopting AI technologies due to unfamiliarity  or  reluctance  to  change  established  teaching  methods.  A teacher suggested, ' I would like to see further discussions at my school regarding  whether  teachers  should  use  GenAI  in  classrooms. ' Some teachers suggested advocating for accessible resources for their teaching.  A  teacher  proposed, ' Our school could subscribe  to  licenses  for various  AI  applications,  allowing  us  to  evaluate  and  select  the  most suitable tools for our students. ' Many AI applications require subscription fees, and teachers prefer that schools cover these costs.
 
 Students ' readiness  and  AI  literacy  (C3). Even  when  teachers become ready to adopt GenAI, there are concerns that students ' AI literacy  levels  may  not  be  sufficient.  First,  concerns  about  academic integrity arise with the use of AI tools. This is supported by a teacher, who claimed, ' The use of AI tools  raises  concerns  about  plagiarism, cheating, and the potential for students to rely solely on AI-generated content  without  critical  thinking  or  independent  learning. ' Second, students may not know how to question the accuracy and reliability of information  provided  by  AI  systems,  particularly  in  terms  of  factchecking  and  the  sources  of  information.  Therefore,  promoting  AIrelated information literacy has become crucial. A teacher said, ' Students need to question the accuracy and reliability of learning materials and recommendations provided by AI systems, particularly in terms of fact-checking and the sources of information. ' Third, over-reliance on AI can also lead to a decrease in human interaction and social skills among students, which is also a concern for some educators. A teacher reflected, ' My concern is that students may use AI without critical evaluation or a clear  purpose,  which  could  hinder  the  development  of  their  critical thinking and analytical skills. It is important to ensure that their skills in critical analysis are properly nurtured and developed. '
@@ -239,6 +264,10 @@ Second, most existing studies have focused on students ' perceptions of how Chat
 
 Third, most current discussions surrounding GenAI usage in education  are  not  subject-specific;  most  studies  either  examined  students across various disciplines or did not specify the subject areas at all (Lo et  al.,  2024).  Our  findings  in  Section  4.1.3 helped  contribute  to  the understanding of teachers ' subject-specific perceptions, and aligns with current findings. For example, language teachers can use GenAI tools to enhance students ' writing quality, promote personalized learning, and facilitate  their  critical  thinking  through  generatiing  coherent  and well-structured content. Mathematics teachers can enable students to use GenAI for generating steps and solutions to learn related concepts (Egara &amp; Mosimege,  2024).  Science  and  social  science  teachers  can leverage AI to assist students in conducting inquiries, extracting relevant information  from  the  internet,  and  summarizing  findings  (Wu  et  al., 2024).  Further  efforts  are  needed  to  propose  strategies  that  can  be
 
+
+<!-- PAGE 8 -->
+
+
 tailored to different learning contexts and subject disciplines.
 
 According to RQ2, many teachers are aware of potential biases in AI, yet few have concrete strategies to mitigate these risks (C2), highlighting a gap between awareness and action. For instance, educators express concerns that young students may misuse tools like ChatGPT to complete  homework  without  fully  understanding  the  learning  material, which could negatively impact their foundational knowledge and cause learning/cognitive laziness (C3). This misuse not only hinders students ' development of critical thinking skills but also raises issues of academic integrity and responsible AI usage in education (C3). This aligns with Mittal et al. (2024), who emphasized the challenges of detecting misuse in learning assessments and the necessity for young learners to grasp fundamental  concepts  rather  than  simply  generating  answers  using GenAI. However, teachers may lack knowledge of effective safeguarding measures to address these risks (C2). Furthermore, ChatGPT can produce inaccurate information, generate biased content, and lead to academic  dishonesty  through  overreliance  on  AI-generated  responses, which align with existing studies (Goedde et al., 2023; Lo, 2023). Its limitations  in  contextual  understanding  and  reasoning  can  further impede students ' development of critical thinking skills (Wu et al., 2024; Zhang &amp; Tur, 2023). Therefore, it is essential to build strategies tailored to different educational contexts and subjects that enable teachers and students to critically evaluate GenAI content.
@@ -263,6 +292,10 @@ Once  the  teaching  contents  have  been  identified,  it  is  crucial  to prov
 
 In addition to guidance, school leaders play a pivotal role in the AI era due to several key reasons. Firstly, they provide a clear vision for organizations in harnessing the power of AI in education. They need to identify the potential of AI to drive schools ' major concerns and direction to spur innovation in education and enhance teaching/learning and administration efficiency. They should keep pace with the digital world to identify the transformative impact of AI and articulate a vision that inspires  their  teaching  teams  toward  an  AI-ready  goal.  Moreover, leaders are responsible for addressing ethical and responsible AI practices. They establish guidelines and policies that ensure AI educational systems are deployed with transparency, fairness, and accountability for parents and students. Leaders have the responsibility to navigate the
 
+
+<!-- PAGE 9 -->
+
+
 Fig. 3. AI education policy implementation at the macro, meso and micro levels.
 
 <!-- image -->
@@ -285,6 +318,10 @@ According to the Government of Canada ' s  guide (2024), the integration  of  Ge
 
 The Chinese government ' s "Interim Measures for the Management of Generative Artificial Intelligence Services," issued in July 2023, reflects a dual approach of promoting innovation while ensuring national security (Migliorini, 2024). The document employs the term ' encouragement ' to reflect a proactive stance toward nurturing a culture of school innovation, digital citizenship and lifelong learning. However, it tends to put less focus on student ' s privacy. For example, some schools would adopt  AI-enabled  cameras  and  wearable  devices  to  monitor  student behavior and attendance in real-time. In contrast, Canada recognized the importance of privacy and cybersecurity in its AI initiatives, and they could not track student engagement during lessons (Attard-Frost et al.,
 
+
+<!-- PAGE 10 -->
+
+
 2024). Furthermore, in February 2024, China ' s Ministry of Education announced a list of 184 primary and secondary schools designated as AI education bases to strengthen the development of AI education (The State  Council  The  People ' s  Republic  of  China,  2024).  This  top-down approach equips schools to develop AI-based curricula, integrate disciplines, reform teaching methods, collaboratively construct and share AI education  resources,  and  enhance  teachers ' AI  literacy.  In  contrast, Canada ' s efforts are more decentralized and use bottom-up initiatives rather  than  a  cohesive  national  strategy  for  integrating  AI  into  the curriculum.
 
 In  the  USA,  the  report  "Artificial  Intelligence  and  the  Future  of Teaching and Learning: Insights and Recommendations" (United States Office of Educational Technology, 2023) outlines strategies for effectively leveraging these technologies within the education sector. With a highly developed ed-tech market, the USA has established guidelines and resources aimed at a broad audience, including teachers, educational leaders, policymakers, researchers, and innovators in educational technology.  Schools  have  the  flexibility  to  design  their  own  policies according to their  specific  needs.  Some  forward-thinking  schools  are adopting  advanced  GenAI  applications;  however,  the  absence  of  a top-down  approach  means  that  schools  are  not  mandated  to  follow specific policies or implement AI, creating a gap between those willing to advance and those that are not. In October 2023, across 51 states, less than half of the states (n = 23) had released some form of AI guidance. In contrast, Canada is less technologically prepared than the USA and tends to  adopt a school-based bottom-up approach rather than a top-down strategy. While there are initiatives and growing interest in AI ' s potential, Canada ' s approach is generally less developed, lacking the necessary  resources  and  strategies  to  support  widespread  adoption  across K-12 education.
@@ -306,6 +343,10 @@ However,  there  are  limitations  in  this  study.  Firstly,  the  sample consi
 ## CRediT authorship contribution statement
 
 Davy Tsz Kit Ng: Writing -review &amp; editing,  Writing -original draft,  Validation,  Supervision,  Methodology,  Investigation,  Formal analysis, Conceptualization. Eagle Kai Chi Chan: Writing -review &amp; editing,  Resources,  Investigation,  Data  curation. Chung  Kwan  Lo: Writing -review &amp; editing, Resources, Data curation.
+
+
+<!-- PAGE 11 -->
+
 
 ## Statements on open data
 
@@ -370,6 +411,10 @@ Supplementary data to this article can be found online at https://doi. org/10.10
 - Sadriu, S., Nuci, K. P., Imran, A. S., Uddin, I., &amp; Sajjad, M. (2021). An automated approach for analysing students feedback using sentiment analysis techniques. In Mediterranean conference on pattern recognition and artificial intelligence (pp. 228 -239). Cham: Springer International Publishing.
 - Samala, A. D., Rawas, S., Wang, T., Reed, J. M., Kim, J., Howard, N. J., &amp; Ertz, M. (2024). Unveiling the landscape of generative artificial intelligence in education: A comprehensive taxonomy of applications, challenges, and future prospects. Education and Information Technologies , 1 -40.
 - Schoon, I., &amp; Lyons-Amos, M. (2017). A socio-ecological model of agency: The role of psycho-social and socioeconomic resources in shaping education and employment transitions in England. Longitudinal and Life Course Studies, 8 (1), 35 -56.
+
+
+<!-- PAGE 12 -->
+
 
 - Shoufan, A. (2023). Exploring students ' perceptions of ChatGPT: Thematic analysis and follow-up survey. IEEE Access, 11 , 38805 -38818.
 - Siemens, G., Marmolejo-Ramos, F., Gabriel, F., Medeiros, K., Marrone, R., Joksimovic, S., &amp; de Laat, M. (2022). Human and artificial cognition. Computers in Education: Artificial Intelligence, 3 , Article 100107.

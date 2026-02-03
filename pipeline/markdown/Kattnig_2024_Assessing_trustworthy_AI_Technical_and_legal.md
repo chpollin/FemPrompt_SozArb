@@ -1,10 +1,11 @@
 ---
 source_file: Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.pdf
-conversion_date: 2026-02-03T09:02:40.718276
+conversion_date: 2026-02-03T18:33:41.636035
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Contents lists available at ScienceDirect
@@ -50,6 +51,10 @@ Ensuring fairness in AI systems has become a research topic of high interest in 
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 of comprehension of how the concept of fairness from the legal and technical perspectives relate to each other. Although many methods for mitigating bias in AI systems have been developed, few of them meet legal requirements. Focusing on the European area, the European Union (EU) aims to influence the development and use of AI systems by defining legal requirements. Hence, it is crucial to examine the legal requirements for AI systems to ensure fairness and non-discrimination. This paper examines the legal framework for AI in the EU and provides insights into the challenges and opportunities of addressing bias mitigation in AI systems in the EU from an interdisciplinary perspective and contributes to this by examining the legal requirements for AI systems to ensure fairness and non-discrimination.
 
 The paper informs about the importance of ensuring fairness in AI systems and thus the need for an interdisciplinary approach to understanding the legal and ethical principles of fairness. In this context, this paper provides deeper insights into current state-of-the-art methods for bias mitigation in AI systems and contrasts them with the legal requirements of the European Union. In addition, the challenges of defining fairness and the need for a comprehensive legal methodology to approach fairness in AI systems are addressed. Achieving fairness in AI decision-making is not only crucial to avoid discriminatory outcomes and unfair treatment, but it is also essential to promote social justice and ethical values. To this end, it is important to develop and implement effective methods for bias mitigation that meet legal requirements and ensure fairness and non-discrimination in AI systems. This paper concludes with recommendations for establishing standards and driving future developments in fair AI systems across technology, science, law, and policy-making.
@@ -82,6 +87,10 @@ Table 1 List of key elements of procedural fairness and their description accord
 
 Substantive fairness. In addition to procedural fairness, notable reference should also be made to substantive fairness which refers to the content and outcome of decisions or processes and ensures that they are just and equitable, based on an assessment of the merits and facts of a case [37]. In contrast to procedural fairness, which focuses on the fairness of the process that leads to a decision, substantive fairness focuses on the decision itself. In certain fields such as law, labour, and public policy, it is important that decisions are made based on fair and equitable criteria. This ensures that individuals' rights are respected and unjust outcomes are avoided. In the context of employment, this could involve ensuring that hiring and promotion practices are non-discriminatory and based on an individual's actual merits and qualifications [38]. Additionally, it may involve ensuring that employees are paid fairly for their work. Substantive fairness is sometimes viewed as being similar to procedural fairness. The argument is that a reasonable and knowledgeable person would not accept unfair treatment such as disadvantageous contract terms or prices that exceed the market rate [37]. Rather substantive fairness looks at
 
+
+<!-- PAGE 3 -->
+
+
 whether the actual terms of an agreement or a court decision are fair, not just if the process to reach that agreement or decision was fair. Even if all the rules were followed in a contract negotiation or court case, the final outcome should be fair to everyone involved. This means that the outcome should consider more than just the steps taken to get there. The criteria for the outcome should also be just and take into account the interests of all parties [39].
 
 Legislative realisation. These elements are also reflected in the legal frameworks [40]. In Article 6 of the ''European Convention on Human Rights'' (ECHR) [41] the right to a fair trial is enshrined, which is considered a fundamental pillar of the rule of law and guarantees the separation of powers [42]. Article 6(1) stipulates that any determination of civil rights and obligations or of any criminal charge has to be made within a reasonable time by an independent, and impartial tribunal established by law. In addition, the verdict must be announced publicly. In Paragraphs 2 and 3, further regulations are laid down for criminal offences, which are also applicable by analogy in civil cases [43]. This includes in particular the presumption of innocence in accordance with Art 6(2). Case law has created new guarantees that are not expressly mentioned in Article 6. According to the opinion of the court, these guarantees are based on the underlying concept of fair proceedings [42]. These additional guarantees include access to a court, the right to legal aid and equality of arms.
@@ -104,6 +113,10 @@ Moreover, it should be noted that ''unfair'' AI systems might be created due to 
 
 In this sense fairness in relation to AI primarily refers to the aspect of non-discrimination [56-58]. In this sense, fairness is very closely related to the idea that every person is treated equally. Ensuring nondiscrimination is one of the fundamental ideas of the European Union
 
+
+<!-- PAGE 4 -->
+
+
 and was laid down in the ''Treaty on the Functioning of the European Union'' (TFEU) [59]. Reference should be made to Article 10 TFEU, where it stated that ''the Union shall aim to combat discrimination based on sex, racial or ethnic origin, religion or belief, disability, age or sexual orientation'' , and also to Article 19 TFEU, where it is clearly emphasised that the ''appropriate action to combat discrimination based on sex, racial or ethnic origin, religion or belief, disability, age or sexual orientation'' should be pursued by the European Council.
 
 A main source of law hereby is Article 21 CFR. According to this, it is legislated that ''any discrimination based on any ground such as sex, race, colour, ethnic or social origin, genetic features, language, religion or belief, political or any other opinion, membership of a national minority, property, birth, disability, age or sexual orientation'' is prohibited. Hence, fairness is the absence of unfairness. The European legislator has therefore issued essential provisions which prohibit unequal treatment based on given characteristics. Further regard should be made to the ''Race Equality Directive'' [60] and the ''Framework Equality Directive'' [61].
@@ -119,6 +132,10 @@ The final version of the AI Act [53] does not appear to contribute to a clearer 
 Respectively, particular criticism is levelled at the fact that under current EU law, grounds of discrimination are considered individually instead of as a whole, as would be the case with the concept of intersectional discrimination. This becomes clear by focusing on the case Parris (2016) [68], in which the ECJ ruled that ''there is, however, no new category of discrimination resulting from the combination of more than one of those grounds, such as sexual orientation and age, that may be found to exist where discrimination on the basis of those grounds taken in isolation has not been established'' . Additionally, traditional non-discrimination law primarily covers explicitly protected characteristics such as race and gender. However, they may fall short in countering the subtler forms of discrimination that AI can introduce or amplify, particularly concerning non-traditional sensitive attributes like economic or social status. Proxy discrimination emerges when AI utilises neutral factors as stand-ins for these protected attributes, inadvertently leading to biased outcomes. This highlights the urgent need for revising nondiscrimination frameworks and advocating for ethical AI practices. Hence, in jurisprudence, an ongoing discussion exists as to whether the current non-discrimination rules are a useful tool for regulating AI at all or whether significant adjustments are required [57,69,70].
 
 Although nowadays the focus is no longer just on court proceedings, due to the increasing use of AI systems, the four elements of procedural fairness established by Tyler [28] still hold significant importance to ensure fairness in AI systems. Focusing on fairness only in relation to non-discrimination is by no means sufficient to meet the requirements of trust and transparency. Non-discrimination can be assigned to the element of respect since any person should be treated with dignity and politeness [71]. However, the elements of voice, neutrality and trust remain open as well as the core elements of substantive fairness.
+
+
+<!-- PAGE 5 -->
+
 
 ## 2.2. Technical fairness
 
@@ -155,6 +172,10 @@ Whereby 𝑇𝑃 stands for the true positive rate, 𝐹𝑃 for the false posit
 The simplified version of equalised odds is called equality of opportunity , where only the true positive rate is enforced [89]. This is a relaxation of the strict equalised odds, thus weaker and allows for better utility [87].
 
 Fairness in allocation is a measure of the difference between the enrolment and allocation status of a particular use case [89]. Thus, the difference between a certain final action and the decision status of the system. For example, a historical or social bias might persist throughout the decision-making process and result in an unjust decision for a group [89]. This becomes clear when reviewing housing allocation systems for homeless people in America. People are enrolled in an allocation system, with a positive decision on receiving a spot in a shelter. However, there is often discrimination against dark-coloured
+
+
+<!-- PAGE 6 -->
+
 
 people in the sense that they are denied a home by the landlord. Thus, the recommendations from the system are not enforced, which leads to an unjust allocation of housing between the groups.
 
@@ -198,6 +219,10 @@ These relationships can be made more explicit with the help of causal graphs. A 
 
 Methods based on causal reasoning involve the construction of a causal graph and then checking the paths in order to detect whether a classifier trained on that data would either directly in indirectly discriminate based on sensitive attributes [26]. If a path can be found from a sensitive attribute (e.g. gender) to the target variable (e.g. hire) it is an indication of possible discrimination. This was further formalised by Nabi and Shpitser [99] as ''path specific effects'' . In their work, they measured these path-specific effects as the effect a sensitive attribute
 
+
+<!-- PAGE 7 -->
+
+
 Table 2 Comparison of Group Fairness and Individual Fairness.
 
 |                         | Group fairness                                                                                                                                 | Individual Fairness                                                                                                                            |
@@ -230,6 +255,10 @@ The question that emerges is which fairness concept, from the perspective of leg
 
 Another approach to interpret fairness can be derived from the categorisation of the European court system as well as the court system in most European countries as civil law. Civil law systems trace
 
+
+<!-- PAGE 8 -->
+
+
 their origins to the legal principles and codes established by the ancient Romans, which follow clear procedural rules and use formal documents [102]. These systems are characterised by comprehensive legislative codes that serve as the primary source of law. In civil law systems, legal decisions are typically based on the interpretation and application of these codes, rather than relying heavily on prior court decisions as in common law systems. This leads to the fact that each court bases its decision on the same procedural principles and thus each case is considered individually, but the decision-making is uniform. This ensures that, on the one hand, the rights and obligations of the parties before the court are clearly defined and, on the other hand, that no disadvantage arises for individual parties. According to Burdick [103], these principles of Roman law, which ensure fairness and equity, are the reason why many legal systems are based on them. The Roman praetors, who were responsible for the jurisprudence, often used the phrase ''ex bono et aequo'' , i.e. ''right and fair'' [104], and the Digest of Justinian also define law as the ''art of what is right and fair'' (Iustinianus, Digesta Iustiniani 1.1.1.pr.1). Civil law is often perceived as fairer due to its structural characteristics and the inherent ability to reevaluate court decisions. In this legal system, influence over the law extends beyond the legislative branch and includes the judiciary. As a result, subsequent cases are assessed based on prior legal rulings. However, it is important to note that revisions of such precedents are possible in all cases, meaning that unlike in common law systems, judicial precedent is not inherently binding.
 
 In this sense, it is not the decision itself that is the decisive element of the civil law system, but the uniformity of the processes. It also follows that the structure of the system contributes significantly to fairness. In his decision, the judge has discretionary powers to interpret the facts of the case, but the solution of the legal question and the associated legal assessment of the facts are standardised so that each party is entitled to his rights and fairness is guaranteed.
@@ -252,6 +281,10 @@ There are many different kinds of biases. Commonly mentioned biases in the liter
 4. Sampling bias. Sampling bias is similar to representation bias [109]. This bias occurs when the training data is not representative of the target population. Thus, certain groups are either under or over-represented in the training data, compared to their actual prevalence in the real-world population. This bias can lead to preferential treatment of over-represented groups or discrimination against underrepresented groups. Further, the trend estimated from one population might not generalise to data from a new population [109].
 5. Measurement Bias . Measurement bias arises from how features are chosen, utilised and measured [106]. Features or labels are typically seen as proxies, which are chosen to approximate a specific construct [113]. If those proxies are poor reflections or the target constructs are computed differently across groups, these proxies become problematic [113]. Hence, this bias results
 
+
+<!-- PAGE 9 -->
+
+
 from using mismeasured proxy features [109]. For example, COMPAS [9], the recidivism risk prediction tool predicts the risk of an individual based on features such as prior arrests and friend/family arrests [109]. Minorities often represent groups with higher arrest rates, due to the fact that they are policed and controlled more frequently. Hence, the method of measurement across groups varies, resulting in a measurement bias that links individuals of minorities with higher arrest rates.
 
 6. Omitted Variable Bias . Omitted Variable Bias occurs when important features are not considered by the model [109]. For instance, a model that predicts the credit score of an individual needs to incorporate all relevant information in order to return accurate predictions. Therefore, the model needs to consider not only the salary and debts of a person but also the heritage or other assets, to assess the full extent of creditworthiness.
@@ -272,6 +305,10 @@ Further, it should be noted that intended decision-support systems might become 
 A particularly striking case for an automated decision-making system is the use of weapons, where for example the Israeli military utilises an AI system called ''Lavender'' for targeting. This system scores individuals in Gaza based on their perceived likelihood of being Hamas militants, utilising extensive surveillance data. Reports indicate that human oversight of these systems is minimal, often reduced to a mere formality, with decisions made in seconds, focusing on male targets for potential action [125].
 
 The study by Skitka et al. [126] showed that people might fail to respond to irregularities or events because automated devices failed to recognise or indicate them. In addition, their experiment showed that participants are more likely to follow the automated directive, although provided with contrary information from a reliable source. This notion is called automation bias , which describes the tendency of using automation as a heuristic replacement for vigilant information seeking and processing [127]. Studies showed that participants without automation aid outperformed those with an automation aid [127]. Furthermore, participants are more likely to act on automated recommendations, regardless of their validity. Hence, automation bias in decision-support systems might result in an instant acceptance of the decision instead of critically questioning.
+
+
+<!-- PAGE 10 -->
+
 
 Feedback loop. An additional problem of unresolved bias within an AI system includes the pernicious feedback loop it creates [128]. If a system disadvantages a group of people based on an assumption such as, ''good employees are those with a higher credit score since they pay their bills on time and follow the rules'' . This also implies that people with low credit scores are less reliable and thus might have more trouble finding a job. That exact reasoning makes it harder for a person with a low credit score to find a job, which would help them pay their bills, and even worsen their current score. These feedback loops help the environment to justify their assumptions without being concerned about the fates of individuals [128]. As a consequence, this feedback loop continues and thereby makes the model more unfair with every decision. Another example mentioned by O'neil [128] about feedback loops is represented by mortgage securities, which were before considered simple financial instruments. However, these developed into frauds, where customers were able to lend money for homes they could not afford. Unsustainable mortgages were written, the fees were collected and the resulting securities were sold. This, of course, was very profitable for the banks, who were ruining thousands of people. The perfidious thing was that they especially targeted poor and minority neighbourhoods. Thus, getting rich at the expense of others. The risk rating of those securities was opaque, thus leaving people to believe they would get their money back, including interest, when buying these securities. Banks held onto false underlying assumptions, namely, that not many people would default at the same time, and that the risks are carefully balanced. Investors bought mortgages with underestimated risk, leading to costly consequences. This is an example of a model, that favoured customer satisfaction over the accuracy of the model, incorporating a pernicious feedback loop.
 
@@ -297,6 +334,10 @@ In-processing techniques are used during the training phase of a model [131]. Wh
 
 Adversarial debiasing. In addition to introducing bias through the training data of an AI system, it is also possible to introduce post-training bias during the application of the system. For example, adversarial attacks can be used to significantly influence the results of such systems. Hussain et al. [136] showed that adversarial attacks aimed at degrading fairness can significantly degrade the fairness of predictions with a low perturbation rate and without a significant drop in accuracy. At the same time, this method can also be used for bias mitigation. Adversarial debiasing is a technique, whereby classifiers and their corresponding adversaries are trained simultaneously [137]. Both models perform against each other to increase the performance, while decorrelating the sensitive attributes from potential biases [138]. While the classification model tries to predict the ground truth, the adversarial model tries to exploit fairness issues. This helps the learner to identify possible problem areas, which are optimised. Further, adversarial models can be used to not only increase the group but also the individual fairness [139]. This approach provides the benefit of generalise-ability across different datasets and applications, while not requiring any prior assumptions about the distribution [138].
 
+
+<!-- PAGE 11 -->
+
+
 Compositional. Compositional approaches tackle bias by training multiple classification models in order to utilise specific models to reach predictions for different population groups [137]. These models can also be used in an ensemble fashion. Decoupled classification models for different protected groups can achieve an increase in accuracy, however, this also entails a reduced amount of training data for each classifier. Various concepts try to counteract this disadvantage by introducing transfer learning and different weights for each classification task [140]. As a result preference guarantees [141] determine that a decoupled classifier is preferred over a classifier trained on all data, or any other classifier by a certain group. A slightly different attempt, fair use , was brought forth by Suriyakumar et al. [142], which specifies that a performance improvement for every group should be attained if a classifier uses sensitive group information. This advance resulted in the training of multiple classification models with different fairness goals. For example Liu and Vincente [143] conceptualise bias mitigation as a multi-objective optimisation problem, which studies fairness-accuracy trade-offs under consideration of multiple fairness metrics. Hence, practitioners are able to choose an approach, depending on the fairness-accuracy trade-off, that suits their use case at hand.
 
 Autoencoders. An autoencoder is a neural network, which is trained to reconstruct its input [144]. Thereby a representation of the data is learned through an unsupervised manner. This means the input is encoded into a compressed and meaningful representation, and afterwards reconstructed such that the output is as similar to the input as possible. However, these models can also be used to eliminate bias during the training process. Variational autoencoders are used in recommender systems, to counteract popularity bias [145]. These generative models are based on Multi-Layer Perceptrons (MLP), and recently gained popularity as a strong method to implement collaborative filtering recommendations [146]. Variational autoencoder infers latent representations of interactions as normal distributions, where the parameters are estimated during the training process [145]. In addition, Grari et al. [147] proposed to use causal graphs from the underlying data to create latent representations, containing information about the sensitive attribute. Afterwards, a model is trained using these proxies in combination with penalised adversarial during the training process. Hence, a predictive model is trained without the availability of sensitive demographic information during the training phase. Tyagi et al. [148] state that an enhanced variational autoencoder can be used to mitigate gender bias while preserving gender-related information. They showed that an enhanced variational autoencoder can mitigate the bias of pretrained static word embeddings while preserving syntactic, semantic and gender information. Hence, this approach achieves non-biased representations of gender words.
@@ -319,6 +360,10 @@ It should be emphasised that ChatGPT is not the only language model that has bee
 
 Furthermore, ChatGPT showed remarkable abilities to generate human-like text, although the information may sometimes be misleading or simply incorrect [159]. A major challenge is to ensure and maintain the accuracy and reliability of the AI-generated context. This also entails a requirement of quality control for the system. In addition, these models are by no means immune to bias. For example, possible biases within the training data could be picked up and amplified by the system [160]. If used in critical areas such as healthcare, employment or within the legal system, these biases could have disastrous consequences. The examination by Touvron et al. [154] highlighted that different models demonstrate disparate sentiments towards sensitive attributes. Hence, ChatGPT overall tends to have a more neutral sentiment score, whereas a fine-tuned version of LLAMA 2-Chat tends to show more positive sentiment. The results of the study indicate that LLMs exhibit a more favourable attitude towards American female actresses than towards American male actors. In addition, a study by Rozado [161] has shown that ChatGPT responses are biased towards a political agenda. Thus, without clear transparency policies and measures to mitigate bias as much as possible, major problems will remain and have the potential to manipulate human decisions.
 
+
+<!-- PAGE 12 -->
+
+
 ## 4.2. Takeaways for lawyers and policymakers
 
 Although research has already proposed different approaches to ensure fairness, no legal guide is in sight so far. Rather, the legislature chooses general and unclear formulations, which appear to be appropriate and solution-oriented on the surface, but on closer inspection often raise questions without offering any answers. In this sense, reference should be made to the General Data Protection Regulation (GDPR) [162], which, despite its introduction in 2016, still leaves many things unclear and presents developers with almost insurmountable tasks [163]. The GDPR also incorporates principles of fairness, especially in Article 5(1)(a), where it clarifies that personal data shall be 'processed lawfully, fairly and in a transparent manner'' . This mostly addresses the aspect of procedural fairness, however, substantive fairness is not taken into account. The focus on procedural fairness inadequately addresses the nuances of data processing's substantive fairness, leaving gaps in effective data subject protection. Substantive fairness, encompassing principles of different areas of law such as good faith, respect for autonomy or data accuracy, are not explicitly defined within the GDPR. Many arguments can be found in the literature, as to why substantive fairness should also be an essential component of legislation [164].
@@ -336,6 +381,10 @@ The implementation of the legal requirements for AI systems is very challenging,
 Ensuring the fairness of an AI system should also be seen as a key consideration of developers and ML engineers. For this, it is also necessary to deal with the legal framework in detail and, as the example of fairness clearly shows, to have a certain understanding of the law. It is by no means enough to focus exclusively on the technical conditions and ignore the legal requirements. Rather, it is indispensable to take the legal components into account in every development and implementation phase of AI systems. Likewise, the Ethics Guidelines for Trustworthy Artificial Intelligence [165] recommends continuous evaluation throughout the life cycle of the AI system to guarantee safety as well as legal conformity. An evaluation of this kind, however, involves a great deal of effort and requires specialists from different fields in order to obtain in-depth results and thus discover any problems and shortcomings at an early stage. This already begins in the phase of designing the AI system, where the selection and design of the algorithm and the features used, as well as the selection of the training data. In addition, the datasets used for training should be carefully documented at the stage of their collection [129]. Every aspect of development must be carefully considered and checked against the legal requirements and correspondingly appropriate audits are to be implemented [170].
 
 The problem here is that it is by no means easy to put legal requirements into practice. Particularly in the area of AI, the legislator limits itself to establishing basic regulations without defining them concretely. Although this allows a certain amount of freedom for development, it also leads to legal uncertainty, which affects small companies and start-ups in particular, which cannot afford lengthy and costly legal disputes [171]. As the GDPR limits certain types of datacentric innovations due to its strict data protection requirements [172], it also stimulates innovation in areas like privacy-enhancing technologies and secure data management solutions. Similarly, upcoming AI regulations may inhibit innovation by prohibiting certain use cases due to their inherent risks. However, it may also incentivise innovation on Trustworthy AI, leading to more research on fairness and discrimination. This is evident with regard to evaluation, where assessments are considered useful and necessary, but there are no standardised procedures. This lack of security must be addressed during development through clear documentation of all development steps, continuous monitoring and evaluation of the AI system, and concrete security measures and data handling practices [173]. To this end, it is necessary for development teams to be interdisciplinary in order to be able to take different aspects into account and to be able to recognise the various problems on the one hand and to find suitable solutions on the other. A key factor here is that experts also acquire knowledge of topics outside their field, so that technicians, for example, also deal with legal issues and lawyers acquire basic knowledge of data processing and data science methods.
+
+
+<!-- PAGE 13 -->
+
 
 ## 4.4. Takeaways for science
 
@@ -360,6 +409,10 @@ In the realm of artificial intelligence research, the interaction between humans
 ## 4. Policies and regulations for AI
 
 The legal debate on the functioning and effects of AI systems is only just beginning [184]. Even if the first attempts at comprehensive regulation are being made by the legislature, it is clear from the continuing progress in AI research that many
+
+
+<!-- PAGE 14 -->
+
 
 topics have not yet been discussed in deep and that there is a need for further regulation. Regulating those areas that pose particular risks to people is especially necessary. In particular, the area of fundamental rights should be emphasised, including the right to data protection and the right not to be discriminated against. The potential dangers and risks associated with AI systems necessitate a comprehensive technical examination and in-depth understanding of underlying legal problems to equip policymakers with adequate guidelines for regulating AI systems.
 
@@ -398,6 +451,10 @@ No data was used for the research described in the article.
 - [15] Schölkopf B. Causality for machine learning. In: Probabilistic and causal inference: the works of judea pearl. first ed.. New York, NY, USA: Association for Computing Machinery; 2022, p. 765-804. http://dx.doi.org/10.1145/3501714. 3501755.
 - [16] Scherer MU. Regulating artificial intelligence systems: Risks, challenges, competencies, and strategies. Harv J Law Technol 2015;29:353-400.
 - [17] Dressel J, Farid H. The accuracy, fairness, and limits of predicting recidivism. Sci Adv 2018;4(1). http://dx.doi.org/10.1126/sciadv.aao5580.
+
+
+<!-- PAGE 15 -->
+
 
 - [18] Silvernail KD. Cross-cultural organizational justice: when are fairness perceptions universal or culturally dependent? (Ph.D. thesis), University of Massachusetts Amherst; 2016.
 - [19] James K. Culture and organizational justice: State of the literature and suggestions for future directions. In: Cropanzano RS, Ambrose ML, editors. The oxford handbook of justice in the workplace. Oxford, United Kingdom: Oxford University Press; 2015, p. 273-90.
@@ -458,6 +515,10 @@ No data was used for the research described in the article.
 - [74] Mitchell S, Potash E, Barocas S, D'Amour A, Lum K. Algorithmic fairness: Choices, assumptions, and definitions. Annu Rev Stat Appl 2021;8(1):141-63. http://dx.doi.org/10.1146/annurev-statistics-042720-125902.
 - [75] Pessach D, Shmueli E. A review on fairness in machine learning. ACM Comput Surv 2022;55(3):1-44. http://dx.doi.org/10.1145/3494672.
 
+
+<!-- PAGE 16 -->
+
+
 - [76] Hutchinson B, Mitchell M. 50 Years of test (un)fairness: Lessons for machine learning. In: Proceedings of the conference on fairness, accountability, and transparency. FAT* '19, New York, NY, USA: Association for Computing Machinery; 2019, p. 49-58. http://dx.doi.org/10.1145/3287560.3287600.
 - [77] Calders T, Kamiran F, Pechenizkiy M. Building classifiers with independency constraints. In: 2009 IEEE international conference on data mining workshops. 2009, p. 13-8. http://dx.doi.org/10.1109/ICDMW.2009.83.
 - [78] Dwork C, Hardt M, Pitassi T, Reingold O, Zemel R. Fairness through awareness. In: Proceedings of the 3rd innovations in theoretical computer science conference. ITCS '12, New York, NY, USA: Association for Computing Machinery; 2012, p. 214-26. http://dx.doi.org/10.1145/2090236.2090255.
@@ -504,6 +565,10 @@ No data was used for the research described in the article.
 - [119] Korteling JEH, van de Boer-Visschedijk G, Blankendaal RAM, Boonekamp R, Eikelboom A. Humanversus artificial intelligence. Frontiers in Artificial Intelligence 2021;4. http://dx.doi.org/10.3389/frai.2021.622364.
 - [120] Skitka LJ, Mosier K, Burdick M. Does automation bias decision-making?. Int J Hum-Comput Stud 1999;51(5):991-1006. http://dx.doi.org/10.1006/ijhc.1999. 0252.
 
+
+<!-- PAGE 17 -->
+
+
 - [121] Mökander J, Morley J, Taddeo M, Floridi L. Ethics-based auditing of automated decision-making systems: Nature, scope, and limitations. Sci Eng Ethics 2021;27. http://dx.doi.org/10.1007/s11948-021-00319-4.
 - [122] Coca-Vila I. Self-driving cars in dilemmatic situations: An approach based on the theory of justification in criminal law. Crim Law Philos 2018;12:59-82. http://dx.doi.org/10.1007/s11572-017-9411-3.
 - [123] Lü L, Medo M, Yeung CH, Zhang Y-C, Zhang Z-K, Zhou T. Recommender systems. Phys Rep 2012;519(1):1-49. http://dx.doi.org/10.1016/j.physrep.2012. 02.006.
@@ -547,6 +612,10 @@ No data was used for the research described in the article.
 - [161] Rozado D. The political biases of ChatGPT. Soc Sci 2023;12(3). http://dx.doi. org/10.3390/socsci12030148.
 - [162] European Union. Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation). 2016, OJ L 119/1.
 - [163] Kutyłowski M, Lauks-Dutka A, Yung M. GDPR - challenges for reconciling legal rules with technical reality. In: Chen L, Li N, Liang K, Schneider S, editors. Computer security - ESORICS 2020. Lecture notes in computer science, 12308, Cham: Springer; 2020, http://dx.doi.org/10.1007/978-3-030-58951-6\_36.
+
+
+<!-- PAGE 18 -->
+
 
 - [164] Häuselmann A, Custers B. Substantive fairness in the GDPR: Fairness elements for article 5.1a GDPR. Comput Law Secur Rev 2024;52:105942. http://dx.doi. org/10.1016/j.clsr.2024.105942.
 - [165] European Commission. Ethics Guidelines for Trustworthy AI. 2019, http://dx. doi.org/10.2759/346720.

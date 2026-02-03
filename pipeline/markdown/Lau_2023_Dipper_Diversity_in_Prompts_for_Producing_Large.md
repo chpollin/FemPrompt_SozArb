@@ -1,10 +1,11 @@
 ---
 source_file: Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.pdf
-conversion_date: 2026-02-03T09:08:26.547780
+conversion_date: 2026-02-03T18:39:46.059532
 converter: docling
-quality_score: 95
+quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Dipper: Diversity in Prompts for Producing Large Language Model Ensembles in Reasoning tasks
 
 Gregory Kang Ruey Lau ∗ 1 , 2 , Wenyang Hu ∗ 1 , Diwen Liu 1 , Jizhuo Chen 1 , See-Kiong Ng 1 , Bryan Kian Hsiang Low 1
@@ -22,6 +23,10 @@ While Large Language Models (LLMs) have demonstrated impressive capabilities in 
 In contrast, ensemble methods, which involve the use of multiple constituent models in parallel , have been shown to improve models' performance and robustness in classical machine-learning settings [7] and are promising approaches to achieve better inference-time performance, although less well-studied in the LLM setting. The prospects of applying such methods to LLMs are increasingly attractive, given recent developments that have enabled significant speed-ups in parallel, LLM batch inference. These include methods to efficiently handle key-value cache memory [8] and prompt caching to efficiently reuse common prompts for multiple queries [9, 10], enabling sub-linear (in the number of queries) costs for batch inference.
 
 ∗ Equal contribution.
+
+
+<!-- PAGE 2 -->
+
 
 However, a key challenge in achieving high performing ensembles is how diversity can be appropriately injected among its constituents [11, 12], and this applies to LLM ensembles as well. Recent works have explored how using hetereogenous model ensembles (i.e. consisting of different models types) could lead to improved performance [13, 14], although users may often prefer to or be restricted to using only a single type of LLM model in practice, making such methods not viable in those cases. While a single LLM may be sampled with the same query multiple times and rely on the stochasticity of the LLM response generation process [15] to essentially form a self-ensemble, this approach injects limited diversity to the ensemble which may limit performance improvements.
 
@@ -48,6 +53,10 @@ We denote a homogeneous LLM ensemble as E ( · ; M,n,ϕ ) , consisting of n inst
 <!-- formula-not-decoded -->
 
 Our objective is to design an ensemble framework with an appropriate design parameter ϕ such that given fixed M , n and a small labeled development set, we can efficiently maximize Eq. (2) by optimizing for ϕ to produce the best performing ensemble without additional training.
+
+
+<!-- PAGE 3 -->
+
 
 ## 3 Method
 
@@ -76,6 +85,10 @@ where M ( · , w ) is the LLM model conditioned by prompt w ∈ W , and F the ex
 Semantic entropy. Instead, our approach involves prioritizing the prompts that have the best predicted performance on the task T , while maximizing the diversity of the selected set of prompts. Then, we measure prompt diversity by considering how different the semantic meanings of the n role prompts are from each other. We represent each prompt's semantic meaning with a mapping R from its text representation w into a normalized continuous vector s ∈ R p in a p -dimensional semantic embedding space S through a sentence embedding model M s [21], i.e., R ( w ) := M s ( w ) . This mapping can be represented as an n × p prompt embedding matrix R = [ s 1 , · · · , s n ] where s is a 1 × p row vector representing each prompt.
 
 2 Without such a development set, an uninformed prior on the performance (e.g. uniform distribution across roles), or an informed-prior based on domain knowledge, could also be used.
+
+
+<!-- PAGE 4 -->
+
 
 To quantify prompt diversity of a given set of prompts, we propose to compute the volume enclosed by the selected prompts in semantic space. Intuitively, for n fixed prompts, more diverse prompts point to more varied directions in semantic space, and enclose larger volume. Specifically, we define the semantic volume metric V as
 
@@ -109,6 +122,10 @@ Baselines. We evaluate our DIPPER framework by comparing it against the "Self-en
 
 3 We omit a factor of 2 which does not affect the optimization process. For our setting, we also have n &lt; p as the semantic embedding space is usually high dimensional.
 
+
+<!-- PAGE 5 -->
+
+
 their validation accuracy distribution ("Random+"), and (2) an ensemble using the "Top-n" prompts as evaluated on the validation set, which benefits from the diversity of prompts introduced by our prompt generation process but do not explicitly optimize for ensemble diversity otherwise.
 
 ## 4.1 Ensembles with fixed prompt methods
@@ -137,6 +154,10 @@ Next, we consider our full DIPPER framework. We first generate a pool of prompt 
 
 Finally, we analyze the effects of using Majority voting (MV) or LLM aggregation (LLMA) for our response aggregator component (see experimental details in Appx. B.3). We consider ensembles of size n = 5 with randomly selected prompts, and compare their performance on MATH when using either majority voting or LLM aggregation. Table 1 summarizes the results, showing that LLMA is more accurate than MV on average (i.e., higher F ( E ) ). To better analyze the performance difference, we computed the 'Override Ratio' which is how often a specific method is correct when the two methods disagree. Note that when MV and LLMA disagree, LLMA has a much higher ratio than MV which is only correct 8% of the time. We attribute LLMA's advantage to its capability of understanding the reasoning ˆ r in responses even when the ensembles do not have a majority for the
 
+
+<!-- PAGE 6 -->
+
+
 final answers ˆ c . This is corroborated when we look at the number of unique answers | C | when only one specific method is accurate: | C | for LLMA is higher than that of MV, which suggests that LLMA performs better than MV when the ensemble produces more unique answers, as expected.
 
 Table 1: Comparison between MV and LLMA. F ( E ) is the test performance. Override ratio is how often a specific method is correct when the two methods disagree. | C | is the number of unique answers when only one specific method is accurate.
@@ -162,6 +183,10 @@ In this work, we have proposed a novel framework, DIPPER, where a single LLM mod
 
 This research/project is supported by the National Research Foundation, Singapore under its AI Singapore Programme (AISG Award No: AISG2-PhD/2023-01-039J). This research is part of the programme DesCartes and is supported by the National Research Foundation, Prime Minister's Office, Singapore under its Campus for Research Excellence and Technological Enterprise (CREATE) programme. This research is supported by the National Research Foundation Singapore and the Singapore Ministry of Digital Development and Innovation, National AI Group under the AI Visiting Professorship Programme (award number AIVP2024 -001 ).
 
+
+<!-- PAGE 7 -->
+
+
 ## References
 
 - [1] Jie Huang and Kevin Chen-Chuan Chang. Towards Reasoning in Large Language Models: A Survey, May 2023.
@@ -183,6 +208,10 @@ This research/project is supported by the National Research Foundation, Singapor
 - [17] Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed Chi, Quoc Le, and Denny Zhou. Chain-of-Thought Prompting Elicits Reasoning in Large Language Models, January 2023.
 - [18] Yilun Du, Shuang Li, Antonio Torralba, Joshua B. Tenenbaum, and Igor Mordatch. Improving Factuality and Reasoning in Language Models through Multiagent Debate, May 2023.
 
+
+<!-- PAGE 8 -->
+
+
 - [19] Zijun Liu, Yanzhe Zhang, Peng Li, Yang Liu, and Diyi Yang. Dynamic LLM-Agent Network: An LLM-agent Collaboration Framework with Agent Team Optimization. October 2023.
 - [20] Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang, Chenfei Yuan, Chi-Min Chan, Heyang Yu, Yaxi Lu, Yi-Hsin Hung, Chen Qian, Yujia Qin, Xin Cong, Ruobing Xie, Zhiyuan Liu, Maosong Sun, and Jie Zhou. AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors, October 2023.
 - [21] Nils Reimers and Iryna Gurevych. Sentence-bert: Sentence embeddings using siamese bertnetworks. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing . Association for Computational Linguistics, 11 2019.
@@ -193,6 +222,10 @@ This research/project is supported by the National Research Foundation, Singapor
 - [26] Yihe Deng, Weitong Zhang, Zixiang Chen, and Quanquan Gu. Rephrase and respond: Let large language models ask better questions for themselves. arXiv preprint arXiv:2311.04205 , 2023.
 - [27] Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, and Yuan Cao. React: Synergizing reasoning and acting in language models. arXiv preprint arXiv:2210.03629 , 2022.
 - [28] Qwen Team. Introducing Qwen2-Math. https://qwenlm.github.io/blog/qwen2-math/ , 2024.
+
+
+<!-- PAGE 9 -->
+
 
 ## A Additional details on the DIPPER framework
 
@@ -214,6 +247,10 @@ Figure 5: The accuracy distribution of 200 candidate prompts on MATH.
 ## A.2 DIPPER algorithm
 
 Our DIPPER algorithm is outlined in Algorithm 1.
+
+
+<!-- PAGE 10 -->
+
 
 Table 2: Examples of reasoning prompts generated based on 7 basic prompts.
 
@@ -254,6 +291,10 @@ Table 3: The table of 7 basic reasoning prompts inspired by existing works.
 
 We use the prompt template in Tab. 4 to generate 200 diverse prompts.
 
+
+<!-- PAGE 11 -->
+
+
 Table 4: The prompt template for generating more reasoning prompts based on the 7 prompts.
 
 ## Prompt Generation Template
@@ -287,6 +328,10 @@ There are some responses:
 ⟨ RESPONSES ⟩
 
 Examine those responses and provide the final answer.
+
+
+<!-- PAGE 12 -->
+
 
 ## C Additional Results
 

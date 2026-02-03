@@ -1,10 +1,11 @@
 ---
 source_file: Alam_2025_Social_work_in_the_age_of_artificial_intelligence.pdf
-conversion_date: 2026-02-03T08:40:31.689950
+conversion_date: 2026-02-03T18:19:35.604683
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Journal of Evidence-Based Social Work
@@ -47,6 +48,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -79,6 +84,10 @@ The integration of artificial intelligence AI, defined as the simulation of huma
 
 Social work practice; artificial intelligence ethics; evidencebased practice; human rights; democratic governance; algorithmic justice
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 2013.  As  AI  systems  increasingly  mediate  service  delivery,  assessment  processes,  and resource  allocation  across  child  welfare,  mental  health,  housing,  and  income  support programs,  social  workers  confront  unprecedented  ethical  dilemmas  that  existing  frameworks  inadequately  address  (Goldkind  &amp;  Wolf,  2015;  Heinlein  &amp;  Huchler,  2024).  The profession's historical commitment to human dignity, self-determination, and social justice demands  a  comprehensive  response  that  neither  uncritically  embraces  nor  reflexively rejects technological innovation (Alsaleh, 2024; F. Reamer, 2018).
@@ -94,6 +103,10 @@ Social  work's  ethical  foundation,  codified  in  the  National  Association  
 The  principle  of  human  dignity  demands  that  AI  systems  preserve  clients'  inherent worth and avoid reducing individuals to algorithmic categories or risk scores (F. Reamer, 2018). Self-determination requires that clients maintain meaningful control over decisions affecting  their  lives,  even  when  AI  systems  provide  recommendations  or  assessments (Garkisch  &amp;  Goldkind,  2025).  Social  justice  mandates  that  AI  implementations  reduce rather than perpetuate structural inequalities, requiring ongoing evaluation of differential impacts across communities (Nuwasiima et al., 2024).
 
 The  value  of  human  relationships  takes  on  new  significance  in  AI-mediated  practice environments, where technology may either augment or undermine the therapeutic alliance central  to  social  work  practice  (Wretman  &amp;  Macy,  2016).  Competence  requires
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -111,6 +124,10 @@ Understanding how social workers and clients interact with AI systems requires e
 
 Cognitive  biases  significantly  impact  how  practitioners  interpret  and  act  upon  AIgenerated recommendations. Automation bias - the tendency to over-rely on automated systems - poses particular risks in high-stakes decisions about child removal or involuntary psychiatric  commitment  (Abrams  &amp;  der  Pütten,  2020;  Parasuraman  &amp;  Riley,  1997). A  documented  case  from  Allegheny  County's  child  welfare  system  supports  that  social workers  initially  showed  high  deference  to  the  Allegheny  Family  Screening  Tool's  risk scores, requiring additional training to maintain critical evaluation of algorithmic recommendations  (Vaithianathan  et  al.,  2019).  Conversely,  algorithm  aversion  may  lead  some practitioners to dismiss potentially valuable insights from data analysis, particularly when recommendations  conflict  with  clinical  intuition  (Dietvorst  et  al.,  2015;  Montag  &amp;  Ali,
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 2024).  These  biases  interact  with  professional  socialization  processes  that  traditionally emphasize  relationship-based  practice  and  holistic  assessment  (Berzin  et  al.,  2015; Heinlein &amp; Huchler, 2024).
@@ -124,6 +141,10 @@ The  implementation  of  AI  in  social  service  organizations  involves  compl
 Team  cohesion,  while  generally  beneficial  for  group  performance,  can  paradoxically undermine ethical AI implementation when it suppresses dissenting voices. Research on groupthink in technology adoption reveals how pressure for consensus can lead teams to minimize risks, overlook biases, and dismiss community concerns (De Dreu et al., 2024; Janis &amp; Janis, 1982). In one documented case, a child welfare agency's AI steering committee, dominated by administrators focused on efficiency metrics, implemented a risk assessment tool despite social workers' warnings about cultural bias in its variables (Abulkassova et  al.,  2025).  The  resulting  system  flagged  poverty-related  factors  as  abuse  indicators, leading  to  disproportionate  investigations  of  low-income  families  (Eubanks,  2018; Heinlein &amp; Huchler, 2024).
 
 Entitativity  -  the  perception  of  a  group  as  a  coherent  unit  -  influences  how  external stakeholders engage with AI implementation efforts (Abrams &amp; der Pütten, 2020; Campbell, 1958).  When  community  members  perceive  implementation  teams  as  unified  and impermeable,  they  may  feel  excluded  from  meaningful  participation  (Alsaleh,  2024; Birhane, 2021). Conversely, visible disagreements within teams can undermine stakeholder confidence in the implementation process (Friedkin &amp; Johnsen, 2011). Successful implementations require carefully managed transparency that acknowledges diverse perspectives while maintaining sufficient cohesion for effective action (Iacopini et al., 2024; Spinuzzi, 2005).
+
+
+<!-- PAGE 6 -->
+
 
 ## Institutional structures and algorithmic governance
 
@@ -142,6 +163,10 @@ Ethical  AI  literacy,  defined  as  the  ability  to  understand,  evaluate,  a
 Research on AI education in social work settings demonstrates the importance of integrating critical perspectives alongside technical knowledge (Haider, 2024). A pilot program incorporated case-based learning where students analyzed real-world examples of technology applications  in  social  services,  developing  both  analytical  skills  and  ethical  reasoning
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 <!-- image -->
 
@@ -163,6 +188,10 @@ Participatory action research (PAR) methodologies offer promising approaches for
 
 Effective  advocacy  for  algorithmic  justice  requires  coalition-building  between  social workers,  affected  communities,  and  allied  professionals  (Alsaleh,  2024;  CostanzaChock,  2020).  This  involves  both  defensive  actions  to  prevent  harmful  implementations  and  proactive  efforts  to  shape  AI  development  toward  more  equitable  ends
 
+
+<!-- PAGE 8 -->
+
+
 <!-- image -->
 
 (Longworth,  2021;  Montag  &amp;  Ali,  2024).  Social  workers'  professional  positioning provides  unique  opportunities  to  bridge  technical  and  community  perspectives  in advocacy  efforts.  This  component  aligns  with  the  NASW  core  values  of  service  and social  justice.
@@ -182,6 +211,10 @@ The concept of 'calibrated trust' becomes crucial in AI-mediated practice enviro
 Social work education must undergo substantial transformation to prepare practitioners for AI-mediated  practice  environments  while  maintaining  the  profession's  core  values  and relational  focus  (Alsaleh,  2024;  Haider,  2024).  This  requires  more  than  adding  technical courses; it demands integrating critical AI literacy throughout the curriculum and fostering capacities  for  ongoing  adaptation  in  rapidly  changing  technological  landscapes  (Berzin et al., 2015; Montag &amp; Ali, 2024).
 
 Foundational AI literacy should be integrated into human behavior, policy, and practice courses  rather  than  segregated  into  specialized  electives  (Abrams  &amp;  der  Pütten,  2020; Goldkind  &amp;  Wolf,  2015).  In  human  behavior  courses,  students  should  examine  how  AI systems  shape  identity  formation,  social  relationships,  and  cognitive  processes  (ArndCaddigan,  2015;  Friedkin  &amp;  Johnsen,  2011).  Policy  courses  must  address  algorithmic governance, digital  rights,  and  the  political  economy  of  AI  development  (Iacopini  et  al., 2024;  Winner,  2017).  Practice  courses  should  include  simulations  and  case  studies  that develop skills in critical evaluation of AI recommendations and ethical decision-making in technology-mediated contexts (De Dreu et al., 2024; F. Reamer, 2018).
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -203,6 +236,10 @@ Advancing  evidence-based  practice  in  AI-mediated  social  work  requires  de
 Algorithmic  auditing  methodologies  must  move  beyond  technical  metrics  of accuracy and efficiency to examine  differential impacts across social groups (Alsaleh,  2024;  Raji  et  al.,  2020).  This  requires  accessing  not  only  aggregate  performance  data  but  also  granular  information  about  how  algorithms  treat  different communities  (Barocas  et  al.,  2020;  Montag  &amp;  Ali,  2024).  Researchers  should  collaborate  with  computer  scientists  to  develop  'fairness  metrics'  that  reflect  social  work values,  recognizing  that  technical  definitions  of  fairness  often  conflict  and  require ethical  judgment  about  trade-offs  (Abulkassova  et  al.,  2025;  Selbst  et  al.,  2019). Future  research  should  focus  on  developing  and  testing  specific  tools  and  protocols for  implementing  the  proposed  framework.  This  includes  creating  validated  instruments  for  assessing  AI  literacy  among  social  workers,  developing  metrics  for  evaluating  community  participation  in  AI  governance,  and  establishing  evidence-based guidelines  for  ethical  AI  integration  in  various  practice  settings.  Additionally,  comparative research across different cultural and political contexts could illuminate how the  framework  might  be  adapted  for  diverse  global  settings.
 
 Based  on  this  analysis,  we  propose  specific  recommendations  for  social  work practice,  education,  research,  and  policy.  These  recommendations  are  summarized in  Table  1.
+
+
+<!-- PAGE 10 -->
+
 
 ## Limitations
 
@@ -227,6 +264,10 @@ The author(s) reported there is no funding associated with the work featured in 
 ## References
 
 Abrams, A. M., &amp; der Pütten, A. M. R. V. (2020). I-C-E framework: Concepts for group dynamics research  in  human-robot  interaction:  Revisiting  theory  from  social  psychology  on  ingroup
+
+
+<!-- PAGE 11 -->
+
 
 <!-- image -->
 
@@ -253,6 +294,10 @@ Abrams, A. M., &amp; der Pütten, A. M. R. V. (2020). I-C-E framework: Concepts 
 - Fricker, M. (2007). Epistemic injustice: Power and the ethics of knowing . Oxford University Press.
 - Friedkin, N. E., &amp; Johnsen, E. C. (2011). Social influence network theory: A sociological examination of small group dynamics (Vol. 33). Cambridge University Press.
 
+
+<!-- PAGE 12 -->
+
+
 <!-- image -->
 
 - Garkisch, M., &amp; Goldkind, L. (2025). Considering a unified model of artificial intelligence enhanced social  work:  A  systematic  review:  M.  Garkisch  and  L.  Goldkind. Journal  of  Human  Rights  and Social Work , 10 (1), 23-42. https://doi.org/10.1007/s41134-024-00326-y
@@ -278,6 +323,10 @@ Abrams, A. M., &amp; der Pütten, A. M. R. V. (2020). I-C-E framework: Concepts 
 - Raji,  I.  D.,  Smart,  A.,  White,  R.  N.,  Mitchell,  M.,  Gebru,  T.,  Hutchinson,  B.,  &amp;  Barnes,  P.  (2020, January).  Closing  the  AI  accountability  gap:  Defining  an  end-to-end  framework  for  internal algorithmic  auditing. Proceedings  of  the  2020  Conference  on  Fairness,  Accountability,  and Transparency , 33-44. https://dl.acm.org/doi/pdf/10.1145/3351095.3372873
 - Reamer, F. (2018). Social work values and ethics . Columbia University Press.
 - Reamer, F. G. (2013). Social work in a digital age: Ethical and risk management challenges. Social Work , 58 (2), 163-172. https://doi.org/10.1093/sw/swt003
+
+
+<!-- PAGE 13 -->
+
 
 <!-- image -->
 

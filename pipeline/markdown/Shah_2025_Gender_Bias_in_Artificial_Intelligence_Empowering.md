@@ -1,10 +1,11 @@
 ---
 source_file: Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.pdf
-conversion_date: 2026-02-03T09:23:22.049954
+conversion_date: 2026-02-03T18:54:35.307998
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -87,6 +88,10 @@ For an equitable society, there is a need to prevent AI systems from gender bias
 
 - i. How do gender biases manifest within AI systems, and what are their primary sources?
 
+
+<!-- PAGE 2 -->
+
+
 - ii. To  what  extent  can  digital  literacy  initiatives empower  women  to  engage  critically  with  AI technologies and mitigate gender disparities in the field?
 
 This study aims to examine the origins and consequences of gender bias in AI systems. It also explores potential  strategies  for  leveraging  digital  literacy  to mitigate  gender  disparities  and  foster  gender  equity within the technology sector.
@@ -118,6 +123,10 @@ The  words  were  chosen  to  cover  different  ways  of putting ideas (like 'AI
 | IEEE Xplore               | 'AI ethics'AND 'gender'                                  | AI Now Institute publications                            |                           |
 | Google Scholar            | 'Womenin tech'AND 'AI'                                   |                                                          | OECD policy papers        |
 | ACMDigital Library        | 'Gender equality' AND 'artificial intelligence'          | Tech company diversity reports                           |                           |
+
+
+<!-- PAGE 3 -->
+
 
 used the words 'AI ethics' and 'gender' to find technical papers about algorithmic bias. Conversely, Scopus sought out social science articles using keywords such as 'empowerment' and 'digital literacy.' These specific search terms made sure that the approach was best for each database's strengths. The search words were improved to make sure that the ideas were consistent while still being able to be changed to fit the needs of each database. A full record of the search process was kept,  including  the  reasoning  behind  choosing  the terms and the results of the pilot tests.
 
@@ -175,6 +184,10 @@ The topic analysis showed a few main ideas that are important  for  understandin
 | Search Results                                                  | The initial search yielded 300 potential sources.                                                          |
 | Final Selection                                                 | After applying inclusion/exclusion criteria and removing duplicates, 107 sources were selected for review. |
 
+
+<!-- PAGE 4 -->
+
+
 Fig 1 | Procedure for thematic analysis
 
 <!-- image -->
@@ -192,6 +205,10 @@ We used some quality control methods to ensure the accuracy of our analysis. All
 All articles were included in the inter-rater reliability study. This all-around method makes sure that the coding system is fully used, which makes the thematic analysis more rigorous and reliable. The whole dataset was coded separately, which allows a full evaluation of  reliability  to  happen.  To  find  out  how  consistent the  scoring  was,  Cohen's  kappa  coefficient,  which is  a  measure of inter-rater agreement, was used. The high level of agreement indicated by the resultant coefficient of 0.82 indicates that the coding method was both  consistent  and  trustworthy.  Any  disagreements found  during  the  independent  coding  process  were settled. This led to repeated improvements to the codebook  that  made  it  clearer  and  more  useful  across  a wide range of studies.
 
 To  eliminate  the  possibility  of  bias  or  under-representation  that  could  arise  from  relying  solely  on  a group, the inter-rater reliability method is used for all 107 articles. This approach guarantees that all examined literature is incorporated into the thematic analysis. As part of the topic analysis process, researchers had  to  do  things  like  reflect  on  their  points  of  view and possible biases throughout the study. In addition, basic  themes were shown to an outside group of experts in AI ethics, gender studies, and digital literacy. Their feedback helped to see details that might have been missed, which made sure the themes made sense in both classroom and real-world settings. The method  makes  sure  there  is  strong  rigour  and  openness by  actively  reflecting  on  the  research  through  team discussions, external validation, and  positionality
+
+
+<!-- PAGE 5 -->
+
 
 statements, as well as by coding all articles and getting a Cohen's kappa coefficient of 0.82.
 
@@ -243,6 +260,10 @@ It  has  been  shown  that  resume-reviewing  tools  that use  AI  favour  men  
 
 Source: Own elaboration
 
+
+<!-- PAGE 6 -->
+
+
 these systems is old and shows that there are gaps between men and women in some skills or jobs. A resume screening tool might learn to support keywords or patterns that are linked to men if it is trained on a set of resumes from past candidates who were mostly men. 34 This would make it harder for women to get jobs. This issue shows how perilous it is to teach AI systems with data that shows unfair and biased behaviour from the past,  as  these  systems  could  make  things  worse  instead of better.
 
 ## Language Models
@@ -275,6 +296,10 @@ AI not only mirrors but also potentially exacerbates existing  social  problems,
 ## Impact of Gender Bias in AI on Women's Participation in Technology
 
 When  there  is  bias  against  women  in  AI,  it  starts  a difficult cycle that makes it harder for women to work in technology and move up in the field. It also changes how women think about the field. This cycle makes it seem like  AI  is  mostly  a  field  for  men,  which  makes women less likely to start or move up in technologyrelated  jobs.  According  to  Thormundsson, 44 relative AI  skill  penetration  rate  by  gender  across  various countries  highlights  disparities  between  male  and female representation in AI skills. India leads with a significant gender gap, showing the highest male skill penetration  rate  (2.78)  compared  to  females  (1.65). The  United  States  follows,  with  male  penetration at  2.21 and female at 1.23. Other countries, such as Germany,  Israel,  and  Canada,  show  similar  trends where  men  significantly  outnumber  women  in  AI skill  penetration. In all countries shown, males have a  higher  rate  of  AI  skill  penetration  than  females, indicating  a  global  gender  gap  in  AI  expertise.  The smallest gaps are observed in countries like Australia and the United Arab Emirates, but even there, males still  hold a higher skill rate. This highlights the need for targeted initiatives  to  encourage  and  support women in developing AI skills globally to reduce this gender disparity.
+
+
+<!-- PAGE 7 -->
+
 
 ## Lack of Role Models and Stereotype Reinforcement
 
@@ -310,6 +335,10 @@ Figure 2 shows how bias against women can show up  in  AI  and  digital  skills.
 
 Several approaches have shown promise in making AI fairer  for  men  and  women. These ways of making AI
 
+
+<!-- PAGE 8 -->
+
+
 Fig 2 | Conceptual model of gender bias in AI and digital literacy
 
 <!-- image -->
@@ -331,6 +360,10 @@ This study's findings highlight the multifaceted nature and multiple root causes
 ## Global Applicability Versus Regional Specificity
 
 In different parts of the world, the ways to fix gender bias in AI tend to work in different ways. There are cultural, economic, and physical differences between men and women that affect how they use technology and how  they  connect. 72 To  make  gender  equality  plans that work well in a range of settings, it is important to be  aware  of  these  differences.  In  high-income  countries, problems with gender bias in AI are often caused by uneven workforces and biased algorithms. 73,74 Most of  the  time,  these  countries  have  better  technology, more  educational  chances  for  women,  especially  in
+
+
+<!-- PAGE 9 -->
+
 
 Fig 3 | Thematic analysis word cloud
 
@@ -362,6 +395,10 @@ The different experiences of low- and middle-income countries show that there is
 
 Intersectionality  is  important  for  understanding  and fixing  the  many  levels  of  injustice  that  women  from disadvantaged  groups  face.  When  we  use  an  intersectional  framework,  we  deduce  how  identities  that overlap,  like  race,  disability,  ethnicity,  and  location, combine with gender to create new problems. 88 These frameworks  are  important  for  making  successful  interventions because they look at inequality in a more complex way than just looking at gender.
 
+
+<!-- PAGE 10 -->
+
+
 In India and sub-Saharan Africa, for example, women in the countryside have very different problems than women in the towns of those same countries. According to Ghouse et al., 89 rural women often have trouble getting an education, using technology, and pursuing their professional goals. This is because social norms hold them back from putting their job goals ahead of household duties. In these situations, digital literacy programs  need  to  do  more  than  just  teach  technical skills. They also need to deal with real-world problems like  how  to  get  reliable  internet  access,  how  much devices cost, and the cultural stigma against women working in STEM areas.
 
 ## Inclusive Design Practices as a Solution
@@ -383,6 +420,10 @@ There  is  a  need  for  intersectionality  and  inclusive design to fix the unf
 Another  thing  that  needs  to  be  explored  more  is how digital literacy programs can be changed to help women in different places who are having trouble. It may be more important to build AI teams with women  in  high-income  countries  with  better  technology infrastructure because of the need to make algorithms more responsible. 95 Conversely, in LMICs, digital literacy programs must address foundational barriers, such as  limited  access  to  technology,  entrenched  cultural norms, and economic constraints, which significantly affect women's involvement in STEM fields. 96 Women from  disadvantaged  groups  often  have  to  deal  with more than one kind of abuse. At the local level, groups like Women in Tech Africa teach women digital skills while also speaking up for and helping their communities to give more power to women from groups that are not well-represented. 97
 
 We need longitudinal studies to find out how programs  that  teach  women  digital  literacy  affect  their long-term interest and success in AI work. One type of
+
+
+<!-- PAGE 11 -->
+
 
 study could look at how participating in programs that teach new skills or pair people up with mentors changes  job  prospects  over  the  course  of  five  to  ten  years. This  is  shown  by  the  fact  that  graduates  of  targeted programs like Girls Who Code are much more likely to go into technology jobs.
 
@@ -410,6 +451,10 @@ Researchers  should  investigate  the  effects  of  digital  literacy  programs 
 - 2 Shrestha S, Das S. Exploring gender biases in ML and AI academic research through systematic literature review. Front Artific Intel. 2022;5:976838.
 - 3 Yarger L, Cobb Payton F, Neupane B. Algorithmic equity in the hiring of underrepresented IT job candidates. Online Inform Rev. 2020;44(2):383-95.
 - 4 Thakkar D, Kumar N, Sambasivan N. Towards an AI-powered future that works for vocational workers. In proceedings of the 2020 CHI
+
+
+<!-- PAGE 12 -->
+
 
 - Conference on Human Factors in Computing Systems 2020 (pp. 1-13).
 - 5 O'Connor S, Liu H. Gender bias perpetuation and mitigation in AI technologies: challenges and opportunities. Ai Soc. 2024;39(4):2045-57.
@@ -466,6 +511,10 @@ Researchers  should  investigate  the  effects  of  digital  literacy  programs 
 - 55 Kovaleva Y, Hyrynsalmi S, Saltan A, Happonen A, Kasurinen J. Becoming an entrepreneur: a study of factors with women from the tech sector. Inform Soft Technol. 2023;155:107110.
 - 56 Fayyaz Z, Ebrahimian M, Nawara D, Ibrahim A, Kashef R. Recommendation systems: algorithms, challenges, metrics, and business opportunities. Appl Sci. 2020;10(21):7748.
 - 57 Wajcman J, Young E, Fitzmaurice A. The digital revolution: Implications for gender equality and women's rights 25 years after Beijing. 2020.
+
+
+<!-- PAGE 13 -->
+
 
 - 58 Nikou S, De Reuver M, Mahboob Kanafi M. Workplace literacy skills-how information and digital literacy affect adoption of digital technology. J Doc. 2022;78(7):371-91.
 - 59 Bhatia N, Bhatia S. Changes in gender stereotypes over time: a computational analysis. Psychol Women Q. 2021;45(1):106-25.

@@ -1,10 +1,11 @@
 ---
 source_file: He_2024_On_the_steerability_of_large_language_models.pdf
-conversion_date: 2026-02-03T08:59:38.785999
+conversion_date: 2026-02-03T18:30:24.159376
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## The steerability of large language models toward data-driven personas
 
 1 2 ∗ 2 ∗ 2 2
@@ -35,6 +36,10 @@ Prior work has attempted to control LLM generation by aligning models toward dem
 
 In this paper, we present a new approach to achieve controllable generation of specific viewpoints using LLMs. We hypothesize that for a given dataset comprising of responses provided by a population of individuals to a set of questions, there is a space of differing characteristic opinions and beliefs. We map this space to an embedding
 
+
+<!-- PAGE 2 -->
+
+
 Figure 1: A schematic of our framework for steering LLMs toward data-driven personas. The bottom-half illustrates the formation of data-driven personas, and the top-half illustrates LLM steering. A persona is defined by generating individual embeddings via collaborative filtering. The persona can be a single individual embedding (grey dots) or the centroid of a group of embeddings, referred to as a cluster persona (denoted by the circled clusters). To steer the LLM we pass an embedding to a soft-prompting model (SPM), which maps the embedding to a set of persona-specific virtual tokens. Finally we prepend these virtual tokens to the tokenized input sequence and pass this into the LLM to obtain a persona-specific response.
 
 <!-- image -->
@@ -49,6 +54,10 @@ We summarize our contributions as follows:
 
 - We propose a hitherto unexplored paradigm in steerable generation where, instead of predefined demographic features, we use a datadriven notion of a persona to modulate the generation process. In particular, we use collaborative-filtering to embed opinions of individuals within a dataset into a continuous vector space (individual personas), and then cluster groups of individuals with similar embeddings (cluster personas).
 - We propose a simple model and an efficient algorithm to align LLMs with these personas
+
+
+<!-- PAGE 3 -->
+
 
 (both individuals and clusters).
 
@@ -75,6 +84,10 @@ In this section, we propose the notion of data-driven personas (Section 3.1) and
 Instead of relying on demographic information such as age, gender or party affiliation, we use collaborative filtering to embed all individuals into a continuous vector space based on their opinions. Then a persona is defined as a portion of the embedding space which represents similar opinions and beliefs. In particular, an individual persona is represented by a single individual embedding, while a cluster persona is represented by the centroid of a cluster of individuals.
 
 Assume we have a set of questions Q , consisting of multiple-choice questions that feature options with an ordinal structure. Furthermore, assume that we also have responses for these questions, given by a set of individuals P . We represent these responses as a matrix R . If individual i responds to question j , the element r i,j ∈ [0 , 1] represents the individual i 's response, where the responses are mapped to the interval [0 , 1] . If no response is given, r i,j is set to null. R = { ( i, j ) , where r i,j is not null , i ∈ P , j ∈ Q} denotes the full set of responses. We utilize collaborative filtering (CF) to learn a continuous representation for each individual. More specifically, we denote the individual embeddings as { u i ∈ R d , i ∈ P} and the question embeddings as { q j ∈ R d , j ∈ Q} and optimize the following objective:
+
+
+<!-- PAGE 4 -->
+
 
 <!-- formula-not-decoded -->
 
@@ -112,6 +125,10 @@ Here, we present an analysis of the cluster personas obtained from our data-driv
 
 Cluster Definition: We employ the matrix factorization approach (Eq. (1)) to perform collaborative filtering. We embed individuals and questions into a 16-dimensional space and employ mean square error as our training objective. The learned individual embeddings are referred to as individual personas . As for cluster personas , we cluster individual embeddings using K-Means clustering.
 
+
+<!-- PAGE 5 -->
+
+
 We run K-Means with varying numbers of clusters, denoted as k , and for each value of k , we replace individual embeddings with the centroids of each cluster to evaluate Eq. (1). This measures how well the cluster centroids can represent individuals and we use it as the criteria to select k . Specifically, we utilize the elbow heuristic (Bishop, 2006) to choose k = 6 , and we label these clusters as Cluster-X, where X ranges from 0 to 5, which represent the six cluster personas that we choose.
 
 For each cluster persona, we present the demographic composition across 13 different traits. We also detail the characteristics of opinions within each cluster, specifying questions for which a cluster disagrees with the overall population and questions where the clusters disagree with each other.
@@ -125,6 +142,10 @@ Demographic Composition of Clusters: We calculate the demographic statistics for
 Questions for which a cluster disagrees with the overall Population: To further investigate the characteristics of each cluster, we show questions where a cluster mostly disagrees with the opinion of the overall population. For each cluster, we calculate the response distribution to each question, where we denote the distribution of cluster c over question q as D c,q for c ∈ [5] , q ∈ Q . Similarly, we calculate the overall population response distribution over each question and denote it as D q . For each question q ∈ Q , we calculate the Total Variation (TV) between the cluster response distribution and the overall population response distribution TV ( D i,q , D q ) , i ∈ [5] .
 
 Note that a larger value of TV ( q ) indicates a greater degree of disagreement between the cluster and the overall population for a given question. In Table 1, we show the three questions with the largest total variation between cluster response distribution and overall population response distribution for cluster-0. We show the corresponding questions for clusters 1 to 5 in Tables 12 to 16 respectively, in the Appendix. Taking Cluster-0 as an example, we find that its members feel that
+
+
+<!-- PAGE 6 -->
+
 
 Table 1: Comparison of responses between Cluster 0 and the overall population
 
@@ -148,6 +169,10 @@ Questions that differentiate clusters: Finally, we show questions that elicit th
 <!-- formula-not-decoded -->
 
 Note that a larger value of TV Ave ( q ) indicates a greater degree of disagreement among clusters for that particular question. In Table 2, we present questions related to immigration topic that exhibit the greatest average total variation across clusters. The responses to these questions show interesting characteristics of each cluster. When considering the Immigration related topics, cluster-0, cluster-1 and cluster-5 have polarized attitudes, while the attitudes from other clusters are milder. In particular, Cluster-0 believes that a low priority should be assigned to allowing more legal immigrants, while placing importance on reducing the number of illegal immigrants. Cluster-1 and Cluster-5 believe that allowing more legal immigrants should be a top priority and that it is crucial to reduce illegal immigration. Cluster-2 and Cluster-3 assert that allowing more legal immigrants is not a top priority, and that reducing illegal immigration does not significantly affect economic inequality. Cluster4 believes that allowing more legal immigrants is not a top priority. However, it also believes that reducing illegal immigrants could reduce economic inequality. In addition to questions related to immigration, the clusters also show disagreement in other questions belonging to topics such as the Crime (Table 17) and Race (Table 18).
+
+
+<!-- PAGE 7 -->
+
 
 ## 4.3 Steering LLMs towards personas
 
@@ -174,6 +199,10 @@ We verify the effectiveness of training the SPM by comparing the prediction accu
 ## 4.3.3 Performance of cluster personas
 
 We explore how well cluster persona embeddings can predict an individual's opinion. For this, we replace an individual's embedding with their corresponding cluster embedding ( CE ). For an individual belonging to cluster i , their corresponding
+
+
+<!-- PAGE 8 -->
+
 
 Table 3: Prediction accuracy across baselines and our experimental method.
 
@@ -206,6 +235,10 @@ In this work, we present an approach for steerable generation using LLMs, where 
 ## Limitations
 
 There are some limitations to the work we present here. Firstly, we rely on the QA format to perform collaborative filtering and embed individuals into an embedding space. Secondly, we only test our approach over one dataset due to time and resource constraints. However, we note that our method should scale well to other similar datasets. Thirdly, in this work we only test prefx-tuning (Lester et al., 2021) and prompt-tuning (Lester et al., 2021) for steering LLMs. Other parameter efficient fine tuning methods such as LoRA (Hu et al., 2021), (IA) 3 (Liu et al., 2022) etc. can also be incorporated into our approach.
+
+
+<!-- PAGE 9 -->
+
 
 Table 5: Prediction accuracy with different types of personas. For Demographic Embedding results we present only the political party trait (PARTY) which consists of 6 groups (see other demographic traits in Table 9).
 
@@ -261,6 +294,10 @@ Ilya Loshchilov and Frank Hutter. 2017. Decoupled weight decay regularization. a
 
 OpenAI. 2023. New and improved embedding model. https://openai.com/blog/ new-and-improved-embedding-model . Accessed: [insert date of access].
 
+
+<!-- PAGE 10 -->
+
+
 - R OpenAI. 2023. Gpt-4 technical report. arXiv , pages 2303-08774.
 - Long Ouyang, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, et al. 2022. Training language models to follow instructions with human feedback. Advances in Neural Information Processing Systems , 35:27730-27744.
 - Mustafa Safa Ozdayi, Charith S. Peris, Jack G. M. FitzGerald, Christophe Dupuy, Jimit Majmudar, Haidar Khan, Rahil Parikh, and Rahul Gupta. 2023. Controlling the extraction of memorized data from large language models via prompt-tuning. In Annual Meeting of the Association for Computational Linguistics .
@@ -276,6 +313,10 @@ OpenAI. 2023. New and improved embedding model. https://openai.com/blog/ new-and
 - Shijie Wu, Ozan Irsoy, Steven Lu, Vadim Dabravolski, Mark Dredze, Sebastian Gehrmann, Prabhanjan Kambadur, David Rosenberg, and Gideon Mann. 2023. Bloomberggpt: A large language model for finance. arXiv preprint arXiv:2303.17564 .
 - Renrui Zhang, Jiaming Han, Aojun Zhou, Xiangfei Hu, Shilin Yan, Pan Lu, Hongsheng Li, Peng Gao, and Yu Qiao. 2023. Llama-adapter: Efficient fine-tuning of language models with zero-init attention. arXiv preprint arXiv:2303.16199 .
 - Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian Min, Beichen Zhang, Junjie Zhang, Zican Dong, et al. 2023. A survey of large language models. arXiv preprint arXiv:2303.18223 .
+
+
+<!-- PAGE 11 -->
+
 
 ## A Additional details on the Dataset and the Experiments
 
@@ -312,6 +353,10 @@ In Table 8 we show the prediction accuracy for the Context + Raw Q. baseline und
 As mentioned in Section 3.2, we draw from prefix-tuning tuning technique to implement our SPM. In order test the robustness of our method to other prompting methods, we also implement the SPM with the use of prompt-tuning (Lester et al., 2021). We show our results in Table 7.
 
 Table 12-Table 16 show the top-3 questions that a cluster mostly disagrees with, when considering the overall population. Finally, Table 17 and Table 18 show the questions that have the largest disagreement among clusters for the Crime or Security and Immigration topics.
+
+
+<!-- PAGE 12 -->
+
 
 Table 7: Prediction accuracy across baselines and our experimental method showcasing the use of both prefix-tuning and prompt-tuning techniques.
 
@@ -358,9 +403,17 @@ Table 11: Prediction accuracy of cluster personas across different choices for n
 | GPT-j-6B           | 55.82%       | 57.13%        | 58.97%        | 59.52%        | 59.86%        | 61.84%                  |
 | Falcon-7B-Instruct | 54.24%       | 56.72%        | 58.99%        | 59.18%        | 59.39%        | 60.78%                  |
 
+
+<!-- PAGE 13 -->
+
+
 Figure 3: The demographic composition of Clusters-0 to 5 and the Overall Population. From left to right and top to bottom, we show demographic composition for Ideology, Region, Age, Citizenship, Marital status, Religion, Sex, Religion attendance and Income.
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 <!-- image -->
 
@@ -381,6 +434,10 @@ Table 13: Comparison of responses between Cluster 2 and the Overall Population.
 | How confident are you, if at all, that the actions taken by the international community will significantly reduce the effects of global climate change? | Very confident: 1.18% Somewhat confident: 91.61% Not too confident: 7.19% Not at all confident: 0.0%                                         | Very confident: 25.32% Somewhat confident: 41.1% Not too confident: 31.73% Not at all confident: 1.83%                                         |
 | In general, how often, if ever, would you say you have parties or get- togethers with any of your neigh- bors?                                          | Every day: 1.65% Several times a week: 16.71% About once a week: 49.86% About once a month: 30.25% Less than once a month: 1.51% Never: 0.0% | Every day: 12.33% Several times a week: 11.1% About once a week: 17.87% About once a month: 17.94% Less than once a month: 28.73% Never: 12.0% |
 | How enthusiastic are you, if at all, about the possibility of using com- puter programs to make hiring de- cisions for society as a whole?              | Very enthusiastic: 6.73% Somewhat enthusiastic: 81.57% Not too enthusiastic: 11.69% Not at all enthusiastic: 0.0%                            | Very enthusiastic: 27.55% Somewhat enthusiastic: 33.07% Not too enthusiastic: 38.58% Not at all enthusiastic: 0.78%                            |
+
+
+<!-- PAGE 15 -->
+
 
 Table 14: Comparison of Responses between Cluster 3 and the Overall Population.
 
@@ -405,6 +462,10 @@ Table 16: Comparison of Responses between Cluster 5 and the Overall Population.
 | How much pressure, if any, did you feel from family members to marry your partner after you moved in to- gether? | A lot of pressure: 2.13% Some pressure: 87.26% Not too much pressure: 10.59% No pressure at all: 0.0% | A lot of pressure: 21.97% Some pressure: 10.68% Not too much pressure: 62.09% No pressure at all: 5.24% |
 | How much control do you think you have over the data the government collects about you?                          | A great deal of control: 2.87% Some control: 87.09% Very little control: 10.02% No control: 0.0%      | A great deal of control: 21.91% Some control: 11.47% Very little control: 60.06% No control: 6.53%      |
 | When you are asked to agree to a company's privacy policy, how often do you read it before agreeing to it?       | Always: 4.19% Often: 87.42% Sometimes: 8.38% Never: 0.0%                                              | Always: 22.24% Often: 12.63% Sometimes: 62.87% Never: 2.24%                                             |
+
+
+<!-- PAGE 16 -->
+
 
 Table 17: Questions pertaining to crime that exhibit the most disagreement among clusters.
 

@@ -1,10 +1,11 @@
 ---
 source_file: Petzel_2025_Prejudiced_interactions_with_large_language.pdf
-conversion_date: 2026-02-03T09:14:56.760380
+conversion_date: 2026-02-03T18:46:17.866104
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Contents lists available at ScienceDirect
@@ -51,6 +52,10 @@ This article is part of a special issue entitled: The social bridge: An interdis
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Z.W. Petzel and L. Sowerby
 
 1989)  and  Unified  Theory  of  Acceptance  and  Use  of  Technology (Venkatesh et al., 2003) to examine the impact of AI-generated prejudice on  behavioral  intentions  to  use  LLMs.  We  consider  recent  evidence which suggests trustworthiness of LLMs may be a vital mechanism to increase engagement with these emerging tools (Wanner et al., 2022). Notably, the current work examines how AI-generated prejudice may uniquely  reduce  perceived  trustworthiness  of  LLMs  among  Black Americans and women who are stigmatized and frequently targets of negative implicit bias.
@@ -75,6 +80,10 @@ Recent literature suggests perceived trustworthiness as a potential mechanism fo
 
 Mayer et al. (1995) proposes three factors which may be considered while developing trustworthiness of LLMs: (1) ability, (2) benevolence, and (3) integrity. Ability is the extent to which LLMs are perceived to be accurate while demonstrating domain-specific expertise. Benevolence is the assumption LLMs are altruistic, acting in a way which benefits the user without harm. Lastly, integrity captures agreement between the
 
+
+<!-- PAGE 3 -->
+
+
 Z.W. Petzel and L. Sowerby user ' s values and principles and those of the LLM (e.g., adherence to ethics). Thus, LLMs trained on data containing prejudices may reduce trustworthiness  among  stigmatized  group  members  due  to  violating these factors. For instance, algorithms which predict higher rates of violent crimes among Black defendants violate assumptions of benevolence among Black Americans due to the further propagation of negative stereotypes,  while  also  violating  integrity  by  not  adhering  to  ethical responsibilities  to  be  unprejudiced  (Angwin  et  al.,  2016).  Similarly, hiring algorithms which prefer men solely due to their gender violate benevolence assumptions among women via harming their employment opportunities,  in  addition  to  violating  integrity  by  not  adhering  to egalitarian values (Criado-Perez, 2019; Lytton, 2024). These violations of  benevolence  and  integrity  outlined  by  Mayer  et  al.  (1995) may uniquely reduce LLM trustworthiness among members of stigmatized social  groups.  Consistent  with  this  assumption,  algorithms  for  immigration,  hiring,  and  advertising  which  depict  prejudice  decrease  AI trustworthiness (Gupta et al., 2022; Parra, Gupta, &amp; Dennehy, 2021; Wang et al., 2021).
 
 Notably, trustworthiness is vital for adopting emerging technologies (Choudhury &amp; Shamszare, 2023; Dawar et al., 2022; Mostafa &amp; Kasamani,  2022),  in  addition  to  increasing  persuasiveness  and  positivity towards AI-generated content during subsequent interactions with LLMs (Metzger et al., 2024). Therefore, members of stigmatized groups who reduce AI trustworthiness due to interacting with prejudiced LLMs may resist adopting this technology into daily life. Early disengagement from LLMs may lead to unequal opportunities in future learning and professional development, exacerbating financial and educational inequalities. Thus, it is vital to understand how LLMs which are trained on data containing implicit biases reduce AI trustworthiness to determine its role in potential disparities in the adoption of this emerging technology. Yet, limited evidence has examined trustworthiness as a mechanism for poor adoption of emerging technologies often observed among stigmatized social groups (e.g., Shaouf &amp; Altaqqi, 2018; Venkatesh et al., 2000).
@@ -94,6 +103,10 @@ Further  extensions  of  the  TAM  include  the  Unified  Theory  of Acceptance 
 While the components outlined by the TAM and UTAUT are established  predictors  of  intentions  to  use  technology,  other  factors  not captured by these models may similarly impact behavioral intentions. For instance, trustworthiness of technology influences perceived utility of enterprise systems, e-commerce, e-banking, and online video gaming (Gefen, 2004; Gefen et al., 2003; Suh &amp; Han, 2002; Wu et al., 2011; Wu &amp; Liu, 2007). Recent applications of the UTAUT also highlight trustworthiness as an antecedent of performance expectancies for AI tools (Wanner  et  al.,  2022).  Notably,  while  the  TAM  and  UTAUT  predict adoption of prior technology, recent proliferation of AI-assisted tools may require revision of these models. For instance, LLMs produce responses with little transparency of decision making, perceived as a black box which does not allow for observation of their underlying processes (Savage, 2022; Von Eschenbach, 2021). This lack of transparency reduces  perceived  competence  of  AI  tools,  in  addition  to  diminishing confidence and trustworthiness of the knowledge base used to train AI (Wanner  et  al.,  2022),  potentially  violating  ability  assumptions  proposed by Mayer et al. (1995). Notably, reductions in trustworthiness predict poorer performance expectancies and reductions in behavioral intentions to use these tools (Wanner et al., 2022).
 
 Thus, factors which lead users to question the competence of LLMs may diminish trustworthiness of AI and subsequent intentions to use these tools. Therefore, AI-generated prejudice may reduce confidence in the data used to train LLMs, diminishing trustworthiness and intentions to use AI tools in the future. Given the wealth of evidence highlighting the importance of trustworthiness in adoption of technology (Choudhury &amp; Shamszare, 2023; Dawar et al., 2022; Mostafa &amp; Kasamani, 2022), in addition to trustworthiness being central to frameworks regarding the successful implementation of AI (European Commision, 2024, 6 March), further work is needed to understand the impact of AI-generated prejudice on trustworthiness and intentions to use LLMs. Using  the  TAM,  UTAUT,  and  recent  extensions  of  these  models  suggesting the role of trustworthiness (Wanner et al., 2022), we theorize trustworthiness is diminished by negative experiences with emerging
+
+
+<!-- PAGE 4 -->
+
 
 Z.W. Petzel and L. Sowerby technologies,  subsequently  impacting  behavioral  intentions.  Thus, AI-generated prejudice is expected to reduce trustworthiness, lowering intentions  to  use  LLMs.  Further,  moderators  from  the  UTAUT  are investigated, examining the impact of group identification (e.g., gender, race),  age,  and prior experience with LLMs (Venkatesh et al., 2003). Importantly, prior applications of the TAM and UTAUT focus on gender differences in technology acceptance, with limited work investigating racial differences (e.g., Mitchell, Chebli, Ruggiero, &amp; Muramatsu, 2019; Porter &amp; Donthu, 2006). Thus, we extend the UTAUT by examining race, in  addition  to  gender,  age,  and  prior  experience,  as  moderators  to examine how AI-generated prejudice reduces trustworthiness and intentions (see Fig. 1).
 
@@ -126,6 +139,10 @@ One  hundred  thirty  participants  from  the  United  States  were recruited to
 Participants  first  read  an  information  sheet  detailing  the  study, which included a warning that participants would not receive compensation if there was any suspicion of sabotage or hurrying through the  study.  Participants  then  completed  an  Implicit  Association  Test (Sriram &amp; Greenwald, 2009) hosted via Millisecond.com (Seattle, WA) assessing implicit racial bias (White-Good/Black-Bad). During the task, participants sorted images of either Black or White faces, in addition to words associated with positive (e.g., pleasure, joyful) or negative attributes (e.g.,  terrible,  awful).  In  two  sets  of  critical  trials,  participants sorted White faces with positive words while Black faces were sorted with negative words (i.e., stereotypical congruence). Two additional sets of  critical  trials  switched  these  pairings  (i.e.,  stereotypical  incongruence). Critical blocks contained 20 trials, with order of blocks counterbalanced.  Scores  were  calculated  such  that  positive  scores  reflected stronger implicit racial biases (i.e., Black-Bad, White-Good). To ensure quality and reliability of the task data, any participant with more than 10% of their trials completed in less than 300ms were excluded from data analysis, consistent with guidelines outlined by Greenwald et al. (2003).  However,  no  participants  met  this  exclusion  criteria  for  this experiment.
 
 Next,  participants  reported  explicit  racial  bias  using  the  Modern Racism Scale (Swim et al., 1995). Seven items ( α = .773) were rated from  1  ( Strongly  disagree )  to  5  ( Strongly  agree ),  with  example  items including, ' Discrimination against Blacks is no longer a problem in the
+
+
+<!-- PAGE 5 -->
+
 
 Z.W. Petzel and L. Sowerby
 
@@ -180,6 +197,10 @@ A 2 (LLM response: neutral, racial bias) x 2 (Race of participant: White,  Black
 
 A  2  (LLM  response)  x  2  (Race  of  participant)  between-subjects ANOVA  indicated  a  main  effect  of  condition  on  trustworthiness, F (1,123) = 4.77, p = .031, η p 2 = .037, suggesting neutral responses ( M = 3.63, SD = .98)  elicited  higher  trustworthiness  than  prejudiced  responses ( M = 3.30, SD = .93). Black participants ( M = 3.83, SD = .88) reported higher trustworthiness compared to White participants ( M = 3.11, SD = .93), F (1,123) = 20.96, p &lt; .001, η p 2 = .146. An interaction emerged between factors, F (1,123) = 5.69, p = .019, η p 2 = .044. Among Black participants, AI-generated prejudice reduced trustworthiness ( M = 3.46, SD = .94) compared to neutral responses ( M = 4.17, SD = .66), F (1,123) = 10.54, p = .002, η p 2 = .079. However, White participants reported  similar  trustworthiness  regardless  of  the  presence  of  racial
 
+
+<!-- PAGE 6 -->
+
+
 Z.W. Petzel and L. Sowerby disparities in pay, F (1,123) = .02, p = .887, η p 2 &lt; .001 (see Fig. 2a). An ANCOVA indicated experience with LLMs was significantly related to trustworthiness, p &lt; .001.  Analyses  controlling  for  LLM  experience reduced significance of the main effect of condition, p = .051. Yet, effects of race and interaction among factors were unaffected by experience,  both p s &lt; .030.  Thus,  while  LLM  experience  predicted  higher trustworthiness, this relationship did not explain racial differences in trustworthiness observed after viewing AI-generated prejudice. Age and gender did not predict trustworthiness, both p s &gt; .535.
 
 ## 2.2.3. Behavioral intentions - Experiment 1
@@ -213,6 +234,10 @@ Direct effect,b=-0.32,95%CI[-0.72,0.10]
 Conditional indirect effect of trustworthiness,b=-0.48,95% CI[-0.79,-0.07]
 
 Fig. 3. Trustworthiness as a mediator of the effects of AI-generated prejudice on intentions among Black americans (Experiment 1). Note. ** p &lt; .01, *** p &lt; .001.
+
+
+<!-- PAGE 7 -->
+
 
 Z.W. Petzel and L. Sowerby
 
@@ -253,6 +278,10 @@ Descriptive statistics for variables are displayed in Table 2. A series of indep
 ## 3.2.1. Manipulation check - Experiment 2
 
 A 2 (LLM response: neutral, gender bias) x 2 (Gender of participant: man,  woman) between-subjects  ANOVA  indicated  a  significant  main effect  of  condition, F (1,125) = 24.75, p &lt; .001, η p 2 = .165,  on
+
+
+<!-- PAGE 8 -->
+
 
 Z.W. Petzel and L. Sowerby
 
@@ -313,6 +342,10 @@ Note . Error bars represent standard error. * p &lt; .05.
 
 (LLM response) as the predictor of behavioral intentions, with trustworthiness entered as the mediator. Gender was used as a moderator for these pathways to understand gender differences in the proposed model. Trustworthiness predicted intentions, t (124) = 8.44, b = .63 , p &lt; .001, and a significant moderated-mediation effect emerged, b = GLYPH&lt;0&gt; .44, SE = .22,  95%  CI  [ GLYPH&lt;0&gt; .88, GLYPH&lt;0&gt; .03].  Among  women,  AI-generated  prejudice decreased trustworthiness which then reduced behavioral intentions, b = .40, SE = .19, 95% CI [.02, .78] (see Fig. 7). No mediation effect emerged for men, b = - .24, SE = .19, 95% CI [ GLYPH&lt;0&gt; .62, .14], suggesting trustworthiness may not be a necessary antecedent for adoption of LLMs
 
+
+<!-- PAGE 9 -->
+
+
 Z.W. Petzel and L. Sowerby
 
 <!-- image -->
@@ -356,6 +389,10 @@ Further, the prompt shown during the interaction with ChatGPT was altered to be 
 ## 4.2. Results - Experiment 3
 
 Descriptive statistics for variables are displayed in Table 3. A series of independent samples t -tests indicated that age, race, gender, and explicit biases did not differ between conditions, all p s &gt; .119. However, prior experience with LLMs was significantly different between conditions, t
+
+
+<!-- PAGE 10 -->
+
 
 Z.W. Petzel and L. Sowerby
 
@@ -415,6 +452,10 @@ Fig.  9. Trustworthiness  and  intentions  as  a  function  of  LLM  response  a
 
 Note . Error bars represent standard error. *** p &lt; .001.
 
+
+<!-- PAGE 11 -->
+
+
 Z.W. Petzel and L. Sowerby
 
 <!-- image -->
@@ -447,6 +488,10 @@ Black  Americans  reported  greater  trustworthiness  and  behavioral intentions
 
 Thus, positive experiences with AI tools which have ambiguous social identities (e.g., ChatGPT) may promote trustworthiness compared to AI technologies which emulate distinct social identities associated with prejudice.  For  instance,  women  poorly  evaluate  virtual  AI  assistants with male voices, instead preferring female voices which match their social  identity  or  personality  (e.g.,  Nass &amp; Brave, 2005; Nass &amp; Lee, 2001). The poorer evaluation of male voices may stem from anticipation
 
+
+<!-- PAGE 12 -->
+
+
 Z.W. Petzel and L. Sowerby of  prejudice  due  to  the  salient  social  identity  of  the  virtual  assistant (Rawlinson, 2019). Similarly, AI-generated responses depicting historical prejudices may lead stigmatized users to assign social identities to LLMs associated  with  this  prejudice  (e.g.,  White  males),  transferring anticipated  prejudice  to  these  tools  and  reducing  confidence  in  the knowledge base used to train AI, violating ability assumptions outlined by Mayer et al. (1995) to reduce trustworthiness of LLMs. Yet, when LLMs do not confirm prejudices, Black Americans may enhance trustworthiness due to subverting expectations of bias. Conversely, White Americans  reported  similar  trustworthiness  regardless  of  prejudice, suggesting  Black  Americans  uniquely  reduce  trustworthiness  when LLMs reflect historical prejudices.
 
 Women  reduced  their  trustworthiness  of  LLMs  after  viewing  AIgenerated  prejudice  (e.g.,  gender  disparities  in  salary).  Unlike  Black Americans shown racial disparities, women did not reduce intentions to use LLMs after viewing AI-generated prejudice. These contrary findings may be explained by evidence suggesting sexism may not be perceived as unfairly compared to racism (Parra et al., 2021; Woodzicka et al., 2015),  in  addition  to  women  being  less  likely  to  confront  prejudice (Swim et al., 2010; Swim &amp; Hyers, 1999). Notably, lack of confrontation is thought to undermine progress towards gender parity, with confrontation  of  sexism  improving  intergroup  relations  and  reducing  men ' s gender biases (Harris et al., 2015; Mallett &amp; Wagner, 2011). Thus, lack of  disengagement  from  LLMs  may  reflect  these  patterns,  suggesting while women reduce trustworthiness, they may continue to use LLMs due to the social costs associated with disengagement (Kaiser &amp; Miller, 2001).  However,  reductions  in  trustworthiness  reduced  women ' s  intentions to use LLMs, suggesting AI-generated prejudice may indirectly influence  behavioral  intentions  among  women.  Notably,  men  in Experiment  3  reported  greater  intentions  regardless  of  AI-generated prejudice. This finding may be due to the sample being younger ( M = 19.58) than those recruited from the general population in Experiment 2 ( M = 39.90). Consistent with this assumption, gender differences in use of technology are apparent in younger generations (i.e., Gen Z), such that men are more likely to accept emerging technologies compared to women, particularly those which collect personal data (Ho et al., 2022). Conversely, gender disparities in technology use are less apparent in older  generations  (e.g.,  baby  boomers;  Berkowsky,  Sharit, &amp; Czaja, 2017; Lian &amp; Yen, 2014).
@@ -467,6 +512,10 @@ Further, we suggest additional moderators should be considered by UTAUT which ma
 
 While sample sizes were determined using power analyses and effect sizes observed in prior research which used similar paradigms (Woodzicka et al., 2015, 2020), the recruited samples may have limited our ability to detect smaller effects in more complex designs which often require larger than estimated samples (e.g., mediation, hierarchical interactions; Giner-Sorolla et al., 2024). Further, our experimental designs may have limited generalizability, as studies only examined racial or gender  biases,  but  not  the  combination  of  these  stigmatized  social groups. For instance, ChatGPT has reportedly generated content suggesting Black women scientists are, ' not worth your time or attention, ' in addition to indicating Black men should be incarcerated based on racial identity (Perrigo, 2022). Thus, these experiments do not address intersectionality and dual stigmatized identities which are associated with more severe disparities (Chen &amp; Soldner, 2013; Towns, 2010). The present research also does not examine other stigmatized groups relevant  for  the  adoption  of  emerging  technologies,  such  as  older  populations who often experience prejudice and bias (e.g., baby boomers;
 
+
+<!-- PAGE 13 -->
+
+
 Z.W. Petzel and L. Sowerby
 
 Peek  et  al.,  2014).  Notably,  baby  boomers  are  less  likely  to  accept emerging technologies compared to generation X and millennials (e.g., smart home devices; Canziani &amp; MacSween, 2021), in addition to age being  an  established  moderator  of  UTAUT  (Venkatesh  et  al.,  2003). While age predicted behavioral intentions in Experiment 1, this effect was not replicated in subsequent experiments. This may be a result of the population recruited for Experiment 1 ( M = 42.18) being older than those recruited for Experiment 2 ( M = 39.90) and Experiment 3 ( M = 19.58). Thus, younger populations used for subsequent experiments may have limited the predictive validity of age if fewer participants were from older generations (e.g., baby boomers). Thus, future work may consider  how  age-related  prejudices  may  reduce  trustworthiness  of LLMs.
@@ -484,6 +533,10 @@ Lastly, the manipulation used to prime participants of AI-generated racial and g
 Despite  results  suggesting  how  AI-generated  prejudices  impact trustworthiness  and  intentions  to  use  LLMs,  interventions  can  be implemented to circumvent these consequences. As mentioned prior, algorithms which are trained on biased datasets can be tuned to avoid generating content which violate users ' expectations (e.g., ensuring diversity  of  racial  and  ethnic  groups  when  asked  to  generate  images depicting  people).  While  this  manipulation  of  algorithms  may  elicit backlash if not thoroughly tested (e.g., generating anachronistic images; Milmo &amp; Hern, 2024), increasing diversity of AI-generated content has been shown to reduce prejudices and use of stereotypes (Vlasceanu &amp; Amodio, 2022). Yet, the extent this increased diversification of LLMs may increase trustworthiness, particularly among stigmatized users, has not been examined and should be a focus for future work. Conversely, as demonstrated in the present research, advantaged social groups may reduce trustworthiness of LLMs if AI-generated content violates their implicit  biases.  Therefore,  algorithms  tuned  to  overrepresent  stigmatized groups may lead White, male users to reduce their engagement with  LLMs  due  to  violating  expectations  informed  by  their  implicit prejudices.
 
 To account for potential backlash in cases where AI-generated responses  may  not  meet  expectations  of  users,  LLMs  have  previously included statements highlighting their limitations (e.g., ' ChatGPT may produce inaccurate information about people, places, or facts. ' Metzger et al., 2024). Alternatively, LLMs may consider including disclaimers on whether users can provide corrections to incorrect or harmful responses, reassuring the user that LLMs are capable of learning new information to limit inappropriate responses in future interactions. However, evidence suggests  disclaimers  of  limitations  and  capabilities  may  not  increase trustworthiness  or  persuasiveness  of  LLMs  (Metzger  et  al.,  2024). Instead, style of communication may increase perceived trustworthiness and persuasiveness of AI-generated content. The elaboration likelihood model outlines peripheral routes of persuasion, suggesting subtle cues may be useful in promoting positivity towards LLMs (Petty &amp; Bri ˜ nol, 2012). For instance, expert or authoritative sources are more effective in promoting agreement with new information (DeBono &amp; Harnish, 1988).
+
+
+<!-- PAGE 14 -->
+
 
 Z.W. Petzel and L. Sowerby
 
@@ -526,6 +579,10 @@ Data and materials used in the paper are freely available via OSF, with links pr
 - Berkowsky, R. W., Sharit, J., &amp; Czaja, S. J. (2017). Factors predicting decisions about technology adoption among older adults. Innovation in Aging, 1 (3), Article igy002. https://doi.org/10.1093/geroni/igy002
 - Bidmon, S., &amp; Terlutter, R. (2015). Gender differences in searching for health information on the internet and the virtual patient-physician relationship in Germany: Exploratory results on how men and women differ and why. Journal of Medical Internet Research, 17 (6), e156. https://doi.org/10.2196/jmir.4127
 - Caetano, R., Vaeth, P. A., Chartier, K. G., &amp; Mills, B. A. (2014). Epidemiology of drinking, alcohol use disorders, and related problems in US ethnic minority groups. Handbook of Clinical Neurology, 125 , 629 -648. https://doi.org/10.1016/B978-0-444-626196.00037-9
+
+
+<!-- PAGE 15 -->
+
 
 Z.W. Petzel and L. Sowerby
 
@@ -584,6 +641,10 @@ Z.W. Petzel and L. Sowerby
 - Kohnke, A., Cole, M. L., &amp; Bush, R. (2014). Incorporating UTAUT predictors for understanding home care patients ' and clinician ' s acceptance of healthcare telemedicine equipment. Journal of Technology Management and Innovation, 9 (2), 29 -41. https://doi.org/10.4067/S0718-27242014000200003
 - Kraus, J., Miller, L., Klumpp, M., Babel, F., Scholz, D., Merger, J., &amp; Baumann, M. (2023). On the role of beliefs and trust for the intention to use service robots: An integrated trustworthiness beliefs model for robot acceptance. International Journal of Social Robotics. Advance online publication . https://doi.org/10.1007/s12369-022-00952-4
 
+
+<!-- PAGE 16 -->
+
+
 Z.W. Petzel and L. Sowerby
 
 - Kraus, M. W., Rucker, J. M., &amp; Richeson, J. A. (2017). Americans misperceive racial economic equality. Proceedings of the National Academy of Sciences, 114 (39), 10324 -10331. https://doi.org/10.1073/pnas.1707719114
@@ -638,6 +699,10 @@ Z.W. Petzel and L. Sowerby
 - Shen, M., Peterson, E. B., Costas-Mu ˜ niz, R., Hunter Hernandez, M., Jewell, S. T., Matsoukas, K., &amp; Bylund, C. L. (2018). The effects of race and racial concordance on patient-physician communication: A systematic review of the literature. Journal of Racial and Ethnic Health Disparities, 5 (1), 117 -140. https://doi.org/10.1007/s40615017-0350-4
 - Sheon, A. R., Bolen, S. D., Callahan, B., Shick, S., &amp; Perzynski, A. T. (2017). Addressing disparities in diabetes management through novel approaches to encourage technology adoption and use. JMIR Diabetes, 2 (2), Article e6751. https://doi.org/ 10.2196/diabetes.6751
 - Simpson, B., McGrimmon, T., &amp; Irwin, K. (2007). Are blacks really less trusting than whites? Revisiting the race and trust question. Social Forces, 86 (2), 525 -552. https:// doi.org/10.1093/sf/86.2.525
+
+
+<!-- PAGE 17 -->
+
 
 Z.W. Petzel and L. Sowerby
 

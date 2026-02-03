@@ -1,10 +1,11 @@
 ---
 source_file: Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.pdf
-conversion_date: 2026-02-03T09:30:03.159159
+conversion_date: 2026-02-03T19:00:57.735125
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## RESEARCH ARTICLE
 
 ## Algorithmic Governance: Gender Bias in AI-Generated Policymaking?
@@ -65,6 +66,10 @@ This issue becomes particularly troubling when users perceive AI-generated conte
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 stereotypes may not only be reinforced but also amplified across domains, from education to recruitment, especially when AI is used to support or automate decision-making. 3
 
 Among the different kinds of bias that AI systems can reflect, gender bias is important and widespread. It shows up when these tools reinforce outdated gender roles, leave out women and/or gender minorities, or produce different results depending on someone's gender. While some academic attention has been directed toward gender bias in AI, particularly in contexts such as hiring algorithms, facial recognition, or content moderation, less is known about how such bias may manifest when AI is used to support policy development. The use of generative AI tools as policy advisors remains an underexplored and largely unregulated area, especially in terms of whether these systems can recognize, include, or overlook gender-specific considerations in their recommendations.
@@ -95,6 +100,10 @@ Numerous examples demonstrate the real-world effects of gender bias in AI. For i
 
 Gender bias also appears prominently in AI-driven automated translation. Gender-neutral English pronouns are
 
+
+<!-- PAGE 3 -->
+
+
 frequently translated into gendered forms, such as 'he' or 'she', in languages with grammatical gender distinctions. For example, 'nurse' is typically translated as feminine, while 'doctor' is usually masculine [19, 20]. AI models commonly associate certain professions with specific genders, reinforcing stereotypes: men are linked more often to STEM fields, while women are associated with family and marriage priorities. Household roles like cooking and cleaning are linked to women, while working outside the home is linked to men [21].
 
 Large language models such as ChatGPT or Microsoft Copilot add layers of complexity to understanding gender bias in AI. These socio-technical systems not only reflect limitations in training data but also embed sociocultural logics through user interactions. Extensive research shows that ChatGPT perpetuates gender-coded associations, even in response to neutral prompts [22, 23].
@@ -124,6 +133,10 @@ While these risks are significant across many domains, they become especially co
 This study used a structured content analysis to investigate whether widely used AI tools generate gender-aware policy recommendations. The aim was to evaluate the inclusivity
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 of the policy suggestions; particularly with respect to gender representation.
 
@@ -170,6 +183,10 @@ Business travel policies also tend to overlook caregivingrelated expenses, such 
 
 7 https://  ec.  europa.  eu/  euros  tat/  web/  produ  cts-  euros  tat-  news/-/  edn20210  601-2
 
+
+<!-- PAGE 5 -->
+
+
 Fig. 1 Flowchart of the Methodological Framework
 
 <!-- image -->
@@ -192,6 +209,10 @@ Then,  the  prompt  was  revised  to  request  restrooms designed  for  non-bina
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 privacy-enhancing stall structures and floor-to-ceiling partitions. Signage using inclusive language (e.g., 'All-Gender Restroom') was recommended in 88% of responses. Regular feedback mechanisms from users to ensure continued comfort and relevance were suggested in 82% of responses, reflecting a participatory approach to inclusive design. Importantly, 74% of responses emphasized the need to maintain choice by continuing to offer male- and female-labeled restrooms alongside all-gender options. Facilities accommodating individuals who may be transitioning, including access to private changing areas, were proposed in 72% of responses. Finally, 70% of the iterations recommended incorporating visible zero-tolerance policies toward harassment within restroom spaces. Notably, these recommendations did not appear in the responses to gender-unspecified prompts.
 
 Furthermore, the responses provided by Microsoft Copilot are illustrated in Figure 8 in Appendix A. In the general (non-gender-specific) formulation of the prompt, Microsoft Copilot consistently emphasized the importance of privacy (96%), cleanliness (94%), and accessibility (90%). Additionally, it recommended the inclusion of gender-neutral restrooms in 78% of iterations to promote inclusivity, and proposed the installation of baby-changing stations in 72% of responses. However, gender-specific needs, such as menstrual product access, were rarely mentioned, appearing in fewer than 6% of responses.
@@ -213,6 +234,10 @@ Fig. 3 Total  mentions  of  Gender-Neutral  Restrooms  in  AI  Policy Recommenda
 <!-- image -->
 
 workplace policies and staff training aimed at fostering respect and understanding across all gender identities. These results suggest that, like ChatGPT, Copilot can respond
+
+
+<!-- PAGE 7 -->
+
 
 effectively to non-binary-specific prompts, though such recommendations are far less frequent in generalized or binaryonly conditions.
 
@@ -237,6 +262,10 @@ In the third condition, where 50% of the population were men, the proposed polic
 The third experiment explored the determination of an appropriate indoor temperature for a municipal office workspace. This topic reflects growing awareness that standard office temperature guidelines are often calibrated based on male metabolic norms, potentially disadvantaging women, whose average resting metabolic rates differ. The tools were
 
 <!-- image -->
+
+
+<!-- PAGE 8 -->
+
 
 asked what temperature they would recommend under three scenarios: (1) a gender-unspecified workforce, (2) a workforce where 50% of employees were women, and (3) one where 50% were men.
 
@@ -268,6 +297,10 @@ Fig. 4 Total  mentions  of  Metabolic  Differences  by  Gender  in  AIGenerated 
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 in 86% of these responses, safety was emphasized as an important factor in accommodation selection. Specifically, ChatGPT recommended that the employer ensure lodging in safe, reputable hotels, ideally in well-lit or central areas, to account for women's safety concerns during business travel. For male employees, the recommendations mirrored those of the general prompt, with no additional safety-specific measures mentioned. This contrast suggests that ChatGPT adapts its responses to perceived gender-based risks only when explicitly mentioned, reinforcing the importance of demographic framing in prompt design.
 
 Notably, when the employee was described as a new mother, a new expense category, namely childcare, was introduced in 100% of iterations. ChatGPT proposed that companies consider covering on-site childcare, remote care support, or per diem allowances for dependent care, recognizing the additional logistical and emotional load faced by working mothers on business trips. Safety was also emphasized in 90% of responses, with recommendations for safe accommodations. When prompted about a non-binary employee, ChatGPT again maintained the standard expense structure but introduced inclusive additions. These included recommending hotels with explicitly gender-neutral or inclusive policies (82%), and ensuring that booking and travel documents respect the employee's gender identity (e.g., through the correct use of names and pronouns) (76%).
@@ -293,6 +326,10 @@ Table 1 summarizes the key responses generated by both AI tools across all four
 Fig. 5 Total  Mentions  of  Safety-Related  Recommendations  in  Business Trip Expenses for ChatGPT and Copilot
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 Fig. 6 Total  inclusion  of  Childcare  Expenses  in  Business  Trip  Policies by ChatGPT and Copilot
 
@@ -323,6 +360,10 @@ In fact, in 2016, U.S. President Barack Obama signed the Bathrooms Accessible in
 11 https://  www.  forsa  kring  skass  an.  se
 
 12 https://  jalsh  akti-  ddws.  gov.  in/  sites/  defau  lt/  files/  MHM\_  guide lines\_0.  pdf
+
+
+<!-- PAGE 11 -->
+
 
 Table 1 Summary of AI-generated Policy Recommendations Across Scenarios
 
@@ -364,6 +405,10 @@ In contrast to both AI tools responses, some countries have begun recognizing th
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 free sanitary pad distribution programs in public spaces, acknowledging the link between menstrual health and social equity. 18 Incorporating such infrastructure, automatically, even in AI tools, is the minimum requirement for gender inclusiveness and sound policy design.
 
 Similarly, safety is a parameter mentioned only when the AI tools were designing restrooms specifically for women. The assumption that safety is primarily a 'women's issue' promotes a limited  understanding  of  public  space  and ignores the fact that safety is a basic right for everyone. Feminist theory has pointed out that a lack of safety in space and time affects women's participation in work and mobility [46]. However, the solution to this inequality is not the individual protection of women, but the institutional integration of safety as a universal design principle.
@@ -392,6 +437,10 @@ This approach reveals a deep flaw in the default design logic: the lack of integ
 
 21 https://  www.  gbc.  gov.  ae/  assets/  uploa  ds/  gbc\_  gender\_  guide\_  en\_ 2019.  pdf
 
+
+<!-- PAGE 13 -->
+
+
 childcare-related expenses from basic corporate policy design reflects the ongoing 'invisibility' of parenthood, particularly for working mothers [51]. This failure to suggest policies that account for gendered caregiving responsibilities, unless explicitly instructed, represents a reproduction of the patriarchal norm that treats professional life as separate from family life and caregiving.
 
 Moreover, as in the results from the first experiment, safety during business travel is treated by AI tools as a 'special need' only when the individual employee is identified as a woman in the prompt. This selective inclusion implies that safety is not considered a fundamental right for all employees but is tied to specific identities.
@@ -409,6 +458,10 @@ The consistent failure of AI tools to anticipate gendered needs unless explicitl
 While our study offers important insights into gender bias in AI-generated policy design, it is not without limitations. First, our study focused on only two widely used LLM tools; ChatGPT and Microsoft Copilot and in their current versions. Although these are among the most popular and commercially integrated AI systems, other tools may have different training datasets or incorporate fairness interventions that influence their behavior. Second, the AI
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 tools we tested are trained on large datasets that may evolve over time. This evolution could influence the consistency or reproducibility of outputs across different periods. Third, the study did not systematically examine cultural influences on AI responses. Language, regional context, or culturally specific framing of prompts could shape the outputs in subtle ways, particularly when AI tools are used in multilingual or cross-cultural policy environments. Finally, while our analysis primarily addressed women's needs and challenges, it offers limited insight into how AI tools respond to the policy concerns of non-binary, transgender, or other gender-diverse populations.
 
@@ -437,6 +490,10 @@ As AI becomes more deeply integrated into governance and decision-making, incorp
 This appendix contains the complete, unedited responses from ChatGPT and Copilot for all policy scenarios from one of the iterations.
 
 See Figs. 7, 8, 9, 10, 11, 12, 13, 14 below. See Figs.
+
+
+<!-- PAGE 15 -->
+
 
 ?
 
@@ -563,6 +620,10 @@ Idwantthedesigntobebothfunctionaland employee-friendlycreatingapositivework envi
 
 <!-- image -->
 
+
+<!-- PAGE 16 -->
+
+
 If you ownedacompanyand hadtodesigntoiletsforyournon-binary employees,what would you do?
 
 That's a great question,and definitely one that requires a thoughtful inclusive approach.f 1were designing emotional comfort of the employees. Here's what I'd focus on:
@@ -608,6 +669,10 @@ Fig. 7 (continued)
 
 Ultimately, the goal would be to create an environment where everyone feels welcome and respected, and these restrooms would just be one part of a broader commitment to inclusion.How do you think your non binary employees would respond to these design elements?
 
+
+<!-- PAGE 17 -->
+
+
 Fig. 8 Copilot policies for restrooms for: a employees, b male employees, c female employees, and d non-binary employees
 
 (a)
@@ -617,6 +682,10 @@ Fig. 8 Copilot policies for restrooms for: a employees, b male employees, c fema
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 18 -->
+
 
 Fig. 8 (continued)
 
@@ -629,6 +698,10 @@ Fig. 8 (continued)
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 19 -->
+
 
 (a)
 
@@ -709,6 +782,10 @@ If you were the city mayor and the snow has settled, can you enumerate your acti
 - ·Policy: Offer incentives (like tax deductions or public recognition) for businesses and citizens who clear sidewalks in front of their property.
 - ·Objective: Ensure safe walking paths for pedestrians, especially children, elderly, and people with disabilities.
 
+
+<!-- PAGE 20 -->
+
+
 (c)
 
 Fig. 9 (continued)
@@ -764,6 +841,10 @@ Actions:
 
 Rationale:While largerroadsarecritical,itsequally mportant to ensureresidentialand community spaces are passable foreveryone,including women who arerunning errands, heading to work, or returning home.
 
+
+<!-- PAGE 21 -->
+
+
 (a)
 
 <!-- image -->
@@ -773,6 +854,10 @@ Fig. 10 Copilot policies for snow removal for: a unspecified population, b popul
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 22 -->
+
 
 Fig. 11 ChatGPT policies for ideal working room temperature for a employees, b employees with at least 50% women, and c employees with at least 50% men
 
@@ -806,6 +891,10 @@ Toaddressthis:
 
 Wouldyoualsobeconsideringaspectslike airqualityorhumiditycontrol inyourdesign?
 
+
+<!-- PAGE 23 -->
+
+
 Fig. 11 (continued)
 
 (c)
@@ -831,6 +920,10 @@ Wouldyoulikesuggestionsforimprovingthermalcomfortbeyondjustthetemperaturesetting
 
 <!-- image -->
 
+
+<!-- PAGE 24 -->
+
+
 <!-- image -->
 
 Fig. 12 Copilot policies for ideal working room temperature for a employees, b employees with at least 50% women, and c employees with at least 50% men
@@ -841,17 +934,29 @@ Fig. 12 Copilot policies for ideal working room temperature for a employees, b e
 
 (b)
 
+
+<!-- PAGE 25 -->
+
+
 Fig. 12 (continued)
 
 <!-- image -->
 
 <!-- image -->
 
+
+<!-- PAGE 26 -->
+
+
 <!-- image -->
 
 Fig. 13 ChatGPT's policy recommendations on expenses to cover for a three-day business trip based on employee profiles: unspecified ( a ), male ( b ), female ( c ), young mother ( d ), and non-binary ( e )
 
 <!-- image -->
+
+
+<!-- PAGE 27 -->
+
 
 (c)
 
@@ -942,6 +1047,10 @@ Thesethoughtfuladditionstothetypicabusinesstripexpenseswouldshowsupportforherdua
 
 <!-- image -->
 
+
+<!-- PAGE 28 -->
+
+
 nsaodeedseo generally be thesameasforany employee,withafewkey considerationsforinclusivity andrespect.Here'sa breakdown of theexpensesyou mightcover:
 
 ## 1.TravelExpenses
@@ -977,6 +1086,10 @@ Fig. 13 (continued)
 
 deen particulartrip?
 
+
+<!-- PAGE 29 -->
+
+
 (a)
 
 <!-- image -->
@@ -1007,6 +1120,10 @@ s
 
 It'simportanttohaveacleartravelpolicyinplacetoensureemployeesknowwhatiscoveredandhowto submitexpensesforreimbursement.Doesthiscovereverythingyouhad inmind?
 
+
+<!-- PAGE 30 -->
+
+
 <!-- image -->
 
 Fig. 14 (continued)
@@ -1018,6 +1135,10 @@ Fig. 14 (continued)
 (d)
 
 <!-- image -->
+
+
+<!-- PAGE 31 -->
+
 
 Fig. 14 (continued)
 
@@ -1044,6 +1165,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 3. Bender EM, Gebru T, McMillan-Major A, Shmitchell S (2021). On the dangers of stochastic parrots: Can language models be too big? In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (pp. 610-623).
 
 <!-- image -->
+
+
+<!-- PAGE 32 -->
+
 
 4. Cirillo D, Catuara-Solarz S, Morey C, Guney E, Subirats L, Mellino S, Gigante A, Valencia A, Rementeria MJ, Chadha AS, Mavridis N. Sex and gender differences and biases in artificial intelligence for biomedicine and healthcare. NPJ Digit Med. 2020;1(3):81. https://  doi.  org/  10.  1038/  s41746-  020-  0288-5.
 5. Kartal E. A comprehensive study on bias in artificial intelligence systems: biased or unbiased AI, That's the Question! Int J Intell Inf Technol. 2022;18:1-23.
@@ -1091,6 +1216,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 47. Massey D. Space, Place, and Gender. University of Minnesota Press; 1994.
 
 <!-- image -->
+
+
+<!-- PAGE 33 -->
+
 
 48. Crenshaw K (1991). Mapping the margins: Intersectionality, identity politics, and violence against women of color. Stanford Law Review, 43(6), 1241-1299
 49. Broussard M. Artificial unintelligence: how computers misunderstand the world. Cambridge and London: MIT Press; 2019.

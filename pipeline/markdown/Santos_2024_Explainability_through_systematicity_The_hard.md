@@ -1,10 +1,11 @@
 ---
 source_file: Santos_2024_Explainability_through_systematicity_The_hard.pdf
-conversion_date: 2026-02-03T09:19:50.426160
+conversion_date: 2026-02-03T18:51:09.705057
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence
 
 <!-- image -->
@@ -27,6 +28,10 @@ Keywords Philosophy of artificial intelligence · Explainability · XAI · In
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## 1  Introduction
 
 Concerns about recent advances in artificial intelligence (AI) are often articulated in terms of a perceived lack of interpretability or explainability . 1 The definitions of these terms vary, sometimes centering on the interpretability or explainability of the models themselves,  sometimes on the interpretability or explainability of the outputs produced  by  these  models. 2 Nevertheless,  the  same  underlying  difficulty  lies at the root of both lines of inquiry: deep artificial neural networks operate via functions of such extreme complexity that their input-output mappings resist straightforward comprehension. This renders the inner workings of the models mechanistically opaque and gives rise to model-centric demands for interpretability and explainability. 3 But it concurrently creates a different and often more immediately challenging form of opacity, namely rational opacity concerning how a given output was derived and  why  we  should  accept  it.  This  second  form  of  opacity  fuels output-centric demands for interpretability and explainability.
@@ -47,6 +52,10 @@ In  AI  research,  the  question  of  whether  a  model  exhibits  'systematicit
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 back to Jerry Fodor, who, in a string of papers with various colleagues, suggested that  network  architectures  were  fundamentally  at  odds  with  'the  systematicity  of thought' in this narrow sense. He thereby laid down what came to be known as the 'systematicity challenge' to neural networks. 5
 
 As we shall see, however, that challenge has now lost much of its challengingness. The time has therefore come to shift our attention to what might be called the 'hard systematicity challenge': the challenge of building neural networks that are sensitive to the structure of thought not merely in the narrow sense of being sensitive to how thoughts are composed of recombinable constituents, but in the broader and more demanding sense of striving towards an integrated body of thought that is consistent, coherent, comprehensive, and parsimoniously principled. This involves stepping back from the inner articulation of individual thoughts to consider how an entire array of thoughts forms an orderly structure-it marks what I shall refer to as a shift from micro - to macrosystematicity .
@@ -61,6 +70,10 @@ See Calvo and Symons (2014); Verdejo (2015).
 
 <!-- image -->
 
+
+<!-- PAGE 4 -->
+
+
 Before we can fully appreciate this richer notion of systematicity, however, it is necessary to address the influential 'systematicity challenge' posed by Fodor and his  colleagues  (§2).  To  clear  the  conceptual  ground  for  an  alternative  conception of systematicity, but also to develop the conceptual building blocks for the paper's positive contribution and to situate that contribution in relation to the prevailing paradigm, I shall engage with Fodor's arguments in some detail (§§3-5). In particular, I  shall  bring out how the Fodorian inferences from the 'systematicity of thought' to the language-like and atomistic character of thought can be resisted. This serves four purposes within the paper: first, to decouple the notion of systematicity from the symbolic and atomistic architecture with which Fodor so influentially associated it; second, to defuse the perceived tension between systematicity and network architectures; third, to distinguish four different senses of the phrase 'the systematicity of thought'; and finally, to determine how Fodor's influential but narrow notion relates to the broader and more demanding ideal of systematicity that shaped our sense of what makes thought rational, authoritative, and scientific.
 
 To determine whether we have reason to hold AI models to this more demanding ideal of systematicity, I then argue, we must look to the rationales for systematizing thought and explore to what extent they transfer to AI models (§6). Drawing on the history of efforts to systematize human thought, I recover five such rationales. This brings into view the 'hard systematicity challenge' (§7). As I argue in closing, however, the demand for systematization itself needs to be regulated by the rationales for systematization. This yields a dynamic understanding of the need to systematize thought, which draws on a sense of why AI models need to be systematic to tell us how systematic we need AI models to be and when (§8).
@@ -72,6 +85,10 @@ If  there  is  a  notion  of  systematicity  that  has  historically  been  infl
 In what became known as the 'systematicity challenge' (Calvo &amp; Symons, 2014; Verdejo, 2015), Fodor and Pylyshin pointed out that there is a revealing symmetry in our cognitive capacities: the ability to entertain a given thought, such as 'John loves Mary,' implies the ability to entertain certain other thoughts, such as 'Mary loves John.' This symmetry has been thought to be a key criterion of concept possession, including in AI (Butlin, 2023, p. §3). Fodor and Pylyshin referred to this phenomenon as 'the systematicity of thought,' and contended that network architectures are
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 inherently ill-suited to account for it-in particular, to account for it as a matter of nomic necessity , as Fodor and McLaughlin (1990) clarified. 6
 
@@ -91,6 +108,10 @@ The  systematicity  debate  between  classicalists  and  connectionists  was  ne
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 The long shadow of the systematicity challenge helps explain why older, broader, and more demanding notions of systematicity have largely remained invisible. Fodor and  Pylyshin  succeeded  in  framing  the  debate  over  connectionism  for  decades, focusing connectionist efforts on overcoming their challenge. 10 The relevant notion of  systematicity  was  crystallized  into  benchmarks  that  connectionist  models  then sought to pass (Ettinger et al., 2018; Hadley, 1994; Yu &amp; Ettinger, 2020). By thus turning a spotlight on this particular conception of systematicity, AI research effectively cast older conceptions into the shadows.
 
 Furthermore, this systematicity challenge turned out to be hard enough already. Even neural networks trained on vast amounts of data have struggled with forms of systematicity that symbolic models handle with ease (Hupkes et al., 2020; Marcus, 2001; Press et al., 2023). This implicitly reinforced the idea that there was little point worrying about broader and more demanding forms of systematicity as long as neural networks had difficulties reliably reproducing the systematicity of thought in Fodor's comparatively basic sense.
@@ -106,6 +127,10 @@ However, the systematicity challenge is more than an empirical prediction that n
 11 As  Quilty-Dunn  et  al.  (2023)  argue,  however,  the  symbolic  approach  to  computational  cognitive science  lives  on  nonetheless,  notably  in  approaches  invoking  a  'probabilistic  language  of  thought' (Colombo 2023; Goodman et al., 2015).
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 the rule-governed manipulation of discrete and partly innate mental representations or symbols.
 
@@ -125,6 +150,10 @@ To resist the inference from the systematicity of thought to the language of tho
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 nections, and regularities discernible in the activity of thinking as performed by actual thinkers: which thoughts they can entertain, whether the capacity to entertain some thoughts entails or tends to entrain the capacity to think others, and whether the capacity to draw certain inferences entails  or  tends  to  entrain  the capacity to draw other inferences. The pattern that Fodor and colleagues focus on is a particular symmetry observable in human cognitive capacities: thinkers capable of entertaining thoughts of the form aRb also have the capacity to entertain thoughts of the form bRa . Fodor regards this symmetry in human thinking as a contingent empirical fact (1998, 26).
 
 - The  systematicity  of  what  is  thought: on  the  other  hand,  the  'systematicity  of thought' can also refer to the systematicity of what is thought .  This is the idea that  there  is  a structure inherent  in  the  contents  of  thought.  Typically,  this  is taken to mean that thoughts are articulated in terms of recombinable constituents . 12 The possibilities for well-formed recombinations are not random, but follow rule-governed patterns that in turn give rise to systematic interconnections between thinkable contents. This is a claim about the nature of thought itself, not an empirical observation about thinkers. Each actual thought is situated in a structured network of thinkable contents. This structure is logically independent of the capacities actual thinkers in fact possess.
@@ -134,6 +163,10 @@ This ambiguity in the phrase 'the systematicity of thought' is an instance of a 
 12 This sense of systematicity figures centrally in Peacocke (1992, 42), Cummins (1996, 2010), Johnson (2004), Perler (2004), and Salje (2019).
 
 <!-- image -->
+
+
+<!-- PAGE 9 -->
+
 
 In  a  second  step,  Fodor  argues  that  the  observable  systematicity  of  thinking requires explanation. Why is it that certain cognitive capacities go together in this way? His answer is that the systematicity of thinking must reflect a systematicity in thought itself: the thinkable contents must themselves be articulated in terms of recombinable constituents. So far, so uncontroversial.
 
@@ -149,6 +182,10 @@ Yet, from the fact that thought-the publicly manifestable product of our thinkin
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 structure of thought (Waismann, 1979, p. 90). Were these systematic variations not in the offing, thought might as well have no internal structure at all. From this observation, Evans derives what he calls the generality constraint :  'if  a  subject  can  be credited with the thought that a is F , then he must have the conceptual resources for entertaining the thought that a is G , for every property of being G of which he has a conception' (1982, p. 104). 14 Evans thus agrees with Fodor that there is a structure inherent in well-formed thoughts that allows systematic variants of them to be produced and understood, where systematic variation involves permuting constituents or, more demandingly, substituting constituents of the same kind.
 
 But Evans is careful to block the inference from the systematicity of thought to the language of thought hypothesis. He remarks, right after asserting that thoughts are structured: 'This might seem to lead immediately to the idea of a language of thought … However, I certainly do not wish to be committed to the idea that having thoughts involves the subject's using, manipulating, or apprehending symbols' (1982, pp. 100-101). There is a danger here of overintellectualizing human thought and modeling the structure of sub-personal processing too closely on the structure of  natural  language.  We  should  not  be  too  quick  to  infer  the  structure  of  a  cause from the structure of its effect (Churchland &amp; Sejnowski, 1990). Maybe part of what makes natural language so useful is precisely that it introduces a structure we would otherwise lack.
@@ -161,6 +198,10 @@ Instead of seeing the structure of language as mirroring a pre-existing structur
 
 <!-- image -->
 
+
+<!-- PAGE 11 -->
+
+
 Thus, we can resist Fodor's inference from the systematicity of thinking to the systematicity  of  thought  by  realizing  that  the  direction  of  explanation  can  just  as well be reversed. Perhaps it is not that the systematicity of thinking reflects the antecedent systematicity of thought. Perhaps the systematicity of thought is the product of the systematicity of thinking. Thought would then be systematic because systematic  patterns-such as certain symmetries-dynamically emerge from the way we form and exercise conceptual abilities. Accordingly, there is no need to postulate a language of thought to explain systematicity in our thinking.
 
 ## 3.2    Resisting the Inference from Systematicity to Atomistic and Compositional Semantics
@@ -172,6 +213,10 @@ Yet  connectionists  can  resist  Fodor's  inference  from  systematicity  to  a
 16 For a critique of this line of thought, see Fermüller (2010); for a corresponding defence, see Turbanti (2017, ch. 4, §4.2).
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 of  thinking.  And  this  recursiveness  does  not  require  atomistic  and  compositional semantics. Rather, recursive rules of combination can operate alongside a semantic holism wherein context and inferential connections further refine or modify meaning through a recursive layering of inferential connections that dynamically shape meaning at each level of constructional complexity. 17 This layering means that while complex thoughts are built recursively from simpler constituents, the full inferential significance of any constituent is not fixed atomically but is modulated and potentially transformed by the larger constructions it enters into. Each level of embedding potentially brings new inferential relations into play, refining the meaning beyond a simple compositional sum of pre-existing parts.
 
@@ -188,6 +233,10 @@ The  same  holistic  point  also  applies  to  the  possession  of  individual  
 19 Whether this constitutes a necessary or a sufficient part of the determination of conceptual content depends on the strength of the inferentialism one endorses; Brandom endorses strong inferentialism, on which inferential articulation, broadly construed (i.e. including materially correct inferences as well as noninferential circumstances and consequences of concept application), is sufficient to account for conceptual content (2000, 28; 2007, 657).
 
 <!-- image -->
+
+
+<!-- PAGE 13 -->
+
 
 you. 20 As Wilfrid Sellars puts the point: 'It is only because the expressions in terms of which we describe objects … locate these objects in a space of implications, that they describe at all, rather than merely label' (1958, 306-7).
 
@@ -208,6 +257,10 @@ Macrosystematicity requires more than being structured in the minimal sense of b
 
 <!-- image -->
 
+
+<!-- PAGE 14 -->
+
+
 are  multiple  aspects  to  this,  and  various  accounts  of  systematicity  have  been proposed,  some  articulating  nine  (Hoyningen-Huene,  2013,  pp.  35-36)  or  even eleven dimensions of systematicity (Rescher, 1979, pp. 10-11, 2005, pp. 25-26). But  many  of  these  dimensions  are  either  domain-specific  or  else  subsumable under the following five principal dimensions of systematicity:
 
 1. Consistency : absence of contradictions.
@@ -221,6 +274,10 @@ This 3C2P conception of macrosystematicity, as we might quasi-acronymically call
 Being sensitive to these dimensions allows assessments of the degree to which a given set of propositions instantiates systematic integration and order: consistency  is  a  matter  of  avoiding  contradictions  that  undermine  the  integrity  of  the systematic  structure,  while  coherence  more  positively  strengthens  this  integrity by establishing rational interconnections among propositions such that they form a network in which each proposition rationally supports or is supported by another.  Comprehensiveness  further  extends  systematicity  by  ensuring  that  the set covers all the relevant aspects within its scope, without salient gaps or arbitrary  omissions. Principledness, in turn, introduces a hierarchical dimension by organizing particular claims under general principles or laws, thereby making the different parts of the structure more unified. Finally, since principles cannot do much unifying  if  there  are  as  many  principles  as  there  are  particulars,  scoring highly along the dimension of parsimony conforms to the idea that principles or laws  should  not  needlessly  proliferate,  but  should  become  fewer  in  number  the more general they get.
 
 The 3C2P conception of macrosystematicity is gradable because a set of propositions can exhibit greater or lesser degrees of consistency, coherence, comprehensiveness, principledness, and parsimony, depending on the extent to which it avoids  contradictions,  establishes  relations  of  rational  support,  eliminates  lacunae,  subordinates  particulars  to  principles,  and  displays  economy  of  principles. Accordingly,  this  conception  of  macrosystematicity  defines  a  spectrum  along which sets of propositions can be evaluated in a nuanced way, with more systematic sets being more harmonious, organized, and unified.
+
+
+<!-- PAGE 15 -->
+
 
 ## 5    Macrosystematicity as an Ideal Regulating Thinking
 
@@ -244,6 +301,10 @@ But the fact that human thought does not always fully live up to the ideal of sy
 
 <!-- image -->
 
+
+<!-- PAGE 16 -->
+
+
 ideal .  As  Kant writes, 'systematic unity (as mere idea) is only a projected unity' (1929, A647/B675). It acts as a focus imaginarius (1929, A644/B672), an ideal vanishing point, whose significance lies in the fact that it coordinates cognition even when not fully realized. Just as the ideal vanishing point is called 'ideal' because it exists only in the projective extension of the standard Euclidean plane instead of being a tangible part of a real-world scene, so the regulative ideal of systematicity exists only as a projective extension of our actual practice of thinking. What is real, however, is the way this ideal regulates the practice.
 
 Moreover,  it  is  the  very  fact  that  human  thinking  is  not  always  fully  systematic  that gives  point  to the  regulative  ideal  of  systematicity.  It  provides  a  corrective,  a  counterweight,  a  disciplining  normative  pull  that  restrains  the  proliferation of contradiction, disconnectedness, lacunarity, unprincipledness, or, on the contrary, profligacy of principles. The regulative ideal of systematicity would be pointless if human thought were always fully systematic.
@@ -261,6 +322,10 @@ This  emphasis  on  the  importance  of  discursively  laying  out  what  otherw
 26 On this aspect of Socrates's thought, see notably Williams (2006).
 
 <!-- image -->
+
+
+<!-- PAGE 17 -->
+
 
 but in transparently articulated rules that offer principled justifications for the exercise of public power. 27
 
@@ -280,6 +345,10 @@ A fundamental rationale for at least some degree of systematization falls out of
 
 <!-- image -->
 
+
+<!-- PAGE 18 -->
+
+
 the consistency and coherence of one's perceptions and judgments is to rob them of any determinate content or representational purport, and thus to cease to genuinely cognize the world at all. The first and most fundamental rationale for systematization is therefore that it serves a constitutive function in cognition.
 
 This is what led Enlightenment thinkers to cast the imperative to systematization as a demand inherent in reason or rationality itself (Franks, 2005, p. 3). 29 The ideal of  systematicity  informs  the  very  process  whereby  the  sensory  manifold  is  transformed into the perception of an objective world. Thus, Kant observed: 'In accordance with reason's legislative prescriptions, our diverse modes of knowledge must not  be  permitted  to  be  a  mere  rhapsody,  but  must  form  a  system'  (1929,  A832/ B860).
@@ -295,6 +364,10 @@ Even when we ascribe propositional attitudes to another human being, there is a 
 30 See, e.g., Koralus (2023, 35), Frankish (2024), and Müller and Löhr (2025).
 
 <!-- image -->
+
+
+<!-- PAGE 19 -->
+
 
 seem inconsistent  or  contradictory'  if  their  beliefs  'change  too  often  for  internal reasons'  (2002,  p.  191)  rather  than  because  the  world  around  them  has  changed. Eventually, their beliefs will cease to be intelligible to us as propositional attitudes at all. They will appear as something else-in the case of human beings, they will perhaps appear as mere 'propositional moods' (2002, p. 191), Williams suggests; but in the case of AI models, the effect is more likely to be to disrupt the impression that one is interacting with a form of cognition or intelligence altogether. 31
 
@@ -312,6 +385,10 @@ The same holds for ongoing efforts to achieve cross-modal alignment in multimoda
 
 <!-- image -->
 
+
+<!-- PAGE 20 -->
+
+
 across  different  modalities,  the  models  need  to  learn  not  only  to align linguistic, visual, acoustic, and tactile representations of the world by treating, say, linguistic and visual representations  of  apples  as  similar  to  each  other  (as  measured  by  the distance between the corresponding feature vectors in a shared embedding space, for instance) 34 ; they also need to treat inconsistencies and incoherences between these representations as something to be remedied . That is just what it means for the models to treat these different modalities as representing one and the same world. Cognition, even when artificial, need not fully achieve systematic integration, but it must at least strive for it if it is to count as cognition.
 
 Second, systematization is fundamental not only to cognizing the world, but also to understanding, because it renders thoughts intelligible in terms of their inferential connections to other thoughts. We do not properly understand a judgment, a belief, or an assertion as long as we cannot see what other thoughts it rationally supports or conflicts with, and what other thoughts it is itself rationally supported or undermined by. We only properly understand it insofar as we can situate it within what Wilfrid Sellars, drawing on Kant, called 'the space of reasons' (1997, §36). 35 This goes back to the earlier holistic point against Fodor's semantic atomism. It is constitutive of genuinely understanding a thought that one can place it in a web of relationships to other thoughts. One does not genuinely understand the thought that x is a dog, for example, unless one understands other thoughts that are inferential consequences of that thought (e.g. if x is a dog , this implies that it can be kept as a pet , and it excludes its being a bird ). More generally, one comes to understand a thought by coming to know how it is systematically integrated into a network of inferential connections. As Brandom (2009, p. 172) argues, understanding is not the sudden incandescence of some 'inner lightbulb.' Understanding is the mastery of certain practical inferential abilities-it consists in knowing one's way around a certain part of the inferential network. This provides what some in the literature on understanding have referred to as 'cognitive control' (Hills, 2015). 36 Consequently, the pursuit of  understanding can be a powerful motive for cognitive systematization. We can call this the hermeneutic function of systematization.
@@ -326,6 +403,10 @@ If this is right, it means that where the interpretability of an AI system's out
 
 <!-- image -->
 
+
+<!-- PAGE 21 -->
+
+
 these  outputs  systematically  relate  to  other  judgments.  And  to  the  extent  that  the model's outputs themselves make these systematic relationships explicit, that will help us grasp these relationships. If an opaque neural network in science gives us a raw hypothesis without making any effort to show how that hypothesis is consistent with the data, how it is rationally supported by particular observations, and how it can be seen as an application of more general principles of the relevant scientific field, we may not properly understand the hypothesis. The desire to understand the output will then be a powerful motive for wanting the model to make explicit how its output can be systematically integrated with other thoughts. But if we had a model capable of accurately making that systematic integration explicit, it would be for the benefit of our understanding, not the model's. In this sense, the regulative ideal of systematicity is fundamental to making outputs interpretable. The second rationale for systematization, then, is that it serves a hermeneutic function.
 
 Third, integrability within a system of thoughts acts as a criterion for the acceptability of judgments. This provides an epistemological rationale for systematization. That point was emphasized by British Neo-Hegelians such as Bradley, who sought to establish 'the claim of system as an arbiter of fact' (1909, p. 489). But intimations  of  this  idea  can  already  be  gleaned  from  Plato's  insistence,  in  the Theaetetus (201c-210d), that a claim needs a logos (a  reason)  to  count  as  knowledge;  or from Aristotle's thesis,  in  the Metaphysics (I,  982a)  and  throughout  the Posterior Analytics , that episteme is knowledge of certain principles and causes (a thesis that Thomas Aquinas influentially rendered as sapientis est ordinare -'the task of the wise  is  to  systematize'). 37 More  recently,  this  is  also  what  Nicholas  Rescher  has extolled as the main purpose of cognitive systematization: it enables 'quality control of knowledge claims' (2005, p. 27). Integrability within a system offers a criterion by which to separate genuine knowledge from mere opinion.
@@ -337,6 +418,10 @@ This  has  been  thought  to  be  one  of  the  principal  reasons  why  academi
 38 This ties in with the realism/anti-realism debate in the philosophy of science over whether the theoretical entities postulated by science are 'fictions facilitating systematic account' (van Fraassen 1980, 204) or true descriptions of unobservable reality. But note that even an anti-realist like van Fraassen does not
 
 <!-- image -->
+
+
+<!-- PAGE 22 -->
+
 
 observation that '[i]t is the desire for explanations which are at once systematic and controllable by factual evidence that generates science' (van Fraassen, 1980, p. 92). And before the question of the acceptability of the theory as a whole can even arise, we need to decide which claims to accept into our scientific theory in the first place, and here, systematic integrability does function as a criterion.
 
@@ -354,6 +439,10 @@ reject systematization; rather, the anti-realist cautions against mistaking the 
 
 <!-- image -->
 
+
+<!-- PAGE 23 -->
+
+
 1989, 2002), and Kagan (1989), who invite us to lean on our principles to uproot our prejudices. 39 The drive towards systematization is an important driver of critique.
 
 In interactions with AI models we do not fully trust, this critical function of systematization can be performed in two directions: an AI model capable of systematization can help one think through the implications of one's own views and awaken one to inconsistencies in them; or the critical leverage generated by systematization can be applied to the AI model itself. By pushing an AI model to explicitly integrate its output into a wider network of thoughts and demonstrating the systematicity of that  network,  one  renders  inconsistencies  and  other  flaws  glaringly  obvious.  Systematization then enables others to verify that some judgment or decision is indeed based on the right kind of supporting considerations. This is why people in positions of  public  authority-such  as  judges,  government  commissions,  or  hospital  ethics committees-are expected not just to hand down decisions, but to make discursively explicit  how  these  decisions  follow  from  more  general  principles  that  have  been consistently and coherently applied (Cueni &amp; Queloz, 2021). That is part of what it means for the decision-making to be fair and to treat like cases alike. Systematicity provides accountability, and enables those at the receiving end of these decisions to ascertain their fairness.
@@ -368,6 +457,10 @@ Rendering fairness verifiable through systematicity is clearly a desirable featu
 
 <!-- image -->
 
+
+<!-- PAGE 24 -->
+
+
 Fifth, systematization performs a didactic function, facilitating synoptic exposition, persuasion, and retention. This is reflected in the studiedly systematic organization of effective textbooks or slide decks in pedagogical contexts. But it also holds for  the  structure  of  speeches,  reports,  encyclopedia  entries,  or  even  ordinary  conversations in which one person is asked to introduce someone to a topic they are unfamiliar with. In any context in which a complex body of new information is to be effectively imparted, systematization helps get the information across. This too provides an easily overlooked but important rationale for systematization. By having something laid out in terms of an easily surveyable system, we gain a sense of its structure-in the broad sense of how a complex array of thoughts can be organized into a systematic order . This renders the complex array of thoughts much easier to  convey and internalize; as schema theory explains, organizing information into structured  schemas  allows  for  more  efficient  encoding  and  retrieval  of  complex information (Anderson, 1983; Rumelhart, 1980), and cognitive load theory suggests that the systematic organization of content helps manage cognitive load during complex learning tasks (Sweller et al., 1998).
 
 Moreover,  systematization  also  has  a protreptic effect,  i.e.  it  renders  the  array of  thoughts  more persuasive by  displaying  its  inner  consistency  and  coherence. According  to  the  Elaboration  Likelihood  Model,  for  example,  people  are  more likely to perceive a message as credible and authoritative if it is organized coherently (Petty &amp; Cacioppo, 1986). This protreptic effect relies on the fact that we have historically come to regard systematicity as a criterion of truth and a hallmark of authoritativeness.
@@ -379,6 +472,10 @@ This didactic rationale for systematization is particularly evident in the histo
 42 Though Plato also speaks of the Pythagorean idea of a 'system' of intervals between notes in the Philebus (17d).
 
 <!-- image -->
+
+
+<!-- PAGE 25 -->
+
 
 in  a  technical  sense  to  refer  to  the systema mundi , 43 the  orderly  whole  of  heaven and earth, they still used it to refer to the systematicity of the world rather than of thought. 44 It was only in the sixteenth century that Protestant theologians, reacting to  the  confusion  about  what  followers  of  the  new  faith  were  supposed  to  believe, began to publish synoptic expositions of the new theological doctrines, and referred to them as 'systems' (Ritschl, 1906, p. 16). Philosophers soon followed suit with works  such  as  Keckerman's Systema  logicae (1600)  and  Timpler's Metaphysicae Systema Methodicum (1604). But the rationale for these systematizations of theology, logic, and metaphysics was primarily (though not exclusively) a didactic one.
 
@@ -400,6 +497,10 @@ Each  of  these  five  functions  yields  a  clear  rationale  for  the  systema
 
 <!-- image -->
 
+
+<!-- PAGE 26 -->
+
+
 beneath the clamors for interpretability or explainability in AI models lies a deeper and broader cognitive ideal. From the end-user perspective, it is systematicity that is called for, and this broader demand is fundamental to making outputs interpretable to begin with and underlies our sense of what would make for good explanations. It may be that developers, to understand how to build better models, primarily need outputs-especially outputs that are clearly wrong-to be mathematically interpretable and explainable in terms of the mechanisms that produced them. But end-users have a wider variety of needs. For them, AI models must answer not just to a need for  mathematical  interpretability  or  mechanistic  explanation,  but  to  a  variety  of needs that all, in different ways, call for the systematic integration of outputs-be it  because they need the models to manifest a unified perspective, or because they need to better understand the outputs, assess their credibility, critique them, or learn and memorize them.
 
 ## 7    The Hard Systematicity Challenge
@@ -412,6 +513,10 @@ However, the training objective alone does not tell us all that much about how s
 
 Moreover, while the many inconsistencies and incoherences in the pre-training data  lead  LLMs  to  embed  inconsistencies  and  incoherences  into  their  parameters along with more systematic sets of propositions, the resulting lack of systematicity  can be substantially mitigated through post-training. The carefully curated and
 
+
+<!-- PAGE 27 -->
+
+
 labeled datasets assembled for SFT, for example, are presumably selected notably for their consistency, coherence, comprehensiveness, and parsimonious principledness-or rather, there is some selection against input-output pairs that are flagrantly inconsistent,  incoherent,  incomplete,  insufficiently  principled,  or  too  profligate  in their  principles.  By  being  fine-tuned  on  what  are  effectively  paradigms  of  localized macrosystematicity within an input-output pair, the models are indirectly being trained to be more systematic, at least within the scope of their responses.
 
 The same holds for other forms of post-training such as reinforcement learning from human feedback (RLHF). Here also, the training objective is not to be systematic, but to maximize the rating ascribed to the LLM's outputs by a 'reward model,' which has in turn been trained to reflect the preferences of human annotators. Yet these preferences are apt to penalize a lack of systematicity for all the reasons we considered-we do expect some degree of systematicity from human interlocutors, and there are robust rationales for transferring these expectations to LLMs at least to some extent. As a result, RLHF indirectly incentivizes greater systematicity within a given response.
@@ -423,6 +528,10 @@ To render models more systematic beyond individual responses, they might need to
 However, as the next and final section will argue, the demand for systematization itself needs to be regulated by the five rationales for systematization. This is because these  five  rationales,  by  clarifying why systematization  is  needed,  also  provide  a
 
 <!-- image -->
+
+
+<!-- PAGE 28 -->
+
 
 guiding sense of when and how AI models need to strive to systematically integrate their output. And once we adopt a suitably dynamic understanding of the need for systematization,  it  becomes  evident  that  not  all  AI  models  need  to  be  maximally systematic all the time.
 
@@ -437,6 +546,10 @@ Accordingly, we can derive a dynamic or input-dependent understanding of the nee
 The first parameter registers the fact that whether AI needs to be capable of systematization depends notably on which kind of AI model we are talking about-a network trained to detect breast cancer plays a very different role in human affairs from  one  trained  to  predict  recidivism,  or  to  play  Go,  or  to  teach  trigonometry lessons.
 
 The  second  parameter  registers  the  fact  that  how  much  explicit  systematization  is  needed  in  a  given  context,  and  along  which  dimensions  (i.e.,  consistency, coherence, comprehensiveness, principledness, or parsimony), depends crucially on which functions of systematization need to be discharged in that context. Some functions require a greater degree of systematization than others. For instance, the epistemological function, especially in demanding contexts like scientific research, might require high levels of consistency, coherence, and comprehensiveness, whereas the basic  constitutive  function  might  only  require  a  minimal  threshold  of  consistency and coherence to maintain interpretability as a cognitive agent at all. Furthermore, different functions prioritize different dimensions: ensuring fairness via the critical function might demand, above all, demonstrable principledness and consistency in applying those principles across cases. In contrast, facilitating understanding via the hermeneutic function might place a premium on coherence -showing how an output rationally connects to other beliefs or data-while the didactic function might additionally emphasize parsimony to  aid  learning and retention. Consequently, the weight we give to these different dimensions should depend on the specific rationale-the function-motivating the need for systematization in the first place.
+
+
+<!-- PAGE 29 -->
+
 
 The third parameter, finally, registers the fact that the need for systematic AI also depends on what kind of human agent is dealing with its output. Is it the AI model's own developers, or is it end-users? Are these end-users school children or  math  teachers?  Defendants  or  judges?  What  human  agents  need  from  an  AI model will vary significantly with the role they occupy.
 
@@ -458,6 +571,10 @@ Thus, if we ask which AI models need to discharge the constitutive function, it 
 
 <!-- image -->
 
+
+<!-- PAGE 30 -->
+
+
 point of using it as a companion. One recent study even found that 'perceiving companion chatbots as more conscious and humanlike correlated with … more pronounced  social  health  benefits'  (Guingrich  &amp;  Graziano,  forthcoming).  But there are plenty of use cases-when using AI models to code, say, or to provide entertaining trivia-where it is fine for the model to come across as a mere pattern matcher or database technology. In other words, it is the third parameterfor whom the  models  need  to  systematize-that  generates  a  demand  for  systematization. At the same time, the kind of  systematization required to discharge this function will above all foreground consistency, and only require a limited degree of coherence and principledness. The other parameters do not seem called for by the need for cognitive interpretability alone.
 
 Insofar as the hermeneutic function needs to be discharged, by contrast, coherence becomes far more important, since mere consistency is often not yet enough to understand something. Some measure of principledness is called for as well, since we often need to understand how something particular instantiates something more general in order to properly understand it. 45 Moreover, parsimony will also matter here,  since  parsimony  in  subsuming  the  particular  under  principles  is  what  gives understanding its unifying power. As Daniel Wilkenfeld puts it, 'understanding is a  matter  of  compressing  information  about  the  understood  so  that  it  can  be  mentally  useful'  (2019,  p.  2808),  and  this  cognitive  compression  expresses  a  striving towards parsimony. Such a pressure to systematize in the service of understanding will be particularly pronounced where AI models are used in fundamental research, whose defining ambition is to trace the particular to a limited number of highly general principles and demonstrate their comprehensive coverage. But most AI use will serve more modest ambitions.
@@ -467,6 +584,10 @@ Similarly,  when  the  function  to  be  discharged  is  epistemological,  coher
 45 I  intentionally  do  not  distinguish  further  here  between  semantic,  objectual,  and  explanatory  understanding in the way that much of the literature does-see Baumberger, Beisbart, and Brun (2017) for an overview-because, on the inferentialist account of semantic understanding given in Sect. 3, there is a level at which all three forms of understanding operate along the same lines (though that does not preclude their being distinguished within that shared framework).
 
 <!-- image -->
+
+
+<!-- PAGE 31 -->
+
 
 soon discover at cocktail parties, there is such a thing as systematizing to the point of being a bore.)
 
@@ -481,6 +602,10 @@ Thus,  by  understanding  the  regulative  ideal  of  the  systematicity  of  th
 46 See Elgin (1983, 1996, 2017) for epistemological applications of the reflective equilibrium model. For a recent reevaluation, see Beisbart and Brun (2024).
 
 47 See Queloz (2025b, 169-79, 362-75).
+
+
+<!-- PAGE 32 -->
+
 
 benchmark for all AI models to meet, but a more nuanced ideal that can be tailored to human needs in particular contexts.
 
@@ -502,6 +627,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 - Anderson, J. R. (1983). The architecture of cognition . Harvard University Press.
 
 <!-- image -->
+
+
+<!-- PAGE 33 -->
+
 
 - Aquinas,  T.  (1969). Sancti  Thomae  de  Aquino  Opera  Omnia:  Sententia  Libri  Ethicorum (Vol.  1).  Ad Sanctae Sabinae.
 - Aydede, M. (1997). Language of thought: The connectionist contribution. Minds and Machines, 7 (1), 57-101.
@@ -544,6 +673,10 @@ A spirit of trust: A reading of Hegel's phenomenology
 
 <!-- image -->
 
+
+<!-- PAGE 34 -->
+
+
 - Churchland, P. S., &amp; Sejnowski, T. J. (1990). Neural representation and neural computation. Philosophical Perspectives, 4 , 343-382.
 - Clark, A. (1991). Systematicity, structured representations and cognitive architecture: A reply to Fodor and Pylyshyn. In T. Horgan &amp; J. Tienson (Eds.), Connectionism and the Philosophy of Mind (pp. 198-218). Springer.
 - Colombo, M. (2023). Concept learning in a probabilistic language-of-thought. How is it possible and what does it presuppose? Behavioral and Brain Sciences, 46 , Article e271.
@@ -579,6 +712,10 @@ A spirit of trust: A reading of Hegel's phenomenology
 
 <!-- image -->
 
+
+<!-- PAGE 35 -->
+
+
 - Fodor, J., &amp; McLaughlin, B. P. (1990). Connectionism and the problem of systematicity: Why Smolensky's solution doesn't work. Cognition, 35 (2), 183-205.
 - Fodor, J. A., &amp; Pylyshyn, Z. W. (1988). Connectionism and cognitive architecture: A critical analysis. Cognition, 28 (1-2), 3-71.
 - Frankish, K. (2024). What are large language models doing? In A. Strasser (Ed.), Anna's AI anthology: How to live with smart machines? Xenomoi.
@@ -609,6 +746,10 @@ A spirit of trust: A reading of Hegel's phenomenology
 - Harcourt, E. Manuscript. 'Consequentialism, Moralism, and the 'Administered World''.
 
 <!-- image -->
+
+
+<!-- PAGE 36 -->
+
 
 - Hare, R. M. (1952). The language of morals . Oxford University Press.
 - Hare, R. M. (1972). Applications of moral philosophy . Macmillan.
@@ -647,6 +788,10 @@ A spirit of trust: A reading of Hegel's phenomenology
 
 <!-- image -->
 
+
+<!-- PAGE 37 -->
+
+
 - Mandelbaum, E., &amp; Quilty-Dunn, J. (2015). Believing without reason, or: Why liberals shouldn't watch fox news. The Harvard Review of Philosophy, 22 , 42-52.
 - Mandelbaum, E., &amp; Ripley, D. (2012). Explaining the abstract/concrete paradoxes in moral psychology: The NBAR hypothesis. Review of Philosophy and Psychology, 3 (3), 351-368.
 - Mann, S., Crook, B., Kästner, L., Schomäcker, A., &amp; Speith, T. (2023). Sources of opacity in computer systems: Towards a comprehensive taxonomy. In 2023 IEEE 31st International Requirements Engineering Conference Workshops (REW).
@@ -681,6 +826,10 @@ A spirit of trust: A reading of Hegel's phenomenology
 
 <!-- image -->
 
+
+<!-- PAGE 38 -->
+
+
 - Räz, T. (2024b). ML interpretability: Simple isn't easy. Studies in History and Philosophy of Science, 103 , 159-167.
 - Räz,  T.,  &amp;  Beisbart,  C.  (2024).  The  importance  of  understanding  deep  learning. Erkenntnis, 89 (5), 1823-1840.
 - Rescher, N. (1979). Cognitive systematization: A systems theoretic approach to a coherentist theory of knowledge . Blackwell.
@@ -714,6 +863,10 @@ A spirit of trust: A reading of Hegel's phenomenology
 - van Fraassen, B. C. (2002). The empirical stance . Yale University Press.
 
 <!-- image -->
+
+
+<!-- PAGE 39 -->
+
 
 - van Gelder, T. (1990). Compositionality: A connectionist variation on a classical theme. Cognitive Science, 14 (3), 355-384.
 - Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., &amp; Polosukhin, I. (2017). Attention is all you need. Advances in Neural Information Processing Systems, 30.

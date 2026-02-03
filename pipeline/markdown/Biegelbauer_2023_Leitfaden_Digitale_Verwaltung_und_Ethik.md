@@ -1,21 +1,34 @@
 ---
 source_file: Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.pdf
-conversion_date: 2026-02-03T08:43:37.615457
+conversion_date: 2026-02-03T18:21:51.213935
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Leitfaden Digitale Verwaltung und Ethik
 
 Praxisleitfaden für KI in der Verwaltung, Version 1.0
 
+
+<!-- PAGE 3 -->
+
+
 Impressum Medieninhaber, Verleger und Herausgeber: Bundesministerium für Kunst, Kultur, öffentlichen Dienst und Sport (BMKÖS) Sektion III Öffentlicher Dienst und Verwaltungsinnovation Hohenstaufengasse 3, 1010 Wien bmkoes.gv.at Autor:innen: PD Dr. Peter Biegelbauer (Projektleitung), Caroline Lackinger, BA, Dr. Sven Schlarb, Edgar Subak, BA, Pia Weinlinger, MA Projektleitung: Mag.a Ursula Rosenbichler, Michael Huber, LL.B, MSc., Ralf M. Tatto, BA MA MA Fotonachweis: BMKÖS Layout: BKA Design &amp; Grafik Druck: Druckerei des BMF Copyright und Haftung: Jede kommerzielle Verwertung (auch auszugsweise) ist ohne schriftliche Zustimmung des Medieninhabers unzulässig. Dies gilt insbesondere für jede Art der Vervielfältigung, der Übersetzung, der Mikroverfilmung, der Wiedergabe in Fernsehen und Hörfunk, sowie für die Verbreitung und Einspeicherung in elektronische Medien wie z. B. Internet oder CD  Rom. Im Falle von Zitierungen im Zuge von wissenschaftlichen Arbeiten sind als Quellenangabe 'BMKÖS' sowie der Titel der Publikation und das Erscheinungsjahr anzugeben. Es wird darauf verwiesen, dass alle Angaben in dieser Publikation trotz sorgfältiger Bearbeitung ohne Gewähr erfolgen und eine Haftung des BMKÖS und der Autorin / des Autors ausgeschlossen ist. Rechtausführungen stellen die unverbindliche Meinung der Autorin / des Autors dar und können der Rechtsprechung der unabhängigen Gerichte keinesfalls vorgreifen. Kontakt und Rückmeldungen: Bundesministerium für Kunst, Kultur, öffentlichen Dienst und Sport Abteilung III/C/9 Strategisches Performancemanagement und Verwaltungsinnovation Ralf Tatto, MA; ralf.tatto@bmkoes.gv.at Diese Publikation ist abrufbar und unter oeffentlicherdienst.gv.at/publikationen zum Download verfügbar. ISBN 978-3-903097-55-1
 
 Wien, 2023
+
+
+<!-- PAGE 4 -->
+
 
 ## Vorwort des Herrn Vizekanzlers
 
@@ -41,6 +54,10 @@ Vizekanzler Mag. Werner Kogler
 
 <!-- image -->
 
+
+<!-- PAGE 5 -->
+
+
 Sektionsleiter Mag. Christian Kemperle
 
 <!-- image -->
@@ -62,6 +79,10 @@ Wir hoffen, dass Sie diesen Leitfaden nützlich finden und dass er Ihnen dabei h
 Mag. Christian Kemperle
 
 Leiter der Sektion III - Öffentlicher Dienst und Verwaltungsinnovation
+
+
+<!-- PAGE 6 -->
+
 
 ## Inhalt
 
@@ -93,6 +114,10 @@ Leiter der Sektion III - Öffentlicher Dienst und Verwaltungsinnovation
 | 9.2                                                                        | EU-Bewertungsliste für vertrauenswürdige künstliche Intelligenz (ALTAI)                            |  56 |
 | 9.3                                                                        | Ethics Self-Assessment für EU-Forschungsförderung und EU 'Ethics by Design' KI-Forschungsleitfaden |  57 |
 
+
+<!-- PAGE 7 -->
+
+
 | 9.4                      | VCIO-Modell                                               | 58   |
 |--------------------------|-----------------------------------------------------------|------|
 | 9.5                      | Folgenabschätzung für Grundrechte und Algorithmen (FRAIA) | 58   |
@@ -106,6 +131,10 @@ Leiter der Sektion III - Öffentlicher Dienst und Verwaltungsinnovation
 | Abbildungsverzeichnis    | Abbildungsverzeichnis                                     | 82   |
 | Tabellenverzeichnis      | Tabellenverzeichnis                                       | 82   |
 
+
+<!-- PAGE 8 -->
+
+
 ## 1  Einleitung
 
 Ziel dieses Leitfadens ist es, Verwaltungsbedienstete in Planung, Design, Erstellung bzw. Vergabe, Einsatz und Evaluierung digitaler, insbesondere aber KI-basierter Anwendungen zu unterstützen. Für die ethischen Überlegungen hierbei ist die Komplexität des eingesetzten Systems, also z.  B. ob es als Künstliche Intelligenz (KI) definiert werden kann oder nicht, weniger zentral, als die Beantwortung der Frage welche Auswirkungen digital unterstützte Prozesse und Entscheidungen auf Individuen und die Gesellschaft haben. Vertrauen in öffentliche Institutionen kann bei negativen Auswirkungen von Verwaltungshandlungen rasch beschädigt werden, weshalb die Verwaltung als zentraler Kontaktpunkt zwischen Bürger:innen und Staat hier eine besondere Verantwortung trägt.
@@ -117,6 +146,10 @@ Das vorliegende Dokument versteht sich als praxisbezogener Leitfaden, der Verwal
 Der Leitfaden richtet sich gleichermaßen an Anwender:innen, Entwickler:innen und Management in der öffentlichen Verwaltung, ebenso wie an die vom Verwaltungshandeln betroffene Öffentlichkeit.
 
 Der Leitfaden versteht sich als Version 1.0. Spätestens mit der Verabschiedung des AI Acts und der Überarbeitung der österreichischen KI-Strategie wird eine Überarbeitung notwendig sein. In diesem Sinn soll es sich also um ein lebendiges Dokument handeln. Vor diesem Hintergrund nehmen wir auch gerne Anregungen entgegen, bitte unter den folgenden E-Mail-Adressen: iii9@bmkoes.gv.at, office.isp@ait.ac.at
+
+
+<!-- PAGE 9 -->
+
 
 ## 1.1  Praxisleitfaden Ziele und Zielgruppen
 
@@ -130,6 +163,10 @@ Sowohl die Existenz, Vorhaltung und Verarbeitung personenbezogener Daten als auc
 
 Diesen Fragen muss sich auch die österreichische Verwaltung täglich stellen. Während die Anforderungen an die öffentliche Verwaltung stetig steigen, wird mit der Pensionierung der Babyboomer-Generation ein erheblicher Anteil der Verwaltungsbediensteten aus dem aktiven Dienst ausscheiden. Gleichzeitig spielt der Ruf nach Einsparungen im öffentlichen Diskurs nach wie vor eine wichtige Rolle. Dementsprechend findet sich hier ein Betätigungsfeld für die Anwendung von digitalen Lösungen und insbesondere KI mit dem Ziel der Steigerung von Effizienz und der Entlastung von Mitarbeiter:innen bei möglichst gleichzeitigen Verbesserungen im Servicebereich.
 
+
+<!-- PAGE 10 -->
+
+
 Die  öffentliche  Verwaltung  hat  allerdings  eine  besondere  Verantwortung  im Hinblick auf die Vielzahl staatlicher Aufgaben, die sie wahrnimmt. Besonders hervorzuheben sind hier handlungsleitende Grundsätze wie Legalitätsprinzip, Rechenschaftspflicht, Transparenzgebot sowie Autoritäts- und Verantwortungsketten, welche Politik und Verwaltung verbinden. Sie bilden den Rahmen, der die Aktivitäten der öffentlichen Verwaltung ermöglicht und, im Sinne von Rechtsstaat und Demokratie, auch einschränkt (Holzinger et al. 2013).
 
 Gleichzeitig  ist  Gesetzeskonformität  im  täglichen  Verwaltungshandeln  nicht ausreichend. Gesetzliche Regelungen können mit der rasanten Entwicklung neuer Technologien wie KI nicht Schritt halten. Deshalb ist es hier besonders wichtig, die Verankerung der öffentlichen Verwaltung in gesellschaftlichen Werten, die einer modernen, offenen, demokratischen Grundhaltung entsprechen, zu betonen.
@@ -142,11 +179,19 @@ Im Kontext der 'Ethics Guidelines for Trustworthy AI' der 'EU High-Level Expert 
 
 1 Bias in der KI stellt eine Unverhältnismäßigkeit bzw. Verzerrtheit beim Output von maschinenlernenden Algorithmen dar, die beispielsweise aufgrund von systematischen Fehlannahmen und Vorurteilen bei der Entwicklung des KI-Algorithmus oder aufgrund unvollständiger, unausgewogener bzw. verzerrter Eingabedaten erfolgen kann. KI-Systeme, deren Entscheidungen oder Vorhersagen einen solchen Bias enthalten bzw. davon beeinflusst sind, bilden die Realität nicht wirklichkeitsgetreu ab und können daher in weiterer Folge zur Diskriminierung von Menschen führen (vgl. Dilmegani 2022).
 
+
+<!-- PAGE 11 -->
+
+
 Fairness  und  Diskriminierungsverbot,  soziale  und  ökologische  Nachhaltigkeit  sowie Rechenschaftspflicht (vgl. auch Jobin et al. 2019).
 
 Diese Prinzipien haben vor dem Hintergrund der Aufgabenstellungen der öffentlichen Verwaltung für deren Arbeit eine besondere Bedeutung, wobei hier eine Analyse der gegenwärtigen Bedingungen sowie Vorschläge für ein weiteres Vorgehen gemacht werden sollen.
 
 Vor diesem Hintergrund zeigt dieser Leitfaden die Voraussetzungen und Hürden auf, die bei der Integration von KI in die öffentliche Verwaltung zu beachten sind. Mit dem Ziel, einen robusten Rahmen für die Implementierung von KI in der öffentlichen Verwaltung zu schaffen, wird ein spezielles Augenmerk auf ethische Prinzipien und regulatorischen Diskussionen gelegt. Die Struktur dieses Leitfadens ist dabei wie folgt: zuerst wird der Hintergrund des Projektes, das zu diesem Leitfaden geführt hat, umrissen. Dann wird der Begriff KI erklärt, der Handlungsbedarf in Bezug auf deren Einsatz in der öffentlichen Verwaltung geklärt, sowie Chancen und Herausforderungen beim Einsatz von KI in der Verwaltung im Hinblick auf Gesellschaft, Ökologie und digitale Souveränität diskutiert. In einem weiteren Schritt geht es um die Abwägung, ob KI in einem gegebenen Fall in der Verwaltung eingesetzt werden soll oder nicht. Als Nächstes werden einerseits der Rechtsrahmen und andererseits die ethischen Prinzipien und Standards beim Einsatz von KI, sowie Möglichkeiten der Folgenabschätzung besprochen. Im letzten Abschnitt werden  schließlich  Empfehlungen  für  nächste  Schritte  auf  einem  Weg  hin  zu  einer menschenzentrierten KI gemacht.
+
+
+<!-- PAGE 12 -->
+
 
 ## 2  Das Projekt DVuE und seine Ziele
 
@@ -164,6 +209,10 @@ Das Projekt 'Digitale Verwaltung und Ethik' beschäftigte sich von Juni 2022 bis
 Der vorliegende Praxisleitfaden basiert auf verschiedenen Quellen. Neben Recherchen in Bereichen wie KI-Ethik, ethische Softwareentwicklung, Verwaltung und Digitalisierung, Debatten im Projektteam und mit den Auftraggeber:innen im BMKÖS, waren die Diskussionen in fünf Workshops von besonderer Bedeutung. Die Verwaltungsbediensteten, die an den Workshops teilgenommen haben, haben dabei aktiv Ideen formuliert und Vorschläge  sowie  Anliegen  eingebracht,  die  für  die  Erarbeitung  dieses  Leitfadens bedeutsam waren.
 
 In  den  Workshops  wurden  einerseits  neue  Ideen  durch  Vorträge,  die  unterschiedliche technische, sozialwissenschaftliche, Ethik-, verwaltungsbezogene und zivilgesellschaftliche Perspektiven eröffneten, getestet und diskutiert. Andererseits wurden Lernprozesse auf Seiten des Projektteams wie auch der Workshop-Teilnehmer:innen durch zahlreiche Diskussions- und Feedbackelemente ermöglicht.
+
+
+<!-- PAGE 13 -->
+
 
 ## 2.2  Workshops
 
@@ -187,6 +236,10 @@ Arbeitsschwerpunkte, welche im Rahmen des Workshops bearbeitet wurden, beinhalte
 - Was kommt auf die österreichische Bundesverwaltung im Hinblick auf KI-Prinzipien und AI-Act zu?
 - Wie reagiert die österreichische Bundesverwaltung auf KI-Prinzipien und AI-Act?
 
+
+<!-- PAGE 14 -->
+
+
 Die Diskussionen und Inhalte der Workshops reichten von Definitionen und Anwendungen von KI über Beispiele für maschinelles Lernen wie Chatbots und den Nutzen von KI im Personalwesen und bei der Prozessoptimierung bis hin zu ethischen Bewertungsinstrumenten für KI-Anwendungen und der Bedeutung der digitalen Souveränität. Die Workshops beschäftigten sich auch mit der Einführung von KI und den damit verbundenen Anforderungen in der Verwaltung, der Kompetenzentwicklung der Mitarbeiter:innen und der Reaktion der Verwaltung auf KI-Grundsätze und AI-Act.
 
 In interaktiven Dialogen wurden Aspekte wie Vertrauen in Institutionen, öffentliche KI-Akzeptanz, Kompetenzentwicklung, Verwaltungskooperation und die ökologischen Auswirkungen von KI behandelt. Darüber hinaus wurden 'Reallabore' vorgeschlagen, um neue KI-Anwendungen und -Tools in einem geschützten Umfeld zu testen. Die Workshops entpuppten sich letztlich als kollektive Lernräume, in denen die Teilnehmer:innen aus verschiedenen Fachbereichen ihr Wissen und ihre Erfahrung zu KI-Themen zusammenführten und so eine symbiotische Lernerfahrung förderten.
@@ -196,6 +249,10 @@ Vortragende bei den Workshops waren die Mitglieder des AIT AI Ethics Labs, Peter
 Beim  Wissenschaftsworkshop  bereicherten  die  externen  Vortragenden  Mirko Schäfer von der Universität Utrecht, Jaana Leikas und Mika Nieminen von der finnischen Forschungseinrichtung VTT sowie Wolfgang Kabelka vom Bundesrechenzentrum das Programm mit ihren Beiträgen.
 
 Zu den externen Referent:innen des NGO-Workshops gehörten Rania Wazir von leiwand.ai, Benjamin Hättasch vom Computer Chaos Club und der TU Darmstadt sowie Matthias Spielkamp von der internationalen NGO AlgorithmWatch.
+
+
+<!-- PAGE 15 -->
+
 
 ## 3  Technik: Was ist KI?
 
@@ -213,6 +270,10 @@ Definition: Künstliche Intelligenz
 
 Hinsichtlich  der  Problemlösungsfähigkeit  wird  außerdem  häufig  zwischen schwacher und starker KI unterschieden (Buxmann und Schmidt 2021, 6):
 
+
+<!-- PAGE 16 -->
+
+
 - Schwache KI bezeichnet Systeme, die spezifische Aufgabenstellungen in einem Anwendungsbereich anhand gegebener Eingabedaten lösen. Auf Basis der Eingabedaten wird eine Ausgabe als Lösung der Aufgabenstellung erreicht. Typische Aufgabenstellungen sind die Erkennung natürlicher gesprochener Sprache, die Transkription von Handschrift oder die Objekterkennung in Bildern.
 - Starke KI bezeichnet Systeme, die selbständig handeln, lernen, sich weiterentwickeln, und neue, bislang unbekannte Aufgabenstellungen lösen können. Sie entwickeln Lernstrategien ohne jegliche menschliche Intervention, planen Aufgaben und setzen Ziele eigenständig. Sie weisen also Fähigkeiten auf, die üblicherweise ausschließlich menschlicher Intelligenz zugeschrieben werden.
 
@@ -224,6 +285,10 @@ Dennoch gelten auch diese Arten der Anwendungen gemeinhin als Beispiele schwache
 
 Darüber  hinaus  können  KI-Systeme  anhand  der  Art  der  Wissensrepräsentation  in symbolische und sub-symbolische Systeme unterteilt werden (Döbel et al. 2018, 11). Symbolische Systeme verwenden explizite und nachvollziehbare Regeln und Symbole, um Wissen darzustellen  und  logische  Schlussfolgerungen  abzuleiten.  Im  Gegensatz dazu nutzen sub-symbolische Systeme implizites, numerisch dargestelltes Wissen, das für  Menschen nicht unmittelbar lesbar ist. Diese Systeme basieren auf numerischen Daten und statistischen Methoden und verwenden maschinelles Lernen und neuronale Netze, um Muster und Zusammenhänge in den Daten zu erkennen. Dies ist der Grund, warum Systeme dieser Art oft metaphorisch als 'Schwarzer Kasten' (engl. ' Black Box ') bezeichnet  werden,  die  kein  Nachvollziehen  der  Entscheidungsfindung  ermöglichen.
 
+
+<!-- PAGE 17 -->
+
+
 Allerdings  gibt  es  Ansätze  der  Erklärbarkeit  (engl. explainability )  die  versuchen,  die entscheidungsrelevanten Informationen zumindest teilweise transparent zu machen. Für konkrete Anwendungen in der öffentlichen Verwaltung ist derzeit vor allem die Kategorie der Schwachen künstlichen Intelligenz, insbesondere datengetriebene Methoden des maschinellen Lernens, von Bedeutung. Dabei werden drei Formen von Lernen unterschieden (Russel und Norvig 2012, 811):
 
 - Nicht-überwachtes Lernen (engl. unsupervised learning) ist das automatisierte Lernen aus Beispielen, bei welchem dem System Beispiele der gewünschten Ausgabe gezeigt werden. Die Clusteranalyse ist ein Beispiel zur Bildung von Gruppen aus einer Menge einzelner Elemente. Ein Beispiel dafür ist die Clusterung von Städten nach relevanten Merkmalen, wie zum Beispiel der Einwohnerzahl, Fläche, BIP pro Kopf, etc. Ähnliche Städte werden dann hinsichtlich dieser Merkmale zu Gruppen (Clustern) zusammengefasst, wobei sich Mitglieder einer Gruppe untereinander möglichst ähneln und zugleich ein möglichst großer Unterschied zu Mitgliedern anderer Gruppen besteht.
@@ -231,6 +296,10 @@ Allerdings  gibt  es  Ansätze  der  Erklärbarkeit  (engl. explainability )  di
 - Bestärkendes Lernen (engl. reinforcement learning) umfasst verschiedene Methoden des maschinellen Lernens bei welchen ein System selbstständig eine Strategie entwickelt, um bei Belohnung für Erfüllung bzw. Bestrafung für Nicht-Erfüllung die maximale Belohnung hinsichtlich bestimmter Zielvorgaben zu erreichen. Ein einfaches Beispiel ist die auf Belohnung basierende Entscheidung für den nächsten Zug in einem Brettspiel, um mit jedem Zug entsprechend der maximalen Siegwahrscheinlichkeit auch die maximale Belohnung anzustreben.
 
 Im  vergangenen  Jahrzehnt  sind  die  Menge  der  verfügbaren  Daten  und  die  Rechenleistung exponentiell angestiegen. Neue Technologien wie Cloud Computing und Big Data ermöglichen außerdem eine immer effizientere Verarbeitung und Analyse dieser Datenmengen.  Unter  diesen  Voraussetzungen  konnten  Methoden  des  Maschinellen Lernens  in  zahlreichen  Anwendungsbereichen  ihre  Leistungsfähigkeit  unter  Beweis stellen. Buxmann und Schmidt beschreiben dazu Anwendungen aus unterschiedlichen Domänen und der Verwendung verschiedener Ansätze Künstlicher Intelligenz (Buxmann und Schmidt 2021, 41ff).
+
+
+<!-- PAGE 18 -->
+
 
 Der Begriff Big Data bezieht sich eigentlich auf große Mengen von Daten, die in hoher Geschwindigkeit und Vielfalt generiert werden. Der Begriff umfasst darüber hinaus aber auch die Methoden zur Sammlung, Speicherung, Verarbeitung und Analyse dieser Daten, um Erkenntnisse zu gewinnen und Regelhaftigkeiten zu erkennen. Ein Beispiel ist die Analyse des Kaufverhaltens bestimmter Alters- und Interessensgruppen im Internet, für die auf großen Verkaufsplattformen sehr große Datenmengen in Bezug auf das Navigationsverhalten und die Kaufabschlüsse der Nutzer:innen verwendet werden. KI stellt Schlüsseltechnologien für die Big Data-Analyse bereit. Die Verarbeitung der Daten kann also, muss aber nicht, mit Methoden der KI   durchgeführt werden.
 
@@ -244,11 +313,19 @@ Wissen: neuronale Netze
 
 Da es - wie zu Beginn des Abschnitts erläutert - keine einheitliche Definition von Künstlicher Intelligenz gibt, die allgemein akzeptiert wird, gibt es auch keine eindeutige Liste von Kriterien, die es ermöglicht, zu entscheiden, ob eine Anwendung oder ein System als Künstliche Intelligenz gilt oder nicht.
 
+
+<!-- PAGE 19 -->
+
+
 Entscheidend im Rahmen dieses Leitfadens ist jedoch nicht die Frage, ob eine Anwendung oder ein System spezifische technische Kriterien einer Künstlichen Intelligenz erfüllt, sondern ob die Anwendung oder das System Aufgaben von Entscheidungsrelevanz übernimmt, das heißt, entweder selbstständig Entscheidungen tri/fft oder Informationen für einen Menschen in Entscheidungsposition aufbereitet.
 
 Wissen: KI im Leitfaden
 
 Besonders wichtig ist hier die Frage, welche Auswirkungen durch KI unterstützte oder beeinflusste  Entscheidungen  möglicherweise  auf  Individuen  und  die  Gesellschaft haben. Wird dieses Kriterium in den Vordergrund gerückt, ist es nicht mehr primär von Bedeutung, ob es sich um ein einfaches regelbasiertes System oder um ein auf großen Datenmengen trainiertes  neuronales  Netz  als  technologische  Grundlage  handelt.  In Abschnitt 10 zur KI-Folgenabschätzung wird der diesbezüglich relevante Aspekt der Auswirkungen der KI-Technologien näher betrachtet.
+
+
+<!-- PAGE 20 -->
+
 
 ## 4  Handlungsbedarf
 
@@ -259,6 +336,10 @@ In Australien wurde das Robodebt System eingesetzt, im Rahmen dessen die austral
 In den Niederlanden kam es zu Unregelmäßigkeiten rund um die Auszahlung der Sozialleistung 'Kinderbetreuungsgeld'. Dabei wurden falsche Betrugsvorwürfe der Steuer- und Zollverwaltung erhoben, als diese versuchte die Zuteilung von Kinderbetreuungsgeldern zu automatisieren. Rund 26.000 Eltern wurden zu Unrecht betrügerische Leistungsanträge unterstellt und Zulagen mussten vollständig zurückgezahlt werden. Die Rückzahlungen umfassten zum Teil mehrere € 10.000, was zu Privatkonkursen, zum Entzug von Sorgerechten und schließlich zu mehreren Suiziden führte. Der Skandal führte 2021 schließlich zum Rücktritt der Regierung und zu Neuwahlen.
 
 Anwendungsfall: Beispiele aus Australien und den Niederlanden
+
+
+<!-- PAGE 21 -->
+
 
 Beide Skandale blieben über mehrere Jahre hindurch unentdeckt, unter anderem aufgrund von 'Automation Bias', also der in experimentellen Studien gut dokumentierten Neigung  von  Menschen  automatisierten  Verfahren  mehr  Vertrauen  zu  schenken  als menschlichen Entscheidungen (Goddard et al. 2012). Der beste Weg einem derartigen Bias entgegenzuwirken ist Sensibilisierung und Ausbildung, insbesondere zum besseren Verständnis von Potentialen, Arbeitsweisen und Einsatzformen von KI, hier KI-Literacy genannt (siehe Abschnitte 5 und 11).
 
@@ -274,6 +355,10 @@ Human in the Loop: heißt übersetzt 'Mensch in der Schleife' und bedeutet im Ko
 
 Wissen: Human in the Loop
 
+
+<!-- PAGE 22 -->
+
+
 Im  Hinblick  auf  die  Digitalisierung  und  Einsatzgebiete  wie  die  Ermittlung  und  Auszahlung sozialer Leistungen sind in Bezug auf die Verwaltung besonders große Effizienzerwartungen vorhanden. Grundsätzlich sind diese Bereiche der öffentlichen Verwaltung vergleichsweise  weniger  problematisch  als  etwa  Rechtsetzung  und  Rechtsprechung. Die angeführten internationalen Beispiele zeigen allerdings, dass auch im Bereich der Leistungsverwaltung bei wenig reflektiertem Einsatz von digitalen Technologien umfangreicher Schaden entstehen kann.
 
 Tatsächlich sind die Chancen und Risiken nicht in jedem Bereich gleich gelagert. So ist die Einführung von Bürger:innen im Regelfall sehr gut angenommenen Chatbots ('WienBot', 'FinanzOnline Fred') als rund um die Uhr zur Verfügung stehende Ergänzung zu anderen Informationsmöglichkeiten oder von Mobilitäts-Apps ('ÖBB Scotty', 'WienMobil') grundsätzlich weniger problematisch: im Regelfall halten sich potentielle negative Folgen einer beispielsweise gebiasten / verzerrten Empfehlung in Grenzen.
@@ -288,6 +373,10 @@ Die koreanische Firma Scatter Lab veröffentlichte im Dezember 2020 einen Chatbo
 
 Anwendungsfall: Chatbot
 
+
+<!-- PAGE 23 -->
+
+
 Gänzlich anders gelagert sind die Bereiche der Rechtsetzung und der Rechtsprechung. Hier sind die Gebote von Transparenz, Nachvollziehbarkeit, Rechenschaftspflicht und Verhinderung von Bias von zentraler Bedeutung. So erscheint der Einsatz von algorithmischen Entscheidungsunterstützungssystemen vor dem Hintergrund der Eigenschaften gegenwärtiger  Technologien  hier  nur  in  peripheren,  beispielsweise  vorbereitenden, Anwendungsbereichen sinnvoll.
 
 Die  öffentliche  Verwaltung  hat  unter  den  staatlichen  Institutionen  einen besonderen Stellenwert, weil sie in der überwiegenden Mehrzahl der Fälle den Kontaktpunkt der Bürger:innen mit dem Staat darstellt und damit auch für den Staat steht. Somit spielt für das Vertrauen der Bürger:innen in den Staat das Vertrauen in die öffentliche Verwaltung  eine  zentrale  Rolle.  Außerdem  wird  die  Arbeit  der  Verwaltung  von  der demokratischen Öffentlichkeit in besonderer Weise an Werten wie Rechtsstaatlichkeit, Rechenschaft, Transparenz, aber auch Gleichbehandlung, Menschenwürde und Sicherheit gemessen.
@@ -295,6 +384,10 @@ Die  öffentliche  Verwaltung  hat  unter  den  staatlichen  Institutionen  eine
 In  Österreich  belegen  Meinungsumfragen  ein  anhaltend  hohes  Vertrauen  in staatliche Institutionen wie Polizei, Bundesheer, Universitäten, Gerichtsbarkeit, Schulen und Finanzämter (OGM 2022). Wie die im Verlauf der letzten Jahre stark schwankenden Werte anderer öffentlicher Institutionen aus dem Bereich von Politik und Religion zeigen, sind derartige Vertrauenswerte allerdings nicht garantiert.
 
 Somit trägt die Verwaltung bei der Anwendung neuer Technologien wie im Fall der  Digitalisierung  eine  hohe  Verantwortung:  Hier  ist  bei  der  Veränderung  der  Entscheidungsprozesse besondere Achtsamkeit geboten. Vor diesem Hintergrund bietet dieser Leitfaden einen wichtigen Ansatzpunkt für die Beschäftigung mit Ethik bei der Einführung von KI.
+
+
+<!-- PAGE 24 -->
+
 
 ## 5  Chancen und Herausforderungen beim Einsatz von KI in der Verwaltung
 
@@ -317,6 +410,10 @@ Die öffentliche Verwaltung ist genauso wie andere Sektoren von den schnellen Fo
 - Verhaltenssteuerung durch Anreizsysteme und / oder Druck (Ampelsysteme, Gamification, Punktevergabe etc.),
 - eigene Systeme wie z. B. Plattformarbeit.
 
+
+<!-- PAGE 25 -->
+
+
 Immer mehr Dienstleistungen werden über Online-Plattformen vermittelt und abgewickelt, darunter Fahrradbot:innen, Reinigungskräfte, Kreativschaffende, Übersetzer:innen, Clickworker:innen und Fahrer:innen. Diese Form der Arbeitsorganisation bietet für Arbeitssuchende aufgrund der geringen Einstiegsbarrieren (z.  B. keine abgeschlossene Ausbildung bzw. Sprachkenntnisse erforderlich) Vorteile. Allerdings basieren Geschäftsmodelle der Plattformen häufig auf der (Schein-)Selbstständigkeit der Beschäftigten, wodurch die Unternehmen sich ihrer sozialen Verantwortung entziehen und für Arbeitnehmer:innen das Risko der Ausbeutung besteht.
 
 Wissen: Plattformarbeit
@@ -324,6 +421,10 @@ Wissen: Plattformarbeit
 Ein zentrales Argument für die Einführung von KI ist die erwartete Effizienzsteigerung von Arbeits- und Verwaltungsprozessen. Im Allgemeinen birgt die Einführung von KIAnwendungen das Potential, den Arbeitsaufwand für Verwaltungsbedienstete zu verringern. Dies gilt insbesondere für Routinetätigkeiten, wie zum Beispiel die Ausstellung von Dokumenten und Zertifikaten oder Beratung zu Themen, die häufig nachgefragt werden. KI-Anwendungen in der öffentlichen Verwaltung bringen jedoch auch Herausforderungen in Bezug auf die Akzeptanz der Mitarbeiter:innen mit sich. Ein besonderes Risiko ist die Auslagerung der Entscheidungsfindung von Menschen auf KI-Systeme, wodurch möglicherweise Risiken der Verletzung des Datenschutzes bzw. der Benachteiligung von Mitarbeiter:innen entstehen. Insbesondere die Erkennung von 'abweichendem' Verhalten im Sinne einer Optimierung der Arbeitseffizienz kann auf ungerechten Annahmen basieren und somit zur Diskriminierung von Arbeitnehmer:innen führen.
 
 Bias in der KI stellt eine Unverhältnismäßigkeit bzw. Verzerrtheit beim Output von maschinenlernenden Algorithmen dar, die beispielsweise aufgrund von systematischen Fehlannahmen und Vorurteilen bei der Entwicklung des KI-Algorithmus oder aufgrund unvollständiger, unausgewogener bzw. verzerrter Eingabedaten erfolgen kann. KI-Systeme, deren Entscheidungen oder Vorhersagen einen solchen Bias enthalten bzw. davon beeinflusst sind, bilden die Realität nicht wirklichkeitsgetreu ab und können daher in weiterer Folge zur Diskriminierung von Menschen führen (vgl. Dilmegani 2022). Geschlechterbias (engl. gender bias) bezeichnet beispielsweise in natürlicher Sprache enthaltene voreingenommene Vorstellungen oder Erwartungen, die über die Fähigkeiten, Eigenschaften und Rollen von Menschen aufgrund ihres Geschlechts urteilen. Ein prominentes Beispiel aus der Vergangenheit war ein KI-basiertes System, welches der Amazon-Konzern ab 2014 zur Vorauswahl von Bewerber:innen eingeführt hatte (Dastin 2022). Das System verwendete
+
+
+<!-- PAGE 26 -->
+
 
 zur Bewertung aktueller Bewerber:innen historische Daten. Da sich jedoch in der Vergangenheit überwiegend männliche Kandidaten beworben hatten, wurden männliche gegenüber weiblichen Kandidat:innen systematisch von der KI-Anwendung bevorzugt.
 
@@ -339,6 +440,10 @@ Um eine erfolgreiche Einführung von KI-Systemen zu gewährleisten, ist es von e
 
 Wissen: KI-Kompetenzen in der Verwaltung
 
+
+<!-- PAGE 27 -->
+
+
 ## 5.2  KI in der Verwaltung und Auswirkungen auf die Bevölkerung
 
 Der  Einsatz  von  KI-Anwendungen  in  der  öffentlichen  Verwaltung  hat  nicht  nur  Auswirkungen  auf  die  Mitarbeiter:innen  des  öffentlichen  Sektors,  sondern  auch  auf  die Bürger:innen. Ein Grund dafür ist, dass der Einsatz von KI in der öffentlichen Verwaltung zur  Einführung  neuartiger  oder  automatisierter  Dienstleistungen  bzw.  Bearbeitungsformen für die Bürger:innen führt. Beispiele dafür sind in Österreich die App 'Digitales Amt', das Unternehmensserviceportal und FinanzOnline. In diesem Zusammenhang ist die Verantwortung der öffentlichen Verwaltung als Vermittler zwischen Bürger:innen und Politik entscheidend. Vertrauen, Akzeptanz und Legitimität sind in diesem Sinne wichtige Faktoren. Ethische Belange, einschließlich Transparenz, Fairness und Datenschutz, sind ebenfalls von Bedeutung. Die Beurteilung der Auswirkungen von KI auf die Bürger:innen, die Ermittlung des Mehrwerts für die Bürger:innen und die Klärung ethischer Fragestellungen sind daher vor dem Einsatz von KI unbedingt in den Vordergrund zu stellen.
@@ -353,12 +458,20 @@ Anwendungsfall: Chatbot Kamu in Finnland
 
 2 Chatbot Kamu | Maahanmuuttovirasto (migri.fi)
 
+
+<!-- PAGE 28 -->
+
+
 - Effizienz und Personalisierung: KI kann Routineaufgaben automatisieren und so die manuelle Arbeit von Verwaltungsbediensteten reduzieren, was zu einer schnelleren Bereitstellung von Dienstleistungen für die Bürger:innen führen kann. Außerdem kann KI dazu beitragen, die Bedürfnisse der einzelnen Bürger:innen schneller zu erkennen und so personalisierte Dienstleistungen anzubieten. KI hat   beispielsweise das Potenzial, die Sozialfürsorge zu verbessern, indem sie gefährdete Personen mit besonderen Bedürfnissen frühzeitig erkennt und maßgeschneiderte Unterstützung bietet. Durch die Analyse verschiedener Datenquellen können KI-Algorithmen schnell und effizient diejenigen identifizieren, die Unterstützung benötigen. Durch die proaktive Erkennung von Personen, die möglicherweise Unterstützung benötigen, kann die öffentliche Verwaltung ein rechtzeitiges Eingreifen und die Bereitstellung personalisierter Dienstleistungen sicherstellen, die den individuellen Bedürfnissen der Betroffenen entsprechen.
 - Zugänglichkeit und Chancengleichheit: KI kann dazu beitragen, öffentliche Dienstleistungen für Bürger:innen, die beispielsweise in abgelegenen Gebieten leben, durch die Erbringung von verwaltungsbezogenen Dienstleistungen aus der Ferne zugänglicher zu machen. Darüber hinaus können KI-Anwendungen die Bürger:innen unterstützen, z.  B. beim Ausfüllen von Formularen oder bei der Bewältigung von Sprachbarrieren bei Fragen.
 
 Neben ihren vielfältigen Vorteilen birgt die fortschreitende Entwicklung von KI auch das Potenzial, eine digitale Kluft ('digital divide') zu schaffen oder zu verstärken. Diese digitale Kluft äußert sich in einer erheblichen Diskrepanz zwischen Personen, die neue Technologien beherrschen, und solchen, die dies nicht tun. Bedauerlicherweise trägt eine derartige Kluft zur Verschärfung der bestehenden sozialen Ungleichheiten und zur weiteren Ausgrenzung bestimmter gesellschaftlicher Gruppen bei. Um die unerwünschten Folgen eines solchen Szenarios abzuwenden, ist es wichtig, die Bevölkerung mit den erforderlichen Kompetenzen auszustatten, um KI-Anwendungen optimal nutzen zu können. In diesem Zusammenhang kommt der KI-Kompetenz (KI-Literacy) eine zentrale Rolle zu, denn sie stellt sicher, dass der oder die Einzelne nicht unangemessen benachteiligt wird. KI-Kompetenz umfasst dabei nicht nur ein Verständnis grundlegender KI-Konzepte, sondern auch die Kultivierung von Fähigkeiten zum kritischen Denken, die für die effektive Nutzung von KI-basierten Technologien erforderlich sind.
 
 Wissen: Bekämpfung der digitalen Kluft durch KI-Kompetenz in der Bevölkerung
+
+
+<!-- PAGE 29 -->
+
 
 ## Vertrauensprobleme / Akzeptanzprobleme
 
@@ -373,6 +486,10 @@ Je weniger die Bevölkerung über die eingesetzten KI-Anwendungen informiert ist
 ## Maßnahmenoptionen
 
 Im Folgenden geben wir eine Reihe von Handlungsempfehlungen, die der öffentlichen Verwaltung helfen, die Akzeptanz von KI-basierten Diensten zu fördern und damit den Einsatz von KI-Anwendungen für öffentliche Dienstleistungen zu erleichtern. Diese Maßnahmen sind als Ergänzung zur Beachtung allgemeiner Leitprinzipien (wie Transparenz, Sicherheit, Rechenschaftspflicht, Vermeidung von Verzerrungen usw.) für die Entwicklung und den Einsatz vertrauenswürdiger KI zu sehen. Die Maßnahmen, auf die im Folgenden kurz eingegangen wird, sind erstens Co-Kreation und Partizipation zur Förderung der Bürgerbeteiligung bei der Entwicklung von KI-Anwendungen und der Akzeptanz und
+
+
+<!-- PAGE 30 -->
+
 
 Einhaltung  ethischer  Standards.  Zweitens  die Benutzerfreundlichkeit  und  KI-Literacy für  die  Öffentlichkeit zur  Schaffung  von  Transparenz  und  als  Beitrag  zur  Aufklärung über KI-Anwendungen, um Chancengleichheit und digitale Kompetenzen in öffentlichen Dienstleistungen zu fördern. Und schließlich Opt-out-Möglichkeiten , welche Bürger:innen Kontrolle darüber geben, welche ihrer Daten von der öffentlichen Verwaltung gespeichert und verarbeitet werden, und zudem die Privatsphäre hinsichtlich der Verwendung der Daten durch KI-basierte Dienste der öffentlichen Verwaltung gewährleisten.
 
@@ -390,6 +507,10 @@ Wenn  KI-Anwendungen  für  öffentliche  Dienstleistungen  der  Verwaltung  ein
 
 Um Chancengleichheit beim Einsatz von KI-Anwendungen für alle Bürger:innen zu  garantieren,  könnten  Initiativen  gesetzt  werden,  die  darauf  abzielen,  öffentliches Wissen über KI-Technologien und Anwendungen zu erweitern. Ein Beispiel dafür ist die 'Digitale Kompetenzoffensive' von Bundesministerium für Finanzen (BMF), Bundesministerium für Kunst, Kultur, öffentlichen Dienst und Sport (BMKÖS), Bundesministerium für Wirtschaft und Arbeit (BMWA) und Bundesministerium für Bildung, Wissenschaft und Forschung (BMBWF), die das Ziel verfolgt, digitale Basiskompetenzen in der Bevölkerung sowie IT-Kompetenzen für die Wirtschaft zielgerichtet zu verbessern. Ressorts, Länder, Sozialpartner,  Städte  und  Gemeinden,  Unternehmen  und  Bildungsanbieter  wollen unter  wissenschaftlicher  Begleitung  beim  Thema  digitale  Kompetenzen  strategisch abgestimmt zusammenarbeiten. Ein Schlüsselprojekt der Digitalen Kompetenzoffensive ist das 2023 vorgestellte österreichische Kompetenzmodell für digitale Kompetenzen
 
+
+<!-- PAGE 31 -->
+
+
 'DigComp 2.3 AT' im europäischen DigComp 2.1-Referenzrahmen. Letzteres ist ein von der Europäischen Kommission herausgegebenes Dokument, das sich mit dem Themenkomplex digitale Kompetenzen von Bürger:innen befasst und beschreibt, was digitale Kompetenzen konkret beinhalten.
 
 ## Opt-out Möglichkeiten
@@ -405,6 +526,10 @@ Im  Diskurs  um  die  Entwicklung  nachhaltiger  Systeme  künstlicher  Intellig
 Im vergangenen Jahrzehnt haben insbesondere datengetriebene Methoden des Maschinellen Lernens in der Künstlichen Intelligenz weite Verbreitung erfahren. Aufgrund des erheblichen Ressourcenaufwands bei der Herstellung und Nutzung dieser Systeme haben ökologische Aspekte, wie der damit verbundene CO2 Verbrauch, in den letzten Jahren zunehmend das öffentliche Interesse geweckt.
 
 Ein  Beispiel  für  die  CO2-Bilanz  bei  der  Erstellung  von  statistischen  Sprachmodellen ist die Verwendung vieler miteinander verbundener Computer (sogenannte Computer-Cluster) und Rechenzentren, um große Mengen an Textdaten zu verarbeiten und auszuwerten. Während des Lernprozesses werden beim maschinellen Lernen häufig viele  verschiedene  Modelle  und  Algorithmen  wiederholt  getestet,  um  ein  optimales Ergebnis zu erzielen. Allerdings erfordert jeder einzelne diese Testdurchläufe erhebliche Rechenleistung, was insgesamt zu einem hohen Energieverbrauch und somit zu erhöhten Treibhausgasemissionen führt.
+
+
+<!-- PAGE 32 -->
+
 
 Laut einer Studie der Universität Massachusetts Amherst (Strubell et al. 2019) beträgt der ökologische Fußabdruck für das Training mehrerer großer KI-Modelle zur Spracherkennung ca. 284 Tonnen CO2.
 
@@ -422,6 +547,10 @@ Schließlich werden für den Betrieb eines KI-Systems bis zum Ende des Lebenszyk
 
 Eine Reihe von Maßnahmen und Entscheidungen, die auch seitens der öffentlichen Verwaltung beeinflusst bzw. gesteuert werden können, bergen das Potential den Ressourcenverbrauch zu reduzieren und so die negativen Auswirkungen auf die Umwelt zumindest abzumildern:
 
+
+<!-- PAGE 33 -->
+
+
 - Wird durch die finale Optimierung eines Algorithmus nur eine geringfügige Verbesserung erreicht und der Energie- und Ressourcenaufwand ist zugleich unverhältnismäßig hoch, sollte überlegt werden, welche Genauigkeit im vorliegenden Anwendungsszenario wirklich benötigt wird. Sowohl in einer Ausschreibung als auch in der Entwicklung können durch die Einschränkung der geforderten Genauigkeit Energie und Ressourcen gespart werden.
 - Die Erstellung generalisierter Modelle, die freie Bereitstellung von Erkenntnissen und Ergebnissen (Open Access) und eine Kultur des Teilens vereinfacht die Übertragbarkeit auf neue Anwendungsszenarien und gewährleistet die Wiederverwendbarkeit durch andere Organisationen, was ein erhebliches Potential zur Energie- und Ressourceneinsparung birgt. Die Entwicklung einer Strategie und eigener Richtlinien in Bezug auf das Veröffentlichen und Teilen von Erkenntnissen und Ergebnissen kann Synergien zwischen Organisationen der Verwaltung fördern.
 - Bereits bei der Planung der Einführung einer KI-Lösung sollte geprüft werden, welche Formen der Zusammenarbeit und Nutzung technischer Infrastruktur auf lokaler, nationaler, internationaler oder europäischer Ebene möglich sind. Dadurch können Ressourcen gemeinsam genutzt, Fachwissen gebündelt und Standards geschaffen werden.
@@ -430,6 +559,10 @@ Eine Reihe von Maßnahmen und Entscheidungen, die auch seitens der öffentlichen
 Es ist davon auszugehen, dass die Entwicklung und Anwendung von KI-Systemen in vielen Anwendungsbereichen ohne Berücksichtigung ökologischer Nachhaltigkeit erfolgt (Rohde et al. 2021, 20), und dass oft technologische Neuerung und Steigerung der Effizienz im Vordergrund stehen. Die öffentliche Verwaltung verfügt hier über die Möglichkeit, hohe ökologische Standards für die Entwicklung und den Einsatz von KI-Systemen zu setzen, beispielsweise  indem  verbindlicher  Kriterien  für  die  öffentliche  Beschaffung  solcher Systeme definiert und zugrunde gelegt werden.
 
 Die UNESCO hat sich diesbezüglich in ihrer Empfehlung zur Ethik in der Künstlichen Intelligenz dafür ausgesprochen, dass ihre Mitgliedstaaten bei der Auswahl von KI-Methoden aufgrund des potenziellen daten- oder ressourcenintensiven Charakters der Technologien besonders auf die Auswirkungen auf die Umwelt achten sollten (UNESCO 2022, 31). Außerdem seien Technologien mit besserer Daten-, Energie- und Ressourcen-Effizienz zu bevorzugen, und KI-Technologien sollten nicht eingesetzt werden, wenn die Gefahr unverhältnismäßig negativer Auswirkungen auf die Umwelt besteht (UNESCO 2022, 31).
+
+
+<!-- PAGE 34 -->
+
 
 ## 5.4  Digitale Souveränität in der Verwaltung
 
@@ -445,6 +578,10 @@ Sinnvoll  scheint  auch  die  Herstellung  einer  Datensouveränität,  da  Date
 
 Im Hinblick auf das Wissen um Digitalisierung und KI ist die KI-Literacy auch hier von zentraler Bedeutung. Diese kann durch Schulungsmaßnahmen auf verschiedenen Ebenen hergestellt werden (siehe Empfehlungen in Abschnitt 11). Die Zertifizierung von Daten und KI-Modellen kann in Bezug auf digitale bzw. Datensouveränität unterstützend wirken.
 
+
+<!-- PAGE 35 -->
+
+
 Die größte Wirkung kann die öffentliche Verwaltung dabei durch die Vorgabe von Bedingungen und die Definition zu erfüllender Kriterien im Rahmen von Beschaffungsvorgängen erzielen (siehe ebenfalls Abschnitt 11). Die österreichische KI-Strategie 'AIM AT 2030' identifiziert die Beschaffung als 'wichtiges strategisches Instrument […], das zur Forcierung und Marktüberleitung von Innovationen eingesetzt werden kann. Der Staat kann z.  B. als nachfragendes Organ für ethische und vertrauenswürdige KI agieren und dadurch Märkte definieren, Standards setzen und seine Effizienz steigern. Zugleich können innovative Lösungen von Start-ups, jungen Unternehmen und Kleinbetrieben davon profitieren' (BMK und BMDW 2021, 56). Die öffentliche Verwaltung kann dabei durch ihre Vergabetätigkeit eine Vorbildwirkung entfalten. Bei der Beschaffung von KI-Anwendungen für KI-Projekte ist die Innovationsfördernde Öffentliche Beschaffung-Servicestelle (IÖB) ein Ansprechpartner für die Verwaltungsbediensteten. Hier ist neben dem Bundesvergabegesetz auch das White Paper der IÖB-Servicestelle eine erste Orientierung (IÖB 2021). Darüber hinaus sollten bei KI-Anwendungen wichtige ethische Grundsätze, wie sie im 'Kriterien- und Maßnahmenkatalog für KI in der Verwaltung (EKIV)' (siehe Abschnitt 10.1)  ausgeführt  werden,  schon  zu  Beginn  von  Entwicklungsprozessen,  wie  z.  B.  vom 'Ethics by Design'-Ansatz vorgeschlagen (siehe Abschnitte 10.3 und 11), bedacht werden.
 
 Ein  Good-Practice-Beispiel  hinsichtlich  des  Beschaffungswesens  durch  die öffentliche Verwaltung stammt aus Amsterdam. Die Gemeinde Amsterdam legt beim Zukauf von KI-Anwendungen vertraglich einen Rahmen für die Informationen fest, die die Anbieter bereitstellen müssen. Auf diese Weise kann die Gemeinde die Qualität und die Risiken von Anwendungen bewerten, ohne dass der Anbieter gezwungen ist, vertrauliche Unternehmensinformationen herauszugeben. Es gibt drei Arten von Informationen, die mit dem Anbieter in den Vertragsbedingungen vereinbart werden:
@@ -453,9 +590,17 @@ Ein  Good-Practice-Beispiel  hinsichtlich  des  Beschaffungswesens  durch  die �
 - Verfahrenstransparenz: Sie verdeutlicht den Zweck der Anwendung und die Schritte, in denen er erstellt wurde. Zum Beispiel eine Beschreibung der getroffenen Entscheidungen und Annahmen, welche Art von Daten verwendet wurden, und wie einer möglichen Verzerrung entgegengewirkt wurde. So kann überprüft werden, ob die richtigen Maßnahmen zur Qualitätssicherung und Risikominderung getroffen wurden.
 - Erklärbarkeit: Wenn das Ergebnis einer Anwendung jemanden persönlich betri/fft, gelten strengere Regeln. Der Anbieter muss mitwirken, um die Entscheidungsfindung der Anwendung auf individueller Ebene transparent zu machen. Dies wird als 'Erklärbarkeit' einer Anwendung bezeichnet. In weiterer Folge ermöglicht das den Bürger:innen, gegebenenfalls rechtlich gegen eine Entscheidung oder ein Ergebnis vorzugehen (City of Amsterdam 2021).
 
+
+<!-- PAGE 36 -->
+
+
 Diesem Beispiel folgend ist der Zugang zu Quellcodes (d.h. die einer KI-Anwendung zugrundeliegenden und nachvollziehbaren Anweisungen) zugekaufter KI-Anwendungen bedeutsam, um dem Kriterium der Transparenz gerecht zu werden. Ethische Prüfungen der in der Verwaltung verwendeten KI-Systeme sollen von verschiedenen Organisationen mit relevanter Expertise gemeinsam mit den Ministerien durchgeführt werden können, ohne dem Anbieter-Unternehmen Schaden durch eine etwaige Lüftung von Betriebsgeheimnissen zuzufügen.
 
 Gegenüber  Bürger:innen  sollen  KI-Anwendungen  verständlich  erklärt  werden können, z.  B. durch einen Chatbot, der Fragen bezüglich des Einsatzes von KI in der Verwaltung beantwortet ('Mentoring-Bot'). Black-Box Anwendungen, also Applikationen, bei denen der Prozess zwischen Eingabedaten und Ergebnis nicht nachvollziehbar ist, und die keine Form der Erklärbarkeit anbieten, sollten nach Möglichkeit nicht eingesetzt werden, da sie Transparenz- und Vertrauensanforderungen nicht entsprechen. Anders formuliert: Black-Box Anwendungen sollen angewandt werden können, sofern Erklärbarkeit gewährleistet wird.
+
+
+<!-- PAGE 37 -->
+
 
 ## 6  Abwägung: Datengetriebene KI in der Verwaltung, oder nicht?
 
@@ -473,13 +618,25 @@ Bei datengetriebene KI-Technologien lernen Algorithmen die für spezifische Aufg
 
 Für den Fall, dass ein geeigneter Anwendungsfall vorliegt, stellt sich außerdem die grundlegende Frage, ob eine Rechtsgrundlage gegeben ist. Dabei handelt es sich um eine notwendige Voraussetzung, ohne die der Einsatz jeglicher Technologie (eingeschlossen der KI) für die öffentliche Verwaltung nicht ohne Verletzung rechtlicher Vorgaben möglich ist.
 
+
+<!-- PAGE 38 -->
+
+
 Ist das notwendige Kriterium der Rechtskonformität erfüllt, stellt sich die Frage, inwieweit personenbezogene Daten für die Erstellung von Modellen beziehungsweise Optimierung der KI-Technologie involviert sind. Werden hier keinerlei personenbezogene Daten benötigt, wie das beispielsweise bei der Verwendung von UmgebungstemperaturSensordaten der Fall wäre, so ist möglicherweise ein geeignetes Anwendungsfeld für datengetriebene  KI-Technologie  gegeben.  Sind  dagegen  personenbezogene  Daten involviert, so ist zu prüfen, ob datenschutzrechtliche Bedenken vorliegen, die nicht mit Verfahren der Anonymisierung, Pseudonymisierung beziehungsweise durch Abstrahierung ausgeräumt werden können. In jedem Fall ist hier streng auf die Einhaltung der DSGVO zu  achten.  Insbesondere,  um  zu  verhindern,  dass  trotz  des  Einsatzes  von  Verfahren zur Gewährleistung der DSGVO-Konformität mittels einer Verschränkung mit externen Datenquellen letztendlich doch Rückschlüsse auf Einzelpersonen gezogen werden können. In jedem Fall muss bedacht werden, dass selbst dann, wenn alle Anstrengungen zur Einhaltung der DSGVO unternommen werden, bei Vorliegen personenbezogener Daten immer das Risiko der Verletzung datenschutzrechtlicher Vorgaben gegeben ist.
 
 Schließlich ist zu erwähnen, dass datengetriebene Technologien oft sogenannte Basismodelle (engl. Foundation Models) verwenden, die statistische Zusammenhänge aus sehr vielen Eingabedaten, die häufig aus Social Media- und Internet-Datenquellen gesammelt wurden, erkennen. Algorithmen können dann mit dem Training an vergleichsweise wenigen Beispielen für einen spezifischen Anwendungsbereich optimiert werden. Dabei besteht jedoch das Risiko, Verzerrungen, die in den ursprünglichen Daten der Basismodelle enthalten sind, zu übernehmen und dadurch bestimmte Gruppen zu diskriminieren. Neben der Vermeidung von Vorurteilen ist darauf zu achten, dass Minderheiten adäquat repräsentiert sind und die KI-Technologie auch für Randgruppen erprobt wurde. Wurden diese Überprüfungen durchgeführt, ist möglicherweise ein geeigneter Anwendungsfall für datengetriebene KI-Technologie gegeben.
 
+
+<!-- PAGE 39 -->
+
+
 Abbildung 2: Entscheidungsbaum zur Verwendung daten-getriebener KI-Technologie
 
 <!-- image -->
+
+
+<!-- PAGE 40 -->
+
 
 ## 7  Rechtlicher Rahmen
 
@@ -497,6 +654,10 @@ Die zentrale Bedeutung des Rechts als Handlungsgrundlage wird oft als Legalität
 
 Gleichzeitig wird der Großteil des Verwaltungshandelns nicht unmittelbar in Gesetzen beschrieben. Die Verwaltung vollzieht dann nicht unmittelbar gesetzliche Vorschriften, agiert
 
+
+<!-- PAGE 41 -->
+
+
 aber nicht im gesetzesfreien Raum, sondern hält sich an allgemeine rechtsstaatliche Grundsätze bzw. wird aufgrund allgemeiner Aufgabenbestimmungen tätig (Raschauer 2009, 217).
 
 Hinzu kommen noch Freiräume im Sinne von Ermessensentscheidungen, nämlich dort, wo bindende Regelungen nicht vorliegen und Behörden freies Ermessen im Sinne eines Gesetzes haben (Raschauer 2009, 224).
@@ -512,6 +673,10 @@ Da es darüber hinaus nicht wünschenswert ist, grundsätzlich jedes Verwaltungs
 Tatsächlich ist der Einsatz von KI vor dem Hintergrund spezifischer politischer Rahmenbedingungen von Anweisungen und Anforderungen an die Verwaltung zu sehen. Die  öffentliche  Verwaltung  steht  unter  dem  Druck  in  Qualität  und  Quantität  wachsende  Anforderungen  mit  zunehmend  weniger  Personal  bewerkstelligen  zu  müssen. Gesellschaftliche Ansprüche an die öffentliche Verwaltung wandeln sich im Zuge der fortschreitenden Digitalisierung des Alltags ebenfalls. Daher setzt die Anwendung von
 
 3 Also die praktische Anwendung der dem Staat verantworteten Entscheidungsgewalt gegenüber Bürger:innen in einem spezifischem Rechtsgegenstand.
+
+
+<!-- PAGE 42 -->
+
 
 KI dort ein, wo begrenzte Ressourcen effektiver zur Erfüllung von Verwaltungsaufgaben umgesetzt werden können.
 
@@ -536,6 +701,10 @@ Das Verarbeiten von Daten beinhaltet das Erheben, Erfassen, Organisieren, Ordnen
 - für den Datenzugriff gilt, die Mitarbeiter:innen müssen verantwortungsvoll und im Datenumgang geschult sein,
 - im Falle eines Sicherheitslecks sind Betroffene und Datenschutzbehörde zu informieren und weiterer Schaden ist zu verhindern,
 
+
+<!-- PAGE 43 -->
+
+
 - eine etwaige Auslagerung der Datenverwaltung ist mittels Vertrags möglich, wobei Datensicherheit und Verschwiegenheitspflicht gewährleistet und seitens der Auftraggeber überprüft werden müssen.
 
 In den Ministerien gibt es außerdem Datenschutzbeauftragte, die mit dem individuellen Anwendungsfall kontaktiert werden können und über konkret notwendige Maßnahmen im ministeriellen Kontext informieren können.
@@ -554,6 +723,10 @@ Hervorzustreichende Pflichten sind dabei unter anderem auch die Verpflichtung zu
 
 Anwendungsfall: DSGVO
 
+
+<!-- PAGE 44 -->
+
+
 ## 7.3  Die EU regelt KI: der AI Act
 
 Der AI Act der EU (im deutschen Sprachraum teils auch 'KI-Verordnung') markiert einen wegweisenden Schritt zur gesetzlichen Regulierung von KI. Der Rechtsakt soll einen einheitlichen Rechtsrahmen für den Einsatz von KI in der EU schaffen und so sowohl Innovation fördern als auch Missbrauch verhindern. Mit Transparenz- und Überwachungsvorgaben, insbesondere für KI-Systeme mit hohem Risiko, soll der Markt für KI geregelt, das Vertrauen in KI gestärkt sowie der Nutzer:innenschutz gewährleistet werden. Die Auswirkungen des AI Acts werden weit über die Grenzen der EU hinaus spürbar sein, setzen neue Standards für die Regulierung von KI und erfordern eine Neubewertung der Rechtslage in zahlreichen Ländern, einschließlich Österreich.
@@ -568,6 +741,10 @@ Abbildung 3: Risikopyramide AI Act - Bildquelle: Europäisches Parlament⁴
 
 4 https://www.europarl.europa.eu/RegData/etudes/BRIE/2021/698792/EPRS\_BRI(2021)698792\_EN.pdf
 
+
+<!-- PAGE 45 -->
+
+
 Insbesondere Organisationen, die KI-Systeme mit hohem Risiko nutzen, werden strengen Auflagen unterworfen. Dazu gehören umfangreiche Risikobewertungen, das Führen von Aktivitätsprotokollen und die Bereitstellung von Daten zur Überprüfung durch Behörden. Sektoren wie Strafverfolgung, Migration, Infrastruktur, Produktsicherheit und Rechtspflege werden aller Voraussicht nach zu den Bereichen gehören, in denen der Einsatz von KI aufgrund ihres hohen Risikos streng reguliert wird (European Commission 2021c, o. J.).
 
 Kritikpunkte an den vorliegenden Entwürfen zum AI Act kommen vor allem von drei Akteursgruppen (Wirtschaft, Wissenschaft, NGOs).
@@ -575,6 +752,10 @@ Kritikpunkte an den vorliegenden Entwürfen zum AI Act kommen vor allem von drei
 BusinessEurope, eine führende Vertretung von Wirtschaftsinteressen, warnte vor einer erheblichen administrativen Belastung für die Industrie, die von Investitionen in die Entwicklung von KI-Systemen abschrecken und die Wettbewerbsfähigkeit der EU langfristig beeinträchtigen könnte (BusinessEurope 2021). Einige Wissenschafter:innen sehen den Bereich 'KI Systeme' als zu breit definiert, befürchten Überregulierung und fordern Ausnahmen für wissenschaftliche Zwecke und Open Source Anwendungen, um als Forschende und nicht als Anbieter von KI-Systemen eingestuft zu werden. Andere fordern im Gegensatz dazu eine größere Geltungsbreite des AI Acts, der sehr wohl alle Anwendungen in Hochrisikodomänen zum Grundrechtsschutz regulieren sollte, also auch einfachere Algorithmen. Zentrale Risiken zeigen sich auch im Bereich Nachhaltigkeit und bei der auf einer Selbsteinschätzung des Anbieters basierenden Risikoklassifikation, die in den meisten Fällen keine externe Aufsicht verlangt und somit Hochrisikoanwendungen als akzeptabel eingeschätzt werden könnten (Ebers et al. 2021; Madiega 2022). Das EDRi-Netzwerk (European Digital Rights), ein Zusammenschluss von Expert:innen und Nichtregierungsorganisationen (NGOs), fordert einen Fokus auf Grundrechte und den Schutz von Betroffenen von KI-Systemen. Access Now und andere NGOs kritisieren den risikobasierten Zugang des AI Acts und fordern eine rechtebasierte Regulierung sowie Folgenabschätzungen zu Menschenrechten, da sie argumentieren, dass KI unberechenbar sein kann und einige Systeme Menschenrechte grundsätzlich untergraben, zum Beispiel bei Emotionserkennung sowie teilweise in den Bereichen der Polizeiarbeit und Migration (Hidvegi et al. 2021; Madiega 2022; EDRi 2023).
 
 Wissen: Kritik am AI Act
+
+
+<!-- PAGE 46 -->
+
 
 ## 7.4  Weitere EU-Normierungen
 
@@ -589,6 +770,10 @@ Zweitens wurden durch die Richtlinie über KI-Haftung jene Fälle harmonisiert g
 ## Data Governance Act
 
 Um das Vertrauen in die gemeinsame Nutzung von Daten zu stärken, die Mechanismen für die Datenverfügbarkeit zu verbessern und technische Herausforderungen im Zusammenhang mit der Wiederverwendung von Daten zu bewältigen, hat die EU den Data Governance Act eingeführt. Der Rechtsakt soll außerdem die Einrichtung und das Wachstum gemeinsamer europäischer Datenräume in Schlüsselbereichen unter Beteiligung sowohl privater als auch öffentlicher Stellen erleichtern. Wo immer personenbezogene Daten betroffen sind, gilt nach wie vor die DSGVO (European Commission 2022a; 2023).
+
+
+<!-- PAGE 47 -->
+
 
 ## Weitere gesetzgeberische Aktivitäten auf EU-Ebene
 
@@ -608,9 +793,17 @@ Wissen: AIM AT 2023
 
 5 https://www.europarl.europa.eu/legislative-train/theme-a-europe-fit-for-the-digital-age
 
+
+<!-- PAGE 48 -->
+
+
 Die KI-Strategie nimmt auch auf den Einsatz von KI in der Verwaltung Bezug. Die Bundesregierung nimmt sich vor, Maßnahmen zu ergreifen, um einen sicheren Einsatz von KI in der Verwaltung zu gewährleisten. Dabei werden die gesetzlichen Grundlagen, insbesondere im Hinblick auf Datenschutz, unter Berücksichtigung von Nachvollziehbarkeit und Transparenz bei KI-basierten Entscheidungen evaluiert. Ziel ist es, Leitlinien für den Einsatz von KI in der Verwaltung zu definieren, die im Einklang mit den Grundrechten stehen. Des Weiteren strebt die Bundesregierung an, Verwaltungsprozesse im Hinblick auf ihre Eignung für KI zu evaluieren, um die Effizienz, Qualität und Treffsicherheit der Dienstleistungen für Bürger:innen zu verbessern. Ein weiterer Schwerpunkt liegt auf der Ausweitung der Bereitstellung und Nutzung von offenen und nicht personenbezogenen Verwaltungsdaten.  Zudem  plant  die  Bundesregierung  die  Erweiterung  der  Aus-  und Weiterbildungsmodelle für öffentlich Bedienstete im Bereich der Digitalen Kompetenz, einschließlich spezifischer Schulungsprogramme, um den Mitarbeiter:innen die erforderlichen KI-relevanten Fähigkeiten zu vermitteln (BMDW und BMK 2021, 56-59).
 
 Wesentlich ist im Zusammenhang mit der KI-Strategie auch das AI Policy Forum. Diese interministerielle Arbeitsgruppe wurde im November 2021 unter dem gemeinsamen Vorsitz von BMK und BMF eingerichtet und tri/fft sich in regelmäßigen Abständen, um die ressort-übergreifende Umsetzung der KI-Strategie AIM AT 2030 zu begleiten und diese auch weiterzuentwickeln. Als thematisches Forum der Bundesverwaltung soll es außerdem den Austausch über Erfahrungen und Herangehensweise zum Einsatz von KI in den Bundesministerien fördern und aktuelle Fragen zur Künstlichen Intelligenz diskutieren. Ein wesentliches Element des AI Policy Forums ist die Einrichtung von Ad-Hoc Arbeitsgruppen für einzelne Maßnahmen unter Einbindung einschlägiger Expert:innen aus Forschung, Wissenschaft, Wirtschaft, Sozialpartnern, NGOs und der Zivilgesellschaft.
+
+
+<!-- PAGE 49 -->
+
 
 ## 8  Ethische KI: Prinzipien und Leitlinien
 
@@ -626,11 +819,19 @@ Auf europäischer Ebene hat die EU ethische Leitlinien für die Entwicklung von 
 
 6 https://algorithmwatch.org/de/ai-ethics-guidelines-global-inventory/
 
+
+<!-- PAGE 50 -->
+
+
 Die EU High-Level Expert Group on Artificial Intelligence (AI-HLEG) definiert vertrauenswürdige KI anhand von sieben Prinzipien: (1) menschliches Handeln und Aufsicht, (2)  technische Robustheit und Sicherheit, (3) Datenschutz und Data Governance, (4) Transparenz, (5) Vielfalt, Nichtdiskriminierung und Fairness, (6) soziales und ökologisches Wohlergehen und (7) Rechenschaftspflicht (AI HLEG 2019). Die Implementierung dieser Grundsätze soll erfolgen durch 'Mechanismen zur Überwachung der von KI getroffenen Entscheidungen, damit sie vertrauenswürdig sind und den ethischen Richtlinien entsprechen' (Kaur et al. 2021). Im Jahr 2020 erstellte die AI-HLEG dann darauf aufbauend eine Bewertungsliste für vertrauenswürdige KI (ALTAI, siehe Abschnitt 10.2).
 
 Darüber  hinaus  haben  die  193  UNESCO-Mitgliedsstaaten  im  November  2021 erstmals  ein  globales  Abkommen  zur  KI-Ethik  und  ein  internationales  Standardinstrument verabschiedet, die 'Recommendation on the Ethics of Artificial Intelligence' (UNESCO 2022). Diese Empfehlungen bieten einen Rahmen, um sicherzustellen, dass die Entwicklung und Nutzung von KI im Einklang mit den Menschenrechten und der Menschenwürde sowie der Rechtsstaatlichkeit steht. Weitere supranationale ethische Leitlinien stammen von der OECD, die fünf komplementäre Grundsätze und Instrumente für ethische KI festlegt, nämlich zu Nachhaltigkeit, Fairness, Transparenz, Sicherheit und Verantwortlichkeit (OECD 2019).
 
 Obwohl auf nationaler Ebene nur wenige Länder wie Australien und China (Beijing Academy of Artificial Intelligence, 2019, Australian Government Dept. Industry, Science and Resources, 2019) explizite ethische Leitlinien für KI haben, enthalten die meisten nationalen KI-Strategien ethische Grundsätze als normativen Rahmen, um die verantwortungsvolle Entwicklung von KI zu leiten. Vor allem die europäischen Länder haben in ihren KI-Strategien ethischen Überlegungen einen hohen Stellenwert eingeräumt. Die französische KI-Strategie 'AI for Humanity' ist ein Beispiel dafür. Die Strategie unterstreicht die Bedeutung einer ethischen und verantwortungsvollen KI-Entwicklung und zielt darauf ab, Frankreich als Vorreiter in diesem Bereich zu positionieren. Die Strategie betont, dass KI das menschliche Wohlergehen fördern sollte, und erkennt an, dass ethische und verantwortungsvolle KI der Schlüssel dazu ist, dass KI der Gesellschaft als Ganzes zugutekommt (General Secretary of the French Digital Council 2018). Ein Beispiel für einen Leitfaden, der sich auf die Verwaltung und auf ein bestimmtes Politikfeld konzentriert, kommt aus Deutschland. Die 'Selbstverpflichtenden Leitlinien für den KI-Einsatz in der behördlichen Praxis der Arbeit und Sozialverwaltung' des deutschen Bundesministeriums für Arbeit und Soziales (BMAS 2022) bieten hier Anhaltspunkte. Auch von anderen deutschen Institutionen gibt es relevante Dokumente, die sich allerdings nicht explizit auf die Verwaltung beziehen, wie die umfassende Stellungnahme zum Thema 'Mensch und Maschine - Herausforderungen durch Künstliche Intelligenz'
+
+
+<!-- PAGE 51 -->
+
 
 vom Deutschen Ethikrat veröffentlicht (Deutscher Ethikrat 2023) oder der 'Leitfaden zur Gestaltung vertrauenswürdiger Künstlicher Intelligenz' des deutschen Fraunhofer IAIS (Fraunhofer IAIS 2021).
 
@@ -650,6 +851,10 @@ Zusätzlich zu den Kriterien wurden Maßnahmenvorschläge entwickelt, um den eth
 
 Im Folgenden werden die angeführten Kriterien kurz beschrieben.
 
+
+<!-- PAGE 52 -->
+
+
 ## Kriterien
 
 - Recht: Eines der wichtigsten Kriterien ist die Einhaltung des geltenden Rechts. Das bedeutet, dass die KI-Anwendung die einschlägigen Gesetze und Vorschriften einhalten muss, einschließlich der Grundrechte wie Gleichheit und Meinungs  freiheit sowie Schutz der Privatsphäre und Datenschutz.
@@ -660,6 +865,10 @@ Im Folgenden werden die angeführten Kriterien kurz beschrieben.
 - Barrierefreiheit und Inklusion: Die KI-Anwendung muss für Menschen mit unterschiedlichen Fähigkeiten, Hintergründen und Kulturen zugänglich und integrativ sein. Die Bevölkerung muss in die Lage versetzt werden, die KI-Anwendung zu nutzen und davon zu profitieren. Außerdem sollten Alternativen zur KI-Technologie angeboten werden, um einen gleichberechtigten Zugang zu öffentlichen Dienstleistungen zu gewährleisten.
 - Rechenschaftspflicht: Die Verantwortlichen für den Einsatz und die Nutzung von KI müssen klare Zuständigkeiten und Verantwortlichkeiten haben. Es sollten Mechanismen vorhanden sein, die sicherstellen, dass die Verantwortlichen sich ihrer Verantwortung auch bewusst sind.
 - Digitale Souveränität: Die Verwaltung muss in der Lage sein, die Entwicklung von KI-Lösungen zu beeinflussen, unabhängig anzuwenden und vertrauliche Daten in ihrem eigenen Einflussbereich zu halten. Es müssen Maßnahmen ergriffen werden, um sensible Daten zu schützen und den Zugriff Dritter zu verhindern, wenn die Entwicklung oder der Betrieb von KI ausgelagert wird.
+
+
+<!-- PAGE 53 -->
+
 
 ## 9   KI-Folgenabschätzung
 
@@ -683,6 +892,10 @@ Der EKIV dient als dialogisches Instrument zur Folgenabschätzung und erleichter
 
 Darüber hinaus wurde ebenso eine Checkliste für KI-Projekte entwickelt, die auf dem EKIV beruht. Sie ist als Instrument gedacht, um einerseits am Anfang eines Planungs-, Beschaffungs- oder Evaluationsprozesses zu prüfen, ob ein spezifischer Bereich eines genaueren Augenmerks bedarf. Andererseits kann die Checkliste auch am Ende eines derartigen Prozesses stehen, um nochmals zu prüfen, ob alle Kriterien bedacht wurden.
 
+
+<!-- PAGE 54 -->
+
+
 Im Vergleich dazu bietet der EKIV die Möglichkeit für eine vertiefende Betrachtung eines defizitären Bereiches auf der Basis von detaillierten Fragestellungen, welche die Formulierung wirksamer Maßnahmen zur Bewältigung ethischer Herausforderungen im Zusammenhang mit der KI-Anwendung ermöglichen. Beide, EKIV und Checkliste, sollen als unterstützende Instrumente verstanden werden, um ethische KI in der Verwaltung zur Anwendung zu bringen. Die Beantwortung einzelner Fragen mit 'Ja' oder 'Nein' bedeutet somit nicht notwendigerweise das Ende eines KI-Projektes, kann aber Änderungsbedarf im Hinblick auf eine KI-Anwendung indizieren.
 
 Da es sich beim gesamten Leitfaden um ein 'living document' handelt, soll auch der  EKIV  kontinuierlich  verfeinert  und  erweitert  bzw.  angepasst  werden,  um  neuen Überlegungen und aufkommenden ethischen Herausforderungen Rechnung zu tragen. Regelmäßige Aktualisierungen und ergänzende Beiträge von Expert:innen aus Wissenschaft und Verwaltung sollen sicherstellen, dass der Katalog relevant und aktuell bleibt und die neuesten Erkenntnisse und Einsichten einbezieht.
@@ -704,6 +917,10 @@ Ziel des EKIV ist somit die Unterstützung von Verwaltungsangehörigen bei der e
 
 - Wie werden die Öffentlichkeit und die Verwaltungsbediensteten über die   spezifischen Ziele und Zwecke der KI-Anwendung in der öffentlichen Verwaltung informiert?
 - Wie werden die Auswirkungen des Einsatzes der KI-Anwendung der Öffentlichkeit und den Verwaltungsbediensteten vermittelt?
+
+
+<!-- PAGE 55 -->
+
 
 ## Unvoreingenommenheit und Fairness
 
@@ -735,6 +952,10 @@ Ziel des EKIV ist somit die Unterstützung von Verwaltungsangehörigen bei der e
 - Welche Mechanismen gibt es, um sicherzustellen, dass die für den Einsatz und die Nutzung von KI Verantwortlichen sich ihrer Verantwortung bewusst sind?
 - Welche Mechanismen oder Strategien gibt es, um sicherzustellen, dass Schäden, die durch die KI-Anwendung entstehen, angemessen entschädigt werden?
 
+
+<!-- PAGE 56 -->
+
+
 ## Digitale Souveränität
 
 - Wie wird sichergestellt, dass ausreichend Wissen um KI-Technologien in der Verwaltung vorhanden ist, um bei Beschaffungsvorgängen mit Dienstleistern und bei Kontrollen im Rahmen der Regulation von KI mit Herstellern auf Augenhöhe umgehen zu können?
@@ -758,6 +979,10 @@ Ziel des EKIV ist somit die Unterstützung von Verwaltungsangehörigen bei der e
 - Welche Ressourcen und Fachkenntnisse sind für die Durchführung einer gründlichen Folgenabschätzung erforderlich, und wie können sie bescha/fft werden?
 - Wie werden die Ergebnisse der Folgenabschätzung der Öffentlichkeit und den Entscheidungsträger:innen wirksam mitgeteilt?
 
+
+<!-- PAGE 57 -->
+
+
 ## Zertifizierung
 
 - Von wem werden KI-Modelle und -Daten zertifiziert, um sicherzustellen, dass sie ethisch und rechtlich einwandfrei sind, insbesondere bei riskanten Anwendungen?
@@ -777,6 +1002,10 @@ Die EU-Bewertungsliste für vertrauenswürdige künstliche Intelligenz (Assessme
 
 7 https://altai.insight-centre.org/
 
+
+<!-- PAGE 58 -->
+
+
 ## 9.3  Ethics Self-Assessment für EU-Forschungsförderung und EU 'Ethics by Design' KI-Forschungsleitfaden
 
 Ein wichtiges und instruktives Instrument, jedoch ohne Fokus auf die Verwaltung, ist das für die Vergabe von Forschungsförderungen verpflichtende Ethics Self-Assessment der EU, das Teil des Förderungsvertrages wird und geprüft werden kann. Neben anderen Bereichen wird auch KI im Self-Assessment abgedeckt und es wird empfohlen, dabei die 'Ethics by Design' Methodologie einzusetzen. Der Teil zu KI verweist auf die Bewertungsliste ALTAI der EU HLEG (siehe Abschnitt 10.2) und den KI-Forschungsleitfaden der EU für mehr Details (European Commission 2021b).
@@ -786,6 +1015,10 @@ Bei der 'Ethics by Design' Methodologie geht es darum, mögliche ethische Bedenk
 Wissen: 'Ethics by Design'
 
 Der EU KI-Forschungsleitfaden 'Ethics By Design and Ethics of Use Approaches for Artificial Intelligence' bezieht sich speziell auf Forschungstätigkeiten zur Entwicklung und /  oder  unter  Einsatz  von  KI-basierten Systemen oder Techniken, folgt dem oben erwähnten 'Ethics by Design' Konzept und beschreibt, wie dieses im KI-Entwicklungsprozess berücksichtigt werden kann. Die daraus entstandene Checkliste ('Checklist: Specification of Objectives against Ethical Requirements') dient als Hilfsmittel für die Implementierung. Um einen ethischen Ansatz in der KI(-basierten) Forschung sicherzustellen,  sollen  KI-Systeme  sechs  ethischen  Prinzipien  entsprechen  und  Merkmale, wie technische Robustheit, transparenten Umgang mit Ungenauigkeiten und Fehlern, Berücksichtigung des sozialen Kontextes, Zuverlässigkeit, Verhinderung von Schäden, und Erklärungsmöglichkeit von wichtigen Entscheidungsprozessen, aufweisen, um die Prinzipien zu bewahren und zu fördern. Außerdem weist der Leitfaden darauf hin, wie in  den Bereichen Projektmanagement, Beschaffung, Implementierung und Monitoring auf einen ethischen Einsatz und eine ethische Nutzung von KI geachtet werden kann (European Commission 2021a).
+
+
+<!-- PAGE 59 -->
+
 
 ## 9.4  VCIO-Modell
 
@@ -798,6 +1031,10 @@ Dadurch werden die Fälle in fünf Risikoklassen eingeteilt, wobei Klasse 0 für
 Die  Folgenabschätzung  für  Grundrechte  und  Algorithmen  (Fundamental  Rights  and Algorithm Impact Assessment, FRAIA) der Utrecht Data School ist ein Diskussions- und Entscheidungsfindungsinstrument  für  Regierungsorganisationen,  das  dazu  dient,  die potenziellen Risiken für die Menschenrechte im Zusammenhang mit dem Einsatz von Algorithmen zu ermitteln und zu mindern. FRAIA scha/fft eine Plattform für einen interdisziplinären Dialog zwischen Entwickler:innen und denjenigen, die KI-Systeme einsetzen.
 
 Durch den Einsatz von FRAIA kann die Verwaltung alle relevanten Aspekte des Einsatzes  von  Algorithmen  rechtzeitig  und  strukturiert  bearbeiten.  Es  umfasst  eine Vielzahl von Fragen zu den Themen, die erörtert werden sollten, wenn eine Regierungsorganisation  die  Entwicklung,  die  Beauftragung  mit  der  Entwicklung,  den  Kauf,  die Anpassung und / oder die Verwendung eines KI-Systems in Betracht zieht. Das Instrument trägt dazu bei, Risiken wie Nachlässigkeit, Ineffizienz oder Verletzungen der Rechte der Bürger:innen zu verringern. In naher Zukunft soll diese Art der Folgenabschätzung in den Niederlanden verpflichtend eingeführt werden (Gerards et al. 2022; Utrecht University 2022; Clausen und Schäfer 2023).
+
+
+<!-- PAGE 60 -->
+
 
 ## 9.6  Data Ethics Decision Aid (DEDA)
 
@@ -814,6 +1051,10 @@ Während hier einige Instrumente beschrieben wurden, gibt es noch zahlreiche wei
 - AlgorithmWatch Checklisten: Die Triage Checkliste prüft, welche ethischen Transparenz-Themen es wert sind, während der Projektdurchführung detailliert dokumentiert zu werden und ob es notwendig ist, einen Transparenzbericht zu schreiben. Die Checkliste für den Transparenzbericht ist eine detaillierte Anleitung zum Schreiben eines solchen Transparenzberichtes (Loi et al. 2021).
 - VERA (Verantwortung und Algorithmen): Das interaktive Werkzeug der Arbeiterkammer prüft die Verantwortlichkeiten bei der Einführung von Algorithmen und zeigt Kompetenzkonflikte und Verantwortungslücken auf. Es stellt eine Ergänzung zum Leitfaden 'Algorithmen in der Entscheidungsfindung' dar, worin detailliertere
 
+
+<!-- PAGE 61 -->
+
+
 Fragen und mehr Themen zu finden sind (Adensamer et al. 2021; Adensamer und Klausner 2021; Bundesarbeiterkammer 2021).
 
 - Examining the Black Box: Der Bericht klärt die Unterschiede zwischen verschiedenen Arten von Instrumenten für die Bewertung von algorithmischen Systemen und hilft dadurch bei der Auswahl einer passenden Evaluierungsform (Ada Lovelace Institute und DataKind UK 2020).
@@ -822,11 +1063,19 @@ Fragen und mehr Themen zu finden sind (Adensamer et al. 2021; Adensamer und Klau
 - ISO/IEC 23053:2022 Framework for Artificial Intelligence (AI) Systems Using Machine Learning (ML): Die ISO Norm scha/fft einen Rahmen für die Beschreibung eines generischen KI-Systems, das Maschinenlernen einsetzt (ISO 2022).
 - 'Audit Framework for Algorithms' des niederländischen Rechnungshofs: Das Instrument dient der Bewertung der Qualität und des verantwortungsvollen Einsatzes von Algorithmen in der Praxis und soll Schwachstellen der Algorithmen aufdecken (Netherlands Court of Audit 2021).
 
+
+<!-- PAGE 62 -->
+
+
 ## 10  Empfehlungen für mögliche weitere Schritte: Ziel menschenzentrierte KI-Governance
 
 Im  letzten  Abschnitt  dieses  Leitfadens  werden  Handlungsmöglichkeiten  in  unterschiedlichen Bereichen, wie Kompetenzaufbau und Fortbildung, KI-Management Entscheidungshilfen, Experimente, Zertifizierungen, Nutzungsbedingungen und Kontrolle, Folgenabschätzung und Risikomanagement sowie Kommunikation und Stakeholdereinbindung vorgeschlagen. Das sich in zahlreichen europäischen (AI HLEG 2019; 2020) und nationalen Dokumenten (BMK und BMDW 2021) widerspiegelnde Ziel ist dabei eine menschenzentrierte KI-Governance, die den zuvor wiedergegebenen ethischen Prinzipien und Standards und dem rechtlichen Rahmen entspricht. Die digitale Transformation, insbesondere im Hinblick auf den Einsatz von KI, sollte nicht als gegeben hingenommen, sondern  als  Chance  verstanden  und  gesellschaftlichen  und  organisationsbezogenen Anforderungen entsprechend geformt werden.
 
 Wie aus der folgenden Abbildung ersichtlich, empfehlen wir Tools bzw. Institutionalisierungsmaßnahmen,  also  strukturelle  Anpassungen,  mit  sechs  verschiedenen Zielsetzungen in den entsprechenden Bereichen.
+
+
+<!-- PAGE 63 -->
+
 
 Tabelle 2: Empfehlungen KI-Governance
 
@@ -834,6 +1083,10 @@ Tabelle 2: Empfehlungen KI-Governance
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | Tools (Prozess)                  | Bildungsstan- dards für die Beschaffung und Verwendung von KI-Anwen- dungen/interne Kompetenzen zu technischen Verfahren und Entwicklung ethischer KI ('Ethics by De- sign', De-biasing)                                                   | KI-Einsatz-Ent- scheidungsbaum, AI RMF (NIST), Selbstverpflich- tende Leitlinien (DE BMAS), Risk Assessment Tools und Entwick- lungsstandards ('Ethics by Design'; IEEE), Entscheidungs- kriterien für interne/externe Beschaffungsvor- gänge (Amster- dam Clauses) | Diskussionen zu Good Practices und Heraus- forderungen, Experimente zu verschiedenen Vorgehensweisen und Tools                         | Zertifizierungen von ISO, IEEE, TÜV, in Entste- hung begriffene Tools wie data. nutrition, data. hazards                                                                                                        | Risk Assess- ment Tools EKIV, DEDA (UDS), VCIO (VDE et al.), FRAIA (UDS), ALTAI (EC HLEG), Fraunhofer KI-Prüfkatalog, NL Rechnungshof 'Audit Framework for Algorithms' | DEDA (UDS), Workshops mit Stakeholdern, Diskussionen zu Good Practices und Herausforde- rungen |
 | Institutionalisierung (Struktur) | Curriculum ab Juni 2023, VAB KI-Ethikseminar und Führungs- kräfte Lehrgang ab WS 2023, the- menspezifische interne Kom- petenzstellen, Informations- und Diskussionsver- anstaltungen für und mit Verwal- tung, Politik und Öffentlichkeit | Verwaltungs- Ethikrat mit inter- nen und externen Expert:innen (vgl. FI Aurora bzw. Etairos Ethikrat), KI-Observatorium (DE BMAS)                                                                                                                                   | Interministe- rielles KI-Ethik Lab (vgl. AIT AI Ethics Lab, vgl. FI Projekt Aurora), Regulatory KI-Sandbox/ Reallabor, AI Policy Forum | Freiwillig/nach AIA Implemen- tierung KI-Be- hörde, Daten- repositorien, welche konform zu rechtlichen und ethischen Vorgaben sind (Compliance), Richtlinien und Vorgaben für Ver- wendung (bspw. Durch Firmen) | Transparenzre- gister, Verarbei- tungsverzeichnis, KI-Behörde, NL Algorithm Register                                                                                   | AI Policy Forum, PIAZZA Format (Algorithm Watch), Inter- ministerielles KI-Ethik Lab           |
+
+
+<!-- PAGE 64 -->
+
 
 ## Kompetenzaufbau und Fortbildung
 
@@ -849,6 +1102,10 @@ Darüber hinaus wären Weiterbildungsmöglichkeiten für diejenigen Verwaltungsb
 
 Vor dem Hintergrund der besonderen Rolle des Vertrauens in die Verwaltung (siehe Abschnitt 5), auch bezogen auf die Verwendung von KI-Anwendungen, erscheinen der Aufbau von KI-Kompetenzen einer breiten Öffentlichkeit und eine möglichst offene Informationspolitik im Hinblick auf in der Verwaltung verwendete Anwendungen sinnvoll. Kompetenzen und eine umfassende Information der Öffentlichkeit können Misstrauen vorbeugen bzw. im Fall auftretender Problemlagen mit spezifischen (KI-)Anwendungen die Basis für eine Krisenkommunikation darstellen.
 
+
+<!-- PAGE 65 -->
+
+
 ## KI-Management Entscheidungshilfen
 
 Die Planung, die Beschaffung und der Einsatz von KI bedürfen einer Reihe von Managemententscheidungen, die durch entsprechende Entscheidungshilfen unterstützt werden können. Dazu dient auf einer allgemeineren Ebene dieser Leitfaden, vergleichbar dazu (wenn auch eingeschränkt auf ein bestimmtes Politikfeld) wären die 'Selbstverpflichtenden Leitlinien für den KI-Einsatz in der behördlichen Praxis der Arbeit und Sozialverwaltung' des deutschen Bundesministeriums für Arbeit und Soziales (BMAS 2022). Noch wesentlich grundsätzlicher und umfangreicher ist die Stellungnahme 'Mensch und Maschine - Herausforderungen durch Künstliche Intelligenz' des Deutschen Ethikrats (Deutscher Ethikrat 2023).
@@ -862,6 +1119,10 @@ Für eine erste Annäherung an Beschaffungsvorgänge zu KI-Anwendungen liegt ein
 Auf der strukturellen Ebene könnte eine Beratungsstruktur im Hinblick auf den Einsatz von KI in der öffentlichen Verwaltung angedacht werden, dem Beispiel Finnlands folgend. Erfahrungen dazu wurden dort im Rahmen des Projektes Aurora (Ministry of Finance Finland o.J.) gemacht, wo KI-Anwendungen flächendeckend in der gesamten Verwaltung zum Einsatz gebracht werden. Dieser Vorgang wird durch das Projekt Etairos (Etairos o.J.) begleitet, das der gesamten Verwaltung einen Ethikrat zur Verfügung stellt. Dieser Ethikrat kann mit einer Aufgabe betraut oder von sich aus tätig werden (FCAI 2022). Ein anderes Modell wird im deutschen Bundesministerium für Arbeit und Soziales angewendet, wo ein KI-Observatorium, bestehend aus einer Reihe von Projekten und universitären sowie außeruniversitären Forschungsinstitutionen, dem Ministerium laufend Expertise zur Verfügung stellt.⁸
 
 8 https://www.ki-observatorium.de/
+
+
+<!-- PAGE 66 -->
+
 
 ## Experimentation
 
@@ -879,6 +1140,10 @@ Für die Kontrolle der Einhaltung verschiedener Normierungen sieht der AI Act na
 
 9 Siehe https://datanutrition.org/ und https://datahazards.com/
 
+
+<!-- PAGE 67 -->
+
+
 zu sammeln. Diese Vorgangsweise wurde in Spanien gewählt, wo der Beschluss für die Etablierung einer derartigen Behörde bereits 2022 gefallen ist.
 
 Die Wirksamkeit der Regulierung von KI wird stark von der Ausgestaltung der österreichischen  KI-Behörde  abhängen.  Grundsätzlich  ist  eine  Bandbreite,  von  einer passiv agierenden Behörde, an die Anfragen und Beschwerden herangetragen werden, bis hin zu einer Institution, die auch ohne konkreten Verdacht einzelne Anwendungen von sich aus überprüft, denkbar. Insbesondere im Hochrisikobereich würde ein erhöhtes Aktivitätsniveau der neuen Behörde die Sicherheit für Staat, Wirtschaft und Gesellschaft gleichermaßen erhöhen. Unter anderem würde sich eine raschere Ausjudizierung von Technologieanwendungen positiv auswirken, indem wie bei der DSGVO Unsicherheiten verringert werden.
@@ -890,6 +1155,10 @@ Damit im Zusammenhang steht auch die Abschätzung der Folgen von KI-Anwendungen,
 Für  die  vorausschauende  wie  rückwirkende  Abschätzung  gesellschaftlicher Folgen kann einerseits auf eine mehrere Jahrzehnte umfassende Erfahrung mit Instrumentarien von Technikfolgenabschätzung, Impact Assessment und Foresight-Methoden zurückgeblickt werden. Andererseits gibt es eine Reihe konkret auf KI abgestimmter Tools, die den Umgang mit Risiken erleichtern. Zuallererst soll hier auf den im Abschnitt 10.1 vorgestellten 'Kriterien- und Maßnahmenkatalog für KI in der Verwaltung (EKIV)' verwiesen werden, der Teil dieses Leitfadens ist. Dort werden KI-Anwendungen in den Bereichen  Recht,  Transparenz,  Unvoreingenommenheit  und  Fairness,  Effektivität  und Effizienz, Sicherheit, Barrierefreiheit und Inklusivität, Rechenschaftspflicht sowie digitale Souveränität untersucht. Andere Tools und Leitfäden, mit teils sehr unterschiedlichen Schwerpunktsetzungen, wurden in den Abschnitten 9 und 10 ausgeführt. Hier sollen zusätzlich  der  'Leitfaden  zur  Gestaltung  vertrauenswürdiger  Künstlicher  Intelligenz' des deutschen Fraunhofer IAIS (Fraunhofer IAIS 2021) und der 'Audit Framework for Algorithms' des niederländischen Rechnungshofs (Netherlands Court of Audit 2021) hervorgehoben werden.
 
 Auf  der  strukturellen  Ebene  sollte  sich  der  Umgang  mit  Folgenabschätzung und Risiken auch in den Tätigkeiten der zu schaffenden KI-Behörde widerspiegeln. Ein wichtiger Arbeitsbereich dieser Institution wird zweifellos die Überprüfung der jeweiligen Risikoabschätzungen für die einzelnen Anwendungen darstellen. Darüber hinaus sollten aber auch Transparenzregister (vgl. Algorithmus Register der niederländischen
+
+
+<!-- PAGE 68 -->
+
 
 Regierung1⁰)  und  Verarbeitungsverzeichnisse  angelegt  bzw.  geprüft  werden,  um  insbesondere  im  Bereich  des  Staates  jederzeit  darüber  Auskunft  geben  zu  können,  in welchen Bereichen, für welche Zwecke und auf welche Art und Weise KI-Anwendungen zum Einsatz kommen.
 
@@ -906,6 +1175,10 @@ Die Institutionalisierung einer derartigen Plattform könnte in einem ausgebaute
 10 https://algoritmes.overheid.nl/en
 
 11 https://piazza-konferenz.de/
+
+
+<!-- PAGE 69 -->
+
 
 ## Quellenverzeichnis
 
@@ -943,6 +1216,10 @@ BRZ. 2020. Forum Alpbach: Bundesrechenzentrum stellt Prüfkatalog für vertrauen
 
 Bundesarbeiterkammer. 2021. VERA. https://vera.arbeiterkammer.at/#/. Zugegriffen: 07. Juni 2023.
 
+
+<!-- PAGE 70 -->
+
+
 BKA, und BML. 2008. Standards der Öffentlichkeitsbeteiligung: Empfehlungen für die gute Praxis. https://partizipation.at/wp-content/uploads/2022/09/standards-der-oeffentlichkeitsbeteiligung2008-druck.pdf. Zugegriffen: 20. Juni 2023.
 
 BMAS. 2022. Selbstverpflichtende Leitlinien für den KI-Einsatz in der behördlichen Praxis der Arbeitsund Sozialverwaltung. https://www.bmas.de/SharedDocs/Downloads/DE/Publikationen/a862-01leitlinien-ki-einsatz-behoerdliche-praxis-arbeits-sozialverwaltung.pdf?\_\_blob=publicationFile&amp;v=2. Zugegriffen: 20. Juni 2023.
@@ -977,6 +1254,10 @@ Devlin, Jacob, Ming-Wei Chang, Kenton Lee, und Kristina Toutanova. 2018. Bert: P
 
 Dilmegani, Cem. 2022. Bias in AI: What it is, Types, Examples &amp; 6 Ways to Fix it in 2023. AI Multiple Website. https://research.aimultiple.com/ai-bias/. Zugegriffen: 15. Juni 2023.
 
+
+<!-- PAGE 71 -->
+
+
 Döbel,  Inga,  Miriam  Leis,  Manuel  Molina  Vogelsang,  Dmitry  Neustroev,  Henning  Petzka, Annamaria  Riemer,  Stefan  Rüping,  Angelika  Voss,  Martin  Wegele,  Juliane  Welz. 2018. Maschinelles Lernen. Eine Analyse zu Kompetenzen, Forschung und Anwendung. Studie. FraunhoferGesellschaft. https://www.bigdata-ai.fraunhofer.de/content/dam/bigdata/de/documents/ Publikationen/Fraunhofer\_Studie\_ML\_201809.pdf. Zugegriffen: 15. Juni 2023.
 
 Ebers, Martin, Veronica R. S. Hoch, Frank Rosenkranz, Hannah Ruschemeier, und Björn Steinrötter. 2021.  The European Commission's Proposal for an Artificial Intelligence Act-A Critical Assessment by Members of the Robotics and AI Law Society (RAILS). J - Multidisciplinary Scientific Journal 4 (4): 589-603. https://doi.org/10.3390/j4040043.
@@ -1009,6 +1290,10 @@ European Commission. 2023. European Data Governance Act. https://digital-strateg
 
 European Commission. o.  J.  Regulatory  framework  proposal  on  artificial  intelligence.  https:// digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai. Zugegriffen: 30. April 2023.
 
+
+<!-- PAGE 72 -->
+
+
 European Digital Rights (EDRi). 2023. Civil society urges European Parliament to protect people's rights in the AI Act. https://edri.org/our-work/civil-society-urges-european-parliament-to-protectpeoples-rights-in-the-ai-act/. Zugegriffen: 19. Mai 2023.
 
 Feik,  Rudolf. 2007. Öffentliche  Verwaltungskommunikation:  Öffentlichkeitsarbeit,  Aufklärung, Empfehlung, Warnung . Wien: Springer.
@@ -1040,6 +1325,10 @@ High-Level  Expert  Group  on  Artificial  Intelligence  (AI  HLEG). 2020.  Asse
 Holzinger, Gerhart, Peter Oberndorfer, und Bernhard Raschauer. 2013.  Österreichische Verwaltungslehre. Wien: Verlag Österreich.
 
 Humm, Bernhard G., Peter Buxmann und Jan C. Schmidt. 2022. Grundlagen und Anwendungen von KI. In Künstliche Intelligenz in der Forschung: Neue Möglichkeiten und Herausforderungen für die Wissenschaft, Hrsg. Carl Friedrich Gethmann, Peter Buxmann, Julia Distelrath, Bernhard G. Humm, Stephan Lingner, Verena Nitsch, Jan C. Schmidt, Indra Spiecker genannt Döhmann, 13-42. Berlin: Springer Nature.
+
+
+<!-- PAGE 73 -->
+
 
 IEEE  Standards  Association  (IEEE  SA). 2021.  IEEE  7000-2021:  IEEE  Standard  Model  Process for  Addressing  Ethical  Concerns  during  System  Design.  Standard.  https://standards.ieee.org/ ieee/7000/6781/. Zugegriffen: 07. Juni 2023
 
@@ -1075,6 +1364,10 @@ Ministry of Finance Finland. o. J. Implementation of the National AuroraAI Progr
 
 National Institute of Standards and Technology (NIST). 2023. Artificial Intelligence Risk Management Framework (AI RMF 1.0). National Institute of Standards and Technology, U.S. Department of Commerce. https://doi.org/10.6028/NIST.AI.100-1. Zugegriffen: 16. Juni 2023.
 
+
+<!-- PAGE 74 -->
+
+
 Nentwich, Michael, Matthias Weber, Dennis Appelt, Eva Buchinger, Leo Capari, Evgeniia Filippova, Niklas Gudowsky-Blatakes, Barbara Heller-Schuh, Manuela Kienegger, Klaus Kubeczko, Wenzel Mehnert, Michael Ornetzeder, Walter Peissl, Petra Schaper-Rinkel, Anna Wang, Dana Wasserbacher. 2021. Foresight und Technikfolgenabschätzung: Monitoring von Zukunftsthemen für das Österreichische Parlament. Report. ÖAW &amp; AIT, 44-46. https://publications.ait.ac.at/en/publications/ foresight-und-technikfolgenabsch%C3%A4tzung-monitoring-f%C3%BCr-das-%C3%B6sterre-2. Zugegriffen: 07. Juni 2023.
 
 Netherlands Court of Audit. 2021. Audit framework for algorithms. https://english.rekenkamer.nl/ publications/publications/2021/01/26/audit-framework-for-algorithms. Zugegriffen: 22. Juni 2023.
@@ -1107,6 +1400,10 @@ Stöger, Karl. 2014. Verhaltensökonomische Steuerungsinstrumente und Verfassung
 
 Strubell, Emma, Ananya Ganesh, und Andrew McCallum. 2019. Energy and policy considerations for deep learning in NLP. In the 57th Annual Meeting of the Association for Computational Linguistics (ACL). Florence, Italy. July 2019. https://doi.org/10.48550/arXiv.1906.02243.
 
+
+<!-- PAGE 75 -->
+
+
 The White House. 2022.  Blueprint  for  an  AI  Bill  of  Rights.  https://www.whitehouse.gov/ostp/ ai-bill-of-rights/. Zugegriffen: 16. Juni 2023.
 
 TÜV Austria, Institute for Machine Learning. 2021. Trusted Artificial Intelligence. White Paper. https://en.tuv.at/wp-content/uploads/sites/12/2022/03/Whitepaper\_Trusted-AI\_TUeV-AUSTRIA\_ JKU.pdf. Zugegriffen: 19. Mai 2023.
@@ -1124,6 +1421,10 @@ Valmeekam, Karthik, Alberto Olmo, Sarath Sreedharan, and Subbarao Kambhampati. 2
 Wille,  Matt. 2021.  South  Korean  chatbot  'Lee  Luda'  killed  off  for  spewing  hate.  Inverse/Input Website.  https://www.inverse.com/input/culture/south-korean-chatbot-lee-luda-killed-off-forspewing-hate. Zugegriffen: 18. Juni 2023.
 
 Winston, Patrick Henry. 1992. Artificial intelligence . Addison-Wesley: Longman Publishing Co. Inc. World  Wide  Web  Foundation. 2018.  Policy  Brief  W20  Argentina:  Artificial  Intelligence:  open questions  about  gender  inclusion.  https://webfoundation.org/docs/2018/06/AI-Gender.pdf. Zugegriffen: 07. Juni 2023.
+
+
+<!-- PAGE 76 -->
+
 
 ## Anhang
 
@@ -1199,6 +1500,10 @@ Wurde sichergestellt, dass die die KI-Anwendung keine Personen stigmatisieren od
 
 1  /  2
 
+
+<!-- PAGE 77 -->
+
+
 ## Sicherheit
 
 ## Zugänglichkeit und Inklusion
@@ -1269,6 +1574,10 @@ Gibt es Sicherheitsvorkehrungen zum Schutz vor Missbrauch oder böswilliger Nutz
 
 2  /  2
 
+
+<!-- PAGE 78 -->
+
+
 ## Kriterien und Maßnahmenkatalog für ethische KI in der Verwaltung (EKIV)
 
 ## Kriterien
@@ -1288,6 +1597,10 @@ Gibt es Sicherheitsvorkehrungen zum Schutz vor Missbrauch oder böswilliger Nutz
 - Wie werden die potenziellen Verzerrungen der KI-Anwendung denjenigen vermittelt, die von ihrem Einsatz betroffen sind, z.  B. den Bürger:innen oder den Bediensteten der öffentlichen Verwaltung?
 - Ist es notwendig oder sinnvoll, Bürger:innen und /  oder Organisationen der Zivilgesellschaft einzubeziehen, um Vorurteile bei der Anwendung der KI-Technologie zu erkennen und zu beseitigen?
 
+
+<!-- PAGE 79 -->
+
+
 4. Effektivität und Effizienz: Einsatz der KI-Anwendungen nur dann, wenn die Effektivität und Effizienz von Dienstleistungen der öffentlichen Verwaltung nachhaltig verbessert werden, ohne die Arbeitssituation der im öffentlichen Dienst tätigen Personen zu verschlechtern.
 - Welche Kriterien werden verwendet, um zu bestimmen, wann der Einsatz der KI-Anwendung die Effektivität und Effizienz von Dienstleistungen der Verwaltung verbessert?
 - Welche Kriterien werden verwendet, um zu bestimmen, ob sich die Arbeitssituation, der im öffentlichen Dienst tätigen Personen durch den Einsatz einer KI-Anwendung verschlechtert?
@@ -1302,6 +1615,10 @@ Gibt es Sicherheitsvorkehrungen zum Schutz vor Missbrauch oder böswilliger Nutz
 - Welche klaren Verantwortlichkeiten und Rechenschaftspflichten werden für Entwickler:innen, Manager:innen und Nutzer:innen der KI-Technologie eingeführt?
 - Welche Mechanismen gibt es, um sicherzustellen, dass die für den Einsatz und die Nutzung von KI-Verantwortlichen sich ihrer Verantwortung bewusst sind?
 - Welche Mechanismen oder Strategien gibt es, um sicherzustellen, dass Schäden, die durch die KI-Anwendung entstehen, angemessen entschädigt werden?
+
+
+<!-- PAGE 80 -->
+
 
 8. Digitale Souveränität: Fähigkeit der Verwaltung, die Entwicklung von KI-Lösungen beeinflussen, eigenständig anwenden zu können sowie vertrauliche Daten im eigenen Kontrollbereich zu belassen.
 - Wie wird sichergestellt, dass ausreichend Wissen um KI-Technologien in der Verwaltung vorhanden ist, um bei Beschaffungsvorgängen mit Dienstleistern und bei Kontrollen im Rahmen der Regulation von KI mit Herstellern auf Augenhöhe umgehen zu können?
@@ -1320,6 +1637,10 @@ Gibt es Sicherheitsvorkehrungen zum Schutz vor Missbrauch oder böswilliger Nutz
 - Welche Kriterien werden verwendet, um zu bestimmen, welche KI-Anwendungen als besonders risikoreich gelten und eine kontinuierliche Bewertung und Beurteilung erfordern?
 - Wer ist für die Durchführung der Folgenabschätzung verantwortlich?
 
+
+<!-- PAGE 81 -->
+
+
 - Welche Ressourcen und Fachkenntnisse sind für die Durchführung einer gründlichen Folgenabschätzung erforderlich, und wie können sie bescha/fft werden?
 - Wie werden die Ergebnisse der Folgenabschätzung der Öffentlichkeit und den Entscheidungsträger:innen wirksam mitgeteilt?
 3. Zertifizierung: Zertifizierung von KI-Modellen inklusive gegebenenfalls verwendeter Daten (insbesondere im Fall risikobehafteter Anwendungen).
@@ -1331,6 +1652,10 @@ Gibt es Sicherheitsvorkehrungen zum Schutz vor Missbrauch oder böswilliger Nutz
 - Welche Rechte und Pflichten haben die unabhängigen Aufsichtsgremien?
 - Welche Monitoringmechanismen werden eingerichtet, um den ethischen und rechtmäßigen Einsatz und die Nutzung von KI-Technologien zu überwachen und sicherzustellen?
 - Über welche Qualifikationen und Fachkenntnisse verfügen die Mitglieder der Aufsichtsgremien?
+
+
+<!-- PAGE 82 -->
+
 
 ## Glossar für Fachbegriffe
 
@@ -1358,6 +1683,10 @@ Neuronale Netze: auch künstliche neuronale Netze (KNN) oder simulierte neuronal
 
 Soft Law: rechtlich  nicht  bindende  Instrumente,  beispielsweise Leitfäden, Leitlinien, Strategien und Absichtserklärungen (siehe Abschnitt 9.1)
 
+
+<!-- PAGE 83 -->
+
+
 ## Abbildungsverzeichnis
 
 | Abbildung 1: Vergleich der Treibhausgasemissionen einer Flugreise,      |    |
@@ -1371,6 +1700,10 @@ Soft Law: rechtlich  nicht  bindende  Instrumente,  beispielsweise Leitfäden, L
 | Tabelle 1: Workshop-Zeitverlauf                                         | 12 |
 | Tabelle 2: Empfehlungen KI-Governance                                   | 62 |
 | Tabelle 3: Checkliste für eine ethische KI                              | 76 |
+
+
+<!-- PAGE 84 -->
+
 
 bmkoes.gv.at
 

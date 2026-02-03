@@ -1,10 +1,11 @@
 ---
 source_file: Ahmed_2024_Feminist_perspectives_on_AI_Ethical.pdf
-conversion_date: 2026-02-03T08:40:20.294238
+conversion_date: 2026-02-03T18:19:24.613337
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## JOURNALOF GENDER,POWER,AND
 
 <!-- image -->
@@ -27,6 +28,10 @@ Artificial intelligence (AI) is transforming multiple facets of contemporary soc
 
 One of the key concerns within feminist critiques of AI is algorithmic bias. AI systems rely on large  datasets  to  learn  and  make  predictions,  yet  these  datasets  often  reflect  historical  and structural  inequalities.  For  instance,  AI-driven  hiring  tools  have  been  found  to  discriminate against  female  candidates  due  to  training  data  that  favor  male  applicants  (O'Neil,  2016). Similarly, facial recognition technologies have demonstrated racial and gender biases, leading to
 
+
+<!-- PAGE 2 -->
+
+
 ## JOURNALOF FGENDER,POWER,AND
 
 VOL.1 NO.3 2024
@@ -45,6 +50,10 @@ This paper argues that feminist perspectives on AI offer essential insights for 
 
 ## Literature Review
 
+
+<!-- PAGE 3 -->
+
+
 ## JOURNALOFGENDER,POWER,AND
 
 ## VOL.1 NO.3 2024
@@ -60,6 +69,10 @@ Beyond  algorithmic  bias,  feminist  scholars  critique  the  broader  sociopol
 Transparency  and  explainability  in  AI  decision-making  are  also  central  themes  in  feminist critiques. Many  AI  systems  operate as "black boxes," making  decisions without clear explanations  or  accountability  mechanisms  (Pasquale,  2015).  This  opacity  disproportionately harms vulnerable populations who lack the resources to challenge biased or unfair algorithmic decisions.  Feminist  scholars  call  for  the  implementation  of  explainable  AI  (XAI)  frameworks, which  prioritize  interpretability  and  user  agency  in  AI  decision-making  processes  (Crawford, 2021).
 
 The literature further emphasizes the importance of interdisciplinary collaboration in ethical AI development.  Integrating  feminist  ethics  into  AI  governance  requires  insights  from  gender
+
+
+<!-- PAGE 4 -->
+
 
 ## JOURNALOFGENDER,POWER,AND
 
@@ -94,6 +107,10 @@ To  provide  empirical  context  to  feminist  critiques  of  AI,  the  followin
 
 This research is significant because it contributes to the growing discourse on AI ethics through a feminist lens, emphasizing the urgent need to address gender biases in AI decision-making. As AI technologies increasingly influence critical societal functions-ranging from employment and law enforcement to healthcare and finance-it is imperative to develop frameworks that ensure fairness, transparency, and inclusivity (Criado-Perez, 2019). Feminist critiques of AI provide an essential  counterbalance  to  dominant  narratives  that  prioritize  technological  efficiency  over social equity (D'Ignazio and Klein, 2020). By integrating feminist ethics into AI governance, this research  offers  valuable  insights  for  policymakers,  technologists,  and  researchers  seeking  to create more equitable AI systems. Ultimately, this study aims to foster ethical AI innovation that upholds social justice principles and mitigates algorithmic discrimination (Crawford, 2021).
 
+
+<!-- PAGE 5 -->
+
+
 ## JOURNALOF GENDER,POWER,AND
 
 ## Data Analysis
@@ -113,6 +130,10 @@ Overall, the data analysis provides compelling evidence of the gendered and raci
 This study employs a mixed-methods approach, combining quantitative statistical analysis with qualitative  insights  from  feminist  AI  ethics.  The  methodology  is  designed  to  critically  assess algorithmic  biases,  evaluate  transparency  measures,  and  propose  solutions  for  inclusive  AI governance.  Data  collection  involves  AI-generated  hiring  decisions,  facial  recognition  system accuracy  rates,  and  survey  responses  from  AI  practitioners.  The  integration  of  multiple  data sources ensures a comprehensive understanding of how AI systems operate within gendered and racialized frameworks (Benjamin, 2019).
 
 VOL.1 NO.3 2024
+
+
+<!-- PAGE 6 -->
+
 
 ## JOURNALOF FGENDER,POWER,AND
 
@@ -147,6 +168,10 @@ Table 2: Facial Recognition Error Rates by Gender and Race (ANOVA Test)
 | White Women                         |   6.8 |                  1.5 |
 | Black Men                           |  13.5 |                  2.2 |
 | Black Women                         |  34.5 |                  3.5 |
+
+
+<!-- PAGE 7 -->
+
 
 ## JOURNALOF FGENDER,POWER,AND
 
@@ -184,6 +209,10 @@ The  statistical  findings  from  SPSS  analysis  provide  empirical  evidence  
 
 The  study's  findings  reveal  significant  gender  and  racial  biases  in  AI-driven  decision-making processes, emphasizing the urgent need for ethical AI frameworks. The regression analysis on AI hiring  algorithms  demonstrates  that  male  applicants  receive  significantly  higher  hiring  scores than female  applicants with  comparable  qualifications,  indicating  embedded  gender  bias (Buolamwini &amp; Gebru, 2018). Similarly, the analysis of facial recognition technologies shows disproportionately higher error rates for Black women, reinforcing systemic discrimination in AI applications  (Crawford,  2021).  These  biases  result  from  imbalanced  training  datasets,  nontransparent algorithmic processes, and a lack of diverse representation in AI development teams (West, Whittaker, &amp; Crawford, 2019).
 
+
+<!-- PAGE 8 -->
+
+
 ## JOURNALOFGENDER,POWER,AND
 
 VOL.1 NO.3 2024
@@ -207,6 +236,10 @@ The future  of  ethical  AI  development  depends  on  integrating  feminist  pe
 7. Pasquale, F. (2015). The Black Box Society: The Secret Algorithms That Control Money and Information . Harvard University Press.
 8. West,  S.  M.,  Whittaker,  M.,  &amp;  Crawford,  K.  (2019).  Discriminating  Systems:  Gender, Race, and Power in AI. AI Now Institute Report .
 9. Benjamin, R. (2019). Race After Technology: Abolitionist Tools for the New Jim Code . Polity Press.
+
+
+<!-- PAGE 9 -->
+
 
 ## JOURNALOF FGENDER,POWER,AND
 
@@ -234,6 +267,10 @@ VOL.1 NO.3 2024
 29. Eubanks, V. (2018). Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor . St. Martin's Press.
 30. Ghosh, D., &amp; Calo, R. (2020). The Legal and Policy Framework for AI Bias Mitigation. Washington Law Review, 95 , 883-916.
 31. Hupfer, S. (2020). The Gender Gap in AI: Why It Exists and How to Close It. Harvard Business Review, 98 (4), 112-118.
+
+
+<!-- PAGE 10 -->
+
 
 ## JOURNALOF FGENDER,POWER,AND
 

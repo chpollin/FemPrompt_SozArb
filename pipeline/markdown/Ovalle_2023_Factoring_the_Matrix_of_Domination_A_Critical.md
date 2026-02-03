@@ -1,10 +1,11 @@
 ---
 source_file: Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.pdf
-conversion_date: 2026-02-03T09:13:56.499177
+conversion_date: 2026-02-03T18:45:21.020763
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -87,6 +88,10 @@ SIGAI
 
 .
 
+
+<!-- PAGE 2 -->
+
+
 ## Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness
 
 Anaelia Ovalle Department of Computer Science University of California, Los Angeles
@@ -139,6 +144,10 @@ ACM ISBN 979-8-4007-0231-0/23/08.
 
 https://doi.org/10.1145/3600211.3604705
 
+
+<!-- PAGE 3 -->
+
+
 Theepistemologies of AI research are not divorced from scientific colonialism's legacy. Intersectionality may be used to critically examine AI research methodologies, so that 'the world-views of those who have suffered a long history of oppression and marginalization are given space to communicate from their frames of reference' [21]. Intersectionality promotes grappling with 'how individuals and groups who are subordinated within varying systems of power might survive and resist their oppression,' thereby empowering communities to criticize the injustices they experience [28]. In the face of epistemic violence (e.g., the erasure of Indigenous knowledge), intersectionality erects a new form of epistemic resistance: knowledge production. Frameworks to articulate social inequalities have been integral to the survival of communities at the margins. Similarly, intersectionality, by enabling researchers to observe and articulate disparities, may break the epistemic molds 'researchers are placed in so they may operate differently' [21].
 
 In the context of AI fairness, intersectionality is less about getting technology right (e.g., establishing fairness constraints for a model); it is more about interrogating the social reality which drives AI oppression, so we can then make technology better. Crenshaw uses the term intersectionality as a metaphor to speak on how 'different systems of oppression overlap,' but more importantly emphasizes that neglecting the convergence of these structures would cause rhetorical and identity politics to abandon issues and people who are actually affected by these intersecting 'systems of subordination' [6]. Intersectionality thereby challenges the sociopolitical amnesia which frames subgroup fairness as solely a technical problem [92]. We do not reject subgroup fairness outright; rather, we share this example to challenge the AI fairness community to expand its engagement with intersectionality. To operationalize AI fairness with an intersectional lens, it is vital to first illuminate underexplored gaps between intersectionality and existing AI fairness literature. To this end, we ask: (1) how is intersectionality discussed in AI fairness literature?; (2) to what extent does this discussion change based on computer science (CS) methodology?; (3) where are the largest gaps in conceptualizing and operationalizing intersectionality for advancing social justice?; (4) what tensions exist in leveraging these gaps for just AI design?; and (5) what do these findings tell us about opportunities for more just AI? To answer these questions, we contribute the following:
@@ -159,6 +168,10 @@ We are not the first to champion or critique intersectional praxis in AI fairnes
 
 A few papers have reimagined intersectionality in AI [9, 23, 88], pushing for intersectional practices to be woven into the full AI pipeline, and arguing for a joint interrogation of culture, technology, and solutionist framings of fairness (e.g., critical technocultural discourse analysis [15]). Constanza-Chock [31] illuminates the lack of critical praxis in AI, drawing upon Collins's matrix of domination to encourage researchers to reflect on how AI relates to 'domination and resistance at each of these three levels (personal, community, and institutional)' [26]. Davis et al. [37], inspired by Crenshaw [36],
 
+
+<!-- PAGE 4 -->
+
+
 argue for AI to be reparative and aware of social and historical context. Klumbyte et al. [63] facilitate community-based critical analysis of the 'tensions and possibilities' of integrating intersectional knowledge into machine learning systems. With a shared goal of intersectional AI, we complementarily gauge the epistemic alignment of AI papers related to intersectionality with Collins' intersectionality tenets [29]. We go beyond the scope of papers like Birhane et al. [12], which is not explicitly about intersectionality and focuses on evaluating discussion of social context and power.
 
 ## 3 INTERSECTIONALITY OVERVIEW
@@ -176,6 +189,10 @@ Relationality. Relationality enables us to examine power and inequality by cente
 Social Power. Intersectionality uses relationality to tie 'intersecting power relations' to how power 'produce[s] social divisions of race, class, gender, etc.' [29]. Intersectionality is predicated on understanding that systems of power 'co-produce each other in ways that reproduce unequal material outcomes and the distinctive social experiences [within] hierachies' [28]. In AI fairness, power is concentrated in human choices: system design, data collection, deployment, operationalizations of fairness. These choices impact resource allocation for communities at the intersections of the 'structural, disciplinary, cultural, and interpersonal' domains [3, 26, 31]; thus, power should be discussed at all stages of the AI pipeline. Our power guiding questions therefore assess the extent to which researchers reflexively comment on or situate their work in the power relations in which they participate.
 
 Social Context. Intersectionality centers 'context-specific [...] historical particularities and the increasing significance of a global context' [29]. When engaging with intersectionality in different (especially global) contexts, inquiry and praxis take different forms; consequently, one must practice epistemic, personal, and critical reflexivity to be cognizant of context, in order to effectively and holistically advance justice. In AI fairness, social context informs AI context through researcher training and background, model training and deployment, language choices, etc. Hence, self-reflexively acknowledging that one operates in the Global North informs who is centered in fairness tasks. Conversely, fairness works that flatten social context (e.g., by optimizing for 'Indigenous people' broadly) informs who drives knowledge production. As a result, our social context guiding questions assess the extent to which context is deliberately referenced and informs research processes.
+
+
+<!-- PAGE 5 -->
+
 
 Complexity. Complexity is key to a 'creative tension' between critical inquiry and praxis, which results in new forms of social action to combat inequality [29]. Complexity necessitates relational thinking and situational awareness. In AI fairness, complexity is often conceptualized as minimizing unfairness across a large number of social groups. However, complexity is more expansive; for example, it entails co-designing with groups who have been harmed by AI systems rather than using preconceptions of excluded groups to remedy exclusion. Our complexity guiding questions probe how works contend with model requirements, community needs, and centers of power that influence AI design. This notion of complexity is distinct from how complexity is used in the complex systems discipline, or runtime complexity in CS.
 
@@ -202,6 +219,10 @@ Reflexivity enables AI fairness researchers to engage in praxis; as Mohamed et a
 4.3.1 Operationalization of intersectionality. We observe how papers engage with and operationalize intersectionality in the AI pipeline. Papers are tagged as pre-processing (i.e., pre-training interventions), in-processing (i.e., training-time modeling choices), post-processing (i.e., test-time interventions of model predictions), full pipeline, or processes. 'Full pipeline' situates intersectionality (for empirical work) across the pipeline, while 'processes' situates intersectionality in broader AI design and epistemology. Works that deeply engage with intersectionality exercise its tenets at every stage of the pipeline. Researchers can contrast modes of operationalizing intersectionality and in that tension, reimagine how they engage with the framework.
 
 4.3.2 Source of bias. A paper may characterize bias as systemic, statistical, both systemic and statistical, or entirely fail to describe its source. Understanding sources of bias is pivotal to aligning AI fairness with intersectional praxis. Intersectionality posits that unequal outcomes reflect a systemic reproduction of existing power relations [28]. Systemic descriptions of bias concern structures and oppressive forces which subsequently permeate sociotechnical
+
+
+<!-- PAGE 6 -->
+
 
 Table 1: Critical review statistics ( 𝑁 = 30 )
 
@@ -251,6 +272,10 @@ Papers only seem to show consistent engagement with the tenets of complexity and
 
 Operationalization of Intersectionality. Figure 2b shows differences in how intersectionality is used across the AI pipeline. Papers
 
+
+<!-- PAGE 7 -->
+
+
 <!-- image -->
 
 (b) Operationalization
@@ -279,6 +304,10 @@ Intersectionality as intersectional subgroup fairness. Among papers which cite i
 
 '... a model that satisfies conditional parity with respect to race and gender independently may fail to
 
+
+<!-- PAGE 8 -->
+
+
 Figure 3: Papers with at least 1 tenet characteristic, split by presence of a synergistic literary component (top=no, bottom=yes).
 
 <!-- image -->
@@ -301,6 +330,10 @@ Foulds and Pan [46] similarly motivate their fairness criteria from a legal pers
 
 Motivating AI fairness from a strictly regulatory lens (e.g., the 80% rule, protected groups) does not fully embrace social and historical context. Several critical scholars argue that discrimination is often legitimized through anti-discrimination law [35, 38, 47, 84]. According to Freeman [47], these laws see racial discrimination 'not as conditions, but as actions inflicted on the victim by the perpetrator. ' He adds that such laws reflect the idea that 'only 'intentional'
 
+
+<!-- PAGE 9 -->
+
+
 discrimination violates anti-discrimination principles,' creating 'a class of the 'innocent' who need not feel any personal responsibility for the conditions associated with discrimination' [47]. Similarly, in AI fairness, researchers prioritize intersectional subgroup fairness over the structures that give rise to unfairness to begin with. Interestingly, AI fairness researchers who adopt a regulatory lens abundantly cite Crenshaw [36], although this work illuminates how anti-discrimination laws render Black women invisible:
 
 'In a monumental paper published in 1989, Kimberlé Crenshaw [11] introduced Intersectionality by referencing a court case where black women were unfairly discriminated as a result of an activity to mitigate the race and gender discrimination independently' [65].
@@ -321,6 +354,10 @@ Questionable citational praxis of intersectionality. Several papers reference li
 
 These findings exemplify a weak spot in the citational praxis of AI fairness researchers. Alexander-Floyd [1] calls for us to cite intersectionality literature, showing that within social science literature, there has been an erasure of Black women and Black feminist knowledge in papers that discuss intersectionality. She describes the centering of positivist and empiricist methods of knowledge production as a force that (re-)subjugates Black feminist knowledge and contributes to maintaining the status quo of whose knowledge counts as 'scientific' [1]. Bilge [7] identifies similar power structures in feminist studies and the broader neoliberal academy that contribute to 'neutralizing the critical potential of intersectionality for social justice-oriented change.'
 
+
+<!-- PAGE 10 -->
+
+
 We find this gentrification of intersectionality in our field too; AI research interprets intersectionality as a dimension of 'solvability' and scale, 'perpetuat[ing] the status quo injustice' [66]. Furthermore, potentially due to disciplinary barriers or gaps, papers use vague language when describing intersectionality. For instance, Kobayashi and Nakao [65] assert, 'the concept of Intersectionality covers diverse discussions including the issue of the oppression that people feel due to the discrimination [15].' Camara et al. [19] mention 'the complex and interconnected nature of social biases.' Mitchell et al. [71] state, 'an individual's identity and experiences are shaped [...] by a complex combination of many factors.' Vague language prevents intersectionality from being appropriately situated in sociotechnical systems, and may convey an incomplete understanding of intersectionality, neutralizing both researchers' and readers' engagement with power structures and inequality.
 
 Recommendation. Researchers explicitly share how their interpretation of intersectionality literature informs their methodology and assumptions. They read critical social justice literature outside of CS and cite it when incorporating it in AI design. Researchers, including those across leadership, expect and enforce intersectionality citational integrity when peer-reviewing.
@@ -340,6 +377,10 @@ Furthermore, many works are not grounded in social context, which ought to infor
 'Future research is recommended to make ground truth comparisons across a broader range of countries against the set of gender-intersections examined in this paper and to comment on a broader spectrum of gender identities. '
 
 Moreover, few papers complement technical contributions with social action, and some even tout their 'purely statistical approach' [73]; this neglects the complexity inherent to dismantling social injustices. Mathematical saviorism restricts the operationalization of critical praxis to the pre/in/post-processing stages. This encourages AI researchers to locate sources of unfairness situated only within the technical domain, ignoring the broader sociotechnical milieu linked to the power relations and inequalities upheld by AI [39]. Consequently, people already at the margins are erased, even in these contexts that ostensibly address fairness, oppression, and complexity. Thus, AI fairness researchers must engage in praxis that is informed by the experiences of those at the margins.
+
+
+<!-- PAGE 11 -->
+
 
 Some papers justify design choices that do not center care for those at the margins through utilitarian perspectives, e.g., Molina and Loiseau [73] reason, 'an algorithm which discriminates 1 person among a 1000 can be described as fair to an extent.' On the other hand, works like Suresh et al. [87] and Mitchell et al. [71] concretely advocate to dismantle injustice and shift power through participation in model development and transparency in deployment, respectively. The contrast in social justice praxis is notable; AI fairness researchers must consider how design choices situate AI systems within their sociotechnical context.
 
@@ -370,6 +411,10 @@ What we cannot name, we cannot see. What we cannot see, we cannot address. By ex
 ## ACKNOWLEDGMENTS
 
 Weareimmensely grateful for the work of intersectionality scholars, especially Black women scholars. We thank Dr. Lisa Bowleg and the anonymous reviewers for their feedback.
+
+
+<!-- PAGE 12 -->
+
 
 ## REFERENCES
 
@@ -435,6 +480,10 @@ Weareimmensely grateful for the work of intersectionality scholars, especially B
 - [60] Ibram X. Kendi. 2023. How to be an antiracist . One World.
 - [61] Jae-Yeon Kim, Carlos Ortiz, Sarah Nam, Sarah Santiago, and Vivek Datta. 2020. Intersectional Bias in Hate Speech and Abusive Language Datasets. ArXiv abs/2005.05921 (2020).
 
+
+<!-- PAGE 13 -->
+
+
 - [62] Hannah Rose Kirk, Yennie Jun, Haider Iqbal, Elias Benussi, Filippo Volpin, Frédéric A. Dreyer, Aleksandar Shtedritski, and Yuki M. Asano. 2021. Bias Out-of-the-Box: An Empirical Analysis of Intersectional Occupational Biases in Popular Generative Language Models. In Neural Information Processing Systems .
 - [63] Goda Klumbyte, Claude Draude, and Alex S. Taylor. 2022. Critical Tools for Machine Learning: Working with Intersectional Critical Concepts in Machine Learning Systems Design. In 2022 ACM Conference on Fairness, Accountability, and Transparency (Seoul, Republic of Korea) (FAccT '22) . Association for Computing Machinery, New York, NY, USA, 1528-1541. https://doi.org/10.1145/3531146. 3533207
 - [64] Goda Klumbyte, Claude Draude, and Alex S. Taylor. 2022. Critical Tools for Machine Learning: Working with Intersectional Critical Concepts in Machine Learning Systems Design. 2022 ACM Conference on Fairness, Accountability, and Transparency (2022).
@@ -471,6 +520,10 @@ Weareimmensely grateful for the work of intersectionality scholars, especially B
 - [95] Ke Yang, Biao Huang, Julia Stoyanovich, and Sebastian Schelter. 2020. FairnessAware Instrumentation of Preprocessing Pipelines for Machine Learning.
 - [96] Ke Yang, Joshua R. Loftus, and Julia Stoyanovich. 2020. Causal intersectionality for fair ranking. ArXiv abs/2006.08688 (2020).
 
+
+<!-- PAGE 14 -->
+
+
 ## APPENDIX
 
 ## A TAGGING FOR INTERSECTIONALITY LITERATURE
@@ -494,6 +547,10 @@ We follow Lincoln and Guba's 1981 model of trustworthiness in our analysis [76],
 
 We use Randolph's 𝜅 to estimate inter-annotator agreement, which is free-marginal rather than fixed-marginal; we choose this because 𝜅 is computed over six distinct items (i.e., tenets).
 
+
+<!-- PAGE 15 -->
+
+
 Table 2: Collins and Bilge's tenets of intersectionality and our corresponding guiding questions
 
 | Tenet             | Guiding Questions                                                                                                                                                                                                                                                                                                                                                                   |
@@ -505,7 +562,7 @@ Table 2: Collins and Bilge's tenets of intersectionality and our corresponding g
 | Complexity        | 1) Do the authors consider cross-sectional social categories? 2) Do they involve those without power in the generation and social construction of new knowledge? 3) Do the authors comment on the interplay between technical interventions and social action, or critical inquiry and practice? 4) Are there any discussions on how spaces operate at different domains of power ? |
 | Social justice    | 1) Do the authors state their commitment or motivation as social justice? 2) Do the authors discuss ways in which fair predictions or rules are not equally applied to everyone and can still produce unfair and unequal outcomes? 3) Do authors aim to dismantle a form of injustice, rather than solely documenting it in the form of a paper?                                    |
 
-## Table 3: Tenet-level interannotator scores by Randolph's 𝜅 and % agreement
+Table 3: Tenet-level interannotator scores by Randolph's 𝜅 and % agreement
 
 | Paper                         |      𝜅 |   % agreement |
 |-------------------------------|--------|---------------|
@@ -521,6 +578,10 @@ Table 2: Collins and Bilge's tenets of intersectionality and our corresponding g
 | Kasy and Abebe [59]           | 0.7778 |         83.33 |
 | Molina and Loiseau [73]       | 0.7778 |         83.33 |
 | Average:                      | 0.7778 |         83.33 |
+
+
+<!-- PAGE 16 -->
+
 
 Table 4: Papers with AI fairness research methodology tags
 
@@ -556,6 +617,10 @@ Table 4: Papers with AI fairness research methodology tags
 |   28 | Mougán et al. [74]            | systemic      | pre-processing                             | theoretical, empirical                | no        |
 |   29 | Finocchiaro et al. [43]       | systemic      | processes                                  | other                                 | yes       |
 |   30 | Makhlouf et al. [69]          | systemic      | post-processing                            | other                                 | no        |
+
+
+<!-- PAGE 17 -->
+
 
 Table 5: Papers with intersectionality-related reference tags
 

@@ -1,10 +1,11 @@
 ---
 source_file: Kong_2025_Artificial_Intelligence_(AI)_literacy_–_an.pdf
-conversion_date: 2026-02-03T09:04:57.272942
+conversion_date: 2026-02-03T18:36:07.282396
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Innovations in Education and Teaching International
@@ -49,6 +50,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -87,6 +92,10 @@ Artificial Intelligence (AI) literacy; capacity building; sustainable developmen
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 active  participants,  able  to  solve  global  challenges  through  the  use  of  AI  (Edwards  &amp; Cheok, 2018).
@@ -105,6 +114,10 @@ There is a significant mismatch between skills taught in schools and those neede
 
 AI  in  education  can  significantly  support  diverse  learners  through  customisable  and tailored  approaches  to  learning,  making  its  role  distinct  from  face  to  face  and  online learning, but also mutually supportive. This means that learners will be able to proceed at
 
+
+<!-- PAGE 4 -->
+
+
 <!-- image -->
 
 Figure 1. Outline of the status quo, transition process and future of AI literacy.
@@ -116,6 +129,10 @@ their  own  pace  and  at  their  own  level.  This  is  also  consistent  with 
 Developing  an  understanding  of  AI  concepts  in  school  can  provide  learners  with opportunities to develop a sense of capability through the maturation of their problemsolving  skills  (Kong  et  al.,  2023;  Korte  et  al.,  2024).  This  will  provide  learners  with  the psychological empowerment to consider the use of AI as a solution to future problems, and ensure confidence in their ability to do so (Korte et al., 2024). To truly contribute as active members of the society, one must be cognitively and inherently ready to harness AI to the benefit of themselves, their professions and the larger society.
 
 As AI becomes all the more ubiquitous, its impact is increasingly felt across societies. One such group foreseen to be significantly influenced is the workforce, as AI progressively changes and replaces jobs and forces industries and their workers to adapt to new
+
+
+<!-- PAGE 5 -->
+
 
 <!-- image -->
 
@@ -130,6 +147,10 @@ Ultimately, when applying AI as solutions to real-life problems, the future work
 ## Possibilities of AI education and AI literacy
 
 To conclude, we argue that AI in education can offer significant improvements in both face-to-face  and online learning environments, by engaging learners at their individual levels,  and  providing  timely  feedback  and  assessments  to  guide  learning  (Luckin  et  al., 2016).  Furthermore,  AI  in  education  can  reduce  gaps  and  challenges  in  education,  and lessen urban and rural learning differences. Specifically, we see AI offering and promoting the  possibilities  of  language  and  culture  revitalisation,  and  tackling  global  educational challenges.  AI  in  education  and  AI  literacy  can  be  used  to  help  realise  some  of  the sustainable  development  goals,  enhance  lifelong  learning,  and  advance  equality  and
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -160,6 +181,10 @@ Pigga  Keskitalo ,  University  of  Lapland,  Finland  is  a  Professor  in  edu
 Tuija  Turunen ,  University of Lapland, Finland is a Professor of Teacher Education at the Faculty of Education,  University  of  Lapland,  Finland.  She  also  holds  the  UArctic  Chair  in  Social  Justice  and Diversity in Education and leads UNITWIN/UNESCO Network on Teacher Education for Social Justice and Diversity.
 
 David Smith , Charles Sturt University, Australia is an Adjunct Professor and a learning strategist with a  broad  expertise  in  educational  leadership  and  technology  through  his  work  in  schools  and universities. David consults on online and educational leadership strategy in the Higher Learning sector in the United Kingdom, Western Europe and Australia and is a recognised expert in online learning for the open education network.
+
+
+<!-- PAGE 7 -->
+
 
 <!-- image -->
 
@@ -212,6 +237,10 @@ Edwards, B. I., &amp; Cheok, A. D. (2018). Why not robot teachers: Artificial in
 - Korte, S.-M., Cheung, W. M.-Y., Maasilta, M., Kong, S. C., Keskitalo, P., Wang, L., Lau, C. M., Lee, J. C. K., &amp; Gu,  M.  M.  (2024).  Enhancing  artificial  intelligence  literacy  in  cross-cultural  online  workshops. Computers and Education Open , 6 , 100164. https://doi.org/10.1016/j.caeo.2024.100164
 
 Lee, I., Ali, S., Zhang, H., DiPaola, D., &amp; Breazeal, C. (2021, March 13-20). Developing middle school students'  AI  literacy.  In Proceedings  of  the  52nd  ACM  technical  symposium  on  computer  science education (pp. 191-197). ACM. https://doi.org/10.1145/3408877.3432513
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 

@@ -1,10 +1,11 @@
 ---
 source_file: Karagianni_2025_The_EU_artificial_intelligence_act_through_a.pdf
-conversion_date: 2026-02-03T09:02:37.000534
+conversion_date: 2026-02-03T18:33:37.054161
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 ANALYSIS
 
 Anastasia Karagianni January 2025
@@ -14,6 +15,10 @@ The EU Artificial Intelligence Act through a Gender Lens
 Competence Centre on the Future of Work
 
 Friedrich Eberte Stiftung
+
+
+<!-- PAGE 2 -->
+
 
 ## Imprint
 
@@ -47,9 +52,17 @@ Further publications of the Friedrich-Ebert-Stiftung can be found here:
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 Anastasia Karagianni January 2025
 
 ## The EU Artificial Intelligence Act through a Gender Lens
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -68,6 +81,10 @@ Anastasia Karagianni January 2025
 | Recommendations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                                  | 11    |
 | References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .                                         | 12    |
 
+
+<!-- PAGE 5 -->
+
+
 ## Summary
 
 This paper provides a feminist analysis of the European Union's Artificial Intelligence Act (hereinafter the 'AI Act'), assessing its capacity to address gender inequities and structural power imbalances in AI systems. Drawing on feminist theories, the paper evaluates the AI Act's limitations in mitigating gender biases that might disproportionately impact marginalised groups, particularly women of colour and women from marginalised communities. Through case studies in recruitment and employment, healthcare, border management control and predictive policing in domestic violence cases, the report highlights how AI applications can reinforce gender disparities. A detailed examination of specific provisions within the AI Act reveals critical gaps in addressing systemic discrimination and bias in AI governance. To promote a more equitable AI landscape, the report recommends integrating intersectional, feminist-informed revisions that prioritise interdisciplinarity, collective instead of individual approaches and strong oversight mechanisms that are oriented by human rights - including feminist - values. The proposed recommendations focus on strengthening the AI Act's framework to better safeguard marginalised communities and to ensure a regulatory approach that reflects the diverse experiences of all individuals.
@@ -79,6 +96,10 @@ This paper examines the need for feminist-informed AI frameworks to address dive
 This paper argues that robust regulation of AI is critical, examining the AI Act through a feminist lens to identify how it interacts with EU laws, including the General Data Protection Regulation (GDPR), equality and non-discrimination laws and consumer protection legislation. Recommendations focus on interpreting the AI Act to strengthen provisions on inclusivity, diversity, transparency and accountability, ensuring AI systems are regulated to prevent gender biases and protect marginalised groups.
 
 1 Objectification theory is a psychological framework that explains how living in a culture that sexually objectifies the female body affects women's mental and physical health. The theory was first developed by Barbara L. Fredrickson and Tomi-Ann Roberts in their 1997 paper, 'Objectification Theory: Toward Understanding Women's Lived Experiences and Mental Health Risks'. See Fredrickson, B. L., &amp; Roberts, T. A. (1997). Objectification Theory: Toward Understanding Women's Lived Experiences and Mental Health Risks. Psychology of Women Quarterly , 21(2), 173-206.
+
+
+<!-- PAGE 6 -->
+
 
 ## Background: AI systems that have been used and their implications on gender equality and non-discrimination
 
@@ -100,6 +121,10 @@ The VioGen case - which involves the implementation of a system for assessing an
 
 All these cases underscore the urgent need for policymakers to ensure that AI applications both in the public and private sector - for example, in recruitment and employment, healthcare, border management control and predictive policing - are designed with a strong emphasis on gender sensitivity, transparency and accountability, to mitigate the risk of perpetuating bias and to promote equitable protection for all individuals affected by gender-based violence.
 
+
+<!-- PAGE 7 -->
+
+
 ## A gender-responsive text analysis of the AI Act
 
 On 22 January 2024, the pre-final text of the AI Act was released, receiving unanimous approval from the EU Council on 2 February 2024. This legislation fol -lows the foundational framework established by the White Paper on Artificial Intelligence (European Commission, 2020), which aimed to protect fundamental rights and prohibit AI practices that conflict with EU values and fundamental rights under EU law. A critical examination of the AI Act reveals significant gaps in addressing gender equality, which are particularly relevant in the context of algorithmic fairness and data protection.
@@ -111,6 +136,10 @@ In recognising the risks associated with algorithmic bias, the AI Act includes m
 This linguistic analysis of the AI Act reveals its predominantly gender-neutral language, which avoids gender-specific terms. However, to substantiate a genuine commitment to gender equality, the Act would benefit from adopting more explicit gender-responsive language. Gender-neutral language may in- advertently overlook the unique challenges faced by marginalised groups, while gender-responsive language actively promotes equality and addresses the specific needs of diverse gender identities.
 
 In conclusion, the AI Act represents a significant step towards regulating artificial intelligence within the EU framework, yet it falls short in adequately addressing gender equality and the risks of bias inherent in AI systems. As policymakers move forward, it is imperative to enhance the Act with more comprehensive and inclusive language that explicitly addresses the intersection of gender and AI, ensuring that regulations not only prevent discrimination, but also actively promote gender equity in all dimensions of AI development and deployment. The integration of gender-responsive provisions will be crucial in safeguarding fundamental rights and advancing the EU's commitment to equality in the rapidly evolving landscape of artificial intelligence.
+
+
+<!-- PAGE 8 -->
+
 
 ## Article-by-article analysis of the AI Act from a feminist perspective
 
@@ -138,6 +167,10 @@ Feminist scholars (Theilen, 2021) contend that existing laws such as the GDPR mu
 
 6 Abusive partners might use digital surveillance tools, such as Global Positioning System (GPS) tracking or spyware on phones and computers, to control and monitor the movements and communications of pregnant women. See Sovacool, B., Furszyfer-Del Rio, D. D., &amp; Martiskainen, M. (2021). Can prosuming become perilous? Exploring systems of control and domestic abuse in the smart homes of the future. Frontiers in Energy Research , 9, 765817.
 
+
+<!-- PAGE 9 -->
+
+
 To this extent, the DSA's provisions against illegal content must similarly address tech-facilitated gender-based violence advocating for accountability in content moderation that disproportionately affects marginalised users, including women of colour (Karagianni and Doh, 2024).
 
 Furthermore, the concept of intersectionality, as articulated by Kimberlé Crenshaw (Crenshaw, 2019), underscores the need for EU harmonisation efforts to consider how various forms of discrimination intersect in AI. The intersectionality framework underscores that individuals do not experience bias in isolation; rather, their experiences are shaped by the confluence of their gender, race, socioeconomic status and other identity factors. In the context of bias auditing, an intersectional approach allows for a deeper understanding of how AI systems may disproportionately impact women from various backgrounds, including women of colour, LGBTQIA+ individuals, and those with disabilities. For example, an AI hiring tool may not only exhibit gender bias against women, but could also reflect racial biases that further disadvantage women of colour.
@@ -164,6 +197,10 @@ Alternatively, augmented-reality (AR) beauty filters used on social media deploy
 
 7 See, https://www.themoderationarcana.com/. In 2022, an algorithmic artist and transgender individual, Ada Ada Ada, attempted to test how algorithms perceive gender. By using her own transgender body, Ada Ada Ada found several methods for tricking gender recognition technology into seeing a gender different from the initial judgement on social media platforms. https://ada-ada-ada.art/linktree.
 
+
+<!-- PAGE 10 -->
+
+
 ards, thereby causing them significant psychological harm (Doh et al., 2024). The same transparency rules are applied for deployers and distributors and for the same reasons, they should prohibit the distribution of AR filters in their platforms. These techniques have a harmful effect on users' mental autonomy, and therefore transparency obligations and cultural diversity should be safeguarded. In these terms, explainability standards should be strengthened, especially when social media influencers promote a product - such as a moisturiser using a beauty filter, where consumer law applies 8 .
 
 Inclusive standardisation mandates the active involvement of diverse stakeholders, including women of colour and other marginalised groups, to ensure that the perspectives of those most affected by AI technologies are incorporated. Gender-aware standards should include measures to address gender bias and inequality, such as mandatory bias audits and the utilisation of diverse datasets. However, there is a significant risk of tokenism, where the involvement of diverse stakeholders is superficial and fails to result in substantive changes promoting gender equity. This challenge is exacerbated by the AI standardisation process being predominantly shaped by powerful corporations and governments, which may obstruct genuine feminist efforts to cultivate inclusivity and equity in AI development and regulation. To overcome these barriers, it is essential to prioritise collaborative approaches that actively engage marginalised voices, ensuring that the evolving landscape of AI remains equitable and just for all stakeholders involved.
@@ -183,6 +220,10 @@ Furthermore, it is critical to establish independent oversight bodies to ensure 
 8 In February 2021, the Advertising Standards Authority (ASA) ruled that filters used in adverts should not mislead consumers about the effect of products. See https://www. dw.com/en/beauty-filters-face-legislation-to-protect-mental-health/a-65681068.
 
 9 See https://www.turing.ac.uk/sites/default/files/2021-03/where-are-the-women\_public-policy\_full-report.pdf. Recital 150 also highlights the need for broad stakeholder involvement, particularly from marginalised communities, in developing AI regulations, while Recitals 165 and 173, alongside Articles 57 and 58 AI Act, underscore the critical importance of participatory governance in the regulation of AI systems. Furthermore, Recital 165 emphasises the need for active engagement from various stakeholders, including civil society, in the development and implementation of AI policies, ensuring that diverse perspectives are considered in decision-making processes. Recital 173 further supports this by highlighting the role of public consultation in fostering transparency and accountability within AI governance. Articles 57 and 58 establish mechanisms for stakeholder involvement in conformity assessments and oversight, reinforcing the commitment to inclusive participation that upholds democratic values and addresses the interests of all affected communities.
+
+
+<!-- PAGE 11 -->
+
 
 addressing issues of bias and harm. These bodies should have the authority to enforce compliance and hold AI developers accountable for any violations, thereby reinforcing the integrity of the AI assessment process and promoting equitable outcomes for all stakeholders.
 
@@ -209,6 +250,10 @@ However, conflating GIAs with risk management systems and fundamental rights imp
 
 10 Until 2 November 2024, member states had to identify public bodies which supervise or enforce fundamental rights in relation to the use of high-risk AI systems referred to in Annex III and make the list publicly available. See European Commission, General-Purpose AI Code of Practice: List of Participating Organisations, published on 6 November 2024. https://digital-strategy.ec.europa.eu/en/policies/ai-code-practice.
 
+
+<!-- PAGE 12 -->
+
+
 ## Conclusion
 
 The AI Act aims to protect fundamental rights but lacks strong measures for gender equality. While it references non-discrimination, explicit mentions of 'gender equality' and diverse gender identities are minimal. The predominantly gender-neutral language may miss the challenges/ voices of marginalised communities. To ensure equality for all, policymakers are urged to integrate gender-responsive provisions, addressing any prejudice in the language of the text and promoting equality and diversity across all dimensions of AI regulation and deployment.
@@ -216,6 +261,10 @@ The AI Act aims to protect fundamental rights but lacks strong measures for gend
 Through a feminist analysis of the AI Act, it became apparent that the intersectional approach of gender-based discrimination in AI is more than necessary (Leavy, 2018). AI systems depend on data, causing data bias resulting from unrepresentative, incomplete or historically biased datasets and perpetuating existing inequalities. For this reason, any kind of user vulnerability emerging from systemic inequalities should be considered under diversity, inclusion and participation provisions. The AI Act -when it enters into force - should be harmonised with EU law. Once enshrined in EU law, it should tackle any form of gender-based discrimination. The standardisation process, which occurs during the preparation stage of an AI system, and conformity assessments, which take place during the evaluation stage of the AI system before its market release, can also provide adequate protection for the prevention and mitigation of gender bias. Yet deployers of AI systems should conduct a fundamental rights impact assessment even after the system is released. According to this feminist analysis, a GIA under the fundamental rights impact assessment is essential for comprehensive and efficient protection of gender equality in AI.
 
 While the AI Act holds potential, it is not a panacea; rather, it must be developed with a critical awareness of existing barriers to women and LGBTQIA+ people and an acknowledgment, for instance, of gender-based violence and oppression. Interdisciplinary collaboration, rooted in feminist critical analysis of law, is essential to ensure that AI technologies foster equality and resist perpetuating existing inequalities, ultimately facilitating an inclusive and equitable digital landscape.
+
+
+<!-- PAGE 13 -->
+
 
 ## Recommendations
 
@@ -236,6 +285,10 @@ Inclusive language:
 non-binary or intersex persons. This raises questions about the adequacy of EU non-discrimination law for those unable or unwilling to access gender-affirming healthcare.
 
 - → The definition of gender must acknowledge its complex and fluid dimensions, as recognised in reports from the Council of Europe and the Yogyakarta Principles. Such acknowledgment is vital to dismantling the patriarchal, heteronormative structures that oppress women and marginalise non-conforming identities.
+
+
+<!-- PAGE 14 -->
+
 
 ## References
 
@@ -303,11 +356,19 @@ Van Dijk, N., Gellert, R., and Rommetveit, K. (2016). A risk to a right? Beyond 
 
 Zuiderveen Borgesius, F. (2018). Discrimination, Artificial Intelligence and Algorithmic Decision-Making. Council of Europe .
 
+
+<!-- PAGE 15 -->
+
+
 ## About the Author
 
 Anastasia Karagianni is a FARI Scholar and Doctoral Researcher at the LSTS research group of Law and Criminology Faculty at VUB. Her academic background is mainly based on international and European human rights law, as she holds an LL.M. from the Department of International Studies at the Aristotle University of Thessaloniki. While studying for her master's degree, she spent a year at the Faculty of International Law at KU Leuven as an exchange student. She has also been a visiting researcher at the iCourts research team at the University of Copenhagen. Her academic research focuses on the 'Divergencies of gender discrimination in AI'.
 
 Besides her academic interests, Anastasia is a digital rights activist, co-founding DATAWO, a civil society organisation based in Greece for the advocacy of gender equality in the digital era. Anastasia Karagianni was a MozFest Ambassador for 2023 and Mozilla Awardee for the project 'A Feminist Dictionary in AI' of the Trustworthy Artificial Intelligence working group.
+
+
+<!-- PAGE 16 -->
+
 
 ## The EU Artificial Intelligence Act through a Gender Lens
 

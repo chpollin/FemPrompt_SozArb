@@ -1,10 +1,11 @@
 ---
 source_file: Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.pdf
-conversion_date: 2026-02-03T08:44:23.689901
+conversion_date: 2026-02-03T18:22:35.441937
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## REVIEW
 
 ## Open Access
@@ -51,6 +52,10 @@ It  is  worth  noting  that  AI  education  addresses  not only  the  learning  
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 foundations  of  AI,  but  also  the  knowledge  and  critical reflection on how a trustworthy AI should be developed and the consequences of not doing so. Hence, it is crucial  to  incorporate  AI  teaching  from  the  earliest  stages of  education  (Heintz,  2021).  However,  although  some countries  are  making  significant  efforts  to  promote  AI teaching  in  K-12  (Touretzky  et  al.,  2019a),  this  is  being implemented  through  highly  varied  AI  training  experiences, such as data-driven design (Vartiainen et al., 2021), interactive data visualizations (Chittora &amp; Baynes, 2020; von Wangenheim et al., 2021), virtual reality and robotics (Narahara &amp; Kobayashi, 2018), games (Giannakos et al., 2020), or even based on combined workshop series (Lee et al., 2021). To date, there are very few methodological proposals on how to introduce the AI curriculum in K-12 education (Lee et al., 2020).
 
 Since the development of a field requires prior research, we propose in this paper to identify and examine the way in  which  AI  literacy  is  developing  in  K-12  around  the world,  to  draw  conclusions  and  guide  teaching  proposals for AI literacy in K-12. By highlighting and discussing the pros and cons of the different approaches and experiences in the literature, we aim to inspire new initiatives and guide the actors involved, from decisions-makers, for example in education policy, to teachers involved in their conception, design and implementation. We also hope to raise  awareness  of  the  importance  of  learning  about  AI from  an  early  age,  emphasizing  the  key  aspects  of  this training and, hopefully, fueling the debate that needs to be fostered in our research community.
@@ -64,6 +69,10 @@ Starting  in  the  1970s,  AI  began  to  emerge  in  educational  contexts  thr
 The  teaching  of  knowledge  in  AI  has  traditionally been carried out at the university level, focused on students  who  study  disciplines  closely  related  to  computing and ICT in general. In recent years, AI learning has also  started  to  be  relevant  both  in  university  programs with  diverse  study  backgrounds  (Kong  et  al.,  2021),  as well as at the K-12 level (Kandlhofer &amp; Steinbauer, 2021; Tedre  et  al.,  2021).  However,  teaching  AI  at  the  K-12 level is not yet prevalent in formal settings and is considered challenging. Experts believe it is important to have some thought on what AI education should look like at the  K-12  level  so  that  future  generations  can  become informed citizens who understand the technologies they interact with in their daily lives (Touretzky et al., 2019a). Training  children and  teenagers  will  allow  them  to understand the basics of the science and technology that underpins AI, its possibilities, its limits and its potential social and economic impact. It also stimulates and better prepares them to pursue further studies related to AI or even to become creators and developers of AI themselves (Heintz, 2021).
 
 Nowadays,  research  on  AI  teaching  is  still  scarce (Chai et al., 2020a, 2020b; Lee et al., 2020). The acquisition of knowledge in AI represents a great pedagogical challenge for both experts and teachers, and a cognitive challenge  for  students  (Micheuz,  2020).  Some  countries are making significant efforts to promote AI education in K-12 (Touretzky et al., 2019b), by developing relatively  comprehensive  curriculum  guidelines  (Yue et al., 2021). Through interviews with practitioners and policy  makers  from  three  different  continents  (America,  Asia  and  Europe),  some  studies  report  on  continuing  works  to  introduce  AI  in  K-12  education  (He et  al.,  2020).  Some  other  work  focuses  on  examining and  comparing  AI  curricula  in  several  countries  (Yue et al., 2021). In addition, there are a growing number of AI training experiences that explore pathways to optimize AI learning for K-12 students. However, most of them are somehow thematically limited as they do not adequately  address  key  areas  of  AI,  such  as  planning,
+
+
+<!-- PAGE 3 -->
+
 
 knowledge  representation  and  automated  reasoning (Nisheva-Pavlova, 2021). Additionally, due to the rapid growth of AI, there is a need to understand how educators  can  best  leverage  AI  techniques  for  the  academic success of their students. Zhai et al. (2021) recommend that educators work together with AI experts to bridge the gap between technique and pedagogy.
 
@@ -86,6 +95,10 @@ The  research  method  chosen  to  conduct  this  research was the systematic li
 We used Scopus to  implement  the  search  process.  Scopus  provides  an  integrated  search  facility  to  find  relevant papers in its database based on curated metadata. It  includes  primary  bibliographic  sources  published  by Elsevier , Springer , ACM ,  and IEEE ,  among  others.  It provides a comprehensive coverage of journals and topranked conferences within fields of interest. We did not limit our search to specific journals or regular conference proceedings, as there is not yet a clearly established body of literature on the subject. All searches were performed based  on  title,  keywords  and  abstract,  and  conducted between 21 October 2021 and 9 March 2023.
 
 To decide the search string, we ran an initial search and found only a few papers focused on 'literacy' whereas the vast  majority  referred  to  the  broader  term  'education' . Therefore, we decided to use both search terms (key issue 1 in Table 1). As some recent works combine the terms ' Artificial  Intelligence'  and  'education'/'literacy'  into  single terms such as 'AI literacy' or ' AI education' , these were added to the search string (key issue 2 in Table 1). The educational stage was also included in the search string (key  issue  3  in  Table  1).  As  the  search  term  'education' also  returns  AI-based  learning  environments  which  are outside the scope of our review, we explicitly considered negated terms to leave out both computer-based learning and intelligent tutoring systems (key issue 4 in Table 1). A final  decision  was  whether  to  use  the  term  ' Artificial
+
+
+<!-- PAGE 4 -->
+
 
 Table 1 Summary of search terms and issues associated with their choice
 
@@ -122,6 +135,10 @@ The data resulted in a spreadsheet with the metadata of  the  papers  which  pas
 
 The results were organized into two subsections. The  first  subsection  is  a  bibliometric  analysis  of  the reviewed studies, which is based on the metadata provided  by  Scopus.  The  second  subsection  provides  a qualitative analysis of the studies, which is based on the
 
+
+<!-- PAGE 5 -->
+
+
 ## Papers per year
 
 Fig. 1 Annual scientific production: number of papers by year
@@ -148,6 +165,10 @@ Fig. 2 Type of contributions: number of papers by type
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 ## Publishers
 
 Fig. 3 Frequency of publishers: number of papers by publisher
@@ -169,6 +190,10 @@ This category covers learning experiences aimed  at experimenting and becoming f
 ## Learning to recognize artifacts using AI
 
 This subcategory refers to experiences that aim to understand  AI  concepts  and  techniques  enabling  the  recognition  of  which  artifacts/platforms  use  AI  and  which do  not.  Four  studies  were  found  in  this  subcategory. They  are  proposals  aimed  at  helping  young  people  to understand and demystify AI through different types of
+
+
+<!-- PAGE 7 -->
+
 
 ## Main Conference Events
 
@@ -205,6 +230,10 @@ This topic covers proposals designed to understand how AI  works  to  make  user
 
 These  experiences  are  mainly  focused  on  teaching  AI subfields such as ML or AI algorithms applied to robotics.  Understanding  the  principles  of  ML,  its  workflows and its role in everyday practices to solve real-life problems has been the main objective of some studies (Burgsteiner  et  al.,  2016;  Evangelista  et  al.,  2019;  Lee  et  al., 2020;  Sakulkueakulsuk  et  al.,  2019;  Vartiainen  et  al., 2021).  In  addition,  there  are  also  experiences  focused on unplugged activities that simulate AI algorithms. For
 
+
+<!-- PAGE 8 -->
+
+
 ## Participation freq.
 
 Fig. 5 Country participation: number of papers by country
@@ -218,6 +247,10 @@ Fig. 6 Taxonomy of approaches to AI learning in K-12
 example,  through  classic  games  such  as  Mystery  Hunt, one can learn how to traverse a graph without being able to see beyond the next path to be traversed (blind search)
 
 (Kandlhofer et al., 2016). Similarly, the AI4K12 initiative (Touretzky et al., 2019b) collects a large set of activities and resources to simulate AI algorithms.
+
+
+<!-- PAGE 9 -->
+
 
 ## Learning tools for AI
 
@@ -239,6 +272,10 @@ Some countries  are  making  efforts  to  promote  AI  education in K-12. In the
 
 In  China,  the  Ministry  of  Education  has  integrated AI  into  the  compulsory  secondary  school  curriculum (Ottenbreit-Leftwich  et  al.,  2021;  Xiao  &amp;  Song,  2021). Among  their  schemes  we  can  reference  the  AI4Future  initiative  of  the  Chinese  University  of  Hong  Kong (CUHK),  which  promotes  the  co-creation  process  to implement  AI  education  (Chiu  et  al.,  2021).  In  Singapore, a program for AI learning in schools has also been developed,  where  K-12  children  learn  AI  interactively. However,  the  program  is  hindered  by  a  lack  of  professionals (teachers) with adequate training (Heintz, 2021). In  Germany,  there  are  also  several  initiatives  to  pilot AI-related projects and studies (Micheuz, 2020), including the launch of a national initiative to teach a holistic view of AI. This initiative consists of a 6-module course aimed at  explaining  how  AI  works,  stimulating  a  social discourse on AI and clarifying the abundant existing misconceptions (Micheuz, 2020). Canada has also designed an  AI  course  for  high  schools.  The  course  is  intended to  empower  students  with  knowledge  about  AI,  covering both its philosophical and conceptual underpinnings
 
+
+<!-- PAGE 10 -->
+
+
 as  well  as  its  practical  aspects.  The  latter  are  achieved by  building  AI  projects  that  solve  real-life  problems (Nisheva-Pavlova, 2021).
 
 The literature  also  highlights  the  different  approaches that  AI  literacy  should  focus  on:  curriculum  design, AI  subject  design,  student  perspective,  teacher  training,  resource  design  and  gender  diversity.  All  these approaches are described in depth below.
@@ -258,6 +295,10 @@ Student-focused  studies  explore  and  analyze  attitudes and previous knowledg
 ## Teacher training in AI
 
 Teachers are key players for the integration of AI literacy in K-12, as proven by the numerous studies that examine this issue (An et al., 2022; Bai &amp; Yang, 2019; Chiu &amp; Chai, 2020; Chiu et al., 2021; Chounta et al., 2021; Judd, 2020; Kandlhofer et al., 2019, 2021; Kim et al., 2021; Korenova, 2016; Lin et al., 2022; Lindner &amp; Berges, 2020; Oh, 2020; Summers et al., 1995; Wei et al.,  2020;  Wu  et  al.,  2020; Xia &amp; Zheng, 2020). This approach places teachers at the center, bearing in mind what they need to know so as to integrate AI into K-12 (Itmazi &amp; Khlaif, 2022; Kim et al., 2021). The literature analyzed reports on the factors that influence  the  knowledge  of  novice  teachers  (Wei,  2021) and focuses on teacher training in AI (Lindner &amp; Berges, 2020; Olari &amp; Romeike, 2021). Thus, AI training proposals can be found aimed at both teachers in training (Xia &amp; Zheng, 2020) and practicing educators. Training schemes focus  on  their  knowledge  in  technologies  to  facilitate their professional development (Wei et al., 2020) through the  TPACK  (Technological,  Pedagogical  and  Content Knowledge) teaching knowledge model (Gutiérrez-Fallas &amp; Henriques, 2020). Studies focusing on teachers' opinions on curriculum development in AI are relevant (Chiu &amp; Chai, 2020), as are their self-efficacy in relation to ICT (Wu et  al.,  2020),  their  opinions  on  the  tools  that  support the teaching-learning process in AI (Holstein et al., 2019) and their teacher training in technologies (Cheung et  al,  2018;  Jaskie  et  al.,  2021).  These  elements  are  central to the design of an AI literacy strategy in K-12. Both the  co-design  of  ML  curricula  between  AI  researchers and K-12 teachers, and the assessment of the impact of these  educational  interventions  on  K-12  are  important issues  today.  At  present,  there  is  a  shortage  of  teachers with training in  AI  and  working  with  teachers  in  training (Xia &amp; Zheng, 2020) or with teachers in schools (Chiu et al., 2021) is proposed as an effective solution. One of the  most  interesting  analyses  of  teacher  competency
+
+
+<!-- PAGE 11 -->
+
 
 proposes  the  acquisition  of  this  skill  for  the  teaching of  AI  in  K-12,  through the analysis of the curricula and resources  of  AI  using  TPACK.  This  model  was  formulated by (Mishra &amp; Koehler, 2006) and aims to define the different types of knowledge that teachers need to integrate  ICT effectively  in  the  classroom.  In  this  regard,  it is suggested that teachers imparting AI to K-12 students require  TPACK  to  build  an  environment  and  facilitate project-based classes that solve problems using AI technologies (Kim et al., 2021).
 
@@ -281,6 +322,10 @@ We  also  found  that  there  are  hardly  any  AI  learning experiences  that  
 
 The  research  shows  that  clear  guidelines  are  needed on what students are expected to learn about AI in K-12 (Chiu, 2021; Chiu &amp; Chai, 2020; Lee et al., 2020). These studies highlight the need for a competency framework to guide the design of didactic proposals for AI literacy in K-12 in educational institutions.  This  framework  would provide a benchmark for describing the areas of competency that K-12 learners should develop and which specific educational projects can be designed. Furthermore, it  would  support  the  definition  of  a  curriculum  reflecting sequence and academic continuity (Woo et al., 2020). Such a curriculum should be modular and personalized
 
+
+<!-- PAGE 12 -->
+
+
 (Gong et al., 2019) and adjusted to the conditions of the schools  (Wang  et  al.,  2020).  In  the  teaching  of  AI,  an exploratory  education  should  be  adopted,  which  integrates  science,  computer  science  and  integral  practice (Wang et al., 2020). It should also address issues related to the ethical dimension, which is fundamental to the literacy of K-12 students as it enables them to understand the basic principles of AI (Henry et al., 2021). This training facilitates the development of students' critical capacity, and this is necessary to understand that technology is not neutral and to benefit from and make appropriate use of it. Ethics, complementary to legal norms, enhances the democratic quality of society by setting legitimate limits in the shaping of technological life. In this sense, different AI literacy proposals in K-12 already support the addressing of ethical, social and security issues linked to AI technologies (Eguchi et al., 2021; Micheuz, 2020; Wong et al., 2020).  Moreover,  considering  designing  for  social  good could foster or help to motivate learning about AI (Chai et al., 2021). Without a doubt, all this will impact on the achievement  of  a  more  democratic  society.  Due  to  the gender gap in issues related to computer science, it is also necessary to address the gender perspective. In this vein, the  research  proposes,  among  other  strategies,  to  focus AI  literacy  on  real-world  elements  since  this  approach favors the motivation of girls and greater involvement in learning (Jagannathan &amp; Komives, 2019). However, little attention  is  paid  to  the  undesirable  consequences  of  an indiscriminate and insufficiently thought-out application of  AI,  both  in  higher  education  and  especially  in  K-12. For  example,  the  increase  in  socio-economic  inequality between countries  and  within  countries,  resulting  from the  increasing  automation  of  employment,  is  of  particular  concern. This is leading to growing inequality in wages and preservation of human employment, but it is not usually a subject of interest in education.
 
 Currently,  the  challenges  of  this  AI  literacy  require an interdisciplinary and critical approach (Henry et al., 2021). We believe that AI literacy can be leveraged to enhance  the  learning  of  disciplinary  core  subjects  by integrating  AI  into  the  teaching  process  of  those  subjects. AI literacy should rely on transferring AI knowledge and methods to core subjects, allowing education to cross disciplinary boundaries, but staying within the framework  of  disciplinary  core  subjects.  To  achieve this change, educators need to take a closer look at the current  capabilities  of  AI.  This  would  enable  them  to identify all options to improve the core of educational practice  and  thus  optimize  the  educational  process. For  example,  understanding  and  using  word  clouds  is a  powerful  educational  strategy  to  enhance  education in core subjects such as science (e.g., to facilitate object classification), language (e.g. to enable the matching of different topics or authors' works), music (e.g., to support the analysis of song lyrics) or social sciences (e.g., to assist in comparing different discourses). Since AI is highly  interdisciplinary  in  nature,  it  has  a  broad  projection  on  multiple  fields  and  problems  that  require a  transversal  and  applied  approach.  For  example,  the basic algorithms of ML could be taught in Mathematics  and  related  disciplines,  the  design  of  supervised classifiers could be performed for the study of taxonomies  in  Biology,  natural  language  processing  could  be used to make the study of a language more attractive, or the ethical issues surrounding AI could be discussed in Philosophy and Social Sciences subjects.
@@ -290,6 +335,10 @@ Finally,  for  this  meaningful  learning  to  take  place,  AI teaching must be
 ## Conclusion
 
 This study aimed to understand how AI literacy is being integrated into K-12 education. To achieve this, we conducted  a  search  process  following  the  systematic  literature  review  method  and  using  Scopus.  Two  broad groups of AI literacy approaches were identified, namely learning  experiences  and  theoretical  perspective.  The study revealed that learning experiences in schools have focused mainly on technical and applied skills limited to a  specific  domain  without  rigorously  assessing  student
+
+
+<!-- PAGE 13 -->
+
 
 learning  outcomes.  In  contrast,  the  US  and  China  are leading  the  way  in  AI  literacy  implementation  schemes which are broader in scope and involve a more ambitious approach. However, there is still a need to test these initiatives through comprehensive learning experiences that incorporate an analysis of learning outcomes. This work has  allowed  us  to  draw  several  conclusions  that  can  be considered in the design of AI literacy proposals in K-12. Firstly,  AI  literacy  should  be  based  on  an  interdisciplinary  and  competency-based  approach  and  integrated into the school curriculum. There is no need to include a  new AI subject in the curriculum, but rather to build on the competencies and content of disciplinary subjects and then integrate AI literacy into those subjects. Given the interdisciplinary nature of AI, AI education can break disciplinary boundaries and adopt a global, practical, and active  approach  in  which  project-based  and  contextualized work plays an important role. Secondly, AI literacy should  be  leveraged  to  extend  and  enhance  learning  in curricular subjects. As a final point, AI literacy must prioritize the competency of teachers and their active participation in the co-design of didactic proposals, together with pedagogues and AI experts.
 
@@ -343,6 +392,10 @@ Received: 6 September 2022   Accepted: 30 March 2023
 
 Chai, C.S., Lin, P .-Y., Jong, M.S.-Y., Dai, Y., Chiu, T.K., &amp; Huang, B. (2020a). Factors influencing students' behavioral intention to continue artificial intelligence learning. In 2020a International Symposium on Educational Technology (ISET). (pp. 147-150). https://  doi.  org/  10.  1109/  ISET4  9818. 2020.  00040
 
+
+<!-- PAGE 14 -->
+
+
 - Chai, C. S., Wang, X., &amp; Xu, C. (2020b). An extended theory of planned behavior for the modelling of chinese secondary school students' intention to learn artificial intelligence. Mathematics, 8 (11), 1-18. https://  doi.  org/  10. 3390/  math8  112089
 - Chai, C.S., Lin, P .-Y., Jong, M.S.-Y., Dai, Y., Chiu, T.K., &amp; Qin, J. (2021). Perceptions of and behavioral intentions towards learning artificial intelligence in primary school students. Educational Technology &amp; Society , 24 (3), 89-101. Retrieved from https://  www.  jstor.  org/  stable/  27032  858
 - Chen, S., Qian, B., &amp; Cheng, H. (2017). Voice recognition for STEM education using robotics. In Volume 9: 13th ASME/IEEE International Conference on Mechatronic and Embedded Systems and Applications. ASME . https://  doi. org/  10.  1115/  DETC2  017-  68368
@@ -380,6 +433,10 @@ Chai, C.S., Lin, P .-Y., Jong, M.S.-Y., Dai, Y., Chiu, T.K., &amp; Huang, B. (20
 - Henry, J., Hernalesteen, A., &amp; Collard, A.-S. (2021). Teaching artificial intelligence to k-12 through a role-playing game questioning the intelligence concept. KI Kunstliche Intelligenz, 35 (2), 171-179. https://  doi.  org/ 10.  1007/  s13218-  021-  00733-7
 - Herrero, Á., Cambra, C., Urda, D., Sedano, J., Quintián, H., &amp; Corchado, E. (Eds) (2020). 11th International Conference on European Transnational Educational (ICEUTE 2020). ICEUTE 2020. Advances in Intelligent Systems and Computing, 1266 . Springer. https://  doi.  org/  10.  1007/ 978-3-  030-  57799-5\_8
 - Ho, J. W., Scadding, M., Kong, S. C., Andone, D., Biswas, G., Hoppe, H. U., &amp; Hsu, T. C. (2019). Classroom activities for teaching artificial intelligence to primary school students. In Proceedings of international conference on
+
+
+<!-- PAGE 15 -->
+
 
 - computational thinking education. The Education University of Hong Kong. (pp. 157-159).
 
@@ -459,6 +516,10 @@ Oh, W. (2020). Physics teachers' perception of it convergence-based physics educ
 
 Olari, V., &amp; Romeike, R. (2021). Addressing ai and data literacy in teacher education: A review of existing educational frameworks. In WiPSCE '21: The 16th Workshop in Primary and Secondary Computing Education, 17. (pp. 1-2) https://  doi.  org/  10.  1145/  34813  12.  34813  51
 
+
+<!-- PAGE 16 -->
+
+
 - Ottenbreit-Leftwich, A., Glazewski, K., Jeon, M., Hmelo-Silver, C., Mott, B., Lee, S., &amp; Lester, J. (2021). How do elementary students conceptualize artificial intelligence? In SIGCSE '21: Proceedings of the 52nd ACM Technical Symposium on Computer Science Education . (pp. 1261). https://  doi.  org/  10.  1145/ 34088  77.  34396  42
 - Park, K., Mott, B., Lee, S., Glazewski, K., Scribner, J., Ottenbreit-Leftwich, A., &amp; Lester, J. (2021). Designing a visual interface for elementary students to formulate ai planning tasks. In IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC). (pp. 1-9). https://  doi.  org/  10.  1109/ VL/  HCC51  201.  2021.  95761  63
 - Perlin, K., Flanagan, M., &amp; Hollingshead, A. (2005). The Rapunsel Project. In Subsol, G. (Eds). Virtual Storytelling. Using Virtual Reality Technologies for Storytelling. ICVS 2005. Lecture Notes in Computer Science , 3805. Springer. https://  doi.  org/  10.  1007/  11590  361\_  29
@@ -494,6 +555,10 @@ Olari, V., &amp; Romeike, R. (2021). Addressing ai and data literacy in teacher 
 - Wei, Y. (2021). Influence factors of using modern teaching technology in the classroom of junior middle school teachers under the background of artificial intelligence-analysis based on HLM. Advances in Intelligent Systems and Computing, 1282 , 110-118. https://  doi.  org/  10.  1007/  978-3030-  62743-0\_  16
 - Wei, Q., Li, M., Xiang, K., &amp; Qiu, X. (2020). Analysis and strategies of the professional development of information technology teachers under the vision of artificial intelligence. In 2020 15th International Conference on Computer Science &amp; Education (ICCSE). (pp. 716-721). https://  doi.  org/  10. 1109/  ICCSE  49874.  2020.  92016  52
 - West, D.M., &amp; Allen, J.R. (2018). How artificial intelligence is transforming the world. Report. Retrieved April 24, 2018, f rom https://  www.  brook  ings. edu/  resea  rch/  how-  artifi  cial-  intel  ligen  ce-  is-  trans  formi  ng-  the-  world/
+
+
+<!-- PAGE 17 -->
+
 
 - Wong, K.-C. (2020). Computational thinking and artificial intelligence education: A balanced approach using both classical AI and modern AI. CoolThink@ JC , 108.
 

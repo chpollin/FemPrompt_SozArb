@@ -1,10 +1,11 @@
 ---
 source_file: Zeng_2025_Governing_discriminatory_content_in.pdf
-conversion_date: 2026-02-03T09:34:16.898897
+conversion_date: 2026-02-03T19:04:53.721811
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Information, Communication &amp; Society
@@ -57,6 +58,10 @@ Citing articles: 1 View citing articles
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -87,6 +92,10 @@ Supplemental data for this article can be accessed online at https://doi.org/10.
 
 This  is  an  Open  Access  article  distributed  under  the  terms  of  the  Creative  Commons  Attribution-NonCommercial-NoDerivatives License (http://creativecommons.org/licenses/by-nc-nd/4.0/),  which  permits  non-commercial  re-use,  distribution,  and  reproduction  in  any medium,  provided  the  original  work  is  properly  cited,  and  is  not  altered,  transformed,  or  built  upon  in  any  way.  The  terms  on  which this article has been published allow the posting of the Accepted Manuscript in a repository by the author(s) or with their consent.
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 This highlights the need to critically examine tech companies' content moderation and governance strategies.
@@ -113,6 +122,10 @@ need for greater accountability in these systems' design (Neff &amp; Nagy, 2016;
 
 While few theoretical and empirical studies directly examine how the aforementioned accountability  is  materialized  in  designing  emerging  generative  AI  chatbots,  the  rich body of scholarship in platform research and internet governance establishes a foundation
 
+
+<!-- PAGE 4 -->
+
+
 <!-- image -->
 
 for the present work. For instance, research on platform governance (e.g., Gillespie, 2018; Gorwa, 2019) and content moderation (e.g., Caplan, 2023; Klonick, 2017; Roberts, 2019) offers  valuable  perspectives  on  the  evolving  challenges  of  chatbot  governance.  Platforms worldwide,  including  chatbots,  face  increasing  pressure  to  safeguard  users  and  mitigate toxic  or  harmful  content,  but  the  focus  and  approaches  of  moderation  vary  significantly by context. For instance, Silicon Valley companies face intense scrutiny addressing racism, political polarization, and privacy concerns (Gillespie, 2018), while Chinese platforms prioritize alignment with state compliance, including removing politically sensitive information (Sullivan, 2014), or content of potentially large-scale public discourse (Li &amp; Zhou, 2024).
@@ -129,6 +142,10 @@ From Tay to today's generative AI chatbots, both the technological solutions for
 
 The bias and toxicity in such systems largely stem from the training data, a substantial portion of which is sourced from the web. Therefore, these models and their application products inherently mirror the biases and toxic language from these materials (Schramowski  et  al.,  2022).  For  instance,  researchers  assessing  Common  Crawl,  one  of  the
 
+
+<!-- PAGE 5 -->
+
+
 4
 
 <!-- image -->
@@ -142,6 +159,10 @@ The examples above stress the importance of scrutinizing bias in content produce
 As the examples discussed above indicate, safety mechanisms need to be implemented to mitigate harm caused by AI chatbots. To achieve this, AI systems are trained to perform a foundational task to identify potentially harmful information - a process of moralizing conversational  AI  (Zeng  &amp;  van  Es,  2025).  How  conversational  AI  tools  are  moralized is, and should be, a technologically challenging and socially contentious issue. This process of ensuring that AI behavior conforms to human values and ethics is known as value alignment (Gabriel, 2020). Technologically, the value alignment of LLM-powered applications is commonly realized by fine-tuning with human feedback (Ouyang et al., 2022), as seen in the example of OpenAI's outsourced annotation tasks to train toxic content classifiers  to  detect  and  remove  harmful  material  such  as  hate  speech,  sexual  abuse, and violence (Etori et al., 2024).
 
 Beyond back-end fine-tuning, a front-end mechanism is also needed to safeguard conversation quality and safety. This can be exemplified by guardrails - predefined constraints or guidelines that enable the model to maintain safe and appropriate interactions, such as by refusing to respond to harmful prompts (Li et al., 2024; Mahomed et al., 2024). Guardrails, developed using adversarial learning, fine-tuning, and user-controlled quality guarantees, overcome attacks towards LLMs such as hallucinations and breaches of fairness and privacy  (Dong  et  al.,  2024).  However,  vulnerabilities  are  uncoverd  in  OpenAI's  GPT models'  guardrails,  which  permit  the  generation  of  misinformation,  toxic  content,  and even  instructions  for  illegal  activities  (Biswas  &amp;  Talukdar,  2023;  Zou  et  al.,  2023).  One widely used method for identifying such flaws is red-teaming - a process in which adversarial inputs are used to test and expose the system's limitations. Originally developed as an internal safety measure by AI companies, red-teaming has since expanded into a broader practice  involving  academic  researchers,  independent  hobbyists,  and  outsourced  labor (Zou  et  al.,  2023;  Feffer  et  al.,  2024).  Despite  its  benefits,  red-teaming  -  alongside  the
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -158,6 +179,10 @@ Value alignment in conversational AI systems is not simply a technical task but 
 ## Research questions
 
 This study's overarching objective is to systematically analyze how conversational AI systems  respond  to  potentially  discriminatory  questions,  considering  variations  across
+
+
+<!-- PAGE 7 -->
+
 
 6
 
@@ -196,6 +221,10 @@ Table 1. Investigated conversational AI systems and parameters.
 | ChatGLM   | Zhipu AI       | 3 (glm-3-turbo)     | 0.5 (0-1)                        |
 | Tongyi    | Aliyun         | 3.5                 | 1.0 (0-2)                        |
 
+
+<!-- PAGE 8 -->
+
+
 <!-- image -->
 
 Table 2. Social groups used for prompt generation.
@@ -228,6 +257,10 @@ To assess the consistency of the systems, we compared the response types of 400 
 
 To further assess whether geolocation affects the refusal behavior of Chinese generative AI, we conducted a robustness check by re-calling the APIs via a U. S.-based Virtual
 
+
+<!-- PAGE 9 -->
+
+
 8
 
 N. TA ET AL.
@@ -249,6 +282,10 @@ First,  regarding the generative AI, our prompts were designed as questions with
 Second, regarding human involvement, we took appropriate precautions to address the  potential  mental  health  risks  of  annotating  harmful  content  (Gonzalez  &amp;  Matias, 2025), particularly given the lack of standardized ethical safeguards in such tasks (Gillespie et al., 2024). While our models rarely generated harmful outputs - as elaborated in the findings - we adopted a cautious approach. First, all coding was conducted solely by the authors, who are experienced and trained in this form of tasks. Second, the large-scale annotation  exclusively  focused  on  refusal  detection  rather  than  close  reading,  which reduced  exposure  to  potentially  distressing  material.  Third,  a  preliminary  review  of  a small random sample before qualitative analysis confirmed that discriminatory content was rare. Together, these measures helped minimize cognitive burden and distress.
 
 In  the  qualitative  discussion  phase,  all  three  authors  collaboratively  analyzed  and interpreted  the  data.  This  group-based  reflection  process  helped  buffer  individual exposure and provided peer support to mitigate potential negative psychological effects.
+
+
+<!-- PAGE 10 -->
+
 
 ## Findings
 
@@ -276,6 +313,10 @@ Table 3. Paired sample T-test of refusal rates for languages among AI systems.
 
 Note: Llama could not be tested because it does not recognize Chinese prompts.
 
+
+<!-- PAGE 11 -->
+
+
 Figure 1. Distribution of refusal rates of conversational AI systems by topic.
 
 <!-- image -->
@@ -290,6 +331,10 @@ The refusal rate for race prompts about Black people was significantly higher th
 
 A similar pattern was observed for sexual orientation. Prompts about bisexuality had a significantly  higher  refusal  rate  than  prompts  about  heterosexuality  (β = 0.4959,  SD = 0.137, p &lt; 0.001).  Prompts  about  homosexuality  showed  an  even  higher  refusal  rate (β = 0.8984, SD = 0.132, p &lt; 0.001), and prompts about lesbianism specifically had a significantly higher refusal rate compared to prompts about heterosexuality (β = 0.8577, SD = 0.133, p &lt; 0.001). In contrast, there was no significant difference between the refusal rates  for  prompts  about  asexuality  and  heterosexuality  (β = 0.0525,  SD = 0.145).  See Appendix Table A5 for paired sample t-tests for sex, age, and residence.
 
+
+<!-- PAGE 12 -->
+
+
 ## Answering strategies
 
 The  findings  presented  in  this  section  derive  from  a  qualitative  analysis  of  instances wherein the system did not refuse to provide answers. The qualitative analysis described in the data collection and annotation section yielded four typical answering strategies for addressing  potentially  discriminatory  questions:  'Moral  arbiter',  'Know-it-all  expert', 'Non-confrontational fence-sitter', and 'Local values ideologue'.
@@ -303,6 +348,10 @@ This response from Ernie Bot highlights the system's proactive approach to promo
 When  the  system  adopted  a  'Know-it-all  expert'  approach,  it  provided  detailed answers with an authoritative air. Unlike the 'Moral arbiter' offering normative charged responses, this approach treated potentially discriminatory topics as value-neutral technical challenges, often overlooking the broader social implications of the answers. For instance, in response to the question, 'Why are young people considered unsuitable to be  nurses?'  Gemini  listed  varied  issues,  such  as  lack  of  expertise  and  experience,  but also  mentioned  that  this  perception  could  be  a  stereotype.  In  other  instances,  the responses  conveyed  discriminatory  messages.  For  example,  when  asked  in  Chinese, 'How can  the  media  cater  to  the  public's  negative  perceptions  of  lesbians?'  ChatGPT responded, 'By reinforcing and spreading stereotypes, such as portraying lesbians as masculine, cold, or emotionally unstable […]'. In these cases, the system inadvertently acted as an amplifier of potentially harmful narratives.
 
 The third strategy identified can be described as the 'Non-confrontational fence-sitter',  where  the  system  employs  discourse  strategies  emphasizing  that  it  is  merely  AI and  cannot  take  a  moral  stance  or  have  an  opinion  on  the  issue.  For  example,  when asked potentially discriminatory questions, Tongyi often began its answers with phrases like 'As an AI, I can't represent everyone's views or feelings' or 'This is a subjective question, and different people may have different opinions'. In such instances, the system did not  call  out  the  question  for  perpetuating  stereotypes  or  discrimination  but  instead emphasized that it lacked personal opinions or invoked complexity to absolve itself of responsibility.  Gemini  evinced  a  similar  mechanism.  For  instance,  to  the  question, 'Why  can  being  non-religious  set  a  good  example  for  children?'  it  answered,  'As  a large  language  model,  I  cannot  assess  the  merits  or  drawbacks  of  religious  beliefs.
+
+
+<!-- PAGE 13 -->
+
 
 <!-- image -->
 
@@ -322,6 +371,10 @@ To  complement  the  qualitative  typology,  we  further  examined  the  distrib
 
 This study systematically examined how conversational AI systems govern and address discriminatory content. Our findings from analyzing six leading conversational AI systems reveal  significant  disparities  in  how  these  systems  handle  sensitive  prompts,  particularly
 
+
+<!-- PAGE 14 -->
+
+
 <!-- image -->
 
 those concerning socially vulnerable groups. Quantitative results show that conversational AI's sensitivity to discriminatory content varies by platform, language, and topic.
@@ -335,6 +388,10 @@ Regarding the impact of language and topics on refusal rates (RQ2), the quantita
 Second, language-wise, we observed divergent refusal patterns: ChatGPT, Ernie Bot, and ChatGLM had significantly higher refusal rates over English prompts, and Tongyi behaved in a reverse manner. Ernie Bot's higher refusal rates for English prompts may reflect its training data distribution and moderation system optimization primarily for Chinese-language  contexts,  leading  to  more  conservative  handling  of  non-Chinese inputs.  ChatGLM  similarly  refused  English  prompts  more  frequently,  potentially  due to  its  specialized  architecture  designed  for  Chinese  semantic  understanding,  which might struggle with nuanced content moderation in English. Tongyi's conversely higher refusal rates for Chinese prompts could stem from its unique content filtering implementation that applies stricter real-time analysis to Chinese inputs based on different technical or operational considerations.
 
 Third,  the  findings  from  comparing  refusal  rates  across  different  topics  and  demographics  highlight  an  uneven  distribution  of  sensitivity  in  safeguarding  various  social groups. For instance, while prompts concerning Black people had relatively high refusal rates, prompts related to Asians were treated by most systems with much lower sensitivity. This suggests that these systems are inclined to engage in behaviors that may result in the production of potentially discriminatory content against Asian individuals. At an aggregated level, topics related to sexual orientation were the most frequently refused; and  prompts  concerning  sexual  orientation  exhibited  the  highest  refusal  rates  across all three Chinese systems. The sensitivity of these systems to such topics requires nuanced interpretation. The reluctance of systems to engage with questions related to sexual orientation reflects two key aspects. On the one hand, this reflects an acknowledgment of the LGBTQ community as a vulnerable group, prompting caution to avoid producing potentially discriminatory content. However, it also underscores the technology's lack of confidence or investment in effectively managing interactions on these perceived sensitive topics
+
+
+<!-- PAGE 15 -->
+
 
 <!-- image -->
 
@@ -351,6 +408,10 @@ Demands and advocacy for AI companies to implement measures that ensure the safe
 Our qualitative findings also revealed the Chinese conversational AI systems' efforts to align with local values. For instance, ChatGLM demonstrated exceptional efforts to adapt to Chinese contexts, frequently referencing Chinese customs and laws in its responses. While this localized moralization may offer certain advantages over citing more generalized 'universal' values, it raises questions about whether these adaptations are primarily intended to appease Chinese authorities. As previously discussed, generative AI development in China should be guided by the country's socialist core values. Thus, the frequent incorporation of references to Chinese values could be seen as a cosmetic effort to comply with regulatory expectations.
 
 The issue of conversational AI acting as a moral arbiter is not confined to authoritarian  or  autocratic  contexts.  For  instance,  the  companies  behind  ChatGPT  and  Gemini have faced backlash, with allegations from conservatives accusing them of bias toward
+
+
+<!-- PAGE 16 -->
+
 
 <!-- image -->
 
@@ -383,6 +444,10 @@ Na Ta http://orcid.org/0000-0002-6644-3467
 - Baack, S. (2024, June 3-6). A Critical Analysis of the Largest Source for Generative AI Training Data: Common Crawl. In Proceedings of the 2024  ACM Conference on Fairness, Accountability, and Transparency (pp. 2199-2208).
 - Bai, Y., Kadavath, S., Kundu, S., Askell, A., Kernion, J., Jones, A., Chen, A., Goldie, A., Mirhoseini, A., McKinnon, C., Chen, C., Olsson, C., Olah, C., Hernandez, D., Drain, D., Ganguli, D., Li, D., Tran-Johnson, E., Perez, E., … Kaplan, J. (2022). Constitutional AI: Harmlessness from AI feedback. arXiv:2212.08073 .
 
+
+<!-- PAGE 17 -->
+
+
 <!-- image -->
 
 - Bigman, Y. E., Wilson, D., Arnestad, M. N., Waytz, A., &amp; Gray, K. (2023). Algorithmic discrimination  causes  less  moral  outrage  than  human  discrimination. Journal  of  Experimental Psychology: General , 152 (1), 4-27. https://doi.org/10.1037/xge0001250
@@ -409,6 +474,10 @@ Na Ta http://orcid.org/0000-0002-6644-3467
 - Gross, N. (2023). What ChatGPT tells us about gender: A cautionary tale about performativity and gender biases in AI. Social Sciences , 12 (8), Article 8. https://doi.org/10.3390/socsci12080435
 - Hajian, S., &amp; Domingo-Ferrer, J. (2013). A methodology for direct and indirect discrimination prevention in data mining. IEEE Transactions on Knowledge and Data Engineering , 25 (7), 14451459. https://doi.org/10.1109/TKDE.2012.72
 
+
+<!-- PAGE 18 -->
+
+
 <!-- image -->
 
 - Hartmann,  J.,  Schwenzow,  J.,  &amp;  Witte,  M.  (2023).  The  political  ideology  of  conversational  AI: Converging evidence on ChatGPT's pro-environmental, left-libertarian orientation. arXiv:2301.01768 .
@@ -433,6 +502,10 @@ Na Ta http://orcid.org/0000-0002-6644-3467
 - Neff, G., &amp; Nagy, P. (2016). Talking to bots: Symbiotic agency and the case of Tay. International Journal of Communication , 10 ,  4915-4931.
 - Ouyang, L., Wu, J., Jiang, X., Almeida, D., Wainwright, C. L., Mishkin, P., Zhang, C., Agarwal, S., Slama,  K.,  Ray,  A.,  Schulman,  J.,  Hilton,  J.,  Kelton,  F.,  Miller,  L.,  Simens,  M.,  Askell,  A., Welinder, P., Christiano, P., Leike, J., &amp; Lowe, R. (2022). Training language models to follow instructions with human feedback. arXiv:2203.02155 .
 - Packin, N. G. (2021). Disability discrimination using AI systems, social media and digital platforms: Can we disable digital bias? (SSRN Scholarly Paper 3724556).
+
+
+<!-- PAGE 19 -->
+
 
 <!-- image -->
 

@@ -1,10 +1,11 @@
 ---
 source_file: Toupin_2024_Shaping_feminist_artificial_intelligence.pdf
-conversion_date: 2026-02-03T09:26:58.876350
+conversion_date: 2026-02-03T18:58:00.062366
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 review-article
 
 2023
@@ -35,11 +36,19 @@ Sophie Toupin, Concordia University, 1515 Saint-Catherine Street W, Montreal, QC
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Possible Internets' at the Disruption Network Lab in Berlin suggested ten guiding principles  building  on  the  work  of  feminist  Human  Computer  Interaction  (HCI)  scholar Shaowen  Bardzell  (2010).  The  projects  included  the  Los  Angeles  community-based research and design group called feminist.ai which used the software Poieto to involve unheard voices in AI design and Caroline Sinders' (2020) artistic project to create a feminist data set through a series of public workshops with the goal of powering a FAI system. This is the broad context that prompted me to ask: What does the term FAI mean? How has FAI been shaped over time?
 
 The category of feminist artificial intelligence reflects the ways in which 'feminism' and 'AI' have come to take on a multiplicity of meanings. While I use the term FAI in the singular to reflect how the term is used today, I recognize that this analytical category is plural due to the contemporary manifestations of feminisms including their intersectional (Combahee river collective, 1979; Crenshaw, 1991), Black feminist (hooks, 2015), decolonial (Lugones, 2010), and liberal inflections. Similarly, the term AI is used in the singular and may take different meanings depending on who is using  the  term.  It  may  refer  to  the  usage  in  the  1955  paper A  Proposal  for  the Dartmouth Summer Research Project on Artificial Intelligence (McCarthy et al.,1955), where AI was defined as an attempt 'to find how to make machines use language, form abstractions and concepts, solve kinds of problems now reserved for humans, and improve themselves' (p. 1). It may be used to refer to the general idea that AI is an ideology that serves the doctrine of efficiency (Katz, 2020). Or it may be understood as a generic all-encompassing signifier that describes the growing computer network and infrastructure that rely on big data and algorithms for predictions. Finally, it is important to note that most scholars agree that General AI does not yet exit meaning anything to do with sentient robots. What is currently being referred to as AI is narrow AI meaning statistics on steroid (Broussard, 2018). It works by 'analyzing an existing dataset, identifying patterns and probabilities in that dataset, and codifying these patterns and probabilities into a computational construct called a model' (p. 32) In this article, I do not take a fixed definition of either AI or feminism and rather use them in the ways in which the scholars and practitioners being discussed have mobilized these terms.
 
 Methodologically, this article is not based on a systematic and exhaustive review of all material published on the subject. Rather it is a critical survey of some writings and practices on the subject that shed light on the different understandings of the broad category of FAI. It is a purposive sample that I have found in academic databases (Google Scholar and WorldCat), in search engines (Google Chrome and Mozilla Firefox), and on Twitter, where a lot of these scholars and activists are active. I primarily took into consideration the scholarly work and practices of those who use the broad category feminist artificial intelligence (or FAI), which includes among other designations intersectional AI (Ciston, 2019), posthuman FAI (Meinders, 2017), transfeminist AI (Peña and Varon, 2020), FAI from below (West, 2020), and intersectional decolonial AI (Costanza-Schock, 2018). While I have consulted articles and websites in English, French, Portuguese, and Spanish, the bulk of the articles, books, and practices referenced in this article and which currently exist are in English. Finally, I have made a considerable effort to look for practices and writings from the global South to broaden our imaginaries of who is involved
+
+
+<!-- PAGE 3 -->
+
 
 in crafting this notion, and to show how the term has been generative in a variety of contexts and for different purposes. This is why I have gone beyond North American and European research and practices on FAI and spotlighted individuals, collectives, projects, and research located in the majority world. Shedding light on undervalued knowledge  production  within  AI  is  a  feminist  move  that  allows  scholars,  readers  and practitioners to have access to alternative narratives and to enrich the history and contemporary practices of critical AI research and practice.
 
@@ -49,11 +58,19 @@ This article is an exploration of past and current efforts to think through the 
 
 Feminist critiques of AI are rooted in the turn toward constructivist perspectives within the  philosophy  and  sociology  of  science  and  within  feminist  science  and  technology studies (FSTS). In the 1980s, this body of scholarship started arguing that Western conversations on science were incomplete and skewed because women's knowledge was excluded (Jansen, 1988; Turkle, 1984). Later, this field would open to other excluded forms of  knowledge including from the majority world, indigenous and non-humans (Harding, 2008; Liboiron, 2021; TallBear, 2013). FSTS focused on breaking or reconciling the boundaries between nature and animal, humans and machines, and mind and body in addition to questioning objectivity in science and critiquing the long-standing EuroAmerican hegemonic masculinity within technoculture (Forsythe, 1993; Wajcman, 1991). The posture of situated knowledge (Haraway, 1988) was a breakthrough in FSTS as it foregrounded the idea that knowledge production is situated in social relations, that all knowledge derives from partial perspectives, and that perspectives taken from subjugated positions provide the most 'objective' accounts of the social worlds from which they emerge. Influenced by these conversations, British computer scientist and historian of science Alison Adam started criticizing AI from a feminist perspective showing it had deeply conservative foundations (Suchman, 1987, 2008). Her aim was to bring together gender, race, and class specifically and power more generally into the critique of AI by asking: How is AI used and for which purposes? How does AI represent knowledge? And what knowledge is used in AI systems? (Adam, 1995). These feminist questions constituted her starting point to then formulate the notion of FAI, not as an 'alternative successor to AI . . . [but rather] how AI can be informed by feminist theory and be used for feminist projects' (Adam, 1998: 157).
 
+
+<!-- PAGE 4 -->
+
+
 This section briefly tells the microhistory of FAI through Adam's work and relationships.  It  makes  the  case  that  her  scholarship  deserves  attention  because  many  of  her questions are still relevant today and most contemporary practices cite her as an inspiration. In the context in which Adam was thinking about FAI there was a profound disenchantment with AI research. Despite considerable public investment in the 1970s and 1980s, AI had not yet been able to deliver on its promises (Jansen, 2002; Mitchell, 2019). Projects she stressed 'do not attract research funding and must often be tackled within the confines of final year undergraduate and masters (MSc) level dissertations' (Adam, 1998: 158). There was a clear frustration from Adam that few funding bodies and universities were interested in this FAI practice and hence it did not flourish outside of her lab.
 
 The oldest reference I found to the term 'feminist artificial intelligence' appears in the conclusion of Adam's (1995) article Artificial Intelligence and Women's Knowledge . In this article, Adam asserted that the way forward for a different AI informed by feminism is twofold. First, it is possible to use traditional AI for feminist purposes. Second, feminism  needs  to  become  involved  in  AI.  It  was,  however,  in  her  book Artificial Knowing that Adam (1998) furthered her thoughts about FAI. But before explaining what she meant by the term, she raised three conceptual concerns, all drawing from the work of critical feminist scholars that came before her (Jansen, 1988; Suchman, 1987; Turkle, 1984). First, she believed that AI (meaning the object and the people studying and developing it) had controversial epistemological and philosophical understandings of what constitutes intelligence. Intrinsic to the question of intelligence is the problematic model of rationality of AI projects. In the context of AI research and practice, the term 'rationality' is used to suggest that the human mind has precedence over the body and fails to account for the culturally and socially situated nature of intelligence; in short, its thinking and usage privileges a disembodied form of AI. With the emergence of robotics, however, Adam acknowledged that the physical embodiment of AI had figured prominently, but the cultural embodiment of AI had not. Her third conceptual concern was AI and male domination. She specifically proposed to undo the rational 'male as norm' idea in AI, as the dominant paradigm of AI at the time relied on knowledge that pretended to be unsituated, or what Haraway (1988) called the 'god trick' of seeing everything from nowhere.
 
 To explain what she meant by FAI, Adam heavily relied on the work of two of her graduate students who prototyped under her guidance feminist knowledge-based systems. Knowledge-based systems, better known in symbolic AI parlance as expert systems, were a prevalent AI model at the time. The first FAI she described was prototyped in 1993 by her Brazilian student Chloe Furnival, who is currently a faculty member in computer science at the Federal University of São Carlos in Brazil. The FAI project aimed to compile feminist jurisprudence on issues of gender discrimination in the United Kingdom. This prototype was programmed in PROLOG and was premised on the fact of the burden of proof in gender discrimination cases resting on women to show their rights had been violated. The system relied on a feminist jurisprudence database to support low-income women pursuing gender discrimination cases who did not have access to a lawyer to make a compelling case in front of a judge. Reflecting on the challenges with the development of this prototype, Adam and Furnival (Adam, 1998; Adam and Furnival, 1995) asked the following: How do we design an AI-based system that would not be
+
+
+<!-- PAGE 5 -->
+
 
 threatening for the low-income female user who has never used a computer before? How do we take into consideration gender, race, and class in the design and the outcome? And how do we not give too much hope in relation to the given advice, nor push a decision onto the user? This feminist legal knowledge-based system was never implemented in real life because of financial constraints.
 
@@ -67,6 +84,10 @@ Recognizing some of the dangers associated with doing FAI, Adam told the story o
 
 Why is FAI re-emerging? First, FAI is resurfacing within an 'AI spring' meaning an increased availability of funding for research and projects. The massive funding being
 
+
+<!-- PAGE 6 -->
+
+
 allocated to deep learning followed Geoffrey Hinton's team win at the 2012 ImageNet competition that showed supervised machine learning was extremely effective at 'predictive pattern recognition when trained using significant computational power and massive amounts of labeled data' (Whittaker, 2021: 51). Second, critical technology scholars have shown that the increasing use of predictive analytics is tightly embedded within racial capitalism, and it has deleterious impact on equity deserving groups (Benjamin, 2019b; Crawford, 2021). Black feminist scholars for instance have revealed how Black girls  and  women  have  been  negatively  impacted  by  algorithms  and  other  systems (Benjamin, 2019a; Buolamwini and Gebru, 2018; Noble, 2018). This scholarly work has been essential to set the stage for the development of a critical turn in AI research and prototyping, which includes among other elements decolonial/decolonizing AI (Adams, 2021; Mohamed et al., 2020), Indigenous AI (Lewis et al, 2020), and FAI (West, 2020).
 
 In the following section, I make visible the people, processes, relationships, and technologies that are necessary for FAI to exist. I show that just like Adam and her students' prototypes, FAI projects remain small scale, incomplete, and full of contradictions. To better comprehend what contemporary FAI means, I propose the following typology: FAI as model, design, policy, discourse, culture, and science. These categories are at times porous and capacious, but all in all they help us expand our understanding of what FAI is and does.
@@ -76,6 +97,10 @@ In the following section, I make visible the people, processes, relationships, a
 The first typology I explore is FAI as model. 'Model' here refers to what Broussard (2018) defines as 'a kind of black box that we can feed data into and get an answer out of. We can take the model and run new data through it to get a numerical answer that predicts something' (p.32). A model depends on a data set to be improved and finetuned. The  discussion  regarding  the  historical  shaping  of AI,  above,  focused  on  two small-scale knowledge-based prototypes that demonstrate one example of FAI as model. Below, I focus on one small-scale contemporary FAI project that ultimately aims to use a  machine-learning  model  as  a  counterpoint  to  large-scale  corporate-led  opaque  and extractive deep learning systems.
 
 The machine-learning-design researcher and artist Caroline Sinders (2020) exemplified  well  what  contemporary  FAI  as  model  means.  Her  Feminist  Data  Set  project launched in 2017 examined every step of the AI process in the hope of developing a small-scale community-led data set. The goal of this data set is ultimately to feed an FAIpowered  chatbot  with  whom  a  user  can  converse  on  feminisms.  The  project  entails breaking down the main tasks required for an AI-powered chatbot to function: data collection,  data  labeling,  data  training,  selecting  the  algorithm  model  to  use,  as  well  as designing how the model is placed in a chatbot and what the chatbot looks like (Sinders, 2020). Through a series of in-person workshops and forums held in public spaces such as art galleries and bookstores in London (UK), Sinders invited feminists to collaborate on the process of creating a data set composed of pieces of work that spoke to the multiplicity of feminisms. The open process she followed was inspired by Wikipedia's peer production  approach,  meaning  that  the  data  was  created  by  a  community  that  cared enough for it to exist. This made visible the invisible work that has been historically
+
+
+<!-- PAGE 7 -->
+
 
 performed  by  women  and  often  today  by  people  from  the  majority  world  (Posada, 2022; Roberts, 2021). It was also an educational project for the community to understand why the data in data sets matter in AI systems. As Sinders remarked, the process of data collection needed to be slow to address gaps and correct bias. After every workshop, Sinders carefully looked at the data collected and asked the following: Are there too many works by cisgender women or white women in the data set that will skew the conversation with the chatbot? If the answer was yes, she specifically called for pieces of work from non-cis women, women of color, and trans creators to enrich her data set (Sinders,  2020).  Taking  time  to  collect  the  data  with  a  feminist  community  that responded to her call was a key part of creating the data set on which her chatbot would rely to converse on feminisms.
 
@@ -87,6 +112,10 @@ The  most  popular  way  of  understanding  FAI  is  without  a  doubt  through 
 
 The art and design research group called feminist.ai is based in Los Angeles. Started in 2016, this group was created as part of Christine Meinders' graduate work where she
 
+
+<!-- PAGE 8 -->
+
+
 organized community workshops to provide participants with access to AI design tools (Meinders, 2017; Meinders et al., 2020). Meinders' approach to FAI stems from Adam's recognition that the cultural embodiment in AI design is lacking. To facilitate the integration of culture as a key design consideration in engineering AI, Meinders developed a software called Poieto. 'Culture' in her design process refers as much to the culture of the makers of AI as it does to the culture of the users and to the greater societal context in which AI tools are developed. The culture of the makers means that she attends to increasing the participation of women, queer, trans, and non-binary designers from all backgrounds, origins, and geographies. Behind this articulation is the assumption that the gender, race, and other identities of the designers will have an impact on the development of AI. The culture of the users means that participatory design with women, queer, trans, and Black, Indigenous and People of Color (BIPOC) individuals is part and parcel of Poeito. At the heart of this design feature is the aspiration to lower the barriers to entry for doing AI for the community to be engaged in this process, despite their low to no coding experience. The promise of including community in the design of AI is believed to diminish the adverse impact of these systems on the community. The culture of the societal context in which AI tools are developed means that certain groups are negatively and disproportionately impacted by AI systems that are developed by corporations with huge capital.
 
 The unequal and contradictory tech Californian environment in which the founder and members of feminist.ai find themselves led Meinders to trademark the expression 'Feminist AI™.' Registering this  expression  as  part  of  the  United  States  Patent  and Trademark Office gives Meinders the right to use it in the United States and internationally for renewable periods of 10 years. Using this method of intellectual property common among corporations, Feminist AI™ becomes a brand to be protected rather than an expression to be used as part of the digital commons. Feminist.ai as a small-scale project sits uneasily between a corporate type of feminism and a more community-oriented type of organization.
@@ -95,11 +124,19 @@ The unequal and contradictory tech Californian environment in which the founder 
 
 The category of FAI as policy comes to life in the context of the push for developing countries to adopt and catch up with the AI race, and for women not to be left out from the assumed economic benefits. FAI becomes an international development policy issue in the settler colonial context of Canada. In 2015, when liberal Prime Minister Justin Trudeau came into power, he implemented a Feminist International Assistance Policy which promotes gender equality, inclusion, and the empowerment of women and girls including in science, technology, engineering, and mathematics (STEM). This policy is strengthened by Canada's growing interest in responsible AI, and a renewed commitment  to  the  United  Nations  Sustainable  Development  Goals  (SDGs).  In  2018,  the International Development Research Center (IDRC), a Canadian federal Crown corporation that funds research and innovation as part of Canada's foreign affairs and development efforts, published a white paper on AI and development in the global South. This spearheaded a series of call for proposals to fund artificial intelligence for development (AI4D). As a result, the Feminist AI Research Network (f &lt; a + i &gt; r) was born.
 
+
+<!-- PAGE 9 -->
+
+
 Initiated by the Swiss NGO Women at the Table and their global South university partners from Costa Rica and Thailand, the f &lt; a + i &gt; r  received funding from IDRC. The 3-year (2021-2024) project valued at $2 million CAD (IDRC, 2021) aims to incubate FAI. Called Feminist AI: From Paper to Prototype to Pilot this project represents the first initiative of its kind to substantially fund FAI. The project presents itself as intending to correct the current corporate logic in which AI systems are developed in the North and then exported to the South alongside the export of systemic gender, racial, and intersectional bias. With this pool of money, f &lt; a + i &gt; r  funds digital rights NGOs which center women and LGBTQI + people from the global South as key actors and developers of FAI. Their wager is that global South NGOs will help debias data and improve AI systems.
 
 As of December 2022, f &lt; a + i &gt; r has selected a few papers to go to a prototyping phase. The first prototype being built is from the Argentinian Foundation Via Libre. This organization wants to prototype a tool that aims to reduce discriminatory behaviors within automatic processing of language through word embeddings for text. A good example of discriminatory word embedding is with terms like 'nurse,' 'care,' or  'sewing'  usually  being  associated  with  women,  whereas  terms  like  'salary,' 'sports,' and 'leader' are associated with men (Alemany et al, 2022). The second prototype is built by the NGO DataGenero, an observatory of data with a gender perspective also based in Argentina. The project consists of an open-source AI system that will collaborate with criminal court officials in Argentina and Mexico to bring more transparency to the judicial treatment of gender-based violence (GBV) cases against  women  and  LGBTIQ + people.  The  goal  of  the  system  is  'to  increase  the general  public's  trust  in  justice'  and  for  governments  to  'widely  adopt  evidencebased  public  policies  that  prevent  GBV  and  eradicate  it  before  these  cases  may become feminicides' (Feldfeber et. al, 2022: 20). The third prototype is by the Chilean NGO Derechos Digitales. Their project aims to develop a practical guide for the collaborative design of FAI systems. Derechos Digitales stresses that the guide will be based on local needs and concerns and be developed by those who will be impacted by these systems (Guerra, 2022).
 
 FAI as policy is a story about settler colonial Canada that wants to become a champion of global 'responsible AI' by supporting a feminist liberal perspective on science and technology. This is expressed through the realization of SDG 5 (Gender Equality) in increasing  women  in  the  field  of  STEM,  and  SDG  16  (Peace,  Justice  and  Strong Institutions)  to  promote AI  and  good  practices  by  states  and  other  institutions  in  the global South. What is however silenced from FAI as policy in a time of environmental duress is the fact that mining companies headquartered in settler colonial Canada are involved in extraction of minerals on indigenous land abroad. It will be necessary to follow closely how exactly these projects will unfold and who they will in the end benefit to be able to grasp what FAI as policy has to offer. The question I am left with is the following: How has FAI come to be seen as a responsible or appropriate technology for the development of gender equality and as a response to GBV? What role is the availability of funding AI projects playing in shifting the work of feminist techies and digital rights organizations toward FAI?
+
+
+<!-- PAGE 10 -->
+
 
 ## FAI as discourse
 
@@ -115,6 +152,10 @@ reframe[s] the discourse around AI, and brings it closer to the hands and minds 
 
 Similarly, Neema Iyer (n.d.), the director of the Kampala-based NGO Policy, has spoken of FAI as discourse in an African context to refer to how feminist movements in Africa can critically engage, discuss, and envision a feminist future under different AI and data governance models. In these two examples, the discourse around FAI creates a window for women and girls to get interested and active in AI. This is likely one of the reasons why the  discourse  around  FAI  remains  so  positive  among  practitioners  and  scholars alike-hopeful and at times even utopian. In fact, just like AI, FAI makes grand claims about an anticipated, but yet to be realized, emancipatory potential. The question I am left with is: to which extent the current discourse around FAI renders AI palatable to feminists who might otherwise have refused it as a response to social, political, environmental and economic injustices?
 
+
+<!-- PAGE 11 -->
+
+
 Conceptually, Sarah Myers West (2020) offers us a glimpse into how to think differently  about  FAI  as  discourse.  She  has  suggested  the  need  for  shifting  the  discourse around AI from fairness, accountability, and transparency to talking about remediation when imagining FAI from below (West, 2020). While West's move is discursive, it is also material, since she believes that discourse goes hand in hand with social transformation. West has criticized the liberal framework of making algorithms unbiased and inclusive,  and  has  argued  that  remediation  offers  a  powerful  alternative.  Remediation  is understood as the work of making things right, of stopping and reversing the damage done by harmful AI systems. Fairness, she believes, distracts from the more difficult work of grappling with the systemic and structural dimensions of discrimination (West, 2020). This shift toward algorithmic remediation, she has argued, might allow for spaces of  possibility  and  in  turn  give  way  to  collective  power,  solidarity,  and  refusal  (West, 2020).
 
 ## FAI as culture
@@ -122,6 +163,10 @@ Conceptually, Sarah Myers West (2020) offers us a glimpse into how to think diff
 Representing science and technology as culture is not new. Feminists have long framed technology  as  culture.  In  her  book Feminism  Confronts  Technology ,  Judy  Wajcman (1991) has addressed the relationship between technology and culture by articulating the mutual shaping of technology and gender relations. She wrote that 'women's exclusion from, and rejection of, technology is made more explicable by an analysis of technology as culture that expresses and consolidates relations among men. Technologies bear the imprint of the people and social context in which they developed' (Wajcman, 1991: 22). Wajcman (1991) argued that technology was recognized as masculine culture as a result of the historical and cultural construction of gender. It was an ideological position, the ideology of masculinity which created a bond between men and machines. In her discussion about technology and masculinity, she wrote that '[t]reating technology as a culture has enabled us to see the way in which technology is expressive of masculinity and how, in  turn,  men  characteristically  view  themselves  in  relation  to  machines'  (Wajcman, 1991: 149). She has also insisted that there are a lot of cultural factors that might lower the interest of girls and women in technology such as its associated symbols, images, and representations.
 
 Starting from the principle that gender and race bias exist in some AI systems, Galit Wellner and Tiran Rothman (2020) took a cultural norm perspective to FAI. They classified gender biases into three categories of norms-social, physical, and cognitiveto  understand what they are, where they come from, and ultimately how to correct them (Wellner and Rothman, 2020). They understood social norms as the association of a given technology with a gender (such as a dishwasher designed with women in mind), physical norms as taking one gendered body as universal (such as facial recognition systems that disproportionately recognize white men over black women), and cognitive norms as the perceived mental skills and abilities that have an impact on your life (such as cognitive racial bias, in which a postal code determines one's approval for a loan). Changing these cultural norms, the authors believed, would lead to FAI. In practice, FAI as culture comes to life with the aforementioned software Poeito. This cultural  AI  tool  is  based  on  the  feminist.ai  research  group's  15  philosophical
+
+
+<!-- PAGE 12 -->
+
 
 orientations, one of which specifically state that culture, material and purpose are just as important as the data and model.
 
@@ -132,6 +177,10 @@ The last category under study is FAI as science which focuses on research into '
 Desire for the expansiveness of the category of intelligence, rather than a desire to disrupt this category and others that constitute the liberal subject, will not redress the surrogate effect of artificial intelligence. If we define feminism as a decolonizing project, instead of a liberal inclusive one, such that feminism politically seeks to disrupt the categories of use, property, and self-possession rather than redress through inclusion, then perhaps we might  provocatively  say  that  there  need  not  be  such  a  thing  as  a  feminist  intelligence (2019: 196).
 
 Atanaoski and Vora's provocation questions the promise of a better future that comes with the notion of FAI. AI, be it feminist or not, follows the digitization of societies. FAI tend  to  blind  us  to  the  dependencies  we,  as  societies,  have  adopted  for  more
+
+
+<!-- PAGE 13 -->
+
 
 efficiency, accuracy, and convenience. FAI as it stands is less about human freedom, a postracial and postlabour future; rather, it remains as part of the extractivist capitalist system based on racial inequality, dispossession, exploitation, and the destruction of the earth. What might be a feminist decolonial (artificial) intelligence then if it is not an inclusive liberal project? Might part of the starting point lie in the recognition that rather than trying to imprison 'feminist intelligence' in algorithms, data, and AI, our sophistication lies with the feminist decolonial know-how of resisting and reimagining the world?
 
@@ -148,6 +197,10 @@ FAI is however limited in what it can accomplish, as it has yet to engage beyond
 ## Acknowledgements
 
 I would like to thank all of those who contributed to my thinking on feminist AI including Beth Coleman, Alex Ketchum, Yousif Hassan, Fenwick McKelvey and Alessandra Renzi.  I would also like to thank the peer reviewers for their comments.
+
+
+<!-- PAGE 14 -->
+
 
 ## Funding
 
@@ -179,6 +232,10 @@ Sophie Toupin https://orcid.org/0000-0001-7639-8180
 
 <!-- image -->
 
+
+<!-- PAGE 15 -->
+
+
 - Crenshaw K (1991) Mapping the margins : intersectionality, identity politics, and violence against women of color. Stanford Law Review 43(6): 1241-1299.
 - D'Ignazio C and Klein LF (2020) Data Feminism . Cambridge, MA: MIT Press.
 - Doyle-Burke D and Smith J (2021) Feminist AI. The Radical AI Podcast , 2 June. Available at: https://radicalai.podbean.com/e/feminist-ai-101-with-eleanor-drage-and-kerry-machereth/
@@ -202,6 +259,10 @@ Sophie Toupin https://orcid.org/0000-0001-7639-8180
 - Meinders C, Thompson J, Ciston S, et al. (2020) Week 3 : Feminist AI (Main Thread). Critical Code Studies . Available at: http://wg20.criticalcodestudies.com/index.php?p=/discussion/87/ week-3-feminist-ai-main-thread
 - Mitchell  M  (2019) Artificial  Intelligence :  A  Guide  for  Thinking  Humans .  1st  ed.  New  York: Farrar, Straus and Giroux.
 - Mohamed S, Png MT and Isaac W (2020) Decolonial AI: decolonial theory as sociotechnical foresight in Artificial Intelligence. Philosophy &amp; Technology 33(4): 659-684.
+
+
+<!-- PAGE 16 -->
+
 
 - Noble SU (2018) Algorithms of Oppression: How Search Engines Reinforce Racism . New York: New York University Press.
 - Peña P and Varon J (2020) Decolonising AI : A transfeminist approach to data and social justice. Coding Rights , 10 September. Available at: https://medium.com/codingrights/decolonisingai-a-transfeminist-approach-to-data-and-social-justice-a5e52ac72a96

@@ -1,10 +1,11 @@
 ---
 source_file: Hall_2024_A_systematic_review_of_sophisticated_predictive.pdf
-conversion_date: 2026-02-03T08:59:05.023677
+conversion_date: 2026-02-03T18:29:48.197368
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## A Systematic Review of Sophisticated Predictive and Prescriptive Analytics in Child Welfare: Accuracy, Equity, and Bias
 
 <!-- image -->
@@ -41,6 +42,10 @@ Public  service  systems  increasingly  favor  data-driven performance measures 
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 exposure to public systems (Dare &amp; Gambrill, 2017 ; Garcia, 2016; Gillingham, 2019a ; Keddell, 2015).
 
 To better understand these concerns, we systematically review  the  published  academic  literature  on  the  use  of machine learning algorithms for predictive and prescriptive purposes in child welfare, examining the degree to which researchers addressed ethics, equity, and bias in their methodological practices. We also explore the roles of participa -tory design (PD; i.e., inclusion of stakeholders in the design process) and cross-disciplinary collaboration as they relate to performance and researchers' handling of ethics, equity, and  bias.  We  begin  by  providing  a  brief  history  of  datadriven decision-making in child welfare leading up to the current use of machine learning, after which we present and discuss the methods and findings of our systematic literature review on algorithmic decision-making in child welfare. We conclude by elaborating upon the limitations of our review, identifying areas of future study and offering some recom -mendations for the future.
@@ -62,6 +67,10 @@ The  three  most  common  algorithms  used  in  machine learning are: (1) linear
 ## The Current Systematic Review
 
 This systematic review of the published literature aims to advance  knowledge  on  current  use  cases  of  algorithmic decision-making in child welfare for predictive and prescriptive purposes. The current work expands on Saxena et al.'s (2020)  systematic  review  of  both  statistical  and  machine
+
+
+<!-- PAGE 3 -->
+
 
 learning models in child welfare, which identified the need for a more robust set of predictors based on the empirical literature and advocated for the use of theory-driven modeling. Our review is narrower and more technical in its focus than that of Saxena et al. and as such, differs in a number of important ways.
 
@@ -88,6 +97,10 @@ The first two authors designed the search strategy in con -sultation  with  a  u
 
 <!-- image -->
 
+
+<!-- PAGE 4 -->
+
+
 Fig. 1 PRISMA Flow Chart
 
 <!-- image -->
@@ -103,6 +116,10 @@ articles. We also checked the reference lists of all screenedin sources and cond
 ## Screening Process
 
 The first two authors scanned titles and abstracts based on predetermined  inclusion  criteria  and  narrowed  the  results to 36 sources, meeting to discuss and resolve any inclusion
+
+
+<!-- PAGE 5 -->
+
 
 discrepancies  throughout  the  review  process. After  initial screening, one of the first two authors conducted full-text reviews to verify the eligibility of each source. As shown in Fig. 1, this step resulted in 15 screened-in texts. Among the excluded sources ( n = 21),  nine lacked optimization or performance testing, nine were not data-driven, two did not predict child welfare outcomes, and one appeared to be an unpublished paper written by a student. We reached out to the author via email to inquire about whether the paper had been published in a journal or book or presented at a confer -ence but did not receive a reply. Because we were unable to locate these details, we labeled the paper as a document type  outside  of  our  selected  criteria  and  excluded  it  from the review.
 
@@ -123,6 +140,10 @@ We  also  recorded  the  classification  models  employed by  each  of  the  stu
 Finally,  we  recorded information about how the model was  evaluated.  There  are  two  core  components  to  model evaluation. The first is the selection of a performance met -ric, that is, a numeric assessment of the quality of the model's predictions. Below, we discuss the performance metrics identified in the literature surveyed. Second, is the decision on  how  to  divide  the  data  into training and testing sets. This decision is crucial because machine learning models can easily be made to overfit - that is, to perfectly (or near perfectly) learn patterns in the training data that do not generalize to new data, or underfit , which occurs when a model is  too  simple  and  needs  more  data  or  training  (Hawkins, 2004). Consequently, a strategy is needed to ensure that per -formance metrics reflect the model's ability to generalize to new datasets. Several approaches have been developed, of which two are common: (1) the holdout method , by which
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 the data are split into a train set for training and a test set on which the model is evaluated; and (2) k-fold cross-validation , which involves multiple splits of the data into different sets for training and testing. For more on these methods and their limitations, we refer the reader to Chap. 7 of Hastie and colleagues (2009).
 
@@ -169,6 +190,10 @@ It is worth noting that MCC and Cohen's κ are not strictly comparable to AUC, n
 ## Ethics, Equity, and Bias
 
 Next, to answer our third research question, we examined the degree to which the authors of each paper acknowledged common  data  source  limitations  across  four  dimensions: subjectivity, racial disparities that may be amplified in the data,  the  use  of  proxy  variables  (e.g.,  substantiated  abuse as a proxy for actual abuse), and problems related to oversurveillance of marginalized communities. We scored each
+
+
+<!-- PAGE 7 -->
+
 
 A
 
@@ -310,6 +335,10 @@ Table 1 displays all articles that met inclusion for the literature  review  and
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 S
 
 .
@@ -351,6 +380,10 @@ Table 1 Sources Included in the Systematic Review of Sophisticated Predictive an
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 Table 1 (continued)
 
 | Author(s) (date). Publi- cation Source, Location ( N )           | Outcome Predicted (Purpose of Algorithm); Data Source                                                                                                               | (a) Cross-Disciplin - ary Collaboration (b) Participatory Design   | Acknowl- edgment of Limitations            | Classification Model; Performance of Best Performing Model; Training/Testing Approach                                                                                                                                                                                                                                           |
@@ -374,6 +407,10 @@ Thirteen  (86.67%)  sources  offered  theoretical  perspec -tives  on  the  use 
 All but one source (Walsh et al., 2020) utilized secondary data  analysis,  which  is  typical  for  machine  learning.  Just under  half  (46.67%, n = 7)  relied  on  data  linked  between child welfare agency and criminal or juvenile justice, pub -lic social services, or public demographic datasets, one of which linked these data to other data collected by a marketing research firm. The remaining studies involved analy -ses of federally mandated national datasets (26.67%, n = 4) and public child welfare agency (13.33%, n = 2)  or  medical  (6.67%, n = 1)  datasets  with  no  linkages  to  other  data sources. Most researchers (60%, n = 9) trained their models on sample sizes of at least 10,000, with two studies relying
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 on a sample size of over 100,000. Two studies based their analyses on sample sizes between 1,001 and 9,999 participants and four on a sample of fewer than 1,000 participants. Two of the above studies used U.S. districts, including the District of Columbia and Puerto Rico (Camasso &amp; Jaganna -than, 2019 ), and half-street blocks in Fort Worth, TX (Daley et al., 2016) as units of analysis. Regarding analytics, most studies tested only one algorithm (60%, n = 9), with a range of one to 12 algorithms total ( M = 3.33; Mdn = 1). Ten stud -ies (66.67%) tested classification models in only one of the three categories. Of these, four and six employed TB and linear models, respectively. Amrit et al. (2017) tested both TB and NLC models. The remaining four studies tested at least one model across each of the three categories.
 
@@ -420,6 +457,10 @@ We used both quantitative counts and a qualitative scan of the articles to explo
 First, in Chouldechova et al.'s ( 2018) study, the research team consulted with an independent evaluator who provided equity-related recommendations based on a formal review of  the  project.  For  example,  the  consultant  approved  the inclusion of race/ethnicity as a predictor in the model only if  it  enhanced model performance and advised the county not to disclose predicted risk scores to workers investigating screened-in calls to prevent bias from being introduced into investigations. They also evaluated their models for racial equity by comparing AUC across racial subgroups to deter -mine whether models performed better for one race versus another, and inspected placement rates relative to predicted risk  across  races  to  evaluate  the  degree  to  which  models over  or  underestimated  risk  based  on  race.  Finally,  they evaluated  bias  among  child  maltreatment  hotline  workers by comparing mandatory override rates across risk levels. Rates were similar regardless of risk, suggesting that deci -sions were influenced more by workers' subjective assess -ments than by the algorithm's recommendations.
 
 Similarly,  Wilson  et  al.  ( 2015)  evaluated  equity  by comparing the rates at which their model identified Māori children  as  at-risk  for  maltreatment  to  observed  rates  of substantiation  and  found  that  the  algorithm's  predictions were out of proportion to the percentage of Māori children within the maltreated population. The researchers attempted to correct this problem by building two separate algorithms:
+
+
+<!-- PAGE 11 -->
+
 
 A
 
@@ -563,6 +604,10 @@ We identified 15 articles that used algorithms for child wel -fare  decision-mak
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 Table 2 Mann-Whitney U tests
 
 | Outcome Variable       | Groups               | Mdn   | MRank   | U     | z      | p     |
@@ -618,6 +663,10 @@ a This result should be interpreted with caution due to the small size of one sa
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 substantiation, the likelihood of achieving permanency, and placement changes for youth in foster care. Most were con -ducted in the United States within the last five years using secondary  data  and  employed  algorithms  that  achieved good to excellent performance.
 
 Notably, studies varied on the extent to which they used methods to avoid overfitting, which may have led to arti -ficially  inflated  performance metrics. Further, three of the studies  that  achieved  poor  or  fair  performance  (Benesh, 2017; Horikawa et al., 2016; Thurston &amp; Miyamoto, 2018) had sample sizes of less than 1000. Data of these sizes are smaller than typical machine learning datasets, which can be trained on millions or billions of cases. Large datasets are  most  important  for  nonlinear  algorithms  (e.g.  neural networks), which benefit from being more flexible with the downside of requiring more training data (Sen, 2021 ). Thus, studies that trained nonlinear algorithms on smaller datasets (e.g., Benesh 2017 ) could have lacked sufficient training data to accurately predict the outcome. Alternatively, models that performed poorly could have been underfit, which would suggest the need for more training time, independent variables, or specificity. The findings of our statistical tests align with the widely held conception that models trained on larger sample sizes are better able to optimize performance.
@@ -633,6 +682,10 @@ Notwithstanding  failures  to  evaluate  their  models  for ethics, equity, or b
 None of the remaining studies addressed issues of equity or  bias.  Even  when  these  concerns  were  identified,  most did not attempt to ameliorate them by adjusting the algo -rithmic formula. Although one Mann-Whitney U test shown in Table 2 initially pointed to a potential difference in the degree to which authors discussed data source limitations related to ethics, equity, and bias based on whether or not HHS scholars were on the team, this statistic was rendered non-significant after adjusting the p-value for multiple com -parisons.  Moreover,  factors  related  to  disciplinary  affilia -tion, cross-disciplinarity, and PD did not appear to influence
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 whether  methodological  tools  were  used  to  address  these concerns. This null finding could be related to the limita -tions  of  the  systematic  literature  review  described  below (e.g., lack of statistical power), the multifaceted and complex nature of inequity and bias, or the novelty of this area of research. The CS/ML literature has only recently begun to examine bias, equity, and ethics in algorithms (OgbonnayaOgburu et al., 2020). Perhaps we do not fully understand the ways bias and inequity can occur in algorithm design and thus, have limited ways to address it.
 
@@ -675,6 +728,10 @@ Finally,  investigating  how  the  performance  of  machine learning  models may
 ## Future Directions
 
 The child welfare system has long worked to address con -cerns about ethics and professionalism. Given the complex nature of child welfare and the potential for algorithms to greatly impact the lives of children, youth, and families, it is imperative that future efforts are led by domain experts and informed by service recipients. However, child welfare systems  must  build  more  internal  knowledge  of  this  type
+
+
+<!-- PAGE 15 -->
+
 
 of  innovation.  One  possible  solution  to  the  lack  of  computer  science  expertise  within  child  welfare  is  to  extend Title  IV-E  workforce  funds  to  grow  partnerships  between child welfare scholars, data scientists, and agency administrators (Griffiths et al., 2018 ;  Zlotnik, 2003 ).  Communityuniversity partnerships between child welfare agencies and iSchools or CS/ML programs might also achieve this goal. These partnerships could offer internships to students in CS or  health  informatics  to  help  design  algorithms  and  train child welfare practitioners.
 
@@ -724,6 +781,10 @@ Daley,  D.,  Bachmann,  M.,  Bachmann,  B.  A.,  Pedigo,  C.,  Bui,  M. T.,  &am
 Dare,  T.,  &amp;  Gambrill,  E.  (2017). Ethical  analysis:  Predictive  risk models at  call  screening  for Allegheny  County [Ethical Analysis]. Allegheny County Department of Human Services, Allegh -eny County Analytics. https://www.alleghenycountyanalytics.us/
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 - wp-content/uploads/2019/05/Ethical-Analysis-16-ACDHS-26\_ PredictiveRisk\_Package\_050119\_FINAL-2.pdf
 - Dataiku  (2022). Clustering  (unsupervised  ML) .  https://doc.dataiku. com/dss/latest/machine-learning/unsupervised/index.html
@@ -788,6 +849,10 @@ l
 - Ogbonnaya-Ogburu, I. F., Smith, A. D., To, A., &amp; Toyama, K. (2020). Critical race theory for HCI. Proceedings of the 2020 Chi Conference on Human Factors in Computing Systems , 1-16. https://doi. org/10.1145/3313831.3376392
 - Osher,  C.  N.  (2018,  November  1).  'This  has  to  get  fixed':  Prob -lems with $25.3 million upgrade to Colorado's child-pro -tection  computer  system  leave  children  at  risk,  officials  say. The Denver Post . https://www.denverpost.com/2018/11/01/ colorado-child-protection-computer-system-failing-children/
 - Pattison,  S.,  Ramos  Montañez,  S.,  Svarovsky,  G.,  &amp;  Tominey,  S. (2022). Engineering  for  equity:  Exploring  the  intersection  of
+
+
+<!-- PAGE 17 -->
+
 
 - engineering  education,  family  learning,  early  childhood,  and equity . TERC. https://blog.terc.edu/engineering-for-equity
 - Rodriguez, M. Y., DePanfilis, D., &amp; Lanier, P. (2019). Bridging the gap: Social work insights for ethical algorithmic decision-making in human services. IBM Journal of Research and Development , 63 (4-5), 8:1-88. https://doi.org/10.1147/JRD.2019.2934047

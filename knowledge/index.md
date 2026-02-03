@@ -1,6 +1,8 @@
-# FemPrompt - Dokumentations-Index
+# Literature Review - Dokumentations-Index
 
-Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** im Kontext Sozialer Arbeit.
+Systematischer Literature Review zu **AI Literacy** und **LLM-Bias** im Kontext Sozialer Arbeit.
+
+Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 ---
 
@@ -8,17 +10,18 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 **Primaer:** Empirische Grundlage schaffen fuer Forschung zu diskriminierungssensiblem Prompting.
 
-**Sekundaer:** Methodische Innovation dokumentieren (Human vs. Agent Assessment Benchmark).
+**Sekundaer:** Methodische Innovation dokumentieren (Human vs. LLM Assessment Benchmark).
 
 ---
 
-## Zielgruppe
+## Korpus
 
-| Zielgruppe | Nutzen |
-|------------|--------|
-| Forscher:innen (Soziale Arbeit + KI) | Strukturierte Literaturuebersicht |
-| Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung |
-| Lehrende (AI Literacy) | Kursmaterial, Konzepte |
+**326 Papers** aus Zotero, zwei parallele Assessment-Tracks:
+
+| Track | Methode | Schema | Status |
+|-------|---------|--------|--------|
+| **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit |
+| **LLM** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
 
 ---
 
@@ -28,28 +31,8 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 |-----------|--------|
 | Literature Review (326 Papers) | 🔄 In Arbeit |
 | Paper eingereicht (4. Mai 2026) | ⏸️ Wartet |
-| Benchmark Human vs. Agent | ⏸️ Wartet |
+| Benchmark Human vs. LLM | ⏸️ Wartet |
 | Obsidian Vault | ⏸️ Wartet |
-
----
-
-## Nicht-Ziele
-
-- ❌ Fertiger Prompting-Leitfaden
-- ❌ Tool fuer Endnutzer:innen
-- ❌ Vollstaendige Automatisierung
-
----
-
-## Aktuelle Phase (Februar 2026)
-
-| Track | Methode | Status |
-|-------|---------|--------|
-| Human Expert | Manuelles Assessment (Susi, Sabine) | 🔄 In Arbeit |
-| Agent Workflow | LLM-basiert (Claude Haiku 4.5) | ⏸️ Bereit |
-| Benchmark | Vergleich Human vs. Agent | ⏸️ Pending |
-
-**Paper:** Forum Wissenschaft 2/2026 (Deadline: 4. Mai 2026)
 
 ---
 
@@ -59,64 +42,38 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 | Datei | Inhalt |
 |-------|--------|
-| [01-project.md](01-project.md) | Projektziel, Zielgruppe, Erfolgskriterien, Nicht-Ziele |
-| [02-methodology.md](02-methodology.md) | PRISMA 2020, 10-Kategorien-Schema, Benchmark |
-| [03-status.md](03-status.md) | Aktueller Stand, offene Punkte |
-| [04-technical.md](04-technical.md) | Pipeline-Architektur, Scripts, Kosten |
+| [01-project.md](01-project.md) | Projektziel, Zielgruppe, Erfolgskriterien |
+| [02-methodology.md](02-methodology.md) | PRISMA 2020, Assessment-Schemas |
+| [03-status.md](03-status.md) | Aktueller Stand |
+| [04-technical.md](04-technical.md) | Pipeline-Architektur, Scripts |
 
 ### Anleitungen
 
 | Datei | Inhalt |
 |-------|--------|
 | [guides/quickstart.md](guides/quickstart.md) | 10-Minuten-Einstieg |
-| [guides/llm-assessment.md](guides/llm-assessment.md) | LLM-basiertes PRISMA-Assessment |
-| [guides/pdf-acquisition.md](guides/pdf-acquisition.md) | Hierarchische PDF-Akquise |
 | [guides/manual-review-checklist.md](guides/manual-review-checklist.md) | Markdown-Review Checkliste |
 
 ### Paper-Materialien
 
 | Datei | Inhalt |
 |-------|--------|
-| [paper/Forum Wissenschaft Paper - Arbeitsplan.md](paper/Forum%20Wissenschaft%20Paper%20-%20Arbeitsplan.md) | Paper-Gliederung und Roadmap |
+| [paper/Forum Wissenschaft Paper - Arbeitsplan.md](paper/Forum%20Wissenschaft%20Paper%20-%20Arbeitsplan.md) | Paper-Gliederung |
 | [paper/Human-LLM Assessment Benchmark.md](paper/Human-LLM%20Assessment%20Benchmark.md) | Benchmark-Spezifikation |
-
-### Archiv
-
-| Datei | Inhalt |
-|-------|--------|
-| [archive/journal-2025-11.md](archive/journal-2025-11.md) | Entwicklungsgeschichte November 2025 |
 
 ---
 
 ## Repository-Struktur
 
 ```
-FemPrompt_SozArb/
-  corpus/                  # Korpus (326 Papers)
-  assessment/
-    human/                 # Track 1: Human Expert
-    agent/                 # Track 2: Agent Workflow
-  benchmark/               # Vergleich Human vs. Agent
-  pipeline/                # PDF -> Markdown -> Summary -> Vault
-  vault/                   # Obsidian Vault
-  knowledge/               # Dokumentation (dieses Verzeichnis)
+├── corpus/                  # Korpus-Metadaten
+├── assessment/              # Human Assessment
+├── assessment-llm/          # LLM Assessment
+├── benchmark/               # Human vs. LLM Vergleich
+├── pipeline/                # PDF → Markdown → Summary → Vault
+├── vault/                   # Obsidian Vault (Output)
+└── knowledge/               # Dokumentation
 ```
-
----
-
-## Quick Links
-
-**Assessment:** Scripts in `assessment/` und `assessment-llm/`
-- Agent Assessment: `assessment/agent/run_assessment.py`
-- Human Assessment: Export aus Google Sheets
-
-**Pipeline:** Scripts in `pipeline/scripts/`
-- PDF-Akquise, Markdown-Konversion, Summarisierung, Vault-Generierung
-
-**Benchmark:** Scripts in `benchmark/scripts/`
-- Assessments zusammenfuehren, Agreement berechnen, Disagreements analysieren
-
-Detaillierte Dokumentation: [04-technical.md](04-technical.md)
 
 ---
 
@@ -137,9 +94,8 @@ Detaillierte Dokumentation: [04-technical.md](04-technical.md)
 | Ressource | Link |
 |-----------|------|
 | Repository | [github.com/chpollin/FemPrompt_SozArb](https://github.com/chpollin/FemPrompt_SozArb) |
-| Google Sheets | [Thematisches Assessment](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
-| Zotero Group | 6080294 |
+| Google Sheets | [Assessment](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
 
 ---
 
-*Version: 3.0 (2026-02-03)*
+*Version: 4.0 (2026-02-03)*

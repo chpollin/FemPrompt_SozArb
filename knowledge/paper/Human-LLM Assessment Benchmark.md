@@ -9,7 +9,7 @@ status: draft
 
 ## Summary
 
-Methodendokumentation für den parallelen Vergleich zwischen menschlichem und LLM-basiertem PRISMA-Assessment im Rahmen des FemPrompt Literature Reviews. Das Dokument spezifiziert Kategorien, Datenformate, Workflows und Metriken für die reproduzierbare Durchführung des Benchmarks.
+Methodendokumentation für den parallelen Vergleich zwischen menschlichem und LLM-basiertem PRISMA-Assessment im Rahmen des Literature Reviews. Das Dokument spezifiziert Kategorien, Datenformate, Workflows und Metriken für die reproduzierbare Durchführung des Benchmarks.
 
 ## Forschungsfrage
 
@@ -219,11 +219,11 @@ Duplicate, Off-topic, No_full_text, Language_not_accessible, Other
 
 - [[Forum Wissenschaft Paper - Arbeitsplan]]: Paper-Kontext und Deadline
 - [[Literature Review Pipeline - Technische Dokumentation]]: Bestehende Pipeline
-- [[FemPrompt-SozArb MOC]]: Projekt-Navigation
+- [[Literature Review MOC]]: Projekt-Navigation
 - [[Workflow für eine Deep-Research-gestützte Literaturanalyse am Beispiel von feministischem AI-Literacy]]: Methodendokument
 
 ## Related
 
-- [[SocialAI MOC]]
+- [[Social AI Project]]
 - [[Promptotyping MOC]]
 - [[Critical-Expert-in-the-Loop]]

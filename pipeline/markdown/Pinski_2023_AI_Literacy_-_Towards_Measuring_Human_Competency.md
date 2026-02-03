@@ -1,10 +1,11 @@
 ---
 source_file: Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency.pdf
-conversion_date: 2026-02-03T09:15:38.033185
+conversion_date: 2026-02-03T18:46:59.750161
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## AI Literacy - Towards Measuring Human Competency in Artificial Intelligence
 
 Marc Pinski Technical University of Darmstadt pinski@ise.tu-darmstadt.de
@@ -26,6 +27,10 @@ We aim to fill this gap by defining and conceptualizing general AI literacy and 
 We  contribute  to  research  and  practice  in  four ways: First, we extend AI and human IS competence literature  by  specifying  the  competencies  necessary
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 for human-AI collaboration and establishing a connection between the IS research fields. Second, we contribute  a  measurement  instrument  that  can  be leveraged academically to investigate further relationships in the future of human work with AI or to enhance our understanding of AI acceptance. Third, the developed scale can be leveraged by practitioners, such as firms that can use the dimensions to analyze AI competencies of existing job roles or to determine AI  skill  requirements  for  new  job  roles.  Humans working  with  AI  can  use  the  structure  to  better understand their future roles, assess AI task appropriateness, or develop AI-related ethical awareness. Educational institutions can leverage it to assess  their  AI  curricula.  Forth,  we  leverage  the  AI literacy construct to structure future research.
 
@@ -59,6 +64,10 @@ Table 1. Broken and revised IS assumptions by Schuetz and Venkatesh (2020)
 |   4 | The way the tool derives its outcomes is comprehensible and can be verified | AI can be functionally not transparent |
 |   5 | There is an artificial interface                                            | Humans can be unaware of their AI use  |
 
+
+<!-- PAGE 3 -->
+
+
 Humans have always used technology, while the IT  artifact  had  the  passive  role  of  a  tool.  With  AI, artifacts  are  more autonomous and  can  assume  an agentic role with their own goals (Baird &amp; Maruping, 2021). This capacity enables AI artifacts to delegate tasks to humans  which  makes  their relationship bilateral (#1, Table 1) (Fügener et al., 2021a). Furthermore, AI artifacts are more autonomous, because  they  are  aware  of  their  environment  and process new types of input. Voice assistants, such as Alexa,  listen  continuously  and  process  unstructured data like speech which have not been specified by a developer in advance (#2, Table 1). Contrary to nonAI artifacts, which produce consistent and deterministic outcomes, AI artifacts learn which implies  functional  inconsistency.  The  artifacts  can incorporate feedback from their produced output and adjust their inner workings accordingly (#3, Table 1). Additionally,  AI  is  often  not  transparent  to  its  users and even developers. Neural networks are inscrutable because their enormous complexity makes it impossible for humans to understand how they derive their  outcomes  (#4,  Table  1).  Finally,  AI  artifacts differ  from  non-AI  artifacts,  because  they  do  not always have an artificial interface that reveals to the user that they interact with technology. For example, human  voice  assistants  are  so  close  to  the  actual human  voice,  that  they  can  interact  with  humans without  them  noticing  (#5,  Table  1)  (Wang  et  al., 2017).
 
 How these revised assumptions impact IS theory has  been  explored,  for  example,  with  regards  to  the ways humans and AI collaborate (Jain et al., 2021) or organizations  function  (Benbya  et  al.,  2021).  Both underline  the  human  factor  and  hence  also  the  role human  IS  competencies  will  play  in  AI  theorizing. However, we have to assert that hitherto the AI study coverage in the IS literature is highly skewed towards the  technical  end  of  the  socio-technical  continuum, which holds especially for human competencies in AI (Sarker  et  al.,  2019).  Nevertheless,  there  are  initial conceptualizations and definitions of AI literacy. Long and Magerko (2020) collocate 17 human competencies and 15 design considerations structured with five key questions: 'What is AI?', 'What can AI do?',  'How  does  AI  work?',  'How  should  AI  be used?',  and  'How  do  people  perceive  AI?'.  Heyder and Posegga (2021) draw on this work and structure the competencies into three conceptual blocks: Functional AI literacy, critical AI literacy, and sociocultural AI literacy. While this structure segments  competencies  by  their  content,  Ng  et  al. (2021)  structure  human  competencies  by  their  skill type into three categories inspired by Bloom's taxonomy for competencies (know &amp; understand, use
@@ -86,6 +95,10 @@ Initially, we defined general AI literacy to set up the foundation for our focal
 
 The  four  outlined  steps  (chapters  3.1-3.4)  are  in line with MacKenzie et al.'s (2011) steps 1-5 of scale development. In the following, we elaborate on each step of the scale development process.
 
+
+<!-- PAGE 4 -->
+
+
 ## 3.1 Definition of the focal measurement construct (step 1)
 
 We  initiated  the  scale  development  process  by systematically  reviewing  the  literature.  To  ensure  a diligent  literature  review,  we  followed  established guidelines practiced in IS research (Webster  &amp; Watson, 2002). We combined a direct search specifically on ' AI literacy '  with two supplementary searches  on  the  more  general  fields  of  ' AI '  and  ' IS competencies' (Appendix B). For the direct search, we used a broad set of 18 IS journals and conferences to cover  emergent  research,  while  we  focused  on  the Senior Scholars' Basket of IS Journals for the supplementary  searches  to  only  include  theorizing with  a  certain  maturity.  The  search  resulted  in  172 articles  which  were  screened  by  reading  titles  and abstracts. After pre-selection followed by deep reading 21 studies remained relevant for the development of the  focal  measurement  construct.  The  search  was supplemented  with  relevant  papers  from  adjacent fields identified via forward and backward reference search in the identified papers.
@@ -103,6 +116,10 @@ technology as well as competencies in human factors involved in AI. Many AI comp
 (III)  So  far,  the  themes  were  in  line  with  IS competence theorizing. However, the theme of broken IS assumptions demands to accommodate AI's particularities. The first and the fifth revised assumptions state that there is a bilateral relationship between humans and AI and that for their interaction there  is no  artificial  interface necessary  anymore, which underlines the socio-technical perspective (Table  1).  Therefore,  general  AI  literacy  needs  to comprise competencies regarding technology subsumed under the term AI (agentic AI artifacts/actors), such as how AI is distinct from nonAI  or  where  AI  can  be  used.  But  it  also  needs  to include  competencies  regarding  the  human  actors involved in the human-AI collaboration, such as tasks where humans are superior to AI or which humans are involved  in  human-AI  collaboration.  Furthermore, humans need new competencies on how to recognize AI and what implications it has that humans can now be unaware of their AI interaction (Long &amp; Magerko, 2020). The second, third, and fourth revised assumptions translate into the steps of how AI handles input, processes the received information, and produces output (Table 1). For each step, humans need competencies on how to handle what has fundamentally  changed  compared  to  non-AI.  For example, humans need to know that AI perceives input differently and that input has different effects on an AI artifact  compared  to  a  non-AI  artifact.  Furthermore, humans must develop competencies to judge what it means  for  an  AI  application  in  a  certain  field  (e.g., medicine or business) to not be functionally transparent  (e.g.,  legal  and  ethical  implications  or effects on humans interacting with AI). When an AI artifact  has  derived  an  outcome,  humans  now  need new competencies on how to handle and interpret it.
 
 Considering the introduced definitions (chapter 2) as well as the identified themes (I - III) of the AI and
+
+
+<!-- PAGE 5 -->
+
 
 human  IS  competence  literature,  we  define  for  the purpose of developing a measurement instrument:
 
@@ -135,6 +152,10 @@ Table 3. List of interviewed experts
 |   5 | AI practitioner | Founder of AI start-up                                |
 
 A key result of the expert interviews was that all experts  intuitively  confirmed  the  importance  of  the socio-technical perspective, as well as the explicit and tacit  knowledge  components.  Also,  from  the  six originally entered dimensions that were derived from the literature, the three  dimensions  aimed  at  an understanding  of  the  AI  steps  (input,  processing, output)  could  be  validated  as  meaningful.  However, the dimensions 'AI &amp; human actors' and 'AI interface' which were also derived from the revised IS assumptions by Schuetz and Venkatesh (2020) did not intuitively  resonate  with  a  majority  of  the  experts. Following  suggestions  from  the  experts  for  more clarity,  we  restructured  the  two  dimensions  into  'AI technology' and 'Human actors in AI'. Furthermore, it was recommended to separate the experience dimension into usage and design which we adopted. Subsequently, we restructured the construct into seven
+
+
+<!-- PAGE 6 -->
+
 
 dimensions  (Table  4).  The  dimensions  are  grouped into  three  categories:  AI  actor  knowledge  (explicit literacy),  AI  steps  knowledge (explicit literacy),  and AI experience (tacit literacy). Finally, we reworded the item set based on the feedback elicited via the thinkaloud technique from the experts.  The refined items then entered the card sorting process.
 
@@ -173,6 +194,10 @@ Table 5. Results of second-round card sorting
 
 In step 4, we first formally specified the measurement  model  and  then  conducted  a  pre-test study in line with established guidelines (MacKenzie et al., 2011). Subsequently, we assessed the measurement model of the general AI literacy construct by analyzing discriminant validity, convergent validity, internal consistency, multicollinearity, and item loadings (Fornell &amp; Larcker, 1981). According to MacKenzie et al. (2011), the  formal  specification should capture the expected relationships between the items, construct dimensions, and focal construct. These relationships can be
 
+
+<!-- PAGE 7 -->
+
+
 described either as formative ('defining characteristics of the construct') or reflective ('manifestations of the construct'). Based on the initial structure (Table 4), we define our construct as a multidimensional construct that  is  commonly  found  in  IS  literature  (Croitor  &amp; Benlian, 2019). We specify the items as reflective of their dimensions, such as 'AI technology knowledge', because the dimensions exist at a deeper  more embedded level than what the items describe. Furthermore, it seems likely that a change in one item would affect other items in the same dimensions. The dimensions themselves are specified as formative of general AI literacy, because it seems plausible that for example 'Human actors in AI' and 'AI technology' knowledge both increase AI literacy, but a change in the 'Human actors in AI' dimension does not necessarily cause a change in 'AI technology' dimension.
 
 After  our  specification,  we  conducted  a  pre-test study  with  50  participants  who  were  asked  to  state their agreement with the dimension items and overall general  construct  items  on  a  7-point  Likert  scale (strongly disagree to strongly agree). Participants were acquired through the survey platform Prolific with a pre-screening for high technology usage (≥daily) and programming skills to ensure a sample with sufficiently  discriminant  validity.  Several  attention checks  were  applied  to  ensure  that  the  participants carefully assessed each item. The participants were on average  32.8  years  old;  the  gender  distribution  was 36% female, 62% male, and 2% other; and the highest educational achievement was a university degree for 66%, a high school diploma for 32%, and an apprenticeship  for  2%.  Taking  into  account  that  our construct is defined to measure general AI literacy, we considered the sample appropriate. While the sample size is at the lower recommended end, we considered it sufficient for an internal measurements pre-test.
@@ -188,6 +213,10 @@ Figure 2. Path analysis of structural equation model (Adjusted model)
 <!-- image -->
 
 While  the  adjusted  model  explained  79%  of  the variance of the general AI literacy construct, only the dimension 'AI technology knowledge' (β = .34) had a strong  and  significant  (p&lt;0.05)  effect  on  general  AI literacy. Despite the low path coefficients of the other dimensions, we decided to retain them in the model, as practiced in other IS construct developments (Croitor &amp; Benlian, 2019), because they add key content for the focal  construct,  the  importance  of  the  dimensions might differ in different contexts of AI literacy, and the dimensions do not have collinearity issues (Table 6).
+
+
+<!-- PAGE 8 -->
+
 
 Table 6. Correlation matrix (square root of average variance extracted in bold) , Composite Reliability, Cronbach's Alpha, Variance Inflation Factors
 
@@ -219,6 +248,10 @@ Each of the identified construct dimensions poses an interesting future research
 | AI steps knowledge (SK)           | Content: Is knowledge of AI input and AI output interpretation sufficient to enable humans to handle ethical dilemmas with AI? Scale: Which AI step (input, processing, output) has the highest impact on general AI literacy?                                       |
 | AI usage experience (UE)          | Content: In which organizational roles is AI usage experience most needed and more important than explicit knowledge? Scale: Which specific AI experiences can be itemized in a scale and describe usage experience most appropriately?                              |
 | AI design experience (DE)         | Content: Is high-level AI design experience (e.g., simple visual modeling) beneficial for managers in their role (e.g., enhancing communication with technical employees?)                                                                                           |
+
+
+<!-- PAGE 9 -->
+
 
 - -Scale: Which specific AI experiences can be itemized in a scale and describe design experience most appropriately?
 
@@ -256,6 +289,10 @@ https://doi.org/10.1177/001316446002000104
 - Ng, D. T. K., Leung, J. K. L., Chu, S. K. W., &amp; Qiao, M. S. (2021). Conceptualizing AI literacy: An  exploratory review. Computers and Education: Artificial Intelligence , 2 . https://doi.org/10.1016/j.caeai.2021.100041
 - Roepke, R., Agarwal, R., &amp; Ferratt, T. W. (2000). Aligning the  IT  Human  Resource  with  Business  Vision:  The Leadership Initiative at 3M. MIS Quarterly , 24 (2). https://doi.org/10.2307/3250941
 - Sambamurthy,  V.,  Bharadwaj,  A.,  &amp;  Grover,  V.  (2003). Shaping Agility through Digital Options:
+
+
+<!-- PAGE 10 -->
+
 
 Reconceptualizing the Role of Information Technology in Contemporary Firms. MIS Quarterly , 27 (2). https://doi.org/10.2307/30036530
 

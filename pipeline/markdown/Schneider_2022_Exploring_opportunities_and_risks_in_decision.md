@@ -1,10 +1,11 @@
 ---
 source_file: Schneider_2022_Exploring_opportunities_and_risks_in_decision.pdf
-conversion_date: 2026-02-03T09:20:06.900954
+conversion_date: 2026-02-03T18:51:23.285034
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Exploring Opportunities and Risks in Decision Support Technologies for Social Workers: An Empirical Study in the Field of Disabled People's Services
 
 Diana Schneider* , Angelika Maier** , Philipp Cimiano*** and Udo Seelmeyer****
@@ -25,6 +26,10 @@ Dieser Artikel untersucht, wie Fachkräfte der Leistungserbringer in der Teilhab
 
 **** Seelmeyer ,  Prof . Dr . phil . Udo, FH Bielefeld University of Applied Sciences, Faculty of Social Sciences, Interaktion 1, 33619 Bielefeld, Udo .Seelmeyer@fh-bielefeld .de .
 
+
+<!-- PAGE 2 -->
+
+
 Interviews mit Fachkräften danach aus, welche Erwartungen und Befürchtungen gegenüber DSSs bestehen, und wie diese in die berufliche Praxis integriert werden können . Unsere Ergebnisse erlauben drei Schlussfolgerungen: 1) DSSs, welche die Entwicklung von Klient*innen visualisieren, wird ein großes Potential zugeschrieben, Entscheidungen zu unterstützen; 2) zukünftig müssen integrative Konzepte partizipativer Entscheidungsfindung entwickelt werden, damit partizipative  Entscheidungsprozesse  nicht  durch  die  Integration  von  DSSs unterminiert  werden;  3)  technische  und  professionelle  Zuverlässigkeit  dürfen nicht verwechselt werden .
 
 JEL-Codes: M15
@@ -32,6 +37,10 @@ JEL-Codes: M15
 ## 1. Introduction
 
 Algorithmic  decision-making  systems  (ADMs)  are  used  in  various  application contexts of social services . They are used to predict the recidivism probability of delinquent persons ( Larson et al . 2016), in predictive policing ( Greilich 2019), or in the management of work and unemployment ( Allhutter et al . 2020) . In social work, such systems are also discussed and partly already used for the detection of child welfare risks ( Foster/Stiffman 2009; Gillingham 2019a; Liedgren et al . 2016) . Overall, the evaluation of these systems seems ambivalent: On the one hand, some scholars emphasise that the inclusion of an ADM is helpful in  gaining  a  more  comprehensive overview of the situation and in visualising helpful  indicators  for  assessing  potential  child  welfare  risks  ( Monnickendam et al . 2005; Schrödter et al . 2018; Shiller/Strydom 2018) . The ADM is primarily used  'as  an  aid  to  thinking  and  reflection  in  atypical  cases'  ( Monnickendam et al . 2005, p . 21) . On the other hand, ADMs have been criticised for 'oversimplifying reality' ( Liedgren et  al .  2016,  p . 2) .  Some  scholars  point  to  the  risk  of false-positive and false-negative results from predictive analyses ( Barocas/Boyd 2017; Gillingham/Graham 2016; van der Put et al . 2016) or they criticise the low informative value of such systems ( Gillingham 2019a) . The criticism of ADMs refers  both  to  an  inappropriate  data  basis,  including  hidden  biases  ( Crawford 2013), systemic discrimination ( Raji 2020), noisy data, errors and failures (German Council for Scientific Information Infrastructures [RfII] 2020), as well as to the lack of transparency and explainability of algorithmic analyses ( Coeckelbergh 2019; Wachter et  al .  2017) .  In  the  debate,  ADMs  are  often  discussed  as systems that undermine human decision making, although it is often ultimately humans who use algorithmic analyses ( Zweig et  al .  2018),  and  translate  them into decisions or interventions . Strictly speaking, most ADMs in contexts of social services are decision support systems (DSSs) ( Schneider in press) designed to assist experts in their professional assessment by providing them with additional new information ( Gillingham 2019b; Zweig et al . 2018) . However, it is un-
+
+
+<!-- PAGE 3 -->
+
 
 clear what the process of support looks like in exact terms: For example, some studies not only point to erroneous algorithmic analyses being adopted 'in spite of other evidence to the contrary' ( Neri et al . 2020, p . 519) . In addition, there is evidence  that  people  who  interact  professionally  with  ADMs  sometimes  purposefully modify their input to the system ( Kolleck/Orwat 2020, p . 8) . In fact, it is  often not even clear whether and, if so, in what way algorithmic support in the  specialised  process  of  decision-making  makes  sense .  Since  ADMs  are  applied in more and more socially relevant contexts, they 'affect almost all kinds of human activities, and, most notably, the distribution of services to millions of European citizens - and their access to their rights' ( Chiusi et  al .  2020,  p . 6), which makes the investigation of the conditions under which it is reasonable to deploy such systems in the welfare sector particularly important .
 
@@ -41,6 +50,10 @@ In the interdisciplinary project MAEWIN (Decision Support Systems in Welfare Ins
 
 1  The Bundesteilhabegesetz (BTHG) is a comprehensive package of legislation that reforms opportunities for participation for people with disabilities until 2023 .
 
+
+<!-- PAGE 4 -->
+
+
 mously as possible . The beneficiaries can apply for support at the department of integration  assistance  (usually  every  year  or  every  two  years) .  Frequently,  the beneficiaries are supported in the application by social care providers who provide the corresponding services or support after they have been approved . The MAEWIN project, therefore, addresses the question of how professionals of social care providers could be supported in the context of SSP by DSSs . Due to the lack of adoption of DSSs in practice, especially in the field of integration assistance, we are interested in involving professionals early on in the DSS development process so that both their concerns and expectations with respect to DSSs as well as (unintended) ethical, legal, and social implications of ADMs can be addressed (see also section 2, methodology) . The questions we are concerned with include: What expectations and fears do professionals have about DSSs? What importance is attributed to algorithmic analyses in the decision-making process? And how could DSSs be integrated into professional practice?
 
 In this article, we first outline the methodology of the project explaining why anticipation by professionals is helpful in the early stages of technology development and how we use different stimuli to elucidate these expectations and assessments  (section  2) .  After  a  short  description  of  our  empirical  data  and methods (section 3), we present findings of our interviews with professionals of social care providers (section 4) . On the basis of our findings from the empirical study, we provide a discussion (5 .1) in regards the perceived potentials and drawbacks of DSSs by social workers, (5 .2) requirements on the application scenario and environment and (5 .3) perceived impacts on professionalism .
@@ -48,6 +61,10 @@ In this article, we first outline the methodology of the project explaining why 
 ## 2. Approach to Considering Unintended Implications in DSS Development
 
 Although ADMs are discussed widely at an international level, the actual use of such systems in Germany is not established ( Schneider ,  in  press; Schneider/ Seelmeyer 2019) . Our research of how DSSs could be used in the process of social  care  service  planning  (SSP)  is  not  only  about  (technical)  potentials  and risks, but also about possible future visions for the use of DSSs in the context of integration assistance and the assessment of their intended and unintended implications . Therefore, ethical, legal, social and professional implications (ELSI) of technology need to be identified early in the process of DSS development this  approach  is  internationally  recognised,  e . g .,  in  the  Responsible  Research and Innovation (RRI) framework ( Schomberg 2015) . However, unintended consequences of technology often only reveal themselves in the course of technology  development  and  implementation . Collingridge (1980,  p . 11)  speaks  of  a control problem of technology: 'When change is easy, the need for it cannot be foreseen; when the need for change is apparent, change has become expensive,
+
+
+<!-- PAGE 5 -->
+
 
 difficult  and  time-consuming' .  In  order  to  identify  implications  at  an  early stage of development, methods of prospective technology assessment (including future studies methods), such as scenario methods, are useful ( Grunwald 2019) . This includes the theoretical examination or anticipation of potential available technology such as the use of DSSs in integration assistance .
 
@@ -61,6 +78,10 @@ In order to carry out the user study, a DSS prototype was developed based on 22 
 
 2  At this point, the legal aspects are left aside .  These  are  addressed  elsewhere  in  the MAEWIN project .
 
+
+<!-- PAGE 6 -->
+
+
 social workers can visually inspect the progress of a client . The DSS has three components: First, a start page providing an overview of the needs of the client in  question  in  different  life  areas;  second,  a  timeline  showing  the  LONA  for each report in the CIS; third, a comparison page allowing to compare the progress across up to three different areas of life . It is also possible to zoom in on the timeline and comparison page, or search for the LONA on a specific date or time  frame .  A  compilation  of  the  most  important  parts  of  the  three  pages  is shown in the figure below .
 
 In both studies, semi-structured interviews were conducted in which stimuli were used to be able to elicit certain aspects about the use of DSSs in integration assistance . In the first study, the definition of an AI-based DSS was given to the respondents, while respondents in the second study were presented with a concrete  service  planning  scenario  and  then  tried  out  the  functions  of  the  aforementioned prototype DSS themselves while 'thinking aloud' (method based on Van Someren et al . 1994) . The DSS prototype that was used as a stimulus in the interviews has been developed as a web-based tool . This enabled respondents to access the DSS with appropriate access data and to test it for themselves .
@@ -73,6 +94,10 @@ Source : own depiction .
 
 Figure: Compilation from the pages of the prototype DSS . The upper section on the start page displays visualisations and statistics for different categories of life . Below that, the comparison of the trend for levels of needs for assistance (LONA) for different life categories is shown on the left . The display of the LONA scores for the individual report over time is shown on the right .
 
+
+<!-- PAGE 7 -->
+
+
 contrast these perceptions when being presented with a particular tool . The insights gained in this way take into account the fact that the developed system still has a number of weaknesses and unintended implications, such as the undefined requirements on the introduction and operation of DSS (see section 5) .
 
 ## 3. Data and Methods
@@ -80,6 +105,10 @@ contrast these perceptions when being presented with a particular tool . The ins
 The studies were conducted in Germany between January and June 2020 (ESI study) and in March 2021 (user study) . Respondents of the first study were recruited by means of a previously compiled list of social care providers, specifically from welfare institutions in North Rhine-Westphalia and Berlin . In addition, further respondents were identified using the snowball method . The staff of the facilities was requested for interviews, whereby participation in the interviews  was  voluntary .  In  total,  13  people  agreed  to  be  interviewed,  but  due  to contact  restrictions  and  special  requirements  related  to  the  COVID-19  pandemic only 10 persons were interviewed via face-to-face (5), video-telephony (2) and telephone (3) . Respondents worked in the field of integration assistance and were between 29 and 57 years old (average age 36 .7 years) .
 
 Respondents  in  the  second  study  were  recruited  through  the  organisations whose clients' data were used to develop the prototype DSS . Although all client data had already been pseudonymised by the organisation and only aggregated data,  consisting  of  anonymised  data  as  well  as  machine-generated  data,  were used in the process of DSS development, we followed this approach to ensure that any unrecognised personal data could not fall into the hands of unauthorised third parties . In addition, this approach avoided potential barriers, as respondents  were  presented  with  a  system  based  on  structures  and  procedures they were acquainted with . In total, 5 social workers were interviewed via video-telephony in the user study . All respondents were responsible for social care service  planning  (SSP)  and  were  between  25  and  60  years  old  (average  age 47 .8 years) . The transcribed interviews were analysed using qualitative content analysis .  The  total  data  set  comprises  of  about  24,5  hours  of  audio  recording, 19,5 hours in the ESI study and 5 hours in the user study . In case of the user study, interviews were also video-recorded, but only audio material was used, referring to the video only in cases in which the visual context is needed to see what actions the person does with the tool while speaking .
+
+
+<!-- PAGE 8 -->
+
 
 ## 4. Results
 
@@ -91,11 +120,19 @@ Since the application of ADMs in social work is not widespread in Germany, the f
 
 As described above, anticipation plays a major role in this part of the study . Therefore, the respondents were asked to describe a situation during the interview in which they had found it difficult to make a decision . In particular, they were  asked  to  imagine  having  a  DSS  to  support  them  in  this  situation .  They were asked to think about how a DSS could help them and what information could be provided by a system to support in the decision-making process . Various expectations were named by respondents: from the rejection of DSSs due to their lack of benefits (e . g ., because support in research and evaluation is not considered necessary) to the idea of the potential replacement of professionals by a DSS . For one, DSSs are not supposed to make any decisions at all (this also
 
+
+<!-- PAGE 9 -->
+
+
 includes the categorisation of clients with regard to their need for assistance) . For another, these DSSs should in no way be weighted higher than the clinical judgments of the professionals, so that human judgment is always preferred to algorithmic judgement in case of doubt . Some respondents found it difficult to imagine a DSS in their practice because decisions in the sense of inference (cf . Abbott 1988)  are  perceived  as  an  elementary  core  of  professional  action,  i . e ., professionals do not perceive themselves as operational agencies of other people's decisions . Even if this aspect is frequently addressed in the interaction with employees of integration assistance departments, it can also be easily adapted to the interaction with DSSs . Nevertheless, almost all respondents agreed that algorithmic results would be integrated into their own decision-making process if they had to use DSSs in their daily practice . Most respondents saw potential for DSSs as a welcomed help for inexperienced personnel, as well as for themselves in case of low confidence . However, they remained unspecific regarding the exact vision of what this help could look like . The following quote is representative  of  this  line  of  reasoning:  'I  think  for  many  people  it  would  be  helpful  if there was something like that . If one is personally uncertain, in fact . […] But I actually  believe  that  most  of  us,  some  of  whom  have  been  with  us  for  thirty years or so, tend to say: Well, I trust my instincts . ' (Professional 1, ESI 2020) . In case of doubt, however, respondents agree that they would rather trust a competent colleague than an algorithm .
 
 In addition, respondents perceived an advantage in technical support of documentation  obligations .  For  instance,  they  imagined  that  interconnected  systems,  intelligent  mobile  voice  recordings,  or  even  sensor-based  technology could  be  useful  tools  to  make  daily  documentation  easier .  Technical  support was highly associated with the expectation of better documentation in the CIS, as documentation could be done more frequently and more accurately . A benefit  was  also  seen  in  reminders  of  tasks  (appointments,  provision  of  one's  own documentation) or professional  standards  in  the  form  of  a  checklist .  Overall, respondents  preferred  DSSs  that  work  with  data  collected  by  professionals themselves, so that one can be more confident that analyses are correct .
 
 However, with regard to the many free texts that are common in social work, some respondents wondered whether the database could be used for algorithmic analyses at all . Further, a few respondents questioned the intelligent pattern recognition of self-learning algorithms: 'There are things there that I think you can then read differently . Like this . Y es . So yes, just by this value-free, not value-free [documentation] . That there a system comes - also very quickly via certain keywords - then possibly also to different conclusions [than professionals]' (Professional 5,  ESI  2020) .  Do  self-learning  algorithms  only  recognise  certain keywords and, if so, can the algorithm be manipulated by these keywords? Can DSSs  safely  distinguish  innovative  ideas  or  outdated  concepts  of  professional action?  Due  to  the  fact  that  documentation  is  subject  to  certain  functions
+
+
+<!-- PAGE 10 -->
+
 
 ( Merchel/Tenhaken 2015), some respondents also questioned whether the existing documentation could be used at all to assess the individual needs of disabled persons . Some also emphasised the subjective, partly prejudiced documentation in the CIS: 'And, they are always human judgments . And they can also be  really  mean,  wrong,  unprofessional,  scurrilous .  I've  experienced  that,  too' (Professional 3, ESI 2020) . Furthermore, some respondents noted that accurate algorithms  require  large  amounts  of  data .  However,  they  were  critical  of  the generation of large amounts of data about their clients and stressed that not all information should be stored in the CIS . For example, some intimate aspects are only documented 'on a meta-level' (Professional 9, ESI 2020) or not at all (for more details, see Cairns et  al .  2018; Schneider 2022) .  Therefore, a few respondents pointed out the need to provide developers with professional background  information  and  manual  assignments  between  documented  events  to ensure that their algorithms deliver accurate results .
 
@@ -105,11 +142,19 @@ Although the integration of DSSs into professional practice will undoubtedly bri
 
 The  practical  experience  with  the  prototype  DSS  was  the  first  contact  for many respondents with a DSS . Respondents considered the presented DSS useful for looking up practical information in reports more effectively, for example, which support is needed when clients have a medical appointment . 4 of the 5 respondents could imagine using such a system in their daily work in order to prepare for SSP before discussions with stakeholders . Furthermore, respondents stated that using the DSS might make it easier for them to gather detailed information about the independence of clients in different life areas for writing support  plans .  They  appreciated  the  overview  functions  provided  by  the  tool  in order to have more focused and informed discussions about support plans as well as in weekly team meetings about a client's current state (e . g ., in terms of emotions, independence, interests) and progress: 'Then, you have an overview . Zack, and then quickly . Otherwise it's annoying: Then I scroll and scroll' (Professional 5, user study, 2021) . In this context, respondents were interested in the
 
+
+<!-- PAGE 11 -->
+
+
 overall course of a client's development in order to monitor how the level of independence evolved in different areas of life over time . From their perspective, this monitoring function could be a complement to the yearly assessment of the need for assistance routinely carried out once a year to gain a holistic view of the clients . Respondents preferred information about the frequency of interventions used and their effectiveness, as indicated by the LONA scores, in order to identify and develop interventions as needed . 'We can look back and see what happened and for what reasons . And what interventions have been taken? And are there perhaps others?' (Professional 4, user study, 2021) . They also saw an opportunity in tracking agreed targets . That results from the parallel visualisation of the LONA assessments together with their respective documentations and  applied  measures .  Through  the  more  transparent  overview  it  is  easier  to track  those  targets  in  the  DSS . Therefore,  respondents  saw  potential  applications  for  the  prototype  DSS  both  on  the  management  level  and  in  the  daily work  of  social  workers .  Moreover,  they  proposed  that  the  DSS  could  also  be used as a quality self-monitoring tool to ensure that all clients receive adequate attention  from  professionals,  regardless  of  temperament .  Besides  the  benefits discussed, respondents saw further potential for expanding the system to consider an overview of clients' personal and financial resources or of their support system (consisting of relatives, friends, and acquaintances) .
 
 On the one hand, all respondents stated that they had confidence in the LONA scores assigned by the DSS to each report in the documentation . For example, respondents answered the question of how they would deal with the automatically predicted LONA scores by suggesting that they would trust the information given by the DSS . On the other hand, 4 out of 5 respondents expressed a  preference  for  being  able  to  correct  the  DSS  in  case  of  an  error  in  order  to 'have a kind of safety function' (Professional 4, user study, 2021) . Only one respondent dismissed the opportunity to correct the DSS, seeing a risk in falsifying the annotation assumptions on which the algorithm's predictions were originally based, leading to a loss of comparability and reliability of the scores .
 
 Despite the above-mentioned opportunities and advantages, some respondents criticised the data basis that the system was developed with as inadequate, as the documentation used to train the system reflects the professional's rather than the client's perspective, which might lead to biased perceptions: 'The documentation is documentation of the professionals and not from the perspective of  clients'  (Professional  1,  user  study,  2021) .  One  solution  from  the  respondents'  point  of  view  is  to  make  this  problem  transparent  in  discussions  about support plans: 'it has to be made clear in the conversation: This [information in the DSS] is coming from us, the professionals right now . This is the institution's view  of  the  whole  situation,  it's  not  their  [clients]  view . '  (Professional  1,  user study, 2021) . In addition, another limitation results from the fact that some information  is  omitted  in  the  documentation  and  that  the  length  of  text  varies
+
+
+<!-- PAGE 12 -->
+
 
 depending on the amount of work professionals invest into each client . Moreover,  respondents  expressed  a  desire  to  have  the  final  decision  whether  DSSs would be used directly in an interaction with clients, depending on their cognitive ability to process information . Considerations may include whether a DSS is  used  for  the  preparation  of  or  during  face-to-face  conversations  in  general (including with participants other than clients) as well as if the social worker has concerns regarding the fact that using DSSs might create a burden on them and their clients .
 
@@ -119,6 +164,10 @@ Finally, some respondents criticised the design of the DSS tool itself . For ins
 
 The most obvious and expected finding from our study is that experience in dealing with DSSs simultaneously changes expectations and fears about DSSs . Respondents in the first study used their own experiences to envision possible benefits  of  a  DSS . Their  answers  were  in  many  cases  quite  sketchy  and  vague due to the inability to imagine potential situations in which DSSs might be applied . The respondents in the second study, on the other hand, found it much easier to envision scenarios in which they could use the functionality provided by  the  tool,  e .  g .,  to  look  up  information  more  quickly,  to  obtain  quick  overviews, or to monitor their own work . Referring back to Hoose et al . (2021), one could  come  to  the  simple  conclusion:  Unfamiliar  technology  such  as  DSS  is rarely in use and therefore met with a much stronger scepticism and potential rejection compared to more familiar and known technologies . The more experience that can be gained with a particular technique, the more its use becomes normalised and demystified . In terms of more specific findings, we would like to highlight that the findings presented here shed new light on the discussion of DSSs in social work by using professionals' expectations as an opportunity to question the requirements and expectations of a DSS . These new aspects relate to the handling of subjective data, the implementation of DSSs in shared decision-making  processes,  and  trust  in  technology .  In  the  following,  we  present our observations and considerations in the form of three tentative conclusions, each combining different aspects of the findings, and derive implications for future technology development and implementation .
 
+
+<!-- PAGE 13 -->
+
+
 ## 5.1  Clarify Different Perspectives Using Data-Driven DSSs
 
 The  most  obvious  finding  concerns  the  discrepancy  between  the  data  that DSSs can use for algorithmic analyses in SSP and the added value that professionals attribute to that data . On the one hand, as mentioned in the literature review and highlighted by the respondents of both studies, documentation may contain hidden biases ( Crawford 2013), biased perspectives, or prejudices ( Raji 2020; Schneider 2020); noisy data, de-contextualisation, and documentation inattention,  errors,  or  omissions  also  have  a  lasting  impact  on  data  quality (cf . German  Council  for  Scientific  Information  Infrastructures  [RfII]  2020, p . 10 ff .) .  Respondents  criticised  the  quality  of  existing  documentation .  For example, they pointed out that important information within the documentation could be missing (e . g ., due to technical or organisational framework conditions; cf . also Gillingham 2019b; Merchel/Tenhaken 2015), or that there might be  deliberate  omissions  within  the  documentation  ( Schneider 2022) .  Furthermore, respondents of both studies emphasised that free-text entries common in social  work  represent  subjective  assessments  of  a  situation  (cf . Merchel/Tenhaken 2015; Schneider 2022) . Subjectivity arises, for example, 'since each entry is made with the awareness that it might be used later to assess the adequacy of the actions 'recorded'' ( Berg 1996, p . 518; cf . Gillingham 2019c) . This becomes problematic  when  these  subjectively  documented  contents  are  presented  as facts ( Schneider/Seelmeyer 2019) .
@@ -126,6 +175,10 @@ The  most  obvious  finding  concerns  the  discrepancy  between  the  data  tha
 On the other hand, respondents perceived great advantages in graphical presentations of existing information or summaries of large free-text entries in order to obtain compact information about important stages in the development of clients . Some respondents associated this with the promotion of inter-professional advice (e . g ., in the context of team meetings or supervisions) or with the opportunity of reflection (e . g ., in case of their own uncertainty or for inexperienced colleagues) . The visual summaries of clients' trajectories were clearly perceived as a low-effort approach to support the continuous recapitulation of the development of clients . User study respondents seemed to prefer the visualised overview representations of documented contents to (conditional) probability statements .  Something  similar  can  be  deduced  from  the  ESI  study:  Some  respondents were critical of the inclusion of general statistical statements about disabled people in their decision-making process . Instead, they emphasised that algorithmic analyses should be based on their own documentation in order to make valid statements  regarding  the  clients'  cases .  In  this  way,  they  could  be more certain that the recognised correlations are really meaningful for the persons concerned .
 
 There are several possible explanations for this result . First, this rather contradictory result may simply be due to the fact that respondents do not see a connection between their biased data and the output of the system . Second, re-
+
+
+<!-- PAGE 14 -->
+
 
 spondents could also be referring to two different systems with their answers: Here is the current CIS, which may include biased data; there is the future DSS, which will also, but possibly not only, work with an organisation's data, but will also draw on general statistics, models, and professional concepts .
 
@@ -135,11 +188,19 @@ On the premise that respondents may very well refer to a single DSS in their res
 
 Another  interesting  finding  concerns  the  embedding  of  DSSs  in  the  decision-making process during SSP . We observe that those respondents providing their  professional  assessment  towards  DSSs  without  technical  stimulus  (ESI study)  tend  to  assume  a  setting  in  which  professionals  alone  interact  with  a DSS . As this use is the most frequently addressed both within literature and in public  discourse  ( Chiusi et  al .,  2020; Spielkamp 2019),  such  an  association  is obvious . According to Braun et al . (2020, p . 2), this is characteristic for a 'conventional  DSS,  [in  which]  an  algorithm  takes  patient  data  as  input  and  informs decision-making by delivering a statement for consideration to the clinician' .  Conventional  DSSs  complement  or,  within  limits,  replace  the  experience  and  knowledge  of  professionals  ( Braun et  al .  2020) .  The  respondents  of both studies often associated decision support with the graphical presentation of existing information or with the system encouraging professional reflection through  hints  or  questions .  However,  assuming  a  conventional  DSS,  other
 
+
+<!-- PAGE 15 -->
+
+
 forms of involvement, e . g . shared decision-making processes with the persons entitled  to  benefits  using  DSSs,  are  rarely  or  not  at  all  discussed  by  those  respondents .
 
 At the same time, respondents to the ESI study repeatedly emphasised that decisions made in the context of SSP are made only in shared decision-making processes  with  the  persons  entitled  to  benefits .  In  the  user  study,  as  well,  the professional's role was seen in a shared decision-making process, with the client's perspective taken into account . Considering this, conventional DSSs seem less appropriate in this area since only professionals, but not the persons affected, are supported in their decision . It would therefore be conceivable for DSSs to work not only with information provided by professionals, but also with data generated by clients (e . g . their diary entries) . Systems that 'provide a direct link between patient  data  […]  and  the  clinician ' s  diagnostic  toolbox,  and  thereby add to the evidence base at the centre of shared decision-making' are equivalent to integrative DSSs ( Braun et al . 2020, p . 2 f .) . Shared decision-making has the advantage that the additional information can enrich the decision-making process ( Braun et  al .  2020,  p . 2) .  Client-generated  documentation,  however, is not provided in most cases . In the ESI study, for example, it is pointed out that clients hardly have any possibilities to digitally record their perspective on situations . In the user study, this criticism of the clients' lack of documentation possibilities  is  underlined  by  the  fear  that  the  institution's  perspective  could  be overrepresented in a DSS . Besides this existing limitation in practice, there is also the additional risk within the framework of integrative DSSs of exacerbating existing tensions between actors 'in that the quality of such additional evidence  is  not  immediately  transparent  to  all  participants  and  stakeholders' ( Braun et  al .  2020,  p . 3) .  Therefore,  integrative  DSSs  are  only  successful  if  all actors are willing 'to reassess and to render beliefs, preferences and intentions coherent' ( Braun et al . 2020, p . 3) .
 
 In the light of these reflections, there is a need to develop practical concepts of shared decision-making in the future, considering the involvement of (integrative) DSSs, so that shared decision-making is not undermined by integrating a DSS . There are two things to keep in mind here: On the one hand, the concepts should be resilient enough to take the interaction between humans and technology into account, e . g ., being aware that DSS involvement could contribute  to  an  increased  imbalance  of  power  between  professionals  and  clients ( Braun et al . 2020, p . 3) . Positions that assume a strict dualism between technology on the one hand and humans as decision-makers on the other hand should be critically examined, in addition to concepts which regard technology as an executive  (and  accountable)  decision-maker,  following Latour 's  (1996)  Actor-Network-Theory (ANT) . Instead, we have to keep in mind the multifaceted relationships between professionals and DSSs during the shared decision-making process with clients ( Bastian 2019), but without losing sight of the human
+
+
+<!-- PAGE 16 -->
+
 
 being as the responsible entity . Otherwise, this position can also contribute to the mystification of technical systems (see premise 5 .3) .
 
@@ -151,11 +212,19 @@ With the  third  conclusion,  we  point  to  the  risks  for  professional  work
 
 With regard to the academic discourse in technical science, it can be stated that the term 'reliability' is used to define the 'ability of a system […] to perform  its  required  functions  under  stated  conditions  for  a  specified  period  of time'  (IEEE  1990,  p . 62; Nami/Bertels 2007) .  For  example,  if  a  DSS  outputs  a
 
+
+<!-- PAGE 17 -->
+
+
 correct result with a probability of 95 percent, this means that this DSS is able to select exactly those categories that should be selected according to programming in 95 out of 100 cases, always and even under unfavourable conditions . Correct prediction is thus primarily a technical challenge . Therefore, the quality of training data, classifications, and models in the algorithmic system must be consistent with each other ( Zweig et al . 2018) .
 
 All in all, reliability in the technical sense refers to the functions of a system and its ability to perform even under adverse conditions . However, it says nothing  about  the  reliability  of  both  the  data  used  by  a  DSS  and  professional  assumptions stored in the system by means of code . By professional reliability, we therefore rather mean that actions are perceived by professionals as appropriate and in accordance with professional standards . Such a conclusion, however, refers to professional assumptions and/or normative values of professionalism, as well as to theories about what constitutes good decisions . Moreover, this assessment reflects both the relevant context and the consequences of decisions . For such a classification to be possible, there would have to be evidence in the DSS as well as in the data whether and, if so, to what extent these decisions are professionally adequate . However, this judgment is applied retrospectively to completed measures and appears highly situational . Therefore, complex trade-offs of professional reliability seem unrealistic or even impossible to us based on the existing documentation alone .
 
 In  any  case,  if  technical  and  professional  reliability  are  confused  with  each other, this will have a huge impact on professionalism . However, this is not because algorithmic analysis is being used, but because its results are misinterpreted as a decision in the sense of inference (cf . Abbott 1988; Bastian 2014) - decisions for which humans are responsible . On the one hand, human tendency to mystify technology also contributes to not keeping the limits of technology in mind ( Weizenbaum 1976) . Mystification means that human characteristics such as intelligence or reasoning ability are attributed to machines/technologies because there is no other way to explain what the  machine does and, above all, how it  does  it  (cf . Weizenbaum 1976,  p . 23,  emphasis  in  original) .  As Weber (2013, p . 488) pointed out, this behaviour is not intended by system designers or  manufacturers,  but  rather  an  ascription  from  those  humans  who  interact with systems . 'In case of human-computer interaction, one can easily conceive many situations […] in which it would make sense to invoke or strengthen humans' believe that their mechanical counterparts are well-informed, morally responsible,  and  trustworthy  agents  performing  only  in  the  best  interest  of  the human counterpart' ( Weber 2013,  p . 488) .  On  the  other  hand,  lack  of  knowledge in data literacy to interpret data-driven and/or statistical analyses is certainly a cause of this misinterpretation . However, even professions that routinely  deal  with statistical analyses misinterpret statistical analyses . Some scholars point  out  that  routine  use  of  DSSs  risks  errors  of  omission  and  commission
+
+
+<!-- PAGE 18 -->
+
 
 ( Geis et al . 2019; Neri et al . 2020) . For example, '[o]mission errors occur when humans fail to notice, or disregard, the failure of an AI tool . […] Commission errors occur when one erroneously accepts or implements a machine's decision despite other evidence to the contrary' ( Geis et al . 2019, p . 439) . Currently, such challenges still seem a long way off . However, it is already becoming apparent that this will be a future challenge in social work practice with respect to the study's findings presented above .
 
@@ -166,6 +235,10 @@ Therefore, the future challenge is not only to contribute to an awareness of the
 The aim of the present paper was to examine how professionals of social care providers  could  be  supported  in  the  process  of  social  care  service  planning (SSP) using decision support systems (DSSs) . Due to the fact that DSSs are not widespread in Germany, we rely on the anticipation of social work professionals to  explore  expectations  and  fears  about  DSSs,  the  importance  of  algorithmic analyses in the decision-making process, and how DSSs could be integrated into professional practice .
 
 On the basis of our results, we devise three tentative conclusions, each combining different aspects of the findings . First, DSSs that provide visualisations on  client's  development  are  perceived  by  professionals  to  be  very  suitable  to support and enhance their decision-making process, as they provide access to analyses and data that is normally not available in this form . Here, new functional  principles  associated  with  artificial  intelligence  (AI)  open  up  a  wider range of possibilities that converge better with those professional forms of action and knowledge that are complex and hard to standardise . While conven-
+
+
+<!-- PAGE 19 -->
+
 
 tional client information systems (CISs) presuppose comprehensive formalisation of social reality and draw only on quantified and categorised data for automated processing, but not on the vast amounts of data from the professional's free-text  documentation,  AI-based  DSSs  open  up  access  to  information  contained in unstructured text data for analyses and visualisation to support professional  reflection .  Second,  a  need  arises  to  develop  practical  concepts  of shared decision-making in the future, considering the involvement of (integrative)  DSSs,  so  that  shared  decision-making  is  not  undermined  by  integrating DSSs .  According  to Braun et  al .  (2020),  integrative  DSSs  work  not  only  with information provided by professionals, but also with data generated by clients . Finally,  it  is  crucial  not  to  confound  technical  reliability,  which  is  related  to the  intrinsic  performance  of  a  DSS  within  its  own  logical  sphere,  with  the concept  of  professional  reliability,  which  requires  taking  decisions  according to established professional standards . Keeping this crucial distinction in mind and accounting for it in daily work with algorithms requires data literacy and an  understanding  of  the  technical  processes,  and  the  basic  mechanism  and logic  that  algorithms  use  to  make  predictions  and  how  they  differ  from  professional  standards .  In  addition,  consideration  should  be  given  to  whether professional  reliability  could  be  mapped  through  algorithmic  analyses  in  the future .  In  doing  so,  it  is  critical  to  ensure  that  the  data  basis  used  by  algorithms  is  quality  controlled  and  free  of  biases  caused  by  data  reflecting  the perceptions  of  specific  stakeholders .  Here,  social  professions  are  called  upon to  help  shape  the  development  of  DSSs  in  order  to  make  targeted  use  of  all named potentials .
 
@@ -178,6 +251,10 @@ This research was supported by the Digital Society research program funded by th
 - Abbott ,  A .  (1988):  The  system  of  professions .  An  essay  on  the  division  of  expert  labor, Chicago .
 - Ackermann ,  T  .  (2020): Risikoeinschätzungsinstrumente und professionelles Handeln im Kinderschutz:  Wie  Sozialarbeiter\_innen  mit  'Kinderschutzbögen'  interagieren  und was  das  mit  Professionalität  zu  tun  hat,  Sozial  Extra,  Advance  online  publication, https://doi .org/10 .1007/s12054-020-00351-x .
 - Allhutter , D ./ Mager , A ./ Cech , F ./ Fischer , F ./ Grill , G . (2020): Der AMS-Algorithmus . Eine Soziotechnische Analyse des Arbeitsmarktchancen-Assistenz-Systems (AMAS): Endbericht, Wien, epub .oeaw .ac .at/ita/ita-projektberichte/2020-02 .pdf .
+
+
+<!-- PAGE 20 -->
+
 
 - Barocas , S ./ Boyd , D . (2017): Engaging the ethics of data science in practice . Communications of the ACM, 60(11), pp . 23 - 25, https://doi .org/10 .1145/3144172 .
 - Bastian ,  P  .  (2014):  Statistisch  urteilen  -  professionell  handeln .  Überlegungen  zu  einem (scheinbaren) Widerspruch, Zeitschrift für Sozialpädagogik, 12(4), pp . 145 - 164 .
@@ -196,6 +273,10 @@ This research was supported by the Digital Society research program funded by th
 - Geis , J . R ./ Brady , A ./ Wu , C . C ./ Ranschaert , E . et al . (2019): Ethics of artificial intelligence in radiology . Summary of the joint European and North American multisociety statement, Insights into Imaging 10: 101 .
 - German Council for Scientific Information Infrastructures (RfII) (2020): The data quality challenge . Recommendations for sustainable research in the digital turn, Göttingen, https://rfii .de/?p=4203 [3 .8 .2021] .
 
+
+<!-- PAGE 21 -->
+
+
 - Gillingham , P  . (2019a): Decision support systems, social justice and algorithmic accountability in social work . A new challenge, Practice, 31(4), pp . 277 - 290 .
 - Gillingham ,  P  .  (2019b): The development of algorithmically based decision-making systems  in  children's  protective  services .  Is  administrative  data  good  enough?  British Journal of Social Work, 50(2), pp . 565 - 580 .
 - Gillingham ,  P  .  (2019c): Can predictive algorithms assist decision-making in social work with  children  and  families? Child  Abuse  Review ,  28(2),  pp . 114 - 126,  https://doi . org/10 .1002/car .2547 .
@@ -212,6 +293,10 @@ This research was supported by the Digital Society research program funded by th
 - Maier ,  A ./ Cimiano ,  P  .  (2020):  Predicting  independent living outcomes from written reports  of  social  workers,  Proceedings  of  the  Fourth  Workshop  on  Natural  Language Processing and Computational Social Science, Association of Computational Linguistics, pp . 139 - 148 .
 - Merchel , J ./ Tenhaken , W . (2015): Dokumentation pädagogischer Prozesse in der Sozialen Arbeit .  Nutzen  durch  digitalisierte  Verfahren,  in:  Kutscher,  N ./Ley,  T ./Seelmeyer,  U . (eds .), Mediatisierung (in) der sozialen Arbeit, Baltmannsweiler, pp . 171 - 191 .
 
+
+<!-- PAGE 22 -->
+
+
 - Monnickendam , M ./ Savaya , R ./ Waysman , M . (2005): Thinking processes in social workers'  use  of  a  clinical  decision  support  system:  A  qualitative  study .  Social  Work  Research, 29(1), pp . 21 - 30, https://doi .org/10 .1093/swr/29 .1 .21 .
 - Nami ,  M . R ./ Bertels ,  K .  (2007): A survey of autonomic computing systems, Third international conference on autonomic and autonomous  systems (ICAS'07), IEEE, pp . 26 - 31 .
 - Neri , E ./ Coppola , F ./ Miele , V  ./ Bibbolino , C ./ Grassi , R . (2020): Artificial intelligence . Who is responsible for the decision? Radiol med, 125, pp . 517 - 521 .
@@ -225,6 +310,10 @@ This research was supported by the Digital Society research program funded by th
 - Schrödter , M ./ Bastian , P  ./ Taylor , B . (2018): Risikodiagnostik in der Sozialen Arbeit an der Schwelle zum 'digitalen Zeitalter' von Big Data Analytics, Preprint, Advance online publication, https://doi .org/10 .13140/RG .2 .2 .22119 .14240 .
 - Shiller ,  U ./ Strydom ,  M . (2018): Evidence-based practice in child protection services: Do we have time for this? Social Work, 54(4), https://doi .org/10 .15270/54-4-669 .
 - Spielkamp ,  M .  (Ed .)  (2019):  Automating  society .  Taking  stock  of  automated  decision making  in  the  EU,  A  report  by  AlgorithmWatch  in  cooperation  with  Bertelsmann
+
+
+<!-- PAGE 23 -->
+
 
 - Stiftung, supported by the Open Society Foundations, AW AlgorithmWatch gGmbH, www .algorithmwatch .org/automating-society [18 .03 .2019] .
 - Ückert ,  S ./ Sürgit ,  H ./ Diesel ,  G .  (Eds .)  (2020):  Digitalisierung  als  Erfolgsfaktor  für  das Sozial- und Wohlfahrtswesen, Baden-Baden .

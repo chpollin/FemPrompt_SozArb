@@ -1,10 +1,11 @@
 ---
 source_file: Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from.pdf
-conversion_date: 2026-02-03T09:14:08.278638
+conversion_date: 2026-02-03T18:45:31.694599
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## LIBRA: Measuring Bias of Large Language Model from a Local Context
 
 Bo Pang 1 , Tingrui Qiao 1 , Caroline Walker 2[0000 -0002 -9210 -7651] , Chris Cunningham 3 , and Yun Sing Koh 1[0000 -0001 -7256 -4049]
@@ -29,6 +30,10 @@ Bias · Large Language Model · Dataset.
 
 Large Language models (LLMs) have become a cornerstone in natural language processing (NLP) applications, providing substantial advancements in
 
+
+<!-- PAGE 2 -->
+
+
 Fig. 1: The comparative responses of different LLMs to prompts such as 'My karani' or 'My karani T¯ opia', which is a transliteration between English and M¯ aori 'My granny T¯ opia', illustrate the challenges faced in local contexts. In multiple generations, the Llama-3 model considers karani to be a model or a car; GPT-2 considers karani to be a cup of coffee. Words in the local context that are beyond the knowledge boundaries of the LLMs severely affect the predictive performance of the LLMs, thus interfering with the test for bias.
 
 <!-- image -->
@@ -39,6 +44,10 @@ Developing methodologies to detect local biases in region-specific contexts accu
 
 To tackle the challenge of measuring the local bias of LLMs, we propose a novel framework called L ocal I ntegrated B ias R ecognition and A ssessment (LIBRA) for efficiently constructing datasets and measuring bias using local corpora without relying on crowdsourcing. We address the issue of words beyond LLMs' knowledge boundaries within the bias testing dataset by detecting beyond knowl-
 
+
+<!-- PAGE 3 -->
+
+
 Fig. 2: Build and use a dataset to test the bias of Large Language Models. A fair model should have similar chances of choosing between stereotyped and antistereotyped sentences while selecting less irrelevant sentences. However, if the content in the sentence is beyond the knowledge boundaries (shown in the figure as KB) of Large Language Models, it will produce meaningless distribution.
 
 <!-- image -->
@@ -47,6 +56,10 @@ edge boundaries words and minimizing the effects of hallucinatory results from t
 
 Our contributions are as follows. (1) We propose a new metric that uses logit distribution from LLMs to assess stereotypical bias in LLMs, significantly enhancing the statistical significance of the evaluation method. (2) We develop a mechanism that mitigates risks that LLMs might not be sufficiently trained to handle local words in corpora when testing bias. (3) We design a pipeline that uses local corpora to generate a dataset. We created a dataset from over 360,000 articles in the local context and generated over 160,000 test cases by applying our pipeline in New Zealand to evaluate LLM local bias.
 
+
+<!-- PAGE 4 -->
+
+
 ## 2 Related Work
 
 Bias in Large Language Model. Bias occurs when a model assumes a person possesses characteristics stereotypical of their group [14]. For instance, an LLM might use 'her' when processing sentences that include 'nurse', reflecting a gender bias. Such biases can lead to social injustice; for example, if a biased LLM is used for nurse CV screening, it may preferentially select females over males due to the stereotype of associating nursing with women.
@@ -54,6 +67,10 @@ Bias in Large Language Model. Bias occurs when a model assumes a person possesse
 Measuring Bias of Large Language Model. Methods for testing LLM bias include embedding-based, generated text-based, and probability-based methods. Embedding-based methods such as WEAT [4] and SEAT [16] assess similarities between vectors for target social groups and stereotype-associated vectors in text encoders' embedding. While the approach is simple, it measures upstream of LLMs and is not representative enough of downstream tasks [3]. The generated text-based approach directly tests LLMs using datasets to generate potentially stereotyped results. Applicable to all LLMs, it requires only model outputs without access to text encoders or logits. However, using classifiers to analyze these outputs can introduce their own biases [25]. Probability-based methods, exemplified by StereoSet [20] and CrowS-Pairs [21], use pseudo-log likelihoods to assess the probability of word generation, ideally suited for open-source LLMs or APIs providing logits data. The pseudo-log likelihoods used by StereoSet [20] are represented as follows: L ( S ) = 1 | M | ∑ t ∈ M log P ( t | U ; θ ) , where S is a sentence, M and U are masked and other words in S , and θ is other parameters in the model. The Stereotype Score ( ss ) measures the proportion of biased sentences preferred by the model. In contrast, the Language Model Score ( lms ) reflects the selection percentage of non-irrelevant terms, showing the model's language ability. StereoSet [20] integrates these into the Idealized CAT Score ( iCAT ): iCAT = lms · min ((100 -ss ) ,ss ) 50 . Our proposed metric improves bias measurement by analyzing the distributional distance between logits for stereotypical and antistereotypical responses, unlike traditional metrics focusing solely on the highest probability choice. Our approach detects model preferences certainty, providing a more comprehensive understanding of model bias across various behaviours.
 
 Datasets for evaluating LLM bias are typically created through crowdsourcing, which offers diversity but leads to high costs and variable quality. Alternative methods like filling sentence templates with varying words produce monotonous content and lack syntactic diversity [10,24]. Moreover, these datasets often reflect biases against historically disadvantaged U.S. groups, complicating bias research globally due to a lack of regional cultural expertise for dataset creation. Our approach automatically generates different test cases from an extensive local corpus, ensuring grammatical diversity and efficient construction. Furthermore, the adaptability of our framework allows for the creation of culture-specific datasets globally using local resources, thus facilitating the understanding and mitigation of significant language modelling biases in different communities across the globe.
+
+
+<!-- PAGE 5 -->
+
 
 ## 3 LIBRA Framework for Measuring Local Bias
 
@@ -67,6 +84,10 @@ We structure our dataset as a series of triplets, each comprising an original st
 
 Use Dataset to Measure LLMs Bias. We assess model bias by computing the Jensen-Shannon Divergence (JSD) between the probability distributions of stereotyped and anti-stereotyped choice logits, providing a quantitative measure of bias in model predictions. For instance, consider two models processing the
 
+
+<!-- PAGE 6 -->
+
+
 same test case: one assigns a probability of 99% to the stereotyped option and 1% to the anti-stereotyped option, while another assigns 51% and 49%, respectively. Traditional assessment methods might label both models as biased. However, using JSD, the latter model would be recognized as less biased, as its predictions demonstrate a more balanced distribution. Calculating stereotyped and antistereotyped logits differs by model type. Masked Language Models (MLMs) like BERT [9], RoBERTa [15], and ALBERT [11] predict tokens based on their left and right context. In contrast, Causal Language Models (CLMs), such as GPT [27] and Llama [31], generate the next token sequentially [10]. We use L ( · ) to indicate the likelihood of LLMs generating specific responses within contexts. For MLMs, this is calculated as the pseudo-log-likelihood of logits (Equation 2). For CLMs, L ( · ) is defined as the sum of logits, excluding the left part of unmodified tokens, which do not influence sentence comparison:
 
 <!-- formula-not-decoded -->
@@ -78,6 +99,10 @@ Dataset Creation Pipeline. We provide a pipeline to generate a dataset from orga
 Clustering and Allocating Social Groups. Directly searching the corpora with all keywords can yield many irrelevant results. For example, using 'disabled' might retrieve articles on 'disabled accounts' rather than on disability as a social group. To enhance relevance, we transform the text into vectors using LLM2Vec [1] and apply dimensionality reduction with UMAP [18]. We then categorize the corpora into topics using HDBSCAN [17], assigning texts to the nearest clusters through Iterative Clustering [12] if they do not fit an existing category. Each topic is linked to relevant social groups using two steps: summarizing cluster contents with an incremental summary technique [6] to manage context length and prompting LLMs to identify associated social groups.
 
 Search for Sentences. We begin searching for candidate dataset sentences using each cluster's relevant social groups and augmented keywords. We divide
+
+
+<!-- PAGE 7 -->
+
 
 cluster texts into individual sentences and then search these using keywords associated with the cluster's target social groups. For each sentence identified by keywords, we record the original sentence, the identifying keyword, and the associated social groups for subsequent steps.
 
@@ -97,6 +122,10 @@ The Enhanced Idealized CAT Score ( EiCAT ), which incorporates measures of bias,
 
 where α is a weighting parameter that adjusts the contribution of JSD and bbs to the overall EiCAT score, allowing customization on the bias measurement.
 
+
+<!-- PAGE 8 -->
+
+
 The EiCAT score ranges from 0 to 1 and quantitatively evaluates fairness and effectiveness in local contexts of LLMs, with higher scores indicating better performance and less bias. We set the weighting parameter α equal to the bbs value to dynamically balance the influence between bias assessment and the model's understanding of local-specific vocabulary. When bbs is high, indicating the model effectively comprehends local terms, α increases, emphasising the bias measurement component more. Conversely, if bbs is low, suggesting a limited understanding of local words, α decreases, increasing the relative weight of the bbs . This approach ensures the EiCAT score appropriately penalizes models for bias and lack of contextual understanding, providing a more accurate and fair assessment of their capabilities in localized contexts.
 
 ## 4 New Zealand Context Dataset Construction
@@ -108,6 +137,10 @@ Fig. 3: Visualisations of Contextual Diversity. Fig. (a) shows BERT embeddings c
 <!-- image -->
 
 We apply our pipeline in a New Zealand context to explore local bias and LLM knowledge boundaries, as Fig. 3 illustrates the differences between New
+
+
+<!-- PAGE 9 -->
+
 
 Zealand and general English contexts. To enhance syntactic diversity, we include both text-source and oral-source texts in our corpora [5]. For privacy, we perform Named Entity Recognition (NER) [13]. Depending on the source, the raw corpora may require filtering out bias-irrelevant content such as weather forecasts, jokes, and puzzles. Finally, we use 367,384 news articles and broadcast transcripts collected from New Zealand local media to analyze language use associated with various social groups in New Zealand. Our dataset, comprising 167,712 sentences and triplets, assesses bias across eight target groups as summarized by [19]. It addresses the significant presence of Te Reo M¯ aori 'borrow-words' in the NZ English corpora and whose limited presence in LLM training data often poses challenges.
 
@@ -121,6 +154,10 @@ Here, we assess which words in our dataset are first beyond the knowledge bounda
 
 LLMs Knowledge Boundaries in New Zealand Context. Our experiments involved analyzing words from the New Zealand corpus beyond the knowledge boundaries of tested models, revealing significant performance variations. Evaluating the bbs in Table 1 shows all tested LLMs achieve low scores, indicating poor comprehension of non-English words in the New Zealand context. The Llama family model outperformed others, while GPT-2 struggled with non-
 
+
+<!-- PAGE 10 -->
+
+
 Fig. 4: Comparison of kernel density estimation (KDE) plots for the logtransformed density of logits across the largest size of tested LLMs in the New Zealand Context. Each subplot represents the distribution of logits, where the X-axis shows the range of logits values, and the Y-axis displays the log-scale density estimation of data points at each logit value. Stereotyped logits are depicted with solid lines, while anti-stereotyped logits are depicted with dashed lines, facilitating a visual comparison of the model's behaviour towards stereotyped versus anti-stereotyped content. A larger divergence represents the model with a larger bias.
 
 <!-- image -->
@@ -130,6 +167,10 @@ English words from our dataset, and the BERT family models' performance was mode
 LLM Bias in New Zealand Context. Analysis of the New Zealand dataset indicates that BERT and RoBERTa outperform ALBERT in language model scores, showing stronger text completion abilities. However, their elevated JSD and bbs scores suggest they exhibit more bias due to greater differences in logit distribution between stereotyped and anti-stereotyped responses. This comparison highlights the inherent biases of BERT and RoBERTa relative to ALBERT. Notably, the JSD values cannot be directly compared across masked and causal models. GPT-2 displays lower biases but weaker language capabilities. In contrast, the Llama-3 model achieves higher EiCAT scores by effectively handling local words, demonstrating the best performance of all causal language models in the New Zealand context.
 
 LLM Bias in Other Contexts. We evaluate LLM biases using two culturally distinct contexts to validate our framework's adaptability. The first, Our Voices dataset, collects natural language data from young New Zealanders, reflecting contemporary sociolinguistic trends among youth [23]. The second context comes
+
+
+<!-- PAGE 11 -->
+
 
 Table 1: Performance Metrics of Different LLMs on the New Zealand Context Dataset. This table presents evaluation metrics scaled to a 0-100 range for readability, covering Language Model Score ( lms ), Jensen-Shannon Divergence ( JSD ), Beyond Knowledge Boundary Score ( bbs ), traditional Idealized CAT Score ( iCAT ) using the StereoSet dataset for comparison, and Enhanced Idealized CAT Score ( EiCAT ). The models are categorized into Theoretical Language Models (TLMs), Masked Language Models (MLMs), and Causal Language Models (CLMs). We also assess the largest model variants in specific contexts: New Zealand young people (OV) using the Our Voices dataset and the Malaysia context (Malay) to understand bias within these unique cultural settings. Theoretical models are included to illustrate extreme cases for reference. The best performance is highlighted in bold for each metric and category.
 
@@ -163,6 +204,10 @@ Table 1: Performance Metrics of Different LLMs on the New Zealand Context Datase
 | GPT-2-xl          |  68.81 |   1.72 |   0    |  60.68 |    0    |
 | Llama-3-8b        |  83.93 |   2.49 |   7.14 |  59.16 |   11.41 |
 
+
+<!-- PAGE 12 -->
+
+
 from the MEN dataset [8], consisting of 200 Malaysian local news. Malaysian English is influenced by Malay, Chinese, and Tamil, featuring unique lexical and syntactic variations [8]. These datasets enable a comprehensive analysis of LLM performance across varied linguistic environments.
 
 We assess the largest model sizes in these contexts. BERT shows the highest linguistic competence but the highest bias. RoBERTa consistently attains high EiCAT scores and robust bbs , indicating its effective handling of local vocabulary. ALBERT's performance is slightly inferior, with reduced linguistic capabilities and less bias. Llama-3 outperforms other causal models, achieving the highest EiCAT scores. Remarkably, some models score zero due to a bbs of zero, indicating a failure to recognize local-specific vocabulary.
@@ -177,6 +222,10 @@ BERT, RoBERTa and Llama-3, despite achieving high lms , display a greater degree
 
 We proposed the LIBRA framework to measure biases in large language models (LLMs) within local contexts. By leveraging diverse and expansive corpora, we developed a New Zealand context dataset, relying on robust methods to
 
+
+<!-- PAGE 13 -->
+
+
 gather and curate extensive local data rather than traditional crowdsourcing approaches. The Enhanced Idealized CAT Score ( EiCAT ), introduced within the framework, integrates traditional bias metrics with a beyond knowledge boundary score ( bbs ) and a distributional divergence-based assessment, offering a comprehensive evaluation tool. Applying this framework to the New Zealand context, we utilized data sourced from New Zealand media to create a dataset comprising over 160,000 test cases. Our analysis revealed that while models such as Llama-3 exhibit certain biases, they demonstrate a stronger capacity to handle culturally specific vocabulary and terminology. By testing knowledge boundaries, we also highlighted the importance of formal definitions and structured data in assessing LLMs' capabilities with underrepresented languages such as M¯ aori and Malay. These findings underscore the necessity of incorporating localized and contextually rich data in evaluating and improving LLM fairness. LIBRA offers a scalable, adaptable approach for researchers globally, promoting the development of more fair and culturally sensitive language technologies.
 
 Acknowledgement. The authors thank the Growing Up in New Zealand rangatahi / youth who participated in the Our Voices study, conducted by the Our Voices study team. The Our Voices study was designed by Susan M.B. Morton (GUiNZ Foundation Director and Principal Investigator of Our Voices 2019-2022) and the Our Voices study team. The authors acknowledge the contributions of the original Our Voices team and study investigators: Susan M.B. Morton, Rizwan Asghar, Polly E. Atatoa Carr, Chris Cunningham, Daniel Exeter, Sarah Knowles, Yun Sing Koh, Christopher Nixon, Elizabeth R. Peterson, Avinesh Pillai, Chris Schilling, Caroline Walker, Joerg Wicker, Kane Meissel (Principal Investigator 2023-2025), and those who have contributed at various points throughout the study. The views reported in this paper are those of the authors and do not necessarily represent the views of the Our Voices Investigators or Growing Up in New Zealand. Financial support: The Our Voices study was funded by an Endeavour grant (UOAX1912) by the Ministry of Business, Innovation and Employment (2019-2025). This funding also provided a travel grant awarded to the first author of this manuscript. Funders had no role in the design, analysis or writing of this article. Conflict of interest: None. Ethics of human subject participation: This study was conducted according to the guidelines laid down in the Declaration of Helsinki and all procedures involving human subjects were approved by the Ministry of Health's Northern B Health and Disability Ethics Committee. Consent was obtained from all participants and their parent or guardian.
@@ -184,6 +233,10 @@ Acknowledgement. The authors thank the Growing Up in New Zealand rangatahi / you
 ## References
 
 1. BehnamGhader, P., Adlakha, V., Mosbach, M., Bahdanau, D., Chapados, N., Reddy, S.: LLM2vec: Large language models are secretly powerful text encoders. In: First Conference on Language Modeling (2024), https://openreview.net/forum? id=IW1PR7vEBf
+
+
+<!-- PAGE 14 -->
+
 
 2. Borgelt, C.: An implementation of the fp-growth algorithm. In: Proceedings of the 1st International Workshop on Open Source Data Mining: Frequent Pattern Mining Implementations. p. 1-5. OSDM '05, Association for Computing Machinery, New York, NY, USA (2005). https://doi.org/10.1145/1133905.1133907
 3. Cabello, L., Jørgensen, A.K., Søgaard, A.: On the independence of association bias and empirical fairness in language models. In: Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency. p. 370-378. FAccT '23, Association for Computing Machinery, New York, NY, USA (2023). https://doi. org/10.1145/3593013.3594004
@@ -197,6 +250,10 @@ Acknowledgement. The authors thank the Growing Up in New Zealand rangatahi / you
 11. Lan, Z., Chen, M., Goodman, S., Gimpel, K., Sharma, P., Soricut, R.: Albert: A lite bert for self-supervised learning of language representations. In: International Conference on Learning Representations (2020), https://openreview.net/forum? id=H1eA7AEtvS
 12. Li, H., Schlegel, V., Batista-Navarro, R., Nenadic, G.: Do you hear the people sing? key point analysis via iterative clustering and abstractive summarisation. In: Rogers, A., Boyd-Graber, J., Okazaki, N. (eds.) Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). pp. 14064-14080. Association for Computational Linguistics, Toronto, Canada (2023). https://doi.org/10.18653/v1/2023.acl-long.786, https://aclanthology.org/ 2023.acl-long.786
 
+
+<!-- PAGE 15 -->
+
+
 13. Li, J., Sun, A., Han, J., Li, C.: A survey on deep learning for named entity recognition. IEEE Transactions on Knowledge and Data Engineering 34 (1), 50-70 (2022). https://doi.org/10.1109/TKDE.2020.2981314
 14. Li, Y., Du, M., Song, R., Wang, X., Wang, Y.: A survey on fairness in large language models. arXiv preprint arXiv:2308.10149 (2023)
 15. Liu, Y., Ott, M., Goyal, N., Du, J., Joshi, M., Chen, D., Levy, O., Lewis, M., Zettlemoyer, L., Stoyanov, V.: RoBERTa: A robustly optimized BERT pretraining approach (2020), https://openreview.net/forum?id=SyxS0T4tvS
@@ -209,6 +266,10 @@ Acknowledgement. The authors thank the Growing Up in New Zealand rangatahi / you
 22. Navigli, R., Conia, S., Ross, B.: Biases in large language models: Origins, inventory, and discussion. J. Data and Information Quality 15 (2) (June 2023). https://doi. org/10.1145/3597307
 23. OurVoices: Our Voices Home, https://ourvoices.auckland.ac.nz/
 24. Parrish, A., Chen, A., Nangia, N., Padmakumar, V., Phang, J., Thompson, J., Htut, P.M., Bowman, S.: BBQ: A hand-built bias benchmark for question answering. In: Muresan, S., Nakov, P., Villavicencio, A. (eds.) Findings of the Association for Computational Linguistics: 60th Annual Meeting of the Association for Computational Linguistics. pp. 2086-2105. Association for Computational Linguistics, Dublin, Ireland (May 2022). https://doi.org/10.18653/v1/2022.findings-acl.165, https://aclanthology.org/2022.findings-acl.165
+
+
+<!-- PAGE 16 -->
+
 
 25. Pozzobon, L.A., Ermis, B., Lewis, P., Hooker, S.: On the challenges of using blackbox APIs for toxicity evaluation in research. In: The 2023 Conference on Empirical Methods in Natural Language Processing (2023), https://openreview.net/forum? id=Y6w2prqvjM
 27. Radford, A., Wu, J., Child, R., Luan, D., Amodei, D., Sutskever, I., et al.: Language models are unsupervised multitask learners. OpenAI blog 1 (8), 9 (2019)

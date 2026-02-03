@@ -1,10 +1,11 @@
 ---
 source_file: Bai_2025_Explicitly_unbiased_large_language_models_still.pdf
-conversion_date: 2026-02-03T08:42:56.986459
+conversion_date: 2026-02-03T18:21:11.798909
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Explicitly unbiased large language models still form biased associations
@@ -51,6 +52,10 @@ Published February 20, 2025.
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Fig. 1. Example of word association bias and relative decision bias in explicitly unbiased LLMs.
 
 <!-- image -->
@@ -62,6 +67,10 @@ Our approach is inspired by a century of psychological studies on human stereoty
 The evolution of language models highlights an intriguing parallel to how humans have managed and transformed their expressions of stereotype biases. Initially, pretrained language models directly reflect the biases inherent in their training data, often resulting in explicitly biased outputs (21, 24, 25). To address these issues, fine-tuned language models incorporate value alignment processes to suppress blatantly racist or sexist expressions (51). This is similar to how societies teach individuals egalitarian principles to suppress bigotry (37, 43). However, just as egalitarian humans still display implicit biases, there is a possibility that value-aligned models do too. Recent case studies have found value-aligned models can still generate stereotypical personas and activate biased usage (9-11), indicating the feasibility and importance for more comprehensive investigations. Traditional word embedding techniques, analyzing static and contextualized associations in training data, do not fully capture the nuanced behaviors postalignment (21-23). Some embeddings are not even accessible due to increasingly proprietary policies. Thus, evolved models need new evaluations based purely on observable behaviors in model outputs. This approach is closer to practical use, as humans interact with models interact after their inherent biases have been adjusted through fine-tuning and alignment.
 
 Here, we introduce a prompt-based method, LLM Word Association Test, to measure implicit biases in proprietary models whose internal states may not be accessible. These implicit biases can serve as a first indicator of possible discriminatory behaviors. We also created a corresponding decision task, LLM Relative Decision Test, designed to capture the stereotypical behaviors indicated by the implicit biases. Drawing on the psychological finding that relative comparisons are particularly diagnostic of implicit biases (19, 52), our decision prompts are designed to be relative and subtle, rather than absolute or overt. Our measures strive to balance a foundation grounded in the humancentered psychological literature, with scalability. We take a twopronged approach, starting with prompt-based measures based on existing experiments validated with human participants, then automating the generation of prompts for measuring implicit and decision bias under human supervision. We study eight value-
+
+
+<!-- PAGE 3 -->
+
 
 aligned language models, across a set of prompt variations in 4 social categories for 21 stereotypes, leading to a total of over 33,000 unique prompts (see below, Materials and Methods and SI Appendix , sections E-H). In striking contrast to prior benchmarks which show little to no explicit bias, we find widespread and consequential implicit biases (see below, Results ). Though we take inspiration from psychology (53-55), our goal is not to anthropomorphize models, but rather to highlight transferable methods (see below, Discussion ). Psychology offers insights from decades of research on human stereotypes, and methods for measuring those biases based purely on observable behavior.
 
@@ -76,6 +85,10 @@ The strongest bias in race appears when language models associate negative attri
 Fig. 2. LLM Word Association Bias: Results showing LLM word association bias scores on the vertical axis, for 21 stereotypes on the horizontal axis, in 4 social categories coded in 4 colors, across 8 LLMs in 8 panels. Areas shaded in gray indicate high levels of stereotypical bias, as shown in the majority of test cases. Red dotted horizontal lines indicate unbiased responses. Error bars represent 95% bootstrapped CIs. See statistical analyses in the main text and tables in SI Appendix .
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 with the word black. There are smaller levels of bias when language models associate negativity with names of African and Arab origins and English learners. The only two types that do not demonstrate biases are names of Asian and Hispanic origins. In gender, science, career, and power showed moderate bias, with LLMs being more likely to associate names or roles of women with home, humanities, and powerless words. In contrast, sexual orientation reveals a positivity bias. In religion, all three religions demonstrate a small negativity bias. In health, disability and age show a stronger bias than mental illness, weight, or food.
 
@@ -101,6 +114,10 @@ Spotlight: Gender and Career in GPT-4. In another work-related example, we measu
 
 In sum, we unveil discriminatory behaviors in even explicitly unbiased LLMs. To further contextualize this result within existing benchmarks, GPT-4 overwhelmingly disagrees with explicitly blatant statements such as 'women are bad at managing people' (8), while having no problem here choosing Ben (man-coded name) over Julia (woman-coded name) for a management workshop. In ambiguous questions from prior
 
+
+<!-- PAGE 5 -->
+
+
 Fig. 3. LLM Decision Bias: Results showing LLM decision bias scores on the vertical axis, for 21 stereotypes on the horizontal axis, in 4 social categories coded in 4 colors, across 8 LLMs in 8 panels. Areas shaded in gray indicate high levels of stereotypical bias, as shown in the majority of test cases. Red dotted horizontal lines indicate unbiased responses. Error bars represent 95% bootstrapped CIs. See statistical analyses in the main text and tables in SI Appendix .
 
 <!-- image -->
@@ -110,6 +127,10 @@ benchmarks between Black and White unemployed people such as 'who didn't work ha
 Understanding Properties of LLM Word Association Bias. So far, we have demonstrated that prompt-based LLM Word Association Test and corresponding LLM Relative Decision Test can measure stereotypical biases and subtle discriminations in explicitly unbiased LLMs. Next, we turn to understanding more about these measures. How does LLM word association bias differ from another indirect measure, the embedding-based bias (21, 23)? How does LLM word association bias relate to downstream decisions, especially given prior work showing little correlation between intrinsic and extrinsic measures (62, 63)? How do relative compared to absolute questions contribute to the observed levels of decision bias (52)? Studying these properties clarifies the strengths and limitations of our approach. Due to compute constraints, we run these additional analyses only on GPT-4 and OpenAI models. We focus on OpenAI both to connect with our initial benchmarking study and because of the wide usage of their models.
 
 Word Association Bias vs. Embedding Bias. Word embeddings have been used to highlight stereotype biases in language models (21, 64). Such embeddings are not always accessible for closed models and do not necessarily correspond to the actual model output (62, 65). Our approach provides an important alternative. We find that prompt-based word association bias and embedding-based bias are related but not redundant. Specifically, we replicate the main test on GPT-4 to calculate promptbased word association bias. For embeddings, because we do not have direct access to GPT-4's embeddings, we use OpenAI's text-embedding-3-small and text-embedding-3-large as our best available proxies. We obtain contextualized word embeddings using our prompts as sentence templates, and calculate the word embedding association test score as the bias metric (21, 23). Results show a moderate linear relationship between the two measures (Pearson's r = 0 : 36 , P &lt; 0 : 001). Aggregating multiple prompts by stereotype, the relationship becomes slightly stronger ( r = 0 : 72 , P &lt; 0 : 001). In an additional analysis (further
+
+
+<!-- PAGE 6 -->
+
 
 Fig. 4. GPT-4 word association bias vs. OpenAI embedding bias predicting relative decision bias: The Top panels show how word association bias predicts the binary decisions, whereas the Bottom panels show how embedding bias predicts these decisions, by category. The model fit is shown in the foreground with 95% CI with raw data in the background.
 
@@ -131,6 +152,10 @@ In summary, LLM word association bias is related to but distinct from embedding-
 
 While significant progress has been made in reducing stereotype biases in LLMs, there is still much to be learned from the origin of these biases: humans. Despite century-long efforts to reduce prejudice and discrimination in human society, humans have not eliminated bias but rather learned to transform blatant stereotypes into harder-to-see forms. Grounded in the psychological literature, we proposed LLM Word Association Test to measure stereotype biases in these models. We found prevalent stereotype biases in a set of value-aligned models across diverse social categories, many of which reflect existing stereotypes that divide human society. These word association biases are diagnostic of model behaviors in many decisions as measured by our LLM Relative Decision Test, indicating significance; see a further
 
+
+<!-- PAGE 7 -->
+
+
 demonstration of similar biases in the newly released GPT-4o in SI Appendix , section N.
 
 Complementing existing studies on bias measurement in language generation models including benchmarks (66, 67), specific tasks (9, 68), critical dimensions (69), relevant groups (70, 71), critiques (4, 72), and jailbreaks (6, 8), we hypothesize that the absence of bias stems not from a resolved issue but from a lack of measurement. Our work studies this previously neglected form of bias. The two proposed measures are related to but distinct from the terminology of intrinsic and extrinsic bias (62, 65) in the NLPcommunity. Intrinsic biases typically measure bias via word embeddings, while our LLM Word Association Test measures bias via model output. In other words, LLM Word Association Tests quantify bias from observable behaviors whereas embeddings approximate bias from internal representations. The LLM Relative Decision Test, a measure of extrinsic bias, is designed to capture downstream use cases and is intentionally matched in content to the Word Association Test. This alignment allows for a more controlled analysis of correlations between intrinsic and extrinsic measures, addressing limitations in prior work where mismatched designs obscured these relationships.
@@ -146,6 +171,10 @@ Although our studies are inspired by psychological research on humans, we cautio
 ## Materials and Methods
 
 OnecommoninstantiationofhumanimplicitbiastestsistheImplicitAssociation Test (further details in SI Appendix , sections E and F). Participants are typically asked to sort words into categories that are on the left and right-hand side of the computer screen by pressing the 'e' key if the word belongs to the category on the left and the 'i' key if the word belongs to the category on the right (86). The richnessofthevalidatedbiasestestedinhumanstudiesoffersanopportunedata source to probe implicit biases in language models (https://www.millisecond. com/download/library/iat). We identified 21 types of stereotype biases from 4 social categories in human studies including 9 stereotypes in race, 4 in gender, 3 in religion, and 5 in health (further details in SI Appendix , sections E and F).
+
+
+<!-- PAGE 8 -->
+
 
 Stimuli. Categories in this study refer to broader social categories that are related to stigma such as race, gender, and religion. We then cluster the remaining stereotypes into 'health' because stereotypes related to these groups often indicate (lack of) health: disability, weight, mental illness, food items (healthy vs. unhealthy), and age. For specific stereotypes, we draw from the original psychology IAT studies in the baseline study, and expand the list of words with synonyms for robustness checks. For example, psychology studies differentiate between whether people associate Black or White with valence, and whether people associate African and Caucasian family names with valence. The former is the 'racism' test including associating the words Black or White with good, bad, pleasant, unpleasant. The latter is the 'Black' test including associating prototypical family names from each of those groups (e.g., Johnson for African or Miller for Caucasian) with valence adjectives such as love, wonderful, hate, awful. Similarly, the gender and science prompt includes synonyms for male (e.g., man, boy, uncle, grandpa) and synonyms for female (e.g., woman, girl, aunt, grandma). These words are chosen from gender-career IAT from Project Implicit. Likewise, the gender and power prompt, drawn from human IAT, includes male and female coded names, and adjectives relate to power (e.g., leader, command) and powerless (e.g., supporter, advocate). We include all stimuli used in this study in SI Appendix , section E and in the online repository for easier access.
 
@@ -190,6 +219,10 @@ Author affiliations: a Department of Psychology, The University of Chicago, Chic
 18. M. R. Banaji, A. G. Greenwald, Blindspot: Hidden Biases of Good People (Bantam, 2016).
 19. F. Crosby, S. Bromley, L. Saxe, Recent unobtrusive studies of black and white discrimination and prejudice: A literature review. Psychol. Bull. 87 , 546 (1980).
 20. T. Riddle, S. Sinclair, Racial disparities in school-based disciplinary actions are associated with county-level rates of racial bias. Proc. Natl. Acad. Sci. U.S.A. 116 , 8255-8260 (2019).
+
+
+<!-- PAGE 9 -->
+
 
 21. A. Caliskan, J. J. Bryson, A. Narayanan, Semantics derived automatically from language corpora contain human-like biases. Science 356 , 183-186 (2017).
 22. W. Guo, A. Caliskan, 'Detecting emergent intersectional biases: Contextualized word embeddings contain a distribution of human-like biases' in Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society (2021), pp. 122-133.

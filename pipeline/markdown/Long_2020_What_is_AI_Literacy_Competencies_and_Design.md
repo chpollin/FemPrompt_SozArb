@@ -1,10 +1,11 @@
 ---
 source_file: Long_2020_What_is_AI_Literacy_Competencies_and_Design.pdf
-conversion_date: 2026-02-03T09:09:45.856761
+conversion_date: 2026-02-03T18:41:12.096352
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -85,6 +86,10 @@ SIGCHI
 
 .
 
+
+<!-- PAGE 2 -->
+
+
 ## What is AI Literacy? Competencies and Design Considerations
 
 ## Duri Long
@@ -125,6 +130,10 @@ Permission to make digital or hard copies of all or part of this work for person
 
 CHI '20, April 25-30, 2020, Honolulu, HI, USA © 2020 Copyright is held by the owner/author(s). Publication rights licensed to ACM. ACM 978-1-4503-6708-0/20/04…$15.00 https://doi.org/10.1145/3313831.3376727
 
+
+<!-- PAGE 3 -->
+
+
 We engaged in an exploratory review of literature with the goal  of  distilling  key  ideas  from  various  fields  that  could inform our understanding of how learners make sense of AI. We organize these key ideas in a conceptual framework that we  thematically  derived  from  the  literature.  The  main contributions  of  this  paper  are  a  concrete  definition  of  AI literacy  and  a  related  set  of  competencies  and  design considerations.  This  framework  is  not  intended  to  be  an exhaustive summary of the literature; rather, it is a set of key ideas/provocations we distilled from the literature that can serve as inspiration and initial guidelines for the design of future  learning  experiences  centered  on  AI  literacy.  We present this framework as the start of a conversation, with the expectation that it will shift, grow, and spark debate in the future as more research is conducted in the field.
 
 The next  section  of  this  paper  presents  a  definition  of  AI literacy in the context of a broader discussion of literacy as a concept  and  how  it  has  been  applied  in  various  related disciplines.  We  then  present  a  conceptual  frameworkconsisting of AI literacy competencies and design considerations-that we derived by conducting a review of a variety of interdisciplinary research related to AI.
@@ -156,6 +165,10 @@ Table 1: Breakdown of papers reviewed by year and venue type
 
 We  began  our  literature  review  by  searching  for  papers related to AI education by closely following updates on the AI4K12  mailing  list  and  reading  papers  by  researchers currently active in the field, searching the proceedings of the
 
+
+<!-- PAGE 4 -->
+
+
 2008 AAAI AI Education Colloquium and proceedings of several post-2016 conferences including AAAI, AI Ed, CHI, and IDC; and searching Google Scholar and the ACM digital library.  Search  terms  used  were  iteratively  revised  and included:  'AI  education',  'learning  about  AI',  'teaching AI',  'AI  literacy',  'ML  literacy',  'understanding  ML' 'understanding  AI',  'AI  for  K-12',  'AI  university',  'AI courses',  'AI  school',  'AI  informal  learning'.  We  also searched  for  papers  related  to  using  robotics  for  AI-not CS-education.  We  focused  on  reviewing  papers  on  AI education for non-technical learners, although we reviewed several  papers  on  university  courses.  After  identifying  an initial set of papers, we reviewed the reference lists to find additional literature. This entire search yielded 18 papers and 8 projects related to AI education for non-technical learners and 14 papers on AI education for CS undergraduates.
 
 Since our initial search revealed only a few recent papers on the  topic  of  AI  education  for  non-technical  learners,  we expanded our search to related fields and 'grey literature' (i.e.  literature  that  is  not  peer-reviewed).  We  examined 14 public  syllabi  from  accredited  universities  in  the  USA  for classes related to artificial intelligence (4), machine learning (6), cognitive science (2), and robotics (2). We looked at the contents of popular AI textbooks (3), seminal writings in AI research (10), papers related to AI ethics (22) and explainable AI (10), and polls on public perceptions of AI (9). We also explored peer-reviewed literature on perceptions of AI (23) by searching for papers with terms such as 'perceptions of AI', 'misconceptions AI', 'AI in the home', 'interactions with AI', 'AI in media'. Finally, we reviewed  select  survey-style  papers  on  related  forms  of literacy (e.g. digital, data, scientific literacy) (6), and looked at papers on CS education (13) relating to the AI education literature to see if there was support for these findings in a more established field.
@@ -175,6 +188,10 @@ Established definitions of AI can aid learners in understanding what AI is. Nils
 Brooks provides a contrasting definition, taking a bottom-up approach to understanding intelligence [21]. He suggests that developing human-level intelligence is too lofty a goal, and instead  we  should  focus  on  understanding  intelligence incrementally, starting with simple levels of intelligence (e.g. that of an insect). Brooks argues that by excluding tasks such as perception and motor response and conducting experiments in controlled environments, AI researchers are abstracting away  the most  challenging  components  of intelligence [21]. He suggests instead developing 'completely autonomous mobile agents' that are capable of perceiving, acting, and pursuing a set of goals in a dynamic environment  [21].  These  agents  would  not  be  capable  of human-level  intelligence  at  first  but  would  autonomously operate in the real world.
 
 Others  have  synthesized  perspectives  on  intelligence  into summative definitions. Russell and Norvig describe intelligence in terms of thinking or acting either humanly (i.e. based on an empirical understanding of human intelligence) or rationally (i.e. based on mathematical principles) [115]. Goel and Davies characterize AI as the intersection of three disciplines-cognitive systems, robotics, and machine learning [64]. These definitions suggests that it is important
+
+
+<!-- PAGE 5 -->
+
 
 for  learners  to  be  able  to  examine  what  it  means  to  be intelligent  (Competency  2  (Understanding  Intelligence)). Activities like comparing AI devices [69] and AI vs. human abilities [145] have been used to promote this understanding. Taken  in  conjunction  with  recent  calls  for  broadened  AI curricula  [117,145],  these  definitions  of  intelligence  also suggest the importance of understanding that AI is interdisciplinary (Competency 3 (Interdisciplinarity)).
 
@@ -209,6 +226,10 @@ We  conducted  a  review  of  topics  covered  in  university syllabi for ML [26
 ## Cognitive Systems
 
 Cognitive  systems -or  AI  systems  that  are  modeled  after theories about the human mind [64]-are used in a variety of application  domains,  including  WordNet,  IBM's  Watson,
+
+
+<!-- PAGE 6 -->
+
 
 expert systems, and cognitive tutors. Most cognitive systems syllabi  cover  topics  related  to  knowledge  representations, planning, decision-making, problem-solving, and learning.
 
@@ -249,6 +270,10 @@ Research  suggests that one way  of dispelling student misconceptions about ML  
 Research  on  data  literacy  education  can  also  inform  our understanding of how to design ML-related learning interventions. Prado and Marzal define a set of competencies for data literacy (e.g. the 'ability to critically assess data and their sources') [107]. The importance of these competencies to understanding ML suggests that knowledge of basic data science concepts is a component of AI literacy (Competency 11  (Data  Literacy)).  Recognizing  when  personal  data  is being  used  to  train  ML  and  interpreting  the  results  of algorithms in the context of the data they were trained on are two particularly relevant data literacy issues for AI. Research suggests that it is important for learners to understand that computers learn from their data [68,130] (Competency 12 (Learning from Data)) and that learners should be able to critically examine data with 'skepticism and interpretation' [68] (Competency 13 (Critically Interpreting Data)).
 
 A  variety of tactics can be used to promote  critical engagement with data and ML. Hautea et al. suggest having young learners creatively engage with data that is collected about  them  online  [68].  D'Ignazio  and  Sulmont  et  al.
+
+
+<!-- PAGE 7 -->
+
 
 encourage educators to carefully select the datasets they use in  class,  favoring  datasets  that  are  low-dimensional  when initially introducing concepts [125]; datasets that are 'messy'  (i.e.  not  cleaned  and  neatly  categorizable)  when demonstrating issues of bias [36]; and incorporating personally relevant datasets that learners can easily relate to and  understand  [36].  Finally,  D'Ignazio  suggests  writing 'data biographies' (i.e. contextual explanations of datasets and  their  origins)  as  a  way  of  helping  learners  better understand the limitations and origins of data [36] (Design Consideration 3 (Contextualizing Data)).
 
@@ -294,6 +319,10 @@ Employment: Advances in automation have reduced the need for  human  workers  wh
 
 Misinformation: The  spread  of  misinformation  and  'fake
 
+
+<!-- PAGE 8 -->
+
+
 news'  has  been  exacerbated  by  AI  algorithms  on  social media and search engines that promote 'clickbait' articles and create 'filter bubbles' [104].
 
 Singularity/concern about harm to people: The idea of 'the singularity'-or the time when machine intelligence surpasses human intelligence [85]-has been popularized in science fiction, and many have concerns about AI intentionally causing harm to people [13,144].
@@ -332,6 +361,10 @@ Wardrip-Fruin describes three effects 'that can arise in the relationship  betwe
 
 Some  of  these  misconceptions  may  be  caused  by  opaque technologies  that  obscure  functionality.  The  Turing  Test, which  has  long  been  used  to  assess  whether  an  agent  is intelligent, is based on the idea that if a computer can fool a person  into  thinking  it  is  human,  it  can  be  considered intelligent. Miller calls machines that masquerade as humans
 
+
+<!-- PAGE 9 -->
+
+
 Turing deceptions and suggests that they may be ethically problematic  [97].  For  instance,  introducing  black-box  AI decision-making algorithms into popular platforms without informing users can lead to concern and apprehension [55]. Researchers seeking to foster AI literacy may want to avoid misleading  tactics  like  Turing  deceptions  and  black-box algorithms [45]. While black-boxing system components can minimize cognitive overload [71], it can also lead to issues with accountability, bias, and misunderstanding. Balance can be achieved by giving users the option to inspect and learn about system components, explaining only a few components at once, or introducing scaffolding that fades as the  user  learns  about  the  system  (Design  Consideration  5 (Unveil  Gradually)).  It  is  important  to  keep  in  mind  that many  factors  affect  how  humans  interpret  explanations, including the framing of an explanation given by an AI agent [31]. Statements that imply agency and intentionality, like 'I selected  this  because  it  seemed  like  something  you  would enjoy,' typically lead to higher perceptions of intelligence than technical statements like 'I selected this because it was 15%  more  similar  to  your  previous  choices  than  other options in the decision space' [31].
 
 Mateas  further  discusses  how  people  make  sense  of  AI, highlighting the role that the AI creator plays in mediating user  interpretations.  He  describes interpretive  affordances, or 'actionable properties of objects in the world' that support 'the interpretations an audience makes about the operations of  an  AI  system'  [95].  Interpretive  affordances  help  users make  sense  of  a  system's  operations,  understand  how  to interact  with  it,  and  understand  the  creator's  intentions. Interpretive  affordances  and  other  strategies  that  promote transparency can aid in improving user understanding of AI (Design Consideration 4 (Promote Transparency)).
@@ -363,6 +396,10 @@ Research indicates that  children  first  personify  agents  and then recognize 
 Early experiences with technology can improve children's perceptions  of  agent  intelligence  [80],  and  lack  of  prior experience can inhibit children's ability to accurately assess what  types  of  problems  a  computer  can  solve  [135].  The influence of factors such as cognitive development, age, and prior  experience  on  perceptions  of  intelligence  should  be taken into consideration when designing learning interventions (Design Consideration 7 (Milestones)).
 
 Children often attribute socio-emotional characteristics to AI agents-more so than  adults  [46].  This  is  not  affected  by whether  or  not  children  believe  the  agent  is  alive  [16]. Children have a tendency to personify agents and treat them like  humans [46,69,127], and generally perceive agents as being both friendly and trustworthy [46,141]. This suggests that children may overestimate agent capabilities and put a lot  of  trust  in  agents.  Design  Consideration  8  (Critical Thinking) suggests encouraging all learners-but particularly children-to critically examine AI.
+
+
+<!-- PAGE 10 -->
+
 
 Both adult and child perceptions of intelligence and socioemotional  characteristics  to  AI  agents  may  be  affected  by cultural  upbringing  and  geographic  location  [10,45,138]. This suggests the importance of keeping learners' identities and backgrounds in mind (Design Consideration 9 (Identity, Values, &amp; Backgrounds)). Making AI literacy interventions culturally  relevant  may  also  have  the  added  benefit  of increasing learner interest in AI-research on CS education has found that learning interventions centered around cultural values and personal identities are particularly effective, especially for underrepresented groups [38,49].
 
@@ -428,6 +465,10 @@ The previous sections have addressed how people perceive specific AI systems. Th
 
 A meta-analysis of New York Times articles has revealed numerous  trends  in  AI-related  coverage  [57].  Coverage related  to  AI  has  generally  increased  over  time,  with  the exception of the AI 'winter' beginning in 1987 and a spike in  coverage  after  2009  [57].  The  sentiment  of  discussion about AI has become more optimistic over time, although coverage of certain issues has become pessimistic recently (e.g. impact on work, loss of control of AI, ethical concerns) [57]. Polls have also found that there is a significant amount of public concern related to these issues [1,13,75,138]. There are notable gender and age differences in opinions about the
 
+
+<!-- PAGE 11 -->
+
+
 ## Design Consideration 13 (Acknowledging Preconceptions)
 
 Acknowledge that learners may have politicized/sensationalized preconceptions of AI from popular media and consider how to address, use, and expand on these ideas in learning interventions.
@@ -465,6 +506,10 @@ Supporting References:
 This paper provides an operational definition of AI literacy. In addition, it distills a set of AI literacy competencies and design  considerations  from  a  survey  of  interdisciplinary literature. It is important to keep in mind that research on AI education is still in its nascent stages. Much of the work we cite was just published in the last two years, and there is still a need for more empirical research in order to build a robust and accurate understanding of what existing preconceptions non-programmers have about AI and what the best practices are for teaching AI to a non-technical audience.
 
 The competencies and design considerations outlined in this paper will likely need to be expanded to accommodate new findings,  technologies,  and  rapidly  changing social  norms. We encourage researchers and educators in the HCI, AI, and learning science communities to both engage in conversation around the competencies and design considerations in this paper and use them to guide and inspire future empirical and design research on AI literacy.
+
+
+<!-- PAGE 12 -->
+
 
 ## REFERENCES
 
@@ -505,6 +550,10 @@ http://www.cs.umd.edu/class/spring2017/cmsc422//sc hedule0101/
 - [31] John William Charnley, Alison Pease, and Simon Colton. 2012. On the Notion of Framing in Computational Creativity. In ICCC , 77-81.
 - [32] Alexandra Chouldechova and Max G'Sell. 2017. Fairer and more accurate, but for whom? In
 
+
+<!-- PAGE 13 -->
+
+
 - Workshop on Fairness, Accountability, and Transparency in Machine Learning (FAT/ML 2017) .
 - [33] Kate Crawford. 2016. Artificial intelligence's white guy problem. The New York Times 25.
 - [34] Kate Crawford and Trevor Paglen. 2019. Training Humans . Retrieved from http://www.fondazioneprada.org/project/traininghumans/?lang=en
@@ -533,6 +582,10 @@ http://www.cs.umd.edu/class/spring2017/cmsc422//sc hedule0101/
 - [57] Ethan Fast and Eric Horvitz. 2017. Long-term trends in the public perception of artificial intelligence. In Thirty-First AAAI Conference on Artificial Intelligence .
 - [58] Robert B Fisher. 2001. AI and Cinema-Does artificial insanity rule? In Twelfth Irish Conference on Artificial Intelligence and Cognitive Science .
 
+
+<!-- PAGE 14 -->
+
+
 - [59] Jodi Forlizzi and Carl DiSalvo. 2006. Service robots in the domestic environment: a study of the Roomba vacuum in the home. In Proceedings of the 1st ACM SIGCHI/SIGART conference on Human-robot interaction , 258-265.
 - [60] Natalie Anne Freed. 2012. 'This is the fluffy robot that only speaks french': language use between preschoolers, their families, and a social robot while sharing virtual toys. Massachusetts Institute of Technology.
 - [61] Paulo Freire. 1972. Pedagogy of the oppressed . Herder and Herder, New York.
@@ -560,6 +613,10 @@ http://www.cs.umd.edu/class/spring2017/cmsc422//sc hedule0101/
 - [83] Todd Kulesza, Margaret Burnett, Weng-Keen Wong, and Simone Stumpf. 2015. Principles of explanatory debugging to personalize interactive machine learning. In Proceedings of the 20th international conference on intelligent user interfaces , 126-137.
 - [84] Deepak Kumar and Lisa Meeden. 1998. A robot laboratory for teaching artificial intelligence. ACM SIGCSE Bulletin 30, 1: 341-344.
 - [85] Ray Kurzweil. 2005. The singularity is near: When humans transcend biology . Penguin.
+
+
+<!-- PAGE 15 -->
+
 
 - [86] Rüdiger C Laugksch. 2000. Scientific literacy: A conceptual overview. Science education 84, 1: 71-94.
 - [87] Yu Liang. 2014. CPSC 4430 Introduction to Machine Learning.
@@ -596,6 +653,10 @@ http://www.cs.umd.edu/class/spring2017/cmsc422//sc hedule0101/
 - [116] Roger C Schank. 1987. What is AI, anyway? AI magazine 8, 4: 59-59.
 - [117] R Benjamin Shapiro, Rebecca Fiebrink, and Peter Norvig. 2018. How machine learning impacts the
 
+
+<!-- PAGE 16 -->
+
+
 - undergraduate computing curriculum. Communications of the ACM 61, 11: 27-29.
 - [118] Judy Hanwen Shen, Lauren Fratamico, Iyad Rahwan, and Alexander M Rush. Darling or Babygirl? Investigating Stylistic Bias in Sentiment Analysis.
 - [119] Matthew Smith, Christian Szongott, Benjamin Henne, and Gabriele Von Voigt. 2012. Big data privacy issues in public social media. In 2012 6th IEEE International Conference on Digital Ecosystems and Technologies (DEST) , 1-6.
@@ -624,6 +685,10 @@ http://www.cs.umd.edu/class/spring2017/cmsc422//sc hedule0101/
 - [142] Randi Williams, Hae Won Park, and Cynthia Breazeal. 2019. A is for Artificial Intelligence: The Impact of Artificial Intelligence Activities on Young Children's Perceptions of Robots. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems , 447.
 - [143] Jason Shun Wong. 2018. Design and fiction: imagining civic AI. Interactions 25, 6: 42-45.
 - [144] Baobao Zhang and Allan Dafoe. 2019. Artificial Intelligence: American Attitudes and Trends . University of Oxford. Retrieved September 6, 2019 from https://governanceai.github.io/US-PublicOpinion-Report-Jan-2019/high-level-machineintelligence.html#subsecharmgood
+
+
+<!-- PAGE 17 -->
+
 
 - [145] Michelle Zimmerman. 2018. Teaching AI: Exploring New Frontiers for Learning . International Society for Technology in Education.
 - [146] Abigail Zimmermann-Niefield, Makenna Turner, Bridget Murphy, Shaun K Kane, and R Benjamin Shapiro. 2019. Youth Learning Machine Learning through Building Models of Athletic Moves. In Proceedings of the 18th ACM International Conference on Interaction Design and Children , 121-132.

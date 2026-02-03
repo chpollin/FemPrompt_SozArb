@@ -1,10 +1,11 @@
 ---
 source_file: Victor_2023_Recommendations_for_social_work_researchers_and.pdf
-conversion_date: 2026-02-03T09:28:46.605880
+conversion_date: 2026-02-03T18:59:45.004824
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Recommendations for Social Work Researchers and Journal Editors on the Use of Generative AI and Large Language Models
 
 Bryan G. Victor
@@ -31,6 +32,10 @@ doi: 10.1086/726021
 
 T he advent of generative arti /uniFB01 cial intelligence (AI) and large language models (LLMs) such as ChatGPT represents a substantial leap forward in the power of computing. These advanced technologies can generate coherent, relevant, and high-quality text based on simple, plain-language prompts provided by the user. The ability to process and analyze vast amounts of text allows LLMs to quickly identify patterns, trends, and relationships in the data with the possibility for novel insights and better informed decision-making. Scholars are beginning to note the
 
+
+<!-- PAGE 2 -->
+
+
 vast potential of LLMs in social work research and practice as demonstrated by recent papers in disciplinary journals by Goldkind et al. (in press), Ioakimidis &amp; Maglajlic (2023), Perron (2023), Scheyett (2023), Singer et al. (2023), and Victor et al. (2023).
 
 Despite the transformative potential of generative AI and LLMs, some researchers -such as Sardana et al. (2023) -have expressed concern about LLMs ' disruptive and potentially destabilizing effects on academia. One of the main concerns is the potential for LLMs to exacerbate existing inequalities and biases in academic research. Because LLMs are trained on large amounts of data, the models will reproduce biases inherent in the data, such as biases that result from the use of texts with racial and gender biases to train the model (Gordon, 2023). Another concern is the potential for LLMs to replace human expertise and judgment in academic research. LLMs are powerful tools that can quickly generate large amounts of text, but they lack the same level of critical thinking, re /uniFB02 ection, and analysis as human researchers. A risk exists that LLMs could be used to automate research processes, reducing the value placed on human expertise and professional knowledge and lowering the quality of research outputs. Finally, LLMs give rise to signi /uniFB01 cant data privacy and security issues, such as concerns over who owns and has access to the data input into these models.
@@ -38,6 +43,10 @@ Despite the transformative potential of generative AI and LLMs, some researchers
 More speci /uniFB01 c to social work, generative AI is likely to signi /uniFB01 cantly in /uniFB02 uence teaching, practice, and research. For instance, in their groundbreaking study, Felten and colleagues (2023) devised a metric to evaluate various occupations in terms of their potential exposure to -or capacity to be in /uniFB02 uenced by -generative AI by linking 10 AI capabilities (e.g., image recognition, reading comprehension, and language modeling) to 52 human skills (e.g., oral comprehension, oral expression, and inductive reasoning). Among the more than 700 occupations assessed, ' Social Work Teachers, Postsecondary ' ranked 11th in terms of potential AI exposure. This high potential for AI exposure suggests a pressing need for social work professionals to proactively engage with and leverage generative AI technologies to stay at the forefront of their /uniFB01 eld.
 
 This article delves into the dual nature of LLMs as both a disruptive and a disrupting technology in social work research. Disruptive technologies are innovations that signi /uniFB01 cantly alter how an industry or market operates, often displacing established methods or practices (Danneels, 2004). LLMs can revolutionize social work research through their ability to generate high-quality text and support data analysis. Conversely, disrupting technologies can be understood as innovations that create problems and complications. Although LLMs may bring transformative advancements, they also have the potential to introduce a wide variety of problems that must be carefully examined and addressed within the context of social work research. We provide this disruptive -disrupting framework to foreground our recommendations around the use of generative AI within social work research. We then review existing
+
+
+<!-- PAGE 3 -->
+
 
 guidelines on using generative AI in research established by other scienti /uniFB01 c disciplines, editors at scholarly journals, and major publishers. Based on the identi /uniFB01 ed opportunities and challenges and in consideration of existing guidelines, we propose an initial set of recommendations that span the social work research continuum -including data collection, analysis, interpretation, and dissemination -to enable researchers and journal editors to integrate LLMs into their activities while considering the ethical, privacy, and social implications of doing so.
 
@@ -53,6 +62,10 @@ LLMs are particularly useful for language translation, chatbots, summarization, 
 
 LLMshavethepotential to substantially improve research activities by offering novel types of support that increase ef /uniFB01 ciency and unlock new analytic capabilities. We consider these novel supports to be disruptive within social work research as they will likely alter the ways that many of us conduct our work. In this section, we /uniFB01 rst discuss how LLMs can aid general research activities and then provide speci /uniFB01 c examples related to qualitative and quantitative research.
 
+
+<!-- PAGE 4 -->
+
+
 ## General Research Activities
 
 At the core of LLMs ' utility is their ability to provide various levels of writing assistance. They can help with basic language-related tasks, such as correcting spelling and grammar errors. Beyond that, researchers can use LLMs for more advanced purposes, such as generating original text, translating languages for international scholars, and even facilitating the generation of novel ideas and hypotheses. (See Appendix A, online, for an example of how we used ChatGPT-4 to support the writing of this article.)
@@ -66,6 +79,10 @@ LLMs have the potential to reshape many core activities in qualitative research.
 ## Quantitative Research
 
 A powerful tool for quantitative research, LLMs can help analysts select suitable statistical procedures for data analysis when provided with research questions and variable descriptions. Moreover, LLMs can assist in writing and debugging code, thereby
+
+
+<!-- PAGE 5 -->
+
 
 streamlining the programming process. LLMs can support data mining with their ability to identify and categorize different data types and identify speci /uniFB01 c entities such as names or locations within the data. They can also perform sentiment analysis, which involves determining the emotions or attitudes expressed in a text by examining words and phrases in context to identify whether the sentiment is positive, negative, or neutral. As LLMs advance, their capacity to create data visualizations will also improve, enhancing their utility for dissemination of quantitative /uniFB01 ndings.
 
@@ -85,6 +102,10 @@ Another key challenge that social work researchers may face when using proprieta
 
 LLMs can be biased depending on the data used to train them, especially in text generation, sentiment analysis, classi /uniFB01 cation, and thematic analysis (Gordon, 2023). This presents a substantial problem for social work research, as inaccurate or biased
 
+
+<!-- PAGE 6 -->
+
+
 results can lead to misinterpretation of data, perpetuation of harmful stereotypes, and policy decisions that reproduce inequity. Furthermore, LLMs are often complex and opaque, making it dif /uniFB01 cult for researchers to understand how they work and whatbiases may be present in the model. This can make it challenging to ensure that the results generated by LLMs are accurate, leading to potential ethical concerns and challenges in interpreting and applying the results.
 
 ## Attribution
@@ -98,6 +119,10 @@ Another substantial challenge related to research attribution is determining whi
 As mentioned previously, LLMs can improve the ef /uniFB01 ciency and output of social work research by facilitating aspects of the research process. However, this ef /uniFB01 ciency may come at the expense of research quality, as researchers may rely too heavily on automating essential research tasks without engaging in critical thinking or rigorously evaluating the data. As one example, the integration of ChatGPT within ATLAS.ti (2023a) will certainly increase qualitative coding speed, but the integration of this generative AI technology might diminish the quality and trustworthiness of analyses.
 
 The academic reward structure, which prioritizes research volume over quality, will likely reinforce this problem. Research-intensive schools and international institutions that predicate promotion decisions on the number of publications in Social Sciences Citation Index-ranked journals are particularly susceptible to this trend. As a result, there is an increased risk for a rise in the overall number of publications that make questionable contributions to knowledge. Additionally, there is a signi /uniFB01 cant risk of research reporting inaccurate or potentially harmful conclusions. As a result,
+
+
+<!-- PAGE 7 -->
+
 
 editors and reviewers may face an overwhelming number of studies with limited value. This might also be of concern to social work, as we may see more researchers seeking to publish in open-access mega-journals, possibly prioritizing publication speed and volume over research quality.
 
@@ -115,6 +140,10 @@ Our recommendations on the use of generative AI in social work research are info
 
 All established guidelines were concise, containing both prescriptive and proscriptive elements. They consistently agreed on two main points. First, AI tools cannot be granted authorship, as authorship implies accountability for the work. Elsevier, for
 
+
+<!-- PAGE 8 -->
+
+
 instance, adheres to this policy, even though ChatGPT was listed as a coauthor of an article (O ' Connor &amp; ChatGPT, 2023) in an Elsevier journal, Nurse Education in Practice . The article has since been amended, removing ChatGPT as an author.
 
 The second guideline necessitates that researchers document their use of LLMs. However, the de /uniFB01 nition of acceptable use varies among the guideline developers. For instance, Science (2023) takes the most stringent position, declaring that ' Text generated from AI, machine learning, or similar algorithmic tools cannot be used in papers published in Science journals, nor can the accompanying /uniFB01 gures, images, or graphics be the products of such tools, without explicit permission from the editors ' (para. 6). Taken literally, this statement suggests that using AI tools to improve a manuscript ' s readability might be deemed misconduct. This requirement could also unfairly diminish the capacity of researchers with English as a second language to engage in scienti /uniFB01 c discussions where English is the primary language. Duracinsky and colleagues (2017) reported that limited skills in English are a major barrier to publishing in English-language journals for French researchers. However, LLMs could be an important tool in mitigating those barriers.
@@ -124,6 +153,10 @@ Although JAMA does not explicitly forbid using AI tools to generate content or i
 The guidelines provided by prominent journals and organizations such as Nature , PNAS , Science, Elsevier, COPE, and JAMA are crucial in addressing authorship concerns and the application of AI tools in scienti /uniFB01 c research. However, these guidelines are insuf /uniFB01 cient for guiding the future of social work research for several reasons. First and foremost, these guidelines are not speci /uniFB01 cally designed for the social work discipline. As a result, they may not adequately address the unique ethical issues that require careful consideration within social work research contexts, such as research involving vulnerable and marginalized groups. The guidelines also lack suf /uniFB01 cient guidance on how AI tools should be described and documented in research publications, which can lead to inconsistent reporting practices and make it challenging to assess the validity and reliability of /uniFB01 ndings.
 
 These guidelines emphasize the role of researchers, particularly concerning their application of AI in manuscript development. However, it is essential to recognize that AI issues are equally relevant to journal editors and reviewers, as they hold signi /uniFB01 cant responsibilities in upholding the quality and integrity of social work research. Furthermore, scholars have been exploring the use of AI in the peer-review process (Checco et al., 2021), which presents a range of novel opportunities and potential challenges that warrant careful consideration. Building on our review of existing
+
+
+<!-- PAGE 9 -->
+
 
 guidelines, we suggest a preliminary set of recommendations for using generative AI and LLMs in social work research. These recommendations offer guidance for contending with the distinct concerns and challenges these new technologies pose for social work while also fostering transparency and ethical application of generative AI tools. We view these recommendations as a foundation that will require ongoing review and modi /uniFB01 cation to keep pace with the rapidly evolving technological landscape and to address unforeseen issues that are likely to arise during this progression.
 
@@ -140,6 +173,10 @@ Researchers should /uniFB01 rst understand how AI tools are constructed, includi
 ## Ethics and Bias
 
 Ethical considerations should be at the forefront of any integration of generative AI technologies. Researchers must be mindful of the potential biases in generative AI algorithms and their training data and work to minimize them to ensure nondiscriminatory outcomes and reporting. They should also consider the implications and impact of
+
+
+<!-- PAGE 10 -->
+
 
 AI-facilitated research -including potential harm to individuals, communities, or the environment -and strive to maximize the bene /uniFB01 ts while minimizing any negative consequences.
 
@@ -159,6 +196,10 @@ As AI technologies evolve rapidly, researchers should engage in ongoing learning
 
 AI technologies can be employed in designing and conducting research and preparing manuscripts for publication. Researchers must actively participate in every stage of the research process, ensuring that their expertise, professional judgment, and ethical considerations guide their work. AI technologies should enhance human intelligence and creativity, facilitating more effective and ef /uniFB01 cient research without replacing the researcher ' s role in shaping research questions, evaluating evidence quality, drafting scienti /uniFB01 c communications, or drawing meaningful conclusions. Researchers must therefore exercise due diligence when using AI technologies, thoroughly reviewing, validating, and assuming responsibility for the information generated by these tools.
 
+
+<!-- PAGE 11 -->
+
+
 ## Large Language Models in Planning and Writing
 
 Researchers using LLMs for research planning or manuscript preparation should describe how they employed AI tools. This description should outline tasks the AI assisted with, such as idea generation, literature reviews, language translation, and manuscript editing. The description should include the names and version numbers of the tools used. Authors should also include a statement con /uniFB01 rming they have carefully reviewed the AI-informed content and fully assume responsibility for its accuracy and validity. This description can be integrated into the text body or included in an acknowledgment section for articles without a scienti /uniFB01 c format (e.g., editorials, commentaries, theoretical papers). For articles with a scienti /uniFB01 c format, the description should be included in the Methods section, along with additional details for data analysis and interpretation. We encourage researchers to align their descriptions of generative AI use with the roles established by the National Information Standards Organization (2023) in their Contributor Role Taxonomy (i.e., CRediT).
@@ -172,6 +213,10 @@ Researchers should con /uniFB01 rm compliance with ethical standards, including 
 ## Recommended Responsibilities of Editors and Reviewers
 
 Editors and reviewers hold signi /uniFB01 cant responsibilities regarding the use of generative AI and LLMs in social work research, as their roles are essential in maintaining the quality, integrity, and ethical standards of scholarly publications. With the increasing prevalence of generative AI technologies, including LLMs, in various research
+
+
+<!-- PAGE 12 -->
+
 
 disciplines, editors and reviewers for social work journals must help ensure responsible and transparent use. As a result, we propose the following guidelines to establish safeguards and maintain high-quality research.
 
@@ -194,6 +239,10 @@ To conduct a fair and rigorous peer-review process, editors and reviewers must b
 ## Conclusion
 
 Theadvent of generative AI and LLMs presents both opportunities and challenges for social work research. These cutting-edge technologies hold the potential to enhance the analytical capabilities and ef /uniFB01 ciency of researchers, providing novel insights and enhancing dissemination capacity. However, as social work embraces these new tools, we must remain vigilant about the potential ethical implications, biases, and
+
+
+<!-- PAGE 13 -->
+
 
 risk of generating misinformation. Journal editors and reviewers must be proactive in implementing quality control measures that ensure the rigorous evaluation of studies using LLMs while also fostering a culture of transparency and accountability within the research community. We hope the recommendations offered here will be a useful starting point for ongoing conversations about the role of generative AI in social work research. By collaboratively navigating this complex terrain and adapting our standards as needed, we can harness the transformative power of generative AI to advance social work research and ultimately enhance the well-being of the individuals, families, and communities we serve.
 
@@ -218,6 +267,10 @@ We acknowledge the use of ChatGPT-4 (Version March 2023) in the conceptualizatio
 - Committee on Publication Ethics (COPE). (2023). Authorship and AI tools . https://publication ethics.org/cope-position-statements/ai-author
 - Danneels, E. (2004). Disruptive technology reconsidered: A critique and research agenda. Journal of Product Innovation Management , 21 (4), 246 -258. https://doi.org/10.1111/j.0737-6782.2004 .00076.x
 
+
+<!-- PAGE 14 -->
+
+
 - Duracinsky, M., Lalanne, C., Rous, L., Dara, A. F., Baudoin, L., Pellet, C., Descamps, A., Péretz, F., &amp; Chassany, O. (2017). Barriers to publishing in biomedical journals perceived by a sample of French researchers: Results of the DIAzePAM study. BMC Medical Research Methodology , 17 , Article 96. https://doi.org/10.1186/s12874-017-0371-z
 - Elsevier. (2023). Publishing ethics . https://www.elsevier.com/about/policies/publishing-ethics
 - Felten, E., Raj, M., &amp; Seamans, R. (2023). How will language modelers like ChatGPT affect occupations and industries? [Working paper]. https://arxiv.org/abs/2303.01157
@@ -237,6 +290,10 @@ We acknowledge the use of ChatGPT-4 (Version March 2023) in the conceptualizatio
 - Science. (2023). Science journals: Editorial policies . https://www.science.org/content/page/science -journals-editorial-policies
 - Scite Inc. [Computer software]. (2023). Retrieved on April 25, 2023, from https://scite.ai Semantic Scholar [Computer software]. (n.d.). Retrieved on April 25, 2023, from https:// semanticscholar.org
 - Singer, J. B., Báez, J. C., &amp; Rios, J. A. (2023). AI creates the message: Integrating AI language learning models into social work education and practice. Journal of Social Work Education , 59 (2), 294 -302. https://doi.org/10.1080/10437797.2023.2189878
+
+
+<!-- PAGE 15 -->
+
 
 - Thorp, H. H. (2023). ChatGPT is fun, but not an author. Science , 379 (6630), 313. https://doi.org /10.1126/science.adg7879
 - Victor, B. G., Kubiak, S., Angell, B., &amp; Perron, B. E. (2023). Time to move beyond the ASWB licensing exams: Can generative arti /uniFB01 cial intelligence offer a way forward for social work? Research on Social Work Practice , 33 (5), 511 -517. https://doi.org/10.1177/10497315231166125

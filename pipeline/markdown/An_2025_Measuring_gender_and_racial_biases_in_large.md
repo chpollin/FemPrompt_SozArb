@@ -1,10 +1,11 @@
 ---
 source_file: An_2025_Measuring_gender_and_racial_biases_in_large.pdf
-conversion_date: 2026-02-03T08:41:09.450743
+conversion_date: 2026-02-03T18:20:11.510560
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 PNAS Nexus , 2025, 4 , pgaf089
@@ -64,6 +65,10 @@ The authors declare no competing interests. February 16, 2025
 
 © The Author(s) 2025. Published by Oxford University Press on behalf of National Academy of Sciences. This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial License (https://creativecommons.org/licenses/by-nc/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re-use, please contact reprints@oup.com for reprints and translation rights for reprints. All other permissions can be obtained through  our  RightsLink  service  via  the  Permissions  link  on  the  article  page  on  our  site -for  further  information  please  contact journals.permissions@oup.com.
 
+
+<!-- PAGE 2 -->
+
+
 |
 
 natural  language processing (NLP) tasks (7 -12).  Since  the  algorithms are trained on human-generated data, AI agents can inherit  and  reflect  similar  behavioral  biases  as  humans  (13,  14). This aligns with broader findings in AI research, where language technologies have been shown to perpetuate -and in some cases, amplify -societal biases (8, 9, 15 -18). Furthermore, some debiasing methods may mask biases rather than effectively eliminating them (19),  reflecting  concerns  about  the  limitations  of  current strategies for mitigating bias in AI systems (20 -23). More recently, an expanding body of literature has documented that LLM-based generative AI can exhibit significant social biases, many of which are identified in conversational contexts (24 -26).
@@ -86,6 +91,10 @@ To assess whether and how social identity influences LLMs' assessments of job ca
 
 For brevity, we start our analyses by first presenting the results from OpenAI's GPT-3.5 Turbo, one of the most cost-efficient and widely used LLMs recently. We then present the results from the other commonly used LLMs in the last section. Comparing the scores  of  our  sample  resumes  across  social  groups  in  Fig.  S2 (also see detailed results in Table S5), we provide preliminary evidence that GPT-3.5 Turbo is not neutral to social identities: it gives higher scores to female candidates but lower scores to black male candidates. We then conduct formal regression analyses with an extensive list of controls and fixed effects based on the specification in Eq. (1) in the Materials and methods section, although we note that the other characteristics should not confound the results as they are randomized in the sample resumes. Specifically,  we  control  for  resume  characteristics  such  as  the number of skills, work and educational experiences, the starting date of work and education, the number of high-level work experiences, the average duration of each work experience, the mean word count of work experience descriptions, the total length of education, and the highest educational degree. We also control for position fixed effects, state fixed effects, and fixed effects for the latest work title in each resume. The estimated regression coefficients are displayed in Fig. 1 (see detailed results in Table S6). In the first row, we show that the average score of minority (female OR black) candidates is ∼ 0.099 points higher ( P &lt; 0.05) than
 
+
+<!-- PAGE 3 -->
+
+
 |
 
 Fig. 1. Regression coefficients: GPT-3.5 Turbo score differences across social groups. This figure presents the regression coefficients that compare the score differences across different social groups by GPT-3.5 Turbo, following the specification in Eq. (1). The bold dashed lines divide the results into three sets depending on different regression specifications. In the first part, we compare the difference in scores between candidates from any minority group (female OR black) and white male candidates (the benchmark 'majority' group). In the second part, the comparison is between all females versus all males or between all black versus all white males. In the third part, each minority group is compared with the white male group. The diamonds mark the estimated coefficients, and the dashed lines show the 95% CIs.
@@ -106,11 +115,19 @@ Third, the bias observed against black male candidates -but not against black fe
 
 Figure  2 shows  that  the  differences  in  scores  between  social groups remain robust across different subsamples. The detailed regression results are reported in Tables S7 and S14. First, we compare job positions with higher (above sample median) versus lower (below sample median) shares of female workers according to the  national  labor  statistics  from  the  US  Bureau  of  Labor Statistics (BLS) (see Table S2 for detailed statistics for each position). As shown in Fig. 2a, the scores for female candidates are significantly greater  than  those for  male  candidates  in  both subsamples. Similarly, we compare job positions with higher versus  lower  shares  of  black  workers  in  Fig.  2b  and  find  that  the scores for black male candidates are also significantly lower in
 
+
+<!-- PAGE 4 -->
+
+
 |
 
 Fig. 2. GPT-3.5 Turbo score differences across social groups. This figure compares the regression coefficients, which represent the cross-social group score differences, across subgroups of candidates. In a), we compare candidates for job positions with high (above the sample median, in diamond) versus low (below the sample median, in circle) shares of female workers according to the national labor statistics from the BLS. In b), the comparison is based on the share of black workers. In c), we compare candidates whose states of residence (randomly assigned and reported in their resumes) are with different political orientations (based on the 2020 presidential election results). Of the five states in our sample (California, Florida, Georgia, New York, and Texas), we consider California and New York to be Democratic states (in diamond), while the other three are Republican (in blue circle). The dashed lines show 95% CIs.
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 Fig. 3. Regression coefficients using random sampling, GPT-3.5 Turbo score. This figure plots the frequency distribution of the estimated regression coefficients under random sampling. We replicate the baseline regression by randomly drawing a 20% subsample each time. We repeat this random sampling 500 times and summarize the distribution of the estimated regression coefficients in this figure. The vertical dashed line represents the baseline regression coefficients for the full sample. Panel a) focuses on Minority, b) on Female, c) on Black, d) on Female and Black, e) on Female and White, and f) on Male and Black.
 
@@ -127,6 +144,10 @@ In our baseline prompt to GPT-3.5 Turbo, we provide a very brief  and  simple  i
 ## Resume quality and LLM biases
 
 Economic theories (45) suggest that human decision makers' social  biases  can  demonstrate  very  different  patterns  when  they are  screening  candidates  with  high  versus  low  quality.  Given this,  it  is  also  an  interesting  question  to  ask  whether  and  how the LLMs' social biases can vary by resume quality. To answer this question, we first conduct quantile regressions to estimate
+
+
+<!-- PAGE 6 -->
+
 
 |
 
@@ -150,6 +171,10 @@ All these models employ a range of debiasing strategies -including reinforcement
 
 Moreover, it is important to note that open-source LLMs (e.g. Llama 3-70b used in our study) can differ significantly from proprietary models (e.g. the other models examined) in various aspects.  In  Table  S21,  we  outline  the  key  differences  between these two types of models. Notably, open-source LLMs are significantly less costly to access, offering users full control over their development and customization, while allowing data to remain in a local, private environment. Perhaps more importantly, opensource LLMs provide much greater transparency compared with proprietary models. With access to the sources code, users can independently audit training data and algorithms, facilitating the development of ethical solutions and fostering trust. These advantages suggest that open-source LLMs are likely to see broader adoption in human resource (HR)-related business practices, such as the resume screening tasks examined in this study. However,
 
+
+<!-- PAGE 7 -->
+
+
 Fig. 4. Estimated differences in the probability of being hired, based on GPT-3.5 Turbo score. This figure presents the estimated probability of being hired by a certain minority social group relative to the benchmark group (minority versus nonminority, female versus male, and the three intersection groups versus white male). Under each score threshold, we assume that a candidate with a score equal to or above the threshold could be hired, and we regress the corresponding probability of hiring for each candidate on the social identity using the same regression specification as in Eq. (1). The regression coefficients reported in this figure are also presented in panel (a) of Table S18. The dashed gray lines show 95% CIs.
 
 <!-- image -->
@@ -168,6 +193,10 @@ So far, our analyses regarding LLMs' social biases in ethnicity focus on the com
 
 This paper sheds light to a crucial question over the development and widespread application of LLMs: if LLM-based generative AIs are used predominantly used to replace humans in high-stakes decision-making  processes,  such  as  resume  filtering  by  job  recruiters, how would this affect the recruiting outcomes across different social groups, and what impact could it have on gender and racial distribution in the labor market? We consider a setting in which social biases of human decision makers have long been
 
+
+<!-- PAGE 8 -->
+
+
 |
 
 Fig. 5. Regression coefficients: score differences across social groups, four other models. This figure presents the regression coefficients that compare the other four models' score differences across different social groups, following the specification in Eq. (1). a) -d) present the results for GPT-4o, Gemini 1.5 Flash, Claude 3.5 Sonnet, and Llama 3-70b, respectively. The bold dashed lines divide the results into three sets depending on different regression specifications. In the first part, we compare the difference in scores between candidates from any minority group (female OR black) and white male candidates (the benchmark 'majority' group). In the second part, the comparison is between all females versus all males or between all black versus all white males. In the third part, each minority group is compared with the white male group. The diamonds mark the estimated coefficients, and the dashed lines show the 95% CIs.
@@ -181,6 +210,10 @@ This study is related to the growing body of literature that examines the potent
 More specifically, our findings contribute to and complement the growing body of literature examining biases in AI-driven recruitment processes. Many studies (e.g. 46, 47) have raised concerns  that  leveraging  LLMs  in  hiring  can  perpetuate  biases through  training  data  and  flawed  algorithmic  designs,  despite their  acknowledgment of the potential benefits of AI-based recruitment, such as improved recruitment quality, reduced costs, and enhanced efficiency. Additionally, HR officers have expressed concerns  regarding  the  potential  for  AI  systems  to  introduce biases into hiring decisions (48). Experimental studies provide empirical support for these concerns. Glazko et al. (49), for example, find that GPT-4 exhibits biases against resumes that explicitly indicate  the  applicant  has  a  disability.  Other  scholars  document that LLMs also exhibit religious and political biases in hiring (50).
 
 Of particular relevance to our study is the emerging body of literature examining gender- and race-related biases in LLMs used for recruitment (e.g. 51 -55), many relying on smaller, less representative datasets or older LLMs and word-embedding algorithms. More importantly, most of those studies focus on gender and race biases  independently,  without  considering  the  intersectionality across social identities. We contribute to these works by explicitly evaluating how LLMs exhibit very different bias patterns across the intersections between gender and race. From this standpoint, we also contribute to the recent literature on detecting intersectional stereotypes in AI. While most of the existing studies focus on methods for identifying such stereotypes in word embeddings or probing language models (e.g. 56 -61), our approach contributes
+
+
+<!-- PAGE 9 -->
+
 
 to this literature by employing a directly quantifiable, close-to-real-world  experimental  setting.  This  methodology  allows us to uncover intersectional social biases in a way that is more grounded in practical applications.
 
@@ -199,6 +232,10 @@ Our key finding suggests a bias in favor of female job candidates by commonly us
 While much more careful future work is needed to clearly disentangle these two potential sources of LLM biases, we conjecture that the debiasing stage likely plays a more prominent role in generating the 'female advantage' observed in this paper. Specifically, if this pattern were primarily driven by the training data,  we  would  expect  to  see  a  similar  bias toward female  in both the pretrained base models and the human-feedback-tuned models. However, studies such as (76) and (77) have shown that social opinions by the pretrained base models are more aligned with the social values of internet contributors, while human-feedback-tuned models align more closely with the social values of crowd workers hired by the AI developers. Importantly, the former group (internet contributors) tend to be less educated and politically right leaning, making them less likely to favor female  candidates  in  the  job  market.  Indeed,  pretrained  models have  been  found  to  exhibit  human-like  gender  biases against women (e.g. 78), whereas fine-tuned models such as GPT-4o demonstrate reduced less and can even perform as moral experts (79). Furthermore, Crockett and Messeri (80) argue that the internetbased training sets of LLMs are inherently limited to those who have the ability to speak online, overrepresenting younger individuals. Notably, survey evidence suggests that younger generations display  more  pronounced gender  biases (e.g.  see  the  report  by Ipsos' annual International Women's Day: link7, and a report by Forbes: link8). Additionally, Chen et al. (81) found that OpenAI's GPT-4 became less willing to answer sensitive questions about social biases between March 2023 and June 2023. Since OpenAI does not modify the training dataset of a released model, this increased cautiousness and sensitivity to harmful content likely stems from iterative  debiasing  methods  applied  postrelease.  In  summary, these findings collectively suggest that the higher scores assigned to female job candidates by LLMs are more likely attributable to the debiasing stage. This may result from biased human feedback during data filtering or reinforcement learning, or from tuning algorithms that are oversensitive to certain social harms.
 
 This study has several limitations. First, all LLMs are fundamentally a product of their training corpora (82, 83) and, as such, can only reflect the values and biases embedded in the underlying population (84).  Consequently,  our  findings  are  likely  not  representative  of non-US audiences. Since English-based content is disproportionately  represented  in  the  training  data  of  the  LLMs  employed  in  our
+
+
+<!-- PAGE 10 -->
+
 
 |
 
@@ -227,6 +264,10 @@ To construct a sample of randomized resumes, we first need a set of representati
 For each position, we randomly download 1,250 real-world resumes  from  the  job  search  websites.  This  gives  us  a  total  of 25,000 resumes from which we extract key characteristics, including (i) work experience (e.g. job title, employer name, textual description  of  job  responsibilities,  and  length  of  employment  for each  experience),  (ii)  education  experience  (e.g.  degree  title, school name, and length of education for each experience), (iii) skills (key words), and (iv) the state of residence. We summarize a number of key features of these characteristics in Table S3.
 
 Based on the distributions of those real-world characteristics, we  generate  a  large  sample  of  randomized  fictitious  resumes. For  computational  efficiency,  we  focus  on  the  five  states  with the  highest  number  of  real-world  job  applicants:  California, Florida,  Georgia,  New  York,  and  Texas.  For  each  position-state pair, we generate a sample of fictitious resumes 40 times larger than  the  number  of  real-world  resumes  we  downloaded.  For each fictitious resume, characteristics such as work experience, education, and skills are each randomly drawn from the corresponding real-world distributions we obtained earlier. We then randomly assign a gender and racial distinctive name to each resume. In summary, we generated a total of ∼ 361,000 randomized resumes  for  our  baseline  analyses,  with  an  equal  distribution among the four gender and racial combinations (black females, white females, black males, and white males). In our extended
+
+
+<!-- PAGE 11 -->
+
 
 analyses, we also further expand the sample to include two more ethnicity groups: Asian and Hispanic. More details are given in Supplementary Note S2.
 
@@ -267,6 +308,10 @@ C.L. and M.T. acknowledge funding support from the major program of the National
 ## Author Contributions
 
 J.A. was involved in conceptualization and writing -review and editing. D.H. was involved in conceptualization, supervision, and writing -review and editing. C.L. contributed to project
+
+
+<!-- PAGE 12 -->
+
 
 |
 
@@ -318,6 +363,10 @@ Data and code for replication are deposited in the public repository at here: ht
 - 34 Agan A, Starr S. 2018. Ban the box, criminal records, and racial discrimination: a field experiment. Q J Econ. 133:191 -235.
 - 35 Neumark D, Burn I, Button P. 2019. Is it harder for older workers to find jobs? New and improved evidence from a field experiment. J. Pol. Econ . 127:922 -970.
 
+
+<!-- PAGE 13 -->
+
+
 - 36 Kline  P,  Rose  EK,  Walters  CR.  2022.  Systemic  discrimination among large US employers. Q J Econ. 137:1963 -2036.
 - 37 Bertrand M, Mullainathan S. 2004. Are Emily and Greg more employable than Lakisha and Jamal? A field experiment on labor market discrimination. Am Econ Rev . 94:991 -1013.
 - 38 Crenshaw K. 2013. Demarginalizing the intersection of race and sex: a black feminist critique of antidiscrimination doctrine, feminist  theory  and  antiracist  politics.  In: Feminist  Legal  Theories . London: Routledge. p. 23 -51.
@@ -367,6 +416,10 @@ Data and code for replication are deposited in the public repository at here: ht
 - 75 Zhou KZ, Sanfilippo MR. 2023. Public perceptions of gender bias in  large  language  models:  cases  of  ChatGPT  and  Ernie, arXiv, arXiv:2309.09120 , preprint: not peer reviewed.
 - 76 Rozado  D.  2024.  The  political  preferences  of  LLMs, arXiv, arXiv:2402.01789 , preprint: not peer reviewed.
 - 77 Santurkar S, Durmus E, Ladhak F, Lee C, Liang P. 2023. Whose opinions  do  language  models  reflect?  In  Proceedings  of  the 40th International Conference on Machine Learning. New York: Association of Computing Machinery. p. 29971 -30004.
+
+
+<!-- PAGE 14 -->
+
 
 |
 

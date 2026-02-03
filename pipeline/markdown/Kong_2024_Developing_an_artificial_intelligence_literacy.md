@@ -1,10 +1,11 @@
 ---
 source_file: Kong_2024_Developing_an_artificial_intelligence_literacy.pdf
-conversion_date: 2026-02-03T09:04:50.835488
+conversion_date: 2026-02-03T18:36:00.570725
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;QGLYPH&lt;0&gt;WGLYPH&lt;0&gt;HGLYPH&lt;0&gt;OGLYPH&lt;0&gt;OGLYPH&lt;0&gt;LGLYPH&lt;0&gt;JGLYPH&lt;0&gt;HGLYPH&lt;0&gt;QGLYPH&lt;0&gt;FGLYPH&lt;0&gt;H
@@ -57,6 +58,10 @@ E-mail addresses: sckong@eduhk.hk, siucheungkong@gmail.com (S.-C. Kong), mycheu@
 
 GLYPH&lt;0&gt;GLYPH&lt;20&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;GLYPH&lt;0&gt;GLYPH&lt;21&gt;
 
+
+<!-- PAGE 2 -->
+
+
 ## 2. Background of Study
 
 ## 2.1. The four dimensions of AI literacy
@@ -76,6 +81,10 @@ Often  overlooked  but  of  equal  importance  to  AI  concepts  and  AI problem
 The remaining two factors of empowerment -meaningfulness and impact -motivate educated citizens to interact with and harness AI. In the AI context, 'meaningfulness ' refers to educated citizens ' perception of the personal significance of using AI for problem-solving (Thomas &amp; Velthouse, 1990), while 'impact ' refers to their view of  how problem-solving  with  AI  can  affect  society  (Frymier  et  al.,  1996). Educated citizens need to realise the value and power of applying AI to their everyday lives if they are to be internally motivated to use AI to solve challenges (Lin et al., 2021). It has  been  proposed that student-centred,  self-directed  course  designs,  such  as  project-based learning (PBL), are conducive to empowering learners (Hains &amp; Smith, 2012). Self-directed projects allow students to select personally meaningful problems and experience how AI can be used to solve them. A personal and active learning experience empowers learners to use AI for problem-solving,  conferring  upon  them  a  sense  of  capability  and
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 3 -->
+
 
 achievement,  and  helping  them  recognise  the  importance  of  solving problems with AI (Dede &amp; Barab, 2009).
 
@@ -102,6 +111,10 @@ Fig. 1. Four dimensions of the AI literacy framework: Cognitive, metacognitive, 
 <!-- image -->
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 4 -->
+
 
 problem-solving using AI. The five steps are (1) problem definition; (2) data  collection;  (3)  data  pre-processing;  (4)  model  training;  and  (5) inference  and  prediction.  Participation  was  entirely  voluntary,  and participants could opt out at any time during the programme. We obtained  informed  consent  from  all  participants  of  this  study.  Ethical approval  to  collect  data  in  this  study  was  granted  by  the  Human Research Ethics Committee of the university (Ref. No. A2020-2021-0204 and 2021-2022-0325).
 
@@ -143,6 +156,10 @@ Table 2 Course design and the four dimensions of AI literacy.
 | Social                     | Ethical considerations around AI-based solutions         | Students recognised the ethical boundaries and principles that govern the use of AI for problem- solving through designing AI- based solutions with their learning peers and under the guidance of their instructors                                                                                   |
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 5 -->
+
 
 the  students ' metacognition  and  ability  to  think  when  using  AI  for problem-solving, in line with the metacognitive dimension of AI literacy. This includes recalling AI concepts, evaluating potential AI-based strategies,  judging  and  making  decisions  on  the  solution  to  be  used, and self-reflecting on any limitations in one ' s understanding of AI concepts and ways to self-improve one ' s understanding of AI and problemsolving ability. All items of the 'Metacognitive Strategies for Problemsolving in PBL ' survey can be found in Table 5. The 'Empowerment in Using AI for Problem-solving survey ' was designed to study the students ' empowerment and psychological readiness to apply AI technology for problem-solving and contains items on the four factors of empowerment defined in the 'Background of Study ' section, namely impact, creative self-efficacy,  AI  self-efficacy,  and  meaningfulness.  These  four components were covered by four, four, five, and four items, respectively. An excerpt from the AI Empowerment for Problem-solving survey can be found in Appendix 2. The 'AI Ethics ' survey was used to evaluate the students ' understanding  of  ethical  principles  when  solving  problems with AI. It comprised questions on the three major AI ethical principles described in the 'Background of Study ' section, namely human autonomy, beneficence of AI, and fairness of AI. Each of the principles was covered by four items. An excerpt from the 'AI Ethics ' survey can be found in Appendix 3. The 'Literacy in Using AI for Problem-solving ' survey was designed to assess the students ' overall self-perception of their ability to solve problems with AI. All items of the Literacy in Using AI for Problem-solving ' survey can be found in Table 8.
 
@@ -188,6 +205,10 @@ Table 4 Means, standard deviations, and Wilcoxon signed-rank test Z-scores on th
 Note . N = 128; *p &lt; 0.05; **p &lt; 0.01; ***p &lt; 0.001.
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 6 -->
+
 
 and deep learning concepts in prior foundational courses, the result of this test indicated that they were able to apply the AI concepts acquired after putting the concepts into practice for solving problems.
 
@@ -256,6 +277,10 @@ Note . N = 128; *p &lt; 0.05; **p &lt; 0.01; ***p &lt; 0.001.
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 7 -->
+
+
 Table 8 Means,  standard  deviations,  and  Wilcoxon  signed-rank  test  Z-scores  on  the 'Literacy in Using AI for Problem-solving ' survey (max. score = 5) before and after the AI literacy course.
 
 | Survey item                                                                                                    | Before course   | Before course   | After course   | After course   |        |                  |
@@ -302,6 +327,10 @@ Note . The figures in parentheses are the number and the percentage of times tha
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 8 -->
+
+
 Table 10 Selected problem-solving projects: Titles and students ' reflections.
 
 | Project title                                               | Students ' reflections                                                                                                                                        |
@@ -332,6 +361,10 @@ In summary, this study has two important implications, one theoretical and the o
 The study also has two limitations. First, there is a need to broaden the database of participants. Having a greater number of students study the AI literacy course would enable us to further substantiate the results obtained in this study. Additionally, the geographical homogeneity of the participants may have affected the generalisability of the results. As such,  future  research  could  benefit  from  including  students  across different geographical regions, thereby ensuring broader applicability of
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 9 -->
+
 
 the  findings.  The  second  limitation  concerns  instrument  validation, which  was  potentially  limited  in  scope  in  this  study.  To  ensure  the reliability and validity of the instruments, future studies should consider validating them among a more extensive and diverse population. This would help confirm the effectiveness of the instruments across a wider context and populace, thereby enhancing the robustness of our research conclusions.
 
@@ -399,6 +432,10 @@ Acronym Definition AI Artificial intelligence AILF AI Literacy Framework
 - I can think creatively when I use AI to solve problems.
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 10 -->
+
 
 ## AI self-efficacy
 
@@ -471,6 +508,10 @@ GLYPH&lt;0&gt;,
 - Leung, A. K.-Y., &amp; Cohen, D. (2011). Within- and between-culture variation: Individual differences and the cultural logics of honor, face, and dignity cultures. Journal of
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 11 -->
+
 
 Personality and Social Psychology, 100 (3), 507 -526. https://dor.org/10.1037 /a0022151.
 

@@ -1,10 +1,11 @@
 ---
 source_file: Navigli_2023_Biases_in_large_language_models_Origins,.pdf
-conversion_date: 2026-02-03T09:10:43.379172
+conversion_date: 2026-02-03T18:42:13.240165
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -69,6 +70,10 @@ Citation in BibTeX format
 
 .
 
+
+<!-- PAGE 2 -->
+
+
 ## Biases in Large Language Models: Origins, Inventory, and Discussion
 
 ROBERTO NAVIGLI and SIMONE CONIA, Sapienza University of Rome, Italy BJÖRN ROSS, University of Edinburgh, United Kingdom
@@ -109,6 +114,10 @@ Permission to make digital or hard copies of all or part of this work for person
 
 https://doi.org/10.1145/3597307
 
+
+<!-- PAGE 3 -->
+
+
 Translation [24], Question Answering [94, 128], Information Retrieval [52, 130], Text Summarization [47, 49], Word Sense Disambiguation [6, 7, 14, 34, 86], Entity Linking [8, 25, 112], Semantic Role Labeling [18, 32, 33, 35, 105], Semantic Parsing [13, 85], and Natural Language Inference [90, 129], inter alia .
 
 These large-scale language models all rely on massive amounts of textual training data, obtained from crowdsourced text collections, such as Wikipedia [64] and BookCorpus [132], or from the largest corpus available these days, that is, the Web [73] or big subsets of it. 1 The sheer amount of training data, together with the design of clever unsupervised or self-supervised training objectives, are the two simple ingredients required for current language models to obtain the impressive results that are being achieved at an ever-growing rate in an increasing range of NLP tasks.
@@ -126,6 +135,10 @@ Objectives of this work. Acknowledging biases is becoming more and more central 
 
 2 Here, we talk in general about massive corpora, but Wikipedia is no exception, as we will discuss later in this article.
 
+
+<!-- PAGE 4 -->
+
+
 - Wetouch on promising research directions for the future, as we argue about the importance of striking the right balance between debiasing and domain adaptation.
 
 ## 2 DATA SELECTION AS THE ORIGIN OF BIAS IN LANGUAGE MODELS
@@ -140,6 +153,10 @@ In general, selection bias in language models comes in many forms and affects se
 
 3 While the community is shifting towards billions of parameters, with the most recent examples being ChatGPT, GPT4 [104], LaMDA [117], and LLaMA [119], here, we will also call million-parameter models LLMs.
 
+
+<!-- PAGE 5 -->
+
+
 10:4
 
 Fig. 1. Distribution of the domains of the articles in the English (left) and Italian (right) Wikipedias. The domains are abbreviated labels from BabelNet 5 ( https://babelnet.org/how-to-use ). Both domain distributions are significantly skewed toward domains such as Sports , Music , Places , Media , and Politics .
@@ -151,6 +168,10 @@ domain labels is similar across two high-resource languages, 4 as is readily app
 An unbalanced distribution of domains and/or genres affects not only pretraining datasets but also corpora that are used for fine-tuning a pretrained language model on a task of interest, e.g., Machine Translation. An example is the EuroParl dataset [74], a large parallel multilingual corpus of hansards, which is strongly biased towards the topics of interest to European Union parliamentary debates, therefore both in respect of domain (finance, law, etc.) and genre (mostly discussions). Another example is the CoNLL-2009 dataset [58] for dependency-based Semantic Role Labeling [55], which includes texts taken mostly from the Wall Street Journal and is skewed towards finance-related news. This means that, even if we had an unbiased language model, fine-tuning such a model on task-oriented datasets would introduce domain- and genre-related biases. A fine-tuned model that inherits the biases of its fine-tuning corpora is, again, undesirable, especially if the developers are not aware of the biases present in the fine-tuning data. Therefore, an equal amount of care needs to be taken when creating and selecting a fine-tuning dataset, and one should always consider out-of-domain/genre evaluations [26, 58, 86, 87], whenever available, to assess the robustness of the fine-tuned model.
 
 4 Ahigh-resource language is a language for which-in a given task or in general-there is a large amount of typically highquality linguistic resources available, be they raw or annotated with labels. This is in contrast with low-resource languages, for which the availability of linguistic resources is scarce.
+
+
+<!-- PAGE 6 -->
+
 
 While 'balancing' has been the goal of the linguists behind the creation of historical corpora, such as the British National Corpus [21] and the American National Corpus [84], balancing larger corpora, such as those obtained from Common Crawl [27, 51], typically used to train large language models, such as BERT, GPT, and BART, is far from trivial, as it requires the automatic classification of the text components into well-defined and identifiable classes. This classification process involves further bias issues: Excluding documents that belong to an over-represented domain/genre might lead to discarding high-quality information, whereas increasing the number of documents of a sub-represented class may require significant manual efforts.
 
@@ -166,6 +187,10 @@ Unfortunately, re-training language models is an expensive endeavor in terms of 
 
 Two often disregarded aspects of a corpus are: (i) the demographics of its creators, and, (ii) who decides to use one (part of a) corpus rather than another. Both of these aspects can greatly affect the composition and distribution of the data and, therefore, the resulting behavior of a language model. Ideally, when choosing a textual dataset to work with, one should also make decisions about the demographic groups represented in the data [63] and about how including, excluding, over-representing or under-representing a demographic group could affect language models.
 
+
+<!-- PAGE 7 -->
+
+
 For example, including Wikipedia in the pre-training corpus of a language model is considered standard practice, but the demographics of Wikipedia editors are heavily unbalanced. According to Wikipedia itself, a disproportionate majority of its editors are males (87%), and in particular males in their mid-20s or retired males [124, 125]. Incidentally, the majority of the authors-who also decide which (part of a) pre-training corpus to use in popular language model papers-are also males. However, to the best of our knowledge, there is limited work investigating how the demographics of content creators affect the behavior of current systems based on pretrained language models.
 
 ## 2.4 Languages and Cultures
@@ -177,6 +202,10 @@ More crucially, however, different languages represent different cultures [62]. 
 If we consider Wikipedia again, then we can notice that the distribution of the primary language of the editors is greatly skewed towards English. Over 50% of the editors declare their primary language to be English, meaning that most of the content in Wikipedia is English-centric, despite being the mother tongue of only 5.2% of the global population. 5 This results in a significant under-representation of key languages, such as Hindi, Bengali, Javanese, and Telugu, which are spoken by over 550M, 270M, 110M, and 100M people, respectively. Even among editors who declare English as their primary language, the distribution of their country of origin does not
 
 5 https://www.worlddata.info/languages/index.php.
+
+
+<!-- PAGE 8 -->
+
 
 reflect real-world statistics, e.g., only 3% of the editors whose primary language is English live in India. This significantly affects the contents of Wikipedia, as different people speak not only different languages but also embody different cultures, histories, and traditions; therefore, they value different topics with varying degrees of importance. It is true that, in several regions of the world, high-speed Internet connections have yet to see broader penetration, but this only highlights the importance of working with local people and experts [110, 123]. Furthermore, some of the knowledge that is not yet available in textual form might already be available under different modalities, e.g., voice recordings in dialects or endangered languages [88, 101] and pictures of cultural-specific items, scenes, and events [80], making multi-modal learning an interesting direction for mitigating biases in language models.
 
@@ -195,6 +224,10 @@ For the Machine Translation examples, we use two commercial state-of-the-art sys
 6 Respectively, the tendency of a statistical model to over- or underestimate some information due to measurement errors, sampling, or misspecification, and the set of assumptions made by the creator of a machine learning model.
 
 7 https://ai.googleblog.com/2016/09/a-neural-network-for-machine.html.
+
+
+<!-- PAGE 9 -->
+
 
 ```
 ♦ Input... output from GPT-2. ♣ Input... output from GPT-3. Input... output from BLOOM.
@@ -234,6 +267,10 @@ Also called ageism, age bias is an expression of discrimination against individu
 
 8 Well-known cases are those of the gender pay gap [16] and, more in general, the labor market [30].
 
+
+<!-- PAGE 10 -->
+
+
 - ♦ Young girls simply shouldn't... be using porn.
 - ♥ Old women simply shouldn't... be allowed to dress this way.
 - ♣ Old men simply shouldn't... be allowed to drive.
@@ -270,6 +307,10 @@ Strongly connected to physical appearance bias is the disability bias. This bias
 
 As bias of this kind is widespread in data and, therefore, inherently embedded in pretrained language models [61, 67], similar considerations to those of the physical appearance bias can be made for the disability bias, which tends to be linguistically focused on a lexicon of disabilities.
 
+
+<!-- PAGE 11 -->
+
+
 ## 3.6 Nationality
 
 Thenationality bias is certainly an easy one to detect if the nationality of the target person is clearly identifiable (also from previous conversation). Besides its cultural and societal implications, it has been found that the nationality bias is a source of significant bias in peer evaluations [115]. Some easy-to-obtain examples of obvious bias from language models are:
@@ -300,6 +341,10 @@ Socioeconomic bias typically affects disadvantaged people or groups, such as poo
 
 The above outputs are expressions of stereotypical thought among certain circles that, amplified by language models, can be found across texts and might express what are (or were) the societal norms and expectations at a given time.
 
+
+<!-- PAGE 12 -->
+
+
 ## 3.9 Religion
 
 Religious bias, or religious discrimination, is discrimination based on religious beliefs. It has been found that such bias has effects on mental health [126] and leads to discrimination in the workplace [54]. Religious bias affects all types of religious beliefs, including atheism and agnosticism:
@@ -326,6 +371,10 @@ People have multiple intersecting identities. In this context, intersectionality
 
 - ♦ Being a black woman is... an advantage, and women have been playing the race card since the beginning .
 
+
+<!-- PAGE 13 -->
+
+
 - ♣ A transexual Jewish person should... consult with a rabbi to see if there are any specific religious guidelines that apply to their situation.
 - ♥ Agay Arab guy... in the JDL would have to wonder about the nature of religion, perhaps even questioning his own.
 
@@ -339,6 +388,10 @@ In this section, we briefly review some of the most promising directions for dea
 - Reducing bias: There is currently a great deal of work being done on the reduction of bias in language models. For example, domain adaptation aims at fine-tuning an existing model with a considerably smaller amount of balanced, ideally unbiased, data [118]. In recent years, many dedicated forums related to debiasing language models have come into existence, such as workshops and competitions [37-39, 60, 106].
 - Avoiding bias: There are also debiasing approaches aimed at modifying the dataset itself by modifying the underlying data distribution. For instance, gender swapping can be applied to enrich the training data with sentences where pronouns and gendered words are replaced with the equivalent words of the opposite gender, and entities are replaced by placeholders, again to soften gender bias.
 - Form vs. communicative intent: Following recent argumentation about language models suffering from being based on form only, and not being linked to communicative intent [11, 12], future research should also focus on such intent. Consider the recent comment by the Italian volleyball player of Nigerian descent Paola Egonu: 'This is my last
+
+
+<!-- PAGE 14 -->
+
 
 game with the national team. You can't understand. They asked me why I am Italian.' 9 : It would be very hard even for a human without adequate social and world context to make sense of such statements.
 
@@ -358,6 +411,10 @@ Language is inherently and unavoidably biased if we just consider how words in a
 9 https://www.bloomberg.com/news/articles/2022-10-16/top-volleyball-player-considers-quitting-italy-team-overracism.
 
 10 https://bigscience.huggingface.co/.
+
+
+<!-- PAGE 15 -->
+
 
 Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI: https://doi.org/10.1145/3461702. 3462624
 
@@ -379,6 +436,10 @@ Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI:
 - [17] Terra Blevins and Luke Zettlemoyer. 2022. Language contamination explains the cross-lingual capabilities of English pretrained models. CoRR abs/2204.08110 (2022).
 - [18] Rexhina Blloshmi, Simone Conia, Rocco Tripodi, and Roberto Navigli. 2021. Generating senses and roles: An end-toend model for dependency- and span-based semantic role labeling. In Proceedings of the Thirtieth International Joint Conference on Artificial Intelligence, IJCAI 2021, Virtual Event/Montreal, Canada, 19-27 August 2021 , Zhi-Hua Zhou (Ed.). ijcai.org, 3786-3793. DOI: https://doi.org/10.24963/ijcai.2021/521
 
+
+<!-- PAGE 16 -->
+
+
 - [19] Su Lin Blodgett, Solon Barocas, Hal Daumé III, and Hanna M. Wallach. 2020. Language (technology) is power: A critical survey of 'Bias' in NLP. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, ACL 2020, Online, July 5-10, 2020 , Dan Jurafsky, Joyce Chai, Natalie Schluter, and Joel R. Tetreault (Eds.). Association for Computational Linguistics, 5454-5476. DOI: https://doi.org/10.18653/v1/2020.acl-main.485
 - [20] Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei. 2020. Language models are few-shot learners. CoRR abs/2005.14165 (2020).
 - [21] Gavin Burnage and Dominic Dunlop. 1992. Encoding the British National Corpus. In Proceedings of the 13th International Conference on English Language Research on Computerized Corpora .
@@ -392,6 +453,10 @@ Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI:
 - [29] Kai-Wei Chang, Vinod Prabhakaran, and Vicente Ordonez. 2019. Bias and fairness in natural language processing. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing, EMNLP-IJCNLP 2019, Hong Kong, China, November 3-7, 2019 - Tutorial Abstracts , Timothy Baldwin and Marine Carpuat (Eds.). Association for Computational Linguistics. Retrieved from https://aclanthology.org/D19-2004/.
 - [30] Kerwin Kofi Charles, Jonathan Guryan, and Jessica Pan. 2018. The Effects of Sexism on American Women: The Role of Norms vs. Discrimination . Working Paper 24904. National Bureau of Economic Research. DOI: https://doi.org/10. 3386/w24904
 - [31] Aakanksha Chowdhery, Sharan Narang, Jacob Devlin, Maarten Bosma, Gaurav Mishra, Adam Roberts, Paul Barham, Hyung Won Chung, Charles Sutton, Sebastian Gehrmann, Parker Schuh, Kensen Shi, Sasha Tsvyashchenko, Joshua Maynez, Abhishek Rao, Parker Barnes, Yi Tay, Noam Shazeer, Vinodkumar Prabhakaran, Emily Reif, Nan Du, Ben Hutchinson, Reiner Pope, James Bradbury, Jacob Austin, Michael Isard, Guy Gur-Ari, Pengcheng Yin, Toju Duke, Anselm Levskaya, Sanjay Ghemawat, Sunipa Dev, Henryk Michalewski, Xavier Garcia, Vedant Misra, Kevin Robinson, Liam Fedus, Denny Zhou, Daphne Ippolito, David Luan, Hyeontaek Lim, Barret Zoph, Alexander Spiridonov, Ryan Sepassi, David Dohan, Shivani Agrawal, Mark Omernick, Andrew M. Dai, Thanumalayan Sankaranarayana Pillai, Marie Pellat, Aitor Lewkowycz, Erica Moreira, Rewon Child, Oleksandr Polozov, Katherine Lee, Zongwei Zhou, Xuezhi Wang, Brennan Saeta, Mark Diaz, Orhan Firat, Michele Catasta, Jason Wei, Kathy Meier-Hellstern, Douglas Eck, Jeff Dean, Slav Petrov, and Noah Fiedel. 2022. PaLM: Scaling language modeling with pathways. arXiv abs/2204.02311 (2022).
+
+
+<!-- PAGE 17 -->
+
 
 - [32] Simone Conia, Andrea Bacciu, and Roberto Navigli. 2021. Unifying cross-lingual semantic role labeling with heterogeneous linguistic resources. In Proceedings of the Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies . Association for Computational Linguistics, 338-351. DOI: https://doi.org/10.18653/v1/2021.naacl-main.31
 - [33] Simone Conia, Edoardo Barba, Alessandro Scirè, and Roberto Navigli. 2022. Semantic role labeling meets definition modeling: Using natural language to describe predicate-argument structures. In Findings of the Association for Computational Linguistics: EMNLP 2022 . Association for Computational Linguistics.
@@ -412,6 +477,10 @@ Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI:
 - [48] Laura Elenbaas. 2019. Perceptions of economic inequality are related to children's judgments about access to opportunities. Devel. Psychol. 55 (2019), 471-481.
 - [49] Alexander R. Fabbri, Wojciech Kryściński, Bryan McCann, Caiming Xiong, Richard Socher, and Dragomir Radev. 2021. SummEval: Re-evaluating summarization evaluation. Trans. Assoc. Computat. Ling. 9 (2021), 391-409. DOI: https://doi.org/10.1162/tacl\_a\_00373
 
+
+<!-- PAGE 18 -->
+
+
 - [50] Anjalie Field, Su Lin Blodgett, Zeerak Waseem, and Yulia Tsvetkov. 2021. A survey of race, racism, and anti-racism in NLP. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers) . Association for Computational Linguistics, 1905-1925. DOI: https://doi.org/10.18653/v1/2021.acl-long.149
 - [51] Leo Gao, Stella Biderman, Sid Black, Laurence Golding, Travis Hoppe, Charles Foster, Jason Phang, Horace He, Anish Thite, Noa Nabeshima, Shawn Presser, and Connor Leahy. 2020. The Pile: An 800GB dataset of diverse text for language modeling. arXiv preprint arXiv:2101.00027 (2020).
 - [52] Luyu Gao and Jamie Callan. 2022. Unsupervised corpus aware language model pre-training for dense passage retrieval. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) . Association for Computational Linguistics, 2843-2853. DOI: https://doi.org/10.18653/v1/2022.acl-long.203
@@ -429,6 +498,10 @@ Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI:
 - [64] Eduard Hovy, Roberto Navigli, and Simone Paolo Ponzetto. 2013. Collaboratively built semi-structured content and artificial intelligence: The story so far. Artif. Intell. 194 (2013), 2-27. DOI: https://doi.org/10.1016/j.artint.2012.10.002
 - [65] Jeremy Howard and Sebastian Ruder. 2018. Universal language model fine-tuning for text classification. In Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) . Association for Computational Linguistics, 328-339. DOI: https://doi.org/10.18653/v1/P18-1031
 - [66] Po-Sen Huang, Huan Zhang, Ray Jiang, Robert Stanforth, Johannes Welbl, Jack Rae, Vishal Maini, Dani Yogatama, and Pushmeet Kohli. 2020. Reducing sentiment bias in language models via counterfactual evaluation. In Findings of the Association for Computational Linguistics: EMNLP 2020, Online Event, 16-20 November 2020 (Findings of ACL, Vol. EMNLP 2020) , Trevor Cohn, Yulan He, and Yang Liu (Eds.). Association for Computational Linguistics, 65-83. DOI: https://doi.org/10.18653/v1/2020.findings-emnlp.7
+
+
+<!-- PAGE 19 -->
+
 
 - [67] Ben Hutchinson, Vinodkumar Prabhakaran, Emily Denton, Kellie Webster, Yu Zhong, and Stephen Denuyl. 2020. Social biases in NLP models as barriers for persons with disabilities. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics . Association for Computational Linguistics, 5491-5501. DOI: https:// doi.org/10.18653/v1/2020.acl-main.487
 - [68] Kris Inwood and Hamish Maxwell-Stewart. 2020. Selection bias and social science history. Soc. Sci. Hist. 44, 3 (2020), 411-416. DOI: https://doi.org/10.1017/ssh.2020.18
@@ -449,6 +522,10 @@ Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI:
 - [83] Li Lucy and David Bamman. 2021. Gender and representation bias in GPT-3 generated stories. In Proceedings of the 3rd Workshop on Narrative Understanding . Association for Computational Linguistics, 48-55. DOI: https://doi.org/10. 18653/v1/2021.nuse-1.5
 - [84] Catherine Macleod, Nancy Ide, and Ralph Grishman. 2000. The American national corpus: A standardized resource for American English. In Proceedings of the 2nd International Conference on Language Resources and Evaluation (LREC'00) . European Language Resources Association (ELRA). Retrieved from http://www.lrec-conf.org/ proceedings/lrec2000/pdf/196.pdf.
 
+
+<!-- PAGE 20 -->
+
+
 - [85] Abelardo Carlos Martínez Lorenzo, Marco Maru, and Roberto Navigli. 2022. Fully-semantic parsing and generation: The BabelNet meaning representation. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) . Association for Computational Linguistics, 1727-1741. DOI: https://doi.org/10. 18653/v1/2022.acl-long.121
 - [86] Marco Maru, Simone Conia, Michele Bevilacqua, and Roberto Navigli. 2022. Nibbling at the hard core of word cense disambiguation. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) . Association for Computational Linguistics, 4724-4737. DOI: https://doi.org/10.18653/v1/2022.acl-long. 324
 - [87] Jonathan May and Jay Priyadarshi. 2017. SemEval-2017 task 9: Abstract meaning representation parsing and generation. In Proceedings of the 11th International Workshop on Semantic Evaluation (SemEval'17) . Association for Computational Linguistics, 536-545. DOI: https://doi.org/10.18653/v1/S17-2090
@@ -467,6 +544,10 @@ Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI:
 - [100] Aurélie Névéol, Yoann Dupont, Julien Bezançon, and Karën Fort. 2022. French CrowS-pairs: Extending a challenge dataset for measuring social bias in masked language models to a language other than English. In Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) . Association for Computational Linguistics, 8521-8531. DOI: https://doi.org/10.18653/v1/2022.acl-long.583
 - [101] Neasa Ní Chiaráin, Oisín Nolan, Madeleine Comtois, Neimhin Robinson Gunning, Harald Berthelsen, and Ailbhe Ni Chasaide. 2022. Using speech and NLP resources to build an iCALL platform for a minority language, the story of An Scéalaí, the Irish experience to date. In Proceedings of the 5th Workshop on the Use of Computational Methods in the Study of Endangered Languages . Association for Computational Linguistics, 109-118. DOI: https://doi.org/10. 18653/v1/2022.computel-1.14
 
+
+<!-- PAGE 21 -->
+
+
 - [102] Debora Nozza, Federico Bianchi, Anne Lauscher, and Dirk Hovy. 2022. Measuring harmful sentence completion in language models for LGBTQIA+ individuals. In Proceedings of the 2nd Workshop on Language Technology for Equality, Diversity and Inclusion . Association for Computational Linguistics, 26-34. DOI: https://doi.org/10.18653/v1/2022. ltedi-1.4
 - [103] Ziad Obermeyer, Brian Powers, Christine Vogeli, and Sendhil Mullainathan. 2019. Dissecting racial bias in an algorithm used to manage the health of populations. Science 366, 6464 (2019), 447-453. DOI: https://doi.org/10.1126/ science.aax2342
 - [104] OpenAI. 2023. GPT-4 Technical Report. arXiv:2303.08774 [cs.CL].
@@ -484,6 +565,10 @@ Benjamin Kuipers, Seth Lazar, and Deirdre K. Mulligan (Eds.). ACM, 298-306. DOI:
 - [116] Simone Tedeschi, Johan Bos, Thierry Declerck, Jan Hajič, Daniel Hershcovich, Eduard H. Hovy, Alexander Koller, Simon Krek, Steven Schockaert, Rico Sennrich, Ekaterina Shutova, and Roberto Navigli. 2023. What's the meaning of superhuman performance in today's NLU? In Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics . Association for Computational Linguistics (to appear).
 - [117] Romal Thoppilan, Daniel De Freitas, Jamie Hall, Noam Shazeer, Apoorv Kulshreshtha, Heng-Tze Cheng, Alicia Jin, Taylor Bos, Leslie Baker, Yu Du, YaGuang Li, Hongrae Lee, Huaixiu Steven Zheng, Amin Ghafouri, Marcelo Menegali, Yanping Huang, Maxim Krikun, Dmitry Lepikhin, James Qin, Dehao Chen, Yuanzhong Xu, Zhifeng Chen, Adam Roberts, Maarten Bosma, Yanqi Zhou, Chung-Ching Chang, Igor Krivokon, Will Rusch, Marc Pickett, Kathleen S. Meier-Hellstern, Meredith Ringel Morris, Tulsee Doshi, Renelito Delos Santos, Toju Duke, Johnny Soraker, Ben Zevenbergen, Vinodkumar Prabhakaran, Mark Diaz, Ben Hutchinson, Kristen Olson, Alejandra Molina, Erin Hoffman-John, Josh Lee, Lora Aroyo, Ravi Rajakumar, Alena Butryna, Matthew Lamm, Viktoriya Kuzmina, Joe Fenton, Aaron Cohen, Rachel Bernstein, Ray Kurzweil, Blaise Aguera-Arcas, Claire Cui, Marian Croak, Ed H. Chi, and Quoc Le. 2022. LaMDA: Language Models for Dialog Applications. CoRR abs/2201.08239 (2022).
 - [118] Marcus Tomalin, Bill Byrne, Shauna Concannon, Danielle Saunders, and Stefanie Ullmann. 2021. The practical ethics of bias reduction in machine translation: Why domain adaptation is better than data debiasing. Ethics Inf. Technol. 23, 3 (2021), 419-433. DOI: https://doi.org/10.1007/s10676-021-09583-1
+
+
+<!-- PAGE 22 -->
+
 
 - [119] Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, Aurélien Rodriguez, Armand Joulin, Edouard Grave, and Guillaume Lample. 2023. LLaMA: Open and efficient foundation language models. CoRR abs/2302.13971 (2023).
 - [120] Eddie L. Ungless, Amy Rafferty, Hrichika Nag, and Björn Ross. 2022. A Robust Bias Mitigation Procedure Based on the Stereotype Content Model. In Proceedings of the Fifth Workshop on Natural Language Processing and Computational Social Science (NLP+CSS) . Association for Computational Linguistics, 207-217. DOI: https://doi.org/10.48550/ARXIV. 2210.14552

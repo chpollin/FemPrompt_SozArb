@@ -1,6 +1,6 @@
 # Analysis Scripts
 
-Hilfsskripte und Tools für die FemPrompt-Pipeline.
+Hilfsskripte und Tools für die Literature Review Pipeline.
 
 **Hinweis:** Die Hauptpipeline-Scripts befinden sich in `pipeline/scripts/`.
 

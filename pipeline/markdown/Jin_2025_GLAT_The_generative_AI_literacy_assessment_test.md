@@ -1,10 +1,11 @@
 ---
 source_file: Jin_2025_GLAT_The_generative_AI_literacy_assessment_test.pdf
-conversion_date: 2026-02-03T09:01:35.641524
+conversion_date: 2026-02-03T18:32:30.699761
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;FGLYPH&lt;0&gt;LGLYPH&lt;0&gt;DGLYPH&lt;0&gt;O
@@ -63,6 +64,10 @@ GLYPH&lt;0&gt;GLYPH&lt;28&gt;
 
 GLYPH&lt;0&gt;GLYPH&lt;11&gt;GLYPH&lt;0&gt;GLYPH&lt;21&gt;
 
+
+<!-- PAGE 2 -->
+
+
 Zhao et al., 2024). There is a growing demand for more nuanced and context-specific instruments to evaluate GenAI literacy, particularly as generative tools become integral to both physical and digital learning environments (Koch et al., 2024; Zhao et al., 2024; Yan et al., 2024b).
 
 Current AI literacy assessments can be broadly categorised into two types: self-reported and performance-based measures. Self-reported instruments, while commonly used, provide insights into individuals' perceived abilities but may introduce biases that obscure a more reliable measure of literacy levels (Ng et al., 2021b; Lintner, 2024). In contrast, performance-based assessments evaluate actual competencies through direct engagement, offering a more reliable measure of skills. This distinction is especially pertinent for GenAI literacy, where there is often a gap between learners' perceived understanding and their real ability to effectively utilise generative tools (Lyu et al., 2024). GenAI technologies necessitate iterative, context-specific interactions that require both sophisticated prompting skills and the ability to critically assess AI outputs, areas where self-reports may fall short (Chiu, 2024; Bozkurt, 2024a). Therefore, developing performance-based instruments is essential to provide a reliable assessment of individuals' abilities to engage with these advanced technologies in educational settings. However, to the best of our knowledge, there are still limited performancebased tools for measuring students' GenAI literacy in higher education, particularly those that have been rigorously developed and validated according to established psychological and educational measurement standards (Thorndike et al., 1991; American Educational Research Association et al., 2014).
@@ -86,6 +91,10 @@ The need for GenAI literacy is particularly crucial in educational settings. The
 ## 2.2. AI literacy instruments
 
 Multiple AI literacy measurement instruments have been developed to address various contexts, audiences, and facets of AI literacy. These facets encompass technical, ethical, behavioural, and contextual elements, reflecting the multifaceted nature of AI literacy. The Scale for the Assessment of Non-Experts' AI Literacy (SNAIL), created by Laupichler et al. (2023a), evaluates technical knowledge, critical analysis, and practical application of AI. This scale's validity was confirmed through factor analyses and a Delphi study (Laupichler et al., 2023b). The AI Literacy Scale (AILS) focuses on general AI literacy by measuring awareness, usage, evaluation, and ethics and was validated by subject matter experts (Wang et al., 2023). For specific audiences, the Medical Artificial Intelligence Readiness Scale for Medical Students (MAIRS-MS) targets medical students, assessing cognition, ability, vision, and ethics (Karaca et al., 2021). Another survey, based on the Unified Theory of Acceptance and Use of Technology (UTAUT) and the Technological Pedagogical and Content Knowledge (TPACK) framework, examines pedagogical knowledge and AI use intentions among EFL teachers (An et al., 2023). Instruments for younger audiences include the AI Literacy Questionnaire (AILQ) by Ng et al. (2024), designed for secondary students, which assesses affective, behavioural, cognitive, and ethical dimensions. Chai et al.'s (2021) AI Literacy Instrument explores students' confidence, readiness, and perceptions of AI. For broader competencies, Carolus et al.'s (2023) Meta AI Literacy Scale (MAILS) covers ethics, persuasion literacy, and emotion regulation. Additionally, Pinski et al.'s (2023) AI Literacy Instrument targets AI professionals, focusing on human-AI interaction, AI processing, and task knowledge, with validation for reliability and robustness. Lastly, Lee and Park's (2024) ChatGPT Literacy Tool is currently the only instrument specifically designed to assess GenAI skills among university students, though it relies on self-reported data.
+
+
+<!-- PAGE 3 -->
+
 
 Despite progress in AI literacy assessment, substantial gaps persist. Most current instruments rely heavily on self-reported assessments, with minimal use of performance-based measurements. A systematic literature review by Lintner (2024) identified 13 self-reported and only three performance-based instruments, highlighting the predominant reliance on self-reported tools and the urgent need for more reliable assessments. While there are some performance-based measures for general AI literacy, such as Hornsberger's (2023) test, which includes 30 multiplechoice questions and a sorting item, and Chiu's (2024) test consisting of 25 multiple-choice questions, no such measures have been developed for GenAI literacy. Performance-based evaluations are crucial for GenAI literacy, given the importance of practical engagement and iterative interactions (Lintner, 2024; Laupichler et al., 2023b; Yan et al., 2024a). To address this gap, it is essential to develop new GenAI literacy instruments specifically targeting GenAI skills and incorporating performance-based assessments for a more accurate evaluation of learners' competencies. These instruments would help educators better understand how students interact with generative models, identify areas needing additional training, and design effective interventions to enhance students' abilities to use GenAI technologies. Apart from recent efforts to assess GenAI literacy using instruments such as Lee and Park's (2024) ChatGPT Literacy Scale (a self-reported measure), rigorous performance-based assessments for GenAI literacy remain largely absent in literature. Performance-based measures are necessary because self-reporting can introduce biases and inaccuracies, particularly when assessing relatively new competencies such as GenAI literacy. Consequently, a valid, reliable performance-based assessment explicitly designed for evaluating learners' actual abilities to understand and utilise GenAI tools effectively remains an unmet need in educational research and practice.
 
@@ -111,6 +120,10 @@ Building on these theoretical foundations, this study introduces the development
 The GLAT was developed following the established test development procedures outlined in Psychological and Educational Measurement (Thorndike et al., 1991). The development process involved: 1) creating a blueprint of relevant GenAI concepts, 2) generating an initial set of test items based on this blueprint, and 3) evaluating face and content validity through expert reviews and pilot studies, respectively. An item analysis was conducted using CTT, which involved selecting items based on item difficulty and discrimination index. The structural validity and reliability of the GLAT (RQ1) were assessed using IRT. The external validity of the GLAT (RQ2) was evaluated by analysing its effectiveness in predicting learners' performance on tasks involving interaction with
 
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;
+
+
+<!-- PAGE 4 -->
+
 
 Fig. 1. The participant sample size and focus of each validation study.
 
@@ -149,6 +162,10 @@ The item generation process began with aligning each item to the specific GenAI 
 
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;
 
+
+<!-- PAGE 5 -->
+
+
 and measurement validation. Each expert panel member independently reviewed the items for clarity, appropriateness, and alignment with the instrument's four dimensions. Subsequent joint discussions were conducted to reach consensus on necessary modifications. This iterative process ensured clarity, content relevance, and cognitive appropriateness of the GLAT items. Eventually, the initial 25-item version of the GLAT was developed and assessed for content validity (Table 2).
 
 ## 3.2.3. Content validity
@@ -181,6 +198,10 @@ Item fit. The signed chi-squared ( /u1D446 -/u1D712 2 ) statistic was used to ev
 
 The reliability of the final item set was evaluated by focusing on internal consistency using Cronbach's alpha. Specifically, the internal consistency and reliability analyses were conducted on the final item set based on the selected, best-fitting 2PL IRT model, chosen after rigorous comparisons between Rasch, 2PL, and 3PL models. Cronbach's alpha provides an estimate of the proportion of variance in the test scores attributable to the true score variance. A Cronbach's alpha value of 0.7 or higher was deemed indicative of acceptable reliability in educational and psychological testing contexts, suggesting that the test items consistently assess the underlying construct of GenAI literacy (Miller, 1995). In addition, we utilised the coefficient omega, which is considered a
 
+
+<!-- PAGE 6 -->
+
+
 Table 2
 
 The initial 25-item version of the Generative AI Literacy Assessment Test (GLAT).
@@ -205,6 +226,10 @@ The initial 25-item version of the Generative AI Literacy Assessment Test (GLAT)
 |     16 | Evaluate & Create | As a student using a Large Language Model (LLM) to gather information for an assignment, how should you approach the information it provides?                                                                                               | A. The LLM's answers are always more trustworthy than any information you will find on the internet, so you can use them without further verification. B. The LLM's answers are generally more trustworthy than internet sources, but you should still verify the information with other reliable sources. C. The LLM's answers are not necessarily more trustworthy than internet sources, and you should cross-check the information with other credible references. D. The LLM's answers are less trustworthy than internet sources because it relies on outdated information. |
 
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;
+
+
+<!-- PAGE 7 -->
+
 
 Table 2 ( continued )
 
@@ -241,6 +266,10 @@ The external validity of the GLAT was assessed by analysing its predictive power
 
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;
 
+
+<!-- PAGE 8 -->
+
+
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;
 
 Fig. 2. Visual analytics on teamwork in healthcare simulations, including: a) a bar chart of four prioritisation strategies, b) a social network diagram of communication behaviours among the actors, and c) a ward map showing individuals' physical positions (hexagon), verbal communication duration (colour saturation), and peak heart rate locations.
@@ -267,6 +296,10 @@ tient, Amy, while attending to other beds, focusing on task prioritisation, verb
 ## 3.4.2. Chatbot design
 
 The GenAI chatbot was designed using the state-of-the-art retrievalaugmented generation (RAG) approach to improve response relevance and reduce inaccuracies (hallucinations) (Siriwardhana et al., 2023). As illustrated in Fig. 3, when learners ask a question about the visual analytics, the chatbot first retrieves relevant contextual information. It does this by computing vector embeddings of the prompts and calculating the cosine similarity between these prompt embeddings and stored knowledge embeddings (Li et al., 2024). The retrieved information, along with learners' questions and chat history, is then sent to a generative AI, specifically GPT-4o, to generate responses. The conversation is sub-
+
+
+<!-- PAGE 9 -->
+
 
 ## Y. Jin, R. Martinez-Maldonado, D. Gašević et al.
 
@@ -324,6 +357,10 @@ Both the assumptions of unidimensionality and local independence were confirmed.
 
 We sequentially fitted three progressively complex IRT models (the Rasch, 2PL, and 3PL models) to evaluate whether increased complexity led to meaningful improvements in modelling GLAT data, with the aim of selecting the most appropriate model that balanced parsimony
 
+
+<!-- PAGE 10 -->
+
+
 Fig. 4. Study design: three literacy measurements, a baseline task, and an AI-assisted task.
 
 <!-- image -->
@@ -380,6 +417,10 @@ The reliability of the GLAT was assessed by examining internal consistency using
 
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;
 
+
+<!-- PAGE 11 -->
+
+
 Fig. 6. Item characteristic curves for the Rasch, 2PL, and 3PL models. /u1D703 presents the latent trait, GenAI literacy.
 
 <!-- image -->
@@ -401,6 +442,10 @@ Effective and valid measurement of GenAI literacy is essential in higher educati
 In terms of RQ2 and external validity, we examined the extent to which the GLAT predicts learners' performance in tasks involving GenAI chatbots compared to self-reported instruments, using visualisation literacy and baseline performance as control variables. The predictive model showed that GenAI literacy, as measured by GLAT, was a significant predictor of learners' performance in GenAI-supported tasks, whereas domain knowledge (e.g., visualisation literacy) served as a control to account for differences in learners' comprehension of visual information. The significant positive relationship between GLAT and AI-assisted task performance underscores the value of reliably assessing GenAI literacy to predict real-world learner outcomes (Annapureddy et al., 2024; Chiu, 2024). In contrast, self-reported ChatGPT proficiency was not a significant predictor, highlighting the limitations of self-assessment, which may be prone to biases or inaccuracies (Lintner, 2024; Ng et al., 2021b). The control for domain knowledge (e.g., visualisation literacy) ensured that the observed effects were specific to GenAI literacy, thereby reinforcing the importance of targeted skill development in GenAI (Lee &amp; Park, 2024; Lyu et al., 2024). These find-
 
 GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYPH&lt;0&gt;
+
+
+<!-- PAGE 12 -->
+
 
 ings suggest that enhancing GenAI literacy has a direct effect on learners' ability to effectively engage with GenAI tools, independent of their domain knowledge. This insight is critical for educators aiming to design targeted interventions that bolster students' competencies in using GenAI technologies effectively in diverse educational contexts.
 
@@ -446,6 +491,10 @@ Supplementary material related to this article can be found online at https://do
 - Alexander, P. A. (1992). Domain knowledge: Evolving themes and emerging concerns. Educational Psychologist , 27 , 33-51.
 - Alexander, P. A., &amp; Judy, J. E. (1988). The interaction of domain-specific and strategic knowledge in academic performance. Review of Educational Research , 58 , 375-404.
 - Almatrafi, O., Johri, A., &amp; Lee, H. (2024). A systematic review of ai literacy conceptualization, constructs, and implementation and assessment efforts (2019-2023). Computers and Education Open , 100173 .
+
+
+<!-- PAGE 13 -->
+
 
 - Alzubi, A. A. F. (2024). Generative artificial intelligence in the efl writing context: Students' literacy in perspective. Qubahan Academic Journal , 4 , 59-69.
 - American Educational Research Association, American Psychological Association, &amp; National Council on Measurement in Education (2014). Standards for educational and psychological testing. Washington, DC: American Educational Research Association.
@@ -513,6 +562,10 @@ GLYPH&lt;0&gt;$GLYPH&lt;0&gt;UGLYPH&lt;0&gt;WGLYPH&lt;0&gt;LGLYPH&lt;3&gt;çGLYP
 - Wang, B., Rau, P. L. P., &amp; Yuan, T. (2023). Measuring user competence in using artificial intelligence: Validity and reliability of artificial intelligence literacy scale. Behaviour &amp; Information Technology , 42 , 1324-1337.
 - Yan, L., Greiff, S., Teuber, Z., &amp; Gašević, D. (2024a). Promises and challenges of generative artificial intelligence for human learning. Nature Human Behaviour . Accepted for publication.
 - Yan, L., Sha, L., Zhao, L., Li, Y., Martinez-Maldonado, R., Chen, G., Li, X., Jin, Y., &amp; Gašević, D. (2024b). Practical and ethical challenges of large language models in education: A systematic scoping review. British Journal of Educational Technology , 55 , 90-112.
+
+
+<!-- PAGE 14 -->
+
 
 - Yan, L., Echeverria, V., Jin, Y., Fernandez-Nieto, G., Zhao, L., Li, X., Alfredo, R., Swiecki, Z., Gašević, D., &amp; Martinez-Maldonado, R. (2024c). Evidence-based multimodal learning analytics for feedback and reflection in collaborative learning. British Journal of Educational Technology , 55 (5), 1900-1925.
 - Yen, W. M. (1984). Effects of local item dependence on the fit and equating performance of the three-parameter logistic model. Applied Psychological Measurement , 8 , 125-145.

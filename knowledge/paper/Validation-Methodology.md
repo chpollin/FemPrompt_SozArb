@@ -9,7 +9,7 @@ status: draft
 
 ## Summary
 
-Diese Dokumentation beschreibt die Validierungsmethodik für die PDF-zu-Markdown-Konvertierung im Rahmen der FemPrompt Literature Review Pipeline. Sie erklärt, warum dieser Konvertierungsschritt notwendig ist, welche Qualitätsschwellen verwendet werden und wie die Validierung durchgeführt wird.
+Diese Dokumentation beschreibt die Validierungsmethodik für die PDF-zu-Markdown-Konvertierung im Rahmen der Literature Review Pipeline. Sie erklärt, warum dieser Konvertierungsschritt notwendig ist, welche Qualitätsschwellen verwendet werden und wie die Validierung durchgeführt wird.
 
 ---
 

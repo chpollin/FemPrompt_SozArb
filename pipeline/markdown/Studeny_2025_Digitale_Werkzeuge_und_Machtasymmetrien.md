@@ -1,10 +1,11 @@
 ---
 source_file: Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.pdf
-conversion_date: 2026-02-03T09:26:08.143974
+conversion_date: 2026-02-03T18:57:11.663417
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## DIGITALE WERKZEUGE UND MACHTASYMMETRIEN?
@@ -34,6 +35,10 @@ EINE KRITISCHE BETRACHTUNG VON TECHNOLOGIE UND ABHÄNGIGKEITEN IN DER SOZIALEN A
 | 17.  | Soziale Arbeit - Eine Stimme für digitale Gerechtigkeit ................................................................ 29                                                                                                                |
 | 18.  | Reflexionsfragen............................................................................................................................ 30                                                                                            |
 | 19.  | Literaturempfehlung...................................................................................................................... 32                                                                                               |
+
+
+<!-- PAGE 2 -->
+
 
 <!-- image -->
 
@@ -72,6 +77,10 @@ Die technische Umsetzung -besonders die Sprachsynchronisation -war eine ziemlich
 
 Wenn ihr Lust habt, mehr über Konrad oder das dahinterliegende Konzept zu erfahren, freue ich mich über den Austausch!
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 ## 2. MACHT IN DER SOZIALEN ARBEIT -REFLEXION, VERANTWORTUNG UND DIGITALE EINFLUSSFAKTOREN
@@ -99,6 +108,10 @@ Digitale  Systeme  (z.  B.  Fallmanagement,  Algorithmen)  sind  nie  neutral  u
 Digitale Soziale Arbeit erfordert kritische Reflexion und Verantwortung im Umgang mit Macht -um Kontrolle, Teilhabe und Gerechtigkeit bewusst zu gestalten.
 
 📌 Fallbeispiel: Ein:e Sozialarbeiter:in nutzt Social Media, um Klient:innen  zu erreichen. Doch wer kontrolliert, welche Inhalte der Algorithmus sichtbar macht?
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -132,6 +145,10 @@ Macht 'durchdringt die gesamte Gesellschaft' und ist 'in alltäglichen Praktiken
 
 Foucault spricht von der Mikrophysik der Macht: Macht zeigt sich auch in kleinen Routinen, in Sprache, in institutionellen Abläufen -und in den unsichtbaren Regeln, nach denen entschieden wird, was normal und was abweichend ist.
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 Für die Digitalisierung bedeutet das: Algorithmen, digitale Plattformen und Dokumentationssysteme sind nicht neutral, sondern tragen diese gesellschaftlichen Normen und Machtstrukturen in sich. Wenn z. B. eine KI entscheidet, ob jemand Hilfe bekommt, dann ist diese Entscheidung von den Vorstellungen der Entwickler:innen und den eingegebenen Daten geprägt -und nicht objektiv. Macht zeigt sich hier subtil, aber wirkmächtig.
@@ -145,6 +162,10 @@ Thomas  Hobbes  hat  ein  sehr  pessimistisches  Bild  von  Macht  und  menschli
 Nach  Hobbes  geht  es  bei  Macht  also  um  Konkurrenz  und  Dominanz.  In  einer  Welt,  die  immer unsicher bleibt, versuchen Menschen, ihre Macht zu sichern -notfalls auf Kosten anderer.
 
 Auch in der Digitalisierung lässt sich dieses Denken wiederfinden: Tech-Konzerne konkurrieren um Daten und Einfluss, Staaten nutzen digitale Überwachung, um Kontrolle auszuüben. Für die Soziale Arbeit bedeutet das: Es braucht bewusste Auseinandersetzung mit Machtfragen, um zu verhindern, dass Klient:innen durch digitale Kontrolle weiter marginalisiert werden.
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -171,6 +192,10 @@ Digitale  Macht  ist  oft  unsichtbar -Soziale  Arbeit  muss  sie  erkennen,  kr
 <!-- image -->
 
 📌 Fallbeispiel: Ein Jobcenter verwendet ein automatisiertes Scoring-System, das entscheidet, wer Förderungen erhält. Personen mit Lücken im Lebenslauf werden systematisch benachteiligt.
+
+
+<!-- PAGE 7 -->
+
 
 <!-- image -->
 
@@ -209,6 +234,10 @@ Folge: Kontrolle wirkt nicht mehr offen von außen, sondern wirkt von innen -üb
 
 ## Zusatzinformationen
 
+
+<!-- PAGE 8 -->
+
+
 <!-- image -->
 
 ## 4. DATENMACHT -KONTROLLE, TRANSPARENZ UND DIE RECHTE VON KLIENT:INNEN
@@ -235,6 +264,10 @@ Daten entscheiden über Menschen -Soziale Arbeit muss Datenmacht sichtbar machen
 <!-- image -->
 
 📌 Fallbeispiel: Ein:e  Sozialarbeiter:in  arbeitet  mit  einem  digitalen  Fallmanagementsystem,  das automatisch  Risikobewertungen  erstellt  (z.  B.  bei  Kindeswohlgefährdung).  Die  Fachkraft  muss  sich bewusst machen, dass die Entscheidung über Maßnahmen nicht nur von ihr selbst, sondern auch von diesem System beeinflusst wird. Gleichzeitig muss sie sich fragen: Wie kann ich die betroffene Familie transparent darüber informieren, dass ein System diese Einschätzung gemacht hat? Und: Wie kann ich
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -279,6 +312,10 @@ Ohne digitale Souveränität sind Staat und Soziale Arbeit abhängig von private
 
 - Sozialverwaltungen nutzen private Software, z. B. für Fallmanagement und Antragsbearbeitung.
 
+
+<!-- PAGE 10 -->
+
+
 <!-- image -->
 
 - Kommunikation zwischen Behörden und Klient:innen läuft über kommerzielle Plattformen (z. B. Microsoft Teams).
@@ -294,6 +331,10 @@ Die Art und Weise, wie Digitalisierung aktuell vorangetrieben wird, ist oft alle
 - Viele  Menschen  werden  von  digitalen  Angeboten  ausgeschlossen,  weil  ihnen  Wissen, Technik oder Zugänge fehlen.
 
 Deshalb  braucht  es  eine  klare  gesellschaftliche  und  soziale  Vision: Eine  faire,  inklusive  und demokratische Digitalisierung, die allen Menschen Teilhabe ermöglicht und soziale Gerechtigkeit in den Mittelpunkt stellt.
+
+
+<!-- PAGE 11 -->
+
 
 <!-- image -->
 
@@ -327,6 +368,10 @@ Soziale Arbeit braucht Vertrauen statt Überwachung -für Klient:innen und Fachk
 <!-- image -->
 
 📌 Fallbeispiel: Apps,  die  Jobcenter-Klient:innen  zur  "Selbstoptimierung"  nutzen  sollen,  inklusive Ortungsfunktion oder automatischer Datenübermittlung.
+
+
+<!-- PAGE 12 -->
+
 
 <!-- image -->
 
@@ -366,6 +411,10 @@ Gefahr: Entscheidungen wirken "objektiv", sind aber von Software und Datenlogik 
 
 ## Zusatzinformationen
 
+
+<!-- PAGE 13 -->
+
+
 <!-- image -->
 
 ## 6. DIGITALE STEUERUNG -ZWISCHEN SELBSTBESTIMMUNG UND UNSICHTBARER LENKUNG
@@ -399,6 +448,10 @@ Soziale  Arbeit  braucht  Beziehung  statt  Algorithmus -digitale  Tools  dürfe
 - Pop-up-Nachrichten, die an "erwünschte" Handlungen erinnern.
 - Fortschrittsanzeigen, die motivieren, Maßnahmen abzuschließen.
 
+
+<!-- PAGE 14 -->
+
+
 <!-- image -->
 
 Ziel: Menschen sollen sich "richtig" verhalten, z. B. Anträge pünktlich stellen, an Programmen teilnehmen, Regeln einhalten -ohne bewusst darüber zu entscheiden.
@@ -431,6 +484,10 @@ Folge: Fachkräfte  werden  zu  Umsetzer:innen  algorithmischer  Vorgaben -ihre 
 - Die  Menschen  hinter  den  Systemen  (Softwareentwickler:innen,  Verwaltung)  haben  die Macht, Normen und Erwartungen festzulegen.
 
 Frage: Wer  entscheidet  dann,  was  ein  "gutes  Leben"  ist -die  Klient:in,  die  Fachkraft,  oder  ein Algorithmus?
+
+
+<!-- PAGE 15 -->
+
 
 <!-- image -->
 
@@ -469,6 +526,10 @@ Digitale Systeme wie Scoring-Modelle, Fallmanagement-Software oder Risiko-Algori
 - Die eigene Lebensgeschichte wird auf Zahlen und Kategorien reduziert:
 - → "Ich bin eine Zahl im System."
 
+
+<!-- PAGE 16 -->
+
+
 <!-- image -->
 
 - Wer ständig erinnert wird, was noch "zu erledigen" ist (durch Apps, automatische Mails), fühlt sich dauerhaft ungenügend oder kontrolliert.
@@ -491,6 +552,10 @@ Digitale Tools können  den Handlungsspielraum von Klient:innen und Fachkräften
 - Eigene  Einschätzungen  geraten  in  den  Hintergrund,  wenn  sie  nicht  zu  den  digitalen Vorgaben passen.
 
 Folge: Menschen  verlieren  die  Autonomie,  über  ihr  eigenes  Leben  und  ihre  Unterstützung mitzubestimmen.  Fachkräfte  verlieren  die  Autonomie,  nach  professioneller  Einschätzung  zu handeln.
+
+
+<!-- PAGE 17 -->
+
 
 <!-- image -->
 
@@ -515,6 +580,10 @@ KI darf nicht über Menschen entscheiden -Soziale Arbeit muss Transparenz forder
 <!-- image -->
 
 📌 Fallbeispiel: Eine KI soll Sozialhilfeanträge bewerten. Schwarze und migrantische Antragsteller:innen werden systematisch schlechter eingestuft.
+
+
+<!-- PAGE 18 -->
+
 
 <!-- image -->
 
@@ -547,6 +616,10 @@ Voreingenommene (bias) Algorithmen und diskriminierende Systeme
 - Das  bedeutet:  Systematische  Benachteiligungen  werden  nicht  aufgehoben,  sondern technisch verstärkt und "unsichtbar gemacht".
 - Beispiel: Wenn frühere Daten zeigen, dass Menschen aus bestimmten Stadtteilen seltener Unterstützung bekommen, wird der Algorithmus dieses Muster übernehmen.
 
+
+<!-- PAGE 19 -->
+
+
 <!-- image -->
 
 Macht  durch  Technik: Diskriminierung  wird  automatisiert  und  normalisiert,  und  es  gibt  kaum Widerspruchsmöglichkeiten.
@@ -558,6 +631,10 @@ Macht  durch  Technik: Diskriminierung  wird  automatisiert  und  normalisiert, 
 - Scoring-Modelle bei  Schuldenregulierungen,  die  Menschen  aus  einkommensschwachen Stadtteilen schlechtere Chancen einräumen.
 
 Fazit: Solche  Bias  sind  unsichtbar,  weil  sie  als  "neutrale  KI-Entscheidung"  erscheinen,  aber  in Wirklichkeit alte Vorurteile technisch zementieren.
+
+
+<!-- PAGE 20 -->
+
 
 <!-- image -->
 
@@ -593,6 +670,10 @@ Die erste Stufe der digitalen Spaltung betrifft den grundlegenden Zugang zu Ger�
 
 - Menschen  mit  geringem  Einkommen,  die  sich  kein  Smartphone,  Tablet  oder  Computer leisten können.
 - Menschen ohne stabile Internetverbindung, vor allem in ländlichen Gebieten.
+
+
+<!-- PAGE 21 -->
+
 
 <!-- image -->
 
@@ -638,6 +719,10 @@ Die dritte Stufe betrifft die Frage, wer wirklich von der Digitalisierung profit
 
 Folge: Menschen  werden  zum  Objekt  der  digitalen  Verwaltung,  ohne  die  Chance,  aktiv  und selbstbestimmt mitzugestalten.
 
+
+<!-- PAGE 22 -->
+
+
 <!-- image -->
 
 ## 11. DIGITALE SOUVERÄNITÄT -UNABHÄNGIGKEIT STATT BIG-TECH-ABHÄNGIGKEIT
@@ -669,6 +754,10 @@ Soziale Arbeit braucht digitale Souveränität -nicht Abhängigkeit von Big Tech
 - Freiheit von Abhängigkeit gegenüber privaten Tech-Konzernen.
 - Selbstbestimmung bei der Auswahl und Gestaltung digitaler Tools.
 - Möglichkeit, digitale Lösungen so zu gestalten, dass sie den Werten und Zielen der Sozialen Arbeit entsprechen: Gerechtigkeit, Teilhabe, Menschenwürde.
+
+
+<!-- PAGE 23 -->
+
 
 <!-- image -->
 
@@ -707,6 +796,10 @@ Folge: Öffentliche und soziale Einrichtungen sind von den Entscheidungen und In
 - Gamification-Modelle in Apps, die Klient:innen Punkte geben, wenn sie Maßnahmen folgen -und damit subtile Verhaltenssteuerung betreiben.
 - Scoring-Systeme, die das "Risiko" von Klient:innen berechnen und damit beeinflussen, ob und wie intensiv Hilfe angeboten wird.
 
+
+<!-- PAGE 24 -->
+
+
 <!-- image -->
 
 ## 12. DIGITALE BILDUNG -SCHLÜSSEL FÜR SOZIALE GERECHTIGKEIT
@@ -733,6 +826,10 @@ Digitale  Bildung  und  Souveränität  sind  essenziell  für  soziale  Gerecht
 
 📌 Fallbeispiel: Ein  sozialer  Träger bietet Digitalkurse für Senior:innen an. Eine Teilnehmerin kann nach dem Kurs erstmals online ihre Sozialhilfe beantragen.
 
+
+<!-- PAGE 25 -->
+
+
 <!-- image -->
 
 ## 13. DIGITALE TRANSFORMATION -MITBESTIMMUNG STATT FREMDBESTIMMUNG
@@ -755,6 +852,10 @@ Damit Digitalisierung den Menschen dient und nicht umgekehrt, müssen Fachkräft
 Digitale Transformation in der Sozialen Arbeit muss partizipativ gestaltet werden -mit den Menschen, nicht über ihre Köpfe hinweg.
 
 📌 Fallbeispiel: In  einer  Wohngruppe  wird  eine  digitale  Plattform  zur Mitbestimmung  eingeführt. Doch viele Jugendliche verstehen die Tools nicht oder haben keinen Zugang.
+
+
+<!-- PAGE 26 -->
+
 
 <!-- image -->
 
@@ -780,6 +881,10 @@ Soziale Arbeit muss digitale Werkzeuge kritisch prüfen -Technik darf den Mensch
 
 📌 Fallbeispiel: Eine Sozialarbeiterin nutzt eine KI-gestützte App zur Bedarfsanalyse, entscheidet aber bewusst, sich nicht nur auf die Vorschläge der KI zu verlassen.
 
+
+<!-- PAGE 27 -->
+
+
 <!-- image -->
 
 ## 15. GERECHTIGKEIT, TRANSPARENZ UND VERANTWORTUNG GESTALTEN
@@ -803,6 +908,10 @@ Soziale Arbeit ist gefragt als Anwältin für soziale Gerechtigkeit, um für dig
 Soziale Arbeit muss digitale Gerechtigkeit gestalten -für Teilhabe, Transparenz und Verantwortung, damit Technik den Menschen dient.
 
 📌 Fallbeispiel: Eine Petition fordert, dass Sozialleistungen nicht durch Algorithmen gesteuert werden dürfen -mit Erfolg.
+
+
+<!-- PAGE 28 -->
+
 
 <!-- image -->
 
@@ -837,6 +946,10 @@ Staatliche Regulierung ist notwendig, um die Rechte von Klient:innen und Fachkr�
 
 - Ohne  klare  Regeln  nutzen  große  Konzerne  (wie  Google,  Microsoft,  Amazon,  Meta)  die Digitalisierung, um Gewinne zu machen -und nicht, um soziale Probleme zu lösen.
 
+
+<!-- PAGE 29 -->
+
+
 <!-- image -->
 
 - Digitale  Systeme  (z.  B.  Algorithmen,  Scoring-Modelle,  automatisierte  Entscheidungen) können Menschen benachteiligen und ausschließen, wenn niemand sie kontrolliert.
@@ -844,6 +957,10 @@ Staatliche Regulierung ist notwendig, um die Rechte von Klient:innen und Fachkr�
 - Fachkräfte  werden  gezwungen,  mit  Tools  zu  arbeiten,  die  nicht  zu  ihren  ethischen Prinzipien passen.
 
 Fazit: Ohne  staatliche  Regulierung  droht  eine  Digitalisierung,  die  Macht  bei  den  Konzernen konzentriert und soziale Ungleichheiten verstärkt.
+
+
+<!-- PAGE 30 -->
+
 
 <!-- image -->
 
@@ -868,6 +985,10 @@ Soziale Arbeit muss für digitale Menschenrechte kämpfen -für Würde, Gerechti
 <!-- image -->
 
 📌 Fallbeispiel: Ein  Verband  der  Sozialen  Arbeit  fordert,  dass  KI  in  der  Verwaltung  nur  mit menschlicher Kontrolle eingesetzt wird.
+
+
+<!-- PAGE 31 -->
+
 
 <!-- image -->
 
@@ -927,6 +1048,10 @@ Soziale Arbeit muss für digitale Menschenrechte kämpfen -für Würde, Gerechti
 
 - Ist digitale Bildung in der Sozialen Arbeit Pflicht oder Luxus?
 
+
+<!-- PAGE 32 -->
+
+
 <!-- image -->
 
 - Können wir digitale Kompetenzen fördern, ohne gleichzeitig Abhängigkeiten zu verstärken?
@@ -947,6 +1072,10 @@ Soziale Arbeit muss für digitale Menschenrechte kämpfen -für Würde, Gerechti
 
 - Wenn nicht wir, wer dann? Wer kämpft sonst für digitale Menschenrechte im Alltag?
 - Wäre es an der Zeit, eine eigene digitale Ethik-Charta für die Soziale Arbeit zu formulieren?
+
+
+<!-- PAGE 33 -->
+
 
 <!-- image -->
 

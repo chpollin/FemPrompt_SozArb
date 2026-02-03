@@ -1,10 +1,11 @@
 ---
 source_file: Fujii_2024_Bildungsteilhabe_-_Flucht_-_Digitalisierung_Eine.pdf
-conversion_date: 2026-02-03T08:57:12.494919
+conversion_date: 2026-02-03T18:27:48.432307
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 Michi SebastianFujiiINadiaKutscher| Henrike Friedrichs-Liesenkotter |Jana Huttmann(Hrsg)
 
 ## Bildungsteilhabe -FluchtDigitalisierung
@@ -13,7 +14,15 @@ EinemultilokaleEthnografieim(digitalen) AlltagjungerGefluchteter
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Michi S. Fujii Nadia Kutscher Henrike Friedrichs-Liesenkötter Jana Hüttmann (Hrsg.) Bildungsteilhabe - Flucht - Digitalisierung
+
+
+<!-- PAGE 3 -->
+
 
 Michi S. Fujii Nadia Kutscher Henrike Friedrichs-Liesenkötter Jana Hüttmann (Hrsg.)
 
@@ -22,6 +31,10 @@ Michi S. Fujii Nadia Kutscher Henrike Friedrichs-Liesenkötter Jana Hüttmann (H
 Eine multilokale Ethnografie im (digitalen) Alltag junger Geflüchteter
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 Das Werk einschließlich aller seiner Teile ist urheberrechtlich geschützt. Der Text dieser Publikation wird unter der Lizenz Creative Commons Namensnennung - Nicht kommerziell - Keine Bearbeitungen 4.0 International (CC BY-NC-ND 4.0) veröffentlicht.
 
@@ -45,6 +58,10 @@ Herstellung: Myriam Frericks Satz: xerif, le-tex Druck und Bindung: Beltz Grafis
 
 Weitere Informationen zu unseren Autor:innen und Titeln finden Sie unter: www.beltz.de
 
+
+<!-- PAGE 5 -->
+
+
 ## Inhalt
 
 | Danksagung                                                                                                                                                                          | 7   |
@@ -62,9 +79,17 @@ Weitere Informationen zu unseren Autor:innen und Titeln finden Sie unter: www.be
 | Literatur                                                                                                                                                                           | 251 |
 | Die Autor*innen                                                                                                                                                                     | 267 |
 
+
+<!-- PAGE 6 -->
+
+
 ## Danksagung
 
 Dieses Buch ist das Ergebnis einer mehrjährigen Forschung, die ohne die Unterstützung anderer nicht hätte durchgeführt werden können. Dank gilt dabei ganz besonders den jungen (geflüchteten) Menschen sowie den verschiedenen Institutionen, die dem Forschungsteam der BIGEDIB-Studie ermöglicht haben, ihren Alltag in vielfältigen Settings zu begleiten und zu beobachten.
+
+
+<!-- PAGE 7 -->
+
 
 ## Digitale Medien und ihre Relevanz für die Bildungsteilhabe junger Geflüchteter
 
@@ -76,6 +101,10 @@ Weltweit nimmt die Zahl von geflüchteten 1 Menschen kontinuierlich zu. Insgesam
 
 2 Die geläufige Bezeichnung 'Aufnahmeland' wird an dieser Stelle nicht vorbehaltlos aufgegriffen. So ist aus Sicht der Autor*innen zu hinterfragen, inwiefern diese Bezeichnung angesichts von oftmals teilhabeeinschränkenden gesellschaftspolitischen Rahmenbedingungen für Geflüchtete semantisch passend ist. Der vorliegende Band bemüht sich daher darum, auch alternative Beschreibungsformen zu nutzen.
 
+
+<!-- PAGE 8 -->
+
+
 Million Geflüchtete nach Deutschland gekommen sind (vgl. UNHCR 2016). Diese Debatte setzt sich gegenwärtig im Zusammenhang des russischen Angriffskriegs gegen die Ukraine und der damit verbundenen Fluchtbewegungen fort.
 
 MitBlick auf die Ermöglichung von Bildung(-steilhabe) werden digitale Medienfür(junge)Geflüchtetealsbesondersrelevanterachtet(vgl.UNICEF2017).Diese Relevanz betrifft insbesondere die Postmigrationsphase, also die Zeit nach der Flucht. Während dieser Phase sind das Ankommen im ,Aufnahmeland' und damit verbunden vielfältige Anforderungen im Alltag zu bewältigen: Verstehen und Erschließen des ,Aufnahmelandes' und seiner verschiedenen Systeme, in denen sich der Alltag organisiert, Bewältigung oftmals prekärer Lebenslagen sowie ZurechtkommenmitderräumlichenDistanzzuoderdemVerlustdereigenenFamilie etc. (vgl. Mancini et al. 2019). Das Smartphone stellt dabei ein 'Schlüsselmedium'(Kutscher/Kreß2018,S. 325) dar,das für (junge) Geflüchtete bei Aneignungsund Teilhabeprozessen eine Rolle spielt (vgl. Kutscher/Kreß 2017; Friedrichs-Liesenkötter/Hüttmann/Müller2020;Fujii/Kutscher2022).ImKontrasthierzuzeigen sich jedoch zugleich Hindernisse und Risiken zur Nutzung digitaler Medien durch (junge) Geflüchtete. So sind vor dem Hintergrund sozialer bzw. digitaler Ungleichheitslagen (vgl.Alam/Imran 2015; Gillespie et al.2016) die Voraussetzungen für eine entsprechende unterstützende Nutzung digitaler Medien aufgrund ungleicher Kapitalausstattungen (vgl. Bourdieu 1997) äußerst unterschiedlich gegeben, da soziales oder auch kulturelles Kapital erforderlich sind, um auch digitale Medien (bildungs-)teilhabeermöglichend zu nutzen (vgl. Kutscher 2019), wie es zuletzt auch im Zuge der Digitalisierung von Bildungsangeboten während der COVID-19-Pandemie sichtbar wurde (vgl. UNESCO 2021; Europäische Kommission 2020). In diesem Zusammenhang wird deutlich, dass digitale Medien (z.B. WhatsApp, Facebook, Instagram), sich sogar gegensätzlich als (wenngleich alternativlose) datenschutzprekäre Räume gerade für Geflüchtete erweisen (vgl. Kutscher/Kreß 2015, S. 57), da diese Räume auch mit Infrastrukturen der Überwachung verbunden sind (vgl. Metcalfe/Dencik 2019) und somit die Ermöglichung von Autonomie im Zusammenhang mit Digitalität grundlegend in Frage stellen (vgl. Fujii/Kutscher/Niermann 2022).
@@ -83,6 +112,10 @@ MitBlick auf die Ermöglichung von Bildung(-steilhabe) werden digitale Medienfü
 Mit Blick auf die Bildungsrelevanz digitaler Medien für junge Geflüchtete rücken als Voraussetzungen dafür neben individuellen Fähigkeiten insbesondere strukturelle und institutionelle Rahmenbedingungen in den Mittelpunkt. So wird die digitale Mediennutzung junger Geflüchteter durch Organisationsgrenzen überschreitende Bezüge, innerorganisationale Normen und subjektive Voraussetzungen geprägt (vgl. Kreß/Kutscher 2020, S. 578).
 
 Gerade der Alltag junger Geflüchteter in Deutschland ist durch Bezüge zu und Abhängigkeiten von diversen Institutionen und Organisationen charakterisiert (z. B. Ausländeramt, Einrichtungen der Kinder- und Jugendhilfe, Polizei, Jobcenter, ehrenamtliche Vereine etc.). Bildungsorte wie die Kinder- und Jugendhilfe und die Schule stellen in diesem Zusammenhang Erfahrungsräume dar, die zur
+
+
+<!-- PAGE 9 -->
+
 
 Befähigung eines ,kompetenten' Umgangs mit digitalen Medien und zur Gestaltung eines ,gelingenden' Lebens beitragen sollen (vgl. Helbig/Kutscher 2017, S. 533), aber auch limitierend wirken können (vgl. Kutscher/Kreß 2015, S. 54ff.). Die Diskussion um Chancen und Potenziale digitaler Medien spiegelt sich an dieser Stelle in Bildungsprogrammatiken wider (vgl. Unicef 2017; UNESCO 2021; Europäische Kommission 2020), nach denen der Kompetenzerwerb mit dem Ziel der selbstbestimmten und verantwortungsvollen Nutzung digitaler Medien als zentrales Ziel benannt wird (z.B. zuletzt DigitalPakt Schule, vgl. BMBF 2019). Inwiefern digitale Medien jedoch Bildungschancen im Rahmen unterschiedlicher institutioneller sowie informeller Kontexte eröffnen können, ist allgemein sowie insbesondere mit Blick auf junge Geflüchtete kaum erforscht.
 
@@ -94,11 +127,19 @@ Vor diesem Hintergrund rücken mehrere Forschungsgegenstände in den Blick: jung
 
 Empirische Studien und Reviews verweisen seit den 2000er Jahren zunehmend auf die hohe und mitunter ambivalente Bedeutung digitaler Medien für Geflüchtete (vgl. Witteborn 2018, S. 21). Seit 2015 hat im Zuge der Fluchtbewegungen des Arabischen Frühlings und des syrischen Bürgerkriegs auch die Forschung zu diesem Themenfeld stark zugenommen. Die Relevanz digitaler Medien für (Flucht-)Migration manifestiert sich auch in entsprechenden Begriffsthematisierungen. So spricht Diminescu von 'connected migrants' (Diminescu 2019) als Ausdruck einer Kultur der Vernetzung und des Kontakthaltens von Geflüchteten während und nach der Flucht. Dekker et al. beziehen sich mit der Bezeichnung 'smart refugees' (Dekker et al. 2018) nicht nur auf die besonders häufige Nutzung des Smartphones während der Flucht, sondern auch auf die Bedeutung der Endgeräte als kommunikative und informative Ressourcen, die bei der Findung ,smarter' Migrationsstrategien unabdingbar sind. In diesem Zusammenhang etabliert sich auch der Forschungsschwerpunkt der 'digital migration studies' (Leurs/Smets 2018), die interdisziplinäre Bezugspunkte u.a. aus Soziologie und
 
+
+<!-- PAGE 10 -->
+
+
 Politikwissenschaft, Kulturanthropologie, Humangeographie und Kommunikationswissenschaften versammeln.
 
 Mancinietal.(2019)zeigenausgehendvondieserInterdisziplinaritätauf,dass sich das Forschungsfeld der 'digital migration studies' bislang als fragmentiert und unübersichtlich erweist. Der Fokus der meist explorativen und qualitativen Untersuchungen liegt auf der alltäglichen digitalen Mediennutzung Geflüchteter mit ihren Mobiltelefonen. Studienübergreifend wird hierbei die zentrale Bedeutung des Smartphones für Geflüchtete im Alltag festgestellt. Im Fokus stehen Chancen und Gefahren während der Flucht, der Erhalt und die Erweiterung von sozialen Beziehungen und von Agency sowie Fragen von Gesundheit und Bildung als auch mit der digitalen Mediennutzung einhergehende Ambivalenzen nach der Flucht (vgl. Patil 2019). Studien von Wall, Campell und Janbek (2019) sowie Berg (2022) weisen hierbei etwa auf die 'Informationsprekarität' von Menschen während und nach der Flucht hin. Durch das Zusammenspiel von fehlenden Leseund Sprachkenntnissen, fehlendem Nutzungswissen über digitale Medien, aber auch und insbesondere nicht vorhandenen Zugängen zu digitalen Medien wird die Zielgruppe gegenüber dem Risiko von Fehlinformationen, StereotypisierungenundGerüchtenalsbesondersvulnerabelerachtet.AlsKonsequenzenunzureichender Informationen oder Fehlinformationen für Geflüchtete werden finanzieller Ruin, Verlust oder dauerhafte Trennung von der Familie angeführt (vgl. Borkert/Fisher/Yafi 2018). In diesem Zusammenhang sind Studien mit Fokus auf die GruppejungerGeflüchteter und zu ihrer digitalen Mediennutzung bislang unterrepräsentiert (vgl.Alencar 2020,S. 2),da sich ein Großteil der vorliegenden StudienaufdiegesamteAltersspannevonGeflüchtetenkonzentriertunddiebesondere Situation junger Menschen damit nicht im Fokus steht (vgl. Neag 2021, S. 65).
 
 In AnknüpfunganbisherigeÜberblicksarbeiten (vgl.Alencar 2020; Mancini et al. 2019) arbeitet Moran (2022) die Studienlage zu den komplexen, vielschichtigen Erfahrungen und Praktiken von Geflüchteten im Kontext digitaler Medien auf. Bezugnehmend auf Awad und Tosells (2019) Forderung zur Erweiterung einer bislang oft utilitaristischen Forschungsperspektive auf die Smartphone-Nutzung Geflüchteter, fordert sie, die digitale Mediennutzung unter den Bedingungen unterschiedlicher Alltagskontexte zu beforschen. Hiermit sollen soziale, rechtliche und institutionelle Rahmungen ebenso wie individuelle Ausgangslagen (z.B. Geschlecht, ethnische Zugehörigkeit, Sexualität) stärker berücksichtigt werden, welche die Erfahrungen der (Flucht-)Migration und digitalen Mediennutzung prägen. Darüber hinaus stellt Moran eine Fokussierung bisheriger Studien vorrangig auf syrische Geflüchtete fest (vgl. u.a. Emmer/Kunst/Richter 2020), womit Forderungen nach mehr Diversität in der zukünftigen Forschung der
+
+
+<!-- PAGE 11 -->
+
 
 'digital migration studies' einhergehen (vgl. Moran 2023, S. 301) 3 . Neben Moran heben weitere Autor*innen zudem die Notwendigkeit hervor, in der Erforschung von digitalen Medien und Flucht verstärkt methodische und ethische Aspekte zu reflektieren (vgl. Leurs/Smets 2018), u.a. aufgrund der Gefahr eines 'homogenisierenden Blick[s]' (Smets 2019, S. 100) auf Geflüchtete, der droht, defizitäre und pauschalisierende Vorstellungen über die Forschungsteilnehmenden zu reproduzieren.
 
@@ -106,11 +147,19 @@ Vorliegende Forschungsarbeiten zu digitalen Medien und Fluchtmigration differenz
 
 3 Ferner wird zum einen ein Großteil der Studien von westlichen Forschenden durchgeführt und es rücken zum anderen nur in sehr wenigen Fällen Fluchtbewegungen in afrikanischen Ländern und fast ausschließlich der globale Norden in den Blick (vgl. Moran 2022).
 
+
+<!-- PAGE 12 -->
+
+
 auch und vor allem über die subjektive Ausstattung mit sozialem, kulturellem und ökonomischem Kapital erklären (vgl. Kutscher/Kreß 2015).
 
 In Bezug auf die Postmigrationsphase weisen empirische Erkenntnisse darauf hin, dass die Nutzung digitaler Medien junge Geflüchtete dabei unterstützen kann,sich in ihrem Lebensumfeld zurechtzufinden (vgl. Michalovich 2021). Diese Bedeutung für gesellschaftliche Teilhabe wird beispielsweise in der Eröffnung eines niederschwelligen Zugangs zu diversen Informationsquellen (vgl. Kutscher/ Kreß2018)undinderBeförderungdesSpracherwerbsmittelsverschiedenerApps gesehen (vgl. Friedrichs-Liesenkötter/Schmitt 2017; Kutscher/Kreß 2015). Unterschiedlich gelagerte Fähigkeiten im Umgang mit digitalen Medien können dabei mit ungleichen Teilhabechancen in der ,Aufnahmegesellschaft' einhergehen, sodasssichdieFragenacheinerinstitutionellenBearbeitungderKompensationvon Ungleichheitslagen stellt (vgl. Kutscher 2017, S. 211). Im Hinblick auf die Entwicklungen im Zusammenhang der COVID-19-Pandemie wurde darüber hinaus eine Verschärfung von digitalen Ungleichheiten deutlich, die besonders auch (junge) Geflüchtetebetraf.DieseVerschärfungwurdeu.a.inBezugaufdieeingeschränkten Zugangsmöglichkeiten von Geflüchteten zu digitalen Medien und Internet und ihre begrenzten kompensatorischen Ressourcen (vgl. Berg 2022) sowie Benachteiligungen hinsichtlich der Teilhabe an schulischer Bildung (vgl. Fujii et al. 2020; Hüttmann/Fujii/Kutscher 2020) diskutiert.
 
 Mit Blick auf institutionelle Kontexte als eine Rahmung der digitalen Mediennutzung junger Geflüchteter liegen vereinzelt Forschungsbefunde vor. Insgesamt wird hierbei die Bildungsteilhabe junger Geflüchteter überwiegend in Bezug auf den formalen Bildungskontext der Schule thematisiert (vgl. Korntheuer 2016; Ausnahmen u.a. Pastoor 2017). Ein Desiderat zeichnet sich hier insofern ab, da vor allem die subjektiven Fähigkeiten der Nutzenden fokussiert und strukturelle Bedingungen vernachlässigt werden (vgl. Mancini et al. 2019; Neag 2021). Hinsichtlich non-formaler Bildungskontexte werden ambivalente Bedeutungen digitaler Medien insofern thematisiert, dass sie in den pädagogischen Institutionen für die Adressat*innen begrenzt zugänglich sind und erzieherischen Regeln unterliegen, während zugleich die Mediennutzung kaum fachlich begleitet und reflektiert wird (vgl. Kreß/Kutscher 2020, S. 578). Eine explizitere empirische Befassung mit der Bildungsfrage im Kontext digitaler Mediennutzung in non-formalen Settings findet sich bislang nicht. Zwar gibt es Hinweise darauf, dass unterschiedliche institutionelle Bildungskontexte (z.B. Schule) und der informelle Bereich privater Mediennutzung (z.B. mit Peers) Bezüge zueinander aufweisen, indem beispielsweise Lehrkräfte im Kontext der Flucht erworbene Mediennutzungsstrategien und Kenntnisse der Jugendlichen als Anknüpfungspunkt für Medienbildung im Unterricht einbeziehen. Diese vorhandenen Kenntnisse und Erfahrungen können Anknüpfungspunkte für Bildungsgelegenheiten wie die Vermittlung weiteren medienbezogenen Wissens darstellen (vgl. Bruinenberg et al. 2019), allerdings wird hierzu bislang nicht systematisch geforscht. Es besteht al-
+
+
+<!-- PAGE 13 -->
+
 
 so eine Forschungslücke in Bezug auf die unterschiedlichen (institutionellen und subjektiven) Rahmenbedingungen der digitalen Mediennutzung mit Blick auf die Gruppe (junger) Geflüchteter.
 
@@ -124,9 +173,17 @@ Für den formalen Bildungskontext Schule liegen vor allem quantitative Erhebunge
 
 5 Der Länderindikator 2021 (vgl. Lorenz et al. 2022) stellt u.a. Unzufriedenheiten von Lehrer*innen mit der digitalen Ausstattungssituation (vor allem Anschluss an schnelles Internet) fest. Diese Ausstattung wird als ausbaubedürftig eingeschätzt, um pädagogischen Anforderungen gerecht zu werden. Hinsichtlich der Nutzungshäufigkeit digitaler Medien wird im Vergleich zur vorherigen Erhebung von 2017 aufgezeigt, dass diese (mit der COVID-19-Pandemie) deutlich zugenommen hat,sich jedoch im internationalen Vergleich weiterhin als problematisch erweist.ImKontextdivergierenderhabituellerOrientierungenvonLehrkräftenundKindernbzw. Eltern wird auch die Bedeutung eines medienbezogenen Habitus hervorgehoben (vgl. Biermann 2009; Henrichwark 2009).
 
+
+<!-- PAGE 14 -->
+
+
 zum Einsatz spezifischer digitaler Medien im Unterricht beziehen sich u.a. auf denEinsatz von Tablets mit Fokus auf Unterrichtskonzepte im Kontext von BYOD ( bring your own device ) (vgl. Kammerl et al. 2016), zu Forschungsmethoden und -perspektiven zum Einsatz von Tablets (vgl. Aufenanger/Bastian 2017), auf die Funktion des interaktiven Whiteboards zur Moderation von Unterrichtsgesprächen (vgl. Mercer/Hennessy/Warwick 2010) und den didaktischen Nutzen von 3-D-Druck-Technologien im Mathematikunterricht (vgl. Dilling/Witzke 2020). Auchliegen Befunde zu Bedingungen für gelingende Digitalisierungsprozesse an Schulen vor (vgl. Herfurth/Fereidooni 2022). Als zentrale Faktoren werden dabei die systematische Integration digitaler Medien in der Aus- und Weiterbildung von Lehrpersonen (mit dem Ziel des Aufbaus einer digitalisierungsspezifischen Medienkompetenz), aber auch die Frage angemessener Ausstattung und schulübergreifender fördernder Infrastrukturen genannt (vgl. Herfurth/Fereidooni 2022, S. 111). Dabei steht jedoch lediglich die Organisations- und Strukturebene von Schulen im Fokus, wohingegen individuelle Kompetenzen sowie VoraussetzungenderSchüler*innen unberücksichtigt bleiben.International vergleichende Studien (vgl. ICILS 2018; Eickelmann et al. 2019) machen wiederholt darauf aufmerksam, dass computerund informationsbezogene Kompetenzen von Schüler*innen eng mit der sozialen Herkunft bzw. einem Migrationshintergrund zusammenhängen und sich hier bestehende De-Privilegiertheiten im Sinne von digitaler Ungleichheit verfestigen können (vgl. Vennemann et al. 2019). Auch werden milieuspezifische Einstellungen von Lehr*innen neben weiteren Faktoren als maßgeblich relevant dafür eingeordnet, ob und wie digitale Medien im Schulkontext heterogenitätssensibel und schüler*innenorientiert eingesetzt werden können, um potenziellen digitalen Ungleichheitslagerungen entgegenwirken zu können (vgl. Drossel/Eickelmann/Vennemann 2020, S. 5ff.).
 
 Mit Blick auf die Gruppe junger Geflüchteter liegen vereinzelt qualitative Untersuchungen zur Bedeutung digitaler Medien im Bereich Schule vor. So wurde der Spracherwerb von geflüchteten Schüler*innen in sogenannten Willkommensklassen im Fach Biologie unter Einsatz von Tablets (vgl. Lindner/Fritsch 2022) und in Bezug auf soziale Medien (vgl. Bigelow et al. 2017) untersucht. Lindner und Fritsch (2022) verdeutlichen den unterschiedlichen Nutzen des Einsatzes digitaler Medien für alle beteiligten Akteur*innen (Schüler*innen u.a. zum Spracherwerb, Lehrkräfte u.a. zur Unterstützung der internen Organisation, Studierende u.a. zur Heterogenitätssensibilisierung). Bigelow et al. (2017) zeigen auf, dass insbesondere die mehrsprachige Peer-to-Peer- und somit freizeitliche private Nutzung sozialer Medien durch junge Geflüchtete Potenziale für den Erwerb von mehrsprachiger kritischer Lese- und Schreibfähigkeit im schulischen Kontext eröffnen kann. Sie weisen zudem auf die Notwendigkeit einer kontextübergreifenden Analyse des bildungsbezogenen Einsatzes digitaler Medien hin, ohne diese jedoch selbst entsprechend umzusetzen. Eine Betrachtung der Herausforderungen und potenziellen Gefahren zum Einsatz digitaler
+
+
+<!-- PAGE 15 -->
+
 
 Medien bleibt ebenfalls aus. Des Weiteren wird die Erstellung digitaler Medieninhalte ( Digital Storytelling ) durch junge Geflüchtete in Schulen kritisch in ihrer Eignung für Auseinandersetzungen über (Flucht-)Migration (vgl. Bruinenberg et al. 2019) und in Bezug auf daraus resultierende digitale Kompetenzen und Anknüpfungspotenziale für formale Bildungsprozesse diskutiert (vgl. Kendrick/ Early/Michalovic 2022). Forschungsergebnisse verweisen hier auf Potenziale des Digital Storytellings für diverse Aspekte von Bildung (u.a. Sprachaneignung, Selbstrepräsentation bzw. -artikulation und Verarbeitung von Erlebtem). Hierbei wird das Zusammenspiel unterschiedlicher Bildungsorte und -modalitäten für die Erforschung von Bildung als zentral erachtet,ohne dieses jedoch systematisch zu untersuchen oder das formale Schulsetting zu verlassen. Es werden außerdem digitale Selbstlernmaterialien zum Fach Deutsch analysiert und in ihrem Potenzial für die individuelle Aneignung von Sprachkenntnissen für Geflüchtete diskutiert (vgl. Hartinger 2018). Neben Potenzialen, wie einem Zugang zur deutschen Sprache, deren Aneignung sich am Alltag der Zielgruppe orientiert, werden Limitationen, wie etwa die fehlende Vermittlung von Lernstrategien für die Nutzenden, deutlich. Mit Blick auf den medialen Diskurs zu digitalen Selbstlernangeboten für Geflüchtete wird deren ,Glorifizierung' als universelle Lösung kritisiert und eine fachliche Begleitung digitaler Lernoptionen zur Entfaltung ihrer Potenziale als besonders bedeutsam herausgestellt (vgl. Hartinger 2018, S. 34, 39).
 
@@ -134,13 +191,25 @@ Des Weiteren sind Studien zu Möglichkeiten bzw. Hindernissen der Teilhabe von j
 
 Mit Blick auf die Kinder- und Jugendhilfe finden sich zwar ähnlich wie im schulischen Bereich entsprechende politische Initiativen (Anfang der 2000er Jahre die Bundesinitiative 'Jugend ans Netz' zeitlich fast parallel zu 'Schulen ans Netz' und aktuell neben dem 'Digitalpakt Schule' die durch die Jugend- und Familienministerkonferenz beschlossene 'Digitalstrategie Kinder- und Jugendhilfe'), allerdings sind die jugendhilfebezogenen Initiativen bislang ressourcenmäßigweitauswenigerbzw.garnichtausgestattet.DieEntwicklungenindenHandlungsfeldern der Kinder- und Jugendhilfe und auch in weiteren Bereichen der Sozialen Arbeit werden zunehmend wissenschaftlich erforscht (vgl. Kutscher et al. 2020; Seelmeyer/Kutscher 2021, S. 23f.). In diesem Zusammenhang verweist u.a. der 15. Kinder- und Jugendbericht der Bundesregierung ausdrücklich auf Forschungs- und Gestaltungsbedarfe (vgl. BMFSFJ 2017, S. 303, 320, 445, 469f.).
 
+
+<!-- PAGE 16 -->
+
+
 Systematische Bestandsaufnahmen zu Digitalisierungsentwicklungen in der Sozialen Arbeit und dem darin enthaltenen Handlungsfeld der Kinder- und Jugendhilfe finden sich bislang nur rudimentär.In der bundesweiten Pulsbefragung'DIGITASA'(vgl.Matthies et al. 2023) wurden Fach-, Führungskräfte sowie Auszubildende und ehrenamtlich Tätige in verschiedenen Feldern der Sozialen Arbeit zu u.a. ihrer Nutzung digitaler Medien im Arbeitsalltag sowie Einschätzungen zur Bedeutung der Digitalisierung in der Sozialen Arbeit befragt. Erste Analysen der Befragung machen deutlich, dass Digitalisierungsentwicklungen in Einrichtungen der Sozialen Arbeit bislang insbesondere administrative Prozesse sowie die Ebene der Kommunikation mit Adressat*innen bzw. der Fachkräfte untereinander betreffen. Eine Betrachtung der bildungsbezogenen Potenziale und Herausforderungen des Einsatzes digitaler Medien in der sozialarbeiterischen Tätigkeit bleibt bislang - abgesehen von medienpädagogischen Initiativen, die sich nur ausschnittweise auf Felder der Sozialen Arbeit beziehen (vgl. Brinda et al. 2019) - aus. Auch mangelt es innerhalb der Theoriebildung Sozialer Arbeit bislang an Forschung zur komplexen Beteiligung der Akteur*innen in soziotechnischen Arrangements, in denen sich Teilhabe bzw. Exklusion konstituieren (vgl. Kutscher 2024). Untersuchungen beschäftigen sich zudem häufig mit der Bedeutung von digitalen Geräten,DokumentenundDokumentationssystemenfürdieArbeitvon Fachkräften mit Adressat*innen (vgl. Böhringer 2015; Ley/Seelmeyer 2018). Hierbei werden Herausforderungen wie die Frage der Priorisierung zwischen standardisierten Formularen und individuellem Unterstützungsbedarf der Klient*innen (vgl. Böhringer 2015, S. 263), aber auch Ambivalenzen im Hinblick auf den subjektbezogenen Nutzen für Fachkräfte herausgestellt.
 
 Werden Digitalisierungsentwicklungen im Handlungsfeld der Kinder- und Jugendhilfe fokussiert, so zeigt sich, dass mittlerweile Fachsoftwareanwendungen in der Falladministration, -dokumentation und -diagnostik etabliert sind (vgl. Ley 2019). Darüber hinaus spielen softwarebasierte Diagnostik- und Einschätzungsverfahren zur Risikoermittlung bei Kindeswohlgefährdung (vgl. Bastian/Schrödter 2015) eine Rolle. Gleichzeitig zeigt sich insbesondere in der Kinder- und Jugendarbeit eine medienpädagogische Befassung mit digitalen Medien und damit verknüpfter ,Medienkompetenzvermittlung' (vgl. Siller/Tillmann/Zorn 2020). Mit Blick auf den Bereich der Online-Beratung (als eine der ersten Dienstleistungen der Kinder- und Jugendhilfe im Internet) sind sowohl quantitative als auch qualitative Erhebungen vorzufinden (vgl. Klein 2007; Kutscher/Zimmermann 2011; Weinhardt 2015). Weitere qualitative Studien (als Ausnahme vgl. Steiner/Luginbühl/Heeg 2019) beschreiben die Nutzung digitaler Medien im Bereich der stationären Erziehungshilfe im Zusammenhang mit Bildungsund Teilhabechancen (vgl. Ackermann 2022; Beckmann/Binder/Lohse 2023; DigiPäd24/7 2022; Hajok 2023; Enssen/Nieding/Stöbe-Blossey 2023; Tillmann/Weßel 2021; Witzel 2015). Als relevante Faktoren werden hierfür u.a. das Zusammenspiel von strukturellen Rahmenbedingungen sowie eines
 
+
+<!-- PAGE 17 -->
+
+
 medienbezogenen Habitus der Fachkräfte und eine Verankerung in Fort- und Weiterbildung thematisiert (vgl. Ackermann 2022). Auch die Bedeutung der sozialpädagogischen Rahmung und Begleitung der digitalen Mediennutzung junger Menschen wird dabei in ihrer Relevanz für die Ermöglichung von Teilhabeoptionen vielfach betont (vgl. u.a. DigiPäd24/7 2022). Hingewiesen wird angesichts der besonderen Relevanz digitaler Medien in stationären Einrichtungen zudem auf Handlungserfordernisse der Praxis (vgl. Kreß/Kutscher 2023). Diese betreffen den Einbezug der Bedarfe von Adressat*innen, eine ausreichende digitale Infrastruktur und hiermit verbunden eine Organisationkultur, die Kommunikationsregeln erfasst und die (medien-)pädagogische Handlungskompetenz in Heimen gezielt fördert. Als Forschungsdesiderat werden 'die unterschiedlichen Rollen, Praktiken und Regeln wie auch die sich gegenseitig verstärkenden, behindernden oder ausgleichenden (Macht-)Prozesse und Mechanismen im Umgang mit digitalen Medien' (Tillmann/Weßel 2021, S. 236f.) zwischen verschiedenen Bildungskontexten angeführt. In Bezug auf Verselbstständigungsprozesse von Jugendlichen wird zudem die Relevanz einer systematischen Analyse des Zusammenspiels unterschiedlicher Alltagskontexte für zukünftige Forschungen betont (vgl. Tillmann/Weßel 2021).
 
 StudienzurBedeutungvondigitalenMedienfürjungeGeflüchteteimspezifischen Kontext der Kinder- und Jugendhilfe in Deutschland liegen bislang nur vereinzelt vor (vgl. Kreß/Kutscher 2020). Hierbei wird u.a. die digitale Elternarbeit mit den Eltern im Herkunftsland untersucht. Im Zusammenhang des Kontakts stellen die digitalen Medien sowohl eine Brücke als auch eine Barriere dar, die u.a. Strategien des Umgangs mit der Medienvermitteltheit erforderlich macht (vgl. Kutscher/Kreß 2018). Zudem wird die Bedeutung einer pädagogischen Rahmung der Mediennutzung geflüchteter Jugendlicher durch Fachkräfte im nonformalen Bereich als relevant für die Entfaltung von Nutzungspotenzialen attestiert (vgl. Friedrichs-Liesenkötter/Hüttmann/Müller 2020). Auch werden organisatorische Herausforderungen von Einrichtungen, wie Hardwareausstattung und Datenschutzfragen, thematisiert (vgl. Kreß/Kutscher 2020, 2023). Während diese Studien meist subjektive Perspektiven von Sozialpädagog*innen fokussieren und lediglich vereinzelt institutionelle und politische Rahmenbedingungen berücksichtigen,stehtdiekonkretePraxisderverschiedenenBeteiligtenimAlltag kaumimFokus,insbesondere wenn es um die Beteiligtheit der jungen Menschen selbst, aber auch die Materialität und Funktionalität digitaler Medien in diesem Zusammenhanggeht.Diesgiltumsomehr,wennsystematischmehrereKontexte der Kinder- und Jugendhilfe und deren Bezüge zueinander das Erkenntnisinteresse bilden (vgl. Seelmeyer/Kutscher 2021, S. 26).
+
+
+<!-- PAGE 18 -->
+
 
 ZumThemenfeldDigitalisierungundinformellesLernen 6 bzw.informelleBildungfinden sich eine Reihe von Trendstudien, die darauf hinweisen, dass der Bereich des Informellen grundsätzlich deutlich stärker in seiner Bedeutung für Bildung berücksichtigt werden sollte (vgl. u.a. mmb Institut 2017), da ein Großteil an digitaler Bildung in Form informellen Lernens stattfindet (vgl. Bertelsmann Stiftung 2017). Studien verweisen daher auf die vielfältigen Potenziale informeller Lernumgebungen (u.a. für den digitalen Kompetenzerwerb) im Alltag junger Menschen (vgl. Autorengruppe Bildungsberichterstattung 2020). Der 16. Kinder- und Jugendbericht der Bundesregierung macht deutlich, dass digitale Medien nur dann als Bildungsraum analysiert werden können, wenn in einer weiten Perspektive sowohl informationsbasiertes Handeln als auch Kommunikation und spielerisches Agieren junger Menschen im Kontext digitaler Medien berücksichtig werden(vgl.BMFSFJ2020,S. 297).HiermitwirddieRelevanzderkontextübergreifendeninsbesondereauchinformellenBezügefürdieRekonstruktionvonBildung und Teilhabe daran hervorgehoben.
 
@@ -148,11 +217,19 @@ Im Zusammenhang von informellem Lernen bzw. informeller Bildung und Digitalisier
 
 6 Informelles Lernen umfasst 'didaktisch nicht organisiertes Lernen in alltäglichen Lebenszusammenhängen, das von den Lernenden nicht immer als Erweiterung ihres Wissens und ihrer Kompetenzenwahrgenommenwird'(AutorengruppeBildungsberichterstattung2020,S.VIII). Diese Lernaktivitäten können auch bewusst und selbstorganisiert erfolgen.
 
+
+<!-- PAGE 19 -->
+
+
 auf digitale Ungleichheit, dass ein 'souveräner Umgang mit digitalen Medien zusätzlich eine instruktionale Unterstützung durch professionelle Lehrpersonen' (Autorengruppe Bildungsberichterstattung 2020, S. 15) erfordert. So sollen zentrale Fähigkeiten und Kenntnisse im Umgang mit digitalen Medien in der allgemeinbildenden Schule vermittelt werden. Diesem Anspruch kann Schule in ihrer Strukturierung und Regulation allein jedoch nicht gerecht werden. Es werden daher non-formale Angebote für die Ermöglichung dieser Aneignungsprozesse - konkret: pädagogische Begleitung durch die Kinder- und Jugendhilfe - potenziell bedeutsam, um individuelle Ausgangslagen zu berücksichtigen. So können non-formale Bildungsangebote sich gezielter an den Bedarfen, Fähigkeiten und Möglichkeiten ihrer Adressat*innen orientieren, um ihnen erweiterte Zugänge zu Ressourcen zu eröffnen (vgl. Kessl et al. 2004).
 
 ## 1.3 Forschungsdesiderata
 
 Mit Blick auf die Gruppe (junger) Geflüchteter legen bisherige nationale und internationale empirische Studien vor allem einen Schwerpunkt auf Nutzungsgewohnheiten mit digitalen Medien. Hierbei wird zwar thematisiert, dass letztere die Bewältigung des Alltags unterstützen und Bildung befördern können. Inwiefern bzw. unter welchen Bedingungen sich dies in den jeweiligen Situationen realisiert, ist bislang allerdings kaum erforscht. Auch zur Bedeutung unterschiedlicher institutioneller Kontexte in Relation zu den subjektiven Voraussetzungen von jungen Geflüchteten gibt es abseits erster Hinweise darauf, dass dies zu untersuchen sei (vgl. Pastoor 2017; Bruinenberg et al. 2019; Neag 2021), keine empirischen Erkenntnisse. Die im Rahmen der nationalen Bildungsberichterstattung entwickelte Differenzierung zwischen formalen,non-formalen und informellen Bildungsorten und -modalitäten spielt in der Erforschung von Bildungsteilhabe und Digitalisierung bislang ebenso wenig eine Rolle wie eine Institutionen- bzw. Organisationsgrenzen überschreitende Perspektive auf damit verbundene Bedingungen und Prozesse. Damit fehlen bis zur vorliegenden Studie Erkenntnisse, inwiefern und unter welchen Bedingungen digitale Medien in unterschiedlichen (institutionellen) Arrangements zur Bildungsteilhabe (junger) Geflüchteter unter Berücksichtigung ihrer ungleichen Ausgangslagen beitragen können. Dabei ist auch unklar, wie die unterschiedlichen Arrangements und ihre jeweiligen Rahmenbedingungen (z.B. institutionelle Logiken, Ziele und Zeitressourcen) in einem Verhältnis zueinander stehen. Eine kontextübergreifende, transorganisationale Betrachtung dieser unterschiedlichen mediatisierten Kontexte und ihrer Bedeutung für die Eröffnung von Bildungsteilhabemöglichkeiten für junge Menschen (und spezifischer junger Geflüchteter) sowie damit verbundenen wechselseitigen Bezüge und potenziellen Brüche zwischen diesen Kontexten steht bislang aus. Auch auf method(-olog-)ischer Ebene
+
+
+<!-- PAGE 20 -->
+
 
 gibt es bislang kaum Studien, die die Potenziale und Grenzen unterschiedlicher qualitativer Forschungszugänge für die Untersuchung von Digitalität im Alltag marginalisierter Gruppen reflektieren (vgl. Kutscher et al. 2022). Auch die empirische Studienlage zu bildungsrelevanten Praktiken und Arrangements und die Beteiligung unterschiedlicher Akteur*innen sowie digitaler Medien selbst in diesem Zusammenhang stehen noch am Anfang. Für diese Fragen versprechen ethnografische Perspektiven, Zugang zu den bislang unerforschten Mikromechanismen von Bildungsteilhabe zu ermöglichen. Dabei kann in einer praxeologischen Ausrichtung - anders als über die Erhebung subjektiver Perspektiven und Erfahrungen - das Zusammenspiel von Artefakten und Akteur*innen die Beteiligung digitaler Medien an ,Lern-, Bildungs- und Sozialisationsgeschehnissen' in den Blick genommen werden (vgl. Bettinger 2020). Solche Zugänge für die Erforschung des Zusammenspiels von Bildungsteilhabe stellen jedoch ein weitgehendes Forschungsdesiderat dar (vgl. Kutscher et al. 2022). An diesen Desiderata setzt die Studie 'Bildungsteilhabe Geflüchteter im Kontext digitalisierter Bildungsarrangements' (BIGEDIB) an, die in diesem Buch vorgestellt wird.
 
@@ -160,17 +237,29 @@ gibt es bislang kaum Studien, die die Potenziale und Grenzen unterschiedlicher q
 
 Die Studie 'Bildungsteilhabe Geflüchteter im Kontext digitalisierter Bildungsarrangements'(BIGEDIB)wurdealseinindenJahren2019bis2022vomBundesministerium für Bildung und Forschung (BMBF) gefördertes Verbundforschungsvorhaben der Universität zu Köln und der Leuphana Universität Lüneburg durchgeführt.Sie war in der Förderlinie des BMBF'Digitalisierung im Bildungsbereich - Grundsatzfragen und Gelingensbedingungen' angesiedelt (Förderzeitraum 2018 bis 2022), in der Fragen zur Bedeutung von Digitalisierungsentwicklungen und damit einhergehenden Anforderungen im Bildungswesen zur Entwicklung von Gestaltungskonzepten im Mittelpunkt standen (vgl. BMBF 2017). Zugleich knüpfte die BIGEDIB-Studie inhaltlich an deutschlandweite bildungspolitische Bestrebungen an, wie die Strategie der Kultusminister Konferenz 'Bildung in der digitalen Welt' (KMK 2016) und dem damit einhergehenden 'DigitalPakt Schule' (BMBF 2019) bzw. die 'Digitalstrategie Kinder- und Jugendhilfe' (JFMK 2022). Mit Bezug auf die Ziele der BMBF-Förderlinie rückte die BIGEDIB-Studie die empirische Untersuchung von Bedingungen für ein ,Gelingen' von Digitalisierungsentwicklungen im Bildungsbereich für junge Geflüchtete in den Blick. Im Folgenden werden 1.) die Zielsetzung und das Erkenntnisinteresse der Studie, 2.) das Untersuchungsdesign und 3.) die Relevanz der Verbundausrichtung sowie die Teilstudien dargestellt.
 
+
+<!-- PAGE 21 -->
+
+
 ## 2.1 Erkenntnisinteresse und Zielsetzung
 
 Im Fokus des Erkenntnisinteresses der BIGEDIB-Studie stand die Exploration der Bedeutung digitaler Medien für die Ermöglichung von Bildungsteilhabe junger Geflüchteter. Um die Frage inklusionsrelevanter 7 Aspekte differenziert zu untersuchen,wurdeimformalen,non-formalenundinformellenBildungsalltag der jungen Geflüchteten die Beteiligung digitaler Medien an verschiedenen Praktiken berücksichtigt. Dabei waren sowohl pädagogisch geplante, ,explizite' (z.B. die unterrichtlich angeleitete Nutzung digitaler Medien) als auch ausdrücklich pädagogisch ungeplante, ,implizite' (z.B. die alltägliche bzw. situative Nutzung digitaler Medien) Situationen und darin eingelagerte digitale Medienbezüge von Interesse. Die Studie zielte darauf ab, die unterschiedlichen Beiträge bzw. ,Leistungen' digitaler Medien am Alltag der jungen Geflüchteten zu rekonstruieren, über die sich sowohl Chancen als auch Hindernisse für Bildungsteilhabe entfalteten können. Methodologisch angeleitet wurde dieses Erkenntnisinteresse durch eine praxistheoretische Perspektive (vgl. Schatzki 2016), mit der sich der Blick auf die situative Praxis und ihre Bedingungen richtete. Um die heterogene und oftmals implizite Einbindung digitaler Medien und die vielschichtigen Verflechtungen der weiteren Beteiligten (Akteur*innen, Institutionen und weitere Artefakte) zu berücksichtigen, wurde unter einer Dezentrierung der Subjekte weniger nach ihren Handlungsmotiven und -optionen gefragt. Stattdessen war von Interesse, wie verschiedene (menschliche und nicht-menschliche) Partizipand*innen in einemteils komplexen Zusammenspiel an der Praxis beteiligt sind (vgl. Bollig 2013) undwelchebildungsrelevantenMöglichkeitenbzw.Limitierungendaraushervorgehen (z.B. in Bezug auf Lernen, gemeinsame Wissensproduktion, dem Erwerb vonFähigkeiten etc.). Vor diesem Hintergrund wurden auch Herausforderungen, Hindernisse,Brüche und Ambivalenzen in den jeweiligen (institutionellen) Bezügen (z.B. Normen, Konzepte, Pädagog*innen) und hiermit verknüpfte ethische wiepragmatischeFragenaufSeitenderInstitutionen,Pädagog*innenundAdressat*innen untersucht. Das heißt, es wurden nicht nur individuelle und ressourcenabhängige Fähigkeiten (bzw. Kompetenzen) junger Menschen mit Fluchterfahrung betrachtet. Vielmehr wurden auch die Bedingungen institutioneller wie außerinstitutioneller Arrangements berücksichtigt, die sich als förderlich bzw. beeinträchtigend für Bildungsteilhabe herausstellen könnten. Dabei rückte auch die Ambivalenz informeller Bildungsorte (z.B. Freizeit und Familie) als einerseits lebensweltnaheAneignungsräumeundandererseitsalsBereichepotenziellerUn-
 
 7 Die BIGEDIB-Studie leitet den ihr zugrundeliegenden Inklusionsbegriff ausgehend von einer universalistischen Bildungs- und Gerechtigkeitsidee ab. Zugrunde gelegt wird hiermit ein weites Inklusionsverständnis (vgl. Budde/Hummrich 2015). Dieses bezieht neben Behinderung auchweitere(exklusionsrelevante) Differenzkategorien mit ein (z.B.Geschlecht,Migration,soziale Herkunft) und geht von Differenzierungsgraden von Teilhabe bzw. Inkludiertheit aus.
 
+
+<!-- PAGE 22 -->
+
+
 gleichheitsreproduktion in den Blick (vgl. Iske/Kutscher 2020). Ziel war es insofern, anhand der empirisch rekonstruierten Bedingungen Implikationen für eine nachhaltige und bildungsteilhabeförderliche Gestaltung digitalisierter Bildungsarrangements in Kinder- und Jugendhilfe und Schule für junge Geflüchtete herauszuarbeiten.
 
 ## 2.2 Untersuchungsdesign
 
 Im Laufe von dreieinhalb Jahren wurde im Rahmen einer multilokalen (vgl. Falzon 2009) Ethnografie (vgl. Breidenstein et al. 2020) der (digitalisierte) Bildungsalltag von jungen Geflüchteten erforscht. Das empirische Feld erstreckte sich dabei auf Einrichtungen bzw. Angebote der Kinder- und Jugendhilfe, Schule undFreizeit. Der Forschungsverbund bestand aus einem Team an der Universität zu Köln und an der Leuphana Universität Lüneburg. Diese nahmen jeweils eine spezifische Institutionenperspektive (Kinder- und Jugendhilfe in der Teilstudie Köln und Schule in der Teilstudie Lüneburg) als ihren Ausgangspunkt für den Eintritt ins Forschungsfeld ein (siehe die folgenden Beiträge zu den beiden Teilstudien i.d.B.). Von dort ausgehend wurden weitere (Bildungs-)Orte im Alltag der jungen Geflüchteten erschlossen. Diese unterschiedlichen institutionellen Zugänge beruhten nicht auf der Annahme, dass in den Institutionen jeweils andere oder getrennt voneinander zu betrachtende Bildungsprozesse stattfänden (beispielsweise nur formale Bildung am Ort Schule). Vielmehr folgte die BIGEDIB-Studie der Differenzierung von miteinander verschränkten Bildungsorten und -modalitäten (formal - non-formal - informell), wie sie für den Nationalen Bildungsbericht erarbeitet worden waren (vgl. Rauschenbach et al. 2004, S. 28f.). Damit wurde es zum einen möglich, unterschiedliche institutionelle Bezüge und damit verbundene Logiken systematisch in den Blick zu nehmen. Zum anderen wurde aber (Medien-)Bildung (vgl. Jörissen/Marotzki 2009) damit auch insbesondere als entgrenztes und komplexes Geschehen (vgl. Erstad 2012) verstanden und nicht verengt im Sinne einer ,Container-Perspektive' (vgl. für die Darstellung des Bildungsverständnisses den Beitrag von Fujii/Kutscher i.d.B.). So wurde beispielsweise angenommen, dass sowohl formale Bildungsarrangements der Schule wie auch non-formale Bildungsarrangements der Kinder- und Jugendhilfe unterschiedliche Anteile an formalem, non-formalem und informellem Bildungsgeschehen aufweisen können, gleichzeitig aber die jeweiligen Rahmungen der formalen, non-formalen oder auch informellen Orte die dort jeweils stattfindenden unterschiedlichen Prozesse mitformen können. Die hier dargelegte Perspektive war somit transorganisational (vgl. Eßer/Schröer 2019) ausgerichtet und bewegte sich zwischen und jenseits einzelner Institutionen zur Fokussierung des Zusammenspiels von Bildungsorten und -modalitäten.
+
+
+<!-- PAGE 23 -->
+
 
 Die multilokale ethnografische Begleitung der Teilnehmenden in die unterschiedlichen Bereiche ihres Alltags ('follow the people', Marcus 1995) war eine Konsequenz der transorganisationalen Perspektive und fand im Rahmen mehrerer Feldphasen mit unterschiedlichen Erhebungsfoki statt (Breidenstein et al. 2020), zu denen parallel die Analyse der Daten erfolgte: die erste Feldphase diente zur Exploration des Felds; die zweite richtete sich auf die systematische Identifikation der beteiligten Artefakte; die dritte untersuchte die Verknüpfungen zwischen unterschiedlichen (institutionellen) Arrangements und die vierte umfasste gezielte Nacherhebungen. 8 Geplant war ursprünglich, in jeder der beiden Teilstudien je fünf junge Geflüchtete aus zwei Institutionen in ihrem Alltag zu begleiten. Aufgrund von Teilnahmeabbrüchen (u.a. aufgrund Veränderungen im Aufenthaltsstatus oder auch Umzügen und eines erschwerten Feldzugangs) wurden letztlich insgesamt 27 junge Geflüchtete im Alter zwischen 12 und 24 Jahren aus 14 Institutionen (acht Einrichtungen der Kinder- und Jugendhilfe in der Kölner Teilstudie und sechs Schulen in der Lüneburger Teilstudie) begleitet. Abbildung 1 veranschaulicht den Verlauf der Erhebungsphasen mit dem dazu parallel verlaufenden Datenauswertungsprozess.
 
@@ -181,6 +270,10 @@ Abbildung 1: Feldphasen der BIGEDIB-Studie
 Das methodische Vorgehen bei der Datenerhebung im Zuge der Feldphasen umfasste hauptsächlich teilnehmende Beobachtungen. Hierbei wurden
 
 8 In Anbetracht der COVID-19-Pandemie als auch aufgrund von Personalvakanzen kam es in beiden Teilstudien zu Abweichungen der ursprünglichen geplanten Datenerhebung. So wurden im Zuge des Lockdowns und der Kontaktbeschränkungen der COVID-19-Pandemie die jungen Geflüchteten und deren Bezugspersonen im Zeitraum von März 2020 bis April 2020 per Telefoninterviews über Einschränkungen in der Teilhabe ihres (Bildungs-)Alltag befragt. Aufgrund der unsicheren Lage und erschwerter Erhebungszugänge (z.B. in den Schulen und Kinder- und Jugendhilfeeinrichtungen) fiel zudem die Entscheidung für die Zusammenlegung der zweiten und dritten Feldphase und deren zeitliche Ausdehnung von April 2020 bis November 2020, um flexibel auf die pandemiebedingten Umstände reagieren zu können. Außerdem erfolgte durch eine bewilligte Laufzeitverlängerung der BIGEDIB-Studie eine Nacherhebungsphase (zur jeweiligen Umsetzung vgl. die nachfolgenden Beiträge der beiden Teilstudien i.d.B.).
+
+
+<!-- PAGE 24 -->
+
 
 detaillierte und ausführliche Einblicke in die Praxis mit ihren Praktiken und Arrangements gewonnen. Daneben wurden ethnografische Gespräche und Interviews mit den verschiedenen Akteur*innen im Feld geführt, um zur Kontextualisierung der Beobachtungen auch darüber hinausgehende spezifische Informationen (z.B. Bildungsvorstellungen und -ziele) sowie Bedingungen institutioneller wie außerinstitutioneller Arrangements zu erfassen. Zusätzlich wurden über Artefaktanalysen (vgl. Lueger/Froschauer 2018) der an den Praktiken beteiligten (digitalen) Medien die in den Artefakten eingeschriebenen (Bildungs-)Potenziale in Relation zur sich vollziehenden Praxis untersucht.
 
@@ -194,6 +287,10 @@ Die spezifische Schwerpunktsetzung der beiden Teilstudien in den jeweils zugrund
 
 9 Detaillierte Informationen zu den erhobenen und analysierten Daten in den Teilstudien finden sich in den jeweiligen folgenden Beiträgen i.d.B.
 
+
+<!-- PAGE 25 -->
+
+
 Konzepte (z.B. der Medienbildung, vgl. Jörissen/Marotzki 2009) explizit eingebunden. In der Teilstudie Lüneburg wurden neben den Beobachtungsdaten vor allem Interviewdaten und die darin geäußerten Sinnzuschreibungen von Subjekten zu digitalen Medien stärker fokussiert und schon früher in der Auswertung theoretische Konzepte einbezogen, wie u.a. das Medienkompetenz-Konzept (vgl. Baacke 1996, 1997), hierbei vor allem Medienkritik (vgl. u.a. die Arbeiten von Ganguin, etwa Ganguin/Gemkow/Haubold 2020), Mediensozialisation und Identitätsarbeit sowie Medienbildung nach Jörissen/Marotzki (2009, 2010) sowie Fromme und Jörissen (2010). Zudem wurde aufgrund der Beobachtungen im Schulunterricht eine Fokussierung auf Aspekte der Mediendidaktik (vgl. u.a. Kerres 2022) vorgenommen. Vor diesem Hintergrund konnten über die jeweiligen Perspektiven der beiden Teilstudien unterschiedliche Schwerpunkte in der Rekonstruktion der Gelingensbedingungen mit Blick auf die Bedeutung digitaler Medien für Bildungsteilhabe bearbeitet werden. 10
 
 ## 3. Aufbau des Buchs
@@ -201,6 +298,10 @@ Konzepte (z.B. der Medienbildung, vgl. Jörissen/Marotzki 2009) explizit eingebu
 Dernachfolgende Beitrag von Michi S. Fujii und Nadia Kutscher stellt eine Ausarbeitung der der BIGEDIB-Studie zugrunde liegenden Methodologie und Methodik dar. Neben der Auseinandersetzung mit der gewählten praxistheoretischen Forschungsperspektive werden hier die emergenten Herausforderungen in Bezug auf die Forschungsgegenstände diskutiert. In den beiden darauffolgenden Beiträgen werden die beiden Teilstudien Köln (Michi S. Fujii, Nadia Kutscher, Antonia Dold, Till Mülheims) und Lüneburg (Henrike Friedrichs-Liesenkötter, Jana Hüttmann, Nico Engfer und Pia Grimpo) dargestellt. Der abschließende Beitrag des Buches präsentiert die standortübergreifenden Ergebnisse der Studie und diskutiert mögliche Anknüpfungspunkte für zukünftige Forschungen.
 
 10 ImRahmenvonzweiExpert*innenworkshopsmitWissenschaftler*innenausdemKontextPraxistheorie, Ethnografie, Fluchtmigration, Digitalisierung, Kinder- und Jugendhilfe, Schule und Bildung wurden die theoretische und methodologische Perspektivierung der Daten mit Hilfe einschlägiger Expert*innen diskutiert und hilfreiche Impulse für den weiteren Interpretationsprozess gesammelt. Dies waren Prof. Dr. Dominik Farrenberg (Katholische Hochschule Nordrhein-Westfalen),Prof. Dr. UdoSeelmeyer(FachhochschuleBielefeld),Prof.inDr. UlrikeKrause (Universität Osnabrück), Prof.in Dr. Anette Korntheuer (Katholische Universität EichstättIngolstadt) und Prof. Dr. Rudolf Kammerl (Friedrich-Alexander-Universität Erlangen-Nürnberg). Diesen critical friends gilt an dieser Stelle noch einmal besonderer Dank.
+
+
+<!-- PAGE 26 -->
+
 
 ## Method(-olog-)ische Aspekte der Erforschung von Bildungsteilhabe unter der Beteiligung digitaler Medien
 
@@ -214,6 +315,10 @@ Das Anliegen der BIGEDIB-Studie, bildungsteilhaberelevante Bedingungen digitalis
 
 1 Spezifische methodische und methodologische Aspekte der beiden Teilstudien werden in den darauffolgenden Kapiteln erörtert.
 
+
+<!-- PAGE 27 -->
+
+
 -einschränkend gestalten kann. 2 Dabei werden neben der ,bewussten' und intendierten Nutzung digitaler Medien auch die alltäglichen, oftmals impliziten Impulse, die die verschiedenen Beteiligten - Menschen und Artefakte - in der Praxis setzen und insofern auch die Bedeutungen digitaler Medien und deren , Wirkungsweisen' am sozialen Geschehen in den Fokus gerückt. Vor diesem Hintergrund geht es somit nicht um sozial- oder auch technikdeterministische Perspektiven wie z.B. eine Fokussierung auf subjektive Deutungen einzelner menschlicher Akteur*innen (zu digitalen Medien) oder eine eingrenzende Perspektive auf ,Personen, die etwas mit Medien machen'. Der Zugang, alle Beteiligten gleichermaßen in den Blick zu nehmen, ermöglicht die Erforschung der Hervorbringung und ,Wirkung' von Bedingungen für Bildungsteilhabe unabhängig von spezifisch subjektiven Deutungen, mit einem ,Blick auf das Ganze', auf Zusammenhänge und Verwobenheiten, Brüche und Widersprüche zwischen Kontext, Beteiligten an der jeweiligen Praxis und dem, was daraus entsteht.
 
 Als besonders gewinnbringend erweist sich hier die neo-praxeologische Perspektive auf das Geschehen von Praxis (vgl. Bollig 2013; Reckwitz 2003; Schatzki 2016). Dabei steht im Mittelpunkt die Annahme, dass alle an sozialen Phänomenen Beteiligten (Menschen, Artefakte, Institutionen und ihre Rahmenbedingungen etc.) diese Phänomene in ihrem Zusammenwirken gemeinsam bzw. verteilt hervorbringen. Vor diesem Hintergrund wird der Stellenwert von Artefakten (und damit digitalen Medien) explizit berücksichtigt. So wird von ,in' den digitalen Medien eingelagerten Logiken bzw. 'Gebrauchs suggestionen ' (Hirschauer 2016, S. 52, Herv. i. Orig.) oder auch Affordanzen (vgl. Gibson 1979; Zillien 2008) ausgegangen, mit denen ,Aufforderungen' bzw. ,Angebote', die sich aus der materiellen Beschaffenheit von Objekten ergeben, gemeint sind, die die jeweiligen zu beobachtenden Aktivitäten (mit) konstituieren, erleichtern, nahelegen, stören oder gar einschränken bzw. verhindern, ohne sie jedoch festlegend zu bestimmen. Die analytische Stärke des 'Beobachtungskonstrukt[s]' (Alkemeyer/Buschmann 2016, S. 117) bzw. 'Beobachterschema[s]' (Hirschauer 2016, S. 60) dieser Praxistheorien liegt dabei in der konzeptuellen Offenheit ihres Vokabulars, mit dem das oben genannte Erkenntnisinteresse bearbeitet werden kann, ohne dass ausgeprägte theoretische Vorannahmen an die beforschten Gegenstände bzw. Akteur*innen herangetragen werden (vgl. Schäfer 2016, S. 14). So können mit diesem Zugang Phänomene wie Aneignung, Vermittlung, Lernen, oder Reflexion in Form von Praktiken sichtbar gemacht und auf ihre impliziten, regelhaften Anteile hin befragt sowie u.a. auch Diskrepanzen zwischen mit den Begriffen verbundenen Programmatiken und dem jeweils in der Praxis Vollzogenen herausgearbeitet werden (vgl. Bittner/Budde 2018, S. 33). Es verschiebt sich insofern der Fokus unter einer Dezentrierung der Subjekte von ihren sinnhaften
@@ -222,9 +327,17 @@ Als besonders gewinnbringend erweist sich hier die neo-praxeologische Perspektiv
 
 Zur Definition von Artefakten vgl. Kapitel 3 zur Artefaktanalyse in diesem Beitrag.
 
+
+<!-- PAGE 28 -->
+
+
 Zuschreibungen oder Orientierungen und richtet sich auf das in den Situationen von menschlichen Akteur*innen, Artefakten und Arrangements performativ Hervorgebrachte und die damit verbundenen Phänomene, in diesem Fall: Möglichkeiten der Bildungsteilhabe unter Beteiligung digitaler Medien im Alltag von jungen Geflüchteten. Ein Anspruch für das weitere method(-olog-)ische Vorgehen lautet daher: 'Akteure sind zu dezentrieren, Artefakte und Techniken ernster und sprachlich verfügbares Wissen weniger ernst zu nehmen, Einverleibungen und Körperperformanzen zu beobachten' (Lengersdorf 2015, S. 177).
 
 Mit Blick auf das praxistheoretische ,Grundvokabular' der BIGEDIB-Studie wird ,das Soziale' anhand von Begriffen wie 'Praxis' und 'Praktiken' beschrieben. Praktiken werden dabei als fundamental soziales und zirkulierendes Repertoire an 'Kulturtechniken' (Reckwitz 2010, S. 190) verstanden, welches die Gesamtheit der Gesellschaft abbildet. Sie sind intelligibel, also von außen für andere verstehbar, da sie ein typisiertes und routiniertes Bündel an körperlich ,aufgeführten' Aktivitäten darstellen (vgl. Reckwitz 2003, S. 289), in denen sich Sinn bildet und artikuliert wird (vgl. Bollig/Kelle 2014, S. 271). Praktiken werden in ihrem Sozialitätsverständnis insofern von 'Handlungen' unterschieden bzw. davon abgegrenzt, da Praktiken das menschliche Tun auf routinisiertes, implizites, meist nicht weiter reflektiertes und kollektiv geteiltes Wissen zurückführen. Demgegenüber werden Handlungen oftmals als Ausführungen von Entscheidungen und individuellen Plänen souveräner Akteur*innen konzipiert (vgl. Hirschauer 2017, S. 91) und sind besonders mit Intentionen der Subjekte verknüpft. Praktiken vollziehen sich in der Praxis , welche den kontingenten Ablauf bzw. Strom des körperlichen Aufführungs- bzw. Vollzugsgeschehens sämtlich möglicher Lebenstätigkeiten darstellt (vgl. Alkemeyer/Buschmann 2017, S. 271f.). Als verkörperte Routinen stellt dabei nicht jedes menschliche Tun eine Praktik dar. Analytisch und zugleich idealtypisch wird vielmehr das Spektrumdersozial-gesellschaftlichenVollzüge differenziert betrachtet. So werden isolierte, einzelne Körperbewegungen nicht als Praktiken, sondern als 'Aktivitäten' bezeichnet (vgl. Lengersdorf 2015, S. 189). Diese Einzelereignisse konstituieren jedoch 'als folgenreiche Bewegungen von Körpern, Sprache und/oder Artefakten' (Budde 2020, S. 63) wiederum Praktiken und sind beobachtbare Oberflächenphänomene, die zu Praktiken in einer spezifischen Art und Weise organisiert bzw. miteinander verknüpft werden und damit über das individuelle Tun einzelner hinausgehen (vgl. Schatzki 2012, S. 13), sodass sie über die jeweiligen Situationen hinweg (und auch vor diesen) bestehen und auch gleichermaßen in anderen Situationen Sinn ergeben (vgl. Lengersdorf 2015, S. 190; Ricken 2019, S. 36). Praxis wiederum stellt in diesem Zusammenhang ein nicht vorhersehbares Wechselspiel menschlichen Tuns dar, in dem sich Praktiken als regelmäßige und übersituative Hervorbringungen ereignen (vgl. Asmussen 2020, S. 48). Der Vollzug dieser beiden Modalitäten des Sozialen ist grundsätzlich materiell geprägt, da eine Angewiesenheit auf Performanzen durch menschliche Körper und Artefakte (und Dinge) besteht (vgl. Bollig/
+
+
+<!-- PAGE 29 -->
+
 
 Kelle 2014,S. 269).Diese Relevanz der menschlichenundnicht-menschlichenMaterialität wird über Schatzkis Verständnis von Arrangements entfaltet. Arrangements sind als 'Verbindungen von Menschen, Organismen, Artefakten und natürlichen Dingen' (Schatzki 2016, S. 33) zu verstehen, innerhalb deren Bedingungen sich Praktiken zum einen vollziehen und zum anderen in ihrer Bedeutung erst durch Praktiken hervorgebracht werden: 'Practices and material arrangements are linked in the sense that practices effect, use, react to, and give meaning to arrangements while arrangements induce, prefigure, and are essential to practices' (Schatzki 2014, S. 19). Um den Blick für diese materiellen Beteiligungen der Arrangements an Praktiken zu schärfen, greift die BIGEDIB-Studie auf Bolligs (2013) Konzept 'verteilter Praktiken' zurück. Dieses Konzept nimmt eine partizipatorische Perspektive in Anlehnung an Hirschauer (2004) ein und fragt danach,welche Beiträge die unterschiedlichen Elemente bzw. Partizipand*innen (oder Beteiligten) eines Arrangements an Praktiken für deren Vollzug leisten. 3 In der vorliegenden Studie bedeutet dies zu untersuchen, welche Bedeutung digitale Medien und weitere Partizipand*innen (z.B. junge Geflüchtete, Fach- und Lehrkräfte, analoge Artefakte etc.) in Praktiken haben und in welchem Verhältnis sie zueinander stehen. Der Status von nicht-menschlichen Elementen gegenüber menschlichen Elementen in der Praxis wird für die vorliegende Studie dabei nicht als völlig gleichrangig (im Sinne der Akteur-Netzwerk-Theorie Latours 1991) betrachtet, da Objekte nur im Zusammenspiel mit menschlichen Partizipand*innen zur Identifikation und sinnhaften Verwirklichung eines sozialen Geschehens beitragen(vgl.Bollig/Kelle/Seehaus2012,S. 224),wieauchSchatzkifeststellt:'no people, no practices' (Schatzki 2017, S. 27).
 
@@ -232,11 +345,19 @@ AusPerspektivederBIGEDIB-StudieistvorallemdieBandbreiteanPraktiken in den unters
 
 3 Schatzki (2012) nutzt dazu in seinen Ausführungen über Arrangements auch die Bezeichnung 'Entitäten'. Es wird auf diese zugunsten der Leser*innenfreundlichkeit verzichtet und stattdessen von Beteiligten, Partizipand*innen oder Elementen gesprochen.
 
+
+<!-- PAGE 30 -->
+
+
 Hillebrandt 2014, S. 11). Hierbei wird nicht versucht, isoliert einzelne Praktiken als Einheiten der Praxis ,herauszupräparieren', sondern vorrangig Praxis (in der sich Praktiken ereignen) und deren Organisation zu erschließen.
 
 ## 1.1 Praxistheoretische Perspektivierung der Forschungsgegenstände
 
 Der BIGEDIB-Studie liegt ein weites Bildungsverständnis zugrunde. Der durch Dewey eingeführte Begriff des 'informellen Lernens' bzw. der 'informellen Bildung' ('informal education') sowie die Formierung des Begriffs der 'non-formal education' im Kontext von UNESCO-Berichten gelten als historische Bezugspunkte der Ausdifferenzierung des Bildungsbegriffs in informelle, non-formale und formale Bildung (vgl. Rohs 2015), wie sie mittlerweile auch in der Nationalen Bildungsberichterstattung etabliert ist (vgl. Autor:innengruppe Bildungsberichterstattung 2022; s.a. BMBF 2008). Mit dieser Differenzierung von Bildung ist somitnichtnurBildungimSinneformalerQualifizierungbzw.Zertifizierungvon Interesse, wie sie i. d. R. mit schulischen Kontexten assoziiert wird. Mit informellem Bildungsgeschehen werden Prozesse der Aneignung und Alltagsbewältigung bezeichnet, die subjektiv und auch unabhängig von pädagogischen Arrangements stattfinden und häufig mit der Freizeit oder dem familialen Kontext verbunden sind. Als non-formale Bildungsprozesse gelten selbstgesteuerte und nicht qualifikationsbezogene, aber in pädagogischen Arrangements stattfindende Formen der Aneignung oder Vermittlung von Fähigkeiten, häufig im Bereich der Kinder- und Jugendhilfe oder anderen außerschulischen pädagogischen Bildungsangeboten angesiedelt (vgl. Rauschenbach 2007). Damit sind neben der formalen Bildung auch Geschehnisse bedeutsam, die darauf ausgerichtet sind, einen ,gelingenderen' Alltag (vgl. Thiersch 2013) durch das Erlangen von (einem Mehr an) subjektiver und sozialer Handlungsfähigkeit zu ermöglichen (vgl. Böhnisch 2010). Diese Erweiterung der Perspektive auf die verschiedenen formalen, non-formalen und informellen Bildungsformen leitete die Forschung von Anfang an, um gerade die im Alltag eingebetteten Aneignungs- und Bewältigungsprozesse in den Blick nehmen zu können, die auch für die jungen Geflüchteten potenziell hochrelevante Aspekte einer Realisierung von Bildungsteilhabe bereitstellen können. In diesem Zusammenhang wurde für eine anschlussfähige weitere Operationalisierung dessen, was empirisch als ,Bildungsrelevantes' im Feld auftauchen könnte, als sensibilisierendes Konzept das transformatorische (Medien-)Bildungsverständnis nach Jörissen und Marotzki (2009) gewählt. Dabei wird angenommen, dass sich Bildung als ein unabgeschlossenes, prozesshaftes Orientierungsgeschehen vollzieht, bei dem sich Sichtweisen auf die Welt und das Subjekt selbst verändern.Bildung wird dabei zu einer Art von Krisenerfahrung,in der sich das bisherige Welt- und Selbstverhältnis eines Menschen als nicht mehr ausreichend erweist, wodurch es zu Bildungsprozessen kommt. Bildung wird
+
+
+<!-- PAGE 31 -->
+
 
 damit nicht in Kompetenzen ,katalogisiert', sondern betrifft unterschiedliche Dimensionen (Wissenslagerung, Handlungsoptionen, Grenzerfahrungen und Biografie) der Gestaltung eines selbstbestimmten und eigenständigen Lebens, die durch Aneignungsprozesse ,verinnerlicht' werden. Vor diesem Hintergrund ist Bildung mit verschiedenen Orten, Akteur*innen und Modalitäten verwoben:
 
@@ -246,11 +367,19 @@ In diesem Zusammenhang und mit Bezug auf die schon oben benannte Systematisierun
 
 Mit der praxistheoretischen Rahmung strukturaler (Medien-)Bildung wird deren Prozesshaftigkeit fokussiert und explizit der Beitrag (digitaler) Medien bzw.Artefakte daran berücksichtigt (vgl. Bettinger 2016, S. 193). Asmussen (2020) folgend, der einen praxistheoretischen Medienbildungsbegriff im Anschluss an Jörissen und Marotzki (2009) entwickelt, versteht die BIGEDIB-Studie Bildung damit als eine ,Krisenerfahrung', die durch die Kontingenz der Praxis bedingt ist. In dieser Krisenerfahrung ,brechen' vertraute Praktiken ,weg', werden fragwürdig oder sie ,funktionieren' nicht mehr, womit diese Momente zum Anlass werden, nachanderenLösungenzusuchenodersichneueFähigkeitenanzueignen.Solche Irritationen der Praxis können auch von den Affordanzen von Artefakten (z.B. digitalen Medien) ausgehen (vgl. Bettinger 2016, S. 192f.). Dabei setzen sich Akteur*innen performativ-gestaltend mit der praxisinhärenten Unbestimmtheit, die ihnen begegnet, auseinander, wodurch sie gemeinsam die Praxis und damit zugleich auch sich selbst konstituieren. Bildung wird hiermit beschreibbar als 'Öffnen eines und als Agieren und Gestalten in einem Möglichkeitsraum [sic!], der erst durch Problemverständnis und Lösungsideen (in einem relationalen und
 
+
+<!-- PAGE 32 -->
+
+
 performativen Verständnis) entsteht und transformiert werden kann' (Asmussen 2020, S. 365). So können im Zuge von Bildungsprozessen die Subjekte praktisches Wissen erlangen, welches sie übersituativ dazu befähigt, die zukünftige Praxis 'kreativ mit- und umzugestalten' (Hörning 2017, S. 80) und zukünftig auf 'sich etablierende situative Kontexte, Anforderungen und Erwartungen so zu reagieren, dass die Reaktionen als sinnvolle, angemessene und somit kompetente Antworten Anerkennung finden' (Alkemeyer/Buschmann 2017, S. 277). Wie bzw. ob sich solche Bildungsprozesse allerdings überhaupt empirisch ,beobachten' lassen und wie sie verlaufen, formuliert Asmussen als eine offene Frage. Er schlägt vor, den Anspruch der empirischen Identifizierbarkeit einzuschränken und Bildung als eine Möglichkeit zu verstehen, die sich für Subjekte über die Beteiligung an Vollzügen der Praxis eröffnen kann (vgl. Asmussen 2020, S. 378f.).
 
 Von einer empirischen Beobachtbarkeit von Bildung selbst wird daher in der BIGEDIB-Studie aus praxistheoretischer Sicht ausdrücklich nicht ausgegangen. Vielmehr werden Bedingungen, innerhalb derer sich so etwas wie Bildung ereignenkann,rekonstruiert.Vor diesem Hintergrund sind Situationen im Alltag 4 von jungen Geflüchteten bedeutsam, in denen sich unter Beteiligung von menschlichen Akteur*innen und (nicht nur digitalen) Artefakten der Vollzug von Praxis als fordernd, problemhaft oder belastend herausstellt (vgl. Wiezoreck 2016), sodass die jeweiligen Beiträge der verschiedenen Beteiligten (' Reparaturleistungen ', Rode/Stern 2017, S. 238, Herv. i. Orig.) für dessen Gelingen bzw. Aufrechthalten sichtbar werden. Auch ist beispielsweise solche Praxis von Interesse, die explizit aufdieAneignungvonWissenoderFähigkeitenausgerichtetist.DiessindimFeld dannMomente,indenenDingeangeeignet,gezeigt bzw.vermittelt,ausprobiert, erprobt oder kennengelernt werden. Mit Blick auf die Zielsetzung der BIGEDIBStudie geht es dabei darum aufzuzeigen, welche Bedingungen diese Praxisvollzüge in verhindernder oder ermöglichender Weise prägen. So können Anteile der Praxis, in denen Aneignung, Vermittlung und Reflexion und die Beteiligung von digitalen Artefakten in unterschiedlichen Arrangements sichtbar werden,als Elemente von Bildungsprozessen, die mediale Bezüge aufweisen (vgl. Jörissen/Marotzki 2009), rekonstruiert werden. Teilhabe (an Bildung) beschränkt sich dabei nicht auf bloße ,Mitgliedschaft' im Sinne eines Dabeiseins und die unmittelbare Beteiligtheit an bildungsbedeutsamen Praktiken (vgl. Herzmann/Merl 2017), wodurch es Akteur*innen möglich wird, den Vollzug von Praktiken ,aktiv' mitzugestalten bzw. daran mitzuwirken. Sie ist auch, als Gegenpol zu Exklusion (vgl. Kronauer2010),als Folge desBeteiligtseins an Praktiken zu verstehen,welches Ak-
 
 4 Alltag wird hier praxistheoretisch als Bündel von Lebensdomänen oder Lebens-Bereichen gefasst (vgl. Reuter/Lengersdorf 2016, S. 372). In Bezug auf Gewohnheiten und Routinen ist hiermiteinbeständigerZusammenhanggemeint,indemsichAkteur*innenbewegenundderüberall existieren kann, ohne zu implizieren, dass alltägliche Praktiken in ihm stets reibungslos und vorhersehbar verlaufen (vgl. Reda/Runkel 2019, S. 212f.).
+
+
+<!-- PAGE 33 -->
+
 
 teur*innen befähigt (vgl. Alkemeyer/Buschmann 2017), über erweiterte Möglichkeiten zur Lebensbewältigung zu verfügen (z.B. ein Mehr an Wissen, Problemlösungsmöglichkeiten, Fähigkeitenerweiterung u.ä.).
 
@@ -260,6 +389,10 @@ Aus einer neo-praxeologischen Perspektive ist das Konzept des Subjekts entgegen 
 
 SowirdüberdieseAnsätze,dieWelt'vordergründigausderPerspektivevon,sinnhaft'Handelnden betrachtet.
 
+
+<!-- PAGE 34 -->
+
+
 werden, wenn die Praktiken, an denen sie partizipieren, darauf ausgerichtet sind bzw. waren, als Geflüchtete adressiert zu werden. Anknüpfend an Bolligs (2013) Überlegungen zu verteilten Praktiken wird Subjektivität dabei 'im jeweils historisch situierten - beileibe nicht immer harmonischen - Wechselspiel mit anderen (menschlichen wie nicht-menschlichen) Partizipanden [ge]bildet, konturiert und verändert' (Alkemeyer/Buschmann 2016, S. 129). In diesem Sinn werden für die BIGEDIB-Studie die Möglichkeiten und Befähigungen für die Teilnahme an Praktiken zur Einnahme von bestimmten Subjektpositionen bedeutsam (vgl. Bollig/Kelle 2014, S. 270, 276). So weist nicht jede*r Akteur*in das praktische Wissen und Können auf, welches es zur Teilnahme an (hier: bildungs-)relevanten Praktiken bedarf, womit die Realisierung von Teilhabe zu einer Frage von Passungen wird (vgl. Lengersdorf 2015, S. 192). Es werden daher in dieser Untersuchung nicht Deutungen aus Subjektperspektive rekonstruiert, sondern immer der Blick auf Praktiken, Arrangements (institutionelle Settings, Normen, Rahmenbedingungen), innerhalb derer sich die Praktiken vollziehen, sowie auf die daran beteiligten Akteur*innen und Artefakte gerichtet.
 
 Widmet man sich digitalen Medien, so weisen diese (im Zuge der zunehmenden Technologisierung und Digitalisierung des Alltags, vgl. Stalder 2016) vielfältige multimodale Nutzungs- und Anwendungspotenziale auf, die über die Möglichkeiten des Informationsaustauschs und der sozialen Kommunikation ,traditioneller' Medien hinausreichen (vgl. Hoffmann 2017, S. 162). Diesen Bezugsrahmen greifen praxistheoretische Ansätze (und auch die BIGEDIB-Studie) auf, indem sie von funktionalistischen Zuschreibungen digitaler Medien im Sinne vergegenständlichter und neutraler Werkzeuge menschlichen Willens (vgl. Asmussen 2020, S. 79) Abstand nehmen und diesen stattdessen einen starken Performativitätsbegriff zugrunde legen:
@@ -268,11 +401,19 @@ Widmet man sich digitalen Medien, so weisen diese (im Zuge der zunehmenden Techn
 
 Ebenso wie Subjekte durch Praktiken hervorgebracht werden, entfaltet sich auch die Bedeutung verschiedener digitaler Medien erst performativ im Moment ihrer Nutzung, ohne dass ihre Funktionsweisen und sozialen Bedeutungen a priori objektiv gegeben sind (vgl. Allert/Asmussen/Richter 2017, S. 146). Neuere praxistheoretische Lesarten digitaler Medien verwehren sich daher auch herkömmlichenOnline-/Offline-Dichotomien,daderfokussierteGegenstandsbereicheiner eindeutigen Zuordnung zu einer Sphäre zuwiderläuft (vgl. Bettinger 2020, S. 61). Ein praxistheoretisches Verständnis digitaler Medien, wie es für die BIGEDIBStudie leitend ist, orientiert sich insofern grundlegend an deren Gebrauchsweisen (vgl. Rode/Stern 2017, S. 237). Dabei wird auch die Materialität digitaler Me-
 
+
+<!-- PAGE 35 -->
+
+
 dien bzw. deren Beschaffenheit berücksichtigt, ohne sie zu zentrieren. So ist die Frage nach den Aufforderungsstrukturen (bzw. Affordanzen) des jeweiligen Mediums als eine sich im produktiven und rezeptiven Vollzug entfaltende Größe zu betrachten (vgl. Bettinger 2020, S. 61). Während sich digitale Medien also einerseits erst in ihrer spezifischen Gebrauchsweise realisieren, präfigurieren sie andererseits Praxis im Fluchtpunkt kollektiver Wissensordnungen (vgl. Rode/Stern 2017, S. 234). Gemeint ist, dass sie ' Durchgangspunktesozialer Praktiken ' darstellen, indem sie 'immer mehr zu Umwelten unterschiedlicher sozialer und kultureller Praktiken werden' (Göttlich 2010, S. 29, Herv. i. O.). Digitale Medien stellen somitaucheineimGefügederPraxisexistierendespezifischeKonfiguration(jedoch keine Praktik) im Vollzug dar (vgl. Asmussen 2020, S. 79), die Praktiken (ermöglichend oder auch begrenzend) mit bedingt (vgl. Carstensen et al. 2014, S. 13f.). Als 'Praxiszusammenhänge' (Göttlich 2010, S. 30) bringen digitale Medien ein Netzwerk von Körpern und Artefakten mit hervor, welche selbst wiederum Orte der (Re-)Produktion des Sozialen und Kulturellen darstellen. Eine praxistheoretische Perspektive verteilter Praktiken (vgl. Bollig 2013) impliziert hier, wie oben dargestellt, digitale Medien als Partizipand*innen von Praktiken zu verstehen und derenBeiträge(bzw.,Handlungsmacht')indiesenPraktikenzufokussieren.Nichtsdestotrotz können digitale Medien nicht losgelöst von Körpertechniken (z.B. Tippen) gedacht werden, welche sich als kulturalisierte Praktiken ausgebildet und etabliert haben, und wären ohne diese belanglos. Das heißt, dass auch digitale Medien grundsätzlich mit Materialität(-en) verknüpft sind, wenngleich sich die Materialität der digitalen Medien selbst nicht immer zwangsläufig erschließen lässt, da diese sowohl sichtbar und berührbar (z.B. als Gerät ein Smartphone) als auch,unsichtbar'(z.B.als Infrastruktur das Internet) sein können (vgl.Hoffmann 2017, S. 164 f.).
 
 ## 2. Ethnografie
 
 Praxistheorien weisen keine einheitliche Methodik auf (vgl. Carnin 2020, S. 93), legen jedoch Forschungszugänge nahe,mit denen die Hervorbringung von Praxis (hier: Bildungsteilhabe junger Geflüchteter in digitalisierten Bildungsarrangements) in den performativen Momenten ihrer Realisierung fokussiert werden kann (vgl. Thole et al. 2011, S. 117). Ausgehend von der praxistheoretischen Ausrichtung der BIGEDIB-Studie bedarf es daher eines Forschungsansatzes zur Erforschung von Bildungsteilhalbe in ihrer 'empirischen Vollzugswirklichkeit' (Neumann 2013, S. 152). Wie Farrenberg erläutert, findet sich dieser Anspruch insbesondere über die Ethnografie eingelöst (vgl. Farrenberg 2018, S. 50, 76), einer Forschungsstrategie, welcher mit ihrem Fokus auf Beobachtungen eine 'Wahlverwandtschaft' (Alkemeyer/Budde/Freist 2013, S. 17) zur Praxistheorie zugeschrieben wird. So ist die Ethnografie in ihrer ,entdeckenden' Haltung sen-
+
+
+<!-- PAGE 36 -->
+
 
 sibler als sämtliche vergleichbaren Ansätze auf die Sinnschichten von Praktiken ausgerichtet (vgl. Breidenstein et al. 2020, S. 37), die als ein durchweg ,öffentliches' (und nicht durch individuelle Handlungsmotive eingeleitetes) Geschehen gefasst werden (vgl. Schmidt/Volbers 2011, S. 33). 6 Dabei greift die Ethnografie zur Datengewinnung vor allem auf die für sie kennzeichnenden (Wechsel-)Bewegungen von teilnehmender Beobachtung und beobachtender Teilnahme zurück und erkennt damit an, dass sich Sozialität performativ in einem Zusammenspiel von Akteur*innen, Artefakten und Kontexten fortwährend in praktischen Vollzügen konstituiert (vgl. Farrenberg 2018, S. 76).
 
@@ -282,19 +423,35 @@ Ethnografie findet dazu in Feldern statt, die als lokale Einheiten verstanden we
 
 7 Das, was dabei das Feld darstellt, wird durch die Ethnograf*innen markiert und entsteht folglich relational aus dem Verhältnis von Forschungsobjekt und -subjekt (vgl. Farrenberg 2018, S. 86): Es ist sowohl ein Gegenstand als auch eine Perspektive (vgl. Neumann 2012b, S. 224f.). So erkundenEthnograf*innenFeldervoninnenheraus,welcheihnenjenachBeobachtungsstandpunkt in einer unterschiedlichen Verfassung erscheinen. Dabei sind auch die Forschungsgegenstände der Felder nicht als ,gegebene' Tatsachen zu verstehen, sondern werden erst im Zuge der Fokussierung der Ethnograf*innen durch das jeweilige Erkenntnisinteresse als solche hervorgebracht (bzw. objektiviert) und sind in dieser Konstruktionsweise zu reflektieren (vgl. Farrenberg 2018, S. 88).
 
+
+<!-- PAGE 37 -->
+
+
 gen fortwährend erarbeitet, die u.a. auch zum Ausgangspunkt nachfolgender Feldaufenthalte werden (vgl. Bollig/Schulz 2019, S. 38f.). Der ethnografische Erkenntnisstil des Entdeckens ist dabei durch die 'Verwandlung von Fremdem in Vertrautes und von Vertrautem in Befremdliches' (Breidenstein et al. 2020, S. 15) organisiert. So wird das Beobachtete in seiner Selbstverständlichkeit über eine (innere) Distanzierung der Forschenden kritisch hinterfragt. Die Erfahrung der Teilnahme wird als zentraler Erkenntnismehrwert der Ethnografie eingeordnet: In Sinne einer partiellen Sozialisation bzw. Enkulturation des zu erforschenden sozialen Zusammenhangs sollen Ethnograf*innen bis zu einem gewissen Grad zu einem Teil des Phänomens werden, um Zugang dazu zu erhalten (vgl. Bollig/Schulz 2019, S. 36). 8 Ethnograf*innen betreiben insofern erfahrungsbasierte Forschung, indem sie selbst das ,Forschungsinstrument' darstellen und die methodischen Konzepte verkörpern (vgl. Breidenstein et al. 2020, S. 42). Charakteristisch für die Ethnografie ist des Weiteren ihre besondere Offenheit im Zugang zum Forschungsgegenstand (vgl. Breidenstein et al. 2020, S. 42f.). So wird der gesamte methodische Zuschnitt durch den Forschungsgegenstand angeleitet (vgl. Bollig/Schulz 2019, S. 35), das heißt, Erkenntniseinstellung und Vorgehen orientieren sich an der Angemessenheit in Bezug auf den Forschungsgegenstand. Dabei gründet die Ethnografie auf der theoretischen Annahme, dass ihre Felder über eine Eigenlogik bzw. eine eigene Ordnung verfügen, die die Forschenden ,an die Hand nimmt', sie ,führt' und von der sie sich ,treiben lassen' (vgl. Breidenstein et al. 2020, S. 43): So vollzieht sich Praxis unabhängig von wissenschaftlichen Beobachter*innen ,immer bereits auf eine in sich geordnete Weise'.
 
 Mit der Offenheit der Ethnografie geht eine Methodenpluralität einher, die die Erforschung der Komplexität und Diversität von Praxis ermöglicht (vgl. Mattoni 2020, S. 2834). So ist gerade vor dem Hintergrund des Anliegens der BIGEDIB-Studie ein ethnografisches Forschungsdesign, welches unterschiedliche Datensorten miteinbezieht, naheliegend, um beispielsweise die Verteilung von Agency zwischen unterschiedlichen Beteiligten (menschlichen Akteur*innen, Artefakten) unter den Bedingungen von Digitalität zu erfassen (vgl. Bettinger 2020, S. 68). Dabei ist das ethnografische Methodenrepertoire in unterschiedlicher Hinsicht zur Erforschung der Praxis geeignet. So wird vor allem die teilnehmende Beobachtung als vorherrschender Erhebungsmodus für praxistheoretische
 
 8 Die langfristige Platzierung der Ethnograf*innen im Forschungsfeld basiert auf der fortwährenden Verschränkung der erfahrungsbasierten Datenerhebung und des analytischen Denkens.Die fortschreitend entwickelten analytischen Konzepte erfordern eine stete Prüfung ihres empirischen Auflösungsgrads durch die gezielte Suche im Feld nach kontrastierenden Erfahrungen. Feldaufenthalte finden daher nicht einmalig statt. Vielmehr wird die Entwicklung von Konzeptualisierungen Ausgangspunkt weiterer Beobachtungsaktivitäten, indem zwischen der Forschung vor Ort und der Forschung am Schreibtisch (z.B. Anfertigen von Feldprotokollen, Memos,Analysen etc.) permanent gewechselt wird (vgl. Bollig/Schulz 2019, S. 38f.).
 
+
+<!-- PAGE 38 -->
+
+
 Forschung benannt (vgl. Schmidt 2017a, S. 104). Diese ist 'eine aktive Konstruktionsleistung von Subjekten, die in einem unauflöslichen Zusammenhang von Wahrnehmungsprozessen, Wissensbeständen, Gedächtnisleistungen, Emotionen und (Vor-)Urteilen in einem je konkreten sozialen und kulturellen Kontext entsteht' (Bollig 2011, S. 34) 9 und zu der je nach Forschungsfeld eine Anpassung an die jeweiligen Erfordernisse (mit technischer Unterstützung) vorgenommen werden kann (vgl. Bollig/Schulz 2019, S. 43). Zugleich umfasst die ethnografische Aufmerksamkeit mehr als rein visuelle Beobachtungen: Demgemäß ist die Beobachtung kein passiver Vorgang, der sich lediglich auf die visuelle Wahrnehmung beschränkt, sondern sie gilt vielmehr deshalb als teilnehmend, da sich Ethnograf*innen in das Feld begeben und sich an den dort auffindbaren Situationen beteiligen (vgl. Knoblauch/Vollmer 2019, S. 607). Das heißt, Ethnografie ist 'Teilhabe an der Introspektion sozialer Situationen' (Amann/Hirschauer 1997, S. 24). Teilnahme und Beobachtung bilden dabei zwei Register, die unterschiedliche Perspektiven auf die Geschehnisse im Feld ermöglichen und zwischen denen Ethnograf*innen permanent wechseln (vgl. Breidenstein et al. 2020, S. 78ff.). Dieser methodische Zuschnitt ermöglicht in besonderem Maße, die materiellen, impliziten und sozialen Sinnschichten von Praktiken als Bereich 'öffentlich gelebter Sozialität' (Breidenstein et al. 2020, S. 37) in den Blick zu nehmen (vgl. Mattoni 2020, S. 2834). Während teilnehmende Beobachtungen den Vollzug der Praxis in den Blick rücken, bleiben ihnen allerdings die Bedeutungen und Motive von Akteur*innen ,hinter' den Praktiken verwehrt (vgl. Knoblauch/Vollmer 2019, S. 609). Um diese mit einzubeziehen - ohne anzunehmen, dass sie die ,eigentliche Wahrheit' zugänglich machten, jedoch eine Perspektive auf das gesamte Arrangement zutage fördern - werden beispielsweise ethnografische Gespräche mit Teilnehmenden als sinnvoll erachtet. Damit lassen sich Einschätzungen, Intentionen, Umgangsformen und Erfahrungsweisen aus der Perspektive der Befragten beschreiben. Allerdings stellen Feldgespräche und Interviews im Sinne der praxistheoretischen Methodologie nicht getreue Abbilder der vergangenen Praxis dar, sondern 'situationsspezifische, praktisch vollzogene Darstellungs-
 
 9 In diesem Zusammenhangistzuberücksichtigen,dassjedeFormderDatenerhebungeinekonstruktive Leistung darstellt, da kein Verfahren einen unmittelbaren Zugang zu dem bietet, was untersucht werden soll (vgl. Flick 2011, S. 56). So ist insgesamt keine rekonstruktive Forschung unabhängigvonderPersonderForschendendenkbar.JedesVerfahrenistdabeizugleichalsnotwendige Komplexitätsreduktion des Untersuchten zu verstehen, 'um überhaupt etwas Spezifisches über den Gegenstandbereich aussagen zu können, weil nämlich nicht alle Aspekte der komplexen Praxis gleichzeitig ,unter die Lupe' genommen werden können' (Kelle 2001, S. 202). Ethnografische Daten widersetzen sich (im Gegensatz zu positivistischen Modellen) demnach einer strikten Trennung zwischen einem ,objektiv' aufgezeichnetem Datum und einer nachträglich gewonnen Interpretation. Sie existieren nicht als ' hard facts ' oder 'rohe Daten' (Krinninger 2018, S. 7, Herv. i. Orig.) außerhalb einer bereits interpretierten sozialen Realität, sondern sind ,nur' Platzhalter sozialer Phänomene: 'Das Gegebene ist etwas durch die ethnografische Forschungs- und Analysepraxis Gemachtes ' (Breidenstein et al. 2020, S. 133, Herv. i. Orig.).
 
+
+<!-- PAGE 39 -->
+
+
 leistungen' (Birkholz/Bochmann/Schank 2020, S. 342). Die Aussagekraft solcher DatenwirdfürdiePraxistheoriedementsprechendkontroversdiskutiert.Sokönnen in Interviews und Feldgesprächen Akteur*innen Beschreibungen der Praxis bereitstellen, bei der Ethnograf*innen nicht anwesend sein konnten ('People can talk about their practices', Hitchings 2012); sie können zudem Unterschiede und Widersprüche sowie Überschneidungen, Kontextualisierungen und Ergänzungen zum Beobachteten aufzeigen (vgl. Flick 2011, S. 73). Nichtsdestotrotz bergen diese Zugänge auch das Risiko, die materielle Charakteristik von Praktiken zu vernachlässigen und Deutungen aus Subjektperspektive höher zu gewichten (vgl. Knoblauch/Vollmer 2019, S. 609). Aussagen und Erzählungen werden daher in ihrem Status als Wissensformen nicht als gleichrangig zu Beobachtungen der Praxis verstanden, sondern sind als 'methodisch prekärer Anknüpfungspunkt' (Bettinger 2020, S. 70) an Praktiken einer sorgfältigen Reflexion in ihrer Verweishaftigkeit und Einbettung zu unterziehen.
 
 Neben der methodenvielfältigen Präsenz im Feld ist für die Ethnografie die Explikation der dortigen Situationen, Erfahrungen und Eindrücke zentral. Die maßgebliche Form der Produktion und Analyse ethnografischer Daten ist daher das Schreiben (vgl. Bollig/Schulz 2019, S. 39), welches den Repräsentationsmodus der Praxis darstellt (vgl. Farrenberg 2018, S. 93). So ermöglicht das Schreiben insbesondere in Form von Feldprotokollen - detaillierte Darstellungen der Beobachtungssituationen und der sich darin vollziehenden Praxis in ihrer leibhaften, performativen Form (vgl. Bollig/Schulz 2019, S. 40). Die Ethnografie stellt dazu eine Reihe von methodischen Werkzeugen zur Verfügung, über die Erkenntnisse zu den beforschten Phänomenen entfaltet, rekombiniert und begrifflich expliziert werden (vgl. Breidenstein et al. 2020, S. 204ff.). So erstreckt sich die ethnografische (Schreib-)Arbeit von Feldnotizen über Beobachtungsprotokolle bis hin zu Kodierungen, Maps, Memos und weiteren Analysen und mündet schließlich in einen Forschungsbericht bzw. eine Publikation (vgl. Bollig/Schulz 2019, S. 42). Dabei ermöglichen Kodierungen über das intensive Zeile-für-ZeileLesen der Beobachtungsprotokolle eine erste Identifizierung, Ideenentwicklung und Sortierung von wissenschaftlich relevanten Themen im Datenmaterial (vgl. Breidenstein et al. 2020, S. 142ff.). Da Kodes allerdings gerade zu Beginn nicht selten einen zufälligen und unpräzisen Charakter aufweisen, werden in einer Bewegung des zooming in ethnografische Sequenzanalysen vorgenommen, welche 'die Rekonstruktion der immanenten Logik von Abläufen ' (Breidenstein et al. 2020, S. 166, Herv. i. Orig.) fokussieren. Darin werden einzelne Situationen aus den Protokollen auf ihre innere Bedeutung, Dynamik und Pragmatik für das Feld hin intensiv interpretiert (vgl. Bollig/Schulz 2019, S. 40f.), um die oft impliziten Regeln und Ordnungen der Praxis herauszuarbeiten. Dabei verweisen Wiederholungen, Routinen oder gar Rituale auf Exemplarisches dieser Ordnungen, während Krisen oder Ausnahmen auf Abweichungen von ,Normalität' und
+
+
+<!-- PAGE 40 -->
+
 
 Routinen hindeuten. Die Detailarbeit der Sequenzanalyse ist in der Logik von Fallanalysen organisiert:
 
@@ -308,11 +465,19 @@ Diepraxistheoretische Ausrichtung der BIGEDIB-Studie definiert den ethnografisch
 
 11 Themen bzw. Muster stellen theoretische und thematische Anknüpfungen an (sozial-)wissenschaftliche Diskurse dar. Literaturarbeit zur Schärfung von theoretischen Zusammenhängen erweist sich dabei als unerlässlich. Davon gilt es sich für die Entwicklung analytischer Themenzugleich jedoch auch ,rechtzeitig' zu lösen. So sind die Fallanalysen (gegenüber bisherigen Studien) als eigene empirische Erkundungen in einem spezifischen Kontext zu verstehen. Eine Wiederholung ,alter' Begriffe und Konzepte vermag hier nicht die Besonderheiten der eigenen Forschung zu berücksichtigen (vgl. Breidenstein et al. 2020, S. 178, 182).
 
+
+<!-- PAGE 41 -->
+
+
 gen nahe. Zugleich wird das ethnografische Postulat der Teilnahme ernst genommen,umeinenZugangzumimplizitenundinkorporiertenWissenderAkteur*innen zu erhalten. Dabei gilt es jenseits ,offizieller' bzw. intendierter (pädagogischer) Ziele und Programmatiken zu rekonstruieren, wie soziale Zusammenhänge - möglicherweise auch in Widerspruch zu ,offiziellen' Programmen - wirkmächtig werden (vgl. Budde 2015, S. 10). Interviews und Feldgespräche stellen in diesem Zusammenhang einen ergänzenden Erkenntniszugang dar, um Kontexte von Praktiken zu beleuchten. In ihrem Erkenntniswert über Hervorbringungen der Praxis werden sie jedoch als nachrangig eingeordnet, sofern sich in den Aussagen der Akteur*innen keine ausführlichen Beschreibungen von Vollzügen wiederfinden. In der Dateninterpretation stellen die Fälle der Analyse die beobachteten und protokollierten Situationen und die sich darin vollziehende Praxis dar. Mit Blick auf die Übersituativität von Praktiken, den Stellenwert von Materialität und den Anspruch der Bildung ,neuer' Konzepte werden in dieser Studie zur Präzisierung der Analysen über die Vorschläge der Ethnografie hinaus im weiteren Verlauf weitere methodische und methodologische Zugänge aufgegriffen. Dies sind die multilokale Ethnografie, die Artefaktanalyse und die Grounded Theory Methodology.
 
 ## 2.1 Multilokalität in der Ethnografie
 
 Die praxistheoretische Ausrichtung der vorliegenden Studie legt ein Sozialitätsverständnis zugrunde, nach dem sich bildungsteilhaberelevante Praxis nicht nur an einzelnen Orten vollzieht, sondern 'in the conceptual frameworks of hybrid, dispersed, networked, and transnational, and thus, supra-local figurations' (Bollig et al. 2015, S. 15). So wird davon ausgegangen, dass die bildungsrelevanten Praktiken der jungen Geflüchteten (z.B. das Bewältigen von Bewerbungen) sich nicht lediglich innerhalb einzelner Räume wie z.B. einem Angebot der Kinderund Jugendhilfe oder einem unterrichtlichen Setting vollziehen, sondern erst durch Querverbindungen zwischen Alltagssituationen an unterschiedlichen Orten und durch dort jeweils angeeignete Fähigkeiten und Anwendungs- bzw. Aneignungsmomente so etwas wie Bildung, Erweiterung von Handlungsoptionen und ein Zuwachs an Autonomie entstehen. Bildungsteilhaberelevante Praxis kann also nicht innerhalb von ,containerartigen' Orten (z.B. Schule, Heimeinrichtung), sondern erst mit einer Perspektive rekonstruiert werden, welche die verteilten Praktiken im Zusammenhang verschiedener Orte und unter Beteiligung unterschiedlicher Akteur*innen und ggf. Artefakte beobachtet. Somit werden Praktiken nicht als lokal gebundene, sondern als multilokale Phänomene fokussiert (vgl. Carnin 2020, S. 111f.). Sie transzendieren - wie in Kapitel 1 ersichtlich wird - raum-zeitliche Begrenzungen (vgl. Jaeger/Nieswand 2022) und legen den Situationen unterschiedlicher Orte ihre jeweilige Logik zugrunde
+
+
+<!-- PAGE 42 -->
+
 
 (vgl. Amelina 2019, S. 41). Damit wird auch die mögliche Hervorbringung von Bildungsteilhabe als Praxis zu einem grenzüberschreitenden Phänomen, dessen spezifische Ausgestaltung sich stets im (über-)lokalen Wechselspiel von Praktiken und Arrangements realisiert (vgl. Schatzki 2002, S. 59). Monolokales Forschen wird daher einer adäquaten Rekonstruktion der vorliegenden Forschungsgegenstände nicht gerecht und steht in der Gefahr, ein verzerrtes Bild zu produzieren. Die BIGEDIB-Studie wählte daher einen Ansatz, der die Multilokalität von Praktiken in ihren verbindenden Logiken (aber auch Brüchen und Diskontinuitäten) angemessen berücksichtigt (vgl. Carnin 2020, S. 111) und den jungen Geflüchteten an die unterschiedlichen Schauplätze ihres (Bildungs-)Alltags folgt. Dieser Anspruch wird durch den von George E. Marcus (1995) eingeführten Ansatz der multi-sited ethnography (vgl. auch Falzon 2009) eingelöst.
 
@@ -324,9 +489,17 @@ Die multi-sited ethnography nimmtan,dass die Fragmente des Weltsystems räumlich
 
 12 Für die praxistheoretische Ausrichtung der vorliegenden Studie ist Marcus' Idee des Weltsystems überaus anschlussfähig an Schatzkis flache Ontologie (2016). Beide konzipieren soziale Phänomene in dem Ausmaß ihrer Ausbreitung auf einer einzigen Ebene, ohne in Mikro- oder Makro-Differenzierungenzuverfallen.SoüberlagertauchMarcus'Weltsystemnichtstrukturalistisch soziale Phänomene, sondern 'besteht aus vielen konkreten Orten seines Vollzuges, der cultural formation ' (Carnin 2020, S. 111, Herv. i. Orig.).
 
+
+<!-- PAGE 43 -->
+
+
 Nieswand 2022). Dabei geht es nicht bloß darum, unterschiedliche Einzelfälle aufzuaddieren, sondern Verflechtungszusammenhänge unterschiedlicher sites sichtbar zu machen (vgl. Mikuszies 2018, S. 32). So können Vergleiche zwischen den jeweiligen sites auch den Blick für überraschende Brüche in Sinnstrukturen sozialer Phänomene und auf die innere Logik ihrer Verbindung eröffnen (vgl. Aden 2019, S. 231). Die multi-sited ethnography setzt dabei allerdings nicht voraus, dass die jeweiligen sites gleichermaßen intensiv beforscht werden. Welche sites stärker ( thickly ) und welche weniger intensiv ( thinly ) untersucht werden, unterliegt inhaltlichen, theoretischen und strategischen Entscheidungen. So liegt das Ziel nicht darin, in einem holistischen Projekt den Forschungsgegenstand als ,Ganzes' zu erfassen, sondern unter begründeten Selektionen Relevantes für eine angemessen Interpretation eines Phänomens aufzuspüren (vgl. Aden 2019, S. 233; Jaeger/Nieswand 2022; Nieswand 2008, S. 89f.) und dabei besonders die Gegenstandsangemessenheit des Zugangs zu berücksichtigen (vgl. Jaeger/ Nieswand 2022, S. 10). Genutzt werden dafür in Abhängigkeit vom jeweiligen Untersuchungsinteresse mehrere Strategien des following , die dazu dienen, aus unterschiedlichen Perspektiven die relevanten sites der Untersuchung zu konstruieren (vgl. Aden 2019, S. 232; Nieswand 2008, S. 95): follow the people , follow the thing , follow the metaphor , follow the plot, story or allegory , follow the life or biography , follow the conflict (vgl. Marcus 1995, S. 105ff.). Diese Strategien leiten die multilokale Bewegung der Forschenden an und fokussieren die Figur der Grenzüberschreitung. Das heißt, ausgehend von der jeweiligen Perspektive des following wird die über einzelne Räume verteilte Praxis entlang unterschiedliche sites erkundet und in deren Verhältnis zueinander diskutiert.
 
 Im Falle der BIGEDIB-Studie geht es darum, den bildungsrelevanten Alltag junger Geflüchteter und die damit einhergehenden informellen, non-formalen und formalen Bildungsorte und die darin vorkommenden Praxisvollzüge überhaupt erst aufzuspüren (vgl. Weißköppel 2005, S. 55). So wird auch aus praxistheoretischer Perspektive nahegelegt, dass das Feld durch die Bewegung der Ethnograf*innen definiert wird und die Ethnograf*innen entscheiden, wohin gefolgt und worauf der Fokus gerichtet wird: 'From a Practice Theory standpoint, the field is not conceptualized as a stationary point, nor as a place the ethnographer enters and inhabits; rather, the Ethnografer's movements and trajectories define it' (Cruz/Ardévol 2013, S. 33). Daher wird in einem ersten Schritt den jungen Geflüchteten gefolgt ( follow the people ), um ein Wissen darüber zu erhalten, was an den jeweiligen sites im Alltag dieser Akteur*innen in welchen sozialen Zusammenhängen, mit welchen Medien wie passiert. Dies bedeutete jedoch nicht, denPerspektivendereinzelnenSubjekteundihrenDeutungenzufolgen,sondern diejungenGeflüchtetenalsZugangzueinerPraxiszuverstehen,diesichüberverschiedene Lokalitäten erstreckt und diese miteinander vernetzt (vgl. Aden 2019, S. 231; Carnin 2020, S. 112). In einem weiteren Schritt wird dann je nach Vertiefung des Aufenthalts an den unterschiedlichen sites den dort genutzten digitalen
+
+
+<!-- PAGE 44 -->
+
 
 Medien selbst ( follow the thing ) gefolgt, um deren Beteiligung an bildungsrelevanter Praxis gezielter in den Blick zu nehmen. Dabei gilt es mit Blick auf die Bewegungen der Forschenden entlang der unterschiedlichen sites zu reflektieren, welche sites Aufschluss zur Beantwortung der Forschungsfrage geben und inwiefern deren Beantwortung über die Aufenthalte an weiteren sites angereichert werden könnte.
 
@@ -340,11 +513,19 @@ Die Artefaktanalyse zielt darauf ab, Fragen zur Existenz und Praxis (z.B. Wer si
 
 Diese Differenzierung zwischen der ,natürlichen' gegenständlichen Welt und der durch Menschen geschaffenen,künstlichen'Welt,hier als Gesamt von Artefakten, ermöglicht es, die sich in Artefakten - im Kontrast zu ,natürlichen' Gegenständen - zwangsläufig materialisierende soziale Dimension von menschlichen Vorstel-
 
+
+<!-- PAGE 45 -->
+
+
 lungen und vergangener Praxis zu berücksichtigen (vgl. Kalthoff/Cress/Röhl 2016, S. 14 ff.). 13 So sind Artefakte nicht bloß äußerliche Dinge, sondern sie durchdringen als aus der Vergangenheit von Menschen geschaffene Imperative zahlreiche Lebensbereiche und Vorstellungen der Gegenwart. Sie schaffen als 'wirkendes Gegenüber' (Kalthoff/Cress/Röhl 2016, S. 12) eine präformierte Welt, aus der heraus die zukünftige Praxis ,beeinflusst' wird (vgl. Lueger/Froschauer 2021, S. 292, 296). Artefakte werden in ihrer Seinsweise unter performatorischen Gesichtspunkten jedoch nicht als vorsoziale, gegebene, passive, stabile Elemente verstanden (vgl. Rabenstein 2018, S. 20ff.). Sie sind potenziell mehrdeutig, da erst im Praxisvollzug, dem Moment des Artefaktgebrauchs, und im Zusammenspiel mit anderen Elementen die soziale Bedeutung von Artefakten, ihre Einbettung in Sinnzusammenhänge fortwährend hervorgebracht und (immer wieder) transformiert wird. Das heißt, welche Affordanzen bzw. Gebrauchssuggestionen in ihnen aufgerufen werden, ist nicht zuvor bestimmt, sondern eine empirisch zu klärende Frage (vgl. Kalthoff/Cress/Röhl 2016, S. 26ff.). So tragen Artefakte nicht aus sich selbst heraus, sondern im Zusammenspiel mit weiteren Akteur*innen zur Identifikation und Verwirklichung des sozialen Geschehens bei (vgl. Bollig/Kelle/Seehaus 2012, S. 224).
 
 Zur Entschlüsselung der 'Sprache der Artefakte' haben Lueger und Froschauer (2021) ein Analyseschema entwickelt, welches die soziale Dimension von Artefakten über sechs Perspektivebenen unterscheidet (vgl. Lueger/Froschauer 2018, S. 66ff.): Zunächst gilt es 1.), den Forschungskontext zu reflektieren. Dies bedeutet, das methodische Verfahren in seiner Bedeutung (z.B.Zweck,Eignung) für das eigene Forschungsvorhaben einzuordnen. Daran anknüpfend werden 2.) die ExistenzbedingungendesArtefakts untersucht.Dabeiwirdherausgearbeitet,weshalbein Artefakt überhaupt geschaffen wurde und welche Voraussetzungen erfüllt sein müssen,damitesexistieren kann.Es erfolgt 3.) eine deskriptive Analyse , welche die materielle Beschaffenheit und die dafür kennzeichnenden Eigenschaften des Artefakts betrachtet. Anschließend wird 4.) auf Ebene der alltagskontextuellen Sinneinbettung das Artefakt in seiner alltäglichen Situiertheit analysiert. Dies bedeutet die Perspektive unterschiedlicher Akteur*innen auf das Artefakt und ihre Auseinandersetzungendamitzubetrachten.Esfolgt5.) eine distanziert-strukturelle Analyse, die die gesellschaftlichen (makrostrukturellen) Bezüge des Artefakts in Bezug auf Produktions- und Distributionszusammenhänge, Funktionen und Wirkweisen sowie über Praktiken etablierte Umgangs- und Rezeptionsarten untersucht. Zuletzt erfolgt 6.) zur genaueren Abgrenzung und Verortung des Artefakts eine komparative Analyse . Dabei werden andere (ähnliche) Artefakte, unterschiedliche
 
 13 Definierend für Materialität aus Perspektive der Artefaktanalyse ist die stoffliche Existenz. So werden alle nicht-materiellen Objekte und folglich Bezugnahmen auf Phantasien, Theorien, Ideen, Vorstellungen etc. als etwaige Untersuchungsgegenstände ausgeblendet (vgl. Lueger/ Froschauer 2018, S. 9).
+
+
+<!-- PAGE 46 -->
+
 
 Kontexte des Artefakts und weitere Analyseverfahren (neben der Artefaktanalyse) miteinander verglichen. 14 In einer zusammenfassenden Analyse werden abschließend die gewonnenen Erkenntnisse strukturiert.
 
@@ -356,19 +537,35 @@ Um auf der Basis der empirischen Daten Gelingensbedingungen für Bildungsteilhab
 
 14 Die Artefaktanalyse ist daher ,nur' als ein Zugang zu verstehen, dessen Erkenntniskraft sich in Kombination mit weiteren wissenschaftlichen Verfahren steigert. Dabei ist eine methodenplurale Forschung, wie es die Ethnografie einlöst, und damit eine mehrdimensionale Annäherung an den jeweiligen Untersuchungsgegenstand sinnvoll, um die jeweiligen Erkenntniszugänge in ihren Potenzialen zu nutzen und die Komplexität des Untersuchungsgegenstands angemessen zu erfassen (vgl. Lueger/Froschauer 2021, S. 302). So erscheint es gerade in Bezug auf bestimmte Ebenen der Artefaktanalyse (z.B. alltagskontextuelle Sinneinbettungen) notwendig, nicht nur Betrachtungen des Artefakts an sich, sondern auch Beobachtungen der Situationen des Artefakts und Befragungen der Akteur*innen durchzuführen, die das Artefakt nutzen (vgl. Lueger/Froschauer 2018, S. 74).
 
+
+<!-- PAGE 47 -->
+
+
 dungssettings zu rekonstruieren und diese Erkenntnisse systematisch zu konzeptualisieren,wurden bildungsteilhaberelevante Praxis und deren Bedingungen im Alltag junger Geflüchteter unter Beteiligung digitaler Medien ethnografisch erforscht. Dabei wurden unterschiedliche Datenarten berücksichtigt und innerhalb dieser Daten wiederkehrende Muster, Themen und Kategorien identifiziert, um eine inhaltlich-gegenstandsbezogene Organisation der Daten vorzunehmen (vgl. Farrenberg 2018, S. 23). Dieser Anspruch wurde durch den Zugang der GroundedTheoryMethodology(vgl.Strauss/Corbin 1996) eingelöst,über die eine denjeweils unterschiedlichen Materialien entsprechenden (der Slogan von Glaser lautet hier: 'all is data') Systematik zur Sammlung und Interpretation von Daten entwickelbar wird, die über einen 'plumpen Instrumentalismus des Anwendens methodischer Regeln und Imperative' (Strübing 2014, S. 113) hinausgeht. 15
 
 Charakteristisch für die GTM ist ein spezifisches Verhältnis von ,Realität' und Theorie. Dabei werden Theorien nicht positivistisch als 'Ausformulierung einiger entdeckter Aspekte einer bereits existierenden Wirklichkeit ,da draußen' aufgefasst', sondern sie bezeichnen 'Interpretationen, die von gegebenen Perspektiven aus gemacht werden' (Strübing 2014, S. 38). Grundprinzipien der GTM sind Iterativität, Prozesshaftigkeit, Offenheit, Multiperspektivität, Ko-Konstitution und Kontextualität. Das zentrale Versprechen der GTM für empirische Forschung besteht in der Entwicklung einer in den Daten verankerten Theorie. So sollen Theorien keine abstrakten Gedankengebilde darstellen, sondern möglichst nah ( grounded ) am jeweiligen Datenmaterial herausgearbeitet werden. Die GTM formuliert zu dieser Theorienentwicklung methodische Vorschläge,die einerseits besagte Offenheit (Interpretation, Kreativität, Subjektivität) und andererseits systematische, regelgeleitete Arbeitsschritte enthalten. Es wird so eine Konzeptualisierung der Daten angestrebt, die über eine bloße Deskription hinausreicht (vgl. Mey/Berli 2019, S. 244). Die GTM verfolgt dabei allerdings in ihrer Ausrichtung nach Strauss und Corbin (1996) keine rein induktive Vorgehensweise, sondern bezieht die (theoretischen) Wissensbestände der Forschenden unter dem Konzept der theoretischen Sensibilität zur Schärfung des Blicks bewusst mit ein. Datenerhebung und -auswertung sind zudem in einem zyklisch-iterativen Forschungsprozess angelegt. Dies bedeutet, dass über kontinuierliches Vergleichen zwischen erhobenen Daten und bereits herausgearbeiteten Konzepten entschieden wird, was zur weiteren Erhebung und Auswertung den nächsten theoretischen Fall abbilden kann (vgl. Reichertz/Wilz 2016, S. 55). Diese prozessorientierte Steuerung zwischen Erhebung und Auswertung der empirischen
 
 15 Die vorliegende Studie folgt der ,klassischen' Ausrichtung nach Strauss und Corbin (1996). Eine DarlegungdervielfältigenEntwicklungenderGroundedTheoryMethodologyseitihremAnfang durch die Arbeiten von Glaser und Strauss erfolgt an dieser Stelle nicht (vgl. für ausführlicher Equit/Hohage 2016). Dabei wird auch die Diskussion, ob die Grounded Theory überhaupt eine Methodologie darstellt (vgl. Reichertz/Wilz 2016), an dieser Stelle nicht weiter aufgegriffen.
 
+
+<!-- PAGE 48 -->
+
+
 Daten wird mit dem Begriff des 'theoretischen Samplings' beschrieben und mit Erreichen einer theoretischen Sättigung beendet. Dies bedeutet, dass neu erhobene Daten und deren Auswertung keine weiteren neuen Erkenntnisse mehr zur Theoriegenerierung produzieren. Der 'Dialog mit den Daten' (Berg/Milmeister 2011: 303) zur Theoriebildung wird in der GTM (vgl. Strauss/Corbin 1996) über das sogenannte Kodieren, das Herzstück der GTM, erbracht. Kodieren wird als ein Analyseschritt verstanden, in dem Datenstücke mit bedeutungsvollen Labels ('book titles', Kozinets 2020, S. 338) versehen werden, um sie in analysierbare, bedeutungsvolle Einheiten zu wandeln. Strauss und Corbin (1996) unterscheiden dabei in Form von Faustregeln zwischen drei Modi des Kodierens: offen, axial undselektiv. Im Zuge des offenen Kodierens wird das Datenmaterial ,aufgebrochen' und ein darin enthaltenes Phänomen in seiner Bedeutung zugänglich, indem die einzelnen konstitutiven Elemente des Phänomens sichtbar gemacht werden: Ein erstes, tieferes Verständnis der Daten wird unter Aufzeigen sich wiederholender Muster innerhalb der Datenvielfalt hergestellt. Familienähnlichkeiten beim Kodieren können dabei bereits eine Abstrahierung zur Theoriebildung initiieren. Von den offenen Kodes ausgehend erfolgt im axialen Kodieren die Kategorienbildung. Die Kategorienbildung verfolgt das Ziel, die gesetzten Kodes in ihren Mustern auf einer konzeptuellen Ebene abzubilden und deren Verhältnisse untereinander herauszuarbeiten. Diese Relationierung der Kode-Kategorien untereinander ist bereits eine Analyseleistung zur Annäherung an Theorien und Hypothesen.EswirddabeiaufeinKodierparadigma,einehandlungstheoretische Heuristik, zurückgegriffen, die die Ausdifferenzierung und Relationierung der Kategorienbildung unterstützen soll. Beim selektiven Kodieren geht es schließlich darum, als zentral betrachtete Kategorien der Theorieentwicklung auszuarbeiten. Es wird dazu von einer oder mehreren Kernkategorien ausgegangen, die zur Erklärung des Untersuchungsphänomens in den Mittelpunkt gestellt werden. Der Schritt des selektiven Kodierens bedeutet allerdings nicht, dass dieser Analyseschritt erst zum Ende des Forschungsvorhabens erfolgt, sondern im Gegenteil: Die Phasen von offenem, axialem und selektivem Kodieren durchdringen sich wechselseitig und nehmen aufeinander Bezug (vgl. Equit/Hohage 2016, S. 23). Neben dem Kodieren ist zudem das Schreiben von Memos für die Dokumentation des Forschungsprozesses und zur Unterstützung der Theoriegenerierung relevant (vgl. Mey/Berli 2019, S. 250). Dem Schreiben wird (wie auch in der Ethnografie) insofern eine hohe Relevanz zugesprochen, um konzeptuelle Überlegungen zu erproben und schrittweise zu entwickeln. Dabei kann zwischen Memos unterschiedlicher Art (z.B. selbstbezüglichen Reflexionen, konzeptuellen/theoretischen Ideen, Felderlebnissen) unterschieden werden (vgl. Breuer/ Muckel 2016, S. 81).
 
 Für die BIGEDIB-Studie fungiert die GTM sowohl als methodologische als auch als methodische 'Richtschnur zur Organisation des Forschungsprozesses sowie zur Analyse der Daten' (Schmidt 2020, S. 160). Dabei wird über das theo-
 
+
+<!-- PAGE 49 -->
+
+
 retische Sampling fortlaufend reflektiert, welche weiteren Daten im Rahmen der ethnografischen Feldaufenthalte (und im Zuge von Nacherhebungen) zur Analyse einzuholen sind, um ,Sättigungslücken' zu schließen. Offene Kodes werden gerade zu Beginn der Erhebung angesichts der ethnografischen Datenvielfalt als sinnvoll erachtet, um im Sinne eines zooming out einen Überblick über den Datenkorpus und dessen Organisation zu erhalten (vgl. Breidenstein et al. 2020, S. 128f.). Die Praxistheorie wird dabei als ein methodologisch fundierter Rahmen für die GTM betrachtet, der gerade im axialen Kodieren Strukturierungshinweise bzw. Anpassungsbedarfe zur GTM impliziert (vgl. Schmidt 2020, S. 198). So wird das zum axialen Kodieren angesetzte Kodierparadigma von Strauss und Corbin (1996) hinsichtlich seiner sozialtheoretischen Annahmen aufgrund der Ursprungsbezüge zu pragmatisch-interaktionistischen Handlungstheorien als nicht mehr länger passungsfähig zu Praxistheorien kritisiert (vgl. Mey/Berli 2019, S. 250). 16 Vor diesem Hintergrund werden in der BIGEDIB-Studie die Theoretisierungen der GTM zur beobachteten Praxis und deren Bedingungen aus neo-praxeologischer Perspektive mit einer entsprechenden methodologischen Abstinenz gegenüber pragmatisch-interaktionistischen Handlungszuschreibungen und stattdessen mit Fokus auf Praxisvollzüge und beteiligte Elemente vorgenommen. Hieraus folgt, dass Kodes und Kategorien in Bezug auf die Vollzüge und Hervorbringungen der Praxis und die Bedingungen innerhalb der Arrangements entwickelt werden. Da Kodes und Kategorien in Abgrenzung zu inhaltsanalytischen Ausrichtungen der GTM (vgl. Reichertz/Wilz 2016, S. 62) nicht vorschnell und oberflächlich ausgearbeitet werden sollen, wird außerdem im Sinne eines zooming in auf die Sequenzanalyse der Ethnografie zurückgegriffen, um relevante Situationen aus Protokollen auf ihre innere Bedeutung, Dynamik und Pragmatik für das Feld hin intensiv(-er) zu interpretieren (vgl. Bollig/Schulz 2019, S. 40f.). Darüber hinaus wird der Anspruch des selektiven Kodierens, Schlüsselkategorien als schwerpunktartige Relevanzen zur Beantwortung der Forschungsfrage zu entwickeln, kritisch hinterfragt bzw. reflektiert. So birgt die Zentrierung einzelner Kategorien Risiken, den Blick für die Komplexität, Verteiltheit und Vielfalt der Praxis zu verschließen. Vor diesem Hintergrund wird als weiterer methodologisch-methodischer Zugang der BIGEDIB-Studie die Situationsanalyse nach Clarke, Friese und Washburn (2018) genutzt.
 
 16 Bei näherer Betrachtung sind die Widersprüche zwischen dem Pragmatismus der GTM und der Praxistheorie jedoch geringfügiger als es oberflächlich scheint. So greift der Pragmatismus nach Mead zwar auf den in Praxistheorien ,verpönten' Handlungsbegriff zurück, jedoch richtet Mead diesen nicht auf Intentionen aus, sondern auf den Handlungsstrom und das, was ihn fortwährend hervorbringt (vgl. Schmidt 2020, S. 158f.).
+
+
+<!-- PAGE 50 -->
+
 
 ## 4.1 Situationsanalyse als Erweiterung zur GTM
 
@@ -377,6 +574,10 @@ Ausgehend von einem Verständnis von Praxis als etwas situativ und verteilt Herv
 Mit der Situationsanalyse nimmt Clarke (als Urheberin) unter Erweiterung postmoderner Positionen eine Revision der bisherigen Erkenntnisperspektive der klassischen GTM vor. So kritisiert Clarke den bisherigen Reflexivitätsmangel bei der methodologischen und forschungspraktischen Gestaltung des Forschungsprozesses. Sie fordert die Forschenden zu einer Neupositionierung des Verhältnisses von Theorie und Methode als aufeinander verweisende Modi einer Forschungsperspektive postpositivistisch auf, 'Rechenschaft über ihre Weltsichten und Erfahrungshintergründe [zu] geben' (Strübing 2014, S. 101). Über Anleihen bei den Science and Technology Studies hebt Clarke zudem das NichtMenschliche in Situationen gesondert hervor, welches in einem ko-konstitutivem Verhältnis zum Menschlichen steht. 'Taking the nonhuman explicitly into account' (Clarke/Friese/Washburn 2018, S. 85), lautet der formulierte Anspruch. Dabei wird auch die Eigentätigkeit von Artefakten aufgegriffen: 'Nonhuman actants structurally condition the interactions within the situation through their specific material properties and requirements and through our engagements with them. Their agency is everywhere' (Clarke/Friese/Washburn 2018, S. 91, Herv. i. Orig.). 17 Mit dem Fokus auf die Komplexität des Sozialen weist Clarke das ,klassische' Bestreben der GTM, eine formale Theorie aus den Daten zu generieren, zurück. So sieht sie darin eine Tendenz zur übermäßigen Vereinfachung, die sich u.a. in einer Überbetonung von Kohärenz zulasten der Heterogenität des
 
 17 In Abgrenzung zur ANT postulieren Clarke, Friese und Washburn keine gleichrangige Handlungsmacht nicht-menschlicher Elemente gegenüber menschlichen, wenngleich sie Unterschiede zwischen den beiden nicht näher spezifizieren (vgl. Clarke/Friese/Washburn 2018, S. 88). In einem Interview berichtet Clarke dazu den Ausdruck des Nicht-Menschlichen lediglich ,geklaut' und weitere Bezüge zur ANT minimal gehalten zu haben (vgl. Both 2015, S. 202).
+
+
+<!-- PAGE 51 -->
+
 
 Datenmaterials niederschlägt (vgl. Equit/Hohage 2016, S. 37). Stattdessen wird der Fokus auf die Situation des Untersuchungsphänomens gelegt. In dieser gilt es unter dem Verständnis der Postmoderne 'Partikularismus, Positionalitäten, Komplikationen, Substanzlosigkeit, Instabilitäten, Unregelmäßigkeiten, Widersprüche, Heterogenität, Situiertheit und Fragmentierung - kurz: Komplexität' (Clarke 2012, S. 26) empirisch zu rekonstruieren. Dabei distanziert sich Clarke vom axialen und selektiven Kodieren, um nicht einzelne Interaktion oder gar ein Individuum zu zentrieren und alles andere als auf die Situation bzw. das Handeln einwirkende strukturelle Rahmenbedingungen zu konzipieren. Stattdessen entwirft sie eine eigene Situationsmatrix mit einer Reihe von Elementen, die sich in der distinkten ,Ökologie' der Situation gegenseitig formen und sich durch ihre interaktive Beziehung zueinander ko-konstituieren (vgl. Clarke/Friese/Washburn 2018, S. 45f., 131). Was das Situationsverständnis selbst betrifft, wird das interessierende Phänomen nicht (deduktiv) vorab bestimmt, da dieses nur hinsichtlich der Situation, in der es existiert, erklärt werden kann. Clarke, Friese und Washburn definieren die Situation wie folgt:
 
@@ -388,11 +589,19 @@ Zentrales WerkzeugderSituationsanalysesindgrafischeMaps,welchebegleitet von Memo
 
 18 ZumVerhältnisdesSituationsbegriffsinderEthnomethodologieundderSituationsanalysevgl. den Methodenbericht von Fujii et al. i.d.B.
 
+
+<!-- PAGE 52 -->
+
+
 situationen abgebildet, die Daten weiter erschlossen und ein analytischer Zugang zu diesen hergestellt (vgl. Clarke/Friese/Washburn 2018, S. 105):
 
 'The main work they do is to provide what Park (1952) called ,the big picture' or ,the big news' about the situation under study. They portray the assemblage of elements and the ecology of relations among them, major collective actors and fundamental issues and debates in the broad situation you have chosen to study' (Clarke/Friese/ Washburn 2018, S. 104).
 
 Clarke unterscheidet hier zwischen drei Typen von Maps, die einen je eigenen analytischen Zugang zu sozialwissenschaftlichen Daten abbilden: SituationsMaps, Maps Sozialer Welten/Arenen und Positions-Maps. Damit werden die in den Situationen relevant gemachten Elemente (also Akteur*innen, Artefakte, soziale Aggregate, Diskurse und Positionen) tentativ repräsentiert (vgl. Strübing 2017, S. 61). Situations-Maps beschreiben, welche Elemente in Situationen vorkommen (z.B. Technologien, Objekte, Organisationen, Menschen, kulturelle Phänomene etc.) und welche eine Bedeutung für sie haben (vgl. Clarke/Friese/Washburn 2018, S. 127ff.). Die Abbildung dieser Elemente erfolgt zunächst bewusst ungeordnet ( messy maps ), um niedrigschwellig eine Vorstellung von der Komplexität einer Situation als Ganzer zu bekommen. Über geordnete Maps ( ordered situational maps und relational maps ) werden anschließend die Bedeutungen und Verhältnisse der Elemente zueinander beschrieben und der Fokus für die relevanten ,Spuren' in Situationen geschärft ( relational analysis ). Maps Sozialer Welten/Arenen analysieren die sozialen, organisationalen und institutionellen Dimensionen einer Situation, die von kollektivem Handeln geprägt ist (vgl. Clarke/Friese/Washburn 2018, S. 147 ff.): 'Thus social worlds/arenas analysis is a relational ecological form of organizational analysis , dealing with how meaning making and commitments are organized and reorganized again and again over time' (Clarke/Friese/Washburn 2018, S. 150, Herv. i. Orig.). Sie umfassen sämtliche geteilten Werte, Beziehungen, Diskurse, Identitäten, Handlungsorte etc., die über den Projektverlauf herausgearbeitet werden, und sollen für die unterschiedlichen Aushandlungsprozesse in einer Situation sensibilisieren. Es werden dazu die relevantesten sozialen Welten innerhalb einer Situation in ihrer Größe und ihren Beziehungen zueinander abgebildet, ohne dass ihnen eine direktionale Einflussnahme auf Situationen zugeschrieben wird (vgl. Clarke/Friese/Washburn 2018, S. 18, 104). Positions-Maps beziehen sich auf die ,hintergründige' diskursive Ebene einer Situation und bilden in Ergänzung zum Mapping Sozialer Welten/Arenen detailliert das Spektrum an Diskurspositionen darin ab. Dabei sind Positionen nicht als Repräsentationen von Einzelnen, Gruppen oder Institutionen zu verstehen oder auf diese zurückzuführen, sondern als solche von heterogenen Diskursen (vgl.Clarke/Friese/Washburn 2018,S. 166).Ziel ist es,die Heterogenität und Konflikte innerhalb eines Diskurses zu verdeutlichen und die
+
+
+<!-- PAGE 53 -->
+
 
 konträren Perspektiven der Beteiligten zu systematisieren. Neben der Erstellung von Maps erweisen sich Memos als unerlässlich, um analytische Gedanken zu befördern, die Plausibilität der Maps zu prüfen und die Konzeptentwicklung voranzutreiben (vgl. Bollig/Schulz 2019, S. 41).
 
@@ -401,6 +610,10 @@ FürdieBIGEDIB-StudiewirdClarkes,FriesesundWashburnsSituationsanalyse als erweit
 Durch die Integration von Praktiken in die Situations-Map wird es möglich, deren raum-zeitliche Verortung und ihr Zusammenspiel mit digitaler Materialität in den komplexen Situationen sichtbar zu machen. Angewendet auf die BI-
 
 19 Die praxistheoretische Fundierung der BIGEDIB-Studie und der Ansatz der Situationsanalyse erfordern die Klärung ihrer Passung mit den anderen interpretatorischen Zugängen (vgl. Fujii/ Rink/Weber2023).DiesgiltsowohlfürdasSituationsverständnisalssolchesalsauchfürdieArbeit mit Maps.So gehen sowohl die Praxistheorie als auch die Situationsanalyse davon aus, dass das Soziale stets innerhalb einer spezifischen Situiertheit hervorgebracht wird. Für Schatzkis (2016) flache Ontologie stellen dies Verflechtungen von Praktiken und Arrangements - die sites of the social -dar, die in ,größeren' Bündelungen sämtliche Phänomene des Sozialen konstituieren (z. B. ,kleinere', wie Unterricht, und ,größere', wie Schule), während Clarke von Situationen ausgeht, die aus miteinander zusammenhängenden, sich wechselseitig beeinflussenden Elementen bestehen. Situationen werden hier insofern - durch die praxistheoretische Perspektivierung des Situationsbegriffes - als Verwicklungen von Praktiken und Arrangements verstanden(bzw.Praxiskonfigurationen,vgl.Farrenberg 2018,S. 26),als Hervorbringungen der Praxis, über die sich situative Elemente, wie Akteur*innen, Materialitäten, Diskursivität, Räumlichkeit, Temporalität etc. entfalten.
+
+
+<!-- PAGE 54 -->
+
 
 Abbildung 2: Relationale Situations-Map mit Praktiken (vgl. Fujii/Rink/Weber 2023; Grafik von Konstantin Rink)
 
@@ -412,6 +625,10 @@ GEDIB-Studie kann das beispielsweise bedeuten, dass das Feld 'practice 2' im kon
 
 20 Diese lassen sich als 'subjektiver Eigensinn' (Alkemeyer 2013, S. 46) der kollektiven Akteur*innen verstehen, der nicht zwangsläufig der hervorgebrachten Praxis mit digitalen Medien entspricht. Maps Sozialer Welten/Arenen können hier für Diskrepanzen, Brüche und Konflikte zwischen Deutungen kollektiver Akteur*innen und der faktisch vollzogenen Praxis sensibilisieren. Dabei bleibt allerdings das Erkenntnisinteresse unbearbeitet, die ausgehend von den digitalen Medien performativ hervorgebrachten Bedeutungen in der Praxis zu analysieren. Der
 
+
+<!-- PAGE 55 -->
+
+
 fakte allenfalls nur noch als ein Thema der Sozialen Arena sichtbar (um welche sich Aushandlungen der Sozialen Welten drehen). Die Perspektive der PositionsMaps ist für das Erkenntnisinteresse der BIGEDIB-Studie augenscheinlich insofern zunächst gewinnbringend, da sie diskursive Konstitutionsmechanismen in Situationen mit digitalen Medien abbildet, die stets normativ ,ideell' strukturiert sind (vgl. Ricken 2019, S. 34). Da die Diskursivität der Praxis allerdings einer ,eigenen' Analyse bedarf, wird diese hier in Anbetracht der Vielfalt an potenziell (für Bildungsteilhabe)relevantenSituationenausforschungspragmatischenGründen nicht explizit fokussiert. Analog zu den Maps Sozialer Welten/Arenen besteht zudem eine Schwierigkeit darin, dass die Bedeutung von digitaler Materialität in den Positions-Maps nicht explizit berücksichtigt wird. Welche Beteiligung sie an der Diskursivität der Praxis hat und wie sich eine möglicherweise in die Materialität eingeschriebene Diskursivität performativ entfaltet, lässt sich über die Maps nicht darstellen und ist mit diesen auch gar nicht vorgesehen darzustellen.
 
 ## 5. Ausblick
@@ -420,7 +637,15 @@ Im Rahmen dieses Beitrags wurde die methodologische und methodische Rahmung der 
 
 Stellenwert von Artefakten, der deren Eigentätigkeit und -dynamik berücksichtigt, bleibt in der Theorie Sozialer Welten/Arenen unterbestimmt. So lassen sich digitale Medien in Verknüpfung mit Praktiken allenfalls noch als ein Thema der Arena darstellen, in der die kollektiven Akteur*innen zur Praxis mit digitalen Medien in Aushandlung zueinander treten und die Bedeutung der digitalen Materialität über Memos eingefangen wird (vgl. Clarke/Friese/Washburn 2018, S. 88). Das entspricht auch dem Vorschlag von Strauss (1993) selbst, der Arenen als Auseinandersetzungen, Verhandlungen, Kämpfe oder Debatten um ein Issue herum sieht.
 
+
+<!-- PAGE 56 -->
+
+
 spezifischer Theorieverständnisse, (Vor-)Annahmen und Interessensfoki die methodologische und methodische Rahmung der BIGEDIB-Studie im Sinne der foucaultschen Metapher der 'Werkzeugkiste' (vgl. Boutin 2015) in unterschiedlichemMaßezumTragen.DieswirdüberdienachfolgendeDarstellungderbeiden Teilstudien in den folgenden Beiträgen abgebildet.
+
+
+<!-- PAGE 57 -->
+
 
 ## Situative Aneignung, Artefaktpotenzialitäten und institutionelle Rahmung: Bildungsteilhabe als verteilte Praxis. Die BIGEDIB-Teilstudie Köln
 
@@ -434,13 +659,25 @@ Mit dem vorliegenden Methodenbericht werden die im Rahmen der Teilstudie Köln v
 
 1 Die Kölner Teilstudie ist sich der (sprachlichen) Umkämpftheit und (teils problematischen) Implikationen der Benennungen bewusst, die Menschen auf der Flucht betreffen (vgl. z.B. Kersting/Leuoth2020).EswerdendaherdieForschungsteilnehmendennachfolgendals'jungeMenschen' oder eben als 'Forschungsteilnehmende' benannt, um den Aspekt des Geflüchtet-Seins nicht zu zentrieren. Die explizite Benennung der jungen Menschen als Geflüchtete erfolgt dort, wosich diese Kategorisierung (für Bildungsteilhabe) als relevant erweist (z.B. im Falle von Rassismus und damit einhergehenden Benachteiligungen).
 
+
+<!-- PAGE 58 -->
+
+
 ## 1.1 Feldzugang
 
 In der Teilstudie Köln wurde der Feldzugang ausgehend von Institutionen der Kinder- und Jugendhilfe in Nordrhein-Westfalen gestaltet. Institutionelle Akteur*innen - Leitungen und Sozialpädagog*innen in Einrichtungen der stationären Kinder- und Jugendhilfe, der Offenen Kinder- und Jugendarbeit, der Flexiblen Hilfen und Hilfen für junge Volljährige sowie (ehrenamtliche) Initiativen, Vereinen und Organisationen für junge Geflüchtete - wurden zunächst über bestehende Kooperationen der Projektleitung mit Wohlfahrtsträgern, persönlichen Kontakten der Forschenden und Internetrecherchen per Schneeballprinzip kontaktiert. Es wurde auf diese Weise Kontakt zu 15 Institutionen bzw. Organisationen aufgenommen. In E-Mail-Korrespondenzen und telefonischen Informationsgesprächen wurden das Forschungsvorhaben vorgestellt und Fragen geklärt. Es galt in einem ersten Schritt, den Institutionen und den dort verantwortlichen Akteur*innen das Forschungsprojekt vorzustellen und in einem zweiten Schritt dann die jungen Menschen (bzw. je nach Alter deren Vormundschaft bzw. Erziehungsberechtigte) für eine Teilnahme zu gewinnen. Bis auf wenige Ausnahmen bestand eine hohe Bereitschaft, das Forschungsvorhaben zu unterstützen und die potenziellen Teilnehmenden wurden von ihren jeweiligen Einrichtungen über das Vorhaben informiert. Vereinzelt äußerten Sozialpädagog*innen Bedenken hinsichtlich der Wahrung der Anonymität der jungen Menschen und der Frage nach dem Mehrwert einer Studienteilnahme für die jungen Menschen. Die Forschenden erläuterten in diesen Gesprächen den Umgang mit den Forschungsdaten, den Aspekt der Freiwilligkeit und die damit verbundene Einhaltung forschungsethischer Grundsätze (vgl. Kleist 2015; Krause/Williams 2020; von Unger 2018) und konnten diese und ähnliche Bedenken ausräumen. 2 Daraufhin wurden die jungen Menschen durch die Sozialpädagog*innen über das Projekt informiert und ,Kennenlerntermine' vereinbart, in denendieForschendensich sowie das Vorhaben den potenziellen Teilnehmenden in den Einrichtungen unverbindlich vorstellten. Ziel dieser Erstkontakte war es, dass die jungen Menschen sich ein Bild von der Studie und den Mitarbeiter*innen machen konnten, bevor sie für sich eine Teilnahme am Projekt prüften. Auch sollte eine erste Basis für eine mögliche Forschungsbeziehung ohne weitere Verbindlichkeiten behutsam geschaffen werden. Diese Vorgehensweise wurde -
 
 2 Ein solcher forschungsethischer Grundsatz bestand vor allem gemäß eines 'Do No Harm' (Krause/Williams 2020, o.S.) darin, den jungen Menschen Sicherheit vor unerwünschten Konsequenzen bzw. Gefahren hinsichtlich deren preisgegebenen Daten zu garantieren (z.B. durch staatliche Behörden).Einen weiterhin zentralen Anspruch stellte eine freiwillige und informierte Teilnahme der jungen Menschen dar. Diese wurde dadurch versucht einzulösen, den jungen Menschen fortwährend das Forschungsvorgehen transparent zu machen und deren Zustimmunghierzu zu erfragen.
 
+
+<!-- PAGE 59 -->
+
+
 auch auf der Basis von Erfahrungen aus vorangegangenen Forschungsprojekten - gewählt, um die bestehende strukturelle Machtasymmetrie in der Forschung (z. B. Informationsdefizite in Bezug auf Forschung und die eigenen Rechte oder auch das Verhältnis von Forschenden als Mitglieder der ,Aufnahmegesellschaft' gegenüber den potenziellen Teilnehmenden in oft prekären Lebenslagen) zu berücksichtigen. Dabei sollte für die jungen Menschen eine Situation geschaffen werden, in der sie ohne die Befürchtung von Nachteilen im Falle der Ablehnung einer Teilnahme und unter Beachtung ihrer Informations- und Absicherungsbedürfnisse in ihrem Tempo für sich prüfen konnten, ob sie sich eine Studienteilnahme vorstellen können, die eine Bereitschaft über einen langen Zeitraum und eine Öffnung von Teilen ihres Privatlebens erforderte. Als Incentive (bzw. symbolischer Anreiz) war vorgesehen, dass die Teilnehmenden nach Abschluss jeder der drei einzelnen Feldphasen eine Aufwandsentschädigung von je 50 Euro erhalten. Die Rückmeldungen der jungen Menschen waren zunächst überwiegend zurückhaltend bis ablehnend. Gründe vermuteten die Forschenden einerseits darin, dass sprachliche Hürden es erschwerten, das Erkenntnisinteresse zu vermitteln. Andererseits wurde angenommen, dass das ethnografische Erhebungssetting,das bei einer Einwilligung bedeutete,die Forschenden in ihren Alltag ,mitzunehmen', für die jungen Menschen befremdlich und abschreckend wirkte. Gerade das Anliegen, die jungen Menschen über mehrere Monate hinweg u.a. auch in ihrem privaten Alltag zu begleiten, stieß zunächst auf Skepsis und Zurückhaltung. Diesen Vorbehalten wurde mit ausführlichen Gesprächen begegnet, in denen diese Fragen und Unsicherheiten mit den jungen Menschen besprochen und ihnen vermittelt werden konnte, dass sie - also die jungen Menschen selbst - jeweils über das Ausmaß der ethnografischen Begleitung entscheiden (z.B. hinsichtlich des Alltags, den sie bereit sind zu zeigen) und ihre freiwillige Studienteilnahme jederzeit beenden können. Zudem wurde ein Informationsblatt, welches das Erkenntnisinteresse schriftlich in einfacher Sprache darlegte, ausgehändigt und eine Website zum Forschungsprojekt eingerichtet, sodass die jungen Menschen sich auch im Anschluss an das unverbindliche Gespräch in Ruhe damit befassen konnten. Um eine tragfähige Vertrauensbasis zu etablieren, trafen sich die Forschenden mehrfach im Anschluss an diese Erstkontakte mit den an einer Studienteilnahme interessierten jungen Menschen einzeln in weiteren Kennenlerntreffen, stellten sich u.a. deren Familien vor oder kamen für weitere unverbindliche Kontaktmöglichkeiten in die Institutionen der Kinder- und Jugendhilfe. Neben der oben genannten Aufwandsentschädigung setzten sich die Forschenden intensiv mit dem 'dualen Imperativ' (von Unger 2018) auseinander, um zu reflektieren, wie den Teilnehmenden außer dem wissenschaftlichen Nutzen auch ein praktischer Nutzen aus der Zusammenarbeit ermöglicht werden könnte. Dies wurde durch Einblicke in die Forschung ,hinter den Kulissen' sowie auch je nach Bedarf konkrete Unterstützung im Alltag (vgl. Kapitel 1.4) realisiert. Daraus ergaben sich immer wieder Fragen in Bezug auf
+
+
+<!-- PAGE 60 -->
+
 
 die Rolle als Forschende, die im Team kontinuierlich thematisiert und reflektiert wurden. Nachdem sich die jungen Menschen zur Teilnahme entschieden, wurde durch schriftliche Erklärungen ihr Einverständnis, bei Minderjährigkeit zusätzlich durch Unterschrift ihrer rechtlichen Vertreter*innen (Eltern, Vormünder u.ä.), sowie die Genehmigung seitens der Leitung der jeweiligen Kinder- und Jugendhilfeeinrichtungen eingeholt. Nichtsdestotrotz wurde auch während der Feldaufenthalte immer wieder mündlich das Einverständnis der jungen Menschen eingeholt, wenn eine Begleitung in weiteren Bereichen des Alltags der jungen Menschen geplant war (z.B. Schule, Familie, Arbeit, Freunde, Hobbys) und vorab mit ihnen besprochen, welche Feldaufenthalte für sie denkbar wären.
 
@@ -455,6 +692,10 @@ Bei der Gewinnung des Samples wurde eine hohe Heterogenität von Differenzkatego
 5. die bisherige Aufenthaltsdauer in Deutschland , da an diese der potenzielle AufbauvonKapitalien(z.B.hinsichtlichErwerbvonSprachkenntnissenoderAufbauvonsozialenKontakten)im,Aufnahmeland'gebundenist(vgl.Tanis2022, S. 9);
 6. Formen von Eingebundenheit in die Kinder- und Jugendhilfe , da den jungen Menschen darüber in unterschiedlicher Ausprägung Unterstützung zukommt (vgl. Schröer/Struck 2018, S. 117ff.) und
 
+
+<!-- PAGE 61 -->
+
+
 7. die Einreise der jungen Menschen mit oder ohne Begleitung der Familie , da hieran die Gewährung von Leistungen der Kinder- und Jugendhilfe gebunden sind (vgl. Scherr/Breit 2021, S. 55f.). 3
 
 Insgesamtnahmen13jungeMenschenausachtverschiedenenInstitutionenbzw. Organisationen an der Kölner Teilstudie teil (vgl. Tabelle 1). Hierbei handelte es sich um stationäre Hilfen zur Erziehung, Offene Kinder- und Jugendarbeit,Flexible Hilfen,Hilfen für junge Volljährige,Berufsvorbereitende Maßnahmenundehrenamtliche (Willkommens-)Initiativen.Die Zusammensetzung der Forschungsteilnehmenden wird in Tabelle 1 dargestellt. 4 Aufgrund vereinzelter vorzeitiger Teilnahmeabbrüche konnten nicht für alle Teilnehmenden vollständig Daten erhoben werden.
@@ -464,6 +705,10 @@ Alle Angaben der Tabelle (z.B. Aufenthaltsdauer, institutionelle Zuordnung) bezi
 3 Weitere Kriterien wurden über einen soziodemografischen Kurzfragebogen dokumentiert (z. B. Erfahrungen mit bestimmten digitalen Medien). Die Erhebung dieser Daten diente dazu, einen ersten Einblick zu den Ausgangslagen der jungen Menschen zu erhalten.
 
 4 Eine Grundbedingung für die Studienteilnahme stellten zudem Deutsch- und/oder Englischkenntnisse dar, da Feldaufenthalte mit Übersetzer*innen nicht realisiert werden konnten. So wäre es Übersetzer*innen einerseits erschwert gewesen, an ,spontanen' Feldaufenthalten teilzunehmen. Zugleich wäre die Anwesenheit dieser Akteur*innen hinderlich gewesen, um Zugang zu den privaten Alltagsbereichen der jungen Menschen zu erhalten.
+
+
+<!-- PAGE 62 -->
+
 
 Tabelle 1: Sample der Teilstudie Köln
 
@@ -489,6 +734,10 @@ einen allgemeinbildenden Schulabschluss an, während ein Teilnehmender im Rahmen
 
 Zu Beginn der Erhebungsphasen wurden über einen soziodemografischen Kurzfragebogen bei den jungen Menschen Angaben zu ihrer bisherigen Aufenthaltsdauer in Deutschland, Alter und Geschlecht abgefragt. Aufgrund des vorzeitigen Abbruchs ihrer Studienteilnahme konnten bei drei der 13 jungen Menschen keine Daten hierüber erfasst werden (vgl. Tabelle 1). Die erste Erhebungsphase begann
 
+
+<!-- PAGE 63 -->
+
+
 imJuni2019undendeteMitteMärz2020.ImZugedesLockdownsmitBeginnder COVID-19-Pandemie führten die Forschenden ergänzend zu telefonischen Befragungen mit den jungen Menschen und ihren Bezugspersonen von März 2020 bis April 2020 auch netnographische (vgl. Kozinets 2020) Forschungsarbeiten im Zeitraum von April bis August 2020 durch: Die Forschenden begleiteten dabei mit Einverständnis der jungen Menschen sowie der sozialpädagogischen Institutionen deren Aktivitäten im Internet, konkret in sozialen Medien (z.B. zu Instagram-Beiträgen), und dokumentierten diese mittels Downloads, Screenshots oder Memos. Die zweite Erhebungsphase, welche aufgrund der Verzögerungen imZugederPandemiemitderdrittenverbundenwurde,erstrecktesich von April bis Oktober 2020. Während dieser Zeit fokussierten die Forschenden die von den jungenMenschengenutztendigitalenMedieninartefaktanalytischerPerspektive und erhoben hierzu u.a. Daten wie Screenshots auf ihren Smartphones und von ihren Apps. Feldaufenthalte waren im Zuge der COVID-19-bedingten KontaktbeschränkungenerstwiederabJuni2020möglich.FokussierteNacherhebungen(in FormvonInterviews)wurdenimRahmeneinerVerlängerungderStudienlaufzeit imMärz2022durchgeführt.DiegeplantenErhebungsmethodenund-fokizuden jeweiligen Feldphasen wurden somit letztlich trotz der COVID-19-Pandemie und den damit veränderten Rahmenbedingungen umgesetzt und dort, wo erforderlich, entsprechend angepasst. Diese Anpassungen spiegelten sich u.a. im Vorgehen bei der Artefaktanalyse wider (vgl. Kapitel 1.5).
 
 Auchstellten sich im Verlauf der Feldphasen anhand der Erfahrungen der Forschenden gewisse Alltagsbereiche der jungen Menschen als (bildungs-)relevant(er) heraus, welche dann fokussiert wurden (z.B. Wochengespräche zwischen Sozialpädagog*innen und jungen Menschen).
@@ -497,11 +746,19 @@ DieFeldaufenthaltewurdeninderTeilstudieKölnbasierendaufderGrounded Theory Metho
 
 Die teilnehmenden Beobachtungen wurden während der Feldaufenthalte in Form von Feldnotizen dokumentiert und im Anschluss jeweils zeitnah in Beob-
 
+
+<!-- PAGE 64 -->
+
+
 achtungsprotokolle überführt. Diese Beobachtungsprotokolle stellten die zentrale Datengrundlage für die anschließende Auswertung dar und wurden zur Qualitätssicherung jeweils im Team gegengelesen,überarbeitet und um weitere Details vervollständigt (vgl. Breidenstein et al. 2020, S. 116ff.). Die Arbeit mit den Beobachtungsprotokollen erfolgte von Beginn an pseudonymisiert, um die Identität der Forschungsteilnehmenden zu schützen. 5 Absprachen zu den Feldaufenthalten wurden mit den jungen Menschen zwischen den Feldaufenthalten vorgenommen.Die Forschenden waren hierzu mit dienstlichen Smartphones ausgestattet, mit denen sie per Telefon, SMS, E-Mail und Signal-Messenger mit den jungen Menschen kommunizierten. Während der Pausen zwischen den Feldaufenthalten wurde auch auf diesem Weg der Kontakt gehalten. Bewusst wurden aus Datenschutzgründen,riskantere'MessengerwieWhatsAppnichtgenutzt,dahierbei potenziell Daten der Teilnehmenden im Rahmen der Forschung an Dritte (Social Media-Provider) weitergegeben worden wären (vgl. von der Lühe 2013).
 
 Im Verlauf der Feldaufenthalte wurden die Fokussierungen in den teilnehmenden Beobachtungen sukzessive ausgerichtet und justiert. So ,hafteten' im SinnedermultilokalenEthnografiedieForschendenwährendderBeobachtungen nicht nur an den Teilnehmenden selbst, sondern erfassten deren Alltag auch aus weiteren Perspektiven (z.B. ausgehend von weiteren Akteur*innen, Gegenständen, räumlichen Arrangements). Durch die Relevanzen, welche die Forschenden im Zuge der Feldaufenthalte feststellten (vgl. Breidenstein et al. 2020, S. 90ff.) und das Wissen, welches sie über die Felder erlangten, fokussierte sich der zunächst weite und offene Blick zunehmend auf spezifische Arrangements. Dabei galt es in Abhängigkeit von den jeweiligen Orten (z.B. Jugendcafés, Berufsbildungsmaßnahme, stationäre Heimeinrichtung, Betreutes Wohnen, Schule, zu Hause bei den jungen Menschen) den Teilnahmegrad im Verhältnis zur Beobachtung stets neu auszurichten. Dies betraf auch die Anfertigung von Feldnotizen, die in informellen Settings (z.B. unterwegs mit Freund*innen) schließlich digital auf dem Smartphone (vgl. zur Übersicht Hoffmeister/Marguin/Schendzielorz 2018) erstellt wurden, da Notizen per Stift und Papier (anders als in schulischen Arrangements) dort zu Irritationen der weiteren anwesenden Personen führten. Der multilokale ethnografische Zugang zu den verschiedenen Alltagskontexten der jungen Menschen ging mit der Begleitung in unterschiedliche Settings wie zuhause bei der Familie, Fitnessstudio, Treffen mit Peers, Unterricht in der Schule, Nachhilfeunterricht, Situationen in Jugendhilfeeinrichtungen u.v.m. einher. An diesen verschiedenen Orten konnten die Forscher*innen die jungen Menschen im Laufe der Feldphasen begleiten, allerdings gab es vereinzelt auch
 
 5 Die Pseudonyme haben sich in der Kölner Teilstudie die jungen Menschen am Ende ihrer Studienteilnahme, sofern sie noch erreichbar waren, selbst gegeben (mit Ausnahme eines Jugendlichen, dem kein eigenes Pseudonym einfiel). Weitere von den Forschenden pseudonymisierte Angaben sind Orts- und Institutionsnamen.
+
+
+<!-- PAGE 65 -->
+
 
 Einschränkungen, die jeweiligen Bezüge zwischen verschiedenen Orten (bzw. sites ) über die Feldaufenthalte,einzufangen'.So war es nicht möglich,in bestimmten Arrangements mit anwesend zu sein. Beispielsweise sprach sich in einem Fall eine Lehrkraft aufgrund einer bevorstehenden Klausurphase gegen die ethnografische Begleitung eines an der Studie teilnehmenden jungen Erwachsenen im Unterricht aus. Auch konnten die Forschenden die jungen Menschen nicht zu sämtlichen Tageszeiten an die unterschiedlichen sites ihres Alltags begleiten, an denen eine Nutzung digitaler Medien voraussichtlich erfolgte (wie z.B. beim morgendlichen Aufstehen oder zu Bett gehen). Zeitlich begrenzte Ressourcen erforderten zudem eine Priorisierung von Feldaufenthalten. So wurden einerseits Bereiche fokussiert, in denen durch die Forschenden im Zuge der parallel stattfindenden Datenauswertungen bildungsteilhaberelevante Praxis identifiziert wurde. Andererseits wurde geprüft, welche von den Forschenden noch nicht ethnografierten Bereiche im Alltag der jungen Menschen noch miteinbezogen werden könnten (z.B. am Arbeitsplatz), um die Datenvielfalt zu erhöhen. In diesem Zusammenhang zeigten sich stellenweise ,Ablaufdaten' der Forschungsfelder (vgl. Candea 2007, S. 173ff.), wenn beispielsweise die jungen Menschen nur zeitlich begrenzt in bestimmte Institutionen eingebunden waren oder sich unvorhergesehene Entwicklungen im Leben der Teilnehmenden ereigneten, die eine Fortführung der Studienteilnahme nicht mehr ermöglichten, und die Forschenden eine Begleitung bis dahin noch nicht umsetzen konnten (z.B. im Unterricht in der Sprachschule oder in zurückliegenden Maßnahmen, wie einer sozialpädagogischen Familienhilfe).
 
@@ -511,9 +768,17 @@ Neben den teilnehmenden Beobachtungen wurden auch Interviews und ethnografische 
 
 Im Rahmen der regelmäßigen Treffen im Forschungsteam wurde die Rolle der Forschenden im Verhältnis zu den Forschungsteilnehmenden kontinuierlich besprochen und reflektiert. Forschungsethische Fragen wurden hier im Kontext des dualen Imperativs der Fluchtforschung (vgl. von Unger 2018) sowie der ethnografischen Haltung,Teilnehmendenichtals,Studienobjekte',sondern als Subjekte in einer Forschungsbeziehung zu betrachten, in den Blick genommen (vgl. Breiden-
 
+
+<!-- PAGE 66 -->
+
+
 stein et al. 2020, S. 82). Die Forschenden reflektierten und besprachen dazu gemeinsam, was sie den Forschungsteilnehmenden selbst ,zurückgeben' könnten, aber auch welche Folgen die Forschung potenziell unwissentlich mit sich bringen könnte (z.B. Risiken bei Deanonymisierung) und nahmen sich vor diesem Hintergrund zu den anfänglichen Feldaufenthalten explizit Zeit, um die Lebenssituationen der jungen Menschen kennenzulernen. Dabei äußerten manche einen Bedarf an Vermittlung von Unterstützung (z.B. Vermittlung an Beratungsstellen) und Hilfe im Alltag (z.B. Sprachlernen). Um einen anwendungsorientierten Nutzen aus der Forschungsteilnahme für die jungen Menschen zu ermöglichen, unterstützten die Forschenden daher im Rahmen ihrer Ressourcen und vor dem Hintergrund der Reflexionen zur Forschendenrolle und zum gesamten Setting auch als durch gesellschaftliche Machtverhältnisse und ungleiche Ressourcenlagen geprägt - die jungen Menschen punktuell, u.a. bei Bewerbungen und dem Erlernen von Sprache oder auch als Nachhilfe. Auch stellte die Projektleitung den jungen Menschen bei Bedarf Bescheinigungen über deren Teilnahme an der BIGEDIB-Studie aus, die von ihnen beispielsweise für Bewerbungen genutzt werdenkonnten.Umdieeigenewissenschaftliche Arbeit und den Ort der Universität den Teilnehmenden transparent zu machen, wurden die jungen Menschen dazu eingeladen, den Arbeitsbereich an der Universität, also die Räumlichkeiten des Lehrstuhls der Studienleitung sowie den dortigen Umgang mit den Forschungsdaten kennenzulernen, was einige von ihnen gerne wahrnahmen.
 
 Es entwickelten sich vor diesem Hintergrund über die längeren Verläufe der ethnografischen Begleitungen (in die teils sehr privaten Bereiche des Alltags der jungen Menschen) und die dabei gemeinsamen Aktivitäten mitunter enge und vertrauensvolle Forschungsbeziehungen zwischen den Forschenden und den jungen Menschen. Dabei forderten die jungen Menschen die Forschenden auch zur Teilnahme an der Praxis ihres Alltags auf (z.B. Mitspielen bzw. Mitmachen beim Rappen, Kickern, FIFA spielen in einem Jugendcafé). In diesem Zusammenhang erwies es sich als zentral, dass gerade zu Beginn den Forschungsteilnehmenden die Rolle der Forschenden transparent und zeitlich fortwährend in dialogischen ,Schleifen' vermittelt wurde (vgl. Gauditz 2019, S. 274): etwa, dass die Begleitung im Rahmen von Forschung stattfindet und zeitlich begrenzt ist. Dabei waren vereinzelt auch Grenzen zu kommunizieren, deren Überschreiten der Rolle der Forschenden widersprochen hätte, wie die Ablehnung der Einladung zu einem Geburtstag oder zu einem gemeinsamen Restaurantbesuch. Die jungen Menschen wurden über den Verlauf der Feldaufenthalte zudem kontinuierlich gefragt, was sie den Forschenden aus ihrem Alltag zeigen wollten, und es wurde ihnen überlassen zu entscheiden, wozu sie bereit waren (vgl. Aden et al. 2019). In manchen Fällen wurde eine Begleitung nur unter einer ,verdeckten' Identität gestattet, so z. B., dass sich eine forschende Person bei Feldaufenthalten in der Schule auf den Wunsch eines Jugendlichen hin gegenüber seinen Mitschüler*innen nicht als in Beziehung zu ihm stehend zu erkennen geben sollte oder
+
+
+<!-- PAGE 67 -->
+
 
 Dritten als Freund*innen in der Freizeit vorgestellt wurde. Letzteres war auch mit forschungsethischen Fragen bzw. Konflikten verbunden, die nicht immer ,eindeutig' gelöst werden konnten. So wurde in einem Fall beim Termin eines jungen Erwachsenen auf dem Ausländeramt einer forschenden Person direkt vor Eintritt in das Büro auf der Behörde vom jungen Erwachsenen die Bitte mitgeteilt, seine Rolle bei der Begleitung gegenüber der Sachbearbeitung zu verschweigen. Der Forschende kam hier der Bitte nach und vermied es, in der teilnehmenden Beobachtung und den dazu angefertigten Notizen (abgesehen vom Erhebungsort) Daten der Sachbearbeitung zu erfassen.
 
@@ -523,6 +788,10 @@ Besondere Herausforderungen, die sich für die Forschenden zeigten, betrafen vor
 
 Die Dauer der Studienteilnahme der einzelnen Jugendlichen bzw. jungen Erwachsenen variierte im Laufe des 3,5-jährigen Forschungsprojekts. Einzelne der
 
+
+<!-- PAGE 68 -->
+
+
 jungen Menschen entschieden sich kurz nach Beginn der ethnografischen Begleitung gegen eine weitere Teilnahme oder reagierten im späteren Verlauf der Forschung nicht mehr auf weitere Kontaktanfragen. In einem Fall stand die unsichere Aufenthaltsperspektive eines jungen Menschen, der kurz vor Erreichen des 18. Lebensjahrs und seinem Schulabschluss stand, im Zusammenhang mit seinem Teilnahmeabbruch.
 
 Als hoch relevant für ein Aufrechterhalten der Forschungsbeziehungen erwies sichderregelmäßigeundkontinuierlicheKontaktzwischenForschendenundden jungen Menschen. Zwischen den Feldphasen meldeten sich die Forschenden vereinbarungsgemäß per Textnachrichten oder Telefon und brachten sich und die Studie ,in Erinnerung'. Zwischenzeitlich als herausfordernd erwiesen sich BeziehungsdiskontinuitätenaufSeitenderForschendenaufgrundvonStellenwechseln bei den im Projekt beschäftigten Hilfskräften, die vermutlich auch eine Rolle bei derBeendigungeinzelnerTeilnahmenzudemfrühenZeitpunktspielten.VordiesemHintergrundnahmenanderzweitenunddrittenFeldphasenochneunvon13 der jungen Menschen teil. Nacherhebungen erfolgten mit zwei der Teilnehmenden. 6
@@ -531,17 +800,33 @@ Die Forschenden hatte sich vor dem Hintergrund forschungsethischer Überlegungen
 
 6 Erreichbar waren zu diesem Zeitpunkt noch drei weitere der Forschungsteilnehmenden, bei denen sich Nacherhebungen jedoch nicht mehr als notwendig erwiesen.
 
+
+<!-- PAGE 69 -->
+
+
 ## 1.5 Datenauswertung
 
 Um Praxis unter Beteiligung digitaler Medien in ihren jeweiligen (Kontext-)Bedingungen rekonstruieren zu können, lag in der Teilstudie Köln der Fokus der Datenauswertung vor allem auf der Analyse der Beobachtungsprotokolle. Diese erfolgte von Beginn an parallel zur Datenerhebung im Zuge des offenen Kodierens (vgl. Strauss/Corbin 1996), indem die Textdokumente aufmerksam gelesen und in der zur qualitativen Datenanalyse genutzten Software 'MAXQDA' sortiert und thematisch annotiert wurden. Dieses Vorgehen ermöglichte es, den umfassenden Datenkorpus von Beginn an zu strukturieren und in ihm bereits spezifische Themen (wie auch Lücken) für nachfolgende Erhebungen (im Sinne einer theoretischen Sättigung) zu identifizieren (vgl.Breidenstein et al.2020,S. 142ff.). Dabei wurden für die weitere Analysearbeit auch zentrale digitale Artefakte im Alltag der jungen Menschen in ihrem Alltag identifiziert (vgl. Lueger/Froschauer 2018). Ergänzend zur Kodierungsarbeit erstellten die Forschenden kontinuierlich Memos (vgl. Breidenstein et al. 2020, S. 185ff.), in denen erste Ideen, Einsichten und Vermutungen zur Datenerhebung und -auswertung festgehalten wurden. Um postpositivistisch die eigene Beobachtungs- und Auswertungsperspektive zum Gegenstand der Beobachtungen selbst zu machen und damit 'den Fallstricken des Empirismus zu entgehen' (Strübing 2017, S. 70), wurden außerdem sensibilisierende Konzepte, Denkfiguren und Theoreme in ihrer Bedeutung für die Forschungsfragen explizit gemacht, ausformuliert und reflektiert. Es erfolgte insofern in späteren Analysephasen eine kontinuierliche Auseinandersetzung mit theoretischen Perspektiven wie Alltagsbewältigung (vgl. Alkemeyer/Buschmann 2017; Wiezoreck 2016), Medienbildung (vgl. Jörissen/Marotzki 2009; Asmussen 2020) und Verfügungs- und Orientierungswissen (vgl. Mittelstraß 2019) mit dem Ziel der 'Präzisierung einer Optik' (Breidenstein et al. 2020: 196), das heißt, um eine Sensibilisierung gegenüber den Daten zu erlangen und unter Vermeidung starker Vortheoretisierungen weiteren analytischen Tiefgang zu gewinnen. Entsprechende Konzepte wurden dabei nicht als ,gegeben' hingenommen oder übernommenodergarimMaterial,gesucht'(vgl.Breidensteinetal.2020,S. 197).Vielmehr wurden sie gemäß der Grounded Theory Methodology im weiteren Verlauf der empirischen Analyse als Möglichkeit der theoretischen Sensibilisierung betrachtet, welche mit Blick auf die Erkenntnisse aus den eigenen Daten offen für Erweiterungen oder Veränderungen gehalten wurde.
 
 Die Phase der offenen Kodierung in MAXQDA verlief parallel zu den verlängerten Erhebungsphasen. Dabei wurden zugleich erste Artefaktanalysen der im Alltag der jungen Menschen vorkommenden digitalen Medien vorgenommen. Diese wurden in Form von Beschreibungen bzw. Interpretationen auf den von Lueger und Froschauer (2018) vorgeschlagenen sechs Ebenen zu den Gegenständen selbst erstellt, um die jeweiligen Artefakte in ihrer Beschaffenheit und den damit verbundenen Potenzialitäten und Begrenzungen zu systematisieren.
 
+
+<!-- PAGE 70 -->
+
+
 Die Artefaktanalyse digitaler Medien stellte sich dabei aufgrund der Komplexitäten digitaler Artefakte (z. B. durch den hochgradig ,verschachtelten' und viele Strukturebenen umfassenden Aufbau und die Struktur von Software und Smartphones) in der Durchführung als herausfordernd dar, sodass forschungspragmatische Entscheidungen über Einschränkungen und Fokussierungen bei der Analyse der einzelnen Artefakte getroffen werden mussten. Diese bestanden etwa darin, dass Analysen zu materiellen Herstellungsvoraussetzungen (Ebene der Existenzbedingungen des Artefakts) eingegrenzt wurden. Auch konnten aufgrund des ,Umfangs' der digitalen Artefakte nicht sämtliche Nutzungsebenen von Apps (z.B. Einstellungen bei Facebook) hinsichtlich ihrer Strukturen und der darin enthaltenen Elemente detailliert dargelegt werden (Ebene der deskriptiven Analyse). Es wurden daher vor allem die Nutzungsebenen von Apps fokussiert, die im Alltag der jungen Menschen präsent waren, und untersucht, inwiefern darüberhinausgehende Potenzialitäten ,im' Artefakt (nicht) genutzt wurden. Im Anschluss an die offene Kodierung und erste Artefaktanalysen erfolgte ein Wechsel in den Modus der Fallanalyse (vgl. Breidenstein et al. 2020, S. 158ff.). Diese wurde durch die Perspektive angeleitet, dass anhand des Falls als partikularer Dateneinheit generalisierende Perspektiven zur Praxis unter Beteiligung digitaler Medien im Alltag der jungen Menschen gewonnen werden konnten. ,Fälle' bildeten hier zunächst die in der Studie begleiteten jungen Menschen. Dies bedeutete jedoch nicht, dass der Perspektive einzelner Subjekte und ihren Deutungen gefolgt wurde, sondern die im Zuge der Begleitung der einzelnen Forschungsteilnehmenden beobachteten Situationen und dabei die verschiedenen Beteiligten (Akteur*innen, digitale und analoge Artefakte sowie weitere Bedingungen des Arrangements) den Gegenstand darstellten. Die Auswahl der Feldprotokolle orientierte sich hier an etablierten Kriterien (u.a. Datenqualität, Fallrelevanz und -typizität) (vgl. Breidenstein et al. 2020, S. 159ff.) und konzentrierte sich als Kernmaterial auf Situationen aus dem Alltag von sechs Teilnehmenden, die sich kontrastierend voneinander unterschieden (u.a. hinsichtlich Alter, Herkunftsland, Aufenthaltsstatus und -dauer, Geschlecht und Bezügen zur Kinder- und Jugendhilfe). In diesem Zusammenhang bestand der Anspruch, über die anfänglichen Kodierungen hinaus ,tiefergehende' Interpretationen der Praxis unter Beteiligung digitaler Medien präzise, detailliert und differenziert vorzunehmen und auch angesichts der kontrastierenden Bedingungen der einzelnen Forschungsteilnehmenden Strukturbedingungen für ein ,Gelingen' bzw. ,Misslingen' von (Bildungs-)Teilhabe in den Blick zu bekommen. Im Zuge dieser fallübergreifenden Analyse wurde der Fallbegriff weiterentwickelt. Die einzelnen Teilnehmenden stellten damit letztlich den jeweiligen spezifischen Zugang zur situativen Praxis dar, innerhalb dessen die Situationen als ,Fallkonglomerate' die Basis der Interpretation bildeten. Aufgrund der themenbezogenen Interpretation, in der zentrale Praktiken fallübergreifend rekonstruiert wurden, sowie einem Interpretationsschritt, der jeweils bezogen auf die einzelnen jungen Men-
+
+
+<!-- PAGE 71 -->
+
 
 schen über die in ihrem jeweiligen Alltag protokollierten Situationen hinweg ihre je subjektbezogenen Spezifika (subjektive Fähigkeiten und Voraussetzungen, Lebenssituation, Strukturbedingungen) herausarbeitete, war es möglich, je nach Datenanalysephase sowohl die Konglomerate an Situationen der jeweiligen Teilnehmenden als auch die einzelnen Situationen als Fall zu fokussieren - und erforderlich, dieses jeweils voneinander analytisch zu unterscheiden. Auf diese Weise wurden einerseits die strukturbezogenen und andererseits die subjektbezogenen Bedingungen für die Hervorbringung spezifischer teilhaberelevanter Praxis in den Blick genommen. Anhand der Feldprotokolle wurden dabei über ein sequenzanalytisches Vorgehen im Sinne eines zooming in (vgl. Breidenstein et al. 2020, S. 166ff.) dichte Beschreibungen in Textdokumenten zu einzelnen Situationen im Alltag der jungen Menschen verfasst, um die implizite Vollzugslogik der beobachteten Praxis und die jeweiligen Beteiligtheiten im Arrangement daran zu rekonstruieren. Es entstanden so nacheinander detaillierte Fallanalysen, welche 1.) bildungsrelevante Praxis unter der Beteiligung digitaler Medien , 2.) die Ausgangslagen und Kontexte der jungen Menschen selbst und 3.) die Situiertheit und Beteiligtheit der digitalen Artefakte abbildeten. Diese Fallanalysen wurden im Zuge der Datenauswertungsprozesse kontinuierlich weiterentwickelt. Im Anschluss an die fallbezogene Analyse erfolgte die fallübergreifende Analyse. Diese verfolgte im Sinne des axialen und selektiven Kodierens (vgl. Strauss/Corbin 1996) das Ziel, über die einzelnen Fallanalysen hinaus 'Schlüsselthemen' (Breidenstein et al. 2020, S. 178ff.) für den Aspekt der Bildungsteilhabe im Zusammenhang der Praxis unter Beteiligung digitaler Medien und damit zur Beantwortung der Forschungsfrage zu rekonstruieren. Als heuristischer Deutungsrahmen wurde ein Kodierparadigma (vgl. Equit/Hohage 2016, S. 22f.) entwickelt und praxistheoretisch ausformuliert (vgl. Abbildung 3), um die verschiedenen Themen in ihren Relationen untereinander zu überprüfen und auszudifferenzieren.
 
 Mit Blick auf dieses Kodierparadigma wurden Phänomene der Praxis (z.B. Sprachbewältigung) zunächst auf ihren Anlass (z.B. ein ,formelles' Schreiben einer Behörde zu erhalten) hin befragt. Zu dem jeweiligen Phänomen der Praxis wurde dann einerseits reflektiert, über welche Praktiken und Aktivitäten dieses hervorgebracht wurde (z.B. Bildpräsentationen auf dem Smartphone, Dialog zwischen Jugendlichem und Sozialpädagogen). Andererseits wurde gefragt, in welchem Kontext die Praxis verortet ist (z.B. Treffen zum Wochengespräch mit Sozialpädagog*innen), welche Entitäten bzw. Elemente des Arrangements an der Praxis beteiligt sind (Akteur*innen, Artefakte, Dinge) und welche Eigenschaften diese charakterisieren (z. B. Wissen von Akteur*innen). Ausgehend von diesem Konstitutionsverhältnis wurde anschließend rekonstruiert, welche ,Effekte' aus dem Vollzug der Praxis hervorgingen (z.B. Handlungsfähigkeit im Umgang mit einer Behörde). Da die jeweiligen untersuchten Phänomene sich in unterschiedlichen ,Größenordnungen' bewegten (z.B. Aufenthaltsorganisation gegenüber räumlicher Orientierung), erwies es sich als notwendig, das Kodier-
+
+
+<!-- PAGE 72 -->
+
 
 Abbildung 3: Kodierparadigma der Teilstudie Köln praxistheoretisch reformuliert
 
@@ -550,6 +835,10 @@ Abbildung 3: Kodierparadigma der Teilstudie Köln praxistheoretisch reformuliert
 paradigma flexibel anzupassen. Im Zuge dieser Umsetzung wurden die bis dahin einzelnen und ,isoliert' betrachteten Fallanalysen ,nebeneinandergelegt' und im Fallvergleich im Sinne eines zooming out herausgearbeitet, wo und wie sich welche bildungsrelevante Praxis unter Beteiligung digitaler Medien vollzieht und welche übersituativen (Kontext-)Bedingungen sich dabei als ermöglichend oder verhindernd zeigen. Die anfänglich getätigten offenen Kodierungen in MAXQDA erwiesen sich in diesem Zusammenhang als hilfreich, um aus dem umfangreichen Datenkorpus über die Schlüsselsequenzen hinaus Situationen aus dem Alltag der Teilnehmenden aufzuspüren, in denen sich Praxis ähnlich bzw. kontrastierend entfaltete. Interviewdaten der jungen Menschen und ihrer Bezugspersonen stellten sich darüber hinaus als gewinnbringend für das Analysevorgehen dar, da darin Informationen zu den (Kontext-)Bedingungen der Akteur*innen und Institutionen (z.B. Wissen und Fähigkeiten) enthalten waren.
 
 Mit Hilfe des Mehr-Ebenen-Ansatzes in der qualitativen Datenanalyse nach Hummerich und Kramer (2011) wurden die verschiedenen Datentypen (Beobachtungen, Interviews und Artefaktanalysen) zueinander relationiert. So wurde zu den unterschiedlichen Datentypen reflektiert, welche Ebenen des Sozialen sie abbilden, welche Aspekte sie damit bei der Rekonstruktion von Praxis einbringen und wo sich für sie Grenzen in der Aussagekraft bzw. Reichweite des jeweiligen Datentyps zeigen (vgl. Flick 2011; Kelle 2001). Außerdem wurden grafische Darstellungen zur Abstraktion und Entwicklung synthetisierender Aussagen erstellt. Dabei wurde u.a. auf Mapping-Verfahren der Situationsanalyse (vgl. Clarke/Friese/Washburn 2018) zurückgegriffen, um sich von der Ebene der nahen praxistheoretischen Beschreibungen von Vollzugslogiken zu distanzieren und analytische Anstöße für die fallübergreifende Analyse zu gewinnen. Die In-
+
+
+<!-- PAGE 73 -->
+
 
 terpretationen und deren Überprüfung wurden mit mehreren Personen im Team realisiert, um die Verlässlichkeit der Interpretationen zu verbessern (vgl. Breidenstein et al. 2020, S. 177f.; Lueger/Froschauer 2018, S. 60ff.). Diese Arbeiten im Team an der fallbezogenen und fallübergreifenden Analyse erfolgten aufgrund Kontaktbeschränkungen im Zusammenhang der Pandemie weitgehend digital. In zusätzlichen Expert*innenworkshops (neben denen des Gesamtprojekts) der Teilstudie Köln wurde die Forschungsmethodik und -methodologie vertieft reflektiert. 7 Um die Forschungsergebnisse hinsichtlich ihrer Gültigkeit und Aussagekraft zu überprüfen fanden darüber hinaus Validierungstreffen mit den Forschungsteilnehmenden (junge Geflüchtete, Sozialpädagog*innen und Lehrer*innen) zum Ende des Projekts hin statt.
 
@@ -561,11 +850,19 @@ Im Folgenden werden die empirischen Ergebnisse der Kölner Teilstudie dargestell
 
 8 Dadie angeführten Feldprotokolle bzw. deren Auszüge teilweise durch unterschiedliche Personen aus dem Forschungsteam angefertigt wurden, wird aus Gründen der Lesbarkeit auf das in den ethnografischen Protokollen jeweils verwendete Personalpronomen 'Ich' zur Markierung des*der Forschende*n in den folgenden Darstellungen verzichtet. Dies bedeutet jedoch nicht, dass die eigene Perspektive und Beteiligung während der Feldaufenthalte ausgeblendet wurde. Vielmehr war sie kontinuierlich Gegenstand der Reflexion im Erhebungs- wie im Analyseprozess.
 
+
+<!-- PAGE 74 -->
+
+
 dichte Beschreibungen von in den Daten vorhandenen Sequenzen arrangiert und aggregiert, in denen sich relevante Sinnzusammenhänge zeigen. Dies geht mit (Um-)Strukturierungen, Verdichtungen (bzw. ,Zäsuren' durch Entfernen von Redundanzen) des Ursprungsmaterials einher. Die nachfolgende lineare Kapitelabfolge ist dabei auf die Notwendigkeit einer solchen Darstellungsweise in Textform zurückzuführen, wobei 'die einzelnen Kapitel eher als ein Netz von vielfach wechselseitig miteinander verbundenen Knotenpunkten zu denken sind'(Farrenberg 2018,S. 25; vgl. Asmussen 2020,S. 39).Vor diesem Hintergrund können analog zur Vielstimmigkeit der Praxis auch deren Beschreibungen in Beobachtungsprotokollform nicht monokausal auf ein einzelnes analytisches Thema reduziert werden.Esfolgthieraus,dassbestimmteSituationenoderErzählungen von Feldaufenthalten vereinzelt mehrfach als Grundlage analytischer Systematisierungen relevant werden. Das erste Teilkapitel umfasst die Rekonstruktion der Praxisvollzüge, in denen sich Aspekte bildungsteilhaberelevanter Praxis unter Beteiligung digitaler Medien abzeichnen. Im zweiten Teilkapitel werden basierend auf dieser Analyse die Bedingungen der Praxis herausgearbeitet, die in der Analyse der empirischen Daten mit Bezug auf die Ermöglichung bzw. Verhinderung von Bildungsteilhabe in digitalisierten Bildungsarrangements als relevant identifiziert wurden.
 
 ## 2.1 Bildungsteilhabe als verteilte Praxis im Alltag junger Geflüchteter unter der Beteiligung digitaler Medien
 
 Ausgehend vom Methodologie- und Methodenbeitrag in diesem Buch werden nachfolgend zentrale Praxen dargestellt (vgl. den Beitrag von Fujii/Kutscher i.d.B.), die als relevant für die Bildungsteilhabe junger Geflüchteter rekonstruiert wurden. Folglich steht nicht die Abbildung subjektiver Bildungserfahrungen und -prozesseimVordergrund.StattdessenistderFokusaufdasGesamtarrangement und die - auch von subjektiven Perspektivierungen unabhängig stattfindenden - sich zwischen menschlichen Akteur*innen, digitalen und nicht-digitalen Artefakten und strukturellen Bedingungen entfaltenden Praxen sowie die daraus entstehenden Optionen für Aneignung, Wissenserwerb, Selbstwirksamkeitserfahrungen und Handlungsbefähigung gerichtet. Vor diesem Hintergrund geht es einerseits um Situationen der Alltagsbewältigung, die sich als fordernd, krisenhaft, irritierend oder belastend herausstellen und in denen im Umgang mit der praxisinhärenten Unbestimmtheit beispielsweise Problemverständnisse, Lösungsansätze oder ,kompetente' Umgangsweisen im Alltag hervorgebracht werden. Andererseits rücken solche Situationen in den Fokus, die explizit auf die Aneignung und Vermittlung von Informationen und Wissen ausgerichtet sind (z.B. zur Entwicklung von Fähigkeiten in Bezug auf digitale Medien). In diesen Situationen werden sowohl unter explizit pädagogischen Zielsetzungen
+
+
+<!-- PAGE 75 -->
+
 
 als auch unabhängig von planvollen Arrangements Möglichkeiten des Lernens unddesErwerbsvonFähigkeiten entdeckt,gezeigt bzw.erklärt,ausprobiert oder kennengelernt (zur detaillierten Darstellung vgl. den Beitrag von Fujii/Kutscher i.d.B.). Konzeptionell werden die vorzustellenden bildungsteilhaberelevanten Praxen im Sinne Schatzkis (2016) flacher Ontologie in ihrem Konstitutionsverhältnis auf einer einzigen Ebene verortet: nämlich der Praxis. 9 Inderempirischen (Re-)Präsentation der Praxis werden außerdem verschiedene ,Zoomeinstellungen' vorgenommen. So bewegen sich manche der analysierten Situationen auf einer besonders kleinteiligen Mikroebene der Praxis und werden über spezifische Tätigkeiten entfaltet (z.B. ,formelle' Schreiben verfassen), während andere komplexere Phänomene (z.B. Unterrichtssituationen) beschreiben.
 
@@ -575,6 +872,10 @@ Im Alltag der Teilnehmenden an der vorliegenden Studie werden regelmäßig ,form
 
 9 So besteht sämtliche Praxis aus Verflechtungen von Praktiken und Arrangements, in denen bestimmteSinn-undOrdnungszusammenhängehervorgebrachtwerden.Hierbeiwerdenerstim Zusammenspiel'verteilte[r] Praktiken' (Bollig 2013, S. 41) von den jeweiligen Akteur*innen, Artefakten und (institutionellen) Räumen unterschiedliche Möglichkeiten zur Bildungsteilhabe bzw. deren Einschränkungen hervorgebracht.
 
+
+<!-- PAGE 76 -->
+
+
 Repräsentation und die Verhandlung eigener Interessen und Ziele von grundlegender Bedeutung, da es dabei auch um Existenzfragen geht. Diese ,formellen' Kommunikationensindzugleich voraussetzungsvoll,wie es auch der Jugendliche Jusuf in einem Interview benennt: 10
 
 'Ich weiß ja nicht, wie ich das Ganze [das Anschreiben einer Bewerbung] dann so formulieren soll, schreiben soll. […] Aber für mich ist es halt irgendwie, also ich hatte das noch nie so gemacht. War auch eigentlich nie so mein Ding, am Laptop zu arbeiten. Vielleicht so Spiele oder so bisschen, also paar Mal, dass wir daran so spielen oder Filme. Aber sonst so, arbeiten oder so, ist nicht auf Laptop meins.' (Interviewtranskript Jusuf, 06/2020)
@@ -583,13 +884,25 @@ Im vorliegenden Fall ist bei einer Bewerbung des Jugendlichen für ein Schüler*
 
 10 In Abhängigkeit des Alters der Forschungsteilnehmenden wird nachfolgend zwischen Jugendlichen (14 bis 17 Jahre) und jungen Erwachsenen (18 bis 27 Jahren) sprachlich differenziert (vgl. z.B. BMFSFJ 2020).
 
+
+<!-- PAGE 77 -->
+
+
 menschlichen Akteur*innen stellen also digitale Artefakte relevante Elemente in demGesamtarrangement der Praxis dar.
 
 Die begleiteten jungen Menschen suchen zur Bewältigung dieser Voraussetzungen regelmäßig die Unterstützung von Sozialpädagog*innen. In diesen Situationen wird auf der Mikroebene sichtbar, wie die Sozialpädagog*innen den jungen Menschen institutionalisiertes Verbindungskapital (vgl. Szreter/ Woolcock 2004) zugänglich machen, indem sie mit ihnen bis dahin nicht verfügbares Wissen teilen, die jungen Menschen an weitere Akteur*innen (z.B. für Bewerbungen) vermitteln, digitale Medien in den Institutionen überhaupt erst bereitstellen (z. B. fehlende Computer der Jugendlichen) und bei der Nutzung anleiten, begleiten bzw. anstelle der jungen Menschen Probleme lösen oder ihnen Hinweise und Informationen geben, mit denen sie befähigt werden, eigenständig zu handeln. Die Ausgestaltung dieser pädagogischen Begleitung zeigt sich dabei als hochrelevant für die Eröffnung unterschiedlicher Grade an Beteiligung am (potenziellen Bildungs-)Geschehen und damit für die Erweiterung oder Begrenzung situativer Optionen für die Entwicklung von Handlungs- und Orientierungsfähigkeit. Dies wird über die nachfolgende Beobachtungssequenz veranschaulicht, in der im Rahmen der Flexiblen Hilfe der Jugendliche Jusuf und der Sozialpädagoge Kadar bei Jusuf zu Hause in dessen Zimmer am Laptop eine Bewerbung erstellen. Dabei sitzen Jusuf und Kadar - mit dem Ethnografen - nebeneinander auf einem Sofa mit dem Laptop vor ihnen auf einem Tisch. Mit Hilfe eines Textverarbeitungsprogramms ist ein auf dem Laptop geöffnetes Bewerbungsanschreiben von Jusufs Bruder Arif geöffnet:
 
 'Also, das ist die Bewerbung von Arif, was siehst du hier?', fragt Kadar Jusuf und richtet den Laptop zu Jusuf. Jusuf beugt sich leicht nach vorne und schaut über den oberen Teil des Bewerbungsanschreibens. Er nennt u.a. Adresse, Name und Briefkopf. Kadar stimmt zu und erklärt, dass ein Bewerbungsanschreiben 'letztlich nichts anderes als ein Brief an jemanden' ist und sie sich gerade beim Briefkopf befinden. Kadar wählt über das Touchpad am Laptop ein Textfeld imoberen Teil des Dokuments aus und löscht die bisherigen Angaben. Dann tippt er mit Absätzen getrennt ein: 'Empfänger, Adresse, Postleitzahl Ort'. Das Textfeld ähnelt nun einer Vorlage zumEinfügendereigenenDaten.KadarmerktzuJusufan,dassernochnachdenZeilenabständen sucht und ändert diese schließlich. Anschließend wendet sich Kadar wieder an Jusuf. 'Was muss man beim Sender ändern?', fragt er Jusuf. Im Textfeld des Senders sind noch die Adressdaten von Arif angegeben. Jusuf beugt sich weiter nach vorne, schaut auf das Textfeld und merkt an, dass Name und Datum geändert werden müssten. 'Magst du das ändern?', fragt Kadar. 'Ja, kann ich machen', bestätigt Jusuf. Jusuf wählt mit dem Cursor das Datum aus und tippt auf den Nummernblock des Laptops. Es passiert im Textdokument nichts. Kadar erklärt, dass der Nummernblock noch nicht aktiviert ist, zeigt Jusuf die Taste und drückt diese dann selbst. (Feldprotokoll Jusuf, 06/2020)
 
+
+<!-- PAGE 78 -->
+
+
 Wie in der vorliegenden Situation zwischen dem Sozialpädagogen Kadar und dem Jugendlichen Jusuf ersichtlich wird, sind es vor allem einordnende und vermittelnde Ausführungen des Sozialpädagogen, die dem Jugendlichen das Vorgehen bei der Erstellung des Schreibens erläutern und sich dabei sowohl auf inhaltliche Angaben als auch auf Bedienungshinweise zum Textverarbeitungsprogramm beziehen. Damit wird dem Jugendlichen ermöglicht, das Tun des Sozialpädagogen nachzuvollziehen und eine Orientierung während der Arbeitsschritte zu gewinnen. In der vorliegenden Situation wird dies in Form eines ,Talk the Walk' sichtbar: Der Sozialpädagoge macht sein Tun dem Jugendlichen gleichzeitig verbal transparent und nachvollziehbar. Diese ,Transparentisierungen' können sich sowohl auf die Bedienung der digitalen Medien selbst beziehen (z. B. welche Tasten wozu gedrückt werden oder was gerade ,in' einem Programm weshalb getan wird) als auch auf das Vorgehen in Bezug auf den Bewältigungsgegenstand (z.B. welche Inhalte weshalb in ein ,formelles' Schreiben eingefügt werden) und ermöglichen es, das erforderliche (und nachgängig möglicherweise ,eigenständig' vollziehbare) Tun verständlich(-er) zu machen. Dabei wird die Praxis stets durch das jeweilige materielle Arrangement mitgeprägt: Die räumliche Anordnung des Sozialpädagogen und des Jugendlichen nebeneinander vor dem Laptop ermöglicht eine geteilte Perspektive auf den Bildschirm und die Tasten. Diese Einsehbarkeit wird erforderlich, um die Bedienschritte mit der digitalen Technik visuell nachvollziehen und dazu Verständnisfragen stellen zu können. Einordnung und Vermittlung durch die Sozialpädagog*innen sind zudem an der Beschaffenheit der digitalen Medien selbst ausgerichtet, indem diese sich beispielsweise auf Bedienungsanforderungen (z.B. Eingaben über die Tastatur) oder innere Artefaktstrukturen (z.B. die in einem Textverarbeitungsprogramm eingelagerten Funktionen) beziehen. Dies veranschaulicht die angeführte Situation, beispielsweise als Kadar Jusuf zeigt, wie der Nummernblock über eine Taste auf der Tastatur aktiviert werden kann. Neben dieser einordnenden und vermittelnden Praxis kann sich im Rahmen der Verfassung der,formellen'Schreiben außerdem eine durch die Sozialpädagog*innen angeleitete bzw. angeregte Auseinandersetzung der jungen Menschen mit den jeweiligen digitalen Medien und dem zu Bewältigenden entfalten. Dies sind Momente, in denen die jungen Menschen gefordert sind, die digitale Technik selbst zu bedienen oder auch ihre Entscheidungen zum Vorgehen zu überlegen und zu benennen. In der pädagogisch begleiteten, aber eigentätigen und gegenstandsorientierten Auseinandersetzung werden die jungen Menschen dazu herausgefordert, sich mit dem Problem (unter Begleitung) zu befassen, auszuprobieren, welche Lösungsansätze es geben könnte, das eigene Vorgehen zu reflektieren und sich damit selbst ins Verhältnis zu setzen. Diese Momente beinhalten das Potenzial, Fähigkeiten zu entwickeln, die über die jeweilige Situation hinausreichen können (z.B. wie Funktionen eines Textverarbeitungsprogramms genutzt werden können). Anhand der Beobachtungsdaten zeigt sich, dass solche eigentätigen
+
+
+<!-- PAGE 79 -->
+
 
 Auseinandersetzungen allerdings an der Überforderung der jungen Menschen ,scheitern' können, wenn sie bei der Bedienung der digitalen Medien durch die Sozialpädagog*innen allein gelassen werden. Dies zeigt sich beispielsweise in einer Situation in einer Einrichtung der Offenen Kinder- und Jugendarbeit, in der ein junger Erwachsener den Computer zu bedienen versucht und es ihm misslingt, über den Internetbrowser eine zuletzt erhaltene E-Mail ausfindig zu machen. Dem in diesem Fall anwesenden Sozialpädagogen ist es dabei nur zeitweise möglich, den jungen Erwachsenen zu begleiten, da sich in der Einrichtung zugleich andere Jugendliche an ihn wenden. Hierdurch kann der Sozialpädagoge nur eingeschränkt an ,plötzlichen' Schwierigkeiten des jungen Erwachsenen in der Bedienung der digitalen Medien anknüpfen und diese dabei vermitteln. Dies ist konkret der Fall, als der junge Erwachsene unbeabsichtigt den Internetbrowser schließt und dabei Irritationen gegenüber dem Ethnografen benennt. Potenziell können solche ,krisenhaften' Momente hingegen auch Bildungschancen darstellen, wenn anwesende Sozialpädagog*innen genau daran in Form einer Einordnung von Informationen oder der Vermittlung von Wissen anknüpfen (z.B. in der Situation zwischen Jusuf und Kadar, in der erklärt und gezeigt wird, weshalb die Bedienung des Nummernblocks auf der Tastatur nicht wie intendiert gelingt) und damit für die Begleitung der situativen Bedarfe der jungen Menschen verfügbar sind.
 
@@ -599,6 +912,10 @@ Jan hat die Tastatur und Maus an sich genommen. Er öffnet den Internetbrowser G
 
 11 Im Zuge der von den jungen Menschen selbst gewählten Pseudonymisierung haben sich zwei der Forschungsteilnehmenden den Namen 'Ali' gegeben. Die beiden können im vorliegenden GesamtbeitragvoneinanderaufgrundihresAltersalsJugendlicherundjungerErwachsenerunterschieden werden.
 
+
+<!-- PAGE 80 -->
+
+
 te und freigelassene Textfelder sichtbar. 'Okay, Name ist Ali', äußert Jan und beginnt in eines der Textfelder Alis Namen einzugeben. Jan fragt Ali nach weiteren persönlichen Daten, etwa der Adresse, Nationalität und Religionszugehörigkeit. Ali antwortet Jan. Jan trägt Alis Antworten in die Vorlage des Lebenslaufs ein. (Feldprotokoll Ali, 09/2019)
 
 In der vorliegenden Situation ähnelt das Vorgehen des Sozialpädagogen einer Dienstleistung. Die Unterstützung erfolgt vor allem darüber, dass der Sozialpädagoge unaufgefordert stellvertretend für den Jugendlichen die Technik bedient und bestimmt, was wie und wozu getan wird, während der Jugendliche daneben sitzt und auf Nachfrage relevante Informationen über sich bereitstellt. Die Interaktion des Sozialpädagogen mit dem Jugendlichen beschränkt sich insofern auf das Nötigste im Sinne einer aufwandsökonomischen Erledigung der Aufgabe (hier: die Erstellung eines Lebenslaufs), ohne dass etwa eine weitere Einordnung des Geschehens oder die Vermittlung von Wissen oder Fähigkeiten erfolgt. 12 Eine Entfaltung potenzieller Bildungsanlässe, in denen dem Jugendlichen ein eigener Erkenntnis-, Entscheidungs- oder Beteiligungsspielraum eröffnet wird und er sein eigenes Wissen benennen oder eigene Fähigkeiten erproben könnte, wird so durch das proaktive Vorgehen des Sozialpädagogen eingeschränkt. Zwar ermöglicht diese Beteiligung des Sozialpädagogen möglicherweise eine schnellere Bewältigung der Aufgabe, sofern die eingeschränkte Beteiligung des Jugendlichen ein beschleunigtes Vorgehen erlaubt (hier: in der Bedienung des Computers); der Jugendliche hat dabei jedoch lediglich die Rolle eines ,Datenlieferanten'. So gibt es keinerlei Vergewisserung, ob aus der Situation irgendein Wissens- oder Fähigkeitenzuwachs für den Jugendlichen entsteht oder ob er daraus lediglich das ausgefüllte Formular und die erledigte Aufgabe mitnimmt.
@@ -607,17 +924,29 @@ Vor dem Hintergrund der hier skizzierten und in weiteren Situationen analysierte
 
 12 In diesem Zusammenhang wird auch anhand des Beispiels sichtbar, wie die Beschaffenheit des digitalen Textdokuments die Kommunikation zwischen Jan und Ali prägt. So werden die vom Lebenslauf-Formular ,abgefragten' Personendaten durch Jan von Ali erfragt und in die Vorlage eingetragen.
 
+
+<!-- PAGE 81 -->
+
+
 potenzieller Arbeitgeber*innen) tauchen als Informationsquellen auf, auf die die jungen Menschen und Sozialpädagog*innen zurückgreifen, um relevante AngabenfürdiejeweiligenSchreibenausfindigzumachen.DiedigitalenMedienselbst (Computer bzw. Laptop, aber auch das Textdokument) treten drittens als Vermittlungsgegenstand auf, wenn die Bedienung und Erläuterungen zur Funktionalität der digitalen Medien (z.B. bei Computerprogrammen) oder das Vorgehen bei der Erstellung der Schreiben in den Fokus gerückt werden. Abschließend stellen die Schreiben auch eine Artikulationsmöglichkeit der jungen Menschen dar, indem darin Anliegen im Zusammenhang der Alltagsbewältigung (z.B. Beschwerden über Wohnbedingungen) mitgeteilt werden. Mit Blick auf die Art und Weise der Thematisierung dieser digitalen Medien durch die Sozialpädagog*innen gegenüber den jungen Menschen zeigen sich Unterschiede, wie auch bereits Böhringer und Wolff (2010) für die Arbeit von Fachkräften mit dem Computer im Jobcenter herausgestellt haben. So stellen Böhringer und Wolff fest, dass der ,Platz' bzw. die Präsenz, die dem Computer gegenüber den Adressat*innen des Jobcenters eingeräumt wird, verbal durch die ,Inszenierung' der Fachkräfte hervorgebracht wird. Die Kölner Teilstudie kommt grundsätzlich zu ähnlichen Schlüssen, setzt diese aber in Bezug zur Frage nach der Ermöglichung von Bildungsteilhabe. Vor dem Hintergrund unterschiedlicher Arrangements (hier: in Maßnahmen der Kinder- und Jugendhilfe) kann über Böhringer und Wolff hinausgehend beschrieben werden, dass bei der Arbeit mit dem Computer bzw. Laptop auch Modi der Einbindung vorzufinden sind, in denen das digitale Medium selbst als anzueignender Bildungsgegenstand durch die Sozialpädagog*innen gegenüber den jungen Menschen hervorgebracht wird. Die Situation der ,formellen' Kommunikation ist also auch gleichzeitig eine Situation der Medienbildung (vgl. Jörissen/Marotzki 2009); der Bildung mit und über Medien. Dabei erweisen sich im Rahmen der Ermöglichung von Bildungsoptionen insbesondere die Einordnung und Vermittlung durch die Sozialpädagog*innen sowie die Beteiligung der jungen Menschen an den praktischen Vollzügen als bedeutsam.
 
 ## 2.1.2 Sprachbewältigung und -aneignung als Praxis der Erweiterung von (Bildungs-)Teilhabe im Alltag
 
 Eine weitere bildungsteilhaberelevante Praxis zeigt sich in Momenten des Deutschsprachgebrauchs. So ist Deutsch im Alltag als Amts- und Verkehrssprache gesetzt und hiermit für die Teilnehmenden der vorliegenden Studie unabdingbar, um am gesellschaftlichen Leben teilzuhaben und dieses mitzugestalten. Dies gilt sowohl für bildungs- und arbeitsmarktbezogene Teilhabe als auch im Allgemeinen für die Alltagsbewältigung (vgl. Natarajan 2019, S. 7). Vor diesem Hintergrund geht es im Folgenden nicht um Situationen, in denen über geplante Bildungsformate ein gezielter bzw. intendierter Erwerb der Sprache des ,Aufnahmelands' im Fokus steht (z.B. über Sprachkurse). Vielmehr werden die
 
+
+<!-- PAGE 82 -->
+
+
 vielfältigen Anlässe in den Blick gerückt, mit denen die jungen Menschen in ihremAlltag immer wieder konfrontiert werden und in denen Informationen durch sprachliche Unklarheiten nicht verständlich sind (z.B. in sozialen Beziehungen oder im Umgang mit Behörden, vgl. auch Mautner 2020). Für eine ,gelingende' sprachliche Kommunikation werden in diesen Situationen u.a. Kenntnisse über Wortschatz, Aussprache und Grammatik (neben solchen über die Kontextangemessenheit von Sprache) bedeutsam (vgl. Brinks/Dittmann/Müller 2016, S. 216). Digitale Medien können hierbei eine niedrigschwellige Möglichkeit zur Überwindung von Sprachbarrieren im Alltag darstellen. Die im Feld rekonstruierte Praxis ist unter Beteiligung digitaler Medien darauf ausgerichtet, dass in der Situation eine sprachliche Klärung über etwas (z.B. in Bezug auf Begriffe, Texte) hervorgebracht wird. Veranschaulichen lässt sich dies beispielsweise an alltäglichen Gesprächssituationen. Dies bildet die nachfolgende Beobachtungssequenz während einer Schulpause ab, in der die jungen Menschen mit weiteren Akteur*innen im Gespräch sind. Ali, Bahram und der Ethnograf stehen dabei vor einem Kiosk der Schule und unterhalten sich miteinander über ihr (mitgebrachtes) Essen:
 
 Bahram klappt auf Nachfrage des Ethnografen zu dem Belag auf seinem Brot dieses auf und erläutert, worum es sich handelt: 'Käse mit so eine, ich weiß nicht, wie das heißt, nicht Marmelade.' Auch Ali merkt an, den Begriff nicht auf Deutsch zu kennen. Bahram nimmt daraufhin sein Smartphone aus der Hosentasche in die Hand. 'Warte, ich zeig eben', teilt er mit und fügt noch hinzu, 'Google'. Bahram öffnet auf dem Smartphone die Internetsuchmaschine Google und wechselt bei der nun erschienen Tastatur zur Eingabe des Suchbegriffs vom lateinischen Alphabet zu arabischen Schriftzeichen. Dann tippt er zur Suche auf dem Smartphone. Es werden nach Absenden der Suchanfrage Bilder als Suchergebnisse angezeigt, die Gläser mit einem dunklen Aufstrich zeigen. Der Ethnograf fragt, ob es sich um Rübensirup handelt, was Bahram verneint. Bahram hält inne und tippt erneut auf seinem Smartphone etwas bei der Google-Suche auf Arabisch ein. Nun werden Bilder von Datteln angezeigt. 'Ah, das ist so eine Dattelmarmelade', ruft der Ethnograf aus, was Bahram bestätigt. (Feldprotokoll Ali, 12/2019)
 
 Informelle Gespräche auf Deutsch (wie hier zwischen Ali, seinem Mitschüler und dem Ethnografen) stellen im Alltag der jungen Menschen Momente dar, in denen verwendete Begriffe unklar sind und mit Bedeutungen ausgehandelt werden. Dabei ist in der vorliegenden Situation allerdings nicht dem Mitschüler von Ali das Verständnis des Gesprächsgegenstands (der Pausenbrotbelag von Bahram)unklar,sondern dem Ethnografen.So ist es Bahram,der dem Ethnografen die Bedeutung des Gesprächsgegenstands zu vermitteln versucht, wozu ihm allerdings entsprechende Deutschsprachkenntnisse fehlen. In diesem Zusammenhang ermöglicht das Smartphone in Verbindung mit einer Internetsuche bei Google eine bildbasierte Verständigung bzw. Klärung des unklaren Gesprächsgegenstands. Dabei wird mit Blick auf die Beschaffenheit des Smartphones sichtbar, wie sprachliche Hürden überwunden werden können. So lässt sich die
+
+
+<!-- PAGE 83 -->
+
 
 Spracheingabe bei der Smartphone-Tastatur für die Suchanfrage von Deutsch auf Arabisch umstellen, sodass es Alis Mitschüler ermöglicht wird, den auf Deutsch unbekannten Begriff über eine Suchmaschinenanfrage in einer für ihn vertrauteren Sprache zu suchen. Die Präsentation der dann gesuchten Bilder auf demSmartphone,die sprachlich ,universal' verständlich sind, ,entlastet' den Präsentierenden um weitere verbale Erklärungsversuche. So wird die Erschließung der Bilder auf Deutsch an die betrachtende, der arabischen Sprache nicht mächtigen Person (den Ethnografen) übergeben. Dabei ermöglichen es Anpassungen der präsentierten Bilder durch Änderung der Suchanfrage, weitere bildbasierte ,Hinweise' zur Verständnisklärung des Gesprächsgegenstands bereitzustellen (im Beispiel vom Brotaufstrich im Herstellungs- bzw. Verkaufszustand über eine Konkretisierung zur zugrunde liegenden Zutat des Brotaufstrichs). Das Smartphone überbrückt dadurch anhand bildbasierter Informationsangebote eine sprachliche Verständnisschwierigkeit zwischen Bahram und dem Ethnografen.
 
@@ -629,6 +958,10 @@ Neben informellen Gesprächen sind auch auf textueller Ebene ,formelle' Schreibe
 
 Wie Friedrichs-Liesenkötter und Schmitt (2017) in diesem Zusammenhang über Befragungen von jungen Geflüchteten bereits herausgearbeitet haben, wird ,das Internet' (ohne dies konkreter zu definieren) zur Übersetzung von Schreiben
 
+
+<!-- PAGE 84 -->
+
+
 durch junge Geflüchtete genutzt. In Erweiterung dazu kann durch die ethnografische Begleitung in der vorliegenden Studie eine Praktik rekonstruiert werden, in der sprachliche Verständnisschwierigkeiten durch die Über- bzw. Weitergabe der digitalen Schreiben auf dem Smartphone an weitere Akteur*innen (hier Sozialpädagog*innen) bewältigt werden. Dies veranschaulicht die nachfolgende Beobachtungssequenz in einem Jugendcafé, bei der die Sozialpädagogin Lisa gerade mit dem Jugendlichen Mohammed an einem Computer sitzt und vom jungen Erwachsenen Achmet eine E-Mail gezeigt bekommt, die dieser nicht versteht:
 
 Achmet richtet sich an Lisa: 'Ich habe eine Frage zu PayPal. Was ist?' Lisa erklärt Achmet daraufhin,dassessichbeiPayPalumeinBezahlungssystemhandelt.AchmeterwidertzuLisa:'Ich glaube, ich habe, aber verstehe nicht so ganz.' Dann gibt er Lisa sein Smartphone. Lisa hat das Smartphone nun in der Hand. Auf dem Display wird eine geöffnete E-Mail von PayPal angezeigt. 'Ah, du hast also ein Konto und hier klären sie über geänderte Bedingungenauf', erläutert Lisa und gibt Achmet das Smartphone zurück. (Feldprotokoll Ali, 08/2019)
@@ -636,6 +969,10 @@ Achmet richtet sich an Lisa: 'Ich habe eine Frage zu PayPal. Was ist?' Lisa erkl
 Während zuvor im Beispiel zur sprachlichen Klärung über einen Brotbelag das Smartphone in Verbindung mit einer Bildersuche und -präsentation über Google zur Sprachbewältigung unterstützend herangezogen wurde, ist in der vorliegenden Situation ,in' dem Smartphone selbst der Gegenstand abgebildet (die E-Mail eines Bezahlungsdienstleisters), der von dem jungen Erwachsenen nicht verstandenwird.Diesprachliche Klärung erfolgt hier durch die Übergabe des Smartphones an die Sozialpädagogin unter der Nachfrage von Achmet, was dort abgebildet ist. So ermöglicht das Smartphone eine Konkretheit bzw. Direktheit, die potenziell verbale Erklärungsversuche übertrifft, da es das Schreiben abbildet, um das es geht. Die Übergabe des Smartphones an die Sozialpädagogin ,entlastet' somit den jungen Erwachsenen um eine umfassende(-re) Kontextualisierung. Der bloße Verweis auf das Schreiben und die Benennung von Verständnisschwierigkeiten erweisen sich als ausreichend. Dies bedeutet, es wird auf visueller Ebene mitHilfederPräsentationeinesdigitalenMedieninhaltsaufdemSmartphonedie Bedeutungserschließung auf eine andere Akteurin übertragen - mit dem Unterschied, dass hier dem jungen Menschen die Bedeutung von etwas unklar ist und eine Vermittlungsleistung zwischen dem digitalen Medieninhalt und dem jungen Erwachsenen durch die Sozialpädagogin erbracht wird.
 
 Wie in anderen Situationen sichtbar wird, ist diese Praxis nicht zwangsläufig auf ein digitales Medium angewiesen.So wird auch sichtbar,wie junge Menschen ausgedruckte Schreiben von bzw. an Behörden für die Bedeutungsklärung an Sozialpädagog*innen überreichen. Gegenüber dieser Praxis sind bei der Nutzung digitaler Medien (wie dem Smartphone) die Schreiben als Medieninhalte erst aufzurufen,sodassesderFunktionsfähigkeitdesDigitalenbedarf(vgl.Kapitel2.2.2). Darüber hinaus zeigen sich sowohl im informellen Alltag als auch im formalen
+
+
+<!-- PAGE 85 -->
+
 
 Schulunterricht Situationen, in denen Sprachverständnis durch ÜbersetzungsleistungenweitererbeteiligterAkteur*innenohnedieEinbindungdigitalerMedien hervorgebracht wird. Dies ist beispielsweise in einer Unterrichtssituation der Fall, in der den Schüler*innen ein ausgedruckter Text vorliegt, zu dem unklare Wortbedeutungen nach einer kurzen Einzellesephase geäußert und gemeinsam im ,öffentlichen' Klassenverbund unter Wortmeldungen der Schüler*innen miteinander geklärt werden.Es erweisen sich die vorhandenen Wissensbestände der Schüler*innen für die Sprachbewältigung im Umgang mit dem Unterrichtstext als ausreichend.
 
@@ -647,6 +984,10 @@ Die von Ali beschriebene Praktik zur Sprachbewältigung entfaltet sich über das
 
 Neben den bisher dargestellten Praxen sind digitale Medien nicht nur an der situativen Sprachbewältigung im Alltag der jungen Menschen beteiligt, sondern auch an der gezielten Aneignung von sprachbezogenem Wissen. Teilnehmende der Studie berichten davon, wie sie auf Netflix (Streaming-Anbieter) Serien bzw. Filme auf Deutsch ansehen, um mit der Sprache der ,Aufnahmegesellschaft' vertraut zu werden. Das Smartphone (und auch Computer bzw.Laptops) werden auf die Betriebssprache Deutsch eingestellt oder auch deutschsprachige Kommentare unter YouTube-Videos durchgelesen,um im Alltag vermehrt Bezugspunkte zur anzueignendenSpracheherzustellen.DieTeilnehmendennutzenauchTelegram-
 
+
+<!-- PAGE 86 -->
+
+
 Kanäle,in denen Übersetzungen zwischen Deutsch und der Herkunftssprache im Kontext alltäglicher Handlungsbedarfe gepostet werden (z.B. ' Geben Sie mir bitte das Formular '). ,Klassische' Sprachlern-Apps finden sich zudem auf den Smartphones jungen Menschen. Diese Sprachlern-Apps sind allerdings hinsichtlich ihrer Funktionalität zu differenzieren.
 
 Abbildung 4: Sprach-Apps auf dem Smartphone eines Teilnehmers
@@ -655,11 +996,19 @@ Abbildung 4: Sprach-Apps auf dem Smartphone eines Teilnehmers
 
 Ein Beispiel hierfür zeigt der Screenshot vom Smartphone des jungen Erwachsenen Ali (vgl. Abbildung 4). So hat Ali - wie er im Interview erläutert auf seinem Smartphone drei Apps installiert, die er auch bei einem Wechsel des Smartphones jeweils wieder installiert und die in unterschiedlicher Hinsicht eine Auseinandersetzung mit Sprache im Alltag ermöglichen. Während der 'Übersetzer' von Google von Ali genutzt wird, um Wörter bzw. Sätze zu übersetzen (z.B. Deutsch-Persisch, Deutsch-Englisch, Englisch-Deutsch, EnglischPersisch), wird die App 'Der Die Das' von ihm genutzt, um Artikel im Deutschen nachzusehen und die App 'Verben', um die Bildung deutschsprachiger Verben in unterschiedlichen Zeitformen nachzuvollziehen. Ausgehend von dieser ,inneren' Beschaffenheit wird das Smartphone des jungen Erwachsenen zu einem Gegenstand, der förderlich für sprachliche Auseinandersetzungen und Aneignungen sein kann.
 
+
+<!-- PAGE 87 -->
+
+
 Sprachliches Verständnis erweist sich, wie in den dargestellten Beispielen sichtbar wird, als eine vorgelagerte Voraussetzung, um im Sinne eines ,gelingenderen'Alltags (vgl.Thiersch 2013) mit Dingen überhaupt umgehen und damit auch (Bildungs-)Teilhabe realisieren zu können. Digitale Medien, vor allem das Smartphone und die damit verketteten Apps (z.B. zur Internetsuche, Übersetzung und Bildpräsentation), sind in diesem Zusammenhang für die Sprachbewältigung im Alltag der jungen Menschen überaus präsent. Dabei stellt sich heraus, wie vorherige Studien benennen (vgl. Artamonova/Androutsopoulos 2019, S. 82f.; Friedrichs-Liesenkötter/Schmitt 2017, S. 14f.), dass Alltagsunterstützung und ein Mehr an Handlungsfähigkeit weniger über die digitalen Medien selbst erbracht werden, welche die jungen Menschen ,allein' für sich nutzen (z.B. in Form von ,klassischen' Übersetzungs- und Sprachlern-Apps). Vielmehr werden die digitalen Medien auf visueller Ebene zur (Re-)Präsentation von nicht-verstandenen Alltagsgegenständen gegenüber anderen (potenziell unterstützenden) Akteur*innen durch die jungen Menschen in einem Wechselverhältnis genutzt. Es kann hier mit Bezug auf die Arbeiten von Reh und Rabenstein (2013) von über Bilder bzw. Fotos realisierten 'Praktiken des Zeigens' (Berdelmann/Fuhr 2020, S. 78) gesprochen werden, an denen neben den Jugendlichen noch weitere Akteur*innen (insbesondere Sozialpädagog*innen) im Zusammenspiel mit den digitalen Medien beteiligt sind. Dabei liegt der Praktik allerdings im Kontrast zu Reh und Rabenstein (deren Arbeiten sich auf den Schulunterricht beziehen) weniger eine pädagogische Ausrichtung im Sinne einer ,geplanten' Aneignung bzw. Vermittlung vorgegebener Lerninhalte zugrunde (vgl. Berdelmann/Fuhr 2020, S. 86). So verfügen die zeigenden Akteur*innen nicht zwangsläufig über ein Mehr an über das Zeigen zu vermitteln versuchtes Wissen. Stattdessen wird als eine Form der Alltagsbewältigung über das von den jungen Menschen Gezeigte (z.B. ,formelle' Schreiben) und dessen Besprechung ein (gemeinsames) Sprachverständnis hervorgebracht.
 
 ## 2.1.3 Räumliches Zurechtfinden als Praxis der Mobilität
 
 Eine alltägliche Anforderung der Teilnehmenden der vorliegenden Studie besteht darin, sich in räumlichen Konstellationen zurecht- oder bestimmte Wege wiederzufinden bzw. auch einen neuen Weg bzw. ein bisher unbekanntes Ziel zu erreichen. Dies gilt insbesondere für junge Geflüchtete, die nach der Flucht ihren Alltag unter unvertrauten räumlichen Bedingungen am neuen Aufenthaltsort gestalten (vgl. Fujii/Kutscher 2022; Gillespie et al. 2016; Kutscher/Kreß 2018). Vor diesem Hintergrund zeigen Situationen, in denen Online-Kartendienste auf den SmartphonesderjungenMenschenzurNavigationimöffentlichenRaumgenutzt werden, eine bildungs- und teilhaberelevante Praxis auf. Das Zurechtfinden in fremden Umgebungen ist insofern Voraussetzung für Teilhabe im Sinne von Orientierung und zugleich ein Anlass für den Erwerb (räumlichen) Wissens, etwa in-
+
+
+<!-- PAGE 88 -->
+
 
 demStraßen bzw. Routen einer Stadt kennengelernt und ,durchwandert' werden (vgl. Herrmann et al. 1998). Digitale Medien (z.B. das Smartphone und damit verknüpfte Navigations-Apps) können dabei u.a. ein niedrigschwelliges Hilfsmittel darstellen, um ein gelingendes räumliches Zurechtfinden im Alltag zu ermöglichen. Dies beschreibt beispielsweise auch der junge Erwachsene Hansala für die Nutzung von Google Maps auf seinem Smartphone:
 
@@ -669,9 +1018,17 @@ Wie Hansala erläutert, ist das Smartphone in Verknüpfung mit Online-Kartendien
 
 'Wo ist Krankenkasse hier in der Nähe?', fragt Ali zu sich gerichtet und teilt mit, sich zu erinnern, dass irgendwo im benachbarten Stadtteil eine Niederlassung ist. Er holt sein iPhone hervor. Im Internetbrowser Safari gibt er über das Suchfenster den Namen seiner Krankenkasse ein. […] Es wird als Ergebnis eine Adresse der Krankenkasse in einer anderen, benachbarten Stadt angezeigt. Der Ethnograf entgegnet, dass auch in Krummstein, der Großstadt, in der sie sich aufhalten, eine Niederlassung ist. 'Dann suche ich jetzt über Google', sagt Ali. Auf seinem Smartphone werden über die Google-Suche unter den in Textform aufgelisteten Suchergebnissen nun drei Niederlassungen der Krankenkasse in Krummstein in unterschiedlichen Stadtteilen angezeigt. Ali wählt dann eine in den Suchergebnissen angezeigte Abbildung der OnlineKarte von Google Maps aus, auf der die drei Krankenkassenniederlassungen bereits markiert
 
+
+<!-- PAGE 89 -->
+
+
 sind, und wählt nun über die Verknüpfung zu Google Maps die nächstgelegene Niederlassung aus. Es werden zu dieser nun weitere Informationen angezeigt, u.a dass die nächstgelegene Niederlassung noch geschlossen ist, sodass Ali sich auf der Online-Karte für die danach nächstgelegene Niederlassung in der Innenstadt entschließt. Er schaut sich von dieser Niederlassung die Öffnungszeiten bei Google ebenfalls an und stellt fest, dass diese nach einer Mittagspause bald geöffnet hat. Einen Einwand des Ethnografen, dass die Öffnungszeiten angesichts der bestehenden Corona-Pandemie möglicherweise nicht mehr aktuell sind, wiegelt Ali ab: 'Nein, die müssen da doch die aktuellen Zeiten haben.' Über den mit Google Maps verknüpften Routenplaner sucht Ali heraus, wie man zur Krankenkasse kommen kann. Dafür wird die Straßenbahnverbindung von der Haltestelle wenige Meter entfernt inklusive eines kurzen Fußwegs nach der Fahrt angezeigt. Der Ethnograf und Ali gehen daraufhin zur Bahnhaltestelle, wobei Ali sein Smartphone in seine Hosentasche steckt. (Feldprotokoll Ali, 08/2020)
 
 Wie die Situation veranschaulicht, ermöglichen die genutzten digitalen Medien (das Smartphone in Verbindung mit Browser-Apps) dem jungen Erwachsenen zu Beginn, einen gesuchten Zielort (hier eine nahegelegene Krankenkasse) in seiner räumlichen Lage ausfindig zu machen.So stellen die Browser-Apps diverse Suchergebnisse (überwiegend in Textform) bereit, die potenziell Informationen über die räumlich-geografische Lage des Zielorts enthalten und dazu erst eingeordnet werden müssen. In diesem Zusammenhang erweist sich der Internetbrowser Safari in seinen (Datenschutz-)Einstellungen allerdings als (implizites) Hindernis für die Auflistung eines mit Blick auf den Standort passenden Suchergebnisses. Erst über den Wechsel zur Internetsuche mit Google werden -vermutlich um den Preis der Lokalisierungsdatenpreisgabe an den kommerziellen Provider Alphabet bzw. Google - mehrere Krankenkassenniederlassungen in der eigenen Stadt angezeigt, wodurch ein erster räumlicher Orientierungsgewinn möglich wird. Mit demWechselzurOnline-KartenansichtvonGoogleMapsvollziehtsichdasräumliche Zurechtfinden in Verschränkung mit den digitalen Medien dann in einer Darstellungsweise, die Räumlichkeit explizit abbildet und die weitere Grundlage dafür liefert, eine Orientierung in der physischen Umgebung herzustellen. HierananknüpfendsindRelationierungenzurAuswahleinerNiederlassungerforderlich. So nimmt der junge Erwachsene über den Abgleich mit der jeweiligen Distanz der einzelnen Niederlassungen zu seinem aktuellen Standort und Angaben zu den jeweiligen Öffnungszeiten eine Auswahl vor, wobei diesen digitalen Daten in Google Maps Geltung bzw. Faktizität zugeschrieben wird (Ali: ' Nein, die müssen da doch die aktuellen Zeiten haben '). Nach dieser - digital gestützten - Entscheidungsfindungverlagert sich die Suche vom Fokus auf die räumliche Lage über die RoutenplanungdesOnline-KartendienstesGoogleMapsaufdieWegfindungzum Zielort. Der Beginn des Weges zur Straßenbahnhaltestelle wird allerdings ohne Zuhilfenahme des Smartphones angetreten, da die unmittelbare Umgebung dem jungen Erwachsenen bekannt ist. Erst im Anschluss orientiert sich das räumli-
+
+
+<!-- PAGE 90 -->
+
 
 che Zurechtfinden weiter an den Informationen des Online-Kartendiensts, wie die nachfolgende Beobachtungssequenz weiter veranschaulicht:
 
@@ -679,17 +1036,29 @@ Als der Ethnograf und Ali bei der Haltestelle in der Innenstadt für Alis Kranke
 
 Hier wird die Bewegung des jungen Erwachsenen im physischen Raum nach der Straßenbahnfahrt an der Online-Karte von Google Maps ausgerichtet, indem der analogeWegamdigitalen,Leit-Medium'gegengeprüftwird.Dabeiermöglichtdie AppeineVerortungdereigenenräumlichenPositioninRelationzurLagederNiederlassung. Es wird hier vom jungen Erwachsenen eine raumbezogene Transferbzw. Syntheseleistung erbracht, da Unterschiede zwischen Alis Perspektive (auf Straßenebene) und der der Online-Karte (aus Vogelperspektive) bestehen, welche erst in ein Verhältnis zueinander zu setzen sind. Das heißt, durch den jungen Erwachsenen müssen Informationen der Online-Karte zur physischen Umgebung (wie Orts- und Straßennamen) mit der physischen Umgebung abgeglichen werden, um eine räumliche Orientierung herzustellen. Auf Ebene der Online-Karte sind diese Informationen in ihrer Darstellung reduziert bzw. begrenzt. Daher ist die konkrete Beschaffenheit von Gebäuden (und deren Eingängen) unklar. So kann erst das Gebäude der Krankenkassenniederlassung identifiziert werden, als der junge Erwachsene sich gemäß der Online-Karte unmittelbar davor befindet. Der Zugang zum Ort wird dann auf den letzten Metern über die Erkundung des physischen Raums erschlossen (vgl. Fujii/Kutscher 2022, S. 471f.).
 
+
+<!-- PAGE 91 -->
+
+
 Vor dem Hintergrund dieser Relationierungsleistungen erweisen sich (neben der Funktionsfähigkeit der digitalen Medien) 13 Kenntnisse und Fähigkeiten der jungen Menschen in Bezug auf das Smartphone und die dazugehörigen Apps für das räumliche Zurechtfinden als erforderlich, um die Potenzialitäten der digitalen Medien routiniert nutzen zu können. Dass diese Kenntnisse und Fähigkeiten keineswegs grundsätzlich vorausgesetzt werden können, zeigt sich anhand der nachfolgenden Beobachtungssequenz. Hier leitet der Sozialpädagoge Kadar den Jugendlichen Jusuf im Rahmen eines Treffens der Flexiblen Hilfe beim Jugendlichen in dessen Zimmer zu Hause zur Nutzung von Google Maps auf dem Smartphonean,alseingemeinsamerAusflugzueinerBarvorgesehenist.Hierbeisitzen Jusuf und Kadar -mit dem Ethnografen auf einem Sofa nebeneinander.Über den BrowserhatJusufdenOnline-KartendienstGoogleMapsaufseinemSmartphone geöffnet:
 
 Jusuf hält das Smartphone in der linken Hand, im Suchfenster von Google Maps ist der Name der von Jusuf vorgeschlagenen Bar eingegeben. Ein roter Punkt markiert die Bar auf der Karte. WährendJusufdasSmartphoneweiterinder linken Hand hält, bewegt er mit der rechten Hand seine Finger über die Karte, welche die Stadt und den Standort der Bar anzeigt. Er zoomt die Karte heran, bewegt den Ausschnitt und spricht hierbei, 'so, wo ist Rotenbach [Stadtteil des Jugendlichen] (Pause), da unten.' 'Und wie kommen wir jetzt dahin?', erkundigt sich Kadar, woraufhin Jusuf zu überlegen scheint und zögert. Kadar schlägt vor, die Routenplanung von Google Maps zu verwenden. 'Okay, Routenplanung', sagt Jusuf und scheint diese nun im Browser von Google Maps auf dem Smartphone zu suchen. Jusuf drückt, möglicherweise versehentlich, auf dasSymbolfürGPSüberdemkleinenblauenSymbolfeldderRoutenplanung,wodurcheineAnfrage auf dem Display erscheint, ob der Standort von Jusufs Smartphone angegeben werden soll. Jusuf lehnt die Anfrage ab. Es wird daraufhin das Textfeld der Routenplanung ausgeblendet. 'Ja, du musst noch einmal auf den Ort klicken, dann kannst du die auswählen', merkt Kadar an. Jusuf wählt den rot markierten Standort der Bar auf der Karte aus. Es wird die RoutenplanungunterdemGPS-SymbolerneutalsTexteingeblendet,dieJusufnunauswählt.Eserscheint ein neuer Balken in Google Maps am oberen Bildrand des Smartphones, der einerseits den Zielort der Bar angibt. Andererseits wird mit einem leeren Feld der Startort angegeben. 'Okay, und wasgibstdujetzt beim Startort ein?', erkundigt sich Kadar bei Jusuf. Jusuf schlägt den Stadtteil Rotenbach vor, den Kadar jedoch als noch zu ungenau rückmeldet. Daraufhin nennt Jusuf die Straßenbahnhaltestelle in der Nähe des eigenen Zuhauses, wozu Kadar sein Einverständnis äußert. Jusuf gibt die Haltestelle beim Startort ein und schickt die Anfrage für die Routenplanung los. Es werden mehrere RoutenzudennächstmöglichenZeitpunktenangezeigt.Jusufscrolltsich durchdieErgebnisvorschläge.KadarschautweitermitaufdasSmartphoneundbeugtsichhierbei zu Jusuf. Kadar beschreibt anschließend die unterschiedlichen Strecken anhand der Ergebnisvorschläge und an welchen Stellen umgestiegen werden müsste. Er fragt Jusuf, welche Bahn
 
 13 Ein Hindernis bei der Nutzung der Online-Kartendienste in anderen Fällen war beispielsweise fehlende Internetverfügbarkeit des Smartphones.
 
+
+<!-- PAGE 92 -->
+
+
 er nehmen möchte. Jusuf entscheidet sich für die nächstmögliche Bahn, woraufhin Kadar zustimmt. (Feldprotokoll Jusuf, 12/2019)
 
 In dieser Situation realisiert sich räumliches Zurechtfinden gemeinsam zwischen dem Jugendlichen und dem Sozialpädagogen in einem non-formalen Setting. Es ist dazu ebenfalls die Anforderung an den Jugendlichen gerichtet, den Zielort digital über die Online-Karte zunächst aufzufinden und im Anschluss die Route dahin zu bestimmen. Dabei zeigt sich, dass der Jugendliche bei der Nutzung des Online-Kartendiensts Google Maps auf dem Smartphone für die Entfaltung von dessen (Orientierungs-)Potenzialität auf die Unterstützung des Sozialpädagogen angewiesen ist. So ist der Online-Kartendienst - wie sich im Interview herausstellt - dem Jugendlichen zwar bekannt, aber bis dahin nicht im Rahmen seiner alltäglichen Praxis präsent. Dies spiegelt sich auch in der vorliegenden Situation wider, da die auszuführenden Bedienungsschritte und die erforderlichen Angaben in der App nicht routiniert von dem Jugendlichen ,eigenständig' vorgenommen werden können. Zwar verfügt der Jugendliche über Kenntnisse zum Zielort (bzw. dessen Namen), um dessen Lage per Texteingabe über den Online-Kartendienst ausfindig zu machen, jedoch ,scheitert' er daran, den Weg in der App zum Zielort zu finden. So ist hierfür die Funktion des Routenplaners zu nutzen, die in der App erst aufgerufen werden muss. Weiterhin bedarf es einer Genauigkeit bei der geografischen Angabe des eigenen Startpunkts, die der Jugendliche zunächst nicht macht. Der Sozialpädagoge zeigt in Form von Einordnung, Nachfragen, Rückmeldungen und Vorschlägen die Bedingungen für eine ,erfolgreiche' Nutzung des Routenplaners (z.B. wo etwas ausgewählt wird und wie geografisch genau Angaben eingegeben werden müssen). Ausgehend von dieser pädagogischen Begleitung stellt sich die Suche des Wegs zum Ausflugsort als ein Anknüpfungspunkt für ein potenzielles Bildungsgeschehen heraus, bei welchem der Jugendliche die Funktionalitäten und Bedienung des Online-Kartendienstes selbst erproben kann.
 
 Zusammengefasst verschränken sich in der hier skizzierten Praxis physische und virtuelle Räumlichkeit, indem Orte über das Smartphone digital gesucht, dort gefunden und anschließend im physischen Raum unter Anleitung des digitalen Mediums aufgesucht werden. Im Rahmen dieser Mikro-Praktiken des Orientierens werden Beiträge und Voraussetzung von Seiten der beteiligten Akteur*innen, Artefakte und der räumlichen Umgebung für ein ,Gelingen' des Orientierungsvorhabens relevant. So eröffnen die digitalen Medien (das Smartphone und die Navigations-Apps) zwar prinzipiell einen Zugang zu Informationen im Rahmen der räumlichen Orientierung. Diese Informationen sind allerdings nicht eins zu eins auf die physische Umgebung übertragbar. Vor diesem Hintergrund kommt ein räumliches Zurechtfinden erst durch von den Akteur*innen geleistete Relationierungsleistungen zustande.
+
+
+<!-- PAGE 93 -->
+
 
 ## 2.1.4 Hausaufgaben als transorganisationale Praxis zur Bearbeitung schulischer Anforderungen
 
@@ -701,25 +1070,45 @@ In den Nachhilfeangeboten sind die Fachkräfte fortwährend aufgefordert, sich i
 
 Das Smartphone wird hier vom Nachhilfelehrer als Ergänzung zu Büchern benannt. So bietet es einen ,direkteren' Zugriff auf die benötigten Informationen zur Aufgabenbearbeitung und ist zugleich (je nach Spezifizität des Recherchean-
 
+
+<!-- PAGE 94 -->
+
+
 liegens) im Vergleich zu den Büchern in seiner Eignung als Informationsquelle für die Recherche aus seiner Sicht begrenzt. Losgelöst von dieser Akteur*innenperspektive werden die Potenziale, die digitale Medien zur Klärung im Rahmen der Hausaufgabenbearbeitung bereitstellen, durch die Beiträge der Beteiligten und die Bedingungen im Arrangement im Vollzug hervorgebracht und bei einem genauen ethnografischen zooming in sichtbar. Die folgende Beobachtungssequenz in einem Nachhilfeangebot der Offenen Kinder- und Jugendarbeit zeigt, wie eine Internetrecherche auf dem SmartphonedemSozialpädagogenJaneineVergewisserung bei der Besprechung einer zu bearbeitenden Mathematikaufgabe mit der Jugendlichen Fadia ermöglicht:
 
 Jan und Fadia betrachten an einem Tisch nebeneinandersitzend eine Textaufgabe aus dem Mathematikbuch zur Berechnung des Seitenumfangs eines Parallelogramms. 'Parallelogramm, was ist das denn nochmal?', fragt Jan und bezieht dazu kurz den Ethnografen mit ein. 'Okay, ich schau auch nochmal nach, kann nicht schaden', teilt Jan nach einer Erklärung des Ethnografen zur Form eines Parallelogramms mit. Jan nimmt sein Smartphone in die Hand, welches vor ihm auf dem Tisch liegt und gibt über die Internetsuchmaschine Google 'Parallelogramm' ein. Es werden ihm mehrere Beiträge angezeigt. Hierbei sind auch Bilder, die der Erklärung des Ethnografen entsprechen. 'Okay, alles klar', kommentiert Jan, legt sein Smartphone wieder vor sich auf den Tisch und wendet sich Fadia zu. 'Warte, ich brauch hier mal 'n Schmierblatt', merkt er an. Fadia reißt ein leeres Blatt aus ihrem Collegebock und gibt es Jan. Jan nimmt sich einen Stift und beginnt auf das Blatt ein Parallelogramm zu zeichnen. Dann erklärt Jan, was mit der Berechnung des Seitenumfangs gemeint ist, und zeigt mit dem Stift auf die einzelnen Seiten des Parallelogramms, die in die Berechnung miteinzubeziehen sind. (Feldprotokoll Hansala, 11/2019)
 
 Die Beteiligung der digitalen Medien (Smartphone, Google) ist hier auf eine begriffliche Klärung des Texts der Mathematikaufgabe ausgerichtet. So wird, bevor das Vorgehen zur Aufgabenberechnung selbst besprochen wird, gegenüber den Anwesenden(FadiaunddemEthnografen)einKlärungsbedarfdesSozialpädagogen in Bezug auf den zu berechnenden Gegenstand (ein Parallelogramm - Jan: ' wasistdasdennnochmal? ') benannt.Zwarerfolgt eine erste Einordnung durch den Ethnografen, jedoch wird das Smartphone zur Vergewisserung durch den Sozialpädagogen hinzugezogen. Diese Vergewisserung erfolgt bildbasiert mit der Internetsuchmaschine Google, indem die Suchergebnisse den über die Texteingabe gesuchten Begriff (' Parallelogramm ') in Form von Vorschaubildern abbilden und die Antwort des Ethnografen bestätigen. Die weitere Besprechung rund um das Vorgehen zur Aufgabenberechnung erfolgt dann losgelöst vom digitalen Medium mittels Stift und Papier, also analog. Wie sich in diesem und auch in weiteren Fällen zeigt,wird die Jugendliche selbst nicht in die Smartphone-Recherche einbezogen. Weitaus komplexer und vielfältiger gestaltet sich die InformationsbeschaffungbeieinerKlärungdesVorgehensbeieinerMathematikaufgabenberechnung.
 
+
+<!-- PAGE 95 -->
+
+
 So geht es bei dieser Art von Klärung nicht mehr nur um ein Begriffsverständnis, sondern um für die Aufgabenbearbeitung erforderliche Verfahrensschritte, die ausfindig zu machen sind. Dies zeigt die folgende Beobachtungsequenz zwischen dem jungen Erwachsenen Ali und seinem Nachhilfelehrer Herrn Mauser, bei der Ali eine Mathematikhausaufgabe zur Berechnung eines Mantelzuschnitts einer Kissenhülle mitgebracht hat:
 
 Ali und Herr Mauser sitzen an einem Tisch gegenüber, auf dem Mathematikaufgabenblätter, auf DIN-A4-Blättern notierte Rechnungen zu diesen, Schreibmaterialien, Bücher und Alis Taschenrechner liegen. '[Aufgabe] Drei habe ich nicht geschafft. Können wir zusammen rechnen?', fragt Ali Herrn Mauser. Herr Mauser stimmt zu und beugt sich über das Aufgabenblatt und die bisherige Berechnung von Ali hierzu. 'Sie haben das nicht berechnet', bemerkt Herr Mauser und zeigt auf das Aufgabenblatt. 'Sie müssen nur den Mantel zuschneiden', fügt er hinzu. Ali und Herr Mauser fangen an, sich über den erforderlichen Rechenweg zur Aufgabe auszutauschen. Hierbei holt Ali sein Smartphone hervor und wählt die Bildergalerie aus. Es erscheint ein Foto, welches eine Fotografie von einem Zettel mit Berechnungen und einer Zeichnung zeigt. 'Habe hier Foto von eine Mitschüler, der hat das so gemacht.' Ali dreht das auf dem Tisch liegende Smartphone zu Herrn Mauser, der sich über das Smartphone beugt und das Foto begutachtet. 'Ja, wie Ihr Kollege das gemacht hat, brauchen Sie nicht', meldet Herr Mauser zurück.AliundHerrMauserhabendieKöpfeüberdaszwischenihnenliegendeSmartphonegebeugt und unterhalten sich weiter über die Rechenarbeiten von Alis Mitschüler. Es scheint dabei weiter Unklarheit zu herrschen, wie vorzugehen ist. 'Was sagt das schlaue Buch denn dazu?', äußert sich Herr Mauser, wendet sich vom Smartphone ab und greift sich eines der auf dem Tisch liegenden Bücher. Ali nimmt sich ebenfalls ein Buch. Die beiden blättern nun durch ihr jeweiliges Buch. 'Aah, hier Mantelzuschnitt', bemerkt Ali mit dem Buch in seiner Hand und überreicht dieses Herrn Mauser. Herr Mauser nimmt das Buch an sich und schaut sich die Stelle im Buch von Ali näher an. Ali nimmt währenddessen sein Smartphone wieder in die Hand. Er hat bei Google 'Mantelzuschnitte von Kissenhüllen' eingegeben und nach Bildern dazu gesucht. Das Smartphone zeigt nun Bilder zu der Suchanfrage. Ali bewegt seinen Daumen über das Display, sodass unter den Suchergebnissen neue Bilder erscheinen. Herr Mauser hat sein Smartphone nun ebenfalls in der Hand und das Buch von Ali weggelegt. Es ist jedoch für den Ethnografen nicht erkennbar, was Herr Mauser hiermit macht. Ali nimmt wieder ein Buch in die Hand. Nach kurzer Zeit sagt er, 'steht hier nicht.' Dann nimmt Ali erneut sein Smartphone. Das Smartphone zeigt wieder das Foto mit der Rechnung von Alis Mitschüler. Ali legt noch einmal das Smartphone mittig auf den Tisch zwischen sich und Herrn Mauser. Herr Mauser wendet sich dem Foto wieder zu. 'Nochmal zur Rechnung ihres Kollegen', merkt Herr Mauser an, während er sich mit Ali über das Smartphone beugt. 'Der hat hier so gerechnet', führt Herr Mauser fort. Aus dem Austausch zwischen den beiden geht für den Ethnografen hervor, dass der Rechenweg auf dem Foto zum Teil korrekt zu sein scheint. 'Der Haluk, der Schlaumeier', merkt Ali lachend an. Daraufhin finden von Ali und Herrn Mauser parallel zueinander erste Berechnungen mit Hilfe von Taschenrechner (Ali) und Smartphone (Herr Mauser) statt, die sie notieren. Herr Mauser geht kurz darauf, als die beiden fertig sind, die Rechenschritte mit Ali
 
+
+<!-- PAGE 96 -->
+
+
 durch. Hierbei bezieht sich Herr Mauser zwischendurch auf das Bild mit der Berechnung von Alis Mitschüler Haluk. Herr Mauser zeigt mit seinem Stift auf das Smartphone und erklärt dazu Rechenschritte. Ali hört währenddessen zu. (Feldprotokoll Ali, 09/2019)
 
 In der Situation findet die Klärung des ,richtigen' Vorgehens zur Aufgabenbearbeitung über eine Suchbewegung nach Informationen über unterschiedliche Medien hinweg statt. Es entfaltet sich so eine komplexe und im Vergleich zur unterrichtlichen Ordnung in der Schule dezentrale Praxis, in der ein quasi körperlicher ,Tanz' der beiden Akteure um die und mit den Medien beginnt, über die sie sich immer wieder beugen, die sie aufnehmen, weglegen und in unterschiedlicher Weise für die Aufgabenbearbeitung nutzen (blättern, schreiben, lesen, vergleichen etc.): Zu Beginn werden bisherige Berechnungen Alis auf ihre Korrektheit hin überprüft und ein fehlender Rechenschritt festgestellt. Das Smartphone-Foto stellt eine Digitalisierung der Rechnung des Mitschülers dar, welche sich als Informationsquelle losgelöst vom Ursprungsartefakt und zeitlich wie räumlich transportabel in die Nachhilfe miteinbeziehen lässt und ein weiteres Rechenvorgehen präsentiert, über dessen Richtigkeit sich verständigt wird. Mit der Hinwendung zu den Büchern wird in der Suchbewegung eine weitere Informationsquelle hinzugezogen. Die Bücher enthalten gegenüber den Berechnungen von Ali undseinemMitschülerpotenziell eine Vielzahl an Informationen,bei deren Sichtung es Ali gelingt, das passende Thema, den Mantelzuschnitt, zu identifizieren. Dessen weitere Einordnung wird jedoch gleichsam mit dem Buch an Herrn Mauser übergeben. Alis Suche löst sich dann von dem für lineare Texthaftigkeit stehenden analogen Buch und vollzieht sich bildbasiert über das Smartphone. Die Multifunktionalität des Smartphones ermöglicht, nicht nur das Foto der Rechnung des Mitschülers anzuzeigen, sondern nun eine Suche im Internet vorzunehmen.GegenüberdemlinearaufgebautenBuchkannderInformationszugang durch die Suchanfrage ' Mantelzuschnitte von Kissenhüllen ' gezielt angepasst werden. Die Internet-Informationen sind im Vergleich zu denen im Buch nicht in ihrer materiellen Beschaffenheit selbst schon strukturiert und ,festgeschrieben', sondern müssen über passende Suchbegriffe erst zugänglich gemacht und in einem nicht-linearen hypertextuellen Raum aufgefunden werden. Die Darstellung der Suchergebnisse in Bildform reduziert dabei zwar den Leseaufwand gegenüberSuchergebnisseninTextform,beinhaltetjedochdasRisiko,dassdieAngaben wenigklärend sind,weil sie nicht erläuternd und nur bildförmig aufbereitet sind. Dabei unterscheiden sich Internetsuche und Buch zudem potenziell hinsichtlich ihrer Zuverlässigkeit von Informationen.Während die Informationen der Mathematikbücher aller Wahrscheinlichkeit nach als ,gesicherter' gelten können, kann dies je nach Internetquelle nicht zwangsläufig angenommen werden. Damit sind nicht nur Informationen zu sichten und einzuordnen, sondern auch in ihrer Gültigkeit zu überprüfen. Gleichzeitig verspricht die Begriffsbezogenheit der Internetsuche eine höhere Passung zum Suchanliegen,die jedoch im vorliegenden Fall
+
+
+<!-- PAGE 97 -->
+
 
 nicht eingelöst wird. Die Rechnung des Mitschülers,zu der schließlich wieder zurückgekehrtwird,bietetfürHerrnMausersErklärungeneineKonkretheit,wiesie die Bücher und das Internet nicht bereitstellen. Diese Rechnung ist eng auf die Unterrichtsaufgabe hin ausgerichtet und in ihrem Informationsgehalt weniger abstrakt, da sie Zahlenwerte und Rechenschritte zur Aufgabe abbildet. Die InformationenderBücherunddesInternetsmüsseninihrerBedeutunghingegenerst auf die Aufgabe bezogen und eingeordnet werden. Vor diesem Hintergrund fällt auf, dass über den Gebrauch der analogen und digitalen Medien selbst (Blättern in den Büchern und Suchen im Internet) nicht die Klärung hervorgebracht wird. Vor allem sind es die Erläuterungen des Nachhilfelehrers, die es Ali erst ermöglichen, die Aufgabe zu lösen. Der Nachhilfelehrer wird damit zum entscheidend vermittelnden Akteur zwischen Ali und der Mathematikaufgabe. Herr Mausers Smartphone und Alis Taschenrechner stellen im Anschluss zwei unterschiedliche digitale Medien dar, die in gleicher Weise daran beteiligt sind, die zuvor besprochenen Rechenwege anzuwenden, während Stift und Papier der Dokumentation dienen. Die parallele Berechnung ermöglicht, die Rechnungen miteinander zu vergleichen. Diese Dokumentation dient in der weiteren Aufgabenbesprechung demVergleichen und Mitvollziehen der einzelnen Schritte.
 
 Im Zuge der Hausaufgabenhilfe erfolgt auch eine Auseinandersetzung über die Aussagekraft bzw. Eignung von recherchierten Informationen. Dies kann anhandeinerweiteren (im zeitlichen Verlauf späteren) Beobachtungssequenz in der HausaufgabenhilfezwischenAliundHerrnMauserherausgearbeitetwerden.Die beiden sitzen sich weiterhin gegenüber und erarbeiten anhand eines Zettels von Ali die Bedeutung von dort aufgelisteten Wirtschaftsbegriffen, die Ali anschließend notiert. Dabei werden zunächst durch den Nachhilfelehrer Informationen von Büchern und schließlich dessen Smartphone zur Recherche hinzugezogen, als weiterhin offene Verständnisfragen des jungen Erwachsenen zu den Informationen der Bücher bestehen:
 
 Ali richtet sich im Anschluss an die Besprechung eines Wirtschaftsbegriffs mit einer Frage an Herrn Mauser: 'Wenn ich [auf dem Smartphone] suche, dann kann ich den Begriff bei Wikipedia schauen?' Herr Mauser antwortet: 'Das ist jetzt nicht Wikipedia gewesen, aber prinzipiell ist das eine gute Methode, um so etwas nachzusehen.' Herr Mauser nimmt wieder sein Smartphone an sich und tippt erneut etwas ein. Dann hält er das Gerät zu Ali hin. Auf dem Display wird ein Beitrag von Wikipedia angezeigt. 'Das ist jetzt etwas sperrig formuliert von Wikipedia', merkt Herr Mauser an und zeigt Ali den Beitrag, der sich diesen ansieht. […] Als nächstes wird der Begriff 'Angebot' besprochen. Herr Mauser und Ali sehen in die Bücher und tauschensichdarüberaus,wasfürArtenvonAngebotenesgibt.HerrMauserziehtseinSmartphone schließlich hinzu: 'Aus Perspektive von VWL nach Wikipedia heißt Angebot', setzt er an und endet damit, dass die Definition hier allerdings 'unklar ausgedrückt' ist. Ali beugt sich über das Smartphone und liest sich den Text von Wikipedia durch. 'Finde ist klarer ausgedrückt', entgegnet Ali. 'Ja okay, wenn's für dich klarer ist, ist so auch gut.', antwortet Herr Mauser. Ali
+
+
+<!-- PAGE 98 -->
+
 
 liest einen Teil des Texts vom Beitrag laut vor. 'Soll ich das hier auch schreiben?', wendet sich Ali fragend an Herrn Mauser. 'Ja, das ist nicht verkehrt. Die Begriffe gehören zusammen und weisen auf die Wechselwirkung hin', erklärt Herr Mauser. (Feldprotokoll Ali, 09/2019)
 
@@ -731,6 +1120,10 @@ WiesichwährendderZeitdesLockdownszuBeginnderCOVID-19-Pandemie zeigt, kann Hilfe
 
 ImVergleich zur Hausaufgabenhilfe in Präsenz begrenzt sich die Beteiligung des Nachhilfelehrers auf die Überprüfung von bereits erarbeiteten Hausaufgaben. Diese werden dem Nachhilfelehrer per Foto (als Digitalisierung des Ursprungsartefakts) verfügbar gemacht, wobei die E-Mail das Kommunikationsmedium zur
 
+
+<!-- PAGE 99 -->
+
+
 Hausaufgabenhilfe darstellt. 14 Gegenüber der Praxis bei der Nachhilfe in Präsenz sind die Möglichkeiten von Aushandlung, Aneignung oder Vermittlung über das in dieser Art und Weise ausgestaltete digitale Distanzformat reduziert, da der soziale Kontakt begrenzt ist. So erfolgt lediglich eine Verbesserung zu Fehlern, ohne dass eine Einsicht in das Zustandekommen des Fehlers bzw. den korrekten Lösungsweg gegeben wird. Der junge Erwachsene berichtet des Weiteren von einer WhatsApp-Gruppe seiner Klasse, die zur Unterstützung bei der Hausaufgabenbearbeitung genutzt wird und gegenüber dem non-formalen Angebot der Nachhilfe im informellen Bereich verortet ist:
 
 'Da[in der WhatsApp-Gruppe] helfen wir uns gegenseitig. Hier [im Chatverlauf] ist nochmal, bin ich z. B. in einem Flächenvorhang. Wie das alles berechnet wird, hab ich geschickt […] ich glaube ich habe das so geschrieben, dass jeder das, für jeden verständlich ist. Ich hab das also/z. B. ich, wenn ich eine Matheaufgabe lösen möchte, ich schreibe das Schritt für Schritt und schreibe daneben, was das ist, damit ich später/z. B. ich habe ja Sachen im ersten Lehrjahr gelernt, aber da habe ich ordentlich geschrieben und nach drei Jahren, ich weiß nicht, wie das mehr geht, ne. Und wenn ich meine Lösung gucke und lese einmal und einmal gucke, dann weiß ich, aha, so geht das, weißt du.' (Interview Ali, 07/2020)
@@ -741,7 +1134,15 @@ Hausaufgaben stellen also eine formale Anforderung der Schule dar, deren Bearbei
 
 14 Solche Fotos können auch die Bedeutung haben, die Erfüllung von Arbeitsaufträgen seitens der Schüler*innen durch die Lehrer*innen zu kontrollieren. Dies zeigt sich ebenfalls im Zuge der COVID-19-bedingtenSchulschließungen.DabeiwurdenbeispielsweiseFotosvondenHausaufgaben der Schüler*innen eingefordert, anstelle des (für die Schüler*innen voraussetzungsvolleren) Uploads der Aufgabenbearbeitung über Cloud-Dienste (in diesem Beispiel Dropbox).
 
+
+<!-- PAGE 100 -->
+
+
 denen Konstrukten, 2.) dem Herausfinden von Vorgehensweisen zur Aufgabenlösung und 3.) als Quelle zum Verfügbarmachen bzw. Wiedergeben von Informationen. Diese Recherchen erfolgen zugleich nicht nur textbasiert, sondern ebenfalls bildbasiert. Hierbei erweisen sich bildbasierte Recherchen je nach Spezifizität bzw. Komplexität des Suchanliegens in unterschiedlichem Maße zur Informationsbeschaffung geeignet. Die Relevanz von Internetrecherchen zeigen auch erste empirische Studien zur Nutzung von Internetsuchmaschinen (Google) und Informationsportalen (Wikipedia und YouTube) bei der Hausaufgabenbearbeitung (vgl. Rummler 2018; Rummler et al. 2021). Hierbei wird von den Autor*innendaraufaufmerksamgemacht,dassdassozialeUmfeldbeiderHausaufgabenbearbeitung essenziell ist und vor allem Eltern als relevante Unterstützung fungieren. Für die vorliegende Studie gilt es, diesen Befund mit Blick auf die Gruppe der jungen Menschen als Geflüchtete kritisch zu reflektieren: einerseits hinsichtlich des Verbleibs bzw. der Verfügbarkeit von Eltern der jungen Menschen im Herkunftsland (vgl. auch Kreß/Kutscher 2023), andererseits in Bezug auf die Sprach- und Schulkenntnisse der Eltern und deren dadurch eingeschränkte Möglichkeiten der Unterstützung sowie die Situation der Unterbringung in stationären Wohnformen (vgl. Fujii et al. 2020). Vor diesem Hintergrund werden für die jungen Menschen in der vorliegenden Studie vor allem non-formale Angebote bei der Hausaufgabenbearbeitung bedeutsam, die solche ressourcenbedingten Ungleichheitslagen in Bezug auf familiale Unterstützungsmöglichkeiten kompensieren können.So werden die (Sozial-)Pädagog*innen zu Ansprechpartner*innen für die Klärung von Verständnisfragen bei schulischen Aufgaben. In diesem Zusammenhangzeigtsichallerdings,dass die Potenziale,diese Situationen auch als Möglichkeiten für (digitale) Bildungsmomente zu nutzen, verhindert bzw. eingeschränkt werden, wenn die jungen Menschen nicht an der Informationsbeschaffung bei der Hausaufgabenbearbeitung selbst beteiligt werden, sondern nur Informationenpräsentiertbekommen.SowirddieAnforderung,dieInformationen digitaler Medien erst ausfindig zu machen und anschließend in ihrer Relevanz für das vorliegende Anliegen einzuordnen, häufig stellvertretend übernommen. In solchen Fällen steht dann primär die Bewältigung des jeweiligen schulischen Arbeitsauftrags im Vordergrund und weniger die Befähigung zu einer dazu unterstützenden Nutzung digitaler Medien. Zu einer ähnlichen Schlussfolgerung kommen Rummler et al. (2021), die anhand der Internetrecherchen von Eltern zur Hausaufgabenbearbeitung darauf hinweisen, dass Fähigkeiten zur Recherche selbst kaum thematisiert und von Schüler*innen eingeübt werden. In Erweiterung zu den bisherigen Untersuchungen verweisen Teilbefunde dieser Studie imZugeder pandemiebedingten Schulschließungen zudem auf die Relevanz von Fotos zur Hausaufgabenbearbeitung. So stellen Fotos aus dem Schulunterricht einerseits eine Möglichkeit dar, um bei der Hausaufgabenhilfe in Präsenz einen Bezugspunkt für die Diskussion von Hausaufgaben zur Verfügung zu haben. Andererseits können Fotos, die digital versendet werden, unterstützende Rückmel-
+
+
+<!-- PAGE 101 -->
+
 
 dungen zur Hausaufgabenbearbeitung ermöglichen, sofern sie sich nicht lediglich auf das Benennen von Ergebnissen beschränken.
 
@@ -753,15 +1154,27 @@ Eine bildungsrelevante Praxis mit digitalen Medien im Schulunterricht zeigt sich
 
 'Ja, ,Das Leben der Anderen'. […] Ist ja grad ganz passend zum Thema mit der Berliner Mauer. […] für viele von den Jugendlichen ist das bei dem Thema mit Ost- und Westberlin so, dass die da überhaupt nichts mehr mit zu tun haben. Da ist das dann teils abstrakt und schwer nachvoll-
 
+
+<!-- PAGE 102 -->
+
+
 ziehbar. Also auch sich das mit der Mauer durch Berlin vorzustellen. So 'n Film dient dann zur Veranschaulichungundumdasgreifbarerzumachen.[…]Mankannsichdasdidaktischsovorstellen, dass das ein Mosaik zum Themaist, das es zu füllen gilt mit unterschiedlichen Steinchen. ZumTeil dann mit dem Lesen von Texten, Diskussionen und eben auch Videos.' (Feldprotokoll Luca, 11/2019)
 
 Wie der Lehrer darlegt, ist die Einbettung des Films explizit zur VeranschaulichungdesUnterrichtsthemasgeplant.MitdemBilddes' Mosaik[s] ' führt der Lehrer mit ' Texten, Diskussion und eben auch Videos ' mehrere Formate bzw. ' Steinchen ' an, die für die Vermittlung genutzt werden. Wie sich in den ethnografischen Beobachtungen von Unterrichtssituationen zeigt, wird die Betrachtung des Films durchdenLehreraufeinebestimmteWeisemoderiertbzw.kontextualisiert.Diese Moderation bzw. Kontextualisierung des Films lässt sich als relevant für eine potenzielle Vermittlung und Aneignung des Unterrichtsthemas einordnen. So bleibt es nicht bloß bei einer ,stillen' Betrachtung des Films durch die Schüler*innen.VielmehrteiltderLehrerdenSchüler*innenunterEinbindungweitererArtefakte vor, während und nach dem Film Informationen zur Einordnung der Handlung,desEntstehungskontextsundderAuthentizitätdesFilmsmit.HerrKornfels nutzt beispielsweise zur Einführung des Films dessen DVD-Hülle, liest die Handlung vor und spricht über die internationale Rezeption des Films. Zudem bettet er den Film in einen (bis dahin von ihm nicht weiter spezifizierten) Test ein, dessen Bearbeitung nach dem Film erfolgt und wozu, wie er sagt, die Betrachtung des Films allein ausreichen würde. Die nachfolgende Beobachtungssequenz veranschaulicht ausschnittsweise diese weitere Beteiligung rund um den Film:
 
 HerrKornfelsschiebtaufeinemWageneinengroßenSchrankmiteinemkleinerenSchrankdarunter in die Klasse neben das Pult und öffnet die Schränke. In dem großen Schrank befindet sich ein Flachbildfernseher, in dem kleineren darunter ein DVD-Player. Herr Kornfels startet DVD-Player und Fernseher, öffnet die DVD-Hülle des Films 'Das Leben der Anderen' und legt die DVD in den DVD-Player ein. Anschließend richtet Herr Kornfels den Fernseher zur Klasse aus und wendet sich an diese: 'Ja, guten Morgen, heute geht's weiter mit dem Film. Holt bitte eure Schreibsachen, denn der Film wird nicht die ganze Stunde gehen und danach wird's dann ja auch noch eine Aufgabe zum Schreiben geben.' Herr Kornfels setzt mit der Fernbedienung die Wiedergabe des Films auf dem Fernseher fort. Dann setzt sich Herr Kornfels mit der Fernbedienung auf einen Platz zu den Schüler*innen. Die Schüler*innen und Herr Kornfels schauen zumlaufenden Film auf dem Fernseher. Während der Film noch etwa eine restliche halbe Stunde läuft, pausiert Herr Kornfels mehrmals den Film mit Hilfe der Fernbedienung. 'IM? Was ist das, kann mir jemand sagen, was IM ist?', erkundigt sich Herr Kornfels beim ersten Pausieren, als im Film von einer 'IM' gesprochen wird. Die Schüler*innen bleiben still und schauen zu Herrn Kornfels. 'Inoffizieller Mitarbeiter', teilt Herr Kornfels mit und erklärt, dass es sich bei der im Film gezeigten Frau nun um eine inoffizielle Mitarbeiterin der Stasi handelt. Herr Kornfels setzt den Film fort. An einer anderen Stelle zum Ende des Films pausiert Herr Kornfels
 
+
+<!-- PAGE 103 -->
+
+
 erneut und kommentiert: 'Der sieht da jetzt noch seine alte Stasiakte ein, ist klar, ne? Also was man für Berichte über ihn geführt hat.' Die Schüler*innen sind weiter still und wieder Herrn Kornfels zugewandt. Herr Kornfels setzt anschließend den Film fort. Als der Film zu Ende ist geht Herr Kornfels nach vorne, macht mit der Fernbedienung den Fernseher aus und schiebt den Fernsehwagen zum Rand der Klasse. Dann setzt sich Herr Kornfels auf das Pult. 'Noch Fragen?', erkundigt er sich bei den Schüler*innen. Eine Schülerin meldet sich und fragt, was es bei einer Szene 'mit den Medikamenten' auf sich hatte. Herr Kornfels gibt die Frage an die Klasse weiter, woraufhin sich ein Schüler meldet und berichtet, dass es sich um Psychopharmaka gehandelt hatte. Herr Kornfels stimmt zu und erklärt, was Psychopharmaka sind und weshalb die Frau diese einnahm. 'Ansonsten noch Infos zum Film, bevor es zur Schreibaufgabe geht', kündigt Herr Kornfels an. Er hält in seiner Hand gerade mehrere getackerte DIN-A4-Blätter, die bedruckt sind. Herr Kornfels schaut auf das vorderste Blatt und erzählt, dass es die Personen im Film nicht tatsächlich gegeben hat, der Film allerdings ansonsten 'authentisch' ist. 'Mit den Überwachungsmöglichkeiten, das wäre wohl allerdings zu der Zeit noch nicht so umfassend möglich gewesen, wie das im Film gezeigt wurde', bemerkt Herr Kornfels. Herr Kornfels steht anschließend vom Pult auf und kündigt die Schreibaufgabe an. Bei dieser sollen die Schüler*innen die zwei Protagonist*innen des Films und deren Charakterentwicklung beschreiben. (Feldvignette, November 2019)
 
 Wie die Situation zeigt, sind Fernseher, DVD-Player und Film kein fester Bestandteil des unterrichtlichen Arrangements, sondern werden der Klasse durch den Lehrer (aus einem Aufbewahrungsraum der Schule) temporär ,zugeführt' und von ihm ,eingerichtet'. Während der Filmbetrachtung sind sowohl Lehrer als auch Schüler*innen auf den Fernseher ausgerichtet. Die Kontrolle bzw. Steuerung des Films liegt durch die Fernbedienung ausschließlich beim Lehrer. Diese Kontrolle bzw. Steuerung erweist sich als relevant für die Möglichkeiten der Vermittlung des Films. Dabei geht das Pausieren des Films von Herrn Kornfels mit Ansprachen an die Schüler*innen und dadurch einer Verlagerung der Aufmerksamkeit zwischen Film und Lehrkraft einher. So wenden sich die Schüler*innen beim Pausieren vom Fernseher ab und dem Lehrer zu, der Verständnisnachfragen zur Filmhandlung und entsprechende Erläuterungen an die Schüler*innen richtet. Dabei fungiert der Lehrer als Auskunftsperson über den Film, wie sich auch zu dessen Ende zeigt, als Herr Kornfels weitere Verständnisnachfragen der Schüler*innen beantwortet. Mittels der Ausdrucke, von denen er vorliest, ordnet Herr Kornfels außerdem für die Schüler*innen ein, wie ,realistisch' die Filmhandlung im Vergleich zu den im Schulunterricht behandelten historischen Ereignissen ist. Die Informationen über das Leben in der DDR, die der Film den Schüler*innen darbietet, werden (mit Ausnahme der Überwachungsmöglichkeiten) als ' authentisch ' und insofern als zuverlässiger Wissensbestand zur Historie eingeordnet. Die Aufmerksamkeit der Schüler*innen auf den Film wird durch den von Herrn Kornfels vor Filmbetrachtung angekündigten Test befördert. So wird die Filmbetrachtung als Voraussetzung für die Erfüllung des später fol-
+
+
+<!-- PAGE 104 -->
+
 
 genden Tests angekündigt. Dabei werden zunächst sämtliche Inhalte des Films potenziell relevant für ein ,Bestehen' des Tests, da der Lehrer die relevanten bzw. erforderlichen Inhalte zur Aufgabenbearbeitung erst nach der Filmbetrachtung konkretisiert. Die Verknüpfung von Arbeitsauftrag und Film zur Sicherung der Aufmerksamkeit der Schüler*innen ist vom Lehrer vorgesehen, wie er in einem Interview einordnet:
 
@@ -773,11 +1186,19 @@ NebenderBetrachtungvonFilmenbzw.VideossinddigitaleMedienimSchulunterricht des We
 
 Herr Seidel steht vor den ihm zugewendeten Schüler*innen der Klasse in der Werkstatt. Eine weiße Leinwand hinter ihm ist zuvor von ihm ausgefahren worden. Ein Beamer ist auf die
 
+
+<!-- PAGE 105 -->
+
+
 Leinwand ausgerichtet und projiziert auf diese ein Standby-Bild. Herr Seidel geht zu einem Stehtisch in der Nähe, auf dem eine Dokumentenkamera steht, während die Schüler*innen auf ihren Stühlen sitzen. Die Linse der Dokumentenkamera ist senkrecht nach unten auf ein Arbeitsblatt ausgerichtet. Herr Seidel drückt einen Knopf auf der Dokumentenkamera. Es wird daraufhin das Bild der Dokumentenkamera auf die ausgefahrene Leinwand übertragen, welches das Arbeitsblatt unter der Dokumentenkamera zeigt. Herr Seidel steht weiter bei der Dokumentenkamera. Er legt anschließend von einem benachbarten Materialwagen mehrere kleine quadratische Plättchen unter die Dokumentenkamera. Die Plättchen verdecken nun zum Teil das Aufgabenblatt. Herr Seidel erklärt, um was für Materialien es sich handelt und an welchen Stellen diese zu bohren sind. Dabei zeigt er auf bestimmte Stellen an den Plättchen, was von der Dokumentenkamera auf die Leinwand übertragen wird. 'Das sind Bohrproben, die ihr gleich bekommt', erwähnt Herr Seidel u. a. Die Schüler*innen sind Herrn Seidel und der Leinwand mit der Übertragung der Dokumentenkamera währenddessen zugewandt. Zwischendurch kommentieren die Schüler*innen Erklärungen von Herrn Seidel und stellen Nachfragen zu den Bohrproben, die Herr Seidel anschließend beantwortet. (Feldprotokoll Ali, 12/2019)
 
 In der vorliegenden Situation sind - im Kontrast zum vorherigen Beispiel - die digitalen Medien fester Bestandteil des unterrichtlichen Arrangements. In diesem Zusammenhang wird die Nutzbarmachung und Bedienung der Dokumentenkamera in Verknüpfung mit den Unterrichtsmaterialien, der Leinwand und dem Beamer durch den Lehrer vorgenommen. Die digitalen Medien übernehmeneine Rolle in der sichtbaren Präsentation und Besprechung der Unterrichtsmaterialien. So wird hierüber eine vergrößerte Übertragung bzw. Abbildung der Bohrproben ermöglicht, welche den Schüler*innen selbst nicht vorliegen. Dies bedeutet, es werden über die Dokumentenkamera nicht nur die Unterrichtsmaterialien bildlich erfasst, sondern ebenfalls die Hände des Lehrers. Diese bildliche Erfassung zeigt sich als relevant für die Vermittlung an die Schüler*innen und ist auf die Ausrichtung der Dokumentenkamera zurückzuführen. So können die Schüler*innen die Handhabung von Herrn Seidel mit den Unterrichtsmaterialien (wo die Bohrproben anzubohren sind) senkrecht von oben betrachten. Das heißt,die DokumentenkameraermöglichtsämtlichenSchüler*innendieEinnahmeeinesspezifischenundanhandderÜbertragungderLeinwandausderDistanz trotzdemnahnachverfolgbarenBlickwinkels.HierbeiwirdderLehrerzugleichals Auskunftsperson für die Schüler*innen erkennbar, indem er Informationen zur noch ausstehenden Handhabung der Bohrproben durch die Schüler*innen mitteilt und für Fragen zur Verfügung steht. 15 In diesem Sinne tragen die digitalen Medien in Verknüpfung mit den weiteren Beteiligten zu einer Vermittlung einer
 
 15 ÜberdasBeispielhinauszeigensichauchnochweitereFormenderEinbindungundBeteiligung über die Dokumentenkamera im Schulunterricht. So lässt sich auch im Mathematikunterricht beobachten, wie Schüler*innen bei der Handhabung von analogen Unterrichtsgegenständen
+
+
+<!-- PAGE 106 -->
+
 
 Unterrichtseinheit bei, die auf die Nutzung der Standbohrmaschine in der Werkstatt ausgerichtet ist. So werden im weiteren Verlauf der Unterrichtsstunde zudem YouTube-Videos über den Computer und den hiermit verbundenen Beamer betrachtet, die über potenzielle Gefahren zur Standbohrmaschine informieren. Daraufhin findet schließlich an den in der Werkstatt befindlichen Standbohrmaschinen eine vom Lehrer angeleitete Einweisung in deren Bedienung durch die Schüler*innen statt. Vor diesem Hintergrund erfolgt die Annäherung an den Unterrichtsgegenstand und die Befassung damit über ein, blendedclassroom '-Setting, in dem sowohl digitale Medien als auch das konkrete Zeigen und Ausprobieren an den Werkgeräten eine Rolle spielen und Teil der auf Vermittlung und Aneignung ausgerichteten Praxis sind.
 
@@ -789,11 +1210,23 @@ Wie sich aus der Erzählung der Lehrerin herleiten lässt, sind mit dem Smartpho
 
 (z. B. Messschiebern und mathematischen Körpern) unter der Dokumentenkamera durch die Lehrkraft näher an den Gegenstand ,gebracht' werden.
 
+
+<!-- PAGE 107 -->
+
+
 der Unterrichtseinheit darstellt. Es vereinfacht bzw. reduziert die Praxis, da das Smartphone eine ,unmittelbare' Verfügbarkeit der relevanten Unterrichtsmaterialien gewährleistet. So werden bestimmte Abläufe verkürzt, wie sie im Umgang mit dem Drucker erforderlich wären, und mögliche Mittelspersonen für den Zugang zum Gerät sind nicht nötig. Bei den Feldaufenthalten zeigt sich, dass die meisten der Schüler*innen als Portraitmotiv ein Foto von sich selbst auf ihrem Smartphone verwenden, welches sie im Kunstunterricht (oder auch woanders) von ihren Mitschüler*innen mit dem Smartphone haben aufnehmen lassen. Welche (unterschiedlichen) Beiträge das Smartphone als informeller Gegenstand der Schüler*innenbeiderErfüllungdesformalenArbeitsauftragsimKunstunterricht aus seiner Beschaffenheit heraus leistet, veranschaulicht die nachfolgende Feldvignette:
 
 Jakob hat sein Smartphone vor sich auf dem Tisch. Auf dem Display wird ein Foto mit der herangezoomten Augenpartie von Jakob angezeigt. Jakob nimmt ein Lineal, legt es auf das Smartphone ab und vermisst mit dem Lineal das Foto. Dann führt er sein Lineal auf das leere DINA3-Blatt neben sich, beginnt eine Linie zu ziehen und damit seine Zeichnung anzufangen. Kurz darauf spricht Jakob zu seinem Mitschüler Paul neben sich: 'Ich weiß nicht, wie ich anfangen soll.' 'Mach doch abpausen', entgegnet Paul. Jakob legt sein Smartphone mit dem geöffneten Foto unter das DIN-A3-Blatt und versucht, das Foto abzupausen. Das Display des Smartphones leuchtet schwach durch das Papier. Wenige Momente später nimmt Jakob das Smartphone wieder unter dem Blatt zurück und bricht das Abpausen ab. Jakob nimmt nun wieder sein Smartphone in die Hand, während er zeichnet. Zwischendurch schaut er auf dieses und legt es zeitweise ab, während er weiter an seinem Portrait zeichnet. Frau Herling geht durch die Klasse und kommt am Tisch von Jakob und Paul vorbei. 'Der Mund muss tiefer', kommentiert sie und bleibt kurz bei Jakob stehen. 'Ja, ich weiß, ich krieg das aber nicht hin ohne die Linien', erwidert dieser frustriert klingend. Frau Herling entgegnet, dass er Linien doch zeichnen und hinterher wegradierenkönnte.Danngehtsieweiter.AucheineandereSchülerinnutztihrSmartphonezur AnfertigungderZeichnung.DieseSchülerinbeginntzaghaftmiteinemBleistiftersteLinienauf einem leeren DIN-A3-Blatt zu ziehen. Zwischendurch schaut sie kurz auf das neben dem Blatt liegende Smartphone, auf dem das Foto eines Modells angezeigt wird. Die Schülerin verschiebt zwischendurchdenAusschnittaufdemGesichtoderverändertdessenGröße.IhreZeichenbewegungenwirkensorgfältig und abgewägt. Die Schülerin zoomt den Bildausschnitt heran, sodass nun ein Teil der Gesichtspartie angezeigt wird. Dann nimmt sie ihren Bleistift und zieht eine Kontur des Gesichts mit dem Bleistift auf dem Smartphone nach. Sie berührt mit dem Bleistift leicht das Display und wiederholt diese Bewegungen mehrmals hintereinander. Anschließend beugt sie sich wieder zu ihrer Zeichnung und beginnt, die auf dem Smartphone durchgeführte BewegungaufdasBlattPapierzuübertragen.MitderZeitwirddieZeichnungderSchülerinzunehmend detaillierter, indem sie Nase, Mund und Schattierungen unter Abgleich mit dem Foto von ihrem Smartphone hinzufügt. (Feldvignette, November 2019)
 
+
+<!-- PAGE 108 -->
+
+
 In der vorliegenden Situation stellt das Smartphone-Foto die Grundlage für eine Übertragung von digital (dem Foto auf dem Smartphone) zu analog (der Zeichnung auf Papier) dar, die Bestandteil einer Aufgabe des Kunstunterrichts ist. Die ÜbertragungdesdigitalenFotoserweistsichdabeialsvoraussetzungsvoll.Soenthält das Foto eine weitaus größere Menge an ,Informationen' (z.B. Schattierung, Proportionen und Längenmaße) als es bei bloßer Schriftlichkeit der Fall wäre: Es kann eine Übertragung des Informationsgehalts (nicht wie im Falle von Texten) ,eins zu eins' erfolgen. Die Übertragung von digital zu analog findet bei Jakob undseinerMitschülerin in verschieden ausgestalteten Artefaktverkettungen zwischen Smartphone-Foto, DIN-A3-Blatt, Bleistift und Lineal statt. Hierbei ist aufgrund der Beschaffenheit der Artefakte deren Einbindung in unterschiedlichem Maßefür die Übertragung des Bildes geeignet. Dies zeigt sich zunächst beim anfänglichen Vermessen des herangezoomten Smartphone-Fotos durch Jakob mit dem Lineal: Der herangezoomte Bildausschnitt muss für die Zeichnung des Gesamtportraits bewegt werden; die herangezoomten Maße müssen in ihrer Größe ,passend'zuderGrößedesDIN-A3-Blattessein;dieausgewählteZoom-Stufedarf nicht verloren gehen, da ansonsten die Maße auf dem Papier nicht mehr weiter übereinstimmen;dieZoom-Stufedroht,verloren'zugehen,dasieaufdemSmartphonenichtabgespeichertwirdunddieBearbeitungderUnterrichtsaufgabeüber mehrere Stunden erfolgt. Auch der Versuch des Abpausens mit dem Smartphone als Unterlage zum DIN-A3-Blatt birgt Hindernisse,da die Undurchsichtigkeit des Papiers die Übertragung von digital zu analog beeinträchtigt. Die von Jakob zuletzt vorgenommene Übertragung zwischen Smartphone-Foto und DIN-A3-Blatt über das ,gleichzeitige' Sehen zwischen Smartphone in der einen Hand bzw. auf dem Tisch und dem Stift auf Papier in der anderen Hand erfordert eine AugenHand-Koordination. Während Jakobs Übertragungsversuche von einer ,Suchbewegung' und ,Orientierungskrise' geprägt sind (Jakob: ' Ich weiß nicht, wie ich anfangen soll '), geht seine Mitschülerin zielgerichteter vor. Die Zeichenbewegungen werden bei ihr auf dem herangezoomten Smartphone-Foto ausprobiert bzw. eingeübt und anschließend auf Papier übertragen. Vor diesem Hintergrund wird für die Bearbeitung des Arbeitsauftrags die ,Beherrschung' des eigenen Körpers relevant: Eine ruhige Hand, präzise Strichführung und eingeübte Koordination zwischen Hand und Auge sind dafür erforderlich. Hierbei hat die Lehrerin durch ihre mobile räumliche Platzierung zwar Einblick in die Arbeiten der Schüler*innen und gibt hierzu (wie bei Jakob) vereinzelt Hinweise bzw. Ratschläge zur Zeichnung. Diese Hilfestellungen beziehen sich jedoch nicht auf die Übertragung von digital zu analog, sondern nur auf die Zeichnung selbst bzw. ein in einer vorherigen Stunde erhaltenes Übungsblatt zur Vermessung des menschlichen Kopfs mittels Linien. Die unterschiedlichen Übertragungstechniken unter HinzunahmedesSmartphones sind nicht Gegenstand des Unterrichts und rücken dadurch in einen informellen Bereich, in dem die Schüler*innen eine geeignete digital-
+
+
+<!-- PAGE 109 -->
+
 
 analoge Übertragungstechnik selbst suchen müssen (oder sich auf die analogen Übertragungsmittel der Lehrerin beziehen).
 
@@ -801,11 +1234,19 @@ Die Beispiele aus dem Schulunterricht zeigen, wie präsent und gleichzeitig dive
 
 16 Diese ungleichen Nutzungsbefugnisse in Bezug auf die verwendeten digitalen Medien haben auch Bezüge zu ungleichen Machtverhältnissen. Dieser Aspekt wird im Rahmen der Dissertation von Michi S. Fujii weiter ausgearbeitet.
 
+
+<!-- PAGE 110 -->
+
+
 indem sie eigene digitale Medien zur Verfügung stellen. So funktioniert im Rahmen einer Unterrichtseinheit die Audioausgabe des Laptops für einen Film über die schulischen Lautsprecher im Raum nicht, da diese am Laptop nicht erkannt werden. Der Bluetooth-Lautsprecher eines Jugendlichen wird daraufhin mit dem Laptop der Lehrerin verbunden, wodurch das Problem der eingeschränkten Audioausgabe der schulischen Medien umgangen wird. Hinsichtlich der Nutzungsbefugnisse zeigen sich ausgeprägte Unterschiede zwischen Lehrer*innen und Schüler*innen. Insbesondere die schulischen digitalen Medien, werden im Unterricht meist ausschließlich von den Lehrer*innen bzw. nur unter deren Erlaubnis und Anleitung von den Schüler*innen genutzt. Die geringe Beteiligung bzw. der Einbezug der Schüler*innen an der digitalen Mediennutzung schränkt insofern (wie auch bei der Hausaufgabenbearbeitung) die Potenziale für eine selbsttätige Aneignung bzw. Auseinandersetzung ein. Diese stünde allerdings auch im Kontrast zur unterrichtlichen Ordnung bzw. würde diese stören, da die Unterrichtsstunde zeitlich begrenzt bzw. getaktet ist und innerhalb dieser ein vorgegebener Arbeitsauftrag der Lehrer*innen zu erfüllen ist. Der Umgang mit den digitalen Medien selbst bzw. die Befähigung dazu ist dabei nicht Bestandteil des Unterrichts. Eine Offenheit für die Nutzung digitaler Medien durch die jungen Menschen und deren Bedarfen dazu, wie es in anderen Settings (z.B. der Flexiblen Hilfe) gegeben ist, ist damit für die unterrichtliche Ordnung nicht vordergründig relevant.
 
 ## 2.2 Subjektive, materiell-dingliche und institutionelle Teilhabebedingungen im Kontext der Praxis
 
 Wie im vorigen Kapitel dargestellt, werden verschiedene Momente sichtbar, in denen digitale Medien Möglichkeiten für Bildungsteilhabe erweitern bzw. eröffnen können. Gleichzeitig wird deutlich, dass die faktische Entfaltung dieser Potenzialitäten allerdings keineswegs selbstverständlich ist. Im Gegenteil kann die Beteiligung digitaler Medien je nach ihrer Einbettung und den in der Situation vorliegenden Bedingungen auch mit Hindernissen und Exklusion einhergehen. WirdderAnalysefokusvordiesemHintergrundaufdieverschiedenenanderPraxis Beteiligten (menschliche Akteur*innen, Artefakte und Rahmenbedingungen) gerichtet, können drei für Bildungsteilhabe relevante Dimensionen rekonstruiert werden: 1) die subjektive Ressourcenlage der jungen Geflüchteten, 2) die Beschaffenheit und Affordanz digitaler Medien sowie 3) die institutionelle bzw. personell-fachliche Rahmung des Arrangements. Die Bedingungen in diesen drei Dimensionen sind mit Verweis auf die bisherigen methodologischen Überlegungen nicht als monodirektionale oder kausale,Ursachen hinter'der Praxis zu verstehen (vgl. den Beitrag von Fujii/Kutscher i.d.B.). Vielmehr stellen diese Bedingungen Ausprägungen bzw. Konfigurationen des Arrangements dar, welche die Möglich-
+
+
+<!-- PAGE 111 -->
+
 
 keiten der jungen Menschen zur Beteiligung an der jeweiligen Praxis präfigurieren, ohne sie zu determinieren. Die Rekonstruktion dieser Bedingungen in den jeweiligen Dimensionen erfolgte im Rahmen des Fallvergleichs (der untersuchten Situationen). Während im vorherigen Kapitel also beispielhaft Praxis kleinschrittig analysiert wurde, wird in den nachfolgenden Ausführungen eine weiter systematisierende Perspektive eingenommen. Dazu werden auch weitere Situationen aus den Ethnografien sowie Interviewaussagen verschiedener Akteur*innen einbezogen, die Aufschluss über Kontextbedingungen der Praxis geben und sich der Beobachtbarkeit entzogen (z.B.institutionelle Regelungen oder biografische Hintergründe).In diesem Zusammenhang lässt sich das dargelegte Material aufgrund der Bedeutungsvielfalt der Praxis nicht immer nur auf eine Bedingung eingrenzen.Vielmehr ist stets eine Menge von miteinander verschränkten Bedingungen anzunehmen (dies gilt auch für die jeweiligen Dimensionen). Die nachfolgende analytische Trennung ist insofern in der Systematisierung begründet, um Bedingungen für Bildungsteilhabe fokussieren zu können. Diese Systematisierung geht ebenfalls mit einer Distanzierung von den kleinschrittigen Analysen des vorherigen Teils einher.
 
@@ -813,9 +1254,17 @@ keiten der jungen Menschen zur Beteiligung an der jeweiligen Praxis präfigurier
 
 Auf einer ersten Ebene stellen die unterschiedlichen Ausgangssituationen und damit verbundenen Ressourcenlagen der jungen Geflüchteten die ,subjektiven' Bedingungen für Bildungsteilhabe unter der Beteiligung digitaler Medien dar. Mit Bourdieu (1997) lassen sie sich als die den jungen Menschen zur Verfügung stehenden (ökonomischen, kulturellen, sozialen und symbolischen) Kapitalien verstehen. Deren Verfügbarkeit hat Folgen für die Voraussetzungen der menschlichen Akteur*innen für die ,kompetente' (im Sinne eines praktischen Wissens, vgl. Schatzki 2012) Bewältigung der in der Praxis an sie gestellten Anforderungen und daraus hervorgehenden Möglichkeiten für Bildungsteilhabe. Die Rekonstruktion dieser Bedingungen ist vor allem auf der Basis von Material aus Interviews und ethnografischen Gesprächen mit den jungen Menschen und ihren Begleiter*innen erfolgt. Dabei weist der Fokus auf diese Subjektebene augenscheinlich einen methodologischen ,Bruch' auf, da Praxistheorien weniger an den Subjekten als an deren Beiträgen an der Praxis interessiert sind (vgl. den Beitrag von Fujii/Kutscher i.d.B.). Bei näherer Betrachtung kann dieser Widerspruch jedoch aufgelöst werden, da die Subjektbedingungen in den jeweiligen Arrangements nicht losgelöst von der sich vollziehenden Praxis, sondern stets in Bezug darauf verstanden und anhand von Beispielen veranschaulicht werden.
 
+
+<!-- PAGE 112 -->
+
+
 Digitale Medien stehen - wie sich auch bezogen auf die Studienteilnehmenden zeigt - nicht allen jungen Menschen gleichermaßen in ihrem Alltag zur Verfügung. Die Verfügbarkeit von und der Zugang zu einem Computer bzw. Laptop waren bei den Teilnehmenden eher die Ausnahme, während sämtliche der begleiteten jungen Menschen mindestens ein (oder teilweise auch mehrere) Smartphone(-s) besaßen. Neben entsprechendem ökonomischem Kapital als Voraussetzung, um sich ein eigenes Gerät anzuschaffen oder sozialem Kapital, um über (meist institutionelle) Kontakte Zugänge zu digitalen Medien erhalten, ist auch entsprechendes kulturelles Kapital in Form computerbezogener Fähigkeiten (die deutlich andere, erweiterte Anforderungen umfassen als die Bedienung eines Smartphones) nicht selbstverständlich verfügbar. In unserer Studie zeigte sich, dass auch die institutionell möglichen Zugänge zum Computer bzw. Laptop nur bedingt an die alltäglichen Anforderungen schulischer Praxis anschlussfähig waren: Da der Zugang in der stationären Wohngruppe eingeschränkt war, hatte beispielsweise das Paar Luca und Madlina entschieden, auf ein Gerät gemeinsam zu sparen. Dabei sahen die beiden den Vorteil in der Anschaffung eines eigenen Geräts darin, dass sie sich auch abends mit Schulaufgaben auseinandersetzen können, ohne sich an die geregelten Nutzungszeiten für den Computer in ihren Wohngruppen halten zu müssen bzw. das Gerät mit den anderen Bewohner*innen ihrer Wohngruppen teilen zu müssen. Die Verfügbarkeit eines eigenen Laptops bzw. Computers erweist sich insofern als eine grundlegende Voraussetzung für die Beteiligung an schulischer Praxis, die abseits des formalen Bildungsorts Schule am non-formalen Ort der stationären Wohngruppe der Kinder- und Jugendhilfe realisiert werden soll. 17 Die Anschaffung eines eigenen Geräts ermöglicht potenziell eine flexiblere Beteiligung an dieser Praxis unabhängig von den Regelungen in der stationären Wohngruppe. Dieser hier herausgearbeiteten Einschränkungen und Mängel in Bezug auf die Ausstattung mit Computer bzw. Laptop stehen in Einklang mit Befunden früherer Studien und erweitern diese um den expliziten Hinweis auf deren Relevanz für die Teilhabe an schulischen Praktiken. So wurde bereits darauf hingewiesen, dass die digitale Ausstattung stationärer Kinder- und Jugendhilfeeinrichtungen mit einer ausreichenden Anzahl an Geräten, die ohne Probleme für alle ohne
 
 17 Die Verfügbarkeit und der Zugang zu digitalen Medien sind nicht nur auf das ,physische Vorhandensein'digitalerMedienbezogen.SoistauchderenZustandrelevantdafür,inwieferndiese zurNutzungverfügbarsind(vgl.Kapitel2.2.2).DieslässtsichbeispielsweiseanDaten-undMobilfunkguthaben von Smartphones der jungen Menschen veranschaulichen. Die (Dienst-)Leistungen bzw. Funktionen des Smartphones werden bei aufgebrauchtem Datenguthaben eingeschränkt, sodass auch die Teilhabe an bildungsrelevanter Praxis (z.B. Internetrecherchen) erschwert wird.
+
+
+<!-- PAGE 113 -->
+
 
 Einschränkung Zugang ermöglicht (z.B. für Hausaufgaben), bei weitem keine Selbstverständlichkeit darstellt (vgl. Kutscher/Kreß 2015, S. 55; Weßel 2022, S. 3).
 
@@ -824,6 +1273,10 @@ Wie essenziell diese Verfügbarkeit von und der Zugang zu digitalen Medien für 
 'Also meine Schüler in der (Bezeichnung einer Klasse mit Förderbedarf), die, (holt Luft) die haben halt keinen Computer zu Hause. Die haben allenfalls ihr Handy. Wenn ich denen einen Arbeitsauftrag als PDF zuschicken würde/manche Kollegen, also mein Kollege, Herr Rader, hat das gemacht im Englischunterricht. Dann öffnen sie die PDF, sollen ihren Arbeitsauftrag bearbeiten und dann stellt sich die Frage: naja, (lacht) wie kriege ich das, was ich jetzt hier digital als PDFauf mein Handy habe, wie kriege ich das auf ein Blatt Papier raus, so und (Pause) ja. Die sollten halt hingehen, ne, die PDF zu Hause ausdrucken, bearbeiten, einscannen und wieder zurückschicken, aber diese Möglichkeit haben die Schüler einfach nicht. Die haben zu Hause keinen Computer. Die haben da niemanden, der (Pause)/Also ich rede nicht von lernerischen HürdenimSinnevonetwasnichtverstehenundHilfebrauchen,sonderneinfachtechnischeHürden. Und die selbst, wenn sie dann, das hatte ich in der E-Mail auch so geschrieben, dann haben einige dann/sind dann den Extraschritt gegangen und sind dann gefolgt und in den Copyshop gegangen, haben sich das dann ausgedruckt. Dann gab es als Antwortschreiben (Pause) ein Foto des bearbeiteten Blattes zurück. Und das macht es dann auch grade schwer, wenn es das ein Foto ist natürlich.' (Interview Herr Berle, 04/2020)
 
 Wie Herr Berle benennt, erweist sich das Smartphone als unzureichend bzw. nicht hinreichend passungsfähig für die Bearbeitung der zugesendeten Schulaufgaben. Diese mangelnde Passungsfähigkeit wird im Zusammenhang der (technischen) Anforderungen für die Aufgabenbearbeitung deutlich. So bedarf es eines Ausdrucks (also einer ,Analogisierung') der als PDF zugesendeten digitalen Aufgaben der Lehrer*innen, um sie zu bearbeiten. Diese Analogisierung muss im Anschluss durch die Schüler*innen wieder (re-)digitalisiert werden, indem die bearbeiteten Ausdrucke zur Korrektur an den Lehrer digital verschickt und dafür verfügbar gemacht werden müssen. Herr Berle hebt die Notwendigkeit des Vorhandenseins von Computer und Drucker für diese Schritte hervor. Die Schüler*innen in seiner Schulklasse und auch die meisten der Forschungsteilnehmenden verfügen jedoch nicht über diese Geräteausstattung, die Voraussetzung für die Beteiligung an der unter den Lockdowns veränderten Praxis der schriftlichen Aufgabenbearbeitung ist. Zwar nutzen die Schüler*innen vereinzelt
+
+
+<!-- PAGE 114 -->
+
 
 Möglichkeiten der Kompensation, etwa indem sie in einen Copyshop gehen um die Aufgaben auszudrucken. Diese Kompensationsmöglichkeiten gleichen jedoch - abgesehen von der Erfordernis, dafür die finanziellen Möglichkeiten zu haben - nicht sämtliche Anforderungen der schulischen Praxis aus. So bedarf es Herrn Berle zufolge im Zuge der Digitalisierung der Hausaufgabe nicht eines Smartphone-Fotos der bearbeiteten Aufgabe, sondern eines PDF-Scans. 18 Als eine Konsequenz ,scheitern' einige der Schüler*innen an den unter COVID-19 veränderten Schulanforderungen im Sinne einer Exklusion - die zugesendeten Schulaufgaben bleiben unbearbeitet.
 
@@ -837,6 +1290,10 @@ Ali differenziert hier zwischen dem E-Mail-Inhalt und dem Schreiben von E-Mails.
 
 18 Diese Probleme bestehen im Übrigen auch weiterhin unter den Bedingungen einer zunehmenden Digitalisierung schulischer Lehre.
 
+
+<!-- PAGE 115 -->
+
+
 sonderndieErstellungunddasVersendenderE-Mail.Ihmistaufgrundfehlender Erfahrungen das Wissen für die spezifische Bedienung eines digitalen Mediums nicht hinreichend verfügbar. Im Kontrast zu Ali sind andere Teilnehmende mit der Nutzung von E-Mails vertraut(-er), da es regelmäßige Anlässe in ihrem Alltag gibt, E-Mails zu formulieren. Ein solcher Anlass wird im Zusammenhang mit der Kommunikation mit Behörden sichtbar, wie der junge Erwachsene Hansala in einem Interview zur Nutzung von Google Mail erläutert:
 
 'Ja, Gmail das ist, das ist SO wichtig hier in Deutschland. Habe ich niemals in Syrien das benutzen. Aber hier muss man benutzen z.B. mit z.B. Jobcenter, mit Ausländerbehörde, mit der Wirtschaft oder irgendwas. Mit der für Bewerbung für Ausbildung oder Arbeit. Z.B. das ist hier die Uniklinik oder das ist/. Ja viele, für viele Sachen.' (Interview Hansala, 08/2020)
@@ -848,6 +1305,10 @@ Dass fehlendes Wissen über die Nutzung digitaler Medien allerdings nicht per se
 'Also mit, ich/ich bin halt nicht so der, der halt viel am Laptop hängt so hängt so. Mal vielleicht so das andere Mal zum Filme gucken oder so. Aber mehr auch nicht so. Zum Spiele/weder zum Spiel spielen, noch darauf zu arbeiten.' (Interview Jusuf, 06/2020)
 
 Wie Jusuf berichtet, wird der Familien-Laptop von ihm nur vereinzelt genutzt. Der Zugriff auf das digitale Medium ist innerhalb der Familie ungleich verteilt, denn das Gerät wird - wie er an anderer Stelle berichtet - überwiegend von seinen beiden älteren Brüdern benutzt, während er selbst sich kaum damit auseinandersetzt. Bis auf vereinzelte Berührungspunkte in der Schule und seiner mehrere Jahre zurückliegenden Spielpraxis am Computer vor seiner Flucht hat er sich nicht regelmäßig mit diesem digitalen Medium auseinandergesetzt. Dieser eingeschränkte Erfahrungshintergrund wird als relevante Voraussetzung für die Erstellung von Bewerbungsunterlagen als potenziell relevanter Moment für Bildungsteilhabe sichtbar (vgl. Kapitel 2.1.1): Als Jusuf beispielsweise in einem Fall von dem Sozialpädagogen Kadar zu Hause bei der Erstellung von Bewerbungsunterlagen für ein Schüler*innenpraktikum begleitet wird, unterlaufen ihmvermehrt Fehler bei der Bedienung des Laptops und der Nutzung von dessen
+
+
+<!-- PAGE 116 -->
+
 
 Funktionen (z.B. beim Tippen auf der Tastatur). Das praktische Wissen, also die Fähigkeiten, die für den routinierten Umgang mit dem Gerät und den damit verknüpften Programmen erforderlich sind, fehlen dem Jugendlichen. Diese fehlende Voraussetzung stellt nur dadurch keine Verhinderung von Bildungsteilhabe dar, da Jusufs begrenzter Erfahrungshintergrund durch den begleitenden Sozialpädagogen als Anlass genommen wird, um den Jugendlichen mit dem Laptop und damit verknüpften Programmen vertraut zu machen und mit Erklärungen und Hinweisen an dessen Schwierigkeiten anzuknüpfen. Durch die Art und Weise der Begleitung durch den Sozialpädagogen wird ein Hindernis zum Anlass und zur Eröffnung einer Möglichkeit für (medienbezogene) Bildung.
 
@@ -861,6 +1322,10 @@ Diese Formen der Ungleichbehandlung bestehen nicht nur in Bezug auf Polizei undL
 
 19 In Erweiterung zur bourdieuschen Kapitaltheorie lässt sich mit Weiß (2013) Rassismus auf die symbolische Kapitalebene der Betroffenen zurückführen. So werden Menschen aufgrund einer rassistischen,Lesung'MöglichkeitenzurgleichberechtigtenTeilhabeabgesprochen,dasienicht die erforderlichen symbolischen Ressourcen (z.B. bestimmte phänotypische Merkmale) aufweisen (selbst, wenn ihnen hohes kulturelles oder ökonomisches Kapital zur Verfügung steht).
 
+
+<!-- PAGE 117 -->
+
+
 nung oder Befähigung der jungen Menschen - findet sich dieses Vorgehen. So zieht in einem anderen Beispiel eine Sozialpädagogin bei der Erstellung einer BewerbungmiteinemJugendlichenamComputerdieBedienungdesGerätsweitgehendansichundschränktdamitseineMöglichkeitenfüreineeigentätigeAuseinandersetzung mit dem digitalen Medium ein. Im anschließenden Feldgespräch erläutert die Sozialpädagogin, dass sie angenommen hatte, dass der Jugendliche Schwierigkeiten mit der Rechtschreibung und dem Finden der Buchstaben auf der Tastatur des Computers habe und daher an seiner Stelle gehandelt hatte.
 
 Im Zuge der pandemiebedingten Schulschließungen wurden einige der Teilnehmenden von digitalen Bildungsangeboten und -kontaktmöglichkeiten ihrer Schule außerdem ausgeschlossen, da die Lehrkräfte davon ausgegangen waren, dass die jungen Menschen aufgrund ihres Geflüchtetseins notwendige Voraussetzungen (konkret: digitale Medien- und Sprachkenntnisse für die Nutzung der im Unterricht verwendeten digitalen Lernplattformen) nicht mitbrächten. 20
@@ -870,6 +1335,10 @@ Im Zuge der pandemiebedingten Schulschließungen wurden einige der Teilnehmenden
 Eine weitere teilhabeeinschränkende bzw. -befördernde Bedingung stellt die Aufenthaltsperspektive der jungen Menschen dar. So sind die meisten der jungen Menschen in der vorliegenden Studie mit der Anforderung konfrontiert, ihre Bleibeperspektive in Deutschland abzusichern. Vor diesem Hintergrund werden bestimmte Praktiken (unter Beteiligung digitaler Medien) notwendig. Hierzu gehören beispielsweise das Aufsuchen von Behörden und die damit verknüpfte Beschaffung und Einreichung aufenthaltsrelevanter Dokumente (vgl. Kapitel 2.1.3). Das heißt, es stellt sich den jungen Menschen aufgrund ihres Status als Geflüchtete eine ,spezifische' zu bewältigende Anforderung in ihrem Alltag, die gleichzeitig mit anderen Anforderungen in Konflikt geraten kann. Die festgelegten Öffnungszeiten von Behörden wie dem Ausländeramt liegen oftmals während der Schul- und Ausbildungszeiten der jungen Menschen. Mit dem Aufsuchen der Behörden gehen daher häufiger Einschränkungen im regelmäßigen Schulbesuch einher, weshalb Sanktionen drohen oder eben Unterricht versäumt wird und dann nachzuholen ist. Immer wieder muss dann Lehrkräften erklärt werden, weshalb eine Abwesenheit vom Unterricht nicht vermeidbar ist, oder es sind auch schriftliche Entschuldigungen bzw. Erklärungen von Vormünder*innen oder Erziehungsberechtigten einzuholen, oder es wird notwendig, Urlaub beim Ausbildungsbetrieb zu nehmen.
 
 20 Dies zeigte sich konkret an der Nutzung von Microsoft Teams Accounts, die bereits vor der COVID-19-Pandemie für sämtliche Schüler*innen außer geflüchteten angelegt wurden. Hintergrund war die Annahme der Lehrer*innen, dass die geflüchteten Schüler*innen diese nicht bedienen können würden.
+
+
+<!-- PAGE 118 -->
+
 
 Die Teilnehmenden beschreiben die unsicheren Aufenthaltsperspektiven (z. B. in Form einer Duldung) mit Blick auf eine mögliche Abschiebung als belastend. So wird die ,Planung' des eigenen Lebens massiv eingeschränkt. Hierauf bezieht sich auch einer der begleiteten jungen Menschen:
 
@@ -881,11 +1350,19 @@ In diesem Zusammenhang sind digitale Medien auch im Zusammenhang der Sicherung d
 
 'Das [Die Kommunikation bei WhatsApp] war ja mein, Anwalt für meine (Pause) Geburtsurkunde und so was. […] ich war beim Afghanen, afghanisch, bei der afghanischen Botschaft. Da habeich ja so eine, das Formular ausgefüllt, das alles. Dann das habe ich ihm [meinem Anwalt]
 
+
+<!-- PAGE 119 -->
+
+
 per Post zugeschickt. Und dann (Pause), dann musste Botschaft eine E-Mail denen in Afghanistan schicken. Dass der bei uns was, ne, ausgefüllt, ne. Dann hat er [mein Anwalt] mir geschrieben, dass ich halt zu Botschaft gehen soll und die haben noch nicht die E-Mail geschickt […] dann habe ich gesagt ,ok dann gehe ich ja persönlich zu Botschaft' und dann sage ich, weil ich, wenn ich angerufen habe oder, keine Ahnung, E-Mail geschrieben hätte, habe keine Chance gehabt. Musst du immer persönlich. Mhm, dann (Pause) hier habe ich [mit meinem Anwalt überWhatsApp]geschrieben,dassmeinNamewirklichsogeschrieben,nichtdassdairgendwas falsch oder sieht denn das ist ja Totalkatastrophe, ne, wenn du das noch mal ändern möchtest. Dannhatergesagt,dann,hiersageichja,dasistjahaltimmerwichtig,dassNamenundNachnamenwirklichgleichsind.NichtdashiereinEfehltoderdaeinAfehlt,ne.[…]Hierhabeichja geschrieben, wahrscheinlich war das so, dass der meinte, dass mein Geburtsurkunde fertig ist. Dann habe ich gesagt, ,ihr könnt meine Sachen an Ali (Nachnahme), Germany Krummstein, (Adresse), das ist ja meine Postleitzahl schicken.' […] das [Geburtsurkunde] habe ich abfoto-, habe ich geschickt. Habe gesagt, ,danke euch, ich habe das jetzt, es ist bei mir angekommen.'' (Interview Ali, 07/2020)
 
 Hier wird sichtbar, wie WhatsApp für die Koordination bzw. Absprache und den Informationsaustausch in Bezug auf erforderliche Vorgehensschritte mit demAnwalt in Afghanistan genutzt wird. Der junge Erwachsene verständigt den Anwalt über seinen Gang zur afghanischen Botschaft in Deutschland und wird von ihm im weiteren Verlauf über weitere anstehende Maßnahmen in der Kommunikation mit der Botschaft informiert. Auch wird das digitale Medium dazu genutzt, um per Fotos den Erhalt von postalisch versendeten Dokumenten zu dokumentieren.Diese digitale Kommunikation ist im vorliegenden Fall nicht nur auf den Anwalt begrenzt, sondern sie beteiligt weitere ,offizielle' Akteur*innen. So steht Ali per E-Mail mit Behörden (wie dem Ausländeramt) in Kontakt, um mit ihnen Termine zu vereinbaren (z.B. für die Verlängerung des Aufenthaltstitels). Wie sich im Interviewauszug und an anderen Stellen zeigt, vollzieht sich die Praxis rund um die Aufenthaltsorganisation transorganisational. Sie entfaltet sich über Beratungsstellen, die zur Klärung von rechtlichen Fragen aufgesucht werden, Botschaften und weitere Institutionen (sowohl im Herkunftsland als auch der ,Aufnahmegesellschaft'), die aufenthaltsrelevante Dokumente ausstellen, Angebote der Kinder- und Jugendhilfe, in denen Sozialpädagog*innen den aktuellen Stand der Aufenthaltsorganisation mit den jungen Menschen besprechen, Ausbildungsstellen und Ehrenamtliche, die die ,Integrationsbemühungen' der jungen Menschen gegenüber dem Jugend- oder Ausländeramt darlegen und bei Behördengängen beistehen.
 
 Eine Verschärfung der Bedingungen für die Sicherung der eigenen Aufenthaltsperspektive durch die jungen Menschen war auch im Zuge der Kontaktbeschränkungen der COVID-19-Pandemie festzustellen. So wurden während dieser Zeit bei den Ausländerämtern (aber auch bei weiteren Behörden) die bis dahin üblichen Präsenztermine eingestellt und die Erreichbarkeit bzw. Möglichkeiten
+
+
+<!-- PAGE 120 -->
+
 
 der Kontaktaufnahme mit der Institution auf ausschließlich den E-Mail-Weg reduziert. 21 Ali, der zu dieser Zeit dringend einen vom Ausländeramt ausgestellten Pass benötigt, um seine Familie im Iran zu besuchen, berichtet in einem Telefonat:
 
@@ -901,6 +1378,10 @@ Interessen und Hobbys der jungen Menschen stellen Anlässe für bildungsteilhabe
 
 22 Diese eingeschränkte Erreichbarkeit des Ausländeramts zeigt sich auch noch weit nach den Lockdowns der Pandemie im Alltag von jungen Geflüchteten bis heute, indem aufenthaltsrelevante Dokumente von den Behörden auch bei frühzeitiger Anfrage im Voraus über Monate (teils ein halbes Jahr und mehr) nicht rechtzeitig ausgestellt werden können und junge Menschen deshalb, teils ohne Fiktionsbescheinigung, in die Illegalität ,rutschen'.
 
+
+<!-- PAGE 121 -->
+
+
 ziell bildungsrelevante Praxis in dem Sinn entfaltet,dass Informationen und Wissen angeeignet, Reflexion angeregt und im Gespräch formuliert und neue HandlungsmöglichkeiteninBezugaufAlltagsproblemeimkommunikativenAustausch entwickelt werden.
 
 Wie vielfältig diese Bildungspotenziale sein können, zeigt sich u.a.am Beispiel des jungen Erwachsenen Shervan. Er betreibt einen YouTube-Kanal, auf dem er nach eigenen Worten zur ' Unterhaltung ' selbst bearbeitete Videos über ' traurige ' und ' emotionale ' Themen wie Mobbing oder Obdachlosigkeit postet. Dabei sollen die Videos Shervans Zuschauer*innen zum Nachdenken und zur Hilfe von Mitmenschen anregen, wie er in einem Interview erläutert, bei dem er auch seinen Kanal zeigt:
@@ -913,6 +1394,10 @@ Wie in dieser Erzählung sichtbar wird, nehmen die Videos für den jungen Erwach
 
 Infolgedessen fragt Shervan die Urheber*innen der Videos um Erlaubnis für die Weiterverarbeitung der Originalvideos an und informiert über diese Erlaubnis dann in seiner Videobeschreibung. Auch vermeidet er eine (über Werbung mögliche) Monetarisierung der Videos und hinterlegt Musik, von der er ausgeht, dass
 
+
+<!-- PAGE 122 -->
+
+
 sie aufgrund ihrer geringen Bekanntheit potenziell weniger Urheberrechtskonflikte hervorruft. Mit Jörissen (2014) kann diese Praxis als klassisches Beispiel eines Bildungsprozesses verstanden werden,in dem'vorhandeneStrukturenund Muster der Weltaufordnung durch komplexere Sichtweisen auf Welt und Selbst ersetzt werden' (Jörissen 2014, S. 5). So werden in diesem Fall durch Handeln und Krisenerfahrung sowohl ein Mehr an Wissen angeeignet als auch erweiterte Handlungsoptionen entwickelt und eine komplexere Selbstverortung des jungen Erwachsenen realisiert.
 
 Selbstpräsentation und Identitätsdarstellung erfolgen allerdings nicht nur im Rahmen des Postens von Beiträgen in sozialen Medien, sondern auch im Rap. So verfassen einige Teilnehmer eigene Rap-Texte auf dem Smartphone, in denen sie ihre Zukunfts- und Wertvorstellungen artikulieren. Die ,Reaktion' des sozialen Umfelds der jungen Menschen auf die mediale Artikulation eröffnet dabei Bildungspotenziale. So knüpfen beispielsweise Sozialpädagog*innen an die RapTexte der jungen Menschen an, hinterfragen die darin ausgedrückten Perspektiven und Artikulationsweisen oder regen eine weitere Auseinandersetzung damit an und vermitteln auch in Bezug auf das Rappen als Praxis den jungen Menschen Hinweise bzw. digitale Informationsquellen (z.B. eine Online-Datenbank zur Erklärung von Songtexten), die für die Weiterentwicklung ihrer Fähigkeiten in VerbindungmitdiesemHobbyanschlussfähigsind.DieseBildungsrelevanzdes,InsGespräch-Kommens' zeigt sich auch an weiteren Beispielen, etwa wenn die jungen Menschen den Sozialpädagog*innen Videos oder Musik präsentieren und die Sozialpädagog*innen sie auffordern, sich zu digitalen Medieninhalten zu äußern (z. B. was daran weshalb gefällt).
@@ -920,6 +1405,10 @@ Selbstpräsentation und Identitätsdarstellung erfolgen allerdings nicht nur im 
 ## (Deutsch-)Sprachkenntnisse
 
 Im Alltag der jungen Menschen stellen sich außerdem Sprachkenntnisse als bedeutsame Voraussetzung heraus, um einen Zugang zu bildungsrelevanter Praxis unter Beteiligung digitaler Medien zu eröffnen. Dabei geht es sowohl um Deutschsprachkenntnisse als auch um Sprachkenntnisse des Herkunftslands bzw.weiterer Länder. Deutschsprachkenntnisse stellen eine ,vorgelagerte' Bedingung dar, um mit Dingen überhaupt erst ,kompetent' umgehen zu können, wie es bei (von Behörden erhaltenen) Schreiben und Erläuterungen zu deren Inhalten zutrifft (vgl. Kapitel 2.1.1). In diesem Zusammenhang werden Deutschsprachkenntnisse auch konkret in Bezug auf die Nutzung digitaler Medien relevant, wie die nachfolgende Beobachtungssequenz zwischen den Jugendlichen Madlina und Ramiz veranschaulicht. Sie halten sich vor der stationären Wohngruppe von Ramiz auf und spielen über das Smartphone und einen damit gekoppelten Bluetooth-Lautsprecher Musik ab:
+
+
+<!-- PAGE 123 -->
+
 
 Madlina und Ramiz gehen aus dem Haus der Wohngruppe. Madlina setzt sich auf die Treppe der Eingangstür, Ramiz steht gegenüber von ihr. Die beiden unterhalten sich auf Albanisch. Ramiz spricht u.a. das Wort 'Musik' aus. Er holt aus der rechten Hosentasche einen kleinen Bluetooth-Lautsprecher und aus der linken Hosentasche sein Smartphone hervor. Dann drückt Ramiz einen Knopf auf dem Lautsprecher (es ertönt ein dumpfer Piep-Ton) und bedient mit der anderen Hand das Smartphone. In einem Satz auf Albanisch sagt Madlina an Ramiz gewandt u.a. auf Deutsch die Worte 'Baby, du bist mein Visum'. Ramiz tippt auf seinem Smartphone, auf dem YouTube geöffnet ist. Dann gibt er nach kurzem Innehalten Madlina das Smartphone. Sie nimmt dieses entgegen, hält es in ihren beiden Händen und beginnt bei YouTube etwas einzutippen. 'Ah hier, ist glaub ich das richtige', sagt sie und hat ein Video ausgewählt. Es ertönt Musik aus dem Lautsprecher, sie gibt das Smartphone Ramiz zurück. Auf Deutsch singt eine männliche Person u.a. 'Baby, du bist mein Visum.' (Feldprotokoll Luca, 10/2019)
 
@@ -931,11 +1420,19 @@ Wie im Zuge der Lockdowns zu Beginn der COVID-19-Pandemie sichtbar wird, sind De
 
 23 Die internationalen Förderklassen richten sich an erst seit kurzem in Deutschland lebende Jugendliche und junge Erwachsene ab 16 Jahren. Neben dem Erwerb eines allgemeinbildenden Schulabschlusses steht der Erwerb bzw. die Vertiefung von Deutschsprachkenntnissen im Vordergrund.
 
+
+<!-- PAGE 124 -->
+
+
 sen erhebliche Unterstützung brauchen beim Deutschspracherwerb. Die können einfach kein Deutsch. Und denen Arbeitsaufträge zukommen zu lassen, würde sich nicht nur für eine technische Hürdestellen, sondern auch einfach/Naja sie brauchen halt intensive Betreuung durch den Lehrer. (Pause) Und das ist halt bei weitem nicht möglich. […] Wenn ich jetzt eben an die Schülerinnen und Schüler der Förderungsklasse für Berufe denke oder die der Deutscherwerb im Vordergrund steht, das/Die brauchen die Unterstützung der Lehrer. Also das das passiert zu Hause nicht. Die haben auchzuHauseniemanden/DiesemeistenFamilien,dieallekeinDeutschsprechen. Wo sollen die sich Hilfe herholen? Die brauchen einfach den Unterricht vor Ort und eine konkrete Betreuung, Unterstützung des Lernpersonals.' (Interview Herr Berle, 04/2020)
 
 Wie der Lehrer darlegt, ist für manche der Schüler*innen in den von ihm begleiteten Klassen der Deutschspracherwerb das definierte Unterrichtsziel. Im Zuge der COVID-19-bedingten Lockdowns wird deutlich, wie dieser die Möglichkeiten des Deutschspracherwerbs für die Schüler*innen reduziert. Das digitale und nicht weiter begleitete Versenden von Unterrichtsaufträgen allein stellt sich in Anbetracht der geringen Deutschsprachkenntnisse der Schüler*innen als Problem für die Bearbeitung der Unterrichtsaufträge heraus. So ist es für die Schüler*innenohnediesonstverfügbareBegleitungdurchdieLehrkraftwährend des Schulunterrichts nicht hinreichend möglich, sich die Unterrichtsaufträge eigenständig zu erschließen. In diesem Zusammenhang bieten die familiären Bezüge der Schüler*innen als (eingeschränkte) Form sozialen Kapitals in der (Förder-)Klasse kein ausreichendes Unterstützungs- bzw. Kompensationspotenzial, da die dortigen Bezugspersonen ebenfalls nicht über die erforderlichen Deutschsprachkenntnisse verfügen. Herr Berle schließt aus all diesen Beobachtungen, dass die Bedingungen der digitalen Unterrichtsaufgabenbearbeitung über Distanz unzureichend sind.
 
 Im Alltag der jungen Menschen sind es allerdings nicht nur ,Defizite' in Bezug auf ihre Deutschkenntnisse, die für die Ermöglichung bzw. Verhinderung von Bildungsteilhabe relevant werden. So wird im Kontrast dazu deutlich, wie durch die Nutzung digitaler Medien in der Erstsprache der jungen Menschen Alltagsbewältigung ermöglicht wird. Dies lässt sich anhand der Sprachbewältigung mittels Internetsuchanfragen auf dem Smartphone zeigen, indem auf der Suche nach unbekannten deutschen Worten der Gegenstand in der Herkunftssprache als Bild gesucht, in der Such-App aufgerufen und präsentiert wird (vgl. Kapitel 2.1.2). Das heißt, die herkunftssprachlichen Kenntnisse werden im Zuge der Bedienung des Smartphones bei der Verständnisklärung mit anderen Personen nutzbar gemacht. Ähnliches zeigt sich in einer Kochsituation als Luca in der Küche seiner Wohngruppe Essen mit Hilfe eines auf dem Smartphone im Internet aufgerufenen Rezepts in seiner Erstsprache Albanisch zubereitet. Dabei stellt das digitale Rezept dem Jugendlichen in Form von Text und Bildern Informationen über Mengenangaben, Zubereitung und Erscheinungsform des
+
+
+<!-- PAGE 125 -->
+
 
 fertigen Gerichts zur Verfügung, die er während der schrittweisen Zubereitung des Gerichts betrachtet.
 
@@ -949,6 +1446,10 @@ Kadar erklärt Jusuf, dass es bei einem Bewerbungsanschreiben auch um die Fragen
 
 Wie sich über Feldgespräche herausstellt, hat der Jugendliche bis dahin noch nie eine Bewerbung geschrieben und dazu keinerlei Erfahrungen. Es findet vor diesem Hintergrund unter Anleitung durch den Sozialpädagogen eine Verständi-
 
+
+<!-- PAGE 126 -->
+
+
 gungdazustatt,welcheInhaltedasAnschreibenfürdasSchüler*innenpraktikum habensollte: nämlich u.a.eine Darstellung der eigenen Stärken und eine BegründungfürdasInteresseandemPraktikumsplatz.DabeiführtderJugendlicheauch eigene Kenntnisse über Autos an, die auf Erfahrungen in der Autowerkstatt des Vaters in Syrien zurückgehen und denen vom Sozialpädagogen ein Gebrauchswert für die Bewerbung zugeschrieben wird. Das heißt, die Erstellung des Bewerbungsanschreibens bedarf über die Bedienung der digitalen Medien hinaus weiteren auf den zu bewältigenden Gegenstand bezogenen Wissens,welches dem Jugendlichen fehlt und vom Sozialpädagogen vermittelt wird.
 
 Die Relevanz dieses gegenstands- bzw. alltagsbezogenen Wissens wird auch im Bereich des Wohnens anhand des jungen Erwachsenen Ali sichtbar, der sich mit einem Wasserschaden in seiner Wohnung auseinandersetzen muss (vgl. Fujii/Kutscher 2022). In einem Interview berichtet der junge Erwachsene von dem zurückliegendenEreignisundderdazuerfolgtenUnterstützungdurchseinenSozialpädagogen, Herrn Lorenz:
@@ -956,6 +1457,10 @@ Die Relevanz dieses gegenstands- bzw. alltagsbezogenen Wissens wird auch im Bere
 'Normalerweise, sage ich mal, es gibt Sachen, wo du dich gar nicht, also, zurechtfindest, ne. Dahat mich immer der Herr Lorenz angerufen, wie z.B. Wasserschaden. Da wusste ich nicht, ja, nicht, was ich machen soll. Da meinte der, ,ja, so und so machst du das. Erstmal (Pause) informierst du alle Nachbarn, dass die halt nicht Wasser laufen lassen, ne. Und dann, machst du bei dir alles zu, damit keiner/, kein Wasser darein fließt. Und, ja und dann informierst du dich, bei/. Dann informierst du den Vermieter oder die Vermieterin.' Also okay, wenn das so ist, dann habe ich das alles so gemacht und dann gut geklappt. Und dann wollte die Vermieterin alles von mir haben, das Geld und Schaden.' (Interview Ali, 10/2020)
 
 Ali berichtet von der Schwierigkeit, mit dem eingetretenen Wasserschaden umzugehen. Der Sozialpädagoge ist dabei Auskunftsperson für ihn und gibt sein Handlungswissen an ihn weiter. Im weiteren Verlauf der Feldaufenthalte wird dannvordemHintergrundeinerForderungderVermieterin zur Kostenübernahme durch Ali Wissen über rechtliche Rahmenbedingungen relevant, indem u.a. zu klären ist, wer für den Schaden haftet und wie eine etwaige Mietminderung seitens des jungen Erwachsenen durchgesetzt werden kann. Das Internet dient Ali dabei als digitale Infrastruktur für den Zugang zu Informationen, die der Sozialpädagoge ihm zwischen den regulären Beratungsgesprächen in Präsenz per E-Mail zusendet. Die weitere Besprechung dieser rechtlichen Informationen erfolgt anschließend in einem face-to-face Gespräch mit dem betreuenden Sozialpädagogen. Dabei wird eingeordnet, wie die im Internet angegebenen formalen Verfahrensschritte umgesetzt werden können. In diesen Fällen wird jeweils das relevante Wissen durch weitere Personen vermittelt und zugänglich gemacht.
+
+
+<!-- PAGE 127 -->
+
 
 Wie in den bisherigen Ausführungen bereits ersichtlich geworden ist, wird ein wesentlicher Beitrag zur Ermöglichung von Teilhabe der jungen Menschen an bildungsrelevanter Praxis über personale Unterstützung realisiert.Neben Familienmitgliedern und Peers unterstützen vor allem Sozialpädagog*innen im Alltag der jungen Menschen. Sie tragen dabei qua ihrer institutionellen Positionierung und den damit einhergehenden Ressourcen zu einer Kompensation von sozialer Ungleichheit bei. Die Unterstützung, die die Sozialpädagog*innen, aber auch weitere Personen dabei leisten, betrifft unterschiedliche Bereiche.
 
@@ -969,6 +1474,10 @@ Zu berücksichtigen ist, dass das ,Wie' der personalen Unterstützung überaus u
 
 24 IndiesemZusammenhangwerdennichtnurdiejungenMenschendurchbereitgestelltedigitale Medien unterstützt. Ebenfalls wird umgekehrt sichtbar, wie die jungen Menschen anderen Akteur*innen digitale Medien verfügbar machen. So schenkt beispielsweise Ali seinen Geschwistern einen nicht mehr benötigten Laptop, als er diese im Iran besucht.
 
+
+<!-- PAGE 128 -->
+
+
 formationenundWissenüberdigitaleMedienunddiezubewältigendenAnliegen potenziell aneignen können.
 
 ## 2.2.2 Beschaffenheit und Affordanz digitaler Medien
@@ -981,11 +1490,19 @@ Jedes digitale Medium weist eine innere Struktur und einen bestimmten Aufbau auf
 
 Im Alltag der jungen Menschen der vorliegenden Studie werden innere Struktur und Aufbau von digitalen Medien für Möglichkeiten zur Beteiligung an Praktiken relevant. Dies wird exemplarisch anhand von Internetwebsites sichtbar. Hierbei können unvertraute Elemente dieser Websites sich als verhindernd bzw. einschränkend für die Navigation ,innerhalb' von diesen herausstellen. Vor diesem Hintergrund wird eine Unterstützung von Akteur*innen des Umfelds relevant (vgl. Kapitel 2.2.1). Diese Akteur*innen zeigen den jungen Menschen anhand der inneren Struktur und des Aufbaus der Websites auf, wie die dort hinterlegten Funktionen genutzt werden können. Dies veranschaulicht die nachfolgende Beobachtungssequenz, in der die Jugendliche Dilan mit zwei weiteren Jugendlichen, Bahira und Tafan, auf einer Sitzbank in einem Willkommens-Café sitzt und mit ihrem Smartphone eine Online-Bestellung auf einer ShoppingWebsite tätigen möchte:
 
+
+<!-- PAGE 129 -->
+
+
 Dilan tippt auf den Bildschirm ihres Smartphones und stöhnt dann. 'Man', beschwert sie sich. 'Was ist los?', fragt Bahira. 'Weißt du, ich will da so was bestellen und das funktioniert nicht.' Auf ihrem Smartphone ist im Internet eine Shopping-Website für Kleidung geöffnet hat. 'Wallah', ruft Dilan aus. Sie tippt auf ihrem Display. 'Wie kann ich das denn jetzt kaufen? (Pause) Man,dasist so kompliziert', äußert sie sich verärgert. Dann dreht sie sich zur Ethnografin und erklärt: 'Guck, ich will das hier kaufen. Aber wo? Bei Amazon kann ich da kaufen, aber hier nicht.' Am unteren Rand des Bildschirms wird eine Leiste mit verschiedenen Symbolen angezeigt. Das mittlere Symbol zeigt einen Warenkorb. Die Ethnografin zeigt darauf und erklärt: 'Dugehst hier auf Warenkorb.' Dilan tippt auf das Symbol. Sie dreht sich zur Ethnografin um undsagt: 'Ja, aber das hatte ich schon.' Die Ethnografin überlegt kurz und erklärt weiter: 'Jetzt gehst du hier auf ,Zur Kasse'.' Dilan tippt wieder auf den Bildschirm. Jetzt öffnet sich ein Fenster, in dem sie aufgefordert wird, ihre Adresse einzugeben. 'Ahh', sagt Dilan, dreht sich zu der Ethnografin um, grinst und bedankt sich. (Feldprotokoll Bahira, 08/2019)
 
 In dieser Situation ist die Praxis darauf ausgerichtet, einen Bestellvorgang im Internet über das Smartphone zu tätigen. Die innere Struktur und der Aufbau der auf dem Smartphone aufgerufenen Shopping-Website stellen ,Vorgaben' bereit, an denen sich die Vollzüge der Akteur*innen für die Nutzung einer Einkaufsfunktion ausgerichtet werden müssen. So weist die Shopping-Website eine vorgegebene spezifische Struktur auf, indem Symbole am unteren Bildschirmrand zur Abwicklung des Online-Kaufs auf eine weitere Funktionsebene weiterleiten, wennsieangeklicktwerden.DieinnereStrukturundderAufbauderWebsitesind hier also eine zu bewältigende Voraussetzung des digitalen Mediums. Dabei wird über die Aussagen von Dilan während der Bedienung des Smartphones sichtbar, dass die Kenntnisse, die die Jugendliche durch ihre vorherigen Nutzungserfahrungen mit Amazon hat, auf das hier vorliegende Kaufportal nicht einfach übertragbar sind. Erst durch die (angefragte) Anleitung der Ethnografin bei der Auswahl bestimmter Symbol- und Textelemente auf der Shopping-Website wird der Jugendlichen ein,Weiterkommen'mitdemdigitalenMediumbiszurSeitemitder Adresseingabe möglich, die ihr vertraut ist, und ab wo sie nicht mehr auf die Unterstützung der Ethnografin angewiesen ist.
 
 Über dieses Beispiel hinausgehend können innere Struktur und Aufbau digitaler Medien auch Hürden bzw. Voraussetzungen für bildungsteilhaberelevante Tätigkeiten darstellen. Dies ist etwa der Fall, wenn auf Websites nach Jobangeboten gesucht wird oder ein Textverarbeitungsprogramm zum Schreiben einer Bewerbung von einer Website herunterzuladen ist. So sind für Websites zur Nutzbarmachung der Funktionen zur Jobsuche bestimmte Einstellungen bzw. Angaben zu tätigen (z.B. hinsichtlich Branchen, Berufserfahrungen und Schulabschlüssen). In diesem Zusammenhang können sich innere Struktur und Aufbau der Websites als hinderlich gegenüber den jungen Menschen herausstellen, wenn die dortigen Angaben für die jungen Menschen unverständlich sind (z. B. aufgrund von Fachwörtern, vgl. Kapitel 2.2.1). Personen, die dabei den jun-
+
+
+<!-- PAGE 130 -->
+
 
 gen Menschen im Alltag durch Einordnung und Vermittlung sowie Aufforderung undAnregungzurEigentätigkeit (vgl.Kapitel 2.2.3) im Umgang mit den digitalen Medien Möglichkeiten zu deren Aneignung eröffnen, sind in den beobachteten Situationen vor allem Sozialpädagog*innen.
 
@@ -997,6 +1514,10 @@ Vor diesem Hintergrund kann das Erfordernis, solche Zugangsdaten einzugeben, auc
 
 Frau Schmidt steht vor den Schüler*innen der Klasse und bittet diese: 'Loggen Sie sich in ihren E-Mail-Account ein.' Es meldet sich daraufhin unmittelbar eine Schülerin, die mitteilt, keinen Account zu haben, worauf die Lehrerin entgegnet, dass die Schülerin aufgrund ihres Smartphones einen E-Mail-Account haben muss. Eine andere Schülerin ruft kurz darauf aus, dass sie ihr Passwort nicht mehr weiß. Frau Schmidt und ein Mitschüler stellen sich zur Schülerin. Es wird
 
+
+<!-- PAGE 131 -->
+
+
 dannunter Anleitung der Lehrerin versucht, das Passwort zurückzusetzen und ein neues einzurichten. (Feldprotokoll Nadja, 01/2020)
 
 In der vorliegenden Situation sind für das Schreiben der E-Mail zunächst Zugangsdaten der Schüler*innen in Form ihres E-Mail-Accounts und des dazugehörigenPasswortserforderlich.DieKenntnissehierüberhabenjedochoffensichtlich nicht alle Schüler*innen. Infolgedessen kann der Unterrichtsauftrag der Lehrerin nicht unmittelbar umgesetzt werden,sodass sich eine Situation entfaltet, in der zunächst die Voraussetzungen auf Seiten der Schüler*innen für den Zugriff auf die eigene E-Mail-Adresse hergestellt werden müssen. Der Unterrichtsauftrag ,scheitert' jedoch nicht, da - im Anschluss an die hier abgebildete Beobachtungssequenz - die Lehrerin sowie die Mitschüler*innen eine kompensierende bzw.unterstützende Beteiligung an der Praxis realisieren.So begleiten die Lehrerin und vereinzelte Mitschüler*innen die Schüler*innen, die sich mit dieser Aufgabeschwertun,beiderZugangsherstellungzurE-Mail-Adresse,indemsieihnen durchErklärungundAnleitungWissen(z.B.darüber,wiemandieeigeneE-MailAdresse finden oder das Passwort zurücksetzen kann) verfügbar machen und sie bei der BedienungdesComputersanleitenbzw.dasauchstellvertretendübernehmen.
@@ -1007,6 +1528,10 @@ Als es in dem Bewerbungsdokument um die Angabe der eigenen E-Mail-Adresse geht, 
 
 In der Situation werden die von dem Jugendlichen benannten Schwierigkeiten durch den Sozialpädagogen situativ aufgegriffen und zum Anlass genommen, umdieBedeutungeiner' vernünftigen ' E-Mail-Adresse zu thematisieren, die sich, so der Sozialpädagoge, dadurch auszeichne, dass das Passwort notiert und die E-Mail-Adresse nicht für beliebige Anliegen (etwa Gewinnspiele) genutzt wird. Der Sozialpädagoge vermittelt damit Kriterien, die eine bestimmte ,Handha-
 
+
+<!-- PAGE 132 -->
+
+
 bung' der eigenen E-Mail-Adresse betreffen und als Orientierung angeboten werden. Die Erläuterungen des Sozialpädagogen verbleiben hier allerdings nur an der Oberfläche, da keine weitere Begründung zum vorgeschlagenen Umgang mit E-Mail-Adressen gegeben wird. Wie sich in einem anderen Fall einer stationären Wohngruppe zeigt, können Kriterien einer ' vernünftigen ' eigenen E-Mail-Adresse zudem deren Domain betreffen. Das heißt, es werden keine Dabei werden jedoch keine ,Empfehlungen' für die Handhabung der E-MailAdresse gegeben, sondern deren ,Beschaffenheit' erläutert: So soll die E-MailAdresse sich am tatsächlichen Namen der Nutzer*in orientieren und nicht davon losgelöst (Zitat des Sozialpädagogen über die E-Mail-Adresse eines Jugendlichen: ' Also nicht, dass ihr Afghanian-Gangster oder so in der heißt ').
 
 ## Verknüpfungen
@@ -1014,6 +1539,10 @@ bung' der eigenen E-Mail-Adresse betreffen und als Orientierung angeboten werden
 Digitale Medien kommen in der alltäglichen Praxis der jungen Menschen selten ,isoliert' vor. Vielmehr sind sie in ihren Gebrauchsmomenten oftmals mit weiteren digitalen Medien verknüpft, indem sie mit diesen per Bluetooth oder Kabel gekoppelt werden (z.B. Beamer und Laptop) oder in diese integriert sind (z. B. Apps auf dem Smartphone). Relevant erweisen sich diese jeweiligen Formen der Verknüpfung, da erst darüber gewisse Potenzialitäten von digitalen Medienermöglicht werden,die bildungsteilhaberelevante Möglichkeiten bergen. Dabei können über Verknüpfungen ,neue' Funktionalitäten digitaler Medien erschlossen werden. Dies kann am Beispiel von Apps auf dem Smartphone bzw. Programmen auf dem Computer erläutert werden. So werden erst über die Verknüpfung des Smartphones oder des Laptops mit Apps bzw. Programmen auf demjeweiligenGerätspezifische Nutzungsweisenermöglicht: etwa,dass OnlineKarten für das räumliche Zurechtfinden aufgerufen werden (vgl. Kapitel 2.1.3). Verknüpfungen digitaler Medien können dabei auch bisherige Leistungen bzw. Funktionen verstärken. Dies wird beispielsweise an der Kopplung zwischen Laptop und BeamerimUnterrichtsichtbar,die -wie oben beschrieben -eine visuelle Vergrößerung der auf dem Laptop befindlichen digitalen Unterrichtsmaterialien für die gemeinsame Besprechung in der Klasse ermöglicht.
 
 Zugleich ist die Herstellung der unterschiedlichen Verknüpfungen digitaler MedienvoraussetzungsvollundbedarfumfassenderKenntnisse(sowohlinBezug auf Sprache als auch auf digitale Medien) der Nutzenden. So können einerseits Programme bzw. Apps auf Geräten oftmals erst über das Herstellen weiterer Artefakt-Verbindungen, etwa die Nutzung von Internetbrowsern und spezifischen Download-Websites, installiert werden oder über die Nutzung von Such-Apps für die Nutzung ,im' Gerät ausfindig gemacht werden. Andererseits sind auch die Kopplungen zwischen mehreren Geräten -sei es kontaktgebunden über Kabel oder kontaktlos über Bluetooth - in vielen Fällen nicht selbsterklärend. Dies wird an kabellosen Verbindungen zwischen Geräten sichtbar. Für diese Verbindungen
+
+
+<!-- PAGE 133 -->
+
 
 sind beispielsweise per Bluetooth über die innere Struktur der digitalen Medien (z.B. durch Menü-Einstellungen) erst die entsprechende Schnittstelle zu aktivieren und dann eine Synchronisation zwischen den Geräten zu bestätigen.
 
@@ -1027,6 +1556,10 @@ Spracheinstellungen können als eine Form der Personalisierung bzw. Modifizierun
 
 25 Die anvisierte Praxis weist in diesem Fall also Potenzial zur Aneignung von Sprache auf (vgl. Kapitel 2.1.2), indem Berührungspunkte zur sich anzueignenden Sprache des ,Aufnahmelands' über die Netflix-Serie eröffnet werden, wie ein Jugendlicher im Feldgespräch berichtet.
 
+
+<!-- PAGE 134 -->
+
+
 veranschaulicht eine Situation in einer stationären Wohngruppe, in der ein Jugendlicher auf den Gemeinschaftscomputer im Wohnzimmer zugreift. Während der vorherigen Nutzung durch andere Jugendliche ist der Computer auf Englisch eingestellt, eine Sprache, die der Jugendliche nicht ausreichend beherrscht. Unter Begleitung der Ethnografin stellt er den Computer in der Spracheinstellung auf Deutsch um. Erst nachdem diese Nutzungsvoraussetzung hergestellt wurde, nutzt der Jugendliche den Computer, um nach gebrauchten Smartphones im Internet zu suchen.
 
 ## Eigentätigkeit und -dynamik
@@ -1036,6 +1569,10 @@ Digitale Medien weisen losgelöst von dem Tun der Nutzenden eine Eigentätigkeit
 Die bildungsteilhaberelevanten Informationsangebote können sich auch auf die Unterstützung sprachbezogener Aktivitäten beziehen. Dies veranschaulicht eine Situation, in der der junge Erwachsene Abdul in einem Jugendcafé am Computer sitzt und unter Verwendung des Textverarbeitungsprogramms Word eine Einladung auf Deutsch zu einem Workshop erstellt, den er geben möchte. Dabei wird er vom Sozialpädagogen Tim zu den Inhalten des Einladungsschreibens beraten. In einem Moment,in dem der Sozialpädagoge abwesend ist, kontrolliert der junge Erwachsene den bisherigen Text. Vom Textverarbeitungsprogramm werden dabei beispielsweise mittels der rot unterkringelten Markierungen visuelle Signale bereitgestellt, die auf sprachliche ,Unstimmigkeiten' zu einzelnen Wörtern im Text verweisen. Dabei hält das Programm auch über Rechtsklick auswählbareKorrekturvorschlägebereit,dievomjungenErwachsenenübernommen werden. Es bleibt jedoch unklar, inwiefern die Rotmarkierungen auf tatsächliche Fehler im Dokument hinweisen oder ob manche Begriffe dem Programm lediglich ,unbekannt' sind. Auch ist die Auswahl der ,richtigen' Korrekturvorschläge von den sprachlichen Fähigkeiten des jungen Erwachsenen abhängig und garantiert nicht voraussetzungslos einen korrekten Sprachgebrauch.
 
 Je nach Arrangement und den sich darüber vollziehenden Praktiken können die von den digitalen Medien (insbesondere beim Smartphone) ausgehenden Si-
+
+
+<!-- PAGE 135 -->
+
 
 gnale des Weiteren als störend bzw. unerwünscht markiert werden und mit institutionellen Regelungen (vgl. Kapitel 2.2.3) verknüpft sein. Dies zeigt sich im Zuge der Feldaufenthalte und wird von dem Sozialpädagogen Gerhard in Bezug auf die Präsenz von Smartphones beim gemeinsamen Essen in der Wohngruppe berichtet:
 
@@ -1049,6 +1586,10 @@ ImAlltagderjungenMenschenzeigensichauchMomente,indenendievonihnen genutzten digi
 
 Funktionseinschränkungenund-ausfällezeigensichvordiesemHintergrund als Anlass für Alltagsbewältigung. Sie eröffnen Situationen, in denen die jungen
 
+
+<!-- PAGE 136 -->
+
+
 MenschenSchwierigkeiten im Umgangmitdigitalen Medien haben,sie überwindenunddieMedieninderfürdiejeweiligenPraktikenerforderlichenWeisenutzbar machen. Relevant dafür werden die verfügbaren Kapitalien bzw. Ressourcen derjungenMenschen,insbesonderesozialesKapital.SowirdamBeispielvoneingeschränkten Internetverbindungen auf dem Smartphone sichtbar, dass die jungen Menschen in den stationären Wohngruppen die Internetzugangsdaten ihrer Mitbewohner*innen zum dortigen WLAN nutzen,solange sie selbst noch keinen eigenen Zugang in der Wohngruppe freigeschaltet bekommen haben. Auch werden in den digitalen Medien selbst Inhalte (z.B. Sprachpakete von Übersetzungs-Apps) heruntergeladen und offline verfügbar gemacht, um auf sie dann zu einem späteren Zeitpunkt mit eingeschränkter Internetverbindung zugreifen zu können. Darüber hinaus zeigen die Sozialpädagog*innen Alternativen zu eingeschränkt nutzbaren digitalen Medien auf. Dies wird in einer Situation sichtbar, in der ein Sozialpädagoge einem Jugendlichen zum Download einer kostenfreien Alternative zu Microsoft Word verhilft. Hintergrund ist, dass die Lizenz für Microsoft Word auf dem Laptop des Jugendlichen ausgelaufen ist und ein alternatives Textverarbeitungsprogramm für das Schreiben einer Bewerbung erforderlich ist.
 
 Zugleich bergen Situationen, in denen Funktionseinschränkungen bzw. -ausfälle digitaler Medien auftreten, Exklusionsrisiken, wenn es den jungen Menschen nicht gelingt, diese Schwierigkeiten zu beheben. Dies veranschaulicht die nachfolgende Unterrichtssituation, in der die Schüler*innen im Klassenverbund auf ihrem Smartphone unter Anleitung des Lehrers, Herrn Mayer, gemeinsam ein Online-Quiz bei Kahoot über Geografie absolvieren, welches auf demSmartboard der Klasse wiedergegeben wird:
@@ -1056,6 +1597,10 @@ Zugleich bergen Situationen, in denen Funktionseinschränkungen bzw. -ausfälle 
 Herr Mayer scrollt auf der Seite von Kahoot durch eine Liste mit Spielthemen, die auf das Smartboard übertragen wird. 'Hauptstädte? Echt, das ist aber schwer', merkt er gegenüber den Schüler*innen nach deren Einrufen an. Er wählt nichtsdestotrotz eines der angeführten Spiele mit der Benennung 'Hauptstädte' bei Kahoot aus. Anschließend wird ein neuer SpielPIN auf dem Smartboard angezeigt. Die eingegebenen Namen der Schüler*innen erscheinen bei Kahoot. 'Ich kann nicht reingehen, mein Internet ist so scheiße!', ruft die Schülerin Vanessa laut aus und schaut mit verkniffener Stirn auf ihr Smartphone. 'Ich hab hier auch immer Probleme mit meinem Handy', teilt Herr Mayer ihr mit. 'Schnell, wir spielen ohne Vanessa!', ruft Can. Nachdem alle anderen Schüler*innen eingeloggt sind, nur weiterhin Vanessa nicht, startet Herr Mayer schließlich das Spiel. […] Vanessa schaut währenddessen mit heruntergezogenen Mundwinkeln nach vorne auf das Smartboard. (Feldprotokoll Raisa, 03/2020)
 
 In der vorliegenden Situation gelingt es der Schülerin aufgrund von Internet-VerbindungsschwierigkeitenaufihremSmartphonenichtrechtzeitig,sichzumQuiz einzuloggen, wodurch sie nicht daran teilnehmen kann. Die Nutzung des eige-
+
+
+<!-- PAGE 137 -->
+
 
 nen Smartphones und dessen Funktionsfähigkeit sind dabei Voraussetzung zur Teilhabe an dem Quiz und liegen in der (individuellen) Verantwortung der Schüler*innen. Dabei liegt es in der Beschaffenheit des Quiz, dass nach dem Start ein verspätetes Einloggen nicht möglich ist.Indem es der Schülerin nicht,rechtzeitig' gelingt,die FunktionseinschränkungdesvonihrgenutztendigitalenMediumszu beheben, erfolgt ihr Ausschluss von der Teilnahme am Quiz. 26 Neben solch einer die Internetverfügbarkeit betreffenden Funktionseinschränkung kann auch die fehlende Kompatibilität zwischen unterschiedlichen digitalen Medien, die miteinander verknüpft werden sollen, verhindernd für die Teilnahme an Praktiken sein. Dies wird in einer Situation sichtbar, in der eine Jugendliche in einem Imbiss-Restaurant auf ihrem Smartphone einen Interessenstest für Praktika zu absolvieren versucht. Der Test kann auf dem Gerät jedoch nicht richtig angezeigt werden,daerfürdaseinwandfreieFunktioniereneinenComputereinfordert(wie das Smartphone der Jugendlichen zurückmeldet),ein Gerät,über das die Jugendliche jedoch nicht (weder in der Situation noch zu Hause) verfügt und weswegen sie den Test abbricht (vgl. Kapitel 2.2.1).
 
@@ -1065,9 +1610,17 @@ Nebenden subjektivenRessourcenundVoraussetzungen jungerGeflüchtetersowieder Bes
 
 26 Die Beschaffenheit des Quiz ist hier nicht die ,einzige' in der Situation relevante Bedingung. So trägt beispielsweise zum Ausschluss der Schülerin mit dazu bei, dass noch weitere Schüler*innenanwesendsind,dieaufdenStartdesQuizdrängen.ZudemspielenzeitlicheGesichtspunkte eine Rolle (vgl. Kapitel 2.2.3). Die Dauer der Unterrichtsstunde ist begrenzt, während das Quiz durch die vorgegebenen Fragen eine definierte Länge aufweist. Der Ausschluss von der Schülerin gewährleistet insofern (oder trägt dazu bei), das Quiz rechtzeitig vor Ende der Unterrichtsstunde abzuschließen.
 
+
+<!-- PAGE 138 -->
+
+
 Nicht alle der teilnehmenden jungen Menschen besitzen gleichermaßen digitale Medien (z.B. Computer und Drucker), die ihnen für die alltägliche Nutzung zur Verfügung stehen (vgl. Kapitel 2.2.1). Vor diesem Hintergrund kommt der digitalen Medienausstattung in den pädagogischen Institutionen, in denen sich die jungen Menschen aufhalten, eine besondere Bedeutung zu, um Ungleichheiten im Zugang zu digitalen Medien zu kompensieren. Dabei ist zwischen der digitalen Medienausstattung zu differenzieren, die den jungen Menschen durch die jeweilige Institution verfügbar gemacht wird und jener,die die Sozialpädagog*innenfürdieeigeneNutzungverfügbarhabenunddiesieindiePraxisimAlltagder jungen Menschen mit einbringen.
 
 Die kompensatorische Bedeutung der digitalen Medienausstattung in Institutionen wird vor allem in Angeboten zur Computernutzung im non-formalen Bereich der Kinder- und Jugendhilfe sichtbar (z.B.in der Offenen Kinder- und Jugendarbeit).Die ComputersindindiesenAngeboten(unterBerücksichtigungder Öffnungszeiten und der Nutzungsregelungen der Einrichtungen) für die jungen Menschen,frei'nutzbar.Dies ermöglicht es denjenigen, die keinen eigenen Computer bzw. Laptop besitzen, auch an bildungsrelevanter Praxis zu partizipieren: So suchen diese jungen Menschen in ihrem Alltag beispielsweise entsprechende Einrichtungen auf (sofern es sich nicht um stationäre Wohngruppen handelt, in denen - auch nicht unbedingt regulär - digitale Geräte verfügbar sind) und erstellen dort an den Computern - meist gemeinsam mit Sozialpädagog*innen bereits beschriebene ,formelle' Schreiben wie Bewerbungen (vgl. Kapitel 2.1.1). Da die Computer meist in einem ,öffentlichen' Teil der Einrichtung stehen (z.B. in Wohnzimmer oder der Küche), haben auch andere Anwesende Einblick in die Computernutzung. Diese ,Öffentlichkeit' kann als ambivalent eingeordnet werden, da einerseits private Inhalte (z.B. der von den jungen Menschen genutzten sozialen Medien oder auch persönliche Angaben in Online-Formularen entgegen Datenschutzanforderungen) so potenziell auch für andere sichtbar werden und Störungen bzw.Unterbrechungen durch die Umgebung auftreten können. Andererseits ermöglicht diese ,Öffentlichkeit' auch potenziell Formen kollektiver Unterstützung: etwa indem andere junge Menschen (z.B. bei Bewerbungen oder bei der Gerätebedienung) sich dazu stellen bzw. setzen und vor dem Hintergrund eigener Erfahrungen Informationen zu dem jeweiligen Anliegen am Computer beitragen bzw. auf Äußerungen reagieren und eingehen können. Abhängig von der jeweiligen Einrichtung und ihrer digitalen Medienausstattung besteht darüber hinaus auch die Möglichkeit, dass den jungen Menschen Leihgeräte von Sozialpädagog*innen im Rahmen der Ausstattung der Institution zur Verfügung gestellt werden, um - beispielsweise in der Zeit der COVID-19-Pandemie - am digitalen Schulunterricht teilzunehmen. So durfte ein Jugendlicher einen von seiner Sozialpädagogin geliehenen Laptop mit nach Hause nehmen.
+
+
+<!-- PAGE 139 -->
+
 
 Neben der ,freien' Computernutzung gibt es auch digitale Medien, die in den Einrichtungen der Kinder- und Jugendhilfe mit einem eher freizeitbezogenen Zweck verknüpft sind. So wird beispielsweise in einer Einrichtung der Offenen Kinder- und Jugendarbeit an einem festen Tag in der Woche ein Ensemble aus Verstärker, Tablet mit YouTube, Lautsprecher und Mikrofon aufgebaut, um den jungen Menschen Möglichkeiten zum Rappen und Singen anzubieten (zu dessen Bildungsrelevanz vgl. Kapitel 2.2.2). Auch wird in derselben Einrichtung über eine PlayStation ermöglicht, gemeinsam mit anderen Anwesenden (z.B. den Sozialpädagog*innen, die mit den jungen Menschen dabei auch Gespräche über die Lebenssituation von letzteren initiieren) FIFA zu spielen. Damit eröffnet der medial arrangierte und zunächst auf Freizeitgestaltung ausgerichtete Raum gleichzeitig auch Optionen der Begleitung bei der alltäglichen Lebensbewältigung.
 
@@ -1077,6 +1630,10 @@ Modi der pädagogischen Begleitung: Stellvertretung/Übernahme, Einordnung/Vermi
 
 Viele Aktivitäten im Alltag der jungen Menschen, insbesondere aber auch bildungsrelevante Praxis -wie das Verfassen,formeller'Schreiben (vgl.Kapitel 2.1.1) oder auch die Bearbeitung von Aufgaben in Verbindung mit dem Schulunterricht (vgl. Kapitel 2.1.5) - werden unter Beteiligung von (Sozial-)Pädagog*innen realisiert. Entscheidend für die faktische Entfaltung von Möglichkeiten der Bildungsteilhabe ist dabei allerdings nicht die bloße Anwesenheit der Fachkräfte oder das Verfügbarmachen von digitalen Medien, sondern die Ausgestaltung
 
+
+<!-- PAGE 140 -->
+
+
 bzw. der Modus der pädagogischen Begleitung in den jeweiligen Situationen. Vor dem Hintergrund der ethnografischen Daten können drei verschiedene Modi der pädagogischen Begleitung unterschieden werden: 1) Stellvertretung und Übernahme , 2.) Einordnung und Vermittlung und 3.) Anregung und Aufforderung zur Eigentätigkeit . Diese verschiedenen Modi gehen mit einem je unterschiedlichen Ausmaß an Beteiligung der Akteur*innen (Fachkräfte und junge Menschen) an der Praxis einher und können sich sowohl auf die Nutzung digitaler Medien beziehen als auch davon unabhängig stattfinden. 27
 
 Stellvertretung und Übernahme bezeichnen Beiträge pädagogischer Akteur*innen in Situationen, in denen sie an Stelle der von ihnen begleiteten (und zumeist anwesenden) jungen Menschen tätig werden. Im Rahmen der Feldaufenthalte zeigt sich, dass dieser Modus der ,Beteiligung' gegenüber den jungen Menschen selten bzw. kaum selbst verbal expliziert wird, sondern oftmals unaufgefordert durch die (Sozial-)Pädagog*innen erfolgt. Dabei kann es einerseits darum gehen, dass (Sozial-)Pädagog*innen die Ausübung einer bestimmten Tätigkeit selbst übernehmen,etwa wenn sie digitale Medien (z.B. den Computer bzw. Laptop bei Internetrecherchen) an Stelle der jungen Menschen bedienen. Andererseits ist damit auch gemeint, dass in einer Interaktionssituation seitens der (Sozial-)Pädagog*innen einfach festgelegt wird, was zu tun ist, ohne dass es die Option eines Aushandlungs- oder Aneignungsprozesses auf Seiten der jungen Menschen gibt. Die Konsequenz ist in beiden Fällen, dass die Möglichkeit einer eigentätigen Auseinandersetzung und Aneignung auf Seiten der jungen Menschen eingeschränkt wird. Gleichzeitig ermöglicht dieser Modus in den jeweiligen Situationen eine Beschleunigung in der Aufgabenbearbeitung und damit der Zielerreichung im Sinne der Erledigung der Aufgabe dann in der Regel allerdings durch die Fachkräfte und nicht durch die Jugendlichen.
@@ -1084,6 +1641,10 @@ Stellvertretung und Übernahme bezeichnen Beiträge pädagogischer Akteur*innen 
 In einer Reihe von Situationen ist dieses stellvertretende Handeln mit Praktikender EinordnungundVermittlung verbunden.HiermitsindSituationengemeint, in denen die Fachkräfte den jungen Menschen Hinweise, Erklärungen und Rückmeldungen zu der zu bewältigenden Aufgabe und den dafür erforderlichen Vollzügen geben. Diese Einlassungen können sich sowohl auf die Vermittlung von Kontextwissen - z.B. welches Vorgehen zur Beilegung eines rechtlichen Konflikts weshalb notwendig ist - aber auch auf die digitalen Medien selbst beziehen, das heißt, Informationen zu deren Bedienung (z.B. welche Tasten am Drucker zu betätigen sind), Funktionalität (z.B. wozu bestimmte Websites ,nützlich' sind), innere Struktur (z.B. wie eine App aufgebaut ist) oder Inhalte (z. B. was für Informationen eine Website gerade anzeigt und welche Bedeutung diese haben). Als bildungsteilhaberelevant erweisen sich Einordnung und Vermittlung vor diesem Hintergrund, da durch die Erläuterungen eine Nachvoll-
 
 27 Zu berücksichtigen ist, dass diese Modi selten allein bzw. isoliert vorliegen, sondern oftmals miteinander verkettet oder gleichzeitig vorhanden sind.
+
+
+<!-- PAGE 141 -->
+
 
 ziehbarkeit des Tuns der (Sozial-)Pädagog*innen mit den Medien hergestellt und damit nicht nur das Ziel der Aufgabenerledigung verfolgt, sondern auch Wissen vermittelt wird. Dabei werden den jungen Menschen vielfach für die alltägliche Praxis relevante (und ihnen teilweise bis dahin unbekannte) digitale Medien (z.B. Websites zur Wohnungssuche) gezeigt und deren Funktionalitäten (bzw. deren Beschaffenheit) erklärt. Darüber hinaus wird Orientierungswissen zur Alltagsbewältigung (auch unabhängig von der Nutzung digitaler Medien) vermittelt, wenn die (Sozial-)Pädagog*innen erläutern, was aus welchen Gründen wie zu tun ist.
 
@@ -1095,6 +1656,10 @@ Damit wird ersichtlich, dass die drei aus den ethnografischen Daten rekonstruier
 
 Dasauf Seiten der Fachkräfte verfügbare Wissen über digitale Medien formt vielfach, wie digitale Medien in den jeweiligen institutionellen Bezügen genutzt bzw. Nutzungsprobleme gelöst werden können. Dies zeigt sich etwa in Situationen, in denen Sozialpädagog*innen den jungen Menschen anlässlich eines im Alltag auftretenden Problems ihnen bis dahin unbekannte digitale Medien zeigen und nahebringen (z.B. eine Online-Datenbank mit Interpretationen von Rap-Texten) oder im Umgang mit digitalen Medien Lösungswege zu erarbeiten (z.B. fehlende optionale Funktionalitäten eines Textverarbeitungsprogramms im Internet aufzufinden und herunterzuladen). Die Bedeutung von Wissen im Umgang mit di-
 
+
+<!-- PAGE 142 -->
+
+
 gitalen Medien benennt der Sozialpädagoge Tim im Rahmen seiner Tätigkeit in der Offenen Kinder- und Jugendarbeit:
 
 'Ja, das merken wir des Öfteren, dass quasi EDV im Endeffekt grundlegend gelernt werden kann hier. Also ja, wir auch versuchen eben erst mal die grundlegende Idee von Word oder von, von Excel in irgendeiner Form hier zu vermitteln. Das heißt nicht, dass wir hier alle Fachmänner sind im, im EDV, aber dass wir so die ein oder anderen Kniffs und Tricks kennen, die wir selber in der Schule lernen durften. Und dieses Wissen ist einfach oft [bei den jungen Menschen] nicht vorhanden. Es wird aber immer vorausgesetzt, dass man mit derartigen Dingen umgehen kann oder auch E-Mails schreiben kann. Das sind schon die großen Hürden, einfach mal zu überlegen, ,krass, ich habe die E-Mail-Adresse, aber wie komme ich da rein und was bringt mir das überhaupt eine E-Mail-Adresse zu haben.' […] Aber die Menschen, die hier am PC arbeiten, tun sich oft schwer mit, mit simplen Mausführung oder mit, ,wo speichere ich etwas ab.' Um das einfach mal zu üben und gemeinsam mal zu machen, sind die ersten Schritte hier.' (Interview Tim, 02/2020)
@@ -1102,6 +1667,10 @@ gitalen Medien benennt der Sozialpädagoge Tim im Rahmen seiner Tätigkeit in de
 Wie der Sozialpädagoge beschreibt und auch in verschiedenen Feldaufenthalten deutlich wurde, sind es oftmals (fehlende) ,grundlegende' Fähigkeiten in der Bedienung digitaler Medien, die als Hindernisse für den Vollzug bildungs- bzw. teilhaberelevanter Praxis sichtbar werden (z.B. die unbekannte eigene E-MailAdresse im Zusammenhang mit dem Schreiben von E-Mails in der Kommunikation mit Behörden). Die Fachkräfte haben hier besondere Bedeutung, indem sie das kulturelle Kapital der jungen Menschen mit ihrem eigenen Wissen, ihren Erfahrungen und Fähigkeiten erweitern. Im Zusammenhang der besuchten Einrichtungen der Kinder- und Jugendhilfe zeigt sich, dass diese digitalisierungsbezogene Qualifikation der Sozialpädagog*innen den jungen Menschen in sehr unterschiedlichem Maße zur Verfügung steht. So ist systematisches Wissen über digitale Medien in den Institutionen kaum Thema oder eher zufällig personenbezogen vorhanden (z.B. durch Erfahrungen und Interessen der Sozialpädagog*innen) und selten konzeptionell verankert. Potenziale der Befähigung der jungen Menschen im Umgang mit digitalen Medien unterliegen dadurch einer gewissen Zufälligkeit in Abhängigkeit von individuellem Wissen und Fähigkeiten der jeweiligen Fachkräfte.
 
 Neben dem medienbezogenen Wissen spielen jedoch auch weitere Wissensformen auf Seiten der pädagogischen Fachkräfte eine Rolle. Dies sind: Faktenbzw. Verfügungswissen (vgl. Mittelstraß 2019) zu bestimmten Unterrichtsinhalten, das durch Lehrer*innen im Schulunterricht und (Sozial-)Pädagog*innen in der Nachhilfe vermittelt wird, Sprachkenntnisse von Sozialpädagog*innen in der Herkunftssprache der jungen Menschen, ähnliche Interessen bzw. Hobbys und damit verbundenes Wissen, das die Fachkräfte dann mit den jungen Menschen teilen (z. B. Musik) und daran anknüpfend eigene Kenntnisse verfügbar machen sowie Wissen über Erwartungen und Konventionen im Zusammenhang mit Be-
+
+
+<!-- PAGE 143 -->
+
 
 hörden, um ,formelle' Schreiben (vgl. Kapitel 2.1.1) mit den jungen Menschen zu erstellen.
 
@@ -1113,6 +1682,10 @@ Wie der Sozialpädagoge darlegt, kommt dem Internet als digitaler Infrastruktur 
 
 Dassdasgegenstands-bzw.alltagsbezogene Wissen der (Sozial-)Pädagog*innen ebenfalls in hohem Maße individuell ist und diesem unterschiedliche (normative) Erwartungen bzw. Vorstellungen zugrunde liegen, zeigt sich am Beispiel der Erstellung von Bewerbungsunterlagen mit den jungen Menschen (vgl. Kapitel 2.1.1). In den Beobachtungen zeigt sich, dass diese Unterlagen je nach beteiligter Fachkraft oder je nach Institution unterschiedlich erstellt und im Zuge des ,Übergangs' von einem*einer beteiligten Akteur*in zum*zur nächsten dann angepasst bzw. überarbeitet werden. Dadurch entstehen ,Brüche' bzw. Widersprüche in der Vermittlung des gegenstandsbezogenen Wissens im Zusammenhang der Bewerbungen, ohne dass zwangsläufig geklärt wird, weshalb bestimmte Bewerbungs-
 
+
+<!-- PAGE 144 -->
+
+
 unterlagen in welcher Form als (il-)legitim betrachtet werden sollen. Auch hier unterliegt es (analog zum vorherigen Kapitel) einer gewissen Zufälligkeit, inwiefern die jeweilige Fachkraft das ,passende' und für die jungen Menschen relevante Wissen verfügbar machen kann.
 
 Weiterhin ist in Bezug auf die Frage der (Re-)Produktion von sozialer Ungleichheit eine Sensibilität seitens der (Sozial-)Pädagog*innen mit Blick auf die besonderen,teils prekären Lebenslagen der jungen Menschen relevant.Dies zeigt sich am Beispiel einer Lehrkraft, die über den Rauswurf eines Jugendlichen aus einer Wohngruppe informiert ist und Verständnis für das temporäre Fernbleiben des jungen Menschen vom Schulunterricht aufbringt, da er damit beschäftigt ist, eine neue Wohnunterkunft zu organisieren. Dass im Gegensatz dazu fehlende Informiertheit den jungen Menschen sogar existenzielle Schwierigkeiten bereiten kann, zeigt sich am Beispiel einer geduldeten Jugendlichen, deren Vormundin zunächst nicht nachvollziehen kann, weshalb die Jugendliche vorzeitig mit einer Ausbildung beginnen möchte und ihr dies verbietet. Erst über weitere Vermittlungsversuche der Jugendlichen ,gestattet' die Vormundin ihr schließlich den Beginn einer Ausbildung, mit der es potenziell möglich wird, eine drohende Abschiebung zu verhindern.
@@ -1122,6 +1695,10 @@ Weiterhin ist in Bezug auf die Frage der (Re-)Produktion von sozialer Ungleichhe
 Inwiefern die (Sozial-)Pädagog*innen zur Entfaltung von Möglichkeiten der Bildungsteilhabe unter Beteiligung digitaler Medien im Rahmen der pädagogischen Begleitung beitragen können, ist auch von Zeit- und Personalressourcen innerhalb der jeweiligen Institution abhängig. So zeigt es sich im Rahmen der Feldaufenthalte, dass vor allem Zeitdruck und Personalmangel bedeutsam dafür sind, inwiefern den jungen Menschen im Rahmen der Begleitung die Möglichkeit eröffnet wird, bei ihrem jeweiligen Anliegen eigenständig tätig zu werden. In einer EinrichtungderOffenenKinder-undJugendarbeitbeschreibtdiesderSozialpädagoge Robert wie folgt:
 
 'Das [die Stellvertretung der jungen Menschen bei der Bedienung des Computers] ist auch so ein richtiges gutes Beispiel für so ein Spannungsfeld, für so ein inneres Spannungsfeld. Also ne, gerade auch wenn der Laden voll ist. Es ist laut. Und man muss vielleicht sogar auf die Uhr gucken und wir schließen in einer Stunde und es will noch irgendwie einen Lebenslauf fertig gemacht haben oder so, ne, dann ist man natürlich, dann gibt es den Impuls, die Verleitung, ,boah komm, ich mach das kurz für dich', so ne? So, ,ey boah komm, gib mir die Infos ich, ich schreib für dich, du sagst.' So, ne? Wo natürlich der Lerneffekt für den Jugendlichen viel geringer ist. Weil der Jugendliche soll ja lernen selber für sich irgendwann mal einen Lebenslaufschreiben zu können. So. Und das ist so ein Ding, dass das auch, das hat was mit Tagesform zu tun, das hat was mit Zeitdruck zu tun oder so.' (Interview Robert, 08/2020)'
+
+
+<!-- PAGE 145 -->
+
 
 Wie der Sozialpädagoge am Beispiel der Erstellung von Bewerbungsunterlagen benennt, stellt es für ihn ein 'inneres Spannungsfeld' dar, den Jugendlichen in seinem Tempo und zu seinen Bedarfen in seinem Aneignungsprozess zu begleiten. Robertistsichdessenbewusst,dasserimRahmendesstellvertretendenHandelns die Chancen des Jugendlichen einschränkt, sich anzueignen, wie ein Lebenslauf erstellt wird. Gleichzeitig rückt unter dem Gesichtspunkt von Zeitdruck und einem hohen Besucher*innenaufkommen die Frage nach Zeiteffizienz in den Vordergrund. Auch während weiterer Feldaufenthalte, in denen die Fachkräfte den von ihnen begleiteten jungen Menschen Dinge abnehmen, um eine Beschleunigung zu bewirken, spielt der Zeitdruck für diese Praxis eine Rolle, wenn z.B. in Beratungssettings die Dauer von Terminen begrenzt ist.
 
@@ -1133,9 +1710,17 @@ Besonders sichtbar werden Aushandlungen von Regelungen in formalen schulischen A
 
 'WirdürfenaberAusnahmenmachen.DasistvonderSchulleitungdannso.WeileinigeBegrifflichkeiten, die wir hier drinnen haben, lassen wir dann übersetzen. Ja. Die können wir nicht in den Sprachen/Die muss einmal in der Muttersprache da sein,//damit die den Text, weil es ja umSicherheit geht, dann besser verstehen. Und deswegen lassen wir das schon mal zu. […] und somit dürfen die dann auch übersetzen.' (Interview Herr Seidel, 12/2019)
 
+
+<!-- PAGE 146 -->
+
+
 Herrn Seidels Erzählung informiert über eine von der Schulleitung legitimierte Ausnahme zum grundsätzlichen Smartphone-Verbot im Unterricht, die er praktiziert. So wird die Smartphone-Nutzung der Schüler*innen von ihm gestattet, wenn es um das Übersetzen von Unterrichtstexten geht. Die partikulare Aufhebung des Smartphone-Verbots ist somit darauf ausgerichtet, Tätigkeiten mit dem digitalen Medium zuzulassen, die das Verständnis der Unterrichtstexte befördern. Dem Smartphone wird so von dem Lehrer eine unterstützende bzw. zum unterrichtlichen Geschehen ,sinnhaft' beitragende Bedeutung zugeschrieben. Dass diese individuelle Handhabung Ambivalenzen in Form von Beliebigkeit, Umsetzbarkeit und Undurchsichtigkeit enthält, wird in Momenten sichtbar, in denen Lehrer*innen die Smartphone-Nutzung der Schüler*innen als nicht ,sinnhaft' zum Unterricht einordnen. Dabei ist es für diese Einordnung für die Lehrer*innen erforderlich, räumlich nah bei den Schüler*innen zu sein, umdie jeweilige Nutzungsweise des digitalen Mediums durch den eigenen Blick überhaupt wahrnehmen zu können.Dies zeigt sich in einer Unterrichtssituation, in der ein anderer Lehrer an derselben Schule einem Schüler das Smartphone als Form der Sanktionierung abnimmt, da letzterer während des Unterrichts WhatsApp nutzt. Was der Schüler genau mit WhatsApp macht, ist für den Lehrer in dem Moment allerdings nicht ersichtlich. Stattdessen wird - im späteren Feldgespräch mit dem Ethnografen - vom Lehrer die reine ,Tatsache' der WhatsApp-Nutzung als unpassend zum Unterricht eingeordnet; wenngleich er und auch andere Kolleg*innen WhatsApp allgemein als ,sinnvolle' Möglichkeit zur Verständigung unter den Schüler*innen (z.B. bei Unterrichtsversäumnissen) erachten.
 
 Als bildungsteilhaberelevant erweisen sich auch Zugangsregelungen zu digitalen Medien in den jeweiligen Institutionen, wie es beispielhaft an der Nutzung von Druckern sichtbar wird. So zeigt sich im Rahmen der Feldaufenthalte, dass die Bedienung von Druckern den jungen Menschen in unterschiedlichen Zusammenhängen Schwierigkeiten bereitet, obwohl das Erfordernis, Dinge auszudrucken,Teil ihres Alltags ist (z. B. um Bewerbungs- oder Schulunterlagen auszudrucken).IndenbegleitetenEinrichtungenderKinder-undJugendhilfe(aberauchin Schulen) stehen Drucker jedoch in der Regel in den Büros der Sozialpädagog*innen und sind dadurch nicht frei zugänglich für die jungen Menschen, die daher den Sozialpädagog*innen ihre Druckaufträge ,übergeben'. Die Zugangs- und Nutzungseinschränkungen verhindern Möglichkeiten zur Aneignung des Geräts, wenn nicht begleitete Auseinandersetzungen damit bewusst von den Sozialpädagog*innen initiiert bzw. angeboten werden. Zugangsregelungen dieser Art zeigen sich auch bei anderen digitalen Medien. So sind für die ,frei' zugänglichen
+
+
+<!-- PAGE 147 -->
+
 
 Computer in den Institutionen meist Nutzungszeiten vorgeschrieben, was ebenfalls mit einer begrenzten digitalen Medienausstattung begründet ist. 28
 
@@ -1149,6 +1734,10 @@ In der Situation macht der Sozialpädagoge den Jugendlichen Jusuf auf eine Regel
 
 28 In den Einrichtungen der Kinder- und Jugendhilfe sind oftmals Pfandsysteme zur Nutzung der digitalen Medien etabliert. Für die Ausleihe der Controller für die PlayStation aus dem Büro der Sozialpädagog*innen müssen die jungen Menschen ein Pfand hinterlegen (z.B. den eigenenZimmerschlüssel),womiteinemetwaigenVerlustderControllerentgegengesteuertwerden soll.
 
+
+<!-- PAGE 148 -->
+
+
 derSozialpädagoge(meist)indereigentlichenRegeldurchsetzungzurück,sodass diese Jusuf, seinem älteren Bruder Shervan oder den Eltern überlassen wird.
 
 ## Datenschutzbestimmungen
@@ -1161,6 +1750,10 @@ Der Umgang mit den vorgegebenen Datenschutzbestimmungen in den Institutionen ges
 
 Wie die Lehrkraft darlegt, schränkt aus ihrer Sicht eine Befolgung von Datenschutzregelungen die Kommunikationsmöglichkeiten (außerhalb der Schule) ein. Die Lehrkraft ist sich dabei bewusst, dass die von ihr praktizierte Handhabung gegen Datenschutzregelungen verstößt und ordnet sie jedoch als unbedenklich ein, sofern ' kein Kläger ' vorhanden ist. Im Falle dieser Lehrkraft ermöglicht der Verstoß gegen Datenschutzbestimmungen allerdings auch, dass sie einen Jugendlichen erreichen und in Erfahrung bringen kann, weswegen er es (aufgrund eines Rauswurfs aus der Wohngruppe) zum betreffenden Zeitpunkt nicht schafft, am Schulunterricht teilzunehmen.
 
+
+<!-- PAGE 149 -->
+
+
 Abseits dieser Missachtung von Datenschutzbestimmungen lassen sich auch kreative ,Workarounds' beschreiben, wie sich an der nachfolgenden Beobachtungssequenz eines Wochengesprächs zwischen dem jungen Erwachsenen Ali und dem Sozialpädagogen Matteo zeigt:
 
 Ali und Matteo sprechen über ein mögliches Ehrenamt für Ali, um seine Chancen der rechtlichen Bleibeperspektive zu erhöhen. Matteo nennt Ali einen Verein, der Veranstaltungen und Angebote für geflüchtete Menschen organisiert. Dort wäre demnächst eine Veranstaltung, zu der Ali hingehen könnte, um sich über die Möglichkeit für ein Ehrenamt zu informieren. Ali erkundigt sich nach dem Datum der von Matteo erwähnten Veranstaltung. 'Warte, ich schau mal kurz, wann das ist', erwidert Matteo. Matteo holt neben seinem dienstlichen Smartphone auf dem Tisch sein privates Smartphone hervor und legt dieses vor sich. Er öffnet hierüber WhatsApp und ruft über einen Link in einem Chatverlauf mit einer Kollegin die Veranstaltung des Vereins bei Facebook auf. Die dort hinterlegte Veranstaltung enthält u. a. Angaben zu Zeit und Ort. Anschließend dreht Matteo das Smartphone zu Ali hin. 'Kannst auch 'n Foto von machen', bietet er Ali an. Ali kommt nimmt daraufhin sein Smartphone in die Hand. 'Handy hilft immer, dieses kleine Fuzziding', merkt Ali an, woraufhin Matteo zustimmt. Ali hält sein Smartphone über Matteos Smartphone und fotografiert die über Facebook aufgerufene Veranstaltung hiervon ab. (Feldprotokoll Ali, 10/2019)
@@ -1168,6 +1761,10 @@ Ali und Matteo sprechen über ein mögliches Ehrenamt für Ali, um seine Chancen
 DieVorgabendesJugendhilfeträgers legen fest,WhatsApp aus Datenschutzgründen nicht auf den Dienstgeräten der Sozialpädagog*innen zu nutzen. Hierzu besteht ein erster Workaround Matteos darin, dass ein Austausch von arbeitsrelevanten Informationen mittels WhatsApp auf seinem privaten Smartphone und auch auf dem seiner Kollegin über einen ,inoffiziellen' Kontaktweg erfolgt. Ein weiterer Workaround besteht dann darin, dass Matteo die auf seinem privaten Smartphonegeteilten Veranstaltungsinformationen dem jungen Erwachsenen in Präsenzquasi,analog'visuell zugänglich macht.Über das Foto,das Ali mit seinem Smartphone davon macht, werden die Veranstaltungsinformationen digital verbildlicht und losgelöst von einer Internetverbindung (wie sie für den Zugang auf Facebook notwendig wäre) verfügbar. Die Fotografie verhindert (scheinbar) den ,direkten' Kontakt bzw. Austausch (von Daten) zwischen den beiden Geräten, sodass eine Trennung zwischen ,beruflich' und ,privat' aufrechterhalten wird.
 
 Auch die jungen Menschen sind in ihrer digitalen Mediennutzung von den Datenschutzbestimmungen der jeweiligen Institution betroffen. Zwar dürfen sie im,Privaten' soziale Medien wie WhatsApp, Facebook oder Instagram nutzen, jedoch ist hierüber entsprechend je nach Institution kein Kontakt mit den Sozialpädagog*innen erlaubt. Stattdessen sind dafür dann E-Mails, SMS oder Anrufe erforderlich. Dies wird sowohl von den Sozialpädagog*innen als auch von denjungenMenschenalsHürdeimVergleichzumKontaktperMessenger-Diensten benannt, beispielsweise auch, wenn die jungen Menschen kein Guthaben für
+
+
+<!-- PAGE 150 -->
+
 
 SMSoderAnrufeaufdemSmartphonemehrverfügbarhabenodernichtmitdem Schreiben von E-Mails vertraut sind (vgl. Kapitel 2.2.1).
 
@@ -1181,6 +1778,10 @@ So ermöglicht die digitale Erreichbarkeit den niedrigschwelligen Zugang zu Unte
 
 Dass die digitale Erreichbarkeit auch Ambivalenzen in sich birgt, zeigt sich am Beispiel einer Einrichtung der Offenen Kinder- und Jugendarbeit. Gemäß den Vorgaben des Jugendhilfeträgers dürfen die Sozialpädagog*innen den Besucher*innen grundsätzlich nicht auf den sozialen Medien (z.B. Facebook und
 
+
+<!-- PAGE 151 -->
+
+
 Instagram) folgen und sie auch nicht kontaktieren. Hintergrund dieser Vorgabe ist, dass die Sozialpädagog*innen den jungen Menschen im Präsenzkontakt ,unvoreingenommen' begegnen sollen. In einem Interview berichtet der Sozialpädagoge Jan von Schwierigkeiten, diesem Anspruch gerecht zu werden, wenn die jungen Menschen über ihre Social Media-Profile möglicherweise erzieherisch relevante Dinge posten:
 
 'Dagabesdannz.B.auchDiskussionen[imTeam].,Wiegehenwirdamitum?'Wennwirz.B. sehen, wie junge Menschen sich in, in digitalen Netzwerken verhalten so, wenn die z. B. problematischesVerhaltenandenTaglegenso.[…]WasmachenwirmitunseremInstagram-Account? WennwirunsmitunserenJugendlichen anfreunden so und sehen, dass sie da z.B. jeden Nachmittag, ich weiß nicht, diese Drogen nehmen, wie so Kiffen oder so, weißt du und wie gehen wir damitum?SprechenwirdenJugendlichendaraufanso?IstesunserJob,dashinzukriegen?Sehr schwierige Zonen, die halt erst im Zuge dieser Digitalisierung irgendwie überhaupt erst in den/ HabenwirdaeinenHandlungsbedarfundso?Alsodasistnichteinfachunddasmussmandann auch im Einzelfall entscheiden so.' (Interview Jan, 07/2020)
@@ -1191,6 +1792,10 @@ LautdemSozialpädagogenbestehteinSpannungsverhältnisinMomenten,indenen die Fach
 
 Im Rahmen der Feldaufenthalte zeigen sich bildungsteilhaberelevante SituationenoftmalsinMomenten,dievondenSozialpädagog*innennichtvorab,geplant' sind. Sie knüpfen oft situativ an den von den jungen Menschen ,mitgebrachten' Anliegen an und gehen offen darauf ein. Diese Situativität und Offenheit als pädagogisch-institutionelle Rahmung erweist sich als relevante Praxis, die es ermöglicht, die jungen Menschen ausgehend von ihren Anliegen alltagsnah zu begleiten
 
+
+<!-- PAGE 152 -->
+
+
 undzubefähigen.Inwiefernsichdasrealisiert,ist jedoch von den institutionellen Normen im jeweiligen Arrangement abhängig. So stellen sich die beobachteten Situationen im Schulunterricht als von den Lehrer*innen strukturiertes, vorgegebenes Geschehen dar, in dem die zu vermittelnden Lehrinhalte im Fokus stehen und möglichst strikt zu verfolgen sind. Demgegenüber stehen Situationen in Arrangements der Kinder- und Jugendhilfe, in denen sich die Begleitung der Sozialpädagog*innen primär an den unterschiedlichen Anliegen bzw. Bedarfen der jungenMenschenorientiert.Diese Bedarfe betreffen etwa Fragen im Zusammenhang der Nutzung digitaler Medien, der Erstellung von ,formellen' Schreiben, der Berufsfindung,der Sicherung der Aufenthaltsperspektive,der Versorgung der eigenen Gesundheit etc., also Anliegen aus dem Alltag der jungen Menschen, die von ihnen thematisiert werden und damit die ,Agenda' der pädagogischen Interventionen formen. Ein Beispiel für Offenheit und Situativität zeigt sich auch in der nachfolgenden Beobachtungssequenz in einer Einrichtung der Offenen Kinder- und Jugendarbeit, in der die Sozialpädagogin Lisa situativ auf die Nachfrage des jungen Erwachsenen Achmet eingeht, während sie mit einem anderen Jugendlichen,Mohammed,amComputersitztundeineOnline-Bewerbungerstellt. Mohammed sucht in diesem Moment gerade seine E-Mail-Adresse ,im' Smartphone:
 
 Achmet richtet sich an Lisa: 'Ich habe eine Frage zu PayPal. Was ist?' Lisa erklärt Achmet daraufhin,dassessichbeiPayPalumeinBezahlungssystemhandelt.AchmeterwidertzuLisa:'Ich glaube, ich habe, aber verstehe nicht so ganz.' Dann gibt er Lisa sein Smartphone. Lisa hat das Smartphone nun in der Hand. Auf dem Display wird eine geöffnete E-Mail von PayPal angezeigt. 'Ah, du hast also ein Konto und hier klären sie über geänderte Bedingungenauf', erläutert Lisa und gibt Achmet das Smartphone zurück. (Feldprotokoll Ali, 08/2019)
@@ -1198,6 +1803,10 @@ Achmet richtet sich an Lisa: 'Ich habe eine Frage zu PayPal. Was ist?' Lisa erkl
 In dieser Situation beantwortet Lisa die Anfrage Achmets in Bezug auf die nichtverstandene E-Mail und ordnet den Inhalt der E-Mail in seiner Bedeutung ein. Sie ist in diesem Moment des Wartens auf Mohammed bereit, situativ auf das Anliegen Achmets einzugehen.
 
 Ein anderes Beispiel ist in der Flexiblen Hilfe der betreuende Sozialpädagoge, der offen und interessiert daran ist, selbstverfasste Rap-Texte des Jugendlichen Jusuf zu hören und mit ihm darüber in einen reflektierenden Austausch zu kommen, etwa, welche Lebensperspektiven weshalb dort vom Jugendlichen benannt werden. Deutlich wird aber auch, dass diese Situativität und Offenheit von den verfügbaren Zeit- und Personalressourcen der Sozialpädagog*innen abhängig sind.
+
+
+<!-- PAGE 153 -->
+
 
 ## Transorganisationale Vernetzung
 
@@ -1207,7 +1816,15 @@ Wie in den bisherigen Analysen herausgearbeitet wurde, vollzieht sich bildungste
 
 Wie anhand der Erzählung von Robert sichtbar wird, sind er und seine Kolleg*innen in stetigem Austausch mit weiteren Einrichtungen der Kinder- und Jugendhilfe und sie arbeiten fortwährend an der Vernetzung mit weiteren Hilfsangeboten für die jungen Menschen, die die Einrichtung der Offenen Kinderund Jugendarbeit aufsuchen. So wird eine Bandbreite von Bedarfen abgedeckt, für die der Sozialpädagoge die jungen Menschen an weitere Institutionen bzw. deren Beratungsangebote vermittelt. Dabei ist es nicht nur der Sozialpädago-
 
+
+<!-- PAGE 154 -->
+
+
 ge, der in der Einrichtung bewusst diese Vernetzung betreibt, auch andere Institutionen betreiben diese Vernetzung mit seiner Einrichtung. Im Zuge der Feldaufenthalte wird darüber hinaus sichtbar, dass die Sozialpädagog*innen die jungen Menschen nicht nur weiterleiten, sondern auch zwischen den jungen Menschen und anderen Einrichtungen vermitteln. Dies wird etwa am Beispiel des jungen Erwachsenen Ali sichtbar, dessen betreuender Sozialpädagoge Matteo zur Bewältigung eines Wohnproblems mit der Vermietung in Kontakt steht und dieser die Problemlage von Ali und dessen Rechte benennt.
+
+
+<!-- PAGE 155 -->
+
 
 Bildungsarrangements, Praktiken und Zuschreibungen im Kontext von Bildung und Teilhabe junger Geflüchteter in digitalisierten Bildungsarrangements. Die BIGEDIB-Teilstudie Lüneburg
 
@@ -1221,6 +1838,10 @@ Für das vorliegende Erkenntnisinteresse der ethnografischen Verbundstudie, die 
 
 1 Die aus den Studienergebnissen des Verbunds abgeleiteten Implikationen für Forschung, die pädagogische Arbeit in den Bildungskontexten Schule und Kinder- und Jugendhilfe sowie die Aus- und Fortbildung pädagogischer Fachkräfte werden im gemeinsamen Artikel mit Nadia Kutscher und Michi S. Fujii i.d.B. dargestellt.
 
+
+<!-- PAGE 156 -->
+
+
 Abbildung 5: Im Rahmen des BIGEDIB-Projekts beforschte Bildungskontexte
 
 <!-- image -->
@@ -1233,6 +1854,10 @@ Der Zugang zum Feld wurde für das Teilprojekt Lüneburg primär über die forma
 
 Es galt zu Beginn die betreffenden Institutionen und ihre Gatekeeper*innen/ Schlüsselpersonen für das Forschungsvorhaben zu gewinnen, wie es sich bereits in anderen Studien mit jungen Geflüchteten als praktikabel erwiesen hat (vgl. Kutscher/Kreß 2015). Um diese Schlüsselpersonen ausfindig zu machen, wurde zunächst Kontakt mit Schulen (über Schulbehörden, Schulleitungen und Lehrkräfte) im norddeutschen Raum aufgenommen, die das Kriterium erfüllen, geflüchtete Schüler*innen in ihren Klassen zu unterrichten. Insbesondere im Hinblick auf den ländlichen Raum war dies nicht immer der Fall. Weitere Herausforderungen der Samplegewinnung lagen darin, dass mit Blick auf Schulen, anders als in Jugendhilfeeinrichtungen,ein stark hierarchischer formaler Prozess durchlaufen werden muss (Ministerien, Schulbehörden, Schulleitungen und Lehrkräfte), bevor das Einholen der durch die jungen Geflüchteten unterzeichneten Einverständnisklärung erfolgen kann, was teilweise langwierige Verhandlungen mit den unterschiedlichen Akteur*innen notwendig machte. Den Kriterien entsprechende Schulen lehnten zudem teilweise mit Verweis auf die hohe Arbeitsbelas-
 
+
+<!-- PAGE 157 -->
+
+
 tung eine Teilnahme ab oder gaben an, unter einer grundlegenden Überforschung zuleiden.DersomiterschwerteFeldzugangführtezueinerVerzögerungdesFeldeintritts von rund zwei Monaten. In einem auf die Zustimmung einer Schule zur Teilnahme folgenden zweiten Schritt konnten die jungen Geflüchteten adressiert werden und ihr Interesse an einer Teilnahme am Forschungsvorhaben abgefragt werden. Je nach Alter unter Einbezug der Vormünder*innen bzw. Erziehungsberechtigten wurden dann die Einverständniserklärungen eingeholt, in deren Kontext die Informiertheit der Teilnehmenden und die Wahrung ihrer Rechte hinsichtlich des Datenschutzes (DSGVO) sichergestellt wurden.In diesem Zuge wurdendiejungenGeflüchteten auch über ihr Recht,eine Teilnahme am Forschungsprozess jederzeit zu beenden, aufgeklärt. Diesem Schritt vorausgehend erwies sich ein besonderer Vertrauensaufbau gegenüber den Teilnehmenden im Hinblick auf einen ethnografischen Forschungsansatz (- der mit einer besonderen Nähe durch die Begleitung des Alltags der jungen Geflüchteten einhergeht, vgl. Breidenstein et al. 2020, S. 71), aber auch mit Blick auf deren mitunter prekäre Situation (Angst davor, dass Forschungsdaten potenziell auch in unerwünschter Weise durch staatliche Behörden genutzt werden könnten, vgl. Kleist 2015) als erforderlich.
 
 Ziel war es dann, ausgehend von dem gewählten Feldzugang der Schule, sich jedoch keineswegs auf die jeweiligen Beobachtungen in den Einrichtungen zu beschränken, sondern im Sinne einer multi-sited ethnography (vgl. Falzon 2009) und eines follow the people -Ansatzes (vgl. Marcus 1995) den Teilnehmenden in unterschiedliche Bereiche ihres (Bildungs-)Alltags zu folgen,was in der Datenerhebung konkret umgesetzt wurde. Des Weiteren wurde im Rahmen des Feldzugangs im Schulkontext von Seiten des Forschungsteams gegenüber schulischen Fachkräften betont, dass maßgeblich Alltagspraxen der Teilnehmenden innerhalb der beobachteten Arrangements im Fokus des Forschungsprojekts stehen,um so mögliche digitale ,Anpassungen' des Unterrichts an den Forschungskontext zu vermeiden.
@@ -1241,9 +1866,17 @@ Ziel war es dann, ausgehend von dem gewählten Feldzugang der Schule, sich jedoc
 
 Das ursprüngliche Forschungsdesign sah vor, pro Teilprojekt ausgehend von zwei Bildungseinrichtungen je fünf junge Menschen mit Fluchterfahrung ethnografisch zu begleiten. Es zeigte sich jedoch in der Forschungspraxis, dass an vielen Schulen, gerade im ländlichen Raum Niedersachsens, weniger als fünf geflüchtete junge Menschen unterrichtet wurden, weshalb am Standort Lüneburg letztendlich als Institutionen sechs Schulen und zusätzlich ein Träger der Kinder- und Jugendhilfe beteiligt wurden. Im Sinne eines theoretischen Samplings (vgl. Strauss/Corbin 1996) war es Ziel, eine maximale Kontrastierung zu erreichen (z. B. mit Blick auf den Aufenthaltsstatus). Die Zusammenstellung des Samples
 
+
+<!-- PAGE 158 -->
+
+
 am Standort erfolgte somit unter Einbezug unterschiedlicher Differenzkategorien (Herkunftsland, Geschlecht, Alter etc.), um eine größtmögliche Diversität abbilden zu können. Gleichzeitig war es jedoch auch von Relevanz, gewisse Ähnlichkeiten in Bezug auf die Teilnehmenden zu berücksichtigen (z.B. mehrere junge Menschen, die minderjährig unbegleitet nach Deutschland gekommen sind und mehrere, die mit ihrer Familie nach Deutschland geflohen sind). Ein Großteil der Teilnehmenden hat mit seiner Familie bei Einreise einen Antrag auf Asyl in Deutschland gestellt. Ein weiterer Teil ist als minderjährig unbegleiteter Geflüchteter nach Deutschland gekommenundunterliegtdamitderFürsorgeder Kinder- und Jugendhilfe. Für alle Teilnehmenden gilt, dass sie unter besonderen asylrechtlichen Bedingungen leben und diese von Bedeutung für ihre Zukunft und Bleibeperspektive in Deutschland sind. Die Gründe für die Flucht sind dabei vielfältig, hierzu zählen auch politische und religiöse Verfolgung. Der Umgang mit personenbezogenen Daten dieser Zielgruppe war daher mit besonderer Sensibilität verbunden. Die teilweise prekäre und oftmals durch Brüche geformte Situation der jungen Geflüchteten prägte auch insofern den Forschungsprozess mit, als dass erzwungene Wechsel des Aufenthaltsortes oder Abschiebungen zu einem Abbruch der Forschungsbeziehung führten und die Zusammensetzung desSamplesverändertbzw.dieerneuteSuchevonForschungsteilnehmendennötig machten. Zudem war es Ziel gemäß der theoretischen Sättigung (vgl. Strauss/ Corbin 1996) die Sampleauswahl dann abzuschließen, wenn sich dem untersuchten Phänomen hinreichend genähert werden konnte. Im Teilprojekt Lüneburg wurden im Rahmen einer zweiten Erhebungsphase weitere junge Menschen in das Sample eingebunden; hierbei half zusätzlich der Weg über Einrichtungen der Kinder- und Jugendhilfe, um Teilnehmende in anderen Lebenssituationen zu erreichen und so die Diversität des Samples zu erhöhen.
 
 Insgesamt konnten über die Feldphasen hinweg 14 junge Geflüchtete für eine Teilnahme gewonnen werden. Diese waren im Alter von zwölf bis 20 Jahren ; hiervonwaren neunmännlich und fünf weiblich . Herkunftsländer der jungen Geflüchteten waren Afghanistan, Iran, Syrien, Serbien, Guinea und Eritrea. Es wurden für dasSampleunterschiedliche Schularten in den Bundesländern Hamburg,Schleswig-Holstein und Niedersachsen berücksichtigt: Eine Schule einer Erstaufnahmeeinrichtung für Geflüchtete, eine Stadtteilschule, eine Regelklasse eines Gymnasiums sowie eine spezielle Klasse für Geflüchtete an einem Gymnasium. Die Teilnehmenden befanden sich in den Klassenstufen fünf bis zwölf. Auch wechselten sie im Zeitrahmen der Erhebung teilweise die Schulformen oder erlangten ihren Schulabschluss. Nachdem das Forscher*innen-Team anfänglich Niedersachen fokussierte, wurde schnell deutlich, dass die Zielgruppe der Forschungsteilnehmenden insbesondere in urbanen Räumen und Großstädten oder aber in Erstaufnahmeeinrichtungen mit schulischen Einrichtungen vor Ort angetroffen werdenkonnte,weswegenderForschungsfokus auf die Bundesländer SchleswigHolstein und Hamburg ausgeweitet wurde.
+
+
+<!-- PAGE 159 -->
+
 
 ## 1.3 Datenerhebung
 
@@ -1253,9 +1886,17 @@ Der Feldeintritt und damit der Beginn der ersten Feldphase am Standort Lüneburg
 
 In der ersten Feldphase war es nach einer Phase des Vertrauensaufbaus möglich, erste explorierende Interviews mit den jungen Menschen mit Fluchterfahrung zu führen, für welche ein qualitativer Leitfaden erarbeitet wurde, der zur Durchführungderteilstrukturierten Interviews diente. Hierbei konnten erste digitale Artefakte, die sich im Alltag als relevant präsentierten, identifiziert werden. Dabei galt es auch mit den Teilnehmenden im intensiven Austausch über die begleiteten Kontexte zu stehen. So musste beispielweise geklärt werden, dass es nicht um das Schaffen besonderer Situationen im Feld ging, sondern darum, den ,normalen' Alltag zu begleiten. Parallel zur Datenerhebung der ersten Feldphase erfolgte die erste Analyse der Feldprotokolle im Sinne der Grounded-TheoryMethodologie, unterstützt durch MAXQDA. Die Kommunikation mit den Teil-
 
+
+<!-- PAGE 160 -->
+
+
 nehmenden hing dabei deutlich von ihrer digitalen Geräteausstattung ab. Zwar war mit einigen Teilnehmenden eine schnelle und unkomplizierte Kommunikation via Messenger-Dienst (überwiegend Wahl von Signal als Messenger aus Datenschutzgründen) möglich, andere, insbesondere die jüngeren Teilnehmenden, konnten jedoch entweder nur über die Schulsozialarbeiterin erreicht werden, da kein eigenes Smartphone vorlag, oder aber über andere ältere, in mehreren Fällen männliche Familienmitglieder. Diese Situation der eingeschränkten Kontaktmöglichkeiten verschärfte sich mit Beginn der zweiten Feldphase ab März 2020 unter den Schulschließungen der COVID-19-Pandemie.
 
 Aufgrund der unsicheren Lage im Frühjahr 2020 im Zuge des Lockdowns und der Kontaktbeschränkungen der COVID-19-Pandemie waren die Erhebungszugänge (z.B. in den Schulen und Kinder- und Jugendhilfeeinrichtungen) in der zweiten Erhebungsphase deutlich erschwert, weswegen die Zusammenlegung der zweiten (Fokus: systematische Betrachtung der beteiligten Artefakte) und drittenFeldphase(Fokus:Verknüpfungenzwischenunterschiedlichen(institutionellen) Arrangements mittels fokussierender Gespräche mit den Akteur*innen) erfolgte und deren insgesamte zeitliche Ausdehnung von April 2020 bis November 2020 erforderte, um flexibel auf die pandemiebedingten Umstände reagieren zu können. Für den Standort Lüneburg ergaben sich im Zuge der COVID-19Pandemie in der zweiten Feldphase aufgrund der Kontaktbeschränkungen Änderungen des methodischen Vorgehens. So wurden die jungen Geflüchteten und deren Bezugspersonen im Zeitraum von März 2020 bis April 2020 per Telefoninterviews zu Einschränkungen in der Teilhabe ihres (Bildungs-)Alltags befragt. Der Hauptteil der Erhebungen wurde auf digitale Kommunikationswege verlagert, wenn dies für die Teilnehmenden auf Basis ihrer digitalen Ausstattungen möglich war, auch wurde telefonisch oder via Messenger-Diensten Kontakt mit den Teilnehmenden gehalten, um einen Abbruch der Beziehung durch die teilweise langen Verzögerungen nicht zu riskieren. Zusätzlich durchgeführte Telefoninterviews zu den persönlichen Erfahrungen und dem Umgang mit der COVID-19-Situation sowie die zusätzliche Erhebung von Inhalten im Social Web seitens der jungen Geflüchteten (Instagram, Facebook, TikTok) wurden so möglich. In Einzelfällen wurde Kontakt über die Schulsozialarbeiter*innen aufrechterhalten.Auch wurden Interviews mit Fachkräften der Schulen und sozialen Einrichtungen auf digitalem Wege per Videokonferenz geführt. Sobald es auf Basis der geltenden Pandemie-Regelungen wieder möglich war, wurden Treffen in Präsenz oftmals draußen fortgeführt. Ein weiterer wichtiger Baustein war die Durchführung der Artefaktanalysen (vgl. Lueger/Froschauer 2018) auf Basis der im Feld erhobenen Daten. Hierbei fiel die Wahl insbesondere auf die digitalen Artefakte Smartphone und Laptop sowie auf die Anwendungen Anton (Lern-App), Facebook, Instagram und WhatsApp. In der daran direkt anknüpfenden Feldphase drei konnten auf Basis der vorliegenden Daten emergierende Häufungen gewisser Phänomene und Bezüge rekonstruiert werden und daran anknüpfend
+
+
+<!-- PAGE 161 -->
+
 
 vertiefende, teilstrukturierte Leitfadeninterviews mit Möglichkeiten für offene Fragen (vgl. Döring/Bortz 2016, S. 358) mit Teilnehmenden und pädagogischen Fachkräften geführt werden.
 
@@ -1269,11 +1910,19 @@ Während der Datenerhebung mittels ethnografischer Feldaufenthalte in den Alltag
 
 Es ergaben sich im Verlauf des Erhebungsprozesses unterschiedliche Herausforderungen, die sich spezifisch auf die Gruppe der jungen Geflüchteten als Forschungsteilnehmenden beziehen (vgl. Krause/Williams 2020; Leurs/Prabhakar 2018; von Unger 2018). Zentral war hierbei, dass die Teilnehmenden sich oftmals in einer existenziell unsicheren Lage befanden als sie für die Forschung gewonnen
 
+
+<!-- PAGE 162 -->
+
+
 wurden (u.a. Bleibeperspektive) und mit Blick auf die gesellschaftliche Teilhabe besonderen Herausforderungen begegneten (z.B. mangelnde Sprachkenntnisse im Deutschen; teilweise unbegleitet ohne familiäre Unterstützung).
 
 Die Beziehung der Forschenden zu den ,Beforschten' beschränkte sich daher nicht bloß auf die anfängliche Kontaktaufnahme und ein einmaliges formelles Einverständnis zur Teilnahme. Vielmehr waren Forschungsbeziehungen aufzubauenundübereinenregelmäßigenKontaktzuaktualisierenunddieHerstellung des Erhebungszugangs fortwährend auszuhandeln.Die Forschenden begegneten den jungen Menschen mit Fluchterfahrung hier nicht als ,Personen ohne Eigenschaften', sondern gestalteten die Anwesenheit im Feld und den Kontakt unter ihren eigenen Merkmalen wie Alter, Geschlecht und Herkunft, auf welche die Forschungsteilnehmenden auf unterschiedliche Arten und Weisen reagierten. Über diegesamteErhebunghinwegnahmindiesemKontextdiereflexiveAuseinandersetzungmitdermachtvollenPositionderForschendenimFeldeinewichtigeRolle in den TeambesprechungendesStandortseinundwurdeauchindenVerbundgetragen. Dies spielte auch im Hinblick auf die Forschungsbeziehungen eine Rolle: Forschungsmethodische und -ethische Herausforderungen zeigten sich in Bezug aufdieeigenePositioniertheit und Perspektive der Forschenden im Feld (vgl.Behrensen/Westphal2019).SomusstegeradezuBeginndesForschungsprozessesdie eigene Rolle als teilnehmende*r Beobachter*in im Feld gefunden und die Balance zwischen möglichst naher Teilnahme und distanzierter Beobachtung gefunden werden. Dabei war auch ein praktischer Nutzen für die Forschungsteilnehmenden im Sinne des dualen Imperativs (vgl. von Unger 2018) ein kontinuierlicher AnsatzpunktdesProjektteams.Diesemwurdeinsofernbegegnet,alsdassdiejungen Geflüchteten (meist im Anschluss an Erhebungen, aber von diesen wenn möglich abgegrenzt) bei bestehenden Alltagsfragen (Handyvertrag, Aktivierung von SIM-Karten, berufliche Orientierung) mit einem gewissen Zeitkontingent durch die Forschenden unterstützt werden konnten. Dieses Angebot wurde gegenüber denTeilnehmendenkommuniziertundindurchausunterschiedlichemMaßeangenommen. Das sich hieraus eröffnende Feld potenziell gegensätzlicher Erwartungshaltungen, welche die Rollen(-konsistenz) der Forschenden irritieren können, war fortwährender Gegenstand der Reflexion im Team des Teilprojekts Lüneburg.
 
 Ein weiterer beziehungsrelevanter Aspekt, der sich aus der Konzeption des Forschungsvorhabens als teilnehmende Beobachtung ergab, war die permanente Klärung, wie intensiv die jungen Geflüchteten den Ethnograf*innen Einblicke in die privaten Bereiche des Lebens (Familie, Beziehungen, Freizeitorte) gewähren wollten. Hierbei galt es den Umstand, dass hinsichtlich des Forschungsinteresses ein intensiver und umfassender Alltagseinblick erfolgen sollte, gegenüber der Freiwilligkeit der Teilnahme sowie der Einhaltung persönlich gesetzter Grenzen der Teilnehmer*innen fortwährend miteinander in Balance zu bringen, ohne
+
+
+<!-- PAGE 163 -->
+
 
 dabei die in Teilen asymmetrische Machtverteilung des jeweiligen Arrangements außer Acht zu lassen.
 
@@ -1284,6 +1933,10 @@ Eine Hürde in der Gestaltung der Forschungsbeziehungen stellte die teilweise un
 ## 1.5 Datenkorpus und Datenauswertung
 
 Über den Zeitraum der ethnografischen Erhebung im Feld entstand über die unterschiedlichen Feldphasen hinweg ein vielfältiger Datenkorpus. Im Teilprojekt Lüneburg umfasste dieser neben Feldnotizen, 66 Beobachtungsprotokollen und einer Vielzahl an Memos, beispielsweise zu den unterschiedlichen Arrangements und Institutionen, detaillierte Beschreibungen der im Feld relevanten (digitalen) Artefakte, Screenshot-Aufnahmen der jeweiligen genutzten digitalen Anwendungen der jungen Geflüchteten sowie 23 qualitative Interviews mit jungen Menschen mit Fluchterfahrung, Lehrkräften und Sozialarbeiter*innen. Das Erhebungs- und Auswertungsverfahren erfolgte gemäß Grounded-Theory-Methodology (vgl. Strauss/Corbin 1996). Dies ermöglichte mittels eines zirkulären ForschungsdesignsimHinblickaufdenwachsendenDatenkorpusdieangewandte Methodik und abgeleitete Erkenntnisse im Austausch kritisch zu hinterfragen
+
+
+<!-- PAGE 164 -->
+
 
 unddurchdieVerschränkungvonDatenerhebungund-auswertungfortwährend zu erweitern. Den Forschenden war es über die Feldphasen möglich, ein fundiertes Verständnis des erforschten Feldes zu erlangen. Dieses Erfahrungswissen ermöglichte es die zum Großteil in Textform vorliegenden ethnografischen Daten als Teil einer gesamten interpretierten Realität (vgl. Breidenstein et al. 2020, S. 130) einordnen und auswerten zu können. Ziel war es, über die Triangulation der mittels verschiedener ethnografischer Methoden (teilnehmende Beobachtungen, Artefaktanalysen, Interviews) gewonnenen Datensorten unter Einbezug der theoretischen Bezüge zu einer Validierung über emergierende Konvergenzen der Analyseergebnisse zu gelangen, aber auch die Differenzen, die sich in den Ergebnissen abbilden, zu erfassen. Durch die Triangulation wurden insgesamt Erkenntnismöglichkeiten in Bezug auf die Forschungsfrage geweitet (vgl. Flick 2011, S. 74) und der Forschungsgegenstand 'quasi zwischen verschiedenen Verfahren' (Kelle 2001, S. 204) in den Blick genommen.
 
@@ -1304,15 +1957,27 @@ Einbezug von Interviews
 
 Bereits während der Datenerhebung wurde mittels Kodierungen eng am Material gearbeitet, um eine Parallelität von Datenerhebung und Auswertung und Theoriebildung im Sinne der Grounded Theory zu gewährleisten. Die erste Kodierung der Daten und davon abgeleitet Themenbildung zur Annäherung an die Forschungsfrage wurde mittels MAXQDA im Sinne des offenen Kodierens realisiert und fortwährend im Team diskutiert (vgl. Breidenstein et al. 2020, S. 177) ( Analyseschritt 1 , vgl. Tabelle 2). Im Zuge der Datenauswertung wurden nach dem offenen Kodieren zunächst für sechs ausgewählte Kernfälle einzelne Fallanalysen erarbeitet, um so am Partikularen auch Verallgemeinerbares zu erkennen (vgl. Breidenstein et al. 2020, S. 158). Für die Auswahl der Fälle spielte die Datenqualität (vgl. Breidenstein et al. 2020, S. 169) eine besondere Rolle. Hierbei wurde
 
+
+<!-- PAGE 165 -->
+
+
 neben der Bedeutung der verwendeten digitalen Artefakte in den jeweiligen Bildungsarrangements auch ein besonderes Augenmerk auf unterschiedliche Praktiken, die auf Bildungs- und Teilhabebedeutsamkeiten verweisen, gelegt. Die unterschiedlich verfassten Situationsanalysen von Praktiken im Rahmen einzelner Fälle stellten das Kernstück der Einzelfallanalysen dar.Diese wurden angereichert um das biografische und kontextbezogene Wissen zu den einzelnen Fällen und die Zuschreibungen der menschlichen Akteur*innen. Die Praxistheorie (vgl. u.a. Schatzki 2016) stellte hierbei den zentralen methodologischen Bezugspunkt dar (vgl. Fujii/Kutscher i.d.B.). Parallel hierzu erfolgte der Einbezug der Artefaktanalysen (vgl. Lueger/Froschauer 2018) für die sich im Auswertungsprozess als besonders zentral abzeichnenden digitalen Artefakte wie beispielsweise Laptop und SmartphoneundeinzelneAnwendungen/Apps(u.a.Lern-AppAnton).AuchwurdeInterviewmaterialergänzendimKodierprozesshinzugezogen,umzusätzliche Informationen für die fallbezogene Auswertung zu erhalten. Es wurde deutlich, dassdiehiervollzogeneTriangulationderunterschiedlichenDatensortenunddie daraus emergierende Vielfalt nicht ' per se die epistemische Kraft der qualitativen Forschung, sondern zunächst einmal die Reflexivität in Bezug auf Gegenstandskonstruktion undLeistungsfähigkeitderjekonkreteneinzelnenVerfahren[erhöht] ' (Kelle 2001, S. 205). So konnten mittels der verschiedenen eingesetzten ethnografischen Methoden unterschiedlichen RelevanzzusammenhängedergegenseitigenKontextekonkreter erfasst werden, sodass eine fortwährend erweiterbare Kontextualisierung zu einer analytischen Verdichtung führte (vgl. Kelle 2001, S. 205) (vgl. Tabelle 2, Analyseschritt 2) .
 
 In einem darauffolgenden Analyseschritt war der Übergang von der fallbezogenen Ebene zur fallübergreifenden Ebene das Ziel (vgl. Bischoff/WohlrabSahr 2018, S. 92). Die Zusammenführung der Fallanalysen und das in Beziehung zueinander setzen ermöglichte es hierbei fallübergreifende Häufungen, Gemeinsamkeiten und Differenzen zu rekonstruieren. Konkret wurden hierzu die vorliegenden Fallanalysen mittels des Theorie-Methoden-Bündels der ,Situational Maps' nach Clarke, Friese und Washburn (2018) bearbeitet, diese ermöglichten eine Visualisierung der zentralen Themen, Artefakte, Kontexte und Praktiken, die sich in den einzelnen Fällen abzeichneten (vgl. Tabelle 2, Analyseschritt 2 ). Eine Grounded Theory in neo-praxeologischer Perspektive (vgl. Pohlmann 2020) ermöglichte es an dieser Stelle gegenseitige Beeinflussungen von unterschiedlichen Praktiken zu erfassen, welche im Rahmen einer sozialen Situation ausgeübt werden, deren Elemente aber in verschiedenen sozialen Welten unterschiedliche (evtl. widersprüchliche) Bedeutungen haben und zwischen diesen ausgehandelt werden müssen. Über die Kombination von praxeologischer Forschungsperspektive mit der Auswertungsmethode der ,Situational Maps' nach Clarke, Friese und Washburn (2018) konnte es realisiert werden, den Blick auf die Heterogenität und Ambivalenz der Praxis der Akteur*innen in Bezug auf soziale Praktiken zu werfen und so die kontextübergreifenden Ambivalenzen,
+
+
+<!-- PAGE 166 -->
+
 
 Diskontinuitäten und Heterogenität menschlicher Praktiken konkreter zu untersuchen (vgl. Pohlmann 2020). Während der Erarbeitung der Situational Maps wurde zudem intensiv mit der Erstellung von Memos (vgl. Strauss/Corbin 1996, S. 175) gearbeitet, diese spiegeln Häufungen von Praktiken oder Phänomenen oder Hinweise auf Praktiken und bildungsbedeutsame Praxis wider, die sich für die fallübergreifende Analyse als relevant abzeichnen.
 
 Der ab diesem Zeitpunkt der Datenanalyse parallele Einbezug von theoretischen Bezugspunkten und Perspektiven half dabei, eine Sensibilisierung im Hinblick auf die Forschungsfrage und eine tiefergehende Analyse des Materials zu ermöglichen (vgl. Tabelle 2, Analyseschritt 3 ). Neben einem praxistheoretischen Bildungsverständnis, welches das 'Tun, um den Vollzug in der Praxis, innerhalb derer sich Subjekte performativ-gestaltend mit praxisinhärenter Unbestimmtheit […] auseinandersetzen und Praxis gleichzeitig konstituieren' (Asmussen 2020, S. 356) fokussiert, waren Diskurse um Teilhabe (vgl. Dietrich 2017) sowie in der Koppelung von (Medien-)Bildung, Inklusion und Teilhabe (vgl. u.a. Zorn/ Schluchter/Bosse 2019) unter der Rahmung eines weiten Inklusionsverständnisses, das junge Geflüchtete mit Blick auf Differenzkategorien um Herkunft und Flucht und etwaige Benachteiligungen adressiert, als sensibilisierende Konzepte für die Analyse ausschlaggebend. Hierbei wurden auf Bildung oder auch Lernen jeweils aus unterschiedlichen Gesichtspunkten geschaut: Vor allem mit Blick auf die Analysen zum Bereich der Kinder- und Jugendhilfe wurde ein Bildungsverständnis herangezogen, das ein lebenspraktisches Lernen (vgl. Heymann 2018) beschreibt und auf Befähigung abzielt (vgl. Alkemeyer/Buschmann 2017). Weiter dienten zentrale medienpädagogische Anknüpfungspunkte als sensibilisierende Konzepte: Die Förderung von Medienkompetenz und vor allem von Medienkritik (vgl. u. a. Baacke 1997) der jungen Geflüchteten durch Pädagog*innen, die strukturale Medienbildung, welche Medienbildung als Veränderung von Weltund Selbstverhältnissen im Kontext von Medialität versteht (vgl. u.a. Jörissen/Marotzki 2009; Jörissen 2011), die hohe Bedeutung digitaler Medien in den Lebenswelten Heranwachsender im Rahmen von Mediensozialisation (u.a. im Sinne von Identitätsprozessen und Orientierung, vgl. u.a. Schorb 2014; Tillmann 2020; Aufenanger 2022; Ganguin/Nickel/Sander 2022) sowie von Seiten der Kommunikationswissenschaft Mediatisierung in Form von Digitalisierung (vgl. Krotz 2022) als übergeordnetes gesamtgesellschaftlich prägendes Phänomen, das Heranwachsen prägt und Herausforderungen hervorbringt. Ein weiterer Bereich sind Lehr- und Lernprozesse unter Beteiligung digitaler Medien (vgl. u.a. Kerres 2022; Mayrberger 2020), sprich mediendidaktische Aspekte.
 
 In einem nächsten Schritt erfolgte die fallübergreifende Analyse (vgl. Tabelle 2, Analyseschritt 4) : Die Memos und Situational-Maps einbeziehend wurde im Sinne des axialen Kodierens (vgl. Strauss/Corbin 1996) durch einen erneuten Materialdurchlauf eine vorläufige Liste mit sich am Material abzeichnenden Häufungen in Form von Praktiken-Arrangements-Bündeln erstellt, worunter
+
+
+<!-- PAGE 167 -->
+
 
 nach Schatzki (2016, S. 33, Herv. d. Verf.) 'Verbindungen von Menschen, Organismen, Artefakten und natürlichen Dingen' zu verstehen sind. Mit diesen Praktiken-Arrangements-Bündeln wurden die relevanten Sequenzen und die darin abgebildeten Praxisvollzüge erneut mittels Orientierung an einem an dem Erkenntnisinteresse der Studie ausgerichteten Kodierparadigma (in Anlehnung an Strauss/Corbin 1996, S. 75 ff.) basierend auf den Schritten: Ursächliche Bedingung → Phänomen → Kontext → intervenierende Bedingungen → interaktionale Strategien → Konsequenzen durchgearbeitet (vgl. Abbildung 6). Insbesondere Aspekte wie Bildungsbedeutsamkeiten in verschiedenen Praxiszusammenhängen,Aushandlungen von Beteiligtheiten oder konstituierende Faktoren für die unterschiedlichen betrachteten Arrangements wurden hierbei fokussiert. Sequenzübergreifend erfolgte eine Rekonstruktion der sich komparativ abbildenden Bezüge zur Forschungsfrage innerhalb unterschiedlicher zu verortender Praktiken und Arrangements.
 
@@ -1322,11 +1987,19 @@ Abbildung 6: Kodierschema Teilprojekt Lüneburg in Anlehnung an Strauss/Corbin (
 
 Für das Kodierparadigma waren somit in einem vorgelagerten Schritt die ursächlichen Bedingungen der beobachteten Praxis von Relevanz. Auf der Ebene der beobachteten Praxis spielten die unterschiedlichen Beteiligtheiten der Akteur*innen in den Arrangements (auch die digitalen Artefakte selbst werden als Akteur*innen verstanden) sowie die erkennbaren sozialen Ordnungen und potenziell intervenierenden Bedingungen im Kontext der Praxis eine bedeutende Rolle in der Analyse. Ziel war es, sich darauf basierend der Frage zu widmen, was in der konkreten Praxis hervorgebracht wird. Hierbei erfolgte eine
 
+
+<!-- PAGE 168 -->
+
+
 fallübergreifende Analyse der Bildungsorte/-kontexte (u.a. Schule; Erstaufnahmeeinrichtungen; Kinder- und Jugendhilfe; informeller Bereich; gesetzlicher Vormund als Schnittstelle zwischen Kinder- und Jugendhilfe und informellem Kontext) mit Blick auf jeweilige Charakteristika und auch übergreifende bildungs- und teilhabebezogene Zielstellungen (z. B. Lernen in Schulen versus stärkere Lebensweltorientierung in Kinderund Jugendhilfe, Thiersch 2014; Verankerung von Medienbildung an Schulen; bildungsbezogene/bildungspolitische Papiere: z.B. KMK-Strategie Bildung in der digitalen Welt (vgl. KMK 2017, 2021); UNESCO 2021; Europäische Kommission 2020: Aktionsplan für digitale Bildung 2021-2027). Die Bedingungen auf Seiten der Institutionen und der Pädagog*innen selbst wurden weiter fallübergreifend analysiert, ebenso die sich abzeichnenden subjektiven und auch durch gesellschaftliche Strukturen bedingten Voraussetzungen der jungen Menschen mit Fluchterfahrung (welche sich u.a. in der späteren Analyse in Zusammenhängen zwischen sozialer Ungleichheit und Digitalität widerspiegelten, vgl. dazu Fujii et al. 2020) sowie die Charakteristika digitaler Artefakte per se und in ihrer Eingebundenheit in die digitalisierten Bildungsarrangements und Praktiken.
 
 Die jeweiligen Analysen wurden auch unter dem Blickwinkel theoretischer Bezüge und aktueller Diskurse der Medienpädagogik (u.a. um Desinformation in digitalen Medien; Digitale Ungleichheit) und allgemeiner der Erziehungswissenschaft (mit Blick auf Bildungsverständnisse) sowie der darin beteiligten Institutionen und ihren Zielstellungen durchgeführt. Auf Basis von Vorarbeiten im Verbund mündete die Analyse in einem Modell, welches die verschiedenen Bedingungen für die Ermöglichung von Bildung und Teilhabe im Kontext digitalisierter Bildungsarrangements darstellt und ihre multidimensionalen Verknüpfungen thematisiert (vgl. Tabelle 2, Abbildung 5). Zentral ist hierbei die notwendig herzustellende Passung der Charakteristika digitaler Artefakte, der subjektiven Voraussetzungen junger Geflüchteter, der fachlich-personellen Bedingungen bzw. Anforderungen der pädagogischen Fachkräfte sowie der institutionellen Bedingungen, um den Möglichkeitsraum 2 für (Bildungs-)Teilhabe junger geflüchteter Menschen in digitalisierten Bildungsarrangements möglichst breit zu gestalten.
 
 2 Möglichkeitsraum meint dabei im Sinne eines praxistheoretisches Bildungsverständnisses, dass es 'normativ um das Ermöglichen von potenzieller Praxis geht' (Asmussen 2020, S. 380).
+
+
+<!-- PAGE 169 -->
+
 
 ## 2. Ergebnisse der Teilstudie: Analyse der Bildungsarrangements und der Hervorbringungen in der Praxis
 
@@ -1335,6 +2008,10 @@ In dem vorliegenden Kapitel werden zentrale Ergebnisse der Studie vorgestellt. D
 Aus dem primären Feldzugang der Teilstudie über den institutionellen Kontext der formalen (Schul-)Bildung ergab sich ein diverses Bild unterschiedlichster institutioneller Schulkontexte (Schule in Erstaufnahmeeinrichtung, Regelschulklasse, Klasse für geflüchtete Schüler*innen), welches insbesondere in der zweiten Erhebungsphase durch Beobachtungen im Feld in anderen institutionellen Kontexten, der Kinder- und Jugendhilfe, aber auch in informellen, eher privaten Lebenskontexten der jungen Geflüchteten ergänzt wurde. Dabei beobachtete konkrete Anlässe (z.B. Wechsel der Schulform) deren ,Bearbeitung' und dann Bewältigung über unterschiedliche Orte (mit teils unterschiedlichen Akteur*innen) erfolgt, realisieren sich dabei in unterschiedlichen Arrangements, die variierend nach Zusammenstellung der beteiligten Akteur*innen (darunter auch digitale Artefakte) sowohl bildungs- und teilhabeermöglichende, als auch -verhindernde Bedingungen produzieren. Diese aufzuzeigen, ist Anliegen der folgenden Analysen. Um im Sinne der Artefaktanalyse, welche nach der Situiertheit der betrachteten Artefakte fragt (vgl. Lueger/Froschauer 2018), auch Bedeutungszuschreibungen der menschlichen Akteur*innen zu rekonstruieren, werden auch Interviewsequenzen vereinzelt im Rahmen der verdichtenden Analysen aufgegriffen, um Hinweise hinsichtlich der Situiertheit der Artefakte zu erhalten.
 
 ImFolgenden werden zentrale bildungs- und teilhabebezogene Schwerpunkte, welche sich im diskursiven Auswertungsverfahren vor allem ausgehend von der Analyse der Feldprotokolle im Kontext zeigten, vorgestellt und in Bezug zu Theorie und aktuellen Diskursen im Kontext von Erziehungswissenschaft und Medienpädagogik sowie weiteren sozialwissenschaftlichen Diskursen um Digitalität gestellt. Hierbei wurde darauf geachtet, einen möglichst inhaltlich breiten Überblick über das Material zu ermöglichen - mit Blick auf die Bildungs- und Alltagskontexte in ihren unterschiedlichen Facetten. Die Praxis wird anhand der Spezifika der jeweiligen Bildungsarrangements betrachtet und die Analysen je nach vorliegendem Material und dessen Relevanz für die Beantwortung der
+
+
+<!-- PAGE 170 -->
+
 
 Fragestellung - werden entweder mit Blick auf die Bildungs- und Alltagskontexte komparativ angelegt dargestellt, um Gemeinsamkeiten und Vollzüge der Praxis anhand der Spezifika der jeweiligen Bildungsarrangements zu betrachten, oder aber der Fokus auf die Praxis im Kontext eines spezifischen Bildungsarrangements gelegt.
 
@@ -1350,6 +2027,10 @@ Einige der Teilnehmenden befinden sich in Unterstützungsstrukturen der Kinder- 
 
 Die in diesem Kontext näher betrachteten Sequenzen spielen sich fallübergreifend zwischen der sozialpädagogischen Fachkraft und dem Teilnehmenden in den Räumlichkeiten des Jugendhilfeträgers ab, durch den die jungen Menschen mit Fluchterfahrung im Rahmen von wöchentlichen Treffen betreut werden. Die Treffen mit den sozialpädagogischen Fachkräften haben eine wöchentli-
 
+
+<!-- PAGE 171 -->
+
+
 che Routine, in der die unterschiedlichen Anliegen der jungen Menschen mit Fluchterfahrung bearbeitet werden. Oftmals bringen die jungen Geflüchteten ihre Anliegen in Form von Briefen, welche sie erhalten haben, in die Beratung ein. Gleichzeitig ist die Bearbeitung dieser Anliegen für die jungen Geflüchteten besonders relevant,da es meist in Zusammenhang mit finanziellen Anliegen bzw. demErhaltvonmateriellen Hilfen,Aufenthaltstiteln etc.steht.So geht es z.B.um die Bearbeitung eines Briefes der GEZ, den der Teilnehmende Jibril, zu diesem Zeitpunkt 18 Jahre alt, erhalten und daher zu dem Treffen mitgebracht hat. Der Brief liefert zum einen die benötigten Informationen für die gemeinsame Praxis (es wird ein neuer Leistungsbescheid vom Jobcenter benötigt, damit die GEZBefreiung beantragt werden kann). Gleichzeitig hat er Aufforderungscharakter für die Erstellung des zu erstellenden Antwortschreibens, wie der folgende Sequenzausschnitt eines Gesprächs zwischen Sozialarbeiter Dennis und Jibril verdeutlicht:
 
 'So, was steht heute noch an? Achja genau du hast einen Brief von der GEZ dabei, was wollen die denn von dir? Lass mal schauen.' Jibril reicht dem Sozialarbeiter Dennis den Brief hin, woraufhin dieser fragt, ob er den Inhalt des Briefes verstanden habe. (Feldprotokoll Jibril, 06/2020)
@@ -1359,6 +2040,10 @@ Im Rahmen der wöchentlichen Treffen existiert ein klar definierter Raum für di
 'Wir können eine Mail ans Jobcenter schreiben.' schlägt Dennis Jibril vor […]. Jibril nimmt sein Handy vom Tisch und dreht das Display zu sich. Dennis stutzt und fragt ihn: 'Willst du am HandyoderhieramLaptop?'Jibril zuckt die Schulter und lacht. 'Laptop ist besser zum Schreiben' sagt Dennis weiter. Jibril nickt und legt sein Handy wieder beiseite. (Feldprotokoll Jibril, 06/2020)
 
 Die beiden menschlichen Akteure definieren nun einen digital-gestützten Arbeitsmodus zur Umsetzung der Bearbeitung des Schreibens, wobei der Aktionsimpuls von der sozialpädagogischen Fachkraft ausgeht. In einem ergänzenden Interview erläutert die Fachkraft den generell von ihm fokussierten Einsatz der
+
+
+<!-- PAGE 172 -->
+
 
 E-Mail zur Beantwortung von offiziellen Schreiben und die damit intendierte Wirkung, z.B. gegenüber Behörden:
 
@@ -1372,6 +2057,10 @@ Der Laptop wird hierbei zum Grenzobjekt (vgl. Star 2017) der unterschiedlichen s
 
 Der Grund, den die Sozialarbeiterin für die von ihr präferierte Nutzung des Laptops angibt, ist die aus ihrer Sicht höhere Praktikabilität des Artefakts. Dabei geht sie auf die Wünsche oder Vorerfahrungen des jungen Menschen nicht ein, der betont keine Vorkenntnisse zur Bearbeitung am Laptop zu haben. Erneut wird hier deutlich, dass die Anwesenheit und Einsatzfähigkeit des digitalen Artefakts Laptop den sich eröffnenden Möglichkeitsraum zur Bearbeitung des Anliegens deutlich mitbestimmt. Dies gilt vor allem für die Sicht der Sozialarbeiterin, wohin-
 
+
+<!-- PAGE 173 -->
+
+
 gegen der Teilnehmende eine andere Bearbeitungsstrategie wählen möchte und hierbei ebenfalls das Herstellen von Verfügbarkeit ( 'Achmet holt sein Handy raus' ) und Präsentieren von Möglichkeiten, in dem bereits die App geöffnet wird, eine Rolle spielen und als Strategien zur Überzeugung genutzt werden, die jedoch von der Sozialarbeiterin nicht angenommen werden.
 
 ## Ressourcenorientierung und lebensweltbezogene Vergleiche als Vermittlungsstrategie
@@ -1381,6 +2070,10 @@ Im Bearbeitungsprozess wählen die Sozialarbeiter*innen in der beobachteten Prax
 'Weißt du noch, was schreibt man immer ganz am Anfang?' […]. 'Ah diese Dings? Diese Nummer?' sagt Jibril. 'Genau, dein Aktenzeichen.' bestätigt nun auch Dennis Jibrils Annahme. 'Das ist wie bei Vodafone, deine Kundennummer, wenn du da einen neuen Vertrag machst oder so.' (Feldprotokoll Jibril, 06/2020)
 
 Der hier abgebildete Vergleich bietet einen lebensweltbezogenen und gleichzeitig bildungsbedeutsamenMöglichkeitsraumfürdenVermittlungsprozess.Ferner wird deutlich, dass Bedingung dafür, dass eine solche Vermittlung initiiert werdenkann,dasWissendesSozialarbeitersüberinformelleAnknüpfungspunkteim Leben des jungen Geflüchteten notwendig ist (Kundennummer, Name des Telefonanbieters,WissenumdieRelevanzdesSmartphones),anhandderererinstitutionelle Logiken und Bedeutsamkeiten für den jungen Menschengreifbarmachen kann.Hierbei zeigt sich auch, dass sich die Vermittlung von Wissen durch die Sozialarbeiter*innen sowohl auf technisches Know-how (Welche Elemente muss ich bei einer E-Mail ausfüllen?) als auch auf Grundlagen der formalen Kommunikation (Wie lautet eine passende Begrüßungsformel im formalen Kontext?) beziehen und beides in der Vermittlung miteinander verzahnt wird. Das sich hier abzeichnendeEingehendesSozialarbeitersaufdiesubjektiveRessourcenausstattungdes jungenGeflüchteten(imHinblickaufseineartefaktbezogenenVorkenntnisseund auch in Bezug auf Fähigkeiten formaler Kommunikation) zeigt sich hierbei förderlich für die Eröffnung eines bildungsrelevanten Vermittlungsraumes im Kon-
+
+
+<!-- PAGE 174 -->
+
 
 text von Handlungsbefähigung im Umgang mit dem digitalen Artefakt zur formalen Kommunikation.
 
@@ -1395,6 +2088,10 @@ Auch die Mittlerrolle der pädagogischen Fachkräfte zwischen der Perspektive de
 'Hier kannst du noch Abstände einfügen. Dann kann dein Sachbearbeiter das besser lesen, ne? SonsthängtderdavormLaptopundsagt:häääwasistdenndageschrieben?'spielterdenSachbearbeiter nach und geht mit der Nase übertrieben nah an den Laptop ran. (Feldprotokoll Jibril, 06/2020)
 
 Der Sozialarbeiter nutzt ein Rollenspiel, um dem jungen Menschen die Bedeutung einer Formatierung aufzuzeigen. Hier wird die vermittelnde Position des Sozialarbeiters zwischen dem Empfänger der Mail (Sachbearbeiter im Jobcenter) und Jibril als Verfasser deutlich. Der Sozialarbeiter schafft ,Übersetzungen', welche die Verständigung zwischen den betroffenen sozialen Welten (Lebenswelt des jungen Menschen und Arbeitswelt im Jobcenter) begünstigen. Gleichzeitig wird eine von dem Artefakt ausgehende Anforderung für das Schreiben eines offiziellen Textes deutlich. So werden auch Kenntnisse darüber benötigt, die Formatierung eines digital abgefassten Texts umzusetzen (Wie füge ich auf der Tastatur Absätze in meinen Text ein?). Diese Kenntnisse zum Aufbau formaler Schreiben und deren technischer Umsetzung im E-Mail-Programm bzw. am digitalen Artefakt Laptop werden im Praxisvollzug zum gleichzeitigen Vermittlungsgegenstand. Die Verzahnung in der Vermittlung von unterschiedlichen
+
+
+<!-- PAGE 175 -->
+
 
 Formen des Wissens erweist sich hierbei als förderlich für den Einsatz des digitalen Artefakts zur Bearbeitung des offiziellen Schreibens und der damit verbundenen Bewältigung alltäglicher Aufgaben.
 
@@ -1412,6 +2109,10 @@ Bei der gemeinsamen Tätigung der Online-Überweisung zeigen sich technische Pro
 
 Das digitale Artefakt Laptop - und darin eingebettet das E-Mail-Programm bzw. Programm zum Online-Banking - ermöglicht in der beobachteten Praxis, neben der praktischen Vermittlung von anwendungsbezogenem Nutzungswissen auch situativ Lösungsmöglichkeiten zu finden. Durch den Einsatz der digitalen Artefakte entsteht ein digitaler Raum, mit der Eigenschaft räumlich-zeitliche Strukturen teilweise aufbrechen zu können und unabhängig von diesen zu arbeiten.
 
+
+<!-- PAGE 176 -->
+
+
 Der Einsatz digitaler Artefakte ermöglicht hier einerseits eine räumlich-zeitliche Entkoppelung von Lösungsprozessen der Anliegen, die sonst auch außerhalb des Unterstützungssettings geklärt werden müssten. E-Mails ermöglichen beispielsweise eine direkte und schnelle Beantwortung innerhalb des Hilfesettings und können somit von den Sozialarbeiter*innen komplett begleitet werden. Sie werden somit zu von den Sozialarbeiter*innen oftmals favorisierten Instrumenten der Bearbeitung von offiziellen (behördlichen) Anliegen.
 
 ## Analog-digital verknüpfte bildungsbezogene Möglichkeitsräume
@@ -1419,6 +2120,10 @@ Der Einsatz digitaler Artefakte ermöglicht hier einerseits eine räumlich-zeitl
 Die Bearbeitung offizieller Schreiben im digitalisierten Setting ermöglicht somit MomentedesLernensundVerstehensundeinedaraufbasierendeBefähigungder jungen Menschen mit Fluchterfahrung, die durch ihre Teilnahme an der Praxis eröffnet werden. Diese Möglichkeitsräume beziehen sich sowohl auf den Erwerb sprachlich-formaler Kompetenz als auch auf den Erwerb eines auf das technische Artefakt bezogenen Wissens.
 
 Die Hervorbringung von Möglichkeitsräumen für (Bildungs-)Teilhabe in den betrachteten Arrangements stellt sich als eine verteilte Praxis zwischen menschlichen Akteur*innen,ihrennormativen(fachlichen)VorstellungenundRessourcensowiedemdigitalen Artefakt Laptop einschließlich dessen Anforderungen und Möglichkeiten dar. Deutlich werden dabei auch unterschiedliche präferierte Bearbeitungsmodi zum Erstellen der Briefe oder Umsetzung relevanter Aktionen von Sozialarbeiter*innen und jungen Geflüchteten. Während die Sozialarbeiter*innen den Einsatz des trägereigenenLaptopsinallenFällenbevorzugenundVorteilederLaptopnutzung gegenüber der Nutzung des Smartphones oder gegenüber der handschriftlichen Kommunikation betonen und den Teilnehmenden diesen auch argumentativ anpreisen (' Sozeigst du wenigstens, dass du Tippen kannst', Feldprotokoll Karim, 08/2022 ), greifendiejungenGeflüchtetengefragtnachihrenVorstellungenzurBearbeitung des Anliegens meist auf das Smartphone zurück. Auffällig hierbei ist, dass die Sozialarbeiter*innen sich zwar nach den Präferenzen des Gegenübers erkundigen, diese dann aber entweder argumentativ ablehnen und die Nutzung des Laptops zum Verfassen der offiziellen Kommunikation oder der benötigten organisatorischen Praxis (z.B. Online Banking) durchsetzen. Dies lässt die Frage nach Anschlussfähigkeit im Alltag der jungen Menschen laut werden, vor allem, wenn man die geäußerten Bedenken über den Einsatz des Laptops einbezieht. Unterschiedliche Kapitalien (vgl. Bourdieu 1997) in Form von anwendungsbezogenem digitalem Nutzungswissen und verschiedene Einstellungen gegenüber bestimmten digitalen Medien zwischen Sozialarbeiter*innen und jungen Geflüchteten sowie damit verknüpft unterschiedliche ökonomische Kapitalien im Sinne von Verfügbarkeiten bestimmter digitaler Endgeräte liegen vor. Als hemmende Faktoren für einen gelingenden Einsatz digitaler Medien im Kontext von Handlungsbefähigung sind zudem technische Herausforderungen, teilweise mangelnde Nutzungskenntnisse auf Seiten der Sozialarbeiter*innen (z.B. zu Online Banking),
+
+
+<!-- PAGE 177 -->
+
 
 aber auch fehlendes Wissen zu Nutzungskenntnissen und nicht ausreichende digitale Nutzungskenntnisse junger Menschen mit Fluchterfahrung (zum Umgang mit dem Laptop) zu nennen. Gleichzeitig wird deutlich, dass im Rahmen einer engmaschigen Anleitung durch die Sozialarbeiter*innen zwar an bereits vorhandenes Wissen angeknüpft werden kann, durch z.B. konkrete Rückfragen der Sozialarbeiter*innen (' Woher weißt du das ?'), allerdings zeigen sich so auch wenig Möglichkeiten, in denen die jungen Geflüchteten ihre Kompetenzen explorieren oder selbstbestimmt anwenden können.
 
@@ -1434,6 +2139,10 @@ Die folgende Analyse beschäftigt sich mit der Bewältigung von Herausforderunge
 
 In der Analyse der betrachteten Sequenz einer teilnehmenden Beobachtung wird der junge Geflüchtete Aloui (16 Jahre alt), der sich kurz vor dem Abschluss des erstenallgemeinenSchulabschlussesineinerPhasedesÜbergangsineine(noch)ungewisse Zukunft im berufsbildenden System befindet, zu seinem ersten Berufsberatungsgespräch bei einem Jugendhilfeträger begleitet. Die Beratung entsteht ausderNotwendigkeitderKonkretisierungseinerZukunftsperspektiven.Diedas GesprächbegleitendeVormundinundgleichzeitigehrenamtlichePatinnimmteineaktive Rolle in der Berufsorientierung ein,beispielsweise indem sie potenzielle
 
+
+<!-- PAGE 178 -->
+
+
 Ausbildungsberufe recherchiert und mit Aloui bespricht.Die Vormundin stellt eine Schnittstelle zwischen dem non-formalen institutionellen Kontext der Kinder undJugendhilfe und dem informellen Kontext des ehrenamtlichen Engagements, in dessen Rahmen sie als Patin agiert, dar.
 
 Zentrale Praktik in der Sequenz ist das Herstellen von Informiertheit und der dafürbenötigteAustauschvonInformationen(mitgebrachteUnterlagenundFragen der Beraterin zu Vorstellungen und Präferenzen des jungen Geflüchteten). Das Arrangement in den Räumlichkeiten des Berufsberatungsträgers ist durch die dominante Rolle der Berufsberaterin geprägt und strukturiert, welche Aloui bittet, von sich selbst zu erzählen, woraufhin Aloui relevante Eckpfeiler seiner Biografie benennt:
@@ -1445,6 +2154,10 @@ MitBlickaufAlouisDarstellungverweistdieBerufsberaterinaufAlouisjungesAlter, durc
 Nachdemerfertig ist, sagt die Beraterin: '16 erst - so jung!' Sie betont dies zweimal und erklärt dann, dass sie das sage, weil er noch so viel Zeit habe. Sie sagt ihm, er müsse mit 16 noch nicht wissen, was er machen will. (Feldprotokoll Aloui, 01/2020)
 
 Die Beraterin initiiert, lenkt und dokumentiert den Informationsaustausch, dieser wird durch mitgebrachte analoge Artefakte (Ausdrucke/Unterlagen) unterstützt. Die anderen Personen (Aloui; Vormundin) sind passiv reagierend beteiligt. In Abwesenheit der Beraterin ergibt sich eine andere Organisiertheit des Arrangements, in der Aloui und seine Vormundin eine aktivere Rolle einnehmen und über das Beratungsgespräch sprechen. Hierbei wird deutlich, dass die Vormundin Aloui ermutigt, Fragen im weiteren Gesprächsverlauf zu stellen; sie nutzt den Moment der Abwesenheit der Beraterin, um ihn darauf hinzuweisen. Das Arrangement, in dem sich das Beratungsgespräch realisiert, ist durch die Abwesenheit von digitalen Medien gekennzeichnet. Es sind keine digitalen Medien im Arrangement sichtbar und auch die Aktionen der Beraterin werden ausschließlich analog vorgenommen. Analogen Medien (Zeugnis, Aufenthaltsdokument, Dokumente bisheriger Berufsorientierung, Notizbuch, Flyer) kommt in der Praxis jedoch eine zentrale Rolle zu, indem über diese für das Gespräch relevante Informationeneingebrachtwerden,diedenGesprächsverlaufmitstrukturieren.Deutlich wird dies am Beispiel des Informationsflyers eines durch die Beraterin vorgeschlagenen Projekts als berufsvorbereitende Maßnahme:
+
+
+<!-- PAGE 179 -->
+
 
 AlsdieBeraterinwiederindenRaumkommt,hatsieeinenFlyerinderHand.Sielegtihnaufden Tisch und setzt sich. An [die Vormundin] Anna gewandt sagt sie: 'So, den richtigen Flyer finde ich jetzt grade nicht, aber hier da ist das Projekt dann auch drauf.' Mit einem Kugelschreiber markiert sie einen Namen und eine Adresse. Daneben schreibt sie 15 Uhr. Sie erklärt, dass man sichandiesenMannwendenkönneunddasserwirklichguteArbeitmache.(FeldprotokollAloui, 01/2020)
 
@@ -1458,6 +2171,10 @@ Bezüglich des Aufenthaltsstatus erklärt die Berufsberaterin mehrfach, dass Alo
 
 Eswirddeutlich,dasszudenAuswirkungendesAufenthaltsstatus,desAltersund des Herkunftslands unterschiedliche bzw. widersprüchliche Informationen bei
 
+
+<!-- PAGE 180 -->
+
+
 den beteiligten Akteur*innen vorliegen, welche die Praxis und den Austausch beeinflussen.Sichtbar wird,dass die Vormundin sich durch digitale Quellen weitere Informationen eingeholt hat, die konträr zu der Bewertung der Beraterin stehen. EntsprechendführtdieInformiertheitderVormundinzueinerBewertungdererhaltenen Beratungsleistung und dem Hinterfragen der Gültigkeit der Aussagen. Sie zieht ihre Informationen zu anderen auf das Herkunftsland bezogenen Fällen dabei aus dem Internet, was sie nicht weiter spezifiziert.
 
 Insgesamt zeigt sich anhand des Berufsberatungsgesprächs, wie die unterschiedlichen Einschätzungen und Zustände von Informiertheit den Austausch mitbestimmen. Aloui positioniert sich bei der Berufsorientierung nicht selbst, sondern bleibt passiv, die Anwesenheit der Vormundin hat eine für ihn unterstützende Wirkung: Es ist die Vormundin, welche Aloui zu dem Gespräch begleitet, die Informationen der Berufsberaterin hinterfragt, sich über die Bleibeperspektive von Aloui informiert und weitere Informationen zu der empfohlenen Ausbildungsmaßnahme einholt. Damit kommt der Vormundin eine ermöglichende und unterstützende Funktion für die Handlungsbefähigung Alouis zur beruflichen Orientierung zu, indem ihr Engagement dazu beiträgt, dass der junge Geflüchtete Zugang zu Informationen über ihm bereitstehende Optionen der beruflichen Orientierung erhält und er ermutigt wird, seine Fragen in dem Gespräch zu platzieren. Hier wird exemplarisch die Relevanz einer Vertrauensperson und Person mit Unterstützungsfunktion im Berufsorientierungsprozess im Sinne sozialen Kapitals (vgl. Bourdieu 1997) deutlich. Das Internet als Informationsquelle hat hierbei eine vermittelnde Bedeutung, indem hier erhaltene Informationen über die Vormundin an den jungen Menschen mit Fluchterfahrung und die Beraterin herangetragen werden.
@@ -1470,6 +2187,10 @@ In dem Gespräch werden schulische Leistungen und formale Qualifikationen in For
 
 Bewerbungenbzw.dasVerfassen von Bewerbungen stellen ein zentrales Moment in der Praxis rund um den Übergang Schule - Beruf dar, da sie als Strukturelement eines mehr oder wenig definierten Ablaufs im Bewerbungsprozess Möglichkeiten des Zugangs zum Arbeitsmarkt eröffnen können. Aus diesem
 
+
+<!-- PAGE 181 -->
+
+
 Grund ist die Auseinandersetzung mit dem Verfassen von Bewerbungen oftmals Bestandteil formaler Bildung und in schulischen Curricula verankert. Bewerbungssituationen zeigen sich in den empirischen Daten hauptsächlich entlang vonschulischenAnforderungen,insbesondereimRahmenvonPflichtpraktikafür die Schule. Teilweise vollziehen sich Auseinandersetzungen mit Bewerbungsprozessen im formalen Unterricht, beispielsweise über ein Rollenspiel im Unterricht zum ,richtigen' Verhalten in Bewerbungsgesprächen, größtenteils verlagert sich die Auseinandersetzung, welche sich aus schulischen Anforderungen ergibt, aber auf informelle Arrangements, beispielsweise beim Erledigen von Hausaufgaben. GeprägtsinddiezuerledigendenschulischenAufgabenvoneinemhohenGradan formalen Anforderungen, beispielsweise wie ein Lebenslauf auszusehen hat und aus welchen Elementen ein Bewerbungsschreiben bestehen sollte; entsprechend gestalten sich die Aufgaben, gerade auch unter der Ausgangslage begrenzter Deutschkenntnisse, damit höchst anforderungsvoll.
 
 ## Analyse
@@ -1477,6 +2198,10 @@ Grund ist die Auseinandersetzung mit dem Verfassen von Bewerbungen oftmals Besta
 Im empirischen Material zeigt sich, dass digitale Medien bei der Erstellung der Bewerbungen, aber auch bei der Recherche von benötigten Inhalten oder Adressat*innen zum Tragen kommen.Hierbeilässt sich das Erstellen von Bewerbungsunterlagen am Computer als bedeutsame Praktik rekonstruieren. Bewerbungsunterlagen wie Lebensläufe und Motivationsschreiben stellen eine Form des Erstkontakts mit Akteur*innen des Arbeitsmarkts dar und nehmen somit eine eröffnende oder einschränkende Position im Zugang zum Arbeitsmarkt ein. Gleichzeitig ist die Erstellung der Dokumente im Hinblick auf die digitale Infrastruktur, Wissen und Fähigkeiten im Umgang mit digitalen Medien und im Erstellen von BewerbungsunterlagensowiediebenötigteArtikulationsfähigkeit anforderungsvoll.
 
 Die vorliegende beobachtete Situation (Sequenz Feldprotokoll) spielt sich in einem informellen Arrangement in der Wohnung einer Freundin der zwei an der Studie teilnehmenden jungen Geflüchteten,welche Geschwister sind,ab.Die beidenverbringendorteinenTeilihrerFerien.Aussagender beiden Geschwister und auch der Freundin lassen vermuten, dass alle mit ihren Familien die gleiche Religionsgemeinschaft besuchen, weswegen sie sich selbst als 'Familie ohne Blut ' bezeichnen, was auf die empfundene familienähnliche Verbindung zwischen ihnen hindeutet. Während der Erhebung unterstützt die Freundin Bahar die zu diesemZeitpunkt fünfzehnjährige Forschungsteilnehmerin Dorkas dabei, einen Lebenslauf für eine Bewerbung zu erstellen, welche Dorkas im Rahmen eines Schulpraktikums benötigt . Hier wird deutlich, dass Anforderungen, die sich im schulischen Kontext stellen, und in diesem Fall am Übergang von Schule zu Beruf stehen,iminformellen Kontext bearbeitet werden.Zentrale Praxis ist das Erarbeiten von Bewerbungsunterlagen gemeinsam mit Peers und der Wissenstransfer zwischen den beteiligten jungen Menschen im Sinne eines voneinander Lernens. Als
+
+
+<!-- PAGE 182 -->
+
 
 bedeutsamesanalogesArtefaktistderausgedruckteLebenslaufmitBewerbungsschreiben der Freundin Bahar zu nennen, durch den die beobachtete Praxis deutlich mitgestaltet und strukturiert wird. Gleichzeitig wird deutlich, dass die analoge Vorlage nicht allein ausreicht, um die Bewerbungsunterlagen zu erstellen, sondern darüber hinaus Fragen entstehen:
 
@@ -1488,6 +2213,10 @@ Neben der digitalen Infrastruktur aus Laptop und Textverarbeitungsprogramm zum E
 
 Dann springt sie mit der Absatztaste in die nächste Zeile des Dokuments und tippt das Wort Telefonnummer ein, wie es auch in dem Lebenslauf von Bahar steht. Nach dem Doppelpunkt stockt sie und schaut Bahar an, die neben ihr sitzt. Ohne zu zögern, nimmt diese ihr rosa iPhone, dasaufdemTischnebendemLaptopliegt,undschautnacheinerHandynummer.Sieöffnetden
 
+
+<!-- PAGE 183 -->
+
+
 KontaktunddrehtdasHandysozuDorkas,dassdiesedieNummergutabtippenkann.Ichsehe, dass bei dem Kontakt ein Name steht, den ich nicht kenne. […] Dorkas [erklärt] mir, dass dies nicht ihre Nummer ist, sondern die von ihrem Vater. Sie sagt, die von ihrem Vater sei besser, weil das ein besseres Handy sei und er sein Handy immer bei sich hat. Ihr Handy hingegen sei meist zu Hause. (Feldprotokoll Dorkas, 07/2020)
 
 Später nutzt Dorkas das Smartphone ihrer Freundin Bahar als Rechercheinstrument im Internet. Diese stellt zudem ihre Bewerbungsunterlagen als Muster für den Entwurf von Bahars Unterlagen bereit. Durch das Abtippen von der Vorlage - unter Anpassung auf die eigene Bewerbungssituation - kann die junge Geflüchtete Dorkas den Entwurf der Bewerbungsunterlagen teilweise selbstständig umsetzen, ermöglicht wird dies jedoch nur durch das in der Situation vorhandene soziale Kapital. Diese erweitert zusätzlich durch ihr bereits vorhandenes Wissen und längere Aufenthaltsdauer im Sinne von bonding social capital (vgl. Putnam 2000) - also auf Basis von vertrauensvollen Beziehungen bei ähnlicher Gruppenzugehörigkeit, die Handlungsoptionen von Dorkas. Auch wird deutlich, dass die Bewerbungsunterlagen eine vorhandene E-Mail-Adresse und/oder Telefonnummer der Bewerber*innen voraussetzen. Beides ist bei Dorkas nur eingeschränkt der Fall:
@@ -1495,6 +2224,10 @@ Später nutzt Dorkas das Smartphone ihrer Freundin Bahar als Rechercheinstrument
 [Bahar]beugt sich herüber und klickt schnell auf ,Speichern' und legt dann das Dokument unter ,Lebenslauf Dorkas' auf dem Desktop ab. 'Schick ich dir per E-Mail.', erklärt sie dann Dorkas, woraufhin diese anmerkt, dass sie keine Mailadresse habe. 'Achso, dann an deine Vater-Adresse!' sagt Bahar. Ich bin mir nicht sicher, ob Dorkas Vater eine Mailadresse hat [Einschätzung Ethnografin]. (Feldprotokoll Dorkas, 07/2020)
 
 Aus dem zitierten Ausschnitt wird deutlich, dass dem Vorhandensein von digitalen Medien im Sinne von ökonomischem Kapital (vgl. Bourdieu 1997) im Bewerbungsprozess eine zentrale Rolle zukommt. Als Hürden im Erstellungsprozess der Unterlagen präsentieren sich die eingeschränkte Erreichbarkeit der jungen Geflüchteten aufgrund einer begrenzten digitalen Infrastruktur (geteilte Smartphone-Nutzung mit Bruder, keine eigene E-Mail-Adresse), mangelnde technische Nutzungskenntnisse (Tippen, Layout, Bild einfügen, Dokument abspeichern), fehlende Artefakte für die Erstellung der Bewerbung (Bewerbungsfoto) sowie ein eingeschränktes Wissen über Form, Inhalte, Normen und Regeln hinsichtlich Bewerbungsschreiben sowie über das Unternehmen und die Rahmenbedingungen des Praktikums (u.a. Zeitraum des Praktikums). Die hier angesprochenen Anforderungen (also z.B. über entsprechendes Wissen zu verfügen) sind nicht isoliert voneinander zu betrachten, sondern müssen beim Erstellen der Bewerbungsunterlagen kombiniert bzw. in Einklang miteinander gebracht werden. Die Anforderungen übersteigen die subjektive Ressourcenausstattung von Dorkas und werden teilweise aufgrund fluchtspezifischer
+
+
+<!-- PAGE 184 -->
+
 
 Besonderheiten in Dorkas Biografie sogar verstärkt (beispielsweise fehlerhafte Übertragung persönlicher Daten in das Ausweisdokument).
 
@@ -1506,6 +2239,10 @@ Erneutzeigtsich in dem gewählten Ausschnitt die zentrale Bedeutung des Smartpho
 
 Dorkas hat derweil WhatsApp geöffnet und tippt. Bahar erklärt mir, dass sie über das Foto diskutiert haben und Dorkas sich erinnert hat, dass ihr Vater auf seinem Handy Bilder von den Passbildern hat, die in der Schule gemacht wurden. Sie schreibt ihm daher bei WhatsApp und bittet ihn darum ihr das Bild zu schicken, damit sie es Bahar schicken kann und sie es dann in das Dokument einfügen kann. (Feldprotokoll Dorkas, 07/2020)
 
+
+<!-- PAGE 185 -->
+
+
 Ander Sequenz werden verschiedene Bedingungen zur situierten Bedeutung des Artefakts Smartphone im Arrangement deutlich. Zum einen wurden die Daten über die Kamerafunktion digitalisiert und wiederauffindbar gespeichert, wozu die KameraundausreichenderSpeicherplatzvorhandenseinmüssen.DesWeiteren ist das Wissen darüber, dass und wo diese Daten auf dem Smartphone gespeichert sind und wie diese abgerufen werden können, entscheidend. Durch diese Bedingungen können Daten zeit- und ortsunabhängig abgerufen werden. Über die Kommunikationsfunktion des Smartphones, in diesem Fall das Übermitteln des Bewerbungsfotos durch den Vater, können gespeicherte Daten unter der Bedingung der Erreichbarkeit, die u.a. auf einer Internetverbindung beruht - einer anderen Person über Distanzen hinweg übermittelt werden; entsprechend können die digitalen Daten somit über mehrere (potenziell sehr viele) Geräte verfügbar gemacht werden und sind somit nicht an ein Smartphone allein gebunden.
 
 In der Analyse wird somit deutlich, dass die Bewältigung im Kontext beruflicher Orientierung an der Schnittstelle von Schule und Beruf stark von dem informellen Unterstützungssystem abhängt, das zur Verfügung steht. Darüber hinaus entstehen hierbei Abhängigkeiten von Dorkas zu den anderen Beteiligten, welche über Daten, Artefakte, Nutzungskenntnisse usw. verfügen. Diese setzen sich außerhalb der beobachteten Praxis fort. So ergibt sich insbesondere aus der mangelnden persönlichen digitalen Infrastruktur (kein eigener Laptop, kein eigenes Smartphone, keine eigene E-Mail-Adresse) eine Abhängigkeit, da beispielsweise die Bewerbungsunterlagen nur auf Bahars Laptop und über die E-Mail-Adresse des Vaters, aber nicht über ihre eigene digitale Infrastruktur abgerufen werden können.
@@ -1513,6 +2250,10 @@ In der Analyse wird somit deutlich, dass die Bewältigung im Kontext beruflicher
 ## 2.2.3 Zwischenfazit
 
 Der Übergang von der Schule in den Beruf stellt einen Schritt zum Eintritt in den Arbeitsmarkt dar, welcher Auswirkungen auf die gesellschaftliche und ökonomische Position von Individuen hat. Beobachtet wurden aufgrund des Samples der Studie insbesondere frühe Momente dieses Übergangs, da sich alle Teilnehmenden in den Erhebungsphasen im allgemeinbildenden Schulsystem befanden. Dabei stellt sich der Übergang zwischen Schule und Beruf als transorganisationale Praxis dar, welche häufig aus schulischen Anforderungen hervorgeht, beispielsweise Pflichtpraktika oder schulischen Übergängen, aber in formalen (Schule), non-formalen (Jugendhilfeträger) und informellen (Freundeskreis, Familie, Religionsgemeinschaft) Kontexten bewältigt wird. Sequenzübergreifend wurde deutlich, dass im Hinblick auf die Kommunikation und Abläufe zwischen einzelnen Institutionen und Akteur*innen Brüche bestehen. So ist beispielsweise das in der Sequenz aufgesuchte Berufsberatungsangebot eigentlich nur für junge Menschen gedacht, die keine Schule mehr besuchen wie die Beraterin von Aloui bemerkt. Dies hat jedoch auch zur Konsequenz, dass kein fließender
+
+
+<!-- PAGE 186 -->
+
 
 Übergang zwischen Schule und Ausbildung erfolgen kann, wenn ein solches Angebot nicht bereits während des Schulbesuchs genutzt werden kann. Auch unterscheiden sich die an die jungen Geflüchteten gerichteten Empfehlungen der verschiedenen Akteur*innen (Sozialarbeiter*innen und Vormunde) in ihrer Ausrichtung hinsichtlich des Verbleibs in dem allgemeinbildenden System oder Übergang in das berufsbildende System stark. Zentrale Zusammenhänge im Kontext der Berufsorientierung wie die Wechselbeziehung zwischen Alter, Herkunft, Aufenthaltsstatus und Aufnahme einer Berufsausbildung in Bezug auf die Bleibeperspektive erhalten durch die Akteur*innen unterschiedliche Bewertungen.
 
@@ -1522,6 +2263,10 @@ Für die Befähigung zur Bewältigung der Anforderungen im Kontext beruflicher O
 
 Digitale Medien treten in der Praxis rund um den Übergang von Schule zu Beruf und darin eingelagert der beruflichen Orientierung unterschiedlich stark auf. So gibt es Situationen wie während des Berufsberatungsgesprächs oder in der Schule, in denen digitale Medien kaum beteiligt sind. Bei der Recherche nach geeigneten Ausbildungsberufen durch die Vormundin oder dem Entwurf von BewerbungsunterlagenhingegensinddigitaleMedienalsInformations-,Recher-
 
+
+<!-- PAGE 187 -->
+
+
 che-, Kommunikations- und Bearbeitungsmedium stark beteiligt. Beim Entwurf von Bewerbungsunterlagen tritt die digitale Infrastruktur als Artefaktverkettung aus Laptop bzw. Computer im Zusammenhang mit einem Textverarbeitungsprogramm zentral auf. Über diese Kombination wird die digitale Erstellung der Bewerbungsunterlagen erst möglich. Über die hier betrachteten Sequenzen hinaus ist anzumerken, dass im Sample bei mehreren Teilnehmenden die benötigte digitale Infrastruktur nicht vorliegt, da sie beispielsweise über keinen Laptop oder kein Textverarbeitungsprogramm verfügen. Auch hier ist es insbesondere das vorliegende Unterstützungssystem, das diese bereitstellt oder beim Erwerb dieser unterstützt. So recherchiert die Vormundin von Aloui beispielsweise nach geeigneten Laptops, kauft ein Gerät gemeinsam mit dem jungen Geflüchteten und leitet ihn später bei dem Download eines Textverarbeitungsprogramms an, sodass er eine Bewerbung erstellen kann.
 
 NebendemLaptoptrittindenvorgestelltenSequenzanalysenauchdasSmartphone in seiner erweiterten Informationsstruktur als zentrales Artefakt in Erscheinung. Beispielsweise zur Archivierung und zum Abruf von Rahmendaten zu dem Praktikum oder zu Kontaktdaten sowie zur Kommunikation mit sozialen Kontakten, die trotz räumlicher Distanz an der Praxis beteiligt werden (KommunikationmitVaterzurBeschaffungdesPassbildes,welchesaufseinemSmartphone gespeichert ist).
@@ -1529,6 +2274,10 @@ NebendemLaptoptrittindenvorgestelltenSequenzanalysenauchdasSmartphone in seiner 
 Auch werden im Übergang von Schule zu Beruf Bezüge zu der Fluchtbiografie der jungen Menschen sichtbar. Beispielsweise sind in der Berufsorientierung der Aufenthaltsstatus bzw. die Bleibeperspektive von Relevanz. So wird deutlich, dass mit dem Übergang in eine Ausbildung Hoffnungen auf eine bessere Bleibeperspektive verbunden sind. Inwiefern die Bleibeperspektive von dem Übergang in eine Ausbildung abhängt, wird von den einzelnen Akteur*innen unterschiedlich bewertet und führt zu einer unklaren Entscheidungsgrundlage für den jungen Geflüchteten.
 
 Beim Entwurf von Bewerbungsunterlagen zeigt sich zudem, dass die Bildungsbiografien der jungen Menschen mit Fluchterfahrung von den Normen und Regeln, welche die Struktur der Lebensläufe konstituieren, abweichen können und dass die falsche Übertragung personenspezifischer Daten im formalen Verfahren der Flucht (Übersetzung und Eintragung der Geburtsdaten in Ausweispapiere) wie dem Alter oder Namen zu Hindernissen beim Entwurf des Lebenslaufs führt.
+
+
+<!-- PAGE 188 -->
+
 
 ## 2.3 Pädagogische Auseinandersetzungen über Medien: Medienkritik im Zuge von Social Media als (medien-)pädagogischer Anspruch und Theoriefolie
 
@@ -1541,6 +2290,10 @@ Mit Blick auf theoretische Verknüpfungen spiegelt sich bei den Pädagog*innende
 ## Sequenz 1: Gespräche über Medien in der Schule
 
 In der Schule werden digitale Medien in der hier betrachteten Sequenz im Deutschunterricht einer Regelschule thematisiert, wobei die Nutzung von Social Networks im Fokus steht. Die Lehrkraft leitet das Thema mit einer Abbildung im Schulbuch ein. Daraufhin erfolgt im Unterrichtsgespräch zum einen eine Auseinandersetzung mit Wissensinhalten, z.B. zu den Funktionalitäten und Unterschieden der sozialen Netzwerke. Zum anderen wird eine Netiquette für eine sichere und sozial adäquate Nutzung von Social Networks erarbeitet.
+
+
+<!-- PAGE 189 -->
+
 
 ## Sequenz 2: Gespräche über Medien in der Kinder- und Jugendhilfe
 
@@ -1558,6 +2311,10 @@ Die folgende Sequenzanalyse eines Feldprotokolls stellt einen Ausschnitt aus ein
 
 Bezeichnend für dieses Unterrichtsgespräch ist das Thematisieren eines vor allem im informellen Alltagskontext angesiedelten Gegenstands von Jugendlichen -nämlich Social Media - im formalen Kontext der Schule. Den Einstieg der Unterrichtseinheit bildet die Auseinandersetzung mit einer Illustration im DeutschLehrbuch zur Facebook-Nutzung. Die Klassenlehrerin (KL) fragt die Schüler*innen (SuS) zunächst, was dort abgebildet sei. Ein*e Schüler*in antwortet: ' Die sitzen am Computer. Die surfen. Facebook ' (Feldprotokoll Henok, 09/2019). Daran schließt sich ein Gespräch im Plenum über soziale Netzwerke an. Auf die Frage, welche sozialen Netzwerke die Schüler*innen kennen, benennen diese neben Facebook nochInstagramundSnapchat.AufNachfrageführendieSchüler*innenverschiedene Funktionalitäten sowie Unterschiede zwischen den Anwendungen auf:
 
+
+<!-- PAGE 190 -->
+
+
 SuS: 'Mit Facebook kann man auch jemand anrufen und folgen halt, wenn er ganz wo anders wohnt!'Sitznachbarin:'NajaundStories.MankannhaltStoriesmachenmitInsta.'(Feldprotokoll Henok, 09/2019)
 
 Die Jugendlichen zeigen sich an dieser Stelle und über die gesamte Sequenz hinweg als Expert*innen hinsichtlich der Funktionalitäten von Social Networks. Hieran anknüpfend stellt die Lehrkraft auf Unterschiede in der Mediennutzung junger bzw. jugendlicher und älterer Mediennutzer*innen fest und weist den Schüler*innen - in Abgrenzung zu sich selbst als älterer Mediennutzerin - einen Expert*innen-Status zu. Hierbei fordert sie die Schüler*innen immer wieder auf, Begriffe wie Stories, Instagram oder Influencer zu erklären, wobei die von ihr gespielte Unwissenheit als didaktisches Mittel interpretiert werden kann, um eine aktive Auseinandersetzung der Schüler*innen mit der Thematik und die Fähigkeit, Sachverhalte zu erklären, anzuregen: ',Erklär mir das!', sagt KL zum wiederholten Mal. ,Ich bin eure alte Lehrerin und kenne nichts'' (Feldprotokoll Henok, 09/2019) . Die Schüler*innen benennen daraufhin die finanziellen Anreize für Influencer*innen und imitieren die direkte und jugendspezifische Ansprache von Influencer*innen der ihnen bekannten Videos:
@@ -1571,6 +2328,10 @@ ImPlenumbenennen die Schüler*innen, wie man in sozialen Netzwerken sicher agier
 Auf die Antworten der Schüler*innen reagiert die Lehrkraft mit Nachfragen, die zu detaillierteren Erklärungen auffordern: Der Schüler nimmt in seiner Antwort entsprechend Bezug zum Thema Desinformation in digitalen Medien und zum Thema Urheberrecht.
 
 In der fortlaufenden Diskussion über Freundschaften in Social Media nutzt die Lehrkraft einen lebensweltorientierten Vergleich: Ein Passwort sei wie ein Haustürschlüssel, den die Schüler*innen benötigen, damit niemand ungewollt in die Wohnung hineinkomme, um das Thema Sicherheit im Netz greifbar zu machen. Anhand eines solchen einfach nachvollziehbaren Vergleichs werden Bezüge zur Lebenswelt aller Schüler*innen hergestellt.
+
+
+<!-- PAGE 191 -->
+
 
 Im Plenum wird weiter auf Social Media-Profile eingegangen. Zur Erläuterung, was Privatsphäre mit Blick auf ein Social Media-Profil bedeute, führt die Lehrkraft exemplarisch das Recht am eigenen Bild an:
 
@@ -1598,6 +2359,10 @@ ImFolgenden sollen zentrale Ergebnisse der Sequenzanalyse anhand von drei Aspekt
 
 Die Lehrkraft entscheidet maßgeblich über die inhaltliche Schwerpunktsetzung des Unterrichts, welches u.a. durch die KMK-Strategie Bildung in der digitalen
 
+
+<!-- PAGE 192 -->
+
+
 Welt (2017) und die hier festgeschriebene Vermittlung von Medienkompetenz an Schüler*innen als Bestandteil von schulischer Bildung zentral festgelegt und jeweils durch die Länder curriculare Rahmungen erfährt. Entsprechend wird das Thema auch im eingesetzten Lehrbuch aufgegriffen. Zur Auseinandersetzung mit Social Networks setzt sie als Unterrichtsmaterialien verschiedene Texte ein, welche gelesen und im Plenum sowie auch in Partner*innenarbeit besprochen werden. In Kleingruppenarbeit und anschließend dann wieder gemeinsam im Plenum erfolgt die Erstellung einer Netiquette für ein sicheres und sozial verträgliches Agieren im Internet bzw. in Social Networks. Es werden also entsprechend verschiedene Sozialformen gewählt, in denen sich die Schüler*innen im gesamten Klassenverband mit der Lehrkraft oder auch mit einzelnen Schüler*innen austauschen. Als digitales Artefakt im Klassenraum ist ein Interactive Whiteboard vorhanden, auf dem die Lehrkraft die Netiquette festhält. Über den Bildschirm vermittelt sind die von den Schüler*innen erarbeiteten Inhalte für alle Schüler*innen einsehbar und nachvollziehbar.
 
 ## Unterrichtsinhalte und Aktivierung der Schüler*innen
@@ -1607,6 +2372,10 @@ In der Unterrichtseinheit wird auf verschiedene soziale Netzwerke eingegangen: F
 ## Verortungen hinsichtlich Medienkunde und Medienkritik
 
 In der Unterrichtssequenz lassen sich deutliche Bezüge zum MedienkompetenzKonzept nach Baacke (1996) ziehen. Zum einen mit Blick auf Medienkunde und ein Wissen über Medieninhalte und Funktionalitäten von Social Networks (in-
+
+
+<!-- PAGE 193 -->
+
 
 formative und instrumentell-qualifikatorische Dimension); vor allem aber auch mit Blick auf Medienkritik und eine damit einhergehende Reflexion des eigenen Medienverhaltens, das die Lehrkraft anzuregen sucht. Im Fokus der Unterrichtseinheit stehen Möglichkeiten einer aus Sicht der Lehrkraft adäquaten Nutzungsweise von Social Media. Dies betrifft zum einen die eigene Sicherheit und den Schutz der eigenen Person und Daten (z.B.durch Passwörter),aber auch die ethische Dimension von Medienkritik, 'die analytisches Denken und reflexiven Rückbezug als sozialverantwortet abstimmt und definiert' (vgl. Baacke 1996), indem auf die ThemenCyberbullying (mit Blick auf die im Unterricht erarbeitete Netiquette ' Punkt 4: Vermeide Mobbing; Punkt 6: Keine Beleidigungen; Thema Hassgruppen im Internet im Unterrichtstex t' ) und die Rechte anderer Mediennutzer*innen (Recht am eigenen Bild; Urheberrechte; u.a. Netiquette 'Punkt 5: Keine Fotos ohne Zustimmung der Anderen' ) abgestellt wird. Insgesamt verbleibt es jedoch bei einer kurzen und allgemeinenAuseinandersetzung mit potenziellen Risiken und Herausforderungen im Kontext einer Social Media-Nutzung. Ein individueller Austausch zwischen Lehrkraft und Schüler*innen zu risikobehafteten Situationen im Kontext der Mediennutzung der einzelnen Schüler*innen bleibt im Plenum aus. Möglicherweise finden in den Partner*innen- und Gruppenarbeitsphasen solche Gespräche zwischen den Schüler*innen statt; dies entzieht sich jedoch der Kenntnis der Lehrkraft und kann entsprechend nicht von dieser in der pädagogischen Interaktion aufgegriffen werden.
 
@@ -1619,6 +2388,10 @@ Im Folgenden wird auf den Bildungskontext der Kinder- und Jugendhilfe geblickt. 
 ## Analyse
 
 Das Gespräch zwischen Karim und Lara entsteht im non-formalen Setting der Kinder- und Jugendhilfe, thematisiert aber informelle und für Karim lebensweltlich relevante Themen der Mediennutzung. Das Gespräch ist nicht geplant, son-
+
+
+<!-- PAGE 194 -->
+
 
 dern entsteht aus einer Konversation über Karims Ferienpläne und die mit der COVID-19-Pandemie verbundenen Reisebestimmungen:
 
@@ -1634,6 +2407,10 @@ Karim: 'Man sagt kommt von Fledermaus, aber die haben immer Fledermäuse gegesse
 
 Hieraus entsteht ein Austausch über Karims Mediennutzung und seine Informationsbeschaffung, wobei Lara wiederholt für mögliche Desinformationen in Social Media zu sensibilisieren sucht. Hierbei betont sie immer wieder, dass man auf die Quellen achten müsse, bevor man auf ,Verschwörungstheorien' hereinfalle: 'Quellen checken, das kann ich nur wiederholen. Es ist wichtig, zu gucken, von wem das kommt.' (ebd.) Auf die Nachfrage von Karim, was ,Verschwörungstheorien' seien
 
+
+<!-- PAGE 195 -->
+
+
 - der Begriff ist ihm nicht geläufig - schaut Lara die Ethnografin an und diese erklärt es kurz in einfachen Worten. Daran anknüpfend verweist die Sozialarbeiterin darauf, dass Personen die Unsicherheiten der Menschen für ihre Ideologien ausnutzen könnten und deswegen falsche Informationen verbreiten.
 
 Lara versucht sich der Anregung von Medienkritik - hier konkret mit Blick auf Desinformationen via Social Media - anzunähern, indem sie Fragen zu Karims medienbezogenen Informationsstrategien stellt. Karim entnimmt seine Informationen vor allem aus Social Media-Videos und deutet hierbei zumindest teilweise eine Skepsis gegenüber einigen Inhalten an:
@@ -1643,6 +2420,10 @@ Lara versucht sich der Anregung von Medienkritik - hier konkret mit Blick auf De
 Hierbei begegnet er offensichtlich Inhalten mit unterschiedlich gearteter Qualität, kann selbst jedoch nicht hinreichend hinsichtlich deren Glaubwürdigkeit differenzieren, was sich auch darin widerzuspiegeln scheint, dass Karim in seinen eigenen Ausführungen zu Corona sich widersprüchlich äußert: So demonstriert er Lara auf Nachfrage Inhalte auf TikTok über sein eigenes Smartphone und darunter sind wiederum scheinbar seriöse Daten zu aktuellen Infizierten-Zahlen hinsichtlich Corona. Lara scheint bis dato nicht mit TikTok als aktuellem und von vielen Jugendlichen präferiertem sozialen Netzwerk vertraut zu sein; sie verfügt über wenig Kenntnisse zur Anwendung: ' Mit TikTok habe ich mich noch nicht beschäftigt' (ebd.). Sie erkundigt sich offen und interessiert bei Karim nach den FunktionalitätenderAppsowieseinemNutzungsverhalten,sodassKarimausseiner Medienerfahrung heraus berichtet. Karim nimmt hier, ähnlich wie die Schüler*innen in der zuvor betrachteten Sequenz zu Gesprächen über Medien in der Schule, einen Expertenstatus ein - jedoch mit dem Unterschied, dass Lara - im GegensatzzurLehrkraftinderanderenSequenzkeinegespielte,sonderneinetatsächliche Unwissenheit aufweist. In seinem Nutzungsverhalten zeigt sich Karim insofern kompetent, als dass er Lara gezielt Inhalte auf TikTok zeigt oder davon berichtet (z.B. PowerPoint-Präsentationen zum Klimawandel auf TikTok; Videos in Form eines 1-Minute-Jura-Formats mit Fragen wie ' Darf der Arbeitgeber mir sagen, ich darf kein Kopftuch tragen?', das Karim gerne anschaut) und ihr verschiedene Funktionen sowie hintergründige Mechanismen erklärt (z.B. Geld verdienen über TikTok).) Auffällig ist dabei Laras wiederholte Nachfrage nach potenziellen (von ihr mutmaßlich begrüßten) Lerninhalten mit Blick auf die Schule. Dabei scheinen solche Medieninhalte von Lara als ,sinnvoll' empfunden zu werden, die mit klassischen Wissensbeständen und damit verbunden auch mit einer klassischen Wissensvermittlung über Texte einhergehen:
 
 Lara [allgemein bezogen auf TikTok]: 'Gibt es viel zum Thema Schule?' Karim: 'Ja, sehr viele Informationen.'
+
+
+<!-- PAGE 196 -->
+
 
 Lara: 'Lernt man da richtig etwas?'
 
@@ -1662,6 +2443,10 @@ MitBlickaufKarimsAussagenzuseinemMediennutzungs-undMedieninformationsverhalten w
 
 Die Sozialarbeiterin sieht angesichts von Karims Medieninformationsverhalten die Notwendigkeit, ihm Wissen zum kritischen Umgang mit Medien zu vermitteln und versucht, dahingehend einen Reflexionsprozess auf Karims Seite anzuregen. Eine zentrale Rolle für das Gespräch nimmt dabei der Lebensweltbezug ein. Karims privates Mediennutzungsverhalten ist Auslöser des Gesprächs und die Möglichkeiten zum Wissenserwerb, die sich ihm durch Social Media eröffnen, haben daher für ihn auch insbesondere alltägliche Relevanz. Als limitierender Faktor für die Herstellung von (Bildungs-)Teilhabe - hier über die Anregung von Medienkritik und Reflexionsprozessen - wirkt jedoch, dass Lara zwar die Wichtigkeit des ,Quellencheckens' betont, aber keinerlei Strategien oder auch medienpädagogische Informationsquellen (z.B. Materialien von Klicksafe 2023 o.ä.) dazu benennt, wie man seriöse Quellen von Desinformationen in digitalen Medien unterscheidet. Hier mangelt es entsprechend an fundierten (medien-)pädagogischen Kenntnissen zur Sensibilisierung für Desinformationen aufseiten der Pädagogin, sodass sie solche Informationen entsprechend nicht an den
 
+
+<!-- PAGE 197 -->
+
+
 jungen Geflüchteten weitergeben kann. Das Gespräch zwischen Karim und Lara endet offen, ohne Lösung oder Vereinbarungen, weshalb auch keine Aussagen darüber getroffen werden können, inwiefern Karim über das Gespräch hinaus sein Mediennutzungsverhalten reflektiert oder adjustiert.
 
 Mit Blick auf eine anvisierte Lebensweltorientierung können im Zuge der Sequenzanalyse verschiedene Bedingungen als relevant rekonstruiert werden, um Medienkritik ausgehend von den Medienerfahrungen der jungen Geflüchteten über die pädagogische Interaktion anzuregen zu suchen und damit auch (Bildungs-)Teilhabe potenziell fördern zu können: Hier zeigt sich die Bedeutung des individuellen Gesprächs zwischen dem jungen Geflüchteten und der pädagogischen Fachkraft sowie damit verknüpft die Offenheit aus der privaten Nutzung zu berichten und schlichtweg die Erfahrungen zu teilen als notwendige Bedingung. Des Weiteren ist auch die Notwendigkeit der Auseinandersetzung mit aktuellen Medienkulturen und präferierten Medien(-inhalten) von Jugendlichen aufseiten der pädagogischen Fachkräfte zentral.
@@ -1669,6 +2454,10 @@ Mit Blick auf eine anvisierte Lebensweltorientierung können im Zuge der Sequenz
 ## 2.4 Lehren und Lernen mit digitalen Medien im Schulunterricht
 
 ImFolgendenwirddasdigitalisierteBildungsarrangementderSchuleuntereiner Fokussierung auf den Bereich der Mediendidaktik im Schulunterricht betrachtet. Unter Mediendidaktik verstehen wir den pädagogisch-intentionalen Einsatz von (hier digitalen) Medien aufseiten von Lehrenden, um spezifische inhaltsbezogene Lernziele zu erreichen und Wissensinhalte zu vermitteln. Es geht somit um den Einsatz von Medien in Lehr- und Lernprozessen und die Gestaltung mediengestützter Lernangebote (vgl. Kerres 2022, S. 105). Im Sinne einer praxeologischen methodologischen Ausrichtung ist Lernen hierbei jedoch nicht '[…] auf den Erwerb praktikenspezifischer Kompetenzen' zu reduzieren, sondern meint 'ein[en] Prozess der Teilnahme an Praktiken' (Alkemeyer/Buschmann 2017, S. 278). Im Zuge der Analyse kommt neben den Beobachtungen im Feld auch den Interviewergebnissen der menschlichen Akteur*innen (Schüler*innen und Pädagog*innen) eine zentrale Bedeutung zu, durch welche die Beobachtungen in der Praxis durch subjektive Einordnungen ergänzt werden. Diese ermöglichen Aufschlüsse über (auch ambivalente) Zuschreibungen an digitale Artefakte zu gewinnen;desWeiterenlassensichmitBlickaufdas DistanceLearning imRahmen der COVID-19-Pandemie Zusammenhänge zwischen einem verstärkten digital gestützten Lernen und sozialer Ungleichheit rekonstruieren.
+
+
+<!-- PAGE 198 -->
+
 
 ## 2.4.1 Lehrkräfte als Gatekeeper digitaler Medien im Unterricht: Einbindung in den Unterricht und Zuschreibungen der Lehrkräfte
 
@@ -1684,6 +2473,10 @@ DemSmartphonederSchüler*innenkommteinezentraleBedeutungfürdenUnterricht zu (ge
 
 Das Smartphone wird im schulischen Kontext von den Lehrkräften immer wieder als prinzipielle Gefährdungs- oder Ablenkungsquelle für den Unterricht bewertet, dies wird oft in Zusammenhang mit einem generellen Nutzungsverbot an der Schule thematisiert. Dies besteht an den meisten Schulen, wird jedoch in sehr unterschiedlichem Maße umgesetzt. Nahezu schulübergreifend wird
 
+
+<!-- PAGE 199 -->
+
+
 deutlich, dass das bestehende Smartphone-Verbot dann aufgehoben wird, wenn das Smartphone im Unterricht für schulische Zwecke genutzt wird:
 
 'Weil wir auch bei uns Handyverbot haben, auch in der Pause und im Unterricht, es sei denn die Lehrkrafterlaubtesausdrücklich.WennÜbersetzungengemachtwerdensollen,dieLaptopsbesetzt sind oder die iPads gerade nicht da sind oder so, aber dann ist es auch in meinen Augen die Pflicht der Lehrkraft, darauf zu achten, dass das Handy auch nur dafür benutzt wird.' (Interview Frau Müller 10/2019)
@@ -1698,6 +2491,10 @@ Um die private Smartphone-Nutzung der Schüler*innen im Schulkontext, das heißt
 
 'UndwenndieSchülererwischt werden außerhalb von solchen Situationen oder außerhalb des Bereiches auf dem Schulhof, in dem sie ihr Handy nutzen können, dann wird das Handy eingesammelt und sie bekommen es erst am Ende des Schultags zurück.' (Interview Frau Brandt, 07/2020)
 
+
+<!-- PAGE 200 -->
+
+
 ## 2.4.2 Sequenzanalyse: Einsatz der Lern-App Anton in Schulklassen für junge Geflüchtete
 
 Im Folgenden werden das Lehren und Lernen mittels der Lern-App Anton in den Blick genommen, welche im Feld zum Spracherwerb in Schulklassen für Geflüchtete von Seiten der Lehrkräfte eingesetzt wurde. Vorgestellt werden zwei Sequenzanalysen teilnehmender Beobachtungen mit ähnlich gelagerten Bildungsarrangements an einer Schule, die an eine Erstaufnahmeeinrichtung gekoppelt ist und an welcher Deutsch als Zweitsprache (DaZ)-Unterricht für geflüchtete Schüler*innen unterrichtet wird. Über die komparative Gegenüberstellung der Sequenzen lassen sich Möglichkeitsräume und Bedingungen für Bildungs- und Teilhabeoptionen rekonstruieren.
@@ -1709,6 +2506,10 @@ Während der Feldaufenthalte wurde die Lern-App Anton über das iPad als digital
 Zentrales Charakteristikum des Unterrichts an der Schule der Erstaufnahmeeinrichtung ist die große Heterogenität der Schüler*innenschaft: Dies gilt für das Alter, die Herkunft, die Sprachkenntnisse (des Deutschen wie auch anderer Sprachen) sowie auch die Erfahrungen und Fähigkeiten der jungen Geflüchteten im Umgang mit digitalen Medien.
 
 Die App Anton wurde von den Lehrkräften unter der pädagogischen Intention eingesetzt, dass die Schüler*innen ihre deutschen Sprachkenntnisse verbessern.SowohlmitBlickaufdieBewältigungdesAlltagsalsaucheinenangestrebten Übergang in das Regelschulsystem mit daraus resultierenden verbesserten Ausbildungs- und Arbeitsmöglichkeiten ist der Erwerb von deutschen Sprachkennt-
+
+
+<!-- PAGE 201 -->
+
 
 nissen zentral (vgl. AUBI-Plus o.J.). Sprachlern-Apps versprechen in diesem Zusammenhang,u.a.durchindividualisierte Aufgabenstellungen und Feedback,zu unterstützen (vgl. zur digitalen Leseförderung mit Anton, Viertel/EhrenspeckKolasa/Spies 2017).
 
@@ -1726,6 +2527,10 @@ In der Analyse werden Unterrichtssequenzen gegenübergestellt, in welchen jeweil
 
 In der Sequenz wird einem jungen Geflüchteten in den DaZ-Unterricht gefolgt. Von den zwei Lehrkräften wirkt eine als zentrale Lehrkraft, die andere als unterstützende Lehrkraft, welche an diesem Tag nur für zwei Stunden aushilft. An derUnterrichtsstundenehmeninsgesamtzwölfSchüler*innenteil.Währendvier Schüler*innen am iPad mit Anton arbeiten, wird die restliche Klasse im Klassenverbandunterrichtet.Aus der Sequenzanalyse lässt sich ein geringer Grad an Vorbereitung durch die zwei beteiligten Lehrkräfte im Hinblick auf den Einsatz des iPads und der App ableiten. Die Absprachen zum Geräteeinsatz erfolgen erst im Unterricht selbst und es besteht Unsicherheit, ob überhaupt auf die Geräte zugegriffen werden kann:
 
+
+<!-- PAGE 202 -->
+
+
 'Was ist nun mit den iPads?', fragt LK1 HLK2 (Hilfslehrkraft 2). 'Ja, weiß ich jetzt auch nicht. Geh du doch am besten mal rüber und frag, ob wir so vier haben können.' […] Beide LKs unterhaltensichdarüber,obdieiPadsgeladensind,wasHLK2bejaht.(FeldprotokollNabil,08/2019)
 
 Im Rahmen der Unterrichtsvorbereitung fand von Seiten der Lehrkräfte weder eine Vorauswahl der Lernaufgaben statt; noch wurde die Bewältigung des Anmeldeprozesses der Schüler*innen in der App vorbereitet. Zudem zeichnen sich die Lehrkräfte durch einen Mangel an Kenntnissen im Hinblick auf die App aus: Die Lehrkraft, die maßgeblich die Unterrichtssituation gestaltet, kennt die Anwendung nur oberflächlich, die Hilfslehrkraft hingegen überhaupt nicht.
@@ -1733,6 +2538,10 @@ Im Rahmen der Unterrichtsvorbereitung fand von Seiten der Lehrkräfte weder eine
 Darüber hinaus zeigt sich während der Unterrichtsstunde ein geringer Grad pädagogischer Begleitung durch die Lehrkräfte. Dies beläuft sich darauf, dass die primär zuständige Lehrkraft die Geräte austeilt, eine Unterstützung bei der Auswahl geeigneter Aufgaben, eine Überprüfung, inwiefern die Aufgaben dem Lernniveau der Lernenden entsprechen oder Feedback zu dem Bearbeitungsmodus der Schüler*innen werden nicht gegeben.
 
 Folglich sind die Schüler*innen bei der BearbeitungderAufgabengrößtenteils auf sich allein gestellt. Wenngleich die basale Anwendung des iPads (Einschalten, Auswahl der Anwendung) von den Schüler*innen problemlos bewältigt wird, zeigen sich in Verbindung mit der Arbeit in der App Herausforderungen und auch dezidierte Einschränkungen hinsichtlich des Möglichkeitsraums für den Spracherwerb: Die Schüler*innen durchlaufen den Anmeldeprozess in deutscher Sprache. Hierbei hätte zwar auch eine andere Sprache in der Anwendung ausgewähltwerdenkönnen,diesmussjedochaktivdurchden*dieNutzer*inangeklickt werden. Im Zuge der Anmeldung müssen die Lernenden u.a. eine Klassenstufe und ein Unterrichtsfach auswählen - hierauf basierend schlägt die App automatisch Lernaufgaben vor. Zu beobachten war, dass die Schüler*innen überwiegend das Fach Deutsch und die dritte Klassenstufe auswählten, vermutlich weil sie der dritten Lerngruppe der Erstaufnahmeeinrichtung zugeteilt waren. Dementsprechend wurden von der Anwendung Lernaufgaben für das Lernniveau ,Deutsch dritte Klassenstufe' vorgeschlagen anstatt ,Deutsch als Zweitsprache' - hieraus lässt sich schließen, dass weder Lernende noch Lehrende die Einstellung 'Deutsch als Zweitsprache' kennen. Für eine Lehrkraft bestätigte sich diese Annahme explizit im Gespräch mit den Forschenden. Weiter konnte beobachtet werden, dass die Schüler*innen viele falsche Antworten abgaben, die von der Anwendung entsprechend markiert wurden. Die Bearbeitung durch die Schüler*innen schien willkürlich zu erfolgen bzw. so lange, bis die korrekte Antwort nach mehreren Durchgängen der Übung durch das digitale Artefakt bestätigt wurde. Der im Artefakt enthaltene Gamification-Ansatz (vgl. Piñero Charlo et al. 2022) scheint ein solches Vorgehen zu verstärken:
+
+
+<!-- PAGE 203 -->
+
 
 [Es] macht […] den Anschein, dass die SuS sich nahezu wahllos durch die Übungen klicken oder nachdemPrinzip,trialanderror'dieÜbungnacheinemgemachtenFehlerimmerkomplettwiederholen, um sie fehlerfrei zu bestehen und dann mit den Punkten, die man bei einer fehlerfreien Übung erhält, ein Spiel spielen zu können. (Feldprotokoll Nabil, 08/2019)
 
@@ -1745,6 +2554,10 @@ Die dargestellten Herausforderungen in der betrachteten Sequenz erfordern auch e
 In der nun gegenüberzustellenden Sequenz 2 besteht eine ähnliche Ausgangslage hinsichtlich Unterrichtsziel und Voraussetzungen der Schüler*innen. Die hier gewähltepädagogischeRahmungdurchdieLehrkraftwirktjedochalsvermittelnder Faktor zwischen den Anforderungen der Anwendung und den Voraussetzungen der Lernenden.
 
 In Sequenz 2 wird im Rahmen einer teilnehmenden Beobachtung ein Deutsch als Zweitsprache -Unterricht derselben Erstaufnahmeeinrichtung wie in der ersten Sequenz aufgesucht. Die Klasse - bestehend aus ca. 15 Jugendlichen - wird von zwei Lehrkräften betreut. Eine Lehrkraft hat den Unterricht maßgeblich konzipiert und vorbereitet und nimmt auch im Unterricht selbst die zentrale Lehren-
+
+
+<!-- PAGE 204 -->
+
 
 denrolle ein, entsprechend beziehen sich die folgenden Ausführungen vor allem auf diese Lehrkraft. Die andere Lehrkraft agiert in der Lehrsituation als unterstützende Kraft. Nach einer Einführung in die Arbeit mit der App, die zweisprachig auf Deutsch und Englisch abläuft, sodass auch Schüler*innen mit geringen Deutschkenntnissen potenziell erreicht werden können,erhalten alle Schüler*innen ein iPad für die Arbeit mit der Anton App.
 
@@ -1759,6 +2572,10 @@ Deutlich wird zudem die intensive Auseinandersetzung mit den Lernaufgaben und da
 GrenzendesEinsatzesbestündenlautderLehrkraftzudemdarin,dassdieseüber zu wenig zeitliche Ressourcen verfüge, die durch die Schüler*innen bearbeiteten Übungen zu kontrollieren und so individuelle Schwachstellen herauszuarbeiten und besser individuell zu fördern.
 
 Insgesamt gibt die Lehrkraft an, dass sie mit der App sehr zufrieden sei. So scheint die App vor allem vor dem Hintergrund des heterogenen und teilweise nicht vorhersehbaren Unterrichtssettings von Relevanz zu sein: Die Herausforderung, die aus der besonderen hier vorliegenden Schulform resultiert (in großer Anzahl wechselnde Schüler*innen; vor Unterrichtsbeginn oft nicht bekannt, welche Schüler*innen nicht mehr teilnehmen), wirkt auf der einen Seite als limitierender Faktor für die Schaffung von Bildungsräumen, da die Lehrkraft nie sicher weiß, welche Klassenzusammensetzung sie am nächsten Unterrichtstag erwartenkann.AndererseitsermöglichtdasArrangementineinerVerknüpfungaus technischemEquipmentundeinerindividualisiertenVorbereitungdieBereitstel-
+
+
+<!-- PAGE 205 -->
+
 
 lung individueller Lernsettings, sodass potenziell den hochheterogenen Bedarfen und Wissensständen der einzelnen Schüler*innen begegnet werden kann.
 
@@ -1778,11 +2595,19 @@ So sind die Schüler*innen in Sequenz 1 in der Unterrichtssituation überwiegend
 
 In Sequenz 2 erfolgt eine individualisierte Unterrichtsvorbereitung, die an den Kenntnisständen der Schüler*innen ansetzt und eine intensive Auseinandersetzung mit den Möglichkeiten und Grenzen der App durch die Lehrkraft umfasst; dieses analytische Explorieren der App durch die Lehrkraft schafft für
 
+
+<!-- PAGE 206 -->
+
+
 diese erst die Bedingung, einschätzen zu können, was die App inhaltlich leisten kann und für welche Aufgaben(-typen) sie genutzt werden kann. Statt eines Trial andError-Prinzips wieinSequenz1könnendieSchüler*inneninSequenz2beiden deutlich präsenteren Lehrkräften (Herumgehen im Klassenraum) Nachfragen stellen, sodass eine auf die Heterogenität der Lernenden und spontan auftretende Herausforderungen abgestellte Unterstützung erfolgen kann. Des Weiteren wirkt das digitale Artefakt der App selbst als Akteur im Lerngeschehen, indem es in Wechselwirkung mit anderen Bedingungen des Arrangements spezifische Nutzungsformen darlegt: So ist davon auszugehen, dass die Schüler*innen in Sequenz1dasLernniveau'Klasse 3'in der App auswählen,da sie erstens Klassenstufe 3 der Schule besuchen (die numerische Zuordnung ist jedoch altersbezogen und bezieht sich nicht auf das sprachliche Lernniveau) und zweitens da die Auswahlmöglichkeit ,Deutsch als Zweitsprache' aufgrund der Navigationsstruktur der App nur schwer auffindbar ist.
 
 ## 2.4.3 Zwischenfazit: Hohe Voraussetzungen an Pädagog*innen hinsichtlich Vorbereitung und pädagogischer Begleitung in digital gestützten pädagogischen Lehr-/Lernsettings
 
 Die betrachteten Sequenzen verdeutlichen, dass ein Medieneinsatz nur um des Einsatzes wegen sich nicht automatisch förderlich auf den Möglichkeitsraum für Bildungs- bzw. in diesem Fall explizit Lernprozesse und damit auch (Bildungs-)Teilhabe auswirkt - ein Ergebnis, das ja auch seit Jahren hinsichtlich Meta-Analysen zum E-Learning bekannt ist (vgl. Kerres/Preußler 2015, S. 34f.). Eine entsprechende Vorbereitung und Begleitung des Einsatzes im pädagogischen Arrangement durch die Pädagog*innen, welche auch eine dezidierte intensive Auseinandersetzung mit dem Artefakt in seiner Funktion als Akteur in Bildungsarrangements mit technischen Logiken und Präkonfigurationen sowie Konfigurationsmöglichkeiten und damit auch mit Möglichkeiten und Begrenzungen umfasst, ist dringend erforderlich. Ansonsten kann es dazu kommen, - wie die Beobachtungen im Feld einschließlich der Trial and Error-Strategie der Schüler*innen in Sequenz 1 nahelegen, die an eine falsche Auswahl des Sprachniveaus in der App gekoppelt sind - dass zwar ein Medieneinsatz unter einer spezifischen pädagogischen Intention der Lehrkräfte erfolgt, z.B. die App Anton zumErlernen der deutschen Sprache über iPads im Unterricht eingesetzt wird die Voraussetzungen für eine Förderung des Spracherwerbs unter dem Einsatz des Artefakts jedoch denkbar schlecht sind. Auch die individualisierte Auswahl der Lernaufgaben für die einzelnen Schüler*innen entsprechend ihres jeweiligen Sprachniveaus erfordert eine intensive Auseinandersetzung aufseiten der Lehrkraft: zunächst mit den Sprachkenntnissen der Schüler*innen und dann mit adäquat auszuwählenden Lernaufgaben in der App, die ggf. noch durch weiteres (evtl. auch analoges) Material zu ergänzen sind. Hinzu kommt die notwendige
+
+
+<!-- PAGE 207 -->
+
 
 technische Infrastruktur, welche die Institution respektive die Lehrkraft bereitstellen muss; dies umfasst mit Blick auf die Vorteile von individualisierten Lernaufgaben auch die Erstellung von Schüler*innenprofilen in der App bzw. eine Zuordnung und Verteilung der möglichst passgenauen Aufgaben über die digitalen Artefakte an die jeweiligen Schüler*innen.
 
@@ -1797,6 +2622,10 @@ Die LK berichtet, dass während in anderen Klassen [mit Schüler*innen ohne Fluc
 Dass auch Schüler*innen ohne Fluchterfahrung vom Einsatz des Smartphones für die eigenständige Aufgabenbearbeitung profitieren können und dabei möglicherweise auch Wege und Anwendungen wählen könnten, welche die Lehrkraft nicht bedacht hat (u.a. gestalterisch produktiver Umgang mit digitalen Medien), scheinendieLehrkräftekaumzusehenoderaufgrundderSorge,dassSchüler*innen sich nicht mit den eigentlichen Unterrichtsinhalten auseinandersetzen, zu ignorieren.
 
 Es wird deutlich, dass die Bewertungen des Artefakts Smartphone im formalen Bildungskontext Schule die sich darin vollziehende Praxis mitgestalten. Hier sind es ausschließlich die Lehrkräfte,die über die Sinnhaftigkeit des Einsatzes für unterrichtsbezogene Zwecke entscheiden; entsprechend werden diese zu Gate-
+
+
+<!-- PAGE 208 -->
+
 
 keepern hinsichtlich digitaler Medien im Schulunterricht. Den Schüler*innen selbst kommt wenig Entscheidungsmacht zu.
 
@@ -1816,11 +2645,19 @@ Deutlich ist hier der Zusammenhang zur Fluchtmigration der Jugendlichen zu erken
 
 Die Arrangements der Schule (Unterricht) und der Kinder- und Jugendhilfe, in denen digitale Medien in Form von Social Media thematisiert werden, sind durch sehr unterschiedliche Bedingungen gekennzeichnet. Zunächst ist festzuhalten, dass in der Regelschule einzelne geflüchtete Schüler*innen am jeweiligen Unterricht teilnehmen, der Großteil der Klasse hat keinen Fluchthintergrund. Der Fo-
 
+
+<!-- PAGE 209 -->
+
+
 kus der Gespräche über Medien liegt nicht auf der (individuellen) Mediennutzung (einzelner) junger Geflüchteter und möglicher damit verbundener Spezifika und Herausforderungen, sondern liegt - flucht- und personenunabhängig - auf dem Thema Social Media, welchem eine hohe Bedeutung im Hinblick auf Nutzungsintensitäten und -relevanz für Jugendliche per se zukommt (vgl. mpfs 2022, S. 30ff.). Die Auseinandersetzung im Schulunterricht wird zeitlich von der Unterrichtsstunde und räumlich vom Klassenraum gerahmt. Die Eröffnung des Unterrichtsgesprächs ist ursächlich durch die formale Vorgabe und entsprechende Bezüge im Schulbuch, digitale Medien als Unterrichtsgegenstand zu behandeln, bedingt. Es ist folglich vorgegebenes didaktisches Ziel, dass digitale Medien als informelles und lebensweltlich relevantes Thema im formalen Kontext Schule behandelt werden. Bezogen auf bildungspolitische Rahmungen der Institution Schule findet sich dies u.a. auch explizit in der KMK-Strategie Bildung in der digitalen Welt (2016) und in weiteren (landesspezifischen) Ausführungen (z.B.'Orientierungsrahmen Medienbildung in der allgemein bildenden Schule' in Niedersachsen, vgl. Niedersächsisches Kultusministerium 2020).
 
 Kennzeichnend für den Schulunterricht in der Regelschule ist dabei die Klasse als Lerngruppe, innerhalb derer das Unterrichtsgespräch in der hier exemplarisch herangezogenen Sequenz sowohl im gesamten Klassenverband, zum Teil aber auch in Partner*innen- und Gruppenarbeit stattfindet. Der Unterricht ist in der hier betrachteten Sequenz für alle Schüler*innen gleich und entsprechend nicht individualisiert gestaltet. Die Thematisierung möglicher Risiken von Social Media verbleibt auf einer übergeordneten Ebene und bezieht individuelle risikobehaftete Erfahrungen der Jugendlichen nicht ein.
 
 ImGegensatz dazu entstehen im Rahmen der gängigen (wöchentlichen) Treffen zwischen einzelnen jungen Geflüchteten und Sozialarbeiter*innen Einzelgespräche in Räumlichkeiten der Kinder- und Jugendhilfe , in denen auch die mediatisierten Lebenswelten der (geflüchteten) Jugendlichen und ihre individuelle Mediennutzung in den Blick geraten. Das Arrangement der Kinder- und Jugendhilfe bietet hier die Möglichkeit eines geschützten Austausches - in einem Raum, lediglich zwischen zwei Personen (bzw. ist zusätzlich die*der teilnehmende Ethnograf*in anwesend) und nicht im Rahmen einer großen Gruppe wie im Schulunterricht. Das Konzept der Lebensweltorientierung (vgl. Thiersch 2014), durch das die Soziale Arbeit geleitet ist, erhält hier entsprechend auch mit Blick auf zeitliche Ressourcen Raum und schlägt sich - in der hier analysierten Sequenz - in einer FokussierungaufdasThemaCOVID-19unddamitverbundeneDesinformationen auf Social Media nieder. Anders als im Regelschulunterricht in Sequenz 1 erfolgt in der in der Kinder- und Jugendhilfe verorteten Sequenz die Auseinandersetzung jedoch nicht pädagogisch-intendiert bzw. geplant aufgrund curricularer Vorgaben, sondern spontan aus einer längeren Unterhaltung zwischen jungem Geflüchteten und Sozialarbeiterin, aus der sich der von der Sozialarbeiterin
+
+
+<!-- PAGE 210 -->
+
 
 wahrgenommene Bedarf, Karim für die Notwendigkeit, Internetquellen kritisch zu sensibilisieren, ableiten lässt.
 
@@ -1834,6 +2671,10 @@ In den Beobachtungen in der Schule und in der Kinder- und Jugendhilfe ereignen s
 
 Kennzeichnend für die pädagogische Auseinandersetzung ist weiter, dass informell und lebensweltlich Relevantes aus der Freizeit der jungen Menschen mit Fluchterfahrung in den Bildungskontexten der Schule und Kinder- und Jugendhilfe thematisiert wird. Digitale Medien liefern hier also einen Anlass, Brücken zwischen formalen und non-formalen Kontexten und der Lebenswelt der jungen Geflüchteten zu schlagen. Hierbei wird nicht nur das private Mediennutzungsverhalten der Teilnehmenden zum Gesprächsthema, sondern auch die
 
+
+<!-- PAGE 211 -->
+
+
 Mediennutzung der Lehrkräfte und der Sozialarbeiterin, indem diese im Zuge der pädagogischen Auseinandersetzung auch Einblicke eröffnen.
 
 ## Unterschiede im Nutzungsverhalten und in den Perspektiven auf digitale Medien
@@ -1842,11 +2683,19 @@ Des Weiteren werden Unterschiede sichtbar, wie die jungen Menschen in Kontrastie
 
 Im Unterrichtsgespräch stellt die Lehrkraft selbst Unterschiede im Hinblick auf eine altersbezogene Nutzung der Social Media-Plattformen fest. Für alle Beteiligten werden so Gemeinsamkeiten und Differenzen im Mediennutzungsverhalten zwischen Lehrkräften und Schüler*innen sichtbar. Dies führt zur Eröffnung von potenziellen Spannungsfeldern: Es entsteht - hierbei beziehen wir uns über die betrachtete Sequenz hinaus auf weiteres Material - über die Thematisierung der Nutzung sozialer Netzwerke im Schulkontext ein Spannungsfeld bzw. eine potenzielle Grenze dahingehend,inwiefern soziale Medien im Unterricht behandelt werden können: So muss Schule navigieren, den Schüler*innen Wissen näherzubringen und das Reflexionsvermögen anzuregen im Hinblick auf Anwendungen, die teilweise rechtlich gesehen aufgrund einer Altersbeschränkung von der betroffenen Schüler*innengruppe nicht genutzt werden dürfen. So sind in einer Beobachtung im Feld alle anwesenden Jugendlichen maximal dreizehn Jahre alt und somit rechtlich nicht zur Nutzung der Social Media-Plattformen befugt, was allerdings nicht von den Lehrkräften angesprochen wird. Des Weiteren wird der Kontext Schule, der charakteristisch von einem professionell-distanzierten Verhältnis zwischen Lehrkraft und Schüler*innen geprägt ist, so zunehmend von privaten Einblicken in die Lebenswelt der Jugendlichen und der Lehrkräfte durchdrungen.
 
+
+<!-- PAGE 212 -->
+
+
 Die unterschiedlichen Perspektiven und Nutzungserfahrungen verdeutlichen auch Herausforderungen für die Herstellung von (Bildungs-)Teilhabe. So wird in den Gesprächen über digitale Medien deutlich, dass die Jugendlichen die inhaltsbezogenenundplattformimmanentenLogikendervonihnenselbstgenutztendigitalen Medien zum Teil besser kennen als das pädagogische Personal.In der Kinder- und Jugendhilfe hat sich die Sozialarbeiterin Lara beispielsweise noch nicht mit der vom Jugendlichen präferierten Plattform auseinandergesetzt und weist daher diesbezüglich stark begrenzte Nutzungskenntnisse auf. Diese fehlenden Kenntnisse limitieren die Pädagogin wiederum in ihren Möglichkeiten zur Anregung von Medienkritik, da sie zum einen nicht auf persönliche Erfahrungen und Strategien für einen medienkompetenten Umgang mit der Anwendung zurückgreifen kann und zum anderen, da sie entsprechende medienpädagogische Materialien und Methoden zur Thematik nicht kennt. Dies impliziert die Notwendigkeit einer stärkeren Lebensweltorientierung und damit Auseinandersetzung mit aktuellen Medienkulturen und präferierten Medien(-inhalten) von Jugendlichen. Zudem muss eine solche Auseinandersetzung auch vor dem Hintergrund eines möglicherweise völlig anders gearteten medialen Habitus von Pädagog*innen geschehen (vgl. Kommer 2022) mit entsprechend differenten Medienpräferenzen, -nutzungsmodi und Bewertungen gegenüber digitalen Medien zwischen Pädagog*innen und Jugendlichen wie es sich für die Lehrkraft und die Sozialarbeiterin Lara andeutet. Weiter ergibt sich mit Blick auf (medien-)pädagogische Arbeit im Kontext von Digitalität immer auch die Herausforderung eines raschen Wandels von Medienangeboten.
 
 ## Ambivalenz von Social Media mit Blick auf Teilhabe
 
 Den sozialen Medien selbst kommt als Akteur im Kontext von (Bildungs-)Teilhabe eine Ambivalenz hinsichtlich der möglichen Eröffnung oder Verschließung von Teilhaberäumen im Hinblick auf die Funktion, Informiertheit herzustellen, auch zu gesellschaftlich relevanten Themen wie dem Pandemiegeschehen, zu. In der Sequenz der Kinder- und Jugendhilfe informiert sich der junge Geflüchtete hauptsächlich über die in den sozialen Medien verbreiteten audiovisuellen Inhalte. Da diese Art des Informationskonsums eine besonders niedrigschwellige Medieninformationsstrategie darstellt, können so auch insbesondere junge Zielgruppen und auch Personen mit sprachlichen Barrieren (z.B. Geflüchtete) adressiert und angesprochen werden. Andererseits bergen sie das Risiko, wenig differenzierte Perspektiven abzubilden oder auch dezidiert Desinformationen zu beinhalten. Dieses Risiko gilt es aus der Sicht der Sozialarbeiterin Lara einzuordnen und eine kritische Reflexion im Hinblick auf rezipierte Medienquellen anzuregen. Als Herausforderung für dieses Vorhaben erweist sich hier u.a., dass die Sozialarbeiterin selbst nicht in der Lage ist, Phänomene wie Desinformation und Verschwörungsmythenausreichend zu erläutern.Dies impliziert die Notwendigkeit für Pädagog*innen (sowohl mit Blick auf außerschulische, aber auch schuli-
+
+
+<!-- PAGE 213 -->
+
 
 sche Bildung), Methoden zur Gesprächsführung zu gesellschaftsrelevanten Themen wie Desinformation/Verschwörungsmythen zu kennen und entsprechend anwenden zu können.
 
@@ -1858,17 +2707,29 @@ Abbildung 7: Kommunikation zwischen Aloui und Patin/Vormundin Anna über WhatsAp
 
 <!-- image -->
 
+
+<!-- PAGE 214 -->
+
+
 Ausgangslage der Unterhaltung aus dem April 2020 ist, dass Aloui für die Teilnahme am Distance Learning ein funktionierendes Microsoft-Konto benötigt, um die Aufgaben zunächst mit einem Textverarbeitungsprogramm zu bearbeiten und dann über die Schulplattform IServ hochladen zu können, über welche Schüler*innen einen eigenen Account haben, mit Lehrkräften kommunizieren und Aufgaben einstellen können.
 
 Da Aloui nicht über ein Textbearbeitungsprogramm auf seinem Computer verfügt, wendet er sich an Anna, die ihn bei der Zurücksetzung seines Microsoft-Konto-Passworts zur Nutzung von Microsoft 365 als onlinebasierte für Schüler*innen kostenlose Variante anleitet. Die Kommunikation mit dem Smartphone und darüber vermittelt dem gewählten Messenger-Dienst ermöglicht es beiden, zusätzlich zur schriftlichen Kommunikation Fotos zu versenden. Ziel des Austausches ist die Nutzbarmachung eines technischen Tools zur Bearbeitung von unterrichtsbezogenen Aufgaben, womit verbunden auch die Möglichkeit eines formal erfolgreichen Bildungsabschlusses unterstützt werden soll. Auch das Versenden eines Links durch die Patin, den Aloui zum Rücksetzen des Passworts benutzen soll, unterstützt deren Erläuterungen. In ihrer anleitenden Struktur ist die Kommunikation nicht nur auf das Ziel eines funktionierenden technischen Zugangs und damit die Beseitigung von technischen Hürden ausgerichtet, vielmehr wird auch der befähigende Charakter deutlich, indem die Patin einzelne Schritte anleitet, begleitet und Aloui selbst den Prozess durchlaufen lässt. Der letzte Satz, welchen die Patin sendet: 'Ich schicke dir morgen Beispiele von Bewerbungen und dann können wir das zusammen machen' (vgl. Abbildung 7), weist zudem darauf hin, dass die sich hier abzeichnende auf schulische Inhalte bezogene Praxis in einem größeren Zusammenhang der Unterstützung und Befähigung, auch zur beruflichen Orientierung, verorten lässt. Zudem wird die Beteiligtheit digitaler Artefakte hier in doppelter Hinsicht deutlich. Einerseits ermöglicht der Messenger-Dienst WhatsApp aufgrund seiner Kerncharakteristika (Text, Fotos undLinks versenden) eine Schritt-für-Schritt-Betreuung Alouis durch Anna über die räumliche Distanz der beiden hinweg. Somit werden hier ermöglichende Strukturen, die sich innerhalb der Praxis durch den Einbezug des digitalen Artefakts ergeben, deutlich. Gleichzeitig ist es ein digitales Artefakt, das als Problem den Anlass für die schriftliche Unterhaltung der beiden darstellt.
 
 Die Patin, die vermittelt durch den non-formalen Kontext der Kinder- und Jugendhilfe auf einer informellen familienähnlichen Ebene im Kontakt zu Aloui steht, bewältigt gemeinsam mit diesem Herausforderungen in Bezug auf technisches Know-how und Anwendungskompetenzen des jungen Geflüchteten zur BearbeitungschulischerAufgaben.DieKommunikationderbeidendurchdigitale Artefakte gibt Hinweise auf die zentrale Bedeutung von Aushandlungspraxis mit undin Bezug auf digitale Medien - im Kontext von in diesem Fall schulischer Bildung, die durch informelle Unterstützung gerahmt wird. Eine kontextübergreifende transorganisationale Perspektive ermöglicht es hier, die zu den jeweiligen
 
+
+<!-- PAGE 215 -->
+
+
 Kontexten querliegende Praxis, die auf Ermöglichung von Teilnahme an schulischer Bildung und die Erweiterung von Anwendungskompetenzen abzielt, zu erfassen.
 
 ## 2.4.7 Zwischenfazit
 
 DieAnalysenzumLehrenundLernenverdeutlichenklar,dassLehrkräftealsGatekeeper*innendigitaler Medien den Einsatz und die Nutzungsweise im Unterricht steuern; den Schüler*innen kommen nur begrenzte Entscheidungsräume zu. Ein zentrales Ergebnis ist zudem, dass der Einsatz digitaler Medien in Lehr-/Lernsettings hinsichtlich angestrebter Möglichkeitsräume für Bildung und Teilhabe hoch voraussetzungsvoll ist. Vor allem die Sequenzanalysen im DaZ-Unterricht zeigen die prägende Rolle der Lehrkraft in diesem Zusammenhang auf, da sie über die Vorbereitung und pädagogische Begleitung der Mediennutzung im Unterricht entscheidet; um diese entlang der Voraussetzungen der Jugendlichen (z. B. Sprachkenntnisse; Medienerfahrungen) auszugestalten und hierbei auch die aktive Rolle des digitalen Artefakts im Praxisvollzug zu identifizieren (z.B. hinsichtlich Chancen und Grenzen des Einsatzes; Erstellung von Schüler*innenProfilen), ist eine intensive inhaltliche und damit auch zeitliche Auseinandersetzung von Seiten der Lehrkraft erforderlich. Die Ergebnisse zum Distance Learning unter COVID-19 zeigen zudem die Ambivalenz einer zunehmenden Digitalität in Lernsettings auf, wodurch auch bereits bestehende Ungleichheiten, die sich durch unterschiedliche soziale Lage und Ressourcen bzw. Kapitalien erklären lassen, perpetuiert werden können. Gleichzeitig zeigt die über die Koppelung der Artefakte Smartphone und Messenger-Dienst vermittelte Kommunikation zwischen Aloui und Anna auf, inwiefern digitale Medien erleichternd auf Prozesse der Kommunikation und Unterstützung bei der Bewältigung von (schulischen) Herausforderungen wirken können.Dies geschieht unter der Rahmung der technischen Möglichkeit einer zeitlich direkt aufeinanderfolgenden Kommunikation - ermöglicht durch die Anzeige der Inhalte auf dem Bildschirm - welche über Fotos oder Screenshots konkret an der (in diesem Fall technischen) Herausforderung ansetzen. Deutlich wird die zentrale Bedeutung, die Bezugspersonen aus den Bereichen der Kinder- und Jugendhilfe und dem informellen Kontext für die Ermöglichung von (Bildungs-)Teilhabe der jungen Geflüchteten einnehmen können. Hierbei lässt sich eine kompensierende Funktion mit Blick auf Ungleichheiten verzeichnen.
+
+
+<!-- PAGE 216 -->
+
 
 ## 2.5 Teilhabe an gesellschaftlichen Diskursen über Social Media
 
@@ -1882,11 +2743,19 @@ Als Material für die Analyse herangezogen wird eine Sequenz eines informellen G
 
 Im Laufe der Unterhaltung werden digitale Medien und soziale Netzwerke zum Gesprächsthema, als Aloui über seine Ferienpläne mit einer Freundin berichtet undindiesemZugeerklärt,dass er den Kontakt zu eben dieser Freundin über die Social Media-Plattform Instagram wiederhergestellt hat. Daraufhin entspinnt sich ein Gesprächsverlauf, in dem immer wieder das private Mediennutzungsverhalten des jungen Geflüchteten thematisiert wird. Die Vormundin Anna berichtet, dass sie Aloui auf Instagram folge und dort seine Aktivitäten zur Black Lives MatterBewegung wahrnehme:
 
+
+<!-- PAGE 217 -->
+
+
 DannkommtdasGesprächaufdieBlackLivesMatter-BewegungunddieaktuellenDemonstrationen. Anna sagt, dass sie bei Alouis Instagram Profil gesehen habe, dass auch er den Hashtag #BLMverwendethat.Alouinickt.Ich[die Ethnografin] frage, was er von der ganzen Sache hält undoberschoneinmalerlebt hat, dass er aufgrund seiner dunklen Hautfarbe schlechter behandelt wurde. Er nickt und sagt, dass dies ständig passiere, im Bus, im Supermarkt. Er sei inzwischendarangewöhnt,mandürfeesnichternstnehmen.Ichfrage,oberauchzudenDemonstrationen geht. Er erklärt, dass Demonstrationen ihm nicht gefallen, da es oft viel Gewalt gebe. Für ihn ist es wichtig, sich für eine Sache einzusetzen, aber dafür dürfe man keine Gewalt verwenden. Auf Gewalt habe er keine Lust. In Guinea kann er sich erinnern, gab es viele sehr schlimme gewaltvolle Demonstrationen gegen die Politik und vieles mehr. Er hat sich immer unter seinem Bett versteckt, wenn draußen die Demonstranten gewütet haben, denn es war sehr gefährlich. Eines Tages habe er dann nicht mehr unters Bett gepasst und habe sich gedacht, jetzt muss ich mitdemonstrieren,dieseErfahrungenmöchteernichtnocheinmalmachen.Dannzeigterlieber mit Posts bei Instagram, wie seine Stellung zu dem Thema ist. (Feldprotokoll Aloui, 06/2020)
 
 Das Gespräch zwischen Aloui, seiner Vormundin und der Ethnografin ist von lebensweltlichen Bezügen gekennzeichnet. Digitale Medien und soziale Netzwerke werden als für Aloui lebensweltlich relevantes Thema fortwährend aufgegriffen. Im Zuge dessen wird sein privates Mediennutzungsverhalten diskutiert, woraus sich verschiedene Aktivitäten in sozialen Netzwerken rekonstruieren lassen - so auch die politische Selbstpositionierung auf Instagram. Ursächliche Bedingung für den Austausch über Alouis Medienaktivität ist, dass die Vormundin Anna erwähnt, während die drei über die (zum Zeitpunkt der teilnehmenden Beobachtung sehr aktuellen) Black Lives Matter-Demonstrationen sprechen, dass sie auf Alouis Instagram-Profil einen Post mit dem Hashtag #BLM (Abkürzung für Black Lives Matter) gesehen habe. Bedingend wirkt hier also die Tatsache, dass Anna Aloui auf Instagram folgt, sodass ihre Beziehung im digitalen Raum fortgeführt wird. Dies ermöglicht Anna über Alouis Interessen und Aktivitäten informiert zu sein und sich darüber mit ihm auszutauschen.
 
 Über die Analyse des Gesprächs lässt sich die besondere Bedeutung sozialer Netzwerke(fürdiejungenMenschenmitFluchterfahrung)imHinblickaufgesellschaftliche Teilhabe rekonstruieren. Über die Funktion des Postens via Instagram wird Aloui die Möglichkeit eröffnet, ein politisches Statement zu setzen. Aloui berichtet, dass er selbst von Benachteiligungen und Rassismus aufgrund seiner Hautfarbe im Alltag betroffen sei. An Demonstrationen möchte er aufgrund seinerAssoziationenvonGewalt,dieaufseinenpersönlichenErfahrungeninseinem Heimatland Guinea beruhen, nicht teilnehmen. Das Posten im digitalen Raum wird von ihm hingegen als risiko- und gewaltlos wahrgenommen. Erfahrungen mit Demonstrationen in Deutschland scheint Aloui nicht gemacht zu haben; hier wirken -seine Entscheidung prägend -offensichtlich Erfahrungen aus dem Heimatland fort, deren gewaltvolle Sanktionen vermutlich auch von Akteur*innen, die für den Staat selbst arbeiten, durchgeführt wurden; es lässt sich vermuten,
+
+
+<!-- PAGE 218 -->
+
 
 dass Aloui eine solche Gefahr einer von Seiten des Staates bzw. der Polizei durchgeführten Gewalt auch für Deutschland wahrnimmt, wenngleich er dies nicht expliziert. Eine Reflexion über mögliche negative Reaktionen auf Posts im Rahmen von Hate Speech (vgl. Thimm 2022), die sich an das Posten von vor allem gesellschaftlich kontrovers diskutierten Themen anschließen können, findet von Seiten Alouis nicht statt. Derartige negative Erfahrungen scheint Aloui nicht gemacht zu haben.
 
@@ -1896,7 +2765,15 @@ Sozialen Medien kommt hier als ermöglichender Struktur für gesellschaftliche T
 
 Die Gespräche über Alouis Aktivitäten auf Instagram zur Black Lives MatterBewegung mit der Vormundin und der Ethnografin eröffnen in dem dargestellten Arrangement einen Austausch über Alouis Erfahrungen mit Demonstrationen und Gewalt in seinem Heimatland sowie zu seinen Erfahrungen mit Rassismus in Deutschland. Die politische Selbstpositionierung Alouis im digitalen Raum wird im analogen Setting im Burger-Restaurant aufgegriffen und hat den Austausch zu eigenen Erfahrungen und für ihn persönlich relevanten und auch gesellschaftlich diskutierten Themen zur Konsequenz. Insgesamt eröffnen sich
 
+
+<!-- PAGE 219 -->
+
+
 hier nicht nur mögliche Räume für Teilhabeprozesse, indem der junge Geflüchtete im digitalen Raum an transnationalen gesellschaftlichen Bewegungen teilnehmen kann, sondern auch darüber hinaus, indem er analog über diese medialen Aktivitäten zu gesellschaftlichen Themen sprechen und mit anderen - auch mit Personen, die aufgrund ihres äußeren Erscheinungsbilds keine RassismusErfahrungen erleben - in einen Dialog treten kann. Social Media bietet hier also die Möglichkeit der Transformation von Selbstverhältnissen (im Rahmen der Selbstpositionierung und -ermächtigung),aber auch (so zumindest die Hoffnung derjenigen, die hier politisch aktiv werden), von Weltverhältnissen (vgl. Jörissen/ Marotzki 2009), hier im Sinne eines angestrebten Abbaus von Diskriminierung und Rassismus.
+
+
+<!-- PAGE 220 -->
+
 
 ## Bildungsteilhabe unter der Beteiligung digitaler Medien - Eine Frage von Passungsverhältnissen
 
@@ -1908,11 +2785,19 @@ In den beiden vorangegangenen Beiträgen wurden die empirischen Befunde der Teil
 
 Die vorliegende Studie untersuchte die Frage, welche Bedeutung digitale Medien für die Bildungsteilhabe junger Geflüchteter haben und welche Bedingungen hierfür im Rahmen unterschiedlicher Arrangements relevant sind. Dabei wurden formale, non-formale und informelle (Bildungs-)Kontexte fokussiert und die darin identifizierbaren Praktiken sowie die damit verbundenen subjektiven und strukturellen (Rahmen-)Bedingungen untersucht. Auf diese Weise war es möglich, Bedingungen für die Ermöglichung von Bildungsteilhabe in unterschiedlichen Arrangements im Alltag von jungen Geflüchteten empirisch zu rekonstruieren. Im Folgenden werden nun 1.) die Bildungspotenziale digitaler Medien ausgehend von ungleichen sozialen Ausgangsbedingungen in ihrer Ambivalenz und ihren transorganisationalen Bezügen erörtert. Daran anknüpfend werden 2.) die für Bildungsteilhabe relevanten Bedingungen in ihrer Komplexität und wechselseitigen Verschränkung dargelegt. Es wird anschließend 3.) die spezifische BrückenfunktionderKinder-undJugendhilfeinihrerRelevanzfürdieErmöglichung von Bildungsteilhabe erläutert. In einer reflektierenden Perspektive geht es um 4.) die Tatsache der Fluchtmigrationserfahrung der teilnehmenden jungen Menschen im Zusammenhang des Forschungsprozesses und der Interpretation der Befunde. Zuletzt werden 5.) die method(-olog-)ischen Erkenntnisse aus der ethnografischen Forschungspraxis diskutiert.
 
+
+<!-- PAGE 221 -->
+
+
 ## 1.1 Vielfalt, Transorganisationalität und Ambivalenz bildungsteilhaberelevanter Praxis unter Beteiligung digitaler Medien
 
 Die Rekonstruktion der Praktiken im Alltag der jungen Menschen verweist auf diverse Bildungs- und Teilhabemöglichkeiten unter der Beteiligung digitaler Medien in verschiedenen miteinander verschränkten Kontexten. Diese finden sich in informellen und durch Freizeitaktivitäten geprägten Alltagssituationen im privatenLebeninderFamilieodermitPeers.Auchnon-formaleAngeboteimJugendcafé, regelmäßige Gespräche zwischen Sozialpädagog*innen und Jugendlichen sowie Unterstützung bei der Hausaufgabenbearbeitung und in der Nachhilfe zählen dazu, aber auch mit dem formalen Bildungssystem verknüpfte Praktiken im Rahmen der Teilnahme am Schulunterricht oder in Berufsbildungsmaßnahmen der jungen Menschen. Die Praktiken an diesen unterschiedlichen Bildungsorten sind selten nur ,isoliert' an einem Ort zu beobachten, sodass sich eine Betrachtung des als bildungsrelevant Beobachteten als ,abgeschlossene' Praxis an einem Ort als verkürzt erweist. Vielmehr werden die sich an einzelnen Orten realisierenden Praxen an weiteren Lokalitäten wiederaufgegriffen und fortgeführt. So werden beispielsweise in der Schule begonnene Aufgaben in der Nachhilfe weiterbearbeitet oder die in einem Angebot der Kinder- und Jugendhilfe erstellten Bewerbungsunterlagen werden an weitere non-formale Unterstützungsangebote wie beispielsweise die Schulsozialarbeit ,weitergereicht'. Die im non-formalen Kontext erlernte Nutzung von Navigations-Apps wird in informellen (Peer-)Zusammenhängen relevant, um sich in der Freizeit besser räumlich zurechtfinden zu können.
 
 Damit geraten vor diesem Hintergrund die vielfältigen Verschränkungen von Orten und Modalitäten, die die Möglichkeiten für Aneignung, Vermittlung, Befähigung, Bewältigung etc. formen, in den Blick. Die digitalen Medien stellen dabei oft eine Verbindung zwischen diesen verschiedenen Orten und den jeweils verbundenen Praktiken her. So erhalten die jungen Menschen in ambulanten Formen der Kinder- und Jugendhilfe unabhängig von konkreten Orten Informationen über den digitalen Kontakt mit den Sozialpädagog*innen (z.B. per Messenger-App oder E-Mail) in Vorbereitung auf bevorstehende Treffen. Im Falle eines jungen Erwachsenen betrifft dies beispielsweise eigenständig vorzubereitende Arbeitsaufträge (z. B. sich mit zugesendeten Informationen aus dem Internet vorab zu befassen). Des Weiteren finden - wie schon Rauschenbach et al. (2004) betonen - am (formalen) Bildungsort Schule informelle Aneignungsprozesse oder im familiären (informellen) Bereich die Bearbeitung von Aufgaben der formalen Bildung statt. Hobbys und Interessensäußerungen (z. B. über Musik) aus informellen Freizeitbezügen der jungen Menschen stellen Anknüpfungspunkte für Sozialpädagog*innen bei der Verfügbarmachung von (medienbezogenem) Wissen oder Fähigkeiten dar (z.B. wenn Websites empfohlen werden, die Hintergrundinformationen zur Musik enthalten). In non-
+
+
+<!-- PAGE 222 -->
+
 
 formalen Angeboten der Kinder- und Jugendhilfe eröffnen Wochengespräche zwischen Sozialpädagog*innen und jungen Menschen einen Rahmen, innerhalb dessen Alltagsprobleme besprochen und unter Erarbeitung von (digital bereitgestellten) Informationen und Wissen (z. B. rechtliche Informationen zu Handlungsmöglichkeiten) bearbeitet bzw. bewältigt werden. Im formalen Schulunterricht werden u.a. Lerninhalte und Aufgaben mit Hilfe des Einsatzes digitaler Präsentationsmedien (z. B. Smartboard, YouTube, Beamer, Dokumentenkamera etc.) verfügbar gemacht, gemeinsam besprochen und für die weitere Auseinandersetzung damit außerhalb des Unterrichts von den jungen MenschenmitdemSmartphoneabfotografiert.Auchhierentfaltetsichbildungsteilhaberelevante Praxis in unterschiedlichen Zusammenhängen fortwährend transorganisational: beispielsweise wenn Hausaufgaben vom formalen Ort der Schule an den non-formalen Ort der Nachhilfe ,mitgebracht' und/oder im informellen Kontext zu Hause im Austausch mit Mitschüler*innen in WhatsAppGruppen besprochen werden.
 
@@ -1922,19 +2807,35 @@ Die performative Bedeutung digitaler Medien für Bildungsteilhabe stellt sich je
 
 1 Gemäß der praxistheoretischen Perspektive der vorliegenden Studie (vgl. hierfür den Beitrag von Fujii/Kutscher i.d.B) sind diese Thematisierungen zwar als nachrangig gegenüber den aus Beobachtungsdaten gewonnen Erkenntnissen einzuordnen. Nichtsdestotrotz können hiermit Kontextualisierung und Einordnung zum beobachteten Tun der Akteur*innen bereitgestellt werden.InsolchenFällenwerdenüberdieErzählungenbeispielsweiseHintergründezudiesem Tun erkennbar (z.B. institutionelle Regelungen) oder spiegeln sich die geäußerten Relevanzen derAkteur*innenentlangvonderenPraktikenwider(z.B.wasdieBeteiligungdesSmartphones betrifft).
 
+
+<!-- PAGE 223 -->
+
+
 - dienung dieser Medien auf die ihnen ,eingeschriebenen' Potenziale zugreifen zu können (z.B. bei der Texterstellung und -formatierung von Dokumenten).
 2. Informations- und Wissensquelle : Digitale Medien ermöglichen es, ,relevante' Informationen und auch Wissen für die Bearbeitung bzw. Bewältigung eines bestimmten Anliegens bereitzustellen. Dies ist etwa der Fall, wenn bei der Hausaufgabenbearbeitung Definitionen über das Internet recherchiert werden (z.B. mittels Wikipedia auf dem Smartphone). Die Verlagerung der Informationsbeschaffung von analogen Medien (z.B. Büchern) auf digitale Medien (z.B. Smartphones in Verknüpfung mit weiteren Anwendungen) ermöglicht (mittels der Eingabe von Suchbegriffen) einen gezielteren Zugriff aufInformationen.Voraussetzunghierfürsindallerdings,Leistungen'derAkteur*innen zur Nutzbarmachung dieser Funktionalität der digitalen Medien. Dies sind neben der Bedienung der digitalen Medien auch Selektionsleistungen (z.B. zu entscheiden und auszuwählen, was aus der dargebotenen Informationsvielfalt relevant ist).
 3. Aneignungs- und Vermittlungsgegenstand : Digitale Medien stellen im Alltag der jungen Menschen auch einen Anlass für bildungsrelevante Auseinandersetzungen dar. So ist selbst bei Vorhandensein und Nutzung der digitalen Medien keinesfalls garantiert, dass sie (z. B. Computer und E-Mails) als , Werkzeuge' zur Bewältigung eines Anliegens beitragen können. Dies zeigt sich, wenn unbekannte Websites besucht werden (z.B. bei der Praktikumsbzw. Ausbildungssuche) und die Sozialpädagog*innen dabei unterstützen, dass die jungen Menschen sich mit den Anforderungen dieser Websites zurechtfinden (z.B. wo erforderliche Angaben zu tätigen bzw. auszuwählen sind). Im Schulunterricht werden digitale Medien zu curricular gerahmten Gesprächsanlässen, die auf die Vermittlung von Medienkompetenz an die Schüler*innen abzielen. Dies wird anhand der Thematisierung der eigenen Privatsphäre (z.B. zu der Frage: Wer kann meine Inhalte sehen?) und des Umgangs miteinander via Social Media (z.B. zu den Fragen: Welcher ,Ton' ist in Kommentaren ,angemessen'? Was bedeutet Cyber-Mobbing und woran erkenne ich es?) deutlich. Im Zuge dieser Auseinandersetzungen mit digitalen Medien werden sie zum Medium der Vermittlung von Wissen (ohne ,unmittelbaren' Bezug zu den Medien). Dies ist beispielsweise der Fall, wenn die Sozialpädagog*innen anhand von aufgerufenen Wohnungsinseraten am ComputerdenjungenMenschenerklären,wieeine,passende'Anredeverfasst werden kann und insofern Regeln einer ,formellen' Kommunikation vermitteln. Ein anderes Beispiel hierfür ist, wenn YouTube-Videos mit dem Lehrer im Werkunterricht an einer Schule angesehen werden, welche Wissen zur Bedienung einer Standbohrmaschine im Rahmen einer Unterrichtseinheit vermitteln.
 4. Dokumentation : Digitale Medien ermöglichen, für den Alltag relevante Informationen abzuspeichern und diese für eine weitere Verwendung zu
+
+
+<!-- PAGE 224 -->
+
 
 - dokumentieren. Dies wird etwa sichtbar, wenn im Schulunterricht Aufgaben oderTafelbilder abfotografiert werden und diese dadurch von der,ursprünglichen' Situation raum-zeitlich losgelöst für spätere Anlässe verfügbar gemacht werden (z.B. bei der Hausaufgabenhilfe). Je nach Arrangement wird diese Dokumentationsform von Lehrkräften allerdings nicht zwangsläufig als ,legitim' anerkannt, da je nach Institution der Gebrauch von Smartphones im Unterricht auch sanktioniert wird. So zeigt sich beispielsweise ein Widerspruch, wenn Fotos von Tafelbildern auf dem Smartphone hinterlegt werden und im Schulunterricht ein Smartphone-Verbot herrscht.
 5. Verständigung im institutionellen Kontext : Digitale Medien sind etablierter Bestandteil in der Kommunikation zwischen den (Sozial-)Pädagog*innen und den jungen Menschen. Die Kommunikation rund um Termine erfolgt über Kommunikationswege wie Messenger-Apps oder E-Mail. Die digitale Kommunikation über die Distanz ermöglicht es dabei auch, zur Vorbereitung auf diese Termine den jungen Menschen Aufgaben zukommen zu lassen und Erwartungen mitzuteilen. Auf diese Weise ermöglicht diese vorbereitende digitale Kommunikation, dass Informationen vorab zugänglich gemacht, Wissen geteilt, Interessen kommuniziert und eine informierte Beteiligung im Austausch mit den Fachkräften stattfindet.
 6. Räumliche Orientierung : Digitale Medien können im Zusammenhang mit dem Zugriff auf geografische Standortdaten Informationen über die eigene räumliche Lage bzw. die Lage von Zielorten bereitstellen. Sie bieten den jungen Menschen damit Potenziale der Raum-Aneignung. Dies ist etwa der Fall, wenn Online-Kartendienste (z.B. Google Maps) auf dem Smartphone für das Ausfindigmachen von unbekannten Orten und die Bewältigung von Wegen dorthin genutzt werden. Diese Funktionalität wird insbesondere sichtbar, wenn es darum geht, Wege zu Behörden oder anderen Einrichtungen zu finden, oder zur Sicherung der Aufenthaltsperspektive Dokumente beschafft werden müssen (z.B. Identitäts-, Versicherungs- und Beschäftigungsnachweise).
 7. ,Krisenhafte' Bewältigungsanlässe : Digitale Medien ,funktionieren' nicht immer auf die intendierte Weise der jungen Menschen und (Sozial-)Pädagog*innen. Dies wird etwa sichtbar, wenn bei der Arbeit am Computer Funktionen eines Textverarbeitungsprogramms fehlen und nach einer Recherche im Internet erst nachinstalliert werden müssen.Solche,krisenhaften'Erfahrungen mit digitalen Medien werden insofern zu Anlässen für Erfahrungen von Alltagsbewältigung,als die Akteur*innen situativ Lösungen finden müssen, um auf bestimmte Funktionalitäten der digitalen Medien zugreifen und damit eine Situation bewältigen zu können (z.B. alternative Softwareanwendungen zu recherchieren und zu nutzen). Dies bedeutet, eine Nutzbarmachung des Mediums wird erst durch Beiträge von weiteren Akteur*innen möglich. In diesem Zusammenhang können auch Erfahrungen des ,Scheiterns' gemacht werden,
 
+
+<!-- PAGE 225 -->
+
+
 - sofern das erforderliche Wissen oder entsprechende Fähigkeiten zur Nutzung eines digitalen Mediums fehlen.
 8. Sprachliches Verständnis und Sprachaneignung : Digitale Medien können die verbale und schriftliche Kommunikation der jungen Menschen mit weiteren Akteur*innen unterstützen, hierbei sprachliches Verständnis (mit-)hervorbringen und die Aneignung von Sprache befördern. Dies zeigt sich etwa in Situationen, in denen eine teilnehmende Person ,unklare' Gesprächsgegenstände oder einzelne Begriffe über den Abruf von Bildern auf dem Smartphone der anderen Gesprächsperson visualisiert oder diese durch eine Übersetzungs-App in eine andere Sprache überführt werden. Die digitalen Medien tragen dann zur Verständnisklärung bei. Im Alltag der jungen Menschen hat diese Funktion digitaler Medien eine spezifische Bedeutung, da mit dem Status als Geflüchtete und der damit verbundenen teils prekären Lebenssituation und Abhängigkeiten die Sprache des ,Aufnahmelands' eine besondere Bedeutung für Teilhabeermöglichung hat. Auch im Schulunterricht in Klassen,in denen ausschließlich junge Menschen mit Fluchterfahrung unterrichtet werden, werden beispielsweise digitale Medien (z.B. die LernApp Anton auf schuleigenen Tablets) gezielt zum Spracherwerb eingesetzt. Hierbei moderieren die sprachlichen Vorkenntnisse der jungen Menschen und die Beschaffenheit der digitalen Medien (z.B. Navigationsmenü von Apps), inwiefern die Aneignung von Sprache befördert wird.
 9. Selbstdarstellung und -reflexion : Digitale Medien können eine Plattform bzw. einen (informellen) Raum darstellen, um Perspektiven auf eigene Positionierungen oder Erfahrungen des eigenen Lebens zu artikulieren und darüber mit anderen Akteur*innen in Austausch zu treten. Dies ist beispielsweise der Fall, wenn Beiträge der jungen Menschen in sozialen Medien (z.B. Facebook, YouTube, Instagram) gepostet und in diesen das eigene Geflüchtetsein oder zukünftige Lebensperspektiven thematisiert werden (z.B. angesichts von Rassismuserfahrungen); auch Situationen, in denen die jungen Menschen selbstverfasste Texte auf ihrem Smartphone rappen, gehören dazu. Diese medialen Artikulationsweisen werden mitunter von Sozialpädagog*innen aufgegriffen und auf diese Weise (Bildungs-)Möglichkeiten im Sinne einer gemeinsamen Reflexion des Artikulierten eröffnet. Zudem wird eine Unterstützung im Sinne von 'voice' (Hirschman 1970) geleistet, indem miteinander daran gearbeitet wird, wie diese Äußerungen und die Themen der jungen Menschen in einer Öffentlichkeit noch hörbarer werden können. Diese präsentativen Formate stellen auch Kommunikationsanlässe dar, bei denen Sozialpädagog*innen mit den jungen Menschen über die von ihnen geäußerten ,Probleme' sprechen, gemeinsam nach Lösungen suchen oder auch Anerkennung für die kreative Leistung in Form eines medialen Produkts geäußert wird. Mindestens sind diese Artikulationsweisen aber vielfach ein
+
+
+<!-- PAGE 226 -->
+
 
 - Anlass für eine Auseinandersetzung der Sozialpädagog*innen mit den jungen Menschen zu ihren Perspektiven, Positionierungen und Erfahrungen.
 10. Gesprächsrahmung : In verschiedenen Situationen eröffnen Settings mit digitalen Medien eine Rahmung (bzw. einen ,Ort') für (pädagogische) Gespräche zwischen Sozialpädagog*innen und den jungen Menschen. Dies ist etwa der Fall, wenn während des Spielens an der PlayStation (z.B. FIFA) im Rahmen der Kinder- und Jugendhilfe nebenbei ein Austausch bzw. eine Beratung über die Lebenssituation der jungen Menschen erfolgt. Dabei eröffnet das medial-spielerische Arrangement in der Jugendeinrichtung einen Raum, anlässlich dessen Gespräche zu Themen wie der Schullaufbahn, dem Familienleben oderpotenziellen(Neben-)BerufenentstehenundimAnschlussandasSpielen vertieft werden können. Dies bedeutet, die digitalen Medien bringen als Rahmung unterschiedliche Akteur*innen zusammen und eröffnen hiermit Anknüpfungspunkte für Bildungsmomente.
@@ -1943,11 +2844,19 @@ DieseindenzehnDimensionenbenanntenPotenzialedigitalerMedienverweisen auf deren e
 
 Wie auch schon in anderen Untersuchungen festgestellt, zeigt sich, dass die Voraussetzungshaftigkeit digitaler Medien im Zusammenspiel mit Arrangements und Akteur*innen auch für die Kontingenz der Realisierung von Bildung bzw. Beteiligung eine Rolle spielt. So ist die Nutzung digitaler Medien in hohem
 
+
+<!-- PAGE 227 -->
+
+
 Maße von den verfügbaren Kapitalien (vgl. Bourdieu 1997) der Akteur*innen geprägt (vgl. z. B. Alam/Imran 2015; Emmer/Kunst/Richter 2020; Kutscher 2019). Dies beginnt bereits bei der digitalen Ausstattung, welche bei den an der Studie teilnehmenden jungen Menschen nicht grundsätzlich vorlag (z.B. in Form von Laptops und Druckern), was durch ihre prekäre ökonomische Situation, aber auch durch die Ausstattung der Einrichtungen, in denen sie lebten, bedingt war. Neben Limitierungen in der Ausstattung mit digitalen Medien werden jedoch auch weitere individuelle und strukturelle Einschränkungen und Hindernisse sichtbar. Dies ist dann der Fall, wenn das Wissen im Umgang mit den digitalen Medien fehlt (z.B. wie man eine E-Mail schreibt) und soziale Unterstützungsmöglichkeiten (z.B. Familienmitglieder) fehlen. Vulnerabilitäten und soziale BenachteiligungenderjungenMenschen(z.B.TrennungvonderFamilie,Traumata, unsichere Aufenthaltsperspektive, Rassismuserfahrungen) verweisen hierbei auf eine (strukturelle) Bedingungsebene, die nur begrenzt durch digitale Medien kompensiert werden kann. Die Potenziale digitaler Medien, Informationen und Wissen bereitzustellen, tragen zudem nicht grundsätzlich zu einem Orientierungswissen der jungen Menschen bei. So werden zwar über Social Media-Apps (z. B. TikTok, Instagram, Facebook) eine Vielzahl von mitunter widersprüchlichen Perspektiven auf die Welt bereitgestellt, für die Nutzer*innen stellt sich jedoch die (Bildungs-)Anforderung, Informationen zu selektieren, in ihrer Plausibilität einzuordnen und ggf. kritisch zu prüfen. Sofern diese Informationen nicht in der Herkunftssprache vorliegen, kann eine kritische Auseinandersetzung damit zudem aufgrund von sprachlichen Verständnisschwierigkeiten erschwert werden. Die Konfrontation mit Desinformationen und Verschwörungsmythen, denen Mediennutzer*innen und damit auch die jungen Geflüchteten begegnen, muss entsprechend auch vor diesem Hintergrund eingeordnet werden. Solche Dynamiken sind im Rahmen der COVID-19-Pandemie sichtbar geworden (z. B. das gegenüber einer Sozialpädagogin vertretene Narrativ, COVID-19 als ,Fiktion' anzusehen). Je nach Praktiken und Arrangements wird die Beteiligung digitaler Medien zudem explizit begrenzt und von unterschiedlichen Akteur*innen als unerwünscht bzw. störend markiert. Dies zeigt sich beispielsweise in Bezug auf das Smartphone sowohl im Schulunterricht (Handyverbot) als auch beim Zusammenleben in Wohngruppen (Medienzeiten oder Medienentzug als Sanktionsmaßnahme).
 
 ## 1.2 Subjektive, mediale und strukturelle Bedingungen von Bildungsteilhabe in digitalisierten Arrangements
 
 Wie oben gezeigt wurde, ist die Entfaltung der Möglichkeiten für Bildung und/oder Teilhabe im Rahmen digitalisierter Arrangements für die jungen Geflüchteten mit vielfältigen Bedingungen verbunden.Die vorliegende Studie zielte
+
+
+<!-- PAGE 228 -->
+
 
 darauf ab, aus der Perspektive einer multi-sited ethnography diesen Bedingungen und dem Zusammenspiel verschiedener Faktoren über Institutionengrenzen hinweg zu folgen, und rekonstruierte vor diesem Hintergrund das komplexe Netzwerk aus Akteur*innen, (digitalen) Artefakten und Rahmenbedingungen des Arrangements 2 . Auf diese Weise ist es möglich, eine Relationierung ungleicher subjektiver Ausgangsbedingungen der digitalen Mediennutzung junger Geflüchteter zu (pädagogisch-)institutionellen Rahmungen (vgl. Kutscher et al. 2022)sowiedieKonturierungderBeschaffenheitbzw.AffordanzdigitalerMedien (aus einer artefaktanalytischen Perspektive) in ihrer Relevanz für Bildungsteilhabe vorzunehmen. Damit werden die Bedingungen für (Bildungs-)Teilhabe im Kontext digitalisierter Arrangements ebenso sichtbar wie deren komplexe Wechselverhältnisse auf Subjekt-, Institutions- und Artefaktebene. Abbildung 8 veranschaulicht diese drei Ebenen. 3
 
@@ -1955,17 +2864,33 @@ Abbildung 8: Ebenen bildungsteilhaberelevanter Bedingungen
 
 <!-- image -->
 
+
+<!-- PAGE 229 -->
+
+
 Mit Blick auf die drei Ebenen ist es erforderlich, für das Verständnis der Entfaltung der Potenziale digitaler Medien die unterschiedlichen Beteiligten und deren Passungsverhältnis zueinander zu berücksichtigen. So geraten bei einer isolierten Betrachtung der jeweiligen subjektiven Ausgangslagen von jungen Geflüchteten, digitalen Medien oder institutionellen/personell-fachlichen Rahmungen die Wechselwirkungen, Brüche, Ambivalenzen und verstärkenden Potenziale oder auch Risiken für die Eröffnung von Möglichkeiten der Bildungsteilhabe aus dem Blick. Dabei bedingen die jeweiligen ,Ausprägungen' auf diesen drei Ebenen und die daraus hervorgehenden Konstellationen die Beiträge der an der verteilten Praxis (vgl. Bollig 2013) Beteiligten. So können die Ausgangslagen von jungen Menschen (z.B. Wissen, soziale Kontakte, digitale Ausstattung), die Beschaffenheit/Affordanz digitaler Medien (z.B. innere Strukturen und darin enthaltene Funktionalitäten) und die institutionelle/personell-fachliche Rahmung(z.B.AusgestaltungderpädagogischenBegleitung,Zeit-undPersonalressourcen, Regelungen zu digitalen Medien) divers gelagert sein. Die Beiträge der jeweiligen Beteiligten können folglich sowohl bildungsteilhabeermöglichende als auch -verhindernde Konsequenzen haben. Dabei ist allerdings zu berücksichtigen, dass die Bedingungen der drei Ebenen nicht ,kausal wirken' und die Praxis determinieren. So kann beim Erstellen einer Bewerbung am Computer in der Offenen Kinder- und Jugendarbeit fehlendes Wissen über digitale Medien auf Seiten eines jungen Menschen (Ebene: Ausgangslagen von jungen Geflüchteten ) einen Anlass für den*die Sozialpädagog*in darstellen, um im Modus der pädagogischen Begleitung (Ebene: Institutionelle/Personell-Fachliche Rahmungen ) den jungen Menschen zu Eigentätigkeiten am Computer aufzufordern bzw. anzuregen. Umgekehrt kann das Nichtwissen des jungen Menschen auch ein Anlass für den*die Sozialpädagogen*in sein, um stellvertretend die Bewerbungserstellung selbst zu übernehmen, da die Zeit für die Begleitung des einen Jugendlichen begrenzt ist und noch Anliegen von weiteren jungen Menschen zu begleiten sind. Relevant kann in diesem Verhältnis zudem sein, wie ,komplex' die genutzten digitalen Medien in ihrer inneren Struktur sind (Ebene: Beschaffenheit/Affordanz digitaler Medien ). Wenn dann mangelnde Deutschsprachkenntnisse des jungen Menschen hinzukommen, kann dies zusätzlich den Umgang mit den digitalen Medien erschweren. Wenn dies wiederum von Sozialpädagog*innen als potenzielles Risiko der Überforderung für den jungen Menschen eingeordnet wird, kann sehr Unterschiedliches daraus folgen: Entweder führt es dazu, dass kein Prozess des Erläuterns, Ausprobierens und Aneignens folgt, sondern die Fachkraft anstelle des Jugendlichen den Computer bedient, oder es stellt umgekehrt einen Anlass dar, anhand der Bedienung des digitalen Mediums mit dem jungen Menschen in einen Prozess der Sprachvermittlung zu treten.
 
 Damit sich also in den unterschiedlichen Arrangements und in den die OrganisationsgrenzenüberschreitendenPraxenOptionenfürBildungsteilhabeentfalten können, ist die Passung zwischen den verschiedenen Beteiligten auf al-
 
+
+<!-- PAGE 230 -->
+
+
 len drei Ebenen von zentraler Bedeutung. Werden diese einzelnen Bedingungsebenen näher in den Fokus gerückt, so lässt sich die Ebene der Ressourcenausstattung und der subjektiven Voraussetzungen der jungen Geflüchteten als Ausprägung sozialer, kultureller, ökonomischer (und symbolischer) Kapitalien (vgl. Bourdieu 1997) verstehen, die in hohem Maße Voraussetzung für Bildungsteilhabe sind. Dabei ist es insbesondere soziales Kapital in Form von ,Anbindung' an Sozialpädagog*innen, Familienmitglieder oder Peers, das den jungen Menschen, ausgehend von den ihnen zur Verfügung stehenden Ressourcen, Möglichkeiten zur Bildungsteilhabe eröffnen kann. In Bezug auf die Beschaffenheit/Affordanz digitaler Medien (vgl.Gibson 1979) lässt sich feststellen,dass die in diesen Artefakten (bildungsteilhaberelevanten) eingelagerten Funktionalitäten erst ,gefunden' bzw. nutzbar gemacht werden müssen. Dieser voraussetzungsvolle ,Zugang' zu den Funktionalitäten der digitalen Medien gestaltet sich angesichts deren unterschiedlicher Beschaffenheiten als uneinheitlich und als abhängig von der jeweiligen Kapitalausstattung der jungen Menschen. Vor diesem Hintergrund nimmt als - allerdings nicht immer verfügbare - Bedingung die institutionelle und personell-fachliche Rahmung eine besondere Bedeutung für die Ermöglichung von Bildungsteilhabe ein. So kann beispielsweise die Affordanz digitaler Medien (und damit einhergehende Schwierigkeiten in der Bedienung) Anlass für Sozialpädagog*innen sein, um den jungen Menschen Wissen ,über' das jeweilige digitale Medium zur Verfügung zu stellen. Wie unsere Studie zeigt, sind dabei insbesondere die Sozialpädagog*innen relevant, um Passungsverhältnisse zwischen Beteiligten herzustellen. Dies setzt zugleich voraus, dass die subjektiven Ausgangslagen der jungen Menschen (z.B. Sprachkenntnisse, Medienerfahrungen, soziale Kontakte, ökonomische Bedingungen) sowie die Voraussetzungen der digitalen Medien (z.B. technische Logiken, Bedienungsweisen, Funktionalitäten) den Sozialpädagog*innen bekannt sind bzw. sie sich mit ihnen vertraut gemacht haben. IndiesemZusammenhangstelltessichbeispielsweisealsherausforderndheraus, wenndiedenSozialpädagog*innenvertrautenPraktikennichtanknüpfungsfähig an die medialen Nutzungsweisen und Formate der jungen Menschen sind (z.B. Smartphones und Apps). In Fällen, in denen der mediale Habitus (vgl. Kommer 2022) der Akteur*innen nicht kompatibel ist (vgl. Welling/Brüggemann 2004), führendiesemangelndenPassungsverhältnissezuBenachteiligung.DiePerspektive auf die Beteiligung der unterschiedlichen Akteur*innen, Artefakte und Rahmenbedingungen und ihr Zusammenspiel zeigt, dass nicht einzelne Bedingungenunabhängigvondenanderenalsbesondersrelevantidentifiziertwerdenkönnen, da gerade das Relationale des Netzwerks (vgl. Latour 1991) die Bedingungen kennzeichnet und auf komplexe Weise hervorbringt. Jedoch wird sichtbar, dass die Rolle der sozialpädagogischen Fachkräfte als ,Brückenbauer*innen' zwischen den verschiedenen institutionellen Bezügen, im Verhältnis der Nutzbarmachung der Artefakte und - da wo möglich - auch in der Gestaltung institutioneller Rahmenbedingungen besondere Relevanz hat. Sowohl durch gezielte Interventionen
+
+
+<!-- PAGE 231 -->
+
 
 als auch durch (mitunter ,beiläufige') Beiträge ermöglichen sie durch Einordnung und Vermittlung von Wissen und Fähigkeiten als auch durch die Eröffnung von Gelegenheiten zur begleiteten Aneignung Räume für Bildung und Teilhabe. Dieser besondere Stellenwert der sozialpädagogischen Fachkräfte wird im nächsten Kapitel weiter erläutert.
 
 ## 1.3 Kinder- und Jugendhilfe als relevanter Kontext der Verfügbarmachung von institutionalisiertem Verbindungskapital
 
 Wie oben dargestellt erweisen sich die Kinder- und Jugendhilfe sowohl als institutioneller Kontext als auch die dortigen Akteur*innen in Form der Sozialpädagog*innenfürdieErmöglichungvonBildungsteilhabealshochrelevant.Letztere können mit Szreter und Woolcock (2004) als institutionalisiertes Verbindungskapital ( linking social capital ) bezeichnet werden, welches den Adressat*innen über den eigenen lebensweltlichen Nahraum hinausreichende Ressourcen zugänglich macht.Dieses institutionalisierte Verbindungskapital zeichnet sich dadurch aus, dass basierend auf Beziehungen die Sozialpädagog*innen aus ihrer institutionalisierten Position heraus, die sowohl ein Mehr an Macht als auch an Wissen umfasst, den jungen Menschen Handlungsspielräume eröffnen, die sie ohne die Sozialpädagog*innen nicht hätten. So werden neue und alternative Wissensressourcen zugänglich gemacht, die durch soziale und kulturelle Heterogenität im Verhältnis zu dem, was den jungen Menschen bis dahin verfügbar war, gekennzeichnet sind, und erweiterte Bildungsorte bereitgestellt (vgl. Kessl et al. 2004, S. 27ff.). Die Kinder- und Jugendhilfe ermöglicht damit gerade in den untersuchten Zusammenhängen eine für Bildungsteilhabe förderliche Ressourcenerweiterung. Dies zeichnet sich nicht nur in Form von geplanten, intendierten Angeboten bzw.Formaten ab,sondern gerade auch und vor allem in Momenten,in denen die Sozialpädagog*innen situativ auf die Anliegen bzw. Bedarfe der jungen Menscheneingehen.HierinwirdaucheinUnterschiedzudenformalenArrangements des Schulunterrichts sichtbar. Dort ist oftmals eine Lehrkraft für die Anliegen einer Vielzahl von jungen Menschen zuständig, während zugleich ein definiertes Unterrichtsziel im Mittelpunkt steht, welches in einer begrenzten Zeit erfüllt werden muss. Offenheit bzw. Situativität für spezifische Bedarfe von einzelnen Schüler*innen erweisen sich hier angesichts der Bedingungen des Arrangements und den sich dazu vollziehenden Praktiken als ,störend' bzw. ,unpassend' im Verhältnis zur gegebenen Zielsetzung. Praxistheoretisch ausgedrückt kann auch von einer spezifischen Teleoaffektivität (also einer Ausrichtung) der unterrichtlichen Praxis ausgegangen werden (vgl. Schatzki 2012). Diese Teleoaffektivität lässt nur ein begrenztes SpektrumvonAktivitätenderAkteur*innenzu.EskönnenvordiesemHintergrundfünfbildungsrelevanteBeteiligungenderSozialpädagog*innen rekonstruiert werden (vgl. Abbildung 9).
+
+
+<!-- PAGE 232 -->
+
 
 <!-- image -->
 
@@ -1975,12 +2900,20 @@ DieseinAbbildung9veranschaulichtenbildungsrelevantenBeteiligungenvon Sozialpäda
 2. Verknüpfung mit weiteren (institutionellen) Akteur*innen : Die Fachkräfte stellen Verbindungen zu anderen Institutionen oder Akteur*innen her, über die für die jungen Menschen weitere Ressourcen (z.B. rechtliche Informationen) zugänglich werden. Diese Verknüpfung mit weiteren (institutionellen) Akteur*innen trägt zu einer Erweiterung des Handlungsspielraums der jungen Menschen bei. Sie erfahren, wohin sie sich wenden können und erleben auch, wie ihre Interessen vertreten werden.
 3. Vermittlung zwischen unterschiedlichen Perspektiven : Im Zuge des Kontakts der jungen Menschen mit weiteren (institutionellen) Akteur*innen können Sozialpädagog*innen eine vermittelnde Position zwischen den unterschiedlichen
 
+
+<!-- PAGE 233 -->
+
+
 Perspektiven der beteiligten Akteur*innen einnehmen. So vermitteln sie in anderen institutionellen Kontexte (z.B. Schule) Anliegen bzw. Bedarfe und Informationen zu den Lebenslagen der jungen Menschen (z.B. mangelnde Ausstattung mit digitalen Medien, sprachliche Verständnisprobleme) und vertreten deren Interessen. Umgekehrt übernehmen die sozialpädagogischen Fachkräfte die Funktion, den jungen Menschen die Perspektiven bzw. Anforderungen von anderen Akteur*innen aufzuzeigen, beispielsweise weshalb ein Antrag abgelehnt wurde bzw. was für dessen Bewilligung an Angaben notwendig ist.
 
 4. Schaffung von Bildungsanlässen und -räumen : Sozialpädagog*innen können den jungenMenscheneinerseitsfürBildungsteilhaberelevanteAngebote(z.B.Bewerbungstrainings) bzw. Bildungsorte (z.B. mit entsprechenden Artefakten ausgestattete Räumlichkeiten) verfügbar machen. Basierend auf der Kenntnis der Bedarfe der jungen Menschen werden dabei sowohl geplante Formate entwickelt (z.B. für das Bewerbungstraining) als auch situative Möglichkeiten im Thekengespräch genutzt, die Aneignung, Vermittlung und Reflexion von Wissen und Fähigkeiten ermöglichen.
 5. Verfügbarmachung digitaler Medien : Die Settings der Kinder- und Jugendhilfe machendarüberhinausdigitaleMedienverfügbar.DigitaleInfrastruktur und Computer bzw. Laptops werden entweder als Geräte, die für die Adressat*innen - vor Ort oder auch als Leihgeräte - zur Verfügung gestellt werden oder auch in Ausnahmefällen als Geräte der Sozialpädagog*innen (auf Anfrage) nutzbar. Den jungen Menschen ist es dann möglich, außerhalb des institutionellen Orts die digitalen Medien ,eigenverantwortlich' zu nutzen. Weiterhin können Sozialpädagog*innen auch dahingehend eine Funktion haben, dass sie für andere institutionelle Settings - hier Schule - eine Verfügbarmachung digitaler Medien durch eine Kooperation mit Lehrkräften und eine damit einhergehende Antragstellung zur Beschaffung der Medien unterstützen.
 
 Inwiefern die Kinder- und Jugendhilfe diese ressourcenerweiternde Rolle spielen kann, wird jedoch in wesentlichem Maße durch die Bedingungen der jeweiligen Institution geprägt. Ähnlich wie digitale Medien kein ,Selbstläufer' für Bildungsteilhabe sind, entfaltet sich auch das institutionalisierte Verbindungskapital stets performativ und relational. Hierbei erweisen sich neben dem Modus der pädagogischen Begleitung gerade Aspekte von Zeit-, Personal- und Finanzressourcen als relevant,die über die subjektive Haltung der Fachkräfte hinausgehen und die Fragenacheinerentsprechenden,Infrastruktur'derInstitution(vgl.Fujiietal.i.d.B.) aufwerfen.
+
+
+<!-- PAGE 234 -->
+
 
 ## 1.4 (Flucht-)Migrationsspezifische Besonderheiten
 
@@ -1990,10 +2923,18 @@ Wird die Bedeutung des Status als Geflüchtete*r für Bildungsteilhabe fokussier
 
 4 Wie schon in den Methodenberichten dargestellt (vgl. Fujii et al. und Friedrichs-Liesenkötter et al. i.d.B.), geht es an dieser Stelle nicht darum, eine empiristische Form des Othering zu manifestieren. Stattdessen steht auf Basis der ethnografischen Daten der Versuch im Vordergrund (ohne eine quasi-naturalistische Kategorie ,der*des Geflüchteten' zu konstruieren), die spezifischen und offensichtlich mit dem Status des Geflüchtetseins verbundenen HerausforderungenundDimensionierungenvonansonsten,regulären'(Entwicklung-)Aufgabensichtbarzu machen.
 
+
+<!-- PAGE 235 -->
+
+
 die jungen Menschen als Geflüchtete betreffen. Dies ist etwa der Fall, wenn aufenthaltsrelevante Dokumente (z.B. Identitätsnachweise) für das Ausländeramt in Deutschland eingeholt werden müssen und die Kommunikation per WhatsApp mit einem Kontakt im Geburtsland vereinbart und etabliert ist, um dort über die Distanz die Beschaffung der erforderlichen Unterlagen zu organisieren.
 
 2. Rassismuserfahrungen : Das Geflüchtetsein der jungen Menschen wird auch durch Vertreter*innen von Institutionen, in die die jungen Menschen eingebunden sind (z.B. Lehrer*innen, Peers, Sozialpädagog*innen), thematisiert. In diesem Zusammenhang berichten die jungen Menschen und auch Fachkräfte einerseits von rassistisch gedeuteten Erfahrungen bzw. Erlebnissen in der alltäglichen Praxis wie einem Hitlergruß vor einem von den jungen Menschen besuchten Jugendcafé. Andererseits finden (strukturelle) Ausschlüsse statt. So berichten die jungen Menschen von rassistisch eingeordneten Benachteiligungen bei der Wohnungssuche, beim Einlass von Nachtclubs oder Polizeikontrollen.
 3. Institutionelle Abhängigkeiten : Im Zusammenhang der Anbindung an Institutionen wie das Jobcenter, das Ausländeramt oder die Unterbringung in Einrichtungen der Kinder- und Jugendhilfe zeigen sich in besonderem Maße im Alltag der jungen Menschen institutionelle Abhängigkeiten. Dies betrifft vor allem diejenigen, die sich als unbegleitete Minderjährige in Deutschland aufhalten. Ihnen wird ein*e Vormund*in zugewiesen, der*die auch für Entscheidungen im Zusammenhang mit Schulbesuch oder Ausbildungsplatzsuche rechtliche*r Repräsentant*in der*des Jugendlichen ist. Hiermit können nicht nur Interessenskonflikte zwischen den Akteur*innen bestehen. Auch sind Benachteiligungen bzw. Ausschlüsse möglich, welche sich in Verknüpfung mit einer prekären Aufenthaltssituation existenziell verschärfen können. So wird beispielsweise im Fall einer geduldeten Jugendlichen aus einem sogenannten sicheren Herkunftsland der Beginn einer Ausbildung durch ihre Vormundin zunächst untersagt. Erst auf weiteres Drängen und nach umfänglichen Erklärungen der Jugendlichen kann die Vormundin von der Notwendigkeit der Ausbildung überzeugt werden und sich von der Erwartung zur Fortführung der Schullaufbahn der Jugendlichen distanzieren. Im Rahmen der regelhaften Unterbringung Minderjähriger in Einrichtungen der Kinder- und Jugendhilfe ist die digitale Mediennutzung institutionell reguliert. So werden beispielsweise temporäre Einschränkungen des WLANZugangs in Wohngruppen der jungen Menschen von den Sozialpädagog*innen als besonders ,wirksame' Sanktionierung verstanden und angewendet (z. B. bei einer verspäteten Rückkehr in der Nacht in die Wohngruppe). Auch ist von der jeweiligen Einrichtung bzw. dem Träger abhängig, welches Wissen und welche Erfahrungen und Fähigkeiten von Sozialpädagog*innen in der
+
+
+<!-- PAGE 236 -->
+
 
 - Begleitung im Alltag aufgegriffen werden und welche digitale Medienausstattung dort verfügbar ist. 5
 4. Sprachliche Anforderungen und Voraussetzungen : Schließlich stellen sprachliche Anforderungen und Voraussetzungen im Alltag der jungen Menschen eine spezifische Herausforderung dar. Die digitalen Medien, welche den jungen Menschen durch Institutionen zugänglich gemacht werden (z.B. ComputerinEinrichtungen der Kinder- und Jugendhilfe) und deren Nutzung vorausgesetzt wird (z.B. Lernplattformen von Schulen oder Websites des Jobcenters), sind meist auf Deutsch als Sprache für die Bedienung eingestellt. Somit werden - abgesehen vom eigenen Smartphone, in dem individuelle Spracheinstellungen vorgenommen werden können - zumindest in Bezug auf ,textlastige' digitale Medien entsprechende Sprachkenntnisse der jungen Menschen relevant: einerseits, um in der Bedienung der digitalen Medien Zugang zu den darin enthaltenen Funktionalitäten zu bekommen und andererseits, um die (institutionellen) Anforderungen zu erfüllen.
@@ -2006,18 +2947,34 @@ Die vorliegende Studie ist durch ein Konglomerat erkenntnistheoretischer Annahme
 
 5 Grundsätzlich betrifft diese ,Abhängigkeit' von den über das Umfeld bereitgestellten Kapitalien auchjungeMenscheninDeutschlandohneFluchterfahrung.SieverschärftsichimZusammenhang mit sprachlichen Beeinträchtigungen, prekärem Aufenthaltsstatus und - teils durch beides bedingt - eingeschränkten weiteren sozialen Kontakten. In beiden Fällen können für sozial benachteiligte junge Menschen die institutionell verfügbaren Ressourcen die einzigen sein, die eine kompensatorische Funktion bei Benachteiligungslagen haben können.
 
+
+<!-- PAGE 237 -->
+
+
 perspektiviertundeinethnografischerForschungszuganggewählt.Derpraxeologische Zugang ermöglichte es, - insbesondere in Verbindung mit der Perspektive aufdieBeteiligungvonAkteur*innen,(digitalen)ArtefaktenundArrangementbedingungenundKontextenanPraktiken-immethodischenZugangder multi-sited ethnography (vgl. Marcus 1995) die komplexen WechselwirkungenundZusammenhängederHervorbringungvon(Bildungs-)Teilhabe junger Geflüchteter in digitalisierten Arrangements zu untersuchen.Dabei erwies sich im RahmenderGrounded Theory Methodology in Anlehnung an Strauss und Corbin (1996) die Kombination von Zugängen wie teilnehmender Beobachtung, ethnografischen Gesprächen und Interviews, Artefaktanalyse nach Lueger und Froschauer (2018) und Situationsanalyse nach Clarke, Friese und Washburn (2018) als geeigneter Methoden-Mix, um den Forschungsgegenstand und seine Erstreckung über diverse Beteiligte und Orte angemessen zu erforschen. Neben den oben dargestellten Befunden sind die folgenden sechs methodischen bzw. methodologischen Aspekte festzuhalten:
 
 1. Praxistheoretische Rekonstruktion von Bildung(-steilhabe) : Eine empirische Beobachtbarkeit von Bildung lag nicht im Erkenntnisinteresse der vorliegenden Studie. Die empirische Rekonstruktion von Bildung stellt - auch bei der Annahme eines starken empirischen Subjekts als Quelle für Erkenntnis und davon abzuleitenden Befunden - eine nicht-triviale Aufgabe dar. Die vorliegende Untersuchung zielte jedoch nicht auf die empirische Rekonstruktion von Bildungsprozessen selbst, sondern auf die Bedingungen für eine Ermöglichung solcher Prozesse als Aneignung oder Vermittlung . Als Hinweise für Bildungsprozesse wurden etwa Äußerungen der Teilnehmenden darüber, was diese ,gelernt' hatten, interpretiert oder auch Analysen, die aufzeigten, dass über den zeitlichen Verlauf sichtbar wurde, wie sich Praktiken (z.B. bei E-Mail-Kommunikationen)verändertenundeigenständigvollzogenwurden.Stattdessenstellte die Rekonstruktion der Bedeutung von digitalen Medien und die hierfür relevanten Bedingungen für die Möglichkeit von (Bildungs-)Teilhabe den Forschungsgegenstanddar.DieseSetzungerwiessichalsanschlussfähigzurPraxistheorie, da solche Vollzüge in den Blick gerückt werden konnten, in denen sichAkteur*innenüberihrePartizipationanderPraxisdieOptionaufBildung im Sinne von Aneignung, Vermittlung, Befähigung, Bewältigung etc. eröffnete (ohne zwangsläufig anzunehmen, dass diese sich in jedem Fall auch tatsächlich dann realisierte). Dabei ermöglicht die praxistheoretische Perspektive eine Sensibilisierung für die unterschiedlichen Grade von Beteiligung an der Praxis, welche gleichzeitig das ,Gelingen' von Bildungsteilhabe 'als etwas Brüchiges,Fragiles und letztlich von vielfältigen Beiträgen der Beteiligten Abhängiges' (Fujii/Kutscher 2022, S. 475) rekonstruieren lässt.
 2. Ethnografische Untersuchung von Praxis unter der Beteiligung digitaler Medien : Die Beteiligung digitaler Medien an Praxis zu beschreiben setzte Erhebungs-
 
+
+<!-- PAGE 238 -->
+
+
 - zugänge voraus, die das implizite, materielle, routinierte Tun mit digitalen Medien sichtbar werden ließen. Sowohl standardisierte Befragungen als auch Interviews (die entsprechende Intentionalität und Bewusstheit voraussetzen) ermöglichen keinen adäquaten Zugang zu entsprechenden vorbewussten Praktiken, im Gegensatz zur teilnehmenden Beobachtung. Letztere erforderte es allerdings, räumlich-körperlich ,nah' an den Akteur*innen und den jeweiligen digitalen Medien zu sein, um die jeweilige Praxis erfassen zu können. Limitierungen ergaben sich dann, wenn aus einem gewissen Abstand zwar beobachtet werden konnte, dass Akteur*innen ihr Smartphone benutzten, jedoch - aufgrund der räumlichen Distanz - nicht, was diese damit wie taten. Das heißt, die Praktiken unter der Beteiligung des jeweiligen digitalen Mediums blieben an dieser Stelle unvollständig beschrieben. In diesem Zusammenhang erwiesen sich wiederum Interviews und Feldgespräche als hilfreich, um entsprechende ,Leerstellen' der Beobachtungen über Nachfragen aufzufüllen. So konnten darüber der Beobachtung bis dahin unzugänglich Geschehnisse konkretisiert werden. Diese Annäherung stellte ergänzende Einblicke zu Normen im Zusammenhang mit digitalen Medien in den Institutionen bereit. Dies betraf auch das Tun von Sozialpädagog*innen, das nicht in den ethnografischen Feldaufenthalten beobachtet wurde (z.B. dokumentierende und koordinierende Tätigkeiten im Büro am Computer während der Schulzeiten der jungen Menschen).
 3. Praxistheorie und (situationsanalytische) Grounded Theory Methodology : Sowohl der Grounded Theory Methodology nach Strauss und Corbin (1996) als auch der Weiterentwicklung durch die Situationsanalyse nach Clarke, Friese und Washburn (2018) liegen pragmatistische-interaktionistische Annahmen zugrunde. Diese spiegeln sich beispielsweise im axialen Kodierparadigma als auch in den Maps Sozialer Welten/Arenen wider. Dabei werden Artefakte vor allem im Zusammenhang mit sinnorientiertem, zielgerichtetem menschlichem Handeln und menschlicher Interpretationen verstanden und in ihrer ,Eigentätigkeit' kaum berücksichtigt. Die soziale Bedeutung von Artefakten, wie sie in der vorliegenden Studie für digitale Medien relevant wird, bliebe dadurch unterbestimmt (vgl. Fujii/Rink/Weber 2023). Um die Verteiltheit von Praxis zwischen menschlichen Akteur*innen, (digitalen) Artefakten und Kontext (vgl. Bollig 2013) sowie die Affordanz digitaler Medien empirisch abzubilden, war es erforderlich, sowohl das Vorgehen der Grounded Theory Methodology nach Strauss und Corbin als auch der situationsanalytischen Erweiterung nach Clarke, Friese und Washburn in ein passungsfähiges Verhältnis zur Praxistheorie zu setzen. Das heißt, die Erschließung von Kategorien zur Theoriegenerierung musste sozialtheoretisch justiert werden (vgl. Mey/Berli 2019). Hierfür war einerseits das Kodierparadigma zu überarbeiten. Die alleinige Strukturierung von Phänomenen nach Kontext, Bedingungen (ursächlich, intervenierend), Strategien bzw. Handlungen und
+
+
+<!-- PAGE 239 -->
+
 
 Konsequenzen erwies sich als unpassend und war in eine praxistheoretische Heuristik zu überführen (vgl. zur detaillierten Umsetzung die Beiträge der beiden Standorte i.d.B.). Aufgrund dieser divergierenden Perspektiven lag für die Situationsanalyse eine Fokussierung auf Situations-Maps unter einer Distanzierung von den Maps der Sozialen Welten/Arenen nahe.
 
 4. Artefaktanalysen digitaler Medien : Die Perspektive der Artefaktanalyse (vgl. Lueger/Froschauer 2018) erwies sich als gewinnbringend, um die soziale Bedeutung digitaler Medien (auch in einem passungsfähigen Verhältnis zur Praxistheorie) und ihre jeweiligen Eigenschaften als Vorbedingungen in Praxiskontexten fokussiert zu untersuchen. Artefaktanalysen digitaler Medien stehen allerdings vor besonderen Herausforderungen aufgrund der Beschaffenheit bzw. Affordanz dieser Artefakte. Anders als nicht-digitale Gegenstände (z.B. ein Sofa oder ein Tisch) zeichnen sich digitale Medien durch eine besonders hohe innere Komplexität und Vieldimensionalität aus. Am Beispiel des Aufbaus eines Smartphones in unterschiedliche je durch die Artefaktanalyse zu beschreibende Bereiche wird dies deutlich: Zunächst ließe sich die äußere Erscheinung, die Materialität der Hardware beschreiben. Hieran anknüpften kann die Nutzungsoberfläche des Betriebssystems analysiert werden. Als nächstes lassen sich die auf dem entsprechenden Smartphone installierten Apps und wiederum deren verschiedene Bereiche fokussieren. Des Weiteren können sowohl zu der Benutzungsoberfläche des Smartphones als auch zu den darauf installierten Apps die (den Forschenden unzugänglichen) Programmcodes der jeweiligen Softwareanwendungen angesehen werden. Neben diesen jeweils in den Blick zu rückenden Bereichen der unterschiedlichen digitalen Medien stellt auch deren ständige Überarbeitung (bzw. Weiterentwicklung von Apps durch die entsprechenden Anbieter) entsprechende Herausforderungen für die Analyse dar. Hiermit geht das Erfordernis einher, Entscheidungen im Rahmen der Analyse zu treffen, um forschungspragmatisch notwendige Eingrenzungen und Fokussierungen vorzunehmen. Deskriptive Analysen digitaler Medien sind somit als fragile ,Momentaufnahmen' zu verstehen und fordern, zwangsläufig jeweils die für das Erkenntnisinteresse relevanten Ebenen zu fokussieren. Für eine praxistheoretische Forschung betrifft dies vor allem die alltägliche Einbettung des Artefakts in den sich ausgehend von dessen Beschaffenheit bzw. Affordanz realisierenden Praktiken.
 5. Forschungsbeziehungen mit jungen Geflüchteten : Die ethnografische Begleitung junger Geflüchteter an die unterschiedlichen Orte ihres Bildungsalltags erwies sich forschungsethisch wie -methodisch als überaus komplex. So ist hinsichtlich der potenziell erhöhten Vulnerabilität der Teilnehmer*innen der Studie und den sich im Verlauf entwickelnden Vertrauensbeziehungen eine umfängliche forschungsethische Reflexivität unabdingbar (vgl. Kleist 2015). Daher waren es wichtige und kontinuierliche Aufgaben des Forschungs-
+
+
+<!-- PAGE 240 -->
+
 
 teams, die fortwährende Herstellung eines informierten Einverständnisses (z. B. in Bezug auf die unterschiedlichen sites des Alltags) zu gewähren 6 und besondere Risiken der Deanonymisierung in der Darstellung der Daten bei Publikationen und Vorträgen (z.B. hinsichtlich der Aufenthaltsperspektive) sowie die Machtasymmetrien zwischen den Forschenden als Vertreter*innen der ,Aufnahmegesellschaft' und den jungen Geflüchteten in teils prekären Lebenssituationen zu berücksichtigen. Dies betraf beispielsweise den sehr sensiblen Umgang mit der Frage der Freiwilligkeit der Teilnahme an der Forschung und der Freiheit der Studienteilnehmer*innen, Anfragen zur Begleitung in bestimmte Alltagssituationen auch abzulehnen. Mit Blick auf die Lebensphase Jugend war eine hohe Flexibilität in der ethnografischen Begleitung, wenn es um Terminvereinbarungen oder -absagen ging, erforderlich. Mit ,Einschränkungen' im Feldzugang und der Frage nach Lösungen waren die Forschenden immer wieder konfrontiert. Diese Einschränkungen waren mit sich verändernden Lebensbedingungen der jungen Menschen verbunden, beispielsweise durch Umzüge, das (freiwillige oder auch unfreiwillige) Verlassen von Einrichtungen in Kinder- und Jugendhilfe und Schule oder auch Veränderungen der Aufenthaltsperspektive. Im Zusammenhang mit den teils prekären Lebenslagen der jungen Menschen und der Forschungsbeziehung, die sich über einen langen Zeitraum in Verbindung mit den verschiedenen Feldphasen entwickelte, war für den Umgang mit der sich entwickelnden emotionalen Involviertheit der Forschenden der regelmäßige Austausch im Team über die Forschungsbeziehungen unerlässlich, um das forschungsmethodische Vorgehen in Orientierung an ethischen Anforderungen abzustimmen und die eigene Rolle im Feld zu klären.
 
@@ -2026,6 +2983,10 @@ teams, die fortwährende Herstellung eines informierten Einverständnisses (z. B
 6 Dasheißt,es wurde nicht nur einmal zu Beginn der Studie das Einverständnis der jungen Menschen zur Begleitung in ihrem Alltag eingeholt. Vielmehr wurde kontinuierlich während des weiteren Verlaufs der Studie immer wieder das Einverständnis eingeholt, sofern bisher noch nicht erschlossene Bereiche im Alltag der jungen Menschen beforscht werden sollten.
 
 7 Diese Beratungen erfolgten im Forschungsverbund sowie u.a.in Zusammenarbeit mit dem auf ethnografische Daten spezialisierten Forschungsdatenzentrum Qualiservice (vgl. Lein 2024).
+
+
+<!-- PAGE 241 -->
+
 
 textwissen aufbereitet werden muss, um die Daten entsprechend nutzbar zu machen, werfen die Erfahrungen dieser Studie grundsätzliche Fragen nach den Bedingungen und Möglichkeiten der Umsetzung des Anspruchs auf Sekundärnutzung als Standard ethnografischer Forschung auf.
 
@@ -2037,11 +2998,19 @@ Ausgehend von den dargestellten Befunden wird abschließend ein Ausblick formuli
 
 8 Hier ist u.a. der digitale Fachtag 'Fachlichkeit und Digitalisierung in der Sozialen Arbeit' des Netzwerks Soziale Arbeit und Digitalisierung vom 19.09.2022 anzuführen. Es stellten die Beiträge von Lea Bergmann (Verband für Digitalisierung in der Sozialwirtschaft e.V.), Dany Kral (Paulinenpflege Winnendene.V.)undJanaSchröder(BundesministeriumfürFamilie,Senioren, Frauen und Jugend) wertvolle Impulse über Gestaltungsanforderungen von Digitalisierungsentwicklungen bereit.
 
+
+<!-- PAGE 242 -->
+
+
 ## 2.1 Ausblick: Implikationen für die Praxis in Kinder- und Jugendhilfe und Schule
 
 Über die Rekonstruktion der verteilten Praktiken wird deutlich, dass die Vermittler*innenrolle der pädagogischen Fachkräfte zwischen den Optionalitäten bzw. Affordanzen der digitalen Medien, den subjektiven Voraussetzungen der jungen Geflüchteten und strukturellen Rahmenbedingungen bedeutsam für die Ermöglichung von (Bildungs-)Teilhabe ist. Damit ergeben sich Konsequenzen für die Gestaltung von pädagogischen bzw. weiteren unterstützenden Arrangements nicht nur,aber auch in der Kinder- und Jugendhilfe: Wissen,das über digitale Medien prinzipiell bereitgestellt werden kann und auch technisch zugänglich ist, bedarf je nach Voraussetzungen der Adressat*innen spezifischer Arrangements, in denen es über Vermittler*innen verfüg- und ,aneigenbar' gemacht werden kann. In den analysierten Situationen nehmen diese Rolle vor allem sozialpädagogische Fachkräfte (aber darüber hinaus auch andere Akteur*innengruppen, wie Peers oder - selten - auch Lehrkräfte) ein, gerade an den institutionellen Schnittstellen. Die faktische Ermöglichung von Teilhabe, ist somit eng verknüpft mit dem institutionalisierten Verbindungs- bzw. Verknüpfungskapital ( linking social capital , vgl. Szreter/Woolcock 2004), das über die institutionellen Akteur*innen verfügbar wird. Durch diese Mittler*innenrolle werden die in den Praktiken und Arrangements beteiligten Elemente in einem (bildungsteilhabe-)förderlichen Verhältnis relationiert, indem wie oben dargestellt (vgl. Fujii/Kutscher i.d.B.) an ,krisenhaften' Stellen eine Brücke zwischen Informations- und Kommunikationslücken geschlagen wird. Auch konkrete Unterstützung in ,Mangelsituationen' wird dadurch möglich, dass die sozialpädagogischen Fachkräfte Einblicke sowohl in den privaten Alltag als auch in schulische und Jugendhilfebezüge haben und damit Unterstützung bei der Alltagsbewältigung in verschiedenen Kontexten leisten. Wie diese Studie zeigt, bezieht sich das nicht nur auf die ,herkömmlichen' Aufgaben der Kinder- und Jugendhilfe oder der Schule, sondern insbesondere im Zusammenhang mit der zunehmenden Digitalisierung des Alltags und der mit Digitalität verbundenen Anforderungen, die Benachteiligungspotenzial für vulnerable Gruppen haben. Vor diesem Hintergrund können auf drei Ebenen Empfehlungen bzw. Implikationen zur Gestaltung bildungsteilhabeförderlicher Praxis benannt werden (vgl. Abbildung 10).
 
 Auf der ersten (Mikro-)Ebene wird eine (digitalisierungsbezogene bzw. auch medienpädagogische) Qualifizierung von Lehr- und sozialpädagogischen Fachkräften für die BefähigungvonAdressat*innenzurEntfaltungvonBildungsteilhabe unter Beteiligung digitaler Medien relevant. Diese umfasst Wissen über digitale Medien (z.B. deren Funktionalitäten, Bedienung und ,Eignung' im Zusammenhang der jeweiligen Praxis), das in Verbindung zu bringen ist mit Herausforderungen und Themen der Jugendphase (wie z.B. Qualifizierung, Verselbstständigung und Selbst-
+
+
+<!-- PAGE 243 -->
+
 
 <!-- image -->
 
@@ -2049,13 +3018,25 @@ positionierung), um auf Seiten der Pädagog*innen bewusst Anknüpfungspunktefür
 
 Von hoher Relevanz ist in diesem Zusammenhang auch ein Austausch von Lehrkräften mit medienpädagogischen Berater*innen, die sowohl zu mediendidaktischen Fragestellungen (u.a. hinsichtlich einer Passung von Lernzielen und damit verbundener Art des Medieneinsatzes), aber auch zur Thematisierung von expliziten Inhalten über Medien (z.B. Social Media, Cyberbullying etc.) in der Schule unterstützen können, wenngleich auch diese Themen entsprechend in einer medienpädagogischen Professionalisierung der pädagogischen Fachkräfte in Aus- und Fortbildung stärker Beachtung finden müssen. Darüber hinaus ist auch in Verbindung mit Digitalisierung bzw. Digitalität (vgl. Stalder 2016) eine Sensibilität für soziale Ungleichheitsaspekte relevant. Es gilt, einen Blick und das Verständnis dafür zu entwickeln, dass nicht alle (jungen) Menschen gleichermaßen von (Bildungs-)Potenzialen digitaler Medien profitieren können und an welchen Stellen Benachteiligungs- oder Exklusionsphänomene auftauchen und einer Bearbeitung bedürfen. Wissen über und Offenheit für Medienpräferenzen und -kulturen der jungen Menschen erweisen sich zudem als bedeutsam, um an die Ausgangslagen der Adressat*innen entsprechend anknüpfen zu können. In den Feldaufenthalten zeigte sich darüber hinaus, dass Fragen des Datenschutzes (z. B. bei digitalen Kommunikationen per Messenger) in alltäglichen Situationen oftmals kaum oder wenig angemessene Berücksichtigung finden. Ein relevanter Bedarf zur Qualifizierung zeichnet sich zudem im Zuge der zunehmenden Verbreitung von Desinformationen digitaler Medien ab (z.B. in Bezug auf ,Verschwörungstheorien bzw. -mythen'). Sozialpädagog*innen und Lehrer*innen stehen hier vor der Herausforderung, digitale Informationen in ihrer Plausibilität einzuschätzen und den jungen Menschen ,geeignete' Informationsquellen
 
+
+<!-- PAGE 244 -->
+
+
 zu vermitteln. In diesem Zusammenhang kann bereits auf Leitlinien der Europäischen Kommission (2020) und medienpädagogische Angebote (z.B. Klicksafe 2023) zurückgegriffen werden. Des Weiteren bedarf es einer Sensibilität gegenüber den spezifischen Lebenslagen junger Geflüchteter und der damit einhergehenden erhöhten Relevanz digitaler Medien (z. B. zur Aufrechterhaltung des Kontakts mit Angehörigen im Herkunftsland). Ein Ausblenden dieser Lebenslagen droht Ungleichheiten und Benachteiligungen zu (re-)produzieren bzw. zu verstärken. Zugleich birgt ein unreflektierter Umgang mit dem Geflüchtetsein der jungen MenschendasRisiko,rassistische Verhältnisse im Alltag der jungen Menschen zu reproduzieren. So bedarf es seitens der Sozialpädagog*innen und Lehrer*innen einer Sensibilität in Bezug auf Formen und Konsequenzen von Rassismus, um im Alltag der jungen Menschen an deren Erfahrungen anknüpfen zu können (z. B. über Einordnungen dieser Erfahrungen) und deren Positionierungen bzw. Stimmen sichtbar zu machen (z.B. im Rahmen von ,öffentlichkeitswirksamen' Formaten wie Podcasts).
 
 Auf der zweiten Ebene liegen Anforderungen auf institutioneller bzw. organisationaler Seite . So bedarf es in den Institutionen allgemein einer passenden (bzw. barrierearmen) Ausstattung mit digitalen Medien , um Ungleichheitslagen der Adressat*innen im Zugang zu digitalen Medien zu begegnen. Auch während der Studie war in den besuchten Wohngruppen für die dort lebenden jungen Menschen oftmals nur ein Computer als geteiltes Gemeinschaftsgerät im Wohnzimmer nutzbar. Die Anschaffung von Laptops mussten die jungen Menschen über eigene finanzielle Mittel leisten. In Formaten des Unterrichts an Schulen wirft die Nutzung digitaler Medien aufgrund ihrer Multifunktionalität (z.B. bei Smartphone oder Tablet und den damit verknüpften Apps) die grundlegende Herausforderung auf, dass es für Lehrer*innen kaum möglich ist festzustellen, inwiefern die jeweilige digitale Mediennutzung der jungen Menschen an den (privaten) Geräten im Zusammenhang der erwünschten unterrichtlichen Praxis stattfindet. Die Ergebnisse der BIGEDIB-Studie verdeutlichen zudem den Bedarf von Pädagog*innen an niedrigschwelliger Unterstützung über die jeweilige Institution, etwa über einen internen IT-Service (sprich Personen, die in der Anwendung mit der Technik unterstützen können). Gerade mit Blick auf die bildungspolitische Diskussion und Forderung nach einer Intensivierung des digital gestützten Lernens und auch von Distanz- bzw. Hybridlernen (auch angesichts von Lehrkräftemangel wie es durch die Ständige Wissenschaftliche Kommission der Kultusministerkonferenz (SWK) 2023 vorgeschlagen wurde) wird eine Begleitung dieser Entwicklungen notwendig. Mit Blick auf digitale Medien könnten sich vorab getätigte Modifikationen der bereitgestellten digitalen Medien als sinnvoll erweisen, sodass nur bestimmte Apps im Rahmen des Unterrichtsgeschehens nutzbar sind (z.B. auf Tablets). Hierbei wäre aus bildungstheoretischer wie -praktischer Perspektive vor dem Hintergrund der Befunde überlegenswert, gerade in unterrichtlichen Arrangements offenere Zeiten und Räume für
 
+
+<!-- PAGE 245 -->
+
+
 die Nutzung dieser digitalen Medien explizit einzuplanen. Damit könnte eine spielerische Aneignungspraxis der (geflüchteten) Schüler*innen ohne permanente ,Angst' der Lehrkräfte vor Kontrollverlust und unter Einbezug einer Ermutigung zu Erkundung, Auseinandersetzung und Reflexion von Medienerfahrungen befördert werden. Die Ergebnisse verweisen auch auf mediendidaktische Fragen der Passung von Lernzielen und digitalen Medien im unterrichtlichen Einsatz. Richtlinien und (auch materielle) Rahmenbedingungen für die Berücksichtigung von Datenschutz, beispielsweise durch die konsequente Nutzung datensicherer Apps und Software, 9 sind ebenfalls auf der Seite institutioneller Verantwortung anzusiedeln. Neben der Verfügbarmachung von Hard- und Software bedarf es zudem in den Institutionen Digitalisierungsstrategien, die die Arbeit mit digitalen Medien in einem fortwährenden Prozess konzeptionell reflektieren und weiterentwickeln. So ist vor dem Hintergrund des Ist-Zustands in den jeweiligen Institutionen beispielsweise zu reflektieren, welche Bedarfe die verschiedenen Akteur*innen haben, welche Ziele die pädagogische Arbeit verfolgt, welche Konzepte dazu bislang vorliegen und welche Bedeutung dabei digitale Medien einnehmen (können). Ansätze, die digitale Medien vorrangig als nützliche Werkzeuge technisch-instrumentalistisch betrachten oder Digitalisierung als kritiklos anzustrebendes Ziel setzen, sind nicht ausreichend. So bestimmt in der Praxis das Zusammenspiel zwischen digitalen Medien, subjektiven Voraussetzungen und strukturellen Bedingungen (Normen, personelle Unterstützung u.v.m.) über die Funktion und den Wert der Medien für unterschiedliche Beteiligte und das Maß an Bildungs- und Teilhabemöglichkeiten. Angebote zur Befähigung von jungen Menschen zur Nutzung digitaler Medien erfordern darüber hinaus Räume, in denen den jungen Menschen die Möglichkeit gegeben wird, sich eigentätig (unter pädagogischer Begleitung) Dinge anzueignen. Dabei bedarf es in der Organisation einer offenen Fehlerkultur, die Unsicherheiten (und deren Bearbeitung) im Zusammenhang mit Digitalität zulässt, und einer fachlich-konzeptionellen Begleitung der Digitalisierungsentwicklungen zur Qualitätssicherung (z. B. in Form eines Monitorings der laufenden Prozesse). Wie die Ergebnisse der vorliegenden Studie zeigen, erweist sich eine transorganisationale Perspektive auf das Geschehen, gerade um Benachteiligungsmechanismen und Unterstützungspotenziale in den Blick bekommen zu können, nicht nur auf der wissenschaftlichen, sondern gerade auch auf der praktischen Ebene als mindestens sinnvoll, wenn nicht sogar unvermeidlich. Erst dann können in der Wahrnehmung der Beiträge unterschiedlicher Akteur*innen und Institutionen und in einer die Organisationsgrenzen übergreifenden Zusammenarbeit -Brüche und Widersprüche in der Bildungs- und Teilhabeermöglichung erkannt und bearbeitet werden.
 
 9 Vgl. die kritische Debatte zu mangelndem Datenschutz bei der Nutzung von Microsoft Office 365 (nicht nur) an Schulen (vgl. Digitalcourage o.J.).
+
+
+<!-- PAGE 246 -->
+
 
 Auf der dritten Ebene ist die Gestaltung entsprechender politischer Rahmenbedingungen für (Bildungs-)Teilhabe fördernde Settings - insbesondere in Kinder- und Jugendhilfe und Schule - und auch in Verbindung zwischen diesen institutionellen Bezügen unter Berücksichtigung ihrer jeweils spezifischen Aufträge notwendig. Der immense Fachkräftemangel in der Kinder- und Jugendhilfe zeigte sich auch im Rahmen der vorliegenden Studie, ebenso das Problem der Finanzierung technischer Ausstattung in stationären erzieherischen Hilfen. Dies bedeutet, dass auf BundesundLänderebenesystematischBedingungengeschaffenwerdenmüssen,die Mittel für die Etablierung und Begleitung von Digitalisierungsprozessen bereitstellen. Ebenso bedarf es über Schule hinausgehend dringend einer Digitalisierungsstrategie in der Kinder- und Jugendhilfe, die von den Kinder- und Jugendrechten ausgehend entwickelt wird, wie das Bundesjugendkuratorium (2021) vorschlägt und auch von der Jugend- und Familienministerkonferenz angestrebt ist (JFMK 2022).
 
@@ -2067,6 +3048,10 @@ Die BIGEDIB-Studie war im Verlauf der Erhebungsphase im Frühjahr 2020 von der C
 
 Ausgehend von den bisherigen Erkenntnissen zeigen sich weitere Forschungsbedarfe für nachfolgende Studien. Diese Bedarfe BIGEDIB beziehen sich einerseits auf Aspekte, die aus der 3,5-jährigen BIGEDIB-Studie hervorgehen und in Folgestudien weiter zu vertiefen wären. Sie beziehen sich andererseits auch auf gesell-
 
+
+<!-- PAGE 247 -->
+
+
 schaftliche Entwicklungen, die weitere Fragen zur Bedeutung digitaler Medien für die Bildungsteilhabe junger Geflüchteter aufwerfen.
 
 1. Blinde Flecken der multilokalen Feldaufenthalte : Im Zuge der multilokalen Ethnografie im Bildungsalltag von 27 jungen Menschen konnten nicht sämtliche sites gleichermaßen in den Blick genommen werden. So war es nicht möglich, Erhebungszugänge in sogenannten Sammelunterkünften für Geflüchtete zu erhalten, da die meisten der jungen Menschen diese bereits verlassen hatten. Aufgrund von Bedenken der jungen Menschen sowie der Sozialpädagog*innen waren keine Begleitungen bei Terminen im Jugendamt möglich. Fokussieren lässt sich mit Blick auf weitere Forschung zudem der berufliche (Ausbildungs-)Kontext.WelchePraktikensichandiesen sites vollziehen und inwiefern sich diese unter Rahmung der jeweils spezifischen Arrangements als relevant für Bildungsteilhabe herausstellen, wäre durch zukünftige Studien zu eruieren.
@@ -2075,6 +3060,10 @@ schaftliche Entwicklungen, die weitere Fragen zur Bedeutung digitaler Medien fü
 
 10 Hier hätte eine erweiterte Mehrsprachigkeit der Forschenden hilfreich für die Gewinnung weiterer Forschungsteilnehmender sein können.
 
+
+<!-- PAGE 248 -->
+
+
 - chen Tun in den Institutionen widerspiegeln und welche Brüche bzw. Widersprüche sich dabei zeigen.
 4. DurchführungvonNetnographien : Im Zuge der COVID-19-bedingtenLockdowns wurden die Aktivitäten der jungen Menschen sowie einzelner teilnehmender pädagogischer Institutionen (z.B.Angebote der Offenen Kinder- und Jugendarbeit) auf Facebook und Instagram temporär in den Blick gerückt. Die Auswertung dieser sozialen Mediendaten wurde im Rahmen der BIGEDIB-Studie bislang aufgrund der ursprünglich zu verfolgenden Studienplanung nur ansatzweise verfolgt. Auch beschränkte sich die Erhebung größtenteils auf DownloadsundScreenshots,sodassInteraktionenderjungenMenschenüber die sozialen Medien nur teilweise berücksichtigt wurden. Dem Postulat der Teilnahme folgend hätte eine netnographische Studie (vgl. Kozinets 2020) die BeteiligungderForschendenüberdiesozialenMedien(imSpannungsverhältnis zu u.a. Fragen des Datenschutzes) vorausgesetzt. Im Zuge der teilnehmenden Beobachtung wurde in einer der Fallanalysen offenkundig, dass die Nutzung von Social Media den jungen Geflüchteten eine Teilhabe an gesellschaftlichen Diskursen ermöglicht.Die,eigene Stimme'kann erhoben werden und auch politische Statements, etwa mit Blick auf Rassismuserfahrungen, könnennachaußengetragenwerden.Nachfolgende Studien könnten von Beginn an nethnographische Perspektiven stärker einplanen bzw. reflektieren, umdie Praktiken entlang der sozialen Medien explizit(-er) zu beforschen.
 5. Nach der COVID-19-Pandemie : Die ausgehend von der COVID-19-Pandemie angestoßenen Digitalisierungsentwicklungen, konnten aufgrund der begrenzten Projektlaufzeit nur noch bedingt beforscht werden. So wurden im Zuge der Pandemie als 'Katalysator' (Schwabl/Vogelsang 2019) zahlreiche (Bildungs-)Formate und Konzepte zu digitalen Medien entwickelt und entsprechende Ausstattungen bereitgestellt. Hier wäre zu untersuchen, inwiefern diese Entwicklungen ,nachhaltig' sind. Aus praxistheoretischer Perspektive wäre u.a. von Interesse, inwiefern sich Praktiken in pädagogischen Institutionen gewandelt haben. Über die nachträglichen Diskussionen mit Sozialpädagog*innen wurde zumindest für Angebote der Kinder- und Jugendhilfe festgestellt, dass im Zuge des Fachkräftemangels und dem Wechsel zurück in Präsenzformate verschiedene Digitalisierungsentwicklungen gestoppt und teils eingestellt wurden. 11
@@ -2082,11 +3071,19 @@ schaftliche Entwicklungen, die weitere Fragen zur Bedeutung digitaler Medien fü
 
 11 Beispielsweise wurde in einer begleiteten Einrichtung der Kinder- und Jugendhilfe davon berichtet, dass im Zuge der Kündigung eines Sozialpädagogen das von diesem hauptverantwortlich entwickelte digitale Format eines Podcasts nicht mehr weiterverfolgt und damit eingestellt wurde.
 
+
+<!-- PAGE 249 -->
+
+
 geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nach Deutschland gekommen (vgl. Statistisches Bundesamt 2023). Die BIGEDIB-Studie konnte aufgrund ihrer begrenzten Laufzeit diese Entwicklung nicht berücksichtigen. Welche ggf. spezifischen Ausgangslagen den Alltag von geflüchteten Ukrainer*innen bedingen und inwiefern diese sich vom Sample der vorliegenden Studie unterscheidenden, bleibt folglich unbeantwortet. Ebenso bleibt unklar, welche (für Bildungsteilhabe relevanten) Praktiken unter Beteiligung digitaler Medien den Alltag dieser Menschen prägen. Diesem Anliegen widmen sich allmählich erste explorative Studien, 12 die zeigen, dass wenngleich digitalen Medien für geflüchtete Menschen oftmals eine hohe, wenn auch (in unterschiedlicher Form) ambivalente Bedeutung für (Bildungs-)Teilhabe zukommt, der Untersuchungsfokus auf die unterschiedlichen Voraussetzungen und Lebensbedingungen der Akteur*innen zu legen ist (vgl. Friedrichs-Liesenkötter et al.2023).Nur so lassen sich,bezogen auf die jeweiligen Alltags- und Bildungskontexte, zielgruppengerecht abgestimmte Implikationen ableiten. 13 Entsprechendist Forschung zu,neuen'Gruppen von Geflüchteten notwendig, um Gemeinsamkeiten, aber auch Differenzen hinsichtlich bildungspolitischer und pädagogischer Bedarfe aufdecken zu können und diese auf Länder-, Kommunal- (vgl. Maykus 2023) und auch institutioneller und individueller subjektiver Ebene aufseiten der pädagogischen Fachkräfte abstimmen zu können.
 
 12 Diese Ambivalenz wird beispielsweise in einer Vielzahl von Desinformationen in Form von russischen und pro-russischen Social Media-Kanälen deutlich. Zugleich werden Unterschiede zur Ausgangslage der Geflüchteten im Vergleich zu den Fluchtbewegungen um 2015/2016 konstatiert. Diese Unterschiede werden hinsichtlich Geschlecht und Alter beschrieben. So flohen vor allem Frauen und Kinder, deren Bildungshintergrund als höher gegenüber den vorherigen Geflüchteten eingeschätzt wird (vgl. Brücker 2022, S. 23). Mit Blick auf die schulische Bildung stehendie geflüchteten Familien aus der Ukraine zudem vor der Herausforderung einer parallelen Beschulung. Hierbei ermöglichen digitale Medien eine Kontakthaltung zu den Lehrer*innen in der Ukraine und eine Auseinandersetzung mit den Lerninhalten des dortigen Bildungssystems.Gleichzeitig sind Kinder und Eltern den schulischen Anforderungen beider Schulsysteme bei gleichzeitig unklarer Bleibeperspektive ausgesetzt. Es kommt zu einer Dilemma-Situation, da die Betroffenen entscheiden müssen, inwiefern schulische Anstrengungen mit Blick auf das jeweilige Schulsystem zu priorisieren sind.
 
 13 Mit Blick auf die ukrainischen Geflüchteten wird ein Dialog über die doppelte Schulpflicht in beiden Ländern, medienpädagogische Angebote zu Desinformation via digitale Medien und die Stärkung der außerschulischen Kinder- und Jugendarbeit gefordert, auch um mehr Freizeitmöglichkeiten vor Ort für die geflüchteten Heranwachsenden zu schaffen (vgl. FriedrichsLiesenkötter et al. 2023, S. 66f.).
+
+
+<!-- PAGE 250 -->
+
 
 ## Literatur
 
@@ -2107,6 +3104,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Amelina,Anna(2019): Jenseits des Homogenitätsmodells der Kultur.In: Roslon,Michael/Bettmann, Richard (Hrsg.): Interkulturelle Qualitative Sozialforschung. Wiesbaden: Springer VS,S. 27-51.
 - Anton (o.J.): Anton. https://anton.app/de/ (Abfrage: 01.06.2024).
 - Artamonova, Olga/Androutsopolous, Jannis (2019): Smartphone-Based Language Practices among Refugees. In: Journal für Medienlinguistik 2, H. 2, S. 60-89.
+
+
+<!-- PAGE 251 -->
+
 
 - Asmussen, Michael (2020): Annäherung an einen praxistheoretischen Bildungsbegriff. Wiesbaden: Springer VS.
 - AUBI-plus (o.J.): Ausbildung in Deutschland als Ausländer. Alles, was du wissen musst. https:// www.aubi-plus.de/blog/ausbildung-in-deutschland-als-auslaender-alles-was-du-wissenmusst-2862/ (Abfrage: 01.06.2024).
@@ -2132,6 +3133,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Bischoff,Andreas/Wohlrab-Sahr,Monika(2018): Theorieorientiertes Kodieren,kein Containern von Inhalten. In: Pentzold, Christian/Bischof, Andreas/Heise, Nele (Hrsg.): Praxis Grounded Theory. Wiesbaden: Springer VS, S. 73-101.
 - BITKOM (2015): Digitale Schule -vernetztes Lernen. Ergebnisse repräsentativer Schülerund Lehrerbefragungen zum Einsatz digitaler Medien im Schulunterricht. https://www.
 
+
+<!-- PAGE 252 -->
+
+
 - bitkom.org/sites/default/files/file/import/BITKOM-Studie-Digitale-Schule-2015.pdf (Abfrage: 01.06.2024).
 - Bittner, Martin/Budde, Jürgen (2018): Der Zusammenhang vom Impliziten und Expliziten in praxistheoretischen Perspektiven. In: Budde, Jürgen/Bittner, Martin/Bossen, Andrea/Rißler, Georg (Hrsg.): Konturen praxistheoretischer Erziehungswissenschaft. Weinheim: Beltz Juventa, S. 32-50.
 - Böhnisch, Lothar (2010): Lebensbewältigung. In: Thole, Werner (Hrsg.): Grundriss Soziale Arbeit. Wiesbaden: VS Verlag, S. 219-233.
@@ -2152,6 +3157,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Bourdieu, Pierre (1997): The Forms of Capital. In: Halsey, A.H./Lauder, Hugh/Brown, Philip/Wells, Amy S. (Hrsg.): Education: Culture, Economy and Society. Oxford: Oxford University Press, S. 241-258.
 - Boutin, Stéphane (2015): Die Dramatisierung der Macht. In: Le foucaldien 1, H. 1, S. 1-25.
 
+
+<!-- PAGE 253 -->
+
+
 - Breidenstein, Georg/Hirschauer, Stefan/Kalthoff, Herbert/Nieswand, Boris (2020): Ethnografie. Konstanz, München: UVK.
 - Breuer, Franz/Muckel, Petra (2016): Reflexive Grounded Theory. In: Equit, Claudia/Hohage, Christoph (Hrsg.): Handbuch Grounded Theory. Weinheim: Beltz Juventa, S. 67-85.
 - Brinda, Torsten/Brüggen, Niels/Diethelm, Ira/Knaus, Thomas/Kommer, Sven/Kopf, Christine/ Missomelius, Petra/Leschke, Rainer/Tilemann, Friederike/Weich, Andreas (2019): Frankfurt Dreieck zur Bildung in der digital vernetzten Welt. In: Medien + Erziehung: Merz Zeitschrift für Medienpädagogik, H. 4, S. 69-75.
@@ -2170,6 +3179,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Bundesministerium für Familie, Senioren, Frauen und Jugend (BMFSFJ) (2023): Jugendschutz -verständlich erklärt. https://www.bmfsfj.de/resource/blob/94070/ 308331c38b8d46d7150987f80d4306c8/jugendschutz-verstaendlich-erklaert-broschuere-data. pdf (Abfrage: 01.06.2024).
 - Candea, Matei (2007): Arbitrary locations. In: The Journal of the Royal Anthropological Institute 13, H. 1, S. 167-185.
 - Carnin, Jennifer (2010): Übergänge verkörpern. Wiesbaden: Springer VS.
+
+
+<!-- PAGE 254 -->
+
 
 - Carstensen,Tanja/Schachtner,Christina/Schelhowe,Heidi/Beer,Raphael(2014): Subjektkonstruktionen im Kontext Digitaler Medien. In: Carstensen, Tanja/Schachtner, Christina/Schelhowe, Heidi/Beer, Raphael (Hrsg.): Digitale Subjekte. Bielefeld: transcript, S. 9-27.
 - Clarke, Adele (2005): Situational analysis. London: Sage.
@@ -2190,6 +3203,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Emmerich, Marcus/Hormel, Ulrike/Jording, Judith (2017): Prekarisierte Teilhabe. In: Die Deutsche Schule 109, H. 3, S. 209-222.
 - Enssen, Susanne/Nieding, Iris/Stöbe-Blossey, Sybille (2023): Digitalisierung und Teilhabe: Chancen und Risiken in der Kinder- und Jugendhilfe. Mainz: Institut für Sozialpädagogische Forschung (ism).
 - Equit, Claudia/Hohage, Christoph (2016): Ausgewählte Entwicklungen und Konfliktlinien der Grounded-Theory-Methodologie. In: Equit, Claudia/Hohage, Christoph (Hrsg.): Handbuch Grounded Theory. Weinheim: Beltz Juventa, S. 9-47.
+
+
+<!-- PAGE 255 -->
+
 
 - Erstad, O. (2012): The learning lives of digital youth -Beyond the formal and informal. In: Oxford Review of Education 38, H. 1, S. 25-43.
 - Eßer,Florian/Schröer,Wolfgang (2019): Infrastrukturen der Kindheiten -ein transorganisationaler Zugang. In: Zeitschrift für Soziologie der Erziehung und Sozialisation 39, H. 2, S. 119-133.
@@ -2212,6 +3229,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Fujii, Michi S./Kutscher, Nadia/Niermann, Klara Marie (2022): Grenzen pädagogischen Handelns. In: Damberger, Thomas/Schell Kiehl, Ines/Wahl, Johannes (Hrsg.): Pädagogik, Soziale Arbeit und Digitalität. Weinheim: Beltz, S. 39-50.
 - Fujii, Michi S./Rink, Konstantin/Weber, Joshua (2023): Digitale Artefakte in der Situation. In: Forum Qualitative Sozialforschung 24, H. 2.
 - Ganguin,Sonja/Gemkow,Johannes/Haubold,Rebekka(2020):MedienkritikzwischenMedienkompetenz und Media Literacy. In: MedienPädagogik, H. 37, S. 51-66.
+
+
+<!-- PAGE 256 -->
+
 
 - Ganguin, Sonja/Nickel, Julia/Sander, Uwe (2022): Diskussionsfelder der Medienpädagogik: Identitätskonstruktionen in digitalen Welten. In: Sander, Uwe/von Gross, Friederike/Hugger, KaiUwe(Hrsg.): Handbuch Medienpädagogik. Wiesbaden: Springer VS, S. 587-593.
 - Gauditz,Leslie C. (2019): Feldausstieg in der Forschung zu Flucht\_Migration. In: Kaufmann, Margit E./Otto, Laura/Nimführ, Sarah/Schütte, Dominik (Hrsg.): Forschen und Arbeiten im Kontext von Flucht. Wiesbaden: Springer VS, S. 261-284.
@@ -2237,6 +3258,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Hörning, Karl H. (2005): Lob der Praxis. Praktisches Wissen im Spannungsfeld technischer und sozialer Uneindeutigkeiten. In: Gramm, Gerhard/Hetzel, Andreas (Hrsg.): Unbestimmtheitssignaturen der Technik. Bielefeld: transcript, S. 297-311.
 - Hörning,KarlH.(2017): Wissen in digitalen Zeiten.In: Allert,Heidrun/Asmussen,Michael/Richter, Carola (Hrsg.): Digitalität und Selbst. Bielefeld: transcript, S. 69-85.
 
+
+<!-- PAGE 257 -->
+
+
 - Hoffmann, Dagmar (2017): Medien. In: Gugutzer, Robert/Klein, Gabriele/Meuser, Michael (Hrsg.): Handbuch Körpersoziologie. Wiesbaden: Springer VS, S. 161-174.
 - Hoffmeister, Anouk/Marguin,Séverine/Schendzielorz,Cornelia (2018): Feldnotizen 2.0. In: Huber, Martin/Krämer, Sibylle (Hrsg.): Wie Digitalität die Geisteswissenschaften verändert. Wolfenbüttel: Sonderband der Zeitschrift für digitale Geisteswissenschaften.
 - Hüttmann, Jana/Fujii, Michi S./Nadia Kutscher (2020): Teilhaben?! In: Medienimpulse 58, H. 2, S. 1-30.
@@ -2259,6 +3284,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Kersting, Daniel/Leuoth, Marcus (2020): Der Begriff des Flüchtlings. Stuttgart: J.B.Metzler.
 - Kessl, Fabian/Kutscher,Nadia/Otto,Hans-Uwe/Ziegler,Holger (2004): Bildungsprozesse im sozialen Kontext unter dem Aspekt der Bedeutung des Sozialraums für das Aufwachsen von Kindern und Jugendlichen. Bielefeld: Universität Bielefeld.
 
+
+<!-- PAGE 258 -->
+
+
 - Kleist, J. Olaf (2015): Über Flucht forschen. In: Peripherie. Zeitschrift für Politik und Ökonomie in der Dritten Welt 50, H. 138/139, S. 150-169.
 - Klein, Alexandra (2007): Soziales Kapital Online: Soziale Unterstützung im Internet: Eine Rekonstruktion virtualisierter Formen sozialer Ungleichheit. https://d-nb.info/988372401/34 (Abfrage: 01.06.2024).
 - Klicksafe. Institut für Digitale Ethik, Hochschule der Medien Stuttgart &amp; der Bischöflichen Medienstiftung (2023): Ethik macht klick. https://www.klicksafe.de/materialien/ethik-macht-klickmeinungsbildung-in-der-digitalen-welt (Abfrage: 01.06.2024).
@@ -2278,6 +3307,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Kutscher,Nadia(2024):DigitalitätundDigitalisierungalsGegenstandderSozialenArbeit.In:Kurtz, Thomas/Meister, Dorothee M./Sander, Uwe (Hrsg.): Digitale Medien und die Produktion von Wissenschaft. Wiesbaden: Springer VS, S. 121-147.
 - Kutscher, Nadia/Kreß, Lisa-Marie (2015): Internet ist gleich mit Essen. Projektbericht. Vechta und Berlin: Deutsches Kinderhilfswerk und Universität Vechta.
 - Kutscher, Nadia/Kreß, Lisa-Marie (2017): Zur doppelten Funktion digitaler Medien für junge Geflüchtete. In: von Gross, Friederike/Röllecke, Renate (Hrsg.): Medienpädagogik der Vielfalt Integration und Inklusion. München: kopaed, S. 53-57.
+
+
+<!-- PAGE 259 -->
+
 
 - Kutscher, Nadia/Kreß,Lisa-Marie (2018): Das Smartphone als Schlüsselmedium. In: Migration und Soziale Arbeit 40, H. 4, S. 325-330.
 - Kutscher, Nadia/Zimmermann, Caruso (2011): Ergebnisbericht zur UserInnenbefragung der kidshotline. Nutzungsweisen, Präferenzen und Beteiligungswünsche älterer und jüngerer NutzerInnen im Vergleich. Unveröffentlichtes Manuskript.
@@ -2299,6 +3332,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - von der Lühe, Ulrike (2013): Die sozialen Netzwerke aus Sicht der betroffenen Akteure: Die Perspektive der Nutzer. In: Herrmann, Hill/Martini, Mario/Wagner, Edgar (Hrsg.): Facebook, Google &amp;Co.Chancen und Risiken. Baden-Baden: Nomos, S. 69-72.
 - Luna, Florencia (2009): Elucidating the concept of vulnerability: Layers not labels. In: International Journal of Feminist Approaches to Bioethics 2, H. 1, S. 121-139.
 
+
+<!-- PAGE 260 -->
+
+
 - Mancini, Tiziana/Sibilla, Frederica/Argiropoulos, Dimitris/Rossi, Michele/Everri, Marina (2019): TheOpportunities and Risks of Mobile Phones for Refugees'Experience: A Scoping Review.PloS one 14, H. 2.
 - Marcus, Georg E. (1995): Ethnography in/of the World System: The Emergence of Multi-Sited Ethnography. In: Annual Review of Anthropology 24, H. 1, S. 95-117.
 - Matthies, Annemarie/Sailer, Jan/Tetens, Jakob/Wahren, Juliane (2023): DIGITASA 2023 - Erste Ergebnisse der zweiten bundesweiten Pulsbefragung. IU Internationale Hochschule. https:// www.digitasa.de/ergebnisse/digitasa-2023/ (Abfrage: 01.06.2024).
@@ -2319,6 +3356,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Müller, Freya-Maria/Friedrichs-Liesenkötter, Henrike (2018): Die Bedeutung digitaler Medien für Jugendliche mit Fluchterfahrung: Zwischen jugendtypischen und migrationsbasierten Nutzungsformen und -bedarfen. In: Migration und Soziale Arbeit 4, H. 40, S. 316-324.
 - Natarajan, Radhika (2019): Sprache, Flucht und Migration. In: Radhika/Natarajan (Hrsg.): Sprache, Flucht, Migration. Wiesbaden: Springer VS, S. 3-48.
 - Neag, Annamária (2021): Unaccompanied Refugee Children and Media Literacy: Doing Media Education Research on the Margins. In: Divina, Frau-Meigs/Sirkku, Kotilainen/Manisha, Pathak-
+
+
+<!-- PAGE 261 -->
+
 
 - Shelat/Michael,Hoechsmann/Stuart,R.Poyntz(Hrsg.):TheHandbookofMediaEducationResearch. Hoboken: Wiley Blackwell, S. 61-74.
 - Neumann, Sascha (2012a): Teilnehmende Objektivierung unter Anwesenden. In: Friebertshäuser, Barbara/Kelle, Helga/Boller, Heike/Bollig, Sabine/Huf, Christina/Langer, Antje/Ott, Marion/ Richter, Sophia (Hrsg.): Feld und Theorie. Opladen: Barbara Budrich, S. 57-70.
@@ -2342,6 +3383,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Rauschenbach, Thomas (2009): Zukunftschancen Bildung. Weinheim: Juventa.
 - Reckwitz, Andreas (2003): Grundelemente einer Theorie sozialer Praktiken. In: Zeitschrift für Soziologie 32, H. 5, S. 282-301.
 
+
+<!-- PAGE 262 -->
+
+
 - Reckwitz, Andreas (2010): Auf dem Weg zu einer kultursoziologischen Analytik zwischen Praxeologie und Poststrukturalismus. In: Wohlrab-Sahr, Monika (Hrsg.): Kultursoziologie. Wiesbaden: VS Verlag, S. 179-205.
 - Reda, Jens/Runkel, Simon (2019): Gewohnheiten und Routinen - praxistheoretische Zugänge zu Geographien des Alltags. In: Schäfer, Susann/Everts, Jonathan (Hrsg.): Handbuch Praktiken und Raum. Bielefeld: transcript, S. 193-222.
 - Reh, Sabine/Rabenstein, Kerstin (2013): Die soziale Konstitution des Unterrichts in pädagogischen Praktiken und die Potentiale qualitativer Unterrichtsforschung. In: Zeitschrift für Pädagogik 59, H. 3, S. 291-307.
@@ -2363,6 +3408,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Schatzki, Theodore (2016): Praxistheorie als flache Ontologie. In: Schäfer, Hilmar (Hrsg.): Praxistheorie. Bielefeld: transcript, S. 29-45.
 - Schatzki, Theodore (2017): Practices and People. In: TPA - Teoria E Prática Em Administração 7, H. 1, S. 26-53.
 - Seelmeyer, Udo/Kutscher, Nadia (2021): Zum Digitalisierungsdiskurs in der Sozialen Arbeit: Befunde - Fragen - Perspektiven. In: Wunder, Maik (Hrsg.): Digitalisierung und Soziale Arbeit. Bad Heilbrunn: Klinkhardt, S. 17-30.
+
+
+<!-- PAGE 263 -->
+
 
 - Scherr,Albert/Breit,Helen (2021): Junge Geflüchtete gesellschaftlich integrieren.In: Sozial Extra 45, H. 1, S. 53-59.
 - Schmidt,Robert/Volbers,Jörg (2011): Öffentlichkeit als methodologisches Prinzip.In: Zeitschrift für Soziologie 40, H. 1, S. 24-41.
@@ -2387,6 +3436,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Strauss, Anselm (1993): Continual Permutations of Action. New York: De Gruyter.
 - Strauss, Anselm/Corbin, Juliet (1996): Grounded Theory. Weinheim: Beltz.
 
+
+<!-- PAGE 264 -->
+
+
 - Strübing, Jörg (2014): Grounded Theory. Wiesbaden: Springer.
 - Strübing, Jörg (2017): Where is the Meat/d? Pragmatismus und Praxistheorien als reziprokes Ergänzungsverhältnis. In: Dietz, Hella/Pettenkofer, Andreas/Nungesser, Frithjof (Hrsg.): Pragmatismus und Theorien sozialer Praktiken. Vom Nutzen einer Theoriedifferenz. Frankfurt a.M.: Campus, S. 41-75.
 - Szreter, Simon/Woolcock, Michael (2004): Health by association? Social capital, social theory, and the political economy of public health. In: International Journal of Epidemiology 33, H. 4, S. 650-667.
@@ -2407,6 +3460,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Unterkofler, Ursula (2016): Wer soziales Handeln erforscht, muss soziales Handeln beobachten. In: Equit, Claudia/Hohage, Christoph (Hrsg.): Handbuch Grounded Theory. Weinheim: Beltz Juventa, S. 290307.
 - Vennemann, Mario/Schwippert, Knut/Eickelmann, Birgit/Massekt, Corinna (2019): ComputerundinformationsbezogeneKompetenzenvonSchülerinnenundSchülernmitundohneMigrationshintergrund im zweiten internationalen Vergleich. In: Eickelmann, Birgit/Bos, Wilfried/ Gerick, Julia/Goldhammer, Frank/Schaumburg, Heike/Schwippert, Knut/Senkbeil, Martin/ Vahrenhold, Jan (Hrsg.): Computer- und informationsbezogene Kompetenzen von Schülerin-
 
+
+<!-- PAGE 265 -->
+
+
 - nen und Schülern im zweiten internationalen Vergleich und Kompetenzen im Bereich Computational Thinking. Münster: Waxmann, S. 335-367.
 - Viertel, Michael/Ehrenspeck-Kolasa, Yvonne/Spies, Anke (2017): Digitale Leseförderung an Grundschulen zwischen Anspruch und Wirklichkeit: Eine Untersuchung zur Nutzung und Bewertung der web-basierten Leseförderung 'Antolin' durch Grundschullehrkräfte in Niedersachen (NuBeAn).In:Mayrberger,Kerstin/Fromme,Johannes/Grell,Petra/Hug,Theo(Hrsg.):13.Jahrbuch Medienpädagogik, S. 151-164.
 - Vodafone Stiftung Deutschland (2020): Schule auf Distanz. Düsseldorf: Vodafone Stiftung Deutschland.
@@ -2425,6 +3482,10 @@ geflohen. Von diesen Menschen sind etwas weniger als eine Millionen Menschen nac
 - Zillien, Nicole (2008): Die (Wieder-)Entdeckung der Medien. Das Affordanzkonzept in der Mediensoziologie. In: Sociologia Internationalis 46, H. 2, S. 161-181.
 - Zorn, Isabel/Schluchter, Jan-René/Bosse, Ingo (2019): Theoretische Grundlagen inklusiver Medienbildung. In: Zorn, Isabel/Schluchter, Jan-René/Bosse, Ingo (Hrsg.): Handbuch Inklusion und Medienbildung. Weinheim: Beltz Juventa, S. 16-33.
 
+
+<!-- PAGE 266 -->
+
+
 ## Die Autor*innen
 
 AntoniaDold , M.A., studierte Pädagogik und Management in der Sozialen Arbeit an der Technischen Hochschule Köln. Sie war von 2019 bis 2022 als wissenschaftliche Mitarbeiterin am Lehrstuhl für Soziale Arbeit und Erziehungshilfe an der Universität zu Köln tätig. Ihre Arbeitsschwerpunkte sind u.a. (Flucht-)Migration, Asylpolitik und Abschiebung sowie intersektionale Perspektiven auf soziale Ungleichheit und Gerechtigkeit.
@@ -2440,6 +3501,10 @@ Pia Grimpo , B.A., studiert aktuell Erziehungs- und Bildungswissenschaften im Ma
 Jana Hüttmann , M.A., arbeitete als wissenschaftliche Mitarbeiterin am Institut für Bildungswissenschaften, insbesondere Bildung mit digitalen Medien an der Leuphana Universität Lüneburg. Ihre Arbeitsschwerpunkte sind u.a. (Bildungs-)Teilhabe, Fluchtmigration und soziale Ungleichheit.
 
 Nadia Kutscher , Univ.-Prof.in Dr., ist seit 2017 Professorin für Erziehungshilfe undSoziale Arbeit an der Universität zu Köln. Arbeitsschwerpunkte: Jugendhilfeund Bildungsforschung, Digitalität und Digitalisierung in Kindheit, Jugend und
+
+
+<!-- PAGE 267 -->
+
 
 Familie sowie in der Sozialen Arbeit, ethische Fragen professionellen Handelns, Bildung und soziale Ungleichheit.
 

@@ -1,10 +1,11 @@
 ---
 source_file: James_2023_Algorithmic_decision-making_in_social_work.pdf
-conversion_date: 2026-02-03T09:00:23.406685
+conversion_date: 2026-02-03T18:31:14.405439
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Social Work Education
@@ -57,6 +58,10 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -85,6 +90,10 @@ paul.james@westernsydney.edu.au
 
 Institute of Culture and Society, University of Western
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 'hardware' (Robson &amp; Robson, 1998). Around the same time, predictive risk-assessment techniques began to be added to the repertoire of social work tools, and debates have abounded since about their efficacy (Cuccaro-Alamin et al., 2017). As the subsequent literature has explored at length, mediating technologies can have a range of effects, from being  used  sensitively  to  enhance  the  interpretative  frame  of  existing  engagement  (La Mendola,  2010)  to  being  deployed  in  ways  that  diminish  meaningful  connection  by substantially replacing face-to-face engagement or bypassing the immediacy of involved interpretation in risk-assessment or decision-making.
@@ -97,6 +106,10 @@ Social work options have long included a problematic 'by-the-numbers' procedural
 
 This shift has major consequences for the presence/mediation tension. It means for example that for all the care that a theorist such as Walter La Mendola (2010) takes in extending the notion of 'social presence' to include mediated communications, the ADM and  AI  has  returned  us  quickly  to  reasserting  the  importance  of  embodied  presence. LaMendola could not have anticipated AI-generated voice, print, and video simulations of human presence. ADM brings new dilemmas of similar kind. On the one hand, much social work pedagogy and practice has sought to foreground the rights and capacities of
 
+
+<!-- PAGE 4 -->
+
+
 <!-- image -->
 
 individuals or to be self-determining and making decisions affecting their future. This is sometimes called client-centered practice. (Here, it should be noted that we use the term 'client'  advisedly-for  all  its  weaknesses,  it  at  least  gives  a  neutral  sense  of  a  person seeking or being offered professional support). On the other hand, the introduction of partly  or  fully  automated  decision-making  has  contributed  to  a  reframing  and  a  recentering  of  who  and  where  decisions  are  made  in  social  work  contexts.  Systems frequently mediate between social workers and clients either to make decisions, set the terms for those decisions, or provide background evidence to influence those decisions
@@ -107,6 +120,10 @@ The pedagogical anthology Digital  Social  Work provides a telling but unintenti
 
 Some commentators have rightly moved to elaborate a series of principles beyond the usual technocratic 'standards' and 'thresholds' that might enhance the positive potential of ADM (Gillingham, 2019). This is an important step, but we suggest that is only part of a  comprehensive  response.  Social  work  education,  we  argue,  increasingly  needs  to grapple with the tensions between, on the one hand, training future social workers for a technologically driven professional environment, and, on the other, engaging students in  critical  theories  that  acknowledge  the  unequal  distribution  of  social  power  that technological change both emerges from and reinscribes at a more abstract level. Even the  conventional  notion  of  'digital  literacy'  as  the  capacity  to  understand  and  operate digitally needs to be questioned (Bawden, 2008). Is it competency in technology or the capacity to adequately critique its framing use, or both and more? Should social work training  also  provide  adequate  tools  for  either  pushing  back  against  the  intrusion  of
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 algorithmic  decision-making  or  re-negotiating  its  framing?  Should  it  teach  a  form  of critical pragmatics that allows social workers to support their clients both through and in tension with this technological framing? Here we use the concept of 'digital literacy' in its fullest sense to include technical competency and critical understanding of the technical implications and social  form  of  such  digital  tools  as  they  contribute  to  making  and remaking our world.
@@ -116,6 +133,10 @@ Thus, in addition to the presence/mediation tension, the discipline of social wo
 The field of social-work education is now faced with the daunting task of adaptation, as technology-use in many places becomes mandatory as a directive of funding, both for the services in which social workers are employed and to determine access and resourcing for individual clients. For all that the field of social work is characterized by frequent innovation in field practice to meet the problems faced by society, these dilemmas go to the heart of discipline itself. Thus, the challenges of digital literacy go much further than Ana Maria Dumitrescu's (2020) argument that social work education needs to come to terms with a world of social media and digital communication.
 
 This article explores the ways that algorithmic decision-making has become increasingly embedded in social work practice. In the first part of the article, through three case studies  we  show  the  varied  ways  that  automated  systems  operate  across  areas  that intersect  with  social  work,  including  health,  policing,  corrections  and  welfare.  The ADM systems that  we  explore  include  the  Allegheny  Family  Screening  Tool  (AFST), Correctional Offender Management Profiling for Alternative Sanctions (COMPAS), and the Australian National Disability Insurance Scheme (NDIS). Through an examination of these  case  studies,  we  aim  to  provide  an  understanding  of  how  ADM  might  work positively by being treated as a technical tool, not a replacement for critical interpretation. Then in the second part of the article we turn to show how social work curriculum might be enhanced by attending reflexively to the two problem-areas we have identified: the  tensions  between  technical  training  and  critical  interpretative  education;  and  the tensions between the mediation of technologies and the presence of social work practitioners in the field. Thus far, social work pedagogy has largely failed to integrate the kinds of  training  required  to  technically  understand,  use, and critique ADM systems. While acknowledging  the  difficulties  associated  with  adding  more  to  an  already  overloaded
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -129,6 +150,10 @@ We do not  want  to  overstate  the  generality  of  the  use  of  these  algori
 
 We  proceed  instead  with  some  cases  which  suggest  that  drawing  upon  extensive algorithmically mediated data has mixed consequences, positive and negative. Carefully administered as a support tool rather than framing system, some writers have suggested, for example, that ADM can temper the over-influence of negative forms of relational or face-to-face  engagement  (Glaberson,  2019).  Here  the  general  notion  of  'relational engagement' refers to the use by a practitioner of interpersonal skills and beliefs about structures  and  contexts  to  create  a  human  connection  between  the  practitioner,  the situation and the client (Healy &amp; Hampshire, 2002). Relational engagement at its best brings together diagnostic and empirical knowledge with care and personal knowledge. It can give the practitioner, and the client, negotiated decision-making agency (Esser et al., 2016). However, it can also contribute to further marginalization or create barriers to the effective engagement of certain groups of people accessing social services. For example, social  workers may enable or restrict children's choices based on their perspectives of certain children's needs (Jensen, 2020). As a group, the case studies below suggest that ADM, operating in a qualified and qualifying way ,  can make some positive differences,
 
+
+<!-- PAGE 7 -->
+
+
 <!-- image -->
 
 for example drawing attention to professional bias against marginalized groups. That is, while  there  is  no  assurance  that  ADM  will  remove  practices  of  racism,  disablism, heterosexism, and misogyny in the allocation of resources or assessment of risk (in fact it  can  introduce  new  structural  biases),  used  reflexively  it  can  draw  attention  to  such biases. At least that is the theory when the process is used with transparency and care. As some writers suggest, a 'thin agency' could be created with digital discretion for clients that, in some contexts, allows good decisions to be made (Klocker, 2007; Zouridis et al., 2020).  An  example  of  this  can  be  seen  through  the  Allegheny  Family  Screening  Tool (AFST).
@@ -141,6 +166,10 @@ The  calculation  of  risk,  based  on  the  cross-analysis  of  data,  produces
 
 Support through broader and combined data can also be beneficial in instances where social workers find themselves in complex environments in which they have insufficient experience. An example of this can be seen through practitioners working with children with a disability in child-protection settings. Taylor et al. (2015) found practitioners can tolerate a higher range of what might be classified as 'abuse' when working with children with a disability compared to non-disabled children. This is suggested to occur because practitioners, firstly, have difficulty in identifying abuse because they had limited experience  of  children  with  disabilities.  Second,  practitioners  do  not  necessarily  understand disability  family-care  arrangements. And third, communication barriers with the children lead to some practitioners over-relying on the accounts of parents during the riskassessment process (Dowse et al., 2013). Some practitioners lean toward parents being
 
+
+<!-- PAGE 8 -->
+
+
 <!-- image -->
 
 incapable  of  deliberate  perpetration  of  abuse  and  believe  that  the  parents  of  disabled children  probably  know  best  their  child's  impairment  and  associated  needs.  The researchers infer that, too often, social work professionals in these circumstances overempathize with the parents of children with a disability, leaving too many children in high-risk situations of abuse and neglect.
@@ -150,6 +179,10 @@ However,  though  it  is  true  that  relational  engagement  is  open  to  misj
 Research has also revealed serious risks created by the over-reach of ADM systems. The removal of social workers' discretionary power also removes the elements of positive relational  engagement  that  occur  through  the  interaction  between  social  workers  and their clients. Continuing relational engagement between social workers and clients is vital for social workers to understand a client's circumstances, thus building on the sourced data. Continuing engagement assists in professional decision-making by adding context to the data being used to form inferences. It is important, for example, that, within the Allegheny Family Screening Tool (AFST) system, data links between specific risk factors such as a family getting behind on the rent can be analyzed and triangulated with other data  such  as  school  attendance  to  indicate  the  level  of  risk  posed  to  the  child  (Eaton, 2019). It should also be said that the overall calculated score is not necessarily representative of the threshold of risk suggested. This is because the algorithmic processes use the data  without  the  consideration  of  circumstances  leading  to,  for  example,  absences  in a school attendance report or late rent repayments (Eaton, 2019). The context of data is made  much  clearer  in  professional  relationships  between  clients  and  social  workers. Advocates of ADM systems might here sustainably argue for the limited scope of their use  in  screening  applications  where  social  workers  are  still  required  to  intervene. However, as further discussed below, even the flagging of potential risks is not without consequence for families and children, in terms of stress, fear and stigmatization.
 
 In  summary, used well, algorithmic decision-making can qualify social worker bias and help navigate through common challenges as discussed by Taylor et al. (2015). As seen through the AFST system, the data provided by the data-sourcing process aided in the  social  workers'  decision-making  because  it  provided  additional  information  to further  inform  the  case  conceptualization  process.  This  reduced  the  need  to  rely  only on relational engagement to fill the gaps, essentially lowering the dependence on subjective  data  as  a  primary  source.  Furthermore,  the  requirement  for  mandatory  interpretative intervention when a high-risk score was produced, limited the potential of the risk  posed to a child from being underplayed as a result of misjudgment. This can be beneficial in complex situations such as working with children living with a disability in child-protections settings as it reduces the risk of abuse being seen as disability-related accidents  and  not  investigated  further.  However,  research  also  showed  how  critical thinking  is  required  to  get  around  potential  ADM  bias.  It  is  crucial  for  future  social
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -162,6 +195,10 @@ When a score or outcome is produced by many current ADM systems, there is limite
 ## COMPAS: algorithmic decision-making in correctional services
 
 As  seen  in  the  AFST  case,  the  representation  of  the  client  is ideally not  simply a calculation based on a dataset but includes an understanding of the data in a decisionmaking context. This context is best treated as an ecological panorama that makes sense of the data and how it interacts with the life and situation of the client. The alternative can be  significantly  impactful  for  clients  with  complex  needs  or  situations  (Hughes,  2017; McQuillan, 2015). This need for an interpretative relation is further highlighted through examining the decision-support tool used in some US justice and correctional service jurisdictions to assess recidivism risk for the purposes of bail, parole, sentencing and/or prisoner  management  (Hartmann  &amp;  Wenzelburger,  2021).  The  tool,  Correctional Offender Management Profiling for Alternative Sanctions (COMPAS), is used by judges in the context of determining non-parole periods in sentencing. Controversy has been raised about the black-box nature and minimized legal protections in the calculation of scores, though its use has been upheld in Wisconsin (Bennett Moses, 2019). Testing of the tool in one community found that African-American populations had a higher falsenegative rate compared to white populations (Angwin et al., 2016). The company that designed  COMPAS  claims  the  likelihood  of  a  person  re-offending  who  has  received
+
+
+<!-- PAGE 10 -->
+
 
 <!-- image -->
 
@@ -179,6 +216,10 @@ The authority that social workers once held to make decisions and to advocate fo
 
 The increasing reliance on ADM systems in everyday social work means that to ensure optimal outcomes social work, practitioners will have to develop the professional capabilities  to  engage  effectively  with  such  technologies.  For  social  work  education  to
 
+
+<!-- PAGE 11 -->
+
+
 <!-- image -->
 
 prepare students for a world where decisions affecting clients' long-term life-chances are increasingly based on AI and algorithmic formulae, students will need the opportunity to develop an algorithmic literacy that centers on understanding the often-critical limitations of such technologies and systems.
@@ -190,6 +231,10 @@ Moreover, there are many concerns about what data is used to inform the developm
 As  ADM  continues  to  be  further  developed  and  implemented  widely,  social  work students will clearly not be able to cover directly all the contexts in which ADM is used. Nevertheless,  case  studies,  examples,  and  explanations  of  theory  incorporated  beyond a single subject area would facilitate better in-context learning and transferable skill-sets. This requires an environment that assists students in connecting their understanding of data practices (technique) with their knowledge of social work theory and practice, and societal change as a whole (critique). Integrated learning units taking this brief as their broad frame would allow students to be exposed to a common theme running across the curriculum. This does not just mean the addition of intermittent lectures on ADM and AI to each unit or subject. Even the introduction of cross-disciplinary content would not be  sufficient  in  itself  to  ensure  that  all  relevant  topics  are  brought  into  the  same conversation  and  to  the  level  necessary  for  students  to  build  a  strong  understanding (Bennett Moses, 2019; Bronstein, 2003). In other words, a holistic and critical incorporation of these areas is more likely to allow students to work effectively with such systems than the possibly disjointed understanding students might get from having the topics of ADM and AI being added here and there across the curriculum.
 
 The strongest arguments in the area of cross-disciplinary unit-design suggest that the curriculum should be practice-embedded rather than technology-led (Bullock &amp; Colvin, 2015). To achieve this, the design of the unit needs to start with social work theory and practice and not ADM (Hill &amp; Shaw, 2011). This is important if social work theory is not either to be reduced to various perspectives on possible responsive adjustments or taught
+
+
+<!-- PAGE 12 -->
+
 
 <!-- image -->
 
@@ -203,6 +248,10 @@ The HEALER algorithm was created by the Center of Artificial Intelligence in Soc
 
 In  this  case  study,  our  students  concluded  that  the  success  of  the  program  was potentially  not  due  to  the  algorithmic  process  itself  but  possibly  to  the  way  in  which the  process  was  used,  including  the  face-to-face  training.  This  conclusion  was  then interrogated  through  the  following  sets  of  questions.  What  is  the  basis  for,  and  are there  potential  social  biases  built  into,  the  original  algorithmic  measure?  In  this  case, the status of peer leader was indicated by the algorithm based on how well a person was
 
+
+<!-- PAGE 13 -->
+
+
 connected  digitally  within  the  group.  However,  it  was  recognized  that  a  participant 'recommended  by'  algorithm  might  not  be  a  suitable  fit  for  a  peer-based  prevention model. Thus, the second set of questions. What is the outcome that the algorithm seeks, and how does it accord with existing evidence-based conclusions? Here students could explore  what  the  social  context  means  for  peer-based  prevention  models,  and  the challenge  of  designing  for  a  high-risk  community  of  adolescents  such  as  homeless youth (Dodge et al., 2006). This is a pedagogical topic in itself. Models that only focus on high-risk youth have the potential to enhance negative outcomes through what has come to be known as 'deviancy training' (Gifford-Smith et al., 2005; Snyder et al., 2005).
 
 Hence,  we  arrive  at  much  broader  considerations  concerning  how  the  algorithm works and a third set of questions. What are the intersectionalities at play in the area covered by the algorithm? It has been suggested by some writers that, to ensure that this risk of deviancy training is significantly reduced, peer-based models need a combination of  participants  who  are  low-risk  and  high-risk  (Rice  et  al.,  2011;  Snyder  et  al.,  2005). However,  the  consequence  of  this  understanding  is  itself  contextual  and  requires  the social  worker's  knowledge  about  deep  intersectionalities:  that  is,  about  the  persons involved, the nature of peer-based prevention models, what it means to use a platform such as Facebook with all its complications, how data can be used to inform or distort intervention strategies, and the limitations and strengths of ADM systems.
@@ -212,6 +261,10 @@ In summary, using such an interrogative method applied to life-world cases has t
 While we have not answered the question of what would be considered an 'ideal' unit design to achieve a holistic understanding of the ends of social work, as well as the means (technique), such case-studies do illustrate the nature of the critical method. All of the case studies introduced earlier could be used to understand intersectionality, but another useful example of complex determinations is the Heat List algorithm. This case introduced  another  set  of  questions  around  the  effect  of  the  knowledge  produced  by  the algorithm on the persons the knowledge was intended to support. Heat List is used by the Chicago police department in partnership with local social workers to lower gun-violence (Stroud, 2021). The algorithm produces calculations based on proximity to and relationships with known shooters and shooting casualties. It produces data indicating a specific person being at risk of gun-violence-though without presuming that the person would be a perpetrator or victim. A team consisting of police officers and social workers then visits the residence of the person indicated by the algorithm and informs them that they are at risk. Attending police officers issue the individual with a warning, while the social workers provide the opportunity for the individual to seek the help of various community services (Stroud, 2021).
 
 On the face of it, introduced without intersectional context, this sounds workable and appropriate in negotiating the presence-mediation tension. However, applications of the Heat List algorithm also caused problems such as the over-policing of African-American communities and the placement of some individuals at risk of being ostracized by their
+
+
+<!-- PAGE 14 -->
+
 
 <!-- image -->
 
@@ -226,6 +279,10 @@ Social work is a helping profession with expertise in addressing human needs thr
 Maintaining  this  changing  and  delicate  balance,  particularly  in  the  context  of  the increasing use of ADM, requires a demanding technical-critical pedagogy. Questions of technique and processes of mediation have a tendency become dominant in practice, and automatic decision-making presents us with a further leap in this direction. At the same time,  ADM  does  not  resolve  longer-term  issues  as  its  proponents  suggest.  Current evidence suggests that with ADM systems, groups already experiencing higher levels of discrimination or social-economic disadvantage are more likely to experience negative human rights impacts, while groups that experience more social advantages are more likely to benefit from it (Farthing et al., 2019). Hence, the social work profession faces a new variation on an issue that it has always faced. How is it possible to support those who live difficult lives to move beyond precarity in a world when the tools of support (and control) tend to be framed by the limits of that very world, and where precarity is too often sustained by welfare dependency?
 
 Social work is a profession that works with both individuals and systems bridging the  tensions  between  social  change,  social  control  and  social  provision.  Social  work education  needs  to  be  able  to  support  students  to  understand  their  roles  in  the
+
+
+<!-- PAGE 15 -->
+
 
 <!-- image -->
 
@@ -242,6 +299,10 @@ Beyond those general framing questions, the questions we have suggested that mig
 Posing  such  questions  as  a  summary  list  may  sound  as  though  the  problems  underpinning ADM lie beyond the current paucity of work on ADM and AI in social work curriculum. A reflexive teaching-and-learning will need to confront that question too. What are the limits of pedagogy? Strengthening algorithmic literacy and social critique aims,  ultimately,  to  embolden  those  most  affected  by  technological  determinationsthose in the field and those supported by welfare-to take hold of what they identify as possibly empowering and disempowering technological processes, in this case potentially enabled in positive ways by sensitively used, constrained, algorithmic support.
 
 In  the  emerging  world  of  ADM  where  human  decision-making  is  being  reframed, social  workers play a pivotal role in negotiating and influencing the development and application  of  such  algorithmic  systems.  This  requires  social  work  education  to  equip students with the digital literacy and awareness of opportunities and risks associated with ADM.  This  can  partly  be  achieved  through  innovations  in  curriculum  design  and academic development, continually reassessed in practice. We must aim to ensure that social workers have capacities for a practice that will always be beset by tensions: to be active advocates for individuals, groups or communities that are already or potentially being negatively impacted by technological change; to use technologies and techniques wisely; and to be change-agents in an unjust system where disadvantages can be amplified by automated processes, especially for the already most precarious.
+
+
+<!-- PAGE 16 -->
+
 
 <!-- image -->
 
@@ -292,6 +353,10 @@ Bennett Moses, L. (2019). Helping future citizens navigate an automated, datafie
 
 - Bronstein,  L.  (2003).  A  model  for  interdisciplinary  collaboration. Social  Work , 48 (3),  297-306. https://doi.org/10.1093/sw/48.3.297
 
+
+<!-- PAGE 17 -->
+
+
 <!-- image -->
 
 - Brown,  L.,  Moore,  S.,  &amp;  Turney,  D.  (2014). Analysis  and  critical  thinking  in  assessment .  www. researchinpractice.org.uk/children/publications/2014/july/analysis-and-critical-thinking-in -assessment-resource-pack-2014/
@@ -316,6 +381,10 @@ Bennett Moses, L. (2019). Helping future citizens navigate an automated, datafie
 - Healy, K., &amp; Hampshire, A. (2002). Social capital: A useful concept for social work? Australian Social Work , 55 (3), 227-238. https://doi.org/10.1080/03124070208410978
 - Hill, A., &amp; Shaw, I. (2011). Social work and ICT . Sage Publications.
 
+
+<!-- PAGE 18 -->
+
+
 <!-- image -->
 
 - Hughes, T. (2017). Prediction and social investment. In J. Boston &amp; D. Gill (Eds.), Social investment: A New Zealand policy experiment (pp. 179-202). Bridget Williams Books.
@@ -338,6 +407,10 @@ Bennett Moses, L. (2019). Helping future citizens navigate an automated, datafie
 - Snyder, J., Schrepferman, L., Oeser, J., Patterson, G., Stoolmiller, M., Johnson, K., &amp; Snyder, A. (2005). Deviancy training and association with deviant peers in young children: Occurrence and contribution  to  early-onset  conduct  problems. Development  and  Psychopathology , 17 (2), 397-413. https://doi.org/10.1017/S0954579405050194
 - Stoltenborgh, M., Bakermans -kranenburg, M. J., Alink, L. R., &amp; van IJzendoorn, M. H. (2015). The prevalence of child maltreatment across the globe: Review of a series of meta -analyses. Child Abuse Review , 24 (1), 37-50. https://doi.org/10.1002/car.2353
 - Stroud,  M.  (2021). Heat listed .  The  Verge.  www.theverge.com/22444020/chicago-pd-predictivepolicing-heat-list
+
+
+<!-- PAGE 19 -->
+
 
 <!-- image -->
 

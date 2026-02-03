@@ -1,10 +1,11 @@
 ---
 source_file: Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.pdf
-conversion_date: 2026-02-03T09:14:38.982524
+conversion_date: 2026-02-03T18:46:00.864092
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## ChatGPT for Social Work Science: Ethical Challenges and Opportunities
 
 Desmond Upton Patton University of Pennsylvania Aviv Y. Landau University of Pennsylvania Siva Mathiyazhagan University of Pennsylvania
@@ -16,6 +17,10 @@ KEYWORDS: generative arti /uniFB01 cial intelligence, large language models, Cha
 A rti /uniFB01 cial intelligence (AI) innovations have radically changed how society functions, impacting how humans engage and communicate with each other in online and of /uniFB02 ine environments. AI systems -technologies that enable computers to perform advanced tasks ' in a way that is similar to how humans solve problems ' (Brown, 2021, para. 8) -have become universal, informing the entire continuum of human decision-making (e.g., driving, ordering food, banking, hiring, medical treatment, and child welfare responses). Among the AI tools that affect social work research and practice, the generative AI tool ChatGPT has garnered signi /uniFB01 cant attention and popularity (Singer et al., 2023).
 
 ChatGPT offers exciting opportunities for innovation in social work science, surfacing theories, ideas, innovations, processes, and approaches that could fundamentally reshape the discipline. In the not-so-distant future, we anticipate social work scientists may use ChatGPT for education, research, practice, social media, and other allied creative and scienti /uniFB01 c activities related to social work. The social work scienti /uniFB01 c community should be prepared to address critical questions around client wellbeing, misinformation, credibility, ethical practices, and bias and harm caused by sourceless information.
+
+
+<!-- PAGE 2 -->
+
 
 Given these justi /uniFB01 ed cautions, we posit that the social work science community should undertake conversations that aim to identify, understand, and provide thought leadership for the potentially problematic features of AI that will affect social work science. In this invited paper, we describe the potential use of ChatGPT in social work science, exploring opportunities and ethical challenges related to the deployment of large language models (LLMs), speci /uniFB01 cally ChatGPT for social work science.
 
@@ -30,6 +35,10 @@ Before we critique the limitations of ChatGPT in social work science, we will be
 ## New Conversations
 
 As an AI tool for social work science, ChatGPT can generate text for possible research ideas and/or clinical simulations that force researchers and clinicians to challenge assumptions. For example, a group of social work scientists used
+
+
+<!-- PAGE 3 -->
+
 
 ChatGPT to answer multiple-choice questions on the Association of Social Work Boards exam to identify validity challenges (Victor et al., 2023). ChatGPT has the potential to help social work scientists ask innovative questions by providing a proof of concept. The tool can also help to create simulated environments that challenge assumptions baked into the type of questions we ask, the tools we use to ask those questions, who is involved in analyzing those questions, and how /uniFB01 ndings are disseminated. The following section will provide examples of how ChatGPT could potentially support how we develop and critique research questions.
 
@@ -46,6 +55,10 @@ Social work scientists may /uniFB01 ne-tune ChatGPT capabilities through a socia
 ## Research Assistance
 
 ChatGPT has the potential to identify, explore, and develop emerging interdisciplinary and domain-speci /uniFB01 c sample research questions and identify new areas of research. As a research assistant used in collaboration with human intelligence, ChatGPT could provide budding researchers with a wider range of questions and
+
+
+<!-- PAGE 4 -->
+
 
 ideas that would expand social work ' s horizons. For example, a social work scientist could input a prompt describing the social work professional ' s involvement in policing and then ask ChatGPT to provide examples of how this collaboration could be harmful and helpful; these examples could then be used as prompts for simulated experiments to test assumptions under conditions where social work involvement in policing was either abolished or present.
 
@@ -65,6 +78,10 @@ ChatGPT can help social work scientists with preparation of professional present
 
 The applications of LLMs in social work research are in their infancy, and a range of concerns emerge as we consider the implications of its use in the /uniFB01 eld. As social work scientists, we must recognize and raise awareness of ChatGPT ' s limitations, including its ability to think and generate new ideas. In their paper on the bureaucratic roots of Big Data and algorithms, Caplan and Boyd (2018) argued that algorithms like ChatGPT are themselves bureaucrats, leveraging existing oppressive institutional thinking to work ef /uniFB01 ciently. Like a bureaucratic system, ChatGPT enforces thought without compassion, reason, speculation, or imagination. Although AI tools such as ChatGPT may afford the 21st century social work scientist opportunities to produce new conversations, innovative questions, and new data sets, we
 
+
+<!-- PAGE 5 -->
+
+
 must constantly engage in critically re /uniFB02 ective dialogue on the utility of AI tools for addressing our most pressing social problems; share our concerns at our respective universities, organizations, and national conversations; locate potential opportunities; and determine parameters for ethical and empirically sound use of AI tools in social work research.
 
 ## Addressing Bias
@@ -78,6 +95,10 @@ OpenAI ' s ChatGPT disclaimer clearly indicates that ChatGPT may produce inaccur
 ## Data Privacy, Con /uniFB01 dentiality, and Informed Consent
 
 Since ChatGPT offers text from referenceless Internet sources, it has a risk of amplifying legal and ethical issues related to data privacy and informed consent from the authors of the content. There is no clear evidence for ChatGPT maintaining con /uniFB01 -dentiality about individual personal data, and how ChatGPT ensures privacy and con /uniFB01 dentiality is unclear. This limitation might lead to legal and ethical consequences for social work scientists, who should consider whether sensitive data such as names, ZIP codes, mental health conditions, income, or identity-related information are protected within the AI system and are not collected for further algorithm development. It is also important to note that it is the responsibility of social work scientists to cross-validate the source of the information, data privacy, con /uniFB01 dentiality regulations, and informed consent requirements prior to use of any information from ChatGPT in their scienti /uniFB01 c work. Furthermore, social work scientists should prepare data security plans with their institutional review board to prevent ethical breaches by using ChatGPT in their scienti /uniFB01 c work.
+
+
+<!-- PAGE 6 -->
+
 
 ## Academic Misconduct
 
@@ -94,6 +115,10 @@ Social work scientists incorporating ChatGPT and other LLMs in academic and prof
 ## 1. Transparency
 
 Currently, there are few requirements to disclose whether AI is used in content generation. Academic writing must clearly document the use of ChatGPT/LLMs, highlight which LLM was used, describe and disclose all potential con /uniFB02 icts of interest,
+
+
+<!-- PAGE 7 -->
+
 
 explain in detail how the LLM was used with prompts to understand the context, explain where in the writing LLMs were used, and discuss limitations of use and results.
 
@@ -115,6 +140,10 @@ LLMs commonly scrape information from online sources and, after scraping, provid
 
 Building on these preliminary recommendations, the National Association of Social Workers, Council of Social Work Education, Society for Social Work and Research, American Psychological Association, and International Federation of Social Workers should develop a comprehensive ethical framework within which social work scientists can agree to use ChatGPT and other LLMs in professional and academic writing and practice.
 
+
+<!-- PAGE 8 -->
+
+
 ## Conclusion
 
 ChatGPT could be a valuable tool for social work science. However, the social work scienti /uniFB01 c communitymustwrestlewith the uncertainties of ChatGPT and broader hyperbolic AI headlines that come with big promises to revolutionize research (Chomsky, 2023). The prominence of tools such as ChatGPT offers an opportunity for scienti /uniFB01 c social work organizations such as the Society for Social Work and Research to engage in timely conversations and agenda setting through working groups or a congressonthespeci /uniFB01 c andnuancedopportunitiesandchallengesofAIandtools like ChatGPT for social work science.
@@ -128,6 +157,10 @@ Social work scientists might also consider advancing antiracist and social justi
 - Can ChatGPT push researchers in social work and related disciplines to ask new, deeper, more re /uniFB01 ned questions centered on ethics, community, and antiracist approaches?
 
 It is important for the broader social work science community to directly engage with ChatGPT and other AI tools to fully explore and understand the potential role of AI in advancing social work science. Through direct engagement with ChatGPT (e.g., free or paid subscription to OpenAI, reading groups, panel discussions, and conference presentations), social work scientists may gain a deeper understanding of its capabilities and limitations, as well as its potential impact on the /uniFB01 eld. This engagement can help us develop strategies to effectively integrate AI into research, create ethical guidelines and framework aligned with social work ' s code of ethics, or create new avenues that provide evidence-based critiques for deploying AI across traditional social work research practice areas. Ignoring the role of ChatGPT and other AI tools in social work science would be a missed opportunity to leverage the strengths of social work science (e.g., holistic approaches, community
+
+
+<!-- PAGE 9 -->
+
 
 empowerment, interdisciplinary collaboration) to advance research, theory, and ethics to address complex social problems.
 
@@ -152,6 +185,10 @@ We thank Elisha Lim, PhD, for their thoughtful feedback on this commentary.
 - Dwivedi, Y. K., Kshetri, N., Hughes, L., Slade, E. L., Jeyaraj, A., Kar, A. K., Baabdullah, A. M., Koohang, A., Raghavan, V., Ahuja, M., Albanna, H., Albashrawi, M. A., Al-Busaidi, A. S., Balakrishnan, J., Barlette, Y., Basu, S., Bose, I., Brooks, L., Buhalis, D., . . . Wright, R. (2023). ' So what if ChatGPT wrote it? ' Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI for research, practice and policy. International Journal of Information Management , 71 , Article 102642. https://doi.org/10.1016/j .ijinfomgt.2023.102642
 - Else, H. (2023, January 12). Abstracts written by ChatGPT fool scientists. Nature . https://doi.org /10.1038/d41586-023-00056-7
 - Goings, T. C., Belgrave, F. Z., Mosavel, M., &amp; Evans, C. B. R. (2023). An antiracist research framework: Principles, challenges, and recommendations for dismantling racism through research. Journal of the Society for Social Work and Research , 14 (1), 101 -128. https://doi.org/10 .1086/720983
+
+
+<!-- PAGE 10 -->
+
 
 - Huang, K. (2023, January 16). Alarmed by AI chatbots, universities start revamping how they teach. The New York Times . https://www.nytimes.com/2023/01/16/technology/chatgpt -arti /uniFB01 cial-intelligence-universities.html
 - Marquart, M., &amp; Goldkind, L. (2023, March 8). ChatGPT: Implications for social work education and practice [Virtual session]. 2023 NASW-NYC Social Work Month Series. https://academic commons.columbia.edu/doi/10.7916/axhj-x577

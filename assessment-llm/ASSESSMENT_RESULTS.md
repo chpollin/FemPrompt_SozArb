@@ -6,7 +6,7 @@
 
 ## Overview
 
-Automated PRISMA screening using Claude Haiku 4.5 to assess 265 papers from the FemPrompt literature corpus. All papers were sourced from Deep Research AI agents (Claude, Gemini, ChatGPT, Perplexity).
+Automated PRISMA screening using Claude Haiku 4.5 to assess 265 papers from the literature corpus. Papers were sourced from Deep Research AI agents (Claude, Gemini, ChatGPT, Perplexity).
 
 ## Results Summary
 

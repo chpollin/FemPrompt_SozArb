@@ -1,19 +1,28 @@
 ---
 source_file: Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.pdf
-conversion_date: 2026-02-03T08:56:09.802121
+conversion_date: 2026-02-03T18:26:49.521409
 converter: docling
-quality_score: 100
+quality_score: 90
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Digitalität in der Kinder- und Jugendhilfe
+
+
+<!-- PAGE 2 -->
+
 
 ## Gliederung
 
 - 1.Digitalisierung und Digitalität? Kleine Einführung
 - 2.Kinderschutz
 - 3.Hilfeplanung
+
+
+<!-- PAGE 3 -->
+
 
 ## Digitalisierung und Digitalität
 
@@ -22,11 +31,19 @@ Digitalität in der Kinder- und Jugendhilfe
 - Digitalität und Digitalisierung bilden ein Spannungsfeld ('Doing Digitality', Weinhardt 2021, 2022): Einführung digitaler Dinge als soziale Innovation (z.B. digitale Fallakte, Lernsoftware, klassische Onlineberatung) vs. Anerkennung und Nutzung lebensweltlicher Digitalität (z.B. Algorithmik, Robotik, Smarte Dinge, Wearables, IOT) im Kontext sozialpädagogischer Bildung und Bewältigung.
 - Für die Sozialpädagogik kennzeichnend ist dabei der Verlust analytischer Differenzen von Beratungsangeboten (raum-zeitliche Strukturierung, Akteur:innenschaft von Fachkräften und Adressat:innen, ungeklärte Agency komplex-interaktiver digitaler Dinge).
 
+
+<!-- PAGE 4 -->
+
+
 ## Digitalisierung und Digitalität
 
 <!-- image -->
 
 - Doing Digitality, Weinhardt 2021: 7
+
+
+<!-- PAGE 5 -->
+
 
 <!-- image -->
 
@@ -35,6 +52,10 @@ Digitalität in der Kinder- und Jugendhilfe
 Horbar. Sichtbar. Beteiligt.
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 ## Digitale Hilfeplangespräche Baustein 3
 
@@ -46,15 +67,31 @@ DuRerhist dich
 
 'Es wird nur darüber geredet, was falsch läuft und was man nicht macht, weil es einem scheiße geht. Dann hört man immer: Du musst das jetzt machen, sonst nehmen wir dir Geld ab. Und eigentlich willst du nur hören: 'Wie geht es dir? Brauchst du was? Was hilft dir?'
 
+
+<!-- PAGE 7 -->
+
+
 <!-- image -->
+
+
+<!-- PAGE 8 -->
+
 
 ## Features
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 ## Features
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 ## Diskussion und Ausblick
 
@@ -62,13 +99,25 @@ DuRerhist dich
 - Oft stark normative und einseitige Bezugnahmen zu Chancen und Gefahren digitaler Technologien sowie der zugehörigen gesellschaftlichen Transformation.
 - Welche Rolle spielen Professionskulturen bei der Frage, wie Digitalität verhandelt wird?
 
+
+<!-- PAGE 11 -->
+
+
 ## EINSATZ VON KI IN DER KINDER- UND JUGENDHILFE
+
+
+<!-- PAGE 12 -->
+
 
 ## Gliederung
 
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 13 -->
+
 
 <!-- image -->
 
@@ -79,6 +128,10 @@ Künstliche Intelligenz und ihre Bedeutung in der modernen Welt
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 <!-- image -->
 
@@ -105,6 +158,10 @@ Künstliche Intelligenz und ihre Bedeutung in der modernen Welt
 - Deep Blue, ein Schachcomputer von IBM, besiegt den Weltmeister Garri Kasparow in einem Schachmatch.
 
 <!-- image -->
+
+
+<!-- PAGE 15 -->
+
 
 <!-- image -->
 
@@ -140,6 +197,10 @@ Künstliche Intelligenz und ihre Bedeutung in der modernen Welt
 
 <!-- image -->
 
+
+<!-- PAGE 16 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -168,6 +229,10 @@ KI schlägt Go Meister Im Jahr 2016 gelingt es dem Computerprogramm AlphaGo, den
 
 <!-- image -->
 
+
+<!-- PAGE 17 -->
+
+
 KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
@@ -184,11 +249,19 @@ Die Bedeutung der KI in der modernen Welt lässt sich kaum überschätzen. Sie t
 
 <!-- image -->
 
+
+<!-- PAGE 18 -->
+
+
 ## Anteil dersozialversicherungspflichtigBeschaftigteninBerufenmit hohemSubstituierbarkeitspotenzialindenBundeslandern,2022
 
 in Prozent
 
 <!-- image -->
+
+
+<!-- PAGE 19 -->
+
 
 <!-- image -->
 
@@ -200,6 +273,10 @@ Was ist Künstliche Intelligenz? (Definitionen und Schlüsselkonzepte)
 
 <!-- image -->
 
+
+<!-- PAGE 20 -->
+
+
 ## WAS IST KÜNSTLICHE INTELLIGENZ?
 
 KI IN DER KINDER- UND JUGENDHILFE
@@ -207,6 +284,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 Künstliche Intelligenz (KI) ist ein Bereich der Informatik, der sich mit der Entwicklung von Maschinen und Systemen befasst, die in der Lage sind, Aufgaben auszuführen, die traditionell menschliche Intelligenz erfordern. Diese Aufgaben umfassen Fähigkeiten wie Lernen, Schlussfolgern, Problemlösen, Wahrnehmung und Sprachverstehen. Durch die Nachahmung menschlicher kognitiver Prozesse strebt die KI danach, Maschinen zu erschaffen, die selbstständig denken und handeln können, um komplexe Probleme zu lösen und menschliche Aktivitäten zu unterstützen oder zu automatisieren.
 
 <!-- image -->
+
+
+<!-- PAGE 21 -->
+
 
 ## KLASSISCHE PROGRAMMIERUNG
 
@@ -222,6 +303,10 @@ Vordefinierte Logik: Die Entscheidungen, die ein klassisch programmiertes System
 
 <!-- image -->
 
+
+<!-- PAGE 22 -->
+
+
 ## KÜNSTLICHE INTELIGENZ KI IN DER KINDER- UND JUGENDHILFE
 
 Lernbasiert: KI-Systeme, insbesondere solche, die auf maschinellem Lernen basieren, lernen aus Daten. Sie entwickeln ihre Fähigkeit, Aufgaben zu erfüllen, indem sie Muster und Beziehungen in den ihnen zur Verfügung gestellten Daten erkennen.
@@ -233,6 +318,10 @@ Unstrukturierte Daten: KI kann mit unstrukturierten Daten wie Bildern, Sprache u
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 23 -->
+
 
 ## ARTEN VON KI
 
@@ -248,6 +337,10 @@ Unterscheidung zwischen schwacher KI (auf spezifische Aufgaben ausgerichtet) und
 
 <!-- image -->
 
+
+<!-- PAGE 24 -->
+
+
 ## DEEP LEARNING
 
 KI IN DER KINDER- UND JUGENDHILFE
@@ -257,6 +350,10 @@ Deep Learning, eine Untergruppe des maschinellen Lernens, bezieht sich auf Algor
 <!-- image -->
 
 KJSH Gemeinsam Verantwortlich Nachhaltig
+
+
+<!-- PAGE 25 -->
+
 
 <!-- image -->
 
@@ -270,11 +367,19 @@ KJSH Gemeinsam Verantwortlich Nachhaltig
 
 <!-- image -->
 
+
+<!-- PAGE 26 -->
+
+
 <!-- image -->
 
 ERSTES THEMA
 
 Untertitel
+
+
+<!-- PAGE 27 -->
+
 
 ## ANWENDUNGEN
 
@@ -294,6 +399,10 @@ Liste unvollständig 
 
 KJSH Gemeinsam Verantwortlich Nachhaltig
 
+
+<!-- PAGE 28 -->
+
+
 ## ERKUNDUNGEN
 
 - Kreativ
@@ -304,6 +413,10 @@ KJSH Gemeinsam Verantwortlich Nachhaltig
 KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
+
+
+<!-- PAGE 29 -->
+
 
 ## EXKURS PROMPTS
 
@@ -318,6 +431,10 @@ Zielformulierung: Das Ziel oder die Absicht des Prompts soll klar formuliert sei
 Sprache und Ton: Diskutieren Sie, wie die Wahl der Sprache und des Tons eines Prompts die Art der Antwort beeinflussen kann, insbesondere in Bezug auf Formalität, Freundlichkeit oder Kreativität.
 
 <!-- image -->
+
+
+<!-- PAGE 30 -->
+
 
 ## EINFACHERE PROMPTS KI IN DER KINDER- UND JUGENDHILFE
 
@@ -341,6 +458,10 @@ Sprache und Ton: Diskutieren Sie, wie die Wahl der Sprache und des Tons eines Pr
 
 <!-- image -->
 
+
+<!-- PAGE 31 -->
+
+
 KOMPLEXERE PROMPTS KI IN DER KINDER- UND JUGENDHILFE
 
 ## Fallstudienanalyse und Interventionsplanung
@@ -353,6 +474,10 @@ KOMPLEXERE PROMPTS KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
 
+
+<!-- PAGE 32 -->
+
+
 KOMPLEXERE PROMPTS KI IN DER KINDER- UND JUGENDHILFE
 
 ## Anpassung von Angeboten an kulturelle Vielfalt
@@ -364,6 +489,10 @@ KOMPLEXERE PROMPTS KI IN DER KINDER- UND JUGENDHILFE
 'Erstelle einen Leitfaden für Fachkräfte in der Kinder- und Jugendhilfe zur Mediation bei Konflikten zwischen Jugendlichen. Der Leitfaden soll Techniken zur Konfliktlösung, zur Deeskalation und zur Förderung von Empathie und gegenseitigem Verständnis umfassen.'
 
 <!-- image -->
+
+
+<!-- PAGE 33 -->
+
 
 ## 2035: MIT KI, VR UND AR
 
@@ -379,6 +508,10 @@ Teamsitzung teil. Die Besprechung erfolgt in einem virtuellen Raum, Daten intera
 
 <!-- image -->
 
+
+<!-- PAGE 34 -->
+
+
 ## 2035: MIT KI, VR UND AR
 
 ## 10:30 Uhr - Hausbesuch mit AR-Unterstützung
@@ -391,6 +524,10 @@ Während des Hausbesuchs bei Familie Meier verwendet die Fachkraft eine AR-Brill
 KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
+
+
+<!-- PAGE 35 -->
+
 
 ## 2035: MIT KI, VR UND AR
 
@@ -409,6 +546,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
 
+
+<!-- PAGE 36 -->
+
+
 ## 2035: MIT KI, VR UND AR
 
 ## 14:00 Uhr - Training mit virtuellen Welten
@@ -424,6 +565,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
 
+
+<!-- PAGE 37 -->
+
+
 ## 2035: MIT KI, VR UND AR
 
 ## 16:00 Uhr - Online-Beratung
@@ -438,6 +583,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
 
+
+<!-- PAGE 38 -->
+
+
 ## 2035: MIT KI, VR UND AR
 
 ## 17:30 Uhr - Tagesabschluss und Fortbildung
@@ -449,6 +598,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 39 -->
+
 
 ## 2035: MIT KI, VR UND AR
 
@@ -462,6 +615,10 @@ Dank der technischen Unterstützung konnte die Fachkraft ihren Fokus auf die Bez
 
 <!-- image -->
 
+
+<!-- PAGE 40 -->
+
+
 ## DISKUSSION
 
 Wie können diese Tools die Arbeit unterstützen? Wo sehen wir Potenzial für unsere täglichen Aufgaben?
@@ -471,6 +628,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 41 -->
+
 
 <!-- image -->
 
@@ -482,6 +643,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
 
+
+<!-- PAGE 42 -->
+
+
 ## BIAS IN TRAININGSDATEN
 
 KI IN DER KINDER- UND JUGENDHILFE
@@ -489,6 +654,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 KI-Modelle lernen aus Daten. Wenn diese Daten unausgewogen sind oder historische Vorurteile widerspiegeln, kann die KI diese Muster lernen und replizieren. Zum Beispiel könnte ein KI-gestütztes Einstellungstool, das mit Lebensläufen trainiert wurde, die hauptsächlich von einer bestimmten Gruppe stammen, dazu neigen, Kandidaten aus dieser Gruppe zu bevorzugen
 
 <!-- image -->
+
+
+<!-- PAGE 43 -->
+
 
 ## ALGORITHMISCHE VERZERRUNG
 
@@ -498,6 +667,10 @@ Neben den Daten können auch die Algorithmen selbst oder deren Anwendung zu Verz
 
 <!-- image -->
 
+
+<!-- PAGE 44 -->
+
+
 ## MANGEL AN DIVERSITÄT IN DER KI-ENTWICKLUNG KI IN DER KINDER- UND JUGENDHILFE
 
 Ein Mangel an Diversität unter den Entwicklern und Forschern, die KI-Systeme erstellen, kann dazu führen, dass unbeabsichtigt Bias und blinde Flecken in die Entwicklung und Implementierung von KI-Systemen einfließen. Dies kann dazu führen, dass bestimmte Perspektiven und Erfahrungen übersehen werden.
@@ -506,6 +679,10 @@ Ein Mangel an Diversität unter den Entwicklern und Forschern, die KI-Systeme er
 
 <!-- image -->
 
+
+<!-- PAGE 45 -->
+
+
 ## FOLGEN VON BIAS UND DISKRIMINIERUNG
 
 KI IN DER KINDER- UND JUGENDHILFE
@@ -513,6 +690,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 Die Auswirkungen können weitreichend sein und die Fairness, Gleichheit und Inklusion in verschiedenen Bereichen wie Arbeit, Bildung, Justiz und Gesundheitswesen beeinträchtigen. Diskriminierung durch KI kann dazu führen, dass Personen ungerechterweise von Dienstleistungen ausgeschlossen werden, ungerechte Behandlung erfahren oder in ihren Möglichkeiten eingeschränkt werden.
 
 <!-- image -->
+
+
+<!-- PAGE 46 -->
+
 
 ## RISIKEN UND HERAUSFORDERUNGEN
 
@@ -533,6 +714,10 @@ KI IN DER KINDER- UND JUGENDHILFE
 
 <!-- image -->
 
+
+<!-- PAGE 47 -->
+
+
 ## DISKUSSION
 
 Diskussion über die potenziellen Risiken und Herausforderungen, die mit dem Einsatz von KI verbunden sind, darunter Datenschutzbedenken, die Gefahr von Bias und Diskriminierung, Sicherheitsrisiken und die Auswirkungen auf den Arbeitsmarkt
@@ -542,6 +727,10 @@ Diskussion über die potenziellen Risiken und Herausforderungen, die mit dem Ein
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 48 -->
+
 
 <!-- image -->
 
@@ -554,6 +743,10 @@ Diskussion über die potenziellen Risiken und Herausforderungen, die mit dem Ein
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 49 -->
+
 
 ## GRUNDPRINZIPIEN
 
@@ -571,6 +764,10 @@ Kindeswohl als oberste Priorität: Sicherstellung, dass der Einsatz von KI das W
 
 <!-- image -->
 
+
+<!-- PAGE 50 -->
+
+
 ## DISKUSSION
 
 Diskussion über die potenziellen Risiken und Herausforderungen, die mit dem Einsatz von KI verbunden sind, darunter Datenschutzbedenken, die Gefahr von Bias und Diskriminierung, Sicherheitsrisiken und die Auswirkungen auf den Arbeitsmarkt
@@ -580,6 +777,10 @@ Diskussion über die potenziellen Risiken und Herausforderungen, die mit dem Ein
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 51 -->
+
 
 <!-- image -->
 
@@ -591,5 +792,9 @@ Diskussion über die potenziellen Risiken und Herausforderungen, die mit dem Ein
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 52 -->
+
 
 <!-- image -->

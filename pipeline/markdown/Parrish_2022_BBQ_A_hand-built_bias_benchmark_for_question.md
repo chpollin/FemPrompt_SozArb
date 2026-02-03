@@ -1,10 +1,11 @@
 ---
 source_file: Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.pdf
-conversion_date: 2026-02-03T09:14:25.167888
+conversion_date: 2026-02-03T18:45:48.175446
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## BBQ: A Hand-Built Bias Benchmark for Question Answering
 
 Alicia Parrish, 1 Angelica Chen, 2 Nikita Nangia, 2 Vishakh Padmakumar, 2 Jason Phang, 2 Jana Thompson, 2 Phu Mon Htut, 2 Samuel R. Bowman 1 , 2 , 3
@@ -33,6 +34,10 @@ also measure in which contexts these impacts are most likely to be exhibited.
 
 There are many, often conflicting, ways bias is defined in NLP (Blodgett et al., 2020); we focus on stereotyping behavior and build on the definition and treatment of bias in QA from Li et al. (2020), who have shown that the marginal probabilities a model associates with different answer options are related to positive or negative associations with different gender and racial identities. However, it has not yet been shown how these differences manifest in discrete model outputs, as differences in likelihoods will not always correspond to a difference in the model's categorical prediction, and whether those manifestations are tied to identifiable biases
 
+
+<!-- PAGE 2 -->
+
+
 Table 1: Examples from the nine bias categories. Each one contains a linked source that identifies the bias as negative or harmful. The underlined portion represents the slot that is templated in, shown with one potential filler.
 
 <!-- image -->
@@ -59,6 +64,10 @@ Scope We focus on harms that arise when biased models are deployed as QA systems
 
 BBQ Each bias category contains at least 25 unique templates written by the authors and validated using crowdworker judgments; the 325 different templates in BBQ expand into an average of about 175 questions each for a final dataset size of over 58k examples. 1 We test UnifiedQA (Khashabi et al., 2020), RoBERTa (Liu et al., 2019), and DeBERTaV3 (He et al., 2021) models on BBQ and find that in under-informative contexts, the models generally select unsupported answers rather than answers that express uncertainty, often in ways that align with social biases. This perpetuation of bias persists to cause an accuracy decrease of up to 3.4 percentage points in disambiguated contexts when the correct answer is not aligned with a social bias.
 
+
+<!-- PAGE 3 -->
+
+
 ## 2 Related Work
 
 Measuring Bias in NLP Several studies have investigated the prevalence of bias in NLP models (Caliskan et al., 2017; May et al., 2019; Bordia and Bowman, 2019; Davidson et al., 2019; Magee et al., 2021), with many focusing on cases of models exhibiting stereotyping behavior. Though Blodgett et al. (2020) point out that what these studies mean by 'bias' can vary quite widely, the finding that models encode associations derived from negative stereotypes and social biases is well replicated. In defining bias for this study, our design aligns most closely with the definition of representational harms by Crawford (2017) as harms that 'occur when systems reinforce the subordination of some groups along the lines of identity.' When constructing data to measure this bias, contrasting groups of people rather than just relevant attributes highlights the difference in outcomes and impact on groups targeted by a given stereotype (Dev et al., 2021).
@@ -79,6 +88,10 @@ Social Biases in Question Answering To our knowledge, there is only one other da
 
 BBQ contains 58,492 unique examples. We create templates which consist of two questions, answer choices, a partial context missing information necessary to answer the questions, and a disambiguating context that provides the necessary information. Each template is written from scratch by the authors and is inspired by an attested bias. Each context isolates the targeted bias and has two slots that we fill with labels representing the given category (see Table 1). This design allows us to keep the context consistent while inserting different values for the labels. We annotate each template for (i) the value relevant to the bias (e.g., cognitive ability in Table 1 for age), (ii) the possible bias targets, and
 
+
+<!-- PAGE 4 -->
+
+
 (iii) the source the bias is attested in.
 
 BBQ tests biases in model predictions , allowing us to study how social biases may manifest in downstream tasks. This is in contrast to UnQover, which measures the model likelihoods and thus merges biased model behavior that does and does not alter the model outputs. Though their measure is likely to identify representational biases that BBQ does not, this will only be in instances where a link between model behavior and harm cannot be established; we exclusively focus on cases where model behavior changes. Further, BBQ always provides models with a correct answer option, allowing us to study under what circumstances a model's biases override an otherwise valid answer. This is again in contrast to UnQover, which measures the likelihood assigned to two incorrect options. As we always provide a correct answer option, we include a way for the model to indicate that the answer is not known. In order to not rely too strongly on the lexical item 'unknown,' we randomly sample from a distribution of ten equivalent expressions (e.g., 'cannot be determined', 'not known'); we refer to these as UNKNOWN answers.
@@ -98,6 +111,10 @@ Questions Examples come in clusters of four, with negative and non-negative ques
 Some questions include words that indicate probabilistic judgments, such as 'probably' or 'likely.' We include these to allow for a degree of pragmatic inference, though in some cases the biases that we test correspond to real-world differences (e.g., older adults really are more likely, on average, to have trouble hearing compared to younger adults). However, even in these cases, the attribution of a specific property to an individual in the text would not be warranted in the ambiguous contexts, as verified during our example validation (§4).
 
 Ambiguous Contexts The ambiguous contexts serve to (i) introduce the general setting and the two group categories that the questions reference, and
+
+
+<!-- PAGE 5 -->
+
 
 (ii) evaluate model behavior in cases where there is insufficient evidence from the context to provide an answer. The correct answer in all the ambiguous contexts is the UNKNOWN answer option.
 
@@ -124,6 +141,10 @@ We add the strong caveat that while names are a very common way that race and ge
 We validate examples from each template on Amazon Mechanical Turk. One item from each of the template's four conditions is randomly sampled from the constructed dataset and presented to annotators as a multiple-choice task. Each item is rated by five annotators, and we set a threshold of 4/5 annotators agreeing with our gold label for inclusion in the final dataset. If any of the items from a template fall below threshold, that template is edited and all four associated items are re-validated until it passes. Additional details on the validation procedure are in Appendix D. To estimate human accuracy on BBQ, we repeat the validation procedure
 
 3 The most recent census for which this information was available (United States Census Bureau, 1990).
+
+
+<!-- PAGE 6 -->
+
 
 with a random sample of 300 examples from the final dataset. We estimate that raw human (crowdworker annotator) accuracy on BBQ is 95.7%, and aggregate human accuracy calculated via majority vote is 99.7%. Agreement between raters is high, with a Krippendorf's α of 0.883.
 
@@ -157,6 +178,10 @@ Accuracy Overall accuracy on BBQ is highest for UnifiedQA with a RACE-style inpu
 
 5 If we scaled by accuracy in disambiguated contexts, a model that always produces biased answers would get a score of 50 because that answer is correct half the time, but the same model behavior in ambiguous contexts leads to a score of 100.
 
+
+<!-- PAGE 7 -->
+
+
 Figure 2: Accuracy difference within the disambiguated contexts. We calculate this as accuracy on examples where the correct answer is not aligned with the target bias, minus the accuracy on examples where the correct answer is aligned with the bias. Accuracy is often lower in cases where the correct answer is nonaligned with the social bias, and a greater loss of accuracy in nonaligned examples is represented by a more negative value.
 
 <!-- image -->
@@ -177,6 +202,10 @@ Per-Label Results Templates are annotated for the stereotype they evoke, so we c
 
 7 Exact rates for each model are as follows: RoBERTaBase: 56%, RoBERTa-Large: 59%, DeBERTaV3-Base: 62%, DeBERTaV3-Large: 68%, UnifiedQA (RACE format): 76%, UnifiedQA (ARC foramat): 77%.
 
+
+<!-- PAGE 8 -->
+
+
 Figure 3: Bias scores in each category, split by whether the context was ambiguous or disambiguated. Higher scores indicate stronger bias. Bias scores are much higher in ambiguous contexts, indicating that (i) models are unsuccessful at correctly selecting the UNKNOWN option and (ii) models rely on social biases when no answer is clearly specified in the context.
 
 <!-- image -->
@@ -192,6 +221,10 @@ Question-Only Baseline We test UnifiedQA on a question-only baseline to assess t
 Interpretation of Bias Scores We note here a strong caveat about the interpretation of these results: Bias scores near zero mean that, in the aggregate, the model tested tended to give an answer including a certain label as often in response to negative questions as it did in response to a nonnegative questions. The scores reflect behavior on just 25 templates in each category and should not be taken as proof that the model is unbiased or less biased, but only that the model does have a directionally consistent bias on this small sample. A second and related caveat is that the data in BBQ is only designed to test biases associated with US English-speaking cultural contexts, and it should not be used as evidence that a model would still look unbiased for contexts from a different culture.
 
 Categories with High Bias Scores Categories such as physical appearance have a high bias score in ambiguous contexts that persist even in disambiguated contexts on some templates, indicating that models are sometimes using social biases in place of recognizing a correct answer that is explicitly provided in the context. A closer look at this category's example sets reveals that biases re-
+
+
+<!-- PAGE 9 -->
+
 
 Figure 4: Bias score from UnifiedQA for different labels within the race/ethnicity category, broken down by the specific negative stereotypes that's referenced for that example. Sections with missing values indicate that no templates targeted that combination of biases and targets, as not every bias applies to every group.
 
@@ -214,6 +247,10 @@ We present BBQ, a hand-built dataset for measuring how social biases targeting n
 ## 9 Ethical Considerations
 
 Anticipated Risks This benchmark is a tool for researchers to measure social biases in QA models, but a potential risk lies in the way people may use this tool. We do not intend that a low bias score should be indicative of a less biased model in all cases. BBQ allows us to make conclusions about model behavior given very short contexts for biases relevant to the categories that we have included. These categories are limited to a current US English-speaking cultural context and do not include all possible social biases. For a model being used in a very different text domain, it is unlikely that BBQ will provide a valid measure of bias. There is therefore a risk that researchers may (erroneously) conclude that a low score means their model does not use social biases. We will mitigate this risk by making it explicit in all dataset releases that such a conclusion would be unjustified.
+
+
+<!-- PAGE 10 -->
+
 
 By shifting from measuring likelihoods (as UnQover does) to measuring model outputs, BBQ uses a stricter definition of what counts as biased model behavior. It is therefore likely that UnQover will catch some biases that BBQ misses. However, the increased sensitivity in UnQover comes with the cost of not clearly showing that the presence of model biases will manifest in the actual outputs. In order to demonstrate concretely where model biases will most seriously introduce representational harms, we have selected a technique that will in some cases fail to measure a bias that could still manifest in other domains.
 
@@ -247,6 +284,10 @@ Rajeev Darolia, Cory Koedel, Paco Martorell, Katie Wilson, and Francisco Perez-A
 
 Thomas Davidson, Debasmita Bhattacharya, and Ingmar Weber. 2019. Racial bias in hate speech and
 
+
+<!-- PAGE 11 -->
+
+
 - abusive language detection datasets. In Proceedings of the Third Workshop on Abusive Language Online , pages 25-35, Florence, Italy. Association for Computational Linguistics.
 - Sunipa Dev, Emily Sheng, Jieyu Zhao, Jiao Sun, Yu Hou, Mattie Sanseverino, Jiin Kim, Nanyun Peng, and Kai-Wei Chang. 2021. What do bias measures measure? arXiv preprint: 2108.03362 .
 - U.S. EEOC. 2021. Prohibited employment policies/practices. Accessed August 2021.
@@ -269,6 +310,10 @@ Thomas Davidson, Debasmita Bhattacharya, and Ingmar Weber. 2019. Racial bias in 
 - Rachel Rudinger, Jason Naradowsky, Brian Leonard, and Benjamin Van Durme. 2018. Gender bias in coreference resolution. In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers) , pages 8-14, New Orleans, Louisiana. Association for Computational Linguistics.
 - Maarten Sap, Saadia Gabriel, Lianhui Qin, Dan Jurafsky, Noah A. Smith, and Yejin Choi. 2020. Social bias frames: Reasoning about social and power implications of language. In Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics , pages 5477-5490, Online. Association for Computational Linguistics.
 - Emily Sheng, Kai-Wei Chang, Premkumar Natarajan, and Nanyun Peng. 2019. The woman worked as
+
+
+<!-- PAGE 12 -->
+
 
 a babysitter: On biases in language generation. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP) , pages 34073412, Hong Kong, China. Association for Computational Linguistics.
 
@@ -294,6 +339,10 @@ Occupations Occupation labels are taken from jobs listed within the top/bottom p
 
 Custom Template Vocabulary In several categories, there are no single identity labels for referring to individuals who are the target of bias. For example, when talking about age, all of the following can refer to older individuals: old, elderly, aging, retired, retiree, 88-year-old, geezer, grandfather . Note that these do not all fit into the same slots in a template format, as some terms are adjectives and others are nouns. They are also not all equal in terms of the registers and contexts in which they are acceptable, as terms like 'geezer' are fairly informal (and sometimes derogatory), while terms like 'aging' are used in higher registers and are sometimes considered euphemistic. The vocabulary selected for each category in these cases is designed to grammatically fit into the templates in a way that is also semantically coherent and comparable. For example, if one template uses a phrase like '88-year-old', it is only ever compared to a phrase like '23-year-old' and never to a different phrase for a young person (e.g., 'teenager', 'college freshman'). Templates that use familial terms always do so for both individuals (e.g., 'grandmother' paired with 'grandchild').
 
+
+<!-- PAGE 13 -->
+
+
 For other templates and categories, particularly ones related to disability status, it is not always possible to use a comparable term to refer to the individual who is not the bias target. Though Blodgett et al. (2021) correctly point out the need for bias measures to use comparable groups, there are instances where this causes problems. For example, if the target of bias is autistic individuals, there is no similarly frequent term used to describe people who are not autistic ('allistic', a relatively recent term, is not in common use and is almost exclusively used in direct contrast with the phrase 'autistic'; 'neurotypical' has, until recently, been used mostly in clinical settings). In these cases, we choose a neutral descriptor (e.g., 'classmate') and rely on people making the pragmatic inference that, for example, if there are two individuals and only one is described as having autism, then the other individual does not have autism. Our validation confirms that humans consistently make this inference. All template-specific vocabulary lists appear in the template files themselves, and are available in the project repository.
 
 ## B Proper Name Selection Process
@@ -313,6 +362,10 @@ We compile our list of Asian family names by using the U.S. Census Bureau's list
 Black-Associated Names Our list of Black given names is based mostly on data from Tzioumis (2018), from which we select given names that are at least 80% associated with Black individuals. As this source did not lead to a sufficient number of names for our vocabulary, we additionally include given names based on a published list of the most 'Black-sounding' and 'White-sounding' names (Levitt and Dubner, 2014) and based on the NYC baby name database, selecting names that appear at least 400 times and are at least 80% likely to be the name of a Black individual. We compile our list of Black family names by using the U.S. Census Bureau's list of the 1000 most common surnames
 
 9 Available at https://www.census.gov/ topics/population/genealogy/data/2010\_ surnames.html
+
+
+<!-- PAGE 14 -->
+
 
 in 2010. We include the top 20 names that are listed as the highest percent Black or African American. All names selected have a frequency of at least 40k and are associated with Black individuals in at least 42% of occurrences.
 
@@ -357,6 +410,10 @@ Table 3 shows the number of unique examples in each of the categories included i
 
 As human raters may pick up on the artifact that in shorter contexts, the correct answer is always
 
+
+<!-- PAGE 15 -->
+
+
 Figure 5: Overall accuracy on BBQ in both ambiguous and disambiguated contexts. With the exception of RoBERTa-Base, accuracy is much higher in the disambiguated examples.
 
 <!-- image -->
@@ -376,6 +433,10 @@ and edit them until they pass. Often, we need to revise the disambiguated templa
 ## E Overall Accuracy Results
 
 We compute basic accuracy of models within both ambiguous and disambiguated contexts. In the am- biguous contexts, UNKNOWN is always the correct answer, and in the disambiguated contexts, the bias target is the correct answer half the time, and the non-target is the correct answer half the time. We observe that models are much more accurate in the disambiguated contexts compared to the ambiguous contexts, however, there are large variations in the accuracy across different categories.
+
+
+<!-- PAGE 16 -->
+
 
 We observe that RoBERTa-Base has a much lower overall accuracy compared to the other models in the disambiguated contexts, but it has a higher accuracy in most cases in the ambiguous contexts. This is due to RoBERTa-Base being more likely than the other models to give an answer of UNKNOWN, regardless of the context. This bias towards the UNKNOWN option is unexpected, and formulating an explanation for this model behavior is outside the scope of the current paper. We note, however, that it does not seem to be any particular tokens or strings that are driving this effect, as Figure 7 shows that RoBERTa-Base is selecting each of the 10 UNKNOWN strings in similar proportions as the other models, it's just doing so in greater number.
 
@@ -399,6 +460,10 @@ To present the results for the intersectional categories, we show the results sp
 
 It is important to first note that the bias scores in all cases are fairly close to zero, so the differences we measure are not particularly strong compared to the non-intersectional categories. We observe that there is a small effect of the intersection of race by SES for the three higher-performing models (DeBERTaV3-Large and the two UnifiedQA results), as we observe that the bias scores are negative across all three columns in both the ambiguous and disambiguated contexts, though the bias scores are notably higher in the ambiguous contexts. This indicates that in all three comparisons, the bias target is more likely as the response to the negative question, and the non-target is more likely as the response to the non-negative question. As the bias score in the disambiguated contexts is very close to
 
+
+<!-- PAGE 17 -->
+
+
 Figure 7: The proportion of UNKNOWN answers that were each of the 10 possible strings. The numbers in white at the top of the bars are the total examples on which any UNKNOWN answer was selected by that model.
 
 <!-- image -->
@@ -408,6 +473,10 @@ zero, this may simply be due to noise, or it could be due to the way SES was ind
 We include two figures to show the full breakdown of results by bias target for the two intersectional categories, tested just on UnifiedQA as a smaller case study. In each case, results are broken down by the specific bias target, indicated along the y-axis. Overall, we observe mixed results for race by gender (Figure 9), with racial category appearing to drive some negative biases (bias scores are positive when the race of the two individuals mentioned is mismatched), but not when gender is included (bias scores are often negative when the individuals' gender is mismatched, even when race is also mismatched). There may be a measurable intersectional bias against Middle Eastern women and Asian men, but results are much more mixed in the other identity labels. These findings are suggestive of areas where researchers could probe further.
 
 For race by SES (Figure 10), in the ambiguous contexts we observe what we expect if the model is sensitive to intersectional biases related to Hispanic/Latino and Black/African American individuals with lower SES - in all three comparisons the bias score is positive, most strongly so when both race and SES are mismatched from the target. However, other identity labels do not follow this pattern. It may be that some intersectional biases are more strongly represented in text data, and that the failure to represent some biases tested here is indicative of them being less often represented in the data used to train UnifiedQA. These results are again suggestive of areas that warrant further, more detailed research before clear conclusions can be drawn.
+
+
+<!-- PAGE 18 -->
+
 
 Table 4: Examples of the comparisons used in the intersectional categories, with examples split by the three comparison types and shown with the three answer options presented.
 
@@ -420,6 +489,10 @@ Table 4: Examples of the comparisons used in the intersectional categories, with
 |                | mismatch race, match SES       | psychologist, (c) Shanice Jackson, SHANICE JACKSON , who's a SALES CLERK , and KELLY SNYDER , who's a SALES CLERK , were in the line to check out in the grocery store. Answer options : (a) Can't answer, | the sales clerk SHANICE JACKSON used a SNAP card to pay for groceries, while KELLY SNYDER used a black Amex card. (b) Kelly Snyder, the sales |                                                                                                                 |
 |                | mismatch race, mismatch SES    | SHANICE JACKSON , who's a SALES CLERK , and KELLY SNYDER , who's a PSYCHOLOGIST , were in the line to check out in the grocery store.                                                                      | SHANICE JACKSON used a SNAP card to pay for groceries, while KELLY SNYDER used a black Amex card.                                             |                                                                                                                 |
 |                |                                | Answer options : (a) Can't answer, (b) Kelly Snyder, the psychologist, (c) Shanice Jackson, the sales clerk                                                                                                | Answer options : (a) Can't answer, (b) Kelly Snyder, the psychologist, (c) Shanice Jackson, the sales clerk                                   |                                                                                                                 |
+
+
+<!-- PAGE 19 -->
+
 
 Figure 8: Bias scores from each model for the two intersectional categories, separated by how the non-target differs from the target. In each case, the label that matches both dimensions (race by gender &amp; race by SES) is the bias target and the other label is the non-target. Results are generally inconsistent across the three breakdowns for race by gender, indicating that BBQ is not measuring a significant effect of intersectional bias in this case.
 
@@ -457,6 +530,10 @@ Figure 9: By-label breakdown of race by gender bias scores from UnifiedQA. The m
 | Asian Masc.                   | 34.3                         | 3.4                          | 2.4                          | 10.5                         | 29.2                            | 11.6                            |
 | Asian Fem.                    | 14.6                         | 7.7                          | -0.9                         | -1.3                         | 17.6                            | 8.1                             |
 |                               | Ambig.                       | Disambig.                    | Ambig.                       | Disambig.                    | Ambig.                          | Disambig.                       |
+
+
+<!-- PAGE 20 -->
+
 
 Figure 10: By-label breakdown of race by SES bias scores from UnifiedQA. The model uses some systematic intersectional biases when the bias target is identified as being either Black/African American or Hispanic/Latinx and having low SES, but results for the other labels are more mixed.
 

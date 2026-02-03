@@ -1,10 +1,11 @@
 ---
 source_file: Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.pdf
-conversion_date: 2026-02-03T09:24:23.462303
+conversion_date: 2026-02-03T18:55:35.219397
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -81,6 +82,10 @@ Conference Sponsors:
 
 SIGDOC
 
+
+<!-- PAGE 2 -->
+
+
 ## Inclusive Prompt Engineering: A Methodology for Hacking Biased AI Image Generation
 
 Rachel Skilton University of Washington Tacoma USA rskilton@uw.edu
@@ -121,6 +126,10 @@ ACM ISBN 979-8-4007-0519-9/24/10
 
 https://doi.org/10.1145/3641237.3691655
 
+
+<!-- PAGE 3 -->
+
+
 using AI. AI image generators are known to create biased images [17] oftentimes defaulting to generating white men when asked to create images of humans without explicit direction [18]. Through what we observed and call 'toxic positivity,' DALL-E attempts to avoid negative stereotypes by defaulting to the 'least offensive' images. However, as we will show, this bias towards positivity further reinforces stereotypical images by defaulting to what the LLM sees as 'positive': young, beautiful, skinny, and white. By intentionally crafting prompts, we aim to counteract overly 'positive' and limited representations of humanity in AI-generated images. Our goal in this method is to help designers and technical communicators produce visuals that accurately reflect the diverse range of human experiences, including variations in age, body type, ethnicity, and gender. To minimize bias, we have developed a systematic approach through what we call 'inclusive prompt engineering.' Building on DALL-E's prompt structure, we refine specific elements that provide limited portrayals of the subject. Through iterative adjustments of prompts, we progressively enhance the image to align with our inclusive vision.
 
 It's no surprise that, as a model trained on a body of data that already is implicitly biased, it would be difficult to get imagegenerating AI to create images that represent the diversity of humanity. While in recent years a robust body of literature has emerged that describes how bias in tech proliferates [19-21], there is less written about how to hack and work around these biases. Our research paper applies theories in TPC to emergent technologies through the development of multimodal methodologies [22, 23] and provides solutions for navigating bias. We might consider this method of inclusive prompt engineering as a form of tactical technical communication [24, 25], since we are finding ways to hack existing technology for the purpose of inclusivity by resisting and refining how these tools work beyond their inherently biased design features that reinforce racist and ageist stereotypes. The paper will give readers a practical and theoretical foundation for unbiased image generation of human subjects in DALL-E.
@@ -136,6 +145,10 @@ OpenAI has attempted to combat the use of its products to generate hateful or mi
 While conducting our applied research, we observed a surprising form of toxic positivity that emphasizes, particularly DALL-E and its content moderation policy, how toxic positivity can have a racist effect. Our prompt details were intentionally vague, 'create a portrait of a low income couple,' allowing the AI to produce an output based entirely on its existing semantic model. We wondered if low income people have a visual representation according to AI. The resulting image (Figure 1) showed the couple noticeably wearing dirty clothes.
 
 When asked why the image showed dirty clothes, which hadn't been shown in any other prompt, DALL-E offered to remake the image with a focus on cleanliness. The resulting output (see Figure 2) changed the man's race to white, and the couple's look more
+
+
+<!-- PAGE 4 -->
+
 
 Figure 1: Generated Image of Low Income
 
@@ -160,6 +173,10 @@ Based on our observations of how toxic positivity because of content moderation 
 AI models are trained using huge amounts of data from the Internet as source material. Though the exact data sources are unknown, they comprise social media, image-hosting sites with alt tags, and search engines. It is estimated that OpenAI's dataset has trained on over 400 million image and text combinations. Therefore, the output from these systems reflects mainstream culture. These biases become dangerous when users are shown images that shape their understanding of cultural concepts as fact. DALL-E operates by using Contrastive Language-Image Pre-training [31]. Rather than predictive text, the system focuses on how semantically related an image is to its text caption based on the millions of image text combinations it's trained on [32].
 
 Although general advice for writing prompts suggests users begin by describing the desired image as specifically as possible, we chose to utilize what is known as zero-shot prompting. Power users of these tools have developed definitions of prompting styles, such as zero-shot prompting, meaning the user does not provide the LLM with a concrete example, such as 'create a portrait of a woman who looks like Marilyn Monroe' for output [33]. Conversely, what
+
+
+<!-- PAGE 5 -->
+
 
 is known as few or multi-shot prompting gives the AI multiple concrete examples to emulate. The intention behind using zero-shot prompts in our research is to show us the base semantic connections from which the AI operates and to gauge what causes toxic positivity to emerge. For instance, asking for a realistic portrait of a person without other descriptors results in a young, thin, white man. When analyzing the prompt returned by the AI with the output image, it's clear how the AI arrived at the image. Maintaining the same prompt structure that mimics the AI's version and noting toxically positive phrasing is especially important to circumvent the system's anti-negativity filters. Through this process of zeroshot prompting, asking the AI to provide appropriate synonyms for negative descriptive traits, and the subsequent examination of outputs and returned prompts, we were able to develop a cascading, multi-step process to circumvent DALL-E's defaults.
 
@@ -186,6 +203,10 @@ To ensure key characteristics are reflected in the output image, they must be me
 ## 5 Conclusion
 
 Inclusive prompting has implications for both teachers and practitioners. We believe that by following this process, content designers
+
+
+<!-- PAGE 6 -->
+
 
 Figure 4: Inclusively Prompt Engineered Older Woman
 

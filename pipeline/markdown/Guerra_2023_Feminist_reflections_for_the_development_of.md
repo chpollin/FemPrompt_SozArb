@@ -1,10 +1,11 @@
 ---
 source_file: Guerra_2023_Feminist_reflections_for_the_development_of.pdf
-conversion_date: 2026-02-03T08:58:57.406874
+conversion_date: 2026-02-03T18:29:40.020064
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -14,6 +15,10 @@ Towards a feminist framework for AI development: from principles to practice
 Juliana Guerra
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Towards a feminist framework for AI development: from principles to practice
 
@@ -37,6 +42,10 @@ This work is available under a Creative Commons License Attribution 4.0 Internat
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 ## Index
 
 - Towards a feminist framework for AI development: from principles to practice 1.
@@ -58,9 +67,17 @@ This work is available under a Creative Commons License Attribution 4.0 Internat
 - 6.4. Recognize, within the previously agreed working group, possible risks, opportunities and conflicts associated with the development and deployment of AI systems in their different stages. 31.
 - 6.5. Define, in a conscious and informed manner by the organization or community, the resources, tools and services to be used for the 32.
 
+
+<!-- PAGE 4 -->
+
+
 ## Abstract
 
 This article is a practical approach, with a feminist perspective and located in Latin America, to the development of Artificial Intelligence (AI). Is it possible to develop AI that does not reproduce logics of oppression? To answer this question, we focus on the power relations immersed in the field of AI and make an interpretative analysis of the dayto-day experiences of seven women working in some field of AI or data science in the region, in dialogue with different statements of feminist principles and guidelines for the development and deployment of digital technologies. The narrative order of the document responds to the most relevant practical principles identified, as follows: 1. state the scope and limitations of this research; 2. how we understand the field of AI and how is the participation from Latin America in the scenarios of knowledge production in this field; 3. discrimination problems associated with the way the field of AI is currently configured and alternative proposals from feminist practices; 4. alternative proposals for the careful management of data, and to promote its auditability and reuse, from a feminist perspective; 5. practical proposals for the development of an AI that does not reproduce logics of oppression; 6. as a conclusion, a basic guide of questions and practices for AI development.
+
+
+<!-- PAGE 5 -->
+
 
 ## 1. Limitations and scope of this proposal
 
@@ -76,6 +93,10 @@ We also recognize the limited scope of this project. In AI development, as in ot
 
 2. Dalhia de la Cerda, 'Feminismos sin cuarto propio', 75.
 
+
+<!-- PAGE 6 -->
+
+
 The proposals we share below are far from a solution to how different forms of oppression intersect during the development of AI systems. There is no one-size-fits-all solution, no guide with all the answers, no framework that guarantees the deployment of a fair technology. Aware of this, our effort focused on identifying and systematizing experiences of people working in the field of digital technologies in Latin America, in order to document the ways of doing and thinking about AI from our territories and from logics that are not limited to the market. We analyzed these experiences in relation to feminist principles and social justice in technologies, as we will describe below.
 
 Moreover, our approach is not computational, although it is technical. As we will see throughout the text, for a technology such as AI, which is advancing so rapidly and currently consists of at least three branches of expertise (Natural Language Processing, Computer Vision and Robotics), it is practically impossible to imagine feminist principles embedded in a code. However, taking up the words of Kéfir, a trans feminist cooperative of free technologies, we consider that 'recognizing and making visible the multiple and diverse forms of the technical reconfigures our perception of who is part of a technology' 3 and changing such perception is key if we want to dispute the meanings of AI.
@@ -87,6 +108,10 @@ Paz Peña and Joana Varon have developed a framework for analyzing potential har
 3. Kéfir, 'Guía de migración de infraestructura', 2020, https://archive.org/details/guiamigracion-Infraestructura, 10.
 
 4. Paz Peña and Joana Varón, 'Oppressive A.I.: Feminist Categories to Understand its Political Effects', Not my A.I., October 10, 2021, https://notmy.ai/news/oppressive-a-ifeminist-categories-to-understand-its-political-effects/
+
+
+<!-- PAGE 7 -->
+
 
 This approach is similar to that adopted by Patricio Velasco and Jamila Venturini in their analysis of AI implementation by the public sector in Latin America. Based on four case studies, they conclude that there is little provision in the public sector to evaluate the relevance and necessity of the proposed technological solutions, and even less to identify the demands and proposals of the people potentially affected in their design. In addition, they draw attention to the fact that 'any deployment of technology takes place in a space with political tensions, where the danger is in pretending that the systems considered may ignore, hide or offset these tensions with nothing more than the very claims of efficiency underpinning them.' 5
 
@@ -101,6 +126,10 @@ We review six statements of feminist principles or values, which have emerged fr
 6. Safiya Umoja Noble, 'Traversing Technologies. A Future for Intersectional Black Feminist Technology Studies', The Scholar &amp; Feminist Online Issue 13.3 -14.1 (2016), https://sfonline.barnard.edu/traversing-technologies/safiya-umoja-noble-a-futurefor-intersectional-black-feminist-technology-studies.
 
 7.  Jobin, A., Ienca, M., &amp; Vayena, E. (2019). The global landscape of AI ethics guidelines. Nature Machine Intelligence , vol. 1 n. 9, 389-399. Retrieved on February 22, 2021 from https://www.nature.com/articles/s42256-019-0088-2.pdf.
+
+
+<!-- PAGE 8 -->
+
 
 of the Internet, 8 The Oracle for Transfeminist Technologies, 9 ManifestNo, 10 Design Justice Principles, 11 the Feminist Principles for the TICas Program 12 and AI Decolonial Manyfesto. 13 We also reviewed the Data Feminism Principles, 14 and the Feminist Categories to Understand [AI] Political Effects, 15 resulting from the research carried out by their authors.
 
@@ -121,6 +150,10 @@ Finally, we interviewed seven women working in some branch of AI or data science
 17. Carla Jancz, 'Enredando territórios de cuidado: Guia para aprendizado e construção de redes comunitárias', Marialab, 2021. https://www.marialab.org/wp-content/ uploads/2021/03/Cartilha-de-redes-comunitarias-FINAL.pdf.
 18. Selene Yang. 'Feminismo, ética y datos geoespaciales: guía práctica de recomendaciones', ILDA, work documents. https://doi.org/10.5281/zenodo.4913074.
 
+
+<!-- PAGE 9 -->
+
+
 practical guide that gathers feminist concerns and stakes in different moments of AI development, deployment and governance. They are:
 
 - Ximena Gutiérrez, postdoctoral researcher in the area of Natural Language Processing (NLP) at University of Zurich, and part of Elotl community. 19
@@ -138,6 +171,10 @@ For a more fluent reading, and considering we only conducted one interview with 
 20.  Selene Yang, Céline Jacquin y Miriam González, 'Geochicas: Helping Women Find their Place on the Map', Mapillary, Mayo 28, 2019, https://blog.mapillary.com/ update/2019/05/28/putting-women-on-the-map-with-geochicas.html
 
 21. OpenStreetMap https://www.openstreetmap.org
+
+
+<!-- PAGE 10 -->
+
 
 ## 2. Imaginaries in dispute
 
@@ -157,6 +194,10 @@ Fifth, AI is much more than a matter of computation, machines and data. In Kate 
 
 25.  Crawford, Atlas of AI , 8.
 
+
+<!-- PAGE 11 -->
+
+
 As Decolonial Manyfesto states, 'AI is a technology, a science, a business, a knowledge system, a set of narratives, of relationships, an imaginary.' 26
 
 With these five points in hand, we will from now on speak of AI to refer to neural network or 'deep learning' systems (not other areas of 'machine learning') applied to technologies that may be deployed by public or private actors, and with which many of us interact daily. Furthermore, considering power relations in AI, we will also refer to the materiality of these systems, including the datasets that feed them.
@@ -170,6 +211,10 @@ For her, the main difference, 'at the academic level in universities, is that in
 26.  AI Decolonial Manyfesto.
 
 27. Luciana Benotti (NLP- Academy) author interview, April 2022.
+
+
+<!-- PAGE 12 -->
+
 
 A similar perception is shared by Mexican researcher Ximena Gutiérrez, from Zurich. 'The Latin American community and the Mexican community is underrepresented in the major conferences in the area,' she says. For her, 'you have much greater visibility when you are at a university in the Global North, Europe or the United States.' And she recognizes as problematic that the system of academic incentives in Mexico fails to value participation in conferences, 'but ironically, because of the speed of machine learning, everything is published at conferences. You cannot wait to publish something in two or three years because it is considered old, you have to be at the conferences because that is where everything moves.' 28
 
@@ -185,6 +230,10 @@ The participation of people from the global south in AI (and computer science in
 
 30.  International Conference on Machine Learning | https://icml.cc/public/ DiversityInclusion
 
+
+<!-- PAGE 13 -->
+
+
 The Association for Computational Linguistics has participation statistics from its 2017 annual conference, 31 which discriminate female participation (24%), male (70%), and 'other/not stated/unknown' (6%), as well as participation by region, 'North, Central and South America' (55%), 'Europe, Middle East and Africa' (19%), 'Asia, Pacific' (23%), and 'Unknown' (3%). These figures speak little of regional differences, for example North-South, and also of other diversities.
 
 Projects such as the Oracle for Transfeminist Technologies seek to account for this situation and to be inspired to imagine what kind of values could be embedded in AI systems if they were built from other subjects and in other spaces. As stated on their website 'the wisdom of the oracle, embedded with transfeminist values, will help us foresee a future where technologies are designed by people who are too often excluded from or targeted by technology in today's world.' 32
@@ -196,6 +245,10 @@ We will return later to how the imagination has been a powerful tool of dispute 
 32. The Oracle for Transfeminist Technologies https://www.transfeministech.codingrights.org
 
 33.  Donna Haraway. 'A Cyborg Manifesto: Science, Technology, and Socialist-Feminism in the Late Twentieth Century', in Simians, Cyborgs and Women: The Reinvention of Nature , (New York: Routledge, 1991), 149.
+
+
+<!-- PAGE 14 -->
+
 
 ## 3. All intelligence is embodied
 
@@ -210,6 +263,10 @@ But this is not just in the public sector. As we saw earlier, initiatives to inc
 35.  Jamila Venturini y María Paz Canales, 'A Feminist Lead Towards an Alternative Digital Future for Latin America' Bot Populi, April 20, 2022, https://botpopuli.net/afeminist-lead-towards-an-alternative-digital-future-for-latin-america
 
 36.  D'Ignazio y Klein, Data Feminism , 76. (traducción propia)
+
+
+<!-- PAGE 15 -->
+
 
 In this context, it is the one-sided perspective of a very homogeneous group of people, mainly white males in the United States, which is overshadowed by the ideas of neutrality, objectivity and truthfulness on which AI systems and digital technologies in general are developed. Or, as different authors call it: models, narratives and culture, 37 or the vision, 38 or the ideology 39 of Silicon Valley being deployed in various other contexts to respond to structural forms of oppression that, most of the time, they do not understand because they are far removed from their daily realities.
 
@@ -229,6 +286,10 @@ Fernanda Carles says that she once had 'the opportunity to work as a technology 
 
 41. Fernanda Carles (Neural Networks-Academia, Civil Society) author interview, April 2022.
 
+
+<!-- PAGE 16 -->
+
+
 absurd to me. [...] What I think is that since they are trying to make women more empowered, this also lends itself to confusion and there are a lot of useless tools just to say that women are involved.'
 
 These are not the only app ideas to protect women from gender-based violence, nor are they the only ones that fail to understand the needs a woman may have when she is facing violence. 42 And there are many other examples of technologies that, by design, are far from contributing to more equitable relationships. Selene Yang says that 'there are many countries in the world where, in public restrooms, there are condom vending machines in men's restrooms and pad and tampon vending machines in women's restrooms.' That, she says, speaks to the fact that access to reproductive rights is given merely to men. But
@@ -244,6 +305,10 @@ These examples are illustrative of two increasingly visible structural condition
 43.  Selene Yang (Data Science-Community) author interview, April 2022.
 
 44.  Carolina Padilla (Data Analytics - Industry) author interview, April 2022.
+
+
+<!-- PAGE 17 -->
+
 
 assembly factories for the Mexican electronics industry, with clients as large as Tesla, Nokia, IBM or Foxconn, demand dignified working conditions such as spaces free of harassment and discrimination, and minimum health conditions for handling highly toxic materials. In addition, they demand that companies be consistent with the social responsibility seals they display on their websites, as they maintain unfair and often illegal working conditions. 45 These and other activities part of the AI production chain, 46 configure and sustain a system of oppression that can hardly be corrected with computer codes alone.
 
@@ -263,6 +328,10 @@ In the words of Mixe linguist Yásnaya Aguilar, 'being bilingual is not the same
 
 48.  Aguilar Gil, 'A modest proposal to save the world'.
 
+
+<!-- PAGE 18 -->
+
+
 This challenge is precisely what gives meaning to this text. For years, feminist groups have been organizing in Latin America to build alternatives 49 to the violent and oppressive order that prevails in digital technologies. In the words of the Manifesto for hackfeminist algorithms, 'we want to resist against all infrastructure that enables and reproduces oppression, discrimination and misogyny, through our bodies-territories-algorithms in whatever space we inhabit on or off the Internet.' 50
 
 For this resistance, infrastructure is a central issue. That is, in addition to the question of what data, and whose data, is being used in digital technologies, the place where that data is hosted matters, as does where that place is, who owns it, who has access to it and under what conditions. But also, how the system of data capture and traffic is kept permanently running. As stated in the Guide for learning and building community networks, people who use the Internet often do not have a concrete knowledge of its infrastructure. 'This information is hidden behind the idea of a 'cloud' where everything seems very abstract and magical.' But the infrastructure is more like a network of terrestrial and submarine cables, behind which 'there are very robust routers controlled by companies and governments.' 51
@@ -279,11 +348,19 @@ Making visible, re-signifying and putting care work at the center has been part 
 
 52.  Jancz, 'Enredando territórios de cuidado'.
 
+
+<!-- PAGE 19 -->
+
+
 that there is a whole materiality of work that is often feminized, precarious and hidden. In order not to reproduce logics of oppression, it is necessary to contemplate these jobs as well. As Paola Ricaurte states,
 
 'it is essential that we listen to and learn from the embodied experiences of datafication, algorithmic mediation, and automation in the lives of women and girls, indigenous communities, immigrants, refugees, platform workers, non-binary people, and rural communities across the globe. Their situated knowledge(s) can help us understand algorithmic harms as a more complex phenomenon than a straightforward experience.' 53
 
 53.  Paola Ricaurte, 'Artificial Intelligence and the Feminist Decolonial Imagination', March 2, 2022. https://botpopuli.net/artificial-intelligence-and-the-feministdecolonial-imagination/.
+
+
+<!-- PAGE 20 -->
+
 
 ## 4. Facing a digestive data system
 
@@ -302,6 +379,10 @@ Therefore, the possibility of conceiving an AI outside the market seems distant.
 55.  This has been documented at https://ia.derechosdigitales.org y https://notmy.ai/es
 
 56.  Varon and Peña, 'Artificial intelligence and consent.
+
+
+<!-- PAGE 21 -->
+
 
 before, narratives are also a terrain of struggle, and in terms of data and digital technologies, the narrative 'the all-encompassing Western mythology flooding our distant territories' 57 is not only being questioned but also challenged with different initiatives of resistance and collaborative work. In this part, we collect alternative proposals for the careful management of data, and to promote its auditability and reusability, from a feminist perspective.
 
@@ -323,6 +404,10 @@ However, as some authors have criticized, the emphasis on biases and algorithmic
 
 61. Catherine D'Ignazio y Lauren F. Klein, Data Feminism .
 
+
+<!-- PAGE 22 -->
+
+
 bias, you can educate, discuss and dialogue with people, but many times the bias will not go away. There can be very implicit bias or explicit bias. I think explicit bias is more workable because it is stated.'
 
 Sofía Trejo has a similar perspective, as she considers that 'it is very useful not to try to remove biases but to use them to understand the discrimination problems we have, to understand the way these types of discrimination are being reinforced.' She believes that focusing too much on biases 'is to point to solutions that do not fix the system itself, but rather create a new justification that they exist to start something that is fairer. But that justice to which we want to aim is not built on democracy and consensus.' And as Marisol Flores points out, 'sometimes the biases are conflicts of value, such as, for example, whether I prefer privacy or equity in certain things.'
@@ -334,6 +419,10 @@ In order to make biases explicit, it is necessary not only to develop technical 
 For machine learning research, nowadays, large benchmark datasets are available on the Internet to be used and adapted by different research communities. As pointed out in a recent article, the different research tasks are concentrated in an increasingly reduced number of datasets, many of which are in the hands of fewer and fewer institutions (companies such as Microsoft and Google, universities such as Stanford and Princeton). In addition, a database can be used for tasks very different from those for which it was designed. 62 It is worth noting that, due to the access conditions imposed by their owners, although these datasets can be used and adapted, any bias mitigation work done on them does not guarantee an improvement in the datasets. On the contrary, this situation implies that different implementations around
 
 62.  Bernard Koch et al., 'Reduced, Reused and Recycled: The Life of a Dataset in Machine Learning Research,' ArXiv: 2112.01716 [Cs, Stat] , December 3, 2021, http://arxiv.org/ abs/2112.01716
+
+
+<!-- PAGE 23 -->
+
 
 the world are relying on models trained by datasets whose collection and labeling policies, to say the least, are not entirely transparent.
 
@@ -348,6 +437,10 @@ This fanzine is released under the Feminist Peer Production license. This means 
 63.  Selene Yang, 'Feminismo, ética y datos geoespaciales'.
 
 64.  Inés Binder and m4rtu, 'Cómo montar una servidora feminista con una conexión casera', ('The right to have our own infraestructure: how to set up a feminist server with a home connection') la\_bekka, october 9, 2019,  https://labekka.red/servidorasfeministas/
+
+
+<!-- PAGE 24 -->
+
 
 It is important to differentiate between two types of datasets, for their treatment and use from a feminist perspective. On the one hand, datasets created in a process based on feminist principles, and on the other hand, datasets already existent in whose design there was no participation. The latter, as has been mentioned in so many places, are a record of the past and using them without this awareness to train and feed automatic learning systems is continuing to reproduce labels, stereotypes and roles, from particular (and privileged) points of view just as the racist, 65 misogynist, transphobic and classist order we still live in has been configured.
 
@@ -367,6 +460,10 @@ As Data &amp; Society's analysis based on the U.S. context points out, while the
 
 68.  Emanuel Moss et al., 'Assembling Accountability'.
 
+
+<!-- PAGE 25 -->
+
+
 formats and languages that are accessible to the people who are expected to use such documentation.
 
 This goes beyond the right to explainability of AI systems, as recognized by the European General Data Protection Regulation, 69 and also goes beyond proposals to include communities in the algorithmic accountability process by recognizing their experiences as a form of expertise, and thus, as authoritative voices to participate in evaluations. 70 As we will see in the next part, the people to whom the documentation is addressed are not only considered users of the systems, but also creators.
@@ -380,6 +477,10 @@ In contrast to algorithmic impact assessment models, which seek to assign respon
 71. Varon y Peña, 'Artificial intelligence and consent'.
 
 72. Paola Ricaurte Quijano et al., 'Tecnoafecciones. Por una política de la coresponsabilidad' (Instituto Simone de Beauvoir, 2020), https://ia601809.us.archive. org/28/items/tecnoafecciones-web/Tecnoafecciones\_web.pdf, 17.
+
+
+<!-- PAGE 26 -->
+
 
 ## 5. Doing speculatively
 
@@ -399,6 +500,10 @@ Imagining that skin does not separate us but connects us, as Nadia Cortés propo
 
 74. Sophie Toupin y Spideralex, 'Introduction: Radical Feminist Storytelling and Speculative Fiction: Creating new worlds by re-imagining hacking', ADA 13, 2018, https://adanewmedia.org/2018/05/issue13-toupin-spideralex
 
+
+<!-- PAGE 27 -->
+
+
 are processes, common becomings, creations in collective to which we belong beyond our will.' 75
 
 Or, as Yásnaya Aguilar writes 'place technological creation and ingenuity once again at the service of the common good, not of the market.' 76 Sofia Trejo says she likes 'to think that we can create joint strategies at the regional level to be able to create counterweights to these large corporations because the problem is that we don't have enough computing resources now or enough resources of various things, but maybe in a collaborative way we can do that.'
@@ -414,6 +519,10 @@ Fernanda Carles says that 'on the technical side, the more social issues are see
 75. Nadia Cortés, 'Piel sintética interconectada: ficcionar para afectarnos', at 'Nos permitimos imaginar: escrituras hackfeministas para otras tecnologías', comp. Paola Ricaurte Quijano (Mexico: Instituto Simone de Beauvoir, 2020), https://ia801805. us.archive.org/32/items/nos-permitimos-imaginar-web/NosPermitimosImaginar.pdf, 8.
 
 76. Aguilar Gil, 'A modest proposal'.
+
+
+<!-- PAGE 28 -->
+
 
 helps the country more.' For this reason, she considers it necessary to have 'more diversity in the teams, critical analysis of how these things are being used and a recognition of the limitations they also have.'
 
@@ -431,6 +540,10 @@ Following this proposal, Yadira Sánchez Benítez writes about how a tequiology 
 
 78.  Aguilar Gil, 'A modest proposal to save the world'.
 
+
+<!-- PAGE 29 -->
+
+
 amount of computational resources required it is difficult to imagine a development outside of universities or corporations, she says,
 
 'for AI infrastructures and machine learning operations to fully embrace this idea of tequiologies, collective and collaborative efforts would include not only participants involved in the design process but the entire community's knowledge and context by following a kind of community assembly becoming more a type of collective intelligence aided by tools.' 79
@@ -444,6 +557,10 @@ For a hyper-specialized field such as AI, this proposal resonates with the princ
 80.  Design Justice Network, Design Justice Network Principles, https://designjustice. org/read-the-principles.
 
 81. D'Ignazio y Klein, Data Feminism , 141.
+
+
+<!-- PAGE 30 -->
+
 
 ## 6. Towards a guide for the development of feminist AI systems
 
@@ -466,6 +583,10 @@ The objective is to reach a common understanding of the needs. For this, it is u
 
 Key principles: collaboration, participation, autonomy, territorial defense, environmental justice.
 
+
+<!-- PAGE 31 -->
+
+
 ## 6.2. Determine, based on the recognition of the context, capabilities and available resources, whether an AI system is the best way to satisfy the identified needs.
 
 It is likely that an AI (understood as a deep learning system for decision making) is not the technological tool best suited to meet the needs posed by the organization or community. In that case, the development team may propose technological alternatives, or, in the process, find alternatives that do not involve digital technologies and still respond to the identified demands. The ultimate goal of this type of effort is not the deployment of certain types of technologies, but the collective construction of answers and alternatives.
@@ -483,6 +604,10 @@ Key principles: care, alternative economies, resilience, co-responsibility.
 This part involves going a little deeper into the technical characteristics of AI, and the ethical conflicts it presents, as well as the risks it could imply for the users. For example: algorithmic or datasets biases; the conditions under which existing datasets were built or the limitations involved in building one's own datasets; privacy implications for users and how to ensure continued consent in data capture and processing; licenses for use of existing codes, datasets or work environments; the costs associated with the computer equipment needed to develop and maintain a system in operation, as well as its environmental impact, among other potential conflicts.
 
 Key principles: usage, intersectional view, consent.
+
+
+<!-- PAGE 32 -->
+
 
 ## 6.5. Define, in a conscious and informed manner by the organization or community, the resources, tools and services to be used for the development and deployment of the IA system.
 

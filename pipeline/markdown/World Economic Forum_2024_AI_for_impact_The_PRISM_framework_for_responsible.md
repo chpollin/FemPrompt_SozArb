@@ -1,10 +1,11 @@
 ---
 source_file: World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.pdf
-conversion_date: 2026-02-03T09:31:48.434498
+conversion_date: 2026-02-03T19:02:42.276806
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 In collaboration with EY and Microsoft
@@ -14,6 +15,10 @@ In collaboration with EY and Microsoft
 ## The PRISM Framework WHI T E   P A P E R J U N E   2 0 2 4
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Contents
 
@@ -39,6 +44,10 @@ In collaboration with EY and Microsoft
 This document is published by the Schwab Foundation for Social Entrepreneurship in partnership with the World Economic Forum. The findings, interpretations and conclusions expressed herein are a result of a collaborative process facilitated and endorsed by the Schwab Foundation for Social Entrepreneurship or the World Economic Forum but whose results do not necessarily represent the views of the Schwab Foundation and World Economic Forum, nor the entirety of its Members, Partners or other stakeholders.
 
 © 2024 Schwab Foundation for Social Entrepreneurship and the World Economic Forum. All rights reserved. No part of this publication may be reproduced or transmitted in any form or by any means, including photocopying and recording, or by any information storage and retrieval system.
+
+
+<!-- PAGE 3 -->
+
 
 ## Foreword
 
@@ -66,6 +75,10 @@ This paper builds on earlier efforts to present a strategic roadmap for social i
 
 This paper will form the basis for work with intermediary partners and other ecosystem collaborators on the further development of training and skill-building toolkits for social enterprises. Our hope is that the frameworks and roadmaps presented herein, along with resources from corporate collaborators, can help social innovators realize the promise of AI-driven social change.
 
+
+<!-- PAGE 4 -->
+
+
 Image credit: LifeBank
 
 ## Executive summary
@@ -84,6 +97,10 @@ The framework also highlights risks and technological shortcomings that need to 
 
 <!-- image -->
 
+
+<!-- PAGE 5 -->
+
+
 FI G U R E   1
 
 ## Introduction
@@ -99,6 +116,10 @@ Geographical summary of the social innovator dataset
 Despite broad implementation, the report identifies gaps hindering wider adoption. Only 13% of AI initiatives focus on educational toolkits, primarily in the Global North. Gender disparities persist, with just 25% of women-led social enterprises using
 
 AI compared to half in the broader sector. Ethical and equity challenges also emerged. For example, most commercially available models are trained on data from high-income countries, delivering sub-par results for low- and middle-income countries.
+
+
+<!-- PAGE 6 -->
+
 
 ## Social impact domain
 
@@ -124,6 +145,10 @@ Woman founder or chief executive officer
 
 <!-- image -->
 
+
+<!-- PAGE 7 -->
+
+
 AI initiatives by type FI G U R E   4
 
 <!-- image -->
@@ -133,6 +158,10 @@ Image credit: SAS Brasil
 <!-- image -->
 
 This paper builds on previous insights and frameworks such as the Presidio Framework by the World Economic Forum's AI Governance Alliance to highlight avenues for broader AI adoption among social innovators. It combines data from previous studies with insights from 22 in-depth interviews and interactive workshops with social innovators and tech leaders, highlighting the nuanced decision-making processes in AI deployment and the ongoing challenges faced by social innovators.
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 
@@ -154,6 +183,10 @@ The Presidio Framework: Funnelling use cases through evaluation gates
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 Image credit: Education for Employment
 
 ## The PRISM Framework 1.1
@@ -165,6 +198,10 @@ The PRISM Framework builds on the Presidio framework. It highlights how differen
 The PRISM Framework FI G U R E   6
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 <!-- image -->
 
@@ -180,6 +217,10 @@ The second layer highlights the different adoption pathways. Innovators may choo
 | Delivery improvements Implement AI with externally facing processes and staff, improving product/service experience and impact              | External | LifeBank's adoption of AI has enabled the company to leapfrog barriers presented by supply chain capital limitations. The enterprise developed its proprietary AI tools for supply chain management and to manage last-mile payments. It's AI-powered brainbox, Light, communicates with healthcare workers at the last-mile, improving supply chain efficiency by reducing human errors in decision-making.                                                                                                            |
 | AI as a core asset Leveraging AI to develop new solutions and services to achieve the impact objective                                      | External | SAS Brasil is seeking to develop an AI-enabled diagnostic tool drawing on large- scale cervical cancer datasets to improve healthcare outcomes for women in vulnerable communities.                                                                                                                                                                                                                                                                                                                                     |
 | AI-first organization Organizational transformation to become data-driven and AI-enabled in almost every offering and service               | External | Geekie made the decision to become a technology organization to fully leverage AI for education. It transformed its basic offering to be free-of-charge to be able to gather data at scale and build AI models. It transformed itself to embed technology into every facet of the organization - from training plans to suggestions for remedial work.                                                                                                                                                                  |
+
+
+<!-- PAGE 11 -->
+
 
 ## AI implementations insights
 
@@ -197,6 +238,10 @@ When implementing AI across the adoption pathways, different capabilities and ri
 
 The following section explores the abovementioned capabilities and risks in more detail. The PRISM Framework offers a modular approach to considering the implementation of AI for impact. On one end of the spectrum, social innovators with strong organizational readiness - solid internal AI skills and capabilities, a healthy enterprise-wide attitude to the technology and a clear articulation and understanding of their data assets and ethical concerns - may apply capabilities and manage risks across the entirety of the framework. Organizations that have not built such internal capabilities may leverage the technology to tinker and therefore use a low-risk entrance point to implement the technology at low cost and with minimal impact on the business strategic goals and ethical concerns.
 
+
+<!-- PAGE 12 -->
+
+
 ## Case studies along the adoption pathways 1.2
 
 The following use cases illustrate the different intensity levels of AI adoption across the different pathways.
@@ -213,6 +258,10 @@ PRISM profile of a 'tinkering' application at Ashoka FI G U R E   8
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 ## CASE STUDY 2 LifeBank's 'Light' staff recommendation system
 
 Recognizing the limitations of solely human-driven decisions, LifeBank transitioned to leverage AI for enhanced decision support. A brain box, internally referred to as 'Light', is a semi-automatic system that offers delivery recommendations for its field staff while allowing human override for more nuanced decisions.
@@ -227,6 +276,10 @@ Through early buy-in from its field staff and stakeholders, LifeBank has ensured
 
 <!-- image -->
 
+
+<!-- PAGE 14 -->
+
+
 ## CASE STUDY 3 SAS Brasil's cervical cancer screening
 
 The social enterprise SAS Brasil is in the process of developing an external-facing AI diagnostic tool to predict the risk of cervical cancer and speed up its diagnosis in local communities in Brazil as a response to a need that the organization has identified. Its approach to developing the technology filters through all aspects of capabilities and risks of the PRISM framework (level 3).
@@ -240,6 +293,10 @@ SAS Brasil has managed to build internal AI skillsets to deploy this technology.
 PRISM Profile of SAS Brasil's cervical cancer screening FI G U R E   1 0
 
 <!-- image -->
+
+
+<!-- PAGE 15 -->
+
 
 TABLE 2
 
@@ -260,6 +317,10 @@ Not applicable for this adoption pathway
 <!-- image -->
 
 Relevant risk or capability for this adoption pathway to evaluate which of these capabilities and risks are relevant for them, based on their adoption pathways and use case.
+
+
+<!-- PAGE 16 -->
+
 
 <!-- image -->
 
@@ -291,6 +352,10 @@ sampled pixels gathered by organizations across different biomes in Brazil from 
 
 However, transparency tends to remain an ambition for many social innovators using off-the-shelf, proprietary models (such as ChatGPT or Gemini). These proprietary models do not grant their customers insights into the algorithm and hence render explainability almost impossible. There is a clear need for technology leaders to engage in conversations with social innovators to allow them to highlight such issues and, ideally, influence the technology roadmap so that AI solutions are fit for purpose. For now, in the absence of full transparency, innovators tend to provide 'chain of thought' explanations that highlight the multi-step queries fed into the proprietary models.
 
+
+<!-- PAGE 17 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -314,6 +379,10 @@ An ethical AI framework is the blueprint upon which organizations can construct 
 For instance, an organization using AI in healthcare will need to consider guidelines for patient consent and medical data privacy. In contrast, an organization using AI to support judicial decisionmaking will focus on fairness and avoiding reinforcing historical injustices. Developing this framework involves consulting with experts, studying best practices and engaging with the communities affected by the AI systems.
 
 RECODE's mission to democratize generative AI in the slums and favelas of Brazil began with establishing a coalition to ensure the promotion of digital inclusion and the development of a manifesto to guide the ethical use of the technology and safeguard data generated from its communities.
+
+
+<!-- PAGE 18 -->
+
 
 <!-- image -->
 
@@ -353,6 +422,10 @@ Social innovators often work with vulnerable populations and, in some cases, mus
 
 unauthorized access and breaches. It involves implementing technical controls like encryption and network security and administrative controls such as access policies and staff training.
 
+
+<!-- PAGE 19 -->
+
+
 Image credit: High Resolves
 
 ## Consent and control
@@ -372,6 +445,10 @@ Latanya Sweeney showed that 87% of US citizens can be uniquely identified by onl
 and ethical management of data. For social innovators, data governance is critical in ensuring that data practices align with the social mission and comply with regulatory requirements.
 
 <!-- image -->
+
+
+<!-- PAGE 20 -->
+
 
 <!-- image -->
 
@@ -403,6 +480,10 @@ The AI landscape, especially its ethical and privacy facets, is in constant flux
 
 An honest assessment of existing skills against the needs of AI initiatives becomes critical as the group of users expands. Impact-first organizations might partner with academic institutions to access cutting-edge AI research or provide staff with training to understand AI tools. For instance, a charity looking to use AI to analyse donor data for better engagement strategies may implement training programmes to upskill their marketing team in data analytics.
 
+
+<!-- PAGE 21 -->
+
+
 <!-- image -->
 
 Image credit: Dimagi
@@ -420,6 +501,10 @@ AI-first organizations will need to develop an AIinformed culture that embraces 
 and error are part of the journey is organizations that hold 'fail fairs' where teams share lessons from unsuccessful projects. This cultural shift is vital for staff to feel comfortable working alongside AI systems and viewing them as tools to enhance their work rather than threats to their roles.
 
 Ashoka encourages this culture and enables teams to tinker with a wide range of AI capabilities to explore solutions that can improve internal efficiencies.
+
+
+<!-- PAGE 22 -->
+
 
 <!-- image -->
 
@@ -459,6 +544,10 @@ Speech-to-text services like Google Speech-to-Text enable real-time transcriptio
 
 AI-powered services like DeepL Translator can assist NGOs in breaking language barriers during international relief efforts.
 
+
+<!-- PAGE 23 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -486,6 +575,10 @@ The amount and type of training data required by AI technologies vary. Where dee
 ## Interpretability and explainability: Trust through transparency
 
 As outlined, the interpretability of AI models is vital in applications where AI decisions have a significant impact, such as in credit scoring for underbanked populations. Transparent models can help build trust within the community by allowing stakeholders to understand and challenge AI decisions. Tools like local interpretable model-agnostic explanations (LIME) can help explain predictions from custom- built models in high-stakes areas such as healthcare diagnostics. This transparency is key in building trust among end-users, such as patients and doctors, who need to understand the basis of AI-driven recommendations. Unfortunately, as outlined earlier, broadly available, proprietary models tend to lack this explainability.
+
+
+<!-- PAGE 24 -->
+
 
 <!-- image -->
 
@@ -521,6 +614,10 @@ High Resolves, a social enterprise working with young people to help them build 
 
 Ushahidi, an open-source platform, has successfully enabled local devices to collect data, which is synced whenever the connection permits, providing critical information during crises in low-connectivity areas.
 
+
+<!-- PAGE 25 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -554,6 +651,10 @@ Collaborations with universities or public data initiatives can be a cost-saving
 Image credit: LifeBank
 
 <!-- image -->
+
+
+<!-- PAGE 26 -->
+
 
 ## Hardware costs
 
@@ -589,6 +690,10 @@ depth to the team's expertise. Beyond technical training, costs include educatin
 
 must ensure compatibility with the current customer relationship management (CRM) API, which might entail custom API development or middleware.
 
+
+<!-- PAGE 27 -->
+
+
 <!-- image -->
 
 ## Legal and compliance costs
@@ -613,6 +718,10 @@ Legal advisory fees can accumulate when navigating the contractual nuances of AI
 - -Stakeholder satisfaction: Feedback from users and beneficiaries on the AI solution's effectiveness and usability, often collected through surveys and direct feedback.
 - -Data-driven insights: The new and actionable insights provided by AI, which can inform policy decisions or the creation of new services.
 
+
+<!-- PAGE 28 -->
+
+
 Image credit: High Resolves
 
 ## Conclusion
@@ -624,6 +733,10 @@ These trailblazers demonstrate that AI's reach extends beyond commercial uses, s
 <!-- image -->
 
 Social innovators' progressive use of AI is a model for responsible and impactful technology use. Looking ahead, incorporating their approaches into AI strategies will be vital to harnessing AI's full potential to benefit humanity. Technology leaders are encouraged to engage with these innovators to prepare the future roadmap of AI for impactful application, jointly addressing issues such as transparency, explainability or interoperability. This paper highlights accomplishments in AI, addresses gaps and encourages ongoing innovation and collaboration in the AI for social good sector.
+
+
+<!-- PAGE 29 -->
+
 
 ## Contributors
 
@@ -699,6 +812,10 @@ Lead, Artificial Intelligence and Machine Learning
 
 Head, Artificial Intelligence, Data and Metaverse; Member of the Executive Committee
 
+
+<!-- PAGE 30 -->
+
+
 The authors would like the thank the following members of the Schwab Foundation, representatives of the Forum's network of Young Global Leaders, and members of the AI for Social Innovation workstream of the Global Alliance for Social Entrepreneurship for their insights and invaluable contributions to this paper:
 
 | Gerald Abila                                                                                                      | Mark Horoszowski                                                                                                     |
@@ -733,6 +850,10 @@ Designer, 1-Pact Edition
 
 Editor, Studio Miko
 
+
+<!-- PAGE 31 -->
+
+
 ## Endnotes
 
 |   1. | Tasso Azevedo, MapBiomas. (2023, 22 February). Interview. (S. Reid, Solutions Insights Lab, Interviewer). https://sjn- static.s3.amazonaws.com/solutions-insights-lab/Complete+Interview+with+Tasso+Azevedo+(MapBiomas).pdf.                                                                                                               |
@@ -746,6 +867,10 @@ Editor, Studio Miko
 |    8 | Google Health . (n.d.). AI-enabled imaging and diagnostics previously thought impossible . https://health.google/health- research/imaging-and-diagnostics/.                                                                                                                                                                                |
 
 9. Ibid.
+
+
+<!-- PAGE 32 -->
+
 
 <!-- image -->
 

@@ -1,10 +1,11 @@
 ---
 source_file: Chen_2024_Exploring_complex_mental_health_symptoms_via.pdf
-conversion_date: 2026-02-03T08:44:59.058517
+conversion_date: 2026-02-03T18:23:09.191236
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Exploring Complex Mental Health Symptoms via Classifying Social Media Data with Explainable LLMs
 
 ## Kexin Chen
@@ -44,6 +45,10 @@ In this paper, we propose a pipeline for gaining new insights from large-scale s
 
 In this work, we apply this approach to two tasks. First, building on the work in (Lee et al., 2024), we classify social media users in the r/anxiety subreddit who have not yet posted in the r/ADHD subreddit as ones that will or will not post in the r/ADHD subreddit in the future, and then visualize the explanations for that classifier. The task is interesting because it can be used as a proxy task for detecting ADHD concerns in people with anxiety concerns, because the task seems impossible for keyword-based architectures (Lee et al., 2024), and the visualization of prediction explanations in this task can lead in to insights about both symptoms and nosology of anxiety disorders and ADHD. Second, we classify Reddit posts that potentially contain concerns about Lyme disease as possibly containing mental health concerns related to Lyme or not containing mental health related to Lyme, based on a small manually-labelled dataset. The task is interesting because it allows us
 
+
+<!-- PAGE 2 -->
+
+
 to iteratively obtain a larger dataset of social media posts related to both Lyme disease and mental health. We analyze the explanations for the classifier that classifies posts as mental health-related or not in order to obtain possibly-novel preliminary insights into the mental health aspects of Lyme disease.
 
 ## 2. Background
@@ -82,6 +87,10 @@ We scrape the latest 5,000 posts from before 2022 from the general-medical-inter
 
 For the mental-health-related datasets, we present results with baselines as well as with a fine-tuned RoBERTa using a 80/20 training/test split. The results are shown in Table 1.
 
+
+<!-- PAGE 3 -->
+
+
 Table 1: Performance metrics for predicting mental-health-related posts in ADHD and Lyme datasets (balanced for 50% baserate)
 
 | Dataset                                    | Metric   |   Logistic Regression |   Na¨ ıve Bayes |   RoBERTa |
@@ -105,6 +114,10 @@ We generate explanations as follows for the RoBERTa classifier: each post is bro
 ## 3.7. Using Explanations to Explore Mental Health Aspects of Lyme Disease
 
 We use the following procedure to explore the mental health aspects of Lyme disease.
+
+
+<!-- PAGE 4 -->
+
 
 Table 3: Comparison of counts of unusual symptoms that we also highlighted by RoBERTa as explanation for classifying post as mental-health-related in the Lyme dataset (out of top 300 matches) and AskDocs (reference) (out of top 300) dataset
 
@@ -137,6 +150,10 @@ Brian A. Fallon and Jenifer A. Nields. Lyme disease: A neuropsychiatric illness.
 
 Brian A. Fallon, Trine Madsen, Annette Erlangsen, and Michael E. Benros. Lyme borreliosis and as-
 
+
+<!-- PAGE 5 -->
+
+
 - sociations with mental disorders and suicidal behavior: A nationwide danish cohort study. Am. J. Psychiatry , 178(10):921-931, October 2021.
 - David C. Giles and Julie Newbold. Self-and otherdiagnosis in user-led mental health online communities. Qual. Health Res. , 21(3):419-428, March 2011.
 - Martin A. Katzman, Terrence S. Bilkey, Pratap R. Chokka, Angelo Fallu, and Laureen J. Klassen. Adult adhd and comorbid disorders: Clinical implications of a dimensional approach. BMC Psychiatry , 17(1), July 2017. doi: 10.1186/ s12888-017-1463-3.
@@ -149,6 +166,10 @@ Brian A. Fallon, Trine Madsen, Annette Erlangsen, and Michael E. Benros. Lyme bo
 - Peter Zachar and Kenneth S. Kendler. The philosophy of nosology. Annu. Rev. Clin. Psychol. , 13(1): 49-71, May 2017.
 
 ## Appendix A. Explanations from r/Lyme
+
+
+<!-- PAGE 6 -->
+
 
 Table 4: Examples of RoBERTa classifier's explanation for positive predictions for Mental Health concerns in Lyme-related Reddit posts, rephrased for privacy
 

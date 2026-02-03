@@ -1,10 +1,11 @@
 ---
 source_file: Zayed_2024_Scaling_implicit_bias_analysis_across.pdf
-conversion_date: 2026-02-03T09:34:04.627723
+conversion_date: 2026-02-03T19:04:43.356369
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Article
@@ -55,6 +56,10 @@ Copyright: © 2024 by the authors. Licensee MDPI, Basel, Switzerland. This artic
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 the substantial impact that consumer evaluations have on public sentiments and actions via digital platforms, the peril of prejudiced AI systems perpetuating stereotypes and misinformation is an urgent matter of concern. Liang et al. [2] emphasized the importance of addressing and minimizing technological model biases to prevent distorted perceptions and unfairness in society.
 
 In light of the pressing need to confront biases, scholarly investigations have progressively centered on comprehending their ramifications and formulating approaches to alleviate them. These could be cultural biases, cognitive biases, biased data, and even algorithmic biases. All these biases can lead to mistakes in how AI systems analyze data and make decisions, as demonstrated by Silberg and Manyika [3]. Furthermore, according to Mehrabi et al. [4], AI will eventually start preferring certain groups over others, which diminishes fairness. Because AI is biased, it often makes erroneous assumptions and conclusions, which lowers its trustworthiness, according to the study by Ntoutsi et al. [5].
@@ -69,6 +74,10 @@ This study adopts the Word Embedding Association Test (WEAT) as a methodological
 
 Bevara et al. [8] emphasized the importance of AI systems being responsible by ensuring fairness, providing explanations, maintaining accountability, being reliable, and gaining user acceptance. They aim to prevent biases and discuss various types, such as implicit bias, which can influence AI's decision making when analyzing movie reviews. The authors also explore methods to reduce these biases, such as using prompt-based learning and creating AI systems that are fair and transparent. The review highlights the continuous research
 
+
+<!-- PAGE 3 -->
+
+
 being conducted to develop AI technologies ethically, making sure they are inclusive and without harmful biases.
 
 Building on the theme of utilizing AI ethically, Bevara et al. [9] took a critical look at the progress and techniques used in customer segmentation for e-commerce, utilizing machine learning and statistical modeling. It points out the drawbacks of conventional clustering methods, such as k-means, and investigates new approaches such as Gaussian mixture models and autoencoders. These innovative techniques help create more detailed and practical customer segments. The study emphasizes earlier research that demonstrates how these methods can improve marketing strategies and customer engagement by using in-depth behavioral data. It highlights the potential of combining different models and using advanced analytics to identify valuable customer groups, which allows for more targeted and efficient marketing campaigns.
@@ -80,6 +89,10 @@ B. Li et al. [11] put forward a strategy for crafting AI systems that are trustw
 Mehrabi et al. [4] delved deeply into bias and fairness within artificial intelligence, specifically focusing on machine learning. Their research emphasizes the crucial need to confront these issues to avert the unjust treatment of certain demographic groups. Through the examination of real-life instances of bias, the study identifies various forms of bias affecting AI systems and introduces a structured taxonomy crafted by experts to define and combat bias. Covering a range of areas, including general machine learning, deep learning, and NLP, the paper sheds light on how disparities in AI applications, such as judiciary systems and facial recognition technology, can lead to adverse societal outcomes. While the paper stops short of deeply exploring particular bias mitigation strategies, it acts as an insightful primer for those keen on understanding bias and fairness in AI. It offers a comprehensive fairness framework and surveys ongoing research across different domains of AI. For NLP systems to accurately convey meaning, grasping concepts such as entailment and contradiction is essential.
 
 The Stanford Natural Language Inference (SNLI) corpus by Bowman et al. [12] is a useful resource for creating semantic representations in natural language processing (NLP). It gives a large dataset for training and testing models with labels for entailment, contradiction, and neutrality. This corpus has facilitated both traditional and neural network models to achieve impressive results. Nevertheless, NLP tasks, such as sentiment analysis
+
+
+<!-- PAGE 4 -->
+
 
 in movie reviews, are vulnerable to bias, as reviewers' personal inclinations can taint evaluations. Variations in reviewers' backgrounds may further tilt outcomes, highlighting the urgency to mitigate bias and foster fairness in NLP. Furthermore, Kumar et al. [13] used machine learning to parse sentiment in film critiques, with the aim of augmenting customer experience and deciphering elements that affect ratings. Despite using a linear SVM model to achieve the highest accuracy, the research's small dataset size prevented it from considering potential biases in the data and algorithms. This underscores the necessity for more comprehensive studies to overcome these challenges and ensure the reliability and fairness of AI systems.
 
@@ -93,6 +106,10 @@ Hube et al. [17] explored sentiment bias in word embeddings created by skip-gram
 
 Sengupta et al. [18] examined the effects of racial bias in data and algorithms on the effectiveness and fairness of AI systems. They highlighted that biases in language data
 
+
+<!-- PAGE 5 -->
+
+
 and models can influence explainability, user experience, and societal biases. The research showed how AI systems, influenced by biased data, can produce unjustifiable discriminatory results and affect the system's credibility. Through a mix of methods, Sengupta evaluated the direct effects of racial bias in language on AI model performance. Controlled studies further investigated the impact of biased outputs on user engagement and decision making. The findings indicated that dependence on biased models diminishes the persuasiveness of users and adversely affects their choices, underscoring the importance of mitigating bias in AI systems.
 
 Mayer et al. [6] looked into how prompt-based learning can be used in transformer models for tasks that need professional categorization. They compared prompt-based methods with zero-shot and few-shot categorization, as well as fine-tuning and human evaluation. Prompt-based learning was noted for providing estimates of reliability and pinpointing difficult responses. They suggested a mutual rating system between humans and machines to evaluate the complexity of responses as a cost-efficient alternative to extensive fine-tuning. However, crafting effective prompts poses its challenges, and the study's focus on English-language data limits its relevance across languages. This points to the necessity for the development of multilingual AI models. Additionally, the small size of the dataset and the absence of a bias examination were seen as limitations, indicating the need for broader and more diverse datasets and a thorough investigation into potential biases. Collectively, these studies bring to light the issues surrounding bias and fairness in AI, emphasizing that, unaddressed, these issues can detrimentally influence AI performance, decision-making processes, and societal perceptions.
@@ -103,6 +120,10 @@ Samin et al. [20] introduced two strategies for efficiently summarizing numerous
 
 Gupta et al. [21] introduced a sentiment classification method for evaluating movie reviews as either positive or negative. This method uses BERT embeddings along with BiLSTM-BiGRU and 1D CNN models, and on the IMDB dataset, it shows impressive accuracy and AUC scores. Despite these achievements, the technique is primarily limited to binary classification and lacks detailed explanations for the selection of model parameters. The reliance on a single dataset also raises questions about the broader applicability of the findings. For this reason, even though the first results are promising, they would be more solid if they were tested on more datasets and it was made clearer how the model configurations were chosen.
 
+
+<!-- PAGE 6 -->
+
+
 Jentzsch Turan et al. [22] looked into gender bias in common BERT models used for NLP. They defined bias as the difference in how texts about male and female subjects are felt. Through evaluating 63 classifiers on IMDB movie reviews, they uniformly detected gender biases in these pre-trained BERT models, showcasing their inherent predisposition towards such biases. The study stresses the importance of using pre-trained models conscientiously and the avoidance of ingrained biases within automated frameworks. It aims to elevate awareness regarding latent biases and encourage further investigation into how sophisticated systems can perpetuate undesired stereotypes. Their innovative approach to measuring bias enhances the capability to recognize and address bias within automated systems. Nevertheless, the research's concentration on sentiment analysis of movie reviews might restrict its wider relevance. Importantly, it did not delve into strategies for debiasing, opening avenues for future research to explore bias mitigation in broader aspects such as race, ethnicity, and sexuality. Despite these limitations, the research illuminates the pervasive nature of gender bias in sentiment analysis across various NLP models and scenarios.
 
 Q. Li et al. [23] looked at how well BERT worked for time series forecasting and sentiment analysis, especially when it came to cloud-edge computing systems. Although BERT is celebrated for its NLP capabilities, the study revealed its limitations in time series forecasting, suggesting a deficiency in its logical reasoning prowess. Moreover, BERT's performance in sentiment analysis, for both English and Chinese, leaned excessively towards positive sentiment, indicating a potential bias. The researchers recommend enhancing BERT's logical processing during pre-training, employing prompt learning for better analytics, and exploring new models for a deeper understanding of emotions. This study emphasizes the critical need for comprehensive evaluation of pre-trained models across diverse applications to prevent biased or inadequate outcomes. However, the study's focused scope and limited sample size may affect the broader applicability of these findings. Despite these limitations, the research sheds light on BERT's analytical and reasoning gaps and suggests that relying on it for sensitive forecasting or analysis tasks should be done with caution. Further investigations are encouraged, but adapting and refining pre-trained models for specific purposes appears to be a wise approach.
@@ -110,6 +131,10 @@ Q. Li et al. [23] looked at how well BERT worked for time series forecasting and
 Manzini et al. [24] introduced a novel approach for extending debiasing techniques from binary attributes, such as gender, to encompass multiclass attributes, such as race and religion. This method starts by pinpointing the bias subspace using sets of words that define each social group. Following this identification, bias components are eliminated from the embeddings through enhanced versions of previous hard and soft debiasing techniques. A new metric called mean average cosine (MAC) is used to measure how well this multiclass debiasing works. It is calculated across words that are likely to be biased and attribute words that should not be linked. This strategy marks a significant step forward in generalizing the debiasing process from binary to multiclass attributes, offering new avenues for addressing complex biases in the real world. Nonetheless, challenges remain due to the subjective nature of bias and the variation of lexicons across different cultures.
 
 Ravfogel et al. [25] looked into the issue of biases in neural representations, such as word embeddings or classifiers, which can reinforce societal stereotypes and cause groups to be treated unfairly because of their gender, race, or other factors. The study introduces the Iterative Nullspace Projection (INLP) technique, designed to strip target bias-related information from these representations. The study uses INLP to fight two main types of bias: representational biases that strengthen stereotypes in word embeddings and allocation harms that show up in differences in how different groups are classified. The fact that INLP can close the gender gap in true positive rates for occupation classifications and reduce gender-biased groupings and associations in embeddings is evidence of its usefulness. This work advances the development of algorithms capable of excising sensitive biases from models without compromising their functionality, although it also emphasizes the ongoing need for more nuanced approaches to defining and measuring biases.
+
+
+<!-- PAGE 7 -->
+
 
 Urman et al. [26] examined how political bias differs among various language models, such as GPT and Bard, particularly when dealing with politically charged questions. It reveals that these models' tendencies toward information censorship and spreading misinformation greatly fluctuate with the language used. This indicates that chatbots may process politically sensitive information in distinct ways across different languages. Such variability highlights the challenge of addressing bias in AI systems and underscores the necessity of incorporating linguistic diversity into strategies aimed at reducing political bias and preventing the spread of misinformation.
 
@@ -124,6 +149,10 @@ Building upon the foundation laid by previous research, various types of biases,
 The study utilizes a sequential mixed methods technique in two phases to examine and address bias in transformer-based language models. During the initial stage, a combined framework is created that utilizes BERT and GPT-3 to perform semi-supervised genre classification of movie reviews. The BERT model is used to generate dense vector representations, which are then clustered using the k-means algorithm for review embeddings. In this study, we briefly introduce this novel genre classification method utilizing a hybrid BERT-GPT approach to generate movie genres based on IMDb reviews, laying the groundwork for more in-depth exploration in future work, while our primary focus remains on mitigating LLM bias through appropriate prompts.
 
 In the second phase, a thorough bias study is conducted by assessing different versions of advanced transformer topologies on a larger scale. The Word Embedding Association Test (WEAT) is employed to accurately measure bias patterns across several models, such
+
+
+<!-- PAGE 8 -->
+
 
 as BERT, RoBERTa, T5, and XLNet, encompassing both basic, large, and x-large versions. The target terms are obtained from movie reviews that are categorized as either favorable or negative. The goal is to analyze the relationship between different movie genres and their associated positive or negative features. Additional engineering experiments are conducted to assess the possibility of customizing adjustments to reduce the identified biases.
 
@@ -155,6 +184,10 @@ The effect size, denoted by the symbol d , is a statistical metric that quantifi
 
 Effect size is a statistic that is utilized in this study for the purpose of measuring the discrepancy that exists between two cohorts. The effect size is a statistical metric that allows for the comparison of averages between two groups while taking into consideration the variability of the data. On the other hand, it offers extremely helpful insights into the practical meaning of the discrepancies that were found. The presence of larger impact sizes
 
+
+<!-- PAGE 9 -->
+
+
 is indicative of the existence of stronger correlations between the target and attribute word sets. In addition, p -values can be utilized in order to evaluate the statistical significance of data, which allows for the determination of the chance of getting outcomes that are as severe as the results that were seen under the null hypothesis. Although the research do not discuss the p -value for significance of the effect sizes in results, incorporating p -values in future analyses could enhance the robustness of findings by confirming that observed differences are not due to random chance, thereby strengthening the evidence for the efficacy of the bias mitigation techniques employed. Rather, this enables to evaluate the existence of biases in the analysis as well as the extent to which they occur.
 
 ## 3.2. Data Preparation
@@ -169,6 +202,10 @@ Figure 1. The hybrid BERT-GPT architecture for semantic annotation in movie revi
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 The synergy between BERT's contextual comprehension and GPT-3.5's generative precision culminates in a refined approach to data categorization. By transcending the conventional genre classification paradigms, this hybrid model not only offers enhanced accuracy in semantic annotation but also establishes a robust foundation for the intricate bias analysis that ensues. The process symbolizes a paradigm shift in automated text classification, setting a new benchmark for subsequent bias analysis frameworks in NLP research.
 
 The word clouds are generated from each cluster formed at the final stage of Phase I. After the reviews have been transformed into vectors using the BERT model, they are then grouped into clusters using the unsupervised K-Means approach. These clusters represent the similarity between the vectors. Since these clusters are created based on reviews, a new attribute cluster is added to the original data to keep track of which reviews belong to each cluster. The GPT 3.5 model is given a prompt to annotate the genre of the reviews supplied, which are sampled from each cluster. The genres to choose from are Action, Romance, or Thriller. This technique involves annotating the clusters with suitable genres, which are then added to the original data. As a result, each review is associated with both the cluster and the genre. After annotating these genres to the reviews, the word cloud analysis aggregates the reviews belonging to each cluster. The word cloud visually represents the most prominent or frequent words from the body of the text, which are the reviews for this article. This signifies the process of isolating target words in the association test from the original data, rather than using more generic words that represent the aim for the analysis.
@@ -182,6 +219,10 @@ Bounded by the influence of the target and attribute words, this phase formulate
 Subsequently, an assessment of bias across a spectrum of transformer-based language models is engaged, stratified by scale: base, large, and x-large. This hierarchical approach reveals the non-linear relationship between a model's scale and its implicit biases. Through this systematic evaluation, using the WEAT, discerning the variations in bias as a function of model complexity offers a granular view of how scaling affects bias tendencies in natural language processing tools.
 
 The designs 'bert-base-uncased' and 'roberta-base' are considered fundamental in transformer technology. These models achieve a compromise between computing efficiency and language understanding by utilizing parameters ranging from tens to hundreds of millions (Devlin et al. [30]; Liu et al. [31]). Base models serve as a reference point for grasping the inherent bias present in transformer models at the outset of the investigation (Bender et al. [32]; Caliskan et al. [16]). As detailed in Table 1, due to their lesser complexity,
+
+
+<!-- PAGE 11 -->
+
 
 they are well-suited for detecting and analyzing bias in the beginning, serving as a reference point for measuring the effect of scale on bias.
 
@@ -226,6 +267,10 @@ Similar to the other model scales, from Table 3, extra large transformer models 
 
 This delineation of models by scale is not merely a technical classification but forms the bedrock upon which the relationship between model complexity and bias is examined. It is hypothesized that as models scale in size, their ability to capture nuanced language
 
+
+<!-- PAGE 12 -->
+
+
 patterns increases, potentially altering the landscape of embedded biases. To facilitate this extensive computational task, the power of GPUs is harnessed, providing the necessary computational efficiency to process large volumes of data rapidly. The use of GPUs is especially critical when generating word embeddings and calculating association strengths across the extensive array of models evaluated.
 
 Table 3. Details of x-large transformer models-the most complex models examined, focusing on their expansive parameter counts, to investigate bias at the highest scale of the model architecture.
@@ -244,6 +289,10 @@ Figure 2. Phase II methodological architecture- the comprehensive approach taken
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 ## 3.5. Prompt-Based Learning for Bias Mitigation
 
 In the realms of machine learning and natural language processing (NLP), the concept of prompt-based learning emerges as a groundbreaking strategy. This methodology diverges from conventional training techniques, which often depend on extensive datasets. Instead, it harnesses the power of carefully constructed textual prompts to direct the behavior of AI models during the learning phase. This approach leverages prompts to invoke specific responses from pre-trained models, utilizing their inherent knowledge to produce outcomes tailored to the given prompts. By drawing on the pre-existing knowledge that these models have encoded, this technique enables them to produce responses or predictions in response to the context that the prompt provides. In the context of prompt engineering, this approach takes on a critical role in bias mitigation efforts. By carefully crafting prompts that are devoid of biased language or that specifically counteract known biases within the model, researchers can steer the model's output towards more equitable, neutral, and balanced responses. This not only enhances the model's ability to deal with diverse and nuanced human languages but also aligns its outputs more closely with ethical and fairness guidelines. In the study, prompt engineering is used on base models to create a controlled environment for testing how well it works at reducing bias across different transformer models.
@@ -255,6 +304,10 @@ prompt_for_data_annotation = f""" Given a set of movie reviews, categorize them 
 ```
 
 Expanding on the utility of prompt engineering, a bias reduction technique, inspired by authors in the article [8], targeting the mitigation of inherent biases in the models' responses. By employing genre-specific prompts that contextualize each review within a movie genre, the aim is to neutralize outputs, diminishing biased interpretations across genres, such as Action, Romance, and Thriller. In this context, it is applied to five distinct base models. A before-and-after analysis of the WEAT effect size reveals the impact of prompts on bias mitigation. The findings from this phase could chart a course for future interventions in bias reduction, underscoring the pivotal role of prompt engineering in refining model outputs. Figure 2 shows a visual representation of this whole process. It walks you through the complex parts of the methodology, from creating genre-specific word clouds to checking for bias in transformer-based language models.
+
+
+<!-- PAGE 14 -->
+
 
 ```
 prompt_for_each_genre = f""" This review is about an Action movie. The review says: This review is about a Romance movie. The review says: This review is about a Thriller movie. The review says: """
@@ -269,6 +322,10 @@ The thorough research on several variations of transformers provided interesting
 Model tuning is more effective than just increasing the scale when it comes to removing bias. Following engineering, targeted genre-specific adjustments enable us to decrease average bias by more than 34.2% across all base transformer designs being studied. Debiasing through prompts is more effective than achieving a 29.1% bias drop by increasing the model size from base to x-large, highlighting the importance of guided conditioning. BERT shows significant improvements, reducing biases in Action, Romance, and Thriller genres by up to 42% after applying the prompt. Efforts must be quickly adjusted to make model creation more accessible based on these numerical findings.
 
 The initial stage of this research project consisted of classifying movie reviews according to the genres that corresponded to what they were written about. An innovative labeling process was embarked upon using two distinct methodologies, a TensorFlow TextVectorization approach and a transformer-based language model, specifically BERT (Bidirectional Encoder Representations from Transformers). This was completed in response to the fact that there was a lack of pre-annotated genre data for movie reviews. The findings of the BERT-based clustering, which were shown using t-SNE (t-distributed stochastic neighbor embedding), exhibited a strong semantic distinction among the three target genres, which indicated a robust grasp of the theme content of the reviews.
+
+
+<!-- PAGE 15 -->
+
 
 ## 4.1. Semantic Data Annotation Key Findings
 
@@ -285,6 +342,10 @@ t-SNEComponent1
 Figure 3. Comparative visualization of genre clusters derived from TensorFlow TextVectorization and BERT embeddings.
 
 Subsequently, a novel approach was utilized to prompt the GPT-3.5 model using the OpenAI API (version: 1.7.0), aiming to refine the genre classification further. The prompt design incorporated a brief description of the task, followed by a sample of reviews from a specific cluster, excluding genres already identified. This method allowed for a dynamic and context-aware classification that leveraged GPT-3.5's linguistic model to ascertain the most probable genre. Post-classification, the genre distribution was analyzed to assess the balance and representativeness of each genre within the dataset. The genre distribution pie chart in Figure 4 indicates a relatively even distribution among the genres, affirming the classification method's effectiveness. This balance is crucial for the integrity of the subsequent phase of bias analysis, ensuring that no genre disproportionately influences the results. The combination of BERT embeddings for semantic understanding and GPT-3.5 for contextually aware genre classification has proven efficient, as seen in the overall genre distribution. The balance achieved through this method sets a strong foundation for the next phases, where a more granular bias analysis will be conducted. This structured approach not only strengthens the reliability of the data preparation phase, but also enhances the potential for insightful findings in bias measurement and mitigation strategies.
+
+
+<!-- PAGE 16 -->
+
 
 Figure 4. Genre distribution post-semantic annotation, depicting the proportion of movie reviews across Romance, Action, and Thriller genres.
 
@@ -306,6 +367,10 @@ Figure 5. Comparative word clouds for Action, Romance, and Thriller genres: thes
 
 As the research deals with model scaling, it employs a suite of base transformer models, including BERT-base (both uncased and cased), GPT-2 (including its medium variant), RoBERTa-base, XLNet-base-cased, A Lite BERT (ALBERT-base-v2), DistilBERT (both uncased and cased), and Text-to-Text transfer transformer (T5) (small and base), along with specialty models such as Google's ELECTRA (small and base discriminators),
 
+
+<!-- PAGE 17 -->
+
+
 Microsoft's DeBERTa-base, and Facebook's BART-base. These models, as visualized in Figure 6, are foundational in natural language processing, each designed with unique architectural nuances to capture and generate human-like text. In order for BERT models to comprehend a word's context, it is necessary to train transformers in both directions. GPT-2 is an autoregressive model that uses word sequence prediction to generate text. To improve efficiency, RoBERTa tweaks BERT's pre-training technique, and XLNet uses permutationbased training to pick up on bidirectional contexts. In order to make training faster and more efficient, ALBERT provides methods for reducing training parameters. DistilBERT streamlines BERT to provide a more lightweight version while preserving the majority of its prior version's effectiveness. With T5, any natural language processing issue may be converted to text. DeBERTa incorporates disentangled attention processes, which improves on BERT and RoBERTa, ELECTRA trains more efficiently by discriminating between 'real' and 'fake' input tokens, and BART uses a denoising autoencoder for pre-training.
 
 ## BaseModelGenreScores
@@ -317,6 +382,10 @@ Figure 6. Effect sizes across genres for base models: this GRAPH illustrates the
 As explained in Table 4, the analysis of effect sizes across genres for each model reveals insightful patterns of bias. BERT-base-uncased showed a tendency towards negative bias in Action, indicative of its processing of thematic elements within the genre. GPT-2 significantly leaned towards positive associations in Thriller, suggesting a predisposition towards engaging, suspenseful content. RoBERTa-base exhibited a relatively balanced approach, yet with slight genre-specific inclinations. GPT-2-medium's strong positive bias in Action underscores its alignment with dynamic, high-energy narratives. XLNetbase-cased maintained a balanced profile, hinting at its robustness across diverse contexts. ALBERT-base-v2, DistilBERT, T5, ELECTRA, DeBERTa, and BART models each demonstrated unique bias spectra, reflecting the complex interplay between model architectures and genre characteristics.
 
 To include large and x-large transformer models in this study, advanced variants such as BERT-large, GPT-3, T5-large, and others were added. These were made to handle more difficult and nuanced language tasks (see Figures 7 and 8). These models, with their increased parameter counts, offer deeper contextual understandings, making them capable of generating and interpreting text with a higher degree of sophistication. Large models such as BERT-large and RoBERTa-large, with their extensive training data and advanced architectures, are adept at capturing intricate patterns in text. The x-large models, including GPT-3 and T5-3B, push the boundaries further, utilizing billions of parameters to achieve state-of-the-art performance across a broad spectrum of NLP tasks. This escalation in model complexity and capacity is pivotal for exploring the nuanced dynamics of language and bias at scale.
+
+
+<!-- PAGE 18 -->
+
 
 Model
 
@@ -362,6 +431,10 @@ Model
 
 Figure 8. Bias assessment in x-large models: this chart presents the effect sizes for different genres analyzed using x-large models such as GPT-3 XL and T5-3B, offering insights into the scale of biases at the pinnacle of model complexity.
 
+
+<!-- PAGE 19 -->
+
+
 Upon analyzing the effect sizes produced by these larger-scale models across genres, distinct patterns emerge, reflecting each model's unique handling of textual data. For instance, GPT-3's expansive knowledge base allows for an unprecedented level of nuance in genre classification, exhibiting a balanced representation across the Action, Romance, and Thriller genres. Meanwhile, T5-large and T5-3B models, with their text-to-text framework, demonstrate an ability to discern and categorize nuanced thematic elements, revealing their potential to mitigate inherent biases more effectively. The larger models generally show a trend towards more balanced or nuanced biases compared to their base counterparts, suggesting that increased model size and complexity can influence the representation and perpetuation of biases within AI systems. These results, as shown in Tables 5 and 6, not only show how important it is to keep looking into the link between model size and bias, but they also show how these more advanced models could help us better understand and work against bias in natural language processing.
 
 Table 5. Comparative bias metrics in large models: the calculated effect sizes for key genres within the suite of large transformer models, illustrating the impact of model scaling on bias perception and representation.
@@ -393,6 +466,10 @@ Table 6. Bias quantification in extra-large transformer models: a comprehensive 
 
 After examining the differences in bias effect sizes at the base, large, and x-large model scales, the study goes on to offer aggregated findings for all transformer model types. By combining insights from all scale variants, aggregated findings of inherent prejudices across various model suites, including BERT, GPT-2, RoBERTa, ELECTRA, DeBERTa, BART, XLNet, T5, and ALBERT, are presented. The research shifts its emphasis from comparing individual model scales to synthesizing the biases included within larger model families. Here, aggregated prejudice profiles for well-known designs such as BERT, GPT-2, XLNet, T5, and ALBERT are presented by combining data from base and scaled transformer modifications. This review of the literature describes bias trajectories throughout modern paradigms in language model building by establishing connections between and within models.
 
+
+<!-- PAGE 20 -->
+
+
 ## 4.3.1. BERT Models
 
 For Action, the biases are generally positive, with DistilBERT-Base-Cased and BERTBase-Uncased showing the highest biases (0.193 and 0.188, respectively), suggesting a strong inclination to generate Action-oriented content. However, BERT-Base-Cased and BERT-Large-Cased show a slight negative bias ( -0.015 and -0.117). In Romance, BERTBase-Cased exhibits the highest positive bias (0.229), indicating a preference for generating Romance content, while DistilBERT models have a lower positive bias (0.087 for uncased and 0.045 for cased). Both BERT-Large models show a negative bias, more so for the cased version ( -0.068). For Thriller, all models show a negative bias, with BERT-Large-Cased showing the strongest aversion ( -0.248) and DistilBERT-Base-Uncased the least ( -0.072). As depicted in Figure 9, this suggests that BERT models, particularly the larger case variant, are less likely to generate Thriller-themed content.
@@ -409,6 +486,10 @@ In the Action genre, as shown in Figure 10, the GPT-2 Medium model exhibits the 
 
 From Figure 11, for the Action genre, the RoBERTa-Base model has a slight positive bias (0.055), indicating a small preference for generating Action content. The RoBERTaLarge model also has a slight positive bias (0.055), showing a similar tendency to the base model. In the Romance genre, the RoBERTa-Large model exhibits a negative bias ( -0.028), while the RoBERTa-Base model shows a more substantial negative bias ( -0.192), suggesting
 
+
+<!-- PAGE 21 -->
+
+
 that both models are generally less inclined to generate Romance-themed content, with the base variant showing a stronger aversion. Regarding the Thriller genre, the RoBERTaBase model displays a positive bias (0.120), indicating a preference for generating Thriller content. In contrast, the RoBERTa-Large model has a very slight negative bias ( -0.019), suggesting a near-neutral response to Thriller content.
 
 Figure 10. GPT-2 genre bias analysis: this illustrates the variance in effect sizes for GPT-2 models, spanning base to x-large scales.
@@ -423,6 +504,10 @@ Figure 11. RoBERTa's Bias distribution: this captures effect sizes in RoBERTa mo
 
 As shown in Figure 12, the Action genre's ALBERT-XLarge-v2 model shows a slight positive bias, with a score of 0.107, suggesting a mild preference for generating Actionoriented content. The ALBERT-Base-v2 and ALBERT-XXLarge-v2 models lean negatively, with scores of -0.115 and -0.143, hinting at a mild disinclination towards Action content. However, the ALBERT-Large-v2 model exhibits a strong negative bias, with a score of -0.410, indicating a significant aversion to Action content. For the Romance genre, all ALBERT variants show a positive bias, with the ALBERT-XXLarge-v2 leading at 0.350, which implies a strong inclination to produce Romance-oriented text. It is followed by the ALBERT-XLarge-v2 and ALBERT-Base-v2 with scores of 0.249 and 0.201, respectively, and the ALBERT-Large-v2 with the lowest positive bias at 0.146. This pattern suggests that
 
+
+<!-- PAGE 22 -->
+
+
 ALBERT models, especially the larger XXLarge variant, may be more adept at handling Romance content. In the Thriller genre, the trend reverses; all models display negative biases, indicating a general tendency against generating Thriller-based content. The ALBERTLarge-v2 shows the most pronounced negative bias with a score of -0.316, followed by the ALBERT-XXLarge-v2 and the ALBERT-Base-v2 with scores of -0.102 and -0.076. The ALBERT-XLarge-v2 presents the least negative bias, -0.013, suggesting a very mild aversion to Thriller content. The biases of ALBERT models vary by genre and model size, with a general trend of positive biases towards Romance and negative biases towards Action and Thriller, with the degree of bias being more pronounced in the larger model variants for Romance and the large variant for Action and Thriller.
 
 Figure 12. ALBERT's Bias Metrics across Scales: Illustrates bias distribution in ALBERT models, spanning base to x-large.
@@ -436,6 +521,10 @@ From the visual depiction shown in Figure 13, for the Action genre, the T5-3B mo
 ## 4.3.6. XLNet Models
 
 Similar to the other categories, in the Action genre, the XLNet-Base-Cased model has a negative bias ( -0.154), suggesting it is less likely to favor Action-oriented content. The XLNet-Large-Cased model has an even stronger negative bias ( -0.275), reinforcing this tendency against Action content as visualized in Figure 14. For Romance, the XLNetBase-Cased model shows a positive bias (0.147), indicating a preference for generating Romance-related content. However, the XLNet-Large-Cased model demonstrates a significant negative bias ( -0.302), indicating a stark contrast in preference between the two model sizes, with the larger model disfavoring Romance content. In the Thriller genre, the XLNet-Base-Cased model shows a strong positive bias (0.336), while the XLNet-LargeCased model has a slight negative bias ( -0.021), revealing a divergence in their content generation preferences, with the base model being more aligned with Thriller content.
+
+
+<!-- PAGE 23 -->
+
 
 <!-- image -->
 
@@ -455,6 +544,10 @@ As seen in the above Figure 15, In the Action genre, the ELECTRA-Base-Discrimina
 
 xinet-base-cased
 
+
+<!-- PAGE 24 -->
+
+
 ## 4.3.8. DeBERTa Models
 
 As demonstrated in Figure 16, for the Action genre, all DeBERTa models exhibit negative biases, with DeBERTa-XLarge showing the most significant negative bias ( -0.116), followed by DeBERTa-Base ( -0.061) and DeBERTa-Large ( -0.020). This suggests that DeBERTa models are less likely to generate Action-oriented content, with the bias increasing with the model size. In the Romance genre, DeBERTa-Large has a slight positive bias (0.054), while DeBERTa-Base and DeBERTa-XLarge show negative biases ( -0.079 and -0.084, respectively), indicating a general tendency against generating Romance content, except for the large variant, which is slightly inclined towards it. Looking at the Thriller genre, the DeBERTa-Large and DeBERTa-Base models show positive biases (0.151 and 0.103, respectively), implying a preference for generating Thriller-themed content. The DEBERTaXLarge model deviates with a slight negative bias ( -0.025), indicating a lower propensity to produce Thriller-based narratives. The biases indicate that DeBERTa models may have a tendency to avoid generating Action and Romance content, especially as the model size increases, but have a disposition towards generating Thriller content, with this tendency being reversed in the largest XLarge variant.
@@ -466,6 +559,10 @@ Figure 15. ELECTRAmodelbias metrics: the bias analysis across ELECTRA's model sc
 Figure 16. DeBERTa genre-specific bias exploration: the bias quantification within DeBERTa models across different scales.
 
 <!-- image -->
+
+
+<!-- PAGE 25 -->
+
 
 ## 4.3.9. BART Models
 
@@ -480,6 +577,10 @@ Figure 17. Bias assessment in BART architectures: the comparative bias metrics i
 Once the impact of the model scales on each transformer model is observed, the next attempt in this research is to mitigate the implicit bias shown by the models by some scale by crafting a perfect prompt to the language model. As part of this approach, modelspecific questions were painstakingly developed to assess genre-specific bias. In order to standardize the effect size computation, these prompts were supplemented with data from the reviews. Using these prompts to analyze reviews from different genres allowed the study to achieve its purpose of training the models to pay more attention to specific features. In order to gain a better understanding of the impact of treatments based on prompts, the effect sizes obtained from association tests with and without prompts were compared next. Table 7 shows that all effect sizes for the Action, Thriller, and Romance genres were affected by the inclusion of prompts, suggesting a decrease in bias.
 
 From the visual of Figures 18 and 19, this phase results revealed some intriguing findings, such as that the ALBERT-base-v2 model showed significant improvement in the Action genre, with its prompted score decreased by 52.25% over the original score. Even for the Romance genre, the scores declined by 59.36% when prompted, and for Thrillers, prompting improved performance as well by 36.37%. Furthermore, the BERT-base-uncased model followed a similar trajectory, with prompts boosting scores for Romance by 79.30% and Thrillers by 41.61%, but dragging down Action genre performance only by 28.99%. Then, for the Roberta-base model, prompting modestly but consistently improved performance on Romance by 44.36% and reduced scores on Action by a more drastic 81.33%, while Thrillers by a milder 23.22%. The T5-small model also showed consistent effects,
+
+
+<!-- PAGE 26 -->
+
 
 diminishing performance on Action by 64.98% and Romance by 34.29%, while enhancing Thriller classification by 17.99%. Finally, the Xlnet-base-cased model demonstrated consistent improvement from prompting across all genres, increasing scores for Action by 15.53%, Romance by 6.84%, and Thrillers by 6.98%. Overall, these results illustrate that the impact of prompts on NLP model performance largely depends on the model architecture and data domain, with effects ranging from strongly positive to strongly negative. Further research is still needed to better understand these interaction effects between prompts and model architectures for optimized domain-specific performance.
 
@@ -511,6 +612,10 @@ Figure 18. Comparative analysis of model-genre level bias: this figure illustrat
 
 <!-- image -->
 
+
+<!-- PAGE 27 -->
+
+
 Once this is examined together, scores are also visualized in Figure 19 at the model level separately, with the percentage changes shown in Table 7 and Figure 18.
 
 Figure 19. Impact of prompt engineering on model-specific genre classification: this figure displays the variations in bias scores for each genre within specific base models, comparing the results before and after the implementation of prompt engineering. It highlights the nuanced effectiveness of prompts in adjusting model outputs across different genres.
@@ -524,6 +629,10 @@ Figure 20. Bias score changes by genre: this graph depicts the aggregate change 
 <!-- image -->
 
 In this analysis of bias within various language models, it can be observed from Figure 21 that there were significant shifts in bias scores when the models were prompted. For the 'albert-base-v2' model, the bias score improved from -0.1168 to -0.0687, marking a 41.22% decrease in bias. Conversely, the 'bert-base-uncased' model displayed a substantial increase in bias, with the score rising from 0.0004 to 0.0208, which constitutes an alarming 4831.40% increase. The 'roberta-base' model exhibited a decrease in bias by 62.15%, with scores changing from 0.0480 to 0.0182. The 't5-small' model had a negative initial score of -0.00314, which increased to a positive 0.0043 after prompting, indicating an 827.71% change. Lastly, the 'xlnet-base-cased' model's bias score decreased from -3.6834 to -3.3076, i.e., a 10.20% reduction. These results highlight the varying impacts of prompting
+
+
+<!-- PAGE 28 -->
+
 
 on the bias levels in different language models, suggesting the need for tailored strategies to mitigate bias in NLP applications.
 
@@ -547,6 +656,10 @@ However, the most striking finding was the significant role of prompt engineerin
 
 A closer examination of the bias shifts in individual models reveals the nuanced impact of prompt engineering. For instance, the Albert-base-v2 model showed a 52.25%
 
+
+<!-- PAGE 29 -->
+
+
 decrease in bias for the Action genre and a 59.36% reduction for Romance when prompted. In contrast, the Bert-base-uncased model saw a more modest 29% improvement for Action but a substantial 79.30% decrease in bias for Romance. These variations suggest that the effectiveness of prompts is not uniform across models and genres, underscoring the importance of developing model-specific prompting strategies.
 
 Several factors may contribute to these bias shifts, including model architecture, dataset characteristics, and prompt design. The differing architectures of models such as BERT, which uses bidirectional training, and GPT, which employs unidirectional training, may influence their receptiveness to prompts. Additionally, the composition of the training data, such as the balance of genres and the presence of biased language, could impact a model's initial biases and its response to prompting. Finally, the specificity and relevance of the prompts themselves play a crucial role in their effectiveness, with more targeted prompts likely to yield greater bias reductions.
@@ -558,6 +671,10 @@ Future studies might aim to extend the scope of prompt engineering, refine the t
 ## 6. Conclusions
 
 This study offers insights into quantifying and mitigating biases propagated in transformer architectures through rigorous multi-scale analysis and tailored tuning interventions. The systematic methodology presented substantiates that the model scale acts as a partial palliative, with prejudice diminishing yet persisting across expanded variants. However, prompt engineering proves significantly more impactful, decreasing biases by over 37.8% on average across base models and overall around a 10% drop in effect sizes. The tunable framework transcends isolated techniques, synthesizing a pathway model that choreographs bias mitigating prompts with intrinsic transformer trajectories. These revelations compel the research community towards prompt optimization as a mechanism for democratizing model development. They also underscore open questions on how intrinsic network properties interact with conditioned guidance. Tailored tuning necessitates interdisciplinary perspectives encompassing social psychology and neural architectures. Moreover, it is imperative for future research to evaluate the societal consequences that follow, guaranteeing that the theoretical advancements in algorithmic fairness translate into fair and impartial systems. While acknowledging constraints around generalizability beyond existing corpora, this study ignites promising new directions. The integrated approach demonstrates that artificial neural systems, similar to biological neural networks, can dynamically adapt their responses when provided with structured guidance. These pioneering experiments, conducted across different model scales, highlight the potential for enhancing fairness and mitigating bias in language models through carefully designed prompts. By strategically crafting prompts, we can guide these models towards more equitable and inclusive language generation. This research opens up new avenues for bias mitigation in AI systems, showing that, much like the human mind can be inspired and influenced by external stimuli, language models can be steered towards greater equity through targeted prompting techniques.
+
+
+<!-- PAGE 30 -->
+
 
 ## References
 
@@ -592,6 +709,10 @@ Informed Consent Statement: Not applicable.
 Data Availability Statement: The data presented used this study is resourced from the original article [8] and it is also available in the GitHub repository https://github.com/Deep6Lab/BiasAnalysis (accessed on 11 April 2024).
 
 Conflicts of Interest: The authors declare no conflicts of interest.
+
+
+<!-- PAGE 31 -->
+
 
 20. Samin, A.M.; Nikandish, B.; Chen, J. Arguments to Key Points Mapping with Prompt-based Learning. arXiv 2022 , arXiv:2211.14995. [CrossRef]
 21. Gupta, B.; Prakasam, P.; Velmurugan, T. Integrated BERT embeddings, BiLSTM-BiGRU and 1-D CNN model for binary sentiment classification analysis of movie reviews. Multimed. Tools Appl. 2022 , 81 , 33067-33086. [CrossRef]

@@ -1,10 +1,11 @@
 ---
 source_file: Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.pdf
-conversion_date: 2026-02-03T09:01:55.783456
+conversion_date: 2026-02-03T18:32:52.156554
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes
 
 ## Mahammed Kamruzzaman
@@ -41,6 +42,10 @@ reasoning, CoT prompting helps LLMs achieve higher levels of clarity and accurac
 
 However, despite these advancements, LLMs continue to struggle with embedded social biases. These biases show up in different ways, including stereotyping and biased answers, which raises questions regarding the ethical use of LLMs in real-life applications. These biases are difficult to identify and even more challenging to eliminate wholesale due to the complex and opaque inner workings of AI models, the flexible and nuanced nature of human language, and the culturally dependent social rules that accompany language use. This task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven
 
+
+<!-- PAGE 2 -->
+
+
 communication and decisions. Applying dual process theory, a well-established psychological framework, to recent advancements in AI systems has illuminated possible pathways to enhancing the reliability and ethical footprint of LLMs by identifying where LLM behavior align with and diverge from human cognitive processes.
 
 In this paper, we use dual process theory-based prompting strategies, comparing their efficacy across multiple categories of social bias from two bias datasets. Our approach uniquely incorporates both human-like and machine-like personas to examine whether the effects of these cognitive theories in LLMs are merely analogical to human cognition or intrinsic to the AI systems themselves. In addition, we compare these results to the use of CoT prompting to test whether this prompting technique aligns with System 2 reasoning in LLMs as some have claimed in the past.
@@ -58,6 +63,10 @@ This paper's contributions are the following.
 Recent studies have explored how reasoning in LLMs can exhibit biases similar to human cognitive processes. Hagendorff et al. (2023) look into reasoning biases that are similar to humans in LLMs. It shows that as these models get bigger and more complex, they start making intuitive mistakes, like those found in human System 1 thinking. This trend shifts with the introduction of ChatGPT models, which effectively avoid these reasoning traps by employing chain-of-thought processes reminiscent of human System 2 thinking, even when such explicit reasoning is inhibited. In a significant enhancement to dual-process interaction within LLMs, Lin et al. (2024) introduce SWIFTSAGE a new dual-module framework for better action planning in complex interactive reasoning tasks. This framework combines behavior cloning and prompting large language models. It includes the SWIFT module for quick, intuitive responses, and the SAGE module for careful, detailed planning. Tested on 30 tasks in the ScienceWorld benchmark, SWIFTSAGE greatly outperforms current methods like SayCan, ReAct, and Reflexion. It shows its ability to efficiently solve complicated interactive challenges with less computational needs. Furthermore, Wei et al. (2022) and Sun (2024) contribute to our understanding of how embedding systematic reasoning in LLMs, through techniques like chainof-thought prompting, can substantially improve performance across various cognitive tasks including complex arithmetic and symbolic reasoning.
 
 Coming to the Dual Process Theory, which is a central idea in understanding human thinking and decision-making. It distinguishes between two different kinds of thinking: fast, automatic (System 1), and slow, effortful (System 2). System 1 enables quick comprehension through associations and preexisting knowledge. In contrast, System 2 engages when we encounter complex or novel situations that require careful thought, evaluating logical relations, and conducting explicit reasoning to arrive at conclusions. These systems guide our reasoning, decision-making, and learning processes in various cognitive tasks (Frankish, 2010). The theory illuminates the intricate relation between intuitive, heuristic thinking and analytical, rule-based cognition (Evans and Stanovich, 2013). In language understanding, Dual Process Theory explains how we can quickly and easily understand the general meanings of language input, but also switch to a more deliberate process when we encounter more complex language use, whether that be, for example, complex embedded syntactic structures, ambiguity in meaning, or uncertain pragmatic contexts. This shows how both quick thinking and more careful thinking work together (Ferreira and Huettig, 2023). Our understanding of our own thinking and knowing our mind's state is connected to this two-part idea. System 1 lets us quickly guess what another person is thinking in analogy to our own while System 2 helps us to think more about their state more systematically with less self-attribution to make a metacognitive judgment (Carruthers, 2009). While the Dual Process Theory first suggested that reasoning biases come from relying too heavily on System 1 and that triggering System 2 more frequently can avoid such pitfalls in thinking, newer studies show that logic and probability can be understood intuitively as well (Ferreira and Huettig, 2023). Interestingly, biases are not only caused by System 2 not getting involved. They can also come from a fight between heuristic and logical intuitions that happen at the same time. What happens next depends on which intuition is stronger and if the person realizes there is a conflict. If the relevant logical intuition is available, a correct judgment can be made without relying on the more resourceintensive System 2 cognitive process. This shows that logical thinking does not just belong to System 2 (De Neys and Pennycook, 2019). These more recent developments in the theory reveal a more nuanced picture of the ideal cognitive system selection for any given task. Building on this theory, Bellini-Leite (2023) discusses the implementation of System 2 analytical processes in LLMs to mimic careful human reasoning, potentially mitigating frequent errors and enhancing decision-making capabilities in these models.
+
+
+<!-- PAGE 3 -->
+
 
 Recent research on LLMs has found that assigning personas to LLMs can notably impact their reasoning and responses. Gupta et al. (2023) show how different personas, reflecting varied sociodemographic backgrounds, can induce biases in LLM responses. Similarly, Deshpande et al. (2023) demonstrate that persona variations can dramatically alter the toxicity levels in model outputs. This study also highlights the risks and challenges in deploying LLMs across diverse user interactions in persona-assigned LLMs.
 
@@ -78,6 +87,10 @@ We evaluate five major language models in this paper: 1) GPT-4 (Achiam et al., 2
 2 Due to the cost of running GPT-4, we use a sample of 2,100 entries from the GenAssocBias dataset to run GPT-4. We ensured that this sample contains an equal number of examples from each bias category.
 
 3 We use 4-bit quantized Llama 2 and Mistral models due to availability of local computing resources.
+
+
+<!-- PAGE 4 -->
+
 
 checkpoint on Huggingface; 5) Gemini (Team et al., 2023), using gemini-1.0-pro-latest on the Google Gemini API. Detailed procedures for the experiment are included in our supplementary materials, which also contain scripts for replication.
 
@@ -109,6 +122,10 @@ We present our main results in terms of stereotypical engagement/response rates,
 
 Overall Prompting Effects. Wepresent our overall stereotypical response rate for each prompt, averaged across all 5 models and 9 bias categories in
 
+
+<!-- PAGE 5 -->
+
+
 Table 1: The types of prompts we use in our experiments. The '...' after each prompt are the common instructions which include 'select the appropriate word from the options provided, without considering the order in which the options come in.' We provide options randomly to eliminate ordering bias and add 'don't add option number as well in your response' to minimize response postprocessing complexity.
 
 | Type                | Prompt                                                                                                                                                                                                                                                                                                     |
@@ -126,6 +143,10 @@ Table 1: The types of prompts we use in our experiments. The '...' after each pr
 | MP + CoT            | Adopt the identity of a machine that answers questions by analyzing them 'step-by-step". Fill in the BLANK while staying in strict accordance with the nature of this identity. Given the context below, ...                                                                                               |
 | MP + System 2 + CoT | Adopt the identity of a machine that answers questions slowly and thought- fully. Its answers are effortful and reliable. It answers questions by analyzing them 'step-by-step". Fill in the BLANK while staying in strict accordance with the nature of this identity. Given the context below, ...       |
 
+
+<!-- PAGE 6 -->
+
+
 Figure 3: Results with Standard Prompts and best-performing (in terms of least stereotypical engagement) prompts for each bias category and all the LLMs. Here, MP stands for M achine P ersona, HP stands for H uman P ersona.
 
 <!-- image -->
@@ -137,6 +158,10 @@ A surprising result is that CoT prompting does not show any reduction in bias. I
 Another surprising result is the effect of personas in prompts and how they relate to System 1 and System 2 prompts. First, we see that no matter which persona we use (Human or Machine) the stereotypical response rate drops (compare System 1 vs HP System 1 and MP System 1; make a similar comparison for System 2). At its face, this result is in direct contradiction with Gupta et al.'s (Gupta et al., 2023) and Deshpande et al. (2023) results where personas led to an increase in bias and toxicity. Our results reveal a more complicated situation. That is, adding a persona does not always lead to more bias in LLMs. Rather, LLM behavior changes based on the selected persona that the LLM is asked to model. In some cases, such as in the prior work, where the persona is a member of an underrepresented population, bias is revealed through its behavior. In our case, when the persona is a generic person or machine, it pushes the model away from socially biased responses. This suggests that having an LLM model a separate entity (human or machine) leads to more objective outputs, similar to Solomon's Paradox observed in humansthis paradox is the observation that people reason more wisely regarding other's problems than their own and that self-distancing may improve objective reasoning capabilities (Grossmann and Kross, 2014).
 
 Things do not stop being interesting even yet. We find that when System 1 and System 2 prompts are combined with a human persona, their effects on social bias are amplified. That is the difference between the System 1 and System 2 responses is greater with the Human Persona + System 2 prompts having the least stereotypical responses overall. This combination results in a reduction of over 3% from the standard zero-shot prompt. While the Machine Persona leads to a reduction in bias, the difference in System 1 and System 2 results remains similar to the no-persona prompts. This suggests that while the LLM intrinsically models the two systems in dual process theory to some degree, its model of human cognition specifically has an even more exaggerated difference in these cognitive systems.
+
+
+<!-- PAGE 7 -->
+
 
 Modeland Bias-specific Prompting Effects. All of the standard prompting results alongside the best performing prompting technique results for each bias category and model combination are presented in Figure 3. Here we see that the Human Persona with the System 2 (HP System 2) prompting technique often yields the least stereotypical responses, but that is not universal across models and bias categories. It outperforms all other prompting techniques in 13 cases. Similarly, the Human Persona in conjunction with System 2 and CoT (HP System 2 + CoT) prompting outperforms other prompting techniques in 9 cases. Only in one case, for profession bias and the GPT-4 model, the standard prompt outperform any other prompting techniques.
 
@@ -159,6 +184,10 @@ Profession. We achieved up to a 10 percent reduction in bias for the profession 
 Race. We observe a reduction in racial biases across all models, although the decrease is relatively small for GPT-4, akin to that observed with standard prompting techniques. In contrast, the Mistral 7B model using HP System 2 with CoT prompting shows a bias reduction of approximately 9 percent.
 
 Religion. We achieved a reduction in religious bias by up to 8 percent. Additionally, we observed reductions across all models, although the decrease in the Gemini model was relatively minor, nearly identical to that seen with standard prompting. For GPT-3.5, MP System 2 exhibited the best performance. For Llama 2, CoT prompting delivered
+
+
+<!-- PAGE 8 -->
+
 
 Table 2: Kendall's τ test results averaged across all bias types and models. We use a significance level of α &lt; 0 . 05 to reject the null hypothesis.
 
@@ -195,6 +224,10 @@ Josh Achiam, Steven Adler, Sandhini Agarwal, Lama Ahmad, Ilge Akkaya, Florencia 
 Samuel C Bellini-Leite. 2023. Dual process theory for large language models: An overview of using psychology to address hallucination and reliability issues. Adaptive Behavior , page 10597123231206604.
 
 Tom Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared D Kaplan, Prafulla Dhariwal, Arvind
+
+
+<!-- PAGE 9 -->
+
 
 - Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, et al. 2020. Language models are few-shot learners. Advances in neural information processing systems , 33:1877-1901.
 - Peter Carruthers. 2009. How we know our own minds: The relationship between mindreading and metacognition. Behavioral and Brain Sciences , 32(2):121-138.

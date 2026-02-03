@@ -1,10 +1,11 @@
 ---
 source_file: Peng_2022_A_Literature_Review_of_Digital_Literacy_over_Two.pdf
-conversion_date: 2026-02-03T09:14:41.485775
+conversion_date: 2026-02-03T18:46:03.187431
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Review Article
 
 ## A Literature Review of Digital Literacy over Two Decades
@@ -40,6 +41,10 @@ Recently, many studies have been done to investigate students' digital literacy 
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 Section 3 provides the selected studies for the main citation and raises research questions, followed by results in Section 4. The paper then provides the discussion part in Section 5, followed by a conclusion in Section 6.
 
@@ -81,6 +86,10 @@ Previous studies have investigated whether age was an important factor affecting
 
 7592, 2022, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2022/2533413 by Karl-Franzens-University Graz, Wiley Online Library on [07/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
+
+<!-- PAGE 3 -->
+
+
 Figure 1: A flowchart of literature inclusion.
 
 <!-- image -->
@@ -96,6 +105,10 @@ Parents' education level is also an important factor affecting students' digital
 To sum up, there are various factors affecting students' digital literacy. This paper illustrated 4 main factors, which are students' age, gender, family socioeconomic status, and parent's education level. Researchers draw contrasting results about whether students' age and gender affect their digital literacy. In addition, researchers are consistent that
 
 7592, 2022, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2022/2533413 by Karl-Franzens-University Graz, Wiley Online Library on [07/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+
+<!-- PAGE 4 -->
+
 
 Table 1: Authors, foci, and major findings of the included literature guiding this study.
 
@@ -122,6 +135,10 @@ Table 1: Authors, foci, and major findings of the included literature guiding th
 | Wei and Chou (2020)                | Whether online learning perceptions and readiness influence students' online learning performance and their course satisfaction    | Students' computer self-efficacy and motivation for learning exerted a direct, positive effect on their online discussion score and course satisfaction [30]                                                                     |
 | Kahu (2013)                        | Student engagement framework in higher education                                                                                   | Present a conceptual framework of student engagement in higher education [31]                                                                                                                                                    |
 
+
+<!-- PAGE 5 -->
+
+
 family socioeconomic status and parents' education level positively correlate with students' digital literacy. This finding has wider implications for educators and policymakers. They are advised to keep students in mind, pay more attention to the students' family socioeconomic status and their parent's education level, and use proper methods to teach them.
 
 4.3. What Is the Relationship between Students' Digital Literacy and Their Self-Control, Technostress, and Engagement? When it comes to the aspects that digital literacy can affect, various kinds of research have been done. The factors can be students' self-control, technostress, engagement, and so on [11, 12, 15].
@@ -146,6 +163,10 @@ This study discussed the definition of digital literacy. This term has been defi
 
 7592, 2022, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2022/2533413 by Karl-Franzens-University Graz, Wiley Online Library on [07/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
 
+
+<!-- PAGE 6 -->
+
+
 can fully understand and wisely use online content. This can help people to manipulate online information and prevents them from being fooled or trapped in the digital world.
 
 This study also illustrated many factors affecting digital literacy: age, gender, family socioeconomic status, and parent's education level. There were no consistent findings on whether age and gender influenced students' digital literacy [19, 21, 22]. A possible reason may be that compared with the differences in students' age and gender, their experience using digital devices matters. However, consistent findings demonstrated that if the family enjoyed high socioeconomic status or the parents had a high educational level, their children tended to process a high digital literacy level [10, 22, 41]. This may be because their counterparts tended to be more capable of improving their children's digital literacy, compared with the families having low socioeconomic status and parents having a low educational level. This phenomenon can lead to inequality since the students do not have equal access to improving their [48]. Thus, it is advisable for educators and policymakers to take action to reduce this phenomenon.
@@ -165,6 +186,10 @@ The term digital literacy referred to not only the mastery of essential technica
 6.3. Implications. This study only investigated whether students' digital literacy is affected by their gender, age, family socioeconomic status, and parent's education level. There are still many other factors affecting their digital literacy. Students' digital literacy can vary if they have different specializations, school locations, or school levels. Further studies could investigate whether these factors significantly affect students' digital literacy. In addition, this study only examined the relationship between students' digital literacy and their self-control, technostress, and engagement. The study of students' cognitive loads, motivation, self-efficacy, and learning outcomes also has gained popularity recently [49, 50]. Thus, it is suggested that further
 
 7592, 2022, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1155/2022/2533413 by Karl-Franzens-University Graz, Wiley Online Library on [07/01/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+
+<!-- PAGE 7 -->
+
 
 studies can illustrate the relationship between students' digital literacy and these aspects.
 
@@ -205,6 +230,10 @@ The authors declare that they have no conflicts of interest.
 - [20] H. S. Kim, H. J. Kil, and A. Shin, 'An analysis of variables affecting the ICT literacy level of Korean elementary school students,' Computers &amp; Education , vol. 77, pp. 29-38, 2014.
 - [21] M. T. Kaarakainen, O. Kivinen, and T. Vainio, 'Performancebased testing for ICT skills assessing: a case study of students and teachers' ICT skills in Finnish schools,' Universal Access in the Information Society , vol. 17, no. 2, pp. 349-360, 2018.
 - [22] O. E. Hatlevik and K. A. Christophersen, 'Digital competence at the beginning of upper secondary school: identifying
+
+
+<!-- PAGE 8 -->
+
 
 - factors explaining digital inclusion,' Computers &amp; Education , vol. 63, pp. 240-247, 2013.
 - [23] I. N. Umar and N. A. Jalil, 'ICTskills, practices and barriers of its use among secondary school students,' in Proceedings of the Paper presented at the 4th World Conference on Educational Sciences (WCES) , Univ Barcelona, Barcelona, SPAIN, February 02-05 2012.

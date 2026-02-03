@@ -1,10 +1,11 @@
 ---
 source_file: Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,.pdf
-conversion_date: 2026-02-03T09:17:40.391420
+conversion_date: 2026-02-03T18:49:03.056379
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 AI Literacy: A Framework to
 
 ## Understand, Evaluate, and Use
@@ -16,6 +17,10 @@ Kelly Mills, Pati Ruiz, Keun-woo Lee, Merijke Coenraad, Judi Fusco, Jeremy Rosch
 June 2024
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Table of Contents
 
@@ -42,6 +47,10 @@ June 2024
 Mills, K , Ruiz, P , Lee, K , Coenraad, M , Fusco, J , Roschelle, J  &amp; Weisgrau, J  (2024, May)
 
 AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology https://doi org/10 51388/20 500 12265/218
+
+
+<!-- PAGE 3 -->
+
 
 ## Acknowledgments
 
@@ -92,6 +101,10 @@ This report was developed under the guidance of Dr  Kelly Mills, Dr  Pati Ruiz, 
 -  Tyron Young, Digital Promise
 -  Dr  Viki Young, Digital Promise
 
+
+<!-- PAGE 4 -->
+
+
 ## Introduction
 
 Generative AI (GenAI) systems and tools are entering the classroom at a rapid pace Given the well-documented examples of AI tools perpetuating and reproducing systemic bias (Benjamin, 2019; Broussard, 2023; Buolamwini, 2023; Noble, 2018; O'Neil, 2016) and violations of data privacy (Ingram, 2023; Federal Trade Commission, 2024), concern and skepticism is well-founded What will educators and learners need to know and be able to do in order to use AI safely and effectively?
@@ -104,6 +117,10 @@ For educators, the development of AI literacy is a necessary prerequisite to har
 
 To enable all who participate in educational settings to leverage AI tools for powerful learning, this paper describes a framework and strategies for educational leaders to design and implement a clear approach to AI literacy for their specific audiences (e g  learners, teachers, or others)  The first part of the paper describes a framework that identifies essential components of AI literacy and connects them to existing initiatives  The second part of the paper identifies strategies and illustrative examples as guidance for educational leaders to integrate AI literacy in K-12 education and adapt to their unique contexts
 
+
+<!-- PAGE 5 -->
+
+
 ## AI Literacy Framework
 
 To provide educational leaders with a concise and comprehensive AI Literacy Framework, Digital Promise took several perspectives into account  We incorporated insights about AI literacy from research-based frameworks such as Almatrafi et al , 2024, Druga et al , 2021, Ng et al , 2021 and Lee and Long (in press)  From an ethical decision making perspective, we considered the SAFE Benchmarks Framework (EdSAFE AI Alliance, 2024)  Finally, from a human justice perspective, we bring in the considerable body of research and journalism on algorithmic and technological bias (e g , Benjamin, 2019; Broussard, 2023; Buolamwini, 2023; Noble, 2018; O'Neil, 2016) and work within education on responsible AI and tech justice (White &amp; Scott, 2024)  We also took into account a longstanding history and research base of related media and computational literacies and their existing and historical applications in school settings  Based upon this body of work and listening to practitioners, we recognized that understanding, evaluating, and using are interconnected ways to engage with AI  Building and facilitating AI literacy necessitates all three  Further, understanding and evaluating AI is critical to making informed decisions about if and how to use AI in different contexts Underscoring our framework is human judgment and justice, which are core values for applying AI in appropriate contexts and mitigating the harmful effects of algorithms
@@ -113,6 +130,10 @@ The framework, pictured below, includes three Modes of Engagement: Understand, E
 Figure 1 AI Literacy Framework includes three interconnected Modes of Engagement: Understand, Evaluate, and Use
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 We describe essential components of AI literacy for educational leaders to adapt to their contexts, including AI Literacy Practices to articulate how users engage in understanding and evaluating AI systems and tools, which are underpinned by Core Values that emphasize the importance of centering human judgment and centering justice in any application of AI  The AI Literacy Practices and Core Values are operationalized through three Types of Use The figure to the right elaborates our framework with each of the components
 
@@ -130,6 +151,10 @@ Table 1 Components of the AI Literacy Framework
 Each component of this framework is elaborated in the following sections of this paper  We begin by describing the AI Literacy Practices and connecting them to existing initiatives
 
 Figure 2 Expanded AI Literacy Framework, including Core Values, Modes of Engagement, Types of Use, and AI Literacy Practices Create
+
+
+<!-- PAGE 7 -->
+
 
 ## AI Literacy Practices
 
@@ -152,6 +177,10 @@ Table 2 Description and Look fors for six AI Literacy practices
 |                        | Data Privacy & Security                           | Develop awareness of data privacy and security while fostering ownership and agency of how to protect data in AI- enabled systems This includes the privacy and security of personal data collected by an AI system or tool and how that data is used | • Identifying how personal information is being collected, used, and shared • Preventing tools from collecting data and/ or deleting data that was collected • Investigating AI models and methods that were used to develop a tool • Identifying datasets that were used to train an AI model          |
 |                        | Digital Communication & Expression                | Understand how AI Systems create synthetic content, evaluate synthetic AI creations, and consider ethical responsibilities when consuming, creating, and sharing AI-enabled products                                                                  | • Understand norms and best practices of use, development, and application AI systems • Evaluate outputs of AI-enabled system for appropriate tone, audience, and content • Responsibly engage in the consumption, creation, or sharing of AI-enabled products, including ethical sourcing and citation |
 
+
+<!-- PAGE 8 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -168,6 +197,10 @@ AI literacy skills connect to initiatives that educators have been discussing an
 
 Computational thinking , defined as solving problems systematically so that a computer could support the process or product development (Mills et al , 2021)  Computational thinking includes practices such as automation, data practice, and modeling and relates to AI literacy practices such as algorithmic thinking, abstraction and decomposition, information and mis/disinformation, data analysis and inference, and communication and expression
 
+
+<!-- PAGE 9 -->
+
+
 Digital citizenship , defined as the responsible use of technology to learn, create, and participate (James et al , 2021)  Digital citizenship includes media balance and well being, privacy and security, digital footprint and identity, relationships and communication, cyberbullying, digital drama and hate speech, and news and media literacy (Common Sense Media, 2024a)  It relates to AI literacy practices such as Ethics and Impact, Data Privacy and Security and Communication and Expression
 
 Data literacy , defined as interacting with data (e g  collecting, analyzing, visualizing, interpreting) with criticality, uncertainty, and intrigue includes components such as context, aggregation, variability, visualization, and inference (Rubin et al , 2020)  It connects to AI literacy practices such as data privacy and security, information and mis/disinformation, and data analysis and inference
@@ -180,7 +213,15 @@ Figure 3 Connections among AI literacy practices and Digital Citizenship, Media 
 
 These existing initiatives provide leaders a starting point to understand how to build capacity to teach AI literacy  Learners will be better prepared to apply these practices to AI tools if they have opportunities to develop them early and often across grades and subject area learning
 
+
+<!-- PAGE 10 -->
+
+
 Over time we anticipate that the increasing prominence and ongoing development of AI tools will shift priority skills within these foundational literacies  For instance, programming has been viewed as a priority skill for Creating Automations, a key practice in Computational Thinking, but AI systems now have the ability to automate on their own, with human oversight, and the skills for this oversight may overtake programming as the key skill for understanding and creating automated systems  To understand how these practices are specifically applicable to AI systems, and how those skills will continue to shift with the innovation of emerging technologies, educators should have a foundational understanding of AI and how it works  In the following section, we provide an overview of AI, intended for leaders to adapt for their context and audience
+
+
+<!-- PAGE 11 -->
+
 
 ## Understanding AI
 
@@ -198,6 +239,10 @@ We strongly recommend that you provide your audience with an explanation of what
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 - 2 Train a model Models are useful simplifications of reality  The pictures, text, posts, and videos (discussed above) are the data that inform the models; the model simplifies the actual data and only keeps a much smaller (but still very large) set of statistics about the relationships among the words, for language models, or pixels, for pictures and image models  For example, a GenAI system that creates text has statistics about the relationship among words and how they are used in language
 - 3 Using the model to receive an output For GenAI systems that generate text, a person may ask a question in the form of a prompt  That prompt then serves as input for the statistical model  The statistical model translates this prompt into numbers  Then, it runs computations in that model to predict an output based on statistical associations  For example, text GenAI systems generate words to answer the question
 
@@ -209,6 +254,10 @@ What if we wanted to make a GenAI system that generates predictions as its outpu
 
 A more advanced model could include other relevant data, such as personalized biometric data, activity level, and the other types of food that they ate  The AI system would determine statistical associations among all of these data points in order to make a prediction as its output  AI systems apply this automation to all kinds of things that might be sensed and predicted by developing associations among billions of data points in order to make a prediction  Below, Figure 5 illustrates the inner workings of a specific type of AI model called an artificial neural network  It is arranged in layers of 'nodes' representing data starting with an input layer, hidden layers as a black box, and then an output layer  The nodes are connected by lines representing weighted associations which indicate the mathematical strength of each connection  In this type of model, there are hidden layers that perform statistical functions that are intractable because of the sheer number of connections and parameters  Because we are not able to understand these models, it's as if they are in a black box  Given AI systems and tools rely on black boxes that do not allow humans to understand how outputs are decided on, these AI systems and tools should not be used for high-stakes applications
 
+
+<!-- PAGE 13 -->
+
+
 Figure 5 Depiction of an Artificial Neural Network Model
 
 <!-- image -->
@@ -218,6 +267,10 @@ In summary, AI systems are trained with extremely large amounts of data  Compute
 ## How Is Artificial Intelligence Being Applied?
 
 AI is very much integrated across tools and sectors in our day to day lives in ways that we may or may not recognize  For instance, AI systems are used for facial recognition, document translation, and personalized recommendations  In education, AI is applied for teaching, learning, assessment, and administrative tasks  Some familiar examples of how AI is currently used in education are in the table below  More detailed applications can be found as case studies in the recently released World Economic Forum (2024) report, Shaping the Future of Learning, The Role of AI in Education 4.0
+
+
+<!-- PAGE 14 -->
+
 
 Table 3 Examples of Applications of AI in Education
 
@@ -229,6 +282,10 @@ Table 3 Examples of Applications of AI in Education
 | Student Support    | • Intelligent tutoring systems • Early reading coaches • College/career advising                                         |
 
 AI will continue to be integrated in educational contexts in existing and novel ways  Educational leaders should support all users of AI to understand and evaluate AI-enabled systems to ensure the safe, efficacious and ethical use of AI  As such, evaluating AI is a main component of our AI Literacy Framework, and discussed more in the next section
+
+
+<!-- PAGE 15 -->
+
 
 ## Evaluating AI
 
@@ -250,6 +307,10 @@ Our world is increasingly becoming one in which computers and humans work togeth
 
 <!-- image -->
 
+
+<!-- PAGE 16 -->
+
+
 appropriate tasks for computers to support and determining if and how it is appropriate to integrate outputs or predictions in our lives  Further, it considers how values, beliefs, and points of view are applied through AI-enabled systems/outputs  For example, if we continue to power our planet through fossil fuels, large AI systems will likely harm our environment through unchecked energy consumption (Dhar, 2020; Keller et al , 2024)  Human judgment must weigh the benefits alongside associated costs of implementing AI systems  To ensure ethical application of AI systems and tools, it is essential that humans remain at the center of if and how we integrate artificial intelligence into any context
 
 ## Centering Justice
@@ -258,9 +319,17 @@ AI systems are impacting the lives of nearly everyone within modern society, but
 
 Another cause of bias within AI systems involves the variables, or information, included in the algorithm  For example, a model that evaluates risk based on historical data might not use race, religion, gender, or age variables, but the proxy variables used like zip code and education level  can be just as discriminatory (O'Neil, 2016)  The individuals that design AI systems, as well as the individuals in leadership positions to determine if and how they should be used, are disproportionately white and male (U S  Bureau of Labor Statistics, 2024; Wachter-Boettcher, 2017)  Therefore, algorithms are currently designed and implemented with a drastic lack of representation from marginalized communities, including communities of color and people with disabilities (Noble, 2018)  Algorithmic bias and the harms it can cause have impacted communities in many ways  In every context in which AI is applied, there is a risk of implementing automated decision-making at scale based on AI systems which perpetuate harm Users must center justice while understanding, evaluating, and using AI in order to ensure that all people, particularly those who have been historically and systematically excluded, are not harmed by the use of AI (White &amp; Scott, 2024)  This is particularly crucial within the education system as
 
+
+<!-- PAGE 17 -->
+
+
 young people are being asked to engage with AI systems without choice about what tools they may use  Teachers and leaders in learning environments must be judicious in understanding the tools they choose and how their learners, in all their variability, will be impacted
 
 Users must constantly center these core values in any use or application of AI systems and tools Of course, there are unique risks associated depending on the use and or context of the AI  The following section elaborates these specific risks in the final dimension of our framework, Using AI  It distinguishes between three different Types of Use: Interacting with AI, Creating with AI, and Problem Solving with A  For each type of use, it describes AI literacy practices and specifies considerations for evaluation
+
+
+<!-- PAGE 18 -->
+
 
 ## Using AI
 
@@ -286,6 +355,10 @@ Table 4 Description and Examples of Different Types of AI Use
 
 AI literacy requires understanding the risks inherent to each of these types of use  In the following sections we explain how AI literacy practices can be uniquely applied to each use type in order to effectively understand and evaluate AI-enabled systems and tools
 
+
+<!-- PAGE 19 -->
+
+
 <!-- image -->
 
 Interacting with AI involves engaging with adaptive technology in multiple modalities that adjusts to data collected  Using these tools can make certain tasks or decisions easier  For example, suggesting songs to make your perfectly curated road trip playlist requires access to data about songs (e g  genre, artist, tempo), as well as features of the songs that you like to listen to
@@ -305,6 +378,10 @@ Table 5 AI Literacy Practices for Interacting with AI
 |                        | Ethics & Impact                                   | Responsibly interact with age-appropriate tools and platforms Be aware of the impact of consumption of AI-influenced content on self, others, and environment                                                                                |
 |                        | Information & Mis/Disinformation                  | Navigate the information landscape to understand what suggestions are relevant and appropriate Fact check content the algorithms recommend Seek information outside of 'filter bubbles' which can limit exposure to different points of view |
 
+
+<!-- PAGE 20 -->
+
+
 <!-- image -->
 
 Generative AI platforms such as ChatGPT, Claude, Gemini, and other LLMs can generate text responses to prompts and platforms such as DALL-E can generate images  The outputs are synthetic content based on associations among billions of data points  To create an output, the person using a GenAI has to enter a prompt  The skill of GenAI prompting involves creating good questions or commands that get the system to produce something that humans consider to be a quality output  While prompting itself is a skill, it requires an understanding of the desired outputs and of how to verify and validate that those outputs are accurate  Effectively prompting a GenAI system or tool takes time and often requires clear communication, specificity, experimentation, and patience
@@ -321,6 +398,10 @@ Table 6 AI Literacy Practices for Creating with AI
 |                        | Data Analysis & Inference                         | Identify the context and source of the dataset the AI platform was trained on                                                    |
 |                        | Data Privacy & Security                           | Understand what and how data is being collected and shared by GenAI tools, and how to control settings that protect data privacy |
 
+
+<!-- PAGE 21 -->
+
+
 <!-- image -->
 
 | Digital Communication & Expression   | Recognize appropriate opportunities to use AI to create more efficiently or augment creative skill sets Evaluate how generated outputs are appropriate for the audience communications/relationships (emails, birthday cards, etc)                                                                     |
@@ -333,6 +414,10 @@ Table 6 AI Literacy Practices for Creating with AI
 Problem solving with AI is using AI-enabled systems and tools to engage in inquiry, such as to decompose problems or develop innovative solutions  An example is training an algorithm for image detection, such as distinguishing between marine animals and litter as part of an automated system to clean up aquatic ecosystems (Code org, 2024)  Taking it a step further, another example is of learners in Delhi, India who applied computer science learnings to build an AI sensor boat to monitor water quality for local villagers and protect aquatic animals (Kumar, 2023)
 
 Likewise, there are risks associated with Problem Solving with AI  Developers need to be aware that algorithms take on the biases that are already represented in the data and all data includes human biases  Therefore, evaluating the sources, contexts and organization of the training data is essential  Most of the training data available to AI systems comes from public interfaces on the internet, which is overrepresented as white and male (Buolamwini, 2023; Noble, 2018) Furthermore, the data used to train these models has often been used without the authors' or artists' consent which has created legal issues and challenges currently in litigation (Ingram, 2023) Additionally, developers must ensure ethical application of the prediction or product from the AI-enabled system  This is particularly important because with AI systems, a human may not be able to understand the rules the algorithm is creating and using to make decisions  Therefore, it's important to consider values, beliefs, and points of view when applying predictions from AI tools to make decisions  The more we understand about the data and algorithms in the AI-enabled systems we use, the better we can make decisions about if and how to use them
+
+
+<!-- PAGE 22 -->
+
 
 Table 7 AI Literacy Practices for Problem Solving with AI
 
@@ -347,17 +432,33 @@ Table 7 AI Literacy Practices for Problem Solving with AI
 |                        | Ethics & Impact                                   | Consider the underlying values, ethics, and intended impact of your AI tool on self, others, environment, and society Evaluate whether the prediction or application in your algorithm is perpetuating bias |
 |                        | Information & Mis/Disinformation                  | Identify bias and representation in the training data or incorrect results                                                                                                                                  |
 
+
+<!-- PAGE 23 -->
+
+
 ## Putting It All Together
 
 We are applying this framework to support educators and leaders in designing AI literacy learning experiences for specific audiences  The following graphic illustrates an example of the framework in action for a high school student, following a winding pathway of the three Modes of Engagement  It demonstrates how engagement in AI literacy is non-linear and intertwined, where each mode of engagement builds and strengthens on each other to foster overall AI literacy  The lesson example builds on Common Sense Media's AI Literacy Lessons for Grades 6-12, specifically, Lesson 3: 'AI Chatbots: Who's Behind the Screen?' (Common Sense Media, 2024b)
 
 <!-- image -->
 
+
+<!-- PAGE 24 -->
+
+
 <!-- image -->
+
+
+<!-- PAGE 25 -->
+
 
 <!-- image -->
 
 While this example helps us to understand what a learning experience for AI literacy could look like in high school, there are systems-level policies and structures that will enable these learning experiences to occur  In the second part of this paper, we identify five strategies for systems leaders to promote AI literacy in K-12 education: providing guidance for adoption and evaluation, integrating AI literacy across grades and subject-area learning, facilitating professional learning, designing powerful learning experiences, and promoting awareness and agency
+
+
+<!-- PAGE 26 -->
+
 
 ## Strategies to Promote AI Literacy in K-12 Education
 
@@ -373,6 +474,10 @@ In developing acceptable use policies for adoption and evaluation, leaders shoul
 
 - Inclusivity Elevate the needs, interest, and voice of marginalized communities in the development of policy and guidance in order to ensure AI tools are accessible to all students and do not perpetuate harmful biases  Support policies and programs that promote digital equity and accessibility through initiatives that impact access, affordability, and adoption (Weaver, 2022)
 - Adaptability There are new platforms for AI systems and tools emerging everyday Guidance should be adaptable in order to be responsive to the risks of new applications as they arise  Additionally, AI systems and tools are being used across environments  While
+
+
+<!-- PAGE 27 -->
+
 
 Digital Promise school systems have control over the technology that they provide, they have much less control over the technology that students bring to school, use outside of school programs, or use at home  Responsible use guidelines and policies should promote responsible use across contexts, both at school and outside of school
 
@@ -401,6 +506,10 @@ Figure 7 Guidance for Teachers and Students to use AI from Iowa City Community S
 
 27
 
+
+<!-- PAGE 28 -->
+
+
 In the future, Iowa City plans to share the responsible use guidelines districtwide, and align them with the academic code of conduct and board policies  They are also planning to provide foundational learning for teachers, establish a scope and sequence for equipping students with the knowledge to stay safe when using AI tools, and identify one teacher from each building to champion the work, providing just-in-time learning to colleagues and co-designing examples of generative AI in lesson planning, differentiation, and feedback/assessment
 
 ## Strategy 2: Integrate AI Literacy Across Grades and Subject-Area Learning
@@ -410,6 +519,10 @@ In the future, Iowa City plans to share the responsible use guidelines districtw
 It is essential that educators integrate AI literacy within the topics they already teach, such as math and ELA  While library media and computer science courses are certainly programs that can build AI literacy foundational skills and technical knowledge, integrating AI literacy across subject area learning enables students to experience the cross-disciplinary application of AI tools Integrating AI literacy across disciplines is advantageous for several reasons  One is that library media and computer science courses are typically elective courses which are not mandated for all students  Computer science courses also disproportionately enroll white males (Code org et al , 2023)  In order to promote AI literacy for all students, particularly females and students of color, it is essential to integrate AI Literacy Practices into core subject areas like math and ELA Another reason to integrate AI literacy across subjects is to realize its potential to introduce novel teaching strategies and enhance learning  For instance, students can learn about homonyms in English Language Arts by using and evaluating text-to-speech systems  If complementary integration points are identified, AI literacy can become a value-add to disciplinary learning and not an add-on to an already overscheduled school day  Finally, cross-disciplinary integration of AI literacy enables students to make connections to cross-sector application of AI, which is relevant to their career and workforce awareness and preparation
 
 We also recommend that AI literacy skills should be integrated cumulatively throughout grades K-12  In the younger grades, students should build foundational skills without necessarily using AI-enabled tools themselves  For example, students might study probability in math and describe patterns and relationships in the data  They could develop a program in Scratch (Algorithmic Thinking, Abstraction and Decomposition) and determine the implications of sharing their program within the Scratch community (Data Privacy and Security; Digital Communication &amp; Expression)  They could also collect data in science or social studies classes and discuss what the sample includes and does not include (Data Analysis &amp; Inference)  In fact, because AI literacy is so dependent on the existing initiatives described earlier, some of these sorts of lessons are likely already taking place in many schools within initiatives already dedicated to media literacy, digital citizenship, and computational thinking  Building these foundational skills is essential to prepare students to engage critically with AI tools when developmentally appropriate   We can build
+
+
+<!-- PAGE 29 -->
+
 
 from well-established bodies of work that support our understanding of learning progressions for these foundational skills (Rich et al , 2017, Rich et al , 2018, Rich et al , 2019) and strategies to integrate them across disciplines and content areas (Mills et al , 2024)
 
@@ -427,6 +540,10 @@ Learn more about:
 Figure 8 Example of a Learning Pathway Integrating Algorithmic Thinking, an AI Literacy Practice Across Subject Areas in Middle School
 
 <!-- image -->
+
+
+<!-- PAGE 30 -->
+
 
 ## Strategy 3: Facilitate Ongoing, Just-In-Time Professional Learning
 
@@ -453,6 +570,10 @@ Digital Promise
 AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology
 
 30
+
+
+<!-- PAGE 31 -->
+
 
 <!-- image -->
 
@@ -482,6 +603,10 @@ Powerful learning experiences integrate AI tools in ways that promote learner-ag
 
 Educators should scaffold students to understand and critically evaluate AI tools everytime they are integrated into learning environments  For example, a lesson may require that a student pulls from personal experience or emotional intelligence to edit a response from a GenAI system,
 
+
+<!-- PAGE 32 -->
+
+
 Digital Promise which would inherently require the student to evaluate the output  Druga et al  (2021) discovered that one way that children can engage in critical awareness of AI is by trying to 'trick the AI ' For instance, they drew nonsense images to 'trick' image recognition systems and wore masks to 'trick' facial recognition systems  Tricking the system reveals flaws and biases of the designers Users can evaluate what the designers valued and what they ignored  Designing lessons in this way also alleviates concerns about misconduct with AI tools, such as plagiarism or inappropriately using the technology to learn new ideas, which could be fraught with misinformation  We elaborate a more specific example of what this could look like in classroom practice below
 
 The expectation, however, is that each of these designs and implementations will differ slightly due to the variance of context and student needs within and between classrooms  With that variance in mind, it is important for policy to position the teacher, who is the context expert, in a way that allows them to design safely for their particular students  Teacher expertise should be leveraged to fine tune broader implementation of AI tools for teaching and learning, and district policy and procedure should facilitate that
@@ -504,6 +629,10 @@ AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology
 
 32
 
+
+<!-- PAGE 33 -->
+
+
 or more  By using ChatGPT as an assistive technology the students were able to learn about and use the story elements to write a story that they can be proud of that was dynamic, personal, and unique '
 
 This lesson exemplifies designing for learning because the AI tool created an opportunity for creative expression, encouraging students to see the vast potential of their own ideas  The output of ChatGPT, in this case, expanded learning opportunities for students with diverse needs  The teacher ensured that the story centered student voice with
@@ -524,6 +653,10 @@ We identify the following tactics for students, teachers, and caregivers to prom
 
 - Learn Information is power, and awareness and agency of AI tools is enhanced with increasing knowledge about how AI works  Opportunities for students, teachers and caregivers to learn about AI and its applications in education should be provided in accessible modalities and languages
 - Communicate School districts have a responsibility to be transparent with parents and caregivers about how AI technologies are being used in schools, including data privacy and ownership and decision making power of algorithms  Parents and caregivers should
+
+
+<!-- PAGE 34 -->
+
 
 be afforded the opportunity to learn about these AI tools, and then prompted with an opportunity to opt in or out of such use
 
@@ -548,6 +681,10 @@ At the end of the night, students even asked family members and attendees to pul
 -  NPR Article about MisinfoDay: AI images and conspiracy theories are driving a push for media literacy education
 -  MisinfoNight at Ballard High School
 
+
+<!-- PAGE 35 -->
+
+
 ## Conclusion
 
 Our AI Literacy Framework seeks to inform educational leaders across contexts to make decisions about how to design learning opportunities to promote AI literacy  To better understand how to promote AI literacy, we build from foundational work across media literacy, data literacy, digital citizenship and computational thinking  We emphasize that understanding, evaluating, and using AI are coinciding Modes of Engagement that can support each other  Further, understanding and evaluating AI, while centering human judgment and justice, are critical to making informed decisions about if and how to use AI in different contexts
@@ -555,6 +692,10 @@ Our AI Literacy Framework seeks to inform educational leaders across contexts to
 We propose five strategies for leaders, educators, learners, and families to promote AI literacy for all  These strategies include providing guidance for adoption and evaluation, integrating AI literacy across grades and subject-area learning, facilitating professional learning, designing powerful learning experiences, and promoting awareness and agency
 
 AI literacy equips us with skill sets to promote individual agency and awareness in order to make informed decisions about how to leverage AI tools for individual and societal benefit  Looking ahead, we call for and seek to support the development of additional resources and guidance for educators, learners, and families to help them make informed decisions about if and when to integrate AI-enabled systems and tools in various contexts, as well as how to provide appropriate scaffoldings to learners when they do
+
+
+<!-- PAGE 36 -->
+
 
 ## References
 
@@ -575,6 +716,10 @@ AI literacy equips us with skill sets to promote individual agency and awareness
 - Executive Order on the Safe, Secure, and Trustworthy Development and Use of AI, 15 U S C  9401(3) (2023, October 30)  https://www govinfo gov/app/details/FR-2023-11-01/2023-24283/summary
 - Federal Trade Commission (2024, January 9)  AI companies: Uphold your privacy and confidentiality commitments  https://www ftc gov/policy/advocacy-research/tech-at-ftc/2024/01/ ai-companies-uphold-your-privacy-confidentiality-commitments
 
+
+<!-- PAGE 37 -->
+
+
 - Ferrara, E  (2024)  GenAI against humanity: Nefarious applications of generative artificial intelligence and large language models Journal of Computational Social Science , 1-21
 - Fusco, J , Roschelle, J , &amp; Ruiz, P  (2020, March 10) What is learning sciences and why does it matter? https://digitalpromise org/2020/03/10/ what-is-learning-sciences-and-why-does-it-matter/
 - Heintz, F  (2022)  The computational thinking and artificial intelligence duality  In S  C  Kong, &amp; H Abelson (Eds ) Computational thinking education in K-12: Artificial intelligence literacy and physical computing. MIT Press
@@ -587,6 +732,10 @@ AI literacy equips us with skill sets to promote individual agency and awareness
 - Kumar, A  (2023, April 24)  How students use AI to design solutions for their community  EdSurge  https://www edsurge com/ news/2023-04-24-how-students-use-ai-to-design-solutions-for-their-community
 - Mills, K , Burke, Q , &amp; Ruiz, R  (2020, August 24)  How to integrate computational thinking with 'look fors ' Digital Promise  https://digitalpromise org/2020/08/24/ how-to-integrate-computational-thinking-with-look-fors/
 - Mills, K , Coenraad, M , Ruiz, P , Burke, Q , &amp; Weisgrau J  (2021, December)  Computational thinking for an inclusive world: A resource for educators to learn and lead  Digital Promise https://doi org/10 51388/20 500 12265/138
+
+
+<!-- PAGE 38 -->
+
 
 - Mills, K , Weisgrau, J , Burke, Q , Lee, K , Solorzano, T , &amp; Coenraad, M  (2024, March)  Shifting education with learning pathways: Becoming your portrait of a graduate  Digital Promise  doi org/10 51388/20 500 12265/205
 - Mishra, P , &amp; Koehler, M  J  (2006)  Technological pedagogical content knowledge: A framework for teacher knowledge Teachers College Record , 108 (6), 1017-1054
@@ -602,6 +751,10 @@ AI literacy equips us with skill sets to promote individual agency and awareness
 - Rich, K  M , Strickland, C , Binkowski, T  A , &amp; Franklin, D  (2019, February)  A K-8 debugging learning trajectory derived from research literature  In Proceedings of the 50th ACM technical symposium on computer science education (pp  745-751)
 - Roschelle, J , Ruiz, P , &amp; Fusco, J  (2021, March 15) AI or intelligence augmentation for education? Blog@CACM  https://cacm acm org/blogcacm/ ai-or-intelligence-augmentation-for-education/
 
+
+<!-- PAGE 39 -->
+
+
 - Roschelle, J  (2020, April 13) Computational thinking or computational teamwork? Blog@CACM https://cacm acm org/blogcacm/computational-thinking-or-computational-teamwork/
 - Rubin, A  (2020)  Learning to reason with data: How did we get here and what do we know? Journal of the Learning Sciences , 29 :1, 154-164, DOI: 10 1080/10508406 2019 1705665
 - Ruiz, P , &amp; Glazer, K  (2024, January 15)  Anthropomorphism of AI in learning environments: Risks of humanizing the machine  EdSurge  April 29, 2024  https://www edsurge com/news/202401-15-anthropomorphism-of-ai-in-learning-environments-risks-of-humanizing-themachine
@@ -613,6 +766,10 @@ AI literacy equips us with skill sets to promote individual agency and awareness
 - Webb, M  (2024, March 4)  A generative AI primer  Jisc  https://nationalcentreforai jiscinvolve org/ wp/2024/03/04/generative-ai-primer/
 - White, S V  &amp; Scott, A  (2024) Responsible AI and tech justice: A guide for K-12 education. Kapor Foundation  https://kaporfoundation org/wp-content/uploads/2024/01/Responsible-AIGuide-Kapor-Foundation pdf
 - World Economic Forum  (2024, April)  Shaping the future of learning: The role of AI in education 4 0  https://www weforum org/publications/ shaping-the-future-of-learning-the-role-of-ai-in-education-4-0/
+
+
+<!-- PAGE 40 -->
+
 
 <!-- image -->
 

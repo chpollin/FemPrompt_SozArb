@@ -15,7 +15,7 @@ import yaml
 class VaultQualityTester:
     def __init__(self, vault_path: str = None):
         if vault_path is None:
-            self.vault_path = Path(__file__).parent.parent / "FemPrompt_Vault"
+            self.vault_path = Path(__file__).parent.parent / "Literature Review_Vault"
         else:
             self.vault_path = Path(vault_path)
 

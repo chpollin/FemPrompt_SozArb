@@ -1,10 +1,11 @@
 ---
 source_file: Chiu_2025_AI_literacy_and_competency_definitions,.pdf
-conversion_date: 2026-02-03T08:45:30.079948
+conversion_date: 2026-02-03T18:23:39.322098
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Interactive Learning Environments
@@ -53,6 +54,10 @@ R
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## EDITORIAL
 
 <!-- image -->
@@ -77,6 +82,10 @@ This literacy empowers individuals to interact with AI responsibly -questioning 
 
 AI competency, in contrast, denotes practical proficiency in using, engaging, interacting, developing, or managing AI systems in real-world contexts (Chiu et al., 2024, 2025; Zhou et al., 2025). It moves beyond knowledge and understanding into capacity  (Chiu  et  al.,  2024).  AI-competent  individuals should  have  the  confidence  and  ability  to  use  AI  to  complete  specific  tasks  ethically,  healthily, responsibly, and productively (Zhou et al., 2025). For example, AI-competent students could effectively use AI to support their self-regulated learning, and AI-competent programmers could effectively  integrate  AI  into  coding  tasks  to  make  computer  applications.  In  other  words,  they  are confident  and  have  great  capacity  to  clearly  explain  how  AI  technologies  work  and  impact
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 society. They are able to use them in an ethical and responsible manner and to effectively communicate and collaborate with them in a specific setting (Chiu et al., 2024, 2025). They should have selfreflective mindsets to critically evaluate their AI tools and knowledge. AI competency is contextual and focuses on how well individuals use AI in beneficial ways.
@@ -93,6 +102,10 @@ AI is not a monolithic technology emerging from a single discipline. It is a pro
 4. Media Literacy: AI  is  surrounded  by  hype,  misinformation,  and  powerful  narratives.  Media  literacy empowers individuals to analyze claims about AI capabilities critically, identify biases in outputs  or  reporting,  discern  deepfakes  or  AI-generated  text,  understand  the  motivations  of different stakeholders (companies, governments), and evaluate the broader societal and political implications of AI adoption. Media literacy focuses on understanding how AI shapes and is represented in information channels.
 5. Computational  Literacy:  Understanding  fundamental  computing  concepts  (algorithms,  logic, hardware/software interaction, complexity) is essential to grasp how AI systems process information and execute tasks. It demystifies the ' black box ' at a basic level, explaining sequential processing and decision-making structures inherent in AI models.
 6. Linguistic Literacy: Natural language processing is a cornerstone of modern AI (chatbots, translation, sentiment analysis). Linguistic literacy provides the understanding of syntax, semantics,
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -111,6 +124,10 @@ These literacies do not exist in silos; they constantly interact and inform each
 
 AI literacy is not merely adding a new technical skill; it is about developing an integrated perspective (Chiu, 2025). It requires weaving together threads of understanding from computation, mathematics,  statistics,  data  handling,  language,  visual  perception,  ethics,  critical  thinking,  human cognition, and specific application domains. Gaps in any of these foundational literacies create vulnerabilities -misunderstanding capabilities, misinterpreting outputs, overlooking biases, or failing to grasp  societal  consequences.  By  recognizing  and  cultivating  this  interdisciplinary  nature  of  AI  literacy,  individuals  can  build  the  robust  understanding  necessary  to  navigate  the  AI-driven  world thoughtfully, critically, and responsibly, forming the essential foundation upon which AI competency can then be built.
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 ## 4. The development of AI competency
@@ -128,6 +145,10 @@ AI literacy and AI companies are new to policymakers, researchers, educators, an
 3. Ethical literacy  as the active scaffold for competency: How does ethical literacy transition from theoretical awareness ( ' knowing the risks ' ) to an active, integrated practice (applying safeguards, auditing  for  bias,  ensuring  transparency)  within  the  development  and  execution  of  AI  competency?  What  frameworks  and  tools  best  support  practitioners  in  making  real-time  ethical decisions while using AI tools under pressure?
 4. Equity and access in the AI literacy-to-competency pipeline: How do disparities in foundational literacies (e.g., mathematical, data, linguistic, and computational access) create barriers to developing AI literacy and, subsequently, AI competency? What are the most effective strategies for mitigating  these  barriers  and  ensuring  equitable  pathways  to  AI  competency  across  diverse populations (socioeconomic, cultural, linguistic)?
 5. Culturally  Responsive  AI  literacy  &amp;  competency  frameworks:  How  do  cultural  values,  linguistic diversity, and local epistemologies shape the definition, acquisition, and application of AI literacy and competency? How can frameworks be adapted to ensure they are culturally sustaining rather than imposing techno-centric?
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 

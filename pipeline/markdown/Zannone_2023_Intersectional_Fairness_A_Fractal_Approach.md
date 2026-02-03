@@ -1,10 +1,11 @@
 ---
 source_file: Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.pdf
-conversion_date: 2026-02-03T09:33:24.816853
+conversion_date: 2026-02-03T19:04:09.422214
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## INTERSECTIONAL FAIRNESS: A FRACTAL APPROACH
 
 ## Giulio Filippi ∗ , Sara Zannone ∗ , Adriano Koshiyama
@@ -25,6 +26,10 @@ However, what happens when these attributes intersect? The concept of intersecti
 
 * These authors contributed equally to this work. contact: sara.zannone@holisticai.com.
 
+
+<!-- PAGE 2 -->
+
+
 [Crenshaw(2013a)], also known as fairness gerrymandering in the AI literature [Kearns et al.(2018)].
 
 These results have sparked an interest and motivated the need for studying the intersectional fairness of AI algorithms. Practically, this has meant extending the study of bias from individual protected attributes to their intersectional groups. Most of the works on intersectional fairness thus far has been concerned with measuring bias when intersecting all the protected attributes [Foulds et al.(2020b), Foulds et al.(2020a), Jin et al.(2020), Morina et al.(2019)]. Since every dataset may include an arbitrary number of protected attributes, which can be combined in any number of ways, it is not clear how one should pick the right level of granularity for the analysis [Kong(2022)].
@@ -43,6 +48,10 @@ A hypercube is a geometrical figure that can be extended to an arbitrary number 
 
 First, we would like to explain the analogy between intersectional subgroups and hypercubes. If we consider a dataset with only one protected attribute, our dataset can be seen as belonging to a line, with each vertex being one of the subgroups (Fig. 1a). For example, if we consider gender as our protected attribute, then one vertex will be 'male' and the other vertex will be 'female'. If instead we consider two protected attributes, such as gender and ethnicity, our data will lie on a square (Fig. 1b). In this case, each vertex will be the intersection of gender and ethnicity (e.g., white male, black male, white female and black female), and each line will be an individual attribute. Adding a third protected attribute, such as age, will increase the dimensionality again, and make our geometrical structure into a cube (Fig. 1c). In this case a single protected attribute will corresponds to the face of the cube, while the intersection of two attributes will correspond to an edge. The vertices of the cube will be the intersection of all three protected attributes.
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 (c)
@@ -54,6 +63,10 @@ The idea is that each protected attribute creates a division in the data, which 
 We will often speak of the hypercubes as separated by levels. The level refers to the number of stars in the vectorial specification, and encodes the dimensionality of the embedded hypercube. There are M +1 possible levels (0 , ..., M ) . Level 0 (the lowest level) corresponds to the vertices, which are the deepest intersectional groups and have dimensionality 0. Level M (the highest level) consists only of the main-hypercube, which contains the whole dataset and has dimensionality M . The total number of hypercubes (intersectional groups), H tot , can be computed by summing the number of hypercubes H K at each level K , with K ∈ { 0 , . . . , M } :
 
 <!-- formula-not-decoded -->
+
+
+<!-- PAGE 4 -->
+
 
 For each vertex v of the hypercube, we can compute the number of data points belonging to that specific subgroup. We denote this number by N ( v ) . We can similarly compute the number of data points with positive label that fall in the same intersection (vertex), N (1) ( v ) . From these we can compute the success rate for any vertex as
 
@@ -82,6 +95,10 @@ Algorithm 1. We start by computing N ( v ) and N (1) ( v ) for all vertices v . 
 In Appendix A, we include a study of the complexity of the propagation algorithm, as opposed to the "brute force" approach. The results of the analysis are summarised in Table 1. The main takeaway is that for large N and 3 M , the difference between the multiplicative ("brute force") and additive ("propagation") complexities becomes considerable.
 
 and
+
+
+<!-- PAGE 5 -->
+
 
 Figure 2: Hypercube graph . Example of a hypercube graph G with M = 2 protected attributes. The nodes of the graph are all hypercubes. The edges represent the possible splits.
 
@@ -120,6 +137,10 @@ Theorem 1. SR min ( K ) is an increasing function of K and SR max ( K ) is a dec
 | SR Propagation       | O ( N +3 M )  |
 
 Table 1: Complexity Table. Brute force approach consists of filtering the dataset for each intersectional subgroup, and computing success rate on filtered data. SR Propagation first computes success rates at vertex level, and then propagates them upwards (Algorithm 1).
+
+
+<!-- PAGE 6 -->
+
 
 Proof. Let x be a non-vertex hypercube (of dimension K ) and let x (0) i and x (1) i be a partition of it using the i th star. Recall that we can compute the success rate as
 
@@ -169,6 +190,10 @@ Proof. As follows from Theorem 1:
 
 and
 
+
+<!-- PAGE 7 -->
+
+
 ## 4.2 Equality of Opportunity
 
 In Appendix B we extend the above analysis to the Equality of Opportunity setting. We do so by adapting Theorem 1, to show that other fairness measures also narrow as we progress up the levels such as: accuracy, precision, true positive rates, false positive rates, true negative rates, false negative rates [Hardt et al.(2016)]. In language, these results can be summarized as follows: " Equality of Opportunity fairness also propagates up the levels ".
@@ -205,6 +230,10 @@ The above formula is known to be an estimator of the theoretical variance, under
 
 <!-- formula-not-decoded -->
 
+
+<!-- PAGE 8 -->
+
+
 What happens if ISP does not hold? In this case, the set of success rates SR ( x ) at each level is made up of copies of random variables with different means. Since the means are different, we expect the variance to be greater than the theoretically computed minimum V ar ISP ( K ) . We can then use this theoretical value for the variance as a benchmark, to define a measure of intersectional bias at each level. We call this family of metrics V arRatio ( K ) , and define it mathematically as
 
 <!-- formula-not-decoded -->
@@ -233,15 +262,27 @@ Figure 3: Success Rate Distributions . Estimated empirical distributions of the 
 
 In order to verify our theoretical results, we run experiments with synthetic data. We create a function to generate random datasets, with M = 10 protected attributes, and one label. Each of the 2 10 = 1024 smallest intersectional groups (vertices), v , contains N ( v ) = 200 R instances, where R is a randomly selected integer between 1 and
 
+
+<!-- PAGE 9 -->
+
+
 10. Each vertex also has an associated probability of success p ( v ) , which we use to sample its binary label data from a Bernoulli ( p ( v )) distribution. We sub-sample the dataset n repeats = 20 times so as to have all vertices contain precisely n sub = 100 datapoints. The sub-sampling is crucial for two reasons. The first is that it allows us to generate a larger number of samples, with minimal amounts of correlation. The second is that it ensures all hypercubes have equal number of datapoints. Both of these conditions were assumptions in our theoretical derivations.
 
 In this first example, we will consider a fair dataset, where p ( v ) = 0 . 5 for all vertices. Since the output label is here independent of all the protected attributes, this example satisfies Intersectional Statistical Parity. We run the Propagation Algorithm 1 to compute the empirical success rates over all the possible intersectional groups, that is, all the hypercubes in our geometrical model. Fig. 3 shows the distribution of the empirical success rates at different levels. As predicted by our theoretical results, the distribution gets narrower around SR tot = 0 . 5 as we go up the levels. Fig. 4a shows how the minimum and maximum values evolve as we progress up the levels. The maximum value decreases and minimum value increases, as shown in Theorem 1. Fig. 4b and Fig. 4c show plots of V ar ( K ) and log V ar ( K ) as a function of K . Both curves match the theoretical results precisely, except for small numerical approximations.
+
+
+<!-- PAGE 10 -->
+
 
 Figure 4: Experiment 1 . (a) Evolution of the minimum and maximum empirical success rates across levels. As expected from the theoretical results, these values tend to 0.5. (b) Evolution of the Variance across levels. The variance decreases exponentially, as predicted by our theoretical results. (c) Evolution of the log-Variance across levels. The log-variance linearly, as predicted by our theoretical results.
 
 <!-- image -->
 
 In our second experiment, we want to analyse how these results change in the presence of bias. We model bias by allowing each vertex v to have a different probability of success p ( v ) . Specifically, we select a set of 100 vertices to have probability of success p ( v ) = 0 . 5 -δ , and a separate set of 100 vertices to have probability of success p ( v ) = 0 . 5 + δ . We set our parameter δ to vary in the interval { 0 , 0 . 1 , 0 . 2 , 0 . 3 , 0 . 4 } . When δ = 0 , we retrieve the case of perfect fairness from the previous example. Otherwise, ISP will not be satisfied, and indeed our dataset will get less and less fair as δ increases. The results show that, as expected, the minimum and maximum success rates narrow down as fairness increases, that is, for lower values of δ (Fig. 5a). We also show that, just as our theoretical results had predicted, the variance of the empirical success rates increases with higher levels of bias (Fig. 5b). Accordingly, the evolution of the log-variance across levels is not linear but concave for higher levels of δ , another indicator that ISP is not satisfied. Finally, we calculate our metric V arRatio (0) (Table 2), and find that it increases for increasing values of δ , which indicate larger bias.
+
+
+<!-- PAGE 11 -->
+
 
 Figure 5: Experiment 2 . (a) Evolution of the minimum and maximum empirical success rates across levels. As expected from the theoretical results, these values tend to 0.5. These values narrow down for smaller δ , as bias decreases. (b) Evolution of the Variance across levels. The variance increases in the presence of bias. (c) Evolution of the log-Variance across levels. The log-variance curve departs from the theoretical value as we increase δ .
 
@@ -252,6 +293,10 @@ Table 2: Metrics Table . V arRatio (0) calculated for experiment 2.
 |         | δ = 0   | δ = 0 . 1   | δ = 0 . 2   | δ = 0 . 3   | δ = 0 . 4   |
 |---------|---------|-------------|-------------|-------------|-------------|
 | Level 0 | 0 . 98  | 1 . 73      | 4 . 19      | 7 . 96      | 13 . 34     |
+
+
+<!-- PAGE 12 -->
+
 
 ## 6.2 Real Data Experiment
 
@@ -276,6 +321,10 @@ On the other hand, we sought a framework that would allow us to think of interse
 
 Furthermore, the geometrical nature of our setting allows us to examine how fairness propagates and scales. We found that fairness necessarily propagates up the levels, while bias propagates down. This suggests that we should, first and foremost, think of fairness in a bottom-up and local way. It also indicates that we cannot think of individual parts of a system in isolation from the whole. We propose that the trustworthiness of an AI system cannot thus be enforced in a top-down way, or by separating individual components from the larger system. Instead, we argue for a bottom-up emergent and holistic approach to trustworthy AI.
 
+
+<!-- PAGE 13 -->
+
+
 Figure 6: Adult Dataset Experiment . (a) Evolution of the minimum and maximum empirical success rates across levels. (b) Evolution of the Variance across levels. (c) Evolution of the log Variance across levels.
 
 <!-- image -->
@@ -283,6 +332,10 @@ Figure 6: Adult Dataset Experiment . (a) Evolution of the minimum and maximum em
 ## 8 Discussion
 
 In this paper, we introduced a geometrical setting for studying the fairness properties of all possible intersectional subgroups together, in a unified framework. There are multiple advantages to this setting. Firstly, it allows for a quicker computation of all the success rates (or other metrics if needed), using a dynamic programming approach. Secondly, it reveals the inter-connectivity between the fairness properties of groups at different levels. In particular, we prove that success rates must narrow as we go up the levels. We use that to prove worst case disparate impact increases with increasing levels, and worst case statistical parity decreases with increasing levels. We summarise these results as "Equality of Outcome fairness propagates up the levels" . We then extend our results to the Equality of Opportunity setting. In particular, we show that accuracy, precision, true positive rates, false positive rates, true negative rates and false negative rates all narrow down as we progress up the levels. We summarise these results as "Equality of Opportunity fairness also propagates up the levels" . In the future, it might be interesting to derive a mathematical description of all metrics for which this method of proof applies.
+
+
+<!-- PAGE 14 -->
+
 
 Furthermore, we suggest that the variance of the empirically computed success rates on a given level can be used as a fairness measure. We prove that under perfect fairness (Intersectional Statistical Parity), the variance follows a simple exponential scaling law. Using this theoretical value as benchmark, we define a family of metrics which capture the intersectional bias on each level. Future work will definitely focus on examining these metrics further and studying the behaviour of the variance and log-variance curves more closely in different settings. One of the hopes is that, the shape of the log-variance curve can help in detecting but also in locating the source of bias. For instance if bias was injected into the system using combinations of two protected attributes (Level M -2 ), we might see a bend in the log-variance curve at around those values of K . This could help answer questions related to the sources of bias and identifying gerrymandering. Alternatively, the variance scaling law could be used to devise similarly structured statistical tests.
 
@@ -301,6 +354,10 @@ One of the advantages of our framework is that it allows us to analyse the whole
 - [Feldman et al.(2015)] Michael Feldman, Sorelle A Friedler, John Moeller, Carlos Scheidegger, and Suresh Venkatasubramanian. 2015. Certifying and removing disparate impact. In proceedings of the 21th ACM SIGKDD international conference on knowledge discovery and data mining . 259-268.
 - [Foulds et al.(2020a)] James R Foulds, Rashidul Islam, Kamrun Naher Keya, and Shimei Pan. 2020a. Bayesian Modeling of Intersectional Fairness: The Variance of Bias. In Proceedings of the 2020 SIAM International Conference on Data Mining . SIAM, 424-432.
 - [Foulds et al.(2020b)] James R. Foulds, Rashidul Islam, Kamrun Naher Keya, and Shimei Pan. 2020b. An intersectional definition of fairness. Proceedings - International Conference on Data Engineering 2020-April (4 2020), 19181921. https://doi.org/10.1109/ICDE48307.2020.00203
+
+
+<!-- PAGE 15 -->
+
 
 - [Hardt et al.(2016)] Moritz Hardt, Eric Price, and Nati Srebro. 2016. Equality of opportunity in supervised learning. Advances in neural information processing systems 29 (2016).
 - [Jin et al.(2020)] Zhongjun Jin, Mengjing Xu, Chenkai Sun, Abolfazl Asudeh, and HV Jagadish. 2020. Mithracoverage: a system for investigating population bias for intersectional fairness. In Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data . 2721-2724.
@@ -328,6 +385,10 @@ Since our algorithm functions with recursion on the graph G , by reusing values 
 ## B.1 Accuracy
 
 Until now we have only been working in an Equality of Outcome fairness framework. Meaning that we are seeking to equalize the outcomes of our model for different subgroups of the population. There are also Equality of Opportunity fairness notions, that seek to equalize the performance of our model on different subgroups. There is a quick way to translate our findings from an Equality of Outcome framework to an Equality of Opportunity framework. Suppose that
+
+
+<!-- PAGE 16 -->
+
 
 we are given the true labels as well as the predicted labels. Name these vectors y true and y pred respectively. Consider the new vector
 
@@ -379,6 +440,10 @@ Therefore
 
 Which concludes the proof by induction.
 
+
+<!-- PAGE 17 -->
+
+
 ## D Variance of empirical success rates at Level K under ISP assumption
 
 We claimed that under ISP (and uncorrelated samples), the expected empirical variance can be lower bounded by H K -1 H K p tot (1 -p tot ) N K . The proof is as follows
@@ -421,6 +486,10 @@ Using Jensen's inequality applied to concave function 1 /X ,
 And the bound is tight iff all sample sizes are the same on the given level.
 
 So we obtain
+
+
+<!-- PAGE 18 -->
+
 
 ## E Metrics for Experiment 2 measured across all levels
 

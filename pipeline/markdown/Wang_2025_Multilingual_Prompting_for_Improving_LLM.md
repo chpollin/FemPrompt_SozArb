@@ -1,10 +1,11 @@
 ---
 source_file: Wang_2025_Multilingual_Prompting_for_Improving_LLM.pdf
-conversion_date: 2026-02-03T09:30:56.273287
+conversion_date: 2026-02-03T19:01:49.283828
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Multilingual Prompting for Improving LLM Generation Diversity
 
 Qihan Wang 1 , Shidong Pan 1,2 , Tal Linzen 1 , Emily Black 1
@@ -25,6 +26,10 @@ Figure 1: An example of the diversity of an LLM (GPT4o)'s responses when prompte
 
 fessionals on the basis of their race, ethnicity, or nationality. Lack of cultural diversity when asking opinions on controversial topics can contribute to inaccurate results when using LLMs as substitutes for human responses in user studies, annotation tasks, and opinion surveys, as they do not reflect the diversity of real-world perspectives. Indeed, prior work has shown that LLMs do not represent the true diversity of human expression in a variety of ways-from reducing sentiment and topic diversity for tasks such as book reviews (Wu et al., 2024), to demonstrating poor linguistic diversity when helping humans write essays (Padmakumar and He, 2023). Perhaps even more importantly, LLMs have been shown to generate largely monocultural responses to controversial questions, often leaning towards expressing Western values (Wang et al., 2025)-or even a subset of Western values (Santurkar et al., 2023).
 
+
+<!-- PAGE 2 -->
+
+
 Figure 2: Above: overview of multilingual and multicultural prompting procedure, and our diversity evaluation. Below: example prompts from our multilingual and multicultural methods, and a subset of comparison methods.
 
 <!-- image -->
@@ -39,6 +44,10 @@ Given these results, we posit that multilingual prompting, using cultural cues a
 
 In sum, in this work, we present the following three contributions: (1) we introduce and evaluate multilingual and multicultural prompting and shown in 2 as methods to increase various forms of demographic, cultural, and other forms of diversity in LLM generations. We find that these methods increase demographic and cultural diversity in LLM generations better than state of the art methods such as step-by-step recall prompting (Hayati et al., 2023), generating personas (Wang et al., 2025), and increasing temperature (Chung et al., 2023), all while maintaining accuracy on factual tasks. (2) We explore whether using the native language that corresponds to the cultural cues reduces hallucination for culture-specific pieces of information, such
 
+
+<!-- PAGE 3 -->
+
+
 as names of famous singers from different parts of the world. Based on human evaluation of model outputs, we find that specifically prompting in the language associated with a specific culture reduces hallucinations about that culture when compared to prompting in English, suggesting that language is imperative for generating accurate and diverse information. (3) Finally, we evaluate the performance of multilingual prompting as the number of languages increases, as well as across lowerand high-resourced languages. We see that overall, the diversity gain from multilingual prompting increases with the number of languages used. Further, we see that some models gain more diversity from prompting in high-resourced languages, while smaller models demonstrate greater diversity gains from lower-resourced languages.
 
 ## 2 Related Work
@@ -52,6 +61,10 @@ LLMs Across Languages. A separate line of work has shown that LLMs perform varia
 ## 3 Multilingual and Multicultural Prompting
 
 We present two related prompting methods in this work, which we call multilingual and multicultural prompting. Both multilingual and multicultural prompting work to increase LLM generation diversity by eliciting responses to several different version of the same prompt, each with different cultural and/or linguistic cues, and then combining them into one response. One goal of this work to understand which method is the best to increase diversity in LLM generations. Multicultural prompting does so by relying solely on adding cultural cues, in English-such as adding to the prompt that the LLM is English-speaking, or giving a persona with a Chinese name and adding they were born in Beijing. For multilingual prompting, we rely on these cultural cues and translating the prompt to the language associated with that culture. See
+
+
+<!-- PAGE 4 -->
+
 
 Figure 2 for examples. Our multilingual and multicultural prompting methods consist of three main steps, also shown in Figure 2:
 
@@ -81,6 +94,10 @@ Specifically, we use a modified version of that the Social Chemistry 101 dataset
 
 The original dataset includes human baseline judgments, where annotators indicate the degree of agreement with each statement. In this study,
 
+
+<!-- PAGE 5 -->
+
+
 in order to ensure we are focusing on truly controversial statements where diverse responses are desirable, we specifically focus on a subset of the dataset where between only 25-75% of annotators agree with the given statement.
 
 Demographic Representation: People Diversity Dataset. In this task, we ask an LLM to generate names for individuals in various professions, and assess the demographic diversity of the response across nationality, ethnicity, and geographic region. To do so, we use the People Diversity Dataset (Lahoti et al., 2023). The dataset consists of 105 questions asking for names of individuals across different professions in a context, for example, 'Name some writers that inspire you'. In our experiment, we ask the LLMs to generate exactly 10 names for each question.
@@ -99,6 +116,10 @@ Prompting Comparisons, Baselines, and Performance Tests. To ensure a fair compar
 
 Comparisons. To assess the effectiveness of our approach, we compare our method against previously established diversity-enhancing techniques: (1) High-temperature sampling, using the monolingual strategy from above, but setting temperature = 1.3 (Chung et al., 2023). (2) Requesting Diversity: We also compare with prompts that simply ask the model to be diverse, namely by adding 'Please try to be as diverse as possible' to the monolingual prompt. For these two comparison methods, to increase diversity, we also evaluate the diversity over concatenated responses of three rephrased versions of the prompt. (3) Random Personas: Following prior work (Wang et al., 2025), we create personas for the model prior to prompting. To separate persona prompting from multilingual prompting, these prompts do not encode cultural information, but rather professions and other personality traits. We use the same number of personas as languages and evaluate concatenated responses. (4) Step-by-step Recall (Hayati et al., 2023): This prepends past an-
 
+
+<!-- PAGE 6 -->
+
+
 swers to subsequent questions sequentially to ask the model to generate new answers after reflection on prior answers. To compare fairly, we generate query responses from three rounds of Step-by-Step Recall, and evaluate the concatenated responses.
 
 We include Step-by-Step Recall and Requesting Diversity for the demographic diversity tasks but not social norm tasks, as they do not work well with multiple choice outputs. Step-by-Step Recall asks the model to reveal its first answer and then generate a different one in the next round, forcing the model to change its mind, which contradicts the spirit of a single-choice multiple-choice task. Similarly, Requesting Diversity is designed to elicit a set of varied outputs, but in the social-norm setting the model must commit to exactly one label, so the notion of 'being diverse' reduces to a single token and loses its intended effect.
@@ -114,6 +135,10 @@ Multilingual Prompting Boosts Diversity of LLM Responses. To evaluate whether an
 Across all models and metrics, multilingual prompting strategies consistently yield the highest diversity scores. Enhanced multilingual prompting have the top score for eight out of twelve experiments, with basic multilingual topping the other four. Multilingual prompting strategies increase reason entropy for social norms questions compared to the best performing diversity increasing comparison methods by a factor of 1.8x-2.38x across all four models, and agreement entropy between 1.65-2.86x. The demographic diversity increase is more modest, but still consistent, between 1.1-1.2x. Impressively, when comparing to the monolingual baseline, multilingual prompting methods can get to up to a 6x increase in reason entropy (LLaMA-70B), 7.3x increase in agreement entropy (LLaMA-8B), and 1.35x (LLaMA-70B) increase in demographic entropies.
 
 Beyond outperforming comparison methods and baselines, multilingual prompting methods consistently outdo multicultural prompting methods, suggesting the added importance of language in reaching different regions of an LLM's knowledge base. Interestingly, the added benefit of language vary depending on the level of added cultural cues in the prompts: language is especially helpful when there is less cultural information in the prompt. Basic multilingual prompting performs markedly better than basic multicultural, by a factor 2x on average for reasoning and agreement entropy (social norm) experiments and 1.1x on averaged demographic entropies. Meanwhile, with the exception of two outliers from LLaMA-8B, enhanced multilingual only outperforms enhanced multicultural by a factor of 1.09 on average for reasoning and agreement entropy (social norm) experiments and 1.04x on averaged demographic entropies. These results suggest that language and cultural cues are both important components of eliciting diverse re-
+
+
+<!-- PAGE 7 -->
+
 
 sponses, but that they are best together (i.e., enhanced multilingual performs the best). This may be surprising given prior work showing minimal impact of language in eliciting specific cultural perspectives (Kwok et al., 2024), but aligns with prior work suggesting that LLMs have language-specific knowledge bases (Aggarwal et al., 2025).
 
@@ -184,6 +209,10 @@ or Wikipedia search. Annotators are given a name and profession from the LLM gen
 
 Language Helps Prevent Hallucination. The evaluation reveals a notable difference between the hallucination rate of Chinese names generated from
 
+
+<!-- PAGE 8 -->
+
+
 Figure 3: Diversity comparison for GPT-4o and GPT-4o-mini across multilingual methods.
 
 <!-- image -->
@@ -209,6 +238,10 @@ Further, our results reveal that diversity performance across low and high resou
 ## 7 Conclusion
 
 We introduce multilingual and multicultural prompting methods to enhance cultural diversity in LLM-generated responses. We show that they out-perform existing methods for this task. Moreover, we find that multilingual prompting is more effective than multicultural prompting, both for promoting diversity and for reducing model hallucination about culture-specific informationsuggesting that language is an important component in eliciting more diverse responses.
+
+
+<!-- PAGE 9 -->
+
 
 ## Limitations
 
@@ -237,6 +270,10 @@ Additionally, to mitigate reproducibility concerns and reinforce the transparenc
 - Ayato Kitadai, Kazuhito Ogawa, and Nariaki Nishino. 2024. Examining the feasibility of large language models as survey respondents. 2024 IEEE International Conference on Big Data (BigData) , pages 3858-3864.
 - Jon M. Kleinberg and Manish Raghavan. 2021. Algorithmic monoculture and social welfare. Proceedings of the National Academy of Sciences , 118.
 - Louis Kwok, Michal Bravansky, and Lewis D Griffin. 2024. Evaluating cultural adaptability of a large language model via simulation of synthetic personas. arXiv preprint arXiv:2408.06929 .
+
+
+<!-- PAGE 10 -->
+
 
 Preethi Lahoti, Nicholas Blumm, Xiao Ma, Raghavendra Kotikalapudi, Sahitya Potluri, Qijun Tan, Hansa Srinivasan, Ben Packer, Ahmad Beirami, Alex Beutel, and 1 others. 2023. Improving diversity of demographic representation in large language models via collective-critiques and self-voting. arXiv preprint arXiv:2310.16523 .
 
@@ -302,6 +339,10 @@ We show two representative outputs in Table 2, each including two agreeing and t
 
 Prompts we use for social norm questions are shown Figure 4. To ensure a fair comparison across
 
+
+<!-- PAGE 11 -->
+
+
 ## Statement: 'It is wrong to do drugs. '
 
 - A: Agree. Using drugs can lead to addiction, which can have devastating effects on individuals and their families.
@@ -338,6 +379,10 @@ Given the name "{name}", predict the following: -Likely nationality or country o
 
 Table 3 shows two illustrative examples. To ensure the reliability of these annotations, we conduct 20 manual sanity checks for each prompting strategy. For each check, we verify whether the predicted nationality, ethnicity, and region are reasonable given the input name. Results show that the majority of outputs aligned well with publicly known information about the names. Overall, the annotation accuracy across strategies is approximately 90%.
 
+
+<!-- PAGE 12 -->
+
+
 | Strategy               | Prompt Text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Monolingual            | (1) You are a helpful assistant. Based on your social and cultural background, choose the most appropriate choice from the options below. (2) You are a helpful assistant. Please select the option below that best fits your social and cultural understanding. (3) You are a helpful assistant. Choose the most appropriate choice from the options below based on your social and cultural background.                                                                                                                                                                                                                                                                                                                                                                           |
@@ -351,6 +396,10 @@ Table 3 shows two illustrative examples. To ensure the reliability of these anno
 1
 
 Figure 4: Prompts for social norm questions
+
+
+<!-- PAGE 13 -->
+
 
 Table 1: Prompts used in the Name Generation Task - Baseline and Other Diversity Increment Strategy Figure 5: Prompts for cultural representation questions - baseline and other diversity-enhancing methods
 
@@ -374,6 +423,10 @@ General form of H max ( k, m ) . Entropy is maximized when the k answers are spr
 
 2
 
+
+<!-- PAGE 14 -->
+
+
 | Strategy                 | Prompt Text                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Basic Multi- lingual     | English: You are an English-speaking assistant. Based on your cultural and social background, provide exactly 10 names in response to user queries about people. Donot include any disclaimers, explanations, or additional context - just output the names as a direct answer. Use commas to separate names in a list. Chinese: 你是一位中文助手。根据你的文化和社会背景，在回答与人物相关的问题时，仅 提供恰好 10 个姓名，不要添加任何免责声明、解释或额外信息。使用逗号分隔名字，直 接输出答案。 Japanese: あなたは日本語アシスタントです。あなたの文化や社会的背景に基づき、人名 に関する質問には 10 人の名前のみを回答してください。免責事項や説明、余計な情報 は含めないでください。名前はコンマで区切り、シンプルに出力してください。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -390,6 +443,10 @@ Figure 6: Prompts for cultural representation questions - our multilingual and m
 ## Name:
 
 Galileo
+
+
+<!-- PAGE 15 -->
+
 
 <!-- formula-not-decoded -->
 
@@ -476,6 +533,10 @@ After this normalization every metric lies in [0 , 1] ; ˜ H = 1 denotes the gre
 
 This section provides the complete results of Table 1 in the main paper. Table 4 presents the full
 
+
+<!-- PAGE 16 -->
+
+
 Figure 7: Performance on multilingual grade school math benchmark
 
 <!-- image -->
@@ -512,6 +573,10 @@ Moreover, we test multiple prompt templates and found that Multilingual promptin
 
 Therefore, we argue that Multilingual prompting is a robust strategy across different prompt formulations. Its effectiveness stems not only from prompt design, but from a fundamental language
 
+
+<!-- PAGE 17 -->
+
+
 Table 4: Diversity metrics across prompting strategies and models. Bold indicates the highest value within each model. Purple highlight shows the maximum across all models for each metric.
 
 | Model       | Strategy                                             | Reason      | Agreement   | Perspective   |
@@ -545,6 +610,10 @@ Table 4: Diversity metrics across prompting strategies and models. Bold indicate
 |             | Enhanced                                             | 0.471       | 0.469       | 0.150 0.445   |
 |             | Multilingual                                         |             |             |               |
 
+
+<!-- PAGE 18 -->
+
+
 Figure 8: Results of social norm experiment
 
 <!-- image -->
@@ -570,9 +639,17 @@ or generate valid completions. This is particularly problematic for LLaMA models
 
 To verify that the models are capable of reasoning about social norms rather than selecting answers arbitrarily in different languages, we conduct a sanity check using adversarial multiple-choice questions. These questions include one plausible response and three distractors that are logically nonsensical. The results are summarized in Table 6.
 
+
+<!-- PAGE 19 -->
+
+
 ## A.9 Use of AI Tools
 
 We employ ChatGPT to assist with code debugging and figure plotting. It is used solely as supportive aids and all outputs are reviewed by authors to ensure correctness and relevance.
+
+
+<!-- PAGE 20 -->
+
 
 Table 5: Normalized cultural diversity scores across prompting strategies and models. Avg is the average of Nationality, Ethnicity, and Region. Bold values indicate the highest score per model.
 
@@ -626,6 +703,10 @@ Table 5: Normalized cultural diversity scores across prompting strategies and mo
 |             | Basic Multilingual     | 0.490         | 0.509       | 0.282    | 0.427 |
 |             | Enhanced Multicultural | 0.430         | 0.467       | 0.250    | 0.382 |
 |             | Enhanced Multilingual  | 0.447         | 0.475       | 0.242    | 0.388 |
+
+
+<!-- PAGE 21 -->
+
 
 Table 6: Sanity check accuracy across models and languages.
 

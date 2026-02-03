@@ -1,10 +1,11 @@
 ---
 source_file: De Duro_2025_Measuring_and_identifying_factors_of_individuals'.pdf
-conversion_date: 2026-02-03T08:46:14.409438
+conversion_date: 2026-02-03T18:24:21.622143
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## MEASURING AND IDENTIFYING FACTORS OF INDIVIDUALS' TRUST IN LARGE LANGUAGE MODELS
 
 ## Edoardo Sebastiano De Duro
@@ -29,6 +30,10 @@ March 3, 2025
 
 Large Language Models (LLMs) can engage in human-looking conversational exchanges. Although conversations can elicit trust between users and LLMs, scarce empirical research has examined trust formation in human-LLM contexts, beyond LLMs' trustworthiness or human trust in AI in general. Here, we introduce the Trust-In-LLMs Index (TILLMI) as a new framework to measure individuals' trust in LLMs, extending McAllister's cognitive and affective trust dimensions to LLM-human interactions. We developed TILLMI as a psychometric scale, prototyped with a novel protocol we called LLM-simulated validity. The LLM-based scale was then validated in a sample of 1,000 US respondents. Exploratory Factor Analysis identified a two-factor structure. Two items were then removed due to redundancy, yielding a final 6-item scale with a 2-factor structure. Confirmatory Factor Analysis on a separate subsample showed strong model fit ( CFI = . 995 , TLI = . 991 , RMSEA = . 046 , p X 2 &gt; . 05 ). Convergent validity analysis revealed that trust in LLMs correlated positively with openness to experience, extraversion, and cognitive flexibility, but negatively with neuroticism. Based on these findings, we interpreted TILLMI's factors as 'closeness with LLMs' (affective dimension) and 'reliance on LLMs' (cognitive dimension). Younger males exhibited higher closeness with- and reliance on LLMs compared to older women. Individuals with no direct experience with LLMs exhibited lower levels of trust compared to LLMs' users. These findings offer a novel empirical foundation for measuring trust in AI-driven verbal communication, informing responsible design, and fostering balanced human-AI collaboration.
 
+
+<!-- PAGE 2 -->
+
+
 ## 1 Introduction
 
 Trust is a key factor shaping interactions in human settings. Trust fosters cooperation, reduces uncertainty, and supports the smooth flow of information [1, 2]. In psychology, trust has been studied for decades as a core determinant of team performance and stakeholder relationships. McAllister [1] described trust as both affective and cognitive. While affective trust involves emotional bonds and genuine care for others, cognitive trust relies on reasoned assessments of another party's competence and reliability. Subsequent studies have shown how, despite being highly correlated, cognitive and affective trust are indeed empirically distinguishable [3]. In workplaces and organizations, these dimensions help coworkers feel confident in each other's intentions and abilities. Employees who perceive both affective and cognitive trust in their teams often report higher job satisfaction, stronger commitment, and better overall performance [2].
@@ -40,6 +45,10 @@ Researchers have long been concerned with how people form trust in technology. M
 Our approach differs from past works testing the trustworthiness of the content produced by LLMs [9, 18] and also by past works focusing on trust formation in various technological contexts [16, 17]. We argue that LLMs present unique challenges [11] that extend beyond traditional human-computer trust dynamics. Unlike simpler automated systems or social robots, LLMs present the unique capability of engaging in natural language exchanges that closely mirror human ones per form, syntax and emotional tone [4, 7]. Thus, measuring trust in LLMs requires a dedicated psychometric scale. Prior scales, designed for trust in automation or simpler forms of AI [19], cannot fully capture the nuances of human-LLM interactions. Researchers have created instruments to measure user trust in various technological contexts, such as e-commerce, recommendation systems, online services, and autonomous systems [14, 16, 20]. Others have focused on how design features, such as system transparency or perceived anthropomorphism, shape users' willingness to rely on AI [15, 21, 22]. Yet, large-scale text generation tools pose distinct challenges because they can produce fluent but potentially misleading or biased text. LLMs often function as 'black boxes', making it difficult for users to assess their decision processes [6, 23, 24].
 
 A new instrument must integrate established ideas about affective and cognitive trust [1], while also reflecting the affordances and risks specific to LLMs. On the one hand, affective trust describes the emotional bond between a user and a system, capturing whether the user feels assured or supported. On the other hand, cognitive trust is based on rational judgments of competence, reliability, and consistency. In the case of LLMs, these judgments hinge on factors like output accuracy, fairness, and the clarity of explanations provided by the system. Drawing from both components, a robust 'trust equation' [25] would thus need to weigh users' emotional comfort (including aspects such as perceived benevolence) against their logical assessments of system performance [26].
+
+
+<!-- PAGE 3 -->
+
 
 Such a psychometric tool could help researchers pinpoint which factors-such as transparency, perceived competence, or ease of interaction-most strongly affect how users decide to trust or distrust an LLM. For instance, perceived competence or reliability may hinge on how often an LLM provides accurate, unbiased, or context-aware information. The ease of interaction, or closeness, could depend on the design of the user interface or personalization features that adapt to the needs of the user [13]. When these components merge, they shape whether a user sees the system as credible, dependable, and safe to rely upon.
 
@@ -58,6 +67,10 @@ The initial version of the Trust-In-LLM-Index featured 8 items (see Materials an
 ## 2.2 Motivating LLM-simulated validity
 
 Recent studies have shown that language embeddings and language models can effectively estimate psychometric measurements that traditionally relied on empirical data collection [10, 27]. In this way, LLMs can be used as (a) a way to simulate human participants and obtain large datasets of synthetic responses [7] and (b) tools to generate and evaluate
+
+
+<!-- PAGE 4 -->
+
 
 items allowing to reduce the load on experts that are usually employed to assess items quality [27]. Inspired by these approaches combining LLMs and psychometrics, we conducted our own simulation test using LLMs as participants (see Materials and Methods ) to assess the designed items' quality, non-redundancy, and internal structure. We defined this approach as 'LLM-simulated validity'.
 
@@ -79,6 +92,10 @@ The first step of the EGA involved performing the Unique Variable Analysis (UV A
 
 Subsequently, we performed the EGA on the 8-item TILLMI scale. For further details on the parameters used, refer to the Materials and Methods section. In the resulting psychometric networks, variables are represented as nodes, with
 
+
+<!-- PAGE 5 -->
+
+
 Figure 1: Response frequencies for 8 items of the initial TILLMI for GPT-4 (in blue) and humans (in orange). To balance the 2 dataset ( n humans = 521 , n gpt 4 = 800 ) we extract a random sample of n 1 = 521 from the synthetic GPT-4 dataset.
 
 <!-- image -->
@@ -90,6 +107,10 @@ Figure 2: Exploratory Graph Analysis of the responses to the TILLMI for particip
 their relationships visualised as edges. We show the network plot of the TILLMI in Figure 2A. Overall, EGA suggested that a 2-factor structure fitted the data well. The correlations between items were positive, meaning that they tended to measure a similar construct. This was expected, as all the items were designed to capture trust in LLMs, where higher scores coded for higher trust. Nevertheless, our analysis revealed two distinct factors, highlighting that two facets of the same construct were captured by our novel scale.
 
 Lastly, we performed an EGA bootstrap analysis (see Materials and Methods ), which involves repeatedly resampling the data and reestimating the network. In this way, we evaluated the stability and robustness of the estimated network structure. Two measures were taken into account: (a) Total Entropy Fit Index (TEFI; [34]) and (b) item stability [31, 35].
+
+
+<!-- PAGE 6 -->
+
 
 TEFI is a measure of the goodness of fit of the data to a model where lower values suggest a better fit. We compared the TEFI results of the bootstrap of our model, against a random 2-dimensional structure. The value found for the empirical 2-factor model ( TEFI = -3 . 7652 , SD = 0 . 0267 ) was significantly lower ( p = . 006 ) compared to a random 2-dimensional structure ( TEFI = -3 . 6682 , SD = 0 . 0226 ). Hence, the model emerging from human responses is better than a random model, suggesting the presence of an underlying structure in the data.
 
@@ -104,6 +125,10 @@ In addition, we checked whether the assumption of normality at a univariate leve
 ## 2.7 Selection of factor number for Exploratory Factor Analysis
 
 Having confirmed the data's suitability for factor analysis, we proceeded to determine the optimal number of factors using parallel analysis [29] to compare the eigenvalues obtained from the test sample, against a model with uncorrelated variables. The number of factors resulting was equal to 2. Through subsequent analysis, we considered also the criterion of Very Simple Structure (VSS; [39]) and Velicer's Minimum Average Partial (MAP; [40]) to further confirm the number of factors. Although some of the results hinted at a single-factor structure (Table 1), the RMSEA index of fit revealed a lower fit for such a solution [41, 42] compared to the 2-factor model. How to address this apparent conflict in the data? Overall, the results suggest that a clear optimal number of factors is not evident from the data alone. As suggested in previous research [43, 44], factor retention can be partially informed by theoretical insights and domain knowledge to determine the factor structure that is not only more 'correct', but also more meaningful. For this reasons, in light of (a) the previous distinction of trust in two facets (cognitive and affective; [3, 45, 46]), (b) the rationale behind the design of the initial 8-items [1] we opted for the 2-factor model and continued with the Exploratory Factor Analysis.
+
+
+<!-- PAGE 7 -->
+
 
 Table 1: Fit indices for 1-factor and 2-factor models. In bold, the best results are highlighted.
 
@@ -138,6 +163,10 @@ Given the results found, we decided to drop Item 5 first and subsequently Item 1
 
 We conducted a Confirmatory Factor Analysis to validate the 2-factor solution and assess model's goodness of fit on an independent sample of the dataset. In Figure 3 we present the path diagram including the latent variables (Factor 1 and Factor 2) and the observed variables ( Q 2 , Q 3 , Q 4 ; Q 6 , Q 7 , Q 8 ). The procedure for deriving this model is detailed in the Material and Methods section. Covariance between the 2 latent factors was high ( ϕ = 0 . 94 ), suggesting the close nature of the 2 components of trust. Despite being highly related, these dimensions coded for different facets of trust
 
+
+<!-- PAGE 8 -->
+
+
 Table 3: Factor loadings (FL) and complexities (com) of the 2-factor structure emerging from the EFA.
 
 | Factor   | Item   |    FL |   com |
@@ -161,6 +190,10 @@ The results in Table 4 show the corrected (or scaled) versions of the indexes. A
 
 Chi-square analysis yielded satisfactory results as the p-value is above .05, meaning that we cannot reject the hypothesis that the model does not fit the data ( H 0 ) and hence we accept the hypothesis that our model, instead, fits the data ( H 1 )
 
+
+<!-- PAGE 9 -->
+
+
 Table 4: CFA fit index for 2-factor model. Scaled version of χ 2 is shown. For CFI, TLI and RMSEA we provide the robust version.
 
 | χ 2                      |   RMSEA |   CFI |   TLI |   SRMR |
@@ -178,6 +211,10 @@ Figure 4: Correlations among constructs, with each construct computed as the sum
 ## 2.10 Internal reliability
 
 Before proceeding with the evaluation of convergent/divergent validity, a crucial step in psychometric validation involves assessing internal reliability (the degree to which different items belonging to the same factor measure the
+
+
+<!-- PAGE 10 -->
+
 
 same construct; [55]). Ensuring high internal reliability is crucial, as it indicates that the scale produces stable and coherent measurements, strengthening its overall validity. Using Cronbach's Alpha ( α ), the standard metric for internal consistency assessment [55], we analysed each of the two factors and found acceptable [43] values ( α F 1 = . 893 ; α F 2 = . 781 ) suggesting that items within each factor ( Q 2 , Q 3 , Q 4 and Q 6 , Q 7 , Q 8 ) were consistent and reliable.
 
@@ -198,6 +235,10 @@ As an additional measure, we computed the correlations between Factor 1, Factor 
 ## 2.13 Closeness with LLMs and Reliance on LLMs
 
 In light of (a) the correlation with established measures of personality, cognitive flexibility and mental distress, (b) the rationale behind the design of the items (taking inspiration from the distinction between cognitive and affective trust; [1]) and (c) the close but distinct nature of the 2 factors, we decided to name Factor 1 and Factor 2 as 'closeness with LLMs' and 'reliance on LLMs'. We argue that closeness represents the affective dimension of trust in LLMs, mostly driven by feelings or emotions towards these systems. Reliance, instead, pertains to the cognitive aspect of trust and is primarily driven by logical assessment of LLMs' capabilities to deliver accurate and dependable responses. After
+
+
+<!-- PAGE 11 -->
+
 
 Figure 5: Correlations between Factor 1, Factor 2 and psychological measures (Depression, Anxiety, and Stress). These measures were derived using the DAsentimental framework, analysing the 10 words participants used to describe their feelings when interacting with LLMs. Out of the participants who used LLMs at least once ( n 1 = 521 ), several responses ( n 3 = 124 ) were excluded due to invalid entries in the emotion-response text boxes of the survey. Hence, these correlations, are relative only to ( n 4 = 397 ). Blue tiles indicate positive correlations; Red tiles indicate negative correlations. White tiles represent non-significant correlations. Significance levels are indicated as * ( p &lt; . 05 ), ** ( p &lt; . 01 ), *** ( p &lt; . 001 ).
 
@@ -221,6 +262,10 @@ Table 5: Regression of Age and Gender on closeness and reliance. We show the val
 | Age                 | -0.284 | .092 | .002 |
 
 Having assessed the relationship between demographic information and our TILLMI measures, we proceeded to further validate our findings evaluating its divergent validity.
+
+
+<!-- PAGE 12 -->
+
 
 ## 2.15 Divergent validity
 
@@ -249,6 +294,10 @@ From the strength analysis, Item 4 ( I invest plenty of time developing and impr
 
 We introduce the Trust-In-LLMs Index (TILLMI) as a new framework for measuring individuals' trust in LLMs. Via psychologically informed item design, and with the contribution of LLMs in item quality assessment, we carried out a comprehensive validation in a US sample. The final version of TILLMI yields two factors ('closeness with LLMs' and 'reliance on LLMs') that are related but distinct.
 
+
+<!-- PAGE 13 -->
+
+
 This is the key result of our work: We find that human trust in LLMs partitions in cognitive and affective components, similarly to what was found by past relevant research for human trust in co-workers [1, 3], management [45], organisations [2] and even computers [13]. Affective trust arises from emotional bonds, benevolence and repeated positive interactions [2]. In contrast, cognitive trust is based on rational assessments of competence, predictability, and reliability [1]. Both components operate in parallel, shaping human decisions about whom or what to trust [3]. Applying TILLMI's framework to LLMs, we observe two analogous dimensions. Users can develop cognitive trust based on the model's accuracy and consistency. We call this dimension 'reliance on LLMs'. However, affective trust also plays a role: users may feel comforted by the model's fluency and responsiveness, fostering an illusion of social connection [60], a dimension we call 'closeness to LLMs'.
 
 Our work adopts a disruptive perspective compared to past approaches in LLMs' trustworthiness, i.e. the task of understanding how unbiased/reliable LLMs' content can be. Liu and colleagues [9] defined LLMs' reliability as 'generating correct, truthful, and consistent outputs with proper confidence'. In this regard, Bo and colleagues [18] showed that disclaimers regarding LLMs' confidence in their responses improved users' over-reliance on models but were generally ineffective in promoting an appropriate level of reliance. Our approach shifts the focus toward human users' perceptions towards LLMs, a paradigm that is needed to understand whether humans can trust LLM-based conversational agents.
@@ -260,6 +309,10 @@ We also found a second psychological dimension, the one of 'closeness to LLMs'. 
 Understanding how these components can change across individuals has significant implications. For instance, we find closeness and reliance towards LLMs are higher in younger men. Our evidence aligns with relevant literature [14] showing a significant negative correlation between age and perceived trustworthiness of technology in general ( β = -0 . 17 , p &lt; . 001 ). Interestingly, literature regarding gender effects on trust towards AIs shows findings that differ according to the target of human trust. While women were found to showcase higher levels of trust in AI-enabled systems [62], a cross-country study [63] found no evidence for gender-based differences in trust towards AI educational technology. Our findings indicate that LLMs might be different from other AIs or technologies, underlining the need for future gender studies investigating human-LLM interactions.
 
 Via the DASentimental AI [58], we also found that higher levels of closeness and reliance were associated with lower mental distress. This result aligns well with relevant literature. Trust can foster emotional support, reduce feelings of isolation and provide security, which all reduce anxiety and depression [1, 3]. In organisational settings, trust in leaders and colleagues creates supportive environments that reduce stress [2, 61]. More recent works [8, 15] show that interacting with reliable systems reduces cognitive load and uncertainty, which are significant contributors to stress.
+
+
+<!-- PAGE 14 -->
+
 
 These elements can all apply to LLMs and thus converge in outlining a positive side that affective and cognitive trust in LLMs might have for mental well being.
 
@@ -282,6 +335,10 @@ Future works should acknowledge that trust in LLMs might change according to con
 ## 3.3 Conclusions
 
 TILLMI's factors of closeness with- and reliance on LLMs highlighted an intriguing range of interactions with personality traits, cognitive flexibility, demographics and mental health. We believe this provides compelling evidence that TILLMI can be a valuable tool when further exploring the complexities of LLM-human interactions. We believe our work provides a quantitative ground, supported by psychological theories, for investigating how humans can trust LLMs over time and across contexts of use, conditions and purposes.
+
+
+<!-- PAGE 15 -->
+
 
 ## 4 Materials and Methods
 
@@ -319,6 +376,10 @@ The Exploratory Factor Analysis (EFA) and the Confirmatory Factor Analysis (CFA)
 
 CFA was performed via the lavaan (v 0.6-17) package. When fitting the data using the cfa function in lavaan we set the following parameters: std.lv = TRUE, ordered = TRUE . Using the summary function setting fit = TRUE,
 
+
+<!-- PAGE 16 -->
+
+
 Table 8: Descriptive statistics for the initial version of the TILLMI. We show the response frequencies for each item, mean (M) and standard deviation ( σ ). 1 = never experienced it, 5 = always experience it.
 
 | Item   |   1 |   2 |   3 |   4 |   5 |     M |     σ |
@@ -348,6 +409,10 @@ We employed the EGAnet package (v 2.1.1; [68]) in R (v 4.4.2) for the Explorator
 
 We used GPT-4 to obtain 800 responses to the TILLMI using a novel prompt (see SI Appendix, Figure S2 ). The model was specifically asked to impersonate a US respondent, to match the population to which the questionnaire would have been administered. For the synthetic response generation, OpenAI's Python API was used. We chose the top-tier model (at the time of the collection), gpt-4-1106-preview . A total of 160 calls were made, randomising a different
 
+
+<!-- PAGE 17 -->
+
+
 persona instruction each time (age, biological gender, education, household income, trust in LLMs). Each call led to five different responses to the questionnaire in the form of a vector. To check whether the model was capable of understanding the prompt, we tested the technique of reverse prompting.
 
 ## References
@@ -367,6 +432,10 @@ persona instruction each time (age, biological gender, education, household inco
 - [13] Mari Madsen and Shirley Gregor. Measuring human-computer trust. In Proceedings of the 11th Australasian Conference on Information Systems , pages 53-59, 2000.
 - [14] D Harrison Mcknight, Michelle Carter, Jason Bennett Thatcher, and Paul F Clay. Trust in a specific technology: An investigation of its components and measures. ACM Transactions on management information systems (TMIS) , 2(2):1-25, 2011.
 
+
+<!-- PAGE 18 -->
+
+
 - [15] Kevin A. Hoff and Masooda Bashir. Trust in automation: Integrating empirical evidence on factors that influence trust. Human Factors , 57(3):407-434, 2015.
 - [16] Kristin E. Schaefer, Jessie YC Chen, James L. Szalma, and Peter A. Hancock. A meta-analysis of factors influencing the development of trust in automation: Implications for understanding autonomy in future systems. Human Factors , 58(3):377-400, 2016.
 - [17] Takayuki Gompei and Hiroyuki Umemuro. Factors and development of cognitive and affective trust on social robots. In Social Robotics: 10th International Conference, ICSR 2018, Qingdao, China, November 28-30, 2018, Proceedings 10 , pages 45-54. Springer, 2018.
@@ -385,6 +454,10 @@ persona instruction each time (age, biological gender, education, household inco
 - [30] Hudson F Golino and Sacha Epskamp. Exploratory graph analysis: A new approach for estimating the number of dimensions in psychological research. PloS one , 12(6):e0174035, 2017.
 - [31] Alexander P Christensen and Hudson Golino. Estimating the stability of psychological dimensions via bootstrap exploratory graph analysis: A monte carlo simulation and tutorial. Psych , 3(3):479-500, 2021.
 - [32] Alexander P Christensen, Luis Eduardo Garrido, and Hudson Golino. Unique variable analysis: A network psychometrics method to detect local dependence. Multivariate Behavioral Research , 58(6):1165-1182, 2023.
+
+
+<!-- PAGE 19 -->
+
 
 - [33] Katja Nowick, Tim Gernat, Eivind Almaas, and Lisa Stubbs. Differences in human and chimpanzee gene expression patterns define an evolving network of transcription factors in brain. Proceedings of the National Academy of Sciences , 106(52):22358-22363, 2009.
 - [34] Hudson Golino, Robert Moulder, Dingjing Shi, Alexander P Christensen, Luis Eduardo Garrido, Maria Dolores Nieto, John Nesselroade, Ritu Sadana, Jotheeswaran Amuthavalli Thiyagarajan, and Steven M Boker. Entropy fit indices: New fit measures for assessing the structure and dimensionality of multiple latent variables. Multivariate Behavioral Research , 56(6):874-902, 2021.
@@ -407,6 +480,10 @@ persona instruction each time (age, biological gender, education, household inco
 - [51] Ledyard R Tucker and Charles Lewis. A reliability coefficient for maximum likelihood factor analysis. Psychometrika , 38(1):1-10, 1973.
 - [52] Li-tze Hu and Peter M Bentler. Cutoff criteria for fit indexes in covariance structure analysis: Conventional criteria versus new alternatives. Structural equation modeling: a multidisciplinary journal , 6(1):1-55, 1999.
 
+
+<!-- PAGE 20 -->
+
+
 - [53] Albert Satorra and Peter M Bentler. A scaled difference chi-square test statistic for moment structure analysis. Psychometrika , 66(4):507-514, 2001.
 - [54] Peter M Bentler and Douglas G Bonett. Significance tests and goodness of fit in the analysis of covariance structures. Psychological bulletin , 88(3):588, 1980.
 - [55] Olly Robertson and Michael Scott Evans. Just how reliable is your internal reliability? an overview of cronbach's alpha ( α ). PsyPag Quarterly , 1(115):23-27, 2020.
@@ -423,6 +500,10 @@ persona instruction each time (age, biological gender, education, household inco
 - [66] Isabel Izquierdo, Julio Olea, and Francisco José Abad. Exploratory factor analysis in validation studies: Uses and recommendations. Psicothema , pages 395-400, 2014.
 - [67] Diana Mindrila. Maximum likelihood (ml) and diagonally weighted least squares (dwls) estimation procedures: A comparison of estimation bias with ordinal and multivariate non-normal data. International Journal of Digital Society , 1(1):60-66, 2010.
 - [68] Hudson Golino and Alexander P Christensen. EGAnet: Exploratory Graph Analysis - A framework for estimating the number of dimensions in multivariate data using network psychometrics , 2025. R package version 2.1.1.
+
+
+<!-- PAGE 21 -->
+
 
 ## SI Appendix
 
@@ -443,11 +524,19 @@ Factor loadings and component correlation for the 2-factor model. Cut thresholds
 | PA1                 | 1.000               | 0.748               |                     |
 | PA2                 | 0.748               | 1.000               |                     |
 
+
+<!-- PAGE 22 -->
+
+
 ## Appendix Figure S1
 
 <!-- image -->
 
 Correlations among constructs, with each construct computed as the sum of its constituent items. The correlations are computed using the Kendall-Tau correlation coefficient on the subset of the population who stated they have never used LLMs ( n 2 = 479 ) to assess divergent validity. Blue tiles indicate positive correlations; red tiles indicate negative correlations. White tiles represent non-significant correlations. Significance levels are indicated as * ( p &lt; . 05 ), ** ( p &lt; . 01 ), *** ( p &lt; . 001 ).
+
+
+<!-- PAGE 23 -->
+
 
 ## Appendix Figure S2
 

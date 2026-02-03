@@ -1,10 +1,11 @@
 ---
 source_file: Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.pdf
-conversion_date: 2026-02-03T08:46:34.155158
+conversion_date: 2026-02-03T18:24:41.147334
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Can LLMs Reason About Trust? A Pilot Study
 
 Anushka Debnath 1 , Stephen Cranefield 2 , Emiliano Lorini 3 , and Bastin Tony Roy Savarimuthu 2
@@ -25,6 +26,10 @@ The concept of trust is studied in various disciplines, including sociology, psy
 
 Within multi-agent systems (MAS), trust is typically modelled through two primary approaches: computational models, which define trust numerically based on prior performance and reputation [12], and socio-cognitive models [18]. While computational models are effective in structured environments, they fall short in
 
+
+<!-- PAGE 2 -->
+
+
 capturing the complexities of goals, intentions, and context that shape trust in dynamic, real-world scenarios. In contrast, the socio-cognitive model introduced by Castelfranchi and Falcone [1,4] asserts that trust is determined by an agent's beliefs, goals, and desires. According to this model, trust is defined as a 'composite mental attitude' whereby, for instance, a trustor (agent X) believes that a trustee (agent Y) possesses both the ability and the willingness to perform a specific action (A) whose execution ensures that the goal of the trustor will be achieved. However, implementing such complex mental states computationally presents significant challenges. Traditional symbolic reasoning approaches often struggle with the inherent complexity and are prone to failures in dynamic and uncontrolled environments, limiting their practical applicability [11]. We believe that LLMs show potential to fill this gap by capturing and reasoning about these nuanced mental states in a more flexible and scalable manner, as they learn trust-related patterns from large-scale data and adapt to new contexts without requiring predefined logical rules or manually crafted representations of trust, making them a promising tool for modelling trust in dynamic settings. The primary objective of this research is to evaluate whether LLMs can analyse conversations between two individuals to reason about trust, thereby facilitating the establishment and maintenance of trustworthy collaborative relationships. Additionally, our study explores whether an LLM, when instructed to act as one of the individuals in a trust relationship, can generate a strategic plan of actions to foster and build trust effectively.
 
 ## 2 Large Language Models
@@ -34,6 +39,10 @@ Large Language Models (LLMs) are advanced AI systems designed to understand, gen
 ## 3 The Concept of Trust
 
 The concept of trust has been studied in various ways. Out of the many numerous theories of trust, we chose Castelfranchi and Falcone's theory [1, 4] as the
+
+
+<!-- PAGE 3 -->
+
 
 foundation for our study because it provides a comprehensive framework that captures the complexity of trust, incorporating both emotional and cognitive aspects. The theory views trust as a mental attitude that is based on beliefs and goals and, more specifically, as a positive expectation about the action of the trustee. It emphasizes on the dynamic and goal-oriented nature of trust which highlights the evolving nature of trust according to changes in situations and its link to achieving specific objectives. Trust plays a critical role in decision making because it is highly context-dependent, shaped by environmental and situational factors and guided by factors such as safety, willingness and competence. These factors make Castelfranchi and Falcone's theory a rigorous foundation for exploring the different dimensions of trust in diverse scenarios. According to the theory, trust has four key components as follows:
 
@@ -56,6 +65,10 @@ We used four state-of-the-art commercial LLMs, namely gpt-4o, llama-3.370b-versa
 
 4 https://groq.com/
 
+
+<!-- PAGE 4 -->
+
+
 Fig. 1: System Prompt
 
 <!-- image -->
@@ -69,6 +82,10 @@ In this work, we consider the relation between a PhD student and their superviso
 In our work, we explore trust in professor-student interactions through two case studies. In the first case study, we analyse five different interactions where an LLM evaluates trust dynamics based on a sequence of exchanges. In the second case study, we examine two scenarios: one where the LLM acts as the supervisor and another where it acts as the student. This allows us to assess the LLM's ability to build trust and determine whether it can plan actions that induce trust.
 
 5 All the case studies and the LLM responses are available in the supplementary material [3].
+
+
+<!-- PAGE 5 -->
+
 
 Fig. 2: Flowchart of Prompt-Response Generation
 
@@ -88,6 +105,10 @@ Trust Questions and LLM Response Analysis At the end of each conversation scenar
 
 As highlighted by Castelfranchi and Falcone's theory, for trust to sustain in a relationship, the alignment of goals is very important. By asking about each person's goals after every conversation scenario, we assess whether their individual goals relate to each other, which in the end helps in sustaining trust.
 
+
+<!-- PAGE 6 -->
+
+
 ## 6 A. Debnath et al.
 
 2. 'How can the level of trust between the professor and the student at this stage be assessed based on their willingness, competence, and security from both sides, and how much trust exists between them?'
@@ -104,6 +125,10 @@ Response Analysis 1: The LLM assesses that the professor's primary goal is to me
 
 6 During analysis, we realised this prompt question is ambiguous about the direction of the trust relationship that the LLM is asked to comment on. Thus, the LLMs varied in whether they gave answers in one direction or both. The intention was that both directions should be considered. We will refine this query in future work.
 
+
+<!-- PAGE 7 -->
+
+
 Interaction 2 (not included here, see [3]): This interaction depicts a second conversation between the student and the professor where the student has diligently acted upon what the professor had told him to do in the previous meeting. The student also brings new ideas that could be implemented in the research and the professor seems to be quite satisfied with his progress.
 
 Response Analysis 2: The LLM identifies that the primary goals of both the professor and the student remain consistent, with no significant changes. It observes that trust between them is growing, as the professor acknowledges Alex's progress and expresses willingness to involve him in lab projects. Similarly, Alex demonstrates increasing competence and dedication through his diligent efforts. To further enhance trust, the LLM recommends that Alex continue developing his research skills and maintain active commitment to his work.
@@ -115,6 +140,10 @@ Response Analysis 3: According to the LLM, the professor's primary objective rem
 Interaction 4 (Fig. 4): In this conversation, the professor meets with Alex to review his progress, only to learn he missed his second deadline due to difficulties and also did not seek assistance. Disappointed by his lack of initiative, the professor questions his research ability. After Alex reassures him, the professor simplifies the task and requests weekly updates.
 
 Response Analysis 4: The LLM analysis reveals that the professor's primary goal remains unchanged, while Alex's objective continues to be to pursue a PhD. However, Alex must now prove his ability to handle tasks independently to regain the professor's trust. The LLM notes that trust between the two is currently strained due to Alex's performance issues, although both parties are willing to improve the situation. The professor is ready to support Alex by simplifying his task and offering another chance, while Alex is determined to improve and avoid past mistakes. The trust in Alex's competence is fragile, as the professor questions his ability to manage tasks independently after repeated delays. However, the relationship still holds a sense of security, as the professor provides con-
+
+
+<!-- PAGE 8 -->
+
 
 ## Fig. 3: Trust Questions Response Interaction 1
 
@@ -194,6 +223,10 @@ Alex: Understood. I'll make sure to dive deeer into that.
 
 you're dealing with sensitive health data.It's not just considerations.
 
+
+<!-- PAGE 9 -->
+
+
 structive feedback rather than punitive measures.To rebuild trust, Alex should show consistent progress, communicate openly, improve problem-solving, and seek feedback. This will enhance his reliability, demonstrate competence, and strengthen trust with the professor.
 
 Interaction 5 (not included here, see [3]): This conversation marks a turning point as Alex reveals his decision to forgo pursuing a PhD in favour of transitioning to industry work. Surprised by the sudden change, the professor questions Alex about his reasoning. Alex explains that a career in industry aligns better with his aspirations and goals. While the professor expresses disappointment over Alex's last-minute shift in direction and raises concerns about his ability to handle long-term challenges and commitments. He is also concerned about how this attitude might affect Alex when he transitions into the industry. He ultimately wishes Alex success in his future endeavours.
@@ -203,6 +236,10 @@ Response Analysis 5: The LLM suggests that the professor's ultimate goal remains
 From the analysis of the above dialogues and the LLM's responses, it can be concluded that the LLM demonstrates capability to analyse dialogue conversations between two individuals and to reason about trust by effectively considering its various components and aspects. Furthermore, it can help in development and maintenance of trust in relationships that require long-term commitment and mutual understanding between individuals, as in the case of the student and the supervisor.
 
 Tables 1 and 2 present a comparative analysis between the responses of the four LLMs with respect to the human ground truth for interactions 1 and 4, respectively. In this case, the human ground truth is the response of the first author. The responses have been compared across five different attributes and assigned scores on a scale of 0 to 3 based on their alignment with the human ground truth. A score of 0 indicates that the LLM response is entirely incorrect. A score of 1 signifies that only a few points align with the human ground truth, while most do not. A score of 2 means that the majority of the response aligns with the human ground truth, with only a few points that do not. Finally, a score of 3 denotes a complete match between the LLM response and the hu-
+
+
+<!-- PAGE 10 -->
+
 
 expectations. Alex: Understood. I'ii make sure to stay in touch and meet the evenif I don't want regularly. Alex: Thank you, Professor. I'll focus on that and send updates and running a basic clear plan and consistent progress.Let's simplify the taskProfessor: I hope so, Alex. But to move forward, I need to see a won't let this happen again. analysis. No more than that for now.
 
@@ -246,6 +283,10 @@ I wasn't able to
 
 **Alexohns**Thegoalistsuccessfullycomletethetasksassignedmrovepoblem-solvingskilland The professoraimstoseeconsistentprogressandresultsfromAlextomaintainconfidenceinhisabilities. **GoalofE
 
+
+<!-- PAGE 11 -->
+
+
 Table 1: Comparison of LLM Responses w.r.t. Ground Truth (Interaction 1)
 
 | Attributes   | First Author's Ground Truth                                                                                                                                                                                                                                                                                                                                                                 |   gpt-4o |   llama- 3.3-70b- versatile |   mixtral- 8x7b- 32768 |   gemma2- 9b-it |
@@ -274,6 +315,10 @@ In the second case study, we again consider the relation between a prospective P
 
 7 Due to the previously mentioned ambiguity in trust question 3, if an LLM only described one direction of the trust relationship, this was not considered an error.
 
+
+<!-- PAGE 12 -->
+
+
 we let the LLM act as the supervisor and observe whether it is capable of inducing trust in the student. As illustrated in Fig. 5, a basic background story was provided as the user prompt. The background tells a new story of Dr. Sofia Martinez who is a newly appointed assistant professor at Aragon Institute of Technology(AIT). The LLM is instructed to act her role in this scenario. The background highlights all her major research interests and her education so far. It also highlights the topic of her PhD research, her contributions to the academia and her future aspirations. It is also brought into notice that currently she does not have many PhD students, so she is actively searching for new PhD students. Then it highlights how the University helps prospective students to get admission into the PhD program through a seamless process. As the story proceeds, the professor receives an email from a student named Georgia Francis who is currently pursuing her Master's Degree from University of Rogini, Canada and wishes to pursue PhD under Dr. Sofia's guidance once she completes her current degree next year.
 
 In the system prompt, the details related to trust theory remain the same as illustrated in Fig. 1, but the questions to assess about trust vary in this case.
@@ -287,6 +332,10 @@ In this scenario, as the LLM is acting as the supervisor, we pose questions to t
 LLM Response Analysis : As illustrated in Fig. 5, the LLM acting as Dr. Sofia demonstrates trust-building strategies to encourage Georgia Francis. The approach focuses on three key elements from trust theory: willingness, competence, and safety. To establish willingness, Dr. Sofia warmly responds to Georgia's initial email, highlighting their shared research interests, potential collaboration opportunities, and her commitment to mentoring PhD students. This demonstrates genuine intent and initial engagement, signalling her openness to guide Georgia through her academic journey. For competence, Dr. Sofia shares details about her academic background, expertise in AI and healthcare, contributions to ethical AI research, and recent publications. By offering relevant resources and showcasing her achievements, she conveys her capability to guide meaningful research projects and support Georgia's academic growth. In ensuring safety, Dr. Sofia outlines the transparent and supportive PhD admission process at her university. She provides resources like research proposal templates, explains funding opportunities, and reassures Georgia about the inclusive and collaborative research environment. This helps create a secure atmosphere where Georgia can thrive both academically and personally.
 
 2. 'What subsequent actions should you perform to build trust with a student to guide them into the PhD program and discuss future research work together?'
+
+
+<!-- PAGE 13 -->
+
 
 Table 3: Comparison of LLM Responses w.r.t. Ground Truth (Scenario 1)
 
@@ -304,6 +353,10 @@ Table 3 presents a comparative analysis between the responses of the four LLMs w
 ## 4.3 LLM acts as one of the individuals: Student Perspective (Case Study 2; Scenario 2)
 
 In the second case, the scenario of the assistant professor and the student remains the same, but this time we let the LLM act as the student and observe whether it is capable of building trust with the Professor. The background story remains same as that of Georgia Francis, wanting to pursue PhD under Dr. Sofia Martinez at Aragon Institute of Technology. This time, we highlight the background of the student more, as compared to the Professor because the LLM
+
+
+<!-- PAGE 14 -->
+
 
 year. of Technology, once she graduates from her master's degree which will be early next inquiring about the possibility of pursuing PhD under your guidance at Aragon Institute pursuing her Master's Degree at University of Rogini in Canada. She has mailed you ano se eo peu ans e sog l e aau n uo a available, making the process seamless and accessible. information about scholarships, funding options for international students is readily previous degree who have high academic scores and many publications. Additionally,. offers conditional PhD admission to students before they even graduate from their applications, such as templates for research proposals and recommendations. AIT also admissions team provides clear instructions and resources for preparing strong including assistance in identifying suitable research areas and potential supervisors. The process for prospective PhD candidates. Applicants benefit from personalized guidance, Aragon Institute of Technology (AIT) ensures a supportive and transparent admission
 
@@ -366,6 +419,10 @@ What subsequent actionsshould youperform tobuildtrust withastudent toguide themi
 
 PhD studies that aligns with both our goals and interests. Bytakingtheestps,imtbuildtrong foudationof trust withorgienurin hefeescofident an uored into theresearchenvironment and communityat Aragon Institute of Technology. -Encouragehertokeepmeinformedabout herprogress inherMaster's programand anynewresearchideasshemay develop. decision to pursue a PhD under my guidance. 4.**Introduce to Current PhDStudents:**-Connect herwithcurrent PhD students undermysupervision,allowing herto gain insights
 
+
+<!-- PAGE 15 -->
+
+
 needs to play her role. This has been provided in the supplementary material [3].
 
 ## Trust Questions and LLM Response Analysis
@@ -384,11 +441,19 @@ LLM Response Analysis: The response in the supplementary material [3] suggests t
 
 In the first case study, the paper investigates whether LLMs can reason about trust from conversations between individuals, focusing on the PhD studentsupervisor relationship. Five different dialogue scenarios were analysed, revealing
 
+
+<!-- PAGE 16 -->
+
+
 that LLMs can assess trust levels based on factors like willingness, competence, and safety. The models also identified individual goals and suggested ways to improve trust in each scenario. Furthermore,in the second case study two different scenarios of PhD student-supervisor relationship were considered which tests whether LLMs can generate strategic action plans to build trust, even without a provided conversation. Acting as a supervisor, the LLM proposed actionable steps to motivate the student and foster trust, ultimately aiding their entry into a PhD program. When, acting as a student, the LLM proposed different ways and actionable steps through which the student increases the Professor's confidence in taking her as a PhD student under her guidance.
 
 From the results across the four models, we can infer that Gpt-4o aligns well with the ground truth, excelling in competence and trust but occasionally struggling with security. Llama-3.3-70b-versatile performs moderately but consistently underperforms when assessing competence and reliability for complex tasks. Mixtral-8x7b-32768 is inconsistent, strong in assessing willingness but weak in goals and competence. Gemma2-9b-it excels in goal alignment but struggles significantly in willingness, competence, and security, making it the weakest overall. While these results are promising, particularly for GPT-4o, LLMs must be used with caution due to hallucinations and occasional misjudgments in evaluating criteria and hence, can be used by software agents to brainstorm potential ideas to improve trust in relationships.
 
 Although LLMs have shown reasonable ability to reason about trust, several future research directions remain. First, enhanced multimodal analysis could extend LLMs to assess trust using inputs like tone of voice, body language, and facial expressions. Second, improving trust in group dynamics is crucial for fostering trust in complex team settings, hence LLMs can be enabled to reason about and build trust in group or team contexts, where conversations are tracked for a long period of time in multi-person teams. Third, LLMs should be developed for real-world testing where they can act as assistants who are capable of building and maintaining trust in scenarios involving professional mentorship, customer-client relationships, and team collaborations, validating their utility and identifying limitations. Fourth, AI planning techniques could enable LLMs to create goal-driven action plans for maintaining trust. Fifth, symbolic AI offers a robust framework for representing trust through logical systems, enhancing transparency and explainability in trust assessments. Herzig et al. (2010) introduced a formal logic of trust and reputation [8] which essentially formalizes Castelfranchi and Falcone's theory of trust [1,4], while Castelfranchi et al.(2008) emphasized the role of agents' goals, beliefs, and intentions [2], approving of a non-reductionist approach that views trust as a complex, multi-dimensional phenomenon rather than a mere probabilistic expectation. Lorini and Demolombe (2008) extended this by introducing graded trust for nuanced evaluations [10]. Future work in this direction should focus on adapting these models for realworld use by integrating adaptive learning to handle trust dynamics, context, and real-time assessments, enhancing symbolic AI in human-agent collaboration.
+
+
+<!-- PAGE 17 -->
+
 
 ## References
 

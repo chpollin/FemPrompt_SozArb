@@ -1,10 +1,11 @@
 ---
 source_file: Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.pdf
-conversion_date: 2026-02-03T08:43:40.577051
+conversion_date: 2026-02-03T18:21:54.243821
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 ## A Formal Account of AI Trustworthiness: Connecting Intrinsic and Perceived Trustworthiness
 
 Piercosma Bisconti 1 , Letizia Aquilino 2 , Antonella Marchetti 2 , Daniele Nardi 4
@@ -26,6 +27,10 @@ Arguably, AI systems are distinguished from other technologies by their autonomy
 The European Union (EU) has recognized the critical importance of trustworthiness in AI systems. This recognition is evident in legislative and regulatory frameworks such as the AI Act, which seeks to govern the use of AI by establishing clear rules  for  its  development  and  application.  Moreover,  the  EU's  Architecture  of  Standards  of  the  European  Committees  for Standardization (CEN) and for Electrotechnical Standardization (CENELEC) specifically emphasizes the need to develop standards that ensure the trustworthiness of AI systems, notably for allowing the presumption of conformity with the EU AI Act. These initiatives aim to create a regulated environment where AI's benefits are maximized, and its risks are minimized, thereby fostering innovation, while protecting citizens' rights.
 
 Previous literature has studied the conceptualization of trust in artificial intelligence (AI) drawing from theories initially developed to understand trust in human-human relationships. One traditional understanding of trust in interpersonal interactions encompassed three key components: ability, benevolence, and integrity (Mayer et al., 1995). Ability refers to the perceived skills and competence of the trustee in fulfilling a given task; benevolence indicates positive intentions not solely driven by self-interest; while integrity underscores the moral and just conduct of the trustee, ensuring consistency, predictability, and honesty. Initially, researchers attempted to apply this framework directly to assess trust in technology. However, debates arose regarding the feasibility of directly applying these components to human-to-machine trust due to the fundamental differences between humans and technology, particularly the lack of (perceived and actual) voluntariness and moral agency in technology.
+
+
+<!-- PAGE 2 -->
+
 
 McKnight and colleagues (2011) proposed an adapted framework focusing on three dimensions of trust in technology: functionality, reliability, and helpfulness. This approach acknowledged the unique attributes of technology, emphasizing its capability,  consistency  of  operation,  and  usefulness  to  users.  Some  studies  bridged  the  gap  between  human-trust  and technology-trust, suggesting a conceptual framework centred on 'trust in automation' (Lee &amp; See, 2004). This framework delineated trust across performance, process, and purpose categories, capturing both operational characteristics and users' goals and expectations.
 
@@ -54,6 +59,10 @@ Building on this discussion, we first consider the ISO definition of Trustworthi
 ## 'Trustworthiness is the ability to meet stakeholder expectations in a verifiable manner.'
 
 A note to this definition clarifies that, while trustworthiness is described as an ability, it is more aptly an attribute. In agreement with our earlier arguments, it is indeed more precise to classify it as an attribute. Specifically, an ability suggests a  property  that  the  system  possesses  and  can  be  evaluated  independently;  it  does  not  inherently  require  interaction.  In contrast, the term 'attribute' implies a quality assigned by an observer, thereby emphasising its interactional nature. Thus, we propose a paraphrase of the ISO definition:
+
+
+<!-- PAGE 3 -->
+
 
 "Trustworthiness is an attribute, outcome of meeting stakeholders' expectations".
 
@@ -89,6 +98,10 @@ To formalize this example, consider the following schema:
 - -Trustworthiness attribution: Low perceived uncertainty leads the observer to attribute high trustworthiness to the robot, believing it possesses the necessary intrinsic characteristics to achieve the goal. High uncertainty results in a low attribution of trustworthiness.
 - -Outcome prediction: Based on the level of trustworthiness attributed, the observer predicts whether the robot will successfully complete the task.
 
+
+<!-- PAGE 4 -->
+
+
 More schematically:
 
 - at time 0 the system starts performing an action to reach the target goal Z (object of the expectation),
@@ -112,6 +125,10 @@ However,  a  paradigm  change  is  slowly  emerging,  to  capture  those  charac
 
 In  the  relationship  between human beings, the individual inevitably forms a mental model of the other agent. Said model becomes more detailed with each interaction and the more information is possessed about the person, the more the sense of understanding  and  predictability  increases.  Ultimately,  gathering  information  constitutes  a  strategy  to  reduce  perceived uncertainty. When a sufficient amount of information is available, the person becomes more 'transparent' and it is possible to create a mental model that is close to the real way of working of the other; therefore, predictions about future behaviors align with the actual behaviors. Similarly, in human-machine interaction, this translates into a desire for information regarding the functioning  of  the  system.  This  can  be  satisfied  by  endowing  the  system  with  transparency.  It  has  been  found  that,  as  a consequence of reducing uncertainty, the transparency of a system can result in increased levels of trust (Liu, 2021). Generally, explanations  about  algorithmic  models  have  been  proven  to  enhance  users'  trust  in  the  system  (Zhang  &amp;  Curley,  2018). However, some other studies have shown how providing information is not always helpful. For instance, Kizilcec (2016) showed how too much information negatively influences trust; Papenmeier et al. (2022) found how users can have more trust and insight into AI when there is no explanation about how the algorithm works, rather than when there is. Certainly, one aspect worth noting pertains to the adequacy of the information provided, depending, for example, on how it is framed and on its level of complexity. In any case, reflecting on uncertainty, it can be assumed that for each system an ideal level of information could be identified so that it contributes to reduce uncertainty without confusing or overstimulating the user. Regarding this, the quality and quantity of information about the system should be tailored to the user's needs, e.g., depending on their need of knowledge to reduce uncertainty and on their ability to handle certain amounts of information without feeling overstimulated. Other than quantity and level of complexity, also the content of information should be chosen carefully. Transparency can be understood as giving information about the rationale of the system, as its rate of success in giving appropriate and correct outputs, or again as its speed in giving outputs. Users could feel the need of one kind of information more than others to form a mental model that is effective for them in contributing to reduce their levels of perceived uncertainty.
 
+
+<!-- PAGE 5 -->
+
+
 ## Agency Locus
 
 However, even in the absence of concrete data with respect to operation, the users will still form assumptions in their mind. Such perception may impact the level of perceived uncertainty, especially by comparing mental images of the system's way of 'thinking' that see it as more or less similar to human thinking mechanisms. The degree of humanness of a system's operating mechanisms may also derive from what the source of its model is. The machine's model or the cause of its apparent agency have been described as perceived agency locus, which can be external as created by humans, or internal, generated by the machine.
@@ -121,6 +138,10 @@ This distinction has become relevant with the development of AI technologies and
 ## Human Oversight
 
 The presence of human oversight in the interaction setting requires a human agent to check and, in case, filter the workings and the output produced by the system. The fact that the process is not solely controlled by a machine could contribute to establish lower levels of perceived uncertainty, as the user is 'reassured' by the presence of a third agent that is supposed to be perceived as more similar to them and therefore more understandable and predictable. The predictability of the human's actions and decisions will, therefore, transfer to the artificial agent.
+
+
+<!-- PAGE 6 -->
+
 
 From  these  premises,  a  theoretical  framework  was  developed  (Figure  1)  aiming  to  comprehensively  represent  the mechanisms of trust formation as mediated by uncertainty. This framework is intended to fully capture the dynamics of trust development in AI systems, by including characteristics of both the human agent and the AI system. Keeping an eye on both parts of the interaction is an element of novelty within the human-machine interaction research.
 
@@ -135,6 +156,10 @@ Personality traits have been found to be predictive of the acceptance of AI (Ber
 Propensity to trust represents a person's general tendency to trust others regardless of the specific situation (McKnight et al., 1998). Dispositional trust is generally a stable trait as it is not immediately influenced by context and only undergoes changes due to learning from previous interactions (Colquitt et al., 2007). Users with higher levels of propensity to trust will be more prone to accepting and trusting new systems, even without needing to gather a lot of information about them. They could tolerate uncertainty better, being naturally drawn to trusting other agents (human or artificial).
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 ## A Formal Account of Trustworthiness
 
@@ -174,6 +199,10 @@ Perceived Trustworthiness, TP , is the other element of ii). As for what concern
 
 In this formula, Tp is determined first by the observed behaviors ( B ), that might be measured with quali-quantitative methods as questionnaires or focus groups. These behaviors are the ones that are displayed by the system and perceived by an observer, where the way they are perceived have of course epistemic priority. Second, iv) is determined by ( B ) alignment with a composite measure of expectations of behaviors ϕ ( L , A , H,M ), which depends on Level of Transparency ( L ), Agency Locus ( A ), Human Oversight ( H ), the mediators ( M ) identified above (e.g. propensity to trust, personality traits, etc.) and 𝑢 , explained below. This new  definition  of 𝜙 allows  us  to  consider  how  these  four  factors  collectively  shape  stakeholder  expectations  and, consequently, perceived uncertainty. Therefore, Tp is given by the relationship between the behaviors that are observed ( B ) and the ones expected ( ϕ ) in performing the task. As every stakeholder is an observer, this formalization could be theoretically applied to any stakeholder. On the other hand, this schematization cannot completely capture the complexity of stakeholders' perceived trustworthiness, since it is not sensitive a) to the perspective and the specific point of observation of each specific stakeholder and b) therefore to the fact that each stakeholder might value specific characteristics of the AI system differently. In fact, the stakeholders of an AI system go well beyond users, that are our ideal observers in the case of formula iv). Taking as example a medical decision support system, the stakeholders impacted directly are at least the physician and the patient. It is easy to note that already these two have profoundly different expectations, concerns, target goals.
 
+
+<!-- PAGE 8 -->
+
+
 Perceived Uncertainty 𝑢 , completing formula iv)
 
 <!-- formula-not-decoded -->
@@ -197,6 +226,10 @@ This adjustment allows Δ T to capture not only the discrepancies in quantity an
 The conceptual model formulated in this paper has the objective to theoretically ground the concept of AI trustworthiness in its double understanding of a system possessing some characteristics, and the perception of humans toward the system.
 
 The formula reflects a foundational principle: the closer the system's behaviors align with stakeholder expectations and the lower the perceived uncertainty, the higher the attributed trustworthiness.
+
+
+<!-- PAGE 9 -->
+
 
 The practical utility of our trustworthiness formula is manifold. Firstly, by quantifying trustworthiness as a function of both perceived and intrinsic qualities, stakeholders can pinpoint specific areas where an AI system may fall short of expectations or excel.  This  dual  perspective  allows  for  targeted  improvements  in  AI  design  and  deployment,  ensuring  that  both  technical robustness and user perception are addressed simultaneously. For example, in the development of autonomous vehicles, our formula can help assess how well these vehicles meet safety standards (intrinsic qualities) while also gauging public trust through perceived safety and reliability.
 
@@ -223,6 +256,10 @@ vii) Trustworthiness is use-case sensitive, and 𝑄 𝑄𝑡𝑜𝑡𝑎𝑙 sh
 Given all this caveats, our integrative model aims to capture the essence of trustworthiness in AI systems, linking intrinsic system characteristics with the human perceptions influenced by uncertainty. By acknowledging and quantifying the impact of perceived uncertainty, the formula provides a tool for evaluating trust in AI systems, emphasizing the importance of aligning system behaviors with stakeholder expectations to foster trust.
 
 In future work we aim to effectively incorporate issues i) to vii) into our formula, and experimentally validate our claims related to perceived uncertainty.  As anticipated, the experimental testing of the presented hypotheses is set to be done through the manipulation of transparency, agency locus and the presence of human oversight. Specifically, what is to be investigated is how the level of transparency with which the system is equipped can influence the user's perception of uncertainty. Although transparent systems have been found to be judged as more trustworthy (e.g., Zhang &amp; Curley, 2018), there is no guarantee that providing complete transparency is an effective way to ensure optimal interaction. Indeed, people may not respond positively to a large amount of information because of the cognitive load it would entail. Therefore, it is interesting to test how much information people need in order to reach an acceptable degree of uncertainty, also in relation to their natural predisposition to trust. Further objective is to test how much human intervention in the operation of the artificial system can affect perceived uncertainty. Building on what has already been reported in the literature (e.g., Liu, 2021), we assume that operations characterized as human-like lead to a reduction in the perception of uncertainty. Such human likeness can be expressed either as external agency locus or as the presence of oversight by a human agent. In terms of experimental setting, what is intended is to propose to the participants an interaction with an artificial system under different conditions, namely: in  the  presence  of  low,  medium or high levels of transparency depending on the amount of information provided; with systems presented as having internal or external agency locus; with or without the presence of oversight by a human. From the combination of these conditions, we then want to observe which elements are most salient in modulating uncertainty and which levels are optimal for improving the quality of interaction.
+
+
+<!-- PAGE 10 -->
+
 
 A solid understanding of the concept of trustworthiness is of paramount importance for the future of design and policies, since this framework is becoming the overarching one, at least in the EU, for development and adoption of AI systems.
 
@@ -251,6 +288,10 @@ Graziani, M., Dutkiewicz, L., Calvaresi, D., Amorim, J. P., Yordanova, K., Vered
 Grimes, G. M., Schuetzler, R. M., &amp; Giboney, J. S. (2021). Mental models and expectation violations in conversational AI interactions. Decision Support Systems, 144, 113515.
 
 Jeronimus, B. F., Kotov, R., Riese, H., &amp; Ormel, J. (2016). Neuroticism's prospective association with mental disorders halves after adjustment for baseline symptoms and psychiatric history, but the adjusted association hardly decays with time: A meta-
+
+
+<!-- PAGE 11 -->
+
 
 - analysis  on  59  longitudinal/prospective  studies  with  443  313  participants.  Psychological  Medicine,  46(14),  2883-2906. https://doi.org/10.1017/S0033291716001653 Jiang,  J.,  Kahai,  S.,  &amp;  Yang,  M.  (2022).  Who  needs  explanation  and  when?  Juggling  explainable  AI  and  user  epistemic uncertainty. International Journal of Human-Computer Studies, 165, 102839. John, O. P., Naumann, L. P., &amp; Soto, C. J. (2008). Paradigm shift to the integrative big five trait taxonomy. Handbook of Personality: Theory and Research, 3(2), 114-158. John, O. P., Naumann, L. P., &amp; Soto, C. J. (2008). Paradigm shift to the integrative big five trait taxonomy. Handbook of Personality: Theory and Research, 3(2), 114-158. Jones,  S.  L.,  &amp;  Shah,  P.  P.  (2016).  Diagnosing  the  locus  of  trust:  A  temporal  perspective  for  trustor,  trustee,  and  dyadic influences on perceived trustworthiness. Journal of Applied Psychology, 101(3), 392. Kätsyri, J., Förger, K., Mäkäräinen, M., &amp; Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses:  support  for  perceptual  mismatch  as  one  road  to  the  valley  of  eeriness.  Frontiers  in  psychology,  6,  390 https://doi.org/10.3389/fpsyg.2015.00390 Kaur, D., Uslu, S., Rittichier,  K.  J.,  &amp;  Durresi,  A.  (2022).  Trustworthy  artificial  intelligence:  a  review.  ACM  Computing Surveys (CSUR), 55(2), 1-38. Kizilcec, R. F. (2016). How Much Information?: Effects of Transparency on Trust in an Algorithmic Interface. Proceedings of the 2016 CHI Conference on Human Factors in Computing Systems, 2390-2395. https://doi.org/10.1145/2858036.2858402 Lin, J., Amini, S., Hong, J. I., Sadeh, N., Lindqvist, J., &amp; Zhang, J. (2012). Expectation and purpose: understanding users' mental models of mobile app privacy through crowdsourcing. In Proceedings of the 2012 ACM conference on ubiquitous computing (pp. 501-510). Liu, B. (2021). In AI We Trust? Effects of Agency Locus and Transparency on Uncertainty Reduction in Human-AI Interaction. Journal of Computer-Mediated Communication, 26(6), 384-402. Scopus. https://doi.org/10.1093/jcmc/zmab013 Matsumoto, D., &amp; Juang, L. (2016). Culture and psychology. Cengage Learning. Mayer, R. C., Davis, J. H., &amp; Schoorman, F. D. (1995). An Integrative Model of Organizational Trust.  The Academy of Management Review, 20(3), 709. https://doi.org/10.2307/258792 McKnight, D. H., Cummings, L. L., &amp; Chervany, N. L. (1998). Initial Trust Formation in New Organizational Relationships. The Academy of Management Review, 23(3), 473. https://doi.org/10.2307/259290 Milliken, F. J. (1987). Three types of perceived uncertainty about the environment: State, effect, and response uncertainty. Academy of Management Review, 12(1), 133-143. Mittelstadt, B. D., Allo, P., Taddeo, M., Wachter, S., &amp; Floridi, L. (2016). The ethics of algorithms: Mapping the debate. Big Data &amp; Society, 3(2), 205395171667967. https://doi.org/10.1177/2053951716679679 Ososky, S., Philips, E., Schuster, D., &amp; Jentsch, F. (2013). A Picture is Worth a Thousand Mental Models: Evaluating Human Understanding of Robot Teammates. Proceedings of the Human Factors and Ergonomics Society Annual Meeting, 57(1), 12981302. https://doi.org/10.1177/1541931213571287 Papenmeier, A., Kern, D., Englebienne, G., &amp; Seifert, C. (2022). It's Complicated: The Relationship between User Trust, Model Accuracy and Explanations in AI. ACM  Transactions on Computer-Human Interaction, 29(4). Scopus. https://doi.org/10.1145/3495013 Rhee,  J.,  Parent,  D.,  &amp;  Basu,  A.  (2013).  The  influence  of  personality  and  ability  on  undergraduate  teamwork  and  team performance. SpringerPlus, 2(1), 16. https://doi.org/10.1186/2193-1801-2-16 Schlicker, N., &amp; Langer, M. (2021). Towards warranted trust: A model on the relation between actual and perceived system trustworthiness. In Proceedings of Mensch und Computer 2021 (pp. 325-329). Stanton, B., &amp; Jensen, T. (2021). Trust and artificial intelligence. Preprint . Zhang, J., &amp; Curley, S. P. (2018). Exploring Explanation Effects on Consumers' Trust in Online Recommender Agents.
 

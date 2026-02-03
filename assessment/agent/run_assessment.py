@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-LLM-based Assessment for FemPrompt Literature Review
+LLM-based Assessment for Literature Review Literature Review
 
 Führt automatisiertes Assessment von Papers durch, basierend auf dem
 Kategorienschema in categories.yaml. Verwendet Claude Haiku 4.5 für

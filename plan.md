@@ -1,4 +1,4 @@
-# FemPrompt Projektplan
+# Literature Review Projektplan
 
 **Projekt:** Deep-Research-gestützte Literature Reviews im Praxistest
 **Publikation:** Forum Wissenschaft 2/2026
@@ -181,12 +181,12 @@ AND
    ```bash
    python analysis/generate_obsidian_vault_improved.py \
      --summaries analysis/summaries/ \
-     --output FemPrompt_Vault/
+     --output Literature Review_Vault/
    ```
 
 **Struktur:**
 ```
-FemPrompt_Vault/
+Literature Review_Vault/
 ├── Papers/           # 200+ Paper-Notizen
 ├── Concepts/         # ~100 Konzept-Notizen
 ├── MOCs/             # Thematische Übersichten
@@ -245,7 +245,7 @@ Nach Pipeline-Abschluss:
 
 ### 4.2 Existierende Infrastruktur
 
-Das SozArb-Projekt hat bereits ein funktionierendes Web-Interface in `docs/`:
+Das bestehende-Projekt hat bereits ein funktionierendes Web-Interface in `docs/`:
 
 | Komponente | Status | Beschreibung |
 |------------|--------|--------------|
@@ -256,9 +256,9 @@ Das SozArb-Projekt hat bereits ein funktionierendes Web-Interface in `docs/`:
 | `js/advanced-features.js` | ✅ Vorhanden | Network Graph (vis-network) |
 | `data/*.json` | 🔄 Anpassen | Datenformat erweitern |
 
-**Deployment:** GitHub Pages → `https://chpollin.github.io/FemPrompt_SozArb/`
+**Deployment:** GitHub Pages → `https://chpollin.github.io/Literature Review_bestehende/`
 
-### 4.3 Erweiterungen für FemPrompt
+### 4.3 Erweiterungen für Literature Review
 
 #### Must Have (Launch)
 
@@ -364,7 +364,7 @@ Das SozArb-Projekt hat bereits ein funktionierendes Web-Interface in `docs/`:
 3. **Deployen:**
    ```bash
    git add docs/
-   git commit -m "feat: update web interface with FemPrompt data"
+   git commit -m "feat: update web interface with Literature Review data"
    git push
    # → GitHub Pages aktualisiert automatisch
    ```

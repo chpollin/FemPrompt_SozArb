@@ -1,10 +1,11 @@
 ---
 source_file: Waag_2023_Rationalisierung_durch_Digitalisierung.pdf
-conversion_date: 2026-02-03T09:30:05.058575
+conversion_date: 2026-02-03T19:00:59.563851
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## FORUM
 
 ## Rationalisierung durch Digitalisierung?
@@ -27,6 +28,10 @@ Ich danke den beiden anonymen Gutachter*innen für ihre wertvollen Hinweise.
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## Rationalization through digitalization?
 
 A sociological perspective on the use of digital technologies in social work
@@ -41,6 +46,10 @@ Als Ausgangspunkt für die Analyse wird ein interaktionssoziologischer Zugang ge
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 aus den Augen verliert, der vor allem jedoch anschließt an die Bestimmung von Interaktionen als soziale Systeme im Sinne Niklas Luhmanns (1981, 1997). 1 Diese Entscheidung liegt einerseits darin begründet, dass die soziologische Systemtheorie das Soziale umfassender in den Blick nimmt als eine bloße Interaktionstheorie, indem sie auch Organisations- und Gesellschaftstheorie ist und Soziale Arbeit so kontextualisieren kann, dass neuere arbeitssoziologische und digitalisierungsbezogene Arbeiten anschlussfähig sind. Andererseits enthält die Systemtheorie einen ausgearbeiteten Kommunikationsbegriff (Luhmann 1987a), der als konstituierendes Element sozialer Systeme auch ein Bezugspunkt für die Analyse der Einsatzmöglichkeiten digitaler Technologien in Interaktionssystemen sein kann.
 
 Zunächst werden im Folgenden die Teilnehmer*innen des Dienstleistungsdreiecks und ihre Relevanz für die Soziale Arbeit bestimmt. Anhand der Beschreibung der Bedeutung von Organisationen sowie von Interaktionssystemen aus Fachkräften und Hilfsbedürftigen, kann zudem die geringe Wahrscheinlichkeit der Rationalisierung helfender Interaktionen plausibilisiert werden. Auf der Basis der Unterscheidung von trivialer und nichttrivialer Maschinen (von Foerster 1993) wird nachfolgend gezeigt, dass Digitaltechnik interpersonale Interaktionen entweder infrastrukturell ermöglicht und vom Kriterium der Kopräsenz löst oder selbst zur eigenständigen Kommunikationspartnerin von Personen wird. Im Anschluss an Seelmeyer und Waag (2020) rücken somit drei wesentliche Entwicklungen der interaktiven Techniknutzung in den Fokus: die Mediatisierung von Interaktionen, in der Weise, dass Hilfsbedürftigkeit auch ohne körperliche Kopräsenz und trotzdem interpersonal bearbeitet werden kann, die Ermöglichung von Interaktionen mit autonomer Digitaltechnik im Sinne einer ausschließlich eigenständigen Bearbeitung von Hilfsbedürftigkeit sowie die Verschärfung der Asymmetrien zwischen Fachkräften und Hilfsbedürftigen sowie zwischen Fachkräften und Organisationen. All diese Entwicklungen bieten aus Sicht der Beteiligten spezifische Chancen und Risiken, vor allem verursachen sie aber neue interaktive Abstimmungsprobleme. Der Text endet mit einer Betonung der Kontingenz der Techniknutzung und empfiehlt ihre ergebnisoffene Erprobung und Reflexion.
@@ -53,6 +62,10 @@ Als Soziale Arbeit sollen im Folgenden diejenigen personenbezogenen Dienstleistu
 
 <!-- image -->
 
+
+<!-- PAGE 4 -->
+
+
 (Fuchs und Schneider 1995) erst spät im noch immer strittigen Status der Sozialen Arbeit als eigenständige Profession mündet (Stichweh 2016, S. 68ff.; Thole 2020, S. 20). Soziale Arbeit orientiert sich mal mehr und mal weniger deutlich an einzelnen gesellschaftlichen Teilbereichen und ist durch eine hohe Pluralität und Heterogenität ihrer Handlungsfelder gekennzeichnet. Die Gründe der Entstehung sowie der professionellen Bearbeitung von Hilfsbedürftigkeit liegen in den Strukturen und Dynamiken der modernen Gesellschaft (Luhmann 1997, S. 633; Scherr 2001, S. 215). In ihr verschwinden reziproke Hilfe und Mildtätigkeit zwar nicht (Wagner 2019), Angehörige, Freund*innen und Nachbar*innen können Hilfsbedürftigkeit jedoch ebenso wenig dauerhaft und zuverlässig bearbeiten wie mildtätige Fremde. Zu diesem Zweck sind in den modernen Wohlfahrtsstaaten zahllose Organisationen entstanden (Drepper und Tacke 2010, S. 243). Erst ihnen gelingt es, genügend Personen als Mitglieder zu rekrutieren, die Hilfsbedürftigkeit professionell, zuverlässig und dauerhaft bearbeiten und sich dabei organisationsspezifischen Anforderungen unterwerfen (Bommes und Scherr 2000, S. 111). Organisationen und ihre Teilnahmebedingungen bilden folglich den Rahmen der interaktiven Bearbeitung von Hilfsbedürftigkeit (ebd., S. 207).
 
 In Abgrenzung zu Dokumentations- und anderen, mutmaßlich bürokratischen Tätigkeiten, gilt die unmittelbare Interaktion zwischen Leistungsgeber*in und Leistungsnehmer*in gemeinhin als professioneller Kern der Sozialen Arbeit. Die Bestimmung von Interaktionen beginnt sowohl bei Goffman (1964, 1983) als auch bei Luhmann (1981, 1997) mit der wechselseitigen Wahrnehmung von Personen als körperlich Anwesende. Ist diese Voraussetzung erfüllt, kann im Sinne Watzlawicks nicht mehr nicht kommuniziert werden, eine Interaktion ist unvermeidlich (Watzlawick et al. 2017). Wie für Organisationen und die funktionalen Teilsysteme der Gesellschaft, gilt auch für Interaktionen, dass ihr Handlungspotenzial prinzipiell so groß ist, dass es nur selektiv realisiert werden kann. Um in einem Interaktionssystem sinnvoll zu kommunizieren, ist demnach eine Auswahl von Mitteilungen notwendig, und nicht alles, was potenziell mitteilbar ist, kann gesagt werden. Diese Auswahl beeinflusst, wie die anschließende Kommunikation sinnvoll weiterlaufen kann (Luhmann 1997, S. 815).
@@ -62,6 +75,10 @@ In helfenden Interaktionen ist die Notwendigkeit der selektiven Einschränkung v
 Die wechselseitige Konditionierung der Interaktionspartner*innen setzt erst an dieser Asymmetrisierung an (Luhmann 1981, S. 88), die in der Sozialen Arbeit mit einem Machtungleichgewicht zugunsten der professionell Helfenden verbunden ist (Dunkel 2011, S. 191). Dies zeigt sich etwa, wenn Hilfsbedürftige ihren Fall betreffende persönliche Fragen beantworten müssen, die sie den Fachkräften in der Regel nicht stellen können (Bommes und Scherr 2000, S. 212). Mitunter ist
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 die Gewährung von Hilfeleistungen an Bedingungen geknüpft, deren Nichteinhalten Zwangsmaßnahmen zur Folge haben kann (Hartmann 2011, S. 82f.). Professionelle Sozialarbeiter*innen sind 'auf der Basis dieser Asymmetrie mit Deutungs-, Definitions- und Entscheidungsmacht insofern ausgestattet, als sie Hilfe zugestehen oder verweigern und die Fallproblematik in einer Weise fassen können, die von den Klienten abgelehnt werden kann und deshalb doch nicht verworfen werden muss' (Bommes und Scherr 2000, S. 220). Zugleich sind Fachkräfte als Mitarbeiter*innen an eine Organisation und ihre Weisungen gebunden, was sich in einer Asymmetrie eigener Art niederschlägt, etwa in der Form strikter V orgaben für die Dokumentation von Hilfeleistungen (Ley und Seelmeyer 2014; Minssen 2019, S. 148).
 
@@ -75,6 +92,10 @@ Interaktiver Arbeit wird zugeschrieben, nur bedingt rationalisierbar zu sein (Ha
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 kontingenten Redebeiträgen und nonverbalen Mitteilungen beeinflussen die Beteiligten den Interaktionsverlauf und machen ihn einzigartig. Ihre Motive und Gedanken bleiben dabei prinzipiell ebenso unkalkulierbar wie ihre Redebeiträge; Ablehnung, Widerspruch und Missverstehen sind jederzeit möglich.
 
 Wären helfende Interaktionen vollständig rationalisierbar, würde das ihre Kalkulierbarkeit voraussetzen, es wäre zweifelsfrei angebbar, dass eine bestimmte Mitteilung zuverlässig eine gewünschte Reaktion des Gegenübers zur Folge hätte. Dies widerspricht jedoch der Möglichkeit, dass selbst in hochstandardisierten Interaktionen Abstimmungsprobleme auftreten können. Die umfassende Rationalisierung von Interaktionen ist daher nur als Substitution zugunsten der Nutzung trivialer Maschinen denkbar (siehe Abschn. 'Digitaltechnik in helfenden Interaktionen der Sozialen Arbeit'). Im Dienstleistungssektor können spätestens seit den 1970er- und 1980er-Jahren entsprechende Phänomene der Selbstbedienung arbeitender Kunden (Voß und Rieder 2005) beobachtet werden. Sie ersetzen vormals interaktive Dienstleistungen wie das Geldabheben, den Kauf einer Fahrkarte oder die Bestellung im Restaurant durch die Nutzung von Automaten und seit den 1990er-Jahren auch durch die Verwendung von Internetplattformen (Voß 2020). Bei den ersetzten Interaktionen handelte es sich allerdings immer um solche, die bereits hochgradig standardisiert waren, in ihnen wurde primär in Form von Wenn-Dann-Relationen kommuniziert, die neben den immer vorhandenen Optionen von Ablehnung, Widerstand und Missverstehen lediglich einen kleinen Horizont nichtstandardisierter Sinnbezüge bereithielten (etwa in Form von Smalltalk). Helfende Interaktionen in der Sozialen Arbeit sind in der Regel nicht so stark standardisiert, ihr Verlauf ist deutlich komplexer und individueller.
@@ -87,6 +108,10 @@ Digitaltechnik ist dazu in der Lage, analoge Werte zu erfassen (etwa über ein I
 
 <!-- image -->
 
+
+<!-- PAGE 7 -->
+
+
 dieser Verarbeitungsprozesse reichen von der simplen Übertragung einer Nachricht an das Gerät eines Empfängers bis hin zu Big-Data-Analysen, deren Ergebnisse in verschiedenen gesellschaftlichen Bereichen Entscheidungsfindungsprozesse verändern können, auch in der Sozialen Arbeit (Schrödter et al. 2020). Chatbots, deren Mitteilungen mitunter sogar für ihre Programmierer*innen überraschend sind (Neff und Nagy 2016), können zunehmend die Rolle eines ernstzunehmenden Interaktionspartners übernehmen (Marquart und Goldkind 2023). Datenverarbeitung bleibt jedoch eine andere Operationsweise als Kommunikation in sozialen Systemen oder die Rekursivität von Gedanken in Bewusstseinssystemen (Baecker 2019, S. 36; Nassehi 2019, S. 31ff.). Beides wird erst gesellschaftlich, also in sozialen Systemen, relevant, wenn sich Kommunikation hiervon irritieren lässt (Luhmann 1995).
 
 Mit einer Unterscheidung von Heinz von Foerster kann Digitaltechnik in zwei Gruppen unterteilt werden. Automaten, Videosoftware, Buchungsplattformen oder Bestellservices im Internet gelten demnach als triviale Maschinen (von Foerster 1993, S. 245ff.). Im Falle ihres Funktionierens reagieren sie auf einen Input vorhersagbar und wiederholbar immer mit dem dazugehörigen Output. Ihre Elemente sind strickt aneinandergekoppelt, die internen Abläufe sind determiniert. Die Nutzung trivialer Technik impliziert jedoch nicht automatisch die Trivialisierung des Nutzungskontexts. Bestellvorgänge können für Nutzer*innen unverständlich sein und sind mitunter nur mit interpersonaler Unterstützung zu bewältigen; der Abstimmungsbedarf in Videokonferenzen ist mindestens so hoch wie in Interaktionen unter körperlich Anwesenden.
@@ -96,6 +121,10 @@ In Form selbstlernender Technologien erlangen bestimmte Formen künstlicher Inte
 ˜hnlich verhält es sich etwa mit Telefonaten (online wie offline) oder mit einem interpersonalen Chat: Hier ermöglichen triviale Maschinen mediatisierte, interpersonale Interaktionen, ohne selbst als Kommunikationspartner*in in Erscheinung zu
 
 <!-- image -->
+
+
+<!-- PAGE 8 -->
+
 
 treten. Dabei beeinflussen die infrastrukturellen Rahmenbedingungen das Entfaltungspotenzial interpersonaler Interkationen, beispielsweise in Form des Designs von Eingabemasken und durch die Störanfälligkeit der Signalübertragung.
 
@@ -111,6 +140,10 @@ Insbesondere in der Beratung ist Soziale Arbeit nicht mehr an die körperliche A
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 heblichem Aufwand eine Beratungseinrichtung aufsuchen könnten oder die lieber zu Hause beraten werden, erlangen so Zugang zu professionellen Angeboten. ˜hnliches gilt beispielsweise im Erziehungssystem für die Aufrechterhaltung der Schulsozialarbeit während der Corona-Pandemie. Hier konnte die Beziehungen zu den Eltern sowie die damit verbundene gemeinschaftsorientierte Praxis mitunter sogar verstärkt werden (Daftary et al. 2021).
 
 Wird Soziale Arbeit in mediatisierten Interaktionen realisiert, kann dies zu einer anderen Interaktionsdynamik führen. Handelt es sich nicht um Videotelefonate, fehlt insbesondere die Möglichkeit der Erfassung nonverbaler Mitteilungen. Unter Umständen muss auch auf die Möglichkeit des unmittelbaren Feedbacks verzichtet werden. Textgebundene Kommunikation obliegt zudem anderen Einschränkungen als der unmittelbare lautsprachliche Austausch (Engelhardt und Gerner 2017). Dabei werden Fachkräfte der Sozialen Arbeit mit neuen, professionellen Anforderungen konfrontiert, für die sie geschult werden müssen (Loew 2020; Tillmann et al. 2020). Zugleich können sie von der Mediatisierung profitieren, wenn etwa eher selten in Anspruch genommene Spezialisierungen örtlich ungebunden zur Verfügung gestellt werden können.
@@ -123,6 +156,10 @@ Schließlich müssen Organisationen der Sozialen Arbeit Ressourcen für IT-Diens
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 ## 3.2 Automatisierung: Hilfe durch Interaktion mit Digitaltechnik
 
 Die Möglichkeit, Aufgaben, die vormals von Fachkräften erledigt wurden, an digitaltechnische Entitäten zu delegieren, kann interaktionstheoretisch als Steigerung der zuvor beschriebenen Abwesenheit aufgefasst werden. Wenn beispielsweise Roboter Klient*innen therapeutisch begleiten (Siebert 2020), Chatbots Teile von Beratungsleistungen übernehmen (Waag et al. 2020) oder Assistenztechnologien den Alltag unterstützen (Schiffhauer 2020), nimmt interaktionsfähige Technik (triviale und nichttriviale Maschinen) den Platz einer helfenden Fach- oder Hilfskraft ein. Zwar obliegt ihr Einsatz organisationalen Entscheidungen, und sie substituiert in Hilfeprozessen bislang lediglich Teilaspekte. Doch Klient*innen werden hierdurch zunehmend in die Lage versetzt, als arbeitende Nutzer (Voß 2020) in Kooperation mit einer technischen Entität oder einem System aus verschiedenen technischen Elementen für sich selbst zu sorgen, freilich nicht ohne Risiken (Decker 2019, S. 452). Die Möglichkeiten der Substituierung von Fachkräften stehen dabei in Abhängigkeit zu den Anforderungen des interaktiven Einsatzkontextes und dem Stand der technischen Entwicklung. In diesem Sinne operieren etwa die aller meisten der gegenwärtig verbreiteten Chatbots als triviale Maschinen nur im Möglichkeitshorizont eines eng umrissenen Themas oder einer eng umrissenen Aufgabenbeschreibung und können auf unpassende Mitteilungen sinnvoll nur mit Rückverweis reagieren (Mornhinweg 2018, S. 146f.). Dies mag sich durch ChatGPT und ähnliche Systeme ändern, doch es schließt zunächst weiterhin den Einsatz entsprechender Technologien in jenen interaktiven Kontexten aus, die etwa um Akteur*innen wie Angehörige erweiterbar sein müssen (Seering et al. 2019).
@@ -132,6 +169,10 @@ Neben Chatbots können auch digital-vernetzte Wohn- und Pflegeumgebungen (Ambien
 Die Chancen der Substitution interpersonaler Hilfe zugunsten der Interaktion zwischen Hilfsbedürftigen und digitaltechnischen Entitäten liegen unter anderem in der Entlastung von Fachkräften sowie der Förderung der Selbstwirksamkeit von Hilfsbedürftigen. Fachkräftemangel, eine steigende Nachfrage sowie die Ökonomisierung von Hilfedienstleistungen haben die Arbeitsdichte enorm gesteigert (Hartmann 2011, S. 81). Dabei sind die Beschäftigten in vielerlei Hinsicht mit ihren personalen Ressourcen gefordert, indem sie ihren Körper instrumentalisieren, ihre Gefühle regulieren und interaktive Abstimmungsprobleme bewältigen müssen (Birken 2012, S. 7). Es liegt auf der Hand, dass der Einsatz von Digitaltechnik hier prinzipiell entlastend wirken kann, wenn er nicht der zusätzlichen Arbeitsverdichtung dient (Staab und Nachtwey 2016). Allerdings könnte die ständige Verfügbarkeit digitaltechnischer Unterstützungssysteme dazu führen, dass auch Fachkräfte und Mitarbeiter*innen von Kundendiensten rund um die Uhr erreichbar sein müssen, um einspringen zu können, wenn die Technik versagt. Die Arbeit der Fachkräfte wäre dann weniger an feste Zeiten gebunden, Schichtarbeit und die nötige Flexibilität könnten zu neuen Belastungen führen. Anstatt mehr Zeit für das Wesentliche zu gewähren, könnten ei-
 
 <!-- image -->
+
+
+<!-- PAGE 11 -->
+
 
 ne Automatisierung in Kombination mit Personalabbau und Fachkräftemangel eher noch das Gegenteil bewirken.
 
@@ -147,6 +188,10 @@ Das Verhältnis von Fachkräften und Hilfsbedürftigen wurde als asymmetrisch be
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 - helfenden Interaktionen als auch im Hinblick auf das Verhältnis zwischen Fachkräften und Organisationen. Widerspruchsoptionen der Hilfsbedürftigen werden mitunter deutlich verringert und die formalen Spielräume der Fachkräfte werden potenziell beschnitten (Staab und Nachtwey 2016). Das 'zu bewältigende Dilemma gleichzeitiger Stabilität und Flexibilität' (Minssen 2019, S. 148) könnte sich auf diese Weise noch verschärfen, so dass für Fachkräfte 'die Notwendigkeit von informaler Abweichung' (Büchner 2020, S. 372) auch in den Interaktionen mit Hilfsbedürftigen steigt und sie arbeitsrechtliche Grauzonen betreten, in denen Fehler schnell zu negativen Konsequenzen führen könnten.
 2. Auch in automatisierten Interaktionen mit digitaltechnischen Entitäten verschärft sich die Asymmetrie: Ihre eingeschränkten und spezifischen kommunikativen Fähigkeiten erfordern eine einseitige Anpassungsleistung der menschlichen Interaktionspartner*innen, die dazu in der Lage sein müssen zu berücksichtigen, dass nicht alle ihre Mitteilungen kommunikative Anschlussfähigkeit generieren können. Was die beteiligte Digitaltechnik sinnvoll verarbeiten kann und was nicht, wird auf der Seite der Technik bestimmt und reduziert die kommunikativen Möglichkeiten der Interaktion einseitig. Statt einer gemeinsamen, offenen Erarbeitung einer Problemdefinition, einer möglichen Lösung und eines Weges dorthin, bestünde mitunter lediglich die Auswahl zwischen vordefinierten Optionen, deren Angemessenheit und Verständlichkeit keinesfalls zuverlässig für alle Personen gewährleistet werden könnte. Hilfsbedürftigen bliebe im Falle von Widerspruch lediglich die Wahl zwischen einer Fundamentalablehnung der Interaktion und dem Verzicht auf die technische Hilfeleistung oder der widerwilligen Akzeptanz dieser Einschränkungen. Verbunden wäre dies womöglich mit einem Gefühl der eigenen Objektivierung, und aufkommende Konflikte könnten hier einen absoluten Charakter annehmen. Der Abbruch der Interaktion oder die Verlagerung zu technischen Kund*innendiensten wären die Konsequenz.
 
@@ -157,6 +202,10 @@ Im Zuge der Digitalisierung in der Sozialen Arbeit werden helfende Interaktionen
 Es bleibt offen, ob bei der Nutzung digitaler Technologien in den Interaktionen der Sozialen Arbeit zukünftig positive oder negative Effekte überwiegen werden und
 
 <!-- image -->
+
+
+<!-- PAGE 13 -->
+
 
 aus wessen Perspektive womöglich das eine oder das andere gilt. Techniknutzung bleibt jedoch immer kontingent, in dem Sinne, dass 'nicht etwa die Technik wie eine anonyme Macht die Gesellschaft beherrscht, sondern daß die Gesellschaft sich selbst in einer nicht rational vorausgeplanten Weise von der Technik abhängig macht, indem sie sich auf sie einläßt' (Luhmann 1997, S. 523).
 
@@ -173,6 +222,10 @@ Open Access Dieser Artikel wird unter der Creative Commons Namensnennung 4.0 Int
 Die in diesem Artikel enthaltenen Bilder und sonstiges Drittmaterial unterliegen ebenfalls der genannten Creative Commons Lizenz, sofern sich aus der Abbildungslegende nichts anderes ergibt. Sofern das betreffende Material nicht unter der genannten Creative Commons Lizenz steht und die betreffende Handlung nicht nach gesetzlichen Vorschriften erlaubt ist, ist für die oben aufgeführten Weiterverwendungen des Materials die Einwilligung des jeweiligen Rechteinhabers einzuholen.
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 Weitere Details zur Lizenz entnehmen Sie bitte der Lizenzinformation auf http://creativecommons.org/ licenses/by/4.0/deed.de.
 
@@ -206,6 +259,10 @@ Weitere Details zur Lizenz entnehmen Sie bitte der Lizenzinformation auf http://
 
 <!-- image -->
 
+
+<!-- PAGE 15 -->
+
+
 - Kutscher, N. (2020). Ethische Fragen Sozialer Arbeit im Kontext von Digitalisierung. In N. Kutscher, T. Ley, U. Seelmeyer, F. Siller, A. Tillmann &amp; I. Zorn (Hrsg.), Handbuch Soziale Arbeit und Digitalisierung (S. 347-361). Weinheim: Beltz Juventa.
 - Latour, B. (1996). On actor-network theory. A few clarifications. Soziale Welt , 47 (4), 369-381.
 - Ley, T. (2020). Wie geht es weiter mit der Digitalisierung in der Sozialen Arbeit? Ein Projekt der Professionalisierung, alternativer Adressat*innenorientierung oder verschärfter Kapitallogik? In Bielefelder Arbeitsgruppe 8 (Hrsg.), Wie gehts weiter mit Profession, Managerialisierung und Wirkungsorientierung in der Sozialen Arbeit? (S. 69-83). Lahnstein: neue praxis.
@@ -231,6 +288,10 @@ Weitere Details zur Lizenz entnehmen Sie bitte der Lizenzinformation auf http://
 - Schrape, J.-F. (2021). Digitale Transformation . Bielefeld: transcript.
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 - Schrödter, M., Bastina, P., &amp; Taylor, B. (2020). Risikodiagnostik und Big Data Analytics in der Sozialen Arbeit. In N. Kutscher, T. Ley, U. Seelmeyer, F. Siller, A. Tillmann &amp; I. Zorn (Hrsg.), Handbuch Soziale Arbeit und Digitalisierung (S. 255-264). Weinheim: Beltz Juventa.
 - Seelmeyer, U., &amp; Waag, P. (2020). Hybridisierung personenbezogener sozialer Dienstleistungen. In N. Kutscher, T. Ley, U. Seelmeyer, F. Siller, A. Tillmann &amp; I. Zorn (Hrsg.), Handbuch Soziale Arbeit und Digitalisierung (S. 180-189). Weinheim: Beltz Juventa.

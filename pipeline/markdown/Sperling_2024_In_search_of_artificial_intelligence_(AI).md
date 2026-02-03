@@ -1,10 +1,11 @@
 ---
 source_file: Sperling_2024_In_search_of_artificial_intelligence_(AI).pdf
-conversion_date: 2026-02-03T09:24:48.343660
+conversion_date: 2026-02-03T18:55:58.687696
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Contents lists available at ScienceDirect
@@ -46,6 +47,10 @@ AI literacy is already being introduced in various national curricula [6 -11],  
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 K. Sperling et al.
 
 education  sector,  TE  could  play  a  crucial  role  in  preparing  both pre-service and in-service teachers with different forms of professional knowledge of how to engage reflectively with AI in their profession.
@@ -77,6 +82,10 @@ Episteme pertains to knowledge of a universal and generalisable nature,  meaning
 
 Techne encompasses practical skills acquired through teaching experiences  in  different  subjects,  such  as  structuring  a  history  lecture, motivating students who have mathematics anxiety, designing geography courses or crafting clear instructions for writing assignments [54]. These skills can also manifest as embodied knowledge in which the hand or body inherently know how to perform actions, such as pipetting in the
 
+
+<!-- PAGE 3 -->
+
+
 K. Sperling et al.
 
 Fig. 1. Study selection.
@@ -104,6 +113,10 @@ To gain a scientifically underpinned understanding of the emergence of AI litera
 ## Identifying relevant studies
 
 We conducted two separate searches on 10 March 2023, using the following search query: ( ' AI literacy ' OR ' AI read* ' ) AND (education OR learning) + (AI OR ' artificial intelligence ' ) AND ' teacher education ' in five highly regarded databases: Scopus, Web of Science, ACM, IEEE Xplore, and ERIC. Search limitations were applied to search for the titles, abstracts, and keywords. An initial search for literature on AI literacy in education and AI in teacher education between 2000 and 2023 in the five major databases resulted in 650 records (Fig. 1). As the field of AI
+
+
+<!-- PAGE 4 -->
+
 
 K. Sperling et al.
 
@@ -136,6 +149,10 @@ Whilst this scoping review was undertaken as rigorously as possible, it is limit
 ## Results
 
 A total of 34 papers serve as the basis for our analysis. In response to our first research question, we describe the current nature and scope of AI literacy relevant to TE as stated in the literature. This section encompasses background details, including publication year, country of origin, and research methods. It also elicits the predominant topics and how AI  literacy  is  framed  within  the  papers.  Next,  we  address  how primary and secondary (K-12) teachers ' and teacher educators ' different forms of knowledge are reflected explicitly or implicitly in the literature, adopting  the  Aristotelian  tripartite  division  of  knowledge -episteme, techne and phronesis.
+
+
+<!-- PAGE 5 -->
+
 
 K. Sperling et al.
 
@@ -177,6 +194,10 @@ Explicit episteme. The conceptual studies by Kandlhofer et al. [88], Long and Ma
 
 Long and Magerko ' s conference paper titled 'What is AI literacy? ' (2020) integrates robotics as one of 17 competencies covering a broad range of topics, including recognizing existing definitions of AI and intelligence, distinguishing between general and narrow AI, grasping the fundamentals of machine learning, identifying AI strengths and weaknesses,  comprehending  representations,  decision-making  processes,
 
+
+<!-- PAGE 6 -->
+
+
 K. Sperling et al.
 
 Fig. 2. Number of conference papers and journal articles from 2019 until 3 August 2023.
@@ -205,6 +226,10 @@ Table 2 Predominant topics reflected in the literature.
 |     4 | How to teach with and about AI          | [82 - 86] ( n = 5)            | Studies that explore the adoption of AI applications and digital resources for teaching about AI in the classroom.                   |
 |     5 | Professional development                | [12,87 - 91] ( n = 6)         | Mapping ways to enhance teacher AI literacy through professional development programmes.                                             |
 |     6 | AI Ethics                               | [92,93] ( n = 2)              | Studies exploring ethical concerns and considerations in relation to AI in education.                                                |
+
+
+<!-- PAGE 7 -->
+
 
 K. Sperling et al.
 
@@ -235,6 +260,10 @@ Table 5 Example of explicit and implicit phronesis.
 Here, ethics is conceptualised in relation to the technical configurations of  data-driven  AI  technologies,  emphasising  the  risk  of  biases  and discriminatory decisions. As a result, ethics are turned into facts that teachers should know, rather than approached as a moral and adaptable way of thinking and acting in response to various unknown situations and contexts where AI is employed or adopted.
 
 In parallel with the epistemic focus on AI ethics, a notable number of papers discuss the need for teachers to comprehend the principles underpinning various AI EdTech to effectively integrate them into their teaching practices [41,45,81,84,91,95]. This knowledge is often believed to enhance teachers ' willingness to  adopt  AI  EdTech.  Thus, teachers  need  to  understand  the  principles  of  where  AI  is  making
+
+
+<!-- PAGE 8 -->
+
 
 K. Sperling et al.
 
@@ -270,6 +299,10 @@ In many of the papers, teachers ' practical knowledge regarding AI literacy impl
 
 Phronesis has been referred to as the professional competence based on  values,  concerned  with  practical  judgement,  and  informed  by reflection  in  an  explicit  manner.  Some  of  the  studies  adopt  different qualitative and quantitative methods to measure ethical concerns and
 
+
+<!-- PAGE 9 -->
+
+
 K. Sperling et al.
 
 teachers ' anxieties related to AI [75], teachers ' readiness and willingness to embrace AI in education [40,76,96], the cultivation of teachers ' critical thinking proficiencies [9,96], teachers ' attitudes and self-determination [74,69], and the considerations teachers make when adopting an AI curriculum [71].
@@ -297,6 +330,10 @@ The  implicit  conceptualisation  is  also  reflected  in  some  of  the quantit
 There is a strong inclination toward exploratory teaching pedagogies involving digital resources for teaching about AI (c.f. [99,100]). Such approaches assume that; 1) the most effective learning experience is to have learners collaboratively experiment with specific digital technology  with  their  peers,  and  2)  the  pedagogic  content  of  the  learning experience is identical to the methods or epistemology of the discipline being studied [24]. Building on this pedagogical bias, different digital resources are believed to address teachers ' and students ' AI literacy. Therefore, a prevailing trend is to provide pre-packaged solutions for teachers to experiment with, delving deeper into how these solutions affect what can be taught in the classroom. As put in one of the few critical notes regarding this pedagogical bias, by Druga and colleagues (2022, p.96): these technologies and their designs matter as they shape and constrain what content knowledge can be taught.
 
 The literature also reflects a somewhat uncritical promotion of AI
+
+
+<!-- PAGE 10 -->
+
 
 K. Sperling et al.
 
@@ -337,6 +374,10 @@ None.
 ## Acknowledgements
 
 The research for this article was carried out with support of Marianne and Marcus Wallenberg Foundation. We wouldlike to express our gratitude  to  the  librarians  Cia  Gustr ´ en  and  Marie-Louise  Axelsson  at
+
+
+<!-- PAGE 11 -->
+
 
 K. Sperling et al.
 
@@ -380,6 +421,10 @@ K. Sperling et al.
 | [85] [86]      | Artificial intelligence literacy teaching in social studies education The road to ai literacy education: From pedagogical needs to tangible game        | Learning with AI in social studies Addressing the need to teach children about basic concepts of AI/ML                                                                                           | Malta          |
 |                | design Developing AI Literacy for Primary and Middle School Teachers in China: Based on a Structural Equation Modeling Analysis                         | through a computer game. Misconceptions about AI Using Ng ' s ' four dimensions of AI literacy ' to quantitively examine teachers AI literacy as well as the correlation between these different | China          |
 | [77]           |                                                                                                                                                         | dimensions                                                                                                                                                                                       |                |
+
+
+<!-- PAGE 12 -->
+
 
 K. Sperling et al.
 
@@ -447,6 +492,10 @@ K. Sperling et al.
 - [60] Bornemark J. Horisonten finns alltid kvar: om det bortgl ¨ omda omd ¨ omet. Volante; 2020.
 - [61] Dunne J, Pendlebury S. Practical reason. The Blackwell guide to the philosophy of education. Wiley; 2003. p. 194 -211. https://doi.org/10.1002/9780470996294. ch12.
 - [62] Kinsella EA, Pitman A. Phronesis as professional knowledge: practical wisdom in the professions, 1. Springer Science &amp; Business Media; 2012.
+
+
+<!-- PAGE 13 -->
+
 
 K. Sperling et al.
 

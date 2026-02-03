@@ -1,10 +1,11 @@
 ---
 source_file: Ciston_2024_Intersectional_Artificial_Intelligence_Is.pdf
-conversion_date: 2026-02-03T08:45:35.176365
+conversion_date: 2026-02-03T18:23:44.021201
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 ## Intersectional Artificial Intelligence Is Essential: Polyvocal, Multimodal, Experimental Methods to Save AI
 
 ## Sarah Ciston
@@ -37,6 +38,10 @@ Such biases precede the use of digital technologies (Chun, 2018, p. 64) but are 
 
 The researchers then enlisted fifty thousand low-paid workers through Amazon's crowdsourcing labor platform,
 
+
+<!-- PAGE 2 -->
+
+
 Amazon Mechanical Turk, to apply labels to the images. The laborers' biases were ultimately embedded into the project, and [...] the prejudices of that labor pool are reflected in the AI technologies drawing from the data. Since AI is used not only by  tech  giants  and  academic  labs,  but also  by  state  and  federal  governments and law enforcement agencies, flaws in sets  can  have  wide-ranging its data impact. ( Artforum , 2019, n.p.)
 
 This  labor  is  horrifyingly  evident  in  the  field  of commercial content moderation (CCM) [1], which Sarah T. Roberts (2016) argues lends a dangerous sense of naturalization to racist and biased content: 'Companies' desire to keep CCM work in the shadows [...] gives the impression that such content is just what is out there in the culture [...] and hides the human decision-making processes'  (p.  157).  Here  AI  'autonomy'  is carefully curated for corporate profit, but contingent  on  human  systems-who  are  acting as technology, while ignored and exploited on its behalf.
@@ -60,6 +65,10 @@ These could be incorporated into intersectional AI at the development, implement
 In  particular,  strategies  from  mixed  race,  trans, bisexual, and femme communities-whose identities are not easily categorized, who sometimes maneuver by passing within systems-may  also  help  engage  and  subvert normative  algorithmic  practices,  operating  on multiple  valences  of  infrastructural  power  and intersectional disenfranchisement. Myra Washington (2017) argues for a mixed-race ethos that can cut across categories: 'transracialness is about  the  'potential  mutual  transformation'  of those categories [...,] how people [...] move within this spectrum of power and is not so much about identity' (p. 14-15).
 
 And because queer theory troubles presumptions about a clearly  defined,  natural  category  called female  (Cipolla,  Gupta  &amp;  Rubin,  2017,  p.  7), reading  AI  through  intersectional  queer  theory can  push  back  on  assumptions  in  AI  about gender-and using queer strategies to disorient those categories can also push back on assumptions about technologies themselves. Geographers Daniel Cockayne and Lizzie Richardson  (2017)  read  queer  theory  through software studies because 'queer approaches are invested in conceptualizing and (therefore)
+
+
+<!-- PAGE 3 -->
+
 
 challenging  both  social  and  digital  code(s)-or the norm-to show how they constrain normativity but also how forms of intimate life can transgress, disrupt, and distribute what is normal' (p. 1643).
 
@@ -91,6 +100,10 @@ From the social sciences and humanities comes Critical Technocultural Discourse 
 
 Several case studies offer inspiration for intersectional AI to come. The Algorithmic Justice League intervenes on what they call the 'coded gaze' with poems, corporate pledges, and code modules  (Buolamwini,  2017,  2018).  The  Data Nutrition Label (Holland et al., 2018) addresses bias at the point of data collection, using a visual aid for assessing problems in potential datasets to prevent bad outcomes early on (p. 13) and help researchers  build  better  habits  by  'questioning datasets through analysis and interrogation techniques'  (p.  15).  While  not  themselves  AI, these practices bring intersectional thinking into tech spaces, helping shift an entrenched mindset with creative and helpful, playful and interventionist tools alike. Imagining intersectional AI means intervening with practical and speculative approaches simultaneously.
 
+
+<!-- PAGE 4 -->
+
+
 One experimental approach is to create absurdist tactical media, such as ladymouth , a chatbot that tries  to  explain  feminism  to  online  misogynists (Ciston, 2019a). Its initial prototype posted quotations  from  feminist  scholars  to  subreddits like The Red Pill and  used  responses  to  make text-based  performance  and  video.  Designed with the idea that the tool should be adaptable to other intersectional issues, it inspired a collaborative  project  that  uses  its  technology  to help address diversity labor in STEM workplaces (Billard et al., 2019). These show how a speculative project can spawn additional practical solutions for other audiences by opening a space to ideate and iterate on intersectional possibilities.
 
 Such spaces thrive in community, and the organization Feminist.AI  takes  a  communitydriven approach to rethinking what it calls 'hegemonic  AI.'  The  Feminist.AI  'Cultural  AI Design' philosophy emphasizes multiple modes of access in order to draw from different knowledge  systems,  community-sourcing  their own data, and revisiting their process with each new project (Feminist.AI, n.d.). Co-founder Christine Meinders (2019) says that feeling safe to play and create rather than focusing on being 'right' is essential, and the organization considers resources such as childcare an important part of its workshops and collaborations.
@@ -112,6 +125,10 @@ These kinds of artistic experiments and interventions that make alternative use 
 The conversation started by 'ImageNet Roulette' has led to direct changes to the database itself ( Artforum , 2019, n.p.), which do not eliminate bias but at least begin to acknowledge its existenceafter decades of use as a 'neutral' tool, one that clearly  has  not  aged  well,  with  its  history  being traceable  to  'boy's  club'  technologist  cultures (Crawford &amp; Paglen, 2019, n.p.).
 
 Such works are a call for all of us to demand a better way, to heed those already speaking up for it. This paper is not, and should not be, the only perspective on intersectional AI, nor does it claim
+
+
+<!-- PAGE 5 -->
+
 
 to  be  the  correct  one.  Rather,  it  argues  thatthrough many conversations and interventionsintersectional AI is a set of possibilities we must construct together.
 
@@ -186,6 +203,10 @@ https://www.academia.edu/28173807/Femi nist\_Data\_Visualization
 Feminist.AI. (n.d.) https://www.feminist.ai/ Griffiths, C. (2018). Visual Tactics Toward An Ethical Debugging. Digital Culture &amp; Society , 4 (1), 217-226.
 
 https://doi.org/10.14361/dcs-2018-040112
+
+
+<!-- PAGE 6 -->
+
 
 Holland, S., Hosny, A., Newman, S., Joseph, J., &amp; Chmielinski, K. (2018). The Dataset Nutrition Label: A Framework To Drive Higher Data Quality Standards. ArXiv:1805.03677 [Cs] .
 

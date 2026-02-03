@@ -18,7 +18,7 @@ if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
 
 class VaultValidator:
-    def __init__(self, vault_path: str = "FemPrompt_Vault"):
+    def __init__(self, vault_path: str = "Literature Review_Vault"):
         self.vault_path = Path(vault_path)
         self.papers_path = self.vault_path / "Papers"
         self.concepts_path = self.vault_path / "Concepts"
@@ -278,8 +278,8 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description='Validate Obsidian vault quality')
-    parser.add_argument('--vault', default='FemPrompt_Vault',
-                       help='Path to vault (default: FemPrompt_Vault)')
+    parser.add_argument('--vault', default='Literature Review_Vault',
+                       help='Path to vault (default: Literature Review_Vault)')
     args = parser.parse_args()
 
     validator = VaultValidator(args.vault)

@@ -1,10 +1,11 @@
 ---
 source_file: Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL.pdf
-conversion_date: 2026-02-03T09:28:37.952587
+conversion_date: 2026-02-03T18:59:36.858346
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 International Studies in
 
 ## SOCIAL SCIENCES and HUMANITIES
@@ -14,6 +15,10 @@ EDITOR
 PROF. DR. HAKAN ALTINTAŞ
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 Genel Yayın Yönetmeni / Editor in Chief · Eda Altunel
 
@@ -57,11 +62,19 @@ Sertifika / Certificate No: 42488
 
 • Serüven Yayınevi
 
+
+<!-- PAGE 3 -->
+
+
 ## INTERNATIONAL STUDIES in SOCIAL SCIENCES and HUMANITIES
 
 ## EDITOR PROF. DR. HAKAN ALTINTAŞ
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -75,6 +88,10 @@ Ferhat TOPER1
 
 1 Associate Professor, Malatya Turgut Özal University Faculty of Health Sciences Department of Social Work, ORCID: 0000-0001-6398-5343, ferhat.toper@ozal.edu.tr
 
+
+<!-- PAGE 5 -->
+
+
 ## Introduction
 
 Arti fi cial intelligence (AI), de fi ned as computer technologies and machine  learning  capable  of  mimicking  human  intelligence,  encompasses technologies that learn using logic and solve complex problems (Kalota, 2024). AI has emerged as one of the most impressive technological developments in recent years due to its ability to predict future events based on past data. AI is designed to perform tasks that require human intelligence, such as learning from data, solving problems, and making accurate decisions in uncertain conditions (Ahn, Choi, Fowler, &amp; Song, 2025). Th is  technological advancement is shaping the way people learn, make decisions, communicate, and work by a ff ecting many aspects of daily life (Maslej &amp; Fattorini, 2024).
@@ -86,6 +103,10 @@ Recent  developments  in  AI  are  having  a  transformative  impact  on many in
 Social  workers,  who  play  critical  roles  in  addressing  complex  social issues, face various challenges due to limited resources, heavy workloads, and weak inter-agency collaboration (Li, Wang, &amp; Jian, 2025). AI is a new and  potentially  bene fi cial  technological  development  for  social  service professionals, who have played important roles in solving the problems brought about by social  change  and  transformation  for  over  a  century worldwide (Garkisch &amp; Goldkind, 2025). One of the basic functions of social services is to guide and analyze changes in individuals and communities. Th e challenges and conveniences brought about by digitalization and technological advancements are among the most signi fi cant changes for individuals and communities in today's societies (Dufva &amp; Dufva, 2019). In this context, digital change and transformation are increasingly gaining importance in social work practices (Goldkind, 2021).
 
 Although studies on the use of AI in social service delivery are still in their infancy, AI has made positive contributions in the areas of mental health (Walsh, Ribeiro, &amp; Franklin, 2017), domestic violence (Hui, Constantino, &amp; Lee, 2023), and child protection (Field, et al., 2023). By analyzing large datasets, AI can predict risks associated with vulnerable individ-
+
+
+<!-- PAGE 6 -->
+
 
 uals, making it a highly useful tool for early intervention (Boetto, 2025).
 
@@ -99,6 +120,10 @@ Victor and Goldkind (2025) state that ChatGPT, a large language model introduced
 
 Th e  integration  of  AI  into  social  work  applications  creates  various opportunities  for  both  social  workers  and  clients. Th is  technological transformation enables social workers to analyze case-related data more quickly and e ff ectively, reduce administrative burdens, allocate more time to professional practices, identify risk situations early, and plan services in a more comprehensive manner. Social workers can analyze large data sets, predict risks, and make more e ff ective assessments through AI (Toli &amp; Manasa, 2024). Th ey can also automate administrative tasks through virtual  assistants,  allowing  them  to  devote  more  time  to  professional practice. Alowais et al. (2023) have noted that AI cannot replace social workers but can optimize many processes to make them more e ff ective and e ffi cient.
 
+
+<!-- PAGE 7 -->
+
+
 Th e  use  of  AI  in  social  service  applications  can  provide  signi fi cant bene fi ts in areas such as developing personalized services (Bako &amp; Taylor, 2021), predictive thinking (Gillingham, 2011), and improving quality control (Kum, Stewart, Rose, &amp; Duncan, 2015).
 
 Data analysis and predictive modeling are among the most powerful applications of AI in the social services fi eld. Th is is because AI can quickly scan large data sets that would take a long time for humans to scan and analyze, making it way easier for practitioners (Fernando &amp; Ranasinghe, 2023). For example, data from multiple sources, like police reports, health service databases, and school records, can be analyzed to identify kids at risk of neglect or abuse. Similarly, when used in the same way, community-level  data  can  be  examined  to  identify  areas  of  substance  use  and take proactive measures (resource allocation, risk mapping, etc.) for these areas (Vijayakumar, Seetharaman, &amp; Maddulety, 2023).
@@ -106,6 +131,10 @@ Data analysis and predictive modeling are among the most powerful applications o
 For social service professionals, administrative tasks in the fi eld consume a large  portion  of  their  time,  which  means  less  time  is  available to  work  with  clients.  At  this  point,  AI-supported  administrative  automation systems can take on routine but necessary tasks such as scheduling appointments, collecting preliminary information from clients, and answering frequently asked questions (Anda, 2001). Resource allocation in the social work fi eld is of critical importance, especially in countries and  regions  with  limited  resources.  AI  models  can  play  an  important role in e ff ective, goal-oriented planning in resource allocation (Fernando &amp; Ranasinghe, 2023). For example, by analyzing data sets related to the demographic  structure  of  the  community,  emerging  issues,  and  previously provided services, the areas where resources are most e ff ective can be identi fi ed (Tu ff ord &amp; Newman, 2010). Making data-driven decisions through AI can ensure that services reach the right people at the right time, which not only improves service quality but also increases cost-effectiveness (Dittakavi, 2022).
 
 In addition, chatbots can play an important role as a fi rst line of support for cases requiring urgent intervention in the fi eld of mental health. Chatbots  that  provide  quick  and  algorithmic  responses  based  on  the symptoms  and  concerns  expressed  by  individuals  in  crisis  situations may not replace medical and clinical intervention, but they can serve as a bridge to professional support by providing emotional support in cases where experts are not immediately available (Fernando &amp; Ranasinghe, 2023). From the perspective of applicants, it creates opportunities in terms of overcoming geographical barriers to facilitate access to services, enabling applicants who are concerned about face-to-face meetings to access services, and reducing stigma. In this way, social service processes
+
+
+<!-- PAGE 8 -->
+
 
 can become faster and more e ff ective.
 
@@ -119,6 +148,10 @@ It is noted that AI fundamentally transforms social systems in terms of decision
 
 Many AI models require large data sets to function, and this information o ft en includes personal data (Ferguson, 2005). Th is entails risks
 
+
+<!-- PAGE 9 -->
+
+
 such as the collection, storage, misuse, or unauthorized access of personal data. Although options such as encryption and two-factor authentication are available, the risk of data breaches and unauthorized use always exists (Gesi, Shen, Geng, Chen, &amp; Ahmed, 2023). Additionally, there is always the risk of serious problems, such as incorrect decisions being made based on these large data sets. Th is is because AI tools rely on analyzing existing data and making predictions. However, from the perspective of the social work profession, each case is unique, each individual is unique, and individuals must be evaluated within their context without being detached from it. Similarly, there is also a risk that AI algorithms may cause bias. An AI tool trained with biased data sets can perpetuate systematic discrimination and thus undermine the professional values of social work, which aims to promote social justice (Fernando &amp; Ranasinghe, 2023). For example, if an algorithm used for a speci fi c type of assistance is trained with data that predominantly represents a particular economic or racial group, that type of assistance may be allocated to similar economic and racial groups, inadvertently perpetuating existing inequalities.
 
 Another concern that has been raised is the loss of the human touch with the integration of AI into social service applications. Th is aspect of the social service profession, which is based on human interaction, empathy, and unconditional positive regard, cannot be fully replicated by AI algorithms, no matter how advanced they become. Th is could erode the interpersonal relationships that form the core of social work, turning it into an automated system and creating a negative process for clients who already feel vulnerable and marginalized (Vijayakumar, 2023). E ff ective social work interventions o ft en rely on professionals' ability to understand complex emotional and social situations to reach a solution. Th e nuances of trust, empathetic listening, and understanding body language between the social worker and the client cannot be fully replicated by AI tools, no matter how advanced they may be (Fernando &amp; Ranasinghe, 2023).
@@ -128,6 +161,10 @@ Another concern that has been raised is the loss of the human touch with the int
 Ethical  issues  are  among  the  most  fundamental concerns regarding the use of AI in social work practice. Th e use of AI raises notable ethical challenges such as client autonomy, privacy, con fi dentiality, transparency,  misdiagnosis,  misrepresentation,  bias,  injustice,  and  generalization (Fr ą ckiewicz, 2025; Rubeis, 2022).
 
 Social  workers,  when  working  with  clients,  have  considered  it  their duty to explain both the bene fi ts and potential risks of the services they o ff er, viewing this as part of the informed consent process (Reamer, 2006). Similarly, when social workers use AI in practice, they must not only ex-
+
+
+<!-- PAGE 10 -->
+
 
 plain the bene fi ts and risks but also respect clients' decisions regarding whether or not to accept the use of AI (Reamer, 2023). Th e NASW Code of Ethics (2021) clearly states this: 'Social workers who use technology in the delivery of social work services must obtain informed consent from individuals using these services during the initial assessment or interview and before beginning the service.'
 
@@ -139,9 +176,17 @@ One of the most important ethical issues raised regarding the use of AI tools in
 
 AI  technology  is  changing  and  developing  much  faster  than  other technological  developments. Th is  situation  highlights  the  fact  that  social  workers  have  certain  responsibilities  regarding  evidence-based  social work practices. Professionals who integrate AI tools into social work practices  have  ethical  responsibilities  to  follow  developments  based  on AI research and adapt their practices accordingly (Reamer, 2023). Th ese ethical  responsibilities  are  similar  to  those  involved  in  following  other evidence-based social work practices and integrating them into their own practices.
 
+
+<!-- PAGE 11 -->
+
+
 ## Conclusion
 
 Th e  use  of  AI  is  rapidly  increasing  in  many  areas,  including  social services.  As  in  other  areas,  there  are  ethical  challenges  and  risks  associated with the use of AI in social services, in addition to its bene fi ts. A number of bene fi ts can be mentioned, such as the planning of services, the  analysis  of  data  sets,  the  automation  of  administrative  tasks  to  allow more time for professional practice, easier access to social services for population groups that cannot access them due to geographical and cognitive barriers, the ability to perform risk analysis for sensitive population groups, and the facilitation of early diagnosis and warning. However, alongside these bene fi ts,  there  are  also  some challenges and risks. Th ese revolve around issues such as informed consent, client autonomy, privacy and con fi dentiality, the risk of misdiagnosis, surveillance, transparency-related  issues,  algorithmic  bias,  and  injustice.  Social  workers should be aware of the opportunities and risks that will arise from the integration of AI into social work practices and take proactive steps. Th ey should review ethical standards regarding the use of AI and adapt them to the institutions where they work. Institutions should design training programs to ensure that their employees can use AI tools appropriately and in accordance with ethical standards during practice. In addition, curriculum changes should be made in social service departments at universities regarding the use of AI so that future social service professionals can be taught how to use AI tools correctly and in accordance with ethical  standards during implementation. Finally, social service academics and practitioners should conduct comprehensive research on the use of AI in professional practice and establish standards regarding the impact, limitations, and algorithmic biases of this technology. Th is is because the integration of AI into social work is only possible through a multidisciplinary approach involving not only technologists but also social work professionals, academics, and policymakers (Khanna &amp; Srivastava, 2020). Th is  integration is very important as it o ff ers numerous advantages for both social work professionals and clients.
+
+
+<!-- PAGE 12 -->
+
 
 ## REFERENCE
 
@@ -160,6 +205,10 @@ Th e  use  of  AI  is  rapidly  increasing  in  many  areas,  including  social 
 - Ferguson, K. M. (2005). Beyond indigenization and reconceptualization: Towards a  global,  multidirectional  model  of  technology  transfer. International Social Work , 48 (5), 519-535. DOI: 10.1177/0020872805055315
 - Fernando, N., &amp; Ranasinghe, P. (2023). Integration of Artificial Intelligence in Social Work: Opportunities, Challenges, and Considerations. Journal of Computational Social Dynamics, 8 , 13-24. Retrieved from https://vectoral.
 
+
+<!-- PAGE 13 -->
+
+
 org/index.php/JCSD/article/view/35
 
 - Field,  A.,  Coston,  A.,  Gandhi,  N.,  Chouldechova,  A.,  Putnam-Hornstein,  E., Steier,  D.,  &amp;  Tsvetkov,  Y.  (2023).  Examining  risks  of  racial  biases  in NLP tools  for  child  protective  services. Proceedings  of  the  2023  ACM Conference  on  Fairness,  Accountability,  and  Transparency ,  1479-1492. https://doi.org/10.48550/arXiv.2305.19409
@@ -175,6 +224,10 @@ org/index.php/JCSD/article/view/35
 - Kum, H.-C., Stewart, C. J., Rose, R. A., &amp; Duncan, D. F. (2015). Using big data for evidence based governance in child welfare. Children and Youth Services Review, 58 , 127-136. https://doi.org/10.1016/j.childyouth.2015.09.014
 - Lee, N. T., Resnick, P., &amp; Barton, G. (2019, May 22). Algorithmic bias detection and mitigation: Best practices and policies to reduce consumer harms .
 
+
+<!-- PAGE 14 -->
+
+
 - Brookings. Retrieved from https://www.brookings.edu/articles/ algorithmic-bias-detection-and-mitigation-best-practices-and-policies-toreduce-consumer-harms/
 - Li,  L.,  Wang,  M.,  &amp;  Jian,  M.  (2025).  Artificial  Intelligence-Assisted  Case Management in Social Work Services: A Systematic Review. Research on Social Work Practice , 1-15. https://doi.org/10.1177/104973152513295
 - Marquart,  M.  S.,  &amp;  Goldkind,  L.  (2023).  ChatGPT:  Implications  for  social work education and practice. Advance Online Pub- lication with: Virtual session for the 2023 NASW-NYC Social Work Month Series. https://doi. org/10.7916/axhj-x577
@@ -189,6 +242,10 @@ org/index.php/JCSD/article/view/35
 - Rong,  G.,  Mendez,  A.,  Assi,  E.  B.,  Zhao,  B.,  &amp;  Sawan,  M.  (2020).  Artificial Intelligence in Healthcare: Review and Prediction Case Studies. Engineering, 6 (3), 291-301. https://doi.org/10.1016/j.eng.2019.08.015
 - Rubeis,  G.  (2022).  iHealth:  The  ethics  of  artificial  intelligence  and  big  data in mental  healthcare. Internet Interventions,  28 . DOI:  10.1016/j. invent.2022.100518
 - Shah, P., Kendall, F., Khozin, S., Goosen, R., Hu, J., Laramie, J., . . . Schork, N. (2019). Artificial intelligence and machine  learning in clinical development: a translational perspective. Dijital Medicine , 2 (69). https://
+
+
+<!-- PAGE 15 -->
+
 
 doi.org/10.1038/s41746-019-0148-3
 

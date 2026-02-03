@@ -1,10 +1,11 @@
 ---
 source_file: Djeffal_2025_Reflexive_prompt_engineering_A_framework_for.pdf
-conversion_date: 2026-02-03T08:54:47.051570
+conversion_date: 2026-02-03T18:25:26.549816
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -73,6 +74,10 @@ June 23 - 26, 2025 Athens, Greece
 
 .
 
+
+<!-- PAGE 2 -->
+
+
 ## Abstract
 
 Responsible prompt engineering has emerged as a critical pracitce for ensuring that generative artificial intelligence (AI) systems are aligned with ethical, legal, and social principles. As generative AI applications become increasingly powerful and ubiquitous, the way we instruct and interact with them through prompts has profound implications for fairness, accountability, and transparency. It is, therefore, necessary to examine how strategic prompt engineering can embed ethical and legal considerations and societal values directly into AI interactions, moving beyond mere technical optimization for functionality. This article proposes 'Reflexive Prompt Engineering', a comprehensive framework for responsible prompt engineering that encompasses five interconnected components: prompt design, system selection, system configuration, performance evaluation, and prompt management. Drawing from empirical evidence, the paper demonstrates how each component can be leveraged to promote improved societal outcomes while mitigating potential risks. The analysis reveals that effective prompt engineering requires a delicate balance between technical precision and ethical consciousness, combining the systematic rigor and focus on functionality with the nuanced understanding of social impact. Through examination of emerging practices, this article illustrates how responsible prompt engineering serves as a crucial connection between AI development and deployment, enabling organizations to align AI outputs without modifying underlying model architectures. This approach links with broader 'Responsibility by Design' principles, embedding ethical considerations directly into the implementation process rather than treating them as post-hoc additions. The article concludes by identifying key research directions and practical guidelines for advancing the field of responsible prompt engineering as an essential component of AI literacy.
@@ -117,6 +122,10 @@ The rapid advancement of generative AI technologies has ushered in an era of unp
 
 As the discourse around safety and ethics of generative AI intensifies, there is growing recognition that accountability must extend beyond the technical architects of these systems [9-12]. While considerable attention has been paid to the responsibilities of AI developers and companies, a critical gap exists in our understanding of how deployers, particularly those engaging in prompt engineering, can contribute to responsible AI deployment. Prompt engineering has emerged as a crucial interface between human intent and AI capability. However, despite its significance, there remains a notable absence of comprehensive frameworks to guide responsible prompt engineering practices across all dimensions. In the absence of such a framework, it is hard to understand, evaluate, and compare the many contributions to responsible prompt engineering that have been made in academia and in practice. This paper addresses this gap through a comprehensive narrative review, examining how prompt engineering can be approached responsibly to mitigate
 
+
+<!-- PAGE 3 -->
+
+
 risks and enhance the beneficial deployment of generative AI technologies. By analyzing existing practices, incidents, and emerging guidelines, the goal is to develop a framework that organizes and structures the various aspects of responsible prompt engineering and allows for an assessment of the current state of the art. This will hopefully contribute to a foundation that empowers users to engage with these powerful tools in ways that promote fairness, accountability, and transparency.
 
 ## 1.2 Research question and methodology
@@ -135,6 +144,10 @@ A prompt serves as an instruction to a generative AI system, directing it to pro
 
 Prompt engineering is more than working on instructions for generative AI. A review of the literature and guides on prompt engineering shows that it encompasses a comprehensive approach to optimizing interactions with generative AI systems through five essential components: First, prompt design focuses on systematically crafting instructions to maximize desired outputs [19, 21]. This involves developing specific templates, techniques, and design patterns ranging from preconfigured prompting structures to techniques like chain-of-thought reasoning. Second, system selection requires strategic decisions about which AI models to employ based on their documented capabilities [22, 23]. This selection process can rely on established benchmarks such as FrontierMath for mathematical reasoning or MMLU for general knowledge, as well as user-based comparisons displayed on various leaderboards. Third, system configuration involves adapting model parameters to optimize performance for specific use cases. This includes adjusting settings such as temperature parameters, which control the balance between predictability and creativity in outputs. Lower temperature values produce more conservative, consistent responses, while higher values generate more diverse and creative outputs. Fourth, performance evaluation encompasses the systematic assessment of prompt effectiveness against predetermined evaluation criteria. This includes analyzing output quality, consistency, and alignment with intended objectives through both automated metrics and human-in-the-loop assessment protocols [24, 25]. Fifth, prompt management involves implementing systematic approaches to organizing, tracking, and improving prompts over time. This includes implementing version control systems for prompts, maintaining detailed records of configuration settings, and tracking performance
 
+
+<!-- PAGE 4 -->
+
+
 Figure 1: Components of Prompt Engineering
 
 <!-- image -->
@@ -144,6 +157,10 @@ outcomes [26]. Proper documentation enables knowledge sharing, facilitates conti
 Prompt engineering could be conceptualized as an art and a science. It embodies a unique duality, combining creativity with rigorous methodology [20]. This hybrid nature reflects both the complexity of human-AI interaction and the emerging maturity of the field. As an art form, prompt engineering requires creative intuition and craftsmanship. The creative dimension manifests in the nuanced understanding of language, context, and model behavior that experienced prompt engineers develop over time [27]. This artistic aspect becomes evident in the subtle choices of wording, tone, and structure that can dramatically influence model outputs. Like skilled writers, prompt engineers develop an intuitive feel for how to frame instructions effectively, often drawing on metaphorical thinking and creative problem-solving to overcome model limitations. This creative dimension becomes particularly crucial when dealing with edge cases or novel applications where established approaches prove insufficient. However, prompt engineering increasingly embraces scientific rigor through systematic experimentation and empirical validation [28]. Structured experiments allow prompt engineers to test hypotheses about prompt effectiveness across different contexts and tasks. These experiments take place in controlled testing environments where researchers systematically vary factors such as prompt structure, length, and complexity while maintaining constant conditions for other variables. Through quantitative metrics, researchers measure output quality, examining dimensions such as accuracy, relevance, and consistency across different prompting strategies.
 
 The proposed framework 'Reflexive Prompt Engineering' transforms these technical practices by integrating ethical, legal, and social considerations into the prompt design process [29-31]. This approach moves beyond purely functional optimization and performance metrics to address broader societal implications and ethical concerns. It helps deployers of generative AI to become aware of the wider implications of the choices they are making and to improve the performance of their prompts, also in terms of ethical, legal, and social concerns, such as fairness, accountability, and transparency. This might involve modifying prompts to prevent discriminatory outcomes, implementing additional validation steps to ensure accessibility, or designing prompts that actively promote inclusive representation [32-35]. As a framework, Reflexive Prompt Engineering speaks to inherent risks and limitations of generative AI as well as to inherent potentials to realize ethical, legal and social values. While this contribution focuses on responsible practices in the use, it is acknowledged that critical examinations of flaws, limitations, and shortcomings of systems are also necessary and often part of responsible prompt engineering practices [36]. Reflexive Prompt Engineering helps deployers realize they cannot make up for every flaw or risk inherent in generative AI. The knowledge about such limitations reinforces the awareness of deployers of their responsibility to mitigate issues as far as possible and to make informed choices on whether and how to deploy generative AI in a specific set of circumstances.
+
+
+<!-- PAGE 5 -->
+
 
 ## 2.2 Relevance
 
@@ -168,6 +185,10 @@ across the five key categories previously established. While existing literature
 This framework deliberately highlights design choices throughout the prompt engineering journey, empowering practitioners to make conscious decisions and effectively organize their knowledge around responsible practices. This aligns with established responsibility by design approaches such as value-sensitive design [51, 52] and design-choice focused engineering methodologies like the Architecture Tradeoff Analysis Method [53]. However, it can be integrated into various life-cycle models, from the waterfall model to agile programming.
 
 The term 'reflexive' underscores the framework's central aim: heightening users' awareness of their influence over generative AI systems and the potential consequences of their interactions. It emphasizes the critical self-awareness of human agency when using AI and the responsibilities this entails. Moreover, it recognizes that effective prompt engineering requires users to develop sufficient literacy regarding generative AI technologies, their societal implications, and the specific subject matter of their tasks. By facilitating the coordination of learning through both personal and collective experiences, the Reflexive Prompt Engineering Framework helps users to organize this knowledge in ways that directly benefit their specific needs and use cases, ultimately fostering more responsible and effective AI interactions. This requires an all-encompassing view of prompt engineering in its five components.
+
+
+<!-- PAGE 6 -->
+
 
 ## 3.1 Prompt design
 
@@ -197,6 +218,10 @@ Chain-of-thought prompting can be strategically enhanced to promote responsible 
 
 Chain-of-thought prompting can also help to tackle legal and ethical tasks. It significantly improves legal analysis by mirroring established legal reasoning frameworks like IRAC (Issue, Rule, Application, Conclusion) [67, 68]. By breaking down complex legal
 
+
+<!-- PAGE 7 -->
+
+
 questions into discrete analytical steps, lawyers and legal AI systems can systematically evaluate cases, interpret statutes, and apply precedents with greater precision [67]. Chain-of-thought prompting can assist in ethical decision-making by decomposing complex moral dilemmas into manageable components that can be systematically evaluated [69]. Such structured approaches help identify potential biases, assess fairness implications, and consider multiple stakeholder perspectives throughout the reasoning process. By incorporating explicit ethical checkpoints into the decisionmaking workflow, users of generative AI can ensure that ethical considerations become an integral part of the process rather than an afterthought, leading to more responsible and well-reasoned outcomes [70, 71].
 
 Chain-of-thought prompting was initially celebrated as a breakthrough in AI transparency [72]. However, critical analysis reveals a concerning disconnect: the narrative explanations produced by these systems may not accurately reflect their internal decisionmaking processes [73]. This discrepancy creates what some researchers describe as an 'illusion of transparency' [73] - a coherent but potentially misleading representation of the system's actual operations. This misalignment between displayed reasoning and actual computation raises serious concerns for responsible AI development. There is evidence that models can generate plausiblesounding explanations even when their internal processes follow entirely different paths [74]. More troublingly, these explanations can be convincing even when the underlying computation is flawed or based on spurious correlations. This phenomenon is particularly problematic in high-stakes applications where understanding the true basis of AI decisions is crucial. This means that deployers of AI need to stay in the loop and design their prompts in a way that they use outputs as elements of preparation for their decision.
@@ -212,6 +237,10 @@ The process of system selection forms a foundational pillar in responsible promp
 3.2.1 Choices. There are generally two layers of system choice in prompt engineering. First, prompt engineers must choose between different model types, specifically ordinary models, agents, retrieval augmented generation (RAG) models, and reasoning models. The second layer involves selecting specific alternatives within the chosen class. Regarding the first layer, each model type offers distinct capabilities and approaches to problem-solving. Ordinary models are standard LLMs that generate responses based solely on their pre-existing training data and the patterns learned from it. Agents are autonomous intelligent systems designed to perceive their environment, make independent decisions, and take actions to achieve specific, predefined goals without continuous human intervention. The integration of generative AI as a central piece in such agentic system is one of the most vibrant areas of AI research and development [85]. Retrieval augmented generation (RAG) systems are agents enhancing standard LLMs by integrating an information retrieval mechanism, which allows them to access, incorporate, and utilize external, up-to-date data beyond their original training dataset [86]. Reasoning models are AI agents that methodically break down complex problems into sequential steps of inference, allowing for more systematic problem-solving approaches.
 
 The distinct characteristics of these AI model types determine their suitability for different applications. Given that ordinary models operate exclusively on their learned patterns from static training data, their applicability is naturally geared towards general text generation tasks. In situations where retrieving information from the system is not a critical factor, the inherent knowledge base of an ordinary model is often sufficient. The nature of agents as generative AI systems combined with other functions allows them to perform better with specific tasks. However, agents often lack the flexibility
+
+
+<!-- PAGE 8 -->
+
 
 to modify goals. Conversely, because retrieval augmented generation (RAG) models are specifically designed to enhance LLMs by accessing and incorporating external, up-to-date information, their applicability shines in scenarios where factual accuracy, current data, and source verifiability are paramount. Finally, reasoning models, with their foundation in employing inference methods and often leveraging structured knowledge or world models, are most effective in complex problem-solving scenarios. When a task requires deep inference, logical deduction, and the systematic application of knowledge structured within a formal model of a system or its environment, the specialized capabilities of reasoning models are called for. However, it is more difficult to steer the processes through prompting, which is why, in certain very complex cases, prompt engineers might opt for a continuous interaction with an ordinary model instead.
 
@@ -232,6 +261,10 @@ Beyond traditional performance metrics, there is growing recognition of the impo
 ## 3.3 Evaluation
 
 Prompt evaluation is the systematic process of assessing and refining the effectiveness of prompts in guiding AI models to produce
+
+
+<!-- PAGE 9 -->
+
 
 desired outputs [25]. This process has become increasingly critical as LLMs are deployed across various domains, from code generation to content analysis [97, 98]. The evaluation of prompts requires examining multiple dimensions simultaneously. At its core, the process involves analyzing the accuracy and reliability of AI-generated responses, while also measuring how well the prompts align with intended tasks and objectives in other dimensions. This includes assessing both the technical performance metrics and the broader implications of prompt design [36, 99]. A fundamental aspect of evaluation involves systematic testing with different prompt variations to understand their effectiveness. This process typically employs both qualitative and quantitative techniques to comprehensively assess prompts across various stages of development. It involves careful documentation of assessment methods, criteria, and findings to enable accountability and facilitate continuous improvement [36, 99].
 
@@ -261,6 +294,10 @@ System configuration in prompt engineering represents a critical aspect of respo
 
 Documenting prompts has emerged as a crucial practice in the responsible development and deployment of AI systems. Much like traditional software documentation, prompt documentation serves as a comprehensive record of how AI models are instructed to perform specific tasks, ensuring transparency and, to a limited extent, reproducibility of results. This is particularly relevant if generative AI is used in the context of decisions that need to be explained to their addressees, even if the system was just used to prepare the decision. Documentation in prompt engineering encompasses recording not only the prompts themselves but also their intended purposes, outcomes, and iterations. This practice is particularly vital because prompt outputs can vary significantly across different models, sampling settings, and even different versions of the same model [115]. By maintaining detailed records, organizations can track the evolution of their prompts, understand what works and what does not, and ensure consistency in AI interactions. This basic information helps teams maintain oversight of their AI interactions and enables systematic improvement of prompt effectiveness. A comprehensive prompt documentation system typically captures several key elements.
 
+
+<!-- PAGE 10 -->
+
+
 Organizations typically employ two primary approaches to prompt documentation. The reduced documentation method focuses on tracking basic elements like AI tools used and their general purposes, while extensive documentation captures complete promptoutput pairs, the prompt's name or identifier, its version history, creation and modification dates, the specific AI model used, and detailed performance notes [116]. For practical implementation, prompts should be stored in easily accessible text formats rather than screenshots, with proper version control systems in place to track modifications [116]. Teams should maintain a centralized repository, such as a spreadsheet [115].
 
 Documentation plays a vital role in ensuring accountability and transparency in AI systems. By maintaining detailed records of prompts and their outcomes, organizations can better understand how their AI systems react, identify potential biases, and make necessary adjustments to improve ethical and legal alignment [117]. This practice also facilitates collaboration among team members and helps maintain consistency in AI interactions across different applications and use cases. Significantly, Art. 86 of the EU AI Act provides a right to explanation when the decision is taken 'based on the output from a high-risk AI system'. Therefore, the right to explanation also applies when AI has been used as decision support. When the right is triggered, it includes an explanation 'of the role of the AI system in the decision-making procedure and the main elements of the decision taken.' When using generative AI, a very good and tangible way to explain the decision is to include the prompts or parts of it. System prompts show how providers of generative AI use prompts to align their models in context. Therefore, system prompts can be considered an excellent resource for responsible prompt engineering practices.
@@ -274,6 +311,10 @@ In conclusion, Reflexive Prompt Engineering provides a vital framework for navig
 The growing recognition of prompt engineering as a core competency in AI literacy underscores its importance beyond technical domains [128, 129]. As educational institutions and organizations incorporate prompt engineering into their curricula and training programs [122, 130], the need for responsible practices becomes increasingly apparent. The analysis reveals that responsible prompt engineering represents both an opportunity and a necessity. As an opportunity, it offers a practical framework for embedding ethical considerations directly into AI interactions without requiring modifications to underlying model architectures. As a necessity, it points to essential guardrails for ensuring that AI systems serve societal needs while minimizing potential harms.
 
 In the fast evolution of generative AI, which might not have reached its pinnacle yet, prompt engineering has served as a method to explore the potential and limitations of generative AI that were often unknown to even the developers of those systems. As long as AI evolves, the need to examine it will continue. The fundamental insights about AI accountability emerging from generative AI reveal that new technologies can amplify human agency beyond the reach of technological control mechanisms. Therefore, it is vital to understand the choices users make in using such technologies
+
+
+<!-- PAGE 11 -->
+
 
 and explore not only technical functionalities but also the potential of those systems to preserve and realize ethical, legal, and social principles.
 
@@ -320,6 +361,10 @@ I acknowledge the help in identifying literature by Hannah Tilsch, Elisabeth Moc
 - [35] Rachel Skilton and Alison Cardinal. 2024. Inclusive Prompt Engineering: A Methodology for Hacking Biased AI Image Generation. In Proceedings of the 42nd ACM International Conference on Design of Communication (SIGDOC '24) (pp. 76-80). ACM. DOI: https://doi.org/10.1145/3641237.3691655.
 - [36] Amalia Foka. 2024. A Framework for Critical Evaluation of Text-to-Image Models: Integrating Art Historical Analysis, Artistic Exploration, and Critical Prompt Engineering. arXiv preprint arXiv:2412.12774 . Retrieved from https: //arxiv.org/abs/2412.12774.
 - [37] Zane Durante, Qiuyuan Huang, Naoki Wake, Ran Gong, Jae S. Park, Bidipta Sarkar, Rohan Taori, Yusuke Noda, Demetri Terzopoulos, Yejin Choi, Katsushi Ikeuchi, Hoi Vo, Li Fei-Fei, and Jianfeng Gao. 2024. Agent AI: Surveying the
+
+
+<!-- PAGE 12 -->
+
 
 Horizons of Multimodal Interaction. arXiv preprint arXiv:2401.03568. DOI: https: //doi.org/10.48550/arXiv.2401.03568.
 
@@ -368,6 +413,10 @@ Horizons of Multimodal Interaction. arXiv preprint arXiv:2401.03568. DOI: https:
 - [80] Microsoft. 2025. Microsoft Presidio: Data Protection and De-identification SDK . Retrieved May 12, 2025, from https://microsoft.github.io/presidio/.
 - [81] Frank Börncke. 2025. Private Prompts: Deine Daten gehören dir! Retrieved May 12, 2025, from https://www.privateprompts.org/.
 - [82] RedHunt Labs. 2025. Octopii: An AI-powered Personal Identifiable Information (PII) Scanner . Retrieved May 12, 2025, from https://redhuntlabs.com/blog/octopiian-opensource-pii-scanner-for-images/.
+
+
+<!-- PAGE 13 -->
+
 
 - [83] Xiangkun Hu and Dongyu Ru. 2024. New tool, dataset help detect hallucinations in large language models . Retrieved May 12, 2025, from https://www.amazon.science/blog/new-tool-dataset-help-detect-hallucinationsin-large-language-models.
 - [84] NVIDIA. 2025. NeMo-Guardrails . Retrieved May 12, 2025, from https://github. com/NVIDIA/NeMo-Guardrails.

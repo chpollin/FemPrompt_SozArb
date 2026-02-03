@@ -1,10 +1,11 @@
 ---
 source_file: Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review.pdf
-conversion_date: 2026-02-03T09:16:06.943317
+conversion_date: 2026-02-03T18:47:28.700490
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Contents lists available at ScienceDirect
@@ -47,6 +48,10 @@ wY/LO/?OX RQOLQX oy b/UYK SfSE
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 pervasive. At the same time, AI users have mostly been left ill-prepared to comprehend, utilize, and critically engage with AI -that is, they have been left AI illiterate at large (Maitz et al., 2022; Wilton et al., 2022). This mismatch raises concerns not only about the efficiency and effectiveness of human-AI collaborations but also about privacy, ethics, and bias (Mikalef et al., 2022). Hence, developing a comprehensive understanding of AI literacy is crucial to preparing AI users for an AI-powered future of work and society.
 
 Prior AI literacy research in the emerging literature stream started to build our understanding of AI literacy along three research avenues that can be seen as three logically consecutive steps: The learning methods leading to AI literacy (e.g., Long, Blunt, &amp; Magerko, 2021), the components constituting  AI  literacy  (e.g.,  Ng  et  al.,  2021),  and  the effects resulting from AI literacy (e.g., Pinski, Adam, &amp; Benlian, 2023). Each step is highly relevant for a comprehensive understanding of AI literacy. First, since AI technologies are evolving rapidly, it is essential to understand the most effective learning methods for equipping different AI users with the needed AI literacy. Understanding how AI users can best grasp novel AI concepts relevant to them enables the development of targeted educational initiatives. Therefore, building a broad repertoire of formal and informal learning methods tailored to conveying AI literacy is necessary (Long, Blunt, &amp; Magerko, 2021). Second, much prior research focused on conceptualizing different AI literacy components , for example,  individual  AI  skills  or  knowledge  concerning  different  AI subjects (e.g., Long &amp; Magerko, 2020; Ng et al., 2021). As different AI user groups have different AI literacy requirements, it is vital to understand  and  build  a  repository  of  AI  literacy  components  and  their relevancy to different AI user groups. For example, a manager (Jorzik et al., 2023) needs different AI skills and knowledge than a teacher (Kim &amp; Kwon, 2023). Third, it is important to understand if AI literacy results in the intended effects . For instance, previous research has shown that AI literacy can positively affect the performance of human-AI collaboration while simultaneously reducing humans ' intention to use AI in the future (Pinski, Adam, &amp; Benlian, 2023). Given that AI might affect humans differently compared to what we have learned with non-AI technology, it is imperative to better understand the diverse effects of AI literacy to foster desired effects and prevent unwanted effects.
@@ -70,6 +75,10 @@ We attempt to answer these research questions using a systematic, scoping litera
 - (3) Prior studies either have not accounted for AI user group differences or have focused on individual AI user groups (e.g., Charow et al., 2021). This review contributes a holistic analysis of AI user groups discussed within both the expert and non-expert domains, shifting the discourse to consider AI user group differences more thoroughly. Further, the holistic user group analysis uncovers yet unexplored AI user groups.
 - (4)  Much prior research investigated highly relevant aspects of AI literacy while leaving it unclear how the AI literacy construct is distinct from prior technology literacies, such as digital or data literacy.  Our  review  departs  from  this  by  assessing  the  AIspecificity  of  the  components  (e.g.,  different  skills  and  knowledge) ascribed to AI literacy by the literature. Therefore, we use three AI facets from an established AI definition (Berente et al., 2021): autonomy, inscrutability, and learning. We use the facets for  a  structured  distinction  of  AI  from  non-AI  technology, enabling us to distinguish AI literacy from other technology literacies. By applying this AI lens, we contribute to a more thorough understanding of what AI literacy refers to and how the construct relates to other literacies.
 - (5)  Concerning  practice,  this  review  also  provides  a  reference  for educators,  policymakers,  and  business  decision-makers  who make crucial decisions concerning the standards of AI literacy in educational institutions, society, and business.
+
+
+<!-- PAGE 3 -->
+
 
 ## 2. Conceptual background
 
@@ -96,6 +105,10 @@ Taken together, the different literacies share common elements that transcend  t
 AI ' s specific facets (autonomy, learning, and inscrutability) caused the invalidation of multiple core assumptions fundamental to humantechnology interaction held for decades (Berente et al., 2021; Schuetz &amp; Venkatesh, 2020). For example, AI technologies break the assumption of functional consistency because they can learn from processed data, thus behaving differently over time. Furthermore, they remove the necessity of an artificial interface through more natural interactions like speech, thus enabling the possibility that humans might not be aware of their interactions with AI technologies, such as with voice assistants like Alexa or chatbots (Schuetz &amp; Venkatesh, 2020). This invalidation of human-technology  interaction  assumptions,  in  combination  with  the increasingly widespread implementation of AI in the broader work-related and societal context (Berente et al., 2021), makes the need for  a  revised  technology  literacy  concept  apparent,  i.e.,  AI  literacy. Furthermore, the ethical challenges of AI are looming larger than before due to the increasingly human-like and beyond-human capacities (e.g., due  to  deep-fakes).  In  other  words,  AI  literacy  is  necessary  for  the broader user base to comprehend and respond to this human-technology interaction paradigm shift.
 
 Similar to prior literacy concepts, different definitions of AI literacy for AI users exist in the literature (see Table 1). One can observe that these definitions also emphasize holistic proficiency regarding different subject  areas  of  AI.  As  part  of  AI  literacy,  scholars  mention  AI
+
+
+<!-- PAGE 4 -->
+
 
 Table 1
 
@@ -138,6 +151,10 @@ Fig. 1. AI literacy proficiency dimensions.
 
 <!-- image -->
 
+
+<!-- PAGE 5 -->
+
+
 Fig. 2. Search and selection process.
 
 <!-- image -->
@@ -145,6 +162,10 @@ Fig. 2. Search and selection process.
 Fig. 3. Overarching conceptual framework.
 
 <!-- image -->
+
+
+<!-- PAGE 6 -->
+
 
 discussed individually until the coders achieved consensus. The exclusion  criteria  at  this  stage  were  that  the  papers  were  either  not  AIliteracy-focused, for example, when only mentioning the term to motivate a different topic, or not user-focused, such as developer-focused papers. As such, we ensured that we only included articles related to this review ' s defined scope. In the fourth step, we read all identified papers fully and applied the same exclusion criteria as in the third step. As a result, 52 papers remained in the selection. Finally, we conducted a forward and backward search of the identified articles, adding 16 papers to the selection, which totals 68 papers included in the final selection. By implementing this rigorous search and screening strategy, we aimed to compile a comprehensive collection of scholarly articles that meet the specific requirements of this study on AI literacy.
 
@@ -179,6 +200,10 @@ Within  the  non-expert  context,  AI  users  can  also  be  regarded  as ' pers
 
 Within the expert context, AI users are typically ' domain experts ' in an organization engaging with specialized AI systems tailored to specific
 
+
+<!-- PAGE 7 -->
+
+
 Table 3 Learning methods for AI literacy framework: Formal methods.
 
 | Subtype (1)     | Subtype (2)           | Examples                                                                             | AI specificity                      | Sources (By AI User Group)                                                                                                         |
@@ -206,6 +231,10 @@ Based  on  the  identified  literature  corpus,  we  structured  formal learning
 Along with early thinking about AI literacy, the literature discussed well-known learning methods, such as traditional lectures in a weekly or block  format  (Kandlhofer  et  al.,  2016;  Xu &amp; Babaian,  2021). Lecture-based learning as a method is not specific to AI. Instead, the content discussed within the respective lectures is specific to the different AI literacy areas. The type of method has predominantly been discussed in a student context (Kandlhofer et al., 2016). The literature divides the exercise-based learning subtype into traditional and interactive exercises (e.g., Khalid et al., 2022; Kong et al., 2021; Xu &amp; Babaian, 2021). These exercises are similar to lecture-based learning methods not specific to AI but can convey AI-specific content that relates to AI ' s learning abilities, increased autonomy, and inscrutability. Traditional exercises achieve this by requiring students to apply AI concepts individually in homework assignments, in-class exercises, or term projects (Xu &amp; Babaian, 2021).  Further  research  conceptualizes  interactive  exercises,  such  as group projects or flipped classrooms, a learning method that places the introduction  of  all  AI  course  materials  outside  of  classes,  using  the available time in class exclusively for inquiry, application, and assessment of learning materials together with the teacher (Kong et al., 2021). Other  studies  use  story-telling exercises to teach  AI  specificities (Kandlhofer et al., 2016; Khalid et al., 2022; Ng et al., 2022). To tell a story that involves AI, learners must understand how an AI might work and  then  organize  and  analyze  their  understanding  to  produce  a narrative  (Ng  et  al.,  2022).  When  building  their  story,  learners  are encouraged  to  assess  how  AI  might  impact  everyday  human  living (Wong et al., 2020).
 
 Unlike these more generic learning methods tailored to AI content, artifact-based learning utilizes AI as part of the learning method. Different studies explored how learners can comprehend AI concepts by interacting with AI-based learning artifacts. Melsi ´ on et al. (2021) investigated how explainable AI models (XAI) can be utilized to convey AI specificities, such as gender biases, by showing learners visualizations during an interaction in which an AI model is trained. Other examples include interactions with an online facial recognition AI that lets users find a look-alike from a database of portraits from the US Civil War (Kusuma  et  al.,  2022).  Kusuma  et  al.  (2022)  create  an  educational interaction by deliberately designing features that provide context about the dataset ' s composition and origins, gradually explaining the steps for the AI predictions, and actively involving the user to speculate about the implications of facial recognition in the real world. Next to pure interaction, many studies also proposed the construction of AI tools (e.g., Chiang &amp; Yin, 2022; Kandlhofer et al., 2016; Steinbauer et al., 2021). Building  on  constructionism  learning  theory  (Papert,  1993),  these methods aim to convey AI literacy by constructing either hardware- or software-related AI tools (Kandlhofer et al., 2016). For example, Chiang and  Yin  (2022)  let  learners  construct  customized  test  datasets  to
+
+
+<!-- PAGE 8 -->
+
 
 Table 4 Learning methods for AI literacy framework: Informal methods.
 
@@ -236,6 +265,10 @@ Fig. 4. AI literacy component framework.
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 the different definitions of AI literacy in the literature (see Table 1), we find  that  AI  literacy  as  a  holistic  and  enabling  construct  comprises different human proficiency dimensions. In the following, we will review the proficiency dimensions that the literature has attributed to AI literacy and what the characteristics of these proficiencies are. Despite some  of  the  existing  literature  using  these  proficiency  dimensions inconsistently, we aim to adhere to established definitions to structure the proficiency dimension discussed in the current literature.
 
 Knowledge is a core proficiency dimension of AI literacy (Dai et al., 2020; Deuze &amp; Beckett, 2022). It encompasses an understanding of the content and information concerning a subject area. Usually, it is obtained via studying in formal education (Cheney et al., 1990). Multiple studies include Awareness as a distinct proficiency dimension (Deuze &amp; Beckett, 2022; Heyder &amp; Posegga, 2021; Lee et al., 2021). Awareness also includes an understanding of a particular topic but is more focused on the acknowledgment of its existence and relevance at the given time (Merriam-Webster,  2023). Skills are  integral  to  effective  AI  literacy, encompassing psychomotor processes and the ability to execute specific tasks with precision (Cheney et al., 1990; Markauskaite et al., 2022). They also include the capacity to choose the actions most suited for a given  scenario  from  a  repertoire  of  available  actions  (Cheney  et  al., 1990). Skills are considered part of AI literacy, primarily for working with AI tools in human-AI collaborations (Dai et al., 2020; Pinski &amp; Benlian,  2023).  Most  AI  definitions  draw  on  the  term Competence or Competencies , synonymous with ability (Carolus et al., 2023; Laupichler, Aster, &amp; Raupach, 2023; Long &amp; Magerko, 2020; Ng et al., 2021). The OECD (2019, p. 98) views competence as applying knowledge and skills, referring to ' the application and use of knowledge and skills in common life  situations. ' Leidig  and  Salmela  (2020,  p.  35)  echo  this  notion, stating that such a definition of competence acknowledges ' cognitive and metacognitive skills, demonstrated use of knowledge and applied skills, and interpersonal skills that often work in concert. ' Last, Pinski and Benlian (2023) attribute Experience in interaction with AI tools to AI literacy.  By  interacting  with  AI  tools  one  learns ' hands  on. ' Thus, experience  often  leads  to  the  buildup  of  tacit  knowledge  which,  as opposed  to  explicit  knowledge,  cannot  be  codified  (Bassellier  et  al., 2015).
@@ -251,6 +284,10 @@ As  a  result,  we  conceptualized  five  core  AI  literacy  areas  ( ' AI Mode
 Fig. 5. AI literacy subject area framework (overview).
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 Table 5
 
@@ -274,6 +311,10 @@ AI literacy subject areas.
 
 ( continued on next page )
 
+
+<!-- PAGE 11 -->
+
+
 Table 5 ( continued )
 
 | Area                               | Subarea                                  | Description                                                                                                                                                                                                                                                          | AI Specificity                                                                                                                                          | Sources by AI User Group                                                                                                                                                                                                                                                         |
@@ -296,6 +337,10 @@ AI  model  fundamentals constitute  the  essential  subarea  for  understanding 
 Magerko, 2020). Furthermore, it entails distinguishing AI from non-AI technology (Lee et al.,  2021)  as  well  as ' general ' from ' narrow ' AI concepts (Laupichler, Aster, &amp; Raupach, 2023; Long &amp; Magerko, 2020). Next to AI concepts, AI model fundamentals include understanding how AI -in principle -functions (Carolus et al., 2023; Ng et al., 2021) and derives  decisions  (Kandlhofer  et  al.,  2016;  Long &amp; Magerko,  2020). Learners should comprehend what it means when a model learns (Laupichler, Aster, &amp; Raupach, 2023) and how they respond to the environment  (Carolus  et  al.,  2023).  AI  model  fundamentals  also  include recognizing how knowledge is represented within an AI and what limitations these knowledge representations have (Long, Padiyath, et al., 2021;  Xu &amp; Babaian,  2021).  Lastly,  the  literature  asserts  that  it  is fundamental  for  AI  models  to  understand  their  strengths  and  weaknesses, like greater accuracy than non-AI models, the ability to process unstructured  data,  or  AI ' s  inscrutability  (Charow  et  al.,  2021;  Laupichler, Aster, &amp; Raupach, 2023).
 
 Beyond a fundamental comprehension of AI models, AI users must also understand how these intelligence concepts, decision-making processes,  or  knowledge  representation  materialize  in  specific AI  model types. The  literature  emphasizes  the  relevance  of  machine  learning (Chiang &amp; Yin, 2022; Khalid et al., 2022) and deep learning models (Kong et al., 2021; Xu &amp; Babaian, 2021). An example of an AI model leveraging deep learning technology is a neural network (Xu &amp; Babaian, 2021). Furthermore, explainable AI (XAI) models, i.e., AI models that are  inscrutable  but  made  partially  explainable  through  additional technology, are model types discussed by several scholars (Chiang &amp; Yin, 2022; Laupichler, Aster, &amp; Raupach, 2023). More recently, generative AI models, i.e., AI models capable of generating text, images, or
+
+
+<!-- PAGE 12 -->
+
 
 audio,  have  gained  attention  (Lee  et  al.,  2022).  This  subarea  is AI-specific since it equips AI users to understand the degree of inscrutability, learning, and autonomy of different AI models. Even though different AI model types constitute already more advanced AI literacy, the literature agrees that it is relevant for students (Kandlhofer et al., 2016; Khalid et al., 2022) as well as for adult AI users (Chiang &amp; Yin, 2022; Laupichler, Aster, &amp; Raupach, 2023) to build a firm understanding.
 
@@ -321,6 +366,10 @@ AI tool recognition has received a special emphasis from academics because AI to
 
 A  central  area  of  AI  literacy  is  efficient AI  tool  handling (Salazar-Gomez et al., 2022; Wang et al., 2022). AI tool handling includes tool-agnostic as well as tool-specific aspects. Independent of the AI tool
 
+
+<!-- PAGE 13 -->
+
+
 one uses, one must manage one ' s own privacy when interacting with the respective AI tool (Carolus et al., 2023; Laupichler, Aster, &amp; Raupach, 2023). Specific to an AI tool, its users need to be aware of the function range and how to operate the AI tool correctly and effectively (Carolus et al., 2023; Salazar-Gomez et al., 2022). For instance, managers need to know how to utilize AI-based decision-support systems (Jorzik et al., 2023). AI tool handling is AI-specific because it is the AI facets (autonomy, learning, and inscrutability) that make handling AI tools different from handling non-AI tools.
 
 Core Area 5: Humans, organizations, and society. Since AI models are instantiated as AI tools in specific human contexts, AI literacy not only  includes  proficiency  regarding  the  isolated  AI  tools  but  also regarding the humans involved. The literature discusses these humanrelated AI literacy subject areas on three different levels: the individual human level (Long &amp; Magerko, 2020), the organizational level, such as firms (Jorzik et al., 2023), and the human society as a whole (Laupichler,  Aster, &amp; Raupach, 2023). First, being aware of the different individual Human roles in the AI context and their respective functions is crucial (Long &amp; Magerko, 2020). For instance, one must acknowledge that humans, in their role as programmers, significantly influence the development  choices,  model  selection,  and  finetuning  of  AI  tools (Cetindamar  et  al.,  2022;  Long &amp; Magerko,  2020).  Beyond  programmers, there are manifold human roles involved when organizations implement AI tools, such as those who provide data for an AI tool (e.g., customers), those who evaluate and approve an AI tool (e.g., managers or government institutions), or those who are replaced by an AI tool (e. g., customer service agents) (Ali, DiPaola, Lee, Sindato, et al., 2021). AI-literates have a comprehensive understanding of the different roles individuals  have  in  relation  to  an  AI  tool  (Pinski,  Adam, &amp; Benlian, 2023). Such an understanding is AI-specific because the human roles in relation to technology have changed due to, for example, the learning capabilities of AI tools.
@@ -338,6 +387,10 @@ Due to AI ' s increasing sphere of influence, critical literacy is a crucial cro
 Following the tradition of metaknowledge, meta literacy refers to the awareness of one ' s own AI literacy (Evans &amp; Foster, 2011). Particularly for informal learners, monitoring and reflecting on their AI literacy is important to become AI-literate when engaging in self-directed learning (Chaudhury et al., 2022). Fügener et al. (2021) show that awareness of one ' s own proficiency is crucial in human-AI collaborations. Meta literacy  is  also  not  new,  but  it  has  increased  in  relevance  due  to  AI ' s increasing human-like capabilities, making it more relevant to monitor what one is capable of compared to the technology and what one knows about it (Authors, Forthcoming).
 
 Additionally, scholars assert that one not only needs an awareness of their current AI literacy but also of the needed future (AI) literacy (Lee et al., 2021; Long &amp; Magerko, 2020) . AI is evolving at unprecedented rates  (Berente  et  al.,  2021),  which  also  requires  AI  literacy  to  adapt constantly. Therefore, AI users will need to imagine what the future of AI might look like (Long &amp; Magerko, 2020) and realize what will be relevant to AI literacy (Lee et al., 2021). Furthermore, they must develop the learning skills that allow them to seize this future AI literacy (Cetindamar et al., 2022; Markauskaite et al., 2022). Ng et al. (2021) state that anticipating and realizing future AI literacy requires confidence in one ' s own learning abilities.  Finally,  future  literacy  is  also  not  AI-specific. Nevertheless,  due  to  AI ' s  unprecedented  rate  of  change,  it  gained
+
+
+<!-- PAGE 14 -->
+
 
 significantly in value as part of human technology proficiency.
 
@@ -378,6 +431,10 @@ In summary, AI literacy ' s explored instrumental and humanistic effects  are  m
 
 In this study, we conducted a scoping review of research on AI Literacy for users. This section outlines a future research agenda offering six future research directions along the three research questions of the study that have not yet been explored but may provide valuable insights into the field. Furthermore, we describe the study ' s contributions and limitations.
 
+
+<!-- PAGE 15 -->
+
+
 Table 7
 
 Future research agenda.
@@ -407,6 +464,10 @@ Furthermore, there are many user groups concerning workers who might be affected
 
 On the other hand, research regarding AI literacy learning methods must aim to focus on AI specificities. Therefore, future research should assess which learning methods or combination of learning methods are
 
+
+<!-- PAGE 16 -->
+
+
 particularly  suited  for  comprehending  the  autonomy,  learning,  and inscrutability  particularities  of  AI  technology  as  well  as  their  consequences. For example, government-related user groups, such as policymakers or judges, which have not been explored so far (see Appendix C, Table 9), should specifically ensure that AI complies with the values of a society (Markauskaite et al., 2022). As such, they necessitate an education  geared  toward  identifying  the  potential  implications  resulting from AI ' s specific characteristics and their impact on the ethical standards of a society. This poses potential research questions like, ' Which learning  methods  are  most  effective  for  building  a  comprehensive awareness of the ethical implications of AI? ' .
 
 ## 5.1.2. Directions for the components of AI literacy
@@ -428,6 +489,10 @@ Furthermore, there are relevant AI user groups that have not yet been explored r
 In that vein, one could also aim to dissect the impact of individual AI literacy subject areas on such humanistic outcomes. A more granular view of the effects of specific AI literacy areas could then, in turn, inform improved  user-specific  AI  literacy  conceptualizations.  One  could  hypothesize that technical knowledge  about  AI  functionality takes discomfort  about  AI  away  by  demystifying  it.  However,  technical knowledge might also confuse unknowledgeable users more and thus amplify discomfort toward AI. As such, future research could investigate, ' Which AI literacy subject areas have which effect on human wellbeing in human-AI collaborations? '
 
 5.1.3.2. Research  direction  VI.  Consider  moderating  factors  to  contextualize AI literacy ' s effects. Research investigating the effects of AI literacy has so far predominantly focused on the direct effect of possessing or increasing  AI  literacy  on  different  outcomes.  Some  studies  seem  to collectively  confirm  an  underlying  relationship,  such  as  AI  literacy ' s positive influence on appropriate delegation behavior (Pinski, Adam, &amp; Benlian,  2023),  appropriate  reliance  (Leichtmann  et  al.,  2023),  and appropriate trust (Chiang &amp; Yin, 2022), which all support that AI literacy has positive effects for human-AI collaboration. However, other AI literacy effects are not that clear. For example, whereas Pinski, Haas, and Franz (2023) find that AI literacy leads to a more positive attitude toward AI, Tully et al. (2023) find that AI literacy decreases AI receptivity. One might argue that attitude toward AI and AI receptivity are related  constructs,  which  poses  the  question  of  why  the  effects  are opposed to each other. What might explain this puzzle are moderating factors that modify AI literacy ' s effect on affective outcomes, such as the type of AI or the setting in which the participants have been asked. Therefore, we call for future research to identify moderating factors that can increase our understanding of the effects of AI literacy. Also, the findings on AI usage continuance intentions (Pinski et al., 2023a, 2023b) and on performance in human-AI collaborations are mixed (Chiang &amp; Yin, 2022; Leichtmann et al., 2023), i.e., they do not point in the same direction. Therefore, future studies could ask, ' How does the type of AI affect AI literacy ' s effect on human attitude and receptivity toward AI? '
+
+
+<!-- PAGE 17 -->
+
 
 Moreover, there is a general notion in the AI literacy literature that AI literacy is positive for humans. While most effects of AI literacy also seem to support this (see Table 6), there are scenarios imaginable where AI literacy might not be positive. For example, if one belongs to a minority  suffering  from  different  biases  in  the  real  world,  some  might perceive learning about technologies that reinforce these biases as not liberating  but  as  increasing  feelings  of  repression.  As  such,  future research  could  also  ask, ' Which moderating factors  contribute  to  AI literacy being positive for humans and which to it being negative? '
 
@@ -460,6 +525,10 @@ Marc  Pinski: Conceptualization, Data curation, Investigation, Methodology, Proj
 ## Declaration of generative AI and AI-assisted technologies in the writing process
 
 During the preparation of this work, the author(s) used Grammarly in order to check spelling and grammar. After using this tool/service, the
+
+
+<!-- PAGE 18 -->
+
 
 author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication.
 
@@ -494,6 +563,10 @@ interests or personal relationships that could have appeared to influence the wo
 Fig. 6. Identified literature by paper type and year of publication.
 
 <!-- image -->
+
+
+<!-- PAGE 19 -->
+
 
 Fig. 7. Identified literature by research method (a) and research discipline (b).
 
@@ -546,6 +619,10 @@ Carolus, A., Augustin, Y., Markus, A., &amp; Wienrich, C. (2023). Digital intera
 
 - Carroll, J. M., &amp; Rosson, M. B. (1987). Paradox of the active user. In Interfacing thought: Cognitive aspects of human-computer interaction (pp. 80 -111). The MIT Press.
 - Casal-Otero, L., Catala, A., Fern ´ andez-Morante, C., Taboada, M., Cebreiro, B., &amp; Barro, S. (2023). AI literacy in K-12: A systematic literature review. International Journal of STEM Education, 10 (1). https://doi.org/10.1186/s40594-023-00418-7
+
+
+<!-- PAGE 20 -->
+
 
 - Cetindamar, D., Kitto, K., Wu, M., Zhang, Y., Abedin, B., &amp; Knight, S. (2022). Explicating AI literacy of employees at digital workplaces. IEEE Transactions on Engineering Management, 0 , 1 -14. https://doi.org/10.1109/tem.2021.3138503
 - Charow, R., Jeyakumar, T., Younus, S., Dolatabadi, E., Salhia, M., Al-Mouaswas, D., Anderson, M., Balakumar, S., Clare, M., Dhalla, A., Gillan, C., Haghzare, S., Jackson, E., Lalani, N., Mattson, J., Peteanu, W., Tripp, T., Waldorf, J., Williams, S., … Wiljer, D. (2021). Artificial intelligence education programs for health care professionals: Scoping review. JMIR Med Educ, 7 (4), Article e31043. https://doi.org/ 10.2196/31043
@@ -605,6 +682,10 @@ Carolus, A., Augustin, Y., Markus, A., &amp; Wienrich, C. (2023). Digital intera
 - Leu, D. J., Kinzer, C. K., Coiro, J., Castek, J., &amp; Henry, L. A. (2013). New literacies: A dual-level theory of the changing nature of literacy, instruction, and assessment. Journal of Education, 197 (2), 1 -18. https://doi.org/10.1177/002205741719700202
 - Liu, S., &amp; Xie, X. (2021). AI quality Cultivation and application ability Training for normal university students 2021 7th annual international conference on network and
 
+
+<!-- PAGE 21 -->
+
+
 - information systems for computers (ICNISC), Livingstone, S. (2004). Media literacy and the challenge of new information and communication technologies. The Communication Review, 7 (1), 3 -14. https://doi.org/10.1080/10714420490280152
 - Long, D. (2023). Conducting remote design Research on embodied, collaborative museum exhibits. In Extended abstracts of the 2023 CHI conference on human factors in computing systems .
 - Long, D., Blunt, T., &amp; Magerko, B. (2021). Co-designing AI literacy exhibits for informal learning spaces. Proceedings of the ACM on Human-Computer Interaction, 5 , 1 -35. https://doi.org/10.1145/3476034
@@ -662,6 +743,10 @@ Carolus, A., Augustin, Y., Markus, A., &amp; Wienrich, C. (2023). Digital intera
 - Turing, A. M. (1950). I. -computing machinery and intelligence. Mind, LIX (236), 433 -460. https://doi.org/10.1093/mind/lix.236.433
 - Van Brummelen, J., Tabunshchyk, V., &amp; Heng, T. (2021). ' Alexa, can I program you? ' . In Student Perceptions of conversational artificial intelligence Before and after programming Alexa interaction design and children .
 - Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł ., &amp; Polosukhin, I. (2017). In Attention is all you need. 31st conference on neural information processing systems .
+
+
+<!-- PAGE 22 -->
+
 
 - Vazhayil, A., Shetty, R., Bhavani, R. R., &amp; Akshay, N. (2019). In Focusing on teacher Education to introduce AI in schools: Perspectives and illustrative findings 2019 IEEE tenth international conference on technology for education (T4E) .
 - Wang, B., Rau, P.-L. P., &amp; Yuan, T. (2022). Measuring user competence in using artificial intelligence: Validity and reliability of artificial intelligence literacy scale. In Behaviour &amp; information technology (pp. 1 -14). https://doi.org/10.1080/ 0144929x.2022.2072768

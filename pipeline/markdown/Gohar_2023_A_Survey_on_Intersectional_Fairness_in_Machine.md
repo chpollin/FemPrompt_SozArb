@@ -1,10 +1,11 @@
 ---
 source_file: Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.pdf
-conversion_date: 2026-02-03T08:58:43.074181
+conversion_date: 2026-02-03T18:29:25.066567
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges
 
 Usman Gohar 1 , Lu Cheng 2
@@ -30,6 +31,10 @@ This has been well-studied in philosophy and social psychology (e.g., [Bierly, 1
 Compared to the binary view of fairness in the independent case, the problem of intersectional fairness poses unique challenges. For instance, for what level of granularity of intersectional groups should fairness be guaranteed? On the other hand, smaller subgroups have higher data sparsity, resulting in higher uncertainty [Foulds et al. , 2018]. Furthermore, an intersectional identity often amplifies biases that might not exist in its constituent groups (e.g., Black woman vs. Black or Woman), rendering traditional mitigation techniques ineffective. To this end, an emerging body of work, e.g., subgroup fairness [Kearns et al. , 2018] and multicalibration [HebertJohnson et al. , 2018], has proposed various notions of intersectional fairness and mitigation techniques that provide a level of guarantee against intersectional discrimination.
 
 Multiple extensive surveys on fairness in ML have been conducted, such as [Mehrabi et al. , 2021] and [Caton and Haas, 2020]. However, they mainly consider the independent group fairness and individual fairness while only briefly discussing intersectional cases. To bridge this gap, we review the existing fairness literature on intersectional and gerrymandering groups. In particular, we examine existing notions of intersectional fairness in ML and AI and investigate the techniques that enable fair learning for intersectionality.
+
+
+<!-- PAGE 2 -->
+
 
 Γ/ΓHΓDΓUΓQΓLΓQΓJΓΛΓEΓHΓ'ΓRΓQΓG
 
@@ -81,6 +86,10 @@ Definition 3. Given C and a weight class W , f ( x ) is ( C , W , α ) -multical
 
 <!-- formula-not-decoded -->
 
+
+<!-- PAGE 3 -->
+
+
 Figure 3: Hierarchy of multicalibration that interpolates from multiaccuracy (MA) to mutilcalibration (MC) [Gopalan et al. , 2022].
 
 <!-- image -->
@@ -123,6 +132,10 @@ Furthermore, [Morina et al. , 2019] extended the DF notion to other standard gro
 
 The Max-min (or min-max ) notion of fairness is based on the Rawlsian principle of distributive justice [Rawls, 2001]. This principle allows for inequalities but aims to maximize the minimum utility across different protected groups. Given a predictor and a fairness metric, it aims to maximize the fairness of the worst-off subgroup. The Max-Min Fairness [Ghosh et al. , 2021] is extended to intersectional cases by measuring the fairness of any combination of intersectional subgroups using existing fairness definitions and then taking the ratio of the maximum and minimum values from this list of subgroups. A ratio below 1 indicates a disparity between groups, with greater disparity if the ratio is closer to 0. This ratio can be applied to any existing fairness or performance measures like AUC. However, this definition also suffers from low data sparsity when the number of dimensions of intersectionality increases.
 
+
+<!-- PAGE 4 -->
+
+
 ## 2.6 Probabilistic Fairness
 
 Differential fairness uses a Dirichlet prior of uniform parameter α to resolve the issue of intersectional groups having zero counts in the data. The parameter affects this empirical count approach and may miss high-risk subgroups not represented in the data. To solve this, Probabilistic Fairness [Molina and Loiseau, 2022] relaxes the requirement of guaranteeing fairness for all subgroups using a probabilistic approach. Formally,
@@ -150,6 +163,10 @@ A surge of methods have been proposed to mitigate bias by learning fair models [
 Subgroup fairness via auditing. A number of works [Kearns et al. , 2018; Kim et al. , 2018; Kim et al. , 2019; Hebert-Johnson et al. , 2018] use auditing to learn fair predictors w.r.t a large number of subgroups. This approach involves an auditor, with access to i.i.d. samples X from an unknown distribution, that assesses the fairness of a predictor using a fairness metric and identifies subgroups with high unfairness. Then a learning algorithm tries to minimize error subject to that fairness constraint. Separately, [HebertJohnson et al. , 2018; Kearns et al. , 2018] both prove that the task of learning such a fair model is equivalent to auditing an arbitrary predictor w.r.t a class of subgroups C which is computationally equivalent to weak agnostic learning of C . Utilizing this approach, the seminal work of [Kearns et al. , 2018] proposes a zero-sum game between an Auditor and a Learner for the subgroup fairness notion. In this setting, the zero-sum game is a Fictitious Play using a cost-sensitive classification oracle [Agarwal et al. , 2018]. Instead of auditing during training, [Hebert-Johnson et al. , 2018] use a post-processing iterative boosting algorithm by combining all c ∈ C until the model is α -calibrated. Multiaccuracy [Kim et al. , 2019] extends this approach to learning a multi-accurate predictor that guarantees accurate predictions w.r.t C . Inspired by these approaches, [Kim et al. , 2018] propose a variant of stochastic descent gradient that can be leveraged using auditing to postprocess a predictor.
 
 Learning beyond surrogate fairness notions. Techniques discussed so far are strictly based on surrogate fairness notions that are adapted to apply to many subgroups e.g., SPsubgroup fairness is a surrogate of the statistical parity notion. Next, we discuss works that go beyond tailor-made intersectional fairness notions. The approach outlined in [Shui et al. , 2022] focuses on addressing group sufficiency for many subgroups (including intersectional groups) in ML predictors. Group sufficiency states that given the prediction f ( x ) , the conditional expectation of the ground-truth label ( E [ Y | ( f ( x ) , A ] ) is similar across different subgroups. They first derive an upper bound of the group sufficiency gap and propose a bi-level optimization approach with a randomized algorithm that generates the output distribution of the predictor. In the lower level, subgroup-specific output distribution is learned using a small sample of each subgroup's labeled data.
+
+
+<!-- PAGE 5 -->
+
 
 Then, the final output distribution is updated at the upper level to ensure it is close to all subgroup-specific output distributions. Another work called GroupFair [Yang et al. , 2020a] proposes Bayes-optimal predictors that are fair for all subgroups w.r.t loss, using a weighted Empirical Risk Minimization (ERM) oracle [Agarwal et al. , 2018]. Recently, [Kang et al. , 2022] took another step towards a more generalized mitigation approach that does not depend on self-defined fairness notions by capturing linear and non-linear dependence between predictions and intersectional groups using mutual information [Shannon, 1948]. Finally, [Morina et al. , 2019], combines and extends previous works [Hardt et al. , 2016; Corbett-Davies et al. , 2017] to include intersectional cases, by utilizing differential fairness. This involves randomly flipping predictions and a loss function which allows users to find the optimal fairness-accuracy trade-off.
 
@@ -185,6 +202,10 @@ Numerous works (e.g. [Tan and Celis, 2019]) have observed that the societal bias
 
 Benchmark. Several studies have examined bias in sentiment analysis systems, such as [Kiritchenko and Mohammad, 2018], and found that such systems discriminate based on intersections of gender and race. A closely related study by [Cˆ amara et al. , 2022] across multiple languages confirms these biases. Contextualized word embedding models, including GPT-2 and BERT, have been analyzed for gender and race intersections at sentence level [May et al. , 2019] and at contextualized word level [Tan and Celis, 2019]. These works report higher discrimination at the intersection of race and gender (e.g., Black females) compared to either group alone. Separately, [Hassan et al. , 2021] evaluates BERT for discrimination against people with disabilities along similar intersectional groups. To automatically identify intersectional biases in static word embeddings, [Guo and Caliskan, 2021] introduces Contextualized Embedding Association Test (CEAT) to measure intersectional bias in contextualized settings. Finally, [Kirk et al. , 2021] expands upon these works to incorporate intersections of religion, sexuality, and political affiliations to investigate representational and allocational harms concerning occupational stereotypes in language models. To quantify the scope of the intersectional bias problem in NLP, [Lalor et al. , 2022] performs a comprehensive evaluation of state-of-the-art NLP models and debiasing strategies for intersectional bias, benchmarking ten downstream tasks and five demographic groups. These studies highlight the importance of considering a diverse set of intersecting groups in discussions around bias in language models, especially userfacing large language models.
 
+
+<!-- PAGE 6 -->
+
+
 Mitigation. Relatively few works have focused on debiasing along intersectional dimensions. The earliest work by [Subramanian et al. , 2021] evaluates two debiasing techniques and shows that debiasing methods based on independent groups are prone to gerrymandering. To address the issue of limited data for intersectional groups, [Cheng et al. , 2022] introduces JoSEC, a debiasing approach that leverages the nonlinear geometry of subspace representations to learn intersectional subspace without using predefined word sets. Unlike the linear correlation assumption, they posit that the individual subspaces intersect over a single dimension where the intersectional group subspace resides.
 
 ## 4.2 Ranking Systems
@@ -206,6 +227,10 @@ A software engineering approach [Jin et al. , 2020] seeks to ensure adequate rep
 ## 4.4 Discussion
 
 Current applications of intersectionality have been focused on NLP and Ranking. Some other promising applications in-
+
+
+<!-- PAGE 7 -->
+
 
 Table 1: Summary of popular datasets across different AI domains that contain multiple intersectional groups. Law School [Wightman, 1998] and Compass [Angwin et al. , ] are also used in Ranking. Adult [Kohavi, 1996], Student [Cortez and Silva, 2008], Psychometrics [Abbasi et al. , 2021], Multilingual Twitter Corpus (MTC) [Huang et al. , 2020], Five Item Personality Inventory (FIPI) and Myers-Briggs Type Indicator (MBTI) [Gjurkovi´ c et al. , 2021], MovieLens [Harper and Konstan, 2015], MEPS [Cohen et al. , 2009], CelebA [Liu et al. , 2015], UTKFace [Zhang et al. , 2017], PPB [Buolamwini and Gebru, 2018].
 
@@ -245,6 +270,10 @@ Evaluating fairness notions. Intersectional notions proposed for handling biases
 ## Acknowledgements
 
 This material is based upon work supported by the Cisco Research Gift Grant.
+
+
+<!-- PAGE 8 -->
+
 
 ## References
 
@@ -318,3 +347,4 @@ This material is based upon work supported by the Cisco Research Gift Grant.
 - [Yang et al. , 2020b] Ke Yang, Joshua R Loftus, and Julia Stoyanovich. Causal intersectionality for fair ranking. 2020.
 - [Yona and Rothblum, 2018] Gal Yona and Guy Rothblum. Probably approximately metric-fair learning. In ICML , pages 56805688. PMLR, 2018.
 - [Zhang et al. , 2017] Zhifei Zhang, Yang Song, and Hairong Qi. Age progression/regression by conditional adversarial autoencoder. In CVPR , pages 5810-5818, 2017.
+

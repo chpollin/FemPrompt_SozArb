@@ -1,10 +1,11 @@
 ---
 source_file: Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.pdf
-conversion_date: 2026-02-03T09:00:17.044426
+conversion_date: 2026-02-03T18:31:07.805148
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -53,6 +54,10 @@ An individual's personal relationship with artificial intelligence (AI) is a dec
 
 I will first discuss the three basic divides that typically define learners' perceptions of AI and argue that there are at least three kinds of gaps between the public presentations of AI and the lived experiences, which need to be taken into account in pedagogy. Following this, I will discuss why pedagogical approaches to AI education can greatly benefit from a positiveconstructive approach in pedagogy and how centering on the individual's perspective is conceived of as important in the current competence models proposed by UNESCO. As a pedagogical application of these ideas, I will present the so-called 3E model that intends to put these  ideas  into  practice.  The  3E  model  focuses  on  adoption  and  building  an  initial understanding  of  AI  technologies,  which  has  been  the  focus  of  my  workshops.  Ideas concerning AI pedagogies are still a work-in-progress, and so is my effort to construct a
 
+
+<!-- PAGE 2 -->
+
+
 pedagogical approach that would help learners become equipped with a baseline understanding of the new disruptive technologies.
 
 ## Disentangling pre-conceptions of AI
@@ -78,6 +83,10 @@ Indeed, policymakers and public educators have started describing AI as an umbre
 ## The organizational vs. individual divide
 
 There is also a gap between organizations and individuals in terms of adopting and using AI. In organizations, decisions regarding the use (or non-use) of tools, as well as in-house AI development, are made top-down at the strategic level. Individuals are typically either prohibited  from  or  permitted  to  use  certain  tools  but  are  rarely encouraged to choose tools based on their own preferences, largely due to concerns about privacy and data security. In informal and private contexts, however, individuals are free to choose whichever
+
+
+<!-- PAGE 3 -->
+
 
 tools they prefer-and must also carry out their risk assessments. This may not sound surprising, but it has consequences for pedagogies.
 
@@ -105,6 +114,10 @@ FIGURE 1
 
 The three stages of AI uses. The images were produced with the AI-tool Playground AI with prompts referring to the following concepts: 'researcher examining a computer', 'researcher and a team analysing results' and 'researcher presenting results to an audience' (see Jaakkola, 2024, p. 5).
 
+
+<!-- PAGE 4 -->
+
+
 of  AI  technologies.  For  instance,  many  organizations-whether universities,  companies,  public  authorities  (such  as  schools),  or newsrooms-implement  specific  policies  that  permit  the  use  of certain platforms, such as Microsoft's AI tools, while restricting or prohibiting  others.  A  common  example  is  the  preferential  use  of Copilot over ChatGPT, or AI systems developed by the organization itself over external tools and services available.
 
 Finally,  at  the  front  stage,  the  uses  at  both  the  backstage  and personal stages need to be assessed and described to increase the transparency and truthfulness of the outcome that has been generated with co-intelligence between human actors and a machine. Some forms of communication, such as journalism, apply stricter ethical frameworks for transparency and accountability than others, such as communication between free citizens. The practices developed for the front  stage  also  significantly  define  what  possibilities  citizens  and audiences have to assess the truthfulness of content and establish trust in the producers of content or information.
@@ -131,6 +144,10 @@ In the final Exit phase, participants reflect on their experiences and attitudes
 
 To settle the individual perspective, an initial pedagogical approach to AI can aptly begin with addressing preconceptions and attitudes among learners. This includes both alleviating unfounded fears and tempering inflated expectations-two extremes that, as mentioned earlier, often characterize public perceptions shaped by media narratives. Educators and facilitators have the important task of placing AI technologies within a realistic and comprehensible context by providing factual, balanced information. Equally important is the effort to understand the subjective meanings individuals assign AI. Each person's background, experiences, and exposure to technology shape their perceptions, influencing both their openness and resistance to engaging with AI tools. Identifying these personal barriers and underlying attitudes-whether they stem from uncertainty,  lack  of  knowledge,  ethical  concerns,  or  past  negative experiences-is crucial.
 
+
+<!-- PAGE 5 -->
+
+
 Example  1.  Learners  are  invited  to  discuss  their  previous experiences with ChatGPT. For what purposes have they used it, and  what  were  the  outcomes?  Are  they  utilizing  their  full potential?  These  experiences  are  documented  on  a  shared whiteboard or similar platform to make the diversity of use visible. By  exchanging  experiences,  learners  can  discover  how  others engage with the tool and consider new ways it might be used. They may also identify gaps in their knowledge and skills. Through shared discussion, the tool becomes more approachable-more 'tamed'-as learners begin to attach personal meaning to it and integrate it into their reasoning.
 
 Learners can also be invited to list the pros and cons of their uses or journalistic uses. Providing an initial reflective space for participants to explore their attitudes and emotional responses to technology lays the groundwork for more focused and meaningful learning. Encouraging learners to consider their relationship with technology in general-and with AI, particularly genAI, which is currently the most prominent and user-friendly form-enables them to develop a holistic understanding of themselves as users and fosters components of self-efficacy. Once this foundation  is  established,  the  process  of  acquiring  knowledge  and practical skills through experimentation and hands-on testing, which requires a degree of confidence and self-perceived competence, tends to proceed more effectively.
@@ -156,6 +173,10 @@ Another  criticism  that  the  positive  approach  stressed  by  the conceptuali
 ## Conclusion
 
 In  this  essay,  I  explored  how  the  concept  of  developing  and strengthening an individual's trusting relationship with AI technologies can be conceptualized and translated into the pedagogical practice of the 3E model. With the threefold model of Enter, Experiment, Exit, educators can visit all stages of AI use in varying didactic settings.
+
+
+<!-- PAGE 6 -->
+
 
 The positive-constructive pedagogical approach to AI of the 3E model can be contrasted with public discourses that often emphasize potential risks and pitfalls from the outset. This approach rests on the premise that critical awareness and reflective distance toward technologies are most effectively cultivated through direct, personal engagement. Hands-on experience allows learners to develop more nuanced, relevant, and proportional insights grounded in observation and evidence. Rather than instill fear or skepticism prematurely, this pedagogy encourages exploration and informed judgment, thereby empowering individuals to critically assess AI technologies based on their encounters and contextualized knowledge.
 

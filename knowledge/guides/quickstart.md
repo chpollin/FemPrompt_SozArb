@@ -1,6 +1,6 @@
 # Quickstart Guide
 
-10-Minuten-Einstieg in die FemPrompt/SozArb Literature Research Pipeline.
+10-Minuten-Einstieg in die Literature Review Pipeline.
 
 ---
 

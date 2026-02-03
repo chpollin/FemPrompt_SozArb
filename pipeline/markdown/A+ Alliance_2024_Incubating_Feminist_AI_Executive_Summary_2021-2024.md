@@ -1,11 +1,16 @@
 ---
 source_file: A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.pdf
-conversion_date: 2026-02-03T08:40:02.690892
+conversion_date: 2026-02-03T18:19:07.741178
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 
 
@@ -20,6 +25,10 @@ Goal: The f&lt;a+i&gt;r,  Feminist AI Research Network,  was created to spring
 f&lt;a+i&gt;r aims to to create new tools in order to transform old systems. We investigate, validate, prototype and pilot research hypotheses using multidisciplinary teams, design justice principles, meaningful community engagement, and public and private sector partnership aligned with our regional and global approach.
 
 Impact: Over 2021-2024  f&lt;a+i&gt;r has spread the idea of Feminist AI to expand the collective vision beyond critical work on Gender Based Violence (the floor) to a vision of a world where new opportunities abound (the ceiling), and women, girls and marginalized communities are equal partners in decision-taking and tools-making.
+
+
+<!-- PAGE 3 -->
+
 
 ## Feminist AI: Artificial Intelligence harnessed to deliver equality outcomes, designed with inclusion at the core, creating new opportunities for proactive, innovative correction of inequities.
 
@@ -50,6 +59,10 @@ Paper ───────────── Prototype ────────
 - Community Perspectives of AI in Natural Resource Governance (Mexico)
 - Explainable AI-Based Tutoring System for Upper Egypt Community Schools (Egypt)
 
+
+<!-- PAGE 4 -->
+
+
 ## 5 papers → prototype → pilot created :
 
 - SafeHer Transit: What Women Want in their AI-Powered Safety App (The Philippines)
@@ -70,6 +83,10 @@ Fostering new forms of multidisciplinary AI thinking and teamwork, catalyzing ne
 
 SafeHER is an AI-driven transit safety app for Manila, a city with one of the most dangerous transport systems in the world for women as 80% of women commuters report harassment or sexual assault. Developed by a philosophy professor and her tech team, SafeHER merges defensive functions with women's collective action. It also integrates an active cooperation with Manila transit authorities AND government units.
 
+
+<!-- PAGE 5 -->
+
+
 - Published in the peer reviewed Journal of Transportation Security by Springer,  Biana, H.T., Jabar, M., Yabut, H. and Domingo, R., 2023. Modified feminist self-defense: violence against women in transit in Metro Manila . Journal of Transportation Security , 16 (1), p.11., the project has the potential to replicate in other densely populated urban settings.
 - In collaboration with the Philippines' Violence Against Women public desk, and the Philippines Commission on Women; for the pilot stage the team conducted successful simulations with local Manila police. Going forward De La Salle University will adopt (https://www.dlsu.edu.ph/can-an-app-make-women-safer-in-their-commute/) the app and mainstream it for their female students.
 
@@ -86,6 +103,10 @@ In Argentina two female computer science professors from University of Cordoba t
 ## AY M U R A I ( H T T P S : / / W W W . AY M U R A I . I
 
 Measuring Gender Based Violence in Latin America, a collaboration between feminist NGO Data Género and Criminal Court 10 in Buenos Aires, Argentina. AymurAI is a software that anonymizes documents, collects and makes available data on gender violence from judicial sentences. AymurAI's long term goal is to offer access to artificial intelligence technologies that allow the automatic extraction of statistical data on gender violence and improve transparency in the judiciary in Latin America.
+
+
+<!-- PAGE 6 -->
+
 
 - The paper mapped out the theory, and the prototype involved a collaboration with a judge and staff running Criminal Court 10 in Buenos Aires in order to easily open their data to document and make public the high rate of femicide.
 - AymurAI is now a case study in UNESCO's Global toolkit on AI and the rule of law for the judiciary. (https://unesdoc.unesco.org/ark:/48223/pf0000387331)
@@ -105,6 +126,10 @@ The three hubs operate as distinct entities, each bringing unique perspectives a
 
 The &lt;A+&gt; Alliance is a global feminist coalition of technologists, activists and academics  with a mission to create a paradigm shift for AI and associated Automated Decision-Making to a focus on systems change in support of inclusive democratic processes and gender transformative policy and structures.  It is dedicated to creating a new body of feminist AI knowledge and models with and from the global South.
 
+
+<!-- PAGE 7 -->
+
+
 In 2020, with the support of IDRC, the &lt;A+&gt; Alliance launched  f&lt;a+i&gt;r  the Feminist AI Research Network to build upon  &lt;A+&gt; Alliance's 2019 Declaration (https://aplusalliance.org/latest-news/) for Affirmative Action for Algorithms which has served as a mothership for the process.  Co-founded in 2019 by Women at the Table and Ciudadania Inteligente, the Alliance has been led from 2021-2024 by Women at the Table
 
 (https://www.womenatthetable.net/) &amp; Tecnologico de Costa Rica (https://www.tec.ac.cr/) .
@@ -117,6 +142,10 @@ In 2020, with the support of IDRC, the &lt;A+&gt; Alliance launched  f&lt;a+i&g
 - Genuine Community involvement Community engagement is sine qua non to this process: More research could be done on how to effectively reach out to and then create and validate methodologies to fully and meaningfully engage communities in the co-creation of new and emerging technologies that serve the needs of the community and the most marginalized.
 - Bi Weekly meetings proved to have great impact encouraging teams to move forward in the compressed timeline, avoid less useful avenues of investigation and produce highly regarded research published in global journals, presented at prestigious conferences, and garner further funding from the institutions such as McGovern Foundation, Mozilla, etc : Bi Weekly meetings
 
+
+<!-- PAGE 8 -->
+
+
 not only built trust but also strong relationships within the larger network, transforming grantor-grantee relationships into a critical community of researchers and technologists that value collaboration and bold experimentations .
 
 - Creative freedom for researchers is key and the close alignment with expressions of interest into papers, prototypes and pilots allowed for researchers to make significant progress vis à vis the bi weekly meetings on one hand, and to have the freedom to experiment, ideate and pivot their means and methods on the other hand.
@@ -124,7 +153,15 @@ not only built trust but also strong relationships within the larger network, tr
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 <!-- image -->
 
@@ -149,6 +186,10 @@ f&lt;A+i&gt;
 - Continue to socialize gender-transformative approaches and feminist AI to technical and computer science communities.
 - Be sensitive to the reality that academics are rewarded when they publish in their specific discipline's journals. Be aware that multidisciplinary approaches are not highly rewarded currently.  This is a continuing obstacle.
 
+
+<!-- PAGE 11 -->
+
+
 <!-- image -->
 
 ## Partnerships, Collaborations and Capacity Building :
@@ -162,6 +203,10 @@ f&lt;A+i&gt;
 - Open opportunities for funding further papers, prototypes and pilots with interdisciplinary outlooks and approaches. Explore multiple publishing avenues and formats: peer-reviewed articles, op-eds, news articles, and creative essays in addition to podcasts and webinars. It's important for the network to exist beyond the academy, and to socialize its jargon and approach to developing feminist technologies with communities that can benefit.
 - A broader grassroot and outreach to policy makers, feminists, digital rights and activists, human rights defenders, critical and responsible AI institutions will build visibility and generate new partnerships with researchers, civil society, and government stakeholders.
 - widen the dissemination of knowledge to showcase the network's applied research, and debate to a general public audience. To do this, the network may consider funding a communications strategy/campaign.
+
+
+<!-- PAGE 12 -->
+
 
 Organized by
 

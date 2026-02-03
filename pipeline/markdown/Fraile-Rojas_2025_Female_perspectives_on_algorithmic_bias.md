@@ -1,10 +1,11 @@
 ---
 source_file: Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.pdf
-conversion_date: 2026-02-03T08:56:22.468036
+conversion_date: 2026-02-03T18:27:00.796197
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 MD 63,9
 
 ## 3042
@@ -61,6 +62,10 @@ Practical implications -From a practical perspective, the results help us unders
 
 Social implications -The results also help us understand the role of female influencers: ordinary individuals often challenged by gender and race discrimination. They request an intersectional, collaborative and pluralistic understanding of gender and race in AI. They act alone and endure the consequences of stigmatized products and services. AI curators should strongly consider advocating for responsible, impartial technologies, recognizing the indispensable role of women. This must consider all stakeholders, including representatives from industry, small and medium-sized enterprises (SMEs), civil society and academia.
 
+
+<!-- PAGE 2 -->
+
+
 Originality/value -This study aims to fill critical research gaps by addressing the lack of a socio-technical perspective on AI-based decision-making systems, the shortage of empirical studies in the field and the need for a critical analysis using feminist theories. The study offers valuable insights that can guide managerial decisionmaking for AI researchers and practitioners, providing a comprehensive understanding of the topic through a critical lens.
 
 Keywords Intersectional feminism, AI gender bias, AI ethics, Societal biases, Social opinion mining Paper type Research paper
@@ -81,6 +86,10 @@ Management Decision
 
 3043
 
+
+<!-- PAGE 3 -->
+
+
 ## 3044
 
 In this context, we advocate for the importance of exploring public awareness around gendered AI technologies. Our particular focus is on the digital conversations of female users surrounding this. Social media platforms foster the broad sharing of ideas and encourage open public discussions. Users' posts can serve as a valuable source of information, as these conversations mirror social perspectives across domains (Cano-Marin et al. , 2023).
@@ -98,6 +107,10 @@ Haraway's manifesto is one of the most influential pieces in this area, profound
 Wajcman (2010) evaluates the impact of the over-representation of dominant androcentric groups which share common attributes: Christian-Jewish, American, white, heterosexual, non-disabled, intellectually gifted men, thought of as responsible for the design, development and deployment of these technologies. Feminist AI scholars contend that this existing Bro Culture in large technology companies (Mittelstadt et al. , 2016; West et al. , 2019) fosters a competitive environment which disadvantages women and other outsiders.
 
 These exclusionary, hypermasculine practices affect women in information technology (IT) firms and female entrepreneurs (Carbone et al. , 2019). Clark refers to this imbalance as a 'sea of dudes problem', whereby males predominantly occupy positions of influence, development and research in AI (2016). This concentration of power fosters masculinity and exclusivity and discriminates systematically against non-dominant groups (Broussard, 2018). Wajcman and Young (2023) identify the masculine culture of the workplace as a significant barrier to the career advancement of women in AI. For all the above reasons, it is important to explore gender balance and pinpoint how crucial it is to prevent algorithms from perpetuating a vicious cycle of gender ideologies that disadvantage women (Criado-Perez, 2021).
+
+
+<!-- PAGE 4 -->
+
 
 Gender bias in AI-based decision-making systems is a socio-technical problem that requires a combination of technological, organizational and societal approaches. The contextual and socio-demographic factors observed are traditional societal prejudices: based on gender (Hamilton, 2019; Cirillo et al. , 2020), race (Benjamin, 2019; Huq, 2019), nationality (Landabur Ayala and Wilson Alcalde, 2022), disability (Shew, 2020), and age (Chu et al. , 2023). Jaume-Palasi (2021) notes that perception of bias differs among all individuals: where data scientists tend to consider it as a mathematical concept, and AI ethics experts view it as a complex term linked to humanistic ideals, Jaume-Palasi considers biological and sociocultural differences, as well as background and experience, to be key factors.
 
@@ -125,6 +138,10 @@ Decision
 
 3045
 
+
+<!-- PAGE 5 -->
+
+
 ## MD 63,9
 
 ## 3046
@@ -146,6 +163,10 @@ The concept of design justice developed by Costanza-Chock (2020) seeks to challe
 Researchers, then, are diligently developing techniques to remove bias, from input data through careful training of AI models. Nonetheless, much work remains, such as on lack of a standardized method for assessing data quality (Balahur et al. , 2022). This is the main reason behind alternative proposals, such as well-grounded legal frameworks to ensure social good (Cheng et al. , 2021; Mendez-Suarez et al. , 2024). M � endez-Su � arez et al. (2023) stress the need for more regulation and audits to prevent AI from being used for unlawful or unethical purposes.
 
 Expanding upon legal frameworks, the European Parliament recently launched the AI Act which establishes obligations for providers and users, depending on the level of risk (European
+
+
+<!-- PAGE 6 -->
+
 
 Parliamentary Research Service, 2023). Leufer and Hidvegi (2023) argue that the Act's riskbased approach faces challenges, particularly because its narrow focus on specific risk categories may leave certain issues unaddressed, creating gaps in effectiveness (2023). L € utz notes the European digital strategy's attempts to ensure effective gender equality and avoid algorithmic discrimination -but argues that it should have more explicitly addressed underlying issues around gender and non-discrimination (2022).
 
@@ -171,6 +192,10 @@ Management Decision
 
 3047
 
+
+<!-- PAGE 7 -->
+
+
 ## MD 63,9
 
 ## 3048
@@ -193,6 +218,10 @@ Textual data can be broadly categorized into two main types: facts and opinions.
 
 Conducting internet-mediated research can present unique, often subtle challenges in upholding established ethical principles (Hewson and Buchanan, 2013). These issues include differentiating between public and private domains online, confidentiality and security of online data, participant anonymity, procedures for obtaining valid consent, ensuring withdrawal rights, levels of researcher control, implications for scientific value and potential harm to participants and researchers. This is especially pertinent to the privacy consent agreements which Twitter users accept when posting on the platform, as these delineate how their data may be collected, stored and analysed (Twitter, 2022). With these considerations in mind, we have ensured the implementation of ethical guidelines which
 
+
+<!-- PAGE 8 -->
+
+
 include maintaining data confidentiality, minimizing potential harm to participants and maximizing the scientific value of our findings.
 
 Discussions were extracted from Twitter for the following reasons: (1) social networks help us understand human society, nature and technology together (Grover et al. , 2018); (2) a large number of users are available on Twitter; (3) the discussion on Twitter contains different metadata information such as user profile, geotag, timestamp and network information; (4) cost-effectiveness.
@@ -214,6 +243,10 @@ After the first classification, a second one made use of the 'she/her' and 'he/h
 Management Decision
 
 3049
+
+
+<!-- PAGE 9 -->
+
 
 ## MD 63,9
 
@@ -239,6 +272,10 @@ Figure 1. Word cloud of associated accounts of the 100 most influential users wh
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 Figure 2. Bar chart of types of accounts of the 100 most influential users, where 'AI' and 'gender' are mentioned
 
 <!-- image -->
@@ -251,6 +288,10 @@ A considerable number of female university professors linked to prestigious acad
 
 Finally, there are a few female managers linked to some of the most influential technological corporations worldwide. @jojobickley, working for Uber Technologies, and @criticalneuro, working for Microsoft Research, are considered the third and fourth most influential leaders.
 
+
+<!-- PAGE 11 -->
+
+
 Figure 3. Word cloud of Twitter description of the 100 most influential users, where 'AI' and 'gender' are mentioned
 
 <!-- image -->
@@ -262,6 +303,10 @@ Recently, the United States has surpassed China, the European Union and the Unit
 As we have noted, RT are vital in conveying Twitter users' messages around gender. Hashtags, meanwhile, help organize the discourse and create a community around it. The hashtag #sustainability represented a substantial portion of the picture and was used 2,573 times. This demonstrates how a term linked to gender inequity was at the core of many conversations; and emanated most often from @katiepatrick. Another directly related hashtag is that of #PeggySmedley, the nineteenth most influential female (frequency value: 1,489), an American tech journalist and sustainability influencer, she hosts her own podcast called The Peggy Smedley Show discussing big trends and digital transformation. The relevance of this hashtag reflects the important role of journalists in this community. These two analyses confirm Hypothesis 3, demonstrating that economic, social and environmental sustainability dimensions and algorithmic gender bias are strongly linked to each other.
 
 We also tested whether the conversation among these women was proactive or reactive. In other words, did the user frequently generate content through fairness-related terms, such as equity, balance, equality, justice, integrity, right or diverse; or discriminatory-related terms,
+
+
+<!-- PAGE 12 -->
+
 
 Figure 4. Spatial distribution of the 100 most influential users where 'AI' and 'gender' are mentioned
 
@@ -281,6 +326,10 @@ These analyses suggest a similar distribution among polarized tweets, both proac
 We classified our primary data here by adopting Ekman's six basic emotions (Ekman et al. , 1999): anger, disgust, fear, joy, sadness and surprise. As we utilized the Syuzhet sentiment analysis algorithm and the R programming language, we obtained two additional sentiments: anticipation and trust (Jockers, 2023). As depicted in Figure 5, four pleasant and four unpleasant emotions were observed, with surprise being categorized as either positive or negative, depending on the context. The result shows that digital conversations by women users have a significantly positive sentiment, which validates Butler's groundbreaking research on feminist discourse around solidarity and hope (2024). Both analyses confirm Hypothesis 1: Algorithmic bias impacts female user behaviours in response to injustice and equality in algorithmic outcomes.
 
 Finally, we sought to understand gender and race association. We applied the chi-square test to evaluate whether there is a significant relationship between the variables of gender and race. The hypotheses proposed were:
+
+
+<!-- PAGE 13 -->
+
 
 Figure 5. Bar chart by emotion of all 172,041 tweets
 
@@ -302,6 +351,10 @@ Table 2. Number of tweets with gender and race in the tweet body
 | Gender                     | 143,555   | 919   |
 |                            | 25,987    | 1,580 |
 | Source(s): Own elaboration |           |       |
+
+
+<!-- PAGE 14 -->
+
 
 Building on Black feminist thought, Crenshaw (2017) developed the concept of 'intersectionality'. She coined this term to address the intersecting social forces, identities and ideological frameworks through which systems of power and inequality are articulated and legitimized. Costanza-Chock (2018) suggests that gender, race and class are interlocking systems, often experienced together by individuals who exist at their intersections. The analyses here confirm Hypothesis 4: Gender and race affiliations tend to converge in collective conversations.
 
@@ -325,6 +378,10 @@ Management Decision
 
 3055
 
+
+<!-- PAGE 15 -->
+
+
 ## 3056
 
 Others among them are feminist activists, independent authors, tech journalists and university professors who engage the audience: raising awareness of social issues and technological threads, and confirming that the term 'sustainability' is strongly linked to conversations around gender inequity. Furthermore, women challenged by cultural bias and social discrimination are more likely to fund entrepreneurial solutions which address AI and ML bias. Most of the women highlighted in our study are entrepreneurs who use Twitter to communicate their point of view and experiences, and promote their prosocial companies.
@@ -342,6 +399,10 @@ That said, despite the limitations acknowledged above, this research has provide
 Further research is needed to identify and assess the various impacts of AI bias (Varsha, 2023). We have shown that female narratives are useful in highlighting discriminatory actions against gendered and racial minorities and reducing stereotypes and prejudices. To avoid algorithmic discrimination and improve fairness, we propose three recommendations for concrete actions.
 
 First , advanced technologies should continue to be approached from a socio-technical viewpoint with a multifaced development team, ensuring that robust legal frameworks and ethical considerations are followed. Lawmakers, regulators and company policymakers should prioritize both direct and indirect approaches when addressing gender equality.
+
+
+<!-- PAGE 16 -->
+
 
 However, as Karanicolas (2024) points out, as regulatory AI frameworks evolve into transnational global standards, it is essential to assess whether they truly address the needs and concerns of those most impacted by technological disruption -particularly in the US, EU and China -or if these global standards merely perpetuate existing domestic inequalities on a global scale. Addressing these broader systemic issues is critical before ensuring that specific concerns, like gender equality, are adequately integrated into these frameworks.
 
@@ -367,6 +428,10 @@ Management Decision
 
 3057
 
+
+<!-- PAGE 17 -->
+
+
 ## MD 63,9
 
 ## 3058
@@ -390,6 +455,10 @@ Management Decision
 - Chatziadam, P., Dimitriadis, A., Gikas, S., Logothetis, I., Michalodimitrakis, M., Neratzoulakis, M., Papadakis, A., Kontouslis, V., Siganos, N., Theodoropoulos, D., Vougioukalos, G., Hatzakis, I., Gerakis, G., Papadakis, N. and Kondylakis, H. (2020), 'TwiFly: a data analysis framework for Twitter', Information 2020 , Vol. 11 No. 5, 247, doi: 10.3390/INFO11050247.
 - Cheng, L., Varshney, K.R. and Liu, H. (2021), 'Socially responsible AI algorithms: issues, purposes, and challenges', Arxiv , Vol. 71, pp. 1137-1181, doi: 10.1613/jair.1.12814, available at: http:// arxiv.org/abs/2101.02032
 - Chu, C.H., Donato-Woodger, S., Khan, S.S., Nyrup, R., Leslie, K., Lyn, A., Shi, T., Bianchi, A., Abbasgholizadeh Rahimi, S. and Grenier, A. (2023), 'Age-related bias and artificial intelligence:
+
+
+<!-- PAGE 18 -->
+
 
 - a scoping review', Humanities and Social Sciences Communications , Vol. 10 No. 1, pp. 1-17, doi: 10.1057/s41599-023-01999-y.
 - Cirillo, D., Catuara-Solarz, S., Morey, C., Guney, E., Subirats, L., Mellino, S., Gigante, A., Valencia, A., Rementeria, M.J., Chadha, A.S. and Mavridis, N. (2020), 'Sex and gender differences and biases in artificial intelligence for biomedicine and healthcare', NPJ Digital Medicine , Vol. 3 No. 1, pp. 1-11, doi: 10.1038/s41746-020-0288-5.
@@ -415,6 +484,10 @@ Management Decision
 
 ## Management Decision
 
+
+<!-- PAGE 19 -->
+
+
 ## MD 63,9
 
 ## 3060
@@ -438,6 +511,10 @@ Management Decision
 - Hamilton, M. (2019), 'The sexist algorithm', Behavioral Sciences and the Law , Vol. 37 No. 2, pp. 145-157, doi: 10.1002/BSL.2406.
 - Hansson, S.O. (2017), The Ethics of Technology: Methods and Approaches , Rowman &amp; Littlefield, Lanham, MA.
 - Haraway, D. (1987), 'A manifesto for cyborgs: science, technology, and socialist feminism in the 1980s', Australian Feminist Studies , Vol. 2 No. 4, pp. 1-42, doi: 10.1080/ 08164649.1987.9961538.
+
+
+<!-- PAGE 20 -->
+
 
 - Harding, S. (1986), From Feminist Empiricism to Feminist Standpoint Epistemologies, The Science Question in Feminism , available at: https://books.google.com/books/about/The\_Science\_ Question\_in\_Feminism.html?hl 5 es&amp;id 5 27TrCuk4LRgC
 - Harding, S. (1991), Whose Science? Whose Knowledge? Thinking from Women's Lives , Cornell University Press, Ithaca, NY.
@@ -464,6 +541,10 @@ Management Decision
 
 ## Management Decision
 
+
+<!-- PAGE 21 -->
+
+
 ## MD 63,9
 
 ## 3062
@@ -487,6 +568,10 @@ Management Decision
 - Mittelstadt, B.D., Allo, P., Taddeo, M., Wachter, S. and Floridi, L. (2016), 'The ethics of algorithms: mapping the debate', Big Data and Society , Vol. 3 No. 2, doi: 10.1177/2053951716679679/ ASSET/IMAGES/LARGE/10.1177\_2053951716679679-FIG1.JPEG.
 - Moorosi, N., Sefala, R. and Luccioni, A.S. (2023), 'AI for whom? Shedding critical light on AI for social good', NeurIPS 2023 Computational Sustainability: Promises and Pitfalls from Theory to Deployment , available at: https://sdgs.un.org/goals
 
+
+<!-- PAGE 22 -->
+
+
 - Mullainathan, S. and Spiess, J. (2017), 'Machine learning: an applied econometric approach', The Journal of Economic Perspectives , Vol. 31 No. 2, pp. 87-106, doi: 10.1257/JEP.31.2.87.
 - Nadeem, A., Marjanovic, O. and Abedin, B. (2022), 'Gender bias in AI-based decision-making systems: a systematic literature review', Australasian Journal of Information Systems , Vol. 26, doi: 10.3127/ajis.v26i0.3835.
 - Noto La Diega, G. (2018), 'Against the dehumanisation of decision-making -algorithmic decisions at the crossroads of intellectual property, data protection, and freedom of information', SSRN , Vol. 9 JIPITEC 3 para 1, available at: https://ssrn.com/abstract 5 3188080
@@ -507,6 +592,10 @@ Management Decision
 - Stern, N. (2006), 'Stern review on the economics of climate change', The National Archives , available at: https://webarchive.nationalarchives.gov.uk/ukgwa/ þ /http:/www.hm-treasury.gov.uk/ sternreview\_index.htm
 
 ## Management Decision
+
+
+<!-- PAGE 23 -->
+
 
 ## MD 63,9
 
@@ -531,6 +620,10 @@ Management Decision
 - World Economic Forum (2024), Global Gender Gap Report 2024 , Geneva, available at: https:// www.weforum.org/publications/global-gender-gap-report-2024/
 - Yang, Z., Wu, Q., Venkatachalam, K., Li, Y., Xu, B. and Trojovsky, P. (2022), 'Topic identification and sentiment trends in Weibo and WeChat content related to intellectual property in China', Technological Forecasting and Social Change , Vol. 184, 121980, doi: 10.1016/ J.TECHFORE.2022.121980.
 - Zarsky, T. (2016), 'The trouble with algorithmic decisions', Science, Technology and Human Values , Vol. 41 No. 1, pp. 118-132, doi: 10.1177/0162243915605575.
+
+
+<!-- PAGE 24 -->
+
 
 ## About the authors
 

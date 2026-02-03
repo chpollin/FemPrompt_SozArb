@@ -1,10 +1,11 @@
 ---
 source_file: Yunusov_2024_MirrorStories_Reflecting_Diversity_through.pdf
-conversion_date: 2026-02-03T09:33:09.944565
+conversion_date: 2026-02-03T19:03:55.495042
 converter: docling
-quality_score: 95
+quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## MIRRORSTORIES: Reflecting Diversity through Personalized Narrative Generation with Large Language Models
 
 Sarfaroz Yunusov , Hamza Sidat , and Ali Emami
@@ -35,6 +36,10 @@ Recent studies have investigated LLMs' capabilities in expressing personality wi
 
 Our study addresses this gap by exploring the potential of LLMs to create mirror stories-narratives that genuinely reflect and resonate with the identities of individual readers. We present a framework
 
+
+<!-- PAGE 2 -->
+
+
 Figure 1: Generation and evaluation process for human-written generic, LLM-generated generic, and LLM-generated personalized narratives
 
 <!-- image -->
@@ -60,6 +65,10 @@ Identities Identity traits such as name, age, gender, ethnic background, and int
 Generic &amp; Personalized LLM-Generated Stories Generic stories are generated focusing solely
 
 2 Scraped from https://read.gov/aesop/001.html
+
+
+<!-- PAGE 3 -->
+
 
 Figure 2: Illustration demonstrating the personalization validation and impact processes
 
@@ -88,6 +97,10 @@ Models GPT-4 (ver. 0613, temperature 0.4) was used as an evaluator in both exper
 Are MIRRORSTORIES personalized? The effectiveness of personalization in MIRRORSTORIES is evident from the high accuracy rates in identifying identity elements by both human and LLM evaluators. As shown in Figure 3, human evaluators were particularly adept at identifying gender and ethnicity with accuracies at 100% and 94%, respectively. Similarly, GPT-4 showed robust performance, matching or exceeding human accuracy in all categories, which confirms the high level of personalization achieved in the narratives.
 
 Personalized LLM-generated stories also effectively incorporate both the provided moral and the reader's interests, with a stronger emphasis on the moral. To demonstrate this, we used BERTopic (Grootendorst, 2022) for topic modeling to identify the top five terms for each story. We then
+
+
+<!-- PAGE 4 -->
+
 
 Figure 3: Accuracy of human and LLM evaluators in identifying identity elements in the story
 
@@ -131,6 +144,10 @@ type of story, or provide 'N/A' if they could not. We manually assessed the eval
 
 What is the impact of personalization on textual diversity? We analyzed how personalization elements impact textual diversity using the Shannon Diversity Index (SDI). Table 2 shows that personalized stories achieve the highest SDI among all story types. Including a single personalization element, such as the 'interest' element, also increases SDI compared to generic and human-written stories with the same moral. Additionally, we observed that increasing GPT-4's temperature negatively affects the diversity and coherence of generic LLM-generated stories. At a temperature of 1.2, the stories showed increased diversity but began to lose coherence. Further increasing the temperature to 1.5 resulted in nonsensical outputs.
 
+
+<!-- PAGE 5 -->
+
+
 Figure 5: Average ratings by GPT-4 across gender
 
 <!-- image -->
@@ -155,6 +172,10 @@ Our study builds on research on the effectiveness of personalized narratives in 
 
 Our study demonstrates the potential of LLMs in generating personalized narratives that effectively incorporate diverse identity elements and enhance reader engagement compared to generic stories. MIRRORSTORIES consists of 1,500 personalized stories that consistently outperform generic ones on key metrics. By making MIRRORSTORIES publicly available and integrating it into an interactive web application, we aim to encourage further research on personalized narrative generation, contributing to more engaging and inclusive content. Future work could explore out-group perceptions of these narratives, broadening our understanding of personalization's impact across diverse audiences.
 
+
+<!-- PAGE 6 -->
+
+
 ## Limitations
 
 Story Constraints: To maintain consistency and feasibility within the scope of our study, we imposed certain constraints on the stories generated, such as limiting the length to 250-300 words and focusing on a specific set of morals. While these constraints allowed for a controlled comparison between personalized and generic stories, they may not fully capture the potential of LLMs in generating longer, more complex narratives or exploring a wider range of themes and morals. Future research could investigate the impact of personalization on stories of varying lengths and themes to gain a more comprehensive understanding of how these factors influence reader engagement and satisfaction.
@@ -178,6 +199,10 @@ Potential Misuse and Unintended Consequences: While personalized storytelling ha
 Inclusivity and Representation: When generating personalized stories, we strived to ensure that the stories were inclusive and representative of diverse identities and experiences. This included considering factors such as race, ethnicity, gender identity, sexual orientation, disability, and socioeconomic status. We aimed to create stories that were respectful, authentic, and empowering for all individuals, avoiding stereotypes and promoting positive representation.
 
 Accountability and integrity were paramount in reporting our results, including limitations and implications. Additionally, every narrative generated by LLMs underwent a thorough review to maintain quality and appropriateness, enhancing the reliability of our findings and participant well-being.
+
+
+<!-- PAGE 7 -->
+
 
 ## Acknowledgements
 
@@ -223,6 +248,10 @@ This work was supported by the Natural Sciences and Engineering Research Council
 - Chao Zhang, Xuechen Liu, Katherine Ziska, Soobin Jeon, Chi-Lin Yu, and Ying Xu. 2024. Mathemyths: Leveraging large language models to teach mathematical language through child-ai co-creative storytelling. In Proceedings of the CHI Conference on Human Factors in Computing Systems , pages 1-23, New York, NY, USA. ACM.
 - Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian Min, Beichen Zhang, Junjie Zhang, Zican Dong, Yifan Du, Chen Yang, Yushuo Chen, Zhipeng Chen, Jinhao Jiang, Ruiyang Ren, Yifan Li, Xinyu Tang, Zikang Liu, Peiyu Liu, Jian-Yun Nie, and Ji-Rong Wen. 2023. A survey of large language models.
 
+
+<!-- PAGE 9 -->
+
+
 ## A Appendix
 
 Figure 6: Illustration of diversity representation in children's books based on 2018 publishing statistics. Data derived from the Cooperative Children's Book Center, University of Wisconsin-Madison. (Illustration by David Huyck, in consultation with Sarah Park Dahlen) (Huyck and Dahlen, 2019).
@@ -257,6 +286,10 @@ I would rate the quality of content of the story a 4. The intertwining of fictio
 
 Figure 7: Sample input and output of GPT-4 evaluating a personalized story
 
+
+<!-- PAGE 10 -->
+
+
 Table 3: Sample responses from two annotators on the main message or moral of each story type, compared with the actual intended moral of the stories
 
 | Annotator #   | Story Type                 | Q: 'What is the main message or moral of the story? If you can't iden- tify, write 'N/A' '' .                                                           | Actual Moral of the Story            |
@@ -279,6 +312,10 @@ Figure 9: Gender Distribution in MIRRORSTORIES
 <!-- image -->
 
 Figure 10: Age Distribution in MIRRORSTORIES
+
+
+<!-- PAGE 11 -->
+
 
 ## A.2 Questionnaire for Annotators
 
@@ -356,6 +393,10 @@ Personalness:
 
 Figure 11: Questionnaire used to assess story satisfaction, quality, engagement, and personalness
 
+
+<!-- PAGE 12 -->
+
+
 ## A.3 Personalization Example
 
 Table 4: This table presents the personalization elements for three individuals, their personalized stories, and the top 5 terms identified by BERTopic for each story, along with the corresponding relevance scores.
@@ -376,6 +417,10 @@ Figure 13: Average evaluation ratings by GPT-4 across gender
 
 <!-- image -->
 
+
+<!-- PAGE 13 -->
+
+
 Figure 14: Average evaluation ratings by GPT-4 across ethnic background
 
 <!-- image -->
@@ -387,6 +432,10 @@ Figure 14: Average evaluation ratings by GPT-4 across ethnic background
 Figure 15: Qualitative comparison of ratings for three types of stories by both human evaluators and GPT-4, including both conflicting and consistent ratings
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 ## A.4.2 Correlation Analysis
 
@@ -408,6 +457,10 @@ Figure 17: Accuracy of human and LLM evaluators in identifying personalization e
 
 <!-- image -->
 
+
+<!-- PAGE 15 -->
+
+
 Figure 18: Illustration of the personalization test process for images. The left side displays the prompt used to generate personalized images. The right side outlines the evaluation criteria for human evaluators to determine how effectively personal elements have been integrated into the image.
 
 <!-- image -->
@@ -421,6 +474,10 @@ Table 6: Dataset structure of MIRRORSTORIES. The dataset includes personal attri
 | Behzad 23 |       | Male        | Boxing              | Indian              | Learn from your mistakes               | Behzad, a sturdy 23-year-old Indian man, was far more attached to his boxing gloves than his engineering textbooks. Son of a mechanic, his life was perched comfort- ably on the rusty edges of Mumbai, lit up by the lambent moon by night and the in- truding sun by day. Unlike his peers, Be- hzad wasn't fascinated by the jingling call of corporate ladders; instead, he ... | ...                            | ...                            |
 | Karina    | 29    | Female      | History             | Ukrainian           | Strive for excel- lence                | Karina's eyes danced with curiosity as she traced her fingers over the ancient tome. The worn leather binding and yellowed pages spoke of centuries past, each word a whisper from a forgotten era. For her, the study of history was more than a mere pursuit of knowledge, it was a gateway to understanding ...                                                                  | ...                            | ...                            |
 | Dario     | 35    | Non- binary | VolunteeringItalian | VolunteeringItalian | Take respon- sibility for your actions | Dario's eyes sparkled with determination as they stepped into the volunteer center. At 35 years old, they had already made a name for themselves in the local commu- nity for their unwavering commitment to making a difference. Born to Italian parents who instilled a deep sense of responsibility and compassion ...                                                           | ...                            | ...                            |
+
+
+<!-- PAGE 16 -->
+
 
 Table 7: Breakdown of the different categories and values included in the MIRRORSTORIES dataset. It covers a diverse range of ages, genders, ethnicities, interests, and moral values.
 

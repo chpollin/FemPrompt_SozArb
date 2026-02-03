@@ -1,10 +1,11 @@
 ---
 source_file: Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.pdf
-conversion_date: 2026-02-03T09:10:29.592481
+conversion_date: 2026-02-03T18:41:59.055868
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Assessing GPT's Bias Towards Stigmatized Social Groups: An Intersectional Case Study on Nationality Prejudice and Psychophobia
 
 Kashif, Afifah
@@ -53,6 +54,10 @@ University of Washington, USA | afifahk@cs.washington.edu
 
 University of Washington, USA | heerpate@cs.washington.edu
 
+
+<!-- PAGE 2 -->
+
+
 3. Request a written explanation for prompts under American and North Korean symptomatic schizophrenia identities, in the renting a room scenario with a flipped scale (Figure 1).
 
 Indicate your willingness for the following scenario,a and please give your answer on a Likert Scale (0 = definitely unwilling, 1 = probably unwilling, 2 = probably willing 3 definitely willing). How would you feel having an American who has symptomaticschizophrenia asa neighbor? [Extra Analysis] Please explain why.
@@ -91,6 +96,10 @@ Figure 2. GPT-4o, American prompts, Regular Scale
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 Figure 3. GPT-4o, North Korean Prompts, Regular Scale
 
 <!-- image -->
@@ -110,6 +119,10 @@ Figure 5. GPT-4o, North Korean Prompts, Flipped scale
 ## Averages and Standard Deviations
 
 Tables 1 and 5's rating averages indicate higher bias toward North Koreans under both scales. The stark contrast between these values highlights GPT's inconsistency in ranking under flipped scales.
+
+
+<!-- PAGE 4 -->
+
 
 Table 2 displays model-specific average differences of higher bias towards North Koreans and inconsistency in the magnitude of bias amongst regular vs. flipped scales. Table 6 shows varying levels of moderate-high deviations.
 
@@ -154,6 +167,10 @@ Table 4.
 | US 3.5(F) - NK 3.5(F) |     0.333 |      1     |        0.833 |      1.333 |       1.667 |
 | US 4(F) - NK 4(F)     |     1.167 |      1.167 |        0.833 |      1.333 |       1.167 |
 | US 4o(F) - NK 4o(F)   |     1.333 |      1.833 |        2.333 |      1.833 |       1.667 |
+
+
+<!-- PAGE 5 -->
+
 
 ## Analyzing GPT's Explanations
 
@@ -209,6 +226,10 @@ GPT models do present bias towards intersectional stigmatized identities. Across
 
 ## Table 6.
 
+
+<!-- PAGE 6 -->
+
+
 information) influences results. We plan to replicate this work under more demographics to encompass larger cultural diversity.
 
 GPT models do make assumptions. From our qualitative analysis, we find that GPT-4o made the assumption that they are different from a North Korean individual, but not from an American, and holds inherent ideals regarding mental disabilities. Future work should assess the political and cultural environment of the model's development location and account for a spectrum of mental disability symptoms at data training and model engineering levels.
@@ -239,6 +260,10 @@ We thank UW CSE 582 Spring 2024 staff and peers for their helpful comments and f
 - Charlesworth, T.E.S., Caliskan, A., &amp; Banaji, M.R. (2022). Historical representations of social groups across 200 years of word embeddings from Google Books, Proc. Natl. Acad. Sci. U.S.A. 119 (28) e2121798119, https://doi.org/10.1073/pnas.2121798119
 - Guo, W., &amp; Caliskan, A. (2021). Detecting emergent intersectional biases: Contextualized word embeddings contain a distribution of human-like biases. Proceedings of the 2021 AAAI/ACM Conference on AI, Ethics, and Society , 122-133.
 - Jiang, L., Hwang, J. D., Bhagavatula, C., Le Bras, R., Forbes, M., Borchardt, J., Liang, J. T., Etzioni, O., Sap, M., &amp; Choi, Y. (2021). Delphi: Towards machine ethics and norms. CoRR , abs/2110.07574 . https://arxiv.org/abs/2110.07574
+
+
+<!-- PAGE 7 -->
+
 
 - Mei, K., Fereidooni, S., &amp; Caliskan, A. (2023). Bias against 93 stigmatized groups in masked language models and downstream sentiment classification tasks. Proceedings of the 2023 ACM Conference on Fairness, Accountability, and Transparency , 1699-1710. ACM. https://doi.org/10.1145/3593013.3594109
 - Steed, R., &amp; Caliskan, A. (2021). Image representations learned with unsupervised pre-training contain human-like biases. CoRR , abs/2010.15052 . https://arxiv.org/abs/2010.15052

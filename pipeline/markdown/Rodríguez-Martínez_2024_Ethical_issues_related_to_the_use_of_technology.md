@@ -1,10 +1,11 @@
 ---
 source_file: Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.pdf
-conversion_date: 2026-02-03T09:17:31.360063
+conversion_date: 2026-02-03T18:48:54.850501
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Ethical Issues Related to the Use of Technology in Social Work Practice. A Systematic Review
@@ -43,6 +44,10 @@ SAGE Open July-September 2024: 1-14 /C211 The Author(s) 2024 DOI: 10.1177/215824
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 consideration of its impact (Almeida et al., 2020). The prioritization of technological resources over human relationships has been evident, necessitating a deeper understanding of this dynamic (Lindgren et al., 2019). This trend has garnered attention across various disciplines, including social sciences (Ranerup &amp; Henriksen, 2020), significantly impacting not only social work professionals but also citizens. Ultimately, this shift in societal dynamics fundamentally alters processes, interventions, and outcomes (Uriarte &amp; Acevedo, 2018).
 
 Analytics Information Management, involving data collection, storage, and analysis for informed decisionmaking, and Business Intelligence, using data analysis for actionable insights, are essential tools for organizational processes (O'Keefe &amp; Brien, 2018). However, their evolution to integrate social data responsibly is crucial for better decision-making (Franquesa &amp; Lo ´ pez, 2011), while ensuring compliance with legal and professional obligations (Rodrı´guez Alca ´ zar, 2017).
@@ -66,6 +71,10 @@ The systematic review process adhered closely to the checklist outlined in the P
 ## Research Approach Based on a Specific Objective
 
 The objective of this systematic review is to understand the current situation regarding the ethical dilemmas and problems that arise in the Social Work profession over time and as a result of the use of technology.
+
+
+<!-- PAGE 3 -->
+
 
 ## Eligibility Criteria
 
@@ -92,6 +101,10 @@ The open access web tool CADIMA was used in the process (Kohl et al., 2018). The
 ## Data Collection Process
 
 In this phase the researchers independently collected the characteristics of the studies analyzed and the main results of each study selected. To complete this stage of the study the authors generated a data compilation form following the methodological recommendations proposed by Butler et al. (2016). Specifically, the information extracted was: Title, authors, publication data, country, language, research design, study population, method, sample, objective/s and main results. As in the previous phases, discrepancies were resolved by consensus, through a joint review process among the authors.
+
+
+<!-- PAGE 4 -->
+
 
 Table 1. Search Strategy Carried Out on September 1, 2023.
 
@@ -125,6 +138,10 @@ A narrative synthesis was used to identify the main findings of the studies incl
 
 The methodological quality of the studies that met eligibility criteria and the assessment of their quality was performed following the CASP Qualitative Checklist (Butler et al., 2016), recommended by the Cochrane Group (Noyes et al., 2018). One of the authors performed the assessment of the methodological quality of the studies, and the assessment procedure was verified by a second reviewer. Discrepancies that arose in the scoring of the studies were resolved by consensus.
 
+
+<!-- PAGE 5 -->
+
+
 The CASP assessment consists of 10 questions that address the rigor of the research methodology, its credibility based on the ability of the results to represent the study phenomenon and the relevance of the main findings (Butler et al., 2016). Following this system, for each item evaluated the following scores were assigned: ''Yes'' (1 point), ''I cannot say'' (0.5 points) and ''No'' (0 points). Consequently, when the result was a ''Yes'' in two thirds of the CASP items, it was rated as ''High''; it was considered ''Moderate'' quality when the score was between four and six ''Yeses''; and finally, if in more than two thirds the answer is ''No,'' the work is recorded as ''Low'' quality, as it has been used in previous qualitative review studies (Fullen et al., 2008).
 
 In this research, a total of 8 of the 15 studies included in this systematic review were evaluated, since the rest ( n =7) obtained negative results in the first three questions of the CASP Qualitative Checklist. They were theoretical analysis studies for which it does not make sense to perform a quality assessment following the CASP Qualitative Checklist. However, in the studies analyzed ( n =8), the result was high quality for all of the studies (see Table 3).
@@ -151,6 +168,10 @@ This section provides an overview of the studies included in this systematic rev
 
 Effects of Digitization on Professional Practice. Currently, the adoption and use of ICTs are unquestionable worldwide. Along with these transformations concerning digital technologies, there is an accelerated change that creates new challenges and opportunities in all professions that does not neglect the professional practice of Social Work in all its interventions. It facilitates decisions
 
+
+<!-- PAGE 6 -->
+
+
 Figure 1. Flowchart of the literature selection process. Source . Author's elaboration.
 
 <!-- image -->
@@ -160,6 +181,10 @@ and simplifies complex theoretical problems (Boddy &amp; Dominelli, 2017; Raneru
 (Boddy &amp; Dominelli, 2017). The profession of Social Work is a living profession, in continuous movement and change, that adapts and reinvents itself to continue serving the social needs of the nation, currently aided by technology.
 
 Education, Research, and Commitment. Research that posits practical and ethical education in the use of digital technologies has been grouped under this heading (Baker et al., 2018; Goldingay &amp; Boddy, 2016; Joiner, 2019; Kirwan &amp; McGuckin, 2014; Young et al., 2018). In this regard they highlight the need for continued research and engagement to ensure that technological advances
+
+
+<!-- PAGE 7 -->
+
 
 Table 2. Included Studies.
 
@@ -182,6 +207,10 @@ Table 2. Included Studies.
 | Reamer (2018) Journal of Social Work Values and Ethics , USA.                 | Practitioners. n =not shown                                                                                                     | Theoretical study                                               | To synthesize new and emerging ethical standards related to the use of technology and professional training and development to ensure that practice meets current ethical standards.                                 |
 
 Source . Author's elaboration.
+
+
+<!-- PAGE 8 -->
+
 
 Table 3. Quality Assessment of Included Studies.
 
@@ -224,6 +253,10 @@ Social Work now exists in a more complex reality, with people and social workers
 
 This systematic review was carried out with the objective of understanding the current situation regarding ethical dilemmas and problems in the Social Work profession over time and up to the present, derived from the use of technologies and the incorporation of new digital methodologies in the development of professional practice. The findings indicate that the scientific literature on the combination of these terms: ''Social Work,'' ''ICT,'' and ''Ethics,'' is scarce. However, contributions show the importance of a model that combines technology and personnel in the development of professional practice, since the use of technologies facilitates decisions and simplifies complex processes that would otherwise be excessively tedious (Ranerup &amp; Henriksen, 2020).
 
+
+<!-- PAGE 9 -->
+
+
 It's important to acknowledge that our research may be subject to certain constraints. One potential limitation lies in the scope of our data collection, which may not encompass all relevant sources due to constraints such as time, resources, or access to certain databases. Additionally, there could be inherent biases in the selection criteria or methodology employed, which might affect the generalizability of our findings. To mitigate these limitations, future studies could consider expanding the scope of data collection, employing more rigorous selection criteria, or utilizing alternative research methodologies to corroborate our results. Moreover, ongoing efforts to enhance transparency and rigor in data collection and analysis can help mitigate potential biases and strengthen the validity of our conclusions. We must consider that the omission of grey literature in the initial search strategy could potentially introduce publication bias by favoring published studies and overlooking relevant unpublished or non-peer-reviewed materials. Grey literature, including reports, theses, and conference proceedings, often contains valuable data and diverse viewpoints that may not be captured in traditional academic publications.
 
 Regardless of the limitations, the key strengths of the approach outlined in the study include a systematic review methodology that provides a comprehensive overview of the current landscape. By synthesizing existing literature and categorizing findings into themes, the study offers a structured analysis of the ethical challenges posed by technology integration that can guide future research and practice in the field of social work ethics. Additionally, the study may highlight the importance of adopting ethical principles and regulatory standards to support ethical decision-making in technology-mediated social work settings.
@@ -238,6 +271,10 @@ Finally, education, research and commitment are the basic pillars for ethical pr
 
 In general, public administration has oriented its objectives based on economic interests (Montero
 
+
+<!-- PAGE 10 -->
+
+
 Carrio ´ n, 2013) as opposed to person-centered values. From these premises the generalized conception in Social Work has been derived of maintaining the principle of professional, aseptic neutrality apart from religious, political or moral convictions. This attitude, in addition to being impossible in daily practice, is being profoundly modified.
 
 This is where the coexistence and interrelationship that is generated in the trinomial ICT, Social Work and professional ethics has a place. The Social Work profession and its practitioners have been faced with the dilemma of exercising an ethical professional practice that does not violate the human rights of the population. The approach to professional praxis to which the technological transformation has led raises the need to introduce social and technical innovations in professional practice (Binimelis Espinoza et al., 2021; Castillo de Mesa et al., 2018). A gradual process of ICT adoption is necessary in the different forms of social intervention (Chan, 2016; Chan &amp; Holosko, 2016; Goldkind et al., 2016; Lo ´ pez Pela ´ ez &amp; Marcuello Servo ´ s, 2018), considering the ethical challenges that this transformation produces (Boddy &amp; Dominelli, 2017; Lo ´ pez, 2014). These issues must be taken into account in the application of social policies.
@@ -251,6 +288,10 @@ Technology has blurred the lines between personal and professional domains, pres
 Globally, professional associations and other regulatory bodies are working together to identify ethical issues and develop guidelines for the profession's use of technology, such as informed consent, privacy, confidentiality, conflicts of interest, documentation records, etc. (ASWB International Technology Task Force, 2015; Campbell &amp; Gordon, 2003; Grimm et al, 2009, Hu et al, 2010, Reamer, 2013, 2015). The new challenges facing the profession arise from the growing use of technology to provide information, communication and care to citizens (Reamer, 2015). Therefore, training is important as a source of well-being in professional practice.
 
 The applicability and generalizability of the results obtained would be in their potential to provide insights and recommendations for social work professionals, educators, policymakers, and researchers working at the intersection of technology, ethics, and social work practice (Boddy &amp; Dominelli, 2017). By understanding the ethical dilemmas and challenges arising from the use of technology in social work, practitioners can adapt their approaches to better navigate these complexities while upholding ethical standards. The findings can inform the development of guidelines, training programs, and policies that address the ethical implications of technology
+
+
+<!-- PAGE 11 -->
+
 
 integration in social work across different contexts. Additionally, the results can contribute to the ongoing dialogue on the ethical considerations related to privacy, confidentiality, and professional relationships in the digital age, offering valuable guidance for promoting ethical practice in a rapidly evolving technological landscape.
 
@@ -271,6 +312,10 @@ Social Work professionals must be people who question, reflect and fight for tra
 Future research avenue in the intersection of technology, ethics, and social work practice could explore several promising directions to advance knowledge and practice in the field. These include investigating the ethical implications of emerging technologies like artificial intelligence, virtual reality, or blockchain, and how they impact ethical decision-making and client interactions. Additionally, research could delve into integrating cultural competence into digital interventions to ensure inclusivity and responsiveness to diverse cultural backgrounds, as well as exploring the relationship between digital literacy skills and ethical practice (IFSW, 2018). Furthermore, exploring how intersectionality influences ethical considerations in technology use and evaluating existing ethical decisionmaking models in the context of technology integration are important areas for further study.
 
 As previously mentioned, it would be pertinent to explore how technology plays a dual role in shaping cultural competence and accessibility in social work services, while also influencing inclusivity in diverse populations. On one hand, technology has the potential to enhance cultural competence by facilitating access to resources,
+
+
+<!-- PAGE 12 -->
+
 
 information, and support tailored to specific cultural backgrounds. For instance, digital platforms can offer multilingual services, culturally relevant educational materials, and virtual support groups that cater to the needs of diverse communities. This expanded access to culturally sensitive resources can improve social workers' understanding of clients' cultural contexts, thereby enhancing the effectiveness of interventions and promoting culturally competent practice.
 
@@ -326,6 +371,10 @@ Data sharing not applicable to this article as no datasets were generated or ana
 - Franquesa, D., &amp; Lo ´ pez, D. (2011). Marco en TIC y RSC. Sostenibilidad para una universidad tecnolo ´gica [Conference session]. XIX Congreso de EBEN (European Business Ethics Network), Barcelona, Espan ˜ a.
 - Fullen, B. M., Baxter, G. D., O'Donovan, B. G. G., Doody, C., Daly, L., &amp; Hurley, D. A. (2008). Doctors' attitudes and beliefs regarding acute low back pain management: A systematic review. Pain , 136 (3), 388-396. https://doi.org/10. 1016/j.pain.2008.01.00
 
+
+<!-- PAGE 13 -->
+
+
 ´
 
 - Garcı´ a A lvarez, B. (2007). Los profesionales del Trabajo Social y la e ´ tica profesional ante los nuevos retos y necesidades sociales. Humanismo y Trabajo Social , 6 , 173-188
@@ -357,6 +406,10 @@ Data sharing not applicable to this article as no datasets were generated or ana
 - Reamer, F. G. (2015). Clinical social work in a digital environment: Ethical and risk-management challenges. Clinical Social Work Journal , 43 , 120-132. https://doi.org/10.1007/ s10615-014-0495-0
 - Reamer, F, G. (2017). Evolving ethical standards in the digital age. Australian Social Work , 70 (2), 148-159. https://doi.org/ 10.1080/0312407X.2016.1146314
 - Reamer, F. G. (2018). Ethical standards for social workers' use of technology: Emerging consensus. Journal of Social Work Values and Ethics , 15 (2), 71-80.
+
+
+<!-- PAGE 14 -->
+
 
 - Reamer, F. G. (2024). Social work boundary issues in the digital age: Reflections of an ethics expert. Advances in Social Work , 23 (2), 375-391. https://doi.org/10.18060/26358
 - Regalado Lo ´ pez, J. M. (2021). Enfrentar las brechas digitales sufriendo brecha digital. El Trabajo Social y el desarrollo de competencias digitales . TSDIFISION.

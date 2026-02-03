@@ -1,10 +1,11 @@
 ---
 source_file: Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.pdf
-conversion_date: 2026-02-03T09:04:43.898092
+conversion_date: 2026-02-03T18:35:53.098103
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -87,6 +88,10 @@ ACM
 
 .
 
+
+<!-- PAGE 2 -->
+
+
 ## Fairness Indicators for Systematic Assessments of Visual Feature Extractors
 
 Fairness Indicators
@@ -112,6 +117,10 @@ ACM ISBN 978-1-4503-9352-2/22/06...$15.00 https://doi.org/10.1145/3531146.353307
 namely harmful label associations , disparity in learned representations of social and demographic traits , and biased performance on geographically diverse images from across the world . We define precise experimental protocols applicable to a wide range of computer vision models. These indicators are part of an ever-evolving suite of fairness probes and are not intended to be a substitute for a thorough analysis of the broader impact of the new computer vision technologies. Yet, we believe it is a necessary first step towards (1) facilitating the widespread adoption and mandate of the fairness assessments in computer vision research, and (2) tracking progress towards building socially responsible models.
 
 To study the practical effectiveness and broad applicability of our proposed indicators to any visual system, we apply them to 'off-the-shelf' models built using widely adopted model training paradigms which vary in their ability to whether they can predict labels on a given image or only produce the embeddings. We also systematically study the effect of data domain and model size. The results of our fairness indicators on these systems suggest that blatant disparities still exist, which highlight the importance on the relationship between the context of the task and contents of a datasets. The code will be released to encourage the use of indicators.
+
+
+<!-- PAGE 3 -->
+
 
 ## CCS CONCEPTS
 
@@ -142,6 +151,10 @@ We propose experimental protocols that apply to any feature extractor (Figure 1)
 Limitations and scope of this work. On one hand, standardized fairness assessments are appealing to help quantify progress and allow for comparison between models in a reproducible way. Potentially, they could facilitate the widespread adoption of fairness assessments by researchers as the AI research community moves towards inclusive studies with broader impact considerations. On the other hand, a risk of any benchmark is that it may be confused with an operational definition of fairness, where the sole target is to optimize the few metrics of the benchmark. We emphasize that our fairness indicators are not meant to serve as a rigid and comprehensive evaluation of all aspects of fairness. First , our limited list of fairness probes cannot capture the multifaceted and ever-evolving aspects of social impacts that computer vision systems can have. Second , our indicators are intrinsically limited by the datasets that are currently available. These datasets have limited size, which will make our indicators unreliable if they become the target of optimization. Third , the datasets come with limited annotations and follow sampling procedures and definitions of sensitive categories that can themselves be challenged.
 
 We view the concept of standardized fairness probes as an effort towards evaluating harms and tracking progress towards socially responsible models. These fairness probes should consistently evolve as new fairness datasets become available, new concerns regarding the social impact of models are surfaced, new types of model training paradigms are developed or indicators become unreliable or useless. The goal of the benchmark is to facilitate auditing of
+
+
+<!-- PAGE 4 -->
+
 
 biases in computer vision models, but it should not be considered as a substitute to the study of broader impact.
 
@@ -174,6 +187,10 @@ We further discuss other fairness studies pertaining to criticism of ImageNet, f
 Following the three main sources of harms and discrepancies between groups outlined in Sec. 2, we propose three fairness indicators that apply to pre-trained feature extractors.
 
 - The first two indicators (Indicator 1 and 2 in Fig. 1) perform an indirect evaluation of feature extractors using classifiers
+
+
+<!-- PAGE 5 -->
+
 
 Table 1: List of Fairness datasets used in the proposed indicators in Sec.3.
 
@@ -221,6 +238,10 @@ Labels that do not fall into the three types above are neither counted as correc
 - -Possibly-Human labels are not in 'people' subtree but describe 'people' attributes ( e.g., 'makeup' or 'beard')
 - -Possibly-Non-Human labels are non-human labels that may be legitimately predicted. For instance, it is common in OpenImages MIAP that a person is holding a pet. In that case, cat might be considered a correct prediction. This type does not apply to the CC dataset which only contains faces of people.
 
+
+<!-- PAGE 6 -->
+
+
 Table 3: Label mapping from ImageNet taxonomy for computing harmful label associations (Sec. 3.1). 'Dog' is considered as a Non-Human label on Casual Conversations v1 only, and the Possibly Non-Human type is evaluated solely on OpenImages MIAP. We manually mapped a subset of labels in full ImageNet taxonomy [75] to these association types.
 
 | Association type   | Labels in the ImageNet taxonomy                                                                                                                                      |
@@ -251,6 +272,10 @@ Choosing thresholds. using confidence scores introduces an additional burden of 
 - Step2 : Run the model inference only on each image in the datasets and capture the top-5 model prediction along with the confidence scores.
 - Step3 : For different subgroups, measure the percentage of images labeled with different association types for different confidence thresholds.
 - Difference with the literature. Label association tests were already present in the analysis of CLIP [60]. The main differences with our proposal are discussed in Sec. 2 under "The impact of broader impact statements". In short, our approach (i) applies to any visual extractor, (ii) aims at comparing different models, (iii) uses self-identified gender in CC dataset and wider variety of practical images present in OpenImages MIAP. On a related note, we also mention that Yang et al. [77] proposed a revisited ImageNet by filtering out unsafe labels. This is different from harmful / biased associations, which we study in our work. For instance, labels such as gorilla are marked safe in Russakovsky et al. [66] because they are legitimate labels on images of the corresponding animal. However, they are clearly harmful when predicted on images of people of certain groups, as is evident in historical incidents [62].
+
+
+<!-- PAGE 7 -->
+
 
 Table 4: Number of samples of each characteristic in the datasets. Gender labels are self-identified-{female, male} for CC, {predominantly feminine, predominantly masculine} for OpenImages, and apparent-{female, male} for UTK. On CC, we follow Buolamwini and Gebru [5] and group the six-point Fitzpatrick scale into two types: Lighter (Type I to Type III) and Darker (Type IV to Type VI) and group age into four groups 18-30, 30-45, 45-70, 70+ . On the OpenImages MIAP, there are three perceived gender subgroups ( predominantly masculine, predominantly feminine, unknown gender ) and four perceived age subgroups ( young, middle, older, unknown ).
 
@@ -299,6 +324,10 @@ In our work, for reliable fairness audit, we take an alternative approach to com
 - (1) First, we observed that for some households, the same image appears several times with different labels. Since our classifiers are not meant for predicting multiple labels for the same image (ImageNet classifiers are typically trained for single-label prediction), we first de-duplicate images, counting the image as correctly classified if any of its ground truth labels has been predicted. This leaves 15 , 222 images for 289 households.
 - (2) Second, since images from the same household tend to be visually much more similar than images from different households, we first compute the hit rate on each household (as the average hit rate over the images of this households), and then take the average of these per-households hit rates over the various sensitive groups (region, income bucket or income bucket × region).
 
+
+<!-- PAGE 8 -->
+
+
 - Summary. We summarize the end-to-end process:
 - Step 1: Adaptation of Visual systems to predict labels in Dollar Street taxonomy. Follow the details in Appendix B.3.
 - Step 2: Inference on Dollar Street images. Use the visual system to predict labels and the confidence score of label prediction for each image in the Dollar Street dataset.
@@ -328,6 +357,10 @@ We illustrate the use of the indicators presented in the previous section by com
 - Weakly-supervisedtraining on filtered Instagram data: We study an open source feature extractor, WSL [55], that was trained on 3 . 6 Billion public Instagram images. The training data is constructed by utilizing the hashtags associated with images and filtering the images with hashtags that have synsets in WordNet [20] resulting in 27 , 000 hashtags. The convolutional neural network was trained using supervised learning using the hashtags associated to each image as target labels. Similar to supervised ImageNet models, the feature extractor is the last layer of the network before the prediction head. We take this model as representative of feature extractors trained at large scale with weak supervision.
 - Self-Supervised training on ImageNet or uncurated Instagram data: We study two representative approaches for self-supervised training, SwAV [6] and SEER [26]. They share the same underlying self-supervised training principles, based on constrained clustering of image crops. The main difference between the two is that SwAV has hyperparameters optimized for self-training on ImageNet, whereas SEER was tuned for training models on random internet image at a much larger data scale. Similar to WSL, SEER is trained on public Instagram images. However, in contrast to WSL, the dataset used for SEER is a completely random subset of 1 billion images that underwent no data filtering
 
+
+<!-- PAGE 9 -->
+
+
 Figure 2: Grid of model and data sizes (in log-log scale) of different training paradigms compared in Sec. 4.
 
 <!-- image -->
@@ -355,6 +388,10 @@ This section analyses the impact of training paradigm, data size and domain on t
 
 Effect of training paradigm. Figures 3a-3b (top row) compare the effect of different training paradigms on Casual Conversations and OpenImages MIAP, respectively. We consider models pretrained on ImageNet and on the larger scale Instagram 1B. On Casual Conversations , trends appear to favor the SSL paradigm, which results in the lowest harmful and the highest non-harmful hit rates. Leveraging supervised signals (Supervised, WSL) results in more harmful associations and larger harmful association hit rate differences across different groups. We also note that SSL-ImageNet leads to overall slightly lower harmful predictions than SSL-Instagram (possibly because ImageNet data domain is more object centric), but the trend is reverted for non-harmful predictions where the SSL-Instagram obtains notably higher hit rates (possibly because Instagram data domain is more human-centric). In OpenImages MIAP , SSL-ImageNet continues to yield to lowest harmful hit rates. However, in this case, Supervised-ImageNet appears to follow. Interestingly, models pretrained on Instagram tend to be among the top harmful label predictors, no matter the training paradigm, suggesting that in the case of OpenImages MIAP the data may play a more important role than the training paradigm. For non-harmful predictions, SSL models tend to yield higher hit rates, which are also comparable to those of WSL. It is worth noting that the effect of training paradigm may strongly depend on the model capacity. In particular, we note that when using a smaller ResNet-50 , Supervised consistently becomes more competitive on both datasets considered, lowering its harmful hit rates, and reaching among the highest non-harmful
 
+
+<!-- PAGE 10 -->
+
+
 Figure 3: Label association results: (Top) Effect of training paradigm; (Mid) Effect of data size and domain; (Bottom) Confidence of models. For harmful association, lower hit-rate is better. For non-harmful association, higher hit-rate is better.
 
 <!-- image -->
@@ -366,6 +403,10 @@ hit rates across all groups. See Appendix E.2 for a detailed analysis on the eff
 Effect of data size and domain. Since SSL learning allows training models on unbounded data size, we study this effect for SSL models specifically. Figures 3a-3b (mid row) show how data domain and data size affect the training of SSL models on Casual Conversations and OpenImages MIAP, respectively. Both datasets exhibit similar trends. When comparing SSL models trained on different Instagram data sizes, it appears that models benefit from additional data: using 1B data points increases the non-harmful predictions and lowers the harmful ones, especially when compared to the model trained on 1M data points. These gains appear more evident on Casual Conversations than on OpenImages MIAP, where improvements are somewhat modest. However, in both datasets, the SSL-ImageNet results in comparable or lower harmful prediction hit rates than the best Instagram-based model, suggesting that within self-supervised training paradigm, the data content might be more critical than the scale of the data to mitigate potentially harmful associations.
 
 Effect of prediction confidence of models. We assess how different training paradigms impact the confidence of models in Figures 3a-3b (bottom row), for CC and OpenImages MIAP respectively. bu studying how of harmful and non-harmful label predictions change as a function of increasing the confidence threshold τ that a prediction is considered 'correct'. On CC , we observe that SSL models consistently require a small confidence threshold to push harmful predictions rates close to 0. Moreover, both Supervised and WSL models start off with notably higher harmful prediction hit rates and take longer to lower their prediction rate close to 0, with the Supervised model being slightly more confident than the WSL model overall. For non-harmful predictions, SSL-Instagram model consistently results in more confident predictions than any other model for τ &gt; 0 . 1. In this case, SSL-ImageNet appears to be less confident than WSL-Instagram, and reaches non-harmful hit rates which are close to 0 faster. Supervised consistently yields the lowest non-harmful hit rates. On OpenImages MIAP , only the SSLImageNet consistently presents the lowest harmful hit rates, and requires a rather small threshold value to bring the hit rate very close to 0. Supervised-ImageNet starts with lower harmful hit rates that SSL-Instagram, which are however quickly matched by both
+
+
+<!-- PAGE 11 -->
+
 
 Figure 4: Geodiversity, hit rates for Supervised, WSL and SSL.
 
@@ -397,6 +438,10 @@ Effect of data domain and scale. In Fig. 7, we show the precisionat-10 for RegNe
 
 - (1) Self-Supervised training on larger and diverse datasets such as Instagram data leads to most improvement in generalization on geographically diverse images. The performance improves the most for lower-income and non-Western regions of the world.
 - (2) SSL paradigm leads to highest non-harmful and lowest harmful label associations. Instagram data leads to highest non-harmful label associations. Further, data scale increases the non-harmful associations.
+
+
+<!-- PAGE 12 -->
+
 
 Figure 5: Geodiversity, improvement relative to Supervised on ImageNet: effect of data domain and size on SSL.
 
@@ -446,6 +491,10 @@ The authors thank Adina Williams, Armand Joulin, Laurens van der Maaten, Melissa
 - [28] Alex Hanna, Emily Denton, Andrew Smart, and Jamila Smith-Loud. 2020. Towards a critical race methodology in algorithmic fairness. In ACMConference on Fairness, Accountability, and Transparency .
 - [29] Drew Harwell. 2019. Federal study confirms racial bias of many facial-recognition systems, casts doubt on their expanding use . https://www.washingtonpost. com/technology/2019/12/19/federal-study-confirms-racial-bias-many-facialrecognition-systems-casts-doubt-their-expanding-use/ Retrieved: 2021-11-05.
 
+
+<!-- PAGE 13 -->
+
+
 Figure 6: Same-group similarity search, precision@10 (left) and precision@50 (right) for the four main models compared.
 
 <!-- image -->
@@ -486,6 +535,10 @@ Figure 7: Similarity search, varying the data domain and size for SSL with RegNe
 - [58] Margaret Mitchell, Simone Wu, Andrew Zaldivar, Parker Barnes, Lucy Vasserman, Ben Hutchinson, Elena Spitzer, Inioluwa Deborah Raji, and Timnit Gebru. 2019. Model Cards for Model Reporting. In ACM Conference on Fairness, Accountability, and Transparency .
 - [59] Carina EA Prunkl, Carolyn Ashurst, Markus Anderljung, Helena Webb, Jan Leike, and Allan Dafoe. 2021. Institutionalizing ethics in AI through broader impact requirements. Nature Machine Intelligence 3, 2 (2021), 104-110.
 
+
+<!-- PAGE 14 -->
+
+
 - [60] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry, Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen Krueger, and Ilya Sutskever. 2021. Learning Transferable Visual Models From Natural Language Supervision. In International Conference on Machine Learning .
 - [61] Ilija Radosavovic, Raj Prateek Kosaraju, Ross Girshick, Kaiming He, and Piotr Dollár. 2020. Designing network design spaces. In IEEE/CVF Conference on Computer Vision and Pattern Recognition .
 - [62] Nitya Rajan. 2015. Google Photo Algorithm Mislabels African Americans As 'Gorillas' . https://www.huffingtonpost.co.uk/2015/06/30/goole-photo-algorithmlabels-african-american-as-gorillas\_n\_7696000.html/ Retrieved: 2021-12-01.
@@ -521,6 +574,10 @@ UTKFaces. [79] is a large-scale face dataset that consists of 24 , 108 face imag
 Dollar Street. [23] is a collection of 16 , 073 images of households captured all around the world by a group of photographers. The images capture 108 concepts from 289 households in 54 different countries across the world. The countries represent 4 different regions (The Americas, Europe, Asia, Africa). We manually mapped the 108 concepts to 94 classes in ImageNet [66] dataset 3 . The households have income levels (measured in USD) varying between 67$ and 10 k . There are on average 53 unique images per household, with a maximum of 135 labeled objects per household.
 
 3 We release the full data information including the label mapping file to enable use of this indicator.
+
+
+<!-- PAGE 15 -->
+
 
 ## B EXPERIMENTAL DETAILS
 
@@ -562,6 +619,10 @@ We note several limitations of our proposed indicators below, and some of them a
 - -the definitions of attributes differ across datasets which limits the possibility of cross-dataset tests (for instance, UTK faces doesn't have Fitzpatrick skintone scale in contrast to Casual Conversations. This limits the study to gender and age attributes in our Similarity search based indicator.
 - -most dataset like UTK-Faces don't yet have data for nonbinary genders which strictly limits the fairness probe for all social memberships.
 
+
+<!-- PAGE 16 -->
+
+
 - -most datasets only provide perceived or apparent labels for people's social membership which itself could be biased.
 - -lack of labels social membership labels (age, gender, skintone etc) puts constraints on the type of task we can address. For instance, publicly available Hate Speech datasets [41, 42] do not have labels for sensitive groups, and hence we can't analyze hate speech harms/biases of current visual systems towards specific groups this data.
 
@@ -589,6 +650,10 @@ Effect of data size and domain. Figures 3a-3b (bottom) show how data domain and 
 
 For completeness, Figure 9 presents label association results on Casual Conversations for all labels separately: human , non-human , possibly-human , and crime . Results are shown both for gender and skin tone, as well as age, and consider the effect of training
 
+
+<!-- PAGE 17 -->
+
+
 Figure 8: Label association results stratified into groups based on age: (Top) Effect of training paradigm; (Bottom) Effect of data size and domain. For harmful labels, the lower the hit rate the better; conversely, for non-harmful labels the higher the hit rate the better.
 
 <!-- image -->
@@ -598,6 +663,10 @@ Figure 9: Casual Conversations extended label association results: (Top) Effect 
 <!-- image -->
 
 paradigm (top) and data size/domain (bottom). We note SSL leads to both lower crime and non-human hit rates. However, SSL-ImageNet resulting in overall lower harmful hit rates can be explained by its lower non-human prediction rates. SSL-Instagram results in lower crime prediction rates, and both its crime and non-human prediction rates can be decreased by appropriately increasing the dataset size (see IG1M vs IG1B results). Interestingly, SSL-ImageNet consistently exhibits among the highest possibly-human hit rates. Analogously, Figure 10 presents extended results on OpenImages MIAP. In this case, results are reported for human , non-human , possibly-human , possibly-non-human , and crime , and consider both perceived gender and age. When decoupling the harmful labels, we observe that the high harmful prediction rates of Instagrampretrained models are driven by their frequent non-human predictions. However, when it comes to crime , Supervised-ImageNet leads to the highest prediction rates. In OpenImages MIAP, possibly-non-human predictions are more present in SSL models, whereas possibly-human predictions are more present in models pre-trained on ImageNet (no matter the paradigm).
+
+
+<!-- PAGE 18 -->
+
 
 Figure 10: OpenImages MIAP extended label association results: (Top) Effect of training paradigm; (Mid) Effect of data size and domain; (Bottom) Confidence of models.For human and possibly-human , the higher the better. For crime , non-human and possibly-non-human , the lower the better.
 
@@ -614,6 +683,10 @@ Figure 11: Effect of model capacity on label association results.
 Finally, Figure 11 presents the impact of model capacity on label association results on both Casual Conversations and OpenImages MIAP. When considering Supervised-ImageNet models, we observe that increasing model capacity tends to increase the prediction of harmful labels across all groups considered in both Casual Conversations and OpenImages MIAP datasets. At the same time, the highest capacity model, RegNetY-128 , exhibits the lowest non-harmful hit rates. This suggests that better fitting the ImageNet data with a supervised objective may lead to undesirable outcomes. When considering SSL-ImageNet models, increasing capacity maintains or decreases harmful hit rates across all groups and for both datasets considered. It is worth noting that these SSL
 
 models not only tend to exhibit among the lowest harmful hit rates but also tend to be more stable in their predictions across different subgroups. However, higher capacity SSL-ImageNet models often result in the lowest non-harmful hit rates. By contrast, when considering SSL-Instagram models, increasing model capacity often increases harmful predictions and leads to slightly higher discrepancies across different groups. In this case, similar to SSL-ImageNet, we observe that increasing model capacity often decreases or maintains the non-harmful predictions. However, as discussed in Section 3.1, these models can significantly benefit from additional Instagram data to mitigate potentially harmful label associations. It is worth noting that in the OpenImages MIAP, non-harmful
+
+
+<!-- PAGE 19 -->
+
 
 prediction rates are overall significantly lower than in Casual Conversations.
 
@@ -632,6 +705,10 @@ We present in this section the results obtained on the similarity search indicat
 As for all other indicators, increasing model capacity improves precision on SSL training on 1 b examples, with RegNetY-128 achieving the best precision values (and about 15% absolute improvement on female darker , the sensitive group where the precision is the lowest).
 
 For other training paradigms/data sizes however, increasing model capacity does not help much. On Supervised pre-training, we see no effect of increasing the model capacity, while when using SSL on 1 m examples (ImageNet or Instagram) ResNet-50 tends to perform the best (on par with RegNetY-128 on ImageNet, by far the best on Instagram with 1 m examples). In conclusion, it seems that on this indicator, large-scale datasets are necessary for SSL with large models to shine. Yet, as noticed in Sec. 5.3, compared to supervised pre-training, the improvement of SSL on Instagram with 1 b examples is substantial (comparing the leftmost and rightmost columns), with nearly 30% absolute improvement in precision@50 on female darker between supervised pre-training on ImageNet and RegNetY-128 trained with SSL.
+
+
+<!-- PAGE 20 -->
+
 
 Figure 12: Geodiversity: effect of model capacity depending on the training paradigm and data size (columns), broken down by income bucket (top row) and region (bottom row).
 

@@ -1,10 +1,11 @@
 ---
 source_file: Charlesworth_2024_Flexible_intersectional_stereotype_extraction.pdf
-conversion_date: 2026-02-03T08:44:24.282810
+conversion_date: 2026-02-03T18:22:36.060504
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Kellogg study suggests that some intersectional groups are more represented than others in internet text
 
 ## 59% of traits in the English language are associated with white men, 5% are associated with Black women
@@ -36,6 +37,10 @@ The study (/https://academic.oup.com/pnasnexus/article/3/3/pgae089/7626925) was 
 'This dominance, versus invisibility, of some groups in language is likely to have serious consequences for the increasing application of large language models and AI,' Charlesworth said. 'When women of color are made invisible in the data, it is likely that the applications of large language models and AI will be particularly inaccurate for any applications involving those groups.'
 
 Charlesworth says you can see these biases in Google or ChatGPT results when a user searches coveted occupations such as 'doctor' and the results produce photos of majority white men. 'Even in the simplest cases, like these text generations or text or image generation that we use with Dali or ChatGPT, you can see these kinds of imbalances coming out in the outputs,' she said. 'AI is a reflection of human behavior because we're always training these AI systems on data that's developed by humans. The problem really is if the data is biased in some way, then AI is going to learn those biases as well.'
+
+
+<!-- PAGE 2 -->
+
 
 Intersectionality, the way gender, race and social class intersect and relate to systems of oppression, domination or discrimination, has been a theory of exploration for many scholars. Charlesworth's team merged intersectional theory and AI to reveal stereotypes about gender, race and class prevalent in English-speaking societies.
 
@@ -78,5 +83,9 @@ Sign Up Now (//subscribe)
 - TikTok (/https://www.tiktok.com/@northwestern.u)
 - LinkedIn (/https://www.linkedin.com/school/northwestern-university/)
 - RSS (/https://news.northwestern.edu/feeds/allStories)
+
+
+<!-- PAGE 3 -->
+
 
 Disclaimer (/https://www.northwestern.edu/disclaimer.html) Cookie Settings (/https://news.northwestern.edu/stories/2024/03/kellogg-studysuggests-that-some-intersectional-groups-are-more-represented-than-others-in-internet-text?fj=1#)

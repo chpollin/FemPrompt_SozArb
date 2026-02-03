@@ -1,10 +1,11 @@
 ---
 source_file: Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.pdf
-conversion_date: 2026-02-03T09:28:44.936016
+conversion_date: 2026-02-03T18:59:43.085596
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Abstract
 
 Achieving fair use of AI systems is a multi-faceted challenge. Intersectionality, rooted in Black Feminist movements, is increasingly used to address the interconnected nature of discrimination such as racism, ableism, and sexism. Yet in AI research, intersectionality is often reduced to a narrow technical lens, focused on algorithmic bias between subgroups defined by protected attributes and addressed through fairness metrics. This algorithmic frame sidelines key aspects of intersectionality, such as power relations, social justice, and structural inequality. Still, AI experts play a central role in development and deployment, and therefore should act to limit unjust outcomes. This study offers actionable guidance for AI experts, grounded in a broader intersectional perspective. Through a thematic analysis of AI fairness papers on key aspects of intersectionality, evaluated through community engagement, we identify five themes with concrete recommendations: 1) insisting on collaboration in interdisciplinary teams, 2) embedding reflection and recognizing positionality, 3) approaching communities and facilitating co-ownership, 4) engaging with power dynamics and social context, and 5) assessing the framing and nuance of data and metrics. Participating experts noted barriers such as tech-optimism and fear of insufficient knowledge. Still, they valued the recommendations for communicating the importance of intersectionality and initiating more just AI practices. We call on AI experts to meet this challenge through interdisciplinary collaboration with diverse communities.
@@ -45,6 +46,10 @@ AI fairness research recognizes the risks and harms of AI and aims to limit its 
 
 1 We capitalize 'Black' to reflect its use as a socially constructed and political identity, rather than as a descriptor of skin color. In the Dutch context, Zwart (Black) carries similar anti-racist significance, though individuals of Surinamese descent may also identify as Bruin (Brown), depending on context [103].
 
+
+<!-- PAGE 2 -->
+
+
 minimize negative outcomes across demographic groups. Increasingly, this includes conceptualizations of fairness across subgroups who face multiple or intersecting forms of discrimination such as racism, sexism and ableism. These conceptualizations are often defined as intersectional (subgroup) fairness or intersectional bias in this community [44, 56, 59], in reference to the concept of intersectionality rooted in Black Feminist theory and practice [13, 28, 31].
 
 The seminal work of Buolamwini and Gebru [26] further illustrates why a narrow interpretation of intersectionality falls short. The authors found that the AI-based image recognition systems made disproportionately more errors for women with darker skin. Many technical oriented papers cite this study in relation to their intersectional bias measurement and consequently continue to propose a bias mitigation techniques aimed at addressing intersectionality within the algorithmic frame by minimizing unequal errors [44, 71]. However, [26] started by understanding the social context of the problem, emphasizing that transparency and accountability reach beyond technical reports, and critically examined use of their measurement (also in [79]). A broader interpretation of intersectionality would advocate for analysing the social context of the data underlying the image recognition models. This analysis reveals unethical data labelling practices and a lack of diversity that have resulted in a process that particularly dehumanizes Black women [59, 68]. Moreover, by considering harms beyond the algorithmic frame in the social context where it is used-such as in mass surveillance and predictive policing-the disproportionate effect on dark-skinned women (and their lack of recourse) is incorporated [42]. On top of that, would a racially profiled Black woman care about more equal errors if she has limited opportunity to contest the errors that occur?
@@ -73,6 +78,10 @@ This section situates our contribution in related work. We commence with an intr
 
 Kimberlé Crenshaw coined the term "intersectionality" as she advocated that legal protection for discrimination should also be afforded for unique experiences from intersecting identities, in her case Black Women experiencing systemic racism and sexism [31, 32]. The concept is mainly associated to the Black Feminist Movement since Crenshaw brought it into public attention, yet it has been brought
 
+
+<!-- PAGE 3 -->
+
+
 Table 1: Comparison of Terminology, Frames, and Goals
 
 |                                    | As used in [59]   | Relating to frames in [89]   | Goal as described in [73]                        |
@@ -100,6 +109,10 @@ In this section, we describe our approach to form actionable recommendations fro
 
 Our approach to developing a set of actionable recommendations is based on analysing the recommendations found in interdisciplinary research on intersectionality. In order to structure the collected recommendations, we follow the well-established method for thematic analysis for qualitative research by [21, 22]. Below, we first explain the selection criteria for relevant papers, and then, elaborate on the phases of the thematic analysis method. In one of the phases,
 
+
+<!-- PAGE 4 -->
+
+
 we use community engagement to align recommendations to AI experts' input, of which the description concludes this section.
 
 3.1.1 Paper selection. The scope of our survey concerned two prominent multidisciplinary machine learning focused conferences: ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT) and the AAAI/ACM Conference on AI, Ethics, and Society (AIES). We took all available papers at March 2024 of AIES (2018-2023) and FAccT (2019-2023) that mentioned intersectionality in their full text. Altogether, this gave a total of 268 papers.
@@ -124,6 +137,10 @@ The interactive workshop was hosted at a Dutch research institute. We had 22 par
 - Q4. To what extent are the recommendations practical enough?
 
 Discussing the recommendations with AI experts influenced the authors of this paper on the tone, formulation and framing of the
+
+
+<!-- PAGE 5 -->
+
 
 actionable recommendations. Insights from the session are therefore interwoven in our actionable recommendations, whilst two main insights are discussed in section 5.
 
@@ -155,6 +172,10 @@ Interdisciplinary teams should discuss and document their position in society an
 
 4.2.2 Write a positionality statement and reflect on it. Dedicate time at the start of the project to sit down with the whole team and reflect
 
+
+<!-- PAGE 6 -->
+
+
 Figure 1: Overview of recommendations on how to do AI fairness with an intersectional approach, from the responsible role of the AI expert, the building of a multi-disciplinary team, the reflection on the team's position in society, the participation and co-ownership of relevant communities, to the consideration of power relations and the social context, and the role of data and metrics.
 
 <!-- image -->
@@ -172,6 +193,10 @@ Invite people at risk of AI harm to voice priorities and concerns and propose co
 - give the community a meaningful voice and control in the participation and full transparency on this matter [19, 36, 48, 55, 61, 65, 81, 87]. Clear communication and agreements to what extent communities share or have leadership or co-ownership of outcomes and decisions is crucial to establish informed consent for participation [36]. This cannot be an afterthought as meaningful participation takes time and space [7, 55, 81]. This investment in time and effort starts with process of identifying and reaching out to impacted communities and/or their representatives for participatory development [19]. [19] discusses multiple approaches to reach communities. Participatory AI projects should begin with AI literacy efforts, as participants need a foundational understanding of what AI is, and what it is not, in order to meaningfully engage in discussions about how such systems may affect their lives [99]. The co-designing exercises suggested for interdisciplinary collaborations are tangible suggestions for community participation as well [19, 38]. Flexibility to change vital parts of the AI project is required for community participation to become worthwhile. [55] show clear lessons learned based on an applied use case, where global and generic aspirations of the project needed to make space for first the impact and effectiveness at a local scale. Other examples of co-design can be found in [74] concerning AI and ableism and in [24] on AI speech technologies, racism and ageism.
 - 4.3.3 Make participation financially sustainable for communities. As we value community experience and knowledge they contribute, make sure to compensate them accordingly [48, 61]. Participation needs to be mutually beneficial and financially sustainable on the long run [36]. To ensure a fair compensation rate, an external party can be involved to determine the appropriate amount [74].
 - 4.3.4 Design a mechanism where impacted communities can safely voice concerns. As is generally known, making AI systems 100% bias free is not possible. Any AI harm that may slip through your mitigation strategies, therefore requires a pathway to be heard. Effective participatory design requires careful attention to the social context and power relation such that impacted communities can safely voice concerns. [81] show how sometimes it is crucial to allow communities to voice concerns collectively and anonymously, as users or impacted people may be ashamed or otherwise disadvantaged to hold systems accountable individually on their own [81]. Voicing concerns does not need to be a passive feedback mechanism, where
+
+
+<!-- PAGE 7 -->
+
 
 one waits for problems to arise. Start from defining harms together with communities to see what could be measured and monitored (rather than starting from definitions of statistical fairness) and facilitate co-designing sessions where communities can make concrete what it means when error may occur [6, 73, 81, 89]. In other words, take diligent care to prevent harms upfront, but give space and power to voiced errors that slip through.
 
@@ -194,6 +219,10 @@ Given all these perspectives and insights, discuss how and if the opportunities 
 4.5.1 Importance to intersectionality. An intersectional approach acknowledges the political nature and power of data and metrics. Within the goal of social justice, reflect on the framing of your intended use with data and metrics. Dare to ask beyond how AI can help, and ask the zero question: is AI suitable for this problem at all? If so, demonstrate how your use of data and metrics has impact beyond the algorithmic frame. Show how you recognize the complexity of how systemic forms of discrimination may interact and are embedded throughout the AI system. Document clearly how you establish the added value and limitations of your data and metrics, for example, through qualitative methods or community participation.
 
 4.5.2 Be critical on your objective with data and metrics. Throughout this paper we have invited AI experts to collaborate within an interdisciplinary team and with diverse communities. This last recommendation requests their shared goal to be beyond technically solvable issues and to be set towards achieving social justice [54, 55, 73]. Ask the zero question, examine whether rather than how AI system should be developed or implemented [55, 73]. Measurement with data and metrics can still have value for social justice, see for example the work of [26] where intersectional bias measurement had a signalling function to show how systemic racism and sexism is embedded in image data and image recognition tooling. Framing here is essential, as the same authors requested caution for their measurement functioning for certifying AI as bias-free [79]. [17] argue for similar caution when aiming to optimizing for seemingly neutral or objective benchmarks. Instead of bringing social justice into AI systems that have a secondary goal such as credit scoring, hiring or detecting fraud, AI can also be developed and (co-)created for the sole purpose of social justice. Through feminist
+
+
+<!-- PAGE 8 -->
+
 
 participatory design Suresh et al. [96] develop an AI system to support activists monitoring feminicide. They highlight the challenges posed by incomplete and infrequently updated data of feminicide, which obscures the systemic nature of violence, and emphasize how the lack of data actively disempowers women. In response, they co-designed datasets and machine learning models to aid in the collection and analysis of feminicide data to support activist efforts. Their work shows how datasets can contribute to oppression and actively fights this by collecting inclusive more data.
 
@@ -221,6 +250,10 @@ In this section, we discuss reflections on the value of our contribution as well
 
 From the start of this paper we have advocated that AI experts have a decisive role in bringing intersectional fairness concerns beyond the algorithmic frame to the AI harms voiced by marginalized communities. We recognize, however, as the participants of the evaluation session had voiced, that their influence is dependent on their work environment. Especially with the omnipresence of tech-solutionism or algorithmic idealism [35], we acknowledge the challenge that (although motivated) most researchers and practicioners are still subject to funding or higher management. We argue that our actionable recommendations allow AI experts to
 
+
+<!-- PAGE 9 -->
+
+
 start small. Invite someone from another company, department or research group to bring another perspective, write a positionality statement with the team and reach out to a few civil society organizations that represent communities. AI fairness is a marathon, you cannot wait for the perfect conditions to start practice your running. To facilitate further alignment within the work environment of AI development, we foresee opportunity for future research to embed the actions in our recommendations in widespread iterative approaches for AI/software development such as Agile Scrum and CRISP-DM [88, 105]. AI experts can also take in our recommendations beyond the work environment of an institute or private organization. Rather than starting with AI experts, asking for interdisciplinary collaboration and community engagement, an intersectional approach to AI fairness is also very suitable to start at civil society. Such an operationalization of intersectionality is also what [35] strive for in their suggestion to redistribute AI power. They provide examples where community-led academic-activist collaborations use AI education, evaluation and design to address historical wrongdoings that affect current and future opportunity structures.
 
 To enhance the actionability for AI experts further, we also see opportunity for future research for creating a learning environment for critical discussions. Inspiration may be gathered from concepts such as psychological safety, pioneered by Edmondson [40, 41] who defines psychological safety as the team environment where members can be with candour to take risks, express ideas, speak up with questions and admit missteps. Another relevant practice already situated within the goal of social justice is that of calling in, currently propelled by Dr. Loretta J Ross Ross [84]. Her recent publication materializes her advocacy work ( e.g. [85]) where calling in is championed as an approach to invite change through compassion rather than expecting that someone has already grown. Their approaches may aid in creating the environment necessary to call in AI fairness experts as allies to move beyond the algorithmic frame to social justice, whilst limiting the chance for polarizing based on past practice.
@@ -238,6 +271,10 @@ Secondly, the recommendations stem entirely from academic sources, and specifica
 ## 7 Conclusion
 
 Much of the AI fairness community currently engages with intersectionality through a narrow, technical lens that focuses on data, model and outputs, also known as the algorithmic frame. This results in efforts that often target algorithmic bias between subgroups defined by protected attributes such as sex, nationality, and skin colour. Yet intersectionality, grounded in Black Feminist thought, offers a much broader framework that can support AI experts in addressing the structural dimensions of unfairness through a social justice lens. Through a thematic analysis of a tailored literature survey and community engagement, we have formulated five actionable recommendations for AI experts. (1) As AI experts are centred in AI development and practice, they have the decisive
+
+
+<!-- PAGE 10 -->
+
 
 role to insist on the interdisciplinary collaboration that AI fairness requires. (2) As the team takes on a responsibility towards social justice, it is key to position themselves within society and reflect which relevant voices are heard and unheard. (3) Through meaningful community participation, the people at risk are also invited to safely voice concerns, co-own the process of their participation and be financially compensated. (4) Then, the interdisciplinary teams, together with communities, should analyse the power relations between those creating, researching, using, benefiting from and those (potentially) harmed by the AI, within their social context. (5) Given all these perspectives and insights, discuss how and if the opportunities and limitations of measurement and technological solutions with data and metrics align with the goal of social justice. We invite AI experts willing to integrate the intersectional approach to embrace any discomfort experienced and hope that our actionable first steps help with this process. We are on that journey ourselves.
 
@@ -278,6 +315,10 @@ To start, we acknowledge that this work is part of the DIVERSIFAIR project that 
 - [9] Bilel Benbouzid. 2023. Fairness in machine learning from the perspective of sociology of statistics: How machine learning is becoming scientific by turning its back on metrological realism. In 2023 ACM Conference on Fairness, Accountability, and Transparency . ACM, Chicago IL USA, 35-43. doi:10.1145/3593013.3593974
 - [8] Jo Bates, David Cameron, Alessandro Checco, Paul Clough, Frank Hopfgartner, Suvodeep Mazumdar, Laura Sbaffi, Peter Stordy, and Antonio De La Vega De León. 2020. Integrating FATE/critical data studies into data science curricula: where are we going and how do we get there?. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency . ACM, Barcelona Spain, 425-435. doi:10.1145/3351095.3372832
 - [10] Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. 2021. On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?. In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency . ACM, Virtual Event Canada, 610-623. doi:10.1145/3442188. 3445922
+
+
+<!-- PAGE 11 -->
+
 
 - [11] Sj Bennett, Caroline Claisse, Ewa Luger, and Abigail C. Durrant. 2023. Unpicking Epistemic Injustices in Digital Health: On the Implications of Designing Data-Driven Technologies for the Management of Long-Term Conditions. In Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society . ACM, Montr\'{e}al QC Canada, 322-332. doi:10.1145/3600211.3604684
 - [13] Michele Tracy Berger and Kathleen Guidroz (Eds.). 2009. The Intersectional Approach: Transforming the Academy through Race, Class, and Gender . University of North Carolina Press, Chapel Hill.
@@ -325,6 +366,10 @@ To start, we acknowledge that this work is part of the DIVERSIFAIR project that 
 - [52] Amnesty International. 2020. Xenophobic Machines: Discrimination through Unregulated Use of Algorithms in the Dutch Welfare System. https://www. amnesty.org/en/documents/eur35/4686/2021/en/ Accessed: 2025-01-10.
 - [51] Melissa Heikkilä. 2022. Algorithmic Bias in Welfare System: How Automation is Reinforcing Discrimination in Europe. https://www.politico.eu/article/dutchscandal-serves-as-a-warning-for-europe-over-risks-of-using-algorithms/ Accessed: 2025-05-04.
 
+
+<!-- PAGE 12 -->
+
+
 - [53] Edward B. Kang. 2023. On the Praxes and Politics of AI Speech Emotion Recognition. In 2023 ACM Conference on Fairness, Accountability, and Transparency . ACM, Chicago IL USA, 455-466. doi:10.1145/3593013.3594011
 - [55] Michael Katell, Meg Young, Dharma Dailey, Bernease Herman, Vivian Guetler, Aaron Tam, Corinne Bintz, Daniella Raz, and P. M. Krafft. 2020. Toward situated interventions for algorithmic equity: lessons from the field. In Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency . ACM, Barcelona Spain, 45-55. doi:10.1145/3351095.3372874
 - [54] Maximilian Kasy and Rediet Abebe. 2021. Fairness, Equality, and Power in Algorithmic Decision-Making. In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency . ACM, Virtual Event Canada, 576-586. doi:10.1145/3442188.3445919
@@ -365,6 +410,10 @@ In Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society . ACM,
 - [87] Princess Sampson, Ro Encarnacion, and Danaë Metaxa. 2023. Representation, Self-Determination, and Refusal: Queer People's Experiences with Targeted Advertising. In 2023 ACM Conference on Fairness, Accountability, and Transparency . ACM, Chicago IL USA, 1711-1722. doi:10.1145/3593013.3594110
 - [89] Andrew D. Selbst, Danah Boyd, Sorelle A. Friedler, Suresh Venkatasubramanian, and Janet Vertesi. 2019. Fairness and Abstraction in Sociotechnical Systems.
 - [88] Ken Schwaber and Mike Beedle. 2001. Agile Software Development with Scrum (1st ed.). Prentice Hall PTR, USA.
+
+
+<!-- PAGE 13 -->
+
 
 - In Proceedings of the Conference on Fairness, Accountability, and Transparency . ACM, Atlanta GA USA, 59-68. doi:10.1145/3287560.3287598
 - [91] Anastasia Siapka. 2022. Towards a Feminist Metaethics of AI. In Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society . ACM, Oxford United Kingdom, 665-674. doi:10.1145/3514094.3534197
@@ -408,6 +457,10 @@ Phase five, refining, defining and naming . In this phase, we first organized br
 
 Phase four, developing and reviewing themes . Through an iterative process on whether adjusting the themes and reassigning codes to different themes, as well as checking whether the themes encompass the codes, we grouped the themes further into finally reaching five overarching themes. Additionally, each of us picked two to four most relevant papers of their selection which was then read by all authors to enhance a common understanding. This also supported verification that the five chosen themes spanned the recommendation of (most of) our selected papers.
 
+
+<!-- PAGE 14 -->
+
+
 Table 2: Actionable Recommendations per Theme
 
 | Theme                       | Actionable Recommendation                                                                                                                                                                                                                |
@@ -435,6 +488,10 @@ named themes were evaluated with an interactive workshop with a diverse set of A
 Table 4 shows all the papers selected for the literature survey.
 
 Finally, phase six of writing up , constituted the reporting of our themes in this paper. As part of the analytical process, the themes are refined further through the act of writing, positing the work in other scholarship and particularly our structure of actionable recommendations.
+
+
+<!-- PAGE 15 -->
+
 
 Table 4: Overview of papers for literature, sorted by author names
 

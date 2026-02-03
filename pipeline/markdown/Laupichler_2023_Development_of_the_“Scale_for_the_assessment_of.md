@@ -1,10 +1,11 @@
 ---
 source_file: Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.pdf
-conversion_date: 2026-02-03T09:08:43.713184
+conversion_date: 2026-02-03T18:40:04.244607
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 Contents lists available at ScienceDirect
@@ -50,6 +51,10 @@ Received 18 April 2023; Received in revised form 7 August 2023; Accepted 25 Sept
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## 1.2. Assessing AI literacy
 
 Although comparatively young, the field of AI literacy and AI education  has  been  the  subject  of  increasing  research  for  several  years (Kandlhofer et al., 2016, Cetindamar et al., 2022). In addition, there are many examples in the literature of courses and classes that strive to increase AI literacy of individuals at different levels of education, e.g., kindergarten (Su &amp; Ng, 2023), high school (Ng et al., 2022), or university (Laupichler et al., 2022). However, few attempts have been made to develop instruments for assessing individuals ' AI literacy. However, the existence of such instruments would be essential, for example, to evaluate  the  teaching  effectiveness  of  the  courses  described  above. Another advantage of AI literacy assessment tools would be the ability to compare  the  AI  literacy  of  different  subgroups  (e.g.,  high  school  or medical students), identify their strengths and weaknesses, and develop learning  opportunities  based  on  these  findings.  In  addition,  a  scale reliably assessing AI literacy could be used to characterize study populations in AI-related research. It is important that such assessment instruments meet psychometric quality criteria. In particular, the reliability  and  validity  of  the  instruments  are  vitally  important  and should be tested extensively (Verma, 2019).
@@ -82,6 +87,10 @@ Laupichler  et  al.  (2023)  developed  a  preliminary  item  set  for assessing
 
 We used an analytical, observational, cross-sectional study design. All 39 items created by Laupichler et al. (2023) were presented to the participants  in  an  online  questionnaire.  Participants  rated  the  corresponding  competency  on  a  seven-point  Likert  scale  from ' strongly disagree ' (one) to ' strongly agree ' (seven), as recommended by Lozano et al. (2008). The items were presented in random order, and the online questionnaire  system  ensured  that  the  items  were  presented  in  a different  (randomized)  order  for  each  participant.  In  addition  to  the actual AI literacy items, some sociodemographic questions were asked
 
+
+<!-- PAGE 3 -->
+
+
 about age, gender, country of origin, etc. In addition, two bogus items were used to control the participants ' attention (see next section).
 
 ## 2.2. Participants
@@ -110,6 +119,10 @@ To conduct a methodologically sound data analysis, we followed the recommendatio
 
 Since our goal was to ' understand and represent the latent structure
 
+
+<!-- PAGE 4 -->
+
+
 of a domain ' (Widaman, 2018, p. 829), we chose common factor analysis  over  principal  component  analysis.  However,  since  we  used  a relatively high number of variables (39), both techniques would likely produce fairly similar results (Watkins, 2021).
 
 Although different factor extraction methods generally yield similar results (Tabachnik et al., 2019), we compared the results of maximum likelihood extraction and iterated principal axis extraction due to the multivariate non-normality of our data. The differences between the two extraction methods were negligible, so we applied the more commonly used maximum likelihood extraction. We used squared multiple correlations for the initial estimation of communalities. Since our variables were in principle ordinal at least, we based the analysis on the polychoric correlation matrix instead of the more commonly used Pearson correlation matrix. We used parallel analysis by Horn (1965) and the minimum average partial (MAP) method of Velicer (1976) to decide how many factors to retain. A scree-plot (Catell, 1966) was used for visual representation, but not as a decisive method, since it was found to be rather subjective and researcher-dependent (Streiner, 1998). Since we expected the various factors in the model to be at least somewhat correlated, we used an oblique rotation method. We used the promax rotation method as a basis for interpretation, but compared the results with  the  oblimin  rotation  method.  Norman and  Streiner  (2014)  suggested to set the threshold at which pattern coefficients (factor loadings) will  be  considered  meaningful  (i.e.,  salient)  to 5 . 152 ̅̅̅̅̅̅̅ N GLYPH&lt;0&gt; 2 √ (for p = .01). However, due to the large number of participants  in our study,  this would imply a relatively low salience threshold of 0.25, which is why we followed the more conservative suggestion made by Comrey and Lee (1992), who considered a minimum loading of 0.32 as salient.
@@ -129,6 +142,10 @@ The  univariate  distribution  of  all  variables  was  acceptable,  with skewne
 Fig. 2. Distribution and number of missing values in absolute and relative terms across all subjects and variables.
 
 <!-- image -->
+
+
+<!-- PAGE 5 -->
+
 
 Thus, we could not find any ' demonstrable proof [that] indicates that they are truly aberrant and not representative of any observations in the population ' (Hair et al., 2019, p. 91), which is why we did not exclude these cases from the data set. In total, each variable missed between 0 and 4 values, which makes up 0 -0.96% of all data. In addition, the data  was  missing  completely  at  random,  as  demonstrated  in  Fig.  2. Therefore, no imputation or deletion methods were applied.
 
@@ -172,6 +189,10 @@ Since Cattell (1978) and other researchers conclude that the right number of fac
 
 As for RQ2, the findings and assessments based on the data coincide well with the content-related examination of the individual factors. With the  two-factor  solution,  a  unifying  theme  could  be  identified  but  is rather diffuse and unclear. However, the three-factor solution creates a more plausible classification of the manifest variables to the latent factors in terms of content (see Table 1). Based on the reasons given, the
 
+
+<!-- PAGE 6 -->
+
+
 Fig. 4. Path diagram for the 3-factor promax model.
 
 <!-- image -->
@@ -198,6 +219,10 @@ One  of  the  most  well-known  lists  of  AI  literacy  components  was certain
 
 Many researchers refer to the literature review by Ng et al. (2021b)
 
+
+<!-- PAGE 7 -->
+
+
 ## Table 1
 
 List of all variables sorted by factors based on the three-factor TUCAPA-model of AI literacy. Listofallvariablessortedbyfactorsbasedonthethree-factorpromaxmodel.
@@ -220,6 +245,10 @@ List of all variables sorted by factors based on the three-factor TUCAPA-model o
 Note.Thevariablesaresortedbypatterncoefficient,withvariablesloadingthehighestoneachfactor appearingatthetopofeachcolumn.Notethatthetableshowsthemodelbeforeeliminationofeight items.Eliminated itemshavea lighterfont.Thesuperscriptnumbersindicatethereasonfor elimination, with (1) indicating salient loadings on more than one factor,(2) indicating extraordinarily low communalities,and (3) indicating a combination of (1) and (2).
 
 Note. The variables are sorted by pattern coefficient, with variables loading the highest on each factor appearing at the top of each column. Note that the table shows the model before elimination of eight items. Eliminated items have a lighter font. The superscript numbers indicate the reason for elimination, with (1) indicating salient loadings on more than one factor, (2) indicating extraordinarily low communalities, and (3) indicating a combination of (1) and (2) .
+
+
+<!-- PAGE 8 -->
+
 
 Table 2 Item parameters sorted by factors based on the three-factor promax model.
 
@@ -287,6 +316,10 @@ In addition, the use of paid and anonymous study participants involves certain r
 ## 4.3. Future research
 
 Future research projects should test the theoretical validity of the three-factor TUCAPA model through confirmatory factor analysis (CFA). This could simultaneously determine whether there is a separate ' AI ethics ' factor or whether the aspect of AI ethics is already included in the three factors of the TUCAPA model (e.g., in the Critical Appraisal factor). In addition to the previously mentioned use of the questionnaire in other samples or in specific sub-populations, the use of SNAIL in other cultures would also be important. For this purpose, the questionnaire has to be validly translated into the corresponding languages beforehand. This would help the international applicability of the scale, as the questions are currently only available in English. Moreover, it should be
+
+
+<!-- PAGE 9 -->
+
 
 investigated whether SNAIL can be applied equally well in all subject domains, or whether there are practical differences in AI literacy between  different  domains.  For  example,  it  could  be  possible  that  individuals with a high level of technical understanding (e.g., individuals from the field of mathematics or mechanical engineering) would rate the questions of the Technical Understanding factor very positively, while people from fields with less technical affinity (e.g., medicine, psychology) may evaluate the same questions rather negatively. Furthermore, it should  be  examined  whether  SNAIL  is  suitable  to  investigate  the teaching effectiveness of courses that aim to increase the AI literacy of their participants. Since SNAIL is freely available as an open access offering, this would also be interesting for platforms such as ' Elements of AI ' (University of Helsinki &amp; MinnaLearn, 2018) or ' AI Campus ' (KI Campus,  2023),  which  offer  open  educational  resources  to  improve general AI literacy. Last but not least, the SNAIL-questionnaire should be compared  with  related  constructs  such  as ' attitudes  toward  AI ' (Schepman &amp; Rodway, 2020; Sindermann et al., 2021) or ' digital literacy ' (Gilster,  1997)  to  investigate  the  relationship  between  each construct. For example, it is possible that more pronounced AI literacy reduces  anxiety  toward  AI  (Wang &amp; Wang,  2022),  leading  to  more positive attitudes toward AI.
 
@@ -363,6 +396,10 @@ KI Campus. (2023). AI Campus. https://Ki-Campus.Org/.
 - Mardia, K. V. (1970). Measures of multivariate skewness and kurtosis with applications. Biometrika, 57 (3), 519 -530.
 
 Meade, A. W., &amp; Craig, S. B. (2012). Identifying careless responses in survey data. Psychological Methods, 17 (3), 437 -455. https://doi.org/10.1037/a0028085 Microsoft Corporation. (2018). Microsoft Excel. Retrieved from https://office.microsoft. com/excel.
+
+
+<!-- PAGE 10 -->
+
 
 - Mulaik, S. A. (2009). Foundations of factor analysis. Chapman and Hall/CRC . https://doi. org/10.1201/b15851
 - Mundfrom, D. J., Shaw, D. G., &amp; Ke, T. L. (2005). Minimum sample size recommendations for conducting factor analyses. International Journal of Testing, 5 (2), 159 -168. https://doi.org/10.1207/s15327574ijt0502\_4

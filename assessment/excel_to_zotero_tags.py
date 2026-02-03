@@ -177,7 +177,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--library-id',
         default='6080294',
-        help='Zotero library ID (default: 6080294 - FemPrompt group)'
+        help='Zotero library ID (default: 6080294 - Literature Review group)'
     )
 
     parser.add_argument(

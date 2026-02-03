@@ -1,10 +1,11 @@
 ---
 source_file: Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.pdf
-conversion_date: 2026-02-03T09:08:47.723438
+conversion_date: 2026-02-03T18:40:09.048677
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 2022
 
 ## Artificial Intelligence in a Structurally Unjust Society
@@ -12,6 +13,10 @@ quality_score: 95
 Ting-An Lin Stanford University tinanlin@stanford.edu
 
 Po-Hsuan Cameron Chen cameron.ph.chen@gmail.com
+
+
+<!-- PAGE 2 -->
+
 
 ## Abstract
 
@@ -27,6 +32,10 @@ Over the past decade, due to a surge in the use of artificial intelligence (AI) 
 
 ## Artificial Intelligence in a Structurally Unjust Society Ting-An Lin and Po-Hsuan Cameron Chen
 
+
+<!-- PAGE 3 -->
+
+
 injustices, such as sexism and racism. For example, one AI recruiting tool downgrades resumes  containing  the  keyword  'women's,'  such  as  'women's  college'  and 'women's chess club,' result ing in a preference for male candidates (Dastin 2018); another  algorithm  used  to  judge  risk  for  recidivism  tends  to  falsely  identify  Black defendants as future criminals (Angwin et al. 2016); and the algorithms behind one global search engine tend to represent women of color with degrading stereotypes (Noble 2018).
 
 In response to the growing concerns regarding AI bias, a burgeoning research paradigm under the names of AI fairness , fairness in AI , and machine learning (ML) fairness has been developed (Hajian and Domingo-Ferrer 2013; Kamiran, Calders, and Pechenizkiy 2013; Barocas and Selbst 2016; Lepri et al. 2018; Friedler et al. 2019). Additionally, many tech companies have launched relevant initiatives to pursue the value of AI fairness by developing fairer algorithms (Joyce et al. 2021). In the following text, we refer to this as the dominant approach to AI fairness. The dominant approach sees the problem of AI bias as being primarily located within algorithms, understands the goal of AI fairness as ensuring some parity of some statistical measures between different groups of people, and thus aims to fix the problem mainly through debiasing algorithms  (Davis,  Williams,  and  Yang  2021).  Despite  its  popularity,  critics  have pointed out limitations of this dominant approach to AI fairness, including challenges of deciding between various statistical measures (Miconi 2017; Friedler, Scheidegger, and Venkatasubramanian 2016), concerns that AI systems are examined as entities isolated from the situated social contexts (Hoffmann 2019; Fazelpour and Lipton 2020; Le Bui and Noble 2020), and an overemphasis on technocentric responses (Fazelpour and Lipton 2020; Le Bui and Noble 2020). These reflections reveal a need for a more comprehensive  moral  framework  to  reconceptualize  the  ethical  concerns  and approaches involved in addressing AI bias and pursuing AI fairness. As suggested by Le Bui and Noble (2020, 163) , 'We are missing a moral framework' for thinking about ethics and justice in AI.
@@ -34,6 +43,10 @@ In response to the growing concerns regarding AI bias, a burgeoning research par
 This  paper  argues  that a  conceptual  framework  named structural  injustice , originally proposed by Iris Marion Young (2011), can serve as a helpful framework for clarifying the ethical concerns surrounding AI bias -including the nature of its moral problem and the responsibility for addressing it -and reconceptualizing the approach to  pursuing  AI  fairness.  In  other  words,  this  paper  aims  to  conduct  what  Sally Haslanger (2000) calls an ameliorative project for the notions of AI bias and AI fairness by asking how these concepts should be used to better serve the purposes of using them. 2 We suggest understanding AI bias as a form of structural injustice that exists when  AI  systems  interact  with  other  social  factors  to  exacerbate  existing  social inequalities, making some groups of people more vulnerable to undeserved burdens
 
 2 We thank Shen-yi Liao for this point.
+
+
+<!-- PAGE 4 -->
+
 
 while conferring unearned benefits to others. From this perspective, the notion of AI fairness should be about pursuing a more just social structure, potentially through the development and use of AI systems when appropriate. By situating AI systems within existing social structures, the structural-injustice perspective enables a more nuanced analysis of the contributing factors to AI bias and indicates potential directions for the pursuit of AI fairness. Drawing on Young's (2011) social connection model (SCM) of responsibility, we argue that a broader group of people beyond software engineers are responsible for pursuing AI fairness and should join collective action to shape the social  structure.  Overall,  the  structural-injustice  framework  helps  clarify  the  moral problem of AI bias and offers new directions for more holistic responses to it.
 
@@ -45,6 +58,10 @@ The idea of structural injustice was proposed by Iris Marion Young to refer to a
 
 Structural  injustice  concerns  the way in  which  social  structure  restricts people's  opportunities. Following  Young,  we  can  understand  social  structures  as background  conditions  formed  through  complicated  and  dynamic  interactions between norms (e.g.,  institutionalized  laws  and  social  norms), schemas (e.g., associated symbols, meanings, and values), and distributions of resources (e.g., public
 
+
+<!-- PAGE 5 -->
+
+
 transportation  and  health-care  coverage). 3 By  setting  up  the  criteria  of  norms, associating meaning with different practices, and distributing resources to different groups of people, social structures affect the options available to people and thereby enable or constrain their actions. When a social structure unfairly restricts the options of certain groups of people and exposes them to the threat of undeserved burdens 4 while  also  conferring  unearned  privilege  and  power  to  other  groups,  this  social structure is unjust and should be rectified.
 
 Two notable features of structural injustice  should be  touched upon. First, structural injustice can result from interactions between morally permissive actions. While several actions may seem permissive when evaluated separately, they could still result in structural injustice when interacting with each other . Young's example of  Sandy  illustrates  this  point.  A  fictional  character  named  Sandy  is  forced  into homelessness due to the combined effect of many factors, including the cost of rental housing, the cost of a security deposit, the need to live in a certain location that she considers suitable for her children and her commute to work, and so on. In this case, Sandy's homelessne ss is not a direct result of deviant individual wrongdoings (e.g., mistreatments  by  landlords  or  real  estate  agents)  or  repressive  policies  (e.g., discriminatory policies blocking Blacks and Jews from owning or renting housing in certain neighborhoods). Many factors -such as the cost of housing, the location of mass  transportation,  and  the  availability  of  job  openings -may not  seem  morally problematic when evaluated separately. However, when these multiple components interact  in  a  complicated  social  process,  the  resulting  social  structure  may  assign certain groups of people to social positions that render them unjustly vulnerable to homelessness. The example of Sandy demonstrates that structural injustice is a moral wrong distinct from individual wrongdoings or repressive policies. Furthermore, this example emphasizes that solely evaluating each component of the social structure in isolation is insufficient to analyze the influence of the overall social structure. Instead, it is essential to take a broader perspective and evaluate the influence of the overall social process to effectively identify structural injustice.
@@ -54,6 +71,10 @@ Second, despite the 'structural' aspect of the term ' structural injustice, ' it
 3 The components of social structure listed here are largely drawn from Young (2011) and Haslanger (2016).
 
 4 While domination is emphasized in Young's original definition of structural injustice, we  suggest  that  structural  injustice  could  bring  about  other  forms  of  undeserved burdens, such as exploitation and alienation. See McKeown (2016) for discussions on structural exploitation and Lu (2017) for discussions on structural alienation.
+
+
+<!-- PAGE 6 -->
+
 
 are not intentionally designed, individuals play critical roles in producing, sustaining, and shaping them. By following or obeying norms, embracing or challenging shared values,  and  distributing  resources  differently,  individuals,  through  their  everyday practices, may support or weaken the social structure. Therefore, the term ' structural injustice ' does not imply that individuals play no part in it. Instead, the structuralinjustice framework offers a perspective that sees individuals not as discrete entities but as always connected to the broader social structure.
 
@@ -69,6 +90,10 @@ The developmental process of health-care AI roughly consists of four stages: pro
 
 5  It should be noted that the process of AI development described herein concerns one category of machine learning methods named supervised learning , in which both input  and  output  data  are  provided  for  the  algorithm  to  learn  the  relationship between them. While there are some other categories of machine learning methods, such as unsupervised learning and reinforcement learning, most AI systems in health care are currently developed based on supervised learning. Thus, this paper focuses on methods of supervised learning.
 
+
+<!-- PAGE 7 -->
+
+
 diagnosis of diabetic retinopathy from fundus images as an example to explain these four stages (Gulshan et al. 2016). Diabetic retinopathy is an eye complication that often  occurs  in  diabetic  patients  and  can  cause  blindness.  For  diabetic  patients, diabetic  retinopathy  screening  should  be  conducted  annually.  In  this  screening process,  ophthalmologists  evaluate  fundus  images  and  assign  severity  scores suggesting different downstream actions. For patients with low scores, no immediate intervention is needed aside from a yearly follow-up; for patients with high scores, active intervention and treatment are advisable.
 
 The first step of developing a health-care AI system is to select a problem and formulate it into a machine learning task. In this case, the problem is formulated as the need for the algorithm to take fundus images, automatically classify these images into different severity scores following clinical guidelines, and output the classified scores.
@@ -78,6 +103,10 @@ The  next  step  after  problem  selection  is  data  curation.  To  develop  th
 In  the  third  stage -algorithm  development  and  validation -engineers  or scientists design algorithms and train these algorithms based on the development set. Once  algorithm  development  is  complete,  the  final  algorithm  is  applied  to  the validation set, and the predictions made by the algorithm are compared against the labels  of  the  validation  set  to  measure  the  algorithm's  performance.  The  results represent the expected performance of the algorithm for an unseen dataset with a similar data distribution to that of the validation set.
 
 Lastly, in the deployment and monitoring stage, the finalized algorithm is used in real-world workflows subject to potential regulatory oversight. For example, after a successful prospective pivotal trial (Abràmoff et al. 2018), the US Food and Drug Administration  authorized  an  automated  tool  for  diabetic  retinopathy  screening without the need for a clinician to interpret the results (FDA 2018). Deployment in real-world scenarios requires integration of the algorithm into the clinical workflow, ensuring that any personnel who may use the algorithm are well trained and that the algorithm  applies  to  the  intended  population.  To  ensure  consistent  algorithm performance, postdeployment monitoring is needed.
+
+
+<!-- PAGE 8 -->
+
 
 ## 3.2. How Health Disparities May Be Exacerbated throughout the AI-Development Process
 
@@ -93,6 +122,10 @@ After a problem is selected, researchers move on to the second stage -data curat
 
 7  The 10/90 gap refers to the phenomenon of disparity in health research spending between diseases that affect rich and poor countries. As Vidyasagar (2006, 55) puts it, 'less than 10% of global funding for research is spent on disease that afflict more than 90% of the world's population.'
 
+
+<!-- PAGE 9 -->
+
+
 developed. There are at least three different ways in which data may contribute to AI bias:  (1)  when  the  data  used  for  training  is  insufficiently  representative,  (2)  when existing  biases  are  encoded  in  the  data,  and  (3)  when  the  reference-standard selection introduces bias. 8 The first form of data-related bias occurs when the data used for training are insufficiently representative, especially for marginalized groups. For example, in order to train an AI system for good performance in aiding healthcare decisions, it is critical to include relevant data on health conditions. However, existing  health  data  are  often  skewed  toward  more  privileged  populations.  For example, many widely used open datasets are US- and Europe-centric and thus lack the geodiversity needed to develop AI systems for other parts of the world (Shankar et al. 2017). In fact, most of the medical data used to train AI algorithms are derived from three states in the US: California, Massachusetts, and New York (Kaushal, Altman, and Langlotz 2020). In the US, EHR datasets include largely White populations with private insurance and much fewer uninsured Black and Hispanic patients (Hing and Burt 2009). In the development of AI systems for skin cancer diagnosis, one of the largest databases used for model development collects pigmented lesions disproportionately from light-skinned populations (Adamson and Smith 2018). Such skewed  data  distributions  produce  AI  systems  with  better  performance  for  lightskinned individuals than for people of color.
 
 Data can also become a source of bias when it incorporates existing systemic biases  against  marginalized  groups.  For  example,  studies  have  shown  that  many clinical  notes  incorporate  the  biases  of  medical  practitioners  against  marginalized patients,  such  as  African  American  and  LGBT  groups  (Geiger  2003;  Fallin-Bennett 2015). When these clinical notes are used to develop AI systems, the resulting systems will tend to replicate existing biases.
@@ -101,11 +134,19 @@ Finally,  data-related  bias  may  occur  through  the  selection  of  reference
 
 8 Thanks to an anonymous reviewer for helping us clarify the three different ways in which data-related bias can occur.
 
+
+<!-- PAGE 10 -->
+
+
 account,  the  selection  of  reference  standards could  replicate existing health inequities. One study revealed that a certain algorithm widely used to evaluate health needs  tends  to  assign  lower  scores  to  Black  patients  than  to  White  patients (Obermeyer  et  al.  2019).  This  largely  stems  from  the  fact  that  the  designer  used health-care costs rather than illness as the reference standard for deciding health needs. Multiple social factors -including socioeconomic status, racial discrimination, and reduced trust in the health-care system -have contributed to the relatively low health-care costs spent on Black patients. As a result, the choice of health-care costs as a proxy for health needs fails to genuinely reflect health needs and intensifies racial disparities.
 
 Although the third stage of algorithm development and validation may sound purely  mathematical, it  also  involves  decision-making  influenced  by  existing  social factors. It is often suggested that AI merely reflects the data distribution, as suggested by the slogan 'Garbage in, garbage out.' By focusing on the problem with data, the discussion often implicitly portrays the algorithms as objective in the sense that they are  not  the  root  of  biased  outcomes  (Smith  2018).  However,  the  design  of  an algorithm  can  amplify  the  disparate  impact  of  social  factors  across  different populations (Hooker 2021) and thus has the potential to amplify health disparities. For  example,  in  deciding  what  kind  of  information  should  be  used  for  algorithm training,  the  problem  of  whether  and  how  demographic  information  should  be incorporated is a complicated issue that poses serious challenges. In some cases, the incorporation of demographic information could lead the algorithm to exploit such information and thus replicate existing biases embedded in the data when making predictions. For example, vaginal birth after cesarean (VBAC) scores are assigned by an algorithm designed to predict the success rate of childbirth with prior cesarean section. Based on observational studies that have revealed a 'correlation between racial identity and the success rate,' it can be concluded that VBAC scores 'explicitly include a race component as an input' (I. Y. Chen et al. 2021, 11) and assign lower VBAC scores to Black and Hispanic women compared with White populations (Vyas, Eisenstein, and Jones 2020). While the underlying cause of this correlation between racial identity and success rate is unclear, this association may be due to the unequal distribution  of  medical  resources  among  different  racial  groups.  By  directly  using VBAC  scores  as  part  of  its  training  information,  the  developed  algorithm  would replicate  the  pattern  of  racial  disparity,  predict  a  lower  success  rate  of  trial  of childbirth labor for Black and Hispanic women, and thus further exacerbate existing health inequalities.
 
 While the example above shows that incorporating demographic information could worsen existing inequalities, it does not imply a necessary link between the inclusion of demographic information and the replication of existing inequalities. On the  one  hand,  even  if  demographic  information  is  not  directly  incorporated,
+
+
+<!-- PAGE 11 -->
+
 
 confounders between the data and sensitive demographic information (e.g., ZIP code is often associated with the residents' race/ethnicity demographics) m ay persist and thus function to replicate existing patterns (Rodriguez et al. 2007; Johnson 2021). On the other hand, some  approaches  have  explicitly incorporated  demographic information to ensure that the developed algorithms do not utilize this information in making predictions (Zhao, Adeli, and Pohl 2020). These observations  indicate that deciding  whether  and  how  to  incorporate  sensitive  information  requires  careful consideration regarding the nature of the information.
 
@@ -114,6 +155,10 @@ In validating an algorithm ' s performance, the way in which the performance is 
 Finally, after an algorithm has been developed and validated, its deployment for real-world use can have a compounding effect on health disparities. For example, consistency  between  the  population  for  which  an  algorithm  is  deployed  and  the originally intended use is essential to the algorithm's performance (Kelly et al. 2019). However, for some of the reasons mentioned above, there is a tendency to develop algorithms intended for use with widespread health conditions in privileged groups. As a result, it is easier to ensure consistency in these contexts than in other health conditions or populations.
 
 Even if an algorithm were developed to improve health-care conditions for diverse groups of people -for example, to aid doctors in the diagnosis and treatment of cancer -this does not mean that different groups of people would benefit similarly from this algorithm. Rather, under current social processes, access to the potential benefits of this new technology could be influenced by existing resource distributions. Hospitals located in wealthy areas of high-income countries may have more resources to  purchase  and  incorporate  the  algorithm  into  their  services.  Furthermore,  in
+
+
+<!-- PAGE 12 -->
+
 
 hospitals with more resources, AI systems may play an assisting role for doctors in the process  of  medical  diagnosis;  in  contrast,  in  places  with  more  restricted  medical resources,  there  might  be  a  need  to  rely  more  heavily  on  AI  systems  to  make diagnoses despite the quality of their performance. Overall, disparate access to and use of AI algorithms could compound with and intensify existing disparities in health resources.
 
@@ -127,6 +172,10 @@ If  AI  bias is recognized as a case of structural injustice, then we should als
 
 First, let us reconsider the goal of AI fairness. The dominant approach portrays AI bias as a problem that is mainly located within the AI system and thus focuses on fixing problematic algorithms. This approach tends to examine the outcomes of AI systems as entities isolated from background conditions and sees the goal of fairness as ensuring the parity of some statistical measures (Davis, Williams, and Yang 2021). Critics have pointed out that overemphasis on the discrete analysis of 'bad algorithms' pays insufficient attention to the related social and cultural contexts in which these AI systems are situated (Hoffmann 2019) and fails to capture the power dynamics that AI systems are embedded in and interact with (Le Bui and Noble 2020). In contrast, the identification of AI bias as a case of structural injustice suggests that the moral
 
+
+<!-- PAGE 13 -->
+
+
 problem is not merely located within the AI systems but also results from interactions of the overall social structure, of which AI is one component. By situating AI systems against existing social contexts, the structural-injustice perspective understands the goal of AI fairness differently from the dominant perspective.
 
 First,  by  paying  attention  to  the  overall  impact  of  interactions  between  AI systems and many other social factors, the structural-injustice perspective highlights that ensuring the statistical parity of a model's performance may be insufficient to achieve AI fairness .  Given the existing social inequalities, AI systems that 'perform similarly  well'  for  different  groups  m ay  function  to  reproduce  the  unjust  social structure. Instead, the more appropriate goal of AI fairness should be understood as the  pursuit  of  a  more  just  social  structure -or  a  social  structure  with  fewer unjustifiable  power  imbalances -through the  development and  use  of  AI  systems when appropriate. Alternatively, considering the ultimate goal of structural justice, this perspective may instead suggest that we should not develop or use AI systems in certain domains.
@@ -136,6 +185,10 @@ The  analysis  of  AI  bias  through  the  structural-injustice  framework  draw
 Given that the moral problem of structural injustice lies in the imbalance of power  relations  between  groups  of  people  and  their  situated  social  positions, structural analysis calls attention to the variety of components that shape the current power structure. Instead of merely asking whether the performance of an AI system, evaluated in isolation, produces fair distributions of goods across different groups of people, structural reflections suggest that the following questions should be raised: How does the AI system, as part of the social structure, shape the existing power structure between different groups of people? Does it function to reduce, reproduce, or further exacerbate existing power imbalances? This perspective naturally broadens its attention beyond resource distribution to also consider issues such as recognition and representation, which also contribute to the hierarchies of social status (Fraser
 
 9  We thank an anonymous reviewer for contributing this reference.
+
+
+<!-- PAGE 14 -->
+
 
 and  Honneth  2003).  When  a  comprehensive  self-tracking  app  failed  to  include  a menstruation  tracking  function  (Eveleth  2014),  it  conveyed  the  message  that women's  health  experiences  were  not  important.  When  a  global  search  engine associates Black women with degrading stereotypes (Noble 2018), they suffer from representational harm. In these cases, even though the harm is not mediated through unequal  resource  distribution,  the  use  of  these  systems  reinforces  unjust  power imbalances  and  thus  should  be  addressed  according  to  the  structural-injustice approach to AI fairness.
 
@@ -149,6 +202,10 @@ Although technological tools should certainly be part of the response to AI bias
 
 Regarding the claim that it is impossible to satisfy all these statistical measures, Hedden (2021) recently argued that this does not necessarily entail making a trade-
 
+
+<!-- PAGE 15 -->
+
+
 off, as most of these statistical criteria are not necessary conditions for fairness. The implication of Hedden's analysis is not that we can easily pursue the goal of fairness by  focusing  on  one  or  a  few  statistical  measure s  of  an  algorithm's  performance. Rather, it points out that the source of bias and unfairness may not lie in the algorithm itself but 'could instead lie elsewhere: with the background conditions of society, with the way decisions are made on the basis of its predictions, and/or with various side effects of the use of that algorithm, such as the exacerbation of harmful stereotypes' (Hedden 2012, 227). This point resonates well with the structural-injustice perspective 's emphasis  on  the  overall  influence  of  social  structure,  of  which  the algorithm is merely one component.
 
 Given  that  structural  injustice  has  resulted  from  interactions  between  AI algorithms and other social factors, the problem of AI bias cannot be fixed solely by designing  algorithms  with  statistical  parity.  Instead,  more  diverse  approaches examining social, political, and institutional structures should also be developed to intervene in the power imbalances surrounding AI development and use. From this perspective, deferring to tech developers and companies for solutions to AI bias is inadequate and risks conferring unearned power to a small group of people. To move forward, the following questions should be reconsidered: Who should be responsible for addressing AI bias and pursuing fairness? Why should they be responsible? What does being responsible for this issue entail? The following two sections discuss these issues in greater detail.
@@ -158,6 +215,10 @@ In  summation,  while  the  dominant  approach  tends  to  see  the  goal  of  A
 ## 5. Responsibility for AI Fairness: Insights from the Social Connection Model
 
 We have argued that structural injustice is a helpful framework for analyzing the ethical problem of AI bias and reconceptualizing the idea of AI fairness. Now, we will  discuss  what  this  reconceptualization  implies  regarding  the  corresponding responsibility for AI fairness. This section will begin by highlighting the challenges of responsibility  attribution  based  on  the  conventional liability  model. Due  to  the features  of  AI  development,  the  conditions  for  assigning  moral  responsibility  are somewhat  difficult  to  meet.  While  we  should  not  necessarily  give  up  the  task  of responsibility attribution, the recognition of AI bias as a case of structural injustice
+
+
+<!-- PAGE 16 -->
+
 
 suggests that we should consider appealing to other moral grounds in responsibility attribution.  Thus,  we turn  to  Young's SCM  of  responsibility  and  discuss  how  it advances existing discussions on responsibility for AI bias. Drawing from the SCM, we suggest that all agents participating in the unjust social structure associated with AI bias bear a shared responsibility for this structure and should join collective action for its reform.
 
@@ -169,6 +230,10 @@ In considering the impact of AI systems and attributing responsibility to the de
 
 These challenges do not mean that the idea of responsibility attribution should be  abandoned.  In  fact,  some  have  proposed  counterarguments  to  the  claim  of  a responsibility gap in AI development, many  appealing to plural notions of responsibility that include but also extend beyond accountability (Köhler, Roughley, and Sauer 2017; Coeckelbergh 2020; Tigard 2021). Along these lines, we argue that the  structural  nature  of  AI  bias  warrants  consideration  of  an  additional  notion  of responsibility based on social connections.
 
+
+<!-- PAGE 17 -->
+
+
 ## 5.2. Responsibility for AI Fairness Based on Social Connections
 
 In response to discussions surrounding the activist movement against garment sweatshops, Young (2006) argued that a common conception of responsibility (the liability model) was suitable for assigning responsibility for individual wrongdoings but inappropriate  for  assigning  responsibility  for  structural  injustices.  Several  central features of structural injustice make it difficult to satisfy the control and knowledge conditions, thus rendering the application of the liability model unsuitable. First, given that structural injustice is a collective result, it is nearly impossible to trace the exact causal  chain  of  one  individual 's  action  to  the  resulting  injustice  in  a  way  that demonstrates that this action is the sufficient cause of the injustice. Furthermore, agents typically contribute to the reproduction of the social structure through their everyday practices without awareness of the consequences of their contributions. However, failure to meet the control and knowledge conditions does not suggest that an individual has no involvement in the resulting social structure. Instead, as noted in section 2, social structure only exists as a result of participation by various individuals. Through participation in the social process, individuals' everyday practiceswhether intentional  or  not -play  a  critical  role  in  reproducing  and  sustaining  the  social structure. Such contributions to the social structure constitute a new moral ground for attributing responsibility.
@@ -176,6 +241,10 @@ In response to discussions surrounding the activist movement against garment swe
 To accommodate the features of structural injustice, Young proposed a new model of responsibility attribution called the SCM. 10  The SCM suggests that agents who are 'connected' with the social structure, or whose actions contribute to the reproduction of the social structure (McKeown 2018), bear some sort of responsibility (which Young called political responsibility ) for structural injustice. Young suggested that  political  responsibility  does  not  concern  fault-finding  and  blame  but  mainly concerns  more  forward-looking  goals,  such  as  reformation  of  the  social  structure. Furthermore, given that no individual has the power to reform the social structure alone, political responsibility is a shared responsibility, meaning that it can only be discharged  through  collective  action.  People  who  bear  this  shared  responsibility should attempt to coordinate, initiate, or participate in collective action to reform the social  structure.  The  goal  of  this  collective  action  is  to  ensure  that  the  power imbalances between different social positions are removed, such that no one will be
 
 10  Young emphasized that she did not intend to replace the liability model with the SCM but rather intended for the SCM to serve as a complementary conception of responsibility that could be applied in contexts for which the liability model is not appropriate. In other words, according to Young, the liability model is appropriate for assigning responsibility for individual wrongdoings, whereas the SCM is appropriate for assigning responsibility for structural injustice.
+
+
+<!-- PAGE 18 -->
+
 
 put into social positions where they would be vulnerable to undeserved harm, such as domination, violence, and exploitation. 11
 
@@ -186,6 +255,10 @@ By providing new grounds for responsibility attribution, the SCM avoids the chal
 While  we  agree  with  this  reasoning  regarding  democratic  citizens  and stakeholders, we wish to add that the reasoning underlying the SCM emphasizes that all individuals are agents with the capacity to shape the social structure. Although no individual can change the social structure independently, by working together with
 
 11 While Young's SCM is quite influential in discussions o n structural injustice,  this model  and  the  corresponding  notion  of  political  responsibility  have  also  received many critiques. For example, see Nussbaum (2009) for critiques of Young's claim that political  responsibility  does not concern blame; see Gunnemyr (2020) for critiques regarding Young's idea of connections; and see Schwenkenbecher (2021) for critiques regarding the lack of specificity on shared responsibility. Lin (forthcoming) also points out some theoretical gaps of Young's theory that require further explorations.
+
+
+<!-- PAGE 19 -->
+
 
 others, one may have the power to decide whether to develop, why to develop, and what to develop. From this perspective, ordinary individuals are not merely 'patients' of responsibility who are affected by actions and decisions made by others and thus 'may demand reasons for actions and decisions made by using AI,' as suggested by Coeckelbergh  (2020).  Rather,  ordinary  individuals  are  also  agents  of  responsibility who can act and make decisions regarding the development and use of AI.
 
@@ -199,6 +272,10 @@ According to the SCM, political responsibility is a shared responsibility that c
 
 An agent's situated social position greatly influences the power and resources available to the agent and thus has a substantive impact on the forms of action the agent can take to participate in a collective movement. Several proposals have been raised to help agents determine their relations to different kinds of structural injustice and decide what actions they should take. Young (2011) suggested four parameters of reasoning: power, privilege, interest, and collective ability. Agents with power are those with a great capacity to shape the social structure and should use this capacity accordingly; in the case of AI bias, leaders of tech companies and governments fall into this category. Agents with privilege are those who benefit from the current social structure, and these individuals should use the abundance of resources available to them to change their everyday practices and support the movement toward a more just  social  structure.  Agents  who  are  oppressed  have  some  special interest in reshaping the social structure, and Young suggested that these individuals should also
 
+
+<!-- PAGE 20 -->
+
+
 contribute to the collective action such as by sharing their situated knowledge and experience to guide how the social structure should be reshaped. Lastly, agents with collective ability are those who belong to a group that can influence the process of reshaping the social structure and should direct their resources accordingly.
 
 Young's four parameters of reasoning are not the only model we can use for reference. For example, Zheng (2018) provides the alternative role-ideal model , which suggests  that  individuals  can  better  decide  on  the  actions  they  should  take  by contemplating their social roles (e.g., as teachers, parents, employees, or citizens). According to this perspective, scholars should conduct in-depth examinations of the interactions  between  AI  systems  and  existing  social  factors  to  propose  diverse intervening approaches; together with the CEOs of tech companies, engineers and tech  developers  should  try  to  develop  AI  systems  that  can  help  mitigate  existing power imbalances; citizens of democratic societies should raise concerns regarding the design, development, and deployment of AI as parts of democratic agendas; and governments and lawmakers should work to provide suitable institutional designs that are conducive to these practices.
@@ -206,6 +283,10 @@ Young's four parameters of reasoning are not the only model we can use for refer
 ## 6.2. Recommendations for the Pursuit of AI Fairness: AI in Health Care as an Example
 
 As  noted  by  Wawira  Gichoya  and  colleagues,  while  a  few  guidelines  for designing AI systems  have  recently been  proposed,  there is still a lack of operationalizing recommendations for the pursuit of increased AI fairness (Wawira Gichoya  et  al.  2021).  In  response,  they  propose  a  handful  of  recommendations, including  suggestions  such  as 'engage  members  of  the  public  in  the  process  of determining  acceptable  standards  of  fairness'  and  'collect  necessary  data  on vulnerable protected groups' (Wawira Gichoya et al. 2021, 2). Although we generally agree with their recommendations, they provide little reasoning in support of these recommendations. To address this gap and advance the discussion on this issue, we aim  to  provide  a  more  comprehensive  (but  by  no  means  exhaustive)  list  of recommendations  for  the  pursuit  of  AI  fairness,  derived  from  structural-injustice analysis. Table 1 is an overview of these recommendations, organized along the four stages  of  AI  development,  as  discussed  in  section  3.  Below,  we  discuss  these recommendations and provide examples of how different moral agents may help in achieving the goal of AI fairness.
+
+
+<!-- PAGE 21 -->
+
 
 Table 1. List of Recommendations for the Pursuit of AI Fairness
 
@@ -218,11 +299,19 @@ Table 1. List of Recommendations for the Pursuit of AI Fairness
 
 For the first stage -problem selection -we provide three recommendations that emphasize paying attention to decisions that are rarely made with transparency. First, we suggest that in deciding whether to develop an AI system for a certain use, efforts  should  be  made  to  assess  relevant  social  contexts  and  existing  social inequalities in order to identify the potential risks and benefits that such a system may bring about. Empirical work in the social sciences and other areas could play a crucial role in these efforts (Joyce et al. 2021), for example, by noting the unexplained
 
+
+<!-- PAGE 22 -->
+
+
 pain levels of underserved populations and thus motivating engineers to design AI systems that may better assist the diagnosis process in reducing health disparities (Pierson et al. 2021). Second, attention should be paid to power dynamics throughout the decision-making process. This process should engage members of diverse groups, especially marginalized groups, in identifying and deciding on problems to address. For  example,  the  tech  industry  could  pursue  this  goal  by  striving  toward  a  more diverse and demographically representative composition. As feminist scholars have long argued, oppressed individuals, through being situated in marginalized positions, have distinct access to knowledge regarding oppression (Collins 1990; hooks 1990). Thus, incorporating the viewpoints of oppressed individuals could make the decisionmaking process more attentive to existing social inequalities. Furthermore, the act of including marginalized people in this process recognizes their agency and can thus function  as  an  empowering  experience.  Third,  efforts  should  be  made  at  the institutional level to ensure that the resource distribution is not overly skewed toward privileged groups, as in the 10/90 gap in health-care research funding.
 
 For  the  second  stage -data  curation -we  propose  two  recommendations. First, in choosing and curating datasets, evaluations are required to ensure that their data distributions are representational with no biases against marginalized groups embedded in the data. Some efforts should be made by designers (e.g., to choose more representative datasets for training systems), but this goal can only be achieved if efforts are made at the institutional level to collect more representative datasets and  make  them  available.  Second,  reflection  is  required  in  choosing  a  reference standard to avoid replicating the associated injustices against marginalized people.
 
 A recent study by Pierson and colleagues (Pierson et al. 2021) serves as a good example  of  how  paying  proper  attention  to  these  two  aspects  of  developing  AI systems  has  the  potential  to  help  mitigate  existing  health  disparities.  It  is  well documented  that  underserved  populations  (e.g.,  people  of  color,  lower-income patients, and less educated patients) experience higher levels of pain due to diseases such as osteoarthritis of the knee (Poleshuck and Green 2008; Allen et al. 2009; Eberly et  al.  2018).  To  inquire  about  the  causes  of  such  pain  disparities,  Pierson  and colleagues developed AI systems that take knee X-ray images as input and predict pain scores as output (Pierson et al. 2021). Being aware of the potential influence of existing  human  biases  on  the  development  of  standard  clinical  guidelines,  they intentionally chose not to use physicians' diagnoses as the reference standard s for their algorithm, as this could replicate the existing biases embedded in established medical knowledge. Instead, they chose to train the algorithm based on a dataset of knee  X-ray  images  with  high  racial  and  socioeconomic  diversity,  using patients' reported pain scores as labels. The resulting AI system predicted pain scores with a much lower percentage of unexplained pain disparities than the diagnoses made by physicians following standard clinical guidelines. This result revealed that information
+
+
+<!-- PAGE 23 -->
+
 
 regarding the severity of osteoarthritis was, in fact, available in the X-ray images, even though the standard clinical guidelines developed decades prior (based mostly on the diagnosis  of  White  British  populations)  failed  to  capture  this  information.  This suggests that much of the unaccounted pain of underserved populations is related to the  racial  and  socioeconomic  biases  embedded  in  the  standard  clinical  guidelines, which fail to capture some physical causes of pain in underserved groups and thus result in misdiagnosis of the severity of their osteoarthritis. If integrated into clinical practice, the AI system developed by Pierson and colleagues could potentially ensure that the reported pain levels of underserved populations are taken more seriously and that the severity of their osteoarthritis is measured more accurately (Pierson et al. 2021).
 
@@ -232,6 +321,10 @@ While some aspects of decision-making require special expertise and thus are con
 
 For the final stage -algorithm deployment and monitoring -we propose two recommendations. First, before the deployment of an AI system, consistency should
 
+
+<!-- PAGE 24 -->
+
+
 be assessed between the originally intended use and the population for which the system will be deployed, as major inconsistencies between these factors generally worsen the performance of an AI system. Second, after deployment, efforts should be  made  to  constantly  evaluate the  system's real-world  impacts  and  make  any necessary  adjustments.  One  important  lesson  that  can  be  drawn  from  structuralinjustice  analysis  is  that,  since  unjust  results  are  formed  through  complicated dynamics between many social factors, new forms of injustice could still occur even if careful examinations were adopted  throughout the AI-development process. Therefore, it is important to treat the process of AI development as circular, in that postdeployment evaluations could potentially promote adjustments in the first three stages. Like many of our recommendations for the other stages, adherence to these recommendations  would  require  effort  from various parties:  lawmakers  and policymakers,  who  could  help  enforce  evaluations  before  and  after  deployment; owners of business corporations, who hold enormous power in shaping the industrial culture  and  distributing  resources;  and  various  developers,  who  are  tasked  with making assessments.
 
 Mobilizing appropriate and required collective action to respond to structural injustice is never easy work. Rooted in structural-injustice analysis, our recommendations aim to provide a core theoretical framework upon which other domain experts can build to develop and realize more detailed mechanisms. With these collective efforts, we can better approach the goal of AI fairness.
@@ -239,6 +332,10 @@ Mobilizing appropriate and required collective action to respond to structural i
 ## 7. Conclusion
 
 The issue of AI bias poses urgent ethical challenges for modern societies and demands that efforts should be poured into pursuing AI fairness. However, to do so effectively, we must clarify what the notions of AI bias and AI fairness should entail. This paper argues that structural injustice provides a fruitful conceptual framework for  analyzing  the  moral  problem  of  AI  bias,  understanding  the  corresponding responsibility, and exploring more holistic responses to AI fairness. Viewed from this perspective,  the  problem  of  AI  bias  is  a  case  of  structural  injustice  resulting  from interactions between AI and many other social factors. Furthermore, the goal of AI fairness  should  be  to  pursue  a  more  just  social  structure,  potentially  with  the development  and  use  of  AI  systems  when  appropriate.  Drawing  on  the  SCM  of responsibility,  we  further  argue  that  all  participating  agents  in  the  unjust  social structure associated with AI bias bear a shared responsibility to join collective action with  the  goal  of  reforming  the  social  structure.  Accordingly,  we  provide  a  list  of practical recommendations for agents in various social positions to contribute to this collective action.
+
+
+<!-- PAGE 25 -->
+
 
 ## Acknowledgements
 
@@ -256,6 +353,10 @@ Earlier versions of this paper were presented at the Feminist, Social Justice, a
 - Chen,  Irene  Y.,  Shalmali  Joshi,  and  Marzyeh  Ghassemi. 2020.  'Treating  Health Disparities with Artificial Intelligence.' Nature Medicine 26,  no.  1  (January): 16 -17. https://doi.org/10.1038/s41591-019-0649-2.
 - Chen,  Irene  Y.,  Emma  Pierson,  Sherri  Rose,  Shalmali  Joshi,  Kadija  Ferryman,  and Marzyeh Ghassemi. 2021. 'Ethical Machine Learning in Healthcare.' Annual
 
+
+<!-- PAGE 26 -->
+
+
 - Review of Biomedical Data Science 4:123 -44. https://doi.org/10.1146/annu rev-biodatasci-092820-114757.
 - Chen, PoHsuan Cameron, Yun Liu, and Lily Peng. 2019. 'How to Develop Machine Learning Models for Healthcare.' Nature Materials 18, no. 5 (May): 410 -14. https://doi.org/10.1038/s41563-019-0345-0.
 - Coeckelbergh, Mark. 2020. 'Artificial Intelligence,  Respon sibility  Attribution,  and  a Relational Justification of Explainability.' Science and Engineering Ethics 26, no. 4 (August): 2051 -68. https://doi.org/10.1007/s11948-019-00146-8.
@@ -270,6 +371,10 @@ Earlier versions of this paper were presented at the Feminist, Social Justice, a
 - Farooq, Faheem, and John J. Strouse. 2018. 'Disparities in Foundation and Federal Support and Development of New Therapeutics for Sickle Cell Disease and Cystic Fibrosis.' Blood 132, Supplement 1 (November 29): 4687. https://doi .org/10.1182/blood-2018-99-115609.
 - Fazelpour, Sina, and Zachary C. Lipton. 2020. 'Algorithmic Fairness from a Non -ideal Perspective.'  In AIES  '20: Proceedings  of  the  AAAI/ACM  Conference  on  AI, Ethics, and Society , 57 -63. New York: Association for Computing Machinery. https://doi.org/10.1145/3375627.3375828.
 
+
+<!-- PAGE 27 -->
+
+
 - FDA  (Food  and  Drug  Administration).  2018.  'FDA  Permits  Marketing  of  Artificial Intelligence-Based Device to Detect Certain DiabetesRelated Eye Problems.' FDA  new  release,  April  11,  2018.  https://www.fda.gov/news-events/pressannouncements/fda-permits-marketing-artificial-intelligence-based-devicedetect-certain-diabetes-related-eye.
 - Fisk,  N.  M.,  and  R.  Atun.  2009.  'Systematic  Analysis  of  Research  Underfunding  in Maternal and Perinatal Health.' BJOG: An International Journal of Obstetrics and Gynaecology 116, no. 3 (February): 347 -56. https://doi.org/10.1111/j .1471-0528.2008.02027.x,
 - Fraser,  Nancy,  and  Axel  Honneth.  2003. Redistribution  or  Recognition?  A  PoliticalPhilosophical Exchange . London: Verso.
@@ -280,6 +385,10 @@ Earlier versions of this paper were presented at the Feminist, Social Justice, a
 - Gulshan, Varun, Lily Peng, Marc Coram, Martin C. Stumpe, Derek Wu, Arunachalam Narayanaswamy,  Subhashini  Venugopalan,  et  al.  2016.  'Development  and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs. ' JAMA: The Journal of the American Medical Association 316, no. 22 (December 13): 2402 -10. https://doi.org/10.1001/jam a.2016.17216.
 - Gunnemyr, Mattias. 2020. 'Why the Social Connection Model Fails: Participation Is Neither Necessary nor Sufficient for Political Responsibility.' Hypatia 35, no. 4 (Fall): 567 -86. https://doi.org/10.1017/hyp.2020.40.
 - Hajian, Sara, and Josep Domingo-Ferrer. 2013. 'A Methodology for Direct and Indirect Discrimination Prevention in Data Mining.' IEEE Transactions on Knowledge
+
+
+<!-- PAGE 28 -->
+
 
 - and Data Engineering 25, no. 7 (July): 1445 -59. https://doi.org/10.1109/tkde .2012.72.
 - Haslanger, Sally.  2000. 'Gender and Race:  (What)  Are  They?  (What) Do  We  Want Them to B e?' Noûs 34, no. 1 (March): 31 -55. https://doi.org/10.1111/00294624.00201.
@@ -295,6 +404,10 @@ Earlier versions of this paper were presented at the Feminist, Social Justice, a
 - Joyce,  Kelly,  Laurel  Smith-Doerr,  Sharla  Alegria,  Susan  Bell,  Taylor  Cruz,  Steve  G. Hoffman, Safiya Umo ja Noble, and Benjamin Shestakofsky. 2021. 'Toward a Sociology  of  Artificial  Intelligence:  A  Call  for  Research  on  Inequalities  and Structural Change.' Socius 7. https://doi.org/10.1177/2378023121999581.
 - Kamiran,  Faisal,  Toon  Calders,  and  Mykola  Pechenizkiy .  2013.  'Techniques  for DiscriminationFree Predictive Models.' In Discrimination and Privacy in the Information Society: Data Mining and Profiling in Large Databases , edited by Bart Custers, Toon Calders, Bart Schermer, and Tal Zarsky, 223 -39. New York: Springer. https://doi.org/10.1007/978-3-642-30487-3\_12.
 
+
+<!-- PAGE 29 -->
+
+
 - Kaushal, Amit, Russ Altman, and Curt Langlotz. 2020. 'Geographic Distribution of US Cohorts Used to Train Deep Learning Algorithms.' JAMA: The Journal of the American  Medical  Association 324,  no.  12  (September  22/29):  1212 -13. https://doi.org/10.1001/jama.2020.12067.
 - Kelly, Christopher J., Alan Karthikesalingam, Mustafa Suleyman, Greg Corrado, and Dominic  King.  2019.  'Key  Challenges  for  Delivering  Clinical  Impact  with Artificial Intelligence.' BMC Medicine 17 (October 29): 195. https://doi.org/10 .1186/s12916-019-1426-2.
 - Köhler, Sebastian, Neil Roughley, and Hanno Sauer. 2017. 'Technologically Blurred Accountability? Technology, Responsibility Gaps and the Robustness of Our Everyday Conceptual Scheme. ' In Moral Agency and the Politics of Responsibility , edited by Cornelia Ulbert, Peter Finkenbusch, Elena Sondermann, and Tobias Debiel, 51 -68. New York: Routledge.
@@ -307,6 +420,10 @@ Earlier versions of this paper were presented at the Feminist, Social Justice, a
 - Lu, Catherine. 2017. Justice and  Reconciliation in World  Politics .  Cambridge: Cambridge University Press.
 - Manuel, Jennifer I. 2018. 'Racial/Ethnic and Gender Disparities in Health Care Use and Access.' Health Services Research 53, no. 3 (June): 1407 -29. https://doi.org /10.1111/1475-6773.12705.
 - Matthias,  Andreas.  2004.  'The  Responsibility  Gap:  Ascribing  Responsibility  for  the Actions of Learning Automata.' Ethics  and Information Technology 6,  no.  3 (September): 175 -83. https://doi.org/10.1007/s10676-004-3422-1.
+
+
+<!-- PAGE 30 -->
+
 
 - McKeown, Maeve. 2016. 'Global Structural Exploitation: Towards an Intersectional Definition.' Global Justice: Theory Practice Rhetoric 9 (2): 155 -77. https://doi.org/10.21248/gjn.9.2.116.
 - ---.  2018.  'Iris  Marion  Young's  'Social  Connection  Model'  of  Responsibility: Clarifying the Meaning of Connection.' Journal of Social Philosophy 49, no. 3 (Fall): 484 -502. https://doi.org/10.1111/josp.12253.
@@ -321,6 +438,10 @@ Earlier versions of this paper were presented at the Feminist, Social Justice, a
 - Rodriguez, Rudolph A., Saunak Sen, Kala Mehta, Sandra Moody-Ayers, Peter Bacchetti, and Ann M. O'Hare. 2007. 'Geography Matters: Relationships among Urban Residential Segregation, Dialysis Facilities, and Patient Outcomes.' Annals of Internal Medicine 146, no. 7 (April 3): 493 -501. https://doi.org/10.7326/00034819-146-7-200704030-00005.
 - RudyHiller, Fernando. 2018. 'The Epistemic Condition for Moral Responsibility.' In The Stanford Encyclopedia of Philosophy , edited by Edward N. Zalta, Fall 2018
 
+
+<!-- PAGE 31 -->
+
+
 - edition. Metaphysics Research Lab, Stanford University. https://plato.stanford .edu/archives/fall2018/entries/moral-responsibility-epistemic/.
 - Schwenkenbecher, Anne. 2021 . 'Structural Injustice and Massively Shared Obligations.' Journal  of  Applied  Philosophy 38,  no.  1  (February):  23 -39. https://doi.org/10.1111/japp.12431.
 - Shankar, Shreya, Yoni Halpern, Eric Breck, James Atwood, Jimbo Wilson, and D. Sculley. 2017.  'No  Classification  without  Representation:  Assessing  Geodiversity Issues in Open  Data  Sets for the Developing  World.' arXiv preprint, arXiv:1711.08536 [stat.ML]. https://doi.org/10.48550/arXiv.1711.08536.
@@ -333,6 +454,10 @@ Earlier versions of this paper were presented at the Feminist, Social Justice, a
 - Wawira Gichoya, Judy, Liam G. McCoy, Leo Anthony Celi, Marzyeh Ghassemi. 2021. 'Equity in Essence: A Call for Operationalising Fairness in Machine Learning for Healthcare.' BMJ Health &amp; Care Informatics 28 (1): e100289. https://doi.org /10.1136/bmjhci-2020-100289.
 - Wong, PakHang, and Judith Simon. 2020. 'Thinking About 'Ethics' in the Ethics of AI.' Idees ,  no.  48 ('Artificial  Intelligence') .  https://revistaidees.cat/en/thinkingabout-ethics-in-the-ethics-of-ai/.
 - Wylie, Alison, and Lynn Hankinson Nelson. 2007. 'Coming to Terms with the Values of Science: Insights From Feminist Science Studies Scholarship.' In Value-Free
+
+
+<!-- PAGE 32 -->
+
 
 Science? Ideals and Illusions , edited by Harold Kincaid, John Dupré, and Alison Wylie, 58 -86. New York: Oxford University Press.
 

@@ -1,10 +1,11 @@
 ---
 source_file: Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.pdf
-conversion_date: 2026-02-03T09:08:20.304022
+conversion_date: 2026-02-03T18:39:39.530068
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -12,6 +13,10 @@ quality_score: 100
 ## Artificial Intelligence Competence Needs for Youth Workers
 
 AI FOR YOUTH WORK Enhancing Youth Work Through AI ai4youthwork.eu
+
+
+<!-- PAGE 2 -->
+
 
 <!-- image -->
 
@@ -63,6 +68,10 @@ Disclaimer :  This project received funding from the European Union's Erasmus+ P
 
 This work is licensed  under  the  Creative  Commons  Attribution-NonCommercial  4.0 International License. You are free to  copy,  share,  adapt  and  use  the  material  for non-commercial  purposes,  as  long  as  you  meet  the  following  conditions:  Attribution:  You must give appropriate credit, provide a link to the licence, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests that the Right to Remain  endorses  you  or  your  use.  NonCommercial:  You  may  not  use  the  material  for commercial purposes.
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 ## Document History
@@ -72,6 +81,10 @@ This work is licensed  under  the  Creative  Commons  Attribution-NonCommercial 
 | V0.1      | 03/05/2024 | ACOMINicoleta,LANZETTAMiriam                                                                                                    | First internal draft. Preliminary outline.                                                                |
 | V0.2      | 23/05/2024 | ABBRUZZESEGianluca, ACOMINicoleta, ACOMIOvidiu, LANZETTAMiriam, MACHADOJorge,MANGIULLOAngela, MARAVELAKISonia, SCHNEIDERBeatryz | Second internal draft. First revision integrating co-authors' contents and feedback from internal review. |
 | V1.0      | 07/06/2024 | LANZETTAMiriam                                                                                                                  | Final version. Final review and editorial corrections.                                                    |
+
+
+<!-- PAGE 4 -->
+
 
 <!-- image -->
 
@@ -116,6 +129,10 @@ This work is licensed  under  the  Creative  Commons  Attribution-NonCommercial 
 | 4.2.4.4. National Focus Group - Portugal                                      |  81 |
 | 4.2.5 Key Conclusions                                                         |  87 |
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 | 5. Conclusions                                                                                                                                | 92   |
@@ -140,6 +157,10 @@ This work is licensed  under  the  Creative  Commons  Attribution-NonCommercial 
 | Figure 10. Focus Group in Romania: Infographic....................................................................................69          |      |
 | Figure 11. Focus Group in Greece: Infographic.......................................................................................76        |      |
 | Figure 12. Focus Group in Portugal: Infographic.....................................................................................81        |      |
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -201,6 +222,10 @@ UNICEF
 
 United Nations Children's Fund
 
+
+<!-- PAGE 7 -->
+
+
 <!-- image -->
 
 ## EXECUTIVE SUMMARY
@@ -214,6 +239,10 @@ This study aims to advance knowledge on the specific competencies required by yo
 - 一 Chapter  3 presents  the  results  of  the  desk  research  conducted  by  the  consortium partners  to  explore  the  intersections  of  artificial  intelligence,  youth  and  youth  work. The  chapter  is  divided  into  four  main  sections,  addressing  an  introduction  to  AI,  the impact  of  AI  on  youth,  the  role  of  youth  workers  in  the  AI  revolution,  and  practical applications of AI in youth work settings.
 - 一 Chapter 4 outlines the needs, challenges, and tasks involved in integrating AI into youth work, presenting the results of focus groups conducted in each partner country.
 - 一 Chapter 5 sets out the publication's conclusions, formulating recommendations for the development  of  an  AI  Competence  Framework  and enhancing the capacity of youth workers to harness AI in their professional work.
+
+
+<!-- PAGE 8 -->
+
 
 <!-- image -->
 
@@ -236,6 +265,10 @@ The  project  aims  to contribute  to  increasing  youth  professionals'  capaci
 - Identify  the  competencies  youth work professionals need to  integrate  AI  into  their work.
 - Equip youth work  professionals with  training  and  learning  resources  to  adopt trustworthy AI solutions and foster young people's AI literacy.
 - Increase the awareness of youth work professionals and young people on the benefits and limitations of adopting artificial intelligence.
+
+
+<!-- PAGE 9 -->
+
 
 <!-- image -->
 
@@ -269,6 +302,10 @@ Learn more: www.ai4youthwork.eu
 
 3
 
+
+<!-- PAGE 10 -->
+
+
 <!-- image -->
 
 ## 2. RESEARCH METHODOLOGY
@@ -297,6 +334,10 @@ The research was conducted through a systematic review, focus groups, and interv
 
 The  first  component  of  the  research  methodology  involved  a  systematic review  of  existing competence frameworks and relevant literature. A search strategy was designed by expanding the  research questions (RQs) and identifying relevant keywords and search strings. Synonyms
 
+
+<!-- PAGE 11 -->
+
+
 <!-- image -->
 
 and alternative spellings were also considered to maximise the retrieval of relevant publications and articles.
@@ -312,6 +353,10 @@ The  collected  documents  were systematically reviewed to extract relevant info
 ## 2.2.2 Focus Groups
 
 The second research component involved conducting focus groups with  youth  work professionals to  gather  qualitative  data  on their needs, challenges, and perspectives regarding AI integration into their work.
+
+
+<!-- PAGE 12 -->
+
 
 <!-- image -->
 
@@ -333,6 +378,10 @@ Interviews  were  transcribed, and content analysis was performed to extract rel
 
 This study presents potential limitations:
 
+
+<!-- PAGE 13 -->
+
+
 <!-- image -->
 
 - The systematic review was limited to articles published from 2019 onwards, potentially excluding relevant earlier works that could have provided additional insights.
@@ -342,6 +391,10 @@ This study presents potential limitations:
 - AI  is  a  rapidly  evolving  field,  and  the  findings  from  this  research may quickly become outdated as new technologies and applications emerge.
 
 Further  research  with  a  broader  scope,  larger  sample  sizes  and  continuous  updates  are necessary to keep the competence needs analysis relevant and comprehensive.
+
+
+<!-- PAGE 14 -->
+
 
 <!-- image -->
 
@@ -358,6 +411,10 @@ Section 3.3, " The Role of Youth Workers in the AI Revolution , " highlights you
 The final  section,  " AI  for  Youth  Work:  Use  Cases ",  provides  practical  examples  of  how  AI  can be integrated into youth work settings to augment youth workers' competencies.
 
 In  summary,  Chapter  3  explores  AI's  potential  in  youth  work,  highlighting  opportunities  and challenges.  It  stresses  the  importance  of  equipping  young  people  and  youth  workers  with  the necessary skills and knowledge to harness AI's benefits while addressing its risks.
+
+
+<!-- PAGE 15 -->
+
 
 <!-- image -->
 
@@ -381,6 +438,10 @@ Disciplines . Retrieved from:
 
 https://digital-strategy.ec.europa.eu/en/library/definition-artificial-intelligence-main-capabilities-and-scie ntific-disciplines
 
+
+<!-- PAGE 16 -->
+
+
 <!-- image -->
 
 The Expert Group, expanding the definition of AI in the Commission Communication on AI 3 , has clarified  aspects  of  AI  as  a  scientific  discipline  and technology. It depicts AI systems as rational systems because  they  can  choose  the best action to pursue an objective based on the available resources.
@@ -399,6 +460,10 @@ In  the perception phase,  data  input  systems  -  or sensors  collect  informa
 
 3 European  Commission  (2018). Communication  from  the  Commission  to  the  European  Parliament,  the European Council, the Council, the European Economic and Social Committee and the Committee of the Regions on Artificial Intelligence for Europe . Brussels, COM(2018) 237 final.
 
+
+<!-- PAGE 17 -->
+
+
 <!-- image -->
 
 During the reasoning and decision-making phase , the system transforms the collected data into an  understandable  format  and  represents  it  to  produce  a  numerical  model. It  then  uses  this model to interpret the information and decide on the best action to achieve its goals.
@@ -415,6 +480,10 @@ Machine reasoning and machine learning are the key techniques upon which the dec
 The most widely used approaches to machine learning are reinforcement learning, unsupervised learning, and supervised learning. Each of these learning paradigms has distinct mechanisms and applications.
 
 In reinforcement learning ,  the system is free to make decisions over time and receives feedback as rewards or penalties to indicate whether its actions were effective. The system learns to make better decisions by maximising the cumulative rewards for its actions.
+
+
+<!-- PAGE 18 -->
+
 
 <!-- image -->
 
@@ -442,6 +511,10 @@ The system is trained with a series of emails labelled as "spam" or "not  spam."
 
 Some machine learning approaches use algorithms based on Artificial Neural Networks (ANN), which  are  inspired  by  the  neural  networks  of  the  biological  brain.  These  networks  consist  of units  (artificial  neurons)  organised  in  layers  that  learn  the  relationships  between  input  and output  through  weighted  connections.  In  a  neural  network,  the  input  data  (e.g.,  an  image)  is processed to produce an output (e.g., identifying what the image is about). During the training phase, the network adjusts the weights of these connections to minimise the error between the expected output and its actual output based on the provided examples.
 
+
+<!-- PAGE 19 -->
+
+
 <!-- image -->
 
 ## Example:  Handwriting Recognition
@@ -460,6 +533,10 @@ A  deep  learning  model  can  be  trained  to  recognise  objects  in photograp
 
 Generative AI (GenAI) is a prime example of deep learning in action .  GenAI uses deep neural networks to generate new content, such as text, images, music, and more, based on the data it has been trained on. Thanks to the democratisation of GenAI, these advanced technologies have become more accessible to the public, increasing awareness of AI's capabilities. GenAI models,
 
+
+<!-- PAGE 20 -->
+
+
 <!-- image -->
 
 such as Open AI's Generative Pre-trained Transformer (GPT) foundation models, illustrate some of the powerful applications of deep learning.
@@ -473,6 +550,10 @@ The following image provides a visual representation of the hierarchical relatio
 Figure 2. Hierarchical representation of AI systems
 
 <!-- image -->
+
+
+<!-- PAGE 21 -->
+
 
 <!-- image -->
 
@@ -489,6 +570,10 @@ Figure 3. Youth Interaction, Perception and Understanding of AI
 4 Hogenhout  L.,  Takahashi  T.  (2022). A  Future  with  AI  -  Voices  of  Global  Youth .  United  Nations  Office  of Information and Communications Technology. Retrieved from:
 
 https://unite.un.org/news/future-ai-voices-global-youth-report-launched
+
+
+<!-- PAGE 22 -->
+
 
 <!-- image -->
 
@@ -508,6 +593,10 @@ Figure 4. Active users of Generative AI by Age Group
 
 5 Gregoire, C. (2024, February 5). Increased uptake of generative AI technology brings excitement and highlights the importance of family conversations about online safety, says new research from Microsoft . Microsoft On the Issues. https://blogs.microsoft.com/on-the-issues/2024/02/05/generative-ai-online-safety-day-global-survey/
 
+
+<!-- PAGE 23 -->
+
+
 <!-- image -->
 
 How do they use AI? Teens and young adults (together, Generation Z or Gen Z ) and Millennials are excited  about  using  Generative  AI  for  work  or  school  and  entertainment.  The  excitement  is particularly  pronounced  in  scenarios  where  AI  can  assist  in  practical,  everyday  tasks,  like translation, increasing efficiency at  work  (applicable  to  &gt;  18-year-olds  only),  answering questions and asking for information, assisting with homework and school projects, entertainment, and image or video generation. The following figure presents the most exciting AI applications for the different age groups identified in Microsoft's Global survey.
@@ -515,6 +604,10 @@ How do they use AI? Teens and young adults (together, Generation Z or Gen Z ) an
 Figure 5. The Most Exciting AI ApplicationsI by Age Group
 
 <!-- image -->
+
+
+<!-- PAGE 24 -->
+
 
 <!-- image -->
 
@@ -532,6 +625,10 @@ Although the study did not provide a detailed age breakdown, it found that male 
 
 Cultural differences also played a role in the responses toward generative AI. Participants from collectivist  countries  showed  more  positive  attitudes  towards  AI  compared  to  those  from
 
+
+<!-- PAGE 25 -->
+
+
 <!-- image -->
 
 individualistic countries 6 .  For instance, 45% of respondents from collectivist countries (e.g., e.g., Spain,  Brazil,  Colombia,  India,  Mexico,  Singapore,  and  South  Korea)  had  used  generative  AI, compared to 34% from individualist countries (e.g., Australia, Canada, Czech Republic, Denmark, France, Germany, Italy, South Africa, United Kingdom, and USA).. Additionally, more individuals from collectivist  cultures  reported  using  AI  weekly  or  more  frequently  (36%  versus  32%) and expressed higher levels of excitement about AI applications (35%, which is 10 percentage points more than their individualist counterparts).
@@ -541,6 +638,10 @@ Figure 7. Cultural Differences in AI Usage and Perception
 <!-- image -->
 
 6 The classification of the country's culture is based on the 6-D model of National Culture by Professor Geert Hofstede.  Hofstede's  Model  consists  of  six  dimensions: Power Distance, Individualism, Motivation towards Achievement and Success,  Uncertainty,  Avoidance,  Long  Term Orientation, Indulgence .  For more information: https://www.hofstede-insights.com/intercultural-management. The website, owned by The Culture Factor Group, also offers a country scoring tool: https://www.hofstede-insights.com/country-comparison-tool.
+
+
+<!-- PAGE 26 -->
+
 
 <!-- image -->
 
@@ -561,6 +662,10 @@ AI  has  the  potential  to  significantly  benefit education by transforming tr
 The Commission's guidelines provide four use cases, which are presented in the following table.
 
 7 European  Commission,  Directorate-General  for  Education,  Youth,  Sport  and  Culture  (2022). Ethical guidelines  on  the use of artificial intelligence (AI) and data in teaching and learning for educators .  Publications Office of the European Union. https://data.europa.eu/doi/10.2766/153756
+
+
+<!-- PAGE 27 -->
+
 
 <!-- image -->
 
@@ -598,6 +703,10 @@ System-wide AI applications support diagnostic and system-wide planning. Educati
 
 Table 1. AI in Education: Categories and Use Cases
 
+
+<!-- PAGE 28 -->
+
+
 <!-- image -->
 
 These  use  cases  provide  some  insight  into  how  AI  systems  are  being  used  by  educators  and learners to support the teaching, learning, and assessment process. However, as addressed by the  panellists  in  the  'Education  Meets  AI'  session  during  the  World  Economic  Forum's  2024 Annual Meeting in Switzerland 8 , educators also face two significant challenges :
@@ -617,6 +726,10 @@ The foundation of special education lies in adopting a tailored and individualis
 
 https://www.researchgate.net/publication/377590496\_Impact\_of\_AI\_on\_the\_inclusion\_of\_Learners\_with\_ Special\_needs\_Public\_Policy\_Perspective\_in\_Contemporary\_Scenario
 
+
+<!-- PAGE 29 -->
+
+
 <!-- image -->
 
 AI  technologies also help overcome communication barriers that often impede the educational progress  of  learners  with  special  needs.  Advanced  AI  features  like  voice  recognition,  and text-to-speech technologies enable learners with speech or physical limitations to communicate more effectively. A study by the World Economic Forum 10 ,  conducted between 2007 and 2020, revealed  that technology-supported  personalised  learning  significantly  improves  learning outcomes. While technology hasn't fully matched the benefits of one-on-one tutoring, recent AI advancements can analyse large data sets, offering personalised learning content, experiences, and real-time feedback similar to a private tutor.
@@ -628,6 +741,10 @@ Furthermore, AI can present materials in various formats to meet different visua
 Digital learning, when designed with accessibility features like text-to-speech, closed captioning, alternative  text  descriptions,  and  customisable  display  settings,  can  support  learners  with diverse  access  needs  and  learning  preferences.  The  integration  of  accessible  digital  learning tools in classrooms also enables teachers to adopt more inclusive practices.
 
 10  World Economic Forum (2024). Shaping the Future of Learning: The Role of AI in Education 4.0. https://www.weforum.org/agenda/2024/05/ways-ai-can-benefit-education/
+
+
+<!-- PAGE 30 -->
+
 
 <!-- image -->
 
@@ -642,6 +759,10 @@ Research  by  Mishra  et  al. 12 shows  how  AI  can  influence  human  behaviou
 11  UNICEF (2023). Accessible Digital Textbooks: Creating Digital Tools to Enable Inclusive Education . https://www.unicef.org/innocenti/media/2641/file/UNICEF-Accessible-Digital-Textbooks-Jamaica-2023.
 
 12 Mishra M. K., Pattanayak M., Shankar U., Murthy G. V. K &amp; Singh S. (2023). Impact of Artificial Intelligence on Human Behaviour &amp; Well-Being-an Empirical Analysis . 44. 1001-4055. Retrieved from: https://www.researchgate.net/publication/374294070\_Impact\_of\_Artificial\_Intelligence\_on\_Human\_Beh aviour\_Well-Being-an\_Empirical\_Analysis p
+
+
+<!-- PAGE 31 -->
+
 
 Table 2. AI's Influences on Human Behavior
 
@@ -658,6 +779,10 @@ Table 2. AI's Influences on Human Behavior
 | Diversity &Inclusion    | AI algorithms can inadvertently perpetuate existing biases in training data, leading to discriminatory outcomes that influence the behaviour and opportunities of certain demographic groups. On the other hand, AI technologies such as voice recognition and natural language processing can enhance accessibility for people with disabilities.                                                                                                                                                                                    |
 | Information             | AIR's ability to produce deep fake content and manipulate information raises significant ethical concerns, impacting trust in digital media and raising questions about content authenticity.                                                                                                                                                                                                                                                                                                                                         |
 
+
+<!-- PAGE 32 -->
+
+
 <!-- image -->
 
 The  table  summarises  the  diverse  influences  of  AI  across  various  fields,  highlighting  how  AI technologies shape behaviour, decisions and interactions in multiple aspects of daily life. Users of AI  systems  are  becoming  aware  of  these  influences.  According  to  Microsoft's  2024  Global Online  Safety  Survey  -  introduced  at  the  beginning  of  this  chapter  -out  of  more  than  16,700 participants in the study, a substantial 87% of respondents worry about at least one scenario of generative AI use. Specifically,  71% are very or somewhat worried about AI-generated scams, 69%  about  deep  fakes  and  sexual  or  online  abuse,  and  66%  about  AI  hallucinations.  Other concerns  include  data  privacy  (62%),  the  amplification  of  biases  (60%),  and  the  creation  of relationships with AI (56%).
@@ -671,6 +796,10 @@ Conversely, AI development demands specialised knowledge and skills, intersectin
 13 OECD  (2023). OECD  Employment  Outlook  2023:  Artificial  Intelligence  and  the  Labour  Market .  OECD Publishing, Paris, https://doi.org/10.1787/08785bba-en. 5.
 
 14 Lane M., Williams M. &amp; Broecke S. (2023). The impact of AI on the workplace: Main findings from the OECD AI  surveys  of  employers  and  workers .  OECD  Social,  Employment  and Migration Working Papers, No. 288, OECD Publishing, Paris. https://doi.org/10.1787/ea0a0fe1-en.
+
+
+<!-- PAGE 33 -->
+
 
 <!-- image -->
 
@@ -688,6 +817,10 @@ In  the  EU,  the  latest  Eurostat  data 16 shows  that  8% of enterprises with
 
 16 Eurostat (2024). Use of artificial intelligence in enterprises . Statistics Explained. Retrieved from: https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use\_of\_artificial\_intelligence\_in\_enterp rises. Accessed on 25 May 2024.
 
+
+<!-- PAGE 34 -->
+
+
 <!-- image -->
 
 spoken language into machine-readable format (speech recognition; 2.5%), identifying objects or persons  based  on  images  (image  recognition,  image  processing;  2.2%),  generating  written or spoken  language  (natural  language  generation;  2.1%),  and  enabling  physical  movement  of machines via autonomous decisions based on observation of surroundings (autonomous robots, self-driving vehicles, and autonomous drones; 0.9%).
@@ -695,6 +828,10 @@ spoken language into machine-readable format (speech recognition; 2.5%), identif
 The  highest  shares  of  enterprises  using  AI  technologies  were  in  Denmark  (15.2%),  Finland (15.1%),  and  Luxembourg  (14.4%), while the lowest shares were recorded in Romania (1.5%), Bulgaria (3.6%), and Poland and Hungary (both 3.7%).
 
 Although currently only 8% of companies in the EU are using AI technology, it is expected that this percentage will increase, as will the demand for AI competencies among young people.
+
+
+<!-- PAGE 35 -->
+
 
 <!-- image -->
 
@@ -709,6 +846,10 @@ Currently, AI can serve different objectives depending  on its  application.  Re
 Furthermore, youth workers expressed a sense of injustice accompanied by AI's unpredictability. They noted that professionals often lack control over the data  collected  by  different technologies, which can significantly influence young people's choices, beliefs, and self-development.  This  unpredictability  raises  ethical  concerns  about  privacy,  consent,  and manipulating young minds. Youth workers stressed the importance of maintaining transparency and ethical standards in using AI to protect young people's interests and rights.
 
 17 Pawluczuk A. (2023). Automating Youth Work: Youth Workers Views on AI' . Research commissioned by the European Union-Council of Europe Youth Partnership. Retrieved from: https://pjp-eu.coe.int/documents/42128013/116591216/AI\_views+of+youth+workers.pdf/93ac326a-cf8 0-3fa4-c4e5-56ee4038a766?t=1682336763487
+
+
+<!-- PAGE 36 -->
+
 
 <!-- image -->
 
@@ -725,6 +866,10 @@ International Conference on Information and Communication Technology (ICT) and P
 China.  https://unesdoc.unesco.org/ark:/48223/pf0000233352
 
 19 UNESCO (2019). Beijing Consensus on Artificial Intelligence and Education . https://unesdoc.unesco.org/ark:/48223/pf0000372249.
+
+
+<!-- PAGE 37 -->
+
 
 <!-- image -->
 
@@ -746,6 +891,10 @@ https://www.weforum.org/agenda/2023/05/ai-accelerate-learners-holistic-developme
 
 22 Hasse A., Cortesi S., Lombana-Bermudez A. &amp; Gasser U. (2019) Youth and Artificial Intelligence: Where We Stand. Berkman Klein Center Research Publication No. 2019-3, Available at SSRN: https://ssrn.com/abstract=3385718 or http://dx.doi.org/10.2139/ssrn.3385718
 
+
+<!-- PAGE 38 -->
+
+
 <!-- image -->
 
 need  to  manage digital youth work while protecting young people from potential side effects such  as  privacy  violations,  teaching  the  balance  between  using  AI  for  effective  learning,  and ensuring  that  young  people  develop  critical  thinking  and  creativity.  This  learning,  however, presents  significant  challenges  and  risks,  such  as  the  need  for  more  effective  and  continuous support, strategic regulation or updated digital security monitoring, and clear guidelines. With each passing day, those involved in education need more training and knowledge.
@@ -758,11 +907,19 @@ Advocating for positive artificial intelligence policies and practices is also c
 
 23 ⁶ UNESCO (2022). Recommendation on the Ethics of Artificial Intelligence . SHS/BIO/PI/2021/1.
 
+
+<!-- PAGE 39 -->
+
+
 <!-- image -->
 
 professionals must engage with policymakers to  ensure  that  AI-related  regulations  are appropriate  and  protect  the  rights  of  young  people.  This  engagement  can  include  active participation in debates, presenting research, and collaborating in the creation of guidelines that consider the specific needs of this age group. Young people can also be supported in mobilising through  bodies  and  representatives  of  international  organisations  to  debate  a  beneficial technology-related  agenda  for  youth  and  in  monitoring  and  evaluating  the  impact  of  any  AI strategy.
 
 In  conclusion,  regarding  the  construction  and  sharing of knowledge in the field, youth workers can  create  networks  and  communities  to  maximise  the  impact  of  technology.  Among  the activities  that  can  be  implemented  are  the  organisation  of  conferences  and  workshops  on  AI, training  opportunities,  updates,  and  networking  among young professionals and AI experts to disseminate new ideas and approaches, promoting a deeper and more applicable understanding of emerging technologies and their application in youth work. According to the World Economic Forum,  ''by  building  capacity,  we  can  ensure  that  leaders  develop  the  expertise  to  serve  their communities and that all staff are equipped to use AI responsibly and effectively throughout the education system'' 20 . Also, collaboration with researchers, programmers, and other stakeholders is  essential  to  promoting  young  people's  positive  use  of  AI.  These  partnerships  result  in  the development of new tools and resources that specifically cater to the needs of young people.
+
+
+<!-- PAGE 40 -->
+
 
 <!-- image -->
 
@@ -791,6 +948,10 @@ Disclaimer : Any tools mentioned in this section are provided for informational 
 - Assessing and evaluating
 - Being civically engaged
 
+
+<!-- PAGE 41 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -806,6 +967,10 @@ Disclaimer : Any tools mentioned in this section are provided for informational 
 | Pitch                | Pitch Software GmbH | An AI-driven presentation tool that aids in creating professional presentations facilitating the design and delivery of educational materials.                                                                                                                                                              |
 | Quizlet              | Quizlet             | Quizlet offers diverse study modes, activities, and AI-based learning tools, making the review of any topic interactive and effective. It includes features like flashcard sets, diagram sets, learning modes, and expert solutions, all designed to cater to different learning styles.                    |
 | Synthesia            | Synthesia           | Uses AI to create realistic video content with virtual avatars, making educational materials more engaging for learners.                                                                                                                                                                                    |
+
+
+<!-- PAGE 42 -->
+
 
 <!-- image -->
 
@@ -827,6 +992,10 @@ Disclaimer : Any tools mentioned in this section are provided for informational 
 |---------|------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Asana   | Asana      | Asana is a work management platform which integrates AI for smart status updates (e.g., automated real-time data pulls to identify risks and roadblocks), smart goals and summaries, auto-generation of charts and custom fields to organise projects, and an AI-Powered Chat to assists in task management, answering questions and providing in-product support. |
 | Trello  | Atlassian  | Trello is a project management tool that uses AI to enhance productivity by automating tasks, setting reminders, and organising resources. It can help youth workers manage their projects and resources efficiently.                                                                                                                                              |
+
+
+<!-- PAGE 43 -->
+
 
 <!-- image -->
 
@@ -854,6 +1023,10 @@ Disclaimer : Any tools mentioned in this section are provided for informational 
 | Grammarly | Grammarly Inc. | Grammarly uses AI to improve written communication by providing suggestions for improving grammar and style. It can support youth workers in enhancing the clarity and correctness of their written interactions. |
 | Otter.ai  | Otter.ai       | Otter.ai provides AI-driven transcription services, converting spoken language into written text. It aids in documenting                                                                                          |
 
+
+<!-- PAGE 44 -->
+
+
 <!-- image -->
 
 |                  |          | meetings, creating accessible content, and enhancing communication.                                                                                                                                                                                                                                                                                                                             |
@@ -878,6 +1051,10 @@ Disclaimer : Any tools mentioned in this section are provided for informational 
 |-----------|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | LinkedIn  | LinkedIn Corporation | LinkedIn uses AI to suggest connections, recommend content, and highlight networking opportunities. It can support youth workers in building professional networks and advocating for their causes. |
 | Hootsuite | Hootsuite            | Hootsuite leverages AI to manage social media accounts, schedule posts, and analyse engagement, thus potentially helping youth workers advocate effectively on social platforms.                    |
+
+
+<!-- PAGE 45 -->
+
 
 <!-- image -->
 
@@ -907,6 +1084,10 @@ Buffer
 
 Buffer  is  an  AI-driven  social  media  management  tool  that assists  in  planning,  scheduling,  and  analysing  social  media campaigns, enhancing advocacy efforts.
 
+
+<!-- PAGE 46 -->
+
+
 <!-- image -->
 
 ## 4. AI COMPETENCE NEEDS FOR YOUTH WORKERS
@@ -916,6 +1097,10 @@ The previous chapter has addressed the multifaceted relations between artificial
 In  this  context,  Chapter  4  delves  into  the specific  AI  competence  needs.  It  begins  by reviewing  existing  competence  frameworks and research that can serve as a foundation for  developing  AI-related  skills,  followed  by insights  and  findings  from focus groups with youth  work  professionals, shedding light on their  experiences and challenges in adapting to AI. Ultimately, the chapter aims to provide insights  to  inform  the  development  of  an AI competence  framework  tailored  for  youth workers,  which  is  aimed  at  equipping  them with the  necessary  skills to thrive in  an increasingly AI-driven environment.
 
 <!-- image -->
+
+
+<!-- PAGE 47 -->
+
 
 <!-- image -->
 
@@ -942,6 +1127,10 @@ The following table provides a summary of the competences specified within each 
 
 25 Vuorikari, R., Kluzer, S. and Punie, Y. (2022). DigComp 2.2: The Digital Competence Framework for Citizens . EUR 31006 EN, Publications Office of the European Union, Luxembourg, 2022, ISBN 978-92-76-48882-8, doi:10.2760/115376, JRC128415.
 
+
+<!-- PAGE 48 -->
+
+
 Table 3. DigComp 2.2: Competences Overview
 
 <!-- image -->
@@ -966,6 +1155,10 @@ To articulate information needs , to search  for data, information  and  content
 ## Knowledge
 
 - Aware  that  search  engines,  social  media  and  content  platforms  often  use  AI algorithms  to  generate  responses  that  are  adapted  to  the  individual  user  (e.g. users  continue  to  see  similar  results  or  content).  This  is  often  referred  to  as
+
+
+<!-- PAGE 49 -->
+
 
 <!-- image -->
 
@@ -996,6 +1189,10 @@ To  analyse,  compare  and  critically  evaluate  the  credibility  and  reliabi
 - Aware  that AI algorithms might not be  configured  to  provide  only  the information  that  the  user  wants;  they  might  also  embody  a  commercial  or political  message  (e.g.  to  encourage  users  to  stay  on  the  site,  to  watch  or  buy something  particular,  to  share  specific  opinions).  This  can  also  have  negative consequences (e.g. reproducing stereotypes, sharing misinformation).
 - Aware that the data, on which AI depends, may include biases. If so, these biases can  become  automated  and  worsened  by  the  use  of  AI.  For  example,  search results about occupation may include stereotypes about male or female jobs (e.g. male bus drivers, female salesperson).
 - Able to recognise that some AI algorithms may reinforce existing views in digital environments  by  creating  'echo  chambers'  or  'filter  bubbles'  (e.g.  if  a  social media stream favours a particular political ideology, additional recommendations can reinforce that ideology without exposing it to opposing arguments).
+
+
+<!-- PAGE 50 -->
+
 
 <!-- image -->
 
@@ -1028,6 +1225,10 @@ To share data, information and digital content with others through appropriate d
 ## Knowledge
 
 - Aware  that  everything  that  one  shares  publicly  online  (e.g.  images,  videos, sounds)  can  be  used  to  train  AI  systems.  For  example,  commercial  software companies who develop AI facial recognition systems can use personal images shared  online  (e.g.  family  photographs)  to  train  and  improve  the  software's capability to automatically recognise those persons in other images, which might not be desirable (e.g. might be a breach of privacy).
+
+
+<!-- PAGE 51 -->
+
 
 <!-- image -->
 
@@ -1062,6 +1263,10 @@ To create, and manage one or multiple digital identities, to be able to protect 
 
 - Knows  how  to  modify  user  configurations  (e.g.  in  apps,  software,  digital platforms) to enable, prevent or moderate the AI system tracking, collecting or analysing data (e.g. not allowing the mobile phone to track the user's location).
 - Identifies  both  the  positive  and  negative  implications  of  the  use  of  all  data (collection, encoding and processing), but especially personal data, by AI driven
+
+
+<!-- PAGE 52 -->
+
 
 <!-- image -->
 
@@ -1107,6 +1312,10 @@ To protect personal data and privacy in digital environments. To understand how 
 
 - Weights the benefits and risks before allowing third parties to process personal data (e.g. recognizes that a voice assistant on a smartphone, that is used to give commands  to  a  robot  vacuum  cleaner,  could  give  third  parties  -  companies, governments, cybercriminals - access to the data).
 
+
+<!-- PAGE 53 -->
+
+
 <!-- image -->
 
 ## 4.4 Protecting the environment
@@ -1143,6 +1352,10 @@ To  assess  needs  and  to  identify,  evaluate,  select  and  use  digital  too
 - Aware  that  AI-driven  speech-based  technology  enables  the  use  of  spoken commands that can enhance the accessibility of digital tools and devices (e.g. for  those  with  mobility  or  visual  limitations,  limited  cognition,  language  or learning  difficulties),  however,  languages  spoken  by  smaller  populations  are often not available, or perform worse, due to commercial prioritisation.
 - Knows  how  and  when  to  use  machine  translation  solutions  (e.g.  Google Translate, DeepL) and simultaneous interpretation apps (e.g. iTranslate) to get a  rough  understanding of a document or conversation. However, also knows that  when  the  content  requires  an  accurate  translation  (e.g.  in  healthcare, commerce or diplomacy), a more precise translation may be needed.
 
+
+<!-- PAGE 54 -->
+
+
 <!-- image -->
 
 ## 5.3 Creatively using digital technology
@@ -1172,6 +1385,10 @@ Digital  Promise,  a  global  nonprofit  working  to  expand  opportunity  for  
 
 26 Mills K., Ruiz P ., Lee K., Coenraad M., Fusco J., Roschelle J., Weisgrau J. (2024). AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology . Digital Promise. DOI: https://doi.org/10.51388/20.500.12265/218
 
+
+<!-- PAGE 55 -->
+
+
 <!-- image -->
 
 2. Evaluating AI: Centering human judgment and justice to critically consider the benefits and/or costs of AI to individuals, society, and the environment. This mode encourages users to evaluate AI tools from four key perspectives: transparency, safety, ethics, and impact. These components prompt users to question the data and methods used in AI systems, the security and privacy of data, the societal biases reproduced by datasets, and the credibility and biases of AI outputs. This evaluation is pivotal in ensuring that AI usage is not only technically proficient but also ethically sound and socially responsible.
@@ -1190,6 +1407,10 @@ The  mapping  relevaled  AI  curriculum  content  is  structured  into  three  m
 
 28 UNESCO  (2022). K-12  AI  curricula:  a  mapping  of  government-endorsed  AI  curricula .   UNESDOC Digital Library. https://unesdoc.unesco.org/ark:/48223/pf0000380602.locale=en
 
+
+<!-- PAGE 56 -->
+
+
 <!-- image -->
 
 1. AI  Foundations:  This  category  includes  fundamental technical skills necessary for AI engagement  such  as  algorithms  and  programming,  data  literacy,  and  contextual problem-solving. These areas form the technical backbone of AI education, emphasising the  skills  needed  to  manipulate  and  understand  data  and  the  basic  programming required to interact with AI systems.
@@ -1207,6 +1428,10 @@ The European Framework for the Digital Competence of Educators (DigCompEdu), dev
 
 29 Redecker C. (2017). European Framework for the Digital Competence of Educators: DigCompEdu .  Punie, Y. (ed). EUR 28775 EN. Publications Office of the European Union, Luxembourg. ISBN 978-92-79-73494-6, doi:10.2760/159770, JRC107466
 
+
+<!-- PAGE 57 -->
+
+
 <!-- image -->
 
 3. Teaching and Learning - Managing and orchestrating the use of digital technologies in teaching and learning.
@@ -1222,6 +1447,10 @@ Figure 8. DigCompEdu Overview - © European Union 2017
 
 While the DigCompEdu  framework  primarily  addresses  digital  technologies  broadly,  its principles are transferable to the context of artificial intelligence. To support its application in AI, the  ' AI  Pioneers' initiative,  an  Erasmus+  Forward  Looking  project  involving  an  international,
 
+
+<!-- PAGE 58 -->
+
+
 <!-- image -->
 
 multidisciplinary consortium 30 ,  has developed a 'Supplement to the DigCompEdu Framework' 31 , integrating  critical  competencies  relating  to  AI  in  education.  A  summary  of  the  integrations proposed by the consortium is presented in the following table.
@@ -1229,6 +1458,10 @@ multidisciplinary consortium 30 ,  has developed a 'Supplement to the DigCompEdu
 30 Project full title: AI and the future of Education . Call for proposal: ERASMUS-EDU-2022-PI-FORWARD-LOT1. Project ID: 101087261 . More information at https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/projects-details/43 353764/101087261/ERASMUS2027.
 
 31 Bekiaridis  G.,  Attwell  G.  (2024).  Supplement  to  the  DigCompEDU  Framework.  Retrieved  from: https://aipioneers.org/supplement-to-the-digcompedu-framework/
+
+
+<!-- PAGE 59 -->
+
 
 Table 4. DigCompEdu Integration by the AI Pioneers Consortium
 
@@ -1242,6 +1475,10 @@ Table 4. DigCompEdu Integration by the AI Pioneers Consortium
 | 4. Assessment                                | AI competencies in the assessment domain focus on utilising AI tools for efficient and effective evaluation of students. This includes the deployment of automated grading systems and AI-driven analytics that assess student progress. Additionally, AI is used to provide personalised feedback and support, thereby streamlining the assessment process and enhancing its accuracy.                                                                                                                                                                                                                                                                       |
 | 5. Empowering Learners                       | In this area, AI competencies are aimed at addressing diverse learning needs and styles to promote inclusivity and accessibility. Educators are equipped to use AI to support special educational needs, facilitate self-regulated learning, and encourage students to critically consider the impact of AI. This competency ensures that all learners can benefit from tailored educational experiences that AI tools offer.                                                                                                                                                                                                                                 |
 | 6. Facilitating Learners' Digital Competence | AI competencies here are essential for educators to help students develop their digital competencies. This involves instructing students about AI concepts, ethical AI usage, data literacy, and the broader role of AI in society. Educators also guide students in critically assessing AI-generated information, fostering an understanding of AI's limitations and potential biases.                                                                                                                                                                                                                                                                      |
+
+
+<!-- PAGE 60 -->
+
 
 <!-- image -->
 
@@ -1266,6 +1503,10 @@ Although this framework is specifically addressed to school teachers, its princi
 
 32  https://www.unesco.org/en/digital-education/ai-future-learning/competency-frameworks
 
+
+<!-- PAGE 61 -->
+
+
 <!-- image -->
 
 ## 4.1.6 AI and Digital Transformation Competency Framework for Civil Servants
@@ -1279,6 +1520,10 @@ The framework offers three competency domains:
 3. Digital Management and Execution: It involves applying management and collaboration tools  to  address  complex  challenges  and  foster  new  modalities for civic participation. This  domain  also  emphasises  the  development  of  a  conducive  digital  culture  that supports collaboration, innovation, and effective leadership in digital projects. Competences included are people-centricity, iteration, agile execution and digital leadership .
 
 33 Balbo  Di  Vinadio  T.,  van  Noordt  C.  Vargas  Alvarez  del  Castillo  C.  and  Avila  R.  (2022).  Artificial Intelligence and Digital Transformation Competencies for Civil Servants. Retrieved at https://www.broadbandcommission.org/wp-content/uploads/2022/09/Artificial-Intelligence-and-DigitalTransformation-Competencies-for-Civil-Servants.pdf
+
+
+<!-- PAGE 62 -->
+
 
 <!-- image -->
 
@@ -1302,6 +1547,10 @@ The focus groups followed a semi-structured format based on a common guideline d
 
 34 Krueger, R. A., &amp; Casey, M. A. (2014). Focus groups: A practical guide for applied research (5th ed.). SAGE Publications.
 
+
+<!-- PAGE 63 -->
+
+
 <!-- image -->
 
 - The definition and understanding of AI;
@@ -1318,6 +1567,10 @@ The focus groups were conducted online, through video-conferencing platforms, an
 
 Each  partner  summarised  and  analysed  the  results  from  each  focus  group,  using  a  common template to report the main findings and conclusions.
 
+
+<!-- PAGE 64 -->
+
+
 <!-- image -->
 
 ## 4.2.4 Activity execution
@@ -1331,6 +1584,10 @@ Where: Online, Google Meet
 Figure 9. Focus Group in Italy: Infographic
 
 <!-- image -->
+
+
+<!-- PAGE 65 -->
+
 
 <!-- image -->
 
@@ -1351,6 +1608,10 @@ Participants indicated the following tools as most relevant in use:
 - Microsoft  Translator :  AI  can  automatically  detect  the  language  of  the  speaker, considering  the broader context of sentences and paragraphs. This helps provide translations  that  make  sense  in  context  rather  than  translating  word-for-word. Real-time  translation  ensures  that  language  barriers  do  not  hinder  participation, promoting cultural exchanges and fostering an inclusive environment.
 - Padlet : it  is  a  tool  for  collaboration  and  information  sharing.  AI  can  analyse  the content added to a Padlet and automatically tag or categorise it. It makes it easier to organise and search for information within a board. Interactive and well-organised content  can  increase  engagement  among  young  people,  making  sessions  more dynamic and engaging.
 
+
+<!-- PAGE 66 -->
+
+
 <!-- image -->
 
 - Synthesia :  This  application  uses  AI  to  create  realistic  video  content  featuring AI-generated avatars, making  educational  content  or  training  material  more interesting so that young people can actively engage with the content.
@@ -1368,6 +1629,10 @@ Participants indicated the following tools as most relevant in use:
 
 - Data  and  privacy :  AI  systems  often  require  access  to  personal  data  to  function effectively. This raises concerns about how data is collected, stored, and used.
 - Uncertainty avoidance :  Some  youth  work  professionals  may hesitate to adopt AI technology due to a lack of familiarity or understanding about how it works and its potential impact on their work.
+
+
+<!-- PAGE 67 -->
+
 
 <!-- image -->
 
@@ -1390,6 +1655,10 @@ A  practical  example  of  integrated  LifeComp-  and  DigComp-based  training  
 
 36 Vuorikari, R., Kluzer, S. and Punie, Y. (2022). DigComp 2.2. The Digital Competence Framework for Citizens With  new  examples  of  knowledge,  skills  and  attitudes .  EUR 31006 EN, Publications Office of the European Union, Luxembourg. ISBN 978-92-76-48883-5, doi:10.2760/490274, JRC128415.
 
+
+<!-- PAGE 68 -->
+
+
 <!-- image -->
 
 GymComp ,  will  consist  of  online  sessions  aimed  at  enhancing  digital  (DigComp  2.2)  and relational/communication (LifeComp) competencies for using generative AI in non-formal education  contexts.  The  sessions,  planned  in  the  second  semester  of  2024,  cover  the following competences:
@@ -1402,6 +1671,10 @@ GymComp ,  will  consist  of  online  sessions  aimed  at  enhancing  digital  (
 
 - Training :  providing  opportunities  for  youth  workers  to  gain  hands-on  experience with AI tools through interactive workshops, hackathons, and collaborative projects. Encourage experimentation and exploration in a supportive environment.
 - Online learning resources :  providing  a  collection  of  online  courses,  tutorials,  and learning materials on AI topics that youth workers can access at their own pace to deepen their knowledge and skills.
+
+
+<!-- PAGE 69 -->
+
 
 <!-- image -->
 
@@ -1431,6 +1704,10 @@ I find the possibility of reaching as many young people as possible through a pa
 
 This is the future of education.
 
+
+<!-- PAGE 70 -->
+
+
 <!-- image -->
 
 ## 4.2.4.2. National Focus Group - Romania
@@ -1442,6 +1719,10 @@ Where: Constanta, Romania
 Figure 10. Focus Group in Romania: Infographic
 
 <!-- image -->
+
+
+<!-- PAGE 71 -->
+
 
 <!-- image -->
 
@@ -1464,6 +1745,10 @@ The activity facilitator invited the participants to brainstorm and identify AI 
 3. Bark - AI-driven storytelling and creative writing tools
 4. Gemini - advanced data analysis and decision-making
 5. Bing -  AI-powered  search  capabilities  enable  rapid  access  to  information  and resources
+
+
+<!-- PAGE 72 -->
+
 
 <!-- image -->
 
@@ -1513,6 +1798,10 @@ Free to some extent;
 
 Develop the imagination;
 
+
+<!-- PAGE 73 -->
+
+
 <!-- image -->
 
 - Generate ideas for future research;
@@ -1543,6 +1832,10 @@ For  each  of  the  benefits,  the  youth  workers  also  identified  some  chal
 - Risk of misinterpreting data, which can lead to incorrect conclusions
 - The use of AI can be technically challenging and time-consuming
 
+
+<!-- PAGE 74 -->
+
+
 <!-- image -->
 
 - AI may not always be able to accurately interpret cultural nuances, slang, or local contexts in youth feedback, leading to potential misunderstandings
@@ -1570,6 +1863,10 @@ Participants mentioned several ways that can help in developing AI-related skill
 
 - Organising knowledge exchange events - conferences, seminars, and meetups where youth workers can share experiences, best practices, and insights about AI
 - Networking and learning sessions to learn from peers and experts in the field, fostering a collaborative environment for knowledge exchange
+
+
+<!-- PAGE 75 -->
+
 
 <!-- image -->
 
@@ -1603,6 +1900,10 @@ Loved the practical sessions.
 
 I enhanced my understanding of the use of AI in education.
 
+
+<!-- PAGE 76 -->
+
+
 <!-- image -->
 
 <!-- image -->
@@ -1625,6 +1926,10 @@ I gained practical tips for implementing AI.
 
 Waiting for more such events in the future!
 
+
+<!-- PAGE 77 -->
+
+
 <!-- image -->
 
 ## 4.2.4.3. National Focus Group - Greece
@@ -1636,6 +1941,10 @@ Where: Online
 Figure 11. Focus Group in Greece: Infographic
 
 <!-- image -->
+
+
+<!-- PAGE 78 -->
+
 
 <!-- image -->
 
@@ -1653,6 +1962,10 @@ Additionally,  AI  tools  can  facilitate  translation  tasks,  breaking  down  
 
 For content creation, AI tools prove invaluable. They can generate engaging social media posts, design visually appealing posters and invitations for events, and create multimedia content like videos  and  images  for  websites.  These  capabilities  can  significantly  enhance  outreach  and
 
+
+<!-- PAGE 79 -->
+
+
 <!-- image -->
 
 engagement efforts. One example given by the participants was the development of a storybook on diversity,  which  would  be  illustrated  or animated with the help of AI technology. In another instance,  AI  can  help  prepare  a  presentation  using  a  microphone  and  even  create  doodles  or animations during the narration. In general, any tools that can produce videos, images, or music are  very  useful  and  can  be  used  in  a  wide  variety  of  activities,  as  they  serve  an  educational purpose.
@@ -1666,6 +1979,10 @@ Youth  workers  identified  numerous  benefits  of  AI,  highlighting  its  pote
 Additionally, AI offers open access to all youth, enabling them to join online platforms and share their  news,  ideas,  and  problems  regardless  of  their  geographic  location.  This  inclusivity  is particularly valuable in fostering a sense of community and shared purpose among young people from  diverse  backgrounds.  The  Lomap  initiative  was  cited  as  an  excellent  example  of  this, providing  a  platform  for  a  large  number  of  young  people  to  come  together,  exchange experiences, and address local challenges.
 
 Another positive outcome discussed in the focus group was the role of youth workers, trainers, and educators in raising awareness about the appropriate use of AI technology. They stressed the  importance  of  educating  young  people  on  using AI as a tool to enhance and refine their original  ideas  rather  than  relying on it to create their work. By understanding AI's potential to improve,  correct,  and  enrich  their  creations,  young  people  can  leverage  this  technology
+
+
+<!-- PAGE 80 -->
+
 
 <!-- image -->
 
@@ -1685,6 +2002,10 @@ The  most  important  skill  emphasised by all participants was basic computer l
 
 Critical  thinking is  another  key  skill  that  should  always  be  applied  when  using  AI  tools.  This
 
+
+<!-- PAGE 81 -->
+
+
 <!-- image -->
 
 involves making informed decisions about which tools to use, how to integrate them into their work,  and  how  to  interpret  and  utilise  the  outcomes.  For  instance,  when  using  AI  for  data analysis  or  content  creation,  it  is  important  to  ensure  compliance  with  regulations  such  as GDPR.   Youth workers also pointed out the necessity of recognising the limitations of each AI tool  to  use  them  effectively.  For  example,  tools  like  ChatGPT have been trained on data up to 2021,  meaning  their  knowledge  is  not  current  beyond  that  point.  This  limitation  must  be considered when seeking information or solutions.
@@ -1701,6 +2022,10 @@ Participants also proposed the creation of a catalogue or guidebook of AI tools.
 
 All participants were enthusiastic about the activity. Most of the participants felt that they gained valuable  insights  and  expressed  their  intention  to  follow  the  project's  developments  and outcomes. None of the participants made any suggestions for improvement.
 
+
+<!-- PAGE 82 -->
+
+
 <!-- image -->
 
 ## 4.2.4.4. National Focus Group - Portugal
@@ -1710,6 +2035,10 @@ When: 10/05/2024, 13/05/2024
 Figure 12. Focus Group in Portugal: Infographic
 
 <!-- image -->
+
+
+<!-- PAGE 83 -->
+
 
 <!-- image -->
 
@@ -1733,6 +2062,10 @@ Participants indicated several AI tools that they use in their daily work, and t
 
 1. Quillbot: An AI-powered writing assistant that can help improve the quality of written content, making it a valuable tool for creating clear and engaging communications.
 
+
+<!-- PAGE 84 -->
+
+
 <!-- image -->
 
 2. Perplexity  AI: A  versatile  AI  that  can  assist  with  research  and  provide  accurate information quickly, supporting youth workers in staying informed and prepared.
@@ -1752,6 +2085,10 @@ Participants indicated several AI tools that they use in their daily work, and t
 
 1. High-Quality and Free Translation: The availability of high-quality translation at no cost is a great benefit .  This not only broadens access to information in different languages but also facilitates international communication and collaboration.
 2. Content  Creation  Tools: Tools like  Bing  AI   and  Canva  AI  play  an  important  role  in creating  dynamic  and  intuitive  content  in  English.  Bing  AI  supports  bibliographic research, providing notifications and updated news, as well as ensuring data protection and security. On the other hand, Canva streamlines the creative process, allowing the
+
+
+<!-- PAGE 85 -->
+
 
 <!-- image -->
 
@@ -1775,6 +2112,10 @@ Participants identified several challenges or obstacles to incorporating AI into
 
 - a. Plagiarism: AI  can  unintentionally produce content that borders on plagiarism, especially with images and drawings. It's crucial to teach the ethical usage of AI, differentiating between assistance and plagiarism.
 - b. Educational  Impact: Over-reliance  on  AI  tools  in  education  might  impair
+
+
+<!-- PAGE 86 -->
+
 
 <!-- image -->
 
@@ -1801,6 +2142,10 @@ For the participants, it is necessary to develop the following skills and attitu
 1. Prompt Engineering: Knowing how, when, and in what way to give instructions to the AI  tool  to  obtain  the  desired  results.  Writing  clear  and  detailed  prompts  to  generate relevant and personalised content for youth.
 2. Knowledge of AI Tools: Being aware of the various AI tools available and knowing how to  use  them in different contexts (education, communication, marketing, management, evaluation, etc.).
 
+
+<!-- PAGE 87 -->
+
+
 <!-- image -->
 
 3. Understanding ethical limitations: Knowing and respecting the ethical limits of using AI,  including  issues  of  human  rights,  privacy,  and  plagiarism.  Implementing  practices that ensure ethical use of AI, avoiding false information and plagiarism.
@@ -1817,6 +2162,10 @@ To  support  youth  workers  in  acquiring  AI-related  competencies,  we  can  
 1. Training  Sessions  on  AI  Tools: Conducting  training  sessions focused on the various tools  available  will  equip  youth  workers  with  the  knowledge  they  need  to  effectively utilise AI in their daily work.
 2. Project  Management  Apps: Introducing  youth  workers to project management apps (Click  Up,  Monday,  Notion,  etc.)  can  help  them  organise  and  streamline  their  tasks efficiently.  These  apps  often  incorporate  AI  features  that  can  automate  and  enhance project  management  processes,  making  it  easier  for  youth  workers  to  manage their projects.
 3. AI  Literacy  Programs: Developing  and  providing  programs  that  focus on AI literacy. These programs should cover what AI is, the various applications of AI, and how to use AI  tools  effectively.  Youth  workers  will  understand  AI  better  and use AII efficiently in
+
+
+<!-- PAGE 88 -->
+
 
 <!-- image -->
 
@@ -1841,6 +2190,10 @@ Participants  provided positive feedback, expressing motivation and eagerness to
 
 The focus groups revealed that AI applications are already being utilised by youth workers to enhance  various  aspects  of  their  professional  activities. Tools  such  as  Microsoft  Translator, Padlet,  Synthesia,  Kahoot!,  and  Mentimeter are recognised for their ability to break language barriers,  streamline  information  organisation,  and  enhance  engagement  through  dynamic content creation. Participants emphasised the significant potential of AI to improve
 
+
+<!-- PAGE 89 -->
+
+
 <!-- image -->
 
 administrative efficiency by automating routine tasks like email responses, scheduling, and data analysis.  This allows youth workers to focus more on direct interactions and strategic planning. Furthermore,  AI's  capability  to  facilitate  translation  and  communication  across  different languages was highlighted as crucial in diverse and international contexts, fostering inclusivity and effective communication.
@@ -1850,6 +2203,10 @@ For content creation and career development, AI tools were seen as invaluable as
 Participants in the focus groups highlighted several significant benefits of AI applications in youth work, emphasising their potential to enhance engagement, accessibility, and efficiency. AI tools like personalised quizzes and games can analyse learners' performance and behaviour to tailor  activities  to  their  learning  needs,  making  the educational experience more engaging and enjoyable. Language and accessibility features in AI applications break down linguistic barriers, allowing  youth  workers  to  create  multilingual  content  and  fostering  cultural  exchange  and inclusivity.  The  ability  of  AI  to  automate  tasks  such  as  question  generation  and  content recommendations saves valuable time, enabling youth workers to focus more on interaction and mentorship.  This  time  optimisation  is  crucial  for  producing  high-quality  results  and  supports creative content generation, innovative teaching materials, and effective strategic planning.
 
 Moreover, AI  technology was seen as a powerful ally in increasing productivity and access to information. Participants  noted  that  AI  facilitates  rapid  access to large data sets and supports quick statistical analysis, idea generation for future research, and creative content development. These capabilities not only enhance the availability of educational resources but also streamline processes such as report analysis, exam preparation, and immediate feedback provision. AI's role in providing high-quality, free translation services and supporting critical thinking through tools like ChatGPT underscores its value in promoting inclusive education and informed
+
+
+<!-- PAGE 90 -->
+
 
 <!-- image -->
 
@@ -1861,6 +2218,10 @@ In  addition,  participants  highlighted  specific  obstacles  related  to  acce
 
 The  responses  from  participants  highlight  that  effectively  utilising  AI  tools  in  youth  work necessitates  a  blend  of  technical,  analytical,  and  soft  skills. Key  among these are computer, data,  and  AI  literacy,  which  are  fundamental  requirements  for  navigating  AI.  Additionally, proficiency in English is  crucial  due  to  the  predominance  of AI tools available primarily in that language.  Participants  underscored  the  importance  of  continuous  learning  and  professional development to stay current with the rapidly evolving AI landscape. Critical thinking emerged as
 
+
+<!-- PAGE 91 -->
+
+
 <!-- image -->
 
 a  vital  skill,  enabling  youth  workers  to  make  informed  decisions  about  the  integration  and application of AI tools while ensuring compliance with regulations such as GDPR. Recognising the  limitations  of  AI  tools,  such  as  the  outdated  knowledge  of  models  like  ChatGPT,  is  also essential for their effective use.
@@ -1871,6 +2232,10 @@ To  support  youth  workers  in  acquiring  AI-related  competencies,  it  is  c
 
 Participants also highlighted the need for knowledge exchange events, such as conferences, seminars,  and  meetups,  where  youth  workers  can  share  experiences,  best  practices,  and insights about AI. Networking  and  learning sessions with peers and experts foster a collaborative  environment  for  knowledge  exchange.  Furthermore,  creating  a  catalogue  or guidebook  of AI tools,  complete  with  short  descriptions,  instructional  videos,  and  user comments,  would  help users quickly identify the most suitable tools for their needs. Implementing self-assessment tools to measure AI competency and providing targeted feedback and  solutions  based  on  these  assessments  would  further  enhance  skill  development.  Lastly, introducing youth workers to project management  apps  and  training them  in  prompt
 
+
+<!-- PAGE 92 -->
+
+
 <!-- image -->
 
 engineering can streamline their tasks and improve their ability to utilise AI effectively in their daily work.
@@ -1878,6 +2243,10 @@ engineering can streamline their tasks and improve their ability to utilise AI e
 The feedback received from participants highlighted a highly positive reception of the project activities,  emphasising  the  value  and  impact  of the sessions on their professional and personal development.  Participants  appreciated  the  creativity  and  emotional  support  the  activities provided,  which  helped  them  manage  everyday  challenges  and  emotional  difficulties.  They underscored the importance of fostering an understanding and awareness of AI, particularly in the educational context, which can be fragile and in need of innovative solutions.
 
 Overall,  participants  expressed  motivation  and  enthusiasm  to  stay engaged with the project, looking  forward  to  future  events  and  the  continued  development of AI applications in youth work.  The  positive  feedback and lack of suggestions for improvement indicate a high level of satisfaction and a strong endorsement of the project's direction and impact.
+
+
+<!-- PAGE 93 -->
+
 
 <!-- image -->
 
@@ -1895,6 +2264,10 @@ Chapter 4 has outlined the experiences, needs and challenges of youth workers in
 
 However, several challenges were identified by participants :  data  privacy and security, youth workers' competence gap and resistance to AI technologies due to unfamiliarity and fear of its
 
+
+<!-- PAGE 94 -->
+
+
 <!-- image -->
 
 potential  impact  on  their  work,  the  potential  for  AI  tools  to  reduce  critical  thinking  and creativity, the risk of over-reliance on technology, and the technical and time-consuming nature of integrating AI into daily workflows.
@@ -1907,6 +2280,10 @@ Participants  in  this  study  emphasised  that a  blend  of  technical,  analyt
 - Linked to the previous purpose, participants also mentioned prompt engineering as an essential  skill  for  writing  clear  and  detailed  prompts  and  generating  relevant  and personalised content.
 - Digital  competencies: Proficiency  in  using  digital  tools  and  platforms,  essential  for navigating AI tools. Among the digital competencies mentioned by participants, data literacy is  considered an indispensable tool for young people and youth workers , who should have the competences  needed  for  reading,  understanding,  creating  and communicating data effectively, being aware of the origins and destinations of data fed into AI systems.
 
+
+<!-- PAGE 95 -->
+
+
 <!-- image -->
 
 - AI  literacy: Familiarity  with  AI  concepts, terminology, and applications to understand how  AI  tools  work  and  their  impact  on  youth  work  practices.  This  also  includes awareness  of  various  AI  tools  available  and  how  they  could  be  used  in  different contexts, such as education, communication, marketing, management, and evaluation.
@@ -1914,6 +2291,10 @@ Participants  in  this  study  emphasised  that a  blend  of  technical,  analyt
 - Organisational  skills: Planning, coordinating resources and integrating AI effectively into youth work.
 
 In conclusion, the AI Competence Framework for Youth Workers must encompass this comprehensive set of knowledge, attitudes and skills which are essential for empowering youth workers to effectively integrate AI into their practices and to thrive in an increasingly AI-driven world.
+
+
+<!-- PAGE 96 -->
+
 
 <!-- image -->
 

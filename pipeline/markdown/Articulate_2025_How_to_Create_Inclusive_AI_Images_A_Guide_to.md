@@ -1,10 +1,11 @@
 ---
 source_file: Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.pdf
-conversion_date: 2026-02-03T08:41:20.700593
+conversion_date: 2026-02-03T18:20:22.690639
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/
 
 ## Blog»AI
@@ -28,6 +29,10 @@ AI image generation tools are fast and creative, but without thoughtful prompts,
 AI-generated images are exploding in popularity, with text-to-image algorithms generating an estimated 150 billion images yearly. These fast, creative, cost-effective tools are a go-to solution for everything from e-learning training and internal comms to business presentations and social campaigns.
 
 But there's a catch.
+
+
+<!-- PAGE 2 -->
+
 
 https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/
 
@@ -63,6 +68,10 @@ That's the idea behind inclusive prompt engineering: writing image prompts that 
 
 Before writing your prompts, it helps to get clear on what inclusion means in this context. Cramming every identity into a single image or trying to reach a specific diversity quota can feel forced, or even tokenizing. And it often misses the fact that many aspects of identity, like disability or religion, aren't always visible.
 
+
+<!-- PAGE 3 -->
+
+
 https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/
 
 Instead, focus on avoiding harm and making thoughtful and respectful choices. Inclusive images should feel real and relatable, not intrusive, forced, or stereotyped.
@@ -92,6 +101,10 @@ Consider the following visible diversity dimensions:
 
 Here's a simple identity shift that changes the outcome:
 
+
+<!-- PAGE 4 -->
+
+
 https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/
 
 <!-- image -->
@@ -114,6 +127,10 @@ These identities deserve representation, but visualizing them too literally can 
 - Ground scenes in reality. Does the context make sense? Is it respectful, or does it feel forced or tokenized? For example, in the case of socioeconomic status, context might
 
 After: Professionals having a friendly team meeting. The group includes an Asian woman in her 40s, a Black man in his 30s, a largerbodied woman in her 50s, and a man with salt-and-pepper hair.
+
+
+<!-- PAGE 5 -->
+
 
 https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/
 
@@ -142,6 +159,10 @@ Here's how a few extra details can completely reshape an image:
 
 After: A woman who uses a wheelchair chatting with co-workers in a contemporary office
 
+
+<!-- PAGE 6 -->
+
+
 https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-freeprompting/
 
 <!-- image -->
@@ -157,6 +178,10 @@ This is especially useful for group scenes, workplace images, or general-purpose
 Here's a small change that invites more balance into the output:
 
 After: A joyful man wearing a manimamah laughing with friends while sharing snacks at a sunny outdoor party
+
+
+<!-- PAGE 7 -->
+
 
 <!-- image -->
 

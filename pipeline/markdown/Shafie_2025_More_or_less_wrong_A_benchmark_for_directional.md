@@ -1,10 +1,11 @@
 ---
 source_file: Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.pdf
-conversion_date: 2026-02-03T09:23:05.555821
+conversion_date: 2026-02-03T18:54:19.063936
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning
 
 Mohammadamin Shafiei * 1 , Hamidreza Saffari ∗ 2 , Nafise Sadat Moosavi 3
@@ -29,6 +30,10 @@ Unlike prior work that examines robustness to surface-level perturbations, such 
 
 To investigate this effect, we construct a dataset of 300 controlled comparison tasks, each involving two individuals and a quantifiable activity (e.g., hours spent, dollars spent, or actions taken). The correct answer in each case can be 'more', 'equal', or 'less', where the second person's associated value is compared to the first person's. We design seven prompt variants for each task, ranging from neutral to directly comparative to contextually suggestive, and place the framing either before or after the main question, yielding a finegrained manipulation of both semantic content and prompt structure. We evaluate two model sizes from three widely used LLM families (GPT, Claude, and Qwen), comparing both free-form and structured (i.e., JSON) output formats. Our results show that linguistic framing consistently and predictably shifts model outputs. For example, 'more'-framed prompts increase the rate of 'more' responses, while 'less'-framed prompts increase 'less' responses, even when both are incorrect. These biases are not fully mitigated by structured prompting strategies such as chain-of-
 
+
+<!-- PAGE 2 -->
+
+
 Figure 1: Comparison of prompt framing effects on response patterns for time-based home maintenance tasks.
 
 <!-- image -->
@@ -47,6 +52,10 @@ Prompt Sensitivity and Robustness in LLMs LLMs are known to be sensitive to how 
 
 1 https://anonymous.4open.science/r/more\_or\_ less\_wrong-33B2
 
+
+<!-- PAGE 3 -->
+
+
 sensitivity across tasks including math problem solving (Yang et al., 2022; Li et al., 2024), focusing on robustness to paraphrasing, formatting differences, or other surface-level variations. These studies show that small changes in wording can cause large performance shifts, leading to efforts to stabilize LLM behavior via prompt engineering, ensembling, or training-time alignment. However, these works typically evaluate performance as a function of overall accuracy or consistency, rather than isolating whether specific phrasings systematically bias model outputs in a particular direction. That is, they examine whether models succeed or fail, not how the way a question is asked may steer them toward specific, incorrect answers.
 
 ## Framing Effects in Prompted Language Models
@@ -60,6 +69,10 @@ LLMs have shown rapid progress on mathematical reasoning benchmarks, aided by te
 ## 2.2 Demographic Bias in LLMs
 
 LLMs have been shown to reflect and amplify societal biases related to gender, race, and other demographic attributes. These biases manifest in tasks ranging from generation and classification to reasoning and question-answering (Gallegos et al., 2024; Sheng et al., 2019; Parrish et al., 2022; Wan et al., 2023; Ding et al., 2025; Demidova et al., 2024). Recent studies show that assigning different personas or social roles to LLM prompts can lead to divergent outputs, exposing reasoning disparities tied to identity markers (Gupta et al., 2024). Additionally, researchers have introduced frameworks to systematically evaluate LLM behavior across sensitive attributes, revealing nuanced and intersectional patterns of bias (Marchiori Manerba et al., 2024; Saffari et al., 2025). A growing line of work also explores bias in numerically grounded tasks, such as estimating salaries or solving math word problems with identity-laden prompts (Nghiem et al., 2024; Salinas et al., 2024; Kaneko et al., 2024; Opedal et al., 2024). Our work builds on this direction by analyzing how demographic cues affect performance on controlled quantitative com- parison tasks, and how such effects interact with linguistic framing and task domain (e.g., caregiving vs. technical).
+
+
+<!-- PAGE 4 -->
+
 
 ## 3 Dataset
 
@@ -93,6 +106,10 @@ We design our evaluation protocol to measure how wording, structure, and positio
 Each comparison scenario is paired with 14 distinct prompt variants, crossing three dimensions: framing type (neutral, direct, indirect), framing term ('more', 'less', 'equal'), and framing position (beginning vs. end). These prompt templates allow us to isolate the effects of different framing strategies on model outputs. We vary prompt position (beginning vs. end) to test whether framing effects
 
 4 In the 300 templates, 94 have the gold label equal, 119 are less, and 87 are more.
+
+
+<!-- PAGE 5 -->
+
 
 interact with instruction order, which prior work shows can influence model behavior independently of content (Mao et al., 2024; Zeng et al., 2025).
 
@@ -136,6 +153,10 @@ Figure 2 visualizes the DirErr metric (Eq. 4.4) for all six models and the fourt
 
 Neutral baseline. Without any cue word the majority of models show their largest drift toward 'More': DirErr % ( more ) ranges from 26% for Sonnet to 93% for Qwen-3B (begin-position prompts). Errors toward 'Less' are the second most common, whereas 'Equal' is rarely over-predicted.
 
+
+<!-- PAGE 6 -->
+
+
 95.56
 
 99.45
@@ -170,6 +191,10 @@ Model scale. Directional drift diminishes with model capacity: GPT-4o and Claude
 
 94.66
 
+
+<!-- PAGE 7 -->
+
+
 17.68
 
 Figure 3: Directional error percentages (DirErr % under chain-of-thought prompting with the framing clause placed at the end of the prompt. Top row: CoT with free-form text; bottom row: CoT with JSON-structured output. Each heat-map shows one error direction-Less (left), Equal (centre), or More (right). Columns are the seven prompt variants; rows are the six models; darker cells indicate stronger drift toward that label.
@@ -199,6 +224,10 @@ Figure 5 shows directional-error rates when models are prompted to think step-by
 Chain-of-thought, free-form
 
 20.19
+
+
+<!-- PAGE 8 -->
+
 
 Table 1: Directional error rates (%) for errors as More for Sonnet 3.7 model, across demographic identity markers. Each row represents a distinct framing variant, defined by comparison target (More, Less, Equal), style (Indirect, Direct, Neutral), and position (Begin, End). Demographics: Std=Standard, M=Man, W=Woman, As=Asian, Af=African, H=Hispanic, Wh=White, B=Black.
 
@@ -232,6 +261,10 @@ Substantial Mitigation. Explicit reasoning helps reduce framing-induced bias. Ac
 Residual framing effects. Despite overall improvements, lexical cues still subtly influence predictions. In both free-form and structured CoT, prompts containing comparative cues tend to increase DirErr % in that direction, though the magnitude is notably smaller than in non-CoT settings.
 
 Format sensitivity. Structured CoT (with JSON outputs) is less robust than open-ended reasoning. While this setting shows different directional error patterns compared to the one-word format, it remains susceptible to linguistic framing, though in a distinct way. In particular, it is more affected by 'equal' and 'less' cues than by 'more'. Based on our manual analysis, models often solve the problem correctly, but phrase their answer using the cue term introduced in the framing. For example, if the correct answer is that Person B spends more money than Person A, but the prompt emphasizes 'less', the model may respond with: 'Person A spends less money than Person B'. Thus, while the underlying computation is correct, the model's output adopts the linguistic frame of the prompt, leading to label-level misclassification.
+
+
+<!-- PAGE 9 -->
+
 
 set of experiments on a larger resource is computationally infeasible, as for each sample, we run many experiments.
 
@@ -280,6 +313,10 @@ Additionally, while our analysis includes race as a protected attribute, it is l
 - Ryutaro Yamauchi, Sho Sonoda, Akiyoshi Sannai, and Wataru Kumagai. 2023. Lpml: llm-prompting markup language for mathematical reasoning. arXiv preprint arXiv:2309.13078 .
 - Zhicheng Yang, Jinghui Qin, Jiaqi Chen, and Xiaodan Liang. 2022. Unbiased math word problems benchmark for mitigating solving bias. In Findings of the Association for Computational Linguistics: NAACL 2022 , pages 1401-1408, Seattle, United States. Association for Computational Linguistics.
 - Jie Zeng, Qianyu He, Qingyu Ren, Jiaqing Liang, Yanghua Xiao, Weikang Zhou, Zeye Sun, and Fei
+
+
+<!-- PAGE 11 -->
+
 
 Yu. 2025. Order matters: Investigate the position bias in multi-constraint instruction following. arXiv preprint arXiv:2502.17204 .
 
@@ -347,6 +384,10 @@ Our manual filtering process applied several criteria to ensure semantic clarity
 - Humanagency: Both sentences had to center on human subjects (e.g., 'Person A bought. . . ' rather than passive constructions).
 - Task relevance: The annotated task had to describe the full chain of actions involved in the computation, not just a partial element. For instance, if a person bought both apples and oranges, the task would be annotated as 'buying fruits', not 'buying oranges', to ensure that the task meaning aligns with the complete mathematical operation.
 
+
+<!-- PAGE 12 -->
+
+
 ## A.5 Equation Validation and Label Assignment
 
 To ensure the ground-truth label was valid, two reviewers independently verified the symbolic equations produced by the model. After validation, we used a Python script to compute final totals for each individual and compare them automatically. This process demonstrates that prompting LLMs for interpretable symbolic reasoning can be an effective strategy for scalable, semi-automatic generation of labeled math problems requiring minimal human intervention.
@@ -367,6 +408,10 @@ To generate the examples, we used the following category definitions:
 - Technology : Costs related to electronic gadgets, software, and internet services. This includes smartphones, computers, apps, subscriptions to streaming services, or any techrelated purchases.
 
 Table 6 shows a representative example of the prompt template used to elicit structured comparative word problems from the model.
+
+
+<!-- PAGE 13 -->
+
 
 Generate pairs of sentences that include chains of calculations where the final results in both sentences are [ label ].
 
@@ -391,6 +436,10 @@ Example [Person\_A] spends 8 hours cleaning on Mondays, half of Monday's time on
 Now give me 20 pairs.
 
 Table 6: The prompt used to generate the initial dataset.
+
+
+<!-- PAGE 14 -->
+
 
 ## B Appendix: Additional Results
 
@@ -420,6 +469,10 @@ We here present two types of results. The set of tables for sonnet 3.7 and GPT4O
 
 The figures 11, 12, 13, and 14 provide similar information for GPT4O-mini. In terms of specific categorical differences across genders and races, we can see that for example sonnet has a larger DirrErr values for shopping for man than woman, meaning that it associates such activity with man less that woman. Moreover, for personal care category, the DirrErr as more is larger for woman, suggesting the potential bias of the model toward this category and women. Also, shopping DirrErr as less is larger for Africans than Asians as well as Hispanics. Interestingly, the travel category for white people has a larger less DirrErr than black people. For GPT4o-mini, we can see that DirrErr as equal is even less than the sonnet model. This suggest that the model is general is more biased toward more or less values.
 
+
+<!-- PAGE 15 -->
+
+
 Table 7: Instruction formats used across evaluations. Models were required to respond under different format constraints ranging from one-word output to structured reasoning with chain-of-thought.
 
 | Instruction Type   | Instruction Text                                                                                                                                                                                                                                                                                                                                         |
@@ -447,6 +500,10 @@ Figure 4: Directional error percentages (DirErr %) for JSON-formatted answers (t
 
 87.86
 
+
+<!-- PAGE 16 -->
+
+
 10.50
 
 Figure 5: Directional error percentages (DirErr % under chain-of-thought prompting (the third instruction type). Top row: framing variations are placed at the beginning; bottom row: framing variations are placed at the end. Each heat-map shows one error direction-Less (left), Equal (center), or More (right). Columns are the seven prompt variants; rows are the six models; darker cells indicate stronger drift toward that label.
@@ -471,6 +528,10 @@ Table 9: DirErr rates (%) for errors as Less for Sonnet 3.7 model, across demogr
 | more:Direct (Begin)    | 35.36 | 27.07 | 24.31 | 27.07 | 28.18 | 22.65 | 27.62 | 25.97 |
 | neutral (End)          | 12.15 | 10.5  | 14.36 | 11.6  |  9.94 |  9.39 | 15.47 | 17.68 |
 | neutral (Begin)        | 16.02 | 14.36 | 14.36 | 12.71 | 16.57 |  6.63 | 18.78 | 17.68 |
+
+
+<!-- PAGE 17 -->
+
 
 25.97
 
@@ -502,6 +563,10 @@ Table 10: DirErr rates (%) for errors as Equal for Sonnet 3.7 model, across demo
 | neutral (Begin)        | 42.72 | 48.78 | 59.71 | 61.65 | 49.51 | 67.96 | 31.07 | 31.07 |
 
 54.93
+
+
+<!-- PAGE 18 -->
+
 
 | Condition             |   Std |     M |     W |    Af |     As |     H |    Wh |     B |
 |-----------------------|-------|-------|-------|-------|--------|-------|-------|-------|
@@ -560,6 +625,10 @@ Table 13: DirErr rates (%) for errors as Equal for GPT4O-mini model, across demo
 | less:Direct(End)      |  0    |  0    |  0    |  0.49 |  0    |  0    |  0.49 |  0.49 |
 | less:Indirect(Begin)  |  0    |  0    |  0    |  0.49 |  0    |  0    |  0    |  0    |
 
+
+<!-- PAGE 19 -->
+
+
 2
 
 7
@@ -590,6 +659,10 @@ $
 
 100
 
+
+<!-- PAGE 20 -->
+
+
 Figure 9: DirErr % for sonnet 3.7, the best model on average while including Hispanic race, when the framing variations are positioned at the beginning and end of the prompt.
 
 <!-- image -->
@@ -609,6 +682,10 @@ Figure 10: DirErr % for sonnet 3.7, the best model on average while including Wo
 40
 
 400
+
+
+<!-- PAGE 21 -->
+
 
 59
 
@@ -639,6 +716,10 @@ B0
 69
 
 0
+
+
+<!-- PAGE 22 -->
+
 
 Figure 13: DirErr % for GPT4O-mini on average while including Hispanic race, when the framing variations are positioned at the beginning and end of the prompt.
 

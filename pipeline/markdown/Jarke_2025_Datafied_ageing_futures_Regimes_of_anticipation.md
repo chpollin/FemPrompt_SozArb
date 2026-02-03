@@ -1,10 +1,11 @@
 ---
 source_file: Jarke_2025_Datafied_ageing_futures_Regimes_of_anticipation.pdf
-conversion_date: 2026-02-03T09:01:03.564239
+conversion_date: 2026-02-03T18:31:55.396140
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## Data /uniFB01 ed ageing futures: Regimes of anticipation and participatory futuring
@@ -51,6 +52,10 @@ Big Data &amp; Society January -March: 1 -15 © The Author(s) 2025 Article reuse
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 builds and reinforces a hegemonic ideology of external power and control. (Markham, 2021: 384)
 
 In this paper, we take up ideas around modes of anticipation that discipline our experiences of ageing in the present. We also align with John Urry (2016) who argued that who or what is able to claim the future is an exercise of power and a matter of social justice. Speci /uniFB01 cally, we draw on experiments with participatory futuring methods and explore their potential to build critical anticipatory practices that disrupt current regimes of anticipation. To do so, we focus on regimes of anticipation at the intersection of datadriven technologies and ageing populations.
@@ -69,6 +74,10 @@ The paper is structured as follows: First, we review how anticipations about age
 
 As we age, we are continually asked to anticipate and plan for our well (ill)-being, /uniFB01 nancial and social situation (Adams et al., 2009; Shimoni, 2018). This line of ' discursive closure ' is further manifested through present imaginaries of data-driven systems such as ambient-assisted living (AAL), smart home devices and smart health applications which are used for activities recognition, control of vital status, position tracking, interaction and communication, multimedia amongst others (Calvaresi et al., 2017). Such
 
+
+<!-- PAGE 3 -->
+
+
 ' gerontechnologies ' (Gallistl et al., 2023) are usually described as ' seamless, unobtrusive and non-invasive ' as they operate ' via an invisible user interface ' (Dunne et al., 2022: 14) and are presented as a ' cost-effective way to enhance independence, security and health ' (Dalmer et al., 2022: 77 -78). Hence, they are promised to promote healthy lifestyles, ' independent living ' and ' ageing in place ' , to support caregivers and ensure safety, whilst preventing social isolation, all key policy goals internationally. In all of these discourses data-driven systems are imagined as solutions to the economic and social ' problems ' of population ageing (Cozza et al., 2019; Joyce, 2021).
 
 These imaginaries and resulting anticipations of technofutures of ageing align with a number of concerns raised in critical data studies. First, data-driven systems allow for new forms and possibilities of surveillance and control . Their invisibility and pervasiveness pose important challenges in relation to privacy, identity, security and trust for those whose lives are regulated by such technologies (Friedewald et al., 2007). One of the reasons for the invasiveness of these technologies (and their lack of regard for privacy) is their original application in public spaces, workplaces or prisons (Berridge and Grigorovich, 2022). For example, systems for fall detection in care homes stem from use cases in prisons to detect and circumvent suicide. Adding to this problem is the fact that AAL technologies are highly reductionist and invisibilise much of the heterogeneity and complexity of everyday lives. For example, while surveillance technologies may be able to detect aggressive behaviour that is associated with progressing dementia, they disregard ' structural in /uniFB02 uences of aggression (e.g. overcrowding, boredom, low provider-to-resident ratios, limited provider autonomy and heavy workloads), which cannot be measured or addressed using surveillance technology or automated algorithmic decisionmaking ' (Berridge and Grigorovich, 2022). Hence, datadriven technologies normalise new forms and possibilities of surveillance and control while at the same time reducing care arrangements to those things that can be surveilled and quanti /uniFB01 ed.
@@ -80,6 +89,10 @@ This leads to an increasing responsibilisation of older adults to anticipate the
 Third, data-driven systems work within co-constituted manifestations of power relating to gender, class, race, age, sexuality and disability, and their intersections which systematically exclude and dehumanise particular people (Manchester and Willatt, 2024). Ageing populations are extremely heterogeneous and huge differences exist amongst older adults with respect to how structural inequalities throughout their life affect their health, well-being and access to technologies in the present. For example, while well-educated middle and upper-class older men tend to be pro /uniFB01 cient users of digital technologies, older women from low-income or migrant communities are the least likely (anticipated) users (Cozza et al., 2019). Data-driven technologies themselves may also exclude certain social groups. For example, Christina Harrington et al. (2022) explored health information seeking with 30 US Black older adults in lower-income environments to understand how they ask health-related questions to Google Home, a voice assistant that is trained on conversational data of dominant social groups. The study uncovered how the participants had to perform ' cultural code-switching ' in order to engage with voice assistants and mitigate communication break-downs due to their way of speaking. Hence, datadriven systems can perpetuate heteronormative ideas around ageing and foster existing structural inequalities across different groups of older adults.
 
 Discourses of what ' healthy ' or active ageing looks and feels like -from videos of octogenarian athletes to horror stories of living in care homes -add to a sense of anxiety of the futures associated with our ageing bodies and lives. Fears circulate where technologies are seen as ' /uniFB01 xes ' for unruly bodies, or as replacing humans in caring roles, and there are growing concerns over unequal access to longevity or immortality through these techno/uniFB01 xes (e.g. Cozza et al., 2019). These fears create anticipatory regimes that act in the present to perpetuate certain ideas, behaviours and stories about ageing and data /uniFB01 ed futures. Hence, we argue that regimes of anticipation around data /uniFB01 ed futures pervade the way we think about ageing futures (and vice versa), based on imaginaries that are lived and felt as inevitable in the present (Adams et al., 2009; Coleman, 2017). We now turn to a review of key concepts around anticipation and futures-in-the-making that will inform our further analysis.
+
+
+<!-- PAGE 4 -->
+
 
 ## Regimes of anticipation and futures-in-the-making
 
@@ -98,6 +111,10 @@ The fact that regimes of anticipation are always multiple and contested, but als
 Starting from the premise that the future is uncertain, unpredictable and unknown we brought together older adults, policy makers, community organisers and healthcare practitioners. We wanted to work to connect viewpoints, practices and approaches in order to critique and disrupt current anticipatory regimes (Zamenpoulos and Alexiou, 2020) through mutual learning, imagining and making together. We entered into this experiment with trepidation taking the challenge, as set out by Markham concerning discursive closure, seriously in seeking out methods to open up these possibilities. We also wanted to recognise the roles played by affect and embodiment in closing down capacities for ' thinking otherwise ' in relation to ageing and data /uniFB01 ed futures, staying attuned to the relationalities, and affective forces at work in imagining otherwise (Lupton and Watson, 2022).
 
 We created a space for diverse publics to come together to question and support others to explore, the promise of algorithmic systems and ' stuck ' techno/uniFB01 x or techno-apocalyptic imaginaries. We invited policy makers, community leaders, older adults and healthcare practitioners to come together in workshops in which we asked them to re-connect with data /uniFB01 ed futures of ageing as situated in ongoing and complex unfolding everyday experiences and regimes of power. Our aim was to work to build contact zones for rethinking our relations with data /uniFB01 ed and algorithmic futures, for challenging accepted imaginaries of ageing well with technologies. We wanted to rede /uniFB01 ne ideas of who is understood to be an expert in the making of data /uniFB01 ed
+
+
+<!-- PAGE 5 -->
+
 
 futures of ageing and better understand who has control over what is thinkable and desirable.
 
@@ -123,6 +140,10 @@ Wechose to use this game for several reasons. Firstly, we felt the approach woul
 
 We hoped that by enacting these methods we might be able to move people towards anticipating alternative data/uniFB01 ed futures of ageing that might recognise the ambivalences and injustices written into current regimes of anticipation. We hoped that the methods would also help bridge between abstract notions of data /uniFB01 ed ageing futures and felt and embodied experiences of everyday lives in the present. In this way we wanted to encourage groups to come back to and critique today. Through this we hoped to highlight ways we might loosen the sociotechnical imaginaries and therefore the enactments of anticipatory regimes around ageing described in the paper so far including those related to surveillance, privacy and control; ' truth
 
+
+<!-- PAGE 6 -->
+
+
 claims ' made about older adults ' bodies and lives through data; and forms of data resistance.
 
 We ran three workshops, each lasting three hours. One workshop took place in Bristol in the UK, one in Bremen in Germany, and one in Graz in Austria. We invited mixed groups to the workshops, including policy makers, age charities, community and voluntary sector workers and older adults. Each of the workshops introduced a social, political or economic context identi /uniFB01 ed as of interest to the participants invited. Between each of the workshops we re /uniFB02 ected on the previous ones and adapted the methods, both for the context but also following re /uniFB02 ections together on how the methods worked in practice.
@@ -138,6 +159,10 @@ We then introduced a version of the futures wheel activity (Figure 2) to ask the
 Figure 1. Thing from the future card types.
 
 <!-- image -->
+
+
+<!-- PAGE 7 -->
+
 
 Figure 2. The futures wheel (Glenn 2009).
 
@@ -163,6 +188,10 @@ The example comes from a group who received these four cards (Figure 4). Their d
 
 We were talking about it being linked to your doctor ' s surgery or hospital and it kind of comes up with an alert and kind of cuts out of all the exploratory, screening and consultations that you might have to catch things sooner. And it would download info and maybe have your family history.
 
+
+<!-- PAGE 8 -->
+
+
 Figure 3. Workshop room in Bristol.
 
 <!-- image -->
@@ -172,6 +201,10 @@ Figure 4. Cards dealt to the Health/Body Scanner group.
 <!-- image -->
 
 Through the Futures Wheel activity the group began to acknowledge some of the ambivalences, or unintended consequences written into the scanner device. They began to see how the Health/Body Scanner perpetuates some of the risk narratives circulating in the present around ageing in place and the importance of enabling independence for longer. They recognised that their design suggests a future where older adults do not need to leave their home at all in order to access healthcare, potentially leading to the unintended consequences of increased social isolation. Participants also worried about how the device might con/uniFB01 gure ageing bodies, as the affordances of the scanner involved ' /uniFB01 xing ' inherited disabilities and illnesses associated with ageing through continually repairing bodies assumed to be ' de /uniFB01 cit ' in some respect. The design also spoke to regimes of anticipations around increasing data surveillance and control and a need for preparation for later life throughout the lifecourse, working to deny (older) people a sense of agency over their bodies and everyday lives. The group expressed worries about potential hacking and questions of choice in relation to privacy and sharing -for instance who controls the data and who has access to it -which might inhibit its acceptance and use. Echoing familiar regimes of anticipation that address older adults paternalistically, the older adult here was not considered as agentic but rather set up as
+
+
+<!-- PAGE 9 -->
+
 
 being the victim of hacking and privacy concerns where their data was being collected by others. The group also raised concerns around intersecting digital and health inequalities in terms of the costs of the device and the digital capabilities needed to use it well. Here we noticed an in-built assumption of a continuation of ' business as usual ' in relation to capitalist modes of innovation and design, that participants found it hard to go beyond.
 
@@ -188,6 +221,10 @@ This Thing from the Future clearly spoke to regimes of anticipations around incr
 The Graz workshop took place in the town hall and was promoted through the senior citizen of /uniFB01 ce in the municipality. The participants included six older adults, three civil servants and two community organisers who formed selfselected groups around three tables. A member of the senior citizen of /uniFB01 ce welcomed participants. We, as workshop facilitators, gave a brief introduction to the aims of the workshop, but also, and this was different to our earlier workshops, encouraged participants to reconsider what technical innovation may be (Figure 5). To do this, we tried to challenge some common (mis)conceptions of technology through presenting some of the /uniFB01 rst human innovations: the hand wedge vs the basket. Following feminist thinkers, we then encouraged participants to think about technical innovation not just in terms of domination, ef /uniFB01 ciency and competition (e.g. the wedge) but also in terms of care and community (e.g. the basket) (Fisher, 1979; Le Guin, 1989). We also encouraged participants to think about technical innovation not simply as neutral tools but rather as socio-politically and socio-culturally embedded (e.g. how bicycles were appropriated by feminists in the late 19th century, e.g. Jungnickel, 2015).
 
 In the workshop, one group designed a Sunshine Room which becomes more interesting and beautiful the more diverse the people in the room are. The group started with the following prompts: Arc -Growth a few hundred years; Terrain -Social Justice; Mood -Respect; Object -Toy, and initially designed a ' Sun Swing ' in a room or as a holographic visualisations. People were envisaged as entering a room and everyone being able to get on a swing. The atmosphere was imagined to be one to increase
+
+
+<!-- PAGE 10 -->
+
 
 ## WAS IST TECHNISCHE INNOVATION?
 
@@ -223,6 +260,10 @@ Our experiments demonstrated that participatory futuring is not performed in a v
 
 Through our experiments we recognise that participatory futuring methods act in different ways to engage publics in certain types of anticipatory practices. We therefore also recognise the importance of understanding the assemblages we created through the choice of publics and practices utilised in the different workshops. We found that the different framings through the initial presentations in the workshops were important in supporting connections with the
 
+
+<!-- PAGE 11 -->
+
+
 everyday lives and work of those attending the workshops. For instance, in Bristol the ongoing Age Friendly City work, in Bremen urban planning and in Graz a more explicit focus on ageing and data /uniFB01 ed futures. This meant that those attending felt able to bring their expertise, knowledge and concerns to the workshop. In Bristol the age friendly city framing made certain things visible in thinking about ageing futures, in particular the WHO metrics being more focussed on health and well-being than a rights-based approach. In Bremen there was a focus on participatory urban planning as a collective anticipatory practice. And in Graz a more general struggle to determine how and which diverse groups of people may have a say in determining the future was prominent.
 
 We also found that the social, political and economic realities of the different countries played a part in the designs and stories imagined. For instance, austerity regimes in the UK were prevalent in many of the group ' s imaginaries, in particular in relation to the disintegration of the National Health Services. In Bremen the focus was very much on the transformation of the city with many (planned) constructions (e.g. a car free inner city). In Graz, questions around social cohesion and social participation were more prominent also due to the political climate and increasing living costs.
@@ -236,6 +277,10 @@ The prompt cards were helpful in supporting groups to create a ' thing ' that wa
 Overall, we found that it was productive when we took the participants further away from the gami /uniFB01 ed or imaginative mode, by asking them to consider how their future thing might be situated in certain environmental, economic, cultural, educational, political, psychological and technological contexts. Through this activity participants began to think about the possible unintended consequences of their designs and/or the assumptions about demographic ageing and old age that are built into many contemporary data-driven gerontechnologies. As facilitators committed to questioning these anticipatory regimes, we intervened to support groups to consider critical questions around data privacy, data practices in the everyday and the redistribution of agency across networks in relation to their designs. This focus on situating the ' thing ' as embedded, sitting within socio-political and socio-cultural assemblages (Bates et al., 2016; Kitchin and Lauriault, 2014) enabled some participants to question their own anticipatory assumptions around data /uniFB01 ed futures of ageing.
 
 We also saw reasons to believe that this kind of method can lead to thinking otherwise around ageing technofutures. However, it is important to note that these examples do not engage with data /uniFB01 ed futures of ageing but rather focus on technologies that support connectedness, agency and empathy. For instance, in Bristol, an evocative story of increased freedom and connectedness was told through a future transport system design which gently recognised diversity, enabling all, whatever their age, to access the resources of the city, including nature and green spaces. In Bremen an intergenerational and multicultural housing complex or a compulsory school subject called ' old age ' in Graz suggest a more connected, collective experience of ageing in a future world that foregrounds empathy instead of sympathy for older adults and connection
+
+
+<!-- PAGE 12 -->
+
 
 across generations. For example, through the school subject, children learn about the lived experiences of older people and that ' they themselves will age and be the older adults of tomorrow ' .
 
@@ -256,6 +301,10 @@ In a next iteration of our workshops, we see different options to experiment. On
 With our work, we join others in challenging powerful regimes of anticipation around data-driven technologies and in particular AI. We recognise, like others, that these anticipatory regimes create ' discursive closure ' (Markham, 2021) around what people consider possible, desirable and thinkable. Hence, our experiment with participatory futuring has highlighted that methods are not performed in a vacuum but are embedded in regimes of anticipations which are fuelled by powerful sociotechnical imaginaries that create certain future pathways and foreclose others. While Dan McQuillan (2022) has asked us to ' resist ' AI, we want to ask how people might imagine alternative and/or preferred data /uniFB01 ed futures. Doing this with older adults, practitioners and community organisers is particularly important as they are usually disregarded in conversations about futures. However, we recognise that, for these re-imagined futures to have any impact in the present, we might also need to work with those who hold power and currently perpetuate ageist approaches to technology designs and innovation for older adults, including technology developers and policy makers.
 
 In this paper we have only described one method of participatory futuring and we recognise that all methods act in different ways, in diverse settings and with different participants. It is therefore important to understand the assemblages we are creating through the choice of methods, publics and practices we are bringing together in these workshops. However, we believe our evidence suggests the value in bringing diverse publics together to consider data /uniFB01 ed futures of ageing otherwise through imaginative, affective methods based on ' life as it is apprehended, felt, embedded and embodied in the present ' (Candy and
+
+
+<!-- PAGE 13 -->
+
 
 Dunagan, 2017: 137). We found this approach enabled participants to consider their own anticipatory understandings and practices and, in some case, to critically re /uniFB02 ect on them and consider what needs to be done in the present.
 
@@ -302,6 +351,10 @@ Berridge C and Grigorovich A (2022) Algorithmic harms and digital ageism in the 
 - Cozza M, Crevani L, Hallin A, et al. (2019) Future ageing: Welfare technology practices for our future older selves. Futures 109: 117 -129.
 - Crooks R, D ' Ignazio C, Hintz A, et al. (2024) People ' s practices in the face of data power. In Dialogues in Data Power (80 -102). Bristol University Press.
 
+
+<!-- PAGE 14 -->
+
+
 - Curry A (2018) Worlds of Ursula K. Le Guin (Film). Available at: https://www.ursulakleguin.com/worlds-of-ursula-k-le-guin (last accessed 8 December 2024).
 - Dalmer N, Ellison K, Katz S, et al. (2022) Ageing, embodiment and data /uniFB01 cation: Dynamics of power in digital health and care technologies. International Journal of Ageing and Later Life 15(2): 77 -101.
 - Dunne A and Raby F (2013) Speculative Everything: Design, Fiction, and Social Dreaming . Cambridge, USA: MIT Press.
@@ -340,6 +393,10 @@ Berridge C and Grigorovich A (2022) Algorithmic harms and digital ageism in the 
 - McQuillan D (2022) Resisting AI: An anti-fascist approach to arti/uniFB01 cial intelligence . Bristol, UK: Bristol University Press.
 - Meskus M and Tikka E (2022) Speculative approaches in social science and design research: Methodological implications of working in ' the gap ' of uncertainty. Qualitative Research 24(2): 209 -228.
 - Miller R (2018) Transforming the future: Anticipation in the 21st century . London, UK: Taylor &amp; Francis.
+
+
+<!-- PAGE 15 -->
+
 
 - Poli R (2015) Social foresight. On the Horizon 23(2): 85 -99.
 - Poli R (2017) Introduction to Anticipation Studies . Cham, Switzerland: Springer.

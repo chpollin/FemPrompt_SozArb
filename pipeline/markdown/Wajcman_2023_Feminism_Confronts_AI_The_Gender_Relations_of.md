@@ -1,10 +1,11 @@
 ---
 source_file: Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.pdf
-conversion_date: 2026-02-03T09:30:06.833109
+conversion_date: 2026-02-03T19:01:01.266587
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## 4
 
 ## Feminism Confronts AI
@@ -21,6 +22,10 @@ Digitalisation presents immense potential to improve social and economic outcome
 
 Moreover, while the internet was initially viewed as a democratising platform, early emancipatory promises increasingly fall short as a small group of large technology corporations based in the Global North has emerged as a dominant force in the new global economy (see Hampton, Chapter 8 in this volume). These
 
+
+<!-- PAGE 2 -->
+
+
 'tech giants' monopolise markets and wield power over digital data, as major online platforms are found complicit in the spread of misinformation, hate speech and misogynistic (and racist) online abuse and harassment. In particular, there are concerns that unprecedented levels of data mining, or 'data extractivism' , algorithms and predictive risk models could entrench existing inequalities and power dynamics (Eubanks 2018). This is about the danger of encoding-and amplifying-offline inequities into online structures, as these technologies carry over the social norms and structural injustices of the offline world into the digital.
 
 This chapter will examine the gender relations of digitalisation, with a particular focus on AI and machine learning as the most contemporary feature of this.¹ Althoughthereis increasing recognition that technologies are both a reflection and crystallisation of society, we will argue that there is still insufficient focus on the ways in which gendered power relations are integral to and embedded in technoscience. This is as much the case with AI and data science as it was with previous waves of technological change.
@@ -32,6 +37,10 @@ This stark lack of diversity and inclusion in the field of AI and data science h
 Crucially, we stress that algorithmic bias is not solely the product of unconscious sexism or racism, nor bad training data, but the end result of a technoculture that
 
 ¹ Artificial Intelligence: 'When a machine or system performs tasks that would ordinarily require human (or other biological) brainpower to accomplish' (The Alan Turing Institute, 2021).
+
+
+<!-- PAGE 3 -->
+
 
 has systematically excluded women and people from marginalised groups from positions of leadership and power.
 
@@ -45,6 +54,10 @@ There is a scarcity of intersectional data on the tech sector, but the little da
 
 The World Economic Forum (2020) estimates that globally women make up approximately 26 percent of workers in data and AI roles more specifically, a number that drops to only 22 percent in the UK. This is partly due to the lack of clarity and newness of these professions-but it is also because of a hesitancy of big tech companies to share this data. As West et al. (2019, pp.10-12) explain, 'the current data on the state of gender diversity in the AI field is dire… the diversity and inclusion data AI companies release to the public is a partial view, and often contains flaws' . This is a significant barrier to research.
 
+
+<!-- PAGE 4 -->
+
+
 Given the scarcity of raw industry data available, researchers have drawn on other sources including online data science platforms, surveys, academia, and conference data. These approaches also provide mounting evidence of serious gaps in the gender diversity of the AI workforce. In 2018, WIRED and Element AI reviewed the AI research pages of leading technology companies and found that only 10-15 percent of machine learning researchers were women (Simonite 2018). Related research found that on average only 12 percent of authors who had contributed to the leading machine learning conferences (NIPS, ICML, and ICLR) in 2017 were women (Mantha and Hudson 2018).
 
 Indeed, there is more information about women in AI research and in the academy, due to the more readily available data. For example, Stathoulopoulos and Mateos-Garcia (2019) found that only 13.8 percent of AI research paper authors were women; at Google, it was 11.3 percent, and at Microsoft, 11.95 percent. Additionally, the AI Index (2021) found that female faculty make up just 16 percent of all tenure-track faculty whose primary focus is AI.
@@ -56,6 +69,10 @@ The statistics we have reviewed confirm that the newest wings of technology, tha
 Before concluding this section, it is important to acknowledge that so-called intelligent machines also depend on a vast, 'invisible' human labour force: those who carry out skilled technological work such as labelling data to feed algorithms, cleaning code, training machine learning tools, and moderating and transcribing content. These 'ghost workers' , often women in the Global South, are underpaid, undervalued, and lacking labour laws (Gray and Suri 2019; Roberts 2019; Atanasoski and Vora 2019). Given the evidence to date, there is no reason to expect the rise of the 'gig' or 'platform' economy to close the gender gap, particularly in the AI fields.
 
 ² See ' Where are the Women? Mapping the Gender Job Gap in AI ' (Young et al. 2021).
+
+
+<!-- PAGE 5 -->
+
 
 ## Feminist STS: From Technofeminism to Data Feminism
 
@@ -69,6 +86,10 @@ A broad social shaping or 'co-production' framework has now been widely adopted 
 
 ³ See, for example, the journal Catalyst: Feminism, Theory, Technoscience . For a recent overview, see Wagman and Parks (2021).
 
+
+<!-- PAGE 6 -->
+
+
 separate from society; rather, they are designed and produced by specific people in specific contexts. As such, artefacts have the potential to embody and reproduce the values and visions of the individuals and organisations that design and build them. And if 'technology is society made durable' (Latour 1990) then, in a patriarchal society, gender power relations will be inscribed into the process of technological change, in turn configuring gender relations.
 
 Such a mutual shaping approach, in common with technofeminist theory, conceives of technology as both a source and consequence of patriarchal relations (Wajcman 2004). In other words, gender relations can be thought of as materialised in technology, and masculinity and femininity in turn acquire their meaning and character through their enrolment and embeddedness in working machines. For example, gendered identities are found to be co-constructed with technologies and technical orientations, often in connection with alignments of race and class (Bardzell 2018; Pérez-Bustos 2018). Empirical research on everything from the microwave oven (Cockburn and Ormrod 1993) and the contraceptive pill (Oudshoorn 1994) to robotics and software agents (Suchman 2008) has clearly demonstrated that the marginalisation of women from the technological community has a profound influence on the design, technical content, and use of artefacts.
@@ -76,6 +97,10 @@ Such a mutual shaping approach, in common with technofeminist theory, conceives 
 The key insights of feminist STS on issues such as the gendering of skills and jobs; the conception of technology as a sociotechnical product and cultural practice; and the critique of binary categories of female/male, nature/culture, emotion/reason, and humans/machines are still foundational resources for contemporary research on gender and technology. In recent years, feminist STS has been enriched by its engagement with intersectional feminist analysis, critical race theorists and post-colonial theory (Crenshaw et al. 1995; Collins 1998; Benjamin 2019; Noble 2018; Sandoval 2000). There is increasing recognition of the ways in which gender intersects with other aspects of difference and disadvantage in the societies within which these technologies sit. Women are a multifaceted and heterogeneous group, with a plurality of experiences. Gender intersects with multiple aspects of difference and disadvantage involving race, class, ethnicity, sexuality, ability, age, and so on. For instance, women who are poor or belong to racial minorities experience the negative effects of digitalisation and automation more acutely (Buolamwini and Gebru 2018).
 
 An intersectional technofeminist lens is particularly pertinent as attention has expanded beyond the sexism and racism of the internet and digital cultures to the growing body of work on AI systems. In Data Feminism (2020: p.105; see Chapter 12 in this volume), D'Ignazio and Klein not only expose the glaring gender data gap-as we noted before-but also show how the data that feeds algorithms is biased. Echoing STS texts on the politics of scientific knowledge production, they highlight the epistemic power of classification systems and the values and judgements they encode (Bowker and Star 2000). Every dataset used to train machine
+
+
+<!-- PAGE 7 -->
+
 
 learning systems contains a worldview, reducing humans to 'false binaries and implied hierarchies, such as the artificial distinctions between men and women' (see also Crawford 2021). This necessitates the 'flattening out of humanity's plurality' (see Browne in this volume). In other words, the very process of classifying data, a core practice in AI, is inherently political. That is why narrow technical solutions to statistical bias and the quest for 'fairer' machine learning systems miss the point.
 
@@ -89,6 +114,10 @@ The stereotype of engineering and computer science as male domains is pervasive 
 
 'Masculine defaults' shape professional practices and career pathways, governing technical fields in particular (Cheryan and Markus 2020). As Wajcman (2010, p.144) explains, definitions of technological skill and expertise have been historically constructed in a way that privileges the masculine (as the 'natural' domain of men), rendering femininity as 'incompatible with technological pursuits' . For example, a number of works highlight the role of gender relations in the very definition and configuration of computing as a profession. Feminist historian Hicks (2017; see also Abbate 2012) recalls that computer programming was originally the purview of women. At the advent of electronic computing following the Second World War, software programming in industrialised countries was largely considered 'women's work' , and the first 'computers' were young women. As computer programming became professionalised, however, and power and
 
+
+<!-- PAGE 8 -->
+
+
 money became associated with the field, the gender composition of the industry shifted, marginalising the work of female technical experts by fashioning them into a technical 'underclass' . Structural discrimination edged women out of the newly prestigious computing jobs (Ensmenger 2012). Such persistent cultural associations around technology are driving women away from, and out of, industries which entail more 'frontier' technical skills such as AI.
 
 Indeed, as feminist scholars have long evidenced, when women participate in male-dominated occupations, they are often concentrated in the lower-paying and lower-status subfields. 'Throughout history, it has often not been the content of the work but the identity of the worker performing it that determined its status' , explains Hicks (2017, p.16). As women have begun to enter certain technological subdomains in recent years (often through boot camps and other atypical educational pathways), such as front-end development, these fields have started to lose prestige and experience salary drops (Broad 2019). Meanwhile, men are flocking to the new (and highly remunerated) data science and AI subspecialities.
@@ -101,6 +130,10 @@ Once defined by inequalities in access to digital technology, the digital gender
 
 It is important to note, however, that the gender skills gap is more marked in some countries than in others. For example, in Malaysia some universities
 
+
+<!-- PAGE 9 -->
+
+
 have up to 60 percent women on computer science programmes, with near parity also reported in certain Taiwanese and Thai institutions. Stoet and Geary (2018) even discuss a 'gender-equality paradox' , suggesting that the more gender equality in a country, the fewer women in STEM fields. They propose that women's engagement with technical subjects may be due to life-quality pressures in less gender-equal countries; there is likely a complex set of reasons including national cultures, and varying professional opportunities for women globally. Indeed, Arab countries have between 40 and 50 percent female participation in ICT programmes (a proportion far higher than many of the more gender-equal European countries). However, these examples are not representative of the broader trends worldwide.
 
 A variety of initiatives has been trialled in the past few decades to encourage morediversity in technological fields within higher education. Particularly notable are the successful models provided by the US universities Carnegie Mellon and Harvey Mudd, which have dramatically increased the participation of women in their computer science departments. For example, Carnegie Mellon increased the number of women from 7 percent in 1995 to 42 percent in 2000 (Frieze and Quesenberry 2019). This was achieved through a multi-pronged approach, which included grouping students by experience, as well as coaching for, and buy-in from, senior faculty. By 2019, Harvey Mudd also boasted 49 percent women in computer science. This suggests that steps towards resolving the issues can be straightforward with the right policies and leadership in place.
@@ -110,6 +143,10 @@ In concluding it should be noted that the gender skills gap not only limits wome
 ## Technoculture in Organisations
 
 Up to this point we have focused on how the gender skills gap, resulting from the history of computing, skews AI professions. However, the masculine culture of the
+
+
+<!-- PAGE 10 -->
+
 
 workplace itself, in particular the 'brogrammer' and 'geek' cultures synonymous with Silicon Valley, is a key factor hindering women's career progression.
 
@@ -121,6 +158,10 @@ In turn, this 'technoculture' has significant repercussions for recruitment, pro
 
 Finally, the 'bro' culture of technological work has resulted in a severe underrepresentation of women in entrepreneurship. This, almost paradoxically, is often heralded as the way for women to 'get ahead' in the digital revolution. Female founders in the United States received only 2.3 percent of venture capital funds in 2020, and women represent just 12 percent of venture capital decision makers (Reardon 2021). Atomico (2020) also found that 93 percent of all start-up funds raised in Europe in 2018 went to all-male founding teams-with just 2 percent to all-female founding teams.
 
+
+<!-- PAGE 11 -->
+
+
 As we will elaborate in the following section, the under-representation of women-especially women of colour (Williams et al. 2022)-on teams of inventors influences what actually gets invented. Patenting inventions has been largely a male endeavour, with a woman cited as the lead inventor on just 7.7 percent of all patents filed between 1977 and 2010 in the United States. Looking specifically at biomedical patents in 2010, Koning et al. (2021) found that teams made up of all women were 35 percent more likely than all-male teams to invent technologies relating to women's health. The researchers estimate that if women and men had produced an equal number of patents since 1976, there would be 6500 more female-focused inventions today.
 
 ## AI Feedback Loops: The Amplification of Gender Bias
@@ -130,6 +171,10 @@ The stark lack of diversity and inclusion in AI has wider implications. Mounting
 Although algorithms and automated decision-making systems are presented and applied as if they are impartial, neutral, and objective, bias enters, and is amplified through, AI systems at various stages (e.g. Leavy 2018; Gebru 2020). For example, the data used to train algorithms may under-represent certain groups or encode historical bias against marginalised demographics, due to previous decisions on what data to collect, and how it is curated. Data created, processed, and interpreted within unequal power structures can reproduce the same exclusions and discriminations present in society.
 
 A key example of this is the 'gender data gap'; the failure to collect data on women, that is, gender-disaggregated data. As Criado Perez (2019) explains, in some instances this directly jeopardises women's health and safety: heart failure trials, historically based on male participants, result in women's heart attacks being misdiagnosed, and seat-belt designs based on the male body result in women being morelikely to be seriously injured in car crashes. Furthermore, the gender data gap tends to be larger for low and middle-income countries. A 2019 Data 2X study of national databases in fifteen African countries found that sex-disaggregated data were available for only 52 percent of the gender-relevant indicators. When deep learning systems are trained on data that contain biases, they are reproduced and amplified. Fei-Fei Li, a prominent Stanford researcher in the AI field, describes this simply as 'bias in, bias out' (Hempel 2017).
+
+
+<!-- PAGE 12 -->
+
 
 Indeed, this issue is not only about exclusion, but also about the risks and potential for harm due to the increased visibility that including and collecting data on certain populations might bring them. For example, some communities are more heavily subject to surveillance and therefore more likely to appear in police databases. This is termed the 'paradox of exposure' by D'Ignazio and Klein (2020). The power of data to sort, categorise, and intervene, alongside corporations and states' ability to use data for profit and surveillance, has been stressed by Taylor (2017).
 
@@ -141,6 +186,10 @@ A growing number of AI products and systems are making headlines for their discr
 
 The introduction of automated hiring is particularly concerning, as the fewer the number of women employed within the AI sector, the higher the potential for future AI hiring systems to exhibit and reinforce gender bias, and so on. Perversely, Sánchez-Monedero et al. (2020) found that automated hiring systems that claim to detect and mitigate bias obscure rather than improve systematic discrimination in the workplace.
 
+
+<!-- PAGE 13 -->
+
+
 There has also been concern about AI bias in the context of the pandemic. For example, Barsan (2020) found that computer vision models (developed by Google, IBM, and Microsoft) exhibited gender bias when identifying people wearing masks for COVID protection. The models were consistently better at identifying masked men than women and, most worrisome, they were more likely to identify the mask as duct tape, gags, or restraints when worn by women. Pulse oximetry devices used for warning of low blood oxygenation in COVID-19 were found to significantly underestimate hypoxaemia in Black patients-'current assumptions and algorithms, often derived from heavily white patient populations, may work against black patients' (BMJ 2020).
 
 Several studies on computer vision have highlighted encoded biases related to gender, race, ethnicity, sexuality, and other identities. For instance, facial recognition software successfully identifies the faces of white men but more often fails to recognise those of dark-skinned women (Buolamwini and Gebru 2018). Further, research analysing bias in Natural Language Processing (NLP) systems reveal that word embeddings learned automatically from the way words co-occur in large text corpora exhibit human-like gender biases (Garg et al. 2018). For example, when translating gender-neutral language related to STEM fields, Google Translate defaulted to male pronouns (Prates et al. 2019). Additionally, AI voice assistants (such as Alexa and Siri) that mimic the master/servant relations of domestic service are aestheticised as a native-speaking, educated, white woman (Phan 2019; see also Rhee in this volume).
@@ -148,6 +197,10 @@ Several studies on computer vision have highlighted encoded biases related to ge
 Finally, it is important to stress that technical bias mitigation (including algorithmic auditing) and fairness metrics for models and datasets are by no means sufficient to resolve bias and discrimination (Hutchinson and Mitchell 2019). Notably, since 'fairness' cannot be mathematically defined, and is rather a deeply political issue, this task often falls to the developers themselves-the very teams in which the diversity crisis lies (Hampton 2021). While we laud the considerable efforts of the Human-Computer Interaction (HCI)/Computer-Supported Cooperative Work community, among others, to design tools to mitigate data, algorithmic, and workers' biases, framing the problem as one of 'bias' risks encoding the premise ' that there is an absolute truth value in data and that bias is just a 'distortion' from that value ' (Miceli et al. 2022, p.4).
 
 As we noted before, feminist STS has demonstrated that the notion of scientific objectivity as a 'view from nowhere' is both androcentric and Eurocentric. It is therefore highly attuned to the privileged and naturalised epistemological standpoints or worldviews inscribed in data and systems that reproduce the status quo. We urgently need more nuanced data and analysis on women in AI to better understand these processes and strengthen efforts to avoid hard-coded discrimination. It is one thing to recall biased technology, but another to ensure that the biased technology is not developed in the first place.
+
+
+<!-- PAGE 14 -->
+
 
 ## Conclusion
 
@@ -162,6 +215,10 @@ If then technology is both a reflection and a crystallisation of society, femini
 - Abbate, J. (2012) Recoding Gender: Women's Changing Participation in Computing . Cambridge, MA: MIT Press.
 - Alegria, S. (2019) 'Escalator or Step Stool? Gendered Labor and Token Processes in Tech Work' . Gender &amp; Society , 33(5): 723.
 - Ashcraft, C., B. McLain, and E. Eger. (2016) 'Women in Tech: The Facts' . National Center for Women &amp; Technology (NCWIT).
+
+
+<!-- PAGE 15 -->
+
 
 - Atanasoski, N. and K. Vora. (2019) Surrogate Humanity. Race, Robots, and the Politics of Technological Futures . Duke University Press.
 - Atomico (2018) 'The State of European Tech' . Atomico.
@@ -189,6 +246,10 @@ If then technology is both a reflection and a crystallisation of society, femini
 - Garg, N., L. Schiebinger, D. Jurafsky, and J. Zou. (2018) 'Word Embeddings Quantify 100 Years of Gender and Ethnic Stereotypes' . Proceedings of the National Academy of Sciences USA 115(16): E3635-E3644.
 - Gebru, T. (2020) Race and Gender. In The Oxford Handbook of Ethics of AI , eds M. Dubber, F. Pasquale and S. Das, pp. 253-270. Oxford: OUP.
 
+
+<!-- PAGE 16 -->
+
+
 - Google (2020) 'Google Diversity Annual Report 2020' . 1-61.
 - Gray, M. and S. Suri. (2019) Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass . Boston: Harcourt.
 - Gurumurthy, A., N. Chami, and C. A. Billorou. (2018) 'Gender Equality in the Digital Economy: Emerging Issues' . Development Alternatives With Women for a New Era (DAWN) August.
@@ -213,6 +274,10 @@ If then technology is both a reflection and a crystallisation of society, femini
 - Mehrabi, N., F. Morstatter, N. Saxena, K. Lerman, and A. Galstyan. (2019) 'A Survey on Bias and Fairness in Machine Learning' . Preprint at arXiv .
 - Miceli, M., J. Posada, and T. Yang. (2022) 'Studying up Machine Learning Data: Why Talk about Bias When We Mean Power?'. Conference Proceedings ACM HCI . 6, GROUP, Article 34 (January).
 
+
+<!-- PAGE 17 -->
+
+
 - Murray, S. (2016) 'When Female Tech Pioneers Were the Future' . Financial Times 7 March.
 - Noble, S. (2018) Algorithms of Oppression: How Search Engines Reinforce Racism . New York: NYU Press.
 - O'Neil, C. (2016) Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy . London: Allen Lane.
@@ -234,6 +299,10 @@ If then technology is both a reflection and a crystallisation of society, femini
 - Stoet, G. and D. C. Geary. (2018) 'The Gender-Equality Paradox in Science, Technology, Engineering, and Mathematics Education' . Psychological Science 29(4): 581-593.
 - Suchman, L. (2008) Human-Machine Reconfigurations . Cambridge: CUP.
 - Taylor, L. (2017) 'What is Data Justice? The Case for Connecting Digital Rights and Freedoms Globally' . Big Data and Society 4(2): 1-14.
+
+
+<!-- PAGE 18 -->
+
 
 - Tech Nation (2018) 'Diversity and Inclusion in UK Tech Companies'. https:// technation.io/insights/diversity-and-inclusion-in-uk-tech-companies/
 - UNESCO (2020) Artificial Intelligence and Gender Equality: Key Findings of UNESCO's Global Dialogue . UNESCO Publishing.

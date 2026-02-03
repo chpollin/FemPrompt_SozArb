@@ -1,10 +1,11 @@
 ---
 source_file: UNESCO_2024_Bias_against_women_and_girls_in_large_language.pdf
-conversion_date: 2026-02-03T09:27:37.507011
+conversion_date: 2026-02-03T18:58:37.490493
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -16,6 +17,10 @@ InternationalResearchCentre onArtificiallntelligence undertheauspicesofUNEScO
 ## Challenging Systematic Prejudices
 
 An Investigation into Gender Bias in Large Language Models
+
+
+<!-- PAGE 2 -->
+
 
 Cite as: UNESCO, IRCAI (2024). ' Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models '.
 
@@ -46,6 +51,10 @@ This work has been possible with funding from the European Union's Horizon 2020 
 
 The authors Noah Siegel and Jackie Kay hold joint appointments at DeepMind and University College London; however, the work presented in this report is exclusively within the scope of their roles at University College London.
 
+
+<!-- PAGE 3 -->
+
+
 ## Executive summary
 
 Artificial intelligence is being adopted across industries at an unprecedented pace. Alongside its posited benefits, AI also presents serious risks to society, making the implementation of normative frameworks to reduce these risks a global imperative. The UNESCO Recommendation on the Ethics of AI asserts that ' AI actors should make all reasonable efforts to minimize and avoid reinforcing or perpetuating discriminatory or biased applications and outcomes throughout the life cycle of the AI system to ensure fairness of such systems '. To date however, AI-based systems often perpetuate (and even scale and amplify) human, structural and social biases. These biases not only prove difficult to mitigate, but may also lead to harm at the individual, collective, or societal level.
@@ -60,6 +69,10 @@ When  it  came  to  sexual  identity,  LLMs  generated  negative  content  about
 
 The issue brief reveals that efforts to address biased AI must mitigate bias where it originates in the AI development cycle, but also mitigate harm in the AI's application context. This approach not only requires the involvement of multiple stakeholders, but as the recommendations provided in  this  brief  make  plain,  a  more  equitable  and  responsible  approach  to  AI  development  and deployment writ large.
 
+
+<!-- PAGE 4 -->
+
+
 In this respect, governments and policymakers play a pivotal role. They can establish frameworks and  guidelines  for  human  rights-based  and  ethical  AI  use  that  mandate  principles  such  as inclusivity,  accountability,  and  fairness  in  AI  systems.  They  can  enact  regulations  that  require transparency in AI algorithms and the datasets they are trained on, ensuring biases are identified and corrected. This includes creating standards for data collection and algorithm development that prevent biases from being introduced or perpetuated, or the establishment of guidelines for equitable  training  and  AI  development.  Moreover,  implementing  regulatory  oversight  to  ensure these standards are met and exploring regular audits of AI systems for bias and discrimination can help maintain fairness over time.
 
 Governments can also mandate technology companies to invest in research that explores the impacts of AI across different demographic groups to ensure that AI development is guided by ethical considerations and societal well-being. Establishing multi-stakeholder collaborations that include technologists, civil society, and affected communities in the policy-making process can also ensure that diverse perspectives are considered, making AI systems more equitable and less prone to perpetuating harm. Additionally, promoting public awareness and education on AI ethics and biases empowers users to critically engage with AI technologies and advocate for their rights.
@@ -67,6 +80,10 @@ Governments can also mandate technology companies to invest in research that exp
 For  technology  companies and developers of AI systems, to mitigate gender bias at its origin in  the  AI  development  cycle,  they  must  focus  on  the  collection  and  curation  of  diverse  and inclusive training datasets. This involves intentionally incorporating a wide spectrum of gender representations and perspectives to counteract stereotypical narratives. Employing bias detection tools is crucial in identifying gender biases within these datasets, enabling developers to address these issues through methods such as data augmentation and adversarial training. Furthermore, maintaining transparency through detailed documentation and reporting on the methodologies used for bias mitigation and the composition of training data is essential. This emphasizes the importance of embedding fairness and inclusivity at the foundational level of AI development, leveraging both technology and a commitment to diversity to craft models that better reflect the complexity of human gender identities.
 
 In  the  application  context  of  AI,  mitigating  harm  involves  establishing  rights-based  and ethical use guidelines that account for gender diversity and implementing mechanisms for continuous improvement based on user feedback. Technology companies should integrate bias mitigation tools  within  AI  applications,  allowing  users  to  report  biased  outputs  and  contributing  to  the model's ongoing refinement. The performance of human rights impact assessments can also alert companies to the larger interplay of potential adverse impacts and harms their AI systems may propagate. Education and awareness campaigns play a pivotal role in sensitizing developers, users, and stakeholders to the nuances of gender bias in AI, promoting the responsible and informed use of technology. Collaborating to set industry standards for gender bias mitigation and engaging with regulatory bodies ensures that efforts to promote fairness extend beyond individual companies, fostering a broader movement towards equitable and inclusive AI practices. This highlights the necessity  of  a  proactive,  community-engaged  approach  to  minimizing  the  potential  harms  of gender bias in AI applications, ensuring that technology serves to empower all users equitably.
+
+
+<!-- PAGE 5 -->
+
 
 <!-- image -->
 
@@ -82,6 +99,10 @@ This widespread bias not only undermines the rights and opportunities of women a
 
 3 UNESCO, 2022b ; UNESCO 2019c.
 
+
+<!-- PAGE 6 -->
+
+
 Figure 1: Perpetuation of inequality
 
 ## Ways AI Perpetuates Biases
@@ -89,6 +110,10 @@ Figure 1: Perpetuation of inequality
 <!-- image -->
 
 Nevertheless, AI could potentially advance the aims of gender equality and equity worldwide if, for instance, it is harnessed ethically and inclusively, or if it is developed by diverse teams which aim for positive societal impacts, and more generally, if it is designed to mitigate -rather than perpetuate -inequality and gender disparity in its interactions with society.
+
+
+<!-- PAGE 7 -->
+
 
 <!-- image -->
 
@@ -106,6 +131,10 @@ Bias in AI can be introduced at any stage of its development, from design and mo
 - Representation  Bias:  When  training  datasets  do  not  adequately  represent  all  groups, leading  to  poor  generalization.  Collecting  more  data  from  under-represented  groups  is  a solution, albeit a challenging one due to privacy norms. An example includes a pathology classification system failing for under-served populations like Hispanic female patients 4 .
 
 4 Seyyed-Kalantari et al., 2021.
+
+
+<!-- PAGE 8 -->
+
 
 ## 2. Biases in Algorithm Selection:
 
@@ -133,6 +162,10 @@ In summary, the scale, adaptability, and intricate development process of LLMs p
 Mitigating  algorithmic  harm  necessitates  a  deep  understanding  of  the  AI  system's  application context, the potential accumulation of harmful effects over time, and how this feedback loop can influence the system's development. This comprehensive approach is crucial for minimizing harm and ensuring AI applications align with societal values and expectations, especially in addressing
 
 5 Straw &amp; Callison-Burch, 2020.
+
+
+<!-- PAGE 9 -->
+
 
 and preventing gender-based violence and discrimination.
 
@@ -170,6 +203,10 @@ In this study, different LLMs were examined for 'regard', which quantifies the d
 
 13 Sheng et al., 2019.
 
+
+<!-- PAGE 10 -->
+
+
 be considered an instance of negative regard for the subject, and ' The woman made a living as a well-respected engineer. ' would be considered positive. Three models were compared 14 : (1) the older generation GPT-2 15 model from OpenAI, (2) the recent open-source Llama2 16 model released by Meta and (3) ChatGPT 17 . The first two models are examples of foundational LLMs which are not yet adapted as conversational agents, while ChatGPT is an instruction-tuned chatbot which has undergone reinforced learning from human feedback (RLHF) to align the model to the safety policies defined by OpenAI.
 
 This method reveals how LLMs, based on their training, might associate genders with different occupations or characteristics.
@@ -191,6 +228,10 @@ In contrast, ChatGPT generated positive or neutral content in over 80% of cases 
 16 https://ai.meta.com/blog/llama-2-update/
 
 17 https://platform.openai.com/docs/models/gpt-3-5
+
+
+<!-- PAGE 11 -->
+
 
 ## Study  3:  Repetitiveness  of  Generated  Text  in  Different  Cultural  and  Gender Contexts
 
@@ -216,6 +257,10 @@ Despite  these  challenges,  the  transparency  of  open-source  LLMs  provides 
 
 19 Demonstrated by lower average diversity values.
 
+
+<!-- PAGE 12 -->
+
+
 ## Diversity and Stereotyping in LLMs
 
 The study explores gender biases in open-source Large Language Models (LLMs) by analyzing open-ended  language  generation  tasks.  Unlike  traditional  methods  that  use  multiple-choice questions and focus on specific biases, this research prompted Llama2 Chat to create stories about boys, girls, women, and men, generating 1,000 stories for each category. The most overrepresented words for each noun were then depicted in a word cloud:
@@ -229,6 +274,10 @@ By  comparing  word  frequencies,  significant  stereotypical  differences  emer
 This analysis expanded on gender bias studies by including the impact of nationality, particularly focusing on the distinction between the Global North and South. The study prompted an AI model to generate stories based on gendered nouns combined with nationalities, like 'Afghan woman' or 'Uzbekistani boy,' and analyzed the narratives for thematic differences. Findings reveal:
 
 - Global South narratives often highlighted community, family, and village, with a pronounced focus  on  hardships,  labor,  and  education,  albeit  with  mentions  of  dreams. This  pattern was particularly noted in narratives about women, where there was also an emphasis on stereotypically feminine activities like textiles and weaving, alongside a stronger focus on academic and career-oriented terms compared to the previous analysis.
+
+
+<!-- PAGE 13 -->
+
 
 - Global North narratives tended towards a more lighthearted or wistful tone, with frequent mentions of love, feelings, and exploring. Stereotypical masculine appearances (e.g., beard, rugged) and activities (e.g., fishing, blacksmithing) were common in stories about men, while stereotypically feminine terms (e.g., sparkle, baking) appeared in stories about women.
 
@@ -250,6 +299,10 @@ Global North, man/boy
 
 <!-- image -->
 
+
+<!-- PAGE 14 -->
+
+
 <!-- image -->
 
 ## Discussion and Societal Implications
@@ -266,6 +319,10 @@ Addressing these risks requires holistic approaches, including judicial and soci
 
 14
 
+
+<!-- PAGE 15 -->
+
+
 <!-- image -->
 
 ## Conclusion
@@ -275,6 +332,10 @@ This briefing specifically addresses the pervasive issue of gender bias against 
 Open-source models such as GPT-2 and Llama 2 offer unique advantages, including the capacity to create models that are both transparent and self-examining, capable of identifying and measuring biases in the data upon which they were trained. This could also shed light on inherent biases within society. The recommendations provided here aim to lay the groundwork for reducing bias in LLMs, targeting fairness and inclusivity for all genders, stakeholders, and communities throughout the AI development process.
 
 21 As discussed in (Birhane et al., 2023) and (Wagner et al., 2021).
+
+
+<!-- PAGE 16 -->
+
 
 <!-- image -->
 
@@ -287,6 +348,10 @@ Open-source models such as GPT-2 and Llama 2 offer unique advantages, including 
 - Establish  Human  Rights-based  and  Ethical  AI  Frameworks:  Governments  should  create guidelines, governance models, and regulations that enforce inclusivity, accountability, and fairness in AI systems, in alignment with UNESCO's Recommendation on the Ethics of AI, including transparency in algorithms and training data to identify and correct biases. The performance of human rights impact assessments can also alert companies to the larger interplay of potential adverse impacts and harms their AI systems may propagate.
 - Regulatory Oversight and Audits: Implement oversight mechanisms and conduct regular audits to ensure AI systems adhere to rights-based and ethical standards, free from bias and discrimination.
 - Publish characteristics, contexts and output properties for which AI models must ensure equitable  performance ,  alongside  guidelines  for  approaches  to  reinforcement  learning from human feedback (RLHF) which are underpinned by the protection of human rights and vulnerable groups .
+
+
+<!-- PAGE 17 -->
+
 
 ## AI Developers to:
 
@@ -313,6 +378,10 @@ Open-source models such as GPT-2 and Llama 2 offer unique advantages, including 
 - Prioritize the integration of ethical considerations and bias mitigation strategies from the outset of AI development . Thorough bias audits must be carried out as part of comprehensive ex-ante  (pre-market  release)  and  ex-post  (post-market  release)  tests,  and -critically -ensuring diverse representation within development teams.
 - Perform in-depth risk assessments and threat modelling speciflcally for vulnerable groups , and publish 'risk cards' which reflect the AI application's performance.
 
+
+<!-- PAGE 18 -->
+
+
 4. Insights into Human Bias: The challenge of detecting gender bias in LLMs also presents an opportunity to uncover and address underlying human biases against gender, as reflected in the data sources used to train these models. To leverage this opportunity, UNESCO calls on:
 
 ## Policymakers to:
@@ -333,6 +402,10 @@ Open-source models such as GPT-2 and Llama 2 offer unique advantages, including 
 - Respond to public demand for a diverse and non-stereotyped representation of intersectional identities in AI models, mobilizing resources to ensure the equitable performance of models for all genders and sociocultural groups .
 - Engage  with advocacy  groups  to  facilitate  the  auditing  and  challenging  of  AI  tools  and applications which are currently in service . This includes the possibility to externally validate the correctness and authenticity of the information or content created by advanced generative models, which may facilitate socio-political coercion, amongst other human rights abuses.
 
+
+<!-- PAGE 19 -->
+
+
 ## References
 
 - Birhane, A., Prabhu, V., Han, S., &amp; Boddeti, V. N. (2023). On Hate Scaling Laws For Data-Swamps. arXiv. https:// doi.org/10.48550/arXiv.2306.13141
@@ -352,6 +425,10 @@ Open-source models such as GPT-2 and Llama 2 offer unique advantages, including 
 - Li,  T.,  Khot,  T.,  Khashabi,  D.,  Sabharwal,  A.,  &amp;  Srikumar,  V.  (2020). UnQovering  Stereotyping  Biases  via Underspecifled Questions . arXiv. https://doi.org/10.48550/arXiv.2010.02428
 - Liu, X. et al. (2023).  Illness severity assessment of older adults in critical illness using machine learning (ELDER-ICU): an international multicentre study with  subgroup bias evaluation. The Lancet Digital Health , Volume 5, Issue 10, e657 -e667
 - Liu, L. T., Dean, S., Rolf, E., Simchowitz, M., &amp; Hardt, M. (2018). Delayed Impact of Fair Machine Learning. Proceedings of the 35th International Conference on Machine Learning, 3150 -3158.
+
+
+<!-- PAGE 20 -->
+
 
 - NCSES. (2023). Diversity and STEM: Women, Minorities, and Persons with Disabilities. https://ncses.nsf.gov/ pubs/nsf23315/
 - Nosek, B. A., Banaji, M. R., &amp; Greenwald, A. G. (2002a). Harvesting implicit group attitudes and beliefs from a demonstration web site. Group Dynamics: Theory, Research, and Practice , 6 (1), 101 -115. https://doi. org/10.1037/1089-2699.6.1.101
@@ -374,7 +451,15 @@ Open-source models such as GPT-2 and Llama 2 offer unique advantages, including 
 - UNESCO.  (2019a). First  UNESCO  recommendations  to  combat  gender  bias  in  applications  using  artiflcial intelligence .  UNESCO.  https://www.unesco.org/en/articles/first-unesco-recommendations-combatgender-bias-applications-using-artificial-intelligence
 - UNESCO. (2019b). I'd  blush  if  I  could:  closing  gender  divides  in  digital  skills  through  education .  UNESCO Digital Library. https://unesdoc.unesco.org/ark:/48223/pf0000367416.page=1
 
+
+<!-- PAGE 21 -->
+
+
 - UNESCO.  (2019c). Artiflcial intelligence in education: Challenges and opportunities for sustainable development. UNESCO  Digital Library. UNESCO  Digital Library. https://unesdoc.unesco.org/ ark:/48223/pf0000366994 UNESCO.  (2020). Artiflcial  intelligence  and  gender  equality:  Key  flndings  of UNESCO's Global  Dialogue . UNESCO Digital Library. https://unesdoc.unesco.org/ark:/48223/pf0000374174 UNESCO. (2022a). Recommendation on the Ethics of Artiflcial Intelligence . UNESCO Digital Library. https:// unesdoc.unesco.org/ark:/48223/pf0000381137 UNESCO. (2022b). The Effects of AI on the Working Lives of Women . UNESCO Digital Library. https://unesdoc. unesco.org/ark:/48223/pf0000380861 UNESCO.  (2023a). Ethical  impact  assessment:  A  tool  of  the  Recommendation  on  the  Ethics  of  Artiflcial Intelligence . UNESCO Digital Library. https://unesdoc.unesco.org/ark:/48223/pf0000386276 UNESCO. (2023b). Technology-facilitated gender-based violence in an era of generative AI. UNESCO Digital Library. https://unesdoc.unesco.org/ark:/48223/pf0000387483 UNFPA.  (2021). Technology-facilitated  Gender-based  Violence:  Making  All  Spaces  Safe. UNFPA.  https:// www.unfpa.org/publications/technology-facilitated-gender-based-violence-making-all-spaces-safe Wagner,  C.,  Strohmaier,  M.,  Olteanu,  A.,  Kıcıman,  E.,  Contractor,  N.,  &amp;  Eliassi -Rad,  T.  (2021).  Measuring algorithmically infused societies. Nature , 595 (7866), Article 7866. https://doi.org/10.1038/s41586021-03666-1 Weidinger,  L.,  Mellor,  J.,  Rauh,  M.,  Griffin,  C.,  Uesato,  J.,  Huang,  P.-S.,  Cheng,  M.,  Glaese,  M.,  Balle,  B., Kasirzadeh, A., Kenton, Z., Brown, S., Hawkins, W., Stepleton, T., Biles, C., Birhane, A., Haas, J., Rimell, L., Hendricks, L. A., … Gabriel, I. (2021). Ethical and social risks of harm from Language Models . arXiv. https://doi.org/10.48550/arXiv.2112.04359 WHO. (2023). Gender and Health. https://www.who.int/health-topics/gender Wiesner, K., Birdi, A., Eliassi-Rad, T., Farrell, H., Garcia, D., Lewandowsky, S., Palacios, P., Ross, D., Sornette, D., &amp; Thébault, K. (2018). Stability of democracies: A complex systems perspective. European Journal of Physics , 40(1), 014002. https://doi.org/10.1088/1361-6404/aaeb4d Men Also Do Laundry: Multi-Attribute Bias Ampliflcation
 - Zhao, D.,  Andrews,  J. T.  A.,  &amp;  Xiang,  A.  (2023). (arXiv:2210.11924). arXiv. https://doi.org/10.48550/arXiv.2210.11924
+
+
+<!-- PAGE 22 -->
+
 
 <!-- image -->

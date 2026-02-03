@@ -1,10 +1,11 @@
 ---
 source_file: Tun_2025_Trust_in_artificial_intelligence–based_clinical.pdf
-conversion_date: 2026-02-03T09:27:08.754170
+conversion_date: 2026-02-03T18:58:09.865017
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Review
 
 ## Trust in Artificial Intelligence-Based Clinical Decision Support Systems Among Health Care Workers: Systematic Review
@@ -35,6 +36,10 @@ Results: A total of 27 studies met the inclusion criteria, involving diverse hea
 
 Conclusions: The findings highlight the need for explainable AI models, comprehensive training, stakeholder involvement, and human-centered design to foster health care workers' trust in AI-CDSSs. Although the heterogeneity of study designs and lack of specific data limit further analysis, this review bridges existing gaps by identifying key themes that support trust in AI-CDSSs. It also recommends that future research include diverse demographics, cross-cultural perspectives, and contextual differences in trust across various health care professions.
 
+
+<!-- PAGE 2 -->
+
+
 J Med Internet Res 2025;27:e69678; doi: 10.2196/69678
 
 Keywords: trust in artificial intelligence; decision support systems; health care workers; PRISMA
@@ -61,6 +66,10 @@ Our  systematic  review  follows  the  Cochrane  Collaboration Handbook  [14,15]
 
 We  conducted  a  systematic  search of published studies focusing  on  trust  in  AI-CDSS  between  January  1,  2020, and  November  30,  2024,  guided  by  PRISMA  guidelines with  the  PICO  (population,  intervention,  comparison,  and outcome) framework [14,16].  This  study  period  was  chosen to  reflect  the  advancements  and  increased  investment  in AI,  particularly  following  the  release  of  generative  models such as ChatGPT in the health care sector, especially in the
 
+
+<!-- PAGE 3 -->
+
+
 aftermath of the COVID-19 pandemic. Our sources included PubMed,  Scopus,  and  Google  Scholar.  The  search  strategy used  a  combination  of  English  keywords,  including  'trust' or  'acceptance'  or  'perception'  and  'artificial  intelligence' or  'AI'  and  'decision  support  systems'  or  'clinical  decision support' or 'AI-based decision support' and 'healthcare workers'  or  'clinicians'  or  'nurses'  or  'medical  professionals' or 'healthcare providers.' Publication date filters were applied  to  include  only  studies  within  the  specified  time frame. Additionally, we used a snowball strategy to identify further  sources  from  the  references  of  relevant  full  texts. Medical Subject Headings (MeSH) and free-text terms were used  to  maximize  search  sensitivity  and  ensure  comprehensive coverage of relevant literature, as described in Multimedia Appendix 1.
 
 ## Eligibility Criteria
@@ -85,6 +94,10 @@ The quality of qualitative studies and the qualitative components  of  mixed-met
 
 The  article  selection  process  consisted  of  2  phases:  (1)  a review of titles and abstracts and (2) a full-text review. Figure 1 illustrates the study selection process. Initially, 333 records were  identified  from  3  databases:  PubMed  (69  records), Scopus  (142  records),  and  Google  Scholar  (122  records). An  independent  reviewer  screened  these  records  to  remove duplicates and articles deemed irrelevant based on titles and abstracts, resulting in 60 records advancing to the next stage. Further screening excluded 20 articles due to unsuitable study designs,  leaving  40  for  eligibility  assessment.  Following  an in-depth  full-text  review  and  final  discussions  among  the reviewers,  13  articles  were  excluded  for  lacking  a  focus  on trust in AI-based decision support systems among health care workers.  Ultimately,  27  studies  were  included  in  the  final analysis.
 
+
+<!-- PAGE 4 -->
+
+
 Figure 1. PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) flowchart for the study selection process. AI: artificial intelligence.
 
 <!-- image -->
@@ -94,6 +107,10 @@ Figure 1. PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Anal
 A total of 23 studies were assessed using the CASP checklist for qualitative analysis (Table 1), while 4 studies used other methodologies.  Among  the  23  studies,  the  majority  (n=19, 83%)  received  a  'Yes'  rating  for  most  CASP  criteria  and were  categorized  as  'valuable'  or  'very  valuable'  in  the quality  assessment.  Studies  categorized  as  'semivaluable' (n=4,  17%)  were  flagged  for  issues  such  as  the  inappropriate  use  of  qualitative  methods  to  measure  nonsubjective  outcomes,  suboptimal  sample  recruitment  strategies,  or insufficient  consideration  of  bias.  Although  quality  assessment was not an inclusion criterion for this systematic review, it  was  conducted  to  provide  an  overview  of  the  quality of the eligible literature. Consequently,  studies rated as
 
 'semivaluable' were still included in the data analysis. While these studies were limited in methodological rigor and offered less  robust  insights  into  the  tools  being  evaluated,  they contributed unique perspectives on health care workers' trust in  AI-CDSS  tools  that  were  not  captured  in  other  included studies.  The  included  studies  also  discussed  several  limitations,  including  small  sample  sizes  and  various  biases,  such as potential  selection  bias,  cognitive  biases  (eg,  anchoring  bias),  and  interviewer  bias  commonly  associated  with qualitative  research.  Other  limitations  included  inaccuracies in  self-reported  data,  regional  differences  in  AI  exposure, participants' familiarity with the study context, and a focus on specific AI solutions or decision domains, all of which may limit the generalizability of findings.
+
+
+<!-- PAGE 5 -->
+
 
 Table 1. Critical Appraisal Skills Programme responses for each study included in the systematic review (n=23) a .
 
@@ -129,6 +146,10 @@ a Choudhury [36], Stacy et al [2], York et al [37], and Elareed et al [38] are c
 
 Of  the  27  included  articles,  summarized  in  Table  2  and Figure  S1  in  Multimedia  Appendix  2,  most  were  published recently: 12 (44%) in 2023, followed by 8 (30%) in 2022, 4 (15%) in  2024,  and  3  (11%)  in  2021.  Geographically,  most studies  were  conducted  in  the  United  States  (n=12,  44%), followed  by  Europe  (n=7,  26%),  multinational  collaborations  (n=3,  11%),  the  United  Kingdom  (n=2,  7%),  and  1 (4%)  study  each  from  China,  Singapore,  and  Egypt.  Most studies  were  conducted  in  hospital  settings  (n=17,  63%), across  departments  such  as  emergency  care,  radiology,  and oncology, while 5 (19%) studies were conducted in primary care  settings  and  5  (19%)  studies  spanned  both  hospital and primary care environments. Study designs included qualitative  research  (n=16,  59%),  mixed-methods  studies (n=6, 22%), quantitative cross-sectional surveys (n=4, 15%), and  1  (4%)  comparative  evaluation  study  assessing  AIgenerated  versus  human-generated  suggestions  for  clinical decision support. The  study populations  encompassed  a wide  range  of  health  care  providers  such  as  physicians, nurses,  nurse  practitioners,  general  practitioners,  intensive care  unit  clinicians,  pharmacists,  ophthalmologists,  oncologists,  interdisciplinary  teams,  behavioral  health  specialists,
 
+
+<!-- PAGE 6 -->
+
+
 and  AI  practitioners.  Sample  sizes  varied  from  small  focus groups to cohorts exceeding 1000 individuals.
 
 The  included  studies  featured  a  wide  range  of  AI-CDSS tools,  demonstrating  their  application  across  various  clinical functions  and  specialties  (Table  2).  These  systems  employ advanced technologies such as machine learning, deep learning, reinforcement learning, and explainable AI to support diagnostics, treatment planning, and clinical decisionmaking.  Examples  include  the  AI-based  blood  utilization calculator for improving transfusion procedures, the Brilliant Doctor system for dermatological diagnosis, machine learning and reinforcement learning models for providing sepsis treatment  recommendations  in  intensive  care  unit  settings, and  QRhythm  for  identifying  optimal  rhythm  management strategies  in  atrial  fibrillation.  Additional  innovations  are AI-CDSS tools for detecting and managing diabetic retinopathy, glaucoma, and cataracts; ChatGPT-enhanced electronic health  record  alerts  for  medication  optimization  in  diabetes;  as  well  as  systems  for  lung  cancer  relapse  prediction, vancomycin  dosing,  cardiovascular  risk  prediction,  trauma radiography, and asthma management.
@@ -143,6 +164,10 @@ Table  2. Characteristics  of  included  studies  and  evaluation  of  trust  fa
 | Henry et al [3]       | United States                                                       | Hospital     | Qualitative study   | Physicians (n=13) and nurses (n=7) worked at the emergency department, critical care, and general ward | Semistructured qualitative interview | A machine learning- based system called Targeted Real-time Early Warning System, designed to alert for sepsis detection, evaluate patients, and support treatment management. | • Direct experience with the system and observing its behavior over time • Endorsement and recommendations from colleagues and experts • Understanding the system's development and validation process • Ability to customize the system and ask questions about its design                                                 |
 | Choudhur y et al [23] | United States                                                       | Hospital     | Qualitative study   | Clinicians involved in blood transfusion decision-making (n=10)                                        | Semistructured qualitative interview | An AI-based blood utilization calculator designed to optimize                                                                                                                 | • Workload • Usability                                                                                                                                                                                                                                                                                                      |
 
+
+<!-- PAGE 7 -->
+
+
 | Study                   | Geography                              | Setting                   | Study design        | Study population (number of participants)                                                                                                                | Method of evaluating trust              | Description of AI-CDSS                                                                                                                                                                                                         | Evaluation of health care worker trust factor for AI-CDSS                                                                               |
 |-------------------------|----------------------------------------|---------------------------|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 |                         |                                        |                           |                     |                                                                                                                                                          |                                         | blood transfusion practices.                                                                                                                                                                                                   | • Impact on decision- making • Alignment with clinical judgment                                                                         |
@@ -155,6 +180,10 @@ Table  2. Characteristics  of  included  studies  and  evaluation  of  trust  fa
 | Sivaraman et al [28]    | United States                          | Hospital                  | Mixed- method study | Intensive care unit clinicians (n=24)                                                                                                                    | Likert scale (0 - 10)                   | A reinforcement learning model-based tool called the 'AI Clinician,' designed to provide interpretable treatment recommendations for patients with sepsis in the intensive care unit.                                          | • The credibility of the developers who created the AI-based tool • The perceived soundness of the methodology used to develop the tool |
 | Amann et al [13]        | Germany and Switzerlan d               | Primary care              | Qualitative study   | Health care professionals, including physicians (n=7), occupational therapists (n=1), physiotherapists (n=4), neuropsychologists (n=2), stroke survivors | Semistructured qualitative interview    | AI-CDSS tools designed to act as administrative assistants for routine tasks and to aid in the diagnosis and treatment of complex stroke cases.                                                                                | • Concerns that AI may lead to dehumanization in health care and erode patient-clinician trust                                          |
 
+
+<!-- PAGE 8 -->
+
+
 | Study                            | Geography                                                     | Setting                          | Study design                     | Study population (number of participants)                                                                                                         | Method of evaluating trust           | Description of AI-CDSS                                                                                                                                                                                                                  | Evaluation of health care worker trust factor for AI-CDSS                                                                                                                                                                                                                                                          |
 |----------------------------------|---------------------------------------------------------------|----------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | (n=14), and family members (n=6) | (n=14), and family members (n=6)                              | (n=14), and family members (n=6) | (n=14), and family members (n=6) | (n=14), and family members (n=6)                                                                                                                  | (n=14), and family members (n=6)     | (n=14), and family members (n=6)                                                                                                                                                                                                        | (n=14), and family members (n=6)                                                                                                                                                                                                                                                                                   |
@@ -164,6 +193,10 @@ Table  2. Characteristics  of  included  studies  and  evaluation  of  trust  fa
 | Anjara et al [32]                | Spain                                                         | Hospital                         | Qualitative study                | Oncologists with specialized training in treating lung cancer (n=10)                                                                              | Think-aloud protocol                 | Explainable AI system based on a graph representation learning model for predicting lung cancer relapse.                                                                                                                                | • Perception of clarity • Credibility and utility • Information overload and the presence of example- based explanation • System's alignment with clinical decision-making needs                                                                                                                                   |
 | Jones et al [5]                  | Multinatio nal: Belgium, the United Kingdom, Italy, and China | Primary care and hospital        | Qualitative study                | Physician (n=24)                                                                                                                                  | Semistructured qualitative interview | AI-powered CDSS used in the context of ophthalmology (ie, clinical care specializing in eye and vision health).                                                                                                                         | • Perception of clinicians' control over decision- making • Medical errors • Legal responsibility/ liability                                                                                                                                                                                                       |
 | Liu et al [33]                   | United States                                                 | Hospital                         | Qualitative study                | Critical care pharmacists (n=13)                                                                                                                  | Semistructured qualitative interview | AI-CDSS tools designed to facilitate vancomycin dosing for hospitalized patients.                                                                                                                                                       | • Accuracy of recommendations • Rationale behind dosing • Transparency of the AI model                                                                                                                                                                                                                             |
+
+
+<!-- PAGE 9 -->
+
 
 | Study              | Geography      | Setting                   | Study design        | Study population (number of participants)                                                                                                                                                                                                     | Method of evaluating trust           | Description of AI-CDSS                                                                                    | Evaluation of health care worker trust factor for AI-CDSS                                                                   |
 |--------------------|----------------|---------------------------|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
@@ -175,6 +208,10 @@ Table  2. Characteristics  of  included  studies  and  evaluation  of  trust  fa
 | Yoon et al [7]     | Singapore      | Hospital                  | Qualitative study   | Clinicians (n=13) in 4 focus groups                                                                                                                                                                                                           | Focus group discussion               | AI-enabled prescription advisory tool.                                                                    | • Interpretability of AI- generated recommendations • Transparency of the system • Clinicians' previous experiences with AI |
 | Zheng et al [4]    | United States  | Hospital                  | Qualitative study   | Clinicians (n=14) who treated pediatric patients with asthma at 2 outpatient facilities                                                                                                                                                       | How-Might- We questions              | Machine learning- based CDSS, the Asthma Guidance and Prediction System, for asthma management.           | • Accuracy • Reliability • Explainability of the AI tool                                                                    |
 | Elareed et al [38] | Egypt          | Hospital                  | Quantitativ e study | Physician (n=249)                                                                                                                                                                                                                             | Likert scale (0 - 5)                 | General AI applications in health care, including potential uses                                          | • Job replacement by AI • Perceived usefulness                                                                              |
+
+
+<!-- PAGE 10 -->
+
 
 | Study                | Geography          | Setting      | Study design      | Study population (number of participants)                                                                                                                            | Method of evaluating trust           | Description of AI-CDSS                                                                          | Evaluation of health care worker trust factor for AI-CDSS                                                                         |
 |----------------------|--------------------|--------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|-------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
@@ -194,6 +231,10 @@ To  analyze  health  care  workers'  trust  in  AI-CDSS  tools, we  identified  
 The  synthesis of study findings on trust  in  AI-CDSSs revealed  8  key  thematic  insights  (Table  3  and  Figure  2). These  include  (1)  system  transparency,  which  emphasizes the  need  for  clear  and  interpretable  AI  systems;  (2)  training and  familiarity,  which  highlights  the  importance  of  educating  and  familiarizing  health  care  workers  with  AI-CDSS; (3)  system  usability,  which  focuses  on  seamless  integration into clinical workflows; (4) clinical reliability, which stresses the need for consistent and accurate system performance; (5) credibility  and  validation,  which  describe  the  importance  of system validation across diverse clinical contexts; (6) ethical consideration,  which  examines  issues  such  as  medicolegal liability,  fairness,  and  adherence  to  ethical  standards  ,(7) human  centric  design,  which  focus  on  piroitizing  patient centered approaches in design and finally, (8) customization and  control,  which  reflect  the  need  for  AI  tools  to  adapt  to specific  clinical  needs  while  ensuring  health  care  providers retain decision-making autonomy.
 
 These  themes  were  explored  through  the  enablers  and barriers  that  influence  health  care  workers'  trust  in  AICDSS.  Among  the  enablers,  prior  system  use  and  validation  through  randomized  controlled  trials  were  cited  as  key factors  that  boosted  confidence  in  the  AI  systems.  Familiarity  and  training  with  AI  tools  further  strengthened  clinicians'  trust,  empowering  them  to  make  informed  decisions.
+
+
+<!-- PAGE 11 -->
+
 
 Additionally,  observing  the  system's  performance  over  time and  receiving  endorsements  from  colleagues  and  domain experts  contributed  significantly  to  trust  building.  Furthermore, system usability, alignment with clinical judgment, and the  ability  to  reduce  workload  emerged  as  important  factors positively influencing trust. Transparency in the AI development process and the perceived credibility of the developers also  played  a  critical  role  in  fostering  confidence.  Finally, the explainability and interpretability of AI recommendations, along  with  the  ability  to  customize  the  system  and  seek clarification,  offered  clinicians  a  greater  sense  of  control, further enhancing trust.
 
@@ -218,6 +259,10 @@ b
 
 CDSS: clinical decision support system.
 
+
+<!-- PAGE 12 -->
+
+
 Figure 2. Overview of eight thematic areas related to healthcare workers' trust in AI-based clinical decision support systems (AI-CDSS).
 
 <!-- image -->
@@ -231,6 +276,10 @@ The  systematic  review  included  27  studies  analyzing  health care workers' 
 ## System Transparency
 
 Fostering  trust  in  AI-CDSSs  among  health  care  workers involves  enhancing  the  transparency  of  AI  algorithms  and providing  clear,  practical,  and  actionable  recommendations for  clinical  decision-making  [39-41].  According  to  Nasarian et  al  [42],  black-box  models  pose  challenges  in  CDSS  due to  their  limited  interpretability,  especially  when  compared with  simpler  white-box  models  that  offer  transparent  results without  requiring  additional  parameters.  While  black-box models  often  deliver  high  accuracy,  their  opacity  can  lead to  confusion  about  how  decisions  are  made-and,  in  some cases,  may  result  in  overreliance  on  the  system,  particularly  among  less  experienced  clinicians  who  may  lack  the expertise  to  interpret  AI  outputs  effectively  [22].  Gray-box models,  positioned  between  the  extremes  of  black-box  and white-box  models,  offer  a  balance  between  complexity  and interpretability,  provided  they  are  designed  effectively  [42]. Interpretability  should  be  incorporated  throughout  the  entire process,  from  data  preprocessing  and  model  selection  to postmodeling phases. However, most existing AI-CDSS tools focus  primarily  on  postmodeling  explainability.  To  reduce skepticism surrounding the 'black-box' nature of AI systems, developers should ensure transparency in the rationale behind
+
+
+<!-- PAGE 13 -->
+
 
 recommendations at every stage of the development pipeline [42].
 
@@ -261,6 +310,10 @@ Clear  guidelines  on  roles  and  responsibilities,  along  with robust  valida
 ## Customization and Control
 
 Trust  in  AI-CDSS  can  be  fostered  through  collaboration, coordination, and meaningful stakeholder engagement during system  design,  helping  to  eliminate  ethical  concerns  and fears of job replacement among health care workers [65-72]. Chiang  et  al  [12]  emphasized  the  importance  of  securing support  from  a  variety  of  stakeholders,  such  as  organizational  leadership  and  end  users,  early  in  the  development process  to  improve  trust  in  AI-based  tools.  Ball  et  al  [73] also  highlighted  the  role  of  collaboration  and  continuous communication through a 'human-in-the-loop' approach, which  integrates  human  expertise  and  addresses  the  limitations  of  AI  algorithms.  Involving  direct  end  users,  such  as health  care  workers,  during  the  development  phase  enables them  to  better  understand  the  supportive  role  of  AI-CDSS, rather than perceiving it as a threat to their jobs. Furthermore, engaging  a  range  of  stakeholders  can  help  reduce  ethical concerns by raising possible issues, such as harm to patients, early in the process. This, in turn, allows developers to make necessary modifications and improve trust in the implementation of AI-CDSS tools [11].
+
+
+<!-- PAGE 14 -->
+
 
 ## Limitations of the Study
 
@@ -302,6 +355,10 @@ PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) chec
 
 1. Rezaeian O, Bayrak AE, Asan O. An architecture to support graduated levels of trust for cancer diagnosis with AI. Presented at: International Conference on Human-Computer Interaction Communications in Computer and Information Science 2119 CCIS; Jun 29 to Jul 4, 2024:344-351; Washington, DC. 2024.[doi: 10.1007/978-3-031-61966-3\_37]
 
+
+<!-- PAGE 15 -->
+
+
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 
 2. Stacy J, Kim R, Barrett C, et al. Qualitative evaluation of an artificial intelligence-based clinical decision support system to guide rhythm management of atrial fibrillation: survey study. JMIR Form Res. Aug 11, 2022;6(8):e36443. [doi: 10. 2196/36443] [Medline: 35969422]
@@ -324,6 +381,10 @@ PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) chec
 18. Hong QN, Fàbregues S, Bartlett G, et al. The Mixed Methods Appraisal Tool (MMAT) version 2018 for information professionals and researchers. Education for Information. ;34(4):285-291. [doi: 10.3233/EFI-180221]
 20. Jacobs M, He J, Pradier FM, et al. Designing ai for trust and collaboration in time-constrained medical decisions: a sociotechnical lens. Presented at: CHI '21: Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems; May 8-13, 2021; Yokohama, Japan. May 6, 2021.[doi: 10.1145/3411764.3445385]
 21. Wang D, Wang L, Zhang Z, et al. 'Brilliant AI doctor' in rural clinics: challenges in AI-powered clinical decision support system deployment. Presented at: CHI '21: Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems; May 8-13, 2021:1-18; Yokohama, Japan. May 6, 2021.[doi: 10.1145/3411764.3445432]
+
+
+<!-- PAGE 16 -->
+
 
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 
@@ -348,6 +409,10 @@ PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) chec
 40. Haocan S. Human-AI Trust Scale. Center for Open Science. Nov 5, 2024. URL: https://osf.io/mk8d9 [Accessed 2025-07-17]
 41. Li Y, Wu B, Huang Y, Luan S. Developing trustworthy artificial intelligence: insights from research on interpersonal, human-automation, and human-AI trust. Front Psychol. 2024;15:1382693. [doi: 10.3389/fpsyg.2024.1382693] [Medline: 38694439]
 
+
+<!-- PAGE 17 -->
+
+
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 
 42. Nasarian E, Alizadehsani R, Acharya UR, Tsui KL. Designing interpretable ML system to enhance trust in healthcare: a systematic review to proposed responsible clinician-AI-collaboration framework. Information Fusion. Aug 2024;108:102412. [doi: 10.1016/j.inffus.2024.102412]
@@ -371,6 +436,10 @@ PRISMA (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) chec
 60. Smith H, Downer J, Ives J. Clinicians and AI use: where is the professional guidance? J Med Ethics. Jun 21, 2024;50(7):437-441. [doi: 10.1136/jme-2022-108831] [Medline: 37607805]
 62. Ethics guidelines for trustworthy AI: shaping europe's digital future. European Commission. Apr 8, 2019. URL: https:// digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai [Accessed 2025-07-17]
 61. Subasi A, Ozaltin O, Mitra A, Subasi ME, Sarirete A. Trustworthy artificial intelligence in healthcare. In: Accelerating Strategic Changes for Digital Transformation in the Healthcare Industry. Elsevier; 2023:145-177. [doi: 10.1016/B978-0443-15299-3.00015-4]
+
+
+<!-- PAGE 18 -->
+
 
 ## JOURNAL OF MEDICAL INTERNET RESEARCH
 

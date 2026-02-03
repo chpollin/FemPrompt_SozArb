@@ -1,10 +1,11 @@
 ---
 source_file: Browne_2024_Engineers_on_responsibility_feminist_approaches.pdf
-conversion_date: 2026-02-03T08:44:07.483664
+conversion_date: 2026-02-03T18:22:20.180090
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## ORIGINAL PAPER
 
 ## Engineers on responsibility: feminist approaches to who's responsible for ethical AI
@@ -39,6 +40,10 @@ unprecedented  speed  and  scale  at  which  AI  technologies operate.  Collecti
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 has now become a brand-like umbrella term for the development of principles, approaches and methods of understanding what responsible AI development means and how it can be implemented.
 
 States,  international  organizations  and  the  technology sector  have  contributed  'Responsible AI'  frameworks and initiatives to the AI ethics landscape, with Responsible AI both  improving  brand  reputation  (Burkhardt  et  al.,  2019) and  arguably  becoming  a  brand  in  itself.  The  Council  of Europe's study on responsibility  in AI  ( 2019) argues that society's  concepts,  institutions  and  practices  of  responsibility  are  critically  important  for  ensuring  that  individuals and organizations are appropriately held to account for the adverse effects of AI. However, responsibility is rarely defined in the literature on Ethical AI, and the way in which the term is used varies depending on the context (Dastani &amp; Yazdanpanah, 2022). As Christian Kästner argues, the exact responsibility  that  software  engineers  and  data  scientists have for their products is also contested (2022). There is an insufficient explanation of who is responsible and to whom, how  responsibility  is  allocated  and  distributed,  and  what happens when responsibilities are not fulfilled.
@@ -57,6 +62,10 @@ Our data concerns engineers' perceptions of responsibility attribution in AI and
 
 Literature on responsibility beyond legislative work can be broadly divided into four categories: first, work that aims to encourage a safer and more responsible approach to AI development by attempting to model and ascribe responsibility in the development process (Dignum n.d.; Dastani &amp; Yazdanpanah, 2022; Hedlund &amp; Persson, 2022; Rochel and Evéquoz, 2021); second, philosophical work on the attribution of responsibility, largely moral philosophy approaches (Browne forthcoming, 2024; Kiener forthcoming; Bartneck et al.,  2021; Tigard, 2021); third, surveys and studies that explore  and  determine  responsibility  allocation  based  on
 
+
+<!-- PAGE 3 -->
+
+
 empirical findings (Association of Nordic Engineers 2021; IBM, 2022 ; Stack Overflow, 2018; Lu et al., 2021; Kelley, 2022 );  and  fourth,  explorations  of  the  specific  AI-related situations in which responsibility becomes a problem and how  to  communicate  this  to  relevant  stakeholders  (IBM, 2022a; Taylor  et  al.,  2018;  Pratt,  2021;  Brookings,  2021; Sebastián, 2021). Our study relates in particular to the second, third and fourth categories by offering feminist philo -sophical perspectives on responsibility, presenting findings from our study on how practitioners allocate responsibility and  exploring  perspectives  on  when  and  how  responsibility  becomes a problem for them. We aim to contribute different  philosophical  underpinnings  to  responsibility  lit -erature,  which  is  currently  dominated  by  moral  philosophy  approaches  (e.g.  Watson,  2004;  Wallace,  1998,  cited in Council of Europe, 2019 ). Established feminist work on responsibility offers an untapped resource centered around ethics that can reframe the debate.
 
 Delineating work on responsibility from other branches of Ethical AI such as explainability or accountability is chal -lenging, because while responsibility sits within the remit of Ethical AI, it is not Ethical AI's entire focus (UNESCO, 2020;  Lu  et  al.,  2021).  The  interchangeability  of  responsibility  with  adjacent  terms  such  as  accountability  (IBM, 2022a) brings another challenge to scoping exercises that seek  to  define  the  parameters  of  responsibility  literature. This exchanging of terms is made possible by the fact that responsibility is rarely defined (Jobin et al., 2019).
@@ -70,6 +79,10 @@ This view intersects with selected work from ethics and technology scholars that
 Feminist  scholarship  has  long  grappled  with  what  it means to live ethically within myriad kinds of socio-technical systems, from institutions and languages to human bodies - themselves an assemblage of complex, technological and societal  forces  (McNeil,  2007). We  base  our  conceptualization of responsibility on two key principles or ideas that  emerge  from  feminist  theory:  1)  the  interdependence of  human  life  and  the  ethical  responsibilities  that  arise from this  (Puig  de  la  Bellacasa,  2012;  Butler,  2003);  and 2) the need to understand human actions and undertakings in relation to broader social and political structures (Chambers, 2008), particularly structural injustice (Young, 2011; Browne, 2023). In their 2003 essay 'Violence, Mourning, Politics', feminist philosopher Judith Butler argues against the idea that gender is a discrete and autonomous category that individuals own, foregrounding instead how gender is fundamentally  a  relational  category:  'neither  gender  nor sexuality is precisely a possession, but, rather, is a mode of being dispossessed, a way of being for another or by virtue of another' (2003, p. 13). More broadly, they ask whether ontological interdependence could provide the ethical basis for a politics based on and oriented towards common human vulnerability:  ''Although  I  am  insisting  on  referring  to  a common human vulnerability,  one  that  emerges  with  life itself, I also insist that we cannot recover the source of this vulnerability: it precedes the formation of 'I'' (Butler, 2003, p. 20). Nonetheless, Butler also insists that this vulnerability
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 is differentially distributed among peoples, groups and coun -tries.  While  Iris  Marion Young  also  observed  an  unequal distribution of vulnerability, she nevertheless claimed that all of us share a responsibility for the harms that emanate from the inevitable interconnectedness and structural relations  of  common human environments (albeit to differing degrees) (Young, 2011). We frame our feminist understanding of responsibility through this emphasis on both (involuntary)  interdependence  and  the  unequal  distribution  of vulnerability.
 
@@ -86,6 +99,10 @@ frameworks and responsible AI programmes that primarily rely  on  high-level  ab
 This  study  is  based  on  a  set  of  63  qualitative  interviews conducted at a large multinational tech company located in the Global North. To retain the anonymity of our research partner, we refer to them here as TCX. We have taken other measures to protect the company's privacy and that of its employees,  omitting  any  names,  geographical  locations or  references  to  specific  tech  systems.  Between  2020  and 2021 we interviewed 63 employees online from a number of teams including Marketing, Legal, AI Research, AI Design and Human Resources. We interviewed as broad a cross-section of the organization as possible, from graduate to senior employees  and  across  a  range  of  demographic  indicators (age, self-defined gender, ethnicity and registered disabili -ties). A point person at TCX helped us establish the research partnership and contact our first interviewees; the rest of our interviewees were selected using the snowballing method. Hence, while we were able to interview a demographically diverse dataset from different parts of the organization, our interviewee  selection  may  have  been  influenced  by  those already predisposed to a project on gender, feminism and technology.
 
 While we asked our interviewees at TCX about a wide range of issues relating to AI ethics, this paper is concerned with  responses  to  the  following  question  posed  to  these practitioners:  who  is  responsible  for AI? We  purposefully did not define responsibility for interviewees in order to bet -ter  ascertain  what responsibility meant to them and avoid pre-empting their responses. As we elaborate elsewhere, we explicitly drew on feminist research methods in designing
+
+
+<!-- PAGE 5 -->
+
 
 and conducting our interviews (Browne et al., 2024). For example,  we  went  to  lengths  to  ensure  our  interviewees' anonymity and used semi-structured methods to allow them to  tell  their  own  'stories'  about AI  ethics.  Our  dataset  for this paper consists of 56 references to responsibility in 27 separate interviewee files. NVivo was used for coding and to  assist  with  data  analysis. We  used  cross-coder  analysis to  verify  our  coded  data,  which  demonstrated  four  main themes:  ecosystems  in  flux,  ownership,  tunnel  vision  and responsible engineers. We subsequently offer four recom -mendations, relating to response-ability, owning up, maintenance and framing responsibility beyond crisis.
 
@@ -107,6 +124,10 @@ At every point we need to be capturing who is responsible and who's doing what. 
 
 This linear view of responsibility resonated with engineers as not only an ordered and systematic approach that aligns with their own disciplinary backgrounds but also the suggestion  of  a  community  of  responsible  stakeholders  in constant contact with each other. This sense of reciprocity and connectedness, signified  by  the  chain,  was  extremely important to practitioners. Others argued that the 'layered models' of AI should be reflected in a layered approach to responsibility, where 'you understand […] who is responsible  for  the  functions  within  [each  layer  of  the  model]' (#62).  However, the downsides to distributed responsibility were also expressed by respondents, notably that a lack of individual ownership was resulting in a 'random' distribution of 'spread' responsibility (#36). This was perceived to be the cause for a shirking of responsibility and 'panic' when crises occur: 'At the moment the responsibility is not clear  […]  something  goes  wrong,  people  panic  normally, and they start pointing fingers' (#38). Respondents claimed that responsibility only became a focal point when things were going wrong, and that this was leading to an inability to assign responsibility. They suggested that one way of avoiding the inevitable dodging of responsibility that arose from only considering responsibility when faced with problematic situations was to install clear and collective organizational  responsibility. This  might  take  the  form  of,  for example, 'responsible AI eyes' that provide oversight during product development stages (#51), or an ethics committee' (#36) that could flag when engineering teams come up
 
+
+<!-- PAGE 6 -->
+
+
 with ideas that 'contain bias' (#51) and rectify them to avoid AI-generated harms. As we will discuss later, respondents were concerned that locating responsibility with a committee rather than engineering teams might constitute a siloing or outsourcing of responsibility.
 
 This is likely why many respondents felt that responsibility is something that can or should be 'located', and that there was a place where 'the buck stops' - whether in one place or many others (#41 #34 #36 #39 #27 #44 #2 #25 #63 #23 #61 #49 #38 #51 #33). That place or role included the people that deploy AI systems, engineers (the responsibility would be with the people that made the machine learning  model,  right?'  #39),  product  owners  ('I'm  quite  clear that the ultimate responsibility lies with the product owner' #61), and 'the business end' (#63 #23 #47), which included the CTO and CEO ('I guess the buck stops ultimately with […] the CEO' #63). Several respondents even stated that the purpose of senior employees was to take final ownership of AI systems: 'That's where the rise of the CTO has come [from] as well, you've tried to [create] that figurehead, that board level person, who effectively would own it, and some -one there would go 'That's where the buck stops'' (#23).
@@ -127,6 +148,10 @@ A key issue that emerged in many conversations was that companies are not stable
 
 The  above  concern  about  the  lack  of  a  responsible individual  or  entity  was  often  also  connected  to  product
 
+
+<!-- PAGE 7 -->
+
+
 ownership (#48 #27 #47 #23 #51 #25 #49 #20 #33 #62 #44 #38 #36 #9). Respondents who mentioned ownership saw it as 'key' to the problem of responsibility (#23). Through the lens of ownership, interviewees viewed responsibility as lying both with the business and with engineers:
 
 There are different levels of responsibility in AI. You have  the  responsibility  for  the  system  itself  […], [engineers] have the responsibility to build tools and build solutions like that. But there is a business ownership of the data, and there is a business ownership of the outcome as well. (#47)
@@ -142,6 +167,10 @@ The flow of people in and out of a corporation is par -alleled  by  the  movemen
 Many engineers exhibited a desire to practice and promote more responsibility for the products they were creating. In light of this, feminist STS can be used to inform a different  conception  of  responsibility,  one  tailored  to  the problems  posed  by  distributed  ecosystems  in  flux.  For example,  feminist  STS  work  on  response-ability  can  be used to reconfigure the relationship between responsibility and liability. The goal here is to enable engineers to practice responsibility without fear of individual culpability by engaging in a 'cultivating collective knowing and doing' or 'making-with' each other [sympoiesis] (Haraway, 2016, pp. 34, 58). This intervention takes place at the level of business culture, which should encourage and reward employees for being attuned to their environment, customers and contexts. Chicana  activist  and  feminist  theorist  Gloria  Anzaldúa argues that 'the ability to respond is always what is meant by responsibility' (1999, p. 42). As we explore in the next section, this is also contingent on feeling comfortable and supported  enough  to  acknowledge  harm,  seek  redress  for this  harm,  and  communicate  issues  to  senior  leadership. Anzaldúa directs us towards an ethos of responsibility where employees are incentivised and equipped with the necessary tools with which to build and deploy AI responsibly.
 
 This  framing  can  help  address  the  problems  that  arise when static and individualistic models of responsibility fail to map cleanly against the in-flux ecosystems identified by our interviewees. Instead of seeking out culpable individuals,  which  treats  responsibility  as  primarily  an  individual property,  engineers  should  collectively  enable  each  other to practice responsible AI development. This means thinking about responsibility as relational: dependent on positive and  enabling  relationships  which  direct  attention  towards the  potentially  affected  persons.  As  Coeckelbergh  ( 2020) argues, too much attention on the agents practicing responsibility often deflects from what should be the actual focal point  -  those  that  suffer  when  crises  occur.  Ensuring  that
+
+
+<!-- PAGE 8 -->
+
 
 the communities and individuals who are most likely to be harmed  are  placed  at  the  center  of  corporate  discussions about responsibility requires stepping back from a singular focus on the technical operations of a product and looking more holistically  at  the  wider  social  and  political  context within which this product is developed and deployed. We explore  the  need  to  'step  back'  in  the  following  section. While this approach is limited by its reliance on companies being invested in responsible business culture, as demonstrated by our study, many tech companies are motivated to go further than meeting legal obligations; more advanced understandings of responsibility in AI ethics can assist them in their endeavor.
 
@@ -165,6 +194,10 @@ Our interviewees highlighted how they were not asked to think more holistically 
 
 Inspired  by  scholarship  in  feminist  political  economy, we  suggest  that  engineers  will  only  be  incentivized  and able to practice greater responsibility over AI systems when maintenance  work  is  revalued  as  necessary  and  important  work.  The  entire  economy  of AI  goods  and  systems is highly dependent on forms of undervalued maintenance work. Critical scholarship in the field of AI ethics has fore -grounded the forms of arduous and repetitive labor that are frequently outsourced to gendered and racialized workers, to  the  Global  South  and  even  (in  the  case  of  Finland)  to prisoners, further demonstrating the ever-expanding reach of the prison-industrial complex (Chen, 2019). These tasks include data labeling, the cleaning and maintenance of data sets, and content moderation (Posada, 2021; Gray &amp; Suri, 2019; Bui, 2022; D'Ignazio &amp; Klein, 2020 ). Similarly, Erin Young,  Judy  Wajcman  and  Laila  Sprejer's  (2021)  study on gender inequality in the AI industry shows that women are more likely to fulfill roles and tasks relating to dataset cleaning and maintenance rather than the more prestigious roles  in  machine  learning,  leading  them  to  argue  that  the
 
+
+<!-- PAGE 9 -->
+
+
 AI industry is characterized by persistent structural gender inequality.
 
 We propose to push this critical feminist work forward in the field of AI ethics by centering the ordinary maintenance of AI systems in our understanding of where responsibility should lie for AI systems. We recommend that companies provide greater recognition at both an individual and structural  level  for  maintenance  work.  Rather  than  punishing individual scapegoats when a system goes awry, companies need to revalue the work of maintenance in order to prevent such situations arising in the first place. This may require moving from a paradigm of individual ownership to one of collective stewardship and responsibility for the care of AI systems.
@@ -183,6 +216,10 @@ I'm building a platform that could be used for things that I really don't agree 
 
 Further to the evident anxiety about colleagues and managers pointing fingers when systems were misused, Inter -viewee #17 also suggests that if the tool is deployed for an unintended purpose then they are no longer responsible for it. Therefore, ongoing responsibility is contingent on using an AI system in a way that is consistent with its intended use at the time of development. Engineers flagged that people making business decisions about particular  AI systems might not have the requisite knowledge to decide how systems can be repurposed; they would need to trust engineers to outline what particular systems should be used for and then adhering to these recommendations (#47 #55). Decisions about AI therefore need to be collaborative and informed, using engineer expertise. These respondents' testimonies suggest that an ethics committee might not be sufficient in ensuring that systems are made and deployed ethically because they would not have first-hand knowledge of the systems they were  overseeing.  While  some  still  indicated  that  responsibility for a product should also lie with the business (or high-level  decision-makers),  they  also  believed  that  these stakeholders might not understand how the product works or has been built, and this would limit the efficacy of their
 
+
+<!-- PAGE 10 -->
+
+
 responsibility practices. They also suggested that this would additionally  inhibit  engineers  from  being  able  to  work responsibly, because decisions were being taken out of their hands by a group of people that were inadequately equipped to make them.
 
 Another respondent that pointed to barriers in engineers being able to exercise responsibility raised the issue of hiring ethical technologists (#56). They suggested that responsible AI development requires ethical people: 'in part, the engineer [is responsible] ethically for making the tool, so it's then [about] the person's ethics and morality and how they  operate  that'  (#56).  For  them,  responsible  engineering required a moral workforce. This view is largely absent from the responsibility literature, which focuses on moral systems rather than moral engineers.
@@ -200,6 +237,10 @@ than others. It also requires thinking about responsibility as a collective rath
 With  this  paper,  we  aim  to  demonstrate  the  utility  and insights of feminist theorising in relation to engineers' own positions on responsibility and what it means to be responsible for an AI-powered product within a complex corporate ecosystem.  Our  rich  empirical  dataset  of  interviews  with practitioners clearly demonstrates the need for further conversations at industry level about what responsibility is in order  to  meaningfully  implement AI  ethics  protocols  and agendas.  Our  findings  suggest  that  practitioners  currently struggle with how responsibility is attributed and practiced within industry settings. We have shown that feminist theory offers a way of rethinking responsibility as a relational principle that requires business contexts to support answerable and responsive actors. These feminist approaches allow practitioners to grapple with responsibility not only in relation  to  risk  and  harms  but  also  to  ongoing  maintenance practices. Crucially, this work is not merely additive (suggesting additional approaches to responsibility) but invites a re-centering of multiple conceptions of responsibility. These feminist approaches, we argue, can facilitate the creation of responsible AI development and deployment cultures.
 
 We recognise the limitations and meaningful challenges that  engineers and other tech workers may face when attempting to put these feminist approaches to responsibility into practice. AI systems are rarely 'located' within single enterprises, crossing private, for-profit companies and different types of entities and organizations with dramatically differ -ent motivations, priorities, and frameworks of understanding (Keyes &amp; Austin, 2022). Therefore, while it is important to explore the individual cultures of responsibility at single technology firms, this research must be complemented by further exploration of what responsibility for AI could and should  look  like  across  sectors  and  organizations.  Moreover, when drawing on the lens of critical feminist political economy, we must also question the extent to which engineers' capacity to be ethically responsive to the short- and long-term consequences of their products is limited by the for-profit context in which they operate. As D'Ignazio sug -gests, within corporate structures the overarching model of accountability is 'accountability to shareholders and profit'; and that creating more responsible AI cultures would require 'reining in that profit motive that is extractive, exploitative, and  exacerbating  systemic  inequality'  (2021).  There  is  a significant risk that engineers and tech workers will simply lack the necessary incentives to enact and practice feministinformed  conceptions  of  responsibility  within  the  present
+
+
+<!-- PAGE 11 -->
+
 
 for-profit corporate structure. Consequently, cultural shifts within tech firms must also be accompanied by the effective enforcement of existing regulatory tools to ensure that companies  consider  the  potential  harms  of  their  products  and successfully  mitigate  them  (Kak  &amp;  West,  2023;  Browne, 2024).  Additionally,  without  broader  pro-justice  cultural transformations within technology firms, it is possible that the labour of being responsible for or caring for AI products and their effects will disproportionately fall on junior workers  or  structurally  disadvantaged  staff.  Hence,  while we aim to shed light on the utility of feminist thinking on responsibility for transforming AI development and deployment cultures, we also recognise that responsibility remains a crucial and contentious issue for the field of AI ethics. We thus recommend further investigation into how AI firms can develop ethical cultures of responsibility informed by feminist  work  and  scholarship,  while  simultaneously  advocating for broader structural transformations of the AI industry towards justice.
 
@@ -244,6 +285,10 @@ Open Access This  article  is  licensed  under  a  Creative  Commons Attribution
 - Dastin, J. (2018). Amazon scraps secret AI recruiting tool that showed bias against women. Reuters,
 
 <!-- image -->
+
+
+<!-- PAGE 12 -->
+
 
 - 11 October. Available at: www.reuters.com/article/ us-amazon-com-jobs-automation-insight-idUSKCN1MK08G.
 - Davis, J. L., Williams, A., &amp; Yang, M. W. (2021). Algorithmic reparation. Big Data &amp; Society , 8(2). https://doi-org.ezp.lib.cam.ac.uk/ 10.1177/20539517211044808.
@@ -290,6 +335,10 @@ Open Access This  article  is  licensed  under  a  Creative  Commons Attribution
 - Taylor, S., Pickering, B., Boniface, M. (2018). Responsible AI - Key Themes, Concerns &amp; Recommendations for European Research
 
 <!-- image -->
+
+
+<!-- PAGE 13 -->
+
 
 - and Innovation. HUB4NGI, 2 July. Available at: https://zenodo. org/record/1303253#.Y4UOpHbP1D8.
 - Tigard, D. W. (2021). Responsible AI and Moral responsibility: A common appreciation. AI Ethics , 1 , 113-117. https://doi.org/10.1007/ s43681-020-00009-0.

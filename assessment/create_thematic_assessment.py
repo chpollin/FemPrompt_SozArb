@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-FemPrompt Thematic Assessment Excel Generator
+Literature Review Thematic Assessment Excel Generator
 
 Creates formatted Excel file with 14 thematic columns (Ja/Nein) for paper assessment.
 Fetches data from Zotero API and adds:
@@ -48,7 +48,7 @@ logger = logging.getLogger(__name__)
 
 
 class ThematicAssessmentGenerator:
-    """Generate FemPrompt thematic assessment Excel from Zotero"""
+    """Generate Literature Review thematic assessment Excel from Zotero"""
 
     # Color definitions
     COLORS = {
@@ -381,12 +381,12 @@ class ThematicAssessmentGenerator:
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Create FemPrompt thematic assessment Excel from Zotero'
+        description='Create Literature Review thematic assessment Excel from Zotero'
     )
     parser.add_argument(
         '--library-id',
         default='6080294',
-        help='Zotero library ID (default: 6080294 - FemPrompt)'
+        help='Zotero library ID (default: 6080294 - Literature Review)'
     )
     parser.add_argument(
         '--library-type',

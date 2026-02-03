@@ -4,7 +4,7 @@ Benchmark für den Vergleich zwischen menschlichem und LLM-basiertem PRISMA-Asse
 
 ## Zweck
 
-Quantifizierung der Übereinstimmung zwischen Expert:innen-Bewertung (Susi, Sabine) und LLM-Assessment (Claude Haiku 4.5) für das FemPrompt Literature Review.
+Quantifizierung der Übereinstimmung zwischen Expert:innen-Bewertung (Susi, Sabine) und LLM-Assessment (Claude Haiku 4.5).
 
 ## Verzeichnisstruktur
 

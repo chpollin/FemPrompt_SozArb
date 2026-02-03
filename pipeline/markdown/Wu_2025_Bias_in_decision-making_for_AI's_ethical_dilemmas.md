@@ -1,10 +1,11 @@
 ---
 source_file: Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.pdf
-conversion_date: 2026-02-03T09:32:00.310025
+conversion_date: 2026-02-03T19:02:54.101165
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Bias in Decision-Making for AI's Ethical Dilemmas: A Comparative Study of ChatGPT and Claude
 
 Yile Yan 1 , Yuqi Zhu 2 , Wentao Xu 3 *
@@ -39,6 +40,10 @@ Keeping LLMs ethically safe is crucial since the biased outputs may lead to unfa
 
 To fill these gaps in the literature, we conducted a study of the ethical decision-making of LLMs regarding multiple protected attributes, with 7 groups of 20 attributes. We evaluate the AI ethical decision-making on an ethical dilemma scenario to investigate the potential biases between GPT and Claude. Ethical dilemma was designed based on rules: (1) it requires AI's moral trade-offs between conflicting values and prioritizing one choice over others, which can reveal the underlying biases in decision-making(for example, (Nassar and Kamal 2021; Lei et al. 2024), (2) it's simulation of real-life complexity where human could face, such as autonomous driving (Cunneen, Mullins, and Murphy 2019). In this way, the research questions in this setting are as follows:
 
+
+<!-- PAGE 2 -->
+
+
 - RQ1: Do LLMs exhibit bias in protected attributes when responding to ethical dilemmas?
 - RQ2: Do different LLMs exhibit different biases in protected attributes when responding to ethical dilemmas?
 
@@ -66,6 +71,10 @@ Previous studies have examined the bias or stereotypes in LLMs, with race, gende
 Ethics is the 'science that deals with conduct, in so far as this is considered as right or wrong, good or bad' (Dewey and Tufts 2017), and it is a set of moral principles that guide our judgment of conduct, i.e., what should or should not be done. The booming of AI has brought ethical issues, which arouse awareness and consideration of ethics of AI. Ethics of AI discuss the principles that ensure AI align with the common values and do not cause harm (Bostrom and Yudkowsky 2018).
 
 Human as the creator of AI, have the moral responsibility for AI's ethical behaviors, so that the principles for ethical AI occurs as a major field (Jobin, Ienca, and Vayena 2019; Floridi and Cowls 2022). If designed properly, AI could promote a safer human-AI interaction and mitigate the inequalities, otherwise, it could deepen the biases, inequalities, and stereotypes (Cirillo et al. 2020).
+
+
+<!-- PAGE 3 -->
+
 
 A global review of AI guidelines identifies several key principles, including transparency, justice and fairness, nonmaleficence, responsibility, and others, as the commonly recognized ethical principles for AI (Jobin, Ienca, and Vayena 2019). Of particular importance is justice and fairness, as it is critical in eliminating unfair discrimination, promoting diversity, and preventing biases that may otherwise lead to undesired outcomes (Jobin, Ienca, and Vayena 2019; Floridi and Cowls 2022).
 
@@ -100,6 +109,10 @@ On a snowy night, you are driving home to celebrate the holidays when you encoun
 For intersectional scenarios, we extended the experiment to examine intersectional protected attributes. For instance, the Age-Gender intersection yielded combinations such as: S = { [8, Masculine], [8, Feminine], [8, Androgynous], [35, Masculine], [35, Feminine], [35, Androgynous], [70, Masculine], [70, Feminine], [70, Androgynous] } Then we asked: ...They are all on your way and are [35, Masculine], [35, Feminine], [35, Androgynous]...
 
 The experimental design encompassed:
+
+
+<!-- PAGE 4 -->
+
 
 Table 1: Review of the protected attributes in LLMs
 
@@ -158,6 +171,10 @@ For intersectional scenario, we calculated the normalized frequency of each prot
 
 For each category experiment, we asked GPT and Claude 50 questions for both single and intersectional scenarios. We conducted four rounds of this experiment.
 
+
+<!-- PAGE 5 -->
+
+
 Ethical preference priority For single protected attribute scenario, we directly used the mean normalized frequency of each single protected attribute to assess the ethical preference of the LLMs.
 
 For intersectional scenario, we summed up the mean normalized frequency of each protected attribute including the specific single protected attribute and divided it by the number of these protected attributes as the mean normalized frequency of the specific single protected attribute for intersectional scenario.
@@ -210,6 +227,10 @@ Then we calculated the normalized total standard deviation of the single protect
 
 For both scenarios, the lower the standard deviation, the more stable the ethical preference.
 
+
+<!-- PAGE 6 -->
+
+
 Figure 1: Comparative visualization of protected attribute interactions using mean normalized frequency heat maps for GPT-3.5 Turbo (panel a) and Claude 3.5 Sonnet (panel b), with values scaled from 0 to 1 . Horizontal bar charts displaying mean normalized frequency rankings for GPT-3.5 Turbo (panel c) and Claude 3.5 Sonnet (panel d), highlighting the top 10 intersectional protected attributes. The intersectional protected attributes are ranked in descending order based on normalized frequency values.
 
 <!-- image -->
@@ -233,6 +254,10 @@ Bias between LLMs We calculated the preference score for each protected attribut
 <!-- formula-not-decoded -->
 
 , where B pa is the preference score of protected attribute pa , f GPT pa and f Claude pa are the mean normalized frequencies of protected attribute pa for GPT-3.5 Turbo and Claude 3.5 Sonnet. For example, B Masculine is the preference score of protected attribute Masculine , f GPT Masculine and f Claude Masculine are the mean normalized frequencies of protected attribute Masculine for GPT-3.5 Turbo and Claude 3.5 Sonnet and are 0.5 and 0.3, and the preference score B Masculine is 0.25.
+
+
+<!-- PAGE 7 -->
+
 
 Figure 2: Comparative analysis of mean normalized frequency distributions for single protected attributes in intersectional contexts, comparing GPT-3.5 Turbo (panel a) and Claude 3.5 Sonnet (panel b) responses. Protected attributes are arranged in descending order along the x-axis based on GPT-3.5 Turbo's mean normalized frequency, with values ranging from 0 to 0 . 5 on the y-axis.
 
@@ -259,6 +284,10 @@ We identified the high-frequency protected attributes in Figure 1a and Figure 1b
 ## Differential Sensitivity Patterns for Single and Intersectional Protected Attribute Scenarios
 
 Figure 3 presents a detailed comparison of ethical sensitivity patterns between single and intersectional protected attribute scenarios for GPT-3.5 Turbo and Claude 3.5 Sonnet.
+
+
+<!-- PAGE 8 -->
+
 
 (a) Standard deviation comparison for single protected attribute scenario
 
@@ -288,6 +317,10 @@ dard deviations for GPT-3.5 Turbo (blue) and Claude 3.5 Sonnet (beige). For sing
 
 Figure 5 illustrates the clustering hierarchical tree diagrams comparing GPT-3.5 Turbo (Figure 5a) and Claude 3.5 Sonnet (Figure 5b) for intersectional protected attribute scenario. The hierarchical clustering methodology is detailed in the Clustering of preference subsection of Measurement Metrics. The dendrograms visualize the clustering of protected attributes based on their preference strengths, with the
 
+
+<!-- PAGE 9 -->
+
+
 (b) Preference score for intersectional protected attribute scenario
 
 <!-- image -->
@@ -305,6 +338,10 @@ Figure 6 illustrates the preference score distributions for GPT-3.5 Turbo and Cl
 This study investigated the ethical decision-making patterns for LLMs through simulated ethical dilemmas, evaluating their ethical preferences, sensitivity, stability, and preference clustering. Our analysis revealed inherent biases in both LLMs' decision-making processes, and the biases vary due to ethical dilemma senarios as well as the model types. By doing so, this study raises significant ethical concerns in LLMs implemented to decision-making process, particularly regarding their impact on underrepresented groups and unstable preferences.
 
 A striking finding across both models is the dominant role of physical appearance in ethical decision-making. Both LLMs showed strong preferences for 'Good-looking' individuals, with this attribute consistently ranking high for both single and intersectional protected attribute scenarios. Moreover, each model exhibited distinct ethical decision-making patterns respectively. GPT-3.5 Turbo showed a clear preference hierarchy favoring stereotypically dominant groups
+
+
+<!-- PAGE 10 -->
+
 
 (Non-disabled, Masculine, Middle-aged, White/Caucasian men). In contrast, Claude 3.5 Sonnet demonstrated more balanced preferences across diverse protected attributes including 'Race', 'Age', 'Gender', and 'Disability' status. These preferences are irrelevant to ethical decision-making in driving-context scenarios.
 
@@ -357,6 +394,10 @@ Gallegos, I. O.; Rossi, R. A.; Barrow, J.; Tanjim, M. M.; Kim, S.; Dernoncourt, 
 Giorgi, T.; Cima, L.; Fagni, T.; Avvenuti, M.; and Cresci, S. 2024. Human and LLM Biases in Hate Speech Annotations: A Socio-Demographic Analysis of Annotators and Targets. arXiv preprint arXiv:2410.07991 .
 
 Gov.UK. 2010. Equality Act 2010. https://www.legislation. gov.uk/ukpga/2010/15/pdfs/ukpga 20100015 en.pdf.
+
+
+<!-- PAGE 11 -->
+
 
 Guan, H.; Dong, L.; and Zhao, A. 2022. Ethical risk factors and mechanisms in artificial intelligence decision making. Behavioral Sciences , 12(9): 343.
 

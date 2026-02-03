@@ -1,10 +1,11 @@
 ---
 source_file: Wong_2020_Broadening_artificial_intelligence_education_in.pdf
-conversion_date: 2026-02-03T09:31:24.455802
+conversion_date: 2026-02-03T19:02:18.213192
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Contributed Article
 
 ## Broadening artificial intelligence (AI) education in K-12: Where to start?
@@ -21,6 +22,10 @@ The history of computer science (CS) as a discipline can be traced back to the e
 
 A recurring question in relation to computing innovation is how to prepare the next generations through education in K-12. A first wave of teaching computational thinking arose in the 1980s, with many projects built around the LOGO programming language. Since then, several major components of CS have  been  introduced  into  K-12  education,  such  as  algorithms,  data  representation,  devices  and infrastructure,  digital  applications,  and  human  factors  in  computing,  while  programming  has  been maintained as the key subject [3]. Although children are already learning how to code in school, and simultaneously developing their computational thinking skills, this might be insufficient for them to make a significant impact in the 21st century. It is time for students learning computational thinking to be introduced to the artificial intelligence (AI) technologies being designed and developed by computer
 
+
+<!-- PAGE 2 -->
+
+
 scientists and engineers using these computational thinking principles. However, there are a series of questions surrounding the implementation of AI education at K-12 level, to which a few researchers have begun to pay attention. Where does AI come from? What does AI mean to us today? What should students in K-12 know before diving deeper into AI learning through CS education? How can we help students to gain more exposure to AI and prepare them for college studies in the field?
 
 ## Trends in Computer Science Education
@@ -35,6 +40,10 @@ Consequently, the Royal Society identified several shortcomings within the ICT c
 
 Similar issues and reforms in national curricula regarding computing and technology education have emerged worldwide. In Australia's National Innovation and Science Agenda, proposed in 2015 [1], AUD$64 million was allocated in support of early learning and STEM initiatives in schools with the intention of promoting digital literacy among its citizens. A portion of that sum (AUD$1.5 million) was allocated  under  the Australian  Technology  and  Science  Growth  Plan  to  delivering  AI  education  in schools. Singapore's education system now has a major focus on developing 21st century competencies [23] to enhance young people's competitiveness in the digital age. In Hong Kong, the government has recently announced in its budget speech a significant increase in funding, totaling HK$500 million, for secondary schools in the hope of encouraging local talent to prosper [10]. Each secondary school is entitled to HK$1 million to acquire the necessary equipment and professional services to conduct extra-
 
+
+<!-- PAGE 3 -->
+
+
 curricular activities that will  increase students' knowledge of the latest technologies, such as block chain, big data, cloud computing, and artificial intelligence.
 
 Over the last few decades, there has been great emphasis on ensuring that education systems are able to provide for the needs of young people. Governments have been trying their best to keep up with the ongoing and dynamic developments in the field of technology. As the world dives into the Fourth Industrial Revolution, bringing smarter cities with intelligent computing systems, it demands yet further evolution in the provision of education.
@@ -46,6 +55,10 @@ John McCarthy coined the term 'artificial intelligence' at a Dartmouth conferenc
 As several initiatives emphasize the need to equip every citizen with computational thinking skills, it may be useful to clarify the relationship between these skills and those required for the development of AI.  Basically, the latter is a subset of the former: 'computational thinking skills' refers to the ability to reason with any algorithm, while AI is a specific family of algorithms. Some computing algorithms, such as many sorting algorithms, are not associated with AI. In addition, many AI approaches have a particular  character,  often  including  a  non-deterministic  aspect,  using  a  cognitive  metaphor,  etc. Algorithms are at the core of AI technology development and are strongly linked to many of today's most popular applications-for example, Naïve Bayes for text classification and k-nearest neighbors for similar documents search. It is not a question of choosing between computational thinking or AI, but rather of the need to devote special attention to some of these application-driven AI algorithms as part of an effort to enable K-12 students to explore how AI works behind the scenes.
 
 Many young people might be unaware of the extent to which this kind of technology has penetrated our everyday  lives  through  many  existing  applications,  such  as  machine  learning,  robotics,  facial recognition,  and  voice assistants,  or  of  how  important  it  will  inevitably  remain  in  the future as  AI develops in sophistication and complexity. Beyond the technical orientation, major challenges remain in  the  areas  of  ethics and  safety. We  suggest  that  the  focus  of  K-12  education  could  be  placed  on building AI literacy across three dimensions: AI concepts , AI applications , and AI ethics/safety (see Table 1).
+
+
+<!-- PAGE 4 -->
+
 
 Table 1. The three dimensions of AI literacy
 
@@ -62,6 +75,10 @@ Gaining a broader understanding of AI and a range of skills related to AI and it
 Beyond understanding the concepts and recognizing the broader applications of AI, ethics is an equally important aspect of technological development. Complex systems of healthcare, transportation, and aerospace  need  to  be  carefully  designed  and  implemented  for  safety  [15].  Testing  an  autonomous vehicle, whether on an actual road or a testing track, for instance, is still controversial. How can the driverless vehicle or even a person learn without making a mistake? Would it be ethical to put the AI machine through a real-world 'clinical trial'? Not only legal liability, but also ethical and safety-related challenges should be regarded as the central drivers of the future of AI. Several initiatives have been set  up  and advocacy  work  is  being  performed  by  various  organizations,  including  the  Alan  Turing Institute and the Stanford Center for AI Safety, to help safeguard the well-being of our communities when developing and applying AI technologies.
 
 As the spread of AI continues toward ubiquity, some countries are beginning to allocate significant resources into leveraging the technology. Universities have already embraced AI, and are now offering specific courses to future professionals in the field. Carnegie Mellon University's Bachelor's degree in Artificial Intelligence, offered by the College of Computer Science, was announced in fall 2018 as the first of its kind in the United States [26]. Massachusetts Institute of Technology announced in October 2018  ambitious  plans  to  establish  an  independent  college  specifically  for  AI,  with  allocated  funds adding up to US$1.4 billion. The University of Rhode Island opened its AI lab, operating as part of its college  library,  in  fall  2018.  On  June  8,  2018,  a  press conference  was  held at  Zhejiang  University presenting the Action Plan on Promoting Artificial Intelligence in Universities. This initiative sets out
+
+
+<!-- PAGE 5 -->
+
 
 plans  to  make  Chinese  universities  and  colleges  leaders  in  AI  innovation  worldwide.  Ambitious milestones have been set for achievement within the next two decades, aiming to position China as the global leader in AI-related developments by 2030 and to ensure that China perseveres with AI talent cultivation and innovation [19].
 
@@ -81,6 +98,10 @@ Computers perceive the world using digital sensors.
 
 AI2. Representation  and  reasoning: Agents  maintain  representations  (and  models)  of the world, and use these for the process of reasoning.
 
+
+<!-- PAGE 6 -->
+
+
 AI3. Machine learning: Computers can learn from data and make appropriate decisions to respond to the environment.
 
 AI4. Natural  interaction: AI  developers  aim  to  develop  agents  that  interact  naturally  and seamlessly with humans.
@@ -97,6 +118,10 @@ A similar approach could be considered in implementing AI education at the K-12 
 
 Our research group has conducted studies of children's computational thinking development through block-based programming in Hong Kong. Basic concepts and techniques, such as sequencing, looping, conditional, debugging, and algorithmic thinking processes, are in general able to be taught to young children. Through the concepts of embodied cognition, we are aware that children understand abstract concepts quickly when various sensorimotor capacities are used, such as through bodily movement. For example, an elementary school pupil can explore the concept of conditionals by playing the role of an agent trying to escape a real maze. Given a stack of two-sided cards (one side has a symbol, and the other side has a direction), he/she needs to choose a card that matches the sign at each branch to make a correct turn. Through narration and post-activity dialogue, pupils can then come to understand how a robot solves a simple maze. After this, showing them a very high-level program containing only the essential steps can expose the pupil to what instructions the robot is given to solve the maze problem. Nonetheless, learning design with scaffolding techniques for AI education in K-12 is relatively new,
 
+
+<!-- PAGE 7 -->
+
+
 and  more  empirical  cases  will  need  to  be  collected  to  build  evidence  for  how  the  practices  for developing children's computational thinking may be applied to building up their AI literacy.
 
 ## A Program for K-12 Education in AI Essentials
@@ -110,6 +135,10 @@ Table 1. Proposed program structure for K-12 AI education
 | K-GRADE 2 (Age 4-7)    | N/A                                                                                                                                                                | • Learning through play • Role-playing • Pen-and-paper exercises • Storytelling                                                  | Low-Order Thinking Skills • Explore how to interact with sensors • Discuss why AI has an impact on everyday living • Recognize different AI applications and why safety may be an issue in our society                                                                                                                                                                                   |
 | GRADES 3-6 (Age 8-11)  | 1. Compare and modify algorithms to do the same or different tasks 2. Create programs using control structures, such as sequences and conditionals                 | • Modifying existing source code • Fill-in-the blanks exercises • Unplugged activities • Problem-based learning                  | Low-Order Thinking Skills • Explore simple processes of making inferences • Examine existing AI applications and identify their design issues High-Order Thinking Skills • Create and modify perception-based applications • Distinguish between artificial intelligence and natural intelligence                                                                                        |
 | GRADES 7-9 (Age 11-14) | 1. Aware of how to perform systematic tests 2. Design and refine algorithms 3. Identify how certain algorithms can be applied to problems in different disciplines | • Modifying, observing, and designing algorithms • Hypothesis testing • Graphical- and syntax-based coding • Critical evaluation | Low-Order Thinking Skills • Perform the Turing Test with intelligent agents • Examine graphs and data structures • Explore the concept of neural networks High-Order Thinking Skills • Create inference algorithms • Create a chatbot • Critically evaluate the ethical and social impacts of AI technologies • Apply acquired AI concepts as potential solutions to real-world problems |
+
+
+<!-- PAGE 8 -->
+
 
 ## K-Grade 2
 
@@ -125,6 +154,10 @@ At this age, pupils are also expected to understand conditional statements [4]. 
 
 There is a limited choice of open resources (especially with multi-language interfaces). AI learning platforms, such as the Cognimates platform (http://cognimates.me) developed by the MIT Media Lab, can serve as prototype learning tools, on which children can build games, program robots, and train AI
 
+
+<!-- PAGE 9 -->
+
+
 models. Further developing these kinds of platforms may be appropriate to allow pupils to engage in AI  development  in  a  more  controlled  environment.  Additional  educational  technology  designed specifically for developing AI literacy would be very useful, whether targeting this level or later levels.
 
 ## Grades 7-9
@@ -137,6 +170,10 @@ Figure 1. Hong Kong students are already learning how to write computer programs
 
 The main intention, however,  would be merely to emphasize that there are different programming languages, and that these come in the forms of graphical-based coding and syntax-based coding. The ability of pupils to perform syntax-based coding may vary, thus necessitating the need to engage with both forms. Pupils should be able to identify how well trained a system is, and how biases will affect its overall performance. At the more advanced level, pupils should now be able to use data structures, such  as  lists  and  dictionaries,  to  independently  create  simple  AI  applying  concepts  like  Bayesian inference,  rules  engines,  and  clustering.  Pupils  should  also  now  be  aware  of  the  constraints  and limitations of perception-based systems, and they should be able to utilize machine learning techniques
 
+
+<!-- PAGE 10 -->
+
+
 to enhance the abilities of their perception-based applications. They should now be able to critically evaluate the implications of AI on a much broader scale, including possible ethical or societal concerns.
 
 Beyond Grade  9  the  program  could  be  made  more  flexible  in  collaboration  with  CS  educators  at universities. Pupils could be exposed to additional technologies and given a chance to try to understand the know-how behind them. In some countries, pupils beyond Grade 9 may begin their preparation for college by choosing electives (e.g. information and communication technology (ICT) in Hong Kong, or AP CS in the U.S.) in their existing curriculum. Schools can therefore consider what AI concepts could be introduced in line with preparation for college study (see Figures 1 and 2).
@@ -148,6 +185,10 @@ Figure 2. Introducing machine learning to a group of students in Hong Kong for t
 Figure 3. Hong Kong students use the Anki Cozmo to explore the use of computer vision in robots.
 
 <!-- image -->
+
+
+<!-- PAGE 11 -->
+
 
 ## The Next Step
 
@@ -165,6 +206,10 @@ As  the  Hong  Kong  government  is  constantly  developing  its  technology  ed
 
 Several steps can be taken in the process of implementing this AI program structure. First, identify whether the CS curriculum currently in place is able to provide pupils with the foundational knowledge necessary to digest AI concepts. The AI program structure can be modified and adjusted to supplement the learning objectives of the current CS curriculum. Second, identify what tools will be utilized for specific grade levels. Although there is no standardized and universal tool specifically designed to teach AI at the K-12 level, educators can source specific tools that will be able to fulfil the learning objects at different levels. Third, it is essential to ensure that individuals assigned to deliver the AI curriculum
 
+
+<!-- PAGE 12 -->
+
+
 receive the necessary training, through workshops or information sessions, regarding AI education. Depending on location, this may be difficult to achieve, as AI education at K-12 level has made the most progress in China and the U.S.; it is thus paramount to ensure that sufficient resources are available for educators to receive the appropriate training.
 
 The proposed program structure serves as an starting point for the implementation of AI education at the K-12 level. However, it is well understood that the process of implementation will be affected by a given school's facilities and available resources. It is necessary for communities to be more involved and  vocal  about  the  need  for  children  to  attain  AI  literacy,  and  collaboration  between  multiple stakeholders is essential to transforming school systems to accommodate the teaching of AI. As AI technology  advances,  we  have  a  responsibility  to  ensure  that  students  become  well  equipped  to manipulate and utilize these emerging technologies, and to enter the workforce with all of the essential skills for them to excel in their careers.
@@ -178,6 +223,10 @@ Table 2. Implementation of K-12 AI Education in Hong Kong
 | Grade 4-6 (Primary School)                | Learning Objectives Under Technology Education Curriculum [6]: - Be aware of the approaches used in solving problems - Know how to write simple program with templates - Be aware of the use of abstraction and pattern recognition in solving problems                                                                                                                                      | Low-Order Thinking Skills ● Understand simple processes of making inferences High-Order Thinking Skills ● Create and modify perception-based applications ● Analyze the difference between artificial intelligence and natural intelligence                                    | AI1, AI4                |
 | Grade 7-9 (Secondary School)              | Learning Objectives Under Technology Education Curriculum [6]: - Apply different approaches in solving problems - Develop skills to solve problems systematically - Know how to develop simple problems                                                                                                                                                                                      | Low-Order Thinking Skills ● Understand graphs and data structures High-Order Thinking Skills ● Create a chatbot                                                                                                                                                                | AI1, AI2, AI4           |
 | Grade 10-12 (Secondary School - Optional) | Topics Under Information, Communication and Technology Curriculum [7]: - Under Compulsory Part (D. Basic Programming Concepts): - Problem-Solving Procedures - Algorithm Design - Algorithm Testing - Under Elective D. Software Development - Under the Topic: Programming - Problem definition and analysis - Design of solution - Implementation - Testing and Evaluation - Documentation | Low-Order Thinking Skills ● Understand the Turing Test ● Understand neural networks High-Order Thinking Skills ● Create inference algorithms ● Create a chatbot with syntax programming e.g. Python ● Apply acquired AI concepts as potential solutions to real-world problems | AI1, AI2, AI3, AI4, AI5 |
+
+
+<!-- PAGE 13 -->
+
 
 ## References
 
@@ -195,6 +244,10 @@ Table 2. Implementation of K-12 AI Education in Hong Kong
 12. portal.org/smash/get/diva2:807981/FULLTEXT01.pdf. Accessed 2019 Feb 19.
 12. Heinze, C., Haase, J. and Higgins, H. An Action Research Report from Multi-Year Approach to Teaching Artificial Intelligence at the K-6 level. In Twenty-Fourth AAAI Conference on Artificial Intelligence ; https://www.aaai.org/ocs/index.php/EAAI/EAAI10/paper/viewPaper/17
 
+
+<!-- PAGE 14 -->
+
+
 46. Accessed 2019 Mar 6. Association for the Advancement of Artificial Intelligence ©2010.
 13. House of Lords of the UK Parliament. AI in the UK: Ready, Willing and Able? (2018); https://publications.parliament.uk/pa/ld201719/ldselect/ldai/100/100.pdf. Accessed 2019 Mar 14.
 14. Kumar, A.N. Using Robotics in an Undergraduate Artificial Intelligence Course: An Experience Report. In 31st ASEE/IEEE Frontiers in Education Conference; http://fie2012.fie-conference.org/sites/fie2012.fieconference.org/history/fie2001/papers/1077.pdf. Accessed 2019 Mar 4. Institute of Electrical and Electronics Engineers ©2001.
@@ -209,6 +262,10 @@ Table 2. Implementation of K-12 AI Education in Hong Kong
 23. The Ministry of Education Singapore; https://www.moe.gov.sg/education/educationsystem/21st-century-competencies. Accessed 2019 Mar 22.
 24. Touretzky, D., Gardner-McCune et al. Envisioning AI For K-12: What Should Every Child Know About AI?. In Thirty-Third AAAI Conference on Artificial Intelligence (2019); https://github.com/touretzkyds/ai4k12/raw/master/documents/AAAI\_Blue\_Sk y\_2019.pdf. Accessed 2019 Mar 14. Association for the Advancement of Artificial Intelligence ©2019.
 25. Tucker, A. et al. A Model Curriculum for K-12 Computer Science: Final Report of the ACM K-12 Task Force Curriculum Committee. The Association for Computing Machinery, Inc. (October 2003); https://ftp.unpad.ac.id/orari/library/library-ref-
+
+
+<!-- PAGE 15 -->
+
 
 - eng/ref-eng-3/application/education/curriculum/k12final1022.pdf. Accessed 2019 Mar 22.
 26. Tugend, A. Colleges Grapple With Teaching the Technology and Ethics of AI. The New York Times, November 2,

@@ -1,10 +1,11 @@
 ---
 source_file: Meilvang_2024_Decision_support_and_algorithmic_support_The.pdf
-conversion_date: 2026-02-03T09:10:36.674648
+conversion_date: 2026-02-03T18:42:05.149378
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 ## European Journal of Social Work
@@ -51,9 +52,17 @@ CrossMark
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 3 -->
+
 
 disse algoritmer rekon /uniFB01 gurerer ideers om det professionelle skøn. Gennem analysen af tre vigtige temaer, standardisering, objektivisering og at eliminere bias, dokumenterer vi den tætte relation mellem de analyserede algoritmer og det professionelle skøn og det professionelle skøns ambivalente rolle.
 
@@ -64,6 +73,10 @@ Arti /uniFB01 cial intelligence and algorithms are increasingly being used in so
 Since Lipsky ' s (1980) study of how street level bureaucrats use discretion to interpret and modify formal rules, the role of professional discretion has been theorised and debated as a central part of the practice of social workers (see Evans, 2011; Evans &amp; Harris, 2004; Møller, 2019; Taylor, 2012; Taylor &amp; Whittaker, 2018). There is a growing literature on the e /uniFB00 ects of digitalisation on frontline work and professional discretion (Bovens &amp; Zouridis, 2002; Bu /uniFB00 at, 2015; Busch &amp; Henriksen, 2018; Petersen et al., 2020). In short, these studies highlight how technologies alter professional discretionary practices, either by limiting the room for discretion (e.g. Bovens &amp; Zouridis, 2002) or by enabling other ways of exercising discretionary power (e.g. Bu /uniFB00 at, 2015). In this paper, we add to these studies by taking a closer look at the way managers, developers, and front line workers construct professional discretion in relation to decision-support algorithms. We analyse the intensions, designs, and workings of these systems in casework with vulnerable children and families for the purpose of answering the following questions: What is meant by professionals needing ' decision support ' and how do these algorithms recon /uniFB01 gure ideas about professional discretion?
 
 We follow Bu /uniFB00 at ' s idea that studies of technological change and street-level bureaucracy must /uniFB01 nd a balanced position between ' technological determinism ' and ' social determinism ' (Bu /uniFB00 at, 2015, p. 157). This resonates with a theoretical focus inspired by science and technology-studies, STS, which have demonstrated that technologies are not neutral tools that possess a kind of mechanical objectivity (e.g. Latour, 1992; Mol, 2008), but play an important role in the process of shaping knowledge and professional practices. Thus, we analyse not only what an algorithm does in technical terms, but also the way in which algorithms recon /uniFB01 gure ideas about professional discretion. Empirically, we attend to the area of algorithms in social work with vulnerable children in Denmark. The article will proceed with a theory section where we present the literature on frontline work, technology, algorithms, and professional discretion. Then, we present our data, methods, and analytical strategy. Our analytical section begins with an analysis of the political background for the development and implementation of algorithms in social work, relating this to the way political and public actors problematise professional discretion. Then, we analyse algorithmic decision support systems as solutions to this problem, speci /uniFB01 cally relating to three themes: standardising casework, objectivising casework, and eliminating bias from casework. We conclude that these algorithms do not work on their own, as they are as much supported by professional decisions and discretion as professional discretion is supported by the algorithmic systems. This leaves the role for professional discretion in relation to algorithmic decision-support systems ambivalent and undecided.
+
+
+<!-- PAGE 4 -->
+
 
 ## Theory: professional discretion and technological systems
 
@@ -79,6 +92,10 @@ In our analysis and discussion, we follow the idea that studies of technological
 
 Our analysis is thus a mapping of the area of algorithms of social work in Denmark, and a case-analysis of three Danish cases. Across these cases, we compare and contrast intentions, design and workings of the algorithms to understand the underlying ideas related to algorithms and professional
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 discretion. Therefore our unit of analysis is the general ideas in the area that we have found across the mapping of the cases.
@@ -92,6 +109,10 @@ The study is designed as a two-step qualitative study, involving both digital in
 Municipalities organise their handling of referrals in di /uniFB00 erent ways, but legally, a referral has to be screened within 24 h. The initial handling of referrals, therefore, is a categorization , involving no other information than the information in the referral. Here, referrals are sorted into acute or non-acute. On the other side of the 24-hours assessment, there is more room for discretion (Lund, 2019, p. 24), when social workers decide di /uniFB00 erent measures and interventions. In the initial categorisation, there are no standards or tools for deciding whether social workers should categorise a referral as acute. This decision is therefore based on experience with the /uniFB01 eld and process, a sort of ' knowledge-how ' (Møller, 2022; Ryle, 1945), de /uniFB01 ned as a skill and expertise, grounded in practice and learning-by-doing.
 
 Due to the covid-pandemic all interviews were conducted on-line. The interviews were carried out as semi-structured interviews, inspired by ' active interviewing ' as described by Holstein and Gubrium (1995). The research is conducted in accordance with The Danish Code of Conduct for Research Integrity and the local university ' s policy on research integrity.
+
+
+<!-- PAGE 6 -->
+
 
 <!-- image -->
 
@@ -114,6 +135,10 @@ Table 2. Coding example.
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------|-----------------|
 | ' now I am categorizing referrals today, and I am supported in this way and led in this direction. Then, it is you tomorrow, and you are led in the same direction ' [C3, manager] | The algorithm is supposed to lead di /uniFB00 erent social workers categorizations in the same direction | Unify social work | Standardization |
 
+
+<!-- PAGE 7 -->
+
+
 the three themes presented below. This is not, we argue, an exhaustive list of themes, but these themes consistently appeared in our analysis of the material and across our cases. Related to for instance implementation of algorithmic systems on a broader scale, other themes could be relevant and important.
 
 The study is limited to examining the development and testing phases of algorithms in social work and access to use of algorithms in practice has been limited. Therefore, our conclusions regard only the intentions, designs, and workings in this initial phase. It is possible that this changes, as municipalities implement algorithmic systems on larger scales.
@@ -134,6 +159,10 @@ In this and other quotes, municipal managers describe the political ' anxiety ' 
 
 However, this does not match the professional understanding. Consistently, social workers replied that they did not consider the initial screening of referrals as di /uniFB03 cult or as an area where they might need support. This is not to say that social workers and the managers close to them did not have ideas about how to improve their work, for instance by using algorithms and predictive risk models. However, professionals did not perceive the particular area of categorising referrals as one that was di /uniFB03 cult to manage. The reason, why referrals were picked, then, has
 
+
+<!-- PAGE 8 -->
+
+
 to do with the political need for feeling safe -for feeling that nothing critical has been overlooked. However, as another municipal manager told us, it might also have to do with the fact that there are many referrals in social work: In 2019, there were more than 130,000 nationally and the number is rising. The sheer volume of referrals constitutes ideal data for the development of an algorithm.
 
 Other recent studies of algorithmic systems in Denmark have shown that the political ambition with such systems is, among other things, to minimise errors in case management (Jørgensen et al., 2021). The intention of introducing algorithmic systems, then, is to provide a kind of safety for municipalities and a protection against poorly managed cases. We found that the system is intended to ensure this by addressing (at least) three things in respect of casework: standardising, objectivising, and eliminating bias. Standardisation relates to the professional work processes in social work, objectivity to the way data is constructed, and bias to the algorithm itself. These themes depict how algorithms are intended to perform decision support and also con /uniFB01 gure professional discretion in speci /uniFB01 c ways.
@@ -149,6 +178,10 @@ Studies describe standardisation as a process of constructing uniformity across 
 … if it [the algorithm] will be able to support in the same way because we, as human beings, are not similar, and even if we have professional discussions and levels, it will always be di /uniFB00 erent. So, if it … now, today I ' mcategorising all the referrals, and I ' msupported in this speci /uniFB01 c way, I will be led in this direction. Tomorrow it ' s you, and you will be led in the same direction [ … .] So I can vividly see that it [the algorithm] can standardise the way that cases we mark as yellow today, would similarly have been marked yellow three days ago, and will also be marked yellow next week.
 
 In this example, we characterise what the manager refers to as a kind of ' procedural objectivity ' (Williamson &amp; Piattoeva, 2019). ' Procedural objectivity ' is impersonal, standardised methods of investigation. The algorithm in this understanding then becomes a tool of standardisation, enabling ' something that started as local and situated to be made public and replicable across space and experience ' (Williamson &amp; Piattoeva, 2019, p. 66).
+
+
+<!-- PAGE 9 -->
+
 
 However, the professional manager quoted above as well as other informants point out the importance of ' the local and the situated ' in professional discretion. According to the manager, the algorithm in The Algorithm project is supposed to ' read ' referrals and sort them according to the prevalence of terms such as for instance violence, rape and drugs. Depending on the quantity of these speci /uniFB01 c words, the referral will be categorised as either red, yellow or green. The professional manager gives an example from a training workshop with social workers, where it was discussed whether the word ' rape ' should automatically categorise a referral as red:
 
@@ -170,6 +203,10 @@ How can we use all the information and numbers we have, so that we can make more
 
 These quotes point to a challenge in social work, namely that it is based on ' soft values ' and lacks informed decisions based on facts. Many of the actors we have talked to think that this challenge
 
+
+<!-- PAGE 10 -->
+
+
 can be met by using algorithmic systems to derive factual knowledge from data. Some of the managers we have interviewed not only consider this a possibility, but also an obligation. Referring to critical discussions and public debate on the ethical aspects of using a predictive algorithm, a (digital) manager states:
 
 It is /uniFB01 ne that we have think tanks and professors who are critical; it is an important debate, we have to take. But we are here as an authority with an obligation to help families, so we are obliged to make use of our knowledge.
@@ -190,6 +227,10 @@ A third theme relating to the way algorithmic systems provide decision support f
 
 In these projects, managers, developers, and people from political and professional organisations consider the risk of bias in relation to three variables in particular: gender, age, and ethnicity. At one meeting, under the heading ' Bias and ethics ' , it was discussed which role these variables should play in the /uniFB01 nished algorithm. Questioned about how to cope with other as yet unknown risks of potential bias, the developing team and municipality answered that this is why, ultimately, it is preferable to have a project member in charge of performing an assessment (meaning: a person who will be capable of dealing with systemic errors and bias). In some ways, then, algorithmic decisionsupport systems are meant to support professional discretion by eliminating bias. However, when asked to defend possible issues of bias in the algorithm itself, professional discretion is considered an element that will ensure fairness.
 
+
+<!-- PAGE 11 -->
+
+
 ## Conclusion: algorithms and professional discretion
 
 In social work with children and families in Denmark, speci /uniFB01 c algorithm types are produced incorporating a particular kind of professional discretion. Some studies have shown that the role of professional discretion in street-level bureaucracy is decreasing and that the bureaucracy, in some places, turns into ' system-level bureaucracy ' (Bovens &amp; Zouridis, 2002) or ' digital bureaucracies ' (Busch &amp; Henriksen, 2018), where the room for professional discretion disappears. Other studies posits that professional discretion in street-level work is delegated from the case worker to the engineer (Alkhatib &amp; Bernstein, 2019). This is not the case in our study, instead, algorithmic systems are consistently across our cases and interviews characterised as providing ' decision support ' to social workers. No one considers fully automated decision-making within social work to be a good idea, and everyone stresses the need for human judgement and professional discretion. This implies that, from the outset, there is a need for professional discretion in relation to algorithms. Our /uniFB01 ndings are thus in line with studies that analyse how new technologies shape, in di /uniFB00 erent ways, frontline workers ' discretionary powers (Bu /uniFB00 at, 2015; Jorna &amp; Wagenaar, 2007). In the political context of striving for faster, more e /uniFB03 cient, and better quali /uniFB01 ed decision-making (Jørgensen et al., 2021), the question, then, will be: how do these systems support professional discretion -and how does professional discretion support the systems?
@@ -199,6 +240,10 @@ First of all, the algorithmic systems are meant to induce procedural objectivity
 Algorithms in social work are not expected to function without professionals ' provision of contextual information, the provision of data for the algorithm, and judgements made in respect of potential bias. Professional discretion occupies an undecided place in relation to these algorithms: on the one hand, professional discretion is seen as being too subjective and sensitive -as being related to the risk of mismanagement of cases. The problem concerning professional discretion is what prompts the development of algorithms in the /uniFB01 rst place. On the other hand, professional discretion is fundamental for the establishment, testing, and workings of the algorithmic systems.
 
 As our analysis shows, algorithms should not be deemed to be tantamount to the elimination of professional discretion by way standardisation and objecti /uniFB01 cation. These systems are not, then, just another example of the evidence-wave sweeping across social work and other public administration areas. As of now, at least in Denmark and other Nordic countries, algorithmic decision-support systems take an ambivalent and undecided position in respect of the role of professional discretion.
+
+
+<!-- PAGE 12 -->
+
 
 ## Re /uniFB02 ections for practice
 
@@ -227,6 +272,10 @@ Bovens, M., &amp; Zouridis, S. (2002). From street-level to system-level bureauc
 Bowker, G. C., &amp; Star, S. L. (1999). Sorting things out. Classi /uniFB01 cation and its consequences . The MIT Press.
 
 - Brown, A., Chouldechova, A., Putnam-Hornstein, E., Tobin, A., &amp; Vaithianathan, R. (2019, May). Toward algorithmic accountability in public services: A qualitative study of a /uniFB00 ected community perspectives on algorithmic decision-
+
+
+<!-- PAGE 13 -->
+
 
 <!-- image -->
 
@@ -280,6 +329,10 @@ Journal of Social Work , 38 (2), 253 -269. https://doi.org/10.1093/bjsw/bcl337
 - Ryle, G. (1945). Knowing how and knowing that: The presidential address. Proceedings of the Aristotelian Society , 46 , 1 -16. http://www.jstor.org/stable/4544405
 - Tavory, I., &amp; Timmermans, S. (2014). Abductive analysis: Theorizing qualitative research . University of Chicago Press.
 - Taylor, B. (2012). Models for professional judgement in social work. European Journal of Social Work , 15 (4), 546 -562. https://doi.org/10.1080/13691457.2012.702310
+
+
+<!-- PAGE 14 -->
+
 
 <!-- image -->
 

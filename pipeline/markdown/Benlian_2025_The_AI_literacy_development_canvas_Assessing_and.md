@@ -1,10 +1,11 @@
 ---
 source_file: Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.pdf
-conversion_date: 2026-02-03T08:43:15.890701
+conversion_date: 2026-02-03T18:21:29.987758
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Journal Pre-proof
 
 The AI literacy development canvas: Assessing and building AI literacy in organizations
@@ -35,17 +36,29 @@ This is a PDF file of an article that has undergone enhancements after acceptanc
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 ## The AI literacy development canvas: Assessing and building AI literacy in organizations
 
 Alexander Benlian * Technical University of Darmstadt Hochschulstr. 1 64287 Darmstadt Germany benlian@ise.tu-darmstadt.de
 
 Marc Pinski Boston Consulting Group Bockenheimer Landstraße 47 60325 Frankfurt am Main pinski.marc@bcg.com * Corresponding author Journal Pre-proof
 
+
+<!-- PAGE 3 -->
+
+
 ## ABSTRACT
 
 As artificial intelligence (AI) technologies become increasingly integral to business operations, organizations must ensure their workforce possesses the necessary AI literacy to harness these advancements effectively. AI literacy, encompassing conceptual, ethical, and practical competencies, is essential for employees at all levels-executives, middle managers, and non-IT staff-to make informed decisions, integrate AI into workflows, and navigate ethical considerations. This article presents a structured framework for assessing and developing AI literacy within organizations. First, we introduce an AI Literacy Assessment Matrix tailored to different managerial levels, enabling firms to evaluate AI-related competencies across the workforce. Second, we propose the AI Literacy Development Canvas, a strategic planning tool, guiding organizations on when, where, and how to invest in AI training and capability building. An illustrative case study in the pharmaceutical sector showcases the practical application of these tools and offers key lessons learned. The article contributes to academic research by advancing the understanding of AI literacy as a multidimensional organizational capability. For practitioners, it offers a conceptual and practical toolset that supports managers in the systematic assessment and strategic development of AI literacy upskilling initiatives across all levels of the organization. KEYWORDS : AI literacy; Workforce capability development; Upskilling; Digital transformation Journal Pre-proof
 
 ## The AI literacy development canvas: Assessing and building AI literacy in organizations
+
+
+<!-- PAGE 4 -->
+
 
 ## 1. The case for AI literacy development in organizations
 
@@ -57,6 +70,10 @@ Yet despite this urgency, most organizations remain ill-equipped to act. There i
 
 Despite growing attention to AI literacy in research and regulations (EU AI Act, 2024; Laupichler et al., 2022), practical frameworks for assessing and building AI competencies within organizations remain scarce. While existing apporaches to define AI literacy span digital literacy and ethical perspectives, they are typically geared toward technical (e.g., developers) or educational (e.g., students) user groups (Almatrafi et al., 2024; Long &amp; Magerko, 2020; Stolpe &amp; Hallström, 2024). What is missing are frameworks that support organizations in assessing and developing AI competencies among different workforce populations and align training with strategy. Yet addressing this gap is crucial: organizations require a systematic approach for identifying AI literacy needs and developing targeted upskilling programs (Retkowsky et al.,
 
+
+<!-- PAGE 5 -->
+
+
 2024). Without such guidance, AI adoption risks remaining fragmented and ineffective, undermining its potential to sustain value creation.
 
 In this article, we aim to offer organizations a clear, actionable roadmap to transform AI literacy from a recognized gap into an actionable capability. Drawing on academic research and corporate insights, we introduce two complementary tools: the AI Literacy Assessment Matrix and the AI Literacy Development Canvas. These frameworks help diagnose AI skill gaps, align training initiatives with business strategy, and implement AI literacy at scale across different organizational layers. As the speed of AI innovation increasingly outpaces organizational readiness, our approach addresses the pressing need for adaptive, scalable, and role-specific AI literacy tools that bridge strategic vision with operational action (Pinski, Tarafdar, et al., 2024).
@@ -67,6 +84,10 @@ For executives and top managers, AI literacy is essential to make informed strat
 
 Middle managers play a pivotal role in AI adoption by translating high-level strategy into daily operations. Their AI literacy should emphasize operational integration, team leadership, and data-driven decision-making (Koponen et al., 2025). They need a solid grasp of AI tools relevant to their functions, such as sales analytics, recruitment screening, or predictive maintenance. Just as Toyota trained middle managers extensively in lean production techniques in the 1980s,
 
+
+<!-- PAGE 6 -->
+
+
 today's middle managers must develop AI literacy to guide their teams through digital transformation. They also serve as AI advocates, coaching employees on AI tools, addressing concerns about job displacement, and promoting a culture of responsible AI use. Even when senior leaders champion AI, a gap at the middle-management level can stall momentum. In otherwise AI-ready firms, 'AI-skeptic' middle managers can halve the number of AI initiatives that succeed (Malmsheimer, 2024). Therefore, companies should treat middle managers as a priority group for AI upskilling.
 
 Non-IT employees (General Staff), the broad base of employees from analysts and marketers to customer service reps and beyond, also need AI literacy, albeit with a very practical, taskoriented emphasis (Cetindamar et al., 2024). They increasingly rely on AI tools in their daily work and require practical AI literacy to use them effectively and ethically. This includes knowing how to interact with AI-driven applications, such as generative AI for drafting reports or AI-enhanced customer service platforms, and critically evaluating AI-generated outputs (Pinski &amp; Benlian, 2024). Employees should be trained to recognize AI limitations, such as bias in automated decision-making, and understand when human oversight is necessary. A recent LinkedIn survey found that while 61% of desk workers want AI training, less than half of companies have begun formal education efforts, highlighting an urgent skills gap (Walsh, 2024). Organizations like IKEA and Mastercard are already implementing company-wide AI literacy programs, offering AI fundamentals training and ethical AI modules to ensure employees understand responsible AI use. Companies should provide accessible training formats, AI support forums, and role-specific learning to empower employees to work alongside AI confidently and responsibly (Rajaram &amp; Tinguely, 2024). 3. The AI literacy assessment matrix for organizations Journal Pre-proof
@@ -74,6 +95,10 @@ Non-IT employees (General Staff), the broad base of employees from analysts and 
 To systematically develop AI literacy in the workforce, organizations need a clear and actionable understanding of what AI literacy entails. However, existing research offers a range of perspectives. Some studies define AI literacy narrowly as technical proficiency, emphasizing programming skills or the ability to build AI systems (e.g., Stolpe &amp; Hallström, 2024)definitions more suitable for developers or data scientists. Other scholars, particularly in educational research, frame AI literacy as a subset of digital literacy, focusing on conceptual understanding and the ability to interact with AI responsibly (e.g., Almatrafi et al., 2024). Still others, such as Long and Magerko (2020), highlight critical thinking, ethics, and collaboration with AI as key competencies. These diverse perspectives have advanced the discourse, yet they often lack operational clarity for organizations seeking to upskill broad, non-technical workforces. Our approach responds to this gap by adopting a holistic, user-centric definition of AI literacy that builds on and extends the definitions proposed by Ng et al. (2021) and Pinski and Benlian (2024), emphasizing the knowledge, skills, and attitudes necessary to understand, apply, and evaluate AI responsibly in organizational contexts. Building on this foundation, we introduce the AI Literacy Assessment Matrix, a business-oriented adaptation of holistic AI literacy frameworks. It is tailored to workforce segments ranging from frontline employees to executives, with an emphasis on usage, interpretation, and governance rather than technical development.
 
 The matrix is grounded in the tripartite AI competence model developed by Knoth et al. (2024), which categorizes AI-related competencies into cognitive knowledge, behavioral skills, and
+
+
+<!-- PAGE 7 -->
+
 
 attitudes across key AI domains, including generic AI concepts, domain-specific applications, and ethics.. This tripartite structure, building on the ABC model of competence (Attitude, Behavior, Cognition), is widely used in educational research for its emphasis on problem-solving flexibility. Rooted in Franz E. Weinert's conceptualization of competence (Weinert, 2001), this framework defines competencies as the knowledge (Cognition) and skills (Behavior) individuals develop to solve problems, along with the motivation, volition, and social dispositions (Attitude) necessary for responsible application in varying contexts.
 
@@ -86,6 +111,10 @@ Conceptual, ethical, and practical AI literacy are mutually reinforcing: without
 ## [Insert Table 1 About Here]
 
 The AI Literacy Assessment Matrix can support onboarding, leadership development, and ongoing training initiatives, particularly within HR. However, its value is significantly enhanced when used not merely for assessment, but as a strategic diagnostic instrument that uncovers AI
+
+
+<!-- PAGE 8 -->
+
 
 capability gaps across the organization. These diagnostic insights form the foundation for the AI Literacy Development Canvas, which operationalizes the findings into structured development plans and strategic alignment. The next section introduces the Canvas as a complementary tool that builds directly on the Matrix to support integrated, organization-wide AI literacy efforts.
 
@@ -103,6 +132,10 @@ The first building block of the AI Literacy Development Canvas (Why do it?) defi
 
 AI literacy initiatives must align with an organization's broader digital and business strategy. They should address concrete goals, such as boosting operational efficiency, driving AI-based innovation, or improving customer experience. Objectives may stem from internal planning or external pressures like regulatory compliance (e.g., the EU AI Act) or competitive dynamics. Clearly defined goals ensure leadership support and position AI literacy as a solution to business challenges, not a standalone training effort. For example, a firm seeking better customer engagement might train marketing managers in AI-driven analytics, while a bank could upskill compliance teams to use AI-powered fraud detection models.
 
+
+<!-- PAGE 9 -->
+
+
 ## 4.1.2. Target outcomes ('What does success look like?')
 
 While business objectives define why an organization is investing in AI literacy, this section defines what success looks like in terms of AI competencies across the workforce. Target outcomes should be measurable and role-specific. For example, within 12 months, a company might aim for: 80% of non-IT employees scoring at least 'intermediate' in AI tool usage, all executives completing an 'AI for Leaders' program and improving literacy scores from an average of 2/5 to 4/5, and the formation of an AI Center of Excellence, where advanced AIliterate employees champion AI adoption. By defining these goals, for example in a SMART (Specific, Measurable, Achievable, Relevant, Time-bound) way, organizations can ensure accountability and better evaluate the success of AI literacy initiatives.
@@ -116,6 +149,10 @@ A clear assessment of AI literacy levels ensures that training efforts address t
 ## 4.2.2. Goals and gap analysis ('Where do we want to go and what's missing?')
 
 At this stage, companies must define their AI literacy goals and identify the gaps preventing them from reaching it. The AI Literacy Assessment Matrix may again support this process by
+
+
+<!-- PAGE 10 -->
+
 
 helping organizations determine the required ('to-be') conceptual, ethical, and procedural competencies across executives, middle managers, and employees. By systematically comparing current and desired literacy levels, businesses can pinpoint key 'from-to' shifts and prioritize areas with the greatest development impact.
 
@@ -133,6 +170,10 @@ A well-executed AI literacy program requires a phased rollout to ensure gradual 
 
 To ensure AI literacy programs drive meaningful business impact, organizations must track progress, measure effectiveness, and refine training efforts based on key performance indicators
 
+
+<!-- PAGE 11 -->
+
+
 (KPIs). These metrics should assess participation, skill development, practical application, and overall business value. Participation metrics track employee engagement, including the percentage of staff completing AI training and total hours invested in learning. Skill development metrics measure improvements in AI literacy, reflected in self-assessments and formal evaluations before and after training. Practical application metrics focus on AI adoption, such as the number of AI-driven projects initiated, increased usage of AI tools, and managers' confidence in applying AI insights. Finally, business impact metrics evaluate tangible improvements, including error reduction, efficiency gains, compliance adherence, and improved decision-making. Organizations should also assess AI readiness, monitoring employee sentiment toward AI through surveys and feedback mechanisms (Holmström, 2022). By implementing regular reviews and feedback loops, companies can ensure that AI literacy programs remain relevant, adaptive, and aligned with evolving technologies and business priorities. This ongoing evaluation process enables organizations to scale successful initiatives, refine underperforming areas, and sustain AI capability development across all levels of the workforce.
 
 This stepwise structure reinforces the canvas' role as a dynamic coordination tool, akin to a business model canvas (Osterwalder &amp; Pigneur, 2010). It supports ongoing dialogue, enables rapid iteration, and ensures that AI literacy development remains tightly coupled to evolving strategic priorities. In sum, the canvas makes AI upskilling not only visible and actionable, but also scalable and adaptable across different organizational settings. It helps answer key questions before launching into action and keeps all stakeholders on the same page about how the company will build the critical capacity of AI literacy in its workforce.
@@ -142,6 +183,10 @@ This stepwise structure reinforces the canvas' role as a dynamic coordination to
 ## 5. An exemplary application at Pharmaco and lessons learned
 
 To illustrate the usefulness of both the AI Literacy Assessment Matrix and the AI Literacy Development Canvas, we present the results from multiple interactions via workshops and interviews with PharmaCo, a partner organization in the pharma industry. PharmaCo, a global pharmaceutical company, has been integrating AI into its drug discovery, supply chain optimization, and patient engagement efforts. However, the leadership team identified a significant barrier: many employees lacked the necessary AI literacy to effectively leverage AIpowered tools and processes. While AI adoption was accelerating, middle managers struggled to integrate AI into operations, and frontline employees were unsure how to interact with AI-driven insights. PharmaCo conducted an AI literacy assessment across three key workforce segments (i.e., executives, middle managers, and non-IT employees in business units) using the AI
+
+
+<!-- PAGE 12 -->
+
 
 Literacy Assessment Matrix (see Table 3). These results highlighted the specific literacy gaps at different levels of the organization. Executives required strategic AI literacy to assess business model implications and investments, middle managers needed operational AI fluency to integrate AI into workflows, and non-IT employees needed foundational AI knowledge to interact effectively with AI-powered tools (e.g., GenAI). These insights were instrumental in defining targeted training and development efforts.
 
@@ -153,6 +198,10 @@ The PharmaCo case revealed several practical lessons for effectively implementin
 
 ## 6. Conclusion
 
+
+<!-- PAGE 13 -->
+
+
 AI literacy is no longer optional. It is essential for organizations seeking to harness AI responsibly and effectively (Mikalef et al., 2025). This article presented a structured and actionable approach to AI capability-building through two core tools: the AI Literacy Assessment Matrix and the AI Literacy Development Canvas. Together, these tools help companies identify literacy gaps across three dimensions-conceptual, ethical, and practicaland translate those insights into role-specific development strategies for executives, managers, and employees. Like a diagnostic and treatment plan, this approach supports continuous capability-building, aligning learning with business needs and strategic goals.
 
 We showed that AI literacy must be multidimensional and role-sensitive: without conceptual understanding, teams risk misuse; without ethical awareness, they may violate trust or compliance; and without practical skills, even the best AI systems may fail to deliver impact. Furthermore, AI literacy is required at all levels-but in different ways. Executives need a strategic grasp of AI's value, risks, and governance implications. Middle managers must develop the operational know-how to integrate AI into day-to-day processes and lead teams through AIdriven change. Non-IT employees require hands-on proficiency with AI tools and the critical thinking needed to use them responsibly. A role-specific, multidimensional approach to AI literacy ensures that training efforts are relevant, actionable, and aligned with organizational goals.
@@ -161,9 +210,17 @@ While this article offers a comprehensive and practical framework for developing
 
 AI education should not be seen as a one-off initiative but as a continuous, strategic effort to build long-term organizational capabilities. No matter their starting point, all companies must recognize the multidimensional and evolving nature of AI literacy. The frameworks introduced in this article-the AI Literacy Assessment Matrix and the AI Literacy Development Canvasoffer actionable guidance to evaluate current competencies, define future literacy goals, design targeted training, and track progress over time. By adopting this structured approach, organizations can empower their workforce, elevate decision-making, and ensure that AI becomes a catalyst for lasting innovation.
 
+
+<!-- PAGE 14 -->
+
+
 [Insert Appendices 1 &amp; 2 Here]
 
 Journal Pre-proof
+
+
+<!-- PAGE 15 -->
+
 
 ## References
 
@@ -182,6 +239,10 @@ Knoth, N., Decker, M., Laupichler, M. C., Pinski, M., Buchholtz, N., Bata, K., &
 Koponen, J., Julkunen, S., Laajalahti, A., Turunen, M., &amp; Spitzberg, B. (2025). Work Characteristics Needed by Middle Managers When Leading AI-Integrated Service Teams. Journal of Service Research , 28 (1), 168-185. https://doi.org/10.1177/10946705231220462
 
 Laupichler, M. C., Aster, A., Schirch, J., &amp; Raupach, T. (2022). Artificial intelligence literacy in higher and adult education: A scoping literature review. Computers and Education: Artificial Intelligence , 3 , 100101. https://doi.org/https://doi.org/10.1016/j.caeai.2022.100101
+
+
+<!-- PAGE 16 -->
+
 
 Long, D., &amp; Magerko, B. (2020). What is AI literacy? Competencies and design considerations. Proceedings of the 2020 CHI conference on human factors in computing systems,
 
@@ -211,6 +272,10 @@ Retkowsky, J., Hafermalz, E., &amp; Huysman, M. (2024). Managing a ChatGPT-empow
 
 StiboSystems. (2024). AI: The High-Stakes Gamble for Enterprises: The Business Leaders' View .
 
+
+<!-- PAGE 17 -->
+
+
 Stolpe, K., &amp; Hallström, J. (2024). Artificial intelligence literacy for technology education. Computers and Education Open , 6 , 100159.
 
 https://doi.org/https://doi.org/10.1016/j.caeo.2024.100159
@@ -225,6 +290,10 @@ Weinert, F. E. (2001). Concept of competence: A conceptual clarification. In D. 
 
 Journal Pre-proof
 
+
+<!-- PAGE 18 -->
+
+
 ## Table 1. The AI literacy assessment matrix
 
 | Role → Dimension ↓                                                                                     | Executives / Top Managers (Strategic competencies)                                                                                                                                                                                                                                                                                                                                 | Middle Managers (Management competencies)                                                                                                                                                                                                                                                                                                                             | General Employees (Non- IT) (Operational competencies)                                                                                                                                                                                                                                                                                     |
@@ -233,6 +302,10 @@ Journal Pre-proof
 | Ethical AI Literacy Recognizing and managing AI's ethical and risk implications.                       | • 'I evaluate the ethical risks of AI systems, such as fairness, transparency, and accountability, when making strategic decisions or approving projects.' • 'I stay informed about data privacy and AI regulations and integrate them into strategic decision-making.' • 'I actively promote responsible AI use and support ethics training across the organization.' Journal     | • 'I am aware of AI-related ethical risks in my team's tools and ensure we have processes in place to mitigate bias and comply with data regulations.' • 'I can identify and address potential biases or unfair outcomes in AI tools used by my team.' • 'I am comfortable discussing AI risks and limitations with both my team and senior management.' Pre-proof    | • 'I understand that AI systems can produce biased or incorrect outputs and always apply human judgment before acting on them.' • 'I am aware that AI tools can produce biased or incorrect outputs and take care to double-check results.' • 'I understand when AI outputs require human review, especially when ethical concerns arise.' |
 | Practical AI Literacy Applying AI tools effectively in daily tasks and communicating insights clearly. | • 'I can clearly explain the business value, limitations, and strategic role of AI to diverse stakeholders.' • 'I interpret AI-generated analytics and use them to support executive decision- making.' • 'I can clearly communicate the strategic benefits, risks, and limitations of our AI initiatives to stakeholders such as the board, regulators, and investors.'           | • 'I know when and how to adjust existing workflows to incorporate AI tools that enhance productivity or accuracy.' • 'I regularly use AI- generated insights (e.g., forecasts, classifications, scores) to inform team decisions.' • 'I can explain the rationale behind an AI-supported decision to both my team and upper management.'                             | • 'I can use AI-generated recommendations to improve how I prioritize tasks or make routine decisions in my role.' • 'I have adapted at least one part of my workflow to make better use of the AI tools available to me.' • 'I can clearly explain to a colleague how an AI tool I use works and how it benefits my day-to-day tasks.'    |
 | Note : Rate each self-assessment statement from 1 = Strongly disagree to 5 = Strongly agree            | Note : Rate each self-assessment statement from 1 = Strongly disagree to 5 = Strongly agree                                                                                                                                                                                                                                                                                        | Note : Rate each self-assessment statement from 1 = Strongly disagree to 5 = Strongly agree                                                                                                                                                                                                                                                                           | Note : Rate each self-assessment statement from 1 = Strongly disagree to 5 = Strongly agree                                                                                                                                                                                                                                                |
+
+
+<!-- PAGE 19 -->
+
 
 Table 2. A step-by-step approach for using the AI literacy development canvas
 
@@ -246,6 +319,10 @@ Table 2. A step-by-step approach for using the AI literacy development canvas
 
 Journal Pre-proof
 
+
+<!-- PAGE 20 -->
+
+
 Table 3. AI literacy assessment matrix results at PharmaCo
 
 |                        | Executives / Top Managers (Strategic competencies)                                                                                                                                                                                                                                                                                                                              | Middle Managers (Management competencies)                                                                                                                                                                                                                                                                                                                                                                                  | General Employees (Non-IT) (Operational competencies)                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -253,6 +330,10 @@ Table 3. AI literacy assessment matrix results at PharmaCo
 | Conceptual AI Literacy | Gaps: Limited understanding of AI's role in drug discovery, clinical trial optimization, and pharma market forecasting; unclear how AI creates value across the pharma value chain. Training Need: Executive briefings on AI-enabled R&D, strategic applications across the pharma lifecycle, and scenario-based sessions on evaluating AI investment and innovation potential. | Gaps: Limited understanding of how AI supports operational decisions in areas like demand forecasting, inventory optimization, and trial site selection; unclear on how AI models function within pharma workflows. Training Need: Applied training on AI use cases in supply chain, manufacturing, and clinical ops; role-based sessions on how AI models are built, validated, and deployed in pharma contexts.          | Gaps: Limited understanding of how AI supports regulatory documentation, automates lab tasks, or enhances patient data workflows; unclear how AI tools generate outputs. Training Need: Introductory sessions on how GenAI, NLP, and machine learning are used in pharma operations; role-specific tutorials on AI basics applied to everyday tasks.                                                                                               |
 | Ethical AI Literacy    | Gaps: Unclear governance regarding AI-generated insights in drug approval decisions and patient safety regulations. Training Need: AI ethics and compliance workshops on AI bias in clinical trials, regulatory impact of AI- assisted diagnostics, and FDA/EMA                                                                                                                 | Gaps: Limited awareness of AI bias and ethical risks in patient recruitment for clinical trials, adverse event monitoring, and trial protocol automation. Training Need: Targeted training on bias mitigation in AI-driven eligibility screening, ethical handling of real-world data, and compliance-aligned decision frameworks in clinical operations. Pre-proof                                                        | Gaps: Limited awareness about AI- generated biases in drug efficacy analysis or automated patient diagnostics. Training Need: Responsible AI training focused on data privacy in AI-driven diagnostics, ethical considerations in automated prescription AI, and AI transparency in patient communication.                                                                                                                                         |
 | Practical AI Literacy  | Gaps: Difficulty operationalizing AI insights in strategic planning, and limited ability to translate AI-driven R&D or supply chain results into compelling executive narratives. Training Need: Executive training on applying AI insights in board-level decisions, investor briefings, and regulatory communication strategies. Journal                                      | Gaps: Challenges in translating AI- generated outputs (e.g., biomarker predictions, patient risk scores, and production forecasts) into actionable insights for cross- funcational teams. Training Need: Targeted workshops on integrating AI insights into operational decisions (e.g., trial enrollment, batch release), paired with simulation-based exercises for explaining AI outputs in cross- functional meetings. | Gaps: Limited ability to use efficient prompt engineering techniques and apply AI-generated outputs (e.g., lab results, patient risk profiles) in daily tasks, and uncertainty in interpreting AI- assisted regulatory insights or escalating questionable outputs. Training Need: Scenario-based exercises on integrating AI into lab workflows and documentation, communication training for conveying AI findings to clinicians and regulators. |
+
+
+<!-- PAGE 21 -->
+
 
 Table 4. AI literacy development canvas implementation at PharmaCo
 
@@ -267,15 +348,27 @@ Table 4. AI literacy development canvas implementation at PharmaCo
 | TheHOW (Execution& Measurement) | Resources& Partnerships             | • Secure Dedicated Budget: Allocate (cross-departmental) targeted funding to design, acquire, and scale role-specific AI literacy programs. • Leverage Tech& Educational Partnerships: Partner with pharma-focused AI vendors (e.g., IBM Watson Health, Tempus, Owkin) and universities to provide access to cutting-edge tools, tailored AI literacy programs, and expert-led training. • Integrate Regulatory &Ethical Expertise: Involve FDA, EMA, and ethics experts to ensure that all training aligns with compliance standards and promotes responsible, bias-aware AI adoption.      |
 | TheHOW (Execution& Measurement) | High-Level Implementation Plan      | • Stage 1 - Pilot &Assessment: Launch a cross-level AI literacy pilot in one business unit (e.g., clinical operations), using the AI Literacy Assessment Matrix to baseline conceptual, ethical, and practical competencies. Gather feedback to refine content and delivery formats. • Stage 2 - Scaled Role-Based Rollout: Expand training company-wide with tailored learning paths for executives, middle managers, and non-IT staff. Secure partnerships with educational providers and AI vendors; allocate budget for platform access and expert facilitation.                         |
 
+
+<!-- PAGE 22 -->
+
+
 |                     | • Stage 3 - Embedding &Continuous Learning: Establish AI champions in key functions, integrate literacy into onboarding and L&D systems, and run ongoing workshops and simulations. Use follow-up assessments and KPIs to measure progress and adjust programs.                                                                                                                                                                |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Metrics& Evaluation | • Track AI literacy improvements via pre- and post-training assessments (e.g., improvement in AI self-assessment results after training). • Monitor AI-driven operational efficiency gains in R&D, regulatory compliance, and supply chain (e.g., reduction in AI-related errors in drug discovery or clinical trials). • Assess the impact of AI literacy on reducing compliance risks and improving drug approval timelines. |
 
 Journal Pre-proof
 
+
+<!-- PAGE 23 -->
+
+
 Figure 1. The AI literacy development canvas
 
 <!-- image -->
+
+
+<!-- PAGE 24 -->
+
 
 Appendix 1. Overview of the three building blocks and nine elements of the AI literacy development canvas
 
@@ -301,6 +394,10 @@ Appendix 2. Prompting questions for completing the AI literacy development canva
 | TheWHAT Assessment& Training (What to do?) | Current AI Literacy Levels       | Where are we now? - What is the existing AI knowledge across different roles? (Executives, Managers, Employees) - What AI-related training/resources are available? - What are the strengths and weaknesses in AI literacy?                            | ____________________ ____________________ __________________ ____________________ |
 
 Journal Pre-proof
+
+
+<!-- PAGE 25 -->
+
 
 |                                               | Goals &Gap Analysis              | Where do we want to go? - What is the gap between where we are and where we need to be? - What are the key knowledge and skills gaps? - Are there organizational barriers (e.g., lack of collaboration, governance issues)? - What are the specific goals/gaps by role? ____________________ ____________________ __________________ ____________________                                               |
 |-----------------------------------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,4 +1,4 @@
-# Projekt: FemPrompt - Feminist AI Literacy Literature Review
+# Literature Review: AI Literacy & Bias in Social Work
 
 ## Projektziel
 

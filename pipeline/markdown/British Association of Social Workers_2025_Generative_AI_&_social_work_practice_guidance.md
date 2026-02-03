@@ -1,10 +1,11 @@
 ---
 source_file: British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.pdf
-conversion_date: 2026-02-03T08:43:53.990117
+conversion_date: 2026-02-03T18:22:07.214908
 converter: docling
 quality_score: 100
 ---
 
+<!-- PAGE 1 -->
 ## Generative AI and
 
 ## Social Work:
@@ -15,6 +16,10 @@ Initial Guidance for Practice and Ethics
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 Generative AI (GenAI) is increasingly in use in social work practice. This short guidance aims to offer some points of reflection for current and future social workers around the use of generative AI in their practice and relate these to ethical considerations raised by the interaction of the use of GenAI with the BASW Code of Ethics.
 
 The development and deployment of GenAI is moving at speed. BASW therefore offers this as initial guidance. We welcome feedback as to whether this guidance is helpful, how it can be improved, as well as any experiences that you have had in using GenAI in your practice. You can share these with us via this form.
@@ -22,6 +27,10 @@ The development and deployment of GenAI is moving at speed. BASW therefore offer
 This guidance uses a range of examples. Use of an example does not represent endorsement of a specific product.
 
 <!-- image -->
+
+
+<!-- PAGE 3 -->
+
 
 ## What is generative AI?
 
@@ -48,6 +57,10 @@ This guidance uses a range of examples. Use of an example does not represent end
 - Generic tools in particular are prone to bias, which is inherent in the datasets on which they are trained. An example of bias would be the use of racist or sexist language or assumptions in its output. In the Code, social workers are reminded of the need to challenge oppression wherever it is found and to respect diversity and this will include reflecting on potential bias in GenAI outputs.
 - GenAI tools can 'hallucinate', that is output can be incorrect or misleading, but it is presented as fact and may sound plausible. In alignment with the Code, ethical practice requires social workers to maintain clear and accurate records, so
 
+
+<!-- PAGE 4 -->
+
+
 check for accuracy and do not assume that everything presented in GenAI is correct.
 
 - Transcriptions may contain transcription errors (as above) especially with regard to names and places. In addition, writing down information is a valuable exercise in developing understanding of a case and reflecting on future actions, nor should the importance of non-verbal cues that cannot be picked up by a recording be ignored.
@@ -71,6 +84,10 @@ Employers considering adoption of GenAI tools should include an Equalities Impac
 - Sensitive personal information should not be entered into generic GenAI tools where it could become part of future training datasets without the informed consent of the person whose data it is. Data must be handled in line with UK GDPR. The Code covers the need to act with informed consent and the appropriate sharing of information.
 - This also applies to using GenAI for practice educator purposes.
 
+
+<!-- PAGE 5 -->
+
+
 <!-- image -->
 
 - This also applies to social work students, and social workers pursuing postqualification courses.
@@ -86,6 +103,10 @@ The rapid development of technology means a range of organisations are strugglin
 
 - If not already doing so, employers who supply AI should provide appropriate training, clear guidance, and support on responsible use of GenAI.
 - If not already doing so, employers should nominate a senior practice lead to ensure ethical use of AI in their services (for example, a Principal Social Worker in England).
+
+
+<!-- PAGE 6 -->
+
 
 - If the potential of GenAI to reduce the administrative burden is realised, the extra capacity should be directed towards relation based social work and not used to justify increased caseload or the cutting of posts.
 - Employers need to undertake continuous evaluation and adaptation of GenAI to ensure they meet social work values and objectives.
@@ -114,6 +135,10 @@ If you found this guidance helpful but are not currently a member of BASW, you c
 - Generative AI is having a growing environmental impact, especially in relation to use of electricity and water. This may also provide grounds for employing generative AI moderately.
 
 This is a rapidly developing area and one in which BASW will continue to work, including calling for government regulation and regulatory guidance. More information can be found in The BASW Statement on Social Work and Generative Artificial Intelligence.
+
+
+<!-- PAGE 7 -->
+
 
 Cite as: BASW (March 2025) Generative AI and Social Work: Initial Guidance for Practice and Ethics. Birmingham: BASW.
 

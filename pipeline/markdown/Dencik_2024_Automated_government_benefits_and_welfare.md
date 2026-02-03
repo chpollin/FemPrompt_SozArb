@@ -1,10 +1,11 @@
 ---
 source_file: Dencik_2024_Automated_government_benefits_and_welfare.pdf
-conversion_date: 2026-02-03T08:46:38.342595
+conversion_date: 2026-02-03T18:24:45.393706
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -37,6 +38,10 @@ Attribution Non-Commercial No Derivatives license
 
 ## Automated Government Benefits and Welfare
 
+
+<!-- PAGE 2 -->
+
+
 about  the  state  of  the  world  and  otherwise  unobservable  correlations  compels  policymakers  and administrators to increase existing and deploy new data generating systems' (Young, Bullock, and Lecy 2019: 310). While simpler, rule-based algorithms are well suited for automating many kinds of eligibility screening, ML-based algorithms excel in finding patterns in data. Therefore, welfare administration tasks for which AI has been implemented include flagging hidden indicators of fraud (Savage 2021), as well as risk indicators in child welfare (Eaton 2019). Governments have also been adopting ML-based chatbots to recommend  services  or  benefits  and  assist  with  applications  for  services  (Makasi  et  al.  2022),  but  a predominant use has been welfare surveillance.
 
 In this article, I will focus on the use of AI by state agencies to distribute benefits and welfare and to govern problems associated with poverty. Since 2018, I have been studying the automation of federal government services in Canada-a country that has been considered a 'world leader' in AI development (Lepage-Richer and McKelvey 2022), although much of the use of AI in Canada's government has remained limited to internal  processes  (Morrison  2023). 1 While  I  draw  some  examples  from  Canada  and  summarize  broad international  trends  towards  digital  government,  most  of  my  examples  of  recent  welfare  surveillance systems are drawn from the Netherlands, which has emerged as one of the best documented examples of a 'digital welfare state.' This is largely as a consequence of reporting following a major recent scandal (SyRI) that provided the 'clearest warning against technological overreach' in welfare surveillance (Geiger 2023).
@@ -51,6 +56,10 @@ The current period of hype and attention to AI technologies follows in the wake 
 
 1  One notable public-facing use of AI in Canada's government has been for the processing of immigration applications (including fraud investigation; see Reevely 2021, 2023).
 
+
+<!-- PAGE 3 -->
+
+
 my focus is on how these technologies are developed to make decisions about people in the present and future on the basis of vast datasets collected, extracted, and translated from the past.
 
 This article considers AI as a technology of governance, defined primarily by its use of 'machine learning' (ML) algorithms based on statistical reasoning that are then used to make social distinctions and predictions. Understanding  key  features  of  machine  learning  is  often  less  important  than  an  algorithm's  'objective function' (Peeters 2020: 512)-what it is 'optimized' for or 'trained' to maximize/minimize in its decisions (Croll  2018).  In  this  regard,  algorithmic  systems  resemble  narrowly  goal-focused  actors,  such  as corporations and their goal of maximizing profit or government bureaucracies with their clearly defined sets of inputs and outputs (Penn 2018). Governments have long been automating mundane bureaucratic tasks, and ML techniques provide just another means of constructing administrative algorithms.
@@ -62,6 +71,10 @@ As with any 'new' technology implicated in surveillance, we need to approach cla
 Several authors have traced continuities between supposedly new technologies and established forms of government. Cellard (2022) shows how existing bureaucratic and administrative procedures are now being 'rebranded'  as  'algorithms,'  while  Lepage-Richer  and  McKelvey  (2022)  compare  attributions  of intelligence  to  machines  and  state  agencies.  They  argue  that  national  governments  might  'appear  so receptive  to  the  latest  innovations  in  information  processing…  because  they  themselves  have  been previously re-configured as information processing systems,' requiring us to consider 'government itself as a form of artificial intelligence' (Lepage-Richer and McKelvey 2022: 2). Alkhatib (2021) draws on Scott's (1998) Seeing Like a State to '[frame] the massive algorithmic systems that harm marginalized groups as functionally similar to massive, sprawling administrative states' (Alkhatib 2021: 2), and Hoffman (2021) builds on the concept of 'administrative violence' carried out by state agencies to develop the notion of 'data violence' carried out through information systems. These conceptual analogies between algorithms and administrative states are effective, given all that the two have in common. Administrative agencies are
 
 2  Others associate 'true AI' with the creation of an artificial 'general intelligence,' which like a human being, would be able to perform a wide range of tasks and reason about the world (Mitchell 2021). However, existing systems remain far from this ideal and remain tied to statistical techniques. Discussions of ML-based systems make generous use of human analogies and metaphors to mischaracterize how these systems operate, further contributing to 'AI hype' (Weil 2023).
+
+
+<!-- PAGE 4 -->
+
 
 increasingly  adopting  algorithmic  systems,  and  as  one  consequence,  we  are  appreciating  just  how 'algorithmic' the work of government agencies has been for a long time before the digital present.
 
@@ -75,6 +88,10 @@ Although welfare surveillance programs do end up targeting individuals and famil
 
 The spread of 'welfare state' policies around the world (beginning with Germany in the late eighteenth century) and the characteristics these assumed in different countries has been theorized through literature on 'policy diffusion' and 'policy translation' (see Béland et al. 2022). Given the historical transformations involved, it is difficult to identify the core ideas, rationalizations, and political goals of the 'welfare state,' but in general the development of post-World War II welfare programs should be interpreted not as 'as a response to the demand for socioeconomic equality, but to the demand for socioeconomic security' (Flora and Heideheimer 1981: 23). In Canada, for instance, the mid-twentieth century creation of 'social security'
 
+
+<!-- PAGE 5 -->
+
+
 was  tied  to  'a  broad  strategy  to  stabilize  society,  contain  socialism  and  communism,  and  ease  class conflict'-one that avoided characterizing inequality as the problem or redistribution as its solution but was 'strictly about providing a basic minimum of material security' (Sager 2021: 268). In the Netherlands, social security was the outcome of negotiations between employers, unions, and the state, wherein business leaders sought to maintain 'harmonious' relations with labor (Oude Nijhuis 2018; Touwen 2023).
 
 The twentieth-century welfare state was made possible by the growth of government bureaucracy, record keeping,  and  identification  systems,  all  of  which  enabled  closer  surveillance  of  populations  as  well  as individuals. 'Public administration' normalized these surveillance practices by requiring citizens to provide personal  information  in  order  to  receive  services,  by  maintaining  records  about  these  citizens,  and increasingly by connecting together records from different sources (Webster 2012). Greater use of computer systems in the late-twentieth century 'increased the relevance of personal data for the modern welfare state' (Gantchev  2019:  6)  and  heightened  the  asymmetry  in  power  between  individuals  and  bureaucratic institutions, gradually making surveillance 'more extensive, more efficient, and less obtrusive than former methods' (Gandy 1989: 62).
@@ -84,6 +101,10 @@ While social welfare can be broadly defined to include benefits and services pro
 In the Netherlands for example, the 1980s were the beginning of a period of welfare retrenchment and concerns about worker 'inactivity,' which led to a greater emphasis on fraud detection (Oude Nijhuis 2018). By the mid-2000s, an early ADM system was being used to hunt for welfare fraud by comparing recorded water usage at a residence with the number of people claiming to be living there (Gantchev 2019: 16). In more recent years, much of the responsibility for fostering a  'participation  society'  in  the  Netherlands (toward greater participation in the workforce) has been decentralized or shifted to local governments (van Kersbergen and Metliaas 2020). This local government responsibility includes fighting welfare fraud, with political pressure to tackle fraud increasing as a result of several incidents 'involving individuals with an immigration background' (Ranchordás and Schuurmans 2020: 11-12). By 2019, fraud investigations were found to be a major application of 'public sector data analytics' in the Netherlands (van Veenstra, Grommé, and Djafari 2020).
 
 ADM systems,  including  ones  based  on  relatively  simple  algorithms  and  more  sophisticated  machine learning  techniques,  have  been  incorporated  into  a  well-defined  'problem  space'  for  the  public administration of welfare-how to get benefits into the hands of the 'right' people and not the 'wrong' kind.  What  exactly  defines  the  category  of  the  'undeserving'  (Romano  2018)  has  been  historically contingent, with many recent surveillance regimes being devoted to identifying and excluding those who are  guilty  of  welfare  fraud.  Such  'fraud'  can  include  not  providing  up-to-date  circumstances  of  one's situation to authorities or the myriad forms of 'everyday resistance' that welfare recipients use as 'survival strategies' (Gilliom 2001). The social construction of welfare fraud has been broadly theorized as part of the criminalization of poverty or the criminalization of welfare (Dobson 2019; Gustafson 2011).
+
+
+<!-- PAGE 6 -->
+
 
 What is algorithmically classified as  'fraud' can be modeled from a growing number of variables, but computer-mediated  welfare  surveillance  inherits  earlier  attitudes  and  assumptions  about  the  moral regulation of the poor (Maki 2021). These include thousands of years of concern over incentives to be 'idle' from work, the prevalence of which has more to do with periods of 'moral crisis' rather than neoliberal preferences for a shrinking state (Romano 2018). The wider category of 'the poor' has long been subjected to high levels of surveillance, not only due to generalized concerns over danger and moral deviance but also as legitimated by the understanding that a person receiving assistance from the state should open themselves up to ongoing state scrutiny. In the words of Coser (1965: 145), 'the protective veil [of privacy] available to other members of society is explicitly denied to them.' Welfare regimes vary in the extent to which this scrutiny  involves  assessing  'initial  eligibility'  up-front  or  'continuing  eligibility'  (Fellowes  and  Rowe 2004: 365) and auditing after-the-fact. However, contemporary welfare regimes fundamentally require a way to  identify  applicants  and  sort  large  volumes  of  files,  and  several  examples  from  the  Netherlands illustrate the dynamics involved as algorithmic systems are combined with a growing abundance of data sources.
 
@@ -95,6 +116,10 @@ First, regardless of the nature of the algorithm involved, it is indeed correct 
 
 One place that human agency remains central for ADM systems is in the decisions around their procurement and deployment. In the Dutch SyRI scandal, a key way in which inequality was reproduced was through the human  decision  to  target  the  algorithm  at  low-income  or  'problem'  neighborhoods  (van  Bekkum  and Borgesius 2021; Wieringa 2023), similar to how predictive policing systems are more often directed at disadvantaged  populations  (Brayne  2020).  Dutch  welfare  surveillance  continues  to  target  particular neighborhoods (Davidson and Adriaens 2022), and the choice to deploy these systems against populations
 
+
+<!-- PAGE 7 -->
+
+
 that are predominantly poor, racialized, or of immigrant background is just as important for the reproduction of inequality as how these algorithms function.
 
 Inequality is reproduced through a variety of channels that complement one another in reinforcing existing hierarchies  and  targeting  social  control  against  marginalized  populations,  but  ML  algorithms  can statistically reproduce social inequalities in their training data, even along lines (i.e., race or ethnicity) that are  not  explicitly  being  measured.  While  governments  are  typically  prohibited  from  discriminating  on certain grounds, these characteristics become encoded indirectly or through proxies in data, the number of which increases with the size of the datasets used. In the Netherlands, the government is prohibited from discriminating on the basis of ethnicity, and as a consequence, datasets used in welfare surveillance do not list ethnicity as a variable. However, there are numerous other correlates with ethnicity (such as language fluency),  and  these  can  result  in  the  disproportionate  targeting  of  ethnic  groups  for  fraud  investigation (Constantaras et al. 2023; see also Belleman, Heilbron, and Kootstra 2023).
@@ -104,6 +129,10 @@ More recent examples of welfare surveillance in the Netherlands highlight additi
 The power of these systems lies in their ability to statistically model complex patterns rather than applying clear criteria for decisions, which  raises particular problems  for government  accountability and administrative justice (Henman 2020) and perhaps even undermines core justifications for the existence of administrative agencies (Calo and Citron 2021). While it is true that ML-based algorithms pose additional challenges  to  transparency  and  the  explainability  of  government  decisions  due  to  their  complexity, ambiguity, or incommensurability with human reasoning (de Bruijn, Warnier, and Janssen 2022; Fazi 2020), there are often more fundamental problems in how these systems are used, including forms of opacity, secrecy, or barriers to government accountability that can make it difficult to determine how decisions are being made (Burrell 2016). Although it was complex, Rotterdam's algorithm could still be subjected to an external audit (resulting in its suspension in 2021), and it was disclosed to journalists 'when faced with the prospect  of  potential  court  action  under  freedom-of-information  laws,'  allowing  for  some  public accountability for how risk scores were calculated (Constantaras et al. 2023). Details of SyRI also had to be fought for through freedom-of-information, with the Dutch government keeping its risk calculation methods secret to avoid giving 'criminals an advantage' (Gantchev 2019: 18). Other governments have similarly opposed  disclosing  details  about  their  'cutting-edge'  algorithmic  technologies  because  they  claim  this would make it easier to commit fraud (Savage 2021; see also Solano 2022). In other cases, the secrecy results from the private companies that develop these systems protecting what they claim as intellectual property (Meaker 2023; Ranchordás and Schuurmans 2020: 28-29).
 
 Concerns about enabling fraud or violating intellectual property should not prevent the decisions made by ADMs from being systematically monitored. Indeed, just as ML-based techniques have become widely used in auditing (Fedyk et al. 2022) to identify 'fraud,' 'anomalies,' and 'improper payments' (Bullock, Young, and Wang 2020), algorithmic systems are themselves increasingly being audited by internal and external actors.  There  are  different  approaches  to  what  such  an  audit  should  encompass  (Vecchione,  Levy,  and
+
+
+<!-- PAGE 8 -->
+
 
 Barocas 2021)-whether to include training data, the resulting algorithms, or their consequences. Some aspects of how algorithmic systems operate may be inscrutable to auditors, particularly if these are external actors who may only be able to track the 'impacts' of the system through some of its decisions (Raji et al. 2020). But internally, algorithmic systems can be characterized by a high level of traceability that can enable 'self-auditing,' even if such audits themselves rely on the use of algorithmic techniques, so that 'evaluation and auditing become inter-algorithmic in form' (Power 2022: 6).
 
@@ -123,6 +152,10 @@ There are ML-based techniques for welfare administration that take a more proact
 
 4  For example, the EU's AI Act has significantly influenced Canada's recently proposed AI regulations, which have been designed for 'inter-operability' with the European approach (ISED 2023).
 
+
+<!-- PAGE 9 -->
+
+
 services or 'miss out on resources that help them overcome their marginalisation' (Clarke, Parsell, and Lata 2021: 410). However, welfare reforms in recent decades have been justified more on the basis of efficiency and fighting fraud. In the SyRI scandal, this resulted in thousands of people being wrongly accused, but it is important to remember that welfare surveillance causes harm even when decisions are not made in error. Tying extensive scrutiny and testing to social benefits is experienced as privacy-invasive and controlling even  in  the  absence  of  algorithms  (Gustafson  2011;  Whelan  2021).  Using  surveillance  to  detect  rule violations and impose punitive sanctions (loss of services, major fines, police involvement) results in a range of harms against people who may find the rules difficult to understand or impossible to comply with while surviving on the margins (Gustafson 2011). Scholarship on welfare surveillance shows how these harms disproportionately  affect  specific  (often  racialized)  groups,  further  compounding  existing  structural inequalities and reproducing structural violence (Monahan 2017).
 
 A more critical argument against welfare surveillance is that 'while surveillance 'could' technically be designed to help, considering the history and treatment of the poor, surveillance in the welfare system is highly unlikely to actually benefit them' (Maki 2021: 71). Instead, welfare surveillance has primarily been carried out to meet government's organizational goals, such as increased efficiency and limiting payments to the 'undeserving.' Even if we accept that welfare surveillance can have benefits, focusing on making 'better'  surveillance  systems  can  distract  us  from  more  fundamental  structural  and  political  issues  that underlie the production of poverty (Clarke, Parsell, and Lata 2021). Marginalization cannot be meaningfully addressed through better data collection and tinkering with algorithms to make them more fair or inclusive.
@@ -138,6 +171,10 @@ Funding for this research was provided by the Social Sciences and Humanities Res
 ## Bibliography
 
 Alkhatib, Ali. 2021. To Live in Their Utopia: Why Algorithmic Systems Create Absurd Outcomes. In Proceedings of the 2021 CHI Conference  on  Human  Factors  in  Computing  Systems,  Yokohama,  Japan,  May  8-13 ,  1-9.  New  York:  Association  for Computing Machinery.
+
+
+<!-- PAGE 10 -->
+
 
 - Alston, Philip. 2019. Digital Technology, Social Protection and Human Rights. UN -OHCHR , October 1. https://www.ohchr.org/en/calls-for-input/2019/digital-technology-social-protection-and-human-rights-report  [accessed  July 3, 2023].
 - Andrejevic, Mark, and Kelly Gates. 2014. Big Data Surveillance: Introduction. Surveillance &amp; Society 12 (2): 185-196.
@@ -170,6 +207,10 @@ Alkhatib, Ali. 2021. To Live in Their Utopia: Why Algorithmic Systems Create Abs
 - Eubanks,  Virginia.  2018. Automating Inequality:  How  High-Tech  Tools  Profile,  Police,  and  Punish  the  Poor .  New  York:  St. Martin's Press.
 - Fazi, M. Beatrice. 2020. Beyond Human: Deep Learning, Explainability and Representation. Theory, Culture &amp; Society 38 (7-8): https://doi.org/10.1177/0263276420966386.
 - Fedyk,  Anastassia,  James  Hodson,  Natalya  Khimich,  and  Tatiana  Fedyk.  2022.  Is  Artificial  Intelligence  Improving  the  Audit Process? Review of Accounting Studies 27 (3): 938-985.
+
+
+<!-- PAGE 11 -->
+
 
 - Fellowes, Matthew C., and Gretchen Rowe. 2004. Politics and the New American Welfare States. American Journal of Political Science 48 (2): 362-373.
 - Flora, Peter, and Arnold J. Heideheimer. 1981. The Historical Core and Changing Boundaries of the Welfare State. In Development of Welfare States in Europe and America , edited by Peter Flora and Arnold J. Heideheimer, 17-34. New York: Routledge.
@@ -204,6 +245,10 @@ Alkhatib, Ali. 2021. To Live in Their Utopia: Why Algorithmic Systems Create Abs
 - OECD. 2023. Global Trends in Government Innovation 2023. https://oecd-opsi.org/publications/trends-2023/ [accessed July 6, 2023].
 - Office of the Privacy Commissioner of Canada. 2021. Office of the Privacy Commissioner Compliance Monitoring of Statistics Canada's Financial Transactions Project and Credit Agency Data Project: Final Report. December 9.
 
+
+<!-- PAGE 12 -->
+
+
 - https://www.priv.gc.ca/en/opc-actions-and-decisions/investigations/investigations-into-federal-institutions/202021/pa\_20210503\_sc/ [accessed July 3, 2023].
 - Oude  Nijhuis,  Dennie.  2018. Religion,  Class,  and  the  Postwar  Development  of  the  Dutch  Welfare  State .  Amsterdam,  NL: Amsterdam University Press.
 - Out-Law News. 2023. Regulator of Algorithms Established in the Netherlands. Pinsent Masons, June 28. https://www.pinsentmasons.com/out-law/news/regulator-of-algorithms-established-in-the-netherlands [accessed July 3, 2023].
@@ -234,6 +279,10 @@ Alkhatib, Ali. 2021. To Live in Their Utopia: Why Algorithmic Systems Create Abs
 - van Bekkum, Marvin, and Frederik Zuiderveen Borgesius. 2021. Digital Welfare Fraud Detection and the Dutch SyRI Judgment. European Journal of Social Security 23 (4): 323-340.
 - van  Kersbergen,  Kees,  and  Kjersti  Metliaas.  2020.  Radical  Alternative  Conceptualizations  of  the  Classical  Welfare  State? Contrasting the United Kingdom and the Netherlands with Norway. Social Policy &amp; Administration 54 (5): 813-826.
 - van  Veenstra,  Anne  Fleur,  Francisca  Grommé,  and  Somayeh  Djafari.  2020.  The  Use  of  Public  Sector  Data  Analytics  in  the Netherlands. Transforming Government: People, Process and Policy 15 (4): 396-419.
+
+
+<!-- PAGE 13 -->
+
 
 - Vecchione, Briana, Karen Levy, and Solon Barocas. 2021. Algorithmic Auditing and Social Justice: Lessons from the History of Audit Studies. In EAAMO '21: Equity and Access in Algorithms, Mechanisms, and Optimization, New York, October 5-9 , 19. New York: Association for Computing Machinery.
 - Webster, C. William R. 2012. Public Administration as Surveillance. In Routledge Handbook of Surveillance Studies , edited by Kirstie Ball, Kevin Haggerty, and David Lyon, 313-320. London: Routledge.

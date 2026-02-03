@@ -1,10 +1,11 @@
 ---
 source_file: Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.pdf
-conversion_date: 2026-02-03T08:57:21.165625
+conversion_date: 2026-02-03T18:27:56.770168
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models
 
 AIMEN GABA, University of Massachusetts Amherst, USA
@@ -33,6 +34,10 @@ Permission to make digital or hard copies of all or part of this work for person
 
 Manuscript submitted to ACM
 
+
+<!-- PAGE 2 -->
+
+
 inequalities in society. For example, facial recognition technologies tend to perform better for individuals with lighter skin tones [9], and voice-controlled devices often struggle with certain accents [42]. In the case of large language models (LLMs), recent studies have shown that they can exhibit biases and other social risks [67] against particular religious groups [2], produce gender stereotypes [63], and generate stigmatizing language [51, 58], reinforcing harmful stereotypes when discussing non-binary or transgender individuals. These biases not only undermine user trust in ML models [21], but also degrade the model's ability to provide meaningful and fair interactions.
 
 Conversations around fairness and harms in sociotechnical systems have been a focal point within the CSCW and broader HCI community [52, 61, 65, 70]. Previous discussions have emphasized the implications of biased technologies on marginalized identities, especially concerning gender [17, 24]. For instance, Scheuerman et al. [57] found that commercial facial analysis services consistently perform worse for transgender individuals and are universally unable to classify non-binary genders, highlighting significant gaps in technological inclusivity. These dialogues within the CSCW community underscore the importance of diverse representation and gender balance in machine learning evaluations [36].
@@ -46,6 +51,10 @@ To address these research questions, we studied how gendered and neutral prompts
 In this work, we make the following contributions:
 
 - We introduce curated gender-focused prompts to evaluate LLMs' inclusivity and gender representation.
+
+
+<!-- PAGE 3 -->
+
 
 Fig. 1. Research questions to understand people's perception of bias in a real-world application of large language models.
 
@@ -70,6 +79,10 @@ The intersection of language technologies and gender representation has become a
 
 Further research has expanded on these findings, showing that LLMs frequently fail to accommodate non-binary identities. For example, Ghosh et al. [22] highlight the limitations of LLMs in representing gender diversity, particularly the persistent exclusion of non-binary and transgender individuals in the models' outputs. This issue is further exacerbated by biases that extend beyond gender, such as anti-Muslim bias, which has been documented in LLMs [2]. These studies reflect the prevalant nature of the biases present in LLMs, not just limited to gender, but that spans various social identities.
 
+
+<!-- PAGE 4 -->
+
+
 Other research has examined how LLMs replicate human tendencies to perceive socially subordinate groups as less diverse than dominant groups [38]. This study emphasizes the inherent biases in LLMs' representations of social groups, mirroring broader societal stereotypes. Similarly, research has shown that LLMs can generate stigmatizing language, particularly when discussing non-binary individuals, which reinforces harmful stereotypes [51]. The paper [69] offers a parallel perspective, exploring how marginalized communities, including individuals with disabilities, experience biases in LLM outputs, stressing the importance of inclusive evaluation approaches in understanding these biases.
 
 In response to these issues, efforts have been made to quantify and mitigate these biases. For example, Holstein et al. [26] advocate for transparent reporting of model behaviors and active interventions to reduce harmful tendencies in LLMs. Similarly, Park et al. [54] evaluate existing models and introduce methods for bias mitigation, such as adversarial training [34], data augmentation, and debiasing algorithms, to improve fairness and accuracy in detecting abusive content. Bartl and Leavy [5] developed a gender includive dataset called the Tiny Heap and observed an overall reduction in gender stereotyping tendencies across three large lagnuage models that were fine-tuned using that dataset. These studies highlight the dual responsibilities of identifying biases and designing interventions to mitigate harm, making them a key part of ongoing efforts to improve LLM fairness and inclusivity.
@@ -81,6 +94,10 @@ Understanding and fostering trust in AI systems is crucial, particularly in sens
 Liao et al.[41] aligns these concerns with actionable recommendations to enhance LLM transparency, framing transparency as vital for ethical AI design. Studies like [72] identify challenges with LLM inaccuracies, biases, and educational misalignment, advocating for ethical guidelines and training. Similarly, Lee et al. [39] explore how conflicting AI outputs increases user comprehension but comprimising users' percieved AI capacity, highlighting the need for transparency in AI models and promote critical LLM usage. In this work [33], Kumar et al. conduct a formative and controlled experiment to explore the impact of pedagogically informed guidance strategies on the students' performance, confidence and trust in LLMs. To measure trust, they collected pre- and post-measures on a scale of 7 regarding perception of LLMs (confidence in LLMs' responses, helpfulness, willingness to interact again and error tolerance) and perception of self (confidence in their answers, self-confidence for the given topic of assignment).
 
 Göben and Lämmel [23] conduct a trust analysis of LLM conversations by using a trust score between -1 (absolute distrust) and +1 (absolute trust) function to understand and assess users' trust in knowledge elicited from these LLMs and its sources, offering insights into trust formation during interactions. This work [64] identifies trust as central to ChatGPT's adoption while also highlighting that an overreliance on it for health-related advice could potentially lead to misinformation and subsequent health risks. Shen et al. [60] conduct a large-scale measurement of ChatGPT's reliability in the generic QA scenario with a carefully curated set of questions across different datasets and domains finding ChatGPT's reliability varying across different domains, especially underperforming in law and science questions. We supplement these existing work to better understand the perceived trustworthiness and the challenges LLMs face in earning user trust.
+
+
+<!-- PAGE 5 -->
+
 
 ## 3 A Case Study on ChatGPT Response Patterns
 
@@ -103,6 +120,10 @@ We analyze the responses of ChatGPT to the four prompts mentioned above (repeate
 
 Manuscript submitted to ACM
 
+
+<!-- PAGE 6 -->
+
+
 The character's personal goals often focused on achievement such as 'navigating college as a first-generation student' (3) or 'excelling in environmental science or psychology' (4). Challenges typically involved 'financial constraints' (9), 'handling/managing rejections' (6), 'navigating a competitive job market' (2). In one response, the female character was depicted as 'selecting a car that fits family and adventure needs'. Symbols associated with the female character emphasized 'growth' or 'discovery'. Memorable quotes included: 'the key to her newfound independence', and 'a sea of gender-based obstacles that sought to erode her confidence'.
 
 3.1.3 Man Prompts. In all 40 responses, ChatGPT consistently used he/him pronouns for the male character. The male character was assigned traditionally masculine Western names commonly such as Alex (6), Mark (5), and Jake (4). These names are traditionally gendered and reflect the stereotype of male identity. Some names, like Alex, were more neutral but still paired with masculine descriptors. Common adjectives included 'resilient' (16), anticipation (5), determination (5) often linked to fields like 'computer science or psychology'. The male character's personal goals often focused on career success and leadership. ChatGPT frequently mentioned objectives such as 'securing a job' (6) or 'overcoming unemployment' (6). Challenges were primarily career-related, including 'unemployment' (8), 'rejection emails' (7), and 'job applications' (6) with occasional mentions of work-life balance struggles. Symbolism highlighted assertive and traditional imagery portraying the male character as 'the provider' or 'adventurous'. Memorable quotes included: 'his dedication to family and his role as a provider' and 'unemployment had turned this room into a battlefield'.
@@ -118,6 +139,10 @@ To understand the perceived utility of LLMs, we conducted in-depth user intervie
 ## 4.1 Participant recruitment and selection
 
 We recruited 25 participants. Among them, 9 identified as non-binary/transgender ( 𝑀 𝑎𝑔𝑒 = 26.11, 𝑆𝐷 𝑎𝑔𝑒 = 8.51), 8 identified as women ( 𝑀 𝑎𝑔𝑒 = 25.62, 𝑆𝐷 𝑎𝑔𝑒 = 4.07), and 8 identified as men ( 𝑀 𝑎𝑔𝑒 = 25.62, 𝑆𝐷 𝑎𝑔𝑒 = 2.39). We first interviewed the non-binary participants and then recruited women and men participants of similar backgrounds (with considerations for diversity in the knowledge of LLM participants, bias in LLM and AI background). Concretely, we Manuscript submitted to ACM
+
+
+<!-- PAGE 7 -->
+
 
 Table 1. Participants' knowledge of bias in LLMs/AI and LLMs/AI background)
 
@@ -146,6 +171,10 @@ Using different prompt-response sets for the second round allowed us to introduc
 
 After showing each prompt, the interviewer asked the participants to share their immediate reactions and thoughts (in case they had not already). The interviewer then guided the discussion by asking if the participants thought ChatGPT Manuscript submitted to ACM
 
+
+<!-- PAGE 8 -->
+
+
 Fig. 2. An overview of our study protocol
 
 <!-- image -->
@@ -164,6 +193,10 @@ We began our analysis by open coding all 25 transcripts following Corbin and Str
 
 We opted not to calculate the inter-rater reliability (IRR) in our analysis because it does not align with the interpretive framework foundational to qualitative research, as argued by McDonald et al. [49]. Our approach prioritized collaboration and consensus in the development of the codebook, where interpretations of the responses of the participants were collectively discussed and agreed on. Adding a numerical comparison of the coding choices after the fact would not Manuscript submitted to ACM
 
+
+<!-- PAGE 9 -->
+
+
 have enhanced the rigor of our process. Instead, we focused on ensuring analytical rigor through in-depth discussions and careful refinement of our coding framework.
 
 ## 4.5 Background: ChatGPT Usage
@@ -175,6 +208,10 @@ Participants reported using ChatGPT in various scenarios, mainly for writing tas
 4.6.1 Participants' Understanding &amp; Characterization of Bias. We began by asking them to reflect on instances where they had encountered biased responses. We then asked how they discovered these biases, and whether they could identify biased responses. Participants were also asked about their specific expectations of ChatGPT and if their current experiences matched these expectations. We also asked if they found certain types of prompts to elicit more biased responses compared to others and if these biases affected their work or life in any way. From the 25 participants in the study, 2 reported that they did not encounter bias during their interactions with LLMs, attributing this to their limited use of technology. The remaining 23 participants shared a variety of experiences, from subtle biases to more noticeable patterns in ChatGPT behavior. Four primary themes emerged from their responses regarding perceived bias.
 
 Stereotypical bias: The most commonly observed bias was stereotypical, particularly regarding gender assumptions. Participants shared several examples where ChatGPT displayed such biases. P1 noted that when asked to draw an arched nose, ChatGPT produced only Eurocentric features, 'it could only draw the same like very eurocentric features... why can you not draw facial features beyond a very eurocentric ideal?' . P9 highlighted gender stereotypes in language, with ChatGPT associating terms like 'beautiful dress' and 'grace' with female CEOs, and 'leadership' to male CEOs, 'it was giving me things like beautiful dress instead of things you usually expect in a CEO like charge and making decisions' . Similarly, P10 noted that ChatGPT referred to male leaders as 'Mr. President' but used 'Miss XYZ' for women in similar roles, 'for my mom, a president, it just wrote Miss Xyz' .
+
+
+<!-- PAGE 10 -->
+
 
 Bias against non-binary individuals was also observed. P15 reported misgendering, with ChatGPT replacing their androgynous name with traditionally feminine ones, 'it kept substituting random women's names for mine' . P25 noted that ChatGPT adopted a passive-aggressive tone after recognizing their non-binary identity, 'it started giving us different answers and got a tone... even refusing to answer some questions on gender' .
 
@@ -194,6 +231,10 @@ When asked if they expected ChatGPT to be biased, responses varied. Some were su
 
 Non-binary Prompts: Non-cisgender participants expressed frustration and, at times, outrage at ChatGPT's handling of non-binary representation, criticizing its responses as lacking nuance , condescending , cis-centric , and stereotypical . Manuscript submitted to ACM
 
+
+<!-- PAGE 11 -->
+
+
 Table 2. Summary of Key Findings by Participant Perspective (Rows) and Prompt Type (Column)
 
 |                                        | Non-binary                                                                               | Woman                                                                                | Man                                                                   | Person                                                                                     |
@@ -207,6 +248,10 @@ P16 shared, 'It does sound condescending... it feels like, okay, I'm non-binary,
 Woman prompts: Non-binary participants criticized ChatGPT's responses as blatant , uncertain , emotional , or AIgenerated . P2 remarked, 'Discussing the...emotional side of things could be construed as a bit stereotypical' . P15 noted uncertainty in the portrayal of the female character, 'There's an uncertainty to her... It assumes that women are less powerful' . P3 observed that ChatGPT assumed the female character was cisgender, 'If Grace weren't cis, there'd be a more complicated story' . While most participants did not find the responses offensive, they shared concerns that associating women with traditional traits could reinforce stereotypical and less powerful images of women.
 
 Man prompts: Non-binary participants noted that ChatGPT reinforced traditional gender roles and used typical male representation with bigger words . P16 commented, 'If you remove pronouns and names, it's clearly about a man... typical traits like engine roared' . P15 criticized the response as overly westernized and consumerist, 'It's so American... 'the drive towards the horizon'... 'a declaration of independence'' . P14 noted the use of white-coded names like Alex, while P3 pointed towards the cis-centric nature of the model and remarked, 'If you prompt, it just seems like they won't give any trans, right? It would never give a trans character unless explicitly asked for it' . Participants commonly found the
+
+
+<!-- PAGE 12 -->
+
 
 responses lacking diversity or even humorous , though not offensive. However, P14 and P15 expressed concerns that the statements could harmfully underemphasize women's career ambitions or overemphasize masculine traits.
 
@@ -228,6 +273,10 @@ Non-binary prompts: Women were critical of how non-binary individuals were portr
 
 Manuscript submitted to ACM
 
+
+<!-- PAGE 13 -->
+
+
 Woman prompts: Women reported to have felt uncomfortable with stereotypical portrayals, particularly when characters were shown as emotional , hesitant , or exhibiting traditional feminine traits . P23 remarked, 'The woman is very like small and shy, and they love to read, and they sit quietly... but women have different personalities, they have different characteristics' . Some noted how prompts often focused on themes like 'newfound independence' with P24 commenting, 'For women, it's independence; for non-binary people, it's their identity.' While participants were not offended, many expressed a need for portrayals that avoided stereotypes. P24 added, 'I'd want it to change its tone, incorporating gender without reinforcing stereotypical biases' .
 
 Man prompts: Women participants commented that ChatGPT used big words for men, such as adventurous or stoic . They reflected on how men were depicted as confident and in control. P10 also shared how there was never a moment of hesitation in these responses. Participants also noticed that these responses were interesting, set in the current age, or went into greater depth. The participants did not feel offended; however, they shared similar concerns as above about ChatGPT making strong assumptions by taking gender stereotypes into account.
@@ -243,6 +292,10 @@ Overall, participants identified significant gender biases in ChatGPT's response
 Participants were asked to recall instances when ChatGPT provided incorrect answers, reflect on its accuracy, and describe patterns in its performance. Participants across all gender groups shared similar concerns about the correctness and performance of ChatGPT, highlighting that errors often occurred with highly specific or technical topics. Most participants indicated that they could generally identify when ChatGPT's responses were accurate or not, especially if they were familiar with the subject, as P13 noted, 'If it's something I was already researching, I realize it's making an incorrect point' . However, for some participants, the verification of the correctness appeared more uncertain. P11 said, 'Sometimes I can tell when it's incorrect because I feel like that was a weird way to say it' . This suggests that familiarity with the topic plays an important role in the ability of a user to assess the accuracy of ChatGPT's responses.
 
 When asked how they knew whether ChatGPT was correct, participants provided a range of strategies. Some relied on external verification, such as checking the information through search engines or comparing it to known sources.
+
+
+<!-- PAGE 14 -->
+
 
 P1 explained, 'I'll do a little bit of research, like look it up on Google. ' . Others noted that they had an intuition (P13) or developed a sense of when responses felt logical or reasonable. Participants observed that ChatGPT performed better on simple , logical , or generic prompts but struggled with creative tasks. P13 noted, 'It seems more correct for logical or factual questions compared to subjective or societal analysis-type prompts' and P18 explained, 'Mostly for programming things where there's some sort of creativity required... or some sort of design or decisions that need to be made... that's where ChatGPT usually gets it wrong' . Expectations for accuracy varied. Some initially expected high accuracy but became cautious after noticing errors. P13 said, 'At first, I expected it to be accurate... but it can mislead you. ' Others had modest expectations but were impressed by its improvement over time, with P12 remarking, 'Part of the reason why I didn't hop on the train at first is because. . . expectations were pretty low... With a well-engineered prompt, my confidence is pretty high nowadays' .
 
@@ -262,6 +315,10 @@ Although majority of the participants were reluctant to use ChatGPT for medical 
 
 Manuscript submitted to ACM
 
+
+<!-- PAGE 15 -->
+
+
 A majority of participants (13 out of 25) preferred search engines, books, or online communities over ChatGPT, citing its unreliable output and the ease of verifying information through trusted sources. P2 emphasized, 'I prefer verified, published information from reputable sources, like academic journals' . For these participants, search engines, books, and online communities were seen as more reliable and verifiable sources, which was crucial in a game show environment where mistakes could result in financial losses.
 
 Conversely, 6 participants trusted ChatGPT for quick, and concise answers. P5 highlighted its efficiency, 'It's good at summarization... It would save me a lot of time that I would spend while searching on Google or any other search engine and it would do the same thing for me in 5 seconds' . Several participants trusted ChatGPT to answer general knowledge questions, particularly when the task was time-sensitive. For these participants, ChatGPT's ability to provide quick and concise responses made it an attractive option in a fast-paced, high-pressure situation. P6 mentioned, 'If I had a very limited amount of time, maybe like 10 seconds or 20 seconds to answer, I'd go with ChatGPT' .
@@ -276,9 +333,17 @@ Fig. 3. Before and after the interview trust ratings by self-reported gender, by
 
 This section examines participants' self-reported trust in the LLM, categorized into two types: morality-based trust, reflecting perceptions of the LLM's benevolence, transparency, and ethicality, and performance-based trust, capturing perceptions of reliability and competence [46]. The findings offer a quantitative perspective on how participants perceive the trustworthiness of LLMs across these dimensions.
 
+
+<!-- PAGE 16 -->
+
+
 Gender and Trust. We first examined how trust ratings varied by gender using a general linear model that included trust type (moral or performance-based), participants' gender (men, women, non-binary/transgender), and the time the trust ratings were collected (before and after the interviews). Figure 3 shows the results. We observed a significant effect of gender ( 𝜒 2 = 70.55, p &lt; 0.001), with men reporting higher levels of trust in both the morality and performance of LLMs compared to women and non-binary participants. For performance-based trust, non-binary participants reported significantly higher levels of trust than women. This divergence in trust levels among non-binary participants between morality-based and performance-based trust contributed to an interaction effect between gender and trust type. Specifically, non-binary participants exhibited greater trust in LLM performance (significantly higher than women) but lower trust in LLM morality (comparable to women). We also found a significant effect of the type of trust ( 𝜒 2 = 20.401, p &lt; 0.001), such that participants reported higher levels of performance-based trust than morality-based trust. Trust ratings decreased significantly after the interviews ( 𝜒 2 = 15.80, p &lt; 0.001). However, we cannot make causal conclusions regarding whether this is driven by the deep reflection induced by the interview study or potential experimenter demand. Experience with LLMs and Trust. Following a similar approach, we used a general linear model to examine the effect of the participant's expertise in AI and LLMs on their trust in LLMs. Specifically, the linear model predicted trust ratings based on trust type, time (as in the previous model), and participants' self-reported expertise in AI and LLM tools, as described in section 4.1. The interactions between these factors were also included in the model. The results are presented in Figure 3. As in the previous model, we found a significant effect of the type of trust and time ( 𝜒 2 = 17.69 and 15.81, p &lt; 0.001). Furthermore, there was a significant effect of the experience and background of the participants in AI and LLM tools ( 𝜒 2 = 26.68, p &lt; 0.001) such that individuals with higher self-reported expertise tended to trust LLMs more in both morality and performance. In contrast, novice AI users tended to trust LLMs less, possibly due to a lack of familiarity with how such systems operate or a higher degree of skepticism stemming from limited exposure to their capabilities and limitations. For example, P3 noted that one of the reasons why they won't use ChatGPT in a high-stake health scenario (4.8.1) was because of their limited experience with using LLMs.
 
 Knowledge of LLM Biases and Trust. We constructed another general linear model to examine the effect of the knowledge of participants about LLM-related biases on their trust in LLMs. The linear model predicted trust ratings based on trust type, time (pre- and post-interviews), and participants' self-reported knowledge of biases in LLM outputs, as described in the methodology section. The interactions between these factors were also included in the model. The results are presented in Figure 3. As in the previous model, we found a significant effect of the type of trust and time ( 𝜒 2 = 18.82 and 13.27, p &lt; 0.001). Furthermore, there was a significant effect of the knowledge of participants about LLM-related biases ( 𝜒 2 = 21.82, p &lt; 0.001), with individuals reporting greater knowledge of biases that tend to trust LLMs less in both morality and performance. Interestingly, there was also a significant interaction between self-reported knowledge of LLM-related biases and the reporting time of trust rating ( 𝜒 2 = 7.76, p &lt; 0.001). Participants with minimal or extensive knowledge of LLM biases showed negligible changes in their trust ratings for both morality and performance over time. However, the most notable group was participants who self-reported a medium level of knowledge about biases. Their trust in LLMs, both in morality and performance, decreased significantly after the interview. These findings corroborate existing work where participants' knowledge of their domain in a computer vision AI application had a huge influence on their trust [28]. We hypothesize that the interview questions, which prompted participants to critically reflect on the behaviors and outputs of LLMs, had a pronounced effect on this group. These participants likely had enough working knowledge to recognize the concept of bias, but lacked the depth of understanding necessary to contextualize how it manifests in LLMs, leading to a change in their trust.
+
+
+<!-- PAGE 17 -->
+
 
 Key takeaways: Our findings highlight significant effects of gender, AI expertise, and LLM experience on trust. Men reported higher trust overall, while non-binary participants showed greater trust in LLM performance but less in morality, similar to women. Higher AI expertise was linked to greater trust, whereas novice users expressed lower trust, likely due to unfamiliarity or skepticism. Knowledge of LLM biases generally reduced trust, with participants possessing medium knowledge experiencing the largest decline after reflecting critically during interviews. These results emphasize how deep reflection and awareness of biases influence trust perceptions across diverse groups.
 
@@ -296,6 +361,10 @@ Several participants highlighted the potential for LLMs to ask clarifying questi
 
 Transparency also emerged as a critical concern. Participants expressed the need for LLMs to clearly communicate how they generate responses and the limitations of their knowledge. P14 shared, 'maybe there needs to be more transparency... where it's pulling its sources from or... being more transparent about how, why, it's showing what it's showing' . By providing more insight into the data sources, algorithms, and design decisions that underpin these systems, LLMs could build greater trust and accountability among users. Additional recommendations included improving the
 
+
+<!-- PAGE 18 -->
+
+
 model's handling of pronoun diversity and incorporating explicit safeguards through mechanisms such as a scoring function for guardrails.
 
 ## 5.2 Future Opportunities &amp; Design Implications
@@ -309,6 +378,10 @@ model's handling of pronoun diversity and incorporating explicit safeguards thro
 5.2.4 Real-Time Bias Auditing. Our findings reveal that perceptions of bias in LLM responses vary significantly across gender identities. While some participants flagged certain responses as stereotypical or offensive, others viewed the same outputs as neutral or appropriate. This variation highlights a key challenge: bias in LLMs is not always universally recognizable, making it difficult to detect and address through one-size-fits-all evaluation methods. To address this, we propose a real-time bias auditing mechanism where users can flag, annotate, and suggest corrections for biased or stereotypical responses during live interactions. These annotations can be collected and analyzed to identify patterns of bias, allowing developers to prioritize critical areas for model refinement. Additionally, community-driven auditing sessions can surface harmful biases that may not be evident during isolated testing, enhancing accountability and inclusivity through collective oversight [19].
 
 Manuscript submitted to ACM
+
+
+<!-- PAGE 19 -->
+
 
 ## 6 Limitations and Future Work
 
@@ -332,6 +405,10 @@ We explore how gender-diverse populations perceive the utility of LLMs using Cha
 - [8] Virginia Braun and Victoria Clarke. 2021. Thematic Analysis: A Practical Guide . SAGE Publications Ltd, London.
 - [9] Joy Buolamwini and Timnit Gebru. 2018. Gender shades: Intersectional accuracy disparities in commercial gender classification. In Conf. on fairness, accountability and transparency . PMLR, 77-91.
 - [10] Juliet Corbin and Anselm Strauss. 2008. Basics of Qualitative Research: Techniques and Procedures for Developing Grounded Theory (3rd ed.). SAGE Publications Ltd, Thousand Oaks, CA.
+
+
+<!-- PAGE 20 -->
+
 
 - [11] Kate Crawford and Vladan Joler. 2021. Harms of Gender Exclusivity and Challenges in Non-Binary Representation in Language Technologies. AI &amp; Society 36, 1 (2021), 245-261.
 - [12] Andreas Dengel, Rupert Gehrlein, David Fernes, Sebastian Görlich, Jonas Maurer, Hai Hoang Pham, Gabriel Großmann, and Niklas Dietrich genannt Eisermann. 2023. Qualitative research methods for large language models: Conducting semi-structured interviews with ChatGPT and BARD on Computer Science Education. In Informatics , Vol. 10. MDPI, 78.
@@ -360,6 +437,10 @@ We explore how gender-diverse populations perceive the utility of LLMs using Cha
 
 Manuscript submitted to ACM
 
+
+<!-- PAGE 21 -->
+
+
 - [35] Christopher A. Le Dantec and Sarah Fox. 2015. Strangers at the Gate: Gaining Access, Building Rapport, and Co-Constructing Community-Based Research. In Proceedings of the 18th ACM Conference on Computer Supported Cooperative Work &amp; Social Computing (Vancouver, BC, Canada) (CSCW '15) . Association for Computing Machinery, New York, NY, USA, 1348-1358. doi:10.1145/2675133.2675147
 - [36] Susan Leavy. 2018. Gender bias in artificial intelligence: the need for diversity and gender theory in machine learning. In Proceedings of the 1st International Workshop on Gender Equality in Software Engineering (Gothenburg, Sweden) (GE '18) . Association for Computing Machinery, New York, NY, USA, 14-16. doi:10.1145/3195570.3195580
 - [37] Susan Leavy. 2018. Uncovering gender bias in newspaper coverage of Irish politicians using machine learning. Digital Scholarship in the Humanities 34, 1 (06 2018), 48-63. doi:10.1093/llc/fqy005 arXiv:https://academic.oup.com/dsh/article-pdf/34/1/48/28078571/fqy005.pdf
@@ -385,6 +466,10 @@ Manuscript submitted to ACM
 - [57] Morgan Klaus Scheuerman, Jacob M. Paul, and Jed R. Brubaker. 2019. How Computers See Gender: An Evaluation of Gender Classification in Commercial Facial Analysis Services. Proc. ACM Hum.-Comput. Interact. 3, CSCW, Article 144 (Nov. 2019), 33 pages. doi:10.1145/3359246
 - [58] H Andrew Schwartz and Maarten Sap. 2023. I'm fully who I am: Towards Centering Transgender and Non-Binary Voices to Measure Biases in Open Language Generation. In Proceedings of the NAACL 2023 . ACL, 123-135.
 - [59] Mark Sendak, Madeleine Clare Elish, Michael Gao, Joseph Futoma, William Ratliff, Marshall Nichols, Armando Bedoya, Suresh Balu, and Cara O'Brien. 2020. "The human body is a black box": supporting clinical decision-making with deep learning. In Proceedings of the 2020 Conference
+
+
+<!-- PAGE 22 -->
+
 
 on Fairness, Accountability, and Transparency (Barcelona, Spain) (FAT* '20) . Association for Computing Machinery, New York, NY, USA, 99-109. doi:10.1145/3351095.3372827
 

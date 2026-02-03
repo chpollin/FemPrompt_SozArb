@@ -1,10 +1,11 @@
 ---
 source_file: Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.pdf
-conversion_date: 2026-02-03T08:40:40.317450
+conversion_date: 2026-02-03T18:19:43.796447
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## ORIGINAL PAPER
 
 ## Policy advice and best practices on bias and fairness in AI
@@ -49,6 +50,10 @@ Second , we contribute towards the objective of providing policy advice and best
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 issues are relevant but not sufficiently developed or acknowledged in the literature. As such, the paper can contribute to the advancement of the research and to increase awareness on bias and fairness in AI.
 
 ## Introducing fair-AI
@@ -64,6 +69,10 @@ works of Pedreschi et al. (2008) and Kamiran and Calders (2009). The area origi
 ## The NoBIAS project
 
 The NoBIAS project (January 2020-June 2024) was a Marie Skłodowska-Curie Innovative Training Network funded by the European Union's Horizon 2020 research and innovation program. The core objective of NoBIAS was to research and develop novel interdisciplinary methods for AI-based decision making without bias. Fig. 1 shows the NoBIAS architecture, which is designed to integrate bias management with the AI-system pipeline layer. The Bias Management Layer is made up of the various components contributed by the research projects of fifteen Early-Stage Researchers (ESRs). Together, these components aim to achieve three
+
+
+<!-- PAGE 3 -->
+
 
 Fig. 1 The NoBIAS architecture integrates the components necessary to understand, mitigate, and account for bias, addressing the whole AISystem decision-making pipeline
 
@@ -89,6 +98,10 @@ In this section, we provide a concise overview of state-ofthe-art fair-AI method
 Multiple measures of the degree of (un)fairness in (automated) decision making have been introduced in ML and AI (Castelnovo et al., 2022; Mehrabi et al., 2021; Berk et  al.,  2021;  Verma  &amp;  Rubin,  2018;  Zliobaite,  2017; Caton &amp; Haas, 2024). Some of them were originally proposed and investigated in other disciplines, such as philosophy, economics, and social science (Lee et al., 2021b; Hutchinson &amp; Mitchell, 2019; Binns, 2018a; Romei &amp; Ruggieri, 2014). Group fairness metrics aim at measuring the statistical difference in distributions of decisions across social groups. Individual fairness metrics bind the
 
 <!-- image -->
+
+
+<!-- PAGE 4 -->
+
 
 distance in the decision space to the distance in the feature space describing people's characteristics. Causal fairness metrics exploit knowledge beyond observational data to infer causal relations between membership to a protected group and decisions, and to estimate interventional consequences. As with other performance objectives, the choice of a fairness metric is crucial for optimizing AI models. See the previous surveys and Räz (2021); Wachter et al. (2021a); Hertweck et al. (2021); Binns (2020); Tang et al. (2023); Binns et al. (2023) for a discussion of the moral/ legal bases and relative merits of the various fairness notions and metrics.
 
@@ -126,6 +139,10 @@ The AI Ethics Guidelines Global Inventory 11 by AlgorithmWatch lists 167 framewo
 
 11 https://  inven  tory.  algor  ithmw  atch.  org/.
 
+
+<!-- PAGE 5 -->
+
+
 agreements, 44 voluntary commitments, and 115 recommendations. The EU Agency for Fundamental Rights 12 has collected a list of 349 policy initiatives at the national level, and also including examples at the EU and international level. The OECD.AI Policy Observatory 13 provides a live repository of over 800 AI policy initiatives.
 
 An early survey of 84 ethics guidelines (mostly from Western countries) found an apparent agreement that AI should be ethical, and it identified shared principles of transparency, justice and fairness, non-maleficence, responsibility and privacy. Authors highlight, however, a 'substantive divergence in relation to how these principles are interpreted, [...] and how they should be implemented' (Jobin et al., 2019). Despite these various contributions, universal standards or blueprints of fair-AI have not yet been provided by policy-makers, regulators or scientific experts (Wachter et al., 2021b). Even if there were such standards or blueprints, computer/data scientists and practitioners still need to translate these into their academic and industrial contexts and specific situations (Hillman, 2011; Kiviat, 2019).
@@ -148,6 +165,10 @@ Regarding legal regimes, the EU law of General Data Protection Regulation (GDPR)
 
 <!-- image -->
 
+
+<!-- PAGE 6 -->
+
+
 using sensitive attributes, (2) facial recognition, (3) emotion recognition, (4) social scoring, (5) human manipulation, and (6) the exploitation of people's vulnerabilities can pose to peoples' rights and democracy values. Notwithstanding the prohibition, the use of real-time and post-remote biometric identification systems in public accessible spaces for law enforcement purposes would be permitted under specific safeguards and strict conditions.
 
 ## Using fair-AI with a guidance
@@ -167,6 +188,10 @@ The report by Balayn and Gürses (2021) studies several EU policy documents, inc
 ## Bias and auditing
 
 In algorithmic decision-making, auditing involves using experimental approaches to investigate potential discrimination by controlling factors that may influence decision outcomes (Romei &amp; Ruggieri, 2014). Given the application scope of these systems, proposed audits span various domains, including algorithmic recruitment (Kazim et al., 2021),  online  housing  markets  (Asplund  et  al.,  2020), resource allocation systems (Coston et al., 2021); and more general processes related to the design (Katell et al., 2019) and vision of these systems as socio-technical processes (Cobbe et al., 2021). Auditors play a crucial role in ensuring algorithmic accountability. Consequently, they involve multiple stakeholders, from product developers, government,
+
+
+<!-- PAGE 7 -->
+
 
 policy makers, and data owners to broader groups in society, such as advocacy organizations and institutional operators (Wieringa, 2020). Ultimately, audits are evaluations designed  to  hold  stakeholders  accountable.  Algorithm auditing (Koshiyama et al., 2021), and specifically AI auditing (Mökander, 2023), is a concept coined to seek for the development of auditing frameworks on research and in practice . Moving from a case-by-case basis, audits should establish formal assurance that algorithms are legal, ethical, and safe by informing on governance and compliance with regulations and standards. Notably, the Information Commissioner's Office (ICO) of the United Kingdom has developed a such a framework for auditing AI systems in the public and private sectors 16 . These investigations assess how these entities process personal information and effectively deal with information rights issues. In this capacity, an audit will involve a thorough evaluation of an organisation's procedures, processes, records, and activities. We see in this example how audits are crucial in addressing issues of bias and discrimination. Specifically, by ensuring the existence of adequate policies and procedures, verifying their compliance, testing the adequacy of controls, detecting existing or potential violations, and recommending necessary changes to controls, policies and procedures.
 
@@ -198,6 +223,10 @@ Anti-discrimination legal cases-targeted and strategically litigated-are  tradit
 
 <!-- image -->
 
+
+<!-- PAGE 8 -->
+
+
 ## Legal Layer
 
 - /g120 AI models often lack the auxiliary causal knowledge required to prove anti-discrimination cases as these require to show that decision is because of (i.e., at cause of) the protected ground . (AI biases, discrimination and unfairness)
@@ -218,6 +247,10 @@ of Justice, 2016), creating a potential gateway for algorithmic discrimination w
 
 Carey and Wu (2023); Weinberg (2022) survey the existing critiques on the hegemonic theory of fairness that draw from non-computing disciplines, including philosophy,
 
+
+<!-- PAGE 9 -->
+
+
 law, critical race and ethnic studies, and feminist studies. The hegemonic (i.e., dominant) theory of fairness in the ML community reduces the fairness problem 'in terms of a domain-general procedural or statistical guideline [...] so long as the chosen fairness criteria are satisfied, the resulting procedures and outcomes of the system are necessarily fair" (Green &amp; Hu, 2018). Beyond those critics, AI systems' opaqueness and the potential to impact individuals' lives are frequently described as the main motivations to demand disclosures of information and provision of explanations about their internal processes and final outcomes, understanding these requirements as necessary to ensure effective governance of the AI context (Almada, 2021) and for allowing applicants to make cases of discrimination (Xenidis and Senden, 2020). On the one hand, algorithms are considered powerful procedures that create 'a growing need to evaluate the claims, decisions, actions, and policies that are being made on the bases of them. This evaluation requires gauging the reasons for an algorithmic decision, its components, and the weight assigned to them' (Vedder &amp; Naudts, 2017), in short, requiring AI accountability . On the other hand, the 'individual adversely affected by a predictive process has the right to understand why and frames this in familiar terms of autonomy and respect as a human being' (Edwards &amp; Veale, 2017), in short AI transparency .
 
 An extensive review of algorithmic accountability is provided by Wieringa (2020), while Percy et al. (2021) brings to life the notion of AI accountability in industry work programs, aiming to implement industry-specific technical requirements. Algorithmic impact assessments are accountability governance practices rendering visible the (possible) harms caused by algorithmic systems (Metcalf et al., 2021). Reviewability, introduced by Cobbe et al. (2021), is a way to break down the algorithmic decision-making process into technical and organisational elements which help in determining the contextually appropriate recordkeeping mechanisms to facilitate meaningful review both of individual decisions and of the process as a whole. The design of interpretable AI models and the development of methods to explain black box models are comprised in the area of eXplainable AI (XAI) (Guidotti et al., 2019; Minh et al., 2022). Such techniques respond to a societal desire to understand the obscure systems that can greatly affect our lives when allocating services or granting and denying rights. Transparency and information obligations can publicly assess the consistent compromise and dutifulness of AI systems with legal principles such as fairness, lawfulness, or information privacy, improving the legitimacy and acceptance of their use by the individuals affected by them at last stay, and supporting the contestability of their outcomes (Henin &amp; Métayer, 2022). However, in most situations where there are obligations to provide information and explanations about automated decision-making systems, the context is adversarial, and the interests of the parties involved are, if not opposite, different (Bordt et al., 2022). The interest of the users and providers of AI systems and the persons affected by them are opposed to the extent that the former will want to address its transparency and information obligations in a way that ensures compliance but does not harm its private interests, whilst the person subjected to the AI systems will expect a level of compliance that is sufficiently rigorous to enable an effective exercise of her rights and protect her interests and freedoms. Consequently, the interests to be protected or respected will largely condition the method of explanation and the information and explanations expected to be received (see also later Sect. 'The need for trustworthy AI, and XAI in particular').
@@ -230,6 +263,10 @@ Since the emergence of the AI bias discourse, EU legal scholars have approached 
 
 <!-- image -->
 
+
+<!-- PAGE 10 -->
+
+
 among those highlighted for their potential to fight against AI bias and support the protection of non-discrimination rights. However, recourse to data protection law cannot be forever a panacea for the challenges of AI discrimination. Not only is the GDPR not rationae materiae primarily concerned with the right to non-discrimination but it is also de facto considerably ineffective in achieving this goal (Zuiderveen Borgesius, 2020; European Parliament et al., 2022). It is important that EU and national legislature and judiciary engage with the limitations of existing non-discrimination frameworks and the nuances of AI application in order to consider tailored legislative amendments or interpretative approaches. Specific recommendations or guidelines by relevant independent bodies such as the European Data Protection Board (EDPB) that adapt the application of existing legislation to the specificities of AI technologies will particularly serve this effort. Striking the right balance between legal certainty and agile application across different domains, Member States and technological developments represent a key challenge in this undertaking. See Gerards and Zuiderveen Borgesius (2022); European Parliament et al. (2022); Xenidis (2020) for suggestions on different legislative and interpretative approaches in the context of fair-AI.
 
 The fair-AI ecosystem may bring about a clash between the objectives of data protection and non-discrimination legislation, as debiasing approaches may interfere with wellestablished data protection rights and principles (Veale &amp; Binns, 2017). First of all, the lack of representative training datasets has been consistently described as one of the sources of AI bias (Barocas &amp; Selbst, 2016; Buolamwini &amp; Gebru, 2018; Ntoutsi et al., 2020) (see also Sect. 'Understanding bias'). This line of reasoning has been adopted by the proposed AI Act (European Commission, 2021). Specifically, art. 10 para 3 mandates that providers of high-risk AI systems shall ensure representative training, validation and testing data sets, as part of the prescribed data governance practices. It is thus conceivable that such legislative calls might risk motivating an increasing collection of personal data particularly from data subjects that belong to hitherto underrepresented groups, who are often the most vulnerable in terms of data protection. Furthermore, fair-AI frameworks centered around bias detection, monitoring, and correction often imply the processing of data on characteristics protected by the EU non-discrimination law. This often corresponds to the collection and/or the processing of special categories of personal data (hereafter sensitive data), despite the fact that they are, as such, extensively protected by the GDPR (European Parliament and Council of the European Union, 2016). Moreover, special attention must be given to the way that bias mitigation approaches, and particularly the modification of training data through pre-processing (see Sect. 'Fair-AI methods and resources'), may interfere, or at least may introduce a layer of complexity, with GDPR principles such as the principle of 'accuracy' outlined in Article 5(1) (d) of GDPR.
@@ -239,6 +276,10 @@ Since the practice of removing or ignoring sensitive attributes shows to be inef
 The proposed AI Act comes to mediate this tension and opens up the possibility of processing sensitive personal data for the case of bias monitoring, detection and correction in high-risk AI systems [art. 10 (5)]. This possibility comes together with various requirements, intended to ensure a balance between the right to data protection and non-discrimination and prevent an excessive processing of sensitive data in the name of debiasing. However, once again these requirements entail indefinite legal concepts (e.g. 'necessity"), with no existing guidance on they way they shall be operationalized in the context of fair-AI. Entrusting the lawful interpretation and implementation of fundamental requirements to the discretion of AI providers entail the risk of a purposeful and inconsistent legal application to the detriment of the right to data protection. In addition, infringements upon provisions of the GDPR or the AI Act might result in severe financial penalties (art. 83, 84 GDPR, art. 71 AI Act).
 
 The tensions between different regulatory tools and the abundance of vague binding textual requirements generate thus a great level of legal uncertainty for all bodies concerned, which explains the urgent need for adequate guidance. Considering the novelty, the fast-evolving nature and the complexity of different debiasing approaches, the desired guidance requires targeted research efforts. Rather than focusing solely on non-discrimination desiderata and sustaining an adversarial conceptualisation of 'fairnes' vs 'privacy', it is important that interdisciplinary research and good practices on fair-AI transition to a more integrated model. This model should account for the deep intertwinement between data protection and non-discrimination legal regimes and seek to enhance privacy while engaging in debiasing.
+
+
+<!-- PAGE 11 -->
+
 
 ## Bias Management Layer - Understanding Bias
 
@@ -268,6 +309,10 @@ AI models are trained on historical data to accomplish a certain task, e.g., to 
 
 <!-- image -->
 
+
+<!-- PAGE 12 -->
+
+
 know whether an applicant with denied credit would have repaid the credit if granted, a sample selection bias problem tackled by reject inference in credit scoring (Ehrhardt et al., 2021). An idea close to reject inference has been considered in (Ji et al., 2020) for group fairness. Such sampling bias in collected ground truth has been called negative legacy unfairness (Kamishima et al., 2012), or the selective label problem (Lakkaraju et al., 2017), and it is an instance of data missingness (Goel et al., 2021). Recognizing that ground truth in collected data is biased help to solve the illusive tension between fairness and accuracy (Wick et al., 2019). In NLP, the ground truth is obtained by human annotation, typically aggregating annotators' labels through majority voting. Here, the simplifying assumption of a single ground truth is used. A perspectivist approach is emerging in favor of granting significance to divergent opinions, by designing methods over non-aggregated data (Cabitza et al., 2023). Uncertainty and inconsistency in expert annotations have been pointed out also in the domain of healthcare (Lebovitz et al., 2021; Sylolypavan et al., 2023). In the absence of unbiased ground truth, however, practitioners train AI classification models by setting the target feature using historical data. Any bias in the historical data risks to be lifted to the AI model with a false claim of fairness. Looking at other disciplines, Zajko (2022) points that AI students are untrained and unprepared for the reality of an unfair society. We support the author's claim that 'AI developers refer to the reality that exists outside of their models as the 'ground truth', and bias is often defined as deviations from this truth, or inaccurate representations and predictions. But when the truth is that society is deeply, structurally unjust and unequal, and that technologies are part of these structures, the question is whether our algorithms should accurately reproduce inequality or work to change it'.
 
 ## Beyond documenting bias: source criticism and archival practices
@@ -283,6 +328,10 @@ Many existing datasets used in fair-AI research have minimal information availab
 ## Don't blame the data, don't blame the annotator
 
 The current paradigm of AI research and development is heavily dependent on data. Consequently, and despite the extensive resources that have been allocated to research pertaining to bias detection and mitigation in datasets and AI models, the common misconception that bias originates in the data persists, especially in circles outside fair-AI research. The hyper-fixation on data as the primary source of bias can wrongfully lead to treating the negative societal impacts of ML-systems' deployment as an oversimplified problem that can be tackled by 'removing' bias from data. Instead, it is essential to reinforce the need to assess algorithmic harms through a holistic assessment that contemplates the whole of the AI pipeline throughout its entire life cycle, whilst also accounting for the societal context for its
+
+
+<!-- PAGE 13 -->
+
 
 intended use (Suresh &amp; Guttag, 2021). With this in mind, we reinstate how biases can arise at any point of the pipeline as they are derived from the series of choices and practices that go into making these systems, and that eradicating all the biases is a near impossible task (Olteanu et al., 2019). Suresh and Guttag (2021) propose a framework that supports the understanding of sources of harm that can be mapped to different stages across the ML life cycle, accompanied by a non-comprehensive taxonomy of biases that can be attributed to each stage. Here, we emphasize on non-comprehensive , because in the same way humans are plagued by innumerable types of biases, datasets and models are also subjected to this problem (Olteanu et al., 2019).
 
@@ -305,6 +354,10 @@ We have already displayed how bias is an umbrella term that comprehends many dif
 23 'Horizontal" is to be understood here as applying uniformly to any training,  testing  and  validation  dataset  used  in  high-risk  AI  systems irrespective of the data-type.
 
 <!-- image -->
+
+
+<!-- PAGE 14 -->
+
 
 ## Bias Management Layer - Mitigating Bias
 
@@ -334,6 +387,10 @@ of missing values (Caton et al., 2022), by encodings of categorical features (M
 
 In addition to the issues discussed in Sect. 'Multi-stakeholder participatory design', involving the interested communities during the whole development process of a decision-making system is also a crucial aspect for prioritising AI systems that respond to human values-an objective known as AI alignment (Ji et al., 2023) or socially responsible AI (Cheng et al., 2021). Inclusion should go beyond the provision of 'lowresource' methods (Gururangan et al., 2022), i.e., framing the under-representation of social minorities as a data scarcity problem. Instead, it should account for preventive considerations that respond to diverse human needs and preferences.
 
+
+<!-- PAGE 15 -->
+
+
 This concept is the basis for a human-centered AI (Mosqueira-Rey et al., 2023; Xu, 2019; Garibay et al., 2023). Active participation during the whole construction process of an AI system can be a key part of addressing the representation bias that prevails in current systems. Involving a diverse group of people has shown to be critical in stages such as selecting the preferences instructed to the model to make decisions (Organizers Of QueerinAI et al., 2023). Such practices elucidate how systems align with values from specific social groups, which frequently reflect structural and power inequalities. Adjusting to and uncovering the variations on how the data captures under-represented communities can help to represent them more fairly. For example, these practices can help to build socially aware language technologies that are adept for different dialects (Ziems et al., 2022) (see also the AAE example in Sect. 'Consider the data type'). Further examples will be considered in Sect. 'The need for trustworthy AI, and XAI in particular'.
 
 ## Intersectionality
@@ -349,6 +406,10 @@ Causal DAGs are able to graphically represent a worldview on a given fairness co
 Overall, while approaches for causal discovery from data can be adopted, specifically in the context of fairness (Binkyte-Sadauskiene et al., 2022), they definitively need to be complemented with domain expert knowledge-but, with  no  guarantee  of  an  unanimous  agreement  among experts (Rahmattalabi &amp; Xiang, 2022). Moreover, a number of assumptions are typically made which might not be met in practice, such as sufficiency (all causes are known), and faithfulness (the graph completely characterizes the conditional independences among features) (Spirtes et al., 2000). Further, causal fairness metrics may suffer from the identifiability problem (Makhlouf et al., 2022), namely the impossibility to compute them from observational data only.
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 ## Bias Management Layer - Accounting for Bias
 
@@ -375,6 +436,10 @@ The majority of traditional fair-AI metrics and methods are developed based on t
 
 In  this  section,  we  consider  two  technical  aspects  of accounting for bias, which complement the legal discussion of Sect. 'AI fairness beyond metrics:transparency and accountabilityof AI systems': monitoring and explaining
 
+
+<!-- PAGE 17 -->
+
+
 bias. We claim the need for trustworthy AI as an holistic approach beyond fairness and bias issues. We warn, however, about the limitations of the young research field of XAI. Also, we discuss bias issues in tasks related to monitoring, including transferring AI models from a domain to another, and in reproducing evaluation scenarios. A summary of the challenges, policy advices, and best practices in accounting for bias is reported in Fig. 5.
 
 ## The need for trustworthy AI, and XAI in particular
@@ -390,6 +455,10 @@ Decision-making processes that affect individuals' rights and freedoms often req
 We highlight a few further issues of XAI. While there is a pool of explanation methods to pick from, most of them focus on classification tasks (and not, e.g., on unsupervised problems), and on tabular, image and text data (and not, e.g., on time series data). Being able to use an explainable AI method then implies that the problem might need to be adapted to the methods currently available, leading to possible losses of information and lower prediction accuracy (State et al., 2022). Also, interpreting explainability methods requires significant amounts of domain knowledge regarding the application context; a lack of such knowledge might render the explanations meaningless to (lay) end-users. Integration can be either achieved by involving the respective experts into the evaluation (see Sect. 'Multi-stakeholder participatory design'), or by directly integrating it via symbolic approaches (Calegari et al., 2020), or knowledge-informed AI methods (see Sect. 'Knowledge-informed AI models'). Beyond solving the technical issues of explainability methods as outlined above, there is also the need to adopt a holistic
 
 <!-- image -->
+
+
+<!-- PAGE 18 -->
+
 
 perspective towards XAI, such as making sure that development teams are diverse, integrating all involved stakeholders into the design process (see Sect. 'Multi-stakeholder participatory design'), evaluating XAI methods in context (see Sect. 'The reproducibility crisis'), etc. Further, it might be worth investigating XAI methods and values embedded into these systems from other perspectives, such as that of historically marginalized groups (see Sect. 'Intersectionality'). More research towards this is needed, and we point out emerging work such as State and Fahimi (2023), investigating explanations from a feminist perspective.
 
@@ -410,6 +479,10 @@ It is common practice to adapt an upstream 'pre-trained' model to a downstream t
 The evaluation of AI models should replicate the operational scenario where the model will be deployed as closely as possible. Similarly, the auditing of AI models should replicate the operational scenario where the system has been deployed. Sometimes, 'stress test' scenarios are also considered to assess the impact of improper usage of the AI models-this is the case of high-risk applications in the AI Act (see Sect. 'The option not to use AI'). However, the lack of good documentation on AI development and bias management processes, including definitions, software, and datasets (see Sect. 'Living with bias by documenting it'), are key factors affecting evaluation and reproducibility, giving raise to the reproducibility crisis (Gundersen, 2020). For instance, an issue has been raised about the arbitrariness of predictions of ML models trained across different samples (Cooper et al., 2023), showing that most fairness classification benchmarks are close-to-fair when taking into account such an arbitrariness. We see reproducibility as a major practical limitation in accounting for bias in AI, for which specialized solutions should be devised based on specific application scenarios. As an example, in the high-risk domain of credit scoring, the European Banking Authority 24 provides detailed guidelines and discussion papers including the monitoring of bias in ML models.
 
 24 https://  www.  eba.  europa.  eu/  regul  ation-  and-  policy/  credit-  risk.
+
+
+<!-- PAGE 19 -->
+
 
 ## Conclusions
 
@@ -456,6 +529,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 - Barocas, S., Selbst, A.D., &amp; Raghavan, M. (2020). The hidden assumptions behind counterfactual explanations and principal reasons. In: FAT ∗ . ACM, pp. 80-89
 
 <!-- image -->
+
+
+<!-- PAGE 20 -->
+
 
 - Baroni, A., &amp; Ruggieri, S. (2018). Segregation discovery in a social network of companies. Journal of Intelligent Information Systems, 51 (1), 71-96.
 - Barrainkua, A., Gordaliza, P., &amp; Lozano, J.A., et al. (2022). A survey on preserving fairness guarantees in changing environments. CoRR abs/2211.07530
@@ -506,6 +583,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 
 <!-- image -->
 
+
+<!-- PAGE 21 -->
+
+
 - of goods and services. Official Journal of the European Union L 373. http://  data.  europa.  eu/  eli/  dir/  2004/  113/  oj
 - Cummings, R., Gupta, V., &amp; Kimpara, D., et al. (2019). On the compatibility of privacy and fairness. In: UMAP (Adjunct Publication). ACM, pp. 309-315
 - Czarnowska, P., Vyas, Y., &amp; Shah, K. (2021). Quantifying social biases in NLP: A generalization and empirical comparison of extrinsic fairness metrics. Transactions of the Association for Computational Linguistics, 9 , 1249-1267.
@@ -552,6 +633,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 - Gellert, R., Vries, K.D., de Hert, P., et al. (2013). A comparative analysis of anti-discrimination and data protection legislations. In: Discrimination and Privacy in the Information Society, Studies in Applied Philosophy, Epistemology and Rational Ethics, vol 3. Springer, pp. 61-89
 
 <!-- image -->
+
+
+<!-- PAGE 22 -->
+
 
 - Gerards, J., &amp; Zuiderveen Borgesius, F. J. (2022). Protected grounds and the system of non-discrimination law in the context of algorithmic decision-making and Artificial Intelligence. Colorado Technology Law Journal, 20 , 1.
 - Ghassemi, M., Oakden-Rayner, L., &amp; Beam, A. L. (2021). The false hope of current approaches to explainable Artificial Intelligence in health care. Lancet Digit Health, 3 (11), e745-e750.
@@ -603,6 +688,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 
 <!-- image -->
 
+
+<!-- PAGE 23 -->
+
+
 - LIPIcs, vol 67. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, pp. 43:1-23
 - Knowles, B., Richards, J.T., Kroeger, F. (2022). The many facets of trust in AI: Formalizing the relation between trust and fairness, accountability, and transparency. CoRR http://  arxiv.  org/  abs/ 2208.  00681
 - Koch, G., &amp; Kinder-Kurlanda, K. (2020). Source criticism of data platform logics on the internet. Historical Social Research, 45 (3), 270-287.
@@ -652,6 +741,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 
 <!-- image -->
 
+
+<!-- PAGE 24 -->
+
+
 - Mitchell, S., Potash, E., Barocas, S., et al. (2021). Algorithmic fairness: Choices, assumptions, and definitions. Annual Review of Statistics and Its Application, 8 , 141-163.
 - Mittelstadt, B.D., Wachter, S., &amp; Russell, C. (2023). The unfairness of fair machine learning: Levelling down and strict egalitarianism by default. CoRR abs/2302.02404
 - Mökander, J. (2023). Auditing of AI: legal, ethical and technical approaches. Digital Society, 2 (3), 49.
@@ -700,6 +793,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 - Rovatsos, M., Mittelstadt, B., Koene, A. (2019). Landscape Summary: Bias In Algorithmic Decision-Making: What is bias in algorithmic decision-making, how can we identify it, and how can we mitigate it? UK Government
 
 <!-- image -->
+
+
+<!-- PAGE 25 -->
+
 
 - Roy, A., Horstmann, J., Ntoutsi, E. (2023). Multi-dimensional discrimination in law and machine learning - A comparative overview. In: FAccT. ACM, pp. 89-100
 - Ruggieri, S., Álvarez, J. M., Pugnana, A., et al. (2023). Can we trust fair-AI? In: AAAI. AAAI Press, pp. 15421-15430
@@ -751,6 +848,10 @@ Open Access This article is licensed under a Creative Commons Attribution 4.0 In
 - Wieringa, M. (2020). What to account for when accounting for algorithms: A systematic literature review on algorithmic accountability. In: FAT*. ACM, pp. 1-18
 
 <!-- image -->
+
+
+<!-- PAGE 26 -->
+
 
 - Wu, D., Liu, J. (2022). Involve humans in algorithmic fairness issue: A systematic review. In: iConference (1), LNCS, vol 13192. Springer, pp. 161-176
 - Xenidis, R. (2018). Multiple discrimination in EU anti-discrimination law: Towards redressing complex inequality? In: Belavusau, U., Henrard, K. (Eds.) EU anti-discrimination law beyond gender. Hart Publishing, pp. 41-74

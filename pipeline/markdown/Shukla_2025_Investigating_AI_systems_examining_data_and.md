@@ -1,10 +1,11 @@
 ---
 source_file: Shukla_2025_Investigating_AI_systems_examining_data_and.pdf
-conversion_date: 2026-02-03T09:23:56.779628
+conversion_date: 2026-02-03T18:55:09.213471
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -47,6 +48,10 @@ boundary objects, hermeneutic reverse engineering, critical data studies, critic
 
 Artificial Intelligence (AI) systems are digital technologies that learn on their own through the data they are trained on, algorithms they are modeled on, and feedback given to them. AI systems, like all other technologies (Winner, 1986), have politics and exercise power. Examples of these politics are visible all around us. Bias based on race, gender, ability, language, class, economic background, and religion, among many other indicators, perpetuating in the AI systems are not just a glitch or an error, but systemic coding of the dominant social fabric (Gebru, 2020; Broussard, 2023). AI systems systemically and structurally enact discrimination and oppression because they are neither inclusive nor do they acknowledge the people, groups
 
+
+<!-- PAGE 2 -->
+
+
 and perspectives they exclude (Broussard, 2019; Crawford, 2021), such as  women,  people  of  color,  disabled  people,  and  queer  people (Buolamwini and Gebru, 2018; Broussard, 2023). The AI Systems operate on an asymmetric power dynamic wherein the groups most impacted by the results of injustices enacted by AI are often devoid of resources  to  design  and  deploy  these  systems  (Whittaker  et  al., 2019, p. 9).
 
 Two ways in which this exclusion is practiced is through a lack of documentation and the domination of hegemonic narration in expert discourses around AI systems. The exclusion practiced in documentation stems from a lack of consideration about whose data is collected, why is that data collected, which computational logics are used on that data, and what or whose purposes are served using results from  that  data.  As  Benjamin  (2019,  p.  1-48)  states,  'engineered equity'  of  AI  systems  either  practices  'default  discrimination'  to ignore  marginalized  people  or  practices  'coded  exposure'  to overexpose the minoritized groups for extra surveillance. For example, a face detection AI failed to detect Buolamwini's (2023, p. 13) darkskinned face as a black woman, but the same AI instantly detected a human face when she put on a plain white mask. This happened because the 'coded gaze' (Buolamwini, 2023, p. 13-21) of AI was not trained to see dark skinned faces and detected only light skin. Such errors are possible when the system is trained and coded with data and algorithms that consider light skin as the norm (Buolamwini, 2023). It  fails  to  recognize  any  face  that  does  not  belong  to  the  societal definitions of race and gender that were fed into it during its creation and  re-enacts  the  default  social  discrimination  (Benjamin,  2019; Buolamwini, 2023; Gebru, 2020).
@@ -64,6 +69,10 @@ Using hermeneutic reverse engineering to understand AI systems helps in question
 ## Examining the politics of data
 
 The field of critical data studies understands that one of the ways in which AI produces and reproduces power and politics is through datasets that are partial and biased (Chadarevian and Porter, 2018; Miceli et al., 2022; Crawford, 2021). After collection, data is often disconnected from its history, people, and context of collection (Gebru, 2020; Chadarevian
+
+
+<!-- PAGE 3 -->
+
 
 and  Porter,  2018).  This  disconnection  masks  underlying  subjective meanings of data and wrongfully brands the quantification of data as purely  objective  (Gitelman  and  Jackson,  2013).  The  discriminatory decisions  made  automatically  by  algorithmic  systems  are  based  on dominant ideologies (Eubanks, 2019), and stem from the loss of context of the original data. Because of this loss of context, the data remains partial and creates problems, like (i) people losing control over their data and how its continuous analysis impacts them (Radin, 2017; Willse, 2015);  (ii)  algorithms  built  on  the  data  producing  results  that  are stereotypically biased (Musto, 2016); (iii) algorithmic outputs reproducing power relations (Jefferson, 2020); and (iv) reinforcing and multiplying the bias by using prejudiced outputs as inputs for other algorithms and tasks (Buolamwini and Gebru, 2018).
 
@@ -86,6 +95,10 @@ The  algorithm  can  also  be  questioned  using  Marino's  (2020) critical cod
 ## Findings and research perspectives
 
 The main findings of this paper include understanding the politics of data, algorithms, and code. Data is a political tool that is always subjective and partial. Questioning the subjectivity, context, collection, categorization practices and storage of data using the framework of
+
+
+<!-- PAGE 4 -->
+
 
 hermeneutic  reverse engineering helps us to  understand  the contribution  of  data  in  the  power  dynamics  of  AI  systems.  This enables us to unveil a hegemony of power that prevails in the data and analyze  its  implications.  It  helps  us  to  understand  the  politics  of representation within data and how the privilege of different societal groups is reflected in that. Questioning the data makes it possible to interpret what data and whose cultural narrative is missing and the reasons behind that. It also explains, to an extent, the biases embedded in the algorithmic models trained on this data.
 
@@ -116,6 +129,10 @@ The author(s) declare that no financial support was received for the research, a
 ## Conflict of interest
 
 The  author  declares  that  the  research  was  conducted  in  the absence  of  any  commercial  or  financial  relationships  that  could be construed as a potential conflict of interest.
+
+
+<!-- PAGE 5 -->
+
 
 ## Publisher's note
 

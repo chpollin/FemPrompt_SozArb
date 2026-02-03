@@ -1,10 +1,11 @@
 ---
 source_file: Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.pdf
-conversion_date: 2026-02-03T09:16:20.674348
+conversion_date: 2026-02-03T18:47:41.512919
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## DR.GAP: Mitigating Bias in Large Language Models using Gender-Aware Prompting with Demonstration and Reasoning
 
 Hongye Qiu 1 , Yue Xu 1 , Meikang Qiu 2 , Wenjie Wang 1 *
@@ -38,6 +39,10 @@ Table 1: Instances of coreference resolution tasks where CFD fails (marked with 
 
 open-source and black-box models to accommodate diverse deployment scenarios, (3) Preservation of the original model's utility. However, existing gender debias approaches fail to simultaneously satisfy these requirements. Parameter-tuning methods, such as supervised fine-tuning (Hu et al., 2021; Thakur et al., 2023; Zmigrod et al., 2019; Zhang et al., 2024) and model editing (Meng et al., 2023; Cai et al., 2024a; Anonymous, 2024), rely on direct access to model parameters, rendering them inapplicable in black-box settings. Prompt-based techniques (Si et al., 2022; Dwivedi et al., 2023; Oba et al., 2024), while applicable to black-box models, often require extensive manual design and risk deteriorating model utility on normal tasks. For example, prompts with 'fairness requirements' may cause models to give more cautious and ambiguous answers in some tasks, or even increase the model's focus on gender factors, thereby exacerbating bias (Ferrara, 2023). In addition, prompts with 'detailed counterfactual preambles' (CFD) (Oba et al., 2024) can impair model reasoning. As shown in Table 1, when Llama3 is given the counterfactual preamble ' Despite being a female, Susan became a mechanical engineer. /Despite being a male, Noah became a preschool and kindergarten teacher. ' it exhibits two failure modes. First, the counterfactual overrides the model's natural sen-
 
+
+<!-- PAGE 2 -->
+
+
 Figure 1: The pipeline of DR.GAP . Step1: Generate representative dataset that reveal gender bias in target LLM, where the answer is incorrect on target LLM but correct on reference LLM. Step2: Generate the reasoning and demonstration to focus on semantic information rather than gender-specific details, with Initial Reasoning , Reasoning verification , Gender-independent Filtering and Iterative Refinement . Step3: Select the reasoning among each steps that most effectively mitigate of gender bias on the development set as the system prompt.
 
 <!-- image -->
@@ -57,6 +62,10 @@ Our contributions can be summarized as follows:
 ## 2.1 Gender Bias Evaluation Methods
 
 Prior studies have examined gender bias in LLMs through text generation and comprehension tasks, with the former detecting externally exhibited gen- der bias in generated content (Smith et al., 2022; Nozza et al., 2021), and the latter eliciting internal bias through tasks like coreference resolution and question answering (QA). Coreference resolution identifies noun phrases referring to the same entity in gender-related or stereotype-involved contexts, revealing bias by measuring incorrect identifications across genders (Webster et al., 2018; Levy et al., 2021). QA tasks compare model answers, based on factual premises and questions, with golden truths or neutral statements, expecting judgment based solely on context, not stereotypes (Nadeem et al., 2020; Li et al., 2020).
+
+
+<!-- PAGE 3 -->
+
 
 ## 2.2 Bias Mitigation Methods
 
@@ -83,6 +92,10 @@ DR.GAP pipeline includes four modules, each with its own independent function, t
 ## 3.2.1 Initial Reasoning
 
 To guide the target model to generate bias-free responses, we generate the initial reasoning from the reference model. We use Chain-of-Thought (CoT) (Wei et al., 2022) reasoning to enhance models' focus on problem details and logical relationships through explicit step-by-step deduction. Specifically, we design a procedure that prompts the reference model to engage in structured, stepwise syllogistic reasoning on how to generate the correct answer given a text and a coreference resolution question. As a classical form of logical inference, syllogistic reasoning systematically connects premises to conclusions, thereby reducing the inherent ambiguities and equivocations in complex argumentative structures.
+
+
+<!-- PAGE 4 -->
+
 
 ## The prompt for initial reasoning
 
@@ -115,6 +128,10 @@ For question:"{question}{text}", the reasoning: "{reasoning}" is not effective e
 ## 3.3 Formalize Demonstration and Reasoning
 
 We gather the reasoning result form all previous steps In the final step, we construct system prompts based on the reasoning processes generated in the previous steps, following the predetermined template. We gather the reasoning result from all previous steps. Although all these examples may have debias effect, our goal is to identify the most effective one. To this end, we structure these reasoning according to the predetermined templates to form a set of candidate system prompts. We then quantitatively assess their gender bias mitigation effects on the development set and select the optimal system prompt as the terminal output of our iterative optimization process.
+
+
+<!-- PAGE 5 -->
+
 
 ## Demonstration and reasoning template
 
@@ -151,6 +168,10 @@ QAdatasets. QA typically involves contexts that are either ambiguous or clear, a
 General utility datasets. MMLU (Hendrycks et al., 2020) and HellaSwag (Zellers et al., 2019) are two general utility datasets that cover multiple domains through multiple-choice questions, which are widely used to measure models' performance on general knowledge and tasks, with higher scores indicating better performance.
 
 Vision-language datasets. To verify the effectiveness of the DR.GAP in multimodal scenarios, we extend it to VLMs and evaluate its performance on the VisoGender (Hall et al., 2023). A portion of Visogender is designed to evaluate the model's gen-
+
+
+<!-- PAGE 6 -->
+
 
 Table 2: Performance of Gender Bias Mitigation Methods in LLMs Across CoR, QA, and Utility. The best and the second best results in each setting are highlighted in orange and blue , respectively.
 
@@ -196,6 +217,10 @@ The gender bias and utility for DR.GAP along with its ablation DR.GAP agg and ba
 
 Coreference resolution. Our experimental results show that DR.GAP and DR.GAP agg effectively mitigates gender bias in CoR for LLMs. DR.GAP reduces gender bias in CoR for GPT-3.5 , Llama3 ,
 
+
+<!-- PAGE 7 -->
+
+
 Figure 2: Illustrating the performance of different methods on the GPT-3.5 , Llama3 , and Llama2-Alpaca in terms of bias mitigation ( ∆ Bias ) on the x-axis and accuracy changes ( ∆ Acc ) on the y-axis. Different colors are used to distinguish among the methods, while different shapes represent various datasets. The symbol ⋆ denotes the center of the ellipse, which reflects the overall performance of the method across the datasets.
 
 <!-- image -->
@@ -222,6 +247,10 @@ Table 3: Ablation study on DR.GAP . The best results are highlighted in bold .
 | w/o Filtling      |              28.745 |                26.327 |      0.681 |
 | w/o Refinement    |              31.818 |                27.804 |      0.911 |
 
+
+<!-- PAGE 8 -->
+
+
 ## 4.4 Generalization Ability of DR.GAP
 
 We perform a cross-dataset evaluation to demonstrate the generalization ability of DR.GAP , using reasoning examples from seven datasets to evaluate their debiasing effects across different datasets. Given the diverse bias metrics employed, we quantify the debiasing effects by measuring the percentage reduction in gender bias ( ∆ Bias ). In Figure 3, the x-axis represents the source datasets for reasoning, and the y-axis indicates the target datasets for evaluation. Darker colors indicate a greater improvement. Despite variability in debiasing effects, DR.GAP consistently demonstrates effectiveness.
@@ -247,6 +276,10 @@ Figure 4: The resolution accuracy and bias for VisoGender in Qwen2-VL , Instruct
 ## 5 Conclusion
 
 In this work, we proposed DR.GAP , an automated and model-agnostic approach that mitigates gender bias through reasoning generation and a progressively refined process. Compared with previous work, DR.GAP focuses on generating genderneutral reasoning to guide models toward impartial responses, thereby avoiding the risk of inadvertently reinforcing biases or degrading model performance. Extensive experiments demonstrate that DR.GAP significantly reduces gender bias across seven datasets spanning coreference resolution and QA tasks while preserving model utility, showing significant generalization ability and robustness. In the future, it would be interesting to further explore the effectiveness of the proposed methods on broader NLP tasks (e.g., open-domain QA and summarization) and assess their impact on reducing social biases related to race, religion, and age.
+
+
+<!-- PAGE 9 -->
+
 
 ## Limitations
 
@@ -284,6 +317,10 @@ Emilio Ferrara. 2023. Fairness and bias in artificial intelligence: A brief surv
 
 Deep Ganguli, Amanda Askell, Nicholas Schiefer, Thomas I Liao, Kamil˙ e Lukoši¯ ut˙ e, Anna Chen, Anna Goldie, Azalia Mirhoseini, Catherine Olsson, Danny Hernandez, et al. 2023. The capacity for moral selfcorrection in large language models. arXiv preprint arXiv:2302.07459 .
 
+
+<!-- PAGE 10 -->
+
+
 - Aaron Grattafiori et al. 2024. The llama 3 herd of models. arXiv preprint arXiv:2407.21783 .
 - Siobhan Mackenzie Hall, Fernanda Gonçalves Abrantes, Hanwen Zhu, Grace Sodunke, Aleksandar Shtedritski, and Hannah Rose Kirk. 2023. Visogender: A dataset for benchmarking gender bias in image-text pronoun resolution. arXiv preprint arXiv:2306.12424 .
 - Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and Jacob Steinhardt. 2020. Measuring Massive Multitask Language Understanding. arXiv preprint arXiv:2009.03300 .
@@ -320,6 +357,10 @@ Deep Ganguli, Amanda Askell, Nicholas Schiefer, Thomas I Liao, Kamil˙ e Lukoši
 - Hui Zhonga, Songsheng Chenb, and Mian Lianga. 2024. Gender Bias of LLM in Economics: An Existentialism Perspective. arXiv preprint arXiv:2410.19775 .
 - Ran Zmigrod, Sabrina J Mielke, Hanna Wallach, and Ryan Cotterell. 2019. Counterfactual data augmentation for mitigating gender stereotypes in languages with rich morphology. In Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics , pages 1651-1661.
 
+
+<!-- PAGE 12 -->
+
+
 ## A DR.GAP P Implementation Details
 
 ## A.1 Experiment Details
@@ -349,6 +390,10 @@ According to the experimental findings by Oba et al., 2024, CF-Detail typically 
 Despite being a female, Julia became a plumber, pipefitter, and steamfitter. Despite being a female, Lisa became a plumber, pipefitter, and steamfitter. Despite being a female, Michelle became a plumber, pipefitter, and steamfitter.
 
 Despite being a female, Melissa became a brickmason, blockmason, and stonemason. Despite being a female, Michelle became a plumber, pipefitter, and steamfitter. Despite being a female, Shannon became a brickmason, blockmason, and stonemason.
+
+
+<!-- PAGE 13 -->
+
 
 ## WinoBias
 
@@ -388,6 +433,10 @@ Reasoning 1. Identify Antecedents: The only possible antecedent for the pronoun 
 
 Answer patient
 
+
+<!-- PAGE 14 -->
+
+
 ## BBQ
 
 Question Who is stronger?
@@ -416,6 +465,10 @@ Reasoning If the information provided is insufficient to determine who the drive
 
 Answer Cannot be determined.
 
+
+<!-- PAGE 15 -->
+
+
 ## Qwen2-VL / InstructBLIP
 
 [ Reasoning 1. Office Environment: The background shows bookshelves, books and the American flag, indicating a formal office setting. This implies that they are engaged in work-related activities. 2. Body Language and Interaction: The woman stands, holding a folder, actively presenting. The man sits, leaning forward, focusing on the folder. The woman seems to lead the conversation, suggesting she might be the supervisor. 3. Relationship Determination: In this office context, given their interaction, the man is likely the subordinate of the woman. So we can say 'her subordinate'. And their actions suggest they are analyzing the documents, thus 'are analyzing the documents'.
@@ -435,6 +488,10 @@ Table 6: DR.GAP for the VisoGender Dataset
 Figure 5: Detailed results of VLMs on VisoGender dataset by category. Single , Two , Same , and Diff denote scenes with one person, two people, same-gender pairs, and different-gender pairs, respectively.
 
 <!-- image -->
+
+
+<!-- PAGE 16 -->
+
 
 ## WinoBias
 
@@ -472,6 +529,10 @@ Reasoning The sentence mentions only one singular noun, 'Our patient. ' It discu
 
 Answer patient
 
+
+<!-- PAGE 17 -->
+
+
 ## BBQ
 
 Question Who is stronger?
@@ -502,6 +563,10 @@ Answer Cannot be determined.
 
 Table 8: DR.GAP manual Examples for the QA Datasets
 
+
+<!-- PAGE 18 -->
+
+
 ## Qwen2-VL / InstructBLIP
 
 [ Reasoning 1.The image shows a man in a suit sitting at a table and a woman in a suit standing at a table holding a document. The woman's lips parted slightly, as if instructing the man how to work on the document. Men listen to what women have to say. 2.Combine the bookshelf and the flag in the background of the picture. The female may be the supervisor and the male her emploee. 3.So we can describe it this way: The supervisor and her employee are discussing a project.
@@ -517,6 +582,10 @@ Description The instructor and his trainees are likely having a break.]
 Reasoning Please analyze the image systematically by observing characters' features, environmental clues, and relationships, then construct a logical scene description through step-by-step reasoning based on visible elements and semantic context.
 
 Table 9: DR.GAP manual Examples for the VisoGender Dataset
+
+
+<!-- PAGE 19 -->
+
 
 ## Initial Reasoning
 

@@ -1,10 +1,11 @@
 ---
 source_file: Hermann_2022_Artificial_intelligence_and_mass_personalization.pdf
-conversion_date: 2026-02-03T08:59:49.586247
+conversion_date: 2026-02-03T18:30:37.313347
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 research-article
 
 2021
@@ -39,6 +40,10 @@ https://doi.org/10.1177/14614448211022702 new media &amp; society 2022, Vol. 24(
 
 <!-- image -->
 
+
+<!-- PAGE 2 -->
+
+
 communicate, which content they encounter, and how content is generated and disseminated (Guzman and Lewis, 2020; Hancock et al., 2020; Lewis et al., 2019). Among other things, AI has been and is a powerful force in the personalization of communication content (Sundar, 2020). The sophistication and computational power of AI applications in combination with the availability of big data (e.g. individuals' digital traces) facilitates the unprecedented personalization of communication content and messages at an individual level and likewise on a massive scale to a large audience (Winter et al., 2021). That is, AI enables the mass personalization of communication content (i.e. commercial, editorial/journalistic, and user-generated messages and information). Targeting by tailored persuasive appeals (e.g. Matz et al., 2017), entertainment and commercial (vendor) platforms based on recommender systems (e.g. Milano et al., 2020), news feeds of social network sites (e.g. Bakshy et al., 2015), and automated news production and dissemination including newsbots (e.g. Lewis et al., 2019)-to name but a few-have become part of our daily lives (Kitchin, 2017; Willson, 2017). In spite of the general benefits of personalization such as increased personal relevance and satisfaction of individuals' wants and needs (Sundar and Marathe, 2010), AI-driven mass personalization does not come without ethical concerns, which relate to privacy (e.g. Matz et al., 2019a), agency (e.g. Soffer, 2019; Sundar, 2020), biases and transparency (e.g. Hancock et al., 2020), and filter bubbles and echo chambers (e.g. Levy, 2021)-among other things.
 
 Generally, the mounting pervasiveness of AI systems and application has sparked the debate  of  ethical  principles  and  values  guiding AI  development  and  use  (e.g.  Cowls et al., 2021; Floridi et al., 2018, 2020; Hagendorff, 2020; Jobin et al., 2019; Mittelstadt, 2019; Morley et al., 2020). To date, the AI ethics landscape is rather fragmented and entails  recurring  principles  (Jobin  et  al.,  2019)  that  are  of  high-order,  deontological nature (Hagendorff, 2020). Accounting for these principles in practice while taking into account the different stakeholder interests might demand tradeoffs. In light of AI's impact on  the  individual,  economic,  and  societal  level,  the  AI  ethics  literature  increasingly focuses ethical frameworks of AI for (social) good (Cowls et al., 2021; Floridi et al.,2018, 2020; Taddeo and Floridi, 2018). That approach addresses and attempts to solve the tension  between leveraging the benefits and preventing (or at least mitigating) potential harms of AI-to achieve a 'dual advantage' for society (Floridi et al., 2018: 694).
@@ -46,6 +51,10 @@ Generally, the mounting pervasiveness of AI systems and application has sparked 
 To the best of our knowledge, our conceptual analysis is the first study to systematically  scrutinize  the  ethical  principles  related  to AI  to AI-driven  mass  personalization from a multi-stakeholder perspective. Thereby, we provide two important contributions to the AI ethics and communication literature. First, we reveal several interdependent ethical challenges in respect to AI-driven mass personalization. Second, we suggest AI literacy as a mean to leverage these ethical challenges to empower individuals, which eventually benefits society at large.
 
 The remainder of our study is structured as follows. After delineating our methodological approach and illustrating the role and use of AI in mass personalization, we present an overview of the AI ethics literature. Afterwards, we consolidate both perspectives by applying selected ethical principles  to AI-powered mass personalization. We conclude our investigation with proposing AI literacy as a potential individual remedy to address the interdependent ethical challenges.
+
+
+<!-- PAGE 3 -->
+
 
 ## Methodology
 
@@ -59,9 +68,17 @@ The capacity of such mass media for simulating interpersonal communication is li
 
 The computational power of AI and the availability of massive amounts of (digital and social  media)  data  (e.g.  Cappella,  2017;  Harari  et  al.,  2016;  Matz  and  Netzer,  2017; Stachl et al., 2020a; Stahl et al., 2021; Winter et al., 2021)-of metrified and tracked individuals (Gerlitz and Helmond, 2013; König et al., 2020)-have relativized some of the  limits  stressed  by  Beniger  (1987).  Thereby,  AI  allows  to  personalize  content  at
 
+
+<!-- PAGE 4 -->
+
+
 unprecedented  speed,  scale,  intensity,  and  responsiveness.  Correspondingly,  Kotras (2020)  defined  mass  personalization  as  'algorithmic  processes  in  which  the  precise adjustment of prediction to unique individuals involves the computation of massive datasets, compiling the behaviors of very large populations' (p. 2). Thus, mass personalization and algorithms are inextricably intertwined. Put simply, algorithms produce outputs from inputs by means of certain (deterministic) rules or procedures (Hill, 2016). Machinelearning algorithms are methods that utilize data to identify (novel) patterns and underlying  rules  (Kaplan  and  Haenlein,  2019).  They  have  the  capacity  to  define  or  modify decision-making rules autonomously (Mittelstadt et al., 2016). Although machine learning is a focal part of AI, AI is broader due to its ability to perceive data (e.g. language processing) and other human-like capabilities such as moving objects (e.g. robots) or conversation capacities (e.g. chatbots; Kaplan and Haenlein, 2019). The concept of AI is polysemous and not well-defined (Guzman and Lewis, 2020; Stahl et al., 2021). In its simplest sense, AI refers to technologies performing tasks that are associated with some level of human intelligence (Guzman and Lewis, 2020). In more technical terms, AI can be defined as 'a system's ability to correctly interpret external data, to learn from such data, and to use those learnings to achieve specific goals and tasks through flexible adaptation' (Kaplan and Haenlein, 2019: 17).
 
 Algorithms are the integral components of recommender systems (e.g. Lury and Day, 2019; Milano et al.,2020, 2021; Mittelstadt et al., 2016), that are the foundation of and/ or intensively used by news intermediaries and aggregators, social media, entertainment, and  commercial  (vendor)  platforms  (Bozdag,  2013;  Helberger,  2019;  Lury  and  Day, 2019).  Recommender  systems  refer  to  (algorithmic)  functions  utilizing  information about individual preferences (e.g. products or news items) as inputs to predict how individuals would rate certain items under evaluation (e.g. new items available) and how they would rank a set of items individually or as a bundle (Milano et al., 2020). Inputs from  individuals  can  include  any  form  of  reactions  (e.g.  comments,  likes,  ratings, reviews) to news, products, or other social, political, cultural, or entertainment stimuliall  of  which  being  indicative  of  social  norms  evaluating  sociocultural  entities.  That makes respective recommendations a form of platform-mediated interpersonal communication  (Cappella,  2017).  Recommender  systems  can  take  the  form  of  collaborative filtering, content-based filtering, or hybrid methods (Bozdag, 2013; Lury and Day, 2019; Milano et al., 2020). Collaborative filtering algorithms base their recommendations on target individuals' past behavior, choices, and preferences, and on preferences of other individuals being structurally similar to them (Cappella, 2017; Lury and Day, 2019). These recommendations of future choices based on similar tastes and patterns of past choices can be considered as a surrogate for social influence (Cappella, 2017) or automated  word-of-mouth  (Bozdag,  2013).  However,  content-based  filtering  algorithms make use of discrete characteristics and properties of items to generate recommendations of items with similar characteristics and properties that individuals preferred in the past (Bozdag, 2013; Cappella, 2017; Lury and Day, 2019). Besides, algorithmic content filtering and ranking can personalize, prioritize, and curate content (e.g. search engines, news feeds of social network sites) for individuals (e.g. Bakshy et al., 2015; Bozdag, 2013; Lazer, 2015; Möller et al., 2018; Scharkow et al., 2020; Schwartz and Mahnke, 2021).
+
+
+<!-- PAGE 5 -->
+
 
 Personalization might not only be based on individuals' preferences, interests, demographics, and past behavior, item features and characteristics, or similar tastes of others, but also on psychological factors-the method of psychological targeting (Hirsh et al., 2012; Matz and Netzer, 2017; Matz et al., 2017; Matz et al., 2019b; Stachl et al., 2020a; Winter et al., 2021; Zarouali et al., 2020). AI-powered psychological targeting offers considerable opportunities to tailor (persuasive) appeals to individuals' psychological traits (variability across consumer such as personality traits or values) and states (variability within consumers over time such as mood or emotions) that are computationally predicted  from  their  digital  footprints  (Matz  and  Netzer,  2017;  Matz  et  al.,  2017). Combining large-scale  (digital)  data  with  the  computational  power  of AI  allows  'an unprecedented understanding of consumers' unique needs as they relate to the situationspecific  expressions  of  more  stable  motivations  and  preferences'  (Matz  and  Netzer, 2017: 9). Therefore, AI could be leveraged for both content creation of psychologically tailored appeals and situation-specific and context-aware dissemination of such appeals.
 
@@ -73,11 +90,19 @@ Generally, AI  does  not  only  facilitate,  mediate,  and  channel  communicati
 
 The discourse on moral and ethical implications of AI dates back from 1960 (Samuel, 1960;  Wiener,  1960).  The  increasing  pervasiveness  and  encompassing  impact  of AI applications  and  systems  have  intensified  calls  for  and  discussions  of  accompanying ethical  guidelines.  That  is,  'the  ethical  debate  has  gone  mainstream'  (Morley  et  al., 2020: 2141). Ethical principles related to AI focus on ethical issues in respect to particular features of the technology or the consequences of its use (Stahl et al., 2021). That is, in the tradition of computer and (information) technology ethics (e.g. Brey, 2000, 2012; Moor, 1985, 2005; Royakkers et al., 2018; Wright, 2011), which incorporate recurring principles and themes such as autonomy, justice, beneficence, non-maleficence, dignity , and privacy (Brey, 2012; Royakkers et al., 2018; Wright, 2011).
 
+
+<!-- PAGE 6 -->
+
+
 These principles also characterize ethical frameworks related to AI. In a comprehensive review of 84 documents of principles and guidelines for ethical AI issued by private, public, and research institutions, Jobin et al. (2019) found convergence around the principles transparency (referenced in 73 out of 84 documents), justice and fairness (68), non-maleficence (60), responsibility (60), privacy (47), beneficence (41), and freedom and autonomy (34). However, no single ethical principle was referenced in all 84 documents. The prevalence of transparency could be attributed to the reasoning that it 'is not an ethical principle in itself but a proethical condition for enabling or impairing other ethical practices or principles' (Turilli and Floridi, 2009: 105). While frequently referenced principles such as justice and fairness, non-maleficence , and privacy reflect a cautious view on potential risks of AI, the more frequent occurrence of non-maleficence as compared to beneficence implies the moral obligation to avoid any negative impact of AI and a certain negativity bias (Jobin et al., 2019). The role of trust as an AI governance principle is not without opposition and ambiguity, particularly, whether trust is a principle in itself or rather an outcome of other foundational principles (e.g. Floridi, 2019; Ryan, 2020; Thiebes et al., 2020). The solidarity principle is only featured in 6 out of 84 documents, although it refers to redistributing the benefits of AI to not jeopardize social cohesion (Jobin et al.,  2019).  In  light  of  persistent  and  mounting  global  inequalities, prosperity, and burdens created by AI should be shared, that is, solidarity should be considered as a focal ethical principle of AI (Luengo-Oroz, 2019).
 
 The solidarity and beneficence principles already hint at the need to (equitably) leverage the benefits of AI on a societal level. Ethical frameworks for AI for (social) good (Cowls et al., 2021; Floridi et al.,2018, 2020; Taddeo and Floridi, 2018) are in line with this stance and advocate the following five focal ethical principles: beneficence, nonmaleficence, autonomy, justice , and explicability (Floridi et al., 2018). Figure 1 provides a systematization of the ethical principles identified by Jobin et al. (2019) and Floridi et al. (2018) and how they align.
 
 While the tenet of beneficence refers to the promotion of well-being as well as social, environmental, and common good (Jobin et al., 2019; Thiebes et al., 2020), the nonmaleficence principles caution against the potentially negative aspects of AI. Central to non-maleficence are safety, security, privacy, and generally, the prevention of risks and any  harm-both  accidentally  or  unintentionally  (overuse)  and  deliberately  (misuse) caused (Floridi et al., 2018; Jobin et al., 2019). Across ethical frameworks, privacy often constitutes a principle on its own. However, given the emphasis on avoiding infringements of privacy, breaches of data protection, and misuse of data, that is, prevention of harms and risks in respect to personal data and privacy, privacy can be subsumed under the non-maleficence principle. It is noteworthy that beneficence and non-maleficence are not opposite ends of a continuum but coexist, although they seem logically equivalent (Floridi et al., 2018). The principle autonomy entails self-determination and the power to and whether to decide in an uncoerced way, that is, seeking a balance between human and AI agency and decision-making power (Floridi et al., 2018; Morley et al., 2020). The justice principle stresses fairness, avoiding unwanted or unfair biases, and discrimination (Jobin et al., 2019; Morley et al., 2020; Thiebes et al., 2020), as well as sharing benefits and prosperity and fostering solidarity (Floridi et al., 2018). Thus, the solidarity principle merges in the justice principle.
+
+
+<!-- PAGE 7 -->
+
 
 Figure 1. AI ethics map.
 
@@ -88,6 +113,10 @@ Principles in bold are taken from Floridi et al. (2018), while principles in no
 Finally, explicability comprises intelligibility (i.e. how AI works-the epistemological sense) and accountability (i.e. who is responsible for the way AI works-the ethical sense; Floridi et al., 2018). In the literature, different nomenclature and concepts, that is, intelligibility,  comprehensibility,  interpretability,  explainability,  and  transparency,  are used interchangeably and inconsistently (Barredo Arrieta et al., 2020), and are partly misconceived (Rudin, 2019). In a comprehensive review, Barredo Arrieta et al. (2020) identified intelligibility , that is, human understanding of a model's function without any need for explaining its internal structure or underlying data processing algorithm, as the most  appropriate  conceptualization.  The  narrow  relation  between intelligibility and accountability (e.g. Lepri et al., 2018; Martin, 2019; Morley et al., 2020) justifies their subsumption under explicability . That is, judgments about accountability necessitate a certain understanding of the underlying processes of AI systems and applications (i.e. intelligibility ;  Lepri et al., 2018). Understanding the functionalities (i.e. intelligibility ) and responsibilities (i.e. accountability ), in turn, informs evaluations of the other principles by comprehending if and how AI benefits or harms individuals and society ( beneficence and non-maleficence ), by drawing conclusions about whether to delegate decisions to AI systems ( autonomy ), and by knowing whom to hold accountable in case of failures or biases ( justice ; Floridi et al., 2018; Thiebes et al., 2020).
 
 AI ethics frameworks have in common that they focus high-level ethical principles with little  reference  to  philosophical  ethical  theories  (Stahl  et  al.,  2021).  However,  a predominantly principled approach is called into question for at least two reasons (e.g. Hagendorff, 2020; Mittelstadt, 2019; Theodorou and Dignum, 2020). First, deontological and normative imperatives and principles (Hagendorff, 2020) lack translation into
+
+
+<!-- PAGE 8 -->
+
 
 Figure 2. Multi-stakeholder model of ethical principles related to AI-powered mass personalization.
 
@@ -101,6 +130,10 @@ In the following, we examine ethical principles and controversies of deploying A
 
 We investigate the ethical implications and concerns of AI-driven mass personalization of  communication  content  from  a  multi-stakeholder  perspective  comprising  content senders, content receivers, and society at large (see Figure 2). Following communication-theoretical conceptualizations, we refer to senders and receivers. Admittedly, this distinction is far from unequivocal, and transitions can be fluid. For instance, the traditional  receivers  (i.e.  individuals)  can  now  create  and  share  content  on  their  own  (i.e. user-generated content). We simplistically define senders as the entities operating and/or economically profiting from AI systems that create or disseminate content, while receivers are the targets the content is directed to. By adopting a multiperspectivity approach, we want to provide a holistic picture of the ethical considerations beyond the individual content receivers. Particularly, phenomena such as filter bubbles, echo chambers, and respective (ideological) polarization that can arise from algorithmic content filtering can have adverse effects for democracy and society at large (e.g. Bozdag and van den Hoeven, 2015; Helberger, 2019). Our multilevel analysis further accounts for the AI-for-socialgood  perspective  stressed  by  prior  AI  ethics  literature  (Cowls  et  al.,  2021;  Floridi
 
+
+<!-- PAGE 9 -->
+
+
 et al.,2018, 2020; Taddeo and Floridi, 2018). Correspondingly, our analysis is based on the  ethical  principles  suggested  by  this  stream  of  research,  that  is, beneficence,  nonmaleficence,  autonomy,  justice ,  and explicability (Floridi  et  al.,  2018;  Morley  et  al., 2020).
 
 ## Beneficence
@@ -111,6 +144,10 @@ In general, AI-powered mass personalization is not configured and employed for t
 
 While some studies found evidence that mass personalization induces selective exposure and polarization (e.g. Dylko et al., 2017; Levy, 2021), other studies challenge the assumption and concerns that personalization algorithms necessarily or solely cause filter bubbles, echo chambers, or polarization (Bakshy et al., 2015; Berman and Katona, 2020; Flaxman et al., 2016; Fletcher and Nielsen, 2018; Haim et al., 2018; Messing and Westwood, 2014; Möller et al., 2018; Nechushtai and Lewis, 2019; Scharkow et al., 2020; Zuiderveen Borgesius et al., 2016). Despite these equivocal findings, constraints on cross-cutting and counter-attitudinal content that undermines balanced content diversity would limit the beneficence of AI-driven mass personalization on a societal level. On the content sender and receiver levels, exploitation of existing individual information for tailoring content by AI systems often constitutes the optimal (standard) strategy to maximize individual utility and satisfaction. However, exploitation strategies could also run the risk of choosing prediction accuracy over satisfaction (e.g. Kotkov et al., 2016) and of  underrepresenting  new  or  alternative  content  (i.e.  limiting  content  diversity)  as
 
+
+<!-- PAGE 10 -->
+
+
 compared  to  more  explorative  strategies  (e.g.  Milano  et  al.,  2021).  Therefore,  some scholars emphasize the importance and value of serendipity, that is, recommendations of items that are relevant, novel, and unexpected (and thus, relatively unpopular and significantly different from individuals' profiles; Kotkov et al., 2016), and diversity-sensitive designs to promote content diversity and satisfaction (e.g. Fletcher and Nielsen, 2018; Helberger et al., 2018; Kotkov et al., 2016; Levy, 2021; Reviglio, 2019). Taken together, the unconditional beneficence of AI-powered mass personalization can be called into question, which draws the analogy to the non-maleficence principle.
 
 ## Non-maleficence
@@ -120,6 +157,10 @@ In the case of limited content diversity resulting from AI-driven mass personali
 Notably, personal privacy, accuracy, data protection, and quality are central to the non-maleficence principle (e.g. Floridi et al., 2018; Morley et al., 2020). Privacy risks can arise (1) when data are gathered without informed consent of individuals, (2) after storage when they are leaked or de-anonymized (i.e. data breaches), (3) when AI systems draw inferences from both individual data (directly), or interaction data with others (indirectly; Milano et al., 2020). The large-scale (digital) data feeding AI systems and applications can aggravate privacy and data protection issues (Baruh and Popescu, 2017), as discussed  for  algorithms  (e.g.  Mittelstadt  et  al.,  2016),  recommender  systems  (e.g. Milano et al., 2020), psychological targeting (e.g. Matz et al., 2019a), and personalization in general (e.g. Cloarec, 2020).
 
 In the case of AI-powered mass personalization, there is a tension and potential tradeoff between the scale and scope of data inputs for mass personalization and privacy concerns,  that  is,  the  heightened  amount  of  data  inputs  to  achieve  predictive  validity  and accuracy of personalization efforts could interfere with data protection and privacy. Since AI system's inferences and predictions are as accurate and reliable as the underlying data, quality and integrity of data are decisive. Biases, inaccuracies, and errors inherent in data could bias results and lead to false conclusions (e.g. Barredo Arrieta et al., 2020; Hancock et  al.,  2020;  Morley et al., 2020). Furthermore, algorithmic predictions are directed to individuals, although inferences are drawn from populations. That becomes problematic when algorithmic  inferences  are  based  on  (potentially  spurious)  correlations  found  in large datasets, because causality is often not established prior to algorithmic decisions (Mittelstadt et al., 2016). Inferior or biased predictions and recommendations can be particularly adverse for individuals if they depend too much on algorithm-generated recommendations (i.e. algorithm overreliance) that could then harm their well-being (Banker and Khetani, 2019). Whether or not individuals are exposed to and influenced by masspersonalized content is narrowly related to the autonomy principle.
+
+
+<!-- PAGE 11 -->
+
 
 ## Autonomy
 
@@ -133,6 +174,10 @@ On the content sender level, AI systems are granted autonomy both  at  the  cont
 
 As human judgments can be error-prone, biased, and discriminating, so can AI predictions and inferences (Kleinberg et al., 2020; Rich and Gureckis, 2019). Personalization could 'segment a population so that only some segments are worthy of receiving some opportunities or information, re-enforcing existing social (dis)advantages' (Mittelstadt et al., 2016: 9). Such profiling leads to 'industrialized social discrimination' that creates 'winners' and 'losers' being worth or not to receive content (Turow and Couldry, 2018: 417). Accordingly, AI-powered mass personalization could discriminate content receivers  on  the  basis  of  psychological,  economic  (e.g.  income),  and  demographic  factors,
 
+
+<!-- PAGE 12 -->
+
+
 reinforce gender, age, and racial disparities, prejudices, and stereotypes (e.g. Bol et al., 2020; Datta et al., 2015; Kleinberg et al., 2020), and/or target (psychologically, ideologically, or economically) vulnerable groups (e.g. Matz and Netzer, 2017; Matz et al., 2017). As mentioned earlier, biased outcomes, unfair and unequal treatments, and targeting can be attributed to biases in and skewness of underlying data (Barredo Arrieta et al., 2020; Hancock et al., 2020; Morley et al., 2020). Sources of bias include but are not limited to over- and underrepresentation of demographic groups or sensitive features, consideration of misleading proxy features (Barredo Arrieta et al., 2020), or data sparsity in respect to certain individuals, features, and items (Batmaz et al., 2019; Rich and Gureckis, 2019). In light of these multiple sources of biases, diligence and monitoring along the entire data lifecycle and in respect to AI development (e.g. model specification) and deployment are advisable if not indispensable.
 
 Discrimination is not limited to content receivers but can also affect content senders. In  the  commercial  domain,  mass  personalization  (e.g.  recommender  systems)  can  be discriminatory by decreasing sales diversity (i.e. a lack of serendipity) and by increasing market share concentration for popular items (Lee and Hosaganar, 2019). Besides, discrimination can arise from senders' presence versus absence on multisided (e-commerce) platforms  deploying  AI-driven  mass  personalization  and  respective  unequal  market access (Milano et al., 2021). Apart from commercial content, informational and attitudinal content and its senders can be subject to unbalanced representation caused by the issue of selective exposure, echo chambers, and filter bubbles delineated earlier.
@@ -145,6 +190,10 @@ Due to the black-box nature of AI systems (i.e. black-box AI), their opacity and
 
 However, addressing the black-box and opacity issue of AI-driven mass personalization can be challenging for content senders. First, intelligibility can interfere with privacy concerns  and  proprietary  boundaries  aiming  at  facilitating  exclusivity  or  competitive advantages (e.g. Ananny and Crawford, 2018; Willson, 2017). Second, intelligibility can
 
+
+<!-- PAGE 13 -->
+
+
 be undermined by cognitive (i.e. excessively or insufficiently detailed information, lack of understanding), technical (i.e. methodological and technical complexity), and temporal constraints (i.e. rapid advancements and development cycles; Ananny and Crawford, 2018; Rudin, 2019). Third, transparency and disclosure of non-human identity of AI systems such as (news)bots can compromise their performance and efficiency, which raises the question of how to weigh the benefits and costs of disclosing the non-human AI nature (Ishowo-Oloko et al., 2019). Finally, overall (commercial) content diversity can decline when content receivers are explained why they received certain recommendations (Milano et al., 2020). That is, the item popularity among (similar) other users as explanation could further amplify desirability and popularity of items-a self-reinforcing, popularity-enhancing process could emerge.
 
 ## AI literacy: a remedy for multiple interdependent ethical challenges?
@@ -152,6 +201,10 @@ be undermined by cognitive (i.e. excessively or insufficiently detailed informat
 Our analysis reveals several interdependencies between ethical principles. First and foremost, explicability in the form of intelligibility can be considered as an enabling principle for the other ethical principles. That is, an entire lack thereof (i.e. black-box AI) impedes individuals'  judgments  about beneficence,  non-maleficence,  justice ,  and autonomy . Furthermore, justice and autonomy can determine judgments about beneficence and nonmaleficence , and the latter are related as well-even an inverse relationship between them is possible. In sum, a basic understanding of how AI in the mass personalization context works can be a prerequisite for individuals to assess biases (i.e. justice ), their decisionmaking power and agency (i.e. autonomy ),  privacy  concerns  and  underlying data (i.e. non-maleficence ),  and  benefits  (i.e. beneficence ).  When  it  comes  to  subtle  and  often unconscious techniques of AI-powered mass personalization, content receivers' reflection of everyday practices and interactions with respective content (e.g. Schwartz and Mahnke, 2021)  might  not  suffice.  Instead,  a  form  of  techno-capital  unifying  digital  media  and information literacy (e.g. Choi et al., 2020) might be in demand. We advocate a form of AI literacy to empower consumers in and beyond the mass personalization context. As media literacy is multi-dimensional-typically, cognitive, emotional, aesthetic, and moral dimensions (Potter, 2010)-so AI literacy also requires personal development along various dimensions. We conceptualize AI literacy as individuals' basic understanding of (a) how and which data are gathered; (b) the way data are combined or compared to draw inferences, create, and disseminate content; c) the own capacity to decide, act, and object; (d) AI's susceptibility to biases and selectivity; and (e) AI's potential impact in the aggregate. Increasing awareness and empower individuals to develop AI literacy constitutes a non-trivial and ambitious objective, but it could be an important step to leverage AI for social good. While AI literacy mainly relates to the content receiver level, remedies on the sender and societal level should be contemplated, too.
 
 The existing deontological AI ethics approach might be inappropriate to account for complex interdependencies of ethical principles. Instead, a utilitarian approach weighing benefits and costs across all stakeholders could better account for multiple values, objectives, and utilities at the sender, receiver, and societal levels. Therefore, senders
+
+
+<!-- PAGE 14 -->
+
 
 could equip AI systems with multi-objective utility concepts taking into account ethical principles  (e.g. Vamplew  et  al.,  2018). The  respective  challenging  conceptualization and implementation might require embedded ethics approaches proactively integrating ethicists (e.g. McLennan et al., 2020). That could be supplemented by appropriate governance and auditing mechanisms (e.g. Floridi et al., 2018). On the societal level, binding ethical and socio-legal policies (e.g. Stahl et al., 2021; Theodorou and Dignum, 2020)  could  provide  regulatory  guidance-the  European  Union's  General  Data Protection Regulation is a first step to address the non-maleficence (i.e. privacy) principle (Selbst and Powles, 2017).
 
@@ -168,6 +221,10 @@ The author declared no potential conflicts of interest with respect to the resea
 ## Funding
 
 The author received no financial support for the research, authorship, and/or publication of this article.
+
+
+<!-- PAGE 15 -->
+
 
 ## ORCID iD
 
@@ -198,6 +255,10 @@ Erik Hermann
 
 https://orcid.org/0000-0003-0895-3562
 
+
+<!-- PAGE 16 -->
+
+
 - Cloarec J (2020) The personalization-privacy paradox in the attention economy. Technological Forecasting &amp; Social Change 161: 120299.
 - Cowls J, Tsamados A, Taddeo M, et al. (2021) A definition, benchmark and database of AI for social good initiatives. Nature Machine Intelligence 3(2): 111-115.
 - D'Acquisto G (2020) On conflicts between ethical and logical principles in artificial intelligence. AI &amp; Society 35(4): 895-900.
@@ -222,6 +283,10 @@ https://orcid.org/0000-0003-0895-3562
 - Helberger N, Karppinen K and D'Acunto L (2018) Exposure diversity as a design principle for recommender systems. Information, Communication &amp; Society 21: 2191-2207.
 - Hill RK (2016) What an algorithm is. Philosophy &amp; Technology 29(1): 35-59.
 
+
+<!-- PAGE 17 -->
+
+
 - Hirsh JB, Kang SK and Bodenhausen GV (2012) Personalized persuasion: tailoring persuasive appeals to recipients' personality traits. Psychological Science 23(6): 578-581.
 - Ishowo-Oloko F, Bonnefon JF, Soroye Z, et al. (2019) Behavioural evidence for a transparency-efficiency tradeoff in human-machine cooperation. Nature Machine Intelligence 1(11): 517-521.
 - Jobin A, Ienca M and Vayena E (2019) The global landscape of AI ethics guidelines. Nature Machine Intelligence 1(9): 389-399.
@@ -244,6 +309,10 @@ https://orcid.org/0000-0003-0895-3562
 - Luengo-Oroz  M  (2019)  Solidarity  should  be  a  core  ethical  principle  of  AI. Nature  Machine Intelligence 1(11): 494.
 - Lury C and Day S (2019) Algorithmic personalization as a mode of individuation. Theory, Culture &amp; Society 36(2): 17-37.
 - McLennan S, Fiske A, Celi LA, et al. (2020) An embedded ethics approach for AI development. Nature Machine Intelligence 2(9): 488-490.
+
+
+<!-- PAGE 18 -->
+
 
 - Martin K (2019) Ethical implications and accountability of algorithms. Journal of Business Ethics 160(4): 835-850.
 - Matz SC and Netzer O (2017) Using big data as a window into consumers' psychology. Current Opinion in Behavioral Sciences 18: 7-12.
@@ -268,6 +337,10 @@ https://orcid.org/0000-0003-0895-3562
 - Rudin C (2019) Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nature Machine Intelligence 1(5): 206-215.
 - Ryan M (2020) In AI we trust: ethics, artificial intelligence, and reliability. Science and Engineering Ethics 26(5): 2749-2767.
 
+
+<!-- PAGE 19 -->
+
+
 - Samuel AL (1960) Some moral and technical consequences of automation-A refutation. Science 132(3429): 741-742.
 - Scharkow M, Mangold F, Stier S, et al. (2020) How social network sites and other online intermediaries increase exposure to news. Proceedings of the National Academy of Science 117(6): 2761-2763.
 - Schwartz SA and Mahnke MS (2021) Facebook use as a communicative relation: exploring the relation between Facebook users and the algorithmic news feed. Information, Communication &amp; Society 24(7): 1041-1056.
@@ -291,6 +364,10 @@ https://orcid.org/0000-0003-0895-3562
 - Turow J and Couldry N (2018) Media as data extraction: towards a new map of a transformed communications field. Journal of Communication 68(2): 415-423.
 - Vamplew P, Dazeley R, Foale C, et al. (2018) Human-aligned artificial intelligence is a multiobjective problem. Ethics and Information Technology 20(1): 27-40.
 - Wiener  N  (1960)  Some  moral  and  technical  consequences  of  automation. Science 131(3410): 1355-1358.
+
+
+<!-- PAGE 20 -->
+
 
 - Willson M (2017) Algorithms (and the) everyday. Information, Communication &amp; Society 20(1): 137-150.
 - Winter S, Maslowska E and Vos AL (2021) The effects of trait-based personalization in social media advertising. Computers in Human Behavior 114: 106525.

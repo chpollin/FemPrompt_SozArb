@@ -1,10 +1,11 @@
 ---
 source_file: Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.pdf
-conversion_date: 2026-02-03T09:07:20.168346
+conversion_date: 2026-02-03T18:38:41.157014
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 Digital Policy Hub - Working Paper
 
 ## Avoiding Catastrophe Through Intersectionality in Global AI Governance
@@ -12,6 +13,10 @@ Digital Policy Hub - Working Paper
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## About the Hub
 
@@ -37,6 +42,10 @@ Centre for International Governance Innovation and CIGI are registered trademark
 
 The Centre for International Governance Innovation (CIGI) is an independent, non-partisan think tank whose peer-reviewed research and trusted analysis influence policy makers to innovate. Our global network of multidisciplinary researchers and strategic partnerships provide policy solutions for the digital era with one goal: to improve people's lives everywhere. Headquartered in Waterloo, Canada, CIGI has received support from the Government of Canada, the Government of Ontario and founder Jim Balsillie.
 
+
+<!-- PAGE 3 -->
+
+
 ## Key Points
 
 - Artificial intelligence (AI) safety is a growing field that highlights the existential risks of AI, while proposing alternative development processes centred around concepts of alignment with human values and ethical concerns.
@@ -50,6 +59,10 @@ The Centre for International Governance Innovation (CIGI) is an independent, non
 As AI systems develop at a rapid pace, AI safety has emerged as a discipline concerned with addressing the existential threats of AI through the development of systems aligned with human values such as ethics, explainability and external control (Amodei et al. 2016; Bostrom 2014). This movement has become increasingly prominent surrounding the utopian promises and dystopian risks of artificial general intelligence (AGI), described as 'a single system that can learn incrementally, reason abstractly, and act effectively over a wide range of domains' (Voss 2017). Similar to the potential for global nuclear annihilation, AI safety experts warn of the potential for AGI to pose irreversible consequences to all human life. In 2002, Nick Bostrom argued that existential risk represents a global terminal threat that 'would either annihilate Earth-originating intelligent life or permanently and drastically curtail its potential' (Bostrom 2002, 2). Dan Hendrycks, Mantas Mazeika and Thomas Woodside (2023) identify four categories of AI existential risk: malicious use, a global unregulated AI race, organizational risks associated with a lack of safety culture and the potential for AGI to produce rogue agents. These scholars represent a growing body of literature focused on how the development of superintelligence could result in permanent harms (Bostrom 2014; Ord 2020; Vold and Harris 2021). In addition to within academic research, numerous well-known figures in the field have voiced concerns for the future of AI, including Stephen Hawking (Cellan-Jones 2014) and Bill Gates (Eadicicco 2015).
 
 Globally, AI safety has gained importance within both policy and research and development sectors, with the founding of AI safety institutes in the United States, United Kingdom, Japan, Canada, Singapore and the European Union (Variengien and Martinet 2024). These institutes supplement industry commitments to develop safe AI, with Cohere, OpenAI and AI21 agreeing on best practices to mitigate misuse (Cohere Team 2022), industry leaders
+
+
+<!-- PAGE 4 -->
+
 
 signing onto pledges that acknowledge the potential existential threats of AI 1  and calls for a pause on giant AI experiments (Future of Life Institute 2023). In 2023, UN Secretary-General António Guterres advocated for a new UN agency to govern the potential catastrophic risks of AI (Fung 2023). While the pathways for addressing the risks associated with AGI are diverse (Sotala and Yampolskiy 2014), they represent an interdisciplinary movement seeking to collaborate on existential challenges.
 
@@ -69,6 +82,10 @@ Other frameworks propose alternative critiques and constructions of AI and polic
 
 1 See www.safe.ai/work/statement-on-ai-risk#open-letter.
 
+
+<!-- PAGE 5 -->
+
+
 represents a framework for integrating feminist principles into the development of data and AI, including examining and challenging power, rethinking hierarchies and considering contexts. In 2003, McPhail devised the Feminist Policy Analysis Framework, a qualitative action-oriented model that utilizes 13 categories to examine how public policy reifies gendered systems of oppression. In 2020, Heather Kanenberg, Roberta Leal and Stephen Erich amended McPhail's framework with considerations of how policy decisions have intersectional impacts. They argue that feminist policy analysis reveals marginalizing and discriminatory practices, connecting them to broader socio-political concerns (Kanenberg, Leal and Erich 2020). Approaches to feminist policy analysis also exist within social policy (Hyde 2000; Hankivsky and Cormier 2011), education (Mansfield, Welton and Grogan 2014; Bensimon and Marshall 2003), public health (Hankivsky et al. 2014) and social work (Kanenberg 2013). These frameworks are united in their commitment to critically reviewing how power intersects with policy in uneven and marginalizing ways.
 
 Drawing from these frameworks, this research proposes a feminist AI policy framework (see Figure 1), which encourages decision makers and stakeholders to evaluate potential AI safety projects in accordance with four goals. Within each of these goals is a series of questions that can be asked when examining AI safety initiatives.
@@ -77,6 +94,10 @@ Drawing from these frameworks, this research proposes a feminist AI policy frame
 - Provide diverse contexts: Assessing the context of a policy involves bringing hidden narratives to light. Focusing on the contexts that influence these intersectional identities - histories, backgrounds, social structures - shows how biases are interrelated and reflect broader practices of discrimination and exclusion. Regarding AI safety, contextual dynamics shape the narrative of what constitutes an 'existential threat' (Gebru and Torres 2024), often certain hegemonic values and depictions of threat over others.
 - Combat neutrality: A focus on neutrality examines how AI policy acts to promote a universal notion of impact, harm and threat. As the experiences of AI for those 'at the margins' (Collins 1986) are different than those with substantial levels of privilege, a presumption of neutrality fails to represent these diverse experiences. When safe AI is designed, it often is encoded with a presumed universal benevolence. This is evident in the 'character training' involved in Claude 3.0, where developers made a list of traits they wanted the model to have, leading it to generate and rank responses in accordance with these traits (Anthropic 2024; Bai et al. 2022). While this approach identifies how these systems are trained, there are important considerations that impact what traits are valued and considered universal.
 - Increase power for those at the margins: Investigating power involves questioning not only who has a seat at the table, but also what that seat looks like. Rather than seeing governance as a top-down technocratic process, an intersectional feminist policy framework argues that there is a need for meaningful participation from those who are disproportionately marginalized by an AI system. Where safety movements may push for overarching technical solutions, this perspective sees solution building as a holistic process encompassing policy, design, literacy and justice.
+
+
+<!-- PAGE 6 -->
+
 
 Figure 1: A Feminist AI Policy Framework
 
@@ -93,6 +114,10 @@ Figure 2: AI Safety Initiatives
 <!-- image -->
 
 Source: Author.
+
+
+<!-- PAGE 7 -->
+
 
 ## Findings
 
@@ -112,6 +137,10 @@ When examining how initiatives provide diverse context , the scores exhibited a 
 
 3 See https://futureoflife.org/open-letter/ai-principles/.
 
+
+<!-- PAGE 8 -->
+
+
 programmes, governance, processes, and best practices required to understand and participate in the AI system lifecycle, including managing risks.' 4  This definition fails to incorporate lived experiences and diverse knowledge into the development of AI safety plans. Additionally, no initiative examined the biases associated with AI safety research, including the overrepresentation of white males, and the reinforcement of narratives surrounding technological utopianism, inevitable progress and effective altruism (Gebru and Torres 2024).
 
 Similar conclusions were found regarding efforts to combat neutrality . The language surrounding existential risks often depicted threats as both future and universal. For example, numbers 14 and 15 of the Asilomar Principles detail a commitment to shared AI benefits and prosperity. However, they fail to detail how these shares will be distributed according to equitable need (substantive equality) as opposed to provision of a single level of support and resources for all (formal equality). When describing AI risk, the Seoul Declaration states, 'Recognizing that all states will be affected by the benefits and risks of AI, we will actively include a wide range of international stakeholders in conversations around AI governance' (GOV.UK 2024). This presumed universal risk ignores how certain groups experience threats that could be considered as existential, such as a discriminatory algorithm that causes a low-income family to lose their social welfare (Eubanks 2018) or a data centre with excessive cooling regimens that lead to a lack of accessible water for rural and Indigenous communities (Valdivia 2024). When a policy seeks to only address future threats, it fails to understand how current harms pose existential threats to vulnerable communities.
@@ -125,6 +154,10 @@ When addressing how to increase power for those at the margins , these initiativ
 6 See www.gov.uk/government/publications/frontier-ai-safety-commitments-ai-seoul-summit-2024/frontier-ai-safetycommitments-ai-seoul-summit-2024.
 
 7 See GOV.UK (2023).
+
+
+<!-- PAGE 9 -->
+
 
 ## Lessons Learned: The Future of Feminist AI Safety Research
 
@@ -142,6 +175,10 @@ At the AI Safety Summit in 2023, then-US Vice President Kamala Harris noted: 'th
 
 Harris then listed potential threats, which also feel existential to certain groups, including abuse from the threat of explicit deep-fake photographs, wrongful imprisonment and AI-enabled misinformation. Amba Kak, the executive director of AI Now, further argues that AI safety ought to be designed and implemented by those who are most impacted (Kak 2023). Figure 4 details how systemic biases create unjust impacts that become normalized when they are collected as seemingly objective data (D'Ignazio and Klein 2020; Baack 2024). When this data is then used to train AI models, the models reify these biases as normal and objective (Gillespie 2024).
 
+
+<!-- PAGE 10 -->
+
+
 Figure 4: Breaking Down AI Existential Risk
 
 <!-- image -->
@@ -151,6 +188,10 @@ Source: Author.
 If these impacts continue to go unaddressed at the systemic level, with solutions prioritizing transparency (Ananny and Crawford 2018), anti-discrimination discourse (Hoffmann 2019) and corporate control (Stark, Greene and Hoffmann 2020) then the development of AGI will be imbued with these systemic harms. AI safety needs to embrace multifaceted, multi-stakeholder participation to address situated existential risk, as those at the margins often feel existential risk first (Lucero-Matteucci 2023). While there is a definite barrier to ensuring meaningful participation, a commitment to developing feminist AI involves not only a commitment to non-discrimination, but also a commitment to increased digital literacy, investment into public intervention strategies such as citizen juries or mini publics (Brandusescu and Sieber 2023) and available grants to develop community-focused safe AI. A proactive approach would enable pathways for meaningful participation and inclusion of various stakeholders through pre-emptive input from marginalized communities and shifting the power to use and deploy algorithms to the communities in which they will be utilized (Okidegbe 2022).
 
 Much of the discussions surrounding AI safety present similar concerns to those argued by feminist AI scholars - both viewpoints are concerned with the potential future of AI, both want to establish clear safeguards and both challenge the idea that AI is universally beneficial. However, within the AI safety movement, there is a clear lack of diverse perspectives. AGI will reflect the biases we are already seeing in AI today. To address gaps in AI safety, there is a need to highlight how certain groups are experiencing forms of existential risks due to the detrimental harms posed by AI. Policy design must acknowledge the interconnectedness of systemic biases and future AI risk. In merging AI safety with feminist theory, this paper has argued for an account that challenges current power structures to prevent future risks.
+
+
+<!-- PAGE 11 -->
+
 
 ## Recommendations
 
@@ -175,6 +216,10 @@ Ananny, Mike and Kate Crawford. 2018. 'Seeing without knowing: Limitations of th
 Anthropic. 2024. 'Claude's Character.' Anthropic, June 8. www.anthropic.com/ research/claude-character.
 
 Amodei, Dario, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman, and Dan Mané. 2016. 'Concrete Problems in AI Safety.' arXiv , July 25. https://doi.org/10.48550/arxiv.1606.06565.
+
+
+<!-- PAGE 12 -->
+
 
 - Baack, Stephen. 2024. 'Training Data for the Price of a Sandwich: Common Crawl's Impact on Generative AI.' Mozilla Foundation, February 6. https://foundation.mozilla.org/en/research/library/generative-ai-training-data/ common-crawl/.
 - Bai, Yuntao, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen et al. 2022. 'Constitutional AI: Harmlessness from AI Feedback.' arXiv , December 15. https://doi.org/10.48550/arxiv.2212.08073.
@@ -205,6 +250,10 @@ Crenshaw, Kimberlé. 1991. 'Mapping the Margins: Intersectionality, Identity Pol
 
 D'Ignazio, Catherine and Lauren F. Klein. 2020. Data Feminism. Cambridge, MA: MIT Press.
 
+
+<!-- PAGE 13 -->
+
+
 Eadicicco, Lisa. 2015. 'Bill Gates: Elon Musk Is Right, We Should All Be Scared Of Artificial Intelligence Wiping Out Humanity.' Business Insider , January 28. www.businessinsider.com/ bill-gates-artificial-intelligence-2015-1.
 
 Eubanks, Virginia. 2018. Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor . London, UK: St. Martin's Press.
@@ -233,6 +282,10 @@ Hendrycks, Dan, Mantas Mazeika and Thomas Woodside. 2023. 'An Overview of Catast
 
 Hoffmann, Anna Lauren. 2019. 'Where fairness fails: data, algorithms, and the limits of antidiscrimination discourse.' Information, Communication &amp; Society 22 (7): 900-15. https://doi.org/10.1080/1369118X.2019.1573912.
 
+
+<!-- PAGE 14 -->
+
+
 - Hyde, Cheryl. 2000. 'Feminist Approaches to Social Policy.' In The Handbook of Social Policy , edited by James Midgley, Martin B. Tracy and Michelle Livermore, 421-35. Thousand Oaks, CA: Sage.
 - Kak, Amba. 2023. 'Remarks from AI Now ED Amba Kak on Day 2 of the UK AI Safety Summit.' Speech at AI Safety Summit, November 2. https://ainowinstitute.org/news/ events/remarks-from-ai-now-ed-amba-kak-on-day-2-of-the-uk-ai-safety-summit.
 - Kanenberg, Heather. 2013. 'Feminist Policy Analysis: Expanding Traditional Social Work Methods.' Journal of Teaching in Social Work 33 (2): 129-42. https://doi.org/10.1080/08841233.2013.772935.
@@ -248,6 +301,10 @@ Hoffmann, Anna Lauren. 2019. 'Where fairness fails: data, algorithms, and the li
 - Ord, Toby. 2020. The Precipice: Existential Risk and the Future of Humanity . New York, NY: Hachette.
 - Ricaurte, Paola. 2024. 'How can feminism inform AI governance in practice?' UNESCO, February 1. www.unesco.org/en/articles/how-can-feminism-inform-ai-governance-practice.
 - Roche, Cathy, P. J. Wall and Dave Lewis. 2022. 'Ethics and diversity in artificial intelligence policies, strategies and initiatives.' AI and Ethics 3 (4): 1095-115. https://doi.org/10.1007/s43681-022-00218-9.
+
+
+<!-- PAGE 15 -->
+
 
 Schelenz, Laura. 2022. 'Artificial Intelligence Between Oppression and Resistance: Black Feminist Perspectives on Emerging Technologies.' In Artificial Intelligence and Its Discontents , edited by Ariane Hanemaayer, 225-49. Cham, Switzerland: Springer International. https://doi.org/10.1007/978-3-030-88615-8\_11.
 

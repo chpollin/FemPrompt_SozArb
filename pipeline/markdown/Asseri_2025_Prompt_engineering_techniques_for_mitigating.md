@@ -1,10 +1,11 @@
 ---
 source_file: Asseri_2025_Prompt_engineering_techniques_for_mitigating.pdf
-conversion_date: 2026-02-03T08:42:41.475128
+conversion_date: 2026-02-03T18:20:56.460079
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models: A Systematic Review
 
 Bushra Asseri 1* , Estabrag Abdelaziz 1 and Areej Al-Wabil 1
@@ -17,6 +18,10 @@ Bushra Asseri 1* , Estabrag Abdelaziz 1 and Areej Al-Wabil 1
 
 Large language models (LLMs) have demonstrated remarkable capabilities across various domains, yet concerns about cultural bias-particularly towards Arabs and Muslims-pose significant ethical challenges by perpetuating harmful stereotypes and marginalization. Despite growing recognition of bias in LLMs, prompt engineering strategies specifically addressing Arab and Muslim representation remain understudied. This mixed-methods systematic review examines such techniques, offering evidence-based guidance for researchers and practitioners. Following PRISMA guidelines and Kitchenham's systematic review methodology, we analyzed 8 empirical studies published between 2021-2024 investigating bias mitigation strategies. Our findings reveal five primary prompt engineering approaches: cultural prompting, affective priming, self-debiasing techniques, structured multi-step pipelines, and parameter-optimized continuous prompts. Although all approaches show potential for reducing bias, effectiveness varied substantially across studies and bias types. Evidence suggests that certain bias types may be more resistant to prompt-based mitigation than others. Structured multi-step pipelines demonstrated the highest overall effectiveness-achieving up to 87.7% reduction in bias-though they require greater technical expertise. Cultural prompting offers broader accessibility with substantial effectiveness (71-81% improvement in cultural alignment). These results underscore the accessibility of prompt engineering for mitigating cultural bias without requiring access to model parameters. The limited number of studies identified highlights a significant research gap in this critical area. Future research should focus on developing culturally adaptive prompting techniques, creating Arab/Muslim-specific evaluation
 
+
+<!-- PAGE 2 -->
+
+
 resources, and integrating prompt engineering with complementary debiasing methods to address deeper stereotypes while maintaining model utility.
 
 Keywords: Large Language Models, Prompt Engineering, Cultural Bias, Arabs, Muslims, AI Ethics
@@ -27,13 +32,25 @@ Large language models (LLMs) have substantially advanced natural language proces
 
 Beyond the high-level insights provided by Bender et al. (2021) and Said (2019), researchers have developed more granular frameworks for understanding the mechanics and ethics of bias in AI. Hovy and Prabhumoye (2021) propose a structured approach that identifies five sources of bias in natural language processing systems: data, the
 
+
+<!-- PAGE 3 -->
+
+
 annotation process, input representations, models, and research design. While this framework underscores the multifaceted origins of bias, Prakash and Lee (2023) further extend this analysis through the notion of 'layered bias,' highlighting how bias can be embedded not just at the dataset or annotation level, but also within the internal layers of transformer architectures themselves. Interventions must therefore reach beyond the surface (e.g., fixing a flawed training dataset) to grapple with how biases permeate deeper representational strata. From an ethical standpoint, Birhane (2021) calls for a shift from rational to relational thinking, emphasizing that technical fixes alone are insufficient to address systemic bias. This relational ethics perspective encourages examination of power structures, historical injustices, and lived experiences, resonating strongly with Said (2019) critique of how Western knowledge production has historically marginalized Arab and Muslim voices. Indeed, 'stochastic parrots' can reflect Orientalist biases if the training data-and thus the very fabric of these models-repeatedly portrays Arabs and Muslims through a limited, negative lens. Among the different types of biases studied in LLMs, cultural and religious bias against Arabs and Muslims has received increasing scholarly attention (Abid et al. 2021; Naous et al. 2024). Such bias can manifest both explicitly (e.g., negative or stereotypical completions to prompts) and implicitly (e.g., subtle misrepresentations of cultural practices). The concept of 'stereotype dimensions' (Schuster et al. 2025) helps clarify how models encode and perpetuate stereotypes about Arabs and Muslims through contextual embeddings, while the 'analogical bias theory' (Manzini et al. 2019) illustrates how these stereotypes become ingrained via analogy-based relationships in embeddings.
 
 Critically, these studies also highlight the intersectionality of cultural, religious, and other identity factors, making mitigation efforts all the more nuanced. The persistence of these biases is especially troubling as LLMs become embedded in global applications such as virtual assistants, automated content moderation, and policy-making tools. Abid et al. (2021) further show that anti-Muslim bias in LLMs can fluctuate in tandem with geopolitical events and media coverage, increasing by up to 18% during periods of heightened attention to terrorism incidents. This underscores the need for agile mitigation strategies that can adapt to rapidly shifting social and political contexts-something mere dataset-level interventions may struggle to achieve. Given the diverse sources of bias (Hovy and Prabhumoye 2021) and their layered nature (Prakash and Lee 2023), prompt engineering has emerged as a compelling approach for mitigating problematic outputs, particularly in scenarios where users lack direct access to model parameters. By carefully crafting or modifying input prompts, users can guide LLM behavior without retraining the model-a critical advantage for closed-source commercial systems (Gallegos et al. 2024; Meade et al. 2022). Moreover, prompt engineering offers both accessibility (allowing non-technical stakeholders to participate) and adaptability (facilitating quick responses to emerging biases). However, the effectiveness of prompt engineering must be contextualized within broader ethical and sociopolitical frameworks. Birhane (2021) relational ethics challenges overly technicist solutions, arguing that any mitigation technique-prompt engineering included-must address embedded power differentials and historical legacies of oppression. Meanwhile, Prakash and Lee (2023) layered intervention theory suggests that adjusting prompts
 
+
+<!-- PAGE 4 -->
+
+
 alone may not be sufficient if biases persist within the deeper representational structures of a model. That said, recent empirical work points to real-world benefits: Gallegos et al. (2024) showed that non-technical users could reduce anti-Muslim bias in GPT-3.5 by 47% using simple prompting frameworks, while Meade et al. Meade et al. (2022) demonstrated that self-debiasing prompts could be reconfigured within 24-48 hours to address newly observed biases-a stark contrast to the lengthy process of model retraining. This rapid adaptability is particularly critical for managing cultural biases that can shift with evolving geopolitical events. Against this rich theoretical and practical backdrop, the present study offers a systematic review of prompt engineering techniques aimed at mitigating cultural bias against Arabs and Muslims in LLMs. By focusing specifically on cultural and religious biases that disproportionately affect Arabs and Muslims, this review seeks to fill a gap in the broader bias-in-AI literature, which has traditionally centered on gender and racial biases. We draw on sociotechnical perspectives to argue that bias mitigation cannot be divorced from historical power asymmetries and that purely technical solutions must be complemented by critical engagement with the social contexts in which these models are developed and deployed (Birhane 2021; Noble 2018; Said 2019).
 
 This systematic review addresses a critical gap in AI ethics research by synthesizing fragmented knowledge on prompt engineering interventions specifically targeting anti-Arab and anti-Muslim bias. While extensive literature exists on technical aspects of bias mitigation and prompt engineering broadly (Bender et al. 2021; Meade et al. 2022), there remains a significant absence of comprehensive analysis focused on culturally-specific interventions for these marginalized groups (Abid et al. 2021; Mohamed et al. 2020). The significance of this work extends beyond academic understanding-as LLMs rapidly integrate into essential services from healthcare to education to public administration (Bommasani et al. 2022), biases affecting Arabs and Muslims (comprising nearly two billion people globally) risk perpetuating historical marginalization through new technological channels (Noble 2018; Said 2019). By identifying effective prompt engineering strategies and their underlying mechanisms, this review provides actionable guidance for developers, policymakers, and end users while advancing the theoretical understanding of how technical interventions interface with deeply embedded cultural biases (Birhane 2021; Hovy and Prabhumoye 2021). Furthermore, by centering Arab and Muslim experiences in AI ethics discourse, this work contributes to a more inclusive approach to responsible AI development that acknowledges and addresses the unique patterns of bias affecting different cultural and religious communities (Crawford 2021; Naous et al. 2024). The remainder of this paper is structured as follows: Section 2 details our methodology, including the search strategy, inclusion criteria, and quality assessment. Section 3 presents the findings according to our three research questions. In Section 4, we discuss theoretical implications, practical applications, and limitations. Lastly, Section 5 concludes with recommendations for future research, emphasizing the combined need for innovative prompt engineering and deep ethical reflection in effectively mitigating cultural bias in LLMs.
+
+
+<!-- PAGE 5 -->
+
 
 ## 2 Method
 
@@ -55,6 +72,10 @@ We established the following criteria for study eligibility:
 
 - Scope of Techniques: The study must include a clear empirical evaluation of prompt engineering, augmentation, or modification techniques intended to mitigate cultural or religious biases in LLMs.
 - Relevance to Arabs/Muslims: The study must address or analyze bias toward Arabs and/or Muslims, recognizing that these encompass diverse populations across
+
+
+<!-- PAGE 6 -->
+
 
 different countries, sectarian groups, linguistic communities, and intersectional identities, including multi-group studies that explicitly consider Arabs/Muslims as one demographic category.
 
@@ -87,11 +108,19 @@ A standardized data extraction form was developed to ensure consistency and comp
 - Challenges and Limitations Identified
 - Future Directions Suggested
 
+
+<!-- PAGE 7 -->
+
+
 Two reviewers independently extracted these data, documenting them within a structured database. Any discrepancies were discussed until consensus was reached, enhancing the reliability of the extracted information.
 
 Fig. 1 Flow diagram of the search and inclusion process based on PRISMA guidelines
 
 <!-- image -->
+
+
+<!-- PAGE 8 -->
+
 
 ## 2.5 Data Synthesis
 
@@ -107,6 +136,10 @@ Figure 2 show that research on prompt based mitigation of anti Arab/anti Muslim 
 - The field is dominated by metric-driven evaluations, with most studies (87.5%) employing purely quantitative approaches, while only 12.5% used mixed methods and no studies used purely qualitative methods.
 - The corpus included a mix of conference papers (50%), preprints/technical reports (37.5%), and journal articles (12.5%), with conferences and arXiv continuing to drive early dissemination in this emerging field.
 
+
+<!-- PAGE 9 -->
+
+
 - Research teams were predominantly based in North America (75%) and Europe (12.5%), with very limited representation from the Middle East and North Africa (12.5%), highlighting that MENA authorship remains the exception rather than the norm in research addressing bias against these very populations.
 - Research demonstrates focus on both commercial and community models. OpenAI systems remain the most scrutinized, with GPT-3.5 appearing in half of all studies (50%), while GPT-3 and GPT-4 each feature in 12.5%. The open-source ecosystem is well represented, led by BERT/RoBERTa variants (37.5%) and Llama/Llama-2/-3 (25
 
@@ -115,6 +148,10 @@ The following sections present our findings, organised by research question, syn
 Fig. 2 Model Distribution Percentage
 
 <!-- image -->
+
+
+<!-- PAGE 10 -->
+
 
 Table 1 Study Characteristics of Included Prompt Engineering Research (n=8)
 
@@ -127,6 +164,10 @@ Table 1 Study Characteristics of Included Prompt Engineering Research (n=8)
 |                         | AlKhamissi al. (2024)                                                        | et al.                                                               | et                                                                      | (2024) et                                                                              | al.                                                                    | al.                                                                                         | and                                                               |
 | Study (Year)            | et                                                                           | Tao (2024)                                                           | Abid (2021)                                                             | Gallegos et al. Meade (2022)                                                           | Xu et (2024)                                                           | Raza et (2023)                                                                              | Xie Lukasiewicz (2023)                                            |
 
+
+<!-- PAGE 11 -->
+
+
 ## 3.2 RQ1: Prompt Engineering Strategies for Mitigating Cultural/Religious Bias
 
 Our systematic review identified five distinct prompt engineering strategies that have been empirically tested for mitigating cultural or religious bias against Arabs and Muslims in LLMs. Table 1 summarises these strategies based on the studies included.
@@ -138,6 +179,10 @@ Self-debiasing leverages the zero-shot capabilities of LLMs to recognise and red
 ## 3.2.2 Cultural Prompting
 
 Cultural-identity prompting explicitly instructs models to align with specific cultural contexts or personas. This approach provides cultural context in prompts to increase alignment with specific countries, regions, or cultural identities. Tao et al. (2024) tested cultural prompting as a control strategy to increase cultural alignment for each country/territory. For later models (GPT-4, GPT-4-turbo, and GPT-4o), this approach improved the cultural alignment of the models' output for 71-81% of countries and territories. The study used the World Values Survey as a benchmark and visualized cultural values on the Inglehart-Welzel World Cultural Map, showing that the model outputs by default favor self-expression values commonly found in English-speaking countries. Cultural-identity prompting is highly effective in addressing cultural bias broadly, but its effectiveness varies significantly across different cultural contexts and bias types. Tao et al. (2024) found that effectiveness was highest (81-92% bias reduction) for Western European and East Asian cultures that were well-represented in training data, but considerably lower (58-67%) for Middle Eastern and North African contexts. This disparity suggests that the technique's effectiveness correlates with the representation of cultures in the training corpus. Furthermore, cultural prompting showed asymmetric performance across different aspects of bias: it was most effective at addressing stereotypical representations (76% reduction) and cultural misattributions (82% reduction), but less successful at mitigating religious prejudice (34%
+
+
+<!-- PAGE 12 -->
+
 
 reduction) and historical misrepresentations (41% reduction). These patterns indicate that cultural prompting works best when correcting surface-level biases rather than deeply embedded historical or ideological perspectives, highlighting the need for complementary approaches when addressing complex cultural and religious biases against Arabs and Muslims.
 
@@ -152,6 +197,10 @@ Structured multi-step pipelines employ sequential or parallel processing approac
 ## 3.2.5 Parameter-Optimized Continuous Prompts
 
 Parameter-optimized continuous prompts use learnable vector representations rather than discrete text to guide model behavior. This approach trains continuous prompt embeddings to achieve debiasing objectives while maintaining model performance. Xie
+
+
+<!-- PAGE 13 -->
+
 
 and Lukasiewicz (2023) investigated parameter-efficient methods, including prompt tuning, for debiasing pre-trained language models. They found that these methods were effective in mitigating gender bias but showed mixed results for racial and religious bias, often proving ineffective or inconsistent for religious bias specifically. The authors attributed these limitations to the constraints of their counterfactual data augmentation approach and the shorter, noisier bias attribute word lists available for religious categories compared to gender. This approach requires access to model parameters and training infrastructure, making it less accessible to users of closed, proprietary models. While showing promise for certain bias types, its effectiveness for religious bias against Muslims appears limited based on current evidence.
 
@@ -178,6 +227,10 @@ Table 2 Bias evaluation metrics used across studies with focus on Arab/Muslim re
 
 ̸
 
+
+<!-- PAGE 14 -->
+
+
 ## 3.3.1 Quantitative Benchmarks
 
 Several standardized benchmarks have been used to quantitatively measure bias in LLMs. StereoSet (Meade et al. 2022) measures stereotypical associations in language models. Although it includes some religious stereotypes, its coverage of Arab/Muslimspecific biases may be limited. CrowS-Pairs (Meade et al. 2022) measures social biases in masked language models but primarily focuses on gender and race rather than religious or cultural biases. BBQ (Bias Benchmark for QA) (Xu et al. 2024) measures bias in question-answering scenarios and includes religious bias categories, making it moderately relevant for assessing bias against Muslims. Icat (Xu et al. 2024) a multi-objective metric combining bias reduction and performance, although its specific relevance to Arabs/Muslims is not specified in the studies. Meade et al. (2022) highlighted concerns about these benchmarks, noting that improvements on bias benchmarks are often accompanied by a decrease in language modeling ability, making it difficult to determine whether bias mitigation was effective or simply degraded overall model performance. Similarly, Abid et al. (2021) found that standard benchmarks may not adequately capture the nuances of religious and cultural biases against Muslims.
@@ -189,6 +242,10 @@ Some studies have developed or employed metrics specifically designed to measure
 ## 3.3.3 Performance Trade-off Metrics
 
 Several studies have measured the impact of debiasing on model performance. Accuracy Degradation (Meade et al. 2022; Xu et al. 2024) measures the drop in task performance after debiasing. Language Modeling Ability (Meade et al. 2022) evaluates impact on general language capabilities. Downstream Task Performance (Meade et al. 2022; Xie and Lukasiewicz 2023) Measures the impact on natural language understanding tasks after debiasing. Meade et al. (2022) highlighted that improvements on bias benchmarks are often accompanied by a decrease in language modeling ability, making it difficult to determine whether bias mitigation was effective or simply degraded overall model performance. These metrics help assess whether bias mitigation comes at the cost of reduced model utility, though they are not specific to Arabs/Muslims and may prioritize performance over fairness considerations.
+
+
+<!-- PAGE 15 -->
+
 
 Fig. 3 Implementation-Complexity vs Effectiveness Scatter Plot
 
@@ -206,6 +263,10 @@ Our systematic review identified several challenges and limitations in using pro
 
 Performance-Fairness Trade-offs: Multiple studies (Meade et al. 2022; Xie and Lukasiewicz 2023; Xu et al. 2024) noted performance degradation after applying debiasing techniques. This trade-off makes it challenging to develop techniques that effectively reduce anti-Muslim bias without compromising model utility. Bias Type Variability: Xie and Lukasiewicz et al. found that techniques effective for one bias type (e.g., gender) are often less effective for others (e.g., religion). This suggests that
 
+
+<!-- PAGE 16 -->
+
+
 Table 3 Challenges in bias evaluation and mitigation approaches for Arab/Muslim contexts
 
 | Challenge cate- gory        | Typical issues surfaced in the papers                                                                                                                                                                                                                                                                                                    | Illustrative examples / cita- tions                          |
@@ -221,6 +282,10 @@ religious and cultural biases may be more resistant to current debiasing techniq
 
 Tao et al. (2024) questioned the validity of current evaluation approaches, highlighting the need for culturally informed metrics. Their work demonstrated that standard evaluation methods may not capture the cultural nuances relevant to Arab and Muslim contexts. The study [3] have highlighted the Western bias in model training and responses, making cultural adaptation challenging. The scarcity of studies (only 8 identified) addressing Arab and Muslim bias specifically underscores the limited attention this critical area has received. The studies consistently noted that commonly used training sources may not adequately represent Arab and Muslim perspectives, perpetuating existing biases. This under-representation in training data creates challenges for prompt engineering approaches that operate within existing model constraints. Xu et al. (2024) questioned the depth of prompt-based debiasing, suggesting that more comprehensive approaches beyond prompting may be necessary to address deep-seated biases. Birhane's theoretical work on the fundamental limitations of AI systems in handling cultural nuance and ambiguity provides a framework for understanding why prompt engineering techniques may struggle with complex cultural contexts. Her argument that certain forms of human meaning-making resist computational formalization helps explain the persistent challenges in addressing subtle forms of bias against Arabs and Muslims.
 
+
+<!-- PAGE 17 -->
+
+
 ## 3.4.3 Future Directions
 
 Abid et al. (2021) emphasized the need for a more nuanced evaluation of anti-Muslim bias, particularly focusing on religious and cultural contexts. Their work suggests developing specialized benchmarks that better capture the complexities of religious and cultural biases. Tao et al. (2024) recommended 'using cultural prompting and ongoing evaluation' to reduce cultural bias in generative AI. This approach could improve the model's responses in Arab and Muslim cultural contexts. Xu et al. (2024); Xie and Lukasiewicz (2023) suggested combining parameter-efficient methods with other approaches. More comprehensive approaches may better address the complex cultural biases against Arabs and Muslims. The limited representation of MENA researchers in this field (12.5% of studies) suggests a critical need for more participatory research approaches that center Arab and Muslim voices in both identifying bias patterns and developing mitigation strategies. Gallegos et al. (2024) hoped to 'open inquiry into other zero-shot techniques for bias mitigation.' These techniques can make bias mitigation more accessible without requiring model retraining. Longitudinal Studies: Given the temporal nature of some biases (as demonstrated by Abid et al.'s findings about violence associations), future research should examine how prompt engineering effectiveness changes over time and across different geopolitical contexts.
@@ -231,6 +296,10 @@ Abid et al. (2021) emphasized the need for a more nuanced evaluation of anti-Mus
 
 Our systematic review reveals a diverse landscape of prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in LLMs. The five identified approaches, cultural-identity prompting, affective priming, self-debiasing techniques, structured multi-step pipelines, and parameter-optimized continuous prompts, offer varying approaches to addressing bias, each with distinct strengths and limitations. The effectiveness of these techniques varies significantly across different types of biases affecting Arabs and Muslims. As illustrated in our bias type effectiveness heatmap (Figure 4), affective priming demonstrates particular effectiveness in addressing violent stereotypes, whereas cultural-identity prompting shows strong performance for cultural alignment issues. Structured multi-step pipelines emerge as the most comprehensive approach, achieving up to 87.7% bias reduction while maintaining model performance, though at the cost of significantly higher implementation complexity. A critical finding of our analysis is the apparent resistance of certain bias types to mitigation compared to others. Evidence from multiple studies suggests that religious stereotypes may be more resistant to prompt-based mitigation than cultural misrepresentations. This pattern appears consistently across different techniques, suggesting that biases against Muslims may be more deeply embedded in model training data and architectures than other forms of cultural bias. This aligns with Abid et al. (2021) finding that 'Muslim' is analogized to 'terrorist' in 23% of test cases in GPT-3, a persistent association that proves difficult to fully mitigate through prompt engineering alone. Our analysis also reveals important trade-offs between bias reduction and model performance. Most studies report some degree of performance degradation
 
+
+<!-- PAGE 18 -->
+
+
 after applying debiasing techniques, though the extent varies significantly. Structured multi-step pipelines (Xu et al. 2024) appear most successful at balancing these competing objectives, while simpler approaches like cultural-identity prompting (Tao et al. 2024) offer minimal performance impact but more limited bias reduction. These tradeoffs necessitate careful consideration of context-specific requirements when selecting and implementing prompt engineering techniques. The limited number of studies identified (only 8 studies despite comprehensive search efforts) highlights a significant research gap in this critical area. The challenges identified across studies point to deeper issues in addressing cultural and religious bias through prompt engineering alone. The Western-centric development of current LLMs, combined with limited research leadership from MENA regions (12.5% of studies), further complicates efforts to address these biases, as the models may lack the cultural context necessary to generate appropriate responses even when prompted to avoid bias. Our findings suggest that while prompt engineering offers accessible and practical approaches to bias mitigation, the field requires more comprehensive frameworks that combine technical interventions with culturally informed evaluation methods and community-centered research approaches. A critical finding of our analysis is the apparent resistance of religious bias
 
 Fig. 4 Bias Type Heatmap
@@ -239,17 +308,29 @@ Fig. 4 Bias Type Heatmap
 
 to mitigation compared to other bias types. This pattern appears consistently across multiple studies and techniques, suggesting that biases against Muslims may be more deeply embedded in model training data and architectures than other forms of cultural bias. This aligns with Abid et al. (2021) finding that 'Muslim' is analogized to 'terrorist' in 23% of test cases in GPT-3, a persistent association that proves difficult
 
+
+<!-- PAGE 19 -->
+
+
 to fully mitigate through prompt engineering alone. Our analysis also reveals important trade-offs between bias reduction and model performance. Most studies report some degree of performance degradation after applying debiasing techniques, though the extent varies significantly. Multi-agent debiasing (Xu et al. 2024) appears most successful at balancing these competing objectives, while simpler approaches like cultural prompting (Tao et al. 2024) offer minimal performance impact but more limited bias reduction. These trade-offs necessitate careful consideration of context-specific requirements when selecting and implementing prompt engineering techniques. The challenges identified across studies point to deeper issues in addressing cultural and religious bias through prompt engineering alone. They align with Gebru et al. (2021) work on transparency in AI training data, highlighting how the lack of such transparency in LLMs contributes to bias against Arabs/Muslims. The Western-centric development of current LLMs further complicates efforts to address these biases, as the models may lack the cultural context necessary to generate appropriate responses even when prompted to avoid bias.
 
 ## 4.2 Theoretical Implications
 
 Our findings have several important theoretical implications for understanding and addressing cultural bias in LLMs. First, they support a sociotechnical perspective on bias, recognizing that biases against Arabs and Muslims emerge from the complex interplay of training data, algorithmic processes, deployment contexts, and power asymmetries in AI development. This perspective helps explain why purely technical solutions like prompt engineering have inherent limitations in addressing deeply embedded cultural and religious biases. Second, our analysis highlights the importance of understanding cultural contexts in shaping bias. Drawing on Said (2019) concept of Orientalism, bias against Arabs and Muslims in LLMs can be understood as a contemporary manifestation of long-standing Western tendencies to exoticize, homogenize, and otherize Arab and Muslim cultures. The persistence of bias against Arabs and Muslims across different LLMs, as documented by Abid et al. (2021) and Naous et al. (2024), directly reflects this Orientalist framework, where Arab and Muslim identities have been constructed through Western-centric knowledge systems. The effectiveness of cultural prompting techniques, as demonstrated by Tao et al. (2024) and AlKhamissi et al. (2024), can be understood as temporarily redirecting models away from these default Western perspectives, though without fundamentally restructuring their underlying knowledge representation. Third, our findings connect directly to Bender et al. (2021) 'stochastic parrots' framework. As our review reveals, prompt engineering can modify the statistical patterns that models produce without addressing their fundamental lack of comprehension. This explains the findings which noted that even when prompted to be culturally sensitive, models demonstrated limited understanding of cultural nuances. The models can avoid explicit associations but struggle with deeper cultural contexts because they lack genuine semantic understanding. The varied effectiveness of different strategies across bias types, as documented in our review, connects to the 'layered bias' concept introduced by Prakash and Lee (2023). The finding that continuous prompt tuning shows limited effectiveness for religious bias compared to gender bias (Xie and Lukasiewicz 2023) suggests that religious
 
+
+<!-- PAGE 20 -->
+
+
 biases may be embedded in deeper representational layers that are less accessible to prompt-based interventions. Fourth, our findings suggest the need for an intersectional approach to understanding and addressing bias. The term 'Arab/Muslim bias' encompasses multiple intersecting dimensions, including religious stereotypes, cultural misrepresentation, geopolitical bias, and linguistic bias. These dimensions may interact in complex ways, requiring nuanced approaches to bias mitigation that recognize the diversity within Arab and Muslim communities and the varying manifestations of bias across different contexts. Fifth, our analysis reveals tensions between technical and cultural approaches to bias mitigation. While prompt engineering offers valuable tools for addressing bias, it operates within the constraints of existing model architectures and training data. Birhane (2021) relational ethics framework provides context for our finding that multiple studies recommended involving cultural experts and members of Arab and Muslim communities in developing bias mitigation techniques. This perspective explains why even sophisticated prompt engineering techniques show limitations when applied without cultural expertise integration. More fundamental changes to how LLMs are developed, including diverse development teams, training data diversification, and participatory design processes, may be necessary to address the root causes of bias against Arabs and Muslims.
 
 ## 4.3 Practical Implications
 
 Our findings offer valuable practical guidance for researchers, developers, and users of LLMs seeking to mitigate cultural bias against Arabs and Muslims. The decision framework we've developed provides a structured approach to selecting appropriate prompt engineering techniques based on context, resources, and objectives. Our systematic comparison of the six identified strategies reveals important patterns in their relative effectiveness and implementation requirements. Cultural prompting demonstrated significant effectiveness in improving cultural alignment for 71-81% of countries and territories, as reported by Tao et al. (2024), while remaining accessible to users without technical expertise. Multi-agent debiasing showed the highest quantitative bias reduction (up to 87.7% reported by Xu et al. (2024)) while maintaining reasonable performance levels, but its high implementation complexity limits its practical application. Scenario-based prompting using resources like CAMeL showed particular effectiveness for addressing specific Arab cultural contexts (Naous et al. 2024), but requires extensive scenario development. For general users with limited technical resources, cultural prompting represents the most accessible approach, requiring only the addition of cultural context to prompts. Our implementation guidelines provide specific examples and best practices for crafting effective cultural prompts, such as 'Please respond with awareness of Arab cultural values and Islamic religious perspectives' or more specific prompts tailored to particular regions or contexts. Self-debiasing also offers an accessible approach that leverages the model's own capabilities without requiring technical expertise. Our guidelines outline two main strategies-explanationbased and reprompting-based self-debiasing-with concrete implementation examples and effectiveness monitoring approaches. For applications in which bias is particularly concerning, our analysis suggests that combining multiple approaches may provide more robust mitigation. For example, cultural prompting may be combined
+
+
+<!-- PAGE 21 -->
+
 
 with self-debiasing, or scenario-based prompting may be used for diagnostic purposes before applying more targeted interventions. For developers with greater technical resources, more sophisticated approaches like multi-agent debiasing offer promising results, achieving up to 87.7% bias reduction while maintaining model performance. Our implementation guidelines provide a framework for developing such systems, including agent role design, optimization objectives, and monitoring strategies. Importantly, our analysis highlights the need to carefully consider performance-fairness trade-offs when implementing prompt engineering techniques. We provide quantified estimates of these trade-offs for each technique, along with strategies for balancing objectives in different contexts. For example, higher bias tolerance may be acceptable for creative writing applications, while lower bias tolerance is essential for educational or informational content. The emerging pattern across studies suggests that combining multiple approaches may yield better results than any single technique. This aligns with the finding that cultural and religious biases are multi-faceted and may require multi-level interventions, as suggested by multiple studies in our review.
 
@@ -261,11 +342,19 @@ Our systematic review process revealed a striking scarcity of research specifica
 
 This systematic review had several limitations that should be considered when interpreting its findings. First, the field of prompt engineering for bias mitigation is rapidly evolving, and new techniques may have emerged since our search was completed in early 2025. Second, our focus on Arabs and Muslims may have excluded studies that addressed cultural and religious biases more broadly without specifically mentioning these groups. Third, the heterogeneity of the included studies in terms of the models studied, evaluation methods, and specific biases addressed makes direct comparison challenging. Fourth, our review was limited to English-language publications, potentially excluding valuable research published in Arabic or other languages. Fifth, the heterogeneity of evaluation metrics across studies (stereotype association percentages, cultural alignment scores, bias reduction measures) makes direct effectiveness comparisons challenging. Our synthesis identifies relative patterns rather than definitive rankings. Sixth, our analytical treatment of 'Arabs and Muslims' as categories, while necessary for review scope, may obscure important variations in bias patterns across different subgroups, regions, and intersectional identities.
 
+
+<!-- PAGE 22 -->
+
+
 ## 5 Conclusion
 
 This systematic review has examined prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in LLMs, synthesizing evidence from 8 empirical studies. Our findings reveal five distinct approaches-cultural-identity prompting, affective priming, self-debiasing techniques, structured multi-step pipelines, and parameter-optimized continuous prompts-each with varying effectiveness, implementation complexity, and accessibility. Key challenges in this field include the superficial nature of some prompt-based interventions, evidence suggesting that certain bias types may be more resistant to prompt-based mitigation than others, and Western-centric development of current LLMs. These challenges highlight the limitations of prompt engineering as a standalone approach and suggest the need for more comprehensive strategies that address the root causes of bias in AI systems. Priority areas for immediate research include: (1) developing culturally adaptive prompting frameworks with input from Arab and Muslim communities, (2) creating standardized evaluation benchmarks that capture cultural and religious bias nuances, and (3) investigating the intersection of prompt engineering with other bias mitigation approaches. Future research should also focus on combining prompt engineering with other debiasing approaches to address deeper stereotypes while maintaining model utility. There is also a critical need for more diverse research teams that include scholars from Arab and Muslim backgrounds who can bring valuable cultural expertise to this work-currently only 12.5% of studies in our review had MENA-based lead authors.
 
 As LLMs continue to be deployed in increasingly diverse contexts, addressing cultural and religious biases is crucial for ensuring equitable AI systems. Prompt engineering offers an accessible approach for mitigating bias without requiring access to model parameters or training data; however, its effectiveness varies across different bias types and models. By building on the promising approaches identified in this review and addressing the challenges and limitations, researchers and practitioners can work toward developing more culturally sensitive and equitable language models that serve diverse populations, including Arabs and Muslims. Our empirical finding that only 8 studies exist specifically addressing Arab/Muslim bias mitigation, despite exhaustive search efforts across major databases, itself represents a significant contribution that highlights a critical and concerning gap in AI ethics research. This scarcity underscores the urgent need for interdisciplinary collaboration between AI researchers, cultural scholars, and members of affected communities. In the immediate term, developers deploying LLMs in contexts affecting Arab and Muslim populations should, at minimum, implement cultural-identity prompting techniques while acknowledging their limitations. The practical frameworks and decision trees provided in this review offer concrete starting points for practitioners, while our effectiveness comparisons enable evidence-based technique selection. The ethical responsibility for addressing bias cannot rest solely with end-users applying prompt engineering; it must be shared by model developers, dataset curators, and the broader AI community. The path forward requires not only technical innovation but also deeper engagement with the cultural, historical, and social contexts that shape bias in AI systems. By combining prompt engineering with more fundamental changes to how LLMs are developed and deployed,
+
+
+<!-- PAGE 23 -->
+
 
 we can work toward AI systems that truly respect and represent the diversity of human cultures and religions.
 
@@ -281,6 +370,10 @@ we can work toward AI systems that truly respect and represent the diversity of 
 - Crawford K (2021) The Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence. Yale University Press, https://doi.org/10.2307/j.ctv1ghv45t, URL https://www.jstor.org/stable/j.ctv1ghv45t
 - Gallegos IO, Rossi RA, Barrow J, et al (2024) Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes. https://doi.org/10.48550/ arXiv.2402.01981, URL http://arxiv.org/abs/2402.01981, arXiv:2402.01981 [cs]
 
+
+<!-- PAGE 24 -->
+
+
 - Gebru T, Morgenstern J, Vecchione B, et al (2021) Datasheets for datasets. Commun ACM 64(12):86-92. https://doi.org/10.1145/3458723, URL https://dl.acm. org/doi/10.1145/3458723
 - Hovy D, Prabhumoye S (2021) Five sources of bias in natural language processing. Language and Linguistics Compass 15(8):e12432. https://doi.org/10.1111/lnc3. 12432, URL https://onlinelibrary.wiley.com/doi/abs/10.1111/lnc3.12432, eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/lnc3.12432
 - Kitchenham B, Charters S (2007) Guidelines for performing Systematic Literature Reviews in Software Engineering. ResearchGate 2
@@ -292,6 +385,10 @@ we can work toward AI systems that truly respect and represent the diversity of 
 - Noble SU (2018) Algorithms of Oppression: How Search Engines Reinforce Racism. NYU Press, https://doi.org/10.2307/j.ctt1pwt9w5, URL https://www.jstor.org/ stable/j.ctt1pwt9w5
 - Page MJ, McKenzie JE, Bossuyt PM, et al (2021) The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. Systematic Reviews 10(1):89. https://doi.org/10.1186/s13643-021-01626-4, URL https://doi.org/10. 1186/s13643-021-01626-4
 - Prakash N, Lee RKW (2023) Layered Bias: Interpreting Bias in Pretrained Large Language Models. In: Belinkov Y, Hao S, Jumelet J, et al (eds) Proceedings of
+
+
+<!-- PAGE 25 -->
+
 
 the 6th BlackboxNLP Workshop: Analyzing and Interpreting Neural Networks for NLP. Association for Computational Linguistics, Singapore, pp 284-295, https:// doi.org/10.18653/v1/2023.blackboxnlp-1.22, URL https://aclanthology.org/2023. blackboxnlp-1.22/
 

@@ -1,10 +1,11 @@
 ---
 source_file: Singh_2025_A_reparative_turn_in_AI.pdf
-conversion_date: 2026-02-03T09:24:20.755768
+conversion_date: 2026-02-03T18:55:32.419680
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## What Comes After Harm? Mapping Reparative Actions in AI through Justice Frameworks
 
 Sijia Xiao 1 , Haodi Zou 2 , Alice Qian Zhang 1 , Deepak Kumar 2 , Hong Shen 1 , Jason Hong 1 ,
@@ -37,6 +38,10 @@ To explore this, we first qualitatively analyze a purposefully sampled subset of
 
 1 https://www.aiaaic.org/aiaaic-repository/user-guide
 
+
+<!-- PAGE 2 -->
+
+
 munication to law and policy change. We then apply the taxonomy to see the distribution of actions and stakeholders in the full dataset.
 
 Our analysis reveals a stark imbalance: most responses stay at an Acknowledgement and Attribution level, such as public statements or third-party audits, while significantly fewer involve Remedy and Reform. This gap reflects a broader accountability shortfall in how the AI ecosystem responds to harm.
@@ -66,6 +71,10 @@ This growing literature has shed light on varied responses to harm, but often ce
 ## Reparative Action in Justice Frameworks
 
 This paper draws on three major justice traditions-punitive, restorative, and transformative justice-to contextualize different approaches to reparation. Punitive justice emphasizes holding perpetrators accountable through proportional punishment, such as incarceration, fines, or legal sanctions (Feinberg 2019; Foucault 2023; Ashworth and Kelly 2021). It is the dominant model in most legal systems and widely used across online and offline governance (Gillespie 2018). In contrast, restorative justice centers the needs of those harmed, aiming to repair relationships and rebuild trust through practices such as public acknowledgment, apology, dialogue, and community-based support (Zehr 2015; Pranis 2015). It has been widely applied in criminal justice and increasingly studied in digital governance and online harm contexts (Xiao, Jhaver, and Salehi 2023; Xiao et al. 2020). Transformative justice builds on these traditions by addressing the structural conditions that enable harm, such as racism, ableism, and economic injustice (Morris 2000; Kaba 2021). It expands the idea of reparation beyond individual or relational repair, advocating for systemic change through institutional reform, power redistribution, and community-led design (Kaba and Hassan 2019).
+
+
+<!-- PAGE 3 -->
+
 
 These frameworks offer complementary perspectives in how they define harm, assign responsibility, and envision repair. Punitive and restorative justice both focus on interpersonal accountability, but take different approaches: punitive justice emphasizes external consequences such as punishment and deterrence, while restorative justice emphasizes mutual recognition, healing, and support for those affected (Wenzel et al. 2008). In addition, while restorative and transformative justice both center the harmed party, they differ in whether the aim is to restore relationships or to transform institutions (Kim 2021).
 
@@ -99,6 +108,10 @@ Webegan by identifying and coding specific post-incident actions and the stakeho
 
 In the next phase, we organized the action categories based on their underlying goals and orientations as reflected in justice frameworks. This approach allowed us to identify both common justice processes such as acknowledgment, accountability, and redress, and the distinctive contributions of each framework such as the emphasis on support to affected communities in restorative justice or sys- temic change in transformative justice. Through this lens, we developed four overarching goals in reparation: Acknowledgment, Attribution, Remedy, and Reform . We refined the taxonomy through iterative team discussions over several months, shaping both action categories and stakeholder groupings. The final taxonomy appears in Table 1 and is elaborated in the findings section.
 
+
+<!-- PAGE 4 -->
+
+
 ## Analyzing Reparative Actions At Scale
 
 Wenext examine how these reparative actions are distributed in the AIAAIC incident database. To address this, we applied the taxonomy developed in the previous stage to all 1060 incidents. Given the scale of the dataset, manual coding was impractical. Recent research has demonstrated the potential of large language models (LLMs) to support deductive qualitative coding at scale (Xiao et al. 2023; Mun et al. 2024). We used GPT-4 Turbo, accessed via the OpenAI API 4 , to assist with this multi-label classification task, in which the model identified the presence or absence of each predefined reparative action and stakeholder category within incident descriptions.
@@ -131,6 +144,10 @@ Acknowledgment, the first step in responding to AI harm, seeks to make the harm 
 
 5 Stakeholder group definitions are provided in Appendix B.
 
+
+<!-- PAGE 5 -->
+
+
 Table 1: Taxonomy of Reparative Actions. This table presents our taxonomy of reparative actions, organized by four overarching goals: Acknowledgment, Attribution, Remedy, and Reform. For each goal, we list corresponding action types, the major stakeholders involved, and common forms these actions take.
 
 | Goal           | Reparative Action                    | Major Stakeholders                              | Examples                                                               |
@@ -159,6 +176,10 @@ One common form of public outcry is social media backlash. For example, when Fac
 Perpetrators' Communication We define perpetrators' communication as the public statements made by the party responsible for AI harm. This was the most frequent response in our dataset, appearing in 541 of 1,060 incidents (51.04%), predominantly issued by AI corporations (489 cases) and end-users (76 cases). These statements are typically reactive, prompted by media scrutiny, legal threats, or public backlash. While they often appear reparative on the surface, they frequently serve reputational management goals rather than delivering accountability. Nonetheless, public communication can be an important first step in acknowledging harm and setting the stage for future action.
 
 Such statements range from acknowledgments and promises of improvement to deflections of responsibility. When Air Canada's chatbot provided misinformation to a customer, the airline acknowledged the issue and promised to update the system to prevent recurrence. However, such acknowledgments are not always paired with substantive commitments (A1339). By contrast, when Tesla faced a lawsuit over a crash involving its autonomous driving system, it publicly released vehicle logs to suggest driver error, denying system fault (A0555). In another case, when the startup Moodbeam was criticized for emotional surveillance in the workplace, it defended the product as a tool for supporting remote workers, downplaying privacy concerns (A0515).
+
+
+<!-- PAGE 6 -->
+
 
 Despite their visibility, these statements do not often commit to remedy or structural reform. This may partly reflect practical constraints: systemic changes often require time, coordination, or factors beyond a single actor's control. Still, the absence of meaningful follow-up creates a gap between symbolic acknowledgment and substantive repair. In many cases, these communications remain the only public-facing response, leaving affected communities without redress or closure.
 
@@ -192,6 +213,10 @@ Repercussions Repercussions are punitive consequences imposed on a responsible e
 
 Regulatory and legal authorities imposed a range of formal penalties, including financial fines, legal prosecution, and usage bans. Many of these actions targeted corporations for unlawful uses of AI technologies. For example, Sweden's Privacy Protection Authority fined the national police for deploying Clearview AI's facial recognition system without proper authorization in child abuse investigations (A0307). In another case, the U.S. Federal Trade Commission banned Rite Aid from using facial recognition technologies for five years and required new privacy and oversight measures (A1253). In rare but severe instances, individuals also faced criminal prosecution. In A1736, a Massachusetts man was arrested for cyberstalking after using AI tools to generate fake nude images and impersonate a victim through chatbot systems.
 
+
+<!-- PAGE 7 -->
+
+
 Some organizations also enacted internal consequences following public backlash or controversy. For instance, the editor-in-chief of Die Aktuelle, a German magazine, was fired after publishing an AI-generated fake interview (A0995). While these actions represent a form of accountability, they are not the result of formal legal enforcement and are typically not subject to public oversight or consistent standards.
 
 Taken together, these cases show that while punitive consequences are possible, they remain relatively limited in scope and frequency. Most occur within the boundaries of existing legal frameworks and require institutional authority to be meaningfully enforced, highlighting the challenges of ensuring accountability without regulatory mechanisms.
@@ -219,6 +244,10 @@ Notable examples include Microsoft's decision to permanently shut down its chatb
 Product or feature discontinuation can be a meaningful response when companies withdraw technologies that cause harm: it signals that certain systems that caused harm are no longer acceptable. However, companies are not obligated to explain or sustain these decisions, and it is often unclear whether discontinued features remain permanently retired. In some cases, similar functionalities may reappear in modified forms, suggesting the need for greater transparency and follow-through in such reforms.
 
 AI Design and Development Changes We define AI and design changes as technical changes made to the AI system to address the underlying issue and prevent recurrence. AI Design and Development Changes were present in 112 incidents (10.57%). These were nearly all initiated by AI corporations (109 cases). These actions aim to prevent recurrence by addressing the design and implementation issues that enable harm to happen.
+
+
+<!-- PAGE 8 -->
+
 
 Examples of this action include both changes to AI models and the implementation of safeguards in development and deployment processes. LinkedIn revised its name prediction algorithm to reduce gender bias by incorporating more diverse name datasets (A044). In another case, following accusations that its AI-generated video technology was being used to misrepresent or exploit actors, Synthesia updated its content development pipeline (A1787).
 
@@ -250,6 +279,10 @@ This section examines how post-incident reparation efforts reflect, or fall shor
 
 Justice frameworks not only help categorize reparative actions but also reveal how current responses fall short of meaningful accountability and redress. Rather than offering prescriptions, these frameworks serve as interpretive tools
 
+
+<!-- PAGE 9 -->
+
+
 Table 2: Stakeholder involvement across reparative actions. Percentages represent the proportion of all 1,060 incidents. Dashes indicate no involvement; bolded values show each stakeholder's highest level of engagement. AI corporations focused on communication, while structural remedies saw limited participation. Affected communities engaged infrequently; third parties surfaced harm but rarely shaped outcomes. Please refer to Table 1 for complete action names.
 
 | Stakeholder Group                | Outcry   | Comm.   | Invest.   | Legal.   | Repr.   | Comp.   | Recall   | Design   | Discont.   | Policy   |
@@ -277,6 +310,10 @@ Reform for Structural Harm: Structural Responses Without Structural Change Actio
 
 In our dataset, 20% of cases involved actions that could be interpreted as targeting structural factors. These included product and feature discontinuation, system redesigns, and law and policy change. However, many of these interventions were narrow in scope. They rarely addressed upstream drivers such as exploitative data practices, profit incentives that reward harmful behavior, or recurring harms across platforms. Most changes were confined to a single organization and lacked coordination across the broader ecosystem. In some cases, structural change took the form of product discontinuation rather than substantive redesign-what has been critiqued as a superficial fix that evades accountability (Johnson et al. 2024). These patterns echo broader critiques that ethics initiatives in the tech industry often serve to preempt regulation and manage public image rather than drive systemic accountability (Metcalf, Moss et al. 2019; Green 2021).
 
+
+<!-- PAGE 10 -->
+
+
 Remedy and Reform as Complementary Forms of Reparation A key distinction in our taxonomy is between reparative actions that address past harm (Remedy) and those that restructure systems to reduce recurrence (Reform). This distinction helps clarify a gap noted in existing scholarship: systemic changes cannot replace direct redress to those harmed. Recent critiques have pointed out that widely used accountability practices-such as auditing and red teaming-often mitigate risk rather than ensure meaningful reparation (Gillespie et al. 2024; Feffer et al. 2024). Similarly, AI policy frameworks frequently prioritize transparency and procedural oversight while lacking enforceable requirements for remediation (Wright et al. 2024). Centering reparation requires that both individual and systemic dimensions be addressed. Remedy and reform must work together to ensure harms are not only acknowledged but actively repaired through inclusive and sustained action.
 
 ## Who Gets to Repair? Participation in AI Reparation
@@ -298,6 +335,10 @@ Yet despite their impact, these interventions remain loosely connected to formal
 ## Conclusion
 
 This paper introduces a taxonomy of AI harm reparative actions and applies it to a large-scale analysis of post-incident responses. The taxonomy traces how harm is acknowledged, addressed, remedied, and, in some cases, transformed over time. Our findings reveal the uneven distribution of reparative efforts and the limits of current responses in achieving meaningful redress. We argue for more systemic approaches that center affected communities, integrate third-party oversight, and tie commitments to enforceable accountability.
+
+
+<!-- PAGE 11 -->
+
 
 ## References
 
@@ -359,6 +400,10 @@ Johnson, K. 2021. The Movement to Hold AI Accountable Gains More Steam. WIRED . 
 
 Johnson, N.; Moharana, S.; Harrington, C.; Andalibi, N.; Heidari, H.; and Eslami, M. 2024. The Fall of an Algorithm: Characterizing the Dynamics Toward Abandonment. In The 2024 ACM Conference on Fairness, Accountability, and Transparency , 337-358. Rio de Janeiro Brazil: ACM. ISBN 9798400704505.
 
+
+<!-- PAGE 12 -->
+
+
 Kaba, M. 2021. We do this' til we free us: Abolitionist organizing and transforming justice , volume 1. Haymarket Books. ISBN 1-64259-526-8.
 
 Kaba, M.; and Hassan, S. 2019. Fumbling towards repair: A workbook for community accountability facilitators . Project NIA. ISBN 1-939202-32-9.
@@ -413,6 +458,10 @@ Schelble, B. G.; Lopez, J.; Textor, C.; Zhang, R.; McNeese, N. J.; Pak, R.; and 
 
 Shen, H.; DeVos, A.; Eslami, M.; and Holstein, K. 2021. Everyday Algorithm Auditing: Understanding the Power of Everyday Users in Surfacing Harmful Algorithmic Behaviors. Proc. ACM Hum.-Comput. Interact. , 5(CSCW2): 433:1-433:29.
 
+
+<!-- PAGE 13 -->
+
+
 Singh, R.; Blili-Hamelin, B.; Anderson, C.; Tafesse, E.; Vecchione, B.; Duckles, B.; and Metcalf, J. 2025. Red-Teaming in the Public Interest. Technical report, Data &amp; Society Research Institute. Accessed: 2025-04-24.
 
 Techtonic Justice. 2023. The Ways AI Decides How LowIncome People Work, Live, Learn, and Survive. https:// www.techtonicjustice.org/reports/inescapable-ai. Accessed: 2025-04-24.
@@ -434,6 +483,10 @@ Xiao, Z.; Yuan, X.; Liao, Q. V.; Abdelghani, R.; and Oudeyer, P.-Y. 2023. Suppor
 Zehr, H. 2015. The Little Book of Restorative Justice: Revised and Updated . Simon and Schuster. ISBN 978-168099-044-7. Google-Books-ID: zF2CDwAAQBAJ.
 
 Zhang, R.; Li, H.; Meng, H.; Zhan, J.; Gan, H.; and Lee, Y.C. 2024. The Dark Side of AI Companionship: A Taxonomy of Harmful Algorithmic Behaviors in Human-AI Relationships. arXiv preprint arXiv:2410.20130 .
+
+
+<!-- PAGE 14 -->
+
 
 ## Appendices
 
@@ -457,6 +510,10 @@ Table 3: Definitions of primary stakeholder categories referenced in our taxonom
 | Media                            | Journalists and news outlets reporting on the incident.                              |
 | Auditors and Oversight Boards    | Entities that assess AI risks or harms through audits or review.                     |
 | Advocacy Groups                  | NGOs or civil society organizations that represent affected communities.             |
+
+
+<!-- PAGE 15 -->
+
 
 ## Appendix C: LLM prompt example
 
@@ -496,6 +553,10 @@ Text for analysis: [Insert case summary and relevant news article text here]
 Inter-rater reliability We assessed inter-rater reliability among three coders, each of whom independently coded five shared cases with every other coder. This resulted in six pairwise comparisons across the three coders. For accuracy of reparative action category, we calculated the percentage of actions where both coders agreed on whether an action was present. The average agreement across all pairs was 93.33%. For accuracy of stakeholder category, we assigned a score of 1 for full agreement, 0.5 for partial agreement, and 0 for disagreement. These scores were averaged across five cases per pair. The average stakeholder agreement was 90.00%.
 
 LLM accuracy To validate the accuracy of GPT-assisted coding across 1,060 incidents in the AIAAIC database, we conducted human annotation on a stratified sample of 200 cases-20 cases for each of the 10 reparative action categories in our taxonomy. For each category, we selected a balanced mix of positive and negative examples (10 each) and evaluated two components: whether the action was correctly identified, and whether the initiating stakeholders aligned with human labels. Action accuracy was calculated as the proportion of cases where GPT's binary label (present or not) matched the human-coded label, out of 20 total cases per category. Stakeholder accuracy was evaluated only for cases where the action was labeled as present by human annotators. In those cases, we compared the set of initiating stakeholders labeled by GPT against human annotations, assigning a score of 1 for exact matches, 0.5 for partial overlap, and 0 for no overlap. We report both macro-averaged scores across the ten action categories and micro-averaged scores weighted by the number of human-positive cases. Table 4 reports the percent agreement for each action and stakeholder category, and the total accuracy.
+
+
+<!-- PAGE 16 -->
+
 
 Table 4: LLM Classification Accuracy
 

@@ -1,10 +1,11 @@
 ---
 source_file: Park_2025_AI_algorithm_transparency,_pipelines_for_trust.pdf
-conversion_date: 2026-02-03T09:14:19.199563
+conversion_date: 2026-02-03T18:45:42.533603
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 1234567890():,;
 
 ## ARTICLE
@@ -24,6 +25,10 @@ This study explores arti /uniFB01 cial intelligence (AI) algorithm transparency 
 <!-- image -->
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 ## Introduction
 
@@ -45,6 +50,10 @@ Effects of general negative attitudes toward AI and trust in AI . A general nega
 
 The general negative attitude toward AI may hinder people from trusting the AI system. Trust is an expectation held in the absence of complete information about another party (Bhattacharya et al. 1998; Blomqvist, 1997). It helps reduce the transactional costs associated with uncertainty (Gefen et al.
 
+
+<!-- PAGE 3 -->
+
+
 2003; Kesharwani and Singh Bisht, 2012; Wang et al. 2016). Previous research has consistently demonstrated that trust is a mediator in /uniFB02 uencing the adoption of new technologies across diverse contexts, including online shopping (Gefen et al. 2003), banking (Kesharwani and Singh Bisht, 2012), and social media platforms (Wang et al. 2016). Trust in /uniFB02 uences the perceived ease of use and perceived usefulness, which, in turn, affect users ' new technology adoption intentions as predicted by the technology acceptance model (TAM, Gefen et al. 2003; Kesharwani and Singh Bisht, 2012). The role of trust is also more important in leading people to engage in new technology-mediated experiences when perceiving higher risks related to the technology (e.g., Kesharwani and Singh Bisht, 2012; Wang et al. 2016).
 
 The formation of trust based on technology-mediated experiences typically follows the direct pipeline pathway, built through repeated positive interactions (Podolny, 2001; Rockmann and Bartel, 2024), which could remedy general negative attitudes toward AI. However, these negative attitudes often prevent initial AI adoption, rendering the direct pipeline approach ineffective and making the indirect ' prism ' pathway through institutional reputation more signi /uniFB01 cant. This prism effect operates through public trust in parent companies that deploy AI, where stakeholders base their con /uniFB01 dence on perceptions of organizational reliability, integrity, and competence (Hon and Grunig, 1999). Such reputation-based trust serves as a crucial foundation for establishing and maintaining long-term relationships with various stakeholders, driving outcomes like consumer loyalty (Sirdeshmukh et al. 2002), purchase intention (See-To and Ho, 2014), and employee engagement (Mishra et al. 2014).
@@ -62,6 +71,10 @@ Conversely, even minimal transparency can function as a ' peripheral cue ' for i
 Individual attitudes have been consistently identi /uniFB01 ed as a signi /uniFB01 cant determinant of trust (Jones, 1996). Previous research has explored the effects of pre-existing attitudes on trust toward received messages and technological acceptance. White et al. (2003) suggested that individuals with inherently positive attitudes are more inclined to trust af /uniFB01 rming messages, while those with negative predispositions are likely to trust adverse messages. Within the framework of dual-process models such as ELM, strong pre-existing attitudes are conceptualized as cues. These cues either direct individuals toward the peripheral route, where they are likely to reject information that contradicts their existing beliefs, or motivate them toward the central route, reinforcing their pre-existing attitudes (Kunda, 1990; Wagner and Petty, 2022).
 
 Pre-existing attitudes toward AI signi /uniFB01 cantly in /uniFB02 uence the development of trust toward AI systems and their parent
+
+
+<!-- PAGE 4 -->
+
 
 companies. In particular, pre-existing negative attitudes can lead to skepticism and lower trust, especially in AI-mediated communication and chatbot engagement. Glikson and Woolley (2020) showed the impact of early views toward AI on trust dynamics in human-AI interactions, emphasizing that negative preconceptions can impede meaningful engagement with AI technologies. Hence, we expect that when individuals with a general negative attitude toward AI encounter situations necessitating communication through AI systems, they are likely to maintain their negative perceptions and exhibit distrust toward these systems. This skepticism extends not only to the AI systems (e.g., chatbots and AI-driven customer service platforms), but also to the parent company deploying the AI systems. The parent company is the ultimate source of the communication and is expected to offer reliable responses. Thus, it is reasonable to assume that there is no justi /uniFB01 cation for altering one ' s previous viewpoint when interacting through AI systems.
 
@@ -82,6 +95,10 @@ Thus, we anticipate that AI-algorithm transparency will mitigate the relationshi
 H2: The relationship between individuals ' general attitude toward AI and trust in (a) the AI system and (b) the parent company is moderated by AI-algorithm transparency, such that the negative relationship is weaker for individuals in the high transparency group compared to those in the low transparency group .
 
 Issue involvement, personal relevance, risk perception, and transparency . In the ELM framework, personal relevance is
+
+
+<!-- PAGE 5 -->
+
 
 Fig. 1 Theoretical Model and Hypotheses of the Study.
 
@@ -104,6 +121,10 @@ Stimuli development . We developed four video clips as stimuli, each depicting a
 Manipulation of AI-algorithm transparency . We operationalized AI algorithm transparency signaling as communicative actions intended to deliver adequate insights into algorithmic processes to assist users to reassure about the AI system ' s decision-making without burdening users with overly complex technical information. The level of transparency was manipulated by altering the chatbot ' s responses. In scenarios with high transparency, the chatbot not only answered the user ' s questions but also provided insights into the algorithmic processes behind its responses. For instance, when a user asked, ' How do you ensure my data remains protected? ' the chatbot replied: ' To protect your data, I operate using advanced encryption methods and comply with international data protection regulations. Regular updates and audits ensure these measures remain effective. ' In contrast, scenarios with low transparency featured a chatbot that answered questions without explaining the algorithmic basis of its responses. In response to the same question, the chatbot simply stated: ' We use various security measures to ensure your data remains protected. '
 
 Manipulation of issue involvement . We differentiated issue involvement through the topics of conversation. High-issue involvement scenarios include data security concerns, a topic of signi /uniFB01 cant personal relevance due to the potential consequences of data breaches. Low-issue involvement scenarios focus on shopping-related concerns, considered to be of lesser personal importance. 1 After a series of revisions, the /uniFB01 nal scripts of the
+
+
+<!-- PAGE 6 -->
+
 
 Table 1 Experiment Subjects ' Pro /uniFB01 les.
 
@@ -159,6 +180,10 @@ Control variables . We included demographic variables as covariates to control t
 
 Testing direct effects of a general negative attitude toward AI on trust in (a) the AI system (H1a) and (b) the parent company (H1b) . In examining the relationships posited in H1a and H1b, hierarchical regression analyses were conducted to predict trust in (a) the AI system and (b) the parent company based on participants ' general negative attitude toward AI,
 
+
+<!-- PAGE 7 -->
+
+
 Table 2 Descriptive Statistics for Trust in (a) AI-assisted Communication and (b) the AI Parent Company.
 
 |             |       | AI Algorithm Transparency   | AI Algorithm Transparency   |                 |
@@ -209,6 +234,10 @@ The integration of AI systems in stakeholder communications presents both opport
 
 Impact of pre-existing negative attitudes toward AI on trust and decision-making . The general negative attitude toward AI often centers on concerns regarding the controllability of AI systems (Clarke, 2019; Johnson and Verdicchio, 2017; Zhan et al. 2023).
 
+
+<!-- PAGE 8 -->
+
+
 Table 4 Coef /uniFB01 cient Analysis with PROCESS Macro Model 3 for Interaction Effects Predicting Trust in (a) AI system and (b) the parent company.
 
 |                                         | Trust in AI System (Y a )   | Trust in AI System (Y a )   | Trust in AI System (Y a )   | Trust in AI System (Y a )   | Trust in the Parent Company (Y b )   | Trust in the Parent Company (Y b )   | Trust in the Parent Company (Y b )   | Trust in the Parent Company (Y b )   |
@@ -240,6 +269,10 @@ Fig. 3 The interaction effect of general negative attitude toward AI and AI algo
 
 <!-- image -->
 
+
+<!-- PAGE 9 -->
+
+
 Many argue that AI should remain under human supervision, with humans retaining the ultimate decision-making authority. This necessity arises from the complex nature of AI decisionmaking processes, which can be challenging to trust and understand, especially when decisions may have signi /uniFB01 cant consequences. Our study highlights that individuals with a general negative attitude toward AI tend to distrust AI systems and the parent companies that employ them for communication purposes. This /uniFB01 nding extends the earlier research by showing that individuals who already view AI negatively also translate this distrust to the parent companies behind AI systems, and thus, create a broader ' halo ' of skepticism. This /uniFB01 nding aligns with previous literature indicating that pre-existing attitudes can in /uniFB02 uence individuals ' reception and processing of new information. Within the framework of dual-process models such as the ELM, strong pre-existing attitudes function as cues, directing individuals either toward the peripheral route, where they are inclined to reject contradictory information, or toward the central route, reinforcing their existing attitudes (Kunda, 1990; Wagner and Petty, 2022). By applying ELM to AI contexts, we show that entrenched negative beliefs can dominate even when new, potentially trust-building information is provided.
 
 The role of transparency in the AI Algorithm and its impact on trust . Perceiving AI as controllable is proposed to alleviate anxiety and fears associated with AI use (Zhan et al. 2023). Building on this literature, our study supports the idea that transparency in AI algorithms positively correlates with trust in AI-assisted communication systems. This /uniFB01 nding resonates with previous research suggesting that revealing how AI ' thinks ' can mitigate uncertainty (e.g., Liu, 2021; Xu et al. 2023). By revealing the inner workings of AI systems, we expected that individuals would mitigate their negative beliefs, such as concerns about being misled by the AI system or the parent company of the AI system.
@@ -253,6 +286,10 @@ Taken together, our /uniFB01 nding showed that while transparency did not signi 
 Drawing on insights from signaling theory, we interpret our /uniFB01 ndings to suggest that the disclosure of AI algorithms can serve as an effective transparency signal and accessible cue, leading communicators to trust the AI ' s parent company even when they do not trust the AI system due to their pre-existing general negative attitude toward AI. This distinction highlights the importance of transparency as a technical feature and as a strategic communicative tool that can enhance organizational trustworthiness in the eyes of skeptical stakeholders.
 
 Theoretical implications . This study advances AI trust research by clarifying the effects of algorithmic transparency on trust in both AI systems and their parent organizations. First, our /uniFB01 ndings contribute to a deeper understanding of ELM by highlighting the complex interplay between pre-existing attitudes and message processing routes in the context of AI-assisted communication and the role of transparency, by showing that for individuals with strong negative biases toward AI, transparency did not catalyze central-route processing that might reshape their core attitudes. ELM posits that individuals process persuasive messages through either a central route, which involves careful and thoughtful consideration of the presented arguments, or a peripheral route, which involves a more super /uniFB01 cial evaluation based on cues outside the message content (Petty and Cacioppo, 1986). Our study implies that for individuals with a general negative attitude toward AI, AI algorithm transparency does not necessarily engage them in central route processing to foster trust in the AI system. Instead, they may rely on peripheral cues, such as the transparency signal, to form judgments about the parent company. This
+
+
+<!-- PAGE 10 -->
+
 
 insight expands the application of ELM by demonstrating that even when users do not take the central route due to negative preexisting attitudes, peripheral cues can still play a signi /uniFB01 cant role in shaping their perceptions of trust. This /uniFB01 nding suggests that companies may bene /uniFB01 t more from focusing on visible transparency signals rather than attempting to change deeply rooted negative attitudes through detailed technical explanations.
 
@@ -271,6 +308,10 @@ We suggest that AI companies adopt a tiered approach to transparency. First, AI 
 Limitations and future research suggestions . We acknowledge the limitation raised regarding our 2 × 2 experimental design potentially being too simplistic for the complex phenomena of AI algorithm transparency signaling and issue involvement. However, as an initial investigation into these phenomena, our study intentionally employed a simpli /uniFB01 ed and clear experimental design to demonstrate fundamental relationships unequivocally. By con /uniFB01 rming the basic effects of transparency signaling and issue involvement in a simpli /uniFB01 ed context, our /uniFB01 ndings lay foundational groundwork for more complex investigations. Therefore, future research should build upon this foundation by exploring the optimal level of AI algorithm transparency signaling and investigating its effectiveness across more nuanced and diverse contexts of issue involvement, which potentially incorporates continuous measures or additional experimental conditions.
 
 We categorized the operationalization of AI algorithm transparency into two distinct levels: high and low. In the high transparency condition, a simplistic algorithmic explanation was provided. While we observed signi /uniFB01 cant effects of these transparency cues on trust in the parent company, we
+
+
+<!-- PAGE 11 -->
+
 
 acknowledge that real-world AI transparency can involve multiple layers (e.g., data sources, bias audits, error metrics) and that our simpli /uniFB01 ed operationalization might be seen as insuf /uniFB01 ciently granular by those with more advanced AI knowledge. Moreover, the study did not systematically account for participants ' prior AI literacy, which can be a variable that was beyond our primary scope but nonetheless in /uniFB02 uential in shaping how users interpret and evaluate transparency disclosures. Thus, future research might incorporate more contextual and multi-layered transparency conditions that incorporate detailed technical data or accountability mechanisms. This attempt could also stratify participants according to their AI literacy or personal attributes (Quazi and Talukder, 2011) to pinpoint optimal transparency levels for different user groups, thereby offering tailored communication strategies. By doing so, scholars could more precisely identify how varying complexities of AI algorithm explanations promote trust in diverse contexts and enhance our broader understanding of transparency ' s role in fostering trustworthy AI communication systems.
 
@@ -335,6 +376,10 @@ Hsiao KL, Chuan -Chuan Lin J, Wang XY, Lu HP, Yu H (2010) Antecedents and conseq
 Huisman M, Ranschaert E, Parker W, Mastrodicasa D, Ko č í M, Santos D, Coppola F, Morozov S, Zins M, Bohyn C, Koç U, Wu J, Veean S, Fleischmann D, Leiner T, Willemink M (2021) An international survey on AI in radiology in 1041 radiologists and radiology residents part 1: Fear of replacement, knowledge, and attitude. Eur Radiol 31:7058 -7066. https://doi.org/10.1007/ s00330-021-07781-5
 
 Johnson DG, Verdicchio M (2017) AI anxiety. J Assoc Inf Sci Technol 68(9):2267 -2270. https://doi.org/10.1002/asi.23867
+
+
+<!-- PAGE 12 -->
+
 
 - Jones K (1996) Trust as an affective attitude. Ethics 107(1):4 -25. https://doi.org/10. 1086/233694
 
@@ -426,6 +471,10 @@ H. Y. Yoon contributed to the conceptualization and writing of the manuscripts a
 ## Competing interests
 
 The authors declare no competing interests.
+
+
+<!-- PAGE 13 -->
+
 
 ## Ethical approval
 

@@ -1,10 +1,11 @@
 ---
 source_file: Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A.pdf
-conversion_date: 2026-02-03T08:41:17.157791
+conversion_date: 2026-02-03T18:20:19.446666
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 <!-- image -->
@@ -51,6 +52,10 @@ Acomprehensive literature search strategy was composed by a qualified medical li
 
 Atotal of 268 articles were identified (263 from the initial search and 5 more added from the references of the original papers), 53 of which were finally selected for full text analysis. Digital health literacy is the most frequently used descriptor to refer to the ability to find and use health information with the goal of addressing or solving a health problem using technology. The most utilized tool to assess digital health literacy is the eHealth literacy scale (eHEALS), a self-reported measurement tool that evaluates six core dimensions and is available in various languages. Individuals with higher digital health literacy scores have better self-management and participation in their own medical decisions, mental and psychological state
 
+
+<!-- PAGE 2 -->
+
+
 and quality of life. Effective interventions addressing poor digital health literacy included education/training and social support.
 
 ## Conclusions
@@ -67,6 +72,10 @@ Digital technologies are transforming health, health care, and public health sys
 
 The digital transformation, which a priori has many advantages, may contribute to further increasing the inequalities that already exist in access to healthcare thus generating a 'digital
 
+
+<!-- PAGE 3 -->
+
+
 divide'. 'Digital divide' is a term used to encompass a wide range of social differences in access to and use of digital equipment and services, especially personal computers and smartphones, and the ability to access the Internet, both in terms of physical connection and ease of use. As health care becomes more reliant on technology-based tools, the digital divide stands to further exacerbate existing health care access disparities [2].
 
 Digital technologies should be recognized nowadays as a key determinant of health, similar to socioeconomic status, income, education, age, race, ethnicity and gender [4]. Although almost the entire world population now lives within reach of some form of mobile broadband or internet service and mobile phones are becoming ubiquitous, only half of people worldwide use the internet and have basic information and communications technology skills [5]. This gap between internet access and use shows that there are multiple barriers to meaningful access that need to be addressed, especially lack of science, technology, engineering, and mathematics education, digital skills and digital literacy.
@@ -76,6 +85,10 @@ Digital literacy can be defined as the varying ability of both children and adul
 ## Methods
 
 This scoping review was conducted following the methodological framework of Arksey and O'Malley [10]. The review process was structured according to the following stages:
+
+
+<!-- PAGE 4 -->
+
 
 ## Identification of the research question
 
@@ -95,6 +108,10 @@ The following key items were obtained based on our consensus as to what informat
 
 The following data were sought for studies that defined digital literacy, digital health literacy, and its related concepts: concept(s) or term(s) used; definition; theoretical framework or model. For studies that employed assessment tools for digital health literacy, the following data were sought: assessment tool; author; elements considered by the assessment tool; aim or intended use of the assessment tool; mode (self-rated versus performance-based); scoring; language; and reliability, Cronbach α . For studies that tackled the correlation between digital health literacy and health outcomes, the following data were sought: health outcomes assessed; and main conclusion on the association between digital health literacy and health outcomes.
 
+
+<!-- PAGE 5 -->
+
+
 For studies on interventions targeted to improve digital health literacy, the following data were sought: intervention category; intervention; author; setting; and study population.
 
 ## Reporting of results
@@ -112,6 +129,10 @@ Fig 1. Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISM
 <!-- image -->
 
 https://doi.org/10.1371/journal.pdig.0000279.g001
+
+
+<!-- PAGE 6 -->
+
 
 Fig 2. Nationality of the population of origin in the selected articles. This figure shows the geographic gap in relation to the origin of the selected articles. If we consider that the determinants of poor digital health literacy (age, level of education, belonging to an ethnic minority) could be the same globally, this figure is indicative of the recognition and interest of the problem in the different countries. Figure created using the Natural Earth base layer from www.naturalearthdata.com under the PDDL license https://opendatacommons.org/licenses/pddl/.
 
@@ -137,6 +158,10 @@ Most studies (20/53; 37.74%) were conducted in North America (17 of them in the 
 
 Different terms were used across the studies to refer to digital health literacy, including electronic health literacy, eHealth literacy, mHealth literacy, telehealth literacy, and mobile health proficiency. Among these, the most frequently used in the included studies is eHealth literacy (30/53; 56.60%) followed by digital health literacy (12/53; 22.64%). These concepts similarly refer to the ability to find and use health information with the goal of addressing or solving a health problem using technology. However, these are differentiated by the source(s) of the
 
+
+<!-- PAGE 7 -->
+
+
 health information [23-26]. mHealth literacy focuses on information gathered with the use of mobile devices [25] while eHealth literacy focuses on information gathered from online resources [23]. Telehealth literacy specifically focuses on telehealth platforms [27].
 
 In the included studies, digital health literacy was most often used interchangeably with the earlier term eHealth literacy [23]. Whereas eHealth literacy is limited to information from Web 1.0 platforms viewed by users in a passive manner, digital health literacy incorporates information from Web 2.0 platforms with interactive content including social media, blogs, and video sharing sites [23-25]. Digital health literacy is therefore a broader concept compared to eHealth literacy.
@@ -154,6 +179,10 @@ In S2 Table, we detail the concepts related to digital health literacy and its c
 Twenty different assessment tools were employed by the included studies to assess digital literacy and/or digital health literacy (Table 1).
 
 Forty-five of the included studies (45/53; 84.90%) used at least one of these assessment tools. (S3 Table) The tools differ in terms of evaluation elements, applicable groups, and intended use. Six of these specifically focus on digital literacy [29,30,39-42], six on eHealth literacy [12,33,36,37,43,44], four on digital health literacy [45-48], one on digital healthy diet literacy [49], one on telehealth literacy [27], one on health information literacy [50] and one on a combination of eHealth and mHealth literacy [51]. Most of these tools are self-rated Likert scales except for eHealth Literacy Assessment [eHLA) toolkit [36] and Digital Health Literacy Instrument [DHLI] [45] which both employ a combination of self-rated and performance-based assessment, and Digital Literacy Evaluation [DILE) tool [41], which is performance-based.
+
+
+<!-- PAGE 8 -->
+
 
 Table 1. Assessment tools for digital literacy and digital health literacy.
 
@@ -176,6 +205,10 @@ Table 1. Assessment tools for digital literacy and digital health literacy.
 | Digital Healthy Diet Literacy [DDL] [49]                                                  | ability to [1] find reliable and accurate healthy diet information on the internet, [2] understand healthy diet information and dietary guidelines on the internet, [3] judge whether healthy diet information on the internet is applied for individuals, and [4] apply healthy diet information from the internet into individuals' daily lives to eat healthily | Self-rated, Likert scale                    | Vietnamese                                     | [49,55]                                 |
 
 ( Continued )
+
+
+<!-- PAGE 9 -->
+
 
 Table 1. (Continued)
 
@@ -201,6 +234,10 @@ Abdulai et al. [56], performed a survey with 268 respondents aiming to examine t
 
 Similarly, Guo et al. [62], in a random cohort of adults in Hong Kong, examined socioeconomic disparities in seeking web-based information on COVID-19 and eHealth literacy, and their associations with personal preventive behaviors during the COVID-19 pandemic. In this study the eHL and mHL literacy scores had significant and negative associations with age
 
+
+<!-- PAGE 10 -->
+
+
 [eHL, r = -0.380, P &lt; .001; mHL, r = -0.398, P = .036]. The results also show that the participants with higher education had a greater level of mobile eHealth literacy.
 
 The association of level of education and digital literacy was also described by Adil et al. [28] In the survey that they performed among a sample of university students, the authors report that belonging to different categories of educational attainment affects the level of usage and of expertise in digital health literacy in varying ways. This study concludes that educational level is the major factor for unequal response towards digital health literacy. The study furthermore depicted that the students of BS/Master, MS/MPhil and PhD are substantially different from each other in their level of usage and expertise.
@@ -218,6 +255,10 @@ Of the 53 studies included, only 13 (24.53%) studies reported on how digital lit
 The most frequent health outcome reported was health promotion. Five of 13 studies (38.46%) reported health-promoting behaviors, including health responsibility, stress management, exercise behavior, self-realization, and social support. Both quality of life and disease prevalence were the second most common reported health outcomes in this study (4/13, 30.77%). This was followed by mental and psychological states (2/13; 13.58%), which involves managing negative emotions, meta-cognition, and psychological well-being. Lastly, 2/13 (15.38%) studies assessed how digital literacy affected the health status of patients. Individuals with better digital literacy were likely to have better disease control (type 2 diabetes patients) [51].
 
 According to the patient's perspectives, digital literacy can limit access to online patient portals. Without access to these tools, less technologically able individuals experience
+
+
+<!-- PAGE 11 -->
+
 
 Table 2. Health outcomes related to digital health literacy.
 
@@ -247,6 +288,10 @@ Decision makers, health professionals, and researchers must consider and address
 
 The body of existing literature on the topic is vast and growing, especially in the last two years. Although it is rich in definitions and author´s proposals of strategies to improve digital health literacy, publications that describe specific health outcomes affected or proven
 
+
+<!-- PAGE 12 -->
+
+
 Table 3. Interventions that address poor digital health literacy.
 
 | Author                           | Intervention Category   | Setting                                                                | Study population                                                                                                                                                              | Intervention                                                                                                                                                                                                                                                                          | Result of Intervention                                                                                                                                                                                                                                                                                                                                |
@@ -262,6 +307,10 @@ Table 3. Interventions that address poor digital health literacy.
 
 ( Continued )
 
+
+<!-- PAGE 13 -->
+
+
 Table 3. (Continued)
 
 | Author           | Intervention Category   | Setting   | Study population                     | Intervention                                                | Result of Intervention                                                                                                                                                                                                  |
@@ -276,6 +325,10 @@ Although most studies show that patients with lower levels of digital literacy a
 
 Defining and measuring digital health literacy should be the first step for bridging the digital divide. However, the definitions used in the different studies are heterogeneous as well as the instruments used for its measurement. Digital literacy can be considered an umbrella term for many different technologies (internet, mobiles, social media, etc) and affects various areas of human lives such as education, business, health, governance among others. It has been defined as 'the skills required to achieve digital competence, the confident and critical use of information and communication technology for work, leisure and communication' [26]. At the same time, health literacy can be defined as 'the degree to which individuals can obtain, process, understand, and communicate about health-related information needed to make informed health decisions' [23]. At first glance 'Digital Health literacy' can be regarded as the convergence of digital literacy and health literacy [76]. However, the reality is more complex. In most published studies, both health and digital literacy are conceptualized through competency-based frameworks. Health literacy is elaborately expressed through a matrix of four dimensions (access/obtain information relevant to health, understand information relevant to health, process/appraise information relevant to health, and apply/use information relevant to health) that are applied across three domains (healthcare, disease prevention, and health promotion) [8]. A European Commission framework on digital competencies takes a similar approach to digital literacy by depicting five dimensions [information and data literacy, communication and collaboration, digital content creation, safety, and problem- solving], each with four to six sub-dimensions that illustrate a core competence of digital literacy [77]. The relationship between digital, health, and digital health literacy is a multi-dimensional one where each competence domain of digital and health literacy may affect one or more competence domains of digital health literacy [78], but certain competencies of digital health literacy may not be covered by neither digital literacy nor health literacy [7]. As an example of this statement, Abdulai reported that educational status, frequency of using the internet, and using
 
+
+<!-- PAGE 14 -->
+
+
 the internet for social media and entertainment purposes were not significant predictors of digital literacy related to online COVID-19 information [56]. Though the overall literacy level was high, respondents had a relatively lower mean score on questions that indicate they may have some challenges locating the right kind of COVID-19 online resources, as well as a limited ability to distinguish high-quality information from those reflecting personal opinions or anecdotal stories [56]. Likewise, Guo et al report in their survey performed in a sample of people with diabetes in 3 taiwanise hospitals that, although they were confident in using mobile eHealth and technology, only 1.6% used health apps or adopted these tools in their daily lives [51].
 
 The complexity and multidimensionality of health and digital literacy highlight the need to conceptualize digital health literacy in the context of a competence framework.
@@ -289,6 +342,10 @@ The complexity of the interaction between digital literacy, health literacy and 
 Instead, most general consequences could be identified according to the patient´s perspectives like decreased access to health care portals, increased wait time for medical appointments, inappropriate use of emergency services, and preventative care coordination. In this sense, poor digital literacy has the potential to worsen most healthcare outcomes.
 
 At the same time, several authors propose that higher digital literacy could be correlated with better quality of life, health promotion and mental health [2,55,63,64,66,69]. G Kim et al [66] found that eHealth literacy was the strongest predictor of health behaviors after adjusting
+
+
+<!-- PAGE 15 -->
+
 
 for sociodemographic and health-related characteristics. These findings indicate that eHealth literacy can be an important factor in promoting individual health behaviors.
 
@@ -309,6 +366,10 @@ Increased interest in this issue in the form of publications is a good starting 
 ## Supporting information
 
 S1 PRISMA Checklist. PRISMA Checklist. (XLSX)
+
+
+<!-- PAGE 16 -->
+
 
 - S1 Text. Search Strategy: Master Medline (Ovid) strategy.
 
@@ -354,6 +415,10 @@ Data curation: Rachel S. Hicklent.
 2. Alkureishi M, Choo Z, Rahman A, Ho K, Benning-Shorb J, Lenti G et al. Digitally Disconnected: Qualitative Study of Patient Perspectives on the Digital Divide and Potential Solutions. JMIR Human Factors. 2021 Dec 15; 8[4]:e33364. https://doi.org/10.2196/33364 PMID: 34705664
 3. van Kessel R, Wong B, Clemens T, Brand H. Digital health literacy as a super determinant of health: More than simply the sum of its parts. Internet Interv. 2022 Feb 7; 27:100500. https://doi.org/10.1016/j. invent.2022.100500 PMID: 35242586
 
+
+<!-- PAGE 17 -->
+
+
 4. van Kessel R, Hrzic R, O'Nuallain E, Weir E, Wong B, Anderson M et al. Digital Health Paradox: International Policy Perspectives to Address Increased Health Inequalities for People Living With Disabilities. J MedInternet Res 2022; 24[2]:e33819 https://doi.org/10.2196/33819 PMID: 35191848
 5. International Telecommunication Union. Measuring digital development: facts and figures 2021. Geneva: International Telecommunication Union, 2021. Available in https://www.itu.int/en/ITU-D/ Statistics/Documents/facts/FactsFigures2021.pdf [accessed 23 june 2022]
 6. Crawford A, Serhal E. Digital health equity and COVID-19: the innovation curve cannot reinforce the social gradient of health. J Med Internet Res 2020; 22: e19361. https://doi.org/10.2196/19361 PMID: 32452816
@@ -374,6 +439,10 @@ Data curation: Rachel S. Hicklent.
 21. Cheng C, Elsworth G, Osborne R. Co-designing eHealth and Equity Solutions: Application of the Ophelia [Optimizing Health Literacy and Access] Process. Frontiers in Public Health. 2020 Nov 20; 8. https:// doi.org/10.3389/fpubh.2020.604401 PMID: 33330344
 22. van der Vaart R, van Driel D, Pronk K, Paulussen S, Te Boekhorst S, Rosmalen J et al. The Role of Age, Education, and Digital Health Literacy in the Usability of Internet-Based Cognitive Behavioral Therapy for Chronic Pain: Mixed Methods Study. JMIR Formative Research. 2019; 3[4]; https://doi.org/10. 2196/12883 PMID: 31750839
 
+
+<!-- PAGE 18 -->
+
+
 23. Norman C, Skinner H. eHealth Literacy: Essential Skills for Consumer Health in a Networked World. Journal of Medical Internet Research. 2006; 8[2]:e9 https://doi.org/10.2196/jmir.8.2.e9 PMID: 16867972
 24. Norgaard O, Furstrand D, Klokker L, Karnoe A, Batterham R, Kayser L et al. The e-health literacy framework: A conceptual framework for characterizing e-health users and their interaction with e-health systems. Knowledge Management and E-Learning. 2015 Dec 1; 7[4]:522-540.
 25. Lin T, Bautista J. Understanding the Relationships between mHealth Apps' Characteristics, Trialability, and mHealth Literacy. Journal of Health Communication. 2017; 22[4]:346-354. https://doi.org/10.1080/ 10810730.2017.1296508 PMID: 28323546
@@ -392,6 +461,10 @@ Data curation: Rachel S. Hicklent.
 38. Paige S, Stellefson M, Krieger J, Anderson-Lewis C, Cheong J, Stopka C. Proposing a Transactional Model of eHealth Literacy: Concept Analysis. Journal of Medical Internet Research. 2018; 20[10]: e10175. https://doi.org/10.2196/10175 PMID: 30279155
 39. Boot W, Charness N, Czaja S, Sharit J, Rogers W, Fisk A et al. Computer Proficiency Questionnaire: Assessing Low and High Computer Proficient Seniors. The Gerontologist. 2013; 55[3]:404-411. https:// doi.org/10.1093/geront/gnt117 PMID: 24107443
 40. Lim J. A study on the affecting of digital literacy on the quality of life on elder. [M.Sc.]. Kongju National University, Gongju, South Korea; 2020
+
+
+<!-- PAGE 19 -->
+
 
 41. Martı ´nez-Alcala ´ C, Rosales-Lagarde A, Alonso-Lavernia M, Ramı ´rez-Salvador J, Jime ´ nez-Rodrı ´guez B, Cepeda-Rebollar R et al. Digital Inclusion in Older Adults: A Comparison Between Face-to-Face and Blended Digital Literacy Workshops. Frontiers in ICT. 2018 Aug 28; 5[21].
 42. Ismond K, Eslamparast T, Farhat K, Stickland M, Spence J, Bailey RJ et al. Assessing Patient Proficiency with Internet-Connected Technology and Their Preferences for E-Health in Cirrhosis. Journal of Medical Systems. 2021 Jun 5; 45[7]. https://doi.org/10.1007/s10916-021-01746-3 PMID: 34091771
@@ -412,6 +485,10 @@ Data curation: Rachel S. Hicklent.
 57. Arcury T, Sandberg J, Melius K, Quandt S, Leng X, Latulipe C et al. Older Adult Internet Use and eHealth Literacy. Journal of Applied Gerontology. 2020; 39[2]:141-150 https://doi.org/10.1177/ 0733464818807468 PMID: 30353776
 58. Hoogland A, Mansfield J, Lafranchise E, Bulls H, Johnstone P, Jim H. Ehealth Literacy in Older Adults with Cancer. Journal of Geriatric Oncology. 2020; 11[6]: 1020-1022; https://doi.org/10.1016/j.jgo.2019. 12.015 PMID: 31917114
 
+
+<!-- PAGE 20 -->
+
+
 59. Moon Z, Zuchowski M, Moss-Morris R, Hunter M, Norton S, Hughes LD. Disparities in access to mobile devices and e-health literacy among breast cancer survivors. Supportive Care in Cancer. 2021 Jan; 30 [1]:117-216 https://doi.org/10.1007/s00520-021-06407-2 PMID: 34236506
 60. Schrauben S, Appel L, Rivera E, Lora C, Lash J, Chen J, et al. Mobile Health [mHealth] Technology: Assessment of Availability, Acceptability, and Use in CKD. American Journal of Kidney Diseases. 2021 Jun; 77[6]:941-50. https://doi.org/10.1053/j.ajkd.2020.10.013 PMID: 33309860
 61. Aponte J, Nokes K. Validating an electronic health literacy scale in an older hispanic population. Journal of Clinical Nursing. 2017; 26[17-18]:2703-2711. https://doi.org/10.1111/jocn.13763 PMID: 28207962
@@ -431,5 +508,9 @@ Data curation: Rachel S. Hicklent.
 75. Sackett D. Rules of evidence and clinical recommendations on the use of antithrombotic agents. Chest 1989; 95:2S-4S. PMID: 2914516
 76. Honeyman M., Maguire D., Evans H., Davies A. Digital Technology and Health Inequalities: A Scoping Review [Internet] Public Health Wales NHS Trust; Cardiff: 2020. p 44 Available in https://phw.nhs. wales/publications/publications1/digital-technology-and-health-inequalities-a-scoping-review/
 77. Joint Research Centre [European Commission], Carretero S., Vuorikari R., Punie Y., den Brande L., 2017. DigComp 2.0: the digital competence framework for citizens [Internet]. LU: Publications Office of the European Union [cited 2021 Jun 30]. Available from:, ISBN 978-92-79-58876-1 https://data.europa. eu/doi/10.2 791/
+
+
+<!-- PAGE 21 -->
+
 
 78. Paige S, David Miller M, Krieger J, Stellefson M, Cheong J. Electronic Health Literacy across the Lifespan: Measurement Invariance Study. Journal of Medical Internet Research. 2018; 20[7]; https://doi. org/10.2196/10434 PMID: 29986848

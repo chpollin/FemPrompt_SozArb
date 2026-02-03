@@ -2,7 +2,7 @@
 
 ## Implementation Status: ✅ FULLY COMPLIANT
 
-This document certifies that the FemPrompt Literature Research Pipeline implements PRISMA 2020 guidelines for systematic reviews.
+This document certifies that the Literature Review Literature Research Pipeline implements PRISMA 2020 guidelines for systematic reviews.
 
 ## PRISMA Checklist Compliance
 
@@ -177,4 +177,4 @@ This implementation meets or exceeds all PRISMA 2020 requirements for:
 
 ---
 
-*This document certifies PRISMA 2020 compliance for the FemPrompt systematic review pipeline.*
+*This document certifies PRISMA 2020 compliance for the Literature Review systematic review pipeline.*

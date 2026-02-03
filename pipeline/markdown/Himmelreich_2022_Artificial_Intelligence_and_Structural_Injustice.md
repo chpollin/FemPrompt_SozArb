@@ -1,10 +1,11 @@
 ---
 source_file: Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.pdf
-conversion_date: 2026-02-03T08:59:52.848267
+conversion_date: 2026-02-03T18:30:41.354515
 converter: docling
-quality_score: 95
+quality_score: 85
 ---
 
+<!-- PAGE 1 -->
 ## AI and Structural Injustice
 
 Foundations for Equity, Values, and Responsibility
@@ -25,6 +26,10 @@ Structural injustice has risen to the top of the agenda. The United States conti
 
 1 This legend may never have been plausible outside the lived experience of a middle- to upper-class white population.
 
+
+<!-- PAGE 2 -->
+
+
 and economic participation, and casually-inflicted prejudices that perfuse everyday life. 2 Around the globe, the pervasive effects of racism and colonialism have been documented: not only in terms of material differences in outcomes and opportunities, but also in discursive or semiotic differences in how particular groups are portrayed. For example, Black neighborhoods in New York City are advertised as exotic and edgy destinations for the adventurous white tourist (Törnberg &amp; Chiappini, 2020). In short, the Global North is growing the awareness that the status quo builds on and manifests various past and present-day injustices and normative deficiencies.
 
 With this growing awareness, students, professionals, academics, and policy-makers in the Global North are attending to the role that Artificial Intelligence (AI) plays in maintaining, entrenching, or even exacerbating this unjust status quo . 3 A software feature may be well-intended and an algorithm considered objective, but when deployed in an unjust status quo , they will likely perpetuate injustice or worsen it. AI interacts with unjust social structures-AI exacerbates structural injustice.
@@ -39,6 +44,10 @@ We concentrate here mostly on gender and race. Structural injustices usually att
 
 3 We understand 'AI' as statistical methods that use Machine Learning (ML) to make data-based predictions or decisions. With the increasing availability of data, and the decreasing costs of storage and computing, the possible uses of AI have dramatically increased.
 
+
+<!-- PAGE 3 -->
+
+
 injustice has to do with identity. Because race, gender, age, ability, or sexual orientation are central to a person's self-conception or self-image, how one is treated based on these characteristics is a matter of high moral concern and deep emotional valence. But although structural injustice attaches to social identity, this chapter is not concerned with identity politics. 4 Insofar as the chapter aims to make a political contribution at all, ours has a theoretical focus: We are concerned that appeals to the values of DEI or to structural injustice in AI are dismissed as a fad, as mysterious methodology, as empty slogans used to virtue-signal, or as sectarian interests pushed by advocacy groups. This is not the case. We argue that the theory of structural injustice is a useful lens for anyone concerned with AI governance. A theory of structural injustice allows researchers and practitioners to identify, articulate and perhaps even anticipate phenomena and problems that may otherwise go unrecognized. Some basic theoretical ingredients of structural injustice-social-structural explanations and theories of justice-easily extend from gender and race to issues of ability, sexual identity, or economic power.
 
 This chapter covers only limited ground. First, it does not cover business or managerial issues, such as building project teams, nor does it cover the sociology, demographics, or politics of who builds and uses AI today. Making sure that research, design and engineering teams are diverse is important for addressing structural injustices and for bringing the values of DEI to life. This chapter concentrates instead on the foundations of DEI or social justice: Which theoretical and moral considerations underwrite a concern for DEI? Second, this chapter concentrates on stylized examples. We cannot do justice to the nuanced ways in which structural injustice plays out. This is because social identities are complex, and the experience of structural injustice often attaches to more than one social category at once. We take our examples mainly from a north-american context. However, thanks to them being somewhat abstract, the examples should easily travel to other contexts.
@@ -46,6 +55,10 @@ This chapter covers only limited ground. First, it does not cover business or ma
 In sum, this chapter provides a conceptual lens to bring into sharper focus how AI relates to structural injustice. We contribute to discussions on DEI by conceptualizing present-day calls for diversity, equity, and inclusion in the sphere of AI as demands of justice , rather than a bid to reduce harm or attempts to comply with ethical codes of conduct that are frequently drafted by tech corporations. We do this by giving a primer on the concept of structural injustice as it has been developed by scholars in moral and political philosophy, in particular by Iris Marion Young (Young, 2006, 2011). We argue that this perspective on structural injustice is particularly important for AI. This chapter not so much highlights the myriad unintended ways in which developing and deploying AI may contribute to structural injustice, but it aims to equip the reader with the theoretical foundations for tools that help to recognize structural injustices and with a sense of responsibility to attend to them.
 
 4 Perhaps structural injustice should not be approached as a matter of identity at all, but as a matter of difference (Young, 2009).
+
+
+<!-- PAGE 4 -->
+
 
 ## 2. AI and Structural Injustice
 
@@ -61,6 +74,10 @@ The reason for this bias is instructive. On the face of it, from the perspective
 
 5 Intentional racism etc. is a problem-and a glaring one. What is wrong here is relatively easy to explain, in contrast to structural injustice.
 
+
+<!-- PAGE 5 -->
+
+
 expenditures, regardless of whether a patient is white or Black. The algorithm hence correctly predicts, without significant bias, whether or not a patient has high health needs-at least when 'high need' is understood as total medical expenditures.
 
 The bias creeps in, however, when we consider the relationship between health and medical expenditures. When developing the algorithm at hand, medical expenditures were falsely taken to be a good proxy for underlying health. On average, however, the healthcare system spends less on Black patients than on white patients at all levels of healthcare needs . As a result, the algorithm did predict costs correctly, but given that average healthcare costs are lower for Black patients, the algorithm underestimated the Black patients' healthcare needs. In a way, the algorithm 'sees' fewer health needs in Black patients. This lines up with how Black patients' experience their interactions with the medical profession already today (Cuevas et al., 2016). AI thus overlooks Black persons' healthcare needs, rendering them less visible or less urgent.
@@ -72,6 +89,10 @@ One set of hypotheses looks at medical professionals. Doctors need not be outrig
 Yet the shortcomings of the medical system cannot be solely attributed to the behavior of medical professionals. A second set of hypotheses looks at material features. In many parts of the US, White patients are geographically closer to medical resources than Black patients. As
 
 6 See Appiah (1990) for an influential analysis of racism. Roughly speaking, Appiah defines 'intrinsic racism' as the belief that a racial group is intrinsically superior or inferior to others.
+
+
+<!-- PAGE 6 -->
+
 
 Probst et al. put it, '[d]isadvantage among rural racial/ethnic minorities is a function of place as well as race' (2004). This structural feature-geographic location, affordance, and travel costs-can, in part, explain the racial differences in medical expenditures that led to the racial bias in the health AI.
 
@@ -85,6 +106,10 @@ This example of AI in healthcare illustrates two key points: First, structural e
 
 One of the most influential and detailed accounts of structural injustice has been articulated by the philosopher Iris Marion Young. The structure of society, as Young characterizes it, is 'the confluence of institutional rules and interactive routines, mobilization of resources, as well as physical structures such as buildings and roads' (2006). Notice how the structure includes not only rules and conventions-such as implicit assumptions about Black people-but also material properties-the distance to the nearest emergency room. At the same time, informal social norms and practices that are not governed by formal rules and conventions, such as stereotypic beliefs, are important constituents of what we mean by 'social structure'.
 
+
+<!-- PAGE 7 -->
+
+
 Young (2011, pp. 43-45) offers an instructive example of structural injustice, the hypothetical case of a single mother, Sandy. Sandy faces eviction because her apartment building was bought by a property developer. When looking for a new home, Sandy realizes that she is unable to afford most apartments that are geographically close to her workplace. After some deliberation, Sandy decides to rent an apartment 45 minutes away from her workplace, and reduce the length of her commute by also buying a car that she can drive to work. Unfortunately, Sandy's story has a tragic ending: before Sandy is allowed to move in, her prospective landlord requires that she cough up three months' advance rent. Having spent her savings on the new car, Sandy simply doesn't have the money. She and her children now face the terrifying prospect of homelessness.
 
 Fictional as the case may be, it is no stretch to say that many people have found themselves in similar situations to Sandy's. The case is stylized but sufficiently realistic-perhaps even typical. Two things are noteworthy about this case.
@@ -97,6 +122,10 @@ Secondly, identifying any individual action or policy that is wrongful or that c
 
 8 The formulation here should draw attention to the methodological challenges of structural explanations: Although individual agents causally contribute to the outcome or phenomenon, the structural features are an essential part of the explanation nonetheless.
 
+
+<!-- PAGE 8 -->
+
+
 The case of Sandy hence illustrates the judgment that we started with: No individual acts in a vacuum. The idea of a social structure fills out the situated and context-specific spaces in which we as individuals may often take ourselves to be acting. Accordingly, structural explanations have considerable explanatory power, and are a staple type of explanation in the social sciences (Little, 1991, Chapter 5; Haslanger, 2015; Soon, 2021). Structural explanations can explain how Sandy ended up facing homelessness despite no individual wrongdoing and, perhaps even, everyone's best intentions. Structural explanations form the basis for theories of structural injustice.
 
 The concept of structural injustice , as we understand it, brings the power of structural explanations to normative analysis. Structural injustice leverages structural explanations and combines them with a theory of justice to enrich analysis, reasoning, and responses to injustice. Three aspects are noteworthy.
@@ -106,6 +135,10 @@ First, structural injustice shifts the focus of our normative attention. It star
 Take the example of a police officer who defends herself with objectionable force against a Black man-much like how Amber Guyger fatally shot Botham Jean in his own apartment. Empirically, structural injustice tries to explain how the shooting came about. This violence arises not just from individual behavior but from social norms and practices, and our human tendency to reproduce and reinforce them-by working together, upholding rules and conventions. The social structure constrains and drives individual actions. The structure that underlies police violence constitutes the criminal justice system, the operation of police departments, and negative cultural stereotypes about Black persons. Structural injustice thus identifies these as the targets of reform.
 
 Second, structural injustice is forward-looking. It focuses on structural features. Yet, that does not mean that structural injustice seeks to rectify historic injustice-although it could be complemented in this way. Instead, structural injustice distinguishes between triggering and maintaining causes: The relevant structural causes of racial disadvantage today differ from the past structures that initially brought about Black disadvantage. Racial disadvantage may remain alive and well even when state-sanctioned racial discrimination has come to an end (Nuti,
+
+
+<!-- PAGE 9 -->
+
 
 2019). So in a way, the structural injustice has a temporal dimension and has important historic origins. However, decades away from slavery and the Jim Crow era, racism operates now through novel structrual mechanisms that past structures created, such as poverty, new forms of oppression, and different social norms. Structural injustice seeks to understand and reform the structural causes of injustice that operate today.
 
@@ -121,6 +154,10 @@ For starters, structural features influence research agendas, methods, and the c
 
 9 The causal story is, of course, more complex. Health outcomes depend not only on material and economic but also on social factors.
 
+
+<!-- PAGE 10 -->
+
+
 developed and deployed. Looking at who funds and directs AI research institutes that investigate the 'ethics' and 'fairness' of AI, even at universities that purport to uphold academic freedom and not shy away from critique, you will find it hard to resist the impression that the fox is guarding the hen house (Le Bui &amp; Noble, 2020). Indeed, the fox can just buy the hen house, or, in fact, the whole farm. Next to regulatory capture and cultural capture (Kwak, 2014), in AI governance there is now the problem of academic capture. Similarly, on a smaller scale, individual researchers or public administrators play a causal role in the governance of AI. Again, structural features relating to the social identities of AI's primary movers and shakers-being white, male, having a certain class background-in part explain how AI is developed and used. The structural lens thus brings into focus a strategic analysis of capital interests and ideology, and the causal relevance of social and economic categorical differences between individuals. Combine this structural explanation with a theory of justice, and you may get the result: AI is a form or a tool of structural injustice.
 
 Second, structural injustice is reflected in the data. The case study on AI in health provides an example: Patients who are similarly healthy differ in the medical expenses they incur, depending on their race. Similarly, crime data reflect policing practices just as they reflect actual criminality. In short, social structures explain the patterns of behavior and phenomena that data 'represent', and social structures condition practices that generate these data. In the case of Sandy, the available data might fail to account for her plight and the complexity of her case, but Sandy's story is likely to show up in data as in the form of significant disparities between different social groups: geographic segregation by race and class or the intergenerational transmission of wealth and opportunity. In an unjust status quo, data evidences-or can even be a driver of-structural injustice.
@@ -131,6 +168,10 @@ The following two points relate to fairness. There is a consensus in AI governan
 
 Fourth, structural injustice contributes heavily towards epistemic limits in determining whether an individual was fairly treated.  epistemology of fairness. Fairness requires treating like cases alike, but structural injustice makes it hard to tell which cases are alike in the first place.Was Lakisha not hired because of her race, or because Emily was objectively more qualified? If race
 
+
+<!-- PAGE 11 -->
+
+
 played a role, then the decision to hire Emily was unfair: Lakisha and Emily are alike (in relevant respects) but were not treated alike. Similarly, did Sandy have to cough up a large deposit for her new apartment because of stereotypes about the financial responsibility of black mothers? Fairness says that differences should matter to the degree that they exist in a just society. However, in a society rife with structural injustice, it is hard to distinguish between those differences that are caused by injustice and those differences that would persist even if the society were just. 10 This larger epistemic problem for fairness is compounded by a smaller one, namely, the fact that structural injustices accumulate and are therefore hard to track. In sum, structural injustice makes it epistemically hard to be fair (Zimmermann &amp; Lee-Stronach, forthcoming). Any AI that aims to be fair hence needs to account for structural injustice [Kate's recommendation]. In a slogan, there can be no fairness without an understanding of social structure and what injustice is due to structural maintaining causes. Even as AI might offer new opportunities to formalize and account for structural difference and injustice (Herington, 2020; Kusner &amp; Loftus, 2020), epistemic limitations remain (Ludwig &amp; Mullainathan, 2021).
 
 Fifth, entrenched social structures limit the efficacy of fairness for justice. Fairness often fails to produce justice, similar to how equality fails to produce equity. 'Fairness', like 'equality' is often understood as a formal condition or an intrinsic virtue of a decision procedure-think of how the maxim to treat like cases alike is a potent source of disparate treatment, under which persons of marginalized social identities are disadvantaged, intentionally or not, because of the failure to recognize salient differences between various groups. In theory, it may be 'fair' for prestigious degree programs to only admit students who score high on standardized tests, insofar as 'like' candidates are accepted or rejected on the basis of a criterion that applies to all prospective students. All the same, such requirements have had a disparate impact on members of communities who, owing to structural injustices, have lacked the educational resources to score relatively well on standardized tests (rather than being inherently less competent or suitable fits for the university's program). In an unjust status quo, in which injustice is maintained by social structures, a focus on fairness makes it instrumentally hard or perhaps even impossible to promote justice. Justice or 'equity', by contrast, may license unfair treatment for reasons of justice (Vredenburgh in this volume). Think, here, of preferential hiring and affirmative action. Such measures can affect structural change-by changing stereotypes, enabling role modeling, affording recognition-but such measures are arguably unfair in this specific sense. Social structure explains why a focus on fairness in AI might be insufficient for promoting justice.
@@ -138,6 +179,10 @@ Fifth, entrenched social structures limit the efficacy of fairness for justice. 
 Finally, social structures affect how AI interacts with the context in which it is deployed (consider cases of disparate impact). The lens of social structural explanations is indispensable for anticipating and analyzing the impact of AI. For example, if automatic license plate readers are deployed among arterial roads where Black Americans are more likely to live, Black Americans are more likely to be subject to the negative consequences of being falsely matched with a license plate on a 'hot list' of wanted plates. However, not all effects of structural injustice are so easy to anticipate. Most are not. For example, economic theories of home mortgages hide and
 
 10 Audit studies are one way of identifying such differences. The 'Lakisha' in this paragraph is a reference to one prominent audit study (Bertrand &amp; Mullainathan, 2004). However, their methodology is controversial.
+
+
+<!-- PAGE 12 -->
+
 
 entrench structural injustice (Herzog, 2017). If even social scientists struggle to capture structural injustice, engineering program managers, public administrators, or computer scientists cannot hardly be expected to succeed on their own. This is an important governance problem because understanding structural injustice is crucial for anyone seeking to anticipate and analyze the impacts of AI.
 
@@ -157,6 +202,10 @@ Such a harms-and-benefits approach surely has its place, but it suffers from sev
 
 12 A good example of a harms-based framework in AI that avoids some of these problems is Microsoft's Azure Architecture Application Guide (Microsoft, 2021).
 
+
+<!-- PAGE 13 -->
+
+
 Airbnb. Nevertheless, even language that is not obviously racialized may affect stereotypes and norms about Black Americans, in a way that is not best described as a 'harm' let alone one that is separately identifiable and affects specific individuals. Similarly, the use of beauty standards in advertising might not be harmful at all, let alone be harmful to a specific woman, but it may promote distorted beliefs about women as a whole and be a form of structural injustice (Widdows, 2021). Moreover, remember how structural injustice accumulates and compounds. Whereas an approach of harms and benefits identifies individual harms, it may fail to see the fuller picture of how these harms relate. The approach of structural injustice, by contrast, sees disadvantages holistically, compounded by others and adding to other disadvantages in turn.
 
 Second, the concepts of harms and benefits restrict the scope of ethical aspirations and values. Many values are not reducible to harms and benefits. 13 For example, some see it as important that an AI system is explicable or accountable to those subject to it (for clarification on what this means, see other chapters in this section). But the lack of explanations or the absence of accountability does not necessarily constitute a harm. Moreover, some technologies could be beneficial for individuals but still be morally wrong. For example, one can benefit from an intervention that they have not consented to. Suppose that, with the help of AI, your employer (or partner) secretly tracks your daily activities, including your dietary and exercise routines. They use these data to serve you lunches that optimize your health and well-being. Despite this benefit, intrusive surveillance without consent is morally off-putting, disturbing, and perhaps morally impermissible. In sum, again a framework of harms and benefits fails to capture the full picture. Governing AI with an eye only to harms and benefits would hence be a mistake. The approach of structural injustice, by contrast, brings into focus structural features such as class interests, economic power, or oppression-concepts that cannot be analyzed purely in terms of harms and their combination.
@@ -164,6 +213,10 @@ Second, the concepts of harms and benefits restrict the scope of ethical aspirat
 A third problem with a harms and benefits approach is that a workable account of harms and benefits will need to be accompanied with a theory of how, exactly, harms and benefits ought to be weighed and aggregated. Suppose that some unfortunate individual, Jones, has suffered an accident in the transmission room of a TV station (Scanlon, 1998, p. 235). Jones could be saved from one hour of excruciating pain, but to do so, we would have to cancel the broadcast of a football game, interrupting the pleasure experienced by enthusiastic football fans who are excited about the game. Intuitively, the harm that Jones suffers outweighs the harms that football fans would experience as a result of the canceled transmission. But this judgment depends on a theory of value-and a controversial one. One might argue that, if the number of football fans was sizable enough (e.g. millions of viewers), their collective pleasure might outweigh Jones's suffering. The aggregate benefit is greater than Jones' individual harm. Thus, despite its superficial simplicity, a harms and benefits approach requires a deeper set of principles that describe the aggregation of harms and benefits over individuals and over time. In the case of AI, we need a similar set of principles to justify why certain benefits (e.g. efficiency or economic benefits) ought to be outweighed by considerations of racial justice. But such a set of deeper principles is likely contested and incompatible with the value pluralism-and valuable
 
 13 Here, we understand 'harm' as the setting back of one's interests.
+
+
+<!-- PAGE 14 -->
+
 
 pluralism-in societies. The harms and benefits approach is thus neither theoretically simple and, likely, often incompatible with pluralism.
 
@@ -177,6 +230,10 @@ First, some organizations may see AI ethics as their mission but cannot, on thei
 
 Second, the task of governance may involve many actors with diverging or competing values. The approach of articulating ethical values and principles, and bringing them to life, cannot do much to reconcile differences. Similar to the problem of the harms and benefits approach, this is a major shortcoming since value pluralism is central to many issues-from the ethics of autonomous vehicles to the value alignment problem (Gabriel, 2020; Himmelreich, 2020).
 
+
+<!-- PAGE 15 -->
+
+
 Of course, such pluralism could be accommodated, if the principles are limited to some basic consensus. Such consensus or minimal principles could be ethical guardrails or democratic principles and values. In this vein, the state-and especially its courts and executive agencies-often purport to be based on values of this sort, neutral values or consensus values. But whether such neutrality is feasible and whether it is desirable is questionable (Wall, 2021, sec. 3.1). Moreover, there is likely a tradeoff between a set of values that is neutral and that can find consensus on the one hand, and a set of values that is interesting, promotes justice, and guides actions. Principles and values that may pass muster and count as neutral enough-such as respect for value pluralism or freedom of speech-might just not be informative enough to guide actions or regulations, let alone promote justice (Himmelreich, 2022).
 
 ## 3.3 Justice
@@ -189,6 +246,10 @@ Justice, by contrast, is concerned with normative requirements or considerations
 
 14 We use Williams here as an illustrative slogan since we disagree with the meta-normative view-political realism-that this quote conveys.
 
+
+<!-- PAGE 16 -->
+
+
 differently, justice is not primarily about treating people in line with ethical principles: instead, for justice, exercises of power must be justified to those subject to them. The approach of justice brings into focus questions of who may issue rules and whose word counts (authority), the processes in which such rules are made and enforced (legitimacy), and the reasons for the rules, decisions or actions (justification).
 
 The task of theories of justice is to normatively ground the regulation and interrogation of power. This applies to the legal system as well as to the markets and the economic system. Such systems cannot take any form that power-holders desire. They must be built or maintained in a way that makes sense to the persons who live within them. This is because, as Rawls insists, power must be legitimated to us because of its 'profound and present' effects on our lives-our life-prospects, goals, attitudes, relationships, characters (Rawls, 1971). Suffice to say, a society that persistently disadvantaged or subordinated persons on the basis of gender or race would be extremely difficult, if not entirely impossible, to legitimate. It is more than reasonable, for a Black man who is disproportionately subject to state-sanctioned police violence, to ask why he should be required to accept these social conditions. Quite obviously, a racist social arrangement would not 'make sense' to him or others in his position. Either way, then, theories of justice-whether as an extension or a reform of existing theories-are the right kind of theoretical framework to address fundamental normative issues in the governance of AI.
@@ -200,6 +261,10 @@ The approach of justice has hence several advantages over the alternative approa
 ## Diversity, Equity, and Inclusion in a Theory of Justice
 
 The approach of justice hence is more foundational than the alternative two approaches. We hope it can also be useful. To illustrate, consider how the approach of structural injustice in particular recognizes calls for greater Diversity, Equity, and Inclusion (DEI) as demands of justice . Articulated as demands of justice, DEI is not an attempt on the part of marginalized social groups to secure more power, resources, and advantage for themselves, as it is often uncharitably interpreted. Nor is it a mere matter of generosity or beneficence that would help to make the world a morally better place. From the perspective of justice, the values of DEI stand
+
+
+<!-- PAGE 17 -->
+
 
 on reasons that should have a hold on everyone regardless of their self-interest. Such reasons of justice weigh more heavily than the reasons to help others in need. Moreover, reasons of justice are important because the institutions in an unjust society often lack legitimacy and authority.
 
@@ -216,6 +281,10 @@ See:
 The pursuit of diversity and inclusion also relates to other ideas and values, not just to justice. Although https://www.theatlantic.com/magazine/archive/2017/04/why-is-silicon-valley-so-awful-to-women/517788/
 
 16 we focus on diversity and inclusion as requirements of justice, there can be other valuable instrumental benefits to diversity and inclusion, such as greater epistemic performance of a group. For example, with more diverse input, tech corporations might get better at developing helpful algorithms.
+
+
+<!-- PAGE 18 -->
+
 
 engineer of color to the team, and the work of DEI is done. By contrast, an approach of justice-especially an approach of structural injustice as that of Iris Young (2009)-looks to overall social conditions that determine or constrain our possibilities, not merely to individual contributions to individual groups. It serves as a reminder that structural disparities often continue to obtain even when certain individuals from diverse backgrounds may achieve great success within their occupation.  Existing theories of justice and structural injustice hence may not only ground the ideas of DEI, but may also enrich and clarify their content.
 
@@ -235,6 +304,10 @@ Justice and structure are closely related. A focus on justice requires a focus o
 
 17 Rawls asserts, 'the primary subject of justice is the basic structure of society, or more exactly, the way in which the major social institutions distribute fundamental rights and duties and determine the advantages from social cooperation' (1971, our emphasis). While we do not seek to defend a Rawlsian
 
+
+<!-- PAGE 19 -->
+
+
 In Rawls' picture, the subject of justice is the basic structure of a society, that is, all institutions, taken together and over time-including political, legal, economic, social, civil systems-that form the backdrop for life in this society.
 
 Rawls-not surprisingly-assumes a narrow and dated idea of the basic structure in several ways. First, Rawls pays relatively little attention to the individuals in the structure (Cohen, 1997). Individuals need to obey the law but they are not subject to demands of justice directly. Rawls concentrates instead largely on 'the political constitution and principal economic and social arrangements'. However, Rawls's articulation of the basic structure falls short in a different respect. While it briefly includes the 'monogamous family' as an example of a 'major social institution (Rawls 1971), the feminist philosopher Susan Okin sharply critiques Rawls's inattention to families-including family structures that are not necessarily 'monogamous' (Okin , 1989, p. 93) and provides a detailed elaboration on how family units can be major sites of social inequalities. Women are typically assumed to be responsible for performing the lion's share of domestic chores and caregiving labor, which may severely hamper their opportunities relative to men. Additionally, families are the 'first schools of moral development, where we first learn to develop a sense of justice' (Okin, 1989, p. 31). Here, the implication is that unjust family structures can hamper or distort our nascent capacities to observe just terms of cooperation under circumstances of conflicting interests and scarce resources. For these reasons, Okin believes that families must also be regulated by principles of justice. It is best to think of the basic structure as including not only the legal system and the economy, but also the family. The idea of the basic structure is thus not only closely related to ideas of justice, what counts as the basic structure is also not set in stone, not even when we think about justice in the tradition of Rawls.
@@ -246,6 +319,10 @@ In the age of AI, and the overwhelming power of 'Big Tech' to shape our everyday
 Iason Gabriel (2022) argues that it should. He argues that the basic structure of society is best understood as 'a composite of socio-technical systems ' that bring about 'new forms of stable institutional practice and behavior'. It would be mistaken to think of 'the political constitution and principal economic and social arrangements' as somehow removed or insulated from its interactions with technology. Instead, AI 'increasingly shapes elements of the basic structure in relevant ways'. It mediates the distribution of basic rights and duties, along with the advantages of social cooperation (Gabriel, 2022). The healthcare algorithm above is only one example. Public services-from policing to welfare, housing, and infrastructure-are increasingly
 
 theory of justice, nor is it necessary to spell out the exact principles of justice that Rawls has proposed, his work is foundational to how we understand the point and purpose of a theory of justice.
+
+
+<!-- PAGE 20 -->
+
 
 automated, with profound aggregate effects on those who are already disadvantaged (Eubanks, 2018).
 
@@ -269,6 +346,10 @@ Suppose that, in a fit of anger, I spitefully pour water onto your laptop to dam
 
 18 Given the purposes and limitations of this chapter, our treatment of the relevant substance here will be very superficial.
 
+
+<!-- PAGE 21 -->
+
+
 for what I have done. Of course, I am also substantively responsible for paying for your laptop. By contrast, suppose instead that I have accidentally spilled water on your laptop. It was an accident with no fault on my part. In this scenario, I am not attributively responsible for damaging your laptop but I can still be substantively responsible, due to the causal role I have played in damaging the laptop. Paying for the repair is still on me.
 
 For structural injustice, it seems best to focus on substantive responsibility. Even if individuals are not to blame for structural injustice, they can still be responsible for rectifying it. The goal of responsibility here is to identify and address individual actions, which may be blameless, but that may have generated injustice. Moreover, we can ask what social changes will prevent-or at least reduce the likelihood of-future structural disadvantage, even if they did not causally contribute to existing structural injustice. These are two paths of assigning responsibility, without blame, that operationalize the theory of structural injustice to affect structural reform. 19
@@ -280,6 +361,10 @@ In conclusion, the overall picture that we hoped to sketch in this chapter is th
 Appiah, K. A. (1990). Racisms. In D. T. Goldberg (Ed.), Anatomy of Racism (pp. 3-17). University of Minnesota Press. Ayala-López, S. (2018). A Structural Explanation of Injustice in Conversations: It's about Norms. Pacific Philosophical Quarterly , 99 (4), 726-748. https://doi.org/10.1111/papq.12244 Bertrand, M., &amp; Mullainathan, S. (2004). Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination. The American Economic Review , 94 (4), 991-1013. Boddington, P. (2020). Normative Modes: Codes and Standards. In M. D. Dubber, F. Pasquale, &amp; S. Das (Eds.), The Oxford Handbook of Ethics of AI (pp. 123-140). Oxford University
 
 19 To be clear, this does not mean that everyone is equally responsible for rectifying structural injustice. Depending on their social position, some participants in the relevant structure may have made greater causal contributions than others, and consequently have more burdensome responsibilities. Some participants may also have more power than others to rectify structural injustice. Finally, some agents may also still have attributive responsibility and be blameworthy for the injustices in which they are involved.
+
+
+<!-- PAGE 22 -->
+
 
 Press. https://doi.org/10.1093/oxfordhb/9780190067397.013.7
 
@@ -293,6 +378,10 @@ Press. https://doi.org/10.1093/oxfordhb/9780190067397.013.7
 - Eubanks, V. (2018). Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor . St. Martin's Press.
 - Fazelpour, S., &amp; Danks, D. (2021). Algorithmic bias: Senses, sources, solutions. Philosophy Compass , 16 (8), e12760. https://doi.org/10.1111/phc3.12760
 - Gabriel, I. (2020). Artificial Intelligence, Values, and Alignment. Minds and Machines , 30 (3),
+
+
+<!-- PAGE 23 -->
+
 
 411-437. https://doi.org/10.1007/s11023-020-09539-2
 
@@ -308,6 +397,10 @@ Press. https://doi.org/10.1093/oxfordhb/9780190067397.013.7
 - Hu, L., &amp; Kohler-Hausmann, I. (2020). What's sex got to do with machine learning? Proceedings of the 2020 Conference on Fairness, Accountability, and Transparency , 513. https://doi.org/10.1145/3351095.3375674
 - Kusner, M. J., &amp; Loftus, J. R. (2020). The long road to fairer algorithms. Nature , 578 (7793), 34-36. https://doi.org/10.1038/d41586-020-00274-3
 
+
+<!-- PAGE 24 -->
+
+
 - Kwak, J. (2014). Cultural capture and the financial crisis. In D. Carpenter &amp; D. A. Moss (Eds.), Preventing regulatory capture: Special interest influence and how to limit it (pp. 79-81). Cambridge University Press.
 - (pp. 161-179). Oxford
 - Le Bui, M., &amp; Noble, S. U. (2020). We're Missing a Moral Framework of Justice in Artificial Intelligence: On the Limits, Failings, and Ethics of Fairness. In M. D. Dubber, F. Pasquale, &amp; S. Das (Eds.), The Oxford Handbook of Ethics of AI University Press. https://doi.org/10.1093/oxfordhb/9780190067397.013.9
@@ -320,6 +413,10 @@ Press. https://doi.org/10.1093/oxfordhb/9780190067397.013.7
 - Mittelstadt, B. (2019). Principles alone cannot guarantee ethical AI. Nature Machine Intelligence , 1 (11), 501-507. https://doi.org/10.1038/s42256-019-0114-4
 - Nuti, A. (2019). Injustice and the Reproduction of History: Structural Inequalities, Gender and Redress . Cambridge University Press.
 - Obermeyer, Z., Powers, B., Vogeli, C., &amp; Mullainathan, S. (2019). Dissecting racial bias in an
+
+
+<!-- PAGE 25 -->
+
 
 - algorithm used to manage the health of populations. Science , 366 (6464), 447-453. https://doi.org/10.1126/science.aax2342
 
@@ -343,6 +440,10 @@ https://doi.org/10.1111/phc3.12782
 - marketing of black communities in New York City. Environment and Planning A: Economy and Space , 52 (3), 553-572. https://doi.org/10.1177/0308518X19886321
 - Wall, S. (2021). Perfectionism in Moral and Political Philosophy. In E. N. Zalta (Ed.), The Stanford Encyclopedia of Philosophy (Fall 2021). Metaphysics Research Lab, Stanford University. https://plato.stanford.edu/archives/win2017/entries/perfectionism-moral/
 - (10), e12782.
+
+
+<!-- PAGE 26 -->
+
 
 - Whittlestone, J., Nyrup, R., Alexandrova, A., &amp; Cave, S. (2019). The Role and Limits of Principles in AI Ethics: Towards a Focus on Tensions . 7.
 - Widdows, H. (2021). Structural injustice and the Requirements of Beauty. Journal of Social Philosophy , 52 (2), 251-269. https://doi.org/10.1111/josp.12369

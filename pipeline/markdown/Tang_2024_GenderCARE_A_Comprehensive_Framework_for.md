@@ -1,10 +1,11 @@
 ---
 source_file: Tang_2024_GenderCARE_A_Comprehensive_Framework_for.pdf
-conversion_date: 2026-02-03T09:26:32.211690
+conversion_date: 2026-02-03T18:57:33.893803
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 .
@@ -117,6 +118,10 @@ October 14 - 18, 2024 UT, Salt Lake City, USA
 
 Conference Sponsors: SIGSAC
 
+
+<!-- PAGE 2 -->
+
+
 ## ABSTRACT
 
 Large language models (LLMs) have exhibited remarkable capabilities in natural language generation, but they have also been observed to magnify societal biases, particularly those related to gender. In response to this issue, several benchmarks have been proposed to assess gender bias in LLMs. However, these benchmarks often lack practical flexibility or inadvertently introduce biases. To address these shortcomings, we introduce Gender CARE , a comprehensive framework that encompasses innovative C riteria, bias A ssessment, R eduction techniques, and E valuation metrics for quantifying and mitigating gender bias in LLMs. To begin, we establish pioneering criteria for gender equality benchmarks, spanning dimensions such as inclusivity, diversity, explainability, objectivity, robustness, and realisticity. Guided by these criteria, we construct GenderPair, a novel pair-based benchmark designed to assess gender bias in LLMs comprehensively. Our benchmark provides standardized and realistic evaluations, including previously overlooked
@@ -154,6 +159,10 @@ Large Language Models; Gender Bias; Algorithmic Fairness; AI Security
 
 Kunsheng Tang, Wenbo Zhou, Jie Zhang, Aishan Liu, Gelei Deng, Shuai Li, Peigui Qi, Weiming Zhang, Tianwei Zhang, and Nenghai Yu. 2024. GenderCARE: A Comprehensive Framework for Assessing and Reducing Gender Bias in Large Language Models. In Proceedings of the 2024 ACM SIGSAC
 
+
+<!-- PAGE 3 -->
+
+
 Conference on Computer and Communications Security (CCS '24), October 14-18, 2024, Salt Lake City, UT, USA. ACM, New York, NY, USA, 15 pages. https://doi.org/10.1145/3658644.3670284
 
 Warning: This paper contains examples of gender non-affirmative language that could be offensive, upsetting, and/or triggering.
@@ -182,6 +191,10 @@ To address the above research questions, we introduce our Gender CARE framework,
 
 Criteria for Gender Equality Benchmarks. Inspired by the National Institute of Standards and Technology's (NIST) criteria on trustworthy AI [35], and following the White House's National Gender Equality Strategy [23], we establish new criteria for gender equality benchmarks (CGEB), encompassing six dimensions: inclusivity, diversity, explainability, objectivity, robustness, and realisticity. Briefly, 1) Inclusivity ensures the recognition of multiple gender identities including TGNB beyond the binary; 2) Diversity implies a broad source of bias, such as societal roles and professions, covering various aspects of gender bias; 3) Explainability mandates that each assessment data in the benchmark is interpretable and traceable; 4) Objectivity focuses on minimal human intervention during the benchmark construction; 5) Robustness refers to the
 
+
+<!-- PAGE 4 -->
+
+
 consistency of assessment results across different prompt structures and their effectiveness across various model architectures; 6) Realisticity ensures that the benchmark data are rooted in realworld scenarios. It aims to assess open-ended responses that mimic realistic interactions, making the benchmark relevant and practical. Assessment of Gender Bias in LLMs. To align with the above criteria, we propose a novel pair-based construction method, which involves the creation of sets containing descriptors that encompass both biased and anti-biased representations for each gender identity. These pair sets serve as prompts for models, prompting them to select a descriptor and generate coherent text. The assessment of bias levels is based on both the choice ratio of descriptors and the content of the generated text. Based on this method, we develop a new gender bias assessment benchmark, GenderPair , which includes prompts with three components: 1) pair sets, which encompass collections of descriptors that articulate both biases and anti-biases for each gender identity, e . g ., 'shitty' and 'excellent' for 'male' gender identity; 2) instructions to guide the model in descriptor selection and text generation; 3) requirements to facilitate the inclusion of precise criteria to enhance the assessment process. Some examples for GenderPair can be seen in Table 1. To pursue inclusivity, GenderPair integrates descriptors from diverse sources, including media comments and occupational gender ratio analyses. This ensures that the benchmark adheres to principles such as diversity, explainability, objectivity, and realism, as outlined in the criteria for gender equality benchmarks. Extensive experiments demonstrate the robustness of our GenderPair .
 
 Reduction of Gender Bias in LLMs. To reduce gender bias without compromising the overall performance, we employ a dualpronged approach that focuses on both dataset debiasing and finetuning strategies. Specifically, (1) we leverage counterfactual data augmentation [57] combined with GenderPair to construct antibiased debiasing datasets. To achieve this, we first construct debiasing texts from the real world using anti-biased descriptors for each gender group. These texts are then reviewed by experts and GPT-4 [5] to ensure equal emotional representation and non-biased content across different gender groups. (2) We apply low-rank adaptation fine-tuning [25] to update the model parameters related to specific gender biases while keeping others fixed, thus reducing gender bias while maintaining model performance.
@@ -206,6 +219,10 @@ Before looking into the nuances of gender bias, it is essential to distinguish b
 
 With this understanding of gender, we can define gender bias as prejudicial attitudes or discriminatory actions based on an individual's gender identity. Gender bias manifests in harmful stereotypes and unequal treatment, affecting not just women and men but all genders across the spectrum. It can be both overt and subtle, embedded in societal norms and influencing perceptions across different communities [13]. This broader perspective is essential for
 
+
+<!-- PAGE 5 -->
+
+
 a comprehensive approach to gender bias, addressing the specific challenges faced by various gender identities, including marginalized transgender and non-binary (TGNB) identities.
 
 ## 2.2 Gender Bias in Large Language Models
@@ -229,6 +246,10 @@ Template-based approaches offer a straightforward and simple way to manipulate g
 The primary advantage of phrase-based approaches is their intuitive nature, closely aligning with natural language processes, thereby providing a more realistic setting for bias assessment. However, its one significant limitation is the potential biases inherent in the phrases themselves. For instance, as illustrated in Fig. 1, an analysis of the BOLD dataset reveals biases in the seed phrases. The dataset's division shows biased descriptions in the seed phrases for both gender groups. This raises concerns about the objectivity of the dataset, as the inherent biases in the prompts could lead to skewed results. Another limitation arises from the dataset's reliance on public resources like Wikipedia. According to Kotek et al. [29], the complete original content corresponding to the seed phrase, extracted from the widely used public domain, may be included in the model's training data, which can subsequently affect the objectivity of the assessment results.
 
 2.3.3 Option-based benchmarks. Option-based approaches present statements with multiple response choices, including biased, neutral, and unrelated options. A notable example is StereoSet [33], a benchmark designed to evaluate bias in language models. Within
+
+
+<!-- PAGE 6 -->
+
 
 Figure 1: Illustration of the limitations of template-based benchmarks (left) and phrase-based benchmarks (right).
 
@@ -256,6 +277,10 @@ Inclusivity. This ensures the recognition and inclusion of multiple gender ident
 
 Diversity. We consider a wide array of sources and contexts that may give rise to potential biases. These sources include societal roles, professions, and cultural norms. This dimension ensures the benchmarks encompass various facets of gender bias, thus capturing the intricate and multifaceted nature of gendered experiences. Explainability. This necessitates that every element of assessment data is presented in a clear, interpretable, and traceable manner. Such transparency is crucial for understanding how and why certain biases are identified, enabling more effective strategies for helping us comprehend the methods and reasons behind the identification of particular biases. It empowers us to devise more effective strategies
 
+
+<!-- PAGE 7 -->
+
+
 Figure 2: The GenderCARE framework for comprehensive gender bias assessment and reduction in LLMs. It consists of four key components: (I) Criteria for gender equality benchmarks; (II) Assessment of gender bias in LLMs using the proposed GenderPair benchmark aligned with the criteria; (III) Reduction of gender bias via counterfactual data augmentation and fine-tuning strategies; (IV) Evaluation metrics at both lexical and semantic levels for bias quantification.
 
 <!-- image -->
@@ -280,6 +305,10 @@ Robustness. This pertains to the reliability and consistency of assessment outco
 Realisticity. This dimension ensures that the benchmark data are 1) grounded in real-world scenarios and 2) capable of assessing open-ended responses similar to natural interactions. It is critical to ensure that the benchmarks are relevant and applicable to reallife situations, providing meaningful insights into the practical implications of gender bias in language models.
 
 By integrating these six dimensions into CGEB, we aim to overcome the current constraints associated with establishing benchmarks for gender equality. This methodical approach is carefully designed to create a dependable and all-encompassing framework, which is essential for developing gender bias benchmarks that not only exhibit robustness but also align with practical, real-world
+
+
+<!-- PAGE 8 -->
+
 
 requirements. Through these efforts, we strive to promote the advancement of more equitable and inclusive language technologies.
 
@@ -331,6 +360,10 @@ Anti-Biased Descriptors . For anti-biased descriptors, we employ counterfactual 
 
 3.3.2 Instructions . In the GenderPair benchmark, the Instructions component of each assessment prompt is designed to guide the model in selecting an appropriate descriptor from the Pair Set and
 
+
+<!-- PAGE 9 -->
+
+
 Table 2: Summary of the elements in the pair set utilized by the GenderPair benchmark. We delineate the distribution of gender targets, biased and anti-biased descriptors, and prompts across three distinct gender groups. The details of each element are documented in the appendix, available at our GitHub repository.
 
 |               | Gender Targets   | Gender Targets   | Gender Targets   | Gender Targets   | # Biased    | # Anti-Biased Descriptors   |           |
@@ -374,6 +407,10 @@ In conclusion, by carefully constructing a debiasing dataset through CDA and emp
 
 To assess the gender bias of the output from the target LLMs, we employ three distinct metrics at both the lexical and semantic levels.
 
+
+<!-- PAGE 10 -->
+
+
 Table 3: Comparison with gender bias benchmarks. means satisfied while means partially satisfied.
 
 | Criteria                                                                 | Winoqueer [17] BOLD [14] StereoSet [33] Ours   | Winoqueer [17] BOLD [14] StereoSet [33] Ours   | Winoqueer [17] BOLD [14] StereoSet [33] Ours   | Winoqueer [17] BOLD [14] StereoSet [33] Ours   |
@@ -412,6 +449,10 @@ In Sec. 5.1, we analyze the effectiveness of various gender bias benchmarks with
 ## 5.1 Comparative Analysis of Gender Bias Benchmarks (RQ1)
 
 As shown in Table 3, Winoqueer [17] includes TGNB identities, satisfying inclusivity but lacks diversity due to missing diverse bias sources like societal roles. While systematic template modifications enhance objectivity, the approach's transparency issues and inherent fragility compromise its explainability and robustness. Despite integrating TGNB community feedback, Winoqueer's template reliance limits its realisticity in mirroring real-world discourse. BOLD [14] employs a phrase-based approach that connects biases to phrases sourced from Wikipedia. While this offers clear explainability and robustness, it also poses risks of inheriting biases due to the reliance on public resources, thus compromising objectivity. Moreover, due to the limited representation of various gender identities, it falls short of inclusivity and diversity. Furthermore, the assessing data lacks representation from the real world, leading to a shortfall in realisticity. StereoSet [33] is lauded for its robustness, adaptability across different model architectures, and imperviousness to variations in prompt structures. However, as
+
+
+<!-- PAGE 11 -->
+
 
 Table 4: Assessing gender bias for LLMs on our GenderPair benchmark. For each column, the gray area and the underlined value are the best and worst case, respectively. 𝜎 denotes the standard deviation among 3 groups.
 
@@ -456,6 +497,10 @@ In contrast, our GenderPair benchmark covers all dimensions, offering an inclusi
 
 The assessment of gender bias in LLMs using the GenderPair Benchmark is delineated in Table 4. The analysis reveals that models with a larger parameter (13B) generally exhibit a reduced level of bias across three distinct evaluation metrics, in contrast to the smaller (7B parameters). Specifically, the Llama2\_13B emerges as the most effective in diminishing gender bias. This is substantiated by its minimal Bias-Pair Ratio of 0.42 for Group 2, alongside low toxicity scores of 0.01 across all groups, and a consistently
 
+
+<!-- PAGE 12 -->
+
+
 Table 6: Reducing gender bias for LLMs by our debiasing strategy, assessed across three existing bias benchmarks. Here, perplexity scores have been normalized probabilistically, and we omit 'Unrelated' options in the StereoSet as they are not pertinent to our assessment. Δ = Perplexity(Stereo More) -Perplexity(Stereo Less).
 
 | Models     | Winoqueer   | Winoqueer   | Winoqueer         | (Perplexity)   | (Perplexity)   | (Perplexity)     | (Perplexity)   | (Perplexity)   | (Perplexity)     | StereoSet (Perplexity)   | StereoSet (Perplexity)   | StereoSet (Perplexity)   |
@@ -490,6 +535,10 @@ On the other hand, Table 7 shows the performance change of the debiased LLMs on 
 5.4.1 Robustness to Different Prompt Structures. To evaluate the robustness of our GenderPair benchmark against variations in the prompt structure, we conduct tests on two representative LLMs, Alpaca and Vicuna, using three distinct prompt types: Type 1 incorporates the prompt structure as outlined in Sec. 3.3, Type 2 maintains the essence of the original instructions but articulates them differently, and Type 3 employs the alternative symbol for marking in the requirements delineated in Type 1 prompts. As shown in Fig. 3, there are only minimal fluctuations within 0.02 across the Bias-Pair Ratio, Toxicity, and Regard metrics for all three types, affirming the robustness of our benchmark against variations in prompt structure.
 
 5.4.2 Extension to Other LLM Architectures. Besides the llama architecture, we apply the GenderPair to other three distinct LLM architectures to assess its versatility across diverse model architectures, as described in Table 8. The results demonstrate that GenderPair can provide effective gender bias quantifications for different model types. Specifically, the Falcon model exhibits excellent
+
+
+<!-- PAGE 13 -->
+
 
 Table 7: Overall performance change of debiased LLMs on GLUE [49] and MMLU [22]. The outcomes are quantified using the Accuracy metric, indicating fluctuations within a 2% range in the models' overall performance. The gray and the underlined areas represent the minimum and maximum fluctuations, respectively.
 
@@ -536,6 +585,10 @@ Although Gender CARE enables robust quantification of gender bias in LLMs, there
 
 In this paper, we present Gender CARE , a comprehensive framework to assess and reduce gender bias in LLMs. Our approach addresses pertinent gaps in existing gender bias research across four interconnected facets: benchmark criteria, bias assessment, reduction, and quantification. Specifically, we propose novel criteria
 
+
+<!-- PAGE 14 -->
+
+
 Table 8: Application of GenderPair on other three different LLM architectures, besides the llama architecture. For each column, the gray area and the underlined value are the best and worst case, respectively.
 
 |                     | Bias-Pair Ratio ( ↓ )                           | Bias-Pair Ratio ( ↓ )                           | Bias-Pair Ratio ( ↓ )                           | Toxicity ( ↓ )                                  | Toxicity ( ↓ )                                  | Toxicity ( ↓ )                                  | Toxicity ( ↓ )   | Regard         | Regard         | Regard         | Regard         | Regard         | Regard         | Regard         |
@@ -575,6 +628,10 @@ This work is supported in part by the Natural Science Foundation of China under 
 - [13] Marta R. Costa-jussà. 2019. An analysis of gender bias studies in natural language processing. Nat. Mach. Intell. 1, 11 (2019), 495-496. https://doi.org/10.1038/ S42256-019-0105-5
 - [14] Jwala Dhamala, Tony Sun, Varun Kumar, Satyapriya Krishna, Yada Pruksachatkun, Kai-Wei Chang, and Rahul Gupta. 2021. BOLD: Dataset and Metrics for Measuring Biases in Open-Ended Language Generation. In FAccT '21: 2021 ACM Conference on Fairness, Accountability, and Transparency, Virtual Event
 
+
+<!-- PAGE 15 -->
+
+
 - / Toronto, Canada, March 3-10, 2021 . ACM, 862-872. https://doi.org/10.1145/ 3442188.3445924
 - [15] Alice Eagly, Christa Nater, and et al. 2020. Gender stereotypes have changed: A cross-temporal meta-analysis of US public opinion polls from 1946 to 2018. American psychologist 75, 3 (2020), 301.
 - [16] Naomi Ellemers. 2018. Gender stereotypes. Annual review of psychology 69 (2018), 275-298.
@@ -611,6 +668,10 @@ This work is supported in part by the Natural Science Foundation of China under 
 - [47] Aniket Vashishtha, Kabir Ahuja, and Sunayana Sitaram. 2023. On Evaluating and Mitigating Gender Biases in Multilingual Settings. In Findings of the Association for Computational Linguistics: ACL 2023, Toronto, Canada, July 9-14, 2023 . Association for Computational Linguistics, 307-318. https://doi.org/10.18653/ V1/2023.FINDINGS-ACL.21
 - [48] Bertie Vidgen, Tristan Thrush, Zeerak Waseem, and Douwe Kiela. 2021. Learning from the Worst: Dynamically Generated Datasets to Improve Online Hate Detection. In Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing, ACL/IJCNLP 2021, (Volume 1: Long Papers), Virtual Event, August 1-6, 2021 . Association for Computational Linguistics, 1667-1682. https://doi.org/10.18653/V1/2021.ACL-LONG.132
 - [49] Alex Wang, Amanpreet Singh, Julian Michael, Felix Hill, Omer Levy, and Samuel R. Bowman. 2018. GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding. In Proceedings of the Workshop: Analyzing and Interpreting Neural Networks for NLP, BlackboxNLP@EMNLP 2018, Brussels, Belgium, November 1, 2018 . Association for Computational Linguistics, 353-355.
+
+
+<!-- PAGE 16 -->
+
 
 https://doi.org/10.18653/V1/W18-5446
 

@@ -16,7 +16,7 @@ Die Identifikationsphase nutzt KI-gestuetzte Deep Research statt traditioneller 
 
 ---
 
-## Thematisches Assessment-Schema (FemPrompt)
+## Human Assessment (10 binaere Kategorien)
 
 ### Forschungsfrage
 
@@ -74,9 +74,9 @@ Ein Paper wird eingeschlossen, wenn beide Bedingungen erfuellt sind:
 
 ---
 
-## LLM-Assessment (SozArb)
+## LLM Assessment (5 Dimensionen)
 
-Fuer das SozArb-Projekt wurde ein automatisiertes 5-dimensionales Scoring-System entwickelt:
+Automatisiertes 5-dimensionales Scoring-System:
 
 ### Relevanz-Dimensionen (0-3 Skala)
 

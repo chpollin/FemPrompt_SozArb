@@ -1,10 +1,11 @@
 ---
 source_file: Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences.pdf
-conversion_date: 2026-02-03T09:24:01.531455
+conversion_date: 2026-02-03T18:55:13.722834
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 1234567890():,;
 
 1234567890():,;
@@ -32,6 +33,10 @@ Recent developments in generative AI technologies, such as large language models
 1 King ' s College London, London, UK. 2 Beth Israel Deaconess Medical Center &amp; Harvard Medical School, Boston, MA, USA. e-mail: steven.siddals@kcl.ac.uk
 
 <!-- image -->
+
+
+<!-- PAGE 2 -->
+
 
 Generative AI ' s capabilities represent a signi /uniFB01 cant opportunity for digital mental health 37 , with media reports of increasing consumer usage 38,39 , one meta-analysis /uniFB01 nding generative AI chatbots more effective than rule-based ones at reducing psychological distress 40 , and a pilot study showing promising results from ChatGPT usage in psychiatric inpatient care 41 . However, this new technology also brings new challenges, including potential risks of harm and questions of liability 42 ; trustworthiness issues such as the tendency to output incorrect or fabricated content (to ' hallucinate ' ), lack of predictability or interpretability, and inherent biases in training data 43 ; and the need to demonstrate clinical effectiveness 44 .
 
@@ -75,6 +80,10 @@ Despite overall positive experiences, a majority of participants also experience
 
 <!-- image -->
 
+
+<!-- PAGE 3 -->
+
+
 <!-- image -->
 
 example, with irrelevant or overly long responses, or offering advice before the user felt fully heard -
@@ -98,6 +107,10 @@ I was like, I have a depression. I don ' t know what to do next. So [the chatbot
 In addition to creating space for emotions, most participants also valued the guidance and advice they received, especially on relationships. Some participants mentioned that it helped them see the other person ' s perspective in con /uniFB02 ict, or coached them through dif /uniFB01 cult relationship situations -
 
 It made sense of my husband ' s behaviour and position in a way that I wouldn ' t have been able to by myself … and now I can respond to him in a more helpful way -Barry, 44, United Kingdom
+
+
+<!-- PAGE 4 -->
+
 
 Others mentioned the chatbot helped them /uniFB01 nd healthier, clearer boundaries -
 
@@ -165,6 +178,10 @@ Pi and my therapist, they agree with each other … they would say the same thin
 
 JeeP ' s experiences with the chatbot helped him to start therapy with a human -
 
+
+<!-- PAGE 5 -->
+
+
 It ' s sort of helped me seek actual therapy and be much more comfortable speaking to a therapist -JeeP, 60, United States
 
 Many participants turned to chatbots because therapy was not an option, either due to cost and availability, or because therapy did not give them the help they were looking for.
@@ -211,6 +228,10 @@ Onthe topic of safety, our study offers observations in two areas. First, the in
 
 Thesecondobservation on safety relates to how generative AI chatbots respond to users in crisis. Given the unpredictable ' black box ' nature of
 
+
+<!-- PAGE 6 -->
+
+
 Fig. 4 | Comparative summary of perceptions of generative AI chatbots, rule-based chatbots, and human therapy. Arrows point to the intervention with the perceived advantage. The advantages of rule-based AI chatbots summarise the literature mentioned in the introduction, all other comparisons are perceptions taken from participant interviews. The comparisons are suggestive and should be interpreted with caution.
 
 <!-- image -->
@@ -234,6 +255,10 @@ Our study has some limitations. While our convenience sampling strategy resulted
 Aswithall re /uniFB02 exive thematic analysis, there is a degree of subjectivity in how themes are developed, especially when conducted by a sole researcher (SS). However, this also affords a level of immersion in the data across themesandparticipantsthat can promoteconsistency anddepthofanalysis, with AC ' s reviews of codes and themes helping to ensure rigour and validity.
 
 In conclusion, generative AI chatbots show potential to provide meaningful mental health support, with participants reporting high engagement, positive impacts, and novel experiences in comparison with existing DMHIs. Further research is needed to explore their effectiveness and to /uniFB01 nd a more nuanced approach to safety, while developers should focus on improving guardrails, listening skills, memory, and therapeutic guidance. If these challenges can be addressed, generative AI chatbots could become a scalable part of the solution to the mental health treatment gap.
+
+
+<!-- PAGE 7 -->
+
 
 ## Methods
 
@@ -283,6 +308,10 @@ Received: 20 June 2024; Accepted: 15 October 2024;
 6. Torous, J., Benson, N. M., Myrick, K. &amp; Eysenbach, G. Focusing on digital research priorities for advancing the access and quality of mental health. JMIR Ment. Health 10 , e47898 (2023).
 7. Bond, R. R. et al. Digital transformation of mental health services. Npj Ment. Health Res. 2 , 13 (2023).
 
+
+<!-- PAGE 8 -->
+
+
 8. Goldberg, S. B., Lam, S. U., Simonsson, O., Torous, J. &amp; Sun, S. Mobile phone-based interventions for mental health: A systematic meta-review of 14 meta-analyses of randomized controlled trials. PLOS Digit. Health 1 , e0000002 (2022).
 9. Groot, J. et al. The effectiveness of fully automated digital interventions in promoting mental well-being in the general population: systematic review and meta-analysis. JMIR Ment. Health 10 , e44658 (2023).
 10. Garrido, S. et al. What works and what doesn ' t work? A systematic review of digital mental health interventions for depression and anxiety in young people. Front. Psychiatry 10 , 759 (2019).
@@ -322,6 +351,10 @@ Received: 20 June 2024; Accepted: 15 October 2024;
 44. Chung, N. C., Dyer, G. &amp; Brocki, L. Challenges of Large Language Modelsfor Mental Health Counseling. Preprint at http://arxiv.org/abs/ 2311.13857 (2023).
 45. Milne-Ives, M., Selby, E., Inkster, B., Lam, C. &amp; Meinert, E. Arti /uniFB01 cial intelligence and machine learning in mobile apps for mental health: A scoping review. PLOS Digit. Health 1 , e0000079 (2022).
 46. Cho, Y., Rai, S., Ungar, L., Sedoc, J. &amp; Guntuku, S. An ' Integrative Survey on Mental Health Conversational Agents to Bridge Computer Science and Medical Perspectives ' . in Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing 11346 -11369 (Association for Computational Linguistics, Singapore, 2023). https://doi.org/10.18653/v1/2023.emnlp-main.698.
+
+
+<!-- PAGE 9 -->
+
 
 47. Braun, V. &amp; Clarke, V. Using thematic analysis in psychology. Qual. Res. Psychol. 3 , 77 -101 (2006).
 48. Maples, B., Cerit, M., Vishwanath, A. &amp; Pea, R. Loneliness and suicide mitigation for students using GPT3-enabled chatbots. Npj Ment. Health Res. 3 , 4 (2024).

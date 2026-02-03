@@ -1,10 +1,11 @@
 ---
 source_file: Ng_2022_Using_digital_story_writing_as_a_pedagogy_to.pdf
-conversion_date: 2026-02-03T09:11:04.152728
+conversion_date: 2026-02-03T18:42:36.079820
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 <!-- image -->
 
 GLYPH&lt;0&gt;,GLYPH&lt;0&gt;QGLYPH&lt;0&gt;WGLYPH&lt;0&gt;HGLYPH&lt;0&gt;OGLYPH&lt;0&gt;OGLYPH&lt;0&gt;LGLYPH&lt;0&gt;JGLYPH&lt;0&gt;HGLYPH&lt;0&gt;QGLYPH&lt;0&gt;FGLYPH&lt;0&gt;H
@@ -53,6 +54,10 @@ Researchers have already started to design pedagogy for students to learn about 
 
 GLYPH&lt;0&gt;GLYPH&lt;20&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;GLYPH&lt;0&gt;GLYPH&lt;19&gt;
 
+
+<!-- PAGE 2 -->
+
+
 Ng &amp; Chu, 2021a; Rodríguez-García et al., 2020). For example, Rodríguez-García et  al.  (2020)  evaluated  LearningML,  a  machine  learning model builder, to encourage students to understand AI applications and how  it  can  affect  our  lives,  as  well  as  knowing  the  ethical  issues regarding  AI  technologies.  Ng  and  Chu  (2021)  designed  an  informal learning experience for students to stylise and create an AI-driven stylised picture, and explore AI via gamification and online collaboration in a social networking site.
 
 A considerable amount of research studies have identified digital story writing (DSW) is an effective inquiry-based pedagogical approach to enhance 21st century digital skills including information, media and technological  literacy  across  disciplines  such  as  STEAM  education, computer science, and health studies (Frazel, 2010; Gubrium, 2009; Hill &amp; Grinnell, 2014; Wu et al., 2020). As discussed, AI literacy is considered as one of the digital skills that people need to learn. We proposed that digital story creation could have a great potential to combine its pedagogy (e.g., inquiry-based learning) and related digital skills (e.g., information seeking, digital drawing, using AI-driven tools). This could enhance  children ' s  ability  to  acquire  and  apply  AI  knowledge,  and create their stories to restructure their knowledge and demonstrate their understanding about AI (Julie et al., 2020; Wong et al., 2020). Through reading and  writing stories, students can scaffold their AI  understandings, and apply what they have learnt to construct stories and share views with their peers to co-construct knowledge when appreciating  and  critiquing  other  students ' work.  During  the  DSW  process, students  could  use  AI-driven  tools  such  as  proofreading  software, translation tools and recommendation systems to facilitate their story creation. Therefore, this is meaningful to discuss the possibility of using DSW as a pedagogy to teach/learn AI literacy.
@@ -96,6 +101,10 @@ Table 1 Characteristics of the participants.
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 3 -->
+
+
 Table 2 Coding framework of AI literacy
 
 .
@@ -132,6 +141,10 @@ Second, DSW provides a strong foundation in multimodal literacies by shifting ve
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 4 -->
+
+
 Table 4
 
 | Five phases in inquiry-based Phases   | learning. Inquiry-based learning                                                                                                                                                                                                                                                                                                                                                               | Using AI-driven chatbot as an example                                                                                                                                                                                                                                                                                                         |
@@ -157,6 +170,10 @@ Other  studies  also  suggested  the  roles  of  reading  and  writing  to scaff
 A review was conducted by Pedaste et al. (2015) in response to this research gap and developed a five-phase inquiry-based learning model based on learners ' perspectives in 32 studies. This model summarises the core features of the inquiry-based learning process that combines the strengths of the existing studies. The review categorised a list of 109 learning  behaviours  (e.g.,  observation,  finding  a  topic,  searching  for information,  synthesizing)  to  formulate  the  five  phases  including orientation, conceptualization, investigation, conclusion and discussion. Among these studies, two studies focused on students ' development of computer and technological literacy in the context of science learning. Zhang  and  Quintana  (2012)  applied  an  online  inquiry  approach  to facilitate students to generate scientific questions, search for
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 5 -->
+
 
 information on the web, evaluate and make sense of online information, and integrate different pieces of information to formulate solutions to solve  problems.  Furthermore,  Wecker  et  al.  (2007)  designed  an inquiry-based  environment  for  37  students  in  a  secondary  school working in pairs on the project 'How far does light go? ' to enhance their technological literacy  skills  (procedural  computer-related  knowledge, self-confidence in using the computer, and familiarity with computers). Since AI has become one of the important technological skills in the twenty-first  century, we can see the potential of using this model to examine students ' development of AI literacy via the DSW processes. Table 4 describes how inquiry-based learning is applied in digital story reading  and  writing  processes  using  AI-driven  chatbot  design  as  an example.
 
@@ -192,6 +209,10 @@ Table 5 Lesson design.
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 6 -->
+
+
 their future roles in our society. Second, to create a digital story, students learnt how to use AI-driven translation software to translate their stories  from  their  native  language  into  English,  and  AI-driven  image stylizers to create some illustrations in their digital story books. These tasks are important for students to learn the AI applications through designing multimedia elements in their digital stories. At the end of the third  month,  all  participating  students  were  invited  to  present  their stories and the teachers will assess them according to the rubrics. Students could appreciate and critique each other ' s work.
 
 ## 3.2. Student and parent interviews
@@ -217,6 +238,10 @@ A student Hai shared her story about an AI-driven waiter to show how students ap
 In addition to using and applying AI concepts in different scenarios, students  learn  how  to  use  AI-driven  tools  to  conduct  specific  tasks. During the workshop, instructors  introduced students  to  different  AI tools to generate stunning visuals, profound poetry and transcendent music. Students could use AI tools to create artwork, compositions and music  pieces  that  are  aesthetically  pleasing  without  mastering  the painting, writing and composing techniques. In our workshop, creative
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 7 -->
+
 
 machine learning techniques and AI-driven tools were demonstrated to encourage students to create artwork. The nature of art and the role of human  creativity  in  the  future  start  to  become  reachable.  Students explore  tools  and  techniques  such  as  neural  networks  across  various forms of media such as text, images and music to enhance students ' creative and imaginative capabilities which facilitate students to enrich the multimedia elements in their digital story books. For example, students chose a photo or artwork (Houses), and chose a painting style (Van Gogh style) to design a new artwork (houses in Van Gogh style) (see Fig. 1). Students can also change some settings of the finalised work such as gradients, brush and colour adjustment. After discussing the ' drawing ' techniques, it is important to highlight ethical issues about generative  AI  including  the  ownership  of  artwork  and  generation  of  fake media throughout the workshop. In other words, we encourage students to use and apply AI tools ethically.
 
@@ -244,6 +269,10 @@ Fig. 1. Examples to stylish photos into an artwork (https://deepart.io).
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 8 -->
+
+
 Fig. 2. Screenshot of building a machine learning model in Scratch.
 
 <!-- image -->
@@ -262,6 +291,10 @@ This  study  provided  qualitative  evidence  regarding  primary  students ' dev
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 9 -->
+
+
 Fig. 3. Students ' digital story about an AI-driven waiter and health alliance.
 
 <!-- image -->
@@ -277,6 +310,10 @@ Peace ' . During the workshops, instructors provided students engaging activitie
 An instructor demonstrated some practical experience of using AIdriven tools to solve authentic problems in real-life scenarios. He told students, ' Nowadays, scientists  and  engineers  design  robots  that  use  AIvision to photograph floating objects and identify different types of marine plastic waste in the oceans to protect aquatic life. ' Then, students built a machine learning model to classify  between garbage  and  fish  in  the ocean. Later in the presentation day, a student proposed the idea of
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 10 -->
+
 
 making a robot in her story to help recognise toxic garbage and nongarbage by using pattern and colour recognition. ' I borrowed the idea from the teacher to use AI robots to save the ocean. It ' s about how to recycle garbage  and  ocean  pollution.  The  robots  can  recognise  and  recycle  the garbage. People use data [such as patterns and colours] to train the model which helps humans to save the ocean. ' From this story, we understand that students have applied machine learning concepts to connect to realworld situations and finally propose a solution to save aquatic life in the ocean (see Fig. 4).
 
@@ -297,6 +334,10 @@ Fig. 4. Students ' story to propose the use of AI to clean the ocean.
 <!-- image -->
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 11 -->
+
 
 <!-- image -->
 
@@ -330,6 +371,10 @@ Covid-19期間，科學家正研究可以遠程視家中老年人 健康狀况�
 
 GLYPH&lt;0&gt;,
 
+
+<!-- PAGE 12 -->
+
+
 process, when Chung doesn ' t understand the AI learning materials, I can try to explain to him and I can learn at the same time. My child and I realize that quite many technologies found in everyday life belong to AI applications too. In the past, we weren ' t aware of that . ' Another student Hin ' s dad said, ' I teach him how to use AI-related software … He sometimes observes me on how to learn using online platforms … I hope my active learning behaviour encourages him to use eLearning and computers or even AI-related learning tools to help his study too. As such, from my observation, he knows how to self-learn, use the Internet and find good resources to learn fast. ' As such, we can see that active parental involvement is important when making inquiry to foster students ' AI literacy.
 
 ' This year, I have attended a robotics making class, and a Scratch programming class. I know how to train the computers by taking many photos in front of a camera. I have learnt how to write programs to train a machine learning model with thirty pictures, and use microprocessors and sensors to recognise an object in AI-driven Scratch games and cars. ' As such, doing research and making inquiry would be important for students to further develop their AI concepts and make their work more convincing and interesting.
@@ -357,6 +402,10 @@ In addition, we applied Pedaste et al. (2015) ' s inquiry-based learning cycle t
 The present study showed some limitations that need to be addressed in future research. First of all, the sample size was so small that only 16 students were interviewed and their work was analysed. The number of samples was less than one third of the total number in the DSW program. The  qualitative  artefact-based  analysis  provides  us  a  comprehensive view of the primary students ' development in AI through digital story writing. However, it may not provide generalizable results for a wider population, and future studies should broaden the sample. Furthermore, the results of this study might be subject to limited generalizability as
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 13 -->
+
 
 the interview and work analysis were implemented in selected groups who performed well in the program. Students with better performance could be more likely to develop their AI literacy than the other lowachieving  students.  In  the  future,  we  could  also  interview  the  lowachievers to tell us the challenges they met throughout the DSW journey.
 
@@ -423,6 +472,10 @@ Frazel, M. (2010). Digital storytelling guide for educators . Washington, DC: In
 - Green, L. S. (2013). Language learning through a lens: The case for digital storytelling in the second language classroom. School Libraries Worldwide, 19 (2), 23 -36.
 
 GLYPH&lt;0&gt;,
+
+
+<!-- PAGE 14 -->
+
 
 - Gubrium, A. (2009). Digital storytelling: An emergent method for health promotion research and practice. Health Promotion Practice, 10 (2), 186 -191.
 - Hafner, C. A., &amp; Miller, L. (2011). Fostering learner autonomy in English for science: A collaborative digital video project in a technological learning environment. Language, Learning and Technology, 15 (3), 68 -86.

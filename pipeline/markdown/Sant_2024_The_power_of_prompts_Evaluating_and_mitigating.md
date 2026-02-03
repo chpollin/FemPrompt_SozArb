@@ -1,10 +1,11 @@
 ---
 source_file: Sant_2024_The_power_of_prompts_Evaluating_and_mitigating.pdf
-conversion_date: 2026-02-03T09:19:45.694651
+conversion_date: 2026-02-03T18:51:05.162012
 converter: docling
 quality_score: 95
 ---
 
+<!-- PAGE 1 -->
 ## The power of Prompts: Evaluating and Mitigating Gender Bias in MT with LLMs
 
 ## Aleix Sant, Carlos Escolano, Audrey Mash, Francesca De Luca Fornaciari, Maite Melero
@@ -31,6 +32,10 @@ Following the benchmarking, an investigation into the effectiveness of prompts i
 
 The relevance of this work lies in several insightful findings. Firstly, we demonstrate that base LLMs tend to lag behind NMT models in terms 94 of translation capabilities and gender-bias scores.
 
+
+<!-- PAGE 2 -->
+
+
 Afterwards, through an extensive trial-and-error examination into prompting, we present a prompt that, when applied to an instructed LLM, achieves impressive bias mitigation across gender-bias test sets, resulting in an increase of 12.4 and 11.7 in the respective Catalan and Spanish WinoMT scores. Finally, we study how gender-bias mitigation through prompting impacts LLMs translation performance.
 
 The rest of the paper is organized as follows: Section 3 reviews relevant research in the field. Section 4 details the methodology, including the datasets, models, and evaluation metrics employed. Section 5 focuses on the benchmarking, while Section 6 explores the investigation into prompting to mitigate gender bias. Section 7 presents the results. Finally, Section 8 provides a discussion and Section 9 highlights the conclusions of this work.
@@ -53,6 +58,10 @@ Gender Terms Detection In this other task, we evaluate whether an MT engine gene
 
 Both gender-bias problems are approached as classification problems since they involve determining the correct gender labels, allowing for the derivation of typical ML scores. Devoid of gender context, we only pay attention to the proportion of male and female terms generated in the translations. As evaluation benchmarks, WinoMT and Gold BUG focus on Gender Coreference Resolution , whereas MuST-SHE in Gender Terms Detection . Check Figure 2 for an illustration of the 95 gender-bias tasks just explained.
 
+
+<!-- PAGE 3 -->
+
+
 Figure 2: Examples of Gender Coreference Resolution (a) and Gender Terms Detection (b) in En → Ca
 
 <!-- image -->
@@ -68,6 +77,10 @@ Longpre et al., 2023).
 Moving away from LLMs, we find Neural Machine Translation models (Cho et al., 2014; Bahdanau et al., 2015; Luong et al., 2015; Johnson et al., 2017; Wu et al., 2016; Fan et al., 2020; NLLB Team, 2022). These models represent the state-of-the-art in machine translation, consistently achieving the highest translation performance. They typically leverage an encoder-decoder transformer (Vaswani et al., 2017) trained with parallel data in a supervised manner, intended solely for the task of translation. Unlike LLMs, NMT models are relatively smaller in size and present unique challenges when it comes to scaling (e.g., bidirectional processing, the attention mechanism complexity...). However, besides their size, the main distinction between LLMs and NMT models lies in the prompting method. LLMs necessitate a prompt to operate, making them entirely dependent on context. This is precisely the aspect we aim to explore: whether we can use the prompting mechanism, absent in NMT models, to alleviate gender bias.
 
 To date, significant research has been conducted on the translation capabilities of LLMs, as extensively documented in the literature (Chowdhery et al., 2023; Jiao et al., 2023a; Zhu et al., 2023; Agrawal et al., 2023; Jiao et al., 2023b; Zhang et al., 2023a; Bawden and Yvon, 2023; Hendy et al., 2023). Furthermore, several efforts have been made to identify and address bias in LLMs (Ernst et al., 2023; Su et al., 2023; Cai et al., 2024). However, the exploration of gender bias in the realm of MT and LLMs remains relatively scarce. This encompasses (Sánchez et al., 2023), which sought to leverage LLMs for gender-specific translations, 96 and (Vanmassenhove, 2024), which experimented with En → It translation in ChatGPT, revealing how GPT models perpetuate biases even when explicitly prompted to provide alternative translations. Additionally, (Ghosh and Caliskan, 2023) examines bias between English and languages that exclusively use gender-neutral pronouns, and (Savoldi et al., 2024) demonstrate through extensive manual analysis the potential of GPT-4 to produce gender-neutral translations for En → It.
+
+
+<!-- PAGE 4 -->
+
 
 ## 4 Methodology
 
@@ -107,6 +120,10 @@ WinoMT Developed by (Stanovsky et al., 2019), this test set is intended to evalu
 
 1 https://github.com/facebookresearch/ flores/tree/main/flores200
 
+
+<!-- PAGE 5 -->
+
+
 gender bias in translations from English to various gender-inflected languages. The corpus 2 consists of 3,888 sentences in the schema of Winograd. Each sentence in the corpus presents two human entities defined by their roles, along with a subsequent pronoun that must be correctly resolved to one of the entities (Levesque et al., 2012). One of the main limitations of this dataset is its synthetic nature, as it is built on templates.
 
 Gold BUG The previous limitation of WinoMT could be addressed through the introduction of BUG 3 (Levy et al., 2021), the first publicly accessible large-scale corpus designed for gender-bias evaluation, comprising 108,000 real-world English sentences. BUG was built by crawling text according to specific syntactic patterns, offering a more diverse and realistic dataset than WinoMT. The Gold BUG version used in our evaluation consists of a gold-quality, human-validated set extracted from BUG, totaling 1,717 instances.
@@ -145,6 +162,10 @@ all\_languages.sh
 
 8 https://github.com/audreyvm/tfm\_ gender\_bias/blob/main/mustshe\_acc\_v1.
 
+
+<!-- PAGE 6 -->
+
+
 ## 5 Benchmarking
 
 ## 5.1 Prompting LLMs
@@ -174,6 +195,10 @@ After observing that LLMs exhibit more gender bias than NMT models, we found it 
 The procedure goes as follows: Initially, we develop a range of prompts based on strategies outlined in the literature, including few-shot prompting, context-supplying, and chain-of-thought instructions. To assess the impact of these prompts, we test them on WinoMT and obtain gender-bias scores for each prompt. Thereafter, the prompt that demonstrates the most considerable reduction in bias on WinoMT, as indicated by numerical genderbias scores, is evaluated on the remaining test sets (Gold BUG, MuST-SHE, and FLoRes-200). By doing so, we want to determine: firstly, the prompt's generalizability across the remaining gender-bias test sets, and secondly, if it affects the overall ma-
 
 - Base LLMs fall behind NMT models in terms 99 chine translation capabilities of the LLM.
+
+
+<!-- PAGE 7 -->
+
 
 Table 1: BLEU and COMET scores for FLoRes-200
 
@@ -211,6 +236,10 @@ Afterwards, we adopted a chain-of-thought strategy for the remaining curated pro
 
 100 The only distinction between these two complex
 
+
+<!-- PAGE 8 -->
+
+
 Table 2: WinoMT scores using different prompting techniques for En → Ca and En → Es
 
 |                 |                                                                  | English → Catalan   | English → Catalan   | English → Catalan   | English → Catalan   | English → Spanish   | English → Spanish   | English → Spanish   | English → Spanish   |
@@ -245,6 +274,10 @@ Regarding the MT metrics, we observe a small
 
 The phrase 'Proceed step by step' is also in101 loss compared to the baseline when testing on
 
+
+<!-- PAGE 9 -->
+
+
 Table 3: WinoMT gender scores
 
 <!-- image -->
@@ -277,6 +310,10 @@ Fortunately, after identifying our successful prompt, we can confidently affirm 
 This work investigates gender bias in the translation outputs generated by various LLMs through two distinct approaches. Firstly, by benchmarking three base models ( ˇ Aguila-7B, Flor-6.3B and 102
 
 Results reveal the presence of gender bias across all models, with base LLMs exhibiting more gender bias than NMT models. Moreover, the performance of all models correlates with gender stereotypes. In the absence of gender cues in the source sentence, they tend to generate predominantly male terms, while female terms are generated primarily when encountering female-stereotypical content. To mitigate this bias, prompting engineering techniques have been implemented in an instruction-tuned LLM. After curating and testing several prompts, one prompt was identified that resulted in a significant reduction in gender bias, achieving impressive gender scores. The prompt follows a simplified chain-of-thought approach with 5-shots relying on anti-stereotypical content and increased female representation. This prompt enables the instructed LLM to perform competitively in terms of gender scores, achieving results comparable to NMT models and even surpassing some of them. However, it is observed that using this prompt leads to a slight loss in the translation quality.
+
+
+<!-- PAGE 10 -->
+
 
 ## 10 Ethical statement
 
@@ -312,6 +349,10 @@ Hyung Won Chung, Le Hou, Shayne Longpre, Barret Zoph, Yi Tay, William Fedus, Eri
 
 Luisa Bentivogli, Beatrice Savoldi, Matteo Negri, Mattia A. Di Gangi, Roldano Cattoni, and Marco Turchi. 103
 
+
+<!-- PAGE 11 -->
+
+
 Mostafa Dehghani, Siddhartha Brahma, Albert Webson, Shixiang Shane Gu, Zhuyun Dai, Mirac Suzgun, Xinyun Chen, Aakanksha Chowdhery, Sharan Narang, Gaurav Mishra, Adams Yu, Vincent Y. Zhao, Yanping Huang, Andrew M. Dai, Hongkun Yu, Slav Petrov, Ed H. Chi, Jeff Dean, Jacob Devlin, Adam Roberts, Denny Zhou, Quoc V. Le, and Jason Wei. 2022. Scaling instruction-finetuned language models. CoRR , abs/2210.11416.
 
 - Marta R. Costa-jussà, James Cross, Onur Çelebi, Maha Elbayad, Kenneth Heafield, Kevin Heffernan, Elahe Kalbassi, Janice Lam, Daniel Licht, Jean Maillard, Anna Sun, Skyler Wang, Guillaume Wenzek, Al Youngblood, Bapi Akula, Loïc Barrault, Gabriel Mejia Gonzalez, Prangthip Hansanti, John Hoffman, Semarley Jarrett, Kaushik Ram Sadagopan, Dirk Rowe, Shannon Spruit, Chau Tran, Pierre Andrews, Necip Fazil Ayan, Shruti Bhosale, Sergey Edunov, Angela Fan, Cynthia Gao, Vedanuj Goswami, Francisco Guzmán, Philipp Koehn, Alexandre Mourachko, Christophe Ropers, Safiyyah Saleem, Holger Schwenk, and Jeff Wang. 2022. No language left behind: Scaling human-centered machine translation. CoRR , abs/2207.04672.
@@ -331,6 +372,10 @@ Mostafa Dehghani, Siddhartha Brahma, Albert Webson, Shixiang Shane Gu, Zhuyun Da
 - Amr Hendy, Mohamed Abdelrehim, Amr Sharaf, Vikas Raunak, Mohamed Gabr, Hitokazu Matsushita, Young Jin Kim, Mohamed Afify, and Hany Hassan Awadalla. 2023. How good are GPT models at machine translation? A comprehensive evaluation. CoRR , abs/2302.09210.
 - Wenxiang Jiao, Wenxuan Wang, Jen-tse Huang, Xing Wang, and Zhaopeng Tu. 2023a. Is chatgpt A 104
 
+
+<!-- PAGE 12 -->
+
+
 good translator? A preliminary study. CoRR , abs/2301.08745.
 
 - Wenxiang Jiao, Wenxuan Wang, Jen tse Huang, Xing Wang, Shuming Shi, and Zhaopeng Tu. 2023b. Is chatgpt a good translator? yes with gpt-4 as the engine.
@@ -349,6 +394,10 @@ good translator? A preliminary study. CoRR , abs/2301.08745.
 - James Cross Onur Çelebi Maha Elbayad Kenneth Heafield Kevin Heffernan Elahe Kalbassi Janice Lam Daniel Licht Jean Maillard Anna Sun Skyler Wang Guillaume Wenzek Al Youngblood Bapi Akula Loic Barrault Gabriel Mejia Gonzalez Prangthip Hansanti John Hoffman Semarley Jarrett Kaushik Ram Sadagopan Dirk Rowe Shannon Spruit Chau Tran Pierre Andrews Necip Fazil Ayan Shruti Bhosale Sergey Edunov Angela Fan Cynthia Gao Vedanuj Goswami Francisco Guzmán Philipp Koehn Alexandre Mourachko Christophe Ropers Safiyyah Saleem Holger Schwenk Jeff Wang NLLB Team, Marta R. Costa-jussà. 2022. No language left behind: Scaling human-centered machine translation.
 - OpenAI. 2023. GPT-4 technical report. CoRR , abs/2303.08774.
 - Kishore Papineni, Salim Roukos, Todd Ward, and WeiJing Zhu. 2002. Bleu: a method for automatic evaluation of machine translation. In Proceedings of the 40th Annual Meeting of the Association for Computational Linguistics , pages 311-318, Philadelphia, Pennsylvania, USA. Association for Computational Linguistics.
+
+
+<!-- PAGE 13 -->
+
 
 - Parmy Olson. 2018. The algorithm that helped google translate become sexist. https://www.forbes. com/sites/parmyolson/ .
 - Matt Post. 2018. A call for clarity in reporting BLEU scores. In Proceedings of the Third Conference on Machine Translation: Research Papers , pages 186191, Brussels, Belgium. Association for Computational Linguistics.
@@ -370,6 +419,10 @@ translation. In Proceedings of the 18th Conference of the European Chapter of th
 - Beatrice Savoldi, Andrea Piergentili, Dennis Fucci, Matteo Negri, and Luisa Bentivogli. 2024. A prompt response to the demand for automatic gender-neutral 106
 - Hugo Touvron, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov, Soumya Batra, Prajjwal Bhargava, Shruti Bhosale, Dan Bikel, Lukas Blecher, Cristian CantonFerrer, Moya Chen, Guillem Cucurull, David Esiobu, Jude Fernandes, Jeremy Fu, Wenyin Fu, Brian Fuller, Cynthia Gao, Vedanuj Goswami, Naman Goyal, Anthony Hartshorn, Saghar Hosseini, Rui Hou, Hakan Inan, Marcin Kardas, Viktor Kerkez, Madian Khabsa, Isabel Kloumann, Artem Korenev, Punit Singh Koura,
 
+
+<!-- PAGE 14 -->
+
+
 Marie-Anne Lachaux, Thibaut Lavril, Jenya Lee, Diana Liskovich, Yinghai Lu, Yuning Mao, Xavier Martinet, Todor Mihaylov, Pushkar Mishra, Igor Molybog, Yixin Nie, Andrew Poulton, Jeremy Reizenstein, Rashi Rungta, Kalyan Saladi, Alan Schelten, Ruan Silva, Eric Michael Smith, Ranjan Subramanian, Xiaoqing Ellen Tan, Binh Tang, Ross Taylor, Adina Williams, Jian Xiang Kuan, Puxin Xu, Zheng Yan, Iliyan Zarov, Yuchen Zhang, Angela Fan, Melanie Kambadur, Sharan Narang, Aurélien Rodriguez, Robert Stojnic, Sergey Edunov, and Thomas Scialom. 2023. Llama 2: Open foundation and finetuned chat models. CoRR , abs/2307.09288.
 
 - Eva Vanmassenhove. 2024. Gender bias in machine translation and the era of large language models. CoRR , abs/2401.10016.
@@ -388,7 +441,15 @@ Marie-Anne Lachaux, Thibaut Lavril, Jenya Lee, Diana Liskovich, Yinghai Lu, Yuni
 - Wayne Xin Zhao, Kun Zhou, Junyi Li, Tianyi Tang, Xiaolei Wang, Yupeng Hou, Yingqian Min, Beichen Zhang, Junjie Zhang, Zican Dong, Yifan Du, Chen Yang, Yushuo Chen, Zhipeng Chen, Jinhao Jiang, Ruiyang Ren, Yifan Li, Xinyu Tang, Zikang Liu, Peiyu Liu, Jian-Yun Nie, and Ji-Rong Wen. 2023. A survey of large language models.
 - Zihao Zhao, Eric Wallace, Shi Feng, Dan Klein, and Sameer Singh. 2021. Calibrate before use: Improving few-shot performance of language models. In Proceedings of the 38th International Conference on Machine Learning, ICML 2021, 18-24 July 2021, Virtual Event , volume 139 of Proceedings of Machine Learning Research , pages 12697-12706. PMLR.
 
+
+<!-- PAGE 15 -->
+
+
 - Wenhao Zhu, Hongyi Liu, Qingxiu Dong, Jingjing Xu, Lingpeng Kong, Jiajun Chen, Lei Li, and Shujian Huang. 2023. Multilingual machine translation with large language models: Empirical results and analysis. CoRR , abs/2304.04675.
+
+
+<!-- PAGE 16 -->
+
 
 ## Appendices
 
@@ -430,6 +491,10 @@ Table 5: MuST-SHE gender scores
 |     | Llama-2-7B-chat             | 88.1                | 89.7                | 86.0                | 3.7                 | 91.0                | 92.0                | 89.6                | 2.4                 |
 |     | Llama-2-7B-chat (GB prompt) | 88.4                | 89.8                | 86.5                | 3.3                 | 92.0                | 92.6                | 91.4                | 1.2                 |
 
+
+<!-- PAGE 17 -->
+
+
 ## C Prompts employed in the Benchmarking
 
 The prompts employed with ˇ Aguila-7B when testing FLoRes-200 devtest set for En → Ca and En → Es respectively:
@@ -438,21 +503,45 @@ The prompts employed with ˇ Aguila-7B when testing FLoRes-200 devtest set for E
 Translate the following sentence from English to Catalan: English: <s>Hangeul is the only purposely invented alphabet in popular daily use. The alphabet was invented in 1444 during the reign of King Sejong (1418-1450).</s> Catalan: <s>El hangul és l'únic alfabet creat arbitràriament que té un ús estès en la vida diària. L'alfabet es va inventar l'any 1444 durant el regnat de King Sejong (1418-1450).</s> English: <s>They also said in a statement, "The crew is currently working to determine the best method of safely extracting the ship".</s> Catalan: <s>També han dit en un comunicat, "La tripulació treballa ara mateix per a determinar la millor tècnica per a extreure la nau de manera segura".</s> English: <s>This is becoming less of an issue as lens manufacturers achieve higher standards in lens production.</s> Catalan: <s>Això és cada vegada menys important perquè els fabricants de lents estan assolint estàndards més elevats en la producció de lents.</s> English: <s>While assessing the successes and becoming aware of failures, individuals and the whole of the participating persons discover more deeply the values, mission, and driving forces of the organization.</s> Catalan: <s>Mentre confirmen els èxits i prenen consciència dels fracassos, els individus i el grup de participants descobreixen més profundament els valors, la missió i les forces motrius de l'organització.</s> English: <s>Entering Southern Africa by car is an amazing way to see all the region's beauty as well as to get to places off the normal tourist routes.</s> Catalan: <s>Entrar a l'Àfrica del Sud en cotxe és una forma impressionant de veure tota la bellesa de la regió i d'arribar a llocs fora de les rutes turístiques més habituals.</s> English: <s>____sentence_to_translate____</s> Catalan: <s>
 ```
 
+
+<!-- PAGE 18 -->
+
+
 Translate the following sentence from English to Spanish: English: &lt;s&gt;Hangeul is the only purposely invented alphabet in popular daily use. The alphabet was invented in 1444 during the reign of King Sejong (1418-1450).&lt;/s&gt; Spanish: &lt;s&gt;El alfabeto coreano es el único diseñado en forma deliberada que aún se utiliza a diario popularmente. Se inventó en 1444, durante el reinado de Sejong (1418 a 1450).&lt;/s&gt; English: &lt;s&gt;They also said in a statement, "The crew is currently working to determine the best method of safely extracting the ship".&lt;/s&gt; Spanish: &lt;s&gt;También se dijo en un comunicado que: «La tripulación se encuentra actualmente trabajando para decidir cuál es el método más seguro para extraer el barco».&lt;/s&gt; English: &lt;s&gt;This is becoming less of an issue as lens manufacturers achieve higher standards in lens production.&lt;/s&gt; Spanish: &lt;s&gt;Este problema cada vez es menos importante gracias a que los fabricantes de lentes logran estándares más altos en su producción.&lt;/s&gt; English: &lt;s&gt;While assessing the successes and becoming aware of failures, individuals and the whole of the participating persons discover more deeply the values, mission, and driving forces of the organization.&lt;/s&gt; Spanish: &lt;s&gt;Durante el proceso de análisis de los éxitos y toma de conciencia de los fracasos, los individuos y grupos de personas involucrados descubren con mayor profundidad los valores, el objetivo y las fuerzas que impulsan a la organización.&lt;/s&gt; English: &lt;s&gt;Entering Southern Africa by car is an amazing way to see all the region's beauty as well as to get to places off the normal tourist routes.&lt;/s&gt; Spanish: &lt;s&gt;Una fantástica forma de contemplar todo el encanto de la región del sur África es ingresar en automóvil, lo que, a su vez, le permitirá acceder a lugares fuera de las rutas turísticas habituales.&lt;/s&gt; English: &lt;s&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;/s&gt; Spanish: &lt;s&gt;
+
+
+<!-- PAGE 19 -->
+
 
 The prompts employed with ˇ Aguila-7B when testing FLoRes-200 dev set, WinoMT, Gold BUG and MuST-SHE for En → Ca and En → Es were:
 
 Translate the following sentence from English to Catalan: English: &lt;s&gt;The feathers' structure suggests that they were not used in flight but rather for temperature regulation or display. The researchers suggested that, even though this is the tail of a young dinosaur, the sample shows adult plumage and not a chick's down.&lt;/s&gt; Catalan: &lt;s&gt;L'estructura de les plomes fa pensar que no s'usaven per a volar sinó per a regular la temperatura o per a exhibir-se. Els investigadors han suggerit que, tot i que es tracta de la cua d'un dinosaure jove, la mostra presenta el plomatge d'un adult i no d'un pollet.&lt;/s&gt; English: &lt;s&gt;They found the Sun operated on the same basic principles as other stars: The activity of all stars in the system was found to be driven by their luminosity, their rotation, and nothing else.&lt;/s&gt; Catalan: &lt;s&gt;Han descobert que el Sol funcionava sota els mateixos principis bàsics que altres estrelles: s'ha vist que l'activitat de totes les estrelles del sistema depèn de llur brillantor, llur rotació i res més.&lt;/s&gt; English: &lt;s&gt;The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.&lt;/s&gt; Catalan: &lt;s&gt;Les velocitats de 802.11n són substancialment més ràpides que les dels seus predecessors amb un rendiment teòric màxim de 600Mbit/s.&lt;/s&gt; English: &lt;s&gt;Over four million people went to Rome to attend the funeral.&lt;/s&gt; Catalan: &lt;s&gt;Més de quatre milions de persones van anar a Roma per a assistir al funeral.&lt;/s&gt; English: &lt;s&gt;Mrs. Kirchner announced her intention to run for president at the Argentine Theatre, the same location she used to start her 2005 campaign for the Senate as member of the Buenos Aires province delegation.&lt;/s&gt; Catalan: &lt;s&gt;La Sra. Kirchner va anunciar la seva intenció de presentar-se a la presidència al Teatre de l'Argentina, el mateix lloc on va engegar la campanya al Senat de 2005 com a membre de la delegació provincial de Buenos Aires.&lt;/s&gt; English: &lt;s&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;/s&gt; Catalan: &lt;s&gt;
 
+
+<!-- PAGE 20 -->
+
+
 Translate the following sentence from English to Spanish: English: &lt;s&gt;The feathers' structure suggests that they were not used in flight but rather for temperature regulation or display. The researchers suggested that, even though this is the tail of a young dinosaur, the sample shows adult plumage and not a chick's down.&lt;/s&gt; Spanish: &lt;s&gt;La estructura que presenta el plumaje sugiere que su función no estaba relacionada con el vuelo, sino que las usaban para regular la temperatura o como indicador de la misma. Los investigadores sostienen que, aunque se trata de la cola de un dinosaurio joven, la muestra analizada presenta rasgos del plumaje de un adulto y no de un polluelo.&lt;/s&gt; English: &lt;s&gt;They found the Sun operated on the same basic principles as other stars: The activity of all stars in the system was found to be driven by their luminosity, their rotation, and nothing else.&lt;/s&gt; Spanish: &lt;s&gt;Se descubrió que el sol se regía por los mismos principios básicos que otras estrellas: los únicos factores que impulsaban su actividad dentro del sistema eran su luminosidad y su rotación.&lt;/s&gt; English: &lt;s&gt;The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.&lt;/s&gt; Spanish: &lt;s&gt;Las velocidades del estándar 802.11n son mucho más altas que las alcanzadas por los que lo precedieron, con un rendimiento teórico máximo de 600 Mbps.&lt;/s&gt; English: &lt;s&gt;Over four million people went to Rome to attend the funeral.&lt;/s&gt; Spanish: &lt;s&gt;Más de cuatro millones de individuos se concentraron en Roma para presenciar el funeral.&lt;/s&gt; English: &lt;s&gt;Mrs. Kirchner announced her intention to run for president at the Argentine Theatre, the same location she used to start her 2005 campaign for the Senate as member of the Buenos Aires province delegation.&lt;/s&gt; Spanish: &lt;s&gt;El Teatro Argentino fue el lugar donde la señora Kirchner anunció su intención de candidatearse como presidenta; este es el mismo sitio donde inició su campaña para el senado en el año 2005, en representación de la provincia de Buenos Aires.&lt;/s&gt; English: &lt;s&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;/s&gt;
 
 Spanish: &lt;s&gt;
+
+
+<!-- PAGE 21 -->
+
 
 The prompts employed with Flor-6.3B and Llama-2-7B when testing FLoRes-200 devtest set for En → Ca and En → Es respectively:
 
 Translate the following sentence from English to Catalan: English: &lt;BOS&gt;Hangeul is the only purposely invented alphabet in popular daily use. The alphabet was invented in 1444 during the reign of King Sejong (1418-1450).&lt;EOS&gt; Catalan: &lt;BOS&gt;El hangul és l'únic alfabet creat arbitràriament que té un ús estès en la vida diària. L'alfabet es va inventar l'any 1444 durant el regnat de King Sejong (1418-1450).&lt;EOS&gt; English: &lt;BOS&gt;They also said in a statement, "The crew is currently working to determine the best method of safely extracting the ship".&lt;EOS&gt; Catalan: &lt;BOS&gt;També han dit en un comunicat, "La tripulació treballa ara mateix per a determinar la millor tècnica per a extreure la nau de manera segura".&lt;EOS&gt; English: &lt;BOS&gt;This is becoming less of an issue as lens manufacturers achieve higher standards in lens production.&lt;EOS&gt; Catalan: &lt;BOS&gt;Això és cada vegada menys important perquè els fabricants de lents estan assolint estàndards més elevats en la producció de lents.&lt;EOS&gt; English: &lt;BOS&gt;While assessing the successes and becoming aware of failures, individuals and the whole of the participating persons discover more deeply the values, mission, and driving forces of the organization.&lt;EOS&gt; Catalan: &lt;BOS&gt;Mentre confirmen els èxits i prenen consciència dels fracassos, els individus i el grup de participants descobreixen més profundament els valors, la missió i les forces motrius de l'organització.&lt;EOS&gt; English: &lt;BOS&gt;Entering Southern Africa by car is an amazing way to see all the region's beauty as well as to get to places off the normal tourist routes.&lt;EOS&gt; Catalan: &lt;BOS&gt;Entrar a l'Àfrica del Sud en cotxe és una forma impressionant de veure tota la bellesa de la regió i d'arribar a llocs fora de les rutes turístiques més habituals.&lt;EOS&gt; English: &lt;BOS&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;EOS&gt; Catalan: &lt;BOS&gt;
 
+
+<!-- PAGE 22 -->
+
+
 Translate the following sentence from English to Spanish: English: &lt;BOS&gt;Hangeul is the only purposely invented alphabet in popular daily use. The alphabet was invented in 1444 during the reign of King Sejong (1418-1450).&lt;EOS&gt; Spanish: &lt;BOS&gt;El alfabeto coreano es el único diseñado en forma deliberada que aún se utiliza a diario popularmente. Se inventó en 1444, durante el reinado de Sejong (1418 a 1450).&lt;EOS&gt; English: &lt;BOS&gt;They also said in a statement, "The crew is currently working to determine the best method of safely extracting the ship".&lt;EOS&gt; Spanish: &lt;BOS&gt;También se dijo en un comunicado que: «La tripulación se encuentra actualmente trabajando para decidir cuál es el método más seguro para extraer el barco».&lt;EOS&gt; English: &lt;BOS&gt;This is becoming less of an issue as lens manufacturers achieve higher standards in lens production.&lt;EOS&gt; Spanish: &lt;BOS&gt;Este problema cada vez es menos importante gracias a que los fabricantes de lentes logran estándares más altos en su producción.&lt;EOS&gt; English: &lt;BOS&gt;While assessing the successes and becoming aware of failures, individuals and the whole of the participating persons discover more deeply the values, mission, and driving forces of the organization.&lt;EOS&gt; Spanish: &lt;BOS&gt;Durante el proceso de análisis de los éxitos y toma de conciencia de los fracasos, los individuos y grupos de personas involucrados descubren con mayor profundidad los valores, el objetivo y las fuerzas que impulsan a la organización.&lt;EOS&gt; English: &lt;BOS&gt;Entering Southern Africa by car is an amazing way to see all the region's beauty as well as to get to places off the normal tourist routes.&lt;EOS&gt; Spanish: &lt;EOS&gt;Una fantástica forma de contemplar todo el encanto de la región del sur África es ingresar en automóvil, lo que, a su vez, le permitirá acceder a lugares fuera de las rutas turísticas habituales.&lt;BOS&gt; English: &lt;BOS&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;EOS&gt; Spanish: &lt;BOS&gt;
+
+
+<!-- PAGE 23 -->
+
 
 The prompts employed with Flor-6.3B and Llama-2-7B when testing FLoRes-200 dev set, WinoMT, Gold BUG and MuST-SHE for En → Ca and En → Es were:
 
@@ -460,9 +549,17 @@ Translate the following sentence from English to Catalan: English: &lt;BOS&gt;Th
 
 Catalan: &lt;BOS&gt;
 
+
+<!-- PAGE 24 -->
+
+
 Translate the following sentence from English to Spanish: English: &lt;BOS&gt;The feathers' structure suggests that they were not used in flight but rather for temperature regulation or display. The researchers suggested that, even though this is the tail of a young dinosaur, the sample shows adult plumage and not a chick's down.&lt;EOS&gt; Spanish: &lt;BOS&gt;La estructura que presenta el plumaje sugiere que su función no estaba relacionada con el vuelo, sino que las usaban para regular la temperatura o como indicador de la misma. Los investigadores sostienen que, aunque se trata de la cola de un dinosaurio joven, la muestra analizada presenta rasgos del plumaje de un adulto y no de un polluelo.&lt;EOS&gt; English: &lt;BOS&gt;They found the Sun operated on the same basic principles as other stars: The activity of all stars in the system was found to be driven by their luminosity, their rotation, and nothing else.&lt;EOS&gt; Spanish: &lt;BOS&gt;Se descubrió que el sol se regía por los mismos principios básicos que otras estrellas: los únicos factores que impulsaban su actividad dentro del sistema eran su luminosidad y su rotación.&lt;EOS&gt; English: &lt;BOS&gt;The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.&lt;EOS&gt; Spanish: &lt;BOS&gt;Las velocidades del estándar 802.11n son mucho más altas que las alcanzadas por los que lo precedieron, con un rendimiento teórico máximo de 600 Mbps.&lt;EOS&gt; English: &lt;BOS&gt;Over four million people went to Rome to attend the funeral.&lt;EOS&gt; Spanish: &lt;BOS&gt;Más de cuatro millones de individuos se concentraron en Roma para presenciar el funeral.&lt;EOS&gt; English: &lt;BOS&gt;Mrs. Kirchner announced her intention to run for president at the Argentine Theatre, the same location she used to start her 2005 campaign for the Senate as member of the Buenos Aires province delegation.&lt;EOS&gt; Spanish: &lt;BOS&gt;El Teatro Argentino fue el lugar donde la señora Kirchner anunció su intención de candidatearse como presidenta; este es el mismo sitio donde inició su campaña para el senado en el año 2005, en representación de la provincia de Buenos Aires.&lt;EOS&gt;
 
 English: &lt;BOS&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;EOS&gt; Spanish: &lt;BOS&gt;
+
+
+<!-- PAGE 25 -->
+
 
 ## D Gender Scores on the Pro- and Anti-Stereotypical sets from WinoMT and Gold BUG
 
@@ -493,6 +590,10 @@ Table 7: WinoMT anti-stereotypical set gender scores
 |     | ˇ Aguila-7B      | 34.5                | 49.8                | 12.0                | 37.8                | 43.1                | 58.5                | 12.7                | 45.8                |
 |     | Flor-6.3B        | 38.7                | 54.0                | 13.8                | 40.2                | 45.2                | 58.2                | 22.8                | 35.4                |
 |     | Llama-2-7B       | 38.8                | 53.6                | 16.6                | 37.0                | 45.3                | 59.0                | 19.7                | 39.3                |
+
+
+<!-- PAGE 26 -->
+
 
 Below you can see the results for the Gold BUG:
 
@@ -526,6 +627,10 @@ Table 9: Gold BUG anti-stereotypical set gender scores
 |     | Flor-6.3B        | 44.5                | 62.5                | 35.1                | 27.4                | 49.0                | 66.2                | 41.9                | 24.3                |
 |     | Llama-2-7B       | 46.7                | 64.4                | 35.7                | 28.7                | 49.8                | 69.0                | 35.4                | 33.6                |
 
+
+<!-- PAGE 27 -->
+
+
 ## E Proportion of Predicted Male and Female terms in Absence of Gender Cues
 
 The following Figures 3 and 4 depict a range of pie diagrams illustrating the proportion of predicted male and female terms in the translations per model when testing on instances of MuST-SHE without gender cues for disambiguation.
@@ -546,6 +651,10 @@ Figure 3: Male and female predicted terms across models for En → Ca in absence
 
 <!-- image -->
 
+
+<!-- PAGE 28 -->
+
+
 Figure 4: Male and female predicted terms across models for En → Es in absence of gender cues
 
 <!-- image -->
@@ -560,6 +669,10 @@ Figure 4: Male and female predicted terms across models for En → Es in absence
 
 <!-- image -->
 
+
+<!-- PAGE 29 -->
+
+
 ## F Prompt used for the Baseline in the Investigation into Prompting
 
 An example of the resulting prompt used for Llama-2-7B-chat after the format adaptations:
@@ -568,6 +681,10 @@ An example of the resulting prompt used for Llama-2-7B-chat after the format ada
 «SYS» Translate the following sentence from English to Catalan: «/SYS» [INST] English: <BOS>The feathers' structure suggests that they were not used in flight but rather for temperature regulation or display. The researchers suggested that, even though this is the tail of a young dinosaur, the sample shows adult plumage and not a chick's down.<EOS> [/INST] Catalan: <BOS>L'estructura de les plomes fa pensar que no s'usaven per a volar sinó per a regular la temperatura o per a exhibir-se. Els investigadors han suggerit que, tot i que es tracta de la cua d'un dinosaure jove, la mostra presenta el plomatge d'un adult i no d'un pollet.<EOS> [INST] English: <BOS>They found the Sun operated on the same basic principles as other stars: The activity of all stars in the system was found to be driven by their luminosity, their rotation, and nothing else.<EOS> [/INST] Catalan: <BOS>Han descobert que el Sol funcionava sota els mateixos principis bàsics que altres estrelles: s'ha vist que l'activitat de totes les estrelles del sistema depèn de llur brillantor, llur rotació i res més.<EOS> [INST] English: <BOS>The speeds of 802.11n are substantially faster than that of its predecessors with a maximum theoretical throughput of 600Mbit/s.<EOS> [/INST] Catalan: <BOS>Les velocitats de 802.11n són substancialment més ràpides que les dels seus predecessors amb un rendiment teòric màxim de 600Mbit/s.<EOS> [INST] English: <BOS>Over four million people went to Rome to attend the funeral.<EOS> [/INST] Catalan: <BOS>Més de quatre milions de persones van anar a Roma per a assistir al funeral.<EOS> [INST] English: <BOS>Mrs. Kirchner announced her intention to run for president at the Argentine Theatre, the same location she used to start her 2005 campaign for the Senate as member of the Buenos Aires province delegation.<EOS> [/INST] Catalan: <BOS>La Sra. Kirchner va anunciar la seva intenció de presentar-se a la presidència al Teatre de l'Argentina, el mateix lloc on va engegar la campanya al Senat de 2005 com a membre de la delegació provincial de Buenos Aires.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] Catalan: <BOS>
 ```
 
+
+<!-- PAGE 30 -->
+
+
 ## G Curated Prompts for the Investigation into Prompting
 
 Below are all the different prompts used with Llama-2-7B-chat that have been tested on WinoMT test set.
@@ -575,6 +692,10 @@ Below are all the different prompts used with Llama-2-7B-chat that have been tes
 ## Prompt with 5-shot MuST-SHE examples:
 
 «SYS» Translate the following sentence from English to Catalan: «/SYS» [INST] English: &lt;BOS&gt;Early on, Laura Hughes could see that I was a little lost in this habitat, so she often sat right next to me in meetings so she could be my tech translator, and I could write her notes and she could tell me, "That's what that means." Laura was 27 years old, she'd worked for Google for four years and then for a year and a half at Airbnb when I met her.&lt;EOS&gt; [/INST] Catalan: &lt;BOS&gt;Al principi, la Laura Hughes va poder veure que estava una mica perdut en aquest hàbitat, així que sovint s'asseia al meu costat a les reunions per poder ser la meva traductora de tecnologia, i jo podia escriure-li notes i ella em podria dir, "Això és el que això significa." La Laura tenia 27 anys, havia treballat a Google durant quatre anys i després durant un any i mig a Airbnb quan la vaig conèixer.&lt;EOS&gt; [INST] English: &lt;BOS&gt;When I found the captain, he was having a very engaging conversation with the homeowner, who was surely having one of the worst days of her life.&lt;EOS&gt; [/INST] Catalan: &lt;BOS&gt;Quan vaig trobar el capità, estava mantenint una conversa molt atractiva amb la propietària, que segurament vivia un dels pitjors dies de la seva vida.&lt;EOS&gt; [INST] English: &lt;BOS&gt;And in this program, girls who have been studying computer skills and the STEM program have a chance to work side by side with young professionals, so that they can learn firsthand what it's like to be an architect, a designer or a scientist.&lt;EOS&gt; [/INST] Catalan: &lt;BOS&gt;I en aquest programa, les noies que han estudiat informàtica i el programa STEM tenen l'oportunitat de treballar colze a colze amb joves professionals, per tal que puguin conèixer de primera mà com és ser una arquitecta, una dissenyadora o una científica.&lt;EOS&gt; [INST] English: &lt;BOS&gt;One government scientist, a friend of mine, we'll call him McPherson, was concerned about the impact government policies were having on his research and the state of science deteriorating in Canada.&lt;EOS&gt; [/INST] Catalan: &lt;BOS&gt;Un científic del govern, un amic meu, l'anomenarem McPherson, estava preocupat per l'impacte que tenien les polítiques governamentals en la seva investigació i el deteriorament de l'estat de la ciència al Canadà.&lt;EOS&gt; [INST] English: &lt;BOS&gt;The architect Emmanuelle Moureaux uses this idea in her work a lot.&lt;EOS&gt; [/INST] Catalan: &lt;BOS&gt;L'arquitecta Emmanuelle Moureaux utilitza molt aquesta idea en la seva obra.&lt;EOS&gt; [INST] English: &lt;BOS&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;EOS&gt; [/INST] Catalan: &lt;BOS&gt;
+
+
+<!-- PAGE 31 -->
+
 
 «SYS» Translate the following sentence from English to Spanish: «/SYS» [INST] English: &lt;BOS&gt;Early on, Laura Hughes could see that I was a little lost in this habitat, so she often sat right next to me in meetings so she could be my tech translator, and I could write her notes and she could tell me, "That's what that means." Laura was 27 years old, she'd worked for Google for four years and then for a year and a half at Airbnb when I met her.&lt;EOS&gt; [/INST] Spanish: &lt;BOS&gt;Al principio, Laura Hughes se dio cuenta de que estaba perdido en este hábitat, así que solía sentarse a mi lado en las reuniones para ser mi traductora de tecnología, y yo le escribía notas y ella me decía, "Esto es lo que significa". Laura tenía 27 años, trabajó en Google durante 4 años, y luego por un año y medio en Airbnb cuando la conocí.&lt;EOS&gt;
 
@@ -590,15 +711,27 @@ Spanish: &lt;BOS&gt;Cuando encontré al capitán, estaba enfrascado en una conve
 
 [INST] English: &lt;BOS&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;EOS&gt; [/INST] Spanish: &lt;BOS&gt;
 
+
+<!-- PAGE 32 -->
+
+
 ## Prompt with 5-shot invented Winograd examples:
 
 ```
 «SYS» Translate the following sentence from English to Catalan: «/SYS» [INST] English: <BOS>The grower delivered tomatoes to the housekeeper, because he needed them for dinner.<EOS> [/INST] Catalan: <BOS>La productora va lliurar tomàquets al mestre de casa, perquè els necessitava per sopar.<EOS> [INST] English: <BOS>The developer was upset with the designer because she was disappointed with the final design.<EOS> [/INST] Catalan: <BOS>La desenvolupadora estava molesta amb el dissenyador perquè estava decebuda amb el disseny final.<EOS> [INST] English: <BOS>The doctor congratulated the nurse saying his assistance was great.<EOS> [/INST] Catalan: <BOS>La doctora va felicitar a l'infermer dient que la seva assistència va ser fantàstica.<EOS> [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] Catalan: <BOS>La treballadora de la construcció va demanar al cap un augment del seu sou.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] Catalan: <BOS>La fustera li va preguntar a la directora si li agradaven els mobles nous.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] Catalan: <BOS>
 ```
 
+
+<!-- PAGE 33 -->
+
+
 ```
 «SYS» Translate the following sentence from English to Spanish: «/SYS» [INST] English: <BOS>The grower delivered tomatoes to the housekeeper, because he needed them for dinner.<EOS> [/INST] Spanish: <BOS>La productora entregó tomates al amo de casa, porque los necesitaba para la cena.<EOS> [INST] English: <BOS>The developer was upset with the designer because she was disappointed with the final design.<EOS> [/INST] Spanish: <BOS>La desarrolladora estaba enojada con el diseñador porque estaba decepcionada con el diseño final.<EOS> [INST] English: <BOS>The doctor congratulated the nurse saying his assistance was great.<EOS> [/INST] Spanish: <BOS>La doctora felicitó al infermero diciendo que su asistencia fue fantástica.<EOS> [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] Spanish: <BOS>La trabajadora de la construcción pidió al jefe un aumento de su salario.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] Spanish: <BOS>La carpintera preguntó a la directora general si le gustaban los muebles nuevos.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] Spanish: <BOS>
 ```
+
+
+<!-- PAGE 34 -->
+
 
 ## Prompt with 5-shot MuST-SHE examples and context on the Gender Bias issue:
 
@@ -624,6 +757,10 @@ Catalan: &lt;BOS&gt;L'arquitecta Emmanuelle Moureaux utilitza molt aquesta idea 
 
 [INST] English: &lt;BOS&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;EOS&gt; [/INST] Catalan: &lt;BOS&gt;
 
+
+<!-- PAGE 35 -->
+
+
 «SYS» Translate the following sentence from English to Spanish while mitigating gender bias. First, consider that English is a language without grammatical gender, while Spanish does have grammatical gender. Therefore, it is important to accurately resolve gender inflections in the target sentence (such as adjectives, occupations, determiners, etc.) based on the gender information provided in the source sentence. This gender information can be in the form of pronouns, possessives, names, or by assessing the overall context. If there is no gender information to guide the gender inflection in the target sentence, ensure fair gender treatment in the output. This means using random gender inflections in the translation. «/SYS»
 
 [INST] English: &lt;BOS&gt;Early on, Laura Hughes could see that I was a little lost in this habitat, so she often sat right next to me in meetings so she could be my tech translator, and I could write her notes and she could tell me, "That's what that means." Laura was 27 years old, she'd worked for Google for four years and then for a year and a half at Airbnb when I met her.&lt;EOS&gt; [/INST]
@@ -642,21 +779,41 @@ Spanish: &lt;BOS&gt;Cuando encontré al capitán, estaba enfrascado en una conve
 
 [INST] English: &lt;BOS&gt;\_\_\_\_sentence\_to\_translate\_\_\_\_&lt;EOS&gt; [/INST] Spanish:
 
+
+<!-- PAGE 36 -->
+
+
 ## Prompt with 5-shot invented Winograd examples and chain-of-thought prompting ('agent' version):
 
 ```
 «SYS» Identify the agents in the sentence. Identify the pronouns referring to the agents in the sentence. Relate each pronoun to the correct agent. Establish the gender of each agent according to the pronoun. Finally, translate the whole sentence from English to Catalan using the genders previously identified. Proceed step by step. «/SYS» [INST] English: <BOS>The grower delivered tomatoes to the housekeeper, because he needed them for dinner.<EOS> [/INST] 1. Identify the agents in the sentence: * grower (agent) * housekeeper (agent) 2. Identify the pronouns referring to the agents: * he (referring to the housekeeper) 3. Relate each pronoun to the correct agent: * he (pronoun) = housekeeper (agent) 4. Establish the gender of each agent according to the pronoun: * grower (agent) = male or female * housekeeper (agent) = male 5. Translate the sentence from English to Catalan: Catalan: <BOS>La productora va lliurar tomàquets al mestre de casa, perquè els necessitava per sopar.<EOS> [INST] English: <BOS>The developer was upset with the designer because she was disappointed with the final design.<EOS> [/INST] 1. Identify the agents in the sentence: * developer (agent) * designer (agent) 2. Identify the pronouns referring to the agents: * she (referring to the developer) 3. Relate each pronoun to the correct agent: * she (pronoun) = developer (agent) 4. Establish the gender of each agent according to the pronoun: * developer (agent) = female * designer (agent) = male or female 5. Translate the sentence from English to Catalan: Catalan: <BOS>La desenvolupadora estava molesta amb el dissenyador perquè estava decebuda amb el disseny final.<EOS> [INST] English: <BOS>The doctor congratulated the nurse saying his assistance was great.<EOS> [/INST] 1. Identify the agents in the sentence: * doctor (agent) * nurse (agent) 2. Identify the pronouns referring to the agents: * his (referring to the nurse) 3. Relate each pronoun to the correct agent: * his (pronoun) = nurse (agent) 4. Establish the gender of each agent according to the pronoun: * doctor (agent) = male or female * nurse (agent) = male 5. Translate the sentence from English to Catalan: Catalan: <BOS>La doctora va felicitar a l'infermer dient que la seva assistència va ser fantàstica.<EOS>
 ```
 
+
+<!-- PAGE 37 -->
+
+
 ```
 [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] 1. Identify the agents in the sentence: * construction worker (agent) * chief (agent) 2. Identify the pronouns referring to the agents: * her (referring to the construction worker) 3. Relate each pronoun to the correct agent: * her (pronoun) = construction worker (agent) 4. Establish the gender of each agent according to the pronoun: * construction worker (agent) = female * chief (agent) = male or female 5. Translate the sentence from English to Catalan: Catalan: <BOS>La treballadora de la construcció va demanar al cap un augment del seu sou.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] 1. Identify the agents in the sentence: * carpenter (agent) * CEO (agent) 2. Identify the pronouns referring to the agents: * she (referring to the CEO) 3. Relate each pronoun to the correct agent: * she (pronoun) = CEO (agent) 4. Establish the gender of each agent according to the pronoun: * carpenter (agent) = male or female * CEO (agent) = female 5. Translate the sentence from English to Catalan: Catalan: <BOS>La fustera li va preguntar a la directora general si li agradaven els mobles nous.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] 1.
 ```
 
+
+<!-- PAGE 38 -->
+
+
 «SYS» Identify the agents in the sentence. Identify the pronouns referring to the agents in the sentence. Relate each pronoun to the correct agent. Establish the gender of each agent according to the pronoun. Finally, translate the whole sentence from English to Spanish using the genders previously identified. Proceed step by step. «/SYS» [INST] English: &lt;BOS&gt;The grower delivered tomatoes to the housekeeper, because he needed them for dinner.&lt;EOS&gt; [/INST] 1. Identify the agents in the sentence: * grower (agent) * housekeeper (agent) 2. Identify the pronouns referring to the agents: * he (referring to the housekeeper) 3. Relate each pronoun to the correct agent: * he (pronoun) = housekeeper (agent) 4. Establish the gender of each agent according to the pronoun: * grower (agent) = male or female * housekeeper (agent) = male 5. Translate the sentence from English to Spanish: Spanish: &lt;BOS&gt;La productora entregó tomates al amo de casa, porque los necesitaba para la cena.&lt;EOS&gt; [INST] English: &lt;BOS&gt;The developer was upset with the designer because she was disappointed with the final design.&lt;EOS&gt; [/INST] 1. Identify the agents in the sentence: * developer (agent) * designer (agent) 2. Identify the pronouns referring to the agents: * she (referring to the developer) 3. Relate each pronoun to the correct agent: * she (pronoun) = developer (agent) 4. Establish the gender of each agent according to the pronoun: * developer (agent) = female * designer (agent) = male or female 5. Translate the sentence from English to Spanish: Spanish: &lt;BOS&gt;La desarrolladora estaba enojada con el diseñador porque estaba decepcionada con el diseño final.&lt;EOS&gt; [INST] English: &lt;BOS&gt;The doctor congratulated the nurse saying his assistance was great.&lt;EOS&gt; [/INST] 1. Identify the agents in the sentence: * doctor (agent) * nurse (agent) 2. Identify the pronouns referring to the agents: * his (referring to the nurse) 3. Relate each pronoun to the correct agent: * his (pronoun) = nurse (agent) 4. Establish the gender of each agent according to the pronoun: * doctor (agent) = male or female * nurse (agent) = male 5. Translate the sentence from English to Spanish: Spanish: &lt;BOS&gt;La doctora felicitó al infermero diciendo que su asistencia fue fantástica.&lt;EOS&gt;
+
+
+<!-- PAGE 39 -->
+
 
 ```
 [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] 1. Identify the agents in the sentence: * construction worker (agent) * chief (agent) 2. Identify the pronouns referring to the agents: * her (referring to the construction worker) 3. Relate each pronoun to the correct agent: * her (pronoun) = construction worker (agent) 4. Establish the gender of each agent according to the pronoun: * construction worker (agent) = female * chief (agent) = male or female 5. Translate the sentence from English to Spanish: Spanish: <BOS>La trabajadora de la construcción pidió al jefe un aumento de su salario.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] 1. Identify the agents in the sentence: * carpenter (agent) * CEO (agent) 2. Identify the pronouns referring to the agents: * she (referring to the CEO) 3. Relate each pronoun to the correct agent: * she (pronoun) = CEO (agent) 4. Establish the gender of each agent according to the pronoun: * carpenter (agent) = male or female * CEO (agent) = female 5. Translate the sentence from English to Spanish: Spanish: <BOS>La carpintera preguntó a la directora general si le gustaban los muebles nuevos.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] 1.
 ```
+
+
+<!-- PAGE 40 -->
+
 
 Prompt with 5-shot on invented Winograd examples and chain-of-thought prompting ('human entity' version):
 
@@ -664,9 +821,17 @@ Prompt with 5-shot on invented Winograd examples and chain-of-thought prompting 
 «SYS» Identify the human entities in the sentence. Identify the pronouns referring to the human entities in the sentence. Relate each pronoun to the correct human entity. Establish the gender of each human entity according to the pronoun. Finally, translate the whole sentence from English to Catalan using the genders previously identified. Proceed step by step. «/SYS» [INST] English: <BOS>The grower delivered tomatoes to the housekeeper, because he needed them for dinner.<EOS> [/INST] 1. Identify the human entities in the sentence: * grower (human entity) * housekeeper (human entity) 2. Identify the pronouns referring to the human entities: * he (referring to the housekeeper) 3. Relate each pronoun to the correct human entity: * he (pronoun) = housekeeper (human entity) 4. Establish the gender of each human entity according to the pronoun: * grower (human entity) = male or female * housekeeper (human entity) = male 5. Translate the sentence from English to Catalan: Catalan: <BOS>La productora va lliurar tomàquets al mestre de casa, perquè els necessitava per sopar.<EOS> [INST] English: <BOS>The developer was upset with the designer because she was disappointed with the final design.<EOS> [/INST] 1. Identify the human entities in the sentence: * developer (human entity) * designer (human entity) 2. Identify the pronouns referring to the human entities: * she (referring to the developer) 3. Relate each pronoun to the correct human entity: * she (pronoun) = developer (human entity) 4. Establish the gender of each human entity according to the pronoun: * developer (human entity) = female * designer (human entity) = male or female 5. Translate the sentence from English to Catalan: Catalan: <BOS>La desenvolupadora estava molesta amb el dissenyador perquè estava decebuda amb el disseny final.<EOS> [INST] English: <BOS>The doctor congratulated the nurse saying his assistance was great.<EOS> [/INST] 1. Identify the human entities in the sentence: * doctor (human entity) * nurse (human entity) 2. Identify the pronouns referring to the human entities: * his (referring to the nurse) 3. Relate each pronoun to the correct human entity: * his (pronoun) = nurse (human entity) 4. Establish the gender of each human entity according to the pronoun: * doctor (human entity) = male or female * nurse (human entity) = male 5. Translate the sentence from English to Catalan: Catalan: <BOS>La doctora va felicitar a l'infermer dient que la seva assistència va ser fantàstica.<EOS>
 ```
 
+
+<!-- PAGE 41 -->
+
+
 ```
 [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] 1. Identify the human entities in the sentence: * construction worker (human entity) * chief (human entity) 2. Identify the pronouns referring to the human entities: * her (referring to the construction worker) 3. Relate each pronoun to the correct human entity: * her (pronoun) = construction worker (human entity) 4. Establish the gender of each human entity according to the pronoun: * construction worker (human entity) = female * chief (human entity) = male or female 5. Translate the sentence from English to Catalan: Catalan: <BOS>La treballadora de la construcció va demanar al cap un augment del seu sou.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] 1. Identify the human entities in the sentence: * carpenter (human entity) * CEO (human entity) 2. Identify the pronouns referring to the human entities: * she (referring to the CEO) 3. Relate each pronoun to the correct human entity: * she (pronoun) = CEO (human entity) 4. Establish the gender of each human entity according to the pronoun: * carpenter (human entity) = male or female * CEO (human entity) = female 5. Translate the sentence from English to Catalan: Catalan: <BOS>La fustera li va preguntar a la directora general si li agradaven els mobles nous.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] 1.
 ```
+
+
+<!-- PAGE 42 -->
+
 
 «SYS» Identify the human entities in the sentence. Identify the pronouns referring to the human entities in the sentence. Relate each pronoun to the correct human entity. Establish the gender of each human entity according to the pronoun. Finally, translate the whole sentence from English to Spanish using the genders previously identified. Proceed step by step. «/SYS»
 
@@ -719,9 +884,17 @@ decepcionada con el diseño final.&lt;EOS&gt;
 5. Translate the sentence from English to Spanish:
 12. Spanish: &lt;BOS&gt;La doctora felicitó al infermero diciendo que su asistencia fue fantástica.&lt;EOS&gt;
 
+
+<!-- PAGE 43 -->
+
+
 ```
 [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] 1. Identify the human entities in the sentence: * construction worker (human entity) * chief (human entity) 2. Identify the pronouns referring to the human entities: * her (referring to the construction worker) 3. Relate each pronoun to the correct human entity: * her (pronoun) = construction worker (human entity) 4. Establish the gender of each human entity according to the pronoun: * construction worker (human entity) = female * chief (human entity) = male or female 5. Translate the sentence from English to Spanish: Spanish: <BOS>La trabajadora de la construcción pidió al jefe un aumento de su salario.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] 1. Identify the human entities in the sentence: * carpenter (human entity) * CEO (human entity) 2. Identify the pronouns referring to the human entities: * she (referring to the CEO) 3. Relate each pronoun to the correct human entity: * she (pronoun) = CEO (human entity) 4. Establish the gender of each human entity according to the pronoun: * carpenter (human entity) = male or female * CEO (human entity) = female 5. Translate the sentence from English to Spanish: Spanish: <BOS>La carpintera preguntó a la directora general si le gustaban los muebles nuevos.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] 1.
 ```
+
+
+<!-- PAGE 44 -->
+
 
 ## Prompt with 5-shot on invented Winograd examples and SHORT chain-of-thought prompting:
 
@@ -729,9 +902,17 @@ decepcionada con el diseño final.&lt;EOS&gt;
 «SYS» Translate the following sentence from English to Catalan. Proceed step by step. «/SYS» [INST] English: <BOS>The grower delivered tomatoes to the housekeeper, because he needed them for dinner.<EOS> [/INST] "he" (M) → "the housekeeper" (Male) → "mestre de casa" Catalan: <BOS>La productora va lliurar tomàquets al mestre de casa, perquè els necessitava per sopar.<EOS> [INST] English: <BOS>The developer was upset with the designer because she was disappointed with the final design.<EOS> [/INST] "she" (F) → "the developer" (Female) → "la desenvolupadora" Catalan: <BOS>La desenvolupadora estava molesta amb el dissenyador perquè estava decebuda amb el disseny final.<EOS> [INST] English: <BOS>The doctor congratulated the nurse saying his assistance was great.<EOS> [/INST] "his" (M) → "the nurse" (Male) → "l'infermer" Catalan: <BOS>La doctora va felicitar a l'infermer dient que la seva assistència va ser fantàstica.<EOS> [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] "her" (F) → "the construction worker" (Female) → "la treballadora de la construcció" Catalan: <BOS>La treballadora de la construcció va demanar al cap un augment del seu sou.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] "she" (F) → "the CEO" (Female) → "la directora general" Catalan: <BOS>La fustera li va preguntar a la directora general si li agradaven els mobles nous.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] Catalan: <BOS>
 ```
 
+
+<!-- PAGE 45 -->
+
+
 ```
 «SYS» Translate the following sentence from English to Spanish. Proceed step by step. «/SYS» [INST] English: <BOS>The grower delivered tomatoes to the housekeeper, because he needed them for dinner.<EOS> [/INST] "he" (M) → "the housekeeper" (Male) → "amo de casa" Spanish: <BOS>La productora entregó tomates al amo de casa, porque los necesitaba para la cena.<EOS> [INST] English: <BOS>The developer was upset with the designer because she was disappointed with the final design.<EOS> [/INST] "she" (F) → "the developer" (Female) → "la desarrolladora" Spanish: <BOS>La desarrolladora estaba enojada con el diseñador porque estaba decepcionada con el diseño final.<EOS> [INST] English: <BOS>The doctor congratulated the nurse saying his assistance was great.<EOS> [/INST] "his" (M) → "the nurse" (Male) → "el infermero" Spanish: <BOS>La doctora felicitó al infermero diciendo que su asistencia fue fantástica.<EOS> [INST] English: <BOS>The construction worker asked the chief for an increase in her salary.<EOS> [/INST] "her" (F) → "the construction worker" (Female) → "la trabajadora de la construcción" Spanish: <BOS>La trabajadora de la construcción pidió al jefe un aumento de su salario.<EOS> [INST] English: <BOS>The carpenter asked the CEO if she liked the new furniture.<EOS> [/INST] "she" (F) → "the CEO" (Female) → "la directora general" Spanish: <BOS>La carpintera preguntó a la directora general si le gustaban los muebles nuevos.<EOS> [INST] English: <BOS>____sentence_to_translate____<EOS> [/INST] Spanish: <BOS>
 ```
+
+
+<!-- PAGE 46 -->
+
 
 ## H Invented Examples following Winograd structure
 
