@@ -1,180 +1,243 @@
----
-type: knowledge
-created: 2026-02-02
-tags: [workflow, research, original]
-status: draft
----
-
 # Forum Wissenschaft Paper - Arbeitsplan
 
-## Summary
+**Stand:** 3. Februar 2026
+**Deadline:** 4. Mai 2026 (91 Tage)
 
-Arbeitsplan für das Paper "Deep-Research-gestützte Literature Reviews im Praxistest" für Forum Wissenschaft (Ausgabe 2/2026). Das Paper dokumentiert den Vergleich zwischen LLM-gestützter und menschlicher Literature Review am Beispiel feministischer AI Literacies in der Sozialen Arbeit.
+---
 
 ## Rahmenbedingungen
 
 | Parameter | Wert |
 |-----------|------|
-| Deadline | 4. Mai 2026 |
 | Umfang | 18.000 Zeichen |
 | Format | Wissenschaftlich-journalistisch |
-| Zitierweise | Fußnoten (kein Literaturverzeichnis) |
+| Zitierweise | Fussnoten (kein Literaturverzeichnis) |
 | Zielgruppe | Wenig KI-Vorwissen |
 | Autor:innen | Christopher Pollin, Susanne Sackl-Sharif, Sabine Klinger, Christian Steiner |
 
-## Aktueller Stand (2. Februar 2026)
+---
 
-### FemPrompt Literature Review
+## Forschungsfrage
 
-| Phase | Status | Details |
-|-------|--------|---------|
-| Deep Research | ✅ Abgeschlossen | 303 Papers identifiziert (4 LLM-Modelle) |
-| Thematisches Assessment | 🔄 Läuft | Susi & Sabine via Google Sheets |
-| Kategoriendefinition | ⚠️ Abstimmung nötig | Meeting mit Susi diese Woche |
-| PDF-Akquise | ⏸️ Wartet | Blockiert durch Assessment |
-| Markdown-Konversion | ⏸️ Wartet | Pipeline bereit |
-| LLM-Summarisierung | ⏸️ Wartet | Pipeline bereit |
-| Obsidian Vault | ⏸️ Wartet | Pipeline bereit |
+> Wie reliabel ist LLM-basiertes Literatur-Assessment im Vergleich zu Expert:innen-Bewertung bei einem interdisziplinaeren, feministisch-technischen Forschungsfeld?
 
-### Repository-Status
+---
 
-GitHub: `chpollin/FemPrompt_SozArb`
+## Projektziel (Gesamtprojekt)
 
-- 33 Python-Scripts im `analysis/` Ordner
-- 5-Stage Pipeline implementiert und getestet
-- SozArb-Vault operativ (266 Papers, 144 Konzepte) — als Referenz verfügbar
+**Primaer:** Systematischer Literature Review zu feministischer AI Literacy und LLM-Bias - empirische Grundlage fuer weitere Forschung.
 
-### Benchmark-Komponente (geplant)
+**Sekundaer (dieses Paper):** Methodische Innovation dokumentieren - Vergleich Human vs. Agent Assessment.
 
-Das Repository enthält einen eingebauten Benchmark für den Human-LLM-Vergleich:
+---
 
-```
-benchmark/
-├── README.md                    # Methodenbeschreibung
-├── data/
-│   ├── human_assessment.csv     # Export Google Sheets
-│   ├── llm_assessment.csv       # Export assessment-llm/
-│   └── merged_comparison.csv    # Vereinigt (Paper-ID als Key)
-├── scripts/
-│   ├── merge_assessments.py     # Zusammenführung
-│   ├── calculate_agreement.py   # Kappa, Übereinstimmung
-│   └── analyze_disagreements.py # Qualitative Divergenzanalyse
-└── results/
-    ├── agreement_metrics.json   # Quantitative Ergebnisse
-    └── disagreement_cases.csv   # Fälle für Paper
-```
+## Zielgruppe
 
-**Erwartete Metriken:**
-- Gesamtübereinstimmung und Cohen's Kappa
-- Übereinstimmung nach Kategorie (explizit feminist, intersektional, deutschsprachig)
-- Konfusionsmatrix (Human Include/Exclude × LLM Include/Exclude)
-- Qualitative Analyse der Disagreement-Fälle
+| Zielgruppe | Nutzen |
+|------------|--------|
+| Forscher:innen (Soziale Arbeit + KI) | Strukturierte Literaturuebersicht |
+| Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung |
+| Lehrende (AI Literacy) | Kursmaterial, Konzepte |
+
+---
+
+## Erfolgskriterien
+
+### Must-Have
+
+| Kriterium | Messbar |
+|-----------|---------|
+| Literature Review abgeschlossen | 326 Papers kategorisiert |
+| Paper eingereicht | 4. Mai 2026 |
+| Assessment-Daten vorhanden | Human + Agent komplett |
+
+### Should-Have
+
+| Kriterium | Messbar |
+|-----------|---------|
+| Benchmark-Metriken | Cohen's Kappa berechnet |
+| Obsidian Vault | Vernetzte Wissensbasis |
+
+---
+
+## Nicht-Ziele
+
+- ❌ Fertiger Prompting-Leitfaden (nachgelagerte Phase)
+- ❌ Tool fuer Endnutzer:innen
+- ❌ Vollstaendige Automatisierung
+- ❌ Training eigener Modelle
+
+---
+
+## Korpus
+
+| Aspekt | Wert |
+|--------|------|
+| Papers gesamt | 326 (Zotero Group 6080294) |
+| PDFs heruntergeladen | 234 |
+| Markdown konvertiert | 232 (99.1%) |
+| Assessment-Schema | 10 binaere Kategorien |
+
+---
+
+## Pipeline-Status
+
+### Phase 1: Datenakquise ✅ ABGESCHLOSSEN
+
+| Schritt | Status | Ergebnis |
+|---------|--------|----------|
+| Zotero-Export | ✅ | 326 Papers |
+| PDF-Download | ✅ | 234 PDFs |
+| Markdown-Konversion (Docling) | ✅ | 232 Dateien |
+| Validierung | ✅ | 98.7 Konfidenz-Score |
+| Post-Processing | ✅ | 107k Zeichen bereinigt |
+| PDF-zu-JPG (Sync-Scroll) | ✅ | ~4000 Seiten |
+| Review-Tool | ✅ | Browser-basiert mit Import/Export |
+
+### Phase 2: Assessment 🔄 IN ARBEIT
+
+| Track | Methode | Status | Verantwortlich |
+|-------|---------|--------|----------------|
+| Human | Google Sheets manuell | 🔄 Laeuft | Susi, Sabine |
+| Agent | Claude Haiku 4.5 | ⏸️ Bereit | Christopher |
+
+**Blocker:** Human-Assessment muss abgeschlossen sein vor Benchmark.
+
+### Phase 3: Benchmark ⏸️ WARTET
+
+| Schritt | Script | Status |
+|---------|--------|--------|
+| Assessments zusammenfuehren | `merge_assessments.py` | ⏸️ Wartet |
+| Agreement berechnen | `calculate_agreement.py` | ⏸️ Wartet |
+| Disagreements analysieren | `analyze_disagreements.py` | ⏸️ Wartet |
+
+**Output:** Cohen's Kappa, Konfusionsmatrix, Disagreement-Faelle
+
+### Phase 4: Synthese ⏸️ WARTET
+
+| Schritt | Status |
+|---------|--------|
+| LLM-Summarisierung | ⏸️ Wartet auf Stichproben-Review |
+| Obsidian Vault | ⏸️ Wartet |
+
+---
 
 ## Offene Aufgaben
 
-### Blocker (vor Pipeline-Ausführung)
+### Sofort (diese Woche)
 
-> [!warning] BLOCKER: Thematisches Assessment
-> Das menschliche Assessment durch Susi und Sabine muss abgeschlossen sein, bevor die Pipeline für FemPrompt ausgeführt werden kann. Die Kategoriendefinitionen wurden überarbeitet und müssen im Meeting abgestimmt werden.
+- [ ] Stichproben-Review mit Browser-Tool (~25 Dokumente, 10%)
+- [ ] Human-Assessment Status bei Susi/Sabine erfragen
 
-1. **Meeting mit Susi** (diese Woche)
-   - Überarbeitete Kategoriendefinitionen besprechen
-   - Bewertungskriterien finalisieren
-   - Timeline für Assessment-Abschluss klären
+### Nach Human-Assessment
 
-2. **Assessment abschließen** (Susi & Sabine)
-   - 303 Papers bewerten
-   - Include/Exclude-Entscheidungen dokumentieren
-   - Inter-Rater-Diskussion bei Uneinigkeit
+- [ ] LLM-Assessment Vollauf (326 Papers, ~$1.30)
+- [ ] Human-Assessment aus Google Sheets exportieren
+- [ ] Benchmark-Skripte ausfuehren
+- [ ] Disagreement-Faelle qualitativ analysieren
 
-### Nach Assessment-Abschluss
+### Paper-Entwicklung (parallel moeglich)
 
-3. **Metadata in Zotero ergänzen**
-   - PDF-Links hinzufügen
-   - Fehlende Metadaten vervollständigen
+- [ ] Methodenbeschreibung schreiben
+- [ ] Theoretischer Rahmen (Co-Intelligence, PRISMA)
+- [ ] Ergebnisse einarbeiten (nach Benchmark)
+- [ ] Auf 18.000 Zeichen kuerzen
 
-4. **Pipeline ausführen**
-   ```
-   PDF-Akquise → Markdown-Konversion → Summarisierung → Vault-Generierung
-   ```
+---
 
-5. **Benchmark ausführen** (Human-LLM Assessment Comparison)
-   - Human-Assessment aus Google Sheets exportieren
-   - LLM-Assessment aus `assessment-llm/` exportieren
-   - Merge-Skript ausführen → `merged_comparison.csv`
-   - Übereinstimmungsmetriken berechnen (Cohen's Kappa)
-   - Disagreement-Analyse für qualitative Auswertung
-
-### Paper-Entwicklung
-
-6. **Textbausteine entwickeln** (parallel möglich)
-   - Methodenbeschreibung (bereits im Abstract)
-   - Theoretischer Rahmen (Co-Intelligence, PRISMA)
-   - Reflexion über epistemische Grenzen
-
-7. **Ergebnisse einarbeiten**
-   - Nach Pipeline-Abschluss
-   - Quantitative Vergleichsdaten
-   - Qualitative Beobachtungen
-
-8. **Finalisierung**
-   - Auf 18.000 Zeichen kürzen
-   - Fußnoten formatieren
-   - Co-Autor:innen-Review
-
-## Paper-Gliederung (Entwurf)
+## Paper-Gliederung
 
 ```
 1. Einleitung (~2.500 Zeichen)
-   - KI verändert wissenschaftliche Wissensproduktion
-   - Deep Research als neues Werkzeug
-   - Forschungsfrage: Wo Co-Intelligence, wo Grenzen?
+   - KI veraendert wissenschaftliche Wissensproduktion
+   - Forschungsfrage: Wie reliabel ist LLM-Assessment?
 
 2. Kontext: Feministische AI Literacies (~2.000 Zeichen)
    - Arbeitsdefinition
-   - Elisabeth-List-Fellowship Projekt
    - Soziale Arbeit als Anwendungsfeld
 
 3. Methodik (~4.000 Zeichen)
-   - 3-Phasen-Workflow
-   - Phase 1: Deep Research (4 LLMs)
-   - Phase 2: Parallele Bewertung (LLM vs. Expert:innen)
-   - Phase 3: Synthese und Knowledge Graph
+   - Dual-Track-Design (Human vs. Agent)
+   - 10-Kategorien-Schema
+   - Benchmark-Metriken
 
 4. Ergebnisse (~5.000 Zeichen)
-   - Quantitativer Vergleich
-   - Wo Übereinstimmung, wo Divergenz
+   - Quantitativer Vergleich (Kappa, Uebereinstimmung)
+   - Wo Divergenz, warum
    - Epistemische Asymmetrien
 
 5. Diskussion (~3.000 Zeichen)
-   - Co-Intelligence: Stärken und Grenzen
-   - Verantwortungsfrage
-   - Abhängigkeit von proprietären Systemen
+   - Co-Intelligence: Staerken und Grenzen
+   - Abhaengigkeit von proprietaeren Systemen
 
 6. Fazit (~1.500 Zeichen)
    - Praktische Empfehlungen
-   - Offene Fragen
 ```
 
-## Kernbotschaft des Papers
+---
 
-Die Frage ist nicht, *ob* KI bei Literature Reviews eingesetzt wird, sondern *wie*. Der Praxistest zeigt:
+## Benchmark-Erwartungen
 
-1. **Deep Research funktioniert** für breite Literaturidentifikation
-2. **Expert:innenwissen bleibt unverzichtbar** für Qualitätsurteil und Kontextualisierung
-3. **Transparenz** über den Prozess ist wissenschaftliche Pflicht
-4. **Abhängigkeit** von proprietären Systemen ist ein Grundproblem
+| Metrik | Beschreibung |
+|--------|--------------|
+| Cohen's Kappa | Uebereinstimmung bereinigt um Zufall |
+| Gesamtuebereinstimmung | % identische Include/Exclude |
+| Kategorie-Uebereinstimmung | Pro Kategorie (10x) |
+| Konfusionsmatrix | Human x Agent (Include/Exclude) |
+| Disagreement-Faelle | Qualitative Analyse fuer Paper |
 
-## Verbindung zu anderen Dokumenten
+---
 
-- [[Abstract - Deep-Research-gestützte Literature Reviews]]: Eingereicher Abstract
-- [[Literature Review Pipeline - Technische Dokumentation]]: Technische Details
-- [[Human-LLM Assessment Benchmark]]: Benchmark-Spezifikation und Workflow
-- [[FemPrompt-SozArb MOC]]: Projekt-Navigation
-- [[Workflow für eine Deep-Research-gestützte Literaturanalyse am Beispiel von feministischem AI-Literacy]]: Methodendokument
+## Technische Infrastruktur
 
-## Related
+### Scripts (bereit)
 
-- [[SocialAI MOC]]
-- [[Promptotyping MOC]]
-- [[Critical-Expert-in-the-Loop]]
+| Script | Zweck |
+|--------|-------|
+| `assessment/agent/run_assessment.py` | LLM-Assessment ausfuehren |
+| `benchmark/scripts/merge_assessments.py` | Human + Agent zusammenfuehren |
+| `benchmark/scripts/calculate_agreement.py` | Kappa berechnen |
+| `benchmark/scripts/analyze_disagreements.py` | Divergenzen analysieren |
+
+### Tools (bereit)
+
+| Tool | Zweck |
+|------|-------|
+| `pipeline/tools/markdown_reviewer.html` | Stichproben-Review |
+| Google Sheets | Human-Assessment |
+
+---
+
+## Ressourcen
+
+| Ressource | Link/Pfad |
+|-----------|-----------|
+| Repository | github.com/chpollin/FemPrompt_SozArb |
+| Google Sheets | [Thematisches Assessment](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
+| Zotero Group | 6080294 |
+| Dokumentation | `knowledge/` |
+
+---
+
+## Team
+
+| Person | Rolle | Aufgabe aktuell |
+|--------|-------|-----------------|
+| Christopher Pollin | Technische Umsetzung | Pipeline, Benchmark-Scripts |
+| Susi Sackl-Sharif | Human-Assessment | Google Sheets bewerten |
+| Sabine Klinger | Human-Assessment | Google Sheets bewerten |
+| Christian Steiner | Paper-Review | Finalisierung |
+| Christina | Zotero-Kuratierung | Abgeschlossen |
+
+---
+
+## Kernbotschaft
+
+1. **Deep Research funktioniert** fuer breite Literaturidentifikation
+2. **Expert:innenwissen bleibt unverzichtbar** fuer Qualitaetsurteil
+3. **Transparenz** ueber den Prozess ist wissenschaftliche Pflicht
+4. **Benchmark quantifiziert** wo LLM-Assessment zuverlaessig ist
+
+---
+
+*Version: 2.0 (2026-02-03)*

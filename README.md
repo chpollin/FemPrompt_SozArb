@@ -1,16 +1,52 @@
-# FemPrompt: Human vs. Agent Literature Review
+# FemPrompt: Feminist AI Literacy Literature Review
 
-Vergleich zwischen menschlichem Expert:innen-Assessment und LLM-basiertem Agent-Workflow
-für systematische Literature Reviews zu feministischer AI Literacy.
+Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit.
 
 ---
 
-## Forschungsfrage
+## Projektziel
 
-> Wie reliabel ist LLM-basiertes Literatur-Assessment im Vergleich zu Expert:innen-Bewertung
-> bei einem interdisziplinären, feministisch-technischen Forschungsfeld?
+**Primaer:** Empirische Grundlage schaffen fuer Forschung zu diskriminierungssensiblem Prompting.
 
-**Paper:** Forum Wissenschaft 2/2026 (Deadline: 4. Mai 2026)
+**Sekundaer:** Methodische Innovation dokumentieren - LLM-gestuetztes Assessment im Vergleich zu Expert:innen-Bewertung.
+
+---
+
+## Forschungsfragen
+
+1. Wie manifestiert sich Bias in Frontier-LLMs kontextabhaengig?
+2. Welche Prompt-Strategien ermoeglichen diskriminierungssensible KI-Nutzung?
+3. Wie koennen Sozialarbeitende AI-Literacy entwickeln?
+
+---
+
+## Zielgruppe
+
+| Zielgruppe | Nutzen |
+|------------|--------|
+| Forscher:innen (Soziale Arbeit + KI) | Strukturierte Literaturuebersicht |
+| Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung |
+| Lehrende (AI Literacy) | Kursmaterial, Konzepte |
+
+---
+
+## Erfolgskriterien
+
+| Kriterium | Status |
+|-----------|--------|
+| Literature Review (326 Papers kategorisiert) | 🔄 In Arbeit |
+| Paper eingereicht (Forum Wissenschaft, 4. Mai 2026) | ⏸️ Wartet |
+| Benchmark Human vs. Agent | ⏸️ Wartet |
+| Obsidian Vault nutzbar | ⏸️ Wartet |
+
+---
+
+## Nicht-Ziele
+
+- ❌ Fertiger Prompting-Leitfaden (nachgelagerte Phase)
+- ❌ Tool fuer Endnutzer:innen
+- ❌ Vollstaendige Automatisierung
+- ❌ Training eigener Modelle
 
 ---
 
@@ -18,7 +54,7 @@ für systematische Literature Reviews zu feministischer AI Literacy.
 
 ```
 FemPrompt_SozArb/
-├── corpus/                    # EIN Korpus (326 Papers)
+├── corpus/                    # Korpus (326 Papers)
 │   ├── zotero_export.json
 │   └── papers_metadata.csv
 │
@@ -49,7 +85,7 @@ FemPrompt_SozArb/
 │   ├── validation_reports/   # Validierungsberichte
 │   └── summaries/
 │
-├── vault/                     # EIN Obsidian Vault
+├── vault/                     # Obsidian Vault
 │   └── MOCs/
 │
 └── knowledge/                 # Dokumentation
@@ -57,61 +93,70 @@ FemPrompt_SozArb/
 
 ---
 
+## Aktueller Stand
+
+### Pipeline Phase 1: Datenakquise ✅
+
+| Schritt | Status |
+|---------|--------|
+| PDF-Download | 234 PDFs |
+| Markdown-Konversion | 232 (99.1%) |
+| Validierung | 98.7 Konfidenz-Score |
+| Review-Tool | Browser-basiert mit Sync-Scroll |
+
+### Pipeline Phase 2: Assessment 🔄
+
+| Track | Status |
+|-------|--------|
+| Human (Susi, Sabine) | In Arbeit |
+| Agent (Claude Haiku) | Bereit |
+
+### Pipeline Phase 3-4: Benchmark & Synthese ⏸️
+
+Wartet auf Abschluss des Human-Assessments.
+
+---
+
 ## Quick Start
 
-### 1. Human Assessment
+### Assessment
 
 ```bash
-# Google Sheets exportieren nach:
-assessment/human/results/assessment_YYYYMMDD.csv
-```
-
-### 2. Agent Assessment
-
-```bash
+# Agent Assessment
 python assessment/agent/run_assessment.py \
   --input corpus/papers_metadata.csv \
-  --output assessment/agent/results/assessment_$(date +%Y%m%d).csv
+  --output assessment/agent/results/
+
+# Human Assessment: Google Sheets exportieren nach
+# assessment/human/results/
 ```
 
-### 3. Benchmark
+### Benchmark
 
 ```bash
-# Assessments zusammenführen
-python benchmark/scripts/merge_assessments.py \
-  --human assessment/human/results/latest.csv \
-  --agent assessment/agent/results/latest.csv \
-  --output benchmark/data/merged_comparison.csv
-
-# Agreement berechnen
-python benchmark/scripts/calculate_agreement.py \
-  --input benchmark/data/merged_comparison.csv \
-  --output benchmark/results/
-
-# Disagreements analysieren
-python benchmark/scripts/analyze_disagreements.py \
-  --input benchmark/data/merged_comparison.csv \
-  --output benchmark/results/disagreement_cases.csv
+python benchmark/scripts/merge_assessments.py
+python benchmark/scripts/calculate_agreement.py
+python benchmark/scripts/analyze_disagreements.py
 ```
 
 ---
 
 ## Assessment-Schema
 
-Beide Tracks verwenden identisches 10-Kategorien-Schema:
+10 binaere Kategorien:
 
-| Kategorie | Typ | Gruppe |
-|-----------|-----|--------|
-| AI_Literacies | binär | Technik |
-| Generative_KI | binär | Technik |
-| Prompting | binär | Technik |
-| KI_Sonstige | binär | Technik |
-| Soziale_Arbeit | binär | Sozial |
-| Bias_Ungleichheit | binär | Sozial |
-| Gender | binär | Sozial |
-| Diversitaet | binär | Sozial |
-| Feministisch | binär | Sozial |
-| Fairness | binär | Sozial |
+| Kategorie | Gruppe |
+|-----------|--------|
+| AI_Literacies | Technik |
+| Generative_KI | Technik |
+| Prompting | Technik |
+| KI_Sonstige | Technik |
+| Soziale_Arbeit | Sozial |
+| Bias_Ungleichheit | Sozial |
+| Gender | Sozial |
+| Diversitaet | Sozial |
+| Feministisch | Sozial |
+| Fairness | Sozial |
 
 **Inklusions-Logik:** `(Technik >= 1) AND (Sozial >= 1) → Include`
 
@@ -121,8 +166,8 @@ Beide Tracks verwenden identisches 10-Kategorien-Schema:
 
 | Person | Rolle |
 |--------|-------|
-| Susi Sackl-Sharif | Human Expert Assessment |
-| Sabine Klinger | Human Expert Assessment |
+| Susi Sackl-Sharif | Human-Assessment, Forschungsleitung |
+| Sabine Klinger | Human-Assessment |
 | Christopher Pollin | Technische Umsetzung |
 | Christina | Zotero-Kuratierung |
 | Christian Steiner | Paper-Review |
@@ -131,13 +176,24 @@ Beide Tracks verwenden identisches 10-Kategorien-Schema:
 
 ## Dokumentation
 
-Vollständige Dokumentation: [`knowledge/`](knowledge/)
+Vollstaendige Dokumentation: [`knowledge/`](knowledge/)
 
-- [index.md](knowledge/index.md) - Dokumentations-Einstieg
-- [02-methodology.md](knowledge/02-methodology.md) - PRISMA 2020, Assessment-Schema
-- [04-technical.md](knowledge/04-technical.md) - Pipeline-Architektur
+| Dokument | Inhalt |
+|----------|--------|
+| [01-project.md](knowledge/01-project.md) | Projektziel, Zielgruppe, Erfolgskriterien |
+| [02-methodology.md](knowledge/02-methodology.md) | PRISMA 2020, Assessment-Schema |
+| [03-status.md](knowledge/03-status.md) | Aktueller Stand |
+| [04-technical.md](knowledge/04-technical.md) | Pipeline-Architektur |
 
 ---
 
-*Version: 2.1 (Pipeline-Erweiterung)*
-*Aktualisiert: 2026-02-03*
+## Paper
+
+**Forum Wissenschaft 2/2026**
+- Deadline: 4. Mai 2026
+- Umfang: 18.000 Zeichen
+- Fokus: LLM-gestuetzter Literature Review im Praxistest
+
+---
+
+*Version: 3.0 (2026-02-03)*

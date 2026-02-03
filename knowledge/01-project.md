@@ -1,41 +1,105 @@
-# Projekt: FemPrompt & SozArb
+# Projekt: FemPrompt - Feminist AI Literacy Literature Review
 
-## Forschungsfrage
+## Projektziel
 
-Frontier-LLMs wie ChatGPT, Claude und Gemini veraendern die berufliche Praxis in der Sozialen Arbeit. Diese Werkzeuge werden zur Informationssuche, Problemloesung und Dokumentation eingesetzt, ihre interne Komplexitaet und potenzielle Bias-Reproduktion bleiben jedoch weitgehend unverstanden.
+Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit.
 
-**Zentrale Frage:** Wie kann ein systematisches Literature Review die Evidenzbasis fuer diskriminierungssensibles Prompting in der Sozialen Arbeit schaffen?
+**Primaeres Ziel:** Empirische Grundlage schaffen fuer weitere Forschung zu diskriminierungssensiblem Prompting.
 
-Das Projekt fokussiert auf:
-- Identifikation von Bias-Typen in LLMs
-- Mitigation-Strategien durch Prompting
-- Methodische Ansaetze zur Sichtbarmachung intersektionaler Diskriminierungsformen
+**Sekundaeres Ziel:** Methodische Innovation dokumentieren - wie kann LLM-gestuetztes Assessment den Review-Prozess unterstuetzen?
 
 ---
 
-## Zielsetzung
+## Forschungsfragen
 
-Das Projekt leistet systematische Vorarbeit fuer einen evidenzbasierten Prompting-Leitfaden:
-
-1. **Forschungslage strukturieren:** Bias in LLMs fuer Soziale Arbeit aufbereiten
-2. **Prozess dokumentieren:** LLM-gestuetzter Review mit feministischer Perspektive
-3. **Wissensbasis schaffen:** Grundlage fuer praktische Handlungsempfehlungen
-
-**Scope:** Literature Review als Grundlage. Der eigentliche Prompting-Leitfaden wird in einer nachgelagerten Phase entwickelt.
+1. Wie manifestiert sich Bias in Frontier-LLMs kontextabhaengig?
+2. Welche Prompt-Strategien ermoeglichen diskriminierungssensible KI-Nutzung?
+3. Wie koennen Sozialarbeitende AI-Literacy entwickeln, die der Systemkomplexitaet gerecht wird?
 
 ---
 
-## Zwei Projekte
+## Zielgruppe
 
-### FemPrompt (303 Papers)
-- **Fokus:** Feministische AI Literacies, generative KI, Prompting in Sozialer Arbeit
-- **Zotero:** Group 6080294
-- **Status:** Thematisches Assessment laeuft (Susi, Sabine)
+| Zielgruppe | Nutzen |
+|------------|--------|
+| Forscher:innen (Soziale Arbeit + KI) | Strukturierte Literaturuebersicht, Forschungsluecken |
+| Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung in der Praxis |
+| Lehrende (AI Literacy) | Kursmaterial, Konzepte, Fallbeispiele |
 
-### SozArb (325 Papers)
-- **Fokus:** AI Literacy fuer vulnerable Populationen
-- **Zotero:** Group 6284300
-- **Status:** Pausiert (222 Include, 75 Enhanced Summaries)
+**Paper-Zielgruppe (Forum Wissenschaft):** Wissenschaftler:innen mit wenig KI-Vorwissen
+
+---
+
+## Erfolgskriterien
+
+### Must-Have (Minimum)
+
+| Kriterium | Messbar |
+|-----------|---------|
+| Literature Review abgeschlossen | 326 Papers thematisch kategorisiert |
+| Paper eingereicht | Deadline 4. Mai 2026 |
+| Assessment-Daten vorhanden | Human + Agent Assessment komplett |
+
+### Should-Have
+
+| Kriterium | Messbar |
+|-----------|---------|
+| Benchmark-Metriken berechnet | Cohen's Kappa, Konfusionsmatrix |
+| Obsidian Vault nutzbar | Vernetzte Wissensbasis |
+| LLM-Summaries generiert | Strukturierte Zusammenfassungen |
+
+### Nice-to-Have
+
+| Kriterium | Messbar |
+|-----------|---------|
+| Wissensbasis fuer Prompting-Leitfaden | Qualitativ |
+| Reproduzierbarer Workflow | Pipeline dokumentiert |
+
+---
+
+## Nicht-Ziele
+
+| Was NICHT Teil des Projekts ist | Warum |
+|---------------------------------|-------|
+| Fertiger Prompting-Leitfaden | Kommt in nachgelagerter Phase |
+| Empirische Validierung von Prompting-Strategien | Ausserhalb Scope |
+| Tool fuer Endnutzer:innen | Fokus ist Forschung, nicht Produkt |
+| Vollstaendige Automatisierung | Expert-in-the-Loop bleibt zentral |
+| Training eigener Modelle | Nutzung bestehender Frontier-LLMs |
+
+---
+
+## Zwei Ebenen des Projekts
+
+### Ebene 1: Inhaltlich (Literature Review)
+
+**Frage:** Was sagt die Forschung zu LLM-Bias und feministischer AI Literacy?
+
+**Output:**
+- Thematisch kategorisierte Literatur (326 Papers)
+- Strukturierte Summaries
+- Obsidian Knowledge Graph
+- Synthese fuer weitere Forschung
+
+### Ebene 2: Methodisch (Benchmark)
+
+**Frage:** Wie zuverlaessig ist LLM-gestuetztes Assessment im Vergleich zu Expert:innen?
+
+**Output:**
+- Benchmark-Daten (Human vs. Agent)
+- Paper fuer Forum Wissenschaft
+- Dokumentierter Workflow
+
+---
+
+## Korpus
+
+| Aspekt | Wert |
+|--------|------|
+| Papers gesamt | 326 (Zotero Group 6080294) |
+| Fokus | Feministische AI Literacies, generative KI, Prompting, Soziale Arbeit |
+| Sprachen | Englisch, Deutsch |
+| Zeitraum | 2017-2025 |
 
 ---
 
@@ -44,8 +108,8 @@ Das Projekt leistet systematische Vorarbeit fuer einen evidenzbasierten Promptin
 | Person | Rolle |
 |--------|-------|
 | Christopher Pollin | Technische Infrastruktur, Pipeline |
-| Susi Sackl-Sharif | Thematisches Assessment, Forschungsleitung |
-| Sabine Klinger | Thematisches Assessment |
+| Susi Sackl-Sharif | Human-Assessment, Forschungsleitung |
+| Sabine Klinger | Human-Assessment |
 | Christina | Zotero-Kuratierung, Metadaten |
 | Christian Steiner | Paper-Review |
 
@@ -57,75 +121,33 @@ Das Projekt leistet systematische Vorarbeit fuer einen evidenzbasierten Promptin
 
 Alle Erkenntnisse entstehen aus spezifischen sozialen, kulturellen und materiellen Kontexten. Objektivitaet bedeutet explizite Positionierung, nicht "View from Nowhere".
 
-**Operationalisierung im Workflow:**
-- Multi-Modell-Strategie: 4 LLMs (Claude, Gemini, ChatGPT, Perplexity) mit unterschiedlichen Trainingsdaten
+**Operationalisierung:**
+- Multi-Modell-Strategie: 4 LLMs mit unterschiedlichen Trainingsdaten
 - Divergenz zwischen Modellen wird dokumentiert, nicht harmonisiert
-- Eigene Positionierung (feministisch, sozialarbeitswissenschaftlich) wird transparent gemacht
+- Eigene Positionierung (feministisch, sozialarbeitswissenschaftlich) transparent
 
 ### Intersektionalitaet (Crenshaw)
 
-Unterdrueckung erfolgt nicht entlang einzelner Achsen (Gender, Race), sondern durch deren wechselseitige Konstitution. Eine schwarze Frau erlebt nicht additiv Sexismus plus Rassismus, sondern eine spezifische Form von Diskriminierung an deren Schnittstelle.
+Unterdrueckung erfolgt nicht entlang einzelner Achsen (Gender, Race), sondern durch deren wechselseitige Konstitution.
 
-**Operationalisierung im Workflow:**
+**Operationalisierung:**
 - Mehrdimensionale Kategorisierungsschemata (10 binaere Kategorien)
 - Prompt-Templates fokussieren auf intersektionale Perspektiven
 - Konzeptextraktion behaelt intersektionale Spezifitaet bei
 
 ### Response-Ability (Haraway)
 
-Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen, nicht nur Fehler zuzuordnen.
+Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen.
 
-**Operationalisierung im Workflow:**
+**Operationalisierung:**
 - Expert-in-the-Loop-Validierung an kritischen Entscheidungspunkten
 - Explizite Begruendungen fuer Einschluss/Ausschluss-Entscheidungen
 - Transparente Dokumentation methodischer Grenzen
 
 ---
 
-## LLM-Ontologie und Alignment
+## Methodische Grenzen
 
-### Exotic Mind-Like Entities (Shanahan 2024)
-
-LLMs sind weder klassische Maschinen noch Minds. Diese ontologische Unsicherheit erfordert neue analytische Kategorien. Bias kann nicht als simple Input-Output-Relation verstanden werden.
-
-### Strange New Minds (Summerfield 2025)
-
-Emergente kognitive Phaenomene entstehen ohne explizites Training. Was in Training-Daten nicht vorhanden war, kann durch kombinatorische Effekte reproduziert werden. Bias-Mitigation muss mit Unvorhersehbarkeit rechnen.
-
-### Persona-Vektoren (Chen et al. 2025)
-
-Messbare Traits (Sycophancy, Halluzinationsneigung) sind im Aktivationsraum lokalisierbar. Diese koennen durch Finetuning unbeabsichtigt verschoben werden.
-
-**Implikation:** Neben expliziten Vorurteilen existieren strukturelle Modell-Charakteristika, die Alignment-Konflikte mit professionellen Werten der Sozialarbeit erzeugen koennen.
-
----
-
-## Bias als emergentes Multi-Level-Phaenomen
-
-Bias ist nicht nur Daten-Artefakt, sondern emergentes Phaenomen aus:
-
-1. **Architektur-Ebene:** Transformer-Design, Attention-Mechanismen
-2. **Training-Ebene:** Daten, Objectives, Curriculum
-3. **Alignment-Ebene:** RLHF, Constitutional AI, Persona-Vektoren
-4. **Nutzungs-Ebene:** Prompt-Formulierung, Kontext, Interaktionsmuster
-
-Response-Ability bedeutet: Verantwortung fuer Modellwahl, Prompt-Design, kritische Validierung.
-
----
-
-## Scope und Grenzen
-
-**Was das Projekt liefert:**
-- Systematischer Literature Review zu Bias in LLMs
-- Methodischer Workflow fuer LLM-gestuetzte Reviews
-- Strukturierte Wissensbasis fuer Handlungsempfehlungen
-
-**Was das Projekt nicht liefert:**
-- Empirische Validierung von Prompting-Strategien
-- Fertiger Prompting-Leitfaden
-- Uebertragbarkeit auf konkrete Praxissituationen (nachgelagert)
-
-**Methodische Grenzen:**
 - Zirkularitaet der LLM-gestuetzten LLM-Kritik
 - Opazitaet der verwendeten Modelle
 - Potenzielle Reproduktion sprachlicher/geografischer Bias
@@ -133,5 +155,4 @@ Response-Ability bedeutet: Verantwortung fuer Modellwahl, Prompt-Design, kritisc
 
 ---
 
-*Konsolidiert aus: project-overview.md, theoretical-framework.md*
-*Version: 1.0 (2026-02-02)*
+*Version: 2.0 (2026-02-03)*

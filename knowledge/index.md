@@ -1,6 +1,43 @@
 # FemPrompt - Dokumentations-Index
 
-Literature Research Pipeline: Human Expert vs. Agent Workflow Benchmark.
+Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** im Kontext Sozialer Arbeit.
+
+---
+
+## Projektziel
+
+**Primaer:** Empirische Grundlage schaffen fuer Forschung zu diskriminierungssensiblem Prompting.
+
+**Sekundaer:** Methodische Innovation dokumentieren (Human vs. Agent Assessment Benchmark).
+
+---
+
+## Zielgruppe
+
+| Zielgruppe | Nutzen |
+|------------|--------|
+| Forscher:innen (Soziale Arbeit + KI) | Strukturierte Literaturuebersicht |
+| Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung |
+| Lehrende (AI Literacy) | Kursmaterial, Konzepte |
+
+---
+
+## Erfolgskriterien
+
+| Kriterium | Status |
+|-----------|--------|
+| Literature Review (326 Papers) | 🔄 In Arbeit |
+| Paper eingereicht (4. Mai 2026) | ⏸️ Wartet |
+| Benchmark Human vs. Agent | ⏸️ Wartet |
+| Obsidian Vault | ⏸️ Wartet |
+
+---
+
+## Nicht-Ziele
+
+- ❌ Fertiger Prompting-Leitfaden
+- ❌ Tool fuer Endnutzer:innen
+- ❌ Vollstaendige Automatisierung
 
 ---
 
@@ -8,12 +45,11 @@ Literature Research Pipeline: Human Expert vs. Agent Workflow Benchmark.
 
 | Track | Methode | Status |
 |-------|---------|--------|
-| Human Expert | Manuelles Assessment (Susi, Sabine) | In Arbeit |
-| Agent Workflow | LLM-basiert (Claude Haiku 4.5) | Bereit |
-| Benchmark | Vergleich Human vs. Agent | Pending |
+| Human Expert | Manuelles Assessment (Susi, Sabine) | 🔄 In Arbeit |
+| Agent Workflow | LLM-basiert (Claude Haiku 4.5) | ⏸️ Bereit |
+| Benchmark | Vergleich Human vs. Agent | ⏸️ Pending |
 
 **Paper:** Forum Wissenschaft 2/2026 (Deadline: 4. Mai 2026)
-**Korpus:** 326 Papers (Zotero Group 6080294)
 
 ---
 
@@ -23,7 +59,7 @@ Literature Research Pipeline: Human Expert vs. Agent Workflow Benchmark.
 
 | Datei | Inhalt |
 |-------|--------|
-| [01-project.md](01-project.md) | Forschungsfrage, Team, Theoretischer Rahmen |
+| [01-project.md](01-project.md) | Projektziel, Zielgruppe, Erfolgskriterien, Nicht-Ziele |
 | [02-methodology.md](02-methodology.md) | PRISMA 2020, 10-Kategorien-Schema, Benchmark |
 | [03-status.md](03-status.md) | Aktueller Stand, offene Punkte |
 | [04-technical.md](04-technical.md) | Pipeline-Architektur, Scripts, Kosten |
@@ -35,12 +71,13 @@ Literature Research Pipeline: Human Expert vs. Agent Workflow Benchmark.
 | [guides/quickstart.md](guides/quickstart.md) | 10-Minuten-Einstieg |
 | [guides/llm-assessment.md](guides/llm-assessment.md) | LLM-basiertes PRISMA-Assessment |
 | [guides/pdf-acquisition.md](guides/pdf-acquisition.md) | Hierarchische PDF-Akquise |
+| [guides/manual-review-checklist.md](guides/manual-review-checklist.md) | Markdown-Review Checkliste |
 
 ### Paper-Materialien
 
 | Datei | Inhalt |
 |-------|--------|
-| [paper/Forum Wissenschaft Paper - Arbeitsplan.md](paper/Forum%20Wissenschaft%20Paper%20-%20Arbeitsplan.md) | Paper-Gliederung und Zeitplan |
+| [paper/Forum Wissenschaft Paper - Arbeitsplan.md](paper/Forum%20Wissenschaft%20Paper%20-%20Arbeitsplan.md) | Paper-Gliederung und Roadmap |
 | [paper/Human-LLM Assessment Benchmark.md](paper/Human-LLM%20Assessment%20Benchmark.md) | Benchmark-Spezifikation |
 
 ### Archiv
@@ -55,22 +92,13 @@ Literature Research Pipeline: Human Expert vs. Agent Workflow Benchmark.
 
 ```
 FemPrompt_SozArb/
-  corpus/                  # EIN Korpus (326 Papers)
-    zotero_export.json
-    papers_metadata.csv
+  corpus/                  # Korpus (326 Papers)
   assessment/
     human/                 # Track 1: Human Expert
     agent/                 # Track 2: Agent Workflow
   benchmark/               # Vergleich Human vs. Agent
-    scripts/
-    data/
-    results/
   pipeline/                # PDF -> Markdown -> Summary -> Vault
-    scripts/
-    pdfs/
-    markdown/
-    summaries/
-  vault/                   # EIN Obsidian Vault
+  vault/                   # Obsidian Vault
   knowledge/               # Dokumentation (dieses Verzeichnis)
 ```
 
@@ -86,7 +114,7 @@ python assessment/agent/run_assessment.py   # Agent Assessment
 
 **Pipeline:**
 ```bash
-python pipeline/scripts/acquire_pdfs.py     # PDF-Akquise
+python pipeline/scripts/acquire_pdfs.py
 python pipeline/scripts/convert_to_markdown.py
 python pipeline/scripts/summarize_documents.py
 python pipeline/scripts/generate_vault.py
@@ -99,25 +127,13 @@ python benchmark/scripts/calculate_agreement.py
 python benchmark/scripts/analyze_disagreements.py
 ```
 
-**Repository:** [github.com/chpollin/FemPrompt_SozArb](https://github.com/chpollin/FemPrompt_SozArb)
-
-**Google Sheets:** [Thematisches Assessment](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/)
-
----
-
-## Forschungsfragen
-
-1. Wie manifestiert sich Bias in Frontier-LLMs kontextabhaengig?
-2. Welche Prompt-Strategien ermoeglichen diskriminierungssensible KI-Nutzung?
-3. Wie koennen Sozialarbeitende AI-Literacy entwickeln, die der Systemkomplexitaet gerecht wird?
-
 ---
 
 ## Team
 
 | Person | Rolle |
 |--------|-------|
-| Susi Sackl-Sharif | Human-Assessment, Kategorien |
+| Susi Sackl-Sharif | Human-Assessment, Forschungsleitung |
 | Sabine Klinger | Human-Assessment |
 | Christopher Pollin | Technische Umsetzung |
 | Christina | Zotero-Kuratierung |
@@ -125,4 +141,14 @@ python benchmark/scripts/analyze_disagreements.py
 
 ---
 
-*Version: 2.0 (2026-02-02) - Human vs. Agent Restructure*
+## Ressourcen
+
+| Ressource | Link |
+|-----------|------|
+| Repository | [github.com/chpollin/FemPrompt_SozArb](https://github.com/chpollin/FemPrompt_SozArb) |
+| Google Sheets | [Thematisches Assessment](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
+| Zotero Group | 6080294 |
+
+---
+
+*Version: 3.0 (2026-02-03)*
