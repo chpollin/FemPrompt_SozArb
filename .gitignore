@@ -63,3 +63,11 @@ test_*.json
 test-pdfs/
 acquisition_log.json
 missing_pdfs.csv
+
+# Pipeline generated images (too large for Git, ~2-3 GB)
+pipeline/pdf_images/
+
+# Pipeline test artifacts
+pipeline/conversion_report_*.json
+pipeline/validation_*.json
+pipeline/markdown_test/
