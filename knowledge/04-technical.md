@@ -37,17 +37,17 @@ In `.env` Datei (nicht committen):
 
 ### Empfohlener Workflow
 
-| Schritt | Script | Input | Output |
-|---------|--------|-------|--------|
-| 1. PDF-Download | `download_zotero_pdfs.py` | Zotero Group | `pipeline/pdfs/` |
-| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` |
-| 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | `pipeline/validation_reports/` |
-| 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` |
-| 5. Human Review | `markdown_reviewer.html` | Markdown + PDFs | JSON-Export |
-| 6. Summarisierung | `summarize_documents.py` | Markdown | `pipeline/summaries/` |
-| 7. Vault | `generate_vault.py` | Summaries | `vault/` |
+| Schritt | Script | Input | Output | Wichtige Parameter |
+|---------|--------|-------|--------|-------------------|
+| 1. PDF-Download | `download_zotero_pdfs.py` | Zotero Group | `pipeline/pdfs/` | `--output` |
+| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | `--input`, `--output` |
+| 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | `pipeline/validation_reports/` | `--md-dir`, `--pdf-dir`, `--output-dir` |
+| 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | `--input-dir`, `--output-dir` |
+| 5. Human Review | `markdown_reviewer.html` | Markdown + PDFs | JSON-Export | Via Live Server oeffnen |
+| 6. Summarisierung | `summarize_documents.py` | Markdown | `pipeline/summaries/` | `--input`, `--output` |
+| 7. Vault | `generate_vault.py` | Summaries | `vault/` | `--input`, `--output` |
 
-Alle Scripts befinden sich in `pipeline/scripts/`. Parameter siehe `--help` der jeweiligen Scripts.
+Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `--help`.
 
 ---
 
@@ -138,18 +138,21 @@ Browser-Tool fuer Human-in-the-Loop Review. Oeffnen via Live Server in VS Code.
 
 ## Verzeichnisstruktur
 
-| Verzeichnis | Inhalt |
-|-------------|--------|
-| `pipeline/scripts/` | Python-Scripts fuer alle Pipeline-Phasen |
-| `pipeline/tools/` | Browser-Tools (markdown_reviewer.html) |
-| `pipeline/pdfs/` | Heruntergeladene PDFs (234) |
-| `pipeline/markdown/` | Konvertierte Dokumente (232) |
-| `pipeline/markdown_clean/` | Post-Processed Dokumente |
-| `pipeline/validation_reports/` | Validierungsberichte |
-| `pipeline/summaries/` | AI Summaries (ausstehend) |
-| `benchmark/` | Human-LLM Benchmark (config, scripts, data) |
-| `knowledge/` | Dokumentation |
-| `FemPrompt_Vault/` | Obsidian Vault |
+| Verzeichnis | Inhalt | Dateien |
+|-------------|--------|---------|
+| `pipeline/scripts/` | Python-Scripts | download_zotero_pdfs.py, convert_to_markdown.py, validate_markdown.py, validate_markdown_enhanced.py, postprocess_markdown.py, summarize_documents.py, generate_vault.py, utils.py |
+| `pipeline/tools/` | Browser-Tools | markdown_reviewer.html |
+| `pipeline/pdfs/` | Heruntergeladene PDFs | 234 Dateien |
+| `pipeline/markdown/` | Konvertierte Dokumente | 232 Dateien |
+| `pipeline/markdown_clean/` | Post-Processed Dokumente | Bereinigt |
+| `pipeline/validation_reports/` | Validierungsberichte | JSON, CSV, MD Reports |
+| `pipeline/summaries/` | AI Summaries | Ausstehend |
+| `benchmark/config/` | Benchmark-Konfiguration | categories.yaml |
+| `benchmark/scripts/` | Benchmark-Scripts | run_llm_assessment.py, merge_assessments.py, calculate_agreement.py, analyze_disagreements.py |
+| `benchmark/data/` | Assessment-Daten | human_assessment.csv, llm_assessment.csv, merged_comparison.csv |
+| `benchmark/results/` | Ergebnisse | agreement_metrics.json, disagreement_cases.csv |
+| `knowledge/` | Dokumentation | Markdown-Dateien |
+| `FemPrompt_Vault/` | Obsidian Vault | Papers, Concepts, MOCs |
 
 ---
 

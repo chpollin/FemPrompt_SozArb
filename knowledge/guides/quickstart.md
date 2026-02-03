@@ -29,6 +29,8 @@ Das Script `run_pipeline.py` fuehrt alle Stages sequenziell aus:
 
 Das Script `assessment-llm/assess_papers.py` bewertet Papers automatisch.
 
+**Aufruf:** `python assessment-llm/assess_papers.py -i input.xlsx -o output.xlsx`
+
 **Input:** Excel mit Paper-Metadaten (Titel, Abstract)
 **Output:** Excel mit Decision (Include/Exclude/Unclear) und Scores
 
@@ -43,22 +45,22 @@ Das Script `analysis/getPDF_intelligent.py` laedt PDFs mit 8 Fallback-Strategien
 - Publisher-Parser
 - URL-Suche
 
-Mit `--filter-decision Include` nur relevante Papers herunterladen.
+**Aufruf:** `python analysis/getPDF_intelligent.py --input assessment.xlsx --output analysis/pdfs/ --filter-decision Include`
 
 ### 4. Einzelne Stages ausfuehren
 
 Alle Pipeline-Scripts befinden sich in `pipeline/scripts/`:
 
-| Stage | Script | Beschreibung |
-|-------|--------|--------------|
-| 1 | `download_zotero_pdfs.py` | PDFs akquirieren |
-| 2 | `convert_to_markdown.py` | Markdown konvertieren |
-| 2b | `validate_markdown_enhanced.py` | Qualitaet validieren |
-| 3 | `summarize_documents.py` | Summaries generieren |
-| 4 | `generate_vault.py` | Vault erstellen |
-| 5 | `test_vault_quality.py` | Qualitaet pruefen |
+| Stage | Script | Wichtige Parameter |
+|-------|--------|-------------------|
+| 1 | `download_zotero_pdfs.py` | `--output pipeline/pdfs/` |
+| 2 | `convert_to_markdown.py` | `--input pipeline/pdfs/ --output pipeline/markdown/` |
+| 2b | `validate_markdown_enhanced.py` | `--md-dir pipeline/markdown --pdf-dir pipeline/pdfs --output-dir pipeline/validation_reports` |
+| 3 | `summarize_documents.py` | `--input pipeline/markdown/ --output pipeline/summaries/` |
+| 4 | `generate_vault.py` | `--input pipeline/summaries/ --output vault/` |
+| 5 | `test_vault_quality.py` | `--vault-dir vault/` |
 
-Parameter siehe `--help` der jeweiligen Scripts.
+Vollstaendige Parameter via `--help`.
 
 ---
 

@@ -186,23 +186,23 @@ Die vollstaendige Konfiguration befindet sich in `benchmark/config/categories.ya
 
 ### Technik-Kategorien (4)
 
-| Kategorie | Definition |
-|-----------|------------|
-| AI_Literacies | Kompetenzen im Umgang mit KI-Systemen, kritische Reflexion, Anwendungskompetenz |
-| Generative_KI | Fokus auf LLMs, Bildgeneratoren, generative Systeme |
-| Prompting | Prompt-Engineering, Prompt-Strategien, Eingabegestaltung |
-| KI_Sonstige | Klassisches ML, Robotik, Computer Vision (nicht-generativ) |
+| Kategorie | Definition | Beispiel positiv | Beispiel negativ |
+|-----------|------------|------------------|------------------|
+| AI_Literacies | Kompetenzen, Faehigkeiten oder Wissen im Umgang mit KI-Systemen. Umfasst kritische Reflexion, technisches Verstaendnis oder praktische Anwendungskompetenz. | Framework fuer KI-Kompetenzentwicklung, Curriculum fuer AI Literacy in Schulen | Rein technische KI-Implementierung ohne Bildungsbezug |
+| Generative_KI | Fokus auf generative KI-Modelle wie LLMs, Bildgeneratoren oder andere generative Systeme | ChatGPT-Studie, DALL-E Analyse | Klassische ML-Klassifikation |
+| Prompting | Prompt-Engineering, Prompt-Strategien oder die Gestaltung von Eingaben fuer KI-Systeme | Chain-of-Thought Prompting, Jailbreak-Analyse | Allgemeine LLM-Nutzung ohne Prompt-Fokus |
+| KI_Sonstige | Andere KI-Themen (klassisches ML, Robotik, Computer Vision ohne generativen Fokus) | Predictive Analytics in Sozialarbeit, Risikobewertungsalgorithmen | - |
 
 ### Sozial-Kategorien (6)
 
-| Kategorie | Definition |
-|-----------|------------|
-| Soziale_Arbeit | Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung |
-| Bias_Ungleichheit | Diskriminierung, algorithmischer Bias, strukturelle Benachteiligung |
-| Gender | Geschlechterperspektive, Gender-Bias |
-| Diversitaet | Diversitaet, Inklusion, Repraesentation |
-| Feministisch | Feministische Theorie, Methodik, Perspektive |
-| Fairness | Algorithmische Fairness, faire ML-Systeme |
+| Kategorie | Definition | Beispiel positiv | Beispiel negativ |
+|-----------|------------|------------------|------------------|
+| Soziale_Arbeit | Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder den Zielgruppen Sozialer Arbeit | KI in der Jugendhilfe, Sozialarbeit-Curriculum | Allgemeine Bildungsforschung |
+| Bias_Ungleichheit | Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit oder strukturelle Benachteiligung im KI-Kontext | Bias-Audit von Gesichtserkennungssystemen | Technische Fairness-Metrik ohne Diskriminierungsbezug |
+| Gender | Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias | Gender-Bias in Sprachmodellen | Allgemeine Diversity-Studie |
+| Diversitaet | Thematisiert Diversitaet, Inklusion oder Repraesentation verschiedener Gruppen | Repraesentation marginalisierter Gruppen in Trainingsdaten | - |
+| Feministisch | Verwendet explizit feministische Theorie, Methodik oder Perspektive. Bezugnahme auf feministische Autor:innen oder Konzepte. | Intersektionale Analyse nach Crenshaw, Kritik aus feministischer Technikforschung | Gender erwaehnt, aber ohne feministische Rahmung |
+| Fairness | Thematisiert algorithmische Fairness, faire ML-Systeme oder Fairness-Metriken | Equalized Odds Implementierung, Fairness-aware ML | - |
 
 ### Inklusions-Kriterien
 
