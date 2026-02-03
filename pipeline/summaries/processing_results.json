@@ -1,0 +1,290 @@
+{
+  "stats": {
+    "total_processed": 20,
+    "total_api_calls": 131,
+    "total_cost": 0.2620000000000002,
+    "avg_quality_score": 79.9
+  },
+  "results": [
+    {
+      "file": "A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md",
+      "quality_score": 77,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 72,
+        "completeness_score": 65,
+        "actionability_score": 78,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 13
+      }
+    },
+    {
+      "file": "Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md",
+      "quality_score": 80,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 80,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 90,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Ahrweiler_2025_AI_FORA_\u2013_Artificial_Intelligence_for_Assessment.md",
+      "quality_score": 85,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 78,
+        "actionability_score": 76,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Alam_2025_Social_work_in_the_age_of_artificial_intelligence.md",
+      "quality_score": 61,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 35,
+        "actionability_score": 60,
+        "structure_score": 75,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 12
+      }
+    },
+    {
+      "file": "Alliance_2024_Incubating.md",
+      "quality_score": 80,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 80,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.md",
+      "quality_score": 92,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 95,
+        "completeness_score": 92,
+        "actionability_score": 88,
+        "structure_score": 98,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.md",
+      "quality_score": 80,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 80,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "An_2025_Measuring_gender_and_racial_biases_in_large.md",
+      "quality_score": 69,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 45,
+        "completeness_score": 60,
+        "actionability_score": 75,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 23
+      }
+    },
+    {
+      "file": "Arias L\u00f3pez_2023_Digital_literacy_as_a_new_determinant_of_health_A.md",
+      "quality_score": 83,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 82,
+        "actionability_score": 85,
+        "structure_score": 90,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Arias_L\u00f3pez_2023_Digital.md",
+      "quality_score": 45,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 15,
+        "completeness_score": 20,
+        "actionability_score": 40,
+        "structure_score": 60,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md",
+      "quality_score": 82,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 75,
+        "completeness_score": 70,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 21
+      }
+    },
+    {
+      "file": "Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 90,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Asseri_2025_Prompt_engineering_techniques_for_mitigating.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 90,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Attard-Frost_2025_Countergovernance.md",
+      "quality_score": 77,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 65,
+        "completeness_score": 72,
+        "actionability_score": 78,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Bai_2025_Explicitly_unbiased_large_language_models_still.md",
+      "quality_score": 63,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 35,
+        "completeness_score": 45,
+        "actionability_score": 70,
+        "structure_score": 85,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 23
+      }
+    },
+    {
+      "file": "Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+      "quality_score": 85,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 85,
+        "completeness_score": 78,
+        "actionability_score": 82,
+        "structure_score": 90,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 17
+      }
+    },
+    {
+      "file": "Barman_2024_Beyond.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    },
+    {
+      "file": "Barman_2024_Beyond_transparency_and_explainability_On_the.md",
+      "quality_score": 90,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 88,
+        "actionability_score": 85,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 16
+      }
+    },
+    {
+      "file": "Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md",
+      "quality_score": 89,
+      "metrics": {
+        "coverage_score": 90,
+        "accuracy_score": 92,
+        "completeness_score": 85,
+        "actionability_score": 88,
+        "structure_score": 95,
+        "limitations_present": true,
+        "implications_present": true,
+        "concepts_count": 22
+      }
+    }
+  ]
+}

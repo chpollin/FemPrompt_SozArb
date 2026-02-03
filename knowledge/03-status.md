@@ -1,8 +1,8 @@
 # Status (2026-02-03)
 
-## Aktueller Fokus: Human Review & Summarisierung
+## Aktueller Fokus: LLM-Summarisierung
 
-Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Dubletten wurden bereinigt. Human Review laeuft (LLM-gestuetzt). Naechster Schritt: LLM-Summarisierung.
+Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Korpus erweitert (32 zusaetzliche PDFs). Test-Durchlauf der Summarisierung erfolgreich (79.9/100 Quality). Naechster Schritt: Vollstaendige LLM-Summarisierung.
 
 ---
 
@@ -41,11 +41,11 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Dubletten wurden bereinigt.
 
 | Aspekt | Stand |
 |--------|-------|
-| PDFs (nach Dubletten-Bereinigung) | 225 |
-| Erfolgreich konvertiert | 223 |
-| Fehlgeschlagen | 2 (0.9%) |
+| PDFs gesamt (nach Erweiterung) | 257 |
+| Erfolgreich konvertiert | 252 |
+| Fehlgeschlagen | 5 (1.9%) |
 | Dubletten entfernt | 9 |
-| Quality-Score (Durchschnitt) | 94.7/100 |
+| Quality-Score (Durchschnitt) | 93.1/100 |
 
 ### Validierung ✅
 
@@ -69,7 +69,7 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Dubletten wurden bereinigt.
 ### Human-in-the-Loop Review Tool ✅
 
 Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
-- **Seiten-Ansicht (Neu):** PDF-Seite und Markdown-Text nebeneinander pro Seite
+- **Seiten-Ansicht:** PDF-Seite und Markdown-Text nebeneinander pro Seite
 - Split-Ansicht: Klassische Gesamtansicht
 - PASS/WARN/FAIL Bewertung
 - Keyboard-Shortcuts: `1` PASS, `2` WARN, `3` FAIL, `V` Ansicht wechseln
@@ -80,11 +80,22 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 
 | Aspekt | Stand |
 |--------|-------|
-| Geprueft | 11 von 223 (5%) |
-| PASS | 8 (73%) |
-| WARN | 3 (27%) |
-| FAIL | 0 (0%) |
+| Geprueft | 25 von 252 (~10%) |
+| PASS | 20 (80%) |
+| WARN | 4 (16%) |
+| FAIL | 1 (4%) |
 | Export | `pipeline/validation_reports/human_review_2026-02-03.json` |
+
+### LLM-Summarisierung 🔄
+
+| Aspekt | Stand |
+|--------|-------|
+| Test-Durchlauf | ✅ Erfolgreich (20 Dokumente) |
+| Quality-Score (Durchschnitt) | 79.9/100 |
+| API-Kosten (Test) | $0.26 |
+| Existierende Summaries | 78 (58 kopiert + 20 Test) |
+| Fehlende Summaries | ~174 |
+| Geschaetzte Kosten (Rest) | ~$7 |
 
 ---
 
@@ -112,13 +123,14 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 
 | Schritt | Status | Details |
 |---------|--------|---------|
-| PDF-Download (Zotero) | ✅ Abgeschlossen | 234 PDFs |
-| Markdown-Konversion (Docling) | ✅ Abgeschlossen | 232/234 |
+| PDF-Download (Zotero) | ✅ Abgeschlossen | 257 PDFs (inkl. 32 neue) |
+| Markdown-Konversion (Docling) | ✅ Abgeschlossen | 252/257 (98.1%) |
 | Validierung (Enhanced) | ✅ Abgeschlossen | 98.7 Konfidenz |
 | Post-Processing | ✅ Abgeschlossen | 107k Zeichen bereinigt |
 | Human Review Tool | ✅ Erstellt | Browser-Tool verfuegbar |
-| LLM-Summarisierung | ⏳ Naechster Schritt | - |
-| Vault-Generierung (Obsidian) | ⏸️ Wartet | - |
+| LLM-Summarisierung (Test) | ✅ Abgeschlossen | 20 Dokumente, 79.9/100 |
+| LLM-Summarisierung (Vollstaendig) | ⏳ Bereit | ~174 Dokumente |
+| Vault-Generierung (Obsidian) | ⏸️ Wartet | Nach Summarisierung |
 
 ### Phase 3: Paper-Entwicklung
 
@@ -134,12 +146,27 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 
 - [x] Dubletten bereinigen (9 entfernt)
 - [x] Seiten-Alignment im Review-Tool implementieren
-- [ ] Stichproben-Review abschliessen (~20 Dokumente)
-- [ ] LLM-Summarisierung starten
+- [x] 32 fehlende PDFs aus analysis/pdfs/ integrieren
+- [x] Existierende 58 Summaries wiederverwenden
+- [x] Test-Durchlauf Summarisierung (20 Dokumente)
+- [ ] Vollstaendige LLM-Summarisierung (~174 Dokumente)
 - [ ] Human-Assessment im Google Spreadsheet abschliessen
 - [ ] Benchmark-Metriken berechnen (nach Human-Assessment)
+- [ ] Vault-Generierung
+
+---
+
+## Fehlgeschlagene Konvertierungen
+
+Diese 5 PDFs konnten nicht konvertiert werden (korrupte oder ungewoehnliche Formate):
+
+1. `British_Association_of_Social_Workers_2025_Generat.pdf` - Data format error
+2. `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf` - Page dimension error
+3. `Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf` - Conversion failure
+4. `UNESCO__IRCAI_2024_Challenging.pdf` - Not valid
+5. `Workers_2025_Generative.pdf` - Not valid
 
 ---
 
 *Aktualisiert: 2026-02-03*
-*Version: 8.0*
+*Version: 9.0*

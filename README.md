@@ -57,8 +57,9 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 ├── pipeline/                  # PDF → Markdown → Summary → Vault
 │   ├── scripts/
 │   ├── tools/                 # Browser-Tools
-│   ├── pdfs/                  # 234 PDFs
-│   ├── markdown/              # 232 Markdown-Dateien
+│   ├── pdfs/                  # 257 PDFs
+│   ├── markdown/              # 252 Markdown-Dateien
+│   ├── summaries/             # 78 Summaries (bisher)
 │   └── validation_reports/
 │
 ├── vault/                     # Obsidian Vault (Output)
@@ -81,10 +82,10 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 | Schritt | Status |
 |---------|--------|
-| PDF-Download | ✅ 234 PDFs |
-| Markdown-Konversion | ✅ 232 (99.1%) |
+| PDF-Download | ✅ 257 PDFs |
+| Markdown-Konversion | ✅ 252 (98.1%) |
 | Validierung | ✅ 98.7 Konfidenz-Score |
-| LLM-Summarisierung | ⏳ Naechster Schritt |
+| LLM-Summarisierung | 🔄 78/252 (58 kopiert + 20 Test) |
 | Vault-Generierung | ⏸️ Wartet |
 
 ### Benchmark
@@ -156,4 +157,4 @@ Wartet auf Abschluss des Human-Assessments.
 
 ---
 
-*Version: 4.0 (2026-02-03)*
+*Version: 4.1 (2026-02-03)*

@@ -62,7 +62,7 @@ Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `
 | `validate_markdown.py` | Basis-Validierung (GLYPH, Unicode) | ✅ Getestet |
 | `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | ✅ Getestet |
 | `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | ✅ Getestet |
-| `summarize_documents.py` | LLM-Summarisierung | Ausstehend |
+| `summarize_documents.py` | LLM-Summarisierung | ✅ Getestet (20 Docs) |
 | `generate_vault.py` | Obsidian Vault generieren | Ausstehend |
 | `utils.py` | Hilfsfunktionen | ✅ Aktiv |
 
@@ -147,11 +147,11 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 |-------------|--------|---------|
 | `pipeline/scripts/` | Python-Scripts | download_zotero_pdfs.py, convert_to_markdown.py, validate_markdown.py, validate_markdown_enhanced.py, postprocess_markdown.py, summarize_documents.py, generate_vault.py, utils.py |
 | `pipeline/tools/` | Browser-Tools | markdown_reviewer.html |
-| `pipeline/pdfs/` | Heruntergeladene PDFs | 234 Dateien |
-| `pipeline/markdown/` | Konvertierte Dokumente | 232 Dateien |
+| `pipeline/pdfs/` | Heruntergeladene PDFs | 257 Dateien |
+| `pipeline/markdown/` | Konvertierte Dokumente | 252 Dateien |
 | `pipeline/markdown_clean/` | Post-Processed Dokumente | Bereinigt |
 | `pipeline/validation_reports/` | Validierungsberichte | JSON, CSV, MD Reports |
-| `pipeline/summaries/` | AI Summaries | Ausstehend |
+| `pipeline/summaries/` | AI Summaries | 78 Dateien (58 + 20 Test) |
 | `benchmark/config/` | Benchmark-Konfiguration | categories.yaml |
 | `benchmark/scripts/` | Benchmark-Scripts | run_llm_assessment.py, merge_assessments.py, calculate_agreement.py, analyze_disagreements.py |
 | `benchmark/data/` | Assessment-Daten | human_assessment.csv, llm_assessment.csv, merged_comparison.csv |
@@ -167,21 +167,32 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 
 | Phase | Ergebnis | Dauer |
 |-------|----------|-------|
-| PDF-Download | 234/306 PDFs | ~10 min |
-| Markdown-Konversion | 232/234 (99.1%) | ~45 min |
+| PDF-Download | 257/326 PDFs | ~10 min |
+| Markdown-Konversion | 252/257 (98.1%) | ~45 min |
 | Dubletten-Bereinigung | 9 entfernt | - |
-| **Finale Dokumente** | **223 Markdown, 225 PDFs** | - |
+| **Finale Dokumente** | **252 Markdown, 257 PDFs** | - |
 | Post-Processing | 107k Zeichen bereinigt | ~2 min |
 
 ### Human Review (Stichprobe)
 
 | Metrik | Wert |
 |--------|------|
-| Geprueft | 11/223 (5%) |
-| PASS | 8 (73%) |
-| WARN | 3 (27%) |
-| FAIL | 0 (0%) |
-| Quality-Score (Durchschnitt) | 94.7/100 |
+| Geprueft | 25/252 (~10%) |
+| PASS | 20 (80%) |
+| WARN | 4 (16%) |
+| FAIL | 1 (4%) |
+
+### LLM-Summarisierung (Test-Durchlauf)
+
+| Metrik | Wert |
+|--------|------|
+| Test-Dokumente | 20 |
+| Erfolgsrate | 100% |
+| Quality-Score (Durchschnitt) | 79.9/100 |
+| Kosten | $0.26 |
+| Existierende Summaries | 58 (wiederverwendet) |
+| Total Summaries | 78 |
+| Fehlende Summaries | ~174 |
 
 ### API-Kosten
 
@@ -210,9 +221,12 @@ Bei Rate-Limit-Fehlern den Delay zwischen API-Calls erhoehen (Standard: 2 Sekund
 
 ### Fehlgeschlagene Konvertierungen
 
-2 Dokumente konnten nicht konvertiert werden:
-- `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf`
-- `Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf`
+5 Dokumente konnten nicht konvertiert werden (korrupte oder ungewoehnliche Formate):
+- `British_Association_of_Social_Workers_2025_Generat.pdf` - Data format error
+- `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf` - Page dimension error
+- `Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf` - Conversion failure
+- `UNESCO__IRCAI_2024_Challenging.pdf` - Not valid
+- `Workers_2025_Generative.pdf` - Not valid
 
 ---
 
@@ -230,4 +244,4 @@ Konfigurationsdatei: `benchmark/config/categories.yaml`
 
 ---
 
-*Version: 2.6 (2026-02-03)*
+*Version: 2.7 (2026-02-03)*
