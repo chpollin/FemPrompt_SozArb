@@ -1,0 +1,110 @@
+{
+  "metadata": {
+    "title": "Bias and Fairness in Large Language Models: A Survey",
+    "authors": [
+      "Isabel O. Gallegos",
+      "Ryan A. Rossi",
+      "Joe Barrow",
+      "Md Mehrab Tanjim",
+      "Sungchul Kim",
+      "Franck Dernoncourt",
+      "Tong Yu",
+      "Ruiyi Zhang",
+      "Nesreen K. Ahmed"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Bias und Fairness in großen Sprachmodellen systematisch evaluiert und gemindert werden?",
+    "methodology": "Theoretisch/Review - umfassende Literaturübersicht mit Formalisierung von Konzepten, Entwicklung von drei taxonomischen Klassifikationssystemen für Metriken, Datensätze und Mitigationstechniken.",
+    "key_finding": "Der Survey konsolidiert und vereinheitlicht fragmentiertes Wissen über Bias-Evaluation und Mitigation in LLMs durch drei intuitive Taxonomien, die Evaluierungsmetriken (nach Operationalisierungsebenen: Embeddings, Wahrscheinlichkeiten, generierter Text), Evaluierungsdatensätze und Mitigationstechniken (nach Interventionsstadium: Pre-, In-, Intra-, Post-Processing) strukturieren.",
+    "data_basis": "Nicht empirisch - systematische Literaturanalyse und konzeptionelle Konsolidierung bestehender Forschung"
+  },
+  "arguments": [
+    "LLMs erben und verstärken gesellschaftliche Stereotypen, Missrepräsentationen und ausgrenzende Sprache aus ihren Trainingsdaten, was besonders marginalisierte Gemeinschaften schadet und Systeme struktureller Ungerechtigkeit verfestigt.",
+    "Eine präzise Konzeptualisierung und Formalisierung von 'sozialen Bias' und 'Fairness' ist notwendig, um unterschiedliche Schadensformen zu disambiguieren und operationalisierbare Fairness-Kriterien für verschiedene NLP-Anwendungen zu entwickeln.",
+    "Bestehende Mitigationsansätze (Pre-, In-, Intra-, Post-Processing) haben je spezifische Limitationen: Data-Augmentation-Techniken basieren auf problematischen Proxy-Variablen und binären Gruppierungen, Prompt-Modifikationen zeigen begrenzte Effektivität, und Embedding-basierte Ansätze beziehen sich schwach auf downstream-Bias - daher werden integrative und kontextgerechte Ansätze benötigt."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Der Survey zielt darauf ab, 'Forscher und Praktiker zu befähigen, die Ausbreitung von Bias in LLMs besser zu verstehen und zu verhindern' und bietet umfassende konzeptionelle Rahmen und Taxonomien zum Verständnis von Bias in sprachlichen KI-Systemen.",
+    "Generative_KI": "Fokus auf 'große Sprachmodelle (LLMs)' mit autoregressive, autoencoding und encoder-decoder Architekturen (GPT, BERT, T5) und deren Fähigkeiten zur Textgenerierung und Few-Shot Learning.",
+    "Prompting": "Section 5.1.4 behandelt 'Instruction Tuning' mit 'Modified Prompting Language' und 'Control Tokens' als Bias-Mitigationstechniken durch Modifikation von Eingabeprompts.",
+    "KI_Sonstige": "Umfangreiche Abdeckung von NLP-Techniken, Embedding-Methoden, Attention-Mechanismen, Loss-Funktionen und neuronalen Architektur-Modifikationen.",
+    "Bias_Ungleichheit": "Explizit: 'LLMs erben Stereotypen, Missrepräsentationen, verächtliche und ausgrenzende Sprache...die überproportional bereits gefährdete und marginalisierte Gemeinschaften betreffen' und 'die automatisierte Reproduktion von Ungerechtigkeit kann Systeme der Ungleichheit verfestigen'.",
+    "Gender": "Umfangreiche Behandlung von Geschlechterbias mit mehreren zitierten Arbeiten zu Geschlechterstereotypen in LLMs, Coreference Resolution und Pronomen-Bias (z.B. Webster et al., Sheng et al.).",
+    "Diversitaet": "Thematisiert 'marginalisierte Gemeinschaften', unterrepräsentierte Sprachvarietäten, verschiedene soziale Gruppen (Race, Religion, Sexualität) und fordert 'intersektionale Perspektiven' auf Bias.",
+    "Fairness": "Zentral für den Survey: Formalisierung von Fairness-Desiderata für LLMs, umfangreiche Taxonomie von Fairness-Metriken (Embedding-, Wahrscheinlichkeits- und Text-basiert), Behandlung von Fairness-Notionen aus ML adaptiert für NLP."
+  },
+  "references": [
+    {
+      "author": "Bender et al.",
+      "year": 2021,
+      "short_title": "On the Dangers of Stochastic Parrots"
+    },
+    {
+      "author": "Benjamin",
+      "year": 2020,
+      "short_title": "Race After Technology"
+    },
+    {
+      "author": "Sheng et al.",
+      "year": 2019,
+      "short_title": "The Woman Worked as a Babysitter: On Biases in Language Generation"
+    },
+    {
+      "author": "Bolukbasi et al.",
+      "year": 2016,
+      "short_title": "Man is to Computer Programmer as Woman is to Homemaker"
+    },
+    {
+      "author": "Buolamwini & Buolamwini",
+      "year": 2018,
+      "short_title": "Gender Shades"
+    },
+    {
+      "author": "Suresh & Guttag",
+      "year": 2021,
+      "short_title": "A Framework for Understanding Sources of Harm Throughout the Machine Learning Life Cycle"
+    },
+    {
+      "author": "Mehrabi et al.",
+      "year": 2021,
+      "short_title": "A Survey on Bias and Fairness in Machine Learning"
+    },
+    {
+      "author": "Bommasani et al.",
+      "year": 2021,
+      "short_title": "On the Opportunities and Risks of Foundation Models"
+    },
+    {
+      "author": "Webster et al.",
+      "year": 2020,
+      "short_title": "Measuring and Reducing Gendered Correlations in Pre-trained Models"
+    },
+    {
+      "author": "Ravfogel et al.",
+      "year": 2020,
+      "short_title": "Null It Out: Guarding Protected Attributes by Iterative Nullspace Projection"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochgradig relevant für die Schnittstelle KI und Soziale Arbeit, da es systematisch dokumentiert, wie automatisierte Systeme marginalisierte Gemeinschaften schädigen können, und praktizierten umfassende Frameworks zur Fairness bietet. Die Fokussierung auf gesellschaftliche Machtverhältnisse und strukturelle Ungerechtigkeit verbindet sich direkt mit sozialarbeiterischer Verantwortung für vulnerable Gruppen.",
+    "unique_contribution": "Der einzigartige Beitrag liegt in der umfassenden Formalisierung und Vereinheitlichung fragmentierter Literatur durch drei ineinander greifende Taxonomien, die Forschende und Praktiker befähigen, Bias-Evaluierungs- und Mitigationsansätze systematisch zu vergleichen und kontextgerecht auszuwählen.",
+    "limitations": "Das Paper konzentriert sich primär auf Englisch und beschränkt sich auf geschlossene formale Metriken, Datensätze und Techniken; es behandelt nicht umfassend kulturelle und kontextuelle Relativität von Fairness, die Machtverhältnisse in der KI-Entwicklung selbst, oder langfristige soziale Auswirkungen im Feld."
+  },
+  "target_group": "KI-Entwickler und NLP-Praktiker, Fairness-Forschende, Algorithmic Auditors, Policy-Maker im Bereich Algorithmen-Governance, Sozialarbeiter und Organisationen, die KI-Systeme einsetzen oder regulieren, sowie Forschende in Gender Studies und Critical Data Studies, die KI-Systeme kritisch analysieren."
+}

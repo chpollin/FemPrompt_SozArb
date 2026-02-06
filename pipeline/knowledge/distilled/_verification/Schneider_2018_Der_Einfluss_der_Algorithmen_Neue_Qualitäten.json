@@ -1,0 +1,51 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Autorin Diana Schneider's Affilitation zum NRW-Graduiertenkolleg 'Digitale Gesellschaft' und MAEWIN-Projekt nicht in Kernbefund erwähnt",
+        "Unterscheidung zwischen 'notwendiger' und 'vorläufiger' Formalisierungslücke könnte präziser im Kernbefund dargestellt sein"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minimal: Kernbefund kombiniert Formalisierungslücken-These mit Bias-Thema; im Original sind diese stärker sequenziell organisiert"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Professionalitaet/Professionalisierung - implizit vorhanden, aber als eigenständige Kategorie relevant (De-Professionalisierung ist Kernthema)",
+        "Transparenz_Erklärbarkeit - explizit im Original ('intransparente Entscheidungen', 'nicht ohne weiteres offenlegbar'), aber nicht als Kategorie kodiert"
+      ]
+    }
+  },
+  "overall_confidence": 94,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_addition": [
+        "Professionalitaet",
+        "Transparenz_Erklärbarkeit"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "current": "Big Data und KI verkleinern die von Rolf beschriebene 'vorläufige Formalisierungslücke' erheblich...",
+        "improved": "Big Data und KI schließen die 'vorläufige Formalisierungslücke' erheblich, wobei unklar bleibt, welche 'notwendigen Formalisierungslücken' verbleiben...",
+        "reason": "Präzisere Abgrenzung der zwei Formalisierungslücken-Typen nach Rolf"
+      },
+      {
+        "section": "Hauptargumente",
+        "current": "Algorithmen in der Sozialen Arbeit (z.B. CFRA für Kindeswohlgefährdung) können zu De-Professionalisierung...",
+        "improved": "Algorithmen in der Sozialen Arbeit (z.B. CFRA für Kindeswohlgefährdung) können zu De-Professionalisierung führen durch Ermessensspielraum-Verengung und fehlende Transparenz der Entscheidungskriterien (insbesondere bei KI-Systemen)...",
+        "reason": "Transparenz ist Kernkritikpunkt des Originaltexts"
+      }
+    ]
+  }
+}

@@ -170,10 +170,8 @@
 
 ### 3. PDF-Akquise (Optional)
 ```bash
-python analysis/getPDF_intelligent.py \
-  --input assessment-llm/output/assessment_socialai_llm.xlsx \
-  --output analysis/pdfs/ \
-  --filter Include
+python pipeline/scripts/download_zotero_pdfs.py \
+  --output pipeline/pdfs/
 ```
 
 ### 4. Weitere Analyse

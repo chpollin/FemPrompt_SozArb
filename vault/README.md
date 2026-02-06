@@ -30,7 +30,7 @@ assessment:
 
 ```bash
 python pipeline/scripts/generate_vault.py \
-  --summaries pipeline/summaries/ \
+  --input pipeline/knowledge/distilled/ \
   --assessment benchmark/data/merged_comparison.csv \
   --output vault/
 ```

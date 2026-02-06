@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Engineers on responsibility: feminist approaches to who's responsible for ethical AI",
+    "authors": [
+      "Eleanor Drage",
+      "Kerry McInerney",
+      "Jude Browne"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie verstehen KI-Praktiker Verantwortung im Kontext von KI-Entwicklung und -Einsatz, und wer sollte verantwortlich sein, wenn etwas schiefgeht?",
+    "methodology": "Empirisch-qualitativ: 50 leitfadengestützte Interviews mit KI-Praktikern und Tech-Arbeitern in einem multinationalen Technologieunternehmen (2020-2021), interpretiert durch feministische politische Theorie",
+    "key_finding": "Verantwortung sollte nicht als statisches individuelles Merkmal verstanden werden, sondern als 'response-ability' – eine dynamische, kollektive Fähigkeit zur Rechenschaft, die durch organisationale Kulturen ermöglicht wird, die Care- und Wartungsarbeit wertschätzen und strukturelle Barrieren abbaut.",
+    "data_basis": "n=ca. 50+ Interviews mit KI-Praktikern und Tech-Arbeitern an einem multinationalen Technologieunternehmen über 12 Monate (2020-2021)"
+  },
+  "arguments": [
+    "Traditionelle, statische Modelle von individueller Verantwortung können nicht mit den dynamischen, fluiden Ökosystemen von KI-Entwicklung umgehen, in denen Systeme die Besitzer wechseln, Arbeitskräfte das Unternehmen verlassen und Produkte orphan werden.",
+    "KI-Ingenieure werden durch Druck und 'Tunnel-Vision'-Fokus auf unmittelbare technische Leistung daran gehindert, holistische Verantwortung für Langzeiteffekte zu übernehmen; dies erfordert Umgestaltung von Arbeitskultur und Bewertung von Wartungsarbeit.",
+    "Feministische Theorie (Haraway, Puig de la Bellacasa, Young, Butler) bietet einen konzeptionellen Rahmen, der Verantwortung als relationales, gegenseitig abhängiges Phänomen rekonzeptualisiert und die unsichtbaren Care- und Wartungsarbeiten – historisch feminisiert und marginalisiert – als zentral für ethische KI-Entwicklung anerkennt."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Paper untersucht 'practitioners' personal understandings of responsibility' und wie KI-Praktiker Kompetenz und Wissen über KI-Systeme entwickeln und anwenden: 'we are unable to access the bigger picture' & interviews with 'AI practitioners and tech workers'",
+    "KI_Sonstige": "Fokus auf 'algorithmic tools which are often, but not always, created through the use of machine learning techniques', black box problem, unexplainability, AI lifecycle management, algorithmic drift",
+    "Soziale_Arbeit": "Thematisiert Care-Arbeit als zentral: 'caring responsibilities are distinctly gendered and racialized forms of work' und verbindet dies mit Care-ethischen Konzepten, die für Soziale Arbeit relevant sind; Fokus auf Beziehungen, Abhängigkeit, Verantwortung für vulnerable Populationen",
+    "Bias_Ungleichheit": "Analysiert wie 'AI replicates, perpetuates, or exacerbates existing patterns of discrimination and injustice' (Amazon hiring tool, UK A-level algorithm); erwähnt 'gendered and racialized workers' und 'Global South', Gefängnisarbeit, strukturelle Benachteiligung",
+    "Gender": "Expliziter Gender-Fokus: 'Amazon's gender discriminatory AI-powered hiring tool', 'caring responsibilities are distinctly gendered and racialized forms of work', Analyse von Frauen in Tech, Geschlechtsdimension von invisibilisierter Arbeit",
+    "Diversitaet": "Untersucht Repräsentation und Marginalisierung: 'communities and individuals who are most likely to be harmed', intersektionale Perspektive auf Arbeit ('gendered and racialized workers'), Global South und Gefängnissysteme",
+    "Feministisch": "EXPLIZIT feministische Theorie als Kern: 'use feminist theory and methodological approaches', 'feminist perspectives on responsibility' (Maria Puig de la Bellacasa, Donna Haraway, Iris Marion Young, Judith Butler), 'feminist organizational studies', 'feminist STS', 'feminist political economy', 'Data Feminism' (D'Ignazio & Klein)",
+    "Fairness": "Adressiert Fairness in KI-Systemen und algorithmische Gerechtigkeit durch feministische Linse: 'what does ethical, fair, and responsible AI look like?' Kritik an oberflächlichen Fairness-Checks ('box-ticking ethics frameworks')"
+  },
+  "references": [
+    {
+      "author": "Haraway, Donna",
+      "year": 2016,
+      "short_title": "Staying with the Trouble: Making Kin in the Chthulucene"
+    },
+    {
+      "author": "Puig de la Bellacasa, Maria",
+      "year": 2012,
+      "short_title": "Nothing comes without its World: Thinking with Care"
+    },
+    {
+      "author": "Young, Iris Marion",
+      "year": 2011,
+      "short_title": "Responsibility for Justice"
+    },
+    {
+      "author": "D'Ignazio, Catherine & Klein, Lauren F.",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Butler, Judith",
+      "year": 2003,
+      "short_title": "Violence, Mourning, Politics"
+    },
+    {
+      "author": "Braidotti, Rosi",
+      "year": 2021,
+      "short_title": "Posthuman Feminism and Gender Methodology"
+    },
+    {
+      "author": "Coeckelbergh, Mark",
+      "year": 2020,
+      "short_title": "Artificial Intelligence, Responsibility Attribution, and Relational Justification of Explainability"
+    },
+    {
+      "author": "Fraser, Nancy",
+      "year": 2016,
+      "short_title": "Contradictions of Capital and Care"
+    },
+    {
+      "author": "Anzaldúa, Gloria",
+      "year": 1999,
+      "short_title": "La Frontera/Borderlands"
+    },
+    {
+      "author": "Chen, Aileen",
+      "year": 2019,
+      "short_title": "Inmates in Finland are Training AI as Part of Prison Labor"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Sehr hohe Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender. Das Paper kombiniert explizit feministische Theorie mit KI-Ethik und adressiert strukturelle Verantwortung, Care-Arbeit und Marginalisierung – Kernthemen der Sozialen Arbeit. Es zeigt, wie invisibilisierte, gendered Arbeit (Datenbereinigung, Labeling, Wartung) die gesamte KI-Wirtschaft trägt.",
+    "unique_contribution": "Bringt feministische politische Philosophie und organisationale Studien in Konversation über KI-Ethik; rekonzeptualisiert Verantwortung von individueller Zurechnung zu relationaler 'response-ability' und wertet Care/Maintenance-Arbeit auf – eine bislang marginalisierte Perspektive in KI-Ethik-Literatur.",
+    "limitations": "Studie begrenzt auf einen multinationalen Tech-Konzern, Generalisierbakeit auf andere Industrien unklar; Abhängigkeit von Unternehmens-Wohlwollen zur Umsetzung von Empfehlungen; begrenzte Analyse von Power-Differentialen zwischen Interviews-Durchführenden und befragten Arbeitern."
+  },
+  "target_group": "KI-Ethiker:innen, Organisationsentwickler:innen in Tech-Unternehmen, Sozialarbeiter:innen in Policy/Tech-Governance, Genderstudies-Forschende, Arbeitnehmer:innen-Vertreter:innen in Tech, CSR/Sustainability-Manager:innen, Hochschullehrende in KI-Ethik und Feminist STS"
+}

@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "The EU Artificial Intelligence Act through a Gender Lens",
+    "authors": [
+      "Anastasia Karagianni"
+    ],
+    "year": 2025,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie adäquat adressiert der EU AI Act Geschlechtergerechtigkeit und strukturelle Machtungleichgewichte in KI-Systemen, insbesondere für marginalisierte Gruppen?",
+    "methodology": "Theoretisch: Feministische Textanalyse des AI Act mit Artikel-für-Artikel-Analyse und Fallstudien; kritische Literaturanalyse; intersektionale Perspektive",
+    "key_finding": "Der EU AI Act enthält erhebliche Lücken bei der Adressierung von Geschlechterungerechtigkeit und verwendet überwiegend geschlechtsneutrale Sprache, die die einzigartigen Herausforderungen marginalisierter Gruppen, insbesondere Frauen of Color und LGBTQIA+ Personen, nicht angemessen berücksichtigt.",
+    "data_basis": "Nicht empirisch; basiert auf Dokumentenanalyse des AI Act, Fallstudien (Amazon Recruiting, Deliveroo, iBorderCtrl, VioGen) und kritischer Literaturanalyse"
+  },
+  "arguments": [
+    "Der AI Act referenziert 'Geschlechtergleichstellung' nur minimal (Recitals 27, 48 und Artikel 95(2)(e)), während 'Nicht-Diskriminierung' häufiger erwähnt wird, was eine mangelnde explizite Verpflichtung zur Geschlechtergleichstellung widerspiegelt.",
+    "Bestehende KI-Systeme (Amazon, Deliveroo, iBorderCtrl, VioGen) demonstrieren, wie Algorithmen ohne intersektionale Perspektive geschlechtsspezifische und rassifizierte Diskriminierung reproduzieren und marginalisierte Gruppen disproportional schädigen.",
+    "Eine intersektionale, feministische Analyse ist notwendig, da Geschlechter-Bias nicht isoliert existiert, sondern mit Rasse, Klasse, Behinderung und anderen Identitätsfaktoren zusammenwirkt, was einen mehrdimensionalen regulatorischen Ansatz erfordert.",
+    "Standardisierungs- und Konformitätsbewertungsprozesse müssen durch geschlechtsspezifische Auswirkungsbewertungen (GIA) und verbindliche Bias-Audits verstärkt werden, die explizit intersektionale Diskriminierung adressieren.",
+    "Die Regulierung allein ist unzureichend; eine feministische Interpretation des AI Act mit inklusiverer Sprache, partizipativen Governance-Strukturen und Einbeziehung marginalisierter Stimmen in Designprozessen ist erforderlich."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Das Paper analysiert den EU AI Act als regulatorisches Framework für verschiedene KI-Systeme in Recruitment, Healthcare, Border Management und Predictive Policing.",
+    "Soziale_Arbeit": "Analyse von KI-Systemen in der Gewaltschutzpraxis (VioGen-Fall) und deren Auswirkungen auf vulnerable Gruppen; Empfehlungen für inklusive Sozialschutzpolitik und Gewaltschutz.",
+    "Bias_Ungleichheit": "Fallstudien zeigen systematische Diskriminierung: 'Amazon's AI recruitment tool...unintentionally favoured male candidates'; 'Deliveroo's rider-ranking algorithm...violated labour laws'; iBorderCtrl könnte 'misinterpret women's facial expressions, reflecting societal biases'.",
+    "Gender": "Expliziter Gender-Fokus: 'gender equality is limited to Recitals 27 and 48 AI Act'; Analyse von Geschlechter-Bias in Objektifizierungstheorie; Schutz vor geschlechtsspezifischer KI-Gewalt (Deepfakes); Reproduktion von Geschlechterstereotypen.",
+    "Diversitaet": "Intersektionale Analyse: 'individuals do not experience bias in isolation; rather, their experiences are shaped by the confluence of their gender, race, socioeconomic status and other identity factors'; Fokus auf 'women of colour, LGBTQIA+ individuals, and those with disabilities'.",
+    "Feministisch": "Explizite Verwendung feministischer Theorie: Objectification Theory (Fredrickson & Roberts 1997); Intersectionality Framework (Crenshaw 2019); Feminist Data Protection (Theilen et al. 2021); Feminist Philosophy of Law (Francs & Smith 2021); 'a feminist approach to harmonisation'; 'feminist-informed revisions'; Kritik an patriarchalischen Strukturen.",
+    "Fairness": "Conformity assessment muss 'comprehensive bias audits' durchführen; Forderung nach 'fair and devoid of bias' AI systems; 'intersectional data analysis in conformity assessments' zur Gewährleistung von Fairness für marginalisierte Communities."
+  },
+  "references": [
+    {
+      "author": "Crenshaw, K.",
+      "year": 2019,
+      "short_title": "Intersectionality Framework"
+    },
+    {
+      "author": "Fredrickson, B. L. & Roberts, T. A.",
+      "year": 1997,
+      "short_title": "Objectification Theory: Toward Understanding Women's Lived Experiences and Mental Health Risks"
+    },
+    {
+      "author": "Theilen, J. T., Baur, A., Bieker, F., Ammicht Quinn, R., Hansen, M., González Fuster, G.",
+      "year": 2021,
+      "short_title": "Feminist data protection: an introduction"
+    },
+    {
+      "author": "Dastin, J.",
+      "year": 2018,
+      "short_title": "Amazon scraps secret AI recruiting tool that showed bias against women"
+    },
+    {
+      "author": "Zuiderveen Borgesius, F.",
+      "year": 2018,
+      "short_title": "Discrimination, Artificial Intelligence and Algorithmic Decision-Making"
+    },
+    {
+      "author": "Leavy, S.",
+      "year": 2018,
+      "short_title": "Gender bias in artificial intelligence: The need for diversity and gender theory in machine learning"
+    },
+    {
+      "author": "Sovacool, B., Furszyfer-Del Rio, D. D., Martiskainen, M.",
+      "year": 2021,
+      "short_title": "Can prosuming become perilous? Exploring systems of control and domestic abuse in the smart homes of the future"
+    },
+    {
+      "author": "Karagianni, A. & Doh, M.",
+      "year": 2024,
+      "short_title": "A feminist legal analysis of non-consensual sexualized deepfakes: contextualizing its impact as AI-generated image-based violence under EU law"
+    },
+    {
+      "author": "Kloza, D., Van Dijk, N., Casiraghi, S., Vazquez Maymir, S., Tanas, A.",
+      "year": 2021,
+      "short_title": "The concept of impact assessment"
+    },
+    {
+      "author": "Hendrickx, V.",
+      "year": 2024,
+      "short_title": "Women's rights in the age of automation"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochrelevant für die Schnittstelle AI/Soziale Arbeit/Gender. Das Paper analysiert regulatorische Rahmenbedingungen für KI-Systeme, die Sozialarbeit, Gewaltschutz und vulnerable Gruppen unmittelbar betreffen, und liefert eine feministisch-kritische Perspektive auf strukturelle Ungleichheiten.",
+    "unique_contribution": "Die systematische feministische und intersektionale Analyse des EU AI Act mit Fokus auf Geschlechter-Bias und strukturelle Benachteiligung marginalisierter Gruppen; konkrete Empfehlungen zur Integration geschlechterspezifischer Auswirkungsbewertungen und inklusiver Sprache.",
+    "limitations": "Nicht empirisch validiert; konzentriert sich auf EU-Kontext; begrenzte Analyse von Implementierungsmechanismen; keine Daten zu tatsächlichen Auswirkungen auf Sozialarbeitspraxis nach AI-Act-Implementierung"
+  },
+  "target_group": "Policymaker und EU-Institutionen; Sozialarbeiter und Fachkräfte in Gewaltschutz und Care-Arbeit; KI-Entwickler und Standardisierungsorgane; Feminist und Gender-Studies Scholar; Menschenrechtsorganisationen und Interessenvertretungen marginalisierter Gruppen; Forschende an der Schnittstelle KI und Soziale Arbeit"
+}

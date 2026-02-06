@@ -6,7 +6,7 @@ Hierarchische PDF-Akquise mit 8 Fallback-Strategien.
 
 ## Schnellstart
 
-Das Script `analysis/getPDF_intelligent.py` akquiriert PDFs aus verschiedenen Quellen.
+Das Script `pipeline/scripts/download_zotero_pdfs.py` (bzw. `acquire_pdfs.py`) akquiriert PDFs aus verschiedenen Quellen.
 
 **Parameter:**
 - `--input` - Excel oder JSON mit Paper-Metadaten
@@ -50,7 +50,7 @@ Array mit Objekten: title, authors, doi, url, decision
 
 Dateiname-Format: `Author2024_TitleKeyword.pdf`
 
-Speicherort: `analysis/pdfs/`
+Speicherort: `pipeline/pdfs/`
 
 ### Logs
 
@@ -77,7 +77,7 @@ Speicherort: `analysis/pdfs/`
 1. `missing_pdfs.csv` oeffnen
 2. DOIs in institutionellem Zugang suchen
 3. Manuell herunterladen
-4. In `analysis/pdfs/` ablegen
+4. In `pipeline/pdfs/` ablegen
 5. Pipeline fortsetzen
 
 ---
@@ -101,4 +101,4 @@ Speicherort: `analysis/pdfs/`
 
 ---
 
-*Version: 3.0 (2026-02-03)*
+*Aktualisiert: 2026-02-06*

@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "title": "Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma",
+    "authors": [
+      "Paul James",
+      "Jason Lal",
+      "Ashley Liao",
+      "Liam Magee",
+      "Karen Soldatic"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie kann Sozialarbeitspädagogik Studierende sowohl auf die technische Kompetenz im Umgang mit algorithmischen Entscheidungssystemen als auch auf deren kritische Reflexion vorbereiten?",
+    "methodology": "Theoretisch und konzeptionell; Case-Study-Analyse von drei Fallbeispielen (AFST, COMPAS, NDIS) plus zwei zusätzliche Fälle (Heat List, HEALER); Curriculumentwicklung basierend auf Fallstudien",
+    "key_finding": "Sozialarbeitseducation muss ein Spannungsverhältnis zwischen technischer Kompetenz und kritischer Analyse auflösen, indem sie theoriegeleitet und praxisorientiert ADM-Systeme als Werkzeuge (nicht als Rahmen) behandelt, um sowohl ihre positiven als auch ihre diskriminierenden Potenziale zu adressieren.",
+    "data_basis": "Keine primären empirischen Daten; qualitative Analyse von vier dokumentierten Algorithmen-Fallstudien in Sozialarbeit, Justizvollzug und Wohlfahrt"
+  },
+  "arguments": [
+    "Algorithmische Entscheidungssysteme werden zunehmend in Sozialarbeit implementiert, ohne dass Sozialarbeiter angemessen geschult werden; dies erzeugt ein Dilemma zwischen technischer Kompetenz und kritischer Reflexion.",
+    "Die bisherige Pädagogik 'normalisiert' Technologieeinsatz kritiklos oder lehrt Kritik getrennt von Technik-Verständnis; stattdessen braucht es eine integrierte, theorieinformierte Pädagogik, die ADM-Systeme als Werkzeuge innerhalb sozialer Machtstrukturen versteht.",
+    "Case-Studies zeigen, dass ADM-Systeme zwar Bias reduzieren können (z.B. AFST), aber oft neue Verzerrungen einführen, Transparenzmangel ('Black Box') schaffen und die Advocacy-Fähigkeit von Sozialarbeitern unterminieren; Studierende müssen lernen, solche Systeme kritisch zu hinterfragen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Digital literacy needs to include 'technical competency and critical understanding of the technical implications and social form of such digital tools'; 'algorithmic literacy that centers on understanding the often-critical limitations of such technologies and systems'",
+    "KI_Sonstige": "Algorithmic decision-making (ADM) systems, predictive risk-assessment techniques, machine learning models trained on large datasets; 'black-box AI' systems; simple rule-based systems and complex AI systems",
+    "Soziale_Arbeit": "Fokus auf Sozialarbeitspraxis, -pädagogik und -theorie; Case-Studies in Kinderschutz (AFST), Strafvollzug (COMPAS), Behindertenhilfe (NDIS); Curricula-Entwicklung für Sozialarbeitsstudierende",
+    "Bias_Ungleichheit": "Even AFST 'threatens the human right of nondiscrimination' when it creates 'imprecise risk-predictions based on invalid correlations'; COMPAS shows 'African-American populations had a higher false-negative rate compared to white populations'; disadvantages are 'amplified by automated processes, especially for the already most precarious'",
+    "Diversitaet": "Children with disabilities in child-protection settings; African-American populations in justice systems; disabled people in NDIS scheme; marginalized and precarious populations systematically affected by ADM; intersectional contexts emphasized",
+    "Fairness": "Algorithmic fairness concerns: systems designed to 'reduce bias in decision-making' have instead 'accentuated or introduce new biases'; discussion of equitable resource allocation, non-discrimination rights, and 'moral crumple zones'"
+  },
+  "references": [
+    {
+      "author": "Eubanks",
+      "year": 2018,
+      "short_title": "Automating inequality: How high-tech tools profile, police, and punish the poor"
+    },
+    {
+      "author": "Keddell",
+      "year": 2019,
+      "short_title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice"
+    },
+    {
+      "author": "Gillingham",
+      "year": 2019,
+      "short_title": "Decision support systems, social justice and algorithmic accountability in social work"
+    },
+    {
+      "author": "Pasquale",
+      "year": 2017,
+      "short_title": "Toward a fourth law of robotics: Preserving attribution, responsibility, and explainability in an algorithmic society"
+    },
+    {
+      "author": "Bennett Moses",
+      "year": 2019,
+      "short_title": "Helping future citizens navigate an automated, datafied world"
+    },
+    {
+      "author": "Angwin et al.",
+      "year": 2016,
+      "short_title": "Machine bias: There's software used across the country to predict future criminals. And it's biased against blacks"
+    },
+    {
+      "author": "La Mendola",
+      "year": 2010,
+      "short_title": "Social work and social presence in an online world"
+    },
+    {
+      "author": "Cuccaro-Alamin et al.",
+      "year": 2017,
+      "short_title": "Risk assessment and decision making in child protective services: Predictive risk modeling in context"
+    },
+    {
+      "author": "Lipsky",
+      "year": 2010,
+      "short_title": "Street-level bureaucracy: Dilemmas of the individual in public services"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Sehr hohes Fit: Das Paper adressiert direkt die Schnittstelle von KI-Literacies und Sozialer Arbeit und thematisiert sowohl technische als auch kritische Aspekte algorithmischer Systeme in wohlfahrtsstaatlichen Kontexten, wo vulnerable Gruppen betroffen sind.",
+    "unique_contribution": "Der besondere Beitrag liegt in der Operationalisierung der 'competency/critique dilemma' für die Sozialarbeitspädagogik und der Entwicklung eines theoriegeleiten, praxisorientierten Curriculumrahmens, der fünf reflexive Leitfragen vorschlägt (Grounding assumptions, Contextualizing complexities, Intended/Unintended consequences, Application tensions).",
+    "limitations": "Rein konzeptionell ohne empirische Evaluation der vorgeschlagenen Curricula; keine quantitativen Daten zu Effektivität von ADM-Systemen; Gender-Perspektive ist unterrepräsentiert troitz Intersektionalitätsfokus; keine Detailanalyse der technischen Funktionsweise von Algorithmen"
+  },
+  "target_group": "Primär: Sozialarbeitsdozenten, Curriculum-Entwickler, Pädagogen im Hochschulbereich; Sekundär: Praktikierende Sozialarbeiter, Policy-Maker in Wohlfahrtsagenturen, kritische Tech-Forscher, Organisationen der Behindertenbewegung und Bürgerrechte"
+}

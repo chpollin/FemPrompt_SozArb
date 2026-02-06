@@ -1,0 +1,60 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Endnote [1] zu Commercial Content Moderation nicht explizit in Haupttext erwähnt",
+        "Biographical Information zu Sarah Ciston (Pronomen she/they, MFA UC San Diego, PhD Candidate USC) nicht erfasst",
+        "Acknowledgements-Sektion nicht dokumentiert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [
+        "Minimal: Jahresangabe '2024' im Dokument basiert auf conversion_date 2026-02-03, was anachronistisch ist - sollte vermutlich 2019 oder später sein basierend auf Publication Context"
+      ],
+      "distortions": [
+        "Slight: 'journalArticle' als type klassifiziert, aber Originaltext gibt keine Publikationsart eindeutig an (könnte Konferenzpaper, Journal oder Buch-Kapitel sein - metadata unvollständig)"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "CriticalRaceTheory (explizit erwähnt: 'critical race theories', Ruha Benjamin 'New Jim Code', ProPublica COMPAS study on racial bias)",
+        "Ethik/Ethics (zentrales Thema: 'alternative ethics from its counterhistories', 'meta-ethics of multiplicity')",
+        "Algorithmen/Algorithms (explizit in Keywords und durchgehend thematisiert, aber nicht separat kategorisiert)"
+      ]
+    }
+  },
+  "overall_confidence": 93,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "year": "Sollte wahrscheinlich mit 2019 beginnen oder Publikationsjahr klären; 2024 ist spekulativ",
+      "type": "Präzisierung empfohlen - 'conferencePaper', 'journalArticle' oder 'bookChapter' basierend auf Ursprungsquelle"
+    },
+    "content_fixes": [
+      {
+        "section": "categories",
+        "action": "hinzufügen",
+        "values": [
+          "CriticalRaceTheory",
+          "Ethik_KI",
+          "Algorithmen"
+        ]
+      },
+      {
+        "section": "biographical_information",
+        "action": "ergänzen",
+        "content": "Sarah Ciston (she/they) ist computational media artist und experimental writer. Sie hält einen MFA von UC San Diego und ist PhD Candidate und Annenberg Fellow in Media Arts + Practice an der University of Southern California. Sie organisiert das Creative Code Collective. Website: http://sarahciston.com"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "action": "ergänzen",
+        "content": "[[Parisi_Luciana_2017]] - Reprogramming Decisionism (on 'reasoning through and with uncertainty')\n[[Wilson_Elizabeth_2011]] - Affect and Artificial Intelligence\n[[Keeling_Kara_2014]] - Queer OS (on 'malfunction with capacity to reorder things')"
+      }
+    ]
+  }
+}

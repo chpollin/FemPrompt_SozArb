@@ -30,7 +30,7 @@ When starting a new session, read these files to understand current state:
 
 ### Configuration Files (Don't Modify Unless Asked)
 
-- `pipeline_config.yaml` - Pipeline configuration
+- `config/defaults.yaml` - Pipeline configuration
 - `.env` - API keys (never commit this!)
 - `requirements.txt` - Python dependencies
 
@@ -61,8 +61,8 @@ When starting a new session, read these files to understand current state:
 ### Files That Require Caution
 
 - `pipeline/scripts/acquire_pdfs.py` - Core PDF acquisition
-- `pipeline/scripts/summarize_documents.py` - API integration
-- `run_pipeline.py` - Master orchestrator
+- `pipeline/scripts/distill_knowledge.py` - Knowledge extraction (API integration)
+- `pipeline/scripts/generate_vault.py` - Vault generation
 
 ---
 
@@ -90,12 +90,12 @@ When starting a new session, read these files to understand current state:
 - Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`
 
 **What to commit:**
-- ✅ Code changes
-- ✅ Documentation updates
-- ✅ Configuration changes
-- ❌ API keys or secrets
-- ❌ Generated data (PDFs, summaries)
-- ❌ Test artifacts (`test_*.xlsx`, `acquisition_log.json`)
+- Code changes
+- Documentation updates
+- Configuration changes
+- NICHT: API keys or secrets
+- NICHT: Generated data (PDFs, knowledge docs)
+- NICHT: Test artifacts (`test_*.xlsx`, `acquisition_log.json`)
 
 **Pushing:**
 - Always use: `git push -u origin <branch-name>`
@@ -124,12 +124,13 @@ When starting a new session, read these files to understand current state:
 - **Success rate:** Target 100% (retry on failures)
 - **Output:** `output/assessment_llm.xlsx`
 
-### Summarization (pipeline/scripts/summarize_documents.py)
+### Knowledge Distillation (pipeline/scripts/distill_knowledge.py)
 
-- **Rate limiting:** 2-second delay between API calls (configurable)
-- **Retries:** Implement exponential backoff for 429 errors
-- **Model:** Claude Haiku 4.5 (default), Sonnet 4.5 (better quality)
-- **Cost monitoring:** Track cost per document (~$0.03-0.04)
+- **3-Stage Workflow:** Extract & Classify (LLM) → Format Markdown (lokal) → Verify (LLM)
+- **Rate limiting:** Configurable delay between API calls (default: 1s)
+- **Model:** Claude Haiku 4.5
+- **Cost:** ~$0.028/Paper
+- **Output:** `pipeline/knowledge/distilled/` (249 Dokumente)
 
 ### Vault Generation (pipeline/scripts/generate_vault.py)
 

@@ -1,0 +1,63 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Publikationskontext: Competence Centre on the Future of Work, Friedrich-Ebert-Stiftung nicht erwähnt",
+        "ISBN und spezifische Publikationsdaten nicht in Frontmatter",
+        "Hinweis auf Autorin als FARI Scholar und Doctoral Researcher nicht inkludiert"
+      ]
+    },
+    "correctness": {
+      "score": 96,
+      "errors": [],
+      "distortions": [
+        "Minor: Im generierten Dokument wird 'women with disabilities' genannt, im Original steht 'particularly women of colour and women from marginalised communities' - die Erwähnung von Behinderungen erfolgt später im Text in andererem Kontext"
+      ]
+    },
+    "category_validation": {
+      "score": 98,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Regulation/Policy könnte zusätzlich als Kategorie relevant sein",
+        "EU-Recht als spezifische Kategorie könnte ergänzt werden"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "recommendation": "Optional: organisation und publisher in Metadaten ergänzen",
+      "suggested_addition": {
+        "publisher": "Friedrich-Ebert-Stiftung",
+        "centre": "Competence Centre on the Future of Work",
+        "isbn": "978-3-98628-690-3"
+      }
+    },
+    "content_fixes": [
+      {
+        "location": "Summary section",
+        "issue": "Formulierung 'women with disabilities' ist nicht primärer Fokus des Originals",
+        "original_text": "particularly women of colour and women from marginalised communities",
+        "suggestion": "Präzisierung behalten, da Intersektionalität auch Behinderung umfasst - keine Korrektur notwendig"
+      }
+    ]
+  },
+  "quality_assessment": {
+    "strengths": [
+      "Exzellente Erfassung der feministischen Perspektive und intersektionalen Analyse",
+      "Alle vier Fallstudien (Amazon, Deliveroo, iBorderCtrl, VioGen) korrekt identifiziert",
+      "Kategorisierung ist präzise und durch Originaltext belegt",
+      "Kernbefunde und Forschungsfrage adäquat zusammengefasst",
+      "Schlüsselreferenzen vollständig und korrekt erfasst",
+      "Methodische Transparenz hinsichtlich theoretischer Ansätze"
+    ],
+    "minor_weaknesses": [
+      "Publikationsinstitution könnte prominenter in Frontmatter erwähnt sein",
+      "Keine Erwähnung des Datum der Konvertierung im Original (2026-02-03)",
+      "Autorinnen-Bio ist im Original vorhanden, könnte noch stärker in Kontextinformation herangezogen werden"
+    ]
+  }
+}

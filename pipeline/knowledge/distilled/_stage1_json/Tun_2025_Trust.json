@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "nicht angegeben",
+    "authors": [
+      "Tun"
+    ],
+    "year": 2025,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "nicht angegeben",
+    "methodology": "Systematischer Review nach PRISMA 2020 Standards",
+    "key_finding": "nicht angegeben",
+    "data_basis": "nicht angegeben"
+  },
+  "arguments": [
+    "nicht angegeben",
+    "nicht angegeben",
+    "nicht angegeben"
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": false,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": false,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": false
+  },
+  "category_evidence": {},
+  "references": [],
+  "assessment": {
+    "domain_fit": "Das vorliegende Dokument ist ausschließlich eine PRISMA 2020 Checkliste ohne inhaltliche Informationen zum eigentlichen Paper-Inhalt. Eine Bewertung der thematischen Relevanz ist nicht möglich.",
+    "unique_contribution": "nicht angegeben",
+    "limitations": "Das bereitgestellte Dokument enthält nur das PRISMA-Checklistenformat ohne den tatsächlichen Paper-Inhalt (Abstract, Introduction, Methods, Results, Discussion). Eine vollständige Analyse ist nicht durchführbar."
+  },
+  "target_group": "nicht angegeben"
+}

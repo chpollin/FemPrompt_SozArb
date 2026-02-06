@@ -1,0 +1,56 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Beispiele aus Sections 5 und 6 (Queer experience of AI) nicht detailliert dargestellt",
+        "Recommendations aus Section 8 nicht zusammengefasst",
+        "Konkrete Policy-Implikationen aus Section 7 nicht explizit aufgeführt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Autorenname: Originaldokument listet 'Dawn McAra-Hunter' auf - im generierten Dokument korrekt, aber Byline zeigt nur Name ohne Affilationen, die im Original vorhanden sind (School of Business and Creative Industries, University of the West of Scotland + Diverse AI)"
+      ]
+    },
+    "category_validation": {
+      "score": 96,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Marginalisierte_Communities (würde das breiter kontextualisieren)",
+        "Ethik_KI (explizites AI Ethics Framework wird diskutiert)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "authors_affiliation": "Should include: School of Business and Creative Industries, University of the West of Scotland, Paisley, UK; Diverse AI, Edinburgh, UK",
+      "published_date": "Published online: 14 February 2024"
+    },
+    "content_fixes": [
+      {
+        "section": "categories",
+        "suggestion": "Optional: Hinzufügen von 'Ethik_KI' und 'Marginalisierte_Communities' für größere Diskoverability"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "note": "Liste ist korrekt aus Original extrahiert; Vollständigkeit validiert gegen References-Sektion"
+      }
+    ]
+  },
+  "validation_notes": {
+    "strength": "Das Wissensdokument erfasst präzise die theoretischen Fundamente (Queer Theory, Foucault, Intersektionalität), die Kernbefunde zur Cishet-Baseline und zum Schaden durch AI-Hype, sowie die methodische Ausrichtung. Die Kategorie-Evidenzen sind sachlich korrekt mit Direktzitaten belegt.",
+    "observations": [
+      "Kernbefund adäquat verkürzt und prägnant formuliert",
+      "Methodologie korrekt als theoretisch/literaturanalytisch klassifiziert",
+      "Target Group ist realistische und breite Stakeholder-Definition",
+      "Assessment-Relevanz und Limitations zeigen kritische Reflexion"
+    ],
+    "quality_assessment": "Das generierte Dokument ist eine hochwertige Extraktions- und Syntheseleistung mit hoher Treue zum Originaltext"
+  }
+}

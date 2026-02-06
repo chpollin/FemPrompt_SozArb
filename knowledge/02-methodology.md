@@ -189,15 +189,30 @@ Heterogene Modell-Outputs werden in RIS-Format konvertiert.
 
 ---
 
-## Human-LLM Benchmark
+## Human-LLM Benchmark (Parallel Human-AI Assessment)
 
-Fuer das Forum Wissenschaft Paper wird ein Vergleich zwischen Human- und LLM-Assessment durchgefuehrt:
+Fuer das Forum Wissenschaft Paper wird ein Vergleich zwischen Human- und LLM-Assessment durchgefuehrt. Das Design adaptiert den Benchmarking-Ansatz von Woelfle et al. (2024).
+
+### Referenzliteratur
+
+| Studie | Befund | Relevanz |
+|--------|--------|----------|
+| Woelfle et al. (2024) | Human IRR: κ = 0.29–0.84 (komplexitaetsabhaengig) | Methodische Vorlage |
+| Hanegraaf et al. (2024) | Human IRR in SLRs: κ = 0.77–0.88 | Benchmark-Werte |
+| Sandner et al. (2025) | Human-LLM κ ≈ 0.52 ≈ Human-Human κ | Hypothese: LLM weicht nicht staerker ab als Menschen |
+
+**Erwartungshorizont:**
+- Human-Human (Susi vs. Sabine): κ ≈ 0.5–0.8 (kategorienabhaengig)
+- Human-LLM: κ ≈ 0.3–0.7 (keyword-nahe Kategorien hoeher)
+
+Detaillierte Dokumentation: `knowledge/paper/Referenzliteratur-Benchmark-Design.md`
 
 ### Metriken
 
-- **Cohen's Kappa:** Inter-Rater-Reliabilitaet
+- **Cohen's Kappa:** Inter-Rater-Reliabilitaet (zufallskorrigiert)
 - **Agreement pro Kategorie:** Wo stimmen Human/LLM ueberein?
 - **Disagreement-Analyse:** Qualitative Untersuchung der Abweichungen
+- **Konfusionsmatrix:** Human × LLM (Include/Exclude)
 
 ### Benchmark-Scripts
 
@@ -221,6 +236,14 @@ Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit H
 
 ---
 
-*Konsolidiert aus: METHODOLOGY.md, analysis/PRISMA_COMPLIANCE.md*
-*Konfiguration: benchmark/config/categories.yaml (v1.1)*
-*Version: 1.0 (2026-02-02)*
+---
+
+## Referenzen
+
+- Woelfle, T., et al. (2024). Benchmarking Human–AI collaboration for common evidence appraisal tools. *Journal of Clinical Epidemiology*, 175, 111533.
+- Hanegraaf, G., et al. (2024). Inter-reviewer reliability of human literature reviewing. *BMJ Open*, 14, e076912.
+- Sandner, F., et al. (2025). Assessing the Reliability of Human and LLM-Based Screening. Konferenzpraesentation (OSSYM).
+
+---
+
+*Aktualisiert: 2026-02-06*

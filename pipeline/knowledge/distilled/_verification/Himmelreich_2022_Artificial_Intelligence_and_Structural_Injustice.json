@@ -1,0 +1,74 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Explizite Erwähnung der 'Social Connection Model' von Young nicht im Kernbefund",
+        "Details zu epistemischen Herausforderungen bei der Identifikation von Strukturen könnten ausführlicher sein",
+        "Ausblick auf zukünftige Forschungsfragen (z.B. 'to what extent AI is itself part of the structure of society') nur marginal erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        {
+          "type": "minor_simplification",
+          "issue": "Unter 'Metodologie' wird 'nicht empirisch' angegeben, aber Obermeyer et al. 2019 wird als Datenbasis erwähnt - präziser wäre: 'Theoretische Analyse mit empirischer Fallstudie'",
+          "severity": "low"
+        }
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        {
+          "category": "Rasse_Rassismus",
+          "justification": "Paper fokussiert explizit auf 'racial bias' und 'racism' - würde als eigenständige Kategorie neben oder statt 'Bias_Ungleichheit' gerechtfertigt sein"
+        },
+        {
+          "category": "Policing_Justiz",
+          "justification": "Policing ist wiederholt Beispiel (police-inflicted violence, automatic license plate readers) - als eigenständige Domäne erwähnenswert"
+        },
+        {
+          "category": "Ethik_Governance",
+          "justification": "AI Governance und AI Ethics sind zentrale Themen des Papers, nicht nur 'KI_Sonstige'"
+        }
+      ]
+    }
+  },
+  "overall_confidence": 94,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_enhance": [
+        "Rasse_Rassismus (primary)",
+        "Ethik_Governance (primary)",
+        "Policing_Justiz (secondary)"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "original": "**Datenbasis:** nicht empirisch | Theoretische Analyse mit Case Study (Obermeyer et al. 2019 Studie zu medizinischem Algorithmus)",
+        "corrected": "**Datenbasis:** Primär theoretisch-konzeptionell mit illustrativer empirischer Fallstudie (Obermeyer et al. 2019: Racial Bias in Healthcare Algorithm)",
+        "reason": "Präzisere Abgrenzung zwischen theoretischem und empirischem Anteil"
+      },
+      {
+        "section": "Hauptargumente",
+        "location": "Nach viertem Argument hinzufügen",
+        "addition": "- Epistemic Challenges: Strukturelle Ungerechtigkeit ist erkenntnistheoretisch schwer zu fassen ('epistemically hard'), was eine methodische Herausforderung für Governance-Praktiker darstellt, die ohne spezialisiertes sozialwissenschaftliches Wissen strukturelle Injustiz antizipieren müssen.",
+        "reason": "Im Original prominent behandelt ('The theory is epistemically hard'), im Dokument unterrepräsentiert"
+      },
+      {
+        "section": "Kernbefund",
+        "location": "Satz 2 erweitern",
+        "original": "Ein struktureller Gerechtigkeitsansatz basiert auf Iris Marion Youngs Theorie und liefert tiefere Grundlagen für Diversity, Equity und Inclusion als alternative governance-Ansätze.",
+        "revised": "Ein struktureller Gerechtigkeitsansatz basiert auf Iris Marion Youngs Social Connection Model und liefert tiefere Grundlagen für Diversity, Equity und Inclusion als alternative governance-Ansätze, indem er strukturelle statt individueller oder harm-basierter Erklärungen in den Fokus rückt.",
+        "reason": "Spezifischere Referenz zu Youngs konzeptuellem Beitrag"
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "Automated Government Benefits and Welfare Surveillance",
+    "authors": [
+      "Mike Zajko"
+    ],
+    "year": 2023,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Was bedeutet künstliche Intelligenz für die Überwachung im digitalen Wohlfahrtsstaat, und sind die Probleme technologisch neuartig oder wiederholen sie historisch bekannte Muster administrativer Kontrolle?",
+    "methodology": "Theoretisch/Literatur-Review mit fallgestützter Analyse; kritische Analyse von Governance-Infrastrukturen und deren historischen Kontinuitäten; Dokumentenanalyse (besonders niederländische SyRI-Skandal)",
+    "key_finding": "Die zentralen Probleme automatisierter Wohlfahrtsüberwachung sind nicht technologisch neuartig, sondern wiederholen historisch dokumentierte Muster von Verdacht gegenüber Armen, opaker Entscheidungsfindung und strafender Maßnahmen gegen marginalisierte Gruppen, die bereits vor der KI-Ära bestanden.",
+    "data_basis": "nicht angegeben (theoretische und dokumentarische Analyse ohne Primärdatenerhebung)"
+  },
+  "arguments": [
+    "KI-Technologien in der Wohlfahrtsverwaltung sollten als 'politische Technologien' verstanden werden, die der Regierungskontrolle dienen und von Governance-Problemen geprägt sind, nicht von technologischen Innovationen. Algorithmen sind Ausdruck bestehender administrativer Strukturen und Ziele.",
+    "Der niederländische SyRI-Skandal zeigt, dass Hauptprobleme (Zielgerichtung gegen arme Gegenden, fehlende Transparenz, Reproduktion von Ungleichheit) durch menschliche Entscheidungen bei Systemdesign und Deployment entstehen, nicht durch algorithmische Komplexität selbst.",
+    "Wohlfahrtsüberwachung hat historische Wurzeln in moralischer Regulierung von Armen, Verdacht auf 'Untätigkeit' und der Annahme, dass Wohlfahrtsempfänger Privatsphäre opfern müssen. Diese Logiken werden durch neue Technologien verstärkt, nicht erfunden."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Der Autor kritisiert die Reifizierung von KI als neues Phänomen und fordert ein differenziertes technisches Verständnis: 'Understanding key features of machine learning is often less important than an algorithm's objective function' und argumentiert für kritische Reflexion über KI-Hype und tatsächliche technische Kapazitäten.",
+    "KI_Sonstige": "Detaillierte Analyse von Machine Learning, Predictive Analytics, algorithmic decision-making (ADM) Systemen, und Chatbots in der Wohlfahrtsverwaltung. Fokus auf automatisierte Entscheidungsfindung und statistische Klassifikationssysteme.",
+    "Soziale_Arbeit": "Direkter Bezug zu Wohlfahrtsverwaltung, Sozialleistungen, und administrative Agenturen, die über soziale Hilfe entscheiden. Relevanz für Sozialarbeiter als 'street-level bureaucrats' und deren Diskretionsverlust durch Systemautomation.",
+    "Bias_Ungleichheit": "Zentrale Analyse struktureller Ungleichheit: 'ML-based algorithms can statistically reproduce social inequalities in their training data' und 'disproportionate targeting of ethnic groups for fraud investigation' trotz Verbots ethnischer Diskriminierung. Fokus auf Reproduktion von Klassenverhältnissen und Marginalisierung.",
+    "Diversitaet": "Analyse von Diskriminierungsmechanismen gegen migrantische, arme und ethnisierte Bevölkerungsgruppen: 'the choice to deploy these systems against populations that are predominantly poor, racialized, or of immigrant background is just as important for the reproduction of inequality'.",
+    "Fairness": "Diskussion algorithmic fairness und auditability von ADM-Systemen; Analyse von Rotterdam's Algorithmus als 'alarmingly inaccurate' und Forderung nach systematischer Kontrolle und Transparenzanforderungen für Entscheidungssysteme."
+  },
+  "references": [
+    {
+      "author": "Eubanks, Virginia",
+      "year": 2018,
+      "short_title": "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor"
+    },
+    {
+      "author": "Bovens & Zouridis",
+      "year": 2002,
+      "short_title": "Street-level bureaucracy vs. screen-level bureaucracy"
+    },
+    {
+      "author": "Alston, Philip",
+      "year": 2019,
+      "short_title": "UN Report: Digital welfare state definition"
+    },
+    {
+      "author": "van Bekkum & Borgesius",
+      "year": 2021,
+      "short_title": "Digital Welfare Fraud Detection and the Dutch SyRI Judgment"
+    },
+    {
+      "author": "Brayne, Sarah",
+      "year": 2020,
+      "short_title": "Predictive policing and feedback loops targeting disadvantaged populations"
+    },
+    {
+      "author": "Alkhatib, Ali",
+      "year": 2021,
+      "short_title": "Algorithmic systems as functionally similar to administrative states"
+    },
+    {
+      "author": "Hoffmann, Anna Lauren",
+      "year": 2021,
+      "short_title": "Data violence and administrative violence"
+    },
+    {
+      "author": "Constantaras et al.",
+      "year": 2023,
+      "short_title": "Rotterdam fraud detection algorithm analysis"
+    },
+    {
+      "author": "Lepage-Richer & McKelvey",
+      "year": 2022,
+      "short_title": "States of Computing: Government as information processing system"
+    },
+    {
+      "author": "Coser, Lewis A.",
+      "year": 1965,
+      "short_title": "Privacy denial for welfare recipients"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für Schnittstelle KI/Soziale Arbeit durch kritische Analyse von Wohlfahrtsautomation und deren Auswirkungen auf marginalisierte Klientel sowie auf Sozialarbeiter als implementierende Akteure. Verbindet Governance-Forschung mit Surveillance Studies und Fragen sozialer Gerechtigkeit.",
+    "unique_contribution": "Der Beitrag dekonstruiert KI-Hype systematisch durch historische Kontextualisierung und zeigt auf, dass zentrale Probleme digitalisierter Wohlfahrt nicht technologisch neuartig sind, sondern lange bekannte Muster von Klassenkontrolle und systematischer Verdächtigung widerspiegeln.",
+    "limitations": "Fokus primär auf Niederlande und Kanada, begrenzte Analyse intersektionaler Dimensionen (Gender wird nicht behandelt), keine empirische Erhebung von Betroffenenperspektiven oder Sozialarbeiter-Erfahrungen."
+  },
+  "target_group": "Sozialarbeiter und Soziale Dienste, KI-Governance und Policy-Maker, Surveillance Studies Fachleute, Menschenrechtsorganisationen, Sozialwissenschaftler, kritische KI-Forscher, Aktivisten gegen digitale Ausgrenzung marginalisierter Gruppen"
+}

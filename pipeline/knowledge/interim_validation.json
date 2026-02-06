@@ -1,0 +1,606 @@
+{
+  "timestamp": "2026-02-05T08:53:29.417448",
+  "input_dir": "pipeline\\knowledge\\vault",
+  "summary": {
+    "total": 42,
+    "valid": 42,
+    "invalid": 0,
+    "with_warnings": 0
+  },
+  "confidence_stats": {
+    "min": 75,
+    "max": 95,
+    "avg": 89.6,
+    "below_75": 0
+  },
+  "documents": [
+    {
+      "filename": "A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 93,
+        "category_count": 9,
+        "year": 2024,
+        "char_count": 7055,
+        "word_count": 738,
+        "wikilink_count": 6
+      }
+    },
+    {
+      "filename": "Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 8,
+        "year": 2024,
+        "char_count": 7976,
+        "word_count": 868,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 85,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 6756,
+        "word_count": 772,
+        "wikilink_count": 9
+      }
+    },
+    {
+      "filename": "Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 6,
+        "year": 2025,
+        "char_count": 5058,
+        "word_count": 560,
+        "wikilink_count": 1
+      }
+    },
+    {
+      "filename": "Alam_2025_Social_work_in_the_age_of_artificial_intelligence.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 91,
+        "category_count": 6,
+        "year": 2025,
+        "char_count": 6242,
+        "word_count": 672,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Alliance_2024_Incubating.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 9,
+        "year": 2024,
+        "char_count": 6621,
+        "word_count": 749,
+        "wikilink_count": 5
+      }
+    },
+    {
+      "filename": "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 88,
+        "category_count": 6,
+        "year": 2024,
+        "char_count": 6571,
+        "word_count": 785,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 7,
+        "year": 2024,
+        "char_count": 8202,
+        "word_count": 904,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "An_2025_Measuring_gender_and_racial_biases_in_large.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 6442,
+        "word_count": 761,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 75,
+        "category_count": 7,
+        "year": 2023,
+        "char_count": 6659,
+        "word_count": 816,
+        "wikilink_count": 9
+      }
+    },
+    {
+      "filename": "Arias_López_2023_Digital.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 75,
+        "category_count": 7,
+        "year": 2021,
+        "char_count": 6119,
+        "word_count": 638,
+        "wikilink_count": 3
+      }
+    },
+    {
+      "filename": "Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 6,
+        "year": 2025,
+        "char_count": 5054,
+        "word_count": 586,
+        "wikilink_count": 1
+      }
+    },
+    {
+      "filename": "Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 94,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 7384,
+        "word_count": 829,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Asseri_2025_Prompt_engineering_techniques_for_mitigating.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 75,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 6709,
+        "word_count": 745,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Attard-Frost_2025_Countergovernance.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 5,
+        "year": 2023,
+        "char_count": 7491,
+        "word_count": 852,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Bai_2025_Explicitly_unbiased_large_language_models_still.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 6449,
+        "word_count": 736,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 6198,
+        "word_count": 737,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Barman_2024_Beyond.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 92,
+        "category_count": 6,
+        "year": 2024,
+        "char_count": 5482,
+        "word_count": 671,
+        "wikilink_count": 7
+      }
+    },
+    {
+      "filename": "Barman_2024_Beyond_transparency_and_explainability_On_the.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 89,
+        "category_count": 7,
+        "year": 2024,
+        "char_count": 6291,
+        "word_count": 729,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 94,
+        "category_count": 6,
+        "year": 2025,
+        "char_count": 5989,
+        "word_count": 653,
+        "wikilink_count": 8
+      }
+    },
+    {
+      "filename": "Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 5,
+        "year": 2024,
+        "char_count": 6934,
+        "word_count": 796,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 75,
+        "category_count": 6,
+        "year": 2023,
+        "char_count": 6957,
+        "word_count": 751,
+        "wikilink_count": 8
+      }
+    },
+    {
+      "filename": "Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 88,
+        "category_count": 5,
+        "year": 2024,
+        "char_count": 6331,
+        "word_count": 723,
+        "wikilink_count": 8
+      }
+    },
+    {
+      "filename": "Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 8,
+        "year": 2025,
+        "char_count": 6532,
+        "word_count": 772,
+        "wikilink_count": 8
+      }
+    },
+    {
+      "filename": "British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 5122,
+        "word_count": 596,
+        "wikilink_count": 1
+      }
+    },
+    {
+      "filename": "Browne_2024_Engineers_on_responsibility_feminist_approaches.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 8,
+        "year": 2024,
+        "char_count": 6564,
+        "word_count": 731,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 6,
+        "year": 2024,
+        "char_count": 5906,
+        "word_count": 684,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 92,
+        "category_count": 6,
+        "year": 2023,
+        "char_count": 5610,
+        "word_count": 684,
+        "wikilink_count": 9
+      }
+    },
+    {
+      "filename": "Charlesworth_2024_Flexible_intersectional_stereotype_extraction.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 94,
+        "category_count": 8,
+        "year": 2024,
+        "char_count": 5713,
+        "word_count": 676,
+        "wikilink_count": 3
+      }
+    },
+    {
+      "filename": "Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 86,
+        "category_count": 5,
+        "year": 2025,
+        "char_count": 5601,
+        "word_count": 645,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Chen_2023_Ideology_Prediction_from_Scarce_and_Biased.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 88,
+        "category_count": 4,
+        "year": 2023,
+        "char_count": 5936,
+        "word_count": 690,
+        "wikilink_count": 9
+      }
+    },
+    {
+      "filename": "Chen_2024_Exploring_complex_mental_health_symptoms_via.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 88,
+        "category_count": 6,
+        "year": 2024,
+        "char_count": 6820,
+        "word_count": 704,
+        "wikilink_count": 9
+      }
+    },
+    {
+      "filename": "Chen_2025_Social_work_and_artificial_intelligence.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 92,
+        "category_count": 6,
+        "year": 2025,
+        "char_count": 5227,
+        "word_count": 582,
+        "wikilink_count": 8
+      }
+    },
+    {
+      "filename": "Cher_2024_Exploring_machine_learning_to_support.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 75,
+        "category_count": 6,
+        "year": 2024,
+        "char_count": 7096,
+        "word_count": 804,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 75,
+        "category_count": 6,
+        "year": 2024,
+        "char_count": 6803,
+        "word_count": 765,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Chisca_2024_Prompting_techniques_for_reducing_social_bias_in.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 75,
+        "category_count": 8,
+        "year": 2024,
+        "char_count": 6886,
+        "word_count": 830,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Chiu_2024_What_are_artificial_intelligence_literacy_and.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 89,
+        "category_count": 8,
+        "year": 2024,
+        "char_count": 5182,
+        "word_count": 599,
+        "wikilink_count": 8
+      }
+    },
+    {
+      "filename": "Chiu_2025_AI_literacy_and_competency_definitions,.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 94,
+        "category_count": 7,
+        "year": 2025,
+        "char_count": 5921,
+        "word_count": 680,
+        "wikilink_count": 7
+      }
+    },
+    {
+      "filename": "Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 90,
+        "category_count": 6,
+        "year": 2024,
+        "char_count": 5786,
+        "word_count": 690,
+        "wikilink_count": 8
+      }
+    },
+    {
+      "filename": "Ciston_2024_Intersectional_Artificial_Intelligence_Is.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 93,
+        "category_count": 7,
+        "year": 2024,
+        "char_count": 6380,
+        "word_count": 714,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 95,
+        "category_count": 7,
+        "year": 2024,
+        "char_count": 6885,
+        "word_count": 777,
+        "wikilink_count": 10
+      }
+    },
+    {
+      "filename": "Colombatto_2025_The_influence_of_mental_state_attributions_on.md",
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "metrics": {
+        "confidence": 94,
+        "category_count": 4,
+        "year": 2025,
+        "char_count": 5261,
+        "word_count": 612,
+        "wikilink_count": 8
+      }
+    }
+  ]
+}

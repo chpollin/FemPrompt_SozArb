@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "GLAT: The generative AI literacy assessment test",
+    "authors": [
+      "Yueqiao Jin",
+      "Roberto Martinez-Maldonado",
+      "Dragan Gašević",
+      "Lixiang Yan"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie kann GenAI-Literalität bei Studierenden in der Hochschulbildung durch ein valides und reliables Performance-basiertes Messinstrument erfasst werden?",
+    "methodology": "Empirisch - Instrument-Entwicklung und Validierung. Classical Test Theory (CTT) und Item Response Theory (IRT); 2-Parameter Logistic (2PL) Modell; Confirmatory Factor Analysis (CFA); Externe Validität durch Korrelation mit Lernleistung in GenAI-gestützten Aufgaben.",
+    "key_finding": "GLAT ist ein valides und reliables 20-Item Multiple-Choice-Instrument zur Messung von GenAI-Literalität (Cronbach's alpha = 0.80; omega total = 0.81; RMSEA = 0.03; CFI = 0.97) und übertrifft selbstberichtete Maße in der Vorhersage tatsächlicher Lernleistung in GenAI-gestützten Aufgaben.",
+    "data_basis": "n=355 Studierende der Hochschulbildung; Content-Validität durch Delphi-Studium mit Fachexperten (n nicht spezifiziert)"
+  },
+  "arguments": [
+    "Bestehende KI-Literalitätsinstrumente sind überwiegend selbstberichtet und erfassen nicht die spezifischen Kompetenzen, die für generative KI-Systeme erforderlich sind, was zu Verzerrungen und Lücken zwischen wahrgenommener und tatsächlicher Kompetenz führt.",
+    "GenAI-Literalität ist eine spezialisierte Teilmenge der KI-Literalität, die integratives Wissen (Know What, Know How, Know Why), Prompt-Engineering, kritische Bewertung von Outputs und ethisches Verständnis erfordert - nicht abgedeckt durch allgemeine KI-Literalitätsrahmen.",
+    "Performance-basierte Assessment-Instrumente sind notwendig und praktikabel für zuverlässige Messung von tatsächlichen GenAI-Kompetenzen in Hochschulkontexten und können als Grundlage für gezielte Interventionen und Politikgestaltung dienen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": false,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "GenAI literacy is defined as 'a set of competencies that enable individuals to effectively interact with AI technologies, encompassing understanding fundamental AI concepts, engaging in critical evaluation, and using AI tools ethically in diverse contexts.' Das Paper fokussiert auf Assessment von Kompetenzen wie 'recognition, application, evaluation, creation, and ethical navigation' (Ng et al., 2021b).",
+    "Generative_KI": "Der gesamte Fokus des Papers liegt auf generativer KI: 'GenAI's capability to generate substantial content from minimal input alters the landscape, prompting a need for a revised understanding of AI literacy in this context.' Spezifische Systeme wie ChatGPT, Gemini und Claude werden erwähnt.",
+    "Prompting": "Das Paper thematisiert Prompt-Engineering als Kernkompetenz: 'Developing GenAI literacy involves more than just foundational knowledge; it requires proficiency in crafting prompts, interpreting AI-generated outputs, and understanding the socio-ethical implications of using such tools.' GLAT-Items testen Prompt-Strategien (Item 11: 'strategies for creating marketing pitch', Item 12: 'customer service chatbot').",
+    "Bias_Ungleichheit": "Das Paper adressiert Bias und faire Anwendung: Item 21 thematisiert Bias in KI-gestützter Bewerbungsscreening ('The AI system could reinforce existing biases found in historical hiring data') und Item 22 behandelt Intransparenz (Black-Box-Problem) von KI-Systemen im Healthcare-Kontext.",
+    "Fairness": "Das Paper behandelt Fairness-Fragen bei algorithmischen Entscheidungen, speziell in Item 21 zu Bias in Hiring-Prozessen und Item 22 zur Interpretierbarkeit und Vertrauenswürdigkeit von KI-Modellen im Healthcare-Kontext, sowie Item 23 zur Copyright-Fairness bei AI-generierten Inhalten."
+  },
+  "references": [
+    {
+      "author": "Long & Magerko",
+      "year": 2020,
+      "short_title": "What is AI literacy? Competencies and design considerations"
+    },
+    {
+      "author": "Ng et al.",
+      "year": 2021,
+      "short_title": "Conceptualizing AI literacy: An exploratory review"
+    },
+    {
+      "author": "Bozkurt",
+      "year": 2024,
+      "short_title": "The 3wAI Framework (Know What, Know How, Know Why)"
+    },
+    {
+      "author": "Zhao et al.",
+      "year": 2024,
+      "short_title": "GenAI literacy: pragmatic, safety, reflective, socioethical, and contextual elements"
+    },
+    {
+      "author": "Laupichler et al.",
+      "year": 2023,
+      "short_title": "Scale for the Assessment of Non-Experts' AI Literacy (SNAIL)"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2023,
+      "short_title": "AI Literacy Scale (AILS)"
+    },
+    {
+      "author": "Lee & Park",
+      "year": 2024,
+      "short_title": "ChatGPT Literacy Tool (einziges existierendes GenAI-spezifisches Instrument, selbstberichtet)"
+    },
+    {
+      "author": "Lintner",
+      "year": 2024,
+      "short_title": "A systematic review of AI literacy scales (13 self-reported, 3 performance-based)"
+    },
+    {
+      "author": "American Educational Research Association et al.",
+      "year": 2014,
+      "short_title": "Standards for educational and psychological testing"
+    },
+    {
+      "author": "Thorndike et al.",
+      "year": 1991,
+      "short_title": "Measurement and evaluation in psychology and education"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist für die Schnittstelle KI und Bildung hochrelevant, adressiert aber nicht direkt Soziale Arbeit oder Gender Studies. Es behandelt wichtige Fragen von Fairness und Bias im Kontext von KI-Literalität, was für sozialarbeiterische und diversitätsgerechte Kontexte relevant wäre, aber nicht explizit gemacht wird.",
+    "unique_contribution": "Das Paper füllt eine kritische Forschungslücke durch Entwicklung und Validierung des ersten rigorosen, performance-basierten Messinstruments für GenAI-Literalität nach etablierten Standards der psychologischen und pädagogischen Messung, mit bewiesener externer Validität durch Vorhersage tatsächlicher Lernleistung.",
+    "limitations": "Das Paper behandelt GenAI-Literalität primär im Hochschulkontext mit N=355 Studierenden aus einer Institution (Monash University, Australien); Generalisierbarkeit auf andere Kulturen, Bildungsstufen oder berufliche Kontexte ist begrenzt; keine explizite Analyse von Unterschieden zwischen verschiedenen Studierendengruppen (demografische, sozioökonomische oder kulturelle Faktoren)."
+  },
+  "target_group": "Hochschulpädagogen, KI-Bildungsforscher, Bildungspolitiker, Curriculumdesigner, Institutionen der Hochschulbildung, die GenAI-Literalität-Interventionen entwickeln möchten; sekundär relevant für Sozialarbeiter in Bildungskontexten und für die Entwicklung ethischer KI-Kompetenzen in verschiedenen Fachdomänen."
+}

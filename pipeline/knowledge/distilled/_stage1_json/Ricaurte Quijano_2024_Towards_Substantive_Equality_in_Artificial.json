@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "title": "Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity",
+    "authors": [
+      "Paola Ricaurte Quijano",
+      "Benjamin Prud'homme",
+      "Isadora Hellegren Létourneau"
+    ],
+    "year": 2024,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie kann transformative KI-Politik Geschlechtergleichstellung und Vielfalt in KI-Ökosystemen fördern und strukturelle Ungleichheiten adressieren?",
+    "methodology": "Mixed: Qualitativ - mehrsprachige regionale und gruppenspezifische Konsultationen mit multi-stakeholder Beteiligung in 5 Regionen (Asien, MENA, Nord-/Südamerika, Europa, Sub-Sahara-Afrika); Literaturanalyse; konzeptionelle Rahmenentwicklung",
+    "key_finding": "KI-Systeme sind nicht neutral und reproduzieren strukturelle Ungleichheiten. Eine transformative Gleichstellungspolitik muss systembezogene Nachteile adressieren, demokratische Defizite überbrücken und Fehlrepräsentation umkehren durch inklusives Design, sinnvolle Partizipation und Accountability über den gesamten KI-Lebenszyklus.",
+    "data_basis": "Regionale und gruppenspezifische Konsultationen mit 100+ Teilnehmenden global; Projektberatungsgruppe mit 35+ Expert:innen; 8 Konsultationsexpert:innen; Analyse von Best Practices aus globalen Initiativen"
+  },
+  "arguments": [
+    "KI-Systeme perpetuieren nicht nur durch technische Bias, sondern auch durch Ausschluss von marginalisierten Gruppen aus Designprozessen und Entscheidungsfindung - eine Form der algorithmischen Unterdrückung, die auf intersektionalen Machtverhältnissen basiert.",
+    "Substantive Gleichstellung erfordert einen dreizeiligen Ansatz: Beseitigung systembezogener Nachteile durch faire Systeme, Überbrückung des demokratischen Defizits durch echte Partizipation, und Umkehrung von Fehlrepräsentation durch Würdeschutz und Anerkennung von marginalisierten Gruppen.",
+    "Transformative KI-Politik muss Kapazitätsentwicklung, inklusives Design, Accountability-Mechanismen und sinnvolle Partizipation von Marginalisierten über den gesamten KI-Lebenszyklus integrieren - nicht nur einzelne technische Interventionen an einzelnen Phasen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "UNESCO Global Dialogue, Data Justice Policy Brief, AI & Equality Human Rights Toolbox, Indigenous Pathfinders in AI - alle fokussieren auf Kapazitätsentwicklung, öffentliche Bildung und AI-Literacies für diverse Gruppen.",
+    "KI_Sonstige": "Umfassender Fokus auf KI-Lebenszyklen, algorithmische Entscheidungssysteme, KI-Governance, KI-Deployment und Auswirkungen auf verschiedene Bevölkerungsgruppen jenseits generativer KI.",
+    "Soziale_Arbeit": "Explizite Fokussierung auf marginalisierte Communities, Junge, Frauen, Indigenous People, Personen mit Behinderungen, Migranten - zentrale Zielgruppen sozialer Arbeit. Integration von Menschenrechten und sozialer Gerechtigkeit als Kernrahmen.",
+    "Bias_Ungleichheit": "Zentral: 'AI systems reproduce the world models, cultural values, knowledge, and languages...thereby replicating or amplifying systemic inequalities based on gender, race, ethnicity, abilities, social class, and education.' Fokus auf algorithmic oppression und strukturelle Diskriminierung.",
+    "Gender": "Explizit im Titel und durchgehend: Geschlechtergerechtigkeit als Kernziel. UNESCO Global Dialogue on 'Artificial Intelligence and Gender Equality', Analyse von Gender-Bias in KI, sexualisierte Darstellungen racialiser Frauen durch AI image generators.",
+    "Diversitaet": "Zentral: Inklusion von Indigenous Perspectives, Disability Justice, LGBTQI+ Perspektiven, mehrsprachige Global South Repräsentation. Indigenous Pathfinders in AI, RIADIS Workshop, intersektionale Perspektiven throughout.",
+    "Feministisch": "Explizite feministische Rahmengestaltung: Zitierung von 'feminist scholars (Benjamin, 2019; Eubanks, 2017; Noble and Roberts, 2019; West, 2020)' zu algorithmic oppression. Feminist AI Research Network als Co-Lead und Initiatoren. Data Feminism und intersektionale feministische Theorie strukturieren die Analyse.",
+    "Fairness": "Behandlung von Fairness als Dimension von substantiver Gleichstellung, aber über technische Fairness-Metriken hinaus zu Würde, Anerkennung und Gerechtigkeit. 'Fairness' ist notwendig aber nicht hinreichend - erfordert demokratische Partizipation und Umkehrung von Fehlrepräsentation."
+  },
+  "references": [
+    {
+      "author": "Benjamin, Ruha",
+      "year": 2019,
+      "short_title": "Race after Technology"
+    },
+    {
+      "author": "Eubanks, Virginia",
+      "year": 2017,
+      "short_title": "Automating Inequality"
+    },
+    {
+      "author": "Noble, Safiya U. & Roberts, Sarah T.",
+      "year": 2019,
+      "short_title": "Algorithms of Oppression/Critical Perspectives on Race and Technology"
+    },
+    {
+      "author": "West, Sarah M.",
+      "year": 2020,
+      "short_title": "Redistribution and Recognition: A Feminist Critique of Algorithmic Fairness"
+    },
+    {
+      "author": "D'Ignazio, Catherine & Klein, Lauren F.",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Ricaurte, Paola",
+      "year": 2019,
+      "short_title": "Data Epistemologies, the Coloniality of Power, and Resistance"
+    },
+    {
+      "author": "UN Women",
+      "year": 2015,
+      "short_title": "Progress of the World's Women 2015-2016: Substantive Equality for Women"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2022,
+      "short_title": "Recommendation on the Ethics of Artificial Intelligence"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Höchst relevant für die Schnittstelle KI/Soziale Arbeit/Gender: Das Report adressiert explizit die Auswirkungen von KI auf marginalisierte Gruppen (zentrale Zielgruppen sozialer Arbeit), integriert Gender-Perspektiven und feministische Theorie, und bietet policy-orientierte Empfehlungen für transformative Praxis.",
+    "unique_contribution": "Einzigartig ist die Integration eines transnationalen, partizipativen, mehrsprachigen Beratungsprozesses mit 100+ Stakeholdern aus dem Globalen Süden, kombiniert mit expliziter feministischer und intersektionaler Rahmengestaltung sowie einem sektoral-weiten Transformationsansatz, der über technische Lösungen zu Würde und Anerkennung führt.",
+    "limitations": "Report präsentiert best practices und policy-Empfehlungen, implementiert aber selbst keine empirischen Studien zur Wirksamkeit; Fokus auf Policy-Ebene mit weniger Granularität zu lokalen Kontexten; Messbarkeit von 'substantiver Gleichstellung' in der Praxis unklar."
+  },
+  "target_group": "KI-Policymaker, Gouvernmentale und multilaterale AI-Governance-Akteure, KI-Entwickler und Deployer, Sozialarbeitende und NGOs mit Fokus auf marginalisierte Communities, Feminist AI Researchers, Global South Technologie-Aktivisten, Indigenous Leaders in Tech, Disability Rights Advocates"
+}

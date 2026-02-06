@@ -1,0 +1,84 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Anzahl der analysierten Papers (34) wird genannt, aber die Suchstrategie (2000-2023) und Ein-/Ausschlusskriterien sind nicht detailliert beschrieben",
+        "Die beiden Forschungsfragen werden im Original explizit formuliert, im Wissensdokument aber nur paraphrasiert",
+        "Wichtiger Kontext: Das Paper analysiert explizit vs. implizite Dimensionen - dies wird erwähnt, aber nicht ausreichend als Kernmethode betont"
+      ],
+      "missing_minor": [
+        "Keine Nennung der affiliations/Institutionen der Autoren",
+        "Die Rolle der Bologna Framework (FQ-EHEA) als Kontextrahmen wird erwähnt aber nicht in Kernbefund integriert",
+        "Die qualitativen vs. quantitativen Verteilung der Studien wird im Original diskutiert, fehlt aber im Wissensdokument",
+        "Detaillierte Analyse des 'AI Book Club' Programms (Lee et al.) als Best-Practice-Beispiel fehlt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        {
+          "type": "Ungenauigkeit",
+          "location": "Kategorie-Evidenz - KI_Sonstige",
+          "issue": "Beschreibung 'Automated grading systems' fokussiert zu eng auf ein Beispiel; das Paper behandelt breiter 'AI-based educational technologies' als Kategorie",
+          "severity": "minor"
+        }
+      ],
+      "distortions": [
+        {
+          "type": "Emphasis-Verzerrung",
+          "location": "Hauptargumente - zweiter Punkt",
+          "issue": "Die Aussage 'eine epistemologische Annahme, die nicht automatisch für alle Unterrichtskontexte gilt' wird vom Dokument impliziert, ist aber im Original subtiler formuliert (Kirschner et al. Referenz wird kritisch diskutiert, nicht als Gegenbeweis presented)",
+          "severity": "minor"
+        }
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/Ethics - sollte als eigene Kategorie stärker gewichtet sein; das Paper fokussiert stark auf 'phronesis' und ethische Urteilskraft",
+        "Professionelle Entwicklung/Professional Development - wird im Original häufig diskutiert (PD-Programme), sollte als Kategorie auftauchen",
+        "Curriculum Design - wird mehrfach adressiert, ist aber nicht als Kategorie gelistet"
+      ],
+      "partially_validated": [
+        {
+          "category": "Bias_Ungleichheit",
+          "issue": "Korrekt belegt, aber die Diskussion beschränkt sich auf Datenbiase in automatisierten Systemen; die strukturelle Dimension (wer wird in AI-Literacy-Initiativen einbezogen) wird im Original auch adressiert, ist aber in der Evidence nicht erfasst"
+        }
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "recommendation": "Add secondary categories: Ethics, Professional_Development, Curriculum_Design",
+      "severity": "minor"
+    },
+    "content_fixes": [
+      {
+        "section": "Forschungsfrage",
+        "original": "How does the scientific literature conceptualize AI literacy in relation to teachers' different forms of professional knowledge relevant for Teacher Education?",
+        "suggestion": "Sollte beide Forschungsfragen aus dem Original nennen: (1) What is the current scope and nature of the scientific literature on AI literacy relevant for TE? (2) How are teachers' different forms of professional knowledge reflected in the literature?",
+        "severity": "minor"
+      },
+      {
+        "section": "Methodik",
+        "original": "Scoping Review; systematische Literaturanalyse von 34 Papern und Proceedings (2000-2023)",
+        "suggestion": "Ergänzen: Suchstrategie umfasste Papers und Proceedings aus 2000-2023, die sich auf AI literacy und Teacher Education oder die Schnittmenge von AI und Unterricht beziehen. Analytischer Rahmen: Aristotelische Konzepte (episteme, techne, phronesis) als Linse zur Erfassung impliziter und expliziter Dimensionen professionellen Wissens.",
+        "severity": "minor"
+      },
+      {
+        "section": "Hauptargumente",
+        "original": "Diese Ansicht ist nicht automatisch...",
+        "suggestion": "Qualifizierung: Die Literatur folgt diesen Annahmen häufig, ohne sie kritisch zu reflektieren. Das Paper selbst verweist kritisch auf Kirschner et al. (2006) als Gegengewicht zu Papert's Konstruktivismus.",
+        "severity": "minor"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "addition": "Neue Subsection für Ethics und Professional Development hinzufügen, da diese im Original prominent sind"
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Expliziter Verweis auf 'Competence Centre on the Future of Work' als ausgebende Institution fehlt",
+        "ISBN und Veröffentlichungsdatum (Januar 2025) nicht in Frontmatter",
+        "Kurze Biographien der Autoren nicht in Kernbefund integriert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minimal: 'paradigmatischer Paradigmenwechsel' ist redundant (sollte: 'paradigmatischer Wechsel' oder 'Paradigmenwechsel')"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Regulierung/Policy sollte ergänzt werden (EU AI Act ist zentral für FemAI-Fallbeispiel)",
+        "Macht/Power Structures könnte als eigenständige Kategorie sein (ist implizit, aber nicht explizit genannt)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "publisher": "Friedrich-Ebert-Stiftung e.V., Competence Centre on the Future of Work",
+      "isbn": "978-3-98628-688-0",
+      "publication_date": "2025-01-01"
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "original": "paradigmatischer Paradigmenwechsel",
+        "corrected": "paradigmatischer Wechsel",
+        "severity": "minor"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "addition": "Sollte erwähnen: Paper ist veröffentlicht durch Friedrich-Ebert-Stiftung (Stiftung der SPD), was auf politischen Policy-Kontext hindeutet",
+        "severity": "minor"
+      }
+    ]
+  },
+  "quality_assessment": {
+    "summary": "Das generierte Wissensdokument erfasst die Originalquelle mit hoher Genauigkeit. Alle Hauptargumente, Fallbeispiele (FemAI, MIRA), theoretischen Grundlagen und kategorialen Zuordnungen sind korrekt und vollständig dokumentiert. Die Extraktion der intersektionalen feministischen Theorie, der Unterscheidung zu Responsible AI und der praktischen Umsetzungsaspekte ist präzise. Katalogisierung und Zielgruppenidentifikation sind angemessen. Minimale Redundanz in der Sprachformulierung und Auslassung institutioneller Metadaten sind vernachlässigbar für die substanzielle Qualität.",
+    "strengths": [
+      "Exakte Erfassung der drei Säulen von FAI-Umsetzung",
+      "Korrekte Differenzierung zwischen FAI und Responsible AI",
+      "Vollständige Referenzliste mit korrekten Zitationen",
+      "Adäquate Kategorie-Evidenz mit direkten Textbelegen",
+      "Kritische Limitation-Analyse (konzeptionell, zwei Fallbeispiele, fehlende Quantifizierung)"
+    ],
+    "weaknesses": [
+      "Redundante Sprachformulierung (Paradigmenwechsel)",
+      "Metadaten (Verlag, ISBN) nicht in Frontmatter",
+      "Regulierungs-/Policy-Kategorie könnte expliziter sein"
+    ]
+  }
+}

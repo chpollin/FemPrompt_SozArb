@@ -1,0 +1,60 @@
+```json
+{
+  "metadata": {
+    "title": "Bias against Women and Girls in Large Language Models / التحيز ضد النساء والفتيات في النماذج اللغوية الكبرى",
+    "authors": ["UNESCO"],
+    "year": 2024,
+    "type": "report",
+    "language": "ar"
+  },
+  "core": {
+    "research_question": "Welche Geschlechterstereotypen und Diskriminierungsmuster zeigen große Sprachmodelle bei der Darstellung von Frauen, LGBTQ+ Personen und ethnischen Gruppen?",
+    "methodology": "Empirisch - Qualitative Inhaltsanalyse von KI-generierten Texten; Systematische Prompting-Experimente mit drei großen Sprachmodellen (GPT-3.5, GPT-2, Llama 2) zur Analyse von Bias-Mustern",
+    "key_finding": "Große Sprachmodelle reproduzieren systematisch rückwärtsgewandte Geschlechterstereotypen, indem sie Frauen viermal häufiger in Haushaltsrollen darstellen als Männer, während sie Männer mit beruflichen und Management-Positionen assoziieren. Zusätzlich zeigen die Modelle homophobe Inhalte (60-70% negative Sätze über homosexuelle Personen) und rassische Stereotypisierung.",
+    "data_basis": "Qualitative Textanalyse von generiertem Inhalt aus drei LLM-Modellen (OpenAI GPT-3.5, GPT-2, Meta Llama 2); systematische Prompt-Experimente mit Story-Generierungstasks und Satz-Completion-Tasks"
+  },
+  "arguments": [
+    "Große Sprachmodelle perpetuieren patriarchale Geschlechterstereotypen durch ihre Trainigsdaten und Architektur: Frauen werden 4x häufiger in Haushaltsrollen (Haushälterin, Köchin, Sexarbeiterin) dargestellt, während Männer mit diversifizierten und prestigeträchtigen Berufen (Ingenieur, Arzt, Manager) assoziiert werden.",
+    "LLMs generieren überwiegend homophobe und rassistisch stereotypisierende Inhalte: 70% des Llama-2-Outputs zu Homosexuellenist negativ; britische Männer werden mit White-Collar-Jobs beschrieben, während Zulu-Männer auf Gärtner- und Sicherheitsrollen begrenzt werden und Zulu-Frauen zu 20% als Haushälterinnen beschrieben werden.",
+    "Open-Source-Modelle zeigen zwar stärkere Bias als proprietäre Systeme, bieten aber Vorteile zur Bias-Mitigation durch transparente Zusammenarbeit in der Forschungsgemeinschaft, anders als geschlossene Systeme wie GPT-4 und Google Gemini."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "Die Studie analysiert explizit große Sprachmodelle (LLMs) wie 'GPT 3.5', 'GPT 2', und 'Llama 2' sowie deren generative Kapazitäten zur Texterstellung: 'تَبَيَّن َ أن ّها تُصو ّ ر النساء في أدوار منزلية' (sie stellen Frauen in häuslichen Rollen dar).",
+    "Prompting": "Die Studie nutzt systematische Prompting-Strategien: 'طلب من أبدت النماذج اللغوية المفتوحة المصدر بصورة...كتابة قصة عن كل شخص' (die Modelle wurden gebeten, Geschichten zu schreiben) und 'عندما ط ُ لب من نماذج الذكاء الاصطناعي الثلاثة إكمال جُمل تبدأ بعبارة' (als die Modelle gebeten wurden, Sätze zu vervollständigen).",
+    "KI_Sonstige": "NLP-Modelle werden als Grundlage von generativen KI-Systemen analysiert: 'أدوات لمعالجة اللغات الطبيعية وركيزة تستند إليها أطر الذكاء الاصطناعي التوليدي' (Werkzeuge zur Verarbeitung natürlicher Sprache und Grundlage für generative KI-Rahmen).",
+    "Soziale_Arbeit": "Die Studie adressiert Themen von Relevanz für Soziale Arbeit: Diskriminierung von Frauen, LGBTQ+-Personen und marginalisierten Gruppen; Ungleichheitsverstärkung durch KI-Systeme in Bereichen wie Beratung, Care und sozialen Diensten. Zielgruppen-Impact wird hervorgehoben: 'أبسط أوجه التحيز الجنساني في محتواها يمكن أن يساهم مساهمة كبيرة في تفاقم أوجه عدم المساواة' (einfache Geschlechtsstereotypen können bestehende Ungleichheiten verschärfen).",
+    "Bias_Ungleichheit": "Zentrale Fokus der Studie auf algorithmischen Bias und Ungleichheit: 'وجود توجهات تُنذر بخطر زرع بذور التحيز الجنساني وكراهية المثلية الجنسية والتنميط العنصري' (Trends die Geschlechtsbias, Homophobie und rassische Stereotypisierung fördern); Daten zu geschlechtsspezifischer Unterrepräsentation: 'النساء تمثل 20 % فقط من الموظفين التقنيين' (Frauen stellen nur 20% der Tech-Mitarbeiter dar), '12 % من الباحثين في مجال الذكاء الاصطناعي' (12% der KI-Forscher) und '6 % من مصممي البرمجيات المحترفين' (6% der Softwaredesigner).",
+    "Gender": "Explizite Gender-Analyse: 'تُصو ّ ر النساء في أدوار منزلية أكثر بكثير من الرجال - أي بواقع أربعة أضعاف عبر كل نموذج' (Frauen werden 4x häufiger in häuslichen Rollen dargestellt); Gender-Bias in Wortverwendung: 'قصص النساء تستخدم بوتيرة أكبر كلمات مثل حب و حديقة و لطيف' (Frauengeschichten verwenden häufiger Liebe, Garten, nett) vs. Männergeschichten mit 'بحر و غابات و كنز و مغامرة' (Meer, Wälder, Schatz, Abenteuer).",
+    "Diversitaet": "Intersektionale Analyse von Geschlecht, sexueller Orientierung und Rasse: 'النظرة السلبية سادت %70 من المحتوى' über LGBTQ+ Personen; rassische Stereotypisierung: 'استخدمت وظائف متنوعة لوصف الرجال البريطانيين، مثل مهنة السائق والطبيب...في حين أسندت إلى رجال شعب الزولو مهن البستاني وحارس الأمن' (diverse Jobs für britische Männer, aber begrenzte Jobs für Zulu-Männer).",
+    "Fairness": "Fairness-Perspektive bei AI-Systemen: 'يتزايد عدد الأشخاص الذين يستخدمون النماذج اللغوية الكبيرة...تمتلك هذه التطبيقات الجديدة للذكاء الاصطناعي القدرة على تشكيل تصورات الملايين' (KI-Systeme beeinflussen Millionen); Forderung nach Fairness-Maßnahmen: 'تدعو الشركات الخاصة إلى رصد وتقييم أشكال التحيز المنهجية بوتيرة متواصلة' (Unternehmen sollen systematisch Bias überwachen und evaluieren) und 'تضمن تصميم أدوات الذكاء الاصطناعي على نحو يكفل تحقيق المساواة بين الجنسين' (KI-Tools müssen für Geschlechterparität gestaltet werden)."
+  },
+  "references": [
+    {
+      "author": "UNESCO",
+      "year": 2021,
+      "short_title": "Recommendation on AI Ethics"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2024,
+      "short_title": "Bias against Women and Girls in Large Language Models (study report)"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochrelevant für die Schnittstelle KI/Soziale Arbeit/Gender: Die Studie dokumentiert, wie generative KI-Systeme systematisch Geschlechterstereotypen, Homophobie und rassische Diskriminierung reproduzieren – alles zentrale Themen für eine kritische Soziale Arbeit, die Gleichheit und Menschenrechte schützen muss. Die Befunde sind direkt relevant für SozialarbeiterInnen, die KI-Systeme in der Praxis verwenden oder mit deren Auswirkungen arbeiten.",
+    "unique_contribution": "Die UNESCO-Studie liefert erstmals systematische empirische Evidenz zur Geschlechterdiskriminierung in führenden LLMs (GPT, Llama) mit konkretisierten Metriken (4x häufiger Haushältsrollen, 70% homophobe Inhalte) und verknüpft technische Bias-Analyse mit politischen Empfehlungen basierend auf dem UNESCO AI Ethics Recommendation Framework.",
+    "limitations": "Die Studie basiert auf qualitativ-analytischer Inhaltsanalyse von generierten Texten; quantitative Häufigkeitsmetriken sind begrenzt dokumentiert; methodische Details zur Stichprobenziehung und Kodierung fehlen; keine vergleichende Analyse neuerer Modelle (GPT-4o, Claude-3); keine longitudinale Analyse zur Entwicklung von Bias über Zeit; die Studie ist Pressemitteilung statt peer-reviewed Journal-Artikel."
+  },
+  "target_group": "Policymaker und Regierungen (Regulierungsempfehlungen

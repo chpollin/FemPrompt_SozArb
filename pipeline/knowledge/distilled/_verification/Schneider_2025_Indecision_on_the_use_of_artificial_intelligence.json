@@ -1,0 +1,54 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Ethik-Genehmigung (Research Ethics Committee Hannover Medical School, Reg. No. 9805_BO_K_2021) nicht erwähnt",
+        "Finanzierungsquelle (German Federal Ministry of Education and Research, Grant ID 01GP1911A-D) nicht explizit genannt",
+        "DESIREE-Projektkontext könnte prägnanter hervorgehoben werden",
+        "Autorenschaftsbeiträge und Guarantor (ML) nicht dokumentiert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Kategorie 'Diversitaet': Formulierung 'Heterogene Fokusgruppen als homogeneous groups' ist missverständlich - Original sagt homogene Gruppen zu Forschungszwecken, nicht heterogen"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik_Governance: Studie thematisiert explizit ethische Fragen ('ethical questions arise', 'ethical and social aspects'), sollte möglicherweise separate Kategorie haben oder in KI_Sonstige integriert sein",
+        "Patient_Engagement/Partizipation: Zentrales Thema ('shared decision-making', 'patient as active partner') könnte explizite Kategorie sein"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "improvement": "Ethik-Genehmigungsnummer und Finanzierungsinformation könnten in Frontmatter ergänzt werden für bessere Nachvollziehbarkeit",
+      "suggested_addition": "ethical_approval: 'Hannover Medical School, Reg. No. 9805_BO_K_2021'\nfunding: 'German Federal Ministry of Education and Research (01GP1911A-D)'"
+    },
+    "content_fixes": [
+      {
+        "location": "Diversitaet-Sektion",
+        "issue": "Widerspruch in Formulierung: 'Heterogene Fokusgruppen als homogeneous groups'",
+        "correction": "Formulierung präzisieren: 'Studie rekrutiert Patientengruppen über Selbsthilfegruppen in unterschiedlichen medizinischen Domänen (Nephrologie, Chirurgie, Home-Care) für vergleichende Perspektiven. Innerhalb jeder Fokusgruppe wurden homogene Gruppen verwendet, um collective knowledge zu erfassen.'"
+      },
+      {
+        "location": "Hauptargumente",
+        "issue": "Fehlender Verweis auf zentrale Befund aus Originaltext",
+        "correction": "Ergänzung empfohlen: Referenz auf die figure 1 im Original (visuelles Modell trust-responsibility-self-determination-dynamik), die ein Kernbefund darstellt"
+      },
+      {
+        "location": "Assessment-Relevanz/Limitations",
+        "issue": "Kultureller Kontext Deutschland erwähnt, aber Sample-Charakteristika könnten detaillierter sein",
+        "correction": "Optional: Altersverteilung, Krankheitsprofile der Selbsthilfegruppen (Nephrologie, Chirurgie, Home-Ventilation) präzisieren für bessere Transparenz"
+      }
+    ]
+  }
+}

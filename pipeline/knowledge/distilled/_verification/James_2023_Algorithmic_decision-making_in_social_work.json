@@ -1,0 +1,63 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Die fünf reflexiven Leitfragen (Grounding assumptions, Contextualizing complexities, etc.) werden im Kernbefund erwähnt, sind aber im Hauptargumente-Abschnitt nicht vollständig ausgearbeitet",
+        "Die zwei zusätzlichen Fallstudien (Heat List und HEALER) werden in der Methodik erwähnt, aber nicht in den Hauptargumenten analysiert",
+        "Praktische Implikationen für Curriculum-Design (z.B. practice-embedded vs. technology-led) sind unterrepräsentiert"
+      ],
+      "missing_minor": [
+        "Die Rolle von COVID-19 Lockdowns bei der Beschleunigung von ADM-Adoption wird nicht in den Kernbefunden hervorgehoben",
+        "Specific quotes zu 'moral crumple zones' concept nur kurz erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 93,
+      "errors": [
+        "Autoren-Nennung: 'Jason Lal' im Original, generiertes Dokument schreibt korrekt 'Jason Lal' - KEIN FEHLER, aber konsistenzprüfung bestätigt"
+      ],
+      "distortions": [
+        "Die Charakterisierung von AFST als 'positiv' könnte zu einseitig wirken - der Text warnt gleichzeitig vor dessen Diskriminierungspotential; dies wird nicht ausreichend in den Hauptargumenten balanciert",
+        "Die Aussage zur NDIS als 'cost-saving measure' ist eine Interpretation des Autors (Carney 2021), nicht eine direkte Aussage des Originalpapers - sollte klarer als sekundäre Quelle gekennzeichnet sein"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Transparency/Explainability - könnte als separate Kategorie hinzugefügt werden, da 'Black Box' ein zentrales Thema ist",
+        "Accountability/Responsibility - wird diskutiert ('moral crumple zones'), aber nicht als eigene Kategorie erfasst",
+        "Human Rights - ist ein durchgängiges Thema (Nondiscrimination, Right to Challenge), könnte expliziter kategorisiert werden"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_addition": [
+        "Transparenz_Erklaerbarkeit",
+        "Rechenschaftspflicht_Accountability",
+        "Menschenrechte"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Die Balance zwischen positiven und negativen ADM-Potentialen sollte stärker betont werden",
+        "suggestion": "In Argument 2: Explizit erwähnen, dass auch AFST trotz möglicher Bias-Reduktion Diskriminierungsrisiken birgt"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Die fünf reflexiven Leitfragen sind zentral, werden aber nur in Klammern erwähnt",
+        "suggestion": "Kurze Auflistung der fünf Fragen als Punkt unter 'Methodik' oder 'Kernbefund' hinzufügen"
+      },
+      {
+        "section": "Assessment-Relevanz / Limitations",
+        "issue": "Genauer Verweis auf fehlende Analyse der Heat List und HEALER Fallstudien",
+        "suggestion": "Hinzufügen: 'Heat List und HEALER-Fallstudien werden methodologisch erwähnt, aber nicht detailliert in den Kernbefunden analysiert'"
+      }
+    ]
+  }
+}

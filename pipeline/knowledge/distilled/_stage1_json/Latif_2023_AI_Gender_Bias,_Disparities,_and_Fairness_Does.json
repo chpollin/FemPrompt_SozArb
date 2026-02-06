@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?",
+    "authors": [
+      "Ehsan Latif",
+      "Xiaoming Zhai",
+      "Lei Liu"
+    ],
+    "year": 2023,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Führen geschlechtsunausgeglichene Trainingsdaten zu geschlechtsspezifischem Bias in automatisierten Bewertungssystemen, oder können ausgewogene Mixed-Gender-Trainingsdatensätze geschlechtsneutrale KI-Modelle produzieren?",
+    "methodology": "Empirisch - Fine-Tuning von BERT und GPT-3.5 auf drei Trainingsdatensätzen (mixed-gender, male-only, female-only) mit statistischen Analysen: Paired t-tests für Accuracy-Unterschiede, Mean Score Gap (MSG) für Disparitäten, Equalized Odds (EO) für Fairness.",
+    "key_finding": "Mixed-trained Modelle zeigen keinen signifikanten geschlechtsspezifischen Bias und erzeugen geringere geschlechtsspezifische Disparitäten im Vergleich zu humans, während gender-spezifisch trainierte Modelle größere MSG aufweisen und Disparitäten vergrößern können.",
+    "data_basis": "Über 1000 human-graded student-written responses von männlichen und weiblichen Teilnehmern zu sechs Assessment-Items aus der Educational Testing Service."
+  },
+  "arguments": [
+    "Geschlechtsunausgeglichene Trainingsdaten führen nicht notwendigerweise zu Scoring-Bias, können aber geschlechtsspezifische Disparitäten vergrößern und Scoring-Fairness reduzieren – dies widerlegt die weit verbreitete Annahme, dass KI unvermeidlich geschlechtsspezifische Vorurteile verstärkt.",
+    "Mixed-trained Modelle demonstrieren konsistent niedrigere Mean Score Gaps und Equalized Odds Werte als gender-spezifisch trainierte Modelle, was die Notwendigkeit diverser und ausgewogener Trainingsdaten für faire KI-Systeme unterstreicht.",
+    "Das Konzept des ‚pseudo-AI Bias' zeigt, dass Bias subtil und tief verankert sein kann; durch sorgfältig gestaltete Trainingsmethoden und diverse Datendarstellung können solche Probleme adressiert werden."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "Studie nutzt fine-tuned Version von BERT und GPT-3.5 zur automatisierten Bewertung von studentischen Antworten.",
+    "KI_Sonstige": "Einsatz von Machine Learning und Natural Language Processing für automatisierte Scoring-Systeme in der Bildungsbewertung.",
+    "Bias_Ungleichheit": "The study investigates 'discrimination against women in AI' und analysiert, wie 'gender-unbalanced data' algorithmic disparities erzeugen können.",
+    "Gender": "Expliziter Fokus auf Gender Bias: 'especially gender biases, which often cause serious problems' und Analyse von männlichen vs. weiblichen Responses in KI-Bewertungssystemen.",
+    "Diversitaet": "Betonung der Rolle von Diversity in Machine Learning: 'the important role that diversity is certain to play in machine learning' und 'gender-aware artificial intelligence'.",
+    "Fairness": "Umfangreiche Fairness-Analyse mittels Equalized Odds (EO): 'An EO value less than 0.01 indicates a fair model with minimal gender bias' und Vergleiche von mixed-trained vs. gender-specific models."
+  },
+  "references": [
+    {
+      "author": "Bolukbasi et al.",
+      "year": 2016,
+      "short_title": "Man is to computer programmer as woman is to homemaker? Debiasing word embeddings"
+    },
+    {
+      "author": "Hardt et al.",
+      "year": 2016,
+      "short_title": "Equality of opportunity in supervised learning"
+    },
+    {
+      "author": "Zhai and Krajcik",
+      "year": 2022,
+      "short_title": "Pseudo AI bias"
+    },
+    {
+      "author": "Zhai and Nehm",
+      "year": 2023,
+      "short_title": "AI and formative assessment: The train has left the station"
+    },
+    {
+      "author": "Leavy",
+      "year": 2018,
+      "short_title": "Gender bias in artificial intelligence: The need for diversity and gender theory in machine learning"
+    },
+    {
+      "author": "Hall and Ellis",
+      "year": 2023,
+      "short_title": "A systematic review of socio-technical gender bias in AI algorithms"
+    },
+    {
+      "author": "Madaio et al.",
+      "year": 2022,
+      "short_title": "Beyond 'fairness': Structural (in)justice lenses on AI for education"
+    },
+    {
+      "author": "Holmes et al.",
+      "year": 2021,
+      "short_title": "Ethics of AI in education: Towards a community-wide framework"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper adressiert Gender Bias und Fairness in KI-basierten Bewertungssystemen im Bildungskontext mit direkter Relevanz für ethische KI-Entwicklung. Die Schnittstelle zu Sozialer Arbeit ist indirekt durch Bildungsgerechtigkeit gegeben, aber es fehlt ein expliziter Bezug zu sozialarbeiterischer Praxis oder Zielgruppen.",
+    "unique_contribution": "Die Studie liefert empirische Evidenz, dass ausgewogene Mixed-Gender-Trainingsdaten zu faireren KI-Modellen führen als gender-spezifische Modelle, und widerlegt damit die weit verbreitete Annahme der Unvermeidlichkeit von Gender Bias in KI.",
+    "limitations": "Die Studie konzentriert sich ausschließlich auf binäre Geschlechtskategorien (male/female), berücksichtigt keine non-binären oder anderen Identitäten; zudem ist die Analyse auf automatisierte Bewertungssysteme im Bildungskontext begrenzt."
+  },
+  "target_group": "KI-Entwickler und Machine Learning-Ingenieure, Bildungstechnologen und EdTech-Forscher, Policy-Maker im Bildungsbereich, Fairness- und Bias-Experten in AI-Systemen, Bildungsforschungscommunity"
+}

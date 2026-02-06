@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "Counterfactual Fairness in Text Classification through Robustness",
+    "authors": [
+      "Sahaj Garg",
+      "Vincent Perot",
+      "Nicole Limtiaco",
+      "Ankur Taly",
+      "Ed H. Chi",
+      "Alex Beutel"
+    ],
+    "year": 2019,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können wir sicherstellen, dass Text-Klassifizierer fair mit sensitiven Attributen wie Identitätsmerkmalen umgehen, indem wir kontrafaktische Fairness messen und optimieren?",
+    "methodology": "Empirisch: Machine Learning Fairness. Entwicklung einer Fairness-Metrik (Counterfactual Token Fairness) und Erprobung von drei Optimierungsansätzen (Blindness, Counterfactual Augmentation, Counterfactual Logit Pairing) auf einem Kaggle-Datensatz mit 160K Wikipedia-Kommentaren zur Toxizitätserkennung.",
+    "key_finding": "Counterfactual Logit Pairing (CLP) und Blindness adressieren erfolgreich kontrafaktische Fairness ohne Beeinträchtigung der Gesamtgenauigkeit, zeigen aber Tradeoffs mit gruppenbasierter Fairness. CLP generalisiert besser zu ungesehenen Identitätstokens als Blindness.",
+    "data_basis": "160K manuell gekennzeichnete Wikipedia-Kommentare (toxisch/nicht toxisch, Kaggle-Datensatz), 50 Identitätstokens, Split in 35 Trainings- und 12 Evaluierungs-Tokens, separate Evaluierungsdatensatz mit höherer Identitätsterm-Häufigkeit, synthetische Testdaten"
+  },
+  "arguments": [
+    "Toxizitätsklassifizierer zeigen systematische Ungerechtigkeit bei sensitiven Identitätsbegriffen: Der Baseline-Klassifizierer klassifiziert 'Some people are gay' mit 98% als toxisch, während 'Some people are straight' nur mit 2% als toxisch klassifiziert wird, was auf problematische Trainungsdaten-Bias hindeutet.",
+    "Kontrafaktische Fairness ist komplementär, aber unterschiedlich von Gruppen-Fairness (equality of odds): Ein Modell kann Equality-of-Odds erfüllen, aber komplett bei kontrafaktischer Fairness versagen, wenn sensitive Attribute nur in disjunkten Datenkontexten auftreten.",
+    "Asymmetrische Kontrafaktive stellen ein fundamentales Problem dar: Manche Substitutionen sind logisch gerechtfertigt (z.B. 'gay' als Beleidigung häufiger als 'straight'), weshalb nicht alle kontrafaktischen Paare identische Vorhersagen benötigen sollten; diese Unterscheidung erfordert sorgfältige Heuristische bei Training und Evaluation."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Text Classification mit Neural Networks (CNN), Natural Language Processing, Machine Learning Fairness-Techniken. 'The classifier f can be an arbitrary neural network.' Paper konzentriert sich auf algorithmische Fairness in NLP-Systemen.",
+    "Bias_Ungleichheit": "Kernthema: Algorithmischer Bias bei Identitätsbegriffen. 'a baseline toxicity model predicted that 'Some people are gay' is 98% likely to be toxic and 'Some people are straight' is only 2% likely to be toxic.' Untersucht, wie sensitives Trainingsmaterial zu systematischer Diskriminierung führt.",
+    "Diversitaet": "Adressiert Benachteiligung marginalisierter Gruppen durch KI-Systeme. 'sexual orientation, race, or religion' als sensitive Attribute; fokussiert auf vulnerable Gruppen: 'when comments attack a particularly vulnerable group' sollte differentielle Behandlung erlaubt sein.",
+    "Fairness": "Zentraler Fokus auf Fairness-Metriken und -Methoden. Entwickelt 'Counterfactual Token Fairness (CTF)' als neue Fairness-Metrik. Vergleicht mit 'equality of odds' (Hardt et al. 2016). Diskutiert Tradeoffs: 'methods do not harm classifier performance, and have varying tradeoffs with group fairness.'"
+  },
+  "references": [
+    {
+      "author": "Kusner et al.",
+      "year": 2017,
+      "short_title": "Counterfactual Fairness"
+    },
+    {
+      "author": "Wachter, Mittelstadt, and Russell",
+      "year": 2017,
+      "short_title": "Counterfactual Explanations without opening the black box"
+    },
+    {
+      "author": "Hardt, Price, and Srebro",
+      "year": 2016,
+      "short_title": "Equality of Opportunity in Supervised Learning"
+    },
+    {
+      "author": "Dixon et al.",
+      "year": 2018,
+      "short_title": "Measuring and Mitigating Unintended Bias in Text Classification"
+    },
+    {
+      "author": "Dwork et al.",
+      "year": 2011,
+      "short_title": "Fairness through Awareness"
+    },
+    {
+      "author": "Kannan, Kurakin, and Goodfellow",
+      "year": 2018,
+      "short_title": "Adversarial Logit Pairing"
+    },
+    {
+      "author": "Zemel et al.",
+      "year": 2013,
+      "short_title": "Learning Fair Representations"
+    },
+    {
+      "author": "Beutel et al.",
+      "year": 2017,
+      "short_title": "Data Decisions and Theoretical Implications when Adversarially Learning Fair Representations"
+    },
+    {
+      "author": "Chiappa and Gillam",
+      "year": 2018,
+      "short_title": "Path-Specific Counterfactual Fairness"
+    },
+    {
+      "author": "Kohler-Hausmann",
+      "year": 2019,
+      "short_title": "Eddie Murphy and the Dangers of Counterfactual Causal Thinking"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist relevant für KI-Systeme in hochsensiblen Anwendungsbereichen (Online-Moderation, Content-Moderation), die Auswirkungen auf marginalisierte Gruppen haben können. Für Soziale Arbeit ist der Bezug indirekt: Es adressiert algorithmische Diskriminierung bei digitalen Services, die SozialarbeiterInnen und ihre Klientel betreffen, thematisiert aber nicht explizit sozialarbeiterische Kontexte.",
+    "unique_contribution": "Das Paper leistet einen innovativen Beitrag durch die systematische Verbindung von Robustness-Literatur (Adversarial Training) mit Fairness und führt Counterfactual Token Fairness als praktisch anwendbare Metrik ein, die über bestehende Gruppen-Fairness-Konzepte hinausgeht.",
+    "limitations": "Die Metrik beschränkt sich auf Token-Substitution und erfasst nicht komplexere semantische Fairness-Probleme; die Heuristik für asymmetrische Kontrafaktive ist task-spezifisch und nicht generalisierbar; Trade-offs zwischen Counterfactual Fairness und True Positive Rate (TPR) bei toxischen Kommentaren sind erheblich."
+  },
+  "target_group": "NLP-Entwickler, Machine Learning Engineers, Fairness-Forscher, Content-Moderations-Systementwickler, AI Policy-Maker, Forschende zu Algorithmic Bias und Diskriminierung"
+}

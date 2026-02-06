@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "Bildungsteilhabe - Flucht - Digitalisierung: Eine multilokale Ethnografie im (digitalen) Alltag junger Geflüchteter",
+    "authors": [
+      "Michi Sebastian Fujii",
+      "Nadia Kutscher",
+      "Henrike Friedrichs-Liesenkötter",
+      "Jana Hüttmann"
+    ],
+    "year": 2024,
+    "type": "book",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Welche Rolle spielen digitale Medien für die Bildungsteilhabe junger Geflüchteter in verschiedenen institutionellen und alltäglichen Kontexten, und wie beeinflussen strukturelle sowie individuelle Faktoren deren Nutzung?",
+    "methodology": "Empirisch: Multilokale Ethnografie mit Feldbeobachtungen in multiplen Settings (stationäre Wohngruppen, Schulen, Jugendcafés); Feldprotokolle und Interviews mit Fachkräften und jungen Geflüchteten",
+    "key_finding": "Digitale Medien ermöglichen Bildungsteilhabe junger Geflüchteter nur unter Bedingungen von gelingenden Passungsverhältnissen zwischen individuellen Fähigkeiten, artefaktgebundenen Potenzialitäten und institutionellen Rahmungen. Ohne angemessene strukturelle und soziale Unterstützung entstehen Exklusionsrisiken trotz Mediennutzung.",
+    "data_basis": "Multilokale ethnografische Feldforschung (BIGEDIB-Studie) mit Fokus auf alltägliche Praktiken junger Geflüchteter in digitalisierten Bildungsarrangements; Zeitraum und genaue Fallzahlen nicht vollständig spezifiziert"
+  },
+  "arguments": [
+    "Digitale Medien sind ein Schlüsselmedium für junge Geflüchtete in der Postmigrationsphase zur Bewältigung alltäglicher Anforderungen, zum Kontakthalten mit Familie und zur Teilhabe an Bildung, spielen aber eine ambivalente Rolle aufgrund datenschutzprekärer Räume und ungleicher Kapitalausstattung.",
+    "Die Nutzung digitaler Medien für Bildungsteilhabe wird durch ein komplexes Zusammenspiel von individuellen Fähigkeiten, technischen Artefaktpotenzialitäten (Verknüpfungen, Personalisierung, Eigendynamik, Funktionsausfälle) und institutionellen Rahmenbedingungen geprägt, nicht primär durch die Medien selbst.",
+    "Bildungsteilhabe unter Beteiligung digitaler Medien ist eine verteilte Praxis, die situativ angeeignet wird und bei der strukturelle Benachteiligungslagen (Asylrecht, prekäre Lebenslagen, digitale Ungleichheiten) zur Exklusion führen können, wenn Passungsverhältnisse nicht gegeben sind."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Fokus auf Kompetenzerwerb und kompetenten Umgang mit digitalen Medien: 'Befähigung eines kompetenten Umgangs mit digitalen Medien und zur Gestaltung eines gelingenden Lebens' sowie 'Kompetenzerwerb mit dem Ziel der selbstbestimmten und verantwortungsvollen Nutzung digitaler Medien als zentrales Ziel'.",
+    "KI_Sonstige": "Behandlung von Algorithmen, Such-Apps, Übersetzungs-Apps und Textverarbeitungsprogrammen mit automatischen Korrekturfunktionen als technische Systeme, die pädagogische Prozesse strukturieren und begrenzen.",
+    "Soziale_Arbeit": "Expliziter Fokus auf Kinder- und Jugendhilfe, stationäre Wohngruppen, Sozialpädagogik und Alltagsbewältigung in Jugendcafés; Analysen von pädagogischen Praktiken und Fachkräften.",
+    "Bias_Ungleichheit": "Zentrale Thematisierung digitaler und sozialer Ungleichheitslagen: 'sozialer bzw. digitaler Ungleichheitslagen', 'ungleicher Kapitalausstattungen', 'multiple strukturelle Benachteiligungslagen (z.B. durch asylrechtliche Bestimmungen)' sowie Exklusionsrisiken bei Funktionsausfällen digitaler Medien.",
+    "Diversitaet": "Intersektionale Perspektive auf junge Geflüchtete als marginalisierte Gruppe mit multiplen Diskriminierungsfaktoren (Migrationsstatus, prekäre Lebenslage, Alter); Berücksichtigung verschiedener institutioneller Kontexte und Lebenslagen.",
+    "Fairness": "Kritische Reflexion von Fairness-Aspekten in Bildungszugang und -teilhabe: Analyse von Passungsverhältnissen, Zugangsbarrieren, und wie institutionelle Regelungen bestimmte Gruppen benachteiligen können; Forderung nach gerechteren Bedingungen der Bildungsteilhabe."
+  },
+  "references": [
+    {
+      "author": "Kutscher, Nadia & Kreß, Anne",
+      "year": 2017,
+      "short_title": "Digitale Medien und Geflüchtete"
+    },
+    {
+      "author": "Kutscher, Nadia",
+      "year": 2019,
+      "short_title": "Digitale Ungleichheiten und kulturelles Kapital"
+    },
+    {
+      "author": "Bourdieu, Pierre",
+      "year": 1997,
+      "short_title": "Kapitaltheorie"
+    },
+    {
+      "author": "UNHCR",
+      "year": 2023,
+      "short_title": "Global Trends Forced Displacement"
+    },
+    {
+      "author": "Fujii, Michi & Kutscher, Nadia",
+      "year": 2022,
+      "short_title": "Bildungsteilhabe und digitale Medien bei Geflüchteten"
+    },
+    {
+      "author": "Schatzki, Theodore",
+      "year": 2002,
+      "short_title": "The Site of the Social - Praxistheorie"
+    },
+    {
+      "author": "Emmerich, Katrin et al.",
+      "year": 2017,
+      "short_title": "Asylrecht und Benachteiligung"
+    },
+    {
+      "author": "Diminescu, Dana",
+      "year": 2019,
+      "short_title": "Connected Migrants"
+    },
+    {
+      "author": "Dekker, Rianne et al.",
+      "year": 2018,
+      "short_title": "Smart Refugees"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2021,
+      "short_title": "Digitale Transformation in der Bildung"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für die Schnittstelle von Sozialer Arbeit, digitaler Bildung und sozialer Ungleichheit. Es adressiert zentrale Fragen der Bildungsgerechtigkeit und zeigt, wie digitale Medien in professionellen sozialpädagogischen Settings Chancen und Barrieren schaffen.",
+    "unique_contribution": "Die multilokale ethnografische Perspektive, die Artefaktpotenzialitäten und institutionelle Rahmungen systematisch analysiert, bietet einen innovativen Zugang zum Verständnis von Bildungsteilhabe as verteilter, situativ angeeigneter Praxis.",
+    "limitations": "Zeitliche und quantitative Spezifikationen der Feldforschung sind nicht detailliert angegeben; der Fokus liegt primär auf deutschen Kontexten; generative KI-Systeme werden nicht behandelt, nur traditionelle Medien und Apps."
+  },
+  "target_group": "Sozialarbeiter:innen, Pädagog:innen, Jugendhilfeeinrichtungen, Geflüchtetenbetreuer:innen, Medienpädagog:innen, Bildungspolitiker:innen, Forscher:innen im Bereich Migration und Bildung, sowie kritische KI- und Digitalität-Forscher:innen mit Fokus auf soziale Gerechtigkeit"
+}

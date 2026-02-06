@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "AI and Structural Injustice: Foundations for Equity, Values, and Responsibility",
+    "authors": [
+      "Johannes Himmelreich",
+      "Désirée Lim"
+    ],
+    "year": 2022,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie kann ein struktureller Gerechtigkeitsansatz zur Governance von KI-Systemen beitragen und warum ist dieser Ansatz dem Harm-and-Benefits oder Value-Statement-Ansatz überlegen?",
+    "methodology": "Theoretisch | Konzeptionelle Analyse mit illustrativen Beispielen aus der KI-Praxis (Gesundheitswesen, Hiring, Policing)",
+    "key_finding": "Strukturelle Ungerechtigkeit bietet sowohl ein analytisches als auch ein normatives Rahmenwerk für KI-Governance und ermöglicht es, systemische Bias-Muster zu identifizieren, die Harm-and-Benefits-Ansätze übersehen würden. Ein struktureller Gerechtigkeitsansatz basiert auf Iris Marion Youngs Theorie und liefert tiefere Grundlagen für Diversity, Equity und Inclusion als alternative governance-Ansätze.",
+    "data_basis": "nicht empirisch | Theoretische Analyse mit Case Study (Obermeyer et al. 2019 Studie zu medizinischem Algorithmus)"
+  },
+  "arguments": [
+    "Strukturelle Injustiz ist ein analytisches und evaluatives Konzept: Sie erfordert strukturelle Erklärungen (wie gesellschaftliche Strukturen individuelle Handlungen und aggregierte Ergebnisse beeinflussen) und eine Theorie der Gerechtigkeit, um zu verstehen, warum bestimmte Unterschiede ungerecht sind.",
+    "Der Harm-and-Benefits-Ansatz ist unzureichend, weil er individuelle Schäden isoliert, kollektive Schäden übersieht, sich auf interessen-basierte Harm-Konzepte beschränkt und komplexe Fragen der Aggregation und Gewichtung nicht löst.",
+    "Value-Statement- und Ethik-Codes-Ansätze leiden unter Compliance-Verschiebung, Ethik-Washing und mangelnder Durchsetzung; DEI-Statements ohne strukturelles Verständnis können zu oberflächlichem Virtue-Signaling werden statt echtem Wandel zu bewirken.",
+    "Strukturelle Erklärungen sind unverzichtbar um vorauszusehen, wie KI in bestehende ungerechte Strukturen eingebettet ist (z.B. räumliche Segregation bei Nummernschildlesern, niedrigere Gesundheitsausgaben für Black Patienten die als Proxy für Need genutzt werden).",
+    "Substantive Verantwortung ohne Zurechnung von Schuld: Individuen und Organisationen können für die Behebung struktureller Ungerechtigkeit verantwortlich sein, auch wenn sie nicht schuldhaft daran beigetragen haben, wenn man zwischen attributiver und substantiver Verantwortung unterscheidet."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Die Autor:innen definieren AI als 'statistical methods that use Machine Learning (ML) to make data-based predictions or decisions' und untersuchen algorithmische Entscheidungssysteme in Healthcare, Hiring, Policing und Infrastruktur.",
+    "Bias_Ungleichheit": "Zentral ist die Analyse von 'racial bias in AI' (Obermeyer et al. 2019), strukturelle Erklärungen für unterschiedliche Behandlung Black patients: 'On average, however, the healthcare system spends less on Black patients than on white patients at all levels of healthcare needs.'",
+    "Gender": "Expliziter Gender-Fokus: 'We concentrate here mostly on gender and race. Structural injustices usually attach to salient social categories such as race, gender, age, ability, or sexual orientation.' sowie Beispiele wie 'gender prejudice' und gendered hiring discrimination (Lakisha/Emily Studie).",
+    "Diversitaet": "Direkter Bezug zu DEI: 'The chapter suggests that structural injustice provides methodological and normative foundations for the values and concerns of Diversity, Equity, and Inclusion.' Behandlung marginalisierter Communities und intersektionaler Perspektiven.",
+    "Fairness": "Umfangreiche Kritik an Fairness-Fokus: 'There is a consensus in AI governance that AI should be fair. However, this focus on fairness is limiting in important ways.' Analyse der epistemic limitations von Fairness und Unterscheidung zwischen Fairness und Equity/Justice."
+  },
+  "references": [
+    {
+      "author": "Young, Iris Marion",
+      "year": 2011,
+      "short_title": "Responsibility for Justice"
+    },
+    {
+      "author": "Obermeyer, Ziad et al.",
+      "year": 2019,
+      "short_title": "Dissecting racial bias in an algorithm used to manage the health of populations"
+    },
+    {
+      "author": "Eubanks, Virginia",
+      "year": 2018,
+      "short_title": "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor"
+    },
+    {
+      "author": "Bertrand, Marianne & Mullainathan, Sendhil",
+      "year": 2004,
+      "short_title": "Are Emily and Greg More Employable than Lakisha and Jamal? A Field Experiment on Labor Market Discrimination"
+    },
+    {
+      "author": "Rawls, John",
+      "year": 1971,
+      "short_title": "A Theory of Justice"
+    },
+    {
+      "author": "Haslanger, Sally",
+      "year": 2015,
+      "short_title": "What is a (social) structural explanation?"
+    },
+    {
+      "author": "Herzog, Lisa",
+      "year": 2017,
+      "short_title": "What Could Be Wrong with a Mortgage? Private Debt Markets from a Perspective of Structural Injustice"
+    },
+    {
+      "author": "Mittelstadt, Brent",
+      "year": 2019,
+      "short_title": "Principles alone cannot guarantee ethical AI"
+    },
+    {
+      "author": "Rini, Regina",
+      "year": 2020,
+      "short_title": "The Ethics of Microaggression"
+    },
+    {
+      "author": "Mills, Charles W.",
+      "year": 2017,
+      "short_title": "Black Rights/white Wrongs: The Critique of Racial Liberalism"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochrelevant für die Schnittstelle KI und Soziale Gerechtigkeit. Das Paper liefert theoretische Grundlagen für ein strukturelles Verständnis von Diskriminierung und Ungerechtigkeit in KI-Systemen, das für Sozialarbeiter:innen und Policymaker:innen zentral ist. Die Fokussierung auf strukturelle (nicht individuelle) Ursachen ist für Soziale Arbeit grundlegend.",
+    "unique_contribution": "Das Paper überträgt die philosophische Theorie der strukturellen Ungerechtigkeit (Iris Marion Young) systematisch auf KI-Governance und demonstriert, warum dieser Ansatz normativ und methodisch überlegen zu etablierten Frameworks (Harm-Benefit-Analysen, Ethik-Codes, Value Statements) ist.",
+    "limitations": "Das Paper konzentriert sich auf stilisierte Beispiele hauptsächlich aus nordamerikanischem Kontext; es adressiert nicht explizit praktische Implementierungsfragen oder hat Schwierigkeiten mit epistemischer Erkennbarkeit von Strukturen zugegeben ('The theory is epistemically hard')."
+  },
+  "target_group": "KI-Governance-Akteur:innen (Policymaker, Regulatoren), KI-Entwickler:innen mit ethischem Interesse, Wissenschaftler:innen in Applied Ethics und Political Philosophy, Diversity-und-Inclusion-Fachkräfte, Sozialwissenschaftler:innen die strukturelle Ungerechtigkeit untersuchen"
+}

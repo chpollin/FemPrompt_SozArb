@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Scaling Implicit Bias Analysis across Transformer-Based Language Models through Embedding Association Test and Prompt Engineering",
+    "authors": [
+      "Ravi Varma Kumar Bevara",
+      "Nishith Reddy Mannuru",
+      "Sai Pranathi Karedla",
+      "Ting Xiao"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können implizite Biase in Transformer-basierten Sprachmodellen verschiedener Größen quantifiziert und durch Prompt Engineering reduziert werden?",
+    "methodology": "Empirisch: Word Embedding Association Test (WEAT) zur Bias-Messung, BERT-basiertes Clustering für Datenklassifizierung, k-means Clustering, t-SNE Visualisierung, Prompt-Engineering-Intervention auf IMDb Movie Reviews",
+    "key_finding": "Prompt Engineering reduziert Genre-Bias durchschnittlich um über 37% in Basismodellen, während Skalierung nur etwa 29% Reduktion erreicht. Größere Modelle zeigen tendenziell geringere Biase als kleinere, aber gezieltes Prompt-Engineering ist die wirksamere Mitigation.",
+    "data_basis": "IMDb Movie Reviews Dataset mit semantischer Annotation in Thriller-, Action- und Romance-Genres; Analyse von 15+ Transformer-Modellen (base, large, x-large Konfigurationen)"
+  },
+  "arguments": [
+    "Transformer-basierte Sprachmodelle enthalten intrinsische implizite Biase, die durch Genre-spezifische Wortkontexte in Filmreviews messbar sind und schädliche Stereotypen perpetuieren können.",
+    "Während Model-Skalierung (von base zu x-large) Biase um bis zu 29% reduziert, ist strategisches Prompt Engineering mit durchschnittlich 34-37% Reduktion signifikant wirkungsvoller und ressourceneffizienter.",
+    "Prompt-basiertes Learning ermöglicht eine Demokratisierung der Bias-Mitigation, da es bestehende vortrainierte Modelle nutzt, ohne rechenintensive Retrainings oder große annotierte Datensätze zu benötigen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Fokus auf kritisches Verständnis von KI-Systemen: 'the need to tap into the possibilities of the growing world of text and enable smooth interaction between humans and computers' und Betonung ethischer KI-Integration in Kernfunktionalität.",
+    "Generative_KI": "Explizite Arbeit mit GPT-Modellen (GPT-2 base/medium/large/xl, GPT-3.5 für Annotation): 'prompt the GPT-3.5 model using the OpenAI API' und Analyse von Generative Pretrained Transformer Architekturen.",
+    "Prompting": "Zentrale Methodik: 'prompt engineering is used on base models to create a controlled environment for testing how well it works at reducing bias' mit spezifischen Prompt-Designs für Genre-Klassifizierung und Bias-Reduktion.",
+    "KI_Sonstige": "Umfangreiche NLP-Analyse mit BERT, Word Embedding Association Test, k-means Clustering, t-SNE Visualisierung und Transformer-Architektur-Analyse über 15+ Modelle.",
+    "Bias_Ungleichheit": "Direkter Fokus: 'the peril of prejudiced AI systems perpetuating stereotypes and misinformation' und 'AI will eventually start preferring certain groups over others, which diminishes fairness' sowie Analyse wie Bias zu 'unjust treatment of certain demographic groups' führt.",
+    "Diversitaet": "Thematisiert Repräsentationsprobleme in KI: 'strong positive bias towards Action content may lead to an overrepresentation of masculine-coded themes, while a negative bias against Romance could marginalize feminine-coded narratives' und 'the need for more balanced and inclusive language generation'.",
+    "Fairness": "Kernthema: 'ensuring fairness is vital to prevent AI systems from perpetuating existing biases' und detaillierte Fairness-Metriken durch WEAT effect sizes (z.B. 0.635, -0.805, 0.019 für verschiedene Genre-Assoziationen) zur Quantifizierung von Bias und Fairness-Verbesserung."
+  },
+  "references": [
+    {
+      "author": "Mehrabi, N. et al.",
+      "year": 2021,
+      "short_title": "A survey on bias and fairness in machine learning"
+    },
+    {
+      "author": "Cheung, C.M., Xiao, B.S., Liu, I.L.",
+      "year": 2014,
+      "short_title": "Do actions speak louder than voices? The signaling role of social information cues"
+    },
+    {
+      "author": "Liang, P.P. et al.",
+      "year": 2021,
+      "short_title": "Towards understanding and mitigating social biases in language models"
+    },
+    {
+      "author": "Kaur, D. et al.",
+      "year": 2023,
+      "short_title": "Trustworthy Artificial Intelligence: A Review"
+    },
+    {
+      "author": "Li, B. et al.",
+      "year": 2023,
+      "short_title": "Trustworthy AI: From Principles to Practices"
+    },
+    {
+      "author": "Caliskan, A., Bryson, J.J., Narayanan, A.",
+      "year": 2017,
+      "short_title": "Semantics derived automatically from language corpora contain human-like biases"
+    },
+    {
+      "author": "Bolukbasi, T. et al.",
+      "year": 2016,
+      "short_title": "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings"
+    },
+    {
+      "author": "Devlin, J. et al.",
+      "year": 2018,
+      "short_title": "BERT: Pre-training of deep bidirectional transformers for language understanding"
+    },
+    {
+      "author": "Bender, E.M. et al.",
+      "year": 2021,
+      "short_title": "On the dangers of stochastic parrots: Can language models be too big?"
+    },
+    {
+      "author": "Mishra, A. et al.",
+      "year": 2019,
+      "short_title": "Examining the Presence of Gender Bias in Customer Reviews Using Word Embedding"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper adressiert kritische Fairness- und Bias-Fragen in KI-Systemen, ist aber primär technisch-orientiert. Für Soziale Arbeit relevant als Ressource zum Verständnis algorithmischer Diskriminierung in digitalen Systemen, die vulnerable Gruppen betreffen können; direkter Anwendungsbezug zu sozialarbeiterischer Praxis jedoch begrenzt.",
+    "unique_contribution": "Systematische Multi-Skalenbewertung von Prompt Engineering als skalierbare, ressourceneffiziente Bias-Mitigationsmethode mit empirischem Nachweis seiner Überlegenheit gegenüber reiner Model-Skalierung.",
+    "limitations": "Beschränkung auf Filmreview-Genre-Bias (keine intersektionalen Identitätskategorien wie Geschlecht, Rasse); Prompt Engineering nur auf Basismodellen getestet wegen Computational Constraints; grundlegende statt sophisticated Prompt-Designs; keine Evaluation von Anwendungen in sensiblen Domänen (Justiz, Hiring, Sozialleistungen)."
+  },
+  "target_group": "KI-Entwickler und ML-Engineers, Bias-Forschende und Fairness-Praktiker, Stakeholder in NLP und Sprachmodell-Deployment, Datenwissenschaftler mit Interesse an praktischen Bias-Mitigationstechniken, (sekundär) Sozialarbeiter als kritische Konsumenten von KI-Systemen"
+}

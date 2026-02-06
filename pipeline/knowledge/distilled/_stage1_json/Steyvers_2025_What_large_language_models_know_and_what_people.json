@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "What large language models know and what people think they know",
+    "authors": [
+      "Mark Steyvers",
+      "Heliodoro Tejeda",
+      "Aakriti Kumar",
+      "Catarina Belem",
+      "Sheer Karny",
+      "Xinyue Hu",
+      "Lukas W. Mayer",
+      "Padhraic Smyth"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie groß ist die Diskrepanz zwischen der internen Konfidenz von LLMs und der Wahrnehmung von Nutzern bezüglich dieser Konfidenz, und kann diese Lücke durch verbesserte Unsicherheitskommunikation verringert werden?",
+    "methodology": "Empirisch: Verhaltensexperimente mit Nutzerstudien (n=41-60 Teilnehmer pro Experiment) kombiniert mit Analyse von LLM-Vertrauen auf Multiple-Choice und Short-Answer Fragen aus MMLU und TriviaQA Datensätzen.",
+    "key_finding": "Nutzer überschätzen systematisch die Genauigkeit von LLM-Ausgaben mit Standarderklärungen; längere Erklärungen erhöhen das Vertrauen ohne die Antwortgenauigkeit zu verbessern. Durch Anpassung der Erklärungen an die interne Modellkonfidenz können Kalibrierungs- und Diskriminierungslücken erheblich reduziert werden.",
+    "data_basis": "6 Experimente mit insgesamt 321 Teilnehmern; 350 Multiple-Choice Fragen aus MMLU; 336 Short-Answer Fragen aus TriviaQA; Analyse von GPT-3.5, PaLM2 und GPT-4o"
+  },
+  "arguments": [
+    "LLMs verfügen über interne Konfidenzindikatoren, die gut mit ihrer tatsächlichen Genauigkeit kalibriert sind, aber diese Konfidenz wird in den natürlichsprachlichen Erklärungen nicht angemessen kommuniziert, was zu einer 'Kalibrierungslücke' führt.",
+    "Nutzer zeigen eine 'Längenbias': Sie bewerten längere Erklärungen als vertrauenswürdiger, auch wenn diese keine zusätzlichen Informationen zur Unterscheidung korrekter von falschen Antworten enthalten, was auf oberflächliche Verarbeitung hindeutet.",
+    "Durch gezieltes Prompt-Engineering, das Unsicherheitssprache an die interne Modellkonfidenz anpasst (niedrig, mittel, hoch), können sowohl die Kalibrierungs- als auch Diskriminierungslücken deutlich verringert werden, was zu verbessertem Nutzervertrauen in KI-gestützte Entscheidungsfindung führt."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": false,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper untersucht zentral die Fähigkeit von Nutzern, LLM-Ausgaben richtig zu interpretieren und Unsicherheit zu verstehen: 'the ability to trust their outputs is crucial' und die Analyse von menschlicher Wahrnehmung von KI-Vertrauen adressiert direkt Kompetenzen im Umgang mit KI-Systemen.",
+    "Generative_KI": "Das Paper evaluiert drei öffentlich verfügbare generative LLMs (GPT-3.5, PaLM2, GPT-4o) und untersucht systematisch deren Konfidenzäußerungen und die Qualität ihrer natürlichsprachlichen Erklärungen.",
+    "Prompting": "Das Prompting wird als Interventionsmechanismus verwendet: 'we designed these prompts to induce varying degrees of certainty in the explanations' und es werden verschiedene Prompt-Stile manipuliert um unterschiedliche Unsicherheitssignale (low, medium, high confidence) zu erzeugen.",
+    "Bias_Ungleichheit": "Das Paper identifiziert systematische Verzerrungen in der Nutzerwahrnehmung: 'users tend to overestimate the accuracy of LLM responses' und die Längenbias zeigt, wie oberflächliche Textmerkmale zu falschen Vertrauenseinschätzungen führen, was zu ungleichen Entscheidungsergebnissen für verschiedene Nutzergruppen führen kann.",
+    "Fairness": "Das Papier adressiert Fairness durch das Konzept der Kalibrierung: 'By aligning the LLM's internal confidence with human perception of this confidence, we can bridge the gap' und evaluiert systematisch, wie Diskriminierungsfähigkeit zwischen korrekten und falschen Antworten (gemessen durch AUC-Metriken) verbessert werden kann."
+  },
+  "references": [
+    {
+      "author": "Kadavath et al.",
+      "year": 2022,
+      "short_title": "Language models (mostly) know what they know"
+    },
+    {
+      "author": "Hendrycks et al.",
+      "year": 2021,
+      "short_title": "Measuring massive multitask language understanding (MMLU)"
+    },
+    {
+      "author": "Petty & Cacioppo",
+      "year": 1984,
+      "short_title": "The effects of involvement on responses to argument quantity and quality"
+    },
+    {
+      "author": "Ouyang et al.",
+      "year": 2022,
+      "short_title": "Training language models to follow instructions with human feedback (RLHF)"
+    },
+    {
+      "author": "Azaria & Mitchell",
+      "year": 2023,
+      "short_title": "The internal state of an LLM can distinguish between truthful statements and lies"
+    },
+    {
+      "author": "Farquhar et al.",
+      "year": 2024,
+      "short_title": "Detecting hallucinations in large language models using semantic entropy"
+    },
+    {
+      "author": "Budescu et al.",
+      "year": 2014,
+      "short_title": "The interpretation of IPCC probabilistic statements around the world"
+    },
+    {
+      "author": "Steyvers & Kumar",
+      "year": 2023,
+      "short_title": "Three challenges for AI-assisted decision-making"
+    },
+    {
+      "author": "Guo et al.",
+      "year": 2017,
+      "short_title": "On calibration of modern neural networks"
+    },
+    {
+      "author": "Rong et al.",
+      "year": 2023,
+      "short_title": "Towards human-centered explainable AI: a survey of user studies for model explanations"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist relevant für KI-Literacies und Fairness, hat aber keinen direkten Bezug zu Sozialer Arbeit oder Gender Studies. Es untersucht jedoch kritische Fragen der vertrauenswürdigen KI-Kommunikation, die für alle Anwendungsdomänen (einschließlich Sozialer Dienste) von Bedeutung sind.",
+    "unique_contribution": "Das Paper trägt erstmals eine systematische empirische Untersuchung des 'Kalibrierungsgaps' und 'Diskriminierungsgaps' bei und zeigt praktische Interventionsmöglichkeiten durch Prompt-Modifikation, um die Kommunikation von Unsicherheit zu verbessern.",
+    "limitations": "Das Paper konzentriert sich auf Multiple-Choice und Short-Answer Fragen; die Übertragbarkeit auf längere, offene Fragen ist ungeklärt; die Nutzer waren überwiegend Laien ohne Domänenexpertise; die Langzeiteffekte des Vertrauenserwerbs wurden nicht untersucht."
+  },
+  "target_group": "KI-Entwickler, UX/UI-Designer, Policymaker im Bereich KI-Governance, Wissenschaftler im Bereich menschlich-KI-Interaktion, Organisationen die LLMs in kritischen Entscheidungskontexten einsetzen (Gesundheit, Recht, Bildung, öffentliche Dienste)"
+}

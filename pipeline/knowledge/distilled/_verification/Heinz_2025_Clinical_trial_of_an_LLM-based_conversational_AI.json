@@ -1,0 +1,68 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Guardrails-Implementierung nicht detailliert beschrieben (nur 'crisis classification model' erwähnt, aber nicht erläutert)",
+        "Statistische Methode (Cumulative-link mixed models) erwähnt aber nicht erklärend dargestellt",
+        "Dropout-Raten (4 Teilnehmer postintervention, 3 follow-up) in Kernbefund nicht reflektiert"
+      ],
+      "missing_minor": [
+        "Kompensationsschema ($25 pro Assessment) nicht in Abstract erwähnt",
+        "Preregistrierung (NCT06013137) im Kernbefund nicht erwähnt",
+        "Exklusionskriterien (Suizidalität, Manie, Psychose) nicht im Methodology-Abschnitt aufgeführt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Effektgrößen-Beschreibung: 'd=0.845-0.903' für MDD ist korrekt aus Original, aber die Beschreibung 'unbounded Cohen's d' basierend auf log-odds-ratio wird im generierten Dokument nicht erwähnt"
+      ],
+      "distortions": [
+        "Kernbefund kombiniert Ergebnisse aus zwei Zeitpunkten (4 und 8 Wochen) ohne Differenzierung - Original differenziert klar zwischen postintervention und follow-up",
+        "Aussage zur 'vergleichbaren therapeutischen Allianz' ist gestützt, aber Originaltext nuanciert dies mehr ('comparable to that of human therapists' - comparative rating, nicht identisch)"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/IRB-Genehmigung - sollte als eigenständige Kategorie erwähnt werden (Dartmouth Hitchcock IRB approval erwähnt)",
+        "Klinische_Trials - explizite Kategorie für RCT-Methodologie wäre angemessen",
+        "Digital_Health / Digital_Therapeutics - nicht in den 6 Kategorien erfasst, obwohl zentral"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "Digital_Health_Interventionen",
+        "Klinische_Trails_Methodik"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Dropout-Raten sollten erwähnt werden für Transparenz",
+        "suggested_addition": "trotz moderater Dropout-Raten (7 postintervention/follow-up von 106 Interventionsgruppe)"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Nuancierung zur therapeutischen Allianz fehlend",
+        "suggested_revision": "Ersetze 'vergleichbare therapeutische Allianz-Ratings mit humanen Therapeuten' mit 'therapeutische Allianz-Ratings, die vergleichbar mit menschlichen Therapeuten-Patient-Beziehungen bewertet wurden'"
+      },
+      {
+        "section": "Methodik",
+        "issue": "Exklusionskriterien nicht erwähnt",
+        "suggested_addition": "Exklusionskriterien: aktuelle Suizidalität, Manie, Psychose"
+      },
+      {
+        "section": "Category-Evidenz / KI_Sonstige",
+        "issue": "Guardrails-Details zu vage",
+        "suggested_revision": "Erweitern auf: 'Crisis classification model für hochriskante Inhalte (z.B. Suizidalität), post-transmission supervision durch trainierte Kliniker und Forscher, automatisches Blocking identischer Email/Telefon/IP-Adressen, zwei-Faktor-Authentifizierung über REDCap'"
+      }
+    ]
+  }
+}

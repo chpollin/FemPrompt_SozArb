@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "title": "Ein Manifest für Cyborgs. Feminismus im Streit mit den Technowissenschaften",
+    "authors": [
+      "Donna Haraway"
+    ],
+    "year": 1985,
+    "type": "book",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Wie können feministische Perspektiven die Beziehung zwischen Organismus und Maschine sowie zwischen Natur und Kultur neu denken, um emanzipatorische Möglichkeiten in einer technologisierten Welt zu eröffnen?",
+    "methodology": "Theoretisch: Kritische Textanalyse, politische Mythologie, Cyborg-Metaphorik, Verbindung von Marxismus, Psychoanalyse und Postmodernismus",
+    "key_finding": "Die Cyborg als imaginäre und materielle Figur ermöglicht einen Weg aus binären Dualismen (Natur/Kultur, Mensch/Maschine, Mann/Frau) und erlaubt eine neue Form feministischer Politik, die Partialität, Ironie und strategische Verbindungen ohne essentiale Identität nutzt.",
+    "data_basis": "Keine empirische Datenbasis; theoretisches Essay basierend auf Science Fiction, Wissenschaftsgeschichte und feministischen Diskursen"
+  },
+  "arguments": [
+    "Die Grenzen zwischen Tier und Mensch, Organismus und Maschine sowie Natur und Kultur sind in der modernen Wissenschaft und Gesellschaft fundamental durchbrochen und können nicht wiederhergestellt werden.",
+    "Die Cyborg als Konzept bietet eine Alternative zu humanistischen Ursprungsgeschichten und ermöglicht eine Politik ohne notwendige Einheit oder organische Ganzheit, die sich stattdessen auf partialen, ironischen Verbindungen gründet.",
+    "Women of Color und feministische Science Fiction sind zentrale theoretische Ressourcen für die Entwicklung einer Cyborg-Politik, die die Verflechtung von Wissenschaft, Technologie, Kapitalismus und Geschlechterrepression kritisiert und subvertiert."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": false
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Cybernetik, kybernetische Systeme und Informationstechnologie als zentrale analytische Konzepte: 'kybernetische Organismen', 'C3I Command-Control-Communication-Intelligence', Mikroelektronik als technische Basis von Simulakren und Informatik der Herrschaft",
+    "Bias_Ungleichheit": "Analyse der 'Informatik der Herrschaft' als globales System der Ausbeutung; Integration/Ausbeutung von Frauen in weltweiter Produktion/Reproduktion; Kritik des rassistischen und patriarchalen Kapitalismus; elektronische Fabrikation und internationale Arbeitsteilung als Instrumente der Kontrolle",
+    "Gender": "Zentrale Fokussierung auf Geschlechterrepression, Post-Gender-Welten, Dekonstruktion von Geschlechtsdichotomien: 'Gender wäre nicht mehr die umfassende Identität schlechthin'; Kritik essentialistischer Frauenkonzepte",
+    "Diversitaet": "Explizite Auseinandersetzung mit Women of Color als Cyborg-Identität und machtvolle Subjektivität; marginalisierte Identitäten; kolonisierte Gruppen; Schreiben als Form des politischen Kampfes für farbige Frauen und Männer",
+    "Feministisch": "Explizite Verwendung feministischer Theorie: 'sozialistischer Feminismus', Bezug auf französische Feministinnen (Irigaray, Wittig), radikale Feministinnen (Griffin, Lorde, Rich); feministische Science Fiction als theoretische Ressource; Kritik humanistischer, patriarchaler Narrative; Konzept von Blasphemie als feminist-theoretische Strategie"
+  },
+  "references": [
+    {
+      "author": "Haraway, Donna",
+      "year": 1979,
+      "short_title": "The Biological Enterprise: Sex, Mind, and Profit from Human Engineering to Sociobiology"
+    },
+    {
+      "author": "Haraway, Donna",
+      "year": 1983,
+      "short_title": "Signs: Sex, Gender, and Science"
+    },
+    {
+      "author": "Butler, Octavia",
+      "year": 1980,
+      "short_title": "Wild Seed"
+    },
+    {
+      "author": "Wittig, Monique",
+      "year": 1973,
+      "short_title": "The Lesbian Body"
+    },
+    {
+      "author": "Lorde, Audre",
+      "year": 1984,
+      "short_title": "Sister Outsider"
+    },
+    {
+      "author": "Rich, Adrienne",
+      "year": 1978,
+      "short_title": "The Dream of a Common Language"
+    },
+    {
+      "author": "Jameson, Frederic",
+      "year": 1984,
+      "short_title": "Postmodernism, or the Cultural Logic of Late Capitalism"
+    },
+    {
+      "author": "Foucault, Michel",
+      "year": 1976,
+      "short_title": "The History of Sexuality, Vol. 1"
+    },
+    {
+      "author": "Merchant, Carolyn",
+      "year": 1980,
+      "short_title": "The Death of Nature: Women, Ecology, and the Scientific Revolution"
+    },
+    {
+      "author": "Grossman, Rachel",
+      "year": 1980,
+      "short_title": "Women's Place in the Integrated Circuit"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist für die Schnittstelle KI/Gender/Diversität hochrelevant, da es eine grundlegende theoretische Kritik von technologisch-organischen Dualismen entwickelt, die auch gegenwärtige KI-Debatten prägt. Es bietet feministische und intersektionale Perspektiven auf Technologie und Herrschaft, die für kritische KI-Forschung zentral sind.",
+    "unique_contribution": "Haraways Cyborg-Manifest ist ein Paradigmenwechsel in der feministischen Techniktheorie: statt Natur/Technologie zu hierarchisieren, werden Hybridität und Partialität als emanzipatorische Ressourcen conceptualisiert; die Verknüpfung von postmoderner Theorie mit marxistischem Feminismus und intersektionalen Perspektiven war für ihre Zeit radikal innovativ.",
+    "limitations": "Das Essay ist bewusst metaphorisch und politisch-mythologisch, keine empirische Analyse; die Fokussierung auf 1980er-Jahre-Technologie (Mikroelektronik, frühe Biotechnologie) erfordert Aktualisierung für gegenwärtige KI-Kontexte; begrenzte direkte Anwendbarkeit auf konkrete soziale Praxisfelder angegeben"
+  },
+  "target_group": "Wissenschaftler:innen in Gender Studies, Feministischer Epistemologie und Science and Technology Studies (STS); KI-Ethiker:innen und kritische KI-Forscher:innen; Aktivist:innen für Technologiegerechtigkeit und intersektionale Feminismen; Theoretiker:innen der Sozialen Arbeit mit kritischem Anspruch; Sozial- und Kulturwissenschaftler:innen"
+}

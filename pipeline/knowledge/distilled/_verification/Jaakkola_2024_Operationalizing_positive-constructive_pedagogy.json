@@ -1,0 +1,58 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Keine Angabe der tatsächlichen Teilnehmerzahl in den 4 Workshops",
+        "Fehlende Informationen zu Evaluationsmethoden und Lernzielmessungen",
+        "Keine systematische Datenanalyse oder Kodierung der Workshop-Ergebnisse dokumentiert"
+      ],
+      "missing_minor": [
+        "Detaillierte zeitliche Struktur der 2-Stunden-Workshops nicht vollständig beschrieben",
+        "Keine Angaben zu dropout rates oder Teilnehmerzusammensetzung nach Geschlecht",
+        "Fehlende Informationen zur Reproduzierbarkeit der Workshops"
+      ]
+    },
+    "correctness": {
+      "score": 94,
+      "errors": [
+        "Quellenangabe: Original nennt 'Jaakkola_2024' im source_file, aber RECEIVED-Datum ist '11 April 2025' und PUBLISHED '10 July 2025' - Datumsinkonsistenz korrekt für 2025, nicht 2024 wie in source_file"
+      ],
+      "distortions": [
+        "Die Darstellung der 'empirischen Basis' als '4 strukturierte 2-Stunden-Workshops mit undefinierter Teilnehmerzahl' könnte zu Missverständnis führen - es ist eher ein reflektiver Essay mit Workshop-Beispielen als eine vollständige Methodenstudie",
+        "Charakterisierung als 'Theoretisch + Reflektive Essay' ist korrekt, aber Begrifflichkeit 'Empirische Basis: 4 Workshops' könnte empirischen Forschungsstandard implizieren, den der Text nicht erfüllt"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Technology_Education könnte explizit als Kategorie hinzugefügt werden (wird erwähnt: 'technology education')",
+        "Critical_Pedagogy als separate Kategorie würde die kritische Reflexions-Komponente stärker hervorheben",
+        "Organizational_Learning könnte als eigene Kategorie relevant sein (SECI-Modell wird ausführlich diskutiert)"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "note": "Quellenangabe überprüfen: source_file nennt '2024' aber Publikationsdatum ist 2025",
+      "suggestion": "Konsistenz zwischen source_file und year (2025) sicherstellen"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Ungenauigkeit in der Charakterisierung der empirischen Basis",
+        "current": "**Datenbasis:** 4 Workshops mit undefinierter Teilnehmerzahl; Dokumentation durch Workshop-Protokolle; Lehrbeispiele und pädagogische Szenarien",
+        "suggested": "**Datenbasis:** 4 Workshops (Oktober 2024, Februar 2025, November 2024, März 2025) mit undefinierter Teilnehmerzahl; keine systematische Datenerhebung; Basis: Autorin-Reflexion über Workshop-Erfahrungen und entwickelte Lehrbeispiele"
+      },
+      {
+        "section": "Methodologie-Beschreibung",
+        "issue": "Charakterisierung könnte präziser sein bezüglich des empirischen Ansatzes",
+        "current": "Theoretisch + Reflektive Essay basierend auf Workshops; Empirische Basis: 4 strukturierte 2-Stunden-Workshops",
+        "suggested": "Reflektive Essay mit illustrativen Workshop-Beispielen; keine experimentelle Evaluationsstudie, sondern konzeptionelle Entwicklung eines Modells"
+      }
+    ]
+  }
+}

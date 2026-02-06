@@ -1,0 +1,71 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Keine explizite Erwähnung der Zusammenarbeit mit dem Competency Framework for Teachers (wird im Original erwähnt)",
+        "Fehlende Details zur Entwicklung und Konsultationsprozess (3 internationale Konsultationstreffen, multiple Online-Konsultationen)",
+        "Keine Erwähnung des 'living document'-Charakters und der geplanten kontinuierlichen Überprüfung"
+      ],
+      "missing_minor": [
+        "Spezifische Namen von Peer-Reviewern nicht erwähnt",
+        "DOI (10.54675/JKJB9835) nicht im generierten Dokument",
+        "ISBN nicht aufgeführt",
+        "Unterstützung durch TAL Education Group nicht dokumentiert"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Autoren-Liste unvollständig: Es fehlen Lidija Kralj (Education Analyst at EduConLK) als Contributor in der generiert angegebenen Darstellung - sie wird als Contributor erwähnt, nicht als Hauptautor"
+      ],
+      "distortions": [
+        "Die Kategorisierung von Gender als reine Querschnittsthema ist teilweise problematisch: Das Original erwähnt 'special focus on gender equality' als eigenständigen Fokus in UNESCO's Mandat, nicht nur als Querschnitt",
+        "Assessment-Relevanz-Bewertung: Aussage 'entwickelt aber keine spezifischen Kompetenzen für sozialarbeiterische Kontexte' könnte zu restriktiv sein - die ethischen und menschenzentrierten Dimensionen sind durchaus für Soziale Arbeit relevant"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Sustainability/Umweltschutz: Das Original erwähnt explizit 'energy-efficient AI model to minimize the negative environmental impact' und Umweltfokus - sollte als eigene Kategorie erwähnt werden",
+        "Human Rights (Menschenrechte): Das Original verankert den Rahmen explizit in 'principles of human rights' - dies ist nicht als separate Kategorie erfasst",
+        "Teacher Education/Lehrerausbildung: Der Zusammenhang zu einem parallelen Framework für Lehrkräfte wird nicht erwähnt"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "authors": "Korrekt sind: Fengchun Miao (Hauptleitung), Kelly Shiohira, Natalie Lao als Framework-Drafters; Lidija Kralj als Contributor",
+      "categories_add": [
+        "Sustainability",
+        "Human_Rights",
+        "Teacher_Education"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Gender-Fokus zu restriktiv charakterisiert",
+        "suggestion": "UNESCO betont 'special focus on gender equality' als eigenständigen Schwerpunkt, nicht nur als Querschnittsthema"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Relevanz für Soziale Arbeit unterschätzt",
+        "suggestion": "Die Kompetenzen in Ethics of AI und Human-centred Mindset haben direkte Anwendbarkeit in sozialarbeiterischen Kontexten, insbesondere bei der Arbeit mit Jugendlichen und KI-Literacies"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Umweltdimension unterrepräsentiert",
+        "suggestion": "Hinzufügen: Der Rahmen betont explizit 'energy-efficient AI model to minimize the negative environmental impact' und Nachhaltigkeitsaspekte als integrale Komponente"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Paralleles Teacher Framework nicht erwähnt",
+        "suggestion": "Ergänzen: 'Das Framework wurde hand in hand mit einem Competency Framework for Teachers entwickelt'"
+      }
+    ]
+  }
+}

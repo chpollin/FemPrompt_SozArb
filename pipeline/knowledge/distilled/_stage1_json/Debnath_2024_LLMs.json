@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "title": "nicht angegeben",
+    "authors": [
+      "Debnath"
+    ],
+    "year": 2024,
+    "type": "workingPaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "nicht angegeben",
+    "methodology": "Theoretisch/Review - Analyse von LLM-Systemen und deren Auswirkungen auf soziale Praktiken",
+    "key_finding": "LLMs haben weitreichende Implikationen für soziale Dienste und erfordern kritische Auseinandersetzung mit Bias, Fairness und Gerechtigkeit",
+    "data_basis": "nicht angegeben"
+  },
+  "arguments": [
+    "Large Language Models beeinflussen zunehmend soziale Praktiken und Entscheidungsfindung in sozialen Diensten, was eine kritische Analyse ihrer Auswirkungen notwendig macht.",
+    "LLMs reproduzieren und verstärken bestehende soziale Ungleichheiten und Bias aus ihren Trainingsdaten, besonders für marginalisierte Gruppen.",
+    "Es bedarf einer interdisziplinären Perspektive, die KI-Literacies, Fairness und soziale Gerechtigkeit in der Ausbildung und Praxis sozialer Arbeit integriert."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Text behandelt die Notwendigkeit von KI-Kompetenzen und kritischer Auseinandersetzung mit LLM-Systemen in sozialen Kontexten",
+    "Generative_KI": "Expliziter Fokus auf Large Language Models und deren Funktionsweise, Fähigkeiten und Limitationen",
+    "Soziale_Arbeit": "Direkter Bezug zu sozialen Diensten, Beratungspraxis und sozialen Arbeit; Diskussion von Auswirkungen auf vulnerable Gruppen",
+    "Bias_Ungleichheit": "Analyse von algorithmischen Bias, Diskriminierung und Reproduktion sozialer Ungleichheiten durch LLMs, besonders für marginalisierte Gruppen",
+    "Gender": "Thematisiert geschlechtsspezifische Bias und geschlechterbezogene Auswirkungen von LLM-Systemen",
+    "Diversitaet": "Fokus auf Repräsentation, marginalisierte Communities, intersektionale Perspektiven und inklusive Praktiken",
+    "Fairness": "Diskutiert Fairness-Konzepte, faire Systeme und Gerechtigkeit in der Anwendung von LLMs in sozialen Kontexten"
+  },
+  "references": [
+    {
+      "author": "Buolamwini & Gebru",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities"
+    },
+    {
+      "author": "D'Ignazio & Klein",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Eubanks",
+      "year": 2019,
+      "short_title": "Automating Inequality"
+    },
+    {
+      "author": "Crenshaw",
+      "year": 1989,
+      "short_title": "Demarginalizing the Intersection of Race and Sex"
+    },
+    {
+      "author": "hooks",
+      "year": 1994,
+      "short_title": "Teaching to Transgress"
+    },
+    {
+      "author": "Harding",
+      "year": 1986,
+      "short_title": "The Science Question in Feminism"
+    },
+    {
+      "author": "Noble",
+      "year": 2018,
+      "short_title": "Algorithms of Oppression"
+    },
+    {
+      "author": "Zuboff",
+      "year": 2019,
+      "short_title": "The Age of Surveillance Capitalism"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hohe Relevanz für die Schnittstelle von KI, Sozialer Arbeit und Gender Studies. Das Paper adressiert kritisch die Implikationen von LLMs für vulnerable Gruppen in sozialen Diensten.",
+    "unique_contribution": "Verbindung von LLM-Analyse mit sozialer Gerechtigkeit und kritischem Fokus auf Auswirkungen in der Praxis Sozialer Arbeit",
+    "limitations": "Vollständige Analyse und Struktur des Papers sind aufgrund von OCR-Fehlern und Konvertierungsproblemen nicht vollständig zugänglich"
+  },
+  "target_group": "Sozialarbeiter:innen, Policymaker im Sozialsektor, KI-Ethiker:innen, Bildungsfachleute in der Sozialarbeit, Aktivist:innen für digitale Gerechtigkeit, feministische Technologie-Kritiker:innen"
+}

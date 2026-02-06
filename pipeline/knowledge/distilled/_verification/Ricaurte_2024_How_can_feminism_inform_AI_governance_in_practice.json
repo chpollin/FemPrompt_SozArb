@@ -1,0 +1,51 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Explizite Erwähnung der Conversion-Metadaten (converter: docling, quality_score: 90) nicht in generiertes Dokument übernommen",
+        "Last update Datum (23 September 2025) nicht dokumentiert",
+        "Affiliationen des Autors (Tecnologico de Monterey, Berkman Klein Center, Tierra Común Network, Feminist AI Research Network) gekürzt statt vollständig aufgeführt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Methodologie als 'Mixed-Methods Ansatz' charakterisiert, obwohl das Original primär konzeptionell-deskriptiv ist; die 200 Teilnehmer und 13 Projekte sind Kontextinformationen, keine Forschungsmethodik im klassischen Sinne"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Mögliche Kategorie 'Gerechtigkeit' oder 'Justice' nicht explizit genannt, obwohl 'multidimensional justice', 'global justice', 'integral planetary justice' Kernkonzepte sind",
+        "Mögliche Kategorie 'Partizipation' / 'Partizipative Governance' wäre relevant gegeben der Betonung von 'participatory methodologies' und 'Nothing about us, without us'"
+      ]
+    }
+  },
+  "overall_confidence": 94,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "note": "Optionale Ergänzungen",
+      "suggestions": [
+        "Affiliationen vollständig aufführen: 'affiliations: [\"Tecnologico de Monterey\", \"Berkman Klein Center for Internet & Society\", \"Tierra Común Network\", \"Feminist AI Research Network\"]'",
+        "Feld hinzufügen: 'last_update: 2025-09-23'"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "current": "Theoretisch-konzeptionell mit Praxisbeispielen; Mixed-Methods Ansatz (Dokumentation von drei Fallstudien mit partizipativen Elementen)",
+        "suggestion": "Theoretisch-konzeptionell mit Fallstudienbeispielen; analytischer Ansatz basierend auf Dokumentation von drei praktischen Initiativen (partizipativ dokumentiert) und globalen Konsultationen"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "location": "Nach 'Feministisch'",
+        "suggestion": "Zusätzliche Kategorie ergänzen: '### Gerechtigkeit / Justice\\nZentral ist das Konzept der \"multidimensional justice\" und \"integral, planetary justice\": \"commitment to achieving integral, planetary justice, considering AI systems throughout their full life cycle\"; Adressierung von \"global justice and the survival of the planet\" als Governance-Ziel.'"
+      }
+    ]
+  }
+}

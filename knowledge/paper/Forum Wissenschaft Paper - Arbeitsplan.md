@@ -62,10 +62,10 @@
 
 ## Nicht-Ziele
 
-- ❌ Fertiger Prompting-Leitfaden (nachgelagerte Phase)
-- ❌ Tool fuer Endnutzer:innen
-- ❌ Vollstaendige Automatisierung
-- ❌ Training eigener Modelle
+- Fertiger Prompting-Leitfaden (nachgelagerte Phase)
+- Tool fuer Endnutzer:innen
+- Vollstaendige Automatisierung
+- Training eigener Modelle
 
 ---
 
@@ -74,51 +74,51 @@
 | Aspekt | Wert |
 |--------|------|
 | Papers gesamt | 326 (Zotero Group 6080294) |
-| PDFs heruntergeladen | 234 |
-| Markdown konvertiert | 232 (99.1%) |
+| PDFs heruntergeladen | 257 |
+| Markdown konvertiert | 252 (98.1%) |
 | Assessment-Schema | 10 binaere Kategorien |
 
 ---
 
 ## Pipeline-Status
 
-### Phase 1: Datenakquise ✅ ABGESCHLOSSEN
+### Phase 1: Datenakquise (Abgeschlossen)
 
 | Schritt | Status | Ergebnis |
 |---------|--------|----------|
-| Zotero-Export | ✅ | 326 Papers |
-| PDF-Download | ✅ | 234 PDFs |
-| Markdown-Konversion (Docling) | ✅ | 232 Dateien |
-| Validierung | ✅ | 98.7 Konfidenz-Score |
-| Post-Processing | ✅ | 107k Zeichen bereinigt |
-| PDF-zu-JPG (Sync-Scroll) | ✅ | ~4000 Seiten |
-| Review-Tool | ✅ | Browser-basiert mit Import/Export |
+| Zotero-Export | Fertig | 326 Papers |
+| PDF-Download | Fertig | 257 PDFs |
+| Markdown-Konversion (Docling) | Fertig | 252 Dateien |
+| Validierung | Fertig | 98.7 Konfidenz-Score |
+| Post-Processing | Fertig | 107k Zeichen bereinigt |
+| PDF-zu-JPG (Sync-Scroll) | Fertig | ~4000 Seiten |
+| Review-Tool | Fertig | Browser-basiert mit Import/Export |
 
-### Phase 2: Assessment 🔄 IN ARBEIT
+### Phase 2: Assessment (In Arbeit)
 
 | Track | Methode | Status | Verantwortlich |
 |-------|---------|--------|----------------|
-| Human | Google Sheets manuell | 🔄 Laeuft | Susi, Sabine |
-| Agent | Claude Haiku 4.5 | ⏸️ Bereit | Christopher |
+| Human | Google Sheets manuell | In Arbeit | Susi, Sabine |
+| Agent | Claude Haiku 4.5 | Bereit | Christopher |
 
 **Blocker:** Human-Assessment muss abgeschlossen sein vor Benchmark.
 
-### Phase 3: Benchmark ⏸️ WARTET
+### Phase 3: Benchmark (Wartet)
 
 | Schritt | Script | Status |
 |---------|--------|--------|
-| Assessments zusammenfuehren | `merge_assessments.py` | ⏸️ Wartet |
-| Agreement berechnen | `calculate_agreement.py` | ⏸️ Wartet |
-| Disagreements analysieren | `analyze_disagreements.py` | ⏸️ Wartet |
+| Assessments zusammenfuehren | `merge_assessments.py` | Wartet |
+| Agreement berechnen | `calculate_agreement.py` | Wartet |
+| Disagreements analysieren | `analyze_disagreements.py` | Wartet |
 
 **Output:** Cohen's Kappa, Konfusionsmatrix, Disagreement-Faelle
 
-### Phase 4: Synthese ⏸️ WARTET
+### Phase 4: Synthese (Wartet)
 
 | Schritt | Status |
 |---------|--------|
 | LLM-Summarisierung | ⏸️ Wartet auf Stichproben-Review |
-| Obsidian Vault | ⏸️ Wartet |
+| Obsidian Vault | Wartet |
 
 ---
 
@@ -194,7 +194,7 @@
 
 | Script | Zweck |
 |--------|-------|
-| `assessment/agent/run_assessment.py` | LLM-Assessment ausfuehren |
+| `benchmark/scripts/run_llm_assessment.py` | LLM-Assessment ausfuehren |
 | `benchmark/scripts/merge_assessments.py` | Human + Agent zusammenfuehren |
 | `benchmark/scripts/calculate_agreement.py` | Kappa berechnen |
 | `benchmark/scripts/analyze_disagreements.py` | Divergenzen analysieren |
@@ -240,4 +240,4 @@
 
 ---
 
-*Version: 2.0 (2026-02-03)*
+*Aktualisiert: 2026-02-06*

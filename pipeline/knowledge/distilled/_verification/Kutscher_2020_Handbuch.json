@@ -1,0 +1,68 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Kapitel 6 'Handlungsfelder' wird in der Originaleinleitung erwähnt, aber nicht vollständig in das generierte Dokument integriert",
+        "Kapitel 'Forschung mit Blick auf Digitalisierung und Soziale Arbeit' wird erwähnt, aber nicht im generierten Dokument abgebildet"
+      ],
+      "missing_minor": [
+        "Spezifische Handlungsfelder (Jugendhilfe, Beratung etc.) sind nur knapp erwähnt",
+        "ISBN und Verlagsinformationen nicht im generierten Dokument",
+        "Conversion-Datum und converter-Info aus Original nicht übernommen"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [],
+      "distortions": [
+        "Die 'Kernbefund'-Formulierung ist eine Verdichtung, nicht direkt aus dem Text entnommen - jedoch sachlich korrekt",
+        "Methodik-Angabe 'Theoretisch/Review' ist korrekt, aber sehr knapp für ein 600+ Seiten Handbuch"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Profession/Professionalisierung als eigenständige Kategorie wäre sinnvoll gewesen (kommt nur in AI_Literacies vor)",
+        "Wohlfahrtsstaat/Sozialpolitik wird erwähnt, aber nicht als separate Kategorie erfasst"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Konversionsdatum sollte auf Original-Konversionsdatum (2026-02-03) gesetzt werden, nicht auf 2026-02-05"
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Drittes Hauptargument sollte expliziter auf 'organisierende Technologien' verweisen - dies ist zentral für Kapitel 5, aber im Original-Ausschnitt nur angedeutet",
+        "severity": "minor"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Limitations-Punkt zu generativer KI ist korrekt, aber könnte präzisieren: Der Text stammt von 2020, daher ist fehlende Behandlung von LLMs sachlich erklärbar",
+        "severity": "minor"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "Alle Referenzen sind korrekt identifiziert, aber [[nicht_angegeben_None]] zeigt, dass keine Einzelautoren für die Kapitel extrahiert wurden - das entspricht dem Original-Ausschnitt, der diese nicht nennt",
+        "severity": "minor"
+      }
+    ]
+  },
+  "strengths": [
+    "Sehr genaue Erfassung der Kernargumente und theoretischen Perspektiven",
+    "Kategorisierung ist gut durchdacht und textnah belegt",
+    "Assessment-Relevanz differenziert korrekt zwischen domain fit und limitations",
+    "Forschungsfrage wurde konstruktiv aus den impliziten Fragen des Textes rekonstruiert",
+    "Methodik-Beschreibung ist sachlich korrekt und prägnant"
+  ],
+  "weaknesses": [
+    "Kapitel-Struktur des Handbuchs nicht vollständig abgebildet (Kap. 6 und Forschungs-Kapitel fehlen)",
+    "Keine separaten Kategorien für Wohlfahrtsstaat und Professionalisierung troderen Zentralität",
+    "Target-Group könnte spezifischer auf konkrete Handlungsfelder eingehen (z.B. Kinder- und Jugendhilfe, Beratungsstellen)"
+  ]
+}

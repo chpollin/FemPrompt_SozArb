@@ -1,0 +1,50 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Anzahl der Fokusgruppenteilnehmenden pro Land nicht angegeben",
+        "Detaillierte Beschreibung der Interviewmethodik fehlt",
+        "Zeitrahmen der Datenerhebung nicht spezifiziert"
+      ],
+      "missing_minor": [
+        "Namen einzelner Fokusgruppenteilnehmender nicht vollständig dokumentiert",
+        "Detaillierte Zusammensetzung nach Berufshintergrund der FG-Teilnehmenden",
+        "Spezifische Limitationen der Fokusgruppenmethodik nicht expliziert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minimale Paraphrasierung: 'Familiarity with AI concepts' korrekt als AI literacy zusammengefasst",
+        "DigComp-Zitierung korrekt mit Referenz Vuorikari et al. 2022"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ansätze des transformativen Lernens (Mezirow) könnten relevant sein für 'learning-to-learn competencies'",
+        "Digitale Ethik (Digital Ethics) könnte eigenständig ausgewiesen werden statt unter Fairness subsumiert"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "section": "Methodik - Datenbasis",
+        "current": "Fokusgruppen mit Jugendarbeitsfachleuten in 4 europäischen Ländern; genaue Anzahl der Teilnehmenden nicht spezifiziert",
+        "improvement": "Hinzufügen: 'Das Dokument enthält Fokusgruppen in vier Ländern (Italien, Rumänien, Griechenland, Portugal), gibt aber keine aggregierte Gesamtzahl oder Größen der einzelnen Gruppen an.' Auch: Drei Interviews sind erwähnt, aber nicht im Methodikteil detailliert beschrieben."
+      },
+      {
+        "section": "Category Validation - fehlende Kategorien",
+        "current": "Transformatives Lernen nicht explizit erwähnt",
+        "improvement": "Die Fokussierung auf 'growth mindset' und 'learning-to-learn' deutet auf transformatives Lernen hin, könnte aber als zusätzliche Kategorie ausgewiesen werden."
+      }
+    ]
+  }
+}

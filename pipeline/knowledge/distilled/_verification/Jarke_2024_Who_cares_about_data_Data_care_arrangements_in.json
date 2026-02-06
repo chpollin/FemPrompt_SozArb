@@ -1,0 +1,60 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Projektförderungen (VolkswagenStiftung, Bundesministerium für Bildung und Forschung) nicht erwähnt",
+        "Affiliationen der Autoren (BANDAS-Center, Institute of Sociology Hannover) nicht vollständig ausgeführt",
+        "Publikationsdetails (27:4, 702-718, DOI) nicht im Dokument aufgeführt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: 'Datenbasis' beschreibt Fallstudien detaillierter als im Original genannt, aber nicht falsch"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Potentiell: 'Datenethik' oder 'Data Governance' als separate Kategorie (implizit vorhanden, aber nicht explizit benannt)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "DOI und Journaldetails (ISSN 1369-118X, Volume 27, Issue 4, pp. 702-718) könnten hinzugefügt werden für vollständige bibliographische Information",
+      "priority": "niedrig"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Projektfinanzierung erwähnen",
+        "suggestion": "Hinzufügen: 'Funded by Volkswagen Foundation (2019-2025) and German Federal Ministry of Education and Research (2018-2022)'",
+        "priority": "niedrig"
+      }
+    ]
+  },
+  "detailed_assessment": {
+    "strengths": [
+      "Kernbefund präzise und prägnant formuliert",
+      "Alle fünf thematischen Kategorien durch Originaltext belegt",
+      "Heterogenität der beiden Fallstudien korrekt kontrastiert",
+      "Feministische STS-Grundlagen adäquat dargestellt",
+      "Verbindung zu Care-Theorie (Mol, Puig de la Bellacasa) korrekt hergestellt",
+      "Kritik an Invisibilisierung von Care-Arbeit authentisch zusammengefasst",
+      "Referenzliste umfassend und korrekt"
+    ],
+    "minor_issues": [
+      "Methodische Details (Anzahl Interviews, Analyseverfahren) könnten präziser sein",
+      "Limitations-Abschnitt könnte erweitert werden um Fehlen von Nutzer-Perspektiven",
+      "Assessment-Relevanz sehr gut, aber hätte noch spezifischere Implikationen für konkrete Digitalisierungspraktiken enthalten können"
+    ],
+    "verification_notes": "Das generierte Dokument gibt den Originaltext akkurat wieder. Die Kategorisierung ist gut begründet und mit Zitaten belegt. Die Kernargumente sind nicht verzerrt. Die Struktur (Kernbefund → Forschungsfrage → Methodik → Argumente → Kategorien) folgt sinnvoll dem Original."
+  }
+}

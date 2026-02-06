@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning",
+    "authors": [
+      "Mohammadamin Shafiei",
+      "Hamidreza Saffari",
+      "Nafise Sadat Moosavi"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie beeinflussen semantische Framing-Effekte (insbesondere die Verwendung von 'mehr', 'weniger', 'gleich') systematisch und direkt die Vorhersagen von Large Language Models bei logisch äquivalenten Vergleichsproblemen?",
+    "methodology": "Empirisch: Kontrolliertes Benchmark-Experiment mit 300 vergleichenden Mathematik-Szenarien, evaluiert unter 14 Prompt-Varianten über drei LLM-Familien (GPT, Claude, Qwen). Systematische Variation von Framing-Termen, Positionen und demografischen Identitätsmarkern.",
+    "key_finding": "LLMs zeigen konsistente und richtungsabhängige Reasoning-Verzerrungen, wobei die Wahl und Position von Vergleichsbegriffen zu systematischen Vorhersagen in Richtung des Framing-Terms führt, unabhängig von der korrekten Antwort. Diese Effekte werden durch demografische Identitätsmarker (Geschlecht, Rasse) verstärkt.",
+    "data_basis": "300 kontrollierte Vergleichsszenarien × 14 Prompt-Varianten × 6 Modellvarianten × 8 demografische Identitätsmarker = Tausende Evaluierungsfälle"
+  },
+  "arguments": [
+    "Framing-Effekte in LLMs sind nicht nur oberflächliche Prompt-Sensitivität, sondern systematische semantische Biases, die zu direktionalen Fehlern führen (z.B. 'mehr'-gerahmte Prompts erhöhen 'mehr'-Antworten auch bei falscher Antwort). Dies offenbart eine grundlegende Limitation in Standard-Evaluationsparadigmen, die nur Genauigkeit messen.",
+    "Chain-of-Thought-Prompting reduziert diese Biases teilweise, aber nicht vollständig, insbesondere bei strukturierten Ausgabeformaten (JSON), wo Modelle korrekt rechnen, aber Ausgaben im Frame der Eingabe formulieren. Dies deutet auf zwei unterschiedliche Fehlerquellen hin: Reasoning und Output-Formulierung.",
+    "Demografische Identitätsmarker (Geschlecht, Rasse) interagieren mit Framing-Effekten und verstärken Reasoning-Disparitäten, besonders in Stereotyp-assoziierten Domänen (Caregiving, Einkaufen, Bildung). Dies weist auf gefährliche Verknüpfungen zwischen sprachlichem Framing und sozialen Vorurteilen hin."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "Fokus auf 'large language models (LLMs)' und evaluation of 'three LLM families (GPT, Claude, and Qwen)' mit verschiedenen Modellgrößen",
+    "Prompting": "Extensive Analyse von 'prompt framing variants', 'prompt position', 'chain-of-thought prompting', 'structured outputs (JSON)', sowie 'direct vs. indirect' Framing",
+    "KI_Sonstige": "Untersuchung der zugrunde liegenden Mechanismen von Reasoning-Bias in LLMs, die über Standard-NLP hinausgehen",
+    "Bias_Ungleichheit": "Zentrales Thema: 'framing-induced reasoning errors', 'systematic directional bias', 'directional errors', 'reasoning disparities' und wie diese zu systematischen Benachteiligungen führen",
+    "Gender": "Explizite Analyse mit 'gender markers' (man, woman), 'gender bias in numerically grounded tasks', sowie Untersuchung von 'protected attributes such as gender'",
+    "Diversitaet": "Evaluation mit mehreren demografischen Markern: 'gender and race references', 'protected attributes such as gender and race', getestet mit 5 Rassen-Kategorien (Asian, African, Hispanic, White, Black)",
+    "Fairness": "Expliziter Fokus auf 'framing-aware benchmarks for diagnosing reasoning robustness and fairness in LLMs', 'fairness' und 'bias-sensitive evaluations'"
+  },
+  "references": [
+    {
+      "author": "Wei et al.",
+      "year": 2022,
+      "short_title": "Chain of Thought Prompting"
+    },
+    {
+      "author": "Sclar et al.",
+      "year": 2023,
+      "short_title": "Quantifying Language Models' Sensitivity to Spurious Features"
+    },
+    {
+      "author": "Lin & Ng",
+      "year": 2023,
+      "short_title": "Mind the Biases: Quantifying Cognitive Biases in Language Model Prompting"
+    },
+    {
+      "author": "Itzhak et al.",
+      "year": 2024,
+      "short_title": "Instructed to Bias: Instruction-tuned LMs exhibit emergent cognitive bias"
+    },
+    {
+      "author": "Druckman",
+      "year": 2001,
+      "short_title": "Evaluating Framing Effects"
+    },
+    {
+      "author": "Gallegos et al.",
+      "year": 2024,
+      "short_title": "Bias and Fairness in Large Language Models: A Survey"
+    },
+    {
+      "author": "Parrish et al.",
+      "year": 2022,
+      "short_title": "BBQ: A Hand-Built Bias Benchmark"
+    },
+    {
+      "author": "Gupta et al.",
+      "year": 2024,
+      "short_title": "Bias Runs Deep: Implicit Reasoning Biases in Persona-Assigned LLMs"
+    },
+    {
+      "author": "Opedal et al.",
+      "year": 2024,
+      "short_title": "Do Language Models Exhibit the Same Cognitive Biases as Human Learners?"
+    },
+    {
+      "author": "Mohammad",
+      "year": 2020,
+      "short_title": "Gender Gap in Natural Language Processing Research"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hohe Relevanz für AI/Fairness-Schnittstelle, aber begrenzte direkte Anwendung für Soziale Arbeit. Der Fokus auf Reasoning-Biases in LLMs und deren Interaction mit demografischen Markern ist relevant für alle Kontexte, in denen LLMs für Entscheidungsfindung oder Assessment in sozialen Diensten eingesetzt werden könnten.",
+    "unique_contribution": "Erste systematische Isolierung von Framing-induzierten Reasoning-Biases in LLMs mit objektiver Grundwahrheit; neuartige Demonstration der Interaktion zwischen semantischem Framing und sozialen Identitätsmarkern in grounded reasoning tasks.",
+    "limitations": "Datensatz mit 300 Szenarien ist klein; binäre Geschlechtsbehandlung (Mann/Frau); begrenzte Rassen-Kategorien (5); keine anderen Protected Attributes (Religion, Einkommen); empirisch begrenzt auf mathematische Vergleichsaufgaben."
+  },
+  "target_group": "KI-Forscher, LLM-Entwickler, Fairness/Bias-Experten, Policymaker im AI-Bereich, Evaluatoren von LLM-Systemen. Indirekt relevant für Sozialarbeiter und Praktiker, die LLMs für Assessment oder Entscheidungshilfen nutzen möchten."
+}

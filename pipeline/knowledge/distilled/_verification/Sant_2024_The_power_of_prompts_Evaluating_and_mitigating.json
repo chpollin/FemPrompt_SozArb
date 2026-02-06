@@ -1,0 +1,74 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Bias-Reduktionswerte (12.4 für Katalanisch, 11.7 für Spanisch auf WinoMT) nicht vollständig in Kernbefund wiedergegeben",
+        "Unterscheidung zwischen base LLMs und instruction-tuned LLMs in Kernbefund nicht deutlich genug hervorgehoben",
+        "Konkrete Modellnamen (Llama-2-7B, Aguila-7B, Flor-6.3B) nur in Kategorie-Evidenz, nicht in Kernbefund"
+      ],
+      "missing_minor": [
+        "Erwähnung von Google Translate und Mt-aina-en-ca in Modellbeschreibung fehlt",
+        "Details zu FLoRes200-Verwendung nur beiläufig erwähnt",
+        "Zeitliche Kontexte (Meta Releases 2020/2022) nicht erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Kernbefund formuliert '12%' generisch, sollte präzisieren: '12.4% für Katalanisch und 11.7% für Spanisch auf WinoMT'"
+      ],
+      "distortions": [
+        "Methodikbeschreibung unterschätzt die Komplexität: 10 Modellvarianten (nicht nur 7 LLMs + 3 NMT), einige Modelle haben mehrere Konfigurationen (base + chat + GB-prompt)",
+        "Chain-of-Thought wird als eine Technik neben anderen dargestellt, ist aber die erfolgreichste und am Ende beste Variante - Gewichtung könnte deutlicher sein"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Machine_Translation / Neural_Machine_Translation (relevanter als nur 'KI_Sonstige')",
+        "Mehrsprachigkeit / Multilingual NLP (Englisch-Katalanisch-Spanisch ist Kernfokus)",
+        "Evaluation_Metrics / Benchmarking (4 etablierte Test-Datasets sind zentral)",
+        "Instruction_Tuning (spezifische Kategorie für instruction-tuned Varianten sinnvoll)"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "Machine_Translation",
+        "Multilingual_NLP",
+        "Benchmarking",
+        "Instruction_Tuning"
+      ],
+      "categories_remove": [
+        "KI_Sonstige"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "current": "Base LLMs zeigen signifikant höheren Geschlechterbias als NMT-Modelle; durch gezielte Prompt-Strukturen mit Chain-of-Thought kann Gender-Bias bei instruktionsgestimmten LLMs um bis zu 12% reduziert werden",
+        "revised": "Base LLMs zeigen signifikant höheren Geschlechterbias als NMT-Modelle (z.B. auf Gold BUG: Llama-2-7B 57.7% GAcc vs. NLLB-200 62.1%); durch gezielte Prompt-Strukturen mit Chain-of-Thought kann Gender-Bias bei instruktionsgestimmten LLMs um 12.4% (Katalanisch) und 11.7% (Spanisch) auf WinoMT reduziert werden"
+      },
+      {
+        "section": "Methodik",
+        "current": "Empirisch: Benchmarking von 7 LLMs und 3 NMT-Modellen",
+        "revised": "Empirisch: Benchmarking von 3 base LLMs (Llama-2-7B, Aguila-7B, Flor-6.3B) + 2 instruction-tuned Varianten (Llama-2-7B-chat, mit/ohne GB-prompt) und 4 NMT-Modellen (M2M-100-1.2B, NLLB-200-1.3B, Mt-aina-en-ca, Google Translate)"
+      },
+      {
+        "section": "Hauptargumente",
+        "current": "Prompt-Engineering mit Chain-of-Thought-Reasoning und strukturiertem Schritt-für-Schritt-Ansatz ist eine praktikable Strategie",
+        "revised": "Prompt-Engineering mit Chain-of-Thought-Reasoning (Identifikation → Pronomen → Coreference → Geschlechtsbestimmung → Übersetzung) ist die effektivste praktikable Strategie und erreicht > 12% Bias-Reduktion ohne Modellretraining, während einfachere Prompts und few-shot Learning weniger wirksam sind"
+      },
+      {
+        "section": "Assessment-Relevanz - Limitations",
+        "current": "keine",
+        "revised": "Paper evaluiert nur explizit durch Prompts adressierbare Gender-Bias-Phänomene; komplexere soziolinguistische Bias-Formen (z.B. Intersektionalität, kulturelle Stereotype) bleiben unberücksichtigt; Trade-offs zwischen erfolgreicher Bias-Mitigation und potenzieller Übersetzungsqualitätseinbußen nicht gründlich analysiert"
+      }
+    ]
+  }
+}

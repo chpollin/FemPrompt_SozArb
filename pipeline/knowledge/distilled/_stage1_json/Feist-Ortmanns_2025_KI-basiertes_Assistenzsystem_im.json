@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "title": "KI-basiertes Assistenzsystem in der Kinder- und Jugendhilfe: Digitalität, Kinderschutz und Hilfeplanung",
+    "authors": [
+      "Feist-Ortmanns"
+    ],
+    "year": 2025,
+    "type": "report",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Wie können KI-Systeme und digitale Technologien in der Kinder- und Jugendhilfe verantwortungsvoll eingesetzt werden, und welche Auswirkungen haben sie auf die Praktiken in Kinderschutz und Hilfeplanung?",
+    "methodology": "Theoretisch-konzeptionell mit praktischen Explorationen und Zukunftsszenarios; kombiniert Literaturreview zu Digitalität mit Use-Case-Szenarien und Diskussionsprompts für Fachkräfte",
+    "key_finding": "KI-Systeme sind nicht neutrale Werkzeuge sondern Akteure, die die sozialpädagogische Praxis grundlegend transformieren. Ein verantwortungsvoller Einsatz erfordert kritische Reflexion von Bias, Transparenz und das Primat des Kindeswohls.",
+    "data_basis": "keine empirischen Daten; theoretisches Konzeptpapier mit Szenarien und Fallbeispielen"
+  },
+  "arguments": [
+    "Digitalität als Alltagspraxis erfordert eine Unterscheidung zwischen technischen Innovationen (z.B. digitale Fallakten) und lebensweltlicher Digitalität von Adressat:innen; dies betont die Notwendigkeit, analytische Differenzen zu bewahren.",
+    "KI-Systeme sind nicht neutrale Entscheidungshilfen, sondern Akteure, die eigene Agency ausüben und die Professionskulturen sowie Machtdynamiken in der Sozialen Arbeit beeinflussen.",
+    "Bias in Trainingsdaten und algorithmischen Designs kann zu Diskriminierung marginalisierter Gruppen führen; ein ethischer Rahmen mit Prinzipien wie Transparenz, Fairness und Kindeswohl als oberste Priorität ist erforderlich."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Entwicklung von Leitlinien für ethischen Einsatz von KI in sozialer Arbeit; Schulung und Aufklärung von Fachkräften über Nutzung und Grenzen von KI-Tools; Abschnitt 'Verantwortungsvoller Umgang mit KI' adressiert Kompetenzentwicklung.",
+    "Generative_KI": "Detaillierte Darstellung von ChatGPT, GPT-3.5, GPT-4, GPT-4o und deren Entwicklung; praktische Beispiele für text- und bildgenerierende KI-Tools (DALL-E, Deepl, Murf.ai, Sora, AIVA) im Kontext der Jugendhilfe.",
+    "Prompting": "Exkurs zu Prompts mit Kategorien Klarheit, Kontext, Zielformulierung; Beispiele einfacher und komplexer Prompts für die Kinder- und Jugendhilfe; Diskussion von Sprache, Ton und Formulierungsstrategien.",
+    "KI_Sonstige": "Klassische Programmierung vs. KI-Systeme; Machine Learning, Deep Learning, neuronale Netze; algorithmische Entscheidungssysteme; Natural Language Processing; Computer Vision für Verhaltenserkennung in AR-Szenarien.",
+    "Soziale_Arbeit": "Direkter Fokus auf Anwendungen in Kinder- und Jugendhilfe (KJSH), Kinderschutz, Hilfeplanung, Hausbesuche, Online-Beratung, digitale Hilfeplangespräche; Praxisszenarien mit Fachkräften und Familien.",
+    "Bias_Ungleichheit": "Ausführliche Thematisierung von Bias in Trainingsdaten, algorithmischen Verzerrungen und Mangel an Diversität in der KI-Entwicklung; Folgen von Diskriminierung durch KI für marginalisierte Gruppen; Risiken für Arbeitsmarkt.",
+    "Diversitaet": "Abschnitt zu Mangel an Diversität unter KI-Entwickler:innen und Forscher:innen; Forderung nach Inklusion und interkulturellen Perspektiven in der Kinder- und Jugendhilfe; Berücksichtigung verschiedener lebensweltlicher Kontexte.",
+    "Fairness": "Grundprinzipien für ethischen Einsatz: Respektierung der Privatsphäre, Transparenz, Verantwortung und Rechenschaft, Fairness und Nicht-Diskriminierung, Kindeswohl als oberste Priorität; kritische Diskussion von Fair-ML-Anforderungen."
+  },
+  "references": [
+    {
+      "author": "Stalder",
+      "year": 2016,
+      "short_title": "Kultur der Digitalität"
+    },
+    {
+      "author": "Weinhardt",
+      "year": 2021,
+      "short_title": "Doing Digitality"
+    },
+    {
+      "author": "Bettinger & Hugger",
+      "year": 2020,
+      "short_title": "Digitalität als Alltagspraxis"
+    },
+    {
+      "author": "Weizenbaum",
+      "year": 1966,
+      "short_title": "ELIZA - Chatbot als Psychotherapeutin-Simulation"
+    },
+    {
+      "author": "Turing",
+      "year": 1950,
+      "short_title": "Turing Test"
+    },
+    {
+      "author": "OpenAI",
+      "year": 2022,
+      "short_title": "ChatGPT und GPT-3.5"
+    },
+    {
+      "author": "OpenAI",
+      "year": 2023,
+      "short_title": "GPT-4"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle KI und Soziale Arbeit. Das Paper adressiert konkret die Implementierung von KI-Systemen in der Kinder- und Jugendhilfe und kombiniert technisches Verständnis mit sozialpädagogischen Herausforderungen. Gender Studies sind nicht zentral, aber Diversität und Fairness werden thematisiert.",
+    "unique_contribution": "Bietet eine deutschsprachige, praxisorientierte Systematisierung von KI-Anwendungen in der Kinder- und Jugendhilfe mit kritischem Fokus auf Bias, Ethik und die Agentur von KI-Systemen; verbindet theoretische Konzepte von Digitalität mit konkreten 2035-Zukunftsszenarien für Fachkräfte.",
+    "limitations": "Keine empirischen Daten oder Evaluationsstudien; theoretisch-explorativer Charakter; Gender-Perspektive unterentwickelt; keine tiefergehende Analyse von intersektionalen Effekten; Anwendungsbeispiele sind Szenarien ohne Implementierungsevaluierung."
+  },
+  "target_group": "Fachkräfte in der Kinder- und Jugendhilfe, Sozialarbeiter:innen, Leitungskräfte von Hilfeeinrichtungen, Ausbilder:innen im Bereich Soziale Arbeit, KI-Implementator:innen in sozialen Diensten, Policy-Maker:innen im Bereich Jugendhilfe, Hochschullehrende in Sozialwissenschaften und KI-Ethik"
+}

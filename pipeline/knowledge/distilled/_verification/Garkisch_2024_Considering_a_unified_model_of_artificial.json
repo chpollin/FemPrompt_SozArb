@@ -1,0 +1,55 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Praktikabereiche (child welfare, youth work, mental health) nicht ausführlich differenziert",
+        "Konkrete Beispiele von AI-Implementierungen sind unterrepräsentiert",
+        "Die 67 analysierten Artikel werden nicht nach Themen/Clustern aufgeschlüsselt"
+      ],
+      "missing_minor": [
+        "Datenbankauswahl (PubMed, SCOPUS, Web of Science etc.) nicht spezifiziert",
+        "Zeitraum 15 Jahre korrekt, aber exakte Grenzen (2009-2024?) nicht explizit genannt",
+        "Intercoderreliabilität/Validierungsmechanismen der qualitativen Analyse nicht erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 97,
+      "errors": [],
+      "distortions": [
+        "MINOR: 'Möglichkeiten' (possibilities) werden in Kernbefund knapp erwähnt, obwohl Originaltext ausführlich possibilities und risks getrennt behandelt"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Datenschutz/Datensicherheit (Data Protection/Privacy) - Original erwähnt mehrfach 'privacy regulations', 'data quality', 'IT infrastructure'"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_addition": "- Datenschutz_Privacy"
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Asymmetrie zwischen Möglichkeiten und Risiken",
+        "suggestion": "Konkretisieren: 'Möglichkeiten umfassen Vorhersagekompetenz, Qualitätskontrolle und maßgeschneiderte Dienste; Risiken beinhalten Diskriminierung durch Bias und fehlende Partizipation.'"
+      },
+      {
+        "section": "Methodik",
+        "issue": "Datenbankauswahl unterspecifiziert",
+        "suggestion": "Hinzufügen: 'Interdisziplinäre Datenbanken wurden verwendet (Soziologie, Informatik, Ethik)' - basierend auf: 'we made an effort to encompass interdisciplinary databases'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Fehlende Privacy/Datenschutz-Kategorie",
+        "suggestion": "Neue Kategorie hinzufügen mit Zitat: 'the availability of data is the basis for AI applications (Schneider & Seelmeyer, 2019), as in many cases it is simply stored in silos [...] it must be of high quality, structured, and available over a certain period of time'"
+      }
+    ]
+  }
+}

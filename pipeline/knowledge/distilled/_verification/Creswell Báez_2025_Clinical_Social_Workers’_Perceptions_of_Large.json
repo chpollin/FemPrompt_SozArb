@@ -1,0 +1,68 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Explizite Angabe der Stichprobengröße (n=?) - nur indirekt aus Teilnehmerzitaten ableitbar",
+        "Keine Detailinformationen zu Rekrutierungsstrategie und Ein-/Ausschlusskriterien",
+        "Fehlende Informationen zu Datenerhebungszeitraum und -ort",
+        "Keine Angaben zu demografischen Charakteristika der Stichprobe (Alter, Geschlecht, Ethnizität, Erfahrung)"
+      ],
+      "missing_minor": [
+        "Konkrete Zahlenwerte zu Codeanzahl oder Themenzahl nicht angegeben",
+        "Spezifische Zitate zu Resistance-Aspekten könnten ausführlicher sein",
+        "Diskussion der Interrater-Reliabilität nicht erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Publikationsdatum: Original zeigt 'Published online: 01 Aug 2025', Dokument nennt 'year: 2025' - korrekt, aber check auf Volumen/Issue: Journal of Evidence-Based Social Work, 23:1, 42-63 - dies ist korrekt erfasst"
+      ],
+      "distortions": [
+        "Die Aussage 'n nicht explizit angegeben' im generierten Dokument ist korrekt, könnte aber präzisieren: Der Text zeigt Zitate bis Teilnehmer #18, was auf mindestens 18 Teilnehmer hindeutet - dies wird im generierten Dokument korrekt dargestellt",
+        "Kernbefund ist leicht verallgemeinert zusammengefasst - original differenziert stärker zwischen Nützlichkeitswahrnehmungen und Barrieren (korrekt auch im generierten Dokument)"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik_und_Verantwortung - explizit im Original unter 'Ethical considerations' behandelt (Datensecurity, Bias, Equity)",
+        "Technologieakzeptanz / Technology_Acceptance - TAM2 ist das zentrale theoretische Rahmenwerk, könnte eigenständige Kategorie sein",
+        "Mensch-Maschine-Interaktion / Human-AI_Collaboration - insbesondere Supervision und Entscheidungsfindung sind zentral",
+        "Professionelle_Identität - der Text diskutiert erheblich, wie LLMs professionelle Normen und Grenzen herausfordern"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "recommended_addition": "sample_size: 18_participants (inferred from participant citations #1-#18)",
+      "date_note": "conversion_date: 2026-02-03T18:24:08 im Original, processed: 2026-02-05 im generierten Dokument - konsistent"
+    },
+    "content_fixes": [
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Fehlende Kategorien sollten hinzugefügt werden",
+        "suggestion": "Neue Kategorien ergänzen: Ethik_und_Verantwortung, Professionelle_Identität, Human-AI_Collaboration"
+      },
+      {
+        "section": "Methodologie",
+        "issue": "Stichprobengröße unklar",
+        "suggestion": "Ersetze '(n nicht explizit angegeben, aber multiple Zitate von Teilnehmern #1-#18 deuten auf mindestens 18 Teilnehmer hin)' durch '(n=18, abgeleitet aus Teilnehmerzitaten #1-#18; exakte Stichprobengröße im Ausschnitt nicht angegeben)'"
+      },
+      {
+        "section": "Limitations",
+        "issue": "Könnte präziser werden",
+        "suggestion": "Ergänze: 'Keine Informationen zu Rekrutierungsstrategie, Ein-/Ausschlusskriterien oder demografischen Charakteristika der Stichprobe'"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Könnte die TAM2-Dimensionen stärker explizieren",
+        "suggestion": "Optional: 'Das Modell TAM2 zeigt, dass perceived usefulness und ease of use durch social influence processes (Peernormen, institutionelle Richtlinien) und cognitive instrumental processes (job relevance, output quality) beeinflusst werden.'"
+      }
+    ]
+  }
+}

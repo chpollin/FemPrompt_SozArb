@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Dipper: Diversity in Prompts for Producing Large Language Model Ensembles in Reasoning Tasks",
+    "authors": [
+      "Gregory Kang Ruey Lau",
+      "Wenyang Hu",
+      "Diwen Liu",
+      "Jizhuo Chen",
+      "See-Kiong Ng",
+      "Bryan Kian Hsiang Low"
+    ],
+    "year": 2023,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie kann man durch Diversity in Prompts ein leistungsfähiges LLM-Ensemble zur Laufzeit erzeugen, um die Reasoning-Fähigkeiten kleinerer Modelle zu verbessern?",
+    "methodology": "Empirisch: Entwicklung eines trainingsfreien Ensemble-Frameworks (DIPPER) mit Prompt-Generator, Prompt-Selector (basierend auf semantischer Volumenoptimierung) und Response-Aggregator, evaluiert auf MATH, GSM8K und MMLU-STEM Datensätzen.",
+    "key_finding": "Ein Ensemble aus drei kleinen Modellen (Qwen2-MATH-1.5B) mit optimierten, diversen Prompts kann die Leistung eines größeren Modells (Qwen2-MATH-7B) erreichen oder übertreffen, mit etwa 10%-Punkt Accuracy-Verbesserung gegenüber dem einzelnen Modell.",
+    "data_basis": "Experimentelle Evaluierung auf MATH (500 Samples davon 480 Test-Samples), GSM8K und MMLU-STEM mit 20-Sample Validierungssets"
+  },
+  "arguments": [
+    "Prompt-Diversity in LLM-Ensembles ist eine effektive Alternative zu Heterogeneity zwischen verschiedenen Modelltypen, da sie auf einer einzelnen Modellinstanz implementierbar ist und beliebig skalierbar.",
+    "Die Optimierung von Prompt-Ensembles kann als Submodular-Maximierungsproblem formuliert werden, wobei Fidelity (Validierungsgenauigkeit) und Semantic Diversity (Volumen im Embedding-Raum) kombiniert werden.",
+    "LLM-basierte Aggregation (LLMA) übertrifft Mehrheitsabstimmung bei der Ensemble-Aggregation, da sie das Reasoning-Output berücksichtigen kann, was bei Disaggreements zu 92% Korrektheit führt versus 8% bei Majority Voting."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": false,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": false
+  },
+  "category_evidence": {
+    "Generative_KI": "Fokus auf Large Language Models (LLMs) wie Qwen2-MATH und GPT-4o für Reasoning-Tasks; 'we propose DIPPER, a novel, training-free LLM ensemble framework where a single LLM model type is fed an optimized, diverse set of reasoning prompts in parallel'",
+    "Prompting": "Zentrale Komponente ist Prompt-Engineering: 'Drawing inspiration from how using different prompts w would result in varying response distributions...our DIPPER framework has the set of prompts {w_i} fed into the ensemble as the key ensemble design parameter'; Treatment von prompt fidelity und diversity metrics",
+    "KI_Sonstige": "Ensemble Methods und Inferenzzeit-Optimierungen für Machine Learning; Submodular optimization; Batch inference techniques wie vLLM",
+    "Diversitaet": "Zentrale Fokus auf Diversity in Prompts und deren Optimierung: 'a key challenge in achieving high performing ensembles is how diversity can be appropriately injected among its constituents'; semantic volume metric als Diversitätsmessung; 'more diverse prompts point to more varied directions in semantic space'"
+  },
+  "references": [
+    {
+      "author": "Wei et al.",
+      "year": 2023,
+      "short_title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+    },
+    {
+      "author": "Yao et al.",
+      "year": 2023,
+      "short_title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models"
+    },
+    {
+      "author": "Shinn et al.",
+      "year": 2024,
+      "short_title": "Reflexion: Language agents with verbal reinforcement learning"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2023,
+      "short_title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
+    },
+    {
+      "author": "Kojima et al.",
+      "year": 2023,
+      "short_title": "Large Language Models are Zero-Shot Reasoners"
+    },
+    {
+      "author": "Kwon et al.",
+      "year": 2023,
+      "short_title": "Efficient memory management for large language model serving with pagedattention"
+    },
+    {
+      "author": "Hendrycks et al.",
+      "year": 2021,
+      "short_title": "Measuring mathematical problem solving with the MATH dataset"
+    },
+    {
+      "author": "Nemhauser et al.",
+      "year": 1978,
+      "short_title": "An analysis of approximations for maximizing submodular set functions"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat keinen direkten Bezug zu Sozialer Arbeit, Gender Studies oder kritischen Perspektiven auf KI-Gerechtigkeit. Es ist rein technisch orientiert auf Optimierung von LLM-Ensembles für Reasoning-Tasks. Die Thematisierung von 'Diversity' bezieht sich ausschließlich auf technische Prompt-Diversität, nicht auf gesellschaftliche Repräsentation oder Fairness.",
+    "unique_contribution": "Erste systematische Untersuchung homogener LLM-Ensembles, die Diversity ausschließlich durch Prompt-Variation injizieren, mit theoriegeleiteter Submodular-Optimierung basierend auf semantischer Volumenmaximierung.",
+    "limitations": "Evaluierung beschränkt auf mathematische Reasoning-Tasks (MATH, GSM8K, MMLU-STEM); keine Untersuchung auf anderen Task-Typen; keine Analyse möglicher negativer Auswirkungen oder ethischer Implikationen der Ensemble-Methode; keine Diskussion von Fairness oder Bias."
+  },
+  "target_group": "KI-Entwickler, NLP-Forscher, Praktiker im Bereich Large Language Models, die Inferenzzeit-Optimierungen suchen; Entwickler mit Ressourcenbeschränkungen; nicht relevant für Sozialarbeiter, Policymaker oder kritische KI-Perspektiven"
+}

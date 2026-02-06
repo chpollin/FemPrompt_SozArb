@@ -1,0 +1,50 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Schwellenwert-Details (Score ≥80 für Einstellung) nicht erwähnt",
+        "Geografische Variation (different states) nicht explizit als Robustheitscheck erwähnt",
+        "Detaillierte Befunde zu asiatischen und hispanischen Kandidaten in Kernbefund unterrepräsentiert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: Im Kernbefund wird 'benachteiligen schwarze männliche Kandidaten' formuliert, Original betont aber 'most models' - nicht alle zeigen diesen Bias gleich stark"
+      ]
+    },
+    "category_validation": {
+      "score": 96,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Arbeitsmärkte/Labour_Economics könnte ergänzend hinzugefügt werden (wird erwähnt: 'labor market outcomes and distributions significantly affect the effectiveness of economic policies')",
+        "Recruiting_HR_Processes als praktische Anwendungsdomäne explizit"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_to_add": [
+        "Arbeitsmärkte",
+        "HR_Prozesse"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Überverallgemeinerung des Black-Male-Bias",
+        "suggested_text": "LLMs bevorzugen systematisch weibliche Kandidaten, während die meisten Modelle schwarze männliche Kandidaten benachteiligen bei ansonsten ähnlichen Qualifikationen."
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Ergänzung zu Ergebnissen neuerer Modelle",
+        "suggested_addition": "Neuere Modelle (GPT-4o, Gemini 1.5 Flash) zeigen Verbesserungen bei asiatischen und hispanischen Kandidaten, können aber zu Überkorrekturungen führen und bevorzugen diese Gruppen teilweise überproportional."
+      }
+    ]
+  }
+}

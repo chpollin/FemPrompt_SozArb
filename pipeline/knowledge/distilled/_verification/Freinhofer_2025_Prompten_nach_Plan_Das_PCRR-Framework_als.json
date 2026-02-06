@@ -1,0 +1,57 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Ergebnisse aus Praxisbeispiel 3 (BAfEP) nicht detailliert erfasst",
+        "Diskussion methodischer Limitationen zu 'Akzeptanz bestimmter Prompting-Techniken' wenig konkretisiert",
+        "Details zu Unterschieden zwischen Text- und Bild-Prompts in Create-Phase nicht ausführlich dokumentiert"
+      ]
+    },
+    "correctness": {
+      "score": 97,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: 'Praxisbeispiel 2' wird als HTL Perg mit n=19 Fragebögen korrekt wiedergegeben, aber die genaue Stichprobengröße (20 Schüler:innen, 19 abgegebene Fragebögen) wird im generierten Dokument zu 'n=19' vereinfacht, was marginal ist"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Computational_Thinking - Im Originaltext explizit erwähnt: 'Die drei Phasen Plan, Review und Reflect stützen sich auf Erkenntnisse des Computational Thinking'",
+        "Educational_Assessment - Paper diskutiert Leistungsbeurteilung und Bewertung von Prompts durch Lehrpersonen",
+        "Didactics_Pedagogy - Zentral für Framework ist didaktische Einbettung und pädagogisches Gesamtkonzept"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_expansion": [
+        "Computational_Thinking",
+        "Educational_Assessment",
+        "Didactics_Pedagogy"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Expliziter Verweis auf Computational Thinking fehlt",
+        "suggestion": "Ergänzen: 'Plan, Review und Reflect-Phasen basieren auf Erkenntnissen des Computational Thinking sowie Forderungen der kritischen und ethischen Beurteilung'"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Social Work relevance möglicherweise zu restriktiv bewertet",
+        "suggestion": "Framework könnte für Sozialarbeiter:innen relevant sein, die mit Schüler:innen oder in digitaler Jugendarbeit tätig sind - sollte differenzierter ausgedrückt sein"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "Einige zentrale Referenzen aus dem Paper fehlen",
+        "suggestion": "Hinzufügen: [[Helmke_2003]] (Unterrichtsqualität), [[Markauskaite_et_al_2022]] (AI Capabilities for Learners)"
+      }
+    ]
+  }
+}

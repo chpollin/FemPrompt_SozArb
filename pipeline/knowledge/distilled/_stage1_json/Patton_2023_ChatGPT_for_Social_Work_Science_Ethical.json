@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "ChatGPT for Social Work Science: Ethical Challenges and Opportunities",
+    "authors": [
+      "Desmond Upton Patton",
+      "Aviv Y. Landau",
+      "Siva Mathiyazhagan"
+    ],
+    "year": 2023,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Welche Chancen und ethischen Herausforderungen entstehen durch die Anwendung von ChatGPT und anderen Large Language Models in der sozialarbeiterischen Forschung?",
+    "methodology": "Theoretisch/Normativ - konzeptionelle Analyse und Policy-Empfehlungen ohne empirische Datenerhebung",
+    "key_finding": "ChatGPT bietet innovative Möglichkeiten für die Sozialarbeitswissenschaft (Forschungsdesign, Qualitative Datenanalyse, Textbearbeitung), erfordert jedoch strenge ethische Richtlinien bezüglich Bias, Datenschutz, Transparenz und sozialer Gerechtigkeit. Die Profession muss ein umfassendes ethisches Framework entwickeln.",
+    "data_basis": "nicht empirisch - Literaturbasierte konzeptionelle Analyse und Fallbeispiele"
+  },
+  "arguments": [
+    "ChatGPT kann als Werkzeug zur Verbesserung qualitativer Forschungsmethoden (Themengenerierung, Transkriptbearbeitung, Interviewprotokolle) und zur Förderung von Innovationen in der Sozialarbeitswissenschaft dienen, insbesondere für ressourcenbenachteiligte Forscherinnen und Forscher sowie BIPOC-Scholars.",
+    "ChatGPT perpetuiert und verstärkt bestehende Bias durch Training auf nicht-verifizierten Internet-Daten, die Eurozentrische und weiße Perspektiven überrepräsentieren und Arbeiten von BIPOC-Autoren, Menschen mit Behinderungen und LGBTQIA+-Personen marginalisieren.",
+    "Kritische ethische und rechtliche Herausforderungen entstehen durch fehlende Transparenz bezüglich Datenschutz, Einwilligungsfragen, potenzielles Plagiarismus und die Produktion von unverifizierbaren, quellenlos generierten Informationen, die die Integrität wissenschaftlicher Arbeit gefährden."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "The paper calls for developing educational frameworks and competencies: 'Through direct engagement with ChatGPT (e.g., free or paid subscription to OpenAI, reading groups, panel discussions, and conference presentations), social work scientists may gain a deeper understanding of its capabilities and limitations'",
+    "Generative_KI": "Central focus on ChatGPT and LLMs: 'ChatGPT is an artificial intelligence chatbot. It is a fine-tuned version of an LLM - an artificial intelligence system that processes and analyzes natural language'",
+    "Prompting": "Discusses prompt engineering and strategic prompting: 'ChatGPT could identify language in case notes and referrals...ChatGPT might also help social work scientists generate content...by explicitly ask[ing] to identify the work of BIPOC scholars'",
+    "KI_Sonstige": "Discussion of broader AI systems and NLP: 'large language models (LLM), specifically ChatGPT...algorithms like ChatGPT are themselves bureaucrats, leveraging existing oppressive institutional thinking'",
+    "Soziale_Arbeit": "Explicit social work focus throughout: 'the potential use of ChatGPT in social work science...exploring opportunities and ethical challenges related to the deployment of large language models (LLMs), specifically ChatGPT for social work science'",
+    "Bias_Ungleichheit": "Critical analysis of bias: 'LLMs are trained on large amounts of data that may reflect the biases and viewpoints of the individuals and groups who create them...LLMs may be more likely to offer Eurocentric and white-centric content and to ignore literature...from BIPOC authors and authors from the Global South'",
+    "Diversitaet": "Strong emphasis on inclusion and marginalized communities: 'social work scientists should adopt an antiracist research framework...explicitly ask to identify the work of BIPOC scholars and resources and perspectives from underrepresented communities...This practice would perpetuate existing social and academic exclusions...BIPOC, people with disabilities, LGBTQIA individuals, and those with other underrepresented identities'",
+    "Fairness": "Addresses algorithmic fairness and equitable application: 'social work scientists may fine-tune ChatGPT capabilities through a social justice and antiracist lens applied to language analysis...Advancing antiracist and social justice frameworks as ethical guidelines or essential characteristics...guardrails for the use of AI tools in social work science while centering human rights and social justice'"
+  },
+  "references": [
+    {
+      "author": "Caplan, R. & Boyd, D.",
+      "year": 2018,
+      "short_title": "Isomorphism through algorithms: Institutional dependencies in the case of Facebook"
+    },
+    {
+      "author": "Dwivedi, Y. K. et al.",
+      "year": 2023,
+      "short_title": "So what if ChatGPT wrote it? Multidisciplinary perspectives on opportunities, challenges and implications of generative conversational AI"
+    },
+    {
+      "author": "Goings, T. C., Belgrave, F. Z., Mosavel, M., & Evans, C. B. R.",
+      "year": 2023,
+      "short_title": "An antiracist research framework: Principles, challenges, and recommendations for dismantling racism through research"
+    },
+    {
+      "author": "Okerlund, J. et al.",
+      "year": 2022,
+      "short_title": "What's in the Chatterbox? Large language models, why they matter, and what we should do about them"
+    },
+    {
+      "author": "Singer, J. B., Báez, J. C., & Rios, J. A.",
+      "year": 2023,
+      "short_title": "AI creates the message: Integrating AI language learning models into social work education and practice"
+    },
+    {
+      "author": "van Dis, E. A. et al.",
+      "year": 2023,
+      "short_title": "ChatGPT: Five priorities for research"
+    },
+    {
+      "author": "Victor, B. G., Kubiak, S., Angell, B., & Perron, B. E.",
+      "year": 2023,
+      "short_title": "Time to move beyond the ASWB licensing exams: Can generative artificial intelligence offer a way forward for social work?"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat eine hohe Relevanz für die Schnittstelle KI/Soziale Arbeit/Diversität. Es adressiert explizit die Anwendung generativer KI-Systeme in der sozialarbeiterischen Wissenschaft und verankert diese in antirassistischen und sozialen Gerechtigkeitsrahmen. Die Analyse ist spezifisch für die Sozialarbeitsprofession und ihre ethischen Standards.",
+    "unique_contribution": "Der besondere Beitrag liegt in der Entwicklung eines spezialisierten ethischen Rahmens für LLM-Nutzung in der Sozialarbeit, der von generischen Tech-Ethik-Richtlinien unterschieden ist und explizit antirassistische Perspektiven sowie die Bekämpfung von Bias in LLMs mit Fokus auf marginalisierte Gemeinschaften integriert.",
+    "limitations": "Das Paper ist konzeptionell-normativ und bietet keine empirischen Daten zur Evaluierung der Auswirkungen von ChatGPT in konkreten Sozialarbeit-Kontexten; die Empfehlungen basieren auf theoretischen Überlegungen statt auf Implementierungsstudien."
+  },
+  "target_group": "Sozialarbeiterinnen und Sozialarbeiter, Hochschullehrerinnen und -lehrer in Sozialer Arbeit, Forscherinnen und Forscher, Professionelle Verbände (NASW, CSWE, SSWR), Policy-Maker und ethische Review-Boards im Sozialsektor, sowie BIPOC-Scholars und unterrepräsentierte Akademikerinnen und Akademiker"
+}

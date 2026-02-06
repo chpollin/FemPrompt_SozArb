@@ -1,0 +1,50 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Projektdetails (Rita Referral, Algorithm Project, Referrals in Focus) sind zusammengefasst, aber die unterschiedlichen Funktionen und Zeiträume könnten detaillierter sein",
+        "Die abduktive Kodierungsstrategie und situational analysis werden erwähnt, aber nicht ausführlich erklärt",
+        "Reflexionen für die Praxis sind im Original vorhanden, aber im generierten Dokument nicht prominent platziert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minimale: Die Methodik-Beschreibung fasst die drei Projekte zusammen, könnte aber deutlicher machen, dass die Interviews teilweise online durchgeführt wurden (COVID-19-Kontext)"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Mögliche Ergänzung: Digitale Verwaltung/E-Government wäre relevant, da das Paper sich mit Digitalisierung in der öffentlichen Verwaltung befasst",
+        "Mögliche Ergänzung: Datenschutz/Privatsphäre wird im Original thematisiert (Bedenken von Sozialarbeitern zu Datenspeicherung)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_expansion": [
+        "Digitale_Verwaltung",
+        "Datenschutz"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "COVID-19-Kontext könnte expliziter erwähnt sein",
+        "suggestion": "Hinzufügen: 'Alle Interviews wurden aufgrund der COVID-19-Pandemie online durchgeführt.'"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Könnte präziser zwischen Standardisierung und Kontextsensitivität differenzieren",
+        "suggestion": "Ergänzung: '...während gleichzeitig kontextuelle Urteile für die praktische Anwendung unerlässlich bleiben.'"
+      }
+    ]
+  }
+}

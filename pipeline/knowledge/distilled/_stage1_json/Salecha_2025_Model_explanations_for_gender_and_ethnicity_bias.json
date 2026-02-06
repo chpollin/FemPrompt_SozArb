@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "title": "Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives",
+    "authors": [
+      "Martha Otisi Dimgba"
+    ],
+    "year": 2025,
+    "type": "thesis",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können modellgenerierte Erklärungen zur Mitigation von Gender- und Ethnizitätsbias in von LLMs generierten Narrativen eingesetzt werden?",
+    "methodology": "Empirisch: Vergleichende Analyse von drei LLMs (Llama 3.1 70B Instruct, Claude 3.5 Sonnet, GPT-4.0 Turbo) mit quantitativen Metriken (TVD, DPR) und qualitativer Story-Analyse über 25 Berufsfelder; iteratives prompt-basiertes Experiment mit modellgenerierten Erklärungen als Interventionen",
+    "key_finding": "Die Integration von modellgenerierten Erklärungen in Prompts reduziert Bias um 2%-20% und verbessert die demografische Repräsentation signifikant. Alle drei Modelle zeigen konsistente Muster bei den Stereotypen-Erklärungen, die auf zugrundeliegende Bias-Strukturen hinweisen.",
+    "data_basis": "5.400 generierte Stories (1.800 pro Modell) über 25 Berufsfelder; 500 Stories wurden von 3 unabhängigen Evaluatoren qualitativ analysiert; modellgenerierte Erklärungen wurden kondensiert und annotiert"
+  },
+  "arguments": [
+    "LLMs perpetuieren trainingsdaten-induzierte Biases in narrativen Inhalten, insbesondere bei Gender und Ethnizität, was substantielle Harms für unterrepräsentierte Gruppen verursacht.",
+    "Modellgenerierte Erklärungen können als Feedback-Mechanismus für iterative Bias-Mitigation genutzt werden und ermöglichen Transparenz über die Reasoning-Prozesse der Modelle bezüglich demografischer Entscheidungen.",
+    "Ein zwei-schritt-prompt-Ansatz, der Modell-Erklärungen integriert, ist effektiver als einfache Vanilla-Prompts, ohne dabei die narrative Qualität (Kohärenz, Kreativität) zu beeinträchtigen."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "Fokus auf drei LLMs: Llama 3.1 70B Instruct, Claude 3.5 Sonnet, GPT-4.0 Turbo; Analyse von KI-generierten narrativen Inhalten und deren bias-Charakteristiken.",
+    "Prompting": "Zentral: Prompt-Engineering-Ansatz mit iterativen Prompts; drei-stufige Prompting-Strategie (Vanilla → Baseline → BAME mit Erklärungen); zwei-schritt-Ansatz mit Buffer-Statement wie 'Before you start, let me provide additional information'.",
+    "KI_Sonstige": "Einsatz von Explainable AI (XAI) Prinzipien; TVD und DPR als quantitative Bias-Metriken; modellgenerierte Explanations als Interventionsmechanismus.",
+    "Bias_Ungleichheit": "Explicit focus: 'their outputs often amplify the biases present in their training data, perpetuating stereotypes and reinforcing societal inequities, particularly regarding gender and ethnicity'; Analyse von Unterrepräsentation in Narrativen.",
+    "Gender": "Explicit gender-bias analysis: 'Gender and Ethnicity Bias Mitigation'; gender-representation Analyse über 25 Berufsfelder; Geschlechterstereotype in Berufsfeldern (z.B. weibliche Überrepräsentation in Food Preparation).",
+    "Diversitaet": "BAME dataset konzentriert sich auf demografische Diversität; Analyse von Ethnicity-Repräsentation (European, African, API, Hispanic/Latino); intersektionale Perspektive auf gender-within-ethnicity.",
+    "Fairness": "Einsatz von Fairness-Metriken: Demographic Parity Ratio (DPR) und Total Variation Distance (TVD); Target-Distribution mit 25% für jede ethnische Gruppe; 0.15-Threshold für TVD-basierte Bias-Annotation als 'meaningful cutoff for bias quantification'."
+  },
+  "references": [
+    {
+      "author": "Buolamwini & Gebru",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+    },
+    {
+      "author": "Bolukbasi et al.",
+      "year": 2016,
+      "short_title": "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings"
+    },
+    {
+      "author": "Suresh & Guttag",
+      "year": 2021,
+      "short_title": "A Framework for Understanding Sources of Harm throughout the Machine Learning Life Cycle"
+    },
+    {
+      "author": "Zhao et al.",
+      "year": 2023,
+      "short_title": "Fairness and Explainability: Bridging the Gap Towards Fair Model Explanations"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2022,
+      "short_title": "Towards Intersectionality in Machine Learning: Including More Identities, Handling Underrepresentation, and Performing Evaluation"
+    },
+    {
+      "author": "Sun et al.",
+      "year": 2019,
+      "short_title": "Mitigating Gender Bias in Natural Language Processing: Literature Review"
+    },
+    {
+      "author": "Tao et al.",
+      "year": 2024,
+      "short_title": "Cultural bias and cultural alignment of large language models"
+    },
+    {
+      "author": "Wan et al.",
+      "year": 2023,
+      "short_title": "'Kelly is a Warm Person, Joseph is a Role Model': Gender Biases in LLM-Generated Reference Letters"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochrelevant für KI-Fairness und ethische KI-Entwicklung; begrenzte direkte Relevanz für Soziale Arbeit, aber wichtig für Verständnis von Bias in Systemen, die in sozialen Kontexten eingesetzt werden könnten. Fokus liegt primär auf technische Mitigation von Bias in Narrative-Generierung.",
+    "unique_contribution": "Innovativer Ansatz: Nutzung von modellgenerierten Erklärungen als iteratives Feedback-Loop für Bias-Mitigation; Schaffung des BAME-Datensatzes mit 5.400 Geschichten und expliziten Erklärungen; Demonstration, dass Explainability-fokussierte Interventionen Fairness-Metriken verbessern.",
+    "limitations": "Begrenztheit auf englischsprachige Inhalte und US-amerikanische Berufsklassifizierung; Training-Data-Analysen der Modelle nicht möglich due to unavailability; nur 500 Stories qualitativ analysiert; Threshold von 0.15 für TVD-Bias-Annotation erscheint arbiträr begründet."
+  },
+  "target_group": "KI-Entwickler, Fairness-Forscher, Machine Learning Engineer, Explainable-AI-Experten, Organisationen die generative KI einsetzen; sekundär: Policy-Maker im Bereich ethischer KI, Algorithmic Accountability-Fachleute"
+}

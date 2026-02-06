@@ -1,0 +1,70 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Konkrete Ergebnisse zu Prompt-Interventionen (Universalisierung, Empathie, Signalisierung, Motivation) nicht detailliert dargestellt",
+        "Cooperation Index (Figure 3) Ergebnisse nur oberflächlich erwähnt, keine konkreten Zahlen",
+        "Unterschiede zwischen Open-Weights und Closed-Weights Modellen nicht adressiert",
+        "Spezifische Modellunterschiede (z.B. Claude 3.5 Haiku vs. 3.7 Sonnet) erwähnt aber nicht erläutert"
+      ],
+      "missing_minor": [
+        "Laufzeit der Experimente nicht dokumentiert",
+        "Statistisches Signifikanzniveau nicht erwähnt",
+        "Vergleich zu menschlichen Urteilen in Kooperationsszenarien fehlt als Referenzbasis"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Claude Modellversion: Generiertes Dokument nennt 'Claude 3.7 Sonnet', während Original 'claude-3-7-sonnet-20250219' nennt - die Version 3.7 existiert, ist aber ungewöhnlich; sollte genauer mit Identifikator dokumentiert sein"
+      ],
+      "distortions": [
+        "Die Darstellung der Stern-Judging-Norm als 'einziges Modell' (nur Llama 3.3 70B) könnte den Eindruck erwecken, dies sei überraschend oder problematisch; der Original-Text präsentiert es neutraler als Varianz",
+        "Bias-Befunde werden im Assessment stärker akzentuiert ('kann soziale Ungleichheit verstärken') als der Original-Text, der differenzierter zwischen empirischen Findings und spekulativen Implikationen unterscheidet"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik_KI: Paper adressiert explizit ethische Implikationen ('fundamental to understand how such repercussions on human judgements can possibly affect our very own social fabric') - sollte hinzugefügt werden",
+        "Soziologie: Indirekte Reziprozität und Reputationssysteme sind soziologische Kernkonzepte - relevant für die Kategorisierung",
+        "Mensch-Maschine-Interaktion: Expliziter Fokus auf 'human-AI interactions' und deren Auswirkungen"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "Ethik_KI",
+        "Soziologie",
+        "Mensch_Maschine_Interaktion"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Prompt-Interventions-Ergebnisse zu vage",
+        "suggestion": "Spezifizieren Sie, welche Interventionstypen am wirksamsten waren. Original nennt: 'particularly through goal-oriented prompts' - dies sollte als separate Erkenntnis hervorgehoben werden"
+      },
+      {
+        "section": "Methodology",
+        "issue": "Modellverteilung unvollständig",
+        "suggestion": "Dokumentieren Sie das Verhältnis Open vs. Closed Weights Models (13 open, 8 closed in Table S1)"
+      },
+      {
+        "section": "Category_Evidence - Gender",
+        "issue": "Zu allgemein formuliert",
+        "suggestion": "Beispiel aus Figure 2 Panel B hinzufügen: Unterschiede zwischen älteren (IS-fokussiert) und neueren Modellen (kontextabhängiger) in Geschlechtsbewertung"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Zu kritisch gegenüber Domain Fit",
+        "suggestion": "Anerkennen, dass algorithmische Fairness in Sozialwesen-Systemen (Beispiel: Fallzuordnungen, Risikobewertungen) direkt relevant ist und das Paper dafür methodische Frameworks bietet"
+      }
+    ]
+  }
+}

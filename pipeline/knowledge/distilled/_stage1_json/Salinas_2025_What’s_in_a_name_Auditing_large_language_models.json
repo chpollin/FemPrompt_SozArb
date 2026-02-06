@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "What's in a Name? Auditing Large Language Models for Race and Gender Bias",
+    "authors": [
+      "Alejandro Salinas",
+      "Amit Haim",
+      "Julian Nyarko"
+    ],
+    "year": 2025,
+    "type": "workingPaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Sind state-of-the-art Large Language Models (einschließlich GPT-4) anfällig für systematische Biase basierend auf Namen, die mit Rasse und Geschlecht korrelieren?",
+    "methodology": "Empirisch: Audit-Studiendesign mit direktem Prompting. 42 Prompt-Templates über 14 Domänen mit systematischer Variation von Namen nach Rasse/Geschlecht-Assoziationen. Mehrere Modelle getestet (GPT-4o, GPT-4, GPT-3.5, Llama-3-70B, Mistral Large, PaLM-2). Quantitative Analyse mit Konfidenzintervallen.",
+    "key_finding": "LLMs zeigen systematische Biase, die Namen benachteiligen, die mit rassischen Minderheiten und Frauen assoziiert sind, wobei Black Women die am meisten benachteiligten Ergebnisse erhalten. Diese Biase sind konsistent über Modelle und Szenarien hinweg und können durch numerische Anker, nicht aber durch qualitative Details reduziert werden.",
+    "data_basis": "42 Prompt-Templates über 14 Domänen (z.B. Autoverkauf, Wahlprognosen, Einstellungen, Sportvorhersagen); Tests mit 6 verschiedenen LLMs; systematische Variation nach Rasse und Geschlecht basierend auf Namen-Assoziationen"
+  },
+  "arguments": [
+    "Namen, die mit rassischen Minderheiten und Frauen assoziiert sind, führen systematisch zu weniger vorteilhaften Ratschlägen und Vorhersagen durch LLMs, was auf implizit kodierte Stereotype hinweist, die den US-Bevölkerungsstereotypen entsprechen.",
+    "Qualitative Kontextinformationen haben inkonsistente Effekte auf Bias-Reduktion und können Disparitäten sogar verstärken, während numerische Anker in den meisten Szenarien wirksam gegen Namen-basierte Disparitäten sind.",
+    "Trotz Bemühungen um Bias-Mitigation und Guardrails gegen explizite Diskriminierung basierend auf Rasse und Geschlecht bleiben LLMs von Bias durchdrungen, was die Notwendigkeit von Audits bei Deployment und Implementation unterstreicht, nicht nur während der Entwicklung."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "Fokus auf state-of-the-art LLMs: 'We employ an audit design to investigate biases in state-of-the-art large language models, including GPT-4.'",
+    "Prompting": "Systematische Variation von Prompts: 'We assess the name-sensitivity of the output produced by state-of-the-art language models. Our assessment encompasses 42 idiosyncratic prompts.'",
+    "KI_Sonstige": "Algorithmic fairness und NLP: 'The fairness of AI algorithms, including LLMs, has been a pernicious issue, motivating a growing literature and community of AI ethics research.'",
+    "Bias_Ungleichheit": "Zentrale Fokus auf algorithmischen Bias und strukturelle Benachteiligung: 'Names associated with white men yield the most beneficial predictions, while those associated with Black women generate outcomes that disadvantage the individual in question.'",
+    "Gender": "Expliziter Geschlechterfokus in Bias-Analyse: 'Disparities across gender and race, among other attributes, have especially preoccupied the field. Names associated with Black women receive the least advantageous outcomes.'",
+    "Diversitaet": "Fokus auf marginalisierte Gruppen und Intersektionalität: 'The biases are consistent with common stereotypes prevalent in the U.S. population. The findings suggest that... disparities are the result of a systematic bias... to the disadvantage of women, Black communities, and in particular Black women.'",
+    "Fairness": "Algorithmische Fairness und Fairness-Audit: 'bias auditing as an important component of AI harm mitigation in policy discussions and regulatory frameworks' und explizite Verbindung zu Disparate Impact Konzepten in der Rechtsprechung."
+  },
+  "references": [
+    {
+      "author": "Bertrand & Mullainathan",
+      "year": 2004,
+      "short_title": "Resume correspondence study on hiring bias"
+    },
+    {
+      "author": "Caliskan, Bryson & Narayanan",
+      "year": 2017,
+      "short_title": "Word Embedding Association Test (WEAT)"
+    },
+    {
+      "author": "Buolamwini & Gebru",
+      "year": 2018,
+      "short_title": "Gender Shades - Facial Recognition Bias"
+    },
+    {
+      "author": "Kotek, Dockum & Sun",
+      "year": 2020,
+      "short_title": "Ambiguous pronoun resolution in LLMs"
+    },
+    {
+      "author": "Sheng et al.",
+      "year": 2019,
+      "short_title": "Measuring gender and racial bias in language models"
+    },
+    {
+      "author": "Veldanda et al.",
+      "year": 2024,
+      "short_title": "LLM bias in resume-to-job matching"
+    },
+    {
+      "author": "Wan et al.",
+      "year": 2023,
+      "short_title": "Gender bias in reference letter generation by LLMs"
+    },
+    {
+      "author": "Gaebler et al.",
+      "year": 2023,
+      "short_title": "Reverse bias in LLM hiring decisions"
+    },
+    {
+      "author": "Tamkin et al.",
+      "year": 2023,
+      "short_title": "LLM bias in diverse decision-making scenarios"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist für die Schnittstelle KI und Soziale Arbeit relevant, da es zeigt, dass LLMs in praktischen Anwendungskontexten (wie Beratung, Recruiting, oder Unterstützungsentscheidungen) systematische Biase reproduzieren können, die marginalisierte Gruppen benachteiligen - zentrale Anliegen der Sozialen Arbeit.",
+    "unique_contribution": "Das Paper führt das erste umfassende Audit von state-of-the-art LLMs (besonders GPT-4) durch, das systematische Namen-basierte Biase mit kontinuierlichen Outcome-Metriken über 14 praktische Domänen hinweg dokumentiert und empirisch das Versagen qualitativer Bias-Mitigationsstrategien zugleich wie die Effektivität numerischer Anker demonstriert.",
+    "limitations": "Die Studie basiert auf englischsprachigen Namen und US-amerikanischen Stereotypen; die Generalisierbarkeit auf andere sprachliche/kulturelle Kontexte ist unklar; die Kausalität zwischen Namen-Wahrnehmung und Modell-Bias wird nicht mechanistisch erklärt."
+  },
+  "target_group": "KI-Entwickler und Deployment-Teams, Policymaker und Regulators, AI-Ethics-Forscher, Organisationen die LLMs in Entscheidungssystemen einsetzen (HR, Finanzdienstleistungen, öffentliche Dienste), kritische Technologie-Studien; begrenzt direkt relevant für Sozialarbeiter, aber indirekt für die Kritik algorithmischer Systeme in Sozialen Diensten"
+}

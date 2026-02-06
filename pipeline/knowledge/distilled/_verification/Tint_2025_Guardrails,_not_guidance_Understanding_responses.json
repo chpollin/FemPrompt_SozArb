@@ -1,0 +1,68 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Experiment 1.1 vs 1.2 Unterschiede nicht deutlich genug erklärt",
+        "F-Score Berechnung in Experiment 2 unzureichend erläutert",
+        "Konkrete Beispiele aus Table 5 (Safety responses) nicht ins Kernbefund integriert"
+      ],
+      "missing_minor": [
+        "Genauer Ablauf der Mahalanobis-Distanz-Berechnung nicht detailliert",
+        "Interrater-Reliabilität für manuelle Audits nicht erwähnt",
+        "Statistische Signifikanztests nicht explizit aufgeführt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "RoBERTa-Genauigkeit: Original sagt '> 94% accuracy for each emotion label except for neutral, which was labeled at a 74% accuracy' - Dokument erwähnt nur '> 94% accuracy' ohne Neutral-Unterscheidung"
+      ],
+      "distortions": [
+        "Kernbefund zu vereinfacht: Suggeriert eindeutige Kausalität 'safety mechanisms fail', während Original subtilere Mechanismen diskutiert",
+        "Assessment-Relevanz: 'limitierte direkte Relevanz für Soziale Arbeit' könnte unterschätzen - LGBTQ+ Online-Beratung ist relevanter als angegeben"
+      ]
+    },
+    "category_validation": {
+      "score": 93,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Content_Moderation sollte expliziter als Kategorie aufgeführt sein (wird in Limitations erwähnt)",
+        "NLP_Ethics könnte als zusätzliche Kategorie hinzugefügt werden"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "type": "sollte 'researchPaper' sein statt 'conferencePaper' - Original zeigt keine Konferenz-Zuordnung"
+    },
+    "content_fixes": [
+      {
+        "location": "Methodik",
+        "issue": "RoBERTa-Genauigkeit unvollständig",
+        "original": "RoBERTa-Base auf GoEmotions Dataset",
+        "corrected": "RoBERTa-Base auf GoEmotions Dataset (>94% Genauigkeit pro Emotion außer Neutral mit 74%)"
+      },
+      {
+        "location": "Kernbefund",
+        "issue": "Zu deterministische Formulierung",
+        "original": "Safety-Mechanismen neutralisieren offene heteronormative Bias durch neutrale/korrektive Antworten, versagen aber bei systemischen Verzerrungen",
+        "corrected": "Safety-Mechanismen triggern bei heteronormativen Prompts Neutral-/Korrektur-Responses, während LGBTQ+-Slang systemische Verzerrungen mit negativen Emotions-Labels zeigt"
+      },
+      {
+        "location": "Datenbasis",
+        "issue": "Modellanzahl inkonsistent",
+        "original": "7 verschiedene LLM-Modelle",
+        "corrected": "7 LLM-Modelle (GPT-3.5, GPT-4o, Llama2, Llama3.2, Gemma, Gemma2, Mistral) - nur 6 in Experiment 1 konsistent genutzt"
+      },
+      {
+        "location": "Kategorie-Evidenz Prompting",
+        "issue": "Zitat ungenau",
+        "original": "Analyse von Prompt-Strategien und deren Auswirkungen",
+        "corrected": "Das Paper testet nicht aktiv Prompt-Strategien, sondern untersucht Auswirkungen bereits existierender Heteronormativitäts-Grade in Prompts - sollte Kategorie möglicherweise nicht als primär aufgeführt sein"
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis",
+    "authors": [
+      "Gesa Linnemann",
+      "Julian Löhe",
+      "Beate Rottkemper"
+    ],
+    "year": 2025,
+    "type": "book",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Wie können Fachkräfte der Sozialen Arbeit KI-Systeme verantwortungsvoll verstehen, einsetzen und kritisch reflektieren, um vulnerable Gruppen zu schützen und professionelle Handlungsfähigkeit zu bewahren?",
+    "methodology": "Theoretisch/Review; Sammelband mit 16 Beiträgen zu Grundlagen, Anwendungsfeldern, ethischen und rechtlichen Fragestellungen; kombiniert konzeptionelle Analysen mit Fallbeispielen und Forschungsüberblicken",
+    "key_finding": "KI birgt sowohl erhebliche Chancen (Inklusion, Assistenz, Dokumentation) als auch Risiken (Bias, Automatisierungsfehler, Marginalisierung) für die Soziale Arbeit; ein reflexierter, an Fachlichkeit und Ethik orientierter Umgang erfordert systematische KI-Kompetenzentwicklung in Studium, Praxis und Organisationen sowie kritische Inklusionsperspektiven.",
+    "data_basis": "Nicht empirisch; theoretische und konzeptionelle Analyse, Literaturüberblick, Beispiele aus Praxis und Forschung"
+  },
+  "arguments": [
+    "KI-Systeme verstärken bestehende gesellschaftliche Ungleichheiten und Diskriminierungen durch verzerrte Trainingsdaten und Design; dies betrifft besonders marginalisierte Gruppen (Frauen, LGBTQIA+, Menschen mit Behinderungen, ältere Menschen), die in KI-Systemen systematisch unterrepräsentiert sind.",
+    "Der Einsatz von KI in der Sozialen Arbeit muss ethisch und rechtlich reflektiert erfolgen, da Fachkräfte mit vulnerablen Gruppen arbeiten, die sich oft nicht selbst gegen KI-Systeme wehren können; Transparenz, Datenschutz und professionelle Kontrolle sind zentral.",
+    "KI-Kompetenz ist für Sozialarbeiter:innen eine Schlüsselqualifikation der Zukunft; sie müssen nicht nur KI-Systeme kritisch evaluieren können, sondern auch aktiv an Gestaltung und Entwicklung digitaler Technologien partizipieren, um professionelle Werte zu schützen und vulnerable Menschen zu schützen.",
+    "KI-Technologien haben differenzierte Potenziale für Inklusion: Sie können marginalisierte Menschen unterstützen (Assistenztechnologien, Sprachausgabe, Zugänglichkeit), aber auch als Kontrollwerkzeuge missbraucht werden; eine kritische Inklusionsperspektive muss hinterfragen, in welche sozialen Systeme tatsächlich inkludiert wird.",
+    "Automation Bias und Deskilling sind reale Risiken: Fachkräfte könnten KI-Systeme unkritisch überbewerten und ihre professionelle Urteilskraft abschwächen, was gerade in der Sozialen Arbeit zu Schädigungen vulnerabler Personen führt."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Zentral für den Band: 'Ein zentrales Anliegen ist die Entwicklung von KI-Kompetenz in Studium, Praxis und Organisationen.' Kapitel 'Künstliche Intelligenz in der Lehre der Sozialen Arbeit' widmet sich explizit Curricula und Kompetenzvermittlung.",
+    "Generative_KI": "Project Debater und Sprachmodelle werden im Vorwort diskutiert; Kapitel behandeln Natural Language Processing und Anwendungen von Sprachmodellen in Beratung und Dokumentation.",
+    "KI_Sonstige": "Umfassende Behandlung: Predictive Analytics (Kindeswohlgefährdung, AFST), Assistenzsysteme, Robotik für Ältere, algorithmische Entscheidungssysteme im Sozialmanagement, Computer Vision für Sprachausgabe.",
+    "Soziale_Arbeit": "Kernfokus des gesamten Bandes: Direkte Anwendungen auf Beratung, Dokumentation, Inklusion, Jugendhilfe, Kindesschutz, Behindertenarbeit, Älterenhilfe, Sozialmanagement.",
+    "Bias_Ungleichheit": "Extensive Diskussion: 'Frauen, LGBTQIA+-Communitys, ältere Menschen und Menschen mit Behinderungen sind in oder durch KI geprägte(n) Technologien systematisch unterrepräsentiert.' Eubanks-Analyse zur Automatisierung von Ungleichheit zitiert; Risiken für benachteiligte Bevölkerungsgruppen thematisiert.",
+    "Gender": "Mehrfach erwähnt: 'Beispielsweise sind nur 14% der Editor:innen des Journals Artificial Intelligence Frauen' (Fosch-Villaronga/Poulsen 2022); Gender-Bias in KI-Training und Entwicklung; Frauen in Technologieentwicklung unterrepräsentiert.",
+    "Diversitaet": "Zentral: 'Fosch-Villaronga und Poulsen (2022) zeigen auf, dass Frauen, LGBTQIA+-Communitys, ältere Menschen und Menschen mit Behinderungen systematisch unterrepräsentiert sind.' Intersektionale Perspektiven auf Behinderung, Ethnizität, Alter, Geschlecht.",
+    "Fairness": "Explizit behandelt in Ethik-Kapitel und Inklusions-Diskussionen: Fairness-Fragen bei Kindeswohleinschätzung (AFST-System), Algorithmic Fairness vs. Practitioner Bias, Equitable Access zu Assistenztechnologien."
+  },
+  "references": [
+    {
+      "author": "Buolamwini & Gebru",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+    },
+    {
+      "author": "Eubanks",
+      "year": 2018,
+      "short_title": "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor"
+    },
+    {
+      "author": "Noble",
+      "year": 2018,
+      "short_title": "Algorithms of Oppression: How Search Engines Reinforce Racism"
+    },
+    {
+      "author": "Fosch-Villaronga & Poulsen",
+      "year": 2022,
+      "short_title": "KI und Inklusion: Unterrepräsentation marginalisierter Gruppen"
+    },
+    {
+      "author": "Shams, Zowghi & Bano",
+      "year": 2023,
+      "short_title": "Metastudie zu Inklusion und Diversität in KI-Technologien"
+    },
+    {
+      "author": "Orwat",
+      "year": 2020,
+      "short_title": "Diskriminierungsrisiken durch die Verwendung von Algorithmen"
+    },
+    {
+      "author": "Gillingham, Schiffhauer & Seelmeyer",
+      "year": 2020,
+      "short_title": "Internationale Forschung zum Einsatz digitaler Technik in der Sozialen Arbeit"
+    },
+    {
+      "author": "Floridi et al.",
+      "year": 2018,
+      "short_title": "AI4People – An Ethical Framework for a Good AI Society"
+    },
+    {
+      "author": "Goldhaber-Fiebert & Prince",
+      "year": 2019,
+      "short_title": "Evaluation des Allegheny Family Screening Tool"
+    },
+    {
+      "author": "Ibison et al.",
+      "year": 2024,
+      "short_title": "KI in NGOs und Graswurzelbewegungen: Potenziale und Barrieren"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Höchste Relevanz für die Schnittstelle AI/Soziale Arbeit/Kritische Perspektiven; das einzige deutschsprachige Handbuch dieser Art, das systematisch KI-Chancen und -Risiken für vulnerable Zielgruppen der Sozialen Arbeit behandelt und dabei Bias, Inklusion und professionelle Ethik zentral setzt.",
+    "unique_contribution": "Erste umfassende deutschsprachige Publikation, die Künstliche Intelligenz als professionelle Gestaltungsaufgabe der Sozialen Arbeit rahmt und dabei kritische Perspektiven auf Diskriminierung, Inklusion und Marginalisierung mit praktischen Anwendungsszenarien verbindet.",
+    "limitations": "Primär konzeptionell-theoretisch ohne systematische Evaluation von KI-Systemen in realen Sozialarbeit-Organisationen; wenig quantitative Daten zur tatsächlichen Verbreitung und Nutzung von KI in deutschsprachigen Sozialeinrichtungen; Fokus auf Chancen und Risiken, weniger auf konkrete technische Lösungsstrategien."
+  },
+  "target_group": "Primär: Sozialarbeiter:innen, Sozialmanager:innen, Lehrende der Sozialen Arbeit, Studierende; Sekundär: KI-Entwickler:innen mit Interesse für Fairness und vulnerable Zielgruppen, Policymaker im Sozialbereich, Ethiker:innen und Kritiker:innen von Algorithmic Decision Systems, Organisationen der Sozialwirtschaft."
+}

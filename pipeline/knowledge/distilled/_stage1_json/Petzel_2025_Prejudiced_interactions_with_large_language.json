@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups",
+    "authors": [
+      "Zachary W. Petzel",
+      "Leanne Sowerby"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie beeinflussen vorurteilsbehaftete Reaktionen von Large Language Models die Vertrauenswürdigkeit und Nutzungsabsichten von Mitgliedern stigmatisierter Gruppen?",
+    "methodology": "Empirisch: 3 preregistrierte experimentelle Studien mit Online-Manipulation von ChatGPT-Interaktionen, Messungen von Vertrauen, Verhaltensziele, implizite und explizite Bias-Messungen (IAT, Modern Sexism Scale), Mediationsanalysen mit PROCESS-Makro",
+    "key_finding": "Mitglieder stigmatisierter Gruppen (Black Americans, Frauen) berichten höheres Vertrauen in LLMs nach unvoreingenommenen Interaktionen; Vertrauen erklärt erhöhte Nutzungsabsichten bei stigmatisierten Gruppen. Umgekehrt nutzen White Americans und Männer LLMs vermehrt, wenn KI-generierte Vorurteile ihre impliziten Biases bestätigen.",
+    "data_basis": "Experiment 1: n=237 (Black Americans, White Americans); Experiment 2: n=300 Frauen; Experiment 3: n=221 Student:innen mit Oversampling von Männern"
+  },
+  "arguments": [
+    "AI-generierte Vorurteile in LLMs wirken sich differenziell auf stigmatisierte Gruppen aus: Während marginalisierte Gruppen bei unverzerrten Responses höheres Vertrauen zeigen, verstärken vorurteilsbehaftete Outputs bei privilegierten Gruppen die Nutzungsintention, wenn diese ihre impliziten Biases bestätigen.",
+    "Vertrauenswürdigkeit (trustworthiness) fungiert als kritischer Mediator zwischen Exposition gegenüber KI-generierten Vorurteilen und Nutzungsabsichten, aber NUR bei stigmatisierten Gruppen – bei privilegierten Gruppen spielt Vertrauen keine Vermittlerrolle.",
+    "Technologische Disparitäten in der Adoption von LLMs könnten durch strukturelle AI-Biases verstärkt werden, was bereits bestehende berufliche und bildungsbezogene Ungleichheiten weiter verschärft, insbesondere da LLMs in Bildung und Arbeit integriert werden."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Adapting to emerging AI technologies will be essential for academic success among students, in addition to remaining competitive while seeking employment. [...] those who fail to incorporate these emerging technologies into their learning and professional development may lag behind.",
+    "Generative_KI": "Access to large language models (LLMs) has proliferated, providing sophisticated tools capable of simulating detailed and accurate conversations (e.g., ChatGPT). [...] LLMs are often trained on text which contain harmful biases against disadvantaged and stigmatized groups.",
+    "Bias_Ungleichheit": "Implicit biases adversely impact stigmatized groups [...] With 42% of organizations using AI to automate business analytics, customer service, and hiring decisions [...] action is needed to understand how algorithms which contain implicit biases may impact engagement with LLMs among stigmatized social groups.",
+    "Gender": "Women's performance is negatively impacted when interviewed by men with implicit gender biases (e.g., women as incompetent). [...] Men are more likely to own two or more smart home devices than women, in addition to perceiving devices as more useful and reporting greater intentions to use this technology.",
+    "Diversitaet": "Members of stigmatized social groups (Black Americans, women) reported higher trustworthiness of LLMs after viewing unbiased interactions with ChatGPT [...] addressing AI-generated prejudice could minimize social disparities in adoption of LLMs which might further exacerbate professional and educational disparities.",
+    "KI_Sonstige": "Amazon having used algorithms preferring men for technical jobs (e.g., software developers) while disregarding female applicants due to their gender. [...] algorithms assessing Black defendants are likely to predict higher rates of future violent crimes compared to White defendants.",
+    "Fairness": "Trustworthiness is the perception of several characteristics of a trustee [...] integrity captures agreement between the user's values and principles and those of the LLM (e.g., adherence to ethics). Thus, LLMs trained on data containing prejudices may reduce trustworthiness among stigmatized group members due to violating these factors."
+  },
+  "references": [
+    {
+      "author": "Mayer, Cohen, Schoorman",
+      "year": 1995,
+      "short_title": "Trustworthiness: Ability, Benevolence, Integrity"
+    },
+    {
+      "author": "Davis",
+      "year": 1989,
+      "short_title": "Technology Acceptance Model"
+    },
+    {
+      "author": "Venkatesh, Morris, Davis, Davis",
+      "year": 2003,
+      "short_title": "Unified Theory of Acceptance and Use of Technology (UTAUT)"
+    },
+    {
+      "author": "Greenwald, Krieger, Krehbiel",
+      "year": 2022,
+      "short_title": "Implicit Biases: Consequences and Remedies"
+    },
+    {
+      "author": "Angwin, Larson, Mattu, Kirchner",
+      "year": 2016,
+      "short_title": "Machine Bias in Criminal Justice Algorithms"
+    },
+    {
+      "author": "Criado-Perez",
+      "year": 2019,
+      "short_title": "Invisible Women: Data Bias in a World Designed for Men"
+    },
+    {
+      "author": "Abid, Farooqi, Zou",
+      "year": 2021,
+      "short_title": "Persistent Anti-Muslim Bias in Large Language Models"
+    },
+    {
+      "author": "Chen, Zhang, Bengio, Liphardt, Bengio",
+      "year": 2022,
+      "short_title": "Fairness and Bias in Facial Recognition Technology"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für die Schnittstelle AI/Soziale Arbeit/Gender, da es zeigt, wie algorithmische Vorurteile die Technologieadoption bei stigmatisierten Gruppen beeinflussen – ein zentrales Thema für sozialarbeiterische Praxis und Gerechtigkeit. Es adressiert kritisch, wie KI-Systeme soziale Disparitäten reproduzieren und verstärken können.",
+    "unique_contribution": "Das Paper erweitert Technologieakzeptanzmodelle um den Mechanismus der Vertrauenswürdigkeit und zeigt differential effects: dass Fairness in KI-Systemen nicht neutral wirkt, sondern je nach sozialem Status der Nutzer:innen gegensätzliche Effekte haben kann.",
+    "limitations": "Experimentelle Manipulation mit stilisierten Szenarien; Fokus auf US-amerikanische Kontexte; Student:innen-Stichproben; keine Langzeit-Effekte untersucht; Frage nach Generalisierbarkeit auf andere KI-Systeme und Anwendungsdomänen bleibt offen."
+  },
+  "target_group": "KI-Entwickler:innen und UX-Designer:innen, Policymaker im Bildungs- und Beschäftigungssektor, Forscher:innen zu Technologiegerechtigkeitsfragen, Sozialwissenschaftler:innen zur Ungleichheit, Diversity- und Inclusion-Spezialist:innen in Organisationen, Nutzer:innen marginalisierter Gruppen"
+}

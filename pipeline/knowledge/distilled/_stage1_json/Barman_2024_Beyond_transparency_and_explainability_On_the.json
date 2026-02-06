@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "Beyond transparency and explainability: on the need for adequate and contextualized user guidelines for LLM use",
+    "authors": [
+      "Kristian González Barman",
+      "Nathan Wood",
+      "Pawel Pawlowski"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Sind nutzerzentrierte Richtlinien für verantwortungsvolle LLM-Nutzung effektiver als Transparenz- und Erklärbarkeitsmethoden, um verschiedene Nutzergruppen angemessen zu unterstützen?",
+    "methodology": "Theoretisch-analytisch mit Literaturreview und konzeptionellem Rahmen. Diskussion praktischer Anwendungsfälle in Bildung, Workplace und Fachberatung. Kritische Analyse von XAI-Ansätzen und Entwicklung eines nutzerzentrierten Guideline-Frameworks.",
+    "key_finding": "Aktuelle Fokussierung auf Transparenz und Explainability reicht nicht aus; stattdessen sollten kontextspezifische, praktische Nutzerrichtlinien zur Schulung, Risikominderung und ethischen Verwendung von LLMs im Vordergrund stehen, da Nutzer primär praktische Anleitung statt technischer Erklärungen benötigen.",
+    "data_basis": "Keine primäre empirische Datenerhebung; konzeptionelle Analyse und Literaturreview mit Fallbeispielen aus realen LLM-Anwendungen"
+  },
+  "arguments": [
+    "Transparenz und XAI-Methoden sind technisch begrenzt und können Nutzern nicht die praktischen Informationen liefern, die sie für verantwortungsvolle LLM-Nutzung benötigen; selbst gute Erklärungen helfen nicht unbedingt bei der Frage, wie man LLMs richtig einsetzt.",
+    "Nutzerzentrierte Richtlinien mit klaren Dos-and-Don'ts, Heuristiken zur Fehlerdetekion und Prompting-Strategien sind praktischer und effizienter als technische Erklärbarkeit, besonders für durchschnittliche Nutzer ohne spezialisiertes KI-Wissen.",
+    "Effektive LLM-Governance erfordert institutionelle und regulatorische Ansätze (Bildung, Richtlinien, Protokolle), nicht nur technische Lösungen; ähnlich wie Verkehrssicherheit nicht erfordert, dass Fahrer Motorentechnik verstehen, sondern Verkehrsregeln kennen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Schwerpunkt auf Nutzerschulung, Kompetenzentwicklung und praktische Richtlinien: 'we argue that LLM users should be given guidelines on what tasks LLMs can do well and which they cannot' und 'teaching users the right way to use these tools, as well as informing them of not only the strengths, potential uses, and best practices'",
+    "Generative_KI": "Fokus auf Large Language Models wie ChatGPT, GPT-4, Claude und Llama: 'Large language models (LLMs) such as ChatGPT present immense opportunities'",
+    "Prompting": "Explizite Behandlung von Prompt-Strategien: 'teaching users to refine and elaborate adequate prompts, be provided with good procedures for prompt iteration' und 'prompt engineering strategies'",
+    "KI_Sonstige": "Behandlung von XAI, Interpretierbarkeit und algorithmischen Entscheidungssystemen: 'Explainable Artificial Intelligence (XAI) has emerged as a significant field'",
+    "Bias_Ungleichheit": "Thematisierung von Bias, Diskriminierung und ungleichem Zugang: 'widely recognized issues such as bias', 'misinformation', 'This approach democratizes the use of advanced AI technologies, making them more accessible to a broader audience, irrespective of their technical background'",
+    "Diversitaet": "Fokus auf unterschiedliche Nutzergruppen und kontextspezifische Bedürfnisse: 'diverse needs and concerns of various user groups', 'different disciplines and domains where lack of reliability can have serious negative consequences', 'collaborative endeavor, involving AI experts, ethicists, educators, and perhaps most importantly, end-users'",
+    "Fairness": "Behandlung fairer und ethischer LLM-Nutzung sowie Bias-Mitigation: 'ethical considerations, bias mitigation strategies', 'guidelines for responsible LLM usage' und 'ensuring these models are employed for the collective good'"
+  },
+  "references": [
+    {
+      "author": "Bender et al.",
+      "year": 2021,
+      "short_title": "On the dangers of stochastic parrots"
+    },
+    {
+      "author": "Burrell",
+      "year": 2016,
+      "short_title": "How the machine 'thinks': Understanding opacity in machine learning"
+    },
+    {
+      "author": "Arrieta et al.",
+      "year": 2020,
+      "short_title": "Explainable artificial intelligence (XAI): concepts, taxonomies, opportunities and challenges"
+    },
+    {
+      "author": "Lundberg & Lee",
+      "year": 2017,
+      "short_title": "A unified approach to interpreting model predictions (SHAP)"
+    },
+    {
+      "author": "Ribeiro et al.",
+      "year": 2016,
+      "short_title": "Model-agnostic interpretability of machine learning (LIME)"
+    },
+    {
+      "author": "Noy & Zhang",
+      "year": 2023,
+      "short_title": "Experimental evidence on the productivity effects of generative artificial intelligence"
+    },
+    {
+      "author": "Kasneci et al.",
+      "year": 2023,
+      "short_title": "ChatGPT for good? On opportunities and challenges of large language models for education"
+    },
+    {
+      "author": "Pan et al.",
+      "year": 2023,
+      "short_title": "On the risk of misinformation pollution with large language models"
+    },
+    {
+      "author": "Wood",
+      "year": 2024,
+      "short_title": "Explainable AI in the military domain"
+    },
+    {
+      "author": "Conmy et al.",
+      "year": 2023,
+      "short_title": "Towards automated circuit discovery for mechanistic interpretability"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist relevant für AI-Literacy und verantwortungsvolle KI-Nutzung, hat aber keinen direkten Bezug zur Sozialen Arbeit als Praxisfeld. Es adressiert allerdings grundsätzliche Fragen von Nutzerkompetenzen, Zugänglichkeit und ethischen Richtlinien, die für soziale Professionen bei LLM-Einsatz bedeutsam sind.",
+    "unique_contribution": "Der Hauptbeitrag liegt in der kritischen Infragestellung von XAI als Lösungsansatz und der Begründung eines nutzerzentrierten Guideline-Frameworks, das praktische, kontextualisierte Richtlinien über technische Explainability priorisiert.",
+    "limitations": "Das Paper ist primär konzeptionell-theoretisch; es fehlen empirische Daten zu Nutzerkompetenzen, Guideline-Effektivität oder reale Implementierungserfahrungen. Keine Differenzierung zwischen unterschiedlichen LLM-Typen oder Nutzerprofielen."
+  },
+  "target_group": "KI-Ethiker, Bildungsfachleute, Policymaker, institutionelle Entscheidungsträger in Bildung und Arbeit, Entwickler von KI-Systemen und deren Integration in Anwendungen, Nutzer von LLMs (Studierende, Fachkräfte); sekundär relevant für Sozialarbeiter, die LLMs in ihrer Praxis einsetzen"
+}

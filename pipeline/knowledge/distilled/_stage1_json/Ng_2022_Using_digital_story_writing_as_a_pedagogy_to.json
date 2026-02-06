@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Using digital story writing as a pedagogy to develop AI literacy among primary students",
+    "authors": [
+      "Davy Tsz Kit Ng",
+      "Wanying Luo",
+      "Helen Man Yi Chan",
+      "Samuel Kai Wah Chu"
+    ],
+    "year": 2022,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie fördert digitales Geschichtenerzählen (DSW) AI-Literalität bei Grundschülern, und wie entwickeln Schüler durch DSW ein Verständnis für AI?",
+    "methodology": "Empirisch, Mixed Methods: Quantitative Komponente (Post-Test mit 5-Punkt Likert-Skala, n=82 Schüler), qualitativ (artefaktbasierte Interviews mit 16 leistungsstarken Schülern, Thematische Analyse, Analyse von digitalen Geschichten und Lernmaterialien)",
+    "key_finding": "DSW als Inquiery-basierter pädagogischer Ansatz fördert wirksam AI-Literalität, indem Schüler authentische Szenarien entwickeln, AI-Wissen anwenden und bedeutungsvolle AI-gestützte Lösungen für reale Probleme gestalten können – weit über bloße konzeptionelle Kenntnisse hinaus.",
+    "data_basis": "n=82 Grundschüler in Hong Kong (3-monatiges Programm 'AI, Robots, Love and Peace'), davon 16 beste Schüler (13 weiblich) in tiefergehenden artefaktbasierten Interviews; Analyse digitaler Geschichten und schulischer STEM-Projekte"
+  },
+  "arguments": [
+    "AI-Literalität sollte als neu erforderliche Kompetenzgruppe in K-12-Bildung verankert werden, die über technisches Verständnis hinausgeht und ethisches Denken sowie praktische Anwendungsfähigkeit in alltäglichen Kontexten einschließt.",
+    "Digitales Geschichtenerzählen kombiniert Inquiry-based Learning mit AI-Konzepten und ermöglicht Schülern, durch Erzählungen ihr Verständnis zu konstruieren, AI-Tools praktisch einzusetzen und ihre Erkenntnisse zu verschriftlichen und auszutauschen.",
+    "Die Studie zeigt vier Ebenen von AI-Literalität nach Bloom'scher Taxonomie: Know & Understand AI (Grundkonzepte), Use & Apply AI (Anwendung in Szenarien), Evaluate & Create AI (höherordentliches Denken mit AI-Artefakten), und AI Ethics – wobei DSW besonders die unteren drei Ebenen effektiv unterstützt."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "AI literacy is widely recognized as a new set of technological attitudes, abilities and competencies that people use AI effectively and ethically in everyday life. Die Studie konzeptualisiert AI-Literalität auf vier Ebenen: Know and understand AI, Use and apply AI, Evaluate and create AI, und AI ethics (inspiriert von Bloom's Taxonomy).",
+    "KI_Sonstige": "The study addresses various AI technologies including machine learning (Teachable Machine, Quickdraw), robotics, computer vision, recommendation systems, chatbots, neural networks, and data bias. Students learn working principles of AI through tools like Code.org and AI-driven applications.",
+    "Bias_Ungleichheit": "The paper discusses data bias explicitly: 'Complete a gamified Kahoot! game to learn the terms of neural network, data bias, Python language...' und behandelt ethische Fragen wie Generative AI und Eigentumsrechte: 'it is important to highlight ethical issues about generative AI including the ownership of artwork and generation of fake media.'",
+    "Gender": "Among the 16 best-achieving students, 13 are female (81%), and the paper explicitly notes: 'this indicates that DSW learning stimulates female learners to perform better than boys to learn AI.' Dies deutet auf unterschiedliche Geschlechterleistungen hin.",
+    "Diversitaet": "Die Studie bezieht Schüler verschiedener Klassenstufen (Primary 1-6, Junior und Senior Form) ein und dokumentiert diverse Story-Namen und Charaktere (z.B. Princess Wawa, Romy, Lily, Kelvin). Teilnehmer repräsentieren ein internationales Setting (Hong Kong, mit Übersetzungskomponenten in mehrere Sprachen).",
+    "Fairness": "The study addresses fairness in AI contexts through ethical discussions about algorithmic decision-making (e.g., AI robots recognizing expired food, sorting recyclables, security with facial recognition). Students learn to evaluate fairness implications: 'how to use AI technologies judiciously, and discriminate between ethical and unethical practices.'"
+  },
+  "references": [
+    {
+      "author": "Ng, D.T.K. & Chu, S.K.W.",
+      "year": 2021,
+      "short_title": "AI literacy: Definition, teaching, evaluation and ethical issues"
+    },
+    {
+      "author": "Long, D. & Magerko, B.",
+      "year": 2020,
+      "short_title": "What is AI literacy? Competencies and design considerations"
+    },
+    {
+      "author": "Burgsteiner, H., Kandlhofer, M. & Steinbauer, G.",
+      "year": 2016,
+      "short_title": "iRobot: Teaching the basics of artificial intelligence in high schools"
+    },
+    {
+      "author": "Rodríguez-García, J.D. et al.",
+      "year": 2020,
+      "short_title": "Introducing artificial intelligence fundamentals with LearningML"
+    },
+    {
+      "author": "Papert, S.",
+      "year": 1980,
+      "short_title": "Mindstorms: Children, computers, and powerful ideas"
+    },
+    {
+      "author": "Wu, F. et al.",
+      "year": 2020,
+      "short_title": "Towards a new generation of artificial intelligence in China"
+    },
+    {
+      "author": "Frazel, M.",
+      "year": 2010,
+      "short_title": "Digital storytelling guide for educators"
+    },
+    {
+      "author": "Druga, S., Vu, S.T., Likhith, E. & Qiu, T.",
+      "year": 2019,
+      "short_title": "Inclusive AI literacy for kids around the world"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper adressiert AI Literacy in der schulischen Ausbildung mit stark pädagogischem Fokus. Der Bezug zu Sozialer Arbeit ist minimal; allerdings sind Themen wie Inklusion, Ethik und gesellschaftliche Auswirkungen von AI relevant für sozialarbeiterische Kontexte. Der Gender-Befund (weibliche Schüler übertreffen Jungen) könnte für diversitätssensible Bildungspraxis interessant sein.",
+    "unique_contribution": "Die Studie entwickelt einen innovativen Ansatz, der digitales Geschichtenerzählen systematisch zur Vermittlung von AI-Literalität nutzt und dabei vier Kompetenzebenen (nach Bloom) empirisch untersucht – mit Besonderheit auf Gender-Unterschieden und praktischer Anwendung.",
+    "limitations": "Kleine qualitative Stichprobe (n=16 Interviews), Single-Site-Studie (Hong Kong), überwiegend weibliche Top-Performer-Gruppe, keine Kontrollgruppe, kurze Programmwdauer (3 Monate), begrenzte Nachfolgemessung."
+  },
+  "target_group": "Pädagogen im K-12-Bereich (insbes. Grundschule), AI-Curriculum-Designer, Bildungspolitiker, Lehrerausbilder, Forscher in Digital Literacy und AI Education. Begrenzt relevant für Sozialarbeiter, aber potenziell interessant für Fachkräfte in schulbezogener Sozialer Arbeit und Jugendhilfe."
+}

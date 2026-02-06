@@ -1,0 +1,47 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Berechnung der 'effektiven' Datenmenge (quality filtering) nicht detailliert erläutert",
+        "Konkrete Zahlen zu multi-epoch training Szenarien fehlen in der Zusammenfassung",
+        "Unterscheidung zwischen 'Common Crawl', 'Indexed Web' und 'Whole Web' könnte präziser sein"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Leichte Ungenauigkeit: Der Originaltitel im Dokument lautet 'Women_2024_Artificial.pdf', was incongruent mit dem Papierinhalt wirkt - möglicherweise eine Dateibenennungsanomalie im Original"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "KI-Skalierung / Computing Infrastructure (würde strengere Fokussierung ermöglichen)",
+        "Datenethik (als eigenständige Kategorie, separiert von Fairness)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "source_file": "Anmerkung: Original trägt Dateiname 'Women_2024_Artificial.pdf', Inhalt ist jedoch rein technisches ML-Paper ohne Bezug zu Gender/Women Studies - ggf. Benennungskonvention überprüfen"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "current": "**Datenbasis:** Sekundärdatenanalyse: Common Crawl (250+ Milliarden Webseiten), Google-Index-Schätzungen (250 Milliarden Webseiten)...",
+        "suggestion": "Präzisierung: Common Crawl (250+ Milliarden Webseiten) als Subset des Google-Index (~250 Milliarden Webseiten). Indexed Web geschätzt auf 510T Tokens [95% CI: 130T-2100T], Whole Web auf 3100T Tokens [95% CI: 1900T-5200T]. Quality filtering reduziert 'effective stock'."
+      },
+      {
+        "section": "Hauptargumente",
+        "current": "Das Modell projiziert einen Bestand von etwa 4e14 Tokens",
+        "suggestion": "Präzisierung: ~510T Tokens für Indexed Web; ~4e14 Tokens bezieht sich auf 'effective stock' nach Quality Filtering für non-overtrained models bei ~5e28 FLOP Training Compute"
+      }
+    ]
+  }
+}

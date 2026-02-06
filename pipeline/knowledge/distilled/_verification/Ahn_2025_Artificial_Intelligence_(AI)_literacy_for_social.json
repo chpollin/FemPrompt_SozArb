@@ -1,0 +1,66 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Explizite Erwähnung der 9 CSWE-Kernkompetenzen im Originaltext nicht vollständig extrahiert - nur 9 Kompetenzen in Tabelle 2 aufgelistet, aber keine detaillierte Beschreibung aller 9 im bereitgestellten Auszug",
+        "'Circle of Transformation' wird im generierten Dokument erwähnt, ist aber im bereitgestellten Originaltext-Auszug nicht vorhanden"
+      ],
+      "missing_minor": [
+        "Detaillierte Diskussion von Area 5 ('How do people perceive AI?') des Long & Magerko-Frameworks fehlt im Original-Auszug",
+        "Spezifische Implementierungsempfehlungen für Curriculum-Integration könnten ausführlicher sein"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "KRITISCHER FEHLER: Das generierte Dokument zitiert einen 'Circle of Transformation' als Framework-Element, dieser Begriff erscheint jedoch nicht im bereitgestellten Originaltext-Auszug"
+      ],
+      "distortions": [
+        "Die Behauptung einer 'systematischen Entwicklung eines social-work-spezifischen AI-Literacy-Frameworks' ist korrekt, aber die Darstellung als empirisch validiert ist übertrieben - der Text selbst ist konzeptionell"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/Professionelle Ethik (Ethics) - sollte als eigenständige Kategorie stärker ausgewiesen sein, da ethische Überlegungen zentral sind",
+        "Evaluation/Assessment-Tools - wird diskutiert, aber nicht als Kategorie codiert",
+        "Advocacy/Interessenvertretung - implizit vorhanden, aber nicht als explizite Kategorie"
+      ]
+    }
+  },
+  "overall_confidence": 85,
+  "needs_correction": true,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "Ethik_Professionelle_Ethik",
+        "Advocacy_Interessenvertretung",
+        "Praxi_Assessment_Tools"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Entfernung der Referenz zu 'Circle of Transformation' - dieser Begriff ist im bereitgestellten Originaltext nicht vorhanden und scheint aus anderen Quellen interpoliert zu sein",
+        "fix": "Ersetzen durch verifiable Konzepte aus dem Long & Magerko (2020) Framework, insbesondere Area 4 'How should AI be used?'"
+      },
+      {
+        "section": "Kategorie-Evidenz > Bias_Ungleichheit",
+        "issue": "Die Aussage über 'Circle of Transformation' sollte entfernt werden, da sie nicht im Originaltext belegt ist",
+        "fix": "Fokus auf die tatsächlich im Text diskutierten Ungleichheitsmechanismen: algorithmic bias, data selection bias, representativeness of data sources"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Impliziert empirische Validierung, die nicht vorhanden ist",
+        "fix": "Klarstellen: 'AI-Literatur SOLLTE integriert werden' statt 'AI-Literatur sollte integriert werden' - normativ statt präskriptiv"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "Brown et al. (2019) wird zitiert, erscheint aber nicht in der bereitgestellten Referenzliste des Originaltextes",
+        "fix": "Entfernen oder nur Referenzen verwenden, die im Original-Auszug tatsächlich vorhanden sind"
+      }
+    ]
+  }
+}

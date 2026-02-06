@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "Considering a Unified Model of Artificial Intelligence Enhanced Social Work: A Systematic Review",
+    "authors": [
+      "Michael Garkisch",
+      "Lauri Goldkind"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie konzeptualisieren Sozialarbeitsforscher Studien zu Künstlicher Intelligenz in der Sozialen Arbeit, und welche Möglichkeiten und Risiken entstehen dabei?",
+    "methodology": "Theoretisch/Review - Systematische Literaturanalyse von 67 Peer-reviewed Artikeln aus englischsprachigen Datenbanken mit qualitativer Kodierung und thematischer Analyse basierend auf Staub-Bernasconis Tripelmandat",
+    "key_finding": "Die Literatur zeigt einen signifikanten Mangel an empirischer Forschung zu AI-Implementierungen in der Sozialen Arbeit. Die Autoren entwickeln ein integriertes Modell der 'Artificial Intelligence Enhanced Social Work' basierend auf Menschenrechtsrahmen und dem Tripelmandat der Sozialen Arbeit.",
+    "data_basis": "67 analysierte Artikel aus einem Zeitraum von 15 Jahren; qualitative Inhaltsanalyse"
+  },
+  "arguments": [
+    "Soziale Arbeit als Menschenrechtsprofession muss AI-Technologien kritisch prüfen, um sicherzustellen, dass sie mit Kernwerten wie Menschenwürde, Nichtdiskriminierung, Partizipation und Transparenz übereinstimmen.",
+    "Der aktuelle Forschungsstand zeigt systematische Lücken: Es gibt wenig empirische Evidenz für AI-Implementierungen in der Sozialen Arbeit, und Forschung konzentriert sich auf einzelne Sektoren (Kinderwohlfahrt, Jugendarbeit, psychische Gesundheit).",
+    "Ein integriertes Modell muss drei Ebenen adressieren (Profession, Organisationen/Agenturen, Klient:innen) und Aspekte wie interdisziplinäre Zusammenarbeit, AI-Literacy, ethische Standards, Governance, Ressourcenallokation, Nichtdiskriminierung und partizipatives Design umfassen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Es is extremely important that professionals are educated and sensitized to data and AI literacy (Fiok et al., 2022). [...] future skills are important for digital and technological transformation [...] The focus on human-machine (AI) interaction [...] and legal affairs should also be taken into account here, too.",
+    "Generative_KI": "the development of large language models like ChatGPT (Marquart & Goldkind, 2023) [...] it is crucial to critically assess AI technology implications on the protection of human rights",
+    "KI_Sonstige": "Artificial intelligence, a specific constellation of algorithmic and computing strategies, has gained significant attention [...] predictive thinking (Gillingham, 2016b) [...] machine learning technology has entered social work and social services [...] predictive analytics, algorithms and other forms of artificial intelligence",
+    "Soziale_Arbeit": "Social work, as a human rights-based profession, is globally recognized as a profession committed to enhancing human well-being [...] the profession is recognized by the United Nations as a profession group that strives to enable a humane life (IFSW, IASSW und UN Centre for Human Rights, 1994)",
+    "Bias_Ungleichheit": "the algorithms can also suggest unjustified or discriminatory recommendations (Aizenberg & van den Hoven, 2020) and [...] include 'embedded bias' [...] predictive analytics, algorithms and other forms of artificial intelligence are highly likely to reproduce and exacerbate biases reflected in existing data and policies (United Nations General Assembly, 2019)",
+    "Diversitaet": "Applying nondiscrimination in an Artificial Intelligence Enhanced Social Work context calls for inclusive data sets, inclusion, and representation across decision makers and AI creators as well as inviting a range of affected population members in the review and refinement process of AI tools",
+    "Fairness": "Ethical guidelines can help to overcome these ethical challenges [...] dignity, freedom, equality, solidarity, and the right to life are the overriding ethical values (Aizenberg & van den Hoven, 2020) [...] It is critical to ensure that technological applications uphold the fundamental principles of the profession, including human rights and justice"
+  },
+  "references": [
+    {
+      "author": "Staub-Bernasconi",
+      "year": 2019,
+      "short_title": "Human Rights and Social Work - The Triple Mandate"
+    },
+    {
+      "author": "United Nations General Assembly",
+      "year": 2019,
+      "short_title": "Digital Welfare States and Human Rights - Report on Extreme Poverty"
+    },
+    {
+      "author": "Aizenberg & van den Hoven",
+      "year": 2020,
+      "short_title": "Human Rights and AI - Design Requirements"
+    },
+    {
+      "author": "Donahoe & Metzger",
+      "year": 2019,
+      "short_title": "AI and Human Rights Framework"
+    },
+    {
+      "author": "Garkisch",
+      "year": 2020,
+      "short_title": "Digital Social Work Technologies"
+    },
+    {
+      "author": "Gillingham",
+      "year": 2016,
+      "short_title": "Predictive Analytics in Child Welfare"
+    },
+    {
+      "author": "Goldkind",
+      "year": 2018,
+      "short_title": "Digital Social Work"
+    },
+    {
+      "author": "Marquart & Goldkind",
+      "year": 2023,
+      "short_title": "ChatGPT and Social Work Practice"
+    },
+    {
+      "author": "Coulton et al.",
+      "year": 2015,
+      "short_title": "Social Sector and Digital Revolution"
+    },
+    {
+      "author": "Rodriguez & Storer",
+      "year": 2020,
+      "short_title": "Computational Social Science and Ethical Algorithms"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Höchst relevant für die Schnittstelle von KI und Sozialer Arbeit. Das Paper adressiert direkt die ethischen, menschenrechtlichen und praktischen Implikationen von AI-Einsatz in sozialarbeiterischen Kontexten und identifiziert kritische Forschungslücken.",
+    "unique_contribution": "Erste umfassende systematische Literaturanalyse (67 Artikel) zur KI-Sozialer-Arbeit-Schnittstelle mit Entwicklung eines integrierten theoretischen Modells (Artificial Intelligence Enhanced Social Work), das Staub-Bernasconis Tripelmandat mit Menschenrechtsrahmen verbindet.",
+    "limitations": "Begrenzt auf englischsprachige Peer-reviewed-Artikel der letzten 15 Jahre; schließt Bücher, Buchkapitel, Konferenzpapers, Dissertationen und graue Literatur aus; primär deskriptive Abbildung des empirischen Forschungsstandes ohne eigene empirische Erhebungen."
+  },
+  "target_group": "Sozialarbeiter:innen, Sozialarbeitswissenschaftler:innen, Organisationen der Sozialen Arbeit, KI-Entwickler mit Fokus auf Sozialsektor, Policymaker im Bereich Soziale Dienste, AI-Ethiker:innen, Bildungsverantwortliche in der Sozialarbeitsausbildung"
+}

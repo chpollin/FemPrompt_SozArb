@@ -29,10 +29,10 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 | Kriterium | Status |
 |-----------|--------|
-| Literature Review (326 Papers) | 🔄 In Arbeit |
-| Paper eingereicht (4. Mai 2026) | ⏸️ Wartet |
-| Benchmark Human vs. LLM | ⏸️ Wartet |
-| Obsidian Vault | ⏸️ Wartet |
+| Literature Review (326 Papers) | In Arbeit |
+| Paper eingereicht (4. Mai 2026) | Wartet |
+| Benchmark Human vs. LLM | Wartet |
+| Obsidian Vault | Wartet |
 
 ---
 
@@ -70,7 +70,7 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 ├── assessment/              # Human Assessment
 ├── assessment-llm/          # LLM Assessment
 ├── benchmark/               # Human vs. LLM Vergleich
-├── pipeline/                # PDF → Markdown → Summary → Vault
+├── pipeline/                # PDF → Markdown → Knowledge → Vault
 ├── vault/                   # Obsidian Vault (Output)
 └── knowledge/               # Dokumentation
 ```
@@ -98,4 +98,4 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 ---
 
-*Version: 4.0 (2026-02-03)*
+*Aktualisiert: 2026-02-06*

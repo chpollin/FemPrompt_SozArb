@@ -1,0 +1,59 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Geografische Verteilung der analysierten Incidents nicht erwähnt",
+        "Zeitlicher Rahmen der Incidents (nur 'vor Dezember 2024') nicht präzisiert",
+        "Inter-Rater Reliabilität (93,33%) und LLM-Genauigkeit (87%) im Haupttext nicht erwähnt, nur in Appendix"
+      ],
+      "missing_minor": [
+        "Spezifische Beispiele aus Taxonomie-Kategorien hätten erweitert werden können",
+        "Quantitative Verteilung der 1.060 Fälle auf die 10 Reparationskategorien nicht zusammengefasst"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Autoren-Zuordnung: Original nennt 'Singh_2025_reparative.pdf' aber Autoren sind 'Xiao et al.' (nicht Singh als Erst-Autor). Generiertes Dokument korrekt, aber source_file-Naming ist inkonsistent mit Authorship."
+      ],
+      "distortions": [
+        "Die Aussage 'Die Analyse offenbart ein grundlegendes Accountability-Defizit' ist eine Interpretation, nicht direkt im Abstract so formuliert. Korrekt, aber verdichtet.",
+        "Compensation als '6,13%' präzise zitiert, aber kontextualisiert als 'einer der am wenigsten häufigen Aktionen' - dies ist korrekt aber könnte übertrieben wirken, da Discontinuation nur 4,43% ist"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "**Verantwortungsethik** - Das Paper behandelt explizit normative Fragen zu Responsibility und Accountability, nicht nur deskriptiv",
+        "**Algorithmische Gerechtigkeit** - Zentrale theoretische Säule, die über 'Fairness' hinausgeht",
+        "**Stakeholder-Governance / Partizipation** - Das Paper hat starken Fokus auf Multi-Stakeholder-Koordination und deren Mangel"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "issue": "Kategorien unvollständig",
+      "suggested_additions": [
+        "Verantwortungsethik",
+        "Algorithmische_Gerechtigkeit",
+        "Stakeholder_Partizipation"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Validierungsmetriken fehlen in Haupttext",
+        "fix": "Ergänzen: 'Inter-Rater Reliabilität: 93,33% (Aktionen), 90,00% (Stakeholder); LLM-Genauigkeit: 87% (Aktionen), 78,78% (Stakeholder) in 200-Fall-Stichprobe validiert.'"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Compensation-Häufigkeit könnte präzisiert werden",
+        "fix": "Ergänzen: '(6,13%), während Discontinuation noch seltener ist (4,43%)' oder vereinfachen zu 'Remedy-Maßnahmen insgesamt selten (<15%)'"
+      }
+    ]
+  }
+}

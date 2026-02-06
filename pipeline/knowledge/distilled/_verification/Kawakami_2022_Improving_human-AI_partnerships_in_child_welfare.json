@@ -1,0 +1,71 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Anzahl der Interviewteilnehmer nicht erwähnt (nur Codes wie C1, C2 verwendet)",
+        "Analysemethode nicht detailliert beschrieben (z.B. Kodierungsverfahren, Thematic Analysis)",
+        "Zeitrahmen der Datenerhebung nicht angegeben",
+        "Limitationen und Generalisierungsgrenzen nicht ausreichend dargelegt"
+      ],
+      "missing_minor": [
+        "Spezifische Design Implications konkret aufgelistet",
+        "Ethische Genehmigung und IRB-Approval nicht erwähnt",
+        "Intersektionale Analyse von Geschlecht nicht vertieft"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Author Kenneth Holstein wird in der ursprünglichen Autorenliste erwähnt, aber seine Affiliation (Carnegie Mellon University, Pittsburgh, USA kjholste@cs.cmu.edu) wird im generierten Dokument nicht vollständig abgebildet"
+      ],
+      "distortions": [
+        "Die Darstellung der organisatorischen Drücke könnte als stärker hervorhoben interpretiert werden, als sie möglicherweise im Original gewichtet sind",
+        "Die Bias-Wahrnehmungen der Worker werden als 'Evidenz' für tatsächliche Bias präsentiert, obwohl dies Worker-Perspektiven sind"
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik_Verantwortbarkeit (explicit algorithmic accountability und ethical implications)",
+        "HCI_Design (das Paper stammt aus CHI und behandelt Design Implications umfangreich)",
+        "Entscheidungsunterstützung_Decision_Support_Systeme (DSS ist Kernthema)"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_to_add": [
+        "Ethik_Verantwortbarkeit",
+        "HCI_Design",
+        "Entscheidungsunterstützung"
+      ],
+      "conference_details": "CHI '22: CHI Conference on Human Factors in Computing Systems, April 29-May 5, 2022, New Orleans, LA, USA"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Unvollständige Methodenbeschreibung",
+        "suggestion": "Ergänzen: Sample size, Kodierungsschema, Inter-Rater Reliability, Datenanalyse-Techniken (z.B. thematic analysis, grounded theory elements)"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Bias-Aussagen könnten klargestellt werden",
+        "suggestion": "Präzisieren, dass dies Worker-Wahrnehmungen und -Vermutungen sind, nicht verifizierte Modell-Biases: 'Workers perceive that...' (bereits teilweise getan, aber konsistent durchzieht helfen)"
+      },
+      {
+        "section": "Assessment-Relevanz / Limitations",
+        "issue": "Gender nicht erwähnt, obwohl relevant",
+        "suggestion": "Ergänzen: 'Gender identity of workers and its potential intersection with algorithmic bias perceptions not explicitly analyzed'"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Zu verdichtet, potentiell ungenau",
+        "suggestion": "Umformulierung: 'obwohl das AFST seit etwa fünf Jahren im Einsatz ist' (das Papier sagt 'half a decade', nicht exakt 5 Jahre)"
+      }
+    ]
+  }
+}

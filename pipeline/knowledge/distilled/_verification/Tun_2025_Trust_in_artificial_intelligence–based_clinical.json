@@ -1,0 +1,76 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "DOI und Journal-Metadaten (J Med Internet Res 2025;27:e69678) nicht in Frontmatter",
+        "Affiliations der Autoren nicht vollständig dokumentiert",
+        "Keywords aus dem Original nicht extrahiert",
+        "PRISMA 2020 Checklist-Referenz erwähnt, aber nicht verlinkt"
+      ]
+    },
+    "correctness": {
+      "score": 96,
+      "errors": [],
+      "distortions": [
+        "Minimale Verzerrung: 'pioritizing' im Original ist Typo für 'prioritizing' - wurde in generiertem Dokument nicht korrigiert, aber auch nicht als Fehler dokumentiert"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Transparency_Explainability - zentral für 8 Schlüsselthemen, nicht als separate Kategorie",
+        "Clinical_Implementation - große Bedeutung für Integration in Workflows, nicht kategorisiert",
+        "Regulatory_Frameworks - EU AI Act, OECD erwähnt im Original, fehlt als Kategorie"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "add_fields": [
+        "doi: '10.2196/69678'",
+        "journal: 'Journal of Medical Internet Research'",
+        "volume: 27",
+        "issue: 1",
+        "keywords: ['trust in artificial intelligence', 'decision support systems', 'health care workers', 'PRISMA']",
+        "published: '2025-07-29'"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "category_validation",
+        "fix": "Ergänzung um Kategorie 'Transparency_Explainability' - ist Fundament aller 8 Schlüsselthemen (System Transparency, interpretable AI)",
+        "evidence": "Original: 'System Transparency, emphasizing the need for clear and interpretable AI'"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "fix": "Korrekte Formatierung: [[Vereschak_2010]] statt [[Vereschak_et_al_2020]] - Original gibt keine Jahreszahl an",
+        "evidence": "Original nennt 'Vereschak et al [10]' ohne Jahreszahl in Referenzen"
+      },
+      {
+        "section": "Assessment_Relevanz_Domain_Fit",
+        "fix": "Könnte erweitert werden um explizite Nennung von Regulatory/Governance-Implikationen",
+        "evidence": "Original diskutiert EU AI Act und OECD Standards am Ende"
+      }
+    ]
+  },
+  "quality_notes": {
+    "strengths": [
+      "Kernbefunde präzise zusammengefasst",
+      "Acht Schlüsselthemen korrekt erfasst und erläutert",
+      "Methodologie vollständig dokumentiert",
+      "Target Groups differenziert und plausibel",
+      "Limitations kritisch reflektiert"
+    ],
+    "areas_for_improvement": [
+      "Frontmatter könnte vollständiger sein (Journal-Metadaten)",
+      "Kategorisierung könnte feinkörniger sein (z.B. Transparency vs. Clinical_Implementation vs. Regulatory)",
+      "Assessment_Relevanz Domain_Fit könnte den Governance-Aspekt stärker betonen",
+      "Keine Erwähnung der Publikationsdatum im Dokument selbst"
+    ]
+  }
+}

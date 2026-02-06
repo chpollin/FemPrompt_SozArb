@@ -1,0 +1,58 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Länder/Regionen der 179 analysierten Dokumente nicht genannt",
+        "Suchdatenbank-Filterkriterien (Publikationsjahre, Sprachen) nicht expliziert",
+        "Konkrete Anzahl der in den zwei Gruppen (Lernexperienzen vs. theoretische Perspektiven) klassifizierten Dokumente fehlt"
+      ],
+      "missing_minor": [
+        "Interrater-Reliabilität bei Dokumentenklassifizierung nicht erwähnt",
+        "Qualitätsscore (95) des Konversionsprozesses wird erwähnt aber nicht interpretiert"
+      ]
+    },
+    "correctness": {
+      "score": 97,
+      "errors": [],
+      "distortions": [
+        "Kernbefund paraphrasiert 'Three axes' korrekt, aber vereinfacht die Komplexität der identifizierten Implementierungslücken leicht zu stark"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Curricula/Lehrplan (implizit vorhanden, aber nicht als eigene Kategorie gelistet)",
+        "Assessment/Evaluation (Papier kritisiert fehlende Assessments, könnte als Kategorie für Forschungslücke dienen)",
+        "Interdisziplinarität (wird diskutiert, keine dedizierte Kategorie)"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Zeitrahmen der Literatursuche (z.B. '2010-2023' oder 'bis 2023') in Metadaten hinzufügen, falls aus Original rekonstruierbar"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Zeitraum der Literaturabdeckung unklar",
+        "original": "**Datenbasis:** 179 Dokumente aus Scopus (primäre Quellen von Elsevier, Springer, ACM, IEEE); Zeitraum nicht explizit angegeben",
+        "suggestion": "Überprüfen ob Originaltext Suchzeitraum enthält; ggf. aus Zitationen (z.B. älteste/neueste Referenz) rekonstruieren"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Operative Granularität der zwei Gruppen fehlt",
+        "original": "Kernbefund bleibt auf hohem Abstraktionsniveau",
+        "suggestion": "Optional: Spezifische Beispiele der beiden Gruppen (z.B. '73 Lernexperienzen, 106 theoretische Rahmenwerke') hinzufügen, falls im Originaltext quantifiziert"
+      },
+      {
+        "section": "Category-Evidenz",
+        "issue": "KI_Sonstige ist catch-all Kategorie",
+        "suggestion": "Ggf. spezifischere Sub-Kategorien wie 'Machine_Learning', 'Robotics', 'Data_Literacy' erwägen, um Kohärenz mit anderen Kategorien zu erhöhen"
+      }
+    ]
+  }
+}

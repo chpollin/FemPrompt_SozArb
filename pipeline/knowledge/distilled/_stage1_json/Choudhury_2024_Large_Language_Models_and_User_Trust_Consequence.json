@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "title": "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals",
+    "authors": [
+      "Avishek Choudhury",
+      "Zaira Chaudhry"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie beeinflussen selbstreferenzielle Lernschleifen in LLMs und das resultierende Vertrauen von Klinikern die klinische Kompetenz sowie die Qualität von LLM-Outputs im Gesundheitswesen?",
+    "methodology": "Theoretisch/Konzeptuell - Analysiert die Dynamiken zwischen Kliniker-Vertrauen, Datenquellen und LLM-Leistung über Zeit; basiert auf Literaturanalyse und konzeptuellem Modell (Figur 1), keine empirische Datenerhebung",
+    "key_finding": "LLMs können in selbstreferenziellen Lernschleifen geraten, in denen KI-generierte Inhalte zur Trainierung führen, was zu Bias-Verstärkung, reduzierter Datenvielfalt und Deskilling von Klinikern führt. Diese Risiken erfordern proaktive Maßnahmen zur Aufrechterhaltung von Fachkompetenz und kritischer Überwachung.",
+    "data_basis": "nicht angegeben (konzeptuelle Analyse ohne empirische Datenerhebung)"
+  },
+  "arguments": [
+    "Der Aufstieg von LLM-Vertrauen bei Klinikern korreliert invers mit dem Erhalt klinischer Fähigkeiten, da zunehmende Automatisierungs-Bias und Abhängigkeit zu kognitiven Verzerrungen (Confirmation Bias, Precautionary Bias) führen.",
+    "Selbstreferenzielle Lernschleifen entstehen, wenn KI-generierte Inhalte zur Trainierung neuer Modelle verwendet werden, was Bias-Verstärkung, Echo-Kammer-Effekte und letztlich Leistungsabbau verursacht.",
+    "Das Risiko der Deskilling betrifft besonders zukünftige Generationen von Gesundheitsfachkräften, deren kritisches Denken, diagnostische Fähigkeiten und tiefes Verständnis durch übermäßiges Delegieren an KI-Systeme beeinträchtigt werden könnte."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Die Expertise von Nutzern bestimmt ihre Fähigkeit, Fehler in LLM-Outputs zu erkennen: 'Subject matter experts (doctors) may use LLMs to handle routine, time-consuming tasks... They have the advantage of being able to critically evaluate the LLM's output, verify its accuracy... The expertise of such users acts as a safeguard against potential errors'",
+    "Generative_KI": "Fokus auf LLMs wie ChatGPT und deren Integration in Gesundheitswesen: 'generative AI like large language models (LLM) is already being deployed in the public sphere... used by health care workers, researchers, and the public for a variety of health care-related tasks'",
+    "KI_Sonstige": "Behandelt algorithmische Entscheidungssysteme und KI-Accountability: 'The Algorithmic Accountability Act of 2023 and Artificial Intelligence Accountability Act represent a critical legislative step toward ensuring the responsible use of algorithms'",
+    "Bias_Ungleichheit": "Explizit thematisiert Bias-Verstärkung durch selbstreferenzielle Schleifen: 'AI systems learn from the data they are fed, and if these data include biases, the AI is likely to replicate and even amplify these biases in its outputs. In a self-referential loop, the problem becomes compounded... these biases can become more entrenched'",
+    "Diversitaet": "Berücksichtigt unterschiedliche Nutzergruppen und deren unterschiedliche Risiken: 'individuals who turn to LLMs due to a lack of expertise in a particular area face a different set of challenges... users vulnerable to accepting erroneous information as fact'",
+    "Fairness": "Adressiert faire Algorithmen-Entwicklung und Gerechtigkeit: 'ensuring transparency in LLM can further enhance trust in the system... This transparency combats algorithmic deference by encouraging health care professionals to critically assess LLM outputs'"
+  },
+  "references": [
+    {
+      "author": "Harris",
+      "year": 2021,
+      "short_title": "AI background, selected issues, and policy considerations"
+    },
+    {
+      "author": "Goddard, Roudsari, Wyatt",
+      "year": 2012,
+      "short_title": "Automation bias: systematic review of frequency, effect mediators, and mitigators"
+    },
+    {
+      "author": "De Angelis et al.",
+      "year": 2023,
+      "short_title": "ChatGPT and the rise of large language models: AI-driven infodemic threat"
+    },
+    {
+      "author": "Singhal et al.",
+      "year": 2023,
+      "short_title": "Large language models encode clinical knowledge"
+    },
+    {
+      "author": "Choudhury, Shamszare",
+      "year": 2023,
+      "short_title": "Impact of user trust on adoption and use of ChatGPT"
+    },
+    {
+      "author": "Asan, Bayrak, Choudhury",
+      "year": 2020,
+      "short_title": "Artificial intelligence and human trust in healthcare: focus on clinicians"
+    },
+    {
+      "author": "Meyer et al.",
+      "year": 2023,
+      "short_title": "ChatGPT and large language models in academia: opportunities and challenges"
+    },
+    {
+      "author": "Lo",
+      "year": 2023,
+      "short_title": "Impact of ChatGPT on education"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist relevant für die Schnittstelle von KI und professioneller Praxis, fokussiert aber auf Gesundheitswesen statt Soziale Arbeit. Die Themen Deskilling, Automation Bias und kritische Kompetenz lassen sich konzeptionell auf andere Fachdomänen übertragen, insbesondere auf Care-Berufe.",
+    "unique_contribution": "Erstmals wird die Dynamik zwischen Kliniker-Vertrauen, selbstreferenziellen LLM-Lernschleifen und Deskilling-Risiken in einem integrierten konzeptuellem Modell dargestellt, das zeitliche Trajektorien visualisiert.",
+    "limitations": "Die Analyse ist rein konzeptuell ohne empirische Validierung; die Selbstreferenzialitäts-These wird als zukünftiges Risiko positioniert ('has not yet materialized'), nicht als gegenwärtige Realität demonstriert."
+  },
+  "target_group": "Gesundheitsfachkräfte, Kliniker, Medizinstudenten, Gesundheitsinstitutionen, KI-Entwickler im Healthtech-Bereich, Policymaker für AI-Regulierung, Bildungsverantwortliche in medizinischen Disziplinen"
+}

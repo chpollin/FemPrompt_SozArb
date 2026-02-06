@@ -1,0 +1,66 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 78,
+      "missing_critical": [
+        "Stichprobengröße für die Interviewstudie zur Erklärbarkeit von KI in der Medizin nicht angegeben (n nicht explizit dokumentiert)",
+        "Konkrete Szenarien und deren Variation in der Studie nicht detailliert beschrieben",
+        "Spezifische Evaluationsfaktoren auf interaktionaler und prozessualer Ebene nicht vollständig aufgelistet",
+        "Unterschied zwischen den beiden Szenarien (Diagnostik vs. Dokumentation) zu vage dargestellt"
+      ],
+      "missing_minor": [
+        "Affiliationen einiger Autoren (Hillmann, Voigt-Antons) in Zusammenfassung nicht vollständig",
+        "Publikationsdatum im Detail (15.03.2024) könnte expliziter sein",
+        "Länder-Codes der Affiliationen fehlen teilweise"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Autoren-Zuordnung: 'Manuela Marquardt' wird mit 3 Affiliationen (1, 2, 3) aufgeführt, aber in Originaltext nur 1 und unklare zweite Affiliation"
+      ],
+      "distortions": [
+        "Die Aussage 'virtuelle Verkörperung kann sprachbasierte Erklärungen verbessern' wird in der Zusammenfassung als Schlüsselbefund präsentiert, ist aber nur eine von mehreren Ergebnissen im Abstract",
+        "Die Gewichtung zwischen Erklärbarkeit, Vertrauen und Funktionalität könnte stärker nuanciert sein"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Transparenz/Explainability (sollte stärker als eigene Kategorie behandelt werden, wird aktuell unter AI_Literacies subsumiert)",
+        "Vertrauen/Trust in AI (wird erwähnt, aber nicht als separate Kategorie aufgeführt)",
+        "Regulierung/Governance (wird im Titel erwähnt, aber in Kategorien unterrepräsentiert)"
+      ]
+    }
+  },
+  "overall_confidence": 86,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Affiliation für Stefan Hillmann und Jan-Niklas Voigt-Antons in Autorenliste präzisieren (aus Originaltext: Hillmann = TU Berlin, Voigt-Antons = Hochschule Hamm-Lippstadt)"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Stichprobengröße unklar",
+        "fix": "Notiz hinzufügen: 'Die genaue Teilnehmendenzahl wird in diesem Ausschnitt nicht explizit angegeben. Das Originalabstract erwähnt nur \"healthcare stakeholders\"'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Differenzierung der Studienergebnisse",
+        "fix": "Spezifischer zwischen den drei empirischen Studien unterscheiden: (1) Medizin-Szenarien, (2) Gerichtsentscheidungen, (3) ADDS an EU-Grenzen"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Fehlende Kategorie Governance/Regulierung",
+        "fix": "Neue Kategorie hinzufügen mit Verweis auf Diskussion von Regulierungsoptionen im Titel und Editorial"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Zu kritisch bezüglich Sozialer Arbeit",
+        "fix": "Stärker betonen: Algorithmic Justice und Diskriminierungsschutz haben hohe Relevanz für vulnerable Gruppen in sozialen Diensten"
+      }
+    ]
+  }
+}

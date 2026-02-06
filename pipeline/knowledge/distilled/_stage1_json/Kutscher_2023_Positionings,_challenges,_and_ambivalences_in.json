@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "title": "Policy advice and best practices on bias and fairness in AI",
+    "authors": [
+      "Jose M. Alvarez",
+      "Alejandra Bringas Colmenarejo",
+      "Alaa Elobaid",
+      "Simone Fabbrizzi",
+      "Miriam Fahimi",
+      "Antonio Ferrara",
+      "Siamak Ghodsi",
+      "Carlos Mougan",
+      "Ioanna Papageorgiou",
+      "Paula Reyero",
+      "Mayra Russo",
+      "Kristen M. Scott",
+      "Laura State",
+      "Xuan Zhao",
+      "Salvatore Ruggieri"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Bias und Fairness in KI-Systemen durch Policy-Interventionen und Best Practices verstanden, gemindert und kontrolliert werden?",
+    "methodology": "Theoretisch/Review - systematische Übersicht der Fair-AI-Methoden, -Ressourcen und -Policies mit multidisziplinärem Ansatz basierend auf Erkenntnissen des NoBIAS-Forschungsprojekts",
+    "key_finding": "Der Hauptbeitrag besteht in einer umfassenden Übersicht des Fair-AI-Forschungsstands sowie in Policy-Empfehlungen und Best Practices aus dem NoBIAS-Projekt, die zentrale unterentwickelte Themen wie Multi-Stakeholder-Partizipation, Intersektionalität, Kausalität und Monitoring adressieren. Fair-AI erfordert einen multidisziplinären Ansatz jenseits reiner technischer Optimierung und muss mit rechtlichen, sozialen und ethischen Frameworks integriert werden.",
+    "data_basis": "nicht empirisch - Review und Policy-Synthese basierend auf Literaturanalyse und Projektergebnissen"
+  },
+  "arguments": [
+    "KI-Systeme sind value-laden und können systematische Diskriminierung reproduzieren, weshalb algorithmische Fairness nicht nur ein technisches, sondern ein grundsätzlich multidisziplinäres Problem ist, das Perspektiven aus Recht, Philosophie, Sozialwissenschaften und Ethik integrieren muss.",
+    "Die aktuelle Hegemonie technischer Fair-AI-Ansätze mit Fokus auf numerische Fairness-Metriken vernachlässigt kontextuelle, politische und substanzielle Gleichheitskonzepte; Multi-Stakeholder-Partizipation und menschenzentrierte AI sind notwendig für robuste Systeme.",
+    "Intersektionalität und das Verbot-Debiasing-Paradoxon zeigen, dass Single-Attribute-Bias-Mitigation bestehende Ungleichheiten verstärken kann, weshalb Systeme ganzheitlich auf Wechselwirkungen zwischen geschützten Merkmalen analysiert werden müssen.",
+    "Kausalität bietet einen vielversprechenden theoretischen Rahmen zur Erfassung echter Diskriminierungsmechanismen, erfordert aber explizite Stakeholder-Verhandlungen über Annahmen und kann nicht vollständig aus Daten allein inferiert werden.",
+    "Bias ist nicht statisch sondern unterliegt Distribution Shifts über Zeit und Kontexte; kontinuierliches Monitoring und domänenspezifische Ansätze sind essentiell für Accountability in hochriskanten Anwendungskontexten."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper betont die Notwendigkeit multidisziplinärer Bildung und kritischer Reflexion über KI-Systeme: 'Involving a diverse group of people has shown to be critical in stages such as selecting the preferences instructed to the model' und diskutiert AI-Alignment und 'human-centered AI' als zentrale Kompetenzen.",
+    "KI_Sonstige": "Umfassende Behandlung verschiedener KI-Subdisziplinen: 'fair-AI research has been rapidly expanding to all sub-fields of AI, including unsupervised and reinforcement learning, natural language processing (NLP), computer vision, speech processing, recommender systems, and knowledge representation'",
+    "Soziale_Arbeit": "Konkrete Anwendung in Sozialen Diensten: 'The NoBIAS project contributed in Scott et al. (2022) to a participatory approach in the design of algorithmic systems in support of public employment services.' Bezug zu Arbeitsmarktentscheidungen und Beratung.",
+    "Bias_Ungleichheit": "Zentral für das Paper: 'algorithmic systems are value-laden in that they (1) create moral consequences, (2) reinforce or undercut ethical principles, or (3) enable or diminish stakeholder rights and dignity'. Extensive Diskussion von Diskriminierungsquellen und Harm: 'illegal discrimination against social groups protected by non-discrimination law'",
+    "Diversitaet": "Starker Fokus auf Repräsentation und marginalisierte Gruppen: 'Active participation during the whole construction process of an AI system can be a key part of addressing the representation bias that prevails in current systems' und 'models trained on raw data fail to capture the nuances found in the less-represented segments of the data distribution (Mallen et al., 2023), which often correspond to underprivileged communities.'",
+    "Feministisch": "Das Paper zitiert und integriert explizit feministische Perspektiven: 'State, L., Fahimi, M. (2023). Careful explanations: A feminist perspective on XAI.' und 'Organizers Of QueerinAI et al., 2023' bei der Diskussion von Representationsbias. Intersektionalität wird als feministisches Konzept behandelt: 'different dimensions of identity cannot be understood in isolation but must be considered collectively' - dies ist Crenshaw'sche Intersektionalitätstheorie.",
+    "Fairness": "Das ist das Kernthema des gesamten Papers: 'Fairness in AI (or simply, fair-AI) aims at designing methods for detecting, mitigating, and controlling biases in AI-supported decision making' mit detaillierter Diskussion von Group Fairness Metrics, Individual Fairness Metrics, Causal Fairness Metrics und deren trade-offs."
+  },
+  "references": [
+    {
+      "author": "Pearl",
+      "year": 2009,
+      "short_title": "Causality: Models, Reasoning and Inference"
+    },
+    {
+      "author": "Mittelstadt et al.",
+      "year": 2023,
+      "short_title": "Bridging the gap between fairness metrics and substantive equality"
+    },
+    {
+      "author": "Buolamwini & Gebru",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial AI"
+    },
+    {
+      "author": "Friedman & Nissenbaum",
+      "year": 1996,
+      "short_title": "Bias in computer systems"
+    },
+    {
+      "author": "Smirnov et al.",
+      "year": 2021,
+      "short_title": "Quota-based debiasing can decrease representation of the most under-represented groups"
+    },
+    {
+      "author": "Caton & Haas",
+      "year": 2024,
+      "short_title": "Fairness in Machine Learning: A Survey"
+    },
+    {
+      "author": "D'Ignazio & Klein",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Kulynych et al.",
+      "year": 2020,
+      "short_title": "Socio-technical systems and fairness in algorithmic decision-making"
+    },
+    {
+      "author": "Pedreschi et al.",
+      "year": 2008,
+      "short_title": "Discrimination-aware data mining"
+    },
+    {
+      "author": "Wachter et al.",
+      "year": 2021,
+      "short_title": "Why fairness cannot be automated: Bridging EU non-discrimination law and AI"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für die Schnittstelle KI und Soziale Arbeit, da es sowohl technische als auch policy-orientierte Lösungen für Fairness adressiert und explizit Anwendungen in sozialen Diensten (Arbeitsmarktservice) diskutiert. Die Integration feministischer und intersektionaler Perspektiven macht es wertvoll für equity-fokussierte Sozialarbeit.",
+    "unique_contribution": "Der besondere Beitrag liegt in der Integration von EU-Rechtsperspektiven mit technischer Fair-AI-Forschung sowie in der systematischen Behandlung unterentwickelter Themen wie intersektionale Bias-Mitigation, Multi-Stakeholder-Partizipation und Kausalität im Fairness-Kontext.",
+    "limitations": "Das Paper ist ein Review/Policy-Synthese ohne empirische Validierung der Empfehlungen; es behandelt die Spannung zwischen technischer Machbarkeit und normativen Anforderungen teilweise abstrakt und liefert begrenzte konkrete Implementierungsrichtlinien für komplexe Kontexte wie Soziale Arbeit."
+  },
+  "target_group": "KI-Entwickler:innen und Datenwissenschaftler:innen, Policymaker und Regulatoren (insbesondere im EU-Kontext), Sozialarbeiter:innen und Fachkräfte sozialer Dienste, Ethik-Expert:innen, Forschende im Bereich AI Ethics und Fair ML, sowie Organisationen, die KI-Systeme in hochriskanten sozialen Kontexten implementieren"
+}

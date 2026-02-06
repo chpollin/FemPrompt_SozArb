@@ -14,29 +14,26 @@ Zentrale Dokumentation aller Python-Scripts im Projekt.
 | `pipeline/tools/` | Browser-Tools (HTML) |
 | `benchmark/scripts/` | Benchmark Human vs. Agent |
 | `assessment/` | Assessment-Workflows |
-| `assessment-llm/` | LLM-Assessment (Legacy) |
+| `assessment-llm/` | LLM-Assessment |
 | `corpus/` | Korpus-Vorbereitung |
-| `analysis/` | Legacy-Scripts |
-| `run_pipeline.py` | Master-Orchestrator |
 
 ---
 
 ## Pipeline Scripts (pipeline/scripts/)
 
-**Zweck:** Hauptworkflow PDF → Markdown → Summary → Vault
+**Zweck:** Hauptworkflow PDF → Markdown → Knowledge → Vault
 
-**Status:** 232/234 PDFs konvertiert, validiert und bereinigt
+**Status:** 252/257 PDFs konvertiert, validiert und bereinigt
 
 | Script | Beschreibung | Status | Dependencies |
 |--------|--------------|--------|--------------|
-| `download_zotero_pdfs.py` | PDFs von Zotero Group herunterladen | ✅ Getestet | pyzotero |
-| `convert_to_markdown.py` | PDF→Markdown mit Qualitaetsmetriken | ✅ Getestet | docling |
-| `validate_markdown.py` | Basis-Validierung (GLYPH, Unicode) | ✅ Getestet | - |
-| `validate_markdown_enhanced.py` | Multi-Layer Validierung mit PDF-Vergleich | ✅ Getestet | pdfplumber |
-| `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | ✅ Getestet | - |
-| `summarize_documents.py` | LLM-Summarisierung | Ausstehend | anthropic |
+| `download_zotero_pdfs.py` | PDFs von Zotero Group herunterladen | Getestet | pyzotero |
+| `convert_to_markdown.py` | PDF→Markdown mit Qualitaetsmetriken | Getestet | docling |
+| `validate_markdown_enhanced.py` | Multi-Layer Validierung mit PDF-Vergleich | Getestet | pdfplumber |
+| `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | Getestet | - |
+| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Abgeschlossen (249 Docs) | anthropic |
 | `generate_vault.py` | Obsidian Vault generieren | Ausstehend | - |
-| `utils.py` | Hilfsfunktionen (Hash, Sanitize, JSON, Windows-Encoding) | ✅ Aktiv | - |
+| `utils.py` | Zentrale Hilfsfunktionen (Logging, API, JSON, Config) | Aktiv | - |
 
 ### validate_markdown_enhanced.py
 
@@ -108,11 +105,8 @@ Oeffnen mit Live Server in VS Code.
 
 | Script | Beschreibung |
 |--------|--------------|
-| `zotero_to_excel.py` | Zotero-Export nach Excel |
+| `create_thematic_assessment.py` | Thematisches Assessment-Template erstellen |
 | `excel_to_zotero_tags.py` | Excel-Assessment zurueck zu Zotero-Tags |
-| `create_thematic_assessment.py` | Thematisches Assessment erstellen |
-| `fill_assessment_demo.py` | Demo-Daten fuer Assessment |
-| `agent/run_assessment.py` | Agent-Assessment Runner |
 
 ---
 
@@ -137,7 +131,7 @@ Oeffnen mit Live Server in VS Code.
 | 3 | `validate_markdown_enhanced.py` | Validierung (Enhanced) |
 | 4 | `postprocess_markdown.py` | Post-Processing |
 | 5 | `markdown_reviewer.html` | Human Review (optional) |
-| 6 | `summarize_documents.py` | Zusammenfassen |
+| 6 | `distill_knowledge.py` | Knowledge Distillation |
 | 7 | `generate_vault.py` | Vault generieren |
 
 Alle Scripts haben `--help` fuer Parameter-Dokumentation.
@@ -162,19 +156,22 @@ Alle Scripts haben `--help` fuer Parameter-Dokumentation.
 
 | Phase | Status | Ergebnis |
 |-------|--------|----------|
-| PDF-Download | ✅ Abgeschlossen | 234 PDFs |
-| Markdown-Konvertierung | ✅ Abgeschlossen | 232/234 (99.1%) |
-| Validierung (Enhanced) | ✅ Abgeschlossen | 136 PASS, 96 WARNING, 0 FAIL |
-| Post-Processing | ✅ Abgeschlossen | 107k Zeichen bereinigt |
-| Human Review Tool | ✅ Erstellt | Browser-Tool verfuegbar |
-| LLM-Summarisierung | ⏳ Ausstehend | Naechster Schritt |
-| Vault-Generierung | ⏳ Ausstehend | - |
+| PDF-Download | Abgeschlossen | 257 PDFs |
+| Markdown-Konvertierung | Abgeschlossen | 252/257 (98.1%) |
+| Validierung (Enhanced) | Abgeschlossen | Konfidenz-Score 98.7 |
+| Post-Processing | Abgeschlossen | 107k Zeichen bereinigt |
+| Human Review Tool | Erstellt | Browser-Tool verfuegbar |
+| Knowledge Distillation | Abgeschlossen | 249/252 (98.8%) |
+| Vault-Generierung | Ausstehend | - |
 
-### Fehlgeschlagene Konvertierungen (2)
+### Fehlgeschlagene Konvertierungen (5)
 
+- `British_Association_of_Social_Workers_2025_Generat.pdf`
 - `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf`
 - `Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.pdf`
+- `UNESCO__IRCAI_2024_Challenging.pdf`
+- `Workers_2025_Generative.pdf`
 
 ---
 
-*Letzte Aktualisierung: 2026-02-03*
+*Aktualisiert: 2026-02-06*

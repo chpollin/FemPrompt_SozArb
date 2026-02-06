@@ -1,0 +1,68 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Anzahl der analysierten Primärstudien nicht erwähnt (nur '17 reviews' genannt)",
+        "Suchstrategie und Datenbanken nicht dokumentiert",
+        "Ausschlusskriterien für die 17 Reviews nicht spezifiziert",
+        "Zeitraum der Literatursuche nicht angegeben",
+        "Qualitätsbewertungsinstrument für die eingeschlossenen Reviews nicht genannt"
+      ],
+      "missing_minor": [
+        "PRISMA-Guideline-Konformität nicht explizit erwähnt (obwohl in Original zitiert)",
+        "Interrater-Reliabilität beim Review-Screening nicht diskutiert",
+        "Funding-Quellen oder Interessenskonflikte nicht erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Verarbeitet-Datum: '2026-02-05' liegt in der Zukunft und widerspricht conversion_date '2026-02-03' aus dem Original (identischer Fehler im Original, aber dokumentiert)"
+      ],
+      "distortions": [
+        "Die Darstellung der 'sechs AI literacy Konstrukte' als universelles Framework ist etwas vereinfacht - dies sind Almatrafi et al. (2024) / Ng et al. (2021a) Konstrukte, nicht consensus aller 17 Reviews",
+        "Assessment-Relevanz-Sektion spekuliert über 'begrenzte Verbindung zur Sozialarbeitspraxis' - dies wird im Original nicht diskutiert"
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethical_Considerations / Ethics_in_AI - wird mehrfach im Original als Kernlücke erwähnt ('integration of ethical considerations in AI education'), sollte als separate Kategorie prominent sein",
+        "Policy_Governance - explizit als großer Gap identifiziert ('Policy is a significant gap in discussions around AI in education')",
+        "Teacher_Professional_Development - wird im Original diskutiert, aber nicht in den Kategorien abgebildet",
+        "Assessment_Measurement - ist ein kritischer Gap, wird aber nicht als eigene Kategorie gelistet"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "processed_date": "Sollte 2026-02-03 sein (alignment mit conversion_date)"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Fehlende Details zur systematischen Übersichtsarbeit",
+        "suggestion": "Hinzufügen: 'Suchstrategie umfasste [Datenbanken nicht spezifiziert im Original]. Einschlusskriterien: peer-reviewed systematic/scoping reviews mit Fokus auf AI literacy, Lehren/Lernen von AI-Konzepten, K-12 bis Hochschulbildung.'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Fehlende prominente Kategorien für kritische Gaps",
+        "suggestion": "Neue Kategorien hinzufügen: 'Ethical_Considerations' (mit Zitaten zu ethischer Integration), 'Policy_Governance' (Gap-Identifikation), 'Assessment_Measurement' (Validierungsdefizite)"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Spekulation über Sozialarbeit ohne Originalbeleg",
+        "suggestion": "Absatz zu Sozialarbeit entfernen oder deutlich als 'Implikation außerhalb des Papier-Fokus' kennzeichnen"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Unvollständige Darstellung der Gaps",
+        "suggestion": "Ausplizit hinzufügen: 'Signifikante Gaps bestehen in: (1) standardisierten, theoriegestützten Assessments, (2) Integration ethischer Überlegungen, (3) Policy-Guidance auf Schul- und Bezirksebene, (4) interdisziplinären Ansätzen, (5) Forschung zu Hochschul-AI-Didaktik.'"
+      }
+    ]
+  }
+}

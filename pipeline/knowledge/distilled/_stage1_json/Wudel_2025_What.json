@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "What is Feminist AI?",
+    "authors": [
+      "Alexandra Wudel",
+      "Anna Ehrenberg"
+    ],
+    "year": 2025,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können feministische Werte und Methodiken in KI-Systemen verankert werden, um Bias und Ungleichheiten zu adressieren und strukturelle Machtverhältnisse zu transformieren?",
+    "methodology": "Theoretisch + praktische Fallstudien / Literaturbasiert mit Praxisbeispielen (FemAI, MIRA); keine empirische Erhebung",
+    "key_finding": "Feminist AI (FAI) bietet einen kritischen Rahmen zur Bekämpfung struktureller Ungleichheiten in KI-Systemen durch intersektionale feministische Methodologie, Theory-Practice-Feedback-Loops und Multi-Stakeholder-Engagement. FAI unterscheidet sich von 'Responsible AI' durch ihre Analyse von Machstrukturen als Wurzel von Ungerechtigkeit statt einzelner 'bad actors'.",
+    "data_basis": "Nicht angegeben (keine quantitative Datenerhebung; qualitative Interviews mit MIRA-Team erwähnt)"
+  },
+  "arguments": [
+    "Aktuelle KI-Systeme sind in patriarchalen, Western-zentrischen Strukturen verankert und verstärken Diskriminierung gegenüber marginalisierten, unterrepräsentierten und benachteiligten Menschen (MUUP). Feminist AI kritisiert die 'rational-masculine' Intelligenz-Definition und die Wertebasis Western-kultureller KI-Entwicklung.",
+    "FAI operationalisiert feministische Prinzipien (Equity, Freedom, Justice) durch drei Brückenmassnahmen: (1) Reduktion von Machtungleichheiten durch intersektionale Methodologie und Feminist Design Tools, (2) Sicherung der gesellschaftlichen Nachfrage und Implementierbarkeit durch Multi-Stakeholder-Engagement, (3) kontinuierliche Entwicklung durch Theory-Practice-Feedback-Loops und die neun Prinzipien von D'Ignazio & Klein.",
+    "Praktische FAI-Implementierungen wie FemAI's Advocacy für den EU AI Act und MIRA's ressourceneffiziente, diversitätsorientierte Diagnostik-Plattform zeigen, dass FAI Machtverhältnisse konkret transformieren kann. FAI unterscheidet sich fundamental von Responsible AI durch ihre systemische Fokussierung auf strukturelle Ungleichheiten statt reparative Ethics-Ansätze."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Feminist AI erfordert ein Verständnis von KI-Systemen, ihrer Auswirkungen und kritische Reflexion: 'Intersectional feminism serves as one of the most effective research methods to unlock the black box of AI systems'",
+    "KI_Sonstige": "Breiter KI-Fokus auf algorithmische Entscheidungssysteme: 'An AI system...infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments'",
+    "Soziale_Arbeit": "Fokus auf Gerechtigkeit, Marginalisierte und Benachteiligte in sozialen Systemen: 'FAI seeks to ensure that AI systems are not only inclusive, but actively work to dismantle historical power imbalances'; MIRA-Beispiel im Healthcare als sozialer Dienst",
+    "Bias_Ungleichheit": "Zentrale Thematik: 'AI systems may reinforce structural discrimination of marginalised, underrepresented and underprivileged people (MUUP)'; 'digitised society embedded into a social system with power inequalities'",
+    "Gender": "Explizite Geschlechterperspektive: 'the present understanding of intelligence in the field of AI is described as mostly rational and masculinist'; 'binary gender categories, which may introduce gender bias and exclude individuals identifying as non-binary'",
+    "Diversitaet": "Intersektionale Perspektive durchgehend: 'intersectionality, interdisciplinarity and the execution of theory-practice feedback loops'; 'Intersectional feminism refers to a framework that acknowledges the oppression of people shaped not only by their gender, but by other social categories such as ethnicity, class, sexuality, ability, age, religion or geography'",
+    "Feministisch": "Explizite Verwendung intersektionaler feministischer Theorie und Methodik als Kern des Ansatzes: 'Intersectional feminism serves as one of the most effective research methods to unlock the black box of AI systems'; referenziert Ferguson (2017), D'Ignazio & Klein (2020, 2024), Hill Collins (2010); 'Ferguson (2017) identifies a set of values shared amongst them which can be categorised into three pillars' (complexity, fluidity, political undertaking)",
+    "Fairness": "Fairness und Equity als zentrale Ziele: 'FAI seeks to ensure that AI systems are not only inclusive, but actively work to dismantle historical power imbalances'; 'MIRA analyses mortality rates, side effects and treatment outcomes across gender, age and ethnicity' zur Messung von Equity"
+  },
+  "references": [
+    {
+      "author": "D'Ignazio, C. & Klein, L.F.",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Ferguson, K.E.",
+      "year": 2017,
+      "short_title": "Feminist Theory Today"
+    },
+    {
+      "author": "Hill Collins, P.",
+      "year": 2010,
+      "short_title": "The New Politics of Community"
+    },
+    {
+      "author": "Atanasoski, N. & Vora, K.",
+      "year": 2019,
+      "short_title": "Surrogate Humanity: On Technoliberal Desire, Or Why There Is No Such Thing as a Feminist AI"
+    },
+    {
+      "author": "Arora, P. & Chowdhury, R.",
+      "year": 2021,
+      "short_title": "Cross-Cultural Feminist Technologies"
+    },
+    {
+      "author": "Toupin, S.",
+      "year": 2024,
+      "short_title": "Shaping Feminist Artificial Intelligence"
+    },
+    {
+      "author": "Gillam, C. & Jain, D.",
+      "year": 2024,
+      "short_title": "Responsible AI Playbook for Investors 2024"
+    },
+    {
+      "author": "Purkayastha, B.",
+      "year": 2012,
+      "short_title": "Intersectionality in a Transnational World"
+    },
+    {
+      "author": "Onuoha, M. & Nucera, D.",
+      "year": 2023,
+      "short_title": "People's Guide to AI"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Sehr hohe Relevanz für die Schnittstelle KI-Systeme, Soziale Arbeit und Gender/Diversität. Das Paper adressiert direkt, wie KI-Systeme marginalisierte Gruppen benachteiligen und bietet einen intersektional-feministischen Rahmen für gerechtere KI-Entwicklung, der auch für Sozialarbeitende relevant ist.",
+    "unique_contribution": "Der originelle Beitrag liegt in der konzeptionellen Operationalisierung von Feminist AI als distinkte Methodik (gegenüber Responsible AI) durch explizite Bezugnahme auf intersektionale feministische Theorie und deren Übersetzung in praktische Tools und Policy-Advocacy.",
+    "limitations": "Methodische Limitation: Das Paper ist primär normativ-konzeptionell und literaturbasiert; empirische Wirkungsstudien zu FAI-Implementierungen fehlen. Die MIRA-Fallstudie wird nur deskriptiv präsentiert ohne kontrollierte Evaluation."
+  },
+  "target_group": "KI-Entwickler:innen, Policymaker:innen und Regulatoren (EU AI Act), Sozialarbeiter:innen und Organisationen des Sozialsektors, Tech-Unternehmen und Startup-Gründer:innen, Forscher:innen im Bereich Critical AI Studies, Gender Studies und Data Feminism, Diversity- und Equity-Officer:innen in Organisationen"
+}

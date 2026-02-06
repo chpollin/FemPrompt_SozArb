@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "Social Work in the Age of Artificial Intelligence: A rights-Based Framework for evidence-Based Practice Through Social Psychology, Group Dynamics, and Institutional Analysis",
+    "authors": [
+      "Nafees Alam"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Sozialarbeiter:innen AI-Integration in der sozialen Arbeit navigieren und dabei ethische Implikationen berücksichtigen sowie die Kernwerte der Profession bewahren?",
+    "methodology": "Theoretisch: Systematische Literaturanalyse (Narrative Review) mit Synthesierung interdisziplinärer Forschung aus Sozialpsychologie, Gruppendynamik und institutioneller Analyse; Analyse existierender Fachliteratur und dokumentierter Fallbeispiele",
+    "key_finding": "Ein umfassendes rechtsbasiertes Framework wurde entwickelt, das vier Komponenten integriert (Ethical AI Literacy, Participatory Governance, Continuous Impact Assessment, Community-Centered Advocacy) und AI-Integration in der sozialen Arbeit mit sozialen Psychologie-, Gruppendynamik- und institutionellen Erkenntnissen verbindet.",
+    "data_basis": "Sekundärforschung: Literaturrecherche in Social Work Abstracts, PsycINFO, JSTOR, ACM Digital Library (2015-2025); dokumentierte Fallbeispiele aus Kinderschutz, psychische Gesundheit und Sozialdiensten"
+  },
+  "arguments": [
+    "AI-Systeme beeinflussen Vulnerable Populationen tiefgreifend durch Mediierung von zwischenmenschlichen Beziehungen und Sinnkonstruktion; ohne proaktives Engagement der Sozialen Arbeit riskiert AI bestehende Ungleichheiten zu verstärken, während diese hinter technologischer Neutralität verborgen bleiben.",
+    "Bestehende ethische Rahmenbedingungen der Sozialen Arbeit (NASW Code of Ethics) bieten Grundlagen, erfordern aber sorgfältige Interpretation und Expansion für technologische Kontexte, insbesondere bezüglich menschlicher Würde, Selbstbestimmung und Gerechtigkeit.",
+    "Kognitives Bias (Automation Bias, Algorithm Aversion) und Epistemic Injustice in AI-Systemen gefährden sozialpädagogische Praxis; ein rechtsbasiertes Framework mit vier Komponenten kann diese Risiken adressieren und democratic governance in sozialen Diensten etablieren."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Ethical AI literacy wird als zentrale Komponente definiert: 'the ability to understand, evaluate, and ethically use AI technologies' einschließlich technischen Verständnisses, kritischem Bewusstsein für soziale Implikationen und 'algorithmic translation' für Klienten.",
+    "KI_Sonstige": "Fokus auf Predictive Analytics, Algorithmic Decision Systems und Risk Assessment Tools in Kinderschutz, psychische Gesundheit und Wohnunterstützung; Analyse von Automation Bias und Algorithm Aversion.",
+    "Soziale_Arbeit": "Explizit für Soziale Arbeit entwickelt; bezieht sich auf NASW Code of Ethics, sozialpädagogische Kernwerte (Menschenwürde, Selbstbestimmung, Gerechtigkeit), Micro-, Meso- und Makro-Ebenen der Praxis, sowie Ausbildung und Forschungsmethodologie.",
+    "Bias_Ungleichheit": "Detaillierte Analyse wie AI-Systeme Marginalisierte Populationen unverhältnismäßig stark beeinträchtigen: Allegheny County-Fallbeispiel zeigt wie Armutsfaktoren als Missbrauchsindikatoren gekennzeichnet wurden; Thematisierung von Epistemic Injustice und Algorithmic Discrimination.",
+    "Diversitaet": "Fokus auf vulnerable Populationen, marginalisierte Communities, differenzielle Auswirkungen über sozialen Gruppen hinweg; Betonung von Community-zentrierter Partizipation, intersektionaler Berücksichtigung in Impact Assessments.",
+    "Fairness": "Entwicklung sozialpädagogik-informierter Fairness-Metriken; kontinuierliche Impact-Analysen mit Attention auf Differential Impacts; Algorithmic Auditing über technische Metriken hinaus; Stop LAPD Spying Coalition als Beispiel für Accountability."
+  },
+  "references": [
+    {
+      "author": "Eubanks",
+      "year": 2018,
+      "short_title": "Automating Inequality: How high-tech tools profile, police, and punish the poor"
+    },
+    {
+      "author": "Noble",
+      "year": 2018,
+      "short_title": "Algorithms of Oppression: How search engines reinforce racism"
+    },
+    {
+      "author": "Fricker",
+      "year": 2007,
+      "short_title": "Epistemic Injustice: Power and the ethics of knowing"
+    },
+    {
+      "author": "Costanza-Chock",
+      "year": 2020,
+      "short_title": "Design Justice: Community-led practices to build the worlds we need"
+    },
+    {
+      "author": "Barocas, Hardt & Narayanan",
+      "year": 2020,
+      "short_title": "Fairness and Machine Learning"
+    },
+    {
+      "author": "Reamer",
+      "year": 2018,
+      "short_title": "Social Work Values and Ethics"
+    },
+    {
+      "author": "Berzin, Singer & Chan",
+      "year": 2015,
+      "short_title": "Practice innovation through technology in the digital age: A grand challenge for social work"
+    },
+    {
+      "author": "Abrams & der Pütten",
+      "year": 2020,
+      "short_title": "I-C-E framework: Concepts for group dynamics research in human-robot interaction"
+    },
+    {
+      "author": "Vaithianathan et al.",
+      "year": 2019,
+      "short_title": "Allegheny Family Screening Tool: Methodology"
+    },
+    {
+      "author": "Birhane",
+      "year": 2021,
+      "short_title": "Algorithmic Injustice: A relational ethics approach"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant: Das Paper adressiert direkt die Schnittstelle AI-Integration/Soziale Arbeit mit Fokus auf ethische, professionelle und justice-orientierte Implikationen; kritisiert AI-bedingte Verstärkung bestehender Ungleichheiten in sozialen Diensten.",
+    "unique_contribution": "Entwicklung eines umfassenden, rechtsbasierten Frameworks speziell für Soziale Arbeit, das Sozialpsychologie, Gruppendynamik und institutionelle Analyse integriert und konkrete, evidenzbasierte Handlungsempfehlungen für Praxis, Ausbildung, Forschung und Policy bietet.",
+    "limitations": "Primär theoretische Analyse ohne empirische Testung des Frameworks in realen Implementierungskontexten; Forschung basiert überwiegend auf westlichen Kontexten, limitiert Anwendbarkeit in diversen globalen Settings; rasche AI-Entwicklung könnte Framework schneller überholen als Theoriebildung."
+  },
+  "target_group": "Sozialarbeiter:innen (Praktiker, Educators, Researchers), Social Work Policy Advocate:innen, Organisationen in sozialen Diensten, Kinderschutzbehörden, Computer Scientists/AI Developer:innen in Social Services, Policymaker im Bereich Soziale Dienste und Digital Governance"
+}

@@ -1,0 +1,61 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Häufigkeitsangaben für einzelne Reparationsmaßnahmen (z.B. 'Removal of Content or Product Recall' 11.42%, 'Law and Policy Change' 7.45%) nicht vollständig im Kernbefund erwähnt",
+        "Multi-Stakeholder-Kollaborationsfindung (nur 29% der Fälle) nicht in Hauptargumenten reflektiert",
+        "Geografische Fragmentierung der Policy-Responses nicht erwähnt"
+      ],
+      "missing_minor": [
+        "Spezifische Fallbeispiele (z.B. DoorDash $2.5M, Google €3.800) nicht im Kernbefund zusammengefasst",
+        "Die Rolle von Medien und Akademia als Drittakteure könnte prägnanter dargestellt sein",
+        "Unterschied zwischen formalen Strafen durch Regulatoren vs. interne Konsequenzen nicht explizit erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 93,
+      "errors": [
+        "Stakeholder-Zuverlässigkeit: Der Originaldokument nennt Inter-Rater-Reliabilität von 90.00%, das generierte Dokument gibt keine Differenzierung zwischen Aktion-Reliabilität (93,33%) und Stakeholder-Reliabilität (90%) an - sollte präziser sein"
+      ],
+      "distortions": [
+        "Die Darstellung 'nur 10,75% der Fälle zeigen Strafen' könnte suggerieren, dass Strafen die einzige Remedy sind; tatsächlich gibt es auch 'Compensation' (6,13%) und 'Removal of Content' (11.42%) - Kontext erforderlich",
+        "Die Charakterisierung von Reparation als 'symbolisch' ist interpretativ; der Originaltext ist differenzierter (z.B. 'largely symbolic or discursive' vs. 'impose consequences')"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "KI-Governance/KI-Regulation könnte explizite Kategorie sein (nicht nur als 'KI_Sonstige' subsumiert)",
+        "Unternehmensverantwortung/Corporate Accountability als eigenständige Kategorie könnte hinzugefügt werden"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Kategorien-Zuordnung ist akzeptabel; könnte aber präzisiert werden mit: 'Governance_Regulation' und 'Corporate_Accountability' als Primär-Kategorien"
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Unvollständige Häufigkeitsangaben",
+        "original": "Nur 10,75% der Fälle zeigen Strafen und 6,13% Kompensationen",
+        "suggested": "Reparationsbemühungen konzentrieren sich stark auf symbolische, frühe Phasen (Ankündigung 60%, Attribution durch Audits/Untersuchungen): Strafen 10,75%, Kompensationen 6,13%, Produktrückrufe/Content-Entfernung 11,42%. Nur 4,43% führen zu Produktdiskontinuation, während 7,45% zu Gesetzesänderungen führen."
+      },
+      {
+        "section": "Methodik",
+        "issue": "Ungenauigkeit bei Reliabilität",
+        "original": "Inter-Rater-Reliabilität: 93,33% für Aktionen, 90% für Stakeholder",
+        "suggested": "Inter-Rater-Reliabilität (n=3 Kodierer, 5 gemeinsame Fälle pro Paarvergleich): Aktionen 93,33%, Stakeholder 90%. LLM-Validierung (n=200 stratifizierte Stichprobe): Aktionsgenauigkeit 87%, Stakeholder-Genauigkeit 78,78% (makro-gemittelt über 10 Kategorien)"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Fehlende Erwähnung von Multi-Stakeholder-Defizit",
+        "suggested": "Zusätzliches Argument hinzufügen: 'Fragmentierte, nicht-koordinierte Reparationspraxis: Nur 29% der Fälle zeigen Aktionen von mehr als einer Stakeholder-Gruppe, mit Koordination primär auf Untersuchungen (127 Fälle) und Klagen (65 Fälle) beschränkt, was systemische Fragmentierung der AI-Harm-Bearbeitung widerspiegelt.'"
+      }
+    ]
+  }
+}

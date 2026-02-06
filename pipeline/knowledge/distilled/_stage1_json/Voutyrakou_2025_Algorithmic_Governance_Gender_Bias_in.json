@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?",
+    "authors": [
+      "Dialekti Athina Voutyrakou",
+      "Constantine Skordoulis"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Berücksichtigen populäre KI-Tools wie ChatGPT und Microsoft Copilot Geschlechteraspekte bei der Erstellung von Politikempfehlungen, sowohl wenn Gender explizit erwähnt wird als auch wenn nicht?",
+    "methodology": "Mixed-Methods: Vier experimentelle Szenarien mit wiederholten Prompts in zwei KI-Systemen (ChatGPT GPT-4 und Microsoft Copilot), Häufigkeitsanalyse und qualitative Kodierung der Ergebnisse.",
+    "key_finding": "KI-Tools integrieren genderspezifische Bedürfnisse (Menstruationshygiene, Sicherheit, Kinderbetreuung, thermischer Komfort) nur dann in Politikempfehlungen, wenn Gender explizit im Prompt erwähnt wird; ansonsten wird eine androzentristische Standardperspektive angewandt.",
+    "data_basis": "Vier experimentelle Szenarien: Restroom Design, Schneeräumpolitik, Bürotemperaturregelung, Business-Travel-Ausgaben; jeweils mit Varianten (unspezifisch, männlich, weiblich, nicht-binär); Tests in ChatGPT und Microsoft Copilot"
+  },
+  "arguments": [
+    "Gender-Bias in KI-Tools ist nicht primär ein Trainingsdaten-Problem, sondern ein strukturelles Designproblem, das eine androzentristische Perspektive als 'neutral' kodifiziert und genderspezifische Bedürfnisse nur als Sonderfälle behandelt.",
+    "Die angenommene Neutralität von KI-Systemen verschleiert tatsächlich eine male-default-Logik, die körperliche Unterschiede (Stoffwechselrate, Menstruation), Sorgearbeit und Sicherheitsbedenken systematisch ausblendet, wenn nicht explizit aufgefordert.",
+    "Faire und genderbewusste Algorithmen-Governance erfordert eine proaktive Integration von feministischer Ethik (Care-Ethik, Capabilities Approach) und intersektionalen Perspektiven in Algorithmen-Design, nicht nur nachträgliche Korrektionen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Diskussion darüber, dass Nutzer als 'aktive Teilnehmer' in den Bias-Feedback-Loop beitragen und dass 'Prompt Literacy und Public Education' notwendig sind: 'users themselves contribute to the bias feedback loop, making them active participants rather than passive recipients'",
+    "Generative_KI": "Fokus auf zwei generative KI-Systeme: 'We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) and Microsoft Copilot'",
+    "Prompting": "Explizite Variation der Prompt-Struktur mit/ohne Gender-Erwähnungen: 'Each scenario includes a gender-neutral prompt, a male-specific version, and a female-specific version and a non-binary-specific version'",
+    "KI_Sonstige": "Analyse von LLMs und NLP-Systemen als Teil von algorithmischen Entscheidungssystemen: 'Large language models such as ChatGPT or Microsoft Copilot add layers of complexity to understanding gender bias in AI'",
+    "Bias_Ungleichheit": "Zentrale These der strukturellen Benachteiligung durch androzentrische Algorithmen-Designs: 'the supposed neutrality of AI tools actually reproduces an androcentric norm' und 'a technological design that equates neutral with male'",
+    "Gender": "Expliziter Fokus auf Gender-Bias in vier verschiedenen Policy-Kontexten und auf geschlechtsspezifische Bedürfnisse: 'gender bias...arises when systems consistently advantage or disadvantage individuals based on gender'",
+    "Diversitaet": "Intersektionale Perspektive und Analyse nicht-binärer Identitäten: 'The non-binary scenario further illustrates this pattern: inclusivity features such as gender-neutral policies and identity-affirming practices were activated only upon explicit mention'",
+    "Feministisch": "Explizite Verwendung feministischer Theorien (Tronto's Care-Ethik, Grosz' embodied subjectivity, Bobel on menstrual stigma, Koskela on women's spatial confidence): 'Drawing on Joan Tronto's ethics of care and Iris Marion Young's concept of justice as inclusion, this perspective argues that fair governance must recognize and respond to differentiated social positions'",
+    "Fairness": "Kritik an oberflächlichen Fairness-Ansätzen und Forderung nach kontextualisierten Fairness-Konzepten: 'fairness interventions must align with real-world harm mitigation and not merely with metric optimization'"
+  },
+  "references": [
+    {
+      "author": "Tronto, Joan",
+      "year": 1993,
+      "short_title": "Moral Boundaries: A Political Argument for an Ethics of Care"
+    },
+    {
+      "author": "D'Ignazio, Catherine & Klein, Lauren F.",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Costanza-Chock, Sasha",
+      "year": 2020,
+      "short_title": "Design Justice: Community-Led Practices to Build the Worlds We Need"
+    },
+    {
+      "author": "West, Sarah M., Whittaker, Meredith & Crawford, Kate",
+      "year": 2019,
+      "short_title": "Discriminating Systems: Gender, Race and Power in AI"
+    },
+    {
+      "author": "Buolamwini, Joy & Gebru, Timnit",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+    },
+    {
+      "author": "Crenshaw, Kimberlé",
+      "year": 1991,
+      "short_title": "Mapping the Margins: Intersectionality, Identity Politics, and Violence Against Women of Color"
+    },
+    {
+      "author": "Sen, Amartya",
+      "year": 1999,
+      "short_title": "Development as Freedom"
+    },
+    {
+      "author": "Nussbaum, Martha C.",
+      "year": 2011,
+      "short_title": "Creating Capabilities: The Human Development Approach"
+    },
+    {
+      "author": "Grosz, Elizabeth A.",
+      "year": 1994,
+      "short_title": "Volatile Bodies"
+    },
+    {
+      "author": "Bobel, Chris (Ed.)",
+      "year": 2019,
+      "short_title": "The Managed Body: Developing Girls and Menstrual Health in the Global South"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hoch relevant für die Schnittstelle KI und Gender-Gerechtigkeit; untersucht konkret, wie KI-Systeme in Governance und Policy-Making androzentristische Bias perpetuieren. Trägt zu dringend benötigten empirischen Erkenntnissen über generative KI im öffentlichen Sektor bei.",
+    "unique_contribution": "Erste systematische experimentelle Studie, die nachweist, dass KI-Tools Gender-Berücksichtigung nicht von sich aus vornehmen, sondern diese als 'Sonderfälle' behandeln, was eine fundamentale Designfrage aufwirft.",
+    "limitations": "Limitierte Stichprobe (nur zwei KI-Tools); keine Analyse der Unterschiede zwischen GPT-4 und Copilot im Detail; keine Nutzerstudie zur Wahrnehmung oder Konsequenzen dieser Biases."
+  },
+  "target_group": "Policy-Maker und Governance-Experten, KI-Ethik-Forscher, feministische Technologiekritiker, KI-Entwickler und -Designer, Sozialwissenschaftler, Organisationen der Gleichstellungsarbeit"
+}

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "Digitale Werkzeuge und Machtasymmetrien? Eine kritische Betrachtung von Technologie und Abhängigkeiten in der Sozialen Arbeit",
+    "authors": [
+      "Studeny"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Wie verändern digitale Werkzeuge und Algorithmen Machtverhältnisse in der Sozialen Arbeit und welche Konsequenzen hat dies für Gerechtigkeit, Selbstbestimmung und die Rechte von Klient:innen?",
+    "methodology": "Theoretisch-kritische Analyse mit praxisorientierten Fallbeispielen und Reflexionsfragen; interdisziplinäre Perspektive (Macht-Theorien, Digitalisierungskritik, Soziale Arbeit)",
+    "key_finding": "Digitale Systeme sind nicht neutral und verstärken bestehende Machvasymmetrien durch unsichtbare Kontrolle, algorithmische Diskriminierung und Ausgrenzung, während sie gleichzeitig professionelle Autonomie und Klient:innen-Selbstbestimmung untergraben. Soziale Arbeit muss diese Dynamiken kritisch reflektieren und sich politisch für digitale Gerechtigkeit einsetzen.",
+    "data_basis": "nicht angegeben"
+  },
+  "arguments": [
+    "Macht in der Sozialen Arbeit wird durch digitale Tools verstärkt und verändert: Digitale Systeme sind nie neutral, sondern tragen gesellschaftliche Normen und Machtstrukturen in sich (Foucault'sche Perspektive) und können Kontrolle unsichtbarer und massiver machen, besonders durch Algorithmen bei automatisierten Entscheidungen.",
+    "Digitale Steuerung und unsichtbare Lenkung (Digital Nudging, algorithmische Risikobewertungen) reduzieren Selbstbestimmung von Klient:innen und professionelle Autonomie von Fachkräften, indem sie Entscheidungen vorgeben, ohne dass Alternativen sichtbar sind oder echte Mitbestimmung möglich wird.",
+    "Algorithmen und KI-Systeme verstärken Diskriminierung durch historisch verzerrte Trainingsdaten und reproduzieren systematisch Benachteiligungen gegen Menschen mit Migrationsgeschichte, People of Color, Frauen, Menschen mit Behinderungen und sozial Benachteiligte, während sie als 'objektiv' und 'neutral' erscheinen.",
+    "Digitale Teilhabe und digitale Souveränität sind zentrale Gerechtigkeitsfragen: Der Digital Divide auf drei Ebenen (Zugang, Kompetenzen, Mitbestimmung) verstärkt soziale Ungleichheit, und die Abhängigkeit von Big-Tech-Infrastruktur widerspricht dem ethischen Auftrag Sozialer Arbeit.",
+    "Soziale Arbeit muss sich als politische Kraft verstehen, die aktiv für digitale Gerechtigkeit, Transparenz, Datenschutz und Mitbestimmung eintritt und gegen diskriminierende Technologien kämpft, statt diese passiv zu übernehmen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Digitale Bildung wird als 'Schlüssel für soziale Gerechtigkeit' behandelt; Reflexionsfragen zu Verständnis und kritischer Nutzung von Technologie; Forderung nach Kompetenzentwicklung für Fachkräfte und Klient:innen im Umgang mit digitalen Systemen.",
+    "KI_Sonstige": "Fokus auf Algorithmen, Scoring-Modelle, automatisierte Risikobewertungen, KI-gestützte Entscheidungssysteme in Fallmanagement, Chatbots und prädiktive Analytik in der Sozialverwaltung; 'Künstliche Intelligenz - Transparenz, Gerechtigkeit und menschliche Entscheidungsmacht' als eigenständiges Kapitel.",
+    "Soziale_Arbeit": "Durchgehender Fokus auf Fachkräfte und Klient:innen in Sozialer Arbeit; konkrete Praxisbereiche wie Schuldnerberatung, Kindeswohl, Jugendhilfe, Jobcenter, Beratungssettings; Machtkritik mit Bezug zu professioneller Ethik und Werteorientierung Sozialer Arbeit.",
+    "Bias_Ungleichheit": "Kapitel 'Diskriminierung durch Algorithmen'; Beispiele wie rassistische Algorithmen bei Bewerbungsportalen, Kindeswohlalgorithmen mit Bias gegen Migrant:innen, Jobcenter-Systeme die nach Merkmalen wie 'Alter, Schulbildung, Stadtteil' diskriminieren; Digital Divide als strukturelle Ungleichheit.",
+    "Diversitaet": "Explizite Nennung betroffener Gruppen: 'Menschen mit Migrationsgeschichte, People of Color, Frauen, Menschen mit Behinderungen, Arme', 'ältere Menschen, Personen mit geringer Bildung oder Migrationserfahrung'; Intersektionalität implizit durch Mehrfachnennungen; marginalisierte Communities im Fokus der Kritik.",
+    "Fairness": "Kapitel 'Gerechtigkeit, Transparenz und Verantwortung gestalten'; Forderungen nach fairen Algorithmen ('Algorithmen dürfen keine Menschen benachteiligen'), Transparenz in algorithmischen Entscheidungen, Fairness-Überprüfung ('Fairness: Algorithmen dürfen keine Menschen benachteiligen'), Equitable Access zu Ressourcen."
+  },
+  "references": [
+    {
+      "author": "Weber, Max",
+      "year": "nicht spezifiziert",
+      "short_title": "Macht als Durchsetzungsvermögen in sozialen Beziehungen"
+    },
+    {
+      "author": "Arendt, Hannah",
+      "year": "nicht spezifiziert",
+      "short_title": "Macht als kollektive Handlungskraft"
+    },
+    {
+      "author": "Foucault, Michel",
+      "year": "nicht spezifiziert",
+      "short_title": "Macht durch Diskurse und Strukturen / Mikrophysik der Macht"
+    },
+    {
+      "author": "Hobbes, Thomas",
+      "year": "nicht spezifiziert",
+      "short_title": "Macht als permanentes Streben nach Kontrolle"
+    },
+    {
+      "author": "Herwig-Lempp, Johannes",
+      "year": "nicht spezifiziert",
+      "short_title": "Sozialarbeiter:innen und Macht"
+    },
+    {
+      "author": "Distelmeyer, Jan",
+      "year": 2021,
+      "short_title": "Kritik der Digitalität"
+    },
+    {
+      "author": "Kutscher, Nadia et al.",
+      "year": 2020,
+      "short_title": "Handbuch Soziale Arbeit und Digitalisierung"
+    },
+    {
+      "author": "Kettemann, Matthias C. et al.",
+      "year": 2022,
+      "short_title": "Menschenrechte im Digitalen"
+    },
+    {
+      "author": "Kaminsky, Carmen et al.",
+      "year": 2020,
+      "short_title": "Digitale Technologien zwischen Lenkung und Selbstermächtigung"
+    },
+    {
+      "author": "Martinsen, Franziska",
+      "year": 2018,
+      "short_title": "Wissen - Macht - Meinung. Demokratie und Digitalisierung"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle KI/Soziale Arbeit: Das Paper adressiert zentrale Fragen von algorithmischer Diskriminierung, Machtasymmetrien und digitaler Gerechtigkeit in einem sozialarbeiterischen Kontext und verbindet klassische Machttheorien mit aktuellen Digitalisierungskritik. Besonders wertvoll für sozialarbeiterische Fachkräfte und Policy-Maker.",
+    "unique_contribution": "Die systematische Verknüpfung von Macht-Theorien (Weber, Arendt, Foucault, Hobbes) mit konkreten Problemen digitaler Technologien in der Sozialen Arbeit bietet ein innovatives kritisches Analyserahmenwerk, das über technische Debatten hinausgeht und politische Forderungen mit praxisrelevanten Beispielen verbindet.",
+    "limitations": "Empirische Daten fehlen; keine eigenen Fallstudien oder Befragungen von Fachkräften/Klient:innen; primär theoretisch-analytisch ohne quantitative oder qualitative Validierung der kritisierten Probleme; Konrad als digitaler Avatar selbst exemplifiziert die technologischen Fragen, die das Paper kritisiert, ohne dies zu reflektieren."
+  },
+  "target_group": "Primär: Sozialarbeiter:innen, Fachkräfte in Sozialen Diensten, Soziale-Arbeit-Studierende, Verbände und Träger der Sozialen Arbeit. Sekundär: KI-Entwickler:innen in Verwaltungskontexten, Policy-Maker im Sozialbereich, Aktivist:innen für digitale Gerechtigkeit, Hochschuldozent:innen in Sozialer Arbeit und kritischer Medienpädagogik."
+}

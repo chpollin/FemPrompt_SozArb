@@ -1,0 +1,63 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Die drei Hauptthemen des Special Issue (Digitalisation mit 'the social', Truth-making, Human labour) sind nur unvollständig in den Kernbefunden abgebildet",
+        "Spezifische Fallstudien-Erkenntnisse (Sleep, Hjelholt, Mateescu, Bielefeld, Singh) werden erwähnt aber nicht systematisch zusammengefasst",
+        "Die Debatte 'Change within Continuity vs. Disruption' ist unterrepräsentiert"
+      ],
+      "missing_minor": [
+        "Historischer Kontext zur Computerisierung seit WWII wird im Kernbefund nicht erwähnt",
+        "Mixed Economy of Welfare-Konzept (Powell 2019) nicht explizit im Kernbefund",
+        "Neoliberalismus und New Public Management (NPM) als Kontextfaktor unterrepräsentiert"
+      ]
+    },
+    "correctness": {
+      "score": 93,
+      "errors": [
+        "Methodologie-Eintrag ist ungenau: Das Paper ist nicht 'Theoretisch/Review' sondern spezifisch eine 'Einleitung zu Special Issue' mit synthetica approach - diese Unterscheidung ist wichtig für Methodologie-Transparenz"
+      ],
+      "distortions": [
+        "Die Charakterisierung als 'Keine empirischen Primärdaten' ist korrekt, aber die Synthese der 7 Fallstudien wird als 'Datenbasis' dargestellt, obwohl es sich um Sekundär-Analyse handelt - Formulierung könnte klarer sein",
+        "Kernbefund fokussiert zu stark auf 'Verstärkung' und weniger auf die nuanciertere Aussage des Originals ('change within continuity'), was einen deterministischeren Eindruck erweckt als das Original"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Überwachung (Surveillance) - ist häufig genanntes Thema, könnte als eigene oder zusätzliche Kategorie definiert sein",
+        "Public-Private Partnerships / Privatisierung - wird mehrfach erwähnt (contracted providers, private firms), könnte kategorisiert werden",
+        "Eugenics / Eugenic Governance - wird explizit im Original diskutiert (van Toorn & Soldatić paper), sollte als Kategorie oder Sub-Theme erfasst sein"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_additional": [
+        "Ueberwachung_Surveillance",
+        "Eugenik_Governance",
+        "Public_Private_Partnerships"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "original": "Theoretisch/Review - Überblickintroduktion zu einem Special Issue mit kritisch-soziologischem Ansatz",
+        "improved": "Synthese und Rahmentext - Einleitung zu einem Special Issue mit kritisch-soziologischem Ansatz, der 7 Fallstudien aus verschiedenen Ländern und Politikbereichen zusammenbindet"
+      },
+      {
+        "section": "Hauptargumente",
+        "original": "Der digitale Wohlfahrtsstaat ist nicht radikal neu, sondern Teil einer historischen Kontinuität der Computarisierung seit dem Zweiten Weltkrieg; Digitalisierung muss als 'change within continuity' verstanden werden, die bestehende Machtverhältnisse kodifiziert.",
+        "improved": "Der digitale Wohlfahrtsstaat ist nicht radikal neu, sondern Teil einer historischen Kontinuität der Computarisierung seit dem Zweiten Weltkrieg (Henman 2022); Digitalisierung muss als 'change within continuity' (Fussey & Roth 2020) verstanden werden, die bestehende Machtverhältnisse kodifiziert, während sie gleichzeitig auch Raum für Widerstand und Umgestaltung erhält."
+      },
+      {
+        "section": "Kernbefund",
+        "note": "Der Kernbefund könnte zusätzlich die drei thematischen Schwerpunkte des Special Issue explizit nennen: (1) Entanglement von Digitalisierung und 'the Social', (2) Digitale Technologien als Truth-Making-Instrumente, (3) Zentrale Rolle menschlicher Arbeit und Agency in der Operationalisierung digitaler Wohlfahrt"
+      }
+    ]
+  }
+}

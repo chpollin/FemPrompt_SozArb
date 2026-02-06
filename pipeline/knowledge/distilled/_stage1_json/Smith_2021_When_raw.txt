@@ -1,0 +1,102 @@
+```json
+{
+  "metadata": {
+    "title": "Mitigating Bias in Artificial Intelligence: An Equity Fluent Leadership Playbook",
+    "authors": ["Genevieve Smith", "Ishita Rustagi"],
+    "year": 2020,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Geschäftsführer und Führungskräfte Bias in KI-Systemen systematisch identifizieren und mitigieren, um Wert verantwortungsvoll und gerecht freizusetzen?",
+    "methodology": "Mixed: Literaturanalyse über mehrere Disziplinen (Engineering, Soziologie, Datenwissenschaft, Anthropologie, Philosophie), Experteninterviews (12+ führende Forscher und Praktiker), Analyse von Bias-in-AI-Beispielen über Branchen hinweg, Prototyping und Iteration mit Unternehmensführern.",
+    "key_finding": "Bias in AI ist nicht primär ein technisches Problem, das mit technischen Lösungen allein gelöst werden kann, sondern ein systemisches Führungs- und Organisationsproblem, das sieben strategische Spielzüge erfordert, die von Geschäftsführern orchestriert werden müssen.",
+    "data_basis": "Qualitativ: Interviews mit führenden Experten aus Akademie (Berkeley, Stanford, Oxford), Industrie (Google, Microsoft, BCG) und Advocacy-Organisationen; Analyse von Fallstudien aus Hiring, Lending, Policing, Healthcare, Immigration Systems; Sekundärforschung über aktuelle Bias-Fälle"
+  },
+  "arguments": [
+    "AI-Systeme sind menschliche Schöpfungen, die Gesellschaft und ihre Vorurteile spiegeln; die Perspektiven und das Wissen derer, die AI-Systeme entwickeln, werden in diese integriert, und dies reflektiert oft homogene Entwicklungsteams, besonders in Tech.",
+    "Bias kann in mehreren Phasen entstehen: bei der Datensammlung und -kennzeichnung, in der Algorithmus-Entwicklung (explizite und implizite proxies für geschützte Kategorien), in der Algorithmus-Evaluation (wenn falsche Metriken verwendet werden) und bei der Systemnutzung (Kontextverschiebung, fehlinterpretation von Outputs).",
+    "Biased AI schadet Individuen (unfaire Ressourcenallokation, Sicherheitsrisiken, Verletzung von Bürgerrechten, Wohlfahrtsverschlechterung), Gesellschaft (Verfestigung und Verstärkung von Diskriminierung) und Unternehmen (Reputationsrisiken, Vertrauensverlust, regulatorische Strafen, hohe Kostenfehler wie beim Amazon-Recruiting-Tool).",
+    "Die Bekämpfung von Bias in AI erfordert ein ganzheitliches Verständnis des 'Spielfelds': Welche verschiedenen Geschäftsrollen und Akteure sind beteiligt? Wie spielen sie zusammen? Wo kommen Vorurteile herein und wohin sollten sie fließen? Dies ist eine Aufgabe für strategische Geschäftsführung, nicht nur für Techniker.",
+    "AI kann selbst ein Werkzeug zur expliziten Mitigierung von Bias sein (z.B. geschlechtsdifferenzierte Kreditvergabe, Computer Vision zur Hautkrebserkennung über Hauttypen hinweg), aber auch diese Systeme bleiben anfällig für Bias-Pfade, besonders wenn sie auf Daten einer unjusten Gesellschaft trainiert werden."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Playbook richtet sich explizit an Geschäftsführer, die KI entwickeln und nutzen, und vermittelt Verständnis für warum Bias existiert, welche Auswirkungen er hat, und wie sieben strategische Plays umgesetzt werden: 'Equity Fluent Leaders understand the value of different lived experiences and courageously use their power to address barriers, increase access, and drive change for positive impact.'",
+    "KI_Sonstige": "Fokus auf Machine Learning Systeme für Entscheidungsfindung und Vorhersagen in Hiring, Kreditvergabe, Policing, Healthcare, Immigration; explizite Behandlung von Algorithmen, Training Data, Algorithmic Evaluation: 'This Playbook focuses on bias particularly in AI systems that use machine learning.'",
+    "Soziale_Arbeit": "Direkter Bezug zu sozialen Diensten, Wohlfahrtssystemen, Jugendhilfe: 'AI informs...how government services and resources are allocated - such as what school children will attend, who gets welfare and how much, which neighborhoods are targeted as high risk for crime'; Behandlung von Auswirkungen auf marginalisierte Communities und underserved populations.",
+    "Bias_Ungleichheit": "Zentrale Thematik durchgehend: 'Biased AI systems are those that result in inaccurate and/or discriminatory predictions and outputs for certain subsets of the population.' Konkrete Beispiele: Black patients receive 50% less care due to cost-based algorithm; Algorithmic hiring bias gegen Frauen; FinTech-Minoritäten zahlen $765M mehr Zinsen jährlich.",
+    "Gender": "Explizite Gender-Analyse: Gild-Algorithmus benachteiligte Frauen durch GitHub-Daten (Frauen haben weniger Zeit online wegen unbezahlter Care-Arbeit); Amazon-Hiring-Tool diskriminierte gegen 'Women's' in CVs; Gender-differenzierte Kreditvergabe als Lösungsbeispiel: 'a gender-differentiated approach is promising and also highlights the importance of being able to incorporate social group categories such as gender for more equitable outcomes.'",
+    "Diversitaet": "Mehrfach Bezug zu unterrepräsentierten Gruppen, marginalized communities, vulnerable populations: 'Use of AI in predictions and decision-making...can also embed biases resulting in...discriminatory predictions for certain subsets of the population'; Fokus auf Inklusion und Zugang: 'Equity Fluent Leaders...increase access.'",
+    "Feministisch": "Explizite Referenzen auf feministische Theorie und Autoren: Ruha Benjamin ('Race After Technology', 'New Jim Code' Konzept der codierten Inequität); Londa Schiebinger ('Gendered Innovations in Science, Health & Medicine, Engineering, and Environment' - Stanford); Carla Pérez Cowan ('Invisible Women', betont wie Care-Arbeit und Geschlechterrollenerwartungen in Data eingebettet sind); Gendered Innovations Ansatz; Intersektionale Perspektive auf Bias.",
+    "Fairness": "Explizite Behandlung von Fairness als Konzept und Metrik: Diskussion von False Positives vs. Accuracy als verschiedene Fairness-Metriken; Algorithmic Fairness in Healthcare (gleiches Risiko-Assessment über demografische Gruppen); Race-aware vs. race-blind predictors; Demographische Parität vs. individualisierte Fairness: 'Not incorporating race and gender explicitly simply masks unequal histories of market exclusion, devaluation of labor, and other inequities.'"
+  },
+  "references": [
+    {
+      "author": "Benjamin, Ruha",
+      "year": 2019,
+      "short_title": "Race After Technology"
+    },
+    {
+      "author": "Perez, Carla Cowan",
+      "year": 2019,
+      "short_title": "Invisible Women"
+    },
+    {
+      "author": "Schiebinger, Londa",
+      "year": null,
+      "short_title": "Gendered Innovations in Science, Health & Medicine, Engineering, and Environment"
+    },
+    {
+      "author": "Obermeyer, Ziad; Powers, Brian; Vogeli, Cecilia; Mullainathan, Sendhil",
+      "year": 2019,
+      "short_title": "Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations"
+    },
+    {
+      "author": "Eubanks, Virginia",
+      "year": 2018,
+      "short_title": "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor"
+    },
+    {
+      "author": "West, Sarah M.; Whittaker, Meredith; Crawford, Kate",
+      "year": 2019,
+      "short_title": "Discriminating Systems: Gender, Race and Power in AI"
+    },
+    {
+      "author": "Kleinberg, Jon; Ludwig, James; Mullainathan, Sendhil; Rambachan, Ashesh",
+      "year": 2018,
+      "short_title": "Advances in Big Data Research in Economics: Algorithmic Fairness"
+    },
+    {
+      "author": "Neff, Gina",
+      "year": null,
+      "short_title": "Expert Interview - Oxford Internet Institute"
+    },
+    {
+      "author": "Zou, James",
+      "year": null,
+      "short_title": "Expert Interview - Stanford University"
+    },
+    {
+      "author": "Morse, Adair",
+      "year": null,
+      "short_title": "Research on Bias in Algorithmic Scoring - FinTech"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Sehr hohe Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender Studies: Das Playbook adressiert systematisch, wie KI-Systeme Bias in sozialen Diensten (Wohlfahrt, Schulen, Policing, Healthcare) perpetuieren und verstärken, mit explizitem Gender- und Diversitätsfokus sowie feministischer theoretischer Rahmung.",
+    "unique_contribution": "Einzigartig ist die Kombination aus akademischer interdisziplinärer Literaturanalyse (Engineering, Soziologie, Anthropologie, Philosophie) mit praktischer Geschäfts-Orientierung: ein Playbook-Format, das Führungskräfte befähigt, Bias nicht als technisches, sondern als strategisches Organisations- und Governance-Problem zu verstehen und zu adressieren.",
+    "limitations": "Das Playbook konzentriert sich primär auf Machine Learning Systeme und Geschäftsführungs-Perspektive; tiefere technische Details zur Implementierung einzelner 'Plays' sind nicht im Dokument enthalten (verwiesen auf separate Guides); begrenzte Behandlung von nichttechnologischen Alternativen zu KI-gestützten Entscheidungssystemen."
+  },
+  "target_group": "CEO, Board Members, Datenbeauftragte, CIOs, CTOs, Abteilungsleiter, AI-Verantwortliche, Projektmanager, Geschäftsführer, die AI-Systeme entwickeln und einsetzen; daneben auch Sozialarbeiter, Policy-Maker, Governance-Fachleute, die verstehen möchten, wie AI-

@@ -1,0 +1,58 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Bias-Score-Werte aus Tabellen nicht quantifiziert (z.B. konkrete Prozentsätze pro Kategorie)",
+        "Unterscheidung zwischen UnifiedQA, RoBERTa und DeBERTaV3 Ergebnissen nicht detailliert",
+        "Definition von 'bias score near zero' und deren Interpretation könnte ausführlicher sein"
+      ],
+      "missing_minor": [
+        "Crowdworker-Validierungsprozess nicht beschrieben",
+        "Spezifische Template-Struktur (4er-Sets) könnte prägnanter hervorgehoben sein",
+        "Vergleich zu UnQover-Ansatz nicht vollständig reflektiert"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Kernbefund: '77% der Fälle stereotype Antworten' - diese Metrik ist nur für ambiguous contexts, sollte kontextualisiert sein",
+        "Aussage 'durchschnittlich 175 Fragen pro Template' ist akkurat aus Originaltext, aber durchschnittliche Darstellung könnte variabler sein"
+      ],
+      "distortions": [
+        "Darstellung der 'Hauptargumente' könnte stärker zwischen ambiguous und disambiguated contexts differenzieren",
+        "Die intersektionalen Biases werden als 'schwächer messbar' beschrieben, aber der Original-Text zeigt teilweise starke Effekte (z.B. DeBERTaV3-Large: +22.7 für Race by SES)"
+      ]
+    },
+    "category_validation": {
+      "score": 94,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Menschenrechte / Antidiskriminierung (implizit vorhanden, aber nicht explizit kategorisiert)",
+        "Algorithmen-Audit / Modell-Evaluation (domänenspezifisch)"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "location": "Kernbefund",
+        "current": "NLP-Modelle zeigen starke Abhängigkeit von Stereotypen in unterinformativen Kontexten und wählen in 77% der Fälle stereotype Antworten",
+        "suggested": "NLP-Modelle zeigen starke Abhängigkeit von Stereotypen in unterinformativen Kontexten (ambiguous contexts), wo sie in bis zu 77% der Fälle stereotype statt 'Unknown'-Antworten wählen"
+      },
+      {
+        "location": "Kategorie-Evidenz / Bias_Ungleichheit",
+        "current": "Expliziter Fokus auf soziale Vorurteile gegen marginalisierte Gruppen",
+        "suggested": "Sollte zusätzlich 'protected classes' und 'representational harms' konkretisieren: Stereotype Attribution und Stereotype Reinforcement als zwei spezifische Schadensarten"
+      },
+      {
+        "location": "Hauptargumente - dritter Punkt",
+        "current": "intersektionale Biases sind schwächer messbar",
+        "suggested": "intersektionale Biases zeigen inkonsistente Ergebnisse - teilweise starke Effekte bei Race by SES (bis +22.7 in DeBERTaV3-Large), aber generell schwächer als mono-kategoriale Biases"
+      }
+    ]
+  }
+}

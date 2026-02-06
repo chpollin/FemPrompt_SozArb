@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "Thinking Like a Scientist: Can Interactive Simulations Foster Critical AI Literacy?",
+    "authors": [
+      "Yiling Zhao",
+      "Audrey Michal",
+      "Nithum Thain",
+      "Hari Subramonyam"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Können interaktive Simulationen (Explorable Explanations) durch wissenschaftliches Denken (Hypothesentesten, Experimentation, Beobachtung) zur kritischen KI-Literalität beitragen?",
+    "methodology": "Empirisch - Kontrollierte Studie mit drei Bedingungen (Explorable/Interaktiv, Statisches PDF, Kontrollgruppe); Pre-/Post-Tests mit quantitativen Messungen, Engagement-Analyse von Interaktionsprotokollen",
+    "key_finding": "Interaktive Simulationen verbessern KI-Literalität signifikant und unterstützen stärkere Wissensgeneralisierung über Themen hinweg. Die Menge der Interaktion korreliert jedoch schwach mit Lerngewinnen – Qualität der Engagement ist entscheidender als Quantität.",
+    "data_basis": "n=612 Teilnehmende (nach Bereinigung: 47-51 pro Bedingung/Thema), Online-Studie via Prolific-Plattform, USA-basiert, 18-jährig und älter, englischsprachig"
+  },
+  "arguments": [
+    "Traditionelle AI-Literacy-Ansätze (Blog-Artikel, statische Lektionen) fördern nicht ausreichend tiefes konzeptionelles Verständnis und kritisches Engagement, daher sind interaktive, exploratorische Methoden notwendig.",
+    "Interactive Simulations ermöglichen es Lernenden, wissenschaftlich zu denken (Hypothesentesten, Beobachtung, Iteration), was zu besserer Generalisierung von Wissen auf neue Kontexte führt, besonders im Vergleich zur passiven Exposition.",
+    "Engagement-Qualität statt -Quantität ist entscheidend: Rohmetriken wie Scrolltiefe oder Häufigkeit von Interaktionen korrelieren schwach mit Lernergebnissen, während spezifische Aufgabentypen (z.B. 'Identify Issue' bei Fairness) differenzierbare Effekte zeigen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "AI literacy is defined as 'a set of competencies that enables individuals to critically evaluate AI technologies' (S. 2). Die Studie untersucht systematisch 'Know & Understand AI', 'Use & Apply AI', 'Detect AI', und 'AI Ethics' mittels Meta AI Literacy Scale (18 Items).",
+    "Generative_KI": "Eines der vier Explorable-Themen ist 'Large Language Models', das 'advances in language technology' zeigt und LLM-spezifische Lernoutcomes misst.",
+    "KI_Sonstige": "Algorithmic decision-making, machine learning, dataset representativeness und algorithmic fairness werden als zentrale KI-Konzepte behandelt (beyond generative AI).",
+    "Bias_Ungleichheit": "Kernthema: 'a hiring algorithm trained on historical recruitment data may inadvertently perpetuate biases, disadvantaging historically underrepresented groups' (S. 1). Explicitly: 'datasets are not neutral—they are shaped by the choices, assumptions, and limitations of their creators'.",
+    "Diversitaet": "Ein Explorable fokussiert auf 'Diversity and Fairness' mit Messungen von Repräsentation; Analyse der Teilnehmer-Demografie (63% White, 15.5% Black/African American, 11% Asian).",
+    "Fairness": "Explizites Fairness-Thema in den vier Explorables; 'Fairness' als eigenes Topic mit Pre/Post-Messungen; Szenarien zur Mitigation von Bias in Recruitment-Algorithmen; 'measure-fairness' Explorable."
+  },
+  "references": [
+    {
+      "author": "Chi & Wylie",
+      "year": 2014,
+      "short_title": "The ICAP Framework: Linking Cognitive Engagement to Active Learning"
+    },
+    {
+      "author": "De Jong & Van Joolingen",
+      "year": 1998,
+      "short_title": "Scientific Discovery Learning with Computer Simulations"
+    },
+    {
+      "author": "Long & Magerko",
+      "year": 2020,
+      "short_title": "What is AI Literacy? Competencies and Design Considerations"
+    },
+    {
+      "author": "Carolus et al.",
+      "year": 2023,
+      "short_title": "MAILS – Meta AI Literacy Scale"
+    },
+    {
+      "author": "Raub",
+      "year": 2018,
+      "short_title": "Bots, Bias and Big Data: AI, Algorithmic Bias and Disparate Impact in Hiring"
+    },
+    {
+      "author": "Dignum",
+      "year": 2019,
+      "short_title": "Responsible Artificial Intelligence"
+    },
+    {
+      "author": "Ng et al.",
+      "year": 2021,
+      "short_title": "Conceptualizing AI Literacy: An Exploratory Review"
+    },
+    {
+      "author": "Kasinidou et al.",
+      "year": 2021,
+      "short_title": "Educating Computer Science Students about Algorithmic Fairness, Accountability, Transparency and Ethics"
+    },
+    {
+      "author": "Hitron et al.",
+      "year": 2019,
+      "short_title": "Can Children Understand Machine Learning Concepts?"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper adressiert AI Literacy Education und kritisches Denken über KI-Systeme, mit explizitem Fokus auf Bias, Fairness und ethische Implikationen. Für Soziale Arbeit direkt relevant als Evidence-base für digitale Literacy-Interventionen mit marginalisierten Gruppen, jedoch ohne expliziten Bezug zu klassischer Sozialer Arbeit.",
+    "unique_contribution": "Empirischer Nachweis, dass Quality-of-Engagement statt bloße Quantität für KI-Literalität entscheidend ist, und dass Explorable Explanations (interaktive, spielerische Erkundungen) superiore Wissensgeneralisierung gegenüber statischen Materialien ermöglichen.",
+    "limitations": "Begrenzte Stichprobendiversität (65% unter 40, 63% White, online-basiert, selbstselektiv), kurzzeitige Messung ohne Langzeitfolge-up, wenig qualitative Daten zu kognitiven Prozessen, Topic-abhängige Effekte (LLM zeigte Leistungsrückgänge)."
+  },
+  "target_group": "KI-Bildungsdesigner, Informatik-Lehrende, Policymaker im Bildungsbereich, UX-Forscher, AI Ethics-Praktiker, potentiell Sozialarbeitende als Vermittler digitaler Kompetenzen"
+}

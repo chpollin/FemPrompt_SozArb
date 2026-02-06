@@ -72,8 +72,8 @@ class QualityMetrics:
 
 
 class EnhancedDocumentProcessor:
-    def __init__(self, api_key: str, source_dir: str = "analysis/markdown_papers_socialai",
-                 output_dir: str = "analysis/summaries_enhanced", model: str = "claude-haiku-4-5"):
+    def __init__(self, api_key: str, source_dir: str = "pipeline/markdown",
+                 output_dir: str = "pipeline/knowledge/distilled", model: str = "claude-haiku-4-5"):
         self.api_key = api_key
         self.source_dir = Path(source_dir)
         self.output_dir = Path(output_dir)
@@ -581,9 +581,9 @@ Respond with ONLY the YAML block.
 
 def main():
     parser = argparse.ArgumentParser(description='Enhanced Document Summarization Pipeline')
-    parser.add_argument('--input-dir', default='analysis/markdown_papers_socialai',
+    parser.add_argument('--input-dir', default='pipeline/markdown',
                        help='Input directory with markdown files')
-    parser.add_argument('--output-dir', default='analysis/summaries_enhanced',
+    parser.add_argument('--output-dir', default='pipeline/knowledge/distilled',
                        help='Output directory for summaries')
     parser.add_argument('--limit', type=int, help='Limit number of documents (for testing)')
     parser.add_argument('--model', default='claude-haiku-4-5',

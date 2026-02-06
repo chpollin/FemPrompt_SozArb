@@ -1,0 +1,58 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 15,
+      "missing_critical": [
+        "Kernbefund/Hauptergebnisse des systematischen Reviews",
+        "Konkrete Forschungsfrage/Objectives des Papers",
+        "Spezifische Studienpopulation und Interventionen",
+        "Anzahl und Charakteristiken der eingeschlossenen Studien",
+        "Syntheseergebnisse und Effektmaße",
+        "Sicherheitsbewertung und Limitations der Evidenz",
+        "Diskussion und Schlussfolgerungen",
+        "Autor(en) vollständig identifiziert",
+        "Abstract-Inhalte",
+        "Konkrete Empfehlungen für Praxis/Policy"
+      ],
+      "missing_minor": [
+        "DOI oder vollständige Zitierinformation",
+        "Registrierungsnummer des Reviews"
+      ]
+    },
+    "correctness": {
+      "score": 100,
+      "errors": [],
+      "distortions": []
+    },
+    "category_validation": {
+      "score": 0,
+      "incorrect_categories": [
+        "categories: [none] - nicht vom Originaltext belegt"
+      ],
+      "missing_categories": [
+        "Systematic Review",
+        "Evidence Synthesis",
+        "Methodological Quality",
+        "Clinical Guidelines/Standards",
+        "Healthcare/Medicine (basierend auf Trust-Thema)"
+      ]
+    }
+  },
+  "overall_confidence": 22,
+  "needs_correction": true,
+  "corrections": {
+    "frontmatter": {
+      "title": "Originaltext enthält nur PRISMA-Checkliste - Titel des eigentlichen Papers nicht verfügbar",
+      "authors": "Erweitern auf vollständige Autorenangabe oder 'Tun et al.' wenn mehrere Autoren",
+      "categories": "Ersetzen durch: ['Systematic Review', 'PRISMA 2020', 'Evidence Synthesis', 'Healthcare/Clinical Research']",
+      "source_file": "Sollte auf original PDF-Dokument hinweisen, nicht auf MD-Version"
+    },
+    "content_fixes": [
+      "Forschungsfrage: Nicht angegeben - Original enthält nur Checkliste, Paper-Inhalt fehlt",
+      "Kernbefunde: KRITISCH - Der bereitgestellte Originaltext ist AUSSCHLIESSLICH eine PRISMA-Checkliste ohne die eigentlichen Paper-Inhalte (Abstract, Methods, Results, Discussion)",
+      "Begründung Assessment-Relevanz: Ergänzen dass das vorliegende Dokument technisch gesehen unvollständig ist und nur das Qualitätskontroll-Instrument zeigt, nicht den Reviewinhalt",
+      "Methodik-Section: Korrekt als 'Systematischer Review nach PRISMA 2020 Standards' identifiziert - dies ist die einzige verlässliche Information aus der Checkliste selbst"
+    ]
+  },
+  "note": "Das generierte Dokument ist nicht fehlerhaft, sondern spiegelt akkurat wider, dass der Originaltext nur eine PRISMA-Checkliste ohne Inhalte bietet. Der extreme Low-Score für Completeness ist gerechtfertigt, da der Paper-Inhalt (Titel, Abstract, Methoden, Ergebnisse, Diskussion) nicht vorhanden ist. Empfehlung: Vollständiges Original-PDF als Quelle nutzen."
+}

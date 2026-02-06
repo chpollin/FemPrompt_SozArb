@@ -1,7 +1,6 @@
 # Technische Dokumentation
 
-Pipeline Version: 2.5
-Letzte Aktualisierung: 2026-02-03
+Aktualisiert: 2026-02-06
 
 ---
 
@@ -44,8 +43,8 @@ In `.env` Datei (nicht committen):
 | 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | `pipeline/validation_reports/` | `--md-dir`, `--pdf-dir`, `--output-dir` |
 | 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | `--input-dir`, `--output-dir` |
 | 5. Human Review | `markdown_reviewer.html` | Markdown + PDFs | JSON-Export | Via Live Server oeffnen |
-| 6. Summarisierung | `summarize_documents.py` | Markdown | `pipeline/summaries/` | `--input`, `--output` |
-| 7. Vault | `generate_vault.py` | Summaries | `vault/` | `--input`, `--output` |
+| 6. Knowledge Distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` | `--input`, `--output`, `--limit` |
+| 7. Vault-Building | `generate_vault.py` | Knowledge Docs | `vault/` | `--input`, `--output` |
 
 Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `--help`.
 
@@ -57,14 +56,13 @@ Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `
 
 | Script | Funktion | Status |
 |--------|----------|--------|
-| `download_zotero_pdfs.py` | PDFs von Zotero herunterladen | ✅ Getestet |
-| `convert_to_markdown.py` | PDF→Markdown mit Docling (inkl. Seiten-Marker) | ✅ Getestet |
-| `validate_markdown.py` | Basis-Validierung (GLYPH, Unicode) | ✅ Getestet |
-| `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | ✅ Getestet |
-| `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | ✅ Getestet |
-| `summarize_documents.py` | LLM-Summarisierung | ✅ Getestet (20 Docs) |
+| `download_zotero_pdfs.py` | PDFs von Zotero herunterladen | Getestet |
+| `convert_to_markdown.py` | PDF→Markdown mit Docling (inkl. Seiten-Marker) | Getestet |
+| `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | Getestet |
+| `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | Getestet |
+| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Abgeschlossen (249 Docs) |
 | `generate_vault.py` | Obsidian Vault generieren | Ausstehend |
-| `utils.py` | Hilfsfunktionen | ✅ Aktiv |
+| `utils.py` | Zentrale Hilfsfunktionen (Logging, API, Config) | Aktiv |
 
 ### Pipeline Tools (pipeline/tools/)
 
@@ -109,11 +107,11 @@ Konservative Bereinigung:
 
 | Operation | Beschreibung | Sicherheit |
 |-----------|--------------|------------|
-| Hyphenation-Fix | Silbentrennungen zusammenfuegen | ✅ Sicher |
-| Page Number Removal | Verwaiste Seitenzahlen entfernen | ✅ Sicher |
-| Header Removal | Journal-Header (>10x + Pattern) | ⚠️ Konservativ |
-| Newline Normalization | Max 2 Leerzeilen | ✅ Sicher |
-| All-Caps Removal | **DEAKTIVIERT** | ❌ Zu riskant |
+| Hyphenation-Fix | Silbentrennungen zusammenfuegen | Sicher |
+| Page Number Removal | Verwaiste Seitenzahlen entfernen | Sicher |
+| Header Removal | Journal-Header (>10x + Pattern) | Konservativ |
+| Newline Normalization | Max 2 Leerzeilen | Sicher |
+| All-Caps Removal | **DEAKTIVIERT** | Zu riskant |
 
 **Wichtig:** All-Caps-Entfernung ist deaktiviert, da strukturierte Dokumente (z.B. DigComp Framework) legitime Wiederholungen enthalten koennen.
 
@@ -145,13 +143,15 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 
 | Verzeichnis | Inhalt | Dateien |
 |-------------|--------|---------|
-| `pipeline/scripts/` | Python-Scripts | download_zotero_pdfs.py, convert_to_markdown.py, validate_markdown.py, validate_markdown_enhanced.py, postprocess_markdown.py, summarize_documents.py, generate_vault.py, utils.py |
+| `pipeline/scripts/` | Python-Scripts | download_zotero_pdfs.py, convert_to_markdown.py, validate_markdown_enhanced.py, postprocess_markdown.py, distill_knowledge.py, generate_vault.py, utils.py |
 | `pipeline/tools/` | Browser-Tools | markdown_reviewer.html |
 | `pipeline/pdfs/` | Heruntergeladene PDFs | 257 Dateien |
 | `pipeline/markdown/` | Konvertierte Dokumente | 252 Dateien |
 | `pipeline/markdown_clean/` | Post-Processed Dokumente | Bereinigt |
 | `pipeline/validation_reports/` | Validierungsberichte | JSON, CSV, MD Reports |
-| `pipeline/summaries/` | AI Summaries | 78 Dateien (58 + 20 Test) |
+| `pipeline/knowledge/distilled/` | Destillierte Wissensdokumente | 249 Dateien |
+| `pipeline/knowledge/_stage1_json/` | Stage 1 Zwischenergebnisse | JSON |
+| `pipeline/knowledge/_verification/` | Verifikationsberichte | JSON |
 | `benchmark/config/` | Benchmark-Konfiguration | categories.yaml |
 | `benchmark/scripts/` | Benchmark-Scripts | run_llm_assessment.py, merge_assessments.py, calculate_agreement.py, analyze_disagreements.py |
 | `benchmark/data/` | Assessment-Daten | human_assessment.csv, llm_assessment.csv, merged_comparison.csv |
@@ -182,17 +182,24 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 | WARN | 4 (16%) |
 | FAIL | 1 (4%) |
 
-### LLM-Summarisierung (Test-Durchlauf)
+### Knowledge Distillation v2 (Test-Durchlauf)
 
 | Metrik | Wert |
 |--------|------|
-| Test-Dokumente | 20 |
+| Test-Dokumente | 10 |
 | Erfolgsrate | 100% |
-| Quality-Score (Durchschnitt) | 79.9/100 |
-| Kosten | $0.26 |
-| Existierende Summaries | 58 (wiederverwendet) |
-| Total Summaries | 78 |
-| Fehlende Summaries | ~174 |
+| Confidence (Durchschnitt) | 90.7% |
+| Kosten | $0.28 |
+| Tokens | 195k in / 32k out |
+| API-Calls pro Paper | 2 (Stage 2 lokal) |
+
+**3-Stage-Workflow:**
+
+| Stage | Funktion | Output |
+|-------|----------|--------|
+| 1. Extract & Classify | Struktur + 10 Kategorien | JSON |
+| 2. Format Markdown | Obsidian-Dokument | Markdown |
+| 3. Verify | Confidence Score | JSON |
 
 ### API-Kosten
 
@@ -203,9 +210,9 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 | Validierung | $0 |
 | Post-Processing | $0 |
 | LLM-Assessment | ~$0.002/Paper |
-| LLM-Summarization | ~$0.04/Paper |
+| Knowledge Distillation | ~$0.028/Paper |
 
-**Modell:** Claude Haiku 4.5 ($1/MTok Input, $5/MTok Output)
+**Modell:** Claude Haiku 4.5 ($0.80/MTok Input, $4.00/MTok Output)
 
 ---
 
@@ -244,4 +251,91 @@ Konfigurationsdatei: `benchmark/config/categories.yaml`
 
 ---
 
-*Version: 2.7 (2026-02-03)*
+---
+
+## Knowledge Distillation
+
+### distill_knowledge.py
+
+Dreistufiger Workflow zur Extraktion von Wissensdokumenten aus akademischen Papers.
+
+**Konzept:** Knowledge Documents sind komprimierte Repräsentationen einzelner Papers (~1000 Token), die alle relevanten Informationen für das LLM-Assessment und Vault-Building enthalten.
+
+**Stages:**
+
+| Stage | Funktion | Input | Output | API-Call |
+|-------|----------|-------|--------|----------|
+| 1 | Extract & Classify | Markdown | JSON | Ja |
+| 2 | Format Markdown | JSON | Markdown | Nein (lokal) |
+| 3 | Verify | Markdown + Original | JSON | Ja |
+
+**Output-Format (Markdown mit YAML-Frontmatter):**
+
+```markdown
+---
+title: "Paper Titel"
+authors: ["Autor1", "Autor2"]
+year: 2024
+type: journalArticle
+categories:
+  - AI_Literacies
+  - Soziale_Arbeit
+confidence: 95
+processed: 2026-02-04
+source_file: paper.md
+---
+
+# Paper Titel
+
+## Kernbefund
+[1-2 Sätze]
+
+## Forschungsfrage
+[1 Satz]
+
+## Methodik
+[Kurzbeschreibung]
+
+## Hauptargumente
+- Argument 1
+- Argument 2
+
+## Kategorie-Evidenz
+### AI_Literacies
+[Evidenz-Zitat]
+
+## Schlüsselreferenzen
+- [[Autor_Jahr]] - Kurztitel
+```
+
+**10 Kategorien (binär):**
+
+- **Technik (4):** AI_Literacies, Generative_KI, Prompting, KI_Sonstige
+- **Sozial (6):** Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+
+**Verwendung:**
+
+```bash
+# Test mit 10 Dokumenten
+python pipeline/scripts/distill_knowledge.py --limit 10
+
+# Vollständiger Durchlauf
+python pipeline/scripts/distill_knowledge.py
+
+# Einzelnes Dokument
+python pipeline/scripts/distill_knowledge.py --single "pipeline/markdown/paper.md"
+```
+
+**Wichtige Parameter:**
+
+| Parameter | Standard | Beschreibung |
+|-----------|----------|--------------|
+| `--input` | `pipeline/markdown` | Input-Verzeichnis |
+| `--output` | `pipeline/knowledge/distilled` | Output-Verzeichnis |
+| `--limit` | - | Anzahl Dokumente begrenzen |
+| `--delay` | 1.0 | Sekunden zwischen API-Calls |
+| `--no-skip` | False | Bereits verarbeitete nicht überspringen |
+
+---
+
+*Aktualisiert: 2026-02-06*

@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "title": "How AI hype impacts the LGBTQ+ community",
+    "authors": [
+      "Dawn McAra-Hunter"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie beeinflussen AI-Hype und Marketing-getriebene frühe Adoption von AI-Technologien die LGBTQ+-Community, und welche Auswirkungen hat dies auf marginalisierte Gruppen?",
+    "methodology": "Theoretisch / Literaturanalyse: Queer Theory, Critical Theory, Foucauldian Power Analysis",
+    "key_finding": "AI-Hype verschleiert reale Probleme von Bias, Schaden und Ausbeutung, die marginalisierte Communities am stärksten treffen, während er eine Cishet-Baseline und heteronormative Strukturen in AI-Systemen verfestigt.",
+    "data_basis": "nicht angegeben"
+  },
+  "arguments": [
+    "AI-Hype perpetuiert schädliche Stereotype und Diskriminierung gegen marginalisierte Communities, insbesondere die LGBTQ+-Community, durch Übertreibung von AI-Fähigkeiten und Verheimlichung von Bias und Limitation.",
+    "Die Cishet-Baseline (Heteronormativität und Cisnormativität) ist strukturell in AI-Systemen verankert und wird durch Marketing-Hype unsichtbar gemacht, was zu systematischer Ausgrenzung von queer und trans Personen führt.",
+    "Policy-Maker verstehen AI-Fähigkeiten hauptsächlich durch Clickbait-Medienberichterstattung statt durch wissenschaftliche Literatur, was zu fehlgeleiteten Implementierungen führt, die marginalisierte Communities disproprtional schädigen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Paper analysiert, wie Hype und fehlerhafte Verständigung von AI-Capabilities bei Policy-Makern zu kritischer Literacies-Lücke führt: 'policymakers don't read the scientific literature but they do read the clickbait'",
+    "Generative_KI": "Explizite Behandlung von generativen AI-Systemen und deren Missgendering-Praktiken: 'misgendering by generative AI systems'",
+    "KI_Sonstige": "Umfassende Analyse von algorithmic bias, dating algorithms, facial recognition, healthcare AI systems, content moderation algorithms und algorithmic decision-making",
+    "Bias_Ungleichheit": "Zentrale These: 'exaggerating the capabilities of AI systems...downplaying their potential biases' führt zu 'reinforcement of stereotypes and biases' und harms für marginalisierte Gruppen",
+    "Gender": "Expliziter Gender-Fokus: 'potential to unintentionally reinforce stereotypes around gender' und 'cisgender heteronormative (cishet) baseline'",
+    "Diversitaet": "Intersektionale Analyse: 'Intersectionality of different marginalising factors is also a key contributor of further marginalisation' und Fokus auf LGBTQ+ als marginalisierte Community",
+    "Feministisch": "Verwendet explizit queer theory (de Lauretis, Foucault) und feministische theoretische Perspektiven: 'queer and feminist theoretical perspectives can offer valuable insights' sowie Referenzen auf intersektionale und anti-oppressive Frameworks"
+  },
+  "references": [
+    {
+      "author": "Lipton, Z.",
+      "year": 2018,
+      "short_title": "Policymakers and scientific literature vs. clickbait"
+    },
+    {
+      "author": "de Lauretis, T.",
+      "year": 1991,
+      "short_title": "Queer theory founding"
+    },
+    {
+      "author": "Foucault, M.",
+      "year": null,
+      "short_title": "Power dynamics, knowledge-power interplay, history of sexuality"
+    },
+    {
+      "author": "Park, R.",
+      "year": null,
+      "short_title": "Chicago School of Sociology - marginality concept"
+    },
+    {
+      "author": "Scheuerman, M.K., Paul, J., Brubaker, J.R.",
+      "year": 2019,
+      "short_title": "How computers see gender"
+    },
+    {
+      "author": "Tomasev, N., McKee, K.R., Kay, J., Mohamed, S.",
+      "year": 2021,
+      "short_title": "Fairness for Unobserved Characteristics - Queer Communities"
+    },
+    {
+      "author": "Ovalle, A., Liang, D., Boyd, A.",
+      "year": 2023,
+      "short_title": "Mobile Biometrics and Technopolicy for Queer Communities"
+    },
+    {
+      "author": "Drage, E., Mackereth, K.",
+      "year": 2022,
+      "short_title": "Does AI Debias Recruitment? Race, Gender, and AI's Eradication of Difference"
+    },
+    {
+      "author": "Ballatore, A., Natale, S.",
+      "year": 2023,
+      "short_title": "Technological failures and the myth of AI"
+    },
+    {
+      "author": "Haimson, O.L., et al.",
+      "year": 2021,
+      "short_title": "Disproportionate removals and content moderation for marginalized users"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle AI/Soziale Arbeit/Gender: Das Paper untersucht, wie AI-Hype marginalisierte Communities, insbesondere LGBTQ+-Personen, schadet und dabei strukturelle Ungleichheiten verschärft. Dies hat direkten Bezug zu sozialarbeiterischen Belangen von Vulnerable Populations und Gender-Gerechtigkeit.",
+    "unique_contribution": "Erste umfassende theoretische Analyse der Verbindung zwischen AI-Hype als Marketing-Phänomen und spezifischen Schadenserfahrungen der LGBTQ+-Community durch queer-theoretische und feminist-kritische Lenses.",
+    "limitations": "Das Paper ist theoretisch-konzeptionell angelegt ohne empirische Datenerhebung (Interviews, Surveys, Case Studies); eine empirische Validierung der Hype-Auswirkungen auf konkrete LGBTQ+-Erfahrungen würde die Argumente stärken."
+  },
+  "target_group": "AI-Ethiker:innen, Queer Theorist:innen, Policy-Maker, LGBTQ+-Advocate:innen, Sozialarbeiter:innen im Queer-Support, KI-Entwickler:innen mit Interesse an Fairness und Inklusion, Aktivist:innen marginalisierter Communities"
+}

@@ -1,0 +1,54 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Publikationskanal 'Europe of Knowledge blog' nicht erwähnt",
+        "Publikationsdatum '03 June 2024' nicht im Frontmatter erfasst",
+        "Converter-Information (docling) und quality_score aus Original nicht übernommen"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minor: 'vier hochprofilierte Berichte' - der Text sagt 'four high profile reports' bezieht sich auf Ulnicane 2024, aber das generierte Dokument präsentiert dies als primäre Datenbasis des vorliegenden Texts, während der Original eher eine Zusammenfassung der Ulnicane 2024 Studie ist"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Algorithmic_Justice - wird implizit diskutiert (justice, fairness, discrimination)",
+        "Critical_AI_Studies - das Paper ist in dieser Tradition positioniert",
+        "Policy_Analysis - Fokus auf AI-Policy-Dokumente und Policy-Framing"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "add_field_publication_date": "2024-06-03",
+      "add_field_publication_venue": "Europe of Knowledge blog",
+      "add_field_source_metadata": {
+        "converter": "docling",
+        "quality_score": 100,
+        "conversion_date": "2026-02-03T18:58:10.406050"
+      }
+    },
+    "content_fixes": [
+      {
+        "location": "Methodik",
+        "issue": "Präzisierung des Bezugs: Das vorliegende Dokument ist eine Zusammenfassung von Ulnicane 2024, nicht primär die Dokumentenanalyse selbst",
+        "suggestion": "Datenbasis klarstellen: 'Dokumentenanalyse basiert auf Ulnicane 2024; vorliegender Text fasst deren Analyse zusammen'"
+      },
+      {
+        "location": "categories",
+        "issue": "Fehlende relevante Kategorien",
+        "suggestion": "Hinzufügen: 'Algorithmic_Justice', 'Critical_AI_Studies', 'Policy_Analysis'"
+      }
+    ]
+  }
+}

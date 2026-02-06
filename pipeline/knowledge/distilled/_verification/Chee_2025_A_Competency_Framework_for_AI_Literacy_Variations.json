@@ -1,0 +1,81 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Explizite Nennung der 8 Kompetenzen und 18 Sub-Kompetenzen nicht im generierten Dokument aufgelistet (nur abstrakt erwähnt)",
+        "Spezifische Unterschiede zwischen K-12, Hochschule und Workforce nicht detailliert aufgeführt",
+        "Quality Assessment Tool (QualSyst) und Qualitätsbewertungsprozess nicht dokumentiert"
+      ],
+      "missing_minor": [
+        "Finanzierungsinformationen (Korean Ministry of Science and ICT, NRF) nicht erwähnt",
+        "Konkrete Publikationsjahr und DOI (10.1111/bjet.13556) nicht im Frontmatter",
+        "Practitioner Notes Struktur (What is already known, What this paper adds, Implications) nicht abgebildet",
+        "Correspondence-Information (Jihyun Lee, leeji1@snu.ac.kr) nicht dokumentiert"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Processed-Datum (2026-02-05) liegt in der Zukunft - sollte 2026-02-03 sein (gemäß conversion_date)"
+      ],
+      "distortions": [
+        "Die Zusammenfassung der 8 Kompetenzen ist zu abstrakt; die tatsächliche Struktur aus den Tabellen (A4, A5) wird nicht konkret abgebildet",
+        "Framework-Kompetenzen hätten explizit aufgelistet sein sollen: 1) AI device/software operations 2) Data and algorithms 3) Problem solving 4) Communication and collaboration 5) AI ethics 6) Career-related 7) AI content creation 8) Affective competences"
+      ]
+    },
+    "category_validation": {
+      "score": 78,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Curriculum_Design - zentrales Anliegen ('can serve as a crucial reference for designing and implementing AI curricula')",
+        "Education_Policy - explizites Statement 'Policies are needed to support a systematic pathway'",
+        "Lifelong_Learning - Fokus auf 'lifelong AI literacy development from K-12 education to workforce training'",
+        "Ethics_AI - zentrale Komponente in allen drei Bildungsstufen",
+        "Workforce_Development - große Relevanz für 'workforce training' und 'job market competencies'"
+      ]
+    }
+  },
+  "overall_confidence": 86,
+  "needs_correction": true,
+  "corrections": {
+    "frontmatter": {
+      "processed": "2026-02-03",
+      "doi": "10.1111/bjet.13556",
+      "journal": "British Journal of Educational Technology",
+      "funding": [
+        "Korean Ministry of Science and ICT (MSIT), Grant: 2021R1F1A1056465",
+        "Korean Ministry of Education, Grant: NRF-2020S1A5A8041947"
+      ],
+      "additional_categories": [
+        "Curriculum_Design",
+        "Education_Policy",
+        "Lifelong_Learning",
+        "Ethics_AI",
+        "Workforce_Development"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Framework-Kompetenzen zu abstrakt",
+        "correction": "Die 8 Kompetenzen konkret aufzählen: (1) AI device and software/application/platform operations, (2) Data and algorithm literacy, (3) Problem solving with AI, (4) Communication and collaboration, (5) AI ethics, (6) Career-related competences, (7) AI content creation, (8) Affective competences with 18 sub-competencies"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "K-12, Hochschule, Arbeitswelt Unterschiede nicht konkret",
+        "correction": "Spezifizieren: K-12: 'basic AI knowledge, device usage, and AI ethics'; Higher education: 'data and algorithms, problem-solving, and career-related competencies'; General workforce: 'interpretation and utilization of data and AI tools, error detection and AI-based decision-making'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Education_Policy, Curriculum_Design, Workforce nicht adressiert",
+        "correction": "Ergänzende Kategorien hinzufügen mit entsprechenden Nachweisen aus Abstract und Discussion"
+      },
+      {
+        "section": "Assessment-Relevanz - Target Group",
+        "issue": "Zu eng fokussiert",
+        "correction": "Ergänzen: 'Curriculum-Designerinnen und -designer', 'Arbeitgebende', 'Berufsbildungsinstitutionen'"
+      }
+    ]
+  }
+}

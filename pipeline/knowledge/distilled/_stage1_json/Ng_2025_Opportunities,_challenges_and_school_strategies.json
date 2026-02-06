@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "title": "Opportunities, challenges and school strategies for integrating generative AI in education",
+    "authors": [
+      "Davy Tsz Kit Ng",
+      "Eagle Kai Chi Chan",
+      "Chung Kwan Lo"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Welche Chancen, Herausforderungen und Schulstrategien sind mit der Integration von generativer KI in der Bildung verbunden?",
+    "methodology": "Empirisch-qualitativ: Online-Umfragen mit schriftlichen Reflexionen, thematische Analyse, n=76 Pädagog:innen in Kanada",
+    "key_finding": "Erfahrene Lehrkräfte zeigen optimistische Einstellungen zur GenAI, während zentrale Herausforderungen bei der Schulbereitschaft, KI-Kompetenzen von Lehrkräften und KI-Literalität von Schüler:innen liegen. Professionelle Entwicklung, klare Richtlinien und technische Unterstützung sind Schlüsselstrategien.",
+    "data_basis": "n=76 Pädagog:innen in Kanada, Online-Umfragen mit schriftlichen Reflexionen"
+  },
+  "arguments": [
+    "Generative KI bietet multiple Chancen in der Bildung: als instructional co-designer für Lehrmaterialien, als Bewertungswerkzeug, als personalisierter Tutor und als Lernbegleiter, aber auch mit potenziellen Risiken wie Überabhängigkeit und akademischer Integrität.",
+    "Es besteht eine signifikante Lücke zwischen theoretischem AI-Verständnis und praktischer Umsetzung im Klassenzimmer; Lehrkräfte mit GenAI-Erfahrung sind deutlich optimistischer als jene ohne Erfahrung.",
+    "Ein sozial-ökologisches Modell mit drei Ebenen adressiert die notwendigen Veränderungen: Schulbereitschaft (Richtlinien), Lehrkräfte-Readiness (KI-Kompetenzen, PD) und Schüler:innen-Readiness (AI Literacy, ethische Überlegungen)."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "AI Literacy wird als zentral für schüler:innenseitiges Verständnis und kritische Evaluation von GenAI-Outputs betont: 'equip students with essential competencies to understand the fundamental principles of AI, use AI responsibly, evaluate its recommendations critically' und 'developing an artificial intelligence literacy framework'",
+    "Generative_KI": "Umfassender Fokus auf GenAI-Integration in Schulen mit Analyse von ChatGPT, LLMs und deren Anwendungen: 'GenAI utilizes vast amounts of unstructured data from the Internet and other diverse sources to produce human-like responses'",
+    "KI_Sonstige": "Abgrenzung zwischen traditioneller KI und GenAI, Diskussion von KI-Konzepten allgemein: 'Artificial intelligence (AI) often mimics human cognitive functions such as learning and problem-solving'",
+    "Bias_Ungleichheit": "Bias und Stereotypisierung werden thematisiert: 'biases inherent in the training data can lead to perpetuating stereotypes in educational content'; Diskussion von Zugangsgerechtigkeit zu KI-Tools",
+    "Diversitaet": "Fachspezifische Perspektiven (Englisch, Mathematik, Naturwissenschaften, Sozialwissenschaften, Informatik) und verschiedene Stakeholder-Gruppen (Lehrkräfte, Schüler:innen, Schulleitung) werden berücksichtigt",
+    "Fairness": "Ethische Erwägungen und faire Nutzung werden diskutiert: 'Ethical considerations, such as responsible use of AI-generated content and maintaining academic integrity'; Fairness in Assessment durch personalisierte Feedback-Systeme"
+  },
+  "references": [
+    {
+      "author": "Ng et al.",
+      "year": 2021,
+      "short_title": "Conceptualizing AI literacy"
+    },
+    {
+      "author": "Lo",
+      "year": 2023,
+      "short_title": "What is the impact of ChatGPT on education?"
+    },
+    {
+      "author": "Kong et al.",
+      "year": 2024,
+      "short_title": "Developing an artificial intelligence literacy framework"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2023,
+      "short_title": "Guidance for generative AI in education and research"
+    },
+    {
+      "author": "Zhang & Tur",
+      "year": 2024,
+      "short_title": "A systematic review of ChatGPT use in K-12 education"
+    },
+    {
+      "author": "Lo et al.",
+      "year": 2024,
+      "short_title": "Exploring the application of ChatGPT in ESL/EFL education"
+    },
+    {
+      "author": "Chan & Hu",
+      "year": 2023,
+      "short_title": "Students' voices on generative AI: Perceptions, benefits, and challenges"
+    },
+    {
+      "author": "Chiu",
+      "year": 2023,
+      "short_title": "The impact of generative AI on practices, policies and research direction"
+    },
+    {
+      "author": "Laviola et al.",
+      "year": 2024,
+      "short_title": "Not all AI Chatbots are Created Equal"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper adressiert KI-Bildung und AI Literacy in schulischen Kontexten, hat aber keinen direkten Bezug zu Sozialer Arbeit als Disziplin oder Profession. Die Thematik ist für die Schnittstelle KI-Bildung-Chancengleichheit relevant, berührt aber nicht primär sozialarbeiterische Praxis.",
+    "unique_contribution": "Die Studie bietet eine nuancierte, fachspezifische Analyse (subject-specific perceptions) der Lehrkräfteperspektiven auf GenAI-Integration und schlägt ein adaptiertes sozial-ökologisches Modell zur Schaffung von AI-ready schools vor.",
+    "limitations": "Selbstselektionsbias (Teilnehmer:innen mit bereits vorhandenem Interesse an AI), keine Pre-Post-Intervention-Analyse, geografisch begrenzt auf Kanada, breitet Perspektive ohne tiefe interventionsbezogene Evaluation."
+  },
+  "target_group": "Schulleiter:innen, Lehrkräfte, Bildungspolitiker:innen, Teacher Educator, Curriculum Designer, KI-Literacy-Entwickler:innen, Stakeholder der K-12 Bildung"
+}

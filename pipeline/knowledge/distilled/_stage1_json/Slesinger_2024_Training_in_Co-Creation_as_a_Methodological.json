@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Training in Co-Creation as a Methodological Approach to Improve AI Fairness",
+    "authors": [
+      "Ian Slesinger",
+      "Evren Yalaz",
+      "Stavroula Rizou",
+      "Marta Gibin",
+      "Emmanouil Krasanakis",
+      "Symeon Papadopoulos"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Schulungskomponenten in Co-Creation-Prozessen effektiv integriert werden, um KI-Bias für vulnerable und marginalisierte Gruppen zugänglicher zu machen?",
+    "methodology": "Mixed Methods - Empirisch: Co-Creation Workshops mit vulnerable Gruppen (n=3 Organisationen mit unterschiedlichen Teilnehmergruppen), kombiniert mit Expert:innen-Analysen, Datenerhebung durch strukturierte Workshops mit Use-Case-Evaluationen",
+    "key_finding": "Training in Co-Creation Prozessen kann technische Barrieren reduzieren und nicht-technische Stakeholder befähigen, informiert über AI-Bias zu diskutieren, erfordert aber sorgfältige Kalibrierung des Inhalts und kritische Reflexion zur Vermeidung von instrumentalisierendem 'Ethics-Washing'.",
+    "data_basis": "3 Co-Creation Workshops mit vulnerablen Gruppen (Arbeitslose, ältere Frauen, LGBTQ+ Personen, Minderheiten), Expert:innen-Interviews, Textanalyse von Workshop-Zusammenfassungen"
+  },
+  "arguments": [
+    "Participatory Design und Co-Creation sind notwendig für faire KI-Gestaltung, besonders wenn marginalisierte Gruppen miteinbezogen werden, da ihre Perspektiven und 'tacit knowledge' systemische Bias-Faktoren aufdecken können, die technische Expert:innen übersehen.",
+    "Ein-Training zu AI-Definitionen und Bias-Grundlagen ermöglicht es nicht-technischen Stakeholdern, mit sozialtechnischen Komplexitäten zu engagieren, ohne sie zu entfremden - dies erfordert ein Gleichgewicht zwischen Zugänglichkeit und technischer Substanz.",
+    "Kritische Reflexion ist notwendig, um zu verhindern, dass Co-Creation von mächtigen Institutionen als 'Compliance Theater' missbräuchlich verwendet wird - echte Inklusion erfordert Machtverhältnisse und Ressourcenausstattung zu hinterfragen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Training component designed to make AI bias more accessible by incorporating AI definitions and terminology. 'RUG designed the training with the assumption that participants would have little prior knowledge of AI technology... took a deliberate strategy of ensuring the training was designed and presented in a way that participants required zero prior technical knowledge'",
+    "KI_Sonstige": "Paper focuses on AI bias detection and mitigation in multiple modalities (text, datasets, images, audio) and multi-attribute approaches accounting for intersecting forms of bias in AI systems",
+    "Soziale_Arbeit": "Engagement with vulnerable and marginalized participant groups including unemployed people, LGBTQ+ communities, ethnic minorities. Use cases relevant to social impact: financial decisions (loan applications), identity verification, academic citation searches",
+    "Bias_Ungleichheit": "Core focus on AI bias as 'the inclination or prejudice of a decision made by an AI system which is for or against one person or group, often leading to unfair treatment and discrimination'. Paper emphasizes how bias results from socio-technical factors and reproduces existing inequalities",
+    "Gender": "Explicit analysis of gender bias in AI systems. Example provided: 'DAF added an example based on generative AI queries on the responsibilities of fathers and mothers that reproduced outdated and stereotypical gender roles' and gender bias in Google Translate",
+    "Diversitaet": "Multi-attribute approach to bias accounting for 'intersecting forms of bias... based on multiple characteristics of vulnerability or marginalization, e.g., gender, age, ethnic origin, and sexual orientation'. Paper addresses inclusion of children, refugees, older adults, people with disabilities, ethnic minorities, LGBTQ+ people",
+    "Fairness": "Paper explicitly addresses algorithmic fairness through Co-Creation. 'Fairness in the context of AI systems is established by preventing bias, discrimination, and stigmatization'. Participants engaged in evaluating fairness of AI systems and suggesting fair alternatives"
+  },
+  "references": [
+    {
+      "author": "Bødker, S.; Dindler, C.; Iversen, O.S.; Smith, R.C.",
+      "year": 2022,
+      "short_title": "What Is Participatory Design?"
+    },
+    {
+      "author": "Rose, E.J.",
+      "year": 2016,
+      "short_title": "Design as Advocacy: Using a Human-Centered Approach"
+    },
+    {
+      "author": "Ramirez Galleguillos, M.; Coşkun, A.",
+      "year": 2020,
+      "short_title": "How Do I Matter? A Review of the Participatory Design Practice with Less Privileged Participants"
+    },
+    {
+      "author": "Wang, Q.; Madaio, M.; Kane, S.; Kapania, S.; Terry, M.; Wilcox, L.",
+      "year": 2023,
+      "short_title": "Designing Responsible AI: Adaptations of UX Practice to Meet Responsible AI Challenges"
+    },
+    {
+      "author": "Birhane, A.; Isaac, W.; Prabhakaran, V.; Diaz, M.; Elish, M.C.; Gabriel, I.; Mohamed, S.",
+      "year": 2022,
+      "short_title": "Power to the People? Opportunities and Challenges for Participatory AI"
+    },
+    {
+      "author": "Delgado, F.; Yang, S.; Madaio, M.; Yang, Q.",
+      "year": 2023,
+      "short_title": "The Participatory Turn in AI Design: Theoretical Foundations and Current State of Practice"
+    },
+    {
+      "author": "Suresh, H.; Movva, R.; Dogan, A.L.; Bhargava, R.; Cruxen, I.; Cuba, A.M.; Taurino, G.; So, W.; D'Ignazio, C.",
+      "year": 2022,
+      "short_title": "Towards Intersectional Feminist and Participatory ML"
+    },
+    {
+      "author": "Katell, M.; Young, M.; Dailey, D.; Herman, B.; Guetler, V.; Tam, A.; Bintz, C.; Raz, D.; Krafft, P.M.",
+      "year": 2020,
+      "short_title": "Toward Situated Interventions for Algorithmic Equity"
+    },
+    {
+      "author": "Wagner, B.",
+      "year": 2018,
+      "short_title": "Ethics as an Escape from Regulation: From 'Ethics-Washing' to Ethics-Shopping?"
+    },
+    {
+      "author": "Krasanakis, E.; Gibin, M.; Rizou, S.",
+      "year": 2024,
+      "short_title": "AI Fairness Definition Guide"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle von KI, Sozialer Arbeit und Gerechtigkeitsperspektiven. Das Paper adressiert direkt, wie vulnerable Gruppen (klassische Zielgruppen Sozialer Arbeit) in KI-Gestaltungsprozessen eingebunden werden können und welche methodologischen Hürden dabei entstehen.",
+    "unique_contribution": "Der einzigartige Beitrag liegt in der empirischen Analyse von Training als methodologischer Komponente in Co-Creation-Prozessen für KI-Fairness, kombiniert mit kritischer Reflexion über Machtverhältnisse, 'Ethics-Washing' und die Notwendigkeit differenzierter Ansätze für diverse marginalisierte Gruppen.",
+    "limitations": "Begrenzte Stichprobe (3 Workshops), keine Langzeit-Follow-up zur tatsächlichen Umsetzung der Anforderungen in das finale Toolkit, Fokus auf europäische Kontexte und EU-regulatorische Rahmenbedingungen, fehlende tiefere intersektionale Analyse einzelner Gruppen"
+  },
+  "target_group": "KI-Entwickler:innen und UX-Designer:innen, Sozialarbeiter:innen und Gemeinwesenarbeiter:innen, Policy-Maker im Bereich AI Governance, Disability Rights und Diversity Advocate:innen, Wissenschaftler:innen in HCI und Participatory Design, NGOs und Zivilgesellschaftsorganisationen, Regulatoren (EU AI Act)"
+}

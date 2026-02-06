@@ -1,0 +1,67 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Autor_in nicht identifiziert - Original zeigt Platzhalter, generiertes Dokument sagt 'nicht angegeben'",
+        "O-Ton von Nushin Yazdani und Chris Köver nicht in Kernargumenten erwähnt",
+        "Praktische Bildungsansätze und Unterrichtsmaterialien nicht strukturiert erfasst"
+      ],
+      "missing_minor": [
+        "Bezug zu #blacklivesmatter-Demonstrationen als Kontext könnte expliziter sein",
+        "Spezifische deutsche Beispiele (hessenData, BAMF, Berlin Südkreuz) sind erwähnt aber nicht alle im Kernbefund",
+        "Caroline Sinders' 'Feminist Data Set' als konkrete emanzipatorische Initiative unterrepräsentiert"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Geringfügig: Haraway-Zitat als '1985' datiert - korrekt, aber Manifesto wird als 'Manifesto for Cyborgs' vollständig korrekt zitiert"
+      ],
+      "distortions": [
+        "Leichte Vereinfachung: Der Begriff 'maschinelles Lernen' wird korrekt erklärt, aber die Reduktion auf 'Korrelationserkennung' könnte etwas präzisiert werden (Patterns vs. nur Korrelationen)",
+        "Die Rolle der 'kolonialen Strukturen' wird korrekt dargestellt, könnte aber differenzierter zwischen Rohstoffabbau, Infrastruktur-Routen und Corporate Dominance trennen"
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Kolonialismus/Postkoloniale Perspektiven - explizit behandelt aber nicht als eigenständige Kategorie ausgewiesen",
+        "Surveillance/Überwachung - mehrfach erwähnt (Predictive Policing, Gesichtserkennung) aber nicht kategorisiert",
+        "Ethik_KI - implizit vorhanden (Neutralität-Kritik, Fairness) könnte aber expliziter sein",
+        "Digitale_Souveraenität/Infrastruktur - wird diskutiert (Kabelrouten, Silicon Valley Dominanz) aber nicht kategorisiert"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "authors_recommendation": "Autor_in bleibt korrekt als 'nicht angegeben' - Original zeigt keine Autor_innennennung, nur Platzhalter",
+      "suggested_addition": "contributors: ['Nushin Yazdani (Interview)', 'Chris Köver (Interview)']"
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Emanzipationsperspektiven sind unterrepräsentiert",
+        "suggestion": "Expand Emanzipation als 4. Hauptargument: 'Feministische Datensätze und kritische KI-Forschung können alternative, nicht-diskriminierende Systeme schaffen (Caroline Sinders' Feminist Data Set als konkrete Utopie)'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Surveillance fehlt als Kategorie",
+        "suggestion": "Hinzufügen: Kategorie 'Surveillance_Ueberwachung' mit Zitat zu Predictive Policing und Gesichtserkennung an Grenzen"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Koloniale Strukturen zu schwach kategorisiert",
+        "suggestion": "Separate Kategorie 'Kolonialismus_Digitale_Infrastruktur' mit Zitat zu Kabelrouten und Rohstoffkreisläufen"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Domain Fit erwähnt Soziale Arbeit-Fokus, aber nicht präzise",
+        "suggestion": "Präzisieren: 'Hohe Relevanz für Politische Bildung und Medienkompetenzvermittlung; indirekte Relevanz für Soziale Arbeit durch Intersektionalitäts- und Diskriminierungskritik'"
+      }
+    ]
+  }
+}

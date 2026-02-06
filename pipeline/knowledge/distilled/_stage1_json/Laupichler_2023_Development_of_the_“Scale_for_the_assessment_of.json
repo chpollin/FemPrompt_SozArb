@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "Development of the 'Scale for the assessment of non-experts' AI literacy' - An exploratory factor analysis",
+    "authors": [
+      "Matthias Carl Laupichler",
+      "Alexandra Aster",
+      "Nicolas Haverkamp",
+      "Tobias Raupach"
+    ],
+    "year": 2023,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie viele latente Faktoren konstituieren AI Literacy bei Laien, und welche Items laden auf welche Faktoren, um ein valides und reliables Messinstrument zu entwickeln?",
+    "methodology": "Empirisch - Exploratory Factor Analysis (EFA) mit 479 online-Befragten nicht-Experten, die 39 AI-Literacyitems auf einer 7-Punkt-Likert-Skala bewerteten.",
+    "key_finding": "Ein Drei-Faktoren-Modell (TUCAPA: Technical Understanding, Critical Appraisal, Practical Application) erklärt die AI-Literacy-Struktur bei Laien am besten. Die finale SNAIL-Skala mit 31 Items zeigt exzellente interne Konsistenz (α=0.93-0.94).",
+    "data_basis": "n=479 Teilnehmende (50% männlich, 50% weiblich), rekrutiert über Prolific-Plattform, English-sprachig, über 18 Jahre, heterogene Zusammensetzung"
+  },
+  "arguments": [
+    "AI-Literacy ist ein kritisches Konstrukt für Laien im Zeitalter von ChatGPT und alltäglichen KI-Anwendungen, erfordert aber bisher keine psychometrisch validierten Messinstrumente - diese Studie füllt diese Lücke durch induktiven Bottom-Up-Ansatz.",
+    "Die identifizierten drei Faktoren (technisches Verständnis, kritische Bewertung, praktische Anwendung) sind inhaltlich kohärent und unterscheiden sich von bisherigen deduktiven Modellen (z.B. Wang et al. 2022: awareness, usage, evaluation, ethics) durch fokussierten Laien-Zuschnitt.",
+    "Das SNAIL-Instrument ermöglicht sowohl Individual-Assessment als auch Evaluation von AI-Literacy-Kursen und kann zur Vergleichbarkeit zwischen Populationen genutzt werden, adressiert aber Limitation durch Englisch-Monolingualität und Selection-Bias bei interessierten Prolific-Nutzern."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": false
+  },
+  "category_evidence": {
+    "AI_Literacies": "Gesamtes Paper widmet sich AI Literacy Definition und Assessment: 'The term AI literacy describes competencies that include basic knowledge and analytical evaluation of AI, as well as critical use of AI applications by non-experts.' Entwicklung und Validierung der SNAIL-Skala mit 31 Items zur Messung dieser Kompetenzen.",
+    "KI_Sonstige": "Breite Behandlung von KI-Konzepten: Machine Learning, Deep Learning, Rule-based Systems, Reinforcement Learning, Data Privacy, Data Security, Algorithmic Decision-Making, Black Box-Problematik, explainable AI, Biases in AI systems.",
+    "Bias_Ungleichheit": "Explizit werden unterschiedliche AI-Literacy-Niveaus in Populationen thematisiert und die Identifikation von 'strengths and weaknesses' verschiedener Subgruppen als Ziel genannt. Begründung für heterogene Stichprobenziehung zur Vermeidung von Selection-Bias.",
+    "Gender": "Bewusste Kontrolle für Geschlecht in der Stichprobenziehung: 'exactly 50% of the participants (n = 240) should identify as male and 50% (n = 240) as female.' Ermöglicht potenzielle Geschlechterdifferenz-Analysen.",
+    "Diversitaet": "Heterogene Stichprobenzusammensetzung beabsichtigt: 'we did not survey a specific (sub-) population but rather attempted to obtain a sample that is as heterogenous as possible.' Diskussion von Unterschieden nach Bildungsniveau, Herkunftsland und potenziell fachspezifischen Domänen."
+  },
+  "references": [
+    {
+      "author": "Long & Magerko",
+      "year": 2020,
+      "short_title": "What is AI literacy? Competencies and design considerations"
+    },
+    {
+      "author": "Ng et al.",
+      "year": 2021,
+      "short_title": "Conceptualizing AI literacy: An exploratory review"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2022,
+      "short_title": "Measuring user competence in using artificial intelligence: Validity and reliability of artificial intelligence literacy scale"
+    },
+    {
+      "author": "Pinski & Benlian",
+      "year": 2023,
+      "short_title": "AI literacy - towards measuring human competency in artificial intelligence"
+    },
+    {
+      "author": "Carolus et al.",
+      "year": 2023,
+      "short_title": "MAILS - meta AI literacy scale"
+    },
+    {
+      "author": "Laupichler et al.",
+      "year": 2023,
+      "short_title": "Delphi study for the development and preliminary validation of an item set for the assessment of non-experts' AI literacy"
+    },
+    {
+      "author": "Cattell",
+      "year": 1978,
+      "short_title": "Use of factor analysis in behavioral and life sciences"
+    },
+    {
+      "author": "Field, Miles & Field",
+      "year": 2012,
+      "short_title": "Discovering statistics using R"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist für KI-Literacies und Diversity-Perspektiven hochrelevant, aber ohne direkten Bezug zu Sozialer Arbeit. Die Bedeutung von AI Literacy für Laien und nicht-spezialisierte Nutzer ist transferierbar auf sozialarbeiterische Kontexte (Fachkräfte und Klient:innen), wird aber nicht explizit diskutiert.",
+    "unique_contribution": "Erstes psychometrisch validiertes Messinstrument (SNAIL) für AI Literacy bei Laien mit explorativem, induktivem Zugang statt deduktiv-theoretisch, plus bewusste Kontrolle für Geschlechtergerechtigkeit in der Stichprobe.",
+    "limitations": "Englisch-Monolingualität, Selection-Bias durch Prolific-Nutzer (möglicherweise höhere baseline AI-Interest), keine konfirmatorische Faktorenanalyse zur Validierung, kleine Stichprobenumfänge pro Subgruppe zur Geschlechter- oder Subpopulationsanalyse, kein Test gegen verwandte Konstrukte wie Digital Literacy oder AI Attitudes."
+  },
+  "target_group": "KI-Bildungsforscher:innen, Curriculum-Entwickler:innen von AI Literacy Kursen (Hochschulen, Erwachsenenbildung, K-16), Evaluator:innen von AI Education Interventionen, Forschende zu Human-AI Interaction, potentiell Sozialarbeiter:innen und Policy-Maker zur Kompetenzentwicklung in breiten Populationen"
+}

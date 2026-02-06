@@ -1,0 +1,74 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Kapitel 4 (Datenmacht) und Kapitel 5 (Digitale Überwachung) sind im Original vollständig, im generierten Dokument aber nur fragmentarisch oder als Stichpunkte zusammengefasst",
+        "Kapitel 10 (Digitale Teilhabe) ist unvollständig - endet mit '[...EXCERPT...]' im Original, was im generierten Dokument nicht gekennzeichnet ist",
+        "Projekt Konrad (Kapitel 1) - vollständige Darstellung des digitalen Avatars fehlt als eigenständiges Konzept in der Analyse",
+        "Konkrete Sekundärliteratur-Links und URL-Referenzen aus Kapitel 19 sind teilweise nicht in Schlüsselreferenzen aufgelöst"
+      ],
+      "missing_minor": [
+        "Spezifische Fallbeispiele aus Schuldnerberatung und Kindeswohl-Algorithmen sind erwähnt, aber nicht vollständig ausgearbeitet",
+        "Die Instagram-/YouTube-Links zu Konrad werden nicht in der Analyse berücksichtigt",
+        "Quantitativ-empirische Daten zum Digital Divide sind nicht aus dem Original extrahierbar, da nicht vorhanden"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Kernbefund formuliert das Thema korrekt, aber 'Machvasymmetrien' ist ein Tippfehler (sollte 'Machtasymmetrien' sein)"
+      ],
+      "distortions": [
+        "Die Charakterisierung von Konrad als 'exemplifiziert die technologischen Fragen, die das Paper kritisiert' ist eine interpretative Hinzufügung, nicht aus dem Original deduzierbar - das Paper reflektiert dies nicht selbst",
+        "Die Kategorisierung 'KI_Literacies' könnte als 'Digital_Literacies' oder 'Critical_Digital_Literacy' präziser sein, da das Paper nicht ausschließlich KI-Kompetenzen adressiert",
+        "Assessment 'Unique Contribution' beschreibt das Paper zu positivistisch - es ist primär eine kritische Analyse ohne empirische Validierung, was korrekterweise in Limitations genannt wird, aber in der Contribution zu positiv dargestellt wird"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Überwachung / Surveillance (sollte als eigenständige Kategorie neben Digital_Governance existieren)",
+        "Transparenz / Explainability (wird adressiert, aber keine dedizierte Kategorie)",
+        "Partizipation / Mitbestimmung (zentral im Paper, fehlt als Kategorie)",
+        "Datenschutz / Data_Governance (explizit gefordert, fehlt als Kategorie)",
+        "Professionelle_Ethik_Soziale_Arbeit (ist implizit, sollte explizit sein)",
+        "Policy_Governance (Kapitel 16 zur politischen Stimme wird kategorisch nicht erfasst)"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "Ueberwachung_Kontrolle",
+        "Transparenz_Explainability",
+        "Partizipation_Mitbestimmung",
+        "Datenschutz",
+        "Professionelle_Ethik",
+        "Policy_Governance"
+      ],
+      "typo_fix": "Kernbefund: 'Machvasymmetrien' → 'Machtasymmetrien'"
+    },
+    "content_fixes": [
+      {
+        "section": "Limitations",
+        "fix": "Hinzufügen: 'Die Analyse von Konrad als eigenständigem Fallbeispiel digitaler Komplexität ist nicht im Selbstreflexionsfokus des Papers verankert.'"
+      },
+      {
+        "section": "Assessment-Relevanz / Unique Contribution",
+        "fix": "Präzisierung: 'Diese theoretisch-kritische Analyse bietet einen innovativen analytischen Rahmen, benötigt aber empirische Validierung durch Fallstudien und Befragungen von Fachkräften zur praktischen Validierung der identifizierten Probleme.'"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "fix": "Hinzufügen fehlender Autoren mit Jahresangaben aus Literaturliste: Seelmeyer (2020 mitherausgeber), Siebert (2020 mitherausgeberin), etc. als separate Einträge oder als 'et al.' korrekt auflösen"
+      },
+      {
+        "section": "Hauptargumente",
+        "note": "Vollständig und korrekt erfasst; Kapitel 1 (Konrad) in Analyse nicht integriert - könnte als 5. Argument zu 'Reflexive Praxis durch innovative Formate' hinzugefügt werden"
+      }
+    ]
+  }
+}

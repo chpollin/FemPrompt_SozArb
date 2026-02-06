@@ -1,0 +1,47 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Erwähnung der 150 Milliarden geschätzten jährlich generierten Bilder",
+        "Heather Hiles / Black Girls Code Zitat vollständiger kontextualisieren",
+        "Explizite Erwähnung des Alt-Text/Accessibility-Aspekts im Kernbefund"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minor: 'unverzerrte Trainingsdaten' im Kernbefund ist missverständlich - sollte 'unausgewogene/verzerrte Trainingsdaten' sein"
+      ]
+    },
+    "category_validation": {
+      "score": 96,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Accessibility (alt text wird am Ende erwähnt, verdient aber möglicherweise eigene Kategorie)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "location": "Kernbefund",
+        "current": "AI-Bildgeneratoren reproduzieren durch unverzerrte Trainingsdaten bedingte stereotype Standardausgaben",
+        "corrected": "AI-Bildgeneratoren reproduzieren durch unausgewogene/verzerrte Trainingsdaten bedingte stereotype Standardausgaben",
+        "severity": "minor",
+        "rationale": "Originaltext betont explizit 'unbalanced datasets', nicht unverzerrte"
+      },
+      {
+        "location": "Hauptargumente",
+        "suggestion": "Accessibility als eigenständiges Element hinzufügen: 'Inklusives Design sollte mit zugänglichen Alt-Text-Beschreibungen gekoppelt werden'",
+        "severity": "optional",
+        "rationale": "Autor:in betont am Ende: 'Inclusive visuals should be paired with accessible descriptions'"
+      }
+    ]
+  }
+}

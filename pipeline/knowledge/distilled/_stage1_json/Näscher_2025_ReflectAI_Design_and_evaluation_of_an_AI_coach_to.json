@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "title": "Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings",
+    "authors": [
+      "Sara Hofmann",
+      "Lieselot Danneels",
+      "Roel Dobbe",
+      "Anna-Sophie Novak",
+      "Peter Parycek",
+      "Gerhard Schwabe",
+      "Vera Spitzer",
+      "Jolien Ubacht"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Welche Herausforderungen ergeben sich bei der intra-gouvernementalen Zusammenarbeit bei IT-basierten Implementierungen aus einer Agency-Theory-Perspektive?",
+    "methodology": "Empirisch qualitativ: Semi-strukturierte Interviews (n=10) mit Regierungsbeamten in verschiedenen Rollen und Ministerien, thematische Analyse mit induktiver und axialer Kodierung",
+    "key_finding": "Herausforderungen bei intra-gouvernementaler Zusammenarbeit lassen sich in drei Kategorien einteilen: interpersonelle und individuelle Dynamiken, strukturelle und systemische Herausforderungen sowie vertragliche und risikobezogene Herausforderungen. Die Sättigung wurde nach zehn Interviews erreicht.",
+    "data_basis": "n=10 Semi-strukturierte Interviews mit Civil Servants aus 5 Ministerien (von 15 insgesamt), dokumentarische Evidenz, 10 IT-basierte Fallstudien der letzten 15 Jahre"
+  },
+  "arguments": [
+    "Intra-gouvernementale Zusammenarbeit wird durch Vertrauensprobleme, Autonomiebestrebungen und kulturelle Unterschiede erschwert, die sich aus der sozialen Natur von Organisationen ergeben.",
+    "Strukturelle und systemische Herausforderungen wie Machtungleichgewichte, widersprüchliche Interessen, Mehrprinzipal-Probleme und Informationsasymmetrie erschweren die Governance in IT-Projekten erheblich.",
+    "Begrenzte Rationalität, unvollständige Verträge und unterschiedliche Risikoapetite führen zu Opportunismus und unterminieren die Effektivität von Governance-Mechanismen in komplexen IT-Implementierungen."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": false,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": false,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": false
+  },
+  "category_evidence": {},
+  "references": [
+    {
+      "author": "Mitnick",
+      "year": 1992,
+      "short_title": "Agency Problems and Agency Theory"
+    },
+    {
+      "author": "O'Leary & Bingham",
+      "year": "nicht angegeben",
+      "short_title": "Collaborative Governance and Personality Issues"
+    },
+    {
+      "author": "Bendickson et al.",
+      "year": "nicht angegeben",
+      "short_title": "Psychological Factors in Governance"
+    },
+    {
+      "author": "Arnold & De Lange",
+      "year": "nicht angegeben",
+      "short_title": "Organizational Culture and Opportunism"
+    },
+    {
+      "author": "Hennink & Kaiser",
+      "year": "nicht angegeben",
+      "short_title": "Sample Size Saturation in Qualitative Research"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat keine direkte Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender Studies. Es behandelt intra-gouvernementale Governance-Herausforderungen bei IT-Implementierungen aus einer Agency-Theory-Perspektive, ohne KI-Systeme, sozialarbeiterische Dimensionen oder Geschlechterperspektiven zu adressieren.",
+    "unique_contribution": "Die Studie bietet eine systematische Klassifizierung von Governance-Herausforderungen in intra-gouvernementaler Zusammenarbeit bei IT-Projekten basierend auf empirischen Interviews und theoretischer Synthese, wobei Sättigung bereits nach 10 Interviews erreicht wurde.",
+    "limitations": "Die Studie konzentriert sich auf niederländische Ministerien mit IT-basierten Implementierungen und hat möglicherweise begrenzte Generalierbarkeit auf andere Länder, Sektoren oder nicht-IT-basierte Governance-Kontexte."
+  },
+  "target_group": "Governance-Professionelle in öffentlichen Verwaltungen, IT-Projektmanager in Regierungsinstitutionen, Policy-Maker, Forschende im Bereich Digital Government und Public Administration"
+}

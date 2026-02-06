@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "title": "Feministische KI – Künstliche Intelligenz für alle?",
+    "authors": [
+      "Tanja Kubes"
+    ],
+    "year": 2024,
+    "type": "workingPaper",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Wie kann eine feministische Perspektive auf Künstliche Intelligenz helfen, diskriminierende Strukturen aufzudecken und gerechtere, inklusivere KI-Systeme zu gestalten?",
+    "methodology": "Theoretisch/Pädagogisch mit praktischen Anwendungsbeispielen. Kombination von feministischer Theorie, soziotechnischer Perspektive und aktivistischen Elementen in Seminarformat.",
+    "key_finding": "Eine feministische und interdisziplinäre Perspektive ist essentiell, um in KI-Systemen eingeschriebene Bias, Sexismen, Rassismen und Normierungen aufzudecken und damit gerechter, vielfältiger und inklusiver gestaltete KI-Systeme zu ermöglichen.",
+    "data_basis": "nicht angegeben"
+  },
+  "arguments": [
+    "KI ist nicht neutral, sondern von individuellen, sozialen, kulturellen, politischen und wirtschaftlichen Faktoren geprägt. Eine rein technische Perspektive reicht daher nicht aus, um KI-Systeme gerecht zu gestalten.",
+    "Eine feministische Perspektive deckt Macht- und Herrschaftsstrukturen auf, identifiziert Normierungen und Dichotomien sowie Ungleichheits- und Diskriminierungskategorien (race, class, disability, etc.) einschließlich Mehrfachdiskriminierungen in KI-Systemen.",
+    "Durch konkrete Beispiele (Dating-Apps, Sexroboter, Ghost-Work, KI-Kreativität) und praktische Workshops (z.B. Queerbot-Design) können Studierende aller Fächergruppen die in KI eingeschriebenen androzentrischen, eurozentrischen und kapitalistisch-patriarchalen Strukturen kritisch analysieren und alternative Gestaltungsmöglichkeiten entwickeln."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Im Seminar lernen Studierende ihren alltäglichen Umgang mit KI-Anwendungen wie KI-Assistenzsystemen, Dating-Apps & ChatGPT aus soziotechnischer Perspektive kritisch zu analysieren.",
+    "Generative_KI": "ChatGPT wird explizit als Beispiel für intelligente Chatbots genannt, mit denen wir kommunizieren und die uns bei schriftlichen Arbeiten unterstützen.",
+    "KI_Sonstige": "Themenbereiche umfassen Robotik (Sexroboter, soziale Roboter), Algorithmen bei Dating-Apps, Gesichtserkennungssoftware und algorithmische Entscheidungssysteme.",
+    "Bias_Ungleichheit": "Ein analytischer Blick wird auf Ungleichheits-, Diskriminierungs- und Exklusionsmechanismen von KI-Anwendungen geworfen und es werden die in die Technologie eingeschriebenen Bias, Sexismen, Rassismen, Dichotomien aufgedeckt.",
+    "Gender": "Der Fokus liegt auf normativen Algorithmen bei Dating-Apps, Konzepten von Geschlecht, Sexualität, Liebe und Begehren sowie Geschlechterperspektiven auf Robotik und Technologie.",
+    "Diversitaet": "Das Seminar berücksichtigt Ungleichheits- und Diskriminierungskategorien (race, class, disability, first generation academic, etc.) sowie intersektionale Mehrfachdiskriminierungen und betont die Notwendigkeit von Diversität in algorithmischen Modellen.",
+    "Feministisch": "Explizit wird eine feministische Perspektive verwendet, die Macht- und Herrschaftsstrukturen aufdeckt, queerfeministische Potenziale ausschöpft und aktivistische Aspekte einbezieht. Kontextualisierung in androzentrischen, eurozentrischen, anthropozentrischen, kapitalistisch-patriarchalen Strukturen.",
+    "Fairness": "Das Seminar zielt darauf ab, KI nicht nur leistungsstark und profitorientiert, sondern auch gerecht, fair und inklusiv zu gestalten und dabei Regulierungsmöglichkeiten für eine gerechtere inklusive KI zu entwickeln."
+  },
+  "references": [
+    {
+      "author": "Bath, Corinna; Kubes, Tanja; Steinke, Jannis",
+      "year": 2023,
+      "short_title": "Feministische Interventionen zu einer vertrauenswürdigen KI"
+    },
+    {
+      "author": "Kubes, Tanja",
+      "year": 2021,
+      "short_title": "Soziale Roboter im sexuellen Bereich. Neomaterialistische Perspektiven und queeres Potenzial"
+    },
+    {
+      "author": "Kubes, Tanja",
+      "year": 2020,
+      "short_title": "Technik jenseits von Geschlecht? Kritische Reflexion der Verschränkung von Geschlecht und Technik"
+    },
+    {
+      "author": "Kubes, Tanja",
+      "year": 2020,
+      "short_title": "Queere Sexroboter – Eine neue Form des Begehrens?"
+    },
+    {
+      "author": "Kubes, Tanja",
+      "year": 2019,
+      "short_title": "New Materialist Perspectives on Sex Robots. A Feminist Dystopia/Utopia?"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für die Schnittstelle KI/Gender/Soziale Arbeit, da es eine pädagogische Intervention zur kritisch-feministischen Vermittlung von KI-Kompetenzen darstellt und besonders für sozialwissenschaftliche Ausbildungskontexte bedeutsam ist.",
+    "unique_contribution": "Der Beitrag liegt in der praktischen Operationalisierung einer feministischen KI-Literacies-Vermittlung durch interdisziplinäres Seminardesign, das aktivistische Elemente mit theoretischer Reflexion und Hands-on-Workshops (z.B. Queerbot-Design) verbindet.",
+    "limitations": "Die Publikation bietet keine empirischen Daten zur Effektivität des Seminarformats, es werden keine Evaluationsergebnisse oder Teilnehmendenfeedbacks dokumentiert."
+  },
+  "target_group": "Primär: Studierende aller Fächergruppen, die sich kritisch mit KI und Digitalisierung auseinandersetzen möchten. Sekundär: Dozent:innen in Geschlechtstudien, Gender Studies, Sozialwissenschaften; Sozialarbeiter:innen; Policy-Maker im Bereich KI-Governance und Regulierung; KI-Entwickler:innen mit Interesse an ethischen Perspektiven."
+}

@@ -155,4 +155,4 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen.
 
 ---
 
-*Version: 2.0 (2026-02-03)*
+*Aktualisiert: 2026-02-06*

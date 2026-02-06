@@ -30,7 +30,7 @@ class ImprovedVaultGenerator:
             self.base_path = Path(base_path)
 
         self.vault_path = self.base_path / vault_name
-        self.papers_path = self.base_path / "pipeline" / "summaries"
+        self.papers_path = self.base_path / "pipeline" / "knowledge" / "distilled"
         self.metadata_path = self.base_path / "corpus" / "zotero_export.json"
 
         # Improved concept extraction patterns - FIXED to avoid fragments
@@ -509,7 +509,7 @@ class ImprovedVaultGenerator:
         note += f"generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
         note += "---\n\n"
 
-        note += "# 🎯 MASTER MOC - Complete Vault Navigation\n\n"
+        note += "# MASTER MOC - Complete Vault Navigation\n\n"
 
         # Research Question Box
         note += "```\n"
@@ -520,13 +520,13 @@ class ImprovedVaultGenerator:
         note += "```\n\n"
 
         # Quick Stats Dashboard
-        note += "## 📊 Vault Statistics\n\n"
+        note += "## Vault Statistics\n\n"
         note += f"| Papers | Concepts | High-Freq | Categories |\n"
         note += f"|:------:|:--------:|:---------:|:----------:|\n"
         note += f"| **{stats['papers']}** | **{created_concepts}** | **{stats['high_freq']}** | **3** |\n\n"
 
         # Navigation Structure
-        note += "## 🗺️ Navigation Structure\n\n"
+        note += "## Navigation Structure\n\n"
         note += "```mermaid\n"
         note += "graph TD\n"
         note += "    A[Master MOC] --> B[Papers]\n"
@@ -539,7 +539,7 @@ class ImprovedVaultGenerator:
         note += "```\n\n"
 
         # Top Concepts by Category
-        note += "## 🔥 Top Concepts by Category\n\n"
+        note += "## Top Concepts by Category\n\n"
 
         note += "### Bias Types (Top 10)\n"
         bias_concepts = [(c, self.concept_frequency[c])
@@ -559,7 +559,7 @@ class ImprovedVaultGenerator:
         note += "\n"
 
         # Recent Papers (2024-2025)
-        note += "## 📚 Recent Papers (2024-2025)\n\n"
+        note += "## Recent Papers (2024-2025)\n\n"
         recent_papers = [p for p in papers_data if p.get('year', '') in ['2024', '2025']]
         for paper in recent_papers[:10]:
             note += f"- [[{paper['title']}]] ({paper['year']})\n"
@@ -568,7 +568,7 @@ class ImprovedVaultGenerator:
         note += "\n"
 
         # Key Findings Summary
-        note += "## 💡 Key Research Themes\n\n"
+        note += "## Key Research Themes\n\n"
         note += "Based on concept frequency analysis:\n\n"
 
         # Identify main themes
@@ -583,7 +583,7 @@ class ImprovedVaultGenerator:
         note += "\n"
 
         # Quick Links Section
-        note += "## ⚡ Quick Links\n\n"
+        note += "## Quick Links\n\n"
         note += "### Core MOCs\n"
         note += "- [[Index]] - Main navigation index\n"
         note += "- [[Concept_Frequency]] - Frequency analysis\n"
@@ -595,7 +595,7 @@ class ImprovedVaultGenerator:
         note += "- [[Questions]] - Track open questions\n\n"
 
         # Search Queries
-        note += "## 🔍 Useful Searches\n\n"
+        note += "## Useful Searches\n\n"
         note += "Copy these into Obsidian search:\n\n"
         note += "- `tag:#paper` - All research papers\n"
         note += "- `tag:#concept` - All concepts\n"

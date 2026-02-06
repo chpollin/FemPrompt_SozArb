@@ -1,0 +1,45 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Bayes Factor-Werte (BF10 = 0.47) nicht erwähnt",
+        "Detaillierte Beschreibung der beiden Aufgaben-Reihenfolge (209 vs 201 Teilnehmer) nicht genannt",
+        "Explorative Analysen zu Task Order Effects nicht ausgeführt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Kernbefund könnte präzisierter sein: Die negative Korrelation zwischen Bewusstseinszuschreibung und Ratsannahmen ist statistisch schwach (r = -0.10) und Bayesian zeigt 'no evidence' - das wird im generierten Text als 'schwache negative Korrelation' korrekt dargestellt, könnte aber nuancierter sein bezüglich Bayesian vs frequentist Ergebnissen"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "KI_Ethik - Das Paper adressiert explizit ethische Fragen von Vertrauen und Über-/Unterreliance: 'achieve well-calibrated and balanced trust, finding the middle ground between mistrust and over-reliance'",
+        "Mensch-Maschine-Interaktion - Expliziter Fokus auf 'human-AI interactions' und User-Verhalten mit KI-Systemen"
+      ]
+    }
+  },
+  "overall_confidence": 94,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Zwei relevante Kategorien fehlen",
+        "suggested_addition": "### KI_Ethik\n\nDas Paper adressiert normative Fragen der Kalibrierung von Vertrauen und dessen gesellschaftliche Implikationen: 'Further investigation will help the AI sector achieve well-calibrated and balanced trust, finding the middle ground between mistrust and over-reliance.' Dies hat direkte ethische Implikationen für die Gestaltung vertrauenswürdiger KI-Systeme.\n\n### Mensch-Maschine-Interaktion\n\nZentraler Fokus auf menschliches Verhalten und Entscheidungsfindung in Interaktion mit KI: 'users' attitudes and behaviours are shaped by sophisticated intuitions about the capacities of LLMs'"
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Statistische Präzision könnte erhöht werden",
+        "suggested_revision": "Kernbefund sollte erwähnen: 'Attributionen von Intelligenz-Merkmalen (B=0.31, p<0.001) erhöhen signifikant die Annahme von KI-Ratschlägen, während Attributionen von Erfahrungs-Merkmalen (B=-1.04, p=0.042) diese reduzieren. Bewusstseinszuschreibungen zeigen eine schwache negative Korrelation mit Ratsannahmen (r=-0.10, p=0.043), wobei Bayesian-Analysen gegen eine positive Korrelation sprechen (BF+0=0.02).'"
+      }
+    ]
+  }
+}

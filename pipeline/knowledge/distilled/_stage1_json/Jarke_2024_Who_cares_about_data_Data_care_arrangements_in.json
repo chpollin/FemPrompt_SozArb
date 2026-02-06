@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "title": "Who cares about data? Data care arrangements in everyday organisational practice",
+    "authors": [
+      "Juliane Jarke",
+      "Stefanie Büchner"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Warum und wie kümmern sich Menschen in Organisationen um Daten, und wie entstehen stabile Datenpflegearrangements im Alltag organisationaler Praxis?",
+    "methodology": "Empirisch, qualitativ; zwei Fallstudien mit Interviews, Beobachtungen und Dokumentenanalyse in Jugendhilfeorganisationen (Deutschland) und Schulen (K-12 Bildung, Deutschland)",
+    "key_finding": "Datenpflege ist nicht selbstverständlich, sondern ein soziomaterielles Accomplishment, das durch zugeschriebene Datenwerte und konkrete Pflegearbeiten in stabilen Datenpflegearrangements konfiguriert wird. Heterogene Arrangements entstehen, wenn Akteure unterschiedliche Werte (discovery, truthiness, actionability, self-evidence) Daten zuschreiben.",
+    "data_basis": "Zwei qualitative Fallstudien: (1) Jugendhilfeservices mit IMPACT-Evaluationsdatensystem; (2) Schulen mit Stundenausfallsdatenberichterstattung an Ministerien. Inklusive Interviews mit Statistikern, Leitern von Jugendhilfediensten, Sozialarbeitern, Schulleitern, Stundenplanern."
+  },
+  "arguments": [
+    "Data care arrangements entstehen durch die Zuschreibung von Werten zu spezifischen Datensätzen und durch konkrete Arbeiten des Erstellens, Wartens und Reparierens von Daten. Diese Arrangements sind nicht homogen, sondern heterogen und standortgebunden.",
+    "Im Fall der Jugendhilfe führen divergierende Datenwertschätzungen zwischen Management (discovery, truthiness, actionability) und Frontline-Arbeitern (competing care obligations) zu fragmentierten, multiplen Datenpflegearrangements und schlechter Datenqualität (\"Swiss cheese\").",
+    "Im Fall der Bildung führen zwei ineinandergreifende und stabile Datenpflegearrangements (Stundenplanverwaltung mit self-evidence-Wert; Ministeriumsberichterstattung mit discovery-Wert) zu zuverlässigen Datenflüssen und höherer Datenqualität durch Translation und Dediziertes Datenpflegemanagement."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Fokus auf algorithmische Systeme, digitale Infrastrukturen, Datenverwaltungssysteme und automatisierte Prozesse in Organisationen: 'school management information systems (SMIS)', 'electronic patient records', 'data-driven technologies'.",
+    "Soziale_Arbeit": "Empirische Fallstudie in Jugendhilfeorganisationen mit Fokus auf Sozialarbeitspraxis, Fallkonferenzen und Beratungsarbeit: 'social workers', 'youth welfare services', 'case work', 'Care Planning Conferences'.",
+    "Bias_Ungleichheit": "Adressiert strukturelle Ungleichheiten in Datenpflegearrangements: 'invisibility and devaluation of care labour often goes hand in hand with the invisibility and devaluation of additional data labour'. Thematisiert, wie Frontline-Arbeiter marginalisiert werden: 'workers...somehow doing data work in addition to and alongside their existing tasks'.",
+    "Diversitaet": "Analyse heterogener und marginalisierter Positionen: unterschiedliche Berufsgruppen (Sozialarbeiter, Lehrer, Schulsekretärinnen, Stundenplaner) mit divergierenden Perspektiven und Pflegepflichten; intersektionale Analyse von Organisationshierarchien und Professionen.",
+    "Feministisch": "Explizit auf Feminist STS und Care-Theorie gegründet: 'In feminist STS, an interesting body of scholarship has extended research on care work'. Referenzen auf Puig de la Bellacasa (care as ethico-political obligation), Mol (logic of care), Criado & Rodríguez-Giralt (sociomaterial care arrangements). Verwendet feministische Konzepte von 'persistent tinkering', 'dark sides of care', Paternalismus und relationalen Arrangements.",
+    "Fairness": "Adressiert faire Datenverwaltung und gerechtigkeit in Datenpflegearrangements: 'dialogue is needed between the multiple departments, hierarchies and professions about prioritisation and the work behind requirements for more and better data'. Kritisiert, dass Managements Datenwerte ohne Berücksichtigung von Frontline-Realitäten durchgesetzt werden, was zu unfairen Arbeitslasten und Datenqualitätsproblemen führt."
+  },
+  "references": [
+    {
+      "author": "Puig de la Bellacasa, María",
+      "year": 2011,
+      "short_title": "Matters of care in technoscience: Assembling neglected things"
+    },
+    {
+      "author": "Mol, Annemarie; Moser, Ingunn; Pols, Jeannette",
+      "year": 2010,
+      "short_title": "Care in practice: On tinkering in clinics, homes and farms"
+    },
+    {
+      "author": "Pine, Karen H.; Bossen, Claus",
+      "year": 2020,
+      "short_title": "Good organizational reasons for better medical records: The data work of clinical documentation integrity specialists"
+    },
+    {
+      "author": "Pink, Sarah; Ruckenstein, Minna; Berg, Marc; Lupton, Deborah",
+      "year": 2022,
+      "short_title": "Everyday automation: Experiencing and anticipating emerging technologies"
+    },
+    {
+      "author": "Hoeyer, Klaus; Wadmann, Selma",
+      "year": 2020,
+      "short_title": "Meaningless work: How the datafication of health reconfigures knowledge about work and erodes professional judgement"
+    },
+    {
+      "author": "Suchman, Lucy",
+      "year": 2007,
+      "short_title": "Human-Machine reconfigurations: Plans and situated actions"
+    },
+    {
+      "author": "Criado, Tatiana S.; Rodríguez-Giralt, Ignacio",
+      "year": 2016,
+      "short_title": "Caring through design?"
+    },
+    {
+      "author": "D'Ignazio, Catherine; Klein, Lauren F.",
+      "year": 2020,
+      "short_title": "Data feminism"
+    },
+    {
+      "author": "Tronto, Joan C.",
+      "year": 2013,
+      "short_title": "Caring democracy: Markets, equality, and justice"
+    },
+    {
+      "author": "Bossen, Claus; Chen, Yu; Pine, Karen H.",
+      "year": 2019,
+      "short_title": "The emergence of new data work occupations in healthcare: The case of medical scribes"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochrelevant für die Schnittstelle Soziale Arbeit/Digitalisierung/organisationale Gerechtigkeit. Das Paper adressiert zentral die Herausforderungen, wenn digitale Systeme in Sozialdienstleistungen implementiert werden und zeigt, wie frontline-Arbeiter mit konkurrierenden Pflegepflichten belastet werden. Besonders wertvoll für feministische und kritische Perspektiven auf Datenpflege als unsichtbare, untervalueierte Arbeit.",
+    "unique_contribution": "Das Paper entwickelt das neuartige Konzept der 'data care arrangements' (Datenpflegearrangements) als analytisches Werkzeug, das heterogene, standortgebundene Datenverwaltungspraktiken in alltäglichen Organisationen sichtbar macht und dabei die unsichtbare, oft unbezahlte oder unterbewertete Laborarbeit an der Schnittstelle von Datenverwaltung und Care-Arbeit theorisiert.",
+    "limitations": "Fallstudien beschränkt auf Deutschland (Jugendhilfe, Bildung), begrenzte Anzahl von Fällen, keine Analyse von Outcomes oder Wirkungen auf Service-Qualität für Nutzer. Fokus liegt auf Arbeitspraktiken, nicht auf Perspektiven der Datensubjekte (Eltern, Kinder, Schüler)."
+  },
+  "target_group": "Sozialarbeiter, Care-Fachkräfte, Organisationsführung im Sozial- und Bildungssektor, Policymaker für digitale Transformation in Sozialservices, Forscher in STS/Feminist Theory/Care Studies, Datenverwaltungsexperten, Befürworter von gerechter Digitalisierung"
+}

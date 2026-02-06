@@ -1,0 +1,49 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Kombination mit Sensibilisierungstraining von Claudia Sommer nicht erwähnt",
+        "Margherita-von-Brentano-Zentrum und ABV-Modul nicht dokumentiert",
+        "Keine Voraussetzungen genannt (explizit: keine KI-Vorkenntnisse erforderlich)"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minor: Methodologie als 'Theoretisch/Pädagogisch' vereinfacht - sollte stärker das Seminarformat mit Workshop-Elementen (Queerbot-Workshop) betonen"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/KI-Ethik könnte zusätzlich erwähnt werden (indirekt durch 'Fairness' abgedeckt)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "type": "should_be_changed_from_workingPaper_to",
+      "suggested": "seminar_outline / teaching_material",
+      "reason": "Dokument ist Seminarausschreibung/Lehrmaterial, nicht akademische Forschungspublikation"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "current": "Theoretisch/Pädagogisch mit praktischen Anwendungsbeispielen. Kombination von feministischer Theorie, soziotechnischer Perspektive und aktivistischen Elementen in Seminarformat.",
+        "suggested": "Seminarformat mit Phasen theoretischer und anwendungsorientierter Inhalte, praktischen Workshops (z.B. Queerbot-Design-Workshop), kritischer Analyse von Fallbeispielen und aktivistischen Elementen. Kombination mit Sensibilisierungstraining.",
+        "priority": "minor"
+      },
+      {
+        "section": "Assessment-Relevanz / Target Group",
+        "addition": "Veranstaltungsformat: Seminar über ABV-Modul des Margherita-von-Brentano-Zentrums. Voraussetzungen: Keine KI-Vorkenntnisse erforderlich.",
+        "priority": "minor"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "title": "A framework for the Learning and Teaching of Critical AI Literacy skills",
+    "authors": [
+      "Dr Mirjam Hauck",
+      "Eleanor Moore",
+      "Carol Wright"
+    ],
+    "year": 2025,
+    "type": "workingPaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Lehrende und Lernende Critical AI Literacy-Kompetenzen unter Berücksichtigung von Equality, Diversity, Inclusion und Accessibility (EDIA) entwickeln?",
+    "methodology": "Theoretisch; Framework-Entwicklung basierend auf Literaturanalyse und Best-Practice-Sammlung; Struktur angelehnt an Sharples (2024); iterativ und kollaborativ konzipiert",
+    "key_finding": "Ein umfassendes Framework für Critical AI Literacy, das technische KI-Konzepte mit kritischer Reflexion, ethischen Überlegungen und EDIA-Prinzipien verbindet und konkrete Handlungsempfehlungen für Lehrende bietet.",
+    "data_basis": "nicht angegeben"
+  },
+  "arguments": [
+    "KI unterscheidet sich fundamental von anderen digitalen Technologien durch ihr Potenzial, Gesellschaft, Wirtschaft und Bildungssysteme tiefgreifend zu transformieren, was spezialisierte Kompetenzen über traditionelle digitale Literalität hinaus erfordert.",
+    "Critical AI Literacy muss sich an Critical Digital Literacy orientieren und Machtstrukturen in KI-Systemen analysieren, insbesondere wie Wissen, Identitäten und Beziehungen so gestaltet werden, dass einige privilegiert und andere marginalisiert werden.",
+    "Eine erfolgreiche Integration von Critical AI Literacy in die Hochschullehre erfordert ein iteratives, kollaboratives Vorgehen mit EDIA-Prinzipien als zentralem Orientierungspunkt und konkrete, disziplinübergreifende Implementierungsbeispiele.",
+    "Lernende benötigen reflektive Mindsets und metacognitive Fähigkeiten, um mit der rasanten Entwicklung von KI-Technologien Schritt zu halten und diese verantwortungsvoll in beruflichen und privaten Kontexten einzusetzen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Gesamter Fokus des Papers auf 'Critical AI Literacy' als Kompetenzrahmen; 'a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI'",
+    "Generative_KI": "Expliziter Fokus auf LLMs und GenAI: 'Large Language Models (LLMs) -AI tools which generate human-like responses'; Umgang mit Generative AI in Learning, Teaching and Assessment",
+    "Prompting": "Framework-Sektion 'Learning and teaching with AI' enthält: 'Support students in crafting effective prompts and refining AI content' und 'Offer guidance and examples on prompt creation and adaptation with a focus on EDIA principles'",
+    "KI_Sonstige": "Breites Spektrum an KI-Anwendungen: 'types of AI products: text, image, video, code, music generators; AI embedded in tools such as search engines; AI analytics and predictive analytics'",
+    "Bias_Ungleichheit": "Zentrales Thema: 'Critical AI Literacy examines how Large Language Models (LLMs)...contribute to ongoing epistemic injustices'; 'Be mindful of biases in AI outputs, such as gender, cultural, disability, racial or cultural bias'",
+    "Diversitaet": "EDIA-Perspektive durchgängig: 'Critical AI Literacy applies the lens of equality, diversity, inclusion and accessibility (EDIA) to the use of AI'; Beispiele wie 'OU's Digital Assistant, which supports students' accessibility needs'",
+    "Fairness": "Ethische Bewertungskriterien für KI-Tools: 'Use key criteria to evaluate AI tools (e.g. functionality, accessibility, privacy, security, copyright)'; Alignment mit Institutional Fairness-Prinzipien"
+  },
+  "references": [
+    {
+      "author": "Long, D., & Magerko, B.",
+      "year": 2020,
+      "short_title": "What is AI literacy? Competencies and design considerations"
+    },
+    {
+      "author": "Darvin, R.",
+      "year": 2017,
+      "short_title": "Language, ideology, and critical digital literacy"
+    },
+    {
+      "author": "Chiu, T.K.F., Ahmad, Z., Ismailov, M., & Sanusi, I.T.",
+      "year": 2024,
+      "short_title": "What are artificial intelligence literacy and competency?"
+    },
+    {
+      "author": "Darvishi, A., Khosravi, H., Sadiq, S., Gašević, D., & Siemens, G.",
+      "year": 2024,
+      "short_title": "Impact of AI assistance on student agency"
+    },
+    {
+      "author": "Sharples, M.",
+      "year": 2024,
+      "short_title": "What to teach about AI?"
+    },
+    {
+      "author": "Jiang, L., & Gu, M.M.",
+      "year": 2022,
+      "short_title": "Toward a Professional Development Model for Critical Digital Literacies in TESOL"
+    },
+    {
+      "author": "Mirra, N., & Garcia, A.",
+      "year": 2020,
+      "short_title": "'I Hesitate but I Do Have Hope': Youth speculative civic literacies for troubled times"
+    },
+    {
+      "author": "Miao, F., & Shiohira, K.",
+      "year": 2024,
+      "short_title": "AI Competency Framework for Students (UNESCO)"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper adressiert die Schnittstelle von KI-Kompetenzentwicklung und sozialer Gerechtigkeit (equity, diversity, inclusion, accessibility), wobei es primär im Hochschulkontext angesiedelt ist. Der Bezug zu Sozialer Arbeit ist implizit durch die EDIA-Perspektive und Fokus auf marginalisierte Gruppen vorhanden, wird aber nicht explizit ausgeführt.",
+    "unique_contribution": "Das Framework integriert erstmals systematisch Critical Digital Literacy-Ansätze in AI-Literacy und verankert EDIA-Prinzipien nicht als Zusatz, sondern als zentrale Kategorie in allen sieben Framework-Dimensionen; mit konkreten Handlungsempfehlungen für Lehrende.",
+    "limitations": "Rein theoretisches Framework ohne empirische Validierung oder Implementierungsergebnisse; begrenzte Diskussion von Kontexten außerhalb der englischsprachigen Hochschullandschaft; fehlendes Engagement mit feministischen oder intersektionalen Theorietraditionen trotz starkem EDIA-Fokus."
+  },
+  "target_group": "Hochschullehrende und Bildungsdesigner:innen in der Hochschullehre; Lerndesigner:innen und Curricula-Entwickler:innen; Institutionale Führungskräfte in Lehre und Lernen; Studierende mit Karriereinteresse in AI-Anwendungen; Policymaker im Hochschulsektor. Potenziell relevant für Sozialarbeiter:innen, die mit Zielgruppen arbeiten, die durch KI-Systeme beeinflusst werden."
+}

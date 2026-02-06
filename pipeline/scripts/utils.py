@@ -1,6 +1,16 @@
 """
 Shared utilities for FemPrompt pipeline scripts
-Provides common functions for path handling, filename sanitization, and metadata loading
+
+Provides common functions for:
+- Path handling and filename sanitization
+- Metadata loading/saving
+- Logging setup
+- API client creation
+- JSON response parsing
+- Configuration management
+
+Usage:
+    from utils import setup_windows_encoding, setup_logging, create_anthropic_client
 """
 
 import os
@@ -8,8 +18,10 @@ import re
 import sys
 import json
 import hashlib
+import logging
+import time
 from pathlib import Path
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, Tuple, Callable
 
 
 def setup_windows_encoding():
@@ -187,7 +199,7 @@ def simplify_title(title: str, max_length: int = 50) -> str:
 
 def get_project_root() -> Path:
     """
-    Get project root directory (parent of analysis/)
+    Get project root directory (parent of pipeline/)
 
     Returns:
         Path to project root
@@ -236,3 +248,260 @@ def ensure_pipeline_dirs() -> Dict[str, Path]:
         dir_path.mkdir(parents=True, exist_ok=True)
 
     return dirs
+
+
+# =============================================================================
+# LOGGING
+# =============================================================================
+
+def setup_logging(
+    name: str = __name__,
+    level: int = logging.INFO,
+    format_str: str = '%(asctime)s - %(levelname)s - %(message)s',
+    datefmt: str = '%H:%M:%S'
+) -> logging.Logger:
+    """
+    Setup standardized logging configuration.
+
+    Args:
+        name: Logger name (typically __name__)
+        level: Logging level (default: INFO)
+        format_str: Log format string
+        datefmt: Date format string
+
+    Returns:
+        Configured logger instance
+    """
+    logging.basicConfig(
+        level=level,
+        format=format_str,
+        datefmt=datefmt
+    )
+    return logging.getLogger(name)
+
+
+# =============================================================================
+# API CLIENT
+# =============================================================================
+
+def create_anthropic_client(api_key: Optional[str] = None):
+    """
+    Create Anthropic API client with proper error handling.
+
+    Args:
+        api_key: API key (if None, uses ANTHROPIC_API_KEY env var)
+
+    Returns:
+        Anthropic client instance
+
+    Raises:
+        SystemExit: If anthropic package not installed or API key missing
+    """
+    try:
+        from anthropic import Anthropic
+    except ImportError:
+        print("Error: anthropic package not installed!")
+        print("Install with: pip install anthropic")
+        sys.exit(1)
+
+    if api_key is None:
+        api_key = get_env_var('ANTHROPIC_API_KEY', required=True)
+
+    return Anthropic(api_key=api_key)
+
+
+def call_llm_with_retry(
+    client,
+    prompt: str,
+    model: str = "claude-haiku-4-5-20251001",
+    max_tokens: int = 2000,
+    max_retries: int = 3,
+    base_delay: float = 2.0
+) -> Tuple[str, Dict[str, int]]:
+    """
+    Call LLM API with exponential backoff retry.
+
+    Args:
+        client: Anthropic client
+        prompt: User prompt
+        model: Model to use
+        max_tokens: Maximum tokens in response
+        max_retries: Maximum retry attempts
+        base_delay: Base delay in seconds (doubles each retry)
+
+    Returns:
+        Tuple of (response_text, usage_dict)
+
+    Raises:
+        Exception: If all retries fail
+    """
+    last_error = None
+
+    for attempt in range(max_retries):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=max_tokens,
+                messages=[{"role": "user", "content": prompt}]
+            )
+
+            usage = {
+                "input_tokens": response.usage.input_tokens,
+                "output_tokens": response.usage.output_tokens
+            }
+
+            return response.content[0].text, usage
+
+        except Exception as e:
+            last_error = e
+            error_str = str(e).lower()
+
+            # Check if it's a rate limit error
+            if '429' in error_str or 'rate' in error_str:
+                delay = base_delay * (2 ** attempt)
+                logging.warning(f"Rate limited, waiting {delay}s (attempt {attempt + 1}/{max_retries})")
+                time.sleep(delay)
+            else:
+                # For other errors, raise immediately
+                raise
+
+    raise last_error
+
+
+# =============================================================================
+# JSON PARSING
+# =============================================================================
+
+def parse_json_response(text: str) -> Optional[Dict]:
+    """
+    Parse JSON from LLM response, handling markdown code blocks.
+
+    Args:
+        text: Raw LLM response text
+
+    Returns:
+        Parsed JSON dict or None if parsing fails
+    """
+    try:
+        text = text.strip()
+
+        # Remove markdown code blocks if present
+        if text.startswith("```json"):
+            text = text[7:]
+        elif text.startswith("```"):
+            text = text[3:]
+        if text.endswith("```"):
+            text = text[:-3]
+
+        text = text.strip()
+
+        # Find JSON object boundaries
+        start = text.find('{')
+        end = text.rfind('}') + 1
+
+        if start >= 0 and end > start:
+            json_str = text[start:end]
+            return json.loads(json_str)
+
+        return None
+    except json.JSONDecodeError:
+        return None
+
+
+def parse_yaml_response(text: str) -> Optional[Dict]:
+    """
+    Parse YAML from LLM response, handling markdown code blocks.
+
+    Args:
+        text: Raw LLM response text
+
+    Returns:
+        Parsed YAML dict or None if parsing fails
+    """
+    try:
+        import yaml
+    except ImportError:
+        logging.warning("PyYAML not installed, cannot parse YAML")
+        return None
+
+    try:
+        text = text.strip()
+
+        # Remove markdown code blocks if present
+        if "```yaml" in text:
+            yaml_match = text.split("```yaml")[1].split("```")[0]
+        elif "```" in text:
+            yaml_match = text.split("```")[1].split("```")[0]
+        else:
+            yaml_match = text
+
+        return yaml.safe_load(yaml_match.strip())
+    except Exception:
+        return None
+
+
+# =============================================================================
+# CONFIGURATION
+# =============================================================================
+
+def load_config(config_path: Optional[Path] = None) -> Dict[str, Any]:
+    """
+    Load configuration from YAML file.
+
+    Args:
+        config_path: Path to config file. If None, uses config/defaults.yaml
+
+    Returns:
+        Configuration dictionary (merged with defaults)
+    """
+    # Get default config as base
+    config = get_default_config()
+
+    # Determine config file path
+    if config_path is None:
+        # Try project root first (pipeline/scripts -> pipeline -> project root)
+        project_root = get_project_root().parent
+        config_path = project_root / 'config' / 'defaults.yaml'
+
+    if not config_path.exists():
+        return config
+
+    try:
+        import yaml
+        with open(config_path, 'r', encoding='utf-8') as f:
+            file_config = yaml.safe_load(f) or {}
+            # Deep merge file config into defaults
+            for key, value in file_config.items():
+                if key in config and isinstance(config[key], dict) and isinstance(value, dict):
+                    config[key].update(value)
+                else:
+                    config[key] = value
+            return config
+    except Exception:
+        return config
+
+
+def get_default_config() -> Dict[str, Any]:
+    """
+    Get default configuration values.
+
+    Returns:
+        Default configuration dictionary
+    """
+    return {
+        'api': {
+            'model': 'claude-haiku-4-5-20251001',
+            'max_tokens': 2000,
+            'temperature': 0.3,
+            'delay': 1.0
+        },
+        'paths': {
+            'input': 'pipeline/markdown',
+            'output': 'pipeline/knowledge/distilled',
+            'pdfs': 'pipeline/pdfs'
+        },
+        'quality': {
+            'min_confidence': 70,
+            'max_artifacts': 50
+        }
+    }

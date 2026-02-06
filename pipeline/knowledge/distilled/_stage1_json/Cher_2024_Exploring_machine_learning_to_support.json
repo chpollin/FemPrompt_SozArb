@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "Exploring Machine Learning to Support Decision-Making for Placement Stabilization and Preservation in Child Welfare",
+    "authors": [
+      "Ka Ho Brian Chor",
+      "Zhidi Luo",
+      "Kit T. Rodolfa",
+      "Rayid Ghani"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Können Machine-Learning-Modelle Caseworkern bei der Früherkennung von Jugendlichen mit Risiko für Platzierungszerfall helfen, um proaktive Stabilisierungs- und Erhaltungsdienste in der Jugendhilfe bereitzustellen?",
+    "methodology": "Empirisch - vergleichende Validierungsstudie von Machine-Learning-Modellen (Random Forest, regularisierte und unregularisierte logistische Regression, Decision Trees) gegen konventionelle Regressionsmodelle mit Zeitreihenvalidierung und Fairness-Audits",
+    "key_finding": "Random-Forest-Modelle erreichten eine 10-fach höhere Präzision als Baseline und identifizierten zuverlässig Jugendliche mit hohem Risiko für Platzierungszerfall, während alle Modelle auf Fairness und Equity überprüft wurden.",
+    "data_basis": "Administrativ-klinische Daten von 12.621 Jugendlichen in einem großen Midwestern-Bundesstaat zwischen Januar 2017 und Januar 2020, mit 8 Validierungszeitpunkten über 21 Monate"
+  },
+  "arguments": [
+    "Machine Learning kann empirische Entscheidungsunterstützung für Caseworker bieten, um Jugendliche mit Risiko für Platzierungszerfall frühzeitig zu identifizieren und proaktive Stabilisierungsdienste bereitstellen zu können, anstatt reaktiv zu handeln.",
+    "Random-Forest-Modelle mit erweiterten Prädiktorsets übertreffen konventionelle logistische Regressionsmodelle bei der Vorhersage von Platzierungsbedarf und können begrenzte Ressourcen effizienter auf Jugendliche mit höchstem Bedarf konzentrieren.",
+    "Fairness und Equity müssen zentral in die Modellentwicklung und -evaluierung integriert werden, um sicherzustellen, dass predictive analytics in der Jugendhilfe nicht zu disparaten Auswirkungen auf Jugendliche verschiedener Rassen/Ethnien führen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Caseworkers benötigen Verständnis und Fähigkeiten für datengestützte Entscheidungsfindung: 'caseworkers can benefit from upstream, empirical decision support' und 'administrative burdens to care for in-care youth are substantial because understaffed and underfunded caseworkers have large caseloads but limited time to make objective and quality decisions'",
+    "KI_Sonstige": "Umfassende Anwendung von Predictive Analytics und Machine Learning: 'we developed and validated a wide grid of ML models -random forest, regularized logistic regression, decision tree, dummy classifier -and a conventional unregularized logistic regression model' und 'Machine Learning (ML) consists of a family of methods that 'learn' from complex data over time and detect underlying or unobserved patterns'",
+    "Soziale_Arbeit": "Direkter Fokus auf Jugendhilfe-Praxis und Casework: 'placement stabilization and preservation program', 'caseworker decision-making', 'multidisciplinary team planning', 'caseworkers could refer youth to a placement stabilization and preservation program'",
+    "Bias_Ungleichheit": "Explizite Thematisierung von Bias und diskriminierenden Effekten: 'concerns about interpretability (e.g., ML 'black box'), errors (e.g., How often a predictive model identifies true positives of severe harm?), and bias (e.g., against protected classes) that ultimately could impact youth in the child welfare system' und Untersuchung von 'caseworkers' differential program referral behavior depending on youth's race'",
+    "Diversitaet": "Fairness-Audit nach Rasse und Geschlecht sowie Berücksichtigung marginalisierter Gruppen: 'We examined TPR by youth's attribute (e.g., race, gender) to quantify potential disparities between subgroups (e.g., Black youth vs. White youth) within and across the predictive models' und Fokus auf 'equitably serve diverse youth'",
+    "Fairness": "Zentrale Evaluierung von algorithmischer Fairness und Equity: 'Understanding the appropriate ways to measure model fairness in context reflects stakeholder and societal values', 'we evaluated and audited fairness among the predictive models', 'TPR meant among all youth with a given attribute who were referred to the program' und Fokus auf 'equality of opportunity'"
+  },
+  "references": [
+    {
+      "author": "Chor, K. H. B., McClelland, G. M., Weiner, D. A., Jordan, N., & Lyons, J. S.",
+      "year": 2015,
+      "short_title": "Out-of-home placement decision-making and outcomes in child welfare"
+    },
+    {
+      "author": "Chouldechova, A., Putnam-Hornstein, E., Benavides-Prado, D., Fialko, O., & Vaithianathan, R.",
+      "year": 2018,
+      "short_title": "A case study of algorithm-assisted decision making in child maltreatment hotline screening decisions"
+    },
+    {
+      "author": "Drake, B., Jonson-Reid, M., Ocampo, M. G., Morrison, M., & Dvalishvili, D.",
+      "year": 2020,
+      "short_title": "A practical framework for considering the use of predictive risk modeling in child welfare"
+    },
+    {
+      "author": "Hall, S. F., Sage, M., Scott, C. F., & Joseph, K.",
+      "year": 2023,
+      "short_title": "A systematic review of sophisticated predictive and prescriptive analytics in child welfare: Accuracy, equity, and bias"
+    },
+    {
+      "author": "Keddell, E.",
+      "year": 2019,
+      "short_title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice"
+    },
+    {
+      "author": "Rodolfa, K. T., Saleiros, P., & Ghani, R.",
+      "year": 2020,
+      "short_title": "Machine Learning"
+    },
+    {
+      "author": "Saxena, D., Badillo-Urquiola, K. A., Wisniewski, P., & Guha, S.",
+      "year": 2020,
+      "short_title": "A human-centered review of algorithms used within the U.S. child welfare system"
+    },
+    {
+      "author": "Schwartz, I. M., York, P., Nowakowski-Sims, E., & Ramos-Hernandez, A.",
+      "year": 2017,
+      "short_title": "Predictive and prescriptive analytics, machine learning and child welfare risk assessment"
+    },
+    {
+      "author": "Chor, K. H. B., Luo, Z., Dworsky, A., Raman, R., Courtney, M. E., & Epstein, R. A.",
+      "year": 2022,
+      "short_title": "Development and validation of a predictive risk model for runaway among youth in child welfare"
+    },
+    {
+      "author": "Hardt, M., Price, E., & Srebro, N.",
+      "year": 2016,
+      "short_title": "Equality of opportunity in supervised learning"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Sehr relevant für die Schnittstelle KI und Soziale Arbeit: Das Paper adressiert konkret den Einsatz von Machine Learning in der Jugendhilfe-Praxis und thematisiert dabei zentrale ethische Fragen wie Fairness, Bias und Equity gegenüber marginalisierten Gruppen.",
+    "unique_contribution": "Das Paper leistet einen methodischen Beitrag durch systematische Modellvergleiche und Fairness-Audits nach Rasse und Geschlecht sowie durch konzeptuelle Integration von ML zur Unterstützung von Präventionsentscheidungen in der Jugendhilfe statt nur Risiko-Screening.",
+    "limitations": "Das Paper konzentriert sich auf einen einzigen Bundesstaat, nicht alle Fairness-Dimensionen werden tiefgreifend untersucht, und die Auswirkungen von Modellempfehlungen auf tatsächliche Caseworker-Entscheidungen werden nicht empirisch gemessen."
+  },
+  "target_group": "Jugendhilfe-Fachkräfte, Policymaker in child welfare agencies, KI-Entwickler:innen im Public-Interest-Bereich, Forscher:innen im Bereich Soziale Arbeit und Algorithmen-Ethik, Family-First-Prevention-Services-Act-Implementierer"
+}

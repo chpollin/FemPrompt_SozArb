@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "Intersectional Fairness: A Fractal Approach",
+    "authors": [
+      "Giulio Filippi",
+      "Sara Zannone",
+      "Adriano Koshiyama"
+    ],
+    "year": 2023,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie kann intersektionale Fairness in KI-Systemen mathematisch modelliert und gemessen werden, wenn multiple geschützte Attribute auf verschiedenen Ebenen der Granularität intersektieren?",
+    "methodology": "Theoretisch/Mathematisch mit empirischer Validierung: Geometrische Modellierung durch Hypercube-Struktur, dynamische Programmierung für Propagation, theoretische Beweise zur Fairness-Propagation, synthetische und echte Datenexperimente (Adult-Dataset).",
+    "key_finding": "Fairness propagiert 'aufwärts' durch Intersektionalitätsebenen (von spezifischsten zu allgemeineren Gruppen), aber nicht 'abwärts'. Die Varianz der empirischen Erfolgsquoten folgt unter perfekter Fairness einem exponentiellen Skalierungsgesetz, das als Benchmark für Intersektionale Statistische Parität verwendet werden kann.",
+    "data_basis": "Synthetische Daten: M=10 geschützte Attribute, 1024 Vertices mit je 200R Instanzen (R∈[1,10]); Real: Adult-Dataset (N=48,842 Instanzen mit M=4 binären geschützten Attributen)"
+  },
+  "arguments": [
+    "Die Modellierung von Intersektionalität als Hypercube-Struktur ermöglicht eine einheitliche geometrische Analyse aller möglichen intersektionalen Subgruppen gleichzeitig, anstatt a priori eine bestimmte Granularität festzulegen.",
+    "Mathematischer Beweis: Wenn Fairness an der niedrigsten Ebene (vollständige Intersection aller geschützten Attribute) garantiert wird, impliziert dies notwendigerweise Fairness auf allen höheren Ebenen und für alle einzelnen Attribute – dies widerlegt die Annahme, dass Fairness auf Individualebene zu Gruppenfairness führt.",
+    "Die Varianzreduktion erfolgt exponentiell mit aufsteigenden Ebenen unter Intersektionaler Statistischer Parität (ISP), was einen neuen statistischen Test und die VarRatio-Metrikfamilie zur Quantifizierung intersektionalen Bias ermöglicht und robuster gegen Stichprobenvarianz ist."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Fokus auf algorithmische Fairness, statistische Parität, Gleichheit der Gelegenheiten in Klassifikationssystemen; mathematische und algorithmische Methoden für Machine Learning.",
+    "Bias_Ungleichheit": "'The issue of fairness in AI has received an increasing amount of attention in recent years. A number of AI systems involved in sensitive applications, like recruitment or credit scoring, were found to be biased against minority groups'",
+    "Gender": "'darker-skinned females' Diskriminierung in Gesichtserkennungssystemen; Gender als zentrale geschützte Attribut in Beispielen und Experimenten.",
+    "Diversitaet": "'the intersection of gender and ethnicity' (white male, black male, white female and black female); Fokus auf marginalisierte Gruppen durch Intersektionalität; multiple geschützte Attribute (Rasse, Geschlecht, Alter, Familienstand).",
+    "Feministisch": "Explizite Referenzen auf feministische Intersektionalitätstheorie: 'The concept of intersectional fairness, initially introduced by Black feminist scholars [Crenshaw(2013a), Crenshaw(2013b)]' und 'The fact that the discrimination faced by Black women was greater than the sum of the discrimination experienced by Black men and white women is a well-known concept in the feminist literature [Crenshaw(2013a)], also known as fairness gerrymandering'",
+    "Fairness": "Gesamtpapier widmet sich Fairness-Metriken (Statistical Parity, Disparate Impact, Equality of Outcome, Equality of Opportunity); mathematische Beweise zu Fairness-Propagation; Definition und Messung intersektionaler Fairness."
+  },
+  "references": [
+    {
+      "author": "Crenshaw",
+      "year": 2013,
+      "short_title": "Demarginalizing the Intersection of Race and Sex / Mapping the Margins"
+    },
+    {
+      "author": "Buolamwini & Gebru",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+    },
+    {
+      "author": "Kearns et al.",
+      "year": 2018,
+      "short_title": "Preventing Fairness Gerrymandering: Auditing and Learning for Subgroup Fairness"
+    },
+    {
+      "author": "Foulds et al.",
+      "year": 2020,
+      "short_title": "An Intersectional Definition of Fairness / Bayesian Modeling of Intersectional Fairness"
+    },
+    {
+      "author": "Feldman et al.",
+      "year": 2014,
+      "short_title": "Certifying and Removing Disparate Impact"
+    },
+    {
+      "author": "Hardt et al.",
+      "year": 2016,
+      "short_title": "Equality of Opportunity in Supervised Learning"
+    },
+    {
+      "author": "Mehrabi et al.",
+      "year": 2021,
+      "short_title": "A Survey on Bias and Fairness in Machine Learning"
+    },
+    {
+      "author": "Kong",
+      "year": 2022,
+      "short_title": "Are 'Intersectionally Fair' AI Algorithms Really Fair to Women of Color?"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle KI/Diversität/Fairness, insbesondere für Verständnis systemischer Diskriminierung. Moderate Relevanz für Soziale Arbeit als Anwendungsfeld (rekrutierung, Kreditvergabe, Sozialdienste); stärker als theoretisch-methodischer Beitrag zur Fairness-Messung relevant.",
+    "unique_contribution": "Erstmals systematische mathematische Modellierung und Beweis, dass Fairness-Eigenschaften bei vollständiger intersektionaler Berücksichtigung automatisch auf alle höheren Aggregationsebenen propagieren, kombiniert mit neuem Varianz-basierten Messsystem für intersektionalen Bias.",
+    "limitations": "Beschränkung auf binäre geschützte Attribute (obwohl erweiterbar); Subsampling-Annahmen zur Validierung; aggregierende statt granulare Bias-Analyse; begrenzte echte Datenexperimente (nur Adult-Dataset)."
+  },
+  "target_group": "Primär: ML-Fairness-Forscher:innen, KI-Ethiker:innen, Algoritmenaudit-Spezialist:innen. Sekundär: Datenwissenschaftler:innen in sensiblen Anwendungsdomänen (Recruiting, Finanzdienstleistungen, Justiz), Policymaker mit Fairness-Mandaten. Tertiär: Sozialarbeiter:innen und Aktivist:innen, die Systeminequitäten verstehen möchten."
+}

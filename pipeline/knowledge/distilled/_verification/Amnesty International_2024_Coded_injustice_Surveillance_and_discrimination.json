@@ -1,0 +1,41 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Nennung des 'Really Single'-Modells könnte präziser in der Datenbasis ausgearbeitet werden",
+        "Die genaue Anzahl der Interviews mit Betroffenen nicht quantifiziert",
+        "Zeitraum der FOI-Anfragen nicht explizit genannt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": []
+    },
+    "category_validation": {
+      "score": 96,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Menschenrechte (explizit; wird durchgehend behandelt, aber nicht als Kategorie benannt)",
+        "Datenschutz/GDPR (könnte als eigenständige Kategorie nennenswert sein, da GDPR-Verletzungen zentral sind)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "section": "Kategorie-Evidenz",
+        "suggestion": "Optional: Kategorien 'Menschenrechte' und 'Datenschutz_GDPR' hinzufügen, da diese im Original stark vertreten sind und das Paper primär eine Menschenrechtskritik darstellt"
+      },
+      {
+        "section": "Methodik",
+        "suggestion": "Optional präzisieren: 'qualitative Fallstudien' könnten spezifiziert werden als 'Dokumentation von Betroffenenerzählungen und Einzelfallanalysen' - Anzahl der Interviews nennen, falls aus dem Original extrahierbar"
+      }
+    ]
+  }
+}

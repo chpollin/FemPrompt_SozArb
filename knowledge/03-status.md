@@ -1,8 +1,8 @@
-# Status (2026-02-03)
+# Status (2026-02-04)
 
-## Aktueller Fokus: LLM-Summarisierung
+## Aktueller Fokus: Knowledge Distillation
 
-Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Korpus erweitert (32 zusaetzliche PDFs). Test-Durchlauf der Summarisierung erfolgreich (79.9/100 Quality). Naechster Schritt: Vollstaendige LLM-Summarisierung.
+Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. **Knowledge Distillation v2** erfolgreich getestet (10 Dokumente, 90.7% Confidence). Der neue 3-Stage-Workflow erzeugt Obsidian-kompatible Markdown-Dokumente mit Wikilinks.
 
 ---
 
@@ -12,8 +12,8 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Korpus erweitert (32 zusaet
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | 🔄 In Arbeit |
-| **LLM** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | ✅ Fertig |
+| **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit |
+| **LLM** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
 
 ### Human Assessment
 
@@ -37,7 +37,7 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Korpus erweitert (32 zusaet
 
 ## Pipeline
 
-### PDF→Markdown Konvertierung ✅
+### PDF→Markdown Konvertierung (Fertig)
 
 | Aspekt | Stand |
 |--------|-------|
@@ -47,7 +47,7 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Korpus erweitert (32 zusaet
 | Dubletten entfernt | 9 |
 | Quality-Score (Durchschnitt) | 93.1/100 |
 
-### Validierung ✅
+### Validierung (Fertig)
 
 | Metrik | Wert |
 |--------|------|
@@ -57,7 +57,7 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Korpus erweitert (32 zusaet
 | Artefakt-Score (Durchschnitt) | 4.5/100 |
 | Tabellen-Mismatch | 94 Dokumente |
 
-### Post-Processing ✅
+### Post-Processing (Fertig)
 
 | Operation | Anzahl |
 |-----------|--------|
@@ -66,7 +66,7 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. Korpus erweitert (32 zusaet
 | Header-Wiederholungen entfernt | 2,263 |
 | Zeichen insgesamt entfernt | 107,545 |
 
-### Human-in-the-Loop Review Tool ✅
+### Human-in-the-Loop Review Tool (Fertig)
 
 Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 - **Seiten-Ansicht:** PDF-Seite und Markdown-Text nebeneinander pro Seite
@@ -76,7 +76,7 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 - Filter fuer offene/problematische Dokumente
 - Export/Import als JSON
 
-### Human Review (Stichprobe) 🔄
+### Human Review (Stichprobe) (In Arbeit)
 
 | Aspekt | Stand |
 |--------|-------|
@@ -86,16 +86,22 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 | FAIL | 1 (4%) |
 | Export | `pipeline/validation_reports/human_review_2026-02-03.json` |
 
-### LLM-Summarisierung 🔄
+### Knowledge Distillation (In Arbeit)
 
 | Aspekt | Stand |
 |--------|-------|
-| Test-Durchlauf | ✅ Erfolgreich (20 Dokumente) |
-| Quality-Score (Durchschnitt) | 79.9/100 |
-| API-Kosten (Test) | $0.26 |
-| Existierende Summaries | 78 (58 kopiert + 20 Test) |
-| Fehlende Summaries | ~174 |
-| Geschaetzte Kosten (Rest) | ~$7 |
+| Script | `pipeline/scripts/distill_knowledge.py` |
+| Test-Durchlauf | Erfolgreich (10 Dokumente) |
+| Confidence (Durchschnitt) | 90.7% |
+| API-Kosten (Test) | $0.28 |
+| API-Calls pro Paper | 2 (Stage 2 ist lokal) |
+| Output | `pipeline/knowledge/distilled/` |
+| Verarbeitete Dokumente | 249/252 (98.8%) |
+
+**Workflow (3 Stages):**
+1. **Extract & Classify** - Kombinierte Extraktion (JSON)
+2. **Format Markdown** - Obsidian-kompatibel mit Wikilinks (lokal)
+3. **Verify** - Confidence Score + Korrekturvorschlaege
 
 ---
 
@@ -115,30 +121,29 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 
 | Schritt | Status | Details |
 |---------|--------|---------|
-| Human-Assessment (Google Sheets) | 🔄 In Bearbeitung | Susi, Sabine |
-| LLM-Assessment (Claude Haiku 4.5) | ✅ Fertig | 325 Papers |
-| Benchmark-Analyse (Cohen's Kappa) | ⏸️ Wartet | Nach Human-Assessment |
+| Human-Assessment (Google Sheets) | In Bearbeitung | Susi, Sabine |
+| LLM-Assessment (Claude Haiku 4.5) | Fertig | 325 Papers |
+| Benchmark-Analyse (Cohen's Kappa) | Wartet | Nach Human-Assessment |
 
 ### Phase 2: Pipeline-Execution
 
 | Schritt | Status | Details |
 |---------|--------|---------|
-| PDF-Download (Zotero) | ✅ Abgeschlossen | 257 PDFs (inkl. 32 neue) |
-| Markdown-Konversion (Docling) | ✅ Abgeschlossen | 252/257 (98.1%) |
-| Validierung (Enhanced) | ✅ Abgeschlossen | 98.7 Konfidenz |
-| Post-Processing | ✅ Abgeschlossen | 107k Zeichen bereinigt |
-| Human Review Tool | ✅ Erstellt | Browser-Tool verfuegbar |
-| LLM-Summarisierung (Test) | ✅ Abgeschlossen | 20 Dokumente, 79.9/100 |
-| LLM-Summarisierung (Vollstaendig) | ⏳ Bereit | ~174 Dokumente |
-| Vault-Generierung (Obsidian) | ⏸️ Wartet | Nach Summarisierung |
+| PDF-Download (Zotero) | Abgeschlossen | 257 PDFs (inkl. 32 neue) |
+| Markdown-Konversion (Docling) | Abgeschlossen | 252/257 (98.1%) |
+| Validierung (Enhanced) | Abgeschlossen | 98.7 Konfidenz |
+| Post-Processing | Abgeschlossen | 107k Zeichen bereinigt |
+| Human Review Tool | Erstellt | Browser-Tool verfuegbar |
+| Knowledge Distillation | Abgeschlossen | 249 Dokumente, 89.6% Confidence |
+| Vault-Building (Obsidian) | Wartet | Nach Knowledge Distillation |
 
 ### Phase 3: Paper-Entwicklung
 
 | Schritt | Status |
 |---------|--------|
-| Textbausteine | ⏸️ Wartet |
-| Ergebnisse einarbeiten | ⏸️ Wartet |
-| Finalisierung | ⏸️ Wartet |
+| Textbausteine | Wartet |
+| Ergebnisse einarbeiten | Wartet |
+| Finalisierung | Wartet |
 
 ---
 
@@ -146,13 +151,13 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 
 - [x] Dubletten bereinigen (9 entfernt)
 - [x] Seiten-Alignment im Review-Tool implementieren
-- [x] 32 fehlende PDFs aus analysis/pdfs/ integrieren
-- [x] Existierende 58 Summaries wiederverwenden
-- [x] Test-Durchlauf Summarisierung (20 Dokumente)
-- [ ] Vollstaendige LLM-Summarisierung (~174 Dokumente)
+- [x] 32 fehlende PDFs integriert
+- [x] Knowledge Distillation v2 entwickeln (3-Stage Markdown Workflow)
+- [x] Test-Durchlauf Knowledge Distillation (10 Dokumente)
+- [x] Vollstaendige Knowledge Distillation (249 Dokumente)
 - [ ] Human-Assessment im Google Spreadsheet abschliessen
 - [ ] Benchmark-Metriken berechnen (nach Human-Assessment)
-- [ ] Vault-Generierung
+- [ ] Vault-Building (Synthese und Vernetzung)
 
 ---
 
@@ -168,5 +173,4 @@ Diese 5 PDFs konnten nicht konvertiert werden (korrupte oder ungewoehnliche Form
 
 ---
 
-*Aktualisiert: 2026-02-03*
-*Version: 9.0*
+*Aktualisiert: 2026-02-06*

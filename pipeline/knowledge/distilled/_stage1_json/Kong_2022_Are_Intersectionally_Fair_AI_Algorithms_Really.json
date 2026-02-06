@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Fairness Indicators for Systematic Assessments of Visual Feature Extractors",
+    "authors": [
+      "Priya Goyal",
+      "Adriana Romero Soriano",
+      "Caner Hazirbas",
+      "Levent Sagun",
+      "Nicolas Usunier"
+    ],
+    "year": 2022,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Computer-Vision-Systeme systematisch auf Fairness und Bias hinsichtlich schädlicher Label-Assoziationen, geografischer Disparitäten und diskriminierender Repräsentationen von demografischen Merkmalen auditiert werden?",
+    "methodology": "Empirisch: Entwicklung von drei standardisierten Fairness-Indikatoren und deren Anwendung auf mehrere vortrainierte Computer-Vision-Modelle (Supervised Learning, Weakly-Supervised Learning, Self-Supervised Learning) mit systematischen Ablationsstudien zu Datengröße, Datendomain und Modellgröße.",
+    "key_finding": "Self-Supervised Learning auf großen, diversen Internetdatensätzen (z.B. Instagram mit 1 Milliarde Bildern) führt zu deutlich besseren Fairness-Ergebnissen als Supervised Learning auf ImageNet, besonders für unterrepräsentierte Gruppen bezüglich Geschlecht, Hautton und geografische Regionen.",
+    "data_basis": "Empirische Analyse von Computer-Vision-Modellen auf mehreren öffentlich verfügbaren Fairness-Datensätzen (Casual Conversations, OpenImages MIAP, UTK-Faces) mit verschiedenen Trainingsparadigmen und Modellgrößen (ResNet-50, RegNetY-16, RegNetY-128)"
+  },
+  "arguments": [
+    "Standardisierte Fairness-Indikatoren sind notwendig zur systematischen Diagnose von Bias und Harms in Computer-Vision-Systemen und sollten als verpflichtende Audits in der CV-Forschung etabliert werden, ohne dabei ein umfassendes operationalisiertes Fairness-Konzept ersetzen zu wollen.",
+    "Die Wahl des Trainingsparadigmas (Supervised vs. Weakly-Supervised vs. Self-Supervised) und die Datendomain/Datengröße haben signifikante Auswirkungen auf Fairness-Metriken: SSL auf ungefiltertem, menschenorientierten Internetdaten übertrifft deutlich die traditionelle ImageNet-basierte Supervised-Methode.",
+    "Disparitäten bestehen in drei Kategorien: (1) schädliche Label-Assoziationen (z.B. Verbrechen, nicht-menschlich), (2) Performance-Unterschiede zwischen geografischen Regionen und Einkommensgruppen (bis zu 0,25 Unterschied), (3) Ungleiche Repräsentation demografischer Merkmale in Feature-Räumen, insbesondere für Frauen mit dunklerer Hautfarbe bei der Geschlechter-Retrieval-Aufgabe."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Paper betont Notwendigkeit von 'standardized fairness assessments' und 'widespread adoption and mandate of the fairness assessments in computer vision research' sowie Bereitstellung von 'code and guidance' für praktische Anwendung von Fairness-Audits.",
+    "KI_Sonstige": "Fokus auf Computer Vision, spezifisch visual feature extractors, prätrainierte Modelle, und verschiedene Trainingsparadigmen (Supervised, Weakly-Supervised, Self-Supervised Learning).",
+    "Bias_Ungleichheit": "Zentral sind 'blatant disparities' zwischen demografischen Gruppen: 'difference of 0.25 between lower and higher income budgets, and about 0.20 between Africa and Europe', sowie 'error patterns between these groups' und 'poor performance when object recognition models are tested on geographically diverse images'.",
+    "Gender": "Explizite Analyse von Geschlechts-Bias: 'discrepancies in the error rates in gender classification systems', 'darker-skinned women are more frequently misgendered and/or not recognized', und Messungen von 'disparity in learned representations of social and demographic traits' insbesondere für Geschlecht.",
+    "Diversitaet": "Fokus auf Repräsentation verschiedener Gruppen: 'sensitive groups defined by demographic attributes', 'marginalized groups such as immigrants', Analyse nach Hautton (Fitzpatrick scale), Geschlecht, Alter, geografischer Region, Einkommensgruppe, und intersektionale Analysen (gender × skintone).",
+    "Fairness": "Zentral sind 'three fairness indicators' für Quantifizierung von 'harms and biases': (1) harmful label associations, (2) disparity in learned representations, (3) biased performance on geographically diverse images; verwendete Metriken: hit rates, precision at k, performance stratified by sensitive groups."
+  },
+  "references": [
+    {
+      "author": "Buolamwini & Gebru",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+    },
+    {
+      "author": "Raji et al.",
+      "year": 2020,
+      "short_title": "Closing the AI accountability gap: Defining an end-to-end framework for internal algorithmic auditing"
+    },
+    {
+      "author": "He et al.",
+      "year": 2016,
+      "short_title": "Deep Residual Learning for Image Recognition (ResNet)"
+    },
+    {
+      "author": "Radford et al.",
+      "year": 2021,
+      "short_title": "Learning Transferable Visual Models From Natural Language Supervision (CLIP)"
+    },
+    {
+      "author": "Caron et al.",
+      "year": 2021,
+      "short_title": "Emerging Properties in Self-Supervised Vision Transformers (SwAV)"
+    },
+    {
+      "author": "Singh et al.",
+      "year": 2022,
+      "short_title": "Large Scale Self-Supervised Image Pre-training (SEER)"
+    },
+    {
+      "author": "Shankar et al.",
+      "year": 2021,
+      "short_title": "No Classification without Representation: Assessing Geodiversity Issues in Open Data Sets for the Developing World"
+    },
+    {
+      "author": "Mitchell et al.",
+      "year": 2019,
+      "short_title": "Model Cards for Model Reporting"
+    },
+    {
+      "author": "Yang et al.",
+      "year": 2022,
+      "short_title": "Towards Fairer Datasets: Filtering and Balancing the Distribution of the People Subtree in the ImageNet Hierarchy"
+    },
+    {
+      "author": "Hardt et al.",
+      "year": 2016,
+      "short_title": "Equality of Opportunity in Supervised Learning"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat begrenzte direkte Relevanz für Soziale Arbeit, ist aber fundamental für KI-Governance und -Ethik im Kontext von automatisierten Systemen, die auch in sozialen Diensten eingesetzt werden. Der Fokus auf systematische Fairness-Audits und die Dokumentation von Disparitäten zwischen demografischen Gruppen sind wichtig für alle, die mit Algorithmen in Kontexten sozialer Intervention arbeiten.",
+    "unique_contribution": "Das Paper stellt einen praktischen, anwendbaren Rahmen für standardisierte Fairness-Audits von Computer-Vision-Modellen dar und zeigt empirisch, dass selbstüberwachtes Lernen auf großen, diversen Datensätzen ein vielversprechender Weg zur Reduktion intersektionaler Diskriminierung ist.",
+    "limitations": "Das Paper selbst dokumentiert mehrere Limitationen: (1) begrenzte Datenverfügbarkeit mit kleinen Stichproben und fehlender Ausreißer für nicht-binäre Geschlechter, (2) verwendung von 'perceived' Labels statt selbst-identifizierten demografischen Merkmalen, (3) Fokus auf binäre Klassifikation und einzelne Labels, (4) Risiko, dass Benchmarks zu einseitiger Optimierung führen könnten statt ganzheitlicher Fairness-Überlegungen."
+  },
+  "target_group": "KI-Entwickler und Forschende im Computer-Vision-Bereich, ML-Engineers, Auditor:innen von algorithmischen Systemen, Policy-Maker im Bereich AI Governance, Ethiker:innen und Forscher:innen an der Schnittstelle von KI und sozialer Gerechtigkeit, sowie Organisationen, die Computer-Vision-Systeme für sensitive Anwendungen (Gesichtserkennung, automatische Objektklassifikation in sozialen Kontexten) einsetzen oder evaluieren."
+}

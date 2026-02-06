@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "title": "Algorithms, Artificial Intelligence and Discrimination: An Analysis of the Equality and Anti-Discrimination Act's Possibilities and Limitations",
+    "authors": [
+      "Vibeke Blaker Strand"
+    ],
+    "year": 2025,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie kann das norwegische Gleichstellungs- und Antidiskriminierungsgesetz (EAD Act) algorithmische Diskriminierung effektiv adressieren, und welche legislativen Anpassungen sind notwendig?",
+    "methodology": "Theoretisch-rechtliche Analyse. Systematische Untersuchung der Anwendbarkeit und Grenzen des geltenden Antidiskriminierungsrechts auf algorithmische Systeme unter Berücksichtigung von EU/EEA-Richtlinien, dem AI Act und der GDPR.",
+    "key_finding": "Das EAD Act ist zwar auf algorithmische Diskriminierung anwendbar, weist aber erhebliche Lücken auf. Eine spezifische Gesetzesbestimmung zu algorithmischer Differenzialbehandlung ist erforderlich, um präzisere Schutzstandards etablieren zu können und rechtliche Sicherheit für alle beteiligten Akteure zu schaffen.",
+    "data_basis": "nicht empirisch; basiert auf Rechtsanalyse, Fallrecht (EuGH, norwegisches Anti-Diskriminierungstribunal) und legislativen Dokumenten"
+  },
+  "arguments": [
+    "Algorithmische und KI-Systeme werden zunehmend in gesellschaftskritischen Bereichen (Gesundheit, Wohnen, Kreditvergabe, Polizeiarbeit) eingesetzt und können individuelle Positionen erheblich beeinflussen, daher sollte der Schutz vor Diskriminierung nicht primär auf den Arbeitsmarkt beschränkt bleiben, sondern alle Sektoren umfassen.",
+    "Proxy-Diskriminierung und die Verwendung von Faktoren, die eng mit geschützten Charakteristiken verknüpft sind, erschweren die klassische rechtliche Unterscheidung zwischen direkter und indirekter Diskriminierung und erfordern spezifische algorithmische Kriterien für Zulässigkeit.",
+    "Die Beweislastregeln im Diskriminierungsrecht sind zentral für die praktische Durchsetzung; Inspiration kann aus der Lohngleichheitsrichtlinie (Pay Transparency Directive) gewonnen werden, die Transparenzverpflichtungen mit Beweislastregeln verknüpft und das 'Black-Box'-Problem adressiert."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Der Report analysiert systematisch algorithmische Systeme und KI-Systeme in regulatorischem Kontext: 'The AI Act specifies that existing EU regulation on discrimination is not impacted by the Act.' Fokus auf Algorithmen, maschinelles Lernen und Entscheidungsunterstützungssysteme.",
+    "Soziale_Arbeit": "Der Report adressiert Wohlfahrtsverwaltung und soziale Dienste explizit: 'algorithmic systems may significantly impact the position of individuals, as they can affect individuals' access to essential services and rights, such as healthcare, housing or the ability to obtain insurance.' Dies betrifft Soziale Arbeit in Kontext von Wohlfahrtsverwaltung und Zugang zu sozialen Dienstleistungen.",
+    "Bias_Ungleichheit": "Zentrales Thema des gesamten Reports: 'Discrimination may occur through algorithmic systems' emphasis on proxy factors ('proxy discrimination'). The use of proxy factors triggers new issues, particularly in relation to the prohibition against indirect discrimination.' Analyse struktureller Diskriminierungsmechanismen durch Algorithmen.",
+    "Diversitaet": "Report thematisiert intersektionale Diskriminierung explizit: 'differential treatment also can be found to have occurred against a group within a larger protected group' und 'Section 6 of the Equality and Anti-Discrimination Act's inclusion of a prohibition against multiple forms of discrimination.' Schutz marginalisierter Gruppen und Minderheiten.",
+    "Fairness": "Report analysiert Fairness-Aspekte algorithmischer Systeme: 'a requirement might be established that the differential treatment be suitable and necessary for the realization of the data system's purpose' und diskutiert Fairness-Kriterien für algorithmische Systeme systematisch in Kapitel 4.6."
+  },
+  "references": [
+    {
+      "author": "Gerards, Janneke & Xenidis, Raphaële",
+      "year": 2020,
+      "short_title": "Algorithmic Discrimination in Europe: Challenges and Opportunities for Gender Equality and Non-Discrimination Law"
+    },
+    {
+      "author": "Hellum, Anne & Strand, Vibeke Blaker",
+      "year": 2022,
+      "short_title": "Likestillings- og diskrimineringsrett (Equality and Non-Discrimination Law)"
+    },
+    {
+      "author": "Wachter, Sandra; Mittelstadt, Brent & Russell, Chris",
+      "year": 2021,
+      "short_title": "Why Fairness Cannot Be Automated: Bridging the Gap Between EU Non-Discrimination Law and AI"
+    },
+    {
+      "author": "Borgesius, Frederik Zuiderveen",
+      "year": 2018,
+      "short_title": "Discrimination, Artificial Intelligence, and Algorithmic Decision-Making"
+    },
+    {
+      "author": "Datta, Anupam et al.",
+      "year": 2017,
+      "short_title": "Proxy Discrimination in Data-Driven Systems"
+    },
+    {
+      "author": "Xenidis, Raphaële",
+      "year": 2020,
+      "short_title": "Tuning EU Equality Law to Algorithmic Discrimination: Three Pathways to Resilience"
+    },
+    {
+      "author": "Hauglid, Mathias Karlsen",
+      "year": 2024,
+      "short_title": "Bias and Discrimination in Clinical Decision Support Systems Based on Artificial Intelligence"
+    },
+    {
+      "author": "Schartum, Dag Wiese",
+      "year": 2019,
+      "short_title": "Digitalisierung of Public Administration: From Legal Text to Program Code"
+    },
+    {
+      "author": "Strümke, Inga; Slavkovik, Marija & Stachl, Clemens",
+      "year": 2023,
+      "short_title": "Against Algorithmic Exploitation of Human Vulnerabilities"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochrelevant für die Schnittstelle KI und Soziale Arbeit: Der Report zeigt, wie algorithmische Systeme in wohlfahrtsverwaltunglichen Kontexten zu Diskriminierung führen können und analysiert regulatorische Mechanismen zur Prävention. Dies ist zentral für sozialarbeiterische Ethik und Praxis.",
+    "unique_contribution": "Der Report leistet erstmalig eine umfassende rechtliche Analyse der Anwendbarkeit norwegischen Antidiskriminierungsrechts auf Algorithmen und KI-Systeme unter EU/EEA-Perspektive und entwickelt konkrete legislative Reformvorschläge (insb. zu algorithmischer Differenzialbehandlung und Beweislastregeln).",
+    "limitations": "Rein rechtlich-theoretische Analyse ohne empirische Fallstudien oder Stakeholder-Perspektiven von Betroffenen; Fokus auf Norwegen/EU-Recht, daher begrenzte internationale Generalisierbarkeit."
+  },
+  "target_group": "Policymaker und Legislatoren (Schwerpunkt), Rechtsanwälte und Richter im Antidiskriminierungsrecht, KI-Regulatoren und Compliance-Officer, Interessenorganisationen und NGOs, Wohlfahrtsverwaltungen und öffentliche Behörden, sekundär Sozialarbeiter und Social-Work-Fachkräfte in regulatorischen Kontexten"
+}

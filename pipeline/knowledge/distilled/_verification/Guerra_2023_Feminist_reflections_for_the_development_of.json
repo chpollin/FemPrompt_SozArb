@@ -1,0 +1,62 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Konkrete Interviewpartnerinnen nicht vollständig aufgelistet - nur 5 von 7 Namen mit Titeln genannt",
+        "Fehlende Zusammenfassung der Sections 4.1-4.3 (Bias, Databases, Auditability) - diese sind im Original vorhanden, aber im generierten Dokument nicht zusammengefasst",
+        "Abschnitt 'Doing speculatively' (Sektion 5) nur oberflächlich dargestellt"
+      ],
+      "missing_minor": [
+        "Spezifische Beispiele zu OpenStreetMap/Geo Chicas nicht erwähnt",
+        "Details zu Tequiology nicht ausführlich genug zusammengefasst",
+        "Konkrete Warnung vor Diversitäts-Washing (Benjamin-Zitat) unterrepräsentiert"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Geringfügig: Titel der Cortés-Referenz als 'Piel sintética interconectada' anstatt vollständiger Kontext nicht korrekt zugeordnet"
+      ],
+      "distortions": [
+        "Methodologie beschreibt 'n=7 qualitative Interviews' korrekt, aber die Datenbasis-Formulierung könnte präziser sein bezüglich der Nicht-Exhaustivität der Literaturanalyse"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Kolonialismus/Dekolonialität - wird im Text zentral behandelt ('decolonial perspective', 'Abya Yala', koloniale Machtverhältnisse), fehlt aber als eigenständige Kategorie",
+        "Infrastruktur/Materialität - wird ausführlich behandelt ('infrastructure as territories of care'), könnte als separate Kategorie sichtbar sein",
+        "Datenschutz/Privacy - wird in Sektion 6.4 angesprochen, fehlt aber in Kategorie-Evidenz"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_extension": [
+        "Kolonialismus_Dekolonialität",
+        "Infrastruktur_Materialität",
+        "Datenschutz_Privacy"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Datenbasis",
+        "current": "n=7 qualitative Interviews mit Frauen in KI/Data Science aus Lateinamerika; systematische Analyse von 6 feministischen Prinzipien-Statements; Review von 3 feministischen Praxis-Guides aus Lateinamerika",
+        "suggested": "n=7 qualitative Interviews mit Frauen in KI/Data Science aus Lateinamerika (NLP, Mathematik, Ethik, Data Science, verschiedene Länder); systematische, nicht-erschöpfende Literaturanalyse von 6 feministischen Prinzipien-Statements und Audit-Frameworks; Review von 3 feministischen Praxis-Guides aus Lateinamerika"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Punkte zu Tequiologie und Design Justice könnten konkretere Bezüge zur Praxis enthalten"
+      },
+      {
+        "section": "Category-Evidenz",
+        "issue": "Abschnitte 4.1-4.3 (Bias, Databases, Auditability) sind nicht explizit zusammengefasst",
+        "suggested": "Unter Bias_Ungleichheit ergänzen: 'Kritik am bestehenden Audit-Framework-Ansatz als oberflächlich; Notwendigkeit von Datenbank-Audits mit Aufmerksamkeit für Entstehungskontexte und Machtrelationen im Datensammlung'"
+      }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "Prompting Fairness: Learning Prompts for Debiasing Large Language Models",
+    "authors": [
+      "Andrei-Victor Chisca",
+      "Camelia Lemnaru",
+      "Andrei-Cristian Rad"
+    ],
+    "year": 2024,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Prompt-Tuning-Methoden eingesetzt werden, um Bias in Encoder-Sprachmodellen wie BERT und RoBERTa zu reduzieren, ohne die Sprachmodellierungsfähigkeit signifikant zu beeinträchtigen?",
+    "methodology": "Empirisch: Entwicklung einer neuartigen Prompt-Tuning-Methode für Bias-Mitigation mit KL-Divergenz-basierter Verlustfunktion; Evaluierung auf zwei Bias-Messbenchmarks (SEAT, StereoSet); systematische Ablationsstudien zu Initialisierungsmethoden, Namensverwendung und groupspezifischen Optionen.",
+    "key_finding": "Die vorgeschlagene Prompt-Tuning-Methode erreicht state-of-the-art Debiasing-Performance bei BERT und konkurrenzfähige Ergebnisse bei RoBERTa, während sie eine minimale Auswirkung auf die Sprachmodellierungsfähigkeit hat. Die Methode trainiert nur kleine, wiederverwendbare Token-Embeddings, die zu beliebigen Eingabesequenzen hinzugefügt werden können.",
+    "data_basis": "Synthetische Daten: 159 Templates für Gender-Bias mit 4 Bias-Slot-Typen und 234 Zieloptionen (219 allgemeine + 15 gruppespezifische); Evaluierung auf etablierten Benchmarks: SEAT (6 Gender-Tests), StereoSet (Gender-, Professions-, Rassen- und Religionsbias-Tests); WikiText-2 für Pseudo-Perplexity-Messung."
+  },
+  "arguments": [
+    "Large Language Models internalisieren soziale Biases aus ihren Trainingsdaten und perpetuieren damit Stereotypen gegenüber unterrepräsentierten Gruppen; daher ist es notwendig, Bias-Mitigationsmethoden zu entwickeln, die diese Schäden reduzieren.",
+    "Bestehende Bias-Mitigationsmethoden haben Nachteile: CDA erfordert vollständiges Modell-Retraining, INLP beeinträchtigt die Sprachmodellierungsfähigkeit erheblich, und projektionsbasierte Methoden benötigen zusätzliche Datenaugmentation.",
+    "Prompt-Tuning bietet eine effiziente Alternative, da nur kleine, trainierbare Token-Embeddings hinzugefügt werden, während die Modellparameter eingefroren bleiben; die Methode kann durch eine KL-Divergenz-basierte Verlustfunktion trainiert werden, die fair zwischen sozialen Gruppen ausgewogene Vorhersagen fördert."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Prompting": "Kern der Methode: 'We base our approach on prompt tuning (Lester et al., 2021), which involves concatenating a set of trainable embeddings to the embedded input of the model while keeping the other parameters frozen.' Fokus auf Template-basiertes Prompt-Design und Prompt-Tuning als Debiasing-Strategie.",
+    "KI_Sonstige": "Arbeit mit NLP-Modellen BERT und RoBERTa, Masked Language Modeling, Embedding-basierte Metriken; klassische NLP-Techniken ohne generativen Fokus.",
+    "Bias_Ungleichheit": "Expliziter Fokus auf algorithmischen Bias: 'Large language models are prone to internalize social biases due to the characteristics of the data used for their self-supervised training scheme' und 'representational harms, such as disparate system performance, exclusion or stereotyping, or allocation harms, such as discrimination and unequal allocation of resources'.",
+    "Gender": "Gender-Bias-Mitigation ist Hauptfokus: '159 templates, mostly focused on genders in relation to professions/occupations'; systematische Evaluierung von Gender-Bias durch SEAT und StereoSet Gender-Tests; Analyse von Geschlechterstereotypen bei Berufsbezeichnungen.",
+    "Diversitaet": "Berücksichtigung mehrerer sozialer Gruppen und deren Repräsentation: 'we aim to give the model additional information at inference, in the form of compact prompt embeddings, which could enable it to implicitly infer a latent concept encompassing the desired behaviour: generating a fair and unbiased output' unter Beibehaltung der Gruppenidentität.",
+    "Fairness": "Zentrales Konzept der Fairness durchzieht die Arbeit: Fairness-Metriken (SEAT effect sizes, StereoSet stereotype scores), KL-Divergenz-basierte Loss-Funktion für faire Vorhersageverteilungen: 'we minimize the KL divergence between the probability distribution predicted by the model for the allowed options of the target slots and a reference probability distribution', Ziel fairer Vorhersagen über Gruppen hinweg."
+  },
+  "references": [
+    {
+      "author": "Caliskan et al.",
+      "year": 2017,
+      "short_title": "Word Embeddings Association Test (WEAT)"
+    },
+    {
+      "author": "May et al.",
+      "year": 2019,
+      "short_title": "Sentence Embedding Association Test (SEAT)"
+    },
+    {
+      "author": "Nadeem et al.",
+      "year": 2021,
+      "short_title": "StereoSet: Measuring Stereotypical Bias in Pretrained Language Models"
+    },
+    {
+      "author": "Lester et al.",
+      "year": 2021,
+      "short_title": "Prompt Tuning for Parameter-Efficient Fine-Tuning"
+    },
+    {
+      "author": "Zmigrod et al.",
+      "year": 2019,
+      "short_title": "Counterfactual Data Augmentation (CDA)"
+    },
+    {
+      "author": "Ravfogel et al.",
+      "year": 2020,
+      "short_title": "Iterative Nullspace Projection (INLP)"
+    },
+    {
+      "author": "Liang et al.",
+      "year": 2020,
+      "short_title": "Sentence Debias"
+    },
+    {
+      "author": "Gallegos et al.",
+      "year": 2023,
+      "short_title": "Bias and Fairness in Large Language Models: A Survey"
+    },
+    {
+      "author": "Meade et al.",
+      "year": 2022,
+      "short_title": "An Empirical Survey of the Effectiveness of Debiasing Techniques"
+    },
+    {
+      "author": "Devlin et al.",
+      "year": 2019,
+      "short_title": "BERT: Pre-training of Deep Bidirectional Transformers"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist primär für KI-Entwickler und NLP-Forscher relevant, die sich mit Bias-Mitigation befassen. Für Soziale Arbeit besteht eine indirekte Relevanz, da algorithmischer Bias durch LLMs auch in sozialen Diensten (z.B. Chatbots für Beratung, automatisierte Fallentscheidungen) Schaden anrichten kann und faire Systeme ethisch geboten sind.",
+    "unique_contribution": "Die Arbeit kombiniert erstmals Prompt-Tuning mit KL-Divergenz-basierter Bias-Mitigation und demonstriert, dass minimal invasive, wiederverwendbare Prompts Fairness mit erhaltener Sprachmodellierungsfähigkeit vereinen können – ein Fortschritt gegenüber bestehenden Methoden, die oft Trade-offs erzwingen.",
+    "limitations": "Limitierungen: (1) Methode erfordert Template-Design und manuelle Auswahl von 'allowed options', was für andere Biasarten und mehrsprachige Kontexte nicht trivial ist; (2) Tokenizer-Abhängigkeit: nur Single-Token-Optionen; (3) Initialisierungsmethoden sind modellabhängig und nicht direkt auf andere Biasarten übertragbar; (4) Referenzverteilung basiert auf Original-Modellvorhersagen, wodurch bereits biased Modelle die Trainierung beeinflussen können."
+  },
+  "target_group": "NLP-Forscher und KI-Entwickler, insbesondere die an Bias-Mitigation und Parameter-effizienten Methoden arbeiten; Systementwickler von LLM-Anwendungen; sekundär: Ethiker und Policy-Maker, die faire KI-Systeme fördern; potentiell auch Sozialarbeiter, die automatisierte Systeme in ihrer Praxis einsetzen oder evaluieren."
+}

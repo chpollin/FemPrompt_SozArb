@@ -1,0 +1,50 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische PRISMA-Checklisten-Elemente nicht erwähnt",
+        "Details zu Ausschlusskriterien der Studienauswahl nicht aufgeführt",
+        "Vollständige Liste aller 9 analysierten Studien fehlt (nur Auszüge vorhanden)",
+        "Zeitraum der Literatursuche nicht präzise angegeben"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: Die Formulierung 'quality_score: 95' aus dem Originalmetadata wird im Dokument nicht erwähnt, obwohl relevant für Quelleneinschätzung"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Potentiell: Ethik / Ethics - könnte als eigene primäre Kategorie aufgeführt sein, da Ethik zentrales Thema ist (aktuell unter 'Fairness' subsumiert)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Konversionsqualität und Original-Quality-Score hinzufügen",
+      "proposed_addition": "quality_score_original: 95,\nconversion_quality: high"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Datenbasis-Beschreibung könnte präziser sein",
+        "current": "9 Studien aus Datenbanken (PubMed, JSTOR, ProQuest, Google Scholar) und grauer Literatur; Zeitraum der Veröffentlichungen variiert",
+        "suggested": "9 Studien aus Datenbanken (PubMed, JSTOR, ProQuest, Google Scholar) und grauer Literatur; Suchstrategie folgte PRISMA-Richtlinien; Review-Protokoll nicht bei Campbell Collaboration registriert, aber mit Universitäts-Librarian entwickelt"
+      },
+      {
+        "section": "category_validation",
+        "issue": "Fehlende Kategorie vorschlagen",
+        "current": "AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness",
+        "suggested": "Ggf. Ethik/Ethics als eigenständige Kategorie erwägen (derzeit mit Fairness vermischt), da 'ethical implementation', 'ethical considerations' und 'Drake et al. ethical framework' zentral sind"
+      }
+    ]
+  }
+}

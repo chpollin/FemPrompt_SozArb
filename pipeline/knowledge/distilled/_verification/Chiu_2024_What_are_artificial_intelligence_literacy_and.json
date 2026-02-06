@@ -1,0 +1,66 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Konkrete fünf Lernkomponenten/learning experiences nicht vollständig dargestellt (Community engagement erwähnt, aber andere vier nicht explizit named)",
+        "Iterativer Prozess der vier Co-Design-Zyklen nicht detailliert dokumentiert",
+        "Spezifische Unterschiede zwischen den drei major frameworks (Five Big Ideas, AI4future, holistic approach) nicht präzise differenziert"
+      ],
+      "missing_minor": [
+        "Detaillierte Beschreibung der Human Sensor-Konzepte unter Perception (see, read, write; speak, hear; etc.) zu kurz",
+        "Konkrete Anwendungsbeispiele für die fünf Ethik-Prinzipien fehlen",
+        "Forschungsdesign: Rolle des Forschers als STEM-Bildungshintergrund und 5 Jahre Erfahrung könnte stärker betont werden"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Kleine Ungenauigkeit bei der Zusammenfassung der fünf Learning Experiences: Nur 'Community engagement' explizit genannt im Text-Ausschnitt, die anderen vier werden im Originaltext erwähnt aber nicht vollständig im generierten Dokument aufgelistet"
+      ],
+      "distortions": [
+        "Die Aussage 'Prompt Engineering als notwendige Fähigkeit' könnte stärker als 'identifizierte zukünftige Forschungsrichtung' statt gegenwärtige Curriculum-Komponente charakterisiert werden",
+        "Gender-Analyse wird als abwesend beschrieben, aber die Stichprobenbeschreibung ist faktisch korrekt; die Interpretation der Limitation könnte expliziter sein"
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Data_Literacy sollte als primäre Kategorie hinzugefügt werden - explizit im Text: 'Data literacy is the capacity to understand, work with, evaluate, and argue with data' und als zukünftige Forschungsrichtung identifiziert",
+        "Computational_Literacy sollte erwähnt werden (als verwandtes, aber nicht überlappend behandeltes Konzept)",
+        "Digital_Literacy als Prerequisite sollte explizit kategorisiert werden"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "Data_Literacy",
+        "Digital_Literacy",
+        "Computational_Literacy",
+        "K12_Bildung",
+        "Curriculum_Design"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kategorie-Evidenz - KI_Sonstige",
+        "issue": "Data Literacy nicht explizit als separate Kategorie behandelt",
+        "fix": "Hinzufügen: 'Data Literacy ist eine Voraussetzung und Komponente von AI-Literalität: \"the capacity to understand, work with, evaluate, and argue with data as part of a more comprehensive process of inquiry\"'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Fünf Learning Experiences nur teilweise aufgelistet",
+        "fix": "Explizit nennen: 1) Community engagement, 2-5) weitere vier nicht vollständig im Originaltext-Ausschnitt enthalten, aber im Volltext dokumentiert. Hinweis auf Limitation hinzufügen."
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Geschlechterparität wird kritisiert, aber Kontext fehlt",
+        "fix": "Ergänzen: 'Die 20% weibliche Beteiligung spiegelt möglicherweise auch die bestehende Geschlechterschiefe im AI-Lehrkörper wider, wird aber nicht analysiert.'"
+      }
+    ]
+  }
+}

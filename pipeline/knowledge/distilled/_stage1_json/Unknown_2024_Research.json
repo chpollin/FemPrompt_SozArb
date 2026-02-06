@@ -1,0 +1,82 @@
+{
+  "metadata": {
+    "title": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+    "authors": [
+      "Yuan Yi"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Welche Risiken entstehen durch die Anwendung von ChatGPT und generativen KI-Systemen in der Sozialen Arbeit, und welche Gegenmaßnahmen sind erforderlich?",
+    "methodology": "Theoretisch | Konzeptionelle Analyse und Literature Review der Risiken von generativer KI in der Sozialen Arbeit",
+    "key_finding": "ChatGPT und generative KI-Systeme präsentieren erhebliche Risiken für die Soziale Arbeit in den Bereichen Datensicherheit, algorithmischer Bias und ethische Herausforderungen. Diese Risiken erfordern robuste regulatorische Rahmenwerke, technische Schutzmaßnahmen und eine Neuorientierung der Fachkräfte zur Bewahrung humanistischer Werte.",
+    "data_basis": "nicht angegeben"
+  },
+  "arguments": [
+    "ChatGPT birgt erhebliche Datensicherheitsrisiken durch die Sammlung großer Sprachdatensätze, fehlende klare Regulierungen bei der Datenerfassung und die Anfälligkeit für passive und aktive Datenlecks in sozialen Diensten.",
+    "Algorithmischer Bias in generativen KI-Systemen kann zu systematischer Diskriminierung marginalisierter Gruppen in der Sozialen Arbeit führen, insbesondere durch unausgeglichene Trainingsdaten und Feedback-Loop-Bias.",
+    "Ethische Probleme entstehen durch fehlende emotionale Konnektivität, Information-Bubbles, Virtualisierung sozialer Beziehungen und die Gefahr der Erosion kritischer Urteilsfähigkeit von Sozialarbeitern.",
+    "Umfassende rechtliche Regulierung, technische Sicherheitsmaßnahmen, Schulung von Fachkräften und Bewusstseinförderung bei Dienstnutzern sind notwendig, um KI-Risiken zu mindern und die humanistische Dimension der Sozialen Arbeit zu bewahren."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Fostering proper understanding of the relationship between humans and generative AI; Enhancing professional training equips social workers to navigate challenges posed by emerging technologies",
+    "Generative_KI": "Focus on ChatGPT and its GPT technology; Discussion of ChatGPT's AIGC capabilities, evolution through GPT-1 to GPT-4, and its integration in social work contexts",
+    "KI_Sonstige": "Discussion of algorithmic decision-making systems, algorithmic bias in risk assessment algorithms, and broader AI integration in community service platforms",
+    "Soziale_Arbeit": "Direct analysis of ChatGPT risks and countermeasures specifically in social work services, addressing data handling in social institutions, emotional rapport in social services, and ethical dilemmas in delegating decisions to AI systems",
+    "Bias_Ungleichheit": "Algorithmic bias stemming from underrepresentation or overrepresentation of certain groups; Data inadequacy on economically disadvantaged or minority groups; Risk of discriminatory outcomes against marginalized groups",
+    "Diversitaet": "Ensuring diversity and representativeness of datasets; Promoting social participation and diversity among clientele; Addressing needs of economically disadvantaged and minority groups in social services",
+    "Fairness": "Emphasis on fairness and equity in AI-driven social work practices; Need for fair, inclusive, and bias-free services; Transparency and accountability in algorithmic decision-making; Upholding principles of fairness, transparency, and legality in social work services"
+  },
+  "references": [
+    {
+      "author": "Agoldende, D. J.",
+      "year": 2022,
+      "short_title": "A Golden Decade of Deep Learning: Computing Systems & Applications"
+    },
+    {
+      "author": "Fuchs, D. J.",
+      "year": 2018,
+      "short_title": "The Dangers of Human-like Bias in Machine-learning Algorithms"
+    },
+    {
+      "author": "Kasneci, E., Sebler, K., Kü chemann, S., et al.",
+      "year": 2023,
+      "short_title": "ChatGPT for Good? On Opportunities and Challenges of Large Language Models for Education"
+    },
+    {
+      "author": "Hartmann, J., Schwenzow, J., & Witte, M.",
+      "year": 2023,
+      "short_title": "The Political Ideology of Conversational AI: Converging Evidence on ChatGPT's Pro-environmental, Left-Libertarian Orientation"
+    },
+    {
+      "author": "Rozado, D.",
+      "year": 2023,
+      "short_title": "The Political Biases of ChatGPT"
+    },
+    {
+      "author": "McGee, R. W.",
+      "year": 2023,
+      "short_title": "Is ChatGPT Biased Against Conservatives? An Empirical Study"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für die Schnittstelle von Generativer KI und Sozialer Arbeit und adressiert zentrale Fragen zu Datensicherheit, Bias und ethischen Herausforderungen. Es verbindet technische KI-Literatur mit der spezifischen Praxis der Sozialen Arbeit und deren vulnerable Zielgruppen.",
+    "unique_contribution": "Der Beitrag liegt in einer umfassenden Risikoanalyse von ChatGPT/generativen KI-Systemen speziell im Kontext der Sozialen Arbeit, kombiniert mit konkreten Gegenmaßnahmen auf technischer, organisationaler und gesetzlicher Ebene.",
+    "limitations": "Das Paper ist konzeptionell/theoretisch ohne empirische Daten; es fehlen empirische Studien zur Validierung der identifizierten Risiken; Gender-Perspektive ist nicht explizit integriert; China-spezifischer Kontext wird erwähnt, aber keine komparative Analyse mit anderen Kontexten."
+  },
+  "target_group": "Sozialarbeiter und Sozialarbeiterinnen, Sozialeinrichtungen, KI-Entwickler, Policymaker und Regulatoren im Sozialbereich, Ausbilder in der Sozialen Arbeit, Fachleute für Datenschutz und Informationssicherheit in Sozialorganisationen"
+}

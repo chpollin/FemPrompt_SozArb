@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "title": "What Comes After Harm? Mapping Reparative Actions in AI through Justice Frameworks",
+    "authors": [
+      "Sijia Xiao",
+      "Haodi Zou",
+      "Alice Qian Zhang",
+      "Deepak Kumar",
+      "Hong Shen",
+      "Jason Hong",
+      "Motahhare Eslami"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Welche Arten von Reparationsmaßnahmen werden nach AI-Schäden eingeleitet, wer ist beteiligt, und wie verteilen sich diese Maßnahmen auf dokumentierte Fälle?",
+    "methodology": "Mixed-Methods: Qualitative Themenanalyse einer absichtlich gewählten Teilmenge von Vorfällen zur Entwicklung einer Taxonomie, anschließend LLM-gestützte Kodierung und quantitative Analyse von 1.060 AI-Schäden aus dem AIAAIC-Datensatz mit manueller Überprüfung (Inter-Rater-Reliabilität: 93,33% für Aktionen, 90% für Stakeholder).",
+    "key_finding": "Reparationsbemühungen konzentrieren sich stark auf symbolische, frühe Phasen (Ankündigung, Attribution), während Maßnahmen zur Rechenschaftspflicht und Systemreform deutlich seltener sind. Nur 10,75% der Fälle zeigen Strafen und 6,13% Kompensationen, was auf ein erhebliches Verantwortungsdefizit hindeutet.",
+    "data_basis": "n=1.060 AI-Harm-Vorfälle aus dem AIAAIC-Repository (dokumentiert vor Dezember 2024), qualitativ analysierte Teilmenge für Taxonomieentwicklung, Validierungsstichprobe von 200 Fällen für LLM-Genauigkeit"
+  },
+  "arguments": [
+    "Die aktuelle Landscape der AI-Schadensbearbeitung zeigt eine systematische Verzerrung hin zu Kommunikation und symbolischen Maßnahmen: AI-Unternehmen sind in 4x höherem Maße an Stellungnahmen/Entschuldigungen beteiligt als an Kompensation, Produktrückrufen oder Designänderungen, was auf Wahrnehmungsmanagement statt substantielle Reformen hindeutet.",
+    "Betroffene Gemeinschaften haben minimalen Einfluss auf Reparationsergebnisse: Sie erscheinen hauptsächlich in reaktiven Rollen (öffentlicher Aufschrei, Klageeinleitung), sind aber weitgehend abwesend bei Kompensation, Designänderungen oder Politikreformen, was ein Machtungleichgewicht in der Reparationspraxis offenbart.",
+    "Drei Gerechtigkeitsrahmen (Straf-, Wiederherstellungs- und Transformative Justice) zeigen, dass bestehende Reparationspraktiken grundlegende Anforderungen für echte Gerechtigkeit nicht erfüllen: Fehlende Rechenschaftspflicht, begrenzte Unterstützung betroffener Gemeinschaften und Versäumnis, strukturelle Bedingungen zu adressieren, die Schäden ermöglichten."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "Das Paper analysiert Schäden durch generative KI-Systeme wie Chatbots (Character AI), Deepfakes-Technologien (Synthesia) und KI-Video-Generierung explizit als Teilmenge der 1.060 Vorfälle.",
+    "KI_Sonstige": "Umfassende Analyse von Schäden durch algorithmische Entscheidungssysteme, Gesichtserkennung (Clearview AI), predictive policing, Einstellungsalgorithmen und automatisierte Systeme im allgemeinen.",
+    "Bias_Ungleichheit": "Das Paper untersucht systematisch diskriminatorische und ungleiche Auswirkungen von AI, etwa Geschlechterbias in LinkedIn-Algorithmen, rassistische Beauty-Standards in FaceApp-Filtern, und disparate Impact in Einstellungssystemen. Es betont strukturelle Ungerechtigkeit und ungleiche Machtverteilung zwischen Unternehmen und betroffenen Gemeinschaften.",
+    "Diversitaet": "Fokus auf marginalisierte Communities und unterrepräsentierte Gruppen: Kindern (TikTok-Datenschutz), Frauen (Deepfakes, KI-Nacktbilder), Minoritäten (LinkedIn-Bias, FaceApp), und systemisch benachteiligte Bevölkerungsgruppen, die von AI-Harm unverhältnismäßig stark betroffen sind.",
+    "Fairness": "Das Paper entwickelt einen Rahmen für gerechte (fair) Reparationspraktiken basierend auf drei Gerechtigkeitstheorien und kritisiert bestehende Systeme für mangelnde Fairness in Reparationsprozessen, Stakeholder-Beteiligung und Resultatverteilung."
+  },
+  "references": [
+    {
+      "author": "Feinberg",
+      "year": 2019,
+      "short_title": "Comparative Wrongfulness and Desert Basis for Moral Responsibility"
+    },
+    {
+      "author": "Zehr",
+      "year": 2015,
+      "short_title": "The Little Book of Restorative Justice"
+    },
+    {
+      "author": "Morris",
+      "year": 2000,
+      "short_title": "Stories of Transformative Justice"
+    },
+    {
+      "author": "Kaba",
+      "year": 2021,
+      "short_title": "We Do This 'til We Free Us"
+    },
+    {
+      "author": "Raji et al.",
+      "year": 2020,
+      "short_title": "Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing"
+    },
+    {
+      "author": "Mökander",
+      "year": 2023,
+      "short_title": "Auditing of AI: Legal, Ethical and Technical Approaches"
+    },
+    {
+      "author": "Johnson et al.",
+      "year": 2024,
+      "short_title": "The Abandonment of Algorithms Following Public Backlash"
+    },
+    {
+      "author": "DeVrio, Eslami, and Holstein",
+      "year": 2024,
+      "short_title": "Grassroots Actors Organizing for Redress in the Face of Institutional Power"
+    },
+    {
+      "author": "Wright et al.",
+      "year": 2024,
+      "short_title": "Null Compliance: NYC Local Law 144 and the Challenges of Algorithm Accountability"
+    },
+    {
+      "author": "United Nations General Assembly",
+      "year": 2005,
+      "short_title": "Basic Principles and Guidelines on the Right to Remedy and Reparation for Victims of Gross Violations"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat moderate Relevanz für die Schnittstelle AI/Soziale Arbeit: Es adressiert strukturelle Gerechtigkeit, marginalisierte Communities und Machtungleichgewichte, was zentrale Anliegen Sozialer Arbeit sind. Allerdings liegt der Fokus primär auf AI-Governance und Unternehmensverantwortung, nicht auf sozialarbeiterische Praxis oder Intervention.",
+    "unique_contribution": "Das Paper leistet einen systematischen und theoretisch grundierten Beitrag zur Schließung der Forschungslücke zwischen AI-Schadensidentifikation und -reparation durch eine umfassende Taxonomie reparativer Maßnahmen und kritische Analyse deren Unzulänglichkeit gegen drei Gerechtigkeitsrahmen.",
+    "limitations": "Analyse begrenzt auf dokumentierte Vorfälle im AIAAIC-Datensatz (Selektionsbias für öffentlich bekannte Fälle); Fokus auf englischsprachige Quellen; LLM-basierte Kodierung mit durchschnittlicher Stakeholder-Genauigkeit von 78,78%, was Klassifizierungsfehler einführt; begrenzte Analyse von Langzeiteffektivität oder Perspektiven betroffener Gemeinschaften direkt nach Reparation."
+  },
+  "target_group": "AI-Governance-Fachleute und Regulatoren, Responsible-AI-Forscher, Unternehmensethik-Abteilungen, Aktivisten und Advocacy-Organisationen im Bereich AI-Gerechtigkeit, Policymaker im AI-Regulierungsbereich, sowie sekundär Sozialarbeiter mit Fokus auf strukturelle Gerechtigkeit und Advocacy für marginalisierte Gruppen"
+}

@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "title": "Digital literacy as a new determinant of health: A scoping review",
+    "authors": [
+      "Maria del Pilar Arias López",
+      "Bradley A. Ong",
+      "Xavier Borrat Frígola",
+      "Ariel L. Fernández",
+      "Rachel S. Hicklent",
+      "Arianne J. T. Obeles",
+      "Aubrey M. Rocimo",
+      "Leo A. Celi"
+    ],
+    "year": 2023,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "How does digital health literacy affect health outcomes, and what interventions can address poor digital health literacy?",
+    "methodology": "Scoping Review. Comprehensive literature search across Medline (Ovid), Embase (Ovid), Scopus, and Google Scholar using natural language and controlled vocabulary terms. Hand-searching and citation chaining. Methodological framework of Arksey and O'Malley. Five authors independently screened 268 identified articles; 53 selected for full-text analysis.",
+    "key_finding": "Digital health literacy is identified as a 'super social determinant of health' that significantly impacts health outcomes including self-management, quality of life, mental health, and disease control. Effective interventions include education/training and social support, though evidence remains limited.",
+    "data_basis": "n=53 articles included in final analysis (from 268 initially identified). Only 13 studies (24.53%) reported health outcomes; only 9 studies (16.98%) evaluated interventions."
+  },
+  "arguments": [
+    "Digital technologies have transformative potential for healthcare access but create a 'digital divide' that disproportionately excludes vulnerable populations (older adults, minorities, rural communities, persons with disabilities), thereby deepening existing health inequities rather than reducing them.",
+    "Digital literacy and digital health literacy function as 'super social determinants of health' that control and mediate access to other social determinants, making them fundamentally different from traditional health determinants and requiring urgent policy and intervention focus.",
+    "Higher digital health literacy is associated with better health outcomes including improved self-management, quality of life, mental health, disease control, and preventive health behaviors, while low literacy creates barriers to online patient portals, vaccine access, and healthcare coordination."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Digital literacy defined as 'the varying ability of both children and adults to use digital technologies and understand their risks' and 'the capacity to critically and confidently engage with the online environment.' Assessment tool eHealth Literacy Scale (eHEALS) evaluates six core dimensions.",
+    "KI_Sonstige": "Paper discusses digital health technologies including virtual visits, asynchronous digital messaging, health tracking wearables, self-monitoring devices, online patient portals, and technology-based health tools as components of healthcare systems.",
+    "Soziale_Arbeit": "Paper addresses vulnerable populations including older adults, minorities, persons with disabilities, rural communities, and those with low socioeconomic status—core constituencies of social work. Discusses health equity, access barriers, and need for supportive interventions.",
+    "Bias_Ungleichheit": "Explicitly addresses 'digital divide' and digital inequities: 'Digital transformation may contribute to further increasing the inequalities that already exist in access to healthcare thus generating a digital divide.' Documents disparities by age, education, socioeconomic status, and digital access.",
+    "Gender": "Study reports gender disparities in digital literacy: 'Males were more likely than females to have high digital literacy related to internet-based information.' Gender identified as factor affecting digital health literacy alongside age and education.",
+    "Diversitaet": "Paper emphasizes intersectional impacts across age, gender, education level, socioeconomic status, and geographic location. Highlights specific vulnerable groups: 'rural areas, aging patients, minorities, or persons with disabilities' are 'most likely to be excluded from the digital world.'",
+    "Fairness": "Proposes addressing digital health literacy as matter of health equity and fairness: 'Decision makers, health professionals, and researchers must consider and address the effects of digital determinants on population health.' Calls for strategies to reduce 'digital health divide' and improve equitable access."
+  },
+  "references": [
+    {
+      "author": "Arksey & O'Malley",
+      "year": 2010,
+      "short_title": "Scoping review methodological framework"
+    },
+    {
+      "author": "Norman & Skinner",
+      "year": 2006,
+      "short_title": "eHealth Literacy Scale (eHEALS)"
+    },
+    {
+      "author": "National Institutes of Health All of Us Research Program",
+      "year": 2023,
+      "short_title": "Digital health literacy definition"
+    },
+    {
+      "author": "Kayser et al.",
+      "year": 2018,
+      "short_title": "eHealth Literacy Questionnaire (eHLQ)"
+    },
+    {
+      "author": "van der Vaart & Drossaert",
+      "year": 2017,
+      "short_title": "Digital Health Literacy Instrument"
+    },
+    {
+      "author": "Perestelo-Perez et al.",
+      "year": 2020,
+      "short_title": "MOOCs for Digital Health Literacy Promotion"
+    },
+    {
+      "author": "Alkureishi et al.",
+      "year": 2023,
+      "short_title": "Patient perspectives on digital divide barriers"
+    },
+    {
+      "author": "Guo et al.",
+      "year": 2021,
+      "short_title": "Socioeconomic disparities in eHealth literacy and COVID-19"
+    },
+    {
+      "author": "Abdulai et al.",
+      "year": 2021,
+      "short_title": "COVID-19 digital literacy in low-income countries"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Highly relevant at intersection of digital literacy, health equity, and vulnerable populations. While not explicitly framed as social work, addresses core social work concerns: health disparities, vulnerable populations, structural inequality, and intervention development for marginalized groups.",
+    "unique_contribution": "First scoping review synthesizing digital health literacy as a 'super social determinant of health' rather than discrete factor, establishing conceptual framework and identifying significant evidence gaps in outcomes and interventions research.",
+    "limitations": "Only 24.53% of included studies measured health outcomes and 16.98% evaluated interventions; limited evidence on effectiveness of mitigation strategies; focus on English-language publications may exclude relevant non-English literature; heterogeneity in definitions and measurement instruments across studies."
+  },
+  "target_group": "Healthcare providers, public health policymakers, social workers, digital health designers, health equity researchers, vulnerable population advocates, and healthcare system administrators seeking to address digital health inequities and improve access for populations with low digital literacy."
+}

@@ -1,0 +1,87 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Publikationsdatum: Oktober 2024 im Original, aber im generierten Dokument als 'year: 2024' zu vage",
+        "Herausgeber/Organisation: Google nicht explizit als Autor/Herausgeber genannt",
+        "Conversion-Metadaten aus Original (conversion_date, converter: docling, quality_score: 90) nicht ins generierte Dokument übernommen"
+      ],
+      "missing_minor": [
+        "Umfang/Seitenzahl des Originals nicht dokumentiert",
+        "Hinweis auf 'Table of Contents' mit spezifischen Seiten nicht strukturiert erfasst",
+        "Unterschied zwischen 'NEW'-Markierten Use-Cases im Original nicht hervorgehoben"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        {
+          "type": "metadata_inaccuracy",
+          "issue": "authors: ['nicht angegeben'] - sollte 'Google' oder 'Google Workspace Team' sein, da durchgängig als Google Workspace Material identifizierbar",
+          "severity": "minor"
+        }
+      ],
+      "distortions": [
+        {
+          "type": "context_loss",
+          "issue": "Die Kernaussage über 21 vs. 9 Wörter ist korrekt zitiert, aber der Kontext 'based on what we've learned from our users so far' könnte stärker betont sein",
+          "severity": "minor"
+        },
+        {
+          "type": "scope_narrowing",
+          "issue": "Die 'Limitations' im Assessment beschreiben berechtigte kritische Punkte, aber das Original ist ein praktischer Leitfaden, keine akademische Forschungspublikation - dieser Vergleich könnte irreführend sein",
+          "severity": "moderate"
+        }
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Produktdokumentation (explizit: 'handbook'/'guide', nicht Forschungspaper)",
+        "Best_Practices",
+        "Anwenderhandbuch/Praktischer_Leitfaden",
+        "Google_Workspace_Ökosystem"
+      ],
+      "category_evidence": {
+        "AI_Literacies": "✓ Korrekt - 'Prompting is a skill we can all learn'",
+        "Generative_KI": "✓ Korrekt - durchgängig Fokus auf Generative AI Features",
+        "Prompting": "✓ Korrekt - Kernthema des gesamten Dokuments"
+      }
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "authors": "['Google Workspace Team'] oder ['Google']",
+      "year": 2024,
+      "month": "Oktober",
+      "type": "handbook/guide (statt 'report')",
+      "note_added": "Praktischer Leitfaden, keine akademische Forschungspublikation",
+      "categories_add": [
+        "Produktdokumentation",
+        "Best_Practices",
+        "Anwenderhandbuch"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Assessment-Relevanz / Domain Fit",
+        "issue": "Kritik an fehlender ethischer Reflexion ist berechtigt, aber für einen Produktleitfaden möglicherweise überzogene Erwartung",
+        "suggestion": "Differenzieren zwischen 'Forschungspublikation' und 'Praktischem Leitfaden' - unterschiedliche Standards"
+      },
+      {
+        "section": "Methodik",
+        "issue": "'Datenbasis: nicht angegeben' ist korrekt, aber könnte ergänzt werden",
+        "suggestion": "Datenbasis: nicht angegeben (Grundlage auf User-Feedback, Google-interne Best Practices und Workspace-Integration)"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "[nicht_angegeben_2024] ist ungültig",
+        "suggestion": "Entfernen oder ersetzen durch: [[Google_Workspace_Prompting_Guide_2024]]"
+      }
+    ]
+  }
+}

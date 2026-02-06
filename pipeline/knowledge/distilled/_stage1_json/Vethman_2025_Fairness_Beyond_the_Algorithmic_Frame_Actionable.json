@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach",
+    "authors": [
+      "Steven Vethman",
+      "Nina M. van Liebergen",
+      "Quirine T. S. Smit",
+      "Cor J. Veenman"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Welche konkreten und umsetzbaren Empfehlungen können AI-Expert:innen befolgen, um einen intersektionalen Ansatz für gerechtere KI-Systeme zu verankern?",
+    "methodology": "Mixed Methods: Thematische Analyse (Braun & Clarke) von 60 AI-Fairness-Papern aus ACM-Konferenzen (AIES, FAccT, FAT*) kombiniert mit gemeinschaftlicher Evaluation durch einen Workshop mit AI-Expert:innen (n=nicht spezifiziert, europäische Forschungseinrichtung).",
+    "key_finding": "Die aktuelle AI-Fairness-Forschung reduziert Intersektionalität auf einen engen technischen Rahmen (Fairness-Metriken für Subgruppen), während ein echter intersektionaler Ansatz strukturelle Ungleichheit, Machtdynamiken und marginalisierte Stimmen zentralstellen muss. Das Paper identifiziert fünf konkrete Handlungsempfehlungen für AI-Expert:innen, die über den algorithmischen Rahmen hinausgehen.",
+    "data_basis": "60 ausgewählte Fachliteraturpapiere aus ACM-Konferenzen (2019-2023); Workshop-Evaluation mit AI-Expert:innen aus einer europäischen Forschungseinrichtung; Thematische Analyse mit iterativer Kodierung (206 Codes → 17 → 5 Themenkomplexe)"
+  },
+  "arguments": [
+    "Die aktuelle AI-Fairness-Forschung nutzt Intersektionalität auf reduzierte Weise (narrow/weak interpretation) durch den Fokus auf statistische Fairness-Metriken für demographische Subgruppen, was zentrale Aspekte wie Machtrelationen, soziale Gerechtigkeit und strukturelle Ungleichheit ignoriert, die im Black Feminist-Ursprung von Intersektionalität zentral sind.",
+    "Ein authentisch intersektionaler Ansatz für AI-Fairness erfordert ein Verständnis der sozialen Kontexte, Machtdynamiken und strukturellen Ungleichheiten (socio-technical frame), nicht nur technische Optimierungen innerhalb des algorithmischen Rahmens, wie die Analyse des Beispiels von Buolamwini & Gebru zeigt.",
+    "AI-Expert:innen haben eine zentrale Verantwortung und entscheidende Position in AI-Entwicklung und -Einsatz, müssen aber über ihre traditionelle technische Ausbildung hinausgehend Fähigkeiten in interdisziplinärer Zusammenarbeit, kritischer Reflexion, Gemeinschaftsbeteiligung und kritischem Verständnis von Machtstrukturen entwickeln.",
+    "Fünf konkrete, umsetzbare Empfehlungen können AI-Expert:innen helfen, intersektionale Gerechtigkeit zu praktizieren: (1) Interdisziplinäre Zusammenarbeit, (2) Reflexion von Positionaliät, (3) echte Gemeinschaftsbeteiligung mit Co-Ownership, (4) Analyse von Machtdynamiken und sozialen Kontexten, (5) kritische Bewertung von Daten, Metriken und deren Limitationen.",
+    "Zentrale Barrieren für AI-Expert:innen sind Tech-Optimismus, Angst vor unzureichendem Wissen und der Wunsch nach perfektionistisch strukturierten Checklisten statt iterativer, adaptiver Prozesse, aber die Empfehlungen können als Kommunikationshilfen bei Stakeholdern und für bessere Projektergebnisse funktionieren."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Starker Fokus auf Bildung und Kompetenzen von AI-Expert:innen: 'This intersectional approach requires moving beyond the algorithmic frame, which is not the core of the AI expert's background, including their formal education and professional experience.' Empfehlungen zu kritischer Datenwissenschaftlicher Ausbildung werden explizit erwähnt.",
+    "KI_Sonstige": "Fokus auf ML-basierte AI-Systeme, algorithmische Entscheidungssysteme in Hochrisiko-Bereichen (Wohlfahrt, Fraud Detection, Hiring, Bail). 'we adopt this same scope for our study' auf ML-basierte AI.",
+    "Soziale_Arbeit": "Explizite Bezüge zu Sozialleistungssystemen und Wohlfahrt: Dutch childcare benefits scandal (26.000 Familien), französisches automated fraud detection in welfare allocation. Marginalisierte Communities und Wohlfahrtszugang sind zentrale Anwendungsbeispiele.",
+    "Bias_Ungleichheit": "Kernfokus auf algorithmischen Bias und strukturelle Ungleichheit: 'These cases demonstrate how Artificial Intelligence (AI), or broader automated decision-making systems, can reinforce and propagate racism, sexism, and social inequality.' Structural inequality und systemic threat werden zentral behandelt.",
+    "Diversitaet": "Intersektionale Perspektive auf marginalisierte Communities: Black women, Surinamese-descent families, immigrant backgrounds, queer communities. 'hearing diverse voices and recognizing multiple kinds of knowledge' ist ein Schlüsselelement.",
+    "Feministisch": "Explizit verankert in Black Feminist-Theorie und Praxis: 'Intersectionality, rooted in Black Feminist movements', Referenz auf Kimberlé Crenshaw, Patricia Hill Collins und Sirma Bilge, 'critical inquiry and praxis' (Examination und Action). Paper verwendet 'critical inquiry and practice towards social justice' als Rahmen. Feminist participatory design (Suresh et al.) wird als Best Practice zitiert.",
+    "Fairness": "Zentrale Diskussion von AI Fairness-Forschung, Fairness-Metriken und deren Limitationen: 'group fairness', 'intersectional (subgroup) fairness', 'fairness metrics', 'Equalized Odds, Demographic Parity' werden diskutiert als narrow interpretation."
+  },
+  "references": [
+    {
+      "author": "Crenshaw, Kimberlé",
+      "year": 1989,
+      "short_title": "Demarginalizing the Intersection of Race and Sex"
+    },
+    {
+      "author": "Collins, Patricia Hill & Bilge, Sirma",
+      "year": 2020,
+      "short_title": "Intersectionality"
+    },
+    {
+      "author": "Buolamwini, Joy & Gebru, Timnit",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+    },
+    {
+      "author": "Kong, Qingqing",
+      "year": 2022,
+      "short_title": "Intersectionality in AI Fairness (kritische Analyse)"
+    },
+    {
+      "author": "D'Ignazio, Catherine & Klein, Lauren F.",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Suresh, Harini et al.",
+      "year": 2022,
+      "short_title": "Towards Intersectional Feminist and Participatory ML: A Case Study in Supporting Feminicide Counterdata Collection"
+    },
+    {
+      "author": "Selbst, Andrew D. et al.",
+      "year": 2019,
+      "short_title": "Fairness and Abstraction in Sociotechnical Systems"
+    },
+    {
+      "author": "Young, Iris Marion",
+      "year": 2011,
+      "short_title": "Responsibility for Justice"
+    },
+    {
+      "author": "Raji, Inioluwa Deborah et al.",
+      "year": 2020,
+      "short_title": "Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing"
+    },
+    {
+      "author": "Bender, Emily M. et al.",
+      "year": 2021,
+      "short_title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle AI/Soziale Arbeit/Gender Studies. Das Paper adressiert direkt, wie KI-Systeme marginalisierte Gruppen (einschließlich sozialer Dienstleistungsempfänger) schädigen und bietet konkrete Empfehlungen für eine gerechtere Praxis, die über technische Lösungen hinausgeht.",
+    "unique_contribution": "Das Paper leistet eine kritische Differenzierung zwischen 'narrow' technischer und 'broad' intersektionaler Fairness-Interpretation und übersetzt Black Feminist-Theorie in konkrete, umsetzbare Handlungsempfehlungen speziell für AI-Expert:innen, die durch Community-Engagement evaluiert wurden.",
+    "limitations": "Die Evaluation basiert auf selbstselegierten, motivierten, europäischen (niederländischen) AI-Expert:innen aus einer Forschungseinrichtung; Unterrepräsentation von aktivistischen Stimmen außerhalb der Akademia; Paper-Analyse begrenzt auf zwei Konferenzen (AIES, FAccT), nicht auf kritische Rechtswissenschaften oder Politikwissenschaften."
+  },
+  "target_group": "Primär: AI-Entwickler, Data Scientists, ML-Forscher:innen und AI-Expert:innen, die ihre Praxis gerechter gestalten wollen. Sekundär: Interdisziplinäre Teams (Ethiker:innen, Sozialwissenschaftler:innen, Aktivist:innen), Policy-Maker im Bereich AI-Governance, Sozialarbeiter:innen die mit AI-Systemen interagieren, Lehrende in kritischer Datenwissenschaft und AI-Ethics."
+}

@@ -1,0 +1,49 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Study 2 Ergebnisse für ChatGPT 4.0 nicht vollständig dargestellt (nur Vergleich zu 3.5)",
+        "Spezifische Effektgrößen (η²-Werte) in Study 3 Results nicht erwähnt",
+        "Detaillierte Beschreibung der vier Prompt-Strategien unvollständig (nur Stichpunkte, keine genauen Formulierungen)"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Kleine semantische Vereinfachung: 'Zukunfts-Szenarien' ist deutsche Paraphrase für 'future-oriented scenarios', passt aber inhaltlich"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "KI_Ethics / Ethik wäre ergänzend sinnvoll (nicht primär, aber zentral für die Implikationen)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "section": "Methodik - Datenbasis",
+        "issue": "Study 2 Stichprobengröße unklar formuliert - sollte präzisiert werden",
+        "suggestion": "Spezifizieren: '20 Länder × 13 Aufgaben × 10 Wiederholungen pro Bedingung (Simulation + Interaktion) = mindestens 5.200 Datenpunkte'"
+      },
+      {
+        "section": "Hauptargumente - Punkt 2",
+        "issue": "Korrelationswerte könnten präzisiert werden",
+        "suggestion": "Spezifische Aufgaben nennen: 'Dictator Task r=0.81, Public Good Game r=0.77'"
+      },
+      {
+        "section": "Kategorie KI_Sonstige",
+        "issue": "RSA-Erklärung sehr kurz",
+        "suggestion": "Ergänzen: 'RSA wurde verwendet um hochdimensionale Muster von Kulturwerten über multiple Dimensionen hinweg zu analysieren und ChatGPT mit realen Populationsdaten zu vergleichen'"
+      }
+    ]
+  }
+}

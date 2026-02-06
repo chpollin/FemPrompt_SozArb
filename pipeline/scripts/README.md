@@ -1,98 +1,72 @@
 # Pipeline Scripts
 
-Scripts für die Verarbeitungspipeline: PDF → Markdown → Summary → Vault
-
-**Stand:** 2026-02-03 | 232/234 PDFs konvertiert (99.1%)
-
-## Übersicht
-
-| Script | Funktion | Status | Input | Output |
-|--------|----------|--------|-------|--------|
-| `download_zotero_pdfs.py` | PDFs von Zotero herunterladen | ✅ | Zotero API | `pdfs/*.pdf` |
-| `convert_to_markdown.py` | PDFs zu Markdown (Docling) | ✅ | `pdfs/*.pdf` | `markdown/*.md` |
-| `validate_markdown.py` | Artefakt-Erkennung | ✅ | `markdown/*.md` | JSON/CSV Report |
-| `summarize_documents.py` | LLM-Zusammenfassung | ⏳ | `markdown/*.md` | `summaries/*.md` |
-| `generate_vault.py` | Obsidian Vault generieren | ⏳ | `summaries/*.md` | `vault/` |
-| `acquire_pdfs.py` | Alternative PDF-Akquise | Legacy | CSV | `pdfs/*.pdf` |
-| `utils.py` | Hilfsfunktionen | ✅ | - | - |
+Scripts fuer die Verarbeitungspipeline: PDF → Markdown → Knowledge → Vault
 
 ## Workflow
 
 ```
-1. download_zotero_pdfs.py   # PDFs von Zotero holen
-         ↓
-2. convert_to_markdown.py    # PDF → Markdown (mit Docling)
-         ↓
-3. validate_markdown.py      # Qualitätsprüfung
-         ↓
-4. summarize_documents.py    # LLM-Zusammenfassung
-         ↓
-5. generate_vault.py         # Obsidian Vault erstellen
+1. download_zotero_pdfs.py      # PDFs von Zotero holen
+         |
+2. convert_to_markdown.py       # PDF → Markdown (mit Docling)
+         |
+3. validate_markdown_enhanced.py # Multi-Layer Validierung
+         |
+4. postprocess_markdown.py      # Artefakt-Bereinigung
+         |
+5. distill_knowledge.py         # Knowledge Distillation (3-Stage)
+         |
+6. generate_vault.py            # Obsidian Vault erstellen
 ```
+
+## Scripts
+
+| Script | Funktion | Status |
+|--------|----------|--------|
+| `download_zotero_pdfs.py` | PDFs von Zotero herunterladen | Fertig |
+| `convert_to_markdown.py` | PDFs zu Markdown (Docling) | Fertig |
+| `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | Fertig |
+| `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | Fertig |
+| `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Fertig (249 Docs) |
+| `generate_vault.py` | Obsidian Vault generieren | Ausstehend |
+| `validate_knowledge_docs.py` | Knowledge-Dokumente verifizieren | Fertig |
+| `utils.py` | Hilfsfunktionen (Logging, API, Config) | Aktiv |
 
 ## Verwendung
 
-### Alle PDFs von Zotero herunterladen
+Alle Scripts haben `--help` fuer Parameter-Dokumentation.
 
 ```bash
-python pipeline/scripts/download_zotero_pdfs.py \
-  --output pipeline/pdfs/
-```
+# PDFs von Zotero herunterladen
+python pipeline/scripts/download_zotero_pdfs.py --output pipeline/pdfs/
 
-Benötigt: `ZOTERO_API_KEY` und `ZOTERO_LIBRARY_ID` in `.env`
+# Markdown konvertieren
+python pipeline/scripts/convert_to_markdown.py --input pipeline/pdfs/ --output pipeline/markdown/
 
-### Markdown konvertieren
+# Validierung
+python pipeline/scripts/validate_markdown_enhanced.py --md-dir pipeline/markdown --pdf-dir pipeline/pdfs
 
-```bash
-# Alle PDFs konvertieren
-python pipeline/scripts/convert_to_markdown.py \
-  --input pipeline/pdfs/ \
-  --output pipeline/markdown/ \
-  --report pipeline/conversion_report.json
+# Post-Processing
+python pipeline/scripts/postprocess_markdown.py --input-dir pipeline/markdown --output-dir pipeline/markdown_clean
 
-# Mit Optionen
-python pipeline/scripts/convert_to_markdown.py \
-  --input pipeline/pdfs/ \
-  --output pipeline/markdown/ \
-  --skip-existing \              # Bereits konvertierte überspringen
-  --limit 10 \                   # Nur erste 10 (für Tests)
-  --min-quality 80               # Mindest-Qualitätsscore
-```
+# Knowledge Distillation
+python pipeline/scripts/distill_knowledge.py --input pipeline/markdown --output pipeline/knowledge/distilled
 
-### Qualität validieren
-
-```bash
-# Artefakt-Prüfung (GLYPH, Unicode-Fehler, Text-Ratio)
-python pipeline/scripts/validate_markdown.py \
-  --input-dir pipeline/markdown/ \
-  --output-json pipeline/validation_report.json \
-  --output-csv pipeline/validation_report.csv
-```
-
-### Dokumente zusammenfassen
-
-```bash
-python pipeline/scripts/summarize_documents.py \
-  --input pipeline/markdown/ \
-  --output pipeline/summaries/
-```
-
-Benötigt: `ANTHROPIC_API_KEY` in `.env`
-
-### Vault generieren
-
-```bash
-python pipeline/scripts/generate_vault.py \
-  --input pipeline/summaries/ \
-  --output vault/
+# Vault generieren
+python pipeline/scripts/generate_vault.py --input pipeline/knowledge/distilled --output vault/
 ```
 
 ## Konfiguration
 
-Alle Scripts lesen Credentials aus `.env`:
+Credentials in `.env`:
 
 ```
-ANTHROPIC_API_KEY=...     # Für LLM-Summarisierung
-ZOTERO_API_KEY=...        # Für Zotero-Download
+ANTHROPIC_API_KEY=...     # Fuer Knowledge Distillation
+ZOTERO_API_KEY=...        # Fuer Zotero-Download
 ZOTERO_LIBRARY_ID=...     # Zotero Group ID
 ```
+
+Defaults in `config/defaults.yaml`.
+
+---
+
+*Version: 2.0 (2026-02-06)*

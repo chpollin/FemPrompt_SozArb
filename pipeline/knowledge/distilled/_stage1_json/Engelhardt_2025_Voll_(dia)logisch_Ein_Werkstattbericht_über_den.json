@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit. Curriculare Überlegungen und veränderte Akteurskonstellationen",
+    "authors": [
+      "Emily Engelhardt",
+      "Thomas Ley"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Welche Potenziale und Herausforderungen entstehen durch den Einsatz generativer KI in der Hochschulbildung für Soziale Arbeit, und wie verändern sich die Rollen von Lehrenden und Lernenden?",
+    "methodology": "Theoretisch; Werkstattbericht mit praktischen Szenarien und konzeptionellen Überlegungen basierend auf Fachliteratur und Praxiserfahrungen",
+    "key_finding": "Generative KI sollte nicht nur als Werkzeug, sondern als kooperativer nicht-menschlicher Akteur verstanden werden, der transformativ in Hochschulbildung einschreitet und neue curriculare sowie didaktische Anforderungen schafft.",
+    "data_basis": "Keine empirische Datenerhebung; basiert auf Literaturanalyse, konzeptionellen Überlegungen und drei idealtypischen Anwendungsszenarien"
+  },
+  "arguments": [
+    "Generative KI-Systeme wie ChatGPT bieten Potenziale zur Bereicherung und Diversifizierung von Lehr-/Lernprozessen, erfordern aber eine ausgewogene Nutzung, die akademische Redlichkeit sicherstellt und kritische Denk- und Analysefähigkeit fördert.",
+    "Die Rolle der KI in der Hochschulbildung sollte über eine verkürzte Chancen-Risiken-Diskussion hinausgehen und als transformative Funktion verstanden werden, wobei KI-Tools als kooperative Agenten und nicht-menschliche Akteure fungieren, die sich in die Hochschulbildung einschreiben.",
+    "Prompting-Kompetenz stellt eine metakognitive Grundfähigkeit dar, die Studierende erwerben müssen, um KI-Systeme effektiv zu steuern und eigene Recherche- und Arbeitsprozesse selbstreflexiv zu gestalten.",
+    "Für die Hochschulbildung Sozialer Arbeit ergeben sich curriculare Konsequenzen in drei Bereichen: Data Literacy in fachwissenschaftlichen Grundlagen, neue didaktische Methoden für die Vermittlung von Beratungskompetenzen, und kritische Reflexion der ethischen, sozialen und diskriminierenden Potenziale von KI."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": false,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Prompting-Kompetenz als 'metakognitive Fähigkeit' und 'grundlegende Fähigkeit' wird als zentral für Studierende erachtet. Darüber hinaus wird 'Data Literacy' als grundlegende Informations- und Datenkompetenz für das Studium der Sozialen Arbeit gefordert.",
+    "Generative_KI": "Der gesamte Artikel konzentriert sich auf Large Language Models wie ChatGPT und GPT-4o. Es werden drei konkrete Anwendungsszenarien mit generativer KI beschrieben: akademische Schreibassistenz, methodischer Übungspartner und Chatbots als Produktivumgebung.",
+    "Prompting": "Ein ganzer Abschnitt (Kapitel 3) ist dem Prompting gewidmet: 'Prompting-Kompetenz kann man demnach als eine metakognitive Fähigkeit beschreiben, die sich auf die effektive Formulierung von Fragen und Anweisungen bezieht.' Chain-of-Thought-Prompting wird als nützliche Vorgehensweise erläutert.",
+    "Soziale_Arbeit": "Der gesamte Artikel behandelt explizit die Hochschulbildung für Soziale Arbeit. Es werden Szenarien zur Beratungsausbildung, zur Einübung von Beratungstechniken und zur Entwicklung von Chatbots für Hilfearrangements in der Sozialen Arbeit diskutiert.",
+    "Bias_Ungleichheit": "Der Artikel thematisiert 'systematische Verzerrung und der Reproduktion von Vorurteilen (sog. bias)', die 'Auswahl der Trainingsdaten kann zu einer systematischen Verzerrung und der Reproduktion von Vorurteilen (sog. bias) führen' und fordert, dass 'das normierende und diskriminierende Potenzial, das zur datengetriebenen Reproduktion und Verschärfung sozialer Ungleichheit führen kann, hervorgehoben werden' müsse.",
+    "Diversitaet": "Die Autoren fordern 'die heterogenen Vorausetzungen und Zugänge Lernender (und Lehrender) didaktisch zu beachten' und weisen auf Fragen digitaler Teilhabe hin. Sie betonen, dass unterschiedliche Hilfesettings und -arrangements in den Blick genommen werden können.",
+    "Fairness": "Der Artikel behandelt ethische Fragen der KI-Nutzung, einschließlich 'ethischen Umgang mit KI-generierten Daten' und fordert eine 'wertebasierte Diskussion' sowie die Berücksichtigung 'ethischer Aspekte der Bot-Nutzung'."
+  },
+  "references": [
+    {
+      "author": "Rammert, Werner",
+      "year": 2007,
+      "short_title": "Technik - Handeln - Wissen. Zu einer pragmatistischen Technik- und Sozialtheorie"
+    },
+    {
+      "author": "Linnemann, Gesa / Löhe, Julian / Rottkemper, Beate",
+      "year": 2024,
+      "short_title": "Bedeutung von Selbstoffenbarungseffekten in quasisozialen Beziehungen mit auf generativer KI basierten Systemen"
+    },
+    {
+      "author": "Ley, Thomas / Seelmeyer, Udo",
+      "year": 2020,
+      "short_title": "Digitale Technologien als Informationsinfrastrukturen"
+    },
+    {
+      "author": "Weßels, Doris",
+      "year": 2022,
+      "short_title": "ChatGPT - ein Meilenstein der KI-Entwicklung"
+    },
+    {
+      "author": "Reinmann, Gabi / Watanabe, Alice",
+      "year": 2024,
+      "short_title": "KI in der universitären Lehre: Vom Spannungs- zum Gestaltungsfeld"
+    },
+    {
+      "author": "Witter, Stefanie et al.",
+      "year": 2024,
+      "short_title": "ChatGPT im Studium der Sozialen Arbeit. Eine quantitative Studie zur Nutzung, Bewertung und Thematisierung"
+    },
+    {
+      "author": "Schreiber, Gerhard / Ohly, Lukas",
+      "year": 2024,
+      "short_title": "KI:Text. Diskurse über KI-Textgeneratoren"
+    },
+    {
+      "author": "Engelhardt, Emily",
+      "year": 2024,
+      "short_title": "Einsatz generativer KI in der Beratungsausbildung: Lehrmethoden und Praxisbeispiele"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat hohe Relevanz für die Schnittstelle KI und Soziale Arbeit durch konkrete Szenarien für Hochschulbildung, didaktische Ansätze und die Betonung ethischer sowie sozialer Implikationen von KI in einem sozialen Handlungsfeld.",
+    "unique_contribution": "Der Beitrag bietet eine über Chancen-Risiken-Debatten hinausgehende konzeptionelle Rahmung, die generative KI als kooperativen nicht-menschlichen Akteur theoretisiert und konkrete, implementierbare Szenarien für die Hochschulbildung Sozialer Arbeit entwickelt.",
+    "limitations": "Der Artikel basiert nicht auf empirischen Daten, sondern auf theoretischen Überlegungen und idealtypischen Szenarien; fachwissenschaftliche Fragen zur Nutzung von KI in der beruflichen Praxis der Sozialen Arbeit werden explizit ausgeblendet."
+  },
+  "target_group": "Hochschullehrende in Sozialer Arbeit, Curriculumentwickler, Studierende der Sozialen Arbeit, Bildungsforscher, Policymaker in Hochschulbildung, sowie Fachvertreter der Sozialen Arbeit, die sich mit Digitalisierung auseinandersetzen"
+}

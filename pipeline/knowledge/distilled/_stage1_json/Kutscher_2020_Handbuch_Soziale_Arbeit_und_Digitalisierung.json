@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "title": "Handbuch Soziale Arbeit und Digitalisierung",
+    "authors": [
+      "Nadia Kutscher",
+      "Thomas Ley",
+      "Udo Seelmeyer",
+      "Friederike Siller",
+      "Angela Tillmann",
+      "Isabel Zorn"
+    ],
+    "year": 2020,
+    "type": "book",
+    "language": "de"
+  },
+  "core": {
+    "research_question": "Wie können Fachkräfte der Sozialen Arbeit professionell mit Digitalisierung und Mediatisierung umgehen und welche Kompetenzen benötigen sie dafür?",
+    "methodology": "Theoretisch/Review: Handbuch mit systematischer Auswahl von Beiträgen aus verschiedenen disziplinären Perspektiven, gesellschaftlichen Diskursen, Handlungsfeldern und Forschungsansätzen zur Digitalisierung in der Sozialen Arbeit.",
+    "key_finding": "Ein sechsdimensionales Modell der Medienpädagogischen Kompetenz für Sozialarbeiter*innen wird entwickelt, das Orientierungswissen, handlungsfeldspezifisches Wissen, eigene Medienkompetenz, analytisches Handlungswissen, Gestaltungskompetenzen und organisationales Handlungswissen umfasst.",
+    "data_basis": "Nicht empirisch: Theoretisches Handbuch mit 50+ Beiträgen von Expert*innen aus Wissenschaft und Praxis."
+  },
+  "arguments": [
+    "Digitalisierung Sozialer Arbeit ist kein neues Phänomen, zeigt aber qualitative Veränderungen, die neue theoretische und empirische Einordnungen erfordern. Der Diskurs selbst erzeugt Handlungsdruck, der kritisch hinterfragt werden muss.",
+    "Medienpädagogische Kompetenz ist zentral für professionelle Soziale Arbeit in mediatisierten Gesellschaften und muss explizit in Studium und Weiterbildung verankert werden, um Adressat*innen in ihrer Handlungsfähigkeit und Partizipation zu unterstützen.",
+    "Digitalisierung reproduziert soziale Ungleichheiten und schafft neue Formen von Digital Divides; Sozialarbeiter*innen müssen diese kritisch erkennen und bekämpfen, während sie gleichzeitig digitale Medien als Ressourcen für Teilhabe und Empowerment nutzen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Entwicklung eines sechsdimensionalen Modells der Medienpädagogischen Kompetenz, das Orientierungswissen über technologische Entwicklungen, eigene Medienkompetenz, Fähigkeiten zur Förderung von Medienkompetenz bei Adressat*innen und organisationales Handlungswissen umfasst.",
+    "KI_Sonstige": "Behandlung von digitalen Technologien, Algorithmen, Big Data Analytics, Assistiven Technologien, Sozialen Robotern, digitaler Dokumentation und Risikodiagnostik in der Sozialen Arbeit.",
+    "Soziale_Arbeit": "Gesamter Fokus auf Digitalisierung in der Sozialen Arbeit, mit Kapiteln zu allen Handlungsfeldern (Jugendhilfe, Altenhilfe, Behindertenhilfe, Suchtberatung, Obdachlosenhilfe, Arbeit mit Geflüchteten) und Professionalisierung.",
+    "Bias_Ungleichheit": "Kapitel zu digitalen Ungleichheiten (Iske & Kutscher): 'Digitale Ungleichheiten im Kontext Sozialer Arbeit' thematisiert Digital Divide und Reproduktion sozialer Ungleichheit durch Medienhandeln. 'Datafizierung und Algorithmisierung' behandelt strukturelle Auswirkungen.",
+    "Diversitaet": "Mehrfache Bezüge zur Förderung medialer Teilhabe, Handlungsfähigkeit und Partizipation von verschiedenen Gruppen (Kindern, Jugendlichen, älteren Menschen, Menschen mit Behinderungen, Geflüchteten, Wohnungslosen); Kapitel zur Inklusion und Medienbildung.",
+    "Fairness": "Behandlung ethischer Fragen der Sozialen Arbeit im Kontext von Digitalisierung, informationeller Selbstbestimmung, Datenschutz sowie faire Nutzung digitaler Technologien im Dienste der Adressat*innen."
+  },
+  "references": [
+    {
+      "author": "Baacke, Dieter",
+      "year": 1996,
+      "short_title": "Medienkompetenz als Schlüsselbegriff"
+    },
+    {
+      "author": "Blömeke, Sigrid",
+      "year": 2000,
+      "short_title": "Medienpädagogische Kompetenz: Theoretische und empirische Fundierung"
+    },
+    {
+      "author": "Deutscher Berufsverband für Soziale Arbeit (DBSH)",
+      "year": 2016,
+      "short_title": "Deutschsprachige Definition Sozialer Arbeit"
+    },
+    {
+      "author": "Deutscher Bundestag",
+      "year": 2017,
+      "short_title": "15. Kinder- und Jugendbericht"
+    },
+    {
+      "author": "Buckingham, David",
+      "year": 2003,
+      "short_title": "Media Education: Literacy, Learning and Contemporary Culture"
+    },
+    {
+      "author": "Habermas, Jürgen",
+      "year": 1971,
+      "short_title": "Theorie der kommunikativen Kompetenz"
+    },
+    {
+      "author": "Helbig, Christian",
+      "year": 2014,
+      "short_title": "Medienpädagogik in der Sozialen Arbeit"
+    },
+    {
+      "author": "Bosse, Ingo / Schluchter, Jan-René / Zorn, Isabel",
+      "year": 2019,
+      "short_title": "Handbuch Inklusion und Medienbildung"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle Digitalisierung/Soziale Arbeit. Das Handbuch bietet umfassende Perspektiven auf Mediatisierung, digitale Ungleichheiten und Professionalisierung. KI wird als Teilaspekt der Digitalisierung behandelt (Algorithmen, Roboter, Predictive Analytics), nicht als Kernfokus.",
+    "unique_contribution": "Systematische Integration eines sechsdimensionalen Modells medienpädagogischer Kompetenz speziell für Sozialarbeiter*innen, das gesellschaftliche Wandlungsprozesse, Lebenswelten von Adressat*innen und organisationale Rahmenbedingungen verbindet.",
+    "limitations": "Kein empirischer Forschungsteil; Fokus liegt auf theoretischer und konzeptioneller Grundlegung. Begrenzte explizite Behandlung von Generative KI oder aktuellen KI-Technologien. Gender ist als eigenständiger Analysefokus nicht prominent (trotz Gendering durch Verwendung von Asterisk und intersektionaler Perspektivierung)."
+  },
+  "target_group": "Sozialarbeiter*innen, Fachkräfte in sozialen Organisationen, Studium und Weiterbildung in Sozialer Arbeit, Organisationsleitungen, Policymaker im Bereich Soziale Dienste, Medienpädagog*innen, Fachwissenschaftler*innen der Digitalisierung und Sozialen Arbeit."
+}

@@ -16,16 +16,7 @@
 
 ## Pipeline-Schritte
 
-### 1. Komplette Pipeline (automatisiert)
-
-Das Script `run_pipeline.py` fuehrt alle Stages sequenziell aus:
-1. PDF-Akquise (Zotero + APIs)
-2. PDF→Markdown (Docling)
-3. AI-Summarisierung (Claude Haiku 4.5)
-4. Knowledge Graph (Obsidian Vault)
-5. Qualitaets-Validierung
-
-### 2. LLM-basiertes PRISMA-Assessment
+### 1. LLM-basiertes PRISMA-Assessment
 
 Das Script `assessment-llm/assess_papers.py` bewertet Papers automatisch.
 
@@ -36,18 +27,15 @@ Das Script `assessment-llm/assess_papers.py` bewertet Papers automatisch.
 
 Performance: ~325 Papers in 24 min, $0.58, 100% Erfolgsrate
 
-### 3. PDF-Akquise
+### 2. PDF-Akquise
 
-Das Script `analysis/getPDF_intelligent.py` laedt PDFs mit 8 Fallback-Strategien:
-- Zotero Attachments
-- DOI via CrossRef
-- ArXiv, Unpaywall, Semantic Scholar, BASE
-- Publisher-Parser
-- URL-Suche
+Das Script `pipeline/scripts/download_zotero_pdfs.py` laedt PDFs von Zotero:
 
-**Aufruf:** `python analysis/getPDF_intelligent.py --input assessment.xlsx --output analysis/pdfs/ --filter-decision Include`
+**Aufruf:** `python pipeline/scripts/download_zotero_pdfs.py --output pipeline/pdfs/`
 
-### 4. Einzelne Stages ausfuehren
+**Ergebnis:** 257/326 PDFs heruntergeladen (78.8%)
+
+### 3. Einzelne Stages ausfuehren
 
 Alle Pipeline-Scripts befinden sich in `pipeline/scripts/`:
 
@@ -55,10 +43,10 @@ Alle Pipeline-Scripts befinden sich in `pipeline/scripts/`:
 |-------|--------|-------------------|
 | 1 | `download_zotero_pdfs.py` | `--output pipeline/pdfs/` |
 | 2 | `convert_to_markdown.py` | `--input pipeline/pdfs/ --output pipeline/markdown/` |
-| 2b | `validate_markdown_enhanced.py` | `--md-dir pipeline/markdown --pdf-dir pipeline/pdfs --output-dir pipeline/validation_reports` |
-| 3 | `summarize_documents.py` | `--input pipeline/markdown/ --output pipeline/summaries/` |
-| 4 | `generate_vault.py` | `--input pipeline/summaries/ --output vault/` |
-| 5 | `test_vault_quality.py` | `--vault-dir vault/` |
+| 2b | `validate_markdown_enhanced.py` | `--md-dir pipeline/markdown --pdf-dir pipeline/pdfs` |
+| 3 | `postprocess_markdown.py` | `--input-dir pipeline/markdown --output-dir pipeline/markdown_clean` |
+| 4 | `distill_knowledge.py` | `--input pipeline/markdown --output pipeline/knowledge/distilled` |
+| 5 | `generate_vault.py` | `--input pipeline/knowledge/distilled --output vault/` |
 
 Vollstaendige Parameter via `--help`.
 
@@ -111,4 +99,4 @@ Fuer ~200 Include-Papers:
 
 ---
 
-*Version: 5.0 (2026-02-03)*
+*Aktualisiert: 2026-02-06*

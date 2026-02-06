@@ -1,0 +1,69 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Die englische Übersetzung des Abstracts und des Titels aus dem Original nicht erwähnt",
+        "Veröffentlichungsdatum (Online: 22. Juni 2023) nicht im Frontmatter",
+        "Journal/Publikationsorgan nicht identifiziert",
+        "Quality Score (95) aus Originalmetadaten nicht übernommen",
+        "DOI oder Publikationsdetails fehlen"
+      ]
+    },
+    "correctness": {
+      "score": 96,
+      "errors": [],
+      "distortions": [
+        "Methodologie wird als 'Theoretisch-konzeptionell' charakterisiert, aber das Original betont stärker, dass es sich um einen Forumsbeitrag ('FORUM') mit diskursiven Elementen handelt, nicht um eine Primärforschungsarbeit"
+      ]
+    },
+    "category_validation": {
+      "score": 94,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik_KI - das Paper widmet sich intensiv ethischen Fragen (Menschenrechte, Transparenz, Datenschutz)",
+        "Transparenz_Explainability - explizite Behandlung von Explainable AI und Blackbox-Problematik",
+        "Datenschutz - wiederkehrende Thematisierung von Datenschutz und -sicherheit",
+        "Arbeitsfelder_Spezifik - könnte als Kategorie hinzugefügt werden für Kinder-/Jugendhilfe und Altenhilfe"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "add_fields": [
+        "published_date: 2023-06-22",
+        "submitted_date: 2022-07-26",
+        "accepted_date: 2023-05-10",
+        "quality_score: 95",
+        "article_type: Forum",
+        "language_variants: [de, en]"
+      ],
+      "update_categories": [
+        "entfernen: KI_Sonstige (zu unspezifisch)",
+        "hinzufügen: Ethik_KI",
+        "hinzufügen: Transparenz_Explainability",
+        "hinzufügen: Datenschutz_Sicherheit"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Charakterisierung als 'Primärforschung' zu stark",
+        "fix": "Ergänzen: 'Artikel-Typ: Konzeptioneller Forumsbeitrag mit diskursiver Analyse von Praxisprojekten, keine empirische Primärforschung'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Ethische Dimension unterrepräsentiert",
+        "fix": "Ergänzen Sie einen vierten Hauptpunkt: 'Ethische und transparente Implementierung ist zentral: Diskriminierungsverbot, Datenhoheit, explizite Transparenz über Algorithmusnutzung und Widerspruchsmöglichkeiten müssen gewährleistet sein, um das Tripelmandat zu wahren.'"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Gender-Bias-Analyse als 'oberflächlich' charakterisiert, aber das ist eine Bewertung, keine Faktenbeschreibung",
+        "fix": "Umformulieren zu: 'Die Analyse von Gender-Bias in GPT-3 wird erwähnt (Lucy & Bamman 2021) und als Problem der Reproduktion von Stereotypen diskutiert, aber nicht grundlegend mittels feministischer Theorien problematisiert'"
+      }
+    ]
+  }
+}

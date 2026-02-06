@@ -133,4 +133,4 @@ Der Delay kann via `--delay` Parameter angepasst werden (empfohlen: 5 bei Rate-L
 
 ---
 
-*Version: 3.0 (2026-02-03)*
+*Aktualisiert: 2026-02-06*

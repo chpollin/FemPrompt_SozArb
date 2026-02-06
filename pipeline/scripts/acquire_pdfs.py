@@ -49,7 +49,7 @@ class PDFAcquisitionPipeline:
     """Intelligent PDF acquisition with Zotero integration and fallback strategies"""
 
     def __init__(self,
-                 output_dir: str = "analysis/pdfs",
+                 output_dir: str = "pipeline/pdfs",
                  zotero_storage: str = None,
                  api_key: str = None,
                  library_id: str = None,
@@ -639,9 +639,9 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description='Intelligent PDF Acquisition with Zotero Integration')
-    parser.add_argument('--input', '-i', default='analysis/zotero_vereinfacht.json',
+    parser.add_argument('--input', '-i', default='corpus/zotero_export.json',
                        help='Input JSON or Excel file (supports .json, .xlsx)')
-    parser.add_argument('--output', '-o', default='analysis/pdfs',
+    parser.add_argument('--output', '-o', default='pipeline/pdfs',
                        help='Output directory for PDFs')
     parser.add_argument('--filter-decision', choices=['Include', 'Exclude', 'Unclear'],
                        help='Filter papers by PRISMA decision (for Excel input)')

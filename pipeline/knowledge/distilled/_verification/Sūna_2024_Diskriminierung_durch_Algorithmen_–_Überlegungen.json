@@ -1,0 +1,85 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Konkrete Handlungsempfehlungen für Medienpädagog:innen könnten detaillierter zusammengefasst sein",
+        "Spezifische Zahlen/Statistiken zu Diskriminierungsfällen fehlen",
+        "Unterscheidung zwischen direkter und indirekter Diskriminierung wird erwähnt, aber nicht in Kernbefunden betont"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        {
+          "location": "Kernbefund",
+          "issue": "Formulierung 'Kompetenzdefizit und digitale Resignation' ist leicht verallgemeinernd - Text differenziert zwischen Gruppen (Jugendliche sensibilisierter als ältere)",
+          "severity": "minor",
+          "impact": "Keine faktische Falschheit, aber vereinfachende Darstellung"
+        }
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik (primärer thematischer Schwerpunkt: 'ethische Fragen im Zusammenhang mit KI')",
+        "Transparenz (explizit behandelt: 'fehlende Erklärbarkeit von KI-Systemen', 'Intransparenz')",
+        "Partizipation/Teilhabe (zentraler Begriff: 'gesellschaftlicher Teilhabe')"
+      ]
+    }
+  },
+  "overall_confidence": 94,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "add_categories": [
+        "Ethik",
+        "Transparenz",
+        "Partizipation"
+      ],
+      "clarification": "Die Kategorien sind sachlich korrekt gewählt, aber zu restriktiv. Der Text hat starke normativ-ethische und partizipative Dimensionen."
+    },
+    "content_fixes": [
+      {
+        "location": "Kernbefund",
+        "original": "Es besteht ein erhebliches Kompetenzdefizit und eine 'digitale Resignation' bei betroffenen Gruppen.",
+        "suggested": "Es besteht ein erhebliches Kompetenzdefizit und eine 'digitale Resignation' insbesondere bei älteren und bildungsfernen Gruppen, während Jugendliche tendenziell sensibilisierter sind.",
+        "rationale": "Text differenziert nach Altersgruppen - Kernbefund sollte diese Nuance bewahren"
+      },
+      {
+        "location": "Datenbasis",
+        "original": "Qualitative Studie: 25 Personen mit Migrationsgeschichte in 5 Fokusgruppen",
+        "suggested": "Qualitative Studie (Sūna/Hoffmann 2024): 25 Personen mit Migrationsgeschichte in 5 Fokusgruppen; ergänzt durch Metaanalyse von Studien (MeMo:Ki 2021, Schober et al. 2022, Bozdag 2022)",
+        "rationale": "Präzisere Quellenangabe und Klarheit über Komplementarität der Datenquellen"
+      },
+      {
+        "location": "Hauptargumente",
+        "issue": "Drittes Argument könnte präziser sein",
+        "suggested": "Medienmediopädagogische Arbeit muss auf drei komplementären Ebenen stattfinden (informieren, sensibilisieren, ermächtigen) und erfordert Unterstützung durch regulatorische Anpassungen des AGG und den Aufbau von Beratungsstrukturen sowie Austauschforen, um vulnerable Gruppen nicht allein mit der Verantwortung zu belasten.",
+        "rationale": "Text betont Ineinandergreifen von Ansätzen - sollte deutlicher sein"
+      }
+    ]
+  },
+  "metadata_validation": {
+    "source_consistency": "✓ Konsistent mit Original (Sūna_2024_Diskriminierung_durch_Algorithmen)",
+    "author_accuracy": "✓ Korrekt (Laura Sūna, Dagmar Hoffmann, Anne Mollen)",
+    "publication_context": "✓ Korrekt als Teil von 'Schriften zur Medienpädagogik 60', kopaed 2024",
+    "date_discrepancy": "⚠ Conversion-Datum im Original 2026-02-03, verarbeitungsangabe im Dokument 2026-02-05 - marginal"
+  },
+  "quality_notes": {
+    "strengths": [
+      "Exzellente Erfassung der komplexen Diskriminierungsmechanismen",
+      "Korrekte Abbildung des dreidimensionalen Kompetenzmodells",
+      "Präzise Zitierweise und Quellenbelege",
+      "Gute Kontextualisierung für Soziale Arbeit"
+    ],
+    "minor_improvements": [
+      "Zusätzliche Kategorien würden Vielfalt besser abbilden",
+      "Mehr Raum für konkrete Interventionsbeispiele könnte gegeben werden",
+      "Intersektionalität wird kurz erwähnt, könnte stärker in Kernbefunden auftauchen"
+    ]
+  }
+}

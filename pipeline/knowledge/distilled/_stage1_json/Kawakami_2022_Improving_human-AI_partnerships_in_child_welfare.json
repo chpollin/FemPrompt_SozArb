@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support",
+    "authors": [
+      "Anna Kawakami",
+      "Venkatesh Sivaraman",
+      "Hao-Fei Cheng",
+      "Logan Stapleton",
+      "Yanghuidi Cheng",
+      "Diana Qing",
+      "Adam Perer",
+      "Zhiwei Steven Wu",
+      "Haiyi Zhu",
+      "Kenneth Holstein"
+    ],
+    "year": 2022,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie integrieren Sozialarbeiter in der Kinderschutzbehörde das Allegheny Family Screening Tool (AFST) in ihre tägliche Entscheidungsfindung, und welche Designmöglichkeiten existieren zur Unterstützung effektiverer KI-gestützter Entscheidungsfindung?",
+    "methodology": "Mixed Methods: Qualitativ-empirisch mit kontextuellen Befragungen (contextual inquiries) und semi-strukturierten Interviews mit Mitarbeitern einer Kinderschutzbehörde (call screeners und supervisors)",
+    "key_finding": "Obwohl das AFST seit fünf Jahren im Einsatz ist, bleibt es eine Spannungsquelle für Arbeiter, die das System als verpasste Gelegenheit zur wirksamen Ergänzung ihrer Fähigkeiten wahrnehmen. Die Abhängigkeit der Arbeiter vom AFST wird durch vier Faktoren gesteuert: kontextuelle Informationen jenseits des Modells, Überzeugungen über die Modellleistung, organisatorische Drücke und Misalignments zwischen algorithmischen Zielen und Entscheidungsobjektiven.",
+    "data_basis": "Kontextuelle Befragungen und semi-strukturierte Interviews mit Kinderschutz-Hotline-Mitarbeitern (Call Screeners und Supervisoren) einer US-amerikanischen Kinderschutzbehörde"
+  },
+  "arguments": [
+    "Arbeiter verlassen sich auf das AFST nicht primär aufgrund von Vertrauen, sondern aufgrund wahrgenommener organisatorischer Drücke und interner Überwachung ihrer Außerkraftsetzungsquoten, was dazu führt, dass sie manchmal gegen ihre eigene fachliche Einschätzung entscheiden.",
+    "Arbeiter verfügen über kontextuelle Informationen (wie die spezifische Art der Vorwürfe, Beziehungen zwischen Tätern und Opfern, familiäre Umstände), die das AFST-Modell nicht erfasst, und diese lokale Expertise führt zu kritischem Hinterfragen und Außerkraftsetzung von Algorithmusempfehlungen.",
+    "Arbeiter haben begrenzte Transparenz über die Funktionsweise des AFST-Modells und müssen daher Vermutungen über seine Faktoren und deren Gewichtung anstellen, was zu ungenauen mentalen Modellen und suboptimalen Entscheidungen führt; sie fordern explizitere Erklärbarkeit und Counterfactual-Interfaces."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Workers' mental models of the AFST: 'the more you use [the AFST], you kind of pick up why it will go a certain way' (C1). Arbeiter entwickeln informelle Verständnismodelle für die Algorithmusfunktion, benötigen aber bessere Schulung und Transparenz: 'If we knew more about how we got to the score, I think I'd pay more attention' (C3).",
+    "KI_Sonstige": "Das Paper fokussiert auf ein Machine-Learning-basiertes Vorhersagesystem (AFST) mit Hunderten von automatisch extrahierten Features aus Verwaltungsdaten zur algorithmischen Entscheidungsunterstützung im Kinderschutz.",
+    "Soziale_Arbeit": "Direkte ethnographische Untersuchung von Sozialarbeitern (call screeners, supervisors) in einer Kinderschutzbehörde bei der alltäglichen Entscheidungsfindung zum Kindesmissbrauchsscreening. Paper untersucht praktische Herausforderungen und Bedürfnisse von Fachkräften.",
+    "Bias_Ungleichheit": "Workers perceive that AFST assigns higher risk scores to families from underprivileged racial identities and socioeconomic backgrounds: 'workers perceived that the AFST tended to assign higher risk scores to families from underprivileged racial identities and socioeconomic backgrounds (C1, C2, S2).' Discussion of how system involvement proxies for race and poverty.",
+    "Diversitaet": "Paper thematisiert, wie das System überproportional marginalisierte Familien (Rasse, Armut) betreffen könnte und wie Arbeiter aus verschiedenen Kontexten unterschiedliche Interpretationen des Systems haben. Intersektionale Überlegungen bezüglich Geschlecht, Rasse und sozioökonomischem Status.",
+    "Fairness": "Explicit discussion of algorithmic fairness concerns: Workers question whether AFST's use of system involvement, family size, and re-referral numbers as predictive features is fair. 'the more people that are involved with these families, no matter what it's for, the higher their score's gonna be' (C5). Workers concerned about misalignment between algorithmic predictions and actual child safety risk."
+  },
+  "references": [
+    {
+      "author": "Chouldechova, Putnam-Hornstein, et al.",
+      "year": 2018,
+      "short_title": "A case study of algorithm-assisted decision making in child maltreatment hotline screening decisions"
+    },
+    {
+      "author": "Eubanks",
+      "year": 2018,
+      "short_title": "Automating inequality: How high-tech tools profile, police, and punish the poor"
+    },
+    {
+      "author": "De-Arteaga, Fogliato, Chouldechova",
+      "year": 2020,
+      "short_title": "A case for humans-in-the-loop: Decisions in the presence of erroneous algorithmic scores"
+    },
+    {
+      "author": "Saxena, Badillo-Urquiola, Wisniewski, Guha",
+      "year": 2021,
+      "short_title": "A framework of high-stakes algorithmic decision-making for the public sector developed through a case study of child welfare"
+    },
+    {
+      "author": "Yang, Steinfeld, Zimmerman",
+      "year": 2019,
+      "short_title": "Unremarkable AI: Fitting intelligent decision support into critical, clinical decision-making processes"
+    },
+    {
+      "author": "Brown, Chouldechova, Putnam-Hornstein, et al.",
+      "year": 2019,
+      "short_title": "Toward algorithmic accountability in public services: A qualitative study of affected community perspectives on algorithmic decision-making in child welfare services"
+    },
+    {
+      "author": "Holten Møller, Shklovski, Hildebrandt",
+      "year": 2020,
+      "short_title": "Shifting concepts of value: Designing algorithmic decision-support systems for public services"
+    },
+    {
+      "author": "Green",
+      "year": 2019,
+      "short_title": "The principles and limits of algorithm-in-the-loop decision making"
+    },
+    {
+      "author": "Levy, Chasalow, Riley",
+      "year": 2021,
+      "short_title": "Algorithms and Decision-Making in the Public Sector"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle von KI und Sozialer Arbeit. Das Paper untersucht empirisch, wie KI-Systeme in einer kernhaften Anwendungsdomäne der Sozialen Arbeit (Kinderschutz) tatsächlich von Fachkräften genutzt werden und welche ethischen sowie praktischen Herausforderungen entstehen.",
+    "unique_contribution": "Dies ist die erste in-depth qualitative Untersuchung von Praktikern, die tatsächlich mit dem AFST arbeiten (nicht retrospektive Analysen). Sie kompliziert Narrative in der Literatur über die Effektivität von ADS im Kinderschutz durch Evidenz von organisatorischen Drücken, Bias-Wahrnehmungen und Misalignments zwischen algorithmischen Zielen und echten Schutzbedürfnissen.",
+    "limitations": "Die Studie fokussiert auf ein spezifisches System (AFST) in einem Bezirk; Generalisierbarkeit auf andere ADS-Kontexte im Kinderschutz oder anderen öffentlichen Sektoren bleibt unklar. Keine explizite Analyse der Perspektiven von Familien oder Kindern, nur von Arbeitern. Gender ist thematisch nicht explizit behandelt."
+  },
+  "target_group": "Primär: HCI-Forscher, KI-Ethiker, Softwareentwickler und Designer von Entscheidungsunterstützungssystemen. Sekundär: Sozialarbeiter, Fachkräfte im Kinderschutz, Policymaker, Organisationen der Kinder- und Jugendhilfe, Befürworter von Algorithmic Accountability im öffentlichen Sektor."
+}

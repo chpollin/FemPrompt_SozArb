@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room",
+    "authors": [
+      "Danial Hooshyar",
+      "Gustav Šír",
+      "Yeongwook Yang",
+      "Eve Kikas",
+      "Raija Hämäläinen",
+      "Tommi Kärkkäinen",
+      "Dragan Gašević",
+      "Roger Azevedo"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Hybrid-AI-Methoden, insbesondere Neural-Symbolic AI, neun persistente Herausforderungen bei der Entwicklung fairer, transparenter und effektiver KI-Systeme im Bildungsbereich adressieren?",
+    "methodology": "Kritische Analyse und theoretische Position Paper mit empirischen Beispielen aus der Literatur. Kombination von theoretischer Fundierung und Best-Practice-Beispielen zur Illustration von Problemen und Lösungen.",
+    "key_finding": "Neural-Symbolic AI und hybrid human-AI Methoden bieten einen vielversprechenden Weg zur Entwicklung verantwortungsvoller KI-Systeme im Bildungsbereich, indem sie Domain-Wissen mit datengesteuerten Ansätzen kombinieren und damit Fairness, Transparenz und Kontextangemessenheit verbessern.",
+    "data_basis": "Nicht primär empirisch: Literatur-basierte kritische Analyse mit illustrativen Beispielen aus existierender Forschung (z.B. Studien zu Knowledge Tracing, Learner Modelling); keine originäre Datenerhebung berichtet."
+  },
+  "arguments": [
+    "Es existieren neun kritische, oft übersehene Herausforderungen in KI-Systemen für Bildung: mangelnde Klarheit über KI-Definitionen, Vernachlässigung von Motivation/Emotion/Metakognition, begrenzte Domain-Knowledge-Integration, ungeeignete Modellwahl für sequenzielle Daten, Misuse von Evaluationsmetriken, unzuverlässige XAI-Methoden, ethisch unkritische Datenbearbeitung, fehlende systematische Benchmarking und Fokus auf globale statt lokale Empfehlungen.",
+    "Hybrid human-AI Methoden wie Neural-Symbolic AI integrieren explizites symbolisches Domänenwissen mit Deep Learning, um sowohl Genauigkeit als auch Interpretierbarkeit zu erreichen und damit Blackbox-Probleme zu vermeiden, die in hochriskanten Kontexten wie Bildung ethisch und rechtlich problematisch sind.",
+    "Die bisherige Dominanz von LLMs und domain-agnostischen Unternehmensmodellen verdrängt spezialisierte, pädagogisch fundierte KI-Ansätze und ignoriert dabei die spezifischen Anforderungen von Lernprozessen (Motivation, Emotion, Metakognition) sowie deren kontextabhängige Natur."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper diskutiert kritisches Verständnis von KI-Systemen im Bildungsbereich, Notwendigkeit von Klarheit über verschiedene KI-Familien und deren Einsatz: 'the lack of clarity around what AI for education truly means-often ignoring the distinct purposes, strengths, and limitations of different AI families'",
+    "Generative_KI": "Explizite Kritik am Trend, KI für Bildung mit großen Sprachmodellen gleichzusetzen: 'the growing trend of equating it with domain-agnostic, company-driven large language models' und spätere Diskussion von LLM-Problemen",
+    "KI_Sonstige": "Umfassende Behandlung verschiedener KI-Methoden: Expert Systems, Machine Learning, Deep Learning, Bayesian Networks, Neural-Symbolic AI, Explainable AI (SHAP, LIME), Knowledge Tracing, Learner Modelling",
+    "Bias_Ungleichheit": "Thematisiert systematische Vorurteile in Algorithmen: 'A-level algorithm' war systematisch vorurteilsbehaftet gegen bestimmte Studierende und Schulen. Diskussionspunkt: 'class imbalance' in Datensätzen führt zu Generalisierungsproblemen, die Ungleichheiten verstärken",
+    "Diversitaet": "Betonung von Inklusion und diverse Stakeholder-Beteiligung: 'limited integration of domain knowledge and lack of stakeholder involvement in AI design and development' sowie Fokus auf individuelle studentische Unterschiede statt globale Prescriptions",
+    "Fairness": "Zentrale Fairness-Herausforderungen werden diskutiert: 'reinforcing inequalities', 'class imbalance' in Trainingssets, Notwendigkeit fairer ML-Praktiken, und Fairness als Kernelement Verantwortungsvoller KI definiert als 'fair, accountable, not biased, non-discriminating'"
+  },
+  "references": [
+    {
+      "author": "European Union",
+      "year": 2024,
+      "short_title": "EU AI Act"
+    },
+    {
+      "author": "Rudin",
+      "year": 2019,
+      "short_title": "Stop explaining black box machine learning models for high stakes decisions"
+    },
+    {
+      "author": "Garcez & Lamb",
+      "year": 2023,
+      "short_title": "Neural-Symbolic AI Integration"
+    },
+    {
+      "author": "Heaton et al.",
+      "year": 2023,
+      "short_title": "UK A-level Algorithm Bias Study"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2019,
+      "short_title": "Beijing Consensus on Artificial Intelligence and Education"
+    },
+    {
+      "author": "Goellner et al.",
+      "year": 2024,
+      "short_title": "Definition of Responsible AI"
+    },
+    {
+      "author": "Hooshyar et al.",
+      "year": 2024,
+      "short_title": "Knowledge-Enhanced Autoencoders for Synthetic Data Generation"
+    },
+    {
+      "author": "Tato & Nkambou",
+      "year": 2022,
+      "short_title": "Bayesian Networks for Learner Modelling"
+    },
+    {
+      "author": "Cui et al.",
+      "year": 2024,
+      "short_title": "Class Imbalance in Knowledge Tracing Datasets"
+    },
+    {
+      "author": "Jakesch et al.",
+      "year": 2022,
+      "short_title": "Responsible AI for Human Dignity and Autonomy"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für die Schnittstelle AI und Bildung/Pädagogik, mit starkem Fokus auf ethische und faire KI-Entwicklung. Der Bezug zu Sozialer Arbeit ist indirekt (Bildung ist ein sozialpolitisches Feld), aber das Paper behandelt nicht explizit sozialarbeiterische Kontexte, Zielgruppen oder Methoden.",
+    "unique_contribution": "Das Paper leistet einen wichtigen kritischen Beitrag durch systematische Identifikation von neun spezifischen, oft übersehenen Herausforderungen in KI-für-Bildung und demonstriert, wie Neural-Symbolic AI als integrative Lösung diese adressieren kann, statt nur technische Fixes anzubieten.",
+    "limitations": "Das Paper ist primär theoretisch-analytisch; während illustrative Beispiele aus Forschung eingebunden sind, werden diese Befunde nicht durch neue empirische Studien systematisch validiert. Die Anwendbarkeit von Neural-Symbolic AI auf verschiedene Bildungskontexte und Skalierbarkeit bleibt teilweise unklar."
+  },
+  "target_group": "Forschende in AI/Bildung, Learning Analytics, Educational Data Mining; Pädagog:innen und Bildungstechnolog:innen; Policymakers im Bildungsbereich; KI-Ethiker:innen und Entwickler:innen verantwortungsvoller KI-Systeme; Universitäten und Bildungsinstitutionen, die KI implementieren"
+}

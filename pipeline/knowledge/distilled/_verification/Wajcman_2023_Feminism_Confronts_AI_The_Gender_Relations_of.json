@@ -1,0 +1,54 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Beispiele erfolgreicher Interventionen (Carnegie Mellon, Harvey Mudd) nur marginal erwähnt",
+        "UNESCO Framework on Gender Equality and AI (2020) erwähnt aber nicht substantiell diskutiert",
+        "Konzept 'Ghost Workers' und unsichtbare Arbeitsforce nur kurz behandelt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Leichte Vereinfachung: Die Aussage zu 'Gender-Equality Paradox' (Malaysia, Taiwan, Thailand) wird im generierten Dokument nicht erwähnt, obwohl sie kontextualisiert, dass regionale Unterschiede und komplexe Ursachen existieren"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Machtasymmetrien / Power Relations (explizit im Text: 'power dynamics', 'power structures', 'positions of power') - könnte als eigene Kategorie ergänzt werden",
+        "Technologische Determinismus-Kritik (implizit vorhanden, aber nicht als Kategorie ausgewiesen)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "note": "Keine Korrektionen notwendig. Metadaten sind korrekt."
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Empfehlung: Carnegie Mellon (7% → 42% Frauen 1995-2000) und Harvey Mudd (49% 2019) als Positivbeispiele explizit nennen für konkrete Lösungspfade",
+        "severity": "minor",
+        "proposed_addition": "Erfolgsbeispiele: Carnegie Mellon erhöhte Frauenanteil von 7% (1995) auf 42% (2000) durch Multi-Faktor-Ansatz (Gruppenbildung nach Erfahrungsniveau, Faculty Coaching, Senior Leadership Buy-in); Harvey Mudd erreichte 49% (2019)—demonstrieren, dass strukturelle Änderungen effektiv sind."
+      },
+      {
+        "section": "Methodologie",
+        "issue": "Präzisierung: Das Paper ist teilweise auch normativ/prescriptive (nicht nur analytisch-deskriptiv)",
+        "severity": "minor",
+        "proposed_addition": "Methodischer Ansatz kombiniert: Theoretisch/Review + normative Kritik ('urgent attention', Forderung nach Systemreformen)"
+      }
+    ]
+  },
+  "quality_assessment": {
+    "source_integrity": "Hochwertig - Originaltext ist wissenschaftliche Monographie mit rigoroser Evidenzbasis",
+    "extraction_quality": "Exzellent - Kernargumente, Kategorien und Evidenz korrekt erfasst",
+    "usability_for_assessment": "Sehr gut - Dokument ist für wissenschaftliche Qualitätsbewertung und Lehre einsetzbar"
+  }
+}

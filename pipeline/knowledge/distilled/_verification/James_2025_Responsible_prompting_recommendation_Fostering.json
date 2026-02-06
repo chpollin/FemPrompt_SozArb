@@ -1,0 +1,67 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Keine explizite Nennung der Konferenz CHI 2025 im generierten Dokument",
+        "Fehlende Erwähnung der Open Access und Institutional Support Details",
+        "Keine Angabe der Seitenzahl (30 pages) im generierten Dokument"
+      ],
+      "missing_minor": [
+        "Total Citations und Downloads nicht erwähnt",
+        "Spezifische Algorithmus-Details (Thresholds 0.1-0.9) nicht im Kernbefund integriert",
+        "Die 14 identifizierten Themen aus der User Study werden nicht einzeln aufgelistet"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Die Forschungsfrage im generierten Dokument ist leicht umformuliert und abstrahiert, deckt aber die Original-Forschungsfrage ab"
+      ],
+      "distortions": [
+        "Die Schlüsselreferenzen sind teilweise erfunden oder nicht vollständig korrekt zitiert (z.B. 'Sunrise_Mark_2020', 'Vallada_AnnaMaria_et_al_2023' können nicht im Original verifiziert werden)",
+        "Kategorie 'Diversitaet' könnte mehr auf Sprachendiversität und kulturelle Unterschiede fokussieren"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "HCI (Human-Computer Interaction) als eigenständige Kategorie nicht etabliert, obwohl zentral",
+        "Value Alignment / Proactive Value Alignment (ist ein Keyword des Papers) nicht als separate Kategorie",
+        "Recommender Systems nicht als eigene Kategorie trotz technologischem Fokus"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "conference": "Sollte explizit 'CHI 2025 Conference on Human Factors in Computing Systems' sein",
+      "pages": "30 pages sollte hinzugefügt werden",
+      "publication_date": "Ist korrekt als 26 April 2025"
+    },
+    "content_fixes": [
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "Mehrere zitierte Werke sind im Original nicht nachweisbar oder unvollständig",
+        "action": "Nur tatsächlich im Text zitierte Werke sollten aufgelistet werden; z.B. [54], [51], [38], [23] für Responsible Innovation und AI Ethics"
+      },
+      {
+        "section": "category_validation",
+        "issue": "Human-Computer Interaction (HCI) ist Kernthema, wird aber nicht explizit als Kategorie genannt",
+        "action": "HCI als Kategorie hinzufügen"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Die Spezifizität der 14 Themen aus 5.5 ist nicht widergespiegelt",
+        "action": "Optional: Auswahl der wichtigsten 3-4 Themen (z.B. User Guidance, Mental Models, Human-in-the-Loop) als separater Punkt"
+      },
+      {
+        "section": "Forschungsfrage",
+        "issue": "Die Frage im generierten Text ist eine Paraphrase, deckt aber Original ab",
+        "action": "Kann so bleiben, ist präzise genug"
+      }
+    ]
+  }
+}

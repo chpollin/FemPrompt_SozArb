@@ -1,0 +1,71 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Explizite Nennung der Publikationsdaten (Published: 8 January 2025) fehlt in Frontmatter",
+        "DOI nicht im Frontmatter erfasst",
+        "Peer-Review-Status (externally peer-reviewed) nicht dokumentiert",
+        "Finanzierungsinformationen (No industry funding) nicht im Kernbefund erwähnt"
+      ],
+      "missing_minor": [
+        "Affiliation (Quaid-i-Azam University, Islamabad, Pakistan) nicht erwähnt",
+        "Abkürzung STEM in Kernbefund nicht definiert",
+        "LMICs-Kontextabschnitt (Low- and Middle-Income Countries) unterrepräsentiert im Kernbefund"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Statistik '22% of AI workers are women' ist korrekt, aber Attribution zu Quelle 4 sollte überprüfbar sein",
+        "AI4ALL-Daten (78%, 91%) sind korrekt aus Text extrahiert, aber Quelle 61 vs. 68 sollte geklärt werden"
+      ],
+      "distortions": [
+        "Kategorie-Evidenz-Zitate sind korrekt, aber 'Kernbefund' vereinfacht die nuancierte Diskussion von Limitationen in LMICs",
+        "Die Aussage zu 'digitale Literaturprogramme sind vielversprechend' ist supportiv, aber der Text hebt auch längerfristige strukturelle Veränderungen als notwendig hervor - diese Balance könnte stärker sein"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Bildung/Education (da extensive Diskussion zu STEM-Education und digital literacy initiatives)",
+        "Arbeit/Employment (da Diskussion zu Hiring-Tools, Workplace Culture, Career Advancement zentral)",
+        "Ethik/Ethics (da ausdrückliche Diskussion zu 'ethical oversight' und 'socially responsible AI')"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "publication_date": "2025-01-08",
+      "doi": "https://doi.org/10.70389/PJAI.1000088",
+      "peer_review": "externally peer-reviewed",
+      "affiliation": "Quaid-i-Azam University, Islamabad, Pakistan",
+      "funding": "No industry funding",
+      "categories_should_add": [
+        "Bildung",
+        "Arbeit",
+        "Ethik"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Vereinfachung der LMICs-Diskussion",
+        "suggested_addition": "Zusätzliche Herausforderungen in Ländern mit niedrigem und mittlerem Einkommen (begrenzte Schulzugang, kulturelle Normen, fehlende Finanzierung) erfordern kontextabhängige Lösungsansätze."
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "Fehlende Quellenverifizierung",
+        "suggested_action": "DOI-Referenzen für alle Quellen überprüfen, insbesondere Refs 61 und 68 für AI4ALL-Statistiken"
+      },
+      {
+        "section": "Category-Evidenz",
+        "issue": "Ungleiche Gewichtung der Kategorien",
+        "suggested_action": "Zitate zu Employment Discrimination und Ethical AI sollten eigenständige Evidenz-Blöcke erhalten"
+      }
+    ]
+  }
+}

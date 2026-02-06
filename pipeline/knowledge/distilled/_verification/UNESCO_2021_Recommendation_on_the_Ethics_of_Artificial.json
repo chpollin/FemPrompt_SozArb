@@ -1,0 +1,75 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Abschnitt II (Values and Principles) nicht in der Zusammenfassung dargestellt - dies ist ein Kernelement des Dokuments",
+        "Abschnitt III (Rights and Freedoms) nicht abgedeckt",
+        "Spezifische AI-Definitionen und technische Aspekte (Machine Learning, Reinforcement Learning Details) unterrepräsentiert",
+        "Policy Areas 3-10 nur teilweise erwähnt (nur 1, 2 und 11 abgedeckt)"
+      ],
+      "missing_minor": [
+        "UNESCO-spezifische Rollen (COMEST, IBC, IGBC) nur kurz erwähnt",
+        "Readiness-Assessment-Methodologie nicht detailliert",
+        "Specific certification mechanism details nicht ausgeführt",
+        "Final Provisions-Abschnitt nicht separat behandelt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Forschungsfrage formuliert als Normativ-Frage, während Original deskriptiv ist - dies ist sachlich korrekt, aber könnte präzisierter sein"
+      ],
+      "distortions": [
+        "Die Darstellung fokussiert stark auf Preamble-Inhalte und Policy Areas 1, 2, 11, während mittlere Abschnitte (Values, Rights, Policy Areas 3-10) unterrepräsentiert sind",
+        "'feminist theoretical depth' als Limitation erwähnt, obwohl Dokument gender equality explizit adressiert - dies ist eine interpretative Bewertung, keine faktische Verzerrung, aber könnte als zu kritisch wahrgenommen werden"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Umwelt/Ökosysteme - wird mehrfach im Original erwähnt ('environment and ecosystems'), ist aber nicht als Kategorie codiert",
+        "Menschenrechte/Human Rights - zentrales Thema des Dokuments, sollte explizite Kategorie sein",
+        "Transparenz/Interpretierbarkeit - wird in Policy Area 1 prominent adressiert",
+        "Datenschutz/Data Protection - wird mehrfach erwähnt, nicht als Kategorie erfasst",
+        "Arbeitsmarkt/Employment - Policy Area 10 komplett fehlt in Kategorie-Evidenz"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_additions": [
+        "Umwelt_Ekosysteme",
+        "Menschenrechte",
+        "Transparenz_Interpretierbarkeit",
+        "Datenschutz",
+        "Arbeit_Beschaeftigung"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Abschnitt II (Values and Principles) sollte als eigenständiger Punkt dargestellt werden, da dies die konzeptionelle Grundlage des gesamten Dokuments darstellt",
+        "suggestion": "Vierter Punkt hinzufügen: 'Das Framework basiert auf integrierten Werten (Menschenwürde, Gerechtigkeit, Transparenz, Inklusion, Diversity, Umweltschutz) und Prinzipien, die querschnittlich über alle Policy-Bereiche gelten.'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Policy Area 10 (Economic and Social Transformation) fehlt ganz",
+        "suggestion": "Arbeit_Beschaeftigung-Kategorie mit Evidenz hinzufügen aus den angegebenen Textauszügen (Section 117-120 zu upskilling, reskilling, fair transition)"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Limitations-Punkt zu 'feminist theoretical depth' könnte als ungerecht gegenüber dem Dokument wahrgenommen werden",
+        "suggestion": "Präzisierung: 'Während Gender Equality adressiert wird, fehlt eine tiefergehende intersektionale feministische Analyse oder kritische Auseinandersetzung mit Machtverhältnissen in KI-Governance.'"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "Viele im Originaltext zitierte internationale Instrumente nicht erfasst (z.B. Convention on the Rights of the Child 1989, Discrimination in Education Convention 1960)",
+        "suggestion": "Referenzen-Liste erweitern oder als 'exemplarisch' kennzeichnen"
+      }
+    ]
+  }
+}

@@ -1,41 +1,12 @@
+# PDFs (too large for Git)
 *.pdf
-/analysis/markdown_papers
-analysis/zotero_backup_*.json
-/analysis/.venv
 
 # Environment variables (contains API keys!)
 .env
 .env.local
 
-# Obsidian vault - KEEP IN REPO (for web tool)
-# FemPrompt_Vault/
-
 # Claude configuration
 .claude/
-
-# Pipeline test artifacts
-test_pipeline_data/
-test_pipeline_*.log
-
-# Pipeline runtime files
-.pipeline_status.json
-logs/
-
-# Temporary analysis files
-analysis/acquisition_log.json
-analysis/missing_pdfs.csv
-analysis/pdf_conversion_full.log
-analysis/vault_test_report.json
-analysis/zotero_test_with_tags.json
-
-# Pipeline logs (root)
-conversion_metadata.json
-markdown_conversion_sozarb.log
-markdown_conversion_sozarb_retry.log
-pdf_acquisition_sozarb.log
-summarization_sozarb.log
-vault_generation_sozarb.log
-*.log
 
 # Python
 __pycache__/
@@ -51,23 +22,32 @@ nul
 ~$*.xlsx
 ~$*.docx
 
+# Logs
+logs/
+*.log
+
 # Temporary files
 *.tmp
 *.backup
 *.bak
 
-# Test files (root directory)
-test_assessment.xlsx
+# Test artifacts
 test_*.xlsx
 test_*.json
 test-pdfs/
+test_pipeline_data/
 acquisition_log.json
 missing_pdfs.csv
 
 # Pipeline generated images (too large for Git, ~2-3 GB)
 pipeline/pdf_images/
 
-# Pipeline test artifacts
+# Pipeline runtime/test artifacts
+.pipeline_status.json
 pipeline/conversion_report_*.json
 pipeline/validation_*.json
 pipeline/markdown_test/
+conversion_metadata.json
+
+# Benchmark test data
+benchmark/data/test_*.csv

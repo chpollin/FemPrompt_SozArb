@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "AI Literacy - Towards Measuring Human Competency in Artificial Intelligence",
+    "authors": [
+      "Marc Pinski",
+      "Alexander Benlian"
+    ],
+    "year": 2023,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können die socio-technischen Kompetenzen von Menschen im Umgang mit künstlicher Intelligenz konzeptualisiert und gemessen werden?",
+    "methodology": "Mixed Methods: Systematische Literaturreview, 5 Expertinterviews, zwei Runden Card Sorting (n=6 und n=5 Richter), Pre-Test-Studie (n=50 Teilnehmer) mit Strukturgleichungsmodellierung",
+    "key_finding": "Entwicklung und Validierung eines 13-Item-Messinstruments für allgemeine AI Literacy mit 5 Dimensionen, das sowohl explizites Wissen als auch tacit knowledge und Erfahrung (Nutzung und Design) erfasst",
+    "data_basis": "50 Teilnehmer in Pre-Test-Studie, 5 Experten in Interviews, 6 und 5 Richter in zwei Card-Sorting-Runden"
+  },
+  "arguments": [
+    "Bisherige IS-Kompetenzforschung ist nicht auf AI-Technologie anwendbar, da AI durch autonome Agentivität, Lernfähigkeit und Intransparenz grundlegend unterschiedliche Annahmen erfordert als traditionelle IT-Systeme.",
+    "AI Literacy muss als socio-technisches Konstrukt verstanden werden, das explizites Wissen (über AI-Technologie, menschliche Akteure, AI-Schritte) und tacit knowledge (Nutzungs- und Design-Erfahrung) umfasst.",
+    "Ein rollenunabhängiges, allgemeines Messinstrument für AI Literacy ist notwendig, um Kompetenzen vergleichbar über verschiedene organisationale Funktionen (R&D, Sales, etc.) hinweg bewerten zu können."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": false,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Hauptfokus des Papers: 'we set out to develop a measurement instrument (scale) for general AI literacy, that is humans' socio-technical competencies regarding AI'. Definiert AI Literacy als Wissen und Erfahrung mit fünf Dimensionen (Technology Knowledge, Human Actors Knowledge, AI Steps Knowledge, Usage Experience, Design Experience).",
+    "KI_Sonstige": "Behandelt KI allgemein (Machine Learning, Neural Networks, autonome Systeme) nicht generativ: 'Berente et al. (2021) provide a concise view that distinguishes AI from non-AI technology by conceptualizing three unique facets of AI: autonomy, learning, and inscrutability'.",
+    "Fairness": "Thematisiert implizit Fair-AI durch Dimension 'AI ethics' und Fähigkeit, AI-Outputs angemessen zu bewerten: 'Higher-order thinking skills (e.g., evaluate, appraise, predict, design) with AI applications' und 'Human-centered considerations (e.g., fairness, accountability, transparency, ethics, safety)'."
+  },
+  "references": [
+    {
+      "author": "Berente et al.",
+      "year": 2021,
+      "short_title": "AI Theorizing in IS Research"
+    },
+    {
+      "author": "Schuetz & Venkatesh",
+      "year": 2020,
+      "short_title": "The Rise of Human Machines: Broken IS Assumptions"
+    },
+    {
+      "author": "Bassellier et al.",
+      "year": 2003,
+      "short_title": "Human IS Competencies and Performance"
+    },
+    {
+      "author": "Long & Magerko",
+      "year": 2020,
+      "short_title": "What is AI Literacy? Competencies and Design Considerations"
+    },
+    {
+      "author": "Heyder & Posegga",
+      "year": 2021,
+      "short_title": "Functional, Critical, and Sociocultural AI Literacy"
+    },
+    {
+      "author": "Ng et al.",
+      "year": 2021,
+      "short_title": "AI Literacy Skill Types: Know, Use, Evaluate, Ethics"
+    },
+    {
+      "author": "Baird & Maruping",
+      "year": 2021,
+      "short_title": "AI Agentic Role and Human-AI Collaboration"
+    },
+    {
+      "author": "Tarafdar et al.",
+      "year": 2022,
+      "short_title": "Algorithms as Co-workers: Human-Algorithm Role Interactions"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2022,
+      "short_title": "Measuring User Competence in Using AI"
+    },
+    {
+      "author": "MacKenzie et al.",
+      "year": 2011,
+      "short_title": "Construct Measurement and Validation in MIS Research"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist für die Schnittstelle AI/Soziale Arbeit nur mittelbar relevant. Es entwickelt ein generisches Messinstrument für AI-Kompetenzen, das potenziell auf Sozialarbeiter als spezifische Berufsgruppe angewendet werden könnte, behandelt Soziale Arbeit aber nicht explizit als Anwendungsfeld.",
+    "unique_contribution": "Erste validierte, rollenunabhängige Messskala für allgemeine AI Literacy im IS-Kontext, die explizites Wissen und tacit knowledge integriert und auf revidierten IS-Annahmen zu AI-Eigenschaften basiert.",
+    "limitations": "Paper behandelt Soziale Arbeit nicht; Sample in Pre-Test ist klein (n=50) und technisch-affin (tägliche Tech-Nutzung, Programmierkentnisse vorausgesetzt); keine Langzeitstabilität oder Kriteriumsvalidität getestet; keine explizite Geschlechts- oder Diversitätsperspektive."
+  },
+  "target_group": "KI-Forscher und Information-Systems-Wissenschaftler, Organisationen zur Bewertung von AI-Kompetenzen in verschiedenen Abteilungen, Bildungsinstitutionen zur Curriculumsbewertung, HR-Praktiker zur Anforderungsanalyse von AI-bezogenen Positionen"
+}

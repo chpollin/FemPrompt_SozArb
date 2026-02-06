@@ -1,0 +1,71 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Konkrete Samplegröße und Anzahl der generierten Prompts nicht angegeben",
+        "Statistische Signifikanztests (p-values) nicht erwähnt",
+        "Interrater-Reliabilität für LLM-as-Judge Evaluationen nicht dokumentiert",
+        "Detaillierte Ergebnisse von H3 (Konflikt/Belästigung) kaum im generiert. Dokument vertreten"
+      ],
+      "missing_minor": [
+        "Hyperparameter-Details (temperature 0.6) nur kurz erwähnt, nicht ausführlich diskutiert",
+        "Quantisierungsmethode (8-bit) für größere Modelle nur beiläufig genannt",
+        "Code-Verfügbarkeit als 'forthcoming' markiert, aber nicht in Knowledge Doc reflektiert",
+        "Appendix B (Prompt-Templates) nicht vollständig dokumentiert"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Geringe Fehlerquote: Eine mögliche Ungenauigkeit bei der Hypothesen-Mapping: Das generierte Dokument ordnet H1+H2 gemeinsam zu 'discursive othering', aber der Originaltext spezifiziert: 'Hypotheses H1 and H2 test for discursive othering, and hypotheses H2, H3 and H4 test for narrow representations.' H2 ist also beiden zugeordnet, was korrekt ist, aber die Trennung könnte klarer sein."
+      ],
+      "distortions": [
+        "Operationalisierung der H3-Testung (negative Erfahrungen/Konflikt): Im generierten Dokument unterrepräsentiert, nur kurz unter 'Kernbefund' erwähnt. Original hat explizit Daten hierzu (Table 5: Q3 Scores), aber Interpretation und Implikationen sind stark gekürzt.",
+        "Die Gewichtung auf 'Topic Divergence' ist im Knowledge Doc schwächer als im Original, wo dies als vierte zentrale Analysedimension ausführlich behandelt wird (Section 6, Figures 4, Table 7/8)."
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "LGBTQ+ (könnte zusätzlich als spezifische Kategorie neben 'Gender' sinnvoll sein)",
+        "Therapie_Chatbots oder Mental_Health_Anwendungen (wird erwähnt, verdient aber eigene Kategorie)",
+        "Repräsentationsharm (konzeptuell zentral, aber nicht als Kategorie explizit gelistet)",
+        "Persona_Simulation (als spezifische NLP-Methode erwähnenswert)"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "recommendation": "Zusätzliche Kategorien in Erwägung ziehen",
+      "suggested_additions": [
+        "LGBTQ_Repraesentation",
+        "Persona_Simulation",
+        "Representational_Harms"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Samplegröße vage beschrieben",
+        "original_text": "genaue Samplegröße nicht explizit angegeben",
+        "suggested_fix": "Ergänzen: Das Paper gibt die genaue Anzahl der generierten Prompts nicht explizit an, aber dokumentiert systematische Tests über 6 Modelle × 5 Kontexte × 2 Identity-Modi (minimum 60 Prompt-Kombinationen). Statistische Signifikanztests sind im Originaltext nicht präsent (score-basierte Vergleiche statt p-values)."
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "H3 (Negative Erfahrungen) unterrepräsentiert",
+        "original_text": "Keine dedizierte Darstellung der H3-Ergebnisse",
+        "suggested_fix": "Ergänzen: H3 untersucht explizit das Auftreten von Konflikt-, Belästigungs- und negativen identitätsbezogenen Erfahrungen. Die Daten zeigen erhöhte Q-Scores in Medical- und Work-Kontexten (z.B. Llama-3.1-70B: 80.3% vs. 1.4% bei Model-Identity), was eine negative Bias in Queer-Kontexten suggeriert."
+      },
+      {
+        "section": "Kernbefund",
+        "issue": "Topic Divergence sollte expliziter erwähnt werden",
+        "original_text": "Nur allgemein erwähnt",
+        "suggested_fix": "Spezifizieren: Topic Divergence-Scores zeigen systematische Unterschiede zwischen Queer- und Not-Queer-Outputs mit Werten von 0.21-0.53 je Kontext, was auf unterschiedliche thematische Fokussierung hinweist."
+      }
+    ]
+  }
+}

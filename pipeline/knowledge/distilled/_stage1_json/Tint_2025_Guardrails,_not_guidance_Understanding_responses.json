@@ -1,0 +1,100 @@
+{
+  "metadata": {
+    "title": "Guardrails, not Guidance: Understanding Responses to LGBTQ+ Language in Large Language Models",
+    "authors": [
+      "Joshua Tint"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie unterscheiden sich die emotionalen Inhalte von LLM-Antworten bei heteronormativen versus nicht-heteronormativen Prompts und LGBTQ+-Slang?",
+    "methodology": "Empirisch: Zwei Experiment mit emotional content classification (RoBERTa-Base auf GoEmotions Dataset), Embedding-basierte Cluster-Analyse mit Mahalanobis-Distanz, Analyse von 500 Tweets (HeteroCorpus) und 1398 Quora-Fragenpaare, getestet auf 7 LLM-Modellen (GPT-3.5, GPT-4o, Llama2, Llama3.2, Gemma, Gemma2, Mistral)",
+    "key_finding": "Safety-Mechanismen neutralisieren offene heteronormative Bias durch neutrale/korrektive Antworten, versagen aber bei systemischen Verzerrungen gegenüber LGBTQ+-Slang, das überproportional negative emotionale Labels auslöst.",
+    "data_basis": "n=500 Tweets aus HeteroCorpus; n=1398 extrahierte Fragenpaare aus Quora Dataset; 7 verschiedene LLM-Modelle mit unterschiedlichen Parametergrößen"
+  },
+  "arguments": [
+    "Aktuelle Fairness-Ansätze adressieren nur explizite Diskriminierung, nicht die subtileren Formen von Bias gegenüber marginalisiertem Sprachgebrauch wie LGBTQ+-Slang, obwohl diese für Minderheitengruppen in Online-Räumen essentiell sind.",
+    "Sicherheitsmechanismen in LLMs erzeugen überproportionale Neutralisierung und Korrektionen bei heteronormativen Prompts, während LGBTQ+-Slang stärker negative emotionale Reaktionen und Disapproval auslöst, was auf asymmetrische Behandlung hindeutet.",
+    "Die Unterrepräsentation von LGBTQ+-Slang in Trainingskorpora kombiniert mit fehlerhaften Sicherheitsmaßnahmen schafft ein System, das marginalisierte Sprachgemeinschaften weiter benachteiligt statt inklusive NLP-Systeme zu ermöglichen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": false,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Der Paper analysiert, wie Nutzer mit LLMs interagieren und wie diese Systeme Sprachverständnis vermitteln: 'Language models have integrated themselves into many aspects of digital life' und untersucht implizite Mechanismen der Modelle.",
+    "Generative_KI": "Fokus auf große Sprachmodelle: 'Through two experiments, the study assesses the emotional content and the impact of queer slang on responses from models including GPT-3.5, GPT4o, Llama2, Llama3, Gemma and Mistral.'",
+    "Prompting": "Analyse von Prompt-Strategien und deren Auswirkungen: 'heteronormative prompts can trigger safety mechanisms, leading to neutral or corrective responses, while LGBTQ+ slang elicits more negative emotions'.",
+    "Bias_Ungleichheit": "Zentraler Fokus auf algorithmischen Bias: 'Biases in LLMs arise during data collection, model development, and evaluation' und 'queer slang is underrepresented in large language model training corpora'.",
+    "Diversitaet": "Expliziter Fokus auf marginalisierte Communities und deren Sprachgebrauch: 'Queer communities, in particular, are heavily impacted by biased language technologies' und intersektionale Perspektive auf AAVE und LGBTQ+-Slang.",
+    "Fairness": "Zentrale Problematisierung von Fairness-Defiziten: 'current fairness approaches' versagen und 'To foster truly inclusive NLP systems, future research and development must prioritize the equitable representation of minority linguistic forms'."
+  },
+  "references": [
+    {
+      "author": "Felkner et al.",
+      "year": 2023,
+      "short_title": "WinoQueer: A community-in-the-loop benchmark for anti-LGBTQ+ bias in large language models"
+    },
+    {
+      "author": "Sap et al.",
+      "year": 2019,
+      "short_title": "The risk of racial bias in hate speech detection"
+    },
+    {
+      "author": "Zhao et al.",
+      "year": 2019,
+      "short_title": "Gender bias in contextualized word embeddings"
+    },
+    {
+      "author": "Bolukbasi et al.",
+      "year": 2016,
+      "short_title": "Man is to computer programmer as woman is to homemaker? debiasing word embeddings"
+    },
+    {
+      "author": "Kiritchenko & Mohammad",
+      "year": 2018,
+      "short_title": "Examining gender and race bias in two hundred sentiment analysis systems"
+    },
+    {
+      "author": "Baker",
+      "year": 2003,
+      "short_title": "Polari - the lost language of gay men"
+    },
+    {
+      "author": "Leap",
+      "year": 2023,
+      "short_title": "Queer linguistics and discourse analysis"
+    },
+    {
+      "author": "Ungless et al.",
+      "year": 2023,
+      "short_title": "Potential pitfalls with automatic sentiment analysis: The example of queerphobic bias"
+    },
+    {
+      "author": "Vásquez et al.",
+      "year": 2022,
+      "short_title": "HeteroCorpus: A corpus for heteronormative language detection"
+    },
+    {
+      "author": "Dorn et al.",
+      "year": 2024,
+      "short_title": "Harmful speech detection by language models exhibits gender-queer dialect bias"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat limitierte direkte Relevanz für Soziale Arbeit, adressiert aber zentrale Fragen von digitaler Inklusion und Fairness für marginalisierte Gruppen (LGBTQ+ Personen), die im Kontext von Online-Beratung und digitalen sozialen Diensten zunehmend relevant werden.",
+    "unique_contribution": "Das Paper leistet einen innovativen Beitrag durch die Kombination von Embedding-basierter Slang-Detektion mit Emotion-Classification, um subtile Bias jenseits expliziter Diskriminination nachzuweisen und die Limitationen bestehender Safety-Mechanismen zu enthüllen.",
+    "limitations": "Experiment 2 vergleicht LGBTQ+-Slang nicht mit anderen Slang-Varianten oder informalen Dialekten, daher bleibt unklar, ob Reaktionen spezifisch für queere Sprache oder generalisiert für non-standard dialects gelten; zudem wird die Auswirkung auf faktische Outputs nicht untersucht."
+  },
+  "target_group": "NLP-Forscher, KI-Entwickler, Fairness-Ingenieure, LGBTQ+-Advocacy-Organisationen, Content Moderation-Teams, Policymaker im Bereich algorithmischer Governance, Wissenschaftler in queer studies und Digital Humanities"
+}

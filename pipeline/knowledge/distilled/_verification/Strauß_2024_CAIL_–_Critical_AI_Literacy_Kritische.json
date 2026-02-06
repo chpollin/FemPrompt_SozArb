@@ -1,0 +1,73 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Projektförderung durch Digitalisierungsfonds der Arbeiterkammer Wien (Projekt-Nr. 5-349) nicht erwähnt",
+        "Creative Commons Attribution 4.0 International License nicht dokumentiert",
+        "ITA-Projektbericht Nr. ITA-2024-07 nicht im Metadaten-Block erfasst"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: Co-Autor Titus Udrea wird im generierten Dokument als gleichberechtigter Author behandelt, war aber gemäß Original nur 'Unter Mitarbeit von'"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Work_Organization / Arbeitsorganisation (zentral: Kluft zwischen KI als Expertensystem vs. En-passant-Nutzung, Arbeitspraktiken)",
+        "Data_Management / Datenmanagement (explizit: 'Tätigkeiten des Datenmanagements, Datenaufbereitung, Datenpflege, Bereinigung')",
+        "Transparency_Explainability (zentral: 'Transparenz-Transparenz der Funktionsweise von KI-Systemen auch eine Nutzungs-Transparenz')",
+        "Skills_Qualifications / Qualifikation (erwähnt: 'Neuer Qualifikationsbedarf aber uneindeutige Tätigkeitsbereiche')",
+        "Hidden_AI / Verdeckte KI (Abschnitt 5.4: 'Verdeckte KI': Intransparenz und Datenanalysen im Hintergrund')"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": true,
+  "corrections": {
+    "frontmatter": {
+      "year": "2024 (November)",
+      "institution": "Institut für Technikfolgen-Abschätzung der Österreichischen Akademie der Wissenschaften",
+      "funding": "Digitalisierungsfonds der Arbeiterkammer Wien, Projekt-Nr. 5-349",
+      "report_number": "ITA-2024-07",
+      "license": "Creative Commons Attribution 4.0 International",
+      "authors_note": "Projektleitung und Autor: Stefan Strauß; Mitarbeit: Titus Udrea"
+    },
+    "content_fixes": [
+      {
+        "section": "categories",
+        "action": "add",
+        "items": [
+          "Work_Organization",
+          "Data_Management",
+          "Transparency_Explainability",
+          "Skills_Qualifications",
+          "Hidden_AI",
+          "Quality_Assurance",
+          "Human_Control"
+        ]
+      },
+      {
+        "section": "Hauptargumente",
+        "action": "add_detail",
+        "text": "Kluft zwischen KI-Nutzung als explizites Expertensystem mit hohem Problembewusstsein (z.B. Medizin) und diffuser En-passant-Nutzung ohne klare Tätigkeitsbezüge ist zentraler Bestimmungsfaktor für konstruktiven Mehrwert"
+      },
+      {
+        "section": "Hauptargumente",
+        "action": "add_detail",
+        "text": "Verdeckte KI über Standardsoftware (Office-Anwendungen, Betriebssysteme) als unterschätztes Problemfeld mit Intransparenz, mangelnder Kontextualisierung und verstärkten Datenschutzrisiken"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "action": "clarify",
+        "text": "Domain Fit: Zentral für Arbeitssoziologie, Technikfolgenabschätzung und Gewerkschaftliche Interessenvertetung. Relevanz für Soziale Arbeit nur indirekt (wenn SA sich mit Qualifikation und Handlungsfähigkeit in digitalisierten Organisationen beschäftigt)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+```json
+{
+  "metadata": {
+    "title": "Queer In AI: A Case Study in Community-Led Participatory AI",
+    "authors": [
+      "Organizers of QueerInAI",
+      "Ashwin Singh",
+      "Davide Locatelli",
+      "Hang Yuan",
+      "Jaidev Shriram",
+      "Maarten Sap",
+      "Maria Ryskina",
+      "Milind Agarwal",
+      "A Pranav",
+      "Sarah Mathew",
+      "Anaelia Ovalle",
+      "Claas Voelcker",
+      "Eva Breznik",
+      "Hetvi J",
+      "Kruno Lehman",
+      "Marc Peter Deisenroth",
+      "Martin Mundt",
+      "Nyx McLean",
+      "Raj Korpan",
+      "Sarthak Arora",
+      "Arjun Subramonian",
+      "Danica J. Sutherland",
+      "Filip Klubička",
+      "Huan Zhang",
+      "Luca Soldaini",
+      "Maria Leonor Pacheco",
+      "Pan Xu",
+      "Ruchira Ray",
+      "St John",
+      "Tanvi Anand",
+      "Vishakha Agrawal",
+      "William Agnew",
+      "Yanan Long",
+      "Zijie J. Wang",
+      "Zeerak Talat",
+      "Avijit Ghosh",
+      "Nathaniel Dennler",
+      "Michael Noseworthy",
+      "Sharvani Jha",
+      "Emi Baylor",
+      "Aditya Joshi",
+      "Natalia Y. Bilenko",
+      "Andrew McNamara",
+      "Raphael Gontijo-Lopes",
+      "Alex Markham",
+      "Evyn Döng",
+      "Jackie Kay",
+      "Manu Saraswat",
+      "Nikhil Vytla",
+      "Luke Stark"
+    ],
+    "year": 2023,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie nutzt die Queer in AI Gemeinschaft partizipative Design- und intersektionale Methoden, um eine inklusive und gerechte KI-Zukunft aufzubauen, und welche Lektionen ergeben sich daraus für die Partizipativforschung in der KI?",
+    "methodology": "Mixed Methods: Fallstudienanalyse einer grassroots-Organisation mit Dokumentenanalyse, Mitgliederbefragungen (Likert-Skalen), Datenerhebung zu Programmauswirkungen (Scholarship-Daten), teilnehmende Beobachtung in Workshops/Sozials, reflexive Organisationsanalyse",
+    "key_finding": "Queer in AI demonstriert erfolgreiche gemeinschaftsgeführte partizipative Praktiken durch dezentrale, intersektionale Governance und zeigt sowohl Stärken (Empowerment von Marginalisierten, kulturelle Veränderung) als auch Grenzen (Reproduktion existierender Ungleichheiten, Spannungen zwischen Aktivismus und institutioneller Integration).",
+    "data_basis": "46 Umfrage-Antworten (von 160 Scholarship-Empfänger:innen), Workshop-Feedback (47% 5/5 Likert), Conference-Willkommensskala (3.38/5), 13 Workshops und 35 soziale Veranstaltungen (2017-2022) mit hunderten Teilnehmer:innen dokumentiert, Scholarship-Programm-Daten (81 Empfänger:innen 2021/22, 48 2022/23)"
+  },
+  "arguments": [
+    "Queere Menschen erleben systematische Harms durch KI-Systeme (Deadnaming, Outing, Hypervisibilität, Datenschutzverletzungen, Zensur), die klassische computationale Fairness-Ansätze nicht adressieren, da diese Queerness als bekannt, statisch und diskret konzeptualisieren.",
+    "Partizipative, gemeinschaftsgeführte Methoden können Machtungleichgewichte besser adressieren als Computational-Fairness-Techniken, besonders wenn sie dezentralisiert organisiert und intersektional ausgerichtet sind, da sie Reflexivität, Werte-Explizitheit und marginalisierte Stimmen institutionalisieren.",
+    "Queer in AI zeigt jedoch auch die Grenzen partizipativer Ansätze: Das Scholarship-Programm reproduziert globale akademische Hierarchien, die Dezentralisierung schafft Koordinationschallenges, und die Gruppe kann externe Institutionen nur bedingt verändern, wenn diese kapitalistische Profitlogiken priorisieren."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper beschreibt Queer in AI als Organisation, die Wissen und Fähigkeiten im Umgang mit KI-Systemen durch Workshops, Talks und Community-Mentorship vermittelt: 'Junior or new members of the community are often encouraged to lead these initiatives while being mentored by more experienced organizers'",
+    "KI_Sonstige": "Fokus auf algorithmic fairness, machine learning systems, automatische Gender Recognition, NLP, und allgemeine KI-Governance: 'machine learning models learn brittle, toxic representations that cause representational and allocational harms, from misgendering to healthcare discrimination'",
+    "Soziale_Arbeit": "Das Paper befasst sich mit Care-Arbeit, Community-Support und strukturellen Hindernissen für marginalisierte Gruppen, klassische Zielgruppen sozialer Arbeit: 'these organizations have worked in AI ethics, advocated against AI harms, provided long-standing venues and visibility for AI ethics research...developed community-led datasets, models, and other technology'",
+    "Bias_Ungleichheit": "Zentrale Analyse von algorithmischen Harms, Diskriminierung und struktureller Benachteiligung queerer Menschen in KI-Systemen: 'These technologies have caused numerous harms to queer people, including privacy violations, censoring and downranking queer content, exposing queer people and spaces to harassment'",
+    "Gender": "Expliziter Fokus auf Geschlechterperspektive und Gender-Bias in KI, besonders Misgendering und Gender Recognition Systeme: 'Os Keyes (2018) The misgendering machines: Trans/HCI implications of automatic gender recognition'",
+    "Diversitaet": "Intersektionale und Inklusionsperspektive mit Fokus auf queere Communities und andere marginalisierte Gruppen: 'community-led efforts from marginalized communities, each tackling issues of inequality that arise along various axes of marginalization; these include Black in AI, LatinX in AI, Women in Machine Learning, Masakhane, Widening NLP'",
+    "Feministisch": "Explizite Verwendung intersektionaler und feministischer Theorie und Methodologie: 'We call for a culture of participation in AI to address this, one that enables deep and long-term participation...Contrary to participation being controlled by the corporations and states...we argue in the favor of shifting power towards marginalized groups' - Referenzen zu D'Ignazio & Klein (Data Feminism), Crenshaw (Intersectionality)",
+    "Fairness": "Kritische Analyse von Fairness-Ansätzen und deren Limitations für queere Kontexte: 'computational techniques generally encode narrow conceptualizations of fairness where queer identities are assumed to be known, observable, measurable, discrete, and static...By locating the source of unfairness in individuals or in specific design decisions, computational approaches to fairness can reinforce existing power relations'"
+  },
+  "references": [
+    {
+      "author": "Keyes, Os",
+      "year": 2018,
+      "short_title": "The misgendering machines: Trans/HCI implications of automatic gender recognition"
+    },
+    {
+      "author": "Gray, Melissa L. & Suri, Siddharth",
+      "year": null,
+      "short_title": "Exploitative labor practices in AI systems"
+    },
+    {
+      "author": "Kalluri, Pratyusha",
+      "year": 2020,
+      "short_title": "Don't ask if artificial intelligence is good or fair, ask how it shifts power"
+    },
+    {
+      "author": "Sloane, Mona et al.",
+      "year": 2022,
+      "short_title": "Participation Is Not a Design Fix for Machine Learning"
+    },
+    {
+      "author": "Tomasev, Nenad et al.",
+      "year": 2021,
+      "short_title": "Fairness for Unobserved Characteristics: Insights from Technological Impacts on Queer Communities"
+    },
+    {
+      "author": "Scheuerman, Morgan Klaus et al.",
+      "year": 2021,
+      "short_title": "Revisiting Gendered Web Forms: An Evaluation of Gender Inputs with (Non)Binary People"
+    },
+    {
+      "author": "Perrigo, Billy",
+      "year": 2023,
+      "short_title": "OpenAI Used Kenyan Workers on Less Than $2 Per Hour to Make ChatGPT Less Toxic"
+    },
+    {
+      "author": "Suresh, Harini et al.",
+      "year": 2022,
+      "short_title": "Towards Intersectional Feminist and Participatory ML: A Case Study in Supporting Feminicide Counterdata Collection"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochgradig relevant für die Schnittstelle KI/Soziale Arbeit/Gender, da es zeigt, wie marginalisierte Communities partizipativ KI-Governance gestalten können und welche strukturellen Hürden dabei entstehen. Es verbindet kritische KI-Ethik mit Community Organizing und feministischen Organisationsprinzipien.",
+    "unique_contribution": "Das Paper leistet einen seltenen Beitrag durch die reflexive Selbstanalyse einer grassroots Organisation als Fallstudie für partizipative KI-Ethik, dabei kritisch die Limits und Widersprüche der eigenen Praktiken thematisierend (z.B. Reproduktion akademischer Hierarchien durch Scholarship-Programm).",
+    "limitations": "Das Paper basiert auf teilweise begrenzte empirische Datenerfassung (46 von 160 Befragten antwortet), hat keine Längzeitfolgestudie zu dauerhaften Auswirkungen, und die Analyse ist von den Autor:innen selbst als Insider geschrieben, was Objektivität limitiert; auch sind marginalisierte Communities aus dem Globalen Süden unterrepräsentiert."
+  },
+  "target_group": "KI-Ethiker:innen und -Forscher:innen, Sozialarbeiter:innen mit KI-Fokus, Community-Organizer:innen und Aktivist:innen, Policymaker im Tech/Diversity-Bereich, LGBTQIA+

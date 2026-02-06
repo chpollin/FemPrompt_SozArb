@@ -1,0 +1,57 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Explizite Erwähnung der fünf Leadership Strategies im Kernbefund fehlt (nur 'Five Leadership Strategies' erwähnt, aber nicht konkret benannt)",
+        "Die konkrete Struktur des Frameworks (Figure 1 und Figure 2) könnte detaillierter beschrieben sein",
+        "Die MisinfoNight-Fallstudie als praktisches Beispiel wird nicht erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minor: Die Datenbasis-Beschreibung 'keine empirische Datenerhebung' ist korrekt, könnte aber präzisieren, dass es sich um eine normativ-konzeptionelle Synthesis handelt, nicht um reine Literaturanalyse ohne partizipatives Element"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Datenschutz_Privatsphäre - sollte als primäre Kategorie ergänzt werden, da 'Data Privacy & Security' eine der sechs Hauptpraktiken ist",
+        "Ethik_KI - könnte als separate Kategorie aufgeführt werden, da 'Ethics & Impact' und 'Centering Justice' zentral sind",
+        "Medienkompetenz - wird als Related Literacy erwähnt und sollte markiert werden"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_should_add": [
+        "Datenschutz_Privatsphäre",
+        "Ethik_KI",
+        "Medienkompetenz"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Zu abstrakt; konkrete Strategie-Namen fehlen",
+        "suggestion": "Ergänzen: '...und fünf Implementierungsstrategien: (1) Adoption & Evaluation Guidance, (2) Cross-Grade Integration, (3) Just-In-Time Professional Learning, (4) Powerful Learning Design, (5) Awareness & Agency Promotion.'"
+      },
+      {
+        "section": "Methodik",
+        "issue": "Partizipatives Element unterschätzt",
+        "suggestion": "Anpassen zu: 'Theoretisch-konzeptionell: Synthese von Forschungsliteratur kombiniert mit strukturiertem Expert:innenfeedback von über 50 Reviewer:innen aus K-12 Schulen, Forschung und Non-Profits (partizipativ-konsultativer Designprozess)'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Hallucination 'LLMs generieren ohne Oversight schädliche Outputs für vulnerable Populationen' - im Original deutlicher formuliert als Warnung, nicht als empirischer Befund",
+        "suggestion": "Umformulieren zu: '...besonders bei generativen KI-Systemen, die ohne ausreichende menschliche Überwachung für vulnerable Populationen potentiell schädliche Outputs generieren können (warnt das Paper).'"
+      }
+    ]
+  }
+}

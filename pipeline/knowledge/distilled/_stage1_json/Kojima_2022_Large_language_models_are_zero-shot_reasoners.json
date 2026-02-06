@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "title": "Large Language Models are Zero-Shot Reasoners",
+    "authors": [
+      "Takeshi Kojima",
+      "Machel Reid",
+      "Yutaka Matsuo",
+      "Yusuke Iwasawa",
+      "Shixiang Shane Gu"
+    ],
+    "year": 2022,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Können große Sprachmodelle durch einfache Prompting-Techniken wie 'Let's think step by step' als Zero-Shot-Reasoner für komplexe Multi-Step-Reasoning-Aufgaben fungieren, ohne task-spezifische Few-Shot-Beispiele zu benötigen?",
+    "methodology": "Empirisch - Experimentelle Evaluierung von Zero-Shot-CoT-Prompting auf 12 Datensätzen aus vier Kategorie von Reasoning-Aufgaben mit mehreren LLM-Modellen (InstructGPT, PaLM, GPT-2, GPT-3, GPT-Neo, GPT-J, T0, OPT)",
+    "key_finding": "Ein einfaches Single-Prompt-Template ('Let's think step by step') aktiviert Multi-Step-Reasoning in großen Sprachmodellen ohne Few-Shot-Beispiele und zeigt erhebliche Leistungssteigerungen über diverse Reasoning-Aufgaben hinweg (z.B. 17.7% → 78.7% auf MultiArith), was auf bislang wenig erforschte Zero-Shot-Fähigkeiten von LLMs hindeutet.",
+    "data_basis": "Evaluierung auf 12 Benchmarks: 6 arithmetische Datensätze (SingleEq, AddSub, MultiArith, AQUA-RAT, GSM8K, SVAMP), 2 Commonsense-Datensätze (CommonsenseQA, StrategyQA), 2 symbolische Reasoning-Aufgaben (Last Letter, Coin Flip), 2 weitere logische Reasoning-Aufgaben (Date Understanding, Tracking Shuffled Objects)"
+  },
+  "arguments": [
+    "Large Language Models verfügen über fundamentale Zero-Shot-Reasoning-Fähigkeiten, die durch gezielte Prompting-Strategien aktiviert werden können, ohne dass task-spezifische Few-Shot-Beispiele erforderlich sind. Diese Fähigkeiten wurden in der Forschung bislang unterschätzt.",
+    "Das Zero-Shot-CoT-Verfahren ist universal anwendbar und task-agnostisch: Ein einziger Prompt funktioniert konsistent über arithmetische, symbolische, Commonsense- und logische Reasoning-Aufgaben hinweg, während Few-Shot-CoT-Ansätze task-spezifische Engineering benötigen.",
+    "Die Skalierungskurven von Zero-Shot-CoT nähern sich denen von Few-Shot-CoT an und verbessern sich mit Model-Größe, was darauf hindeutet, dass höherstufige kognitive Fähigkeiten (generisches logisches Reasoning) durch einfaches Prompting extrahiert werden können, ohne Finetuning oder aufwändiges Prompt-Design."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": false,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": false
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper diskutiert fundamentale Fähigkeiten und Kompetenzen im Umgang mit LLMs: 'we show that LLMs are decent zero-shot reasoners by simply adding Let's think step by step before each answer' und betont die Wichtigkeit, 'zero-shot knowledge hidden inside LLMs' zu verstehen.",
+    "Generative_KI": "Fokus auf große vortrainierte Sprachmodelle (LLMs) wie GPT-3, InstructGPT und PaLM: 'Pretrained large language models (LLMs) are widely used in many sub-fields of natural language processing (NLP)'",
+    "Prompting": "Zentrale Methodik ist Chain-of-Thought-Prompting und Zero-Shot-Prompting: 'Zero-shot-CoT, using the same single prompt template' und 'simply adding Let's think step by step before each answer'",
+    "KI_Sonstige": "Das Paper behandelt NLP, Reasoning-Aufgaben, In-Context-Learning und Skalierungsgesetze von Sprachmodellen, die über generatives Prompting hinausgehen"
+  },
+  "references": [
+    {
+      "author": "Wei et al.",
+      "year": 2022,
+      "short_title": "Chain of Thought Prompting"
+    },
+    {
+      "author": "Brown et al.",
+      "year": 2020,
+      "short_title": "Language Models are Few-Shot Learners (GPT-3)"
+    },
+    {
+      "author": "Chowdhery et al.",
+      "year": 2022,
+      "short_title": "PaLM: Scaling Language Modeling with Pathways"
+    },
+    {
+      "author": "Liu et al.",
+      "year": 2021,
+      "short_title": "Pre-train, Prompt, and Predict"
+    },
+    {
+      "author": "Vaswani et al.",
+      "year": 2017,
+      "short_title": "Attention is All You Need"
+    },
+    {
+      "author": "Devlin et al.",
+      "year": 2019,
+      "short_title": "BERT: Pre-training of Deep Bidirectional Transformers"
+    },
+    {
+      "author": "Raffel et al.",
+      "year": 2020,
+      "short_title": "Exploring the Limits of Transfer Learning with Unified Text-to-Text Transformer"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2022,
+      "short_title": "Self-Consistency Improves Chain of Thought Reasoning"
+    },
+    {
+      "author": "Stanovich and West",
+      "year": 2000,
+      "short_title": "System 1 and System 2 Thinking"
+    },
+    {
+      "author": "Srivastava et al.",
+      "year": 2022,
+      "short_title": "Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist primär ein Beitrag zur KI/NLP-Forschung mit Fokus auf Prompting-Engineering und hat keine direkte Relevanz für die Schnittstelle zwischen KI und Sozialer Arbeit oder Gender Studies. Es adressiert technische Aspekte von Sprachmodellen, nicht deren soziale Implikationen oder Anwendungen in sozialen Kontexten.",
+    "unique_contribution": "Die bahnbrechende Erkenntnis, dass einfaches Zero-Shot-Prompting ('Let's think step by step') mit großen Sprachmodellen für komplexes Multi-Step-Reasoning funktioniert, ohne task-spezifische Exemplare zu benötigen, wird mit umfangreichen empirischen Evidenzen auf 12 Benchmarks und mehreren Modellen untermauert.",
+    "limitations": "Das Paper konzentriert sich ausschließlich auf technische Leistungsmessungen und adressiert nicht die potentiellen negativen Auswirkungen, Bias oder Fairness-Probleme der evaluierten LLMs; es fehlt auch eine kritische Reflexion über die sozialen oder ethischen Implikationen der Technologie."
+  },
+  "target_group": "Primär KI-Forscher, NLP-Praktiker, Machine-Learning-Ingenieure und Entwickler, die mit großen Sprachmodellen arbeiten; sekundär Technologie-Manager und Policy-Maker im AI-Bereich. Nicht direkt relevant für Sozialarbeiter, Gender-Forscher oder kritische Technologie-Studien ohne zusätzliche Kontextualisierung."
+}

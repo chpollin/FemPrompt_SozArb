@@ -1,0 +1,60 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Ergebnisse aus den drei Workshops (Health/Body Scanner, Digital Legal Guardian, Sunshine Room) nicht ausführlich in 'Hauptargumente' dargestellt",
+        "Begriff 'discursive closure' (Markham 2021) wird erwähnt, aber nicht präzise als zentrale Limitation der partizipativen Methode erklärt",
+        "Unterschiede zwischen den drei Workshop-Kontexten (Bristol, Bremen, Graz) in Methodologie/Ergebnissen nicht systematisch reflektiert"
+      ],
+      "missing_minor": [
+        "Co-Facilitators erwähnt aber nicht namentlich in Methodologie",
+        "Rolle des 'Thing from the Future' Card Game vs. Futures Wheel Activity könnte differenzierter sein"
+      ]
+    },
+    "correctness": {
+      "score": 93,
+      "errors": [],
+      "distortions": [
+        "Formulierung 'ca. 30-50 Teilnehmende insgesamt' ist leicht impräzise: Bristol 20, Bremen 5, Graz 6 Teilnehmende = 31 insgesamt, nicht 30-50 Range notwendig",
+        "Charakterisierung der Teilnehmendenzahl in Graz: '11 Teilnehmende' ist nicht explizit im Original genannt (nur 'six older adults, three civil servants and two community organisers' = 11, aber diese Summe sollte transparent sein)"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Speculative Design / Design Fiction könnte als separate Kategorie sichtbar sein (sehr zentral für Methodologie)",
+        "Partizipatorische/Demokratische Governance-Ansätze könnten expliziter ausgewiesen sein"
+      ]
+    }
+  },
+  "overall_confidence": 91,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "processed": "2026-02-05 sollte auf 2025 oder Konversionsdatum abgestimmt werden - inkonsistent mit source_file date von 2025"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Teilnehmendenzahl-Präzision",
+        "original": "Design Fiction Workshops mit ca. 30-50 Teilnehmenden (20 in Bristol, 5 in Bremen, 11 in Graz)",
+        "corrected": "Design Fiction Workshops mit insgesamt 31 Teilnehmenden (20 in Bristol, 5 in Bremen, 6 älteren Erwachsenen + 3 Beamten + 2 Community-Organisierenden in Graz)",
+        "severity": "minor"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Spezifische Workshop-Ergebnisse unterbeleuchtet",
+        "suggestion": "Health/Body Scanner, Digital Legal Guardian und Sunshine Room als konkrete Beispiele stärker in die Diskussion der Limitationen partizipativer Futuring integrieren - zeigen, wie 'discursive closure' sich manifestiert",
+        "severity": "minor"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Speculative Design fehlt",
+        "suggestion": "Sollte ergänzt werden: 'Speculative_Design / Design_Fiction' als Kategorie mit Evidenz: 'Thing from the Future card game, design fiction workshops as methods to imagine otherwise'",
+        "severity": "minor"
+      }
+    ]
+  }
+}

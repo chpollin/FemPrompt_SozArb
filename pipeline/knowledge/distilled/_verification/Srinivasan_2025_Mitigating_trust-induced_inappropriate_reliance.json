@@ -1,0 +1,63 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Erfolgskennzahlen: '38% reduction' und '20% improvement' werden zitiert, aber die Baseline nicht explizit im Kernbefund verglichen",
+        "Unterscheidung zwischen 'calibrated' und 'overconfident' AI-Assistenten in der Methodologie unterrepräsentiert",
+        "Die drei Experiment-Settings (ArcC, ArcO, DiagC) werden erwähnt, aber nicht systematisch differenziert",
+        "Trust-Update-Mechanismus (0-10 Skala nach jedem Trial) könnte expliziter in der Methodik beschrieben sein"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [],
+      "distortions": [
+        "Minor: Stichprobengröße 'ca. 1800+ Nutzer-KI-Interaktionen' ist geschätzt; exakte Zahl aus Original: 60 Nutzer × 30 Probleme = 1800 Interaktionen aus ARC-Tasks + 20 Ärzte × 30 = 600 Diagnose-Interaktionen = ~2400, also Unterschätzung",
+        "Die Aussage 'medizinische Diagnosen' sollte präzisiert sein als 'Diagnosen basierend auf Patienteninterview/DDXPlus-Dataset'"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Human-Computer Interaction (HCI) – zentral für das Paper, nicht kategorisiert",
+        "Explainability/Interpretability – supporting und counter-explanations sind zentrale Interventionen",
+        "Decision Support Systems – medialer Kontext des Papers",
+        "Cognitive Biases – 'miscalibrated trust' wird als kognitiver Bias explizit definiert"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_to_add": [
+        "HCI",
+        "Explainability",
+        "Decision_Support",
+        "Cognitive_Biases"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik – Datenbasis",
+        "original": "insgesamt ca. 1800+ Nutzer-KI-Interaktionen",
+        "corrected": "insgesamt ca. 2400 Nutzer-KI-Interaktionen (60 Nutzer × 30 Probleme ARC + 20 Ärzte × 30 Probleme Diagnose + 75 zusätzliche Sessions für Appendix D Analysen)",
+        "severity": "minor"
+      },
+      {
+        "section": "Methodologie",
+        "original": "zwei Entscheidungsaufgaben (ARC-Wissensfragen, medizinische Diagnosen)",
+        "corrected": "zwei Entscheidungsaufgaben: (1) ARC-Wissensfragen (zwei Optionen), (2) medizinische Diagnosen aus DDXPlus-Dataset (vier Diagnose-Optionen basierend auf Patienten-Intake-Formularen)",
+        "severity": "minor"
+      },
+      {
+        "section": "Hauptargumente",
+        "addition": "Spezifizierung der Quantifizierung: Bei Ärzten zeigt sich Over-Reliance bei hohem Vertrauen mit 26% falscher Akzeptanz vs. 8% bei niedrigem Vertrauen; Under-Reliance manifestiert sich als 68% Ablehnung korrekter Diagnosen bei niedrigem vs. 40% bei höherem Vertrauen.",
+        "severity": "minor"
+      }
+    ]
+  }
+}

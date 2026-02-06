@@ -1,0 +1,57 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Publikationsdatum (March 19, 2024) im Journal PNAS Nexus nicht explizit erwähnt",
+        "Finanzierungsquellen (SSHRC Postdoctoral Fellowship, Rand Innovation Fund, Hodgson Innovation Fund, NIST grant) nicht aufgeführt",
+        "Institutionelle Zugehörigkeit der Co-Autoren (Harvard, University of Washington) nicht dokumentiert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: Formulierung 'geschlechtsspezifische Befunde wie Überrepräsentation weiblicher positiver Traits bei Wohlstand' könnte missverständlich sein - das Paper zeigt eher, dass Wohlstand das Geschlecht in der Stereotypisierung überlagert, nicht dass Frauen bei Wohlstand überrepräsentiert sind"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Intersectionality_Theory - sollte explizit als Kategorie aufgeführt werden, da die Studie Intersektionalitätstheorie zentral mit KI-Analyse verbindet"
+      ]
+    }
+  },
+  "overall_confidence": 94,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "journal": "PNAS Nexus",
+      "publication_date": "2024-03-19",
+      "doi": "https://academic.oup.com/pnasnexus/article/3/3/pgae089/7626925",
+      "authors_affiliations": [
+        "Tessa Charlesworth (Northwestern University, Kellogg School of Management)",
+        "Kshitish Ghate (Harvard University)",
+        "Aylin Caliskan (University of Washington)",
+        "Mahzarin R. Banaji (Harvard University)"
+      ],
+      "funding": "SSHRC Postdoctoral Fellowship, Rand Innovation Fund (Harvard Department of Psychology), Hodgson Innovation Fund (Harvard Department of Psychology), NIST grant"
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Präzisierung der Klasseneffekt-Aussage",
+        "current": "Wohlhabende Identitäten werden unabhängig von Rasse und Geschlecht mit 78% positiven Traits assoziiert",
+        "corrected": "78% der Traits, die mit 'reich und weiß' assoziiert sind, sind positiv; nur 21% der Traits, die mit 'arm und schwarz' assoziiert sind, sind positiv - demonstriert Klasse als übergeordneter Faktor"
+      },
+      {
+        "section": "categories",
+        "issue": "Fehlende Kategorie",
+        "current": "Intersectionality_Theory nicht aufgeführt",
+        "proposed_addition": "Intersectionality_Theory sollte hinzugefügt werden neben bestehenden Kategorien"
+      }
+    ]
+  }
+}

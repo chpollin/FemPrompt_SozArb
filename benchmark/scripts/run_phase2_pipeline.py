@@ -306,7 +306,7 @@ cost: ${cost:.4f}
 def main():
     parser = argparse.ArgumentParser(description='Phase 2 Pipeline: PDF -> Markdown -> Summaries')
     parser.add_argument('--input', required=True, help='LLM assessment CSV/Excel with Include papers')
-    parser.add_argument('--zotero', default='analysis/zotero_vereinfacht.json',
+    parser.add_argument('--zotero', default='corpus/zotero_export.json',
                        help='Zotero JSON with full metadata')
     parser.add_argument('--output-dir', default='benchmark/data/phase2_test',
                        help='Output directory for all pipeline outputs')

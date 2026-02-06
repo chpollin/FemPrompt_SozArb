@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "title": "Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes",
+    "authors": [
+      "Isabel O. Gallegos",
+      "Ryan Aponte",
+      "Ryan A. Rossi",
+      "Joe Barrow",
+      "Md Mehrab Tanjim",
+      "Tong Yu",
+      "Hanieh Deilamsalehy",
+      "Ruiyi Zhang",
+      "Sungchul Kim",
+      "Franck Dernoncourt",
+      "Nedim Lipka",
+      "Deonna Owens",
+      "Jiuxiang Gu"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Können Large Language Models durch Zero-Shot-Techniken ohne Modifikation ihrer Parameter oder Trainingsdaten dazu gebracht werden, ihre Stereotypen selbst zu erkennen und zu reduzieren?",
+    "methodology": "Empirisch: Zwei Zero-Shot-Prompting-Techniken (Self-Debiasing via Explanation und Self-Debiasing via Reprompting) evaluiert mit dem BBQ-Datensatz über 15.556 Fragen zu neun sozialen Gruppen; Bias-Score-Messung und Bootstrap-Konfidenzintervalle",
+    "key_finding": "Both self-debiasing techniques significantly reduce stereotyping across nine diverse social groups (age, disability, gender identity, nationality, physical appearance, race/ethnicity, religion, sexual orientation, socioeconomic status), with reprompting showing the greatest bias reduction while relying only on simple prompts and the LLM itself.",
+    "data_basis": "n=15.556 ambiguous questions from the Bias Benchmark for Question Answering (BBQ), tested on GPT-3.5 Turbo, with additional validation on GPT-4o mini and LLaMA-3-8B-Instruct"
+  },
+  "arguments": [
+    "Bestehende Bias-Mitigationstechniken erfordern häufig Zugriff auf Trainingsparameter, Trainingsdaten oder spezialisierte Decodierungsalgorithmen, was in Praktiken mit Black-Box-Modellen nicht umsetzbar ist; Zero-Shot-Self-Debiasing bietet eine zugängliche Alternative für breite Anwendung.",
+    "Large Language Models besitzen die Fähigkeit, durch einfache Prompting-Strategien ihre eigenen stereotypischen Annahmen zu erkennen und zu korrigieren, ohne dass externe Modifikationen notwendig sind.",
+    "Die Effektivität der Self-Debiasing-Techniken variiert nach sozialen Gruppen, mit besonders starken Ergebnissen bei Reprompting, was auf unterschiedliche Grade von Stereotypisierung in den Trainingsdaten hindeutet und die Notwendigkeit differenzierter Ansätze unterstreicht."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": false,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper befasst sich mit Zero-Shot-Capabilities von LLMs und wie Nutzer durch Prompting-Strategien KI-Systeme für Bias-Reduktion adaptieren können: 'we leverage the zero-shot capabilities of LLMs to reduce stereotyping'",
+    "Generative_KI": "Fokus auf Large Language Models und deren Fähigkeit zur Stereotypenreduktion: 'Large language models (LLMs) have shown remarkable advances in language generation and understanding but are also prone to exhibiting harmful social biases'",
+    "Prompting": "Zentrale Methodologie basiert auf Prompt-Engineering durch zwei Techniken: 'self-debiasing via explanation and self-debiasing via reprompting, we show that self-debiasing can significantly reduce the degree of stereotyping'",
+    "Bias_Ungleichheit": "Expliziter Fokus auf soziale Biases und Stereotypisierung über neun soziale Gruppen: 'We refer to this class of harms as social bias, a normative term that characterizes disparate representations, treatments, or outcomes between social groups due to historical and structural power imbalances'",
+    "Diversitaet": "Evaluation über neun diverse soziale Gruppen zur Gewährleistung von Repräsentation: 'We select BBQ for its breadth across nine social groups: age, disability, gender identity, nationality, physical appearance, race/ethnicity, religion, sexual orientation, and socioeconomic status'",
+    "Fairness": "Fokus auf Reduktion von Bias und faire Modellverhalten gemessen durch Bias-Scores: 'we demonstrate self-debiasing's ability to decrease stereotyping in question-answering over nine different social groups with a single prompt'"
+  },
+  "references": [
+    {
+      "author": "Parrish et al.",
+      "year": 2022,
+      "short_title": "BBQ: A hand-built bias benchmark for question answering"
+    },
+    {
+      "author": "Bender et al.",
+      "year": 2021,
+      "short_title": "On the Dangers of Stochastic Parrots"
+    },
+    {
+      "author": "Hutchinson et al.",
+      "year": 2020,
+      "short_title": "Social biases in NLP models as barriers for persons with disabilities"
+    },
+    {
+      "author": "Sheng et al.",
+      "year": 2021,
+      "short_title": "Societal biases in language generation: Progress and challenges"
+    },
+    {
+      "author": "Wei et al.",
+      "year": 2022,
+      "short_title": "Chain-of-thought prompting elicits reasoning in large language models"
+    },
+    {
+      "author": "Kojima et al.",
+      "year": 2022,
+      "short_title": "Large language models are zero-shot reasoners"
+    },
+    {
+      "author": "Schick et al.",
+      "year": 2021,
+      "short_title": "Self-diagnosis and self-debiasing: A proposal for reducing corpus-based bias in NLP"
+    },
+    {
+      "author": "Weidinger et al.",
+      "year": 2022,
+      "short_title": "Taxonomy of risks posed by language models"
+    },
+    {
+      "author": "Chen et al.",
+      "year": 2024,
+      "short_title": "Debiasing prompts for large language models"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat begrenzte direkte Relevanz für Soziale Arbeit, adressiert aber kritische Fragen der Algorithmengerechtigkeitund Diskriminierungsvermeidung, die für sozialarbeiterische Systeme (insbesondere bei der Nutzung von KI-gestützten Entscheidungshilfen in Beratung, Fallmanagement oder Ressourcenallokation) zunehmend relevant werden.",
+    "unique_contribution": "Die Arbeit bietet eine praktische, zugängliche Methode zur Bias-Reduktion in Black-Box-LLMs ohne technische Modifikationen, durch einfache Prompting-Strategien, was die Skalierbarkeit und Anwendbarkeit von Bias-Mitigationen erheblich erhöht.",
+    "limitations": "Das Paper konzentriert sich ausschließlich auf GPT-3.5 Turbo als Hauptmodell mit begrenzterer Validierung auf anderen Modellen; es untersucht nur Bias in englischsprachigen Frage-Antwort-Szenarien und adressiert nicht, wie sich diese Techniken auf andere Aufgaben oder Sprachen übertragen; die Dauerhaftigkeit der Bias-Reduktion über mehrere Interaktionen wird nicht untersucht."
+  },
+  "target_group": "KI-Entwickler und MLOps-Teams, die mit Black-Box-LLM-Systemen arbeiten; Policy-Maker und Governance-Fachleute im Bereich algorithmische Fairness; NLP-Forscher und AI-Ethik-Fachleute; potenziell auch Sozialarbeiter, die KI-Systeme in ihrer Praxis einsetzen oder evaluieren"
+}

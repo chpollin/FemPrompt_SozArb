@@ -1,0 +1,53 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Explizite Erwähnung der Rolle der Competence Centre on the Future of Work als Issuing Department nicht im Kernbefund",
+        "ISBN und Publikationsnummer (978-3-98628-690-3) nicht dokumentiert",
+        "Verantwortung für Inhalte (Dr. Inga Sabanova) nicht erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minimale semantische Verschiebung: Der Original-Summary erwähnt 'women with disabilities', das generierte Dokument schreibt 'women of colour and women with disabilities' - die Reihenfolge ist neu akzentuiert, aber nicht falsch"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Menschenrechte (werden implizit behandelt, verdienen aber eigene Kategorisierung)",
+        "Regulierung/Policy (centrales Thema, könnte expliziter sein)",
+        "Intersektionalität (wird intensiv behandelt, sollte möglicherweise als separate Kategorie existieren)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggested_addition": "organization: Friedrich-Ebert-Stiftung\ncompetence_centre: Competence Centre on the Future of Work\nISBN: 978-3-98628-690-3\nresponsible_editor: Dr. Inga Sabanova"
+    },
+    "content_fixes": [
+      {
+        "section": "Kategorie-Evidenz",
+        "type": "suggestion",
+        "text": "Könnte erweitert werden um explizite Kategorie 'Menschenrechte' mit Bezug auf GDPR, ECHR, CEDAW und UN-Konventionen, die mehrfach im Original genannt werden"
+      },
+      {
+        "section": "Hauptargumente",
+        "type": "clarification",
+        "text": "Der vierte Punkt könnte präzisiert werden: 'GIA (Gender Impact Assessment)' sollte als Acronym explizit definiert werden, da dies eine zentrale Empfehlung darstellt"
+      },
+      {
+        "section": "Target Group",
+        "type": "enhancement",
+        "text": "Könnte ergänzt werden: 'Institutionen der EU-Governance und Normalisierungsorganisationen (CEN-CENELEC, ESOs, NSBs)' - wird implizit adressiert, sollte aber expliziter sein"
+      }
+    ]
+  }
+}

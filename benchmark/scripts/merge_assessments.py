@@ -7,11 +7,9 @@ zusammen fuer die Benchmark-Analyse.
 
 Usage:
     python merge_assessments.py \
-        --human ../../assessment/human/results/latest.csv \
-        --agent ../../assessment/agent/results/latest.csv \
+        --human ../data/human_assessment.csv \
+        --agent ../data/llm_assessment.csv \
         --output ../data/merged_comparison.csv
-
-Note: --agent is accepted as alias for --agent for backwards compatibility.
 """
 
 import argparse

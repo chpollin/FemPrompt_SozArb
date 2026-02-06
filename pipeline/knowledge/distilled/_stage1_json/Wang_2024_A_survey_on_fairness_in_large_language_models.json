@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "title": "A Survey on Fairness in Large Language Models",
+    "authors": [
+      "Yingji Li",
+      "Mengnan Du",
+      "Rui Song",
+      "Xin Wang",
+      "Ying Wang"
+    ],
+    "year": 2024,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können Bias und Fairness in Large Language Models verschiedener Größen und Trainingsparadigmen systematisch evaluiert und adressiert werden?",
+    "methodology": "Review/Survey - systematische Literaturanalyse und Klassifizierung von Forschung zu Fairness in LLMs, organisiert nach Modellgröße und Trainingsparadigma (Pre-training/Fine-tuning vs. Prompting)",
+    "key_finding": "Der Survey zeigt, dass Fairness-Forschung in LLMs je nach Modellgröße und Trainingsparadigma unterschiedliche Ansätze erfordert: Medium-sized LLMs benötigen intrinsische und extrinsische Debiasing-Methoden, während Large-sized LLMs im Prompting-Paradigma neue Evaluations- und Debiasing-Strategien brauchen.",
+    "data_basis": "Literaturbasiert - keine primäre Datenerhebung; umfangreiche Referenzliste mit Arbeiten zu Bias-Evaluierung und Debiasing in LLMs"
+  },
+  "arguments": [
+    "LLMs erfassen gesellschaftliche Vorurteile aus unkurierten Trainingsdaten und propagieren diese in nachgelagerte Aufgaben, was diskriminierende Entscheidungen gegen marginalisierte Gruppen zur Folge hat (z.B. geschlechtsspezifische Verzerrungen bei Lebenslauf-Filterung, rassistische Bias in medizinischen Systemen).",
+    "Die Unterscheidung zwischen intrinsischen Bias (in den Representationen des Pre-trained Models) und extrinsischen Bias (in downstream-Task-Outputs) ist zentral für die Entwicklung differenzierter Evaluations- und Debiasing-Methoden in Medium-sized LLMs.",
+    "Große LLMs im Prompting-Paradigma zeigen unterschiedliche Bias-Manifestationen als Medium-sized Modelle und erfordern neue Evaluationsstrategien (z.B. demographische Repräsentation, stereotype Assoziationen, counterfactual fairness, Performance Disparities), um ihre Fairness zu bewerten."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Der Survey bietet umfassendes Wissen und technisches Verständnis für die Bewertung und Mitigation von Bias in LLMs: 'we provide a comprehensive review of related research on fairness in LLMs'",
+    "Generative_KI": "Fokus auf Large Language Models wie BERT, GPT-3, GPT-4, LLaMA, ChatGPT und deren Bias-Probleme: 'Large Language Models (LLMs), such as BERT, GPT-3, and LLaMA, have shown powerful performance'",
+    "Prompting": "Ausführliche Behandlung des Prompting-Paradigmas und Prompt-basierter Evaluationsmethoden: 'the prompting paradigm replaces the pre-training and fine-tuning paradigm as a more suitable learning strategy for large models'",
+    "KI_Sonstige": "Behandlung von NLP, Pre-trained Language Models, und klassischen ML-Bias-Konzepten: 'Social bias in language models can be defined as the assumption by the model that a person has a certain characteristic'",
+    "Bias_Ungleichheit": "Zentrale Thematisierung von Diskriminierung und algorithmischem Bias: 'Unfair LLM systems make discriminatory, stereotypic and demeaning decisions against vulnerable or marginalized demographics, causing undesirable social impacts and potential harms'",
+    "Gender": "Explizite Behandlung von Geschlechter-Bias in LLMs mit konkreten Beispielen: 'GPT-3 is found to associate males with higher levels of education and greater occupational competence' und 'automatic resume filtering systems can be gender-biased, which tend to assign programmer jobs to men and homemaker jobs to women'",
+    "Diversitaet": "Behandlung marginalisierter Gruppen und ihrer Repräsentation: 'gender, race, religion, age, sexuality, country, disease' als social sensitive topics und Analyse von Bias gegen verschiedene demografische Gruppen",
+    "Fairness": "Kernfokus des gesamten Surveys auf algorithmische Fairness, Fairness-Metriken und Debiasing-Methoden: 'The key to fairness in NLP is the presence of social biases in language models' sowie Behandlung von Metriken wie Statistical Parity, Equal Opportunity, Equalized Odds"
+  },
+  "references": [
+    {
+      "author": "Brown et al.",
+      "year": 2020,
+      "short_title": "Language Models are Few-Shot Learners (GPT-3)"
+    },
+    {
+      "author": "Bolukbasi et al.",
+      "year": 2016,
+      "short_title": "Man is to Computer Programmer as Woman is to Homemaker"
+    },
+    {
+      "author": "Abid et al.",
+      "year": 2021,
+      "short_title": "Persistent anti-muslim bias in large language models"
+    },
+    {
+      "author": "Liang et al.",
+      "year": 2022,
+      "short_title": "Holistic Evaluation of Language Models (HELM)"
+    },
+    {
+      "author": "Parrish et al.",
+      "year": 2021,
+      "short_title": "Towards Debiasing Language Models at Scale"
+    },
+    {
+      "author": "Santy et al.",
+      "year": 2023,
+      "short_title": "NLPositionality: Characterizing design biases of datasets and models"
+    },
+    {
+      "author": "Wang et al.",
+      "year": 2023,
+      "short_title": "DecodingTrust: A comprehensive assessment of trustworthiness in GPT models"
+    },
+    {
+      "author": "Gallegos et al.",
+      "year": 2023,
+      "short_title": "Bias and Fairness in Large Language Models (vorherige Survey)"
+    },
+    {
+      "author": "Ouyang et al.",
+      "year": 2022,
+      "short_title": "Training language models to follow instructions with human feedback"
+    },
+    {
+      "author": "Ravfogel et al.",
+      "year": 2022,
+      "short_title": "Linear Adversarial Concept Erasure"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für die Schnittstelle KI und Ungleichheit, insbesondere hinsichtlich struktureller Diskriminierung durch algorithmische Systeme. Es bietet however wenig direkten Bezug zu Sozialer Arbeit als Praxis oder zu konkreten Anwendungen in sozialarbeiterischen Kontexten.",
+    "unique_contribution": "Der Survey bietet eine neuartige, differenzierte Klassifizierung von Fairness-Forschung basierend auf Modellgröße und Trainingsparadigma, was eine präzisere und strukturiertere Übersicht bietet als bisherige breitere Surveys zu Fairness in KI.",
+    "limitations": "Der Survey ist stark technisch-algorithmisch ausgerichtet und adressiert wenig sozialwissenschaftliche oder normativ-philosophische Dimensionen von Fairness; zudem wird die fehlende explizite feministische Perspektive trotz Gender-Fokus nicht reflektiert."
+  },
+  "target_group": "KI-Entwickler, NLP-Forscher, Informatiker, Data Scientists, Fairness-Spezialisten, Policymaker im Bereich KI-Regulierung, sowie Fachkräfte in High-Stakes-Anwendungen (Justiz, Healthcare, Finance) die mit LLMs arbeiten"
+}

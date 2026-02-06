@@ -1,0 +1,50 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Metriken (Entropy, Max-Gap) könnten detaillierter erklärt werden",
+        "Die vier Schritte der CCSV-Methode (Initial Response, Critique, Address-critique, Voting) könnten expliziter aufgelistet werden",
+        "Ablation Study Ergebnisse nur kurz zusammengefasst"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": []
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/Responsible_AI könnte als zusätzliche Kategorie erwogen werden (Ethics Statement und Responsible AI sind prominent)",
+        "NLP könnte explizit hinzugefügt werden (primär Text Generation fokussiert)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Kategorien um 'Ethik' oder 'Responsible_AI' erweitern, z.B.: categories: [..., 'Ethik', 'Responsible_AI']"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Metriken könnten präziser benannt werden",
+        "suggestion": "Ergänze: 'Metriken: Entropy (Shannon-Entropie), Max-Gap (maximale Repräsentationslücke zwischen Gruppen)'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "CCSV-Methodenschritte könnten strukturierter dargestellt werden",
+        "suggestion": "Explizite Auflistung der 4 Schritte: 1) Initial Response, 2) Collective Critique (multiple Dekodierungen), 3) Address-critique & Rewrite, 4) Self-voting auf beste Revision"
+      },
+      {
+        "section": "Categories",
+        "issue": "Verantwortungsethik unterrepräsentiert",
+        "suggestion": "Kategorie 'Ethik' oder 'Responsible_AI' hinzufügen, da das Paper explizit 'from a responsibility perspective' argumentiert und eigene 'Ethics Statement' enthält"
+      }
+    ]
+  }
+}

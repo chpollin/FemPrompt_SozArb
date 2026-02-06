@@ -1,0 +1,60 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Explizite Nennung der mathematischen Formeln in der Zusammenfassung fehlt - nur konzeptionell erwähnt",
+        "Die fünf Hauptkaviate (i-v) des Papers werden nicht vollständig in Kernbefund/Hauptargumenten abgebildet",
+        "Empirische Validierungspläne sind erwähnt, aber nicht prominent dargestellt"
+      ],
+      "missing_minor": [
+        "EU AI Act und CEN-CENELEC Standards als regulatorischer Kontext könnten stärker hervorgehoben sein",
+        "Die Rolle der 'Uncanniness' (Uncanny Valley) als Konzept wird erwähnt, aber nicht integriert",
+        "Spezifische Anwendungsbeispiele (Roboter Wasser gießen) könnten als Veranschaulichung erwähnt sein"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Geringfügig: Die Klassifikation als 'conferencePaper' ist inkorrekt - das Original ist ein Journal/Konferenzbeitrag mit DOI-Struktur (keine explizite Klassifizierung im Original gegeben, aber 'PDF article' wäre präziser)"
+      ],
+      "distortions": [
+        "Die Darstellung von Persönlichkeitszügen als 'mediating Faktoren' ist korrekt, könnte aber präziser als 'moderating' oder 'mediating individual differences' dargestellt sein",
+        "Die Aussage zur 'epistemologischen Problematik' der Intrinsic/Perceived-Dichotomie wird korrekt wiedergegeben, könnte aber als zentraler diskutiert sein"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Algorithmic Accountability / Explainability - das Paper behandelt XAI-Aspekte (Transparenz, Explanations) substanziell, dies wird unter AI_Literacies subsumiert, verdient aber explizitere Nennung",
+        "Human-AI Collaboration / Human-Centered AI - die Diskussion von Human Oversight und menschlichen Faktoren ist zentral für diese Kategorie"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "type": "Vorschlag: 'journal' oder 'research_article' statt 'conferencePaper'",
+      "categories_expansion": "Erwägen Sie Hinzunahme von: 'Explainability_Interpretability', 'Human_AI_Interaction'"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Könnte expliziter machen, dass empirische Validierung ausstehend ist",
+        "suggestion": "Ergänzen: 'Experimentale Validierung der Hypothesen ist für zukünftige Arbeiten geplant und wird die Manipulation von Transparenz, Agency Locus und Human Oversight untersuchen.'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Die Limitationen (sieben Kaviate) sind nicht in Hauptargumenten reflektiert",
+        "suggestion": "Punkt hinzufügen: 'Das Modell ist begrenzt auf statische, dyadische Interaktionen und berücksichtigt nicht ausreichend sozioteknische, institutionelle und kulturelle Faktoren sowie die dynamische Natur von Vertrauen über Zeit.'"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Domain Fit zu Sozialer Arbeit könnte präziser motiviert sein",
+        "suggestion": "Konkrete Szenarien benennen: 'z.B. Algorithmen für Hilfebedarf-Assessment, Fallmanagement-Systeme, Risiko-Prediction-Tools'"
+      }
+    ]
+  }
+}

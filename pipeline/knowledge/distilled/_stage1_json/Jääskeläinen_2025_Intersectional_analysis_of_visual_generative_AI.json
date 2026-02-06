@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
+    "authors": [
+      "Petra Jääskeläinen",
+      "Nickhil Kumar Sharma",
+      "Helen Pallett",
+      "Cecilia Åsberg"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie werden verschiedene soziale Kategorien ästhetisch in Stable Diffusion-generierten Bildern dargestellt, wie perpetuieren institutionelle Strukturen Marginalisierung, und wie intersektieren sich Machtsysteme wie Rassismus, Kolonialismus und Kapitalismus in diesen visuellen Repräsentationen?",
+    "methodology": "Empirisch-qualitativ: Visuelle intersektionale Analyse von 180 mit Stable Diffusion generierten Bildern kombiniert mit Literaturanalyse und Review von Online-Quellen. Interpretative Bildanalyse auf drei Ebenen (Mikro: Ästhetik, Meso: institutionelle Kontexte, Makro: Machtsysteme).",
+    "key_finding": "Stable Diffusion perpetuiert systematisch bestehende Machtstrukturen (Sexismus, Rassismus, Heteronormativität, Ableismus) durch die Annahme eines standardisierten Individuums als weiß, nicht-behindert und maskulin präsentierend. Die Technologie reproduziert kontinuierlich schädliche Bilder durch ihre Euro- und Nordamerika-zentrische kulturelle Ausrichtung.",
+    "data_basis": "180 Stable Diffusion-generierte Bilder, systematisch über Prompts für verschiedene soziale Kategorien (Profession, politische Ideologie, kultureller Hintergrund, alltägliche Szenen) generiert"
+  },
+  "arguments": [
+    "Visuelle Generative-AI-Systeme sind nicht kulturell oder ästhetisch neutral, sondern spiegeln und verstärken gesellschaftliche Machtverhältnisse durch ihre trainierten Daten und Designentscheidungen, die primär von westlichen Institutionen geprägt sind.",
+    "Die intersektionale Analyse zeigt, dass Repräsentation oft nur entlang einer einzelnen Achse variiert wird (z.B. Hautfarbe), während komplexe Intersektionen (z.B. Frauen of Color als Feministen) systematisch ausgelassen werden und damit bestehende Ungleichheiten verstärken.",
+    "Algorithmic Bias in vGenAI resultiert aus spezifischen institutionellen Kontexten, kapitalistischen Märkten und der Geschwindigkeit der Technologieentwicklung ohne ethische Kontrolle, was eine reparative und gerechtigkeitsorientierte Neugestaltung dieser Systeme erfordert."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "Fokus auf Stable Diffusion (SD), ein visuelles generatives KI-Tool: 'Visual Generative AI (vGenAI) tools have experienced rapid adoption' und detaillierte Analyse von SDXL-generierten Bildern.",
+    "Prompting": "Systematische Prompt-basierte Bildgenerierung: 'We observe that altering the contextual prompts for images only led to superficial changes' sowie durchgehende Analyse von Prompts wie 'A color photograph of a conservative', 'A color photograph of a feminist'.",
+    "KI_Sonstige": "Einbettung in breitere KI-Kritik: 'These technologies mirror society's prevailing visual politics' und Bezüge zu Computer Vision und algorithmischen Entscheidungssystemen.",
+    "Bias_Ungleichheit": "Zentrale Analyse von algorithmischem Bias und struktureller Benachteiligung: 'demonstrate how imagery produced through SD perpetuates pre-existing power systems such as sexism, racism, heteronormativity, and ableism' sowie 'assumes a default individual as white, able-bodied, and masculine-presenting'.",
+    "Gender": "Expliziter Gender-Fokus: Analyse von Geschlechterrepräsentationen in Berufen ('heteronormative masculine representations were significantly overrepresented' in CEOs), Feminismus (ausschließlich feminine Darstellungen) und Heteronormativität.",
+    "Diversitaet": "Intersektionale Perspektive auf Repräsentation marginalisierter Gruppen: 'SD inadvertently excludes specific representations of individuals, such as wealthy people of color, economically disadvantaged white individuals' und Analyse von Inklusion/Exklusion verschiedener Communities.",
+    "Feministisch": "Explizite Nutzung feministischer Theorie und Methodik: 'draws primarily from feminist Science and Technology Studies (STS)' (Wajcman, D'Ignazio & Klein), 'intersectional critical theory' (Crenshaw), 'feminist media and visual cultural studies' (Hall, Evans). Konzepte wie 'coded gaze' (vom Konzept 'male gaze' abgeleitet) und 'reparative and social justice-oriented approach'.",
+    "Fairness": "Fairness in generativen KI-Systemen: 'lack of transparency and fairness', Analyse von algorithmischer Gerechtigkeit in Bildrepräsentation und Forderung nach 'reparative approaches that aim to symbolically and materially mend injustices'."
+  },
+  "references": [
+    {
+      "author": "Benjamin",
+      "year": 2019,
+      "short_title": "Race After Technology"
+    },
+    {
+      "author": "Buolamwini",
+      "year": 2019,
+      "short_title": "Gender Shades / Coded Gaze"
+    },
+    {
+      "author": "Crenshaw",
+      "year": 1989,
+      "short_title": "Demarginalizing the Intersection of Race and Sex"
+    },
+    {
+      "author": "D'Ignazio & Klein",
+      "year": 2020,
+      "short_title": "Data Feminism"
+    },
+    {
+      "author": "Bender et al.",
+      "year": 2021,
+      "short_title": "On the Dangers of Stochastic Parrots"
+    },
+    {
+      "author": "Hall",
+      "year": 1997,
+      "short_title": "The Spectacle of the Other"
+    },
+    {
+      "author": "Wajcman",
+      "year": 2010,
+      "short_title": "Feminist Theories of Technology"
+    },
+    {
+      "author": "Sturken & Cartwright",
+      "year": 2017,
+      "short_title": "Practices of Looking"
+    },
+    {
+      "author": "Luccioni et al.",
+      "year": 2023,
+      "short_title": "Stable Bias: Analyzing Societal Representations in Diffusion Models"
+    },
+    {
+      "author": "Gorska & Jemielniak",
+      "year": 2023,
+      "short_title": "The Invisible Women: Uncovering Gender Bias in AI-Generated Images"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle KI und Gender/Diversität. Die intersektionale Analyse von visueller generativer KI verbindet kritische KI-Forschung mit feministischen Science and Technology Studies und adressiert strukturelle Ungleichheiten, die für kritisch orientierte Soziale Arbeit zentral sind. Weniger direkt zur klassischen Sozialen Arbeit, aber relevant für deren ethische und gerechtigkeitsorientierte Dimensionen.",
+    "unique_contribution": "Erste empirisch basierte intersektionale Analyse von Stable Diffusion mit Fokus auf die Verschränkung von Machtsystemen (Rassismus, Sexismus, Kolonialismus, Kapitalismus) auf Mikro-, Meso- und Makro-Ebene und Vorschlag eines reparativen, gerechtigkeitsorientierten Ansatzes für vGenAI.",
+    "limitations": "Fokus primär auf visuelle Ästhetik und Bildrepräsentation ohne quantitative Metriken oder großangelegte Frequenzanalyse; Analyse konzentriert sich auf SDXL und möglicherweise nicht vollständig auf andere vGenAI-Systeme übertragbar; keine direkten Interviews mit Nutzer:innen oder Entwickler:innen zur subjektiven Bedeutungsherstellung."
+  },
+  "target_group": "KI-Forscher:innen mit kritischem Fokus, Entwickler:innen von generativen AI-Systemen, Policymaker im Bereich AI-Regulierung, feministische Wissenschaftler:innen, Kunstschaffende und Kreative, Vertreter:innen der Sozialen Arbeit mit Schwerpunkt auf Gerechtigkeit und Inklusion, Aktivist:innen und Organisationen, die sich mit Repräsentation und Diskriminierung auseinandersetzen"
+}

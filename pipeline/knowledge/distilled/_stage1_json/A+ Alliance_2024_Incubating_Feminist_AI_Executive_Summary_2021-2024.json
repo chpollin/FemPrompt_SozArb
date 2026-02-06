@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "title": "Incubating Feminist AI: Executive Summary 2021-2024",
+    "authors": [
+      "A+ Alliance",
+      "f<a+i>r Feminist AI Research Network"
+    ],
+    "year": 2024,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können feministische KI-Ansätze und automatisierte Entscheidungssysteme konkret und positiv auf soziale/Geschlechtergerechtigkeit wirken, die Lebensqualität verbessern und historische Ausschlüsse korrigieren?",
+    "methodology": "Mixed-Methoden: Multidisziplinäre Teams, Design Justice Prinzipien, Community Engagement, Paper-Prototype-Pilot Methodik, partizipative Technologiegestaltung, regionale Hubs in Lateinamerika, Südostasien und MENA",
+    "key_finding": "Das f<a+i>r Netzwerk hat über 2021-2024 nachgewiesen, dass eine kombinierte Strategie aus Forschung, Prototyping und Pilotierung mit echter Community-Beteiligung zu transformativen KI-Anwendungen führt, die Geschlechtergerechtigkeit, Sicherheit und Zugang zu Justiz für marginalisierte Gruppen verbessern.",
+    "data_basis": "9 Stand-Alone Papers, 4 Paper-zu-Prototype Projekte, 5 vollständige Paper-Prototype-Pilot Projekte aus 10 Ländern (Argentinien, Brasilien, Chile, Ekuador, Ägypten, Indien, Indonesien, Mexiko, Philippinen, Thailand)"
+  },
+  "arguments": [
+    "Feministische KI muss von Grund auf mit Inklusion als Kernprinzip gestaltet werden und sollte nicht nur Gewalt bekämpfen, sondern neue Chancen für marginalisierte Communities schaffen, insbesondere Frauen und Mädchen als gleichberechtigte Partner in Entscheidungsfindung und Werkzeugentwicklung.",
+    "Echte Community-Beteiligung ist unverzichtbar für die Entwicklung wirksamer KI-Systeme; multidisziplinäre Teams von Technolog:innen, Sozialwissenschaftler:innen und Community-Vertreter:innen können transformative Lösungen co-kreieren, die tatsächliche Bedürfnisse marginalisierter Gruppen erfüllen.",
+    "Regionale Hubs in der Globalen Süd sind entscheidend für die Vertiefung von feministischem KI-Denken und -Praxis und für die Schaffung vernetzter Lösungen, die lokale Kontexte und unterschiedliche epistemologische Traditionen berücksichtigen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Workshops für neue Grantees zu intersektionalen, feministischen Themen; Training von KI-Entwickler:innen in feministischen Prinzipien; AI & Equality Human Rights Toolbox, Course & Community als Bildungsangebot.",
+    "Generative_KI": "SOF+IA: GenAI chatbot zur Dialogue und Bewältigung von Gewalt und digitaler Belästigung gegen Frauen auf Social-Media-Plattformen.",
+    "KI_Sonstige": "Natural Language Processing für Bias-Erkennung (E.D.I.A.); Annotierte Korpora (Work Related Diseases); automatisierte Datenextraktion (AymurAI); AI-gesteuerte Mobilitäts-Apps (SafeHER); Machine Learning für Tutoring-Systeme.",
+    "Soziale_Arbeit": "Projekte zu Gewaltprävention (SafeHER Transit Safety, SOF+IA gegen digitale Gewalt), Kinderehen-Prävention (Indonesien), Menschenhandel (ASEAN), Integration mit sozialen Diensten und Justizinstitutionen, Unterstützung für Gewaltüberlebende durch technische Lösungen.",
+    "Bias_Ungleichheit": "E.D.I.A. zur Identifikation von Bias und Stereotypen in NLP; Analyse von Geschlechterperspektiven in öffentlicher Beschaffung; Auseinandersetzung mit algorithmischem Bias durch intersektionale Analyse; Fokus auf historische Ausschlüsse marginalisierter Gruppen.",
+    "Gender": "Gesamtnetzwerk fokussiert auf Geschlechtergerechtigkeit; spezifische Projekte zu Frauensicherheit im Transit, geschlechtsspezifischer Gewalt, geschlechtsspezifischen Stereotypen in Sprachtechnologie, Arbeitskrankheiten und Geschlechtsdifferenzen.",
+    "Diversitaet": "Explizite Fokussierung auf Frauen, Mädchen und marginalisierte Gemeinschaften; intersektionale Analysen (E.D.I.A. berücksichtigt mehrere binäre Dimensionen); regionale Hubs in Global South; Community-zentrierte Methoden; Einbeziehung der am stärksten Benachteiligten.",
+    "Feministisch": "Netzwerk ist explizit als 'Feminist AI Research Network' strukturiert; verwendet feministische Prinzipien (Gender Justice, JEDI - Justice, Equity, Diversity, Inclusion); Design Justice Prinzipien; Referenzen zu Gender-transformativen Ansätzen; feministische Epistemologien und intersektionale feministische Theorien als Grundlage.",
+    "Fairness": "Ziel ist es, Gleichheitsergebnisse (equality outcomes) zu liefern; Fokus auf Fairness in automatisierten Entscheidungssystemen (ADM); Transparenz in der Justiz (AymurAI); Equity-zentierte Designs; Korrekturen für historische Ungleichheiten und Ausschlüsse."
+  },
+  "references": [
+    {
+      "author": "Biana, H.T., Jabar, M., Yabut, H. and Domingo, R.",
+      "year": 2023,
+      "short_title": "Modified feminist self-defense: violence against women in transit in Metro Manila"
+    },
+    {
+      "author": "Alemany, L.A., Benotti, L., Maina, H., Gonzalez, L., Martinez, L., Busaniche, B., Halvorsen, A., Rojo, A. and Rajngewerc, M.",
+      "year": 2023,
+      "short_title": "Bias assessment for experts in discrimination, not in computer science"
+    },
+    {
+      "author": "Soudi, M., Ali, E., Bali, M. and Mabrouk, N.",
+      "year": 2023,
+      "short_title": "Generative AI-Based Tutoring System for Upper Egypt Community Schools"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2024,
+      "short_title": "Global toolkit on AI and the rule of law for the judiciary"
+    },
+    {
+      "author": "A+ Alliance",
+      "year": 2019,
+      "short_title": "Declaration for Affirmative Action for Algorithms"
+    },
+    {
+      "author": "Women at the Table & Ciudadania Inteligente",
+      "year": 2019,
+      "short_title": "Co-founding of A+ Alliance"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Außergewöhnlich relevant für die Schnittstelle von KI, Sozialer Arbeit und Gender Studies. Das Paper dokumentiert konkrete, implementierte Projekte, die KI-Systeme zu sozialer und Geschlechtergerechtigkeit einsetzen und verbindet technische Innovation mit sozialarbeiterischen Praxisfeldern und feministischen Ansätzen.",
+    "unique_contribution": "Der einzigartige Beitrag liegt in der systematischen, multi-regionalen Dokumentation des Paper-Prototype-Pilot-Ansatzes zur Entwicklung von feministischer KI mit echter Community-Partizipation, die nachweist, dass regionale, dezentralisierte Ansätze in der Globalen Süd transformative Lösungen für strukturelle Ungleichheiten schaffen können.",
+    "limitations": "Das Dokument ist ein Executive Summary, das eher einen Überblick über Prozesse und Outcomes bietet als detaillierte methodische Validierung oder kritische Analyse von Fehlern und Grenzen der Projekte; quantitative Evaluationsergebnisse und vergleichbare Metriken zur Wirksamkeit fehlen."
+  },
+  "target_group": "Multidisziplinär adressiert: KI-Entwickler:innen und Informatiker:innen (zur Schulung in feministischen Prinzipien), Sozialarbeiter:innen und Sozialwissenschaftler:innen (zur Integration von KI in Praxis), Feminist:innen und Gender-Forscher:innen (zur Anwendung feministischer Theorie in Tech), Policymaker:innen und Justizinstitutionen (zur Implementierung von Systemen), Aktivist:innen und civil society Organisationen (zur Community-Partizipation), Geldgeber:innen und Philanthropien (zur Finanzierung transformativer Ansätze)"
+}

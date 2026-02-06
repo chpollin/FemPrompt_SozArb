@@ -1,0 +1,50 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Two-stage prompting mechanism (1st prompt: reasoning extraction, 2nd prompt: answer extraction) nicht explizit in Kernbefund erwähnt",
+        "Answer Cleansing Parser-Details nicht erfasst",
+        "Vergleich mit Few-shot-CoT Sensitivität gegenüber Prompt-Mismatches könnte prominenter sein"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Minimal: 'Assessment-Relevanz' Sektion behandelt 'Domain Fit' als nicht relevant für Soziale Arbeit/Gender Studies - dies ist korrekt, aber die originale Arbeit adressiert dies gar nicht, daher ist diese Bewertung eine Hinzufügung, keine Verzerrung des Originals"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "KI_Ethik - Das Paper diskutiert begrenzt ethische Aspekte, aber die Limitation Section erwähnt explizit das Fehlen von Bias/Fairness-Diskussion, was auf eine fehlende Kategorie hindeutet",
+        "Reasoning_und_Logik - Könnte als spezifischere Kategorie neben KI_Sonstige hinzugefügt werden"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Two-stage prompting wird nicht erwähnt",
+        "suggestion": "Ergänzen: 'Two-stage prompting: 1) Reasoning extraction mit Trigger 'Let's think step by step', 2) Answer extraction mit task-spezifischen Answer-Triggern'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "KI_Ethik fehlt als Kategorie",
+        "suggestion": "Hinzufügen: '### KI_Ethik\\nDas Paper adressiert explizit das Fehlen von Bias-, Fairness- und ethischer Analyse als Limitation und fordert kritischere Reflexion über Implikationen großer Sprachmodelle.'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Two-stage Prompting Mechanik nicht erwähnt",
+        "suggestion": "Ergänzen in Arg. 1: 'Das Zero-Shot-CoT-Verfahren nutzt einen zweistufigen Ansatz: erste Prompting für Reasoning-Extraktion, zweite für Answer-Extraktion aus dem generierten Reasoning-Pfad.'"
+      }
+    ]
+  }
+}

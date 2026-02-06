@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "title": "A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway",
+    "authors": [
+      "Hyunkyung Chee",
+      "Solmoe Ahn",
+      "Jihyun Lee"
+    ],
+    "year": 2025,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Was sind die wesentlichen Kompetenzen und Sub-Kompetenzen eines AI-Literacy-Rahmens, wie variieren diese je nach Bildungsstufe und Disziplin, und welcher mögliche Lernpfad ermöglicht die Entwicklung von AI-Literacy vom K-12 bis zur Arbeitswelt?",
+    "methodology": "Systematische Literaturübersicht nach PRISMA 2020-Richtlinien; Durchsuchung von Web of Science, Scopus und ScienceDirect (Januar 2012 - Oktober 2024); Qualitätsbewertung mit QualSyst; Synthese von 29 Studien",
+    "key_finding": "Entwicklung eines umfassenden AI-Literacy-Kompetenzrahmens mit 8 Kompetenzen und 18 Sub-Kompetenzen, die sich je nach Bildungsstufe (K-12, Hochschule, Arbeitswelt) und Disziplin systematisch unterscheiden und zu einem Lernpfad über die Lebensspanne führen.",
+    "data_basis": "29 systematisch identifizierte und analysierte Studien aus drei wissenschaftlichen Datenbanken (Web of Science, Scopus, ScienceDirect)"
+  },
+  "arguments": [
+    "AI-Literacy ist ein übergreifendes Konzept, das sich vom technischen Verständnis zu kritischer Reflexion, ethischer Bewusstsein und verantwortungsvoller Anwendung entwickelt hat, analog zu früheren Literacies (Computerliteracy, ICT-Literacy, Digital Literacy).",
+    "Unterschiedliche Lerngruppen erfordern differenzierte Kompetenzschwerpunkte: K-12 fokussiert auf Grundwissen und Ethik, Hochschule auf Datenverständnis und Problemlösung, Arbeitswelt auf Anwendung und Validierung von AI-Ergebnissen.",
+    "Ein systematischer Lernpfad vom K-12 über Hochschule bis zur Arbeitswelt ist notwendig, um Einzelne zur kritischen, strategischen und ethisch verantwortungsvollen Integration von AI zu befähigen statt nur oberflächliche Anwendungskompetenzen zu vermitteln."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Zentral: 'AI literacy as a comprehensive set of competencies enabling individuals to critically evaluate AI technologies, effectively communicate and collaborate with AI, and utilize AI as a tool in various settings'. Framework umfasst 8 Kompetenzen und 18 Sub-Kompetenzen als Basis für AI-Curriculumentwicklung.",
+    "KI_Sonstige": "Behandlung klassischer KI-Themen wie Machine Learning, Algorithmen, Datenverarbeitung, Robotik und algorithmische Entscheidungssysteme als integraler Bestandteile der AI-Literacy-Kompetenzen.",
+    "Bias_Ungleichheit": "Expliziter Fokus auf Unterschiede zwischen Lerngruppen: 'How do these competencies vary by educational level and discipline?' mit Implikation für gleichberechtigten Zugang zu AI-Bildung über alle Bevölkerungsschichten.",
+    "Diversitaet": "Framework berücksichtigt explizit 'different learner groups (by educational level and discipline)' und adressiert Variationen in Anforderungen für K-12, Hochschule, Arbeitswelt und verschiedene Berufsfelder (Healthcare, Engineering, etc.).",
+    "Fairness": "Implikation für faire Chancenverteilung durch systematische AI-Literacy-Entwicklung: 'Policies are needed to support a systematic pathway for lifelong AI literacy development' zur Gewährleistung, dass alle Bevölkerungsgruppen Zugang zu AI-Kompetenzen erhalten."
+  },
+  "references": [
+    {
+      "author": "Long & Magerko",
+      "year": 2020,
+      "short_title": "What is AI literacy? Competencies and design considerations"
+    },
+    {
+      "author": "Ng et al.",
+      "year": 2021,
+      "short_title": "Conceptualizing AI literacy: An exploratory review"
+    },
+    {
+      "author": "Frey & Osborne",
+      "year": 2017,
+      "short_title": "The future of employment: How susceptible are jobs to computerisation?"
+    },
+    {
+      "author": "Holmes et al.",
+      "year": 2019,
+      "short_title": "Artificial intelligence in education: Promises and Implications for Teaching and Learning"
+    },
+    {
+      "author": "Kukulska-Hulme et al.",
+      "year": 2020,
+      "short_title": "Education for AI and education with AI: A framework for understanding the role of AI in education"
+    },
+    {
+      "author": "World Economic Forum",
+      "year": 2018,
+      "short_title": "The future of jobs report 2018"
+    },
+    {
+      "author": "European Commission",
+      "year": 2019,
+      "short_title": "AI and education research"
+    },
+    {
+      "author": "Miao et al.",
+      "year": 2021,
+      "short_title": "AI and education: A guidance for policymakers"
+    },
+    {
+      "author": "Huang",
+      "year": 2021,
+      "short_title": "Aims for cultivating students' key competencies based on artificial intelligence education in China"
+    },
+    {
+      "author": "Almatrafi et al.",
+      "year": 2024,
+      "short_title": "AI literacy competencies framework"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist hochrelevant für Bildungspolicy und Curriculum-Design bei AI-Integration. Die Fokussierung auf Kompetenzvariationen nach Bildungsstufe und Disziplin adressiert Chancenungleichheit in AI-Literacy, hat aber keinen direkten Bezug zu Sozialer Arbeit als Profession oder zu feministischen Perspektiven.",
+    "unique_contribution": "Erste umfassende systematische Übersicht, die AI-Literacy-Kompetenzen über alle Bildungsstufen (K-16) und Disziplinen integriert und einen expliziten Lernpfad vorschlägt statt fragmentierter Einzelstudien.",
+    "limitations": "Geographischer Bias durch Fokus auf englischsprachige Datenbanken; keine Untersuchung von Geschlechterdimensionen oder intersektionalen Faktoren; begrenzte Analyse struktureller Barrieren für marginalisierte Gruppen beim Zugang zu AI-Bildung."
+  },
+  "target_group": "Policymaker im Bildungsbereich, Curriculum-Designer, Lehrkräfte, Hochschuldozenten, Arbeitgebende, Bildungsforschende; sekundär relevant für Sozialarbeiter in der Jugendhilfe und Beratung, die AI-Literacy als Schlüsselkompetenz vermitteln möchten"
+}

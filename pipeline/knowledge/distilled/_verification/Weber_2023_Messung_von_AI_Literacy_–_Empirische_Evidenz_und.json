@@ -1,0 +1,74 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Trennschärfe-Ergebnisse (>0,8) aus Onlinestichprobe-Studie nicht erwähnt",
+        "Detaillierte Ergebnisse der Quadranten-Analyse (Socio User, Technical User, etc.) nur für Unikurs-Studie erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 88,
+      "errors": [
+        "Mann-Whitney U p-Wert: Original gibt 'p = 0,076; beidseitig' an, wird aber als 'statistisch signifikant' interpretiert - bei α=0,05 ist p=0,076 NICHT signifikant auf konventionellem Niveau (marginaler Befund)"
+      ],
+      "distortions": [
+        "Kernbefund formuliert 'diskriminiert erfolgreich zwischen verschiedenen Populationen' - dies ist zu stark für p=0,076, sollte als 'marginal signifikant' oder 'Trend' beschrieben werden"
+      ]
+    },
+    "category_validation": {
+      "score": 78,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Education/Bildung - expliziter Fokus auf Bildungskontext (KI-Schlüsselkompetenzkurs, Universitätskurs), nicht adäquat abgebildet",
+        "Digital_Divide/Digital_Inequality - sollte eigenständige Kategorie sein anstatt unter Bias_Ungleichheit subsuiert"
+      ],
+      "category_issues": [
+        "Gender-Kategorie: Mit 'aber keine explizite geschlechterspezifische Analyse' selbst dokumentiert, dass Gender-Daten erfasst aber nicht analysiert wurden - sollte eher unter 'nicht adressiert' fallen, nicht als eigenständige Kategorie mit Inhalten gelistet",
+        "Diversitaet-Kategorie: Zu breit und unspezifisch; unterscheidet nicht zwischen erfasster vs. analysierter Diversität"
+      ]
+    }
+  },
+  "overall_confidence": 86,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories": {
+        "current": [
+          "AI_Literacies",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Gender",
+          "Diversitaet"
+        ],
+        "suggested": [
+          "AI_Literacies",
+          "KI_Sonstige",
+          "Digital_Divide",
+          "Education"
+        ]
+      }
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Statistische Signifikanz überstate",
+        "current": "Das entwickelte 25-Item-Messinstrument diskriminiert erfolgreich zwischen verschiedenen Populationen",
+        "suggested": "Das entwickelte 25-Item-Messinstrument zeigt einen marginalen Trend zur Diskriminierung zwischen Populationen mit/ohne IT-Hintergrund (p=0,076, n=88), mit objektiver AI Literacy von 31,3% (mit IT) vs. 27,5% (ohne IT)"
+      },
+      {
+        "section": "Kategorie-Evidenz / Gender",
+        "issue": "Widerspruch zwischen Kategorienzuweisung und Dokumentation",
+        "current": "Geschlechterverteilung in den Stichproben erfasst... aber keine explizite geschlechterspezifische Analyse oder Diskussion",
+        "suggested": "Geschlechterverteilung erfasst aber nicht analysiert. Gender-spezifische Unterschiede in AI Literacy werden nicht untersucht."
+      },
+      {
+        "section": "Methodik",
+        "issue": "Stichprobengröße für Zentralbank-Studie relativieren",
+        "current": "Zentralbank (n=17 Manager)",
+        "suggested": "Zentralbank (n=17 Manager, sehr kleine Stichprobe)"
+      }
+    ]
+  }
+}

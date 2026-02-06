@@ -1,0 +1,45 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Nutzerzahlen oder Verbreitungsgrad von KI in KMU nicht erwähnt",
+        "Konkrete Kosten oder ROI-Analysen für KI-Implementierung nicht behandelt",
+        "Detaillierte rechtliche Rahmenbedingungen (DSGVO, KI-Verordnung) nur kurz angerissen"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Sehr kleine Distortion: Das 'KI-FAIRNESS-Framework' wird im generierten Dokument als zentral dargestellt, ist aber im Original als 'Fair KI-Prompting Strategien' in Kapitel 5.2 präsentiert - die Bezeichnung 'KI-FAIRNESS-Framework' ist eine Interpretation/Abstraktion, nicht wörtlich im Original"
+      ]
+    },
+    "category_validation": {
+      "score": 96,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/KI_Ethik könnte als zusätzliche Kategorie erwähnt werden (wird im Original behandelt, z.B. 'ethischen Herausforderungen schärfen', Kapitel 4.6 KI-Governance)",
+        "KMU_Spezifik könnte als Kategorie hinzugefügt werden (ist Fokusgruppe des Leitfadens)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "KI_Ethik",
+        "KMU_Spezifik"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kategorie-Evidenz / Prompting",
+        "issue": "Framework-Bezeichnung präzisieren",
+        "suggestion": "Klarstellung hinzufügen: 'Das Framework wird im Original als Strategien zu 'Faire KI-Prompting Strategien' präsentiert und abstrahiert hier als KI-FAIRNESS-Framework bezeichnet (Akronym basierend auf: Kontext, Input, Fokus, Ausschnitt, Iterationen, Repertoire, Nachbessern, Eignung, Sprache, Sinn)'"
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Distributed Representations of Words and Phrases and their Compositionality",
+    "authors": [
+      "Tomas Mikolov",
+      "Ilya Sutskever",
+      "Greg Corrado",
+      "Kai Chen",
+      "Jeffrey Dean"
+    ],
+    "year": 2013,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können hochwertige verteilte Vektorrepräsentationen von Wörtern und Phrasen effizient gelernt werden, und wie lassen sich diese Repräsentationen für analoges Denken und semantische Komposition nutzen?",
+    "methodology": "Empirisch: Skip-Gram Modell mit Verbesserungen (Negative Sampling, Subsampling), Training auf 1-33 Milliarden Wörtern aus News-Korpora, Evaluation durch Analogie-Reasoning-Tasks",
+    "key_finding": "Der verbesserte Skip-Gram mit Negative Sampling und Subsampling ermöglicht effiziente Trainingsprozesse bei gleichzeitiger Verbesserung der Vektorqualität; Phrase-Vektoren können präzise analoges Denken ermöglichen und Vektoren zeigen additive Zusammensetzungsstrukturen.",
+    "data_basis": "Interne Google News-Datensätze: 1 Milliarde Wörter (Wortvektoren), 33 Milliarden Wörter (Phrase-Modell); Analogie-Testsets: Word Analogies, Phrase Analogies mit 3218 Beispielen"
+  },
+  "arguments": [
+    "Das Skip-Gram Modell mit Negative Sampling übertrifft Hierarchical Softmax und Noise Contrastive Estimation bei der Erfassung syntaktischer und semantischer Wortbeziehungen mit 2-10x Beschleunigung durch Subsampling häufiger Wörter.",
+    "Phrasen als einzelne Tokens zu behandeln ermöglicht die Darstellung idiomatischer Ausdrücke, deren Bedeutung nicht einfach aus Komponenten zusammensetzbar ist (z.B. 'Air Canada' vs. Komposition von 'Air' und 'Canada').",
+    "Vektorrepräsentationen zeigen lineare Struktur, die intuitive arithmetische Operationen erlaubt: vec('Russia') + vec('river') ≈ vec('Volga River'), was auf implizite Vercodierung von Kontextverteilungen hindeutet."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": false,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": false
+  },
+  "category_evidence": {
+    "KI_Sonstige": "Paper behandelt Natural Language Processing, Word Embeddings, Skip-Gram Modell, Negative Sampling und neuronale Sprachmodelle als Kernthemen klassischen Machine Learning für NLP-Aufgaben."
+  },
+  "references": [
+    {
+      "author": "Mikolov et al.",
+      "year": 2013,
+      "short_title": "Efficient estimation of word representations in vector space"
+    },
+    {
+      "author": "Mikolov et al.",
+      "year": 2013,
+      "short_title": "Linguistic Regularities in Continuous Space Word Representations"
+    },
+    {
+      "author": "Gutmann & Hyvärinen",
+      "year": 2012,
+      "short_title": "Noise-contrastive estimation of unnormalized statistical models"
+    },
+    {
+      "author": "Mnih & Hinton",
+      "year": 2009,
+      "short_title": "A scalable hierarchical distributed language model"
+    },
+    {
+      "author": "Morin & Bengio",
+      "year": 2005,
+      "short_title": "Hierarchical probabilistic neural network language model"
+    },
+    {
+      "author": "Bengio et al.",
+      "year": 2003,
+      "short_title": "A neural probabilistic language model"
+    },
+    {
+      "author": "Collobert & Weston",
+      "year": 2008,
+      "short_title": "A unified architecture for natural language processing: deep neural networks with multitask learning"
+    },
+    {
+      "author": "Rumelhart, Hinton & Williams",
+      "year": 1986,
+      "short_title": "Learning representations by backpropagating errors"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat KEINE direkte Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender Studies. Es ist eine rein technische Arbeit zur Optimierung von Wort-Embeddings ohne normative oder sozialwissenschaftliche Perspektive.",
+    "unique_contribution": "Einführung von Negative Sampling als effiziente Alternative zu Hierarchical Softmax und systematische Demonstration, dass Phrase-Vektoren idiomatische Bedeutungen erfassen können, mit erheblichen Effizienzgewinnen im Training.",
+    "limitations": "Keine Analyse von Bias, Fairness oder Diskriminierung in Wortrepräsentationen; keine Diskussion von sozialen Auswirkungen oder ethischen Implikationen der Wort-Embeddings; rein technische Fokussierung auf Performance-Metriken."
+  },
+  "target_group": "Computerlinguisten, Machine Learning Ingenieure, NLP-Entwickler, Forscher in neuronalen Sprachmodellen; NICHT relevant für Sozialarbeiter, Sozialwissenschaftler oder Gender Studies-Forscher"
+}

@@ -1,0 +1,49 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Explizite Nennung der FAccT '22 Konferenz (nur im Originaltext erwähnt)",
+        "Die spezifischen Datensätze (Casual Conversations, OpenImages MIAP, UTK-Faces) könnten präziser in der Methodologie eingeführt werden",
+        "Begrenzter Bezug zu den Ablationsstudien bezüglich Model Capacity in der Kernbefund-Zusammenfassung"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Sehr minor: Der Kernbefund vereinfacht die differenzierten Findings zu SSL leicht - der Originaltext zeigt auch, dass SSL-ImageNet oft besser als SSL-Instagram bei harmful labels ist, was in der Kernzusammenfassung unterrepräsentiert ist"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Algorithmen/Modellarchitekturen könnte als separaten Punkt hinzugefügt werden (ResNet, RegNet, Vision Transformers werden erwähnt)",
+        "Intersektionalität könnte explizit als Kategorie aufgelistet sein (wird implizit abgedeckt durch Gender/Diversität, aber Originaltext betont gender × skintone Analysen wiederholt)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Zusätzliche Kategorie hinzufügen: 'Intersektionalitaet' (wird im Text mehrfach erwähnt: 'gender × skintone', intersektionale Analysen)"
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Zu vereinfacht bezüglich SSL-Ergebnisse",
+        "original": "Self-Supervised Learning auf großen, diversen Internetdatensätzen (z.B. Instagram mit 1 Milliarde Bildern) führt zu deutlich besseren Fairness-Ergebnissen als Supervised Learning auf ImageNet",
+        "suggested": "Self-Supervised Learning auf großen, diversen Internetdatensätzen (z.B. Instagram mit 1 Milliarde Bildern) führt zu deutlich besseren Fairness-Ergebnissen für harmful label associations und geographische Disparitäten; bei anderen Metriken zeigt sich ein differenzierteres Bild, wobei SSL-ImageNet oft für harmful labels am besten abschneidet"
+      },
+      {
+        "section": "Kategorie-Evidenz - Diversitaet",
+        "issue": "Intersektionalität nicht explizit erwähnt",
+        "original": "Fokus auf Repräsentation verschiedener Gruppen: 'sensitive groups defined by demographic attributes', 'marginalized groups such as immigrants', Analyse nach Hautton (Fitzpatrick scale), Geschlecht, Alter, geografischer Region, Einkommensgruppe, und intersektionale Analysen (gender × skintone).",
+        "suggested": "Präzisierung: Paper führt systematische intersektionale Analysen durch, insbesondere gender × skintone Kombinationen, was zeigt, dass 'female darker' Gruppen am meisten leiden (z.B. 10 Punkte Unterschied bei precision@10)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "title": "The steerability of large language models toward data-driven personas",
+    "authors": [
+      "Junyi Li",
+      "Charith Peris",
+      "Ninareh Mehrabi",
+      "Palash Goyal",
+      "Kai-Wei Chang",
+      "Aram Galstyan",
+      "Richard Zemel",
+      "Rahul Gupta"
+    ],
+    "year": 2024,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können große Sprachmodelle durch datengesteuerte Personas, die auf kollaborativem Filtern basieren, besser gesteuert werden, um diverse Meinungen und unterrepräsentierte Gruppen abzubilden?",
+    "methodology": "Empirisch - Machine Learning / NLP mit kollaborativem Filtern zur Persona-Generierung, Soft-Prompting-Modell (SPM) zur LLM-Steuerung, Evaluation mit OpinionQA-Dataset",
+    "key_finding": "Datengesteuerte Personas, die durch kollaboratives Filtern definiert werden, ermöglichen eine 57-77% bessere Steuerung von LLMs gegenüber Baseline-Methoden und erfassen nuanciertere soziale Gruppen als demografische Merkmale allein.",
+    "data_basis": "OpinionQA-Dataset mit 18.339 Teilnehmenden, 1.476 Multiple-Choice-Fragen zu 23 verschiedenen Themen; evaluiert auf GPT-Neo-1.3B, GPT-Neo-2.7B, GPT-j-6B und Falcon-7B-Instruct"
+  },
+  "arguments": [
+    "Traditionale demografische Merkmale (Alter, Geschlecht, Parteiaffinität) sind unzureichend zur Abbildung der Vielfalt von Meinungen innerhalb und zwischen Gruppen; datengesteuerte Personas bieten eine nuanciertere Segmentierung basierend auf tatsächlichen Meinungsmustern.",
+    "Kollaboratives Filtern ermöglicht die Projektion individueller Meinungsprofile in einen kontinuierlichen Einbettungsraum, was differenzierte Kontrollierbarkeit von LLMs ermöglicht und Bias-Verstärkung durch unterrepräsentierte Gruppen reduziert.",
+    "Ein Single Soft-Prompting-Modell, das Persona-Embeddings in virtuelle Tokens für Prefix-Tuning abbildet, ist kosteneffizient und performant, da ähnliche Personas analoge Meinungen teilen und mit ähnlichen Token-Sequenzen steuerbar sind."
+  ],
+  "categories": {
+    "AI_Literacies": false,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "Generative_KI": "The paper focuses on steering Large Language Models (LLMs) and uses 'soft-prompting model (SPM) which maps the embedding of a persona to a set of virtual tokens' for controllable generation.",
+    "Prompting": "Virtual tokens are 'prepended before tokens mapping to the actual input text, to steer the responses of the LLMs' using prefix-tuning and prompt-tuning techniques.",
+    "KI_Sonstige": "Uses collaborative filtering, a classical machine learning technique, to embed individuals into continuous vector space based on opinion responses.",
+    "Bias_Ungleichheit": "LLMs are known to 'generate biased responses where the opinions of certain groups and populations are underrepresented' and 'Santurkar et al. (2023) showed that LLMs under-represent the opinions of individuals aged 65 and over, Mormons, and the widowed.'",
+    "Diversitaet": "The approach aims to 'produce multiple perspectives and to reflect the diverse opinions' and 'encourage diversity through the curated inclusion of a broad spectrum of viewpoints' as well as 'diminishing polarization and preventing the marginalization of the voices of minority groups.'",
+    "Fairness": "The paper addresses fairness through controllable generation that 'can be leveraged to produce multiple perspectives in a balanced way' and proposes methods to align LLMs more equitably with diverse population segments rather than reinforcing majority opinions."
+  },
+  "references": [
+    {
+      "author": "Santurkar et al.",
+      "year": 2023,
+      "short_title": "Alignment of LLM opinions with U.S. demographic groups (OpinionQA)"
+    },
+    {
+      "author": "Hwang et al.",
+      "year": 2023,
+      "short_title": "Aligning language models to user opinions"
+    },
+    {
+      "author": "Brown et al.",
+      "year": 2020,
+      "short_title": "Language Models are Few-Shot Learners (GPT-3)"
+    },
+    {
+      "author": "Li and Liang",
+      "year": 2021,
+      "short_title": "Prefix-Tuning: Optimizing continuous prompts for generation"
+    },
+    {
+      "author": "Lester et al.",
+      "year": 2021,
+      "short_title": "The Power of Scale for Parameter-Efficient Prompt Tuning"
+    },
+    {
+      "author": "Hu et al.",
+      "year": 2021,
+      "short_title": "LoRA: Low-Rank Adaptation of Large Language Models"
+    },
+    {
+      "author": "Durmus et al.",
+      "year": 2023,
+      "short_title": "Towards measuring the representation of subjective global opinions in language models"
+    },
+    {
+      "author": "Argyle et al.",
+      "year": 2023,
+      "short_title": "Out of one, many: Using language models to simulate human samples"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper ist relevant für KI-Governance und Fairness, hat aber keinen direkten Bezug zu Sozialer Arbeit. Es adressiert jedoch zentrale Fragen von Bias, Repräsentation und Marginalisierung, die für sozialarbeiterische KI-Anwendungen wichtig sind.",
+    "unique_contribution": "Der Beitrag liegt in der erstmaligen Anwendung von kollaborativem Filtern zur Generierung datengestützter Personas für LLM-Steuerung, was eine nuanciertere und nicht-demografische Segmentierung von Bevölkerungsgruppen ermöglicht.",
+    "limitations": "Das Paper selbst nennt Limitationen: Abhängigkeit vom QA-Format für kollaboratives Filtern, Evaluation nur auf einem Dataset (OpinionQA), Test nur mit Prefix- und Prompt-Tuning (nicht mit LoRA oder anderen PEFT-Methoden); keine Diskussion möglicher Verstärkung von Biases in Trainingsdaten."
+  },
+  "target_group": "NLP/KI-Entwickler, Fairness-ML-Forscher, Policy-Maker im Bereich KI-Governance, Anwendungsentwickler von LLM-Systemen in sozial sensiblen Bereichen (Healthcare, Bildung, öffentliche Services); potentiell relevant für sozialarbeiterische Fachpersonen, die mit KI-Systemen arbeiten oder diese evaluieren"
+}

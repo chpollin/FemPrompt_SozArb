@@ -1,0 +1,66 @@
+# FemPrompt Pipeline Configuration
+# Version: 1.0 (2026-02-04)
+#
+# This file contains default settings for all pipeline scripts.
+# Override with --config flag or environment variables.
+
+# API Settings
+api:
+  model: "claude-haiku-4-5-20251001"
+  max_tokens: 2000
+  temperature: 0.3
+  delay: 1.0  # seconds between API calls
+  max_retries: 3
+  base_retry_delay: 2.0  # exponential backoff base
+
+# Pipeline Paths (relative to project root)
+paths:
+  pdfs: "pipeline/pdfs"
+  markdown: "pipeline/markdown"
+  markdown_clean: "pipeline/markdown_clean"
+  knowledge_distilled: "pipeline/knowledge/distilled"
+  validation_reports: "pipeline/validation_reports"
+  vault: "vault"
+
+# Knowledge Distillation
+knowledge:
+  output_format: "markdown"  # markdown or yaml
+  min_confidence: 70
+  max_tokens_per_document: 1000
+
+# Validation Settings
+validation:
+  max_glyph_errors: 50
+  max_unicode_error_ratio: 0.05
+  min_character_ratio: 0.7
+  llm_spot_check_enabled: false
+  llm_spot_check_sample_size: 0.1
+
+# Assessment Categories (10 binary categories)
+categories:
+  technical:
+    - AI_Literacies
+    - Generative_KI
+    - Prompting
+    - KI_Sonstige
+  social:
+    - Soziale_Arbeit
+    - Bias_Ungleichheit
+    - Gender
+    - Diversitaet
+    - Feministisch
+    - Fairness
+
+# Post-Processing
+postprocess:
+  fix_hyphenation: true
+  remove_page_numbers: true
+  remove_repeated_headers: true
+  max_consecutive_newlines: 2
+  remove_all_caps: false  # disabled - too risky for structured docs
+
+# Logging
+logging:
+  level: INFO
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  datefmt: "%H:%M:%S"

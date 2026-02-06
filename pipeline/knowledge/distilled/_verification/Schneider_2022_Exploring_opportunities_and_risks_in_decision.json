@@ -1,0 +1,64 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Stichprobengröße ESI-Studie nicht spezifiziert (nur 'n nicht spezifiziert' notiert)",
+        "Konkrete Anzahl und Rollen der Interview-Teilnehmer*innen aus Behörden nicht quantifiziert",
+        "Zeitraum der Datenerhebung nicht explizit angegeben (nur '2018-2021' als Projektlaufzeit)"
+      ],
+      "missing_minor": [
+        "MAEWIN-Projektkontext könnte deutlicher als Anwendungsfall strukturiert werden",
+        "Unterscheidung zwischen ESI- und User-Study-Ergebnissen in Kernbefund weniger präzise",
+        "Kritik an negativen/positiven Trend-Visualisierungen (Professional 5 feedback) nicht in Hauptargumenten erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Methodologie-Beschreibung: 'n nicht spezifiziert' für ESI-Studie ist unpräzise; Original sagt nicht explizit, dass Stichprobengröße unbekannt ist, könnte aber aus Textumfang rekonstruierbar sein"
+      ],
+      "distortions": [
+        "Kernbefund komprimiert drei separate Schlussfolgerungen zu stark; Original hat nuancierteren Übergang zwischen den Findings",
+        "Aussage zu 'technischer und professioneller Zuverlässigkeit' präzisiert implizit etwas Subtileres aus dem Original (Original: distinction between technical reliability of system vs. professional reliability of decisions)"
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/Verantwortungsvolle Innovation (RRI-Framework wird diskutiert, aber nicht als Kategorie abgebildet)",
+        "Partizipation/Shared Decision-Making (wird als Hauptargument benannt, aber nicht als eigenständige Kategorie)",
+        "Implementierung/Change Management (professionelle Praxis und Integration werden analysiert)"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_expansion": [
+        "Ethik_KI",
+        "Partizipation",
+        "Implementation_Change"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "ESI-Stichprobe zu vage",
+        "suggestion": "Präzisierung: 'ESI Study (Interviews zu Erwartungen und Befürchtungen mit Fachkräften und Behördenmitarbeitenden, exakte n aus Original nicht extrahierbar)'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Vierte Dimension untergegangen",
+        "suggestion": "Ergänzen: 'Die Design-Entscheidungen von DSSs (z.B. Fokus auf Defizite vs. Ressourcen) können professionelle Wahrnehmungsmuster unbeabsichtigt lenken und erfordern kritische Gestaltung.'"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Intersektionalität",
+        "suggestion": "Spezifizieren: 'Geschlechter- und intersektionale Perspektiven werden weder in Originaltext systematisch behandelt noch in kritischen Überblick integriert'"
+      }
+    ]
+  }
+}

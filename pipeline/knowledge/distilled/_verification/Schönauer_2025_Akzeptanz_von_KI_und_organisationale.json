@@ -1,0 +1,57 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Statistische Signifikanztests nicht erwähnt (z.B. Chi-Quadrat für Abb. 1)",
+        "Konkrete Zitate zu Bedenken bezüglich 'Verfälschung und fehlender Authentizität' (6 Personen) könnten direkter integriert sein",
+        "Abhängigkeiten zwischen Variablen (z.B. Korrelation zwischen eigenen Kompetenzen und KI-Bewertung) nicht quantifiziert dargestellt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Sehr minor: 'Nicht einmal ein Drittel der Befragten bewerten KI-Einsatz positiv' - im Original heißt es 'knapp über 60% bewerten digitale Technologien positiv' vs. 'nicht einmal ein Drittel' für KI. Diese Differenzierung ist korrekt erfasst, aber die Phrasing könnte deutlicher machen, dass dies ein Kontrast ist"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Organisationen/Organisationsentwicklung - könnte eigenständige Kategorie sein, nicht nur als 'organisationale Rahmenbedingungen' im Kernbefund",
+        "Kompetenzentwicklung/Weiterbildung - wird erwähnt, könnte aber als eigenständige Kategorie stärker gewichtet werden",
+        "Arbeitsbedingungen/Ressourcen - finanzielle und personelle Ressourcen sind kritisch für Organisationen"
+      ]
+    }
+  },
+  "overall_confidence": 92,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_to_add": [
+        "Organisationen",
+        "Weiterbildung_Kompetenzentwicklung",
+        "Arbeitsbedingungen"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Point 2 könnte präzisieren, dass dies eine These ist, die 'gestützt aber keinesfalls belegt' ist (wie der Original-Fußnote 5 anmerkt)",
+        "suggestion": "Formulierung ergänzen: '...ist eine These, die durch fehlende Erfahrung gestützt wird, aber empirisch weiterer Untersuchungen mit größeren Fallzahlen bedarf.'"
+      },
+      {
+        "section": "Methodologie",
+        "issue": "Response-Rate und Dropout-Analyse nicht dargestellt",
+        "suggestion": "Falls vorhanden: 'Von XX angesprochenen Personen nahmen 68 teil (XX%)' hinzufügen. Falls nicht: transparente Dokumentation der Limitierung."
+      },
+      {
+        "section": "Gender",
+        "issue": "Gender-Analyse bleibt oberflächlich",
+        "suggestion": "Explizit darauf hinweisen, dass 79% Frauenanteil typisch für Soziale Arbeit ist, aber keine Geschlechtsdifferenzierung der Ergebnisse vorgenommen wurde - dies könnte als Limitation erwähnt werden"
+      }
+    ]
+  }
+}

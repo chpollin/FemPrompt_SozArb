@@ -1,0 +1,70 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Keine Erwähnung der spezifischen Lernaktivitäten in Woche 1-4 und 5-7 (Kahoot, Code.org, Quickdraw, Image Stylizer)",
+        "Fehlende Details zur 3-teiligen Programmstruktur (Wochen 1-4, 5-7, Presentation Day)",
+        "Keine spezifischen Schülernamen/Beispiele in Kernbefund erwähnt (Leung, Sammy, Hai, Ho, Max werden im Original ausführlich diskutiert)"
+      ],
+      "missing_minor": [
+        "Kontaktdaten der Autoren nicht aufgeführt",
+        "Spezifische Plattform (Storyjumper) nur beiläufig erwähnt",
+        "Rubrics für Bewertung nicht detailliert beschrieben"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Teilnehmerzahl Geschlechterverteilung: Dokument sagt '13 von 16 sind weiblich' (81%), nicht 'überwiegend weiblich' - sollte präziser sein"
+      ],
+      "distortions": [
+        "Kernbefund formuliert zu abstrakt - konkrete Schülerbeispiele (Leung's Scratch game, Lily's Lego brick recognition) sind zentral für die Studie, werden aber nur in Category-Evidenz erwähnt, nicht in Kernbefund",
+        "Assessment-Relevanz 'minimal' für Soziale Arbeit ist zu definitiv - ethische AI-Fragen haben durchaus Relevanz für Sozialarbeiter"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Pädagogik/Didaktik: Inquiry-Based Learning ist Kernaspekt, fehlt aber als dedizierte Kategorie",
+        "Ethik: AI Ethics wird behandelt (Ownership, Fake Media), verdient eigene prominente Kategorie statt nur als Unterkategorie",
+        "Computational Thinking: Erwähnt im Original (Vazhayil et al., 2019), nicht in Kategorien abgebildet"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_add": [
+        "AI_Ethics",
+        "Inquiry_Based_Learning",
+        "Computational_Thinking",
+        "Pedagogical_Design"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Zu abstrakt, fehlende konkrete Beispiele",
+        "suggestion": "Ergänze ein spezifisches Beispiel: 'z.B. entwickelte Schülerin Leung ein Scratch-Spiel mit Machine Learning-Training zur Objekterkennung (Finger vs. Lego-Baustein mit 30 Trainingsbildern)'"
+      },
+      {
+        "section": "Methodik",
+        "issue": "Fehlende Programmstruktur",
+        "suggestion": "Ergänze: 'Die 3-monatige Intervention gliederte sich in: Wochen 1-4 (Grundkonzepte via Code.org, Quickdraw, Kahoot!), Wochen 5-7 (AI-Anwendungen, Translations- und Style-Transfer-Tools), Monat 3 (Präsentationen und Peer-Feedback)'"
+      },
+      {
+        "section": "Gender",
+        "issue": "Formulierung impräzise",
+        "suggestion": "Ändere 'überwiegend weiblich' zu: 'deutlich überrepräsentiert mit 13 von 16 (81%) der leistungsstarken Schüler weiblich'"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Zu negative Bewertung für Soziale Arbeit",
+        "suggestion": "Ändere 'minimal' zu 'begrenzt, aber potentiell signifikant': AI-Ethik, Bias-Erkennung und diverse Lerndesigns sind für sozialarbeiterische Kontexte (z.B. Jugendarbeit, digitale Inklusion) durchaus relevant"
+      }
+    ]
+  }
+}

@@ -52,15 +52,19 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 ├── benchmark/                 # Human vs. LLM Vergleich
 │   ├── config/categories.yaml # 10-Kategorien Schema
 │   ├── scripts/               # Analyse-Skripte
-│   └── results/
+│   └── data/                  # Assessment-Daten
 │
-├── pipeline/                  # PDF → Markdown → Summary → Vault
-│   ├── scripts/
+├── pipeline/                  # PDF → Markdown → Knowledge
+│   ├── scripts/               # Python-Scripts
 │   ├── tools/                 # Browser-Tools
 │   ├── pdfs/                  # 257 PDFs
 │   ├── markdown/              # 252 Markdown-Dateien
-│   ├── summaries/             # 78 Summaries (bisher)
-│   └── validation_reports/
+│   ├── markdown_clean/        # Bereinigte Markdowns
+│   ├── knowledge/distilled/   # 249 destillierte Wissensdokumente
+│   └── validation_reports/    # Validierungsberichte
+│
+├── config/                    # Konfiguration
+│   └── defaults.yaml
 │
 ├── vault/                     # Obsidian Vault (Output)
 │
@@ -75,18 +79,18 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 | Track | Status | Details |
 |-------|--------|---------|
-| Human | 🔄 In Arbeit | Google Sheets (Susi, Sabine) |
-| LLM | ✅ Fertig | 325 Papers, 100% Erfolgsrate |
+| Human | In Arbeit | Google Sheets (Susi, Sabine) |
+| LLM | Fertig | 325 Papers, 100% Erfolgsrate |
 
 ### Pipeline
 
-| Schritt | Status |
-|---------|--------|
-| PDF-Download | ✅ 257 PDFs |
-| Markdown-Konversion | ✅ 252 (98.1%) |
-| Validierung | ✅ 98.7 Konfidenz-Score |
-| LLM-Summarisierung | 🔄 78/252 (58 kopiert + 20 Test) |
-| Vault-Generierung | ⏸️ Wartet |
+| Schritt | Status | Details |
+|---------|--------|---------|
+| PDF-Download | Fertig | 257 PDFs |
+| Markdown-Konversion | Fertig | 252 (98.1%) |
+| Validierung | Fertig | 98.7 Konfidenz-Score |
+| Knowledge Distillation | Fertig | 249/252 (98.8%) |
+| Vault-Generierung | Wartet | - |
 
 ### Benchmark
 
@@ -157,4 +161,4 @@ Wartet auf Abschluss des Human-Assessments.
 
 ---
 
-*Version: 4.1 (2026-02-03)*
+*Aktualisiert: 2026-02-06*

@@ -15,7 +15,9 @@ Methodendokumentation für den parallelen Vergleich zwischen menschlichem und LL
 
 Wie reliabel ist LLM-basiertes Literatur-Assessment im Vergleich zu Expert:innen-Bewertung bei einem interdisziplinären, nicht-englischsprachigen Forschungsfeld?
 
-## Dual-Track Assessment Design
+## Parallel Human-AI Assessment Design
+
+Das Design adaptiert den Benchmarking-Ansatz von Woelfle et al. (2024) für Evidence Appraisal.
 
 | Track | Akteure | Methode | Output |
 |-------|---------|---------|--------|
@@ -23,6 +25,47 @@ Wie reliabel ist LLM-basiertes Literatur-Assessment im Vergleich zu Expert:innen
 | LLM | Claude Haiku 4.5 | Automatisiert via Prompt | Include/Exclude + Kategorien |
 
 **Kernprinzip:** Beide Tracks bewerten mit identischem Kategorienschema. Das Human-Assessment definiert das Schema, das LLM-Assessment übernimmt es exakt.
+
+### Methodische Referenzen
+
+| Studie | Kernbefund | Relevanz für Projekt |
+|--------|------------|---------------------|
+| Woelfle et al. (2024) | Human IRR: κ = 0.29–0.84 (komplexitätsabhängig); LLM-Accuracy: 53–74% | Methodische Vorlage; PRECIS-2-Niveau als realistischer Vergleich |
+| Hanegraaf et al. (2024) | Human IRR in SLRs: κ = 0.77–0.88 | Oberer Erwartungshorizont für Human-Human |
+| Sandner et al. (2025) | Human-LLM κ ≈ 0.52 ≈ Human-Human κ | Hypothese: LLM weicht nicht stärker ab als Menschen |
+
+**Detaillierte Analyse:** [[Referenzliteratur-Benchmark-Design]]
+
+### Erwartungshorizont
+
+| Vergleich | Erwarteter κ-Bereich | Begründung |
+|-----------|---------------------|------------|
+| Human-Human (Susi vs. Sabine) | 0.5–0.8 | Kategorienabhängig; interpretative Kategorien niedriger |
+| Human-LLM | 0.3–0.7 | Keyword-nahe Kategorien höher als kontextabhängige |
+
+**Erwartbare Fehlermuster:**
+- LLM-Overinclusion bei keyword-nahen, aber kontextuell irrelevanten Papers
+- LLM-Underinclusion bei implizit relevanten Papers (z.B. feministische Perspektive ohne "feministisch")
+
+### Konvergierende Erkenntnis
+
+Alle drei Referenzstudien zeigen:
+1. **Menschliche Baseline ist nicht perfekt** – variiert stark mit Aufgabenkomplexität (κ = 0.29–0.88)
+2. **Aufgabenkomplexität und Reviewer-Erfahrung** bestimmen Übereinstimmung stärker als Mensch vs. Maschine
+3. **LLMs allein** liegen unter erfahrener menschlicher Leistung
+4. **Human-AI-Kollaboration** kann menschliche Leistung übertreffen, aber nur bei hinreichend strukturierten Aufgaben
+
+### Position des eigenen Projekts
+
+Das 10-Kategorien-Schema mit interpretativen Kategorien ("Feministisch", "Diversität") liegt auf der Komplexitätsskala zwischen Woelfles mittleren und schwierigen Instrumenten. Die Unterstützungsleistung des LLM ist nicht symmetrisch:
+
+- **Keyword-nahe Kategorien** (Prompting, Generative_KI): LLM kann als zuverlässiger zweiter Reviewer fungieren
+- **Interpretative Kategorien** (Feministisch, Diversität): LLM-Beitrag liegt eher in der Identifikation von Fällen, die menschliche Aufmerksamkeit verdienen – als Filtersystem, nicht als Urteilsinstanz
+
+**Drei Aspekte gehen über die Referenzliteratur hinaus:**
+1. Domänenspezifik feministischer Theorietraditionen
+2. Mögliche Sycophancy des LLM bei wertgeladenen Kategorien
+3. Zirkularität der LLM-basierten LLM-Analyse
 
 ## Kategorienschema
 
@@ -215,11 +258,16 @@ Paper wird eingeschlossen, wenn mindestens zwei Kriterien erfuellt sind UND Rele
 
 Duplicate, Off-topic, No_full_text, Language_not_accessible, Other
 
+## Referenzen
+
+- Woelfle, T., et al. (2024). Benchmarking Human–AI collaboration for common evidence appraisal tools. *Journal of Clinical Epidemiology*, 175, 111533.
+- Hanegraaf, G., et al. (2024). Inter-reviewer reliability of human literature reviewing. *BMJ Open*, 14, e076912.
+- Sandner, F., et al. (2025). Assessing the Reliability of Human and LLM-Based Screening. OSSYM.
+
 ## Verbindung zu anderen Dokumenten
 
 - [[Forum Wissenschaft Paper - Arbeitsplan]]: Paper-Kontext und Deadline
-- [[Literature Review Pipeline - Technische Dokumentation]]: Bestehende Pipeline
-- [[Literature Review MOC]]: Projekt-Navigation
+- [[Referenzliteratur-Benchmark-Design]]: Detaillierte Analyse der methodischen Referenzen
 - [[Workflow für eine Deep-Research-gestützte Literaturanalyse am Beispiel von feministischem AI-Literacy]]: Methodendokument
 
 ## Related

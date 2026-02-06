@@ -1,0 +1,54 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Autor:innen-Affiliationen (FHNW) nicht explizit erwähnt",
+        "Publikationsdatum im Journal 'Sozial Extra' (2022, Heft 6) nicht spezifiziert",
+        "DOI/Permalink nicht aufgeführt",
+        "Quality Score (85) aus Metadaten nicht erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Kernbefund formuliert etwas präskriptiver als Original ('müssen aber', 'dürfen nicht') - Original ist etwas ausgewogener"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik/Ethics_Governance hätte zusätzlich aufgenommen werden können (Jonas 1984, Verantwortungsfrage ist Leitmotiv)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "suggestion": "Zusätzliche Metadaten aufnehmen: institution: 'FHNW University of Applied Sciences and Arts Northwestern Switzerland', journal: 'Sozial Extra', issue: '6/2022', quality_score: 85"
+    },
+    "content_fixes": [
+      {
+        "location": "Kernbefund",
+        "issue": "Formulierung zu normativ/präskriptiv",
+        "original": "...dürfen aber menschliche Beziehungsarbeit nicht ersetzen und werfen Fragen auf...",
+        "suggestion": "...sollten menschliche Beziehungsarbeit eher unterstützen denn ersetzen und werfen Fragen auf... [näher am Original-Ton]"
+      },
+      {
+        "location": "categories section",
+        "issue": "Ethik-Dimension fehlt",
+        "suggestion": "Kategorie 'Ethik_Governance' hinzufügen, da Jonas (1984) und Verantwortungsfragen zentral sind"
+      },
+      {
+        "location": "Datenbasis",
+        "issue": "Präzisierung möglich",
+        "original": "Sekundäranalyse: Review von wissenschaftlichen Studien...",
+        "suggestion": "Literaturreview: Systematische Analyse von Sekundärquellen (peer-reviewed Literatur, Praxisberichte, Pilotprojekte)"
+      }
+    ]
+  }
+}

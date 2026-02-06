@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Adjust for Trust: Mitigating Trust-Induced Inappropriate Reliance on AI Assistance",
+    "authors": [
+      "Tejas Srinivasan",
+      "Jesse Thomason"
+    ],
+    "year": 2025,
+    "type": "conferencePaper",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können KI-Assistenten durch vertrauensadaptive Interventionen die unangemessene Abhängigkeit von KI-Empfehlungen bei zu hohem oder zu niedrigem Nutzervertrauen reduzieren?",
+    "methodology": "Empirisch: Kontrollierte Between-Subjects Benutzer-Studien mit zwei Entscheidungsaufgaben (ARC-Wissensfragen, medizinische Diagnosen), simulierte KI-Assistenten, Messungen von Vertrauen und Reliance-Verhalten über mehrere Interaktionen hinweg",
+    "key_finding": "Vertrauensadaptive Interventionen – unterstützende Erklärungen bei niedrigem Vertrauen und Gegenargumente bei hohem Vertrauen – reduzieren unangemessene Abhängigkeit um bis zu 38% und verbessern die Entscheidungsgenauigkeit um 20%.",
+    "data_basis": "User-Studien mit 30 Laienpersonen (ARC-Task), 20 Fachärzte (Diagnose-Task), insgesamt ca. 1800+ Nutzer-KI-Interaktionen"
+  },
+  "arguments": [
+    "Nutzervertrauen ist nicht statisch und wird kontinuierlich durch Interaktionsergebnisse aktualisiert. Extremes Vertrauen (zu hoch oder zu niedrig) führt zu kognitiven Verzerrungen und unangemessener Abhängigkeit von KI-Empfehlungen (Over- und Under-Reliance).",
+    "KI-Systeme sollten ihr Verhalten adaptiv an die Vertrauenslevel der Nutzer anpassen: Bei niedrigem Vertrauen erhöhen unterstützende Erklärungen die kritische Würdigung korrekter KI-Ratschläge; bei hohem Vertrauen reduzieren Gegenargumente oder erzwungene Pausen die unkritische Akzeptanz.",
+    "Die Kombination von situationsspezifischen Interventionen (Erklärungen + kognitive Verzögerungen) führt zu messbar besserer Entscheidungsqualität und reduziert systemisch beide Formen unangemessener Abhängigkeit in High-Stakes-Domains wie Medizin."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": false,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper befasst sich explizit mit Nutzerkompetenzen im Umgang mit KI: 'trust does not always align with AI assistant trustworthiness' und untersucht wie Nutzer KI-Empfehlungen kritisch evaluieren und verarbeiten können. Die Interventionen zielen auf die Verbesserung des Verständnisses und der kritischen Reflexion ab.",
+    "KI_Sonstige": "Das Paper behandelt klassische KI-Assistenzsysteme, algorithmische Entscheidungsfindung und Mensch-KI-Kollaboration in nicht-generativen Kontexten mit Fokus auf Vertrauen und Reliance-Verhalten.",
+    "Bias_Ungleichheit": "Das Paper adressiert systematische Verzerrungen in der Nutzer-KI-Interaktion: 'Miscalibrated trust acts as a cognitive bias' und untersucht unterschiedliche Fehlerraten (26% vs. 8% bei Ärzten, 68% vs. 40% Under-Reliance), die strukturelle Probleme der KI-Unterstützung offenbaren.",
+    "Fairness": "Das Paper behandelt faire und angemessene Reliance als Fairness-Problem: 'Appropriate reliance can be fostered through various decision aids' und entwickelt Metriken und Interventionen zur Minimierung von Over- und Under-Reliance als Fairness-Dimensionen in KI-Systemen."
+  },
+  "references": [
+    {
+      "author": "Lee & See",
+      "year": 2004,
+      "short_title": "Trust in Automation: Designing for Appropriate Reliance"
+    },
+    {
+      "author": "Parasuraman & Riley",
+      "year": 1997,
+      "short_title": "Humans and Automation: Use, Misuse, Disuse, Abuse"
+    },
+    {
+      "author": "Jacovi et al.",
+      "year": 2021,
+      "short_title": "Formalizing Trust in Artificial Intelligence"
+    },
+    {
+      "author": "Dzindolet et al.",
+      "year": 2003,
+      "short_title": "The Role of Trust in Automation Reliance"
+    },
+    {
+      "author": "Buçinca et al.",
+      "year": 2021,
+      "short_title": "To Trust or to Think: Cognitive Forcing Functions Can Reduce Overreliance"
+    },
+    {
+      "author": "Dhuliawala et al.",
+      "year": 2023,
+      "short_title": "A Diachronic Perspective on User Trust in AI under Uncertainty"
+    },
+    {
+      "author": "Bansal et al.",
+      "year": 2021,
+      "short_title": "Does the Whole Exceed Its Parts? The Effect of AI Explanations on Complementary Team Performance"
+    },
+    {
+      "author": "Lai et al.",
+      "year": 2023,
+      "short_title": "Towards a Science of Human-AI Decision Making"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat indirekten Bezug zur Schnittstelle von KI und Sozialer Arbeit durch seinen Fokus auf vulnerable Nutzer-KI-Interaktionen und High-Stakes Domains (Medizin, klinische Entscheidungen). Es ist relevant für sozialarbeiterische Kontexte, in denen KI-Assistenzsysteme in Beratung oder Fallmanagement eingesetzt werden könnten.",
+    "unique_contribution": "Das Paper leistet einen innovativen Beitrag durch die empirische Operationalisierung von vertrauensadaptiven Interventionen und zeigt, dass nicht Vertrauen selbst, sondern dessen (Fehl-)Kalibrierung das zentrale Design-Problem ist, das durch situationsspezifische, dynamische Verhaltensanpassungen adressierbar ist.",
+    "limitations": "Das Paper verwendet simulierte KI-Assistenten statt echter Systeme (z.B. LLMs), begrenzt sich auf Nutzer aus UK und USA, rekrutiert relativ kleine Stichproben (besonders 20 Ärzte), und kann daher Generalisierbarkeit nicht vollständig gewährleisten. Zudem setzt die Intervention Echtzeit-Feedback über Entscheidungskorrektheit voraus, was in realen Settings oft nicht verfügbar ist."
+  },
+  "target_group": "KI-Entwickler und UX-Designer, die Assistenzsysteme entwickeln; klinische und medizinische Fachkräfte; Forschende in HCI und Human-AI Collaboration; Policy-Maker für AI Governance; indirekt relevant für Sozialarbeiter, die mit KI-gestützten Entscheidungssystemen arbeiten"
+}

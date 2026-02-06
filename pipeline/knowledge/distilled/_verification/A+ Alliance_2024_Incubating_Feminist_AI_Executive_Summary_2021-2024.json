@@ -1,0 +1,56 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Explizite Nennung der IDRC-Unterstützung (2020) für f<a+i>r Gründung",
+        "Detaillierte Beschreibung des 'ceiling vs floor' Konzepts (Vision eines Wandels von Gewaltprävention zu Chancenschaffung)",
+        "Spezifische Erwähnung der ACM FAccT Konferenz als Publikationsvenue",
+        "UNESCO-Fall-Studie-Status von AymurAI hätte prominenter sein können"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: 'Ekuador' statt 'Ecuador' in der generierten Datenbasis (Tippfehler, nicht im Original)"
+      ]
+    },
+    "category_validation": {
+      "score": 96,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Menschenrechte / Human Rights (wird mehrfach erwähnt: 'human rights-based approaches', 'AI & Equality: A Human Rights Toolbox', UNESCO AI and rule of law)",
+        "Partizipation / Community Co-Design (wird als zentral für Methodik betont, aber nicht als eigene Kategorie)",
+        "Transparenz / Accountability (AymurAI zu Justiz-Transparenz, aber nicht als Kategorie geführt)"
+      ]
+    }
+  },
+  "overall_confidence": 93,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_to_add": [
+        "Menschenrechte",
+        "Partizipation_Communitybeteiligung",
+        "Transparenz_Accountability"
+      ],
+      "authors_correction": "Besser spezifizieren: Führungsstruktur 2021-2024 (Women at the Table & Tecnologico de Costa Rica) vs. Co-Gründung 2019"
+    },
+    "content_fixes": [
+      {
+        "section": "Datenbasis",
+        "fix": "Tippfehler korrigieren: 'Ecuador' statt 'Ekuador'"
+      },
+      {
+        "section": "Hauptargumente",
+        "add": "Explizite Erwähnung der paradigmatischen Verschiebung vom 'floor' (Gewaltbekämpfung) zum 'ceiling' (Chancenschaffung für marginalisierte Gruppen)"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "add": "Neue Untersektion für 'Menschenrechte' mit Belegen: human rights-based approaches, AI & Equality Human Rights Toolbox, UNESCO Global Toolkit on AI and Rule of Law"
+      }
+    ]
+  }
+}

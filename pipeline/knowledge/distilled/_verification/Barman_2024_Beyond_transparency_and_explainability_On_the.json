@@ -1,0 +1,71 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Keine explizite Erwähnung der 'corrected publication 2025' aus dem Frontmatter",
+        "Die Autoren-Affiliationen (Institute und Adressen) sind nicht erfasst",
+        "Die Conversion-Metadaten (quality_score: 95) sind nicht dokumentiert"
+      ],
+      "missing_minor": [
+        "Spezifische Diskussion der Embedding von LLMs in andere Tools (Word, Excel) nur kurz erwähnt",
+        "Die Meta-Kriterien für Guidelines (section heading vorhanden, aber Inhalte nicht vollständig extrahiert)",
+        "Real-world case studies als Grundlage für Guidelines werden erwähnt, aber nicht konkretisiert"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Methodologie beschreibung als 'Keine primäre empirische Datenerhebung' ist korrekt, aber die Charakterisierung als 'konzeptionell-analytisch mit Literaturreview' könnte präziser sein: Es ist primär ein policy/framework paper"
+      ],
+      "distortions": [
+        "Die Darstellung der XAI-Kritik ist korrekt, aber könnte deutlicher machen, dass die Autoren XAI nicht komplett ablehnen, sondern als nicht-ausreichend für Nutzerguidelines einstufen",
+        "Assessment-Relevanz beschreibt Limitations korrekt, aber die Aussage 'keinen direkten Bezug zur Sozialen Arbeit' ist zu absolut - die Implikationen für vulnerable Nutzergruppen sind relevant"
+      ]
+    },
+    "category_validation": {
+      "score": 87,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "KI_Ethik/AI_Ethics - zentral für das Paper (guidelines, responsibility, ethics)",
+        "Bildung/Education - explizit als Anwendungskontext diskutiert",
+        "Regulierung/Policy - institutional approaches und Governance sind Kernthema",
+        "Mensch-Computer-Interaktion/User Experience - UCA (user-centric approach) ist zentral"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_to_add": [
+        "KI_Ethik",
+        "Bildung",
+        "Regulierung_Governance",
+        "Mensch_Computer_Interaktion"
+      ],
+      "metadata_additions": {
+        "corrected_publication": "2025",
+        "original_quality_score": 95,
+        "publisher": "Springer Nature B.V."
+      }
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Unvollständige Charakterisierung",
+        "suggestion": "Ergänzen: 'Policy- und Framework-Paper mit konzeptioneller Analyse, Literaturreview und Diskussion praktischer Anwendungsfälle. Keine primäre empirische Datenerhebung, aber Bezugnahme auf real-world case studies zur Illustration.'"
+      },
+      {
+        "section": "Assessment-Relevanz",
+        "issue": "Überengführung der Sozialen Arbeit Relevanz",
+        "suggestion": "Differenzieren: 'Sekundär relevant für Sozialarbeiter und soziale Fachkräfte, da Paper grundsätzliche Fragen von Nutzerkompetenzen, Zugänglichkeit und ethischen Richtlinien für vulnerable Nutzergruppen adressiert, die auch in der Sozialen Arbeit bei LLM-Einsatz bedeutsam sind.'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Fehlende Kategorien sollten ergänzt werden",
+        "suggestion": "Hinzufügen von KI_Ethik, Bildung, Regulierung/Policy und Mensch-Computer-Interaktion mit entsprechenden Textbelegen"
+      }
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "title": "Biases in Large Language Models: Origins, Inventory, and Discussion",
+    "authors": [
+      "Roberto Navigli",
+      "Simone Conia",
+      "Björn Ross"
+    ],
+    "year": 2023,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie entstehen Verzerrungen in großen Sprachmodellen, welche Arten von sozialen Bias treten auf, und wie können sie gemessen und reduziert werden?",
+    "methodology": "Theoretisch/Review: Systematische Analyse von Data Selection Bias und sozialen Bias-Typen in LLMs mit empirischen Beispielen und Literaturüberblick.",
+    "key_finding": "Die meisten Verzerrungen in Sprachmodellen entstehen durch Data Selection Bias bei der Wahl der Trainingstexte; das Paper inventarisiert elf Typen sozialer Bias (Gender, Alter, sexuelle Orientierung, Ethnizität, Religion, Kultur, Nationalität, Behinderung, Sprache und intersektionale Bias) und argumentiert für präventive Ansätze bei der Datenkurierung statt nachträglicher Debiasingmaßnahmen.",
+    "data_basis": "nicht empirisch empirisch: Sekundäranalyse bestehender Studien, Analyse von Wikipedia-Domain-Verteilungen mit BabelNet, generative Beispiele aus LLM-Ausgaben"
+  },
+  "arguments": [
+    "Data Selection Bias ist die Wurzel sozialer Verzerrungen in LLMs: Die Auswahl von Trainingstexten (z.B. Wikipedia-Überrepräsentation von Sport, Musik, Politik) prägt die Modelle systematisch und kann kaum mehr durch nachträgliche Debiasing-Maßnahmen korrigiert werden.",
+    "Soziale Bias manifestieren sich intersektional und mehrschichtig: Ein Sprachmodell kann keine isolierten Bias gegen schwarze Menschen oder Frauen zeigen, aber stark gegen schwarze Frauen verzerrt sein, weshalb mehrdimensionale Analyse kritisch ist.",
+    "Technische Lösungen allein sind unzureichend; interdisziplinäre Ansätze unter Einbeziehung von Psychologie, Soziologie, Linguistik und Commonsense-Wissen sind notwendig, um Bias zu verstehen und zu adressieren."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Das Paper diskutiert notwendiges Wissen zur Funktionsweise von LLMs und deren Risiken: 'we need to keep in mind that, in the words of Baeza-Yates, \"the output quality of any algorithm is a function of the quality of the data that it uses\"' – dies adressiert kritisches Verständnis.",
+    "Generative_KI": "Fokus auf 'large-scale pretrained language models, such as BERT, GPT, T5, and BART, which are now pervasive in every high-performance system for Machine [Learning]' und deren Bias.",
+    "KI_Sonstige": "NLP und algorithmische Systeme werden behandelt; Beispiel COMPAS-Recidivism-Vorhersage zeigt klassische ML-Bias: 'black defendants were often predicted to be at a higher risk of recidivism than they actually were'.",
+    "Bias_Ungleichheit": "Zentrale These: 'most types of bias originate in corpora and, consequently, language models learn and amplify such biases' und Diskussion struktureller Benachteiligungen ('harm, especially to minorities and marginalized groups').",
+    "Gender": "Expliziter Gender-Bias-Fokus: 'gender, sexual and racial biases' und Beispiel 'some sports have historically been male-dominated, meaning that the majority of their popular players have also been male' prägt Wikipedia und damit LLMs.",
+    "Diversitaet": "Extensive Behandlung von Minderheiten und marginalisierten Gruppen: 'bias against non-binary genders', 'religion bias', ethnische Bias, intersektionale Perspektiven ('a person's social identity can combine to create discrimination'), Sprachen-Diversität.",
+    "Fairness": "Mehrfache Diskussion von Fairness-Metriken: 'three generalized fairness metrics: pairwise comparison, background comparison, and multi-group comparison metrics' und Anforderung von Transparenz ('transparent about the levels of bias of production systems')."
+  },
+  "references": [
+    {
+      "author": "Bolukbasi et al.",
+      "year": 2016,
+      "short_title": "Man is to Computer Programmer as Woman is to Homemaker: Debiasing Word Embeddings"
+    },
+    {
+      "author": "Buolamwini & Buolamwini",
+      "year": 2018,
+      "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+    },
+    {
+      "author": "Baeza-Yates",
+      "year": 2016,
+      "short_title": "Data and algorithmic bias in the web"
+    },
+    {
+      "author": "Nangia et al.",
+      "year": 2020,
+      "short_title": "CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models"
+    },
+    {
+      "author": "Nadeem et al.",
+      "year": 2021,
+      "short_title": "StereoSet: Measuring Stereotypical Bias in Pretrained Language Models"
+    },
+    {
+      "author": "Abid et al.",
+      "year": 2021,
+      "short_title": "Persistent anti-Muslim bias in large language models"
+    },
+    {
+      "author": "Obermeyer et al.",
+      "year": 2019,
+      "short_title": "Dissecting racial bias in an algorithm used to manage the health of populations"
+    },
+    {
+      "author": "Bender et al.",
+      "year": 2021,
+      "short_title": "On the dangers of stochastic parrots: Can language models be too big?"
+    },
+    {
+      "author": "Angwin et al.",
+      "year": 2016,
+      "short_title": "Machine Bias (COMPAS case study)"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hohes Relevanzpotenzial für KI in der Sozialen Arbeit: Das Paper identifiziert konkrete Verzerrungen (Gender, Ethnizität, Behinderung, Nationalität), die in Entscheidungssystemen der Sozialen Arbeit (Fallzuordnung, Risikoeinschätzung) direkt zu Diskriminierung führen können. Es fehlt aber der direkter Bezug zu sozialarbeiterischer Praxis.",
+    "unique_contribution": "Das Paper leistet die erste umfassende, strukturierte Inventarisierung von elf Bias-Typen in LLMs mit Fokus auf Data Selection Bias als Root Cause und argumentiert programmatisch für Bias-Vermeidung durch Datenkurierung statt nachträglichem Debiasing.",
+    "limitations": "Keine empirischen Tests oder Messungen präsentiert; keine Analyse von Interventionsmaßnahmen oder deren Effektivität; begrenzte Behandlung von nicht-englischsprachigen Modellen trotz Erwähnung multilingualer Bias; fehlender direkter Anwendungsbezug auf konkrete Sektoren wie Soziale Arbeit."
+  },
+  "target_group": "KI-Entwickler und Datenkuratore, NLP-Forscher, Fairness-Spezialisten, Policy-Maker, Tech-Ethiker; sekundär relevant für Sozialarbeiter in Positionen mit KI-Governance; begrenzt für praktizierende Sozialarbeiter ohne Technikhintergrund"
+}

@@ -1,0 +1,70 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Keine explizite Darstellung der drei Use Cases (Finanzentscheidungen, biometrische Identifizierung, akademische Zitationen) in den Hauptargumenten",
+        "MAMMOth-Projekt-Kontext und seine spezifische Rolle nur implizit erwähnt, nicht als Forschungskontext prominent positioniert",
+        "Kritische Befunde zu 'ethics-washing' und regulatorischer Compliance-Theatik sind zu kurz zusammengefasst"
+      ],
+      "missing_minor": [
+        "Spezifische Unterschiede in Teilnehmerwissensständen zwischen den drei Workshops (DAF: 3 von X mit AI-Wissen; IASIS: gering; DDG: durchschnittlich hoch) nicht differenziert dargestellt",
+        "Konkrete Facilitator-Adaptationen (Catalan-Spanish-Google-Translate-Beispiel) nur angedeutet, nicht als Methodologie-Punkt strukturiert",
+        "Spannungsfeld zwischen sozialtechnischem und technischem Trainingsansatz hätte stärker gewichtet werden können"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [],
+      "distortions": [
+        "Kernbefund rahmt 'ethics-washing' zu abstrakt ein - Paper formuliert kritischere Bedenken zur Instrumentalisierung von Co-Creation durch mächtige Institutionen, was stärker explizieren würde",
+        "Methodik-Beschreibung 'n=3 Organisationen' ist präzise, aber die Heterogenität der Teilnehmerzahlen und Vulnerabilitätsprofile innerhalb dieser Organisationen wird unterschätzt",
+        "Kategorisierung als 'Mixed Methods' ist korrekt, aber der qualitative explorative Charakter könnte stärker betont werden (keine quantitativen Messungen, keine Kontrollgruppe)"
+      ]
+    },
+    "category_validation": {
+      "score": 92,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "**Partizipation/Empowerment**: Paper hat starken Fokus auf partizipatorische Demokratie und Empowerment marginalisierter Gruppen - dies könnte als eigenständige Kategorie fungieren",
+        "**Regulierung/Policy**: EU AI Act und regulatorische Compliance sind zentral; könnte als Kategorie 'AI_Governance' oder 'AI_Regulation' ergänzt werden",
+        "**Intersektionalität**: Obwohl erwähnt, verdient die intersektionale Analyse (multiple Vulnerabilitätstypen) eigene kategoriale Gewichtung",
+        "**Ethik/Verantwortung**: AI Ethics und Responsible AI sind explizite Themenstränge, die kategorisiert werden könnten"
+      ]
+    }
+  },
+  "overall_confidence": 90,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "categories_addition": [
+        "AI_Governance",
+        "Partizipation_Empowerment",
+        "Intersektionalitaet",
+        "AI_Ethik"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "3. Argument zu 'ethics-washing' ist zu abstrakt",
+        "suggestion": "Präzisieren: 'Co-Creation kann von Institutionen als performatives 'Compliance-Theater' missbraucht werden, um regulatorische Anforderungen (z.B. EU AI Act) zu erfüllen, ohne tatsächliche Machtverhältnisse zu verändern - echte Inklusion erfordert kritische Reflexion über institutionelle Motive, Ressourcenverteilung und ob betroffene Gruppen tatsächlich Entscheidungsmacht haben.'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "KI_Sonstige beschreibt Multimodalität, aber dies ist Mittel, nicht Kern",
+        "suggestion": "In 'AI_Governance' umschreiben: 'MAMMOth toolkit addresses bias detection/mitigation across modalities (text, images, audio, datasets) through EU regulatory and ethical frameworks; positions co-creation as compliance mechanism for trustworthy AI requirements'"
+      },
+      {
+        "section": "Assessment-Relevanz / Domain Fit",
+        "issue": "Kritische Dimension der regulatorischen Instrumentalisierung zu wenig prominent",
+        "suggestion": "Ergänzen: 'Besonders relevant für kritische Analyse, wie participatory design von Regulierung und Compliance-Logiken geprägt wird - wichtig für Sozialarbeiter:innen, die als Vermittler in solchen Prozessen fungieren könnten.'"
+      },
+      {
+        "section": "Methodik",
+        "issue": "Keine Angabe zu Analyse-Methode der Workshop-Daten",
+        "suggestion": "Ergänzen: 'Qualitative Inhaltsanalyse von Workshop-Zusammenfassungen, iterative Übersetzung zwischen sozialer und technischer Terminologie durch Soziolog:innen und Software-Engineer:innen; keine quantitative Auswertung'"
+      }
+    ]
+  }
+}

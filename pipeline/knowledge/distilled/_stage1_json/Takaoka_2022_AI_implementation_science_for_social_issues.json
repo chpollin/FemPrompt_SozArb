@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "title": "AI Implementation Science for Social Issues: Pitfalls and Tips",
+    "authors": [
+      "Kota Takaoka"
+    ],
+    "year": 2022,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können KI-Technologien systematisch in sozialen Bereichen wie dem Kinderschutz implementiert werden, und welche Fallstricke und Best Practices sollten dabei beachtet werden?",
+    "methodology": "Theoretisch mit praktischem Use-Case: Vierstufiges Implementierungsmodell (Problemredefinition, technische Lösungsfindung, soziale Implementierung, horizontale Ausbreitung) illustriert durch Fallstudie zum Kindermissbrauch in Japan.",
+    "key_finding": "Soziale Implementierung von KI erfordert nicht nur technische Lösungen, sondern umfassende Systemveränderungen in Dateninfrastruktur, Organisationskultur und stakeholder-engagement. Der entwickelte SSTRD-Modell (Sustainable Service Team as R&D) zeigt, dass KI-Implementierung im Sozialbereich nur durch langfristige Zusammenarbeit von Wissenschaft, Industrie und Behörden erfolgreich ist.",
+    "data_basis": "Empirische Fallstudie mit 6.000+ Kinderschutzmeldungen aus einer japanischen Gemeinde (2014-2018), prospektive Datenerfassung mit Rückmeldungen alle 3-6 Monate"
+  },
+  "arguments": [
+    "KI-Implementierung im Sozialbereich muss mit der Redefinition von Problemen zu lösbaren Fragen beginnen, nicht mit technologischen Lösungen. Dies erfordert intensive Zusammenarbeit mit Fachkräften, um Konsens über Ziele wie die Reduktion von Kindesmissbrauchsfällen zu erreichen.",
+    "Datenqualität und -design sind zentral für KI-Implementierung: Standardisierte Datenerfassung, Behandlung von Klassenungleichgewicht (SMOTE) und Feature-Extraktion unter Berücksichtigung der Arbeitsbelastung in sozialen Organisationen sind notwendig.",
+    "Explainability (XAI) ist in sozialen Kontexten essentiell, insbesondere wenn administrative und juristische Behörden involviert sind; lineare Modelle und interpretierbare ML-Methoden sollten bevorzugt werden gegenüber Black-Box-Ansätzen.",
+    "Soziale Implementierung von KI wird durch psychologische Reaktanz, normalcy bias und Widerstand gegen Veränderungen behindert; Mitarbeiterschulung, klare Betriebsanleitungen und agile Methodologien sind entscheidend.",
+    "KI sollte Fachkräfte unterstützen, nicht ersetzen: Das System dient der Verbesserung von Entscheidungsqualität und zur Überwindung kognitiver Verzerrungen durch datengestützte Unterstützung von Erfahrung und Intuition."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Artikel thematisiert erforderliche Kompetenzen von Fachkräften im Umgang mit KI-Systemen: 'training and briefing sessions for field staff to master them' und 'agile trial methodology' zur Entwicklung von Verständnis. Fokus auf Schulung, Betriebsanleitungen und das Überwinden von Widerständen gegen neue Technologien.",
+    "KI_Sonstige": "Einsatz von Machine Learning (Gradient Boosting), Bayesian Networks, probabilistic modelling, clustering (unsupervised learning), sparse modelling und eXplainable AI (XAI). Konkrete Implementierung im AiCAN-System für Risikovorhersage und kausale Schlussfolgerung.",
+    "Soziale_Arbeit": "Direkte Anwendung in Kinderschutzdiensten (Child Guidance Centers in Japan). Fokus auf Verbesserung sozialer Fachpraxis: 'improving the quality of decision making, enhancing operational efficiency, and professional training for practitioners.' Thematisiert spezifische Herausforderungen von Sozialarbeit wie Umgang mit mehrdeutigen Informationen.",
+    "Bias_Ungleichheit": "Thematisiert implizite Diskriminierung durch KI: 'there can be implicit discrimination and favoritism towards certain individuals due to sampling size, bias effects, and tuning effects of AI.' Diskutiert normalcy bias bei Fachkräften und systematische Unterschiede zwischen Kinderschutzzentren in Schutzstandards.",
+    "Diversitaet": "Fokus auf vulnerable Gruppen (Kinder als Zielgruppe von Schutzmaßnahmen). Verknüpfung mit SDGs und Maslow's Hierarchy of Needs; Ziel ist Sicherheit und Wohlbefinden für alle Kinder ohne Gewalt und Missbrauch.",
+    "Fairness": "Explizite Behandlung von Fairness bei KI-Entscheidungen: 'Political correctness and social norms must be carefully considered in AI implementation design.' Verwendung von PR und ROC Curves für evaluierung von Klassifikationsmodellen. Fokus auf gerechte Ressourcenallokation unter Budgetbeschränkungen: 'best possible choices within the resources available.'"
+  },
+  "references": [
+    {
+      "author": "Chawla et al.",
+      "year": 2002,
+      "short_title": "SMOTE: Synthetic Minority Over-sampling Technique"
+    },
+    {
+      "author": "Birken, Powell, Presseau et al.",
+      "year": 2017,
+      "short_title": "Combined use of CFIR and TDF: Systematic Review"
+    },
+    {
+      "author": "Barredo Arrieta et al.",
+      "year": 2020,
+      "short_title": "Explainable Artificial Intelligence (XAI): Concepts and Challenges"
+    },
+    {
+      "author": "Ribeiro, Singh, Guestrin",
+      "year": 2016,
+      "short_title": "LIME: Local Interpretable Model-agnostic Explanations"
+    },
+    {
+      "author": "Lundberg & Lee",
+      "year": 2017,
+      "short_title": "SHAP: A Unified Approach to Interpreting Model Predictions"
+    },
+    {
+      "author": "Landes, McBain, Curran",
+      "year": 2020,
+      "short_title": "Effectiveness-Implementation Hybrid Designs"
+    },
+    {
+      "author": "Damschroder",
+      "year": 2020,
+      "short_title": "Clarity out of Chaos: Use of Theory in Implementation Research"
+    },
+    {
+      "author": "Chambers & Norton",
+      "year": 2016,
+      "short_title": "The Adaptome: Advancing the Science of Intervention Adaptation"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle von KI und Sozialer Arbeit. Der Artikel adressiert konkrete Implementierungsfragen für vulnerable Gruppen (Kinder) und zeigt auf, wie KI-Systeme in niedrig-technisierten sozialen Kontexten funktionieren können, während ethische und fairness-bezogene Fragen zentral bleiben.",
+    "unique_contribution": "Bietet ein strukturiertes vierstufiges Implementierungsmodell für KI in sozialen Bereichen mit explizitem Fokus auf Fallstricke und praktische Tipps; führt das SSTRD-Modell als alternatives Governance-Modell zu traditionellen scientist-practitioner-Ansätzen ein.",
+    "limitations": "Fokus auf einen nationalen Kontext (Japan); begrenzte Diskussion von Fragen um Datenschutz und Privatsphäre jenseits technischer Sicherheitsarchitektur; Gender-Perspektive nicht adressiert; keine umfassende kritische Diskussion von Machtdynamiken zwischen Technolog:innen und Sozialarbeiter:innen."
+  },
+  "target_group": "Sozialarbeiter:innen in Kinderschutz und verwandten Feldern; KI-Entwickler:innen mit Interesse an sozialen Anwendungen; Policy-maker und Administratoren in Sozialwesen und Behörden; Implementation Science Forscher:innen; Studierende in Sozialer Arbeit und angewandter KI"
+}

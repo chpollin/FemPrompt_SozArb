@@ -1,0 +1,61 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Institutionsnamen/Praktiken nicht erwähnt",
+        "Geografische Fokus (Türkei/International) nicht explizit hervorgehoben",
+        "Publikationskontext (International Studies in Social Sciences and Humanities) nicht in Kernbefund erwähnt"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Sehr geringfügig: 'Datenbasis: nicht empirisch' könnte präzisieren, dass es sich um ein Buchkapitel mit Literature Review handelt"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Ethik (ethics) - wird stark thematisiert, könnte als separate Kategorie neben Bias_Ungleichheit aufgeführt werden"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "note": "Optional: Zusätzliche Kategorien hinzufügen",
+      "suggested_addition": "- Ethik_KI\n- Regulierung_Standards"
+    },
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "current": "nicht empirisch - argumentatives Review",
+        "suggested": "nicht empirisch - narrative Literaturanalyse in Buchkapitel-Format"
+      },
+      {
+        "section": "Target Group",
+        "current": "vorhanden",
+        "note": "Exzellent spezifiziert, keine Änderung nötig"
+      }
+    ]
+  },
+  "quality_assessment": {
+    "strengths": [
+      "Ausgezeichnete Erfassung der Originalstruktur",
+      "Korrekte Zuordnung aller Primärzitate",
+      "Präzise Kategorisierung mit Evidenzbelegen",
+      "Realistische Limitation-Analyse",
+      "Umfassende Referenzenliste"
+    ],
+    "notes": [
+      "Das generierte Dokument hat sehr hohe inhaltliche Qualität",
+      "Alle kritischen Konzepte (Bias, Empathie, informed consent) korrekt extrahiert",
+      "Die Schlüsselreferenzen sind vollständig und akkurat"
+    ]
+  }
+}

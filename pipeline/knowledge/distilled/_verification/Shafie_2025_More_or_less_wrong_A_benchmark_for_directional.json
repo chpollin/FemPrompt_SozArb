@@ -1,0 +1,46 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Zahlen zu DirErr%-Raten in den Kernergebnissen nicht quantifiziert",
+        "Dataset-Release und Code-Verfügbarkeit nur kurz erwähnt, nicht in Schlüsselbefunden hervorgehoben",
+        "Unterschied zwischen Free-Form und Structured CoT nicht detailliert erläutert"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Leichte Überverallgemeinerung: 'unabhängig von der korrekten Antwort' – besser: 'auch wenn falsch', da die Verzerrung nicht bei allen korrekten Antworten auftritt"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Robustness/Evaluation könnte explizit als Kategorie hinzugefügt werden (wird behandelt, aber nicht kategorisiert)"
+      ]
+    }
+  },
+  "overall_confidence": 95,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "original": "LLMs zeigen konsistente und richtungsabhängige Reasoning-Verzerrungen, wobei die Wahl und Position von Vergleichsbegriffen zu systematischen Vorhersagen in Richtung des Framing-Terms führt, unabhängig von der korrekten Antwort.",
+        "suggested": "LLMs zeigen konsistente und richtungsabhängige Reasoning-Verzerrungen, wobei die Wahl und Position von Vergleichsbegriffen zu systematischen Vorhersagen in Richtung des Framing-Terms führt, auch wenn dies zu falschen Antworten führt.",
+        "reason": "Präzisere Formulierung des Effekts"
+      },
+      {
+        "section": "Hauptargumente",
+        "original": "Dies offenbart eine grundlegende Limitation in Standard-Evaluationsparadigmen, die nur Genauigkeit messen.",
+        "suggested": "Dies offenbart eine grundlegende Limitation in Standard-Evaluationsparadigmen, die nur Genauigkeit messen und direktionale sowie socially-conditioned Reasoning-Fehler übersehen.",
+        "reason": "Vollständigere Erfassung der im Original genannten Limitation"
+      }
+    ]
+  }
+}

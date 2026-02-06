@@ -1,0 +1,65 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "TPACK-Modell wird im generiertem Dokument erwähnt, aber die drei Dimensionen (Technological, Pedagogical, Content Knowledge) sind nicht ausgeführt",
+        "Die vier Forschungsfragen sind im Original deutlich aufgelistet, im generierten Dokument jedoch nur implizit zusammengefasst",
+        "Systematische Übersicht der Lernwerkzeuge (Tabelle 6 im Original mit 8 Hardware + 6 Software + 11 Agents + 5 Unplugged) ist nicht quantifiziert"
+      ],
+      "missing_minor": [
+        "Assessment-Methoden-Details (13 quantitativ, 18 qualitativ) sind nur vage referenziert",
+        "Lehrerausbildungs-Herausforderungen (Finanzierung, unreife Curricula, technische Infrastruktur) sind komprimiert",
+        "Die spezifische Erwähnung von 'Elements of AI' Initiative (Norwegen 2020) fehlt"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Prozess-Fehler: processed_date ist 2026-02-05, liegt aber nach conversion_date (2026-02-03) - sollte später sein"
+      ],
+      "distortions": [
+        "Gender-Absatz ist korrekt, aber die Kontextualisierung 'überproportionale Auswirkungen' ist eine Interpretation; Original sagt 'may need to transition' (Potenzialaussage, keine Garantie)",
+        "Die Charakterisierung von AI-Automatisierung als 'Gender-spezifisches Phänomen' ist eine interpretative Rahmung, die im Original zwar belegt ist, aber als Kernfokus des Papers zu prominent dargestellt wird"
+      ]
+    },
+    "category_validation": {
+      "score": 85,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "KI_in_Bildung - sollte Primary Category sein (nicht nur KI_Sonstige)",
+        "Arbeitsmarkt / Berufliche_Zukunft - wird im Original ausführlich behandelt (McKinsey Report, Automatisierung bis 2030)",
+        "Ethik_in_KI - ist eine der vier Kernkomponenten des Modells und sollte eigene Kategorie sein"
+      ]
+    }
+  },
+  "overall_confidence": 88,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "processed_date": "2026-02-05 sollte nicht nach conversion_date liegen - bitte als 2026-02-04 korrigieren",
+      "categories_addition": [
+        "KI_in_Bildung",
+        "Arbeitsmarkt_Automatisierung",
+        "Ethik_KI_Systems"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Kernbefund",
+        "issue": "Gender-Darstellung zu absolut",
+        "fix": "Ändern von 'betrifft besonders Frauen' zu 'birgt spezifische Risiken für Frauen, da 160 Millionen Frauen weltweit möglicherweise Berufe wechseln müssen, insbesondere in Büroarbeit (72% Frauenanteil in betroffenen Rollen)'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "TPACK-Operationalisierung nicht ausgeführt",
+        "addition": "Die drei Wissensdimensionen des TPACK-Modells sind: (1) Technological Knowledge: AI-spezifische Hardware/Software-Tools; (2) Pedagogical Knowledge: Lehrmethoden und Scaffolding-Strategien; (3) Content Knowledge: AI-Konzepte und Curriculum-Inhalte"
+      },
+      {
+        "section": "Kategorie-Evidenz / Gender",
+        "issue": "Spezifische Zahlen aus McKinsey-Report sollten besser belegt sein",
+        "addition": "Manyika et al. (2017) schätzen: 15% globaler Arbeitsstunden werden automatisiert, 47% amerikanischer Jobs tragen hohes Automatisierungsrisiko bis 2030"
+      }
+    ]
+  }
+}

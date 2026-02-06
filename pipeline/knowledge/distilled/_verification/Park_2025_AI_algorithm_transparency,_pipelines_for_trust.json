@@ -1,0 +1,49 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 92,
+      "missing_critical": [],
+      "missing_minor": [
+        "Spezifische Stichprobengröße pro Experimentalbedingung (n=254, 283, 253, 269) nicht in Methodenabschnitt zusammengefasst",
+        "Messinstrumente (Cronbach's α Werte: 0.91 für Chatbot-Vertrauen, 0.96 für Unternehmensvertrauen) nicht explizit erwähnt",
+        "Kontrollvariablen (Alter, Bildung, Einkommen, Geschlecht, Ethnizität) könnten präziser aufgelistet sein"
+      ]
+    },
+    "correctness": {
+      "score": 98,
+      "errors": [],
+      "distortions": [
+        "Geringfügig: 'Datenbasis' im Methodikabschnitt wiederholt Information aus der Hauptmethodik-Beschreibung; könnte redundant wirken"
+      ]
+    },
+    "category_validation": {
+      "score": 95,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Potentiell: Organizational_Communication oder Trust_Building - Das Paper behandelt explizit Vertrauensdynamiken in Organisationskommunikation und hat direkte praktische Implikationen für Unternehmenskommunikation. Dies könnte als eigene Kategorie relevant sein, wurde aber nicht erwähnt"
+      ]
+    }
+  },
+  "overall_confidence": 94,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": null,
+    "content_fixes": [
+      {
+        "section": "Methodik",
+        "issue": "Ergänzung der Stichprobenverteilung",
+        "suggestion": "Explizit erwähnen: 'High Transparency/High Involvement (n=254), High Transparency/Low Involvement (n=253), Low Transparency/High Involvement (n=283), Low Transparency/Low Involvement (n=269)'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Potentielle fehlende Kategorie",
+        "suggestion": "Erwägen, 'Organizational_Communication' oder 'Trust_Building' hinzuzufügen, da das Paper explizit auf organisationale Kommunikationsstrategien und Vertrauensmechanismen fokussiert: 'This has practical implications for organizations integrating AI, offering a viable strategy to cultivate trust'"
+      },
+      {
+        "section": "Hauptargumente",
+        "issue": "Moderation-Effekt-Details",
+        "suggestion": "Ergänzung: 'Bei hohem Issue-Involvement und hoher Transparenz wird die negative Beziehung zwischen negativer KI-Einstellung und Vertrauen in das Unternehmen signifikant reduziert (b = -0.48, t(1046) = -9.54, p < 0.001 für Low Transparency; signifikante Moderation bei High Transparency)'"
+      }
+    ]
+  }
+}

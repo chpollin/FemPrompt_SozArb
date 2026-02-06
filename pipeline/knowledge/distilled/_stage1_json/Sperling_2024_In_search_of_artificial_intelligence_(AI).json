@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "title": "In search of artificial intelligence (AI) literacy in teacher education: A scoping review",
+    "authors": [
+      "Katarina Sperling",
+      "Carl-Johan Stenberg",
+      "Cormac McGrath",
+      "Anna Åkerfeldt",
+      "Fredrik Heintz",
+      "Linnea Stenliden"
+    ],
+    "year": 2024,
+    "type": "journalArticle",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "How does the scientific literature conceptualize AI literacy in relation to teachers' different forms of professional knowledge relevant for Teacher Education?",
+    "methodology": "Scoping Review; systematische Literaturanalyse von 34 Papern und Proceedings (2000-2023) mit analytischem Rahmen basierend auf Aristoteles' Konzepten (episteme, techne, phronesis)",
+    "key_finding": "AI literacy ist ein global emergierendes Forschungsthema, aber kaum in Teacher Education verankert. Die Literatur ist computer-science-zentriert und konzeptualisiert AI literacy implizit und überwiegend durch technische und praktische Dimensionen, während ethische und kontextgebundene professionelle Urteile unterrepräsentiert sind.",
+    "data_basis": "Scoping Review von 34 wissenschaftlichen Papern und Proceedings; keine primäre empirische Datenerhebung durch die Autoren"
+  },
+  "arguments": [
+    "AI literacy ist in Teacher Education Programmen nahezu abwesend, obwohl nationale Curricula bereits AI literacy einführen. Dies schafft eine Lücke zwischen wachsenden Erwartungen und fehlender Lehrerausbildung.",
+    "Die Literatur ist stark computer-science-getrieben und folgt explorativen Lehrpädagogien mit digitalen Ressourcen, was impliziert, dass Lernen durch kollaboratives Experimentieren mit Technologie am effektivsten ist—eine epistemologische Annahme, die nicht automatisch für alle Unterrichtskontexte gilt.",
+    "Ethische Fragen werden überwiegend als technische Herausforderungen framed (z.B. besseres Datendesign), nicht als Fragen professioneller Urteilskraft (phronesis). Die praktische und ethische Wissensdimension von Lehrkräften bleibt unterexpliziert."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": false,
+    "Bias_Ungleichheit": true,
+    "Gender": false,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "AI literacy has recently emerged in a landscape rich with a variety of literacies, necessitated by the pervasive presence of AI in contemporary society. The study explicitly examines 'how the scientific literature conceptualises AI literacy in relation to teachers' different forms of professional knowledge relevant for Teacher Education.'",
+    "KI_Sonstige": "The paper discusses machine learning, natural language processing (NLP), algorithms, automated grading systems, and AI-based educational technologies. It covers 'AI-based educational technologies into classrooms and universities' and discusses how 'AI often operates autonomously and can adapt according to the context.'",
+    "Bias_Ungleichheit": "The literature addresses 'data biases' and the paper discusses algorithmic bias in automated grading systems. Teachers exhibit 'confirmation bias' and 'algorithm aversion.' The paper notes concerns about 'surveillance' and 'potential impact on employment and sustainable development.' Discussion of how AI can perpetuate inequality through biased systems.",
+    "Diversitaet": "The paper emphasizes that AI literacy considerations should account for 'factors like age, prior experience, preconceptions, and the learners' identities, values, and backgrounds.' It notes that resources 'seldom cater to diverse age groups or varying levels of prior knowledge' and discusses challenges in reaching different populations.",
+    "Fairness": "Concerns about 'fairness' in AI systems, particularly regarding automated grading. Discussion of 'reliability and fairness' of AI EdTech. The paper addresses 'algorithmic fairness' implicitly through discussions of bias in automated assessment and the need for teachers to understand 'capabilities and constraints' of AI systems."
+  },
+  "references": [
+    {
+      "author": "Long, D. & Magerko, B.",
+      "year": 2018,
+      "short_title": "AI literacy definition and competencies framework"
+    },
+    {
+      "author": "Council of Europe, Commissioner for Human Rights",
+      "year": 2019,
+      "short_title": "AI literacy and human rights in education"
+    },
+    {
+      "author": "Gustavsson, B.",
+      "year": "nicht angegeben",
+      "short_title": "Contemporary elaboration of Aristotelian knowledge concepts"
+    },
+    {
+      "author": "Keeling, R.",
+      "year": "nicht angegeben",
+      "short_title": "Aristotelian framework in higher education"
+    },
+    {
+      "author": "Kinsella, E.A. & Pitman, A.",
+      "year": 2012,
+      "short_title": "Phronesis as professional knowledge"
+    },
+    {
+      "author": "Druga, S. et al.",
+      "year": 2022,
+      "short_title": "The landscape of teaching resources for AI education"
+    },
+    {
+      "author": "Holmes, W. & Porayska-Pomsta, K.",
+      "year": 2022,
+      "short_title": "The ethics of artificial intelligence in education"
+    },
+    {
+      "author": "UNICEF",
+      "year": 2021,
+      "short_title": "Policy guidance on AI for children"
+    },
+    {
+      "author": "Ng, D.T.K. et al.",
+      "year": 2021,
+      "short_title": "Conceptualizing AI literacy: an exploratory review"
+    },
+    {
+      "author": "Nazaretsky, T. et al.",
+      "year": 2022,
+      "short_title": "Teachers' trust in AI-powered educational technology"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat begrenzte Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender Studies. Es behandelt AI literacy im Kontext von Lehrerausbildung und Schulen, nicht Soziale Arbeit. Es adressiert Fragen von Bias und Diversität, aber nicht explizit Gender oder feministische Perspektiven. Der konzeptionelle Rahmen (episteme-techne-phronesis) könnte auf Soziale Arbeit anwendbar sein, wird aber nicht in diesem Kontext entwickelt.",
+    "unique_contribution": "Der Paper leistet einen originären Beitrag durch die systematische Analyse von AI literacy in Teacher Education (ein bisher kaum beforschtes Feld) und durch die Anwendung des Aristotelischen Rahmens zur Differenzierung impliziter vs. expliziter Dimensionen professioneller Wissensentwicklung.",
+    "limitations": "Das Paper ist rein literaturbasiert ohne Klassenzimmernobservationen oder primäre Lehrkräftenbefragungen; es fehlt eine explizite intersektionale oder feministische Perspektive auf AI literacy; die Fokussierung auf Teacher Education bedeutet begrenzte Relevanz für andere professionelle Kontexte wie Soziale Arbeit."
+  },
+  "target_group": "Lehrerausbildner, Policymaker im Bildungsbereich, Curriculumdesigner, Forscher im Bereich Educational Technology und AI Education, Schulleitung und Lehrkräfte in Fortbildungen. Sekundär relevant für: Fachgruppen in digitaler Ethik, Fairness in Algorithmen und Bildungsgerechtigkeit."
+}

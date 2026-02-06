@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "title": "Challenging Systematic Prejudices: An Investigation into Gender Bias in Large Language Models",
+    "authors": [
+      "Daniel van Niekerk",
+      "María Pérez-Ortiz",
+      "John Shawe-Taylor",
+      "Davor Orlić",
+      "Ivana Drobnjak",
+      "Jackie Kay",
+      "Noah Siegel",
+      "Katherine Evans",
+      "Nyalleng Moorosi",
+      "Tina Eliassi-Rad",
+      "Leonie Maria Tanczer",
+      "Leona Verdadero",
+      "Wayne Holmes",
+      "Marc Peter Deisenroth",
+      "Isabel Straw",
+      "Maria Fasli",
+      "Rachel Adams",
+      "Nuria Oliver",
+      "Dunja Mladenić",
+      "Urvashi Aneja",
+      "Madeleine Janickyj"
+    ],
+    "year": 2024,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie manifestieren sich Geschlechterstereotypen und geschlechtsspezifische Vorurteile in der Ausgabe großer Sprachmodelle und welche Auswirkungen haben diese auf Gesellschaft und vulnerable Gruppen?",
+    "methodology": "Empirisch - Mixed Methods: Wort-Embedding-Assoziationstests, Textgenerierungsaufgaben mit Sentiment- und Regard-Analyse, Diversitätsanalysen von Textgenerierungen, qualitative Wort-Cloud-Analysen",
+    "key_finding": "State-of-the-art LLMs (GPT-2, Llama 2, ChatGPT) perpetuieren persistente Geschlechterstereotypen, wobei nicht-optimierte Modelle in ~20% der Fälle sexistische Inhalte generieren und LGBTQ+-Themen in 60-70% negativ darstellen, während RLHF-gesteuerte Modelle wie ChatGPT diese Biases teilweise reduzieren.",
+    "data_basis": "4 empirische Studien: (1) Wort-Embedding-Test mit OpenAI Ada-002; (2) Text-Completion-Studien mit GPT-2, Llama 2, ChatGPT; (3) Kultur- und Geschlechter-kontextualisierte Textgenerierung; (4) Open-ended Story-Generation mit 1.000 Geschichten pro Kategorie (boys, girls, women, men)"
+  },
+  "arguments": [
+    "Geschlechterstereotypen sind in modernen LLMs tief verwurzelt: Weibliche Namen werden mit 'home', 'family', 'children' assoziiert, männliche Namen mit 'business', 'executive', 'salary' und 'career', was traditionelle Geschlechterrollen perpetuiert.",
+    "Untrainierte LLMs generieren explicit sexistische, misogynistische und homophobe Inhalte in signifikanten Quoten (20-70% je nach Modell und Kategorie), während durch RLHF-Finetuning optimierte Modelle diese Biases substanziell reduzieren können.",
+    "Algorithmen verstärken die Homogenisierung marginalisierter Gruppen: LLMs generieren repetitive, stereotype Inhalte für Frauen und Personen aus dem Global South, während Männer und Global North-Narrative vielfältigere und professionellere Kontexte erhalten."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": true,
+    "Prompting": true,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": false,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Education and awareness campaigns play a pivotal role in sensitizing developers, users, and stakeholders to the nuances of gender bias in AI, promoting the responsible and informed use of technology.",
+    "Generative_KI": "This study explores biases in three significant large language models (LLMs): OpenAI's GPT-2 and ChatGPT, along with Meta's Llama 2, highlighting their role in both advanced decision-making systems and as user-facing conversational agents.",
+    "Prompting": "The approach of this second study starts with an incomplete sentence and prompts the model to complete it. It investigates if the LLMs would show bias in its text generation. For example, to examine associations between gender and occupation, it is possible to repeatedly sample how the LLM completed partial sentences starting with 'The man/woman worked as a …'",
+    "KI_Sonstige": "Measurement Bias, Representation Bias, Aggregation Bias, Learning Bias, Deployment Bias - biases can be introduced at any stage of AI development from design and modelling decisions, to data collection, processing, and the context of deployment.",
+    "Soziale_Arbeit": "Gender-Based Violence (GBV): AI systems, especially those leveraging LLMs, offer new avenues to address GBV through prevention, detection, and support services. Yet, they also risk facilitating technology-facilitated GBV (TF-GBV), amplifying online harassment and abuse, including doxing and the creation of deepfakes.",
+    "Bias_Ungleichheit": "The underrepresentation of women in AI development and leadership roles can further lead to the creation of socio-technical systems which fail to consider the diverse needs and perspectives of all genders, once again perpetuating stereotypes and gender disparities.",
+    "Gender": "In gendered word association tasks, a recent LLM still exhibited previously identified biases and was significantly more likely to associate gendered names with traditional roles (e.g. female names with 'home', 'family', 'children'; and male names with 'business', 'executive', 'salary', and 'career'.",
+    "Diversitaet": "Both models generated richer sets of sentence completions for certain subjects, while producing significantly more repetitive content for local groups. Furthermore, this same trend can be seen for male compared to female subjects in each sub-group. The reason for this disparity may be the relative under-representation of local groups in historical and online digital media from which the models were trained.",
+    "Fairness": "The UNESCO Recommendation on the Ethics of AI asserts that 'AI actors should make all reasonable efforts to minimize and avoid reinforcing or perpetuating discriminatory or biased applications and outcomes throughout the life cycle of the AI system to ensure fairness of such systems'."
+  },
+  "references": [
+    {
+      "author": "Caliskan, Bryson & Narayanan",
+      "year": 2017,
+      "short_title": "Semantics derived automatically from language corpora contain human-like biases"
+    },
+    {
+      "author": "Sheng, Chang, Natarajan & Peng",
+      "year": 2019,
+      "short_title": "The Woman Worked as a Babysitter: On Biases in Language Generation"
+    },
+    {
+      "author": "Dhamala et al.",
+      "year": 2021,
+      "short_title": "BOLD: Dataset and Metrics for Measuring Biases in Open-Ended Language Generation"
+    },
+    {
+      "author": "Weidinger et al.",
+      "year": 2021,
+      "short_title": "Ethical and social risks of harm from Language Models"
+    },
+    {
+      "author": "Greenwald, McGhee & Schwartz",
+      "year": 1998,
+      "short_title": "Measuring individual differences in implicit cognition: The implicit association test"
+    },
+    {
+      "author": "Seyyed-Kalantari et al.",
+      "year": 2021,
+      "short_title": "Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations"
+    },
+    {
+      "author": "Bommasani et al.",
+      "year": 2022,
+      "short_title": "On the Opportunities and Risks of Foundation Models"
+    },
+    {
+      "author": "Guo & Caliskan",
+      "year": 2021,
+      "short_title": "Detecting Emergent Intersectional Biases: Contextualized Word Embeddings Contain a Distribution of Human-like Biases"
+    },
+    {
+      "author": "Kapoor & Narayanan",
+      "year": 2023,
+      "short_title": "Quantifying ChatGPT's gender bias"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2022,
+      "short_title": "Recommendation on the Ethics of Artificial Intelligence"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Das Paper hat hohe Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender, da es systematisch Geschlechtsstereotypen und deren Auswirkungen auf vulnerable Gruppen analysiert und explizite Empfehlungen für Policymaker und Entwickler formuliert, die auch sozialarbeiterische Anwendungsfelder betreffen.",
+    "unique_contribution": "Die Studie leistet einen bedeutsamen Beitrag durch umfassende empirische Analyse multipler State-of-the-art LLMs mit standardisierten Messmethoden (Word-Embeddings, Sentiment-Analyse, Regard-Metriken) und intersektionaler Perspektive (Geschlecht × Kultur × Nationalität), verbunden mit konkreten Handlungsempfehlungen für Policymaker und Entwickler.",
+    "limitations": "Die Studien konzentrieren sich primär auf englischsprachige Texte und Modelle; Language Limitation wird selbst als Limitation identifiziert; Deployment Bias wird als Challenge erkannt, dass Test-Szenarien möglicherweise nicht reale Anwendungskontexte abbilden; fehlende tiefere intersektionale Analyse hinsichtlich Behinderung, Alter und anderen Kategorien."
+  },
+  "target_group": "Primär: Policy-Maker und Regierungen, KI-Entwickler und Tech-Unternehmen, Forscher:innen im Bereich AI Ethics und Gender Studies. Sekundär: Sozialarbeiter:innen, Bildungsfachkräfte, Aktivist:innen für Frauenrechte und LGBTQ+-Rechte, zivilgesellschaftliche Organisationen, Nutzer:innen von KI-Systemen"
+}

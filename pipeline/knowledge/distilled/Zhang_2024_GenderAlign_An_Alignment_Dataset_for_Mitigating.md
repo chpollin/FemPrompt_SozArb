@@ -1,0 +1,92 @@
+---
+title: "GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models"
+authors: ["Tao Zhang", "Ziqian Zeng", "Yuxiang Xiao", "Huiping Zhuang", "Cen Chen", "James Foulds", "Shimei Pan"]
+year: 2024
+type: conferencePaper
+language: en
+categories:
+  - Generative_KI
+  - Prompting
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Gender
+  - Diversitaet
+  - Fairness
+processed: 2026-02-05
+source_file: Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md
+confidence: 95
+---
+
+# GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models
+
+## Kernbefund
+
+Das GenderAlign-Dataset mit 8k Dialogpaaren reduziert Gender-Bias in LLMs signifikant effektiver als das bestehende HH-RLHF-Dataset und zeigt konsistent bessere Performance über verschiedene Modelle (Llama2-7B und Llama2-13B).
+
+## Forschungsfrage
+
+Wie kann ein speziell zur Bekämpfung von Gender-Bias konzipiertes Alignment-Dataset (GenderAlign) die Qualität und Fairness von Large Language Models verbessern?
+
+## Methodik
+
+Empirisch - Automatisierte Annotationsschema zur Dataseterstellung, LLM-basierte Dialoggenerierung (GPT-3.5), Validierung durch mehrere LLM-Evaluatoren (GPT-3.5, Gemini-Pro, Claude-3-opus) und menschliche Evaluator:innen, Kategorische Klassifikation von Gender-Bias
+**Datenbasis:** 8.000 einzelne Dialogpaare mit jeweils 'chosen' und 'rejected' Responses; Seed-Texte aus 3.217 Texten aus CORGI-PM-Dataset, 626 aus WorkplaceSexism-Dataset, 404 manuell kuratierte Texte aus 5 Fachbüchern
+
+## Hauptargumente
+
+- Existierende öffentlich verfügbare Alignment-Datasets wie HH-RLHF enthalten immer noch messbare Gender-Bias-Phänomene (293 von 3.154 'chosen' Responses); selbst kleine Mengen kontaminierter Daten (1%) können RLHF-Training gefährden.
+- Gender-Bias in LLMs lässt sich durch spezialisierte Alignment-Datasets systematisch reduzieren; GenderAlign wurde durch Kombination von automatisierter Annotation und LLM-Generierung mit vier explizit kategorisierten Bias-Typen (Stereotypes, Discriminatory Language, Occupational/Educational Sexism, Bias Against Marginalized Genders) entwickelt.
+- Unterschiedliche Quellen (Workplace-Sexism-Daten und akademische Fachliteratur zu Gender) tragen unterschiedlich zur Bias-Mitigation bei; die kombinierte Nutzung beider Quellentypen erzielt beste Ergebnisse gegenüber Einzelquellen.
+
+## Kategorie-Evidenz
+
+### Generative_KI
+
+Das Paper konzentriert sich auf Large Language Models (LLMs) einschließlich GPT-3.5, Gemini-Pro und Claude-3-opus sowie deren Alignment durch spezialisierte Trainingsdatensätze.
+
+### Prompting
+
+Die Dialoggenerierung erfolgt durch sorgfältig gestaltete Prompts für GPT-3.5, um Fragen und 'chosen' Responses zu erzeugen; 'rejected' Responses werden durch Prompting von unaligned LLMs generiert. Siehe Appendix C und Table 8.
+
+### KI_Sonstige
+
+Das Paper behandelt RLHF (Reinforcement Learning from Human Feedback), NLP-Techniken, Alignment-Techniken und Bias-Messung in neuronalen Sprachmodellen.
+
+### Bias_Ungleichheit
+
+Zentrales Thema: Analyse und Mitigation von systematischen Verzerrungen in LLMs; das Paper identifiziert 293 biased Responses in HH-RLHF und dokumentiert messbare Unterschiede in Bias-Levels zwischen Modellen.
+
+### Gender
+
+Expliziter Fokus auf Gender-Bias; vier Kategorien von Gender-Bias werden definiert und klassifiziert: Stereotypes, Discriminatory Language, Sexism in Occupational/Educational Institutions, Bias Against Marginalized Genders. Zahlreiche Beispiele zu Geschlechterstereotypen, Workplace-Sexismus und LGBTQ+-bezogenen Verzerrungen.
+
+### Diversitaet
+
+Das Paper adressiert marginalisierte Genders explizit ('Bias Against Marginalized Genders') und referenziert WinoQueer-Dataset für LGBTQ+-spezifische Bias-Messung; Inklusivität ist ein Designprinzip des GenderAlign-Datensatzes.
+
+### Fairness
+
+Das Paper verwendet explizite Fairness-Metriken (Pearson Correlation Coefficient, Ranking Scores) zur Evaluation von Bias-Reduktion; Alignment wird als Fairness-Instrument verstanden, um LLMs mit faireren Verhaltensweisen auszurichten.
+
+## Assessment-Relevanz
+
+**Domain Fit:** Das Paper adressiert eine kritische Schnittstelle zwischen KI-Entwicklung und sozialer Gerechtigkeit, insbesondere Gender-Fairness; die Erstellung eines öffentlich verfügbaren Datensatzes zur Bias-Mitigation trägt zu ethischer KI-Praxis bei. Relevanz für KI-Policy und responsible AI-Entwicklung ist hoch, direkter Bezug zu Sozialer Arbeit jedoch begrenzt.
+
+**Unique Contribution:** Erste spezialisierte öffentlich verfügbare Alignment-Dataset (GenderAlign) mit systematischer Kategorisierung von Gender-Bias in conversationalen Kontexten, kombiniert mit empirischem Nachweis der Überlegenheit gegenüber bestehenden Alignment-Datasets.
+
+**Limitations:** Die Annotation durch menschliche Evaluator:innen kann selbst Gender-Bias aufweisen; Fokus auf englischsprachige Dialoge mit begrenzter kultureller Diversität; unaligned LLMs als Quelle für 'rejected' Responses könnten systematische Verzerrungen einführen; Limitierung auf Single-Turn-Dialoge.
+
+**Target Group:** KI-Entwickler:innen und ML-Engineer:innen, die an Bias-Mitigation in LLMs arbeiten; Policy-Maker und Ethik-Verantwortliche in KI-Organisationen; Forscher:innen in NLP und AI-Fairness; sekundär relevant für Sozialarbeiter:innen, die mit KI-gestützten Systemen in Beratungs- oder Entscheidungskontexten arbeiten
+
+## Schlüsselreferenzen
+
+- [[Nangia_et_al_2020]] - CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models
+- [[Parrish_et_al_2022]] - BBQ: A Hand-Built Bias Benchmark for Question Answering
+- [[Zhao_et_al_2018]] - WinoGender: An Evaluation Set for Gender Bias in Coreference Resolution
+- [[Felkner_et_al_2023]] - WinoQueer: A Community-in-the-Loop Benchmark for Anti-LGBTQ+ Bias in Large Language Models
+- [[Grosz_CondeCespedes_2020]] - Automatic Detection of Sexist Statements Commonly Used at the Workplace
+- [[Zhang_et_al_2023]] - CORGI-PM: A Corpus for Gender Bias in Chinese
+- [[Bai_et_al_2022]] - Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback (HH-RLHF)
+- [[Doughman_et_al_2021]] - Gender Bias in Text: Origin, Taxonomy, and Implications
+- [[Havens_et_al_2022]] - Uncertainty and Inclusivity in Gender Bias Annotation: An Annotation Taxonomy and Annotated Datasets of British English Text
+- [[Luccioni_Viviano_2021]] - What's in the Box? An Analysis of Undesirable Content in the Common Crawl Corpus

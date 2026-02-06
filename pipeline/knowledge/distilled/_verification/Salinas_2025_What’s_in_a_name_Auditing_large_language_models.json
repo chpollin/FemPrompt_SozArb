@@ -1,0 +1,65 @@
+{
+  "verification": {
+    "completeness": {
+      "score": 88,
+      "missing_critical": [
+        "Spezifische Zahlenergebnisse aus den Tabellen fehlen (z.B. konkrete Disparitäts-Werte)",
+        "Diskussion der rechtlichen Implikationen (Disparate Impact vs. Disparate Treatment) nicht ausreichend zusammengefasst",
+        "Recommendations und Implikationen für Praxis zu kurz behandelt"
+      ],
+      "missing_minor": [
+        "Detaillierte Beschreibung der 14 Domänen nicht vollständig",
+        "Spezifische Modellunterschiede in den Ergebnissen nicht differenziert",
+        "Code-Verfügbarkeit erwähnt, aber nicht als Stärke hervorgehoben"
+      ]
+    },
+    "correctness": {
+      "score": 92,
+      "errors": [
+        "Minimal: 'source_file' im Frontmatter verweist auf .md-Datei statt .pdf - aber akzeptabel als Konversion"
+      ],
+      "distortions": [
+        "Die Kernbefunde sind korrekt, aber die Formulierung 'Names associated with Black women receive the least advantageous outcomes' könnte präzisiert werden: Die Intersektionalität wird im Original deutlicher als in der Zusammenfassung hervorgehoben"
+      ]
+    },
+    "category_validation": {
+      "score": 88,
+      "incorrect_categories": [],
+      "missing_categories": [
+        "Audit_Methoden - das Paper präsentiert Audit Studies als etablierte Methode, dies verdient eine Kategorie",
+        "Rechtliche_Frameworks - das Paper diskutiert US-amerikanische Anti-Diskriminierungsgesetze (Fourteenth Amendment, Title VII, etc.) ausführlich",
+        "Eval_Benchmarking - das Paper ist ein Benchmark/Evaluation von 6 verschiedenen State-of-the-Art-Modellen"
+      ]
+    }
+  },
+  "overall_confidence": 89,
+  "needs_correction": false,
+  "corrections": {
+    "frontmatter": {
+      "source_file": "Hinweis: Original ist PDF, Dokumentation als .md erfolgte durch Konversion mit Docling (conversion_date: 2026-02-03T18:50:50.043394, quality_score: 95)",
+      "additional_categories": [
+        "Audit_Methoden",
+        "Rechtliche_Frameworks",
+        "Eval_Benchmarking",
+        "Stereotype"
+      ]
+    },
+    "content_fixes": [
+      {
+        "section": "Hauptargumente",
+        "issue": "Ergänzung: Die Studie dokumentiert auch spezifische Kontexteffekte",
+        "suggestion": "Hinzufügen: 'In Sport-Szenarien zeigt sich paradox eine Präferenz für Black-sounding Names, während in allen anderen Szenarien ein White-Male-Bias dominiert - was auf domänenspezifische Stereotype hindeutet.'"
+      },
+      {
+        "section": "Kategorie-Evidenz",
+        "issue": "Rechtliche Frameworks unterrepräsentiert",
+        "suggestion": "Neuer Punkt Rechtliche_Frameworks: 'The paper situates name-based bias within U.S. anti-discrimination law frameworks, distinguishing disparate treatment from disparate impact and demonstrating that LLM-induced name-based disparities constitute potential disparate impact violations.'"
+      },
+      {
+        "section": "Schlüsselreferenzen",
+        "issue": "Inkomplett - fehlen Referenzen zu neueren Arbeiten",
+        "suggestion": "Hinzufügen sollte: Griggs v. Duke Power (rechtliche Grundlage für disparate impact), sowie weitere referenzierte Arbeiten wie Onwuachi-Willig und Barnes (normative Kritik an Audit-Designs)"
+      }
+    ]
+  }
+}

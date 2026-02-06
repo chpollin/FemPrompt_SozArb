@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "title": "How can feminism inform AI governance in practice?",
+    "authors": [
+      "Paola Ricaurte"
+    ],
+    "year": 2024,
+    "type": "report",
+    "language": "en"
+  },
+  "core": {
+    "research_question": "Wie können feministische Perspektiven und Prinzipien die Governance, Entwicklung und den Einsatz von KI-Systemen demokratischer, gerechter und inklusiver gestalten?",
+    "methodology": "Theoretisch-konzeptionell mit Praxisbeispielen; Mixed-Methods Ansatz (Dokumentation von drei Fallstudien mit partizipativen Elementen)",
+    "key_finding": "Feminist AI Governance adressiert Machtungleichgewichte im KI-Ökosystem durch systemic-strukturelle Ansätze und erkennt algorithmische Systeme als soziotechnische Assemblierungen an, die von Machtverhältnissen geprägt sind. Drei implementierte Initiativen demonstrieren die Machbarkeit und Notwendigkeit, KI-Systeme auf Basis von sozialer Gerechtigkeit, Menschenrechten und Care-Prinzipien zu entwickeln.",
+    "data_basis": "Qualitativ: ~200 Teilnehmer:innen in globalen Konsultationen (GPAI Working Group); 13 inkubierte Projekte im LAC-Hub des Incubating Feminist AI; Symposium mit Regierungsvertreter:innen und Stakeholder:innen (Buenos Aires 2023)"
+  },
+  "arguments": [
+    "Algorithmen sind nicht neutrale mathematische Entitäten, sondern kontextuelle, situierte Konstrukte, die von sozialen Relationen und kulturellen Werten geprägt sind ('Algorithms are opinions embedded in code'); daher müssen sie als Produkte von Machtverhältnissen und nicht nur als technische Systeme verstanden werden.",
+    "Feminist AI Governance adressiert strukturelle Ungleichheiten, koloniale Kontinuitäten und multidimensionale Schäden, die marginalisierte Gemeinschaften und Territorien des globalen Südens disproportional beeinflussen; zentral ist die Umverteilung von Macht in hochkonzentrierten und ungleichen KI-Ökosystemen.",
+    "Praktische Implementierung zeigt, dass Technologien aus Care-Prinzipien entwickelt werden können und dass Frauen und rassialisierte Communities aktiv an der Gestaltung ihrer eigenen Technologien teilhaben können ('Nothing about us, without us'); dies erfordert aber institutionelle Unterstützung, ausreichende Finanzierung und politischen Willen.",
+    "Eine intersektionale, partizipative und auf Menschenrechten basierende Feminist AI Governance ermöglicht es, Diversitäts- und Gleichstellungsaspekte über den gesamten KI-Lebenszyklus (nicht nur Data/AI-Pipeline) zu integrieren und so zu integraler planetarer Gerechtigkeit beizutragen."
+  ],
+  "categories": {
+    "AI_Literacies": true,
+    "Generative_KI": false,
+    "Prompting": false,
+    "KI_Sonstige": true,
+    "Soziale_Arbeit": true,
+    "Bias_Ungleichheit": true,
+    "Gender": true,
+    "Diversitaet": true,
+    "Feministisch": true,
+    "Fairness": true
+  },
+  "category_evidence": {
+    "AI_Literacies": "Der Text diskutiert grundlegende Fragen zur Kompetenzvermittlung: 'Who can develop AI? Where? How? For what purpose? Why?' und adressiert die Notwendigkeit, Verständnis für die Kontextualität von Algorithmen zu schaffen.",
+    "KI_Sonstige": "Fokus auf algorithmic assemblages, algorithmische Entscheidungssysteme und deren gesellschaftliche Implikationen: 'algorithmic assemblages result from the ensemble of the mathematical and the infrastructural, the sociopolitical and the cultural'.",
+    "Soziale_Arbeit": "Die 13 Projekte adressieren 'profound societal issues' und sind 'grounded in communities'; Care-Ansatz ist zentral: 'involve nurturing processes and challenging the underlying assumptions of what technology is'.",
+    "Bias_Ungleichheit": "Expliziter Fokus auf strukturelle Ungleichheiten: 'addressing power imbalances in the AI ecosystem, considering structural inequalities, colonial legacies, and the multidimensional harms that disproportionately affect communities of the global majority'.",
+    "Gender": "Gender ist zentral für die Initiativen: 'Argentine Ministry of Foreign Affairs and UNESCO organized the Symposium on Feminist Contributions in Artificial Intelligence' und 'Towards Real Diversity and Gender Inclusion in AI Ecosystems'.",
+    "Diversitaet": "Inklusion und Repräsentation sind Kernziele: 'ensure that our ethical frameworks and governance structures reflect the principles of diversity, equity, and inclusion' und 'lack of representation in governance structures of countries, territories and populations of the global majority'.",
+    "Feministisch": "Explizit feministische Rahmenwerk und Theorie: 'Based on feminist principles and a critical understanding of the role of technology in society'; Verwendung von Design Justice Prinzipien; intersektionaler Ansatz; Bezug zu feministischen Konzepten von Care und 'Nothing about us, without us'.",
+    "Fairness": "Fairness und Gerechtigkeit sind zentral für das Konzept: 'aimed to ensure that artificial intelligence systems are governed, designed, developed, deployed, and used in ways that are just, equitable, and inclusive'; 'pursuing fair, equitable and inclusive AI systems in the pursuit of universal access to human rights'."
+  },
+  "references": [
+    {
+      "author": "O'Neil, Cathy",
+      "year": "nicht angegeben",
+      "short_title": "Algorithms are opinions embedded in code"
+    },
+    {
+      "author": "UNESCO",
+      "year": 2023,
+      "short_title": "Recommendation on the Ethics of AI"
+    },
+    {
+      "author": "Ricaurte, Paola",
+      "year": 2024,
+      "short_title": "Incubating Feminist AI in Latin America (IDRC-funded)"
+    },
+    {
+      "author": "Argentine Ministry of Foreign Affairs & UNESCO",
+      "year": 2023,
+      "short_title": "Feminist Contributions in Artificial Intelligence: Epistemological Justice and Ethics of Equality (Buenos Aires Symposium)"
+    },
+    {
+      "author": "Global Partnership on Artificial Intelligence (GPAI)",
+      "year": 2024,
+      "short_title": "Towards Real Diversity and Gender Inclusion in AI Ecosystems (Responsible AI Working Group)"
+    }
+  ],
+  "assessment": {
+    "domain_fit": "Hochgradig relevant für die Schnittstelle KI/Soziale Arbeit/Gender: Das Paper artikuliert einen ganzheitlichen, feministischen Governance-Ansatz, der strukturelle Ungleichheiten adressiert und Community-basierte technologische Entwicklung mit Care-Prinzipien verbindet—zentral für sozialarbeiterische Praxis mit marginalisierten Gruppen.",
+    "unique_contribution": "Der Text leistet einen originären Beitrag durch die konzeptionelle Definition und praktische Operationalisierung von 'Feminist AI Governance' als Feld mit systematischem, intersektionalem Ansatz und dokumentiert konkrete, multi-stakeholder Implementierungen auf regionaler und internationaler Ebene.",
+    "limitations": "Das Paper ist primär konzeptionell-deskriptiv; es fehlen tiefere Evaluationen der langfristigen Wirkung und quantitative Effektivitätsmessungen der beschriebenen Initiativen; zudem wird die Nachhaltigkeitsproblematik (begrenzte Finanzierung, fehlende Policy-Integration) erwähnt, aber nicht systematisch analysiert."
+  },
+  "target_group": "Policymaker und Regierungsvertreter:innen in KI und Gender/Gleichstellung; KI-Entwickler:innen und Technolog:innen mit sozialem Bewusstsein; Sozialarbeiter:innen und NGOs in Kontexten des globalen Südens; Forscher:innen in Gender Studies, AI Ethics und Critical Technology Studies; internationale Organisationen (UNESCO, IDRC); Aktivist:innen und Advocate:innen für Geschlechtergerechtigkeit und digitale Gerechtigkeit."
+}
