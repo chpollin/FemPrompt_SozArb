@@ -1,8 +1,8 @@
-# Status (2026-02-04)
+# Status (2026-02-06)
 
-## Aktueller Fokus: Knowledge Distillation
+## Aktueller Fokus: Benchmark vorbereiten
 
-Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. **Knowledge Distillation v2** erfolgreich getestet (10 Dokumente, 90.7% Confidence). Der neue 3-Stage-Workflow erzeugt Obsidian-kompatible Markdown-Dokumente mit Wikilinks.
+Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: Benchmark (Human vs. LLM Assessment). Blockiert durch Human-Assessment.
 
 ---
 
@@ -13,7 +13,8 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. **Knowledge Distillation v2
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
 | **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit |
-| **LLM** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
+| **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
+| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Wartet |
 
 ### Human Assessment
 
@@ -24,7 +25,7 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. **Knowledge Distillation v2
 | Google Spreadsheet | [Link](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
 | Bearbeiter | Susi Sackl-Sharif, Sabine Klinger |
 
-### LLM Assessment
+### LLM Assessment (5 Dimensionen - abgeschlossen)
 
 | Aspekt | Stand |
 |--------|-------|
@@ -33,29 +34,27 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. **Knowledge Distillation v2
 | Kosten | $1.15 |
 | Output | `assessment-llm/output/assessment_llm.xlsx` |
 
+### LLM Assessment (10 Kategorien - fuer Benchmark)
+
+| Aspekt | Stand |
+|--------|-------|
+| Script | `benchmark/scripts/run_llm_assessment.py` |
+| Schema | 10 binaere Kategorien (identisch mit Human) |
+| Status | Wartet auf Human-Assessment |
+
 ---
 
 ## Pipeline
 
-### PDF→Markdown Konvertierung (Fertig)
+### PDF-Akquise und Konvertierung (Fertig)
 
-| Aspekt | Stand |
-|--------|-------|
-| PDFs gesamt (nach Erweiterung) | 257 |
-| Erfolgreich konvertiert | 252 |
-| Fehlgeschlagen | 5 (1.9%) |
+| Phase | Ergebnis |
+|-------|----------|
+| PDFs gesamt | 257/326 (78.8%) |
+| Markdown-Konversion | 252/257 (98.1%) |
+| Fehlgeschlagen | 5 (korrupte PDFs) |
 | Dubletten entfernt | 9 |
 | Quality-Score (Durchschnitt) | 93.1/100 |
-
-### Validierung (Fertig)
-
-| Metrik | Wert |
-|--------|------|
-| PASS | 136 (58.6%) |
-| WARNING | 96 (41.4%) |
-| FAIL | 0 (0.0%) |
-| Artefakt-Score (Durchschnitt) | 4.5/100 |
-| Tabellen-Mismatch | 94 Dokumente |
 
 ### Post-Processing (Fertig)
 
@@ -66,42 +65,42 @@ Die PDF-zu-Markdown-Konvertierung ist abgeschlossen. **Knowledge Distillation v2
 | Header-Wiederholungen entfernt | 2,263 |
 | Zeichen insgesamt entfernt | 107,545 |
 
-### Human-in-the-Loop Review Tool (Fertig)
-
-Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
-- **Seiten-Ansicht:** PDF-Seite und Markdown-Text nebeneinander pro Seite
-- Split-Ansicht: Klassische Gesamtansicht
-- PASS/WARN/FAIL Bewertung
-- Keyboard-Shortcuts: `1` PASS, `2` WARN, `3` FAIL, `V` Ansicht wechseln
-- Filter fuer offene/problematische Dokumente
-- Export/Import als JSON
-
-### Human Review (Stichprobe) (In Arbeit)
+### Knowledge Distillation (Fertig + Verifiziert)
 
 | Aspekt | Stand |
 |--------|-------|
-| Geprueft | 25 von 252 (~10%) |
-| PASS | 20 (80%) |
-| WARN | 4 (16%) |
-| FAIL | 1 (4%) |
-| Export | `pipeline/validation_reports/human_review_2026-02-03.json` |
-
-### Knowledge Distillation (In Arbeit)
-
-| Aspekt | Stand |
-|--------|-------|
-| Script | `pipeline/scripts/distill_knowledge.py` |
-| Test-Durchlauf | Erfolgreich (10 Dokumente) |
-| Confidence (Durchschnitt) | 90.7% |
-| API-Kosten (Test) | $0.28 |
-| API-Calls pro Paper | 2 (Stage 2 ist lokal) |
-| Output | `pipeline/knowledge/distilled/` |
 | Verarbeitete Dokumente | 249/252 (98.8%) |
+| Verifizierte Qualitaet | 242/249 perfekt (97.2%) |
+| API-Kosten | ~$7 (gesamt) |
+| Output | `pipeline/knowledge/distilled/` |
 
-**Workflow (3 Stages):**
-1. **Extract & Classify** - Kombinierte Extraktion (JSON)
-2. **Format Markdown** - Obsidian-kompatibel mit Wikilinks (lokal)
-3. **Verify** - Confidence Score + Korrekturvorschlaege
+**Verifikationsergebnis (2026-02-06):**
+
+| Kategorie | Anzahl | Details |
+|-----------|--------|---------|
+| Perfekt | 242 | Alle Checks bestanden |
+| PDF-Qualitaetsprobleme | 5 | Korrupte/falsche PDFs (nicht Pipeline-Fehler) |
+| Niedrige Uebereinstimmung | 2 | Kurze Dokumente, inhaltlich korrekt |
+| Nicht erstellt | 3 | Cvoelcker_2023, Smith_2021, UNESCO_2024_Bias |
+
+**Problematische Dokumente (PDF-Upstream-Probleme):**
+- `Debnath_2024_LLMs` - Original-Markdown korrupt (Zeichen-Muell)
+- `Tun_2025_Trust` - PDF war nur PRISMA-Checklist
+- `D_Ignazio_2024_Data` - PDF enthielt falsches Dokument (Cabnal 2010)
+- `Statistics_2023_Occupational` - Kein AI/Gender Paper (US Bureau of Labor)
+- `Naescher_2025_ReflectAI` - PDF war Konferenzband-Titelseite
+
+---
+
+## Benchmark (Wartet)
+
+| Schritt | Status | Script |
+|---------|--------|--------|
+| Human-Assessment abschliessen | In Arbeit | Google Sheets |
+| LLM-Assessment (10 Kategorien) | Wartet | `benchmark/scripts/run_llm_assessment.py` |
+| Merge Human + LLM | Wartet | `benchmark/scripts/merge_assessments.py` |
+| Cohen's Kappa berechnen | Wartet | `benchmark/scripts/calculate_agreement.py` |
+| Disagreement-Analyse | Wartet | `benchmark/scripts/analyze_disagreements.py` |
 
 ---
 
@@ -112,38 +111,7 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 | Deadline | 4. Mai 2026 |
 | Umfang | 18.000 Zeichen |
 | Fokus | LLM-gestuetzter Literature Review im Praxistest |
-
----
-
-## Pipeline-Phasen
-
-### Phase 1: Assessment & Benchmark
-
-| Schritt | Status | Details |
-|---------|--------|---------|
-| Human-Assessment (Google Sheets) | In Bearbeitung | Susi, Sabine |
-| LLM-Assessment (Claude Haiku 4.5) | Fertig | 325 Papers |
-| Benchmark-Analyse (Cohen's Kappa) | Wartet | Nach Human-Assessment |
-
-### Phase 2: Pipeline-Execution
-
-| Schritt | Status | Details |
-|---------|--------|---------|
-| PDF-Download (Zotero) | Abgeschlossen | 257 PDFs (inkl. 32 neue) |
-| Markdown-Konversion (Docling) | Abgeschlossen | 252/257 (98.1%) |
-| Validierung (Enhanced) | Abgeschlossen | 98.7 Konfidenz |
-| Post-Processing | Abgeschlossen | 107k Zeichen bereinigt |
-| Human Review Tool | Erstellt | Browser-Tool verfuegbar |
-| Knowledge Distillation | Abgeschlossen | 249 Dokumente, 89.6% Confidence |
-| Vault-Building (Obsidian) | Wartet | Nach Knowledge Distillation |
-
-### Phase 3: Paper-Entwicklung
-
-| Schritt | Status |
-|---------|--------|
-| Textbausteine | Wartet |
-| Ergebnisse einarbeiten | Wartet |
-| Finalisierung | Wartet |
+| Arbeitsplan | `knowledge/paper/Forum Wissenschaft Paper - Arbeitsplan.md` |
 
 ---
 
@@ -152,18 +120,18 @@ Browser-basiertes Tool: `pipeline/tools/markdown_reviewer.html`
 - [x] Dubletten bereinigen (9 entfernt)
 - [x] Seiten-Alignment im Review-Tool implementieren
 - [x] 32 fehlende PDFs integriert
-- [x] Knowledge Distillation v2 entwickeln (3-Stage Markdown Workflow)
-- [x] Test-Durchlauf Knowledge Distillation (10 Dokumente)
-- [x] Vollstaendige Knowledge Distillation (249 Dokumente)
-- [ ] Human-Assessment im Google Spreadsheet abschliessen
-- [ ] Benchmark-Metriken berechnen (nach Human-Assessment)
-- [ ] Vault-Building (Synthese und Vernetzung)
+- [x] Knowledge Distillation (249 Dokumente)
+- [x] Knowledge-Doc Verifikation (97.2% perfekt)
+- [x] Repository-Bereinigung (analysis/, pipeline/summaries/, Redundanzen)
+- [ ] Human-Assessment im Google Spreadsheet abschliessen (Blocker)
+- [ ] Benchmark-LLM-Assessment ausfuehren
+- [ ] Benchmark-Metriken berechnen
+- [ ] Vault-Building (Obsidian)
+- [ ] Paper schreiben
 
 ---
 
-## Fehlgeschlagene Konvertierungen
-
-Diese 5 PDFs konnten nicht konvertiert werden (korrupte oder ungewoehnliche Formate):
+## Fehlgeschlagene PDF-Konvertierungen (5)
 
 1. `British_Association_of_Social_Workers_2025_Generat.pdf` - Data format error
 2. `Browne_2023_Feminist_AI_Critical_Perspectives_on_Algorithms,.pdf` - Page dimension error

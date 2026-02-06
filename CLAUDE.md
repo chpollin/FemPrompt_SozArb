@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** Literature Review - AI Literacy & Bias in Social Work
-**Last Updated:** 2026-02-03
+**Last Updated:** 2026-02-06
 
 ---
 

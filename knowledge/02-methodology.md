@@ -236,8 +236,6 @@ Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit H
 
 ---
 
----
-
 ## Referenzen
 
 - Woelfle, T., et al. (2024). Benchmarking Human–AI collaboration for common evidence appraisal tools. *Journal of Clinical Epidemiology*, 175, 111533.

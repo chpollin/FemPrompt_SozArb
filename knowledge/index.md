@@ -66,11 +66,13 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 ## Repository-Struktur
 
 ```
-├── corpus/                  # Korpus-Metadaten
-├── assessment/              # Human Assessment
-├── assessment-llm/          # LLM Assessment
-├── benchmark/               # Human vs. LLM Vergleich
-├── pipeline/                # PDF → Markdown → Knowledge → Vault
+├── corpus/                  # Korpus-Metadaten (326 Papers)
+├── assessment/              # Human Assessment Tools
+├── assessment-llm/          # LLM Assessment (5D, abgeschlossen)
+├── benchmark/               # Human vs. LLM Benchmark
+├── pipeline/                # PDF -> Markdown -> Knowledge -> Vault
+│   └── knowledge/distilled/ # 249 Wissensdokumente
+├── config/                  # Konfiguration (defaults.yaml)
 ├── vault/                   # Obsidian Vault (Output)
 └── knowledge/               # Dokumentation
 ```

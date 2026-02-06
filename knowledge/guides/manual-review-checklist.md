@@ -166,7 +166,7 @@
 
 ---
 
-*Checklist Version 1.0 | Erstellt: 2026-02-03*
+*Aktualisiert: 2026-02-06*
 
 ---
 

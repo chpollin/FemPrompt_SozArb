@@ -2,7 +2,7 @@
 
 Zentrale Dokumentation aller Python-Scripts im Projekt.
 
-**Stand:** 2026-02-03
+**Stand:** 2026-02-06
 
 ---
 

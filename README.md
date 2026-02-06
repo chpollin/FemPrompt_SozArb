@@ -40,9 +40,9 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 │   ├── zotero_export.json
 │   └── papers_metadata.csv
 │
-├── assessment/                # Human Assessment
-│   ├── human/                 # Google Sheets Export
-│   └── agent/                 # Agent-Konfiguration
+├── assessment/                # Human Assessment Tools
+│   ├── create_thematic_assessment.py
+│   └── excel_to_zotero_tags.py
 │
 ├── assessment-llm/            # LLM Assessment
 │   ├── assess_papers.py       # Claude Haiku Pipeline

@@ -1,7 +1,5 @@
 # Technische Dokumentation
 
-Aktualisiert: 2026-02-06
-
 ---
 
 ## System-Anforderungen
@@ -182,24 +180,16 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 | WARN | 4 (16%) |
 | FAIL | 1 (4%) |
 
-### Knowledge Distillation v2 (Test-Durchlauf)
+### Knowledge Distillation (Abgeschlossen)
 
 | Metrik | Wert |
 |--------|------|
-| Test-Dokumente | 10 |
-| Erfolgsrate | 100% |
-| Confidence (Durchschnitt) | 90.7% |
-| Kosten | $0.28 |
-| Tokens | 195k in / 32k out |
+| Dokumente verarbeitet | 249/252 (98.8%) |
+| Verifizierte Qualitaet | 242/249 perfekt (97.2%) |
+| Kosten (gesamt) | ~$7 |
 | API-Calls pro Paper | 2 (Stage 2 lokal) |
 
-**3-Stage-Workflow:**
-
-| Stage | Funktion | Output |
-|-------|----------|--------|
-| 1. Extract & Classify | Struktur + 10 Kategorien | JSON |
-| 2. Format Markdown | Obsidian-Dokument | Markdown |
-| 3. Verify | Confidence Score | JSON |
+**Verifikation (2026-02-06):** 242 Dokumente bestehen alle Checks (YAML-Frontmatter, Sektionen, Content-Uebereinstimmung mit Original). 5 Dokumente haben PDF-Upstream-Probleme, 2 haben niedrige Uebereinstimmung bei kurzen Dokumenten.
 
 ### API-Kosten
 
@@ -248,8 +238,6 @@ Das Benchmark verwendet 10 binaere Kategorien:
 **Sozial (6):** Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
 
 Konfigurationsdatei: `benchmark/config/categories.yaml`
-
----
 
 ---
 
