@@ -1,0 +1,38 @@
+TY  - RPRT
+AU  - Gengler, E.
+AU  - Kraus, A.
+AU  - Bodrožić-Brnić, K.
+PY  - 2024
+TI  - Faires KI-Prompting – Ein Leitfaden für Unternehmen
+JO  - Mittelstand-Digital Zentrum Zukunftskultur
+UR  - https://www.digitalzentrum-zukunftskultur.de/wp-content/uploads/2024/05/Faires-KI-Prompting-Ein-Leitfaden-fuer-Unternehmen.pdf
+AB  - This practical guide argues that feminist AI competency results in conscious prompt design to actively reduce stereotypes and discrimination in AI-generated content. It presents the "KI-FAIRNESS" framework for diversity-reflective prompting and demonstrates how specific, context-rich prompts lead to fairer and more representative results by compensating for AI's "blind spots" through targeted instructions.
+N1  - Quality: High - Published by state-funded Mittelstand-Digital Network (Federal Ministry for Economic Affairs and Climate Action), authored by academic experts, methodologically robust with clear framework and practical examples, high relevance as first German-language application-oriented publication on this topic.
+ER  -
+
+TY  - CONF
+AU  - Santy, S.
+AU  - O'Connor, A.
+AU  - Shi, E.
+AU  - Wang, A.
+AU  - Dai, J.
+AU  - Klein, D.
+PY  - 2023
+TI  - NLPositionality: Characterizing design biases of datasets and models
+JO  - Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)
+UR  - https://aclanthology.org/2023.acl-long.530/
+AB  - This study provides a theoretical and methodological framework for making bias visible in AI models and datasets. It introduces the concept of "positionality" - the assumption that developers' social, cultural, and political perspectives inevitably flow into AI artifacts. The authors develop a method to quantify design biases by analyzing which dialects, demographic groups, or social contexts are under- or over-represented in datasets.
+N1  - Quality: High - Published in ACL proceedings (CORE ranking A*, world's leading peer-reviewed computational linguistics conference), methodologically robust quantitative analysis method based on established sociolinguistic and critical theory, validated through experiments with large language models, significant citation impact.
+ER  -
+
+TY  - CONF
+AU  - Clemmer, C.
+AU  - Ding, J.
+AU  - Feng, Y.
+PY  - 2024
+TI  - PreciseDebias: An automatic prompt engineering approach for generative AI to mitigate image demographic biases
+JO  - Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)
+UR  - https://openaccess.thecvf.com/content/WACV2024/html/Clemmer_PreciseDebias_An_Automatic_Prompt_Engineering_Approach_for_Generative_AI_WACV_2024_paper.html
+AB  - This paper presents a technical solution for reducing demographic bias in AI image generators through "PreciseDebias," an automated approach that rewrites simple prompts into more complex, diversity-reflective prompts. The system analyzes model bias and strategically adds attributes like ethnicity, gender, or age to enforce fairer representation distributions, demonstrating that diversity-reflective prompting can be automated at the system level.
+N1  - Quality: High - Published at WACV (CORE ranking A, recognized IEEE/CVF sponsored conference for computer vision), methodologically robust with clear reproducible algorithm, validated through extensive quantitative experiments measuring demographic distribution before and after bias reduction, addresses widely known problem with concrete technical solution.
+ER  -

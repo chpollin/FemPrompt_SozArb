@@ -21,8 +21,8 @@ from collections import defaultdict
 # Configuration
 # ---------------------------------------------------------------------------
 
-KNOWLEDGE_DIR = Path(r"c:\Users\Chrisi\Documents\GitHub\FemPrompt_SozArb\pipeline\knowledge\distilled")
-MARKDOWN_DIR = Path(r"c:\Users\Chrisi\Documents\GitHub\FemPrompt_SozArb\pipeline\markdown")
+KNOWLEDGE_DIR = Path(__file__).parent.parent / "knowledge" / "distilled"
+MARKDOWN_DIR = Path(__file__).parent.parent / "markdown"
 
 REQUIRED_FRONTMATTER_FIELDS = {"title", "authors", "year", "type"}
 REQUIRED_CATEGORIES = {

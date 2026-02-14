@@ -213,6 +213,18 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 
 **Verifikation (2026-02-06):** 242 Dokumente bestehen alle Checks (YAML-Frontmatter, Sektionen, Content-Uebereinstimmung mit Original). 5 Dokumente haben PDF-Upstream-Probleme, 2 haben niedrige Uebereinstimmung bei kurzen Dokumenten.
 
+**Verifikations-Praezisierung (Was "verifiziert" bedeutet):**
+
+| Aspekt | Gewicht | Pruefung | Kriterium |
+|---|---|---|---|
+| Completeness | 40% | Alle Pflichtfelder befuellt, keine wesentlichen Informationen fehlend | Vollstaendig = volle Punktzahl |
+| Correctness | 40% | Extrahierte Aussagen stimmen mit Originaltext ueberein | Zitat muss im Original auffindbar sein |
+| Category Validation | 20% | Kategorien-Zuordnungen durch Evidenzzitate gestuetzt | Evidenz-Zitat muss Kategorie stuetzen |
+
+**Eskalationsregel:** Confidence < 75 markiert Dokument als `needs_correction`. Aktuell keine automatische Korrektur, nur Logging und manuelle Pruefung.
+
+**Epistemischer Kontext:** Die Verifikation nutzt die Asymmetrie zwischen Erzeugung und Pruefung: Die Pruefung bereits erzeugter Ergebnisse ist systematisch einfacher als die Erzeugung neuer korrekter Ergebnisse. Dies ist die technische Grundlage fuer die Skalierung ueber spezialisierte Agenten-Teams (vgl. Snell et al. 2024, Test-Time Compute).
+
 ### API-Kosten
 
 | Operation | Kosten |
@@ -345,6 +357,20 @@ python pipeline/scripts/distill_knowledge.py --single "pipeline/markdown/paper.m
 | `--limit` | - | Anzahl Dokumente begrenzen |
 | `--delay` | 1.0 | Sekunden zwischen API-Calls |
 | `--no-skip` | False | Bereits verarbeitete nicht überspringen |
+
+---
+
+## Konfabulations-Dokumentation
+
+Im bisherigen Durchlauf lieferte Deep Research ueberpruefbare Quellen. Dokumentierte Probleme:
+
+| Typ | Beschreibung | Quelle |
+|---|---|---|
+| Nicht verifizierbarer Eintrag | Ein Deep-Research-Eintrag konnte nicht verifiziert werden | Paper-Text, Abschnitt "LLM-gestuetzter Pfad" |
+| PDF-Upstream-Probleme | 5 Dokumente mit korrupten/falschen PDFs (nicht auf Konfabulation zurueckgehend) | `pipeline/knowledge/_verification/` |
+| Niedrige Uebereinstimmung | 2 Dokumente mit niedrigem Score bei kurzen Texten (inhaltlich korrekt) | Verifikations-Report |
+
+**Wichtig:** Die Pipeline-Fehler (PDF-Upstream) sind keine Konfabulationen des LLMs, sondern Probleme in der Datenbeschaffung. Der einzige dokumentierte Konfabulations-Fall betrifft die Deep-Research-Phase (Identifikation), nicht die Pipeline-Verarbeitung.
 
 ---
 

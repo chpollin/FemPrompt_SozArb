@@ -73,7 +73,7 @@ class QualityMetrics:
 
 class EnhancedDocumentProcessor:
     def __init__(self, api_key: str, source_dir: str = "pipeline/markdown",
-                 output_dir: str = "pipeline/knowledge/distilled", model: str = "claude-haiku-4-5"):
+                 output_dir: str = "pipeline/knowledge/distilled", model: str = "claude-haiku-4-5-20251001"):
         self.api_key = api_key
         self.source_dir = Path(source_dir)
         self.output_dir = Path(output_dir)
@@ -586,7 +586,7 @@ def main():
     parser.add_argument('--output-dir', default='pipeline/knowledge/distilled',
                        help='Output directory for summaries')
     parser.add_argument('--limit', type=int, help='Limit number of documents (for testing)')
-    parser.add_argument('--model', default='claude-haiku-4-5',
+    parser.add_argument('--model', default='claude-haiku-4-5-20251001',
                        help='Claude model to use')
 
     args = parser.parse_args()

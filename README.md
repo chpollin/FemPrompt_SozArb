@@ -1,16 +1,18 @@
-# Literature Review: AI Literacy & Bias in Social Work
+# Epistemische Asymmetrien in Deep-Research-gestuetzten Literature Reviews
 
-Systematischer Literature Review zu **AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit.
+Workflow-Design zwischen Large Language Models und Expert:innenwissen.
 
-Teil des [Social AI Projekts](https://socialai.2aw.at/).
+Christopher Pollin, Susanne Sackl-Sharif, Sabine Klinger, Christian Steiner
+
+Teil des [Elisabeth-List-Fellowship-Projekts "Diversitaetssensibler Umgang mit Kuenstlicher Intelligenz"](https://socialai.2aw.at/) an der Universitaet Graz.
 
 ---
 
 ## Projektziel
 
-**Primaer:** Empirische Grundlage schaffen fuer Forschung zu diskriminierungssensiblem Prompting.
+**Primaer:** Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** im Kontext Sozialer Arbeit. Konzeptuelle Grundlage fuer eine Benchmark ("Fair Bench").
 
-**Sekundaer:** Methodische Innovation dokumentieren - LLM-gestuetztes Assessment im Vergleich zu Expert:innen-Bewertung.
+**Sekundaer:** Methodische Innovation dokumentieren -- epistemische Infrastruktur fuer LLM-gestuetzte Forschung, dokumentiert in einem Paper fuer Forum Wissenschaft (Deadline: 4. Mai 2026).
 
 ---
 
@@ -24,12 +26,13 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 ## Korpus
 
-**326 Papers** aus Zotero, zwei parallele Assessment-Tracks:
+**326 Papers** aus Zotero (254 Deep Research + 50 manuell), drei Assessment-Tracks:
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit |
-| **LLM** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
+| **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit (56%) |
+| **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (325/325) |
+| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Code bereit, wartet |
 
 ---
 
@@ -66,9 +69,14 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 ├── config/                    # Konfiguration
 │   └── defaults.yaml
 │
-├── vault/                     # Obsidian Vault (Output)
+├── prompts/                   # Prompt-Changelog und Governance
+│   └── CHANGELOG.md
 │
-└── knowledge/                 # Dokumentation
+├── vault/                     # Obsidian Vault (Skelett, wartet auf Daten)
+│
+├── deep-research/restored/    # Deep-Research-Artefakte (RIS, Raw-Outputs)
+│
+└── knowledge/                 # Dokumentation (01-06 + Guides + Paper)
 ```
 
 ---
@@ -143,10 +151,10 @@ Wartet auf Abschluss des Human-Assessments.
 
 ## Paper
 
-**Forum Wissenschaft 2/2026**
+**Forum Wissenschaft 2/2026:** "Epistemische Asymmetrien in Deep-Research-gestuetzten Literature Reviews"
 - Deadline: 4. Mai 2026
 - Umfang: 18.000 Zeichen
-- Fokus: LLM-gestuetzter Literature Review im Praxistest
+- Fokus: Epistemische Infrastruktur fuer LLM-gestuetzte Forschung
 
 ---
 
@@ -154,11 +162,28 @@ Wartet auf Abschluss des Human-Assessments.
 
 | Dokument | Inhalt |
 |----------|--------|
-| [01-project.md](knowledge/01-project.md) | Projektziel, Zielgruppe |
-| [02-methodology.md](knowledge/02-methodology.md) | PRISMA, Assessment-Schema |
+| [01-project.md](knowledge/01-project.md) | Projektziel, theoretischer Rahmen, Glossar |
+| [02-methodology.md](knowledge/02-methodology.md) | PRISMA, dualer Bewertungspfad, SKE |
 | [03-status.md](knowledge/03-status.md) | Aktueller Stand |
-| [04-technical.md](knowledge/04-technical.md) | Pipeline-Architektur |
+| [04-technical.md](knowledge/04-technical.md) | Pipeline-Architektur, Scripts, Kosten |
+| [05-paper-repo-abgleich.md](knowledge/05-paper-repo-abgleich.md) | Paper vs. Repository (detailliert) |
+| [06-epistemic-infrastructure.md](knowledge/06-epistemic-infrastructure.md) | Mapping-Tabelle, Sycophancy-Mitigation |
+| [WORKFLOW.md](WORKFLOW.md) | Workflow-Uebersicht |
+| [prompts/CHANGELOG.md](prompts/CHANGELOG.md) | Prompt-Versionierung |
 
 ---
 
-*Aktualisiert: 2026-02-06*
+## API-Kosten
+
+| Operation | Kosten |
+|-----------|--------|
+| Knowledge Distillation (249 Docs) | ~$7.00 |
+| LLM-Assessment 5D (325 Papers) | ~$1.15 |
+| Validierung | ~$0.58 |
+| **Gesamt** | **~$8.73** |
+
+Modell: Claude Haiku 4.5
+
+---
+
+*Aktualisiert: 2026-02-14*

@@ -1,0 +1,245 @@
+{
+  "metadata": {
+    "description": "Mapping of Zotero keys to Deep Research source tools",
+    "generated": "2026-02-14",
+    "method": "Title matching between restored RIS files and Zotero export",
+    "sources": {
+      "Claude": 15,
+      "Gemini": 3,
+      "OpenAI": 6,
+      "Perplexity": 10
+    }
+  },
+  "collection_mapping": {
+    "_note": "Collection names inferred from RIS-file correlation. Collections with confirmed Deep Research provenance are marked. Other collection names need manual verification from Zotero UI.",
+    "deep_research_collections": {
+      "UW6T3MBH": {
+        "name": "Claude Deep Research",
+        "source_tool": "Claude",
+        "confidence": "high",
+        "evidence": "14/15 RIS-matched papers from Claude"
+      },
+      "VH5KFKHH": {
+        "name": "Perplexity Deep Research",
+        "source_tool": "Perplexity",
+        "confidence": "high",
+        "evidence": "8/10 RIS-matched papers from Perplexity"
+      },
+      "AJJ7PB62": {
+        "name": "OpenAI Deep Research",
+        "source_tool": "OpenAI",
+        "confidence": "high",
+        "evidence": "5/6 RIS-matched papers from OpenAI"
+      },
+      "VTYAS8FA": {
+        "name": "Gemini Deep Research",
+        "source_tool": "Gemini",
+        "confidence": "high",
+        "evidence": "3/3 RIS-matched papers from Gemini"
+      }
+    },
+    "thematic_collections": {
+      "AR93F6HV": {
+        "name": "UNBEKANNT (31 papers, AI Literacy Fokus)",
+        "paper_count": 31
+      },
+      "W8QJN8GS": {
+        "name": "UNBEKANNT (25 papers, Bias/Scaling)",
+        "paper_count": 25
+      },
+      "GI76FWUJ": {
+        "name": "UNBEKANNT (20 papers, Ethics/Surveillance)",
+        "paper_count": 20
+      },
+      "2TZ7BNHZ": {
+        "name": "UNBEKANNT (17 papers, mixed)",
+        "paper_count": 17
+      },
+      "RG4AVS5G": {
+        "name": "UNBEKANNT (16 papers, AI Trust)",
+        "paper_count": 16
+      },
+      "Q82BV2L4": {
+        "name": "UNBEKANNT (15 papers, Bildung/Flucht)",
+        "paper_count": 15
+      },
+      "CNA79RIV": {
+        "name": "UNBEKANNT (13 papers, Intersectionality)",
+        "paper_count": 13
+      },
+      "B53V64VS": {
+        "name": "UNBEKANNT (13 papers, Feminismus)",
+        "paper_count": 13
+      },
+      "AFJUUMXL": {
+        "name": "UNBEKANNT (12 papers, AI Ethics)",
+        "paper_count": 12
+      },
+      "92E6FQ9C": {
+        "name": "UNBEKANNT (10 papers, Queer/Intersectional)",
+        "paper_count": 10
+      },
+      "KMGRSQLC": {
+        "name": "UNBEKANNT (9 papers, Social Work + AI)",
+        "paper_count": 9
+      },
+      "LT4EVQZA": {
+        "name": "UNBEKANNT (9 papers, Prompting/Bias)",
+        "paper_count": 9
+      },
+      "C62UPN32": {
+        "name": "UNBEKANNT (8 papers, Trust)",
+        "paper_count": 8
+      },
+      "2XNKSRWB": {
+        "name": "UNBEKANNT (7 papers, Responsible AI)",
+        "paper_count": 7
+      },
+      "4QY8ZEHL": {
+        "name": "UNBEKANNT (6 papers, KI Soziale Arbeit DE)",
+        "paper_count": 6
+      },
+      "LHMJJK67": {
+        "name": "UNBEKANNT (6 papers, AI in SW)",
+        "paper_count": 6
+      },
+      "WXXWPYF5": {
+        "name": "UNBEKANNT (6 papers, Accountability)",
+        "paper_count": 6
+      },
+      "EMCPWVSQ": {
+        "name": "UNBEKANNT (6 papers, Policy)",
+        "paper_count": 6
+      },
+      "L226XLYY": {
+        "name": "UNBEKANNT (5 papers, KI Soziale Arbeit DE)",
+        "paper_count": 5
+      },
+      "ZBMZZ3VM": {
+        "name": "UNBEKANNT (5 papers, Bias Measurement)",
+        "paper_count": 5
+      },
+      "YIHRB5P5": {
+        "name": "UNBEKANNT (5 papers, Feminism/Algorithms)",
+        "paper_count": 5
+      },
+      "V2MCHJEK": {
+        "name": "UNBEKANNT (5 papers, Gender/Intersectionality)",
+        "paper_count": 5
+      },
+      "9HKNMZ9J": {
+        "name": "UNBEKANNT (5 papers, LLM Bias)",
+        "paper_count": 5
+      },
+      "WCXGVMB7": {
+        "name": "UNBEKANNT (4 papers, AI Social Work)",
+        "paper_count": 4
+      },
+      "TZDQI5LW": {
+        "name": "UNBEKANNT (4 papers, KI Paedagogik DE)",
+        "paper_count": 4
+      }
+    },
+    "unassigned_papers": 30
+  },
+  "source_tool_mapping": {
+    "IGFYSIV8": [
+      "Claude"
+    ],
+    "7G73H3KM": [
+      "Claude"
+    ],
+    "8BUHU5EP": [
+      "Claude"
+    ],
+    "MS3CNU3S": [
+      "Claude"
+    ],
+    "KNQYFQ6B": [
+      "Claude"
+    ],
+    "JZN2I6J5": [
+      "Claude"
+    ],
+    "XW8NHCIE": [
+      "Claude"
+    ],
+    "ZMW228P6": [
+      "Claude"
+    ],
+    "SQ38TTWQ": [
+      "Claude"
+    ],
+    "ZLM537Z4": [
+      "Claude"
+    ],
+    "YMYHLMFS": [
+      "Claude",
+      "Perplexity"
+    ],
+    "V4GTLMED": [
+      "Claude"
+    ],
+    "ZNHUCA4B": [
+      "Claude"
+    ],
+    "5T55I5Z7": [
+      "Claude"
+    ],
+    "QM6L6XLZ": [
+      "Claude"
+    ],
+    "YN9JAREI": [
+      "Gemini"
+    ],
+    "UJ7DXK8Y": [
+      "Gemini"
+    ],
+    "MIT8HTC6": [
+      "Gemini"
+    ],
+    "9Y7ZFGI5": [
+      "OpenAI",
+      "Perplexity"
+    ],
+    "IDW7QSYG": [
+      "OpenAI"
+    ],
+    "YLAKP7Z2": [
+      "OpenAI"
+    ],
+    "6L85PRUW": [
+      "OpenAI"
+    ],
+    "8WBUGXRR": [
+      "OpenAI"
+    ],
+    "MJDTRLAI": [
+      "OpenAI"
+    ],
+    "SHJQQTI6": [
+      "Perplexity"
+    ],
+    "GPSB87RN": [
+      "Perplexity"
+    ],
+    "SWB86AYC": [
+      "Perplexity"
+    ],
+    "2EBHMYU4": [
+      "Perplexity"
+    ],
+    "AIGLDZ4C": [
+      "Perplexity"
+    ],
+    "CHJQ52DC": [
+      "Perplexity"
+    ],
+    "AFDLFCIL": [
+      "Perplexity"
+    ],
+    "X7ZGW6CN": [
+      "Perplexity"
+    ]
+  }
+}

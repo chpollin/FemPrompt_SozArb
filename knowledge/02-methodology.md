@@ -77,7 +77,31 @@ Ein Paper wird eingeschlossen, wenn beide Bedingungen erfuellt sind:
 
 ---
 
-## Dual Assessment: Zwei Systeme, unterschiedliche Zwecke
+## Dualer Bewertungspfad: Konzept und Umsetzung
+
+### Epistemische Begruendung
+
+Der duale Bewertungspfad ist das methodische Kernstueck des Workflows. Die Entscheidung fuer den Parallelmodus (nicht sequentiell) ist bewusst: Eine sequentielle Anordnung haette den LLM-Pfad auf eine vorbereitende Funktion begrenzt. Der Parallelmodus ermoeglicht den systematischen Vergleich und macht sichtbar, wo die epistemischen Beitraege konvergieren und wo sie divergieren.
+
+**Dual** bezieht sich auf zwei Merkmale zugleich:
+1. Zwei unabhaengige Bewertungsinstanzen (Expert:innen und LLM)
+2. Zwei verschiedene epistemische Grundlagen der Bewertung
+
+Beide Pfade arbeiten auf Grundlage der PRISMA-Richtlinien: identische Kriterien bei verschiedenen epistemischen Grundlagen. Die Trennung schuetzt die Expert:innen davor, dass LLM-Ergebnisse ihre eigene Bewertung beeinflussen.
+
+### Expert:innen-Pfad (epistemisch verbindlich)
+
+Wissenschaftler:innen aus der Sozialarbeitsforschung, der Gender- und Diversitaetsforschung sowie der Technikforschung bewerten jede Studie nach 10 binaeren Kategorien. Dieser Pfad ist der epistemisch verbindliche Referenzpfad, weil Verantwortung und Rechenschaftsfaehigkeit nur hier liegen.
+
+**Asymmetrie-Beispiele aus dem Paper:**
+
+| Entscheidungstyp | Beschreibung | Warum LLM das nicht kann |
+|---|---|---|
+| KI-Definitionsabgrenzung | Undefinierte vs. regelbasierte vs. generative KI | Expert:innen erschliessen aus Kontext, welche KI-Form gemeint ist |
+| Interpretatives Mitdenken | "Diversitaet" selten als Begriff, "Intersektionalitaet" haeufiger, "Fairness" mitgemeint | Verwandte Konzepte kontextabhaengig mitzufuehren setzt Feldkenntnis voraus |
+| Implizite theoretische Zugehoerigkeit | Paper zu "algorithmic fairness" ohne den Begriff "feministisch", aber mit intersektionalen Gerechtigkeitskategorien | LLM operiert auf Ebene expliziter Muster, Expertin auf Ebene impliziter Zugehoerigkeit |
+
+### LLM-Pfad (zwei Assessment-Systeme)
 
 Der Workflow verwendet zwei LLM-Assessment-Systeme fuer unterschiedliche Aufgaben:
 
@@ -192,9 +216,23 @@ Heterogene Modell-Outputs werden in RIS-Format konvertiert.
 
 ### KI-Output-Validierung
 
-- Konfabulationserkennung durch Zitat-Validierung (Terminologie: "Konfabulation" statt "Halluzination", da LLMs kein Bewusstsein haben)
-- Sycophancy-Mitigation durch neutrale Prompts
+- **Konfabulationserkennung** durch Zitat-Validierung. Terminologie: "Konfabulation" statt "Halluzination", da Halluzination eine Wahrnehmungsstoerung bei vorhandenem Bewusstsein voraussetzt, die bei LLMs nicht vorliegt. Konfabulation beschreibt den Erzeugungsmechanismus praeziser: kohaerente Narrative ohne Taeuschungsabsicht (vgl. Hatem et al. 2023, Sui et al. 2024)
+- **Sycophancy-Mitigation** durch negative Constraints in Prompts, Calibration Items und Prompt-Versionierung (Details: `knowledge/06-epistemic-infrastructure.md`)
 - Vergleich der Outputs verschiedener Modelle
+
+### Structured Knowledge Extraction (SKE)
+
+Die dreistufige Verarbeitung von Volltexten zu Wissensdokumenten wechselt bewusst zwischen probabilistischen und deterministischen Stufen:
+
+| Stufe | Typ | Funktion | Konfabulationsrisiko |
+|---|---|---|---|
+| 1. Extract & Classify | Probabilistisch (LLM) | JSON-Extraktion aus Volltext | Vorhanden |
+| 2. Format | Deterministisch (lokal) | Template-Rendering, kein LLM-Call | Null |
+| 3. Verify | Probabilistisch mit Pruefauftrag | Verifikation gegen Originaltext | Reduziert (Pruefrole) |
+
+**Epistemische Begruendung:** Die deterministische Stufe 2 unterbricht die probabilistische Kette und stellt sicher, dass die Formatierung reproduzierbar und nicht von statistischen Schwankungen abhaengig ist. Die Verifikation in Stufe 3 nutzt die Asymmetrie zwischen Erzeugung und Pruefung: Die Pruefung bereits erzeugter Ergebnisse ist systematisch einfacher als die Erzeugung neuer korrekter Ergebnisse.
+
+**Was "verifiziert" bedeutet:** Confidence-Score = Completeness (40%) + Correctness (40%) + Category Validation (20%). Score < 75 markiert `needs_correction`. Details: `knowledge/06-epistemic-infrastructure.md`
 
 ---
 
@@ -277,6 +315,14 @@ Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit H
 | 7. Vault | generate_vault.py, Knowledge Docs + Assessment-Daten zu Obsidian Vault | Wartet |
 
 Detaillierte technische Dokumentation: `knowledge/04-technical.md`
+
+---
+
+## Zirkularitaet als Feldbedingung
+
+LLMs werden eingesetzt, um Literatur ueber den Einsatz von LLMs zu untersuchen. Feministische AI Literacies sind zugleich Gegenstand des Reviews und Voraussetzung des Workflows. Die Qualitaet des Prompts, der die Deep-Research-Abfrage steuert, haengt von Kompetenzen ab, die im Review selbst erst untersucht werden.
+
+Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel, sondern als Bedingung des Feldes behandelt. Die Dokumentation dieser Abhaengigkeit im Workflow und im Repository ist die epistemische Infrastruktur, die an die Stelle einer nicht erreichbaren Neutralitaet tritt.
 
 ---
 

@@ -13,7 +13,7 @@ Manuelles Assessment durch Fachexpert:innen.
 
 ## Schema
 
-Siehe [schema.yaml](schema.yaml) fuer Kategorie-Definitionen.
+Siehe [categories.yaml](../../benchmark/config/categories.yaml) fuer Kategorie-Definitionen.
 
 ### 10 Binaere Kategorien
 
@@ -78,7 +78,6 @@ Siehe [schema.yaml](schema.yaml) fuer Kategorie-Definitionen.
 ```
 assessment/human/
 ├── README.md           # Diese Datei
-├── schema.yaml         # Kategorie-Definitionen
 └── results/
     └── assessment_YYYYMMDD.csv  # Exportierte Assessments
 ```
@@ -91,4 +90,4 @@ assessment/human/
 
 ---
 
-*Version: 1.0 (2026-02-02)*
+*Aktualisiert: 2026-02-08*

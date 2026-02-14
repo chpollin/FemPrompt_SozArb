@@ -1,216 +1,141 @@
-# LLM Assessment Report
+# LLM Assessment Report (5D)
 
 **Datum:** 2025-11-02
+**Modell:** Claude Haiku 4.5
 **Assessment-Datei:** [assessment_llm.xlsx](output/assessment_llm.xlsx)
 
 ---
 
-## Executive Summary
+## Ergebnis
 
-✅ **325 Papers erfolgreich bewertet** mit 100% Erfolgsrate
-💰 **Kosten:** $1.15 (~$0.0035 pro Paper)
-⏱️ **Dauer:** ~20 Minuten (~16 Papers/Minute)
-🤖 **Model:** Claude Haiku 4.5
+| Metrik | Wert |
+|--------|------|
+| **Papers bewertet** | 325 |
+| **Erfolgsrate** | 100% |
+| **Kosten** | $1.15 (~$0.0035/Paper) |
+| **Dauer** | 23 Minuten (~13.7 Papers/Min) |
+| **Input Tokens** | 1,114,534 (~3,429/Paper) |
+| **Output Tokens** | 64,700 (~199/Paper) |
 
 ---
 
 ## PRISMA-Entscheidungen
 
-| Decision | Count | Percentage |
-|----------|-------|------------|
+| Decision | Count | Anteil |
+|----------|-------|--------|
 | **Include** | 222 | 68.3% |
 | **Exclude** | 83 | 25.5% |
 | **Unclear** | 20 | 6.2% |
 
-### Ausschlussgründe (Exclude Papers)
+### Ausschlussgruende
 
-| Grund | Count | Percentage |
-|-------|-------|------------|
+| Grund | Count | Anteil |
+|-------|-------|--------|
 | No full text | 50 | 60.2% |
 | Not relevant topic | 24 | 28.9% |
 | Wrong publication type | 9 | 10.8% |
 
 ---
 
-## Relevanz-Dimensionen (Include Papers)
+## Relevanz-Dimensionen (nur Include-Papers)
 
-**Durchschnittliche Scores** (Skala 0-3):
+5 Dimensionen auf Skala 0-3:
 
-| Dimension | Avg Score | Interpretation |
-|-----------|-----------|----------------|
-| **Rel_Bias** | 2.47 | Bias & Diskriminierung (höchste Relevanz) |
-| **Rel_Vulnerable** | 2.23 | Vulnerable Gruppen & Digital Equity |
+| Dimension | Avg Score | Beschreibung |
+|-----------|-----------|--------------|
+| **Rel_Bias** | 2.47 | Algorithmische Verzerrungen (hoechste Relevanz) |
+| **Rel_Vulnerable** | 2.23 | Vulnerable Gruppen und Digital Equity |
 | **Rel_Praxis** | 1.68 | Praktische Implementation |
 | **Rel_Prof** | 1.67 | Professioneller Kontext (Soziale Arbeit) |
 | **Rel_AI_Komp** | 1.18 | AI/LLM-Kompetenzen |
 
-**Interpretation:**
-- Das Korpus hat **starken Fokus auf Bias-Thematik** und vulnerable Gruppen
-- Moderate Praxis-Relevanz und professioneller Sozialarbeits-Kontext
-- AI-Literacy ist eher peripher behandelt (viele Papers setzen AI-Kontext voraus)
+**Interpretation:** Das Korpus hat starken Fokus auf Bias-Thematik und vulnerable Gruppen. AI-Literacy ist eher peripher behandelt (viele Papers setzen AI-Kontext voraus).
 
 ---
 
-## Top 10 Papers nach Gesamtrelevanz
+## Assessment-Schema
 
-### 1. How child welfare workers reduce racial disparities in algorithmic decisions
-- **Total Score:** 13/15 (höchstmöglich!)
-- **Scores:** AI:1, Vuln:3, Bias:3, Prax:3, Prof:3
-- **Highlights:** Empirische Studie zu Bias-Reduktion durch menschliche Expertise
+### Entscheidungs-Kategorien
+- **Include:** AI/LLM-Relevanz UND (Bias ODER Vulnerable Groups ODER Professional Social Context)
+- **Exclude:** Mindestens ein Inklusionskriterium nicht erfuellt
+- **Unclear:** Unzureichendes Abstract oder Grenzfall
 
-### 2-3. Systematic Reviews zu Child Welfare AI
-- **Total Score:** 12/15
-- A systematic review of sophisticated predictive and prescriptive analytics
-- Improving human-AI partnerships in child welfare
+### Relevanz-Dimensionen (0-3)
 
-### 4-5. AI Literacy für Soziale Arbeit
-- **Total Score:** 12/15
-- Algorithmic decision-making in social work practice and pedagogy
-- Artificial Intelligence (AI) literacy for social work: Implications for core competencies
-
-### 6. Artificial intelligence in social work: An EPIC model for practice
-- **Total Score:** 12/15
-- **Scores:** AI:2, Vuln:3, Bias:2, Prax:2, Prof:3
-
-### 7. Künstliche Intelligenz in der Sozialen Arbeit (Linnemann)
-- **Total Score:** 12/15
-- **Deutschsprachiges Grundlagenwerk**
-
-### 8. Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice
-- **Total Score:** 12/15
-
-### 9-10. AI Literacy for Social Work (Duplikate)
-- **Total Score:** 12/15
-- Mehrere hochrelevante Papers zum gleichen Thema
+| Score | Bedeutung | Beispiel |
+|-------|-----------|----------|
+| 0 | Keine Erwaehnung | -- |
+| 1 | Periphere Erwaehnung | Einzelne Nennung als Limitation |
+| 2 | Substantielle Behandlung | Eigenes Kapitel oder Datenanalyse |
+| 3 | Kernfokus | Framework-Entwicklung, primaerer Forschungsgegenstand |
 
 ---
 
 ## Thematische Schwerpunkte
 
-### Child Welfare & Algorithmic Decision-Making
-- **10+ hochrelevante Papers** (Score 12-13)
-- Fokus: Racial/social bias, fairness, human-AI collaboration
-- Beispiele: Kawakami, Cheng, Hall, Cher, Moreau, Field
-
-### AI Ethics in Social Work
-- **15+ Papers** zu ethischen Fragen
-- Autoren: Reamer, Baker, McDonald, Hodgson, Singer
-- Themen: Professional standards, emerging issues, ChatGPT impact
-
-### Digital Welfare State
-- **Dänische Forschung prominent** (Amnesty, Jørgensen, Meilvang)
-- Algorithmic surveillance, data rights, automation
-
-### Feminist AI & Intersectionality
-- **20+ Papers** zu Gender Bias, Intersectionality
-- Stark vertreten: Prompting-Techniken zur Bias-Mitigation
-- Konzeptionelle und technische Ansätze
-
-### Deutschsprachige Forschung
-- **15+ Papers** aus D/A/CH-Raum
-- Schwerpunkte: Digitalisierung Sozialer Arbeit, KI-Kompetenzen
-- Key-Autoren: Linnemann, Kutscher, Schneider, Gravelmann
+| Cluster | Papers | Beispiele |
+|---------|--------|-----------|
+| Child Welfare und Algorithmic Decision-Making | 10+ (Score 12-13) | Kawakami, Cheng, Hall, Field |
+| AI Ethics in Social Work | 15+ | Reamer, Baker, McDonald, Singer |
+| Digital Welfare State | 5+ | Amnesty, Jorgensen, Meilvang |
+| Feminist AI und Intersectionality | 20+ | Prompting-Techniken, Bias-Mitigation |
+| Deutschsprachige Forschung | 15+ | Linnemann, Kutscher, Schneider |
 
 ---
 
-## Zotero-Tag-System
+## Technische Details
 
-**PRISMA Tags:**
-- `PRISMA_Include` (222 Papers)
-- `PRISMA_Exclude` (83 Papers)
-- `PRISMA_Unclear` (20 Papers)
+### Modell-Konfiguration
+- **Modell:** claude-haiku-4-5
+- **Temperature:** 0.3 (erster Versuch), 0.1 (Retry)
+- **Max Tokens:** 1024
+- **Delay:** 2 Sekunden zwischen API-Calls
 
-**Relevanz-Tags (nur Include/Unclear):**
-- `Relevance_High` (Total Score ≥10)
-- `Relevance_Medium` (Total Score 6-9)
-- `Relevance_Low` (Total Score <6)
+### Response-Repair (automatisch)
+29 Papers wurden automatisch repariert (primaer `scores: null` zu `[0,0,0,0,0]`). Weitere Reparaturtypen: Array zu kurz/lang, Float-zu-Int, String-zu-Int.
 
-**Dimensions-Tags (bei Score ≥2):**
-- `Dimension_AI_Literacy`
-- `Dimension_Vulnerable_Groups`
-- `Dimension_Bias`
-- `Dimension_Practice`
-- `Dimension_Social_Work`
+### Auto-Exclude
+30 Papers ohne Abstract wurden automatisch als "Exclude" markiert (Grund: "No full text").
 
-**Exclusion-Tags:**
-- `Exclusion_No_full_text`
-- `Exclusion_Not_relevant_topic`
-- `Exclusion_Wrong_publication_type`
+### Validierungschecks
+- JSON-Parsing, Pflichtfelder, Score-Range (0-3), Array-Laenge (5), Decision-Werte, Exclusion-Reason-Logik
 
 ---
 
-## API-Nutzung
+## Run-Historie
 
-**Token-Verbrauch:**
-- Input: 1,114,534 tokens (~3,429 tokens/paper)
-- Output: 64,700 tokens (~199 tokens/paper)
+| Run | Papers | Erfolgsrate | Kosten | Status |
+|-----|--------|-------------|--------|--------|
+| Run 1 | 265 | 84.2% | $0.39 | Abgeschlossen (42 Fehler) |
+| Run 2 | 265 | 62.6% | ~$0.30 | Unvollstaendig |
+| Run 3 | 265 | Partiell | ~$0.15 | Unvollstaendig |
+| Run 4 | 265 | Partiell | ~$0.15 | Unvollstaendig |
+| **Run 5 (final)** | **325** | **100%** | **$0.58** | **Abgeschlossen** |
 
-**Kosten (Claude Haiku 4.5):**
-- Input: $0.89 ($0.80/1M tokens)
-- Output: $0.26 ($4.00/1M tokens)
-- **Total: $1.15**
-
-**Performance:**
-- 0 Fehler bei 325 Papers (100% Erfolgsrate)
-- Auto-Repair für 20 Papers mit null-Scores
-- 50 Papers ohne Abstract automatisch ausgeschlossen
+Run 5 loeste das Problem durch Response-Repair-Logik (`_repair_response()` in `assess_papers.py`). Gesamtkosten ueber alle Runs: ~$1.15.
 
 ---
 
-## Nächste Schritte
+## Output-Dateien
 
-### 1. Zotero synchronisieren
-- Öffnen Sie: https://www.zotero.org/groups/6284300/socialai-litreview-curated
-- Klicken Sie auf den grünen Sync-Button
-- Tags sollten jetzt sichtbar sein
+| Datei | Inhalt |
+|-------|--------|
+| `output/assessment_llm.xlsx` | Finale Assessment-Ergebnisse (325 Papers) |
+| `logs/api_calls.jsonl` | API-Call-Log (Run 5) |
+| `logs/assessment.log` | Processing-Log (Run 5) |
 
-### 2. PRISMA-Filter anwenden
-- Filtern Sie nach `PRISMA_Include` → 222 Papers
-- Nutzen Sie Dimensions-Tags für thematische Cluster
-
-### 3. PDF-Akquise (Optional)
-```bash
-python pipeline/scripts/download_zotero_pdfs.py \
-  --output pipeline/pdfs/
-```
-
-### 4. Weitere Analyse
-- Excel-Datei öffnen für detaillierte Notes
-- Relevanz-Scores nach Bedarf anpassen
-- Unclear-Papers manuell reviewen (20 Papers)
+Archivierte Logs frueherer Runs in `logs/` (Suffix `_OLD_run1`, `_RUN2_incomplete`, etc.).
 
 ---
 
-## Dateien
+## Limitationen
 
-- **Excel Assessment:** `assessment-llm/output/assessment_socialai_llm.xlsx`
-- **API Logs:** `assessment-llm/logs/api_calls.jsonl`
-- **Analysis Script:** `assessment-llm/analyze_results.py`
-- **Zotero Export:** `assessment/assessment_socialai.xlsx`
-
----
-
-## Reflexion & Limitationen
-
-### Stärken
-✅ Vollautomatische Bewertung ohne manuellen Aufwand
-✅ Konsistente 5-dimensionale Relevanz-Bewertung
-✅ Transparent dokumentierte Entscheidungsgründe
-✅ Kosteneffizient ($0.0035/Paper)
-
-### Limitationen
-⚠️ 50 Papers ohne Abstract automatisch ausgeschlossen (evtl. false negatives)
-⚠️ LLM-Entscheidungen basieren nur auf Abstracts (kein Full-Text)
-⚠️ 20 Unclear-Papers erfordern manuelle Nachbearbeitung
-⚠️ Bias in LLM-Bewertungen möglich (v.a. bei englischsprachiger Dominanz)
-
-### Empfehlungen
-1. **Unclear-Papers manuell reviewen** (20 Papers, überschaubar)
-2. **Stichproben-Validierung** der Include-Entscheidungen (10-20 Papers)
-3. **No-abstract-Papers prüfen**: Evtl. DOI-basierte Abstract-Suche
-4. **Dimensionen-Scores anpassen** falls thematischer Fokus sich verschiebt
+- 50 Papers ohne Abstract automatisch ausgeschlossen (moeglicherweise false negatives)
+- Bewertung basiert nur auf Abstracts (kein Full-Text)
+- 20 Unclear-Papers erfordern manuelle Nachbearbeitung
+- Moeglicher Bias bei englischsprachiger Dominanz
+- Prompt-Dokumentation: siehe [prompts/CHANGELOG.md](../prompts/CHANGELOG.md)
 
 ---
 
-**Generiert:** 2025-11-02 16:15 CET
-**Repository:** https://github.com/chpollin/FemPrompt_SozArb
+*Aktualisiert: 2026-02-14*

@@ -1,7 +1,7 @@
 # Quality Report - LLM Assessment Test (50 Papers)
 
 **Datum:** 2026-02-02
-**Modell:** Claude Haiku 4.5 (claude-3-5-haiku-latest)
+**Modell:** Claude Haiku 4.5 (claude-haiku-4-5-20251001)
 **Papers:** 50 (von 326)
 
 ---

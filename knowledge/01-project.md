@@ -122,6 +122,68 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 ## Theoretischer Rahmen
 
+### Epistemische Asymmetrie (Leitbegriff des Papers)
+
+Epistemische Asymmetrie beschreibt eine Arbeitsteilung, in der die beteiligten Instanzen auf grundsaetzlich verschiedene Weise Wissen verarbeiten, wobei keine Seite die epistemischen Beitraege der anderen vollstaendig bewerten kann. LLMs verarbeiten grosse Textmengen und erkennen Muster ueber Hunderte von Texten. Expert:innen bewerten die epistemische Qualitaet von Quellen und erkennen Nuancen, die nur mit Feldkenntnis sichtbar werden.
+
+Die Asymmetrie ist wechselseitig und kontextabhaengig. Sie laesst sich mit gegenwaertigen Systemen nicht aufloesen, sondern nur durch Workflow-Design produktiv bearbeiten (Mollick: Co-Intelligence).
+
+**Dimensionen der Asymmetrie:**
+
+| Dimension | Beschreibung | Repo-Artefakt |
+|-----------|--------------|---------------|
+| Technologisch | Undurchsichtigkeit von Modellverhalten und Selektionslogik | Multi-Provider-Strategie, `deep-research/` |
+| Verantwortung | Forscher:innen koennen Rechenschaft ablegen, LLMs nicht | Dualer Bewertungspfad, Expert:innen-Pfad als Referenz |
+| Oekonomisch | Zugang zu Frontier-Modellen ist kostenpflichtig und ungleich verteilt | Kosten-Dokumentation ($8.73 gesamt) |
+| Kompetenz | Prompt-Qualitaet bestimmt Ergebnisqualitaet | Prompt-Governance (siehe `prompts/CHANGELOG.md`) |
+| Ethisch | Datenfluss in proprietaere Systeme, oekologische Kosten | -- |
+
+**Zentrale These:** Die Verantwortungsasymmetrie bindet die anderen Dimensionen. Ohne zurechenbare Verantwortung gibt es keine Instanz, die Intransparenz, Zugangsbedingungen und Kompetenzunterschiede methodisch bearbeiten kann.
+
+### Epistemische Infrastruktur
+
+Epistemische Infrastruktur bezeichnet die Gesamtheit derjenigen Verfahren, Dokumentationsstrukturen, institutionellen Regelungen und Community-Praktiken, die sicherstellen, dass LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben.
+
+**Vier Ebenen:**
+
+| Ebene | Beschreibung | Projekt-Umsetzung |
+|-------|--------------|-------------------|
+| Workflow | Dualer Bewertungspfad, deterministische Verarbeitungsstufen | 3-Stage SKE, paralleles Assessment |
+| Research Integrity | Dokumentation, nachvollziehbare Designentscheidungen | Repository, Prompt-Changelog, PAPER_VS_REPO.md |
+| Institutionell | KI-Richtlinien | Noch nicht vorhanden |
+| Community | Peer-Review-Praktiken, die Workflows einschliessen | Paper-Forderung |
+
+**Arbeitsformel:** "Nicht das Modell wird verlaesslich, sondern der Forschungsprozess wird auditierbar: Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzung zu nachvollziehbarer, verantwortbarer Wissensproduktion."
+
+Detaillierte Operationalisierung: `knowledge/05-epistemic-infrastructure.md`
+
+### Kuenstliche epistemische Autoritaeten (Hauswald 2025)
+
+Rico Hauswald argumentiert, dass epistemische Deferenz nicht an Ueberzeugungen oder kommunikative Intentionen gebunden sein muss. Entscheidend ist, ob die Outputs eines Systems als zuverlaessige Wahrheitsindikatoren fungieren. Das erlaubt es, LLM-Beitraege als epistemisch relevant zu behandeln, ohne dem System menschliches Verstehen zuzuschreiben.
+
+Hauswald beschreibt eine justifikatorische Esoterik: nicht der Inhalt, sondern die Begruendung bleibt unzugaenglich. Trainingsdaten, Modellarchitekturen und Selektionslogiken werden nicht offengelegt.
+
+**Ergaenzung (Ferrario/Facchini/Termine 2024):** Selbst empirisch nachweisbare Ueberlegenheit eines KI-Systems begruendet keine epistemische Autoritaet, weil Autoritaet epistemische Tugenden und normative Ansprechbarkeit voraussetzt, die Maschinen nicht besitzen.
+
+### Konfabulation (nicht Halluzination)
+
+Konfabulation bezeichnet die Erzeugung kohaerenter, aber faktuell ungesicherter Aussagen durch ein LLM, ohne dass eine interne Instanz den Wahrheitsgehalt gegen eine externe Referenz prueft. Der Begriff ist der klinischen Psychologie entlehnt (Wiggins/Bunin 2023).
+
+**Begruendung der Terminologie:**
+- Halluzination setzt Wahrnehmungsstoerung bei vorhandenem Bewusstsein voraus (bei LLMs nicht gegeben)
+- Konfabulation beschreibt den Erzeugungsmechanismus praeziset (kohaerente Narrative ohne Taeuschungsabsicht)
+- Sui et al. (2024): Konfabulierte LLM-Outputs weisen hoehere Narrativitaet und semantische Kohaerenz auf als veridikale Outputs
+
+**Konsequenz fuer die Pipeline:** Die 3-Stage SKE adressiert Konfabulationsrisiko durch deterministische Stufe 2 (kein LLM, keine Konfabulation moeglich) und Verifikation in Stufe 3 (Pruefauftrag gegen Original).
+
+### Sycophancy (Prompt-Konformitaet)
+
+Empirisch belegte Tendenz von LLMs, den Vorannahmen eines Prompts uebermaeessig zuzustimmen. Malmqvist (2024) dokumentiert Error Introduction Rates von bis zu 40% bei suggestiven Anfragen.
+
+**Relevanz fuer das Projekt:** Wenn der Assessment-Prompt Kategorien wie "feministisch" oder "intersektional" betont, koennte das Modell diese Kategorien grosszuegiger zuweisen. Qualitaet des LLM-Beitrags haengt damit nicht nur von der Modell-Kompetenz ab, sondern auch von der Prompt-Gestaltung.
+
+**Massnahmen im Projekt:** Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung (siehe `prompts/CHANGELOG.md`, `knowledge/05-epistemic-infrastructure.md`)
+
 ### Situiertes Wissen (Haraway)
 
 Alle Erkenntnisse entstehen aus spezifischen sozialen, kulturellen und materiellen Kontexten. Objektivitaet bedeutet explizite Positionierung, nicht "View from Nowhere".
@@ -140,23 +202,27 @@ Unterdrueckung erfolgt nicht entlang einzelner Achsen (Gender, Race), sondern du
 - Prompt-Templates fokussieren auf intersektionale Perspektiven
 - Konzeptextraktion behaelt intersektionale Spezifitaet bei
 
-### Response-Ability (Haraway)
+### Response-Ability (Haraway) / Verantwortungsasymmetrie
 
-Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen.
+Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. Im Kontext des dualen Bewertungspfads: Die Verantwortung fuer alle Ergebnisse bleibt bei den Forscher:innen, auch wenn LLMs epistemisch relevante Beitraege liefern.
 
 **Operationalisierung:**
 - Expert-in-the-Loop-Validierung an kritischen Entscheidungspunkten
 - Explizite Begruendungen fuer Einschluss/Ausschluss-Entscheidungen
 - Transparente Dokumentation methodischer Grenzen
+- Expert:innen-Pfad als epistemisch verbindlicher Referenzpfad
 
 ---
 
 ## Methodische Grenzen
 
-- Zirkularitaet der LLM-gestuetzten LLM-Kritik
-- Opazitaet der verwendeten Modelle
-- Potenzielle Reproduktion sprachlicher/geografischer Bias
-- Abhaengigkeit von proprietaeren Systemen
+- **Zirkularitaet:** LLMs werden eingesetzt, um Literatur ueber den Einsatz von LLMs zu untersuchen. Diese Zirkularitaet ist kein Defekt, sondern eine Bedingung des Feldes -- es gibt keinen externen Standpunkt, von dem aus feministische AI Literacies untersucht werden koennten, ohne selbst auf AI Literacies angewiesen zu sein
+- **Justifikatorische Esoterik (Hauswald):** Trainingsdaten, Modellarchitekturen und Selektionslogiken werden nicht offengelegt. Nicht der Inhalt, sondern die Begruendung bleibt unzugaenglich
+- **Konfabulationsrisiko:** Architekturbedingte Erzeugung plausibler, aber ungesicherter Aussagen (adressiert durch 3-Stage SKE)
+- **Sycophancy-Risiko:** Prompt-induzierte Ueberattribuierung (adressiert durch Negative Constraints, Calibration Items)
+- **Paywall-Bias:** Systematische Unterrepraesentation kostenpflichtiger Literatur im Korpus (79% Beschaffungsrate, Rest hinter Paywalls)
+- **Ressourcenasymmetrie:** Gruppen, die Bias und Ungleichheit untersuchen, verfuegen haeufig ueber geringere Ressourcen fuer den Aufbau epistemischer Infrastruktur
+- **Abhaengigkeit von proprietaeren Systemen**
 
 ---
 
@@ -167,11 +233,28 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen.
 | Deadline | 4. Mai 2026 |
 | Umfang | 18.000 Zeichen (inkl. Leerzeichen, inkl. Fussnoten) |
 | Fussnoten | max. 15, keine Literaturliste |
-| Titel | Deep-Research-gestuetzte Literature Reviews im Praxistest |
-| Untertitel | Epistemische Asymmetrien und Qualitaetssicherung zwischen Large Language Models und Expert:innenwissen |
+| Titel | Epistemische Asymmetrien in Deep-Research-gestuetzten Literature Reviews |
+| Untertitel | Workflow-Design zwischen Large Language Models und Expert:innenwissen |
 | Wissensdokument | v12 (strukturell geschaerft) |
 | Paper-Text | Entwurf liegt vor |
 | Abgleich Paper vs. Repo | `knowledge/05-paper-repo-abgleich.md` |
+
+---
+
+## Glossar (Kernbegriffe)
+
+| Begriff | Definition |
+|---------|------------|
+| Epistemische Asymmetrie | Arbeitsteilung, in der beteiligte Instanzen auf grundsaetzlich verschiedene Weise Wissen verarbeiten |
+| Epistemische Infrastruktur | Verfahren, Dokumentationsstrukturen, Regelungen, die LLM-Beitraege ueberpruefbar machen |
+| Konfabulation | Erzeugung kohaerenter, aber faktuell ungesicherter Aussagen durch LLMs |
+| Sycophancy | Tendenz von LLMs, Prompt-Vorannahmen uebermaeessig zuzustimmen |
+| Jagged Frontier | Ungleichmaessige Kompetenzverteilung von KI-Systemen (Mollick) |
+| Structured Knowledge Extraction (SKE) | 3-stufige Verarbeitung von Volltexten zu Wissensdokumenten |
+| Dualer Bewertungspfad | Parallele Anordnung von Expert:innen- und LLM-Pfad |
+| Verantwortungsasymmetrie | Verantwortung bleibt bei Forscher:innen, obwohl LLMs epistemisch relevante Beitraege liefern |
+| Deep Research | Agentenbasierte LLM-Systeme fuer iterative Recherche und zitierte Synthese |
+| Wissensdokument | Strukturierte Zusammenfassung einer Studie mit Metadaten, Kernbefunden, Kategorien und Confidence-Score |
 
 ---
 

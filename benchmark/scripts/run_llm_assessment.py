@@ -49,12 +49,12 @@ def build_assessment_prompt(categories: dict) -> str:
     decision_info = categories.get('decision', {})
     include_criteria = decision_info.get('include_criteria', 'Nicht definiert')
 
-    prompt = f"""Du bist ein wissenschaftlicher Reviewer für ein Literature Review zu feministischen AI Literacies in der Sozialen Arbeit.
+    prompt = f"""Du bist ein wissenschaftlicher Reviewer. Deine Aufgabe ist die systematische Kategorisierung von Papers fuer ein Literature Review.
 
 ## Aufgabe
 Bewerte das Paper anhand der Kategorien. Die Decision MUSS logisch konsistent mit den Kategorie-Bewertungen sein!
 
-## Kategorien (binär: Ja/Nein)
+## Kategorien (binaer: Ja/Nein)
 
 {chr(10).join(category_descriptions)}
 
@@ -65,12 +65,22 @@ Bewerte das Paper anhand der Kategorien. Die Decision MUSS logisch konsistent mi
 ## WICHTIG - Konsistenzregel
 
 Deine Decision MUSS mathematisch aus den Kategorien folgen:
-- Zähle: Hat das Paper mindestens 1x Ja bei AI_Literacies, Generative_KI, Prompting oder KI_Sonstige? → TECHNIK_OK
-- Zähle: Hat das Paper mindestens 1x Ja bei Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch oder Fairness? → SOZIAL_OK
-- Wenn TECHNIK_OK UND SOZIAL_OK → Decision = "Include"
-- Sonst → Decision = "Exclude"
+- Zaehle: Hat das Paper mindestens 1x Ja bei AI_Literacies, Generative_KI, Prompting oder KI_Sonstige? -> TECHNIK_OK
+- Zaehle: Hat das Paper mindestens 1x Ja bei Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch oder Fairness? -> SOZIAL_OK
+- Wenn TECHNIK_OK UND SOZIAL_OK -> Decision = "Include"
+- Sonst -> Decision = "Exclude"
 
-Du darfst die Logik NICHT mit eigenem Judgment überschreiben!
+Du darfst die Logik NICHT mit eigenem Judgment ueberschreiben!
+
+## WICHTIG - Negative Constraints (Sycophancy-Mitigation)
+
+Klassifiziere restriktiv. Bei Unsicherheit: "Nein" statt "Ja".
+
+- **Feministisch = "Ja"** NUR wenn der Text EXPLIZIT feministische Theorie, Methoden oder Perspektiven verwendet ODER sich auf feministische Autor:innen bezieht (z.B. Crenshaw, Haraway, hooks, D'Ignazio, Harding, Butler). Implizite Naehe zu Gender-Themen reicht NICHT.
+- **Soziale_Arbeit = "Ja"** NUR wenn der Text einen direkten Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder Zielgruppen Sozialer Arbeit herstellt. Allgemeine "social impact"-Diskussionen reichen NICHT.
+- **Prompting = "Ja"** NUR wenn Prompt-Engineering, Prompt-Strategien oder Eingabegestaltung ein substantielles Thema des Papers sind. Beilaeufige Erwaehnung von Prompts reicht NICHT.
+- Vergib insgesamt nicht mehr als 4-5 Kategorien mit "Ja" pro Paper, es sei denn, der Text adressiert tatsaechlich mehr Bereiche mit Substanz.
+- Eine Kategorie ist "Ja" nur wenn der Text sie SUBSTANTIELL behandelt, nicht wenn sie am Rande erwaehnt wird.
 
 ## Exclusion Reasons
 Falls Exclude: Duplicate, Not_relevant_topic, Wrong_publication_type, No_full_text, Language
@@ -95,14 +105,14 @@ Antworte NUR mit diesem JSON-Objekt:
   "Exclusion_Reason": "..." | null,
   "Studientyp": "Empirisch" | "Experimentell" | "Theoretisch" | "Konzept" | "Literaturreview" | "Unclear",
   "Confidence": 0.0-1.0,
-  "Reasoning": "Kurze Begründung (max 100 Wörter)"
+  "Reasoning": "Kurze Begruendung (max 100 Woerter)"
 }}
 ```
 """
     return prompt
 
 
-def assess_paper(client: anthropic.Anthropic, system_prompt: str, paper: dict, model: str = "claude-3-5-haiku-20241022") -> Optional[dict]:
+def assess_paper(client: anthropic.Anthropic, system_prompt: str, paper: dict, model: str = "claude-haiku-4-5-20251001") -> Optional[dict]:
     """Bewertet ein einzelnes Paper mit dem LLM."""
 
     # Baue Paper-Text
@@ -161,7 +171,7 @@ def main():
     parser.add_argument('--input', required=True, help='Input CSV mit Papers')
     parser.add_argument('--config', required=True, help='YAML config mit Kategorien')
     parser.add_argument('--output', required=True, help='Output CSV für Ergebnisse')
-    parser.add_argument('--model', default='claude-3-5-haiku-20241022', help='Anthropic Model')
+    parser.add_argument('--model', default='claude-haiku-4-5-20251001', help='Anthropic Model')
     parser.add_argument('--limit', type=int, help='Limit Anzahl Papers (für Tests)')
     parser.add_argument('--delay', type=float, default=0.5, help='Delay zwischen API calls (Sekunden)')
     parser.add_argument('--resume', action='store_true', help='Setze von letztem Checkpoint fort')

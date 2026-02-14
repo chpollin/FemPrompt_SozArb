@@ -258,7 +258,7 @@ Be precise and accurate. Total: ~400-500 words.
 """
 
             response = client.messages.create(
-                model="claude-3-5-haiku-20241022",
+                model="claude-haiku-4-5-20251001",
                 max_tokens=1024,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -277,7 +277,7 @@ Be precise and accurate. Total: ~400-500 words.
             summary_content = f"""---
 source_file: {md_file.name}
 summarization_date: {time.strftime('%Y-%m-%d %H:%M:%S')}
-model: claude-3-5-haiku-20241022
+model: claude-haiku-4-5-20251001
 input_tokens: {input_tokens}
 output_tokens: {output_tokens}
 cost: ${cost:.4f}

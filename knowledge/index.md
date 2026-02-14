@@ -46,11 +46,20 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 | Datei | Inhalt |
 |-------|--------|
-| [01-project.md](01-project.md) | Projektziel, Zielgruppe, Erfolgskriterien |
-| [02-methodology.md](02-methodology.md) | PRISMA 2020, Assessment-Schemas |
-| [03-status.md](03-status.md) | Aktueller Stand |
-| [04-technical.md](04-technical.md) | Pipeline-Architektur, Scripts |
-| [05-paper-repo-abgleich.md](05-paper-repo-abgleich.md) | Abgleich Paper (v12) vs. Repository |
+| [01-project.md](01-project.md) | Projektziel, theoretischer Rahmen (epistemische Asymmetrie, Konfabulation, Sycophancy), Glossar |
+| [02-methodology.md](02-methodology.md) | PRISMA 2020, dualer Bewertungspfad, SKE, Assessment-Schemas, Zirkularitaet |
+| [03-status.md](03-status.md) | Aktueller Stand, Blocker, offene Punkte |
+| [04-technical.md](04-technical.md) | Pipeline-Architektur, Scripts, Performance, Verifikations-Praezisierung |
+| [05-paper-repo-abgleich.md](05-paper-repo-abgleich.md) | Abgleich Paper-Text vs. Repository (detailliert, Satz-fuer-Satz) |
+| [06-epistemic-infrastructure.md](06-epistemic-infrastructure.md) | Mapping-Tabelle (Asymmetrie -> Risiko -> Massnahme -> Artefakt), Sycophancy-Mitigation, Selektions-Audit |
+
+### Workflow und Prompt-Governance
+
+| Datei | Inhalt |
+|-------|--------|
+| [WORKFLOW.md](../WORKFLOW.md) | Workflow-Uebersicht (Pipeline + Assessment + Benchmark) |
+| [PAPER_VS_REPO.md](../PAPER_VS_REPO.md) | Kurzversion Paper-vs-Repo (verweist auf 05-paper-repo-abgleich.md) |
+| [prompts/CHANGELOG.md](../prompts/CHANGELOG.md) | Versionierte Prompts: 5D, 10K, SKE Stage 1+3, Sycophancy-Massnahmen |
 
 ### Anleitungen
 
@@ -63,8 +72,9 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 
 | Datei | Inhalt |
 |-------|--------|
-| [paper/Forum Wissenschaft Paper - Arbeitsplan.md](paper/Forum%20Wissenschaft%20Paper%20-%20Arbeitsplan.md) | Paper-Gliederung |
+| [paper/Forum Wissenschaft Paper - Arbeitsplan.md](paper/Forum%20Wissenschaft%20Paper%20-%20Arbeitsplan.md) | Paper-Gliederung und Struktur |
 | [paper/Human-LLM Assessment Benchmark.md](paper/Human-LLM%20Assessment%20Benchmark.md) | Benchmark-Spezifikation |
+| [paper/Referenzliteratur-Benchmark-Design.md](paper/Referenzliteratur-Benchmark-Design.md) | Referenzstudien und erwartete Kappa-Werte |
 
 ---
 
@@ -80,7 +90,8 @@ Teil des [Social AI Projekts](https://socialai.2aw.at/).
 │   └── knowledge/distilled/ # 249 Wissensdokumente
 ├── config/                  # Konfiguration (defaults.yaml)
 ├── vault/                   # Obsidian Vault (Skelett, nicht befuellt)
-└── knowledge/               # Dokumentation (01-05 + Guides + Paper)
+├── prompts/                 # Prompt-Changelog und Governance
+└── knowledge/               # Dokumentation (01-06 + Guides + Paper)
 ```
 
 ---
