@@ -1,8 +1,8 @@
-# Status (2026-02-06)
+# Status (2026-02-14)
 
-## Aktueller Fokus: Benchmark vorbereiten
+## Aktueller Fokus: Paper finalisieren + Benchmark vorbereiten
 
-Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: Benchmark (Human vs. LLM Assessment). Blockiert durch Human-Assessment.
+Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Forum Wissenschaft) liegt vor, Abgleich Paper vs. Repository durchgefuehrt (siehe `knowledge/05-paper-repo-abgleich.md`). Benchmark blockiert durch Human-Assessment.
 
 ---
 
@@ -20,10 +20,14 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: 
 
 | Aspekt | Stand |
 |--------|-------|
-| Papers | 303 (254 DeepResearch + 49 Human 1 Collection) |
+| Papers in CSV | 305 (254 DeepResearch + 50 Manual + 1 leer) |
+| Decisions getroffen | 171/305 (56.3%): 55 Include, 102 Exclude, 14 Unclear |
+| Kategorien befuellt | 115/305 (37.7%) |
 | Schema | 10 binaere Kategorien (Technik + Sozial) |
 | Google Spreadsheet | [Link](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
 | Bearbeiter | Susi Sackl-Sharif, Sabine Klinger |
+
+**Hinweis:** 326 Papers in Zotero, aber nur 305 in human_assessment.csv. 21 Papers fehlen in der CSV (Grund unklar).
 
 ### LLM Assessment (5 Dimensionen - abgeschlossen)
 
@@ -52,6 +56,7 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: 
 |-------|----------|
 | PDFs gesamt | 257/326 (78.8%) |
 | Markdown-Konversion | 252/257 (98.1%) |
+| Markdown bereinigt | 232/252 (markdown_clean/) |
 | Fehlgeschlagen | 5 (korrupte PDFs) |
 | Dubletten entfernt | 9 |
 | Quality-Score (Durchschnitt) | 93.1/100 |
@@ -71,6 +76,7 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: 
 |--------|-------|
 | Verarbeitete Dokumente | 249/252 (98.8%) |
 | Verifizierte Qualitaet | 242/249 perfekt (97.2%) |
+| Verifikations-JSONs | 219/249 (Rest ohne detailliertes JSON) |
 | API-Kosten | ~$7 (gesamt) |
 | Output | `pipeline/knowledge/distilled/` |
 
@@ -109,9 +115,22 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: 
 | Aspekt | Stand |
 |--------|-------|
 | Deadline | 4. Mai 2026 |
-| Umfang | 18.000 Zeichen |
-| Fokus | LLM-gestuetzter Literature Review im Praxistest |
+| Umfang | 18.000 Zeichen (inkl. Leerzeichen, inkl. Fussnoten) |
+| Fokus | Deep-Research-gestuetzter Literature Review im Praxistest |
+| Wissensdokument | v12 (strukturell geschaerft) |
+| Paper-Text | Entwurf liegt vor (5 Abschnitte + Vorspann) |
+| Abgleich Paper vs. Repo | `knowledge/05-paper-repo-abgleich.md` |
 | Arbeitsplan | `knowledge/paper/Forum Wissenschaft Paper - Arbeitsplan.md` |
+
+### Offene Korrekturen am Paper-Text (vor Einreichung)
+
+| Problem | Prioritaet |
+|---|---|
+| Prompts nicht im Repo, Paper behauptet das Gegenteil | Hoch |
+| "jeder Konversion" uebertrieben (nur 10% geprueft) | Hoch |
+| Konfabulations-Befund widerspruechlich zwischen Paper und v12 | Hoch |
+| RIS-Konversion nicht reproduzierbar dokumentiert | Mittel |
+| Vault-Script integriert keine Assessment-Daten | Mittel |
 
 ---
 
@@ -123,11 +142,15 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: 
 - [x] Knowledge Distillation (249 Dokumente)
 - [x] Knowledge-Doc Verifikation (97.2% perfekt)
 - [x] Repository-Bereinigung (analysis/, pipeline/summaries/, Redundanzen)
+- [x] Paper-Entwurf schreiben (Wissensdokument v12 + Text)
+- [x] Abgleich Paper vs. Repository (05-paper-repo-abgleich.md)
+- [ ] Deep-Research-Prompts aus Git-History wiederherstellen (Paper-Korrektur)
 - [ ] Human-Assessment im Google Spreadsheet abschliessen (Blocker)
-- [ ] Benchmark-LLM-Assessment ausfuehren
+- [ ] Benchmark-LLM-Assessment (10K) ausfuehren
 - [ ] Benchmark-Metriken berechnen
 - [ ] Vault-Building (Obsidian)
-- [ ] Paper schreiben
+- [ ] Paper-Text finalisieren (Korrekturen aus Abgleich einarbeiten)
+- [ ] Paper einreichen (Deadline 4. Mai 2026)
 
 ---
 
@@ -141,4 +164,4 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Naechster Schritt: 
 
 ---
 
-*Aktualisiert: 2026-02-06*
+*Aktualisiert: 2026-02-14*

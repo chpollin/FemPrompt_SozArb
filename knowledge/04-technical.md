@@ -55,10 +55,16 @@ Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `
 | Script | Funktion | Status |
 |--------|----------|--------|
 | `download_zotero_pdfs.py` | PDFs von Zotero herunterladen | Getestet |
-| `convert_to_markdown.py` | PDF→Markdown mit Docling (inkl. Seiten-Marker) | Getestet |
+| `acquire_pdfs.py` | PDF-Akquise mit 4 Fallback-Strategien | Getestet |
+| `convert_to_markdown.py` | PDF zu Markdown mit Docling (inkl. Seiten-Marker) | Getestet |
 | `validate_markdown_enhanced.py` | Multi-Layer Validierung + PDF-Vergleich | Getestet |
 | `postprocess_markdown.py` | Konservative Artefakt-Bereinigung | Getestet |
+| `pdf_to_images.py` | PDF-Seiten als Bilder extrahieren (fuer Reviewer) | Getestet |
+| `summarize_documents.py` | Dokument-Zusammenfassungen | Getestet |
 | `distill_knowledge.py` | Knowledge Distillation (3-Stage) | Abgeschlossen (249 Docs) |
+| `validate_knowledge_docs.py` | Knowledge-Dokument-Validierung | Getestet |
+| `verify_knowledge_quality.py` | Qualitaetspruefung Knowledge Docs | Abgeschlossen |
+| `validate_pipeline.py` | Pipeline-Validierung (End-to-End) | Getestet |
 | `generate_vault.py` | Obsidian Vault generieren | Ausstehend |
 | `utils.py` | Zentrale Hilfsfunktionen (Logging, API, Config) | Aktiv |
 
@@ -68,13 +74,26 @@ Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `
 |------|----------|
 | `markdown_reviewer.html` | Browser-Tool fuer Human-in-the-Loop Review |
 
+### Corpus Scripts (corpus/)
+
+| Script | Funktion |
+|--------|----------|
+| `extract_metadata.py` | Metadaten aus Zotero-Export extrahieren |
+
 ### Assessment Scripts
 
 | Script | Funktion |
 |--------|----------|
-| `assessment-llm/assess_papers.py` | LLM-basiertes PRISMA-Assessment |
+| `assessment-llm/assess_papers.py` | LLM-basiertes PRISMA-Assessment (5D) |
+| `assessment-llm/analyze_results.py` | Ergebnis-Analyse des 5D-Assessments |
+| `assessment-llm/write_llm_tags_to_zotero.py` | LLM-Tags in Zotero schreiben |
 | `assessment/create_thematic_assessment.py` | Excel fuer manuelles Assessment |
-| `benchmark/scripts/run_llm_assessment.py` | Benchmark-Assessment (10 Kategorien) |
+| `assessment/excel_to_zotero_tags.py` | Excel-Tags in Zotero uebertragen |
+| `benchmark/scripts/run_llm_assessment.py` | Benchmark-Assessment (10K, nur 50-Paper-Test) |
+| `benchmark/scripts/run_phase2_pipeline.py` | Phase-2-Pipeline fuer Benchmark |
+| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenfuehren (nicht ausgefuehrt) |
+| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa berechnen (nicht ausgefuehrt) |
+| `benchmark/scripts/analyze_disagreements.py` | Qualitative Analyse (nicht ausgefuehrt) |
 
 ---
 
@@ -152,10 +171,13 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 | `pipeline/knowledge/_verification/` | Verifikationsberichte | JSON |
 | `benchmark/config/` | Benchmark-Konfiguration | categories.yaml |
 | `benchmark/scripts/` | Benchmark-Scripts | run_llm_assessment.py, merge_assessments.py, calculate_agreement.py, analyze_disagreements.py |
-| `benchmark/data/` | Assessment-Daten | human_assessment.csv, llm_assessment.csv, merged_comparison.csv |
-| `benchmark/results/` | Ergebnisse | agreement_metrics.json, disagreement_cases.csv |
-| `knowledge/` | Dokumentation | Markdown-Dateien |
-| `vault/` | Obsidian Vault | Papers, Concepts, MOCs |
+| `benchmark/data/` | Assessment-Daten | human_assessment.csv, llm_assessment_50.csv, llm_assessment_50_v2.csv, femprompt_papers.csv |
+| `benchmark/data/phase2_test/` | Phase-2-Testdaten | acquisition_input.json, missing_pdfs.csv, pipeline_stats.json |
+| `benchmark/results/` | Ergebnisse | (leer, wartet auf Benchmark-Ausfuehrung) |
+| `corpus/` | Korpus-Metadaten | zotero_export.json, papers_metadata.csv, source_tool_mapping.json, extract_metadata.py |
+| `deep-research/restored/` | Deep-Research-Artefakte | 4 RIS-Dateien, 3 Raw-Outputs, ris-template.md |
+| `knowledge/` | Dokumentation | Markdown-Dateien (01-05 + Guides + Paper) |
+| `vault/` | Obsidian Vault | Skelett: README.md + 5 MOC-Templates (nicht befuellt) |
 
 ---
 
@@ -326,4 +348,13 @@ python pipeline/scripts/distill_knowledge.py --single "pipeline/markdown/paper.m
 
 ---
 
-*Aktualisiert: 2026-02-06*
+## Bekannte Dokumentationsfehler (korrigiert)
+
+| Datei | Fehler | Korrektur | Datum |
+|---|---|---|---|
+| CLAUDE.md | "8 fallback strategies" | Tatsaechlich 4 (Zotero, DOI, Unpaywall, ArXiv) | 2026-02-14 |
+| 03-status.md (alt) | "303 (254 DeepResearch + 49 Human 1 Collection)" | Tatsaechlich 305 in CSV (254 DR + 50 Manual + 1 leer) | 2026-02-14 |
+
+---
+
+*Aktualisiert: 2026-02-14*

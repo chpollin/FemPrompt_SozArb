@@ -10,9 +10,12 @@ Der Workflow folgt PRISMA 2020 Standards fuer systematische Reviews:
 ### Abweichung von Standard-Datenbanksuchen
 
 Die Identifikationsphase nutzt KI-gestuetzte Deep Research statt traditioneller Datenbanksuchen:
-- 4 Modelle (ChatGPT, Claude, Gemini, Perplexity) generieren Empfehlungen
-- Parametrische Prompts sichern Vergleichbarkeit
+- 4 Modelle (ChatGPT, Claude, Gemini, Perplexity) erhalten identische kontextparametrisierte Anweisungen
+- Ergaenzt durch eine begrenzte Zahl manuell identifizierter Studien (50 von 305 Papers im Human-Assessment)
 - Abweichung wird explizit dokumentiert und begruendet
+- Motivation: Erprobung einer neuen Technologie, nicht Aufwandsreduktion
+
+**Hinweis:** Die Deep-Research-Prompts wurden im Oktober 2025 aus dem Repository geloescht. Wiederherstellung aus Git-History vor Einreichung erforderlich (siehe `knowledge/05-paper-repo-abgleich.md`, Abschnitt 3.1).
 
 ---
 
@@ -74,6 +77,21 @@ Ein Paper wird eingeschlossen, wenn beide Bedingungen erfuellt sind:
 
 ---
 
+## Dual Assessment: Zwei Systeme, unterschiedliche Zwecke
+
+Der Workflow verwendet zwei LLM-Assessment-Systeme fuer unterschiedliche Aufgaben:
+
+| System | Schema | Skala | Zweck | Status |
+|--------|--------|-------|-------|--------|
+| **5D** | 5 Relevanz-Dimensionen | Ordinal (0-3) | Exploratives Screening und Priorisierung | Fertig (325/325) |
+| **10K** | 10 binaere Kategorien | Ja/Nein | Benchmark gegen Human-Assessment (Cohen's Kappa) | Code bereit, nicht ausgefuehrt |
+
+**Warum zwei Systeme?** Das 5D-System wurde zuerst entwickelt, um das Korpus parametrisch zu screenen und Relevanz-Cluster zu identifizieren. Das 10K-System wurde spaeter eingefuehrt, als das Human-Assessment-Schema feststand (10 binaere Kategorien). Nur das 10K-System ist direkt mit dem Human-Assessment vergleichbar -- es verwendet das identische Schema. Das 5D-System ist ein eigenstaendiges Screening-Instrument, das andere Fragen beantwortet (Wie relevant ist ein Paper auf 5 Dimensionen?) als das 10K-System (Behandelt ein Paper Kategorie X ja oder nein?).
+
+**Wichtig:** Die beiden Systeme sind **nicht direkt vergleichbar**, da sie unterschiedliche Skalen und unterschiedliche Dimensionen verwenden. Der Benchmark (Cohen's Kappa) basiert ausschliesslich auf dem 10K-System.
+
+---
+
 ## LLM Assessment (5 Dimensionen)
 
 Automatisiertes 5-dimensionales Scoring-System:
@@ -92,7 +110,7 @@ Automatisiertes 5-dimensionales Scoring-System:
 
 - 325 Papers in 24 Minuten
 - 100% Erfolgsrate
-- Kosten: $0.58 (Claude Haiku 4.5)
+- Kosten: $1.15 (Claude Haiku 4.5)
 
 ---
 
@@ -145,8 +163,10 @@ Heterogene Modell-Outputs werden in RIS-Format konvertiert.
 
 ### Export
 
-- `zotero_vereinfacht.json` fuer Pipeline-Input
+- `corpus/zotero_export.json` fuer Pipeline-Input
 - Felder: key, itemType, title, creators, date, DOI, url, abstractNote
+- `corpus/papers_metadata.csv` fuer Metadaten-Analyse
+- `corpus/source_tool_mapping.json` fuer Provenienz-Tracking
 
 ---
 
@@ -172,7 +192,7 @@ Heterogene Modell-Outputs werden in RIS-Format konvertiert.
 
 ### KI-Output-Validierung
 
-- Halluzinationserkennung durch Zitat-Validierung
+- Konfabulationserkennung durch Zitat-Validierung (Terminologie: "Konfabulation" statt "Halluzination", da LLMs kein Bewusstsein haben)
 - Sycophancy-Mitigation durch neutrale Prompts
 - Vergleich der Outputs verschiedener Modelle
 
@@ -244,4 +264,20 @@ Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit H
 
 ---
 
-*Aktualisiert: 2026-02-06*
+## End-to-End-Workflow (Uebersicht)
+
+| Phase | Schritte | Status |
+|---|---|---|
+| 1. Identifikation | Deep Research (4 Modelle) + manuelle Ergaenzung, RIS-Konversion, Zotero-Import | Fertig |
+| 2. PDF-Akquise | Hierarchische Fallback-Strategie (4 Stufen), 257/326 PDFs | Fertig |
+| 3. Konversion | Docling PDF-zu-Markdown, Validierung (4-Layer), Post-Processing, Human Review (~10% Stichprobe) | Fertig |
+| 4. Knowledge Distillation | 3-Stage (LLM Extract, Deterministisch Format, LLM Verify), 249 Knowledge Docs | Fertig |
+| 5. Assessment (dual) | Human (Google Sheets, 10K) parallel zu LLM (5D fertig, 10K wartet) | In Arbeit |
+| 6. Benchmark | 10K-LLM ausfuehren, Merge, Cohen's Kappa, Disagreement-Analyse | Wartet |
+| 7. Vault | generate_vault.py, Knowledge Docs + Assessment-Daten zu Obsidian Vault | Wartet |
+
+Detaillierte technische Dokumentation: `knowledge/04-technical.md`
+
+---
+
+*Aktualisiert: 2026-02-14*

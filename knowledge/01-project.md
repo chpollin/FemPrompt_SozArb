@@ -2,11 +2,13 @@
 
 ## Projektziel
 
-Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit.
+Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit. Teil des Elisabeth-List-Fellowship-Projekts "Diversitaetssensibler Umgang mit Kuenstlicher Intelligenz" (Universitaet Graz, 2025-2026).
 
-**Primaeres Ziel:** Empirische Grundlage schaffen fuer weitere Forschung zu diskriminierungssensiblem Prompting.
+**Primaeres Ziel:** Konzeptuelle Grundlage fuer eine Benchmark ("Fair Bench") fuer die Soziale Arbeit, die systematisch ueberprueft, wie LLMs auf Bias-bezogene Begriffe reagieren. Der Review identifiziert die relevanten Begriffe, Konzepte und Diskurspositionen, bevor sie in Testszenarien ueberfuehrt werden koennen.
 
-**Sekundaeres Ziel:** Methodische Innovation dokumentieren - wie kann LLM-gestuetztes Assessment den Review-Prozess unterstuetzen?
+**Sekundaeres Ziel:** Methodische Innovation dokumentieren -- LLM-gestuetzter Literature Review im Praxistest, dokumentiert in einem Paper fuer Forum Wissenschaft.
+
+**Arbeitsdefinition feministischer AI Literacies:** Diversitaetssensible, intersektionale und Bias-erkennende Faehigkeiten, die Fachkraefte der Sozialen Arbeit im Umgang mit generativer KI benoetigen, mit Fokus auf Prompting, kritische Output-Bewertung und Kontext-/Anwendungssensitivitaet.
 
 ---
 
@@ -77,18 +79,18 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 **Output:**
 - Thematisch kategorisierte Literatur (326 Papers)
-- Strukturierte Summaries
-- Obsidian Knowledge Graph
-- Synthese fuer weitere Forschung
+- 249 destillierte Knowledge Documents
+- Obsidian Vault (in Umsetzung)
+- Konzeptuelle Grundlage fuer Fair Bench
 
-### Ebene 2: Methodisch (Benchmark)
+### Ebene 2: Methodisch (Praxistest)
 
-**Frage:** Wie zuverlaessig ist LLM-gestuetztes Assessment im Vergleich zu Expert:innen?
+**Frage:** Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review?
 
 **Output:**
-- Benchmark-Daten (Human vs. Agent)
-- Paper fuer Forum Wissenschaft
-- Dokumentierter Workflow
+- Dualer Bewertungspfad (Human + LLM, parallel)
+- Paper fuer Forum Wissenschaft (Deadline 4. Mai 2026)
+- Dokumentierter, reproduzierbarer Workflow im Repository
 
 ---
 
@@ -97,6 +99,9 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 | Aspekt | Wert |
 |--------|------|
 | Papers gesamt | 326 (Zotero Group 6080294) |
+| Herkunft | 254 Deep Research (4 Modelle) + 50 manuell identifiziert + 22 nur in Zotero |
+| Deep Research Modelle | Gemini, Claude, ChatGPT, Perplexity |
+| DR-Verteilung | Perplexity 75, Claude 63, ChatGPT 62, Gemini 54 |
 | Fokus | Feministische AI Literacies, generative KI, Prompting, Soziale Arbeit |
 | Sprachen | Englisch, Deutsch |
 | Zeitraum | 2017-2025 |
@@ -155,4 +160,19 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen.
 
 ---
 
-*Aktualisiert: 2026-02-06*
+## Paper: Forum Wissenschaft 2/2026
+
+| Aspekt | Wert |
+|--------|------|
+| Deadline | 4. Mai 2026 |
+| Umfang | 18.000 Zeichen (inkl. Leerzeichen, inkl. Fussnoten) |
+| Fussnoten | max. 15, keine Literaturliste |
+| Titel | Deep-Research-gestuetzte Literature Reviews im Praxistest |
+| Untertitel | Epistemische Asymmetrien und Qualitaetssicherung zwischen Large Language Models und Expert:innenwissen |
+| Wissensdokument | v12 (strukturell geschaerft) |
+| Paper-Text | Entwurf liegt vor |
+| Abgleich Paper vs. Repo | `knowledge/05-paper-repo-abgleich.md` |
+
+---
+
+*Aktualisiert: 2026-02-14*
