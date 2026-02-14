@@ -51,3 +51,16 @@ conversion_metadata.json
 
 # Benchmark test data
 benchmark/data/test_*.csv
+benchmark/data/phase2_test/
+
+# Validation reports (generated artifacts)
+pipeline/validation_reports/
+pipeline/validation_reports_clean/
+
+# API call logs
+*.jsonl
+
+# Backup files
+*_old.*
+*_backup.*
+*_copy.*
