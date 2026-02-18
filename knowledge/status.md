@@ -30,13 +30,14 @@ Knowledge-Base konsolidiert (Dateien umbenannt, Redundanzen eliminiert). Paper-E
 - [x] Paper-Behauptung korrigieren ("im Repository dokumentiert" -> ehrliche Formulierung)
 - Commit: (siehe Git-Log)
 
-### M4: Korpus-Bereinigung (326 vs 305)
+### M4: Korpus-Bereinigung (326 vs 305) -- ABGESCHLOSSEN
 
-- [ ] HA-CSV mit aktuellem Zotero-Export abgleichen (DOI/Titel-Matching)
-- [ ] 6 identifizierte Duplikate markieren/entfernen
-- [ ] 30 unkategorisierte Zotero-Eintraege pruefen: Sollen sie ins HA?
-- [ ] ID-Mapping-Datei erstellen (Zotero_Key -> HA_ID)
-- Abhaengigkeit: Entscheidung ob 305 oder 326 als Benchmark-Basis
+- [x] HA-CSV mit aktuellem Zotero-Export abgleichen (292 gemeinsam, 34 nur Zotero, 13 nur HA)
+- [x] Duplikate markieren (95 gesamt: 76 Titel-basiert in Zotero + 60 in HA, Ueberlappung)
+- [x] `papers_full.csv` generiert (326 Zeilen, Has_HA-Spalte fuer Mapping)
+- [x] Generator-Script: `benchmark/scripts/generate_papers_csv.py`
+- Benchmark-Basis: 326 Papers, Schnittmenge mit HA fuer Kappa-Berechnung
+- Commit: (siehe Git-Log)
 
 ### M5: 10K LLM Assessment ausfuehren
 
