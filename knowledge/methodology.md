@@ -15,7 +15,7 @@ Die Identifikationsphase nutzt KI-gestuetzte Deep Research statt traditioneller 
 - Abweichung wird explizit dokumentiert und begruendet
 - Motivation: Erprobung einer neuen Technologie, nicht Aufwandsreduktion
 
-**Hinweis:** Die Deep-Research-Prompts wurden im Oktober 2025 aus dem Repository geloescht. Wiederherstellung aus Git-History vor Einreichung erforderlich (siehe `knowledge/05-paper-repo-abgleich.md`, Abschnitt 3.1).
+**Hinweis:** Die Deep-Research-Prompts wurden im Oktober 2025 aus dem Repository geloescht. Wiederherstellung aus Git-History vor Einreichung erforderlich (siehe `knowledge/paper-integrity.md`, Abschnitt 3.1).
 
 ---
 
@@ -217,7 +217,7 @@ Heterogene Modell-Outputs werden in RIS-Format konvertiert.
 ### KI-Output-Validierung
 
 - **Konfabulationserkennung** durch Zitat-Validierung. Terminologie: "Konfabulation" statt "Halluzination", da Halluzination eine Wahrnehmungsstoerung bei vorhandenem Bewusstsein voraussetzt, die bei LLMs nicht vorliegt. Konfabulation beschreibt den Erzeugungsmechanismus praeziser: kohaerente Narrative ohne Taeuschungsabsicht (vgl. Hatem et al. 2023, Sui et al. 2024)
-- **Sycophancy-Mitigation** durch negative Constraints in Prompts, Calibration Items und Prompt-Versionierung (Details: `knowledge/06-epistemic-infrastructure.md`)
+- **Sycophancy-Mitigation** durch negative Constraints in Prompts, Calibration Items und Prompt-Versionierung (Details: `knowledge/epistemic-framework.md`)
 - Vergleich der Outputs verschiedener Modelle
 
 ### Structured Knowledge Extraction (SKE)
@@ -232,7 +232,7 @@ Die dreistufige Verarbeitung von Volltexten zu Wissensdokumenten wechselt bewuss
 
 **Epistemische Begruendung:** Die deterministische Stufe 2 unterbricht die probabilistische Kette und stellt sicher, dass die Formatierung reproduzierbar und nicht von statistischen Schwankungen abhaengig ist. Die Verifikation in Stufe 3 nutzt die Asymmetrie zwischen Erzeugung und Pruefung: Die Pruefung bereits erzeugter Ergebnisse ist systematisch einfacher als die Erzeugung neuer korrekter Ergebnisse.
 
-**Was "verifiziert" bedeutet:** Confidence-Score = Completeness (40%) + Correctness (40%) + Category Validation (20%). Score < 75 markiert `needs_correction`. Details: `knowledge/06-epistemic-infrastructure.md`
+**Was "verifiziert" bedeutet:** Confidence-Score = Completeness (40%) + Correctness (40%) + Category Validation (20%). Score < 75 markiert `needs_correction`. Details: `knowledge/epistemic-framework.md`
 
 ---
 
@@ -285,6 +285,21 @@ Scripts in `benchmark/scripts/`:
 
 Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit Human-Assessment)
 
+### Benchmark-Pipeline (Datenfluss)
+
+```
+run_llm_assessment.py --> llm_assessment.csv
+                                                \
+                                                 --> merge_assessments.py --> merged_comparison.csv
+                                                /                                      |
+Human-Assessment (Google Sheets Export) --> human_assessment.csv            +-----------+-----------+
+                                                                           |                       |
+                                                                  calculate_agreement.py   analyze_disagreements.py
+                                                                           |                       |
+                                                                  agreement_metrics.json   disagreement_cases.csv
+                                                                  (Cohen's Kappa)          (Severity-Ranking)
+```
+
 ### V2-Ergebnisse (50 Papers Test)
 
 | Metrik | V1 | V2 | Verbesserung |
@@ -304,17 +319,22 @@ Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit H
 
 ## End-to-End-Workflow (Uebersicht)
 
-| Phase | Schritte | Status |
-|---|---|---|
-| 1. Identifikation | Deep Research (4 Modelle) + manuelle Ergaenzung, RIS-Konversion, Zotero-Import | Fertig |
-| 2. PDF-Akquise | Hierarchische Fallback-Strategie (4 Stufen), 257/326 PDFs | Fertig |
-| 3. Konversion | Docling PDF-zu-Markdown, Validierung (4-Layer), Post-Processing, Human Review (~10% Stichprobe) | Fertig |
-| 4. Knowledge Distillation | 3-Stage (LLM Extract, Deterministisch Format, LLM Verify), 249 Knowledge Docs | Fertig |
-| 5. Assessment (dual) | Human (Google Sheets, 10K) parallel zu LLM (5D fertig, 10K wartet) | In Arbeit |
-| 6. Benchmark | 10K-LLM ausfuehren, Merge, Cohen's Kappa, Disagreement-Analyse | Wartet |
-| 7. Vault | generate_vault.py, Knowledge Docs + Assessment-Daten zu Obsidian Vault | Wartet |
+Alle Pipeline-Scripts liegen in `pipeline/scripts/`, sind unabhaengige CLI-Tools (`argparse`) und kommunizieren ueber das Dateisystem. Gemeinsame Funktionen stellt `utils.py` bereit, Konfiguration laedt `config/defaults.yaml`.
 
-Detaillierte technische Dokumentation: `knowledge/04-technical.md`
+| Phase | Script / Tool | Input -> Output | Status |
+|---|---|---|---|
+| 1. Identifikation | Deep Research (4 Modelle) + manuell | -> `corpus/zotero_export.json` (326 Papers) | Fertig |
+| 2. PDF-Akquise | `acquire_pdfs.py` | `zotero_export.json` -> `pipeline/pdfs/` (257) | Fertig |
+| 3. Konversion | `convert_to_markdown.py` | `pipeline/pdfs/` -> `pipeline/markdown/` (252) | Fertig |
+| 4. Post-Processing | `postprocess_markdown.py` | `pipeline/markdown/` -> `pipeline/markdown_clean/` | Fertig |
+| 5. Human Review | `markdown_reviewer.html` | Stichprobe ~10% (25/252 geprueft) | Fertig |
+| 6. Knowledge Distillation | `distill_knowledge.py` | `pipeline/markdown/` -> `pipeline/knowledge/distilled/` (249) | Fertig |
+| 7. Qualitaetspruefung | `verify_knowledge_quality.py` | 242/249 perfekt (97.2%) | Fertig |
+| 8. Assessment (dual) | Human (Google Sheets) + LLM (5D fertig, 10K wartet) | | In Arbeit |
+| 9. Benchmark | `merge_assessments.py` + `calculate_agreement.py` | | Wartet |
+| 10. Vault | `generate_vault.py` | `pipeline/knowledge/distilled/` -> `vault/` | Wartet |
+
+Detaillierte technische Dokumentation: `knowledge/technical.md`
 
 ---
 
@@ -326,4 +346,4 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 
 ---
 
-*Aktualisiert: 2026-02-14*
+*Aktualisiert: 2026-02-18*

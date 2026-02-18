@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** Literature Review - AI Literacy & Bias in Social Work
-**Last Updated:** 2026-02-06
+**Last Updated:** 2026-02-18
 
 ---
 
@@ -24,9 +24,9 @@ Systematischer Literature Review zu **AI Literacy** und **LLM-Bias** im Kontext 
 
 When starting a new session, read these files to understand current state:
 
-1. **knowledge/03-status.md** - Current state, pending tasks
-2. **knowledge/04-technical.md** - Complete technical documentation
-3. **README.md** - Project overview
+1. **knowledge/status.md** - Current state, pending tasks
+2. **knowledge/technical.md** - Complete technical documentation
+3. **knowledge/README.md** - Documentation index
 
 ### Configuration Files (Don't Modify Unless Asked)
 
@@ -185,7 +185,7 @@ When starting a new session, read these files to understand current state:
 
 **When updating docs:**
 - Update "Last Modified" date
-- Increment version number if major changes
+- Use date format `*Aktualisiert: YYYY-MM-DD*` for footers
 - Add clear section headers
 - Use tables for comparisons
 
@@ -195,7 +195,7 @@ When starting a new session, read these files to understand current state:
 
 1. **LLM-based PRISMA assessment** - Fully automated, 100% success rate
 2. **5-dimensional relevance scoring** - Parametric, adaptable to other projects
-3. **Hierarchical PDF acquisition** - 8 fallback strategies
+3. **Hierarchical PDF acquisition** - 4 fallback strategies
 4. **Human-LLM Benchmark** - Cohen's Kappa comparison
 
 ---
@@ -204,7 +204,7 @@ When starting a new session, read these files to understand current state:
 
 ### First Actions in New Session
 
-1. Read `knowledge/03-status.md`
+1. Read `knowledge/status.md`
 2. Check git status: `git status`
 3. Read recent commits: `git log -3`
 4. Create todo list if multi-step task

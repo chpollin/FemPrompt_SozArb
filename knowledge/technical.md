@@ -176,7 +176,7 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 | `benchmark/results/` | Ergebnisse | (leer, wartet auf Benchmark-Ausfuehrung) |
 | `corpus/` | Korpus-Metadaten | zotero_export.json, papers_metadata.csv, source_tool_mapping.json, extract_metadata.py |
 | `deep-research/restored/` | Deep-Research-Artefakte | 4 RIS-Dateien, 3 Raw-Outputs, ris-template.md |
-| `knowledge/` | Dokumentation | Markdown-Dateien (01-05 + Guides + Paper) |
+| `knowledge/` | Dokumentation | project, methodology, status, technical, paper-integrity, epistemic-framework + Guides + Paper |
 | `vault/` | Obsidian Vault | Skelett: README.md + 5 MOC-Templates (nicht befuellt) |
 
 ---
@@ -378,9 +378,9 @@ Im bisherigen Durchlauf lieferte Deep Research ueberpruefbare Quellen. Dokumenti
 
 | Datei | Fehler | Korrektur | Datum |
 |---|---|---|---|
-| CLAUDE.md | "8 fallback strategies" | Tatsaechlich 4 (Zotero, DOI, Unpaywall, ArXiv) | 2026-02-14 |
+| CLAUDE.md | "8 fallback strategies" | Korrigiert auf 4 (Zotero, DOI, Unpaywall, ArXiv) | 2026-02-18 |
 | 03-status.md (alt) | "303 (254 DeepResearch + 49 Human 1 Collection)" | Tatsaechlich 305 in CSV (254 DR + 50 Manual + 1 leer) | 2026-02-14 |
 
 ---
 
-*Aktualisiert: 2026-02-14*
+*Aktualisiert: 2026-02-18*

@@ -1,8 +1,8 @@
-# Status (2026-02-14)
+# Status (2026-02-18)
 
 ## Aktueller Fokus: Paper finalisieren + Benchmark vorbereiten
 
-Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Forum Wissenschaft) liegt vor, Abgleich Paper vs. Repository durchgefuehrt (siehe `knowledge/05-paper-repo-abgleich.md`). Benchmark blockiert durch Human-Assessment.
+Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Forum Wissenschaft) liegt vor, Abgleich Paper vs. Repository durchgefuehrt (siehe `knowledge/paper-integrity.md`). Benchmark blockiert durch Human-Assessment.
 
 ---
 
@@ -119,7 +119,7 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 | Fokus | Deep-Research-gestuetzter Literature Review im Praxistest |
 | Wissensdokument | v12 (strukturell geschaerft) |
 | Paper-Text | Entwurf liegt vor (5 Abschnitte + Vorspann) |
-| Abgleich Paper vs. Repo | `knowledge/05-paper-repo-abgleich.md` |
+| Abgleich Paper vs. Repo | `knowledge/paper-integrity.md` |
 | Arbeitsplan | `knowledge/paper/Forum Wissenschaft Paper - Arbeitsplan.md` |
 
 ### Offene Korrekturen am Paper-Text (vor Einreichung)
@@ -143,7 +143,8 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 - [x] Knowledge-Doc Verifikation (97.2% perfekt)
 - [x] Repository-Bereinigung (analysis/, pipeline/summaries/, Redundanzen)
 - [x] Paper-Entwurf schreiben (Wissensdokument v12 + Text)
-- [x] Abgleich Paper vs. Repository (05-paper-repo-abgleich.md)
+- [x] Abgleich Paper vs. Repository (paper-integrity.md)
+- [x] Knowledge-Base konsolidieren (Dateien umbenannt, Redundanzen eliminiert)
 - [ ] Deep-Research-Prompts aus Git-History wiederherstellen (Paper-Korrektur)
 - [ ] Human-Assessment im Google Spreadsheet abschliessen (Blocker)
 - [ ] Benchmark-LLM-Assessment (10K) ausfuehren
@@ -164,4 +165,4 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 
 ---
 
-*Aktualisiert: 2026-02-14*
+*Aktualisiert: 2026-02-18*

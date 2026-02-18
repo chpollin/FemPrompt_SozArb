@@ -93,9 +93,9 @@ Fuer ~200 Include-Papers:
 
 ## Naechste Schritte
 
-1. **Mehr lernen:** [04-technical.md](../04-technical.md)
-2. **Status pruefen:** [03-status.md](../03-status.md)
-3. **Forschungskontext:** [01-project.md](../01-project.md)
+1. **Mehr lernen:** [technical.md](../technical.md)
+2. **Status pruefen:** [status.md](../status.md)
+3. **Forschungskontext:** [project.md](../project.md)
 
 ---
 

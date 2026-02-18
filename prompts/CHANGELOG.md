@@ -1,6 +1,6 @@
 # Prompt-Changelog
 
-Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment eingesetzt werden. Teil der epistemischen Infrastruktur (siehe `knowledge/06-epistemic-infrastructure.md`).
+Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment eingesetzt werden. Teil der epistemischen Infrastruktur (siehe `knowledge/epistemic-framework.md`).
 
 ---
 
@@ -20,7 +20,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 **Status:** Im Oktober 2025 aus dem Repository geloescht. Wiederherstellung aus Git-History vor Paper-Einreichung erforderlich.
 
-**Bekannte Struktur (aus `knowledge/02-methodology.md`):**
+**Bekannte Struktur (aus `knowledge/methodology.md`):**
 1. Rolle: Literature Review Spezialist fuer feministische KI-Forschung
 2. Aufgabe: Annotierte Bibliographie mit strukturierten Metadaten
 3. Kontext: Forschungsziele, zeitlicher Scope, geografischer Fokus

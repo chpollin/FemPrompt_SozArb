@@ -149,13 +149,13 @@ Epistemische Infrastruktur bezeichnet die Gesamtheit derjenigen Verfahren, Dokum
 | Ebene | Beschreibung | Projekt-Umsetzung |
 |-------|--------------|-------------------|
 | Workflow | Dualer Bewertungspfad, deterministische Verarbeitungsstufen | 3-Stage SKE, paralleles Assessment |
-| Research Integrity | Dokumentation, nachvollziehbare Designentscheidungen | Repository, Prompt-Changelog, PAPER_VS_REPO.md |
+| Research Integrity | Dokumentation, nachvollziehbare Designentscheidungen | Repository, Prompt-Changelog, paper-integrity.md |
 | Institutionell | KI-Richtlinien | Noch nicht vorhanden |
 | Community | Peer-Review-Praktiken, die Workflows einschliessen | Paper-Forderung |
 
 **Arbeitsformel:** "Nicht das Modell wird verlaesslich, sondern der Forschungsprozess wird auditierbar: Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzung zu nachvollziehbarer, verantwortbarer Wissensproduktion."
 
-Detaillierte Operationalisierung: `knowledge/05-epistemic-infrastructure.md`
+Detaillierte Operationalisierung: `knowledge/epistemic-framework.md`
 
 ### Kuenstliche epistemische Autoritaeten (Hauswald 2025)
 
@@ -182,7 +182,7 @@ Empirisch belegte Tendenz von LLMs, den Vorannahmen eines Prompts uebermaeessig 
 
 **Relevanz fuer das Projekt:** Wenn der Assessment-Prompt Kategorien wie "feministisch" oder "intersektional" betont, koennte das Modell diese Kategorien grosszuegiger zuweisen. Qualitaet des LLM-Beitrags haengt damit nicht nur von der Modell-Kompetenz ab, sondern auch von der Prompt-Gestaltung.
 
-**Massnahmen im Projekt:** Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung (siehe `prompts/CHANGELOG.md`, `knowledge/05-epistemic-infrastructure.md`)
+**Massnahmen im Projekt:** Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung (siehe `prompts/CHANGELOG.md`, `knowledge/epistemic-framework.md`)
 
 ### Situiertes Wissen (Haraway)
 
@@ -237,7 +237,7 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 | Untertitel | Workflow-Design zwischen Large Language Models und Expert:innenwissen |
 | Wissensdokument | v12 (strukturell geschaerft) |
 | Paper-Text | Entwurf liegt vor |
-| Abgleich Paper vs. Repo | `knowledge/05-paper-repo-abgleich.md` |
+| Abgleich Paper vs. Repo | `knowledge/paper-integrity.md` |
 
 ---
 
@@ -258,4 +258,4 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 
 ---
 
-*Aktualisiert: 2026-02-14*
+*Aktualisiert: 2026-02-18*

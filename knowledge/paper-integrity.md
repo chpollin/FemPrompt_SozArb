@@ -1,6 +1,6 @@
 # Abgleich: Paper-Text vs. Repository
 
-Systematischer Abgleich zwischen dem fertigen Paper-Text (Forum Wissenschaft, basierend auf Wissensdokument v12) und dem tatsaechlichen Stand im Repository. Synthetisiert aus drei Pruefungen: v8-Abgleich (PAPER_VS_REPO.md), v12-Abgleich und Satz-fuer-Satz-Pruefung des fertigen Texts.
+Systematischer Abgleich zwischen dem fertigen Paper-Text (Forum Wissenschaft, basierend auf Wissensdokument v12) und dem tatsaechlichen Stand im Repository. Synthetisiert aus drei Pruefungen: v8-Abgleich, v12-Abgleich und Satz-fuer-Satz-Pruefung des fertigen Texts. Der fruehere v8-Abgleich (ehemals `PAPER_VS_REPO.md` im Root) ist vollstaendig in dieses Dokument integriert.
 
 **Grundprinzip:** Das Repository ist Ground Truth. Wo Paper und Repo sich widersprechen, muss das Paper angepasst werden.
 
@@ -55,7 +55,7 @@ Jede inhaltliche Aussage im Paper-Text wurde gegen Code, Daten und Dokumentation
 | 326 Papers im Korpus | `corpus/zotero_export.json`: 326 Eintraege | BELEGT |
 | 257 PDFs heruntergeladen | `pipeline/pdfs/`: 257 Dateien | BELEGT |
 | 252 Markdown-Dateien | `pipeline/markdown/`: 252 Dateien | BELEGT |
-| 5 fehlgeschlagene PDF-Konvertierungen | `knowledge/03-status.md` dokumentiert | BELEGT |
+| 5 fehlgeschlagene PDF-Konvertierungen | `knowledge/status.md` dokumentiert | BELEGT |
 | 249 Knowledge Documents | `pipeline/knowledge/distilled/`: 249 Dateien | BELEGT |
 | 97.2% Verifikationsqualitaet (242/249 perfekt) | 219+ Verifikations-JSONs in `pipeline/knowledge/_verification/` | BELEGT |
 | "Kritische Konfabulationsfaelle traten im bisherigen Durchlauf nicht auf" (Knowledge Distillation) | Verifikationsberichte zeigen keine Konfabulationsfaelle; 7 Probleme sind PDF-Upstream | BELEGT |
@@ -98,7 +98,7 @@ Diese Probleme wurden im fertigen Paper-Text gegenueber frueheren Versionen beho
 
 **Paper sagt:** "Ein eigens gebautes Browser-Tool ermoeglicht die visuelle Ueberpruefung jeder Konversion."
 
-**Repo zeigt:** Das Tool existiert und funktioniert. Aber laut `knowledge/04-technical.md` wurden nur 25/252 (~10%) der Konversionen tatsaechlich geprueft (PASS 20, WARN 4, FAIL 1). "Jeder Konversion" suggeriert vollstaendige Abdeckung.
+**Repo zeigt:** Das Tool existiert und funktioniert. Aber laut `knowledge/technical.md` wurden nur 25/252 (~10%) der Konversionen tatsaechlich geprueft (PASS 20, WARN 4, FAIL 1). "Jeder Konversion" suggeriert vollstaendige Abdeckung.
 
 **Handlungsbedarf:** Formulierung praezisieren. Vorschlag: "ermoeglicht die visuelle Ueberpruefung der Konversionen" (ohne "jeder") oder "eine Stichprobe von rund zehn Prozent wurde visuell geprueft".
 
@@ -274,4 +274,4 @@ Der duale Bewertungspfad als methodisches Kernstueck ist konzeptuell solide, abe
 
 ---
 
-*Aktualisiert: 2026-02-14*
+*Aktualisiert: 2026-02-18*

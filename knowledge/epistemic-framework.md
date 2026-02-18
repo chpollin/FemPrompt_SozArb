@@ -168,4 +168,4 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 ---
 
-*Aktualisiert: 2026-02-14*
+*Aktualisiert: 2026-02-18*
