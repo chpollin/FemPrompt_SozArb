@@ -10,7 +10,7 @@ function initializeBenchmark() {
     const ok = [], fail = [];
     const run = (label, fn) => { try { fn(); ok.push(label); } catch(e) { fail.push(label); console.error(`[Benchmark] ${label}:`, e); } };
     run('metrics', renderBenchmarkMetrics);
-    run('radar', renderPerspectiveRadar);
+    run('slope', renderSlopeChart);
     run('overlap', renderOverlapTreemap);
     run('kappa-chart', renderKappaChart);
     run('disagreements', renderDisagreementsTable);
@@ -61,63 +61,77 @@ function renderBenchmarkMetrics() {
     `;
 }
 
-// ---- Perspektiv-Fingerabdruck: Radar-Chart ----
+// ---- Kategorie-Divergenz: Slope Chart (ersetzt Radar) ----
+// human_yes_rate and agent_yes_rate are 0-100 scale (e.g. 32.7 means 32.7%)
 
 let radarChartInstance = null;
 
-function renderPerspectiveRadar() {
+function renderSlopeChart() {
     const canvas = document.getElementById('radar-chart');
     if (!canvas) return;
 
     const CATS = Object.keys(kappas);
-    const humanRates = CATS.map(cat => Math.round(kappas[cat].human_yes_rate * 100));
-    const agentRates = CATS.map(cat => Math.round(kappas[cat].agent_yes_rate * 100));
-    const labels = CATS.map(c => c.replace(/_/g, ' '));
+
+    const datasets = CATS.map(cat => {
+        const d = kappas[cat];
+        const diff = d.agent_yes_rate - d.human_yes_rate;  // in Prozentpunkten
+        const color = Math.abs(diff) < 5 ? '#94a3b8'
+                    : diff > 0 ? '#3b82f6'    // LLM sieht mehr: blau
+                    : '#f97316';              // Human sieht mehr: orange
+        return {
+            label: cat.replace(/_/g, ' '),
+            data: [d.human_yes_rate, d.agent_yes_rate],  // beide 0-100
+            borderColor: color,
+            backgroundColor: 'transparent',
+            borderWidth: Math.abs(diff) > 20 ? 2.5 : 1.5,
+            pointRadius: 4,
+            pointBackgroundColor: color,
+            tension: 0
+        };
+    });
 
     if (radarChartInstance) { radarChartInstance.destroy(); radarChartInstance = null; }
 
     radarChartInstance = new Chart(canvas, {
-        type: 'radar',
-        data: {
-            labels,
-            datasets: [
-                {
-                    label: 'Human-Perspektive',
-                    data: humanRates,
-                    borderColor: '#059669',
-                    backgroundColor: 'rgba(5,150,105,0.12)',
-                    borderWidth: 2,
-                    pointRadius: 3,
-                    pointBackgroundColor: '#059669'
-                },
-                {
-                    label: 'LLM-Perspektive',
-                    data: agentRates,
-                    borderColor: '#3b82f6',
-                    backgroundColor: 'rgba(59,130,246,0.10)',
-                    borderWidth: 2,
-                    pointRadius: 3,
-                    pointBackgroundColor: '#3b82f6'
-                }
-            ]
-        },
+        type: 'line',
+        data: { labels: ['Human', 'LLM'], datasets },
         options: {
-            responsive: true,
-            maintainAspectRatio: false,
+            responsive: true, maintainAspectRatio: false,
             plugins: {
-                legend: { position: 'bottom', labels: { font: { size: 11 } } },
+                legend: { display: false },
                 tooltip: { callbacks: {
-                    label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.r}%`
+                    label: (ctx) => {
+                        const cat = CATS[ctx.datasetIndex];
+                        const d = kappas[cat];
+                        const diff = (d.agent_yes_rate - d.human_yes_rate).toFixed(1);
+                        return `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}% (${diff > 0 ? '+' : ''}${diff}pp)`;
+                    }
                 }}
             },
             scales: {
-                r: {
-                    beginAtZero: true, max: 100,
-                    ticks: { stepSize: 25, callback: v => v + '%', font: { size: 9 } },
-                    pointLabels: { font: { size: 10 } }
-                }
+                x: { grid: { display: false } },
+                y: { beginAtZero: false, min: 0, max: 100,
+                     ticks: { callback: v => v + '%' },
+                     title: { display: true, text: 'Anteil Ja-Klassifikationen (%)' } }
             }
-        }
+        },
+        plugins: [{
+            id: 'slope-labels',
+            afterDatasetsDraw(chart) {
+                const { ctx } = chart;
+                ctx.save();
+                ctx.font = '9px Inter, sans-serif';
+                chart.data.datasets.forEach((ds, i) => {
+                    const meta = chart.getDatasetMeta(i);
+                    if (!meta.data.length) return;
+                    const last = meta.data[meta.data.length - 1];
+                    ctx.fillStyle = ds.borderColor;
+                    ctx.textAlign = 'left';
+                    ctx.fillText(ds.label, last.x + 4, last.y + 3);
+                });
+                ctx.restore();
+            }
+        }]
     });
 }
 
@@ -180,12 +194,13 @@ function renderKappaChart() {
     const container = document.getElementById('kappa-chart-container');
     if (!container) return;
 
+    // human_yes_rate and agent_yes_rate are 0-100 scale (e.g. 32.7 means 32.7%)
     const kappaData = Object.entries(kappas).map(([cat, data]) => ({
         category: cat.replace(/_/g, ' '),
         kappa: data.kappa,
         agreement: data.agreement_pct,
-        humanRate: Math.round(data.human_yes_rate * 100),
-        agentRate: Math.round(data.agent_yes_rate * 100),
+        humanRate: Math.round(data.human_yes_rate),
+        agentRate: Math.round(data.agent_yes_rate),
         n: data.n
     })).sort((a, b) => a.kappa - b.kappa);
 

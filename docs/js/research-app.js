@@ -542,9 +542,10 @@ function renderDivergenceScatter() {
         diff: d.agent_yes_rate - d.human_yes_rate
     }));
 
+    // human_yes_rate and agent_yes_rate are 0-100 (e.g. 32.7 means 32.7%)
     const colors = catData.map(d => {
         const absDiff = Math.abs(d.diff);
-        if (absDiff < 0.05) return '#94a3b8';   // grau: nah an Konsens
+        if (absDiff < 5) return '#94a3b8';   // grau: nah an Konsens (< 5pp)
         return d.diff > 0 ? '#3b82f6' : '#f97316'; // blau: LLM mehr / orange: Human mehr
     });
 
@@ -565,35 +566,35 @@ function renderDivergenceScatter() {
                 tooltip: { callbacks: {
                     label: (ctx) => {
                         const d = catData[ctx.dataIndex];
-                        const diff = ((d.diff) * 100).toFixed(1);
+                        const diff = d.diff.toFixed(1);
                         return [
                             d.label,
-                            `Human: ${(d.x * 100).toFixed(1)}%`,
-                            `LLM: ${(d.y * 100).toFixed(1)}%`,
+                            `Human: ${d.x.toFixed(1)}%`,
+                            `LLM: ${d.y.toFixed(1)}%`,
                             `Diff: ${diff > 0 ? '+' : ''}${diff}pp`
                         ];
                     }
                 }}
             },
             scales: {
-                x: { min: 0, max: 1, title: { display: true, text: 'Human Ja-Rate' },
-                     ticks: { callback: v => Math.round(v * 100) + '%' } },
-                y: { min: 0, max: 1, title: { display: true, text: 'LLM Ja-Rate' },
-                     ticks: { callback: v => Math.round(v * 100) + '%' } }
+                x: { min: 0, max: 100, title: { display: true, text: 'Human Ja-Rate' },
+                     ticks: { callback: v => v + '%' } },
+                y: { min: 0, max: 100, title: { display: true, text: 'LLM Ja-Rate' },
+                     ticks: { callback: v => v + '%' } }
             }
         },
         plugins: [{
             id: 'divergence-annotations',
             afterDraw(chart) {
                 const { ctx, scales } = chart;
-                // Diagonale y=x (Konsens-Linie)
+                // Diagonale y=x (Konsens-Linie), von (0,0) bis (100,100)
                 ctx.save();
                 ctx.setLineDash([5, 4]);
                 ctx.strokeStyle = '#cbd5e1';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(scales.x.getPixelForValue(0), scales.y.getPixelForValue(0));
-                ctx.lineTo(scales.x.getPixelForValue(1), scales.y.getPixelForValue(1));
+                ctx.lineTo(scales.x.getPixelForValue(100), scales.y.getPixelForValue(100));
                 ctx.stroke();
                 ctx.restore();
                 // Kategorie-Labels direkt am Punkt
