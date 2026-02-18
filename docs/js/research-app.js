@@ -21,8 +21,6 @@ let dashboardInitialized = false;
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('Initializing Research Vault App v2.0...');
-
     try {
         updateLoadingMessage('Loading data... (1/3)');
         await loadData();
@@ -36,12 +34,30 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderCategoryChips();
         renderPapers();
 
-        console.log('App initialized successfully!');
+        _logInit();
     } catch (error) {
-        console.error('Failed to initialize app:', error);
+        console.error('[Vault] init failed:', error);
         showError('Failed to load research vault data: ' + error.message);
     }
 });
+
+function _logInit() {
+    const withHuman = allPapers.filter(p => p.benchmark.has_human).length;
+    const agreements = allPapers.filter(p => p.benchmark.agreement === true).length;
+    const disagreements = allPapers.filter(p => p.benchmark.agreement === false).length;
+    const llmInclude = allPapers.filter(p => p.llm.decision === 'Include').length;
+    const cm = vaultMeta.confusion_matrix || {};
+    const kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
+
+    console.groupCollapsed(`[Vault] ${allPapers.length} papers | κ=${kappa} | graph: ${graphData.nodes?.length}N ${graphData.edges?.length}E`);
+    console.log(`Corpus    : ${allPapers.length} total | LLM Include ${llmInclude} (${vaultMeta.llm_include_rate}%) | Human ${withHuman} assessed`);
+    console.log(`Benchmark : agree=${agreements} disagree=${disagreements} | Human Include ${vaultMeta.human_include_rate}%`);
+    console.log(`Confusion : II=${cm.Include_Include} IE=${cm.Include_Exclude} EI=${cm.Exclude_Include} EE=${cm.Exclude_Exclude}`);
+    const bestCat = Object.entries(kappas).sort((a,b) => b[1].kappa - a[1].kappa)[0];
+    const worstCat = Object.entries(kappas).sort((a,b) => a[1].kappa - b[1].kappa)[0];
+    if (bestCat) console.log(`Kappa     : best=${bestCat[0]}(${bestCat[1].kappa}) worst=${worstCat[0]}(${worstCat[1].kappa})`);
+    console.groupEnd();
+}
 
 function updateLoadingMessage(message) {
     document.querySelectorAll('.loading p').forEach(el => el.textContent = message);
@@ -56,12 +72,10 @@ async function loadData() {
     vaultMeta = vaultData.meta;
     kappas = vaultData.kappa_by_category;
     filteredPapers = [...allPapers];
-    console.log(`Loaded ${allPapers.length} papers`);
 
     const graphRes = await fetch('data/graph_data.json');
     if (!graphRes.ok) throw new Error('Failed to load graph_data.json');
     graphData = await graphRes.json();
-    console.log(`Loaded graph: ${graphData.nodes.length} nodes, ${graphData.edges.length} edges`);
 
     fuse = new Fuse(allPapers, {
         keys: ['title', 'author_year', 'abstract'],
@@ -115,6 +129,12 @@ function switchTab(tabName) {
     if (tabName === 'graph' && !network) {
         setTimeout(initializeGraph, 100);
     }
+
+    const flags = [];
+    if (tabName === 'benchmark') flags.push(benchmarkInitialized ? 'cached' : 'init');
+    if (tabName === 'dashboard') flags.push(dashboardInitialized ? 'cached' : 'init');
+    if (tabName === 'graph') flags.push(network ? 'cached' : 'init');
+    console.log(`[Tab] ${tabName}${flags.length ? ' (' + flags[0] + ')' : ''}`);
 }
 
 // Stats bar
@@ -231,6 +251,17 @@ function applyFilters() {
     }
 
     renderPapers(filtered);
+
+    // Compact filter state log (only when non-default)
+    const chips = activeCategories.size > 0 ? `+[${[...activeCategories].join(',')}]` : '';
+    const q = document.getElementById('search-box')?.value.trim();
+    const parts = [];
+    if (decision !== 'all') parts.push(`dec=${decision}`);
+    if (humanStatus !== 'all') parts.push(`human=${humanStatus}`);
+    if (year !== 'all') parts.push(`year=${year}`);
+    if (chips) parts.push(chips);
+    if (q) parts.push(`q="${q}"`);
+    console.log(`[Filter] ${filtered.length}/${allPapers.length}${parts.length ? ' | ' + parts.join(' ') : ''}`);
 }
 
 // Render papers
@@ -587,7 +618,7 @@ function initializeGraph() {
     };
 
     network = new vis.Network(container, graphData, options);
-    console.log('Category graph initialized');
+    console.log(`[Graph] ${graphData.nodes?.length}N ${graphData.edges?.length}E | nodes colored by kappa`);
 }
 
 // Export

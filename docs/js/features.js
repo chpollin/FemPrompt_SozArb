@@ -6,11 +6,16 @@
 // =============================================
 
 function initializeBenchmark() {
-    if (!vaultMeta || !kappas) { console.warn('initializeBenchmark: no data'); return; }
-    try { renderBenchmarkMetrics(); } catch(e) { console.error('renderBenchmarkMetrics:', e); }
-    try { renderKappaChart(); } catch(e) { console.error('renderKappaChart:', e); }
-    try { renderConfusionMatrix(); } catch(e) { console.error('renderConfusionMatrix:', e); }
-    try { renderDisagreementsTable(); } catch(e) { console.error('renderDisagreementsTable:', e); }
+    if (!vaultMeta || !kappas) { console.warn('[Benchmark] no data -- skipping'); return; }
+    const ok = [], fail = [];
+    const run = (label, fn) => { try { fn(); ok.push(label); } catch(e) { fail.push(label); console.error(`[Benchmark] ${label}:`, e); } };
+    run('metrics', renderBenchmarkMetrics);
+    run('kappa-chart', renderKappaChart);
+    run('confusion', renderConfusionMatrix);
+    run('disagreements', renderDisagreementsTable);
+    const cm = vaultMeta.confusion_matrix || {};
+    const dis = allPapers.filter(p => p.benchmark.has_human && p.benchmark.agreement === false).length;
+    console.log(`[Benchmark] ok=[${ok.join(',')}]${fail.length ? ' FAIL=['+fail.join(',')+']' : ''} | κ=${(vaultMeta.kappa_overall||0).toFixed(3)} dis=${dis} II=${cm.Include_Include} EI=${cm.Exclude_Include}`);
 
     // Severity filter
     const sev = document.getElementById('filter-severity');
