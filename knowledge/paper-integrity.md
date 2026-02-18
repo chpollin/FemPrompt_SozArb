@@ -84,13 +84,13 @@ Diese Probleme wurden im fertigen Paper-Text gegenueber frueheren Versionen beho
 
 ## 3. Abweichungen (Paper muss korrigiert werden)
 
-### 3.1 Deep-Research-Prompts -- FALSCHE BEHAUPTUNG
+### 3.1 Deep-Research-Prompts -- KORRIGIERT
 
-**Paper sagt:** "Die Anweisungen sind im Repository dokumentiert."
+**Paper sagt (aktualisiert):** "Die Prompt-Templates sind im Repository dokumentiert."
 
-**Repo zeigt:** Die Deep-Research-Prompts existieren NICHT im Repository. Die Prompt-Templates wurden im Oktober 2025 geloescht (v8-Analyse). In `deep-research/restored/` liegen nur RIS-Dateien und Raw-Outputs, aber keine Prompts. `deep-research/restored/ris-template.md` ist ein RIS-Struktur-Template, kein Deep-Research-Prompt.
+**Repo zeigt:** Das parametrische Prompt-Template wurde aus der Git-History (Commit `0a98f49`, `knowledge/Operativ.md`) restauriert und liegt in `prompts/deep-research-template.md`. Es enthaelt die 5-Komponenten-Struktur (Rolle, Aufgabe, Kontext, Analyseschritte, Output-Format), den RIS-Konvertierungs-Prompt und den Dokumenten-Zusammenfassungs-Prompt. Die meisten Placeholder-Werte wurden rekonstruiert (mit Quellenangabe und Sicherheits-Bewertung). Genuinely verloren sind: der exakt instanziierte Prompt-Text, einige Placeholder-Werte (Autorenliste, Region, spezifische Kompetenzen) und der OpenAI-Raw-Output.
 
-**Handlungsbedarf:** Entweder Prompts aus Git-History wiederherstellen und committen, oder die Formulierung im Paper aendern (z.B. "Die Anweisungen werden vor Einreichung im Repository dokumentiert" oder "auf Anfrage verfuegbar").
+**Status:** Paper-Text (Fussnoten [^7] und [^13]) und `prompts/CHANGELOG.md` wurden aktualisiert. Die Formulierung ist jetzt ehrlich: "Template dokumentiert, instanziierter Prompt rekonstruiert".
 
 ---
 

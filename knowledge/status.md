@@ -23,12 +23,12 @@ Knowledge-Base konsolidiert (Dateien umbenannt, Redundanzen eliminiert). Paper-E
 - [x] 7 Abschnitte, 13 Fussnoten, Platzhalter fuer Ergebnisse
 - Commit: `d7d4557`
 
-### M3: Deep-Research-Prompts restaurieren
+### M3: Deep-Research-Prompts restaurieren -- ABGESCHLOSSEN
 
-- [ ] Prompt-Template aus Git-History (`knowledge/Operativ.md`) in `prompts/deep-research-template.md` wiederherstellen
-- [ ] Rekonstruierte Parametrisierung dokumentieren (was bekannt, was verloren)
-- [ ] Paper-Behauptung korrigieren ("im Repository dokumentiert" -> ehrliche Formulierung)
-- Abhaengigkeit: Keine
+- [x] Prompt-Template aus Git-History (`knowledge/Operativ.md`) in `prompts/deep-research-template.md` wiederherstellen
+- [x] Rekonstruierte Parametrisierung dokumentieren (was bekannt, was verloren)
+- [x] Paper-Behauptung korrigieren ("im Repository dokumentiert" -> ehrliche Formulierung)
+- Commit: (siehe Git-Log)
 
 ### M4: Korpus-Bereinigung (326 vs 305)
 

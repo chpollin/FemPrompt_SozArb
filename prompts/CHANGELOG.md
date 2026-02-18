@@ -8,7 +8,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 | Prompt | Datei | Zeilen | Version | Status |
 |--------|-------|--------|---------|--------|
-| Deep-Research-Prompt | (geloescht Okt 2025) | -- | unbekannt | Verloren, Wiederherstellung aus Git-History noetig |
+| Deep-Research-Prompt | `prompts/deep-research-template.md` | -- | v1.0 (restauriert) | Template wiederhergestellt, instanziierter Prompt rekonstruiert |
 | SKE Stage 1: Extract & Classify | `pipeline/scripts/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |
 | SKE Stage 3: Verify | `pipeline/scripts/distill_knowledge.py` | 223-282 | v1.0 | Aktiv, 249 Docs verifiziert |
 | 5D Assessment | `assessment-llm/prompt_template.md` | 1-124 | v1.0 | Aktiv, 325/325 bewertet |
@@ -16,11 +16,13 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 ---
 
-## Deep-Research-Prompt (verloren)
+## Deep-Research-Prompt (restauriert)
 
-**Status:** Im Oktober 2025 aus dem Repository geloescht. Wiederherstellung aus Git-History vor Paper-Einreichung erforderlich.
+**Status:** Template aus Git-History wiederhergestellt (`knowledge/Operativ.md`, Commit `0a98f49`). Instanziierter Prompt mit realen Parameterwerten rekonstruiert, soweit moeglich. Exakter Wortlaut des ausgefuehrten Prompts war nie committed.
 
-**Bekannte Struktur (aus `knowledge/methodology.md`):**
+**Datei:** `prompts/deep-research-template.md`
+
+**Struktur (5-Komponenten):**
 1. Rolle: Literature Review Spezialist fuer feministische KI-Forschung
 2. Aufgabe: Annotierte Bibliographie mit strukturierten Metadaten
 3. Kontext: Forschungsziele, zeitlicher Scope, geografischer Fokus
@@ -28,6 +30,8 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 5. Output-Format: APA 7, 150-200 Woerter Summary, Relevanz-Score
 
 **Ausfuehrung:** Manuelles Copy-Paste in 4 Deep Research Interfaces (Gemini, Claude, ChatGPT, Perplexity). Identischer Prompt fuer alle 4 Modelle.
+
+**Genuinely verloren:** Exakter instanziierter Prompt-Text, Autorenliste, spezifische Kompetenzen, Region, OpenAI Raw-Output (nur binaere PDF).
 
 ---
 
@@ -136,6 +140,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 | Datum | Prompt | Von | Zu | Begruendung |
 |-------|--------|-----|-----|-------------|
 | Okt 2025 | Deep-Research | vorhanden | geloescht | Unklar (versehentlich?) |
+| Feb 2026 | Deep-Research | geloescht | restauriert | Template aus Git-History, Parametrisierung rekonstruiert |
 | Nov 2025 | 5D Assessment | -- | v1.0 | Erstversion, 325/325 bewertet |
 | Jan 2026 | SKE Stage 1 + 3 | -- | v1.0 | Erstversion, 249 Docs produziert |
 | Feb 2026 | 10K Assessment | v1.0 | v2.0 | Konsistenzregel, Beispiele hinzugefuegt |
@@ -143,4 +148,4 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 ---
 
-*Aktualisiert: 2026-02-14*
+*Aktualisiert: 2026-02-18*

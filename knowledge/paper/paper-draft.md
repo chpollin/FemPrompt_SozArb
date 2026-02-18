@@ -124,7 +124,7 @@ Die empirische Datenlage zur LLM-Nutzung in der Sozialen Arbeit ist duenn. Welch
 
 ## 7. Fazit (~1.000 Zeichen)
 
-Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzung zu nachvollziehbarer, verantwortbarer Wissensproduktion. Die hier vorgestellte Infrastruktur -- duale Bewertungspfade, deterministische Verarbeitungsstufen, Prompt-Governance, Divergenz-Dokumentation -- zeigt einen gangbaren Weg, der die Leistungsfaehigkeit von Frontier-LLMs nutzt, ohne die epistemischen Standards wissenschaftlicher Forschung aufzugeben. Der vollstaendige Workflow, alle Prompts und alle Daten sind oeffentlich zugaenglich.[^13]
+Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzung zu nachvollziehbarer, verantwortbarer Wissensproduktion. Die hier vorgestellte Infrastruktur -- duale Bewertungspfade, deterministische Verarbeitungsstufen, Prompt-Governance, Divergenz-Dokumentation -- zeigt einen gangbaren Weg, der die Leistungsfaehigkeit von Frontier-LLMs nutzt, ohne die epistemischen Standards wissenschaftlicher Forschung aufzugeben. Der vollstaendige Workflow, die Prompt-Templates und alle Daten sind oeffentlich zugaenglich.[^13]
 
 ---
 
@@ -136,13 +136,13 @@ Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzu
 [^4]: Shanahan, M. (2024). Talking About Large Language Models. Minds and Machines, 34(1), Art. 3.
 [^5]: Malmqvist, L. (2024). Sycophancy in Large Language Models: Causes and Mitigations. arXiv:2411.15287v1.
 [^6]: Hauswald, R. (2025). Kuenstliche epistemische Autoritaeten.
-[^7]: Pipeline-Code und Zwischenergebnisse: github.com/chpollin/FemPrompt_SozArb/pipeline/
+[^7]: Pipeline-Code, Prompt-Templates (restauriert aus Git-History) und Zwischenergebnisse: github.com/chpollin/FemPrompt_SozArb. Der exakt instanziierte Deep-Research-Prompt wurde nicht persistent gespeichert; das parametrische Template und eine Rekonstruktion der Parametrisierung sind dokumentiert.
 [^8]: Wiggins, B. & Bunin, S. (2023). Der Begriff der Konfabulation beschreibt den Erzeugungsmechanismus praeziser; vgl. Sui et al. (2024) zur erhoehten Narrativitaet konfabulierter LLM-Outputs.
 [^9]: Overlap-Analyse auf Basis von 34 Papers der ersten Deep-Research-Runde. Vollstaendige Daten: github.com/chpollin/FemPrompt_SozArb/corpus/
 [^10]: Woelfle, T., et al. (2024). Benchmarking Human-AI collaboration for common evidence appraisal tools. J Clin Epidemiol, 175, 111533.
 [^11]: Hanegraaf, G., et al. (2024). Inter-reviewer reliability of human literature reviewing. BMJ Open, 14, e076912.
 [^12]: Sandner, F., et al. (2025). Assessing the Reliability of Human and LLM-Based Screening. Konferenzpraesentation, OSSYM.
-[^13]: github.com/chpollin/FemPrompt_SozArb -- Repository mit allen Prompts, Daten und Analyseskripten.
+[^13]: github.com/chpollin/FemPrompt_SozArb -- Repository mit Prompt-Templates, Daten und Analyseskripten. Die Deep-Research-Prompt-Parametrisierung ist rekonstruiert, nicht verbatim archiviert.
 
 ---
 
