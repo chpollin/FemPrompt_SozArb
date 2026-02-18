@@ -103,9 +103,15 @@ M1-M6 abgeschlossen. Benchmark-Ergebnisse liegen vor (κ = 0,035, 210 Papers, 11
 
 ### M9 (Nice-to-Have): Vault + GitHub Pages
 
-- [ ] Vault-Building mit Assessment-Integration
-- [ ] Statische GitHub-Pages-Seite fuer Wissensexploration
-- Abhaengigkeit: M6 (Assessment-Daten fuer Vault)
+- [x] Statische GitHub-Pages-Seite fuer Wissensexploration -- **UMGESETZT**
+  - `docs/` SPA rebuilt: 4-Tab-Layout (Papers, Benchmark, Dashboard, Graph)
+  - Benchmark-Tab: Kappa-Chart (Observable Plot), 2x2 Confusion Matrix, Disagreements-Tabelle
+  - Papers-Tab: Category-Chips, Human-Status-Filter, neue Cards mit Doppel-Badge
+  - Daten-Pipeline: `pipeline/scripts/generate_docs_data.py` -> `docs/data/research_vault_v2.json`
+  - Commit: `5d8bd36`
+  - **Noch ausstehend:** GitHub Pages in Repository-Settings aktivieren (Settings -> Pages -> Source: docs/, Branch: main)
+- [ ] Vault-Building (Obsidian, lokal): `pipeline/scripts/generate_vault.py` existiert, noch nicht ausgefuehrt
+- Abhaengigkeit: M6 (Assessment-Daten) -- erledigt
 
 ---
 
