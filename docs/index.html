@@ -26,12 +26,13 @@
     <meta name="twitter:image" content="https://chpollin.github.io/FemPrompt_SozArb/preview.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📚</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e40af'/><text x='50' y='68' font-size='60' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
 
     <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/dist/vis-network.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/dist/plot.umd.min.js"></script>
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -61,7 +62,8 @@
     <nav class="nav-tabs">
         <div class="nav-tabs-container">
             <button class="nav-tab active" data-tab="papers">Papers Browser</button>
-            <button class="nav-tab" data-tab="dashboard">Dimensions Dashboard</button>
+            <button class="nav-tab" data-tab="benchmark">Benchmark</button>
+            <button class="nav-tab" data-tab="dashboard">Dashboard</button>
             <button class="nav-tab" data-tab="graph">Network Graph</button>
         </div>
     </nav>
@@ -75,40 +77,31 @@
 
                 <div class="filters-grid">
                     <div class="filter-group">
-                        <label class="filter-label">Decision</label>
+                        <label class="filter-label">LLM Decision</label>
                         <select class="filter-select" id="filter-decision">
                             <option value="all">All Papers</option>
-                            <option value="Include">Include Only</option>
-                            <option value="Exclude">Exclude Only</option>
-                            <option value="Unclear">Unclear Only</option>
+                            <option value="Include">LLM Include</option>
+                            <option value="Exclude">LLM Exclude</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
-                        <label class="filter-label">Relevance</label>
-                        <select class="filter-select" id="filter-relevance">
-                            <option value="all">All Levels</option>
-                            <option value="high">High (≥10)</option>
-                            <option value="medium">Medium (5-9)</option>
-                            <option value="low">Low (<5)</option>
+                        <label class="filter-label">Human Assessment</label>
+                        <select class="filter-select" id="filter-human">
+                            <option value="all">All Papers</option>
+                            <option value="has_human">Has Human Assessment</option>
+                            <option value="agreement">Agreement (LLM = Human)</option>
+                            <option value="disagreement">Disagreement (LLM ≠ Human)</option>
+                            <option value="no_human">No Human Assessment</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
                         <label class="filter-label">Sort By</label>
                         <select class="filter-select" id="sort-by">
-                            <option value="relevance">Relevance (High to Low)</option>
                             <option value="year">Year (Newest First)</option>
                             <option value="author">Author (A-Z)</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group">
-                        <label class="filter-label">Summary Available</label>
-                        <select class="filter-select" id="filter-summary">
-                            <option value="all">All Papers</option>
-                            <option value="yes">With Summary Only</option>
-                            <option value="no">Without Summary</option>
+                            <option value="title">Title (A-Z)</option>
                         </select>
                     </div>
 
@@ -130,6 +123,14 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- Category chips -->
+                <div class="category-filter-row">
+                    <span class="filter-label">Categories (LLM):</span>
+                    <div class="category-chips" id="category-chips">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
             </div>
 
             <!-- Results Counter -->
@@ -145,48 +146,91 @@
             </div>
         </div>
 
+        <!-- Benchmark Tab -->
+        <div class="tab-content" id="benchmark-tab">
+            <div class="benchmark-section">
+                <h2 class="benchmark-title">Human vs. LLM Assessment Benchmark</h2>
+                <p class="benchmark-subtitle">Cohen's Kappa measures agreement between expert human reviewers and Claude Haiku 4.5 (10 binary categories, PRISMA screening).</p>
+            </div>
+
+            <!-- Metric tiles -->
+            <div class="benchmark-metrics-grid" id="benchmark-metrics">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- Charts row -->
+            <div class="benchmark-charts-row">
+                <div class="benchmark-chart-card">
+                    <h3>Cohen's Kappa by Category</h3>
+                    <p class="chart-subtitle">Positive = LLM and humans agree above chance. Negative = less than chance.</p>
+                    <div id="kappa-chart-container"></div>
+                </div>
+                <div class="benchmark-chart-card">
+                    <h3>Decision Confusion Matrix</h3>
+                    <p class="chart-subtitle">How human and LLM Include/Exclude decisions align. Click a cell to filter papers.</p>
+                    <div id="confusion-matrix-container"></div>
+                </div>
+            </div>
+
+            <!-- Disagreements table -->
+            <div class="benchmark-chart-card" style="margin-top: 1.5rem;">
+                <div class="disagreements-header">
+                    <h3>Top Disagreements</h3>
+                    <div class="filter-group" style="width:auto;">
+                        <select class="filter-select" id="filter-severity" style="font-size:0.8rem;">
+                            <option value="all">All Severities</option>
+                            <option value="high">High Only</option>
+                            <option value="medium">Medium Only</option>
+                            <option value="low">Low Only</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="disagreements-table-container"></div>
+            </div>
+        </div>
+
         <!-- Dashboard Tab -->
         <div class="tab-content" id="dashboard-tab">
             <div class="dashboard-grid">
                 <div class="dashboard-card">
-                    <h3>Papers by Decision</h3>
+                    <h3>LLM Decision Distribution</h3>
                     <div class="chart-container">
                         <canvas id="decision-chart"></canvas>
                     </div>
                 </div>
 
                 <div class="dashboard-card">
-                    <h3>Relevance Distribution</h3>
+                    <h3>Human vs. LLM Include Rate</h3>
                     <div class="chart-container">
-                        <canvas id="relevance-chart"></canvas>
+                        <canvas id="include-rate-chart"></canvas>
                     </div>
                 </div>
 
                 <div class="dashboard-card">
-                    <h3>AI Literacy Dimension</h3>
+                    <h3>Category Distribution (LLM)</h3>
                     <div class="chart-container">
-                        <canvas id="ai-chart"></canvas>
+                        <canvas id="category-chart"></canvas>
                     </div>
                 </div>
 
                 <div class="dashboard-card">
-                    <h3>Vulnerable Groups Dimension</h3>
+                    <h3>Publications by Year</h3>
                     <div class="chart-container">
-                        <canvas id="vulnerable-chart"></canvas>
+                        <canvas id="year-chart"></canvas>
                     </div>
                 </div>
 
                 <div class="dashboard-card">
-                    <h3>Bias Analysis Dimension</h3>
+                    <h3>LLM Confidence Distribution</h3>
                     <div class="chart-container">
-                        <canvas id="bias-chart"></canvas>
+                        <canvas id="confidence-chart"></canvas>
                     </div>
                 </div>
 
                 <div class="dashboard-card">
-                    <h3>Practical Implementation</h3>
+                    <h3>Agreement by Category (%)</h3>
                     <div class="chart-container">
-                        <canvas id="praxis-chart"></canvas>
+                        <canvas id="agreement-chart"></canvas>
                     </div>
                 </div>
             </div>

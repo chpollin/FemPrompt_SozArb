@@ -1,68 +1,68 @@
-// Research Vault Web App
+// Research Vault Web App - v2.0 (10K Assessment Schema)
 // Main application logic
+
+const CATEGORIES = [
+    'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
+    'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender',
+    'Diversitaet', 'Feministisch', 'Fairness'
+];
 
 // Global state
 let allPapers = [];
 let filteredPapers = [];
-let statistics = {};
+let vaultMeta = {};
+let kappas = {};
 let graphData = {};
 let network = null;
 let fuse = null;
+let activeCategories = new Set(); // for chip multi-select
+let benchmarkInitialized = false;
+let dashboardInitialized = false;
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('Initializing Research Vault App...');
+    console.log('Initializing Research Vault App v2.0...');
 
     try {
-        updateLoadingMessage('Loading papers data... (1/4)');
+        updateLoadingMessage('Loading data... (1/3)');
         await loadData();
 
-        updateLoadingMessage('Initializing interface... (2/4)');
+        updateLoadingMessage('Initializing interface... (2/3)');
         initializeUI();
         initializeKeyboardShortcuts();
 
-        updateLoadingMessage('Rendering statistics... (3/4)');
+        updateLoadingMessage('Rendering papers... (3/3)');
         renderStatistics();
+        renderCategoryChips();
         renderPapers();
-
-        updateLoadingMessage('Loading dashboard charts... (4/4)');
-        initializeDashboard();
 
         console.log('App initialized successfully!');
     } catch (error) {
         console.error('Failed to initialize app:', error);
-        showError('Failed to load research vault data. Please check console for details.');
+        showError('Failed to load research vault data: ' + error.message);
     }
 });
 
-// Update loading message
 function updateLoadingMessage(message) {
-    const loadingEls = document.querySelectorAll('.loading p');
-    loadingEls.forEach(el => el.textContent = message);
+    document.querySelectorAll('.loading p').forEach(el => el.textContent = message);
 }
 
-// Load data from JSON files
+// Load data
 async function loadData() {
-    console.log('Loading data...');
-
-    // Load papers
-    const papersResponse = await fetch('data/research_vault.json');
-    if (!papersResponse.ok) throw new Error('Failed to load papers data');
-    const papersData = await papersResponse.json();
-    allPapers = papersData.papers;
-    statistics = papersData.statistics;
+    const vaultRes = await fetch('data/research_vault_v2.json');
+    if (!vaultRes.ok) throw new Error('Failed to load research_vault_v2.json');
+    const vaultData = await vaultRes.json();
+    allPapers = vaultData.papers;
+    vaultMeta = vaultData.meta;
+    kappas = vaultData.kappa_by_category;
     filteredPapers = [...allPapers];
-
     console.log(`Loaded ${allPapers.length} papers`);
 
-    // Load graph data
-    const graphResponse = await fetch('data/graph_data.json');
-    if (!graphResponse.ok) throw new Error('Failed to load graph data');
-    graphData = await graphResponse.json();
+    const graphRes = await fetch('data/graph_data.json');
+    if (!graphRes.ok) throw new Error('Failed to load graph_data.json');
+    graphData = await graphRes.json();
+    console.log(`Loaded graph: ${graphData.nodes.length} nodes, ${graphData.edges.length} edges`);
 
-    console.log(`Loaded graph with ${graphData.nodes.length} nodes`);
-
-    // Initialize search
     fuse = new Fuse(allPapers, {
         keys: ['title', 'author_year', 'abstract'],
         threshold: 0.3,
@@ -70,144 +70,172 @@ async function loadData() {
     });
 }
 
-// Initialize UI event listeners
+// Initialize UI
 function initializeUI() {
-    // Tab switching
     document.querySelectorAll('.nav-tab').forEach(tab => {
         tab.addEventListener('click', () => switchTab(tab.dataset.tab));
     });
 
-    // Search
     document.getElementById('search-box').addEventListener('input', handleSearch);
-
-    // Filters
     document.getElementById('filter-decision').addEventListener('change', applyFilters);
-    document.getElementById('filter-relevance').addEventListener('change', applyFilters);
-    document.getElementById('filter-summary').addEventListener('change', applyFilters);
+    document.getElementById('filter-human').addEventListener('change', applyFilters);
     document.getElementById('filter-year').addEventListener('change', applyFilters);
     document.getElementById('sort-by').addEventListener('change', applyFilters);
 
-    // Graph filters
-    document.getElementById('graph-filter-decision').addEventListener('change', updateGraph);
-    document.getElementById('graph-filter-relevance').addEventListener('change', updateGraph);
-
-    // Modal close on background click
     document.getElementById('paper-modal').addEventListener('click', (e) => {
         if (e.target.id === 'paper-modal') closePaperModal();
     });
 }
 
+function initializeKeyboardShortcuts() {
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closePaperModal();
+        if (e.key === '/' && !e.target.matches('input, textarea')) {
+            e.preventDefault();
+            document.getElementById('search-box').focus();
+        }
+    });
+}
+
 // Tab switching
 function switchTab(tabName) {
-    // Update tab buttons
     document.querySelectorAll('.nav-tab').forEach(tab => {
         tab.classList.toggle('active', tab.dataset.tab === tabName);
     });
-
-    // Update tab content
     document.querySelectorAll('.tab-content').forEach(content => {
         content.classList.toggle('active', content.id === `${tabName}-tab`);
     });
 
-    // Initialize graph on first view
+    if (tabName === 'benchmark' && !benchmarkInitialized) {
+        setTimeout(() => { initializeBenchmark(); benchmarkInitialized = true; }, 100);
+    }
+    if (tabName === 'dashboard' && !dashboardInitialized) {
+        setTimeout(() => { initializeDashboard(); dashboardInitialized = true; }, 100);
+    }
     if (tabName === 'graph' && !network) {
         setTimeout(initializeGraph, 100);
     }
 }
 
-// Render statistics
+// Stats bar
 function renderStatistics() {
     const container = document.getElementById('stats-container');
+    const llmInclude = allPapers.filter(p => p.llm.decision === 'Include').length;
+    const withHuman = allPapers.filter(p => p.benchmark.has_human).length;
+    const disagreements = allPapers.filter(p => p.benchmark.has_human && p.benchmark.agreement === false).length;
+    const kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
 
-    const html = `
+    container.innerHTML = `
         <div class="stat">
-            <span class="stat-value">${statistics.total_papers}</span>
+            <span class="stat-value">${allPapers.length}</span>
             <span class="stat-label">Total Papers</span>
         </div>
         <div class="stat">
-            <span class="stat-value">${statistics.by_decision.Include || 0}</span>
-            <span class="stat-label">Included</span>
+            <span class="stat-value">${llmInclude}</span>
+            <span class="stat-label">LLM Include</span>
         </div>
         <div class="stat">
-            <span class="stat-value">${statistics.with_summaries}</span>
-            <span class="stat-label">With Summaries</span>
+            <span class="stat-value">${withHuman}</span>
+            <span class="stat-label">Human Assessed</span>
         </div>
         <div class="stat">
-            <span class="stat-value">${statistics.by_relevance.high || 0}</span>
-            <span class="stat-label">High Relevance</span>
+            <span class="stat-value">${disagreements}</span>
+            <span class="stat-label">Disagreements</span>
         </div>
         <div class="stat">
-            <span class="stat-value">${statistics.average_relevance}</span>
-            <span class="stat-label">Avg Relevance</span>
+            <span class="stat-value">${kappa}</span>
+            <span class="stat-label">Cohen's Kappa</span>
         </div>
     `;
-
-    container.innerHTML = html;
 }
 
-// Search papers
-function handleSearch(e) {
-    const query = e.target.value.trim();
+// Category chips
+function renderCategoryChips() {
+    const container = document.getElementById('category-chips');
+    const chips = CATEGORIES.map(cat => {
+        const label = cat.replace('_', ' ');
+        return `<button class="category-chip" data-cat="${cat}" onclick="toggleCategoryChip('${cat}')">${label}</button>`;
+    }).join('');
+    container.innerHTML = chips;
+}
 
-    if (query.length === 0) {
-        filteredPapers = [...allPapers];
+function toggleCategoryChip(cat) {
+    if (activeCategories.has(cat)) {
+        activeCategories.delete(cat);
     } else {
-        const results = fuse.search(query);
-        filteredPapers = results.map(r => r.item);
+        activeCategories.add(cat);
     }
-
+    // Update chip appearance
+    document.querySelectorAll('.category-chip').forEach(chip => {
+        chip.classList.toggle('active', activeCategories.has(chip.dataset.cat));
+    });
     applyFilters();
 }
 
-// Apply all filters
+// Search
+function handleSearch(e) {
+    const query = e.target.value.trim();
+    if (query.length === 0) {
+        filteredPapers = [...allPapers];
+    } else {
+        filteredPapers = fuse.search(query).map(r => r.item);
+    }
+    applyFilters();
+}
+
+// Filters
 function applyFilters() {
     const decision = document.getElementById('filter-decision').value;
-    const relevance = document.getElementById('filter-relevance').value;
-    const summary = document.getElementById('filter-summary').value;
+    const humanStatus = document.getElementById('filter-human').value;
     const year = document.getElementById('filter-year').value;
     const sortBy = document.getElementById('sort-by').value;
 
-    // Apply filters
     let filtered = [...filteredPapers];
 
     if (decision !== 'all') {
-        filtered = filtered.filter(p => p.decision === decision);
+        filtered = filtered.filter(p => p.llm.decision === decision);
     }
 
-    if (relevance !== 'all') {
-        filtered = filtered.filter(p => p.relevance_category === relevance);
-    }
-
-    if (summary !== 'all') {
-        const hasSummary = summary === 'yes';
-        filtered = filtered.filter(p => p.has_summary === hasSummary);
+    if (humanStatus === 'has_human') {
+        filtered = filtered.filter(p => p.benchmark.has_human);
+    } else if (humanStatus === 'agreement') {
+        filtered = filtered.filter(p => p.benchmark.has_human && p.benchmark.agreement === true);
+    } else if (humanStatus === 'disagreement') {
+        filtered = filtered.filter(p => p.benchmark.has_human && p.benchmark.agreement === false);
+    } else if (humanStatus === 'no_human') {
+        filtered = filtered.filter(p => !p.benchmark.has_human);
     }
 
     if (year !== 'all') {
         if (year === '2021') {
-            filtered = filtered.filter(p => p.publication_year <= 2021);
+            filtered = filtered.filter(p => p.year && p.year <= 2021);
         } else {
-            filtered = filtered.filter(p => p.publication_year == year);
+            filtered = filtered.filter(p => p.year == parseInt(year));
         }
     }
 
-    // Apply sorting
-    if (sortBy === 'relevance') {
-        filtered.sort((a, b) => b.total_relevance - a.total_relevance);
-    } else if (sortBy === 'year') {
-        filtered.sort((a, b) => (b.publication_year || 0) - (a.publication_year || 0));
+    // Category chip filter: paper must have ALL selected categories (LLM-positive)
+    if (activeCategories.size > 0) {
+        filtered = filtered.filter(p => {
+            return [...activeCategories].every(cat => p.llm.all_categories[cat] === 1);
+        });
+    }
+
+    // Sort
+    if (sortBy === 'year') {
+        filtered.sort((a, b) => (b.year || 0) - (a.year || 0));
     } else if (sortBy === 'author') {
         filtered.sort((a, b) => a.author_year.localeCompare(b.author_year));
+    } else if (sortBy === 'title') {
+        filtered.sort((a, b) => a.title.localeCompare(b.title));
     }
 
     renderPapers(filtered);
 }
 
-// Render papers grid
+// Render papers
 function renderPapers(papers = filteredPapers) {
     const container = document.getElementById('papers-grid');
-
-    // Update results counter
     const resultsCount = document.getElementById('results-count');
     const totalCount = document.getElementById('total-count');
     if (resultsCount) resultsCount.textContent = papers.length;
@@ -218,363 +246,374 @@ function renderPapers(papers = filteredPapers) {
         return;
     }
 
-    const html = papers.map(paper => createPaperCard(paper)).join('');
-    container.innerHTML = html;
+    container.innerHTML = papers.map(p => createPaperCard(p)).join('');
 
-    // Add click listeners
-    document.querySelectorAll('.paper-card').forEach((card, index) => {
-        card.addEventListener('click', () => showPaperDetail(papers[index]));
+    document.querySelectorAll('.paper-card').forEach((card, i) => {
+        card.addEventListener('click', () => showPaperDetail(papers[i]));
     });
 }
 
-// Create paper card HTML
+// Paper card HTML
 function createPaperCard(paper) {
-    const decisionClass = `decision-${paper.decision.toLowerCase()}`;
-    const relevancePercent = (paper.total_relevance / 15) * 100;
+    const llmDec = paper.llm.decision;
+    const humanDec = paper.human ? paper.human.decision : null;
+    const hasHuman = paper.benchmark.has_human;
+    const agreement = paper.benchmark.agreement;
 
-    // Decision icons (FontAwesome)
-    const decisionIcons = {
-        'Include': '<i class="fas fa-check-circle"></i>',
-        'Exclude': '<i class="fas fa-times-circle"></i>',
-        'Unclear': '<i class="fas fa-question-circle"></i>'
-    };
+    // Assessment badges
+    const llmBadge = llmDec === 'Include'
+        ? `<span class="decision-badge badge-llm-include">LLM: Include</span>`
+        : `<span class="decision-badge badge-llm-exclude">LLM: Exclude</span>`;
 
-    // Dimension icons mapping
-    const dimensionIcons = {
-        'AI Literacy': '<i class="fas fa-robot"></i>',
-        'Vulnerable Groups': '<i class="fas fa-shield-alt"></i>',
-        'Bias Analysis': '<i class="fas fa-balance-scale"></i>',
-        'Practical Implementation': '<i class="fas fa-tools"></i>',
-        'Professional': '<i class="fas fa-users"></i>',
-        'Professional Context': '<i class="fas fa-users"></i>'
-    };
+    let humanBadge = '';
+    if (hasHuman && humanDec) {
+        humanBadge = humanDec === 'Include'
+            ? `<span class="decision-badge badge-human-include">Human: Include</span>`
+            : `<span class="decision-badge badge-human-exclude">Human: Exclude</span>`;
+    } else if (!hasHuman) {
+        humanBadge = `<span class="decision-badge badge-llm-only">LLM only</span>`;
+    }
 
-    // Top dimensions with icons
-    const topDims = paper.top_dimensions.slice(0, 2).map(dim => {
-        const icon = dimensionIcons[dim] || '<i class="fas fa-tag"></i>';
-        return `<span class="dimension-pill high">${icon} ${dim}</span>`;
-    }).join('');
+    let agreementBadge = '';
+    if (hasHuman && humanDec) {
+        agreementBadge = agreement === true
+            ? `<span class="decision-badge badge-agreement">Agreement</span>`
+            : `<span class="decision-badge badge-disagreement">Disagreement</span>`;
+    }
+
+    // Category tags (LLM positive only)
+    const catTags = paper.llm.categories.slice(0, 4).map(cat =>
+        `<span class="cat-tag">${cat.replace('_', '\u202F')}</span>`
+    ).join('');
+    const moreCats = paper.llm.categories.length > 4
+        ? `<span class="cat-tag">+${paper.llm.categories.length - 4}</span>` : '';
+
+    const year = paper.year || '';
+    const type = paper.item_type ? paper.item_type.replace('-', '\u2011') : '';
+    const journal = paper.journal ? ` | ${escapeHtml(paper.journal).substring(0, 40)}` : '';
 
     return `
-        <div class="paper-card" data-relevance="${paper.relevance_category}">
-            <div class="paper-header">
-                <span class="paper-author">${escapeHtml(paper.author_year)}</span>
-                <span class="decision-badge ${decisionClass}">
-                    ${decisionIcons[paper.decision] || ''} ${paper.decision}
-                </span>
-            </div>
-
+        <div class="paper-card">
             <h3 class="paper-title">${escapeHtml(paper.title)}</h3>
-
-            <div class="relevance-bar">
-                <div class="relevance-label">
-                    <span><i class="fas fa-chart-line"></i> Relevance</span>
-                    <span class="relevance-value">${paper.total_relevance}/15</span>
-                </div>
-                <div class="relevance-progress">
-                    <div class="relevance-fill" style="width: ${relevancePercent}%"></div>
-                </div>
+            <div class="paper-meta-row">
+                <span class="meta-pill">${escapeHtml(paper.author_year)}</span>
+                ${year ? `<span class="meta-sep">|</span><span class="meta-pill">${year}</span>` : ''}
+                ${type ? `<span class="meta-sep">|</span><span class="meta-pill">${type}</span>` : ''}
+                ${journal ? `<span class="meta-sep">|</span><span class="meta-pill">${journal}</span>` : ''}
             </div>
-
-            ${topDims ? `<div class="dimensions-mini">${topDims}</div>` : ''}
-
-            ${paper.has_summary && paper.summary_section && !paper.summary_section.startsWith('![[') ?
-                '<div class="summary-indicator"><i class="fas fa-file-alt"></i> AI Summary Available</div>' :
-                ''
-            }
+            <div class="assessment-badges">
+                ${llmBadge}${humanBadge}${agreementBadge}
+            </div>
+            ${catTags || moreCats ? `<div class="category-tags">${catTags}${moreCats}</div>` : ''}
         </div>
     `;
 }
 
-// Show paper detail modal
+// Paper detail modal
 function showPaperDetail(paper) {
     const modal = document.getElementById('paper-modal');
-    const titleEl = document.getElementById('modal-title');
-    const authorEl = document.getElementById('modal-author');
-    const bodyEl = document.getElementById('modal-body');
+    document.getElementById('modal-title').textContent = paper.title;
+    document.getElementById('modal-author').textContent =
+        `${paper.author_year}${paper.year ? ' | ' + paper.year : ''}${paper.item_type ? ' | ' + paper.item_type : ''}`;
 
-    titleEl.textContent = paper.title;
-    authorEl.textContent = `${paper.author_year} | ${paper.publication_year}`;
-
-    // Build modal content
-    let html = `
-        <div class="detail-section">
-            <h3>Assessment</h3>
-            <div class="dimension-row">
-                <span class="dimension-name">Decision</span>
-                <span class="decision-badge decision-${paper.decision.toLowerCase()}">${paper.decision}</span>
-            </div>
-            <div class="dimension-row">
-                <span class="dimension-name">Total Relevance</span>
-                <span style="font-weight: 700; color: var(--primary-color);">${paper.total_relevance}/15</span>
-            </div>
-        </div>
-
-        <div class="detail-section">
-            <h3>Relevance Dimensions</h3>
-            <div class="dimensions-detail">
-                ${createDimensionRow('AI Literacy & Competencies', paper.rel_ai_komp)}
-                ${createDimensionRow('Vulnerable Groups & Digital Equity', paper.rel_vulnerable)}
-                ${createDimensionRow('Bias & Discrimination Analysis', paper.rel_bias)}
-                ${createDimensionRow('Practical Implementation', paper.rel_praxis)}
-                ${createDimensionRow('Professional/Social Work Context', paper.rel_prof)}
-            </div>
-        </div>
-    `;
-
-    if (paper.abstract) {
-        html += `
-            <div class="detail-section">
-                <h3>Abstract</h3>
-                <p style="line-height: 1.8; color: var(--gray-700);">${escapeHtml(paper.abstract)}</p>
-            </div>
-        `;
-    }
-
-    // AI Summary Section (Enhanced Pipeline v2.0)
-    if (paper.has_summary && paper.summary_section && paper.summary_section.trim() &&
-        !paper.summary_section.startsWith('![[') &&
-        !paper.summary_section.includes('No AI summary available')) {
-        html += `
-            <div class="detail-section">
-                <h3><i class="fas fa-robot"></i> AI-Generated Summary</h3>
-                <div class="summary-content" style="line-height: 1.8; color: var(--gray-700); background: var(--gray-50); padding: 1rem; border-radius: 6px; border-left: 3px solid var(--primary);">
-                    ${escapeHtml(paper.summary_section)}
-                </div>
-                ${paper.summary_file ? `<p style="margin-top: 0.75rem; font-size: 0.875rem; color: var(--gray-500);">
-                    <i class="fas fa-info-circle"></i> Generated by Enhanced Summarization Pipeline v2.0 • Full summary: <code>${paper.summary_file}</code>
-                </p>` : ''}
-            </div>
-        `;
-    } else if (paper.has_summary && paper.decision === 'Include') {
-        html += `
-            <div class="detail-section">
-                <h3><i class="fas fa-hourglass-half"></i> Summary Status</h3>
-                <p style="color: var(--gray-600); font-style: italic;">
-                    <i class="fas fa-info-circle"></i> This paper has been marked for summarization but processing is pending.
-                    Enhanced summaries are generated through multi-pass analysis with quality validation.
-                </p>
-            </div>
-        `;
-    }
-
-    // Related Papers (if available)
-    if (typeof addRelatedPapersSection === 'function') {
-        html += addRelatedPapersSection(paper);
-    }
-
-    if (paper.doi || paper.url) {
-        html += `<div class="detail-section"><h3>Links</h3>`;
-        if (paper.doi) {
-            html += `<p><strong>DOI:</strong> <a href="https://doi.org/${paper.doi}" target="_blank">${paper.doi}</a></p>`;
-        }
-        if (paper.url && paper.url !== 'nan') {
-            html += `<p><strong>URL:</strong> <a href="${paper.url}" target="_blank">${paper.url}</a></p>`;
-        }
-        html += `</div>`;
-    }
-
-    bodyEl.innerHTML = html;
+    document.getElementById('modal-body').innerHTML = buildModalContent(paper);
     modal.classList.add('active');
 }
 
-function createDimensionRow(name, score) {
-    // FontAwesome stars
-    const stars = Array(3).fill(0).map((_, i) => {
-        const filled = i < score ? 'filled' : '';
-        const icon = i < score ? 'fas' : 'far';
-        return `<span class="star ${filled}"><i class="${icon} fa-star"></i></span>`;
+function buildModalContent(paper) {
+    let html = '';
+
+    // Abstract
+    if (paper.abstract && paper.abstract.trim()) {
+        html += `
+            <div class="detail-section">
+                <h3>Abstract</h3>
+                <p style="line-height:1.8;color:var(--gray-700);">${escapeHtml(paper.abstract)}&hellip;</p>
+            </div>
+        `;
+    }
+
+    // Links
+    const doiLink = paper.doi && paper.doi !== 'nan'
+        ? `<a href="https://doi.org/${paper.doi}" target="_blank">DOI: ${paper.doi}</a>` : '';
+    const urlLink = paper.url && paper.url !== 'nan' && paper.url !== ''
+        ? `<a href="${paper.url}" target="_blank">Link</a>` : '';
+    if (doiLink || urlLink) {
+        html += `<div class="detail-section" style="padding-bottom:0;">
+            <h3>Links</h3><p>${[doiLink, urlLink].filter(Boolean).join(' &bull; ')}</p>
+        </div>`;
+    }
+
+    // Assessment grid
+    html += `<div class="detail-section"><h3>Assessment</h3><div class="modal-assessment-grid">`;
+
+    // LLM panel
+    const llmDecClass = paper.llm.decision === 'Include' ? 'decision-include' : 'decision-exclude';
+    const catGridLLM = CATEGORIES.map(cat => {
+        const active = paper.llm.all_categories[cat] === 1;
+        return `<div class="cat-grid-item${active ? ' active' : ''}">
+            <span class="cat-dot"></span>
+            <span>${cat.replace('_', ' ')}</span>
+        </div>`;
     }).join('');
 
-    // Dimension icons
-    const icons = {
-        'AI Literacy & Competencies': '<i class="fas fa-robot"></i>',
-        'Vulnerable Groups & Digital Equity': '<i class="fas fa-shield-alt"></i>',
-        'Bias & Discrimination Analysis': '<i class="fas fa-balance-scale"></i>',
-        'Practical Implementation': '<i class="fas fa-tools"></i>',
-        'Professional/Social Work Context': '<i class="fas fa-users"></i>'
-    };
-
-    const icon = icons[name] || '';
-
-    return `
-        <div class="dimension-row">
-            <span class="dimension-name">${icon} ${name}</span>
-            <div class="dimension-score">${stars}</div>
+    html += `
+        <div class="assessment-panel">
+            <h4>LLM Assessment (Claude Haiku 4.5)</h4>
+            <div class="assessment-decision ${llmDecClass}">${paper.llm.decision}</div>
+            <div style="margin-bottom:0.5rem;">
+                <span style="font-size:0.75rem;color:var(--gray-500);">Confidence: ${Math.round(paper.llm.confidence * 100)}%</span>
+                <div class="confidence-bar"><div class="confidence-fill" style="width:${paper.llm.confidence * 100}%"></div></div>
+            </div>
+            <div class="category-grid-10">${catGridLLM}</div>
+            ${paper.llm.reasoning ? `<p style="margin-top:0.5rem;font-size:0.7rem;color:var(--gray-400);font-style:italic;">${escapeHtml(paper.llm.reasoning)}&hellip;</p>` : ''}
         </div>
     `;
+
+    // Human panel
+    if (paper.benchmark.has_human && paper.human) {
+        const hDec = paper.human.decision;
+        const hDecClass = hDec === 'Include' ? 'decision-include' : (hDec === 'Exclude' ? 'decision-exclude' : '');
+        const catGridHuman = CATEGORIES.map(cat => {
+            const active = paper.human.all_categories[cat] === 1;
+            return `<div class="cat-grid-item${active ? ' active' : ''}">
+                <span class="cat-dot"></span>
+                <span>${cat.replace('_', ' ')}</span>
+            </div>`;
+        }).join('');
+
+        html += `
+            <div class="assessment-panel">
+                <h4>Human Assessment (Expert Review)</h4>
+                <div class="assessment-decision ${hDecClass}">${hDec || 'No decision'}</div>
+                <div class="category-grid-10">${catGridHuman}</div>
+            </div>
+        `;
+    } else {
+        html += `
+            <div class="assessment-panel" style="opacity:0.6;">
+                <h4>Human Assessment</h4>
+                <p style="color:var(--gray-400);font-size:0.8rem;">No human assessment available for this paper.</p>
+            </div>
+        `;
+    }
+
+    html += `</div>`; // close modal-assessment-grid
+
+    // Benchmark section
+    if (paper.benchmark.has_human && paper.human && paper.human.decision) {
+        const isAgreement = paper.benchmark.agreement === true;
+        const panelClass = isAgreement ? 'agreement' : '';
+        const affectedCats = paper.benchmark.affected_categories || [];
+        const catKappas = affectedCats.map(cat => {
+            const k = kappas[cat] ? kappas[cat].kappa : null;
+            return k !== null ? `${cat}: κ = ${k.toFixed(3)}` : cat;
+        }).join(', ');
+
+        html += `
+            <div class="benchmark-panel ${panelClass}">
+                <h4>Benchmark</h4>
+                <div style="display:flex;gap:1rem;flex-wrap:wrap;font-size:0.8rem;">
+                    <span><strong>Agreement:</strong> ${isAgreement ? 'Yes' : 'No'}</span>
+                    ${paper.benchmark.disagreement_type ? `<span><strong>Type:</strong> ${paper.benchmark.disagreement_type.replace(/_/g, ' ')}</span>` : ''}
+                    ${paper.benchmark.severity ? `<span><strong>Severity:</strong> ${paper.benchmark.severity}</span>` : ''}
+                </div>
+                ${affectedCats.length ? `<p style="font-size:0.75rem;color:var(--gray-500);margin-top:0.25rem;">Affected: ${catKappas}</p>` : ''}
+            </div>
+        `;
+    }
+
+    html += `</div>`; // close detail-section
+
+    return html;
 }
 
 function closePaperModal() {
     document.getElementById('paper-modal').classList.remove('active');
 }
 
-// Initialize dashboard charts
-function initializeDashboard() {
-    // Decision chart
-    new Chart(document.getElementById('decision-chart'), {
-        type: 'doughnut',
-        data: {
-            labels: ['Include', 'Exclude', 'Unclear'],
-            datasets: [{
-                data: [
-                    statistics.by_decision.Include || 0,
-                    statistics.by_decision.Exclude || 0,
-                    statistics.by_decision.Unclear || 0
-                ],
-                backgroundColor: ['#10b981', '#ef4444', '#f59e0b']
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false
-        }
-    });
-
-    // Relevance distribution
-    new Chart(document.getElementById('relevance-chart'), {
-        type: 'bar',
-        data: {
-            labels: ['High (≥10)', 'Medium (5-9)', 'Low (<5)'],
-            datasets: [{
-                label: 'Papers',
-                data: [
-                    statistics.by_relevance.high || 0,
-                    statistics.by_relevance.medium || 0,
-                    statistics.by_relevance.low || 0
-                ],
-                backgroundColor: '#2563eb'
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: { y: { beginAtZero: true } }
-        }
-    });
-
-    // Dimension charts
-    const dimensions = ['ai_komp', 'vulnerable', 'bias', 'praxis', 'prof'];
-    const chartIds = ['ai-chart', 'vulnerable-chart', 'bias-chart', 'praxis-chart'];
-    const dimData = statistics.by_dimension;
-
-    dimensions.slice(0, 4).forEach((dim, i) => {
-        new Chart(document.getElementById(chartIds[i]), {
-            type: 'bar',
-            data: {
-                labels: ['High (3)', 'Medium (2)', 'Low (1)', 'None (0)'],
-                datasets: [{
-                    label: 'Papers',
-                    data: [
-                        dimData[dim].high,
-                        dimData[dim].medium,
-                        dimData[dim].low,
-                        dimData[dim].none
-                    ],
-                    backgroundColor: ['#10b981', '#3b82f6', '#8b5cf6', '#d1d5db']
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: { y: { beginAtZero: true } }
-            }
-        });
-    });
-}
-
-// Initialize graph visualization
-function initializeGraph() {
-    console.log('Initializing graph...');
-
-    const container = document.getElementById('graph-container');
-
-    const options = {
-        nodes: {
-            shape: 'dot',
-            font: {
-                size: 12,
-                face: 'Arial'
-            }
-        },
-        edges: {
-            smooth: {
-                type: 'continuous'
-            },
-            color: {
-                color: '#e5e7eb',
-                highlight: '#2563eb'
-            }
-        },
-        physics: {
-            enabled: true,
-            barnesHut: {
-                gravitationalConstant: -30000,
-                centralGravity: 0.3,
-                springLength: 200,
-                springConstant: 0.04
-            },
-            stabilization: {
-                iterations: 150
-            }
-        },
-        interaction: {
-            hover: true,
-            tooltipDelay: 100
-        }
-    };
-
-    network = new vis.Network(container, graphData, options);
-
-    network.on('click', (params) => {
-        if (params.nodes.length > 0) {
-            const nodeId = params.nodes[0];
-            const paper = allPapers.find(p => p.id === nodeId);
-            if (paper) showPaperDetail(paper);
-        }
-    });
-
-    console.log('Graph initialized');
-}
-
-// Update graph filters
-function updateGraph() {
-    if (!network) return;
-
-    const decision = document.getElementById('graph-filter-decision').value;
-    const minRelevance = parseInt(document.getElementById('graph-filter-relevance').value);
-
-    // Filter nodes
-    const filteredNodes = graphData.nodes.filter(node => {
-        if (decision !== 'all' && node.decision !== decision) return false;
-        if (node.relevance < minRelevance) return false;
-        return true;
-    });
-
-    const nodeIds = new Set(filteredNodes.map(n => n.id));
-
-    // Filter edges
-    const filteredEdges = graphData.edges.filter(edge => {
-        return nodeIds.has(edge.from) && nodeIds.has(edge.to);
-    });
-
-    // Update network
-    network.setData({
-        nodes: filteredNodes,
-        edges: filteredEdges
-    });
-}
-
-// Utility functions
+// Utility
 function escapeHtml(text) {
+    if (!text) return '';
     const div = document.createElement('div');
-    div.textContent = text;
+    div.textContent = String(text);
     return div.innerHTML;
 }
 
 function showError(message) {
-    alert(message);
+    console.error(message);
+    document.getElementById('papers-grid').innerHTML =
+        `<div class="loading"><p style="color:var(--danger);">${escapeHtml(message)}</p></div>`;
 }
 
-// Export for global access
+// Dashboard charts (new 10K schema)
+function initializeDashboard() {
+    const llmInclude = allPapers.filter(p => p.llm.decision === 'Include').length;
+    const llmExclude = allPapers.filter(p => p.llm.decision === 'Exclude').length;
+    const llmOther = allPapers.length - llmInclude - llmExclude;
+
+    // Decision doughnut
+    new Chart(document.getElementById('decision-chart'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Include', 'Exclude', 'Other'],
+            datasets: [{ data: [llmInclude, llmExclude, llmOther],
+                backgroundColor: ['#10b981', '#6b7280', '#f59e0b'] }]
+        },
+        options: { responsive: true, maintainAspectRatio: false }
+    });
+
+    // Human vs LLM include rate
+    const humanInclude = vaultMeta.human_include_count || 0;
+    const humanTotal = vaultMeta.human_total_with_decision || 1;
+    const llmRate = Math.round(llmInclude / allPapers.length * 100);
+    const humanRate = Math.round(humanInclude / humanTotal * 100);
+
+    new Chart(document.getElementById('include-rate-chart'), {
+        type: 'bar',
+        data: {
+            labels: ['LLM', 'Human'],
+            datasets: [{
+                label: 'Include Rate (%)',
+                data: [llmRate, humanRate],
+                backgroundColor: ['#1e40af', '#059669']
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            scales: { y: { beginAtZero: true, max: 100,
+                ticks: { callback: v => v + '%' }
+            }},
+            plugins: { legend: { display: false } }
+        }
+    });
+
+    // Category distribution (LLM positive counts)
+    const catCounts = CATEGORIES.map(cat =>
+        allPapers.filter(p => p.llm.all_categories[cat] === 1).length
+    );
+    new Chart(document.getElementById('category-chart'), {
+        type: 'bar',
+        data: {
+            labels: CATEGORIES.map(c => c.replace('_', ' ')),
+            datasets: [{ label: 'Papers', data: catCounts, backgroundColor: '#1e40af' }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { x: { beginAtZero: true } }
+        }
+    });
+
+    // Year distribution
+    const yearCounts = {};
+    allPapers.forEach(p => {
+        if (p.year) yearCounts[p.year] = (yearCounts[p.year] || 0) + 1;
+    });
+    const years = Object.keys(yearCounts).sort();
+    new Chart(document.getElementById('year-chart'), {
+        type: 'bar',
+        data: {
+            labels: years,
+            datasets: [{ label: 'Papers', data: years.map(y => yearCounts[y]), backgroundColor: '#1e40af' }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+
+    // Confidence histogram
+    const confBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0.0-0.1, 0.1-0.2, ...
+    allPapers.forEach(p => {
+        const idx = Math.min(Math.floor(p.llm.confidence * 10), 9);
+        confBuckets[idx]++;
+    });
+    new Chart(document.getElementById('confidence-chart'), {
+        type: 'bar',
+        data: {
+            labels: ['0-10%', '10-20%', '20-30%', '30-40%', '40-50%', '50-60%', '60-70%', '70-80%', '80-90%', '90-100%'],
+            datasets: [{ label: 'Papers', data: confBuckets, backgroundColor: '#3b82f6' }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+
+    // Agreement by category
+    const catAgreement = CATEGORIES.map(cat => {
+        const k = kappas[cat];
+        return k ? Math.round(k.agreement_pct) : 0;
+    });
+    new Chart(document.getElementById('agreement-chart'), {
+        type: 'bar',
+        data: {
+            labels: CATEGORIES.map(c => c.replace('_', ' ')),
+            datasets: [{ label: 'Agreement %', data: catAgreement, backgroundColor: '#059669' }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: { x: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' } } }
+        }
+    });
+}
+
+// Graph (category co-occurrence)
+function initializeGraph() {
+    const container = document.getElementById('graph-container');
+    const options = {
+        nodes: {
+            shape: 'dot',
+            font: { size: 13, face: 'Inter, sans-serif', bold: { mod: 'bold' } },
+            borderWidth: 2,
+            shadow: true
+        },
+        edges: {
+            smooth: { type: 'continuous' },
+            color: { color: '#d6d3d1', highlight: '#1e40af' },
+            scaling: { min: 1, max: 8 }
+        },
+        physics: {
+            barnesHut: { gravitationalConstant: -20000, centralGravity: 0.5, springLength: 180 },
+            stabilization: { iterations: 200 }
+        },
+        interaction: { hover: true, tooltipDelay: 100 }
+    };
+
+    network = new vis.Network(container, graphData, options);
+    console.log('Category graph initialized');
+}
+
+// Export
+function exportFilteredPapers() {
+    const papers = filteredPapers.length > 0 ? filteredPapers : allPapers;
+    const headers = ['ID', 'Title', 'Author_Year', 'Year', 'Item_Type', 'DOI',
+        'LLM_Decision', 'LLM_Confidence', 'LLM_Categories',
+        'Human_Decision', 'Has_Human', 'Agreement'];
+    const rows = papers.map(p => [
+        p.id, p.title, p.author_year, p.year, p.item_type, p.doi,
+        p.llm.decision, p.llm.confidence, p.llm.categories.join(';'),
+        p.human ? p.human.decision : '', p.benchmark.has_human,
+        p.benchmark.agreement === null ? '' : p.benchmark.agreement
+    ]);
+    const csv = [headers, ...rows].map(r =>
+        r.map(v => `"${String(v || '').replace(/"/g, '""')}"`).join(',')
+    ).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'research_vault_filtered.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
 window.closePaperModal = closePaperModal;
+window.exportFilteredPapers = exportFilteredPapers;
+window.toggleCategoryChip = toggleCategoryChip;
