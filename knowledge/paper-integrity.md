@@ -104,13 +104,13 @@ Diese Probleme wurden im fertigen Paper-Text gegenueber frueheren Versionen beho
 
 ---
 
-### 3.3 10K-System als operativer Pfad -- UNGENAU
+### 3.3 10K-System als operativer Pfad -- GELOEST (v0.4)
 
-**Paper sagt:** "ergaenzt durch ein binaeres Kategoriensystem, das fuer den Abgleich mit der menschlichen Bewertung entwickelt wurde."
+**Urspruengliches Problem (v12):** Nur 50-Paper-Test, nie voll ausgefuehrt.
 
-**Repo zeigt:** `run_llm_assessment.py` existiert, wurde aber nur auf 50 Papers getestet (`benchmark/data/llm_assessment_50.csv`). Es wurde nie auf dem vollen Korpus ausgefuehrt. Das Paper impliziert, dass beide Pfade operativ existieren. Tatsaechlich ist nur der 5D-Pfad abgeschlossen.
+**Aktueller Stand:** `run_llm_assessment.py` wurde auf allen 326 Papers ausgefuehrt ($1.44, Commit M5). Ergebnis: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude). Benchmark-Ergebnisse (κ = 0,035, Konfusionsmatrix, Kategorie-Kappas) liegen in `benchmark/results/agreement_metrics.json`. Paper v0.4 beschreibt diese Ergebnisse korrekt in Abschnitt 5.
 
-**Handlungsbedarf:** Das Paper beschreibt den 10K-Pfad als existent, was technisch stimmt (Code bereit). Die Formulierung ist akzeptabel, solange das Paper nicht suggeriert, dass bereits Vergleichsergebnisse vorliegen. Im aktuellen Text ist das nicht der Fall, aber die Grenze ist duenn.
+**Status:** BELEGT
 
 ---
 
@@ -268,9 +268,9 @@ Vier wichtige Probleme aus frueheren Versionen wurden behoben: manuelle Papers j
 
 Drei Aussagen im Paper-Text stimmen nicht mit dem Repo ueberein und muessen vor Einreichung korrigiert werden: Prompts im Repo (falsch), "jeder Konversion" (uebertrieben), Assessment-Daten im Vault (technisch nicht vorbereitet). Keine dieser Korrekturen erfordert groessere Umschreibungen.
 
-### Systemische Luecke
+### Operativer Stand (aktualisiert 2026-02-18)
 
-Der duale Bewertungspfad als methodisches Kernstueck ist konzeptuell solide, aber operativ unvollstaendig: 10K-LLM-Assessment nicht auf vollem Korpus gelaufen, Human-Assessment bei 56%, Benchmark nicht berechnet. Das Paper kennzeichnet dies als "laufendes Experiment", was ehrlich ist. Die Frage ist, ob die Gutachter:innen das als ausreichend bewerten.
+10K-LLM-Assessment auf vollem Korpus abgeschlossen (326/326). Human-Assessment: 210/326 mit Decision (Benchmark-Basis). Benchmark berechnet: κ = 0,035, 111 Disagreements, alle Kategorie-Kappas vorliegen. Paper v0.4 beschreibt alle Ergebnisse korrekt. Das Paper kennzeichnet weiterhin den Status als "laufendes Experiment" (116 fehlende Human-Assessment-Decisions), was ehrlich ist.
 
 ---
 

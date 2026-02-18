@@ -112,42 +112,13 @@ M1-M7 abgeschlossen. Paper v0.4: 17.975 Zeichen (Limit: 18.000). Alle Abschnitte
   - Logging verbessert: kompaktes grouped init summary, Filter/Tab/Benchmark state (Commit `1f3092b`)
   - Commits: `5d8bd36`, `d22a22f`, `1f3092b`
   - **Noch ausstehend:** GitHub Pages aktivieren: Settings -> Pages -> Source: docs/, Branch: main (manuell, 2 Min.)
-- [ ] Visualisierungen umbauen: epistemisches Framing statt Validierungsframing (siehe unten)
+- [x] Visualisierungen umgebaut: epistemisches Framing (Commit `bb258f6`)
+  - Divergenz-Scatter (Bug-Fix: Achsen 0-100%, Diagonale korrekt)
+  - Slope Chart ersetzt Radar (10 Linien, Steigung = epistemische Divergenz)
+  - Overlap-Treemap (additives Framing, Klick filtert Papers-Tab)
+  - Coverage Map (LLM=326 vs. Human=210)
 - [ ] Vault-Building (Obsidian, lokal): `pipeline/scripts/generate_vault.py` existiert, noch nicht ausgefuehrt
 - Abhaengigkeit: M6 (Assessment-Daten) -- erledigt
-
-#### Offene Visualisierungsaufgabe (M9, naechster Schritt)
-
-**Problem:** Aktuelle Charts fragen "Wie gut ist das LLM?" -- falsches Framing. Kappa-Bar in Gruen/Rot,
-"LLM overclassifies"-Label, Vergleichsbalken sind Validierungserzaehlung. Richtige Frage: "Was sieht
-jede Perspektive, was die andere nicht sieht?"
-
-**Datenbefund (aus agreement_metrics.json):**
-
-| Kategorie | Human-Ja | LLM-Ja | Differenz | Interpretation |
-|-----------|----------|--------|-----------|----------------|
-| Soziale_Arbeit | 24% | 7% | -17pp | LLM fehlt Disziplinwissen |
-| Gender | 63% | 36% | -27pp | groesste Blindstelle LLM |
-| Fairness | 52% | 73% | +21pp | LLM ueberdehnt Breitbegriff |
-| Feministisch | 22% | 30% | +8pp | LLM grosszuegiger bei Diskursbegriffen |
-| Bias_Ungleichheit | 80% | 77% | -3pp | hohe Uebereinstimmung |
-
-145 Papers nur LLM Include = Erschliessungsangebot (kein Fehler).
-19 Papers nur Human Include = implizites Domainwissen, strukturell nicht automatisierbar.
-
-**4 Ersatz-Visualisierungen (alle Chart.js, kein neues Framework):**
-
-1. **Divergenz-Scatter** -- X=Human-Ja-Rate, Y=LLM-Ja-Rate, 10 Punkte, Diagonale=Konsens
-   (ersetzt: Kappa-Bar + Include-Rate-Vergleichsbalken)
-2. **Radar-Chart** -- 2 Flaechen (Human gruen / LLM blau), 10 Achsen, Luecke = epistemisches Komplement
-   (neu, Benchmark-Tab)
-3. **Overlap-Treemap** -- 4 Zellen proportional: Kern(63) / LLM-only(145) / Human-only(19) / Draussen(65)
-   (ersetzt: Confusion Matrix, additives Framing statt Fehlerdiagnose, Klick filtert Papers-Tab weiterhin)
-4. **Coverage Map** -- 2 gestapelte Balken: LLM=326 vollstaendig / Human=210 lueckenhaft
-   (ersetzt: Decision Doughnut)
-
-Bleiben unveraendert: Year-Bar, Confidence-Histogram, Papers-Tab, Graph-Tab, Disagreements-Tabelle
-(Label "overclassifies" -> "nur LLM: Include").
 
 ---
 

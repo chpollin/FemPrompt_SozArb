@@ -3,6 +3,8 @@
 **Stand:** 18. Februar 2026
 **Deadline:** 4. Mai 2026 (75 Tage)
 
+**Aktueller Status:** M1-M7 abgeschlossen. Paper v0.4: 17.975 Zeichen. Naechste Phase: Review-Runde Co-Autor:innen (M8).
+
 ---
 
 ## Rahmenbedingungen
@@ -94,47 +96,43 @@
 | PDF-zu-JPG (Sync-Scroll) | Fertig | ~4000 Seiten |
 | Review-Tool | Fertig | Browser-basiert mit Import/Export |
 
-### Phase 2: Assessment (In Arbeit)
+### Phase 2: Assessment (Abgeschlossen)
 
 | Track | Methode | Status | Verantwortlich |
 |-------|---------|--------|----------------|
-| Human | Google Sheets manuell | In Arbeit | Susi, Sabine |
-| Agent | Claude Haiku 4.5 | Bereit | Christopher |
+| Human | Google Sheets manuell | Abgeschlossen (210/326 mit Decision) | Susi, Sabine |
+| LLM (10K) | Claude Haiku 4.5 | Abgeschlossen (326/326, $1.44) | Christopher |
 
-**Blocker:** Human-Assessment muss abgeschlossen sein vor Benchmark.
-
-### Phase 3: Benchmark (Wartet)
+### Phase 3: Benchmark (Abgeschlossen)
 
 | Schritt | Script | Status |
 |---------|--------|--------|
-| Assessments zusammenfuehren | `merge_assessments.py` | Wartet |
-| Agreement berechnen | `calculate_agreement.py` | Wartet |
-| Disagreements analysieren | `analyze_disagreements.py` | Wartet |
+| Assessments zusammenfuehren | `merge_assessments.py` | Abgeschlossen (210 Papers) |
+| Agreement berechnen | `calculate_agreement.py` | Abgeschlossen (κ = 0,035) |
+| Disagreements analysieren | `analyze_disagreements.py` | Abgeschlossen (111 Faelle) |
 
-**Output:** Cohen's Kappa, Konfusionsmatrix, Disagreement-Faelle
+**Output:** `benchmark/results/agreement_metrics.json` -- Cohen's Kappa 0,035, Konfusionsmatrix, Kategorie-Kappas
 
-### Phase 4: Synthese (Wartet)
+### Phase 4: Paper (Abgeschlossen, Review offen)
 
 | Schritt | Status |
 |---------|--------|
-| LLM-Summarisierung | ⏸️ Wartet auf Stichproben-Review |
-| Obsidian Vault | Wartet |
+| Paper v0.4 | Fertig -- 17.975 Zeichen (Limit 18.000) |
+| Obsidian Vault | Ausstehend (Nice-to-Have) |
+| GitHub Pages SPA | Implementiert, Aktivierung manuell |
 
 ---
 
 ## Offene Aufgaben
 
-### Sofort (diese Woche)
+### Erledigt
 
-- [ ] Stichproben-Review mit Browser-Tool (~25 Dokumente, 10%)
-- [ ] Human-Assessment Status bei Susi/Sabine erfragen
-
-### Nach Human-Assessment
-
-- [ ] LLM-Assessment Vollauf (326 Papers, ~$1.30)
-- [ ] Human-Assessment aus Google Sheets exportieren
-- [ ] Benchmark-Skripte ausfuehren
-- [ ] Disagreement-Faelle qualitativ analysieren
+- [x] Stichproben-Review mit Browser-Tool
+- [x] Human-Assessment exportiert (210/326 mit Decision)
+- [x] 10K LLM-Assessment ausgefuehrt (326/326, $1.44)
+- [x] Benchmark-Skripte ausgefuehrt (κ = 0,035)
+- [x] Disagreement-Faelle analysiert (111 Faelle, 3 Muster identifiziert)
+- [x] Benchmark-Ergebnisse ins Paper eingearbeitet
 
 ### Paper-Entwicklung (im Repo, iterativ)
 
@@ -142,9 +140,10 @@
 **Google Docs ist nicht mehr relevant -- Paper wird ausschliesslich im Repo iteriert.**
 
 - [x] Grundstruktur mit epistemischer Infrastruktur als Leitkonzept
-- [ ] Ergebnisse einarbeiten (nach Benchmark)
-- [ ] Zeichenzaehlung pruefen und kuerzen
-- [ ] Finale Review mit Co-Autor:innen
+- [x] Ergebnisse einarbeiten (Benchmark-Metriken, Jagged Frontier, qualitative Beispiele)
+- [x] Zeichenzaehlung: 17.975 Zeichen (Limit 18.000, Differenz +25)
+- [ ] Finale Review mit Co-Autor:innen (M8, naechster Schritt)
+- [ ] Einreichung 4. Mai 2026
 
 ---
 
@@ -179,15 +178,20 @@
 
 ---
 
-## Benchmark-Erwartungen
+## Benchmark-Ergebnisse (Endstand)
 
-| Metrik | Beschreibung |
-|--------|--------------|
-| Cohen's Kappa | Uebereinstimmung bereinigt um Zufall |
-| Gesamtuebereinstimmung | % identische Include/Exclude |
-| Kategorie-Uebereinstimmung | Pro Kategorie (10x) |
-| Konfusionsmatrix | Human x Agent (Include/Exclude) |
-| Disagreement-Faelle | Qualitative Analyse fuer Paper |
+| Metrik | Wert |
+|--------|------|
+| Papers mit beiden Assessments | 210 |
+| Cohen's Kappa (gesamt) | 0,035 ("slight") |
+| Gesamtuebereinstimmung | 47,1 % |
+| LLM Include-Rate | 71 % (232/326) |
+| Human Include-Rate | 42 % (88/210) |
+| Disagreements gesamt | 111 Faelle |
+| Kategorie-Kappa best | +0,075 (Feministisch) |
+| Kategorie-Kappa worst | -0,163 (Fairness) |
+
+**Interpretation:** Jagged Frontier -- LLM uebermenschlich bei "Fairness" (73 % Ja vs. Human 52 %), untermenschlich bei "Gender" (36 % Ja vs. Human 63 %). Die epistemische Grenzlinie ist nicht intuitiv vorhersagbar.
 
 ---
 
@@ -244,3 +248,18 @@
 ---
 
 *Aktualisiert: 2026-02-18*
+
+---
+
+## Paper-Gliederung (Endstand v0.4)
+
+```
+1. Einleitung (~2.284 Zeichen) -- Fertig
+2. Epistemische Asymmetrie (~3.014 Zeichen) -- Fertig (inkl. Jagged Frontier)
+3. Epistemische Infrastruktur (~3.126 Zeichen) -- Fertig
+4. Methodik (~3.091 Zeichen) -- Fertig
+5. Ergebnisse (~3.445 Zeichen) -- Fertig (inkl. qualitative Beispiele)
+6. Diskussion (~1.927 Zeichen) -- Fertig
+7. Fazit (~1.088 Zeichen) -- Fertig
+Gesamt: 17.975 Zeichen (Limit: 18.000)
+```
