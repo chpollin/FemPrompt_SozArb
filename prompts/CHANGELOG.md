@@ -12,7 +12,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 | SKE Stage 1: Extract & Classify | `pipeline/scripts/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |
 | SKE Stage 3: Verify | `pipeline/scripts/distill_knowledge.py` | 223-282 | v1.0 | Aktiv, 249 Docs verifiziert |
 | 5D Assessment | `assessment-llm/prompt_template.md` | 1-124 | v1.0 | Aktiv, 325/325 bewertet |
-| 10K Assessment | `benchmark/scripts/run_llm_assessment.py` | 37-102 | v2.0 | Getestet (50 Papers) |
+| 10K Assessment | `benchmark/scripts/run_llm_assessment.py` | 37-111 | v2.1 | Aktiv (negative Constraints, Beispiele fuer alle Kategorien) |
 
 ---
 
@@ -110,7 +110,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 **Eingesetzt:** Testlauf (50 Papers, v1 + v2)
 
 **Kernstruktur:**
-- Rolle: "wissenschaftlicher Reviewer fuer ein Literature Review zu feministischen AI Literacies in der Sozialen Arbeit"
+- Rolle: "wissenschaftlicher Reviewer" (neutral, kein thematischer Bias)
 - Dynamisch generiert aus `benchmark/config/categories.yaml`
 - 10 binaere Kategorien (Ja/Nein) mit Definitionen, positiven und negativen Beispielen
 - Strikte Entscheidungslogik: TECHNIK_OK UND SOZIAL_OK -> Include
@@ -123,15 +123,15 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 |---------|-----------|------------|
 | v1.0 | Initialer Prompt ohne Konsistenzregel | 20% Inkonsistenzen, "Feministisch" 0x erkannt |
 | v2.0 | Konsistenzregel + negative/positive Beispiele pro Kategorie | 6% Inkonsistenzen, "Feministisch" 8x erkannt |
-| v2.1 (geplant) | Negative Constraints fuer Sycophancy-Mitigation | Ausstehend |
+| v2.1 | Negative Constraints, neutrale Rolle, Beispiele fuer alle 10 Kategorien | Vollstaendige Sycophancy-Mitigation |
 
-**Sycophancy-Relevanz:** Hoch. Die Rolle "Reviewer fuer ... feministische AI Literacies" koennte systematische Ueberattribuierung bei feministischen/Gender-Kategorien foerdern. v2.0 verbesserte die Trennschaerfe durch Beispiele, aber negative Constraints fehlen noch.
+**Sycophancy-Relevanz:** Mittel (nach Mitigation). Die Rolle ist jetzt neutral ("wissenschaftlicher Reviewer"). Negative Constraints verhindern Ueberattribuierung bei Feministisch, Soziale_Arbeit und Prompting. Allgemeine Restriktivitaetsregel ("Bei Unsicherheit: Nein") und Kategorie-Cap (max 4-5) reduzieren False-Positive-Rate.
 
-**Geplante Aenderungen (v2.1):**
-- Negative Constraints: "Klassifiziere nur als 'Feministisch', wenn der Text explizit feministische Theorie, Methoden oder Perspektiven verwendet ODER sich auf feministische Autor:innen bezieht"
-- "Bei Unsicherheit: 'Nein' statt 'Ja'"
-- "Vergib nicht mehr als 3-4 Kategorien pro Paper, es sei denn, der Text adressiert tatsaechlich mehr"
-- Calibration Items (3-5 Papers mit bekannter Klassifikation)
+**Aenderungen v2.0 -> v2.1:**
+- Rolle neutralisiert (war: "Reviewer fuer ... feministische AI Literacies")
+- 5 negative Constraints hinzugefuegt (Feministisch, Soziale_Arbeit, Prompting, max 4-5, substantiell)
+- Beispiele fuer Bias_Ungleichheit, Gender, Diversitaet, Fairness ergaenzt
+- Doku (assessment_prompt.md) mit Code synchronisiert
 
 ---
 
@@ -144,7 +144,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 | Nov 2025 | 5D Assessment | -- | v1.0 | Erstversion, 325/325 bewertet |
 | Jan 2026 | SKE Stage 1 + 3 | -- | v1.0 | Erstversion, 249 Docs produziert |
 | Feb 2026 | 10K Assessment | v1.0 | v2.0 | Konsistenzregel, Beispiele hinzugefuegt |
-| (geplant) | 10K Assessment | v2.0 | v2.1 | Sycophancy-Mitigation |
+| Feb 2026 | 10K Assessment | v2.0 | v2.1 | Neutrale Rolle, negative Constraints, Beispiele fuer alle Kategorien |
 
 ---
 

@@ -1,12 +1,13 @@
 # Assessment Categories
-# Version: 1.1 (Updated inclusion logic based on test results)
+# Version: 1.2 (Examples added for all categories, synced with documentation)
 # Synchronized with Human-Assessment Google Sheets schema
 
 metadata:
   project: Literature Review (AI Literacy & Bias in Social Work)
-  last_updated: 2026-02-02
-  status: draft
+  last_updated: 2026-02-18
+  status: active
   changelog:
+    - "v1.2: Beispiele fuer Bias_Ungleichheit, Gender, Diversitaet, Fairness ergaenzt. Doku synchronisiert."
     - "v1.1: KI_Sonstige zur Inklusions-Logik hinzugefügt (algorithmische Systeme in Sozialer Arbeit)"
 
 categories:
@@ -82,6 +83,11 @@ categories:
       oder strukturelle Benachteiligung im KI-Kontext.
     type: binary
     group: sozial
+    examples_positive:
+      - "Analyse von Racial Bias in LLM-Outputs"
+      - "Algorithmische Diskriminierung bei Kreditvergabe"
+    examples_negative:
+      - "Allgemeine KI-Performance-Studie ohne Bias-Fokus"
 
   - name: Gender
     definition: >
@@ -89,6 +95,11 @@ categories:
       Analyse von Gender-Bias.
     type: binary
     group: sozial
+    examples_positive:
+      - "Gender-Bias in Sprachmodellen"
+      - "Geschlechterstereotype in KI-generierten Bildern"
+    examples_negative:
+      - "Demografische Daten enthalten Geschlecht, aber kein Gender-Fokus"
 
   - name: Diversitaet
     definition: >
@@ -96,6 +107,11 @@ categories:
       verschiedener Gruppen.
     type: binary
     group: sozial
+    examples_positive:
+      - "Inklusive KI-Entwicklung mit marginalisierten Communities"
+      - "Repraesentation verschiedener Ethnien in Trainingsdaten"
+    examples_negative:
+      - "Diverse Methoden verwendet (methodische Diversitaet, nicht sozial)"
 
   - name: Feministisch
     definition: >
@@ -119,6 +135,11 @@ categories:
       oder Fairness-Metriken.
     type: binary
     group: sozial
+    examples_positive:
+      - "Fairness-Metriken fuer Klassifikationsmodelle"
+      - "Fair ML Frameworks und Debiasing-Strategien"
+    examples_negative:
+      - "Allgemeine Ethik-Diskussion ohne spezifischen Fairness-Bezug"
 
 decision:
   field: Decision
