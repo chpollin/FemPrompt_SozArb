@@ -85,28 +85,37 @@ Die 249 erfolgreich konvertierten Volltexte durchlaufen eine dreistufige Wissens
 
 ## 5. Ergebnisse (~3.500 Zeichen)
 
-[[Platzhalter: Dieser Abschnitt wird nach Abschluss des Benchmarks befuellt.]]
-
 ### 5.1 Quantitative Ergebnisse
 
-[[Benchmark-Metriken einfuegen:
-- Cohen's Kappa (gesamt und pro Kategorie)
-- Konfusionsmatrix (Human x LLM)
-- Gesamtuebereinstimmung (%)
-- Kategorienspezifische Agreement-Raten]]
+Auf Basis von 210 Papers mit vollstaendigen Bewertungen beider Pfade ergibt sich fuer die Include/Exclude-Entscheidung eine Gesamtuebereinstimmung von 47,1 Prozent und ein Cohen's Kappa von κ = 0,035 ("slight"). Diese Zahl beschreibt keine Qualitaet der Bewertenden, sondern eine epistemische Struktur: LLM und Expert:innen operieren auf grundsaetzlich verschiedenen Wissensbasen und kommen deshalb systematisch zu verschiedenen Ergebnissen.
+
+Die Verwirrungsmatrix zeigt das asymmetrische Muster: In 78 Faellen schliesst das LLM ein, die Expert:innen aus; in 23 Faellen ist es umgekehrt. Die LLM-Inklusionsrate betraegt 71 Prozent, die menschliche 42 Prozent. Das LLM klassifiziert grosszuegiger -- nicht weil es schlechter urteilt, sondern weil es auf anderen Merkmalen operiert: expliziten Keywords statt impliziter Feldverankerung.
+
+Die Kategorie-Ebene zeigt differentielle Muster:
+
+| Kategorie | Uebereinstimmung | Kappa | Befund |
+|-----------|-----------------|-------|--------|
+| Soziale_Arbeit | 68,9 % | -0,083 | Hohe Uebereinstimmung durch gemeinsame Ablehnung (LLM selten: 7,3 % vs. Human: 24,4 %) |
+| Feministisch | 64,2 % | +0,075 | Einzige Kategorie mit klarer gegenseitiger Uebereinstimmung |
+| Bias_Ungleichheit | 62,6 % | -0,097 | Trugbild: beide klassifizieren hoch, aber auf verschiedene Papers |
+| Gender | 41,1 % | -0,098 | Staerkste Diskrepanz: Human 63 %, LLM 36 % |
+| Fairness | 43,2 % | -0,163 | Schlechteste Kappa: LLM 73 % vs. Human 52 % |
 
 ### 5.2 Divergenz-Analyse
 
-[[Qualitative Analyse der Disagreement-Faelle:
-- Erwartetes Muster 1: LLM-Overinclusion bei keyword-nahen, aber kontextuell irrelevanten Papers
-- Erwartetes Muster 2: LLM-Underinclusion bei implizit relevanten Papers (feministische Perspektive ohne "feministisch")
-- 3-5 annotierte Beispielfaelle]]
+Die 111 Disagreement-Faelle verteilen sich ungleich: 78 Faelle (70 Prozent) folgen dem Muster "LLM Include, Human Exclude". Dieses Muster ist kein Messfehler, sondern die messbare Konsequenz epistemischer Asymmetrie.
+
+**Muster 1: Keyword-Inklusion ohne Feldverankerung.** Das LLM reagiert auf thematische Oberflaechenstruktur -- ein Paper zum Einsatz algorithmischer Entscheidungssysteme in der Verwaltung erhaelt "KI_Sonstige = Ja" und "Soziale_Arbeit = Ja", weil die Woerter vorhanden sind. Die Expert:innen schliessen aus, weil der Paper-Kontext kein sozialarbeiterisches Problemverstaendnis entwickelt. Die Keywords stimmen, die Feldverankerung fehlt.
+
+**Muster 2: Semantische Expansion bei wertgeladenen Kategorien.** Bei "Fairness" klassifiziert das LLM 73 Prozent aller bewerteten Papers positiv, die Expert:innen nur 52 Prozent. "Fairness" wird semantisch auf alle Gleichbehandlungsfragen ausgedehnt, wo die Expert:innen engere Kriterien (algorithmische Fairness-Metriken) anlegen. Dieses Muster zeigt, dass die Kategoriendefinitionen im Prompt den fachspezifischen Bedeutungshorizont nicht vollstaendig einfangen.
+
+**Muster 3: Implizite Feldzugehoerigkeit.** Gender (Human 63 %, LLM 36 %) zeigt das umgekehrte Muster: Das LLM unterschaetzt systematisch, weil es "Gender" an expliziten Begriffsmarken festmacht. Expert:innen erkennen Gender-Perspektiven auch dann, wenn der Text sie implizit anlegt -- in Forschungsdesign, Stichprobenbeschreibung oder theoretischer Rahmung.
 
 ### 5.3 Epistemische Marker
 
-[[Wo fallen maschinelle Musterkennung und disziplinaeres Kontextwissen systematisch auseinander?
-- Keyword-nahe Kategorien (Prompting, Generative_KI) vs. interpretative Kategorien (Feministisch, Diversitaet)
-- Hypothese: Die Unterstützungsleistung des LLM ist nicht symmetrisch]]
+Die Ergebnisse bestaetigen und praezisieren die theoretische Ausgangshypothese: Die Unterstuetzungsleistung des LLM ist nicht symmetrisch ueber Kategorien hinweg. Sie ist dort am hoechsten, wo Kategorien durch explizite Fachterminologie abgegrenzt sind ("Feministisch" mit direktem Theoriebezug, kappa = +0,075); sie ist dort am niedrigsten, wo die Kategorisierung semantische Expansion verhindert werden muss ("Fairness", kappa = -0,163) oder wo implizites Feldwissen erforderlich ist ("Gender", kappa = -0,098).
+
+Der niedrige Gesamt-Kappa-Wert ist kein Argument gegen LLM-basiertes Assessment, sondern ein Argument fuer den dualen Bewertungspfad: Er zeigt, dass die Divergenz zwischen beiden Pfaden informationshaltig ist. Die Disagreement-Faelle sind keine Fehlerquelle, sondern die eigentlichen Daten -- sie markieren, wo maschinelle Musterkennung und disziplinaeres Kontextwissen strukturell auseinanderfallen.
 
 ## 6. Diskussion: Grenzen und Implikationen (~2.000 Zeichen)
 

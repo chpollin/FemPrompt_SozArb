@@ -1,8 +1,8 @@
 # Status (2026-02-18)
 
-## Aktueller Fokus: Benchmark ausfuehren (M6) + Paper iterieren
+## Aktueller Fokus: Paper fertigstellen (M7-M8)
 
-M3-M5 abgeschlossen: Deep-Research-Prompt-Template restauriert, papers_full.csv generiert (326 Papers), 10K LLM Assessment ausgefuehrt (326/326, 232 Include, 94 Exclude, ~$1.44). Naechster Schritt: Google Sheets Export fuer Human Assessment -> Merge -> Cohen's Kappa berechnen.
+M1-M6 abgeschlossen. Benchmark-Ergebnisse liegen vor (κ = 0,035, 210 Papers, 111 Disagreements). Abschnitt 5 im Paper-Draft befuellt. Naechster Schritt: Zeichenzaehlung pruefen, Paper auf 18.000 Zeichen bringen, Review mit Co-Autor:innen.
 
 ---
 
@@ -47,23 +47,43 @@ M3-M5 abgeschlossen: Deep-Research-Prompt-Template restauriert, papers_full.csv 
 - [x] Ergebnis: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude)
 - Commit: (siehe Git-Log)
 
-### M6: Teilmengen-Benchmark ausfuehren
+### M6: Teilmengen-Benchmark ausfuehren -- ABGESCHLOSSEN
 
-**BLOCKER:** Frische Google-Sheets-CSV benoetigt (Susi/Sabine muessen aktuellen Stand exportieren).
+- [x] Human Assessment CSV exportiert (`benchmark/data/human_assessment.csv`, 304 Papers, 210 mit Decision)
+- [x] `merge_assessments.py` ausgefuehrt: 304 Papers mit beiden Assessments, 22 LLM-only
+- [x] `calculate_agreement.py` ausgefuehrt: Cohen's Kappa berechnet
+- [x] `analyze_disagreements.py` ausgefuehrt: 111 Disagreements identifiziert
+- [x] Ergebnisse in `benchmark/results/` dokumentiert
+- Commit: `07c4ac6`
 
-Vorbereitung abgeschlossen:
-- LLM-Assessment: `benchmark/data/llm_assessment_10k.csv` (326/326, bereit)
-- Merge-Script: `benchmark/scripts/merge_assessments.py` (bereit, Schnittmenge ueber Zotero_Key)
-- Kappa-Script: `benchmark/scripts/calculate_agreement.py` (bereit)
-- Disagreement-Script: `benchmark/scripts/analyze_disagreements.py` (bereit)
+**Kernergebnisse:**
 
-Ausstehend (nach HA-Export):
-- [ ] **Google Sheets exportieren** -> als `benchmark/data/human_assessment.csv` ablegen
-- [ ] `merge_assessments.py` ausfuehren (ergibt ~200 Papers Schnittmenge)
-- [ ] `calculate_agreement.py` ausfuehren (Cohen's Kappa pro Kategorie)
-- [ ] `analyze_disagreements.py` ausfuehren (Severity-Ranking)
-- [ ] Ergebnisse in `benchmark/results/` dokumentieren
-- Abhaengigkeit: Human Assessment (mind. ~200 Papers bewertet)
+| Metrik | Wert | Interpretation |
+|--------|------|----------------|
+| Papers mit beiden Assessments | 210 (mit Decision) | Benchmark-Basis |
+| Decision: Gesamtuebereinstimmung | 47,1 % | -- |
+| Decision: Cohen's Kappa | 0,035 | "slight" |
+| Mittlere Kategorie-Uebereinstimmung | 53,8 % | -- |
+| LLM Include-Rate | 71,2 % (232/326) | vs. Human 42 % |
+| Human Include-Rate | 42 % (88/210) | -- |
+| Disagreements gesamt | 111 | 78 LLM-Include/Human-Exclude |
+
+**Kategoriespezifische Kappa-Werte:**
+
+| Kategorie | Uebereinstimmung | Kappa |
+|-----------|-----------------|-------|
+| Soziale_Arbeit | 68,9 % | -0,083 |
+| Feministisch | 64,2 % | +0,075 (beste) |
+| Bias_Ungleichheit | 62,6 % | -0,097 |
+| KI_Sonstige | 51,5 % | +0,048 |
+| Diversitaet | 50,6 % | +0,024 |
+| Prompting | 52,4 % | -0,066 |
+| AI_Literacies | 54,6 % | -0,018 |
+| Generative_KI | 49,4 % | -0,004 |
+| Gender | 41,1 % | -0,098 |
+| Fairness | 43,2 % | -0,163 (schlechteste) |
+
+**Interpretation:** Der niedrige Kappa-Wert ist kein Messfehler, sondern der messbare Ausdruck epistemischer Asymmetrie. LLM und Expert:innen operieren auf verschiedenen Wissensbasen. Die Divergenz ist informationshaltig -- sie markiert, wo maschinelle Musterkennung und disziplinaeres Kontextwissen strukturell auseinanderfallen.
 
 ### M7: Ergebnisse ins Paper einarbeiten
 
@@ -255,11 +275,13 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - [x] Korpus-CSV generiert (`benchmark/data/papers_full.csv`, 326 Zeilen, Is_Duplicate + Has_HA Flags)
 - [x] 10K LLM Assessment ausgefuehrt (326/326, $1.44, `benchmark/data/llm_assessment_10k.csv`)
 - [x] Assessment-Ordner restrukturiert (`assessment/human/`, `assessment/llm-5d/`, Altdateien in `benchmark/` bereinigt)
-- [ ] **Google Sheets Export** (aktuelle Human-Assessment-CSV exportieren, als `benchmark/data/human_assessment.csv` ablegen) -- BLOCKER
-- [ ] Teilmengen-Benchmark ausfuehren (merge + kappa + disagreements)
-- [ ] Benchmark-Ergebnisse ins Paper einarbeiten
+- [x] **Google Sheets Export** (Human Assessment CSV, 304 Papers, 210 mit Decision)
+- [x] Teilmengen-Benchmark ausgefuehrt (merge + kappa + disagreements, κ = 0,035)
+- [x] Benchmark-Ergebnisse ins Paper eingearbeitet (Abschnitt 5 befuellt)
+- [ ] Paper finalisieren: Zeichenzaehlung pruefen und auf 18.000 Zeichen bringen
+- [ ] Review-Runde mit Co-Autor:innen
 - [ ] Vault-Building (Obsidian) + GitHub Pages
-- [ ] Paper finalisieren und einreichen (Deadline 4. Mai 2026)
+- [ ] Paper einreichen (Deadline 4. Mai 2026)
 
 ---
 

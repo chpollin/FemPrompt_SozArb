@@ -279,10 +279,10 @@ Scripts in `benchmark/scripts/`:
 | Script | Funktion | Status |
 |--------|----------|--------|
 | `generate_papers_csv.py` | Zotero JSON -> papers_full.csv | Fertig |
-| `run_llm_assessment.py` | LLM-Assessment mit YAML-Schema | Fertig (326/326) |
-| `merge_assessments.py` | Human + LLM zusammenfuehren | Wartet auf HA-Export |
-| `calculate_agreement.py` | Cohen's Kappa berechnen | Wartet auf Merge |
-| `analyze_disagreements.py` | Qualitative Analyse | Wartet auf Kappa |
+| `run_llm_assessment.py` | LLM-Assessment mit YAML-Schema | Fertig (326/326, $1.44) |
+| `merge_assessments.py` | Human + LLM zusammenfuehren | Fertig (304 Papers, 210 mit Decision) |
+| `calculate_agreement.py` | Cohen's Kappa berechnen | Fertig (Decision κ = 0,035) |
+| `analyze_disagreements.py` | Qualitative Analyse | Fertig (111 Disagreements) |
 
 Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit Human-Assessment)
 
@@ -305,12 +305,25 @@ Human-Assessment (Google Sheets Export) --> human_assessment.csv            +---
 
 | Metrik | V1 (50 Papers) | V2 (50 Papers) | Volllauf v2.1 (326 Papers) |
 |--------|----------------|----------------|---------------------------|
-| Inkonsistenzen | 20% | 6% | (ausstehend) |
-| Feministisch erkannt | 0 | 8 | (ausstehend) |
+| Inkonsistenzen | 20% | 6% | -- |
+| Feministisch erkannt | 0 | 8 | 48 (29,6 %) |
 | Include | -- | -- | 232 (71.2%) |
 | Exclude | -- | -- | 94 (28.8%) |
 
 **Volllauf:** `benchmark/data/llm_assessment_10k.csv` (326/326, $1.44, Prompt v2.1)
+
+### Benchmark-Ergebnisse (Abgeschlossen)
+
+| Metrik | Wert | Interpretation |
+|--------|------|----------------|
+| Benchmark-Basis | 210 Papers (mit beiden Assessments + Decision) | -- |
+| Decision: Gesamtuebereinstimmung | 47,1 % | -- |
+| Decision: Cohen's Kappa | 0,035 | "slight" |
+| Mittlere Kategorie-Uebereinstimmung | 53,8 % | -- |
+| LLM Include-Rate | 71,2 % | vs. Human 42 % |
+| Disagreements | 111 (davon 78 LLM-Include/Human-Exclude) | -- |
+
+**Interpretation:** Der Kappa-Wert quantifiziert die epistemische Asymmetrie: LLM und Expert:innen operieren auf verschiedenen Wissensbasen. Die Divergenz ist methodisch informationshaltig -- sie zeigt, wo keyword-basierte Musterkennung und disziplinaeres Kontextwissen auseinanderfallen. Beste Kategorie: Feministisch (κ = +0,075). Schlechteste: Fairness (κ = -0,163). Vollstaendige Ergebnisse: `benchmark/results/agreement_metrics.json`.
 
 ---
 
@@ -335,8 +348,8 @@ Alle Pipeline-Scripts liegen in `pipeline/scripts/`, sind unabhaengige CLI-Tools
 | 5. Human Review | `markdown_reviewer.html` | Stichprobe ~10% (25/252 geprueft) | Fertig |
 | 6. Knowledge Distillation | `distill_knowledge.py` | `pipeline/markdown/` -> `pipeline/knowledge/distilled/` (249) | Fertig |
 | 7. Qualitaetspruefung | `verify_knowledge_quality.py` | 242/249 perfekt (97.2%) | Fertig |
-| 8. Assessment (dual) | Human (Google Sheets) + LLM (5D fertig, 10K wartet) | | In Arbeit |
-| 9. Benchmark | `merge_assessments.py` + `calculate_agreement.py` | | Wartet |
+| 8. Assessment (dual) | Human (Google Sheets) + LLM 10K | 210 Papers mit beiden Assessments | Fertig |
+| 9. Benchmark | `merge_assessments.py` + `calculate_agreement.py` | Decision κ = 0,035, 111 Disagreements | Fertig |
 | 10. Vault | `generate_vault.py` | `pipeline/knowledge/distilled/` -> `vault/` | Wartet |
 
 Detaillierte technische Dokumentation: `knowledge/technical.md`

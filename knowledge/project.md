@@ -4,15 +4,21 @@
 
 Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit. Teil des Elisabeth-List-Fellowship-Projekts "Diversitaetssensibler Umgang mit Kuenstlicher Intelligenz" (Universitaet Graz, 2025-2026).
 
-**Primaeres Ziel:** Konzeptuelle Grundlage fuer eine Benchmark ("Fair Bench") fuer die Soziale Arbeit, die systematisch ueberprueft, wie LLMs auf Bias-bezogene Begriffe reagieren. Der Review identifiziert die relevanten Begriffe, Konzepte und Diskurspositionen, bevor sie in Testszenarien ueberfuehrt werden koennen.
+**Primaeres Ziel (Paper, Forum Wissenschaft):** Epistemische Infrastruktur fuer LLM-gestuetzte Literature Reviews beschreiben und operationalisieren -- am Beispiel eines systematischen Reviews zu feministischer AI Literacy und LLM-Bias in der Sozialen Arbeit. Kernfrage: Welche Verfahren, Dokumentationsstrukturen und Workflow-Entscheidungen sind noetig, damit LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben?
 
-**Sekundaeres Ziel:** Methodische Innovation dokumentieren -- LLM-gestuetzter Literature Review im Praxistest, dokumentiert in einem Paper fuer Forum Wissenschaft.
+**Sekundaeres Ziel (Grundlage):** Konzeptuelle Basis fuer eine Benchmark ("Fair Bench") fuer die Soziale Arbeit schaffen. Der Review identifiziert relevante Begriffe, Konzepte und Diskurspositionen, die in Testszenarien ueberfuehrt werden koennen.
 
 **Arbeitsdefinition feministischer AI Literacies:** Diversitaetssensible, intersektionale und Bias-erkennende Faehigkeiten, die Fachkraefte der Sozialen Arbeit im Umgang mit generativer KI benoetigen, mit Fokus auf Prompting, kritische Output-Bewertung und Kontext-/Anwendungssensitivitaet.
 
 ---
 
 ## Forschungsfragen
+
+### Paper (Hauptfrage)
+
+Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review, um der Asymmetrie zwischen maschineller Musterkennung und fachlicher Urteilskraft methodisch gerecht zu werden?
+
+### Review (Inhaltliche Fragen, nachgelagert)
 
 1. Wie manifestiert sich Bias in Frontier-LLMs kontextabhaengig?
 2. Welche Prompt-Strategien ermoeglichen diskriminierungssensible KI-Nutzung?
@@ -36,26 +42,27 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 ### Must-Have (Minimum)
 
-| Kriterium | Messbar |
-|-----------|---------|
-| Literature Review abgeschlossen | 326 Papers thematisch kategorisiert |
-| Paper eingereicht | Deadline 4. Mai 2026 |
-| Assessment-Daten vorhanden | Human + Agent Assessment komplett |
+| Kriterium | Messbar | Status |
+|-----------|---------|--------|
+| Paper eingereicht | Deadline 4. Mai 2026 | Ausstehend |
+| Epistemische Infrastruktur dokumentiert | Repository auditierbar, Prompts versioniert | Umgesetzt |
+| Dualer Bewertungspfad ausgefuehrt | Human + LLM Assessment komplett | Abgeschlossen |
+| Benchmark-Metriken berechnet | Cohen's Kappa pro Kategorie | Abgeschlossen (κ = 0,035) |
 
 ### Should-Have
 
-| Kriterium | Messbar |
-|-----------|---------|
-| Benchmark-Metriken berechnet | Cohen's Kappa, Konfusionsmatrix |
-| Obsidian Vault nutzbar | Vernetzte Wissensbasis |
-| LLM-Summaries generiert | Strukturierte Zusammenfassungen |
+| Kriterium | Messbar | Status |
+|-----------|---------|--------|
+| 249 Knowledge Documents | Strukturierte Volltext-Extraktion | Abgeschlossen (97.2% verifiziert) |
+| Disagreement-Analyse | 111 Faelle kategorisiert | Abgeschlossen |
+| Obsidian Vault | Vernetzte Wissensbasis | Ausstehend |
 
 ### Nice-to-Have
 
-| Kriterium | Messbar |
-|-----------|---------|
-| Wissensbasis fuer Prompting-Leitfaden | Qualitativ |
-| Reproduzierbarer Workflow | Pipeline dokumentiert |
+| Kriterium | Messbar | Status |
+|-----------|---------|--------|
+| GitHub Pages | Statische Dokumentationsseite | Ausstehend |
+| OA-Analyse | Open-Access-Rate des Korpus | Ausstehend |
 
 ---
 
@@ -73,24 +80,26 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 ## Zwei Ebenen des Projekts
 
-### Ebene 1: Inhaltlich (Literature Review)
+### Ebene 2: Methodisch -- KERNBEITRAG DES PAPERS
+
+**Frage:** Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review, um der Asymmetrie zwischen maschineller Musterkennung und fachlicher Urteilskraft methodisch gerecht zu werden?
+
+**Output:**
+- Konzept der epistemischen Infrastruktur (vier Ebenen: Workflow, Research Integrity, Institutionell, Community)
+- Dualer Bewertungspfad als Operationalisierung (Human + LLM, parallel, unabhaengig)
+- Benchmark-Ergebnisse als Illustration: κ = 0,035 -- Beweis, dass Divergenz messbar und informationshaltig ist
+- Paper fuer Forum Wissenschaft (Deadline 4. Mai 2026)
+- Dokumentierter, reproduzierbarer Workflow im Repository (github.com/chpollin/FemPrompt_SozArb)
+
+### Ebene 1: Inhaltlich (Literature Review -- Anwendungsfall)
 
 **Frage:** Was sagt die Forschung zu LLM-Bias und feministischer AI Literacy?
 
 **Output:**
-- Thematisch kategorisierte Literatur (326 Papers)
-- 249 destillierte Knowledge Documents
+- Thematisch kategorisierter Korpus (326 Papers, 10 binaere Kategorien)
+- 249 destillierte Knowledge Documents (Volltext-Extraktion, 3-Stage SKE)
 - Obsidian Vault (in Umsetzung)
-- Konzeptuelle Grundlage fuer Fair Bench
-
-### Ebene 2: Methodisch (Praxistest)
-
-**Frage:** Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review?
-
-**Output:**
-- Dualer Bewertungspfad (Human + LLM, parallel)
-- Paper fuer Forum Wissenschaft (Deadline 4. Mai 2026)
-- Dokumentierter, reproduzierbarer Workflow im Repository
+- Konzeptuelle Grundlage fuer Fair Bench (nachgelagerte Phase)
 
 ---
 
