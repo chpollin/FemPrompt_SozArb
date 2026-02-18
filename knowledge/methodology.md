@@ -108,7 +108,7 @@ Der Workflow verwendet zwei LLM-Assessment-Systeme fuer unterschiedliche Aufgabe
 | System | Schema | Skala | Zweck | Status |
 |--------|--------|-------|-------|--------|
 | **5D** | 5 Relevanz-Dimensionen | Ordinal (0-3) | Exploratives Screening und Priorisierung | Fertig (325/325) |
-| **10K** | 10 binaere Kategorien | Ja/Nein | Benchmark gegen Human-Assessment (Cohen's Kappa) | Code bereit, nicht ausgefuehrt |
+| **10K** | 10 binaere Kategorien | Ja/Nein | Benchmark gegen Human-Assessment (Cohen's Kappa) | **Fertig (326/326, $1.44, 232 Include, 94 Exclude)** |
 
 **Warum zwei Systeme?** Das 5D-System wurde zuerst entwickelt, um das Korpus parametrisch zu screenen und Relevanz-Cluster zu identifizieren. Das 10K-System wurde spaeter eingefuehrt, als das Human-Assessment-Schema feststand (10 binaere Kategorien). Nur das 10K-System ist direkt mit dem Human-Assessment vergleichbar -- es verwendet das identische Schema. Das 5D-System ist ein eigenstaendiges Screening-Instrument, das andere Fragen beantwortet (Wie relevant ist ein Paper auf 5 Dimensionen?) als das 10K-System (Behandelt ein Paper Kategorie X ja oder nein?).
 
@@ -276,12 +276,13 @@ Detaillierte Dokumentation: `knowledge/paper/Referenzliteratur-Benchmark-Design.
 
 Scripts in `benchmark/scripts/`:
 
-| Script | Funktion |
-|--------|----------|
-| `run_llm_assessment.py` | LLM-Assessment mit YAML-Schema |
-| `merge_assessments.py` | Human + LLM zusammenfuehren |
-| `calculate_agreement.py` | Cohen's Kappa berechnen |
-| `analyze_disagreements.py` | Qualitative Analyse |
+| Script | Funktion | Status |
+|--------|----------|--------|
+| `generate_papers_csv.py` | Zotero JSON -> papers_full.csv | Fertig |
+| `run_llm_assessment.py` | LLM-Assessment mit YAML-Schema | Fertig (326/326) |
+| `merge_assessments.py` | Human + LLM zusammenfuehren | Wartet auf HA-Export |
+| `calculate_agreement.py` | Cohen's Kappa berechnen | Wartet auf Merge |
+| `analyze_disagreements.py` | Qualitative Analyse | Wartet auf Kappa |
 
 Konfiguration: `benchmark/config/categories.yaml` (10 Kategorien, synchron mit Human-Assessment)
 
@@ -300,12 +301,16 @@ Human-Assessment (Google Sheets Export) --> human_assessment.csv            +---
                                                                   (Cohen's Kappa)          (Severity-Ranking)
 ```
 
-### V2-Ergebnisse (50 Papers Test)
+### Ergebnis-Uebersicht
 
-| Metrik | V1 | V2 | Verbesserung |
-|--------|----|----|--------------|
-| Inkonsistenzen | 20% | 6% | -70% |
-| Feministisch erkannt | 0 | 8 | +8 |
+| Metrik | V1 (50 Papers) | V2 (50 Papers) | Volllauf v2.1 (326 Papers) |
+|--------|----------------|----------------|---------------------------|
+| Inkonsistenzen | 20% | 6% | (ausstehend) |
+| Feministisch erkannt | 0 | 8 | (ausstehend) |
+| Include | -- | -- | 232 (71.2%) |
+| Exclude | -- | -- | 94 (28.8%) |
+
+**Volllauf:** `benchmark/data/llm_assessment_10k.csv` (326/326, $1.44, Prompt v2.1)
 
 ---
 

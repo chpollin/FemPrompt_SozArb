@@ -89,11 +89,12 @@ Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `
 | `assessment-llm/write_llm_tags_to_zotero.py` | LLM-Tags in Zotero schreiben |
 | `assessment/create_thematic_assessment.py` | Excel fuer manuelles Assessment |
 | `assessment/excel_to_zotero_tags.py` | Excel-Tags in Zotero uebertragen |
-| `benchmark/scripts/run_llm_assessment.py` | Benchmark-Assessment (10K, nur 50-Paper-Test) |
+| `benchmark/scripts/generate_papers_csv.py` | Zotero JSON -> papers_full.csv (326 Zeilen) |
+| `benchmark/scripts/run_llm_assessment.py` | Benchmark-Assessment (10K, **326/326 ausgefuehrt**) |
 | `benchmark/scripts/run_phase2_pipeline.py` | Phase-2-Pipeline fuer Benchmark |
-| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenfuehren (nicht ausgefuehrt) |
-| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa berechnen (nicht ausgefuehrt) |
-| `benchmark/scripts/analyze_disagreements.py` | Qualitative Analyse (nicht ausgefuehrt) |
+| `benchmark/scripts/merge_assessments.py` | Human + LLM zusammenfuehren (wartet auf HA-Export) |
+| `benchmark/scripts/calculate_agreement.py` | Cohen's Kappa berechnen (wartet auf Merge) |
+| `benchmark/scripts/analyze_disagreements.py` | Qualitative Analyse (wartet auf Kappa) |
 
 ---
 
@@ -227,16 +228,18 @@ Das Tool erkennt `<!-- PAGE N -->` Marker im Markdown und zeigt jede Seite als s
 
 ### API-Kosten
 
-| Operation | Kosten |
-|-----------|--------|
-| PDF-Akquise | $0 |
-| Markdown-Konversion | $0 |
-| Validierung | $0 |
-| Post-Processing | $0 |
-| LLM-Assessment | ~$0.002/Paper |
-| Knowledge Distillation | ~$0.028/Paper |
+| Operation | Kosten | Status |
+|-----------|--------|--------|
+| PDF-Akquise | $0 | Abgeschlossen |
+| Markdown-Konversion | $0 | Abgeschlossen |
+| Validierung | $0 | Abgeschlossen |
+| Post-Processing | $0 | Abgeschlossen |
+| 5D LLM-Assessment (325 Papers) | $1.15 | Abgeschlossen |
+| Knowledge Distillation (249 Papers) | ~$7.00 | Abgeschlossen |
+| 10K LLM-Assessment (326 Papers) | $1.44 | **Abgeschlossen** |
+| **Gesamt** | **~$10.17** | |
 
-**Modell:** Claude Haiku 4.5 ($0.80/MTok Input, $4.00/MTok Output)
+**Modell:** Claude Haiku 4.5 ($1.00/MTok Input, $5.00/MTok Output, Preise Stand Feb 2026)
 
 ---
 

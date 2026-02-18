@@ -1,8 +1,8 @@
 # Status (2026-02-18)
 
-## Aktueller Fokus: Benchmark vorbereiten + Paper iterieren
+## Aktueller Fokus: Benchmark ausfuehren (M6) + Paper iterieren
 
-Knowledge-Base konsolidiert (Dateien umbenannt, Redundanzen eliminiert). Paper-Entwurf mit epistemischer Infrastruktur als Leitkonzept liegt im Repo. Drei Untersuchungen abgeschlossen: 21 fehlende Papers erklaert, Deep-Research-Prompts teilweise rekonstruiert, 10K-Assessment-Prompt geprueft.
+M3-M5 abgeschlossen: Deep-Research-Prompt-Template restauriert, papers_full.csv generiert (326 Papers), 10K LLM Assessment ausgefuehrt (326/326, 232 Include, 94 Exclude, ~$1.44). Naechster Schritt: Google Sheets Export fuer Human Assessment -> Merge -> Cohen's Kappa berechnen.
 
 ---
 
@@ -49,12 +49,21 @@ Knowledge-Base konsolidiert (Dateien umbenannt, Redundanzen eliminiert). Paper-E
 
 ### M6: Teilmengen-Benchmark ausfuehren
 
-- [ ] Google Sheets exportieren (aktueller Stand, ~2/3 fertig)
-- [ ] `merge_assessments.py` ausfuehren (Merge ueber Zotero_Key)
-- [ ] `calculate_agreement.py` ausfuehren (Cohen's Kappa)
-- [ ] `analyze_disagreements.py` ausfuehren
-- [ ] Ergebnisse dokumentieren
-- Abhaengigkeit: M5 + Human Assessment (mind. ~200 Papers)
+**BLOCKER:** Frische Google-Sheets-CSV benoetigt (Susi/Sabine muessen aktuellen Stand exportieren).
+
+Vorbereitung abgeschlossen:
+- LLM-Assessment: `benchmark/data/llm_assessment_10k.csv` (326/326, bereit)
+- Merge-Script: `benchmark/scripts/merge_assessments.py` (bereit, Schnittmenge ueber Zotero_Key)
+- Kappa-Script: `benchmark/scripts/calculate_agreement.py` (bereit)
+- Disagreement-Script: `benchmark/scripts/analyze_disagreements.py` (bereit)
+
+Ausstehend (nach HA-Export):
+- [ ] **Google Sheets exportieren** -> als `benchmark/data/human_assessment_fresh.csv` ablegen
+- [ ] `merge_assessments.py` ausfuehren (ergibt ~200 Papers Schnittmenge)
+- [ ] `calculate_agreement.py` ausfuehren (Cohen's Kappa pro Kategorie)
+- [ ] `analyze_disagreements.py` ausfuehren (Severity-Ranking)
+- [ ] Ergebnisse in `benchmark/results/` dokumentieren
+- Abhaengigkeit: Human Assessment (mind. ~200 Papers bewertet)
 
 ### M7: Ergebnisse ins Paper einarbeiten
 
@@ -136,9 +145,9 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | ~2/3 fertig |
-| **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
-| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Bereit (Prompt geprueft) |
+| **Human** | Google Sheets | 10 binaere Kategorien | ~2/3 fertig (BLOCKER fuer M6) |
+| **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (325/325) |
+| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | **Fertig (326/326)** |
 
 ### Human Assessment
 
@@ -158,14 +167,15 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 | Kosten | $1.15 |
 | Output | `assessment-llm/output/assessment_llm.xlsx` |
 
-### LLM Assessment (10 Kategorien - fuer Benchmark)
+### LLM Assessment (10 Kategorien - abgeschlossen)
 
 | Aspekt | Stand |
 |--------|-------|
 | Script | `benchmark/scripts/run_llm_assessment.py` |
-| Prompt-Status | Code-Prompt OK, Doku veraltet |
-| Geschaetzte Kosten | ~$1.50 |
-| Status | Bereit (nach Korpus-Klaerung) |
+| Prompt-Status | Code-Prompt und Doku synchronisiert (v2.1) |
+| Tatsaechliche Kosten | $1.44 |
+| Status | **Fertig** -- 326/326 Papers, 232 Include, 94 Exclude |
+| Output | `benchmark/data/llm_assessment_10k.csv` |
 
 ---
 
@@ -220,9 +230,8 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 | Punkt | Prioritaet |
 |---|---|
-| Ergebnis-Abschnitt befuellen (nach Benchmark) | Hoch (blockiert) |
+| Ergebnis-Abschnitt befuellen (nach Benchmark) | Hoch (blockiert bis M6) |
 | Zeichenzaehlung + Kuerzung auf 18.000 | Mittel |
-| Deep-Research-Prompts rekonstruieren und verlinken | Mittel |
 | Finale Review mit Co-Autor:innen | Nach Benchmark |
 
 ---
@@ -241,11 +250,12 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - [x] Paper im Repo einrichten (paper-draft.md als Single Source of Truth)
 - [x] 21 fehlende Papers untersucht (temporale Divergenz, 6 Duplikate identifiziert)
 - [x] Deep-Research-Prompts untersucht (Template in Git-History, instanziierter Prompt verloren)
-- [x] 10K Assessment-Prompt geprueft (funktionsbereit, 3 Doku-Inkonsistenzen)
-- [ ] Deep-Research-Prompt-Template im Repo wiederherstellen
-- [ ] Korpus-Bereinigung (HA-CSV mit Zotero synchronisieren)
-- [ ] 10K LLM Assessment ausfuehren
-- [ ] Teilmengen-Benchmark ausfuehren
+- [x] 10K Assessment-Prompt geprueft und synchronisiert (3 Inkonsistenzen behoben, v2.1)
+- [x] Deep-Research-Prompt-Template im Repo wiederhergestellt (`prompts/deep-research-template.md`)
+- [x] Korpus-CSV generiert (`benchmark/data/papers_full.csv`, 326 Zeilen, Is_Duplicate + Has_HA Flags)
+- [x] 10K LLM Assessment ausgefuehrt (326/326, $1.44, `benchmark/data/llm_assessment_10k.csv`)
+- [ ] **Google Sheets Export** (aktuelle Human-Assessment-CSV von Susi/Sabine exportieren) -- BLOCKER
+- [ ] Teilmengen-Benchmark ausfuehren (merge + kappa + disagreements)
 - [ ] Benchmark-Ergebnisse ins Paper einarbeiten
 - [ ] Vault-Building (Obsidian) + GitHub Pages
 - [ ] Paper finalisieren und einreichen (Deadline 4. Mai 2026)

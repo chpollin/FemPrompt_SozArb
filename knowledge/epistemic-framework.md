@@ -10,12 +10,12 @@ Operationalisierung des Leitbegriffs "epistemische Infrastruktur" aus dem Paper 
 |---|---|---|---|---|
 | **Intransparenz** (justifikatorische Esoterik) | Unueberpruefbare Selektion durch Deep-Research-Modelle | Multi-Provider-Strategie (4 Modelle) + Selektions-Logging | `corpus/source_tool_mapping.json`, `deep-research/restored/` | Teilweise (Logging vorhanden, Audit ausstehend) |
 | **Konfabulation** | Erzeugung plausibler, aber falscher Aussagen | 3-Stage SKE mit deterministischer Stufe 2 + Verifikation Stufe 3 | `pipeline/knowledge/_verification/`, Confidence-Scores in Frontmatter | Umgesetzt |
-| **Sycophancy** | Prompt-induzierte Ueberattribuierung von Kategorien | Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung | `prompts/CHANGELOG.md`, negative Constraints in `benchmark/scripts/run_llm_assessment.py` | In Arbeit |
+| **Sycophancy** | Prompt-induzierte Ueberattribuierung von Kategorien | Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung | `prompts/CHANGELOG.md`, negative Constraints in `benchmark/scripts/run_llm_assessment.py` | Umgesetzt (v2.1: 5 negative Constraints, neutrale Rolle, Restriktivitaetsregel) |
 | **Paywall-Bias** | Systematische Unterrepraesentation kostenpflichtiger Literatur | Hierarchische Beschaffungsstrategie + OA-Disclosure | PRISMA Flow-Diagramm, Beschaffungsrate (257/326 = 79%) | Teilweise (Rate dokumentiert, OA-Analyse ausstehend) |
-| **Prompt-Kompetenz** | Ergebnisabhaengigkeit von Prompt-Qualitaet | Prompt-Governance: Versionierung, Review, Dokumentation | `prompts/CHANGELOG.md` | In Arbeit |
+| **Prompt-Kompetenz** | Ergebnisabhaengigkeit von Prompt-Qualitaet | Prompt-Governance: Versionierung, Review, Dokumentation | `prompts/CHANGELOG.md`, `prompts/deep-research-template.md` | Umgesetzt (5 Prompts versioniert, Deep-Research-Template restauriert) |
 | **Verantwortungsasymmetrie** | Keine zurechenbare Instanz auf LLM-Seite | Expert:innen-Pfad als epistemisch verbindlicher Referenzpfad | Human Assessment (Google Sheets), auditierbare Bewertungsdaten | Umgesetzt (Assessment laufend) |
 | **Anbieter-Divergenz** | Verschiedene Modelle liefern verschiedene Evidenzbasen | Multi-Provider-Vergleich, Overlap-Analyse | `corpus/papers_metadata.csv` (Source_Tool-Spalte), Provider-Statistiken | Teilweise (Verteilung dokumentiert, Overlap-Analyse ausstehend) |
-| **Ressourcenasymmetrie** | Ungleich verteilter Zugang zu Frontier-Modellen und Infrastruktur | Kosten-Transparenz, Open-Source-Pipeline wo moeglich | Kosten-Dokumentation ($8.73 gesamt), Docling (Open Source) | Dokumentiert |
+| **Ressourcenasymmetrie** | Ungleich verteilter Zugang zu Frontier-Modellen und Infrastruktur | Kosten-Transparenz, Open-Source-Pipeline wo moeglich | Kosten-Dokumentation ($10.17 gesamt: $7 SKE + $1.15 5D + $1.44 10K + $0.58 Sonstige), Docling (Open Source) | Dokumentiert |
 
 ---
 
@@ -162,9 +162,10 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 - [ ] OA-Analyse durchfuehren (Unpaywall-API)
 - [ ] Overlap-Analyse auf vollem Korpus (ueber `papers_metadata.csv`, nicht nur RIS)
-- [ ] Calibration Items definieren und testen
+- [x] Calibration Items: Negative Constraints implementiert (v2.1) -- formale Calibration-Items nicht umgesetzt (Nice-to-Have)
 - [ ] Eskalationsregel fuer Expert:innen-Review formalisieren
 - [ ] Institutional-Level: KI-Richtlinien-Bezug dokumentieren
+- [x] Sycophancy-Mitigation im 10K-Prompt: 5 negative Constraints, neutrale Rolle (v2.1)
 
 ---
 
