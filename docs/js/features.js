@@ -10,14 +10,14 @@ function initializeBenchmark() {
     const ok = [], fail = [];
     const run = (label, fn) => { try { fn(); ok.push(label); } catch(e) { fail.push(label); console.error(`[Benchmark] ${label}:`, e); } };
     run('metrics', renderBenchmarkMetrics);
+    run('radar', renderPerspectiveRadar);
+    run('overlap', renderOverlapTreemap);
     run('kappa-chart', renderKappaChart);
-    run('confusion', renderConfusionMatrix);
     run('disagreements', renderDisagreementsTable);
     const cm = vaultMeta.confusion_matrix || {};
     const dis = allPapers.filter(p => p.benchmark.has_human && p.benchmark.agreement === false).length;
     console.log(`[Benchmark] ok=[${ok.join(',')}]${fail.length ? ' FAIL=['+fail.join(',')+']' : ''} | κ=${(vaultMeta.kappa_overall||0).toFixed(3)} dis=${dis} II=${cm.Include_Include} EI=${cm.Exclude_Include}`);
 
-    // Severity filter
     const sev = document.getElementById('filter-severity');
     if (sev) sev.addEventListener('change', renderDisagreementsTable);
 }
@@ -28,38 +28,151 @@ function renderBenchmarkMetrics() {
     const container = document.getElementById('benchmark-metrics');
     if (!container) return;
 
-    const kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
-    const kappaInterp = vaultMeta.kappa_interpretation || '';
+    const cm = vaultMeta.confusion_matrix || {};
+    const ii = cm.Include_Include || 0;
+    const ei = cm.Exclude_Include || 0; // nur LLM Include
+    const ie = cm.Include_Exclude || 0; // nur Human Include
     const benchPapers = vaultMeta.benchmark_papers || 0;
-    const disagreements = allPapers.filter(p => p.benchmark.has_human && p.benchmark.agreement === false).length;
     const llmRate = vaultMeta.llm_include_rate || 0;
     const humanRate = vaultMeta.human_include_rate || 0;
+    const kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
 
     container.innerHTML = `
         <div class="metric-tile">
+            <span class="metric-value" style="color:#10b981;">${ii}</span>
+            <span class="metric-label">Gemeinsamer Kern</span>
+            <span class="metric-sub">beide: Include</span>
+        </div>
+        <div class="metric-tile">
+            <span class="metric-value" style="color:#3b82f6;">${ei}</span>
+            <span class="metric-label">LLM-Kandidaten</span>
+            <span class="metric-sub">nur LLM: Include</span>
+        </div>
+        <div class="metric-tile">
+            <span class="metric-value" style="color:#f97316;">${ie}</span>
+            <span class="metric-label">Human-Signal</span>
+            <span class="metric-sub">nur Human: Include</span>
+        </div>
+        <div class="metric-tile">
             <span class="metric-value kappa-value">${kappa}</span>
             <span class="metric-label">Cohen's Kappa</span>
-            <span class="metric-sub">${kappaInterp}</span>
-        </div>
-        <div class="metric-tile">
-            <span class="metric-value">${benchPapers}</span>
-            <span class="metric-label">Papers Benchmarked</span>
-            <span class="metric-sub">both Human + LLM</span>
-        </div>
-        <div class="metric-tile">
-            <span class="metric-value">${disagreements}</span>
-            <span class="metric-label">Disagreements</span>
-            <span class="metric-sub">LLM &ne; Human decision</span>
-        </div>
-        <div class="metric-tile">
-            <span class="metric-value">${llmRate}%</span>
-            <span class="metric-label">LLM Include Rate</span>
-            <span class="metric-sub">vs. ${humanRate}% Human</span>
+            <span class="metric-sub">LLM ${llmRate}% vs. Human ${humanRate}%</span>
         </div>
     `;
 }
 
-// ---- Kappa Chart (Chart.js horizontal bar) ----
+// ---- Perspektiv-Fingerabdruck: Radar-Chart ----
+
+let radarChartInstance = null;
+
+function renderPerspectiveRadar() {
+    const canvas = document.getElementById('radar-chart');
+    if (!canvas) return;
+
+    const CATS = Object.keys(kappas);
+    const humanRates = CATS.map(cat => Math.round(kappas[cat].human_yes_rate * 100));
+    const agentRates = CATS.map(cat => Math.round(kappas[cat].agent_yes_rate * 100));
+    const labels = CATS.map(c => c.replace(/_/g, ' '));
+
+    if (radarChartInstance) { radarChartInstance.destroy(); radarChartInstance = null; }
+
+    radarChartInstance = new Chart(canvas, {
+        type: 'radar',
+        data: {
+            labels,
+            datasets: [
+                {
+                    label: 'Human-Perspektive',
+                    data: humanRates,
+                    borderColor: '#059669',
+                    backgroundColor: 'rgba(5,150,105,0.12)',
+                    borderWidth: 2,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#059669'
+                },
+                {
+                    label: 'LLM-Perspektive',
+                    data: agentRates,
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59,130,246,0.10)',
+                    borderWidth: 2,
+                    pointRadius: 3,
+                    pointBackgroundColor: '#3b82f6'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { font: { size: 11 } } },
+                tooltip: { callbacks: {
+                    label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.r}%`
+                }}
+            },
+            scales: {
+                r: {
+                    beginAtZero: true, max: 100,
+                    ticks: { stepSize: 25, callback: v => v + '%', font: { size: 9 } },
+                    pointLabels: { font: { size: 10 } }
+                }
+            }
+        }
+    });
+}
+
+// ---- Overlap-Treemap (ersetzt Confusion Matrix) ----
+
+function renderOverlapTreemap() {
+    const container = document.getElementById('confusion-matrix-container');
+    if (!container) return;
+
+    const cm = vaultMeta.confusion_matrix || {};
+    const ii = cm.Include_Include || 0;  // Gemeinsamer Kern
+    const ei = cm.Exclude_Include || 0;  // nur LLM Include
+    const ie = cm.Include_Exclude || 0;  // nur Human Include
+    const ee = cm.Exclude_Exclude || 0;  // beide Exclude
+    const total = ii + ei + ie + ee;
+
+    function pct(n) { return total ? Math.round(n / total * 100) : 0; }
+
+    // Proportionale Zellgroessen via fr-Einheiten
+    const colLeft = ii + ie;   // Human-Include-Seite
+    const colRight = ei + ee;  // Human-Exclude-Seite
+
+    function cell(count, label, desc, color, light, quadrant) {
+        const safeQ = quadrant.replace(/,/g, "','");
+        return `
+        <div onclick="filterByQuadrant('${safeQ.split("','")[0]}','${safeQ.split("','")[1]}')"
+             title="${desc} -- Klick zum Filtern"
+             style="background:${light};border:2px solid ${color};border-radius:6px;padding:0.75rem 0.5rem;
+                    cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;
+                    min-height:90px;transition:opacity 0.15s;"
+             onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+            <span style="font-size:1.6rem;font-weight:700;color:${color};">${count}</span>
+            <span style="font-size:0.75rem;font-weight:600;color:${color};text-align:center;margin-top:2px;">${label}</span>
+            <span style="font-size:0.65rem;color:#6b7280;text-align:center;margin-top:2px;">${pct(count)}% &bull; ${desc}</span>
+        </div>`;
+    }
+
+    container.innerHTML = `
+        <div style="display:grid;grid-template-columns:${colLeft}fr ${colRight}fr;gap:6px;margin-bottom:6px;">
+            <div style="text-align:center;font-size:0.65rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;padding:2px 0;">Human: Include</div>
+            <div style="text-align:center;font-size:0.65rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;padding:2px 0;">Human: Exclude</div>
+        </div>
+        <div style="display:grid;grid-template-columns:${colLeft}fr ${colRight}fr;grid-template-rows:${Math.max(ii,ei)}fr ${Math.max(ie,ee)}fr;gap:6px;">
+            ${cell(ii, 'Gemeinsamer Kern', 'beide Include', '#10b981', '#d1fae5', 'Include,Include')}
+            ${cell(ei, 'LLM-Kandidaten', 'nur LLM Include', '#3b82f6', '#dbeafe', 'Exclude,Include')}
+            ${cell(ie, 'Human-Signal', 'nur Human Include', '#f97316', '#ffedd5', 'Include,Exclude')}
+            ${cell(ee, 'Beide Exclude', 'Konsens-Ausschluss', '#6b7280', '#f3f4f6', 'Exclude,Exclude')}
+        </div>
+        <p style="font-size:0.65rem;color:#9ca3af;margin-top:0.5rem;text-align:center;">
+            Zellgroesse proportional zur Anzahl &bull; n=${total} Papers &bull; Klick filtert Papers-Tab
+        </p>
+    `;
+}
+
+// ---- Kappa Chart (technisches Detail, Chart.js horizontal bar) ----
 
 let kappaChartInstance = null;
 
@@ -67,146 +180,70 @@ function renderKappaChart() {
     const container = document.getElementById('kappa-chart-container');
     if (!container) return;
 
-    // Build sorted data (worst to best kappa, so best is at top of horizontal chart)
     const kappaData = Object.entries(kappas).map(([cat, data]) => ({
-        category: cat.replace('_', ' '),
+        category: cat.replace(/_/g, ' '),
         kappa: data.kappa,
         agreement: data.agreement_pct,
+        humanRate: Math.round(data.human_yes_rate * 100),
+        agentRate: Math.round(data.agent_yes_rate * 100),
         n: data.n
-    })).sort((a, b) => a.kappa - b.kappa); // ascending -> worst at bottom, best at top
+    })).sort((a, b) => a.kappa - b.kappa);
 
-    const labels = kappaData.map(d => d.category);
-    const values = kappaData.map(d => d.kappa);
-    const colors = values.map(v => v > 0 ? '#10b981' : '#ef4444');
-    const borderColors = values.map(v => v > 0 ? '#059669' : '#dc2626');
-
-    // Create canvas if it doesn't exist
     container.innerHTML = '<canvas id="kappa-canvas"></canvas>';
     const canvas = document.getElementById('kappa-canvas');
 
-    if (kappaChartInstance) {
-        kappaChartInstance.destroy();
-        kappaChartInstance = null;
-    }
+    if (kappaChartInstance) { kappaChartInstance.destroy(); kappaChartInstance = null; }
+
+    // Color by divergence direction (not by kappa sign alone)
+    const colors = kappaData.map(d => {
+        const diff = d.agentRate - d.humanRate;
+        if (Math.abs(diff) < 5) return '#94a3b8';      // grau: kein relevanter Unterschied
+        return diff > 0 ? '#3b82f6' : '#f97316';        // blau: LLM mehr / orange: Human mehr
+    });
 
     kappaChartInstance = new Chart(canvas, {
         type: 'bar',
         data: {
-            labels,
+            labels: kappaData.map(d => d.category),
             datasets: [{
                 label: "Cohen's Kappa",
-                data: values,
+                data: kappaData.map(d => d.kappa),
                 backgroundColor: colors,
-                borderColor: borderColors,
-                borderWidth: 1
+                borderWidth: 0
             }]
         },
         options: {
             indexAxis: 'y',
-            responsive: true,
-            maintainAspectRatio: false,
+            responsive: true, maintainAspectRatio: false,
             plugins: {
                 legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: (ctx) => {
-                            const d = kappaData[ctx.dataIndex];
-                            return [
-                                `Kappa: ${d.kappa.toFixed(4)}`,
-                                `Agreement: ${d.agreement}%`,
-                                `n = ${d.n}`
-                            ];
-                        }
+                tooltip: { callbacks: {
+                    label: (ctx) => {
+                        const d = kappaData[ctx.dataIndex];
+                        const diff = d.agentRate - d.humanRate;
+                        return [
+                            `Kappa: ${d.kappa.toFixed(3)}`,
+                            `Human: ${d.humanRate}% | LLM: ${d.agentRate}% (${diff > 0 ? '+' : ''}${diff}pp)`,
+                            `n = ${d.n}`
+                        ];
                     }
-                }
+                }}
             },
             scales: {
-                x: {
-                    beginAtZero: false,
-                    grid: { color: '#e7e5e4' },
-                    ticks: { callback: v => v.toFixed(2) }
-                },
-                y: {
-                    grid: { display: false },
-                    ticks: { font: { size: 11 } }
-                }
+                x: { beginAtZero: false, ticks: { callback: v => v.toFixed(2) } },
+                y: { grid: { display: false }, ticks: { font: { size: 11 } } }
             }
         }
     });
 
-    // Ensure the container has sufficient height
     container.style.height = '300px';
     container.style.position = 'relative';
 }
 
-// ---- Confusion Matrix ----
-
-function renderConfusionMatrix() {
-    const container = document.getElementById('confusion-matrix-container');
-    if (!container) return;
-
-    const cm = vaultMeta.confusion_matrix || {};
-    const ii = cm.Include_Include || 0;
-    const ie = cm.Include_Exclude || 0;
-    const ei = cm.Exclude_Include || 0;
-    const ee = cm.Exclude_Exclude || 0;
-    const total = ii + ie + ei + ee;
-
-    function pct(n) { return total ? Math.round(n / total * 100) + '%' : '-'; }
-
-    container.innerHTML = `
-        <p style="font-size:0.7rem;color:var(--gray-400);margin-bottom:0.75rem;text-align:center;">
-            Zeilen = Human-Entscheidung &bull; Spalten = LLM-Entscheidung
-        </p>
-
-        <!-- Column headers -->
-        <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;margin-bottom:4px;">
-            <div></div>
-            <div style="text-align:center;font-size:0.7rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;padding:4px 0;">LLM: Include</div>
-            <div style="text-align:center;font-size:0.7rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;padding:4px 0;">LLM: Exclude</div>
-        </div>
-
-        <!-- Row 1: Human Include -->
-        <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;margin-bottom:4px;">
-            <div style="display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:0.7rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;">Human:<br>Include</div>
-            <div class="confusion-cell agreement" onclick="filterByQuadrant('Include','Include')" title="Click to filter papers">
-                <span class="cell-count">${ii}</span>
-                <span class="cell-label">Agreement</span>
-                <span class="cell-pct">${pct(ii)}</span>
-            </div>
-            <div class="confusion-cell disagreement" onclick="filterByQuadrant('Include','Exclude')" title="Click to filter papers">
-                <span class="cell-count">${ie}</span>
-                <span class="cell-label">Human wins</span>
-                <span class="cell-pct">${pct(ie)}</span>
-            </div>
-        </div>
-
-        <!-- Row 2: Human Exclude -->
-        <div style="display:grid;grid-template-columns:90px 1fr 1fr;gap:4px;">
-            <div style="display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font-size:0.7rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;">Human:<br>Exclude</div>
-            <div class="confusion-cell disagreement" onclick="filterByQuadrant('Exclude','Include')" title="LLM klassifiziert zu grosszuegig -- Klick zum Filtern" style="border-top-width:4px;">
-                <span class="cell-count" style="color:#dc2626;">${ei}</span>
-                <span class="cell-label">LLM overclassifies</span>
-                <span class="cell-pct">${pct(ei)}</span>
-            </div>
-            <div class="confusion-cell agreement" onclick="filterByQuadrant('Exclude','Exclude')" title="Click to filter papers">
-                <span class="cell-count">${ee}</span>
-                <span class="cell-label">Agreement</span>
-                <span class="cell-pct">${pct(ee)}</span>
-            </div>
-        </div>
-
-        <p style="font-size:0.65rem;color:var(--gray-400);margin-top:0.75rem;text-align:center;">
-            Klick auf eine Zelle filtert den Papers-Tab &bull; n = ${total} Papers
-        </p>
-    `;
-}
-
-// ---- Quadrant filter (from confusion matrix) ----
+// ---- Quadrant filter ----
 
 function filterByQuadrant(humanDec, llmDec) {
     switchTab('papers');
-    // Apply filter directly
     const filtered = allPapers.filter(p => {
         if (!p.benchmark.has_human || !p.human || !p.human.decision) return false;
         const hNorm = p.human.decision === 'Include' ? 'Include' : 'Exclude';
@@ -214,18 +251,16 @@ function filterByQuadrant(humanDec, llmDec) {
         return hNorm === humanDec && lNorm === llmDec;
     });
     filteredPapers = filtered;
-    // Update filter UI to reflect
     const decEl = document.getElementById('filter-decision');
     if (decEl) decEl.value = llmDec;
     const humEl = document.getElementById('filter-human');
     if (humEl) humEl.value = 'has_human';
-    // Reset category chips
     activeCategories.clear();
     document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('active'));
     renderPapers(filteredPapers);
 }
 
-// ---- Disagreements Table ----
+// ---- Divergenz-Faelle Tabelle ----
 
 function renderDisagreementsTable() {
     const container = document.getElementById('disagreements-table-container');
@@ -250,25 +285,26 @@ function renderDisagreementsTable() {
     });
 
     if (disagreements.length === 0) {
-        container.innerHTML = '<p style="color:var(--gray-400);padding:1rem;">Keine Disagreements fuer diesen Filter.</p>';
+        container.innerHTML = '<p style="color:var(--gray-400);padding:1rem;">Keine Eintraege fuer diesen Filter.</p>';
         return;
     }
 
     const rows = disagreements.map(p => {
         const sev = p.benchmark.severity || '';
         const sevClass = `severity-${sev}`;
-        const disType = (p.benchmark.disagreement_type || '').replace(/_/g, ' ');
         const cats = (p.benchmark.affected_categories || []).slice(0, 3).join(', ');
         const humanDec = p.human ? p.human.decision : '';
         const llmDec = p.llm.decision;
         const safeId = p.id.replace(/'/g, "\\'");
+        // Divergenztyp aus Daten: LLM Include / Human Exclude oder umgekehrt
+        const divType = llmDec === 'Include' ? 'LLM-Kandidat' : 'Human-Signal';
 
         return `<tr onclick="window._openPaper('${safeId}')" style="cursor:pointer;">
             <td class="title-cell" title="${escapeHtml(p.title)}">${escapeHtml(p.title.substring(0, 55))}${p.title.length > 55 ? '...' : ''}</td>
             <td style="font-size:0.75rem;">${escapeHtml((p.author_year || '').substring(0, 22))}</td>
             <td><span class="decision-badge ${llmDec === 'Include' ? 'badge-llm-include' : 'badge-llm-exclude'}" style="font-size:0.65rem;">${llmDec}</span></td>
             <td><span class="decision-badge ${humanDec === 'Include' ? 'badge-human-include' : 'badge-human-exclude'}" style="font-size:0.65rem;">${humanDec}</span></td>
-            <td style="font-size:0.7rem;color:var(--gray-500);">${disType}</td>
+            <td style="font-size:0.7rem;color:var(--gray-500);">${divType}</td>
             <td><span class="severity-badge ${sevClass}">${sev}</span></td>
             <td style="font-size:0.7rem;color:var(--gray-400);">${escapeHtml(cats)}</td>
         </tr>`;
@@ -290,11 +326,10 @@ function renderDisagreementsTable() {
             <tbody>${rows}</tbody>
         </table>
         <p style="font-size:0.7rem;color:var(--gray-400);margin-top:0.5rem;">
-            ${disagreements.length} Disagreements &bull; Klick auf Zeile &rarr; Paper-Detail
+            ${disagreements.length} Divergenz-Faelle &bull; Klick auf Zeile &rarr; Paper-Detail
         </p>
     `;
 
-    // Helper for row onclick (avoids inline string escaping issues)
     window._openPaper = function(id) {
         const paper = allPapers.find(x => x.id === id);
         if (paper) showPaperDetail(paper);

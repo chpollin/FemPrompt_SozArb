@@ -477,71 +477,161 @@ function showError(message) {
         `<div class="loading"><p style="color:var(--danger);">${escapeHtml(message)}</p></div>`;
 }
 
-// Dashboard charts (new 10K schema)
+// Dashboard charts
 function initializeDashboard() {
+    renderCoverageChart();
+    renderDivergenceScatter();
+    renderCategoryChart();
+    renderYearChart();
+    renderConfidenceChart();
+    renderHumanCategoryChart();
+    console.log('[Dashboard] 6 charts rendered');
+}
+
+// 1. Coverage Map: LLM (326) vs. Human (assessed) -- additives Framing
+function renderCoverageChart() {
     const llmInclude = allPapers.filter(p => p.llm.decision === 'Include').length;
     const llmExclude = allPapers.filter(p => p.llm.decision === 'Exclude').length;
     const llmOther = allPapers.length - llmInclude - llmExclude;
-
-    // Decision doughnut
-    new Chart(document.getElementById('decision-chart'), {
-        type: 'doughnut',
-        data: {
-            labels: ['Include', 'Exclude', 'Other'],
-            datasets: [{ data: [llmInclude, llmExclude, llmOther],
-                backgroundColor: ['#10b981', '#6b7280', '#f59e0b'] }]
-        },
-        options: { responsive: true, maintainAspectRatio: false }
-    });
-
-    // Human vs LLM include rate
     const humanInclude = vaultMeta.human_include_count || 0;
-    const humanTotal = vaultMeta.human_total_with_decision || 1;
-    const llmRate = Math.round(llmInclude / allPapers.length * 100);
-    const humanRate = Math.round(humanInclude / humanTotal * 100);
+    const humanTotal = vaultMeta.human_total_with_decision || 0;
+    const humanExclude = humanTotal - humanInclude;
+    const humanUnassessed = allPapers.length - humanTotal;
 
-    new Chart(document.getElementById('include-rate-chart'), {
+    new Chart(document.getElementById('coverage-chart'), {
         type: 'bar',
         data: {
-            labels: ['LLM', 'Human'],
+            labels: ['LLM (326 Papers)', 'Human (210 bewertet)'],
+            datasets: [
+                { label: 'Include', data: [llmInclude, humanInclude],
+                  backgroundColor: ['#10b981', '#059669'] },
+                { label: 'Exclude', data: [llmExclude, humanExclude],
+                  backgroundColor: ['#6b7280', '#9ca3af'] },
+                { label: 'Nicht bewertet / Unclear', data: [llmOther, humanUnassessed],
+                  backgroundColor: ['#f59e0b', '#e5e7eb'] }
+            ]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom', labels: { font: { size: 10 } } },
+                tooltip: { callbacks: {
+                    label: (ctx) => {
+                        const total = ctx.dataIndex === 0 ? allPapers.length : humanTotal || allPapers.length;
+                        const pct = total ? Math.round(ctx.parsed.x / total * 100) : 0;
+                        return `${ctx.dataset.label}: ${ctx.parsed.x} (${pct}%)`;
+                    }
+                }}
+            },
+            scales: {
+                x: { stacked: true, max: allPapers.length, beginAtZero: true },
+                y: { stacked: true }
+            }
+        }
+    });
+}
+
+// 2. Divergenz-Scatter: X=Human-Ja-Rate, Y=LLM-Ja-Rate, 10 Kategorien
+function renderDivergenceScatter() {
+    const catData = Object.entries(kappas).map(([cat, d]) => ({
+        x: d.human_yes_rate,
+        y: d.agent_yes_rate,
+        label: cat.replace(/_/g, ' '),
+        n: d.n,
+        diff: d.agent_yes_rate - d.human_yes_rate
+    }));
+
+    const colors = catData.map(d => {
+        const absDiff = Math.abs(d.diff);
+        if (absDiff < 0.05) return '#94a3b8';   // grau: nah an Konsens
+        return d.diff > 0 ? '#3b82f6' : '#f97316'; // blau: LLM mehr / orange: Human mehr
+    });
+
+    new Chart(document.getElementById('divergence-chart'), {
+        type: 'scatter',
+        data: {
             datasets: [{
-                label: 'Include Rate (%)',
-                data: [llmRate, humanRate],
-                backgroundColor: ['#1e40af', '#059669']
+                data: catData,
+                pointRadius: catData.map(d => Math.sqrt(d.n) * 0.7 + 4),
+                backgroundColor: colors,
+                borderWidth: 0
             }]
         },
         options: {
             responsive: true, maintainAspectRatio: false,
-            scales: { y: { beginAtZero: true, max: 100,
-                ticks: { callback: v => v + '%' }
-            }},
-            plugins: { legend: { display: false } }
-        }
+            plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: {
+                    label: (ctx) => {
+                        const d = catData[ctx.dataIndex];
+                        const diff = ((d.diff) * 100).toFixed(1);
+                        return [
+                            d.label,
+                            `Human: ${(d.x * 100).toFixed(1)}%`,
+                            `LLM: ${(d.y * 100).toFixed(1)}%`,
+                            `Diff: ${diff > 0 ? '+' : ''}${diff}pp`
+                        ];
+                    }
+                }}
+            },
+            scales: {
+                x: { min: 0, max: 1, title: { display: true, text: 'Human Ja-Rate' },
+                     ticks: { callback: v => Math.round(v * 100) + '%' } },
+                y: { min: 0, max: 1, title: { display: true, text: 'LLM Ja-Rate' },
+                     ticks: { callback: v => Math.round(v * 100) + '%' } }
+            }
+        },
+        plugins: [{
+            id: 'divergence-annotations',
+            afterDraw(chart) {
+                const { ctx, scales } = chart;
+                // Diagonale y=x (Konsens-Linie)
+                ctx.save();
+                ctx.setLineDash([5, 4]);
+                ctx.strokeStyle = '#cbd5e1';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(scales.x.getPixelForValue(0), scales.y.getPixelForValue(0));
+                ctx.lineTo(scales.x.getPixelForValue(1), scales.y.getPixelForValue(1));
+                ctx.stroke();
+                ctx.restore();
+                // Kategorie-Labels direkt am Punkt
+                const meta = chart.getDatasetMeta(0);
+                ctx.font = '9px Inter, sans-serif';
+                ctx.fillStyle = '#374151';
+                catData.forEach((d, i) => {
+                    const el = meta.data[i];
+                    if (el) ctx.fillText(d.label, el.x + 5, el.y - 3);
+                });
+            }
+        }]
     });
+}
 
-    // Category distribution (LLM positive counts)
+// 3. Kategorie-Verteilung LLM
+function renderCategoryChart() {
     const catCounts = CATEGORIES.map(cat =>
         allPapers.filter(p => p.llm.all_categories[cat] === 1).length
     );
     new Chart(document.getElementById('category-chart'), {
         type: 'bar',
         data: {
-            labels: CATEGORIES.map(c => c.replace('_', ' ')),
-            datasets: [{ label: 'Papers', data: catCounts, backgroundColor: '#1e40af' }]
+            labels: CATEGORIES.map(c => c.replace(/_/g, ' ')),
+            datasets: [{ label: 'Papers (LLM)', data: catCounts, backgroundColor: '#3b82f6' }]
         },
         options: {
-            indexAxis: 'y',
-            responsive: true, maintainAspectRatio: false,
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: { x: { beginAtZero: true } }
         }
     });
+}
 
-    // Year distribution
+// 4. Jahr-Verteilung
+function renderYearChart() {
     const yearCounts = {};
-    allPapers.forEach(p => {
-        if (p.year) yearCounts[p.year] = (yearCounts[p.year] || 0) + 1;
-    });
+    allPapers.forEach(p => { if (p.year) yearCounts[p.year] = (yearCounts[p.year] || 0) + 1; });
     const years = Object.keys(yearCounts).sort();
     new Chart(document.getElementById('year-chart'), {
         type: 'bar',
@@ -555,9 +645,11 @@ function initializeDashboard() {
             scales: { y: { beginAtZero: true } }
         }
     });
+}
 
-    // Confidence histogram
-    const confBuckets = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; // 0.0-0.1, 0.1-0.2, ...
+// 5. Konfidenz-Histogramm LLM
+function renderConfidenceChart() {
+    const confBuckets = Array(10).fill(0);
     allPapers.forEach(p => {
         const idx = Math.min(Math.floor(p.llm.confidence * 10), 9);
         confBuckets[idx]++;
@@ -565,8 +657,8 @@ function initializeDashboard() {
     new Chart(document.getElementById('confidence-chart'), {
         type: 'bar',
         data: {
-            labels: ['0-10%', '10-20%', '20-30%', '30-40%', '40-50%', '50-60%', '60-70%', '70-80%', '80-90%', '90-100%'],
-            datasets: [{ label: 'Papers', data: confBuckets, backgroundColor: '#3b82f6' }]
+            labels: ['0-10%','10-20%','20-30%','30-40%','40-50%','50-60%','60-70%','70-80%','80-90%','90-100%'],
+            datasets: [{ label: 'Papers', data: confBuckets, backgroundColor: '#6366f1' }]
         },
         options: {
             responsive: true, maintainAspectRatio: false,
@@ -574,23 +666,24 @@ function initializeDashboard() {
             scales: { y: { beginAtZero: true } }
         }
     });
+}
 
-    // Agreement by category
-    const catAgreement = CATEGORIES.map(cat => {
-        const k = kappas[cat];
-        return k ? Math.round(k.agreement_pct) : 0;
-    });
-    new Chart(document.getElementById('agreement-chart'), {
+// 6. Kategorie-Verteilung Human (nur Papers mit Human Assessment)
+function renderHumanCategoryChart() {
+    const papersWithHuman = allPapers.filter(p => p.benchmark.has_human && p.human);
+    const catCounts = CATEGORIES.map(cat =>
+        papersWithHuman.filter(p => p.human.all_categories[cat] === 1).length
+    );
+    new Chart(document.getElementById('human-category-chart'), {
         type: 'bar',
         data: {
-            labels: CATEGORIES.map(c => c.replace('_', ' ')),
-            datasets: [{ label: 'Agreement %', data: catAgreement, backgroundColor: '#059669' }]
+            labels: CATEGORIES.map(c => c.replace(/_/g, ' ')),
+            datasets: [{ label: 'Papers (Human)', data: catCounts, backgroundColor: '#059669' }]
         },
         options: {
-            indexAxis: 'y',
-            responsive: true, maintainAspectRatio: false,
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
             plugins: { legend: { display: false } },
-            scales: { x: { beginAtZero: true, max: 100, ticks: { callback: v => v + '%' } } }
+            scales: { x: { beginAtZero: true } }
         }
     });
 }
