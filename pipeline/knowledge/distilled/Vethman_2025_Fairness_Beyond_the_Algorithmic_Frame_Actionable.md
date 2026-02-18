@@ -4,14 +4,6 @@ authors: ["Steven Vethman", "Nina M. van Liebergen", "Quirine T. S. Smit", "Cor 
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.md
 confidence: 95
@@ -42,31 +34,31 @@ Mixed Methods: Thematische Analyse (Braun & Clarke) von 60 AI-Fairness-Papern au
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Starker Fokus auf Bildung und Kompetenzen von AI-Expert:innen: 'This intersectional approach requires moving beyond the algorithmic frame, which is not the core of the AI expert's background, including their formal education and professional experience.' Empfehlungen zu kritischer Datenwissenschaftlicher Ausbildung werden explizit erwähnt.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf ML-basierte AI-Systeme, algorithmische Entscheidungssysteme in Hochrisiko-Bereichen (Wohlfahrt, Fraud Detection, Hiring, Bail). 'we adopt this same scope for our study' auf ML-basierte AI.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Explizite Bezüge zu Sozialleistungssystemen und Wohlfahrt: Dutch childcare benefits scandal (26.000 Familien), französisches automated fraud detection in welfare allocation. Marginalisierte Communities und Wohlfahrtszugang sind zentrale Anwendungsbeispiele.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kernfokus auf algorithmischen Bias und strukturelle Ungleichheit: 'These cases demonstrate how Artificial Intelligence (AI), or broader automated decision-making systems, can reinforce and propagate racism, sexism, and social inequality.' Structural inequality und systemic threat werden zentral behandelt.
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektive auf marginalisierte Communities: Black women, Surinamese-descent families, immigrant backgrounds, queer communities. 'hearing diverse voices and recognizing multiple kinds of knowledge' ist ein Schlüsselelement.
 
-### Feministisch
+### Evidenz 6
 
 Explizit verankert in Black Feminist-Theorie und Praxis: 'Intersectionality, rooted in Black Feminist movements', Referenz auf Kimberlé Crenshaw, Patricia Hill Collins und Sirma Bilge, 'critical inquiry and praxis' (Examination und Action). Paper verwendet 'critical inquiry and practice towards social justice' als Rahmen. Feminist participatory design (Suresh et al.) wird als Best Practice zitiert.
 
-### Fairness
+### Evidenz 7
 
 Zentrale Diskussion von AI Fairness-Forschung, Fairness-Metriken und deren Limitationen: 'group fairness', 'intersectional (subgroup) fairness', 'fairness metrics', 'Equalized Odds, Demographic Parity' werden diskutiert als narrow interpretation.
 

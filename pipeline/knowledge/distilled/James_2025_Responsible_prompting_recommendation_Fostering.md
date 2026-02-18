@@ -4,13 +4,6 @@ authors: ["Vagner Figueredo de Santana", "Sara E Berger", "Heloísa Caroline Can
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: James_2025_Responsible_prompting_recommendation_Fostering.md
 confidence: 88
@@ -39,27 +32,27 @@ Mixed Methods: 10 qualitative Interviews mit IT-Professionellen, Entwicklung ein
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Responsible Prompting als Prozess wird definiert als Kommunikation mit KI-Systemen unter Vermeidung von Schäden und Förderung verantwortungsvoller Praktiken. Das Paper bietet praktische Leitfäden für Nutzer zum kompetenten Umgang mit GenAI.
 
-### Generative_KI
+### Evidenz 2
 
 Focus auf Large Language Models (LLMs) und generative AI (GenAI), einschließlich Stochastizität, Variabilität und Halluzination von generativen Systemen.
 
-### Prompting
+### Evidenz 3
 
 Zentral sind Prompt Engineering, Prompt-Strategien, Template-Empfehlungen und Best Practices beim Strukturieren von Eingaben für Text-Generierung und Bild-Generierung.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 GenAI kann zu 'erasing or obfuscating social terms or issues, stereotyping or misrepresenting people' führen. Adversarial prompting und Jailbreaks werden als Sicherheitsrisiken thematisiert. Concerns um fairness, bias, und marginalisierte Communities werden erwähnt.
 
-### Diversitaet
+### Evidenz 5
 
 Mehrere Teilnehmer aus Brasilien äußern Bedenken bezüglich Priorisierung des Englischen gegenüber anderen Sprachen. Research-Teams arbeiten mit spezifischen Populationen (z.B. ALS-Patienten) und betonen Notwendigkeit, Nuancen und Variationen in Sprachverwendung zu erfassen.
 
-### Fairness
+### Evidenz 6
 
 Responsible AI als umbrella term für faire, ethische und verantwortungsvolle KI-Entwicklung. Fairness-Überlegungen in Bias-Mitigation, Systembewertung und Value Alignment werden integriert.
 

@@ -4,14 +4,6 @@ authors: ["Roberto Navigli", "Simone Conia", "Björn Ross"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Navigli_2023_Biases_in_large_language_models_Origins,.md
 confidence: 75
@@ -40,31 +32,31 @@ Theoretisch/Review: Systematische Analyse von Data Selection Bias und sozialen B
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper diskutiert notwendiges Wissen zur Funktionsweise von LLMs und deren Risiken: 'we need to keep in mind that, in the words of Baeza-Yates, "the output quality of any algorithm is a function of the quality of the data that it uses"' – dies adressiert kritisches Verständnis.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf 'large-scale pretrained language models, such as BERT, GPT, T5, and BART, which are now pervasive in every high-performance system for Machine [Learning]' und deren Bias.
 
-### KI_Sonstige
+### Evidenz 3
 
 NLP und algorithmische Systeme werden behandelt; Beispiel COMPAS-Recidivism-Vorhersage zeigt klassische ML-Bias: 'black defendants were often predicted to be at a higher risk of recidivism than they actually were'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale These: 'most types of bias originate in corpora and, consequently, language models learn and amplify such biases' und Diskussion struktureller Benachteiligungen ('harm, especially to minorities and marginalized groups').
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Bias-Fokus: 'gender, sexual and racial biases' und Beispiel 'some sports have historically been male-dominated, meaning that the majority of their popular players have also been male' prägt Wikipedia und damit LLMs.
 
-### Diversitaet
+### Evidenz 6
 
 Extensive Behandlung von Minderheiten und marginalisierten Gruppen: 'bias against non-binary genders', 'religion bias', ethnische Bias, intersektionale Perspektiven ('a person's social identity can combine to create discrimination'), Sprachen-Diversität.
 
-### Fairness
+### Evidenz 7
 
 Mehrfache Diskussion von Fairness-Metriken: 'three generalized fairness metrics: pairwise comparison, background comparison, and multi-group comparison metrics' und Anforderung von Transparenz ('transparent about the levels of bias of production systems').
 

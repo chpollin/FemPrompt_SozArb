@@ -4,10 +4,6 @@ authors: ["Zilong Pan", "Ozias A. Moore", "Antigoni Papadimitriou", "Jiayan Zhu"
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Fairness
 processed: 2026-02-05
 source_file: Pan_2025_AI_literacy_and_trust_A_multi-method_study_of.md
 confidence: 88
@@ -36,15 +32,15 @@ Mixed Methods: Qualitativ (kodierte Interviews zu Trust-Kategorien) und Quantita
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Long and Magerko (2020) define AI literacy as understanding basic AI concepts, recognizing practical applications, and evaluating social impacts. The study operationalizes AI literacy through three sub-constructs: knowledge about GAI, perceived value of GAI, and perceived concerns about GAI, with α=.75 overall reliability.
 
-### Generative_KI
+### Evidenz 2
 
 Study focuses explicitly on human-generative AI (GAI) collaboration, defined as systems capable of generating new content based on training data, specifically examining LLMs like ChatGPT. Both Study 1 and Study 2 measure trust and perceptions of GAI as a teammate in collaborative settings.
 
-### Fairness
+### Evidenz 3
 
 The National Institute of Standards and Technology (2023) AI Risk Management Framework is referenced, highlighting key attributes contributing to AI trustworthiness such as explainability, accuracy, reliability, and fairness as critical factors for positioning AI as a trustworthy collaborator.
 

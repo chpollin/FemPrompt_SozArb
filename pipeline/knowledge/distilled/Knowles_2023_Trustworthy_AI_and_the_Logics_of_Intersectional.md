@@ -4,13 +4,6 @@ authors: ["Bran Knowles", "Jasmine Fledderjohann", "John T. Richards", "Kush R. 
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional.md
 confidence: 75
@@ -39,23 +32,23 @@ Theoretisch-konzeptuell. Kritische Analyse von Trustworthy AI Literatur kombinie
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf algorithmic decision-making systems, predictive analytics im Kontext von Ressourcenallokation, Risikobewertung und sozialen Kontrollmechanismen.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Explizite Bezüge zu Vulnerability, Care-Arbeit, Sozialschutz, marginalisierte Bevölkerungsgruppen als Zielgruppen von KI-Systemen. Beispiele: Sozialhilfesysteme, Jugendhilfe, Risikoeinschätzung.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale These: 'AI is being used to construct a digital underclass that is rhetorically labelled as undeserving' [Abstrakt]. Analyse struktureller Gewalt ('structural violence') durch KI, Reproduktion von Ungleichheit, Digital Divide.
 
-### Diversitaet
+### Evidenz 4
 
 Multiply marginalized people und intersektionale Perspektive durchziehen das gesamte Paper. Spezifische Analyse unterschiedlicher Marginalisierungsformen (Race, Class, Disability etc.) und deren Kumulation.
 
-### Feministisch
+### Evidenz 5
 
 Explizite Verwendung von intersectionality (Crenshaw), Referenzen auf D'Ignazio & Klein 'Data Feminism', care ethics und Jean Watson's theory of human caring. Feminist ML approaches zitiert. Intersektionale und Care-theoretische Rahmung.
 

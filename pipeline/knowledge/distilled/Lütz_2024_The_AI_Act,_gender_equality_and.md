@@ -4,13 +4,6 @@ authors: ["Fabian Lütz"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Lütz_2024_The_AI_Act,_gender_equality_and.md
 confidence: 91
@@ -40,27 +33,27 @@ Theoretisch/Review - Doctrinal legal analysis mit kritischer Evaluierung von EU-
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 The article discusses Large Language Models (LLMs) and Generative AI: 'Since Large Language Models (LLMs) and Generative AI entered the public discussion and legislative proposals, the topic of AI regulation has received increased public attention' (Introduction). Specific examples: 'Open AI's GPT-4' with discussion of model cards showing bias representations.
 
-### KI_Sonstige
+### Evidenz 2
 
 Comprehensive analysis of AI Act's treatment of high-risk AI systems in recruitment, education, employment decisions, and algorithmic decision-making systems. Discussion of 'the classification of AI systems as high risk is conducted in accordance with Art. 6 AI Act' and various application domains.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Central theme throughout: 'The term 'biases' makes seventeen appearances' in the AI Act. Detailed analysis of algorithmic discrimination: 'the risk of harm to health and safety, or an adverse impact on fundamental rights' and how 'some AI systems with potentially negative impacts for gender would not have these mandatory compliance obligations'.
 
-### Gender
+### Evidenz 4
 
 The paper consistently emphasizes gender equality as a fundamental right to be protected through AI regulation. Specific case example cited: 'An often-cited example concerns a recruitment algorithm used by a tech company which potentially had discriminatory effects on women.' Discussion of 'the lack of diversity among AI developers' as contributor to gender bias.
 
-### Diversitaet
+### Evidenz 5
 
 Emphasis on inclusive and diverse design: 'inclusive and diverse design and development of AI systems, including attention to vulnerable persons and accessibility to persons with disability' (Recital 81). Discussion of diverse development teams and representation in decision-making systems.
 
-### Fairness
+### Evidenz 6
 
 Analysis of fairness mechanisms: 'fundamental rights impact assessments and bias audits to reduce gender biases and discriminatory risk'. Discussion of 'fairness-aware' compliance obligations and tools like 'Equalized Odds, Demographic Parity' through the lens of algorithmic fairness.
 

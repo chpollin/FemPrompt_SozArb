@@ -4,13 +4,6 @@ authors: ["Marie Leth Meilvang", "Anne Marie Dahler"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Meilvang_2024_Decision_support_and_algorithmic_support_The.md
 confidence: 95
@@ -39,27 +32,27 @@ Mixed methods: Two-step qualitative study combining semi-structured interviews (
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The study examines how professionals understand, interpret, and use algorithmic systems in their practice: 'professionals should be aware of potential bias in data and, hence, in algorithmic systems. Discussions about known bias or potential future bias should be a key concern in the development of algorithms.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Focuses on algorithmic decision-support systems in social work: 'algorithms in social work are most frequently used as systems that work as decision support' and analyzes predictive and categorization algorithms used in referral screening.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direct engagement with social work practice, casework, professional discretion in child protection services: 'the analysis of intentions, designs, and workings of decision-support algorithms in casework with vulnerable children and families' across three Danish municipalities.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Examines algorithmic bias and concerns about discrimination: 'considerable efforts are made to avoid such bias as relate to gender, ethnicity, and age' and discusses how poor data quality and subjective decision-making create systematic biases.
 
-### Diversitaet
+### Evidenz 5
 
 Discusses marginalized communities and representation: concern that algorithms may replicate patterns of discrimination based on protected characteristics (gender, ethnicity, age) and the importance of including diverse professional perspectives in algorithm design.
 
-### Fairness
+### Evidenz 6
 
 Directly addresses algorithmic fairness: 'eliminating bias from casework' is identified as a key theme, and the paper discusses fairness in algorithmic categorization and the need for regular testing of algorithms for bias.
 

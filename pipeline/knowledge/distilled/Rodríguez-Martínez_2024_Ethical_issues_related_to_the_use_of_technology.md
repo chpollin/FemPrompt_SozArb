@@ -4,13 +4,6 @@ authors: ["Antonia Rodríguez-Martínez", "María Teresa Amezcua Aguilar", "Javi
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.md
 confidence: 87
@@ -39,27 +32,27 @@ Systematische Literaturübersicht nach PRISMA 2020 Guidelines mit Thematic Synth
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Young et al. (2018) assess 'students' digital literacy in a Social Work classroom'; Joiner (2019) on 'Digital ethics in social work education'; the paper emphasizes 'understanding ethical implications within social work and ICT integration requires familiarity with various theoretical frameworks'.
 
-### KI_Sonstige
+### Evidenz 2
 
 Extensive discussion of 'Information and Communication Technologies (ICT)', 'Analytics Information Management', 'Business Intelligence', and 'algorithmic decision-making' in social services; Ranerup & Henriksen (2020) on 'automated decision making in Sweden's social services'.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Paper explicitly analyzes 'ethical dilemmas and problems that arise in the Social Work profession'; focuses on 'effects of digitization on professional practice', 'education, research and engagement', and 'ethical challenges in digital professional practice'; discusses practitioner experiences and client relationships.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Discussion of 'digital divide', 'inclusivity in online services', 'accessibility in diverse populations', and potential for technology to disadvantage marginalized communities; Baker et al. (2018) on 'developing practice-led approaches' considering equitable access.
 
-### Diversitaet
+### Evidenz 5
 
 Paper explores 'how technology plays a dual role in shaping cultural competence and accessibility in social work services' and 'cultural competence by facilitating access to resources... tailored to specific cultural backgrounds'; addresses 'diverse communities' and 'culturally relevant educational materials'.
 
-### Fairness
+### Evidenz 6
 
 Discussion of 'ethical principles' and 'ethical decision-making frameworks'; ASWB (2015) 'Model regulatory standards for technology and social work practice'; emphasis on 'fair treatment', 'protection of rights', and 'equitable practice' in digital contexts.
 

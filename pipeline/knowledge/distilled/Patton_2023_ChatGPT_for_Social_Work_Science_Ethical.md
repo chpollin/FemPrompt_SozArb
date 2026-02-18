@@ -4,15 +4,6 @@ authors: ["Desmond Upton Patton", "Aviv Y. Landau", "Siva Mathiyazhagan"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md
 confidence: 75
@@ -41,35 +32,35 @@ Theoretisch/Normativ - konzeptionelle Analyse und Policy-Empfehlungen ohne empir
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The paper calls for developing educational frameworks and competencies: 'Through direct engagement with ChatGPT (e.g., free or paid subscription to OpenAI, reading groups, panel discussions, and conference presentations), social work scientists may gain a deeper understanding of its capabilities and limitations'
 
-### Generative_KI
+### Evidenz 2
 
 Central focus on ChatGPT and LLMs: 'ChatGPT is an artificial intelligence chatbot. It is a fine-tuned version of an LLM - an artificial intelligence system that processes and analyzes natural language'
 
-### Prompting
+### Evidenz 3
 
 Discusses prompt engineering and strategic prompting: 'ChatGPT could identify language in case notes and referrals...ChatGPT might also help social work scientists generate content...by explicitly ask[ing] to identify the work of BIPOC scholars'
 
-### KI_Sonstige
+### Evidenz 4
 
 Discussion of broader AI systems and NLP: 'large language models (LLM), specifically ChatGPT...algorithms like ChatGPT are themselves bureaucrats, leveraging existing oppressive institutional thinking'
 
-### Soziale_Arbeit
+### Evidenz 5
 
 Explicit social work focus throughout: 'the potential use of ChatGPT in social work science...exploring opportunities and ethical challenges related to the deployment of large language models (LLMs), specifically ChatGPT for social work science'
 
-### Bias_Ungleichheit
+### Evidenz 6
 
 Critical analysis of bias: 'LLMs are trained on large amounts of data that may reflect the biases and viewpoints of the individuals and groups who create them...LLMs may be more likely to offer Eurocentric and white-centric content and to ignore literature...from BIPOC authors and authors from the Global South'
 
-### Diversitaet
+### Evidenz 7
 
 Strong emphasis on inclusion and marginalized communities: 'social work scientists should adopt an antiracist research framework...explicitly ask to identify the work of BIPOC scholars and resources and perspectives from underrepresented communities...This practice would perpetuate existing social and academic exclusions...BIPOC, people with disabilities, LGBTQIA individuals, and those with other underrepresented identities'
 
-### Fairness
+### Evidenz 8
 
 Addresses algorithmic fairness and equitable application: 'social work scientists may fine-tune ChatGPT capabilities through a social justice and antiracist lens applied to language analysis...Advancing antiracist and social justice frameworks as ethical guidelines or essential characteristics...guardrails for the use of AI tools in social work science while centering human rights and social justice'
 

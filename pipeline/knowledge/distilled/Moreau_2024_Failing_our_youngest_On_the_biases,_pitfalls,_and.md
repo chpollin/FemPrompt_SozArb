@@ -4,13 +4,6 @@ authors: ["Therese Moreau Hansen", "Roberta Sinatra", "Vedran Sekara"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and.md
 confidence: 95
@@ -39,27 +32,27 @@ Empirisch: Algorithmisches Audit durch Zugangsanfrage zu Algorithmus-Dokumentati
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kritische Analyse der technischen Kompetenzen bei Algorithmus-Implementierung in Behörden: 'we strongly advise against the use of this kind of algorithms in local government, municipal, and child protection settings, and we call for rigorous evaluation of such tools before implementation'
 
-### KI_Sonstige
+### Evidenz 2
 
 Detaillierte Audit eines Predictive Risk Models mit Post-Lasso Regression: 'The resulting linear model for DSS contains 9 features... and predicts a risk score (rs)' sowie Analyse von Machine-Learning-Methodologie
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Fokus auf Kinderschutzpraxis und sozialarbeiterische Entscheidungsfindung: 'Designed as a support tool for caseworkers assessing the risk of child abuse, DSS was developed and pilot-tested in collaboration with the municipalities'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Nachweis von systematischer Diskriminierung und struktureller Benachteiligung: 'DSS scores children differently. For example, a well-treated 17-year-old... will have a base risk score of 8, while a 0-year-old will have a risk score of 1' sowie 'model predictions are very skewed with respect to socio-economic class'
 
-### Diversitaet
+### Evidenz 5
 
 Analyse von Disparitäten gegenüber vulnerablen Gruppen (Kinder, sozioökonomisch Benachteiligte, Familien mit Substanzmissbrauch): 'some of the indicators of neglect are direct proxies of poverty'
 
-### Fairness
+### Evidenz 6
 
 Zentrale Fokussierung auf algorithmische Fairness und Diskriminierungsfreiheit: 'Age is a protected attribute and globally recognized as a ground for discrimination. As such, avoiding automated discrimination based on protected attributes should be a prime concern'
 

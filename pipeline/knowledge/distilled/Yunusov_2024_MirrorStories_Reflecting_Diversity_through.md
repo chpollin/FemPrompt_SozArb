@@ -4,15 +4,6 @@ authors: ["Sarfaroz Yunusov", "Hamza Sidat", "Ali Emami"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Yunusov_2024_MirrorStories_Reflecting_Diversity_through.md
 confidence: 95
@@ -41,35 +32,35 @@ Empirisch/Mixed-Methods: Generierung eines Corpus von 1.500 personalisierten Kur
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Studie untersucht die Fähigkeit von LLMs, personalisierte Inhalte zu generieren, was einen kritischen Kompetenzbedarf im Umgang mit generativen KI-Systemen in der Praxis widerspiegelt: 'LLMs excel in generating human-like text and adapting content to various contextual needs'.
 
-### Generative_KI
+### Evidenz 2
 
 Zentral für die Studie ist der Einsatz von GPT-4, Claude-3 Sonnet und Gemini 1.5 Flash zur Narrative-Generierung sowie DALL-E 2 für Bildgenerierung: 'Our study addresses this gap by exploring the potential of LLMs to create mirror stories-narratives that genuinely reflect and resonate with the identities of individual readers.'
 
-### Prompting
+### Evidenz 3
 
 Strukturierte Prompts wurden für personalisierte vs. generische Geschichtengenerierung verwendet, mit expliziten Instruktionen zur Integration oder Vermeidung expliziter Identitätselemente: 'Personalized prompts incorporating identity elements were used to generate personalized stories. For Personalization Validation, these elements were specifically asked not to be stated explicitly.'
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Die Studie adressiert ein kernhaftes Anliegen Sozialer Arbeit: Zugehörigkeitsgefühl, Selbstverständnis und Empowerment durch Spiegelung von Identität in Narrativen. Dies ist relevant für Ausbildung, Beratung und Jugendförderung: 'Mirror books are stories that reflect the reader's identity, culture, and experiences, serving to engage, validate, and empower individuals... Such books are crucial in educational settings, fostering a sense of belonging and self-understanding.'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Die Studie dokumentiert systematisch sowohl Unterrepräsentation als auch algorithmische Bias: 'Noticeable underrepresentation of non-white minority groups in literature relative to their population size' und identifiziert Geschlechts- und ethnische Bias in GPT-4-Evaluationen: 'Figure 5 shows an instance of gender-based bias, with stories featuring non-binary characters receiving lower ratings.'
 
-### Gender
+### Evidenz 6
 
 Explizite Integration von Geschlechtsidentität als Personalisierungselement (männlich, weiblich, nicht-binär) mit dokumentierter ungleicher Bewertung durch LLM-Evaluatoren: 'The dataset spans a broad age range from 10 to 60 years. MIRRORSTORIES comprises 1,500 narratives with an almost even split between male and female characters' sowie 'We found several preferential biases in GPT-4's evaluation results... with stories featuring non-binary characters receiving lower ratings.'
 
-### Diversitaet
+### Evidenz 7
 
 Kernthema der Studie ist die Förderung von Repräsentation und Inklusion durch Generierung diverser personalisierter Narrative für 123 ethnische Hintergründe, 3 Geschlechtsidentitäten und 124 Interessen: 'Gap in cultural representation highlights the need for more inclusive narratives that reflect diverse reader identities, enhance empathy, and promote cultural awareness.'
 
-### Fairness
+### Evidenz 8
 
 Die Studie untersucht systematisch die Qualität und Gerechtigkeit personalisierter Narrative sowie identifiziert und dokumentiert Bias in LLM-Bewertungen: 'Are there biases in LLM evaluations of personalized stories? We found several preferential biases in GPT-4's evaluation results.' und implementiert Safeguards gegen schädliche Inhalte und Bias-Audits.
 

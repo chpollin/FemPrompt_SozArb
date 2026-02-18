@@ -4,13 +4,6 @@ authors: ["Yiling Zhao", "Audrey Michal", "Nithum Thain", "Hari Subramonyam"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Zhao_2025_Thinking_like_a_scientist_Can_interactive.md
 confidence: 75
@@ -39,27 +32,27 @@ Empirisch - Kontrollierte Studie mit drei Bedingungen (Explorable/Interaktiv, St
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy is defined as 'a set of competencies that enables individuals to critically evaluate AI technologies' (S. 2). Die Studie untersucht systematisch 'Know & Understand AI', 'Use & Apply AI', 'Detect AI', und 'AI Ethics' mittels Meta AI Literacy Scale (18 Items).
 
-### Generative_KI
+### Evidenz 2
 
 Eines der vier Explorable-Themen ist 'Large Language Models', das 'advances in language technology' zeigt und LLM-spezifische Lernoutcomes misst.
 
-### KI_Sonstige
+### Evidenz 3
 
 Algorithmic decision-making, machine learning, dataset representativeness und algorithmic fairness werden als zentrale KI-Konzepte behandelt (beyond generative AI).
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kernthema: 'a hiring algorithm trained on historical recruitment data may inadvertently perpetuate biases, disadvantaging historically underrepresented groups' (S. 1). Explicitly: 'datasets are not neutral—they are shaped by the choices, assumptions, and limitations of their creators'.
 
-### Diversitaet
+### Evidenz 5
 
 Ein Explorable fokussiert auf 'Diversity and Fairness' mit Messungen von Repräsentation; Analyse der Teilnehmer-Demografie (63% White, 15.5% Black/African American, 11% Asian).
 
-### Fairness
+### Evidenz 6
 
 Explizites Fairness-Thema in den vier Explorables; 'Fairness' als eigenes Topic mit Pre/Post-Messungen; Szenarien zur Mitigation von Bias in Recruitment-Algorithmen; 'measure-fairness' Explorable.
 

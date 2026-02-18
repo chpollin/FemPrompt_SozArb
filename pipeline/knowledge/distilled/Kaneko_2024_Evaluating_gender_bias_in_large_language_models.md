@@ -4,14 +4,6 @@ authors: ["Masahiro Kaneko", "Danushka Bollegala", "Naoaki Okazaki", "Timothy Ba
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kaneko_2024_Evaluating_gender_bias_in_large_language_models.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch: Entwicklung eines neuen Benchmarks (Multi-step Gender Bias Reasoning 
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf 'Large Language Models (LLMs)' wie OPT, Llama2, GPT-J, Claude mit Chain-of-Thought Prompting als zentrale Methode zur Debiasing generativer Systeme.
 
-### Prompting
+### Evidenz 2
 
 Zentrale Methode ist Chain-of-Thought (CoT) Prompting: 'an LLM is required to explain step-by-step whether a word is feminine or masculine' mit spezifischen Prompt-Strategien (Zero-shot+CoT, Few-shot+CoT, Debiasing Prompt).
 
-### KI_Sonstige
+### Evidenz 3
 
 Behandelt Themen wie Natural Language Processing (NLP), Word Embeddings, Language Model Scaling Laws, Arithmetic and Symbolic Reasoning in unscalable tasks.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Expliziter Fokus auf 'unfair social biases' und 'discriminatory societal biases' in LLMs: 'LLMs still learn unfair social biases' und Untersuchung wie implizite Lernmechanismen zu stereotypen Assoziationen führen.
 
-### Gender
+### Evidenz 5
 
 Kernfokus auf Geschlechtsbias: 'gender bias in LLMs', 'gender-neutral occupations classified as feminine or masculine', Verwendung von feminine/masculine/gendered occupational words als Benchmark-Komponenten.
 
-### Diversitaet
+### Evidenz 6
 
 Erwähnung marginalisierter Perspektiven durch Referenzen auf non-binary gender bias: 'gender biases have been reported related to non-binary gender' (Dev et al., 2021a) und Anerkennung intersektionaler Dimensionen jenseits Geschlecht (Rasse, Religion).
 
-### Fairness
+### Evidenz 7
 
 Zentral für Fairness-Evaluation: 'bias score' als Fairness-Metrik definiert als Differenz in Genauigkeit zwischen unbiased vs. biased Konditionen; Vergleich mit Fairness-Benchmarks wie BBQ und BNLI mit Metriken für faire Vorhersagen.
 

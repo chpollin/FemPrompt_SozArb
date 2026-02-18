@@ -4,12 +4,6 @@ authors: ["Karine Perset", "Luis Aranda"]
 year: 2023
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: OECD_2023_Advancing_Accountability_in_AI.md
 confidence: 92
@@ -38,23 +32,23 @@ Theoretisch/Review - Systematische Analyse von Frameworks, Best Practices und te
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Papier fordert Dokumentation, technisches Verständnis und Kompetenz in Risikomanagement: 'Provide technical documentation and user manuals for operators and users of the system' und 'Ensure that insights and disclosures are directed to the end-users affected by the model'
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Behandlung von ML-Systemen, Robustness, Security, Safety, Adversarial Examples, Model Verification: 'AI systems should be robust, secure, and safe throughout their lifespan so that they function appropriately in conditions of normal use, foreseeable misuse, or other adverse conditions'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Explizite Behandlung von Fairness, Bias-Mitigation und Diskriminierungsrisiken: 'Risks to human-centred values and fairness' einschließlich Proxy Discrimination, mit Verweis auf 'Prince and Schwarcz (2020) on Proxy Discrimination in the Age of Artificial Intelligence and Big Data'
 
-### Diversitaet
+### Evidenz 4
 
 Betonung von Inklusion und verschiedenen Stakeholder-Perspektiven: 'Making AI Inclusive: 4 Guiding Principles for Ethical Engagement' und Einbeziehung von Civil Society, Geschäftsverbänden und Gewerkschaften in Governance-Prozesse
 
-### Fairness
+### Evidenz 5
 
 Kernfokus auf Fairness-Metriken und -Behandlung: 'Human-centred values and fairness' als wesentliche OECD-Prinzipien mit Ansätzen wie Fairness Constraints, Learning Fair Representations, Adversarial Learning zur Bias-Mitigation
 

@@ -4,14 +4,6 @@ authors: ["Lauren Klein", "Catherine D'Ignazio"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: D'Ignazio_2024_Data_Feminism_for_AI.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch/Literature Review: Reartikulierung und Erweiterung der sieben Data-F
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Explizite Analysen von LLMs und deren Trainings-Praktiken: 'the work of data science replicated professional hierarchies, with credentialed data scientists at the top' und Beispiel von ChatGPT mit Arbeitern in Kenia, die 'screening potentially offensive responses in real-time' durchführten.
 
-### KI_Sonstige
+### Evidenz 2
 
 Breite KI-Fokussierung auf Computer Vision (Buolamwini & Gebru), NLP, Algorithmen, algorithmische Entscheidungssysteme, ML-Trainings-Praktiken.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrales Thema durchgehend: 'unequal, undemocratic, extractive, and exclusionary forces at work in AI research, development, and deployment'; Analyse von Datenbias, Geschlechterbias in Sprachmodellen, reproduktion von sexistischen, rassistischen und kolonialen Vorurteilen in Text-to-Image-Modellen.
 
-### Gender
+### Evidenz 4
 
 Explizite Behandlung von Geschlechterperspektiven: Deepfakes von Frauen, Nicht-Konsent bei Audio/visueller Generierung, Geschlechterbias in NLP und Autocomplete-Systemen, Frauenrepräsentation in Tech/AI-Feldern.
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektive auf marginalisierte Communities: Indigenous feminists, Black feminists, Latin American feminists, Global South vs. North Asymmetrien, Analysen von Repräsentation und Exklusion in AI-Forschung und -Entwicklung.
 
-### Feministisch
+### Evidenz 6
 
 Explizit feministische Theorie durchgehend: Intersektionaliät (Crenshaw, Combahee River Collective, Patricia Hill Collins 'matrix of domination'), feministische Epistemologie, Black Feminism, Ökofeminismus, Indigenous Feminism, reproductive justice, trans justice.
 
-### Fairness
+### Evidenz 7
 
 Direkte Behandlung algorithmischer Fairness: 'fairness research', Fairness-Aspekte in ML-Entwicklung, Kritik an unzureichender Operationalisierung von Intersektionalität in AI-Fairness-Forschung.
 

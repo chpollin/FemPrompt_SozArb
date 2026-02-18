@@ -4,14 +4,6 @@ authors: ["Heather Boetto"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Unknown_Artificial_Intelligence_in_Social_Work_An_EPIC.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch: Umfassende Literaturrevision zur Schnittstelle KI und Soziale Arbei
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Inclusion of AI content in professional social work policy documents and practice standards; development of education opportunities for increasing community AI knowledge and skills; staff training in organisations implementing AI.
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT is discussed as problematic case study that has yielded inaccurate output data and breached privacy principles in child protection settings; generative AI's capacity to autonomously augment, synthesise, and innovate new data; concerns about 'black box' problem especially with generative AI.
 
-### KI_Sonstige
+### Evidenz 3
 
 AI applications in predictive risk modelling for suicide, domestic violence, and child protection; AI-powered chatbots in mental health settings; machine learning algorithms and deep neural networks; decision support systems in social work.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 The article directly examines AI's influence on social work profession, including risks to professional ethics, mission and values; dual human-technology approach supporting social work methods; service user-practitioner relationship; social workers' roles and responsibilities being reshaped by AI.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Algorithmic bias in AI systems due to reliance on historical datasets that are not representative of marginalised groups; gender classification systems producing error rates up to 34.7% for darker-skinned females; digital divide and 'information poverty' for marginalised groups; discrimination and exclusion risks; colonial knowledges reinforced in algorithms.
 
-### Diversitaet
+### Evidenz 6
 
 Emphasis on inclusion of First Nations' perspectives and data sovereignty; ethnic data governance; representation of marginalised groups and underrepresented communities in AI design and development; intersectional perspectives; diverse reference groups in organisations.
 
-### Fairness
+### Evidenz 7
 
 Addressing racial justice and health equity in AI development; non-discriminatory outcomes; algorithmic fairness concerns; legal protection for marginalised groups; transparent and regulated use of AI systems; equitable access to AI.
 

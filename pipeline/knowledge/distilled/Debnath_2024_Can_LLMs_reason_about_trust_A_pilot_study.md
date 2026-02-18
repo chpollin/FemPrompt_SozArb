@@ -4,13 +4,6 @@ authors: ["Anushka Debnath", "Stephen Cranefield", "Emiliano Lorini", "Bastin To
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Fairness
 processed: 2026-02-05
 source_file: Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md
 confidence: 88
@@ -39,27 +32,27 @@ Empirisch mit Mixed-Methods: Fallstudienanalyse von fünf Dialogszenarien zwisch
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper evaluiert die Fähigkeit von Menschen (oder Systemen), KI-Modelle zu verstehen und deren Reasoning über soziale Konzepte kritisch zu bewerten. 'we assess whether LLMs are capable of inducing trust by role-playing' und die Notwendigkeit, LLM-Halluzinationen und Fehlurteile zu erkennen.
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf vier state-of-the-art LLM-Modelle: gpt-4o, llama-3.3-70b-versatile, mixtral-8x7b-32768, gemma2-9b-it. 'Large Language Models (LLMs) are advanced AI systems designed to understand, generate, and process human language'
 
-### Prompting
+### Evidenz 3
 
 Detailliertes System-Prompt-Design in Abb. 1 mit strukturierten Fragen zu Zielen, Willingness, Competence, Security. Iteratives Prompt-Response-Cycle mit Zusammenfassungen und Kontextanreicherung (Abb. 2).
 
-### KI_Sonstige
+### Evidenz 4
 
 Theoretische Fundierung in Multi-Agent-Systemen (MAS), Comparison zwischen computational und socio-cognitive Trust Models, Bezug zu symbolischer KI und AI Planning.
 
-### Soziale_Arbeit
+### Evidenz 5
 
 Anwendungskontext: Beziehungen zwischen PhD-Student und Supervisor, die 'long-term, healthy relationships' und 'cooperation' erfordern. Relevanz für 'computer-supported human interactions' und 'establishment and maintenance of relationships'.
 
-### Fairness
+### Evidenz 6
 
 Das Paper adressiert implizit Fairness durch die Evaluation, ob verschiedene LLM-Modelle konsistent und reliabel über Vertrauen urteilen. Vergleich zeigt unterschiedliche Modell-Performances (GPT-4o vs. Gemma2-9b), was auf Fairness-Disparitäten hinweist: 'Gemma underperforms, scoring the lowest in willingness'.
 

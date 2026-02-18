@@ -4,12 +4,6 @@ authors: ["Georgia van Toorn", "Paul Henman", "Karen Soldatić"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: van Toorn_2024_Introduction_to_the_digital_welfare_state.md
 confidence: 89
@@ -38,23 +32,23 @@ Theoretisch/Review - Überblickintroduktion zu einem Special Issue mit kritisch-
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf 'automated decision-making systems, algorithms, big data analytics and artificial intelligence (AI)' in government welfare administration; keine generative KI, sondern klassische ML und Decision Support Systems
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Direkte Analyse von Wohlfahrtsservice-Digitalisierung: 'digitalisation of welfare policy, institutions and service delivery has led to increased scrutiny, social sorting and surveillance of welfare recipients'; Fallstudien zu Kinderbetreuung, Behindertenhilfe, Sozialhilfe
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentral: 'digitalisation tends to further bed down -even literally encode -long-standing political, economic and social relations of power'; Fokus auf Diskriminierung armer Menschen, Behinderte, rassifizierte Minderheiten durch algorithmische Systeme
 
-### Diversitaet
+### Evidenz 4
 
 Explizit intersektionale Perspektive: 'classed, racialised, gendered and disabling aspects of digitalisation, and the ways in which these intersecting power relations come to shape people's experiences'; Analyse von marginalisierten Communities
 
-### Fairness
+### Evidenz 5
 
 Diskussion 'algorithmic fairness' implizit durch Kritik an 'objective data' producing 'social inequalities and discrimination'; keine technischen Fairness-Metriken, aber konzeptuelle Fairness-Kritik
 

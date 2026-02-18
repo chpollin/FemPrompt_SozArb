@@ -4,14 +4,6 @@ authors: ["Kelly Mills", "Pati Ruiz", "Keun-woo Lee", "Merijke Coenraad", "Judi 
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,.md
 confidence: 92
@@ -42,31 +34,31 @@ Theoretisch-konzeptionell: Synthese von Forschungsliteratur zu AI Literacy, Medi
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy is defined as 'the knowledge and skills that enable people to critically understand, evaluate, and use AI systems and tools to safely and effectively participate in an increasingly digital world.' Framework explicitly provides six AI Literacy Practices as 'actionable skills that learners can demonstrate.'
 
-### Generative_KI
+### Evidenz 2
 
 Extensive discussion of generative AI platforms: 'Generative AI platforms such as ChatGPT, Claude, Gemini, and other LLMs can generate text responses to prompts and platforms such as DALL-E can generate images.' Detailed section on 'Creating with AI' addresses GenAI prompting skills and risks including bias and hallucinations.
 
-### Prompting
+### Evidenz 3
 
 Section on 'Creating with AI' states: 'The skill of GenAI prompting involves creating good questions or commands that get the system to produce something that humans consider to be a quality output. While prompting itself is a skill, it requires an understanding of the desired outputs and of how to verify and validate that those outputs are accurate.'
 
-### KI_Sonstige
+### Evidenz 4
 
 Framework addresses algorithmic systems generally, including adaptive technology, recommendation algorithms, and traditional ML for problem-solving: 'Interacting with AI involves engaging with adaptive technology in multiple modalities that adjusts to data collected.'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Paper cites foundational works on algorithmic bias (Benjamin 2019, Broussard 2023, Buolamwini 2023, Noble 2018). States: 'the well-documented examples of AI tools perpetuating and reproducing systemic bias' and 'algorithms take on the biases that are already represented in the data and all data includes human biases.' Highlights that 'most of the training data available to AI systems comes from public interfaces on the internet, which is overrepresented as white and male.'
 
-### Diversitaet
+### Evidenz 6
 
 Framework emphasizes 'human justice perspective' and references 'responsible AI and tech justice.' Strategy 5 explicitly promotes 'Awareness and Agency' for marginalized populations: 'raising awareness about algorithmic bias and advocating for changes in policies around algorithms and automation in our society.' Mentions vulnerable populations and the need for equity in AI literacy access.
 
-### Fairness
+### Evidenz 7
 
 Core Values emphasize 'Centering Justice' in AI applications. Paper discusses need to 'mitigate the harmful effects of algorithms' and examines how AI systems can 'perpetuate and exacerbate existing inequities.' Recommends evaluation of algorithmic fairness through questions about bias in training data and impacts on different populations.
 

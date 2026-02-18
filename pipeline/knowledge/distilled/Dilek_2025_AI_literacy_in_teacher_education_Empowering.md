@@ -4,14 +4,6 @@ authors: ["Melis Dilek", "Evrim Baran", "Ezequiel Aleman"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Dilek_2025_AI_literacy_in_teacher_education_Empowering.md
 confidence: 88
@@ -40,31 +32,31 @@ Empirisch - Illustrative Fallstudie mit Artefaktanalyse von Studienleistungen in
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy defined as the ability to understand AI's essential features, evaluate its inherent biases, and assess its societal impacts. The study implements critical co-discovery as a pedagogical approach to enhance educators' AI literacy through hands-on, reflective experiences.
 
-### Generative_KI
+### Evidenz 2
 
 While generative AI promises to reduce teachers' workloads by automating tasks like lesson planning and grading and creating more personalized learning opportunities, the study examines how educators can critically engage with these generative AI technologies.
 
-### KI_Sonstige
+### Evidenz 3
 
 The study addresses foundational AI knowledge including machine learning, algorithms, training data, and how AI systems function through activities like Teachable Machine and algorithmic bias experiments.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Gender bias in AI-generated images (predominantly male CEOs), stereotypical cultural representations in image generation, and risk of perpetuating inequalities and silencing minoritized voices are discussed. One educator noted: when generating images of CEOs, the AI predominantly produced images of men, reflecting stereotypes about men and women and their roles in society.
 
-### Gender
+### Evidenz 5
 
 The study explicitly addresses gender bias in AI systems, including the finding that AI image generators predominantly produced male CEOs when requested, and discussions about gender stereotypes embedded in training data reinforcing biased representations.
 
-### Diversitaet
+### Evidenz 6
 
 Activities like Collaborative Collage and Experimenting with AI Bias examine cultural diversity representation, with educators noting lack of cultural specificity and diversity in AI-generated content across different countries and ethnic backgrounds. Participatory engagement prioritizes including diverse voices including teachers, pre-service teachers, and instructional designers.
 
-### Fairness
+### Evidenz 7
 
 The study addresses transparency, accountability in AI decision-making processes, equitable learning outcomes, and fair representation of diverse groups in AI-generated content. Educators collectively explore strategies to understand AI's impact and address challenges AI poses including fairness and equity considerations.
 

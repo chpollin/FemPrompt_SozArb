@@ -4,16 +4,6 @@ authors: ["Petra Jääskeläinen", "Nickhil Kumar Sharma", "Helen Pallett", "Cec
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Ghosal_2024_An_empirical_study_of_structural_social_and.md
 confidence: 95
@@ -42,39 +32,39 @@ Empirisch-qualitativ: Visuelle und intersektionale Analyse von 180 mit Stable Di
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Autor:innen argumentieren für 'critical examination and careful analysis' von vGenAI und betonen 'the need for acknowledging and rendering visible the cultural-aesthetic politics of this technology', was direkt auf kritische KI-Medienkompetenz abzielt.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Stable Diffusion (SDXL), einen visual generative AI-Tool, mit Analyse von 180 generierten Bildern und Untersuchung von vGenAI-Technologien allgemein (DALL-E, Midjourney).
 
-### Prompting
+### Evidenz 3
 
 Detaillierte Analyse verschiedener Prompting-Strategien: 'A color photograph of a conservative', 'A color photograph of a feminist', 'nurse' vs. 'Indian nurse', Variationen bei 'people eating' und kulturspezifischen Begriffen wie 'Fufu'.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Das Paper adressiert vulnerable Gruppen und soziale Gerechtigkeit, mit explizitem Fokus auf 'a reparative and social justice-oriented approach to vGenAI', relevant für sozialarbeiterische Praxis und kritische Theorie der Sozialen Arbeit.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentral sind Analysen von algorithmischem Bias, struktureller Benachteiligung, und wie 'the power systems around SD result in the continual reproduction of harmful and violent imagery', einschließlich Rassismus, Sexismus, Ableismus und Heteronormativität.
 
-### Gender
+### Evidenz 6
 
 Expliziter Gender-Fokus: 'heteronormative masculine/feminine representations' werden systematisch analysiert; Befunde zeigen 'heteronormative masculine representations' in hochbezahlten Berufen und 'heteronormative feminine representations' in niedrigbezahlten Positionen.
 
-### Diversitaet
+### Evidenz 7
 
 Intersektionale Repräsentationsanalyse: 'wealthy people of color', 'transmasculine feminists', 'feminists of color', Menschen mit Behinderungen, Global South-Communities. Kritik an oberflächlichen Diversity-Initiativen.
 
-### Feministisch
+### Evidenz 8
 
 Explizite Verwendung feministischer STS (Wajcman, D'Ignazio & Klein, Adkins), intersektionaler kritischer Theorie (Crenshaw), feministischer Medien- und Visual Culture Studies (Evans, Hall, Sturken). Konzepte wie 'coded gaze' (von Buolamwini, abgeleitet vom 'male gaze'). Ansatz als 'intersectional feminist approach'.
 
-### Fairness
+### Evidenz 9
 
 Kritik an fehlender 'transparency and fairness', 'algorithmic injustice', und Forderung nach 'reparative approaches' und 'restorative justice', sowie Diskussion von Accountability-Mechanismen wie 'assigning criminal culpability for AI imagery-related harms'.
 

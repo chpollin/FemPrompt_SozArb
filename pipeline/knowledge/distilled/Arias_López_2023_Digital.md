@@ -4,14 +4,6 @@ authors: ["World Health Organization", "Soumya Swaminathan", "Bernardo Mariano",
 year: 2021
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Arias_López_2023_Digital.md
 confidence: 75
@@ -40,31 +32,31 @@ Strategiedokument basierend auf globaler Ko-Kreation über zwei Jahre mit mehrer
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Digitale Gesundheitskompetenz wird explizit als notwendig identifiziert: 'Ensure competencies on digital health are included in the education and training curricula of all health professionals and allied workers, and at all levels of formal education and informal training.' sowie 'Foster digital health literacy at population level and raise awareness of patients' rights'.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf digitale Technologien, Datenverarbeitung, Health Information Exchange, elektronische Patientenakten, Telemedicine, Population Health Management, Personalisierte Medizin und algorithmische Entscheidungssysteme im Gesundheitswesen.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Dokumentiert Bezug zu Care-Arbeit, Gemeinschaftsgesundheit, vulnerable Bevölkerungsgruppen, Gesundheitsfürsorge und Zugang zu Gesundheitsservices durch digitale Technologien, besonders für marginalisierte Communities und in Notfallsituationen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Adressierung von Ungleichheit: 'Recognize the urgent need to address the major impediments faced by least-developed countries implementing digital health technologies' und 'achieve increased quality, coverage and accessibility of health care' mit Fokus auf vulnerable Populationen und Digital Divide überwindung.
 
-### Gender
+### Evidenz 5
 
 Gender-Gleichstellung wird mehrfach erwähnt: 'Promote the use of population health management and gender-equality approaches through digital health applications' und 'Develop a digitally capable and gender-balanced health workforce' sowie 'Ensure competencies on digital health are included in the education and training curricula' mit explizitem Gender-Balance-Fokus.
 
-### Diversitaet
+### Evidenz 6
 
 Inklusion verschiedener Stakeholder wird betont: 'Conduct a stakeholder analysis and identify suitable actions to engage each group contextualized to different public health situations' und Fokus auf 'people-centred health systems' mit Ansprache verschiedener Bevölkerungsgruppen, Berufsgruppen und geografischer Kontexte.
 
-### Fairness
+### Evidenz 7
 
 Fairness in Systemzugang wird adressiert durch Fokus auf 'universal health coverage', 'equity goals within the health system', 'accessibility of health care' und 'people-centred outcomes', sowie durch Governance-Strukturen zur fairen Implementierung digitaler Health-Technologien.
 

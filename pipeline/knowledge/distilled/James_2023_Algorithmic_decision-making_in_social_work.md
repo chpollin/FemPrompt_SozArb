@@ -4,13 +4,6 @@ authors: ["Paul James", "Jason Lal", "Ashley Liao", "Liam Magee", "Karen Soldati
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: James_2023_Algorithmic_decision-making_in_social_work.md
 confidence: 91
@@ -39,27 +32,27 @@ Theoretisch und konzeptionell; Case-Study-Analyse von drei Fallbeispielen (AFST,
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Digital literacy needs to include 'technical competency and critical understanding of the technical implications and social form of such digital tools'; 'algorithmic literacy that centers on understanding the often-critical limitations of such technologies and systems'
 
-### KI_Sonstige
+### Evidenz 2
 
 Algorithmic decision-making (ADM) systems, predictive risk-assessment techniques, machine learning models trained on large datasets; 'black-box AI' systems; simple rule-based systems and complex AI systems
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Fokus auf Sozialarbeitspraxis, -pädagogik und -theorie; Case-Studies in Kinderschutz (AFST), Strafvollzug (COMPAS), Behindertenhilfe (NDIS); Curricula-Entwicklung für Sozialarbeitsstudierende
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Even AFST 'threatens the human right of nondiscrimination' when it creates 'imprecise risk-predictions based on invalid correlations'; COMPAS shows 'African-American populations had a higher false-negative rate compared to white populations'; disadvantages are 'amplified by automated processes, especially for the already most precarious'
 
-### Diversitaet
+### Evidenz 5
 
 Children with disabilities in child-protection settings; African-American populations in justice systems; disabled people in NDIS scheme; marginalized and precarious populations systematically affected by ADM; intersectional contexts emphasized
 
-### Fairness
+### Evidenz 6
 
 Algorithmic fairness concerns: systems designed to 'reduce bias in decision-making' have instead 'accentuated or introduce new biases'; discussion of equitable resource allocation, non-discrimination rights, and 'moral crumple zones'
 

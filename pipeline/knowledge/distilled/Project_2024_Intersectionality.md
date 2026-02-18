@@ -4,14 +4,6 @@ authors: ["DIVERSIFAIR Project Team", "CorTexter", "Eticas", "Sciences Po", "TNO
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Project_2024_Intersectionality.md
 confidence: 95
@@ -40,31 +32,31 @@ Mixed-Methods Review: Literaturanalyse, Stakeholder-Interviews (KI-Community und
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Build awareness and AI literacy: 'Provide AI literacy training across teams, focusing on ethics, intersectionality, and societal impact. Debunk AI myths, such as the notion of AI neutrality, through internal workshops and communication.' (S. 18-19)
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf klassische ML-Systeme und algorithmische Entscheidungssysteme: Predictive Policing, Healthcare Algorithms, Facial Recognition, Hiring Algorithms, Credit Scoring, Welfare Fraud Detection
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Intersectional bias in AI describes 'the AI harms as experienced by people due to multiple intersecting and often marginalised parts of their identity.' Beispiele: Dutch childcare scandal (immigrant families), predictive policing (low-income communities of colour), healthcare disparities (uninsured/underinsured populations)
 
-### Gender
+### Evidenz 4
 
 Gender bias dokumentiert in Amazon Recruiting Tool, Apple Credit Card, Austrian Unemployment Agency; Frauen in Tech-Rollen unterrepräsentiert: '21% of leaders are women, 4% are women of colour, 1% are Black women' (S. 9)
 
-### Diversitaet
+### Evidenz 5
 
 Zentral: 'Embed inclusivity and cultural sensitivity: Prioritise localised solutions tailored to specific cultural or regional needs. Plan for marginal use cases, allocating resources to support the most vulnerable groups.' Fallstudien zu marginalisierten Gruppen: Migranten, Racial minorities, disabled persons, single-parent households
 
-### Feministisch
+### Evidenz 6
 
 Explizit feministische Perspektive: Referenzen auf Kimberlé Crenshaw (Intersectionality Begriffsschöpferin), Suresh et al. 'Towards Intersectional Feminist and Participatory ML' (2022), D'Ignazio & Bhargava zu Data Justice, Partizipatorischer ML-Ansatz, Community-basierte Ansätze zur Gegendatensammlung (Feminicide Counterdata Collection)
 
-### Fairness
+### Evidenz 7
 
 Fairness definiert als: 'designing systems that promote equitable outcomes for all individuals, regardless of identity.' Kritik an single-axis Fairness-Ansätzen: 'Many approaches to AI fairness focus on addressing just one type of bias at a time, such as gender or race. However, this approach ignores the complex ways biases overlap' (S. 8)
 

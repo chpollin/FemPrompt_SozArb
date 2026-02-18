@@ -4,14 +4,6 @@ authors: ["Na Ta", "Jing Zeng", "Zhanghao Li"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Zeng_2025_Governing_discriminatory_content_in.md
 confidence: 88
@@ -40,31 +32,31 @@ Mixed Methods: Quantitativ - algorithmic auditing mit 28.314 Responses über API
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf conversational AI-Systeme: 'ChatGPT and others', 'LLM-powered applications', detailed analysis of ChatGPT, Gemini, Ernie Bot, etc.
 
-### Prompting
+### Evidenz 2
 
 Algorithm auditing basiert auf systematisch konstruierten Prompts zur Detektion diskriminatorischer Inhalte; 'constructed prompts for auditing conversational AI systems'
 
-### KI_Sonstige
+### Evidenz 3
 
 Klassisches ML/NLP: Large Language Models, training data bias, fine-tuning, value alignment, guardrails als Sicherheitsmechanismen
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral: 'discriminatory content output unjustly differentiating or prejudicing individuals or groups based on specific attributes'; Analyse von Bias zu Race, Religion, Sexual Orientation, Age, Disability, Gender
 
-### Gender
+### Evidenz 5
 
 Explizite Analyse von Gender-Bias; 'gender prompts', Unterschiede bei weiblichen vs. männlichen Framing; Sexualorientierung (lesbian, gay, bisexual)
 
-### Diversitaet
+### Evidenz 6
 
 Analyse marginalisierter Gruppen: Black people, Indians, Asians; LGBTQ+ Orientierungen (homosexuality, lesbianism, bisexuality); Religion (Islam, Christianity, Buddhism); Disability; Age
 
-### Fairness
+### Evidenz 7
 
 Fairness und Transparenz als zentrale Prinzipien; 'fairness is upheld at a systemic rather than merely cosmetic level'; Analyse disparater Auswirkungen auf verschiedene Gruppen
 

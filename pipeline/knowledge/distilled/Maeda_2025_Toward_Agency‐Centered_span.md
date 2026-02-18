@@ -4,13 +4,6 @@ authors: ["Takuya Maeda", "Hillary Anderson", "Anabel Quan-Haase", "Katharine Wi
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Maeda_2025_Toward_Agency‐Centered_span.md
 confidence: 94
@@ -39,27 +32,27 @@ Scoping Review mit thematischer Analyse (Braun & Clarke 2007); 129 Studien aus 1
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentrale Fokus der Review: 'Most definitions focus on knowledge and skill acquisition, framing AI literacy as a suite of acquired competencies.' und 'Most studies (n=100) discuss AI or algorithms as generic umbrella terms' - Analyse von 129 Studien zu AI-Literacy-Definitionen und -Rahmen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Breite Abdeckung algorithmischer Systeme: 'algorithmic literacy' (24% der Studien), Algorithmen-Transparenz ('algorithms tend to be highly opaque and black-box in nature'), Algorithmen-Awareness und verschiedene KI-Anwendungen.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Expliziter Fokus auf vulnerable Zielgruppen und digitale Gerechtigkeit: 'scholars and practitioners are calling for the development of AI literacy as an integral part of digital equity, given a society that is increasingly reliant on AI integration', sowie 'public's understanding of and engagement with AI tools'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kernthema der Review: 'Almost half (46%) of the studies (n=59) do not meaningfully examine factors of social inequality', und 'AI systems could create new forms of harm and inequality'. Analyse des Digital Divide im AI-Kontext, insbesondere für marginalisierte Gruppen: 'AI systems often perform differently across demographic groups'.
 
-### Diversitaet
+### Evidenz 5
 
 Kritische Analyse der Vernachlässigung marginalisierter Gruppen: 'We identify significant gaps in understanding the role of demographic disparities within AI literacy, particularly regarding how marginalized groups develop and exercise agency when interacting with AI systems.' Intersektionaler Ansatz notwendig.
 
-### Fairness
+### Evidenz 6
 
 Implikationen für algorithmische Fairness durch Literacygaps: 'given growing evidence that AI systems often perform differently across demographic groups', sowie Forderung nach Berücksichtigung von 'power dynamics, digital marginalization, and lived experiences'.
 

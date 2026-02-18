@@ -4,13 +4,6 @@ authors: ["Duri Long", "Brian S Magerko"]
 year: 2020
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Long_2020_What_is_AI_Literacy_Competencies_and_Design.md
 confidence: 88
@@ -39,27 +32,27 @@ Theoretisch/Review - Explorative Scoping Study mit Analyse von 150 interdiszipli
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Core paper on AI literacy definition: 'We define AI literacy as a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI; and use AI as a tool online, at home, and in the workplace.' Präsentiert 16 core competencies und Design-Überlegungen für Bildung.
 
-### KI_Sonstige
+### Evidenz 2
 
 Diskussionen zu Machine Learning, algorithmischen Entscheidungssystemen, Robotik, Explainable AI und klassischen AI-Ansätzen: 'Black-box algorithms (i.e. algorithms with obscured inner-workings) can cause misunderstandings about AI.'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Explizite Behandlung von algorithmischen Biases, digitaler Divide und struktureller Benachteiligung: 'Algorithmic bias is often directly related to bias present in training datasets. Agents in-the-wild are also able to learn bias and bigotry from human users.' Diskussion von Auswirkungen auf marginalisierte Gruppen.
 
-### Gender
+### Evidenz 4
 
 Geschlechtspezifisches Diversity-Problem in AI-Workforce dokumentiert: 'in 2018, 80% of AI professors and 71% of applicants to AI-related jobs identified as male.' Diskussion wie fehlende Diversity beeinflusst, für wen Systeme entwickelt werden.
 
-### Diversitaet
+### Evidenz 5
 
 Fokus auf Inclusion und Repräsentation: 'companies have pursued initiatives to broaden AI education to underrepresented audiences in an effort to increase workforce diversity.' Design-Überlegung zu Identity, Values und Backgrounds: kulturelle Relevanz von Lerninterventionen, besonders für unterrepräsentierte Gruppen.
 
-### Fairness
+### Evidenz 6
 
 Fokus auf algorithmic fairness und faire ML-Systeme: 'Most of the papers in the 2018 FAT ML conference focused on issues related to algorithmic bias.' Diskussion von Transparenz, Accountability und ethischen Entscheidungsprozessen in KI-Systemen.
 

@@ -4,13 +4,6 @@ authors: ["Yih-Chang Chen", "Chia-Ching Lin"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chen_2025_Social_work_and_artificial_intelligence.md
 confidence: 92
@@ -39,27 +32,27 @@ Empirisch/Qualitativ: Semi-strukturierte Interviews (n=35) und 3 Fokusgruppen mi
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 92% of social work professionals identified the need for enhanced AI-related professional training. Study proposes comprehensive educational reforms including incorporation of AI knowledge into curricula and practice-oriented workshops.
 
-### KI_Sonstige
+### Evidenz 2
 
 Study examines AI applications including risk assessment, case classification, automated management, resource matching, and predictive analytics in social work practice.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Study investigates application of AI in social work practice across child welfare (n=7), elderly care (n=6), and mental health (n=7) sectors, involving social work professionals with average 10.5 years experience.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 When AI models fail to account for cultural differences, social contexts, or individual variations, they risk producing biased conclusions. Study emphasizes risk of data misuse and privacy violations, particularly concerning vulnerable populations served by social work.
 
-### Diversitaet
+### Evidenz 5
 
 Participant diversity includes 43% male and 57% female professionals across three stakeholder groups (social workers, AI developers, policymakers) representing different professional and institutional perspectives. Study acknowledges need to examine different cultural and institutional contexts.
 
-### Fairness
+### Evidenz 6
 
 Study emphasizes need for fair and equitable AI deployment, highlighting 85% of social workers' concerns about client privacy/data protection, 100% policymaker emphasis on ethical guidelines, and mechanisms for balancing technological assistance with professional accountability.
 

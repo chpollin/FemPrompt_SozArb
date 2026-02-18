@@ -4,12 +4,6 @@ authors: ["Vibeke Blaker Strand"]
 year: 2025
 type: report
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Lund_2025_Algorithms,_artificial_intelligence_and.md
 confidence: 93
@@ -38,23 +32,23 @@ Theoretisch-rechtliche Analyse. Systematische Untersuchung der Anwendbarkeit und
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Der Report analysiert systematisch algorithmische Systeme und KI-Systeme in regulatorischem Kontext: 'The AI Act specifies that existing EU regulation on discrimination is not impacted by the Act.' Fokus auf Algorithmen, maschinelles Lernen und Entscheidungsunterstützungssysteme.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Der Report adressiert Wohlfahrtsverwaltung und soziale Dienste explizit: 'algorithmic systems may significantly impact the position of individuals, as they can affect individuals' access to essential services and rights, such as healthcare, housing or the ability to obtain insurance.' Dies betrifft Soziale Arbeit in Kontext von Wohlfahrtsverwaltung und Zugang zu sozialen Dienstleistungen.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrales Thema des gesamten Reports: 'Discrimination may occur through algorithmic systems' emphasis on proxy factors ('proxy discrimination'). The use of proxy factors triggers new issues, particularly in relation to the prohibition against indirect discrimination.' Analyse struktureller Diskriminierungsmechanismen durch Algorithmen.
 
-### Diversitaet
+### Evidenz 4
 
 Report thematisiert intersektionale Diskriminierung explizit: 'differential treatment also can be found to have occurred against a group within a larger protected group' und 'Section 6 of the Equality and Anti-Discrimination Act's inclusion of a prohibition against multiple forms of discrimination.' Schutz marginalisierter Gruppen und Minderheiten.
 
-### Fairness
+### Evidenz 5
 
 Report analysiert Fairness-Aspekte algorithmischer Systeme: 'a requirement might be established that the differential treatment be suitable and necessary for the realization of the data system's purpose' und diskutiert Fairness-Kriterien für algorithmische Systeme systematisch in Kapitel 4.6.
 

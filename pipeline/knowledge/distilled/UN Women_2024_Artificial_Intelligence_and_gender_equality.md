@@ -4,14 +4,6 @@ authors: ["UN Women"]
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: UN Women_2024_Artificial_Intelligence_and_gender_equality.md
 confidence: 95
@@ -40,31 +32,31 @@ Review/Explainer - Kombination von Sekundärliteratur-Analyse (Berkeley Haas Cen
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The AI field needs more women, and that requires enabling and increasing girls' and women's access to and leadership in STEM and ICT education and careers. African Girls Can Code Initiative als Beispiel für Bildungsinitiativen.
 
-### Generative_KI
+### Evidenz 2
 
 Beyza Doğuç encountered gender bias in Generative AI when researching for a novel and prompted it to write a story about a doctor and a nurse. Generative AI creates new content (text, images, video, etc.) inspired by similar content and data that it was trained on.
 
-### KI_Sonstige
+### Evidenz 3
 
 AI-powered solutions used for health diagnosis, job decisions, credit assessments. Berkeley Haas Center analysed 133 AI systems across different industries for gender bias.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 A study by the Berkeley Haas Center for Equity, Gender and Leadership analysed 133 AI systems across different industries and found that about 44 per cent of them showed gender bias, and 25 per cent exhibited both gender and racial bias. The gender digital divide creates a data gap that is reflected in the gender bias in AI.
 
-### Gender
+### Evidenz 5
 
 The world has a gender equality problem, and Artificial Intelligence (AI) mirrors the gender bias in our society. According to the Global Gender Gap Report of 2023, there are only 30 per cent women currently working in AI.
 
-### Diversitaet
+### Evidenz 6
 
 There is a critical need for drawing upon diverse fields of expertise when developing AI, including gender expertise, so that machine learning systems can serve us better. More women researchers are needed in the field. The unique lived experiences of women can profoundly shape the theoretical foundations of technology.
 
-### Fairness
+### Evidenz 7
 
 Right now, there is no mechanism to constrain developers from releasing AI systems before they are ready and safe. There's a need for a global multistakeholder governance model that prevents and redresses when AI systems exhibit gender or racial bias, reinforce harmful stereotypes, or does not meet privacy and security standards.
 

@@ -4,14 +4,6 @@ authors: ["Gesa Alena Linnemann", "Julian Löhe", "Beate Rottkemper"]
 year: 2023
 type: journalArticle
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der.md
 confidence: 91
@@ -40,31 +32,31 @@ Theoretisch-konzeptionell: Systematische Analyse unter Anwendung von Staub-Berna
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Ausdrückliche Betonung der Notwendigkeit von Fachkompetenz: 'Fachkräfte müssen dazu befähigt werden, diese Wahrscheinlichkeiten zu interpretieren' und 'Es ist essenziell für den Einsatz von Entscheidungsunterstützungssystemen in der Praxis, dass transparent gemacht wird, mit welcher Wahrscheinlichkeit ein Ergebnis passend ist.'
 
-### Generative_KI
+### Evidenz 2
 
 Explizite Diskussion von GPT-3 und ChatGPT: 'Das im Jahr 2020 veröffentlichte OpenAI GPT-3 nutzt DeepLearning-Applikationen und ist in der Lage, anhand von wenigen Input-Parametern qualitativ hochwertige Texte zu generieren' sowie 'ChatGPT' mit Verweis auf dessen Bestehen einer Jura-Prüfung 2023.
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfassende Behandlung von Natural Language Processing, Machine Learning, Deep Learning, Künstlichen Neuronalen Netzwerken und Predictive Analytics als zentrale Technologien.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Expliziter Fokus auf alle Handlungsfelder: 'In verschiedenen Handlungsfeldern der Sozialen Arbeit wird der Einfluss von NLP exemplarisch dargestellt'; Analyse von Kinder- und Jugendhilfe, Altenhilfe, Beratung; Referenz zu Staub-Bernasconis Konzept der Menschenrechtsprofession.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Warnung vor Reproduktion von Diskriminierung: 'stereotype Rollenbilder wiederholt werden' und 'Ohne interdisziplinäre Teams in der Entwicklung von Werkzeugen, die NLP nutzen, besteht die Gefahr der Reproduktion von Diskriminierung und sogar weiterer Radikalisierung'.
 
-### Diversitaet
+### Evidenz 6
 
 Thematisierung marginalisierter Gruppen durch NLP und Sprachassistenz: besondere Betrachtung älterer Menschen, von Einsamkeit betroffener Menschen, weniger digital affiner Hilfesuchender: 'grundsätzlich darf die digitale Kontaktaufnahme nicht die ausschließliche Form des Erstkontakts sein, da sonst weniger digital affine Hilfesuchende nicht mehr erreicht werden.'
 
-### Fairness
+### Evidenz 7
 
 Explizite Forderung nach Fairness im Sinne der Menschenrechte: 'Im Bereich NLP sind insbesondere das Verbot von Diskriminierung, der Schutz der Freiheitssphäre des Einzelnen und die Meinungs- und Informationsfreiheit zu beachten.'
 

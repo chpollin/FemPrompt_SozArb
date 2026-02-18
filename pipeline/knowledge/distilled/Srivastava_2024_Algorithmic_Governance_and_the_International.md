@@ -4,11 +4,6 @@ authors: ["Swati Srivastava"]
 year: 2021
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Srivastava_2024_Algorithmic_Governance_and_the_International.md
 confidence: 75
@@ -37,19 +32,19 @@ Theoretisch/Konzeptionell: Integrative Literaturanalyse und IR-theoretische Neuk
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Classification algorithms using unsupervised and semi-supervised machine learning for object detection, text processing, and predictive modeling; algorithmic governance defined as 'deference to automated decision-making makes algorithms a source and factor of social order'; focus on algorithmic systems in surveillance, content moderation, risk assessment, and recommendation systems.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Risk-assessment algorithms 'construct people's identities and reputations by classifying them as risky, associating them with undesirable traits'; examples of algorithmic discrimination including Facebook's differential treatment of content moderation for Black activists versus white users; mass surveillance generating behavioral data extraction; algorithmic systems perpetuating structural inequalities in credit, terrorism, and crime assessment.
 
-### Diversitaet
+### Evidenz 3
 
 Discussion of marginalized communities affected by algorithmic governance; reference to Rohingya genocide facilitated by Facebook's algorithmic amplification; mention of diverse global operating contexts and multilingual oversight challenges; intersectional harms affecting different user populations differently through algorithmic systems.
 
-### Fairness
+### Evidenz 4
 
 Emphasis on due process, transparency, and fair procedures in algorithmic governance; discussion of 'obligations of transparency, notice, and fair procedures' for tech platforms; evaluation of Facebook's Content Oversight Board as attempt at fairness and accountability mechanisms; concerns about algorithmic discrimination and need for nondiscrimination standards.
 

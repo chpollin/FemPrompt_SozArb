@@ -4,12 +4,6 @@ authors: ["Matthieu Queloz"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: Santos_2024_Explainability_through_systematicity_The_hard.md
 confidence: 89
@@ -40,23 +34,23 @@ Theoretisch - Konzeptuelle Analyse und Begriffsgeschichte; historische Rekonstru
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentrales Thema ist, wie wir KI-Systeme verstehen und bewerten sollen: 'the fundamental question, especially from the perspective of users as opposed to builders of these models, is to what extent AI exhibits systematicity of thought'
 
-### Generative_KI
+### Evidenz 2
 
 Umfangreiche Diskussion von Large Language Models (LLMs) und Transformer-Architekturen: 'With the advent of transformer-based architectures (Vaswani et al., 2017), LLMs have become remarkably proficient at generating linguistic outputs'; detaillierte Analyse von LLM-Limitationen bezüglich Konsistenz und Kohärenz
 
-### KI_Sonstige
+### Evidenz 3
 
 Diskussion von Neural Networks allgemein, Connectionism vs. Klassische Symbolische KI, Fodor/Pylyshin Systematicity Challenge, Kompositionialität, Architektur-Fragen
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Fairness und Bias-Probleme werden als Manifestationen fehlender Systematizität analysiert: 'Rendering fairness verifiable through systematicity is clearly a desirable feature in AI models. As the fast-growing literature on fair-AI and the various techniques for de-biasing these models brings out, the anxiety provoked by the opacity of these models stems in part from the worry that they might be biased'
 
-### Fairness
+### Evidenz 5
 
 Fairness wird als vierte und fünfte Rationale für Systematisierung entwickelt: kritische Funktion (Aufdeckung von Bias durch Systematisierung) und Verantwortlichkeitsfunktion: 'That is part of what it means for the decision-making to be fair and to treat like cases alike. Systematicity provides accountability'
 

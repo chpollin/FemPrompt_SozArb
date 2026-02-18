@@ -4,13 +4,6 @@ authors: ["Giulio Filippi", "Sara Zannone", "Adriano Koshiyama"]
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.md
 confidence: 95
@@ -39,27 +32,27 @@ Theoretisch/Mathematisch mit empirischer Validierung: Geometrische Modellierung 
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf algorithmische Fairness, statistische Parität, Gleichheit der Gelegenheiten in Klassifikationssystemen; mathematische und algorithmische Methoden für Machine Learning.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 'The issue of fairness in AI has received an increasing amount of attention in recent years. A number of AI systems involved in sensitive applications, like recruitment or credit scoring, were found to be biased against minority groups'
 
-### Gender
+### Evidenz 3
 
 'darker-skinned females' Diskriminierung in Gesichtserkennungssystemen; Gender als zentrale geschützte Attribut in Beispielen und Experimenten.
 
-### Diversitaet
+### Evidenz 4
 
 'the intersection of gender and ethnicity' (white male, black male, white female and black female); Fokus auf marginalisierte Gruppen durch Intersektionalität; multiple geschützte Attribute (Rasse, Geschlecht, Alter, Familienstand).
 
-### Feministisch
+### Evidenz 5
 
 Explizite Referenzen auf feministische Intersektionalitätstheorie: 'The concept of intersectional fairness, initially introduced by Black feminist scholars [Crenshaw(2013a), Crenshaw(2013b)]' und 'The fact that the discrimination faced by Black women was greater than the sum of the discrimination experienced by Black men and white women is a well-known concept in the feminist literature [Crenshaw(2013a)], also known as fairness gerrymandering'
 
-### Fairness
+### Evidenz 6
 
 Gesamtpapier widmet sich Fairness-Metriken (Statistical Parity, Disparate Impact, Equality of Outcome, Equality of Opportunity); mathematische Beweise zu Fairness-Propagation; Definition und Messung intersektionaler Fairness.
 

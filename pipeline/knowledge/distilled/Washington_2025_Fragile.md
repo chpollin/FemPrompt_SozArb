@@ -4,15 +4,6 @@ authors: ["Anne L. Washington"]
 year: 2025
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Washington_2025_Fragile.md
 confidence: 95
@@ -41,35 +32,35 @@ Mixed Methods: Literature review of academic and corporate research papers, expe
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Report addresses critical understanding of foundation models for practitioners and decision-makers: 'This report is directed primarily at practitioners and decision-makers in mission-driven organizations, but also at anyone committed to a responsible digital future.'
 
-### Generative_KI
+### Evidenz 2
 
 Central focus on foundation models like GPT, ChatGPT, Claude, Gemini, DALL-E, and CoPilot: 'Systems such as ChatGPT, Gemini, Dall-E, or CoPilot now shape search results, education, and workplace routines.'
 
-### KI_Sonstige
+### Evidenz 3
 
 Discusses large language models, machine learning, NLP, and computer vision: 'Large language models (LLMs) are foundation models that capture patterns in human language' and extensive appendix on ML concepts.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Explicit reference to mission-driven social organizations and vulnerable populations served: 'For mission-driven organizations, these risks are not abstract technicalities but immediate practical challenges. Precisely in contexts where vulnerable groups depend on accurate information and fair treatment, biased or erroneous AI outputs can cause real harm. A chatbot used in migration counseling...An automated tool in social work...'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Core argument about bias perpetuation: 'These datasets reflect dominant power structures that are often Western, patriarchal, and discriminatory. Rather than reflecting diversity, the models reproduce and amplify existing biases.' Documents concrete harms: 'A chatbot from Austria's employment agency gave stereotypical career advice, steering women toward cooking or nursing professions and men toward IT jobs.'
 
-### Gender
+### Evidenz 6
 
 Analysis of gender-specific biases: 'A chatbot from Austria's employment agency gave stereotypical career advice, steering women toward cooking or nursing professions and men toward IT jobs.' Discussion of WEIRD (Western, Educated, Industrialized, Rich, Democratic) value embedding reflecting gendered perspectives.
 
-### Diversitaet
+### Evidenz 7
 
 Extensive focus on representation and inclusion of marginalized groups and languages: 'Smaller language groups, often overlooked in large general-purpose models, now have alternative foundation models that represent their populations, languages, and cultures, making them visible in artificial intelligence.' Discusses low-resource languages, endangered language preservation (Gaelic, Kalaallisut, isiZulu), and African language models (EthioLLM).
 
-### Fairness
+### Evidenz 8
 
 Explicit focus on algorithmic fairness and fair AI design: 'With deliberate curation, continuous improvement, and a service orientation, foundation models could evolve into infrastructures that are more firmly aligned with the public interest.' Discusses fairness through diverse participation, source transparency, and constitutional AI approaches.
 

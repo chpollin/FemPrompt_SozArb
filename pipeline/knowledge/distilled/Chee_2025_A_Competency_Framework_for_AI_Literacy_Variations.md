@@ -4,12 +4,6 @@ authors: ["Hyunkyung Chee", "Solmoe Ahn", "Jihyun Lee"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md
 confidence: 86
@@ -38,23 +32,23 @@ Systematische Literaturübersicht nach PRISMA 2020-Richtlinien; Durchsuchung von
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentral: 'AI literacy as a comprehensive set of competencies enabling individuals to critically evaluate AI technologies, effectively communicate and collaborate with AI, and utilize AI as a tool in various settings'. Framework umfasst 8 Kompetenzen und 18 Sub-Kompetenzen als Basis für AI-Curriculumentwicklung.
 
-### KI_Sonstige
+### Evidenz 2
 
 Behandlung klassischer KI-Themen wie Machine Learning, Algorithmen, Datenverarbeitung, Robotik und algorithmische Entscheidungssysteme als integraler Bestandteile der AI-Literacy-Kompetenzen.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Expliziter Fokus auf Unterschiede zwischen Lerngruppen: 'How do these competencies vary by educational level and discipline?' mit Implikation für gleichberechtigten Zugang zu AI-Bildung über alle Bevölkerungsschichten.
 
-### Diversitaet
+### Evidenz 4
 
 Framework berücksichtigt explizit 'different learner groups (by educational level and discipline)' und adressiert Variationen in Anforderungen für K-12, Hochschule, Arbeitswelt und verschiedene Berufsfelder (Healthcare, Engineering, etc.).
 
-### Fairness
+### Evidenz 5
 
 Implikation für faire Chancenverteilung durch systematische AI-Literacy-Entwicklung: 'Policies are needed to support a systematic pathway for lifelong AI literacy development' zur Gewährleistung, dass alle Bevölkerungsgruppen Zugang zu AI-Kompetenzen erhalten.
 

@@ -4,15 +4,6 @@ authors: ["Anastasia Karagianni"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.md
 confidence: 93
@@ -43,35 +34,35 @@ Theoretisch; kritische Textanalyse mit feministischen Rechtstheorien, Hermeneuti
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Paper adressiert 'generative AI raises legal concerns, particularly in the proliferation of non-consensual sexualised deepfakes, which constitute a form of gender-based violence'
 
-### KI_Sonstige
+### Evidenz 2
 
 Analysiert high-risk AI systems unter AI Act, predictive algorithms (SyRI-Fall), recruitment tools, healthcare diagnostics, AI-driven systems für soziale Wohlfahrt
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Bezug zu social services als high-risk Kontexte: 'in high-risk domains such as law enforcement and social services, to ensure compliance with the GDPR and safeguard fundamental rights'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kernthema: 'AI systems have been shown to disproportionately misclassify racialised and gender-diverse individuals, reinforcing structural inequalities' und detaillierte Analyse algorithmischer Diskriminierung
 
-### Gender
+### Evidenz 5
 
 Explizites Gender-Focus durchgehend: 'gynaecologic cancer detection, operate within binary gender frameworks, often misgendering transgender and non-binary patients'; Analyse geschlechterspezifischer Auswirkungen
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Perspektive zentral: 'assessments must account for the ways in which gender intersects with race, class, disability and other identity factors' und Fokus auf marginalisierte Communities
 
-### Feministisch
+### Evidenz 7
 
 Explizit feministische Theorie verwendet: Miranda Fricker (hermeneutical injustice), Catharine MacKinnon (dominance theory), Kimberlé Crenshaw (intersectionality), Donna Haraway (agential realism), Ann Julia Cooper; 'feminist legal methods', 'decolonial feminist approach'
 
-### Fairness
+### Evidenz 8
 
 Diskutiert algorithmische Fairness, Fairness in Hiring/Healthcare, 'intersectional data analysis in AI conformity assessments', Fairness-aware standards und Bias-Audits
 

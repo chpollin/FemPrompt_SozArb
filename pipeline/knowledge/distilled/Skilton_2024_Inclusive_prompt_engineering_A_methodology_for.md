@@ -4,13 +4,6 @@ authors: ["Rachel Skilton", "Alison Cardinal"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.md
 confidence: 93
@@ -39,27 +32,27 @@ Mixed Methods: Empirisch (systematische Experimente mit DALL-E durch iterative P
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 As a field that has historically addressed the social impact of visual content and has provided strategies for analyzing user interfaces, the field [of technical and professional communication] is poised to provide guidance to practitioners and scholars alike on how to analyze and use these technology tools. [...] we offer a methodology [...] for content designers and students for how to use them.
 
-### Generative_KI
+### Evidenz 2
 
 With the emergent and rapidly expanding use cases of images created with AI image generators such as Midjourney, DALL-E, and Adobe Firefly [...] Through a series of prompt engineering practices, we show how users can bypass this toxic positivity to create images that better demonstrate the diversity of humanity.
 
-### Prompting
+### Evidenz 3
 
 Through what we call 'toxic positivity,' DALL-E attempts to avoid negative stereotypes by defaulting to the 'least offensive' images. [...] Through a series of prompt engineering practices [...] we alter sections that misrepresent the subject. Through continued refining, we arrive at an image more aligned with our intended inclusive result.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 AI image generators are known to create biased images [...] often defaulting to generating white men when asked to create images of humans without explicit direction. [...] what is considered an offensive stereotype is not clearly stated by the system in the list of restricted content. [...] the output is worse than intended. DALL-E's model reinforces the idea that disability, especially as it shows up in a person's body or physical appearance, is inherently negative.
 
-### Diversitaet
+### Evidenz 5
 
 Our goal in this method is to help designers and technical communicators produce visuals that accurately reflect the diverse range of human experiences, including variations in age, body type, ethnicity, and gender. [...] we aim to counteract overly 'positive' and limited representations of humanity in AI-generated images.
 
-### Fairness
+### Evidenz 6
 
 The intention of the user ultimately dictates how the program is used regardless of safeguards put in place. [...] By intentionally crafting prompts, we aim to counteract overly 'positive' and limited representations of humanity in AI-generated images.
 

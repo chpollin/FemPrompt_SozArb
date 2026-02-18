@@ -4,14 +4,6 @@ authors: ["Yuan Yi"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Unknown_2024_Research.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch | Konzeptionelle Analyse und Literature Review der Risiken von gener
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fostering proper understanding of the relationship between humans and generative AI; Enhancing professional training equips social workers to navigate challenges posed by emerging technologies
 
-### Generative_KI
+### Evidenz 2
 
 Focus on ChatGPT and its GPT technology; Discussion of ChatGPT's AIGC capabilities, evolution through GPT-1 to GPT-4, and its integration in social work contexts
 
-### KI_Sonstige
+### Evidenz 3
 
 Discussion of algorithmic decision-making systems, algorithmic bias in risk assessment algorithms, and broader AI integration in community service platforms
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Direct analysis of ChatGPT risks and countermeasures specifically in social work services, addressing data handling in social institutions, emotional rapport in social services, and ethical dilemmas in delegating decisions to AI systems
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Algorithmic bias stemming from underrepresentation or overrepresentation of certain groups; Data inadequacy on economically disadvantaged or minority groups; Risk of discriminatory outcomes against marginalized groups
 
-### Diversitaet
+### Evidenz 6
 
 Ensuring diversity and representativeness of datasets; Promoting social participation and diversity among clientele; Addressing needs of economically disadvantaged and minority groups in social services
 
-### Fairness
+### Evidenz 7
 
 Emphasis on fairness and equity in AI-driven social work practices; Need for fair, inclusive, and bias-free services; Transparency and accountability in algorithmic decision-making; Upholding principles of fairness, transparency, and legality in social work services
 

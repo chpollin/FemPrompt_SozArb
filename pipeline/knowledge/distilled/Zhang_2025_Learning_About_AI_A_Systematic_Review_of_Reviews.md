@@ -4,12 +4,6 @@ authors: ["Shan Zhang", "Priyadharshini Ganapathy Prasad", "Noah L. Schroeder"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Zhang_2025_Learning_About_AI_A_Systematic_Review_of_Reviews.md
 confidence: 89
@@ -38,23 +32,23 @@ Umbrella Review / Systematic Review of Systematic Reviews: Critical examination 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Core focus: 'to empower students to become creators, designers, and producers of AI technologies' and 'acquire knowledge and skills about AI concepts and methods to identify AI-powered tools and platforms.' Comprehensive framework analysis of six AI literacy constructs: 'recognize, know & understand, use & apply, evaluate, create, and navigate ethically.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Covers machine learning concepts, algorithms, object detection, speech synthesis, computer vision, predictive systems: 'freely accessible online tools that help students learn AI concepts without prior programming experience, particularly in areas such as machine learning, recognition, object detection, and speech synthesis.'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Addresses digital divide and equitable access: 'democratized access to AI education' and 'the emergence of tools that allow students to learn AI without prior programming experience has democratized access to AI education.' Discussion of structured curriculum absence in K-12: 'the absence of structured AI literacy curricula in K12 education, underscoring the necessity of educational reforms that prioritize AI literacy from a young age.'
 
-### Diversitaet
+### Evidenz 4
 
 Discusses diverse learner populations and educational contexts: 'integration of AI literacy across different educational contexts, from early childhood to professional education' and tailoring to 'different user groups—ranging from students to professionals—with each having distinct AI literacy needs.' Recognition of cultural differences: 'the development of standardized, theoretically-based, content-validated, and reliable assessments across different educational levels and cultures is needed.'
 
-### Fairness
+### Evidenz 5
 
 Addresses algorithmic fairness and ethical AI evaluation: 'critically evaluating the influence of AI tools on everyday life, personal learning gains, and social impact' and integration of 'ethical considerations in AI education' including 'considerations for student privacy and algorithmic fairness.' Framework component: 'navigate ethically' as core AI literacy construct.
 

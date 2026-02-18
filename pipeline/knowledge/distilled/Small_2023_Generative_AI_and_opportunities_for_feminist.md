@@ -4,15 +4,6 @@ authors: ["Sarah F. Small"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Small_2023_Generative_AI_and_opportunities_for_feminist.md
 confidence: 93
@@ -41,35 +32,35 @@ Theoretisch/Critical Commentary: Konzeptuelle Analyse von ChatGPT im Kontext fem
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fokus auf Entwicklung von KI-Kompetenzen und kritischer Reflexion bei Studierenden: 'encouraging students to use it critically: highlighting data and algorithmic biases within AI'
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT als Hauptfokus: 'With the recent popularization of ChatGPT, many educators have been wringing their hands about students using generative artificial intelligence (AI) to complete assignments'
 
-### Prompting
+### Evidenz 3
 
 Diskussion von Prompt-Variation und deren Auswirkungen: 'Students could enter such a prompt, or experiment with rephrased prompts as in Figure 2, then critically examine ChatGPT's generated paragraphs'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Analyse algorithmischer Biases und deren Auswirkungen: 'Bolukbasi et al. (2016) find that a generative model trained on a large corpus of text from the internet demonstrated gender bias' und 'groups of researchers developing AI lack diversity and, thus, impart Western, white, and patriarchal value systems'
 
-### Gender
+### Evidenz 5
 
 Geschlechterperspektive in Bias und in Pädagogik: 'ChatGPT is not devoid of these issues' und 'Other scholars have shown that the groups of researchers developing AI lack diversity and, thus, impart Western, white, and patriarchal value systems'
 
-### Diversitaet
+### Evidenz 6
 
 Forderung nach Pluralität und Diversität: 'if such an assignment also prompts instructors to think more deliberately about whose ideas are being presented in class, it may challenge us to introduce plurality and diversify our syllabi'
 
-### Feministisch
+### Evidenz 7
 
 Explizite Verwendung feministischer Theorie und Pädagogik: 'Scholars in feminist pedagogy have encouraged self-reflexivity in classrooms', 'feminist epistemology and standpoint theory', 'privileging individual and community voices as ways of knowing may become central to education in the wake of generative AI as it is central to feminist pedagogy'
 
-### Fairness
+### Evidenz 8
 
 Gerechtigkeit in Wissenserstellung und Repräsentation: 'conscious citation can also be a feminist avenue of resistance that demonstrates engagement with authors and voices we want to elevate' und Kritik an Surveillance: 'concerns over its use may lead to heavy surveillance of students, which comes with unequal outcomes'
 

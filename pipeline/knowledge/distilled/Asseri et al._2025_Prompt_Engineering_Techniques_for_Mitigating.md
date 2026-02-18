@@ -4,14 +4,6 @@ authors: ["Bushra Asseri", "Estabrag Abdelaziz", "Areej Al-Wabil"]
 year: 2025
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating.md
 confidence: 94
@@ -40,31 +32,31 @@ Mixed-Methods Systematische Literaturreviw; folgt PRISMA-Richtlinien und Kitchen
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Systematische Synthese von Prompt-Engineering-Techniken und deren praktischen Anwendungen; Bereitstellung von Implementierungsrichtlinien und Decision Trees für Praktiker: 'Our implementation guidelines provide specific examples and best practices for crafting effective cultural prompts'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models (LLMs) wie GPT-3.5; Analyse von Generierungs- und Completion-Verhalten: 'Large language models (LLMs) have demonstrated remarkable capabilities across various domains, yet concerns about cultural bias—particularly towards Arabs and Muslims—pose significant ethical challenges'
 
-### Prompting
+### Evidenz 3
 
 Detaillierte Analyse von fünf Prompt-Engineering-Techniken: kulturelle Prompting, affektive Priming, Self-Debiasing, Multi-Step-Pipelines, parameter-optimierte kontinuierliche Prompts; Leitfäden zur Prompt-Konstruktion: 'Please respond with awareness of Arab cultural values and Islamic religious perspectives'
 
-### KI_Sonstige
+### Evidenz 4
 
 Diskussion von transformer-Architekturen, Word Embeddings, NLP-Bias-Quellen nach Hovy & Prabhumoye: 'Hovy and Prabhumoye (2021) propose a structured approach that identifies five sources of bias in natural language processing systems: data, the annotation process, input representations, models, and research design'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentrale Fokus auf algorithmische Diskriminierung gegen Araber und Muslime; Dokumentation von Stereotyp-Persistenz und Assoziation mit Terrorismus; Analyse von Anti-Muslim-Bias und struktureller Benachteiligung: 'This bias often takes the form of associating these groups with terrorism, violence, or religious extremism, thus reinforcing damaging stereotypes that can fuel marginalization and discrimination'
 
-### Diversitaet
+### Evidenz 6
 
 Expliziter Fokus auf Repräsentation und Inklusion von etwa zwei Milliarden Arabern und Muslimen weltweit; Kritik an Western-centric AI Development; Forderung nach mehr MENA-basierten Forscher:innen (nur 12,5% der Studien): 'By centering Arab and Muslim experiences in AI ethics discourse, this work contributes to a more inclusive approach to responsible AI development'
 
-### Fairness
+### Evidenz 7
 
 Umfassende Analyse von Fairness-Metriken und Bias-Evaluationsmethoden; Behandlung von Performance-Fairness Trade-offs; Diskussion von Equitable AI Systems: 'Our analysis highlights the need to carefully consider performance-fairness trade-offs when implementing prompt engineering techniques'
 

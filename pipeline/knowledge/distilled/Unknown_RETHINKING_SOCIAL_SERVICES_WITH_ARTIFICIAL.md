@@ -4,14 +4,6 @@ authors: ["Ferhat Toper"]
 year: 2025
 type: book
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch/Review - Narrative Literaturanalyse zu AI-Anwendungen in der Soziale
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Reamer (2023) states that AI has the potential to increase the effectiveness and capacity of social workers in administrative, clinical, and policy contexts. Institutions should design training programs to ensure that their employees can use AI tools appropriately and in accordance with ethical standards.
 
-### Generative_KI
+### Evidenz 2
 
 Victor and Goldkind (2025) state that ChatGPT, a large language model introduced by OpenAI in late 2022 and recognized globally, has begun to be used as a 'public therapist.' Similar AI tools are increasingly being used in the field of mental health.
 
-### KI_Sonstige
+### Evidenz 3
 
 Data analysis and predictive modeling are among the most powerful applications of AI in the social services field. This is because AI can quickly scan large data sets that would take a long time for humans to scan and analyze.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Social workers, who play critical roles in addressing complex social issues, face various challenges due to limited resources, heavy workloads, and weak inter-agency collaboration. AI is a new and potentially beneficial technological development for social service professionals.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Eubanks (2019) argues that AI tools can reinforce structural biases and negatively affect vulnerable population groups, particularly low-income individuals. Coeckelberg (2022) notes that global inequalities have deepened due to the concentration of AI development activities in developed and wealthy countries, which has excluded disadvantaged communities from policy-making processes.
 
-### Diversitaet
+### Evidenz 6
 
 If an algorithm used for a specific type of assistance is trained with data that predominantly represents a particular economic or racial group, that type of assistance may be allocated to similar economic and racial groups, inadvertently perpetuating existing inequalities. McNally et al. (2024) state that families with autistic children communicate with AI tools.
 
-### Fairness
+### Evidenz 7
 
 One of the most important ethical issues raised regarding the use of AI tools in social work practice is algorithmic bias and injustice. An AI tool trained with biased data sets can perpetuate systematic discrimination and thus undermine the professional values of social work, which aims to promote social justice.
 

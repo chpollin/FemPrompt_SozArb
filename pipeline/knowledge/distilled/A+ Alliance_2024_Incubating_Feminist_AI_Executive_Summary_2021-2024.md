@@ -4,16 +4,6 @@ authors: ["A+ Alliance", "f<a+i>r Feminist AI Research Network"]
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-04
 source_file: A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md
 confidence: 93
@@ -42,39 +32,39 @@ Mixed-Methoden: Multidisziplinäre Teams, Design Justice Prinzipien, Community E
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Workshops für neue Grantees zu intersektionalen, feministischen Themen; Training von KI-Entwickler:innen in feministischen Prinzipien; AI & Equality Human Rights Toolbox, Course & Community als Bildungsangebot.
 
-### Generative_KI
+### Evidenz 2
 
 SOF+IA: GenAI chatbot zur Dialogue und Bewältigung von Gewalt und digitaler Belästigung gegen Frauen auf Social-Media-Plattformen.
 
-### KI_Sonstige
+### Evidenz 3
 
 Natural Language Processing für Bias-Erkennung (E.D.I.A.); Annotierte Korpora (Work Related Diseases); automatisierte Datenextraktion (AymurAI); AI-gesteuerte Mobilitäts-Apps (SafeHER); Machine Learning für Tutoring-Systeme.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Projekte zu Gewaltprävention (SafeHER Transit Safety, SOF+IA gegen digitale Gewalt), Kinderehen-Prävention (Indonesien), Menschenhandel (ASEAN), Integration mit sozialen Diensten und Justizinstitutionen, Unterstützung für Gewaltüberlebende durch technische Lösungen.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 E.D.I.A. zur Identifikation von Bias und Stereotypen in NLP; Analyse von Geschlechterperspektiven in öffentlicher Beschaffung; Auseinandersetzung mit algorithmischem Bias durch intersektionale Analyse; Fokus auf historische Ausschlüsse marginalisierter Gruppen.
 
-### Gender
+### Evidenz 6
 
 Gesamtnetzwerk fokussiert auf Geschlechtergerechtigkeit; spezifische Projekte zu Frauensicherheit im Transit, geschlechtsspezifischer Gewalt, geschlechtsspezifischen Stereotypen in Sprachtechnologie, Arbeitskrankheiten und Geschlechtsdifferenzen.
 
-### Diversitaet
+### Evidenz 7
 
 Explizite Fokussierung auf Frauen, Mädchen und marginalisierte Gemeinschaften; intersektionale Analysen (E.D.I.A. berücksichtigt mehrere binäre Dimensionen); regionale Hubs in Global South; Community-zentrierte Methoden; Einbeziehung der am stärksten Benachteiligten.
 
-### Feministisch
+### Evidenz 8
 
 Netzwerk ist explizit als 'Feminist AI Research Network' strukturiert; verwendet feministische Prinzipien (Gender Justice, JEDI - Justice, Equity, Diversity, Inclusion); Design Justice Prinzipien; Referenzen zu Gender-transformativen Ansätzen; feministische Epistemologien und intersektionale feministische Theorien als Grundlage.
 
-### Fairness
+### Evidenz 9
 
 Ziel ist es, Gleichheitsergebnisse (equality outcomes) zu liefern; Fokus auf Fairness in automatisierten Entscheidungssystemen (ADM); Transparenz in der Justiz (AymurAI); Equity-zentierte Designs; Korrekturen für historische Ungleichheiten und Ausschlüsse.
 

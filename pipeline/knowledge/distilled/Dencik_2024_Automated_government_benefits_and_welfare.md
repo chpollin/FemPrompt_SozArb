@@ -4,13 +4,6 @@ authors: ["Mike Zajko"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Dencik_2024_Automated_government_benefits_and_welfare.md
 confidence: 95
@@ -39,27 +32,27 @@ Theoretisch/Literatur-Review mit fallgestützter Analyse; kritische Analyse von 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Der Autor kritisiert die Reifizierung von KI als neues Phänomen und fordert ein differenziertes technisches Verständnis: 'Understanding key features of machine learning is often less important than an algorithm's objective function' und argumentiert für kritische Reflexion über KI-Hype und tatsächliche technische Kapazitäten.
 
-### KI_Sonstige
+### Evidenz 2
 
 Detaillierte Analyse von Machine Learning, Predictive Analytics, algorithmic decision-making (ADM) Systemen, und Chatbots in der Wohlfahrtsverwaltung. Fokus auf automatisierte Entscheidungsfindung und statistische Klassifikationssysteme.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Bezug zu Wohlfahrtsverwaltung, Sozialleistungen, und administrative Agenturen, die über soziale Hilfe entscheiden. Relevanz für Sozialarbeiter als 'street-level bureaucrats' und deren Diskretionsverlust durch Systemautomation.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Analyse struktureller Ungleichheit: 'ML-based algorithms can statistically reproduce social inequalities in their training data' und 'disproportionate targeting of ethnic groups for fraud investigation' trotz Verbots ethnischer Diskriminierung. Fokus auf Reproduktion von Klassenverhältnissen und Marginalisierung.
 
-### Diversitaet
+### Evidenz 5
 
 Analyse von Diskriminierungsmechanismen gegen migrantische, arme und ethnisierte Bevölkerungsgruppen: 'the choice to deploy these systems against populations that are predominantly poor, racialized, or of immigrant background is just as important for the reproduction of inequality'.
 
-### Fairness
+### Evidenz 6
 
 Diskussion algorithmic fairness und auditability von ADM-Systemen; Analyse von Rotterdam's Algorithmus als 'alarmingly inaccurate' und Forderung nach systematischer Kontrolle und Transparenzanforderungen für Entscheidungssysteme.
 

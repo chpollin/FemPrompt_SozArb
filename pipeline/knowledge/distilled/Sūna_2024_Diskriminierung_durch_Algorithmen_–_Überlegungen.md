@@ -4,13 +4,6 @@ authors: ["Laura Sūna", "Dagmar Hoffmann", "Anne Mollen"]
 year: 2024
 type: book
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.md
 confidence: 94
@@ -39,27 +32,27 @@ Theoretisch-konzeptionell mit Integration empirischer Befunde aus Studien (quali
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 KI-bezogene Kompetenzen umfassen: 'das Bewusstsein und die Wahrnehmung der Allgegenwärtigkeit von algorithmen-basierten und KI-getriebenen Prozessen' sowie 'die Fähigkeit, KI-geprägte Entscheidungen kritisch und affektiv zu bewerten und zu hinterfragen'. Gefordert wird 'umfassende medienpädagogische Arbeit' auf allen Lebensbereichen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf algorithmen-basierte Entscheidungssysteme, Empfehlungsalgorithmen, maschinelles Lernen und automatisierte Klassifikationssysteme in verschiedenen Anwendungsbereichen (Bildung, Arbeitsmarkt, Gesundheit, Justiz, predictive policing).
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Zielgruppen sind Menschen mit Migrationsgeschichte, im höheren Lebensalter, mit niedrigem Bildungsniveau – klassische Adressaten Sozialer Arbeit. Kontext: 'Zugang zu Sozialleistungen' als besonders anfälliger Bereich. Beratungsstrukturen und zivilgesellschaftliche Unterstützungsangebote werden als notwendig erachtet.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale These: 'diverse KI-basierte Systeme reproduzieren und verstärken Ungleichheit und Exklusion'. 'Strukturelle Ungleichheiten von Algorithmen werden teils sogar überbetont'. Spezifische Analyse von Mechanismen wie Sample Bias, Proxy-Variablen und Skalierungseffekten der Diskriminierung.
 
-### Diversitaet
+### Evidenz 5
 
 Expliziter Fokus auf marginalisierte Gruppen: 'Gruppen, die von (digitaler) Ungleichheit besonders betroffen sind, wie beispielsweise Migrant*innen, Frauen, Menschen im höheren Lebensalter oder mit niedrigem Bildungsniveau'. Intersektionale Perspektive: 'Diskriminierung kann aus der Kombination unterschiedlicher geschützter Merkmale entstehen'.
 
-### Fairness
+### Evidenz 6
 
 Algorithmen-basierte Diskriminierung wird als Fairness-Problem konzeptualisiert. 'Nutzer*innen werden aufgrund ihrer persönlichen Daten [...] ungerecht, unethisch oder einfach nur anders behandelt'. Fairness erfordert kritische Bewertung, Transparenz und Verantwortlichkeit von Systemen.
 

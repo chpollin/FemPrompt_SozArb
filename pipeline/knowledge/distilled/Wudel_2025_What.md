@@ -4,15 +4,6 @@ authors: ["Alexandra Wudel", "Anna Ehrenberg"]
 year: 2025
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Wudel_2025_What.md
 confidence: 94
@@ -41,35 +32,35 @@ Theoretisch + praktische Fallstudien / Literaturbasiert mit Praxisbeispielen (Fe
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Feminist AI erfordert ein Verständnis von KI-Systemen, ihrer Auswirkungen und kritische Reflexion: 'Intersectional feminism serves as one of the most effective research methods to unlock the black box of AI systems'
 
-### KI_Sonstige
+### Evidenz 2
 
 Breiter KI-Fokus auf algorithmische Entscheidungssysteme: 'An AI system...infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Fokus auf Gerechtigkeit, Marginalisierte und Benachteiligte in sozialen Systemen: 'FAI seeks to ensure that AI systems are not only inclusive, but actively work to dismantle historical power imbalances'; MIRA-Beispiel im Healthcare als sozialer Dienst
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Thematik: 'AI systems may reinforce structural discrimination of marginalised, underrepresented and underprivileged people (MUUP)'; 'digitised society embedded into a social system with power inequalities'
 
-### Gender
+### Evidenz 5
 
 Explizite Geschlechterperspektive: 'the present understanding of intelligence in the field of AI is described as mostly rational and masculinist'; 'binary gender categories, which may introduce gender bias and exclude individuals identifying as non-binary'
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Perspektive durchgehend: 'intersectionality, interdisciplinarity and the execution of theory-practice feedback loops'; 'Intersectional feminism refers to a framework that acknowledges the oppression of people shaped not only by their gender, but by other social categories such as ethnicity, class, sexuality, ability, age, religion or geography'
 
-### Feministisch
+### Evidenz 7
 
 Explizite Verwendung intersektionaler feministischer Theorie und Methodik als Kern des Ansatzes: 'Intersectional feminism serves as one of the most effective research methods to unlock the black box of AI systems'; referenziert Ferguson (2017), D'Ignazio & Klein (2020, 2024), Hill Collins (2010); 'Ferguson (2017) identifies a set of values shared amongst them which can be categorised into three pillars' (complexity, fluidity, political undertaking)
 
-### Fairness
+### Evidenz 8
 
 Fairness und Equity als zentrale Ziele: 'FAI seeks to ensure that AI systems are not only inclusive, but actively work to dismantle historical power imbalances'; 'MIRA analyses mortality rates, side effects and treatment outcomes across gender, age and ethnicity' zur Messung von Equity
 

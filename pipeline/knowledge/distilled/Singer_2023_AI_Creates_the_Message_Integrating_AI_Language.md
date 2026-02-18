@@ -4,15 +4,6 @@ authors: ["Jonathan B. Singer", "Johanna Creswell Báez", "Juan A. Rios"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.md
 confidence: 95
@@ -41,35 +32,35 @@ Theoretisch/Editorial - Diskursive Analyse mit praktischen Anwendungsbeispielen 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Students need real-time experience and practice with the opportunities and challenges of AI. It is unethical for social workers not to learn and teach about technology-mediated social work.
 
-### Generative_KI
+### Evidenz 2
 
 Focus on ChatGPT as a language model developed by OpenAI. ChatGPT is trained on a massive dataset of text to generate human-like responses to prompts.
 
-### Prompting
+### Evidenz 3
 
 Examples throughout paper on prompt design: 'Write a 500-word editorial...', 'write an e-mail addressing the following topics...', 'Write a one paragraph story about a 13-year-old...'
 
-### KI_Sonstige
+### Evidenz 4
 
 The field of AI encompasses machine learning, computer vision (facial recognition), and natural language processing (NLP).
 
-### Soziale_Arbeit
+### Evidenz 5
 
 The editorial appears in the Journal of Social Work Education and addresses integration into social work education, practice with clients (case management, advocacy), and social work values throughout.
 
-### Bias_Ungleichheit
+### Evidenz 6
 
 ChatGPT could perpetuate bias and discrimination. ChatGPT is trained on a dataset that reflects the biases and limitations of the data on which it has been trained. Example: ChatGPT identified only White social workers when asked about founders of social work profession.
 
-### Diversitaet
+### Evidenz 7
 
 We believe social workers have an ethical responsibility to provide education, support, and access to those who have historically been excluded from technological advances to bridge the gap in technological justice.
 
-### Fairness
+### Evidenz 8
 
 Social workers must play a pivotal role in helping AI developers understand how these technologies can either exacerbate or alleviate existing social and structural inequities. Addresses technological justice and equitable access to AI capabilities.
 

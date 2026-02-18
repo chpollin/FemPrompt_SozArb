@@ -4,13 +4,6 @@ authors: ["Davy Tsz Kit Ng", "Eagle Kai Chi Chan", "Chung Kwan Lo"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Ng_2025_Opportunities,_challenges_and_school_strategies.md
 confidence: 94
@@ -39,27 +32,27 @@ Empirisch-qualitativ: Online-Umfragen mit schriftlichen Reflexionen, thematische
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI Literacy wird als zentral für schüler:innenseitiges Verständnis und kritische Evaluation von GenAI-Outputs betont: 'equip students with essential competencies to understand the fundamental principles of AI, use AI responsibly, evaluate its recommendations critically' und 'developing an artificial intelligence literacy framework'
 
-### Generative_KI
+### Evidenz 2
 
 Umfassender Fokus auf GenAI-Integration in Schulen mit Analyse von ChatGPT, LLMs und deren Anwendungen: 'GenAI utilizes vast amounts of unstructured data from the Internet and other diverse sources to produce human-like responses'
 
-### KI_Sonstige
+### Evidenz 3
 
 Abgrenzung zwischen traditioneller KI und GenAI, Diskussion von KI-Konzepten allgemein: 'Artificial intelligence (AI) often mimics human cognitive functions such as learning and problem-solving'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Bias und Stereotypisierung werden thematisiert: 'biases inherent in the training data can lead to perpetuating stereotypes in educational content'; Diskussion von Zugangsgerechtigkeit zu KI-Tools
 
-### Diversitaet
+### Evidenz 5
 
 Fachspezifische Perspektiven (Englisch, Mathematik, Naturwissenschaften, Sozialwissenschaften, Informatik) und verschiedene Stakeholder-Gruppen (Lehrkräfte, Schüler:innen, Schulleitung) werden berücksichtigt
 
-### Fairness
+### Evidenz 6
 
 Ethische Erwägungen und faire Nutzung werden diskutiert: 'Ethical considerations, such as responsible use of AI-generated content and maintaining academic integrity'; Fairness in Assessment durch personalisierte Feedback-Systeme
 

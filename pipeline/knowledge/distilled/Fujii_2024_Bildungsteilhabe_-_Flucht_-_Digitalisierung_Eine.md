@@ -4,13 +4,6 @@ authors: ["Michi Sebastian Fujii", "Nadia Kutscher", "Henrike Friedrichs-Liesenk
 year: 2024
 type: book
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Fujii_2024_Bildungsteilhabe_-_Flucht_-_Digitalisierung_Eine.md
 confidence: 91
@@ -39,27 +32,27 @@ Empirisch: Multilokale Ethnografie mit Feldbeobachtungen in multiplen Settings (
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fokus auf Kompetenzerwerb und kompetenten Umgang mit digitalen Medien: 'Befähigung eines kompetenten Umgangs mit digitalen Medien und zur Gestaltung eines gelingenden Lebens' sowie 'Kompetenzerwerb mit dem Ziel der selbstbestimmten und verantwortungsvollen Nutzung digitaler Medien als zentrales Ziel'.
 
-### KI_Sonstige
+### Evidenz 2
 
 Behandlung von Algorithmen, Such-Apps, Übersetzungs-Apps und Textverarbeitungsprogrammen mit automatischen Korrekturfunktionen als technische Systeme, die pädagogische Prozesse strukturieren und begrenzen.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Expliziter Fokus auf Kinder- und Jugendhilfe, stationäre Wohngruppen, Sozialpädagogik und Alltagsbewältigung in Jugendcafés; Analysen von pädagogischen Praktiken und Fachkräften.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Thematisierung digitaler und sozialer Ungleichheitslagen: 'sozialer bzw. digitaler Ungleichheitslagen', 'ungleicher Kapitalausstattungen', 'multiple strukturelle Benachteiligungslagen (z.B. durch asylrechtliche Bestimmungen)' sowie Exklusionsrisiken bei Funktionsausfällen digitaler Medien.
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektive auf junge Geflüchtete als marginalisierte Gruppe mit multiplen Diskriminierungsfaktoren (Migrationsstatus, prekäre Lebenslage, Alter); Berücksichtigung verschiedener institutioneller Kontexte und Lebenslagen.
 
-### Fairness
+### Evidenz 6
 
 Kritische Reflexion von Fairness-Aspekten in Bildungszugang und -teilhabe: Analyse von Passungsverhältnissen, Zugangsbarrieren, und wie institutionelle Regelungen bestimmte Gruppen benachteiligen können; Forderung nach gerechteren Bedingungen der Bildungsteilhabe.
 

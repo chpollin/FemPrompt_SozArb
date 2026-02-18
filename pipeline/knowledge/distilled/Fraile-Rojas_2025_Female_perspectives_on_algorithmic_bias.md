@@ -4,14 +4,6 @@ authors: ["Belen Fraile-Rojas", "Carmen De-Pablos-Heredero", "Mariano Mendez-Sua
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch, Mixed Methods: Social Opinion Mining mit Natural Language Processing 
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf Natural Language Processing (NLP), Machine Learning (ML) Modelle und algorithmische Entscheidungssysteme: 'explores the use of natural language processing (NLP) techniques and machine learning (ML) models to discover underlying concepts of gender inequality applied to artificial intelligence (AI) technologies'
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Bezug zu Gerechtigkeit, sozialen Auswirkungen und Interventionen in vulnerable Gruppen: 'highlighting the need for critical analysis to ensure social justice', 'endure the consequences of stigmatized products and services'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Expliziter Fokus auf algorithmischen Bias und strukturelle Ungleichheit: 'algorithmic bias impacts female user behaviours in response to injustice and inequality in algorithmic outcomes', 'gender bias in state-of-the-art AI models'
 
-### Gender
+### Evidenz 4
 
 Umfassender Gender-Fokus durchgehend: 'Female perspectives on algorithmic bias', 'gender bias in AI-based decision-making systems', 'gender inequality concepts applied to AI technologies'
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektive und Fokus auf marginalisierte Gruppen: 'They request an intersectional, collaborative and pluralistic understanding of gender and race in AI', 'affirms that women challenged by cultural bias and social discrimination are more likely to fund entrepreneurial solutions'
 
-### Feministisch
+### Evidenz 6
 
 Explizite Verwendung feministischer Theorie und Methodologie: 'Haraway's manifesto', 'feminist critical thought is indispensable', 'feminist socio-technical approaches', 'Black feminist scholar Patricia Hill Collins' matrix of domination', 'Crenshaw (2017) developed the concept of intersectionality', 'Data feminists contend that feminism inherently involves activist efforts'
 
-### Fairness
+### Evidenz 7
 
 Fokus auf faire und ausgewogene KI-Systeme: 'gender balanced systems', 'responsible, impartial technologies', 'balanced and inclusive' technologies, Analyse zwischen fairen und diskriminierenden Begriffen in 172.041 Tweets
 

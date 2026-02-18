@@ -4,16 +4,6 @@ authors: ["Feminist AI Research Network", "Alliance (A+)"]
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-04
 source_file: Alliance_2024_Incubating.md
 confidence: 95
@@ -42,39 +32,39 @@ Mixed Methods: Multidisziplinäre Teams mit Technolog:innen und Sozialwissenscha
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Training von 500 argentinischen Gymnasiallehrkräften zur Nutzung und Vermittlung des E.D.I.A.-Tools; 'Capacity building' und 'train AI developers on feminist principles'; 'AI & Equality: A Human Rights Toolbox, Course & Community'
 
-### Generative_KI
+### Evidenz 2
 
 SOF+IA: GenAI chatbot to dialogue and address situations of violence and digital harassment that women experience on digital social media platforms
 
-### KI_Sonstige
+### Evidenz 3
 
 Natural Language Processing (NLP) Software (E.D.I.A.); Automated Decision Making (ADM) Systeme; algorithmic systems for gender-based violence data extraction (AymurAI); Explainable AI-Based Tutoring System
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Gender Based Violence Interventionen; Trafficking survivors' legal services (Thailand); Child Marriage Prevention; Violence Against Women public desk collaboration; Trauma-informed digital connections
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 E.D.I.A. tool to identify biases and stereotypes in NLP software; 'Bias assessment'; intersectional analysis; correcting for historic exclusion; 'historic inequities and sustainability'
 
-### Gender
+### Evidenz 6
 
 Umfassender Fokus auf Geschlechterperspektive: 'Gendered language sets in Thai's service sectors'; 'Gender Based Violence in Latin America' (AymurAI); 'Women What Women Want in their AI-Powered Safety App' (SafeHER); Women in transit harassment; femicide
 
-### Diversitaet
+### Evidenz 7
 
 Marginalized communities and women, girls as equal partners; intersectional analysis in E.D.I.A.; most marginalized others in vulnerable communities; representation in Globalen Süden; regional diversity across 10 countries
 
-### Feministisch
+### Evidenz 8
 
 Explizite feministische Theorie und Methodik: 'Feminist AI Research Network'; 'Declaration for Affirmative Action for Algorithms'; 'Design Justice principles'; 'feminist self-defense'; 'gender transformative policy'; 'feminist principles'; 'gender justice'; 'JEDI' (Justice, Equity, Diversity, Inclusion)
 
-### Fairness
+### Evidenz 9
 
 Fairness in algorithmic decision-making; correcting for historic inequities; 'Inclusive Public Policy Design for Data Science Projects'; gender-fair AI systems; transparent judiciary (AymurAI); equal access to technologies
 

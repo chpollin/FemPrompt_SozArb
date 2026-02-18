@@ -4,12 +4,6 @@ authors: ["Xukang Wang", "Ying Cheng Wu", "Xueliang Ji", "Hongpeng Fu"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Wang_2024_Algorithmic_discrimination_examining_its_types.md
 confidence: 92
@@ -38,23 +32,23 @@ Theoretisch/Mixed Methods - Systematische Literaturanalyse (85 Artikel), Analyse
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Das Paper konzentriert sich auf 'algorithmic decision-making systems' in Kriminalitätsprognose, Einstellung, Bildung und Kreditvergabe und behandelt klassische Machine Learning, nicht generative KI.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Explizite Behandlung von Algorithmen im Criminal Justice System ('judges to estimate the risk of reoffending'), Arbeitseinstellung und Bildung ('schools to choose whether to admit students'), die zentrale Domänen Sozialer Arbeit und ihrer Schnittstellen sind.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Kernfokus des Papers: 'Algorithmic discrimination can manifest in various forms, such as bias by the algorithmic agents, biased feature selection... These different types of algorithmic bias can lead to unfair treatment and disparate impacts on protected groups, raising concerns about equal rights, due process, and social justice'
 
-### Diversitaet
+### Evidenz 4
 
 Paper diskutiert 'disparate impacts on protected groups' und bezieht sich auf verschiedene marginalisierte Gruppen in Kontexten wie Criminal Justice Risk Assessments und Hiring Algorithms, mit Bezug zu 'lack of diversity in the development teams' als Ursache.
 
-### Fairness
+### Evidenz 5
 
 Zentrales Thema durchgehend: 'algorithmic fairness, transparency, and accountability', spezifische Behandlung von Fairness-Metriken, Fairness Constraints in ML und 'algorithmic auditing and impact assessments' zur Messung und Gewährleistung von Fairness.
 

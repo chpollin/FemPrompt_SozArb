@@ -4,14 +4,6 @@ authors: ["Emily Engelhardt", "Thomas Ley"]
 year: 2025
 type: conferencePaper
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.md
 confidence: 95
@@ -41,31 +33,31 @@ Theoretisch; Werkstattbericht mit praktischen Szenarien und konzeptionellen Übe
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Prompting-Kompetenz als 'metakognitive Fähigkeit' und 'grundlegende Fähigkeit' wird als zentral für Studierende erachtet. Darüber hinaus wird 'Data Literacy' als grundlegende Informations- und Datenkompetenz für das Studium der Sozialen Arbeit gefordert.
 
-### Generative_KI
+### Evidenz 2
 
 Der gesamte Artikel konzentriert sich auf Large Language Models wie ChatGPT und GPT-4o. Es werden drei konkrete Anwendungsszenarien mit generativer KI beschrieben: akademische Schreibassistenz, methodischer Übungspartner und Chatbots als Produktivumgebung.
 
-### Prompting
+### Evidenz 3
 
 Ein ganzer Abschnitt (Kapitel 3) ist dem Prompting gewidmet: 'Prompting-Kompetenz kann man demnach als eine metakognitive Fähigkeit beschreiben, die sich auf die effektive Formulierung von Fragen und Anweisungen bezieht.' Chain-of-Thought-Prompting wird als nützliche Vorgehensweise erläutert.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Der gesamte Artikel behandelt explizit die Hochschulbildung für Soziale Arbeit. Es werden Szenarien zur Beratungsausbildung, zur Einübung von Beratungstechniken und zur Entwicklung von Chatbots für Hilfearrangements in der Sozialen Arbeit diskutiert.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Der Artikel thematisiert 'systematische Verzerrung und der Reproduktion von Vorurteilen (sog. bias)', die 'Auswahl der Trainingsdaten kann zu einer systematischen Verzerrung und der Reproduktion von Vorurteilen (sog. bias) führen' und fordert, dass 'das normierende und diskriminierende Potenzial, das zur datengetriebenen Reproduktion und Verschärfung sozialer Ungleichheit führen kann, hervorgehoben werden' müsse.
 
-### Diversitaet
+### Evidenz 6
 
 Die Autoren fordern 'die heterogenen Vorausetzungen und Zugänge Lernender (und Lehrender) didaktisch zu beachten' und weisen auf Fragen digitaler Teilhabe hin. Sie betonen, dass unterschiedliche Hilfesettings und -arrangements in den Blick genommen werden können.
 
-### Fairness
+### Evidenz 7
 
 Der Artikel behandelt ethische Fragen der KI-Nutzung, einschließlich 'ethischen Umgang mit KI-generierten Daten' und fordert eine 'wertebasierte Diskussion' sowie die Berücksichtigung 'ethischer Aspekte der Bot-Nutzung'.
 

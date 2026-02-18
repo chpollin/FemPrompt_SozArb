@@ -4,14 +4,6 @@ authors: ["Bo Pang", "Tingrui Qiao", "Caroline Walker", "Chris Cunningham", "Yun
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from.md
 confidence: 91
@@ -40,31 +32,31 @@ Empirisch-Mixed: Framework-Entwicklung (LIBRA) mit automatisierter Datensatzkons
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper adressiert die Notwendigkeit von Verständnis über LLM-Biases und deren Auswirkungen auf diverse Kulturen: 'LLMs have become a cornerstone in natural language processing (NLP) applications' und 'Developing methodologies to detect local biases in region-specific contexts accurately is essential, ensuring that LLMs are evaluated and improved with a sensitivity to cultural diversity.'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models (BERT, GPT-2, Llama-3): 'This research addresses these limitations with a Local Integrated Bias Recognition and Assessment Framework (LIBRA) for measuring bias using datasets sourced from local corpora without crowdsourcing.'
 
-### KI_Sonstige
+### Evidenz 3
 
 Verwendung von NLP-Techniken (Named Entity Recognition, Clustering, Text Encoding mit LLM2Vec, Association Rule Learning, Jensen-Shannon Divergence Analyse): 'For privacy, we perform Named Entity Recognition (NER)' und 'We then measure bias between these distributions using the Jensen-Shannon Divergence, JSD(Da||Ds).'
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Fokus auf marginalisierte Communities und historisch benachteiligte Gruppen in Neuseeland: 'Māori and Pacific Peoples have historically faced poor socio-economic outcomes stemming from colonization and cultural marginalization' und Fokus auf faire Technologien für diverse Populationen.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentrale Fokus auf algorithmischen Bias, Stereotype in LLMs und strukturelle Ungleichheiten: 'Bias in LLMs is typically influenced by the data they are trained on, which consists of internet-sourced corpora reflecting the dominant cultural stereotypes from all over the world. When used in diverse cultural settings, this leads to unfair and potentially harmful outcomes.'
 
-### Diversitaet
+### Evidenz 6
 
 Expliziter Fokus auf kulturelle Diversität, lokale Kontexte und unterrepräsentierte Sprachen: 'The use of LLMs in diverse cultural settings, this leads to unfair and potentially harmful outcomes' und Konzentration auf Te Reo Māori und kulturelle Besonderheiten: 'It addresses the significant presence of Te Reo Māori borrow-words in the NZ English corpora and whose limited presence in LLM training data often poses challenges.'
 
-### Fairness
+### Evidenz 7
 
 Framework zur Messung und Verbesserung der Fairness von LLMs durch neue Metriken (EiCAT) und beyond knowledge boundary scoring: 'The Enhanced Idealized CAT Score (EiCAT), which incorporates measures of bias, language model capacity and knowledge boundaries, is as follows' und 'ensure that LLMs are evaluated and improved with a sensitivity to cultural diversity.'
 

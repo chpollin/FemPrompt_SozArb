@@ -4,15 +4,6 @@ authors: ["Uzair Ahmed"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-04
 source_file: Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md
 confidence: 95
@@ -41,35 +32,35 @@ Mixed-Methods: Quantitative statistische Analyse (SPSS Regressionsanalyse, ANOVA
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kritische Reflexion über KI-Systeme und deren Design: 'AI is not an objective or neutral technology; rather, it is embedded within societal power structures' und Forderung nach interdisziplinärer Zusammenarbeit in AI-Governance und Bildung.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf AI-driven Entscheidungssysteme, speziell Hiring-Algorithmen, Facial-Recognition-Technologien und automatisierte Klassifizierungssysteme, sowie deren technische und ethische Aspekte wie 'black box' Problem.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Bezug zu sozialarbeiterischen Zielgruppen und Gerechtigkeitsprinzipien: 'Feminist ethics emphasizes transparency, fairness, and inclusivity, challenging the patriarchal and corporate-driven narratives' und Fokus auf marginalisierte Gemeinschaften, Menschen in Armut und betroffene Populationen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Analyse von algorithmischem Bias und strukturellen Ungleichheiten: 'Algorithmic bias disproportionately affects marginalized groups, reinforcing societal inequalities in areas such as hiring, healthcare, and law enforcement' mit empirischer Evidenz (Regression p=0.001 für Gender-Bias, ANOVA für Facial-Recognition).
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus durchgehend: 'AI-driven hiring tools have been found to discriminate against female candidates' und 'facial recognition technologies have demonstrated racial and gender biases, leading to higher error rates for women' sowie spezifische Analyse von Gender-Representation in AI-Teams.
 
-### Diversitaet
+### Evidenz 6
 
 Starker Fokus auf Diversität und Inklusion: 'lack of diversity in AI training data' und 'underrepresentation of women and marginalized groups in AI development teams' mit Forderung nach partizipatorischem Design mit 'diverse stakeholders, including women, non-binary individuals, and marginalized communities'.
 
-### Feministisch
+### Evidenz 7
 
 Explizite Verwendung feministischer Theorie und Methodik: 'Feminist perspectives provide a critical lens' und Referenzen auf D'Ignazio & Klein (Data Feminism), Benjamin (Race After Technology), feministische partizipative Forschungsprinzipien und intersektionaler Feminismus. Der gesamte theoretische Rahmen basiert auf feministischer Ethik und Epistemologie.
 
-### Fairness
+### Evidenz 8
 
 Algorithmic Fairness zentral: Regressionsanalyse zeigt Gender-Bias in Hiring (Koeffizient 0.45, p=0.001), ANOVA-Test vergleicht Fehlerquoten in Facial-Recognition über demografische Gruppen (White Men 1,2%, Black Women 34,5%), und Surveys messen Fairness-Awareness. Forderungen nach Fairness-Metriken, Bias-Audits und XAI-Frameworks.
 

@@ -4,16 +4,6 @@ authors: ["Eva Gengler", "Andreas Kraus", "Kristina Bodrožić-Brnić"]
 year: 2024
 type: report
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md
 confidence: 95
@@ -42,39 +32,39 @@ Theoretisch/Praktisch: Leitfaden basierend auf Literaturrecherche und Expertise 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Gesamter Leitfaden vermittelt KI-Kompetenzen: 'Der Guide vermittelt Ihnen nicht nur das 'Was' und 'Wie', sondern auch das 'Warum' des Einsatzes Generativer KI.' Kapitel 1 behandelt 'Grundlagen: KI, Generative KI und KI-Prompting' und Best Practices beim Prompting.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Generative KI-Systeme: 'Generative KI-Systeme - Programme, die selbstständig Texte, Bilder und vieles mehr erzeugen können'. Detaillierte Übersicht zu TextgeneratorenTools (ChatGPT 4, Claude 3, Gemini, DALL-E 2, Midjourney) in Kapitel 2.3.
 
-### Prompting
+### Evidenz 3
 
 Zentral: Kapitel 5 'Promptingstrategien' mit KI-FAIRNESS-Framework (K-I-F-A-I-R-N-E-S-S). Punkt 'Sprache ist Macht' behandelt englisches Prompting, Neutralität vs. Diversität, Anonymisierung, Tonalität.
 
-### KI_Sonstige
+### Evidenz 4
 
 Behandlung klassischer ML-Probleme wie Halluzinationen, Datenschutz, unzureichende Aktualität in Kapitel 2.2: 'Das sogenannte Halluzinieren, bei dem die Künstliche Intelligenz Informationen erfindet oder verfälscht.'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Umfassende Behandlung: Kapitel 3 'Problemstellung: Warum Fair AI Prompting?' behandelt historische Daten, Gender-Data-Gap, Stereotype, Überrepräsentation weißer Männer: 'Viele Entscheidungsträger*innen und Entwickler*innen sind weiß, männlich* und privilegiert.' Praktische Beispiele zeigen Diskriminierung in KI-generierten Bildern (nur schlanke Menschen, lange Haare, priviligierte Kontexte).
 
-### Gender
+### Evidenz 6
 
 Explizit thematisiert: Gender-Data-Gap, genderstereotypische Beschreibungen, Repräsentation von Frauen in Berufsfeldern. Beispiel MissJourney: 'sich darauf spezialisiert hat, Bilder von Frauen in verschiedenen Berufsfeldern zu erstellen.' Hinweis auf Gefahr genderstereotypischer Formulierungen bei Empfehlungsschreiben.
 
-### Diversitaet
+### Evidenz 7
 
 Kernthema: 'Ziel dieses Leitfadens ist es...diese mit Blick auf eine diverse Gesellschaft nutzen zu können.' KI-FAIRNESS-Framework fordert explizit diverse Darstellung. Beispiel: 'Es könnte z.B. explizit gefordert werden, dass Frauen und Männer, Menschen unterschiedlicher Hautfarbe und sozialer Schicht dargestellt werden sollen.'
 
-### Feministisch
+### Evidenz 8
 
 Leitfaden basiert auf feministischer KI-Perspektive: Co-Autorin Eva Gengler ist 'Expertin im Bereich feministischer KI' und Co-Founderin von 'feminist AI'. Referenzen auf D'Ignazio & Klein 'Data Feminism', Caroline Criado-Perez 'Unsichtbare Frauen' (Gender-Data-Gap). Konzept 'Feministische KI': 'Es gibt bereits einige Beispiele von KI mit feministischem Zweck und für die Stärkung der Rechte marginalisierter Gruppen.'
 
-### Fairness
+### Evidenz 9
 
 Zentral: Kap. 4.5 'Werteorientierung bei Entwicklung und Einsatz von KI', Kap. 4.6 'KI-Governance: Prinzipien, Prozesse und Strukturen für KI' mit Fairness-Definition: 'Fairness im Kontext von KI bedeutet, dass alle Menschen gleichberechtigt und diskriminierungsfrei von KI-Systemen behandelt werden: Gleiche Chancen, Verbot der Diskriminierung, Transparenz und Nachvollziehbarkeit, Rechenschaftspflicht.' KI-FAIRNESS-Framework als systematischer Ansatz.
 

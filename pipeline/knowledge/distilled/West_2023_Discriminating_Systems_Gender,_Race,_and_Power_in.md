@@ -4,14 +4,6 @@ authors: ["Sarah Myers West", "Meredith Whittaker", "Kate Crawford"]
 year: 2019
 type: report
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.md
 confidence: 95
@@ -42,31 +34,31 @@ Theoretisch/Review – umfassende Literaturanalyse über ein Jahr mit Perspektiv
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf algorithmische Klassifikationssysteme, Gesichtserkennung, Predictive Policing, Chatbots und kommerzialisierte AI-Systeme im Allgemeinen, nicht generativ oder spezifisch auf LLMs fokussiert.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Direkter Bezug zu marginalisieren Communities, Gerechtigkeit, Überwachung von Armen und Farbigen, polizeiliche Systeme, die Soziale Arbeit und Care-Kontexte betreffen: 'AI systems are increasingly tasked with sorting those who are worthy from those who are not - be it for school admission, release from prison, or job interviews.'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale These: 'Image recognition technologies miscategorize black faces, sentencing algorithms discriminate against black defendants, chatbots easily adopt racist and misogynistic language... such bias mirrors and replicates existing structures of inequality in society.'
 
-### Gender
+### Evidenz 4
 
 Explizit Geschlechterperspektive durchgehend: 'women comprise only 15% of AI research staff at Facebook and just 10% at Google'; kritische Analyse von Geschlechts-Klassifikationssystemen: 'such systems functionally understand gender as an essential, biological, and binary identity that can be 'detected' and affirmed through the lens of a commercialized technical system.'
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Analyse zentral: 'The overwhelming focus on 'women in tech' is too narrow and likely to privilege white women over others. We need to acknowledge how the intersections of race, gender, and other identities and attributes shape people's experiences with AI.' Kritik an 'colorless diversity' ohne Berücksichtigung von race.
 
-### Feministisch
+### Evidenz 6
 
 Explizite Nutzung intersektionaler feministischer Perspektiven (Erica Joy Baker's 'colorless diversity', Gender Shades von Buolamwini & Gebru als Beispiel intersektionaler Forschung); Referenzen zu Power, Representation und struktureller Diskriminierung aus feministischer Perspektive; Autoren-Positionierung: 'As white women, we don't experience the intersections of oppression in the same way that people of color and gender minorities... the silence of those who experience privilege in this space is the problem.'
 
-### Fairness
+### Evidenz 7
 
 Kritik an und Diskussion von Fairness-Ansätzen: 'the AI research community has begun addressing the problem of bias by building on a body of work on fairness, accountability, and transparency... focused on adjusting AI systems in ways that produce a result deemed 'fair' by one of various mathematical definitions'; Argument, dass technische Fairness-Lösungen allein unzureichend sind.
 

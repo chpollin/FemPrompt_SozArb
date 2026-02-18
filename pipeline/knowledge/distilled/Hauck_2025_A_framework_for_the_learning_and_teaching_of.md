@@ -4,14 +4,6 @@ authors: ["Dr Mirjam Hauck", "Eleanor Moore", "Carol Wright"]
 year: 2025
 type: workingPaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Hauck_2025_A_framework_for_the_learning_and_teaching_of.md
 confidence: 94
@@ -40,31 +32,31 @@ Theoretisch; Framework-Entwicklung basierend auf Literaturanalyse und Best-Pract
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Gesamter Fokus des Papers auf 'Critical AI Literacy' als Kompetenzrahmen; 'a set of competencies that enables individuals to critically evaluate AI technologies; communicate and collaborate effectively with AI'
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf LLMs und GenAI: 'Large Language Models (LLMs) -AI tools which generate human-like responses'; Umgang mit Generative AI in Learning, Teaching and Assessment
 
-### Prompting
+### Evidenz 3
 
 Framework-Sektion 'Learning and teaching with AI' enthält: 'Support students in crafting effective prompts and refining AI content' und 'Offer guidance and examples on prompt creation and adaptation with a focus on EDIA principles'
 
-### KI_Sonstige
+### Evidenz 4
 
 Breites Spektrum an KI-Anwendungen: 'types of AI products: text, image, video, code, music generators; AI embedded in tools such as search engines; AI analytics and predictive analytics'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentrales Thema: 'Critical AI Literacy examines how Large Language Models (LLMs)...contribute to ongoing epistemic injustices'; 'Be mindful of biases in AI outputs, such as gender, cultural, disability, racial or cultural bias'
 
-### Diversitaet
+### Evidenz 6
 
 EDIA-Perspektive durchgängig: 'Critical AI Literacy applies the lens of equality, diversity, inclusion and accessibility (EDIA) to the use of AI'; Beispiele wie 'OU's Digital Assistant, which supports students' accessibility needs'
 
-### Fairness
+### Evidenz 7
 
 Ethische Bewertungskriterien für KI-Tools: 'Use key criteria to evaluate AI tools (e.g. functionality, accessibility, privacy, security, copyright)'; Alignment mit Institutional Fairness-Prinzipien
 

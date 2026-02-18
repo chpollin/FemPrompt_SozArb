@@ -4,14 +4,6 @@ authors: ["Xuechunzi Bai", "Angelina Wang", "Ilia Sucholutsky", "Thomas L. Griff
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Bai_2025_Explicitly_unbiased_large_language_models_still.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch: Zwei psychologisch inspirierte, prompt-basierte Messmethoden (LLM Wor
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf Large Language Models: 'Large language models (LLMs) can pass explicit social bias tests but still harbor implicit biases'. Untersuchung von GPT-4, Claude-3, Llama2Chat Modellen.
 
-### Prompting
+### Evidenz 2
 
 Zwei prompt-basierte Messmethoden: 'LLM Word Association Test, a prompt-based method for revealing implicit bias; and LLM Relative Decision Test, a strategy to detect subtle discrimination in contextual decisions.' Insgesamt 33.600 einzigartige Prompts.
 
-### KI_Sonstige
+### Evidenz 3
 
 Explizite Verbindung zu NLP und algorithmischen Entscheidungssystemen: 'Traditional word embedding techniques, analyzing static and contextualized associations in training data'. Analyse von Wort-Einbettungen und Modellverhalten.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Thematik: 'we find that they still show widespread stereotype biases on two psychology-inspired measures.' Dokumentation von 21 Stereotypen über Rasse (z.B. 'race and criminality, race and weapons'), Geschlecht, Religion, Gesundheit.
 
-### Gender
+### Evidenz 5
 
 Geschlechterstereotypen explizit untersucht: 'suggest women study humanities while men study science' und Gender-assoziierte Begriffe wie 'power' und 'home'. Gender als eine von 4 sozialen Kategorien.
 
-### Diversitaet
+### Evidenz 6
 
 Explizite Adressierung marginalisierter Gruppen über multiple Kategorien: 'stereotype biases mirroring those in society in 8 value-aligned models across 4 social categories (race, gender, religion, health)'. Analyse intersektionaler Stereotypen.
 
-### Fairness
+### Evidenz 7
 
 Fairness-Kontext und Algorithmen: 'measures to detect subtle discrimination in contextual decisions' und 'Algorithmic fairness, fair ML-Systems'. Fokus auf Fairness-aware Bias-Detection in LLMs. Logistische Regressionsmodelle zur Fairness-Analyse.
 

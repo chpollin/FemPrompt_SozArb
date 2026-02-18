@@ -4,11 +4,6 @@ authors: ["Lucas Dixon", "John Li", "Jeffrey Sorensen", "Nithum Thain", "Lucy Va
 year: 2018
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.md
 confidence: 94
@@ -37,19 +32,19 @@ Empirisch: Experimentelle Evaluierung mit Convolutional Neural Networks, Synthet
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf Text-Klassifikation mit Convolutional Neural Networks, Trainingsmethoden mit TensorFlow/Keras, Evaluierung von Modellleistung
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Zentrale These: 'Initial versions of text classifiers trained on this data showed problematic trends for certain statements... Clearly non-toxic statements containing certain identity terms, such as 'I am a gay man', were given unreasonably high toxicity scores. We call this false positive bias.' Analyse von Diskriminierung durch Überrepräsentation bestimmter Identitätstermen in toxischen Trainingsdaten.
 
-### Diversitaet
+### Evidenz 3
 
 Untersuchung von 51 verschiedenen Identitätstermen (atheist, queer, gay, transgender, lesbian, homosexual, feminist, black, white, muslim, etc.) und deren unterschiedliche Repräsentation in toxischen vs. nicht-toxischen Kommentaren. Fokus auf marginalisierte Communities und deren Darstellung in Trainingsdaten.
 
-### Fairness
+### Evidenz 4
 
 Explizite Definition von Fairness-Metriken: 'Equality of Odds' und Error Rate Equality Difference. Entwicklung der 'Pinned AUC'-Metrik als schwellenwertunabhängiges Fairness-Evaluationsinstrument. Ziel: 'A more fair model will have similar values across all terms, approaching the equality of odds ideal.'
 

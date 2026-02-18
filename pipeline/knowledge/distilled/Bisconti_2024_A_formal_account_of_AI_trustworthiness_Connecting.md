@@ -4,12 +4,6 @@ authors: ["Piercosma Bisconti", "Letizia Aquilino", "Antonella Marchetti", "Dani
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.md
 confidence: 88
@@ -38,23 +32,23 @@ Theoretisch / Formalisierung mit mathematischen Modellen. Der Ansatz entwickelt 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper adressiert kritisches Verständnis von KI-Systemen: 'A solid understanding of the concept of trustworthiness is of paramount importance for the future of design and policies' und entwickelt konzeptuelle Fähigkeiten zum Verständnis von Vertrauenswürdigkeit als Schlüsselkompetenz für Stakeholder.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf algorithmische Entscheidungssysteme, autonome Systeme und Robotik. 'AI systems are distinguished from other technologies by their autonomy and adaptability' und 'Therefore, the trustworthiness of AI is critical not only for ensuring safety and compliance with ethical standards'.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Behandelt unterschiedliche Stakeholder-Perspektiven und deren unterschiedliche Erwartungen: 'the stakeholders impacted directly are at least the physician and the patient. It is easy to note that already these two have profoundly different expectations, concerns, target goals.' Adressiert auch strukturelle Unterschiede in Wahrnehmung und Verzerrungen durch individuelle Unterschiede.
 
-### Diversitaet
+### Evidenz 4
 
 Berücksichtigung verschiedener Stakeholder-Perspektiven und individueller Unterschiede: 'Our schematization cannot completely capture the complexity of stakeholders' perceived trustworthiness, since it is not sensitive a) to the perspective and the specific point of observation of each specific stakeholder and b) therefore to the fact that each stakeholder might value specific characteristics of the AI system differently.' Einbeziehung von Persönlichkeitszügen (Big Five) und Vertrauenspropensität als mediating Faktoren.
 
-### Fairness
+### Evidenz 5
 
 Expliziter Fokus auf faire KI-Systeme und ethische Standards: 'ensuring they meet both functional and ethical criteria' und 'fostering more ethical and widely accepted AI technologies'. Discussion von Fairness im Kontext von EU AI Act und Regulierung zur Sicherstellung gerechter Behandlung.
 

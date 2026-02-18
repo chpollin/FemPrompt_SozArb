@@ -4,10 +4,6 @@ authors: ["U.S. Bureau of Labor Statistics"]
 year: 2024
 type: report
 language: en
-categories:
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
 processed: 2026-02-05
 source_file: Statistics_2023_Occupational.md
 confidence: 75
@@ -36,15 +32,15 @@ Empirisch - Semiannuale Befragung (OEWS) von ca. 1,1 Millionen Betrieben, basier
 
 ## Kategorie-Evidenz
 
-### Soziale_Arbeit
+### Evidenz 1
 
 Gebäudereinigungs- und Instandhaltungsberufe mit 4,5 Millionen Beschäftigten sind zentral für Soziale Arbeit und Care-Infrastruktur; der Report dokumentiert Arbeitsmarktstrukturen für marginalisierte Berufsgruppen, die oft Zielgruppen oder Arbeitgeber der Sozialen Arbeit sind.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Systematische Lohnunterschiede zeigen sich über Berufskategorien hinweg: niedrig bezahlte Textil- und Bekleidungsarbeiter (33.370-34.810 USD) vs. hochbezahlte Ingenieure (141.180-156.770 USD); strukturelle Benachteiligung bestimmter Berufssegmente, besonders in Dienstleistungen.
 
-### Diversitaet
+### Evidenz 3
 
 Report dokumentiert Beschäftigungsvielfalt über Berufskategorien, Branchen, Regionen und Metropolregionen; zeigt unterschiedliche Beschäftigungskonzentrationen in verschiedenen geografischen und industriellen Kontexten (z.B. 32,8% Produktionsberufe in Elkhart-Goshen vs. nationale Quote von 5,7%).
 

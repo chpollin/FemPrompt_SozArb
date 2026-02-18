@@ -4,14 +4,6 @@ authors: ["Lauri Goldkind", "Lea Wolf", "Alexis Glennon", "Juan Rios", "Laura Ni
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch/Kommentarisch mit illustrativen Beispielen und reflexiver Analyse
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Few practitioners have access to training that would position them to interrogate the use of ChatGPT or its implications. Congruent with the ethical imperative to maintain competency, professionals will need channels to learn about emerging AI tools.
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT is a chatbot powered by artificial intelligence (AI) that responds to prompts posed as questions, producing intelligible, mostly accurate text responses. ChatGPT is among the most complex language models yet assembled.
 
-### KI_Sonstige
+### Evidenz 3
 
 Natural language processing, a branch of AI initiated in the 1960s that seeks to program a computer's capacity to understand text and spoken words. AI already shapes and speeds up our daily lives, powering Amazon recommendations, employment screening, social media feeds.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 For social workers, the best way to comprehend how the chatbot could augment or disrupt practice is to watch it work. ChatGPT could support transformational efficiencies at the organizational level, speeding the production of grant writing and fundraising activity, easing documentation demands.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Evidence shows that the existing use of advanced technological tools—in arenas like sentencing or risk assessment in child welfare—has exerted disproportionate impact upon marginalized populations, because the construction and deployment of these technologies amplifies existing bias and discrimination.
 
-### Diversitaet
+### Evidenz 6
 
 The extant texts training these language models are generally not inclusive of diverse perspectives and frequently reflect larger biases of society. As AI tools grow in capacity and complexity, and as they are incorporated, increasingly, into the structures that govern social life, vulnerable populations may face accelerating marginalization.
 
-### Fairness
+### Evidenz 7
 
 Organizations will need to move rapidly to consider and distribute policies that allow them to maximize the utility of AI with practices that align with their mission. AI and chatbots will continue to evolve, and the advent of ChatGPT offers organizations a critical opportunity to conceptualize which tasks can be ethically automated.
 

@@ -4,12 +4,6 @@ authors: ["Erik Hermann"]
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Hermann_2022_Artificial_intelligence_and_mass_personalization.md
 confidence: 88
@@ -38,23 +32,23 @@ Theoretisch/Konzeptuelle Analyse. Umfassende Literatursuche in elektronischen Da
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 By this form of AI literacy, individuals could be empowered to interact with and treat mass-personalized content in a way that promotes individual and social good while preventing harm. The authors propose AI literacy as a potential individual remedy to address the interdependent ethical challenges.
 
-### KI_Sonstige
+### Evidenz 2
 
 The study systematically scrutinizes AI-driven mass personalization of communication content, including recommender systems, personalization algorithms, machine learning algorithms, and algorithmic content filtering in news feeds and e-commerce platforms.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Personalization could 'segment a population so that only some segments are worthy of receiving some opportunities or information, re-enforcing existing social (dis)advantages' leading to 'industrialized social discrimination' that creates 'winners' and 'losers'. AI-powered mass personalization could discriminate based on psychological, economic, and demographic factors, and reinforce gender, age, and racial disparities, prejudices, and stereotypes.
 
-### Diversitaet
+### Evidenz 4
 
 The analysis accounts for a multi-stakeholder perspective and addresses phenomena such as filter bubbles, echo chambers, and selective exposure that can have adverse effects on democratic representation and content diversity for different social groups.
 
-### Fairness
+### Evidenz 5
 
 The justice principle addresses how biases in algorithmic systems can lead to unfair and unequal treatment, discrimination on the basis of demographic factors, and the need for monitoring and diligence along the entire data lifecycle to prevent discriminatory outcomes and ensure fair market access.
 

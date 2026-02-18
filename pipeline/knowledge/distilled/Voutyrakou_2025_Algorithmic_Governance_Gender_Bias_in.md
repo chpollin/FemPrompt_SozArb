@@ -4,16 +4,6 @@ authors: ["Dialekti Athina Voutyrakou", "Constantine Skordoulis"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.md
 confidence: 95
@@ -42,39 +32,39 @@ Mixed-Methods: Vier experimentelle Szenarien mit wiederholten Prompts in zwei KI
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Diskussion darüber, dass Nutzer als 'aktive Teilnehmer' in den Bias-Feedback-Loop beitragen und dass 'Prompt Literacy und Public Education' notwendig sind: 'users themselves contribute to the bias feedback loop, making them active participants rather than passive recipients'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf zwei generative KI-Systeme: 'We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) and Microsoft Copilot'
 
-### Prompting
+### Evidenz 3
 
 Explizite Variation der Prompt-Struktur mit/ohne Gender-Erwähnungen: 'Each scenario includes a gender-neutral prompt, a male-specific version, and a female-specific version and a non-binary-specific version'
 
-### KI_Sonstige
+### Evidenz 4
 
 Analyse von LLMs und NLP-Systemen als Teil von algorithmischen Entscheidungssystemen: 'Large language models such as ChatGPT or Microsoft Copilot add layers of complexity to understanding gender bias in AI'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentrale These der strukturellen Benachteiligung durch androzentrische Algorithmen-Designs: 'the supposed neutrality of AI tools actually reproduces an androcentric norm' und 'a technological design that equates neutral with male'
 
-### Gender
+### Evidenz 6
 
 Expliziter Fokus auf Gender-Bias in vier verschiedenen Policy-Kontexten und auf geschlechtsspezifische Bedürfnisse: 'gender bias...arises when systems consistently advantage or disadvantage individuals based on gender'
 
-### Diversitaet
+### Evidenz 7
 
 Intersektionale Perspektive und Analyse nicht-binärer Identitäten: 'The non-binary scenario further illustrates this pattern: inclusivity features such as gender-neutral policies and identity-affirming practices were activated only upon explicit mention'
 
-### Feministisch
+### Evidenz 8
 
 Explizite Verwendung feministischer Theorien (Tronto's Care-Ethik, Grosz' embodied subjectivity, Bobel on menstrual stigma, Koskela on women's spatial confidence): 'Drawing on Joan Tronto's ethics of care and Iris Marion Young's concept of justice as inclusion, this perspective argues that fair governance must recognize and respond to differentiated social positions'
 
-### Fairness
+### Evidenz 9
 
 Kritik an oberflächlichen Fairness-Ansätzen und Forderung nach kontextualisierten Fairness-Konzepten: 'fairness interventions must align with real-world harm mitigation and not merely with metric optimization'
 

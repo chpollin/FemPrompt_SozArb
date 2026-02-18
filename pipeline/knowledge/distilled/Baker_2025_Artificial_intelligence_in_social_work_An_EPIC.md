@@ -4,14 +4,6 @@ authors: ["Heather Boetto"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch: Umfassende Literaturreview zur Schnittstelle von KI und Sozialer Ar
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Empfehlung für Inclusion of AI content in course accreditation requirements and practice standards is critical for ensuring practitioners can appropriately navigate this new era of frontier technologies
 
-### Generative_KI
+### Evidenz 2
 
 The type of deep learning machines garnering much public debate is generative AI, which has the capacity to autonomously augment, synthesise, and innovate new data inspired from an original dataset. ChatGPT als Beispiel für Risiken: inaccurate output data and breached privacy principles involving third-party access to service user data
 
-### KI_Sonstige
+### Evidenz 3
 
 AI applications in mental health and predictive risk assessment, AI-powered chatbots in clinical settings, predictive risk modelling for suicide, domestic violence, and child protection using machine learning algorithms
 
-### Soziale_Arbeit
+### Evidenz 4
 
 As artificial intelligence (AI) permeates the workplace environments of social workers, there is a need to understand the risks and benefits posed to the mission and values of the profession. Examination of AI's influence across child welfare, counselling, mental health, and domestic violence contexts
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 gender classification systems produced an error rate up to 34.7% for darker-skinned females (Buolamwini & Gebru). The dominance of colonial knowledges in AI algorithms are reinforced, and the ongoing colonisation and oppression of First Nations Peoples perpetuated. Lack of community involvement in AI development means algorithms rarely consider diverse perspectives
 
-### Diversitaet
+### Evidenz 6
 
 Lack of representative data for marginalised groups, digital divide and information poverty for marginalised groups, need for First Nations' data sovereignty and control, underrepresented groups in AI employment pathways, intersectionality concerns regarding gender, race, ethnicity, and sexual orientation
 
-### Fairness
+### Evidenz 7
 
 Advocating for legal protection and self-governance of personal data, advocacy for international and national collaborative governance and regulation, addressing structural biases through decolonisation processes, ensuring AI systems reflect diverse needs and concerns through community engagement
 

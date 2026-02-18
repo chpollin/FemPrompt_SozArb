@@ -4,14 +4,6 @@ authors: ["Hannah Overbye-Thompson", "Ronald E. Rice"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Sharma_2024_Intersectional.md
 confidence: 75
@@ -40,31 +32,31 @@ Theoretisch - Konzeptuelle Analyse unter Anwendung der HAII-TIME (Human-AI Inter
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper diskutiert explizit 'algorithmic literacy' und wie Nutzer:innen ihre Fähigkeit entwickeln, algorithmische Systeme zu verstehen und zu navigieren: 'Understanding these adaptive strategies provides crucial insights for developing inclusive technologies and fostering algorithmic literacy'.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf algorithmische Entscheidungssysteme (nicht generativ) in verschiedenen Bereichen wie Gesichtserkennungsalgorithmen, Kreditscoring, Einstellungsalgorithmen, Healthcare-Algorithmen, Empfehlungssysteme.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Expliziter Fokus auf vulnerable und marginalisierte Gruppen, die durch algorithmischen Bias benachteiligt werden; Bezug zu sozialen Wohlfahrtssystemen und deren algorithmischen Kontrolle: 'Algorithms leading to widespread rejection of welfare benefit claims for low-income applicants'; Zitation von Eubanks (2018) 'Automating Inequality'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Thematik des gesamten Papers; dokumentiert systematische Benachteiligung durch Algorithmen: 'smartwatches have been found to provide less accurate data...to those with dark skin'; 'facial recognition systems more frequently misgender individuals with darker skin'; 'healthcare algorithms systematically favor White patients over Black patients'.
 
-### Gender
+### Evidenz 5
 
 Mehrfach explizit behandelt: 'justice algorithms more often label women as high recidivism risks when determining parole'; 'hiring algorithms discriminating based on gender, race, and personality'; COMPAS-Algorithmus mit geschlechtsspezifischen Effekten; 'NIST audit finding...facial algorithms perform worse for women'.
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Perspektive auf verschiedene marginalisierte Gruppen: Menschen mit dunkler Hautfarbe, Frauen, Menschen mit afrikanisch-amerikanischem Englisch, Mieter:innen mit schwarzem/hispanischem Hintergrund, Menschen mit Behinderungen (blind assistive technology).
 
-### Fairness
+### Evidenz 7
 
 Diskussion von fairness-relevanten Konzepten: 'proxy bias' (Variablen als unbeabsichtigte Proxies für geschützte Merkmale), 'equalized odds', Fairness-Metriken in ML, 'bias mitigation' Strategien, verschiedene Fairness-Ansätze in Algorithmendesign.
 

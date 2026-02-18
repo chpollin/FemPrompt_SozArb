@@ -4,13 +4,6 @@ authors: ["Nadia Kutscher", "Thomas Ley", "Udo Seelmeyer", "Friederike Siller", 
 year: 2020
 type: book
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kutscher_2020_Handbuch.md
 confidence: 88
@@ -38,27 +31,27 @@ Theoretisch/Review - Systematische Zusammenstellung von Perspektiven aus Technik
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kapitel 4 'Digitalisierung und Profession' thematisiert 'notwendige (anzueignende) Kompetenzen von Sozialarbeiter*innen' und fragt: 'Wie kann ein professioneller Habitus ausgebildet werden, der die Digitalisierung kritisch-analytisch und pragmatisch-handlungsorientiert in beruflichen Arbeitskontexten einbetten kann?'
 
-### KI_Sonstige
+### Evidenz 2
 
 Explizite Behandlung von Algorithmisierung, Automatisierung, Robotik, statistischen Risisobewertungen im Kindeswohlgefährdungskontext und 'sozialer Robotik' als Substitution von Fachkräften. Techniksoziologischer Zugang analysiert Handlungsträgerschaft und Involviertheit technischer Systeme.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Das gesamte Handbuch ist auf Soziale Arbeit ausgerichtet. Fokus auf Handlungsfelder (Jugendhilfe, Beratung), professionelle Urteilsbildung, Falldokumentation, Onlineberatung, Adressat*innen, organisationale Praktiken und wohlfahrtsstaatliche Strukturen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Thematisierung von Vulnerabilität, Ungleichheiten und digitaler Spaltung: 'Der sich verändernde Umgang mit Daten verändert gesellschaftliche Teilhabemöglichkeiten...Vulnerabilitäten und Ungleichheiten'. Fragen zu Zugängen zur Technik für vulnerable Gruppen und deren Nutzungskompetenz werden explizit aufgeworfen.
 
-### Diversitaet
+### Evidenz 5
 
 Adressat*innen-Perspektive durchzieht die Analyse. Besondere Aufmerksamkeit für vulnerable Gruppen, digitale Teilhabe, Zugangsbarrieren, 'marginalisierte' Perspektiven durch die Betonung von Adressat*innen-Beteiligung und Handlungsfähigkeit.
 
-### Fairness
+### Evidenz 6
 
 Implizite Fairness-Dimensionen durch kritische Reflexion auf Standardisierung, Deprofessionalisierung, Qualitätserhalt und Gebrauchswert von Dienstleistungen. Ethische Dimensionen der Professionalität und autonomie der Lebenspraxis als ethische Richtlinie werden thematisiert.
 

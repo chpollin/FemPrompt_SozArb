@@ -4,13 +4,6 @@ authors: ["Mackline Nuwasiima", "Metogbe Patricia Ahonon", "Caleb Kadiri"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Nuwasiima_2024_The_role_of_artificial_intelligence_(AI)_and.md
 confidence: 91
@@ -39,27 +32,27 @@ Theoretisch/Review: Systematische Literaturanalyse und Überblick über aktuelle
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Integration von AI-Training in Sozialarbeit-Curricula: 'Social work curricula should integrate technology training, covering topics such as data privacy, ethical considerations, and the application of AI in practice.' (Section 7.2)
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf Machine Learning, Predictive Analytics, Natural Language Processing und automatisierte Fallmanagementsysteme: 'By analysing various data sources, including demographic information, historical case data, and social determinants of health, predictive analytics can identify at-risk individuals or groups' (Section 2.1)
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Gesamter Fokus auf Anwendung in sozialen Diensten, Kinderwohlfahrt und psychischer Gesundheit: 'AI and machine learning are revolutionizing the field further, enhancing predictive analytics, automating routine tasks, and improving decision-making processes in areas such as child welfare and mental health' (Section 1.2)
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Detaillierte Analyse von algorithmischen Vorurteilen gegen marginalisierte Gruppen: 'In several U.S. states, algorithms designed to assess the risk of child maltreatment have been shown to disproportionately flag families of color for investigation... found that the predictive risk modeling tool disproportionately identified Black children as high risk' (Section 4.1.1)
 
-### Diversitaet
+### Evidenz 5
 
 Betonung von inklusiven Datensätzen und kultureller Sensibilität: 'Stakeholders in social work must advocate for diverse and inclusive datasets that accurately represent the populations they serve. Additionally, ongoing evaluation and auditing of AI systems are essential to identify and mitigate bias' (Section 4.1)
 
-### Fairness
+### Evidenz 6
 
 Expliciter Fokus auf Fairness und Gerechtigkeit in KI-Systemen: 'Ensuring that AI systems are interpretable and open to scrutiny, social workers can better evaluate the fairness of the tools they use' (Section 4.3.1) und 'the core values of social work, such as equity and social justice, remain central to practice' (Abstract)
 

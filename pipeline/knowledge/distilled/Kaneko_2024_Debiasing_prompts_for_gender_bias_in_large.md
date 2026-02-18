@@ -4,15 +4,6 @@ authors: ["Masahiro Kaneko", "Danushka Bollegala", "Naoaki Okazaki", "Timothy Ba
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md
 confidence: 95
@@ -41,35 +32,35 @@ Empirisch: Benchmark-Konstruktion (Multi-step Gender Bias Reasoning - MGBR), exp
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper adressiert die kritische Fähigkeit, LLMs zu verstehen und ihre Biases zu evaluieren. Es zeigt, wie CoT-Prompting als Instrument zur bewussteren Nutzung von LLMs fungiert: 'Humans organize their thoughts through natural language, enabling them to make better decisions'.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models und ihre inhärenten Biases: 'Despite the impressive performance, unfortunately LLMs still learn unfair social biases'. Evaluation von 23 verschiedenen LLMs (OPT, Llama2, GPT-J, etc.).
 
-### Prompting
+### Evidenz 3
 
 Zentrale Methodik basiert auf Prompting-Strategien: 'In CoT, an LLM is required to explain step-by-step whether a word is feminine... Zero-shot+CoT follows Kojima et al. (2022) and adds "Let's think step by step"'.
 
-### KI_Sonstige
+### Evidenz 4
 
 Behandelt fundamentale NLP-Herausforderungen wie Wort-Embedding-Bias: 'Models do not explicitly learn the meanings of words but do so implicitly from the co-occurrences of tokens in a corpus, which can lead to flawed associations between words'.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Hauptfokus auf algorithmischen Bias und diskriminierende Vorhersagen: 'Without step-by-step prediction, most LLMs make socially biased predictions, despite the task being as simple as counting words'. Das Paper zeigt systematische Verzerrungen in der Klassifikation von Berufen nach Geschlecht.
 
-### Gender
+### Evidenz 6
 
 Explizites Gender-Fokus in Benchmark-Design und Evaluation: 'We construct a benchmark for an unscalable task where the LLM is given a list of words comprising feminine, masculine, and gendered occupational words'. Die gesamte Studie konzentriert sich auf Geschlechterstereotypen.
 
-### Diversitaet
+### Evidenz 7
 
 Erkennt Begrenztheit der binären Geschlechtsperspektive: 'For future work, potential areas of exploration include extending the application of CoT techniques to non-binary genders (Dev et al., 2021b; Ovalle et al., 2023)' und erwähnt andere Formen sozialer Biases (Rasse, Religion).
 
-### Fairness
+### Evidenz 8
 
 Fairness ist zentral zur Evaluierungsmethodik: 'If an LLM is unbiased, the inclusion of occupational words in the input should not affect its prediction accuracy. However, if an LLM is gender biased, it might incorrectly count occupations as feminine or masculine words'. Verwendet Fairness-Konzepte zur Bias-Messung.
 

@@ -4,15 +4,6 @@ authors: ["World Economic Forum", "EY", "Microsoft", "Schwab Foundation for Soci
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.md
 confidence: 75
@@ -41,35 +32,35 @@ Mixed-Methods: Empirisch (Analyse von über 300 sozialen Innovatoren, 22 tiefgeh
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das gesamte PRISM Framework adressiert 'organizational readiness' und Kompetenzaufbau: 'The framework encourages organizations to start with low-risk, low-cost AI applications and stresses the importance of organizational readiness over mere technological capability.' Kapitel 2.3 behandelt Leadership Vision, Skills Development und Training Costs.
 
-### Generative_KI
+### Evidenz 2
 
 Mehrfache Beispiele generativer KI-Nutzung: 'Dimagi built a tool based on Voice Engine, a new offering from the technology organization for the creation of custom voices, and ChatGPT-4' und Diskussion von proprietary Modellen wie ChatGPT und Gemini für Transparenzprobleme.
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfangreiche Abdeckung klassischer ML-Anwendungen: Predictive Analytics, Computer Vision (facial recognition), sentiment analysis, machine learning algorithms (MapBiomas), OCR-Tools für Digitalisierung.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Fokus auf soziale Innovatoren und deren Arbeit mit vulnerablen Populationen: 'As social innovators often work with vulnerable and marginalized groups, this is one of the key considerations.' Beispiele: SAS Brasil (Gesundheit), High Resolves (Bildung), LifeBank (Gesundheitssystem), Haqdarshak (ökonomische Empowerment), Recode (digitale Inklusion in Slums).
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Explizite Behandlung von Bias und struktureller Ungleichheit: 'AI is a mirror reflecting the data fed into it. When the reflection is distorted by biased data, the outcomes can perpetuate societal disparities.' Geographische Disparitäten: 'most commercially available models are trained on data from high-income countries, delivering sub-par results for low- and middle-income countries.' Gender Gap: 'just 25% of women-led social enterprises using AI compared to half in the broader sector.'
 
-### Gender
+### Evidenz 6
 
 Explizite Geschlechterdisparität identifiziert: 'Gender disparities persist, with just 25% of women-led social enterprises using AI compared to half in the broader sector.' Figure 5 zeigt Verteilung nach Gründerinnen und CEO-Geschlecht.
 
-### Diversitaet
+### Evidenz 7
 
 Betonung von Inklusivität und Repräsentation: 'to ensure that their AI systems act as lenses that correct, rather than amplify, biases' durch diverse Datenquellen. Geographische Diversität: 'There is no gap in implementation between low-/middle-income and high-income countries but a strong diversity in the sectors of implementation.' Adressierung marginalisierter Communities: Haqdarshak in Indien, RECODE in Brazil favelas, Swahili/Sheng-Sprachenunterstützung.
 
-### Fairness
+### Evidenz 8
 
 Algorithmische Fairness ist zentrales Kapitel (2.1 Ethics): Fairness and avoiding bias, Transparenz, Accountability. Fairness-Metriken und -Frameworks werden diskutiert: 'In applications like facial recognition, where historical data may have underrepresented certain demographics, diverse data samples may need to be included.' Fairness als Schlüssel für vertrauenswürdige Systeme.
 

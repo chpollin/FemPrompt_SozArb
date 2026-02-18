@@ -4,14 +4,6 @@ authors: ["Alejandro Salinas", "Amit Haim", "Julian Nyarko"]
 year: 2025
 type: workingPaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Salinas_2025_What’s_in_a_name_Auditing_large_language_models.md
 confidence: 89
@@ -40,31 +32,31 @@ Empirisch: Audit-Studiendesign mit direktem Prompting. 42 Prompt-Templates über
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf state-of-the-art LLMs: 'We employ an audit design to investigate biases in state-of-the-art large language models, including GPT-4.'
 
-### Prompting
+### Evidenz 2
 
 Systematische Variation von Prompts: 'We assess the name-sensitivity of the output produced by state-of-the-art language models. Our assessment encompasses 42 idiosyncratic prompts.'
 
-### KI_Sonstige
+### Evidenz 3
 
 Algorithmic fairness und NLP: 'The fairness of AI algorithms, including LLMs, has been a pernicious issue, motivating a growing literature and community of AI ethics research.'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Fokus auf algorithmischen Bias und strukturelle Benachteiligung: 'Names associated with white men yield the most beneficial predictions, while those associated with Black women generate outcomes that disadvantage the individual in question.'
 
-### Gender
+### Evidenz 5
 
 Expliziter Geschlechterfokus in Bias-Analyse: 'Disparities across gender and race, among other attributes, have especially preoccupied the field. Names associated with Black women receive the least advantageous outcomes.'
 
-### Diversitaet
+### Evidenz 6
 
 Fokus auf marginalisierte Gruppen und Intersektionalität: 'The biases are consistent with common stereotypes prevalent in the U.S. population. The findings suggest that... disparities are the result of a systematic bias... to the disadvantage of women, Black communities, and in particular Black women.'
 
-### Fairness
+### Evidenz 7
 
 Algorithmische Fairness und Fairness-Audit: 'bias auditing as an important component of AI harm mitigation in policy discussions and regulatory frameworks' und explizite Verbindung zu Disparate Impact Konzepten in der Rechtsprechung.
 

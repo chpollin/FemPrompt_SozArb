@@ -4,14 +4,6 @@ authors: ["UNESCO General Conference"]
 year: 2021
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.md
 confidence: 88
@@ -39,31 +31,31 @@ Normativ-regulatorisch; internationale Standard-Setting durch multilaterale Kons
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Recognizing that AI technologies can bring important benefits, but that achieving them can also amplify tension around innovation, asymmetric access to knowledge and technologies, including the digital and civic literacy deficit that limits the public's ability to engage in topics related to AI' (Preamble); 'Member States should enhance media and information literacy and access to independent, pluralistic, trusted sources of information'
 
-### KI_Sonstige
+### Evidenz 2
 
 AI systems are information-processing technologies that integrate models and algorithms that produce a capacity to learn and to perform cognitive tasks including machine learning, deep learning, reinforcement learning, machine reasoning, planning, scheduling, knowledge representation and reasoning' (Section I); covers all stages of AI system life cycle from research, design, deployment, maintenance, operation, monitoring, evaluation
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Policy action addresses health and social well-being (Policy Area 11); emphasis on vulnerable people or people in vulnerable situations; children and youth; persons with disabilities; references to welfare systems, employment, and care for older persons
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 AI technologies can deepen existing divides and inequalities in the world, within and between countries... potential resulting discrimination, inequality, digital divides, exclusion and a threat to cultural, social and biological diversity'; 'LMICs, including but not limited to LDCs, LLDCs and SIDS... have been underrepresented in the AI ethics debate'; emphasis on ensuring fair access and protection against negative implications
 
-### Gender
+### Evidenz 5
 
 Convention on the Elimination of All Forms of Discrimination against Women (1979) cited as foundational instrument; explicit mention of 'gender equality' as key principle in preamble and throughout; Policy Area on Human Rights includes gender equality as protected dimension
 
-### Diversitaet
+### Evidenz 6
 
 Multicultural and evolving framework of interdependent values, principles and actions'; 'cultural diversity, diversity of cultures and ethical systems'; 'marginalized groups, communities and individuals'; 'indigenous peoples, respect for the self-governance of their data'; emphasis on representation of LMICs, LDCs in governance; social, cultural and gender diversity in monitoring processes
 
-### Fairness
+### Evidenz 7
 
 Justice, trust and fairness must be upheld so that no country and no one should be left behind'; global fairness to deal with positive and negative impacts'; fair access to AI technologies; 'Member States should prevent the resulting inequalities... promote competitive markets'; ensuring 'fair transition for at-risk employees'; emphasis on equitable benefit-sharing and protection mechanisms
 

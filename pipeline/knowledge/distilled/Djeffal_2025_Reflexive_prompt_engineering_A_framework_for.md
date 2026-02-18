@@ -4,14 +4,6 @@ authors: ["Christian Djeffal"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Djeffal_2025_Reflexive_prompt_engineering_A_framework_for.md
 confidence: 89
@@ -40,31 +32,31 @@ Theoretisch/Narrative Review - systematische Analyse von akademischer Literatur,
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The article concludes by identifying key research directions and practical guidelines for advancing the field of responsible prompt engineering as an essential component of AI literacy.
 
-### Generative_KI
+### Evidenz 2
 
 The analysis examines how prompt engineering can be approached responsibly to mitigate risks and enhance the beneficial deployment of generative AI technologies, with focus on transformer-based models and LLMs.
 
-### Prompting
+### Evidenz 3
 
 Prompt engineering encompasses five essential components: prompt design, system selection, system configuration, performance evaluation, and prompt management, with detailed techniques like chain-of-thought reasoning and few-shot prompting.
 
-### KI_Sonstige
+### Evidenz 4
 
 The paper discusses algorithmic decision systems, RAG systems, benchmarking, and broader AI governance frameworks including responsibility by design principles.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 The analysis includes examination of model biases (position bias, verbosity bias, self-enhancement bias), discrimination benchmarks assessing how AI systems affect demographic groups, and alignment with fairness principles to prevent perpetuation of societal biases.
 
-### Diversitaet
+### Evidenz 6
 
 The paper references the Google Gemini incident involving misrepresentation of historical figures in an overcorrection for diversity and inclusion, and discusses inclusive design through stakeholder involvement, particularly vulnerable groups, in prompt design and evaluation.
 
-### Fairness
+### Evidenz 7
 
 Performance evaluation must consider ethical dimensions including fairness implications; benchmarking frameworks evaluate models across dimensions including fairness and bias mitigation; responsible model selection must account for the model's tendency to produce biased outputs.
 

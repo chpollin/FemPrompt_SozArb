@@ -4,15 +4,6 @@ authors: ["Juliana Guerra"]
 year: 2023
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Guerra_2023_Feminist_reflections_for_the_development_of.md
 confidence: 89
@@ -41,35 +32,35 @@ Mixed Methods: Nicht-erschöpfende Literaturanalyse von Audit-Frameworks und Fai
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fokus auf Wissenstransfer, kritische Reflexion und Kompetenzerwerb in KI-Entwicklung: 'recognizing and making visible the multiple and diverse forms of the technical reconfigures our perception of who is part of a technology'
 
-### KI_Sonstige
+### Evidenz 2
 
 Thematisierung von Natural Language Processing, Computer Vision, Robotics, algorithmischen Entscheidungssystemen, Machine Learning und Bias in Datenbanken und Audit-Frameworks.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Fokus auf Soziale Dienste und technologische Interventionen in Kontexten von Gewalt gegen Frauen, Care-Arbeit und Gemeinschaftsorganisierung. Beispiel: 'app to tackle violence against women' und Analyse feministischer kollektiver Praxis.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Thematisierung von Bias in Datenbanken, strukturellen Ungleichheiten in Latinamerika (indigene Sprachen, Geschlechter-Digital-Divide, Arbeitsbedingungen in Elektronik-Fabriken): 'if you are born speaking an indigenous language your chances are going to be very different'
 
-### Gender
+### Evidenz 5
 
 Expliziter Fokus auf Geschlechterperspektive: Frauen im Tech/AI-Bereich, Geschlechter-Bias in Datensätzen, Gender-basierte Gewalt als Anwendungsfall, Unterrepräsentation von Frauen in datengetriebenen Rollen.
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Analyse mit Fokus auf marginalisierte Gruppen: indigene Bevölkerung, Frauen, nicht-binäre Personen, Arbeiter:innen, Geflüchtete. 'It is essential that we listen to and learn from the embodied experiences of datafication...in the lives of women and girls, indigenous communities, immigrants, refugees, platform workers, non-binary people, and rural communities'
 
-### Feministisch
+### Evidenz 7
 
 Explizite Verwendung feministischer Theorie (Haraway, D'Ignazio & Klein, hooks implizit durch Critical Race Theory, Crenshaw-Konzepte durch Intersektionalität): 'a feminist perspective', Referenz zu 'Feminist Principles of the Internet', 'Data Feminism', Manifesto for hackfeminist algorithms, Design Justice, Decolonial Feminism.
 
-### Fairness
+### Evidenz 8
 
 Thematisierung von Fairness in Algorithmen, Audit-Frameworks, Bias-Mitigation, algorithmischer Gerechtigkeit und Impact-Assessment: 'algorithmic or datasets biases', 'Equalized Odds, Demographic Parity', auditability und reusability von Daten.
 

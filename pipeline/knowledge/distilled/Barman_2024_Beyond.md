@@ -4,13 +4,6 @@ authors: ["South Australian Government", "Office of the Chief Information Office
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Barman_2024_Beyond.md
 confidence: 92
@@ -38,27 +31,27 @@ Theoretisch/Policy-Analyse; Richtliniendokumentation mit Risikobewertung und Mit
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Conduct awareness campaigns for the safe and ethical use of AI tools; Instruct employees via clearly understood and widely disseminated policies; Remind staff of their obligations under the Code of Ethics for the SA Public Sector
 
-### Generative_KI
+### Evidenz 2
 
 This guideline covers the limitations and risks associated with the use of generative artificial intelligence (AI) and Large Language Model (LLM) tools; Generative AI and LLM tools, such as OpenAI's ChatGPT and Google Bard
 
-### Prompting
+### Evidenz 3
 
 Employees can easily expose sensitive and proprietary government data in the questions and prompts they provide to generative AI and LLM tools; Disallow any cut-and-paste of enterprise content, such as emails, reports and chat logs into prompts
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Relying on vast amounts of algorithms and data carries the inherent risk of bias or discriminatory content in outputs; This can lead to inbuilt and amplified biases that could be particularly damaging for Aboriginal and Torres Strait Islander peoples and minority groups
 
-### Diversitaet
+### Evidenz 5
 
 Where generative AI and LLM tools are used in circumstances that may impact Aboriginal and Torres Strait Islander peoples, agencies must consider the risk of negative bias in that instance and consult with Aboriginal and Torres Strait Islander peoples; Be wary of inherent biases that may be inbuilt and develop strategies to counter them
 
-### Fairness
+### Evidenz 6
 
 Establish or update the agency's privacy policies to accommodate the use of AI tools to meet applicable obligations - including in relation to integrity, privacy, security, human rights, anti-discrimination, administrative and other laws; AI systems have the potential to be expressions of cultural and social frameworks, representing the socially dominant concepts and normative ideas of the system designers
 

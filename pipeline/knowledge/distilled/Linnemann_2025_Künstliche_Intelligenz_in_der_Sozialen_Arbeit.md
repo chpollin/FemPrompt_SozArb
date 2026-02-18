@@ -4,15 +4,6 @@ authors: ["Gesa Linnemann", "Julian Löhe", "Beate Rottkemper"]
 year: 2025
 type: book
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Linnemann_2025_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md
 confidence: 75
@@ -43,35 +34,35 @@ Theoretisch/Review; Sammelband mit 16 Beiträgen zu Grundlagen, Anwendungsfelder
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentral für den Band: 'Ein zentrales Anliegen ist die Entwicklung von KI-Kompetenz in Studium, Praxis und Organisationen.' Kapitel 'Künstliche Intelligenz in der Lehre der Sozialen Arbeit' widmet sich explizit Curricula und Kompetenzvermittlung.
 
-### Generative_KI
+### Evidenz 2
 
 Project Debater und Sprachmodelle werden im Vorwort diskutiert; Kapitel behandeln Natural Language Processing und Anwendungen von Sprachmodellen in Beratung und Dokumentation.
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfassende Behandlung: Predictive Analytics (Kindeswohlgefährdung, AFST), Assistenzsysteme, Robotik für Ältere, algorithmische Entscheidungssysteme im Sozialmanagement, Computer Vision für Sprachausgabe.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Kernfokus des gesamten Bandes: Direkte Anwendungen auf Beratung, Dokumentation, Inklusion, Jugendhilfe, Kindesschutz, Behindertenarbeit, Älterenhilfe, Sozialmanagement.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Extensive Diskussion: 'Frauen, LGBTQIA+-Communitys, ältere Menschen und Menschen mit Behinderungen sind in oder durch KI geprägte(n) Technologien systematisch unterrepräsentiert.' Eubanks-Analyse zur Automatisierung von Ungleichheit zitiert; Risiken für benachteiligte Bevölkerungsgruppen thematisiert.
 
-### Gender
+### Evidenz 6
 
 Mehrfach erwähnt: 'Beispielsweise sind nur 14% der Editor:innen des Journals Artificial Intelligence Frauen' (Fosch-Villaronga/Poulsen 2022); Gender-Bias in KI-Training und Entwicklung; Frauen in Technologieentwicklung unterrepräsentiert.
 
-### Diversitaet
+### Evidenz 7
 
 Zentral: 'Fosch-Villaronga und Poulsen (2022) zeigen auf, dass Frauen, LGBTQIA+-Communitys, ältere Menschen und Menschen mit Behinderungen systematisch unterrepräsentiert sind.' Intersektionale Perspektiven auf Behinderung, Ethnizität, Alter, Geschlecht.
 
-### Fairness
+### Evidenz 8
 
 Explizit behandelt in Ethik-Kapitel und Inklusions-Diskussionen: Fairness-Fragen bei Kindeswohleinschätzung (AFST-System), Algorithmic Fairness vs. Practitioner Bias, Equitable Access zu Assistenztechnologien.
 

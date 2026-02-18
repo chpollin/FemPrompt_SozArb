@@ -4,14 +4,6 @@ authors: ["Maria del Pilar Arias López", "Bradley A. Ong", "Xavier Borrat Fríg
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-04
 source_file: Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A.md
 confidence: 75
@@ -40,31 +32,31 @@ Scoping Review. Comprehensive literature search across Medline (Ovid), Embase (O
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Digital literacy defined as 'the varying ability of both children and adults to use digital technologies and understand their risks' and 'the capacity to critically and confidently engage with the online environment.' Assessment tool eHealth Literacy Scale (eHEALS) evaluates six core dimensions.
 
-### KI_Sonstige
+### Evidenz 2
 
 Paper discusses digital health technologies including virtual visits, asynchronous digital messaging, health tracking wearables, self-monitoring devices, online patient portals, and technology-based health tools as components of healthcare systems.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Paper addresses vulnerable populations including older adults, minorities, persons with disabilities, rural communities, and those with low socioeconomic status—core constituencies of social work. Discusses health equity, access barriers, and need for supportive interventions.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explicitly addresses 'digital divide' and digital inequities: 'Digital transformation may contribute to further increasing the inequalities that already exist in access to healthcare thus generating a digital divide.' Documents disparities by age, education, socioeconomic status, and digital access.
 
-### Gender
+### Evidenz 5
 
 Study reports gender disparities in digital literacy: 'Males were more likely than females to have high digital literacy related to internet-based information.' Gender identified as factor affecting digital health literacy alongside age and education.
 
-### Diversitaet
+### Evidenz 6
 
 Paper emphasizes intersectional impacts across age, gender, education level, socioeconomic status, and geographic location. Highlights specific vulnerable groups: 'rural areas, aging patients, minorities, or persons with disabilities' are 'most likely to be excluded from the digital world.'
 
-### Fairness
+### Evidenz 7
 
 Proposes addressing digital health literacy as matter of health equity and fairness: 'Decision makers, health professionals, and researchers must consider and address the effects of digital determinants on population health.' Calls for strategies to reduce 'digital health divide' and improve equitable access.
 

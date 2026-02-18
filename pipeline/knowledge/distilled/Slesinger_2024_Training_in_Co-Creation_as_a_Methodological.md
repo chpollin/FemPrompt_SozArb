@@ -4,14 +4,6 @@ authors: ["Ian Slesinger", "Evren Yalaz", "Stavroula Rizou", "Marta Gibin", "Emm
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.md
 confidence: 90
@@ -40,31 +32,31 @@ Mixed Methods - Empirisch: Co-Creation Workshops mit vulnerable Gruppen (n=3 Org
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Training component designed to make AI bias more accessible by incorporating AI definitions and terminology. 'RUG designed the training with the assumption that participants would have little prior knowledge of AI technology... took a deliberate strategy of ensuring the training was designed and presented in a way that participants required zero prior technical knowledge'
 
-### KI_Sonstige
+### Evidenz 2
 
 Paper focuses on AI bias detection and mitigation in multiple modalities (text, datasets, images, audio) and multi-attribute approaches accounting for intersecting forms of bias in AI systems
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Engagement with vulnerable and marginalized participant groups including unemployed people, LGBTQ+ communities, ethnic minorities. Use cases relevant to social impact: financial decisions (loan applications), identity verification, academic citation searches
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Core focus on AI bias as 'the inclination or prejudice of a decision made by an AI system which is for or against one person or group, often leading to unfair treatment and discrimination'. Paper emphasizes how bias results from socio-technical factors and reproduces existing inequalities
 
-### Gender
+### Evidenz 5
 
 Explicit analysis of gender bias in AI systems. Example provided: 'DAF added an example based on generative AI queries on the responsibilities of fathers and mothers that reproduced outdated and stereotypical gender roles' and gender bias in Google Translate
 
-### Diversitaet
+### Evidenz 6
 
 Multi-attribute approach to bias accounting for 'intersecting forms of bias... based on multiple characteristics of vulnerability or marginalization, e.g., gender, age, ethnic origin, and sexual orientation'. Paper addresses inclusion of children, refugees, older adults, people with disabilities, ethnic minorities, LGBTQ+ people
 
-### Fairness
+### Evidenz 7
 
 Paper explicitly addresses algorithmic fairness through Co-Creation. 'Fairness in the context of AI systems is established by preventing bias, discrimination, and stigmatization'. Participants engaged in evaluating fairness of AI systems and suggesting fair alternatives
 

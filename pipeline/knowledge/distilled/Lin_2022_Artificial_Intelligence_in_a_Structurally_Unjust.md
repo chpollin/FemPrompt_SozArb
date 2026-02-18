@@ -4,13 +4,6 @@ authors: ["Ting-An Lin", "Po-Hsuan Cameron Chen"]
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust.md
 confidence: 94
@@ -39,27 +32,27 @@ Theoretisch-konzeptionell: Anwendung von Iris Marion Youngs Strukturelle-Ungerec
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf Machine Learning, algorithmische Entscheidungssysteme in verschiedenen Domänen: 'Several studies have revealed that AI may reproduce existing social injustices, such as sexism and racism' und spezifische Beispiele wie COMPAS, Amazon Recruiting Tool, Google Search Engine.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Thematisiert strukturelle Ungerechtigkeit und Verantwortung in Systemen, die vulnerable Gruppen treffen; Bezug zu Domänen der Sozialen Arbeit wie Gesundheitswesen und strukturelle Gerechtigkeit: 'AI bias exists when AI systems interact with other social factors to exacerbate existing social inequalities, making some groups of people more vulnerable to undeserved burdens'.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale Thematik durchgehend. 'AI bias is a form of structural injustice that exists when AI systems interact with other social factors to exacerbate existing social inequalities.' Detaillierte Analyse von Rassismus- und Geschlechterdiskriminierung in KI-Systemen.
 
-### Gender
+### Evidenz 4
 
 Explizite Beispiele von Geschlechterdiskriminierung: 'one AI recruiting tool downgrades resumes containing the keyword 'women's,' such as 'women's college' and 'women's chess club,' resulting in a preference for male candidates' und Analyse von Geschlechterdisparitäten im Gesundheitswesen.
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektive auf strukturelle Ungleichheit: 'algorithms behind one global search engine tend to represent women of color with degrading stereotypes' und Fokus auf 'Racial, gender, and class disparities in health care'.
 
-### Fairness
+### Evidenz 6
 
 Zentrale Kritik und Rekonzeptualisierung: 'the dominant approach sees the problem of AI bias as being primarily located within algorithms, understands the goal of AI fairness as ensuring some parity of some statistical measures between different groups of people' wird kritisiert zugunsten eines strukturellen Fairness-Ansatzes.
 

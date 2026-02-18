@@ -4,14 +4,6 @@ authors: ["Laine McCrory"]
 year: 2024
 type: workingPaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch-analytisch: Entwicklung eines feministischen KI-Policy-Analyse-Frame
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Paper diskutiert 'AI knowledge' und kritisiert OECD-Definition, die 'lived experiences and diverse knowledge' nicht einbezieht: 'This definition fails to incorporate lived experiences and diverse knowledge into the development of AI safety plans.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf AI Safety, AGI, AI-Governance, existenzielle Risiken von KI-Systemen und deren Auswirkungen auf verschiedene Bevölkerungsgruppen.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Paper integriert Feminist Policy Analysis Framework aus Sozialarbeit (McPhail 2003, Kanenberg 2013) und adressiert vulnerable Populations und marginalisierte Communitys als zentrale Zielgruppe.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral: 'Scholarship in critical data studies demonstrates how AI reinforces inequalities related to race, sexuality, class and gender' und 'AI regularly replicates broader social biases and power dynamics.'
 
-### Diversitaet
+### Evidenz 5
 
 Kern des Papers: 'AI research is characterized by a diversity problem, facing not only a lack of diverse perspectives within technical development...but also a lack of representation in the framing of policy narratives' und intersektionale Analyse von Identitäten (Geschlecht, Rasse, Klasse, Sexualität, Fähigkeit, etc.).
 
-### Feministisch
+### Evidenz 6
 
 Explizite Verwendung feministischer Theorie (Kimberlé Crenshaw - Intersektionalität, D'Ignazio & Klein - Data Feminism, Beverly McPhail - Feminist Policy Analysis Framework, Patricia Hill Collins - outsider within). Framework ist explizit 'Feminist AI Policy Framework'.
 
-### Fairness
+### Evidenz 7
 
 Diskussion von substantive versus formal equality: 'they fail to detail how these shares will be distributed according to equitable need (substantive equality) as opposed to provision of a single level of support and resources for all (formal equality).'
 

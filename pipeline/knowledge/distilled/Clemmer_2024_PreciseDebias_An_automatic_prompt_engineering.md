@@ -4,14 +4,6 @@ authors: ["Colton Clemmer", "Junhua Ding", "Yunhe Feng"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch/Mixed: Entwicklung eines End-to-End-Frameworks mit Fine-Tuning von Lar
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Das Paper fokussiert explizit auf generative KI-Modelle: 'By leveraging fine-tuned Large Language Models (LLMs) coupled with text-to-image generative models' und verwendet Stable Diffusion und LLaMA-7B als Kernkomponenten.
 
-### Prompting
+### Evidenz 2
 
 Automatisches Prompt-Engineering ist der zentrale Beitrag: 'we propose PreciseDebias, a comprehensive end-to-end framework that can rectify demographic bias in image generation. By leveraging fine-tuned Large Language Models (LLMs) coupled with text-to-image generative models, PreciseDebias transforms generic text prompts to produce images in line with specified demographic distributions.'
 
-### KI_Sonstige
+### Evidenz 3
 
 Computer Vision und NLP-Techniken werden integriert, z.B. Named Entity Recognition (NER) als Baseline-Vergleich und Stable Diffusion als Text-zu-Bild-Generator.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Das Paper adressiert explizit demografische Verzerrungen in KI-Systemen: 'Recent years have witnessed growing concerns over demographic biases in image-centric applications' und zeigt, dass DALL-E einen Male-to-Female-Ratio von 2.35 für 'doctor' generiert, der vom realen Ratio von 1.78 abweicht.
 
-### Gender
+### Evidenz 5
 
 Geschlecht ist eine der zwei Hauptdimensionen der Bias-Analyse: 'Extensive experiments demonstrate the effectiveness of PreciseDebias in rectifying biases pertaining to both ethnicity and gender in images.' Mit Erfolgsquoten von 99,9% für Gender-spezifische Bilderzeugung.
 
-### Diversitaet
+### Evidenz 6
 
 Diversität von Repräsentationen ist das Kernziel: 'The advent of generative AI offers a pathway to mitigate these biases by producing underrepresented images' und das Paper zeigt Generalisierung 'across multiple professions and demographic attributes'.
 
-### Fairness
+### Evidenz 7
 
 Fairness-Metriken und -Ziele sind zentral: Das Papier verwendet statistische Fairness-Metriken (Demographic Parity durch kontrollierte Ratios) mit der Formel Δc = Gc - P(c|M), um 'specified demographic distributions' zu erreichen.
 

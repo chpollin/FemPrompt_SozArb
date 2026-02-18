@@ -4,12 +4,6 @@ authors: ["Donna Haraway"]
 year: 1985
 type: book
 language: de
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
 processed: 2026-02-05
 source_file: Mosene_2023_Feministische.md
 confidence: 75
@@ -38,23 +32,23 @@ Theoretisch: Kritische Textanalyse, politische Mythologie, Cyborg-Metaphorik, Ve
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Cybernetik, kybernetische Systeme und Informationstechnologie als zentrale analytische Konzepte: 'kybernetische Organismen', 'C3I Command-Control-Communication-Intelligence', Mikroelektronik als technische Basis von Simulakren und Informatik der Herrschaft
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Analyse der 'Informatik der Herrschaft' als globales System der Ausbeutung; Integration/Ausbeutung von Frauen in weltweiter Produktion/Reproduktion; Kritik des rassistischen und patriarchalen Kapitalismus; elektronische Fabrikation und internationale Arbeitsteilung als Instrumente der Kontrolle
 
-### Gender
+### Evidenz 3
 
 Zentrale Fokussierung auf Geschlechterrepression, Post-Gender-Welten, Dekonstruktion von Geschlechtsdichotomien: 'Gender wäre nicht mehr die umfassende Identität schlechthin'; Kritik essentialistischer Frauenkonzepte
 
-### Diversitaet
+### Evidenz 4
 
 Explizite Auseinandersetzung mit Women of Color als Cyborg-Identität und machtvolle Subjektivität; marginalisierte Identitäten; kolonisierte Gruppen; Schreiben als Form des politischen Kampfes für farbige Frauen und Männer
 
-### Feministisch
+### Evidenz 5
 
 Explizite Verwendung feministischer Theorie: 'sozialistischer Feminismus', Bezug auf französische Feministinnen (Irigaray, Wittig), radikale Feministinnen (Griffin, Lorde, Rich); feministische Science Fiction als theoretische Ressource; Kritik humanistischer, patriarchaler Narrative; Konzept von Blasphemie als feminist-theoretische Strategie
 

@@ -4,13 +4,6 @@ authors: ["Nadia Kutscher"]
 year: 2024
 type: book
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand.md
 confidence: 75
@@ -39,27 +32,27 @@ Theoretisch-konzeptuell; Narrative Review und disziplinäre Analyse mit Bezug zu
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kutscher fordert ,Handlungskompetenzen im Kontext digitaler Medien in der Sozialen Arbeit' und diskutiert ,medienbezogene Handlungskompetenzen' als notwendig für professionelles Handeln.
 
-### KI_Sonstige
+### Evidenz 2
 
 Explizite Behandlung von ,Algorithmen und ihre Implikationen für Soziale Arbeit', algorithmischen Entscheidungssystemen, Scoring-Verfahren und Predictive Analytics in sozialen Diensten.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Das gesamte Kapitel ist der Sozialen Arbeit gewidmet und behandelt Digitalisierung in Jugendhilfe, Beratung, Dokumentationssystemen und professionellen Handlungskontexten.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kutscher analysiert ,algorithmische Ungleichheit', ,digitale Ungleichheiten' und die Gefahr von diskriminierenden Algorithmen, die besonders vulnerable Gruppen (young refugees, Kinder) treffen.
 
-### Diversitaet
+### Evidenz 5
 
 Expliziter Fokus auf ,digitale Ungleichheiten', besonders bei young refugees, unbegleiteten minderjährigen Flüchtlingen und jungen Menschen in vulnerable Positionen; Intersektionalität impliziert durch Analyse verschiedener sozialer Positionen.
 
-### Fairness
+### Evidenz 6
 
 Behandlung ethischer Fragen zu algorithmischen Entscheidungssystemen, Scoring-Verfahren und deren Gerechtigkeit gegenüber verschiedenen Klientelgruppen; Forderung nach fairness-aware Ansätzen.
 

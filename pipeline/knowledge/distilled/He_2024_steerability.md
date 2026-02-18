@@ -4,14 +4,6 @@ authors: ["Erik Miehling", "Michael Desmond", "Karthikeyan Natesan Ramamurthy", 
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: He_2024_steerability.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch: Benchmark-Entwicklung mit formaler Definition von Prompt-Steerability
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Benchmark zur Bewertung der Fähigkeit von Modellen, verschiedene Wertsysteme zu repräsentieren; 'understanding how much a model can be steered along a given dimension' als Kernkompetenz für AI-Literalität
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models und deren Prompt-Verhalten; Evaluierung von LLMs wie GPT-4, Llama-3, Phi-3, Granite-Modellen
 
-### Prompting
+### Evidenz 3
 
 Zentral: 'Our investigation focuses on prompting, primarily due to its simplicity in modifying model behavior'; Design von Steering-Funktionen σ über Prompts; Analyse von Persona-Statements als Prompting-Prinzipien
 
-### KI_Sonstige
+### Evidenz 4
 
 Alignment-Forschung, Kontrolltheorie für LLMs, In-Context Learning, formally definition von Modellverhalten durch Evaluation Profiles
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Asymmetrische Steerability führt zu ungleichen Möglichkeiten, verschiedene Perspektiven zu vertreten; Baseline-Skew erzeugt Verzerrungen in der Steerability über Dimensionen
 
-### Diversitaet
+### Evidenz 6
 
 'designing models that are able to be shaped to represent a wide range of value systems and cultures'; Fokus auf Pluralismus und Repräsentation verschiedener Persönlichkeiten und Wertsysteme
 
-### Fairness
+### Evidenz 7
 
 Algorithmic Fairness durch Steerability: 'designing steerable models' für faire Behandlung verschiedener Wertesysteme; Evaluation von Fairness über multiple Persona-Dimensionen
 

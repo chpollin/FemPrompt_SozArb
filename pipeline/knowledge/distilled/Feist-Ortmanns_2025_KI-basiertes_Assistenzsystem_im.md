@@ -4,15 +4,6 @@ authors: ["Feist-Ortmanns"]
 year: 2025
 type: report
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.md
 confidence: 88
@@ -41,35 +32,35 @@ Theoretisch-konzeptionell mit praktischen Explorationen und Zukunftsszenarios; k
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Entwicklung von Leitlinien für ethischen Einsatz von KI in sozialer Arbeit; Schulung und Aufklärung von Fachkräften über Nutzung und Grenzen von KI-Tools; Abschnitt 'Verantwortungsvoller Umgang mit KI' adressiert Kompetenzentwicklung.
 
-### Generative_KI
+### Evidenz 2
 
 Detaillierte Darstellung von ChatGPT, GPT-3.5, GPT-4, GPT-4o und deren Entwicklung; praktische Beispiele für text- und bildgenerierende KI-Tools (DALL-E, Deepl, Murf.ai, Sora, AIVA) im Kontext der Jugendhilfe.
 
-### Prompting
+### Evidenz 3
 
 Exkurs zu Prompts mit Kategorien Klarheit, Kontext, Zielformulierung; Beispiele einfacher und komplexer Prompts für die Kinder- und Jugendhilfe; Diskussion von Sprache, Ton und Formulierungsstrategien.
 
-### KI_Sonstige
+### Evidenz 4
 
 Klassische Programmierung vs. KI-Systeme; Machine Learning, Deep Learning, neuronale Netze; algorithmische Entscheidungssysteme; Natural Language Processing; Computer Vision für Verhaltenserkennung in AR-Szenarien.
 
-### Soziale_Arbeit
+### Evidenz 5
 
 Direkter Fokus auf Anwendungen in Kinder- und Jugendhilfe (KJSH), Kinderschutz, Hilfeplanung, Hausbesuche, Online-Beratung, digitale Hilfeplangespräche; Praxisszenarien mit Fachkräften und Familien.
 
-### Bias_Ungleichheit
+### Evidenz 6
 
 Ausführliche Thematisierung von Bias in Trainingsdaten, algorithmischen Verzerrungen und Mangel an Diversität in der KI-Entwicklung; Folgen von Diskriminierung durch KI für marginalisierte Gruppen; Risiken für Arbeitsmarkt.
 
-### Diversitaet
+### Evidenz 7
 
 Abschnitt zu Mangel an Diversität unter KI-Entwickler:innen und Forscher:innen; Forderung nach Inklusion und interkulturellen Perspektiven in der Kinder- und Jugendhilfe; Berücksichtigung verschiedener lebensweltlicher Kontexte.
 
-### Fairness
+### Evidenz 8
 
 Grundprinzipien für ethischen Einsatz: Respektierung der Privatsphäre, Transparenz, Verantwortung und Rechenschaft, Fairness und Nicht-Diskriminierung, Kindeswohl als oberste Priorität; kritische Diskussion von Fair-ML-Anforderungen.
 

@@ -4,11 +4,6 @@ authors: ["Takeshi Kojima", "Machel Reid", "Yutaka Matsuo", "Yusuke Iwasawa", "S
 year: 2022
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
 processed: 2026-02-05
 source_file: Kojima_2022_Large_language_models_are_zero-shot_reasoners.md
 confidence: 92
@@ -37,19 +32,19 @@ Empirisch - Experimentelle Evaluierung von Zero-Shot-CoT-Prompting auf 12 Datens
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper diskutiert fundamentale Fähigkeiten und Kompetenzen im Umgang mit LLMs: 'we show that LLMs are decent zero-shot reasoners by simply adding Let's think step by step before each answer' und betont die Wichtigkeit, 'zero-shot knowledge hidden inside LLMs' zu verstehen.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf große vortrainierte Sprachmodelle (LLMs) wie GPT-3, InstructGPT und PaLM: 'Pretrained large language models (LLMs) are widely used in many sub-fields of natural language processing (NLP)'
 
-### Prompting
+### Evidenz 3
 
 Zentrale Methodik ist Chain-of-Thought-Prompting und Zero-Shot-Prompting: 'Zero-shot-CoT, using the same single prompt template' und 'simply adding Let's think step by step before each answer'
 
-### KI_Sonstige
+### Evidenz 4
 
 Das Paper behandelt NLP, Reasoning-Aufgaben, In-Context-Learning und Skalierungsgesetze von Sprachmodellen, die über generatives Prompting hinausgehen
 

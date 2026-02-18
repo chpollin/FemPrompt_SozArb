@@ -4,12 +4,6 @@ authors: ["Yueqiao Jin", "Roberto Martinez-Maldonado", "Dragan Gašević", "Lixi
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: Jin_2025_GLAT_The_generative_AI_literacy_assessment_test.md
 confidence: 90
@@ -38,23 +32,23 @@ Empirisch - Instrument-Entwicklung und Validierung. Classical Test Theory (CTT) 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 GenAI literacy is defined as 'a set of competencies that enable individuals to effectively interact with AI technologies, encompassing understanding fundamental AI concepts, engaging in critical evaluation, and using AI tools ethically in diverse contexts.' Das Paper fokussiert auf Assessment von Kompetenzen wie 'recognition, application, evaluation, creation, and ethical navigation' (Ng et al., 2021b).
 
-### Generative_KI
+### Evidenz 2
 
 Der gesamte Fokus des Papers liegt auf generativer KI: 'GenAI's capability to generate substantial content from minimal input alters the landscape, prompting a need for a revised understanding of AI literacy in this context.' Spezifische Systeme wie ChatGPT, Gemini und Claude werden erwähnt.
 
-### Prompting
+### Evidenz 3
 
 Das Paper thematisiert Prompt-Engineering als Kernkompetenz: 'Developing GenAI literacy involves more than just foundational knowledge; it requires proficiency in crafting prompts, interpreting AI-generated outputs, and understanding the socio-ethical implications of using such tools.' GLAT-Items testen Prompt-Strategien (Item 11: 'strategies for creating marketing pitch', Item 12: 'customer service chatbot').
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Das Paper adressiert Bias und faire Anwendung: Item 21 thematisiert Bias in KI-gestützter Bewerbungsscreening ('The AI system could reinforce existing biases found in historical hiring data') und Item 22 behandelt Intransparenz (Black-Box-Problem) von KI-Systemen im Healthcare-Kontext.
 
-### Fairness
+### Evidenz 5
 
 Das Paper behandelt Fairness-Fragen bei algorithmischen Entscheidungen, speziell in Item 21 zu Bias in Hiring-Prozessen und Item 22 zur Interpretierbarkeit und Vertrauenswürdigkeit von KI-Modellen im Healthcare-Kontext, sowie Item 23 zur Copyright-Fairness bei AI-generierten Inhalten.
 

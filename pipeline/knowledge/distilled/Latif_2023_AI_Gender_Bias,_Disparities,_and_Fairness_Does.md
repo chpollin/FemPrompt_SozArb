@@ -4,13 +4,6 @@ authors: ["Ehsan Latif", "Xiaoming Zhai", "Lei Liu"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md
 confidence: 89
@@ -39,27 +32,27 @@ Empirisch - Fine-Tuning von BERT und GPT-3.5 auf drei Trainingsdatensätzen (mix
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Studie nutzt fine-tuned Version von BERT und GPT-3.5 zur automatisierten Bewertung von studentischen Antworten.
 
-### KI_Sonstige
+### Evidenz 2
 
 Einsatz von Machine Learning und Natural Language Processing für automatisierte Scoring-Systeme in der Bildungsbewertung.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The study investigates 'discrimination against women in AI' und analysiert, wie 'gender-unbalanced data' algorithmic disparities erzeugen können.
 
-### Gender
+### Evidenz 4
 
 Expliziter Fokus auf Gender Bias: 'especially gender biases, which often cause serious problems' und Analyse von männlichen vs. weiblichen Responses in KI-Bewertungssystemen.
 
-### Diversitaet
+### Evidenz 5
 
 Betonung der Rolle von Diversity in Machine Learning: 'the important role that diversity is certain to play in machine learning' und 'gender-aware artificial intelligence'.
 
-### Fairness
+### Evidenz 6
 
 Umfangreiche Fairness-Analyse mittels Equalized Odds (EO): 'An EO value less than 0.01 indicates a fair model with minimal gender bias' und Vergleiche von mixed-trained vs. gender-specific models.
 

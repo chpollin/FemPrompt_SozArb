@@ -4,11 +4,6 @@ authors: ["Chen Chen", "Dylan Walker", "Venkatesh Saligrama"]
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chen_2023_Ideology_Prediction_from_Scarce_and_Biased.md
 confidence: 88
@@ -37,19 +32,19 @@ Empirisch: Deep Learning mit Variational Autoencoder (VAE)-Rahmen, statistische 
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Entwicklung eines Deep Learning Modells (VAE mit bi-modalen Priors) für Political Ideology Prediction (NLP, Supervised Learning, Domain Adaptation). Klassisches ML-Problem mit innovativer statistischer Modellierung.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Paper adressiert explizit Selection Bias durch Überrepräsentation von 'vocal minority' gegenüber 'silent majority': 'Such self-reported affiliations are generally sparse, and when reported tend to be of extreme polarity.' Die Justification betont: 'A black-box model trained exclusively on scarce and polarized group is likely to perform poorly on the under-observed moderates who are the majority.'
 
-### Diversitaet
+### Evidenz 3
 
 Fokus auf Repräsentation unterrepräsentierter Bevölkerungsgruppen (moderate, nicht-extreme politische Positionen): 'it is particularly useful to predict and evaluate the stance of the non-extreme group who tends to politically inactive.' Kritik an Überrepräsentation extremer Positionen und Vernachlässigung von Minderheitsgruppen in Trainingsdaten.
 
-### Fairness
+### Evidenz 4
 
 Fairness-Aspekt durch Adressierung von Repräsentationsbias und Entwicklung eines Modells, das bei knapper und verzerrter Supervision fair across polarization spectrum performt. Validierung zeigt bessere Generalisierung zu moderaten Gruppen als Baselines.
 

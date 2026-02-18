@@ -4,11 +4,6 @@ authors: ["Siu-Cheung Kong", "Man-Yin William Cheung", "Olson Tsang"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kong_2024_Developing_an_artificial_intelligence_literacy.md
 confidence: 92
@@ -37,19 +32,19 @@ Mixed Methods: Quantitativ (Pre-Post-Test-Designs mit Wilcoxon signed-rank Tests
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper entwickelt und evaluiert ein umfassendes AI Literacy Framework mit vier Dimensionen: 'The cognitive dimension of AI literacy relates to the understanding of AI concepts, including the underlying logic of AI algorithms such as supervised learning... The metacognitive dimension relates to the capacity to apply AI tools for problem-solving... The affective dimension relates to educated citizens' psychological readiness to interact with AI... The social dimension relates to how educated citizens can contribute to society by using AI to solve problems.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf klassisches Machine Learning (supervised learning wie linear regression, K-nearest neighbour; unsupervised learning wie K-means clustering), neuronale Netzwerke und deren Anwendung auf reale Probleme in verschiedenen Domänen (Bildverarbeitung, Tonverarbeitung, Textverarbeitung, Deepfakes).
 
-### Diversitaet
+### Evidenz 3
 
 Das Paper betont die Notwendigkeit, KI-Literalität 'as universally as possible' zu fördern und nicht nur auf Computer Science Studierende zu beschränken: 'This study extended the teaching of AI literacy to senior secondary students as part of the greater goal of promoting AI literacy among all educated citizens.' Zielgruppe sind diverse Schüler:innen verschiedener Backgrounds.
 
-### Fairness
+### Evidenz 4
 
 Starker Fokus auf ethische Überlegungen und gerechte KI-Nutzung: 'The social dimension relates to how educated citizens can contribute to society by using AI to solve problems... AI usage inevitably has both favourable and adverse impacts, and educated citizens must appropriately balance these effects.' Die thematische Analyse zeigt, dass ethische Überlegungen 31.64% aller codierten Instanzen ausmachen.
 

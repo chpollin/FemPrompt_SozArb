@@ -4,11 +4,6 @@ authors: ["Pablo Villalobos", "Anson Ho", "Jaime Sevilla", "Tamay Besiroglu", "L
 year: 2024
 type: workingPaper
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: Women_2024_Artificial.md
 confidence: 95
@@ -37,19 +32,19 @@ Theoretisch und quantitativ: Entwicklung eines mathematischen Modells zur Projek
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Der gesamte Paper fokussiert auf Large Language Models (LLMs) und deren Skalierung. Zentral sind LLMs wie GPT-4, PaLM, Llama etc.: 'Recent progress in language modeling has relied heavily on unsupervised training on vast amounts of human-generated text'
 
-### KI_Sonstige
+### Evidenz 2
 
 Das Paper behandelt neuronale Skalierungsgesetze, Trainingsdynamiken und technische Aspekte des Machine Learning jenseits generativer KI: 'large language models (LLMs) are typically trained according to neural scaling laws'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Im Impact Statement werden Fairness und Gerechtigkeitsthemen adressiert, insbesondere bezüglich Datenschöpfern und Marginalisierung: 'there are strong arguments in favor of compensating the creators of the data used to train these systems'
 
-### Fairness
+### Evidenz 4
 
 Das Paper behandelt explizit Fragen von fairer Datennutzung, Datenschöpfer-Entschädigung und ethischen Implikationen von Daten-Scraping: 'The practice of scraping data from the web and using it for large-scale training of AI systems raises important issues regarding fairness and justice' und Diskussionen zu Privacy und Security bei Nutzung von Plattformdaten.
 

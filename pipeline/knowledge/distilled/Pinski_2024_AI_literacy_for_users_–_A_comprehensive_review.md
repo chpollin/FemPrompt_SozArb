@@ -4,14 +4,6 @@ authors: ["Marc Pinski", "Alexander Benlian"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review.md
 confidence: 86
@@ -40,31 +32,31 @@ Systematische Scoping Literature Review; 68 Papiere analysiert; Entwicklung eine
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Central theme: 'AI literacy, referring to human proficiency in different subject areas of AI that enable purposeful, efficient, and ethical usage of AI technologies.' Umfassende Konzeptualisierung von Lernmethoden, Komponenten und Effekten.
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT und GPT-basierte Systeme als Beispiele: 'The AI-powered large language model ChatGPT released in November 2022...broke the all-time record in technology adoption speed with 100 million users in only two months.'
 
-### KI_Sonstige
+### Evidenz 3
 
 Breiter KI-Fokus über generative KI hinaus: 'AI tools can be characterized by three distinguishing facets: learning ability, increased autonomy, and inscrutability' (Machine Learning, Deep Learning, Explainable AI, Neural Networks).
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizit adressiert: 'enabling them to recognize potential biases and understand the ethical considerations involved'; Concern 'about privacy, ethics, and bias'; AI users left 'AI illiterate at large'.
 
-### Gender
+### Evidenz 5
 
 Gender Bias wird erwähnt in Kontext von AI Literacy: Referenz auf 'Using Explainability to help children UnderstandGender Bias in AI'
 
-### Diversitaet
+### Evidenz 6
 
 Expliziter Fokus auf unterschiedliche Nutzergruppen: 'As different AI user groups have different AI literacy requirements...a manager...needs different AI skills and knowledge than a teacher'; Analyse unterschiedlicher Nutzergruppen im Expert- und Non-Expert-Domain.
 
-### Fairness
+### Evidenz 7
 
 Fairness und ethische Implikationen sind zentral: 'ethical implications' as AI literacy component; 'ethical considerations involved'; Fairness als Aspekt von AI tool handling und Human-AI Collaboration.
 

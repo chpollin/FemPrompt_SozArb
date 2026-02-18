@@ -4,13 +4,6 @@ authors: ["Anna Kawakami", "Venkatesh Sivaraman", "Hao-Fei Cheng", "Logan Staple
 year: 2022
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare.md
 confidence: 89
@@ -39,27 +32,27 @@ Mixed Methods: Qualitativ-empirisch mit kontextuellen Befragungen (contextual in
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Workers' mental models of the AFST: 'the more you use [the AFST], you kind of pick up why it will go a certain way' (C1). Arbeiter entwickeln informelle Verständnismodelle für die Algorithmusfunktion, benötigen aber bessere Schulung und Transparenz: 'If we knew more about how we got to the score, I think I'd pay more attention' (C3).
 
-### KI_Sonstige
+### Evidenz 2
 
 Das Paper fokussiert auf ein Machine-Learning-basiertes Vorhersagesystem (AFST) mit Hunderten von automatisch extrahierten Features aus Verwaltungsdaten zur algorithmischen Entscheidungsunterstützung im Kinderschutz.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkte ethnographische Untersuchung von Sozialarbeitern (call screeners, supervisors) in einer Kinderschutzbehörde bei der alltäglichen Entscheidungsfindung zum Kindesmissbrauchsscreening. Paper untersucht praktische Herausforderungen und Bedürfnisse von Fachkräften.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Workers perceive that AFST assigns higher risk scores to families from underprivileged racial identities and socioeconomic backgrounds: 'workers perceived that the AFST tended to assign higher risk scores to families from underprivileged racial identities and socioeconomic backgrounds (C1, C2, S2).' Discussion of how system involvement proxies for race and poverty.
 
-### Diversitaet
+### Evidenz 5
 
 Paper thematisiert, wie das System überproportional marginalisierte Familien (Rasse, Armut) betreffen könnte und wie Arbeiter aus verschiedenen Kontexten unterschiedliche Interpretationen des Systems haben. Intersektionale Überlegungen bezüglich Geschlecht, Rasse und sozioökonomischem Status.
 
-### Fairness
+### Evidenz 6
 
 Explicit discussion of algorithmic fairness concerns: Workers question whether AFST's use of system involvement, family size, and re-referral numbers as predictive features is fair. 'the more people that are involved with these families, no matter what it's for, the higher their score's gonna be' (C5). Workers concerned about misalignment between algorithmic predictions and actual child safety risk.
 

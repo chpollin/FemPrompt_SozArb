@@ -4,13 +4,6 @@ authors: ["Jose M. Alvarez", "Alejandra Bringas Colmenarejo", "Alaa Elobaid", "S
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-04
 source_file: Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.md
 confidence: 88
@@ -39,27 +32,27 @@ Multidisciplinary literature review combined with applied research findings from
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Paper discusses need for 'novel researchers and practitioners' to develop 'bird's-eye guidance' and addresses education/awareness gaps: 'increase awareness on bias and fairness in AI' and criticizes 'low-resource methods' framing that treats underrepresentation as data scarcity rather than preventive design.
 
-### KI_Sonstige
+### Evidenz 2
 
 Covers multiple AI subdisciplines: supervised ML, unsupervised learning, reinforcement learning, NLP, computer vision, speech processing, recommender systems, knowledge representation, graph mining, and large language models.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Explicit application to public employment services: 'NoBIAS project contributed in Scott et al. (2022) to a participatory approach in the design of algorithmic systems in support of public employment services,' directly relevant to social work contexts of job placement and welfare administration.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Central focus throughout: 'concerns have been raised about the—intentional or unintentional—negative impacts on individuals and society due to biases embedded in AI models' with emphasis on 'illegal discrimination against social groups protected by non-discrimination law' and structural inequality reinforcement.
 
-### Diversitaet
+### Evidenz 5
 
 Extensively addresses representation and inclusion: 'involving interested communities during the whole development process,' concerns about 'underrepresentation of social minorities,' 'representation bias,' diverse groups in AI design, and explicit discussion of intersectionality as key challenge.
 
-### Fairness
+### Evidenz 6
 
 Core subject matter: defines fair-AI as 'designing methods for detecting, mitigating, and controlling biases in AI-supported decision making' with detailed discussion of fairness metrics (group fairness, individual fairness, causal fairness), bias detection, pre/in/post-processing mitigation approaches, and monitoring methods.
 

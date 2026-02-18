@@ -4,14 +4,6 @@ authors: ["Michael Garkisch", "Lauri Goldkind"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Garkisch_2024_Considering_a_unified_model_of_artificial.md
 confidence: 92
@@ -40,31 +32,31 @@ Theoretisch/Review - Systematische Literaturanalyse von 67 Peer-reviewed Artikel
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Es is extremely important that professionals are educated and sensitized to data and AI literacy (Fiok et al., 2022). [...] future skills are important for digital and technological transformation [...] The focus on human-machine (AI) interaction [...] and legal affairs should also be taken into account here, too.
 
-### Generative_KI
+### Evidenz 2
 
 the development of large language models like ChatGPT (Marquart & Goldkind, 2023) [...] it is crucial to critically assess AI technology implications on the protection of human rights
 
-### KI_Sonstige
+### Evidenz 3
 
 Artificial intelligence, a specific constellation of algorithmic and computing strategies, has gained significant attention [...] predictive thinking (Gillingham, 2016b) [...] machine learning technology has entered social work and social services [...] predictive analytics, algorithms and other forms of artificial intelligence
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Social work, as a human rights-based profession, is globally recognized as a profession committed to enhancing human well-being [...] the profession is recognized by the United Nations as a profession group that strives to enable a humane life (IFSW, IASSW und UN Centre for Human Rights, 1994)
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 the algorithms can also suggest unjustified or discriminatory recommendations (Aizenberg & van den Hoven, 2020) and [...] include 'embedded bias' [...] predictive analytics, algorithms and other forms of artificial intelligence are highly likely to reproduce and exacerbate biases reflected in existing data and policies (United Nations General Assembly, 2019)
 
-### Diversitaet
+### Evidenz 6
 
 Applying nondiscrimination in an Artificial Intelligence Enhanced Social Work context calls for inclusive data sets, inclusion, and representation across decision makers and AI creators as well as inviting a range of affected population members in the review and refinement process of AI tools
 
-### Fairness
+### Evidenz 7
 
 Ethical guidelines can help to overcome these ethical challenges [...] dignity, freedom, equality, solidarity, and the right to life are the overriding ethical values (Aizenberg & van den Hoven, 2020) [...] It is critical to ensure that technological applications uphold the fundamental principles of the profession, including human rights and justice
 

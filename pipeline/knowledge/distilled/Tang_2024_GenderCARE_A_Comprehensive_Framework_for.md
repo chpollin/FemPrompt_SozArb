@@ -4,15 +4,6 @@ authors: ["Kunsheng Tang", "Wenbo Zhou", "Jie Zhang", "Aishan Liu", "Gelei Deng"
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Tang_2024_GenderCARE_A_Comprehensive_Framework_for.md
 confidence: 95
@@ -41,35 +32,35 @@ Empirisch und Mixed-Method: Entwicklung eines Bewertungs-Frameworks (GenderPair 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper adressiert kritische KI-Kompetenzentwicklung durch Framework-Kriterien für systematische Bias-Erkennung und Debiasing-Strategien, die notwendiges Wissen für verantwortungsvollen Umgang mit LLMs vermitteln: 'By offering a realistic assessment and tailored reduction of gender biases, we hope that our Gender CARE can represent a significant step towards achieving fairness and equity in LLMs.'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models (ChatGPT, GPT-3.5, GPT-4): 'Large Language Models (LLMs) have become pivotal in natural language generation tasks' und explizite Evaluierung von LLMs wie Alpaca, Vicuna, Llama, Mistral etc.
 
-### Prompting
+### Evidenz 3
 
 Prompt-Engineering durch die GenderPair Benchmark-Konstruktion mit strukturierten Pair Sets und Instruktionen: 'For configurations (3) to (6), the instructions are formulated as: Please generate a coherent text by choosing a pair from the following set of phrase pairs'
 
-### KI_Sonstige
+### Evidenz 4
 
 Breiter KI-Fokus auf Natural Language Processing, Klassisches Machine Learning (LoRA Fine-Tuning), Toxicity Detection, Sentiment Analysis: 'We employ Low-Rank Adaptation (LoRA) fine-tuning [25]. This method allows for the modification of parameters related to gender bias while freezing other parameters.'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentrale Thematisierung algorithmischen Bias und digitaler Diskriminierung: 'a recent survey conducted by QueerInAI reveals that more than 65% of respondents from the marginalized community LGBTQIA+ experience increased digital discrimination correlating with biased AI outputs'
 
-### Gender
+### Evidenz 6
 
 Expliziter Gender-Fokus mit Analyse von Gender-Bias in LLMs und Geschlechterstereotypen: 'LLMs, such as GPT-3.5, reinforce stereotypes for various gender groups' und umfassende Evaluation gender-spezifischer Bias-Metriken
 
-### Diversitaet
+### Evidenz 7
 
 Inklusive Perspektive auf marginalisierte Communities, insbesondere TGNB-Personen: 'More importantly, most of these existing approaches fail to adequately consider individuals who are identified as transgender and non-binary (TGNB) when constructing gender bias benchmarks.' Inclusivity ist explizit definiertes Criterion.
 
-### Fairness
+### Evidenz 8
 
 Algorithmische Fairness ist Kernthema mit definierten Fairness-Metriken (Bias-Pair Ratio, Toxicity, Regard) und Fairness-aware Debiasing-Strategien: 'By offering a realistic assessment and tailored reduction of gender biases, we hope that our Gender CARE can represent a significant step towards achieving fairness and equity in LLMs.'
 

@@ -4,14 +4,6 @@ authors: ["Michael V. Heinz", "Daniel M. Mackin", "Brianna M. Trudeau", "Sukanya
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md
 confidence: 88
@@ -40,27 +32,27 @@ Empirisch – randomisierte kontrollierte Studie (RCT) mit 1:1 Allokation zu Int
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Therabot is a Gen-AI chatbot trained using expertly written therapist-patient dialogues based on third-wave CBT... utilizing transformer-based, decoder-only architectures. The system employed both Falcon-7B and LLaMA-2-70B models in tandem.
 
-### KI_Sonstige
+### Evidenz 2
 
 Crisis classification model, guard rails implementation, post-transmission supervision by trained clinicians; conversational agent architecture for natural language processing.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Addresses mental health treatment accessibility and scalability gaps... digital therapeutics for treatment of major depressive disorder, generalized anxiety disorder, and eating disorders... developed with psychiatrist and clinical psychologist oversight for evidence-based (CBT) modalities.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 We help mitigate selection bias by planning equivalent contact between groups... given our recruitment strategy, there was potential for selection bias toward younger, more technologically minded participants... monetary incentive may have introduced selection bias favoring financially motivated participants.
 
-### Gender
+### Evidenz 5
 
 Table 2 reports gender distribution: Female 59.52%, Male 37.14%, Nonbinary 2.86%, Other 0.48%; transgender status reported (3.81% yes). Sexual orientation categories included (heterosexual 79.05%, homosexual/gay 5.71%, bisexual 10.00%, pansexual 1.90%, asexual 0.48%).
 
-### Diversitaet
+### Evidenz 6
 
 Nationally recruited, demographically diverse sample... Meta Ads campaign shown to represent varied age, education, and gender groups... diverse baseline characteristics across intervention and control groups... recruitment across United States.
 

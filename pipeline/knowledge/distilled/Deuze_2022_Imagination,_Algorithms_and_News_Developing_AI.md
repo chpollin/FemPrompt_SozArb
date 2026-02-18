@@ -4,12 +4,6 @@ authors: ["Mark Deuze", "Charlie Beckett"]
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Deuze_2022_Imagination,_Algorithms_and_News_Developing_AI.md
 confidence: 94
@@ -37,23 +31,23 @@ Theoretisch/Konzeptionell basierend auf track record der Autoren in Medientechno
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy defined as 'knowledge and beliefs about artificial intelligence which aid their recognition, management, and application' with three key components: knowledge about AI, ability to recognize instances where AI should/shouldn't be applied, and skills to teach others about AI implementation.
 
-### KI_Sonstige
+### Evidenz 2
 
 Discusses machine learning, natural language processing, automated statistical data analysis, algorithms, and their pervasive role in journalism workflows from story ideation to monetization.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 AI systems are 'vulnerable to manipulations and mistakes, tend to be systemically biased, amplifying and exacerbating existing inequalities.' Paper identifies urgent historical-ethical concerns including 'technology bias, machine-driven exploitation of human labor, loss of human dignity at work governed by automated systems... particularly affect society's least privileged individuals and communities.'
 
-### Diversitaet
+### Evidenz 4
 
 AI presented 'as an amplifier of all existing issues that benchmark contemporary journalism and its role in society, including how it wins (and loses) trust, how it covers and exemplifies diversity and inclusion, and how it assumes responsibility for the key challenges we all face in the 21st century.'
 
-### Fairness
+### Evidenz 5
 
 Discusses fairness concerns in relation to AI's role in journalism: 'how it covers and exemplifies diversity and inclusion' and the danger of 'journalism being captured by technology (and the tech sector)' rather than using it responsibly. Emphasizes critical awareness of 'ways in which AI tends to amplify existing social and digital inequalities when left to technology companies.'
 

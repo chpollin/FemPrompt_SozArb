@@ -4,14 +4,6 @@ authors: ["Eunhye Ahn", "Moon Choi", "Patrick Fowler", "In Han Song"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-04
 source_file: Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social.md
 confidence: 85
@@ -40,31 +32,31 @@ Theoretisch-konzeptionell; Literaturübersicht und Konzeptentwicklung mit Bezug 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy ist definiert als 'the ability to critically evaluate, collaborate with, and use AI technologies responsibly' (Long & Magerko, 2020). Das gesamte Paper konzentriert sich auf die Entwicklung eines AI-Literacy-Frameworks mit fünf Schlüsselbereichen speziell für die Soziale Arbeit.
 
-### Generative_KI
+### Evidenz 2
 
 Das Paper diskutiert generative AI-Anwendungen wie 'real-time spelling and grammar editing such as Grammarly, software coding autocompletion like Co-Pilot, and AI-powered mental health chatbots' sowie Large Language Models wie ChatGPT zur Zusammenfassung von Fallgeschichten und Berichtserstellung.
 
-### KI_Sonstige
+### Evidenz 3
 
 Das Paper behandelt verschiedene KI-Technologien: Machine Learning (überwacht und unüberwacht), Neural Networks, Predictive Analytics, Computer Vision für Sturzdetection bei älteren Menschen, und Reinforcement Learning für Substanzabhängigkeitsbehandlung.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Der gesamte Fokus liegt auf der Integration von AI-Literatur in die neun Kernkompetenzen des Council on Social Work Education (CSWE) und auf Implikationen für sozialarbeiterische Praxis, Ausbildung und Ethik.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Das Paper argumentiert, dass 'AI systems can perpetuate and amplify structural biases, disproportionately affecting marginalized populations such as low-income individuals, communities of color, and people with disabilities' und diskutiert den 'Circle of Transformation' mit Fokus auf Digital Divide und strukturelle Ungleichheiten.
 
-### Diversitaet
+### Evidenz 6
 
 Das Paper betont, dass AI-Systeme 'diverse lived experiences and knowledge systems' reflektieren müssen und Accessibility für 'people of all abilities' sowie Inklusion marginalisierter Gemeinschaften in AI-Governance erforderlich ist.
 
-### Fairness
+### Evidenz 7
 
 Das Paper diskutiert algorithmic fairness im Kontext von 'algorithmic bias, transparency, and accountability' sowie die Notwendigkeit, 'equitable AI resource distribution' zu gewährleisten und 'fair appeals processes' in AI-gesteuerten Systemen zu etablieren.
 

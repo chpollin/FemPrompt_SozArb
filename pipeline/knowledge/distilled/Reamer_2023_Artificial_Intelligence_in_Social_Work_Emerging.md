@@ -4,14 +4,6 @@ authors: ["Frederic G. Reamer"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch/Review - Umfassende Literaturanalyse und Anwendung bestehender ethis
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Social workers should familiarize themselves with AI protocols, review relevant ethical standards, undergo training on appropriate and ethical use of AI, and social work education programs should incorporate AI content into curricula. Standard 2.23: 'Social workers should keep apprised of the types of technology that are available and research best practices, risks, ethical challenges, and ways of managing them.'
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT wird explizit erwähnt als Tool für Social Workers, das 'nearly instant suggestions' für Distress-Management bietet. Paper diskutiert Plagiarismus- und Fair-Use-Herausforderungen bei Nutzung von ChatGPT für grant applications und program evaluations.
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfassende Diskussion von machine learning, predictive analytics, natural language processing, computer vision, affective computing/emotion AI, expert systems, und algorithmic decision-support systems in der Sozialen Arbeit.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Kernpapier der Sozialarbeits-Ethik mit direkter Anwendung auf Praktiken in klinischer Sozialer Arbeit, Krisenintervention, Risikobewertung mit Fokus auf vulnerable Bevölkerungsgruppen und Berufsstandards (NASW, ASWB, CSWE, CSWA).
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Machine learning datasets may not be representative of social workers' clients; algorithmic bias can manifest in recruitment, marketing, and facial recognition; risk of replicating and amplifying human biases affecting protected groups based on race, ethnicity, gender, sexual orientation.
 
-### Diversitaet
+### Evidenz 6
 
 Focus groups should include individuals from diverse populations (clients, advocates, practitioners, community leaders); AI tools must collect data to reduce biases against protected categories including race, ethnicity, culture, gender, sexual orientation, gender expression, religion.
 
-### Fairness
+### Evidenz 7
 
 Paper addresses 'algorithmic bias and unfairness' as core ethical challenge; emphasizes need for algorithms to treat similarly-situated people fairly; discusses fairness implications of AI in social service delivery and algorithmic justice in decision-making systems.
 

@@ -4,15 +4,6 @@ authors: ["Mahammed Kamruzzaman", "Gene Louis Kim"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chisca_2024_Prompting_techniques_for_reducing_social_bias_in.md
 confidence: 75
@@ -41,35 +32,35 @@ Empirisch: Vergleichende Analyse von 12 Prompting-Techniken (Standard, CoT, Syst
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kritische Reflexion über Assumptions in der KI-Forschung: 'This contradicts often stated assumptions by researchers in the past (Hagendorff et al., 2023)' - ein Beispiel für Hinterfragung bestehenden Wissens.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models (GPT-4, GPT-3.5, Llama 2, Mistral 7B, Gemini): 'large language models (LLMs) like GPT-4, ChatGPT, Llama 2 have revolutionized many aspects of technology and society.'
 
-### Prompting
+### Evidenz 3
 
 Zentral für die gesamte Studie: 'We compare zero-shot CoT, debiasing, and a variety of dual process theory-based prompting strategies' mit systematischer Analyse von 12 Prompting-Techniken und deren Variationen.
 
-### KI_Sonstige
+### Evidenz 4
 
 NLP und Dual-Process-Theorie-Anwendung auf LLMs: 'NLP researchers often compare zero-shot prompting in LLMs to System 1 reasoning and chain-of-thought (CoT) prompting to System 2.'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Expliziter Fokus auf neun Bias-Kategorien und strukturelle Vorurteile: 'LLMs continue to struggle with embedded social biases' und systematische Analyse von Ageismus, Schönheits-Bias, Rassen-Bias, Religions-Bias, etc.
 
-### Gender
+### Evidenz 6
 
 Gender-Bias ist eine von neun analysierten Kategorien mit spezifischen Resultaten: 'We see no consistent prompt setting that best reduces gender bias, but the best setting leads to consistent bias reductions.' Vergleich mit früheren Studien zu Gender-Bias.
 
-### Diversitaet
+### Evidenz 7
 
 Abdeckung mehrerer marginalisierter Kategorien (Rasse, Religion, Nationalität, Institution) und intersektionale Dimensionen von Bias: 'Kamruzzaman et al.'s bias detection dataset covers age, beauty, institution, beauty in the profession, and nationality bias'.
 
-### Fairness
+### Evidenz 8
 
 Algorithmische Fairness und faire LLM-Ausgaben sind Kernthema: 'This task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven communication and decisions.' Fairness-Metriken durch Reduktion stereotypischer Antworten.
 

@@ -4,13 +4,6 @@ authors: ["Junyi Li", "Charith Peris", "Ninareh Mehrabi", "Palash Goyal", "Kai-W
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: He_2024_On_the_steerability_of_large_language_models.md
 confidence: 95
@@ -39,27 +32,27 @@ Empirisch - Machine Learning / NLP mit kollaborativem Filtern zur Persona-Generi
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 The paper focuses on steering Large Language Models (LLMs) and uses 'soft-prompting model (SPM) which maps the embedding of a persona to a set of virtual tokens' for controllable generation.
 
-### Prompting
+### Evidenz 2
 
 Virtual tokens are 'prepended before tokens mapping to the actual input text, to steer the responses of the LLMs' using prefix-tuning and prompt-tuning techniques.
 
-### KI_Sonstige
+### Evidenz 3
 
 Uses collaborative filtering, a classical machine learning technique, to embed individuals into continuous vector space based on opinion responses.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 LLMs are known to 'generate biased responses where the opinions of certain groups and populations are underrepresented' and 'Santurkar et al. (2023) showed that LLMs under-represent the opinions of individuals aged 65 and over, Mormons, and the widowed.'
 
-### Diversitaet
+### Evidenz 5
 
 The approach aims to 'produce multiple perspectives and to reflect the diverse opinions' and 'encourage diversity through the curated inclusion of a broad spectrum of viewpoints' as well as 'diminishing polarization and preventing the marginalization of the voices of minority groups.'
 
-### Fairness
+### Evidenz 6
 
 The paper addresses fairness through controllable generation that 'can be leveraged to produce multiple perspectives in a balanced way' and proposes methods to align LLMs more equitably with diverse population segments rather than reinforcing majority opinions.
 

@@ -4,13 +4,6 @@ authors: ["Morgan Jefferson"]
 year: 2025
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md
 confidence: 95
@@ -38,27 +31,27 @@ Theoretisch/Review-basiert mit praktischen Handlungsempfehlungen; Analyse von AI
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Gesamtfokus auf Kompetenz- und Wissensaufbau: 'with a few thoughtful techniques, you can generate images that respectfully and accurately reflect the full spectrum of human experience' und 'Inclusive representation takes deliberate, informed choices. It means educating ourselves, challenging assumptions, and crafting visuals'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Text-to-Image AI-Generatoren: 'AI image generators are trained on massive datasets scraped from the internet' und 'Ask an artificial intelligence tool to generate a person'
 
-### Prompting
+### Evidenz 3
 
 Kernthema des gesamten Artikels: 'inclusive prompt engineering: writing image prompts that account for identity, context, and representation so that the AI model doesn't make assumptions for us' und detaillierte Techniken wie 'Specify visible identity details', 'Use respectful, people-first language', 'Add cultural, social, and emotional context'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Analyse von Bias-Mechanismen: 'The images available online and their associated captions and metadata tend to overrepresent certain demographics while underrepresenting or stereotyping others. That skew gets baked into the AI model.' sowie 'Doctors, CEOs, and lawyers often appear as white men, while caregivers are usually women. Service workers are more likely to show up with darker skin, and people with disabilities are rarely represented at all.'
 
-### Diversitaet
+### Evidenz 5
 
 Kernfokus auf Repräsentation und Inklusion: 'These default outputs are harmful. They erase people, reinforce biases, and exclude audiences.' und Detailbehandlung von Altersvielfalt, rassischer/ethnischer Vielfalt, Geschlechteridentitäten, Körpergrößenvielfalt und Behindertenrepräsentation
 
-### Fairness
+### Evidenz 6
 
 Adressierung von fairness im AI-System: 'Bias is an AI default. When generated images misrepresent or stereotype people, the solution isn't to blame the tool. The responsibility lies with us.' und Diskussion von ausgewogener Repräsentation als Fairness-Anforderung
 

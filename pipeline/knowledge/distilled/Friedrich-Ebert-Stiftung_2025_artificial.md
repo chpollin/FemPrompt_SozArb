@@ -4,14 +4,6 @@ authors: ["Anastasia Karagianni"]
 year: 2025
 type: report
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Friedrich-Ebert-Stiftung_2025_artificial.md
 confidence: 95
@@ -42,31 +34,31 @@ Theoretisch: Feministische Textanalyse des AI Act mit Artikel-für-Artikel-Analy
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Das Paper analysiert den EU AI Act als regulatorisches Framework für verschiedene KI-Systeme in Recruitment, Healthcare, Border Management und Predictive Policing.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Analyse von KI-Systemen in der Gewaltschutzpraxis (VioGen-Fall) und deren Auswirkungen auf vulnerable Gruppen; Empfehlungen für inklusive Sozialschutzpolitik und Gewaltschutz.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Fallstudien zeigen systematische Diskriminierung: 'Amazon's AI recruitment tool...unintentionally favoured male candidates'; 'Deliveroo's rider-ranking algorithm...violated labour laws'; iBorderCtrl könnte 'misinterpret women's facial expressions, reflecting societal biases'.
 
-### Gender
+### Evidenz 4
 
 Expliziter Gender-Fokus: 'gender equality is limited to Recitals 27 and 48 AI Act'; Analyse von Geschlechter-Bias in Objektifizierungstheorie; Schutz vor geschlechtsspezifischer KI-Gewalt (Deepfakes); Reproduktion von Geschlechterstereotypen.
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Analyse: 'individuals do not experience bias in isolation; rather, their experiences are shaped by the confluence of their gender, race, socioeconomic status and other identity factors'; Fokus auf 'women of colour, LGBTQIA+ individuals, and those with disabilities'.
 
-### Feministisch
+### Evidenz 6
 
 Explizite Verwendung feministischer Theorie: Objectification Theory (Fredrickson & Roberts 1997); Intersectionality Framework (Crenshaw 2019); Feminist Data Protection (Theilen et al. 2021); Feminist Philosophy of Law (Francs & Smith 2021); 'a feminist approach to harmonisation'; 'feminist-informed revisions'; Kritik an patriarchalischen Strukturen.
 
-### Fairness
+### Evidenz 7
 
 Conformity assessment muss 'comprehensive bias audits' durchführen; Forderung nach 'fair and devoid of bias' AI systems; 'intersectional data analysis in conformity assessments' zur Gewährleistung von Fairness für marginalisierte Communities.
 

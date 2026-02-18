@@ -4,14 +4,6 @@ authors: ["Martha Otisi Dimgba"]
 year: 2025
 type: thesis
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md
 confidence: 91
@@ -40,31 +32,31 @@ Empirisch: Vergleichende Analyse von drei LLMs (Llama 3.1 70B Instruct, Claude 3
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf drei LLMs: Llama 3.1 70B Instruct, Claude 3.5 Sonnet, GPT-4.0 Turbo; Analyse von KI-generierten narrativen Inhalten und deren bias-Charakteristiken.
 
-### Prompting
+### Evidenz 2
 
 Zentral: Prompt-Engineering-Ansatz mit iterativen Prompts; drei-stufige Prompting-Strategie (Vanilla → Baseline → BAME mit Erklärungen); zwei-schritt-Ansatz mit Buffer-Statement wie 'Before you start, let me provide additional information'.
 
-### KI_Sonstige
+### Evidenz 3
 
 Einsatz von Explainable AI (XAI) Prinzipien; TVD und DPR als quantitative Bias-Metriken; modellgenerierte Explanations als Interventionsmechanismus.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explicit focus: 'their outputs often amplify the biases present in their training data, perpetuating stereotypes and reinforcing societal inequities, particularly regarding gender and ethnicity'; Analyse von Unterrepräsentation in Narrativen.
 
-### Gender
+### Evidenz 5
 
 Explicit gender-bias analysis: 'Gender and Ethnicity Bias Mitigation'; gender-representation Analyse über 25 Berufsfelder; Geschlechterstereotype in Berufsfeldern (z.B. weibliche Überrepräsentation in Food Preparation).
 
-### Diversitaet
+### Evidenz 6
 
 BAME dataset konzentriert sich auf demografische Diversität; Analyse von Ethnicity-Repräsentation (European, African, API, Hispanic/Latino); intersektionale Perspektive auf gender-within-ethnicity.
 
-### Fairness
+### Evidenz 7
 
 Einsatz von Fairness-Metriken: Demographic Parity Ratio (DPR) und Total Variation Distance (TVD); Target-Distribution mit 25% für jede ethnische Gruppe; 0.15-Threshold für TVD-basierte Bias-Annotation als 'meaningful cutoff for bias quantification'.
 

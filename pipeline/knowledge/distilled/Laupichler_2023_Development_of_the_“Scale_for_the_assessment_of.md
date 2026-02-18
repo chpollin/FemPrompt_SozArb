@@ -4,12 +4,6 @@ authors: ["Matthias Carl Laupichler", "Alexandra Aster", "Nicolas Haverkamp", "T
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
 processed: 2026-02-05
 source_file: Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.md
 confidence: 91
@@ -38,23 +32,23 @@ Empirisch - Exploratory Factor Analysis (EFA) mit 479 online-Befragten nicht-Exp
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Gesamtes Paper widmet sich AI Literacy Definition und Assessment: 'The term AI literacy describes competencies that include basic knowledge and analytical evaluation of AI, as well as critical use of AI applications by non-experts.' Entwicklung und Validierung der SNAIL-Skala mit 31 Items zur Messung dieser Kompetenzen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Breite Behandlung von KI-Konzepten: Machine Learning, Deep Learning, Rule-based Systems, Reinforcement Learning, Data Privacy, Data Security, Algorithmic Decision-Making, Black Box-Problematik, explainable AI, Biases in AI systems.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Explizit werden unterschiedliche AI-Literacy-Niveaus in Populationen thematisiert und die Identifikation von 'strengths and weaknesses' verschiedener Subgruppen als Ziel genannt. Begründung für heterogene Stichprobenziehung zur Vermeidung von Selection-Bias.
 
-### Gender
+### Evidenz 4
 
 Bewusste Kontrolle für Geschlecht in der Stichprobenziehung: 'exactly 50% of the participants (n = 240) should identify as male and 50% (n = 240) as female.' Ermöglicht potenzielle Geschlechterdifferenz-Analysen.
 
-### Diversitaet
+### Evidenz 5
 
 Heterogene Stichprobenzusammensetzung beabsichtigt: 'we did not survey a specific (sub-) population but rather attempted to obtain a sample that is as heterogenous as possible.' Diskussion von Unterschieden nach Bildungsniveau, Herkunftsland und potenziell fachspezifischen Domänen.
 

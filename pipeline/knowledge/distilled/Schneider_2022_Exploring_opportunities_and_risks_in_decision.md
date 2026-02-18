@@ -4,13 +4,6 @@ authors: ["Diana Schneider", "Angelika Maier", "Philipp Cimiano", "Udo Seelmeyer
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Schneider_2022_Exploring_opportunities_and_risks_in_decision.md
 confidence: 89
@@ -39,27 +32,27 @@ Mixed Methods: Empirisch qualitativ mit zwei Teilen - ESI Study (Interviews zu E
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Data literacy und Verständnis technischer Prozesse werden als erforderlich benannt: 'Keeping this crucial distinction in mind and accounting for it in daily work with algorithms requires data literacy and an understanding of the technical processes'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf AI-basierte Vorhersagesysteme (LONA-Scoring), algorithmische Entscheidungssysteme und natürliche Sprachverarbeitung: 'The system relies on an artificial intelligence (AI) based system trained to predict levels of need for assistance (LONA) from textual documentations'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Expliziter Fokus auf Soziale Arbeit in Teilhabeplanung für Menschen mit Behinderung, professionelle Urteilsbildung und Fachkräfte-Kompetenzen: 'MAEWIN project, therefore, addresses the question of how professionals of social care providers could be supported in the context of SSP by DSSs'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kritische Analyse von Biases in Dokumentation und Datenbasis: 'documentation may contain hidden biases, biased perspectives, or prejudices' und Diskriminierungsrisiken von Algorithmen: 'systemic discrimination'
 
-### Diversitaet
+### Evidenz 5
 
 Fokus auf Menschen mit Behinderung als marginalisierte Gruppe und deren Partizipation in Entscheidungsprozessen: 'shared decision-making processes with the persons entitled to benefits'
 
-### Fairness
+### Evidenz 6
 
 Fairness-Konzepte in algorithmischen Entscheidungssystemen und Anforderung fairer Darstellung: 'data basis used by algorithms is quality controlled and free of biases caused by data reflecting the perceptions of specific stakeholders'
 

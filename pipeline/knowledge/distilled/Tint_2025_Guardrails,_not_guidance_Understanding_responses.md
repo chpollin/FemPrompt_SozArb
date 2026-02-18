@@ -4,13 +4,6 @@ authors: ["Joshua Tint"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Tint_2025_Guardrails,_not_guidance_Understanding_responses.md
 confidence: 91
@@ -39,27 +32,27 @@ Empirisch: Zwei Experiment mit emotional content classification (RoBERTa-Base au
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Der Paper analysiert, wie Nutzer mit LLMs interagieren und wie diese Systeme Sprachverständnis vermitteln: 'Language models have integrated themselves into many aspects of digital life' und untersucht implizite Mechanismen der Modelle.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf große Sprachmodelle: 'Through two experiments, the study assesses the emotional content and the impact of queer slang on responses from models including GPT-3.5, GPT4o, Llama2, Llama3, Gemma and Mistral.'
 
-### Prompting
+### Evidenz 3
 
 Analyse von Prompt-Strategien und deren Auswirkungen: 'heteronormative prompts can trigger safety mechanisms, leading to neutral or corrective responses, while LGBTQ+ slang elicits more negative emotions'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentraler Fokus auf algorithmischen Bias: 'Biases in LLMs arise during data collection, model development, and evaluation' und 'queer slang is underrepresented in large language model training corpora'.
 
-### Diversitaet
+### Evidenz 5
 
 Expliziter Fokus auf marginalisierte Communities und deren Sprachgebrauch: 'Queer communities, in particular, are heavily impacted by biased language technologies' und intersektionale Perspektive auf AAVE und LGBTQ+-Slang.
 
-### Fairness
+### Evidenz 6
 
 Zentrale Problematisierung von Fairness-Defiziten: 'current fairness approaches' versagen und 'To foster truly inclusive NLP systems, future research and development must prioritize the equitable representation of minority linguistic forms'.
 

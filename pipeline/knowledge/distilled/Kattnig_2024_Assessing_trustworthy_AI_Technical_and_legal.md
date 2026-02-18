@@ -4,12 +4,6 @@ authors: ["Markus Kattnig", "Alessa Angerschmid", "Thomas Reichel", "Roman Kern"
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md
 confidence: 89
@@ -37,23 +31,23 @@ Theoretisch-vergleichende Review: Analyse von State-of-the-Art Bias-Mitigationsm
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper behandelt das Verständnis und die kritische Reflexion von KI-Systemen: 'it is crucial to examine the legal requirements for AI systems to ensure fairness and non-discrimination. This paper examines the legal framework for AI in the EU and provides insights into the challenges and opportunities of addressing bias mitigation in AI systems'
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Behandlung von Machine Learning Methoden, algorithmischen Entscheidungssystemen und deren technischen Implementierungen: 'Automated decision-making systems (ADMs) gather and process data in order to make qualitative decisions with minimal to no human intervention'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentraler Fokus auf algorithmischen Bias und soziale Ungleichheit: 'bias refers to the presence of systematic and unfair behaviour and errors in AI systems. Hence, a bias may lead to discriminatory outcomes and unfair treatment, which further implicates the importance of fairness' und 'systematic or historical inequalities, which exacerbate unfair treatment of already disadvantaged groups'
 
-### Diversitaet
+### Evidenz 4
 
 Thematisiert Repräsentation und Benachteiligung verschiedener Gruppen: 'they especially targeted poor and minority neighbourhoods' und Diskussion von Group Fairness vs. Individual Fairness für unterschiedliche Populationen
 
-### Fairness
+### Evidenz 5
 
 Zentrales Thema des gesamten Papers mit detaillierter Analyse von Fairness-Konzepten: 'Fairness is considered the central starting point for the application of AI in society' und umfassende Behandlung von Fairness-Maßnahmen, Group Fairness und Individual Fairness
 

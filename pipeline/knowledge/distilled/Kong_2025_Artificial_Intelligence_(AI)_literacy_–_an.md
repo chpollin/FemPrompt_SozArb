@@ -4,12 +4,6 @@ authors: ["Siu-Cheung Kong", "Satu-Maarit Korte", "Steve Burton", "Pigga Keskita
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kong_2025_Artificial_Intelligence_(AI)_literacy_–_an.md
 confidence: 92
@@ -38,23 +32,23 @@ Theoretisch/Argumentativ - internationale Zusammenarbeit von Bildungsexperten mi
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy can be understood as the competency to use AI at home, at school, in work and online, and utilise it for collaboration and critical evaluation. Education ought to equip learners with the knowledge, competency and mindset required to use AI to solve professional and societal challenges.
 
-### KI_Sonstige
+### Evidenz 2
 
 Recent years have seen an explosive development of AI and its societal impacts, in particular through machine learning Artificial Intelligence (AI) and deep learning algorithms. A conceptual understanding of AI would mean that learners comprehend the underlying concepts and logic of AI algorithms.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 There is a significant mismatch between skills taught in schools and those needed in the age of AI in workplaces and the society. AI in education can significantly support diverse learners through customisable and tailored approaches. United Nations Sustainable Development Goal 4 (quality education) explicitly refers to equality concerning rural, vulnerable, indigenous and other minority groups.
 
-### Diversitaet
+### Evidenz 4
 
 AI could be of considerable assistance in contributing to these global challenges, including these groups' culture and language revitalisation. AI in education can significantly support diverse learners through customisable and tailored approaches to learning, making learners able to proceed at their own pace and at their own level.
 
-### Fairness
+### Evidenz 5
 
 Ethical issues around AI: One must remember that the application of AI to solve real-life problems can - as with all technological advances - lead to both positive and adverse impacts. Balancing these effects when using AI is an obligation of AI-literate educated learners, who must consider the ethical implications when solving problems with AI. Ethical guidelines regarding AI systems development and function should align with the societal values. Furthermore, transparency in data usage and its responsible monitoring is pivotal.
 

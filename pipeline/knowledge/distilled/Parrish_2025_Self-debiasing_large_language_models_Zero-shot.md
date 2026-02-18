@@ -4,13 +4,6 @@ authors: ["Isabel O. Gallegos", "Ryan Aponte", "Ryan A. Rossi", "Joe Barrow", "M
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md
 confidence: 88
@@ -39,27 +32,27 @@ Empirisch: Zwei Zero-Shot-Prompting-Techniken (Self-Debiasing via Explanation un
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper befasst sich mit Zero-Shot-Capabilities von LLMs und wie Nutzer durch Prompting-Strategien KI-Systeme für Bias-Reduktion adaptieren können: 'we leverage the zero-shot capabilities of LLMs to reduce stereotyping'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models und deren Fähigkeit zur Stereotypenreduktion: 'Large language models (LLMs) have shown remarkable advances in language generation and understanding but are also prone to exhibiting harmful social biases'
 
-### Prompting
+### Evidenz 3
 
 Zentrale Methodologie basiert auf Prompt-Engineering durch zwei Techniken: 'self-debiasing via explanation and self-debiasing via reprompting, we show that self-debiasing can significantly reduce the degree of stereotyping'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Expliziter Fokus auf soziale Biases und Stereotypisierung über neun soziale Gruppen: 'We refer to this class of harms as social bias, a normative term that characterizes disparate representations, treatments, or outcomes between social groups due to historical and structural power imbalances'
 
-### Diversitaet
+### Evidenz 5
 
 Evaluation über neun diverse soziale Gruppen zur Gewährleistung von Repräsentation: 'We select BBQ for its breadth across nine social groups: age, disability, gender identity, nationality, physical appearance, race/ethnicity, religion, sexual orientation, and socioeconomic status'
 
-### Fairness
+### Evidenz 6
 
 Fokus auf Reduktion von Bias und faire Modellverhalten gemessen durch Bias-Scores: 'we demonstrate self-debiasing's ability to decrease stereotyping in question-answering over nine different social groups with a single prompt'
 

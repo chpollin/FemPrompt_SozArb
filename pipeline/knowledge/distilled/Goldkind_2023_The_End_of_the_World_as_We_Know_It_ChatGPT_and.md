@@ -4,14 +4,6 @@ authors: ["Lauri Goldkind", "Lea Wolf", "Alexis Glennon", "Juan Rios", "Laura Ni
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and.md
 confidence: 94
@@ -40,31 +32,31 @@ Theoretisch/Kommentar: Konzeptuelle Analyse mit praktischen Beispielen (ChatGPT-
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Social work education must expand training on the Code of Ethics to speak to new AI tools... professionals will need channels to learn about emerging AI tools, seeking guidance from professional organizations
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT is among the most complex language models yet assembled... ChatGPT was trained on a massive 40 gigabytes of text data
 
-### KI_Sonstige
+### Evidenz 3
 
 AI is the theory and development of computer systems able to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision making... AI already shapes and speeds up our daily lives, powering Amazon recommendations, employment screening, social media feeds
 
-### Soziale_Arbeit
+### Evidenz 4
 
 For social workers, the best way to comprehend how the chatbot could augment or disrupt practice is to watch it work... Social work education is reckoning with the reality that ChatGPT allows students to generate course assignments
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Evidence shows that the existing use of advanced technological tools—in arenas like sentencing or risk assessment in child welfare—has exerted disproportionate impact upon marginalized populations, because the construction and deployment of these technologies amplifies existing bias and discrimination
 
-### Diversitaet
+### Evidenz 6
 
 The extant texts training these language models are generally not inclusive of diverse perspectives and frequently reflect larger biases of society... vulnerable populations may face accelerating marginalization
 
-### Fairness
+### Evidenz 7
 
 Organizations will need to move rapidly to consider and distribute policies that allow them to maximize the utility of AI with practices that align with their mission... which tasks can be ethically automated... social workers are not uniquely responsible for assessing and remediating the ethical harms associated with AI... new types of regulations, ethics, guidelines, and functional capacities to promote meaningful and life-affirming use of AI
 

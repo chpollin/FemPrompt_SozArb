@@ -4,13 +4,6 @@ authors: ["Reji TR"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Unknown_Artificial_Intelligence_in_Social_Sciences_and.md
 confidence: 92
@@ -41,27 +34,27 @@ Theoretisch/Review - systematische Literaturanalyse von 2022-2025 mit thematisch
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The review emphasizes the importance of ethical AI frameworks and interdisciplinary collaboration to ensure professionals understand AI's capabilities and limitations: 'the review calls for interdisciplinary collaboration to ensure the ethical, inclusive, and accountable integration of AI in social contexts.' Critical engagement with AI competencies is evident in discussions of how social workers must maintain oversight rather than relying on AI autonomously.
 
-### KI_Sonstige
+### Evidenz 2
 
 Extensive coverage of machine learning, natural language processing, predictive analytics, blockchain, virtual reality, and AI-powered assistants: 'AI technologies-such as machine learning, natural language processing, and predictive analytics-are reshaping research methodologies, public policy, and service delivery.' The paper examines NLP for sentiment analysis, ML for risk prediction, and emerging technologies like blockchain for welfare distribution and VR for social work training.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Core focus throughout: direct examination of AI's role in case management, mental health interventions, child welfare, crisis response, and resource allocation. 'Within social work and human services, AI-driven tools facilitate case management, mental health interventions, crisis response, and resource allocation.' Specific discussion of AI chatbots (Woebot, Wysa), Crisis Text Line, Allegheny Family Screening Tool, and implications for frontline practice.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Extensive critical examination of algorithmic bias and its disproportionate impact on marginalized communities: 'Biases in AI models have been documented in areas such as criminal justice, child welfare, and hiring practices, disproportionately affecting marginalized communities.' Case studies (COMPAS algorithm, Australia's Robodebt) demonstrate discriminatory outcomes; discussion of how 'AI training data can reflect and reinforce existing social inequalities' particularly affecting lower-income families and marginalized groups.
 
-### Diversitaet
+### Evidenz 5
 
 Addresses representation, inclusion, and vulnerable populations throughout: 'identify vulnerable populations at scale' and emphasis on ensuring 'resources reach the most vulnerable populations.' Discussion of marginalized communities, underserved areas, refugees, low-income citizens, and disabled individuals as particularly affected by AI systems; emphasis on ensuring inclusive design and representation in data.
 
-### Fairness
+### Evidenz 6
 
 Multiple references to fairness in algorithmic design and outcomes: 'Addressing algorithmic bias requires diverse training datasets, transparent model design, and continuous human oversight to mitigate discriminatory impacts.' Discussion of fairness-driven AI policies, fair allocation of resources, and fairness in economic decision-making; emphasis on transparent algorithm design and continuous bias auditing.
 

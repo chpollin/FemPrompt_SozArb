@@ -4,14 +4,6 @@ authors: ["Tao Zhang", "Ziqian Zeng", "Yuxiang Xiao", "Huiping Zhuang", "Cen Che
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch - Automatisierte Annotationsschema zur Dataseterstellung, LLM-basierte
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Das Paper konzentriert sich auf Large Language Models (LLMs) einschließlich GPT-3.5, Gemini-Pro und Claude-3-opus sowie deren Alignment durch spezialisierte Trainingsdatensätze.
 
-### Prompting
+### Evidenz 2
 
 Die Dialoggenerierung erfolgt durch sorgfältig gestaltete Prompts für GPT-3.5, um Fragen und 'chosen' Responses zu erzeugen; 'rejected' Responses werden durch Prompting von unaligned LLMs generiert. Siehe Appendix C und Table 8.
 
-### KI_Sonstige
+### Evidenz 3
 
 Das Paper behandelt RLHF (Reinforcement Learning from Human Feedback), NLP-Techniken, Alignment-Techniken und Bias-Messung in neuronalen Sprachmodellen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrales Thema: Analyse und Mitigation von systematischen Verzerrungen in LLMs; das Paper identifiziert 293 biased Responses in HH-RLHF und dokumentiert messbare Unterschiede in Bias-Levels zwischen Modellen.
 
-### Gender
+### Evidenz 5
 
 Expliziter Fokus auf Gender-Bias; vier Kategorien von Gender-Bias werden definiert und klassifiziert: Stereotypes, Discriminatory Language, Sexism in Occupational/Educational Institutions, Bias Against Marginalized Genders. Zahlreiche Beispiele zu Geschlechterstereotypen, Workplace-Sexismus und LGBTQ+-bezogenen Verzerrungen.
 
-### Diversitaet
+### Evidenz 6
 
 Das Paper adressiert marginalisierte Genders explizit ('Bias Against Marginalized Genders') und referenziert WinoQueer-Dataset für LGBTQ+-spezifische Bias-Messung; Inklusivität ist ein Designprinzip des GenderAlign-Datensatzes.
 
-### Fairness
+### Evidenz 7
 
 Das Paper verwendet explizite Fairness-Metriken (Pearson Correlation Coefficient, Ranking Scores) zur Evaluation von Bias-Reduktion; Alignment wird als Fairness-Instrument verstanden, um LLMs mit faireren Verhaltensweisen auszurichten.
 

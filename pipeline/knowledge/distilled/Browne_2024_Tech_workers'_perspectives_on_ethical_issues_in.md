@@ -4,13 +4,6 @@ authors: ["Jude Browne", "Eleanor Drage", "Kerry McInerney"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.md
 confidence: 95
@@ -39,27 +32,27 @@ Empirisch-qualitativ: In-depth interviews (n=63+) mit Tech-Mitarbeitern verschie
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fokus auf Verständnis und Kompetenzlücken von Tech-Workern: 'a 'lack of ethical knowledge' that made it difficult to expand and scale AI ethics principles in industry contexts' (Khan et al. 2023, zitiert im Paper)
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Analyse von AI-Ethics-Frameworks, Bias-Mitigation-Strategien, ML-Modellen und algorithmischen Systemen in der KI-Produktentwicklung
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale Analyse von Bias-Konzepten und struktureller Ungleichheit: 'data should be understood as always laden with the uneven experiences of the unequal contexts in which it emerges'; Diskussion von Geschlecht und Rasse in Daten (Wikipedia-Beispiel)
 
-### Diversitaet
+### Evidenz 4
 
 Explizit DEI-fokussiert mit Analyse marginalisierter Gruppen: 'marginalized users and consumers'; Untersuchung von Repräsentation in der Datenbeschaffung und unternehmensweiter Diversität
 
-### Feministisch
+### Evidenz 5
 
 Explizit feministische Methodik und Theorie durchgehend: 'we explicitly draw on feminist insights' und 'follow the methodological approach of feminist and critical race scholar Sara Ahmed (2012)'; Verwendung von Haraway's 'situated knowledges', D'Ignazio & Klein, Ahmed zur Analyse
 
-### Fairness
+### Evidenz 6
 
 Diskussion von Fairness-Konzepten in AI: 'justice, fairness and equity' als zentrales AI-Ethics-Thema; kritische Analyse von Fairness-Mitigation-Ansätzen und Unmöglichkeit der Neutralität
 

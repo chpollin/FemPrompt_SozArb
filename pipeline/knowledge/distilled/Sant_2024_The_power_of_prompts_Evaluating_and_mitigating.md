@@ -4,14 +4,6 @@ authors: ["Aleix Sant", "Carlos Escolano", "Audrey Mash", "Francesca De Luca For
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Sant_2024_The_power_of_prompts_Evaluating_and_mitigating.md
 confidence: 89
@@ -40,31 +32,31 @@ Empirisch: Benchmarking von 7 LLMs und 3 NMT-Modellen mittels 4 etablierter Test
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Paper evaluiert Large Language Models (LLMs) für Maschinenübersetzung: 'Four widely-used test sets are employed to benchmark various base LLMs' und untersucht 'Llama-2-7B', 'Aguila-7B', 'Flor-6.3B' sowie deren instruction-tuned Varianten.
 
-### Prompting
+### Evidenz 2
 
 Umfassende Exploration von Prompt-Engineering-Techniken: 'we explore prompting engineering techniques applied to an instruction-tuned LLM. We identify a prompt structure that significantly reduces gender bias by up to 12% on the WinoMT evaluation dataset' mittels Few-Shot, Chain-of-Thought und Kontext-Vorgaben.
 
-### KI_Sonstige
+### Evidenz 3
 
 Paper behandelt Machine Translation und Neural Machine Translation Models als etablierte NLP-Systeme: 'comparing their translation quality and gender bias against state-of-the-art Neural Machine Translation (NMT) models for English to Catalan and English to Spanish translation directions'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Expliziter Fokus auf Gender-Bias als Diskriminierungsproblem mit schädlichen Konsequenzen: 'gender bias is defined as the tendency of MT systems to produce translations that reflect or perpetuate gender stereotypes, inequalities, or assumptions' mit Verweis auf 'representational (i.e., misrepresentation or underrepresentation of social groups) or allocational harms (i.e., allocation or withholding of opportunities)'.
 
-### Gender
+### Evidenz 5
 
 Zentrale Analyse zweier Gender-Bias-Aufgaben: 'Gender Coreference Resolution' und 'Gender Terms Detection'; Evaluation mit Metriken für männliche und weibliche Terme; Beispiele zeigen stereotypische Geschlechterzuordnungen (z.B. Ingenieure maskulin, Krankenschwestern feminin).
 
-### Diversitaet
+### Evidenz 6
 
 Untersucht Geschlechterrepräsentation in maschineller Übersetzung mit Fokus auf marginalisierte Darstellungen: 'the presence of gender bias may affect the representation of genders in certain communities' und 'users of a machine translation system may not be proficient in at least one of the languages' sind gefährdet durch bias-behaftete Übersetzungen.
 
-### Fairness
+### Evidenz 7
 
 Fairness als zentrale Evaluation mit klassischen ML-Metriken (Accuracy, F1-Score für männliche/weibliche Klassen) und Gender-spezifischen Fairness-Gaps (ΔG = Differenz zwischen F1-male und F1-female); Ziel ist 'gender-bias mitigation' durch verbesserte Prompt-Strukturen.
 

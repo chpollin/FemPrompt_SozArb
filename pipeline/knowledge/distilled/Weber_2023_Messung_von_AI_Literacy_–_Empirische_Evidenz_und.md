@@ -4,12 +4,6 @@ authors: ["Patrick Weber", "Lorenz Baum", "Marc Pinski"]
 year: 2023
 type: conferencePaper
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
 processed: 2026-02-05
 source_file: Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und.md
 confidence: 86
@@ -38,23 +32,23 @@ Empirisch/Mixed Methods: Literaturrecherche, Experteninterviews (n=10), Card-Sor
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kernfokus des Papers: 'AI literacy is a set of socio-technical competencies of humans that shape relevant types of human-AI interaction'. Entwicklung eines objektiven 25-Item-Messinstruments mit vier Dimensionen (Socio User, Socio Creator/Evaluator, Technical User, Technical Creator/Evaluator).
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf Mensch-KI-Interaktion, KI-Systeme in Bildung und Arbeitsmarkt, algorithmische Entscheidungsfindung: 'ihre Nutzenden und Erschaffenden sowie diejenigen, die mit Hilfe von KI Entscheidungen treffen, werden in der Lage sein müssen, KI effizient zur Problemlösung einsetzen zu können'.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Analyse von unterschiedlichen AI Literacy Levels zwischen Gruppen mit/ohne IT-Hintergrund (31,3% vs. 27,5%), unterschiedliche Literacy zwischen technischen und nicht-technischen Studierenden (Socio 63% vs. Technical 51%), Digital Divide implizit thematisiert.
 
-### Gender
+### Evidenz 4
 
 Geschlechterverteilung in den Stichproben erfasst (46-52% weiblich, 41-52% männlich, bis zu 7% andere Geschlechter), aber keine explizite geschlechterspezifische Analyse oder Diskussion von Gender-Unterschieden in AI Literacy durchgeführt.
 
-### Diversitaet
+### Evidenz 5
 
 Erfassung diverser Populationen: verschiedene Bildungshintergründe, mit/ohne IT-Hintergrund, verschiedene Beschäftigungsstatus (Studierende, berufstätig, arbeitslos), unterschiedliche Altersgruppen (24-25 Jahre Durchschnitt), Manager vs. Studierende.
 

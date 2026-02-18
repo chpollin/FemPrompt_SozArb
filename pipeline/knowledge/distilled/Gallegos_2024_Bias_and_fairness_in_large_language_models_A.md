@@ -4,15 +4,6 @@ authors: ["Isabel O. Gallegos", "Ryan A. Rossi", "Joe Barrow", "Md Mehrab Tanjim
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Gallegos_2024_Bias_and_fairness_in_large_language_models_A.md
 confidence: 75
@@ -41,35 +32,35 @@ Theoretisch/Review - umfassende Literaturübersicht mit Formalisierung von Konze
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Der Survey zielt darauf ab, 'Forscher und Praktiker zu befähigen, die Ausbreitung von Bias in LLMs besser zu verstehen und zu verhindern' und bietet umfassende konzeptionelle Rahmen und Taxonomien zum Verständnis von Bias in sprachlichen KI-Systemen.
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf 'große Sprachmodelle (LLMs)' mit autoregressive, autoencoding und encoder-decoder Architekturen (GPT, BERT, T5) und deren Fähigkeiten zur Textgenerierung und Few-Shot Learning.
 
-### Prompting
+### Evidenz 3
 
 Section 5.1.4 behandelt 'Instruction Tuning' mit 'Modified Prompting Language' und 'Control Tokens' als Bias-Mitigationstechniken durch Modifikation von Eingabeprompts.
 
-### KI_Sonstige
+### Evidenz 4
 
 Umfangreiche Abdeckung von NLP-Techniken, Embedding-Methoden, Attention-Mechanismen, Loss-Funktionen und neuronalen Architektur-Modifikationen.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Explizit: 'LLMs erben Stereotypen, Missrepräsentationen, verächtliche und ausgrenzende Sprache...die überproportional bereits gefährdete und marginalisierte Gemeinschaften betreffen' und 'die automatisierte Reproduktion von Ungerechtigkeit kann Systeme der Ungleichheit verfestigen'.
 
-### Gender
+### Evidenz 6
 
 Umfangreiche Behandlung von Geschlechterbias mit mehreren zitierten Arbeiten zu Geschlechterstereotypen in LLMs, Coreference Resolution und Pronomen-Bias (z.B. Webster et al., Sheng et al.).
 
-### Diversitaet
+### Evidenz 7
 
 Thematisiert 'marginalisierte Gemeinschaften', unterrepräsentierte Sprachvarietäten, verschiedene soziale Gruppen (Race, Religion, Sexualität) und fordert 'intersektionale Perspektiven' auf Bias.
 
-### Fairness
+### Evidenz 8
 
 Zentral für den Survey: Formalisierung von Fairness-Desiderata für LLMs, umfangreiche Taxonomie von Fairness-Metriken (Embedding-, Wahrscheinlichkeits- und Text-basiert), Behandlung von Fairness-Notionen aus ML adaptiert für NLP.
 

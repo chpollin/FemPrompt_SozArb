@@ -4,12 +4,6 @@ authors: ["Hein Minn Tun", "Hanif Abdul Rahman", "Lin Naing", "Owais Ahmed Malik
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Tun_2025_Trust_in_artificial_intelligence–based_clinical.md
 confidence: 91
@@ -38,23 +32,23 @@ Systematischer Review; Mixed Methods (16 qualitative, 6 quantitative, 5 mixed-me
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Training and Familiarity als Schlüsselthema: 'highlighting the importance of knowledge sharing and user education' [Results]; Fokus auf Kliniker-Kompetenzen: 'Knowledge of AI' und 'Confidence in interpreting radiographs' als Einflussfaktoren [York et al].
 
-### KI_Sonstige
+### Evidenz 2
 
 Breites KI-Spektrum behandelt: machine learning models, deep learning, reinforcement learning, large language models (ChatGPT); Klassifizierung, Prognose und Optimierungsalgorithmen; Fokus auf Clinical Decision Support Systems und deren algorithmische Funktionsweise.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Algorithmic bias und Fehler werden thematisiert: 'algorithmic bias' und 'false positives/negatives' als Vertrauensbarrieren; Diverse klinische Kontexte und Validierung in unterschiedlichen Settings erwähnt; jedoch keine explizite Analyse sozialer Ungleichheiten.
 
-### Diversitaet
+### Evidenz 4
 
 Diverse Gesundheitsfachkräfte: 'diverse health care workers, predominantly in hospitalized settings' inkl. Ärzte, Krankenschwestern, Apotheker, Spezialisten verschiedener Disziplinen; Empfehlungen für 'diverse demographics, cross-cultural perspectives, and contextual differences in trust across various health care professions'.
 
-### Fairness
+### Evidenz 5
 
 Ethical Consideration als eines von 8 Schlüsselthemen: 'examining medicolegal liability, fairness, and adherence to ethical standards'; Fairness in algorithmic performance across diverse contexts; Calibration und Performance-Konsistenz als Vertrauensfaktoren.
 

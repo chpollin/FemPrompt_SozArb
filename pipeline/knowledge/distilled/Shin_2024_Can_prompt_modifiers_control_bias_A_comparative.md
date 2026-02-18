@@ -4,14 +4,6 @@ authors: ["Philip Wootaek Shin", "Jihyun Janice Ahn", "Wenpeng Yin", "Vijaykrish
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.md
 confidence: 91
@@ -40,31 +32,31 @@ Empirisch - Vergleichende Analyse mit systematischer Prompt-Engineering-Methodik
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper zielt auf die Kompetenzentwicklung zur kritischen Reflexion von KI ab: 'This study aims to deepen the understanding of bias in AI. Through comparative analysis, we illuminate each model's specific biases and underscore the role of prompt engineering in bias reduction.'
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf Text-zu-Bild-Generierungsmodelle: 'This study examines the presence and manipulation of societal biases in leading text-to-image models: Stable Diffusion, DALL·E 3, and Adobe Firefly.'
 
-### Prompting
+### Evidenz 3
 
 Systematische Analyse von Prompt-Engineering als Interventionsmittel: 'Prompt Modifiers as a Tool for Bias Adjustment: We introduce the use of prompt modifiers as a means of adjusting bias within image generation models... [and] Impact of Prompt Sequencing on Bias Control.'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral thematisiert sind Diskriminierung und algorithmischer Bias: 'It has been shown that many generative models inherit and amplify societal biases... uncovering the nuanced ways these AI technologies encode biases across gender, race, geography, and region/culture.'
 
-### Gender
+### Evidenz 5
 
 Explizite Gender-Bias-Analyse: 'A preliminary analysis of image outputs for a generic 'monk' prompt... unveils a marked inclination towards representing monks as Asian males' und Tabellen zeigen durchgehend Gender-Verteilungen (Male/Female Ratios).
 
-### Diversitaet
+### Evidenz 6
 
 Thematisierung von Repräsentation marginalisierter Gruppen: 'our analysis spanning gender, race, geography, and religion/culture biases... aims to enrich the discourse on AI ethics and creativity with respect to... fostering a more equitable trajectory for AI innovation.'
 
-### Fairness
+### Evidenz 7
 
 Explizite Fairness-Fragestellung: 'Should they aim to accurately mirror historical and sociodemographic realities, or aspire towards an idealized inclusivity... This underscores the imperative for strategic bias mitigation to foster a more equitable trajectory.'  und Quantitative Fairness-Metriken: 'utilizing our dataset, we calculated variances for each category and then computed an average variance across 16 base prompts... determining the average standard deviation for these prompts.'
 

@@ -4,12 +4,6 @@ authors: ["Sijia Xiao", "Haodi Zou", "Alice Qian Zhang", "Deepak Kumar", "Hong S
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Singh_2025_A_reparative_turn_in_AI.md
 confidence: 91
@@ -38,23 +32,23 @@ Mixed-Methods: Qualitative Themenanalyse einer absichtlich gewählten Teilmenge 
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Das Paper analysiert Schäden durch generative KI-Systeme wie Chatbots (Character AI), Deepfakes-Technologien (Synthesia) und KI-Video-Generierung explizit als Teilmenge der 1.060 Vorfälle.
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Analyse von Schäden durch algorithmische Entscheidungssysteme, Gesichtserkennung (Clearview AI), predictive policing, Einstellungsalgorithmen und automatisierte Systeme im allgemeinen.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Das Paper untersucht systematisch diskriminatorische und ungleiche Auswirkungen von AI, etwa Geschlechterbias in LinkedIn-Algorithmen, rassistische Beauty-Standards in FaceApp-Filtern, und disparate Impact in Einstellungssystemen. Es betont strukturelle Ungerechtigkeit und ungleiche Machtverteilung zwischen Unternehmen und betroffenen Gemeinschaften.
 
-### Diversitaet
+### Evidenz 4
 
 Fokus auf marginalisierte Communities und unterrepräsentierte Gruppen: Kindern (TikTok-Datenschutz), Frauen (Deepfakes, KI-Nacktbilder), Minoritäten (LinkedIn-Bias, FaceApp), und systemisch benachteiligte Bevölkerungsgruppen, die von AI-Harm unverhältnismäßig stark betroffen sind.
 
-### Fairness
+### Evidenz 5
 
 Das Paper entwickelt einen Rahmen für gerechte (fair) Reparationspraktiken basierend auf drei Gerechtigkeitstheorien und kritisiert bestehende Systeme für mangelnde Fairness in Reparationsprozessen, Stakeholder-Beteiligung und Resultatverteilung.
 

@@ -4,13 +4,6 @@ authors: ["Keonyoung Park", "Ho Young Yoon"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Park_2025_AI_algorithm_transparency,_pipelines_for_trust.md
 confidence: 94
@@ -39,27 +32,27 @@ Empirisch: Online-Experiment mit 2x2 zwischen-Subjekt-Design (AI-Algorithmen-Tra
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Studie untersucht, wie Transparenz von KI-Algorithmen das Wissen und Verständnis von Nutzern fördert: 'transparency can reduce uncertainty and enhance trust in AI systems' und 'transparency serves as a strategic tool to reduce uncertainty and enhance knowledge'.
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf generative KI wie ChatGPT: 'Given the growing importance of generative AI such as ChatGPT in stakeholder communications' und 'The integration of generative artificial intelligence (AI) with chatbots such as ChatGPT, is becoming increasingly prevalent'.
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfassende Behandlung algorithmischer Entscheidungssysteme: 'algorithmic systems may reinforce biases' und Analyse von Vertrauensdynamiken in KI-Systemen generell.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Adressiert algorithmische Verzerrungen und deren gesellschaftliche Auswirkungen: 'Recent studies have pointed out how algorithmic systems may reinforce biases or even spur radicalization' und 'promoting an inclusive approach to AI adoption that avoids technological disparity'.
 
-### Diversitaet
+### Evidenz 5
 
 Berücksichtigung unterschiedlicher Stakeholder-Gruppen und Zugangsbarrieren: 'varying attitudes toward AI' und 'support ethical AI integration across diverse contexts'; Fokus auf inklusive KI-Adoption.
 
-### Fairness
+### Evidenz 6
 
 Implizit adressiert durch Fokus auf Transparenz als Fairness-Mechanismus: 'transparency not only fosters understanding but also acts as a signaling mechanism for organizational accountability' und Engagement mit Konzepten von Vertrauenswürdigkeit und Integrität.
 

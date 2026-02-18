@@ -4,10 +4,6 @@ authors: ["nicht angegeben"]
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
 processed: 2026-02-05
 source_file: Freinhofer_2025_Prompten.md
 confidence: 88
@@ -37,15 +33,15 @@ Praktischer Leitfaden mit Best Practices, Beispielen und Use-Cases für verschie
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Understanding what makes an effective prompt and learning to craft prompts on the fly can boost your productivity and creativity. Prompting is a skill we can all learn.
 
-### Generative_KI
+### Evidenz 2
 
 Gemini for Google Workspace to help boost your productivity and creativity without sacrificing privacy or security. The embedded generative AI-powered features can help you write, organize information, create images, accelerate workflows.
 
-### Prompting
+### Evidenz 3
 
 This guide provides you with the foundational skills to write effective prompts when using Gemini for Workspace. You can think of a prompt as a conversation starter with your AI-powered assistant. The four main areas to consider when writing an effective prompt are: Persona, Task, Context, Format.
 

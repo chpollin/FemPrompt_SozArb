@@ -4,14 +4,6 @@ authors: ["Hongye Qiu", "Yue Xu", "Meikang Qiu", "Wenjie Wang"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.md
 confidence: 94
@@ -40,31 +32,31 @@ Empirisch: Automatisiertes Prompt-Engineering mit vier sequenziellen Modulen (In
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf Large Language Models (GPT-3.5, Llama3, Llama2-Alpaca) und Vision-Language Models (InstructBlip, Qwen2-VL, Llava-1.5); Abstract: 'Large Language Models (LLMs) exhibit strong natural language processing capabilities but also inherit and amplify societal biases'
 
-### Prompting
+### Evidenz 2
 
 Expliziter Fokus auf Prompt-Engineering; Abstract: 'an automated and model-agnostic approach that mitigates gender bias' durch 'gender-aware prompting with demonstration and reasoning'; Sections 3.2.1-3.2.4 beschreiben Prompt-Design für Initial Reasoning, Verification, Gender-Independent Filtering und Iterative Refinement
 
-### KI_Sonstige
+### Evidenz 3
 
 Behandelt Coreference Resolution und Question-Answering als NLP-Tasks; Section 2.1 diskutiert Gender Bias Evaluation Methods durch 'text generation and comprehension tasks'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral: 'trained on large-scale, unfiltered datasets, they not only inherit but also magnify social biases, exacerbating existing inequities'; Reduction of Gender Bias in AccGap und sAMB-Metriken als Hauptmesswerte; Limitation: 'our work is limited to the English language and does not account for cultural nuances or biases present in other languages'
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Bias-Fokus: 'Gender bias, as a typical form of social bias, has been proven to be widely present in LLMs'; Evaluation auf gender-spezifischen Datensätzen (WinoBias, WinoGender, VisoGender); Ethics Statement: 'Our study targets binary gender biases in LLMs'
 
-### Diversitaet
+### Evidenz 6
 
 Recognition von Limitationen: 'our current scope is restricted to binary gender biases, neglecting the diverse spectrum of gender identities beyond the binary. Future research should prioritize evaluating and mitigating biases against non-binary and gender-diverse individuals'; Cross-Model und Cross-Task Evaluierung demonstriert breite Anwendbarkeit
 
-### Fairness
+### Evidenz 7
 
 Fairness als zentrale Zielsetzung: 'fairness concerns' im Abstract; Section 4.2 'Utility' evaluiert Fairness-Accuracy Trade-off; Figure 2 zeigt explizit Bias Mitigation (ΔBias) vs. Accuracy Changes (ΔAcc); Ethics Statement: 'guided by the principles of fairness, accountability, and transparency'
 

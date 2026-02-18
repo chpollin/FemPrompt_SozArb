@@ -4,13 +4,6 @@ authors: ["Ka Ho Brian Chor", "Zhidi Luo", "Kit T. Rodolfa", "Rayid Ghani"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Cher_2024_Exploring_machine_learning_to_support.md
 confidence: 75
@@ -39,27 +32,27 @@ Empirisch - vergleichende Validierungsstudie von Machine-Learning-Modellen (Rand
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Caseworkers benötigen Verständnis und Fähigkeiten für datengestützte Entscheidungsfindung: 'caseworkers can benefit from upstream, empirical decision support' und 'administrative burdens to care for in-care youth are substantial because understaffed and underfunded caseworkers have large caseloads but limited time to make objective and quality decisions'
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Anwendung von Predictive Analytics und Machine Learning: 'we developed and validated a wide grid of ML models -random forest, regularized logistic regression, decision tree, dummy classifier -and a conventional unregularized logistic regression model' und 'Machine Learning (ML) consists of a family of methods that 'learn' from complex data over time and detect underlying or unobserved patterns'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Fokus auf Jugendhilfe-Praxis und Casework: 'placement stabilization and preservation program', 'caseworker decision-making', 'multidisciplinary team planning', 'caseworkers could refer youth to a placement stabilization and preservation program'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Thematisierung von Bias und diskriminierenden Effekten: 'concerns about interpretability (e.g., ML 'black box'), errors (e.g., How often a predictive model identifies true positives of severe harm?), and bias (e.g., against protected classes) that ultimately could impact youth in the child welfare system' und Untersuchung von 'caseworkers' differential program referral behavior depending on youth's race'
 
-### Diversitaet
+### Evidenz 5
 
 Fairness-Audit nach Rasse und Geschlecht sowie Berücksichtigung marginalisierter Gruppen: 'We examined TPR by youth's attribute (e.g., race, gender) to quantify potential disparities between subgroups (e.g., Black youth vs. White youth) within and across the predictive models' und Fokus auf 'equitably serve diverse youth'
 
-### Fairness
+### Evidenz 6
 
 Zentrale Evaluierung von algorithmischer Fairness und Equity: 'Understanding the appropriate ways to measure model fairness in context reflects stakeholder and societal values', 'we evaluated and audited fairness among the predictive models', 'TPR meant among all youth with a given attribute who were referred to the program' und Fokus auf 'equality of opportunity'
 

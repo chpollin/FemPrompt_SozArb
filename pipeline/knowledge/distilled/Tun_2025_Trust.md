@@ -4,8 +4,6 @@ authors: ["Tun"]
 year: 2025
 type: report
 language: en
-categories:
-  - none
 processed: 2026-02-05
 source_file: Tun_2025_Trust.md
 confidence: 22

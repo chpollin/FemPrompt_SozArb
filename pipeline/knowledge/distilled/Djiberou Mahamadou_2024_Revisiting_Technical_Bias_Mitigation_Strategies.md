@@ -4,12 +4,6 @@ authors: ["Abdoul Jalil Djiberou Mahamadou", "Artem A. Trotsyuk"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.md
 confidence: 95
@@ -39,23 +33,23 @@ Narrative Review mit systematischer Analyse von fünf Dimensionen (Who, Which, W
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Education is critical for meaningful patient engagement and understanding the technical complexities and social implications of bias. The authors advocate for AI literacy among deployed stakeholders.
 
-### KI_Sonstige
+### Evidenz 2
 
 Paper adressiert Machine Learning, Algorithmen zur Bias-Detektion, Fairness-Metriken, und KI-Systeme im Healthcare (Diagnose, Vorhersage).
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 AI can exhibit and perpetuate inherent social biases amplifying health inequities. Discusses data biases, algorithmic biases, user interaction biases, minority bias, label bias; examines how interconnection between bias sources exacerbates effects.
 
-### Diversitaet
+### Evidenz 4
 
 Diversity in AI developers can address misalignment of interests; Hispanic, Black, and African Americans account for only 3.2% and 2.4% of new AI PhDs in the US. Advocates for diversity extending beyond workforce to include voices of those impacted by AI systems. Examines intersectionality, underrepresented populations, marginalized groups.
 
-### Fairness
+### Evidenz 5
 
 Central focus on algorithmic fairness metrics (Demographic Parity, Equalized Odds, Calibration), fairness definitions across stakeholders, Stakeholders' Agreement on Fairness framework, statistical vs. causal fairness approaches, fairness trade-offs, context-specific fairness in healthcare applications.
 

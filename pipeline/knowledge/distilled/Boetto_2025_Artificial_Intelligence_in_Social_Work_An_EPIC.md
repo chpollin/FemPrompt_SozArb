@@ -4,15 +4,6 @@ authors: ["Heather Boetto"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.md
 confidence: 95
@@ -41,35 +32,35 @@ Theoretisch: Umfassende Literaturübersicht zur Schnittstelle von KI und Soziale
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Emphasis on need for 'inclusion of AI content in course accreditation requirements and practice standards' and 'develop education opportunities for increasing community AI knowledge and skills' for social workers and communities.
 
-### Generative_KI
+### Evidenz 2
 
 Discussion of generative AI as a subcategory with 'capacity to autonomously augment, synthesise, and innovate new data'; specific examples of ChatGPT use in child protection settings with privacy breaches and inaccurate outputs.
 
-### KI_Sonstige
+### Evidenz 3
 
 Extensive discussion of machine learning, predictive risk modeling (suicide, domestic violence, child protection), AI-powered chatbots, and decision-support systems in healthcare and social work contexts.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Central focus throughout: 'AI provides opportunities to address social problems and advance socially just outcomes'; applications in child welfare, counselling, mental health, and domestic violence; implications for service user-practitioner relationships.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Critical analysis of algorithmic bias: 'algorithms supporting AI rarely consider diverse perspectives'; research showing 'gender classification systems produced an error rate up to 34.7% for darker-skinned females'; concerns about 'digital divide' and 'information poverty for marginalised groups'; reinforcement of 'colonial knowledges in AI algorithms'.
 
-### Gender
+### Evidenz 6
 
 Explicit reference to gender bias: 'considerations of gender, race, ethnicity, and sexual orientation may be nonexistent or significantly prejudiced and discriminative'; citation of Buolamwini & Gebru (2018) Gender Shades study on gender classification disparities.
 
-### Diversitaet
+### Evidenz 7
 
 Emphasis on representation and inclusion: 'lack of community involvement in AI development' means diverse perspectives missing; advocacy for 'First Nations' and ethnic data sovereignty and control'; need for 'underrepresented groups in AI design and development'; focus on 'marginalised communities' and 'vulnerable populations'.
 
-### Fairness
+### Evidenz 8
 
 Discussion of ethical AI frameworks addressing fairness: 'structured, ethical approach to integrating AI emphasises the importance of addressing biases and promoting justice'; strategies include 'decolonisation processes' and 'creation of AI employment pathways for underrepresented groups'; emphasis on 'secure, safe, transparent, and socially just' systems.
 

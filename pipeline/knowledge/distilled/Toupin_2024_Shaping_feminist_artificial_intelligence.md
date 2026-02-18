@@ -4,15 +4,6 @@ authors: ["Sophie Toupin"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Toupin_2024_Shaping_feminist_artificial_intelligence.md
 confidence: 88
@@ -41,35 +32,35 @@ Kritische Literaturübersicht und Analyse von Schriften und Praktiken; Purposive
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Analyse betont Bildungs- und Kompetenzaspekte: 'The culture of the users means that participatory design with women, queer, trans, and Black, Indigenous and People of Color (BIPOC) individuals is part and parcel of Poieto' und 'The promise of including community in the design of AI... to lower the barriers to entry for doing AI for the community to be engaged in this process'.
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Analyse von AI-Systemen jenseits generativer Modelle: 'Knowledge-based systems, better known in symbolic AI parlance as expert systems', Chatbots, predictive systems, word embeddings, robotics, algorithmic decision-making systems.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Bezug zu Jugendhilfe und rechtlicher Beratung: Furnival's FAI-Projekt für 'low-income women pursuing gender discrimination cases who did not have access to a lawyer' und Projekte zu 'gender-based violence (GBV) cases against women and LGBTIQ+ people' mit Ziel der Justizsystemreform.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Analyse von Diskriminierung: 'A good example of discriminatory word embedding is with terms like 'nurse,' 'care,' or 'sewing' usually being associated with women, whereas terms like 'salary,' 'sports,' and 'leader' are associated with men' und Kritik der 'systemic gender, racial, and intersectional bias'.
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus durchgängig: 'Furnival's FAI project aimed to compile feminist jurisprudence on issues of gender discrimination' und 'Scott was a feminist computational language knowledge-based system. The goal of the system was to repair in a meaningful way misunderstandings in communication between men and women'.
 
-### Diversitaet
+### Evidenz 6
 
 Starker Fokus auf marginalisierte Communities und intersektionale Perspektiven: 'She specifically called for pieces of work from non-cis women, women of color, and trans creators to enrich her data set' und Betonung der Partizipation von 'women, queer, trans, and non-binary designers from all backgrounds, origins, and geographies'.
 
-### Feministisch
+### Evidenz 7
 
 Explizit feministische Theorie und Methodik: 'Influenced by these conversations, British computer scientist and historian of science Alison Adam started criticizing AI from a feminist perspective... Her aim was to bring together gender, race, and class specifically and power more generally into the critique of AI'. Extensive Verwendung von Haraway (situated knowledge), Crenshaw (Intersektionalität), Combahee River Collective, Audre Lorde, hooks, D'Ignazio & Klein (Data Feminism), und dekolonialen Feminist:innen wie Lugones.
 
-### Fairness
+### Evidenz 8
 
 Fokus auf faire und gerechtere AI-Systeme: 'The promise associated with FAI is that a fairer, slower, consensual, collaborative AI is possible' und Analyse von Sinders' Praktiken zur Sichtbarmachung von 'invisible, slow, and nitty-gritty work of creating a community-led data set'.
 

@@ -4,13 +4,6 @@ authors: ["Anaelia Ovalle", "Arjun Subramonian", "Gilbert Gee", "Vagrant Gautam"
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Ovalle_2023_Factoring.md
 confidence: 89
@@ -39,27 +32,27 @@ Theoretisch/Review - Kritische Literaturanalyse von 30 AI-Fairness-Papieren basi
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Arbeit kritisiert die Epistemologien der KI-Forschung und fordert eine Transformation der Wissensproduktion und kritischen Reflexivität: 'intersectionality, by enabling researchers to observe and articulate disparities, may break the epistemic molds researchers are placed in so they may operate differently'
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Analyse der AI-Fairness-Literatur und ihrer algorithmischen Operationalisierungen (pre/in/post-processing, Fairness-Metriken, Subgroupenbildung, Bias-Quellen)
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentral ist die Kritik der fehlenden Auseinandersetzung mit strukturellen Ursachen von Ungleichheit: 'researchers prioritize intersectional subgroup fairness over the structures that give rise to unfairness to begin with'
 
-### Diversitaet
+### Evidenz 4
 
 Intersektionalität wird als Framework zur Analyse marginalisierter Gruppen und ihrer Verschränkung mehrfacher Dimensionen von Unterdrückung behandelt: 'groups associated with multiple, intersectional demographic attributes (e.g., Black women)'
 
-### Feministisch
+### Evidenz 5
 
 Explizite Verankerung in Black Feminist Theory (Crenshaw, Collins, hooks) und dekolonialer Theorie; Praxis wird als 'knowledge production' gegen 'epistemic violence' definiert: 'frameworks to articulate social inequalities have been integral to the survival of communities at the margins' - dies ist zentral für feministische Epistemologie
 
-### Fairness
+### Evidenz 6
 
 Kritische Analyse von Fairness-Metriken und deren Limitation: 'merely mentioning power does not entail engaging with it in depth'; Argument dass echte Fairness nur durch intersektionale Analyse möglich ist, die Machtstrukturen und sozialen Kontext einbezieht
 

@@ -4,13 +4,6 @@ authors: ["Nafees Alam"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-04
 source_file: Alam_2025_Social_work_in_the_age_of_artificial_intelligence.md
 confidence: 91
@@ -39,27 +32,27 @@ Theoretisch: Systematische Literaturanalyse (Narrative Review) mit Synthesierung
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Ethical AI literacy wird als zentrale Komponente definiert: 'the ability to understand, evaluate, and ethically use AI technologies' einschließlich technischen Verständnisses, kritischem Bewusstsein für soziale Implikationen und 'algorithmic translation' für Klienten.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf Predictive Analytics, Algorithmic Decision Systems und Risk Assessment Tools in Kinderschutz, psychische Gesundheit und Wohnunterstützung; Analyse von Automation Bias und Algorithm Aversion.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Explizit für Soziale Arbeit entwickelt; bezieht sich auf NASW Code of Ethics, sozialpädagogische Kernwerte (Menschenwürde, Selbstbestimmung, Gerechtigkeit), Micro-, Meso- und Makro-Ebenen der Praxis, sowie Ausbildung und Forschungsmethodologie.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Detaillierte Analyse wie AI-Systeme Marginalisierte Populationen unverhältnismäßig stark beeinträchtigen: Allegheny County-Fallbeispiel zeigt wie Armutsfaktoren als Missbrauchsindikatoren gekennzeichnet wurden; Thematisierung von Epistemic Injustice und Algorithmic Discrimination.
 
-### Diversitaet
+### Evidenz 5
 
 Fokus auf vulnerable Populationen, marginalisierte Communities, differenzielle Auswirkungen über sozialen Gruppen hinweg; Betonung von Community-zentrierter Partizipation, intersektionaler Berücksichtigung in Impact Assessments.
 
-### Fairness
+### Evidenz 6
 
 Entwicklung sozialpädagogik-informierter Fairness-Metriken; kontinuierliche Impact-Analysen mit Attention auf Differential Impacts; Algorithmic Auditing über technische Metriken hinaus; Stop LAPD Spying Coalition als Beispiel für Accountability.
 

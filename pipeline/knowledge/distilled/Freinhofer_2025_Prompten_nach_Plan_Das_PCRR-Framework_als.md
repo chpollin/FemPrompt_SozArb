@@ -4,12 +4,6 @@ authors: ["Dominik Freinhofer", "Gerlinde Schwabl", "Susanne Aichinger", "Sandra
 year: 2025
 type: journalArticle
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: Freinhofer_2025_Prompten_nach_Plan_Das_PCRR-Framework_als.md
 confidence: 91
@@ -38,23 +32,23 @@ Empirisch-iterativ: Entwicklung eines Frameworks basierend auf Hochschullehrgang
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fokus auf 'Schlüsselkompetenz für den kompetenten Umgang mit KI-Modellen' und 'Notwendigkeit, AI Literacy systematisch in Lehrpläne und Lehramtsausbildungen zu integrieren'; PCRR als pädagogisches Werkzeug für Schüler:innen und Lehrpersonen
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Bezug zu 'generativer Künstlicher Intelligenz' und Sprachmodellen (LLMs wie ChatGPT, Gemini, Claude) sowie Bildgeneratoren (Midjourney, Stable Diffusion, Adobe Firefly)
 
-### Prompting
+### Evidenz 3
 
 Zentraler Fokus auf Prompt Engineering mit vier Phasen (Plan-Create-Review-Reflect), verschiedenen Prompting-Techniken (Chain-of-Thought, N-Shot-Prompting, RAG, Delimiter, Format) und deren didaktische Vermittlung
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Diskussion digitaler Chancengleichheit: 'Schüler:innen ohne Zugang zu kostenpflichtigen Modellen könnten bei identischer Prompt-Formulierung qualitativ schlechtere Ergebnisse erhalten' und damit entstehende Disparitäten in Bewertung und Chancengerechtigkeit
 
-### Fairness
+### Evidenz 5
 
 Konzern mit ethischem Umgang mit KI, kritischer Beurteilung KI-generierter Ergebnisse und der Forderung nach 'nachhaltige[r] und verantwortungsbewusste[r] Nutzung von KI im Bildungsbereich'
 

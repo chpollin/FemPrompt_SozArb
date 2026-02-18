@@ -4,12 +4,6 @@ authors: ["Seventy F. Hall", "Melanie Sage", "Carol F. Scott", "Kenneth Joseph"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Hall_2024_A_systematic_review_of_sophisticated_predictive.md
 confidence: 93
@@ -38,23 +32,23 @@ Systematisches Literatur-Review mit quantitativer Synthese (Mann-Whitney U Tests
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf 'sophisticated predictive and prescriptive analytics' und 'machine learning models' im Kinderschutz; Analyse von supervised ML-Ansätzen (linear models, tree-based models, neural networks) zur Outcome-Vorhersage.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Expliziter Fokus auf child welfare agencies, caseworker decision-making, risk assessment und child removal decisions; Analyse von Praxisanwendungen in Kinderschutzsystemen und deren Auswirkungen auf sozialarbeiterische Praxis.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale Frage: 'To what extent do scholars address ethics, equity, and bias in their reporting of data source limitations, algorithmic design, and model implementation?'; Analyse von Diskriminierungsrisiken, insbesondere für 'families with frequent exposure to public systems'; Beispiel Wilson et al. (2015): Algorithmus identifizierte disproportional mehr Māori-Kinder als gefährdet.
 
-### Diversitaet
+### Evidenz 4
 
 Analyse von disparate impacts auf unterschiedliche racial/ethnic groups; Evaluierung von Equity durch Vergleich von Modellperformance und placement rates across racial subgroups; Thematisierung von marginalized communities und struktureller Benachteiligung.
 
-### Fairness
+### Evidenz 5
 
 Explizite Evaluation von algorithmic fairness durch Vergleich von AUC-Werten across racial subgroups (Chouldechova et al. 2018); Untersuchung von Fairness-Metriken und -Problemen; Diskussion von Equalized Odds (override rates across risk levels).
 

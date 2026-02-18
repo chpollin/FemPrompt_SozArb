@@ -4,13 +4,6 @@ authors: ["Andrei-Victor Chisca", "Camelia Lemnaru", "Andrei-Cristian Rad"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.md
 confidence: 75
@@ -39,27 +32,27 @@ Empirisch: Entwicklung einer neuartigen Prompt-Tuning-Methode für Bias-Mitigati
 
 ## Kategorie-Evidenz
 
-### Prompting
+### Evidenz 1
 
 Kern der Methode: 'We base our approach on prompt tuning (Lester et al., 2021), which involves concatenating a set of trainable embeddings to the embedded input of the model while keeping the other parameters frozen.' Fokus auf Template-basiertes Prompt-Design und Prompt-Tuning als Debiasing-Strategie.
 
-### KI_Sonstige
+### Evidenz 2
 
 Arbeit mit NLP-Modellen BERT und RoBERTa, Masked Language Modeling, Embedding-basierte Metriken; klassische NLP-Techniken ohne generativen Fokus.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Expliziter Fokus auf algorithmischen Bias: 'Large language models are prone to internalize social biases due to the characteristics of the data used for their self-supervised training scheme' und 'representational harms, such as disparate system performance, exclusion or stereotyping, or allocation harms, such as discrimination and unequal allocation of resources'.
 
-### Gender
+### Evidenz 4
 
 Gender-Bias-Mitigation ist Hauptfokus: '159 templates, mostly focused on genders in relation to professions/occupations'; systematische Evaluierung von Gender-Bias durch SEAT und StereoSet Gender-Tests; Analyse von Geschlechterstereotypen bei Berufsbezeichnungen.
 
-### Diversitaet
+### Evidenz 5
 
 Berücksichtigung mehrerer sozialer Gruppen und deren Repräsentation: 'we aim to give the model additional information at inference, in the form of compact prompt embeddings, which could enable it to implicitly infer a latent concept encompassing the desired behaviour: generating a fair and unbiased output' unter Beibehaltung der Gruppenidentität.
 
-### Fairness
+### Evidenz 6
 
 Zentrales Konzept der Fairness durchzieht die Arbeit: Fairness-Metriken (SEAT effect sizes, StereoSet stereotype scores), KL-Divergenz-basierte Loss-Funktion für faire Vorhersageverteilungen: 'we minimize the KL divergence between the probability distribution predicted by the model for the allowed options of the target slots and a reference probability distribution', Ziel fairer Vorhersagen über Gruppen hinweg.
 

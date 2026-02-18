@@ -4,16 +4,6 @@ authors: ["Lanzetta Miriam", "Acomi Nicoleta", "Acomi Ovidiu", "Abbruzzese Gianl
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for.md
 confidence: 92
@@ -42,39 +32,39 @@ Mixed Methods: Systematische Literaturanalyse (30+ Quellen), Fokusgruppen in 4 L
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy als 'Familiarity with AI concepts, terminology, and applications to understand how AI tools work and their impact on youth work practices.' Umfangreicher Fokus auf KI-Kompetenzen und Kompetenzrahmen für Jugendarbeiter:innen.
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT wird als Tool für Inhalterstellung, Ideengenerierung und kritisches Denken erwähnt: 'providing high-quality, free translation services and supporting critical thinking through tools like ChatGPT.'
 
-### Prompting
+### Evidenz 3
 
 Prompt Engineering als essenzielle Fähigkeit identifiziert: 'youth workers need to develop prompt engineering skills to generate relevant and personalised content effectively.'
 
-### KI_Sonstige
+### Evidenz 4
 
 Umfangreiche Diskussion von KI-Systemen allgemein: Suchmaschinen-Algorithmen, Personalisierung, 'Black Box' Decision-Making, Deep-Fakes, algorithmische Bias, Social Media AI-Systeme.
 
-### Soziale_Arbeit
+### Evidenz 5
 
 Direkter Fokus auf Jugendarbeiter:innen und Jugendarbeitspraxis: 'youth workers play a critical role in guiding young people to make an effective and responsible use of AI systems' und umfangreiche Analyse von KI-Use-Cases in Jugendarbeitskontexten.
 
-### Bias_Ungleichheit
+### Evidenz 6
 
 Algorithmischer Bias und Ungleichheit werden analysiert: 'aware that the data, on which AI depends, may include biases... search results about occupation may include stereotypes about male or female jobs' und Digital Divide zwischen englischsprachigen und nicht-englischsprachigen Tools.
 
-### Gender
+### Evidenz 7
 
 Geschlechtsspezifische Unterschiede in KI-Nutzung untersucht: 'Generative AI use among GenZ by gender' und stereotypische Bias in KI-Systemen ('male bus drivers, female salesperson').
 
-### Diversitaet
+### Evidenz 8
 
 Inklusion und Repräsentation werden betont: 'multilingual content and fostering cultural exchange and inclusivity', Herausforderungen mit lokalen Sprachen ('particularly problematic in countries like Greece, where there is a pressing need for localised AI solutions') und kulturelle Nuancen in KI-Interpretation.
 
-### Fairness
+### Evidenz 9
 
 Faire Nutzung von KI-Systemen und Schutzmechanismen: 'ensuring that these tools are used in ways that protect and respect young people's rights', Bias-Awareness und ethische Verantwortung in KI-Anwendungen.
 

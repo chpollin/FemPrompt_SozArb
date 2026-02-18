@@ -4,15 +4,6 @@ authors: ["Tanja Kubes"]
 year: 2024
 type: workingPaper
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für.md
 confidence: 95
@@ -40,35 +31,35 @@ Theoretisch/Pädagogisch mit praktischen Anwendungsbeispielen. Kombination von f
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Im Seminar lernen Studierende ihren alltäglichen Umgang mit KI-Anwendungen wie KI-Assistenzsystemen, Dating-Apps & ChatGPT aus soziotechnischer Perspektive kritisch zu analysieren.
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT wird explizit als Beispiel für intelligente Chatbots genannt, mit denen wir kommunizieren und die uns bei schriftlichen Arbeiten unterstützen.
 
-### KI_Sonstige
+### Evidenz 3
 
 Themenbereiche umfassen Robotik (Sexroboter, soziale Roboter), Algorithmen bei Dating-Apps, Gesichtserkennungssoftware und algorithmische Entscheidungssysteme.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Ein analytischer Blick wird auf Ungleichheits-, Diskriminierungs- und Exklusionsmechanismen von KI-Anwendungen geworfen und es werden die in die Technologie eingeschriebenen Bias, Sexismen, Rassismen, Dichotomien aufgedeckt.
 
-### Gender
+### Evidenz 5
 
 Der Fokus liegt auf normativen Algorithmen bei Dating-Apps, Konzepten von Geschlecht, Sexualität, Liebe und Begehren sowie Geschlechterperspektiven auf Robotik und Technologie.
 
-### Diversitaet
+### Evidenz 6
 
 Das Seminar berücksichtigt Ungleichheits- und Diskriminierungskategorien (race, class, disability, first generation academic, etc.) sowie intersektionale Mehrfachdiskriminierungen und betont die Notwendigkeit von Diversität in algorithmischen Modellen.
 
-### Feministisch
+### Evidenz 7
 
 Explizit wird eine feministische Perspektive verwendet, die Macht- und Herrschaftsstrukturen aufdeckt, queerfeministische Potenziale ausschöpft und aktivistische Aspekte einbezieht. Kontextualisierung in androzentrischen, eurozentrischen, anthropozentrischen, kapitalistisch-patriarchalen Strukturen.
 
-### Fairness
+### Evidenz 8
 
 Das Seminar zielt darauf ab, KI nicht nur leistungsstark und profitorientiert, sondern auch gerecht, fair und inklusiv zu gestalten und dabei Regulierungsmöglichkeiten für eine gerechtere inklusive KI zu entwickeln.
 

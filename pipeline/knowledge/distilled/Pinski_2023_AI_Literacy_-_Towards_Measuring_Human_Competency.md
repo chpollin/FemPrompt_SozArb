@@ -4,10 +4,6 @@ authors: ["Marc Pinski", "Alexander Benlian"]
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Fairness
 processed: 2026-02-05
 source_file: Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency.md
 confidence: 95
@@ -36,15 +32,15 @@ Mixed Methods: Systematische Literaturreview, 5 Expertinterviews, zwei Runden Ca
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Hauptfokus des Papers: 'we set out to develop a measurement instrument (scale) for general AI literacy, that is humans' socio-technical competencies regarding AI'. Definiert AI Literacy als Wissen und Erfahrung mit fünf Dimensionen (Technology Knowledge, Human Actors Knowledge, AI Steps Knowledge, Usage Experience, Design Experience).
 
-### KI_Sonstige
+### Evidenz 2
 
 Behandelt KI allgemein (Machine Learning, Neural Networks, autonome Systeme) nicht generativ: 'Berente et al. (2021) provide a concise view that distinguishes AI from non-AI technology by conceptualizing three unique facets of AI: autonomy, learning, and inscrutability'.
 
-### Fairness
+### Evidenz 3
 
 Thematisiert implizit Fair-AI durch Dimension 'AI ethics' und Fähigkeit, AI-Outputs angemessen zu bewerten: 'Higher-order thinking skills (e.g., evaluate, appraise, predict, design) with AI applications' und 'Human-centered considerations (e.g., fairness, accountability, transparency, ethics, safety)'.
 

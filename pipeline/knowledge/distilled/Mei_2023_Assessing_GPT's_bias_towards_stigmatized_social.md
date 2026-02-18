@@ -4,15 +4,6 @@ authors: ["Kashif, Afifah", "Patel, Heer"]
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.md
 confidence: 89
@@ -41,35 +32,35 @@ Empirisch; strukturierte Prompt-Serie mit systematischer Variation von zwei Nati
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf GPT-3.5/4/4o LLMs: 'Recent studies have separately highlighted significant biases within foundational large language models (LLMs) against certain nationalities and stigmatized social groups.'
 
-### Prompting
+### Evidenz 2
 
 Strukturierte Prompt-Engineering mit Likert-Skalen und invertierten Skalen: 'We prompt GPT-3.5, GPT-4, and GPT-4o in three steps... Ask to answer the question with a Likert scale... Re-prompt with a flipped Likert scale.'
 
-### KI_Sonstige
+### Evidenz 3
 
 NLP und algorithmische Bias-Analyse: 'evaluates model responses to several scenarios involving American and North Korean nationalities with various mental disabilities'
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Thematisiert vulnerable Gruppen (Menschen mit psychischen Erkrankungen, Migrant:innen) und alltägliche soziale Interaktionen (Wohnen, Kinderbetreuung, Arbeit): 'our prompts assess GPT's bias in everyday scenarios like renting, cohabiting, working, childcare, and marriage'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Explizite Analyse struktureller Diskriminierung: 'Findings reveal significant discrepancies in empathy levels with North Koreans facing greater negative bias, particularly when mental disability is also a factor. This underscores the need for improvements in LLMs designed with a nuanced understanding of intersectional identity.'
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Perspektive mit explizitem Fokus auf marginalisierte Gruppen: 'This research seeks to explore the intersectional nature of LLM biases... how do GPT biases towards nationality and mental disabilities intersect and affect marginalized groups?'
 
-### Feministisch
+### Evidenz 7
 
 Verwendung intersektionaler Theorie und Perspektive auf marginalisierte Identitäten, die in der feministischen Kritik sozialer Systeme verankert ist: 'apply a novel approach in using an intersectional lens towards nationality prejudice and psychophobia'
 
-### Fairness
+### Evidenz 8
 
 Evaluation von algorithmischer Fairness und Equity: 'evaluate model responses... Findings reveal significant discrepancies... underscores the need for improvements in LLMs designed with a nuanced understanding of intersectional identity... ensure equitable treatment of global users'
 

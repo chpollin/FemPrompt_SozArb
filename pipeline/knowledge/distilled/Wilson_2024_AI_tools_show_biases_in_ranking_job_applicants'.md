@@ -4,13 +4,6 @@ authors: ["Kyra Wilson", "Aylin Caliskan"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'.md
 confidence: 94
@@ -39,27 +32,27 @@ Empirisch: Audit-Studie mit über 500 öffentlich verfügbaren Lebensläufen und
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf Massive Text Embedding Models als spezialisierte LLMs für Retrieval-Aufgaben: 'While many studies have characterized the biases of foundation or instruction-tuned LLMs, very few have investigated the biases of MTEs'
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Direkter Bezug zu Einstellungsprozessen und deren Auswirkungen auf Chancengleichheit und gesellschaftliche Ungleichheit: 'AI hiring tools have revolutionized resume screening... it is estimated that 99% of Fortune 500 companies are already using some sort of AI assistance'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale Fokussierung auf algorithmischen Bias und Diskriminierung: 'We find that the MTEs are biased, significantly favoring White-associated names in 85.1% of cases and female-associated names in only 11.1% of cases'
 
-### Gender
+### Evidenz 4
 
 Explizite Gender-Analyse und Geschlechts-Bias: 'While male names were also favored compared to female names in the majority of experiments, the disparities were less than those demonstrated using Black versus White names'
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Analyse mehrerer marginalisierter Gruppen und deren Repräsentation: 'Intersectional comparisons reveal resumes that contain Black male names are highly unfavored in resume screening'
 
-### Fairness
+### Evidenz 6
 
 Fokus auf Fairness in algorithmischen Systemen und Fairness-Metriken: 'We use a chi-square test to determine whether the selected resumes are distributed uniformly amongst relevant groups'
 

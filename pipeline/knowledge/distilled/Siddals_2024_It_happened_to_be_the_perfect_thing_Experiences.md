@@ -4,14 +4,6 @@ authors: ["Steven Siddals", "John Torous", "Astrid Coxon"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences.md
 confidence: 94
@@ -40,31 +32,31 @@ Empirisch - qualitativ: Semi-strukturierte Interviews (n=19) mit reflexiver them
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Studie untersucht, wie Nutzer generative KI-Technologien verstehen und nutzen: 'Given the novelty of generative AI and the nascent state of the field, qualitative research is an important starting point to generate rich foundational insights into individuals' subjective experiences' und empfiehlt, dass Kliniker 'build their awareness of the potential benefits and limitations of these tools'.
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf generative KI-Chatbots wie ChatGPT, Gemini, Pi und Inflection: 'generative AI chatbots like OpenAI's ChatGPT, Google's Gemini, and Inflection's Pi are trained on vast amounts of data, enabling them to understand and generate language with remarkable proficiency'.
 
-### KI_Sonstige
+### Evidenz 3
 
 Vergleichende Analyse mit regelgestützten KI-Chatbots (Woebot, Wysa) und Diskussion algorithmischer Sicherheitsmaßnahmen sowie technischer Begriffe wie Halluzinationen und Black-Box-Natur von LLMs.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Direkte Relevanz für psychische Gesundheitsversorgung und therapeutische Interventionen: 'Digital mental health interventions (DMHIs) have emerged over the last decade as a promising potential response to the treatment gap' und Empfehlungen für Kliniker zur Integration dieser Tools in ihre Praxis.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Identifiziert Zugangsherausforderungen und Bevölkerungslücken: 'Well-educated, tech-savvy nature of our participant sample suggests that the benefits of this technology may not currently be connecting with the full population who need mental health support' und diskutiert die Bedeutung von Geschäftsmodellen und Finanzierbarkeit für Zugänglichkeit.
 
-### Diversitaet
+### Evidenz 6
 
 Thematisiert Unterschiede in Zugangsrealitäten und fehlende Repräsentation: 'While our convenience sampling strategy resulted in a diverse set of participants by country, age and gender, many populations and groups were not represented. Most of our participants lived in high-income countries, were tech-savvy and well-educated' und schlägt Lösungen für spezifische Populationen vor.
 
-### Fairness
+### Evidenz 7
 
 Diskutiert faire Sicherheitsmaßnahmen und algorithmische Gerechtigkeit: 'providing the safest response to those in crisis may require a more nuanced, balanced and sophisticated approach, based on a more complete understanding of capabilities and risks'.
 

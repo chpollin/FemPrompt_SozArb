@@ -4,13 +4,6 @@ authors: ["Maarit Jaakkola"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md
 confidence: 91
@@ -39,27 +32,27 @@ Theoretisch + Reflektive Essay basierend auf Workshops; Empirische Basis: 4 stru
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The essay 'outlines a positive-constructive pedagogy as an approach to enhancing AI literacies of different types, with a focus on the individual's personal relationship to AI technologies.' UNESCO competency frameworks sind zentral: 'four dimensions: a human-centered mindset, ethics of AI, AI techniques and applications, and AI system design.'
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf generative AI und Large Language Models: 'genAI seems more appealing because of its concrete form, in particular as large language models such as ChatGPT, Copilot, or Claude.' Bildgeneratoren: 'Playground AI' für Bildgenerierung in Workshops.
 
-### Prompting
+### Evidenz 3
 
 Prompt-Engineering wird adressiert: 'those who actively test and learn by trial can be better equipped to encounter AI-driven technologies at the workplace, as they have developed a sense for critical prompting.' Beispiel 2 bezieht sich auf Prompt-Variationen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Analyse der Medienabdeckung zeigt male domination: 'almost 60% of news articles across different outlets covered new industry products... These are typically promoted and commented on by male stakeholders.' Bias in AI-Systemen wird adressiert: 'Learners are asked to create visualizations of a given group of people...to engage with the various biases and instances of cultural insensitivity that may occur in AI systems.'
 
-### Diversitaet
+### Evidenz 5
 
 Unter-Repräsentation verschiedener Perspektiven in AI-Diskursen: 'The dominance of insider and tech expert views overshadows experts from the academy and governments, female experts, activists, non-governmental organizations (NGOs), and other civil-society representatives, as well as ordinary customers, educators, and citizens.'
 
-### Fairness
+### Evidenz 6
 
 Strukturelle Gerechtigkeit wird in der Exit-Phase adressiert: 'A key pedagogical objective in engaging learners with AI, therefore, lies in making visible the often-invisible infrastructures—technological, organizational, and societal—that individuals rely on' und 'Educators can help learners situate their experiences within larger systems of power and influence, fostering both individual agency and structural awareness.'
 

@@ -4,14 +4,6 @@ authors: ["Amnesty International"]
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-04
 source_file: Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.md
 confidence: 95
@@ -42,31 +34,31 @@ Mixed Methods: Dokumentenanalyse, Interviews mit Betroffenen, Freedom of Informa
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper thematisiert kritisch den mangelnden Aufbau von Kompetenzen bei Caseworkern im Umgang mit Algorithmen: 'Ensure that Udbetaling Danmark/ATP and municipalities provide caseworkers with additional training and capacity building where necessary to address and prevent issues such as automation bias.' Es behandelt Fragen algorithmischer Transparenz und das Verständnis der Öffentlichkeit für KI-Systeme.
 
-### KI_Sonstige
+### Evidenz 2
 
 Detaillierte Analyse von Machine-Learning-basierten Betrugskontrollalgorithmen, die Fraud-Detection durchführen: 'algorithms are deployed by UDK to classify or predict a person's circumstances, such as their relationship status, or whether they've left the country without informing the welfare agency' sowie Discussion von Register-Merging, Risk-Scoring und semi-automatisierten Entscheidungssystemen.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkte Analyse des Sozialhilfesystems und dessen digitaler Transformation: 'welfare system known as Udbetaling Danmark (Pay Out Denmark), undermines human rights through its use of analogue and digital forms of surveillance to detect social benefits fraud.' Fokus auf Zugang zu Sozialhilfe, Caseworker-Praktiken, Betroffene von Sozialpolitik.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Thematisierung von algorithmischem Bias und struktureller Diskriminierung: 'These characteristics or variables can act as proxies for race, migration status, and socio-economic status and can encourage discrimination' sowie 'Structural discrimination, heightened risk of algorithmic discrimination' und Analyse wie Algorithmen gegen Migranten, ethnische Minderheiten, Menschen mit Behinderungen, arme Menschen discriminieren.
 
-### Gender
+### Evidenz 5
 
 Explizite Thematisierung geschlechtsspezifischer Auswirkungen: 'Discrimination is also present as a result of the digitalization of the benefits system. This is because for some marginalised groups, including women in crisis and people with disabilities, accessing a digital service independently is not possible' sowie 'intersectional harms of technologies' und Empfehlungen für Frauen in Krisenzentren.
 
-### Diversitaet
+### Evidenz 6
 
 Durchgehende intersektionale Perspektive auf marginalisierte Gruppen: 'low-income groups, racialised groups, including migrants and people who have been granted refugee status in Denmark, ethnic minorities, people with disabilities, and older people' sowie Discussion von 'intersectional discrimination' und 'foreignness' als Diskriminierungsgrund.
 
-### Fairness
+### Evidenz 7
 
 Explizite Thematisierung algorithmischer Fairness und deren Fehlen: 'absence of demographic data prevents statistical bias and fairness testing' sowie Diskussion von Performance-Metriken, Evaluation, Confusion Matrix und die Forderung nach 'bias and fairness testing' und Fairness-Audits.
 

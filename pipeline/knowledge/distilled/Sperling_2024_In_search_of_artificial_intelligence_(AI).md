@@ -4,12 +4,6 @@ authors: ["Katarina Sperling", "Carl-Johan Stenberg", "Cormac McGrath", "Anna Å
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Sperling_2024_In_search_of_artificial_intelligence_(AI).md
 confidence: 89
@@ -38,23 +32,23 @@ Scoping Review; systematische Literaturanalyse von 34 Papern und Proceedings (20
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy has recently emerged in a landscape rich with a variety of literacies, necessitated by the pervasive presence of AI in contemporary society. The study explicitly examines 'how the scientific literature conceptualises AI literacy in relation to teachers' different forms of professional knowledge relevant for Teacher Education.'
 
-### KI_Sonstige
+### Evidenz 2
 
 The paper discusses machine learning, natural language processing (NLP), algorithms, automated grading systems, and AI-based educational technologies. It covers 'AI-based educational technologies into classrooms and universities' and discusses how 'AI often operates autonomously and can adapt according to the context.'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The literature addresses 'data biases' and the paper discusses algorithmic bias in automated grading systems. Teachers exhibit 'confirmation bias' and 'algorithm aversion.' The paper notes concerns about 'surveillance' and 'potential impact on employment and sustainable development.' Discussion of how AI can perpetuate inequality through biased systems.
 
-### Diversitaet
+### Evidenz 4
 
 The paper emphasizes that AI literacy considerations should account for 'factors like age, prior experience, preconceptions, and the learners' identities, values, and backgrounds.' It notes that resources 'seldom cater to diverse age groups or varying levels of prior knowledge' and discusses challenges in reaching different populations.
 
-### Fairness
+### Evidenz 5
 
 Concerns about 'fairness' in AI systems, particularly regarding automated grading. Discussion of 'reliability and fairness' of AI EdTech. The paper addresses 'algorithmic fairness' implicitly through discussions of bias in automated assessment and the need for teachers to understand 'capabilities and constraints' of AI systems.
 

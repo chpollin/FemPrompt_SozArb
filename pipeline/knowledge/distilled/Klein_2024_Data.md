@@ -4,15 +4,6 @@ authors: ["Lauren Klein", "Catherine D'Ignazio"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Klein_2024_Data.md
 confidence: 95
@@ -40,35 +31,35 @@ Theoretisch; Literaturbasierte Analyse und Reartikulierung existierender Prinzip
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Diskussion darüber, wie KI-Forscher:innen und -Entwickler:innen feministische Prinzipien in ihre Arbeit integrieren können; 'people working with data, who wanted to work with data, or who wanted to refuse to work with data on political or personal grounds'
 
-### Generative_KI
+### Evidenz 2
 
 Extensive Diskussion von Language Models, Large Language Models (LLMs), generativen KI-Systemen und deren Trainings-Datenquellen; 'training data, which we began to discuss with respect to language models'; 'the energy and water requirements of LLMs'
 
-### KI_Sonstige
+### Evidenz 3
 
 Breite KI-Themen behandelt: Computer Vision, NLP, Algorithmic Decision-Making, Facial Analysis, Topic Modeling, Deep Fakes; 'research on computer vision systems', 'text-to-image models'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kernfokus auf algorithmischen Bias und strukturelle Ungleichheit: 'how data was being used to amplify existing structural inequalities'; 'reproduce of sexist, racist, and colonial biases'; Analyse von Machtstrukturen und Diskriminierungsmechanismen
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus auf Geschlechtergewalt, Abtreibungsrechte, Trans-Gerechtigkeit, Gender-Bias in NLP; 'attacks on the bodily autonomy of some are attacks on the autonomy of all'; Diskussion von Deepfakes und 'AI-induced gender violence'
 
-### Diversitaet
+### Evidenz 6
 
 Durchgehender Fokus auf marginalisierte Communities, intersektionale Perspektiven, Global South vs. Global North; 'women of color feminists, and Black feminists'; 'Two Spirit, genderqueer, travesti, nonbinary people'; indigene feministische Perspektiven
 
-### Feministisch
+### Evidenz 7
 
 Explizit intersektional-feministische Theorie als Fundament; Referenzen zu Crenshaw (Intersectionality), Combahee River Collective, Patricia Hill Collins (Matrix of Domination); 'intersectional feminism', 'feminist epistemology'; Wendung zu Ökofeminismus und queeren Zustimmungskonzepten
 
-### Fairness
+### Evidenz 8
 
 Kritische Analyse von Fairness-Ansätzen in ML/KI; Discussion von 'AI fairness research' und deren Limitationen; Verknüpfung mit strukturellen Machtfragen über technische Fairness-Metriken hinaus
 

@@ -4,14 +4,6 @@ authors: ["Ravi Varma Kumar Bevara", "Nishith Reddy Mannuru", "Sai Pranathi Kare
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Zayed_2024_Scaling_implicit_bias_analysis_across.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch: Word Embedding Association Test (WEAT) zur Bias-Messung, BERT-basiert
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fokus auf kritisches Verständnis von KI-Systemen: 'the need to tap into the possibilities of the growing world of text and enable smooth interaction between humans and computers' und Betonung ethischer KI-Integration in Kernfunktionalität.
 
-### Generative_KI
+### Evidenz 2
 
 Explizite Arbeit mit GPT-Modellen (GPT-2 base/medium/large/xl, GPT-3.5 für Annotation): 'prompt the GPT-3.5 model using the OpenAI API' und Analyse von Generative Pretrained Transformer Architekturen.
 
-### Prompting
+### Evidenz 3
 
 Zentrale Methodik: 'prompt engineering is used on base models to create a controlled environment for testing how well it works at reducing bias' mit spezifischen Prompt-Designs für Genre-Klassifizierung und Bias-Reduktion.
 
-### KI_Sonstige
+### Evidenz 4
 
 Umfangreiche NLP-Analyse mit BERT, Word Embedding Association Test, k-means Clustering, t-SNE Visualisierung und Transformer-Architektur-Analyse über 15+ Modelle.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Direkter Fokus: 'the peril of prejudiced AI systems perpetuating stereotypes and misinformation' und 'AI will eventually start preferring certain groups over others, which diminishes fairness' sowie Analyse wie Bias zu 'unjust treatment of certain demographic groups' führt.
 
-### Diversitaet
+### Evidenz 6
 
 Thematisiert Repräsentationsprobleme in KI: 'strong positive bias towards Action content may lead to an overrepresentation of masculine-coded themes, while a negative bias against Romance could marginalize feminine-coded narratives' und 'the need for more balanced and inclusive language generation'.
 
-### Fairness
+### Evidenz 7
 
 Kernthema: 'ensuring fairness is vital to prevent AI systems from perpetuating existing biases' und detaillierte Fairness-Metriken durch WEAT effect sizes (z.B. 0.635, -0.805, 0.019 für verschiedene Genre-Assoziationen) zur Quantifizierung von Bias und Fairness-Verbesserung.
 

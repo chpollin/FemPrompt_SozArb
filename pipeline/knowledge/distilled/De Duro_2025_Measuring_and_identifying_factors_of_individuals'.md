@@ -4,14 +4,6 @@ authors: ["Edoardo Sebastiano De Duro", "Giuseppe Alessandro Veltri", "Hudson Go
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: De Duro_2025_Measuring_and_identifying_factors_of_individuals'.md
 confidence: 91
@@ -41,31 +33,31 @@ Empirisch, Mixed-Methods: Psychometrische Skalenentwicklung (TILLMI) mit LLM-sim
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper entwickelt ein Messinstrument für Nutzerkompetenz und kritisches Verständnis im Umgang mit LLMs: 'measuring individuals' trust in LLMs' als zentrale Literacy-Komponente. Nutzer mit direkter LLM-Erfahrung zeigen signifikant höheres Vertrauen als Nicht-Nutzer (t(998)=23.61, p<.001).
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf Large Language Models: 'LLMs present unique challenges that extend beyond traditional human-computer trust dynamics. Unlike simpler automated systems or social robots, LLMs present the unique capability of engaging in natural language exchanges that closely mirror human ones.'
 
-### KI_Sonstige
+### Evidenz 3
 
 Psychometrische Methoden und Psychological Science Ansätze zur KI-Vertrauensmessung; Network Psychometrics und Machine Learning (DASentimental) zur Datenanalyse.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Signifikante demografische Disparitäten: 'Younger males exhibited higher closeness with- and reliance on LLMs compared to older women' (Gender: β=-0.317/-0.638, Age: β=-0.457/-0.284). Digital Divide bezüglich LLM-Zugang und Vertrauensentwicklung.
 
-### Gender
+### Evidenz 5
 
 Explizite Geschlechtsunterschiede als Hauptergebnis: Männer und jüngere Personen zeigen signifikant höheres Vertrauen. Die Analyse nach Geschlecht (1=Male, 2=Female) ist zentral in der Regressionsanalyse (Table 5). Gendereffekte unterscheiden sich je nach Zielgruppe: 'literature regarding gender effects on trust towards AIs shows findings that differ according to the target of human trust.'
 
-### Diversitaet
+### Evidenz 6
 
 Unterschiedliche Vertrauensniveaus je nach Altersgruppe, Geschlecht und Nutzungserfahrung; jedoch limitierte Analyse anderer Diversitätsdimensionen (Ethnizität, Behinderung, SES werden nicht systematisch untersucht).
 
-### Fairness
+### Evidenz 7
 
 Ethische Implikationen von Vertrauen in LLMs für Fairness: 'measuring trust is essential for both leveraging the benefits of AI and guarding against its potential harms.' Konzeptionalisierung fairen Zugangs: 'Without trust, users may hesitate to follow AI-generated advice, share sensitive information, or integrate these tools into daily workflows.'
 

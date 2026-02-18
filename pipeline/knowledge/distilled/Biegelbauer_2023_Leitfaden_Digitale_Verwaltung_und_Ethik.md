@@ -4,13 +4,6 @@ authors: ["Peter Biegelbauer", "Caroline Lackinger", "Sven Schlarb", "Edgar Suba
 year: 2023
 type: report
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.md
 confidence: 75
@@ -39,27 +32,27 @@ Theoretisch/Mixed – Literaturanalyse, Stakeholder-Workshops mit Verwaltungsbed
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 KI Literacy wird als eigenständige Maßnahme definiert: 'Förderung eines Grundverständnisses von KI-Anwendungen, deren Voraussetzungen und Anwendungen sowie deren Auswirkung auf Verwaltung, Staat und Gesellschaft als Grundbedingung'. Der Leitfaden fordert explizit: 'Durch welche Maßnahmen wird die KI-Kompetenz der Verwaltungsbediensteten gefördert' und 'Wie wird die KI-Kompetenz der breiten Öffentlichkeit [...] gefördert?'
 
-### KI_Sonstige
+### Evidenz 2
 
 Der Leitfaden behandelt vielfältige KI-Technologien: Maschinelles Lernen, neuronale Netze, Chatbots, Algorithmen, Predictive Analytics. Kapitel 3 'Technik: Was ist KI?' bietet grundlegende technische Erklärungen. Der AI Act wird detailliert analysiert mit seiner Risikopyramide für verschiedene KI-Systeme.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Die Verwaltung wird als Kontaktpunkt zwischen Bürgern und Staat mit sozialer Verantwortung positioniert: 'Vertrauen in öffentliche Institutionen kann bei negativen Auswirkungen von Verwaltungshandlungen rasch beschädigt werden'. Konkrete Auswirkungen auf vulnerable Gruppen werden thematisiert, z.B. in Bereichen Strafverfolgung, Migration, Infrastruktur, Sozialleistungen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Unvoreingenommenheit und Fairness sind eigenständiges Kriterium: 'Verwendung vielfältiger Daten und Modelle, um zu vermeiden, dass bestehende Vorurteile fortbestehen bzw. in der KI-Anwendung implizit mitwirken'. Die Checkliste fragt: 'Wurde sichergestellt, dass die KI-Anwendung keine Personen stigmatisieren oder diskriminieren kann? (Z. B. aufgrund von Geschlecht, ethnischer oder sozialer Herkunft, Alter, sexueller Ausrichtung, Religion oder Weltanschauung)'.
 
-### Diversitaet
+### Evidenz 5
 
 Barrierefreiheit und Inklusion werden als eigenständiges Kriterium verankert: 'Möglichkeit der Nutzung und Verfügbarkeit von KI-Technologien für Personen mit unterschiedlichen Fähigkeiten, Hintergründen und Kulturen'. Fragen zur Inklusion: 'Wie wird die KI-Anwendung für Menschen mit unterschiedlichen Fähigkeiten, Hintergründen und Kulturen zugänglich und integrativ gestaltet?'
 
-### Fairness
+### Evidenz 6
 
 Fairness ist explizites Fairness-Kriterium im EKIV-Katalog: 'Unvoreingenommenheit und Fairness: Verwendung vielfältiger Daten und Modelle, um zu vermeiden, dass bestehende Vorurteile fortbestehen'. Der Leitfaden fragt: 'Welche Kriterien werden verwendet, um festzustellen, ob die Anwendung fair ist?' und 'Wie wird sichergestellt, dass die zum Training der KI-Anwendung verwendeten Daten vielfältig und repräsentativ sind?'
 

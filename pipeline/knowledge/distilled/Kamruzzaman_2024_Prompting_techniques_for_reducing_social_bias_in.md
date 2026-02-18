@@ -4,13 +4,6 @@ authors: ["Mahammed Kamruzzaman", "Gene Louis Kim"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md
 confidence: 94
@@ -39,27 +32,27 @@ Empirisch: Vergleichende Analyse von 12 verschiedenen Prompting-Techniken (Stand
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf Large Language Models (GPT-4, GPT-3.5, Llama 2, Mistral7B, Gemini) und deren Bias-Eigenschaften: 'These models display remarkable linguistic capabilities, crafting responses that not only mimic human language'
 
-### Prompting
+### Evidenz 2
 
 Zentrale Methode: 'We use 12 different types of prompting techniques in our paper including the combinations of CoT, System 1, System 2, and Persona' mit detaillierten Prompt-Engineering-Strategien und Zero-Shot-Varianten
 
-### KI_Sonstige
+### Evidenz 3
 
 NLP-Techniken und Dual-Process-Theorie aus kognitiver Psychologie: 'NLP researchers often compare zero-shot prompting in LLMs to System 1 reasoning and chain-of-thought (CoT) prompting to System 2'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Expliziter Fokus auf soziale Biases: 'LLMs continue to struggle with embedded social biases. These biases show up in different ways, including stereotyping and biased answers' über 9 Bias-Kategorien einschließlich Rassismus, Gender, Religion, Nationalität
 
-### Diversitaet
+### Evidenz 5
 
 Untersuchung von 9 verschiedenen Bias-Kategorien (Ageism, Beauty, Gender, Race, Religion, Nationality, Profession, etc.) repräsentiert multiple marginalisierte Gruppen und intersektionale Aspekte
 
-### Fairness
+### Evidenz 6
 
 Fokus auf Bias-Reduktion und faire LLM-Outputs: 'This task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven communication and decisions'
 

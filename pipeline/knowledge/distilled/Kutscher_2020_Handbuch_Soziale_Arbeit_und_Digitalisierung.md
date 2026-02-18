@@ -4,13 +4,6 @@ authors: ["Nadia Kutscher", "Thomas Ley", "Udo Seelmeyer", "Friederike Siller", 
 year: 2020
 type: book
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.md
 confidence: 75
@@ -39,27 +32,27 @@ Theoretisch/Review: Handbuch mit systematischer Auswahl von Beiträgen aus versc
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Entwicklung eines sechsdimensionalen Modells der Medienpädagogischen Kompetenz, das Orientierungswissen über technologische Entwicklungen, eigene Medienkompetenz, Fähigkeiten zur Förderung von Medienkompetenz bei Adressat*innen und organisationales Handlungswissen umfasst.
 
-### KI_Sonstige
+### Evidenz 2
 
 Behandlung von digitalen Technologien, Algorithmen, Big Data Analytics, Assistiven Technologien, Sozialen Robotern, digitaler Dokumentation und Risikodiagnostik in der Sozialen Arbeit.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Gesamter Fokus auf Digitalisierung in der Sozialen Arbeit, mit Kapiteln zu allen Handlungsfeldern (Jugendhilfe, Altenhilfe, Behindertenhilfe, Suchtberatung, Obdachlosenhilfe, Arbeit mit Geflüchteten) und Professionalisierung.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kapitel zu digitalen Ungleichheiten (Iske & Kutscher): 'Digitale Ungleichheiten im Kontext Sozialer Arbeit' thematisiert Digital Divide und Reproduktion sozialer Ungleichheit durch Medienhandeln. 'Datafizierung und Algorithmisierung' behandelt strukturelle Auswirkungen.
 
-### Diversitaet
+### Evidenz 5
 
 Mehrfache Bezüge zur Förderung medialer Teilhabe, Handlungsfähigkeit und Partizipation von verschiedenen Gruppen (Kindern, Jugendlichen, älteren Menschen, Menschen mit Behinderungen, Geflüchteten, Wohnungslosen); Kapitel zur Inklusion und Medienbildung.
 
-### Fairness
+### Evidenz 6
 
 Behandlung ethischer Fragen der Sozialen Arbeit im Kontext von Digitalisierung, informationeller Selbstbestimmung, Datenschutz sowie faire Nutzung digitaler Technologien im Dienste der Adressat*innen.
 

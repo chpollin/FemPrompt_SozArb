@@ -4,14 +4,6 @@ authors: ["Irina Zakharova", "Juliane Jarke", "Anne Kaun"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Zakharova_2024_Tensions_in_digital_welfare_states_Three.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch-konzeptionell mit empirischen Vignetten aus Deutschland und Schweden
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Algorithmen, digitale Infrastrukturen, Datenifikation, automatisierte Entscheidungssysteme in Wohlfahrtsadministration: 'Digital technologies, however, are often developed in line with a logic of control and dispositions around surveillance and efficiency'
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Digitale Wohlfahrtsleistungen, Care-Arbeit, Altenbetreuung, Wohnungsversorgung, Schulverwaltung: 'welfare technologies use digital data in decisions on citizenship; welfare benefit eligibility assessment, calculation, and payments'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Intersektionale Diskriminierung, Überwachung vulnerabler Gruppen, strukturelle Benachteiligung: 'vulnerable populations often emerge as testing grounds for new technologies relating to the intersection of class-based racial and citizenship dynamics'
 
-### Gender
+### Evidenz 4
 
 Unsichtbare, weiblich geprägte Datenarbeit, geschlechtsspezifische Arbeitsteilung: 'secretaries...were predominantly women...and often part-time working women...receive' niedrigere Löhne als männliche Datenspezialisten
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionalität, marginalisierte Communities, mehrfach diskriminierte Gruppen: 'Intersectional perspectives further shed light on the multiple ways in which care is not only gendered, but is also provided and received according to other, overlapping socio-demographic and socio-economic categories'
 
-### Feministisch
+### Evidenz 6
 
 Explizite Anwendung feministischer Care-Theorie (Tronto, Puig de la Bellacasa, Sevenhuijsen), intersektionale feministische Perspektive: 'The concept and ethics of care has a long tradition in feminist and sociological thought' und 'we understand government care as a social capacity and activity involving the nurturing of all that is necessary for the welfare and flourishing of life'
 
-### Fairness
+### Evidenz 7
 
 Fairness im Zugang zu Care, gerechtfertigte Systeme, soziale Gerechtigkeit, algorithmische Ungerechtigkeit: 'we add to the literature concerned with social justice by shifting attention from big-scale ethics of digital technologies to the everyday lived experiences in-between state control and care'
 

@@ -4,12 +4,6 @@ authors: ["Fengchun Miao", "Kelly Shiohira", "Natalie Lao", "Lidija Kralj"]
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Unknown_AI_competency_framework_for_students.md
 confidence: 89
@@ -38,23 +32,23 @@ Theoretisch/Review - Entwicklung eines globalen Kompetenzrahmens basierend auf U
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The framework outlines 12 competencies across four dimensions including Human-centred mindset, Ethics of AI, AI techniques and applications, and AI system design spanning three progression levels: Understand, Apply, and Create. It aims to help educators integrate AI learning objectives into curricula with detailed curricular goals and pedagogical methodologies.
 
-### KI_Sonstige
+### Evidenz 2
 
 The framework covers AI techniques including supervised learning, unsupervised learning, reinforcement learning, data preprocessing, algorithms, AI architectures, machine learning models, and open-source AI tools and datasets (MNIST, CIFAR, ImageNet, Teachable Machine, PyTorch, Keras).
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The framework emphasizes inclusive and equitable quality education and addresses the digital divide through commitment to lifelong learning opportunities for all. It notes that 'by 2022, only 15 countries had included AI learning objectives in their national curricula' and calls for ensuring 'AI supports the development of human capabilities, protects human dignity and agency, and promotes justice and sustainability.'
 
-### Diversitaet
+### Evidenz 4
 
 UNESCO's mandate anchors the framework in principles of human rights, inclusion and equity, with special focus on gender equality and Africa. The framework emphasizes linguistic and cultural diversity, stating competencies are 'based on principles of inclusivity, the centrality of human agency, nondiscrimination, and respect for linguistic and cultural diversity.'
 
-### Fairness
+### Evidenz 5
 
 The framework includes ethics of AI dimension requiring students to apply 'deepened human-centred values and ethical principles' and to consider 'anti-bias data structure' in AI system architecture. It emphasizes 'fair representations in datasets' and requires students to evaluate AI systems for societal implications and potential harms.
 

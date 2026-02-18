@@ -4,11 +4,6 @@ authors: ["Vítor Bernardo"]
 year: 2023
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md
 confidence: 88
@@ -37,19 +32,19 @@ Theoretisch/Review - Analyse und Darstellung von Konzepten, Risiken und Best Pra
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Fokus auf Verständnis und kritische Reflexion von KI-Systemen durch verschiedene Stakeholder: 'XAI empowers individuals with understandable insights into how their personal data is being handled'
 
-### KI_Sonstige
+### Evidenz 2
 
 Breite Behandlung von ML, Deep Learning, neuronalen Netzwerken und algorithmischen Entscheidungssystemen: 'AI systems such as machine learning (ML) or deep learning (DL) use algorithms learned by their own process of training'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Explizite Analyse von Diskriminierungsrisiken und Bias in KI: 'when AI is used to select job applicants, systems might inadvertently favour candidates from certain demographics or backgrounds due to biased training data'
 
-### Fairness
+### Evidenz 4
 
 Zentrale Behandlung von Fairness-Anforderungen und Fairness-Implementierung: 'the limitations of black box approaches should be considered when trying to assess the fairness of the models'
 

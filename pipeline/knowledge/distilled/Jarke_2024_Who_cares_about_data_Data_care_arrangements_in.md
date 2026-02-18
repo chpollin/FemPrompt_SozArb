@@ -4,13 +4,6 @@ authors: ["Juliane Jarke", "Stefanie Büchner"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Jarke_2024_Who_cares_about_data_Data_care_arrangements_in.md
 confidence: 95
@@ -39,27 +32,27 @@ Empirisch, qualitativ; zwei Fallstudien mit Interviews, Beobachtungen und Dokume
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf algorithmische Systeme, digitale Infrastrukturen, Datenverwaltungssysteme und automatisierte Prozesse in Organisationen: 'school management information systems (SMIS)', 'electronic patient records', 'data-driven technologies'.
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Empirische Fallstudie in Jugendhilfeorganisationen mit Fokus auf Sozialarbeitspraxis, Fallkonferenzen und Beratungsarbeit: 'social workers', 'youth welfare services', 'case work', 'Care Planning Conferences'.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Adressiert strukturelle Ungleichheiten in Datenpflegearrangements: 'invisibility and devaluation of care labour often goes hand in hand with the invisibility and devaluation of additional data labour'. Thematisiert, wie Frontline-Arbeiter marginalisiert werden: 'workers...somehow doing data work in addition to and alongside their existing tasks'.
 
-### Diversitaet
+### Evidenz 4
 
 Analyse heterogener und marginalisierter Positionen: unterschiedliche Berufsgruppen (Sozialarbeiter, Lehrer, Schulsekretärinnen, Stundenplaner) mit divergierenden Perspektiven und Pflegepflichten; intersektionale Analyse von Organisationshierarchien und Professionen.
 
-### Feministisch
+### Evidenz 5
 
 Explizit auf Feminist STS und Care-Theorie gegründet: 'In feminist STS, an interesting body of scholarship has extended research on care work'. Referenzen auf Puig de la Bellacasa (care as ethico-political obligation), Mol (logic of care), Criado & Rodríguez-Giralt (sociomaterial care arrangements). Verwendet feministische Konzepte von 'persistent tinkering', 'dark sides of care', Paternalismus und relationalen Arrangements.
 
-### Fairness
+### Evidenz 6
 
 Adressiert faire Datenverwaltung und gerechtigkeit in Datenpflegearrangements: 'dialogue is needed between the multiple departments, hierarchies and professions about prioritisation and the work behind requirements for more and better data'. Kritisiert, dass Managements Datenwerte ohne Berücksichtigung von Frontline-Realitäten durchgesetzt werden, was zu unfairen Arbeitslasten und Datenqualitätsproblemen führt.
 

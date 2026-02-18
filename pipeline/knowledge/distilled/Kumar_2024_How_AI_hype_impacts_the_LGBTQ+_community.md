@@ -4,15 +4,6 @@ authors: ["Dawn McAra-Hunter"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.md
 confidence: 95
@@ -40,31 +31,31 @@ Theoretisch / Literaturanalyse: Queer Theory, Critical Theory, Foucauldian Power
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Paper analysiert, wie Hype und fehlerhafte Verständigung von AI-Capabilities bei Policy-Makern zu kritischer Literacies-Lücke führt: 'policymakers don't read the scientific literature but they do read the clickbait'
 
-### Generative_KI
+### Evidenz 2
 
 Explizite Behandlung von generativen AI-Systemen und deren Missgendering-Praktiken: 'misgendering by generative AI systems'
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfassende Analyse von algorithmic bias, dating algorithms, facial recognition, healthcare AI systems, content moderation algorithms und algorithmic decision-making
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale These: 'exaggerating the capabilities of AI systems...downplaying their potential biases' führt zu 'reinforcement of stereotypes and biases' und harms für marginalisierte Gruppen
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus: 'potential to unintentionally reinforce stereotypes around gender' und 'cisgender heteronormative (cishet) baseline'
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Analyse: 'Intersectionality of different marginalising factors is also a key contributor of further marginalisation' und Fokus auf LGBTQ+ als marginalisierte Community
 
-### Feministisch
+### Evidenz 7
 
 Verwendet explizit queer theory (de Lauretis, Foucault) und feministische theoretische Perspektiven: 'queer and feminist theoretical perspectives can offer valuable insights' sowie Referenzen auf intersektionale und anti-oppressive Frameworks
 

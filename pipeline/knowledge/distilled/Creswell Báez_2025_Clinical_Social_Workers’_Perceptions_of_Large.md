@@ -4,13 +4,6 @@ authors: ["Johanna Creswell Báez", "Eunhye Ahn", "Aubrey Tamietti", "Bryan G. V
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.md
 confidence: 89
@@ -39,27 +32,27 @@ Empirisch - Qualitative Studie mit reflexiver thematischer Analyse (reflexive th
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Studium der Akzeptanz und des Verständnisses von LLMs durch klinische Sozialarbeiter als Fachpersonen; Diskussion von Schulungs- und Kompetenzentwicklungsbedarf: 'A recent survey of German social work students indicates growing interest in LLMs among both technical and non-technical users'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models wie ChatGPT, Claude und Gemini und ihre Anwendung in klinischer Praxis: 'Generic LLMs such as ChatGPT, Claude, and Gemini offer broad capabilities in generating text-based documents such as treatment plans, psychoeducational materials and clinical documentation'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Zentrale Analyse der Auswirkungen von LLMs auf die klinische Sozialarbeitspraxis, berufliche Werte und disziplinäre Grenzen: 'This major technological advancement has prompted urgent questions within the profession about how LLMs might reshape clinical social work practice and challenge our disciplinary boundaries'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Diskussion von Verzerrungen in LLMs, ihrer Verstärkung bestehender Ungleichheiten und des Risikos von zweistufigen Dienstleistungsmodellen: 'there are concerns that AI chatbots could displace human social workers or create a two-tiered service model, where clients from high-income backgrounds continue receiving in-person support, while individuals from marginalized communities with lower incomes rely on automated, algorithm-driven care, risking a widening of existing inequalities'
 
-### Diversitaet
+### Evidenz 5
 
 Fokus auf Zugang für marginalisierte Gruppen, LGBTQ-Individuen, autistische Personen und unterversorgte Bevölkerungsgruppen: 'LGBTQ individuals have sought mental health support from LLMs when faced with limited care options tailored to their unique needs'
 
-### Fairness
+### Evidenz 6
 
 Bedenken bezüglich fairer Verteilung von Dienstleistungen, Equity im Zugang und der Vermeidung algorithmisch unfairer Praktiken: 'Under-resourced agencies, ethical and legal considerations, and limited training opportunities require careful evaluation to ensure client dignity and equity'
 

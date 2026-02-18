@@ -4,14 +4,6 @@ authors: ["Bryan G. Victor", "Rebeccah L. Sokol", "Lauri Goldkind", "Brian E. Pe
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Victor_2023_Recommendations_for_social_work_researchers_and.md
 confidence: 94
@@ -40,31 +32,31 @@ Theoretisch/Review - Disruptive-Disrupting Framework kombiniert mit systematisch
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Requirement for researchers to 'understand how AI tools are constructed, including a sense of their underlying algorithms, data sources, and training processes' and emphasis on 'continuous learning and development' to stay current with AI tools and techniques.
 
-### Generative_KI
+### Evidenz 2
 
 Extensive focus on ChatGPT, LLMs, and generative AI capabilities: 'Generative AI uses deep learning and natural language processing to understand and respond to human conversation' and detailed discussion of applications in literature reviews, text generation, and data analysis.
 
-### KI_Sonstige
+### Evidenz 3
 
 Discussion of broader AI applications including sentiment analysis, data mining, image recognition, and algorithmic decision-making tools beyond pure generative models.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Entire paper addresses social work research specifically: 'the social work profession will need to iteratively adapt and revise guidelines' and explicit focus on 'vulnerable and marginalized groups' in social work research contexts.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Critical discussion of how 'LLMs are trained on large amounts of data, the models will reproduce biases inherent in the data, such as biases that result from the use of texts with racial and gender biases' and concern about 'exacerbate existing inequalities and biases in academic research.'
 
-### Diversitaet
+### Evidenz 6
 
 Recognition that guidelines 'may not adequately address the unique ethical issues that require careful consideration within social work research contexts, such as research involving vulnerable and marginalized groups' and discussion of English-language barriers for non-English speaking researchers.
 
-### Fairness
+### Evidenz 7
 
 Emphasis on 'fair and rigorous peer-review process' and requirements that research 'minimize them to ensure nondiscriminatory outcomes and reporting' with attention to algorithmic fairness in model design and application.
 

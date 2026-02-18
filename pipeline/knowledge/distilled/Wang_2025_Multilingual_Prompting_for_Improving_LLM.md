@@ -4,12 +4,6 @@ authors: ["Qihan Wang", "Shidong Pan", "Tal Linzen", "Emily Black"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Wang_2025_Multilingual_Prompting_for_Improving_LLM.md
 confidence: 94
@@ -38,23 +32,23 @@ Empirisch: Experimentelle Evaluationen mit GPT-4o, GPT-4o-mini, LLaMA 70B und LL
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Das Paper adressiert Large Language Models (GPT-4o, GPT-4o-mini, LLaMA 70B, 8B) und deren Fähigkeit zur Generierung diverser Inhalte.
 
-### Prompting
+### Evidenz 2
 
 Zentrale Methodik: 'multilingual prompting - a prompting method which generates several variations of a base prompt with added cultural and linguistic cues from several cultures' sowie Vergleich mit anderen Prompting-Techniken wie 'step-by-step recall prompting', 'personas prompting', und High Temperature Sampling.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Das Paper thematisiert explizit: 'lack of demographic diversity when queried about individuals can lead to unfair lack of exposure of artists, academics, and other professionals on the basis of their race, ethnicity, or nationality' und 'LLMs generate largely monocultural responses...often leaning towards expressing Western values'.
 
-### Diversitaet
+### Evidenz 4
 
 Primärer Fokus auf 'demographic diversity', 'cultural diversity', 'perspective diversity', und 'overall diversity in LLM generations'. Messung durch Entropie über 30 generierte Namen, mit Annotation nach Nationalität, Ethnizität und geografischer Region.
 
-### Fairness
+### Evidenz 5
 
 Das Paper argumentiert für 'equitable manner' der Informationsexposition durch LLMs und untersucht, ob die Outputs 'reflect the diversity of real-world perspectives' sowie die Reduktion von Halluzinationen bei kulturell spezifischen Informationen.
 

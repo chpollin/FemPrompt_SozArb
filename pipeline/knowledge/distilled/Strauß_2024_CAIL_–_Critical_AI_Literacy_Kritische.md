@@ -4,11 +4,6 @@ authors: ["Stefan Strauß", "Titus Udrea"]
 year: 2024
 type: report
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische.md
 confidence: 91
@@ -37,19 +32,19 @@ Mixed Methods: Literaturanalyse, qualitative Interviews mit Betriebsräten und A
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Critical AI Literacy (CAIL) als zentrale Kompetenz zur Handlungsfähigkeit: 'Grundkompetenzen umfasst Critical AI Literacy und mit welchen Ansätzen ist das entsprechende Wissen vermittelbar?' CAIL-Framework mit Kategorien wie Funktionswissen, Kontextualisierung, Interpretationsfähigkeit.
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Behandlung von klassischem Machine Learning (unterschiedliche ML-Verfahren, Deep Learning, regelbasierte Systeme), Automatisierungsformen, KI-Anwendungen in Medizin, Journalismus, Bildung und bereichsübergreifend.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Deep Automation Bias als zentrales Risiko; Ungleichheiten in Handlungsfähigkeit zwischen Expert:innen und Laien; 'Click Workers' in Kenia exploitiert für KI-Training; Abhängigkeitsverhältnisse zu großen Softwareanbietern benachteiligen kleine Betriebe.
 
-### Fairness
+### Evidenz 4
 
 Algorithmic Fairness implizit durch Fokus auf Zuverlässigkeit, Überprüfbarkeit und korrekte Funktionsweise von KI-Systemen; Qualitätssicherung und Fehlererkennung als Fairness-Maßnahmen.
 

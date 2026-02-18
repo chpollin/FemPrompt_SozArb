@@ -4,11 +4,6 @@ authors: ["Gregory Kang Ruey Lau", "Wenyang Hu", "Diwen Liu", "Jizhuo Chen", "Se
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Diversitaet
 processed: 2026-02-05
 source_file: Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.md
 confidence: 75
@@ -37,19 +32,19 @@ Empirisch: Entwicklung eines trainingsfreien Ensemble-Frameworks (DIPPER) mit Pr
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf Large Language Models (LLMs) wie Qwen2-MATH und GPT-4o für Reasoning-Tasks; 'we propose DIPPER, a novel, training-free LLM ensemble framework where a single LLM model type is fed an optimized, diverse set of reasoning prompts in parallel'
 
-### Prompting
+### Evidenz 2
 
 Zentrale Komponente ist Prompt-Engineering: 'Drawing inspiration from how using different prompts w would result in varying response distributions...our DIPPER framework has the set of prompts {w_i} fed into the ensemble as the key ensemble design parameter'; Treatment von prompt fidelity und diversity metrics
 
-### KI_Sonstige
+### Evidenz 3
 
 Ensemble Methods und Inferenzzeit-Optimierungen für Machine Learning; Submodular optimization; Batch inference techniques wie vLLM
 
-### Diversitaet
+### Evidenz 4
 
 Zentrale Fokus auf Diversity in Prompts und deren Optimierung: 'a key challenge in achieving high performing ensembles is how diversity can be appropriately injected among its constituents'; semantic volume metric als Diversitätsmessung; 'more diverse prompts point to more varied directions in semantic space'
 

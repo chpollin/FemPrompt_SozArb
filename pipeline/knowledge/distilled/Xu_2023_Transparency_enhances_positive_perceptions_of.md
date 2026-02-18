@@ -4,13 +4,6 @@ authors: ["Ying Xu", "Nora Bradford", "Radhika Garg"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Xu_2023_Transparency_enhances_positive_perceptions_of.md
 confidence: 75
@@ -39,27 +32,27 @@ Empirisch - randomisiertes Experiment mit 914 Teilnehmern aus Amazon Mechanical 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Transparenz erhöht die Selbsteinschätzung des Nutzerwissens über Chatbot-Mechanismen signifikant (F=64.86, p<0.001). Paper argumentiert, dass Nutzer bei Transparenz besseres Verständnis von KI-Fähigkeiten und Grenzen entwickeln: 'enabling users to better comprehend the output of AI systems'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf Social Chatbots, deren Mechanismen, algorithmische Opazität, Black-Box-Problem, Explainable AI: 'Users are generally unaware of what is happening between their own inputs and the system's output'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Chatbots werden als potenzielle Unterstützungsinstrumente für emotionales Wohlbefinden positioniert: 'social chatbots could possibly enhance individuals' well-being, particularly when alternative interpersonal interactions are limited or inaccessible' - relevant für Care-Arbeit und Beratung
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Unterschiedliche Effekte basierend auf Prior AI Knowledge: 'transparency appeared to have a larger effect on increasing the perceived social intelligence among participants with lower prior AI knowledge' - adressiert digitale Ungleichheit
 
-### Diversitaet
+### Evidenz 5
 
 Sample-Charakterisierung nach Rasse/Ethnizität (82.82% White, 4.49% Asian/Pacific Islander, 7.77% Black/African American, 2.30% Hispanic/Latino), Geschlecht (64.2% Male, 35.4% Female), Bildungsabschluss und Einkommen dokumentiert; jedoch keine intersektionalen Analysen
 
-### Fairness
+### Evidenz 6
 
 Transparenz als Mechanismus zur fairen und ethisch vertretbaren KI-Gestaltung: 'the research community has actively advocated for AI transparency' um Manipulation zu minimieren und Nutzerempowerment zu fördern. Fairness-Aspekt in Gleichbehandlung verschiedener Nutzergruppen bei Transparenzbotschaften
 

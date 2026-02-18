@@ -4,12 +4,6 @@ authors: ["Alicia Parrish", "Angelica Chen", "Nikita Nangia", "Vishakh Padmakuma
 year: 2022
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.md
 confidence: 91
@@ -38,23 +32,23 @@ Empirisch: Hand-erstellter Bias-Benchmark mit Kontextvariation und Multiple-Choi
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Paper fokussiert auf NLP-Modelle und Question-Answering Tasks: 'we measure biases against a range of social categories and also measure in which contexts these impacts are most likely to be exhibited'
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Expliziter Fokus auf soziale Vorurteile gegen marginalisierte Gruppen: 'social biases against people belonging to protected classes' und 'representational harms...occur when systems reinforce the subordination of some groups along the lines of identity'
 
-### Gender
+### Evidenz 3
 
 Geschlecht ist eine der neun Dimensionen mit besonders hohen Bias-Scores: 'this difference widening to over 5 points on examples targeting gender for most models tested'
 
-### Diversitaet
+### Evidenz 4
 
 Benchmark adressiert neun verschiedene soziale Dimensionen und marginalisierte Gruppen: 'targets attested social biases against nine different socially-relevant categories' einschließlich Rasse, Religion, sexuelle Orientierung und SES
 
-### Fairness
+### Evidenz 5
 
 Fokus auf faire Modellausgaben und Messung von Bias in QA-Systemen; Ziel ist 'facilitating efforts to mitigate those potential harms'
 

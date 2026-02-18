@@ -4,15 +4,6 @@ authors: ["Anaelia Ovalle", "Arjun Subramonian", "Vagrant Gautam", "Gilbert Gee"
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.md
 confidence: 75
@@ -41,35 +32,35 @@ Kritische Literaturanalyse; deduktive und induktive Codierung von 30 AI-Fairness
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kritische Analyse von Wissensproduktion und epistemologischen Grundlagen in der KI-Forschung: 'The epistemologies of AI research are not divorced from scientific colonialism's legacy.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Breite Kritik auf algorithmische Fairness, ML-Systeme, predictive systems und deren Machteffekte fokussiert.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Expliziter Bezug zu Sozialen Systemen und struktureller Unterdrückung: 'intersectionality [...] allows us to examine how social inequalities persist through domains of structure and discipline'; Engagement mit carceral systems und sozialer Gerechtigkeit.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Analyse algorithmischen Bias und struktureller Ungleichheit: 'the goal of minimizing negative outcomes across demographic groups, including groups associated with multiple, intersectional demographic attributes'
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus mit Referenzen auf Black women, gender-intersections und geschlechtsspezifische Dimensionen von Unterdrückung.
 
-### Diversitaet
+### Evidenz 6
 
 Kernfokus auf Intersektionalität, marginalisierte Communities und intersektionale Perspektiven: 'examining interlocking mechanisms of structural oppression [...] which produce inequality'
 
-### Feministisch
+### Evidenz 7
 
 Explizit feministische Theorie (Crenshaw, Collins, Black Feminist epistemology, hooks): 'Black feminist knowledge' wird zentralisiert; Referenzen zu 'gentrification of intersectionality' und Schutz Black feminist Wissensproduktion.
 
-### Fairness
+### Evidenz 8
 
 Zentrale Kritik der Fairness-Literatur: 'The majority of the papers we review approach intersectionality from the narrow perspective of subgroup fairness.'
 

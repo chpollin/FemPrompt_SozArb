@@ -4,12 +4,6 @@ authors: ["UNESCO Women for Ethical AI Group"]
 year: 2024
 type: report
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: UNESCO_2024_Women4Ethical_AI_Global_cooperation_for.md
 confidence: 91
@@ -37,23 +31,23 @@ Policy-Analyse und Multi-Stakeholder-Advocacy; Review von globalen KI-Governance
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf KI-Governance, ethische Entwicklung von KI-Systemen, foundation models und algorithmische Entscheidungssysteme
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Systeme, 'die durch erwiesenermaßen vorhandene Vorurteile versärken, Desinformation ausbreiten, Polarisierung verursachen, die Privatsphäre beeinträchtigen... und neue Möglichkeiten für geschlechtsspezifische und ethnische Diskriminierung schaffen'
 
-### Gender
+### Evidenz 3
 
 Explizites Ziel einer 'geschlechtsspezifischen KI' (gender-inclusive AI), Forderung nach Affirmativmaßnahmen und dedizierten Budgets für Frauenbeteiligung als Entscheidungsträgerinnen und Gründerinnen
 
-### Diversitaet
+### Evidenz 4
 
 Betonung der Notwendigkeit von 'Vielfalt in Perspektiven' und 'Multi-Stakeholder-Zusammenarbeit' sowie Adressierung von 'Geschlechts- und ethnischer Diskriminierung'
 
-### Fairness
+### Evidenz 5
 
 Fokus auf 'faire und inklusive Ergebnisse', Schutz von Menschenrechten, Menschenwürde und fundamentalen Freiheiten; Haftungsmechanismen und due diligence
 

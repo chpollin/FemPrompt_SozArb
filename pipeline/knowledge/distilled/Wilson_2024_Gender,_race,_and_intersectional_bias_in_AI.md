@@ -4,14 +4,6 @@ authors: ["Kyra Wilson", "Aylin Caliskan"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch - Audit Study mit über 500 öffentlich verfügbaren Resumes und 500 J
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Die Studie untersucht 'Large Language Models' (LLMs), speziell 'Massive Text Embedding Models' (MTEs) basierend auf Mistral-7B für Resume-Screening-Aufgaben
 
-### KI_Sonstige
+### Evidenz 2
 
 Behandelt algorithmic decision systems, document retrieval frameworks, embeddings und NLP-basierte Systeme im Kontext automatisierter Entscheidungsfindung
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale Fragestellung: 'whether they can be used in this scenario without disadvantaging groups based on their protected attributes'; Befund: 'resumes with Black male names are disadvantaged in up to 100% of cases, replicating real-world patterns of bias in employment settings'
 
-### Gender
+### Evidenz 4
 
 Analysiert explizit Gender-Bias: 'male names were also favored compared to female names in the majority of experiments' (51,9% Tests), mit besonderem Fokus auf geschlechtsspezifische Auswirkungen in verschiedenen beruflichen Kontexten
 
-### Diversitaet
+### Evidenz 5
 
 Untersucht marginalisierte Gruppen (Black, White, male, female), analysiert Repräsentation: 'We find that MTEs are biased, significantly favoring White-associated names in 85.1% of cases and female-associated names in only 11.1% of cases' und fokussiert auf intersektionale Perspektiven
 
-### Feministisch
+### Evidenz 6
 
 Nutzt intersektionale Theorie (Referenzen auf Ghavami & Peplau 2013 'An intersectional analysis of gender and ethnic stereotypes: Testing three hypotheses'): 'These findings validate three hypotheses of intersectionality'; Fokus auf strukturelle Benachteiligung überintersektionaler Kategorien im Arbeitsmarkt
 
-### Fairness
+### Evidenz 7
 
 Analysiert algorithmische Fairness durch Resume-Audit-Studien: 'we perform a resume audit study to determine whether a selection of Massive Text Embedding (MTE) models are biased in resume screening scenarios' mit Chi-Square Tests und Fairness-Metriken zur Messung von Selection Rate Disparities
 

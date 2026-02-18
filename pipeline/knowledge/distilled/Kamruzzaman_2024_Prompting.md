@@ -4,15 +4,6 @@ authors: ["Mahammed Kamruzzaman", "Gene Louis Kim"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kamruzzaman_2024_Prompting.md
 confidence: 75
@@ -41,35 +32,35 @@ Empirisch: Vergleichende Experimente mit 12 Prompting-Techniken (CoT, System 1, 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Papier adressiert kritisches Verständnis von KI-Systemen und ihrer Biases sowie praktische Kompetenz im Prompt-Engineering: 'end-users can reduce bias in a manner that is practical for resource-constrained scenarios'.
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf Large Language Models (GPT-4, ChatGPT, Llama, Mistral, Gemma): 'Large language models (LLMs) like GPT-4, ChatGPT, Llama have revolutionized many aspects of technology and society'.
 
-### Prompting
+### Evidenz 3
 
 Kernthema des Papers: 12 verschiedene Prompting-Techniken inkl. CoT, System 1/2, Persona-Variationen und Debiasing-Prompts. 'we compare zero-shot CoT, debiasing, and dual process theory-based prompting strategies'.
 
-### KI_Sonstige
+### Evidenz 4
 
 Verwendung von Chain-of-Thought (CoT) Prompting und dual process theory, die in klassischem NLP und kognitiven Modellierungen verwurzelt sind.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentaler Fokus auf soziale Biases über 9 Kategorien (Ageismus, Geschlecht, Rasse, Religion, Nationalität, Profession, Schönheit, Institution): 'LLMs continue to struggle with embedded social biases' und 'these biases are difficult to identify and even more challenging to eliminate'.
 
-### Gender
+### Evidenz 6
 
 Geschlechterbias ist eine von 9 untersuchten Bias-Kategorien, mit spezifischen Analysen zu Geschlechterstereotypen: 'StereoSet covers gender, race, religion, and profession biases'. Beispiel: 'The chess player was Asian'.
 
-### Diversitaet
+### Evidenz 7
 
 Papier adressiert multiple marginalisierte Gruppen über 9 Bias-Kategorien (race, religion, nationality, age, beauty standards, institutional bias) und untersucht intersektionale Effekte: 'nine different social bias categories spanning ageism, beauty, gender, institutional, nationality, profession, race, religion'.
 
-### Fairness
+### Evidenz 8
 
 Expliziter Fairness-Fokus mit Metriken zur Messung stereotypischer Urteile und Debiasing-Techniken: 'task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven communication and decisions'.
 

@@ -4,14 +4,6 @@ authors: ["Danhua Peng", "Zhonggen Yu"]
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Peng_2022_A_Literature_Review_of_Digital_Literacy_over_Two.md
 confidence: 95
@@ -40,31 +32,31 @@ Systematische Literaturübersicht basierend auf PRISMA-Rahmen; Hand-Suche in Web
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Kernthema der gesamten Arbeit; 'digital literacy' definiert als 'ability, attitude, and awareness to use digital devices in a proper way to handle digital resources' (Martin 2005) und 'ability to understand and use information in various formats, highlighting the role of critical thinking rather than a simplistic grasp of ICT skills' (Chan 2017)
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf ICT-Skills (Information and Communication Technology), digitale Kompetenzen mit Technologie, Online-Lernumgebungen, Technostress durch Technologienutzung
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Untersuchung von Schüler:innen als Zielgruppe vulnerabler Gruppen, besonders während COVID-19 Krise; Empfehlungen für Pädagog:innen und Policymaker zur Unterstützung benachteiligter Studierende
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Analyse von 'digital divide' und Ungleichheit: 'family socioeconomic status positively correlated with students' digital literacy' und 'students from lower socioeconomic backgrounds tended to have a lower level of digital literacy...difficult for students from lower-economic backgrounds to get access to modern digital devices'
 
-### Gender
+### Evidenz 5
 
 Untersuchung von Geschlechterdifferenzen in digitaler Literalität; 'girls enjoyed a higher level of digital literacy than boys' vs. 'boys were more digitally literate than girls' mit inkonsistenten Ergebnissen; Analyse geschlechtsspezifischer Unterschiede in ICT-Fähigkeiten
 
-### Diversitaet
+### Evidenz 6
 
 Berücksichtigung unterschiedlicher Schüler:innen-Gruppen nach Alter, Geschlecht, sozioökonomischem Status, Bildungsstand von Eltern, Schulort (urban/ländlich); Anerkennung, dass 'students in rural or remote areas' benachteiligt sind und verbesserten Zugang benötigen
 
-### Fairness
+### Evidenz 7
 
 Kritik struktureller Ungleichheit: 'This phenomenon can lead to inequality since the students do not have equal access to improving their digital literacy'; Empfehlungen für Ausgleichsmassnahmen durch Educator und Policymaker, um digitale Chancengleichheit zu fördern
 

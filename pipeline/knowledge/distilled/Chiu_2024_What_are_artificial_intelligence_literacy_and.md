@@ -4,15 +4,6 @@ authors: ["Thomas K.F. Chiu", "Zubair Ahmad", "Murod Ismailov", "Ismaila Temitay
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chiu_2024_What_are_artificial_intelligence_literacy_and.md
 confidence: 89
@@ -41,35 +32,35 @@ Mixed-Methods: Empirisch - iterativer Co-Design-Zyklus mit 30 erfahrenen AI-Lehr
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentraler Fokus: 'AI literacy is defined as an individual's ability to clearly explain how AI technologies work and impact society...It focuses on knowing (i.e. knowledge and skills).'
 
-### Generative_KI
+### Evidenz 2
 
 'These generative AI tools keep humans learning' und explizite Nennung von 'ChatGPT and Sora' als Beispiele disruptiver Technologien, die in K-12 behandelt werden müssen.
 
-### Prompting
+### Evidenz 3
 
 'the students need to learn how to prompt effectively when using ChatGPT' und Diskussion von Prompt-Engineering als notwendige Fähigkeit.
 
-### KI_Sonstige
+### Evidenz 4
 
 Umfangreiche Behandlung klassischer ML-Konzepte: 'machine learning, and cloud computing', 'big data (velocity, volume, value, variety, and veracity)', 'training models and learning algorithms'.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 'fairness and biases' als eines der fünf ethischen Prinzipien; Fokus auf 'risks' und 'potential harmful effects on society'.
 
-### Gender
+### Evidenz 6
 
 Geschlechterverteilung der Stichprobe wird dokumentiert: '24 male and 6 female participants' (20% weiblich), aber kein expliziter Gender-Analysefokus.
 
-### Diversitaet
+### Evidenz 7
 
 'the framework promotes inclusive and diverse education, ensuring success for each student'; Erwähnung von 'underrepresented youth in STEM' und Förderung von Community Engagement.
 
-### Fairness
+### Evidenz 8
 
 'fairness and biases' als Kernkomponente der Ethik-Curricula; 'trust and transparency, accountability, social benefit, privacy and security' als Fairness-Prinzipien.
 

@@ -4,13 +4,6 @@ authors: ["Davy Tsz Kit Ng", "Wanying Luo", "Helen Man Yi Chan", "Samuel Kai Wah
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Ng_2022_Using_digital_story_writing_as_a_pedagogy_to.md
 confidence: 88
@@ -39,27 +32,27 @@ Empirisch, Mixed Methods: Quantitative Komponente (Post-Test mit 5-Punkt Likert-
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy is widely recognized as a new set of technological attitudes, abilities and competencies that people use AI effectively and ethically in everyday life. Die Studie konzeptualisiert AI-Literalität auf vier Ebenen: Know and understand AI, Use and apply AI, Evaluate and create AI, und AI ethics (inspiriert von Bloom's Taxonomy).
 
-### KI_Sonstige
+### Evidenz 2
 
 The study addresses various AI technologies including machine learning (Teachable Machine, Quickdraw), robotics, computer vision, recommendation systems, chatbots, neural networks, and data bias. Students learn working principles of AI through tools like Code.org and AI-driven applications.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The paper discusses data bias explicitly: 'Complete a gamified Kahoot! game to learn the terms of neural network, data bias, Python language...' und behandelt ethische Fragen wie Generative AI und Eigentumsrechte: 'it is important to highlight ethical issues about generative AI including the ownership of artwork and generation of fake media.'
 
-### Gender
+### Evidenz 4
 
 Among the 16 best-achieving students, 13 are female (81%), and the paper explicitly notes: 'this indicates that DSW learning stimulates female learners to perform better than boys to learn AI.' Dies deutet auf unterschiedliche Geschlechterleistungen hin.
 
-### Diversitaet
+### Evidenz 5
 
 Die Studie bezieht Schüler verschiedener Klassenstufen (Primary 1-6, Junior und Senior Form) ein und dokumentiert diverse Story-Namen und Charaktere (z.B. Princess Wawa, Romy, Lily, Kelvin). Teilnehmer repräsentieren ein internationales Setting (Hong Kong, mit Übersetzungskomponenten in mehrere Sprachen).
 
-### Fairness
+### Evidenz 6
 
 The study addresses fairness in AI contexts through ethical discussions about algorithmic decision-making (e.g., AI robots recognizing expired food, sorting recyclables, security with facial recognition). Students learn to evaluate fairness implications: 'how to use AI technologies judiciously, and discriminate between ethical and unethical practices.'
 

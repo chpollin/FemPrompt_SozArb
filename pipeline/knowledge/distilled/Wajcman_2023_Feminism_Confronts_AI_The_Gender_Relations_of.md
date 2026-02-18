@@ -4,14 +4,6 @@ authors: ["Judy Wajcman", "Erin Young"]
 year: 2023
 type: book
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch/Review: Intersektionale technofeministische Analyse mit empirischen 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Diskussion der Digital Skills Gap und fehlender techno-sozialer Kompetenzen von Frauen: 'the gender 'digital skills gap' persists... divided not only remains large but, in some contexts, is growing wider.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf Machine Learning, Algorithmen, automatisierte Entscheidungssysteme: 'AI, underpinned by algorithms and machine learning, has become a defining feature and driving force of this data-driven digitalisation.'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrale Analyse von Algorithmic Bias und struktureller Benachteiligung: 'Data created, processed, and interpreted within unequal power structures can reproduce the same exclusions and discriminations present in society.'
 
-### Gender
+### Evidenz 4
 
 Expliziter Gender-Fokus durchgehend: 'women are under-represented in this digital revolution... despite the possibilities for marshalling greater equality'; 'historical relationship between technical expertise and masculinity'
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektive auf marginalisierte Gruppen: 'women of colour are particularly under-represented... Only 1.6 percent of Google's US workforce in 2020 were Black women'; 'a technoculture that has systematically excluded women and people from marginalised groups'
 
-### Feministisch
+### Evidenz 6
 
 Explizite Verwendung feministischer STS-Theorie (Harding, Haraway, D'Ignazio, Suchman): 'Adopting an intersectional technofeminist approach... feminist STS scholars have been researching the gendering of technology for decades'; Referenzen auf Crenshaw (1995), Collins (1998), Sandoval (2000) für intersektionale feministische Theorie
 
-### Fairness
+### Evidenz 7
 
 Kritik an Fairness-Konzepten und deren Limitations: 'Notably, since 'fairness' cannot be mathematically defined, and is rather a deeply political issue, this task often falls to the developers themselves'; 'bias in, bias out'
 

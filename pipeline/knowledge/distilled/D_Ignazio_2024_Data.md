@@ -4,13 +4,6 @@ authors: ["Lorena Cabnal", "ACSUR-Las Segovias"]
 year: 2010
 type: report
 language: es
-categories:
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: D_Ignazio_2024_Data.md
 confidence: 75
@@ -41,27 +34,27 @@ Theoretisch-reflexiv; kombiniert persönliche Erfahrung, politische Analyse und 
 
 ## Kategorie-Evidenz
 
-### Soziale_Arbeit
+### Evidenz 1
 
 Analysiert Kooperationspraxis und internationale Zusammenarbeit; kritisiert Bürokratisierung von Entwicklungsprojekten und fordert 'herramientas políticas' und feministische Methodologien für soziale Transformation
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Zentrales Konzept des 'Racismo sentido, internalizado, reproducido' analysiert strukturelle Unterdrückung as historische patriarchale Wurzel; kritisiert hierarchische Differenz als Suprematie und Kontrolle
 
-### Gender
+### Evidenz 3
 
 Expliziter Gender-Fokus durchgehend: Patriarchat, weibliche Unterdrückung, Geschlechterrollen, Heteronormativität, Körperpolitik von Frauen
 
-### Diversitaet
+### Evidenz 4
 
 Zentral für das gesamte Paper: indigene Diversität, marginalisierte Perspektiven gegenüber westlichem Feminismus, nicht-westliche Kosmovísionen, intersektionale Analyse (indigene Identität + Frauensein + Kolonialität)
 
-### Feministisch
+### Evidenz 5
 
 Explizit feministische Theorie und Methodik: 'lo personal es político'; Körper als Wissensquelle; Dekonstruktion von Patriarchalismus; Referenzen auf feministische Praxis; critiques eurozentric feminism; proposes alternative epistemology
 
-### Fairness
+### Evidenz 6
 
 Kritik an ungerechten globalen Strukturen; Forderung nach horizontalen und gerechten Beziehungen in der internationalen Zusammenarbeit; Gerechtigkeit ('justicia, equidad, paz y la vida en plenitud') als zentrales Ziel
 

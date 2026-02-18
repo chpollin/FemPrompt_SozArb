@@ -4,13 +4,6 @@ authors: ["Lorena Casal-Otero", "Alejandro Catala", "Carmen Fernández-Morante",
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.md
 confidence: 92
@@ -39,27 +32,27 @@ Systematische Literaturübersicht (SLR) - Scopus-Datenbank, 179 Dokumente analys
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy is defined as 'a set of skills that enable a solid understanding of AI through three priority axes: learning about AI, learning about how AI works, and learning for life with AI'. The paper systematically reviews 179 documents on AI literacy approaches in K-12 education worldwide.
 
-### KI_Sonstige
+### Evidenz 2
 
 The paper addresses machine learning, data-driven design, robotics, computer vision, natural language processing, and knowledge representation as components of AI education in K-12 contexts.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The paper identifies that 'little attention has been paid to the undesirable consequences of an indiscriminate and insufficiently thought-out application of AI' including 'the increase in socio-economic inequality between countries and within countries, resulting from the increasing automation of employment'.
 
-### Gender
+### Evidenz 4
 
 Explicitly addresses gender diversity: 'Due to the gender gap in issues related to computer science, it is also necessary to address the gender perspective.' Literature highlights 'proposals designed with a perspective toward gender, where the activities designed are specifically aimed at girls'.
 
-### Diversitaet
+### Evidenz 5
 
 Paper discusses inclusion and representation: 'the existence of proposals designed with a perspective toward gender' and addresses reaching 'minority, female and disadvantaged students' in K-12 AI education.
 
-### Fairness
+### Evidenz 6
 
 Calls for ethical framework: 'It should also address issues related to the ethical dimension, which is fundamental to the literacy of K-12 students as it enables them to understand the basic principles of AI' and includes fairness in AI system design considerations.
 

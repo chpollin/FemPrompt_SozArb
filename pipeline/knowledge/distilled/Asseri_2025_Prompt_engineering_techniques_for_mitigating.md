@@ -4,14 +4,6 @@ authors: ["Bushra Asseri", "Estabrag Abdelaziz", "Areej Al-Wabil"]
 year: 2025
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Asseri_2025_Prompt_engineering_techniques_for_mitigating.md
 confidence: 75
@@ -40,31 +32,31 @@ Mixed-Methods Systematic Review; PRISMA-Richtlinien und Kitchenham's Systematic 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Schwerpunkt auf Kompetenzentwicklung für Nutzer und Praktiker: 'providing evidence-based guidance for researchers and practitioners' und 'accessibility of prompt engineering for mitigating cultural bias without requiring access to model parameters'
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf Large Language Models: 'Large language models (LLMs) have demonstrated remarkable capabilities across various domains, yet concerns about cultural bias—particularly towards Arabs and Muslims—pose significant ethical challenges'
 
-### Prompting
+### Evidenz 3
 
 Kernfokus auf fünf Prompt-Engineering-Techniken: 'cultural prompting, affective priming, self-debiasing techniques, structured multi-step pipelines, and parameter-optimized continuous prompts'
 
-### KI_Sonstige
+### Evidenz 4
 
 Natural Language Processing und transformer architectures: 'Prakash and Lee (2023) further extend this analysis through the notion of 'layered bias,' highlighting how bias can be embedded not just at the dataset or annotation level, but also within the internal layers of transformer architectures themselves'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentrales Thema: 'cultural bias against Arabs and Muslims, which has been documented across various LLMs and poses significant ethical challenges' und 'perpetuating harmful stereotypes and marginalization'
 
-### Diversitaet
+### Evidenz 6
 
 Expliziter Fokus auf marginalisierte Communities: 'This bias often takes the form of associating these groups with terrorism, violence, or religious extremism, thus reinforcing damaging stereotypes that can fuel marginalization and discrimination' und 'comprising nearly two billion people globally'
 
-### Fairness
+### Evidenz 7
 
 Algorithmische Fairness als Kernthema: 'effectiveness metrics including Bias Benchmark for QA (BBQ), StereoSet, CrowS-Pairs, and SEAT' sowie 'performance-fairness trade-offs' und Fairness-Metriken wie 'Survey-alignment gap' und 'Violent-completion rate'
 

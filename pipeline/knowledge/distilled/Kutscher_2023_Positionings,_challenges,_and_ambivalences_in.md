@@ -4,14 +4,6 @@ authors: ["Jose M. Alvarez", "Alejandra Bringas Colmenarejo", "Alaa Elobaid", "S
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Kutscher_2023_Positionings,_challenges,_and_ambivalences_in.md
 confidence: 95
@@ -42,31 +34,31 @@ Theoretisch/Review - systematische Übersicht der Fair-AI-Methoden, -Ressourcen 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper betont die Notwendigkeit multidisziplinärer Bildung und kritischer Reflexion über KI-Systeme: 'Involving a diverse group of people has shown to be critical in stages such as selecting the preferences instructed to the model' und diskutiert AI-Alignment und 'human-centered AI' als zentrale Kompetenzen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassende Behandlung verschiedener KI-Subdisziplinen: 'fair-AI research has been rapidly expanding to all sub-fields of AI, including unsupervised and reinforcement learning, natural language processing (NLP), computer vision, speech processing, recommender systems, and knowledge representation'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Konkrete Anwendung in Sozialen Diensten: 'The NoBIAS project contributed in Scott et al. (2022) to a participatory approach in the design of algorithmic systems in support of public employment services.' Bezug zu Arbeitsmarktentscheidungen und Beratung.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral für das Paper: 'algorithmic systems are value-laden in that they (1) create moral consequences, (2) reinforce or undercut ethical principles, or (3) enable or diminish stakeholder rights and dignity'. Extensive Diskussion von Diskriminierungsquellen und Harm: 'illegal discrimination against social groups protected by non-discrimination law'
 
-### Diversitaet
+### Evidenz 5
 
 Starker Fokus auf Repräsentation und marginalisierte Gruppen: 'Active participation during the whole construction process of an AI system can be a key part of addressing the representation bias that prevails in current systems' und 'models trained on raw data fail to capture the nuances found in the less-represented segments of the data distribution (Mallen et al., 2023), which often correspond to underprivileged communities.'
 
-### Feministisch
+### Evidenz 6
 
 Das Paper zitiert und integriert explizit feministische Perspektiven: 'State, L., Fahimi, M. (2023). Careful explanations: A feminist perspective on XAI.' und 'Organizers Of QueerinAI et al., 2023' bei der Diskussion von Representationsbias. Intersektionalität wird als feministisches Konzept behandelt: 'different dimensions of identity cannot be understood in isolation but must be considered collectively' - dies ist Crenshaw'sche Intersektionalitätstheorie.
 
-### Fairness
+### Evidenz 7
 
 Das ist das Kernthema des gesamten Papers: 'Fairness in AI (or simply, fair-AI) aims at designing methods for detecting, mitigating, and controlling biases in AI-supported decision making' mit detaillierter Diskussion von Group Fairness Metrics, Individual Fairness Metrics, Causal Fairness Metrics und deren trade-offs.
 

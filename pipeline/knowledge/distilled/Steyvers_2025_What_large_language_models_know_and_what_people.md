@@ -4,12 +4,6 @@ authors: ["Mark Steyvers", "Heliodoro Tejeda", "Aakriti Kumar", "Catarina Belem"
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: Steyvers_2025_What_large_language_models_know_and_what_people.md
 confidence: 94
@@ -38,23 +32,23 @@ Empirisch: Verhaltensexperimente mit Nutzerstudien (n=41-60 Teilnehmer pro Exper
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper untersucht zentral die Fähigkeit von Nutzern, LLM-Ausgaben richtig zu interpretieren und Unsicherheit zu verstehen: 'the ability to trust their outputs is crucial' und die Analyse von menschlicher Wahrnehmung von KI-Vertrauen adressiert direkt Kompetenzen im Umgang mit KI-Systemen.
 
-### Generative_KI
+### Evidenz 2
 
 Das Paper evaluiert drei öffentlich verfügbare generative LLMs (GPT-3.5, PaLM2, GPT-4o) und untersucht systematisch deren Konfidenzäußerungen und die Qualität ihrer natürlichsprachlichen Erklärungen.
 
-### Prompting
+### Evidenz 3
 
 Das Prompting wird als Interventionsmechanismus verwendet: 'we designed these prompts to induce varying degrees of certainty in the explanations' und es werden verschiedene Prompt-Stile manipuliert um unterschiedliche Unsicherheitssignale (low, medium, high confidence) zu erzeugen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Das Paper identifiziert systematische Verzerrungen in der Nutzerwahrnehmung: 'users tend to overestimate the accuracy of LLM responses' und die Längenbias zeigt, wie oberflächliche Textmerkmale zu falschen Vertrauenseinschätzungen führen, was zu ungleichen Entscheidungsergebnissen für verschiedene Nutzergruppen führen kann.
 
-### Fairness
+### Evidenz 5
 
 Das Papier adressiert Fairness durch das Konzept der Kalibrierung: 'By aligning the LLM's internal confidence with human perception of this confidence, we can bridge the gap' und evaluiert systematisch, wie Diskriminierungsfähigkeit zwischen korrekten und falschen Antworten (gemessen durch AUC-Metriken) verbessert werden kann.
 

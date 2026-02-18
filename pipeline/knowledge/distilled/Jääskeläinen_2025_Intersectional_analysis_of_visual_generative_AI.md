@@ -4,15 +4,6 @@ authors: ["Petra Jääskeläinen", "Nickhil Kumar Sharma", "Helen Pallett", "Cec
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.md
 confidence: 95
@@ -41,35 +32,35 @@ Empirisch-qualitativ: Visuelle intersektionale Analyse von 180 mit Stable Diffus
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf Stable Diffusion (SD), ein visuelles generatives KI-Tool: 'Visual Generative AI (vGenAI) tools have experienced rapid adoption' und detaillierte Analyse von SDXL-generierten Bildern.
 
-### Prompting
+### Evidenz 2
 
 Systematische Prompt-basierte Bildgenerierung: 'We observe that altering the contextual prompts for images only led to superficial changes' sowie durchgehende Analyse von Prompts wie 'A color photograph of a conservative', 'A color photograph of a feminist'.
 
-### KI_Sonstige
+### Evidenz 3
 
 Einbettung in breitere KI-Kritik: 'These technologies mirror society's prevailing visual politics' und Bezüge zu Computer Vision und algorithmischen Entscheidungssystemen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Analyse von algorithmischem Bias und struktureller Benachteiligung: 'demonstrate how imagery produced through SD perpetuates pre-existing power systems such as sexism, racism, heteronormativity, and ableism' sowie 'assumes a default individual as white, able-bodied, and masculine-presenting'.
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus: Analyse von Geschlechterrepräsentationen in Berufen ('heteronormative masculine representations were significantly overrepresented' in CEOs), Feminismus (ausschließlich feminine Darstellungen) und Heteronormativität.
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Perspektive auf Repräsentation marginalisierter Gruppen: 'SD inadvertently excludes specific representations of individuals, such as wealthy people of color, economically disadvantaged white individuals' und Analyse von Inklusion/Exklusion verschiedener Communities.
 
-### Feministisch
+### Evidenz 7
 
 Explizite Nutzung feministischer Theorie und Methodik: 'draws primarily from feminist Science and Technology Studies (STS)' (Wajcman, D'Ignazio & Klein), 'intersectional critical theory' (Crenshaw), 'feminist media and visual cultural studies' (Hall, Evans). Konzepte wie 'coded gaze' (vom Konzept 'male gaze' abgeleitet) und 'reparative and social justice-oriented approach'.
 
-### Fairness
+### Evidenz 8
 
 Fairness in generativen KI-Systemen: 'lack of transparency and fairness', Analyse von algorithmischer Gerechtigkeit in Bildrepräsentation und Forderung nach 'reparative approaches that aim to symbolically and materially mend injustices'.
 

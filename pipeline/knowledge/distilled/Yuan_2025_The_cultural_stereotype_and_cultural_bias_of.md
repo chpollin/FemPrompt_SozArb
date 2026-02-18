@@ -4,14 +4,6 @@ authors: ["Hang Yuan", "Zhongyue Che", "Yue Zhang", "Shao Li", "Xianger Yuan", "
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Yuan_2025_The_cultural_stereotype_and_cultural_bias_of.md
 confidence: 95
@@ -40,31 +32,31 @@ Mixed-Methods: Empirisch mit drei Studien kombiniert. Study 1: Fragebogen-Survey
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper untersucht implizite kulturelle Werte und Bias in KI-Systemen und deren Verstehen durch Nutzende: 'ensure that AI models equally benefit human society, we must fully understand the cultural stereotypes and biases that AI models may exhibit'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf ChatGPT 3.5 und ChatGPT 4.0 als Large Language Models und deren kulturelle Verhalten: 'ChatGPT 3.5 exhibits apparent cultural stereotypes in most decision-making tasks and shows significant cultural bias in third-party punishment and ultimatum games. However, ChatGPT 4o, while reinforcing stereotypes, showed reduced cultural bias'
 
-### Prompting
+### Evidenz 3
 
 Study 3 testet explizit vier Prompt-Strategien: 'we designed various prompt strategies to enable ChatGPT to overlook cultural differences between countries and provide unbiased answers. Our approaches include emphasizing personal traits, emphasizing fairness, creating future-oriented scenarios, and creating scenarios without national differences'
 
-### KI_Sonstige
+### Evidenz 4
 
 Verwendung von Representational Similarity Analysis (RSA) aus Neurowissenschaften und Multivariate Pattern Analysis auf KI-Systeme angewendet: 'RSA initially originated in systems neuroscience and is a specialized multivariate pattern analysis method'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentral: Systematische Analyse von algorithmischen Vorurteilen gegenüber verschiedenen Kulturen: 'if ChatGPT shows a different cultural value from the user, it may have controversial answers or offensive suggestions, which will cause user resistance or distrust, or subtly influence users' values and affect their physical and mental health'
 
-### Diversitaet
+### Evidenz 6
 
 Untersuchung von Unterschieden zwischen 20 Ländern und kulturellen Gruppen: 'we ask ChatGPT to simulate decision-making across various nationalities' and 'studied in 65 countries/regions' zur Erfassung von Diversität in kulturellen Wertorientierungen
 
-### Fairness
+### Evidenz 7
 
 Expliziter Fokus auf algorithmische Fairness und faire Interaktion: 'the neutrality and fairness of interactions, exacerbate misunderstandings, and lead to group conflict or societal divisions'. Multiple Fairness-bezogene Aufgaben (Ultimatum Game, Third-party Punishment, Dictator Task, Public Good Game)
 

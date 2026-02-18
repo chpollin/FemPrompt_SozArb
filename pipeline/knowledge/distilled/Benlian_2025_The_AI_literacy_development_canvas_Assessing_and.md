@@ -4,13 +4,6 @@ authors: ["Alexander Benlian", "Marc Pinski"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md
 confidence: 94
@@ -39,27 +32,27 @@ Theoretisch und praxisorientiert mit illustrierender Fallstudie; kombiniert akad
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy refers to 'the cognitive and behavioral capabilities that enable individuals at all organizational levels to critically understand, evaluate, and interact with AI systems' (Ng et al., 2021); umfangreicher Fokus auf tripartites Kompetenzmodell (Cognition-Behavior-Attitude) über Konzeptuelles, Ethisches und Praktisches.
 
-### Generative_KI
+### Evidenz 2
 
 Explizite Erwähnungen von 'generative AI', GenAI-Tools für Mitarbeiter: 'Non-IT employees increasingly rely on AI tools in their daily work' inkl. 'generative AI for drafting reports or AI-enhanced customer service platforms'; Fallstudie erwähnt 'advanced prompting techniques'.
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfassende Behandlung von AI-Systemen jenseits Generativ-KI: 'AI-based applicant recommendation systems', 'AI-driven applications', 'algorithmic decision-making', 'predictive maintenance', 'sales analytics', 'recruitment screening'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Workday-Fallbeispiel mit Anklage wegen Geschlechts-, Alters- und Behinderungsdiskriminierung; Thematisierung von 'algorithmic bias' und 'bias in automated decision-making'; Forderung nach Verständnis für 'AI limitations, such as bias in automated decision-making'.
 
-### Diversitaet
+### Evidenz 5
 
 Erwähnung verschiedener Organisationsgruppen und deren unterschiedliche Zugänge; Fokus auf 'employees at all levels', 'diverse workforce populations'; Pharma-Fallstudie behandelt drei verschiedene Mitarbeitersegmente (Executives, Middle Managers, Non-IT Staff) mit differenzierten Bedarfen.
 
-### Fairness
+### Evidenz 6
 
 Explizite Erwähnung von Fairness im Kontext AI governance: 'fair AI systems', 'bias-aware AI adoption'; Regulatory Compliance und ethische Standards als zentral; EU AI Act Compliance als Fairness-Requirement.
 

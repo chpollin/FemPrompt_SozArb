@@ -4,15 +4,6 @@ authors: ["Nishanshi Shukla"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Shukla_2025_Investigating_AI_systems_examining_data_and.md
 confidence: 95
@@ -40,35 +31,35 @@ Theoretisch/Review - Literaturbasierte kritische Analyse mit Einsatz von hermene
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Paper argumentiert für kritische Untersuchung und Verständnis von KI-Systemen: 'examining each part related to the building and working of AI systems is essential for unpacking the political play and potential insert points of biases'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf AI systems generell, deren Daten, Algorithmen, Code und deren Auswirkungen: 'AI systems, like all other technologies, have politics and exercise power'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Paper diskutiert Impact auf verschiedene soziale Gruppen und marginalisierte Communities: 'the groups most impacted by the results of injustices enacted by AI are often devoid of resources to design and deploy these systems'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral: 'Bias based on race, gender, ability, language, class, economic background, and religion, among many other indicators, perpetuating in the AI systems are not just a glitch or an error, but systemic coding of the dominant social fabric'
 
-### Gender
+### Evidenz 5
 
 Explizites Genderbeispiel: 'Keyes (2018) showcases how a conventional binary understanding of gender within tools of Automatic Gender Recognition (AGR) operationalizes non-inclusive and harmful technologies for transgender people'
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Perspektive durchgehend: 'such as women, people of color, disabled people, and queer people'; 'interlocking systems of structural oppression'
 
-### Feministisch
+### Evidenz 7
 
 Explizit intersektional-feministische Theorie: 'based in intersectional feminist thought of acknowledging and understanding interlocking systems of structural oppression as stated by the Combahee River Collective Statement'; verwendet Combahee River Collective (1978) als theoretisches Fundament
 
-### Fairness
+### Evidenz 8
 
 Fokus auf algorithmische Fairness und Gerechtigkeit: 'actionable AI audits that lead to the reduction of biased results'; 'strategies based on alignments between AI practitioners and fairness literature'; 'tensions of fairness at the intersection of individual and group needs'
 

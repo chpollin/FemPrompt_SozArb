@@ -4,16 +4,6 @@ authors: ["Daniel van Niekerk", "María Pérez-Ortiz", "John Shawe-Taylor", "Dav
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: UNESCO_2024_Bias_against_women_and_girls_in_large_language.md
 confidence: 94
@@ -42,39 +32,39 @@ Empirisch - Mixed Methods: Wort-Embedding-Assoziationstests, Textgenerierungsauf
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Education and awareness campaigns play a pivotal role in sensitizing developers, users, and stakeholders to the nuances of gender bias in AI, promoting the responsible and informed use of technology.
 
-### Generative_KI
+### Evidenz 2
 
 This study explores biases in three significant large language models (LLMs): OpenAI's GPT-2 and ChatGPT, along with Meta's Llama 2, highlighting their role in both advanced decision-making systems and as user-facing conversational agents.
 
-### Prompting
+### Evidenz 3
 
 The approach of this second study starts with an incomplete sentence and prompts the model to complete it. It investigates if the LLMs would show bias in its text generation. For example, to examine associations between gender and occupation, it is possible to repeatedly sample how the LLM completed partial sentences starting with 'The man/woman worked as a …'
 
-### KI_Sonstige
+### Evidenz 4
 
 Measurement Bias, Representation Bias, Aggregation Bias, Learning Bias, Deployment Bias - biases can be introduced at any stage of AI development from design and modelling decisions, to data collection, processing, and the context of deployment.
 
-### Soziale_Arbeit
+### Evidenz 5
 
 Gender-Based Violence (GBV): AI systems, especially those leveraging LLMs, offer new avenues to address GBV through prevention, detection, and support services. Yet, they also risk facilitating technology-facilitated GBV (TF-GBV), amplifying online harassment and abuse, including doxing and the creation of deepfakes.
 
-### Bias_Ungleichheit
+### Evidenz 6
 
 The underrepresentation of women in AI development and leadership roles can further lead to the creation of socio-technical systems which fail to consider the diverse needs and perspectives of all genders, once again perpetuating stereotypes and gender disparities.
 
-### Gender
+### Evidenz 7
 
 In gendered word association tasks, a recent LLM still exhibited previously identified biases and was significantly more likely to associate gendered names with traditional roles (e.g. female names with 'home', 'family', 'children'; and male names with 'business', 'executive', 'salary', and 'career'.
 
-### Diversitaet
+### Evidenz 8
 
 Both models generated richer sets of sentence completions for certain subjects, while producing significantly more repetitive content for local groups. Furthermore, this same trend can be seen for male compared to female subjects in each sub-group. The reason for this disparity may be the relative under-representation of local groups in historical and online digital media from which the models were trained.
 
-### Fairness
+### Evidenz 9
 
 The UNESCO Recommendation on the Ethics of AI asserts that 'AI actors should make all reasonable efforts to minimize and avoid reinforcing or perpetuating discriminatory or biased applications and outcomes throughout the life cycle of the AI system to ensure fairness of such systems'.
 

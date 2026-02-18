@@ -4,13 +4,6 @@ authors: ["Davy Tsz Kit Ng", "Jac Ka Lok Leung", "Samuel Kai Wah Chu", "Maggie S
 year: 2021
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.md
 confidence: 88
@@ -39,27 +32,27 @@ Theoretisch - Exploratory Review von 30 peer-reviewed Artikeln aus Web of Scienc
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The paper proposes four aspects for fostering AI literacy: 'know and understand, use and apply, evaluate and create, and ethical issues'. AI literacy is defined as 'having the essential abilities that people need to live, learn and work in our digital world through AI-driven technologies' and should be taught at K-12 levels.
 
-### KI_Sonstige
+### Evidenz 2
 
 The review covers diverse AI applications including machine learning, natural language processing, neural networks, robotics (LEGO Mindstorms, Bee-bots, Cozmo robots), intelligent agents, chatbots, and adaptive learning systems across educational contexts.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The paper states: 'Vast majority of the public acknowledges the existence of AI services and devices, but seldom do they know about the concepts and technology behind, or aware of potential ethical issues related to AI.' It emphasizes public understanding gaps and the need for ethical awareness in AI usage.
 
-### Gender
+### Evidenz 4
 
 The paper explicitly highlights gender disparities: 'Over 160 million women worldwide may need to transition between occupations... clerical work such as secretaries and bookkeepers will be mostly easily eliminated by AI, given that 72% of those jobs in advanced economies are held by women.' This gender-specific analysis of AI's labor market impact is central to the motivation for AI literacy.
 
-### Diversitaet
+### Evidenz 5
 
 The paper calls for 'human-centered considerations' and educating 'citizens to become socially responsible and ethical users such as inclusiveness, fairness, accountability, transparency, and ethics'. It emphasizes the importance of 'social inclusion and diversity to apply AI for societal good'.
 
-### Fairness
+### Evidenz 6
 
 The review discusses ethical concerns in AI literacy including 'algorithmic bias and malicious uses of AI'. It emphasizes that educators must help learners 'use AI technologies judiciously, as well as to discriminate between ethical and unethical practices' and promote 'accountability, transparency' in AI systems.
 

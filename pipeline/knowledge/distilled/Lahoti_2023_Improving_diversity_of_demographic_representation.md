@@ -4,14 +4,6 @@ authors: ["Preethi Lahoti", "Nicholas Blumm", "Xiao Ma", "Raghavendra Kotikalapu
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Lahoti_2023_Improving_diversity_of_demographic_representation.md
 confidence: 95
@@ -40,27 +32,27 @@ Empirisch - Entwicklung von Evaluationsdatensätzen, Metriken zur Messung von Di
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Das Paper adressiert generative Large Language Models (LLMs) wie Flan-PaLM 540B explizit: 'A crucial challenge for generative large language models (LLMs) is diversity: when a user's prompt is under-specified, models may follow implicit assumptions while generating a response'
 
-### Prompting
+### Evidenz 2
 
 Prompting ist zentral zur Methode: 'we propose a new technique called collective-critique and self-voting (CCSV) to self-improve people diversity of LLMs by tapping into its diversity reasoning capabilities' mit spezifischen Prompts wie 'Critique the AI model's response and identify ways in which it lacks diversity'
 
-### KI_Sonstige
+### Evidenz 3
 
 Das Paper behandelt algorithmische Entscheidungssysteme und NLP im Kontext von Fairness und Bias: 'homogenization (Bommasani et al., 2022) poses concerns for using LLMs in downstream applications from a responsibility perspective, much like the diversity and inclusion concerns in recommendation, ranking and image search'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Expliziter Fokus auf Diskriminierung und Unterrepräsentation: 'certain demographic groups being under-represented or even erased from the generated responses' und 'baseline Flan-PaLM model has very low diversity scores close to 0.0 with ∼ 99% of responses belonging to the same gender on average and ∼ 98% of responses belonging to the same ethnicity'
 
-### Gender
+### Evidenz 5
 
 Geschlechterdimensionen sind zentrale Evaluationskriterien: 'We find that the baseline Flan-PaLM model has very low diversity scores close to 0.0 with ∼ 99% of responses belonging to the same gender on average' und Geschlecht ist eine der evaluierten demografischen Attribute
 
-### Diversitaet
+### Evidenz 6
 
 Kernthema des gesamten Papers: 'we formalize diversity of representation in generative LLMs' und 'we present evaluation datasets and propose metrics to measure diversity in generated responses along people and culture axes' mit Fokus auf Repräsentation marginalisierter Gruppen
 

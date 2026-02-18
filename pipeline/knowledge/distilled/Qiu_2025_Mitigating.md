@@ -4,12 +4,6 @@ authors: ["Qiu"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Qiu_2025_Mitigating.md
 confidence: 91
@@ -38,23 +32,23 @@ Empirisch: Model Editing mit Editor-Hypernetworks, kombiniert mit speziell entwo
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Model Editing mit Editor-Hypernetworks, NLP-Methode auf Transformers (RoBERTa, GPT-2), Sprachmodellierungsfähigkeiten: 'small editor hyper-networks can be flexibly applied to any language model'
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Fokus auf stereotypische Verzerrungen in Sprachmodellen: 'pretrained language models (PLMs) inherently manifest various biases' und 'gender bias, race bias, among others'; Analyse von Stereotypen gegenüber verschiedenen demografischen Gruppen.
 
-### Gender
+### Evidenz 3
 
 Explizite Behandlung von Gender-Bias: 'gender bias attribute words for gender bias are she, he, mother, father'; Gender Reverse Robustness Test zur Evaluierung der Gleichbehandlung von männlichen und weiblichen Geschlechtern.
 
-### Diversitaet
+### Evidenz 4
 
 Untersuchung von Bias über mehrere demografische Dimensionen: Gender, Race (Rasse), Religion; Fokus auf 'different demographic groups in society'; StereoSet umfasst multiple Bias-Kategorien.
 
-### Fairness
+### Evidenz 5
 
 Zentrale Fairness-Perspektive: 'Debiasing aims to make a language model equally treat the stereotypical contexts and anti-stereotypical contexts for fairness'; Verwendung von Fairness-Metriken durch Stereotype Score (SS) und Language Modeling Score (LMS); 'To ensure fairness and accuracy in language models' applications'.
 

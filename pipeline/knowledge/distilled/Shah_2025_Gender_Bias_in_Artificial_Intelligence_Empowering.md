@@ -4,13 +4,6 @@ authors: ["Syed Sibghatullah Shah"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md
 confidence: 88
@@ -39,27 +32,27 @@ Theoretisch: Narrative Review von Fachliteratur aus 2010-2024; systematische Lit
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Digital literacy includes not only knowing how to use technology but also how to think about, criticise, and deal with digital technologies, like AI systems. [...] Digital literacy programs are important because they teach women how to think critically, which helps them find bugs in AI systems and fix them.
 
-### KI_Sonstige
+### Evidenz 2
 
 Gender bias in AI is well-documented, manifesting in various ways, including biased algorithms, the under-representation of women in AI development teams [...] AI-based hiring tools are less helpful for women and voice recognition systems often do not work well with female sounds.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The findings reveal systemic gender biases embedded in AI applications across diverse domains, such as recruitment, healthcare, and financial services. [...] AI systems can reinforce gender stereotypes and biases without trying to if the people who work on them are not diverse.
 
-### Gender
+### Evidenz 4
 
 Only 22% of AI workers around the world are women. [...] Gender bias in AI goes beyond the number of women working in the field and includes the data and algorithms that support these technologies. [...] AI-assisted performance review systems were 23% less likely to suggest women for senior positions than reviews done by humans only.
 
-### Diversitaet
+### Evidenz 5
 
 More diverse development teams using inclusive AI design methods have been shown to reduce gender bias. [...] Putting gender-sensitive STEM education at the top of policy lists has a big impact on the number of women working in AI.
 
-### Fairness
+### Evidenz 6
 
 AI not only mirrors but also potentially exacerbates existing social problems, such as gender bias, when observed in the actual world. [...] The study highlights the importance of inclusive AI design, gender-responsive education policies, and sustained research efforts to mitigate bias and promote equity.
 

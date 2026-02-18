@@ -4,12 +4,6 @@ authors: ["Johannes Himmelreich", "Désirée Lim"]
 year: 2022
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice.md
 confidence: 94
@@ -40,23 +34,23 @@ Theoretisch | Konzeptionelle Analyse mit illustrativen Beispielen aus der KI-Pra
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Die Autor:innen definieren AI als 'statistical methods that use Machine Learning (ML) to make data-based predictions or decisions' und untersuchen algorithmische Entscheidungssysteme in Healthcare, Hiring, Policing und Infrastruktur.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Zentral ist die Analyse von 'racial bias in AI' (Obermeyer et al. 2019), strukturelle Erklärungen für unterschiedliche Behandlung Black patients: 'On average, however, the healthcare system spends less on Black patients than on white patients at all levels of healthcare needs.'
 
-### Gender
+### Evidenz 3
 
 Expliziter Gender-Fokus: 'We concentrate here mostly on gender and race. Structural injustices usually attach to salient social categories such as race, gender, age, ability, or sexual orientation.' sowie Beispiele wie 'gender prejudice' und gendered hiring discrimination (Lakisha/Emily Studie).
 
-### Diversitaet
+### Evidenz 4
 
 Direkter Bezug zu DEI: 'The chapter suggests that structural injustice provides methodological and normative foundations for the values and concerns of Diversity, Equity, and Inclusion.' Behandlung marginalisierter Communities und intersektionaler Perspektiven.
 
-### Fairness
+### Evidenz 5
 
 Umfangreiche Kritik an Fairness-Fokus: 'There is a consensus in AI governance that AI should be fair. However, this focus on fairness is limiting in important ways.' Analyse der epistemic limitations von Fairness und Unterscheidung zwischen Fairness und Equity/Justice.
 

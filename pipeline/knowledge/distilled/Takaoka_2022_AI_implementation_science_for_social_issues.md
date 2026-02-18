@@ -4,13 +4,6 @@ authors: ["Kota Takaoka"]
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Takaoka_2022_AI_implementation_science_for_social_issues.md
 confidence: 95
@@ -41,27 +34,27 @@ Theoretisch mit praktischem Use-Case: Vierstufiges Implementierungsmodell (Probl
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Artikel thematisiert erforderliche Kompetenzen von Fachkräften im Umgang mit KI-Systemen: 'training and briefing sessions for field staff to master them' und 'agile trial methodology' zur Entwicklung von Verständnis. Fokus auf Schulung, Betriebsanleitungen und das Überwinden von Widerständen gegen neue Technologien.
 
-### KI_Sonstige
+### Evidenz 2
 
 Einsatz von Machine Learning (Gradient Boosting), Bayesian Networks, probabilistic modelling, clustering (unsupervised learning), sparse modelling und eXplainable AI (XAI). Konkrete Implementierung im AiCAN-System für Risikovorhersage und kausale Schlussfolgerung.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkte Anwendung in Kinderschutzdiensten (Child Guidance Centers in Japan). Fokus auf Verbesserung sozialer Fachpraxis: 'improving the quality of decision making, enhancing operational efficiency, and professional training for practitioners.' Thematisiert spezifische Herausforderungen von Sozialarbeit wie Umgang mit mehrdeutigen Informationen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Thematisiert implizite Diskriminierung durch KI: 'there can be implicit discrimination and favoritism towards certain individuals due to sampling size, bias effects, and tuning effects of AI.' Diskutiert normalcy bias bei Fachkräften und systematische Unterschiede zwischen Kinderschutzzentren in Schutzstandards.
 
-### Diversitaet
+### Evidenz 5
 
 Fokus auf vulnerable Gruppen (Kinder als Zielgruppe von Schutzmaßnahmen). Verknüpfung mit SDGs und Maslow's Hierarchy of Needs; Ziel ist Sicherheit und Wohlbefinden für alle Kinder ohne Gewalt und Missbrauch.
 
-### Fairness
+### Evidenz 6
 
 Explizite Behandlung von Fairness bei KI-Entscheidungen: 'Political correctness and social norms must be carefully considered in AI implementation design.' Verwendung von PR und ROC Curves für evaluierung von Klassifikationsmodellen. Fokus auf gerechte Ressourcenallokation unter Budgetbeschränkungen: 'best possible choices within the resources available.'
 

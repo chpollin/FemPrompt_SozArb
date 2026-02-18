@@ -4,14 +4,6 @@ authors: ["nicht angegeben"]
 year: 2023
 type: report
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Mosene_2023_Feministische_Netzpolitik_und_Künstliche.md
 confidence: 89
@@ -40,31 +32,31 @@ Theoretisch/Review - kritische Analyse von KI-Systemen und deren gesellschaftlic
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Es ist deshalb nicht nur wichtig, den Nutzer_innen von Technologien zu vermitteln, wie diese funktionieren, sondern vor allem wie sie entstanden sind, welche gesellschaftlichen Ideen und Realitäten sie widerspiegeln, welche soziopolitischen Potenziale sich in ihnen verbergen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Künstliche Intelligenzen denken also nicht wie Menschen. Sie erkennen Hunde und Katzen nicht einfach, sondern lernen, dass beispielsweise Hundefotos statistisch häufiger mit einem Copyrightzeichen versehen sind als Katzenfotos. Künstliche Intelligenz ist damit stark von Trainingsdaten abhängig.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Es ist hinlänglich bekannt, dass biometrische Gesichtserkennung, die vorwiegend in einem männlich dominierten Raum im weißen globalen Norden entwickelt wird, lange nicht in der Lage war, Schwarze Menschen und People of Colour zu identifizieren, da sie sich überwiegend auf Trainingsdatensätze weißer Personen stützte.
 
-### Gender
+### Evidenz 4
 
 Unsere Alltagsbegleiter heißen heute Siri und Alexa: eine Frau in der Hosentasche oder im Haushalt, die uns stets gefügig zur Seite steht. Dahinter verbergen sich stereotype weibliche Rollenvorstellungen: die Frau als Sekretärin, Hausfrau und Mutter.
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektiven nehmen ineinandergreifende, sich teils verstärkende Strukturen von Ungleichheit, Macht und Herrschaft in den Blick, und ein besonderer Fokus liegt dabei auf der wechselseitigen Konstitution von Rassismus und Sexismus in ihren gesellschaftsstrukturierenden Formen.
 
-### Feministisch
+### Evidenz 6
 
 Feministische Netzpolitik übt Kritik an bestehenden Ungleichheitsverhältnissen im digitalen Raum. Donna Haraway beschrieb in ihrem 'Cyborg Manifesto' das potenzielle Aufbrechen von Geschlechterzuschreibungen. Feministische Netzpolitik besteht darin, KI-Forscher_innen und Aktivist_innen zu unterstützen, die im Techniksektor die Bias aufzuheben suchen.
 
-### Fairness
+### Evidenz 7
 
 Machtstrukturen sind schon in der technischen Infrastruktur fest angelegt. Sie führen die Geschichte des Kolonialismus auch in der virtuellen Sphäre fort: in Gestalt des 'digitalen' oder 'elektronischen Kolonialismus'. Feministische Datensätze könnten die Utopie eines non-biased Internet bilden.
 

@@ -4,11 +4,6 @@ authors: ["Clara Colombatto", "Jonathan Birch", "Stephen M. Fleming"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Fairness
 processed: 2026-02-05
 source_file: Colombatto_2025_The_influence_of_mental_state_attributions_on.md
 confidence: 94
@@ -37,19 +32,19 @@ Empirisch: Preregistriertes Experiment (N=410) mit zwei Aufgaben (Advice-Taking-
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper untersucht, wie Nutzer Kompetenzen und mentale Zustände von LLMs verstehen und interpretieren: 'the extent to which current AI systems possess consciousness remains contentious' und 'the majority of a representative sample of the public attributes some possibility of human-like consciousness to large language models'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf ChatGPT und Large Language Models: 'We recruited a stratified sample of US adults and probed their intuitions about the capacity for consciousness and a variety of other mental states in a prominent LLM, ChatGPT.'
 
-### KI_Sonstige
+### Evidenz 3
 
 Thematisiert Anthropomorphismus, Mentalisierung und Trust in KI-Systemen allgemein: 'the tendency to assign mental states to AI systems is independent from whether these systems truly possess them'
 
-### Fairness
+### Evidenz 4
 
 Das Paper adressiert faire und kalibrierte Vertrauensbeziehungen zwischen Menschen und KI: 'Further investigation will help the AI sector achieve well-calibrated and balanced trust, finding the middle ground between mistrust and over-reliance.'
 

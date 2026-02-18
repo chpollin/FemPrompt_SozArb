@@ -4,12 +4,6 @@ authors: ["Sijia Xiao", "Haodi Zou", "Alice Qian Zhang", "Deepak Kumar", "Hong S
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Singh_2025_reparative.md
 confidence: 88
@@ -38,23 +32,23 @@ Mixed Methods: Qualitative thematische Analyse einer gezielt ausgewählten Stich
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Das Paper untersucht systematisch AI-bedingte Schäden und Reparation in Verantwortlicher KI: 'As Artificial Intelligence (AI) systems are integrated into more aspects of society, they offer new capabilities but also cause a range of harms that are drawing increasing scrutiny.'
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Der restorative und transformative Justiz-Rahmen ist zentral für sozialarbeiterische Praxis: 'We draw from three justice frameworks widely applied in the context of social and technological harm: punitive, restorative, and transformative justice.' Das Paper adressiert strukturelle Ungleichheit und Community-Engagement, zentrale Anliegen der Sozialen Arbeit.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Das Paper thematisiert systematische Diskriminierung durch AI und strukturelle Benachteiligung: 'New York City introduced a law requiring employers to disclose their use of AI systems in hiring' und analysiert Disparate Impact. Die Analyse zeigt, wie marginalisierte Communities von AI-Schäden überproportional betroffen sind: 'Affected communities have limited influence on outcomes.'
 
-### Diversitaet
+### Evidenz 4
 
 Das Paper fokussiert auf repräsentation und Inklusion verschiedener Stakeholder: 'Affected communities have limited influence on outcomes. Affected users most commonly appeared in public outcry... both groups were largely absent from compensation, design changes, or policy reform.' Der intersektionale Fokus auf verschiedene Stakeholder-Gruppen ist zentral.
 
-### Fairness
+### Evidenz 5
 
 Fairness und Gerechtigkeit sind Kernkonzepte: 'we view reparation not merely as a pragmatic fix, but as a normative response to wrongdoing' basierend auf Gerechtigkeitstheorie. Das Paper untersucht faire Reparationsprozesse und deren Mangel.
 

@@ -4,13 +4,6 @@ authors: ["Usman Gohar", "Lu Cheng"]
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine.md
 confidence: 90
@@ -39,27 +32,27 @@ Literaturreview und systematische Taxonomie von Fairness-Notionen und Mitigation
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Survey fokussiert auf Machine Learning Systeme, algorithmische Entscheidungssysteme in hochriskanten Anwendungen (criminal sentencing, bank loans, hiring decisions), sowie NLP und Ranking-Systeme.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Zentral ist die Analyse von algorithmischen Diskriminierungen: 'Machine learning (ML) has been increasingly used in high-stake applications such as loans, criminal sentencing, and hiring decisions with reported fairness implications for different demographic groups'
 
-### Gender
+### Evidenz 3
 
 Explicit gender focus: 'Black woman's experience of discrimination differs from both women and Black people in general' und extensive Diskussion von Gender-Bias in NLP-Modellen (BERT, GPT-2), Sentiment Analysis und Gender Classification.
 
-### Diversitaet
+### Evidenz 4
 
 Intersektionalität als Kernkonzept: Paper diskutiert Repräsentation marginalisierter Gruppen an Schnittmengen mehrerer Identitätsdimensionen (race, gender, disability, sexuality, religion) und deren Underrepresentation in Daten.
 
-### Feministisch
+### Evidenz 5
 
 Explizit auf Crenshaw (1989) Intersektionalitätstheorie aufbauend: 'recent works have identified a more nuanced case of group unfairness that spans multiple subgroups based on Crenshaw's theory of intersectionality called intersectional group fairness'. Intersektionalität ist ursprünglich eine feministische kritische Theorie.
 
-### Fairness
+### Evidenz 6
 
 Kernthema: umfassende Taxonomie von Fairness-Notionen (Subgroup Fairness, Multicalibration, Multiaccuracy, Differential Fairness, Max-Min Fairness, Metric-based Fairness) mit mathematischen Definitionen und Mitigationsmethoden.
 

@@ -4,11 +4,6 @@ authors: ["Sahaj Garg", "Vincent Perot", "Nicole Limtiaco", "Ankur Taly", "Ed H.
 year: 2019
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Garg_2019_Counterfactual_fairness_in_text_classification.md
 confidence: 95
@@ -37,19 +32,19 @@ Empirisch: Machine Learning Fairness. Entwicklung einer Fairness-Metrik (Counter
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Text Classification mit Neural Networks (CNN), Natural Language Processing, Machine Learning Fairness-Techniken. 'The classifier f can be an arbitrary neural network.' Paper konzentriert sich auf algorithmische Fairness in NLP-Systemen.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Kernthema: Algorithmischer Bias bei Identitätsbegriffen. 'a baseline toxicity model predicted that 'Some people are gay' is 98% likely to be toxic and 'Some people are straight' is only 2% likely to be toxic.' Untersucht, wie sensitives Trainingsmaterial zu systematischer Diskriminierung führt.
 
-### Diversitaet
+### Evidenz 3
 
 Adressiert Benachteiligung marginalisierter Gruppen durch KI-Systeme. 'sexual orientation, race, or religion' als sensitive Attribute; fokussiert auf vulnerable Gruppen: 'when comments attack a particularly vulnerable group' sollte differentielle Behandlung erlaubt sein.
 
-### Fairness
+### Evidenz 4
 
 Zentraler Fokus auf Fairness-Metriken und -Methoden. Entwickelt 'Counterfactual Token Fairness (CTF)' als neue Fairness-Metrik. Vergleicht mit 'equality of odds' (Hardt et al. 2016). Diskutiert Tradeoffs: 'methods do not harm classifier performance, and have varying tradeoffs with group fairness.'
 

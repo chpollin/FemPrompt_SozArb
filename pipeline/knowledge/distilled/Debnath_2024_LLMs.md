@@ -4,15 +4,6 @@ authors: ["Debnath"]
 year: 2024
 type: workingPaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Debnath_2024_LLMs.md
 confidence: 22
@@ -40,31 +31,31 @@ Theoretisch/Review - Analyse von LLM-Systemen und deren Auswirkungen auf soziale
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Text behandelt die Notwendigkeit von KI-Kompetenzen und kritischer Auseinandersetzung mit LLM-Systemen in sozialen Kontexten
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf Large Language Models und deren Funktionsweise, Fähigkeiten und Limitationen
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Bezug zu sozialen Diensten, Beratungspraxis und sozialen Arbeit; Diskussion von Auswirkungen auf vulnerable Gruppen
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Analyse von algorithmischen Bias, Diskriminierung und Reproduktion sozialer Ungleichheiten durch LLMs, besonders für marginalisierte Gruppen
 
-### Gender
+### Evidenz 5
 
 Thematisiert geschlechtsspezifische Bias und geschlechterbezogene Auswirkungen von LLM-Systemen
 
-### Diversitaet
+### Evidenz 6
 
 Fokus auf Repräsentation, marginalisierte Communities, intersektionale Perspektiven und inklusive Praktiken
 
-### Fairness
+### Evidenz 7
 
 Diskutiert Fairness-Konzepte, faire Systeme und Gerechtigkeit in der Anwendung von LLMs in sozialen Kontexten
 

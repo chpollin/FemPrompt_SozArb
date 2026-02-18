@@ -4,12 +4,6 @@ authors: ["Gabriele Biagini", "Stefano Cuomo", "Maria Ranieri"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.md
 confidence: 95
@@ -38,23 +32,23 @@ Empirisch: Quantitative Querschnittsstudie mit validiertem Fragebogen zur KI-Lit
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Studie entwickelt und wendet ein validiertes Framework zur Messung von KI-Literalität an, definiert als 'range of skills that enable critical evaluation and productive collaboration with AI technologies' über vier Dimensionen: 'a Knowledge-related Dimension', 'an Operational Dimension', 'a Critical Dimension' und 'an Ethical Dimension'. Das Paper adressiert 'the need for a more comprehensive approach to AI literacy that encompasses a deeper understanding of its ethical, social and economic implications'.
 
-### KI_Sonstige
+### Evidenz 2
 
 Das Paper behandelt allgemeine KI-Systeme (nicht generativ), ihre Anwendungen in Notfalldiensten, Bildung, Chirurgie, Nachrichtenberichterstattung, medizinischer und wissenschaftlicher Forschung sowie emotionaler Unterstützung. Es diskutiert 'AI's potential benefits and drawbacks' sowie 'implications and underlying mechanisms' von KI-Entwicklung.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Das Paper adressiert algorithmische Ungerechtigkeit und digitale Ungleichheit durch die Analyse von Bedenken hinsichtlich 'equity and fairness' (41.67% sehen unveränderte Situation), Arbeitsverdängung (62.5% Besorgnis) und Datenschutz als 'societal inequalities' und 'societal and ethical implications' von KI.
 
-### Diversitaet
+### Evidenz 4
 
 Die Studie umfasst verschiedene Doktorandenprogramme mit unterschiedlichen Disziplinen ('mainly but not exclusively, in the field of educational sciences') und anerkennt kulturelle und subjektive Dimensionen von KI-Literalität: 'AI literacy is more than a set of technical abilities but also includes the ability to navigate and modify one's life amid AI's transformations'.
 
-### Fairness
+### Evidenz 5
 
 Das Paper behandelt Fairness-Dimensionen durch die ethische Analyse und die Frage von Equity/Fairness in KI-Systemen ('Equity and fairness' als eine von fünf zukünftigen Auswirkungskategorien) und diskutiert die Notwendigkeit, KI-Bias und potenzielle Benachteiligungen zu verstehen: 'educational initiatives need to emphasise not only AI's capabilities but also their limitations and potential biases'.
 

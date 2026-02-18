@@ -4,13 +4,6 @@ authors: ["A. Taeihagh"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.md
 confidence: 75
@@ -39,27 +32,27 @@ Theoretisch/Review – Systematische Analyse der Governance-Herausforderungen vo
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Explizite Empfehlungen: 'Educate officials about AI benefits, challenges, and implications. Develop capacities to understand AI's impact on policymaking.' und 'Promote media literacy and educational campaigns about AI capabilities and risks.'
 
-### Generative_KI
+### Evidenz 2
 
 Gesamter Fokus auf generative KI-Modelle: 'generative AI systems that create new content (text, images, audio, or video) based on inputs, leveraging ML, particularly generative adversarial networks (GANs), variational autoencoders (VAEs), large language models (LLMs), and diffusion models'
 
-### KI_Sonstige
+### Evidenz 3
 
 Behandlung klassischer ML und algorithmischer Entscheidungssysteme: 'traditional rule-based AI' und 'algorithmic decision-making'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Behandlung von Bias und Ungleichheit: 'if a model is trained on data that are not demographically representative, it might disproportionately underperform for those demographics' und 'bias amplification' sowie 'power imbalances' und 'Big Tech's influence exacerbated by generative AI developments'
 
-### Diversitaet
+### Evidenz 5
 
 Mehrfache Forderungen nach Inklusion und diversen Stakeholdern: 'Assemble diverse teams and engage stakeholders to build trust' und 'Use participatory methods to involve the public in AI policy decisions' sowie 'increased inclusivity' und Berücksichtigung marginalisierter Gruppen durch 'impacts on low-skilled workers'
 
-### Fairness
+### Evidenz 6
 
 Fairness-zentrale Governance-Empfehlungen: 'Develop tools and procedures to detect and address biases during training and deployment', 'Promote responsible innovation and ethical AI development', 'Institutionalize red teaming, impact assessments, and internal auditing' und 'Independent audits for models with high impact'
 

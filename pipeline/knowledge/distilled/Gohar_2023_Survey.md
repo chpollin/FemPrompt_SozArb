@@ -4,13 +4,6 @@ authors: ["Usman Gohar", "Lu Cheng"]
 year: 2023
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Gohar_2023_Survey.md
 confidence: 95
@@ -39,27 +32,27 @@ Theoretisch/Review - systematische Literaturübersicht mit Taxonomie-Entwicklung
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Fokus auf Machine Learning Fairness, Algorithmen, Predictive Systems in hochstakigen Anwendungen wie Kreditvergabe und strafrechtliche Verurteilung: 'Machine learning (ML) has been increasingly used in high stake applications such as loans, criminal sentencing, and hiring decisions'
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Zentrale Thematisierung von Diskriminierung in ML-Systemen und deren Auswirkungen auf verschiedene demografische Gruppen: 'Measuring and mitigating discrimination in ML/AI systems has been studied extensively'
 
-### Gender
+### Evidenz 3
 
 Explizite Geschlechterperspektive mit Beispielen von Gender-Bias, insbesondere in Gesichtserkennungssystemen: 'Buolamwini and Gebru, 2018 identified accuracy disparities that were more significant for Black Women in gender classification algorithms'
 
-### Diversitaet
+### Evidenz 4
 
 Starke Fokussierung auf marginalisierte und intersektionale Gruppen sowie deren differenzierte Erfahrungen: 'interaction along multiple dimensions of identity produces unique and differing levels of discrimination for various possible subgroups'
 
-### Feministisch
+### Evidenz 5
 
 Explizite Verwendung von Crenshaw's Intersektionalitätstheorie als Basis der gesamten Analyse: 'based on Crenshaw's theory of intersectionality [Crenshaw, 1989] called intersectional group fairness' und Bezugnahme auf intersektionales Verständnis von Diskriminationserfahrungen: 'a Black woman's experience of discrimination differs from both women and Black people in general'
 
-### Fairness
+### Evidenz 6
 
 Kernfokus auf algorithmische Fairness mit umfassender Taxonomie von Fairness-Notionen: Statistical Parity Subgroup Fairness, Multicalibration, Metric-based Fairness, Differential Fairness und Max-Min Fairness werden detailliert analysiert
 

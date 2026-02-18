@@ -4,11 +4,6 @@ authors: ["Marc Pinski", "Thomas Hofmann", "Alexander Benlian"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
 processed: 2026-02-05
 source_file: Pinski_2024_AI_Literacy_for_the_top_management_An_upper.md
 confidence: 86
@@ -37,19 +32,19 @@ Empirisch: Beobachtungsdaten von 6.986 Führungskräften aus LinkedIn kombiniert
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy ist zentral definiert als 'holistic proficiency concerning AI that enables critical usage and evaluation of AI, as well as effective communication and collaboration with AI.' TMT AI literacy wird als share of AI-literate executives gemessen via detailed taxonomy von 71 AI skills und competencies aus LinkedIn-Profilen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Paper behandelt AI-Adoption im Unternehmenskontext, AI-Orientierung als strategische Ausrichtung, und AI-Implementierungsfähigkeit als organisationale Kapabilität zur Umsetzung von AI-basierten Informationssystemen.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Implizit adressiert: 70% der Organisationen erzielen minimal business impact mit AI; Study identifiziert Ungleichheiten in AI-Wert-Realisierung zwischen Firmen. Strukturelle Unterschiede zwischen Startups und Incumbents in Ressourcenausstattung und organisationaler Kultur wirken sich auf AI-Diffusion aus.
 
-### Diversitaet
+### Evidenz 4
 
 Diversity in TMT-Komposition wird indirekt berücksichtigt: TMT size und CIO/CTO presence als Kontrollvariablen. Heterogenität von Firmentypen (diverse organizational resources) moderiert den Effect von TMT-Charakteristiken.
 

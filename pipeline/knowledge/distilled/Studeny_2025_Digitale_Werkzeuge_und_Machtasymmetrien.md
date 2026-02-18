@@ -4,13 +4,6 @@ authors: ["Studeny"]
 year: 2025
 type: conferencePaper
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.md
 confidence: 88
@@ -40,27 +33,27 @@ Theoretisch-kritische Analyse mit praxisorientierten Fallbeispielen und Reflexio
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Digitale Bildung wird als 'Schlüssel für soziale Gerechtigkeit' behandelt; Reflexionsfragen zu Verständnis und kritischer Nutzung von Technologie; Forderung nach Kompetenzentwicklung für Fachkräfte und Klient:innen im Umgang mit digitalen Systemen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf Algorithmen, Scoring-Modelle, automatisierte Risikobewertungen, KI-gestützte Entscheidungssysteme in Fallmanagement, Chatbots und prädiktive Analytik in der Sozialverwaltung; 'Künstliche Intelligenz - Transparenz, Gerechtigkeit und menschliche Entscheidungsmacht' als eigenständiges Kapitel.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Durchgehender Fokus auf Fachkräfte und Klient:innen in Sozialer Arbeit; konkrete Praxisbereiche wie Schuldnerberatung, Kindeswohl, Jugendhilfe, Jobcenter, Beratungssettings; Machtkritik mit Bezug zu professioneller Ethik und Werteorientierung Sozialer Arbeit.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kapitel 'Diskriminierung durch Algorithmen'; Beispiele wie rassistische Algorithmen bei Bewerbungsportalen, Kindeswohlalgorithmen mit Bias gegen Migrant:innen, Jobcenter-Systeme die nach Merkmalen wie 'Alter, Schulbildung, Stadtteil' diskriminieren; Digital Divide als strukturelle Ungleichheit.
 
-### Diversitaet
+### Evidenz 5
 
 Explizite Nennung betroffener Gruppen: 'Menschen mit Migrationsgeschichte, People of Color, Frauen, Menschen mit Behinderungen, Arme', 'ältere Menschen, Personen mit geringer Bildung oder Migrationserfahrung'; Intersektionalität implizit durch Mehrfachnennungen; marginalisierte Communities im Fokus der Kritik.
 
-### Fairness
+### Evidenz 6
 
 Kapitel 'Gerechtigkeit, Transparenz und Verantwortung gestalten'; Forderungen nach fairen Algorithmen ('Algorithmen dürfen keine Menschen benachteiligen'), Transparenz in algorithmischen Entscheidungen, Fairness-Überprüfung ('Fairness: Algorithmen dürfen keine Menschen benachteiligen'), Equitable Access zu Ressourcen.
 

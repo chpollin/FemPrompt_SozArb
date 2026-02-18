@@ -4,14 +4,6 @@ authors: ["Shirley Anugrah Hayati", "Minhwa Lee", "Dongyeop Kang", "Rajesh Dilip
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from.md
 confidence: 94
@@ -40,31 +32,31 @@ Empirisch - experimentell mit quantitativen und qualitativen Methoden. Vergleich
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper untersucht die Fähigkeit von Menschen/Systemen, LLM-Kapazitäten zu verstehen und zu nutzen: 'Collecting diverse human opinions is costly and challenging. This leads to a recent trend in exploiting large language models (LLMs) for generating diverse data' - es geht um Kompetenzen im Umgang mit LLMs für spezifische Anwendungen.
 
-### Generative_KI
+### Evidenz 2
 
 Expliziter Fokus auf generative LLM-Varianten: 'We experiment primarily with four GPT variants: GPT-4o, GPT-4, GPT-3.5 (OpenAI, 2023), and GPT-3 (text-davinci-002), along with Llama3-70b-chat and Mixtral 8x7B' sowie deren Fähigkeit zur Generierung von Text und Perspektiven.
 
-### Prompting
+### Evidenz 3
 
 Zentrales Thema sind Prompting-Strategien: 'We introduce criteria-based diversity prompting to extract and ground diverse perspectives from LLMs. Finally, we suggest a step-by-step recall approach to measure the extent of diversity coverage of LLMs' sowie 'in-context prompting' und 'few-shot learning'.
 
-### KI_Sonstige
+### Evidenz 4
 
 Natural Language Processing und semantische Diversitätsmessung: 'To examine the semantic diversity of the model's reasons... we convert the LLM-generated reasons into sentence embeddings using SentenceBERT'.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Das Paper adressiert Bias durch fehlende Perspektivenvielfalt: 'Instead of providing a single viewpoint, an ideal NLP model should accommodate various perspectives to avoid any bias towards a dominant one' und untersucht systematisch, wie Dominanzperspektiven entstehen und wie Verzerrungen durch fehlende Diversität auftreten.
 
-### Diversitaet
+### Evidenz 6
 
 Diversität ist der zentrale Forschungsfokus: 'We introduce the problem of extracting maximum diversity from LLMs' und 'Our methods... show that LLMs can indeed produce diverse opinions according to the degree of task subjectivity. We also find that LLMs performance of extracting maximum diversity is on par with human.'
 
-### Fairness
+### Evidenz 7
 
 Algorithmische Fairness durch Diversität: Das Paper verbindet Fairness mit der Fähigkeit von NLP-Systemen, multiple Perspektiven zu berücksichtigen. 'Prior works emphasize the importance of modeling multiple viewpoints (Plank, 2022; Abercrombie et al., 2022)' - faire Systeme erfordern Perspektivenvielfalt, nicht einzelne Dominanzperspektiven.
 

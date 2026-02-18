@@ -4,8 +4,6 @@ authors: ["Tomas Mikolov", "Ilya Sutskever", "Greg Corrado", "Kai Chen", "Jeffre
 year: 2013
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
 processed: 2026-02-05
 source_file: Yunusov_2024_MirrorStories.md
 confidence: 84
@@ -34,7 +32,7 @@ Empirisch: Skip-Gram Modell mit Verbesserungen (Negative Sampling, Subsampling),
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Paper behandelt Natural Language Processing, Word Embeddings, Skip-Gram Modell, Negative Sampling und neuronale Sprachmodelle als Kernthemen klassischen Machine Learning für NLP-Aufgaben.
 

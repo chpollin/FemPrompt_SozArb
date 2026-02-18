@@ -4,14 +4,6 @@ authors: ["Lixiang Yan", "Samuel Greiff", "Ziwen Teuber", "Dragan Gašević"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Yan_2024_Promises_and_challenges_of_generative_artificial.md
 confidence: 95
@@ -40,31 +32,31 @@ Theoretisch/Review - Perspektive Paper, das Erkenntnisse aus Learning Sciences, 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Vollständiger Abschnitt 4.1 widmet sich AI Literacy: 'Cultivating AI literacy is essential to ensuring the effective, responsible, and ethical use of GenAI technologies to support human learning. This need extends beyond learners to include educators, policymakers, and administrators.' Betonung von Verständnis für Funktionsweise, Potenziale, Ethik und Limitierungen von KI-Systemen.
 
-### Generative_KI
+### Evidenz 2
 
 Paper fokussiert durchgehend auf GenAI-Technologien: 'Generative artificial intelligence (GenAI) technologies, such as large language models (LLMs) and diffusion models...have shown promise in automating various learning tasks.' Detaillierte Behandlung von LLMs (ChatGPT, GPT-4), Diffusion Models (Stable Diffusion, DALL-E, Midjourney) und Text-zu-Video-Modellen.
 
-### KI_Sonstige
+### Evidenz 3
 
 Intelligent Tutoring Systems und Learning Analytics werden als Vergleichssysteme zu GenAI diskutiert: 'Unlike conventional intelligent tutoring systems that require extensive knowledge engineering to design rule-based responses'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Digital Divide wird explizit adressiert: 'One major concern is the digital divide, where unequal access to these powerful technologies can exacerbate existing inequalities in learning opportunities.' Außerdem wird überbetonung gegenüber generativer KI als Risiko diskutiert.
 
-### Gender
+### Evidenz 5
 
 Paper erwähnt spezifisch Geschlechterstereotypen in STEAM: 'students can create imaginative visuals with AI and write inspired diaries based on these images, a practice found to reduce gender disparities in interest in art during Science, Technology, Engineering, the Arts and Mathematics (STEAM) classes.'
 
-### Diversitaet
+### Evidenz 6
 
 Mehrfache Betonung von Inklusion und Zugang für diverse Lernende: 'This capability is particularly valuable for teaching students with specific disabilities, such as providing multisensory instruction to students with dyslexia.' Sowie 'enabling learners with diverse needs to interact with content in more informed, creative, and personalised ways.'
 
-### Fairness
+### Evidenz 7
 
 Fairness wird in Kontext von Bewertung diskutiert: 'assessing learning to reflect genuine knowledge and skill development rather than an AI-created performance illusion' und die Notwendigkeit, Algorithmen-Bias in Bewertungssystemen zu vermeiden.
 

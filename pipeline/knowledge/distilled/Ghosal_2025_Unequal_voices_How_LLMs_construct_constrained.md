@@ -4,15 +4,6 @@ authors: ["Atreya Ghosal", "Ashim Gupta", "Vivek Srikumar"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.md
 confidence: 89
@@ -41,35 +32,35 @@ Empirisch mit vier hypothesengesteuerten Experimenten: (1) Frequenzanalyse spezi
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Analyse von LLM-Outputs aus mehreren großen Sprachmodellen (Llama 3.1/3.3, Gemma, Qwen) in unterschiedlichen Persona-Szenarien.
 
-### Prompting
+### Evidenz 2
 
 Systematische Prompt-Templates über fünf soziale Kontexte (Housing, Medical, Persona, Recommendation, Work) mit kontrollierten Identitätsausdrücken als Variablen.
 
-### KI_Sonstige
+### Evidenz 3
 
 NLP-Analyse mit Porter Stemmer und NLTK-Library zur Begriffsfrequenz-Messung sowie LLM-as-Judge Evaluationsmethodik.
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Explizites Fallbeispiel eines Therapie-Chatbots mit queeren Patienten als Demonstrationsszenario für potenzielle Schädigungen; Fokus auf Mental-Health-Chatbots und klinische Interaktionspraxis.
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Zentrale These: Systematische Bias in LLM-Outputs reproduziert und perpetuiert soziale Marginalisierung queerer Menschen durch Repräsentationsharms und Allokationsharms.
 
-### Gender
+### Evidenz 6
 
 Expliziter Fokus auf LGBTQ+ Identitäten, speziell queere, schwule, lesbische und trans Personas als Subjekte der Repräsentationsanalyse.
 
-### Diversitaet
+### Evidenz 7
 
 Analyse der Repräsentation marginalisierter Communities (queere Menschen) versus Dominanzgruppen; Intersektionalität implizit durch Fokus auf Othering-Prozesse.
 
-### Fairness
+### Evidenz 8
 
 Vier Hypothesen zur Messung systematischer Fairness-Unterschiede (H1-H4); Bezug zu Fairness-Harms und Konzepten like Equalized Representation; Test auf diskriminatorische Assoziationsmuster.
 

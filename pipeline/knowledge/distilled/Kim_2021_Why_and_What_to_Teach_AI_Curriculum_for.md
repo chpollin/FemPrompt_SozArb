@@ -4,12 +4,6 @@ authors: ["Seonghun Kim", "Yeonju Jang", "Woojin Kim", "Seongyune Choi", "Heeseo
 year: 2021
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Fairness
 processed: 2026-02-05
 source_file: Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.md
 confidence: 89
@@ -38,23 +32,23 @@ Mixed Methods: Theoretische Curriculum-Entwicklung basierend auf Literaturanalys
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 The proposed AI curriculum focuses on achieving AI literacy based on three competencies: AI Knowledge, AI Skill, and AI Attitude. The curriculum is designed to cultivate students' AI literacy to answer the question of 'why and what to teach' on AI.
 
-### KI_Sonstige
+### Evidenz 2
 
 The curriculum covers multiple AI technologies: search algorithms, reasoning, face detection, speech recognition, machine translation, image classification, text classification, and self-driving cars. It addresses computer vision, NLP, supervised/unsupervised learning, and reinforcement learning concepts.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 The curriculum explicitly addresses data bias issues: 'Through the course of activities, students learn the importance of using quality data by experiencing imbalanced and biased training data and how it affects machine learning models' decision-making' (Module 7: Text Classification).
 
-### Gender
+### Evidenz 4
 
 The paper explicitly references gender bias in commercial AI systems: 'Addressed issues include a commercial gender-biased face classifier (Buolamwini and Gebru 2018)'. Module 3 on Face Detection discusses impacts of face recognition on society with attention to bias issues.
 
-### Fairness
+### Evidenz 5
 
 The curriculum integrates fairness considerations through discussions of toxic comment blocking, biased training data in text classification, and the consequences of data bias on algorithmic decision-making. Students are exposed to the importance of fair and representative training data.
 

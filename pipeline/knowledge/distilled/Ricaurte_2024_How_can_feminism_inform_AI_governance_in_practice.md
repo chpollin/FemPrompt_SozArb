@@ -4,15 +4,6 @@ authors: ["Paola Ricaurte"]
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md
 confidence: 94
@@ -42,35 +33,35 @@ Theoretisch-konzeptionell mit Praxisbeispielen; Mixed-Methods Ansatz (Dokumentat
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Der Text diskutiert grundlegende Fragen zur Kompetenzvermittlung: 'Who can develop AI? Where? How? For what purpose? Why?' und adressiert die Notwendigkeit, Verständnis für die Kontextualität von Algorithmen zu schaffen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf algorithmic assemblages, algorithmische Entscheidungssysteme und deren gesellschaftliche Implikationen: 'algorithmic assemblages result from the ensemble of the mathematical and the infrastructural, the sociopolitical and the cultural'.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Die 13 Projekte adressieren 'profound societal issues' und sind 'grounded in communities'; Care-Ansatz ist zentral: 'involve nurturing processes and challenging the underlying assumptions of what technology is'.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Expliziter Fokus auf strukturelle Ungleichheiten: 'addressing power imbalances in the AI ecosystem, considering structural inequalities, colonial legacies, and the multidimensional harms that disproportionately affect communities of the global majority'.
 
-### Gender
+### Evidenz 5
 
 Gender ist zentral für die Initiativen: 'Argentine Ministry of Foreign Affairs and UNESCO organized the Symposium on Feminist Contributions in Artificial Intelligence' und 'Towards Real Diversity and Gender Inclusion in AI Ecosystems'.
 
-### Diversitaet
+### Evidenz 6
 
 Inklusion und Repräsentation sind Kernziele: 'ensure that our ethical frameworks and governance structures reflect the principles of diversity, equity, and inclusion' und 'lack of representation in governance structures of countries, territories and populations of the global majority'.
 
-### Feministisch
+### Evidenz 7
 
 Explizit feministische Rahmenwerk und Theorie: 'Based on feminist principles and a critical understanding of the role of technology in society'; Verwendung von Design Justice Prinzipien; intersektionaler Ansatz; Bezug zu feministischen Konzepten von Care und 'Nothing about us, without us'.
 
-### Fairness
+### Evidenz 8
 
 Fairness und Gerechtigkeit sind zentral für das Konzept: 'aimed to ensure that artificial intelligence systems are governed, designed, developed, deployed, and used in ways that are just, equitable, and inclusive'; 'pursuing fair, equitable and inclusive AI systems in the pursuit of universal access to human rights'.
 

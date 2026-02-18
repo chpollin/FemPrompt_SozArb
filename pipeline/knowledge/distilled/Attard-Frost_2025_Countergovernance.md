@@ -4,12 +4,6 @@ authors: ["The Dais at Toronto Metropolitan University", "Centre for Media, Tech
 year: 2023
 type: report
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Attard-Frost_2025_Countergovernance.md
 confidence: 95
@@ -40,23 +34,23 @@ Qualitativ - Multi-Stakeholder-Roundtable mit über 30 Experten aus Akademie, Zi
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Das Paper behandelt umfassend algorithmen Entscheidungssysteme, biometrische Systeme, Facial Recognition, AI in Einstellung, Sicherheit und Strafverfolgung sowie Data Governance: 'The AIDA proposes to establish an Artificial Intelligence and Data Commissioner' und 'systems used for biometric identification, education and training, legal and interpretation'
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Das Paper adressiert AI-Systeme in Kontexten, die für Soziale Arbeit zentral sind: Immigration, Strafverfolgung, Polizei, staatliche Dienstleistungen. 'The exclusion of public sector institutions from the AIDA creates regulatory gaps and sets a double standard. While the public and private sector have been historically regulated separately... it does not mean that government use of AI should be exempt from accountability and scrutiny.'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Extensive Analyse algorithmischer Diskriminierung und struktureller Ungleichheiten: 'Researchers have debunked such practices as pseudoscience that can reinforce systemic forms of discrimination such as racism and sexism.' und 'racial profiling of racialized groups' sowie systematische Ausgrenzung marginalisierter Gruppen durch zu enge Harm-Definition.
 
-### Diversitaet
+### Evidenz 4
 
 Das Paper fordert explizit Einbeziehung marginalisierter Gemeinschaften und betont fehlende Partizipation: 'we urge the government and Parliamentarians to pay special attention to how it can engage with the Canadian population more rigorously, especially those representing marginalized communities' sowie Fokus auf vulnerable Gruppen: 'systems that exploit vulnerable groups based on their age (such as children) or physical and mental disabilities'
 
-### Fairness
+### Evidenz 5
 
 Fairness wird zentral behandelt durch Forderung nach fairem Ansatz: 'establish minimum transparency and accountability requirements for systems that pose 'lower' levels of impact' und Kritik an unfairen Audit-Prozessen: 'research shows that the quality of regulatory audits is poor when the auditee selects and compensates the auditor' sowie Fairness-basierte Kategorisierung analog EU AI Act mit risikogestuftem Ansatz
 

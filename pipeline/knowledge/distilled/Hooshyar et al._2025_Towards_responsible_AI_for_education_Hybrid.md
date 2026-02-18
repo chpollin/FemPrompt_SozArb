@@ -4,13 +4,6 @@ authors: ["Danial Hooshyar", "Gustav Šír", "Yeongwook Yang", "Eve Kikas", "Rai
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.md
 confidence: 91
@@ -39,27 +32,27 @@ Kritische Analyse und theoretische Position Paper mit empirischen Beispielen aus
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper diskutiert kritisches Verständnis von KI-Systemen im Bildungsbereich, Notwendigkeit von Klarheit über verschiedene KI-Familien und deren Einsatz: 'the lack of clarity around what AI for education truly means-often ignoring the distinct purposes, strengths, and limitations of different AI families'
 
-### Generative_KI
+### Evidenz 2
 
 Explizite Kritik am Trend, KI für Bildung mit großen Sprachmodellen gleichzusetzen: 'the growing trend of equating it with domain-agnostic, company-driven large language models' und spätere Diskussion von LLM-Problemen
 
-### KI_Sonstige
+### Evidenz 3
 
 Umfassende Behandlung verschiedener KI-Methoden: Expert Systems, Machine Learning, Deep Learning, Bayesian Networks, Neural-Symbolic AI, Explainable AI (SHAP, LIME), Knowledge Tracing, Learner Modelling
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Thematisiert systematische Vorurteile in Algorithmen: 'A-level algorithm' war systematisch vorurteilsbehaftet gegen bestimmte Studierende und Schulen. Diskussionspunkt: 'class imbalance' in Datensätzen führt zu Generalisierungsproblemen, die Ungleichheiten verstärken
 
-### Diversitaet
+### Evidenz 5
 
 Betonung von Inklusion und diverse Stakeholder-Beteiligung: 'limited integration of domain knowledge and lack of stakeholder involvement in AI design and development' sowie Fokus auf individuelle studentische Unterschiede statt globale Prescriptions
 
-### Fairness
+### Evidenz 6
 
 Zentrale Fairness-Herausforderungen werden diskutiert: 'reinforcing inequalities', 'class imbalance' in Trainingssets, Notwendigkeit fairer ML-Praktiken, und Fairness als Kernelement Verantwortungsvoller KI definiert als 'fair, accountable, not biased, non-discriminating'
 

@@ -4,13 +4,6 @@ authors: ["Kexin Chen", "Noelle Lim", "Claire Lee", "Michael Guerzhoy"]
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chen_2024_Exploring_complex_mental_health_symptoms_via.md
 confidence: 88
@@ -39,27 +32,27 @@ Empirisch / Mixed Methods: RoBERTa-basierte Textklassifikation von Reddit-Posts 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper adressiert 'Explainable AI' und technisches Verständnis für LLM-basierte Systeme. Die Pipeline erfordert Verständnis von RoBERTa-Klassifikatoren, Phrase-Masking-Erklärungsmethoden und Embedding-Techniken zur Interpretation von KI-Ausgaben.
 
-### KI_Sonstige
+### Evidenz 2
 
 Verwendung von RoBERTa für Textklassifikation, NLP-Techniken (Phrase-Masking), OpenAI Text-Embedding-3-Large für Ähnlichkeitsanalyse, sowie Evaluierung mit traditionellen Baselines (Logistic Regression, Naive Bayes).
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkte Anwendung auf mentale Gesundheitszustände (Angststörung, ADHD, Lyme-Krankheit mit psychischen Folgen), Verwendung von Reddit als Datenquelle für nicht-professionelle Hilfesuche, Fokus auf Erkrankungen mit komplexen Symptomen die Sozialarbeiter betreffen, insbesondere Comorbidität und Früherkennung.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Das Paper thematisiert implizit strukturelle Ungleichheiten: 53% der Erwachsenen mit ADHD haben Angststörungen, aber diese werden oft nicht erkannt - dies ist ein diagnostischer Bias. Menschen mit komplexen Erkrankungen ohne Zugang zu Spezialisten sind überrepräsentiert online.
 
-### Diversitaet
+### Evidenz 5
 
 Fokus auf marginalisierte Gruppen: Menschen mit psychischen Erkrankungen, die keinen klinischen Zugang haben; Lyme-Disease-Patienten mit unterdiagnosed mental health aspects; Berücksichtigung verschiedener Online-Communities (r/Anxiety, r/ADHD, r/AskDocs) mit unterschiedlichen Patientendemographien.
 
-### Fairness
+### Evidenz 6
 
 Die explainability-Methode zielt auf transparente und faire Klassifikation ab. Das Paper evaluiert Fairness durch F1-Score und Accuracy auf potenziell class-imbalanced Datensätzen. Die Verwendung von Baseline-Modellen ermöglicht Fairness-Vergleiche zwischen Algorithmen.
 

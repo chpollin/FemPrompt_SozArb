@@ -4,12 +4,6 @@ authors: ["Gary K. W. Wong", "Xiaojuan Ma", "Pierre Dillenbourg", "John Huan"]
 year: 2020
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Wong_2020_Broadening_artificial_intelligence_education_in.md
 confidence: 75
@@ -38,23 +32,23 @@ Theoretisch/Review - Synthese von Best Practices aus universitärer AI-Bildung, 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Building AI literacy across three dimensions: AI concepts, AI applications, and AI ethics/safety (Table 1). Students should 'develop their computational thinking and programming for learning about AI'. The paper proposes structured learning outcomes at each grade level.
 
-### KI_Sonstige
+### Evidenz 2
 
 Focus on machine learning, neural networks, robotics, computer vision, voice assistants, decision trees, inference algorithms, chatbots, and the Turing Test. 'AI is a specific family of algorithms' applied through programming techniques.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Discusses unequal access to AI education ('the recruitment of teachers specializing in ICT was a struggle'), global inequalities in AI readiness between countries, and the need to equip 'every citizen with computational thinking skills' to prevent talent shortages that perpetuate inequality.
 
-### Diversitaet
+### Evidenz 4
 
 Paper emphasizes inclusive K-12 AI education across diverse global contexts (US, UK, Australia, Singapore, Hong Kong, China). References gender representation: 'Gender And Technology in Free Play in Swedish Early Childhood Education' (reference 11). Notes anthropomorphization tendencies in diverse student populations.
 
-### Fairness
+### Evidenz 5
 
 Addresses 'ethical challenges and safety issues involved in applying AI technologies to real-world applications'. References ethical and safety-related challenges as 'central drivers of the future of AI' and mentions organizations like the Alan Turing Institute and Stanford Center for AI Safety safeguarding community well-being.
 

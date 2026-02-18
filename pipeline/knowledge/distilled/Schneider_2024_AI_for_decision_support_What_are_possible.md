@@ -4,12 +4,6 @@ authors: ["Armin Grunwald", "Daniel Schneider", "Karsten Weber", "Daniel Minkin"
 year: 2024
 type: journalArticle
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Schneider_2024_AI_for_decision_support_What_are_possible.md
 confidence: 86
@@ -38,23 +32,23 @@ Mixed Methods: Qualitative Interviewstudien mit szenariobasierten Ansätzen, Lit
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentrale Anforderung ist 'Erklärbarkeit' von KI-Systemen als 'Bereitstellung von adressat*innengerechten Informationen über ihre Funktionsweise' und der Aufbau von Vertrauen durch Transparenz in Entscheidungsprozessen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf AI-based decision support systems in Medizin, Justiz und Grenzpolizei; algorithmische Entscheidungssysteme, Machine Learning, Gesichtserkennung, Deception Detection Systeme.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 ADDS-Systeme an EU-Grenzen 'continue inequalities and discriminatory dynamics but, by automating them, embed them further into the social fabric'; Diskriminierung in algorithmischen Systemen wird analysiert als strukturelle Benachteiligung von Migrant*innen und vulnerablen Gruppen.
 
-### Diversitaet
+### Evidenz 4
 
 Analyse verschiedener Stakeholder-Perspektiven (Richter*innen, Patient*innen, Grenzbeamte, Ärzt*innen); marginalisierte Communities (Migrant*innen) als besonders von automatisierten Entscheidungssystemen betroffen.
 
-### Fairness
+### Evidenz 5
 
 Analyse von Fairness in justiziellen Entscheidungssystemen, Debiasing-Potential von KI, Algorithmic Fairness in Policing und Grenzkontrollen; kritische Reflexion über Fairness-Metriken und deren Grenzen in real-world Anwendungen.
 

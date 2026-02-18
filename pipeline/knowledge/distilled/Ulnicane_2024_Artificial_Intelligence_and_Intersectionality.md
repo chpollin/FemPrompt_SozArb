@@ -4,13 +4,6 @@ authors: ["Inga Ulnicane"]
 year: 2024
 type: workingPaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Ulnicane_2024_Artificial_Intelligence_and_Intersectionality.md
 confidence: 92
@@ -39,27 +32,27 @@ Theoretisch/Review - Analyse von AI-Policy-Dokumenten mit intersektionaler Linse
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Analyse von AI-Systemen wie Einstellungsalgorithmen, Gesichtserkennung und digitalen Sprachassistenten als Fallbeispiele für algorithmische Bias
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Growing evidence suggests that AI is amplifying and exacerbating gender, racial, ethnic and other stereotypes; AI amplifies and exacerbates human biases and reflects deep rooted historical and systemic inequalities and power asymmetries
 
-### Gender
+### Evidenz 3
 
 focus on framing concerns and recommendations related to gender; biased AI applications include hiring algorithms that discriminate against female candidates, facial recognition that performs poorly on black and female faces as well as obedient and subservient digital female voice assistants
 
-### Diversitaet
+### Evidenz 4
 
 The diversity crisis among AI developers and founders; Lack of women and minorities in computing; intersectional lens to highlight the interaction of multiple identities - gender, race, class and others - leading to the marginalization, exclusion and discrimination of certain social groups
 
-### Feministisch
+### Evidenz 5
 
 use an intersectional lens; intersectionality provides an illuminating perspective; use intersectionality to reimagine AI in more inclusive and participatory ways - referenziert implizit intersektionale feministische Theorie (Crenshaw-Tradition)
 
-### Fairness
+### Evidenz 6
 
 concerns about bias and inequality in AI; issues such as justice, fairness and equality; focus on shaping culture, power and opportunities
 

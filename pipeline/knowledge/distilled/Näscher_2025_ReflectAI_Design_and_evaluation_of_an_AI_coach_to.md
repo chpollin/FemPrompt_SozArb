@@ -4,8 +4,6 @@ authors: ["Sara Hofmann", "Lieselot Danneels", "Roel Dobbe", "Anna-Sophie Novak"
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - none
 processed: 2026-02-05
 source_file: Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md
 confidence: 75

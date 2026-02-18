@@ -4,14 +4,6 @@ authors: ["Laine McCrory"]
 year: 2025
 type: workingPaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in.md
 confidence: 93
@@ -40,27 +32,27 @@ Theoretisch/Analyse: Feminist Policy Analysis Framework angewendet auf 7 interna
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die OECD definiert 'AI knowledge' als 'skills and resources required to understand and participate in the AI system lifecycle' – McCrory kritisiert, dass gelebte Erfahrung marginalisierter Gruppen ausgeschlossen wird und alternative Epistemologien in Expertise-Definitionen fehlen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Analysen von AI-Safety-Instituten, AGI-Risiken, algorithmischen Entscheidungssystemen und deren Implementierung in globalen Governance-Rahmen; Fokus auf ML-Modelle und deren strukturelle Verzerrungen.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Expliziter Bezug zu Sozialpolitik-Analyse (McPhail, Kanenberg), Vulnerable Populationen, Social Welfare Systeme (Eubanks-Referenz zu Automating Inequality in Sozialhilfe-Kontexten), Care und Community Governance.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kern-These: 'AI reinforces inequalities related to race, sexuality, class and gender'; diskriminierende Algorithmen als existenziell für low-income families; 'technological redlining' durch systematische Benachteiligung; Power Dynamics und strukturelle Diskriminierung.
 
-### Diversitaet
+### Evidenz 5
 
 Intersectionality als Framework-Kern; marginalisierte Communities, race, ethnicity, gender identity, class, carceral status, ability als überlappende Identitäten; Forderung nach 'diverse perspectives within technical development' und Repräsentation in Policy-Narrativen.
 
-### Feministisch
+### Evidenz 6
 
 Explizit feministische Theorie: Crenshaw's Intersectionality (1991), D'Ignazio & Klein's Data Feminism (2020), McPhail's Feminist Policy Analysis Framework (2003), Kanenberg et al.'s intersektionale Policy-Analyse; feministische Prinzipien wie Accountability, Partizipation, Power-Analyse zentral.
 

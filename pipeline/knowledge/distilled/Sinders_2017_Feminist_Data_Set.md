@@ -4,15 +4,6 @@ authors: ["Caroline Sinders"]
 year: 2017
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Sinders_2017_Feminist_Data_Set.md
 confidence: 90
@@ -43,35 +34,35 @@ Mixed Methods: Praxis-basierte Kunstforschung kombiniert mit partizipatorischen 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Projekt entwickelt kritische Medienkompetenz und Technologieverständnis durch Workshops und öffentliche Vermittlung. Sinders schreibt: 'Every step of the AI process that includes data collection, data labeling, data training, selecting an algorithm to use... through intersectional feminism as an investigatory framework'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf maschinelles Lernen, Datenmodellierung, Algorithmen, Chatbots und neuronale Netze. Detaillierte Untersuchung der KI-Pipeline von Datenerfassung bis zum Einsatz.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Das Projekt zielt auf Gerechtigkeit, Community-Empowerment und Harm Reduction ab – zentrale Themen der Sozialen Arbeit. Sinders: 'What would it look like to create technology that acts as harm reduction, that acts actively as critique' und betont Community-Mitsprache und Vulnerabilität von marginalisierten Gruppen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Fokussierung auf Bias in ML-Systemen (Prison Sentencing, Facial Recognition, Hiring, Social Media Algorithms). Dokumentation struktureller Diskriminierung. Sinders: 'Machine learning algorithms have also been used in biased and unjust prison sentencing, in facial detection (or lack thereof), in biased hiring practices that favor male applicants'
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus auf Frauenrepräsentation und geschlechtsspezifische Auswirkungen von Technologie. Beispiel: Amazon Recruiting Tool mit Bias gegen Frauen. Sinders betont auch Cis-Frauen vs. Nicht-Cis-Frauen und deren unterschiedliche Erfahrungen.
 
-### Diversitaet
+### Evidenz 6
 
 Starker Fokus auf intersektionale Perspektiven und marginalisierte Communities. Sinders: 'we need to think about power, context, and privilege in society' und 'data must reflect the community's ideas'. Explizite Erwähnung von Frauen of Color, trans Personen, queerer Communities, indigenen Aktivisten und anderen marginalisierten Gruppen.
 
-### Feministisch
+### Evidenz 7
 
 Das Projekt ist explizit in intersektionaler feministischer Theorie verankert. Direkter Bezug zu: Kimberlé Crenshaw (Intersektionalität), Donna Haraway (Cyborg Manifesto), Feminist Principles of the Internet, Xenofeminism, Data Feminism (implizit). Sinders nutzt feministische Methodologie (consent, agency, care, collective knowledge production) als Investigativ-Framework für jeden Schritt der KI-Entwicklung.
 
-### Fairness
+### Evidenz 8
 
 Fokus auf faire Arbeitsbedingungen (Lohngleichheit auf Mechanical Turk), Transparenz, Governance, Arbeitnehmerkommunikation und faire Datenverwendung. Sinders: 'A system that creates competition amongst laborers, that discourages a union, that pays pennies per repetitive task, and that creates nameless and hidden labor is not ethical, nor is it feminist.'
 

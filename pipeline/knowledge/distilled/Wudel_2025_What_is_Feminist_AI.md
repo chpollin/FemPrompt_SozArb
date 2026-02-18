@@ -4,14 +4,6 @@ authors: ["Alexandra Wudel", "Anna Ehrenberg"]
 year: 2025
 type: report
 language: en
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Wudel_2025_What_is_Feminist_AI.md
 confidence: 95
@@ -40,27 +32,27 @@ Theoretisch-konzeptionell mit praktischen Fallbeispielen; basiert auf intersekti
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Paper analysiert AI-Systeme breit im Kontext von Bias-Verstärkung: 'AI systems may reinforce structural discrimination of marginalised, underrepresented and underprivileged people (MUUP)'
 
-### Soziale_Arbeit
+### Evidenz 2
 
 MIRA-Fallbeispiel zeigt Anwendung im Gesundheitswesen als soziale Leistung; fokussiert auf Zugang für unterversorgte Populationen und Gerechtigkeit: 'reducing hierarchies and barriers in healthcare, fostering societal sustainability'
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentral für das gesamte Paper: 'The present understanding of intelligence in the field of AI is described as mostly rational and masculinist...AI currently leads to a digitised society embedded into a social system with power inequalities'
 
-### Gender
+### Evidenz 4
 
 Expliziter Gender-Fokus durchgehend, z.B.: 'checking if a system relies on binaries and hierarchies, such as binary gender categories, which may introduce gender bias and exclude individuals identifying as non-binary'
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Perspektive ist Kernprinzip: 'Intersectional feminism refers to a framework that acknowledges the oppression of people shaped not only by their gender, but by other social categories such as ethnicity, class, sexuality, ability, age, religion or geography'
 
-### Feministisch
+### Evidenz 6
 
 Explizite Verwendung intersektionaler feministischer Theorie (Ferguson 2017, Hill Collins, Crenshaw's Intersectionality, D'Ignazio & Klein 2020 'Data Feminism'): 'Ferguson (2017) identifies a set of values shared amongst them which can be categorised into three pillars' - Komplexität, Fluidität, politisches Engagement
 

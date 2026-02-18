@@ -4,12 +4,6 @@ authors: ["Anastasia Siapka"]
 year: 2022
 type: conferencePaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md
 confidence: 89
@@ -38,23 +32,23 @@ Theoretisch; kritische Analyse von AI-Ethik-Literatur und -Praktiken, feministis
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Das Paper behandelt AI-Ethik als globales Forschungsfeld mit Fokus auf Governance, Richtlinien und ethische Frameworks für AI-Systeme: 'the proliferation of Artificial Intelligence (AI) algorithms in a multitude of, often high-stake, contexts has sparked intense and sustained debate about the risks of AI'
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 Explizite Behandlung von Diskriminierung, algorithmischem Bias und struktureller Benachteiligung: 'the impact of ostensibly neutral AI systems' und Analyse von 'data colonialism', 'ghost work' und ethischen Problemen im Global South
 
-### Diversitaet
+### Evidenz 3
 
 Starke intersektionale Perspektive mit Fokus auf marginalisierte Gruppen: 'no one is simply a person but instead is constituted fundamentally by race, class, and gender' sowie Analyse von Repräsentation in AI-Ethik-Boards: 'who sits at the table, what questions and concerns are sidelined, and what power asymmetries are shaping the terms of debate'
 
-### Feministisch
+### Evidenz 4
 
 Explizit und systematisch feministische Theorie und Methodik: Das Paper basiert auf feministischer Philosophie (Referenzen zu Lugones, Spelman, Harding, D'Ignazio & Klein), verwendet feministische Metaethik als Rahmen, betont 'commitment to normativity and social change' und kritisiert 'mainstream philosophical views and methods' die von privilegierten Gruppen dominiert werden
 
-### Fairness
+### Evidenz 5
 
 Behandlung von algorithmischer Fairness und gerechten AI-Systemen durch Untersuchung von 'power relations', Testimonial Injustice und strukturellen Ungerechtigkeiten: 'examine how AI systems affect power relations in terms of who is believed or not as well as if and how they might exacerbate testimonial injustice'
 

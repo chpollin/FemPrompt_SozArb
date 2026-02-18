@@ -4,15 +4,6 @@ authors: ["Tessa Charlesworth", "Kshitish Ghate", "Aylin Caliskan", "Mahzarin R.
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Charlesworth_2024_Flexible_intersectional_stereotype_extraction.md
 confidence: 94
@@ -41,35 +32,35 @@ Empirisch - Natural Language Processing; Entwicklung und Anwendung des FISE-Verf
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Studie zielt darauf ab, Industrien zu zeigen, wie Sprache Stereotypen verkörpert, verbreitet und intensiviert: 'Our research can show industries that such findings and methods illustrate the societal significance of how language embodies, propagates and even intensifies stereotypes'
 
-### Generative_KI
+### Evidenz 2
 
 Explizite Bezüge zu generativen KI-Systemen: 'you can see these kinds of imbalances coming out in the outputs' bei Google, ChatGPT, DALL-E
 
-### KI_Sonstige
+### Evidenz 3
 
 Verwendung von Natural Language Processing (NLP) und Word Embeddings: 'an approach built on earlier versions of natural language processing (word embeddings) compared to the more advanced large language models'
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral: '59% of traits in the English language are associated with white men, Black women are associated with only about 5% of the traits' und 'Imbalances in English language create imbalances in AI systems'
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus: 'the way gender, race and social class intersect and relate to systems of oppression, domination or discrimination' und geschlechtsspezifische Befunde wie Überrepräsentation weiblicher positiver Traits bei Wohlstand
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale Perspektive auf Repräsentation: 'underrepresentation of Black women specifically in the training data' und 'When women of color are made invisible in the data, it is likely that the applications of large language models and AI will be particularly inaccurate'
 
-### Feministisch
+### Evidenz 7
 
 Die Studie bezieht sich auf Intersektionalitätstheorie und deren führende Theoretiker:innen (impliziert Crenshaw). Explizite Verbindung von intersektionaler Theorie mit KI-Kritik zur Analyse von Machtverhältnissen und Unterdrückung
 
-### Fairness
+### Evidenz 8
 
 Algorithmic Fairness als zentrales Anliegen: 'The research tells us that even in these intersectional spaces where we are having race, gender and social class interacting, social class seems to be an overwhelming factor on how a person is represented' mit Fokus auf faire Repräsentation
 

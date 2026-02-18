@@ -4,13 +4,6 @@ authors: ["Anastasia Karagianni"]
 year: 2025
 type: workingPaper
 language: en
-categories:
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Karagianni_2025_The_EU_artificial_intelligence_act_through_a.md
 confidence: 95
@@ -39,27 +32,27 @@ Theoretisch: Feministische Textanalyse des AI Act mit artikel-für-artikel-Analy
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Das Paper analysiert verschiedene AI-Systeme und deren Regulierung durch das EU-AI-Gesetz, einschließlich hochriskanter KI-Systeme in Rekrutierung, Gesundheitswesen, Grenzmanagement und prädiktiver Polizei.
 
-### Bias_Ungleichheit
+### Evidenz 2
 
 The paper provides extensive case studies showing how AI systems perpetuate discrimination: 'AI technologies, if not designed with comprehensive oversight, can inadvertently perpetuate existing societal biases, leading to discriminatory impacts against women and marginalised communities.'
 
-### Gender
+### Evidenz 3
 
 Explicit gender focus throughout: 'This paper examines the need for feminist-informed AI frameworks to address diverse socio-technical impacts and counter the risk of AI reflecting biases favouring white, cisgender, able-bodied men.'
 
-### Diversitaet
+### Evidenz 4
 
 The paper emphasizes intersectionality: 'Feminist scholars contend that existing laws must incorporate stronger protections for individuals, especially women, facing vulnerabilities related to privacy breaches and surveillance' and explicitly discusses marginalized communities including women of color, LGBTQIA+, disabled individuals.
 
-### Feministisch
+### Evidenz 5
 
 Explicit feminist theoretical framework: 'Drawing on feminist theories, the paper evaluates the AI Act's limitations in mitigating gender biases.' Uses feminist scholars like Crenshaw (intersectionality), MacKinnon, objectification theory, and feminist legal analysis throughout.
 
-### Fairness
+### Evidenz 6
 
 Addresses algorithmic fairness in context of gender: 'Conformity assessments should require comprehensive bias audits that extend beyond identifying overt discrimination' and discusses fairness in recruitment, healthcare, and border control contexts.
 

@@ -4,14 +4,6 @@ authors: ["British Association of Social Workers (BASW)"]
 year: 2025
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md
 confidence: 95
@@ -41,31 +33,31 @@ Theoretisch/Richtlinien-basiert: Analyse von GenAI-Anwendungen im Kontext der BA
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Employer should provide training and clear guidance; critical thinking and reflection remain essential; professional judgment and ability to evidence decisions remains central; attention given needs proportional to task importance
 
-### Generative_KI
+### Evidenz 2
 
 Generative AI understood as AI that can create new content in text, audio or visual form; tools like Magic Notes, CoPilot discussed; transcription and note-taking applications explicitly featured
 
-### KI_Sonstige
+### Evidenz 3
 
 References to algorithmic decision systems and the broader AI landscape in public services and deployment challenges
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Entire document focused on social work practice; BASW Code of Ethics as framework; applications in assessments, meeting transcriptions, client record-keeping; care and support service contexts throughout
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Generic tools prone to bias inherent in training datasets; example of racist or sexist language or assumptions; need to challenge oppression and respect diversity; equalities impact assessment required; bias aggregates data around ethnicity and gender concluding higher risk
 
-### Diversitaet
+### Evidenz 6
 
 Social workers reminded to respect diversity; equalities impact assessment for GenAI adoption; consideration of diverse groups in bias analysis; people drawing on care and support have rights regarding data control
 
-### Fairness
+### Evidenz 7
 
 Professional judgment and ethical practice require accurate records and checking outputs; proportional attention to task importance; accountability sits with social worker; transparency key to Code; informed consent and appropriate information sharing required
 

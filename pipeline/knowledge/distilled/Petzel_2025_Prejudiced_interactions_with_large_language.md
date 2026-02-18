@@ -4,14 +4,6 @@ authors: ["Zachary W. Petzel", "Leanne Sowerby"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Petzel_2025_Prejudiced_interactions_with_large_language.md
 confidence: 75
@@ -40,31 +32,31 @@ Empirisch: 3 preregistrierte experimentelle Studien mit Online-Manipulation von 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Adapting to emerging AI technologies will be essential for academic success among students, in addition to remaining competitive while seeking employment. [...] those who fail to incorporate these emerging technologies into their learning and professional development may lag behind.
 
-### Generative_KI
+### Evidenz 2
 
 Access to large language models (LLMs) has proliferated, providing sophisticated tools capable of simulating detailed and accurate conversations (e.g., ChatGPT). [...] LLMs are often trained on text which contain harmful biases against disadvantaged and stigmatized groups.
 
-### KI_Sonstige
+### Evidenz 3
 
 Amazon having used algorithms preferring men for technical jobs (e.g., software developers) while disregarding female applicants due to their gender. [...] algorithms assessing Black defendants are likely to predict higher rates of future violent crimes compared to White defendants.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Implicit biases adversely impact stigmatized groups [...] With 42% of organizations using AI to automate business analytics, customer service, and hiring decisions [...] action is needed to understand how algorithms which contain implicit biases may impact engagement with LLMs among stigmatized social groups.
 
-### Gender
+### Evidenz 5
 
 Women's performance is negatively impacted when interviewed by men with implicit gender biases (e.g., women as incompetent). [...] Men are more likely to own two or more smart home devices than women, in addition to perceiving devices as more useful and reporting greater intentions to use this technology.
 
-### Diversitaet
+### Evidenz 6
 
 Members of stigmatized social groups (Black Americans, women) reported higher trustworthiness of LLMs after viewing unbiased interactions with ChatGPT [...] addressing AI-generated prejudice could minimize social disparities in adoption of LLMs which might further exacerbate professional and educational disparities.
 
-### Fairness
+### Evidenz 7
 
 Trustworthiness is the perception of several characteristics of a trustee [...] integrity captures agreement between the user's values and principles and those of the LLM (e.g., adherence to ethics). Thus, LLMs trained on data containing prejudices may reduce trustworthiness among stigmatized group members due to violating these factors.
 

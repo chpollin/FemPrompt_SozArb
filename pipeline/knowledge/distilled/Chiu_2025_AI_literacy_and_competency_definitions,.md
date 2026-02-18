@@ -4,14 +4,6 @@ authors: ["Thomas K. F. Chiu"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Chiu_2025_AI_literacy_and_competency_definitions,.md
 confidence: 94
@@ -40,31 +32,31 @@ Theoretisch: Konzeptionelle Analyse und Rahmenwerk-Entwicklung basierend auf OEC
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das gesamte Paper konzentriert sich auf AI Literacy und Competency Definitionen, Rahmen und Entwicklung. Zentral: 'AI literacy is about knowledge and understanding; AI competency is about skillful application and optimization.'
 
-### Generative_KI
+### Evidenz 2
 
 ChatGPT, Midjourney und Large Language Models werden als Beispiele generativer KI-Systeme erwähnt: 'from generative tools like ChatGPT to predictive algorithms'
 
-### Prompting
+### Evidenz 3
 
 Prompt-Engineering wird explizit diskutiert unter Linguistic Literacy: 'prompt engineering... relies on understanding how the model encodes concepts'
 
-### KI_Sonstige
+### Evidenz 4
 
 Machine Learning, Neural Networks, Computer Vision, Algorithmen, NLP und Vorhersage-Algorithmen werden behandelt: 'machine learning, neural networks... recommendation engines or facial recognition'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Algorithmische Bias, Fairness und Diskriminierung sind zentrale ethische Themen: 'Ethical literacy provides the philosophical frameworks... to identify these dilemmas, analyze potential harms... bias, privacy, accountability, transparency'
 
-### Diversitaet
+### Evidenz 6
 
 Das Papier adressiert Diversität explizit in Zukunftsforschungsrichtungen: 'Equity and access in the AI literacy-to-competency pipeline' und 'Culturally Responsive AI literacy & competency frameworks: How do cultural values, linguistic diversity, and local epistemologies shape the definition, acquisition, and application'
 
-### Fairness
+### Evidenz 7
 
 Fairness wird in Ethical Literacy und in praktischer Anwendung behandelt: 'auditing for bias, and ensuring transparency within the development and execution of AI competency'. Erwähnt wird auch 'fairness and impact' im Kontext von AI Design.
 

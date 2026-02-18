@@ -4,13 +4,6 @@ authors: ["Petra Ahrweiler"]
 year: 2025
 type: book
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-04
 source_file: Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment.md
 confidence: 95
@@ -39,27 +32,27 @@ Mixed Methods: Internationale vergleichende Fallstudien in neun Ländern auf vie
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Projekt befasst sich mit der Notwendigkeit, dass 'alle gesellschaftlichen Akteure' zur 'Gestaltung von partizipativer, kontextspezifischer und fairer KI' beitragen müssen, was kritisches Verständnis und Kompetenzen im Umgang mit KI erfordert.
 
-### KI_Sonstige
+### Evidenz 2
 
 Das Projekt untersucht KI-Systeme für automatisierte soziale Bewertungen und algorithmische Entscheidungsfindung in der öffentlichen Verwaltung.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Der direkte Fokus liegt auf der Verteilung öffentlicher sozialer Leistungen (Renten, Arbeitslosengeld, Asylbewilligung, Kindergartenplätze) und damit auf Kernbereichen der Sozialen Arbeit und sozialer Dienste.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Das Projekt adressiert explizit 'Diskriminierungsprobleme' ('Bias'), strukturelle Benachteiligung und die Tatsache, dass KI-Systeme unterschiedliche Gruppen ungleich behandeln können je nach Fairnesskonzept.
 
-### Diversitaet
+### Evidenz 5
 
 Die Studie untersucht neun Länder mit unterschiedlichen kulturellen, politischen und sozialen Kontexten und betont die Notwendigkeit, 'vulnerable Gruppen' und die Perspektiven von 'marginalisierten' Akteuren in die KI-Entwicklung einzubeziehen.
 
-### Fairness
+### Evidenz 6
 
 Das gesamte Projekt konzentriert sich auf 'Fairnesskriterien' und 'Fairness bei der Verteilung', wobei die Fallstudien zeigen, dass Fairnesskonzepte kultur- und kontextabhängig sind und nicht standardisiert sein können.
 

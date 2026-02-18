@@ -4,13 +4,6 @@ authors: ["Siu-Cheung Kong", "William Man-Yin Cheung", "Guo Zhang"]
 year: 2021
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md
 confidence: 95
@@ -39,27 +32,27 @@ Empirisch (Mixed-Methods): Quantitativ mit Pre-Post-Tests (14-Item AI Concepts T
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 We propose that AI literacy includes three components: AI concepts, using AI concepts for evaluation, and using AI concepts for understanding the real world through problem solving. Understanding AI concepts is essential for learners developing AI literacy.
 
-### KI_Sonstige
+### Evidenz 2
 
 The course served as a pilot initiative to promote AI literacy to the public. This article reports the process of designing, implementing and evaluating this AI literacy course, which is named 'Understanding Artificial Intelligence' and concentrates on concepts related to machine learning.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Along with the new benefits and options that AI can offer, these new technologies also raise public concerns over issues such as bias, digital privacy and security.
 
-### Gender
+### Evidenz 4
 
 Gender stereotypes may account for the fact that female participants feel less empowered before the course even though they have similar performance as that of their male counterparts in AI Concepts Test and AI Literacy Survey. It was reported that female students were more critical of their abilities in STEM than male students even if they had the same grades.
 
-### Diversitaet
+### Evidenz 5
 
 The objective of this study was to design, implement and evaluate an AI literacy course for university students. One of the study's research questions was whether university students from a variety of disciplines could develop a conceptual understanding of AI through a literacy course. These findings indicated that the participants of diverse study backgrounds, and of both genders, could understand the concepts of machine learning.
 
-### Fairness
+### Evidenz 6
 
 Prior knowledge of programming was not necessary for AI concepts development, and the flipped classroom learning approach enabled more flexible learning by the participants. This course was similarly beneficial in promoting understanding of AI for participants of all disciplines and of both genders.
 

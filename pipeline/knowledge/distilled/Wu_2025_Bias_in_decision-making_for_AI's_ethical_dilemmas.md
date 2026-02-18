@@ -4,14 +4,6 @@ authors: ["Yile Yan", "Yuqi Zhu", "Wentao Xu"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md
 confidence: 91
@@ -40,31 +32,31 @@ Empirisch - Simulationsstudie mit systematischer Evaluation von LLM-Antworten zu
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Die Studie adressiert kritisches Verständnis von LLM-Funktionsweisen und deren ethischen Limitationen: 'it is undeniable that ethical limitations in AI still exist and should be publicly acknowledged' und 'it's crucial to demystify their performance in ethical contexts'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf zwei prominente LLM-Modelle: 'Using two prominent models - GPT-3.5 Turbo and Claude 3.5 Sonnet' und systematische Analyse ihrer Antwortmuster in ethischen Dilemmata
 
-### KI_Sonstige
+### Evidenz 3
 
 Breites KI-Fairness-Framework: 'bias being a prominent representative' von ethischen Problemen in ML-Systemen und Analyse von 'algorithmische Biases' im Allgemeinen
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrale Fokussierung auf Diskriminierung und strukturelle Benachteiligung: 'The biased outputs may lead to unfair treatment to the underrepresented individuals or groups of people, exacerbate the pre-existing inequalities' und 'systematic neglect of others'
 
-### Gender
+### Evidenz 5
 
 Geschlecht als geschütztes Attribut systematisch untersucht: 'Gender' in den 7 Attributgruppen mit Masculine, Feminine, Androgynous; Befund: 'Claude 3.5 Sonnet demonstrated more diverse protected attribute choices' inkl. Feminine-Präferenzen
 
-### Diversitaet
+### Evidenz 6
 
 Intersektionale und diversitätsorientierte Analyse: '7 groups of 20 attributes', 'intersectional protected attribute combinations', Analyse von Race (Asian, Caucasian, African), Age, Disability Status; Befund: 'ethical sensitivity significantly decreases in more complex scenarios involving multiple protected attributes'
 
-### Fairness
+### Evidenz 7
 
 Explizite Fairness-Fokussierung: 'justice and fairness' als zentrale Ethik-Prinzipien; 'fairness, justice, and accountability of ethical AI'; systematische Fairness-Metriken (Normalized Frequency, Preference Priority, Sensitivity, Stability, Clustering); algorithmic fairness Framework
 

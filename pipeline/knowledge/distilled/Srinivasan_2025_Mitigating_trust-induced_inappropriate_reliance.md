@@ -4,11 +4,6 @@ authors: ["Tejas Srinivasan", "Jesse Thomason"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Fairness
 processed: 2026-02-05
 source_file: Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md
 confidence: 89
@@ -37,19 +32,19 @@ Empirisch: Kontrollierte Between-Subjects Benutzer-Studien mit zwei Entscheidung
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper befasst sich explizit mit Nutzerkompetenzen im Umgang mit KI: 'trust does not always align with AI assistant trustworthiness' und untersucht wie Nutzer KI-Empfehlungen kritisch evaluieren und verarbeiten können. Die Interventionen zielen auf die Verbesserung des Verständnisses und der kritischen Reflexion ab.
 
-### KI_Sonstige
+### Evidenz 2
 
 Das Paper behandelt klassische KI-Assistenzsysteme, algorithmische Entscheidungsfindung und Mensch-KI-Kollaboration in nicht-generativen Kontexten mit Fokus auf Vertrauen und Reliance-Verhalten.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Das Paper adressiert systematische Verzerrungen in der Nutzer-KI-Interaktion: 'Miscalibrated trust acts as a cognitive bias' und untersucht unterschiedliche Fehlerraten (26% vs. 8% bei Ärzten, 68% vs. 40% Under-Reliance), die strukturelle Probleme der KI-Unterstützung offenbaren.
 
-### Fairness
+### Evidenz 4
 
 Das Paper behandelt faire und angemessene Reliance als Fairness-Problem: 'Appropriate reliance can be fostered through various decision aids' und entwickelt Metriken und Interventionen zur Minimierung von Over- und Under-Reliance als Fairness-Dimensionen in KI-Systemen.
 

@@ -4,9 +4,6 @@ authors: ["Bingcheng Wang", "Pei-Luen Patrick Rau", "Tianyi Yuan"]
 year: 2023
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
 processed: 2026-02-05
 source_file: Wang_2023_Measuring_user_competence_in_using_artificial.md
 confidence: 93
@@ -35,11 +32,11 @@ Empirisch - Quantitative Skalenkonstruktion mittels exploratorischer Faktorenana
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 AI literacy refers to the ability to properly identify, use, and evaluate AI-related products under the premise of ethical standards. The paper develops a 12-item scale measuring four core constructs: awareness, usage, evaluation, and ethics.
 
-### KI_Sonstige
+### Evidenz 2
 
 The study examines human-AI interactions (HAII), human-robot interaction, smart devices, and AI-embedded applications as the broader context for understanding user competence with AI systems.
 

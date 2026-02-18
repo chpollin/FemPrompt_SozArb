@@ -4,15 +4,6 @@ authors: ["Alexandre S. Pires", "Laurens Samson", "Sennay Ghebreab", "Fernando P
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Santos_2025_How_large_language_models_judge_cooperation.md
 confidence: 88
@@ -41,35 +32,35 @@ Mixed Methods: Empirisch (Analyse von 21 LLMs mit 43.200 Prompts zu Kooperations
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Das Paper analysiert, wie Menschen auf LLM-basierte Ratschläge reagieren und welche Kompetenz nötig ist, um Auswirkungen von LLMs auf soziale Entscheidungen zu verstehen: 'Humans increasingly rely on large language models (LLMs) to support decisions in social settings.'
 
-### Generative_KI
+### Evidenz 2
 
 Zentrale Analyse von 21 state-of-the-art Large Language Models (GPT-4o, Claude, Llama, Gemini, Deepseek) und deren Fähigkeit, soziale Urteile zu treffen: 'We provide 21 different LLMs with an extensive set of examples where individuals cooperate - or refuse cooperating - in a range of social contexts'
 
-### Prompting
+### Evidenz 3
 
 Explizite Untersuchung von Prompt-Engineering und dessen Effekt auf LLM-Normen: 'Finally, we test prompts to steer LLM norms, showing that such interventions can shape LLM judgements, particularly through goal-oriented prompts.' Mit vier Prompt-Interventionstypen: Universalisierung, Empathie, Signalisierung und Motivation.
 
-### KI_Sonstige
+### Evidenz 4
 
 Verwendung von evolutionsspieltheoretischen Modellen zur Analyse von Kooperationsdynamiken unter indirekter Reziprozität: 'we develop an evolutionary game theoretical model to study cooperation in an adaptive population where individuals repeatedly play donation games'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Das Paper dokumentiert systematische Biases in LLM-Urteilen basierend auf wahrgenommener Identität: 'nearly all models judge donors based on gender and perceived cultural background of the agents (as inferred from their names), and more significantly, on the context of the interaction.' Dies kann soziale Ungleichheit verstärken.
 
-### Gender
+### Evidenz 6
 
 Analyse von Geschlechtseffekten in LLM-Urteilen: 'In Figure 2, this uncertainty is captured by the use of an ellipse indicating one standard deviation of the calculated social norm... models such as Grok 2 display more sensitive norms.' Datensatz enthält männliche und weibliche Namen: 'our prompt dataset contains a mixture of male and female recipient and donor names from various cultural backgrounds'
 
-### Diversitaet
+### Evidenz 7
 
 Explizite Untersuchung von Unterschieden in der Behandlung verschiedener kultureller und geschlechtlicher Gruppen: 'prompt dataset contains a mixture of male and female recipient and donor names from various cultural backgrounds' mit Namen aus Western, East Asian, Sub-Saharan, und MENA-Regionen. Das Paper analysiert, wie diese Diversitätsmarker LLM-Urteile beeinflussen.
 
-### Fairness
+### Evidenz 8
 
 Das Paper adressiert algorithmische Fairness durch die Frage, ob und wie LLM-Normen gerecht zwischen verschiedenen Populationen Kooperation aufrechterhalten können: 'we develop an evolutionary theoretical model of indirect reciprocity to evaluate the capacity to sustain human cooperation via the norms extracted from LLMs.' und 'to carefully align LLM norms in order to preserve human cooperation'
 

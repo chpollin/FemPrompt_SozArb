@@ -4,13 +4,6 @@ authors: ["Meng-Hsuan Yu", "Roderick A. Rose"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.md
 confidence: 95
@@ -39,27 +32,27 @@ Systematische Literaturreview (PRISMA-Richtlinien) mit Einschluss von grauer Lit
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Explicit focus on training to enhance understanding of algorithmic tools and mitigating automation bias (CFIR table on 'Access to knowledge and information'). The review emphasizes need for caseworkers and agency staff to develop competencies in using decision-support systems effectively.
 
-### KI_Sonstige
+### Evidenz 2
 
 Central focus on predictive analytics, machine learning models, algorithmic-assisted decision-making, and computational algorithms in child welfare. Tools reviewed include LASSO logistic regression, random forests, neural networks, natural language processing, and risk prediction models.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Systematic review of algorithmic tools implemented in child welfare practice across multiple decision-making stages: referral screening, investigation, substantiation, placement, and permanency decisions. Direct engagement with social workers' decision-making, professional judgment, and practical utility in frontline child protective services.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Extensive discussion of algorithmic bias and racial disparities: 'one tool, for instance, disproportionately flagged Black children for mandatory maltreatment investigations' (Ho & Burke, 2022). Review examines whether tools 'function consistently across subgroups' and analyzes accuracy across demographic groups, particularly by race and gender.
 
-### Diversitaet
+### Evidenz 5
 
 Multiple references to marginalized communities and intersectional concerns: examination of whether algorithmic tools 'worsen racial disparities in the CW system,' analysis of overrepresentation of Black children, and equity-focused reports examining racial disproportionality in Los Angeles County model. Consideration of how tools impact diverse families and communities.
 
-### Fairness
+### Evidenz 6
 
 Core focus on algorithmic fairness as one of three central themes. Framework explicitly addresses fairness across subgroups (Russell 2015), uses fairness correction techniques (Purdy & Glass 2023), analyzes model equity through AUC/ROC values, and evaluates whether algorithms function consistently across demographic groups. Drake et al. (2020) framework includes fairness assessment at each stage of development and deployment.
 

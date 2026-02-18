@@ -4,14 +4,6 @@ authors: ["Kristian González Barman", "Nathan Wood", "Pawel Pawlowski"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Barman_2024_Beyond_transparency_and_explainability_On_the.md
 confidence: 89
@@ -40,31 +32,31 @@ Theoretisch-analytisch mit Literaturreview und konzeptionellem Rahmen. Diskussio
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Schwerpunkt auf Nutzerschulung, Kompetenzentwicklung und praktische Richtlinien: 'we argue that LLM users should be given guidelines on what tasks LLMs can do well and which they cannot' und 'teaching users the right way to use these tools, as well as informing them of not only the strengths, potential uses, and best practices'
 
-### Generative_KI
+### Evidenz 2
 
 Fokus auf Large Language Models wie ChatGPT, GPT-4, Claude und Llama: 'Large language models (LLMs) such as ChatGPT present immense opportunities'
 
-### Prompting
+### Evidenz 3
 
 Explizite Behandlung von Prompt-Strategien: 'teaching users to refine and elaborate adequate prompts, be provided with good procedures for prompt iteration' und 'prompt engineering strategies'
 
-### KI_Sonstige
+### Evidenz 4
 
 Behandlung von XAI, Interpretierbarkeit und algorithmischen Entscheidungssystemen: 'Explainable Artificial Intelligence (XAI) has emerged as a significant field'
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Thematisierung von Bias, Diskriminierung und ungleichem Zugang: 'widely recognized issues such as bias', 'misinformation', 'This approach democratizes the use of advanced AI technologies, making them more accessible to a broader audience, irrespective of their technical background'
 
-### Diversitaet
+### Evidenz 6
 
 Fokus auf unterschiedliche Nutzergruppen und kontextspezifische Bedürfnisse: 'diverse needs and concerns of various user groups', 'different disciplines and domains where lack of reliability can have serious negative consequences', 'collaborative endeavor, involving AI experts, ethicists, educators, and perhaps most importantly, end-users'
 
-### Fairness
+### Evidenz 7
 
 Behandlung fairer und ethischer LLM-Nutzung sowie Bias-Mitigation: 'ethical considerations, bias mitigation strategies', 'guidelines for responsible LLM usage' und 'ensuring these models are employed for the collective good'
 

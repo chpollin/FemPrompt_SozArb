@@ -4,13 +4,6 @@ authors: ["Priya Goyal", "Adriana Romero Soriano", "Caner Hazirbas", "Levent Sag
 year: 2022
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.md
 confidence: 95
@@ -39,27 +32,27 @@ Empirisch: Entwicklung von drei standardisierten Fairness-Indikatoren und deren 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Paper betont Notwendigkeit von 'standardized fairness assessments' und 'widespread adoption and mandate of the fairness assessments in computer vision research' sowie Bereitstellung von 'code and guidance' für praktische Anwendung von Fairness-Audits.
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf Computer Vision, spezifisch visual feature extractors, prätrainierte Modelle, und verschiedene Trainingsparadigmen (Supervised, Weakly-Supervised, Self-Supervised Learning).
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentral sind 'blatant disparities' zwischen demografischen Gruppen: 'difference of 0.25 between lower and higher income budgets, and about 0.20 between Africa and Europe', sowie 'error patterns between these groups' und 'poor performance when object recognition models are tested on geographically diverse images'.
 
-### Gender
+### Evidenz 4
 
 Explizite Analyse von Geschlechts-Bias: 'discrepancies in the error rates in gender classification systems', 'darker-skinned women are more frequently misgendered and/or not recognized', und Messungen von 'disparity in learned representations of social and demographic traits' insbesondere für Geschlecht.
 
-### Diversitaet
+### Evidenz 5
 
 Fokus auf Repräsentation verschiedener Gruppen: 'sensitive groups defined by demographic attributes', 'marginalized groups such as immigrants', Analyse nach Hautton (Fitzpatrick scale), Geschlecht, Alter, geografischer Region, Einkommensgruppe, und intersektionale Analysen (gender × skintone).
 
-### Fairness
+### Evidenz 6
 
 Zentral sind 'three fairness indicators' für Quantifizierung von 'harms and biases': (1) harmful label associations, (2) disparity in learned representations, (3) biased performance on geographically diverse images; verwendete Metriken: hit rates, precision at k, performance stratified by sensitive groups.
 

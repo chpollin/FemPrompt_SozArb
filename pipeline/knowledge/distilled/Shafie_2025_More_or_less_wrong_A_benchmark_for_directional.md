@@ -4,14 +4,6 @@ authors: ["Mohammadamin Shafiei", "Hamidreza Saffari", "Nafise Sadat Moosavi"]
 year: 2025
 type: conferencePaper
 language: en
-categories:
-  - Generative_KI
-  - Prompting
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch: Kontrolliertes Benchmark-Experiment mit 300 vergleichenden Mathematik
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Fokus auf 'large language models (LLMs)' und evaluation of 'three LLM families (GPT, Claude, and Qwen)' mit verschiedenen Modellgrößen
 
-### Prompting
+### Evidenz 2
 
 Extensive Analyse von 'prompt framing variants', 'prompt position', 'chain-of-thought prompting', 'structured outputs (JSON)', sowie 'direct vs. indirect' Framing
 
-### KI_Sonstige
+### Evidenz 3
 
 Untersuchung der zugrunde liegenden Mechanismen von Reasoning-Bias in LLMs, die über Standard-NLP hinausgehen
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentrales Thema: 'framing-induced reasoning errors', 'systematic directional bias', 'directional errors', 'reasoning disparities' und wie diese zu systematischen Benachteiligungen führen
 
-### Gender
+### Evidenz 5
 
 Explizite Analyse mit 'gender markers' (man, woman), 'gender bias in numerically grounded tasks', sowie Untersuchung von 'protected attributes such as gender'
 
-### Diversitaet
+### Evidenz 6
 
 Evaluation mit mehreren demografischen Markern: 'gender and race references', 'protected attributes such as gender and race', getestet mit 5 Rassen-Kategorien (Asian, African, Hispanic, White, Black)
 
-### Fairness
+### Evidenz 7
 
 Expliziter Fokus auf 'framing-aware benchmarks for diagnosing reasoning robustness and fairness in LLMs', 'fairness' und 'bias-sensitive evaluations'
 

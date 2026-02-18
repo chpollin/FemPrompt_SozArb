@@ -4,12 +4,6 @@ authors: ["Philipp Waag"]
 year: 2023
 type: journalArticle
 language: de
-categories:
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Waag_2023_Rationalisierung_durch_Digitalisierung.md
 confidence: 92
@@ -38,23 +32,23 @@ Theoretisch; soziologische Systemtheorie nach Luhmann, Interaktionssoziologie na
 
 ## Kategorie-Evidenz
 
-### KI_Sonstige
+### Evidenz 1
 
 Analyse von Chatbots als triviale und nichttriviale Maschinen, Diskussion autonomer Digitaltechnik und selbstlernender KI-Systeme: 'In Form selbstlernender Technologien erlangen bestimmte Formen künstlicher Intelligenz (KI) inzwischen den Status nichttrivialer Maschinen'
 
-### Soziale_Arbeit
+### Evidenz 2
 
 Fokus auf personenbezogene Dienstleistungen, helfende Interaktionen, Beratung, Erziehungssystem, Hilfebedarf und professionelle Sozialarbeit als zentrale Analysegegenstand: 'Soziale Arbeit als organisierte Interaktion' ist Kernthema der Analyse
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Analyse der Asymmetrien zwischen Fachkräften und Hilfsbedürftigen sowie zwischen Fachkräften und Organisationen, Machtungleichgewicht, Kontrolle durch algorithmische Unterstützung: 'Im Zuge der Digitalisierung scheint sich die Asymmetrie auf mindestens zwei Ebenen potenziell zu verschärfen'
 
-### Diversitaet
+### Evidenz 4
 
 Berücksichtigung verschiedener Perspektiven (Fachkräfte, Hilfsbedürftige, Organisationen), Zugang zu Angeboten für räumlich benachteiligte Personen: 'Personen, die nur unter erheblichem Aufwand eine Beratungseinrichtung aufsuchen könnten oder die lieber zu Hause beraten werden, erlangen so Zugang zu professionellen Angeboten'
 
-### Fairness
+### Evidenz 5
 
 Analyse der gerechten Gestaltung von Mensch-Technik-Interaktionen, Fragen der angemessenen Standardisierung und Kontrolle: 'Die Nutzung digitaler Technologien dürfte die für Interaktionen üblichen Abstimmungsprobleme damit nicht verringern, sondern neue und andersartige Abstimmungsprobleme hervorbringen'
 

@@ -4,15 +4,6 @@ authors: ["Eleanor Drage", "Kerry McInerney", "Jude Browne"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Browne_2024_Engineers_on_responsibility_feminist_approaches.md
 confidence: 95
@@ -41,35 +32,35 @@ Empirisch-qualitativ: 50 leitfadengestützte Interviews mit KI-Praktikern und Te
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Paper untersucht 'practitioners' personal understandings of responsibility' und wie KI-Praktiker Kompetenz und Wissen über KI-Systeme entwickeln und anwenden: 'we are unable to access the bigger picture' & interviews with 'AI practitioners and tech workers'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf 'algorithmic tools which are often, but not always, created through the use of machine learning techniques', black box problem, unexplainability, AI lifecycle management, algorithmic drift
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Thematisiert Care-Arbeit als zentral: 'caring responsibilities are distinctly gendered and racialized forms of work' und verbindet dies mit Care-ethischen Konzepten, die für Soziale Arbeit relevant sind; Fokus auf Beziehungen, Abhängigkeit, Verantwortung für vulnerable Populationen
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Analysiert wie 'AI replicates, perpetuates, or exacerbates existing patterns of discrimination and injustice' (Amazon hiring tool, UK A-level algorithm); erwähnt 'gendered and racialized workers' und 'Global South', Gefängnisarbeit, strukturelle Benachteiligung
 
-### Gender
+### Evidenz 5
 
 Expliziter Gender-Fokus: 'Amazon's gender discriminatory AI-powered hiring tool', 'caring responsibilities are distinctly gendered and racialized forms of work', Analyse von Frauen in Tech, Geschlechtsdimension von invisibilisierter Arbeit
 
-### Diversitaet
+### Evidenz 6
 
 Untersucht Repräsentation und Marginalisierung: 'communities and individuals who are most likely to be harmed', intersektionale Perspektive auf Arbeit ('gendered and racialized workers'), Global South und Gefängnissysteme
 
-### Feministisch
+### Evidenz 7
 
 EXPLIZIT feministische Theorie als Kern: 'use feminist theory and methodological approaches', 'feminist perspectives on responsibility' (Maria Puig de la Bellacasa, Donna Haraway, Iris Marion Young, Judith Butler), 'feminist organizational studies', 'feminist STS', 'feminist political economy', 'Data Feminism' (D'Ignazio & Klein)
 
-### Fairness
+### Evidenz 8
 
 Adressiert Fairness in KI-Systemen und algorithmische Gerechtigkeit durch feministische Linse: 'what does ethical, fair, and responsible AI look like?' Kritik an oberflächlichen Fairness-Checks ('box-ticking ethics frameworks')
 

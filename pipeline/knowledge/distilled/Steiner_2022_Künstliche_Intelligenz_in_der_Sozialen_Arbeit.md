@@ -4,13 +4,6 @@ authors: ["Olivier Steiner", "Dominik Tschopp"]
 year: 2022
 type: journalArticle
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md
 confidence: 95
@@ -40,27 +33,27 @@ Theoretisch/Review: Systematische Analyse von KI-Technologien und deren Anwendun
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Paper bietet umfassende Begriffserklärungen zu KI-Technologien (Algorithmen, Machine Learning, neuronale Netzwerke, Deep Learning) und diskutiert notwendiges Verständnis für Fachkräfte in der Sozialen Arbeit: 'Um einen groben Einblick in die Funktionsweise aktueller KI-Technologien zu geben, werden im folgenden Abschnitt einige zentrale Begriffe kurz dargestellt'
 
-### KI_Sonstige
+### Evidenz 2
 
 Ausführliche Behandlung von Predictive Risk Modeling und Algorithmen im sozialen Bereich: 'Predictive Modelling soll im sozialen Bereich datenbasierte Vorhersagen mittels Algorithmen über menschliches Verhalten und Entwicklung treffen'; Analyse von Machine Learning und neuronalen Netzwerken in Entscheidungsunterstützungssystemen
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Fokus auf KI-Anwendungen in Sozialer Arbeit: Kindesschutz, Beratung, Fallrekonstruktion; kritische Analyse zweier Anwendungsszenarien (PRM und Chatbots) und deren Auswirkungen auf professionelle Praxis und Klient:innen
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Thematisierung von Algorithmen-Bias: 'die eingesetzten Algorithmen selbst sind mitnichten neutral, sondern bilden oftmals ungerechte Lebensbedingungen ab und drohen diese durch ihren Bias zu verstetigen'; Warnung vor 'automatisierter sozialer Exklusion durch Algorithmen' und Risiken für vulnerable Bevölkerungsgruppen
 
-### Diversitaet
+### Evidenz 5
 
 Reflexion von Differenzen und Vulnerabilität: Fokus auf unterschiedliche Lebenssituationen, marginalisierte Gruppen (Armutspopulationen, Kinder in Gefährdungssituationen), Jugendliche mit chronischen Erkrankungen; Warnung vor technologischer Exklusion: 'Chatbots können Personen nicht zur Kommunikation animieren, die nicht an Hilfe interessiert sind'
 
-### Fairness
+### Evidenz 6
 
 Diskussion von Fairness in algorithmischen Entscheidungssystemen: Potenzial zur Verminderung von 'practitioner bias' durch Standardisierung, aber gleichzeitige Gefahr der Reproduktion bestehender Ungerechtigkeiten; Qualität und Vollständigkeit von Trainingsdaten als Voraussetzung für faire Prädiktionen
 

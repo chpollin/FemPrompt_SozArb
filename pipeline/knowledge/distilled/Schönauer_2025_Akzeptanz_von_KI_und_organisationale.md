@@ -4,15 +4,6 @@ authors: ["Anna-Lena Schönauer"]
 year: 2025
 type: journalArticle
 language: de
-categories:
-  - AI_Literacies
-  - Generative_KI
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Schönauer_2025_Akzeptanz_von_KI_und_organisationale.md
 confidence: 92
@@ -41,35 +32,35 @@ Empirisch, quantitativ; Fragebogenerhebung (n=68) unter Sozialarbeiter:innen im 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentrale Fokussierung auf digitale Kompetenzen und KI-Kompetenzfelder: 'Mandl und Dreisiebner unterscheiden für Künstliche Intelligenz die vier Kompetenzfelder Programmierung, Data Literacy, Machine Learning und KI-Ethik' sowie 'die Akzeptanz von KI und digitalen Technologien hängt von den digitalen Kompetenzen und den Erfahrungen der Fachkräfte beim Einsatz digitaler Technologien im beruflichen Kontext ab'
 
-### Generative_KI
+### Evidenz 2
 
 Explizite Behandlung von Large Language Models: 'LLMs wie ChatGPT, Gemini, Llama oder Copilot sind zunehmend dazu in der Lage auch komplexere Interaktionen durchzuführen'
 
-### KI_Sonstige
+### Evidenz 3
 
 Breitere KI-Thematisierung algorithmischer Entscheidungssysteme: 'Ethische Dimensionen des Einsatzes von algorithmenbasierten Entscheidungen und Scoring in pädagogischen und sozialpolitischen Kontexten' (Kutscher 2021)
 
-### Soziale_Arbeit
+### Evidenz 4
 
 Kernfokus auf Soziale Arbeit als Praxisfeld und Berufsgruppe: 'eine empirische quantitative Erhebung unter Berufseinsteiger:innen der Sozialen Arbeit betrachten, wie sie den Einsatz von KI in der Sozialen Arbeit bewerten' sowie differenzierte Analyse der Tätigkeitsbereiche (Jugendhilfe, Behindertenhilfe, Beratung)
 
-### Bias_Ungleichheit
+### Evidenz 5
 
 Thematisierung von Benachteiligung und strukturellen Unterschieden: 'Mögliche Diskriminierung durch algorithmische Entscheidungssysteme' (Kolleck & Orwat 2020) sowie Befund zu 38% überforderten Kolleg:innen und ungleiche Kompetenzenverteilung
 
-### Gender
+### Evidenz 6
 
 Genderausgewogene Stichprobenbeschreibung (79% weiblich) und implizit genderrelevante Reflexionen zu Care-Arbeit und Beziehungsarbeit als weiblich kodierte Tätigkeitsfelder, sowie gendersensible Sprache mit Geschlechterinklusion (Fachkräfte, Berufseinsteiger:innen)
 
-### Diversitaet
+### Evidenz 7
 
 Berücksichtigung unterschiedlicher Arbeitsfelder und Zielgruppen (Jugendhilfe, Behindertenhilfe, Suchtberatung, Sozialpsychiatrie) sowie Heterogenität der Fachkräfte in Alter und Geschlecht, mit Aufmerksamkeit für unterschiedliche Kompetenzniveaus
 
-### Fairness
+### Evidenz 8
 
 Reflexion von fairnessrelevanten Aspekten bei algorithmischen Systemen in der Sozialen Arbeit: 'ethische Bedenken beim Einsatz von KI' sowie Forderung nach 'Minimierung von Risiken' und partizipative Gestaltung: 'Technik an die Praxis anpassen muss' statt umgekehrt
 

@@ -4,13 +4,6 @@ authors: ["Diana Schneider", "Wenke Liedtke", "Andrea Diana Klausen", "Myriam Li
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.md
 confidence: 92
@@ -39,27 +32,27 @@ Empirisch: Qualitativ. Drei Fokusgruppen mit insgesamt 18 Patienten (n=18, 5-7 p
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Patienten und Fachleute müssen 'AI literacy in ongoing work processes' entwickeln. 'It is therefore of importance to provide patients and healthcare professionals with information to prevent indecision.' Die Studie zeigt, dass 'the patients' perspective is profoundly influenced by the individuals' comprehension of the functionality of AI-CDSS.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Fokus auf AI-CDSS (Clinical Decision Support Systems) mit Machine Learning in Radiologie, Chirurgie, Nephrologie und Home-Ventilation. Explizit: 'AI-based clinical decision support systems (AI-CDSS) aim to assist healthcare professionals and patients in making decisions.'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Studie analysiert Patientenperspektiven in Gesundheitsversorgung, Care-Kontexten (Home-Ventilation), und die professionelle Beziehung zwischen Patientinnen und Fachkräften. Fokus auf Selbstbestimmung und Partizipation vulnerable Gruppen (chronisch erkrankte, home-ventilierte Patienten). Ein Autor arbeitet am 'Department of Social Work' der Protestant University of Applied Sciences.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Patienten befürchten Diskriminierungsmöglichkeiten durch Algorithmen: 'the reliability of technology and possible risks of discriminating algorithms.' Besorgnis um marginalisierte Gruppen und ungleiche Auswirkungen: 'possible loss of human interaction in the entire care process' führt zu unterschiedlichen Zugängen je nach Patientenlage.
 
-### Diversitaet
+### Evidenz 5
 
 Studie rekrutiert verschiedene Patientengruppen über Selbsthilfegruppen in unterschiedlichen medizinischen Domänen (Nephrologie, Chirurgie, Home-Care), um unterschiedliche Perspektiven zu erfassen. Fokus auf Inklusion von Patientenperspektiven: 'Special consideration must be given to the AI-CDSS implementation from all users' perspectives.' Heterogene Fokusgruppen als 'homogeneous groups.'
 
-### Fairness
+### Evidenz 6
 
 Studie thematisiert algorithmische Fairness durch Patientenperspektive: 'concerns like data security, responsibility, fairness and autonomy are being discussed, yet remain unsolved.' Forderung nach fairem Design: 'algorithms should thus be developed with a wider spectrum of stakeholders than just the doctor to ensure that the people affected by the system's analysis can also understand the system's results.' Verteilungsgerechtigkeit bei Ressourcen und Verantwortung.
 

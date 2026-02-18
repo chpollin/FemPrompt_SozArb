@@ -4,14 +4,6 @@ authors: ["Jiafu An", "Difang Huang", "Chen Lin", "Mingzhu Tai"]
 year: 2025
 type: journalArticle
 language: en
-categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-04
 source_file: An_2025_Measuring_gender_and_racial_biases_in_large.md
 confidence: 95
@@ -40,31 +32,31 @@ Empirisch: Randomisiertes Experiment mit ~361.000 synthetischen Lebensläufen mi
 
 ## Kategorie-Evidenz
 
-### Generative_KI
+### Evidenz 1
 
 Die Studie untersucht 'a number of commonly used LLMs, including OpenAI's GPT-3.5 Turbo and GPT-4o, Google's Gemini 1.5 Flash, Anthropic AI's Claude 3.5 Sonnet, and Meta's Llama 3-70b' bei der Bewertung von Lebensläufen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Das Paper behandelt algorithmische Entscheidungssysteme, NLP-Bias und maschinelles Lernen im Kontext von 'high-stakes decision-making processes' in der Rekrutierung.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 Zentrales Thema: 'LLM-based AI systems demonstrate significant biases, varying in terms of the directions and magnitudes across different social groups' mit wirtschaftlichen Konsequenzen für unterrepräsentierte Gruppen.
 
-### Gender
+### Evidenz 4
 
 Expliziter Fokus auf Geschlechtsverzerrung: 'the LLMs award higher assessment scores for female candidates with similar work experience, education, and skills, but lower scores for black male candidates'.
 
-### Diversitaet
+### Evidenz 5
 
 Intersektionale Analyse rassischer und geschlechtsspezifischer Kategorien: 'we find that, in aggregate, most of the LLMs seem to be 'prosocial' when screening resumes: four out of five models we assessed yield significantly higher assessment scores on average for minority (female OR black) job candidates'.
 
-### Feministisch
+### Evidenz 6
 
 Explizite Verwendung von Crenshaw's Intersektionalitätsrahmen (Referenz 38: 'Crenshaw K. 2013. Demarginalizing the intersection of race and sex: a black feminist critique') und intersektionale Methodik: 'we explicitly evaluating how LLMs exhibit very different bias patterns across the intersections between gender and race'.
 
-### Fairness
+### Evidenz 7
 
 Fokus auf algorithmische Fairness in Hiring-Entscheidungen, Analyse differentieller Behandlung und wirtschaftlicher Auswirkungen: 'The effects are robust across different job positions and applications from different states. They are also robust when we repeat the analyses many times using randomly drawn subsamples.'
 

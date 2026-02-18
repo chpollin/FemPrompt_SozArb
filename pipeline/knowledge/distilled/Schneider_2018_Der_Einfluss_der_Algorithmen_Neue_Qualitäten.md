@@ -4,13 +4,6 @@ authors: ["Diana Schneider", "Udo Seelmeyer"]
 year: 2018
 type: journalArticle
 language: de
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten.md
 confidence: 94
@@ -40,27 +33,27 @@ Theoretisch-konzeptionell; kombiniert Technikphilosophie (Formalisierungstheorie
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Zentrale Forderung: 'Sowohl data literacy als kompetenter Umgang mit komplexen Datenquellen und anspruchsvollen Verfahren zu deren Verarbeitung als auch ein konsequenter Persönlichkeitsschutz bilden neue Anforderungen an die Professionalität von Fachkräften.'
 
-### KI_Sonstige
+### Evidenz 2
 
 Ausführliche Behandlung von maschinellem Lernen, neuronalen Netzen, Big Data Analytics, Mustererkennung und algorithmischen Entscheidungssystemen: 'Das Neue an Technologien wie Big Data Analytics, maschinellem Lernen und Künstlicher Intelligenz (KI) besteht darin, dass nicht nur strukturierte Daten, sondern auch unstrukturierte Daten wie (Frei-) Texte, Audio- und Videodaten maschinell verarbeitet werden können.'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Fokus auf Soziale Arbeit als Anwendungsfeld: 'Digitalisierung prägt zunehmend auch Arbeitsvollzüge und Entscheidungsprozesse in der Sozialen Arbeit.' Fallbeispiele aus Jugendhilfe (CFRA, Kindeswohlgefährdung). Autoren arbeiten an FH Bielefeld, Fachbereich Sozialwesen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Kritische Analyse von Bias-Reproduktion: 'Da ein Algorithmus die in ihm enthaltenden Daten nur kristallisieren und verschärfen kann, besteht stets die Gefahr, hier Vorurteile zu reproduzieren bzw. zu verstärken.' Stigmatisierungspotenzial durch Milieu-basierte Durchschnittsprognosen.
 
-### Diversitaet
+### Evidenz 5
 
 Implizite Adressierung durch Fokus auf Ermessensspielraum-Einschränkung und Standardisierung, die ganzheitliche Betrachtung von Individuen erschwert: 'wird doch nicht das hinter den Ergebnissen der Datenanalyse stehende Individuum betrachtet, sondern lediglich die Häufigkeitsverteilung innerhalb seines Milieus'.
 
-### Fairness
+### Evidenz 6
 
 Expliziter Fokus auf algorithmische Fairness und faire Entscheidungsfindung: 'Gleichsam wird deutlich, dass ein gelingender Umgang mit den genannten Herausforderungen allein damit noch nicht gewährleistet ist.' Kritik an vermeintlicher Objektivität und fehlerhaften Korrelationen; Forderung nach Systemen, die Entscheidungen unterstützen statt ersetzen.
 

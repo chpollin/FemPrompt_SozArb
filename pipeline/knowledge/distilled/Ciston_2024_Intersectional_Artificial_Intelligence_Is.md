@@ -4,14 +4,6 @@ authors: ["Sarah Ciston"]
 year: 2024
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Ciston_2024_Intersectional_Artificial_Intelligence_Is.md
 confidence: 93
@@ -40,31 +32,31 @@ Theoretisch/Review + interdisziplinäre Analyse mit kunstgestützten und gemeins
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Ciston argumentiert für 'the application of intersectional strategies to Artificial Intelligence at every level, from data to design to implementation, from technologist to user' und betont kritisches Verständnis und reflexive Praxis im Umgang mit KI-Systemen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Das Paper diskutiert Algorithmen, maschinelles Lernen, neuronale Netze, Computer Vision (ImageNet), Criminal Risk Assessment AI und algorithmen-basierte Entscheidungssysteme im Kontext von Voreingenommenheit.
 
-### Bias_Ungleichheit
+### Evidenz 3
 
 ProPublica-Studie zeigt, dass AI Criminal Risk Assessment 'particularly likely to falsely flag black defendants as future criminals'; ImageNet Beispiel demonstriert, wie 'laborers' biases were ultimately embedded into the project' und staatliche Systeme diese verstärken.
 
-### Gender
+### Evidenz 4
 
 Expliziter Gender-Fokus: 'using queer strategies to disorient those categories can also push back on assumptions about technologies themselves' und die Analyse von Gender-Bias in Kategorisierungssystemen.
 
-### Diversitaet
+### Evidenz 5
 
 Paper betont marginalisierte Communities: 'strategies from mixed race, trans, bisexual, and femme communities' und organisationen wie Color Coded, das 'technology-rich environments only for historically excluded people to collaborate and learn' schafft.
 
-### Feministisch
+### Evidenz 6
 
 Explizite Verwendung von Black-Feminist-Theorie (Safiya Noble, Ruha Benjamin), Queer-Feminist-Theorie und Referenzen auf D'Ignazio & Klein, Chun, hooks-adjacent thinking: 'Brittney Cooper reminds us how intersectionality is often misunderstood' und die Anwendung feministischer Datenvisualisierungsprinzipien.
 
-### Fairness
+### Evidenz 7
 
 Ciston diskutiert 'Data Nutrition Label' zur Verhinderung von Datenbias und 'Algorithmic Justice League' als Interventionen gegen 'coded gaze', sowie Frameworks zur Fairness in ML-Systemen.
 

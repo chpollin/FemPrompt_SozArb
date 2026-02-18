@@ -4,15 +4,6 @@ authors: ["Paola Ricaurte Quijano", "Benjamin Prud'homme", "Isadora Hellegren L�
 year: 2024
 type: report
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
 processed: 2026-02-05
 source_file: Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md
 confidence: 93
@@ -41,35 +32,35 @@ Mixed: Qualitativ - mehrsprachige regionale und gruppenspezifische Konsultatione
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 UNESCO Global Dialogue, Data Justice Policy Brief, AI & Equality Human Rights Toolbox, Indigenous Pathfinders in AI - alle fokussieren auf Kapazitätsentwicklung, öffentliche Bildung und AI-Literacies für diverse Gruppen.
 
-### KI_Sonstige
+### Evidenz 2
 
 Umfassender Fokus auf KI-Lebenszyklen, algorithmische Entscheidungssysteme, KI-Governance, KI-Deployment und Auswirkungen auf verschiedene Bevölkerungsgruppen jenseits generativer KI.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Explizite Fokussierung auf marginalisierte Communities, Junge, Frauen, Indigenous People, Personen mit Behinderungen, Migranten - zentrale Zielgruppen sozialer Arbeit. Integration von Menschenrechten und sozialer Gerechtigkeit als Kernrahmen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral: 'AI systems reproduce the world models, cultural values, knowledge, and languages...thereby replicating or amplifying systemic inequalities based on gender, race, ethnicity, abilities, social class, and education.' Fokus auf algorithmic oppression und strukturelle Diskriminierung.
 
-### Gender
+### Evidenz 5
 
 Explizit im Titel und durchgehend: Geschlechtergerechtigkeit als Kernziel. UNESCO Global Dialogue on 'Artificial Intelligence and Gender Equality', Analyse von Gender-Bias in KI, sexualisierte Darstellungen racialiser Frauen durch AI image generators.
 
-### Diversitaet
+### Evidenz 6
 
 Zentral: Inklusion von Indigenous Perspectives, Disability Justice, LGBTQI+ Perspektiven, mehrsprachige Global South Repräsentation. Indigenous Pathfinders in AI, RIADIS Workshop, intersektionale Perspektiven throughout.
 
-### Feministisch
+### Evidenz 7
 
 Explizite feministische Rahmengestaltung: Zitierung von 'feminist scholars (Benjamin, 2019; Eubanks, 2017; Noble and Roberts, 2019; West, 2020)' zu algorithmic oppression. Feminist AI Research Network als Co-Lead und Initiatoren. Data Feminism und intersektionale feministische Theorie strukturieren die Analyse.
 
-### Fairness
+### Evidenz 8
 
 Behandlung von Fairness als Dimension von substantiver Gleichstellung, aber über technische Fairness-Metriken hinaus zu Würde, Anerkennung und Gerechtigkeit. 'Fairness' ist notwendig aber nicht hinreichend - erfordert demokratische Partizipation und Umkehrung von Fehlrepräsentation.
 

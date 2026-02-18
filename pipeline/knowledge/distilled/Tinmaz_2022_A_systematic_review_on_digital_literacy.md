@@ -4,13 +4,6 @@ authors: ["Hasan Tinmaz", "Yoo-Taek Lee", "Mina Fanea-Ivanovici", "Hasnan Baber"
 year: 2022
 type: journalArticle
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Tinmaz_2022_A_systematic_review_on_digital_literacy.md
 confidence: 87
@@ -39,27 +32,27 @@ Theoretisch/Review - Systematische Literaturübersicht mit qualitativ-manueller 
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Digital literacy wird definiert als 'competencies and skills required for navigating a fragmented and complex information ecosystem' (Eshet, 2004); Framework umfasst Denken, technische Anwendung, kritisches Denken und kreative Fähigkeiten.
 
-### KI_Sonstige
+### Evidenz 2
 
 Explizite Bezüge zu IoT, Cloud-Technologie, Big Data, künstlicher Intelligenz und Robotik im Kontext von Industry 4.0: 'Sousa and Rocha (2019) explained that there is a stake of digital skills for disruptive digital business, and they connect it to the latest developments, such as the Internet of Things (IoT), cloud technology, big data, artificial intelligence, and robotics.'
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Der Paper adressiert Vulnerable Populationen und Gesundheit: 'digital inequalities have grown larger due to the COVID-19 pandemic, and they influenced the very state of health of the most vulnerable categories of population or their employability' sowie Relevanz für Policymaker in Bildung, Verwaltung und Gesundheitswesen.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Zentral ist die Analyse von Digital Divides und Disparitäten: 'digital inequalities encompass skills, along with access, usage and self-perceptions. These inequalities need to be addressed, as they are credited with a potential to shape life chances in multiple ways' mit Auswirkungen auf akademische Leistung, Arbeitsmarktfähigkeit und Partizipation.
 
-### Diversitaet
+### Evidenz 5
 
 Das Paper betont unterschiedliche regionale Disparitäten und Unterschiede zwischen Bevölkerungsgruppen: 'digital inequalities have grown larger due to the COVID-19 pandemic, and they influenced the very state of health of the most vulnerable categories of population' - implizite Adressierung marginalisierter Gruppen.
 
-### Fairness
+### Evidenz 6
 
 Implizites Fairness-Verständnis durch Fokus auf gerechte Chancenverteilung: digitale Kompetenz als Voraussetzung für faire Teilhabe an Arbeitsmarkt, Bildung und politischen Prozessen; Problemlösung und kritisches Denken als faire Kompetenzverteilung.
 

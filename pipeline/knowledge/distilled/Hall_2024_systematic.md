@@ -4,13 +4,6 @@ authors: ["Alexandra Chouldechova", "Emily Putnam-Hornstein", "Diana Benavides-P
 year: 2024
 type: conferencePaper
 language: en
-categories:
-  - AI_Literacies
-  - KI_Sonstige
-  - Soziale_Arbeit
-  - Bias_Ungleichheit
-  - Diversitaet
-  - Fairness
 processed: 2026-02-05
 source_file: Hall_2024_systematic.md
 confidence: 94
@@ -39,27 +32,27 @@ Mixed Methods: Empirische Fallstudie mit Modellentwicklung, Fairness-Auditing, V
 
 ## Kategorie-Evidenz
 
-### AI_Literacies
+### Evidenz 1
 
 Diskussion der Notwendigkeit, dass Fachkräfte verstehen, dass 'scores do not reflect anything about the certainty of the present allegations' und kritisches Verständnis von Modellgrenzen (Training, Überriding-Praktiken).
 
-### KI_Sonstige
+### Evidenz 2
 
 Entwicklung und Evaluierung von Predictive Risk Models unter Verwendung von Machine Learning Methoden (Random Forest, XGBoost, Support Vector Machines) für algorithmische Entscheidungsunterstützung.
 
-### Soziale_Arbeit
+### Evidenz 3
 
 Direkter Fokus auf Kinderschutzhilfe, Hotline-Screening-Entscheidungen, Fallbearbeiter-Praktiken und Integration von Modellen in reale Sozialarbeit-Workflows in Allegheny County Department of Human Services.
 
-### Bias_Ungleichheit
+### Evidenz 4
 
 Explizite Analyse rassischer Diskrepanzen: 'screened-in referrals that score a 20 on the AFST ventile scale are observed to result in placement in 50% of cases involving Black children and only 30% of cases involving White children'; statistische Diskriminierung durch Verwendung von Zip-Code als Proxy.
 
-### Diversitaet
+### Evidenz 5
 
 Analyse stratifiziert nach Rasse/Ethnizität, Armut und Geschlecht; Fokus auf marginalisierte Gruppen (schwarze Kinder, Familien in Armut); Diskussion der Überrepräsentation von Schwarzen Kindern im Kinderschutz.
 
-### Fairness
+### Evidenz 6
 
 Zentrale Thematisierung von Fairness-Metriken: Kalibrierung, Accuracy Equity (AUC-Gleichheit), False Positive/False Negative Rates; Diskussion der Unavoidability von Trade-offs bei Fairness-Kriterien; Vergleich mit COMPAS-Debatte.
 
