@@ -116,21 +116,22 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 |--------|-------|
 | Deadline | 4. Mai 2026 |
 | Umfang | 18.000 Zeichen (inkl. Leerzeichen, inkl. Fussnoten) |
-| Fokus | Deep-Research-gestuetzter Literature Review im Praxistest |
-| Wissensdokument | v12 (strukturell geschaerft) |
-| Paper-Text | Entwurf liegt vor (5 Abschnitte + Vorspann) |
+| Fokus | Epistemische Infrastruktur fuer LLM-gestuetzte Literature Reviews |
+| **Paper-Datei** | **`knowledge/paper/paper-draft.md`** (Single Source of Truth) |
+| Leitkonzept | Epistemische Asymmetrie + Epistemische Infrastruktur |
 | Abgleich Paper vs. Repo | `knowledge/paper-integrity.md` |
 | Arbeitsplan | `knowledge/paper/Forum Wissenschaft Paper - Arbeitsplan.md` |
 
-### Offene Korrekturen am Paper-Text (vor Einreichung)
+**Hinweis:** Das Paper wird ausschliesslich im Repo iteriert. Google Docs ist nicht mehr relevant.
 
-| Problem | Prioritaet |
+### Offene Punkte am Paper
+
+| Punkt | Prioritaet |
 |---|---|
-| Prompts nicht im Repo, Paper behauptet das Gegenteil | Hoch |
-| "jeder Konversion" uebertrieben (nur 10% geprueft) | Hoch |
-| Konfabulations-Befund widerspruechlich zwischen Paper und v12 | Hoch |
-| RIS-Konversion nicht reproduzierbar dokumentiert | Mittel |
-| Vault-Script integriert keine Assessment-Daten | Mittel |
+| Ergebnis-Abschnitt befuellen (nach Benchmark) | Hoch (blockiert) |
+| Zeichenzaehlung + Kuerzung auf 18.000 | Mittel |
+| Deep-Research-Prompts rekonstruieren und verlinken | Mittel |
+| Finale Review mit Co-Autor:innen | Nach Benchmark |
 
 ---
 

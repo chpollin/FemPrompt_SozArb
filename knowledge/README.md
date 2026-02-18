@@ -21,7 +21,8 @@ Zentrale Dokumentation fuer den systematischen Literature Review zu AI Literacy 
 |---------------------|--------|
 | [guides/quickstart.md](guides/quickstart.md) | 10-Minuten-Einstieg |
 | [guides/manual-review-checklist.md](guides/manual-review-checklist.md) | Markdown-Review Checkliste |
-| [paper/](paper/) | Paper-Materialien (Arbeitsplan, Benchmark-Spezifikation, Referenzliteratur) |
+| [paper/paper-draft.md](paper/paper-draft.md) | **Paper-Entwurf** (Forum Wissenschaft, 18.000 Zeichen) -- iterativ im Repo bearbeitet |
+| [paper/](paper/) | Hintergrund-Materialien (Arbeitsplan, Benchmark-Spezifikation, Referenzliteratur, Validierung) |
 
 ## Externe Ressourcen
 

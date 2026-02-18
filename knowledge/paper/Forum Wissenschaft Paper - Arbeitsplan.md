@@ -1,7 +1,7 @@
 # Forum Wissenschaft Paper - Arbeitsplan
 
-**Stand:** 3. Februar 2026
-**Deadline:** 4. Mai 2026 (91 Tage)
+**Stand:** 18. Februar 2026
+**Deadline:** 4. Mai 2026 (75 Tage)
 
 ---
 
@@ -136,12 +136,15 @@
 - [ ] Benchmark-Skripte ausfuehren
 - [ ] Disagreement-Faelle qualitativ analysieren
 
-### Paper-Entwicklung (parallel moeglich)
+### Paper-Entwicklung (im Repo, iterativ)
 
-- [ ] Methodenbeschreibung schreiben
-- [ ] Theoretischer Rahmen (Co-Intelligence, PRISMA)
+**Zentrale Datei:** `knowledge/paper/paper-draft.md`
+**Google Docs ist nicht mehr relevant -- Paper wird ausschliesslich im Repo iteriert.**
+
+- [x] Grundstruktur mit epistemischer Infrastruktur als Leitkonzept
 - [ ] Ergebnisse einarbeiten (nach Benchmark)
-- [ ] Auf 18.000 Zeichen kuerzen
+- [ ] Zeichenzaehlung pruefen und kuerzen
+- [ ] Finale Review mit Co-Autor:innen
 
 ---
 
@@ -240,4 +243,4 @@
 
 ---
 
-*Aktualisiert: 2026-02-06*
+*Aktualisiert: 2026-02-18*
