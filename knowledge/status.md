@@ -1,8 +1,131 @@
 # Status (2026-02-18)
 
-## Aktueller Fokus: Paper finalisieren + Benchmark vorbereiten
+## Aktueller Fokus: Benchmark vorbereiten + Paper iterieren
 
-Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Forum Wissenschaft) liegt vor, Abgleich Paper vs. Repository durchgefuehrt (siehe `knowledge/paper-integrity.md`). Benchmark blockiert durch Human-Assessment.
+Knowledge-Base konsolidiert (Dateien umbenannt, Redundanzen eliminiert). Paper-Entwurf mit epistemischer Infrastruktur als Leitkonzept liegt im Repo. Drei Untersuchungen abgeschlossen: 21 fehlende Papers erklaert, Deep-Research-Prompts teilweise rekonstruiert, 10K-Assessment-Prompt geprueft.
+
+---
+
+## Meilenstein-Plan (bis 4. Mai 2026)
+
+### M1: Knowledge-Konsolidierung -- ABGESCHLOSSEN
+
+- [x] Dateien umbenannt (Nummern-Praefixe entfernt)
+- [x] Redundanzen eliminiert (PAPER_VS_REPO.md, WORKFLOW.md, index.md)
+- [x] CLAUDE.md korrigiert
+- [x] Alle Querverweise aktualisiert
+- Commit: `ff558e2`
+
+### M2: Paper im Repo -- ABGESCHLOSSEN
+
+- [x] `knowledge/paper/paper-draft.md` als Single Source of Truth
+- [x] Epistemische Infrastruktur als Leitkonzept
+- [x] 7 Abschnitte, 13 Fussnoten, Platzhalter fuer Ergebnisse
+- Commit: `d7d4557`
+
+### M3: Deep-Research-Prompts restaurieren
+
+- [ ] Prompt-Template aus Git-History (`knowledge/Operativ.md`) in `prompts/deep-research-template.md` wiederherstellen
+- [ ] Rekonstruierte Parametrisierung dokumentieren (was bekannt, was verloren)
+- [ ] Paper-Behauptung korrigieren ("im Repository dokumentiert" -> ehrliche Formulierung)
+- Abhaengigkeit: Keine
+
+### M4: Korpus-Bereinigung (326 vs 305)
+
+- [ ] HA-CSV mit aktuellem Zotero-Export abgleichen (DOI/Titel-Matching)
+- [ ] 6 identifizierte Duplikate markieren/entfernen
+- [ ] 30 unkategorisierte Zotero-Eintraege pruefen: Sollen sie ins HA?
+- [ ] ID-Mapping-Datei erstellen (Zotero_Key -> HA_ID)
+- Abhaengigkeit: Entscheidung ob 305 oder 326 als Benchmark-Basis
+
+### M5: 10K LLM Assessment ausfuehren
+
+- [ ] `assessment_prompt.md` mit Code synchronisieren (3 Doku-Inkonsistenzen)
+- [ ] Optional: Calibration Items implementieren (3-5 Kontroll-Papers)
+- [ ] Optional: Retry-Logik fuer fehlgeschlagene API-Calls
+- [ ] Assessment ausfuehren (~$1.50, ~30 Min)
+- Abhaengigkeit: M4 (Korpus-Basis muss klar sein)
+
+### M6: Teilmengen-Benchmark ausfuehren
+
+- [ ] Google Sheets exportieren (aktueller Stand, ~2/3 fertig)
+- [ ] `merge_assessments.py` ausfuehren (Merge ueber Zotero_Key)
+- [ ] `calculate_agreement.py` ausfuehren (Cohen's Kappa)
+- [ ] `analyze_disagreements.py` ausfuehren
+- [ ] Ergebnisse dokumentieren
+- Abhaengigkeit: M5 + Human Assessment (mind. ~200 Papers)
+
+### M7: Ergebnisse ins Paper einarbeiten
+
+- [ ] Benchmark-Metriken in Abschnitt 5 einfuegen
+- [ ] Divergenz-Analyse schreiben (3-5 annotierte Beispiele)
+- [ ] Epistemische Marker beschreiben
+- [ ] Zeichenzaehlung pruefen und kuerzen
+- Abhaengigkeit: M6
+
+### M8: Paper finalisieren + einreichen
+
+- [ ] Review-Runde mit Co-Autor:innen
+- [ ] Auf 18.000 Zeichen bringen
+- [ ] Fussnoten finalisieren (max. 15)
+- [ ] Einreichung 4. Mai 2026
+- Abhaengigkeit: M7
+
+### M9 (Nice-to-Have): Vault + GitHub Pages
+
+- [ ] Vault-Building mit Assessment-Integration
+- [ ] Statische GitHub-Pages-Seite fuer Wissensexploration
+- Abhaengigkeit: M6 (Assessment-Daten fuer Vault)
+
+---
+
+## Untersuchungsergebnisse (2026-02-18)
+
+### 21 fehlende Papers: Temporale Divergenz
+
+Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich die Bibliothek in beide Richtungen veraendert:
+
+| | Anzahl |
+|---|---|
+| In beiden vorhanden | 292 |
+| Nur in Zotero (neu hinzugefuegt) | 34 |
+| Nur in HA (spaeter geloescht) | 13 |
+| Netto-Differenz | 21 |
+
+**Muster:** 30 der 34 Zotero-only-Papers haben keine Collection-Zugehoerigkeit (Bulk-Import nach HA-Erstellung). 6 der 34 sind Duplikate von Papers, die bereits in HA unter anderem Key existieren.
+
+**Empfehlung:** HA mit aktuellem Zotero-Export neu synchronisieren, bestehende Bewertungen ueber DOI/Titel-Matching uebernehmen.
+
+### Deep-Research-Prompts: Teilweise rekonstruierbar
+
+**Gefunden:**
+- Parametrisches Prompt-Template (5-Komponenten-Struktur: Rolle, Aufgabe, Kontext, Analyseschritte, Output-Format) in Git-History (`knowledge/Operativ.md`, Commit `0a98f49`)
+- 3 von 4 Raw-Outputs (Claude, Gemini, Perplexity) in `deep-research/restored/`
+- Alle 4 RIS-Dateien
+- Meiste Placeholder-Werte rekonstruierbar
+
+**Verloren:**
+- Der exakt instanziierte Prompt-Text (wie er in die 4 Modelle eingefuegt wurde)
+- Einige Placeholder-Werte (Autorenliste, spezifische Kompetenzen, Region)
+- OpenAI/ChatGPT Raw-Output (war nur als binaere PDF committed)
+
+**Konsequenz fuer Paper:** Die Behauptung "im Repository dokumentiert" muss korrigiert werden. Ehrliche Formulierung: Template rekonstruiert, instanziierter Prompt nicht persistent gespeichert.
+
+### 10K Assessment-Prompt: Funktionsbereit
+
+**Staerken:**
+- Alle 10 Kategorien stimmen exakt mit Knowledge-Doc-Frontmatter ueberein
+- Negative Constraints gegen Sycophancy implementiert
+- Inklusions-Logik korrekt (TECHNIK_OK AND SOZIAL_OK)
+- Neutrale Rollen-Beschreibung
+
+**Schwaechen:**
+- `assessment_prompt.md` (Doku) veraltet vs. tatsaechlicher Code-Prompt
+- Keine Calibration Items implementiert (empfohlen, nicht Blocker)
+- Keine Retry-Logik fuer API-Fehler
+- 4 von 10 Kategorien ohne Positiv/Negativ-Beispiele
+
+**Urteil:** Kann so ausgefuehrt werden. Doku-Sync und optionale Calibration Items sind empfohlen.
 
 ---
 
@@ -12,22 +135,18 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit |
+| **Human** | Google Sheets | 10 binaere Kategorien | ~2/3 fertig |
 | **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
-| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Wartet |
+| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Bereit (Prompt geprueft) |
 
 ### Human Assessment
 
 | Aspekt | Stand |
 |--------|-------|
-| Papers in CSV | 305 (254 DeepResearch + 50 Manual + 1 leer) |
-| Decisions getroffen | 171/305 (56.3%): 55 Include, 102 Exclude, 14 Unclear |
-| Kategorien befuellt | 115/305 (37.7%) |
+| Papers in CSV | 305 (292 auch in aktuellem Zotero, 13 nur in HA) |
+| Decisions getroffen | ~2/3 (ca. 200 Papers) |
 | Schema | 10 binaere Kategorien (Technik + Sozial) |
-| Google Spreadsheet | [Link](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
-| Bearbeiter | Susi Sackl-Sharif, Sabine Klinger |
-
-**Hinweis:** 326 Papers in Zotero, aber nur 305 in human_assessment.csv. 21 Papers fehlen in der CSV (Grund unklar).
+| Bearbeiter | Susi Sackl-Sharif (aktiv), Sabine Klinger (spaeter) |
 
 ### LLM Assessment (5 Dimensionen - abgeschlossen)
 
@@ -43,8 +162,9 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 | Aspekt | Stand |
 |--------|-------|
 | Script | `benchmark/scripts/run_llm_assessment.py` |
-| Schema | 10 binaere Kategorien (identisch mit Human) |
-| Status | Wartet auf Human-Assessment |
+| Prompt-Status | Code-Prompt OK, Doku veraltet |
+| Geschaetzte Kosten | ~$1.50 |
+| Status | Bereit (nach Korpus-Klaerung) |
 
 ---
 
@@ -76,37 +196,8 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 |--------|-------|
 | Verarbeitete Dokumente | 249/252 (98.8%) |
 | Verifizierte Qualitaet | 242/249 perfekt (97.2%) |
-| Verifikations-JSONs | 219/249 (Rest ohne detailliertes JSON) |
 | API-Kosten | ~$7 (gesamt) |
 | Output | `pipeline/knowledge/distilled/` |
-
-**Verifikationsergebnis (2026-02-06):**
-
-| Kategorie | Anzahl | Details |
-|-----------|--------|---------|
-| Perfekt | 242 | Alle Checks bestanden |
-| PDF-Qualitaetsprobleme | 5 | Korrupte/falsche PDFs (nicht Pipeline-Fehler) |
-| Niedrige Uebereinstimmung | 2 | Kurze Dokumente, inhaltlich korrekt |
-| Nicht erstellt | 3 | Cvoelcker_2023, Smith_2021, UNESCO_2024_Bias |
-
-**Problematische Dokumente (PDF-Upstream-Probleme):**
-- `Debnath_2024_LLMs` - Original-Markdown korrupt (Zeichen-Muell)
-- `Tun_2025_Trust` - PDF war nur PRISMA-Checklist
-- `D_Ignazio_2024_Data` - PDF enthielt falsches Dokument (Cabnal 2010)
-- `Statistics_2023_Occupational` - Kein AI/Gender Paper (US Bureau of Labor)
-- `Naescher_2025_ReflectAI` - PDF war Konferenzband-Titelseite
-
----
-
-## Benchmark (Wartet)
-
-| Schritt | Status | Script |
-|---------|--------|--------|
-| Human-Assessment abschliessen | In Arbeit | Google Sheets |
-| LLM-Assessment (10 Kategorien) | Wartet | `benchmark/scripts/run_llm_assessment.py` |
-| Merge Human + LLM | Wartet | `benchmark/scripts/merge_assessments.py` |
-| Cohen's Kappa berechnen | Wartet | `benchmark/scripts/calculate_agreement.py` |
-| Disagreement-Analyse | Wartet | `benchmark/scripts/analyze_disagreements.py` |
 
 ---
 
@@ -146,13 +237,17 @@ Knowledge Distillation und Qualitaetspruefung abgeschlossen. Paper-Entwurf (Foru
 - [x] Paper-Entwurf schreiben (Wissensdokument v12 + Text)
 - [x] Abgleich Paper vs. Repository (paper-integrity.md)
 - [x] Knowledge-Base konsolidieren (Dateien umbenannt, Redundanzen eliminiert)
-- [ ] Deep-Research-Prompts aus Git-History wiederherstellen (Paper-Korrektur)
-- [ ] Human-Assessment im Google Spreadsheet abschliessen (Blocker)
-- [ ] Benchmark-LLM-Assessment (10K) ausfuehren
-- [ ] Benchmark-Metriken berechnen
-- [ ] Vault-Building (Obsidian)
-- [ ] Paper-Text finalisieren (Korrekturen aus Abgleich einarbeiten)
-- [ ] Paper einreichen (Deadline 4. Mai 2026)
+- [x] Paper im Repo einrichten (paper-draft.md als Single Source of Truth)
+- [x] 21 fehlende Papers untersucht (temporale Divergenz, 6 Duplikate identifiziert)
+- [x] Deep-Research-Prompts untersucht (Template in Git-History, instanziierter Prompt verloren)
+- [x] 10K Assessment-Prompt geprueft (funktionsbereit, 3 Doku-Inkonsistenzen)
+- [ ] Deep-Research-Prompt-Template im Repo wiederherstellen
+- [ ] Korpus-Bereinigung (HA-CSV mit Zotero synchronisieren)
+- [ ] 10K LLM Assessment ausfuehren
+- [ ] Teilmengen-Benchmark ausfuehren
+- [ ] Benchmark-Ergebnisse ins Paper einarbeiten
+- [ ] Vault-Building (Obsidian) + GitHub Pages
+- [ ] Paper finalisieren und einreichen (Deadline 4. Mai 2026)
 
 ---
 
