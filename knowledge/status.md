@@ -1,8 +1,8 @@
 # Status (2026-02-18)
 
-## Aktueller Fokus: Paper fertigstellen (M7-M8)
+## Aktueller Fokus: Paper fertigstellen (M8)
 
-M1-M6 abgeschlossen. Benchmark-Ergebnisse liegen vor (κ = 0,035, 210 Papers, 111 Disagreements). Abschnitt 5 im Paper-Draft befuellt. Naechster Schritt: Zeichenzaehlung pruefen, Paper auf 18.000 Zeichen bringen, Review mit Co-Autor:innen.
+M1-M7 abgeschlossen. Paper v0.4: 17.975 Zeichen (Limit: 18.000). Alle Abschnitte ausgeschrieben -- Jagged-Frontier-Konzept, qualitative Disagreement-Beispiele, didaktische Einschuebe fuer Nicht-KI-Zielgruppe. Naechster Schritt: Review-Runde mit Co-Autor:innen (Susi, Sabine, Christian).
 
 ---
 
@@ -85,13 +85,15 @@ M1-M6 abgeschlossen. Benchmark-Ergebnisse liegen vor (κ = 0,035, 210 Papers, 11
 
 **Interpretation:** Der niedrige Kappa-Wert ist kein Messfehler, sondern der messbare Ausdruck epistemischer Asymmetrie. LLM und Expert:innen operieren auf verschiedenen Wissensbasen. Die Divergenz ist informationshaltig -- sie markiert, wo maschinelle Musterkennung und disziplinaeres Kontextwissen strukturell auseinanderfallen.
 
-### M7: Ergebnisse ins Paper einarbeiten
+### M7: Ergebnisse ins Paper einarbeiten -- ABGESCHLOSSEN
 
-- [ ] Benchmark-Metriken in Abschnitt 5 einfuegen
-- [ ] Divergenz-Analyse schreiben (3-5 annotierte Beispiele)
-- [ ] Epistemische Marker beschreiben
-- [ ] Zeichenzaehlung pruefen und kuerzen
-- Abhaengigkeit: M6
+- [x] Benchmark-Metriken in Abschnitt 5 einfuegen
+- [x] Divergenz-Analyse schreiben (3 Muster mit konkreten Paper-Beispielen)
+- [x] Epistemische Marker beschreiben
+- [x] Jagged-Frontier-Konzept (Mollick) in Abschnitt 2 integriert
+- [x] Didaktische Einschuebe fuer Nicht-KI-Zielgruppe
+- [x] Zeichenzaehlung: 17.975 Zeichen (Limit 18.000, Differenz +25)
+- Commit: (diese Session)
 
 ### M8: Paper finalisieren + einreichen
 
@@ -318,9 +320,9 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - [x] **Google Sheets Export** (Human Assessment CSV, 304 Papers, 210 mit Decision)
 - [x] Teilmengen-Benchmark ausgefuehrt (merge + kappa + disagreements, κ = 0,035)
 - [x] Benchmark-Ergebnisse ins Paper eingearbeitet (Abschnitt 5 befuellt)
-- [ ] Paper finalisieren: Zeichenzaehlung pruefen und auf 18.000 Zeichen bringen
-- [ ] Review-Runde mit Co-Autor:innen
-- [ ] Vault-Building (Obsidian) + GitHub Pages
+- [x] Paper ausschreiben: v0.4, 17.975 Zeichen, alle Abschnitte fertig
+- [ ] Review-Runde mit Co-Autor:innen (Susi, Sabine, Christian Steiner)
+- [ ] Vault-Building (Obsidian) + GitHub Pages aktivieren (manuell: Settings -> Pages)
 - [ ] Paper einreichen (Deadline 4. Mai 2026)
 
 ---
@@ -335,4 +337,4 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 ---
 
-*Aktualisiert: 2026-02-18 (Session 2)*
+*Aktualisiert: 2026-02-18 (Session 3)*
