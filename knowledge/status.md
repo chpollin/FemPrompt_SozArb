@@ -58,7 +58,7 @@ Vorbereitung abgeschlossen:
 - Disagreement-Script: `benchmark/scripts/analyze_disagreements.py` (bereit)
 
 Ausstehend (nach HA-Export):
-- [ ] **Google Sheets exportieren** -> als `benchmark/data/human_assessment_fresh.csv` ablegen
+- [ ] **Google Sheets exportieren** -> als `benchmark/data/human_assessment.csv` ablegen
 - [ ] `merge_assessments.py` ausfuehren (ergibt ~200 Papers Schnittmenge)
 - [ ] `calculate_agreement.py` ausfuehren (Cohen's Kappa pro Kategorie)
 - [ ] `analyze_disagreements.py` ausfuehren (Severity-Ranking)
@@ -165,7 +165,7 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 | Papers bewertet | 325/325 (100% Erfolgsrate) |
 | Ergebnis | 222 Include, 83 Exclude, 20 Unclear |
 | Kosten | $1.15 |
-| Output | `assessment-llm/output/assessment_llm.xlsx` |
+| Output | `assessment/llm-5d/output/assessment_llm.xlsx` |
 
 ### LLM Assessment (10 Kategorien - abgeschlossen)
 
@@ -254,7 +254,8 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - [x] Deep-Research-Prompt-Template im Repo wiederhergestellt (`prompts/deep-research-template.md`)
 - [x] Korpus-CSV generiert (`benchmark/data/papers_full.csv`, 326 Zeilen, Is_Duplicate + Has_HA Flags)
 - [x] 10K LLM Assessment ausgefuehrt (326/326, $1.44, `benchmark/data/llm_assessment_10k.csv`)
-- [ ] **Google Sheets Export** (aktuelle Human-Assessment-CSV von Susi/Sabine exportieren) -- BLOCKER
+- [x] Assessment-Ordner restrukturiert (`assessment/human/`, `assessment/llm-5d/`, Altdateien in `benchmark/` bereinigt)
+- [ ] **Google Sheets Export** (aktuelle Human-Assessment-CSV exportieren, als `benchmark/data/human_assessment.csv` ablegen) -- BLOCKER
 - [ ] Teilmengen-Benchmark ausfuehren (merge + kappa + disagreements)
 - [ ] Benchmark-Ergebnisse ins Paper einarbeiten
 - [ ] Vault-Building (Obsidian) + GitHub Pages

@@ -18,24 +18,26 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 | Track | Schema | Status |
 |-------|--------|--------|
-| **Human** | 10 binaere Kategorien | In Arbeit (56%) |
-| **LLM (5D)** | 5 Dimensionen (0-3) | Fertig (325/325) |
-| **LLM (10K)** | 10 binaere Kategorien | Code bereit, wartet |
+| **Human** | 10 binaere Kategorien | In Arbeit (~171/305 bewertet) |
+| **LLM (5D)** | 5 Dimensionen (0-3) | Fertig (325/325, archiviert) |
+| **LLM (10K)** | 10 binaere Kategorien | Fertig (326/326, $1.44) |
 
 ## Repository-Struktur
 
 ```
-corpus/                    # Korpus-Metadaten (326 Papers)
-assessment/                # Human Assessment Tools
-assessment-llm/            # LLM Assessment (5D, abgeschlossen)
-benchmark/                 # Human vs. LLM Benchmark (10K, wartet)
-pipeline/                  # PDF -> Markdown -> Knowledge -> Vault
-  scripts/                 # Python-Scripts (13 CLI-Tools)
-  tools/                   # Browser-Tools (markdown_reviewer.html)
+corpus/                    # Korpus-Metadaten (326 Papers, Zotero-Export)
+assessment/                # Assessment-Systeme
+  human/                   # Human Assessment (Excel, Skripte)
+  llm-5d/                  # LLM Assessment 5D (abgeschlossen, archiviert)
+benchmark/                 # Human vs. LLM Benchmark (10K, wartet auf HA-Export)
+  config/                  # categories.yaml (10 Kategorien, Single Source of Truth)
+  data/                    # papers_full.csv, llm_assessment_10k.csv, human_assessment.csv
+  scripts/                 # merge, calculate_agreement, analyze_disagreements
+pipeline/                  # PDF -> Markdown -> Knowledge
+  scripts/                 # Python-Scripts
   knowledge/distilled/     # 249 destillierte Wissensdokumente
 config/                    # Konfiguration (defaults.yaml)
 prompts/                   # Prompt-Changelog und Governance
-vault/                     # Obsidian Vault (Skelett, wartet auf Daten)
 deep-research/restored/    # Deep-Research-Artefakte (RIS, Raw-Outputs)
 knowledge/                 # Projektdokumentation (Single Source of Truth)
 ```
@@ -59,9 +61,10 @@ Die vollstaendige Projektdokumentation liegt in [`knowledge/`](knowledge/README.
 | Operation | Kosten |
 |-----------|--------|
 | Knowledge Distillation (249 Docs) | ~$7.00 |
+| Verifikation | ~$0.58 |
 | LLM-Assessment 5D (325 Papers) | ~$1.15 |
-| Validierung | ~$0.58 |
-| **Gesamt** | **~$8.73** |
+| LLM-Assessment 10K (326 Papers) | ~$1.44 |
+| **Gesamt** | **~$10.17** |
 
 Modell: Claude Haiku 4.5
 
