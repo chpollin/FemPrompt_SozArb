@@ -1,50 +1,58 @@
-# Human Expert Assessment
+# Human Assessment
 
-Manuelles Assessment durch Fachexpert:innen.
+Manuelles Assessment durch Fachexpert:innen (Susi Sackl-Sharif, Sabine Klinger).
 
-## Bearbeiter:innen
+---
 
-- Susi Sackl-Sharif
-- Sabine Klinger
+## Aktueller Stand
 
-## Google Sheet
+| Metrik | Wert |
+|--------|------|
+| Papers gesamt | 305 |
+| Mit Decision | ~171 (56%) |
+| Include | ~55 |
+| Exclude | ~102 |
+| Unclear | ~14 |
 
-**URL:** https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/
+Aktuelle Datei: [results/assessment_20260218.xlsx](results/assessment_20260218.xlsx)
 
-## Schema
+Google Sheets (live): [Link](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/)
 
-Siehe [categories.yaml](../../benchmark/config/categories.yaml) fuer Kategorie-Definitionen.
+---
+
+## Assessment-Schema
+
+Vollstaendige Kategorie-Definitionen: [../../benchmark/config/categories.yaml](../../benchmark/config/categories.yaml)
 
 ### 10 Binaere Kategorien
 
-**Technik:**
+**Technik-Dimensionen:**
 - AI_Literacies
 - Generative_KI
 - Prompting
 - KI_Sonstige
 
-**Sozial:**
+**Sozial-Dimensionen:**
 - Soziale_Arbeit
 - Bias_Ungleichheit
 - Gender
-- Diversitaet
+- Diversitaet / Intersektionalitaet
 - Feministisch
 - Fairness
 
-### Entscheidung
+### Entscheidungslogik
 
-- Include: Technik >= 1 AND Sozial >= 1
-- Exclude: Nicht relevant
-- Unclear: Unsicher, Diskussion noetig
+- **Include:** Mindestens 1 Technik-Kategorie = Ja UND mindestens 1 Sozial-Kategorie = Ja
+- **Exclude:** Kriterien nicht erfuellt
+- **Unclear:** Unsicher, Diskussion noetig
 
-## Export-Anleitung
+---
 
-### CSV Export aus Google Sheets
+## Google Sheets Export fuer Benchmark
 
-1. Google Sheet oeffnen
-2. File → Download → Comma Separated Values (.csv)
-3. Datei speichern als: `assessment_YYYYMMDD.csv`
-4. In `results/` Ordner kopieren
+1. [Google Sheets oeffnen](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/)
+2. Datei -> Herunterladen -> Comma-separated values (.csv)
+3. Speichern als `benchmark/data/human_assessment.csv`
 
 ### Spalten-Mapping
 
@@ -61,33 +69,57 @@ Siehe [categories.yaml](../../benchmark/config/categories.yaml) fuer Kategorie-D
 | Soziale Arbeit | Soziale_Arbeit |
 | Bias/Ungleichheit | Bias_Ungleichheit |
 | Gender | Gender |
-| Diversitaet | Diversitaet |
+| Diversitaet / Intersektionalitaet | Diversitaet |
 | Feministisch | Feministisch |
 | Fairness | Fairness |
+| Studientyp | Studientyp |
 | Decision | Decision |
 | Exclusion Reason | Exclusion_Reason |
 | Notes | Notes |
 
-### Werte
+Werte: Kategorien = `Ja` oder `Nein` (leer = Nein), Decision = `Include` / `Exclude` / `Unclear`
 
-- Kategorien: `Ja` oder `Nein` (oder leer = Nein)
-- Decision: `Include`, `Exclude`, `Unclear`
+---
+
+## Skripte
+
+### Excel aus Zotero generieren
+
+Erstellt eine neue formatierte Excel-Datei mit allen Papers (fuer Google Sheets Upload):
+
+```bash
+python assessment/human/create_thematic_assessment.py
+```
+
+### Ergebnisse nach Zotero exportieren
+
+Schreibt die finalen Assessment-Entscheidungen als Tags zurueck in Zotero:
+
+```bash
+python assessment/human/excel_to_zotero_tags.py
+```
+
+---
+
+## Qualitaetssicherung
+
+- Bei Uneinigkeit: Inter-Rater-Diskussion (Susi + Sabine)
+- Konsens-Entscheidung in Notes-Spalte dokumentieren
+- Unclear-Kategorie fuer Papers die weitere Diskussion benoetigen
+
+---
 
 ## Dateien
 
 ```
 assessment/human/
-├── README.md           # Diese Datei
+├── README.md                          # Diese Datei
+├── create_thematic_assessment.py      # Excel aus Zotero generieren
+├── excel_to_zotero_tags.py            # Ergebnisse -> Zotero Tags
 └── results/
-    └── assessment_YYYYMMDD.csv  # Exportierte Assessments
+    └── assessment_20260218.xlsx       # Aktuelles Assessment (exportiert 2026-02-18)
 ```
-
-## Qualitaetssicherung
-
-1. **Inter-Rater-Diskussion:** Bei Uneinigkeit zwischen Susi und Sabine
-2. **Konsens-Entscheidung:** Dokumentiert in Notes-Spalte
-3. **Unclear-Kategorie:** Fuer Papers die weitere Diskussion benoetigen
 
 ---
 
-*Aktualisiert: 2026-02-08*
+*Aktualisiert: 2026-02-18*
