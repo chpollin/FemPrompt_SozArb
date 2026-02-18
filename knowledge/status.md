@@ -39,13 +39,13 @@ Knowledge-Base konsolidiert (Dateien umbenannt, Redundanzen eliminiert). Paper-E
 - Benchmark-Basis: 326 Papers, Schnittmenge mit HA fuer Kappa-Berechnung
 - Commit: (siehe Git-Log)
 
-### M5: 10K LLM Assessment ausfuehren
+### M5: 10K LLM Assessment ausfuehren -- ABGESCHLOSSEN
 
-- [ ] `assessment_prompt.md` mit Code synchronisieren (3 Doku-Inkonsistenzen)
-- [ ] Optional: Calibration Items implementieren (3-5 Kontroll-Papers)
-- [ ] Optional: Retry-Logik fuer fehlgeschlagene API-Calls
-- [ ] Assessment ausfuehren (~$1.50, ~30 Min)
-- Abhaengigkeit: M4 (Korpus-Basis muss klar sein)
+- [x] `assessment_prompt.md` mit Code synchronisieren (3 Inkonsistenzen behoben: Rolle, KI_Sonstige, negative Constraints)
+- [x] Beispiele fuer alle 10 Kategorien in `categories.yaml` ergaenzt (v1.2)
+- [x] Assessment ausgefuehrt: 326/326 Papers, ~$1.44, Haiku 4.5
+- [x] Ergebnis: `benchmark/data/llm_assessment_10k.csv` (232 Include, 94 Exclude)
+- Commit: (siehe Git-Log)
 
 ### M6: Teilmengen-Benchmark ausfuehren
 
