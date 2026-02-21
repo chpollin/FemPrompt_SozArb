@@ -189,6 +189,9 @@ def compute_confusion_matrix(papers):
             continue
         h = p["human"]["decision"]
         l = p["llm"]["decision"]
+        # Skip papers without actual decisions (empty string = not yet assessed)
+        if not h or not l:
+            continue
         # Normalize: map Unclear -> Exclude for matrix
         h_norm = "Include" if h == "Include" else "Exclude"
         l_norm = "Include" if l == "Include" else "Exclude"

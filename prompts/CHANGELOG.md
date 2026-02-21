@@ -1,6 +1,6 @@
 # Prompt-Changelog
 
-Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment eingesetzt werden. Teil der epistemischen Infrastruktur (siehe `knowledge/epistemic-framework.md`).
+Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment eingesetzt werden. Teil der epistemischen Infrastruktur (siehe `knowledge/project.md`, Abschnitt Sycophancy).
 
 ---
 

@@ -47,7 +47,7 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 | Paper eingereicht | Deadline 4. Mai 2026 | Ausstehend |
 | Epistemische Infrastruktur dokumentiert | Repository auditierbar, Prompts versioniert | Umgesetzt |
 | Dualer Bewertungspfad ausgefuehrt | Human + LLM Assessment komplett | Abgeschlossen |
-| Benchmark-Metriken berechnet | Cohen's Kappa pro Kategorie | Abgeschlossen (κ = 0,035) |
+| Benchmark-Metriken berechnet | Cohen's Kappa pro Kategorie | Abgeschlossen (Details: `status.md`) |
 
 ### Should-Have
 
@@ -87,7 +87,7 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 **Output:**
 - Konzept der epistemischen Infrastruktur (vier Ebenen: Workflow, Research Integrity, Institutionell, Community)
 - Dualer Bewertungspfad als Operationalisierung (Human + LLM, parallel, unabhaengig)
-- Benchmark-Ergebnisse als Illustration: κ = 0,035 -- Beweis, dass Divergenz messbar und informationshaltig ist
+- Benchmark-Ergebnisse als Illustration: Divergenz ist messbar und informationshaltig (Ergebnisse: siehe `status.md`)
 - Paper fuer Forum Wissenschaft (Deadline 4. Mai 2026)
 - Dokumentierter, reproduzierbarer Workflow im Repository (github.com/chpollin/FemPrompt_SozArb)
 
@@ -137,21 +137,26 @@ Epistemische Asymmetrie beschreibt eine Arbeitsteilung, in der die beteiligten I
 
 Die Asymmetrie ist wechselseitig und kontextabhaengig. Sie laesst sich mit gegenwaertigen Systemen nicht aufloesen, sondern nur durch Workflow-Design produktiv bearbeiten (Mollick: Co-Intelligence).
 
-**Dimensionen der Asymmetrie:**
-
-| Dimension | Beschreibung | Repo-Artefakt |
-|-----------|--------------|---------------|
-| Technologisch | Undurchsichtigkeit von Modellverhalten und Selektionslogik | Multi-Provider-Strategie, `deep-research/` |
-| Verantwortung | Forscher:innen koennen Rechenschaft ablegen, LLMs nicht | Dualer Bewertungspfad, Expert:innen-Pfad als Referenz |
-| Oekonomisch | Zugang zu Frontier-Modellen ist kostenpflichtig und ungleich verteilt | Kosten-Dokumentation ($8.73 gesamt) |
-| Kompetenz | Prompt-Qualitaet bestimmt Ergebnisqualitaet | Prompt-Governance (siehe `prompts/CHANGELOG.md`) |
-| Ethisch | Datenfluss in proprietaere Systeme, oekologische Kosten | -- |
-
 **Zentrale These:** Die Verantwortungsasymmetrie bindet die anderen Dimensionen. Ohne zurechenbare Verantwortung gibt es keine Instanz, die Intransparenz, Zugangsbedingungen und Kompetenzunterschiede methodisch bearbeiten kann.
+
+#### Mapping-Tabelle: Asymmetrie -> Risiko -> Massnahme -> Artefakt
+
+| Asymmetrie-Dimension | Risiko | Infrastruktur-Massnahme | Pruefbares Artefakt | Status |
+|---|---|---|---|---|
+| **Intransparenz** (justifikatorische Esoterik) | Unueberpruefbare Selektion durch Deep-Research-Modelle | Multi-Provider-Strategie (4 Modelle) + Selektions-Logging | `corpus/source_tool_mapping.json`, `deep-research/restored/` | Teilweise (Logging vorhanden, Audit ausstehend) |
+| **Konfabulation** | Erzeugung plausibler, aber falscher Aussagen | 3-Stage SKE mit deterministischer Stufe 2 + Verifikation Stufe 3 | `pipeline/knowledge/_verification/`, Confidence-Scores in Frontmatter | Umgesetzt |
+| **Sycophancy** | Prompt-induzierte Ueberattribuierung von Kategorien | Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung | `prompts/CHANGELOG.md`, negative Constraints in `benchmark/scripts/run_llm_assessment.py` | Umgesetzt (v2.1: 5 negative Constraints, neutrale Rolle, Restriktivitaetsregel) |
+| **Paywall-Bias** | Systematische Unterrepraesentation kostenpflichtiger Literatur | Hierarchische Beschaffungsstrategie + OA-Disclosure | PRISMA Flow-Diagramm, Beschaffungsrate (257/326 = 79%) | Teilweise (Rate dokumentiert, OA-Analyse ausstehend) |
+| **Prompt-Kompetenz** | Ergebnisabhaengigkeit von Prompt-Qualitaet | Prompt-Governance: Versionierung, Review, Dokumentation | `prompts/CHANGELOG.md`, `prompts/deep-research-template.md` | Umgesetzt (5 Prompts versioniert, Deep-Research-Template restauriert) |
+| **Verantwortungsasymmetrie** | Keine zurechenbare Instanz auf LLM-Seite | Expert:innen-Pfad als epistemisch verbindlicher Referenzpfad | Human Assessment (Google Sheets), auditierbare Bewertungsdaten | Umgesetzt (Assessment laufend) |
+| **Anbieter-Divergenz** | Verschiedene Modelle liefern verschiedene Evidenzbasen | Multi-Provider-Vergleich, Overlap-Analyse | `corpus/papers_metadata.csv` (Source_Tool-Spalte), Provider-Statistiken | Teilweise (Verteilung dokumentiert, Overlap-Analyse ausstehend) |
+| **Ressourcenasymmetrie** | Ungleich verteilter Zugang zu Frontier-Modellen und Infrastruktur | Kosten-Transparenz, Open-Source-Pipeline wo moeglich | Kosten-Dokumentation ($10.17 gesamt), Docling (Open Source) | Dokumentiert |
 
 ### Epistemische Infrastruktur
 
 Epistemische Infrastruktur bezeichnet die Gesamtheit derjenigen Verfahren, Dokumentationsstrukturen, institutionellen Regelungen und Community-Praktiken, die sicherstellen, dass LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben.
+
+**Arbeitsformel:** "Nicht das Modell wird verlaesslich, sondern der Forschungsprozess wird auditierbar: Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzung zu nachvollziehbarer, verantwortbarer Wissensproduktion."
 
 **Vier Ebenen:**
 
@@ -162,9 +167,32 @@ Epistemische Infrastruktur bezeichnet die Gesamtheit derjenigen Verfahren, Dokum
 | Institutionell | KI-Richtlinien | Noch nicht vorhanden |
 | Community | Peer-Review-Praktiken, die Workflows einschliessen | Paper-Forderung |
 
-**Arbeitsformel:** "Nicht das Modell wird verlaesslich, sondern der Forschungsprozess wird auditierbar: Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzung zu nachvollziehbarer, verantwortbarer Wissensproduktion."
+#### Designprinzip: Wer entscheidet wo was, und warum?
 
-Detaillierte Operationalisierung: `knowledge/epistemic-framework.md`
+**Phase 1: Identifikation (Deep Research)**
+
+| Entscheidung | Wer entscheidet | Warum | Artefakt |
+|---|---|---|---|
+| Welche Literatur wird gefunden? | 4 LLM-Modelle | Automatisierte Suche ueber Disziplinen | RIS-Dateien, Zotero-Collections |
+| Welche Literatur wird ergaenzt? | Studienassistentin + Forschende | Manuelle Recherche schliesst Luecken | 50 Manual-Papers in `papers_metadata.csv` |
+| Welche Duplikate werden entfernt? | Studienassistentin | Metadaten-Abgleich (DOI, Titel) | Zotero-Duplikaterkennung |
+
+**Phase 2: Bewertung (Dual Assessment)**
+
+| Entscheidung | Wer entscheidet | Warum | Artefakt |
+|---|---|---|---|
+| Include/Exclude (verbindlich) | Expert:innen (Sackl-Sharif, Klinger) | Feldkenntnis, interpretative Urteilskraft | Google Sheets, `human_assessment.csv` |
+| Include/Exclude (explorativ) | LLM (Haiku 4.5) | Skalierbarkeit, Muster-Erkennung | `assessment_llm.xlsx` (5D), 10K-Output |
+| Kategorie-Zuordnung | Beide (parallel, unabhaengig) | Vergleich ermoeglicht Divergenz-Analyse | Benchmark-Metriken (Cohen's Kappa) |
+
+**Phase 3: Synthese (SKE)**
+
+| Entscheidung | Wer entscheidet | Warum | Artefakt |
+|---|---|---|---|
+| Extraktion (Stufe 1) | LLM (probabilistisch) | Skalierung ueber 249 Dokumente | `_stage1_json/` |
+| Formatierung (Stufe 2) | Deterministische Software | Reproduzierbarkeit, keine Konfabulation | `_stage2_draft/` |
+| Verifikation (Stufe 3) | LLM (probabilistisch mit Pruefauftrag) | Pruefung gegen Original-Volltext | `_verification/`, Confidence-Score |
+| Eskalation bei niedrigem Confidence | Software-Regel (< 75) | Schwellenwert-basierte Weiterleitung | `needs_correction`-Markierung |
 
 ### Kuenstliche epistemische Autoritaeten (Hauswald 2025)
 
@@ -174,16 +202,35 @@ Hauswald beschreibt eine justifikatorische Esoterik: nicht der Inhalt, sondern d
 
 **Ergaenzung (Ferrario/Facchini/Termine 2024):** Selbst empirisch nachweisbare Ueberlegenheit eines KI-Systems begruendet keine epistemische Autoritaet, weil Autoritaet epistemische Tugenden und normative Ansprechbarkeit voraussetzt, die Maschinen nicht besitzen.
 
+### LLMs als "Exotic Mind-Like Entities" (Shanahan 2024)
+
+Shanahan (2024, *Strange New Minds*) praegt den Begriff "Exotic Mind-Like Entities" fuer Frontier-LLMs: Systeme, die anders als Menschen operieren, auch wenn ihr Verhalten oft menschenaehnlich erscheint. LLMs "lack the means to exercise concepts" wie Verstehen oder Glauben "in anything like the way we do" (S. 71) -- sie produzieren statistisch wahrscheinliche Fortsetzungen durch Next-Token-Prediction mit emergenten, kognitionsaehnlichen Mustern. Wenn Praktizierende diesen Systemen Einsicht in Klient:innensituationen zuschreiben, uebersehen sie, dass LLMs ohne das Weltverstaendnis oder die kritische Reflexionsfaehigkeit operieren, die professionelle Sozialarbeit erfordert.
+
+Drei Aspekte sind fuer das Projekt relevant:
+1. **Emergente Capabilities** ohne explizites Training (In-Context Learning, Domainuebertragung)
+2. **Alignment-Spannungen** zwischen Constitutional AI ("helpful, harmless, honest") und professionsspezifischen Werten der Sozialen Arbeit
+3. **Persona-Effekte** (Chen et al. 2025): Konsistente Charaktereigenschaften, die sich durch Finetuning verschieben und unvorhersehbare Cross-Trait-Effekte erzeugen
+
 ### Konfabulation (nicht Halluzination)
 
 Konfabulation bezeichnet die Erzeugung kohaerenter, aber faktuell ungesicherter Aussagen durch ein LLM, ohne dass eine interne Instanz den Wahrheitsgehalt gegen eine externe Referenz prueft. Der Begriff ist der klinischen Psychologie entlehnt (Wiggins/Bunin 2023).
 
 **Begruendung der Terminologie:**
 - Halluzination setzt Wahrnehmungsstoerung bei vorhandenem Bewusstsein voraus (bei LLMs nicht gegeben)
-- Konfabulation beschreibt den Erzeugungsmechanismus praeziset (kohaerente Narrative ohne Taeuschungsabsicht)
+- Konfabulation beschreibt den Erzeugungsmechanismus praeziser (kohaerente Narrative ohne Taeuschungsabsicht)
 - Sui et al. (2024): Konfabulierte LLM-Outputs weisen hoehere Narrativitaet und semantische Kohaerenz auf als veridikale Outputs
 
-**Konsequenz fuer die Pipeline:** Die 3-Stage SKE adressiert Konfabulationsrisiko durch deterministische Stufe 2 (kein LLM, keine Konfabulation moeglich) und Verifikation in Stufe 3 (Pruefauftrag gegen Original).
+**Massnahme im Projekt:** Die 3-Stage SKE adressiert Konfabulationsrisiko durch deterministische Stufe 2 (kein LLM, keine Konfabulation moeglich) und Verifikation in Stufe 3 (Pruefauftrag gegen Original). Verifikation nutzt die Asymmetrie zwischen Erzeugung und Pruefung: Die Pruefung bereits erzeugter Ergebnisse ist systematisch einfacher als die Erzeugung neuer korrekter Ergebnisse.
+
+**Verifikations-Scoring:**
+
+| Aspekt | Gewicht | Pruefung | Schwellenwert |
+|---|---|---|---|
+| Completeness | 40% | Sind alle Pflichtfelder befuellt? Fehlen wesentliche Informationen? | Vollstaendig = 100%, Fehlendes Feld = Abzug |
+| Correctness | 40% | Stimmen extrahierte Aussagen mit dem Originaltext ueberein? | Zitat muss im Original auffindbar sein |
+| Category Validation | 20% | Sind Kategorien-Zuordnungen durch Evidenzzitate gestuetzt? | Evidenz-Zitat muss Kategorie stuetzen |
+
+Gesamt-Confidence: Gewichteter Score (0-100). Ergebnis: 242/249 (97.2%) erreichen Score >= 75. Confidence < 75 markiert Dokument als `needs_correction`.
 
 ### Sycophancy (Prompt-Konformitaet)
 
@@ -191,7 +238,22 @@ Empirisch belegte Tendenz von LLMs, den Vorannahmen eines Prompts uebermaeessig 
 
 **Relevanz fuer das Projekt:** Wenn der Assessment-Prompt Kategorien wie "feministisch" oder "intersektional" betont, koennte das Modell diese Kategorien grosszuegiger zuweisen. Qualitaet des LLM-Beitrags haengt damit nicht nur von der Modell-Kompetenz ab, sondern auch von der Prompt-Gestaltung.
 
-**Massnahmen im Projekt:** Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung (siehe `prompts/CHANGELOG.md`, `knowledge/epistemic-framework.md`)
+**Massnahmen im Projekt:**
+
+1. **Negative Constraints** (in Assessment-Prompts, v2.1):
+   - "Klassifiziere nur als 'Feministisch', wenn der Text explizit feministische Theorie, Methoden oder Perspektiven verwendet ODER sich auf feministische Autor:innen bezieht. Implizite Naehe zu Gender-Themen reicht nicht."
+   - "Bei Unsicherheit: 'Nein' statt 'Ja'. Im Zweifel fuer den restriktiveren Wert."
+   - "Vergib nicht mehr als 3-4 Kategorien pro Paper, es sei denn, der Text adressiert tatsaechlich mehr."
+
+2. **Calibration Items:** 3-5 Papers mit bekannter korrekter Klassifikation als Kontrollgruppe:
+
+   | Paper (Beispiel) | Erwartete Klassifikation | Prueft |
+   |---|---|---|
+   | Rein technisches ML-Paper ohne Sozialbezug | Alle Sozial-Kategorien = Nein | False-Positive-Rate |
+   | Explizit feministisches Paper | Feministisch = Ja | True-Positive-Rate |
+   | Fairness-Paper ohne Gender-Bezug | Feministisch = Nein, Fairness = Ja | Trennschaerfe |
+
+3. **Prompt-Versionierung:** Jede Aenderung in `prompts/CHANGELOG.md` dokumentiert mit Versionsnummer, Datum, Aenderung, Begruendung und Auswirkung.
 
 ### Situiertes Wissen (Haraway)
 
@@ -235,21 +297,6 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 
 ---
 
-## Paper: Forum Wissenschaft 2/2026
-
-| Aspekt | Wert |
-|--------|------|
-| Deadline | 4. Mai 2026 |
-| Umfang | 18.000 Zeichen (inkl. Leerzeichen, inkl. Fussnoten) |
-| Fussnoten | max. 15, keine Literaturliste |
-| Titel | Epistemische Asymmetrien in Deep-Research-gestuetzten Literature Reviews |
-| Untertitel | Workflow-Design zwischen Large Language Models und Expert:innenwissen |
-| Wissensdokument | v12 (strukturell geschaerft) |
-| Paper-Text | Entwurf liegt vor |
-| Abgleich Paper vs. Repo | `knowledge/paper-integrity.md` |
-
----
-
 ## Glossar (Kernbegriffe)
 
 | Begriff | Definition |
@@ -267,4 +314,13 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 
 ---
 
-*Aktualisiert: 2026-02-18*
+## Offene Punkte (Theorie/Rahmung)
+
+- [ ] OA-Analyse durchfuehren (Unpaywall-API)
+- [ ] Overlap-Analyse auf vollem Korpus (ueber `papers_metadata.csv`, nicht nur RIS)
+- [ ] Eskalationsregel fuer Expert:innen-Review formalisieren
+- [ ] Institutional-Level: KI-Richtlinien-Bezug dokumentieren
+
+---
+
+*Aktualisiert: 2026-02-21*

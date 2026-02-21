@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** Literature Review - AI Literacy & Bias in Social Work
-**Last Updated:** 2026-02-18
+**Last Updated:** 2026-02-21
 
 ---
 
@@ -25,7 +25,7 @@ Systematischer Literature Review zu **AI Literacy** und **LLM-Bias** im Kontext 
 When starting a new session, read these files to understand current state:
 
 1. **knowledge/status.md** - Current state, pending tasks
-2. **knowledge/technical.md** - Complete technical documentation
+2. **knowledge/methods-and-pipeline.md** - Methodology and technical documentation
 3. **knowledge/README.md** - Documentation index
 
 ### Configuration Files (Don't Modify Unless Asked)
@@ -37,7 +37,7 @@ When starting a new session, read these files to understand current state:
 ### Data Files (Read-Only Unless Explicitly Told)
 
 - `corpus/zotero_export.json` - Bibliography metadata
-- `assessment-llm/output/*.xlsx` - Assessment results
+- `assessment/llm-5d/output/*.xlsx` - Assessment results (5D, archived)
 - Any files in `pipeline/pdfs/`, `pipeline/markdown/`, etc.
 
 ---
@@ -56,7 +56,7 @@ When starting a new session, read these files to understand current state:
 
 - Documentation (`.md` files)
 - Test scripts (`test_*.py`)
-- Helper scripts in `assessment-llm/`
+- Helper scripts in `assessment/llm-5d/`
 
 ### Files That Require Caution
 
@@ -117,12 +117,12 @@ When starting a new session, read these files to understand current state:
 
 ## Pipeline-Specific Rules
 
-### LLM Assessment (assessment-llm/)
+### LLM Assessment (assessment/llm-5d/)
 
 - **Model:** Claude Haiku 4.5 (fast and cheap)
-- **Cost:** ~$0.002 per paper
-- **Success rate:** Target 100% (retry on failures)
-- **Output:** `output/assessment_llm.xlsx`
+- **Cost:** ~$0.004 per paper (5D: $1.15/325, 10K: $1.44/326)
+- **Success rate:** 100%
+- **Output:** `assessment/llm-5d/output/assessment_llm.xlsx` (5D), `benchmark/data/llm_assessment_10k.csv` (10K)
 
 ### Knowledge Distillation (pipeline/scripts/distill_knowledge.py)
 

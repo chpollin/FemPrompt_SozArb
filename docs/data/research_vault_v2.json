@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-02-18",
+    "generated": "2026-02-21",
     "total_papers": 326,
     "papers_with_human": 292,
     "benchmark_papers": 199,
@@ -16,8 +16,8 @@
     "confusion_matrix": {
       "Include_Include": 63,
       "Include_Exclude": 19,
-      "Exclude_Include": 145,
-      "Exclude_Exclude": 65,
+      "Exclude_Include": 80,
+      "Exclude_Exclude": 37,
       "Other": 0
     }
   },

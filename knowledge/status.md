@@ -178,7 +178,7 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | ~2/3 fertig (BLOCKER fuer M6) |
+| **Human** | Google Sheets | 10 binaere Kategorien | 210/326 mit Decision |
 | **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (325/325) |
 | **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | **Fertig (326/326)** |
 
@@ -187,7 +187,7 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 | Aspekt | Stand |
 |--------|-------|
 | Papers in CSV | 305 (292 auch in aktuellem Zotero, 13 nur in HA) |
-| Decisions getroffen | ~2/3 (ca. 200 Papers) |
+| Decisions getroffen | 210/326 mit Decision |
 | Schema | 10 binaere Kategorien (Technik + Sozial) |
 | Bearbeiter | Susi Sackl-Sharif (aktiv), Sabine Klinger (spaeter) |
 
@@ -255,17 +255,8 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 | **Paper-Datei** | **`knowledge/paper/paper-draft.md`** (Single Source of Truth) |
 | Leitkonzept | Epistemische Asymmetrie + Epistemische Infrastruktur |
 | Abgleich Paper vs. Repo | `knowledge/paper-integrity.md` |
-| Arbeitsplan | `knowledge/paper/Forum Wissenschaft Paper - Arbeitsplan.md` |
 
 **Hinweis:** Das Paper wird ausschliesslich im Repo iteriert. Google Docs ist nicht mehr relevant.
-
-### Offene Punkte am Paper
-
-| Punkt | Prioritaet |
-|---|---|
-| Ergebnis-Abschnitt befuellen (nach Benchmark) | Hoch (blockiert bis M6) |
-| Zeichenzaehlung + Kuerzung auf 18.000 | Mittel |
-| Finale Review mit Co-Autor:innen | Nach Benchmark |
 
 ---
 
@@ -298,6 +289,64 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 ---
 
+## Selektions-Audit
+
+### Provider-Verteilung (aus `human_assessment.csv`, 305 Papers)
+
+| Provider | Papers | Anteil (DR) | DOI verfuegbar |
+|----------|--------|-------------|----------------|
+| Perplexity | 75 | 29.5% | 22 (29%) |
+| Claude | 63 | 24.8% | 37 (59%) |
+| ChatGPT | 62 | 24.4% | 42 (68%) |
+| Gemini | 54 | 21.3% | 22 (41%) |
+| **Deep Research gesamt** | **254** | **100%** | **123 (48%)** |
+| Manual (ergaenzend) | 50 | -- | 40 (80%) |
+| **Gesamt** | **305** | -- | **163 (53%)** |
+
+**Befund DOI-Verfuegbarkeit:** Manuelle Recherche liefert deutlich hoehere DOI-Raten (80%) als Deep Research (48%). Perplexity hat die niedrigste DOI-Rate (29%), was auf mehr graue Literatur hindeutet.
+
+### Publikationstypen
+
+| Typ | Anzahl | Anteil |
+|-----|--------|--------|
+| journalArticle | 182 | 59.7% |
+| report | 60 | 19.7% |
+| conferencePaper | 42 | 13.8% |
+| bookSection | 9 | 3.0% |
+| book | 6 | 2.0% |
+| webpage | 4 | 1.3% |
+| thesis | 1 | 0.3% |
+
+### Overlap-Analyse (aus RIS-Dateien, 34 Papers)
+
+Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Papers ab (13.4%). Fuer diese Stichprobe:
+
+| Metrik | Wert |
+|--------|------|
+| Total unique Papers in RIS | 32 |
+| Davon nur von 1 Provider gefunden | 30 (93.8%) |
+| Davon von 2+ Providern gefunden | 2 (6.2%) |
+| **Overlap-Rate** | **6.2%** |
+
+**Einschraenkung:** Diese Zahlen gelten nur fuer die 34 Papers der ersten RIS-Runde. Eine Gesamt-Overlap-Analyse auf Korpus-Ebene ist mit den vorhandenen Daten nicht moeglich, da `human_assessment.csv` jedes Paper nur einem einzigen Provider zuordnet.
+
+### Missingness-Indikatoren
+
+| Indikator | Wert |
+|-----------|------|
+| PDF-Beschaffungsrate | 257/326 (79%) |
+| Nicht beschaffbar | 69/326 (21%) -- primaer Paywall |
+| Markdown-Konversionsrate | 252/257 (98%) |
+| Knowledge-Doc-Rate | 249/252 (99%) |
+| **Gesamte Verlustrate** (Zotero -> Knowledge Doc) | 77/326 (23.6%) |
+
+### Ausstehend
+
+- [ ] OA-Analyse: Open-Access-Status der 326 Papers via Unpaywall-API (DOI-basiert, daher nur fuer 53% moeglich)
+- [ ] Gesamt-Overlap: Nicht berechenbar mit vorhandenen Daten (s.o.)
+
+---
+
 ## Fehlgeschlagene PDF-Konvertierungen (5)
 
 1. `British_Association_of_Social_Workers_2025_Generat.pdf` - Data format error
@@ -308,4 +357,4 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 ---
 
-*Aktualisiert: 2026-02-18 (Session 3)*
+*Aktualisiert: 2026-02-21*

@@ -98,7 +98,7 @@ Diese Probleme wurden im fertigen Paper-Text gegenueber frueheren Versionen beho
 
 **Paper sagt:** "Ein eigens gebautes Browser-Tool ermoeglicht die visuelle Ueberpruefung jeder Konversion."
 
-**Repo zeigt:** Das Tool existiert und funktioniert. Aber laut `knowledge/technical.md` wurden nur 25/252 (~10%) der Konversionen tatsaechlich geprueft (PASS 20, WARN 4, FAIL 1). "Jeder Konversion" suggeriert vollstaendige Abdeckung.
+**Repo zeigt:** Das Tool existiert und funktioniert. Aber laut `knowledge/methods-and-pipeline.md` wurden nur 25/252 (~10%) der Konversionen tatsaechlich geprueft (PASS 20, WARN 4, FAIL 1). "Jeder Konversion" suggeriert vollstaendige Abdeckung.
 
 **Handlungsbedarf:** Formulierung praezisieren. Vorschlag: "ermoeglicht die visuelle Ueberpruefung der Konversionen" (ohne "jeder") oder "eine Stichprobe von rund zehn Prozent wurde visuell geprueft".
 

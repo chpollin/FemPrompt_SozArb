@@ -8,11 +8,11 @@ Manuelles Assessment durch Fachexpert:innen (Susi Sackl-Sharif, Sabine Klinger).
 
 | Metrik | Wert |
 |--------|------|
-| Papers gesamt | 305 |
-| Mit Decision | ~171 (56%) |
-| Include | ~55 |
-| Exclude | ~102 |
-| Unclear | ~14 |
+| Papers gesamt | 305 (in CSV), 326 (in Zotero) |
+| Mit Decision | 210 |
+| Include | 88 |
+| Exclude | 108 |
+| Unclear | 14 |
 
 Aktuelle Datei: [results/assessment_20260218.xlsx](results/assessment_20260218.xlsx)
 
@@ -122,4 +122,4 @@ assessment/human/
 
 ---
 
-*Aktualisiert: 2026-02-18*
+*Aktualisiert: 2026-02-21*

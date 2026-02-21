@@ -34,7 +34,7 @@ assessment/
 
 | Track | Ordner | Schema | Status |
 |-------|--------|--------|--------|
-| **Human** | `human/` | 10 binaere Kategorien (Ja/Nein) | In Arbeit (~171/305 bewertet) |
+| **Human** | `human/` | 10 binaere Kategorien (Ja/Nein) | In Arbeit (210/326 mit Decision) |
 | **LLM 5D** | `llm-5d/` | 5 ordinale Dimensionen (0-3) | Fertig (325/325, $1.15) |
 | **LLM 10K** | `../benchmark/` | 10 binaere Kategorien (Ja/Nein) | Fertig (326/326, $1.44) |
 
@@ -66,4 +66,4 @@ python assessment/human/excel_to_zotero_tags.py
 
 ---
 
-*Aktualisiert: 2026-02-18*
+*Aktualisiert: 2026-02-21*

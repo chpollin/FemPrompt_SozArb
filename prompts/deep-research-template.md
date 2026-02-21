@@ -104,11 +104,11 @@ Die folgenden Werte wurden aus verschiedenen Repo-Quellen rekonstruiert. Sie sin
 | Placeholder | Rekonstruierter Wert | Quelle | Sicherheit |
 |---|---|---|---|
 | `[FACHGEBIET]` | Feministische KI-Forschung / Feminist AI Research | `prompts/CHANGELOG.md` Z.24 | Hoch |
-| `[FORSCHUNGSFRAGE]` | Feministische Digital/AI Literacies und diversitaetsreflektierendes Prompting | OpenAI-PDF-Titel, `knowledge/methodology.md` | Hoch |
+| `[FORSCHUNGSFRAGE]` | Feministische Digital/AI Literacies und diversitaetsreflektierendes Prompting | OpenAI-PDF-Titel, `knowledge/methods-and-pipeline.md` | Hoch |
 | `[ZEITRAHMEN]` | 2023-2025 | OpenAI-PDF-Titel: "...(2023-2025)" | Hoch |
 | `[THEORIEN]` | Intersektionale Analyse, feministische AI-Literacy | `knowledge/paper/Workflow...md` Z.68 | Mittel |
 | `[DISZIPLINEN]` | Social Work Journals, DH-Konferenzen | `knowledge/paper/Workflow...md` Z.68 | Mittel |
-| `[SPRACHEN]` | DE/EN | `knowledge/methodology.md` | Hoch |
+| `[SPRACHEN]` | DE/EN | `knowledge/methods-and-pipeline.md` | Hoch |
 | `[SPEZIFISCHE KOMPETENZEN]` | Nicht rekonstruierbar | -- | Verloren |
 | `[ZIEL]` | Nicht exakt rekonstruierbar | -- | Verloren |
 | `[REGION]` | Nicht rekonstruierbar | -- | Verloren |

@@ -18,14 +18,16 @@
 
 ### 1. LLM-basiertes PRISMA-Assessment
 
-Das Script `assessment-llm/assess_papers.py` bewertet Papers automatisch.
+Das Script `assessment/llm-5d/scripts/assess_papers.py` bewertet Papers automatisch (5D-Assessment, archiviert).
 
-**Aufruf:** `python assessment-llm/assess_papers.py -i input.xlsx -o output.xlsx`
+**Aufruf:** `python assessment/llm-5d/scripts/assess_papers.py -i input.xlsx -o output.xlsx`
 
 **Input:** Excel mit Paper-Metadaten (Titel, Abstract)
 **Output:** Excel mit Decision (Include/Exclude/Unclear) und Scores
 
-Performance: ~325 Papers in 24 min, $0.58, 100% Erfolgsrate
+Performance: ~325 Papers in 24 min, $1.15, 100% Erfolgsrate
+
+Fuer das 10K-Assessment (Benchmark): `python benchmark/scripts/run_llm_assessment.py` (326 Papers, $1.44)
 
 ### 2. PDF-Akquise
 
@@ -70,7 +72,7 @@ Fuer ~200 Include-Papers:
 
 | Stage | Dauer | Kosten | Erfolgsrate |
 |-------|-------|--------|-------------|
-| LLM Assessment | 24 min | $0.58 | 100% |
+| LLM Assessment (5D) | 24 min | $1.15 | 100% |
 | PDF-Akquise | 1-2 h | $0 | 70-80% |
 | Markdown-Konversion | 2-3 h | $0 | ~100% |
 | AI-Summarisierung | 6-7 h | $8-9 | ~100% |
@@ -93,10 +95,10 @@ Fuer ~200 Include-Papers:
 
 ## Naechste Schritte
 
-1. **Mehr lernen:** [technical.md](../technical.md)
+1. **Mehr lernen:** [methods-and-pipeline.md](../methods-and-pipeline.md)
 2. **Status pruefen:** [status.md](../status.md)
 3. **Forschungskontext:** [project.md](../project.md)
 
 ---
 
-*Aktualisiert: 2026-02-06*
+*Aktualisiert: 2026-02-21*

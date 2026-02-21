@@ -6,23 +6,26 @@ Zentrale Dokumentation fuer den systematischen Literature Review zu AI Literacy 
 
 ## Kern-Dokumente
 
-| Datei | Inhalt | Zuletzt aktualisiert |
-|-------|--------|---------------------|
-| [project.md](project.md) | Projektziel, Forschungsfragen, Team, theoretischer Rahmen (epistemische Asymmetrie, Konfabulation, Sycophancy), Glossar | 2026-02-18 |
-| [methodology.md](methodology.md) | PRISMA 2020, 10 Kategorien, dualer Bewertungspfad, SKE (3-Stage), Multi-Modell-Recherche, Benchmark-Design, End-to-End-Workflow | 2026-02-18 |
-| [status.md](status.md) | Aktueller Projektstand, Blocker, offene Punkte, Fortschrittsmetriken | 2026-02-18 |
-| [technical.md](technical.md) | Pipeline-Architektur, Script-Referenz, Performance, Kosten, Fehlerbehandlung | 2026-02-18 |
-| [paper-integrity.md](paper-integrity.md) | Systematischer Abgleich Paper-Text vs. Repository (BELEGT/ABWEICHUNG/FEHLEND) | 2026-02-18 |
-| [epistemic-framework.md](epistemic-framework.md) | Mapping-Tabelle (Asymmetrie -> Risiko -> Massnahme -> Artefakt), Sycophancy-Mitigation, Selektions-Audit | 2026-02-18 |
+| Datei | Inhalt |
+|-------|--------|
+| [project.md](project.md) | Projektziel, Forschungsfragen, Team, theoretischer Rahmen (Asymmetrie + Mapping-Tabelle, Infrastruktur + Designprinzip, Konfabulation + Verifikation, Sycophancy + Massnahmen), Glossar |
+| [methods-and-pipeline.md](methods-and-pipeline.md) | PRISMA, Assessment-Design (10 Kategorien, dualer Bewertungspfad, Benchmark), Pipeline (PDF -> Markdown -> Knowledge), Script-Referenz, Kosten |
+| [status.md](status.md) | Meilensteine, Benchmark-Ergebnisse, Selektions-Audit, offene Punkte |
+| [paper-integrity.md](paper-integrity.md) | Systematischer Abgleich Paper-Text vs. Repository (BELEGT/ABWEICHUNG/FEHLEND) |
 
-## Ergaenzende Materialien
+## Guides
 
-| Verzeichnis / Datei | Inhalt |
-|---------------------|--------|
-| [guides/quickstart.md](guides/quickstart.md) | 10-Minuten-Einstieg |
-| [guides/manual-review-checklist.md](guides/manual-review-checklist.md) | Markdown-Review Checkliste |
+| Datei | Inhalt |
+|-------|--------|
+| [guides/quickstart.md](guides/quickstart.md) | 10-Minuten-Einstieg in die Pipeline |
+| [guides/manual-review-checklist.md](guides/manual-review-checklist.md) | Markdown-Review Checkliste fuer Human-in-the-Loop |
+
+## Paper
+
+| Datei | Inhalt |
+|-------|--------|
 | [paper/paper-draft.md](paper/paper-draft.md) | **Paper-Entwurf** (Forum Wissenschaft, 18.000 Zeichen) -- iterativ im Repo bearbeitet |
-| [paper/](paper/) | Hintergrund-Materialien (Arbeitsplan, Benchmark-Spezifikation, Referenzliteratur, Validierung) |
+| [paper/Referenzliteratur-Benchmark-Design.md](paper/Referenzliteratur-Benchmark-Design.md) | Detailanalyse der Referenzstudien (Woelfle, Hanegraaf, Sandner) |
 
 ## Externe Ressourcen
 
@@ -34,4 +37,4 @@ Zentrale Dokumentation fuer den systematischen Literature Review zu AI Literacy 
 
 ---
 
-*Aktualisiert: 2026-02-18*
+*Aktualisiert: 2026-02-21*

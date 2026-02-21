@@ -187,11 +187,9 @@ Modell: Claude Haiku 4.5 ($1.00/MTok Input, $5.00/MTok Output, Stand Feb 2026)
 | Was | Pfad |
 |-----|------|
 | Paper (Single Source of Truth) | `knowledge/paper/paper-draft.md` |
-| Projektplan | `knowledge/paper/Forum Wissenschaft Paper - Arbeitsplan.md` |
 | Status + Meilensteine | `knowledge/status.md` |
-| Methodik-Dokumentation | `knowledge/methodology.md` |
-| Technische Doku | `knowledge/technical.md` |
-| Epistemische Infrastruktur | `knowledge/epistemic-framework.md` |
+| Methodik + Pipeline | `knowledge/methods-and-pipeline.md` |
+| Projekt + Theorie | `knowledge/project.md` |
 | Paper vs. Repo Abgleich | `knowledge/paper-integrity.md` |
 | Assessment-Schema | `benchmark/config/categories.yaml` |
 | LLM Assessment-Ergebnis | `benchmark/data/llm_assessment_10k.csv` |

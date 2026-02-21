@@ -37,9 +37,20 @@ benchmark/
 
 | Track | Datei | Papers | Status |
 |-------|-------|--------|--------|
-| Human | `data/human_assessment.csv` | 305 (171 bewertet) | In Arbeit |
+| Human | `data/human_assessment.csv` | 304 (210 mit Decision) | In Arbeit |
 | LLM 10K | `data/llm_assessment_10k.csv` | 326/326 | Fertig ($1.44) |
-| Benchmark | `data/merged_assessment.csv` | ~170 (Schnittmenge) | Wartet auf HA |
+| Benchmark | `data/merged_assessment.csv` | 210 (Schnittmenge mit Decision) | **Abgeschlossen** |
+
+## Benchmark-Ergebnisse
+
+| Metrik | Wert |
+|--------|------|
+| Decision: Cohen's Kappa | 0,035 ("slight") |
+| Decision: Gesamtuebereinstimmung | 47,1 % |
+| Mittlere Kategorie-Uebereinstimmung | 53,8 % |
+| Disagreements | 111 (davon 78 LLM-Include/Human-Exclude) |
+
+Vollstaendige Ergebnisse: `results/agreement_metrics.json`, `results/disagreements.csv`
 
 ---
 
@@ -82,13 +93,13 @@ python scripts/analyze_disagreements.py \
 
 ---
 
-## Erwartete Ergebnisse
+## Einordnung
 
-| Metrik | Erwartungshorizont |
-|--------|-------------------|
-| Human-Human κ | 0.5--0.8 (kategorienabhaengig) |
-| Human-LLM κ | 0.3--0.7 |
-| Benchmark-Basis | ~170 Papers (mit Human + LLM Assessment) |
+| Metrik | Erwartungshorizont | Tatsaechlich |
+|--------|-------------------|-------------|
+| Human-Human κ | 0.5--0.8 (kategorienabhaengig) | (noch nicht gemessen) |
+| Human-LLM κ | 0.3--0.7 | 0,035 (Decision) |
+| Benchmark-Basis | ~170 Papers | 210 Papers |
 
 ---
 
@@ -112,4 +123,4 @@ Vollstaendige Definitionen mit Beispielen: [config/categories.yaml](config/categ
 
 ---
 
-*Aktualisiert: 2026-02-18*
+*Aktualisiert: 2026-02-21*
