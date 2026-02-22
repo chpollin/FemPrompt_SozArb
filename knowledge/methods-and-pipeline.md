@@ -188,7 +188,7 @@ Das Benchmark vergleicht Human- und LLM-Assessment und adaptiert den Ansatz von 
 
 Detaillierte Dokumentation: `paper/Referenzliteratur-Benchmark-Design.md`
 
-**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet, ist aber durch den Prevalence-Bias-Paradox eingeschraenkt (Byrt et al. 1993): Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035, unabhaengig von der Bewertungsqualitaet. Details: `ANALYSIS_SESSION_2026-02-22.md`
+**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet, ist aber durch den Prevalence-Bias-Paradox eingeschraenkt (Byrt et al. 1993): Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035, unabhaengig von der Bewertungsqualitaet. Details: `knowledge/paper-integrity.md` Abschnitt 3.6, `knowledge/status.md` M6-Interpretation
 
 **Benchmark-Scripts:**
 

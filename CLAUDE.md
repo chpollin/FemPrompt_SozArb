@@ -180,7 +180,7 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 | Information | Kanonischer Ort |
 |-------------|-----------------|
 | Benchmark-Ergebnisse | `knowledge/status.md` (M6) + `benchmark/results/agreement_metrics.json` |
-| Kappa-Revision | `ANALYSIS_SESSION_2026-02-22.md` |
+| Kappa-Revision | `knowledge/paper-integrity.md` Abschnitt 3.6 + `knowledge/status.md` M6-Interpretation |
 | Script-Referenz | `knowledge/methods-and-pipeline.md` |
 | Pipeline-Statistiken | `knowledge/status.md` + `knowledge/methods-and-pipeline.md` |
 | Kategorie-Definitionen | `benchmark/config/categories.yaml` |

@@ -148,7 +148,7 @@ Das Paper verwendet bewusst Groessenordnungen ("mehrere hundert Papers"), was ko
 
 **Analyse (2026-02-22):** Cohen's Kappa ist durch den Prevalence-Bias-Paradox (Byrt et al. 1993, Feinstein & Cicchetti 1990) in diesem Anwendungsfall als Leitmetrik ungeeignet. Die Basisraten divergieren um 26 Prozentpunkte (LLM 68% Include vs. Human 42% Include). Bei derart unterschiedlichen Basisraten kollabiert Kappa kuenstlich -- der Wert 0,035 reflektiert primaer die Schwellenwert-Differenz, nicht die inhaltliche Uebereinstimmung.
 
-**Handlungsbedarf:** Paper-Revision (v0.5) muss Konfusionsmatrix und Basisraten ins Zentrum ruecken, Kappa als Vergleichsanker mit Prevalence-Paradox-Erklaerung in Fussnote. Kategorie-Tabelle mit Ja-Raten und Richtung statt Kappa-Werten. Details: `ANALYSIS_SESSION_2026-02-22.md`
+**Handlungsbedarf:** Paper-Revision (v0.5) muss Konfusionsmatrix und Basisraten ins Zentrum ruecken, Kappa als Vergleichsanker mit Prevalence-Paradox-Erklaerung in Fussnote. Kategorie-Tabelle mit Ja-Raten und Richtung statt Kappa-Werten. Details: `knowledge/status.md` M6-Interpretation (Prevalence-Bias-Erklaerung)
 
 ---
 

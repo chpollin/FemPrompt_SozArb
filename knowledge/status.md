@@ -89,7 +89,7 @@ Human Exclude           78              34
 | AI_Literacies | -- | -- | -- | -- | -0,018 |
 | Generative_KI | -- | -- | -- | -- | -0,004 |
 
-**Interpretation:** Die Konfusionsmatrix zeigt das asymmetrische Divergenzmuster: 78 Faelle LLM-Include/Human-Exclude gegenueber nur 23 in umgekehrter Richtung. Die Basisraten-Differenz (26 Prozentpunkte) verweist auf fundamental verschiedene Operationsweisen. Cohen's Kappa (0,035) ist primaer ein Artefakt des Prevalence-Bias-Paradoxes (Byrt et al. 1993): Bei stark unterschiedlichen Basisraten kollabiert Kappa, unabhaengig von der Bewertungsqualitaet. Die inhaltliche Analyse stuetzt sich daher auf Konfusionsmatrix, Basisraten und die qualitative Disagreement-Analyse. Details: `ANALYSIS_SESSION_2026-02-22.md`, Abschnitt 2.
+**Interpretation:** Die Konfusionsmatrix zeigt das asymmetrische Divergenzmuster: 78 Faelle LLM-Include/Human-Exclude gegenueber nur 23 in umgekehrter Richtung. Die Basisraten-Differenz (26 Prozentpunkte) verweist auf fundamental verschiedene Operationsweisen. Cohen's Kappa (0,035) ist primaer ein Artefakt des Prevalence-Bias-Paradoxes (Byrt et al. 1993): Bei stark unterschiedlichen Basisraten kollabiert Kappa, unabhaengig von der Bewertungsqualitaet. Die inhaltliche Analyse stuetzt sich daher auf Konfusionsmatrix, Basisraten und die qualitative Disagreement-Analyse. Details: `knowledge/paper-integrity.md` Abschnitt 3.6 (Prevalence-Bias-Analyse).
 
 ### M7: Ergebnisse ins Paper einarbeiten -- ABGESCHLOSSEN
 
@@ -161,7 +161,7 @@ Human Exclude           78              34
 - [x] Design: CSS-Variablen aus `research.css`, `pt-*` Namespace, responsive (768px Breakpoint)
 - [x] CDN-Dependencies: D3 v7.9.0, d3-sankey v0.12.3, Chart.js 4.4.0, FontAwesome 6.5.1
 - [x] Vault ZIP: `docs/downloads/vault.zip` (1.1 MB, 505 Dateien)
-- Branch: `FemPrompt_SozArb_promptotyping-interface`, Commits: `3476437` (v2), v2.1 in Arbeit
+- Branch: `FemPrompt_SozArb_promptotyping-interface`, Commits: `3476437` (v2), `963c08d` (v2.1)
 - Offene Punkte: Browser-Test, Mobile-Verifikation, Merge zu main
 
 ---

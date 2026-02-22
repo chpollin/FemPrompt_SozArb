@@ -145,7 +145,7 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 ## 2026-02-22 (Session 2): Kappa-Revision und Workflow-Analyse
 
 **Branch:** `main`
-**Dokumentiert in:** `ANALYSIS_SESSION_2026-02-22.md` (Arbeitsdokument, nicht in knowledge/)
+**Dokumentiert in:** `knowledge/paper-integrity.md` Abschnitt 3.6, `knowledge/status.md` M6-Interpretation
 
 ### Was passiert ist
 
