@@ -1,24 +1,15 @@
 ---
-title: Learning About AI: A Systematic Review of Reviews on AI Literacy
+title: "Learning About AI: A Systematic Review of Reviews on AI Literacy"
 authors:
   - Shan Zhang
   - Priyadharshini Ganapathy Prasad
   - Noah L. Schroeder
-year: 09/2025
+year: 2024
 type: journalArticle
-url: https://journals.sagepub.com/doi/10.1177/07356331251342081
 doi: 10.1177/07356331251342081
+url: "https://journals.sagepub.com/doi/10.1177/07356331251342081"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Discrimination
-mitigation_strategies:
-  - Equitable Access
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -32,39 +23,35 @@ agreement: agree
 
 # Learning About AI: A Systematic Review of Reviews on AI Literacy
 
-## Abstract
+## Transformation Trail
 
-Given the ubiquity of artificial intelligence (AI), it is essential to empower students to become creators, designers, and producers of AI technologies, rather than limiting them to the role of informed consumers. To achieve this, learners need to be equipped with AI knowledge and concepts and develop AI literacy. Paradoxically, it is largely unclear what AI literacy is and how we should learn and teach it. We address both of these questions through a systematic review of systematic reviews, also known as an umbrella review, to gain a comprehensive understanding of AI literacy. After searching the literature, we critically examine the results of 17 reviews focusing on AI literacy and the teaching and learning of AI concepts. Our analysis revealed several encouraging developments: a general consensus on the definition of AI literacy, the availability of teaching tools and materials that support AI learning without prior programming experience, and effective pedagogical approaches that have shown positive effects on students' understanding and engagement. In addition, we identified several areas needing attention in the field: an interdisciplinary pedagogical approach, integration of ethical considerations in AI education, discussions on AI policy, and standardized, content-validated, reliable assessments across educational levels and cultures.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, KI_Sonstige
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Discrimination]]
-- [[Discrimination]]
+- [[AI Competency Framework]]
+- [[AI Literacy]]
+- [[Algorithmic Fairness]]
+- [[Ethical AI Integration]]
 
-### Mitigation Strategies
-- [[Equitable Access]]
-
-## Full Text
-
----
-title: "Learning About AI: A Systematic Review of Reviews on AI Literacy"
-authors: ["Shan Zhang", "Priyadharshini Ganapathy Prasad", "Noah L. Schroeder"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Zhang_2025_Learning_About_AI_A_Systematic_Review_of_Reviews.md
-confidence: 89
----
+## Wissensdokument
 
 # Learning About AI: A Systematic Review of Reviews on AI Literacy
 

@@ -4,48 +4,36 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Discrimination
-  - Stereotypical
-mitigation_strategies:
-  - Debiasing
-  - Fine-tuning
-  - Counterfactual Data
 ---
 
 # Tang_2024_GenderCARE_A_Comprehensive_Framework_for
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Stereotypical]]
-- [[Stereotyping]]
+- [[Algorithmic Fairness]]
+- [[Gender Bias in Large Language Models]]
 
-### Mitigation Strategies
-- [[Counterfactual Data]]
-- [[Debiasing]]
-- [[Fine-tuning]]
-
-## Full Text
-
----
-title: "GenderCARE: A Comprehensive Framework for Assessing and Reducing Gender Bias in Large Language Models"
-authors: ["Kunsheng Tang", "Wenbo Zhou", "Jie Zhang", "Aishan Liu", "Gelei Deng", "Shuai Li", "Peigui Qi", "Weiming Zhang", "Tianwei Zhang", "Nenghai Yu"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Tang_2024_GenderCARE_A_Comprehensive_Framework_for.md
-confidence: 95
----
+## Wissensdokument
 
 # GenderCARE: A Comprehensive Framework for Assessing and Reducing Gender Bias in Large Language Models
 

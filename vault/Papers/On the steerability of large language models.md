@@ -6,15 +6,10 @@ authors:
   - A. D’Amour
 year: 2024
 type: conferencePaper
-url: https://aclanthology.org/2025.naacl-long.400.pdf
+doi: 
+url: "https://aclanthology.org/2025.naacl-long.400.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.6
 llm_categories:
@@ -24,25 +19,27 @@ llm_categories:
 
 # On the steerability of large language models
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.6)
-**LLM Categories:** Generative_KI, Prompting
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Key Concepts
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-## Full Text
+### Stufe 3: Verifikation (LLM)
 
----
-title: "The steerability of large language models toward data-driven personas"
-authors: ["Junyi Li", "Charith Peris", "Ninareh Mehrabi", "Palash Goyal", "Kai-Wei Chang", "Aram Galstyan", "Richard Zemel", "Rahul Gupta"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: He_2024_On_the_steerability_of_large_language_models.md
-confidence: 95
----
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.6)
+
+## Wissensdokument
 
 # The steerability of large language models toward data-driven personas
 

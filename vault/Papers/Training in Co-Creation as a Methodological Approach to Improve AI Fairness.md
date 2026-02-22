@@ -9,20 +9,10 @@ authors:
   - M. Gibin
 year: 2024
 type: journalArticle
-url: https://cris.unibo.it/retrieve/707c849f-3aeb-4ca3-8d1f-2817960064bd/societies-14-00259%20(1).pdf
+doi: 
+url: "https://cris.unibo.it/retrieve/707c849f-3aeb-4ca3-8d1f-2817960064bd/societies-14-00259%20(1).pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Prejudice
-  - Intersectionality
-  - Stereotypical
-mitigation_strategies:
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -46,41 +36,28 @@ agreement: agree
 
 # Training in Co-Creation as a Methodological Approach to Improve AI Fairness
 
-## Abstract
+## Transformation Trail
 
-This study examines the integration of training components in co-creation processes with vulnerable and marginalized stakeholder groups as part of developing AI bias detection and mitigation tools. The research shows that training on AI definitions, terminology, and socio-technical impacts is necessary to enable non-technical stakeholders to clearly articulate their insights on AI fairness. The authors emphasize the importance of critical reflection on appropriate use of training in co-creation approaches and their design and implementation for a truly more inclusive approach to AI system design.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 92 |
+| **Overall Confidence** | **90** |
 
-### Bias Types
-- [[Discrimination]]
-- [[Intersectionality]]
-- [[Prejudice]]
-- [[Stereotypical]]
+### Stufe 4: Assessment
 
-### Mitigation Strategies
-- [[Intersectionality]]
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
-## Full Text
-
----
-title: "Training in Co-Creation as a Methodological Approach to Improve AI Fairness"
-authors: ["Ian Slesinger", "Evren Yalaz", "Stavroula Rizou", "Marta Gibin", "Emmanouil Krasanakis", "Symeon Papadopoulos"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Slesinger_2024_Training_in_Co-Creation_as_a_Methodological.md
-confidence: 90
----
+## Wissensdokument
 
 # Training in Co-Creation as a Methodological Approach to Improve AI Fairness
 

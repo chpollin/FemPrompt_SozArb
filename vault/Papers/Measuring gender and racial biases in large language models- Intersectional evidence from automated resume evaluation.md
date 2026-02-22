@@ -1,5 +1,5 @@
 ---
-title: Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation
+title: "Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation"
 authors:
   - J. An
   - D. Huang
@@ -7,24 +7,10 @@ authors:
   - M. Tai
 year: 2025
 type: journalArticle
-url: https://doi.org/10.1093/pnasnexus/pgaf089
 doi: 10.1093/pnasnexus/pgaf089
+url: "https://doi.org/10.1093/pnasnexus/pgaf089"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Intersectional Evidence
-  - Intersectionality
-  - Demographic
-  - Stereotyping
-mitigation_strategies:
-  - Debiasing
-  - Intersectional Evidence
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -38,41 +24,32 @@ llm_categories:
 
 # Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation
 
-## Abstract
+## Transformation Trail
 
-Large-scale experimental study examining bias across five major LLMs using over 361,000 randomized resumes. Reveals complex intersectional patterns where LLMs favor female candidates but discriminate against Black male candidates, with bias effects translating to 1-3 percentage point differences in hiring probabilities, validating intersectionality theory through three key findings.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
 
 ## Key Concepts
 
-### Bias Types
-- [[Demographic]]
-- [[Discrimination]]
-- [[Intersectional Evidence]]
-- [[Intersectionality]]
-- [[Stereotyping]]
+- [[Gender Bias in Large Language Models]]
+- [[Intersectional Algorithmic Bias]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Intersectional Evidence]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation"
-authors: ["Jiafu An", "Difang Huang", "Chen Lin", "Mingzhu Tai"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-04
-source_file: An_2025_Measuring_gender_and_racial_biases_in_large.md
-confidence: 95
----
+## Wissensdokument
 
 # Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation
 

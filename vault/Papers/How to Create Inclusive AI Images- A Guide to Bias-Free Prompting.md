@@ -1,25 +1,13 @@
 ---
-title: How to Create Inclusive AI Images: A Guide to Bias-Free Prompting
+title: "How to Create Inclusive AI Images: A Guide to Bias-Free Prompting"
 authors:
   - Unknown Author
 year: 2025
 type: webpage
-url: https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-free-prompting/
+doi: 
+url: "https://www.articulate.com/blog/how-to-create-inclusive-ai-images-a-guide-to-bias-free-prompting/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Stereotypische
-  - Stereotype
-  - Stereotypisieren
-mitigation_strategies:
-  - Inclusive Prompt
-  - Prompt Engineering
-  - Inclusive Ai
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -34,40 +22,32 @@ llm_categories:
 
 # How to Create Inclusive AI Images: A Guide to Bias-Free Prompting
 
-## Abstract
+## Transformation Trail
 
-Practical guide examining prompt engineering strategies for creating inclusive AI-generated images and avoiding biased default outputs. Analysis shows AI image generators often produce stereotypical representations (white, male, slim, young, physically able) due to training on unbalanced internet datasets. Presents concrete techniques for inclusive prompt engineering: specifying visible identity characteristics (age, race, gender, body size, visible disabilities), using diversity-promoting terms like "multicultural" and "gender-diverse," and providing additional context to break stereotypical associations.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotype]]
-- [[Stereotyping]]
-- [[Stereotypische]]
-- [[Stereotypisieren]]
+- [[Inclusive Prompt Engineering]]
+- [[Training Data Bias]]
 
-### Mitigation Strategies
-- [[Inclusive Ai]]
-- [[Inclusive Prompt]]
-- [[Prompt Engineering]]
-
-## Full Text
-
----
-title: "How to Create Inclusive AI Images: A Guide to Bias-Free Prompting"
-authors: ["Morgan Jefferson"]
-year: 2025
-type: report
-language: en
-processed: 2026-02-05
-source_file: Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to.md
-confidence: 95
----
+## Wissensdokument
 
 # How to Create Inclusive AI Images: A Guide to Bias-Free Prompting
 

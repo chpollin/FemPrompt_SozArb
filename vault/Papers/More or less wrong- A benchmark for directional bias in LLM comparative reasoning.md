@@ -1,20 +1,15 @@
 ---
-title: More or less wrong: A benchmark for directional bias in LLM comparative reasoning
+title: "More or less wrong: A benchmark for directional bias in LLM comparative reasoning"
 authors:
   - H. Liu
   - C. Sferrazza
   - Y. Lupu
 year: 2025
 type: report
-url: https://arxiv.org/html/2506.03923v1
+doi: 
+url: "https://arxiv.org/html/2506.03923v1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -35,28 +30,50 @@ agreement: disagree
 
 # More or less wrong: A benchmark for directional bias in LLM comparative reasoning
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Shafie_2025_More_or_less_wrong_A_benchmark_for_directional]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[Chain-of-Thought Prompting Limitations]]
 
----
-title: "More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning"
-authors: ["Mohammadamin Shafiei", "Hamidreza Saffari", "Nafise Sadat Moosavi"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md
-confidence: 95
----
+## Wissensdokument
 
 # More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning
 

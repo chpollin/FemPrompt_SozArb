@@ -1,5 +1,5 @@
 ---
-title: Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach
+title: "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach"
 authors:
   - S. Vethman
   - Q. T. S. Smit
@@ -7,20 +7,10 @@ authors:
   - C. J. Veenman
 year: 2025
 type: conferencePaper
-url: https://facctconference.org/static/docs/facct2025-206archivalpdfs/facct2025-final2348-acmpaginated.pdf
+doi: 
+url: "https://facctconference.org/static/docs/facct2025-206archivalpdfs/facct2025-final2348-acmpaginated.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Intersectionality
-mitigation_strategies:
-  - Intersectional Accuracy
-  - Bias Evaluation
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -44,41 +34,33 @@ agreement: agree
 
 # Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach
 
-## Abstract
+## Transformation Trail
 
-This study develops actionable recommendations for AI experts to implement intersectional approaches beyond purely technical solutions. The authors criticize the reduction of intersectionality to algorithmic bias measurements between subgroups and develop a framework that emphasizes interdisciplinary teams, community participation, and analysis of power structures in social context. Their approach includes six core recommendations: responsible AI expert role, multidisciplinary team building, reflection on societal positioning, participatory community engagement, power and context analysis, and data-sensitive metrics.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
+- [[Algorithmic Bias in Welfare Systems]]
+- [[Intersectional AI Fairness]]
 
-### Mitigation Strategies
-- [[Bias Evaluation]]
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach"
-authors: ["Steven Vethman", "Nina M. van Liebergen", "Quirine T. S. Smit", "Cor J. Veenman"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable.md
-confidence: 95
----
+## Wissensdokument
 
 # Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach
 

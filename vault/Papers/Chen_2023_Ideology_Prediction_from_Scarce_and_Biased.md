@@ -4,32 +4,35 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 ---
 
 # Chen_2023_Ideology_Prediction_from_Scarce_and_Biased
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
 ## Key Concepts
 
-## Full Text
+- [[Representation Bias]]
 
----
-title: "Ideology Prediction from Scarce and Biased Supervision: Learn to Disregard the 'What' and Focus on the 'How'!"
-authors: ["Chen Chen", "Dylan Walker", "Venkatesh Saligrama"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Chen_2023_Ideology_Prediction_from_Scarce_and_Biased.md
-confidence: 88
----
+## Wissensdokument
 
 # Ideology Prediction from Scarce and Biased Supervision: Learn to Disregard the 'What' and Focus on the 'How'!
 

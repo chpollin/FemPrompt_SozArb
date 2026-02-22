@@ -4,32 +4,31 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 ---
 
 # Maeda_2025_Toward_Agency‐Centered_span
 
-## Key Concepts
+## Transformation Trail
 
-## Full Text
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
----
-title: "Toward Agency-Centered AI Literacy: A Scoping Review"
-authors: ["Takuya Maeda", "Hillary Anderson", "Anabel Quan-Haase", "Katharine Willis", "Selena Gignac"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Maeda_2025_Toward_Agency‐Centered_span.md
-confidence: 94
----
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **94** |
+
+## Wissensdokument
 
 # Toward Agency-Centered AI Literacy: A Scoping Review
 

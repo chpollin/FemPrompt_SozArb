@@ -11,22 +11,10 @@ authors:
   - S. Ruggieri
 year: 2024
 type: journalArticle
-url: https://link.springer.com/article/10.1007/s10676-024-09746-w
 doi: 10.1007/s10676-024-09746-w
+url: "https://link.springer.com/article/10.1007/s10676-024-09746-w"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Discrimination
-  - Intersectionality
-mitigation_strategies:
-  - Bias Mitigation
-  - Debiasing
-  - Bias Evaluation
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -37,39 +25,34 @@ llm_categories:
 
 # Policy advice and best practices on bias and fairness in AI
 
-## Abstract
+## Transformation Trail
 
-This open-access paper provides a comprehensive overview of fairness in AI, bridging technical bias mitigation methods with legal and policy considerations. Alvarez et al. survey the state-of-the-art in fair AI techniques and review major policy initiatives and standards on algorithmic bias. A key contribution is the NoBIAS architecture introduced in the paper, which comprises a “Legal Layer” (focusing on EU non-discrimination law and human rights requirements) and a “Bias Management Layer” (covering bias understanding, mitigation, and accountability). The authors note that AI systems have produced real-world harms, including illegal discrimination against protected groups, and they highlight challenges such as intersectional discrimination that current EU law does not explicitly address. By organizing existing knowledge and best practices, the article guides researchers and practitioners in aligning technical solutions with ethical and legal norms – underscoring that managing AI bias requires not just algorithmic techniques but also adherence to equality principles and governance frameworks.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 94 |
+| Category Validation | 92 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Discrimination]]
-- [[Discrimination]]
-- [[Intersectionality]]
+- [[Algorithmic Bias Mitigation]]
+- [[Algorithmic Fairness]]
+- [[Intersectionality in AI Systems]]
+- [[Representation Bias]]
 
-### Mitigation Strategies
-- [[Bias Evaluation]]
-- [[Bias Mitigation]]
-- [[Debiasing]]
-
-## Full Text
-
----
-title: "Policy advice and best practices on bias and fairness in AI"
-authors: ["Jose M. Alvarez", "Alejandra Bringas Colmenarejo", "Alaa Elobaid", "Simone Fabbrizzi", "Miriam Fahimi", "Antonio Ferrara", "Siamak Ghodsi", "Carlos Mougan", "Ioanna Papageorgiou", "Paula Reyero", "Mayra Russo", "Kristen M. Scott", "Laura State", "Xuan Zhao", "Salvatore Ruggieri"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-04
-source_file: Alvarez_2024_Policy_advice_and_best_practices_on_bias_and.md
-confidence: 88
----
+## Wissensdokument
 
 # Policy advice and best practices on bias and fairness in AI
 

@@ -5,18 +5,12 @@ authors:
   - Yoo-Taek Lee
   - Mina Fanea-Ivanovici
   - Hasnan Baber
-year: 12/2022
+year: 2024
 type: journalArticle
-url: https://slejournal.springeropen.com/articles/10.1186/s40561-022-00204-y
 doi: 10.1186/s40561-022-00204-y
+url: "https://slejournal.springeropen.com/articles/10.1186/s40561-022-00204-y"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories: []
@@ -28,32 +22,34 @@ agreement: agree
 
 # A systematic review on digital literacy
 
-## Abstract
+## Transformation Trail
 
-Abstract
-            The purpose of this study is to discover the main themes and categories of the research studies regarding digital literacy. To serve this purpose, the databases of WoS/Clarivate Analytics, Proquest Central, Emerald Management Journals, Jstor Business College Collections and Scopus/Elsevier were searched with four keyword-combinations and final forty-three articles were included in the dataset. The researchers applied a systematic literature review method to the dataset. The preliminary findings demonstrated that there is a growing prevalence of digital literacy articles starting from the year 2013. The dominant research methodology of the reviewed articles is qualitative. The four major themes revealed from the qualitative content analysis are: digital literacy, digital competencies, digital skills and digital thinking. Under each theme, the categories and their frequencies are analysed. Recommendations for further research and for real life implementations are generated.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 82 |
+| **Overall Confidence** | **87** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[Critical Digital Thinking]]
+- [[Digital Divide]]
+- [[Digital Literacy]]
 
----
-title: "A systematic review on digital literacy"
-authors: ["Hasan Tinmaz", "Yoo-Taek Lee", "Mina Fanea-Ivanovici", "Hasnan Baber"]
-year: 2022
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Tinmaz_2022_A_systematic_review_on_digital_literacy.md
-confidence: 87
----
+## Wissensdokument
 
 # A systematic review on digital literacy
 

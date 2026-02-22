@@ -4,17 +4,10 @@ authors:
   - Unknown Author
 year: 2023
 type: report
-url: https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/02/advancing-accountability-in-ai_753bf8c8/2448f04b-en.pdf
+doi: 
+url: "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/02/advancing-accountability-in-ai_753bf8c8/2448f04b-en.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Fairness Constraints
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -33,38 +26,53 @@ agreement: disagree
 
 # Advancing Accountability in AI
 
-## Abstract
+## Transformation Trail
 
-Delivers a multi-level review of AI accountability, focusing on transparency, fairness, and privacy. Discusses trade-offs in adopting explainability and transparency measures while mitigating algorithmic bias and upholding fairness, framed within legal, social, and ethical requirements for inclusive, trustworthy AI.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Nein | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Nein | Nein |  |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz OECD_2023_Advancing_Accountability_in_AI]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[Algorithmic Accountability]]
+- [[Algorithmic Fairness]]
+- [[Algorithmic Transparency and Explainability]]
+- [[Trustworthy AI]]
 
-### Mitigation Strategies
-- [[Fairness Constraints]]
-
-## Full Text
-
----
-title: "Advancing Accountability in AI: Governing and Managing Risks Throughout the Lifecycle for Trustworthy AI"
-authors: ["Karine Perset", "Luis Aranda"]
-year: 2023
-type: report
-language: en
-processed: 2026-02-05
-source_file: OECD_2023_Advancing_Accountability_in_AI.md
-confidence: 92
----
+## Wissensdokument
 
 # Advancing Accountability in AI: Governing and Managing Risks Throughout the Lifecycle for Trustworthy AI
 

@@ -5,15 +5,10 @@ authors:
   - J. Thomason
 year: 2025
 type: journalArticle
-url: https://arxiv.org/pdf/2502.13321.pdf
+doi: 
+url: "https://arxiv.org/pdf/2502.13321.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -27,31 +22,35 @@ agreement: agree
 
 # Mitigating trust-induced inappropriate reliance on AI assistance
 
-## Abstract
+## Transformation Trail
 
-Investigates trust-adaptive interventions to reduce inappropriate reliance on AI recommendations in decision-support tasks. Argues that AI assistants should adapt behavior based on user trust to mitigate both under- and over-trust. In two decision scenarios shows that providing supportive explanations for low trust and counter-explanations for high trust leads to 38% reduction in inappropriate reliance and 20% improvement in decision accuracy. Demonstrates that adaptive insertion of forced pauses to promote deliberation reduces over-trust, opening new paths for improved human-AI collaboration.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Fairness
-**Human Decision:** Exclude
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Algorithmic Decision Support]]
+- [[Explainable AI (XAI)]]
+- [[Human-AI Collaboration]]
 
----
-title: "Adjust for Trust: Mitigating Trust-Induced Inappropriate Reliance on AI Assistance"
-authors: ["Tejas Srinivasan", "Jesse Thomason"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance.md
-confidence: 89
----
+## Wissensdokument
 
 # Adjust for Trust: Mitigating Trust-Induced Inappropriate Reliance on AI Assistance
 

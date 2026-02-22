@@ -8,19 +8,10 @@ authors:
   - V. Narayanan
 year: 2024
 type: report
-url: https://arxiv.org/abs/2406.05602
+doi: 
+url: "https://arxiv.org/abs/2406.05602"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Bias Mitigation
-  - Bias Evaluation
-  - Equitable Trajectory
-  - Prompt Engineering
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -41,38 +32,32 @@ agreement: agree
 
 # Can prompt modifiers control bias? A comparative analysis of text-to-image generative models
 
-## Abstract
+## Transformation Trail
 
-This preprint investigates whether explicit prompt modifiers can reduce societal biases in text-to-image generative AI models. Authors evaluated three models (Stable Diffusion, DALL·E 3, Adobe Firefly) comparing baseline versus bias-mitigating prompts. Analysis revealed notable biases across all models, with inconsistent effectiveness of prompt modifiers. While diversity-reflective prompting can expose hidden biases and sometimes nudge outputs towards inclusivity, it is not a comprehensive fix and must be combined with broader ethical AI development efforts.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 94 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Bias Evaluation]]
-- [[Bias Mitigation]]
-- [[Equitable Trajectory]]
-- [[Prompt Engineering]]
+- [[Prompt Engineering for Bias Mitigation]]
 
-## Full Text
-
----
-title: "Can Prompt Modifiers Control Bias? A Comparative Analysis of Text-to-Image Generative Models"
-authors: ["Philip Wootaek Shin", "Jihyun Janice Ahn", "Wenpeng Yin", "Vijaykrishnan Narayanan", "Jack Sampson"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Shin_2024_Can_prompt_modifiers_control_bias_A_comparative.md
-confidence: 91
----
+## Wissensdokument
 
 # Can Prompt Modifiers Control Bias? A Comparative Analysis of Text-to-Image Generative Models
 

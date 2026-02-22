@@ -6,16 +6,10 @@ authors:
   - F. S. Melo
 year: 2025
 type: report
-url: https://arxiv.org/pdf/2507.00088
+doi: 
+url: "https://arxiv.org/pdf/2507.00088"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.82
 llm_categories:
@@ -36,35 +30,28 @@ agreement: agree
 
 # How large language models judge cooperation
 
-## Abstract
+## Transformation Trail
 
-This study investigates how 21 state-of-the-art LLMs make social and moral judgments about cooperative behavior. Using an evolutionary game-theory model and a dataset of 43,200 prompts, the authors find significant variation in how different models assign reputations, particularly when judging interactions with "ill-reputed" actors. Demonstrates that LLM social norms are highly malleable and can be consistently steered by different types of prompt interventions.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.82)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
 
-### Bias Types
-- [[Stereotyping]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.82)
+**Human:** Include
 
----
-title: "How large language models judge and influence human cooperation"
-authors: ["Alexandre S. Pires", "Laurens Samson", "Sennay Ghebreab", "Fernando P. Santos"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Santos_2025_How_large_language_models_judge_cooperation.md
-confidence: 88
----
+## Wissensdokument
 
 # How large language models judge and influence human cooperation
 

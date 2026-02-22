@@ -1,21 +1,13 @@
 ---
-title: Guardrails, not guidance: Understanding responses to LGBTQ+ language in large language models
+title: "Guardrails, not guidance: Understanding responses to LGBTQ+ language in large language models"
 authors:
   - J. Tint
 year: 2025
 type: conferencePaper
-url: https://aclanthology.org/2025.queerinai-main.2.pdf
+doi: 
+url: "https://aclanthology.org/2025.queerinai-main.2.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Equitable Representation
-  - Debiasing
-  - Inclusive Nlp
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -38,37 +30,32 @@ agreement: agree
 
 # Guardrails, not guidance: Understanding responses to LGBTQ+ language in large language models
 
-## Abstract
+## Transformation Trail
 
-Examines how large language models respond to prompts involving LGBTQ+ terminology and how current safety measures handle such content. Finds disparity where LLMs invoke safety guardrails for overtly heteronormative prompts but exhibit subtle biases when handling queer slang or informal LGBTQ+ language, responding with more negative emotional tone without triggering content filters.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 93 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Equitable Representation]]
-- [[Inclusive Nlp]]
+- [[Algorithmic Bias in Language Models]]
 
-## Full Text
-
----
-title: "Guardrails, not Guidance: Understanding Responses to LGBTQ+ Language in Large Language Models"
-authors: ["Joshua Tint"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Tint_2025_Guardrails,_not_guidance_Understanding_responses.md
-confidence: 91
----
+## Wissensdokument
 
 # Guardrails, not Guidance: Understanding Responses to LGBTQ+ Language in Large Language Models
 

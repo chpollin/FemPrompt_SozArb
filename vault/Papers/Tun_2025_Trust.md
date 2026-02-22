@@ -4,32 +4,31 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 ---
 
 # Tun_2025_Trust
 
-## Key Concepts
+## Transformation Trail
 
-## Full Text
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
----
-title: "nicht angegeben"
-authors: ["Tun"]
-year: 2025
-type: report
-language: en
-processed: 2026-02-05
-source_file: Tun_2025_Trust.md
-confidence: 22
----
+**Extrahierte Kategorien:** keine
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 15 |
+| Correctness | 100 |
+| Category Validation | 0 |
+| **Overall Confidence** | **22** |
+
+## Wissensdokument
 
 # nicht angegeben
 

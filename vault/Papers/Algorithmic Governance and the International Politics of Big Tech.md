@@ -4,18 +4,10 @@ authors:
   - S. Srivastava
 year: 2024
 type: journalArticle
-url: https://www.cambridge.org/core/journals/perspectives-on-politics/article/algorithmic-governance-and-the-international-politics-of-big-tech/3C04908735A5F2EE8A70AFED647741FB
+doi: 
+url: "https://www.cambridge.org/core/journals/perspectives-on-politics/article/algorithmic-governance-and-the-international-politics-of-big-tech/3C04908735A5F2EE8A70AFED647741FB"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Intersectionality
-mitigation_strategies:
-  - Intersectional Accuracy
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -32,118 +24,102 @@ agreement: disagree
 
 # Algorithmic Governance and the International Politics of Big Tech
 
-## Abstract
+## Transformation Trail
 
-Structural analysis examines how Big Tech corporations exercise "entrepreneurial private authority" through algorithmic governance systems challenging state sovereignty. Moves beyond individual-focused approaches to analyze how technology firms exercise instrumental, structural, and discursive power globally. Critiques approaches focusing on individual user agency or technical fixes, examining instead how "Big Tech's algorithmic governance incentivizes 'information pollution'" and creates systemic power imbalances.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit
-**Human Decision:** Unclear
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Unclear
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Nein | Nein |  |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Nein | X |
+
+> Siehe [[Divergenz Srivastava_2024_Algorithmic_Governance_and_the_International]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
+- [[Algorithmic Discrimination]]
+- [[Algorithmic Governance]]
+- [[Algorithmic Opacity]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
+## Wissensdokument
 
-## Full Text
-
----
-title: "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?"
-authors: ["Dialekti Athina Voutyrakou", "Constantine Skordoulis"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in.md
-confidence: 95
----
-
-# Algorithmic Governance: Gender Bias in AI-Generated Policymaking?
+# Algorithmic Governance and the International Politics of Big Tech
 
 ## Kernbefund
 
-KI-Tools integrieren genderspezifische Bedürfnisse (Menstruationshygiene, Sicherheit, Kinderbetreuung, thermischer Komfort) nur dann in Politikempfehlungen, wenn Gender explizit im Prompt erwähnt wird; ansonsten wird eine androzentristische Standardperspektive angewandt.
+Algorithmic governance by Big Tech creates unprecedented forms of private authority that challenge existing IR frameworks of legitimacy, and requires new conceptualizations of corporate international responsibility that account for opacity, scale, and the complex oscillation between state-corporate collaboration and contestation.
 
 ## Forschungsfrage
 
-Berücksichtigen populäre KI-Tools wie ChatGPT und Microsoft Copilot Geschlechteraspekte bei der Erstellung von Politikempfehlungen, sowohl wenn Gender explizit erwähnt wird als auch wenn nicht?
+How should International Relations scholarship engage with algorithmic governance by Big Tech companies, and what are the implications for private authority and state-corporate relations?
 
 ## Methodik
 
-Mixed-Methods: Vier experimentelle Szenarien mit wiederholten Prompts in zwei KI-Systemen (ChatGPT GPT-4 und Microsoft Copilot), Häufigkeitsanalyse und qualitative Kodierung der Ergebnisse.
-**Datenbasis:** Vier experimentelle Szenarien: Restroom Design, Schneeräumpolitik, Bürotemperaturregelung, Business-Travel-Ausgaben; jeweils mit Varianten (unspezifisch, männlich, weiblich, nicht-binär); Tests in ChatGPT und Microsoft Copilot
+Theoretisch/Konzeptionell: Integrative Literaturanalyse und IR-theoretische Neukonzeptualisierung, teilweise qualitative Fallstudien (Facebook Content Oversight Board, Trending Topics)
+**Datenbasis:** Nicht primär empirisch; hauptsächlich theoretische und dokumentarische Analyse mit illustrativen Beispielen aus Unternehmenshandlungen und Policies
 
 ## Hauptargumente
 
-- Gender-Bias in KI-Tools ist nicht primär ein Trainingsdaten-Problem, sondern ein strukturelles Designproblem, das eine androzentristische Perspektive als 'neutral' kodifiziert und genderspezifische Bedürfnisse nur als Sonderfälle behandelt.
-- Die angenommene Neutralität von KI-Systemen verschleiert tatsächlich eine male-default-Logik, die körperliche Unterschiede (Stoffwechselrate, Menstruation), Sorgearbeit und Sicherheitsbedenken systematisch ausblendet, wenn nicht explizit aufgefordert.
-- Faire und genderbewusste Algorithmen-Governance erfordert eine proaktive Integration von feministischer Ethik (Care-Ethik, Capabilities Approach) und intersektionalen Perspektiven in Algorithmen-Design, nicht nur nachträgliche Korrektionen.
+- Big Tech companies exercise algorithmic governance that functions as private authority comparable to state governance, creating 'arbiters of knowledge, connection, and desire' through classification algorithms that make automated decisions affecting billions of users without meaningful consent or representation.
+- Algorithmic opacity in machine-learning systems creates a fundamental legitimation crisis: algorithms are black boxes both to users and often to their designers, making it impossible for surveillance subjects to internalize governance norms, which IR legitimacy theory defines as essential for non-coercive authority.
+- State-corporate relations around algorithmic governance involve complex dynamics of interdependence (state delegation), circumvention (Big Tech resistance to state overreach), and curtailment (state regulation), requiring IR scholars to move beyond simplistic 'states versus markets' frameworks toward understanding simultaneous collaboration and contestation.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Diskussion darüber, dass Nutzer als 'aktive Teilnehmer' in den Bias-Feedback-Loop beitragen und dass 'Prompt Literacy und Public Education' notwendig sind: 'users themselves contribute to the bias feedback loop, making them active participants rather than passive recipients'
+Classification algorithms using unsupervised and semi-supervised machine learning for object detection, text processing, and predictive modeling; algorithmic governance defined as 'deference to automated decision-making makes algorithms a source and factor of social order'; focus on algorithmic systems in surveillance, content moderation, risk assessment, and recommendation systems.
 
 ### Evidenz 2
 
-Fokus auf zwei generative KI-Systeme: 'We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) and Microsoft Copilot'
+Risk-assessment algorithms 'construct people's identities and reputations by classifying them as risky, associating them with undesirable traits'; examples of algorithmic discrimination including Facebook's differential treatment of content moderation for Black activists versus white users; mass surveillance generating behavioral data extraction; algorithmic systems perpetuating structural inequalities in credit, terrorism, and crime assessment.
 
 ### Evidenz 3
 
-Explizite Variation der Prompt-Struktur mit/ohne Gender-Erwähnungen: 'Each scenario includes a gender-neutral prompt, a male-specific version, and a female-specific version and a non-binary-specific version'
+Discussion of marginalized communities affected by algorithmic governance; reference to Rohingya genocide facilitated by Facebook's algorithmic amplification; mention of diverse global operating contexts and multilingual oversight challenges; intersectional harms affecting different user populations differently through algorithmic systems.
 
 ### Evidenz 4
 
-Analyse von LLMs und NLP-Systemen als Teil von algorithmischen Entscheidungssystemen: 'Large language models such as ChatGPT or Microsoft Copilot add layers of complexity to understanding gender bias in AI'
-
-### Evidenz 5
-
-Zentrale These der strukturellen Benachteiligung durch androzentrische Algorithmen-Designs: 'the supposed neutrality of AI tools actually reproduces an androcentric norm' und 'a technological design that equates neutral with male'
-
-### Evidenz 6
-
-Expliziter Fokus auf Gender-Bias in vier verschiedenen Policy-Kontexten und auf geschlechtsspezifische Bedürfnisse: 'gender bias...arises when systems consistently advantage or disadvantage individuals based on gender'
-
-### Evidenz 7
-
-Intersektionale Perspektive und Analyse nicht-binärer Identitäten: 'The non-binary scenario further illustrates this pattern: inclusivity features such as gender-neutral policies and identity-affirming practices were activated only upon explicit mention'
-
-### Evidenz 8
-
-Explizite Verwendung feministischer Theorien (Tronto's Care-Ethik, Grosz' embodied subjectivity, Bobel on menstrual stigma, Koskela on women's spatial confidence): 'Drawing on Joan Tronto's ethics of care and Iris Marion Young's concept of justice as inclusion, this perspective argues that fair governance must recognize and respond to differentiated social positions'
-
-### Evidenz 9
-
-Kritik an oberflächlichen Fairness-Ansätzen und Forderung nach kontextualisierten Fairness-Konzepten: 'fairness interventions must align with real-world harm mitigation and not merely with metric optimization'
+Emphasis on due process, transparency, and fair procedures in algorithmic governance; discussion of 'obligations of transparency, notice, and fair procedures' for tech platforms; evaluation of Facebook's Content Oversight Board as attempt at fairness and accountability mechanisms; concerns about algorithmic discrimination and need for nondiscrimination standards.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Hoch relevant für die Schnittstelle KI und Gender-Gerechtigkeit; untersucht konkret, wie KI-Systeme in Governance und Policy-Making androzentristische Bias perpetuieren. Trägt zu dringend benötigten empirischen Erkenntnissen über generative KI im öffentlichen Sektor bei.
+**Domain Fit:** Das Paper hat moderate Relevanz für die KI-Soziale-Arbeit-Schnittstelle: Es adressiert algorithmische Diskriminierung und Bias in klassischen ML-Systemen, aber nicht explizit Anwendungen in der Sozialen Arbeit (Jugendhilfe, Casework). Die Analyse von Fairness, Bias und privater Autorität ist jedoch hochrelevant für die ethische Gestaltung von KI-Systemen in sozialen Diensten.
 
-**Unique Contribution:** Erste systematische experimentelle Studie, die nachweist, dass KI-Tools Gender-Berücksichtigung nicht von sich aus vornehmen, sondern diese als 'Sonderfälle' behandeln, was eine fundamentale Designfrage aufwirft.
+**Unique Contribution:** Der Paper leistet einen innovativen IR-theoretischen Beitrag durch Rekonseptualisierung von Big Tech als private Autorität und durch Analyse der komplexen state-corporate relations, die Algorithmic Governance umgeben—ein bislang unterbeleuchtetes Thema in der internationalen Politikwissenschaft.
 
-**Limitations:** Limitierte Stichprobe (nur zwei KI-Tools); keine Analyse der Unterschiede zwischen GPT-4 und Copilot im Detail; keine Nutzerstudie zur Wahrnehmung oder Konsequenzen dieser Biases.
+**Limitations:** Keine empirische Primärdatenerhebung; konzeptionell-theoretischer Fokus auf Global Governance eher als auf konkrete Auswirkungen in spezifischen Sektoren wie Soziale Arbeit; begrenzte Behandlung nicht-westlicher Perspektiven auf algorithmische Governance trotz Erwähnung chinesischer Tech-Unternehmen.
 
-**Target Group:** Policy-Maker und Governance-Experten, KI-Ethik-Forscher, feministische Technologiekritiker, KI-Entwickler und -Designer, Sozialwissenschaftler, Organisationen der Gleichstellungsarbeit
+**Target Group:** Internationale Politikwissenschaftler:innen, Global-Governance-Forscher:innen, Tech-Regulator:innen und Policymaker, Vertreter:innen von Menschenrechtsorganisationen, Tech Ethics und Corporate Responsibility Spezialist:innen; sekundär relevant für Sozialarbeiter:innen, die mit algorithmischen Systemen in ihrer Praxis konfrontiert sind
 
 ## Schlüsselreferenzen
 
-- [[Tronto_Joan_1993]] - Moral Boundaries: A Political Argument for an Ethics of Care
-- [[DIgnazio_Catherine_Klein_Lauren_F_2020]] - Data Feminism
-- [[CostanzaChock_Sasha_2020]] - Design Justice: Community-Led Practices to Build the Worlds We Need
-- [[West_Sarah_M_Whittaker_Meredith_Crawford_Kate_2019]] - Discriminating Systems: Gender, Race and Power in AI
-- [[Buolamwini_Joy_Gebru_Timnit_2018]] - Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification
-- [[Crenshaw_Kimberlé_1991]] - Mapping the Margins: Intersectionality, Identity Politics, and Violence Against Women of Color
-- [[Sen_Amartya_1999]] - Development as Freedom
-- [[Nussbaum_Martha_C_2011]] - Creating Capabilities: The Human Development Approach
-- [[Grosz_Elizabeth_A_1994]] - Volatile Bodies
-- [[Bobel_Chris_Ed_2019]] - The Managed Body: Developing Girls and Menstrual Health in the Global South
+- [[Benjamin_Ruha_2019]] - Race after Technology: Abolitionist Tools for the New Jim Code
+- [[Crawford_Kate_2021]] - Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence
+- [[Noble_Safiya_2018]] - Algorithms of Oppression: How Search Engines Reinforce Racism
+- [[Pasquale_Frank_2015]] - The Black Box Society: The Secret Algorithms that Control Money and Information
+- [[Yeung_Karen_2018]] - Algorithmic Regulation: A Critical Interrogation
+- [[Zuboff_Shoshana_2019]] - The Age of Surveillance Capitalism: The Fight for a Human Future at the New Frontier of Power
+- [[Amoore_Louise_2020]] - Cloud Ethics: Algorithms and the Attributes of Ourselves and Others
+- [[Citron_Danielle_Pasquale_Frank_2014]] - The Scored Society: Due Process for Automated Predictions
+- [[Hall_Rodney_Biersteker_Thomas_2002]] - The Emergence of Private Authority in Global Governance
+- [[Balkin_Jack_2018]] - Free Speech in an Algorithmic Society: Big Data, Private Governance, and New School Speech Regulation

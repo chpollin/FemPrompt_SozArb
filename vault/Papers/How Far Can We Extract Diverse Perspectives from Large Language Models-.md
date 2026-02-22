@@ -6,15 +6,10 @@ authors:
   - J. Naradowsky
 year: 2024
 type: conferencePaper
-url: https://aclanthology.org/2024.emnlp-main.306.pdf
+doi: 
+url: "https://aclanthology.org/2024.emnlp-main.306.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -27,29 +22,27 @@ llm_categories:
 
 # How Far Can We Extract Diverse Perspectives from Large Language Models?
 
-## Abstract
+## Transformation Trail
 
-Systematically evaluates prompting strategies to extract diverse perspectives from LLMs and mitigate dominant group bias in outputs. Measuring subjective tasks such as argumentation and hate speech labeling, the study finds that diversity prompting increases perspective variety and reduces monocultural output tendencies.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **94** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "How Far Can We Extract Diverse Perspectives from Large Language Models?"
-authors: ["Shirley Anugrah Hayati", "Minhwa Lee", "Dongyeop Kang", "Rajesh Dilip"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from.md
-confidence: 94
----
+**LLM:** Include (Confidence: 0.85)
+
+## Wissensdokument
 
 # How Far Can We Extract Diverse Perspectives from Large Language Models?
 

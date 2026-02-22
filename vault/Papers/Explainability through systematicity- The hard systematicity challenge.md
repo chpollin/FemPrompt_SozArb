@@ -1,18 +1,13 @@
 ---
-title: Explainability through systematicity: The hard systematicity challenge
+title: "Explainability through systematicity: The hard systematicity challenge"
 authors:
   - J. D. Santos
 year: 2024
 type: journalArticle
-url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12307450/
+doi: 
+url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12307450/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -28,32 +23,50 @@ agreement: disagree
 
 # Explainability through systematicity: The hard systematicity challenge
 
-## Abstract
+## Transformation Trail
 
-This philosophical paper argues that the pursuit of "explainability" in AI is too narrow. It proposes a richer ideal called "systematicity," which demands that an AI's reasoning be consistent, coherent, comprehensive, and principled, akin to an integrated body of human thought. The author distinguishes this "hard systematicity challenge" from the historical Fodorian debate on connectionism and explores how the demand for AI to be systematic should be regulated by different rationales.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Nein | X |
+
+> Siehe [[Divergenz Santos_2024_Explainability_through_systematicity_The_hard]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Fairness]]
 
----
-title: "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence"
-authors: ["Matthieu Queloz"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Santos_2024_Explainability_through_systematicity_The_hard.md
-confidence: 89
----
+## Wissensdokument
 
 # Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence
 

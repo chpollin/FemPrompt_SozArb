@@ -6,15 +6,10 @@ authors:
   - D. Penney
 year: 2025
 type: report
-url: https://arxiv.org/pdf/2506.05687
+doi: 
+url: "https://arxiv.org/pdf/2506.05687"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -33,32 +28,34 @@ agreement: agree
 
 # A reparative turn in AI
 
-## Abstract
+## Transformation Trail
 
-Argues for a "reparative turn" in AI governance, moving beyond harm prevention to focus on remedying harm after it occurs. Based on thematic analysis of 1,060 real-world AI harm incidents, proposes taxonomy of reparative actions around four goals: acknowledging harm, attributing responsibility, providing remedies, and enabling systemic change. Finds significant "accountability gap" with most corporate responses limited to symbolic acknowledgments.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 93 |
+| Category Validation | 92 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Discrimination]]
+- [[Reparative Justice in AI]]
+- [[Transformative Justice Framework]]
 
----
-title: "What Comes After Harm? Mapping Reparative Actions in AI through Justice Frameworks"
-authors: ["Sijia Xiao", "Haodi Zou", "Alice Qian Zhang", "Deepak Kumar", "Hong Shen", "Jason Hong", "Motahhare Eslami"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Singh_2025_A_reparative_turn_in_AI.md
-confidence: 91
----
+## Wissensdokument
 
 # What Comes After Harm? Mapping Reparative Actions in AI through Justice Frameworks
 

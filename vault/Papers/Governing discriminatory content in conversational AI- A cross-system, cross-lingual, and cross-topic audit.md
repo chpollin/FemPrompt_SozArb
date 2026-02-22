@@ -1,21 +1,14 @@
 ---
-title: Governing discriminatory content in conversational AI: A cross-system, cross-lingual, and cross-topic audit
+title: "Governing discriminatory content in conversational AI: A cross-system, cross-lingual, and cross-topic audit"
 authors:
   - J. Zeng
   - K. van Es
 year: 2025
 type: journalArticle
-url: https://doi.org/10.1080/1369118X.2025.2537803
 doi: 10.1080/1369118X.2025.2537803
+url: "https://doi.org/10.1080/1369118X.2025.2537803"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Fine-tuning
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -36,35 +29,28 @@ agreement: agree
 
 # Governing discriminatory content in conversational AI: A cross-system, cross-lingual, and cross-topic audit
 
-## Abstract
+## Transformation Trail
 
-Conducts mixed-method audit of how major conversational AI systems respond to and regulate discriminatory content. Analysis is cross-system, cross-lingual, and cross-topic, revealing that refusal sensitivity and answering strategies vary significantly across all three axes. Discusses value alignment process through reinforcement learning with human feedback and implementation of guardrails, highlighting tensions when tech platforms become arbiters of morality.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
 
-### Mitigation Strategies
-- [[Fine-tuning]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
----
-title: "Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis"
-authors: ["Na Ta", "Jing Zeng", "Zhanghao Li"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Zeng_2025_Governing_discriminatory_content_in.md
-confidence: 88
----
+## Wissensdokument
 
 # Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis
 

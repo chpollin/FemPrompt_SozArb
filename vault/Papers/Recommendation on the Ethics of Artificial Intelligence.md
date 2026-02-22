@@ -4,17 +4,10 @@ authors:
   - Unknown Author
 year: 2021
 type: report
-url: https://unesdoc.unesco.org/ark:/48223/pf0000380455
+doi: 
+url: "https://unesdoc.unesco.org/ark:/48223/pf0000380455"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Equitable Benefit
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -37,38 +30,32 @@ agreement: agree
 
 # Recommendation on the Ethics of Artificial Intelligence
 
-## Abstract
+## Transformation Trail
 
-First global standard on AI ethics adopted by 193 member states, establishing comprehensive policy frameworks addressing gender equality in AI development and deployment. Explicitly addresses gender stereotyping, discriminatory biases, and need for equitable participation across the AI lifecycle, with recent implementation including Women4Ethical AI platform and systematic bias studies.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[Algorithmic Fairness and Equity]]
 
-### Mitigation Strategies
-- [[Equitable Benefit]]
-
-## Full Text
-
----
-title: "Recommendation on the ethics of artificial intelligence"
-authors: ["UNESCO General Conference"]
-year: 2021
-type: report
-language: en
-processed: 2026-02-05
-source_file: UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial.md
-confidence: 88
----
+## Wissensdokument
 
 # Recommendation on the ethics of artificial intelligence
 

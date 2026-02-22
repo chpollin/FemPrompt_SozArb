@@ -5,20 +5,10 @@ authors:
   - M. Gartner
 year: 2024
 type: journalArticle
-url: https://doi.org/10.1007/s43681-024-00423-8
 doi: 10.1007/s43681-024-00423-8
+url: "https://doi.org/10.1007/s43681-024-00423-8"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Algorithmic Bias
-  - Stereotype
-  - Intersectionality
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -41,38 +31,51 @@ agreement: disagree
 
 # How AI hype impacts the LGBTQ+ community
 
-## Abstract
+## Transformation Trail
 
-Die Studie analysiert, wie der Hype um KI heteronormative Annahmen verstärkt. Sie führt Fallstudien zur Gesichtserkennung, Content-Moderation und Geschlechtsklassifikation durch und zeigt auf, wie queere Identitäten algorithmisch marginalisiert werden.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Ja |  |
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
 - [[Algorithmic Bias]]
-- [[Intersectionality]]
-- [[Stereotype]]
-- [[Stereotyping]]
+- [[Intersectionality in AI Systems]]
 
-## Full Text
-
----
-title: "How AI hype impacts the LGBTQ+ community"
-authors: ["Dawn McAra-Hunter"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.md
-confidence: 95
----
+## Wissensdokument
 
 # How AI hype impacts the LGBTQ+ community
 

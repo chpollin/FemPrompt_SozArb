@@ -1,5 +1,5 @@
 ---
-title: Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma
+title: "Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma"
 authors:
   - P. James
   - J. Lal
@@ -8,20 +8,10 @@ authors:
   - K. Soldatic
 year: 2023
 type: journalArticle
-url: https://www.tandfonline.com/doi/full/10.1080/02615479.2023.2195425
 doi: 10.1080/02615479.2023.2195425
+url: "https://www.tandfonline.com/doi/full/10.1080/02615479.2023.2195425"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Intersectionality
-mitigation_strategies:
-  - Equitable Resource
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -34,37 +24,33 @@ llm_categories:
 
 # Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma
 
-## Abstract
+## Transformation Trail
 
-The world is experiencing an accelerating digital transformation. One aspect of this is the implementation of...[source](https://www.google.com/search?q=https://www.aminer.cn/pub/645d0410d68f896efa94d024/algorithmic-decision-making-in-social-work-practice-and-pedagogy-confronting-the-competency)
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 93 |
+| Category Validation | 92 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Intersectionality]]
+- [[Algorithmic Bias in Welfare Systems]]
+- [[Algorithmic Fairness in Social Work]]
+- [[Algorithmic Literacy]]
 
-### Mitigation Strategies
-- [[Equitable Resource]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma"
-authors: ["Paul James", "Jason Lal", "Ashley Liao", "Liam Magee", "Karen Soldatic"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: James_2023_Algorithmic_decision-making_in_social_work.md
-confidence: 91
----
+## Wissensdokument
 
 # Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma
 

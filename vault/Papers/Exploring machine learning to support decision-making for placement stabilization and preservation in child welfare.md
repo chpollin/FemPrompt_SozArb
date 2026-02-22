@@ -8,14 +8,9 @@ authors:
 year: 2024
 type: journalArticle
 doi: 10.1007/s10826-024-02993-x
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -26,29 +21,23 @@ llm_categories:
 
 # Exploring machine learning to support decision-making for placement stabilization and preservation in child welfare
 
-## Abstract
+## Transformation Trail
 
-Statewide study analyzed 12,621 child welfare cases in large Midwestern state (2017-2020) to develop machine learning models predicting placement disruption risk. Goal was to identify youth who could benefit from placement stabilization services to prevent unnecessary residential care under Family First Prevention Services Act. Random forest models were compared with conventional logistic regression for predicting placement disruption and referral to stabilization programs. ML models demonstrated moderate predictive validity with practical implications for proactive service allocation. Results showed ML could support but not replace caseworker judgment in placement decisions. Study used administrative child welfare data and evaluated model fairness considerations.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Fairness
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Fairness Auditing]]
+- [[Predictive Analytics in Child Welfare]]
 
----
-title: "Exploring Machine Learning to Support Decision-Making for Placement Stabilization and Preservation in Child Welfare"
-authors: ["Ka Ho Brian Chor", "Zhidi Luo", "Kit T. Rodolfa", "Rayid Ghani"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Cher_2024_Exploring_machine_learning_to_support.md
-confidence: 75
----
+## Wissensdokument
 
 # Exploring Machine Learning to Support Decision-Making for Placement Stabilization and Preservation in Child Welfare
 

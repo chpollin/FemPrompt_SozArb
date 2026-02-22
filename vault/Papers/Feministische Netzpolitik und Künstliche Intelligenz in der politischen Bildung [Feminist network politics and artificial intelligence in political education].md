@@ -4,16 +4,10 @@ authors:
   - K. Mosene
 year: 2023
 type: webpage
-url: https://www.politische-medienkompetenz.de/debatte/ki-und-intersektionalitaet/
+doi: 
+url: "https://www.politische-medienkompetenz.de/debatte/ki-und-intersektionalitaet/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotype
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -36,104 +30,100 @@ agreement: disagree
 
 # Feministische Netzpolitik und Künstliche Intelligenz in der politischen Bildung [Feminist network politics and artificial intelligence in political education]
 
-## Abstract
+## Transformation Trail
 
-Examines intersections of feminist network politics and AI within political education, emphasizing intersectional feminist perspectives on digital technologies. Argues feminist network politics involves supporting AI researchers and activists working to eliminate bias in development and outcomes. Discusses how traditional gender roles are reinforced through AI systems and advocates for political education helping users understand how technologies function, emerged, which societal ideas they reflect, and where critical discourse is needed.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Feministisch, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Disagree
+### Stufe 4: Assessment
 
-## Key Concepts
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
 
-### Bias Types
-- [[Stereotype]]
+**Kategorie-Vergleich (bei Divergenz):**
 
-## Full Text
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Ja |  |
 
----
-title: "Feministische Netzpolitik und Künstliche Intelligenz in der Politischen Bildung"
-authors: ["nicht angegeben"]
-year: 2023
-type: report
-language: de
-processed: 2026-02-05
-source_file: Mosene_2023_Feministische_Netzpolitik_und_Künstliche.md
-confidence: 89
----
+> Siehe [[Divergenz Mosene_2023_Feministische]] fuer detaillierte Analyse
 
-# Feministische Netzpolitik und Künstliche Intelligenz in der Politischen Bildung
+
+## Wissensdokument
+
+# Ein Manifest für Cyborgs. Feminismus im Streit mit den Technowissenschaften
 
 ## Kernbefund
 
-Diskriminierende Stereotype und koloniale Strukturen sind bereits in der technischen Infrastruktur und den Trainingsdaten von KI-Systemen eingeschrieben; feministische Netzpolitik und kritische politische Bildung sind notwendig, um diese Mechanismen aufzudecken und emanzipatorische Alternativen zu schaffen.
+Die Cyborg als imaginäre und materielle Figur ermöglicht einen Weg aus binären Dualismen (Natur/Kultur, Mensch/Maschine, Mann/Frau) und erlaubt eine neue Form feministischer Politik, die Partialität, Ironie und strategische Verbindungen ohne essentiale Identität nutzt.
 
 ## Forschungsfrage
 
-Wie können feministische und intersektionale Perspektiven helfen, diskriminierende Strukturen in künstlichen Intelligenzsystemen zu identifizieren und in der politischen Bildung zu adressieren?
+Wie können feministische Perspektiven die Beziehung zwischen Organismus und Maschine sowie zwischen Natur und Kultur neu denken, um emanzipatorische Möglichkeiten in einer technologisierten Welt zu eröffnen?
 
 ## Methodik
 
-Theoretisch/Review - kritische Analyse von KI-Systemen und deren gesellschaftlichen Auswirkungen aus feministischer und intersektionaler Perspektive
-**Datenbasis:** nicht empirisch - konzeptionelle und diskursanalytische Analyse
+Theoretisch: Kritische Textanalyse, politische Mythologie, Cyborg-Metaphorik, Verbindung von Marxismus, Psychoanalyse und Postmodernismus
+**Datenbasis:** Keine empirische Datenbasis; theoretisches Essay basierend auf Science Fiction, Wissenschaftsgeschichte und feministischen Diskursen
 
 ## Hauptargumente
 
-- Technologie ist nicht neutral (Kranzberg's First Law): Sprachassistenten wie Siri und Alexa verkörpern stereotype weibliche Rollenvorstellungen (Sekretärin, Hausfrau, Mutter), was zeigt, dass normative Entscheidungen bereits in der Gestaltung technischer Systeme eingebettet sind.
-- Künstliche Intelligenz perpetuiert strukturelle Diskriminierung durch verzerrte Trainingsdaten: Biometrische Gesichtserkennung wurde überwiegend mit Daten weißer Personen trainiert und kann daher Schwarze Menschen und People of Colour mit deutlich höherer Fehlerquote nicht identifizieren, was zu Racial Profiling in der Strafverfolgung führt.
-- Digitale Infrastruktur folgt kolonialen Geografien: Die Routen von Glasfaserkabeln folgen den historischen Linien von Telegraphenkabeln und Sklavenschiffrouten; proprietäre Tech-Konzerne aus dem Silicon Valley dominieren das Internet und tragen ihre Interessen in den globalen Süden, statt lokale, bedarfsgerechte Initiativen zu unterstützen.
+- Die Grenzen zwischen Tier und Mensch, Organismus und Maschine sowie Natur und Kultur sind in der modernen Wissenschaft und Gesellschaft fundamental durchbrochen und können nicht wiederhergestellt werden.
+- Die Cyborg als Konzept bietet eine Alternative zu humanistischen Ursprungsgeschichten und ermöglicht eine Politik ohne notwendige Einheit oder organische Ganzheit, die sich stattdessen auf partialen, ironischen Verbindungen gründet.
+- Women of Color und feministische Science Fiction sind zentrale theoretische Ressourcen für die Entwicklung einer Cyborg-Politik, die die Verflechtung von Wissenschaft, Technologie, Kapitalismus und Geschlechterrepression kritisiert und subvertiert.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Es ist deshalb nicht nur wichtig, den Nutzer_innen von Technologien zu vermitteln, wie diese funktionieren, sondern vor allem wie sie entstanden sind, welche gesellschaftlichen Ideen und Realitäten sie widerspiegeln, welche soziopolitischen Potenziale sich in ihnen verbergen.
+Cybernetik, kybernetische Systeme und Informationstechnologie als zentrale analytische Konzepte: 'kybernetische Organismen', 'C3I Command-Control-Communication-Intelligence', Mikroelektronik als technische Basis von Simulakren und Informatik der Herrschaft
 
 ### Evidenz 2
 
-Künstliche Intelligenzen denken also nicht wie Menschen. Sie erkennen Hunde und Katzen nicht einfach, sondern lernen, dass beispielsweise Hundefotos statistisch häufiger mit einem Copyrightzeichen versehen sind als Katzenfotos. Künstliche Intelligenz ist damit stark von Trainingsdaten abhängig.
+Analyse der 'Informatik der Herrschaft' als globales System der Ausbeutung; Integration/Ausbeutung von Frauen in weltweiter Produktion/Reproduktion; Kritik des rassistischen und patriarchalen Kapitalismus; elektronische Fabrikation und internationale Arbeitsteilung als Instrumente der Kontrolle
 
 ### Evidenz 3
 
-Es ist hinlänglich bekannt, dass biometrische Gesichtserkennung, die vorwiegend in einem männlich dominierten Raum im weißen globalen Norden entwickelt wird, lange nicht in der Lage war, Schwarze Menschen und People of Colour zu identifizieren, da sie sich überwiegend auf Trainingsdatensätze weißer Personen stützte.
+Zentrale Fokussierung auf Geschlechterrepression, Post-Gender-Welten, Dekonstruktion von Geschlechtsdichotomien: 'Gender wäre nicht mehr die umfassende Identität schlechthin'; Kritik essentialistischer Frauenkonzepte
 
 ### Evidenz 4
 
-Unsere Alltagsbegleiter heißen heute Siri und Alexa: eine Frau in der Hosentasche oder im Haushalt, die uns stets gefügig zur Seite steht. Dahinter verbergen sich stereotype weibliche Rollenvorstellungen: die Frau als Sekretärin, Hausfrau und Mutter.
+Explizite Auseinandersetzung mit Women of Color als Cyborg-Identität und machtvolle Subjektivität; marginalisierte Identitäten; kolonisierte Gruppen; Schreiben als Form des politischen Kampfes für farbige Frauen und Männer
 
 ### Evidenz 5
 
-Intersektionale Perspektiven nehmen ineinandergreifende, sich teils verstärkende Strukturen von Ungleichheit, Macht und Herrschaft in den Blick, und ein besonderer Fokus liegt dabei auf der wechselseitigen Konstitution von Rassismus und Sexismus in ihren gesellschaftsstrukturierenden Formen.
-
-### Evidenz 6
-
-Feministische Netzpolitik übt Kritik an bestehenden Ungleichheitsverhältnissen im digitalen Raum. Donna Haraway beschrieb in ihrem 'Cyborg Manifesto' das potenzielle Aufbrechen von Geschlechterzuschreibungen. Feministische Netzpolitik besteht darin, KI-Forscher_innen und Aktivist_innen zu unterstützen, die im Techniksektor die Bias aufzuheben suchen.
-
-### Evidenz 7
-
-Machtstrukturen sind schon in der technischen Infrastruktur fest angelegt. Sie führen die Geschichte des Kolonialismus auch in der virtuellen Sphäre fort: in Gestalt des 'digitalen' oder 'elektronischen Kolonialismus'. Feministische Datensätze könnten die Utopie eines non-biased Internet bilden.
+Explizite Verwendung feministischer Theorie: 'sozialistischer Feminismus', Bezug auf französische Feministinnen (Irigaray, Wittig), radikale Feministinnen (Griffin, Lorde, Rich); feministische Science Fiction als theoretische Ressource; Kritik humanistischer, patriarchaler Narrative; Konzept von Blasphemie als feminist-theoretische Strategie
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper hat hohe Relevanz für die Schnittstelle zwischen KI und feministischen/intersektionalen Perspektiven. Es adressiert jedoch nicht direkt Soziale Arbeit, sondern konzentriert sich auf politische Bildung und netzpolitische Kritik.
+**Domain Fit:** Das Paper ist für die Schnittstelle KI/Gender/Diversität hochrelevant, da es eine grundlegende theoretische Kritik von technologisch-organischen Dualismen entwickelt, die auch gegenwärtige KI-Debatten prägt. Es bietet feministische und intersektionale Perspektiven auf Technologie und Herrschaft, die für kritische KI-Forschung zentral sind.
 
-**Unique Contribution:** Das Paper bietet eine deutschsprachige, intersektional-feministische Analyse von KI-Systemen, die sowohl algorithmische Diskriminierung als auch koloniale Strukturen der digitalen Infrastruktur kritisiert und Emanzipationsperspektiven für die politische Bildung aufzeigt.
+**Unique Contribution:** Haraways Cyborg-Manifest ist ein Paradigmenwechsel in der feministischen Techniktheorie: statt Natur/Technologie zu hierarchisieren, werden Hybridität und Partialität als emanzipatorische Ressourcen conceptualisiert; die Verknüpfung von postmoderner Theorie mit marxistischem Feminismus und intersektionalen Perspektiven war für ihre Zeit radikal innovativ.
 
-**Limitations:** Das Paper ist konzeptionell-theoretisch und enthält keine empirischen Daten; es fokussiert auf Problembeschreibung mehr als auf lösungsorientierte Interventionen oder Implementierungsstrategien.
+**Limitations:** Das Essay ist bewusst metaphorisch und politisch-mythologisch, keine empirische Analyse; die Fokussierung auf 1980er-Jahre-Technologie (Mikroelektronik, frühe Biotechnologie) erfordert Aktualisierung für gegenwärtige KI-Kontexte; begrenzte direkte Anwendbarkeit auf konkrete soziale Praxisfelder angegeben
 
-**Target Group:** Politische Bildner_innen, Multiplikator_innen in der Erwachsenenbildung, KI-Kritiker_innen, Aktivist_innen im Bereich feministische Netzpolitik, Journalist_innen, Policy-Maker im Bildungsbereich, sowie allgemein an kritischer Medienkompetenzvermittlung Interessierte
+**Target Group:** Wissenschaftler:innen in Gender Studies, Feministischer Epistemologie und Science and Technology Studies (STS); KI-Ethiker:innen und kritische KI-Forscher:innen; Aktivist:innen für Technologiegerechtigkeit und intersektionale Feminismen; Theoretiker:innen der Sozialen Arbeit mit kritischem Anspruch; Sozial- und Kulturwissenschaftler:innen
 
 ## Schlüsselreferenzen
 
-- [[Haraway_Donna_1985]] - Manifesto for Cyborgs: Science, Technology, and Socialist Feminism in the 1980's
-- [[Crenshaw_Kimberlé_1989]] - Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine
-- [[Kranzberg_Melvin_1986]] - Technology and History: Kranzberg's Laws
-- [[Shepard_Nicole_2017]] - Was hat Überwachung mit Sex und Gender zu tun?
-- [[Sinders_Caroline_None]] - Feminist Data Set
-- [[Holev_Ina_2020]] - 2020: Digitaler Kolonialismus
-- [[Köppert_Katrin_2019]] - 'Internet is not in the Cloud.' Digitaler Kolonialismus
-- [[NIST_2019]] - NIST Study Evaluates Effects of Race, Age, Sex on Face Recognition Software
+- [[Haraway_Donna_1979]] - The Biological Enterprise: Sex, Mind, and Profit from Human Engineering to Sociobiology
+- [[Haraway_Donna_1983]] - Signs: Sex, Gender, and Science
+- [[Butler_Octavia_1980]] - Wild Seed
+- [[Wittig_Monique_1973]] - The Lesbian Body
+- [[Lorde_Audre_1984]] - Sister Outsider
+- [[Rich_Adrienne_1978]] - The Dream of a Common Language
+- [[Jameson_Frederic_1984]] - Postmodernism, or the Cultural Logic of Late Capitalism
+- [[Foucault_Michel_1976]] - The History of Sexuality, Vol. 1
+- [[Merchant_Carolyn_1980]] - The Death of Nature: Women, Ecology, and the Scientific Revolution
+- [[Grossman_Rachel_1980]] - Women's Place in the Integrated Circuit

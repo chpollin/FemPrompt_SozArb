@@ -4,19 +4,10 @@ authors:
   - S. Toupin
 year: 2024
 type: journalArticle
-url: https://journals.sagepub.com/doi/full/10.1177/14614448221150776
 doi: 10.1177/14614448221150776
+url: "https://journals.sagepub.com/doi/full/10.1177/14614448221150776"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Intersectionality
-mitigation_strategies:
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -32,38 +23,51 @@ agreement: disagree
 
 # Shaping feminist artificial intelligence
 
-## Abstract
+## Transformation Trail
 
-Comprehensive examination of feminist artificial intelligence through historical analysis and contemporary typology development. Provides detailed framework categorizing FAI as: model, design, policy, culture, discourse, and science. Traces FAI's evolution from foundational work to contemporary initiatives, analyzing tensions between commercialized approaches and community-oriented methods.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Ja | X |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Ja | X |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Toupin_2024_Shaping_feminist_artificial_intelligence]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Intersectionality]]
+- [[Feminist AI]]
+- [[Intersectional Algorithmic Bias]]
 
-### Mitigation Strategies
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Shaping feminist artificial intelligence"
-authors: ["Sophie Toupin"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Toupin_2024_Shaping_feminist_artificial_intelligence.md
-confidence: 88
----
+## Wissensdokument
 
 # Shaping feminist artificial intelligence
 

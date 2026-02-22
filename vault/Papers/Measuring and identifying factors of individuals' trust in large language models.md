@@ -7,16 +7,10 @@ authors:
   - M. Stella
 year: 2025
 type: journalArticle
-url: https://arxiv.org/html/2502.21028v1
 doi: 10.48550/arXiv.2502.21028
+url: "https://arxiv.org/html/2502.21028v1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -26,29 +20,27 @@ llm_categories:
 
 # Measuring and identifying factors of individuals' trust in large language models
 
-## Abstract
+## Transformation Trail
 
-Study developing "Trust-In-LLMs Index (TILLMI)" psychometric scale to quantify trust in conversational AI. Survey of ~1,000 U.S. adults identified two trust dimensions: affective component (emotional closeness) and cognitive component (reliance on competence). Found significant individual differences with personality factors influencing trust. Prior LLM experience increased trust while those with no direct use were more skeptical. Highlights need for prompt-engineering and system design to account for user differences.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Generative_KI
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 94 |
+| **Overall Confidence** | **91** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Measuring and Identifying Factors of Individuals' Trust in Large Language Models"
-authors: ["Edoardo Sebastiano De Duro", "Giuseppe Alessandro Veltri", "Hudson Golino", "Massimo Stella"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: De Duro_2025_Measuring_and_identifying_factors_of_individuals'.md
-confidence: 91
----
+**LLM:** Exclude (Confidence: 0.85)
+
+## Wissensdokument
 
 # Measuring and Identifying Factors of Individuals' Trust in Large Language Models
 

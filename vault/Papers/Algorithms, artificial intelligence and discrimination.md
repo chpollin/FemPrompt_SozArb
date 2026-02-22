@@ -4,17 +4,10 @@ authors:
   - O. Lund
 year: 2025
 type: report
-url: https://ldo.no/content/uploads/2025/05/Algorithms-artificial-intelligence-and-discrimination-report.pdf
+doi: 
+url: "https://ldo.no/content/uploads/2025/05/Algorithms-artificial-intelligence-and-discrimination-report.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Discrimination
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -30,36 +23,54 @@ agreement: disagree
 
 # Algorithms, artificial intelligence and discrimination
 
-## Abstract
+## Transformation Trail
 
-Dieser norwegische Regierungsbericht überprüft Schlüsselelemente des norwegischen Gleichstellungs- und Antidiskriminierungsgesetzes mit primärem Fokus auf algorithmische Diskriminierung. Der Bericht diskutiert die mögliche Einführung spezifischer Definitionen direkter und indirekter algorithmischer Diskriminierung und schlägt die Schaffung einer spezifischen Bestimmung zu rechtmäßiger algorithmischer Differenzialbehandlung vor. Die Komplexität algorithmischer Systeme erschwert die Unterscheidung zwischen direkter und indirekter Diskriminierung, was neue rechtliche Ansätze erfordert.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Lund_2025_Algorithms,_artificial_intelligence_and]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
 - [[Algorithmic Discrimination]]
-- [[Discrimination]]
+- [[Algorithmic Fairness]]
+- [[Algorithmic Transparency and Explainability]]
+- [[Intersectional Discrimination]]
+- [[Proxy Discrimination]]
 
-## Full Text
-
----
-title: "Algorithms, Artificial Intelligence and Discrimination: An Analysis of the Equality and Anti-Discrimination Act's Possibilities and Limitations"
-authors: ["Vibeke Blaker Strand"]
-year: 2025
-type: report
-language: en
-processed: 2026-02-05
-source_file: Lund_2025_Algorithms,_artificial_intelligence_and.md
-confidence: 93
----
+## Wissensdokument
 
 # Algorithms, Artificial Intelligence and Discrimination: An Analysis of the Equality and Anti-Discrimination Act's Possibilities and Limitations
 

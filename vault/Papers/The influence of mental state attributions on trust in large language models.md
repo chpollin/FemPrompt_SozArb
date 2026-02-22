@@ -6,16 +6,10 @@ authors:
   - S. M. Fleming
 year: 2025
 type: journalArticle
-url: https://www.nature.com/articles/s44271-025-00262-1
 doi: 10.1038/s44271-025-00262-1
+url: "https://www.nature.com/articles/s44271-025-00262-1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -26,29 +20,27 @@ llm_categories:
 
 # The influence of mental state attributions on trust in large language models
 
-## Abstract
+## Transformation Trail
 
-Empirical study examining how users' beliefs about LLM's "mind" affect trust in advice. Preregistered experiment (N=410) showing attributing intelligence to LLM strongly increased trust, whereas attributing human-like consciousness did not increase trust. Higher ascriptions of sentience correlated with less advice-taking. Participants trusted AI for perceived analytical competence, not for having feelings. Suggests prompt-engineering highlighting competence and reliability more effective than anthropomorphism for building appropriate trust.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "The influence of mental state attributions on trust in large language models"
-authors: ["Clara Colombatto", "Jonathan Birch", "Stephen M. Fleming"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Colombatto_2025_The_influence_of_mental_state_attributions_on.md
-confidence: 94
----
+**LLM:** Exclude (Confidence: 0.85)
+
+## Wissensdokument
 
 # The influence of mental state attributions on trust in large language models
 

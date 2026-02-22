@@ -4,20 +4,10 @@ authors:
   - O. Zayed
 year: 2024
 type: journalArticle
-url: https://www.mdpi.com/2076-3417/14/8/3483
+doi: 
+url: "https://www.mdpi.com/2076-3417/14/8/3483"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Stereotyping
-mitigation_strategies:
-  - Inclusive Language
-  - Debiasing
-  - Prompt Engineering
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -38,37 +28,51 @@ agreement: disagree
 
 # Scaling implicit bias analysis across transformer-based language models through embedding association test and prompt engineering
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Zayed_2024_Scaling_implicit_bias_analysis_across]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypen]]
-- [[Stereotyping]]
+- [[Algorithmic Fairness in NLP]]
+- [[Prompt Engineering for Bias Mitigation]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Inclusive Language]]
-- [[Prompt Engineering]]
-
-## Full Text
-
----
-title: "Scaling Implicit Bias Analysis across Transformer-Based Language Models through Embedding Association Test and Prompt Engineering"
-authors: ["Ravi Varma Kumar Bevara", "Nishith Reddy Mannuru", "Sai Pranathi Karedla", "Ting Xiao"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Zayed_2024_Scaling_implicit_bias_analysis_across.md
-confidence: 95
----
+## Wissensdokument
 
 # Scaling Implicit Bias Analysis across Transformer-Based Language Models through Embedding Association Test and Prompt Engineering
 

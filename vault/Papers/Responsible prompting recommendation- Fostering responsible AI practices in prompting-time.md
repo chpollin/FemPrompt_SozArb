@@ -1,5 +1,5 @@
 ---
-title: Responsible prompting recommendation: Fostering responsible AI practices in prompting-time
+title: "Responsible prompting recommendation: Fostering responsible AI practices in prompting-time"
 authors:
   - P. James
   - M. Meeussen
@@ -8,16 +8,9 @@ authors:
 year: 2025
 type: conferencePaper
 doi: 10.1145/3706598.3713365
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-mitigation_strategies:
-  - Prompt Engineering
 llm_decision: Include
 llm_confidence: 0.87
 llm_categories:
@@ -31,35 +24,32 @@ llm_categories:
 
 # Responsible prompting recommendation: Fostering responsible AI practices in prompting-time
 
-## Abstract
+## Transformation Trail
 
-Presents insights from interviews and user studies with IT professionals exploring prompting practices and develops open-source responsible prompting recommender system. Research reveals responsible prompt recommendations can support novice prompt engineers and raise awareness about Responsible AI in prompting-time, helping people reflect on responsible practices before LLM content generation. Demonstrates that finding right balance between adding social values to prompts and removing potentially harmful content is critical for recommendation systems. Framework highly relevant for social services as it addresses how to design systems encouraging reflective, values-based prompting practices.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.87)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Soziale_Arbeit, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.87)
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotyping]]
-
-### Mitigation Strategies
+- [[Algorithmic Bias in Language Models]]
 - [[Prompt Engineering]]
 
-## Full Text
-
----
-title: "Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time"
-authors: ["Vagner Figueredo de Santana", "Sara E Berger", "Heloísa Caroline Candello", "Tiago Machado", "Cassia Sampaio Sanctos", "Tianyu Su", "Lemara Williams"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: James_2025_Responsible_prompting_recommendation_Fostering.md
-confidence: 88
----
+## Wissensdokument
 
 # Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time
 

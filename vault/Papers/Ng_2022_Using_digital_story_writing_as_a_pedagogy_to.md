@@ -4,36 +4,36 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Inclusive Ai
 ---
 
 # Ng_2022_Using_digital_story_writing_as_a_pedagogy_to
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Inclusive Ai]]
+- [[AI Literacy]]
+- [[Machine Learning Fundamentals for K-12]]
 
-## Full Text
-
----
-title: "Using digital story writing as a pedagogy to develop AI literacy among primary students"
-authors: ["Davy Tsz Kit Ng", "Wanying Luo", "Helen Man Yi Chan", "Samuel Kai Wah Chu"]
-year: 2022
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Ng_2022_Using_digital_story_writing_as_a_pedagogy_to.md
-confidence: 88
----
+## Wissensdokument
 
 # Using digital story writing as a pedagogy to develop AI literacy among primary students
 

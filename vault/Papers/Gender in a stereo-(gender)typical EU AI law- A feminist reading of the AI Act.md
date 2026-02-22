@@ -1,23 +1,13 @@
 ---
-title: Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI Act
+title: "Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI Act"
 authors:
   - A. Karagianni
 year: 2025
 type: journalArticle
-url: https://www.cambridge.org/core/journals/cambridge-forum-on-ai-law-and-governance/article/gender-in-astereogendertypical-eu-ai-law-a-feminist-reading-of-the-ai-act/E9DEFC1E114CBE577D737EC616610921
 doi: 10.1017/cfl.2025.12
+url: "https://www.cambridge.org/core/journals/cambridge-forum-on-ai-law-and-governance/article/gender-in-astereogendertypical-eu-ai-law-a-feminist-reading-of-the-ai-act/E9DEFC1E114CBE577D737EC616610921"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Data
-  - Intersectionality
-mitigation_strategies:
-  - Intersectional Data
-  - Feminist Approach
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -41,40 +31,33 @@ agreement: agree
 
 # Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI Act
 
-## Abstract
+## Transformation Trail
 
-This peer-reviewed article offers a feminist critique of the European Union’s AI Act, arguing that the law’s current bias mitigation provisions only superficially address gendered risks and fail to confront deeply embedded structural biases. Using frameworks like hermeneutical injustice and feminist legal theory, Karagianni shows that AI systems can perpetuate historical power imbalances and systemic discrimination against women and marginalized groups. The AI Act’s pre-market and post-market measures are analyzed to reveal how they often reinforce, rather than challenge, algorithmic discrimination. The author concludes that effective AI governance must go beyond technical fixes, incorporating an intersectional perspective and substantive equality principles. She calls for feminist-informed revisions to the AI Act – emphasizing gender inclusivity, intersectionality, and accountability – to ensure AI regulation actively dismantles (instead of inadvertently upholding) existing power asymmetries.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 97 |
+| Category Validation | 95 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Data]]
-- [[Intersectionality]]
+- [[Algorithmic Gender Bias]]
+- [[Intersectional Algorithmic Discrimination]]
 
-### Mitigation Strategies
-- [[Feminist Approach]]
-- [[Intersectional Data]]
-
-## Full Text
-
----
-title: "Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI act"
-authors: ["Anastasia Karagianni"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A.md
-confidence: 93
----
+## Wissensdokument
 
 # Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI act
 

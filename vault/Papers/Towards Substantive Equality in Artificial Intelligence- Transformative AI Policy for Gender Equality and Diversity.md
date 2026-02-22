@@ -1,29 +1,25 @@
 ---
-title: Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity
+title: "Towards substantive equality in artificial intelligence: Transformative AI policy for gender equality and diversity"
 authors:
-  - A. Ovalle
+  - P. Ricaurte Quijano
+  - B. Prud’homme
 year: 2024
 type: report
-url: https://datapopalliance.org/publications/towards-real-diversity-and-gender-equality-in-ai/
+doi: 
+url: "https://wp.oecd.ai/app/uploads/2025/05/towards-substantive-equality-in-artificial-intelligence_Transformative-AI-policy-for-gender-equality-and-diversity.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Feminist AI
 llm_decision: Include
-llm_confidence: 0.92
+llm_confidence: 0.95
 llm_categories:
+  - AI_Literacies
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
   - Diversitaet
   - Feministisch
   - Fairness
-human_decision: Include
+human_decision: Unclear
 human_categories:
   - AI_Literacies
   - KI_Sonstige
@@ -33,40 +29,58 @@ human_categories:
   - Diversitaet
   - Feministisch
   - Fairness
-agreement: agree
+agreement: disagree
 ---
 
-# Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity
+# Towards substantive equality in artificial intelligence: Transformative AI policy for gender equality and diversity
 
-## Abstract
+## Transformation Trail
 
-Dieser GPAI-Bericht, basierend auf Konsultationen mit über 200 Teilnehmern aus mehr als 50 Ländern, entwickelt einen menschenrechtsbasierten Rahmen für substantielle Gleichberechtigung in der KI. Der Bericht betont, dass KI ohne Intervention das Risiko birgt, gesellschaftliche Verzerrungen zu perpetuieren und zu verstärken, insbesondere gegen historisch marginalisierte Gruppen. Die Empfehlungen zielen darauf ab, die strukturellen Wurzeln der Ungleichheit zu bekämpfen und transformative Veränderungen zu fördern, die substantielle Gleichberechtigung in der KI erreichen. Solche Politiken verbessern die Effektivität, Fairness und Nutzbarkeit von KI-Systemen.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Unclear
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Nein | X |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Ja |  |
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Feminist AI]]
+- [[AI Governance and Accountability]]
+- [[Gender Bias in AI]]
+- [[Inclusive AI Design]]
+- [[Intersectional Feminism in AI]]
 
-## Full Text
-
----
-title: "Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity"
-authors: ["Paola Ricaurte Quijano", "Benjamin Prud'homme", "Isadora Hellegren Létourneau"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-05
-source_file: Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md
-confidence: 93
----
+## Wissensdokument
 
 # Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity
 

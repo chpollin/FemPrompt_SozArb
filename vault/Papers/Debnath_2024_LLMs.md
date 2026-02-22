@@ -4,40 +4,38 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-mitigation_strategies:
-  - Intersectional Accuracy
 ---
 
 # Debnath_2024_LLMs
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 25 |
+| Correctness | 30 |
+| Category Validation | 20 |
+| **Overall Confidence** | **22** |
+
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
+- [[AI Literacy in Social Work]]
+- [[Algorithmic Bias in Social Services]]
+- [[Algorithmic Fairness]]
+- [[Gender Bias in Large Language Models]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "nicht angegeben"
-authors: ["Debnath"]
-year: 2024
-type: workingPaper
-language: en
-processed: 2026-02-05
-source_file: Debnath_2024_LLMs.md
-confidence: 22
----
+## Wissensdokument
 
 # nicht angegeben
 

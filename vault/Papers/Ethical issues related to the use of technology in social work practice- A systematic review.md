@@ -1,5 +1,5 @@
 ---
-title: Ethical issues related to the use of technology in social work practice: A systematic review
+title: "Ethical issues related to the use of technology in social work practice: A systematic review"
 authors:
   - A. Rodríguez-Martínez
   - M. T. Amezcua Aguilar
@@ -8,16 +8,9 @@ authors:
 year: 2024
 type: journalArticle
 doi: 10.1177/21582440241274842
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Equitable Practice
-  - Equitable Access
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -32,36 +25,50 @@ agreement: disagree
 
 # Ethical issues related to the use of technology in social work practice: A systematic review
 
-## Abstract
+## Transformation Trail
 
-Systematic literature review examining ethical tensions arising from technology integration in social work practice. Review identifies three main categories of ethical challenges: effects of digitization on professional practice (tensions between efficiency and human connection), education, research and engagement challenges (digital literacy requirements conflicting with traditional social work training), and ethical challenges in digital professional practice (boundary issues, dual relationships, informed consent in digital contexts). Key value conflicts include technology's potential to erode professional relationships and trust; digital divide creating social justice concerns; automated systems undermining client self-determination and participation; and privacy violations threatening human dignity.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
-**Human Decision:** Exclude
-**Human Categories:** Soziale_Arbeit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 82 |
+| **Overall Confidence** | **87** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Equitable Access]]
-- [[Equitable Practice]]
+- [[Algorithmic Decision-Making in Social Services]]
 
-## Full Text
-
----
-title: "Ethical Issues Related to the Use of Technology in Social Work Practice. A Systematic Review"
-authors: ["Antonia Rodríguez-Martínez", "María Teresa Amezcua Aguilar", "Javier Cortés Moreno", "Juan José Jiménez-Delgado"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology.md
-confidence: 87
----
+## Wissensdokument
 
 # Ethical Issues Related to the Use of Technology in Social Work Practice. A Systematic Review
 

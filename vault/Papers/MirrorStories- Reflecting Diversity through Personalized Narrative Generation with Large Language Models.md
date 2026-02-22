@@ -1,21 +1,15 @@
 ---
-title: MirrorStories: Reflecting Diversity through Personalized Narrative Generation with Large Language Models
+title: "MirrorStories: Reflecting Diversity through Personalized Narrative Generation with Large Language Models"
 authors:
   - S. Yunusov
   - H. Sidat
   - A. Emami
 year: 2024
 type: report
-url: https://arxiv.org/html/2409.13935v1
+doi: 
+url: "https://arxiv.org/html/2409.13935v1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Inclusive Narratives
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -38,110 +32,73 @@ agreement: agree
 
 # MirrorStories: Reflecting Diversity through Personalized Narrative Generation with Large Language Models
 
-## Abstract
+## Transformation Trail
 
-This empirical study introduces a corpus of 1,500 personalized short stories generated with LLMs, incorporating identity features like gender, ethnicity, and age. Human judges rated these stories higher in engagement, diversity, and personalness. Narrative personalization increased textual diversity without harming moral comprehension. However, biases persist, such as preferential engagement for certain identities. The paper illustrates both potential and limitations of diversity-sensitive prompting.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 75 |
+| **Overall Confidence** | **84** |
 
-### Mitigation Strategies
-- [[Inclusive Narratives]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
----
-title: "MIRRORSTORIES: Reflecting Diversity through Personalized Narrative Generation with Large Language Models"
-authors: ["Sarfaroz Yunusov", "Hamza Sidat", "Ali Emami"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Yunusov_2024_MirrorStories_Reflecting_Diversity_through.md
-confidence: 95
----
+## Wissensdokument
 
-# MIRRORSTORIES: Reflecting Diversity through Personalized Narrative Generation with Large Language Models
+# Distributed Representations of Words and Phrases and their Compositionality
 
 ## Kernbefund
 
-Personalisierte LLM-generierte Geschichten erzielen signifikant höhere Bewertungen bei Engagement und Zufriedenheit (4,22 vs. 3,37 auf 5-Punkte-Skala) als generische Narrative, während sie gleichzeitig textuelle Diversität erhöhen und die vermittelte Moral bewahren.
+Der verbesserte Skip-Gram mit Negative Sampling und Subsampling ermöglicht effiziente Trainingsprozesse bei gleichzeitiger Verbesserung der Vektorqualität; Phrase-Vektoren können präzise analoges Denken ermöglichen und Vektoren zeigen additive Zusammensetzungsstrukturen.
 
 ## Forschungsfrage
 
-Können Large Language Models effektiv personalisierte 'Mirror Stories' generieren, die die Identitäten und Erfahrungen diverser Leser widerspiegeln und zu höherem Engagement führen als generische Narrative?
+Wie können hochwertige verteilte Vektorrepräsentationen von Wörtern und Phrasen effizient gelernt werden, und wie lassen sich diese Repräsentationen für analoges Denken und semantische Komposition nutzen?
 
 ## Methodik
 
-Empirisch/Mixed-Methods: Generierung eines Corpus von 1.500 personalisierten Kurzgeschichten mit GPT-4, Claude-3 Sonnet und Gemini 1.5 Flash; Validierung der Personalisierungselemente durch 26 menschliche Evaluatoren; Bewertung durch menschliche Evaluatoren und GPT-4; Textanalysen (Shannon Diversity Index, BERTopic, Word2Vec); Bias-Analyse der LLM-Evaluationen.
-**Datenbasis:** 1.500 generierte Kurzgeschichten; 26 diverse menschliche Evaluatoren (Universitätsstudenten); Identitätselemente aus 123 ethnischen Hintergründen, 124 Interessen und 28 Moralen; 30-Story-Sample für Personalisierungsvalidierung
+Empirisch: Skip-Gram Modell mit Verbesserungen (Negative Sampling, Subsampling), Training auf 1-33 Milliarden Wörtern aus News-Korpora, Evaluation durch Analogie-Reasoning-Tasks
+**Datenbasis:** Interne Google News-Datensätze: 1 Milliarde Wörter (Wortvektoren), 33 Milliarden Wörter (Phrase-Modell); Analogie-Testsets: Word Analogies, Phrase Analogies mit 3218 Beispielen
 
 ## Hauptargumente
 
-- Personalisierte LLM-generierte Geschichten integrieren erfolgreich Identitätselemente (Name, Geschlecht, Alter, Ethnizität, Interesse) mit hoher Erkennungsgenauigkeit durch menschliche Evaluatoren (100% für Geschlecht, 94% für Ethnizität) und übertreffen teilweise GPT-4-Leistungen.
-- Personalisierung führt zu nachweislich höherem Reader-Engagement, Zufriedenheit und wahrgenommenem Bezug zu den Geschichten, während die kognitiven Fähigkeiten zur Moralverständnis nicht beeinträchtigt werden (keine signifikanten Unterschiede bei Moralidentifikation).
-- Personalisierte Narrationen erreichen höhere textuelle Diversität (Shannon Diversity Index 4,71) im Vergleich zu generischen Varianten und adressieren damit die dokumentierte Unterrepräsentation von Minderheiten in Kinderliteratur und die Notwendigkeit für inklusivere Narrative.
+- Das Skip-Gram Modell mit Negative Sampling übertrifft Hierarchical Softmax und Noise Contrastive Estimation bei der Erfassung syntaktischer und semantischer Wortbeziehungen mit 2-10x Beschleunigung durch Subsampling häufiger Wörter.
+- Phrasen als einzelne Tokens zu behandeln ermöglicht die Darstellung idiomatischer Ausdrücke, deren Bedeutung nicht einfach aus Komponenten zusammensetzbar ist (z.B. 'Air Canada' vs. Komposition von 'Air' und 'Canada').
+- Vektorrepräsentationen zeigen lineare Struktur, die intuitive arithmetische Operationen erlaubt: vec('Russia') + vec('river') ≈ vec('Volga River'), was auf implizite Vercodierung von Kontextverteilungen hindeutet.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Die Studie untersucht die Fähigkeit von LLMs, personalisierte Inhalte zu generieren, was einen kritischen Kompetenzbedarf im Umgang mit generativen KI-Systemen in der Praxis widerspiegelt: 'LLMs excel in generating human-like text and adapting content to various contextual needs'.
-
-### Evidenz 2
-
-Zentral für die Studie ist der Einsatz von GPT-4, Claude-3 Sonnet und Gemini 1.5 Flash zur Narrative-Generierung sowie DALL-E 2 für Bildgenerierung: 'Our study addresses this gap by exploring the potential of LLMs to create mirror stories-narratives that genuinely reflect and resonate with the identities of individual readers.'
-
-### Evidenz 3
-
-Strukturierte Prompts wurden für personalisierte vs. generische Geschichtengenerierung verwendet, mit expliziten Instruktionen zur Integration oder Vermeidung expliziter Identitätselemente: 'Personalized prompts incorporating identity elements were used to generate personalized stories. For Personalization Validation, these elements were specifically asked not to be stated explicitly.'
-
-### Evidenz 4
-
-Die Studie adressiert ein kernhaftes Anliegen Sozialer Arbeit: Zugehörigkeitsgefühl, Selbstverständnis und Empowerment durch Spiegelung von Identität in Narrativen. Dies ist relevant für Ausbildung, Beratung und Jugendförderung: 'Mirror books are stories that reflect the reader's identity, culture, and experiences, serving to engage, validate, and empower individuals... Such books are crucial in educational settings, fostering a sense of belonging and self-understanding.'
-
-### Evidenz 5
-
-Die Studie dokumentiert systematisch sowohl Unterrepräsentation als auch algorithmische Bias: 'Noticeable underrepresentation of non-white minority groups in literature relative to their population size' und identifiziert Geschlechts- und ethnische Bias in GPT-4-Evaluationen: 'Figure 5 shows an instance of gender-based bias, with stories featuring non-binary characters receiving lower ratings.'
-
-### Evidenz 6
-
-Explizite Integration von Geschlechtsidentität als Personalisierungselement (männlich, weiblich, nicht-binär) mit dokumentierter ungleicher Bewertung durch LLM-Evaluatoren: 'The dataset spans a broad age range from 10 to 60 years. MIRRORSTORIES comprises 1,500 narratives with an almost even split between male and female characters' sowie 'We found several preferential biases in GPT-4's evaluation results... with stories featuring non-binary characters receiving lower ratings.'
-
-### Evidenz 7
-
-Kernthema der Studie ist die Förderung von Repräsentation und Inklusion durch Generierung diverser personalisierter Narrative für 123 ethnische Hintergründe, 3 Geschlechtsidentitäten und 124 Interessen: 'Gap in cultural representation highlights the need for more inclusive narratives that reflect diverse reader identities, enhance empathy, and promote cultural awareness.'
-
-### Evidenz 8
-
-Die Studie untersucht systematisch die Qualität und Gerechtigkeit personalisierter Narrative sowie identifiziert und dokumentiert Bias in LLM-Bewertungen: 'Are there biases in LLM evaluations of personalized stories? We found several preferential biases in GPT-4's evaluation results.' und implementiert Safeguards gegen schädliche Inhalte und Bias-Audits.
+Paper behandelt Natural Language Processing, Word Embeddings, Skip-Gram Modell, Negative Sampling und neuronale Sprachmodelle als Kernthemen klassischen Machine Learning für NLP-Aufgaben.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper ist hochrelevant für die Schnittstelle AI/Soziale Arbeit/Diversität, da es zeigt, wie generative KI-Systeme zur Adressierung struktureller Probleme (Unterrepräsentation in Literatur) eingesetzt werden können und gleichzeitig kritische Fragen zu LLM-Bias und -Fairness in der Praxis aufwirft. Es hat direktes Anwendungspotential für Beratung, Bildung und identitätsfördernde Interventionen in der Sozialen Arbeit.
+**Domain Fit:** Das Paper hat KEINE direkte Relevanz für die Schnittstelle AI/Soziale Arbeit/Gender Studies. Es ist eine rein technische Arbeit zur Optimierung von Wort-Embeddings ohne normative oder sozialwissenschaftliche Perspektive.
 
-**Unique Contribution:** Die Studie leistet einen innovativen empirischen Beitrag durch Schaffung des ersten umfassenden Corpus personalisierter, diversitäts-informierter Narrative und Nachweis, dass LLMs tatsächlich kulturelle und identitätsbezogene Elemente effektiv integrieren können, während sie gleichzeitig systematisch dokumentiert, wie diese Systeme selbst Gender- und Ethnizitäts-Bias reproduzieren.
+**Unique Contribution:** Einführung von Negative Sampling als effiziente Alternative zu Hierarchical Softmax und systematische Demonstration, dass Phrase-Vektoren idiomatische Bedeutungen erfassen können, mit erheblichen Effizienzgewinnen im Training.
 
-**Limitations:** Die Studie konzentriert sich auf begrenzte Personalisierungsfaktoren (demografische Merkmale); Evaluator-Pool bestand primär aus Universitätsstudenten (begrenzte Repräsentativität); Subektivität bei Evaluationen; begrenzte Modellvarietät; und unklar bleibt die longitudinale Wirkung personalisierter Narrative auf tatsächliche Leser-Outcomes wie Selbstverständnis oder Empowerment.
+**Limitations:** Keine Analyse von Bias, Fairness oder Diskriminierung in Wortrepräsentationen; keine Diskussion von sozialen Auswirkungen oder ethischen Implikationen der Wort-Embeddings; rein technische Fokussierung auf Performance-Metriken.
 
-**Target Group:** Sozialarbeiter (besonders in Jugendhilfe und Bildung), KI-Entwickler und Ethiker, Pädagogen, Policy-Maker im Bildungssektor, Verlage, Forscher in den Bereichen NLP/KI-Fairness, und Interessensgruppen für Diversität und kulturelle Repräsentation
+**Target Group:** Computerlinguisten, Machine Learning Ingenieure, NLP-Entwickler, Forscher in neuronalen Sprachmodellen; NICHT relevant für Sozialarbeiter, Sozialwissenschaftler oder Gender Studies-Forscher
 
 ## Schlüsselreferenzen
 
-- [[Bishop_1990]] - Mirrors, Windows, and Sliding Glass Doors
-- [[Brown_et_al_2020]] - Language Models are Few-Shot Learners
-- [[Fleming_et_al_2016]] - More Mirrors in the Classroom
-- [[Walkington_Bernacki_2014]] - Motivating Students by Personalizing Learning
-- [[Phillips_2014]] - How Diversity Works
-- [[Hoytt_et_al_2022]] - Impact of Cultural Responsiveness on Student Achievement
-- [[Gilardi_et_al_2023]] - ChatGPT Outperforms Crowd Workers for Text-Annotation Tasks
-- [[Jiang_et_al_2023]] - Evaluating and Inducing Personality in Pre-trained Language Models
-- [[Li_et_al_2024]] - Tailoring Personality Traits in Large Language Models
-- [[CCBC_2021]] - Books by and/or about Black, Indigenous, and People of Color
+- [[Mikolov_et_al_2013]] - Efficient estimation of word representations in vector space
+- [[Mikolov_et_al_2013]] - Linguistic Regularities in Continuous Space Word Representations
+- [[Gutmann_Hyvärinen_2012]] - Noise-contrastive estimation of unnormalized statistical models
+- [[Mnih_Hinton_2009]] - A scalable hierarchical distributed language model
+- [[Morin_Bengio_2005]] - Hierarchical probabilistic neural network language model
+- [[Bengio_et_al_2003]] - A neural probabilistic language model
+- [[Collobert_Weston_2008]] - A unified architecture for natural language processing: deep neural networks with multitask learning
+- [[Rumelhart_Hinton_Williams_1986]] - Learning representations by backpropagating errors

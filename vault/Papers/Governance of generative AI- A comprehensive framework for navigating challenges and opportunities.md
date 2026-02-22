@@ -1,18 +1,13 @@
 ---
-title: Governance of generative AI: A comprehensive framework for navigating challenges and opportunities
+title: "Governance of generative AI: A comprehensive framework for navigating challenges and opportunities"
 authors:
   - A. Taeihagh
 year: 2025
 type: journalArticle
-url: https://academic.oup.com/policyandsociety/article/44/1/1/7997395
+doi: 
+url: "https://academic.oup.com/policyandsociety/article/44/1/1/7997395"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -32,32 +27,23 @@ agreement: agree
 
 # Governance of generative AI: A comprehensive framework for navigating challenges and opportunities
 
-## Abstract
+## Transformation Trail
 
-Provides comprehensive overview of governance challenges posed by generative AI, including bias amplification, privacy violations, misinformation, and exacerbation of power imbalances. Critiques inadequacy of voluntary self-regulation and proposes comprehensive governance framework that is proactive, adaptive, and participatory. Recommends improving data governance, mandating independent audits, enhancing public engagement, and fostering international cooperation.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Bias Amplification]]
 
----
-title: "Governance of Generative AI: A Comprehensive Framework"
-authors: ["A. Taeihagh"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Taeihagh_2025_Governance_of_generative_AI_A_comprehensive.md
-confidence: 75
----
+## Wissensdokument
 
 # Governance of Generative AI: A Comprehensive Framework
 

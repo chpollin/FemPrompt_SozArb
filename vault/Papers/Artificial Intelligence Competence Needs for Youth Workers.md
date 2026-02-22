@@ -12,23 +12,10 @@ authors:
   - Salomé Marques
 year: 2024
 type: journalArticle
-url: https://zenodo.org/doi/10.5281/zenodo.11525357
 doi: 10.5281/ZENODO.11525357
+url: "https://zenodo.org/doi/10.5281/zenodo.11525357"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Intersectional Accuracy
-  - Algorithmic Bias
-  - Intersectional Perspectives
-mitigation_strategies:
-  - Intersectional Accuracy
-  - Intersectional Perspectives
-  - Equitable Access
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -46,144 +33,110 @@ agreement: agree
 
 # Artificial Intelligence Competence Needs for Youth Workers
 
-## Abstract
+## Transformation Trail
 
-The rapid developments in AI technology and the rise of accessible AI-powered tools are transforming the way we live, work and learn. While young people have already warmly embraced these solutions, with Gen Z being the most active users and experimenters of Generative AI (Microsoft, 2024), there is a sense of confusion and fear among youth workers about the future of how AI tools are going to be used in the youth sector, mixed with diverse emotions and viewpoints ranging from apprehension, scepticism, resistance to feelings of enthusiasm and recognition of the significance of AI's role in the field (Pawluczuk, 2023).
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-This study aims to advance knowledge on the specific competencies required by youth workers to effectively integrate AI into their professional activities, as well as picture the current and potential use of AI for youth professionals.  
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-The publication is part of the Artificial Intelligence for Youth Work (AI4YouthWork)project, a pioneering initiative under the Erasmus+ programme, co-funded by the European Union, dedicated to enhancing the youth sector across Europe through the integration of artificial intelligence (AI). The project unites four organisations - Lascò from Italy, TEAM4Excellence from Romania, Kyttaro Enallaktikon Anazitiseon Neon from Greece, and Contextos from Portugal -, aspiring to contribute to increasing youth professionals' capacity to harness AI's potential to enhance the quality, attractiveness and effectiveness of their work, and prepare young people to thrive in AI-powered environments. 
+### Stufe 3: Verifikation (LLM)
 
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 98 |
+| Category Validation | 92 |
+| **Overall Confidence** | **92** |
 
+### Stufe 4: Assessment
 
-
-
-Chapter 1 introduces the project, highlighting the steps and methodological approaches to achieving the main objectives and the expected results.
-
-
-
-
-Chapter 2, dedicated to the research methodology, outlines the approach and techniques used to conduct this study. It includes the research design, data collection methods through systematic review, focus groups and interviews, data analysis procedures, as well as limitations and criteria for ensuring the validity and reliability of the findings.
-
-
-
-
-Chapter 3 presents the results of the desk research conducted by the consortium partners to explore the intersections of artificial intelligence, youth and youth work.  The chapter is divided into four main sections, addressing an introduction to AI, the impact of AI on youth, the role of youth workers in the AI revolution, and practical applications of AI in youth work settings.
-
-
-
-
-Chapter 4 outlines the needs, challenges, and tasks involved in integrating AI into youth work, presenting the results of focus group discussions which have been conducted in each partner country.
-
-
-
-
-Chapter 5 sets out the publication's conclusions, formulating recommendations for the development of an AI Competence Framework for Youth Workers, and enhancing the capacity of youth professionals to harness AI in their work.
-
-## Assessment
-
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Generative_KI, Soziale_Arbeit
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit
-**Agreement:** Agree
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
+- [[AI Literacy]]
 - [[Algorithmic Bias]]
-- [[Discrimination]]
-- [[Intersectional Accuracy]]
-- [[Intersectional Perspectives]]
+- [[Algorithmic Fairness]]
+- [[Digital Inclusion]]
+- [[Ethical AI Integration]]
+- [[Prompt Engineering]]
 
-### Mitigation Strategies
-- [[Equitable Access]]
-- [[Intersectional Accuracy]]
-- [[Intersectional Perspectives]]
+## Wissensdokument
 
-## Full Text
-
----
-title: "Artificial Intelligence in Social Work: An EPIC Model for Practice"
-authors: ["Heather Boetto"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Unknown_Artificial_Intelligence_in_Social_Work_An_EPIC.md
-confidence: 95
----
-
-# Artificial Intelligence in Social Work: An EPIC Model for Practice
+# Artificial Intelligence Competence Needs for Youth Workers
 
 ## Kernbefund
 
-Ein vierpeiliges EPIC-Modell (Ethics and Justice, Policy Development and Advocacy, Intersectoral Collaboration, Community Engagement and Empowerment) wird als strukturierter Ansatz zur ethischen Integration von KI in der Sozialen Arbeit präsentiert, um Chancen zu nutzen und Risiken wie algorithmische Verzerrungen und Desinformation zu mitigieren.
+Jugendarbeiter:innen benötigen ein Spektrum technischer, analytischer und sozialer Kompetenzen (AI-Literalität, kritisches Denken, Datenkompetenz, ethische Verantwortung), wobei erhebliche Kompetenzlücken und Herausforderungen bei der Integration von KI-Tools bestehen.
 
 ## Forschungsfrage
 
-Wie kann künstliche Intelligenz in der Sozialen Arbeit ethisch und gerecht integriert werden, um die beruflichen Werte und die Unterstützung marginalisierter Gruppen zu wahren?
+Welche spezifischen Kompetenzen benötigen Jugendarbeiter:innen, um künstliche Intelligenz effektiv in ihre professionelle Arbeit zu integrieren?
 
 ## Methodik
 
-Theoretisch: Umfassende Literaturrevision zur Schnittstelle KI und Soziale Arbeit; Entwicklung eines konzeptuellen Rahmens (EPIC-Modell)
-**Datenbasis:** Sekundäranalyse: Literaturrevision (keine primären Daten)
+Mixed Methods: Systematische Literaturanalyse (30+ Quellen), Fokusgruppen in 4 Ländern (Italien, Rumänien, Griechenland, Portugal) mit Jugendarbeitsfachleuten, Interviews
+**Datenbasis:** Fokusgruppen mit Jugendarbeitsfachleuten in 4 europäischen Ländern; genaue Anzahl der Teilnehmenden nicht spezifiziert
 
 ## Hauptargumente
 
-- KI-Systeme reproduzieren historische Diskriminierungen und koloniale Wissensbestände durch ihre Abhängigkeit von großen historischen Datensätzen, was besonders für First Nations Peoples und marginalisierte Gruppen problematisch ist.
-- Eine duale Mensch-Technologie-Ansatz ist erforderlich, bei dem KI als Entscheidungsunterstützung fungiert, nicht als Ersatz für professionelle Urteilskraft und empathische Beziehungen zwischen Fachkräften und Nutzer:innen.
-- Intersektorale Zusammenarbeit zwischen Sozialarbeiter:innen, Informatiker:innen, Regierungen und Privatsektor sowie Gemeinschaftsbeteiligung sind zentral, um KI-Systeme gerecht und transparent zu gestalten und marginalisierte Perspektiven einzubeziehen.
+- KI-Technologien haben tiefgreifende Auswirkungen auf Jugendliche in Bildung, sozialen Interaktionen und psychologischem Wohlbefinden, daher müssen Jugendarbeiter:innen als Vermittler fungieren, um Jugendliche bei der kritischen Nutzung von KI zu unterstützen.
+- Existierende Kompetenzrahmen (DigComp 2.2, DigCompEdu, UNESCO AI Competency Framework) können als Grundlagen dienen, müssen aber spezifisch für die Kontexte von Jugendarbeit adaptiert werden.
+- Effektive KI-Integration in Jugendarbeit erfordert eine Balance zwischen technischen Fähigkeiten (Prompt Engineering, Datenkompetenz), Soft Skills (kritisches Denken, Kommunikation) und ethischer Verantwortung, um Datenschutz, Bias-Bewusstsein und kulturelle Sensibilität zu gewährleisten.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Inclusion of AI content in professional social work policy documents and practice standards; development of education opportunities for increasing community AI knowledge and skills; staff training in organisations implementing AI.
+AI literacy als 'Familiarity with AI concepts, terminology, and applications to understand how AI tools work and their impact on youth work practices.' Umfangreicher Fokus auf KI-Kompetenzen und Kompetenzrahmen für Jugendarbeiter:innen.
 
 ### Evidenz 2
 
-ChatGPT is discussed as problematic case study that has yielded inaccurate output data and breached privacy principles in child protection settings; generative AI's capacity to autonomously augment, synthesise, and innovate new data; concerns about 'black box' problem especially with generative AI.
+ChatGPT wird als Tool für Inhalterstellung, Ideengenerierung und kritisches Denken erwähnt: 'providing high-quality, free translation services and supporting critical thinking through tools like ChatGPT.'
 
 ### Evidenz 3
 
-AI applications in predictive risk modelling for suicide, domestic violence, and child protection; AI-powered chatbots in mental health settings; machine learning algorithms and deep neural networks; decision support systems in social work.
+Prompt Engineering als essenzielle Fähigkeit identifiziert: 'youth workers need to develop prompt engineering skills to generate relevant and personalised content effectively.'
 
 ### Evidenz 4
 
-The article directly examines AI's influence on social work profession, including risks to professional ethics, mission and values; dual human-technology approach supporting social work methods; service user-practitioner relationship; social workers' roles and responsibilities being reshaped by AI.
+Umfangreiche Diskussion von KI-Systemen allgemein: Suchmaschinen-Algorithmen, Personalisierung, 'Black Box' Decision-Making, Deep-Fakes, algorithmische Bias, Social Media AI-Systeme.
 
 ### Evidenz 5
 
-Algorithmic bias in AI systems due to reliance on historical datasets that are not representative of marginalised groups; gender classification systems producing error rates up to 34.7% for darker-skinned females; digital divide and 'information poverty' for marginalised groups; discrimination and exclusion risks; colonial knowledges reinforced in algorithms.
+Direkter Fokus auf Jugendarbeiter:innen und Jugendarbeitspraxis: 'youth workers play a critical role in guiding young people to make an effective and responsible use of AI systems' und umfangreiche Analyse von KI-Use-Cases in Jugendarbeitskontexten.
 
 ### Evidenz 6
 
-Emphasis on inclusion of First Nations' perspectives and data sovereignty; ethnic data governance; representation of marginalised groups and underrepresented communities in AI design and development; intersectional perspectives; diverse reference groups in organisations.
+Algorithmischer Bias und Ungleichheit werden analysiert: 'aware that the data, on which AI depends, may include biases... search results about occupation may include stereotypes about male or female jobs' und Digital Divide zwischen englischsprachigen und nicht-englischsprachigen Tools.
 
 ### Evidenz 7
 
-Addressing racial justice and health equity in AI development; non-discriminatory outcomes; algorithmic fairness concerns; legal protection for marginalised groups; transparent and regulated use of AI systems; equitable access to AI.
+Geschlechtsspezifische Unterschiede in KI-Nutzung untersucht: 'Generative AI use among GenZ by gender' und stereotypische Bias in KI-Systemen ('male bus drivers, female salesperson').
+
+### Evidenz 8
+
+Inklusion und Repräsentation werden betont: 'multilingual content and fostering cultural exchange and inclusivity', Herausforderungen mit lokalen Sprachen ('particularly problematic in countries like Greece, where there is a pressing need for localised AI solutions') und kulturelle Nuancen in KI-Interpretation.
+
+### Evidenz 9
+
+Faire Nutzung von KI-Systemen und Schutzmechanismen: 'ensuring that these tools are used in ways that protect and respect young people's rights', Bias-Awareness und ethische Verantwortung in KI-Anwendungen.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper ist hochgradig relevant für die Schnittstelle KI und Soziale Arbeit. Es adressiert kritische ethische, justice-orientierte und praktische Fragen, die für Sozialarbeiter:innen zentral sind, und verbindet technische KI-Fragen mit sozialpolitischen Werten der Profession.
+**Domain Fit:** Hochgradig relevant für die Schnittstelle KI/Soziale Arbeit: Das Paper adressiert direkt die Kompetenzanforderungen von Jugendarbeiter:innen beim Umgang mit KI und untersucht sowohl technische als auch ethische Dimensionen, was für ein emanzipatorisches Verständnis von Sozialer Arbeit zentral ist.
 
-**Unique Contribution:** Die Entwicklung des EPIC-Modells bietet einen strukturierten, professionsspezifischen Rahmen zur ethischen KI-Integration in der Sozialen Arbeit, der explizit Dekolonisierung, Gemeinschaftsbeteiligung und intersektorale Zusammenarbeit priorisiert.
+**Unique Contribution:** Das Paper trägt durch eine systematische Analyse von KI-Kompetenzen speziell für Jugendarbeiter:innen (nicht nur allgemeine Educator:innen oder Bürger:innen) und durch empirische Fokusgruppen in vier europäischen Ländern bei, die kontextspezifische Herausforderungen und Bedarfe identifizieren.
 
-**Limitations:** Das Paper ist theoretisch orientiert und präsentiert kein empirisches Validierungsdesign für das EPIC-Modell; es wird anerkannt, dass marginalisierte Gruppen möglicherweise nicht über ausreichende Ressourcen für aktive AI-Partizipation verfügen, aber wenig konkrete Lösungsansätze dafür geboten.
+**Limitations:** Fokusgruppen-Größe und genaue Zusammensetzung nicht detailliert angegeben; begrenzt auf vier europäische Länder, daher keine globale Perspektive; der Fokus liegt eher auf Kompetenzen als auf strukturelle oder systemische Kritik von KI-Systemen.
 
-**Target Group:** Primär: Sozialarbeiter:innen, Sozialarbeits-Praktiker:innen und -Fachkräfte, Sozialarbeits-Ausbildende und -Verbände. Sekundär: KI-Entwickler:innen und Informatiker:innen, die mit Sozialsektor arbeiten; Policymaker:innen und Regierungsverantwortliche; Organisationen im Bereich Health und Social Services; Gemeinschaftsorganisationen und First Nations-Organisationen.
+**Target Group:** Jugendarbeiter:innen, Ausbilder:innen in der Sozialen Arbeit, Policymaker im Jugendsektor, KI-Entwickler:innen, die mit Jugendlichen arbeiten, Forschende in der Schnittstelle KI und Soziale Arbeit, Organisationen im Non-Formal Learning Sektor
 
 ## Schlüsselreferenzen
 
-- [[Buolamwini_Gebru_2018]] - Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification
-- [[Gough_Spencer_2019]] - Ethical social work practice in the technological era
-- [[DankwaMullan_et_al_2021]] - Framework on integrating health equity and racial justice into the AI development lifecycle
-- [[Reamer_2023]] - Artificial intelligence in social work: Emerging ethical issues
-- [[Rice_Tambe_2018]] - Merging social work science and computer science for social good
-- [[Meilvang_Dahler_2024]] - Decision support and algorithmic support: The construction of algorithms and professional discretion in social work
-- [[Khawaja_BélislePipon_2023]] - Your robot therapist is not your therapist: Understanding the role of AI-powered mental health chatbots
-- [[Cave_Dihal_2020]] - The whiteness of AI
-- [[World_Economic_Forum_2024]] - The Global Risks Report
-- [[Jacobi_Christensen_2023]] - Functions, utilities and limitations: A scoping study of decision support algorithms in social work
+- [[Vuorikari_R_Kluzer_S_and_Punie_Y_2022]] - DigComp 2.2: The Digital Competence Framework for Citizens
+- [[UNESCO_2023]] - UNESCO's AI Competency Framework for Teachers
+- [[Digital_Promise_nicht spezifiziert]] - AI Literacy Framework
+- [[European_Union_HighLevel_Expert_Group_on_AI_nicht spezifiziert]] - Ethics Guidelines for Trustworthy AI

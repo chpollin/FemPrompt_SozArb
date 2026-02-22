@@ -1,5 +1,5 @@
 ---
-title: AI literacy in K-12: a systematic literature review
+title: "AI literacy in K-12: a systematic literature review"
 authors:
   - Lorena Casal-Otero
   - Alejandro Catala
@@ -9,16 +9,10 @@ authors:
   - Senén Barro
 year: 2023
 type: journalArticle
-url: https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00418-7
 doi: 10.1186/s40594-023-00418-7
+url: "https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-023-00418-7"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -27,30 +21,33 @@ llm_categories:
 
 # AI literacy in K-12: a systematic literature review
 
-## Abstract
+## Transformation Trail
 
-Abstract
-            The successful irruption of AI-based technology in our daily lives has led to a growing educational, social, and political interest in training citizens in AI. Education systems now need to train students at the K-12 level to live in a society where they must interact with AI. Thus, AI literacy is a pedagogical and cognitive challenge at the K-12 level. This study aimed to understand how AI is being integrated into K-12 education worldwide. We conducted a search process following the systematic literature review method using Scopus. 179 documents were reviewed, and two broad groups of AI literacy approaches were identified, namely learning experience and theoretical perspective. The first group covered experiences in learning technical, conceptual and applied skills in a particular domain of interest. The second group revealed that significant efforts are being made to design models that frame AI literacy proposals. There were hardly any experiences that assessed whether students understood AI concepts after the learning experience. Little attention has been paid to the undesirable consequences of an indiscriminate and insufficiently thought-out application of AI. A competency framework is required to guide the didactic proposals designed by educational institutions and define a curriculum reflecting the sequence and academic continuity, which should be modular, personalized and adjusted to the conditions of the schools. Finally, AI literacy can be leveraged to enhance the learning of disciplinary core subjects by integrating AI into the teaching process of those subjects, provided the curriculum is co-designed with teachers.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** AI_Literacies
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 97 |
+| Category Validation | 92 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Algorithmic Fairness]]
+- [[Machine Learning Literacy]]
 
----
-title: "AI literacy in K-12: a systematic literature review"
-authors: ["Lorena Casal-Otero", "Alejandro Catala", "Carmen Fernández-Morante", "Maria Taboada", "Beatriz Cebreiro", "Senén Barro"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.md
-confidence: 92
----
+## Wissensdokument
 
 # AI literacy in K-12: a systematic literature review
 

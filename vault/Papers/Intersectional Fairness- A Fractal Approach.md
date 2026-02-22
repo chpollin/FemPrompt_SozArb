@@ -1,25 +1,13 @@
 ---
-title: Intersectional Fairness: A Fractal Approach
+title: "Intersectional Fairness: A Fractal Approach"
 authors:
   - S. Zannone
 year: 2023
 type: report
-url: https://arxiv.org/abs/2302.12683
+doi: 
+url: "https://arxiv.org/abs/2302.12683"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Definition
-  - Discrimination
-  - Intersectional Accuracy
-  - Intersectionality
-mitigation_strategies:
-  - Intersectional Definition
-  - Intersectional Accuracy
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -41,43 +29,33 @@ agreement: agree
 
 # Intersectional Fairness: A Fractal Approach
 
-## Abstract
+## Transformation Trail
 
-Diese Studie rahmt intersektionale Fairness in einem geometrischen Setting und projiziert Daten auf einen Hyperkubus. Die Autoren beweisen mathematisch, dass Fairness "nach oben" propagiert - die Sicherstellung von Fairness für alle Untergruppen auf der niedrigsten intersektionalen Ebene führt notwendigerweise zu Fairness auf allen höheren Ebenen. Sie definieren eine Familie von Metriken zur Erfassung intersektionaler Verzerrung und schlagen vor, Fairness als "fraktales" Problem zu betrachten, bei dem Muster auf der kleinsten Skala auf größeren Skalen wiederholt werden. Dieser Bottom-up-Ansatz führt zur natürlichen Entstehung fairer KI.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Intersectional Accuracy]]
-- [[Intersectional Definition]]
-- [[Intersectionality]]
+- [[Fairness Gerrymandering]]
+- [[Intersectional Fairness]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-- [[Intersectional Definition]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Intersectional Fairness: A Fractal Approach"
-authors: ["Giulio Filippi", "Sara Zannone", "Adriano Koshiyama"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.md
-confidence: 95
----
+## Wissensdokument
 
 # Intersectional Fairness: A Fractal Approach
 

@@ -1,19 +1,14 @@
 ---
-title: Datafied ageing futures: Regimes of anticipation and participatory futuring
+title: "Datafied ageing futures: Regimes of anticipation and participatory futuring"
 authors:
   - J. Jarke
   - H. Manchester
 year: 2025
 type: journalArticle
 doi: 10.1177/20539517241306363
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.82
 llm_categories:
@@ -26,29 +21,27 @@ llm_categories:
 
 # Datafied ageing futures: Regimes of anticipation and participatory futuring
 
-## Abstract
+## Transformation Trail
 
-Challenges regimes of anticipation suggesting datafied futures are inevitable, arguing futures are actively made through sociotechnical imaginaries promoted by powerful actors. Explores how to democratize futures-making regarding aging populations, critiquing how current anticipations around data-driven systems and ageist assumptions dominate discussions without adequate participation from affected populations. Develops participatory futuring methodology enabling diverse stakeholders, particularly older adults, to imagine and design alternative futures beyond dominant techno-solutionist narratives.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.82)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 93 |
+| Category Validation | 92 |
+| **Overall Confidence** | **91** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Data-fied ageing futures: Regimes of anticipation and participatory futuring"
-authors: ["Juliane Jarke", "Helen Manchester"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Jarke_2025_Datafied_ageing_futures_Regimes_of_anticipation.md
-confidence: 91
----
+**LLM:** Include (Confidence: 0.82)
+
+## Wissensdokument
 
 # Data-fied ageing futures: Regimes of anticipation and participatory futuring
 

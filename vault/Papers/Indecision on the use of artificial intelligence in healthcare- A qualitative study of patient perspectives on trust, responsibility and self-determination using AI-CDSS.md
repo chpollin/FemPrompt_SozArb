@@ -1,5 +1,5 @@
 ---
-title: Indecision on the use of artificial intelligence in healthcare: A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS
+title: "Indecision on the use of artificial intelligence in healthcare: A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS"
 authors:
   - D. Schneider
   - W. Liedtke
@@ -13,14 +13,9 @@ authors:
 year: 2025
 type: journalArticle
 doi: 10.1186/s12910-024-01143-5
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -36,32 +31,28 @@ agreement: agree
 
 # Indecision on the use of artificial intelligence in healthcare: A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS
 
-## Abstract
+## Transformation Trail
 
-Empirical qualitative study exploring patient perspectives on AI-based clinical decision support systems (AI-CDSS) in healthcare, revealing significant ambivalence about AI use in medical decision-making. Through interviews examining trust, responsibility distribution, and self-determination when AI systems assist physicians, findings show patients worry about decreased human interaction, loss of holistic care perspectives, and unclear accountability when AI makes errors. Vulnerable populations express particular concerns about algorithmic systems making decisions affecting their wellbeing.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Indecision on the use of artificial intelligence in healthcare - A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS"
-authors: ["Diana Schneider", "Wenke Liedtke", "Andrea Diana Klausen", "Myriam Lipprandt", "Florian Funer", "Tanja Bratan", "Nils B. Heyen", "Heike Aichinger", "Martin Langanke"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.md
-confidence: 92
----
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
+
+## Wissensdokument
 
 # Indecision on the use of artificial intelligence in healthcare - A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS
 

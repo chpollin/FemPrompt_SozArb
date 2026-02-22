@@ -5,22 +5,10 @@ authors:
   - P. K. Srijith
 year: 2025
 type: thesis
-url: https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=7888&context=open_access_etds
+doi: 
+url: "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=7888&context=open_access_etds"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Intersectional Accuracy
-  - Stereotyping
-  - Intersectionality
-mitigation_strategies:
-  - Bias Mitigation
-  - Debiasing
-  - Intersectional Accuracy
 llm_decision: Include
 llm_confidence: 0.75
 llm_categories:
@@ -42,39 +30,32 @@ agreement: agree
 
 # Model explanations for gender and ethnicity bias mitigation in AI-generated narratives
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Include (Confidence: 0.75)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 94 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.75)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
-- [[Stereotypen]]
-- [[Stereotyping]]
+- [[Intersectional Bias Analysis]]
 
-### Mitigation Strategies
-- [[Bias Mitigation]]
-- [[Debiasing]]
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives"
-authors: ["Martha Otisi Dimgba"]
-year: 2025
-type: thesis
-language: en
-processed: 2026-02-05
-source_file: Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md
-confidence: 91
----
+## Wissensdokument
 
 # Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives
 

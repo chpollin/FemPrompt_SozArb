@@ -4,15 +4,10 @@ authors:
   - A. Siapka
 year: 2023
 type: journalArticle
-url: https://arxiv.org/abs/2311.14700
+doi: 
+url: "https://arxiv.org/abs/2311.14700"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -33,32 +28,34 @@ agreement: agree
 
 # Towards a Feminist Metaethics of AI
 
-## Abstract
+## Transformation Trail
 
-This work develops a research agenda for a feminist metaethics of AI. Unlike traditional metaethics that reflects on moral judgments non-normatively, feminist metaethics expands its scope to ask not only what ethics is, but also how our approach to it should be. The author argues that a feminist metaethics of AI should investigate four areas: (1) continuity between theory and action in AI ethics, (2) real-world impacts of AI ethics, (3) the role and profile of those involved in AI ethics, and (4) AI's impacts on power relations through methods that consider context, emotions, and narrative.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Feministisch
-**Human Decision:** Include
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-## Full Text
+- [[Epistemic Injustice in AI Systems]]
+- [[Ethics Washing]]
+- [[Intersectional AI Governance]]
 
----
-title: "Towards a Feminist Metaethics of AI"
-authors: ["Anastasia Siapka"]
-year: 2022
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md
-confidence: 89
----
+## Wissensdokument
 
 # Towards a Feminist Metaethics of AI
 

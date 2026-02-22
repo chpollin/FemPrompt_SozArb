@@ -1,23 +1,14 @@
 ---
-title: Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review
+title: "Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review"
 authors:
   - M.-H. Yu
   - R. A. Rose
 year: 2025
 type: journalArticle
-url: https://doi.org/10.1177/10497315251350933
 doi: 10.1177/10497315251350933
+url: "https://doi.org/10.1177/10497315251350933"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Concerns
-  - Algorithmic Bias
-mitigation_strategies:
-  - Intersectional Concerns
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -39,39 +30,34 @@ agreement: agree
 
 # Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review
 
-## Abstract
+## Transformation Trail
 
-PRISMA-guided review of algorithmic tools in child welfare. Finds potential for consistency and early risk identification but significant concerns about bias, transparency, practitioner training, and stakeholder inclusion. Recommends audits, participatory design, and ethical guidelines; highlights evidence gaps.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
-- [[Intersectional Concerns]]
+- [[Algorithmic Fairness in Child Welfare]]
+- [[Algorithmic Transparency and Interpretability]]
+- [[Racial Disparities in Algorithmic Decision-Making]]
 
-### Mitigation Strategies
-- [[Intersectional Concerns]]
-
-## Full Text
-
----
-title: "Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review"
-authors: ["Meng-Hsuan Yu", "Roderick A. Rose"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in.md
-confidence: 95
----
+## Wissensdokument
 
 # Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review
 

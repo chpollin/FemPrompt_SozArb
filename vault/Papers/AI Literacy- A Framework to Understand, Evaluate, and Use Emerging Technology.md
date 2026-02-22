@@ -1,5 +1,5 @@
 ---
-title: AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology
+title: "AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology"
 authors:
   - Pati Ruiz
   - Kelly Mills
@@ -8,18 +8,12 @@ authors:
   - Judi Fusco
   - Jeremy Roschelle
   - Josh Weisgrau
-year: 06/2024
+year: 2024
 type: report
-url: https://hdl.handle.net/20.500.12265/218
+doi: 
+url: "https://hdl.handle.net/20.500.12265/218"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -38,35 +32,54 @@ agreement: disagree
 
 # AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology
 
-## Abstract
+## Transformation Trail
 
-To enable all who participate in educational settings to leverage AI tools for powerful learning, this paper describes a framework and strategies for educational leaders to design and implement a clear approach to AI Literacy for their specific audiences (e.g. learners, teachers, or others) that are safe and effective. The first part of the paper describes a framework that identifies essential components of AI Literacy and connects them to existing initiatives. The second part of the paper identifies strategies and illustrative examples as guidance for educational leaders to integrate AI Literacy in PK–12 education and adapt to their unique contexts.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
+- [[AI Literacy]]
 - [[Algorithmic Bias]]
+- [[Algorithmic Fairness Evaluation]]
+- [[Computational Thinking]]
+- [[Generative AI Literacy]]
 
-## Full Text
-
----
-title: "AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology"
-authors: ["Kelly Mills", "Pati Ruiz", "Keun-woo Lee", "Merijke Coenraad", "Judi Fusco", "Jeremy Roschelle", "Josh Weisgrau"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-05
-source_file: Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,.md
-confidence: 92
----
+## Wissensdokument
 
 # AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology
 

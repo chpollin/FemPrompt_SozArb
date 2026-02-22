@@ -1,126 +1,115 @@
 ---
-title: The end of the world as we know it? ChatGPT and social work
+title: The End of the World as We Know It? ChatGPT and Social Work
 authors:
   - L. Goldkind
   - L. Wolf
   - A. Glennon
   - J. Rios
   - L. Nissen
-year: 2024
+year: 2023
 type: journalArticle
 doi: 10.1093/sw/swad044
+url: "https://doi.org/10.1093/sw/swad044"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Inclusive Of
 llm_decision: Include
-llm_confidence: 0.92
+llm_confidence: 0.85
 llm_categories:
   - AI_Literacies
   - Generative_KI
-  - Prompting
   - Soziale_Arbeit
-  - Fairness
+  - Bias_Ungleichheit
 ---
 
-# The end of the world as we know it? ChatGPT and social work
+# The End of the World as We Know It? ChatGPT and Social Work
 
-## Abstract
+## Transformation Trail
 
-Editorial in flagship journal Social Work providing critical reflection on ChatGPT's introduction and implications for social work practice. Addresses how ChatGPT, built on natural language processing, responds to prompts and generates text responses. Notes social work's historical reluctance to embrace new technologies and positions ChatGPT as opportunity to reflect on strategies promoting just technology use. Urges social workers to join cross-disciplinary conversations about AI evolution and advocate for fair use. Calls for profession to move beyond fear and awe toward critical, reflective engagement with AI systems through thoughtful prompting practices.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Soziale_Arbeit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[AI Ethics Curriculum Integration]]
+- [[Algorithmic Fairness in Social Work]]
 
-### Mitigation Strategies
-- [[Inclusive Of]]
-
-## Full Text
-
----
-title: "The End of the World as We Know It? ChatGPT and Social Work"
-authors: ["Lauri Goldkind", "Lea Wolf", "Alexis Glennon", "Juan Rios", "Laura Nissen"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and.md
-confidence: 95
----
+## Wissensdokument
 
 # The End of the World as We Know It? ChatGPT and Social Work
 
 ## Kernbefund
 
-ChatGPT bietet sowohl Chancen (Effizienzsteigerung, Unterstützung von Klient:innen) als auch erhebliche Risiken für die Soziale Arbeit, insbesondere bezüglich der Reproduktion von Bias und der Marginalisierung vulnerabler Bevölkerungsgruppen. Sozialarbeitende müssen aktiv in den globalen Dialog über KI-Ethik eintreten und die Profession entsprechend ausbilden.
+ChatGPT bietet sowohl Chancen (Effizienzsteigerung) als auch Risiken für die Soziale Arbeit, erfordert aber kritische Auseinandersetzung der Profession mit ethischen, justizialen und kompetenzbezogenen Fragen, um vulnerable Populationen vor algorithmengestützter Marginalisierung zu schützen.
 
 ## Forschungsfrage
 
-Wie wird ChatGPT und KI-Technologie die Soziale Arbeit in der nahen Zukunft disruptiv beeinflussen und welche Strategien fördern eine gerechtfertigte Nutzung?
+Wie wird ChatGPT und KI die Praxis, Ausbildung und ethischen Grundlagen der Sozialen Arbeit disruptieren und wie können Sozialarbeiter:innen zu gerechter KI-Nutzung beitragen?
 
 ## Methodik
 
-Theoretisch/Kommentarisch mit illustrativen Beispielen und reflexiver Analyse
-**Datenbasis:** Keine empirischen Daten; konzeptuelle Analyse und Diskursanalyse basierend auf Fachliteratur
+Theoretisch/Kommentar: Konzeptuelle Analyse mit praktischen Beispielen (ChatGPT-Fallnote) und reflexive Diskussion der Implikationen für Soziale Arbeit
+**Datenbasis:** Nicht empirisch: konzeptuelle Analyse, Literaturüberblick, praktisches Beispiel einer KI-generierten Fallnotiz
 
 ## Hauptargumente
 
-- ChatGPT kann sozialarbeiterische Routineaufgaben (Dokumentation, Fallnotizen, Psychoedukation) automatisieren, führt aber zur Gefahr, dass fundamental engagement mit professionellem Wissen entfällt, insbesondere in der Ausbildung.
-- Existierende KI-Systeme in Bereichen wie Strafzumessung und Kindeswohlgefährdungsrisikobewertung zeigen disproportionale negative Auswirkungen auf marginalisierte Bevölkerungsgruppen, da die Technologieentwicklung bestehende Bias und Diskriminierung verstärkt.
-- Sozialarbeiter:innen benötigen Schulungen zur kritischen Bewertung von KI-Tools, zur ethischen Anwendung und zur Vermittlung von KI-Literacies an Klient:innen und müssen dabei menschliche Fähigkeiten (Beziehungsaufbau, Problemidentifikation, Gemeinschaftsbildung) priorisieren.
+- ChatGPT ist ein hochkomplexes Sprachmodell, das auf 40 Gigabyte Textdaten trainiert wurde, aber strukturelle Verzerrungen der Trainungsdaten reproduziert und keine inhärente Ethik, Beziehungsfähigkeit oder Problemidentifikationskompetenz besitzt.
+- Soziale Arbeit als Profession hat historisch Technologien nicht adaptiert, muss aber jetzt Curricula, Codex-Schulung und Kompetenzanforderungen an KI-Tools anpassen, um ethische Nutzung in Lehre und Praxis zu sichern.
+- Algorithmengestützte Entscheidungssysteme verstärken existierende Diskriminierung und Marginalisierung vulnerabler Populationen in Kontexten wie Sentencing und Child Welfare; Sozialarbeiter:innen müssen in globale Debatten zu AI-Regulierung und justizialer Nutzung eintreten.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Few practitioners have access to training that would position them to interrogate the use of ChatGPT or its implications. Congruent with the ethical imperative to maintain competency, professionals will need channels to learn about emerging AI tools.
+Social work education must expand training on the Code of Ethics to speak to new AI tools... professionals will need channels to learn about emerging AI tools, seeking guidance from professional organizations
 
 ### Evidenz 2
 
-ChatGPT is a chatbot powered by artificial intelligence (AI) that responds to prompts posed as questions, producing intelligible, mostly accurate text responses. ChatGPT is among the most complex language models yet assembled.
+ChatGPT is among the most complex language models yet assembled... ChatGPT was trained on a massive 40 gigabytes of text data
 
 ### Evidenz 3
 
-Natural language processing, a branch of AI initiated in the 1960s that seeks to program a computer's capacity to understand text and spoken words. AI already shapes and speeds up our daily lives, powering Amazon recommendations, employment screening, social media feeds.
+AI is the theory and development of computer systems able to perform tasks that normally require human intelligence, such as visual perception, speech recognition, decision making... AI already shapes and speeds up our daily lives, powering Amazon recommendations, employment screening, social media feeds
 
 ### Evidenz 4
 
-For social workers, the best way to comprehend how the chatbot could augment or disrupt practice is to watch it work. ChatGPT could support transformational efficiencies at the organizational level, speeding the production of grant writing and fundraising activity, easing documentation demands.
+For social workers, the best way to comprehend how the chatbot could augment or disrupt practice is to watch it work... Social work education is reckoning with the reality that ChatGPT allows students to generate course assignments
 
 ### Evidenz 5
 
-Evidence shows that the existing use of advanced technological tools—in arenas like sentencing or risk assessment in child welfare—has exerted disproportionate impact upon marginalized populations, because the construction and deployment of these technologies amplifies existing bias and discrimination.
+Evidence shows that the existing use of advanced technological tools—in arenas like sentencing or risk assessment in child welfare—has exerted disproportionate impact upon marginalized populations, because the construction and deployment of these technologies amplifies existing bias and discrimination
 
 ### Evidenz 6
 
-The extant texts training these language models are generally not inclusive of diverse perspectives and frequently reflect larger biases of society. As AI tools grow in capacity and complexity, and as they are incorporated, increasingly, into the structures that govern social life, vulnerable populations may face accelerating marginalization.
+The extant texts training these language models are generally not inclusive of diverse perspectives and frequently reflect larger biases of society... vulnerable populations may face accelerating marginalization
 
 ### Evidenz 7
 
-Organizations will need to move rapidly to consider and distribute policies that allow them to maximize the utility of AI with practices that align with their mission. AI and chatbots will continue to evolve, and the advent of ChatGPT offers organizations a critical opportunity to conceptualize which tasks can be ethically automated.
+Organizations will need to move rapidly to consider and distribute policies that allow them to maximize the utility of AI with practices that align with their mission... which tasks can be ethically automated... social workers are not uniquely responsible for assessing and remediating the ethical harms associated with AI... new types of regulations, ethics, guidelines, and functional capacities to promote meaningful and life-affirming use of AI
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper ist hochgradig relevant für die Schnittstelle KI und Soziale Arbeit. Es adressiert zentrale Fragen der Professionalisierung, ethischen Anwendung und sozialen Gerechtigkeit, präsentiert aber keinen expliziten Gender-Fokus.
+**Domain Fit:** Hochrelevant für die Schnittstelle AI und Soziale Arbeit: Das Paper adressiert direkt, wie generative KI-Systeme Sozialarbeiterische Praxis, Ausbildung und ethische Verpflichtungen beeinflussen und plädiert für reflexive, kritische Engagement der Profession mit KI-Entwicklungen.
 
-**Unique Contribution:** Erstmalige systematische Reflexion von ChatGPT speziell für sozialarbeiterische Ausbildung, Praxis und organisationale Strukturen mit Fokus auf Fairness und marginalisierte Gruppen.
+**Unique Contribution:** Das Paper leistet einen frühen, profession-spezifischen kritischen Kommentar zu ChatGPT, der über Technologie-Hype hinausgeht und die Notwendigkeit von ethischer Due-Diligence, Justice-Perspektive und Curriculum-Reform in der Sozialen Arbeit konkretisiert.
 
-**Limitations:** Rein konzeptuelle/reflektive Analyse ohne empirische Daten; begrenzte Diskussion von Gender und intersektionalen Perspektiven; keine detaillierte technische Analyse von Bias-Mechanismen in LLMs.
+**Limitations:** Primär konzeptionell-normativ ohne empirische Daten zu tatsächlicher ChatGPT-Nutzung in sozialer Arbeit oder Impact-Forschung; begrenzte Literaturzitationen (nur 5 Referenzen) und fehlende differenzierte Gender-/Intersektionalitätsperspektive trotz kritischer Analyse von Marginalisierung.
 
-**Target Group:** Sozialarbeiter:innen und Soziale-Arbeit-Profis, Fachkräfte in Bildungseinrichtungen (Schools of Social Work), Organisationsleitungen in Sozialen Diensten, Policymaker im Sozialbereich, KI-Ethiker:innen mit Fokus auf vulnerable Populationen
+**Target Group:** Primär: Sozialarbeiter:innen, Lehrende in Sozialer Arbeit, Ausbildner:innen, Führungskräfte in Sozialorganisationen; sekundär: KI-Ethiker:innen, Policymaker, die an fairness und justice-zentriertem Einsatz von AI interessiert sind
 
 ## Schlüsselreferenzen
 
@@ -128,4 +117,4 @@ Organizations will need to move rapidly to consider and distribute policies that
 - [[Goldkind_L_Wolf_L_Jones_J_2016]] - Late adapters? How social workers acquire knowledge and skills about technology tools
 - [[Kitchin_R_2014]] - The data revolution: Big data, open data, data infrastructures and their consequences
 - [[Wei_C_Yu_Z_Fong_S_2018]] - How to build a chatbot: chatbot framework and its capabilities
-- [[Stevenson_A_2015]] - Artificial intelligence in Oxford Dictionary of English
+- [[Stevenson_A_Ed_2015]] - Artificial intelligence. Oxford Dictionary of English

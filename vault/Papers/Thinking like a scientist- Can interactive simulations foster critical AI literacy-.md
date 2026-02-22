@@ -1,5 +1,5 @@
 ---
-title: Thinking like a scientist: Can interactive simulations foster critical AI literacy?
+title: "Thinking like a scientist: Can interactive simulations foster critical AI literacy?"
 authors:
   - Y. Zhao
   - A. Michal
@@ -8,15 +8,9 @@ authors:
 year: 2025
 type: conferencePaper
 doi: 10.1007/978-3-031-98417-4_5
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -36,35 +30,24 @@ agreement: agree
 
 # Thinking like a scientist: Can interactive simulations foster critical AI literacy?
 
-## Abstract
+## Transformation Trail
 
-Empirical study with 605 participants demonstrates that interactive simulations enhance critical AI literacy by engaging learners in scientific thinking processes including hypothesis testing and direct observation of AI behavior. Reveals that critical AI literacy requires understanding of fairness, dataset representativeness, and bias mechanisms in language models beyond technical knowledge. Establishes that effective AI literacy education must move beyond static instruction toward experiential engagement that fosters deep conceptual understanding of power structures embedded in AI systems.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Fairness
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
+- [[Algorithmic Fairness]]
+- [[Critical AI Literacy]]
 
-## Full Text
-
----
-title: "Thinking Like a Scientist: Can Interactive Simulations Foster Critical AI Literacy?"
-authors: ["Yiling Zhao", "Audrey Michal", "Nithum Thain", "Hari Subramonyam"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Zhao_2025_Thinking_like_a_scientist_Can_interactive.md
-confidence: 75
----
+## Wissensdokument
 
 # Thinking Like a Scientist: Can Interactive Simulations Foster Critical AI Literacy?
 

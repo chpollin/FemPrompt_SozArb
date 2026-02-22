@@ -1,33 +1,24 @@
 ---
-title: Data Feminism for AI
+title: Data feminism for AI
 authors:
   - L. Klein
   - C. D'Ignazio
 year: 2024
 type: conferencePaper
 doi: 10.1145/3630106.3658543
+url: "https://doi.org/10.1145/3630106.3658543"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Intersectionality
-mitigation_strategies:
-  - Intersectional Accuracy
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
-  - AI_Literacies
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
   - Diversitaet
   - Feministisch
   - Fairness
-human_decision: Include
+human_decision: Exclude
 human_categories:
   - AI_Literacies
   - Generative_KI
@@ -37,44 +28,58 @@ human_categories:
   - Diversitaet
   - Feministisch
   - Fairness
-agreement: agree
+agreement: disagree
 ---
 
-# Data Feminism for AI
+# Data feminism for AI
 
-## Abstract
+## Transformation Trail
 
-Presents intersectional feminist principles for just, ethical, and sustainable AI research. Extends seven Data Feminism principles to AI contexts: examine power, challenge power, rethink binaries and hierarchies, elevate emotion and embodiment, consider context, embrace pluralism, and make work visible. Proposes two additional principles on environmental impacts and consent. Framework helps identify and mitigate predictable harms before releasing discriminatory systems. Practical applications include participatory ML design processes and analysis of online advertising systems.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Nein | X |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Ja |  |
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz D'Ignazio_2024_Data_Feminism_for_AI]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
+- [[Algorithmic Fairness]]
+- [[Data Feminism]]
+- [[Gender Bias in NLP]]
+- [[Intersectional Feminism]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Data Feminism for AI"
-authors: ["Lauren Klein", "Catherine D'Ignazio"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: D'Ignazio_2024_Data_Feminism_for_AI.md
-confidence: 95
----
+## Wissensdokument
 
 # Data Feminism for AI
 

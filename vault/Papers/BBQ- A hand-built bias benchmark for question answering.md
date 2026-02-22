@@ -1,5 +1,5 @@
 ---
-title: BBQ: A hand-built bias benchmark for question answering
+title: "BBQ: A hand-built bias benchmark for question answering"
 authors:
   - A. Parrish
   - A. Chen
@@ -8,17 +8,10 @@ authors:
   - S. R. Bowman
 year: 2022
 type: conferencePaper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Stereotyping
-  - Stereotype
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -40,33 +33,32 @@ agreement: agree
 
 # BBQ: A hand-built bias benchmark for question answering
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 94 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotyping]]
+- [[Representational Harm]]
 
-## Full Text
-
----
-title: "BBQ: A Hand-Built Bias Benchmark for Question Answering"
-authors: ["Alicia Parrish", "Angelica Chen", "Nikita Nangia", "Vishakh Padmakumar", "Jason Phang", "Jana Thompson", "Phu Mon Htut", "Samuel R. Bowman"]
-year: 2022
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question.md
-confidence: 91
----
+## Wissensdokument
 
 # BBQ: A Hand-Built Bias Benchmark for Question Answering
 

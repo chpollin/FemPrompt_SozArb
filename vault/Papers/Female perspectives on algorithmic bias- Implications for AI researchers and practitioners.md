@@ -1,24 +1,15 @@
 ---
-title: Female perspectives on algorithmic bias: Implications for AI researchers and practitioners
+title: "Female perspectives on algorithmic bias: Implications for AI researchers and practitioners"
 authors:
   - B. Fraile-Rojas
   - C. De-Pablos-Heredero
   - M. Méndez-Suárez
 year: 2025
 type: journalArticle
-url: https://colab.ws/articles/10.1108%2Fmd-04-2024-0884
 doi: 10.1108/MD-04-2024-0884
+url: "https://colab.ws/articles/10.1108%2Fmd-04-2024-0884"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Bias
-  - Intersectionality
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -33,34 +24,34 @@ llm_categories:
 
 # Female perspectives on algorithmic bias: Implications for AI researchers and practitioners
 
-## Abstract
+## Transformation Trail
 
-This study uses NLP and machine learning to analyze 172,041 tweets from female users discussing gender inequality in AI. It identifies prominent themes including the future of AI technologies and women's active role in ensuring gender-balanced systems. Findings show that algorithmic bias directly affects women's experiences, prompting engagement in online discourse about injustices. Women lead constructive conversations and create entrepreneurial solutions when faced with bias, demonstrating how feminist digital literacies can make AI biases visible and push for their reduction.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
-- [[Discrimination]]
-- [[Intersectionality]]
+- [[Algorithmic Fairness]]
+- [[Gender Bias in AI Systems]]
+- [[Intersectionality in AI]]
+- [[Responsible AI Development]]
 
-## Full Text
-
----
-title: "Female perspectives on algorithmic bias: implications for AI researchers and practitioners"
-authors: ["Belen Fraile-Rojas", "Carmen De-Pablos-Heredero", "Mariano Mendez-Suarez"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.md
-confidence: 95
----
+## Wissensdokument
 
 # Female perspectives on algorithmic bias: implications for AI researchers and practitioners
 

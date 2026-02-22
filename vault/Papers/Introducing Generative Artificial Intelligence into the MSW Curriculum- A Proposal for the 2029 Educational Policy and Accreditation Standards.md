@@ -1,5 +1,5 @@
 ---
-title: Introducing Generative Artificial Intelligence into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards
+title: "Introducing Generative Artificial Intelligence into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards"
 authors:
   - M. Y. Rodriguez
   - L. Goldkind
@@ -8,18 +8,10 @@ authors:
   - B. E. Perron
 year: 2024
 type: journalArticle
-url: https://doi.org/10.1080/10437797.2024.2340931
 doi: 10.1080/10437797.2024.2340931
+url: "https://doi.org/10.1080/10437797.2024.2340931"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-mitigation_strategies:
-  - Prompt Engineering
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -44,38 +36,32 @@ agreement: agree
 
 # Introducing Generative Artificial Intelligence into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards
 
-## Abstract
+## Transformation Trail
 
-Proposal to add an explicit AI competency to MSW accreditation. Outlines benefits and risks of generative AI, recommends curricular content on ethics, bias, transparency, and responsible use, and frames AI literacy as essential for safeguarding client dignity and equity while leveraging innovation.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Generative_KI, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotyping]]
-
-### Mitigation Strategies
 - [[Prompt Engineering]]
 
-## Full Text
-
----
-title: "Introducing Generative Artificial Intelligence Into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards"
-authors: ["Maria Y. Rodriguez", "Lauri Goldkind", "Bryan G. Victor", "Barbara Hiltz", "Brian E. Perron"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Rodriguez_2024_Introducing_Generative_Artificial_Intelligence.md
-confidence: 95
----
+## Wissensdokument
 
 # Introducing Generative Artificial Intelligence Into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards
 

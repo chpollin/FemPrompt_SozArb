@@ -4,38 +4,35 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Stereotypisierung
-mitigation_strategies: []
 ---
 
 # Ng_2025_Opportunities,_challenges_and_school_strategies
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 93 |
+| **Overall Confidence** | **94** |
+
 ## Key Concepts
 
-### Bias Types
-- [[Stereotyping]]
-- [[Stereotypisierung]]
+- [[AI Literacy]]
 
-## Full Text
-
----
-title: "Opportunities, challenges and school strategies for integrating generative AI in education"
-authors: ["Davy Tsz Kit Ng", "Eagle Kai Chi Chan", "Chung Kwan Lo"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Ng_2025_Opportunities,_challenges_and_school_strategies.md
-confidence: 94
----
+## Wissensdokument
 
 # Opportunities, challenges and school strategies for integrating generative AI in education
 

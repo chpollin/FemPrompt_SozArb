@@ -1,26 +1,13 @@
 ---
-title: Coded injustice: Surveillance and discrimination in Denmark's automated welfare state
+title: "Coded injustice: Surveillance and discrimination in Denmark's automated welfare state"
 authors:
   - Unknown Author
 year: 2024
 type: report
-url: https://www.amnesty.org/en/documents/eur18/8709/2024/en/
+doi: 
+url: "https://www.amnesty.org/en/documents/eur18/8709/2024/en/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Intersectional Harms
-  - Algorithmic Discrimination
-  - Intersectionality
-  - Algorithmic Bias
-  - Structural Discrimination
-mitigation_strategies:
-  - Intersectional Harms
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -33,41 +20,31 @@ llm_categories:
 
 # Coded injustice: Surveillance and discrimination in Denmark's automated welfare state
 
-## Abstract
+## Transformation Trail
 
-Critical human rights investigation documenting how Denmark's AI-powered welfare fraud detection systems risk discriminating against people with disabilities, low-income individuals, migrants, refugees, and marginalized racial groups. Report examines up to 60 algorithmic models used to flag individuals for fraud investigations, revealing mass surveillance practices violating privacy rights and creating atmospheres of fear among welfare recipients. Key findings demonstrate how automated systems paired with extensive data collection from multiple government agencies create what approaches prohibited social scoring. Investigation reveals harmful psychological tolls on surveilled populations and argues automation exacerbates pre-existing structural inequalities rather than creating fair or efficient systems.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
 - [[Algorithmic Discrimination]]
-- [[Discrimination]]
-- [[Intersectional Harms]]
-- [[Intersectionality]]
-- [[Structural Discrimination]]
 
-### Mitigation Strategies
-- [[Intersectional Harms]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Coded Injustice: Surveillance and Discrimination in Denmark's Automated Welfare State"
-authors: ["Amnesty International"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-04
-source_file: Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination.md
-confidence: 95
----
+## Wissensdokument
 
 # Coded Injustice: Surveillance and Discrimination in Denmark's Automated Welfare State
 

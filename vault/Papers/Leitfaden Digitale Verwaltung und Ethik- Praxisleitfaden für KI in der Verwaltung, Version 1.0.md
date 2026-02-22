@@ -1,5 +1,5 @@
 ---
-title: Leitfaden Digitale Verwaltung und Ethik: Praxisleitfaden für KI in der Verwaltung, Version 1.0
+title: "Leitfaden Digitale Verwaltung und Ethik: Praxisleitfaden für KI in der Verwaltung, Version 1.0"
 authors:
   - P. Biegelbauer
   - C. Lackinger
@@ -8,15 +8,10 @@ authors:
   - P. Weinlinger
 year: 2023
 type: report
-url: https://oeffentlicherdienst.gv.at/wp-content/uploads/2023/11/Leitfaden-Digitale-Verwaltung-Ethik.pdf
+doi: 
+url: "https://oeffentlicherdienst.gv.at/wp-content/uploads/2023/11/Leitfaden-Digitale-Verwaltung-Ethik.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -27,29 +22,25 @@ llm_categories:
 
 # Leitfaden Digitale Verwaltung und Ethik: Praxisleitfaden für KI in der Verwaltung, Version 1.0
 
-## Abstract
+## Transformation Trail
 
-This guideline defines AI literacy as the ability to understand and use AI, emphasizing that safe, self-determined, and responsible use requires sufficient understanding of the technology's functioning, possibilities, and challenges. It identifies automation bias as a central risk and emphasizes competency building and training as the foundation for all further measures, recommending the creation of educational standards for AI procurement and application.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Algorithmic Fairness]]
+- [[Digital Sovereignty]]
+- [[Inclusive AI Design]]
 
----
-title: "Leitfaden Digitale Verwaltung und Ethik. Praxisleitfaden für KI in der Verwaltung, Version 1.0"
-authors: ["Peter Biegelbauer", "Caroline Lackinger", "Sven Schlarb", "Edgar Subak", "Pia Weinlinger"]
-year: 2023
-type: report
-language: de
-processed: 2026-02-05
-source_file: Biegelbauer_2023_Leitfaden_Digitale_Verwaltung_und_Ethik.md
-confidence: 75
----
+## Wissensdokument
 
 # Leitfaden Digitale Verwaltung und Ethik. Praxisleitfaden für KI in der Verwaltung, Version 1.0
 

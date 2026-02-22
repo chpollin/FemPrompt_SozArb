@@ -6,15 +6,10 @@ authors:
   - C. Wright
 year: 2025
 type: report
-url: https://www.open.ac.uk/blogs/learning-design/wp-content/uploads/2025/01/OU-Critical-AI-Literacy-framework-2025-external-sharing.pdf
+doi: 
+url: "https://www.open.ac.uk/blogs/learning-design/wp-content/uploads/2025/01/OU-Critical-AI-Literacy-framework-2025-external-sharing.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -28,29 +23,33 @@ llm_categories:
 
 # A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1)
 
-## Abstract
+## Transformation Trail
 
-This framework defines Critical AI Literacy as expanding beyond traditional AI literacy to examine how Large Language Models contribute to ongoing epistemic injustices that can lead to significant social and personal harm. It applies equality, diversity, inclusion, and accessibility principles to AI use, emphasizing the importance of critically evaluating AI-generated outputs and engaging in equitable and inclusive prompting practices. Critical AI Literacy is conceptualized as context-specific and treats literacy as a social practice rather than a possession. At advanced levels, it examines AI's potential to shift power relationships and explores how AI contributes to inequalities while considering ways it could help redress power balances.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Bias Detection]]
+- [[Critical AI Literacy]]
+- [[Epistemic Injustice in AI Systems]]
 
----
-title: "A framework for the Learning and Teaching of Critical AI Literacy skills"
-authors: ["Dr Mirjam Hauck", "Eleanor Moore", "Carol Wright"]
-year: 2025
-type: workingPaper
-language: en
-processed: 2026-02-05
-source_file: Hauck_2025_A_framework_for_the_learning_and_teaching_of.md
-confidence: 94
----
+## Wissensdokument
 
 # A framework for the Learning and Teaching of Critical AI Literacy skills
 

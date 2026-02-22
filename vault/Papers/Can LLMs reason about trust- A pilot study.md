@@ -7,15 +7,10 @@ authors:
   - B. T. R. Savarimuthu
 year: 2024
 type: journalArticle
-url: https://arxiv.org/html/2507.21075v1
+doi: 
+url: "https://arxiv.org/html/2507.21075v1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -24,29 +19,27 @@ llm_categories:
 
 # Can LLMs reason about trust? A pilot study
 
-## Abstract
+## Transformation Trail
 
-Pilot study investigating LLMs' ability to reason about trust between individuals by capturing complex mental states that exceed traditional symbolic approaches. Evaluates whether LLMs can analyze conversations and assess trust levels based on willingness, competence, and security factors. Demonstrates that LLMs can identify individual goals and develop improvement suggestions for trust building, as well as generate strategic action plans for trust promotion. Suggests LLMs have potential to bridge the gap between computational and socio-cognitive trust models.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Can LLMs Reason About Trust? A Pilot Study"
-authors: ["Anushka Debnath", "Stephen Cranefield", "Emiliano Lorini", "Bastin Tony Roy Savarimuthu"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md
-confidence: 88
----
+**LLM:** Exclude (Confidence: 0.85)
+
+## Wissensdokument
 
 # Can LLMs Reason About Trust? A Pilot Study
 

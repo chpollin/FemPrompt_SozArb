@@ -1,21 +1,15 @@
 ---
-title: Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption
+title: "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption"
 authors:
   - A. Thwaites
   - C. Maas
   - Y. Zhang
 year: 2024
 type: journalArticle
-url: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1293235/full
 doi: 10.3389/feduc.2024.1293235
+url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1293235/full"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -26,29 +20,31 @@ llm_categories:
 
 # Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption
 
-## Abstract
+## Transformation Trail
 
-This article proposes the "3E model" (Expose, Explore, Exploit) as a pedagogical framework for developing critical AI literacy. The model aims to move students beyond passive use of AI to a more critical engagement. The "Expose" phase involves revealing the underlying mechanisms and biases of AI systems. "Explore" encourages students to test AI boundaries and critically question its outputs, a practice akin to critical prompting. "Exploit" focuses on using AI for creative and novel purposes. While not explicitly feminist, the framework provides a practical method for developing the critical literacies needed to identify and question the co-constitution of discrimination in AI outputs, thereby making biases visible.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Prompting, Bias_Ungleichheit
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 94 |
+| Category Validation | 92 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
 
----
-title: "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption"
-authors: ["Maarit Jaakkola"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md
-confidence: 91
----
+## Wissensdokument
 
 # Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption
 

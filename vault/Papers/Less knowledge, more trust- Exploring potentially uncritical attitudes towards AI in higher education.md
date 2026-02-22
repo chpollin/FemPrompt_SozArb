@@ -4,18 +4,12 @@ authors:
   - Gabriele Biagini
   - Stefano Cuomo
   - Maria Ranieri
-year: Juli 24, 2024
+year: 2024
 type: journalArticle
-url: https://doi.org/10.17471/2499-4324/1337
 doi: 10.17471/2499-4324/1337
+url: "https://doi.org/10.17471/2499-4324/1337"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.92
 llm_categories:
@@ -24,29 +18,33 @@ llm_categories:
 
 # Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education
 
-## Abstract
+## Transformation Trail
 
-L'intelligenza artificiale (IA) ha il potenziale per trasformare vari aspetti delle nostre vite, ma il suo sviluppo è stato accompagnato da numerose preoccupazioni sociali ed etiche. Per comprendere le implicazioni e i meccanismi sottostanti, è essenziale acquisire una comprensione ampia dei suoi benefici e svantaggi. A questo scopo, l'alfabetizzazione all'IA è un fattore fondamentale per promuovere atteggiamenti più consapevoli verso lo sviluppo dell'IA e delle sue implicazioni. Tuttavia, la ricerca sulla literacy all'IA è ancora agli esordi. Per contribuire ai progressi del settore, questo articolo presenta i risultati di uno studio volto a valutare l'alfabetizzazione all'IA degli studenti nel contesto dell'istruzione universitaria, concentrandosi su dei dottorandi. L’indagine sulla loro literacy all’IA è stata condotta su quattro dimensioni: cognitiva, operativa, critica ed etica. I risultati mostrano che, sebbene i partecipanti avessero poca conoscenza dell'IA, erano eccessivamente fiduciosi nelle capacità della tecnologia. Lo studio evidenzia la necessità di un approccio più completo all'alfabetizzazione all'IA, che includa una comprensione più profonda delle sue implicazioni etiche, sociali ed economiche.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.92)
-**LLM Categories:** AI_Literacies
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.92)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Ethics Education]]
+- [[Algorithmic Fairness and Equity]]
+- [[Critical AI Literacy]]
 
----
-title: "Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education"
-authors: ["Gabriele Biagini", "Stefano Cuomo", "Maria Ranieri"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially.md
-confidence: 95
----
+## Wissensdokument
 
 # Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education
 

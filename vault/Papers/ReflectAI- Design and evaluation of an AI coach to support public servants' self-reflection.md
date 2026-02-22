@@ -1,5 +1,5 @@
 ---
-title: ReflectAI: Design and evaluation of an AI coach to support public servants' self-reflection
+title: "ReflectAI: Design and evaluation of an AI coach to support public servants' self-reflection"
 authors:
   - H.-H. Näscher
   - J. Schaffner
@@ -7,14 +7,9 @@ authors:
 year: 2025
 type: conferencePaper
 doi: 10.1007/978-3-032-02515-9_7
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -30,32 +25,37 @@ agreement: disagree
 
 # ReflectAI: Design and evaluation of an AI coach to support public servants' self-reflection
 
-## Abstract
+## Transformation Trail
 
-Design science research presenting ReflectAI, an LLM-based AI coach designed to support public servants in developing self-reflection competencies—critical skill for digital transformation in public administration. Two-week user study with seven public servants revealed three key benefits: increased awareness of self-reflection opportunities, improved thought structure, and valuable conversation documentation. Demonstrates how conversational AI can facilitate reflective practice through structured prompting and dialogue. Shows AI coaching for personality-related competencies, demonstrating how prompt-based interactions can support professional development in human services contexts closely aligned with social services.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** keine
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Soziale_Arbeit
-**Human Decision:** Unclear
-**Human Categories:** Generative_KI
-**Agreement:** Disagree
+### Stufe 4: Assessment
 
-## Key Concepts
+**LLM:** Include (Confidence: 0.85)
+**Human:** Unclear
 
-## Full Text
+**Kategorie-Vergleich (bei Divergenz):**
 
----
-title: "Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings"
-authors: ["Sara Hofmann", "Lieselot Danneels", "Roel Dobbe", "Anna-Sophie Novak", "Peter Parycek", "Gerhard Schwabe", "Vera Spitzer", "Jolien Ubacht"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md
-confidence: 75
----
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Nein | Ja | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Ja | X |
+| Bias_Ungleichheit | Nein | Nein |  |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to]] fuer detaillierte Analyse
+
+
+## Wissensdokument
 
 # Electronic Participation: 17th IFIP WG 8.5 International Conference, ePart 2025 Krems, Austria, August 31 - September 4, 2025 Proceedings
 

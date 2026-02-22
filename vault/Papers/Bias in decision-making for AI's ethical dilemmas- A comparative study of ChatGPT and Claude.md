@@ -1,23 +1,13 @@
 ---
-title: Bias in decision-making for AI's ethical dilemmas: A comparative study of ChatGPT and Claude
+title: "Bias in decision-making for AI's ethical dilemmas: A comparative study of ChatGPT and Claude"
 authors:
   - Z. Wu
 year: 2025
 type: report
-url: https://arxiv.org/html/2501.10484v2
+doi: 
+url: "https://arxiv.org/html/2501.10484v2"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypisch
-  - Intersectional Protected
-mitigation_strategies:
-  - Debiasing
-  - Fine-tuning
-  - Intersectional Protected
 llm_decision: Exclude
 llm_confidence: 0.3
 llm_categories:
@@ -35,37 +25,52 @@ agreement: disagree
 
 # Bias in decision-making for AI's ethical dilemmas: A comparative study of ChatGPT and Claude
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.3)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 93 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.3)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Nein | X |
+
+> Siehe [[Divergenz Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Protected]]
-- [[Stereotypisch]]
+- [[Algorithmic Bias in Large Language Models]]
+- [[Algorithmic Fairness]]
+- [[Intersectional Discrimination]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Fine-tuning]]
-- [[Intersectional Protected]]
-
-## Full Text
-
----
-title: "Bias in Decision-Making for AI's Ethical Dilemmas: A Comparative Study of ChatGPT and Claude"
-authors: ["Yile Yan", "Yuqi Zhu", "Wentao Xu"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md
-confidence: 91
----
+## Wissensdokument
 
 # Bias in Decision-Making for AI's Ethical Dilemmas: A Comparative Study of ChatGPT and Claude
 

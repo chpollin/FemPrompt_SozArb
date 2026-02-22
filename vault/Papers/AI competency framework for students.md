@@ -4,17 +4,10 @@ authors:
   - Unknown Author
 year: 2024
 type: book
-url: https://unesdoc.unesco.org/ark:/48223/pf0000391105
+doi: 
+url: "https://unesdoc.unesco.org/ark:/48223/pf0000391105"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Equitable Quality
-  - Inclusive And
 llm_decision: Exclude
 llm_confidence: 0.3
 llm_categories:
@@ -33,32 +26,51 @@ agreement: disagree
 
 # AI competency framework for students
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.3)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.3)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Unknown_AI_competency_framework_for_students]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Equitable Quality]]
-- [[Inclusive And]]
+- [[AI Literacy Framework]]
+- [[Algorithmic Fairness in Education]]
 
-## Full Text
-
----
-title: "AI competency framework for students"
-authors: ["Fengchun Miao", "Kelly Shiohira", "Natalie Lao", "Lidija Kralj"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-05
-source_file: Unknown_AI_competency_framework_for_students.md
-confidence: 89
----
+## Wissensdokument
 
 # AI competency framework for students
 

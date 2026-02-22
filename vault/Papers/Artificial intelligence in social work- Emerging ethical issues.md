@@ -1,21 +1,13 @@
 ---
-title: Artificial intelligence in social work: Emerging ethical issues
+title: "Artificial intelligence in social work: Emerging ethical issues"
 authors:
   - F. G. Reamer
 year: 2023
 type: journalArticle
-url: https://doi.org/10.55521/10-020-205
 doi: 10.55521/10-020-205
+url: "https://doi.org/10.55521/10-020-205"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Discrimination
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -39,99 +31,120 @@ agreement: disagree
 
 # Artificial intelligence in social work: Emerging ethical issues
 
-## Abstract
+## Transformation Trail
 
-Systematic analysis of ethical challenges in AI use within social work, developing comprehensive framework for ethical AI implementation. Identifies eight central ethical areas including informed consent, data privacy, transparency, misdiagnosis, client neglect, surveillance, scientific misconduct, and algorithmic bias. Emphasizes transparency as fundamental principle requiring social workers to inform clients about AI use. Develops eight-step protocol for ethical AI implementation including ethics committees and continuous peer-review processes.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Stereotyping]]
+- [[Algorithmic Bias in Social Work]]
 
-## Full Text
+## Wissensdokument
 
----
-title: "Artificial intelligence and mass personalization of communication content: An ethical and literacy perspective"
-authors: ["Erik Hermann"]
-year: 2022
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Hermann_2022_Artificial_intelligence_and_mass_personalization.md
-confidence: 88
----
-
-# Artificial intelligence and mass personalization of communication content: An ethical and literacy perspective
+# Artificial Intelligence in Social Work: Emerging Ethical Issues
 
 ## Kernbefund
 
-Die konzeptuelle Analyse offenbart Interdependenzen und Spannungen zwischen ethischen Prinzipien (Beneficence, Non-maleficence, Autonomy, Justice, Explicability) bei der KI-gestützten Massenpersonalisierung. AI-Literalität wird als Schlüsselmittel zur Befähigung von Individuen vorgeschlagen, um mit personalisierten Inhalten auf Weise umzugehen, die individuelles und gesellschaftliches Wohlbefinden fördert.
+Sozialarbeiter müssen sich mit neun zentralen ethischen Herausforderungen auseinandersetzen (informierte Zustimmung, Datenschutz, Transparenz, Fehldiagnose, Patientenabbruch, Überwachung, Plagiarismus, algorithmischer Bias), und es existiert derzeit keine umfassende berufsethische Reflexion dieser Themen in der Sozialarbeits-Literatur.
 
 ## Forschungsfrage
 
-Welche ethischen Herausforderungen entstehen durch den Einsatz von KI für die Massenpersonalisierung von Kommunikationsinhalten, und wie kann AI-Literalität diese Herausforderungen adressieren?
+Welche ethischen Herausforderungen entstehen durch den Einsatz von Künstlicher Intelligenz in der Sozialen Arbeit und wie können Sozialarbeiter ethisch verantwortungsvoll mit KI umgehen?
 
 ## Methodik
 
-Theoretisch/Konzeptuelle Analyse. Umfassende Literatursuche in elektronischen Datenbanken (Web of Science, EBSCO, Google Scholar), Screening von Referenzen in Review- und Seminalarbeiten, manuelle Suche in relevanten Fachzeitschriften.
-**Datenbasis:** Nicht empirisch; konzeptuelle Literaturanalyse ohne quantitative oder qualitative Datenerhebung
+Theoretisch/Review - Umfassende Literaturanalyse und Anwendung bestehender ethischer Standards der Sozialen Arbeit auf KI-Kontexte
+**Datenbasis:** nicht empirisch - theoretische Analyse bestehender Kodizes, Standards und Fachliteratur
 
 ## Hauptargumente
 
-- KI-gestützte Massenpersonalisierung bietet erhebliche Vorteile für individuelle Bedürfnisbefriedigung und Nutzerzufriedenheit, führt aber gleichzeitig zu ethischen Spannungen zwischen Benefizenz auf individueller Ebene und potenziellen Schäden auf Gesellschaftsebene durch Filter-Blasen und polarisierte Inhaltsvielfalt.
-- Zwischen den fünf zentralen ethischen Prinzipien (Beneficence, Non-maleficence, Autonomy, Justice, Explicability) entstehen Zielkonflikte und Trade-offs: Beispielsweise konkurriert der Datenschutz mit der Genauigkeit von Personalisierung, und individuelle Autonomie wird durch algorithmische Gatekeeping-Funktionen gefährdet.
-- AI-Literalität - verstanden als grundlegendes Verständnis von KI-Inputs, Funktionsweise, Agentur und Ergebnissen - kann Individuen befähigen, mit Massenpersonalisierung auf eine Weise umzugehen, die persönliches und gesellschaftliches Wohlbefinden schützt und Schaden verhindert.
+- KI bietet erhebliches Potenzial für die Soziale Arbeit (Risikobewertung, Krisenintervention, Bias-Erkennung, Burnout-Vorhersage), wird aber von ethischen Risiken begleitet, die spezifische berufsethische Richtlinien erfordern.
+- Bestehende sozialarbeiterische Ethik-Standards (NASW Code of Ethics 2021, ASWB/CSWE/CSWA Standards 2017) bieten Rahmen für AI-Nutzung, aber es fehlt eine spezifische In-Tiefe-Anwendung auf KI-Kontexte.
+- Organisationen sollten acht konkrete Schritte implementieren: ethics-based governing principles, digital ethics steering committees, diverse focus groups, peer review, AI model simulations, social worker-focused guidance, external communication/training, und Testlogs zur Gewährleistung ethischer KI-Nutzung.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-By this form of AI literacy, individuals could be empowered to interact with and treat mass-personalized content in a way that promotes individual and social good while preventing harm. The authors propose AI literacy as a potential individual remedy to address the interdependent ethical challenges.
+Social workers should familiarize themselves with AI protocols, review relevant ethical standards, undergo training on appropriate and ethical use of AI, and social work education programs should incorporate AI content into curricula. Standard 2.23: 'Social workers should keep apprised of the types of technology that are available and research best practices, risks, ethical challenges, and ways of managing them.'
 
 ### Evidenz 2
 
-The study systematically scrutinizes AI-driven mass personalization of communication content, including recommender systems, personalization algorithms, machine learning algorithms, and algorithmic content filtering in news feeds and e-commerce platforms.
+ChatGPT wird explizit erwähnt als Tool für Social Workers, das 'nearly instant suggestions' für Distress-Management bietet. Paper diskutiert Plagiarismus- und Fair-Use-Herausforderungen bei Nutzung von ChatGPT für grant applications und program evaluations.
 
 ### Evidenz 3
 
-Personalization could 'segment a population so that only some segments are worthy of receiving some opportunities or information, re-enforcing existing social (dis)advantages' leading to 'industrialized social discrimination' that creates 'winners' and 'losers'. AI-powered mass personalization could discriminate based on psychological, economic, and demographic factors, and reinforce gender, age, and racial disparities, prejudices, and stereotypes.
+Umfassende Diskussion von machine learning, predictive analytics, natural language processing, computer vision, affective computing/emotion AI, expert systems, und algorithmic decision-support systems in der Sozialen Arbeit.
 
 ### Evidenz 4
 
-The analysis accounts for a multi-stakeholder perspective and addresses phenomena such as filter bubbles, echo chambers, and selective exposure that can have adverse effects on democratic representation and content diversity for different social groups.
+Kernpapier der Sozialarbeits-Ethik mit direkter Anwendung auf Praktiken in klinischer Sozialer Arbeit, Krisenintervention, Risikobewertung mit Fokus auf vulnerable Bevölkerungsgruppen und Berufsstandards (NASW, ASWB, CSWE, CSWA).
 
 ### Evidenz 5
 
-The justice principle addresses how biases in algorithmic systems can lead to unfair and unequal treatment, discrimination on the basis of demographic factors, and the need for monitoring and diligence along the entire data lifecycle to prevent discriminatory outcomes and ensure fair market access.
+Machine learning datasets may not be representative of social workers' clients; algorithmic bias can manifest in recruitment, marketing, and facial recognition; risk of replicating and amplifying human biases affecting protected groups based on race, ethnicity, gender, sexual orientation.
+
+### Evidenz 6
+
+Focus groups should include individuals from diverse populations (clients, advocates, practitioners, community leaders); AI tools must collect data to reduce biases against protected categories including race, ethnicity, culture, gender, sexual orientation, gender expression, religion.
+
+### Evidenz 7
+
+Paper addresses 'algorithmic bias and unfairness' as core ethical challenge; emphasizes need for algorithms to treat similarly-situated people fairly; discusses fairness implications of AI in social service delivery and algorithmic justice in decision-making systems.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper hat moderate Relevanz für die Schnittstellenforschung AI/Soziale Arbeit/Gender. Es adressiert KI-Ethik und Literalität aus einer Multi-Stakeholder-Perspektive, was für Soziale Arbeit relevant ist, fokussiert jedoch primär auf Kommunikation und Massenpersonalisierung statt direkt auf sozialarbeiterische Kontexte oder explizit Gender-Fragen.
+**Domain Fit:** Hochgradig relevant für die Schnittstelle AI und Soziale Arbeit; addressiert zentrale Ethik-Themen und praktische Implementierungsfragen; fehlt jedoch intersektionale und Gender-spezifische Tiefenanalyse sowie feministische Perspektiven auf AI-Ethik in der Sozialen Arbeit.
 
-**Unique Contribution:** Das Paper leistet einen einzigartigen Beitrag durch die erste systematische konzeptuelle Analyse von ethischen Prinzipien im Kontext von KI-gestützter Massenpersonalisierung mit Fokus auf Interdependenzen und Spannungen zwischen Ethik-Prinzipien sowie der Vorschlag von AI-Literalität als individuelle Empowerment-Strategie.
+**Unique Contribution:** Erste umfassende, berufsstandard-basierte Analyse ethischer AI-Herausforderungen speziell für Sozialarbeiter mit konkrete acht-Schritte-Implementierungsprotokoll für ethische AI-Nutzung.
 
-**Limitations:** Das Paper ist eine konzeptuelle Analyse ohne empirische Datengrundlage; es fehlt die spezifische Anwendung auf Soziale Arbeit und eine explizite Gender-Perspektive wird nicht entwickelt, obwohl Diskriminierung und Fairness adressiert werden.
+**Limitations:** Rein theoretischer/analytischer Ansatz ohne empirische Validierung der vorgeschlagenen Protokolle; begrenzte Diskussion spezifischer Auswirkungen auf marginalisierte Bevölkerungsgruppen; keine Gender- oder intersektionale Analyse; keine Evaluation bestehender AI-Implementierungen in Sozialarbeits-Organisationen.
 
-**Target Group:** KI-Ethiker, Kommunikationswissenschaftler, Policymaker im Tech-Bereich, Medienliteratur-Experten, Plattform-Designer, und potentiell Sozialarbeiter im Kontext von digitaler Inklusion und Nutzerschutz. Das Paper ist relevant für die Ausbildung von Fachkräften im Umgang mit algorithmischen Systemen und deren gesellschaftlichen Auswirkungen.
+**Target Group:** Primär: Sozialarbeiter in Praxis und Lehre, Hochschullehrer, Supervisoren, Agency-Administrator, Ethics Committee Members. Sekundär: KI-Entwickler in health care/social services, Policymaker, Regulierungsbehörden, Berufsverbände (NASW, ASWB, CSWE, CSWA).
 
 ## Schlüsselreferenzen
 
-- [[Floridi_L_Cowls_J_Beltrametti_M_et_al_2018]] - AI4People—An ethical framework for a good AI society
-- [[Matz_SC_Kosinski_M_Nave_G_et_al_2017]] - Psychological targeting as an effective approach to digital mass persuasion
-- [[Milano_S_Taddeo_M_Floridi_L_2020]] - Recommender systems and their ethical challenges
-- [[Hancock_JT_Naaman_M_Levy_K_2020]] - AI-mediated communication: definition, research agenda, and ethical considerations
-- [[Sundar_SS_2020]] - Rise of machine agency: a framework for studying the psychology of human-AI interaction
-- [[Guzman_AL_Lewis_SC_2020]] - Artificial intelligence and communication: a human-machine communication research agenda
-- [[Mittelstadt_BD_Allo_P_Taddeo_M_et_al_2016]] - The ethics of algorithms: mapping the debate
-- [[Turow_J_Couldry_N_2018]] - Media as data extraction: towards a new map of a transformed communications field
-- [[Levy_R_2021]] - Social media, news consumption, and polarization
-- [[Cowls_J_Tsamados_A_Taddeo_M_et_al_2021]] - A definition, benchmark and database of AI for social good initiatives
+- [[National_Association_of_Social_Workers_2021]] - Code of Ethics of the National Association of Social Workers
+- [[NASW_ASWB_CSWE_CSWA_2017]] - Standards for Technology in Social Work Practice
+- [[Lee_Resnick_Barton_2019]] - Algorithmic Bias Detection and Mitigation: Best Practices and Policies
+- [[Tambe_Rice_2018]] - Artificial Intelligence and Social Work
+- [[Reamer_2023]] - Risk Management in the Behavioral Health Professions
+- [[Gillingham_2019]] - Can Predictive Algorithms Assist Decision-Making in Social Work with Children and Families?
+- [[Keddell_2019]] - Algorithmic Justice in Child Protection: Statistical Fairness and Social Justice
+- [[Goldkind_2021]] - Social Work and Artificial Intelligence: Into the Matrix
+- [[Yan_Ruan_Jiang_2023]] - Challenges of Artificial Intelligence in Recognizing Mental Disorders

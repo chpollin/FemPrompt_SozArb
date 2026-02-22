@@ -5,18 +5,10 @@ authors:
   - G. L. Kim
 year: 2024
 type: report
-url: https://arxiv.org/html/2404.17218v1
+doi: 
+url: "https://arxiv.org/html/2404.17218v1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Stereotypische
-  - Stereotypical
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -36,103 +28,116 @@ agreement: disagree
 
 # Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes
 
-## Abstract
+## Transformation Trail
 
-This study evaluates 12 prompt strategies across five LLMs, finding that instructing a model to adopt a System 2 (deliberative) reasoning style and a "human persona" most effectively reduces stereotypes. Combining these two strategies yielded up to a 13% reduction in stereotypical responses. Contrary to prior assumptions, Chain-of-Thought (CoT) prompting alone was not as effective, showing bias levels similar to a default prompt. The results suggest that prompts encouraging careful, human-like reasoning are key for mitigating bias.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Fairness
-**Agreement:** Disagree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Chisca_2024_Prompting_techniques_for_reducing_social_bias_in]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypical]]
-- [[Stereotyping]]
-- [[Stereotypische]]
+- [[Intersectional Bias Analysis]]
 
-## Full Text
-
----
-title: "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes"
-authors: ["Mahammed Kamruzzaman", "Gene Louis Kim"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md
-confidence: 94
----
+## Wissensdokument
 
 # Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes
 
 ## Kernbefund
 
-Human Persona kombiniert mit System 2 Prompting reduziert stereotypische Urteile von LLMs am effektivsten (bis zu 13% Reduktion), während CoT-Prompting entgegen bisheriger Annahmen nicht dem System 2 Denken entspricht, sondern dem System 1 ähnlicher ist.
+Human Persona kombiniert mit System 2 Prompting reduziert stereotypische Urteile um bis zu 19%, während CoT-Prompting überraschenderweise dem System 1 ähnlicher ist als dem System 2, was die gängige Annahme in der Literatur widerlegt.
 
 ## Forschungsfrage
 
-Können auf Dual-Process-Theorie basierende Prompting-Strategien soziale Biases in Large Language Models effektiver reduzieren als Standard-Prompting oder Chain-of-Thought-Methoden?
+Wie können Prompting-Techniken, die auf der Dual-Process-Theorie basieren, zur Reduzierung sozialer Vorurteile in Large Language Models beitragen, und unterscheiden sich diese Effekte je nach Persona-Modellierung?
 
 ## Methodik
 
-Empirisch: Vergleichende Analyse von 12 verschiedenen Prompting-Techniken (Standard, CoT, System 1, System 2, mit Human/Machine Personas) über zwei Bias-Datensätze (StereoSet und GenAssocBias) mit fünf LLMs (GPT-4, GPT-3.5, Llama-2-7B, Mistral7B, Gemini). Messung von Stereotyp-Response-Raten über 9 Bias-Kategorien. Statistische Analyse mittels Kendall τ Korrelation.
-**Datenbasis:** StereoSet Dataset (intrasentence subset) + GenAssocBias Dataset mit Abdeckung von 9 Bias-Kategorien (Ageismus, Beauty, Beauty in Profession, Gender, Institutional, Nationality, Profession, Race, Religion) über 5 LLMs; GPT-4 getestet auf 2.100 Beispiele, andere Modelle auf vollständigen Datasets
+Empirisch: Vergleichende Analyse von 12 Prompting-Techniken (Standard, CoT, System 1/2, mit Human/Machine Personas) über 5 LLMs (GPT-4, GPT-3.5, Llama2, Mistral7B, Gemini) auf 9 Bias-Kategorien unter Verwendung von zwei Bias-Datensätzen (StereoSet und GenAssocBias). Messmetrik: Stereotypische Antwortrate. Statistische Analyse: Kendall's τ Korrelation.
+**Datenbasis:** 5 LLMs getestet, 9 Bias-Kategorien (Ageismus, Beauty, Beauty-Profession, Geschlecht, Institution, Nationalität, Beruf, Rasse, Religion), 2 Bias-Datensätze (StereoSet mit intra-sentence subset, GenAssocBias mit 2.100 Einträge für GPT-4, vollständig für andere Modelle)
 
 ## Hauptargumente
 
-- Dual-Process-Theorie (System 1: schnell, emotional, vorurteilsbelastet; System 2: langsam, deliberativ, zuverlässig) kann auf LLMs angewendet werden, um durch explizite kognitiv-psychologische Prompts soziale Biases zu reduzieren.
-- Die Kombination von Human Persona mit System 2 Prompting amplifiziert den Bias-Reduktions-Effekt stärker als Machine Persona, was darauf hindeutet, dass LLMs ein modelliertes Verständnis menschlicher Kognition haben, das über bloße System-interne Mechanismen hinausgeht.
-- CoT-Prompting zeigt keine konsistente Bias-Reduktion und korreliert statistisch stärker mit System 1 als mit System 2 Prompting, was die bisherige Annahme widerlegt, dass CoT-Prompting System 2 Reasoning entspricht; die Persona-Zuweisung (Human vs. Machine generisch) reduziert Biases durch Self-Distancing-Effekt ähnlich Solomons Paradox bei Menschen.
+- Dual-Process-Theory kann auf LLMs angewendet werden: Durch explizite Prompts für System 1 (schnell, emotional) und System 2 (langsam, überlegt) können LLMs unterschiedliche Grade von Stereotypisierung zeigen, was darauf hindeutet, dass sie menschliche Kognitionsmuster modellieren.
+- Human Persona ist kritisch für Bias-Reduktion: Die Einführung von Human Persona mit System 2 Prompting führt zu substantiellen Bias-Reduktionen, während Machine Persona deutlich weniger effektiv ist, was nahelegt, dass LLMs ihr Modell menschlicher Kognitiver Prozesse aktivieren müssen.
+- CoT-Prompting entspricht nicht System 2: Entgegen verbreiteter Annahmen zeigt die Korrelationsanalyse, dass CoT-Prompting dem Standard-Prompt und System 1 ähnlicher ist als System 2, was frühere Annahmen zur Cognitiven Mappierung von CoT hinterfragt.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Fokus auf Large Language Models (GPT-4, GPT-3.5, Llama 2, Mistral7B, Gemini) und deren Bias-Eigenschaften: 'These models display remarkable linguistic capabilities, crafting responses that not only mimic human language'
+Kritische Reflexion über Assumptions in der KI-Forschung: 'This contradicts often stated assumptions by researchers in the past (Hagendorff et al., 2023)' - ein Beispiel für Hinterfragung bestehenden Wissens.
 
 ### Evidenz 2
 
-Zentrale Methode: 'We use 12 different types of prompting techniques in our paper including the combinations of CoT, System 1, System 2, and Persona' mit detaillierten Prompt-Engineering-Strategien und Zero-Shot-Varianten
+Fokus auf Large Language Models (GPT-4, GPT-3.5, Llama 2, Mistral 7B, Gemini): 'large language models (LLMs) like GPT-4, ChatGPT, Llama 2 have revolutionized many aspects of technology and society.'
 
 ### Evidenz 3
 
-NLP-Techniken und Dual-Process-Theorie aus kognitiver Psychologie: 'NLP researchers often compare zero-shot prompting in LLMs to System 1 reasoning and chain-of-thought (CoT) prompting to System 2'
+Zentral für die gesamte Studie: 'We compare zero-shot CoT, debiasing, and a variety of dual process theory-based prompting strategies' mit systematischer Analyse von 12 Prompting-Techniken und deren Variationen.
 
 ### Evidenz 4
 
-Expliziter Fokus auf soziale Biases: 'LLMs continue to struggle with embedded social biases. These biases show up in different ways, including stereotyping and biased answers' über 9 Bias-Kategorien einschließlich Rassismus, Gender, Religion, Nationalität
+NLP und Dual-Process-Theorie-Anwendung auf LLMs: 'NLP researchers often compare zero-shot prompting in LLMs to System 1 reasoning and chain-of-thought (CoT) prompting to System 2.'
 
 ### Evidenz 5
 
-Untersuchung von 9 verschiedenen Bias-Kategorien (Ageism, Beauty, Gender, Race, Religion, Nationality, Profession, etc.) repräsentiert multiple marginalisierte Gruppen und intersektionale Aspekte
+Expliziter Fokus auf neun Bias-Kategorien und strukturelle Vorurteile: 'LLMs continue to struggle with embedded social biases' und systematische Analyse von Ageismus, Schönheits-Bias, Rassen-Bias, Religions-Bias, etc.
 
 ### Evidenz 6
 
-Fokus auf Bias-Reduktion und faire LLM-Outputs: 'This task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven communication and decisions'
+Gender-Bias ist eine von neun analysierten Kategorien mit spezifischen Resultaten: 'We see no consistent prompt setting that best reduces gender bias, but the best setting leads to consistent bias reductions.' Vergleich mit früheren Studien zu Gender-Bias.
+
+### Evidenz 7
+
+Abdeckung mehrerer marginalisierter Kategorien (Rasse, Religion, Nationalität, Institution) und intersektionale Dimensionen von Bias: 'Kamruzzaman et al.'s bias detection dataset covers age, beauty, institution, beauty in the profession, and nationality bias'.
+
+### Evidenz 8
+
+Algorithmische Fairness und faire LLM-Ausgaben sind Kernthema: 'This task of mitigating social biases in LLMs is paramount to ensuring fairness and inclusivity in AI-driven communication and decisions.' Fairness-Metriken durch Reduktion stereotypischer Antworten.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper hat begrenzte direkte Relevanz für Soziale Arbeit, ist aber hochrelevant für die Schnittstelle KI und Fairness/Bias-Reduktion. Es bietet praktische Prompting-Techniken zur Reduktion von sozialen Biases in KI-Systemen, die in Anwendungsfeldern der Sozialen Arbeit (z.B. Risikobewertung, Ressourcenallokation) zum Einsatz kommen könnten.
+**Domain Fit:** Das Paper hat moderate Relevanz für die Schnittstelle KI/Soziale Arbeit: Während es sich auf technische Bias-Reduktion in LLMs konzentriert, sind die erkannten Bias-Kategorien (Ageismus, Nationalität, Institution) relevant für sozialarbeiterische Kontexte. Allerdings fehlt ein expliziter Bezug zu sozialarbeiterischer Praxis oder Ethik.
 
-**Unique Contribution:** Die Studie widerlegt die bisherige Annahme, dass CoT-Prompting System 2 Reasoning modelliert, und zeigt empirisch, dass Human Persona + System 2 Kombination die effektivste Strategie zur Bias-Reduktion ist, mit statistischen Korrelationsanalysen.
+**Unique Contribution:** Die systematische Kombination von Dual-Process-Theory mit Persona-Modellierung zur Bias-Reduktion ist innovativ, besonders die kontra-intuitiven Befunde zur CoT-Prompting-System-2-Annahme durch Kendall τ-Korrelationen.
 
-**Limitations:** Begrenzte Analyse auf englischsprachige Datasets; GPT-4 nur auf reduzierter Sample getestet (2.100 vs. vollständige Datasets); keine theoretische Erklärung für das Nicht-Funktionieren von CoT bei sozialen Biases; keine Untersuchung von Langzeit-Effekten oder User-Compliance.
+**Limitations:** Die Studie konzentriert sich primär auf englischsprachige Bias-Kategorien in englischen Datensätzen; die Generalisierbarkeit auf andere Sprachen und kulturelle Kontexte ist unklar. Zudem wird nicht untersucht, ob die Bias-Reduktion auch in realen sozialarbeiterischen Anwendungsszenarien nachweisbar ist.
 
-**Target Group:** NLP-Forscher, KI-Entwickler und Ingenieure, Fairness-und-Bias-Spezialist:innen, Policymaker in AI-Governance, Ethiker:innen im KI-Bereich, Sozialwissenschaftler:innen die mit KI-Systemen arbeiten
+**Target Group:** KI-Entwickler:innen, NLP-Forscher:innen, Prompter:innen, AI Ethics-Spezialisten, potenziell auch Sozialarbeiter:innen mit Interesse an Algorithmic Fairness; weniger direkt für praktische Sozialarbeiter:innen geeignet ohne Adaptation auf Praxiskontexte.
 
 ## Schlüsselreferenzen
 
 - [[Wei_et_al_2022]] - Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
 - [[Nadeem_et_al_2020]] - StereoSet: Measuring Stereotypical Bias in Pretrained Language Models
-- [[Kaneko_et_al_2024]] - Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting
 - [[Hagendorff_et_al_2023]] - Human-like Intuitive Behavior and Reasoning Biases Emerged in Large Language Models but Disappeared in ChatGPT
-- [[Gupta_et_al_2023]] - Bias Runs Deep: Implicit Reasoning Biases in Persona-Assigned LLMs
-- [[Deshpande_et_al_2023]] - Toxicity in ChatGPT: Analyzing Persona-Assigned Language Models
+- [[Kaneko_et_al_2024]] - Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting
+- [[Beck_et_al_2024]] - Sensitivity, Performance, Robustness: Deconstructing the Effect of Sociodemographic Prompting
+- [[De_Araujo_Roth_2024]] - Helpful Assistant or Fruitful Facilitator? Investigating How Personas Affect Language Model Behavior
 - [[Evans_Stanovich_2013]] - Dual-Process Theories of Higher Cognition: Advancing the Debate
-- [[Grossmann_Kross_2014]] - Exploring Solomon's Paradox: Self-Distancing Eliminates the Self-Other Asymmetry in Wise Reasoning
-- [[Kamruzzaman_et_al_2023]] - Investigating Subtler Biases in LLMs: Ageism, Beauty, Institutional, and Nationality Bias
+- [[Furniturewala_et_al_2024]] - Thinking Fair and Slow: On the Efficacy of Structured Prompts for Debiasing Language Models
+- [[Lin_et_al_2024]] - SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks
+- [[Nighojkar_2024]] - Beyond Binary: Advancing Natural Language Inference for Human-like Reasoning

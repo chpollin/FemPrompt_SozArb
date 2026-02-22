@@ -6,17 +6,10 @@ authors:
   - C. Kadiri
 year: 2024
 type: journalArticle
-url: https://doi.org/10.30574/wjarr.2024.24.1.2998
 doi: 10.30574/wjarr.2024.24.1.2998
+url: "https://doi.org/10.30574/wjarr.2024.24.1.2998"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Inclusive Datasets
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -40,35 +33,35 @@ agreement: agree
 
 # The role of artificial intelligence (AI) and machine learning in social work practice
 
-## Abstract
+## Transformation Trail
 
-This comprehensive review identifies algorithmic bias as a critical challenge in social work AI implementation, noting that algorithms trained on historical data may perpetuate existing inequalities by replicating racial, gender, and socio-economic disparities. The authors document specific cases where predictive analytics tools disproportionately flagged families of color for child welfare interventions despite lacking substantial evidence of higher abuse rates. The study emphasizes that addressing algorithmic bias requires multi-faceted approaches including diverse and inclusive datasets, ongoing evaluation and auditing of AI systems, and involvement of social workers and community members in AI tool development.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 94 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Inclusive Datasets]]
+- [[AI Literacy in Social Work Education]]
+- [[Algorithmic Bias in Social Services]]
+- [[Algorithmic Fairness and Transparency]]
+- [[Predictive Analytics in Social Work]]
 
-## Full Text
-
----
-title: "The Role of Artificial Intelligence (AI) and machine learning in social work practice"
-authors: ["Mackline Nuwasiima", "Metogbe Patricia Ahonon", "Caleb Kadiri"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Nuwasiima_2024_The_role_of_artificial_intelligence_(AI)_and.md
-confidence: 91
----
+## Wissensdokument
 
 # The Role of Artificial Intelligence (AI) and machine learning in social work practice
 

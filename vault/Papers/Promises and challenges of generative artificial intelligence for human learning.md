@@ -7,16 +7,10 @@ authors:
   - Dragan Gašević
 year: 2024
 type: journalArticle
-url: https://www.nature.com/articles/s41562-024-02004-5
 doi: 10.1038/s41562-024-02004-5
+url: "https://www.nature.com/articles/s41562-024-02004-5"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.3
 llm_categories:
@@ -32,28 +26,50 @@ agreement: disagree
 
 # Promises and challenges of generative artificial intelligence for human learning
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.3)
-**LLM Categories:** AI_Literacies, Generative_KI
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, Bias_Ungleichheit
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.3)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Yan_2024_Promises_and_challenges_of_generative_artificial]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
 
----
-title: "Promises and challenges of generative artificial intelligence for human learning"
-authors: ["Lixiang Yan", "Samuel Greiff", "Ziwen Teuber", "Dragan Gašević"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Yan_2024_Promises_and_challenges_of_generative_artificial.md
-confidence: 95
----
+## Wissensdokument
 
 # Promises and challenges of generative artificial intelligence for human learning
 

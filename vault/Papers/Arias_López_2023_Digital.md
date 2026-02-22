@@ -4,32 +4,26 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 ---
 
 # Arias_López_2023_Digital
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
 ## Key Concepts
 
-## Full Text
+- [[Digital Health Literacy]]
 
----
-title: "Global strategy on digital health 2020-2025"
-authors: ["World Health Organization", "Soumya Swaminathan", "Bernardo Mariano", "Sameer Pujari", "Yu Zhao"]
-year: 2021
-type: report
-language: en
-processed: 2026-02-05
-source_file: Arias_López_2023_Digital.md
-confidence: 75
----
+## Wissensdokument
 
 # Global strategy on digital health 2020-2025
 

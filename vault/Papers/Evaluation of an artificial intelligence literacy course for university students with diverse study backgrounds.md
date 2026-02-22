@@ -6,18 +6,10 @@ authors:
   - Guo Zhang
 year: 2021
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2666920X21000205
 doi: 10.1016/j.caeai.2021.100026
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2666920X21000205"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Stereotypen
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -33,32 +25,50 @@ agreement: disagree
 
 # Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Unclear
-**Human Categories:** AI_Literacies, KI_Sonstige, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Unclear
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Nein |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Kong_2021_Evaluation_of_an_artificial_intelligence_literacy]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypen]]
-- [[Stereotyping]]
+- [[AI Literacy]]
 
-## Full Text
-
----
-title: "Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds"
-authors: ["Siu-Cheung Kong", "William Man-Yin Cheung", "Guo Zhang"]
-year: 2021
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Kong_2021_Evaluation_of_an_artificial_intelligence_literacy.md
-confidence: 95
----
+## Wissensdokument
 
 # Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds
 

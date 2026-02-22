@@ -1,21 +1,15 @@
 ---
-title: Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach
+title: "Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach"
 authors:
   - Siu-Cheung Kong
   - Man-Yin William Cheung
   - Olson Tsang
-year: 06/2024
+year: 2024
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2666920X24000158
 doi: 10.1016/j.caeai.2024.100214
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2666920X24000158"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -31,28 +25,51 @@ agreement: disagree
 
 # Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Unclear
-**Human Categories:** AI_Literacies, KI_Sonstige, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Unclear
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Nein |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Kong_2024_Developing_an_artificial_intelligence_literacy]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[AI Ethics Education]]
+- [[AI Literacy Framework]]
 
----
-title: "Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach"
-authors: ["Siu-Cheung Kong", "Man-Yin William Cheung", "Olson Tsang"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Kong_2024_Developing_an_artificial_intelligence_literacy.md
-confidence: 92
----
+## Wissensdokument
 
 # Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach
 

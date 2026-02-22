@@ -1,19 +1,13 @@
 ---
-title: AI implementation science for social issues: Pitfalls and tips
+title: "AI implementation science for social issues: Pitfalls and tips"
 authors:
   - K. Takaoka
 year: 2022
 type: journalArticle
 doi: 10.2188/jea.JE20210380
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -29,35 +23,52 @@ agreement: disagree
 
 # AI implementation science for social issues: Pitfalls and tips
 
-## Abstract
+## Transformation Trail
 
-Case study documenting four-stage social implementation of AI system (AiCAN - Assistant of Intelligence for Child Abuse and Neglect) in Japanese Child Guidance Centers from 2012-2020. System uses machine learning to predict child abuse recurrence and Bayesian networks for real-time probabilistic inference to guide temporary protection decisions. Data from over 6,000 cases (2014-2018) were used to develop gradient boosting algorithms with AUROC >0.70. Implementation involved iterative stakeholder engagement, workflow redesign, training field staff, and addressing organizational resistance. Emphasizes critical importance of building consensus with practitioners, designing for field usability, ensuring data quality through validated scales, and employing eXplainable AI for transparency.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Nein | Nein |  |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Takaoka_2022_AI_implementation_science_for_social_issues]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[Algorithmic Fairness in Social Services]]
+- [[Explainable AI (XAI)]]
+- [[Human-in-the-Loop Decision Support]]
 
-## Full Text
-
----
-title: "AI Implementation Science for Social Issues: Pitfalls and Tips"
-authors: ["Kota Takaoka"]
-year: 2022
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Takaoka_2022_AI_implementation_science_for_social_issues.md
-confidence: 95
----
+## Wissensdokument
 
 # AI Implementation Science for Social Issues: Pitfalls and Tips
 

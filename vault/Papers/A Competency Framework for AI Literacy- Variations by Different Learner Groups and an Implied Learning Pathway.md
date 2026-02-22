@@ -1,21 +1,15 @@
 ---
-title: A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway
+title: "A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway"
 authors:
   - Hyunkyung Chee
   - Solmoe Ahn
   - Jihyun Lee
-year: 09/2025
+year: 2024
 type: journalArticle
-url: https://bera-journals.onlinelibrary.wiley.com/doi/10.1111/bjet.13556
 doi: 10.1111/bjet.13556
+url: "https://bera-journals.onlinelibrary.wiley.com/doi/10.1111/bjet.13556"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -24,76 +18,33 @@ llm_categories:
 
 # A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway
 
-## Abstract
+## Transformation Trail
 
-This study aims to develop a comprehensive competency framework for artificial intelligence (AI) literacy, delineating essential competencies and sub‐competencies. This framework and its potential variations, tailored to different learner groups (by educational level and discipline), can serve as a crucial reference for designing and implementing AI curricula. However, the research on AI literacy by target learners is still in its infancy, and the findings of several existing studies provide inconsistent guidelines for educational practices. Following the 2020 PRISMA guidelines, we searched the Web of Science, Scopus, and ScienceDirect databases to identify relevant studies published between January 2012 and October 2024. The quality of the included studies was evaluated using QualSyst. A total of 29 studies were identified, and their research findings were synthesized. Results show that at the K‐12 level, the required competencies include basic AI knowledge, device usage, and AI ethics. For higher education, the focus shifts to understanding data and algorithms, problem‐solving, and career‐related competencies. For general workforce, emphasis is placed on the interpretation and utilization of data and AI tools for specific careers, along with error detection and AI‐based decision‐making. This study connects the progression of specific learning objectives, which should be intensively addressed at each stage, to propose an AI literacy education pathway. We discuss the findings, potentials, and limitations of the derived competency framework for AI literacy, including its theoretical and practical implications and future research suggestions.
-            
-            
-              
-              
-                
-                  
-                    Practitioner notes
-                  
-                  
-                    What is already known about this topic
-                    
-                      
-                        AI literacy is becoming increasingly important as AI technologies are integrated into various aspects of life and work.
-                      
-                      
-                        Research on AI literacy competencies across diverse learner groups and disciplines remains fragmented and inconsistent to guide educational practices.
-                      
-                      
-                        Studies providing a coherent pathway for AI literacy development throughout educational and working life are lacking.
-                      
-                    
-                  
-                  
-                    What this paper adds
-                    
-                      
-                        A comprehensive AI literacy competency framework consisting of 8 competencies and 18 sub‐competencies.
-                      
-                      
-                        Variations in AI literacy competencies with tailored configuration and prioritization across different learner groups by school levels and disciplines.
-                      
-                      
-                        A proposed pathway for developing AI literacy from K‐12 to higher education and workforce levels.
-                      
-                    
-                  
-                  
-                    Implications for practice and policy
-                    
-                      
-                        The framework can guide the design and implementation of AI curricula tailored to different learner characteristics and needs.
-                      
-                      
-                        Education should shift focus from teaching how to use AI to fostering competencies for critical, strategic, responsible and ethical integration of AI.
-                      
-                      
-                        Policies are needed to support a systematic pathway for lifelong AI literacy development from K‐12 education to workforce training.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** AI_Literacies
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 78 |
+| **Overall Confidence** | **86** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Ethical AI Awareness]]
+- [[Machine Learning Literacy]]
 
----
-title: "A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway"
-authors: ["Hyunkyung Chee", "Solmoe Ahn", "Jihyun Lee"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations.md
-confidence: 86
----
+## Wissensdokument
 
 # A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway
 

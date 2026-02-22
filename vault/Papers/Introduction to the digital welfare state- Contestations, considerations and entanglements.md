@@ -1,5 +1,5 @@
 ---
-title: Introduction to the digital welfare state: Contestations, considerations and entanglements
+title: "Introduction to the digital welfare state: Contestations, considerations and entanglements"
 authors:
   - G. van Toorn
   - P. Henman
@@ -7,15 +7,9 @@ authors:
 year: 2024
 type: journalArticle
 doi: 10.1177/14407833241260890
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -31,34 +25,50 @@ agreement: disagree
 
 # Introduction to the digital welfare state: Contestations, considerations and entanglements
 
-## Abstract
+## Transformation Trail
 
-Special issue introduction providing critical sociological analysis of digital welfare state, examining how datafication and automation amplify existing trends of surveillance and control over marginalized populations. Authors argue that contrary to neutral efficiency narratives, digital welfare technologies are embedded in fiscal austerity politics and criminalization of poverty. Employs power relations and human agency frameworks to demonstrate how algorithmic systems increase scrutiny of welfare recipients, migrants, and undeserving populations while prioritizing cost-cutting over meeting social needs. Critiques framing of AI as unprecedented innovation, situating digital welfare within historical dynamics of social control. Key themes include erosion of professional discretion, surveillance assemblages, and automated decision-making reproducing structural inequalities.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 93 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Ja | X |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz van Toorn_2024_Introduction_to_the_digital_welfare_state]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[Intersectional Algorithmic Bias]]
 
-## Full Text
-
----
-title: "Introduction to the digital welfare state: Contestations, considerations and entanglements"
-authors: ["Georgia van Toorn", "Paul Henman", "Karen Soldatić"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: van Toorn_2024_Introduction_to_the_digital_welfare_state.md
-confidence: 89
----
+## Wissensdokument
 
 # Introduction to the digital welfare state: Contestations, considerations and entanglements
 

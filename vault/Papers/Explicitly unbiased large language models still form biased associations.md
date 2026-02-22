@@ -7,22 +7,10 @@ authors:
   - T. L. Griffiths
 year: 2025
 type: journalArticle
-url: https://doi.org/10.1073/pnas.2416228122
 doi: 10.1073/pnas.2416228122
+url: "https://doi.org/10.1073/pnas.2416228122"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Prejudice
-  - Stereotyping
-  - Stereotypische
-  - Stereotype
-  - Stereotypen
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -33,37 +21,31 @@ llm_categories:
 
 # Explicitly unbiased large language models still form biased associations
 
-## Abstract
+## Transformation Trail
 
-Demonstrates that even when LLMs are aligned to avoid overt bias, they can still harbor implicit biases. Introduces novel evaluation methods inspired by psychology: LLM Word Association Test (LLM-WAT) and LLM Relative Decision Test (LLM-RDT) to probe automatic associations and subtle discrimination. Finds pervasive stereotype-consistent biases across multiple domains in eight state-of-the-art, value-aligned models.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Prejudice]]
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotyping]]
-- [[Stereotypische]]
+- [[Algorithmic Fairness in Generative AI]]
 
-## Full Text
-
----
-title: "Explicitly unbiased large language models still form biased associations"
-authors: ["Xuechunzi Bai", "Angelina Wang", "Ilia Sucholutsky", "Thomas L. Griffiths"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Bai_2025_Explicitly_unbiased_large_language_models_still.md
-confidence: 95
----
+## Wissensdokument
 
 # Explicitly unbiased large language models still form biased associations
 

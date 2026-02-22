@@ -1,20 +1,13 @@
 ---
-title: AI literacy and competency: definitions, frameworks, development and future research directions
+title: "AI literacy and competency: definitions, frameworks, development and future research directions"
 authors:
   - Thomas K. F. Chiu
 year: 2025
 type: journalArticle
-url: https://www.tandfonline.com/doi/full/10.1080/10494820.2025.2514372
 doi: 10.1080/10494820.2025.2514372
+url: "https://www.tandfonline.com/doi/full/10.1080/10494820.2025.2514372"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Prompt Engineering
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -23,28 +16,34 @@ llm_categories:
 
 # AI literacy and competency: definitions, frameworks, development and future research directions
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-### Mitigation Strategies
+- [[AI Literacy]]
+- [[Algorithmic Bias]]
+- [[Ethical AI Literacy]]
 - [[Prompt Engineering]]
 
-## Full Text
-
----
-title: "AI literacy and competency: definitions, frameworks, development and future research directions"
-authors: ["Thomas K. F. Chiu"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Chiu_2025_AI_literacy_and_competency_definitions,.md
-confidence: 94
----
+## Wissensdokument
 
 # AI literacy and competency: definitions, frameworks, development and future research directions
 

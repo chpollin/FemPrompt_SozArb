@@ -4,20 +4,10 @@ authors:
   - Z. Wang
 year: 2024
 type: report
-url: https://file.mixpaper.cn/paper_store/2023/5ddea1cd-c031-433f-a09b-14e7754f7826.pdf
+doi: 
+url: "https://file.mixpaper.cn/paper_store/2023/5ddea1cd-c031-433f-a09b-14e7754f7826.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotype
-  - Stereotypic
-mitigation_strategies:
-  - Debiasing
-  - Fine-tuning
-  - Counterfactual Fairness
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -37,37 +27,50 @@ agreement: disagree
 
 # A survey on fairness in large language models
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 94 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Wang_2024_A_survey_on_fairness_in_large_language_models]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotype]]
-- [[Stereotypic]]
+- [[Social Bias in Language Models]]
 
-### Mitigation Strategies
-- [[Counterfactual Fairness]]
-- [[Debiasing]]
-- [[Fine-tuning]]
-
-## Full Text
-
----
-title: "A Survey on Fairness in Large Language Models"
-authors: ["Yingji Li", "Mengnan Du", "Rui Song", "Xin Wang", "Ying Wang"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Wang_2024_A_survey_on_fairness_in_large_language_models.md
-confidence: 88
----
+## Wissensdokument
 
 # A Survey on Fairness in Large Language Models
 

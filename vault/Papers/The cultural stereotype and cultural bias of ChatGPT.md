@@ -10,20 +10,10 @@ authors:
   - S. Luo
 year: 2025
 type: journalArticle
-url: https://www.researchgate.net/publication/393408216_The_cultural_stereotype_and_cultural_bias_of_ChatGPT
 doi: 10.1177/18344909251355673
+url: "https://www.researchgate.net/publication/393408216_The_cultural_stereotype_and_cultural_bias_of_ChatGPT"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Stereotyping
-  - Stereotype
-  - Stereotypisieren
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -45,38 +35,28 @@ agreement: agree
 
 # The cultural stereotype and cultural bias of ChatGPT
 
-## Abstract
+## Transformation Trail
 
-This article examines cultural biases in ChatGPT-3.5 and GPT-4. Study 1 measures alignment with human cultural values. Study 2 finds clear cultural stereotypes in GPT-3.5 but fewer in GPT-4. Study 3 tests four diversity-sensitive prompts (emphasizing individuality, fairness, egalitarian futures, or multiculturalism). All four strategies eliminated cultural stereotypes in GPT-3.5's outputs. For GPT-4, bias mitigation was more nuanced, requiring task-specific prompts. This indicates that while various prompts can reduce stereotypes, newer models may need more targeted strategies.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
 
-### Bias Types
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotyping]]
-- [[Stereotypisieren]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
----
-title: "The cultural stereotype and cultural bias of ChatGPT"
-authors: ["Hang Yuan", "Zhongyue Che", "Yue Zhang", "Shao Li", "Xianger Yuan", "Liqin Huang", "Xiaomeng Hu", "Kaiping Peng", "Siyang Luo"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Yuan_2025_The_cultural_stereotype_and_cultural_bias_of.md
-confidence: 95
----
+## Wissensdokument
 
 # The cultural stereotype and cultural bias of ChatGPT
 

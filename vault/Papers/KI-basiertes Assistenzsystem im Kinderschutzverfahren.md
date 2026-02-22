@@ -6,15 +6,10 @@ authors:
   - M. Brinkmann
 year: 2025
 type: bookSection
-url: https://afet-ev.de/assets/themenplattform/KI-in-der-Kinder--und-Jugendhilfe-Naher-Grasshoff-Forum-2.pdf
+doi: 
+url: "https://afet-ev.de/assets/themenplattform/KI-in-der-Kinder--und-Jugendhilfe-Naher-Grasshoff-Forum-2.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -27,29 +22,31 @@ llm_categories:
 
 # KI-basiertes Assistenzsystem im Kinderschutzverfahren
 
-## Abstract
+## Transformation Trail
 
-Praxisnaher Bericht zu einem KI-Assistenzsystem für Gefährdungseinschätzung. Betont Human-in-the-Loop, Datenschutz, Organisationsentwicklung und Schulungsbedarf; zeigt Potenziale (präventive Hinweise) und Risiken (Bias, Fehlklassifikationen) im sensiblen Kinderschutzkontext.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Bias in Child Welfare]]
 
----
-title: "KI-basiertes Assistenzsystem in der Kinder- und Jugendhilfe: Digitalität, Kinderschutz und Hilfeplanung"
-authors: ["Feist-Ortmanns"]
-year: 2025
-type: report
-language: de
-processed: 2026-02-05
-source_file: Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im.md
-confidence: 88
----
+## Wissensdokument
 
 # KI-basiertes Assistenzsystem in der Kinder- und Jugendhilfe: Digitalität, Kinderschutz und Hilfeplanung
 

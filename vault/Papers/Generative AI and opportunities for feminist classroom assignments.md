@@ -4,16 +4,10 @@ authors:
   - S. F. Small
 year: 2023
 type: journalArticle
-url: https://digitalcommons.calpoly.edu/feministpedagogy/vol3/iss5/10/
+doi: 
+url: "https://digitalcommons.calpoly.edu/feministpedagogy/vol3/iss5/10/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Debiasing
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -34,35 +28,34 @@ agreement: agree
 
 # Generative AI and opportunities for feminist classroom assignments
 
-## Abstract
+## Transformation Trail
 
-Addresses integration of generative AI into feminist classroom assignments to develop reflexivity and feminist epistemology. Proposes intentional feminist approaches where students collaborate with AI to develop understanding of feminist knowledge production, transforming AI from educational threat into tool for critical learning about power and epistemology.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Generative_KI, Gender, Feministisch
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Feministisch
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Debiasing]]
+- [[AI Literacy]]
+- [[Algorithmic Bias]]
+- [[Gender Bias in AI]]
 
-## Full Text
-
----
-title: "Generative AI and Opportunities for Feminist Classroom Assignments"
-authors: ["Sarah F. Small"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Small_2023_Generative_AI_and_opportunities_for_feminist.md
-confidence: 93
----
+## Wissensdokument
 
 # Generative AI and Opportunities for Feminist Classroom Assignments
 

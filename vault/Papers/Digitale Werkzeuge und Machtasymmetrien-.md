@@ -4,16 +4,10 @@ authors:
   - S. Studeny
 year: 2025
 type: conferencePaper
-url: https://www.ogsa.at/wp-content/uploads/2025/03/ogsaTAGUNG2025_AG-Digitalisierung_Handout-Machtasymmetrien-Susanne-Studeny.pdf
+doi: 
+url: "https://www.ogsa.at/wp-content/uploads/2025/03/ogsaTAGUNG2025_AG-Digitalisierung_Handout-Machtasymmetrien-Susanne-Studeny.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Equitable Access
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -35,35 +29,35 @@ agreement: agree
 
 # Digitale Werkzeuge und Machtasymmetrien?
 
-## Abstract
+## Transformation Trail
 
-Studeny analyzes power asymmetries in digital social work, emphasizing that digital tools and algorithms create new, often invisible forms of power and control. AI decisions remove influence from both professionals and clients while responsibility remains unclear. Algorithms reinforce discrimination as they work with biased data. The author demands that social work critically reflects on digital technologies, demands transparency, and ensures that technology serves people.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Equitable Access]]
+- [[Algorithmic Discrimination]]
+- [[Algorithmic Transparency]]
+- [[Digital Divide]]
+- [[Digital Sovereignty]]
 
-## Full Text
-
----
-title: "Digitale Werkzeuge und Machtasymmetrien? Eine kritische Betrachtung von Technologie und Abhängigkeiten in der Sozialen Arbeit"
-authors: ["Studeny"]
-year: 2025
-type: conferencePaper
-language: de
-processed: 2026-02-05
-source_file: Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien.md
-confidence: 88
----
+## Wissensdokument
 
 # Digitale Werkzeuge und Machtasymmetrien? Eine kritische Betrachtung von Technologie und Abhängigkeiten in der Sozialen Arbeit
 

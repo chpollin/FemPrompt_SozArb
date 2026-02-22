@@ -5,15 +5,10 @@ authors:
   - T. Ley
 year: 2025
 type: bookSection
-url: https://www.pedocs.de/volltexte/2025/33133/pdf/Engelhardt_Ley_2025_Voll_dia_logisch.pdf
+doi: 
+url: "https://www.pedocs.de/volltexte/2025/33133/pdf/Engelhardt_Ley_2025_Voll_dia_logisch.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -25,29 +20,27 @@ llm_categories:
 
 # Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit – Curriculare Überlegungen und veränderte Akteurskonstellationen
 
-## Abstract
+## Transformation Trail
 
-Werkstattbericht zur curricularen Integration generativer KI. Positioniert Prompting als metakognitive Schlüsselkompetenz und diskutiert Rollenwandel von Lehr-/Lernakteuren; fordert reflektierte, ethisch eingebettete Nutzung mit Fokus auf kritische Validierung von KI-Ergebnissen.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Soziale_Arbeit
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit. Curriculare Überlegungen und veränderte Akteurskonstellationen"
-authors: ["Emily Engelhardt", "Thomas Ley"]
-year: 2025
-type: conferencePaper
-language: de
-processed: 2026-02-05
-source_file: Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.md
-confidence: 95
----
+**LLM:** Include (Confidence: 0.95)
+
+## Wissensdokument
 
 # Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit. Curriculare Überlegungen und veränderte Akteurskonstellationen
 

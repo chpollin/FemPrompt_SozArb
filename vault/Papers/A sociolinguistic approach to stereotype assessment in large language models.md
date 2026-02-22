@@ -5,20 +5,10 @@ authors:
   - K. Kjeldsen
 year: 2024
 type: conferencePaper
-url: https://facctconference.org/static/docs/facct2025-206archivalpdfs/facct2025-final1618-acmpaginated.pdf
+doi: 
+url: "https://facctconference.org/static/docs/facct2025-206archivalpdfs/facct2025-final1618-acmpaginated.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypstärke
-  - Stereotyping
-  - Stereotype
-  - Stereotypical
-  - Stereotypen
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.75
 llm_categories:
@@ -29,32 +19,31 @@ llm_categories:
 
 # A sociolinguistic approach to stereotype assessment in large language models
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Include (Confidence: 0.75)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Gender
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.75)
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotypical]]
-- [[Stereotyping]]
-- [[Stereotypstärke]]
+- [[Algorithmic Fairness in NLP]]
 
-## Full Text
-
----
-title: "Detecting Linguistic Indicators for Stereotype Assessment with Large Language Models"
-authors: ["Rebekka Görge", "Michael Mock", "Héctor Allende-Cid"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Klinge_2024_A_sociolinguistic_approach_to_stereotype.md
-confidence: 95
----
+## Wissensdokument
 
 # Detecting Linguistic Indicators for Stereotype Assessment with Large Language Models
 

@@ -1,19 +1,14 @@
 ---
-title: Der Einfluss der Algorithmen: Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz
+title: "Der Einfluss der Algorithmen: Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz"
 authors:
   - D. Schneider
   - U. Seelmeyer
 year: 2018
 type: journalArticle
 doi: 10.1007/s12054-018-0046-y
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -30,32 +25,51 @@ agreement: disagree
 
 # Der Einfluss der Algorithmen: Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz
 
-## Abstract
+## Transformation Trail
 
-Examines how algorithmic decision-making affects professional judgment formation and discretionary decision-making space for practitioners. Analyzes automation bias where professionals may over-rely on algorithmic recommendations without adequate critical evaluation. Stresses social work requires debate about what forms of knowledge new technologies can generate, where limits lie, and how it can meaningfully be incorporated into professional reflection and decision-making practices.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Bias in Social Work]]
+- [[Data Literacy in Professional Practice]]
 
----
-title: "Der Einfluss der Algorithmen: Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz"
-authors: ["Diana Schneider", "Udo Seelmeyer"]
-year: 2018
-type: journalArticle
-language: de
-processed: 2026-02-05
-source_file: Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten.md
-confidence: 94
----
+## Wissensdokument
 
 # Der Einfluss der Algorithmen: Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz
 

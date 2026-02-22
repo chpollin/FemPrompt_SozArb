@@ -5,17 +5,10 @@ authors:
   - M. Sowerby
 year: 2025
 type: journalArticle
-url: https://doi.org/10.1016/j.chb.2025.108563
 doi: 10.1016/j.chb.2025.108563
+url: "https://doi.org/10.1016/j.chb.2025.108563"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Prejudice
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -35,35 +28,23 @@ agreement: agree
 
 # Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups
 
-## Abstract
+## Transformation Trail
 
-Investigates how biased or prejudiced content in LLM responses affects user trust and willingness to use the system, particularly for users from marginalized communities. Through three preregistered experiments, finds that when AI responses exhibited prejudice, participants from marginalized groups reported significantly lower trust and decreased intentions to continue using the system.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Prejudice]]
+- [[Algorithmic Bias]]
 
-## Full Text
-
----
-title: "Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups"
-authors: ["Zachary W. Petzel", "Leanne Sowerby"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Petzel_2025_Prejudiced_interactions_with_large_language.md
-confidence: 75
----
+## Wissensdokument
 
 # Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups
 

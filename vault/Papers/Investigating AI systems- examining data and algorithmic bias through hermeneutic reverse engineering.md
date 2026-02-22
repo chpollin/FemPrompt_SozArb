@@ -1,24 +1,13 @@
 ---
-title: Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering
+title: "Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering"
 authors:
   - N. Shukla
 year: 2025
 type: journalArticle
-url: https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1380252/full
+doi: 
+url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1380252/full"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Algorithmic Bias
-  - Intersectionality
-mitigation_strategies:
-  - Intersectional Accuracy
-  - Intersectionality
-  - Inclusive And
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -37,42 +26,34 @@ agreement: agree
 
 # Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering
 
-## Abstract
+## Transformation Trail
 
-This work presents hermeneutic reverse engineering as a framework for investigating bias in AI systems. The approach considers AI systems as boundary objects and analyzes cultural meanings and assumptions embedded in techno-cultural objects. The study proposes three research perspectives: (1) comparative exploration of algorithmic bias, (2) investigation of impacts on various social groups, and (3) participatory approaches to include users in AI design.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
 - [[Algorithmic Bias]]
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
+- [[Algorithmic Fairness]]
+- [[Intersectional Feminism in Technology]]
 
-### Mitigation Strategies
-- [[Inclusive And]]
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering"
-authors: ["Nishanshi Shukla"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Shukla_2025_Investigating_AI_systems_examining_data_and.md
-confidence: 95
----
+## Wissensdokument
 
 # Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering
 

@@ -1,24 +1,14 @@
 ---
-title: Feminism Confronts AI: The Gender Relations of Digitalisation
+title: "Feminism Confronts AI: The Gender Relations of Digitalisation"
 authors:
   - J. Wajcman
   - E. Young
 year: 2023
 type: bookSection
-url: https://academic.oup.com/book/55103/chapter/423909956
+doi: 
+url: "https://academic.oup.com/book/55103/chapter/423909956"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Technofeminist
-  - Intersectional Accuracy
-  - Algorithmic Bias
-mitigation_strategies:
-  - Intersectional Technofeminist
-  - Intersectional Accuracy
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -41,41 +31,33 @@ agreement: agree
 
 # Feminism Confronts AI: The Gender Relations of Digitalisation
 
-## Abstract
+## Transformation Trail
 
-Wajcman and Young provide a feminist critique of AI, arguing that the technology is not neutral but deeply embedded in existing gendered power structures. They highlight the severe underrepresentation of women in AI development as a key source of bias, leading to the creation of systems that reflect and amplify a masculine worldview. The authors contend that simply adding more women to the field is insufficient. Instead, they call for a fundamental shift in the culture of technology production, challenging the technical-social dualism and integrating feminist perspectives into the very design of AI. This requires addressing the structural power asymmetries that shape technological development and moving beyond individualistic solutions.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
 - [[Algorithmic Bias]]
-- [[Intersectional Accuracy]]
-- [[Intersectional Technofeminist]]
+- [[Intersectional Bias]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-- [[Intersectional Technofeminist]]
-
-## Full Text
-
----
-title: "Feminism Confronts AI: The Gender Relations of Digitalisation"
-authors: ["Judy Wajcman", "Erin Young"]
-year: 2023
-type: book
-language: en
-processed: 2026-02-05
-source_file: Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.md
-confidence: 95
----
+## Wissensdokument
 
 # Feminism Confronts AI: The Gender Relations of Digitalisation
 

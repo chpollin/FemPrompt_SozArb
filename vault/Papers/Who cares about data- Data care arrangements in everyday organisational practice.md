@@ -6,14 +6,9 @@ authors:
 year: 2024
 type: journalArticle
 doi: 10.1080/1369118X.2024.2320917
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -22,29 +17,31 @@ llm_categories:
 
 # Who cares about data? Data care arrangements in everyday organisational practice
 
-## Abstract
+## Transformation Trail
 
-Introduces data care arrangements concept to understand mundane data work in organizations. Demonstrates through empirical research in educational and social service organizations how data care work is distributed across organizational members with different, often conflicting care obligations. Reveals data quality maintenance involves complex sociomaterial configurations of people, infrastructures, routines, and practices. Shows data care work is frequently backgrounded and assumed effortless despite being essential for datafied organizations.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Soziale_Arbeit
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-## Full Text
+- [[Feminist Science and Technology Studies (STS)]]
 
----
-title: "Who cares about data? Data care arrangements in everyday organisational practice"
-authors: ["Juliane Jarke", "Stefanie Büchner"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Jarke_2024_Who_cares_about_data_Data_care_arrangements_in.md
-confidence: 95
----
+## Wissensdokument
 
 # Who cares about data? Data care arrangements in everyday organisational practice
 

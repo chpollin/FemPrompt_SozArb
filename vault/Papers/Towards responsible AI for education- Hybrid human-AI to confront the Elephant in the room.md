@@ -1,20 +1,15 @@
 ---
-title: Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room
+title: "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room"
 authors:
   - J. Goellner
   - V. Kumar
   - V. Aleven
 year: 2025
 type: report
-url: https://arxiv.org/pdf/2504.16148
+doi: 
+url: "https://arxiv.org/pdf/2504.16148"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -26,29 +21,32 @@ llm_categories:
 
 # Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room
 
-## Abstract
+## Transformation Trail
 
-Identifies nine persistent challenges undermining responsible use of AI in education, including neglect of key learning processes, lack of stakeholder involvement, and use of unreliable XAI methods. Proposes hybrid human-AI methods, specifically neural-symbolic AI (NSAI), which integrates expert domain knowledge with data-driven approaches. This hybrid architecture allows for built-in transparency, stakeholder engagement, and modeling of complex pedagogically-grounded principles.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 94 |
+| Category Validation | 92 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Fairness in Education]]
+- [[Explainable AI (XAI)]]
 
----
-title: "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room"
-authors: ["Danial Hooshyar", "Gustav Šír", "Yeongwook Yang", "Eve Kikas", "Raija Hämäläinen", "Tommi Kärkkäinen", "Dragan Gašević", "Roger Azevedo"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.md
-confidence: 91
----
+## Wissensdokument
 
 # Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room
 

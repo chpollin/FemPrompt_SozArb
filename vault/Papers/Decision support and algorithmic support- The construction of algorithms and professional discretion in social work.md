@@ -1,20 +1,14 @@
 ---
-title: Decision support and algorithmic support: The construction of algorithms and professional discretion in social work
+title: "Decision support and algorithmic support: The construction of algorithms and professional discretion in social work"
 authors:
   - M. L. Meilvang
   - A. M. Dahler
 year: 2024
 type: bookSection
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -32,36 +26,52 @@ agreement: disagree
 
 # Decision support and algorithmic support: The construction of algorithms and professional discretion in social work
 
-## Abstract
+## Transformation Trail
 
-Critical analysis examining three decision-support algorithms developed for Danish municipalities in child and family social work, analyzing how they affect professional discretion despite claims to merely support professionals. Demonstrates how algorithmic systems designed to minimize subjective judgment and promote efficiency actually embody positivist assumptions that professional discretion can and should be eliminated. Key findings reveal how political actors favor standardized, automated approaches to avoid high-profile cases, effectively negating professional judgment central to ethical social work practice. Drawing on street-level bureaucracy and digitalization literature, argues that framing algorithms as neutral decision support obscures their role in fundamentally restructuring professional autonomy, expertise, and nature of care relationships.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Meilvang_2024_Decision_support_and_algorithmic_support_The]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
-- [[Discrimination]]
+- [[Algorithmic Bias in Social Work]]
+- [[Algorithmic Decision Support]]
+- [[Algorithmic Fairness]]
 
-## Full Text
-
----
-title: "Decision support and algorithmic support: the construction of algorithms and professional discretion in social work"
-authors: ["Marie Leth Meilvang", "Anne Marie Dahler"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Meilvang_2024_Decision_support_and_algorithmic_support_The.md
-confidence: 95
----
+## Wissensdokument
 
 # Decision support and algorithmic support: the construction of algorithms and professional discretion in social work
 

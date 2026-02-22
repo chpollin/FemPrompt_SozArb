@@ -7,16 +7,10 @@ authors:
   - B. E. Perron
 year: 2023
 type: journalArticle
-url: https://doi.org/10.1086/726021
 doi: 10.1086/726021
+url: "https://doi.org/10.1086/726021"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -37,32 +31,28 @@ agreement: agree
 
 # Recommendations for social work researchers and journal editors on the use of generative AI and large language models
 
-## Abstract
+## Transformation Trail
 
-Develops "disruptive-disrupting" framework for analyzing generative AI in social work research with concrete recommendations for researchers and journal editors. Emphasizes transparency and accountability requiring researchers to fully document AI use, disclose prompts, and take responsibility for AI-generated content. Argues that continuous education about AI construction, limitations, and ethical considerations is essential for developing appropriate trust in LLM systems.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Soziale_Arbeit
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Recommendations for Social Work Researchers and Journal Editors on the Use of Generative AI and Large Language Models"
-authors: ["Bryan G. Victor", "Rebeccah L. Sokol", "Lauri Goldkind", "Brian E. Perron"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Victor_2023_Recommendations_for_social_work_researchers_and.md
-confidence: 94
----
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
+
+## Wissensdokument
 
 # Recommendations for Social Work Researchers and Journal Editors on the Use of Generative AI and Large Language Models
 

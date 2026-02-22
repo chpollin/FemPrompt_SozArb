@@ -6,16 +6,10 @@ authors:
   - Ehsan Rezvani
 year: 2022
 type: journalArticle
-url: https://www.hindawi.com/journals/edri/2022/2533413/
 doi: 10.1155/2022/2533413
+url: "https://www.hindawi.com/journals/edri/2022/2533413/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -27,31 +21,35 @@ agreement: agree
 
 # A Literature Review of Digital Literacy over Two Decades
 
-## Abstract
+## Transformation Trail
 
-The COVID-19 pandemic has forced online learning to be a “new normal” during the past three years, which highly emphasizes students’ improved digital literacy. This study aims to present a literature review of students’ digital literacy. Grounded on about twenty journal articles and other related publications from the Web of Science Core Collection, this paper focused on the definition of digital literacy; the factors affecting students’ digital literacy (age, gender, family socioeconomic status, and parent’s education level); the relationship between students’ digital literacy and their self-control, technostress, and engagement; and the three approaches to gauge the level of students’ digital literacy. The study also provided some advice for educators and policymakers. Finally, the limitations and implications were presented.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** Gender
-**Human Decision:** Exclude
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[Critical Digital Thinking]]
+- [[Digital Divide]]
+- [[Digital Equity in Education]]
+- [[Digital Literacy]]
 
----
-title: "A Literature Review of Digital Literacy over Two Decades"
-authors: ["Danhua Peng", "Zhonggen Yu"]
-year: 2022
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Peng_2022_A_Literature_Review_of_Digital_Literacy_over_Two.md
-confidence: 95
----
+## Wissensdokument
 
 # A Literature Review of Digital Literacy over Two Decades
 

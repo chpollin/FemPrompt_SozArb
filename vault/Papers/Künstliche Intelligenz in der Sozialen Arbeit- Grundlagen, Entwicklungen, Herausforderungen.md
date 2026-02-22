@@ -1,19 +1,14 @@
 ---
-title: Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen
+title: "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen"
 authors:
   - O. Steiner
   - D. Tschopp
 year: 2022
 type: journalArticle
 doi: 10.1007/s12054-022-00546-4
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -31,32 +26,52 @@ agreement: disagree
 
 # Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen
 
-## Abstract
+## Transformation Trail
 
-Systematically analyzes two key AI application scenarios: Predictive Risk Modeling (PRM) and chatbots in counseling. Discusses neural networks' black box problem, dangers of case labeling through standardization, ethical questions of responsibility and liability when AI predictions diverge from professional judgment, and algorithmic bias risks perpetuating social inequalities. Uses Jonas' ethical theory of responsibility to emphasize ethical responsibility as foundational to all AI implementation decisions.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Ja | X |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy in Social Work]]
+- [[Algorithmic Bias in Social Services]]
+- [[Algorithmic Fairness]]
 
----
-title: "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen"
-authors: ["Olivier Steiner", "Dominik Tschopp"]
-year: 2022
-type: journalArticle
-language: de
-processed: 2026-02-05
-source_file: Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit.md
-confidence: 95
----
+## Wissensdokument
 
 # Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen, Entwicklungen, Herausforderungen
 

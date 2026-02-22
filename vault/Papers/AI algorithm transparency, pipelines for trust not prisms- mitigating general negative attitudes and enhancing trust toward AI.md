@@ -1,22 +1,14 @@
 ---
-title: AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI
+title: "AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI"
 authors:
   - K. Park
   - H. Y. Yoon
 year: 2025
 type: journalArticle
-url: https://www.nature.com/articles/s41599-025-05116-z
 doi: 10.1057/s41599-025-05116-z
+url: "https://www.nature.com/articles/s41599-025-05116-z"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Disparity
-mitigation_strategies:
-  - Inclusive Approach
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -34,38 +26,33 @@ agreement: agree
 
 # AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI
 
-## Abstract
+## Transformation Trail
 
-Peer-reviewed study examining how algorithmic transparency overcomes users' predisposed distrust in AI. 2×2 experiment showing transparency significantly increases trust, especially for those with initially negative AI attitudes. Making AI workings visible mitigated negative relationship between user AI-skepticism and organizational trust. Transparency acts as "signal of trustworthiness," reducing skepticism and uncertainty. Emphasizing transparency in prompts and system design can reassure wary professionals by demonstrating accountability.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Prompting, KI_Sonstige, Fairness
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, Generative_KI, Bias_Ungleichheit
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Bias Types
-- [[Disparity]]
+- [[AI Literacy]]
+- [[Algorithmic Bias]]
 
-### Mitigation Strategies
-- [[Inclusive Approach]]
-
-## Full Text
-
----
-title: "AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI"
-authors: ["Keonyoung Park", "Ho Young Yoon"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Park_2025_AI_algorithm_transparency,_pipelines_for_trust.md
-confidence: 94
----
+## Wissensdokument
 
 # AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI
 

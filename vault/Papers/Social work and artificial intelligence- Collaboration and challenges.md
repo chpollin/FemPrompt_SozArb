@@ -1,21 +1,14 @@
 ---
-title: Social work and artificial intelligence: Collaboration and challenges
+title: "Social work and artificial intelligence: Collaboration and challenges"
 authors:
   - Y.-C. Chen
   - C.-C. Lin
 year: 2025
 type: journalArticle
-url: https://dmjr-journals.com/assets/article/1755892935-SOCIAL_WORK_&_ARTIFICIAL_INTELLIGENCE-_COLLABORATION_AND_CHALLENGES.pdf
+doi: 
+url: "https://dmjr-journals.com/assets/article/1755892935-SOCIAL_WORK_&_ARTIFICIAL_INTELLIGENCE-_COLLABORATION_AND_CHALLENGES.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Equitable Ai
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -28,35 +21,33 @@ llm_categories:
 
 # Social work and artificial intelligence: Collaboration and challenges
 
-## Abstract
+## Transformation Trail
 
-This qualitative study explores current AI applications in social work through interviews with professionals, AI developers, and policymakers, identifying challenges including insufficient decision-making transparency, gaps in ethical frameworks, and inadequate technical literacy among professionals. The research reveals that while ninety percent of social work professionals acknowledge AI's auxiliary function in daily operations, concerns persist about automation bias and the potential undermining of professional autonomy. The study proposes educational training and policy recommendations while advocating for explainable AI systems and strengthened ethical governance to foster harmonious development between technological applications and humanistic values.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[AI Literacy in Professional Practice]]
+- [[Algorithmic Bias in Social Services]]
+- [[Explainable Artificial Intelligence (XAI)]]
 
-### Mitigation Strategies
-- [[Equitable Ai]]
-
-## Full Text
-
----
-title: "Social Work and Artificial Intelligence: Collaboration and Challenges"
-authors: ["Yih-Chang Chen", "Chia-Ching Lin"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Chen_2025_Social_work_and_artificial_intelligence.md
-confidence: 92
----
+## Wissensdokument
 
 # Social Work and Artificial Intelligence: Collaboration and Challenges
 

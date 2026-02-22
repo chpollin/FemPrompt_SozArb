@@ -1,5 +1,5 @@
 ---
-title: Algorithmic discrimination: examining its types and regulatory measures with emphasis on US legal practices
+title: "Algorithmic discrimination: examining its types and regulatory measures with emphasis on US legal practices"
 authors:
   - X. Wang
   - Y. C. Wu
@@ -7,22 +7,10 @@ authors:
   - H. Fu
 year: 2024
 type: journalArticle
-url: https://doi.org/10.3389/frai.2024.1320277
 doi: 10.3389/frai.2024.1320277
+url: "https://doi.org/10.3389/frai.2024.1320277"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Discrimination
-  - Algorithmic Bias
-  - Intersectional Accuracy
-mitigation_strategies:
-  - Intersectional Accuracy
-  - Fairness Constraints
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -36,41 +24,53 @@ agreement: disagree
 
 # Algorithmic discrimination: examining its types and regulatory measures with emphasis on US legal practices
 
-## Abstract
+## Transformation Trail
 
-Diese umfassende Systematik identifiziert fünf primäre Typen algorithmischer Diskriminierung: Bias durch algorithmische Agenten, diskriminierende Merkmalsselektion, Proxy-Diskriminierung, disparate Auswirkungen und gezielte Werbung. Die Analyse der US-Rechtslandschaft offenbart einen mehrstufigen Regulierungsansatz aus prinzipieller Regulierung, präventiven Kontrollen, konsequenter Haftung und Selbstregulierung. Zentral ist die Erkenntnis, dass unbeabsichtigte Diskriminierung durch scheinbar neutrale Algorithmen besonders schwer zu erkennen und zu regulieren ist, da sie strukturelle historische Ungleichheiten perpetuiert. Die Studie betont die Notwendigkeit interdisziplinärer Forschung und proaktiver Politikentwicklung.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Wang_2024_Algorithmic_discrimination_examining_its_types]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
 - [[Algorithmic Discrimination]]
-- [[Discrimination]]
-- [[Intersectional Accuracy]]
+- [[Algorithmic Fairness]]
+- [[Algorithmic Transparency and Accountability]]
+- [[Proxy Discrimination]]
 
-### Mitigation Strategies
-- [[Fairness Constraints]]
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Algorithmic discrimination: examining its types and regulatory measures with emphasis on US legal practices"
-authors: ["Xukang Wang", "Ying Cheng Wu", "Xueliang Ji", "Hongpeng Fu"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Wang_2024_Algorithmic_discrimination_examining_its_types.md
-confidence: 92
----
+## Wissensdokument
 
 # Algorithmic discrimination: examining its types and regulatory measures with emphasis on US legal practices
 

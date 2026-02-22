@@ -1,5 +1,5 @@
 ---
-title: Bias, accuracy, and trust: Gender-diverse perspectives on large language models
+title: "Bias, accuracy, and trust: Gender-diverse perspectives on large language models"
 authors:
   - A. Gaba
   - E. Wall
@@ -9,24 +9,10 @@ authors:
   - C. Xiong
 year: 2025
 type: journalArticle
-url: https://arxiv.org/abs/2506.21898
+doi: 
+url: "https://arxiv.org/abs/2506.21898"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypischen
-  - Stereotyping
-  - Stereotypisierung
-  - Stereotypische
-  - Stereotypical
-  - Stereotypen
-mitigation_strategies:
-  - Bias Mitigation
-  - Inclusive Dataset
-  - Inclusive And
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -42,44 +28,51 @@ agreement: disagree
 
 # Bias, accuracy, and trust: Gender-diverse perspectives on large language models
 
-## Abstract
+## Transformation Trail
 
-Qualitative study with 25 interviews exploring how users of different gender identities perceive bias and trustworthiness in ChatGPT. Found perceived biases in LLM outputs undermine user trust, with non-binary participants encountering stereotyped responses that eroded confidence. Trust levels varied by group with male participants reporting higher trust. Participants recommended bias mitigation strategies including diversifying training data and implementing clarifying follow-up prompts to check biases.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Fairness
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 92 |
+| **Overall Confidence** | **90** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Ja | X |
+| Prompting | Nein | Ja | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Ja | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypen]]
-- [[Stereotypical]]
-- [[Stereotyping]]
-- [[Stereotypische]]
-- [[Stereotypischen]]
-- [[Stereotypisierung]]
+- [[Algorithmic Fairness]]
+- [[Gender Bias in Large Language Models]]
 
-### Mitigation Strategies
-- [[Bias Mitigation]]
-- [[Inclusive And]]
-- [[Inclusive Dataset]]
-
-## Full Text
-
----
-title: "Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models"
-authors: ["Aimen Gaba", "Emily Wall", "Tejas Ramkumar Babu", "Yuriy Brun", "Kyle Wm. Hall", "Cindy Xiong Bearfield"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse.md
-confidence: 90
----
+## Wissensdokument
 
 # Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models
 

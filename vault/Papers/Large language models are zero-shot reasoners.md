@@ -8,15 +8,10 @@ authors:
   - Y. Iwasawa
 year: 2022
 type: conferencePaper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Fine-tuning
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -31,31 +26,32 @@ agreement: agree
 
 # Large language models are zero-shot reasoners
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** Generative_KI, Prompting
-**Human Decision:** Exclude
-**Human Categories:** Generative_KI, Prompting
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Fine-tuning]]
+- [[Prompt Engineering]]
 
-## Full Text
-
----
-title: "Large Language Models are Zero-Shot Reasoners"
-authors: ["Takeshi Kojima", "Machel Reid", "Yutaka Matsuo", "Yusuke Iwasawa", "Shixiang Shane Gu"]
-year: 2022
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Kojima_2022_Large_language_models_are_zero-shot_reasoners.md
-confidence: 92
----
+## Wissensdokument
 
 # Large Language Models are Zero-Shot Reasoners
 

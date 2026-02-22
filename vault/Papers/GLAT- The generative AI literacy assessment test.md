@@ -1,22 +1,16 @@
 ---
-title: GLAT: The generative AI literacy assessment test
+title: "GLAT: The generative AI literacy assessment test"
 authors:
   - Yueqiao Jin
   - Roberto Martinez-Maldonado
   - Dragan Gašević
   - Lixiang Yan
-year: 12/2025
+year: 2024
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2666920X25000761
 doi: 10.1016/j.caeai.2025.100436
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2666920X25000761"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -26,25 +20,32 @@ llm_categories:
 
 # GLAT: The generative AI literacy assessment test
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Generative_KI
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 93 |
+| **Overall Confidence** | **90** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Bias in Hiring Systems]]
+- [[Generative AI Literacy]]
 
----
-title: "GLAT: The generative AI literacy assessment test"
-authors: ["Yueqiao Jin", "Roberto Martinez-Maldonado", "Dragan Gašević", "Lixiang Yan"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Jin_2025_GLAT_The_generative_AI_literacy_assessment_test.md
-confidence: 90
----
+## Wissensdokument
 
 # GLAT: The generative AI literacy assessment test
 

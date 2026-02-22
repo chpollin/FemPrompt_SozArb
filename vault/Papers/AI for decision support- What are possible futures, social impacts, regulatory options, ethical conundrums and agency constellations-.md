@@ -1,21 +1,14 @@
 ---
-title: AI for decision support: What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations?
+title: "AI for decision support: What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations?"
 authors:
   - D. Schneider
   - K. Weber
 year: 2024
 type: journalArticle
 doi: 10.14512/tatup.33.1.08
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Debiasing
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -29,37 +22,51 @@ agreement: disagree
 
 # AI for decision support: What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations?
 
-## Abstract
+## Transformation Trail
 
-Comprehensive examination of AI-based decision support systems across healthcare, legal systems, and border control. Provides critical analysis of technical, ethical, legal, and societal challenges when machines make or support decisions previously made by humans. Reviews regulatory attempts including EU AI Act. Examines key issues: opacity of algorithmic systems creating black box problems for accountability, professional deskilling risks when practitioners defer to AI, and potential for discrimination embedded in training data and algorithmic logic.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 78 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **86** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Schneider_2024_AI_for_decision_support_What_are_possible]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[Algorithmic Fairness]]
+- [[Automated Decision-Making Systems]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-
-## Full Text
-
----
-title: "AI for decision support: What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations?"
-authors: ["Armin Grunwald", "Daniel Schneider", "Karsten Weber", "Daniel Minkin", "Lou Therese Brandner", "Manuela Marquardt", "Philipp Graf", "Eva Jansen", "Stefan Hillmann", "Jan-Niklas Voigt-Antons"]
-year: 2024
-type: journalArticle
-language: de
-processed: 2026-02-05
-source_file: Schneider_2024_AI_for_decision_support_What_are_possible.md
-confidence: 86
----
+## Wissensdokument
 
 # AI for decision support: What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations?
 

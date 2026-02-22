@@ -1,36 +1,27 @@
 ---
-title: Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness
+title: "Factoring the matrix of domination: A critical review and reimagination of intersectionality in AI fairness"
 authors:
   - A. Ovalle
   - A. Subramonian
   - V. Gautam
   - G. Gee
-  - K.-W. Chang
+  - K. W. Chang
 year: 2023
 type: conferencePaper
-url: https://www.lsv.uni-saarland.de/wp-content/uploads/2023/12/Ovalle-et-al.-2023-Factoring-the-Matrix-of-Domination-A-Critical-Rev.pdf
+doi: 10.1145/3600211.3604705
+url: "https://dl.acm.org/doi/abs/10.1145/3600211.3604705"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Intersectionality
-  - Intersectional Demographic
-mitigation_strategies:
-  - Intersectional Demographic
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
+  - Gender
   - Diversitaet
   - Feministisch
   - Fairness
-human_decision: Unclear
+human_decision: Exclude
 human_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
@@ -40,118 +31,120 @@ human_categories:
 agreement: disagree
 ---
 
-# Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness
+# Factoring the matrix of domination: A critical review and reimagination of intersectionality in AI fairness
 
-## Abstract
+## Transformation Trail
 
-This critical review examines how intersectionality is discussed in 30 works of AI fairness literature. The study shows that researchers predominantly reduce intersectionality to optimizing fairness metrics across demographic subgroups while neglecting social context and power structures. The authors develop a framework for re-conceptualizing intersectionality in AI fairness based on relationality, social power, and structural analysis. They argue that genuine intersectional approaches must consider the interweaving of various systems of oppression rather than treating them as separate, additive categories.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
-**Human Decision:** Unclear
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Ja |  |
+| Feministisch | Nein | Ja | X |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Ovalle_2023_Factoring]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Intersectional Demographic]]
-- [[Intersectionality]]
+- [[Intersectional AI Fairness]]
+- [[Subgroup Fairness Metrics]]
 
-### Mitigation Strategies
-- [[Intersectional Demographic]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness"
-authors: ["Anaelia Ovalle", "Arjun Subramonian", "Vagrant Gautam", "Gilbert Gee", "Kaiwei Chang"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Ovalle_2023_Factoring_the_Matrix_of_Domination_A_Critical.md
-confidence: 75
----
+## Wissensdokument
 
 # Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness
 
 ## Kernbefund
 
-AI-Fairness-Forscher reduzieren Intersektionalität primär auf Fairness-Metriken für demographische Subgruppen und ignorieren dabei zentrale intersektionale Prinzipien wie Machtrelationen, soziale Kontexte und kritisches Handeln für Gerechtigkeit.
+AI-Fairness-Forscher reduzieren Intersektionalität überwiegend auf die Optimierung von Fairness-Metriken über demografische Subgruppen, während sie kritische Aspekte wie Machtanalyse, sozialen Kontext und intersektionale Praxis vernachlässigen. Dies reproduziert koloniale Epistemologien und untergrä&bt die liberatorische Kraft der intersektionalen Theorie.
 
 ## Forschungsfrage
 
-Wie wird Intersektionalität in der AI-Fairness-Literatur diskutiert und welche Lücken entstehen zwischen der Konzeptualisierung und Operationalisierung intersektionaler Frameworks?
+Wie wird Intersektionalität in der AI-Fairness-Literatur diskutiert und wo liegen die Lücken zwischen ihrer Konzeptualisierung und Operationalisierung für gerechte KI-Systeme?
 
 ## Methodik
 
-Kritische Literaturanalyse; deduktive und induktive Codierung von 30 AI-Fairness-Papers gegen Collins und Bilges Intersektionalitäts-Tenets; Mixed-Methods mit Interannotator-Agreement-Messungen (Randolph's κ)
-**Datenbasis:** n=30 peer-reviewed AI-Fairness-Papers; 11 Papiere wurden von 3 Annotatoren kodiert, 19 weitere von mindestens 1 Annotator
+Theoretisch/Review - Kritische Literaturanalyse von 30 AI-Fairness-Papieren basierend auf Collins und Bilge's sechs Intersektionalitäts-Tenets (soziale Gerechtigkeit, soziale Ungleichheit, Relationalität, Machtstrukturen, sozialer Kontext, Komplexität); deduktive und induktive Kodierung mit Interannotator-Reliabilität (Randolph's κ).
+**Datenbasis:** n=30 AI-Fairness-Papiere (11 mit Triple-Annotation für Reliabilität, 19 mit Single-Annotation); Analyse basiert auf etablierter intersektionaler Theorie (primär Crenshaw, Collins, Bilge)
 
 ## Hauptargumente
 
-- Intersektionalität ist ein kritisches Praxis-Framework zur Analyse von Machtstrukturen und struktureller Unterdrückung, nicht bloß ein statistisches Problem der Fairness-Optimierung über Subgruppen.
-- Die epistemologischen Fundamente der KI-Forschung sind in kolonialer Wissenschaft verwurzelt; Intersektionalität kann helfen, diese zu hinterfragen und marginalisierte Wissensproduktion zu zentralisieren.
-- Vier Hauptlücken wurden identifiziert: (1) fehlende Auseinandersetzung mit Machtrelationen über das KI-System hinaus, (2) schwache Zitierpraxen intersektionaler Literatur, (3) Verlust von Relationalität zwischen Strukturen durch statistische Operationalisierung, (4) mangelnde soziale Gerechtigkeit als explizites Praxisziel.
+- Intersektionalität ist kein technisches, sondern ein kritisches analytisches Konzept aus Black Feminist Theory zur Untersuchung interlocking systems of oppression; AI-Fairness-Forschung entfremdet diesen emanzipatorischen Anspruch durch ihre Reduktion auf statistische Subgruppen-Fairness.
+- Koloniale Epistemologie prägt KI-Forschung strukturell und führt zur Auslöschung von Wissen marginalisierter Communities; intersektionale Praxis erfordert hingegen Partizipation von Betroffenen, Reflexivität und soziale Ortung der Forschenden selbst.
+- Power wird in der AI-Fairness-Literatur technodeterministisch verengt (auf das System statt auf menschliche Gestalter fokussiert) oder ganz ignoriert (nur 53% erwähnen Power); echte intersektionale Praxis erfordert die Analyse struktureller, disziplinärer, kultureller und interpersonaler Machtdomänen.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Kritische Analyse von Wissensproduktion und epistemologischen Grundlagen in der KI-Forschung: 'The epistemologies of AI research are not divorced from scientific colonialism's legacy.'
+Die Arbeit kritisiert die Epistemologien der KI-Forschung und fordert eine Transformation der Wissensproduktion und kritischen Reflexivität: 'intersectionality, by enabling researchers to observe and articulate disparities, may break the epistemic molds researchers are placed in so they may operate differently'
 
 ### Evidenz 2
 
-Breite Kritik auf algorithmische Fairness, ML-Systeme, predictive systems und deren Machteffekte fokussiert.
+Umfassende Analyse der AI-Fairness-Literatur und ihrer algorithmischen Operationalisierungen (pre/in/post-processing, Fairness-Metriken, Subgroupenbildung, Bias-Quellen)
 
 ### Evidenz 3
 
-Expliziter Bezug zu Sozialen Systemen und struktureller Unterdrückung: 'intersectionality [...] allows us to examine how social inequalities persist through domains of structure and discipline'; Engagement mit carceral systems und sozialer Gerechtigkeit.
+Zentral ist die Kritik der fehlenden Auseinandersetzung mit strukturellen Ursachen von Ungleichheit: 'researchers prioritize intersectional subgroup fairness over the structures that give rise to unfairness to begin with'
 
 ### Evidenz 4
 
-Zentrale Analyse algorithmischen Bias und struktureller Ungleichheit: 'the goal of minimizing negative outcomes across demographic groups, including groups associated with multiple, intersectional demographic attributes'
+Intersektionalität wird als Framework zur Analyse marginalisierter Gruppen und ihrer Verschränkung mehrfacher Dimensionen von Unterdrückung behandelt: 'groups associated with multiple, intersectional demographic attributes (e.g., Black women)'
 
 ### Evidenz 5
 
-Expliziter Gender-Fokus mit Referenzen auf Black women, gender-intersections und geschlechtsspezifische Dimensionen von Unterdrückung.
+Explizite Verankerung in Black Feminist Theory (Crenshaw, Collins, hooks) und dekolonialer Theorie; Praxis wird als 'knowledge production' gegen 'epistemic violence' definiert: 'frameworks to articulate social inequalities have been integral to the survival of communities at the margins' - dies ist zentral für feministische Epistemologie
 
 ### Evidenz 6
 
-Kernfokus auf Intersektionalität, marginalisierte Communities und intersektionale Perspektiven: 'examining interlocking mechanisms of structural oppression [...] which produce inequality'
-
-### Evidenz 7
-
-Explizit feministische Theorie (Crenshaw, Collins, Black Feminist epistemology, hooks): 'Black feminist knowledge' wird zentralisiert; Referenzen zu 'gentrification of intersectionality' und Schutz Black feminist Wissensproduktion.
-
-### Evidenz 8
-
-Zentrale Kritik der Fairness-Literatur: 'The majority of the papers we review approach intersectionality from the narrow perspective of subgroup fairness.'
+Kritische Analyse von Fairness-Metriken und deren Limitation: 'merely mentioning power does not entail engaging with it in depth'; Argument dass echte Fairness nur durch intersektionale Analyse möglich ist, die Machtstrukturen und sozialen Kontext einbezieht
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Hochgradig relevant für die Schnittstelle AI/Soziale Arbeit/Gender: Das Paper verbindet kritische sozialwissenschaftliche Theorie (intersektionaler Feminismus, Dekolonialität) mit technischer KI-Forschung und zeigt, wie soziale Gerechtigkeit in AI-Systemen operationalisiert werden kann. Besonders wertvoll für Sozialarbeiter und KI-Entwickler, die kritische Reflexion suchen.
+**Domain Fit:** Hochgradig relevant für die Schnittstelle KI/Gender Studies/Kritische Sozialtheorie. Das Paper verbindet AI Fairness kritisch mit intersektionaler und dekolonialer Theorie und hat implizite Bedeutung für Soziale Arbeit, da es Machtstrukturen und marginalisierte Communities in technischen Systemen analysiert.
 
-**Unique Contribution:** Das Paper bietet die erste systematische kritische Analyse, wie AI-Fairness-Papiere intersektionale Theorie (miss)verwenden, und entwickelt ein operationalisierbares Framework (Collins/Bilges Tenets) zur Messung echter intersektionaler Praxis versus oberflächlicher Fairness-Optimierung.
+**Unique Contribution:** Erstmalige systematische Mappung der Lücke zwischen intersektionaler Theorie (als kritisches Framework für Befreiung) und ihrer technischen Operationalisierung in AI-Fairness-Forschung, verbunden mit konkreten Empfehlungen zur Überwindung kolonialer Epistemologien in KI-Entwicklung.
 
-**Limitations:** Fokus auf englischsprachige, akademische peer-reviewed Papiere (nicht Industrie oder globale Perspektiven); begrenzte Analyse praktischer Implementierungen außerhalb des AI-Pipelines; Positioniertheit der Autoren auf US/Europa kann globale Kontexte limitieren.
+**Limitations:** Fokus ausschließlich auf englischsprachige Literatur; geografisch konzentriert auf USA/Nordatlantik; keine Interviews mit marginialisierten Communities selbst; Transferierbarkeit auf andere technische Domänen unklar
 
-**Target Group:** AI-Forscher und -Entwickler mit Fairness-Fokus; Sozialwissenschaftler und kritische Theoretiker; Policy-Maker; Lehrende in KI-Ethik; Community-Organizer und soziale Gerechtigkeit Aktivisten; Studierenden in Gender Studies, KI-Ethik, Sozialer Arbeit
+**Target Group:** AI-Fairness-Forscher und KI-Ethiker (primär), Policymaker im Tech/AI-Bereich, dekoloniale und feministische Wissenschaftler, Technologie-Aktivisten, Software-Entwickler mit Gerechtigkeitskomitment. Potentiell relevant für Sozialarbeiter in Kontext algorithmischer Entscheidungssysteme in Sozialdiensten (Leistungszuteilung, Risikobewertung).
 
 ## Schlüsselreferenzen
 
-- [[Crenshaw_1989]] - Demarginalizing the Intersection of Race and Sex (Intersectionality foundational work)
-- [[Collins_2000]] - Black Feminist Thought (Matrix of Domination framework)
-- [[Buolamwini_Gebru_2018]] - Gender Shades (intersectional subgroups in computer vision)
-- [[DIgnazio_Klein_2020]] - Data Feminism
-- [[Eubanks_2019]] - Automating Inequality (algorithmic systems and surveillance)
-- [[hooks_bell_2000]] - Feminist Theory: From Margin to Center
-- [[Freeman_1978]] - Legitimizing Racial Discrimination Through Antidiscrimination Law (critical legal studies)
-- [[Mitchell_et_al_2019]] - Model Cards for Model Reporting
-- [[ConstanzaChock_2020]] - Design Justice (intersectional critical design)
-- [[AlexanderFloyd_2012]] - Black Feminist Knowledge and Black Feminist Erasure (citational praxis)
+- [[Crenshaw_Kimberlé_1989]] - Demarginalizing the Intersection of Race and Sex (Intersectionality Framework)
+- [[Collins_Patricia_Hill_Bilge_Sirma_2016]] - Intersectionality (Core Tenets: social justice, social inequality, relationality, social power, social context, complexity)
+- [[Buolamwini_Joy_Gebru_Timnit_2018]] - Gender Shades: Intersectional Accuracy Disparities in Gender Classification
+- [[CostanzaChock_Sasha_2020]] - Design Justice: Community-Centered Approaches to Technology
+- [[DIgnazio_Catherine_2020]] - Data Feminism (with Lauren Klein)
+- [[Davis_Jenny_L_Kneese_Tamara_Snitow_Jeffrey_2021]] - Reparative and Historically Informed AI (cited as [37])
+- [[Freeman_Alan_David_1978]] - Legitimizing Racial Discrimination through Antidiscrimination Law
+- [[Mitchell_Shira_et_al_2021]] - Model Cards for Model Reporting (Transparency and Social Context)
+- [[Kasy_Maximilian_Abebe_Rediet_2021]] - Algorithmic Fairness and the Social Contract
+- [[Birhane_Abeba_et_al_2021]] - The Normative Crisis in AI Ethics (Power and Social Context Analysis)

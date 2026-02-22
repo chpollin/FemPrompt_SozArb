@@ -1,23 +1,15 @@
 ---
-title: Feminist perspectives on AI: Ethical considerations in algorithmic decision-making
+title: "Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making"
 authors:
   - U. Ahmed
 year: 2024
 type: journalArticle
-url: https://www.researchcorridor.org/index.php/jgsi/article/download/330/314
+doi: 
+url: "https://www.researchcorridor.org/index.php/jgsi/article/download/330/314"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Algorithmic Bias
-mitigation_strategies:
-  - Intersectional Accuracy
 llm_decision: Include
-llm_confidence: 0.92
+llm_confidence: 0.95
 llm_categories:
   - KI_Sonstige
   - Bias_Ungleichheit
@@ -25,53 +17,59 @@ llm_categories:
   - Diversitaet
   - Feministisch
   - Fairness
-human_decision: Include
-human_categories:
-  - Generative_KI
-  - KI_Sonstige
-  - Bias_Ungleichheit
-  - Gender
-  - Diversitaet
-  - Feministisch
-  - Fairness
-agreement: agree
+human_decision: Exclude
+human_categories: []
+agreement: disagree
 ---
 
-# Feminist perspectives on AI: Ethical considerations in algorithmic decision-making
+# Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making
 
-## Abstract
+## Transformation Trail
 
-Theoretische Arbeit zur feministischen KI-Ethik. Argumentiert, dass KI strukturell eingebettete Diskriminierung reproduziert und plädiert für partizipative, intersektionale Entwicklungspraxis.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Ja | X |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Ja | X |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Ahmed_2024_Feminist_perspectives_on_AI_Ethical]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
 - [[Algorithmic Bias]]
-- [[Intersectional Accuracy]]
+- [[Explainable AI (XAI)]]
+- [[Intersectional Feminism in Technology]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making"
-authors: ["Uzair Ahmed"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-04
-source_file: Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md
-confidence: 95
----
+## Wissensdokument
 
 # Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making
 

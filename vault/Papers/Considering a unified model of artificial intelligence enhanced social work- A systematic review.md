@@ -1,5 +1,5 @@
 ---
-title: Considering a unified model of artificial intelligence enhanced social work: A systematic review
+title: "Considering a unified model of artificial intelligence enhanced social work: A systematic review"
 authors:
   - M. Garkisch
   - P. J. Langer
@@ -7,15 +7,9 @@ authors:
 year: 2024
 type: journalArticle
 doi: 10.1007/s41134-024-00326-y
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Inclusive Data
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -26,32 +20,33 @@ llm_categories:
 
 # Considering a unified model of artificial intelligence enhanced social work: A systematic review
 
-## Abstract
+## Transformation Trail
 
-Systematic review mapping research landscape of social work AI scholarship, analyzing 67 articles using qualitative analytic approaches to explore how social work researchers investigate AI. Identified themes consistent with Staub-Bernasconi's triple mandate covering profession level, social agencies/organizations, and clients. Emphasizes importance of enhancing computational thinking, AI literacy, and data literacy, and developing skills for evaluating automated systems. Stresses that professionals must be educated and sensitized to data and AI literacy with regular training opportunities.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 97 |
+| Category Validation | 92 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Inclusive Data]]
+- [[AI Literacy in Social Work]]
+- [[Algorithmic Bias in Social Services]]
+- [[Predictive Analytics in Child Welfare]]
 
-## Full Text
-
----
-title: "Considering a Unified Model of Artificial Intelligence Enhanced Social Work: A Systematic Review"
-authors: ["Michael Garkisch", "Lauri Goldkind"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Garkisch_2024_Considering_a_unified_model_of_artificial.md
-confidence: 92
----
+## Wissensdokument
 
 # Considering a Unified Model of Artificial Intelligence Enhanced Social Work: A Systematic Review
 

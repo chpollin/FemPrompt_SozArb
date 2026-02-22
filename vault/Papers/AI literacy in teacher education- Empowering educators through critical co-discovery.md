@@ -1,5 +1,5 @@
 ---
-title: AI literacy in teacher education: Empowering educators through critical co-discovery
+title: "AI literacy in teacher education: Empowering educators through critical co-discovery"
 authors:
   - M. Dilek
   - E. Baran
@@ -7,18 +7,9 @@ authors:
 year: 2025
 type: journalArticle
 doi: 10.1177/00224871251325083
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Algorithmic Bias
-  - Stereotypical
-mitigation_strategies:
-  - Equitable Learning
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -28,37 +19,34 @@ llm_categories:
 
 # AI literacy in teacher education: Empowering educators through critical co-discovery
 
-## Abstract
+## Transformation Trail
 
-Implements critical co-discovery approaches within AI teacher education to move beyond technical automation toward critical pedagogical engagement. Through co-discovery activities, educators developed understanding of AI concepts, ethical considerations, and context-specific applications while co-constructing knowledge. Emphasizes that prolonged engagement with AI literacy integrated into teacher education programs enables educators to critically navigate AI systems and examine broader pedagogical and ethical implications, prioritizing critical examination of AI's power dynamics and social justice implications.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Bias_Ungleichheit
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
+- [[AI Literacy]]
 - [[Algorithmic Bias]]
-- [[Stereotypical]]
-- [[Stereotyping]]
+- [[Algorithmic Fairness]]
+- [[Gender Bias in AI]]
 
-### Mitigation Strategies
-- [[Equitable Learning]]
-
-## Full Text
-
----
-title: "AI Literacy in Teacher Education: Empowering Educators Through Critical Co-Discovery"
-authors: ["Melis Dilek", "Evrim Baran", "Ezequiel Aleman"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Dilek_2025_AI_literacy_in_teacher_education_Empowering.md
-confidence: 88
----
+## Wissensdokument
 
 # AI Literacy in Teacher Education: Empowering Educators Through Critical Co-Discovery
 

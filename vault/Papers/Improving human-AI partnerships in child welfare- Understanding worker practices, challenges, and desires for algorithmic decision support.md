@@ -1,5 +1,5 @@
 ---
-title: Improving human-AI partnerships in child welfare: Understanding worker practices, challenges, and desires for algorithmic decision support
+title: "Improving human-AI partnerships in child welfare: Understanding worker practices, challenges, and desires for algorithmic decision support"
 authors:
   - A. Kawakami
   - V. Sivaraman
@@ -11,17 +11,12 @@ authors:
   - Z. S. Wu
   - H. Zhu
   - K. Holstein
-year: April 30
+year: 2024
 type: conferencePaper
 doi: 10.1145/3491102.3517439
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -39,32 +34,52 @@ agreement: disagree
 
 # Improving human-AI partnerships in child welfare: Understanding worker practices, challenges, and desires for algorithmic decision support
 
-## Abstract
+## Transformation Trail
 
-Empirical study examining how child maltreatment hotline workers interact with Allegheny Family Screening Tool, an AI-based decision support system. Through interviews and contextual inquiries, found workers' reliance on algorithmic predictions guided by four key factors: knowledge of contextual information beyond AI model capabilities, beliefs about system limitations, organizational pressures around tool use, and awareness of misalignments between algorithmic predictions and their own decision-making objectives. Reveals discrimination risks stemming from workers lacking adequate training on tool's data sources and limitations.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Ja | X |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Fairness in Child Welfare]]
+- [[Algorithmic Transparency and Explainability]]
+- [[Human-AI Collaboration]]
 
----
-title: "Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support"
-authors: ["Anna Kawakami", "Venkatesh Sivaraman", "Hao-Fei Cheng", "Logan Stapleton", "Yanghuidi Cheng", "Diana Qing", "Adam Perer", "Zhiwei Steven Wu", "Haiyi Zhu", "Kenneth Holstein"]
-year: 2022
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare.md
-confidence: 89
----
+## Wissensdokument
 
 # Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support
 

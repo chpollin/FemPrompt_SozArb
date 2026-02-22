@@ -1,5 +1,5 @@
 ---
-title: DR.GAP: Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning
+title: "DR.GAP: Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning"
 authors:
   - H. Qiu
   - Y. Xu
@@ -7,20 +7,10 @@ authors:
   - W. Wang
 year: 2025
 type: report
-url: https://arxiv.org/html/2502.11603v1
+doi: 
+url: "https://arxiv.org/html/2502.11603v1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypical
-mitigation_strategies:
-  - Bias Mitigation
-  - Debiasing
-  - Bias Evaluation
-  - Counterfactual Preambles
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -41,41 +31,50 @@ agreement: disagree
 
 # DR.GAP: Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning
 
-## Abstract
+## Transformation Trail
 
-DR.GAP ist eine prompting-basierte Methode zur Bias-Reduktion in LLMs. Sie nutzt Beispielfälle und strukturierte Reasoning-Schritte, um gendergerechtere Antworten zu erzielen.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypical]]
+- [[Gender Bias in Large Language Models]]
 
-### Mitigation Strategies
-- [[Bias Evaluation]]
-- [[Bias Mitigation]]
-- [[Counterfactual Preambles]]
-- [[Debiasing]]
-
-## Full Text
-
----
-title: "DR.GAP: Mitigating Bias in Large Language Models using Gender-Aware Prompting with Demonstration and Reasoning"
-authors: ["Hongye Qiu", "Yue Xu", "Meikang Qiu", "Wenjie Wang"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models.md
-confidence: 94
----
+## Wissensdokument
 
 # DR.GAP: Mitigating Bias in Large Language Models using Gender-Aware Prompting with Demonstration and Reasoning
 

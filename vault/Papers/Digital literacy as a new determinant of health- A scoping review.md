@@ -1,5 +1,5 @@
 ---
-title: Digital literacy as a new determinant of health: A scoping review
+title: "Digital literacy as a new determinant of health: A scoping review"
 authors:
   - Maria Del Pilar Arias López
   - Bradley A. Ong
@@ -12,19 +12,10 @@ authors:
   - Jennifer Ziegler
 year: 2023
 type: journalArticle
-url: https://dx.plos.org/10.1371/journal.pdig.0000279
 doi: 10.1371/journal.pdig.0000279
+url: "https://dx.plos.org/10.1371/journal.pdig.0000279"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Impacts
-mitigation_strategies:
-  - Equitable Access
-  - Intersectional Impacts
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -34,49 +25,23 @@ llm_categories:
 
 # Digital literacy as a new determinant of health: A scoping review
 
-## Abstract
+## Transformation Trail
 
-Introduction
-              Harnessing new digital technologies can improve access to health care but can also widen the health divide for those with poor digital literacy. This scoping review aims to assess the current situation of low digital health literacy in terms of its definition, reach, impact on health and interventions for its mitigation.
-            
-            
-              Methods
-              A comprehensive literature search strategy was composed by a qualified medical librarian. Literature databases [Medline (Ovid), Embase (Ovid), Scopus, and Google Scholar] were queried using appropriate natural language and controlled vocabulary terms along with hand-searching and citation chaining. We focused on recent and highly cited references published in English. Reviews were excluded. This scoping review was conducted following the methodological framework of Arksey and O’Malley.
-            
-            
-              Results
-              A total of 268 articles were identified (263 from the initial search and 5 more added from the references of the original papers), 53 of which were finally selected for full text analysis. Digital health literacy is the most frequently used descriptor to refer to the ability to find and use health information with the goal of addressing or solving a health problem using technology. The most utilized tool to assess digital health literacy is the eHealth literacy scale (eHEALS), a self-reported measurement tool that evaluates six core dimensions and is available in various languages. Individuals with higher digital health literacy scores have better self-management and participation in their own medical decisions, mental and psychological state and quality of life. Effective interventions addressing poor digital health literacy included education/training and social support.
-            
-            
-              Conclusions
-              Although there is interest in the study and impact of poor digital health literacy, there is still a long way to go to improve measurement tools and find effective interventions to reduce the digital health divide.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Bias_Ungleichheit
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Impacts]]
+- [[Digital Divide]]
+- [[Digital Health Literacy]]
 
-### Mitigation Strategies
-- [[Equitable Access]]
-- [[Intersectional Impacts]]
-
-## Full Text
-
----
-title: "Digital literacy as a new determinant of health: A scoping review"
-authors: ["Maria del Pilar Arias López", "Bradley A. Ong", "Xavier Borrat Frígola", "Ariel L. Fernández", "Rachel S. Hicklent", "Arianne J. T. Obeles", "Aubrey M. Rocimo", "Leo A. Celi"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-04
-source_file: Arias López_2023_Digital_literacy_as_a_new_determinant_of_health_A.md
-confidence: 75
----
+## Wissensdokument
 
 # Digital literacy as a new determinant of health: A scoping review
 

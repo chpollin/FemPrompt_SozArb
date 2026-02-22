@@ -5,19 +5,10 @@ authors:
   - D. Bollegala
 year: 2024
 type: report
-url: https://arxiv.org/html/2404.17218v3
+doi: 
+url: "https://arxiv.org/html/2404.17218v3"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Stereotypical
-mitigation_strategies:
-  - Debiasing
-  - Bias Evaluation
 llm_decision: Exclude
 llm_confidence: 0.92
 llm_categories:
@@ -33,110 +24,106 @@ agreement: agree
 
 # Debiasing prompts for gender bias in large language models
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Fairness
-**Human Decision:** Exclude
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.92)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypen]]
-- [[Stereotypical]]
+- [[Algorithmic Fairness]]
+- [[Gender Bias in Large Language Models]]
+- [[Reinforcement Learning from Human Feedback (RLHF)]]
+- [[Responsible AI Development]]
 
-### Mitigation Strategies
-- [[Bias Evaluation]]
-- [[Debiasing]]
+## Wissensdokument
 
-## Full Text
-
----
-title: "Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting"
-authors: ["Masahiro Kaneko", "Danushka Bollegala", "Naoaki Okazaki", "Timothy Baldwin"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large.md
-confidence: 95
----
-
-# Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting
+# GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models
 
 ## Kernbefund
 
-CoT-Prompting reduziert systematisch Geschlechterbias in LLMs signifikant, indem es Modelle dazu zwingt, ihre versteckten Annahmen über Geschlechterstereotypen explizit zu artikulieren, selbst bei einfachen Zählaufgaben.
+Das GenderAlign-Dataset mit 8k Dialogpaaren reduziert Gender-Bias in LLMs signifikant effektiver als das bestehende HH-RLHF-Dataset und zeigt konsistent bessere Performance über verschiedene Modelle (Llama2-7B und Llama2-13B).
 
 ## Forschungsfrage
 
-Kann Chain-of-Thought (CoT) Prompting Geschlechterbias in Large Language Models bei unscalierbaren Aufgaben reduzieren?
+Wie kann ein speziell zur Bekämpfung von Gender-Bias konzipiertes Alignment-Dataset (GenderAlign) die Qualität und Fairness von Large Language Models verbessern?
 
 ## Methodik
 
-Empirisch: Benchmark-Konstruktion (Multi-step Gender Bias Reasoning - MGBR), experimentelle Evaluierung mit 23 LLMs, Vergleich von sechs Prompting-Strategien (Zero-shot, Few-shot, CoT, Debiasing Prompts), Korrelationsanalyse mit bestehenden Bias-Metriken (BBQ, BNLI, CrowS-Pairs, StereoSet), statistische Tests (McNemar's test).
-**Datenbasis:** 23 verschiedene LLMs getestet (OPT-Familie: 125m-66b, Llama2-Familie: 7b-70b, GPT-J, MPT, Falcon, Phi, Mistral, BioGPT); Benchmark mit zufällig generierten Word-Listen; multiple Test-Instanzen mit randomisierten Parametern.
+Empirisch - Automatisierte Annotationsschema zur Dataseterstellung, LLM-basierte Dialoggenerierung (GPT-3.5), Validierung durch mehrere LLM-Evaluatoren (GPT-3.5, Gemini-Pro, Claude-3-opus) und menschliche Evaluator:innen, Kategorische Klassifikation von Gender-Bias
+**Datenbasis:** 8.000 einzelne Dialogpaare mit jeweils 'chosen' und 'rejected' Responses; Seed-Texte aus 3.217 Texten aus CORGI-PM-Dataset, 626 aus WorkplaceSexism-Dataset, 404 manuell kuratierte Texte aus 5 Fachbüchern
 
 ## Hauptargumente
 
-- Trotz ihrer beeindruckenden Reasoning-Fähigkeiten internalisieren und reproduzieren LLMs diskriminierende gesellschaftliche Biases aus ihrer Trainingskorpora, was sich auch bei kognitiv einfachen Aufgaben wie Wörter zählen manifestiert.
-- Chain-of-Thought-Prompting, das Schritt-für-Schritt-Erklärungen für jeden einzelnen Schritt verlangt (z.B. explizite Geschlechtsklassifizierung jedes Wortes), zwingt Modelle ihre impliziten Annahmen zu externalisieren und reduziert damit unbewusste Biases signifikant.
-- Die neu entwickelte MGBR-Benchmark zeigt unterschiedliche Korrelationsmuster mit bestehenden Bias-Evaluierungsmetriken und misst eine andere Dimension von Bias (sogenannte intrinsic bias vs. extrinsic bias), was auf die Notwendigkeit mehrfacher Evaluierungsperspektiven hinweist.
+- Existierende öffentlich verfügbare Alignment-Datasets wie HH-RLHF enthalten immer noch messbare Gender-Bias-Phänomene (293 von 3.154 'chosen' Responses); selbst kleine Mengen kontaminierter Daten (1%) können RLHF-Training gefährden.
+- Gender-Bias in LLMs lässt sich durch spezialisierte Alignment-Datasets systematisch reduzieren; GenderAlign wurde durch Kombination von automatisierter Annotation und LLM-Generierung mit vier explizit kategorisierten Bias-Typen (Stereotypes, Discriminatory Language, Occupational/Educational Sexism, Bias Against Marginalized Genders) entwickelt.
+- Unterschiedliche Quellen (Workplace-Sexism-Daten und akademische Fachliteratur zu Gender) tragen unterschiedlich zur Bias-Mitigation bei; die kombinierte Nutzung beider Quellentypen erzielt beste Ergebnisse gegenüber Einzelquellen.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Das Paper adressiert die kritische Fähigkeit, LLMs zu verstehen und ihre Biases zu evaluieren. Es zeigt, wie CoT-Prompting als Instrument zur bewussteren Nutzung von LLMs fungiert: 'Humans organize their thoughts through natural language, enabling them to make better decisions'.
+Das Paper konzentriert sich auf Large Language Models (LLMs) einschließlich GPT-3.5, Gemini-Pro und Claude-3-opus sowie deren Alignment durch spezialisierte Trainingsdatensätze.
 
 ### Evidenz 2
 
-Fokus auf Large Language Models und ihre inhärenten Biases: 'Despite the impressive performance, unfortunately LLMs still learn unfair social biases'. Evaluation von 23 verschiedenen LLMs (OPT, Llama2, GPT-J, etc.).
+Die Dialoggenerierung erfolgt durch sorgfältig gestaltete Prompts für GPT-3.5, um Fragen und 'chosen' Responses zu erzeugen; 'rejected' Responses werden durch Prompting von unaligned LLMs generiert. Siehe Appendix C und Table 8.
 
 ### Evidenz 3
 
-Zentrale Methodik basiert auf Prompting-Strategien: 'In CoT, an LLM is required to explain step-by-step whether a word is feminine... Zero-shot+CoT follows Kojima et al. (2022) and adds "Let's think step by step"'.
+Das Paper behandelt RLHF (Reinforcement Learning from Human Feedback), NLP-Techniken, Alignment-Techniken und Bias-Messung in neuronalen Sprachmodellen.
 
 ### Evidenz 4
 
-Behandelt fundamentale NLP-Herausforderungen wie Wort-Embedding-Bias: 'Models do not explicitly learn the meanings of words but do so implicitly from the co-occurrences of tokens in a corpus, which can lead to flawed associations between words'.
+Zentrales Thema: Analyse und Mitigation von systematischen Verzerrungen in LLMs; das Paper identifiziert 293 biased Responses in HH-RLHF und dokumentiert messbare Unterschiede in Bias-Levels zwischen Modellen.
 
 ### Evidenz 5
 
-Hauptfokus auf algorithmischen Bias und diskriminierende Vorhersagen: 'Without step-by-step prediction, most LLMs make socially biased predictions, despite the task being as simple as counting words'. Das Paper zeigt systematische Verzerrungen in der Klassifikation von Berufen nach Geschlecht.
+Expliziter Fokus auf Gender-Bias; vier Kategorien von Gender-Bias werden definiert und klassifiziert: Stereotypes, Discriminatory Language, Sexism in Occupational/Educational Institutions, Bias Against Marginalized Genders. Zahlreiche Beispiele zu Geschlechterstereotypen, Workplace-Sexismus und LGBTQ+-bezogenen Verzerrungen.
 
 ### Evidenz 6
 
-Explizites Gender-Fokus in Benchmark-Design und Evaluation: 'We construct a benchmark for an unscalable task where the LLM is given a list of words comprising feminine, masculine, and gendered occupational words'. Die gesamte Studie konzentriert sich auf Geschlechterstereotypen.
+Das Paper adressiert marginalisierte Genders explizit ('Bias Against Marginalized Genders') und referenziert WinoQueer-Dataset für LGBTQ+-spezifische Bias-Messung; Inklusivität ist ein Designprinzip des GenderAlign-Datensatzes.
 
 ### Evidenz 7
 
-Erkennt Begrenztheit der binären Geschlechtsperspektive: 'For future work, potential areas of exploration include extending the application of CoT techniques to non-binary genders (Dev et al., 2021b; Ovalle et al., 2023)' und erwähnt andere Formen sozialer Biases (Rasse, Religion).
-
-### Evidenz 8
-
-Fairness ist zentral zur Evaluierungsmethodik: 'If an LLM is unbiased, the inclusion of occupational words in the input should not affect its prediction accuracy. However, if an LLM is gender biased, it might incorrectly count occupations as feminine or masculine words'. Verwendet Fairness-Konzepte zur Bias-Messung.
+Das Paper verwendet explizite Fairness-Metriken (Pearson Correlation Coefficient, Ranking Scores) zur Evaluation von Bias-Reduktion; Alignment wird als Fairness-Instrument verstanden, um LLMs mit faireren Verhaltensweisen auszurichten.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper hat moderaten Bezug zur Sozialen Arbeit. Während es sich primär mit KI-technischen Fragen beschäftigt, sind die Erkenntnisse über Geschlechterstereotypen und Bias-Mitigation in KI-Systemen für Sozialarbeiter:innen relevant, die zunehmend algorithmen-gestützte Systeme in ihrer Praxis nutzen oder von diesen beeinflusst werden.
+**Domain Fit:** Das Paper adressiert eine kritische Schnittstelle zwischen KI-Entwicklung und sozialer Gerechtigkeit, insbesondere Gender-Fairness; die Erstellung eines öffentlich verfügbaren Datensatzes zur Bias-Mitigation trägt zu ethischer KI-Praxis bei. Relevanz für KI-Policy und responsible AI-Entwicklung ist hoch, direkter Bezug zu Sozialer Arbeit jedoch begrenzt.
 
-**Unique Contribution:** Die Konstruktion eines Benchmark-Datensatzes (MGBR), der spezifisch unbewussten Geschlechterbias durch eine einfache aber strikte Zählaufgabe operationalisiert und nachweist, dass CoT-Prompting durch Externalisierung von Stereotypen Bias reduzieren kann - während gleichzeitig die Differenzierung zwischen intrinsic und extrinsic Bias-Metriken beleuchtet wird.
+**Unique Contribution:** Erste spezialisierte öffentlich verfügbare Alignment-Dataset (GenderAlign) mit systematischer Kategorisierung von Gender-Bias in conversationalen Kontexten, kombiniert mit empirischem Nachweis der Überlegenheit gegenüber bestehenden Alignment-Datasets.
 
-**Limitations:** Das Paper evaluiert nur englische Sprachfähigkeiten, konzentriert sich ausschließlich auf binäre Geschlechterkategorien und Geschlechterbias (nicht Rasse, Religion, etc.), und die Studienautoren betonen selbst: 'intrinsic bias evaluation does not necessarily correlate with extrinsic bias evaluation' - es ist unklar ob CoT-Debiasing in echten downstream tasks genauso wirkt.
+**Limitations:** Die Annotation durch menschliche Evaluator:innen kann selbst Gender-Bias aufweisen; Fokus auf englischsprachige Dialoge mit begrenzter kultureller Diversität; unaligned LLMs als Quelle für 'rejected' Responses könnten systematische Verzerrungen einführen; Limitierung auf Single-Turn-Dialoge.
 
-**Target Group:** Primär: NLP/KI-Forscher:innen und KI-Entwickler:innen, die sich mit Bias-Evaluierung und Debiasing-Methoden auseinandersetzen. Sekundär: Policy-Maker und KI-Ethics-Spezialist:innen, die an Fairness und Governance von LLMs arbeiten. Tertiär: Sozialarbeiter:innen und andere Praktiker:innen, die verstehen möchten, wie Bias in KI-gestützten Systemen funktioniert und potenziell gemindert werden kann.
+**Target Group:** KI-Entwickler:innen und ML-Engineer:innen, die an Bias-Mitigation in LLMs arbeiten; Policy-Maker und Ethik-Verantwortliche in KI-Organisationen; Forscher:innen in NLP und AI-Fairness; sekundär relevant für Sozialarbeiter:innen, die mit KI-gestützten Systemen in Beratungs- oder Entscheidungskontexten arbeiten
 
 ## Schlüsselreferenzen
 
-- [[Wei_et_al_2022]] - Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
-- [[Bolukbasi_et_al_2016]] - Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings
-- [[Parrish_et_al_2022]] - BBQ: A Hand-Built Bias Benchmark for Question Answering
-- [[Nadeem_et_al_2021]] - StereoSet: Measuring stereotypical bias in pretrained language models
 - [[Nangia_et_al_2020]] - CrowS-Pairs: A Challenge Dataset for Measuring Social Biases in Masked Language Models
-- [[Ganguli_et_al_2023]] - The Capacity for Moral Self-Correction in Large Language Models
-- [[Kojima_et_al_2022]] - Large Language Models are Zero-Shot Reasoners
-- [[Dev_et_al_2021]] - Harms of Gender Exclusivity and Challenges in Non-binary Representation in Language Technologies
-- [[Kaneko_and_Bollegala_2022]] - Unmasking the Mask: Evaluating Social Biases in Masked Language Models
-- [[Brown_et_al_2020]] - Language Models are Few-Shot Learners
+- [[Parrish_et_al_2022]] - BBQ: A Hand-Built Bias Benchmark for Question Answering
+- [[Zhao_et_al_2018]] - WinoGender: An Evaluation Set for Gender Bias in Coreference Resolution
+- [[Felkner_et_al_2023]] - WinoQueer: A Community-in-the-Loop Benchmark for Anti-LGBTQ+ Bias in Large Language Models
+- [[Grosz_CondeCespedes_2020]] - Automatic Detection of Sexist Statements Commonly Used at the Workplace
+- [[Zhang_et_al_2023]] - CORGI-PM: A Corpus for Gender Bias in Chinese
+- [[Bai_et_al_2022]] - Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback (HH-RLHF)
+- [[Doughman_et_al_2021]] - Gender Bias in Text: Origin, Taxonomy, and Implications
+- [[Havens_et_al_2022]] - Uncertainty and Inclusivity in Gender Bias Annotation: An Annotation Taxonomy and Annotated Datasets of British English Text
+- [[Luccioni_Viviano_2021]] - What's in the Box? An Analysis of Undesirable Content in the Common Crawl Corpus

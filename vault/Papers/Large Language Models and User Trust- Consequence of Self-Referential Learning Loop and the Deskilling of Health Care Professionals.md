@@ -1,20 +1,14 @@
 ---
-title: Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals
+title: "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals"
 authors:
   - A. Choudhury
   - Z. Chaudhry
 year: 2024
 type: journalArticle
-url: https://www.jmir.org/2024/1/e56764/
 doi: 10.2196/56764
+url: "https://www.jmir.org/2024/1/e56764/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.75
 llm_categories:
@@ -30,31 +24,33 @@ agreement: agree
 
 # Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals
 
-## Abstract
+## Transformation Trail
 
-Peer-reviewed viewpoint discussing integration of LLMs into healthcare requiring balance between trust and skepticism. Warns that "blind trust" in LLM recommendations can lead to automation bias and confirmation bias as clinicians may accept AI outputs uncritically. Argues that prompting for transparency in LLM reasoning enhances professionals' trust by making AI reasoning visible and verifiable. Emphasizes need for human oversight and bias mitigation to ensure LLMs complement rather than compromise expert decision-making.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.75)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 92 |
+| **Overall Confidence** | **90** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.75)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Bias Amplification]]
+- [[Automation Bias]]
 
----
-title: "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals"
-authors: ["Avishek Choudhury", "Zaira Chaudhry"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence.md
-confidence: 90
----
+## Wissensdokument
 
 # Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals
 

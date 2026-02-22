@@ -9,15 +9,10 @@ authors:
   - Isabel Zorn
 year: 2020
 type: book
-url: https://www.beltz.de/fileadmin/beltz/leseproben/978-3-7799-5258-9.pdf
+doi: 
+url: "https://www.beltz.de/fileadmin/beltz/leseproben/978-3-7799-5258-9.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -29,96 +24,95 @@ agreement: agree
 
 # Handbuch Soziale Arbeit und Digitalisierung
 
-## Abstract
+## Transformation Trail
 
-Dieses umfassende Handbuch mit über 50 Beiträgen behandelt erstmals systematisch Digitalisierung in Bezug auf Disziplin und Praxis der Sozialen Arbeit. Das 658-seitige Werk beleuchtet aus verschiedenen disziplinären Perspektiven gesellschaftliche Entwicklungen, Diskurse, digitalisierte Formen der Dienstleistungserbringung, Profession, Organisation und Handlungsfelder sowie neue Herausforderungen für Forschung. Zentrale Themen umfassen Mediatisierung, Akteur-Netzwerk-Theorie, ethische Fragen, informationelle Selbstbestimmung, Datenschutz, Social Media, E-Government, digitalisierte Kinder- und Jugendhilfe, Medienpädagogik und Sozialwirtschaft. Das Handbuch verfolgt einen über technisches Verständnis hinausgehenden Begriff von Digitalität und fokussiert auf soziotechnische Arrangements sowie deren Folgen für Akteure, Formen und Rahmenbedingungen Sozialer Arbeit. Mit Perspektiven auf Organisation, Fachkräfte, Adressat*innen und Erbringungsformen werden Möglichkeiten, Risiken und offene Fragestellungen diskutiert.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** Soziale_Arbeit
-**Human Decision:** Exclude
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Decision-Making in Social Services]]
 
----
-title: "Handbuch Soziale Arbeit und Digitalisierung"
-authors: ["Nadia Kutscher", "Thomas Ley", "Udo Seelmeyer", "Friederike Siller", "Angela Tillmann", "Isabel Zorn"]
-year: 2020
-type: book
-language: de
-processed: 2026-02-05
-source_file: Kutscher_2020_Handbuch_Soziale_Arbeit_und_Digitalisierung.md
-confidence: 75
----
+## Wissensdokument
 
 # Handbuch Soziale Arbeit und Digitalisierung
 
 ## Kernbefund
 
-Ein sechsdimensionales Modell der Medienpädagogischen Kompetenz für Sozialarbeiter*innen wird entwickelt, das Orientierungswissen, handlungsfeldspezifisches Wissen, eigene Medienkompetenz, analytisches Handlungswissen, Gestaltungskompetenzen und organisationales Handlungswissen umfasst.
+Digitalisierung bedeutet nicht nur digitale Umwandlung analoger Prozesse, sondern etabliert sociotechnische Arrangements mit fundamentalen Transformationen für Adressat*innen, Professionelle, Organisationen und wohlfahrtsstaatliche Strukturen. Eine differenzierte Analyse muss die wechselseitige Verflechtung digitaler Logiken mit fachlichen Logiken der Sozialen Arbeit in den Blick nehmen.
 
 ## Forschungsfrage
 
-Wie können Fachkräfte der Sozialen Arbeit professionell mit Digitalisierung und Mediatisierung umgehen und welche Kompetenzen benötigen sie dafür?
+Wie verändern sich Gegenstände, Methoden und professionelle Praktiken Sozialer Arbeit durch Digitalisierungsprozesse und deren eingelagerte Logiken, und wie können diese Veränderungen theoretisch und empirisch eingeordnet werden?
 
 ## Methodik
 
-Theoretisch/Review: Handbuch mit systematischer Auswahl von Beiträgen aus verschiedenen disziplinären Perspektiven, gesellschaftlichen Diskursen, Handlungsfeldern und Forschungsansätzen zur Digitalisierung in der Sozialen Arbeit.
-**Datenbasis:** Nicht empirisch: Theoretisches Handbuch mit 50+ Beiträgen von Expert*innen aus Wissenschaft und Praxis.
+Theoretisch/Review - Systematische Zusammenstellung von Perspektiven aus Techniksoziologie, Kommunikationswissenschaft, Medienpädagogik und Sozialpädagogik auf Digitalisierung in der Sozialen Arbeit
 
 ## Hauptargumente
 
-- Digitalisierung Sozialer Arbeit ist kein neues Phänomen, zeigt aber qualitative Veränderungen, die neue theoretische und empirische Einordnungen erfordern. Der Diskurs selbst erzeugt Handlungsdruck, der kritisch hinterfragt werden muss.
-- Medienpädagogische Kompetenz ist zentral für professionelle Soziale Arbeit in mediatisierten Gesellschaften und muss explizit in Studium und Weiterbildung verankert werden, um Adressat*innen in ihrer Handlungsfähigkeit und Partizipation zu unterstützen.
-- Digitalisierung reproduziert soziale Ungleichheiten und schafft neue Formen von Digital Divides; Sozialarbeiter*innen müssen diese kritisch erkennen und bekämpfen, während sie gleichzeitig digitale Medien als Ressourcen für Teilhabe und Empowerment nutzen.
+- Digitalisierung in der Sozialen Arbeit ist ein komplexes Phänomen, das über technische Effizienzgewinne hinausgeht und ethische, epistemologische und professionelle Fragen aufwirft. Handlungsdruck entstehe durch diskursive Naturalisierung von technischem Fortschritt, nicht nur durch faktische technische Notwendigkeit.
+- Datafizierung, Algorithmisierung und Automatisierung von Entscheidungsprozessen transformieren gesellschaftliche Teilhabemöglichkeiten, politische Prozesse, Vulnerabilitäten und professionelle Entscheidungsspielräume fundamental. Diese Transformationen müssen auf disziplinärer, professionaler und organisationaler Ebene analysiert werden.
+- Digitale Technologien wirken als 'organisierende Technologien', die nicht neutral sind, sondern Handlung disziplinieren, Wissensformen verändern und in kongruenten, dynamisierenden oder widersprüchlichen Verhältnissen zu fachlichen Logiken Sozialer Arbeit stehen können.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Entwicklung eines sechsdimensionalen Modells der Medienpädagogischen Kompetenz, das Orientierungswissen über technologische Entwicklungen, eigene Medienkompetenz, Fähigkeiten zur Förderung von Medienkompetenz bei Adressat*innen und organisationales Handlungswissen umfasst.
+Kapitel 4 'Digitalisierung und Profession' thematisiert 'notwendige (anzueignende) Kompetenzen von Sozialarbeiter*innen' und fragt: 'Wie kann ein professioneller Habitus ausgebildet werden, der die Digitalisierung kritisch-analytisch und pragmatisch-handlungsorientiert in beruflichen Arbeitskontexten einbetten kann?'
 
 ### Evidenz 2
 
-Behandlung von digitalen Technologien, Algorithmen, Big Data Analytics, Assistiven Technologien, Sozialen Robotern, digitaler Dokumentation und Risikodiagnostik in der Sozialen Arbeit.
+Explizite Behandlung von Algorithmisierung, Automatisierung, Robotik, statistischen Risisobewertungen im Kindeswohlgefährdungskontext und 'sozialer Robotik' als Substitution von Fachkräften. Techniksoziologischer Zugang analysiert Handlungsträgerschaft und Involviertheit technischer Systeme.
 
 ### Evidenz 3
 
-Gesamter Fokus auf Digitalisierung in der Sozialen Arbeit, mit Kapiteln zu allen Handlungsfeldern (Jugendhilfe, Altenhilfe, Behindertenhilfe, Suchtberatung, Obdachlosenhilfe, Arbeit mit Geflüchteten) und Professionalisierung.
+Das gesamte Handbuch ist auf Soziale Arbeit ausgerichtet. Fokus auf Handlungsfelder (Jugendhilfe, Beratung), professionelle Urteilsbildung, Falldokumentation, Onlineberatung, Adressat*innen, organisationale Praktiken und wohlfahrtsstaatliche Strukturen.
 
 ### Evidenz 4
 
-Kapitel zu digitalen Ungleichheiten (Iske & Kutscher): 'Digitale Ungleichheiten im Kontext Sozialer Arbeit' thematisiert Digital Divide und Reproduktion sozialer Ungleichheit durch Medienhandeln. 'Datafizierung und Algorithmisierung' behandelt strukturelle Auswirkungen.
+Thematisierung von Vulnerabilität, Ungleichheiten und digitaler Spaltung: 'Der sich verändernde Umgang mit Daten verändert gesellschaftliche Teilhabemöglichkeiten...Vulnerabilitäten und Ungleichheiten'. Fragen zu Zugängen zur Technik für vulnerable Gruppen und deren Nutzungskompetenz werden explizit aufgeworfen.
 
 ### Evidenz 5
 
-Mehrfache Bezüge zur Förderung medialer Teilhabe, Handlungsfähigkeit und Partizipation von verschiedenen Gruppen (Kindern, Jugendlichen, älteren Menschen, Menschen mit Behinderungen, Geflüchteten, Wohnungslosen); Kapitel zur Inklusion und Medienbildung.
+Adressat*innen-Perspektive durchzieht die Analyse. Besondere Aufmerksamkeit für vulnerable Gruppen, digitale Teilhabe, Zugangsbarrieren, 'marginalisierte' Perspektiven durch die Betonung von Adressat*innen-Beteiligung und Handlungsfähigkeit.
 
 ### Evidenz 6
 
-Behandlung ethischer Fragen der Sozialen Arbeit im Kontext von Digitalisierung, informationeller Selbstbestimmung, Datenschutz sowie faire Nutzung digitaler Technologien im Dienste der Adressat*innen.
+Implizite Fairness-Dimensionen durch kritische Reflexion auf Standardisierung, Deprofessionalisierung, Qualitätserhalt und Gebrauchswert von Dienstleistungen. Ethische Dimensionen der Professionalität und autonomie der Lebenspraxis als ethische Richtlinie werden thematisiert.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Hochgradig relevant für die Schnittstelle Digitalisierung/Soziale Arbeit. Das Handbuch bietet umfassende Perspektiven auf Mediatisierung, digitale Ungleichheiten und Professionalisierung. KI wird als Teilaspekt der Digitalisierung behandelt (Algorithmen, Roboter, Predictive Analytics), nicht als Kernfokus.
+**Domain Fit:** Sehr hohe Relevanz für die Schnittstelle von Digitalisierung und Sozialer Arbeit. Das Handbuch bietet grundlegende theoretische Rahmungen für die Analyse algorithimischer Systeme, KI-gestützter Entscheidungshilfen und digitaler Infrastrukturen im Kontext von Gerechtigkeit, Profession und Adressat*innenschutz, ohne jedoch explizit generative KI zu thematisieren.
 
-**Unique Contribution:** Systematische Integration eines sechsdimensionalen Modells medienpädagogischer Kompetenz speziell für Sozialarbeiter*innen, das gesellschaftliche Wandlungsprozesse, Lebenswelten von Adressat*innen und organisationale Rahmenbedingungen verbindet.
+**Unique Contribution:** Das Handbuch leistet eine erste systematische, deutschsprachige Kanonisierung des Wissens zum Verhältnis von Digitalisierung und Sozialer Arbeit durch Integration disziplinärer, professionsbezogener, organisationaler und gesellschaftlicher Perspektiven ohne technikdeterminstische oder rein instrumentelle Sicht.
 
-**Limitations:** Kein empirischer Forschungsteil; Fokus liegt auf theoretischer und konzeptioneller Grundlegung. Begrenzte explizite Behandlung von Generative KI oder aktuellen KI-Technologien. Gender ist als eigenständiger Analysefokus nicht prominent (trotz Gendering durch Verwendung von Asterisk und intersektionaler Perspektivierung).
+**Limitations:** Die Einleitung weist selbst darauf hin, dass dies nur ein 'erster konzeptioneller Versuch' ist und keine konsistente Theorie der Digitalisierung Sozialer Dienste bietet. Generative KI und aktuelle Diskurse um LLMs werden nicht explizit behandelt.
 
-**Target Group:** Sozialarbeiter*innen, Fachkräfte in sozialen Organisationen, Studium und Weiterbildung in Sozialer Arbeit, Organisationsleitungen, Policymaker im Bereich Soziale Dienste, Medienpädagog*innen, Fachwissenschaftler*innen der Digitalisierung und Sozialen Arbeit.
+**Target Group:** Sozialarbeiter*innen, Fachkräfte in Sozialen Diensten, Lehrende und Studierende der Sozialen Arbeit, Organisationsleitungen von Wohlfahrtsverbänden, Policymaker im Kontext von Digitalisierung und Sozialwesen, Forscher*innen an der Schnittstelle von Digitalisierung, Gesellschaft und Sozialer Arbeit
 
 ## Schlüsselreferenzen
 
-- [[Baacke_Dieter_1996]] - Medienkompetenz als Schlüsselbegriff
-- [[Blömeke_Sigrid_2000]] - Medienpädagogische Kompetenz: Theoretische und empirische Fundierung
-- [[Deutscher_Berufsverband_für_Soziale_Arbeit_DBSH_2016]] - Deutschsprachige Definition Sozialer Arbeit
-- [[Deutscher_Bundestag_2017]] - 15. Kinder- und Jugendbericht
-- [[Buckingham_David_2003]] - Media Education: Literacy, Learning and Contemporary Culture
-- [[Habermas_Jürgen_1971]] - Theorie der kommunikativen Kompetenz
-- [[Helbig_Christian_2014]] - Medienpädagogik in der Sozialen Arbeit
-- [[Bosse_Ingo__Schluchter_JanRené__Zorn_Isabel_2019]] - Handbuch Inklusion und Medienbildung
+- [[nicht_angegeben_None]] - Techniksoziologische Perspektiven auf digitalisierte Klient*innenkommunikation
+- [[nicht_angegeben_None]] - Mediatisierung und ihre Auswirkungen auf Soziale Arbeit
+- [[nicht_angegeben_None]] - Virtual Reality und immersive Technologien in Sozialer Arbeit
+- [[nicht_angegeben_None]] - Software zur digitalen Falldokumentation und deren Auswirkungen auf Entscheidungsprocesse
+- [[nicht_angegeben_None]] - Robotik und Assistenztechnologien in der Sozialen Arbeit
+- [[nicht_angegeben_None]] - Open Source und Freie Software-Bewegung in gemeinwohl-orientierten Kontexten
+- [[nicht_angegeben_None]] - Big Data, Künstliche Intelligenz und immersive Technologien als gesellschaftliche Herausforderung

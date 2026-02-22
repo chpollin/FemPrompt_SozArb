@@ -6,15 +6,10 @@ authors:
   - Marc Pinski
 year: 2023
 type: journalArticle
-url: https://aisel.aisnet.org/wi2023/3
+doi: 
+url: "https://aisel.aisnet.org/wi2023/3"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.65
 llm_categories:
@@ -28,28 +23,34 @@ agreement: agree
 
 # Messung von AI Literacy – Empirische Evidenz und Implikationen
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.65)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, KI_Sonstige
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 88 |
+| Category Validation | 78 |
+| **Overall Confidence** | **86** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.65)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Digital Divide]]
+- [[Measurement Instrument Development]]
 
----
-title: "Messung von AI Literacy - Empirische Evidenz und Implikationen"
-authors: ["Patrick Weber", "Lorenz Baum", "Marc Pinski"]
-year: 2023
-type: conferencePaper
-language: de
-processed: 2026-02-05
-source_file: Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und.md
-confidence: 86
----
+## Wissensdokument
 
 # Messung von AI Literacy - Empirische Evidenz und Implikationen
 

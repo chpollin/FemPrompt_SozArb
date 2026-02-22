@@ -1,23 +1,15 @@
 ---
-title: Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches
+title: "Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches"
 authors:
   - J. Browne
   - E. Drage
   - K. McInerney
 year: 2024
 type: journalArticle
-url: https://doi.org/10.1177/20539517231221780
 doi: 10.1177/20539517231221780
+url: "https://doi.org/10.1177/20539517231221780"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-mitigation_strategies:
-  - Intersectional Accuracy
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -32,35 +24,27 @@ llm_categories:
 
 # Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches
 
-## Abstract
+## Transformation Trail
 
-Empirical study examining tech workers' understanding of ethical AI development through feminist lens, revealing critical gaps in current AI ethics approaches. Finds that the term "bias" creates confusion among tech workers, undermining AI ethics initiatives, and argues for moving beyond diversity narratives toward "design justice" that centers marginalized voices.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
 
-### Bias Types
-- [[Intersectional Accuracy]]
+### Stufe 4: Assessment
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
+**LLM:** Include (Confidence: 0.95)
 
-## Full Text
-
----
-title: "Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches"
-authors: ["Jude Browne", "Eleanor Drage", "Kerry McInerney"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in.md
-confidence: 95
----
+## Wissensdokument
 
 # Tech workers' perspectives on ethical issues in AI development: Foregrounding feminist approaches
 

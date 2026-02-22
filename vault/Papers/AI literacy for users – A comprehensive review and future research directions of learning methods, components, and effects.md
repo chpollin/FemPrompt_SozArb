@@ -3,18 +3,12 @@ title: AI literacy for users – A comprehensive review and future research dire
 authors:
   - Marc Pinski
   - Alexander Benlian
-year: 01/2024
+year: 2024
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2949882124000227
 doi: 10.1016/j.chbah.2024.100062
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2949882124000227"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -32,28 +26,53 @@ agreement: disagree
 
 # AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 78 |
+| **Overall Confidence** | **86** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Ja | Ja |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Ja | Nein | X |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Nein | X |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Algorithmic Bias]]
+- [[Explainable AI (XAI)]]
+- [[Human-AI Collaboration]]
 
----
-title: "AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects"
-authors: ["Marc Pinski", "Alexander Benlian"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review.md
-confidence: 86
----
+## Wissensdokument
 
 # AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects
 

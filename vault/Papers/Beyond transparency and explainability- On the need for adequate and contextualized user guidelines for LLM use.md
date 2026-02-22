@@ -1,23 +1,15 @@
 ---
-title: Beyond transparency and explainability: On the need for adequate and contextualized user guidelines for LLM use
+title: "Beyond transparency and explainability: On the need for adequate and contextualized user guidelines for LLM use"
 authors:
   - K. G. Barman
   - N. Wood
   - P. Pawlowski
 year: 2024
 type: journalArticle
-url: https://doi.org/10.1007/s10676-024-09778-2
 doi: 10.1007/s10676-024-09778-2
+url: "https://doi.org/10.1007/s10676-024-09778-2"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Bias Mitigation
-  - Prompt Engineering
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -30,104 +22,94 @@ llm_categories:
 
 # Beyond transparency and explainability: On the need for adequate and contextualized user guidelines for LLM use
 
-## Abstract
+## Transformation Trail
 
-Argues for user-centered approach to governing AI systems, contending that transparency alone is insufficient. Proposes contextualized guidelines and training for users including clear instructions on LLM reliability, diversity-sensitive prompting techniques, and iterative query refinement. Emphasizes shifting focus from AI's internal workings to human-AI interaction context.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Bias Mitigation]]
-- [[Prompt Engineering]]
+- [[AI Governance Frameworks]]
 
-## Full Text
+## Wissensdokument
 
----
-title: "Beyond transparency and explainability: on the need for adequate and contextualized user guidelines for LLM use"
-authors: ["Kristian González Barman", "Nathan Wood", "Pawel Pawlowski"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Barman_2024_Beyond_transparency_and_explainability_On_the.md
-confidence: 89
----
-
-# Beyond transparency and explainability: on the need for adequate and contextualized user guidelines for LLM use
+# Guideline for the use of Generative Artificial Intelligence and Large Language Model Tools
 
 ## Kernbefund
 
-Aktuelle Fokussierung auf Transparenz und Explainability reicht nicht aus; stattdessen sollten kontextspezifische, praktische Nutzerrichtlinien zur Schulung, Risikominderung und ethischen Verwendung von LLMs im Vordergrund stehen, da Nutzer primär praktische Anleitung statt technischer Erklärungen benötigen.
+Generative KI-Tools bieten erhebliche Produktivitätspotenziale für Regierungsbehörden, erfordern aber umfassende Governance-Frameworks, Datenschutzkontrollen und ethische Überlegungen, insbesondere bezüglich Verzerrungen, die marginalisierte Gruppen betreffen können.
 
 ## Forschungsfrage
 
-Sind nutzerzentrierte Richtlinien für verantwortungsvolle LLM-Nutzung effektiver als Transparenz- und Erklärbarkeitsmethoden, um verschiedene Nutzergruppen angemessen zu unterstützen?
+Wie können Regierungsbehörden die sichere, ethisch verantwortungsvolle und risikominimierte Nutzung von generativen KI- und LLM-Tools gewährleisten?
 
 ## Methodik
 
-Theoretisch-analytisch mit Literaturreview und konzeptionellem Rahmen. Diskussion praktischer Anwendungsfälle in Bildung, Workplace und Fachberatung. Kritische Analyse von XAI-Ansätzen und Entwicklung eines nutzerzentrierten Guideline-Frameworks.
-**Datenbasis:** Keine primäre empirische Datenerhebung; konzeptionelle Analyse und Literaturreview mit Fallbeispielen aus realen LLM-Anwendungen
+Theoretisch/Policy-Analyse; Richtliniendokumentation mit Risikobewertung und Mitigationsmaßnahmen
 
 ## Hauptargumente
 
-- Transparenz und XAI-Methoden sind technisch begrenzt und können Nutzern nicht die praktischen Informationen liefern, die sie für verantwortungsvolle LLM-Nutzung benötigen; selbst gute Erklärungen helfen nicht unbedingt bei der Frage, wie man LLMs richtig einsetzt.
-- Nutzerzentrierte Richtlinien mit klaren Dos-and-Don'ts, Heuristiken zur Fehlerdetekion und Prompting-Strategien sind praktischer und effizienter als technische Erklärbarkeit, besonders für durchschnittliche Nutzer ohne spezialisiertes KI-Wissen.
-- Effektive LLM-Governance erfordert institutionelle und regulatorische Ansätze (Bildung, Richtlinien, Protokolle), nicht nur technische Lösungen; ähnlich wie Verkehrssicherheit nicht erfordert, dass Fahrer Motorentechnik verstehen, sondern Verkehrsregeln kennen.
+- Generative KI und LLMs können Routineaufgaben automatisieren und Mitarbeiter:innen für höherwertige Arbeit freisetzen, erfordern aber strikte Kontrollen zur Vermeidung von Datenverlust und unbefugter Weitergabe vertraulicher Regierungsinformationen.
+- LLMs sind anfällig für 'Halluzinationen' – erfundene, aber selbstbewusst präsentierte Antworten – sowie für Bias und Diskriminierung aufgrund ihrer Trainings- und Entwicklungsdaten, was besonders für Aboriginal und Torres Strait Islander peoples und Minderheitsgruppen riskant ist.
+- Behörden müssen umfassende Risk-Assessments durchführen, Privacy Impact Analyses durchlaufen, Governance-Frameworks etablieren und Mitarbeiter:innen kontinuierlich schulen, um ethische, rechtliche und sicherheitstechnische Standards einzuhalten.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Schwerpunkt auf Nutzerschulung, Kompetenzentwicklung und praktische Richtlinien: 'we argue that LLM users should be given guidelines on what tasks LLMs can do well and which they cannot' und 'teaching users the right way to use these tools, as well as informing them of not only the strengths, potential uses, and best practices'
+Conduct awareness campaigns for the safe and ethical use of AI tools; Instruct employees via clearly understood and widely disseminated policies; Remind staff of their obligations under the Code of Ethics for the SA Public Sector
 
 ### Evidenz 2
 
-Fokus auf Large Language Models wie ChatGPT, GPT-4, Claude und Llama: 'Large language models (LLMs) such as ChatGPT present immense opportunities'
+This guideline covers the limitations and risks associated with the use of generative artificial intelligence (AI) and Large Language Model (LLM) tools; Generative AI and LLM tools, such as OpenAI's ChatGPT and Google Bard
 
 ### Evidenz 3
 
-Explizite Behandlung von Prompt-Strategien: 'teaching users to refine and elaborate adequate prompts, be provided with good procedures for prompt iteration' und 'prompt engineering strategies'
+Employees can easily expose sensitive and proprietary government data in the questions and prompts they provide to generative AI and LLM tools; Disallow any cut-and-paste of enterprise content, such as emails, reports and chat logs into prompts
 
 ### Evidenz 4
 
-Behandlung von XAI, Interpretierbarkeit und algorithmischen Entscheidungssystemen: 'Explainable Artificial Intelligence (XAI) has emerged as a significant field'
+Relying on vast amounts of algorithms and data carries the inherent risk of bias or discriminatory content in outputs; This can lead to inbuilt and amplified biases that could be particularly damaging for Aboriginal and Torres Strait Islander peoples and minority groups
 
 ### Evidenz 5
 
-Thematisierung von Bias, Diskriminierung und ungleichem Zugang: 'widely recognized issues such as bias', 'misinformation', 'This approach democratizes the use of advanced AI technologies, making them more accessible to a broader audience, irrespective of their technical background'
+Where generative AI and LLM tools are used in circumstances that may impact Aboriginal and Torres Strait Islander peoples, agencies must consider the risk of negative bias in that instance and consult with Aboriginal and Torres Strait Islander peoples; Be wary of inherent biases that may be inbuilt and develop strategies to counter them
 
 ### Evidenz 6
 
-Fokus auf unterschiedliche Nutzergruppen und kontextspezifische Bedürfnisse: 'diverse needs and concerns of various user groups', 'different disciplines and domains where lack of reliability can have serious negative consequences', 'collaborative endeavor, involving AI experts, ethicists, educators, and perhaps most importantly, end-users'
-
-### Evidenz 7
-
-Behandlung fairer und ethischer LLM-Nutzung sowie Bias-Mitigation: 'ethical considerations, bias mitigation strategies', 'guidelines for responsible LLM usage' und 'ensuring these models are employed for the collective good'
+Establish or update the agency's privacy policies to accommodate the use of AI tools to meet applicable obligations - including in relation to integrity, privacy, security, human rights, anti-discrimination, administrative and other laws; AI systems have the potential to be expressions of cultural and social frameworks, representing the socially dominant concepts and normative ideas of the system designers
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Das Paper ist relevant für AI-Literacy und verantwortungsvolle KI-Nutzung, hat aber keinen direkten Bezug zur Sozialen Arbeit als Praxisfeld. Es adressiert allerdings grundsätzliche Fragen von Nutzerkompetenzen, Zugänglichkeit und ethischen Richtlinien, die für soziale Professionen bei LLM-Einsatz bedeutsam sind.
+**Domain Fit:** Das Dokument ist eine Governance- und Policy-Richtlinie für Behördeneinsatz von generativen KI-Tools und adressiert primär technische, rechtliche und ethische Risiken. Es hat begrenzte direkte Relevanz für Soziale Arbeit, bietet aber wichtige Erkenntnisse zu Bias-Risiken und Auswirkungen auf marginalisierte Gruppen.
 
-**Unique Contribution:** Der Hauptbeitrag liegt in der kritischen Infragestellung von XAI als Lösungsansatz und der Begründung eines nutzerzentrierten Guideline-Frameworks, das praktische, kontextualisierte Richtlinien über technische Explainability priorisiert.
+**Unique Contribution:** Umfassende und praktisch anwendbare Governance-Richtlinie, die explizit die Risiken für Aboriginal und Torres Strait Islander peoples sowie marginalisierte Gruppen thematisiert und konkrete Mitigationsmaßnahmen fordert.
 
-**Limitations:** Das Paper ist primär konzeptionell-theoretisch; es fehlen empirische Daten zu Nutzerkompetenzen, Guideline-Effektivität oder reale Implementierungserfahrungen. Keine Differenzierung zwischen unterschiedlichen LLM-Typen oder Nutzerprofielen.
+**Limitations:** Das Dokument ist eine Richtlinie ohne empirische Forschung oder theoretische Vertiefung; es bietet Überblicks-Level Orientierung statt detaillierter Analyse spezifischer Auswirkungen auf verschiedene gesellschaftliche Gruppen oder Soziale Arbeit.
 
-**Target Group:** KI-Ethiker, Bildungsfachleute, Policymaker, institutionelle Entscheidungsträger in Bildung und Arbeit, Entwickler von KI-Systemen und deren Integration in Anwendungen, Nutzer von LLMs (Studierende, Fachkräfte); sekundär relevant für Sozialarbeiter, die LLMs in ihrer Praxis einsetzen
+**Target Group:** Regierungsbehörden, Public Sector Manager:innen, IT Security Officer:innen, Datenschutzverantwortliche, Policymaker:innen; potenziell relevant für Sozialarbeitende, die in behördlichen Kontexten tätig sind oder mit KI-gestützten Systemen interagieren
 
 ## Schlüsselreferenzen
 
-- [[Bender_et_al_2021]] - On the dangers of stochastic parrots
-- [[Burrell_2016]] - How the machine 'thinks': Understanding opacity in machine learning
-- [[Arrieta_et_al_2020]] - Explainable artificial intelligence (XAI): concepts, taxonomies, opportunities and challenges
-- [[Lundberg_Lee_2017]] - A unified approach to interpreting model predictions (SHAP)
-- [[Ribeiro_et_al_2016]] - Model-agnostic interpretability of machine learning (LIME)
-- [[Noy_Zhang_2023]] - Experimental evidence on the productivity effects of generative artificial intelligence
-- [[Kasneci_et_al_2023]] - ChatGPT for good? On opportunities and challenges of large language models for education
-- [[Pan_et_al_2023]] - On the risk of misinformation pollution with large language models
-- [[Wood_2024]] - Explainable AI in the military domain
-- [[Conmy_et_al_2023]] - Towards automated circuit discovery for mechanistic interpretability
+- [[Forrester_None]] - Build your own business case for Microsoft 365 Copilot
+- [[Australian_Government_None]] - Australia's AI Ethics Principles
+- [[Australian_Government_None]] - National framework for the assurance of artificial intelligence in government
+- [[ISOIEC_2023]] - ISO/IEC 42001:2023 Information Technology-Artificial Intelligence-Management Standard
+- [[South_Australian_Government_None]] - SA Government Information Privacy Principles
+- [[South_Australian_Government_None]] - Code of Ethics for the SA Public Sector
+- [[Cybergovau_None]] - Deploying AI Systems Securely

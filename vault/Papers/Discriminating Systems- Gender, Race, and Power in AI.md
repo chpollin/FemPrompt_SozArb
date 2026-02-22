@@ -1,24 +1,15 @@
 ---
-title: Discriminating Systems: Gender, Race, and Power in AI
+title: "Discriminating Systems: Gender, Race, and Power in AI"
 authors:
   - S.M. West
   - M. Whittaker
   - K. Crawford
 year: 2023
 type: report
-url: https://ainowinstitute.org/wp-content/uploads/2023/04/discriminatingsystems.pdf
+doi: 
+url: "https://ainowinstitute.org/wp-content/uploads/2023/04/discriminatingsystems.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Intersectionality
-mitigation_strategies:
-  - Intersectional Accuracy
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -39,40 +30,52 @@ agreement: disagree
 
 # Discriminating Systems: Gender, Race, and Power in AI
 
-## Abstract
+## Transformation Trail
 
-Diese einflussreiche Studie argumentiert, dass die Diversitätskrise im KI-Sektor und Bias in KI-Systemen zwei Manifestationen desselben Problems sind und gemeinsam angegangen werden müssen. Die Autoren zeigen, dass rein technische Ansätze zur Bias-Behebung unzureichend sind, da sie die systemischen Machtverhältnisse ignorieren, die sowohl Arbeitsplätze als auch Technologien formen. Das "Pipeline-Problem"-Narrativ wird als zu eng kritisiert, da es tieferliegende Probleme mit Arbeitsplatzkultur, Machtasymmetrien und struktureller Diskriminierung nicht adressiert. Die Studie fordert eine Verschiebung von technischer "Debiasing" zu breiterer sozialer Analyse.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 5 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Ja |  |
+| Feministisch | Nein | Ja | X |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
+- [[Algorithmic Bias]]
+- [[Algorithmic Fairness]]
+- [[Intersectional Feminism in AI]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Discriminating Systems: Gender, Race, and Power in AI"
-authors: ["Sarah Myers West", "Meredith Whittaker", "Kate Crawford"]
-year: 2019
-type: report
-language: en
-processed: 2026-02-05
-source_file: West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.md
-confidence: 95
----
+## Wissensdokument
 
 # Discriminating Systems: Gender, Race, and Power in AI
 

@@ -1,24 +1,14 @@
 ---
-title: The AI Act, gender equality and non-discrimination: what role for the AI Office?
+title: "The AI Act, gender equality and non-discrimination: what role for the AI Office?"
 authors:
   - M. Giannoni Adielsson
   - J. Öberg
 year: 2024
 type: journalArticle
-url: https://doi.org/10.1007/s12027-024-00785-w
 doi: 10.1007/s12027-024-00785-w
+url: "https://doi.org/10.1007/s12027-024-00785-w"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Discrimination
-mitigation_strategies:
-  - Debiasing
-  - Inclusive And
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -30,37 +20,32 @@ llm_categories:
 
 # The AI Act, gender equality and non-discrimination: what role for the AI Office?
 
-## Abstract
+## Transformation Trail
 
-Diese Analyse bewertet, ob der EU AI Act Fragen der Geschlechtergerechtigkeit und Nichtdiskriminierung ausreichend adressiert. Die substantiellen Bestimmungen des AI Acts werden durch die Linse von Gleichstellungs- und Antidiskriminierungsrecht analysiert, wobei vorgeschlagene Tools wie grundrechtliche Folgenabschätzungen und Bias-Audits zur Reduzierung von Geschlechterverzerrungen und Diskriminierungsrisiken hervorgehoben werden. Die Rolle des AI Office und seine Kooperation mit nationalen, europäischen und internationalen Stellen zur Durchsetzung der Geschlechtergerechtigkeit wird diskutiert.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 97 |
+| Category Validation | 95 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Discrimination]]
-- [[Discrimination]]
+- [[Algorithmic Fairness Metrics]]
+- [[Algorithmic Gender Bias]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Inclusive And]]
-
-## Full Text
-
----
-title: "The AI Act, gender equality and non-discrimination: what role for the AI office?"
-authors: ["Fabian Lütz"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Lütz_2024_The_AI_Act,_gender_equality_and.md
-confidence: 91
----
+## Wissensdokument
 
 # The AI Act, gender equality and non-discrimination: what role for the AI office?
 

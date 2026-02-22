@@ -7,15 +7,10 @@ authors:
   - H. Warne
 year: 2024
 type: journalArticle
-url: https://ojs.library.queensu.ca/index.php/surveillance-and-society/article/view/16107
+doi: 
+url: "https://ojs.library.queensu.ca/index.php/surveillance-and-society/article/view/16107"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -26,29 +21,31 @@ llm_categories:
 
 # Automated government benefits and welfare surveillance
 
-## Abstract
+## Transformation Trail
 
-Critical surveillance studies analysis examining digital welfare state historically, presently, and prospectively, focusing on AI-driven welfare surveillance systems. Authors argue problems posed by AI in public administration are often misattributed to technological novelty when they actually represent historically familiar patterns of surveillance and control. Drawing on bureaucracy, welfare state, and automation scholarship, demonstrates how algorithmic fraud detection and chatbot assistance systems extend long-standing practices of scrutinizing and disciplining marginalized populations. Critical insights include analysis of how automation enables unprecedented scale of surveillance while maintaining opacity through algorithmic systems' auditable veneer. Examines cases from Netherlands and other jurisdictions showing how automated welfare systems amplify existing power asymmetries and inequality.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Bias in Social Services]]
 
----
-title: "Automated Government Benefits and Welfare Surveillance"
-authors: ["Mike Zajko"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Dencik_2024_Automated_government_benefits_and_welfare.md
-confidence: 95
----
+## Wissensdokument
 
 # Automated Government Benefits and Welfare Surveillance
 

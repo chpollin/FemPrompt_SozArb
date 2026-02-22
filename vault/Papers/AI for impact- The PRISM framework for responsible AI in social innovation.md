@@ -1,18 +1,13 @@
 ---
-title: AI for impact: The PRISM framework for responsible AI in social innovation
+title: "AI for impact: The PRISM framework for responsible AI in social innovation"
 authors:
   - Unknown Author
 year: 2024
 type: report
-url: https://www.weforum.org/publications/ai-for-impact-the-prism-framework-for-responsible-ai-in-social-innovation/
+doi: 
+url: "https://www.weforum.org/publications/ai-for-impact-the-prism-framework-for-responsible-ai-in-social-innovation/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -31,32 +26,24 @@ agreement: agree
 
 # AI for impact: The PRISM framework for responsible AI in social innovation
 
-## Abstract
+## Transformation Trail
 
-Institutional report introducing PRISM framework specifically designed for social innovators, impact enterprises, and intermediaries working in social services sectors. Building on Presidio Framework of AI Governance Alliance, PRISM provides adoption pathways through which organizations can filter their impact mission, capabilities, and risks against AI technology use. Framework includes AI-enabled readiness assessment matrix enabling organizations to evaluate current practices and develop actionable roadmaps for AI integration both internally and externally. Emphasizes ethical adoption of AI aligned with social impact missions.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit
-**Human Decision:** Include
-**Human Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Fairness]]
+- [[Algorithmic Transparency and Explainability]]
 
----
-title: "AI for Impact: The PRISM Framework for Responsible AI in Social Innovation"
-authors: ["World Economic Forum", "EY", "Microsoft", "Schwab Foundation for Social Entrepreneurship"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-05
-source_file: World Economic Forum_2024_AI_for_impact_The_PRISM_framework_for_responsible.md
-confidence: 75
----
+## Wissensdokument
 
 # AI for Impact: The PRISM Framework for Responsible AI in Social Innovation
 

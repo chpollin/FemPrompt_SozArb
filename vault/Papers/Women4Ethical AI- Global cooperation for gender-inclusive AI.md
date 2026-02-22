@@ -1,19 +1,13 @@
 ---
-title: Women4Ethical AI: Global cooperation for gender-inclusive AI
+title: "Women4Ethical AI: Global cooperation for gender-inclusive AI"
 authors:
   - Unknown Author
 year: 2024
 type: report
-url: https://www.unesco.org/en/articles/unescos-women4ethical-ai-urges-global-cooperation-gender-inclusive-ai
+doi: 
+url: "https://www.unesco.org/en/articles/unescos-women4ethical-ai-urges-global-cooperation-gender-inclusive-ai"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Inclusive Ai
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -30,34 +24,50 @@ agreement: disagree
 
 # Women4Ethical AI: Global cooperation for gender-inclusive AI
 
-## Abstract
+## Transformation Trail
 
-UNESCO-Initiative zur Förderung genderinklusiver KI-Entwicklung. Fokus auf globale Zusammenarbeit, Menschenrechtsprinzipien und Expertinnenbeteiligung in allen Phasen.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 93 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Ja | X |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz UNESCO_2024_Women4Ethical_AI_Global_cooperation_for]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Inclusive Ai]]
+- [[Gender Bias in AI Systems]]
 
-## Full Text
-
----
-title: "Women for Ethical AI Action Request: A global cooperation for gender-inclusive AI governance"
-authors: ["UNESCO Women for Ethical AI Group"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-05
-source_file: UNESCO_2024_Women4Ethical_AI_Global_cooperation_for.md
-confidence: 91
----
+## Wissensdokument
 
 # Women for Ethical AI Action Request: A global cooperation for gender-inclusive AI governance
 

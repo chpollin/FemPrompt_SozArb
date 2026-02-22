@@ -60,6 +60,9 @@ pipeline/validation_reports_clean/
 # API call logs
 *.jsonl
 
+# LLM cache (vault generation)
+.vault_cache/
+
 # Backup files
 *_old.*
 *_backup.*

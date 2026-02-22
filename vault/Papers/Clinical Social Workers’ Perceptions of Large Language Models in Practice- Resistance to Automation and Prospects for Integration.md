@@ -1,5 +1,5 @@
 ---
-title: Clinical Social Workers’ Perceptions of Large Language Models in Practice: Resistance to Automation and Prospects for Integration
+title: "Clinical Social Workers’ Perceptions of Large Language Models in Practice: Resistance to Automation and Prospects for Integration"
 authors:
   - J. Creswell Báez
   - E. Ahn
@@ -8,16 +8,10 @@ authors:
   - L. Goldkind
 year: 2025
 type: journalArticle
-url: https://doi.org/10.1080/26408066.2025.2542450
 doi: 10.1080/26408066.2025.2542450
+url: "https://doi.org/10.1080/26408066.2025.2542450"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -28,29 +22,32 @@ llm_categories:
 
 # Clinical Social Workers’ Perceptions of Large Language Models in Practice: Resistance to Automation and Prospects for Integration
 
-## Abstract
+## Transformation Trail
 
-Qualitative study (interviews, reflexive thematic analysis) of clinicians exposed to LLM-supported consultation. Identifies efficiency and documentation support alongside concerns over confidentiality, loss of nuance, and reduced empathy. Concludes AI should augment—not replace—clinical judgment, requiring training and ethics.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Generative_KI, Soziale_Arbeit
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy in Social Work]]
+- [[Algorithmic Bias in Healthcare]]
 
----
-title: "Clinical Social Workers' Perceptions of Large Language Models in Practice: Resistance to Automation and Prospects for Integration"
-authors: ["Johanna Creswell Báez", "Eunhye Ahn", "Aubrey Tamietti", "Bryan G. Victor", "Lauri Goldkind"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large.md
-confidence: 89
----
+## Wissensdokument
 
 # Clinical Social Workers' Perceptions of Large Language Models in Practice: Resistance to Automation and Prospects for Integration
 

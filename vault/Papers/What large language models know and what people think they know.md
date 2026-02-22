@@ -9,17 +9,10 @@ authors:
   - P. Smyth
 year: 2025
 type: journalArticle
-url: https://www.nature.com/articles/s42256-024-00976-7
 doi: 10.1038/s42256-024-00976-7
+url: "https://www.nature.com/articles/s42256-024-00976-7"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Calibration
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -34,34 +27,28 @@ agreement: agree
 
 # What large language models know and what people think they know
 
-## Abstract
+## Transformation Trail
 
-High-impact study investigating mismatch between LLMs' confidence and users' trust. Found users often over-trust LLM answers, especially with explanations. Longer, detailed explanations increased user confidence even when answers weren't more accurate. Demonstrated that prompt engineering to convey uncertainty accurately helps users calibrate trust better. Aligning explanation with model's true confidence narrowed "calibration gap," improving accuracy in judging when to trust AI.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Fairness
-**Human Decision:** Exclude
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **94** |
 
-### Mitigation Strategies
-- [[Calibration]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
 
----
-title: "What large language models know and what people think they know"
-authors: ["Mark Steyvers", "Heliodoro Tejeda", "Aakriti Kumar", "Catarina Belem", "Sheer Karny", "Xinyue Hu", "Lukas W. Mayer", "Padhraic Smyth"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Steyvers_2025_What_large_language_models_know_and_what_people.md
-confidence: 94
----
+## Wissensdokument
 
 # What large language models know and what people think they know
 

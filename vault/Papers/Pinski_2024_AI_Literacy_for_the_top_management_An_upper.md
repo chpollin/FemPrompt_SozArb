@@ -4,32 +4,35 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 ---
 
 # Pinski_2024_AI_Literacy_for_the_top_management_An_upper
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 78 |
+| **Overall Confidence** | **86** |
+
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
 
----
-title: "AI Literacy for the top management: An upper echelons perspective on corporate AI orientation and implementation ability"
-authors: ["Marc Pinski", "Thomas Hofmann", "Alexander Benlian"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Pinski_2024_AI_Literacy_for_the_top_management_An_upper.md
-confidence: 86
----
+## Wissensdokument
 
 # AI Literacy for the top management: An upper echelons perspective on corporate AI orientation and implementation ability
 

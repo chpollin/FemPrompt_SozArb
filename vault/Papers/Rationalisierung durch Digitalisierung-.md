@@ -5,14 +5,9 @@ authors:
 year: 2023
 type: journalArticle
 doi: 10.1007/s12592-023-00472-6
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -27,32 +22,28 @@ agreement: agree
 
 # Rationalisierung durch Digitalisierung?
 
-## Abstract
+## Transformation Trail
 
-Contributes labor sociology and interaction sociology perspectives (particularly Luhmann's interaction theory) to digitalization analyses in social work. Examines potential advantages and disadvantages from multiple stakeholder perspectives (professionals, service users, organizations), revealing that fears and hopes regarding rationalization through digitalization are overly simplistic. Highlights irreducible complexity of professional helping relationships and fundamental limitations of applying rationalization logic to social work contexts.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** Soziale_Arbeit
-**Human Decision:** Exclude
-**Human Categories:** Generative_KI, KI_Sonstige, Soziale_Arbeit
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **92** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Rationalisierung durch Digitalisierung? Eine soziologische Perspektive auf den Einsatz digitaler Technologien in der Sozialen Arbeit"
-authors: ["Philipp Waag"]
-year: 2023
-type: journalArticle
-language: de
-processed: 2026-02-05
-source_file: Waag_2023_Rationalisierung_durch_Digitalisierung.md
-confidence: 92
----
+**LLM:** Exclude (Confidence: 0.95)
+**Human:** Exclude
+
+## Wissensdokument
 
 # Rationalisierung durch Digitalisierung? Eine soziologische Perspektive auf den Einsatz digitaler Technologien in der Sozialen Arbeit
 

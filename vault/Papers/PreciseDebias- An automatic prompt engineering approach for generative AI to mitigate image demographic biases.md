@@ -1,24 +1,15 @@
 ---
-title: PreciseDebias: An automatic prompt engineering approach for generative AI to mitigate image demographic biases
+title: "PreciseDebias: An automatic prompt engineering approach for generative AI to mitigate image demographic biases"
 authors:
   - C. Clemmer
   - J. Ding
   - Y. Feng
 year: 2024
 type: conferencePaper
-url: https://openaccess.thecvf.com/content/WACV2024/html/Clemmer_PreciseDebias_An_Automatic_Prompt_Engineering_Approach_for_Generative_AI_WACV_2024_paper.html
+doi: 
+url: "https://openaccess.thecvf.com/content/WACV2024/html/Clemmer_PreciseDebias_An_Automatic_Prompt_Engineering_Approach_for_Generative_AI_WACV_2024_paper.html"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Demographic
-mitigation_strategies:
-  - Fine-tuning
-  - Prompt Engineering
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -32,37 +23,27 @@ llm_categories:
 
 # PreciseDebias: An automatic prompt engineering approach for generative AI to mitigate image demographic biases
 
-## Abstract
+## Transformation Trail
 
-This paper presents a technical solution for reducing demographic bias in AI image generators through "PreciseDebias," an automated approach that rewrites simple prompts into more complex, diversity-reflective prompts. The system analyzes model bias and strategically adds attributes like ethnicity, gender, or age to enforce fairer representation distributions, demonstrating that diversity-reflective prompting can be automated at the system level.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
 
-### Bias Types
-- [[Demographic]]
-- [[Stereotyping]]
+### Stufe 4: Assessment
 
-### Mitigation Strategies
-- [[Fine-tuning]]
-- [[Prompt Engineering]]
+**LLM:** Include (Confidence: 0.95)
 
-## Full Text
-
----
-title: "PreciseDebias: An Automatic Prompt Engineering Approach for Generative AI to Mitigate Image Demographic Biases"
-authors: ["Colton Clemmer", "Junhua Ding", "Yunhe Feng"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering.md
-confidence: 95
----
+## Wissensdokument
 
 # PreciseDebias: An Automatic Prompt Engineering Approach for Generative AI to Mitigate Image Demographic Biases
 

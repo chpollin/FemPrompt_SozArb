@@ -1,5 +1,5 @@
 ---
-title: The power of prompts: Evaluating and mitigating gender bias in MT with LLMs
+title: "The power of prompts: Evaluating and mitigating gender bias in MT with LLMs"
 authors:
   - A. Sant
   - C. Escolano
@@ -8,19 +8,10 @@ authors:
   - M. Melero
 year: 2024
 type: conferencePaper
-url: https://doi.org/10.18653/v1/2024.gebnlp-1.7
 doi: 10.18653/v1/2024.gebnlp-1.7
+url: "https://doi.org/10.18653/v1/2024.gebnlp-1.7"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotyping
-  - Stereotypische
-mitigation_strategies:
-  - Bias Mitigation
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -40,39 +31,52 @@ agreement: disagree
 
 # The power of prompts: Evaluating and mitigating gender bias in MT with LLMs
 
-## Abstract
+## Transformation Trail
 
-Examines gender bias in machine translation through LLMs using four widely-used test sets. Develops specific prompting engineering techniques that reduce gender bias by up to 12% on WinoMT evaluation dataset. Identifies optimal prompt structures incorporating explicit fairness instructions and context-aware guidelines.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Sant_2024_The_power_of_prompts_Evaluating_and_mitigating]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotyping]]
-- [[Stereotypische]]
+- [[Algorithmic Fairness Evaluation]]
+- [[Chain-of-Thought Reasoning]]
+- [[Prompt Engineering for Bias Mitigation]]
 
-### Mitigation Strategies
-- [[Bias Mitigation]]
-
-## Full Text
-
----
-title: "The power of Prompts: Evaluating and Mitigating Gender Bias in MT with LLMs"
-authors: ["Aleix Sant", "Carlos Escolano", "Audrey Mash", "Francesca De Luca Fornaciari", "Maite Melero"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Sant_2024_The_power_of_prompts_Evaluating_and_mitigating.md
-confidence: 89
----
+## Wissensdokument
 
 # The power of Prompts: Evaluating and Mitigating Gender Bias in MT with LLMs
 

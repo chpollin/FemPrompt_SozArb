@@ -1,5 +1,5 @@
 ---
-title: Tensions in digital welfare states: Three perspectives on care and control
+title: "Tensions in digital welfare states: Three perspectives on care and control"
 authors:
   - I. Zakharova
   - J. Jarke
@@ -7,19 +7,9 @@ authors:
 year: 2024
 type: journalArticle
 doi: 10.1177/14407833241226800
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Discrimination
-  - Intersectional Perspectives
-mitigation_strategies:
-  - Feminist AI
-  - Intersectional Perspectives
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -33,40 +23,46 @@ agreement: disagree
 
 # Tensions in digital welfare states: Three perspectives on care and control
 
-## Abstract
+## Transformation Trail
 
-Examines tensions between care and control in digital welfare states, analyzing how welfare services increasingly rely on digital technologies and data systems. Develops three analytical perspectives: datafied care practices, algorithmic governance, and digitalized welfare encounters. Demonstrates how digitalization reshapes welfare provision by intensifying surveillance while potentially enabling new forms of care. Reveals fundamental contradictions where care logics and control logics coexist uneasily.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **95** |
 
-### Bias Types
-- [[Algorithmic Discrimination]]
-- [[Discrimination]]
-- [[Intersectional Perspectives]]
+### Stufe 4: Assessment
 
-### Mitigation Strategies
-- [[Feminist AI]]
-- [[Intersectional Perspectives]]
+**LLM:** Include (Confidence: 0.85)
+**Human:** Exclude
 
-## Full Text
+**Kategorie-Vergleich (bei Divergenz):**
 
----
-title: "Tensions in digital welfare states: Three perspectives on care and control"
-authors: ["Irina Zakharova", "Juliane Jarke", "Anne Kaun"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Zakharova_2024_Tensions_in_digital_welfare_states_Three.md
-confidence: 95
----
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Ja | X |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Zakharova_2024_Tensions_in_digital_welfare_states_Three]] fuer detaillierte Analyse
+
+
+## Wissensdokument
 
 # Tensions in digital welfare states: Three perspectives on care and control
 

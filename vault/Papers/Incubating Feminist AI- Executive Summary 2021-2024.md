@@ -1,21 +1,13 @@
 ---
-title: Incubating Feminist AI: Executive Summary 2021-2024
+title: "Incubating Feminist AI: Executive Summary 2021-2024"
 authors:
   - Unknown Author
 year: 2024
 type: report
-url: https://aplusalliance.org/incubatingfeministai2024/
+doi: 
+url: "https://aplusalliance.org/incubatingfeministai2024/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Discrimination
-mitigation_strategies:
-  - Feminist AI
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -40,39 +32,53 @@ agreement: disagree
 
 # Incubating Feminist AI: Executive Summary 2021-2024
 
-## Abstract
+## Transformation Trail
 
-Documents outcomes from $2 million CAD Feminist AI Research Network project across Latin America, Middle East, and Asia. Developed 12 feminist AI prototypes addressing gender-based violence, transit safety, bias detection in NLP systems, and judicial transparency, demonstrating practical applications of feminist AI principles through community-centered design and intersectional analysis capabilities.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Exclude
-**Human Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 96 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Nein | X |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Ja | X |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Ja |  |
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Stereotypen]]
-
-### Mitigation Strategies
+- [[Algorithmic Bias Detection]]
+- [[Design Justice]]
 - [[Feminist AI]]
+- [[Intersectional Feminism in Technology]]
 
-## Full Text
-
----
-title: "Incubating Feminist AI: Executive Summary 2021-2024"
-authors: ["A+ Alliance", "f<a+i>r Feminist AI Research Network"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-04
-source_file: A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md
-confidence: 93
----
+## Wissensdokument
 
 # Incubating Feminist AI: Executive Summary 2021-2024
 

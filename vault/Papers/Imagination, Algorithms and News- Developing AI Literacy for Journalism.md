@@ -1,20 +1,14 @@
 ---
-title: Imagination, Algorithms and News: Developing AI Literacy for Journalism
+title: "Imagination, Algorithms and News: Developing AI Literacy for Journalism"
 authors:
   - Mark Deuze
   - Charlie Beckett
 year: 2022
 type: journalArticle
-url: https://www.tandfonline.com/doi/full/10.1080/21670811.2022.2119152
 doi: 10.1080/21670811.2022.2119152
+url: "https://www.tandfonline.com/doi/full/10.1080/21670811.2022.2119152"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.75
 llm_categories:
@@ -24,25 +18,33 @@ llm_categories:
 
 # Imagination, Algorithms and News: Developing AI Literacy for Journalism
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.75)
-**LLM Categories:** AI_Literacies, KI_Sonstige
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.75)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Algorithmic Bias]]
+- [[Algorithmic Fairness]]
 
----
-title: "Imagination, Algorithms and News: Developing AI Literacy for Journalism"
-authors: ["Mark Deuze", "Charlie Beckett"]
-year: 2022
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Deuze_2022_Imagination,_Algorithms_and_News_Developing_AI.md
-confidence: 94
----
+## Wissensdokument
 
 # Imagination, Algorithms and News: Developing AI Literacy for Journalism
 

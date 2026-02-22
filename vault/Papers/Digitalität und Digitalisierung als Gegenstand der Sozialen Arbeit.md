@@ -4,14 +4,10 @@ authors:
   - N. Kutscher
 year: 2024
 type: bookSection
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -26,32 +22,42 @@ agreement: disagree
 
 # Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit
 
-## Abstract
+## Transformation Trail
 
-Differentiates between digitalization (technical processes of making things digital) and digitality (sociotechnical transformations of social practices and relations), arguing social work must engage with both technological changes and their social implications. Demonstrates how algorithms, data-driven systems, and digital platforms reshape professional practice, client relationships, and social inequalities. Argues digitalization fundamentally transforms social contexts where social work operates rather than merely adopting new tools, requiring critical engagement examining power relations, surveillance mechanisms, and social justice implications.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit
-**Human Decision:** Exclude
-**Human Categories:** Soziale_Arbeit
-**Agreement:** Disagree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-## Full Text
+- [[Algorithmic Discrimination]]
+- [[Algorithmic Fairness in Social Work]]
 
----
-title: "Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit"
-authors: ["Nadia Kutscher"]
-year: 2024
-type: book
-language: de
-processed: 2026-02-05
-source_file: Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand.md
-confidence: 75
----
+## Wissensdokument
 
 # Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit
 

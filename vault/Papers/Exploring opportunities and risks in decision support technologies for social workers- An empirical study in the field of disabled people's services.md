@@ -1,5 +1,5 @@
 ---
-title: Exploring opportunities and risks in decision support technologies for social workers: An empirical study in the field of disabled people's services
+title: "Exploring opportunities and risks in decision support technologies for social workers: An empirical study in the field of disabled people's services"
 authors:
   - D. Schneider
   - A. Maier
@@ -8,15 +8,9 @@ authors:
 year: 2022
 type: journalArticle
 doi: 10.1093/bjsw/bcab262
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -33,35 +27,51 @@ agreement: disagree
 
 # Exploring opportunities and risks in decision support technologies for social workers: An empirical study in the field of disabled people's services
 
-## Abstract
+## Transformation Trail
 
-Empirical study investigating German social workers' perspectives on decision support systems in disability services through practitioner interviews. Identifies both opportunities (consistency across cases, evidence-based practice, administrative time-saving) and significant risks (deprofessionalization, data protection concerns, reduced professional autonomy, loss of holistic assessment capabilities). Social workers express ambivalence: recognizing potential for reducing subjective bias and improving resource allocation transparency while worrying about losing relational aspects of assessment and client trust.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Schneider_2022_Exploring_opportunities_and_risks_in_decision]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[Algorithmic Fairness in Vulnerable Populations]]
+- [[Data Literacy in Professional Practice]]
 
-## Full Text
-
----
-title: "Exploring Opportunities and Risks in Decision Support Technologies for Social Workers: An Empirical Study in the Field of Disabled People's Services"
-authors: ["Diana Schneider", "Angelika Maier", "Philipp Cimiano", "Udo Seelmeyer"]
-year: 2022
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Schneider_2022_Exploring_opportunities_and_risks_in_decision.md
-confidence: 89
----
+## Wissensdokument
 
 # Exploring Opportunities and Risks in Decision Support Technologies for Social Workers: An Empirical Study in the Field of Disabled People's Services
 

@@ -1,21 +1,15 @@
 ---
-title: Unequal voices: How LLMs construct constrained queer narratives
+title: "Unequal voices: How LLMs construct constrained queer narratives"
 authors:
   - A. Ghosal
   - A. Gupta
   - V. Srikumar
 year: 2025
 type: report
-url: https://arxiv.org/abs/2507.15585
+doi: 
+url: "https://arxiv.org/abs/2507.15585"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotype
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -27,32 +21,31 @@ llm_categories:
 
 # Unequal voices: How LLMs construct constrained queer narratives
 
-## Abstract
+## Transformation Trail
 
-Investigates how large language models represent queer individuals in generated narratives, uncovering tendencies toward stereotyped and narrow portrayals. Identifies phenomena including narrow topic range, discursive othering, and identity foregrounding. Shows LLMs unconsciously reinforce divide where marginalized groups are not afforded same breadth of narrative roles as others.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Gender, Diversitaet
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotype]]
+- [[Representational Harm]]
 
-## Full Text
-
----
-title: "Unequal Voices: How LLMs Construct Constrained Queer Narratives"
-authors: ["Atreya Ghosal", "Ashim Gupta", "Vivek Srikumar"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained.md
-confidence: 89
----
+## Wissensdokument
 
 # Unequal Voices: How LLMs Construct Constrained Queer Narratives
 

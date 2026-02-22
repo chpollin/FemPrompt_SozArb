@@ -7,15 +7,10 @@ authors:
   - M. Guerzhoy
 year: 2024
 type: report
-url: https://www.arxivdaily.com/thread/62478
+doi: 
+url: "https://www.arxivdaily.com/thread/62478"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.35
 llm_categories:
@@ -25,25 +20,27 @@ llm_categories:
 
 # Exploring complex mental health symptoms via classifying social media data with explainable LLMs
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.35)
-**LLM Categories:** Generative_KI, KI_Sonstige
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Key Concepts
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-## Full Text
+### Stufe 3: Verifikation (LLM)
 
----
-title: "Exploring Complex Mental Health Symptoms via Classifying Social Media Data with Explainable LLMs"
-authors: ["Kexin Chen", "Noelle Lim", "Claire Lee", "Michael Guerzhoy"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Chen_2024_Exploring_complex_mental_health_symptoms_via.md
-confidence: 88
----
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.35)
+
+## Wissensdokument
 
 # Exploring Complex Mental Health Symptoms via Classifying Social Media Data with Explainable LLMs
 

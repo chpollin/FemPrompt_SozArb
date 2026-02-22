@@ -1,5 +1,5 @@
 ---
-title: A formal account of AI trustworthiness: Connecting intrinsic and perceived trustworthiness in an operational schematization
+title: "A formal account of AI trustworthiness: Connecting intrinsic and perceived trustworthiness in an operational schematization"
 authors:
   - P. Bisconti
   - L. Aquilino
@@ -7,15 +7,10 @@ authors:
   - D. Nardi
 year: 2024
 type: journalArticle
-url: https://philarchive.org/archive/BISAFA
+doi: 
+url: "https://philarchive.org/archive/BISAFA"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -24,29 +19,33 @@ llm_categories:
 
 # A formal account of AI trustworthiness: Connecting intrinsic and perceived trustworthiness in an operational schematization
 
-## Abstract
+## Transformation Trail
 
-Develops formal conceptualization of AI trustworthiness connecting intrinsic and perceived trustworthiness in operationalizable schema. Argues that trustworthiness extends beyond inherent AI system capabilities to include significant influences from observer perceptions such as perceived transparency, agency locus, and human oversight. Identifies three central perceived characteristics: transparency (access to information about functionality), agency locus (perception of action autonomy source), and human oversight (presence of human control). Mathematical formalization defines overall trustworthiness as function of discrepancy between intrinsic and perceived trustworthiness.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-## Full Text
+- [[AI Transparency]]
+- [[AI Trustworthiness]]
+- [[Algorithmic Fairness]]
 
----
-title: "A Formal Account of AI Trustworthiness: Connecting Intrinsic and Perceived Trustworthiness"
-authors: ["Piercosma Bisconti", "Letizia Aquilino", "Antonella Marchetti", "Daniele Nardi"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting.md
-confidence: 88
----
+## Wissensdokument
 
 # A Formal Account of AI Trustworthiness: Connecting Intrinsic and Perceived Trustworthiness
 

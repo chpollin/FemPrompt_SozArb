@@ -1,21 +1,15 @@
 ---
-title: Measuring user competence in using artificial intelligence: validity and reliability of artificial intelligence literacy scale
+title: "Measuring user competence in using artificial intelligence: validity and reliability of artificial intelligence literacy scale"
 authors:
   - Bingcheng Wang
   - Pei-Luen Patrick Rau
   - Tianyi Yuan
 year: 2023
 type: journalArticle
-url: https://www.tandfonline.com/doi/full/10.1080/0144929X.2022.2072768
 doi: 10.1080/0144929X.2022.2072768
+url: "https://www.tandfonline.com/doi/full/10.1080/0144929X.2022.2072768"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -29,28 +23,33 @@ agreement: agree
 
 # Measuring user competence in using artificial intelligence: validity and reliability of artificial intelligence literacy scale
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, KI_Sonstige
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Digital Literacy]]
 
----
-title: "Measuring user competence in using artificial intelligence: validity and reliability of artificial intelligence literacy scale"
-authors: ["Bingcheng Wang", "Pei-Luen Patrick Rau", "Tianyi Yuan"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Wang_2023_Measuring_user_competence_in_using_artificial.md
-confidence: 93
----
+## Wissensdokument
 
 # Measuring user competence in using artificial intelligence: validity and reliability of artificial intelligence literacy scale
 

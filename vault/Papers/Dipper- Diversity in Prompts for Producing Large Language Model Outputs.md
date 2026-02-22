@@ -1,18 +1,13 @@
 ---
-title: Dipper: Diversity in Prompts for Producing Large Language Model Outputs
+title: "Dipper: Diversity in Prompts for Producing Large Language Model Outputs"
 authors:
   - G. K. R. Lau
 year: 2023
 type: conferencePaper
-url: https://www.comp.nus.edu.sg/~greglau/assets/pdf/dipper_neurips_mint.pdf
+doi: 
+url: "https://www.comp.nus.edu.sg/~greglau/assets/pdf/dipper_neurips_mint.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -31,32 +26,23 @@ agreement: agree
 
 # Dipper: Diversity in Prompts for Producing Large Language Model Outputs
 
-## Abstract
+## Transformation Trail
 
-Presents 'Dipper', an LLM prompting ensemble framework that systematically deploys a diverse set of prompts in parallel to improve the breadth of generated perspectives, including those of minority or marginalized groups. This training-free technique enhances demographic and perspective diversity without performance degradation.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Diversitaet
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Diversitaet
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
+**Human:** Include
 
 ## Key Concepts
 
-## Full Text
+- [[Chain-of-Thought Reasoning]]
 
----
-title: "Dipper: Diversity in Prompts for Producing Large Language Model Ensembles in Reasoning Tasks"
-authors: ["Gregory Kang Ruey Lau", "Wenyang Hu", "Diwen Liu", "Jizhuo Chen", "See-Kiong Ng", "Bryan Kian Hsiang Low"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Lau_2023_Dipper_Diversity_in_Prompts_for_Producing_Large.md
-confidence: 75
----
+## Wissensdokument
 
 # Dipper: Diversity in Prompts for Producing Large Language Model Ensembles in Reasoning Tasks
 

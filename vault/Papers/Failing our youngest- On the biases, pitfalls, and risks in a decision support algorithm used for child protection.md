@@ -1,5 +1,5 @@
 ---
-title: Failing our youngest: On the biases, pitfalls, and risks in a decision support algorithm used for child protection
+title: "Failing our youngest: On the biases, pitfalls, and risks in a decision support algorithm used for child protection"
 authors:
   - T. Moreau
   - R. Sinatra
@@ -7,15 +7,9 @@ authors:
 year: 2024
 type: conferencePaper
 doi: 10.1145/3630106.3658906
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -36,35 +30,46 @@ agreement: disagree
 
 # Failing our youngest: On the biases, pitfalls, and risks in a decision support algorithm used for child protection
 
-## Abstract
+## Transformation Trail
 
-Critical empirical study examining child protection decision support algorithm deployed in Danish municipalities, analyzing its biases and implementation challenges. Using real administrative data from Denmark's child welfare system, evaluated algorithm's predictions against actual case outcomes and found significant biases including disproportionate impacts on immigrant families and systematic errors in risk assessment. Results revealed concerning patterns of false positives for marginalized communities and questioned algorithm's validity for high-stakes decision-making. Documents actual harms from deployed systems.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Fairness
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
 
-### Bias Types
-- [[Discrimination]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
 
----
-title: "Failing Our Youngest: On the Biases, Pitfalls, and Risks in a Decision Support Algorithm Used for Child Protection"
-authors: ["Therese Moreau Hansen", "Roberta Sinatra", "Vedran Sekara"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and.md
-confidence: 95
----
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and]] fuer detaillierte Analyse
+
+
+## Wissensdokument
 
 # Failing Our Youngest: On the Biases, Pitfalls, and Risks in a Decision Support Algorithm Used for Child Protection
 

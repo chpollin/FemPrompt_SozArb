@@ -7,14 +7,9 @@ authors:
 year: 2023
 type: journalArticle
 doi: 10.1155/2023/5550418
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.92
 llm_categories:
@@ -30,32 +25,25 @@ agreement: agree
 
 # Transparency enhances positive perceptions of social artificial intelligence
 
-## Abstract
+## Transformation Trail
 
-Experimental study with 914 participants testing how transparent explanations about chatbot workings affect user perceptions. Results show transparency modestly improved trust-related perceptions: users found chatbot "less creepy," felt more affinity, and perceived it as more socially intelligent when transparent explanation provided. Transparency's impact on perceived intelligence stronger for users with low prior AI knowledge. Suggests prompt-engineering for greater transparency can foster user comfort and trust.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, KI_Sonstige
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.92)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[AI Transparency]]
+- [[Algorithmic Opacity]]
 
----
-title: "Transparency Enhances Positive Perceptions of Social Artificial Intelligence"
-authors: ["Ying Xu", "Nora Bradford", "Radhika Garg"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Xu_2023_Transparency_enhances_positive_perceptions_of.md
-confidence: 75
----
+## Wissensdokument
 
 # Transparency Enhances Positive Perceptions of Social Artificial Intelligence
 

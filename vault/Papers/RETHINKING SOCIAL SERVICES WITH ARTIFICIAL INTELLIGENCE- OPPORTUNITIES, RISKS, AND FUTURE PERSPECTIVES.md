@@ -1,21 +1,13 @@
 ---
-title: RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE: OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIVES
+title: "RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE: OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIVES"
 authors:
   - Unknown Author
 year: 2024
 type: bookSection
-url: https://www.researchgate.net/publication/393509196_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL_INTELLIGENCE_OPPORTUNITIES_RISKS_AND_FUTURE_PERSPECTIVES
+doi: 
+url: "https://www.researchgate.net/publication/393509196_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL_INTELLIGENCE_OPPORTUNITIES_RISKS_AND_FUTURE_PERSPECTIVES"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Systematic Discrimination
-  - Discrimination
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -36,37 +28,50 @@ agreement: disagree
 
 # RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE: OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIVES
 
-## Abstract
+## Transformation Trail
 
-This chapter explores the transformative potential of artificial intelligence (AI) in the field of social services. It highlights how AI—through data analysis, predictive modeling, and administrative automation—can enhance the effectiveness, accessibility, and efficiency of social work practice. The chapter also presents significant ethical concerns, including risks of algorithmic bias, loss of human connection, and violations of privacy. The author emphasizes that while AI can complement social work, it cannot replace the human-centered values at the core of the profession. It concludes by urging institutions and educational programs to prepare social workers for ethical and effective use of AI and calls for multidisciplinary collaboration to develop guidelines that ensure AI integration supports social justice, equality, and human rights.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
-- [[Discrimination]]
-- [[Systematic Discrimination]]
+- [[Algorithmic Bias in Social Services]]
 
-## Full Text
-
----
-title: "Rethinking Social Services with Artificial Intelligence: Opportunities, Risks, and Future Perspectives"
-authors: ["Ferhat Toper"]
-year: 2025
-type: book
-language: en
-processed: 2026-02-05
-source_file: Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL.md
-confidence: 95
----
+## Wissensdokument
 
 # Rethinking Social Services with Artificial Intelligence: Opportunities, Risks, and Future Perspectives
 

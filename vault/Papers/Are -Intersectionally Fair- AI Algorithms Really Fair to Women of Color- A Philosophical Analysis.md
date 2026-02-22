@@ -1,22 +1,13 @@
 ---
-title: Are "Intersectionally Fair" AI Algorithms Really Fair to Women of Color? A Philosophical Analysis
+title: "Are \"Intersectionally Fair\" AI Algorithms Really Fair to Women of Color? A Philosophical Analysis"
 authors:
   - Y. Kong
 year: 2022
 type: conferencePaper
-url: https://doi.org/10.1145/3531146.3533074
 doi: 10.1145/3531146.3533074
+url: "https://doi.org/10.1145/3531146.3533074"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Disparity
-mitigation_strategies:
-  - Intersectional Accuracy
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -39,39 +30,32 @@ agreement: agree
 
 # Are "Intersectionally Fair" AI Algorithms Really Fair to Women of Color? A Philosophical Analysis
 
-## Abstract
+## Transformation Trail
 
-Diese philosophische Analyse identifiziert drei fundamentale Probleme mit der dominanten Interpretation intersektionaler Fairness in der KI: Die Fokussierung auf Identitätskategorien statt Unterdrückungsstrukturen, ein Dilemma zwischen statistischer Parität und substanzieller Gerechtigkeit, sowie die Vernachlässigung historischer Kontexte. Kong argumentiert, dass echte intersektionale Fairness über statistische Metriken hinausgehen und strukturelle Unterdrückungssysteme (Rassismus, Sexismus) direkt adressieren muss. Die Arbeit fordert eine Verschiebung von rein technischen zu kritisch-theoretischen Ansätzen.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Disparity]]
-- [[Intersectional Accuracy]]
+- [[Intersectional Bias]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Fairness Indicators for Systematic Assessments of Visual Feature Extractors"
-authors: ["Priya Goyal", "Adriana Romero Soriano", "Caner Hazirbas", "Levent Sagun", "Nicolas Usunier"]
-year: 2022
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really.md
-confidence: 95
----
+## Wissensdokument
 
 # Fairness Indicators for Systematic Assessments of Visual Feature Extractors
 

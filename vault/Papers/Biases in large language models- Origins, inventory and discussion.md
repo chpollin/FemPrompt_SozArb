@@ -1,28 +1,15 @@
 ---
-title: Biases in large language models: Origins, inventory and discussion
+title: "Biases in large language models: Origins, inventory and discussion"
 authors:
   - R. Navigli
   - S. Conia
   - B. Ross
 year: 2023
 type: journalArticle
-url: https://doi.org/10.1145/3597307
 doi: 10.1145/3597307
+url: "https://doi.org/10.1145/3597307"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Intersectional Accuracy
-  - Algorithmic Bias
-  - Stereotypical
-mitigation_strategies:
-  - Debiasing
-  - Intersectional Accuracy
-  - Bias Evaluation
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -44,43 +31,24 @@ agreement: agree
 
 # Biases in large language models: Origins, inventory and discussion
 
-## Abstract
+## Transformation Trail
 
-Provides an overview of various social biases manifested by large language models and discusses their root causes. Examines how training data selection leads to bias and surveys different types of biases including gender, racial/ethnic, sexual orientation, age, religious and cultural biases. Compiles an inventory of biased behaviors and discusses emerging approaches to measure and mitigate such biases.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
-- [[Discrimination]]
-- [[Intersectional Accuracy]]
-- [[Stereotypical]]
+- [[Gender Bias in Language Models]]
+- [[Intersectional Bias]]
 
-### Mitigation Strategies
-- [[Bias Evaluation]]
-- [[Debiasing]]
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Biases in Large Language Models: Origins, Inventory, and Discussion"
-authors: ["Roberto Navigli", "Simone Conia", "Björn Ross"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Navigli_2023_Biases_in_large_language_models_Origins,.md
-confidence: 75
----
+## Wissensdokument
 
 # Biases in Large Language Models: Origins, Inventory, and Discussion
 

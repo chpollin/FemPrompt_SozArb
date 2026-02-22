@@ -1,5 +1,5 @@
 ---
-title: Trust in artificial intelligence–based clinical decision support systems among health care workers: Systematic review
+title: "Trust in artificial intelligence–based clinical decision support systems among health care workers: Systematic review"
 authors:
   - H. M. Tun
   - H. Abdul Rahman
@@ -7,18 +7,10 @@ authors:
   - O. A. Malik
 year: 2025
 type: journalArticle
-url: https://www.jmir.org/2025/1/e69678
 doi: 10.2196/69678
+url: "https://www.jmir.org/2025/1/e69678"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Algorithmic Bias
-mitigation_strategies:
-  - Calibration
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -33,37 +25,33 @@ agreement: agree
 
 # Trust in artificial intelligence–based clinical decision support systems among health care workers: Systematic review
 
-## Abstract
+## Transformation Trail
 
-Systematic review synthesizing 27 studies on clinicians' trust in AI decision-support tools. Identifies eight key factors shaping professional trust, notably system transparency as primary enabler. Lack of transparency was recurring barrier with "black-box" algorithms undermining trust. Improving transparency, providing explainable recommendations, and addressing bias/fairness issues recommended to bolster trust. Concludes transparent, explainable AI with proper training and ethical safeguards crucial for practitioner trust.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Exclude
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 88 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
+- [[Algorithmic Bias in Healthcare]]
+- [[Algorithmic Transparency]]
 
-### Mitigation Strategies
-- [[Calibration]]
-
-## Full Text
-
----
-title: "Trust in Artificial Intelligence-Based Clinical Decision Support Systems Among Health Care Workers: Systematic Review"
-authors: ["Hein Minn Tun", "Hanif Abdul Rahman", "Lin Naing", "Owais Ahmed Malik"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Tun_2025_Trust_in_artificial_intelligence–based_clinical.md
-confidence: 91
----
+## Wissensdokument
 
 # Trust in Artificial Intelligence-Based Clinical Decision Support Systems Among Health Care Workers: Systematic Review
 

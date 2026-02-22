@@ -1,21 +1,13 @@
 ---
-title: Social work in the age of artificial intelligence: A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis
+title: "Social work in the age of artificial intelligence: A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis"
 authors:
   - N. Alam
 year: 2025
 type: journalArticle
-url: https://doi.org/10.1080/26408066.2025.2547219
 doi: 10.1080/26408066.2025.2547219
+url: "https://doi.org/10.1080/26408066.2025.2547219"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Algorithmic Discrimination
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -29,33 +21,31 @@ llm_categories:
 
 # Social work in the age of artificial intelligence: A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis
 
-## Abstract
+## Transformation Trail
 
-This study develops a comprehensive rights-based framework for navigating AI integration in social work practice while addressing ethical implications across micro, meso, and macro practice levels. The framework bridges social work theory with interdisciplinary insights, demonstrating that AI systems profoundly impact vulnerable populations by mediating interpersonal relationships and constructing meaning in AI-mediated environments. It provides evidence-based guidance for practitioners to harness AI's potential while safeguarding core social work values of human dignity, self-determination, and social justice, offering concrete strategies for social work education and research methodologies that center community voices.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Discrimination]]
-- [[Discrimination]]
+- [[Ethical AI Literacy]]
 
-## Full Text
-
----
-title: "Social Work in the Age of Artificial Intelligence: A rights-Based Framework for evidence-Based Practice Through Social Psychology, Group Dynamics, and Institutional Analysis"
-authors: ["Nafees Alam"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-04
-source_file: Alam_2025_Social_work_in_the_age_of_artificial_intelligence.md
-confidence: 91
----
+## Wissensdokument
 
 # Social Work in the Age of Artificial Intelligence: A rights-Based Framework for evidence-Based Practice Through Social Psychology, Group Dynamics, and Institutional Analysis
 

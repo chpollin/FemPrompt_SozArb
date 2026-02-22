@@ -1,24 +1,15 @@
 ---
-title: AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice
+title: "AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice"
 authors:
   - J. B. Singer
   - J. Creswell Báez
   - J. A. Rios
 year: 2023
 type: journalArticle
-url: https://doi.org/10.1080/10437797.2023.2189878
 doi: 10.1080/10437797.2023.2189878
+url: "https://doi.org/10.1080/10437797.2023.2189878"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Prompt Design
-  - Equitable Access
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -36,39 +27,52 @@ agreement: disagree
 
 # AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice
 
-## Abstract
+## Transformation Trail
 
-Commentary advocating cautious integration of LLMs in teaching and practice. Describes pedagogical uses (idea generation, material tailoring) and warns of bias, factual errors, confidentiality risks, and plagiarism. Emphasizes transparency policies and that engagement with AI is ethically preferable to avoidance.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, Generative_KI, Soziale_Arbeit, Bias_Ungleichheit
-**Human Decision:** Exclude
-**Human Categories:** Generative_KI, KI_Sonstige, Soziale_Arbeit
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Ja | X |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Nein | X |
+| Soziale_Arbeit | Ja | Ja |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Nein |  |
+
+> Siehe [[Divergenz Singer_2023_AI_Creates_the_Message_Integrating_AI_Language]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[AI Ethics Curriculum Integration]]
+- [[Algorithmic Bias in Social Work]]
+- [[Natural Language Processing (NLP)]]
 
-### Mitigation Strategies
-- [[Equitable Access]]
-- [[Prompt Design]]
-
-## Full Text
-
----
-title: "AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice"
-authors: ["Jonathan B. Singer", "Johanna Creswell Báez", "Juan A. Rios"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Singer_2023_AI_Creates_the_Message_Integrating_AI_Language.md
-confidence: 95
----
+## Wissensdokument
 
 # AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice
 

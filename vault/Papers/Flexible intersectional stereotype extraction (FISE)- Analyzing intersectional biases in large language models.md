@@ -1,31 +1,13 @@
 ---
-title: Flexible intersectional stereotype extraction (FISE): Analyzing intersectional biases in large language models
+title: "Flexible intersectional stereotype extraction (FISE): Analyzing intersectional biases in large language models"
 authors:
   - T. Charlesworth
 year: 2024
 type: journalArticle
-url: https://news.northwestern.edu/stories/2024/03/kellogg-study-suggests-that-some-intersectional-groups-are-more-represented-than-others-in-internet-text/
+doi: 
+url: "https://news.northwestern.edu/stories/2024/03/kellogg-study-suggests-that-some-intersectional-groups-are-more-represented-than-others-in-internet-text/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Stereotyping
-  - Intersectional Stereotypes
-  - Intersectionality
-  - Stereotypisierung
-  - Intersectional Stereotype
-  - Stereotype
-  - Stereotypen
-  - Intersectional Spaces
-mitigation_strategies:
-  - Intersectional Stereotypes
-  - Intersectional Stereotype
-  - Intersectionality
-  - Intersectional Spaces
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -39,46 +21,31 @@ llm_categories:
 
 # Flexible intersectional stereotype extraction (FISE): Analyzing intersectional biases in large language models
 
-## Abstract
+## Transformation Trail
 
-Studie entwickelt FISE-Methode zur Messung intersektionaler Repräsentationsverzerrungen. Zeigt massive Dominanz weißer Männer in Internettexten und Ableitung entsprechender LLM-Biases.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Intersectional Spaces]]
-- [[Intersectional Stereotype]]
-- [[Intersectional Stereotypes]]
-- [[Intersectionality]]
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotyping]]
-- [[Stereotypisierung]]
+- [[Algorithmic Fairness]]
 
-### Mitigation Strategies
-- [[Intersectional Spaces]]
-- [[Intersectional Stereotype]]
-- [[Intersectional Stereotypes]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Extracting Intersectional Stereotypes from Embeddings: Developing and Validating the Flexible Intersectional Stereotype Extraction Procedure"
-authors: ["Tessa Charlesworth", "Kshitish Ghate", "Aylin Caliskan", "Mahzarin R. Banaji"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Charlesworth_2024_Flexible_intersectional_stereotype_extraction.md
-confidence: 94
----
+## Wissensdokument
 
 # Extracting Intersectional Stereotypes from Embeddings: Developing and Validating the Flexible Intersectional Stereotype Extraction Procedure
 

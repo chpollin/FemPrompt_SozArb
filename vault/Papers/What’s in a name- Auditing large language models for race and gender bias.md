@@ -6,19 +6,10 @@ authors:
   - J. Nyarko
 year: 2025
 type: report
-url: https://arxiv.org/html/2402.14875v3
+doi: 
+url: "https://arxiv.org/html/2402.14875v3"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Systematic Bias
-  - Stereotyping
-  - Stereotype
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -41,38 +32,34 @@ agreement: agree
 
 # What’s in a name? Auditing large language models for race and gender bias
 
-## Abstract
+## Transformation Trail
 
-This interdisciplinary audit of GPT-4 and other LLMs reveals systematic intersectional biases based on names signaling race and gender. Prompts with names suggesting a Black woman received less favorable advice compared to those with white male names. This disparity was robust across 42 prompt templates. The study found that adding quantitative anchors (facts, numbers) to the prompt largely eliminated this bias, whereas adding qualitative descriptive details had inconsistent effects and sometimes amplified stereotypes.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotyping]]
-- [[Systematic Bias]]
+- [[Algorithmic Bias in Large Language Models]]
+- [[Disparate Impact Assessment]]
+- [[Intersectional Bias]]
 
-## Full Text
-
----
-title: "What's in a Name? Auditing Large Language Models for Race and Gender Bias"
-authors: ["Alejandro Salinas", "Amit Haim", "Julian Nyarko"]
-year: 2025
-type: workingPaper
-language: en
-processed: 2026-02-05
-source_file: Salinas_2025_What’s_in_a_name_Auditing_large_language_models.md
-confidence: 89
----
+## Wissensdokument
 
 # What's in a Name? Auditing Large Language Models for Race and Gender Bias
 

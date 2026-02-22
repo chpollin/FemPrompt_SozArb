@@ -1,25 +1,14 @@
 ---
-title: Self-debiasing large language models: Zero-shot recognition and reduction of stereotypes
+title: "Self-debiasing large language models: Zero-shot recognition and reduction of stereotypes"
 authors:
   - A. Parrish
   - M. de-Arteaga
 year: 2025
 type: conferencePaper
-url: https://aclanthology.org/2025.naacl-short.74.pdf
+doi: 
+url: "https://aclanthology.org/2025.naacl-short.74.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Stereotypischen
-  - Stereotypenreduktion
-  - Stereotypisierung
-  - Stereotyping
-mitigation_strategies:
-  - Debiasing
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -39,38 +28,50 @@ agreement: disagree
 
 # Self-debiasing large language models: Zero-shot recognition and reduction of stereotypes
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Disagree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Ja | Ja |  |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Nein | X |
+| Diversitaet | Ja | Nein | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Parrish_2025_Self-debiasing_large_language_models_Zero-shot]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypen]]
-- [[Stereotypenreduktion]]
-- [[Stereotyping]]
-- [[Stereotypischen]]
-- [[Stereotypisierung]]
+- [[Social Bias in Language Models]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-
-## Full Text
-
----
-title: "Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes"
-authors: ["Isabel O. Gallegos", "Ryan Aponte", "Ryan A. Rossi", "Joe Barrow", "Md Mehrab Tanjim", "Tong Yu", "Hanieh Deilamsalehy", "Ruiyi Zhang", "Sungchul Kim", "Franck Dernoncourt", "Nedim Lipka", "Deonna Owens", "Jiuxiang Gu"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md
-confidence: 88
----
+## Wissensdokument
 
 # Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes
 

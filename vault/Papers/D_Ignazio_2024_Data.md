@@ -4,32 +4,22 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 ---
 
 # D_Ignazio_2024_Data
 
-## Key Concepts
+## Transformation Trail
 
-## Full Text
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
----
-title: "Feminismos diversos: el feminismo comunitario. Acercamiento a la construcción del pensamiento epistémico de las mujeres indígenas feministas comunitarias de Abya Yala"
-authors: ["Lorena Cabnal", "ACSUR-Las Segovias"]
-year: 2010
-type: report
-language: es
-processed: 2026-02-05
-source_file: D_Ignazio_2024_Data.md
-confidence: 75
----
+**Extrahierte Kategorien:** Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 5 extrahiert
+
+## Wissensdokument
 
 # Feminismos diversos: el feminismo comunitario. Acercamiento a la construcción del pensamiento epistémico de las mujeres indígenas feministas comunitarias de Abya Yala
 

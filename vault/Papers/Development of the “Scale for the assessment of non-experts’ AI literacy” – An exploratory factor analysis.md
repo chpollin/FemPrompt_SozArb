@@ -5,18 +5,12 @@ authors:
   - Alexandra Aster
   - Nicolas Haverkamp
   - Tobias Raupach
-year: 12/2023
+year: 2024
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2451958823000714
 doi: 10.1016/j.chbr.2023.100338
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2451958823000714"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -30,28 +24,35 @@ agreement: agree
 
 # Development of the “Scale for the assessment of non-experts’ AI literacy” – An exploratory factor analysis
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, KI_Sonstige
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 88 |
+| **Overall Confidence** | **91** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
 
 ## Key Concepts
 
-## Full Text
+- [[AI Literacy]]
+- [[Algorithmic Bias]]
+- [[Explainable AI]]
+- [[Machine Learning Literacy]]
 
----
-title: "Development of the 'Scale for the assessment of non-experts' AI literacy' - An exploratory factor analysis"
-authors: ["Matthias Carl Laupichler", "Alexandra Aster", "Nicolas Haverkamp", "Tobias Raupach"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of.md
-confidence: 91
----
+## Wissensdokument
 
 # Development of the 'Scale for the assessment of non-experts' AI literacy' - An exploratory factor analysis
 

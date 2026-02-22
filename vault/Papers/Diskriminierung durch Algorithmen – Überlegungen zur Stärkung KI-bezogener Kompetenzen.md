@@ -6,17 +6,10 @@ authors:
   - A. Mollen
 year: 2024
 type: bookSection
-url: https://www.gmk-net.de/wp-content/uploads/2024/12/gmk60_suna_hoffmann_mollen.pdf
+doi: 
+url: "https://www.gmk-net.de/wp-content/uploads/2024/12/gmk60_suna_hoffmann_mollen.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Inclusive Media
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -39,38 +32,34 @@ agreement: agree
 
 # Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen
 
-## Abstract
+## Transformation Trail
 
-Konzeptioneller Beitrag zu Ursachen und Formen algorithmischer Diskriminierung und zur Förderung kritischer KI-Kompetenzen. Plädiert für Aufklärung zu Datenbias, reflexive Nutzung und partizipative Trainings, um Benachteiligungen zu erkennen und digitale Teilhabe zu stärken.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[AI Literacy]]
+- [[Algorithmic Discrimination]]
+- [[Automation Bias]]
 
-### Mitigation Strategies
-- [[Inclusive Media]]
-
-## Full Text
-
----
-title: "Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen"
-authors: ["Laura Sūna", "Dagmar Hoffmann", "Anne Mollen"]
-year: 2024
-type: book
-language: de
-processed: 2026-02-05
-source_file: Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.md
-confidence: 94
----
+## Wissensdokument
 
 # Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen
 

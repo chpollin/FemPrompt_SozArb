@@ -6,16 +6,10 @@ authors:
   - S. Ahn
 year: 2023
 type: conferencePaper
-url: https://aclanthology.org/2023.emnlp-main.643/
+doi: 
+url: "https://aclanthology.org/2023.emnlp-main.643/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-mitigation_strategies: []
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -35,35 +29,28 @@ agreement: agree
 
 # Improving diversity of demographic representation in people entities in Large Language Models
 
-## Abstract
+## Transformation Trail
 
-Introduces the Collective-Critique and Self-Voting (CCSV) prompting method to systematically enhance demographic diversity in LLM outputs. The approach leverages LLMs' internal capacity for diversity reasoning and combines critique and self-voting mechanisms to iteratively improve output balance while maintaining model performance.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, KI_Sonstige, Diversitaet
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
 
-### Bias Types
-- [[Stereotypen]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
----
-title: "Improving Diversity of Demographic Representation in Large Language Models via Collective-Critiques and Self-Voting"
-authors: ["Preethi Lahoti", "Nicholas Blumm", "Xiao Ma", "Raghavendra Kotikalapudi", "Sahitya Potluri", "Qijun Tan", "Hansa Srinivasan", "Ben Packer", "Ahmad Beirami", "Alex Beutel", "Jilin Chen"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Lahoti_2023_Improving_diversity_of_demographic_representation.md
-confidence: 95
----
+## Wissensdokument
 
 # Improving Diversity of Demographic Representation in Large Language Models via Collective-Critiques and Self-Voting
 

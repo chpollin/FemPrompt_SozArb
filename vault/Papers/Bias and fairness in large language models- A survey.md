@@ -1,5 +1,5 @@
 ---
-title: Bias and fairness in large language models: A survey
+title: "Bias and fairness in large language models: A survey"
 authors:
   - I. O. Gallegos
   - R. A. Rossi
@@ -12,17 +12,10 @@ authors:
   - N. K. Ahmed
 year: 2024
 type: journalArticle
-url: https://doi.org/10.1162/coli_a_00524
 doi: 10.1162/coli_a_00524
+url: "https://doi.org/10.1162/coli_a_00524"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -33,32 +26,24 @@ llm_categories:
 
 # Bias and fairness in large language models: A survey
 
-## Abstract
+## Transformation Trail
 
-Comprehensive survey consolidating notions of social bias and fairness in NLP, defining distinct facets of harm and introducing desiderata to operationalize fairness for LLMs. Proposes three taxonomies: metrics for bias evaluation, datasets for bias evaluation, and techniques for bias mitigation classified by intervention timing.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Fairness
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotypen]]
+- [[Algorithmic Bias in Language Models]]
+- [[Gender Bias in NLP]]
+- [[Intersectional Fairness]]
 
-## Full Text
-
----
-title: "Bias and Fairness in Large Language Models: A Survey"
-authors: ["Isabel O. Gallegos", "Ryan A. Rossi", "Joe Barrow", "Md Mehrab Tanjim", "Sungchul Kim", "Franck Dernoncourt", "Tong Yu", "Ruiyi Zhang", "Nesreen K. Ahmed"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Gallegos_2024_Bias_and_fairness_in_large_language_models_A.md
-confidence: 75
----
+## Wissensdokument
 
 # Bias and Fairness in Large Language Models: A Survey
 

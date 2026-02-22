@@ -5,20 +5,12 @@ authors:
   - Zubair Ahmad
   - Murod Ismailov
   - Ismaila Temitayo Sanusi
-year: 06/2024
+year: 2024
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2666557324000120
 doi: 10.1016/j.caeo.2024.100171
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2666557324000120"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Inclusive Ai
-  - Inclusive And
 llm_decision: Exclude
 llm_confidence: 0.7
 llm_categories:
@@ -27,29 +19,35 @@ llm_categories:
 
 # What are artificial intelligence literacy and competency? A comprehensive framework to support them
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.7)
-**LLM Categories:** AI_Literacies
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.7)
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Inclusive Ai]]
-- [[Inclusive And]]
+- [[AI Competency Framework]]
+- [[AI Ethics Principles]]
+- [[AI Literacy]]
+- [[Machine Learning Literacy]]
+- [[Prompt Engineering]]
 
-## Full Text
-
----
-title: "What are artificial intelligence literacy and competency? A comprehensive framework to support them"
-authors: ["Thomas K.F. Chiu", "Zubair Ahmad", "Murod Ismailov", "Ismaila Temitayo Sanusi"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Chiu_2024_What_are_artificial_intelligence_literacy_and.md
-confidence: 89
----
+## Wissensdokument
 
 # What are artificial intelligence literacy and competency? A comprehensive framework to support them
 

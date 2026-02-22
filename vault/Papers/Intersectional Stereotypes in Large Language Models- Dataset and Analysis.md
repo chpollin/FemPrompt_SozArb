@@ -1,5 +1,5 @@
 ---
-title: Intersectional Stereotypes in Large Language Models: Dataset and Analysis
+title: "Intersectional Stereotypes in Large Language Models: Dataset and Analysis"
 authors:
   - W. Ma
   - B. Chiang
@@ -8,31 +8,10 @@ authors:
   - S. Vosoughi
 year: 2023
 type: conferencePaper
-url: https://aclanthology.org/2023.findings-emnlp.575.pdf
 doi: 10.18653/v1/2023.findings-emnlp.575
+url: "https://aclanthology.org/2023.findings-emnlp.575.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Discrimination
-  - Stereotypisierungsmustern
-  - Intersectional Stereotypes
-  - Stereotypenkategorien
-  - Intersectionality
-  - Stereotypisierungsgrad
-  - Stereotype
-  - Stereotypical
-  - Stereotyping
-  - Intersectional Demographic
-mitigation_strategies:
-  - Debiasing
-  - Intersectional Demographic
-  - Intersectional Stereotypes
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -55,51 +34,32 @@ agreement: agree
 
 # Intersectional Stereotypes in Large Language Models: Dataset and Analysis
 
-## Abstract
+## Transformation Trail
 
-This EMNLP paper introduces a dataset for studying intersectional stereotypes and applies it to three LLMs. Results reveal emergent stereotypes not predictable from single-attribute analysis. Prompt engineering reduces but does not eliminate such patterns, highlighting persistent biases in generated narratives.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Intersectional Demographic]]
-- [[Intersectional Stereotypes]]
-- [[Intersectionality]]
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotypenkategorien]]
-- [[Stereotypical]]
-- [[Stereotyping]]
-- [[Stereotypisierungsgrad]]
-- [[Stereotypisierungsmustern]]
+- [[Algorithmic Fairness Evaluation]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Intersectional Demographic]]
-- [[Intersectional Stereotypes]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Intersectional Stereotypes in Large Language Models: Dataset and Analysis"
-authors: ["Weicheng Ma", "Brian Chiang", "Tong Wu", "Lili Wang", "Soroush Vosoughi"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Ma_2023_Intersectional_Stereotypes_in_Large_Language.md
-confidence: 95
----
+## Wissensdokument
 
 # Intersectional Stereotypes in Large Language Models: Dataset and Analysis
 

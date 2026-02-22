@@ -6,17 +6,12 @@ authors:
   - G. Semien
   - R. Brown
   - N. C. Jacobson
-year: March 27, 2025
+year: 2024
 type: journalArticle
-url: https://ai.nejm.org/doi/full/10.1056/AIoa2400802
+doi: 
+url: "https://ai.nejm.org/doi/full/10.1056/AIoa2400802"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.95
 llm_categories:
@@ -25,29 +20,27 @@ llm_categories:
 
 # Clinical trial of an LLM-based conversational AI psychotherapy
 
-## Abstract
+## Transformation Trail
 
-Groundbreaking study representing first randomized controlled trial of generative AI-powered therapy chatbot, Therabot. Trial included 106 participants across United States diagnosed with major depressive disorder, generalized anxiety disorder, or eating disorders. Participants interacted with Therabot via smartphone app over 4-8 weeks. Results showed clinically significant symptom improvements: 51% reduction in depression symptoms, 31% reduction in anxiety symptoms, and 19% reduction in eating disorder concerns, with outcomes comparable to traditional outpatient therapy. Participants reported therapeutic alliance levels comparable to human therapists and engaged average of 6 hours (equivalent to 8 therapy sessions).
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.95)
-**LLM Categories:** Generative_KI
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment"
-authors: ["Michael V. Heinz", "Daniel M. Mackin", "Brianna M. Trudeau", "Sukanya Bhattacharya", "Yinzhou Wang", "Haley A. Banta", "Abi D. Jewett", "Abigail J. Salzhauer", "Tess Z. Griffin", "Nicholas C. Jacobson"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md
-confidence: 88
----
+**LLM:** Exclude (Confidence: 0.95)
+
+## Wissensdokument
 
 # Randomized Trial of a Generative AI Chatbot for Mental Health Treatment
 

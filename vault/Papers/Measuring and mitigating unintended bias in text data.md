@@ -8,17 +8,10 @@ authors:
   - L. Vasserman
 year: 2018
 type: conferencePaper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Disparity
-  - Unfairness
-mitigation_strategies:
-  - Debiasing
 llm_decision: Include
 llm_confidence: 0.75
 llm_categories:
@@ -29,32 +22,27 @@ llm_categories:
 
 # Measuring and mitigating unintended bias in text data
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Include (Confidence: 0.75)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Key Concepts
+**Extrahierte Kategorien:** KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-### Bias Types
-- [[Disparity]]
-- [[Unfairness]]
+### Stufe 3: Verifikation (LLM)
 
-### Mitigation Strategies
-- [[Debiasing]]
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
 
-## Full Text
+### Stufe 4: Assessment
 
----
-title: "Measuring and Mitigating Unintended Bias in Text Classification"
-authors: ["Lucas Dixon", "John Li", "Jeffrey Sorensen", "Nithum Thain", "Lucy Vasserman"]
-year: 2018
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text.md
-confidence: 94
----
+**LLM:** Include (Confidence: 0.75)
+
+## Wissensdokument
 
 # Measuring and Mitigating Unintended Bias in Text Classification
 

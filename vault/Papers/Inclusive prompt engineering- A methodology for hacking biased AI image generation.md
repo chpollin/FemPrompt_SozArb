@@ -1,27 +1,14 @@
 ---
-title: Inclusive prompt engineering: A methodology for hacking biased AI image generation
+title: "Inclusive prompt engineering: A methodology for hacking biased AI image generation"
 authors:
   - R. Skilton
   - A. Cardinal
 year: 2024
 type: conferencePaper
-url: https://www.researchgate.net/publication/385325948_Inclusive_Prompt_Engineering_A_Methodology_for_Hacking_Biased_AI_Image_Generation
 doi: 10.1145/3641237.3691655
+url: "https://www.researchgate.net/publication/385325948_Inclusive_Prompt_Engineering_A_Methodology_for_Hacking_Biased_AI_Image_Generation"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Stereotypen
-  - Stereotype
-  - Stereotyping
-mitigation_strategies:
-  - Debiasing
-  - Inclusive Result
-  - Prompt Engineering
-  - Inclusive Prompt
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -44,43 +31,33 @@ agreement: agree
 
 # Inclusive prompt engineering: A methodology for hacking biased AI image generation
 
-## Abstract
+## Transformation Trail
 
-This conference paper introduces "inclusive prompt engineering" as a strategy to probe and mitigate biases in generative AI image systems. Authors developed methodology to systematically modify prompts and provide tools for generating more diverse outputs. User studies revealed that when participants encountered stereotypical outputs, they tried adding negative qualifiers but models often failed to obey these negations. Findings underscore need for improved prompt interfaces that actively promote inclusive representation.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotyping]]
+- [[Inclusive Prompt Engineering]]
+- [[Iterative Prompt Refinement]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Inclusive Prompt]]
-- [[Inclusive Result]]
-- [[Prompt Engineering]]
-
-## Full Text
-
----
-title: "Inclusive Prompt Engineering: A Methodology for Hacking Biased AI Image Generation"
-authors: ["Rachel Skilton", "Alison Cardinal"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Skilton_2024_Inclusive_prompt_engineering_A_methodology_for.md
-confidence: 93
----
+## Wissensdokument
 
 # Inclusive Prompt Engineering: A Methodology for Hacking Biased AI Image Generation
 

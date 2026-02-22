@@ -1,28 +1,15 @@
 ---
-title: Prompting fairness: Learning prompts for debiasing large language models
+title: "Prompting fairness: Learning prompts for debiasing large language models"
 authors:
   - A.-V. Chisca
   - A.-C. Rad
   - C. Lemnaru
 year: 2024
 type: conferencePaper
-url: https://aclanthology.org/2024.ltedi-1.6/
+doi: 
+url: "https://aclanthology.org/2024.ltedi-1.6/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-  - Stereotyping
-  - Stereotype
-  - Stereotypical
-  - Stereotypen
-mitigation_strategies:
-  - Debiasing
-  - Fine-tuning
-  - Counterfactual Data
 llm_decision: Exclude
 llm_confidence: 0.92
 llm_categories:
@@ -34,41 +21,23 @@ llm_categories:
 
 # Prompting fairness: Learning prompts for debiasing large language models
 
-## Abstract
+## Transformation Trail
 
-Introduces novel prompt-tuning method for reducing biases in encoder models like BERT and RoBERTa through training small sets of additional reusable token embeddings. Demonstrates state-of-the-art performance while maintaining minimal impact on language modeling capabilities through parameter-efficient approach applicable across different models and tasks.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.92)
-**LLM Categories:** Prompting, KI_Sonstige, Bias_Ungleichheit, Fairness
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
-- [[Stereotype]]
-- [[Stereotypen]]
-- [[Stereotypical]]
-- [[Stereotyping]]
+- [[Algorithmic Bias in Language Models]]
+- [[Gender Bias in NLP]]
 
-### Mitigation Strategies
-- [[Counterfactual Data]]
-- [[Debiasing]]
-- [[Fine-tuning]]
-
-## Full Text
-
----
-title: "Prompting Fairness: Learning Prompts for Debiasing Large Language Models"
-authors: ["Andrei-Victor Chisca", "Camelia Lemnaru", "Andrei-Cristian Rad"]
-year: 2024
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Chisca_2024_Prompting_fairness_Learning_prompts_for_debiasing.md
-confidence: 75
----
+## Wissensdokument
 
 # Prompting Fairness: Learning Prompts for Debiasing Large Language Models
 

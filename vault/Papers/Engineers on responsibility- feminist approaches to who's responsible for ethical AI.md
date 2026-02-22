@@ -1,5 +1,5 @@
 ---
-title: Engineers on responsibility: feminist approaches to who's responsible for ethical AI
+title: "Engineers on responsibility: feminist approaches to who's responsible for ethical AI"
 authors:
   - J. Browne
   - E. Drage
@@ -7,15 +7,9 @@ authors:
 year: 2024
 type: journalArticle
 doi: 10.1007/s10676-023-09739-1
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -25,32 +19,27 @@ llm_categories:
 
 # Engineers on responsibility: feminist approaches to who's responsible for ethical AI
 
-## Abstract
+## Transformation Trail
 
-Through interviews with AI practitioners interpreted via feminist political thought, reimagines responsibility in AI development beyond individualized approaches. Critiques current AI responsibility frameworks focused on individual competency and technical solutions, proposing instead "responsibility as the product of work cultures that enable tech workers to be responsive and answerable for their products." Moves beyond "individual competency approaches" toward understanding responsibility as embedded in structural power relations and organizational cultures.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Feministisch
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
 
-### Bias Types
-- [[Discrimination]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Exclude (Confidence: 0.85)
 
----
-title: "Engineers on responsibility: feminist approaches to who's responsible for ethical AI"
-authors: ["Eleanor Drage", "Kerry McInerney", "Jude Browne"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Browne_2024_Engineers_on_responsibility_feminist_approaches.md
-confidence: 95
----
+## Wissensdokument
 
 # Engineers on responsibility: feminist approaches to who's responsible for ethical AI
 

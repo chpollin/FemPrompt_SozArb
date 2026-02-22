@@ -1,68 +1,52 @@
 ---
-title: Feminist reflections for the development of artificial intelligence
+title: Feminist reflections for the development of Artificial Intelligence
 authors:
-  - J. Guerra
-  - J. Venturini
-  - A. Castrillón
-  - M.J. Porras Sepúlveda
+  - Unknown Author
 year: 2023
 type: report
-url: https://www.derechosdigitales.org/fair-2023-en/
+doi: 
+url: "https://www.derechosdigitales.org/fair-2023-en/"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectionality
-mitigation_strategies:
-  - Intersectionality
-  - Feminist Frameworks
 llm_decision: Include
-llm_confidence: 0.95
+llm_confidence: 0.92
 llm_categories:
-  - AI_Literacies
   - KI_Sonstige
   - Bias_Ungleichheit
   - Gender
   - Diversitaet
   - Feministisch
-  - Fairness
 ---
 
-# Feminist reflections for the development of artificial intelligence
+# Feminist reflections for the development of Artificial Intelligence
 
-## Abstract
+## Transformation Trail
 
-Comprehensive synthesis of Latin American women's conversations developing AI under feminist frameworks establishes methodological commitments for co-design with communities, gender perspective integration in data science projects, and strategies for women crowd workers. Key feminist AI principles include building diverse intersectional teams, establishing community collaboration agreements, choosing technology based on context rather than consumption, and protecting autonomy through strong anonymity criteria.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectionality]]
+- [[Algorithmic Bias]]
+- [[Design Justice]]
+- [[Intersectional Fairness]]
 
-### Mitigation Strategies
-- [[Feminist Frameworks]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Towards a feminist framework for AI development: from principles to practice"
-authors: ["Juliana Guerra"]
-year: 2023
-type: report
-language: en
-processed: 2026-02-05
-source_file: Guerra_2023_Feminist_reflections_for_the_development_of.md
-confidence: 89
----
+## Wissensdokument
 
 # Towards a feminist framework for AI development: from principles to practice
 

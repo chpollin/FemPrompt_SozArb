@@ -1,5 +1,5 @@
 ---
-title: Conceptualizing AI literacy: An exploratory review
+title: "Conceptualizing AI literacy: An exploratory review"
 authors:
   - Davy Tsz Kit Ng
   - Jac Ka Lok Leung
@@ -7,17 +7,10 @@ authors:
   - Maggie Shen Qiao
 year: 2021
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2666920X21000357
 doi: 10.1016/j.caeai.2021.100041
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2666920X21000357"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -35,31 +28,34 @@ agreement: agree
 
 # Conceptualizing AI literacy: An exploratory review
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
+- [[AI Literacy]]
+- [[Algorithmic Fairness and Transparency]]
+- [[Ethical AI in Education]]
 
-## Full Text
-
----
-title: "Conceptualizing AI literacy: An exploratory review"
-authors: ["Davy Tsz Kit Ng", "Jac Ka Lok Leung", "Samuel Kai Wah Chu", "Maggie Shen Qiao"]
-year: 2021
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review.md
-confidence: 88
----
+## Wissensdokument
 
 # Conceptualizing AI literacy: An exploratory review
 

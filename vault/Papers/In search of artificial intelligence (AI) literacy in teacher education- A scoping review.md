@@ -1,5 +1,5 @@
 ---
-title: In search of artificial intelligence (AI) literacy in teacher education: A scoping review
+title: "In search of artificial intelligence (AI) literacy in teacher education: A scoping review"
 authors:
   - Katarina Sperling
   - Carl-Johan Stenberg
@@ -7,19 +7,12 @@ authors:
   - Anna Åkerfeldt
   - Fredrik Heintz
   - Linnéa Stenliden
-year: 06/2024
+year: 2024
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S2666557324000107
 doi: 10.1016/j.caeo.2024.100169
+url: "https://linkinghub.elsevier.com/retrieve/pii/S2666557324000107"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.92
 llm_categories:
@@ -35,31 +28,34 @@ agreement: agree
 
 # In search of artificial intelligence (AI) literacy in teacher education: A scoping review
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.92)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.92)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Bias Types
-- [[Algorithmic Bias]]
+- [[AI Literacy]]
+- [[Algorithmic Fairness]]
+- [[Ethical AI in Education]]
 
-## Full Text
-
----
-title: "In search of artificial intelligence (AI) literacy in teacher education: A scoping review"
-authors: ["Katarina Sperling", "Carl-Johan Stenberg", "Cormac McGrath", "Anna Åkerfeldt", "Fredrik Heintz", "Linnea Stenliden"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Sperling_2024_In_search_of_artificial_intelligence_(AI).md
-confidence: 89
----
+## Wissensdokument
 
 # In search of artificial intelligence (AI) literacy in teacher education: A scoping review
 

@@ -7,16 +7,10 @@ authors:
   - E. Black
 year: 2025
 type: report
-url: https://arxiv.org/html/2505.15229v1
+doi: 
+url: "https://arxiv.org/html/2505.15229v1"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Equitable Manner
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -32,34 +26,46 @@ agreement: disagree
 
 # Multilingual Prompting for Improving LLM Generation Diversity
 
-## Abstract
+## Transformation Trail
 
-This study introduces multilingual prompting as a strategy to enhance narrative diversity in LLM outputs. By using prompts with diverse languages and cultural cues, models produced outputs with improved demographic and opinion diversity. Compared to temperature-based and persona prompting, multilingual prompting was more effective and reduced cultural hallucinations.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **94** |
 
-### Mitigation Strategies
-- [[Equitable Manner]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.85)
+**Human:** Exclude
 
----
-title: "Multilingual Prompting for Improving LLM Generation Diversity"
-authors: ["Qihan Wang", "Shidong Pan", "Tal Linzen", "Emily Black"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Wang_2025_Multilingual_Prompting_for_Improving_LLM.md
-confidence: 94
----
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Ja | X |
+| Prompting | Nein | Ja | X |
+| KI_Sonstige | Nein | Nein |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Nein |  |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Wang_2025_Multilingual_Prompting_for_Improving_LLM]] fuer detaillierte Analyse
+
+
+## Wissensdokument
 
 # Multilingual Prompting for Improving LLM Generation Diversity
 

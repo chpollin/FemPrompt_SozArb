@@ -1,23 +1,13 @@
 ---
-title: Reflexive prompt engineering: A framework for responsible prompt engineering and AI interaction design
+title: "Reflexive prompt engineering: A framework for responsible prompt engineering and AI interaction design"
 authors:
   - C. Djeffal
 year: 2025
 type: conferencePaper
 doi: 10.1145/3715275.3732118
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Bias Mitigation
-  - Prompt Design
-  - Inclusive Design
-  - Prompt Engineering
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -31,38 +21,33 @@ llm_categories:
 
 # Reflexive prompt engineering: A framework for responsible prompt engineering and AI interaction design
 
-## Abstract
+## Transformation Trail
 
-This paper proposes "Reflexive Prompt Engineering" as a comprehensive framework to embed ethical and inclusive principles into prompt crafting for generative AI. Framework consists of five components: prompt design, system selection, system configuration, performance evaluation, and prompt management, each considered from social responsibility perspective. Positions responsible prompt engineering as essential component of AI literacy, bridging gap between AI development and deployment by aligning AI behavior with human rights and diversity values.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 87 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[AI Literacy]]
+- [[Algorithmic Fairness Evaluation]]
+- [[Chain-of-Thought Reasoning]]
 
-### Mitigation Strategies
-- [[Bias Mitigation]]
-- [[Inclusive Design]]
-- [[Prompt Design]]
-- [[Prompt Engineering]]
-
-## Full Text
-
----
-title: "Reflexive Prompt Engineering: A Framework for Responsible Prompt Engineering and AI Interaction Design"
-authors: ["Christian Djeffal"]
-year: 2025
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Djeffal_2025_Reflexive_prompt_engineering_A_framework_for.md
-confidence: 89
----
+## Wissensdokument
 
 # Reflexive Prompt Engineering: A Framework for Responsible Prompt Engineering and AI Interaction Design
 

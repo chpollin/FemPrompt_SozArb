@@ -1,23 +1,15 @@
 ---
-title: AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?
+title: "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?"
 authors:
   - E. Latif
   - X. Zhai
   - L. Liu
 year: 2024
 type: journalArticle
-url: https://arxiv.org/html/2312.10833v4
+doi: 
+url: "https://arxiv.org/html/2312.10833v4"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Debiasing
-  - Fine-tuning
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -36,39 +28,50 @@ agreement: disagree
 
 # AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?
 
-## Abstract
+## Transformation Trail
 
-Empirical study examining gender bias in large language models through analysis of over 6000 evaluated student responses from 70 male and 70 female participants. Research uses fine-tuned BERT models and GPT-3.5 to evaluate various training data configurations: gender-specific versus mixed datasets. Three evaluation metrics applied: Scoring Accuracy Difference for bias assessment, Mean Score Gaps (MSG) for gender disparities, and Equalized Odds (EO) for fairness measurement. Results show mixed-gender trained models produce significantly better results than gender-specific models with reduced MSG and fairer predictions.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Bias_Ungleichheit, Gender
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
+**Human:** Include
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Ja | Ja |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Nein | Nein |  |
+| Feministisch | Nein | Nein |  |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[Gender Bias in AI Systems]]
 
-### Mitigation Strategies
-- [[Debiasing]]
-- [[Fine-tuning]]
-
-## Full Text
-
----
-title: "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?"
-authors: ["Ehsan Latif", "Xiaoming Zhai", "Lei Liu"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does.md
-confidence: 89
----
+## Wissensdokument
 
 # AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?
 

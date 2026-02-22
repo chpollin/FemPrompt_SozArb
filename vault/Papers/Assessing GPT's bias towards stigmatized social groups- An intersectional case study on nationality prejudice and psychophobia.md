@@ -1,30 +1,15 @@
 ---
-title: Assessing GPT's bias towards stigmatized social groups: An intersectional case study on nationality prejudice and psychophobia
+title: "Assessing GPT's bias towards stigmatized social groups: An intersectional case study on nationality prejudice and psychophobia"
 authors:
   - H. Jiang
   - B. Kim
   - Z. C. Lipton
 year: 2022
 type: report
-url: https://arxiv.org/pdf/2505.17045
+doi: 
+url: "https://arxiv.org/pdf/2505.17045"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Nature
-  - Prejudice
-  - Intersectionality
-  - Stereotypisierung
-  - Stereotyping
-  - Intersectional Case
-mitigation_strategies:
-  - Equitable Treatment
-  - Intersectional Nature
-  - Intersectional Case
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.85
 llm_categories:
@@ -37,39 +22,31 @@ llm_categories:
 
 # Assessing GPT's bias towards stigmatized social groups: An intersectional case study on nationality prejudice and psychophobia
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Include (Confidence: 0.85)
-**LLM Categories:** Generative_KI, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Case]]
-- [[Intersectional Nature]]
-- [[Intersectionality]]
-- [[Prejudice]]
-- [[Stereotyping]]
-- [[Stereotypisierung]]
+- [[Intersectional Algorithmic Bias]]
 
-### Mitigation Strategies
-- [[Equitable Treatment]]
-- [[Intersectional Case]]
-- [[Intersectional Nature]]
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Assessing GPT's Bias Towards Stigmatized Social Groups: An Intersectional Case Study on Nationality Prejudice and Psychophobia"
-authors: ["Kashif, Afifah", "Patel, Heer"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social.md
-confidence: 89
----
+## Wissensdokument
 
 # Assessing GPT's Bias Towards Stigmatized Social Groups: An Intersectional Case Study on Nationality Prejudice and Psychophobia
 

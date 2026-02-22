@@ -1,5 +1,5 @@
 ---
-title: Assessing trustworthy AI: Technical and legal perspectives of fairness in AI
+title: "Assessing trustworthy AI: Technical and legal perspectives of fairness in AI"
 authors:
   - M. Kattnig
   - A. Angerschmid
@@ -7,18 +7,10 @@ authors:
   - R. Kern
 year: 2024
 type: journalArticle
-url: https://graz.elsevierpure.com/ws/portalfiles/portal/89954869/1-s2.0-S0267364924001195-main.pdf
 doi: 10.1016/j.clsr.2024.106053
+url: "https://graz.elsevierpure.com/ws/portalfiles/portal/89954869/1-s2.0-S0267364924001195-main.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Discrimination
-mitigation_strategies:
-  - Bias Mitigation
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -38,38 +30,35 @@ agreement: agree
 
 # Assessing trustworthy AI: Technical and legal perspectives of fairness in AI
 
-## Abstract
+## Transformation Trail
 
-Kattnig et al. examine the disconnect between existing AI fairness techniques and the requirements of non-discrimination law, highlighting that many algorithmic bias mitigation methods do not meet legal standards for equality. Focusing on the EU context (with particular attention to the forthcoming AI Act and established non-discrimination directives), the authors review state-of-the-art bias mitigation approaches – from pre-processing data fixes to in-processing algorithms – and evaluate them against legal concepts of fairness and equality. They discuss how ambiguous legal frameworks and the difficulty of defining “fairness” pose challenges: for instance, fairness has multiple interpretations (individual vs. group fairness, formal vs. substantive equality) and is understood differently across disciplines. The paper argues for an interdisciplinary legal methodology to complement technical solutions. In practice, this means moving beyond purely quantitative parity metrics and ensuring AI systems comply with human rights and equality principles (e.g. ensuring de facto non-discrimination for all data subjects). By contrasting algorithms with legal norms, the study underlines that trustworthy AI requires more than technical robustness – it demands alignment with justice and accountability frameworks.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Discrimination]]
+- [[AI Literacy]]
+- [[Algorithmic Bias]]
+- [[Algorithmic Fairness]]
+- [[Automated Decision-Making Systems]]
 
-### Mitigation Strategies
-- [[Bias Mitigation]]
-
-## Full Text
-
----
-title: "Assessing trustworthy AI: Technical and legal perspectives of fairness in AI"
-authors: ["Markus Kattnig", "Alessa Angerschmid", "Thomas Reichel", "Roman Kern"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal.md
-confidence: 89
----
+## Wissensdokument
 
 # Assessing trustworthy AI: Technical and legal perspectives of fairness in AI
 

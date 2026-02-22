@@ -4,18 +4,10 @@ authors:
   - P. Ricaurte
 year: 2024
 type: report
-url: https://www.unesco.org/en/articles/how-can-feminism-inform-ai-governance-practice
+doi: 
+url: "https://www.unesco.org/en/articles/how-can-feminism-inform-ai-governance-practice"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Feminist AI
-  - Equitable And
-  - Inclusive Ai
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -32,36 +24,46 @@ agreement: disagree
 
 # How can feminism inform AI governance in practice?
 
-## Abstract
+## Transformation Trail
 
-Diese UNESCO-Publikation definiert feministische KI-Governance als einen aufkommenden Bereich von Politik, Forschung und Entwicklung, der darauf abzielt, KI-Systeme gerecht, gleichberechtigt und inklusiv zu gestalten. Feministische KI-Governance zielt darauf ab, Machtungleichgewichte im KI-Ökosystem zu adressieren und strukturelle Ungleichheiten, koloniale Vermächtnisse und multidimensionale Schäden zu berücksichtigen, die überproportional Gemeinschaften der globalen Mehrheit betreffen. Der Ansatz versteht Algorithmen als kontextuell und durch soziale Beziehungen geformt, nicht als rein mathematische Entitäten.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Exclude
-**Agreement:** Disagree
+### Stufe 3: Verifikation (LLM)
 
-## Key Concepts
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **94** |
 
-### Mitigation Strategies
-- [[Equitable And]]
-- [[Feminist AI]]
-- [[Inclusive Ai]]
+### Stufe 4: Assessment
 
-## Full Text
+**LLM:** Include (Confidence: 0.95)
+**Human:** Exclude
 
----
-title: "How can feminism inform AI governance in practice?"
-authors: ["Paola Ricaurte"]
-year: 2024
-type: report
-language: en
-processed: 2026-02-05
-source_file: Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice.md
-confidence: 94
----
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Nein | Ja | X |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Nein | Ja | X |
+| Gender | Nein | Ja | X |
+| Diversitaet | Nein | Ja | X |
+| Feministisch | Nein | Ja | X |
+| Fairness | Nein | Ja | X |
+
+> Siehe [[Divergenz Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice]] fuer detaillierte Analyse
+
+
+## Wissensdokument
 
 # How can feminism inform AI governance in practice?
 

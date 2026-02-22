@@ -4,40 +4,38 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-mitigation_strategies:
-  - Intersectional Accuracy
 ---
 
 # Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for
 
+## Transformation Trail
+
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 88 |
+| **Overall Confidence** | **89** |
+
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
+- [[AI Literacy]]
+- [[Computational Thinking]]
+- [[Critical AI Literacy]]
+- [[Gender Bias in AI Systems]]
 
-### Mitigation Strategies
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Why and What to Teach: AI Curriculum for Elementary School"
-authors: ["Seonghun Kim", "Yeonju Jang", "Woojin Kim", "Seongyune Choi", "Heeseok Jung", "Soohwan Kim", "Hyeoncheol Kim"]
-year: 2021
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for.md
-confidence: 89
----
+## Wissensdokument
 
 # Why and What to Teach: AI Curriculum for Elementary School
 

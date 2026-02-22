@@ -7,18 +7,10 @@ authors:
   - K. R. Varshney
 year: 2023
 type: conferencePaper
-url: https://doi.org/10.1145/3593013.3593986
 doi: 10.1145/3593013.3593986
+url: "https://doi.org/10.1145/3593013.3593986"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectionality
-mitigation_strategies:
-  - Intersectionality
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -41,38 +33,41 @@ agreement: disagree
 
 # Trustworthy AI and the Logics of Intersectional Resistance
 
-## Abstract
+## Transformation Trail
 
-Critically examines mainstream "Trustworthy AI" frameworks from an intersectional feminist perspective, arguing that traditional AI ethics often privilege dominant groups and fail marginalized communities. Suggests reframing trustworthy AI principles to incorporate stewardship, care, humility, and empowerment, addressing intersectional injustices through power-sharing and structural change.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Exclude
-**Human Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Agreement:** Disagree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Exclude
+
+**Kategorie-Vergleich (bei Divergenz):**
+
+| Kategorie | Human | LLM | Divergent |
+|-----------|-------|-----|----------|
+| AI_Literacies | Nein | Nein |  |
+| Generative_KI | Nein | Nein |  |
+| Prompting | Nein | Nein |  |
+| KI_Sonstige | Ja | Ja |  |
+| Soziale_Arbeit | Nein | Nein |  |
+| Bias_Ungleichheit | Ja | Ja |  |
+| Gender | Ja | Ja |  |
+| Diversitaet | Ja | Ja |  |
+| Feministisch | Ja | Ja |  |
+| Fairness | Ja | Ja |  |
+
+> Siehe [[Divergenz Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional]] fuer detaillierte Analyse
+
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectionality]]
+- [[Trustworthy AI]]
 
-### Mitigation Strategies
-- [[Intersectionality]]
-
-## Full Text
-
----
-title: "Trustworthy AI and the Logics of Intersectional Resistance"
-authors: ["Bran Knowles", "Jasmine Fledderjohann", "John T. Richards", "Kush R. Varshney"]
-year: 2023
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Knowles_2023_Trustworthy_AI_and_the_Logics_of_Intersectional.md
-confidence: 75
----
+## Wissensdokument
 
 # Trustworthy AI and the Logics of Intersectional Resistance
 

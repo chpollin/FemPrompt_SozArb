@@ -4,20 +4,10 @@ authors:
   - L. McCrory
 year: 2024
 type: report
-url: https://www.cigionline.org/documents/3375/DPH-paper-Laine_McCrory.pdf
+doi: 
+url: "https://www.cigionline.org/documents/3375/DPH-paper-Laine_McCrory.pdf"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectional Accuracy
-  - Intersectionality
-mitigation_strategies:
-  - Equitable Need
-  - Feminist AI
-  - Intersectional Accuracy
 llm_decision: Include
 llm_confidence: 0.95
 llm_categories:
@@ -40,112 +30,100 @@ agreement: agree
 
 # Avoiding catastrophe through intersectionality in global AI governance
 
-## Abstract
+## Transformation Trail
 
-In this working paper, McCrory argues that prevailing global AI governance efforts (especially those focused on “AI safety” and existential risks) lack an adequate intersectional, feminist perspective, which is needed to avert not just hypothetical future catastrophes but ongoing injustices. The paper analyzes seven prominent international AI policy initiatives (e.g. global AI accords and principles) against criteria derived from feminist theory, such as intersectionality, context, and power dynamics. McCrory finds that these high-level policies often remain techno-centric: they invoke abstract risks or neutrality, but fail to engage with how AI harms are unevenly distributed along lines of gender, race, and class. For example, current AI “safety” pledges seldom consider the lived experiences of marginalized communities or the way existing structural inequalities are mirrored in AI systems. The author contends that treating AI governance as a purely technical, top-down process is misguided; instead, governance should include meaningful participation from under-represented groups and incorporate feminist insights about power and oppression. The paper’s recommendations call for centering intersectionality in AI policy: explicitly addressing how AI-related risks and harms intersect with social identity and historical injustices, and ensuring that any frameworks for AI risk management or ethics actively involve those who have been marginalized by past technological developments.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Feministisch, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.95)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness
-**Human Decision:** Include
-**Human Categories:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Feministisch
-**Agreement:** Agree
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **93** |
+
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.95)
+**Human:** Include
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectional Accuracy]]
-- [[Intersectionality]]
+- [[Algorithmic Discrimination]]
+- [[Feminist Policy Analysis Framework]]
 
-### Mitigation Strategies
-- [[Equitable Need]]
-- [[Feminist AI]]
-- [[Intersectional Accuracy]]
-
-## Full Text
-
----
-title: "Avoiding Catastrophe Through Intersectionality in Global AI Governance"
-authors: ["Laine McCrory"]
-year: 2024
-type: workingPaper
-language: en
-processed: 2026-02-05
-source_file: McCrory_2024_Avoiding_catastrophe_through_intersectionality_in.md
-confidence: 95
----
+## Wissensdokument
 
 # Avoiding Catastrophe Through Intersectionality in Global AI Governance
 
 ## Kernbefund
 
-Keine der sieben analysierten KI-Sicherheits-Initiativen erfüllt die intersektionalen und feministischen Standards des Frameworks; die KI-Sicherheitsbewegung versäumt es, aktuelle Schäden für marginalisierte Gruppen zu adressieren und diese mit zukünftigen existenziellen Risiken zu verbinden.
+Keine der sieben analysierten globalen AI-Sicherheitsinitiativen erfüllt die Ziele eines intersektionalen feministischen Ansatzes; sie vernachlässigen gegenwärtige Schäden marginalisierter Gruppen und mangelt es an aussagekräftiger Partizipation betroffener Gemeinschaften.
 
 ## Forschungsfrage
 
-Wie können intersektionale und feministische Perspektiven in die globale KI-Sicherheitspolitik integriert werden, um existenzielle Risiken für marginalisierte Gruppen angemessen zu adressieren?
+Wie können intersektionale und feministische Perspektiven in die globale AI-Sicherheitsgovernance integriert werden, um gegenwärtige Schäden marginalisierter Gruppen mit zukünftigen existenziellen Risiken zu verbinden?
 
 ## Methodik
 
-Theoretisch-analytisch: Entwicklung eines feministischen KI-Policy-Analyse-Frameworks mit fünf Themenbereichen (Intersektionalität, Kontext, Neutralität, Kontrolle, Macht) zur Bewertung von sieben internationalen KI-Sicherheits-Initiativen mittels qualitativ-analytischer Kodierung.
-**Datenbasis:** Dokumentenanalyse von 7 internationalen KI-Sicherheits-Governance-Initiativen (UN-Resolutionen, OECD-Prinzipien, Asilomar Principles, Bletchley Declaration, Seoul Declaration, Frontier AI Safety Commitments, OECD Safe AI Principles)
+Theoretisch/Analyse: Feminist Policy Analysis Framework angewendet auf 7 internationale AI-Sicherheitsinitiativen mittels eines entwickelten 4-Ziel-Bewertungssystems (Intersectionality, Context, Neutrality, Power)
+**Datenbasis:** Dokumentenanalyse von 7 internationalen AI-Governance-Initiativen (UN-Resolution, OECD-Prinzipien, Asilomar Principles, Bletchley Declaration, Seoul Declaration, Frontier AI Safety Commitments, weitere Industrie-Commitments)
 
 ## Hauptargumente
 
-- Die KI-Sicherheitsbewegung konzentriert sich zu stark auf zukünftige existenzielle Risiken (AGI) und ignoriert dabei die bereits existierenden, disproportionalen Schäden von KI-Systemen für marginalisierte Gruppen (Frauen, Racial-ized People, wirtschaftlich benachteiligte Gruppen), die als ebenso existenziell wahrgenommen werden.
-- Aktuelle KI-Sicherheits-Governance-Initiativen basieren auf universalistischen Annahmen von Risiko und Benefit, die die heterogenen Erfahrungen marginalisierter Gruppen ignorieren und deren Partizipation in Policy-Entwicklungsprozessen ausschließen, wodurch reproduzieren sie bestehende Machtstrukturen.
-- Ein feministisches KI-Policy-Framework, das auf Intersektionalität, Kontextbewusstsein, Kritik an Neutralität, und Machtverschiebung basiert, kann als Audit-Tool dienen, um KI-Sicherheitspolitiken auf Accountability und meaningful participation zu überprüfen und existenzielle Risiken auf unterschiedlichen sozialen Ebenen anzuerkennen.
+- Die AI-Safety-Bewegung fokussiert auf zukünftige existenzielle Risiken durch AGI, während sie gegenwärtige, bereits auftretende existenzielle Schäden für marginalisierte Gruppen (durch diskriminierende Algorithmen, Datenextraktion, Umweltschäden) ignoriert und damit Verantwortung für aktuelle Harms abwälzt.
+- Ein intersektionaler feministischer Policy-Rahmen muss vier zentrale Ziele verfolgen: Intersectionality promoten, diverse Kontexte berücksichtigen, falsche Neutralitätsannahmen bekämpfen und Macht für marginalisierte Gruppen erhöhen – ein Ansatz, den bestehende Governance-Initiativen systematisch verfehlen.
+- Accountability und Partizipation sind zentral: Zukünftige AI-Sicherheitspolitik muss von betroffenen marginalierten Communities mitgestaltet werden, kompound identities systematisch adressieren und strukturelle Diskriminierung als Fundament AGI-geleiteter Systeme bekämpfen.
 
 ## Kategorie-Evidenz
 
 ### Evidenz 1
 
-Paper diskutiert 'AI knowledge' und kritisiert OECD-Definition, die 'lived experiences and diverse knowledge' nicht einbezieht: 'This definition fails to incorporate lived experiences and diverse knowledge into the development of AI safety plans.'
+Die OECD definiert 'AI knowledge' als 'skills and resources required to understand and participate in the AI system lifecycle' – McCrory kritisiert, dass gelebte Erfahrung marginalisierter Gruppen ausgeschlossen wird und alternative Epistemologien in Expertise-Definitionen fehlen.
 
 ### Evidenz 2
 
-Fokus auf AI Safety, AGI, AI-Governance, existenzielle Risiken von KI-Systemen und deren Auswirkungen auf verschiedene Bevölkerungsgruppen.
+Analysen von AI-Safety-Instituten, AGI-Risiken, algorithmischen Entscheidungssystemen und deren Implementierung in globalen Governance-Rahmen; Fokus auf ML-Modelle und deren strukturelle Verzerrungen.
 
 ### Evidenz 3
 
-Paper integriert Feminist Policy Analysis Framework aus Sozialarbeit (McPhail 2003, Kanenberg 2013) und adressiert vulnerable Populations und marginalisierte Communitys als zentrale Zielgruppe.
+Expliziter Bezug zu Sozialpolitik-Analyse (McPhail, Kanenberg), Vulnerable Populationen, Social Welfare Systeme (Eubanks-Referenz zu Automating Inequality in Sozialhilfe-Kontexten), Care und Community Governance.
 
 ### Evidenz 4
 
-Zentral: 'Scholarship in critical data studies demonstrates how AI reinforces inequalities related to race, sexuality, class and gender' und 'AI regularly replicates broader social biases and power dynamics.'
+Kern-These: 'AI reinforces inequalities related to race, sexuality, class and gender'; diskriminierende Algorithmen als existenziell für low-income families; 'technological redlining' durch systematische Benachteiligung; Power Dynamics und strukturelle Diskriminierung.
 
 ### Evidenz 5
 
-Kern des Papers: 'AI research is characterized by a diversity problem, facing not only a lack of diverse perspectives within technical development...but also a lack of representation in the framing of policy narratives' und intersektionale Analyse von Identitäten (Geschlecht, Rasse, Klasse, Sexualität, Fähigkeit, etc.).
+Intersectionality als Framework-Kern; marginalisierte Communities, race, ethnicity, gender identity, class, carceral status, ability als überlappende Identitäten; Forderung nach 'diverse perspectives within technical development' und Repräsentation in Policy-Narrativen.
 
 ### Evidenz 6
 
-Explizite Verwendung feministischer Theorie (Kimberlé Crenshaw - Intersektionalität, D'Ignazio & Klein - Data Feminism, Beverly McPhail - Feminist Policy Analysis Framework, Patricia Hill Collins - outsider within). Framework ist explizit 'Feminist AI Policy Framework'.
-
-### Evidenz 7
-
-Diskussion von substantive versus formal equality: 'they fail to detail how these shares will be distributed according to equitable need (substantive equality) as opposed to provision of a single level of support and resources for all (formal equality).'
+Explizit feministische Theorie: Crenshaw's Intersectionality (1991), D'Ignazio & Klein's Data Feminism (2020), McPhail's Feminist Policy Analysis Framework (2003), Kanenberg et al.'s intersektionale Policy-Analyse; feministische Prinzipien wie Accountability, Partizipation, Power-Analyse zentral.
 
 ## Assessment-Relevanz
 
-**Domain Fit:** Sehr hohe Relevanz für KI/Soziale Arbeit/Gender-Schnittstelle: Paper verbindet explizit feministische Policy-Analyse (Sozialarbeit-Tradition) mit KI-Governance-Kritik und adressiert marginalisierte Gruppen als zentrale Stakeholder, die von KI-Systemen disproportional geschädigt werden.
+**Domain Fit:** Extrem relevant für die Schnittstelle AI/Soziale Arbeit/Gender Studies: Das Paper verbindet AI-Governance-Kritik mit sozialpolitischer Theorie, marginalisierte Populationen und strukturelle Gerechtigkeit – zentral für kritische Soziale Arbeit im digitalen Zeitalter.
 
-**Unique Contribution:** Entwicklung eines operationalisierbaren feministischen KI-Policy-Analyse-Frameworks und empirische Anwendung auf sieben internationale AI-Sicherheits-Initiativen, die zeigt, dass existenzielle KI-Risiken mit aktuellen strukturellen Harms marginalisierter Gruppen verbunden sein müssen.
+**Unique Contribution:** Entwicklung eines operationalisierbaren feministischen AI-Policy-Analyse-Frameworks mit empirischer Anwendung auf 7 globale Governance-Initiativen, die systematisch zeigt, dass AI-Safety-Diskurse gegenwärtige Harms ignorieren und Partizipation marginalisierter Gruppen ausschließen.
 
-**Limitations:** Dokumentenanalyse ohne Interviews mit Stakeholdern oder betroffenen Communitys; Framework-Scores basieren auf binären Bewertungen ohne detaillierte Gewichtung; begrenzte Anzahl analysierter Initiativen (n=7).
+**Limitations:** Dokumentenanalyse ohne primäre Daten von betroffenen Communities; Framework-Validität nicht durch externe Reviewer getestet; begrenzte Sample (7 Initiativen); keine Empfehlungen zu Implementierungsmetriken oder Monitoring-Mechanismen für Fem-AI-Standards.
 
-**Target Group:** KI-Policy-Maker und Governance-Spezialist:innen, feministische Technologie-Forscher:innen, Sozialarbeiter:innen und Care-Professionals, Aktivist:innen und Advocate:innen marginalisierter Gruppen, Kritische Data Studies Forscher:innen, Organisationen im Bereich AI Ethics und Fairness
+**Target Group:** Policy-Maker in AI-Governance, Feminist AI-Forschende, Sozialarbeiter:innen in digitalen Kontexten, Critical Data Studies Scholar:innen, marginalisierte Community-Organisationen, Tech-Worker mit ethischem Fokus, Aktivist:innen für Tech-Gerechtigkeit
 
 ## Schlüsselreferenzen
 
-- [[Crenshaw_Kimberlé_1991]] - Mapping the Margins: Intersectionality, Identity Politics, and Violence against Women of Color
-- [[DIgnazio_Catherine_Klein_Lauren_F_2020]] - Data Feminism
-- [[McPhail_Beverly_A_2003]] - A Feminist Policy Analysis Framework: Through a Gendered Lens
-- [[Buolamwini_Joy_Gebru_Timnit_2018]] - Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification
-- [[Benjamin_Ruha_2019]] - Race after Technology: Abolitionist Tools for the New Jim Code
-- [[Gebru_Timnit_Torres_Émile_P_2024]] - The TESCREAL bundle: Eugenics and the promise of utopia through artificial general intelligence
-- [[Crawford_Kate_2021]] - The Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence
-- [[Noble_Safiyah_Umoja_2018]] - Algorithms of Oppression: How Search Engines Reinforce Racism
-- [[Eubanks_Virginia_2018]] - Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor
-- [[Kanenberg_Heather_Leal_Roberta_Erich_Stephen_2020]] - Revising McPhail's Feminist Policy Analysis Framework: Updates for Use in Contemporary Social Policy Research
+- [[Buolamwini_Gebru_2018]] - Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification
+- [[Crenshaw_1991]] - Mapping the Margins: Intersectionality, Identity Politics, and Violence Against Women of Color
+- [[DIgnazio_Klein_2020]] - Data Feminism
+- [[Eubanks_2018]] - Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor
+- [[Crawford_2021]] - The Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence
+- [[Benjamin_2019]] - Race after Technology: Abolitionist Tools for the New Jim Code
+- [[Gebru_Torres_2024]] - The TESCREAL bundle: Eugenics and the promise of utopia through artificial general intelligence
+- [[Kanenberg_Leal_Erich_2020]] - Revising McPhail's Feminist Policy Analysis Framework: Updates for Use in Contemporary Social Policy Research
+- [[Noble_2018]] - Algorithms of Oppression: How Search Engines Reinforce Racism
+- [[Bostrom_2014]] - Superintelligence: Paths, Dangers, Strategies

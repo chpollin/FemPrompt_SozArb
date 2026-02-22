@@ -1,21 +1,14 @@
 ---
-title: The AI literacy development canvas: Assessing and building AI literacy in organizations
+title: "The AI literacy development canvas: Assessing and building AI literacy in organizations"
 authors:
   - Alexander Benlian
   - Marc Pinski
-year: 10/2025
+year: 2024
 type: journalArticle
-url: https://linkinghub.elsevier.com/retrieve/pii/S0007681325001673
 doi: 10.1016/j.bushor.2025.10.001
+url: "https://linkinghub.elsevier.com/retrieve/pii/S0007681325001673"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -24,28 +17,33 @@ llm_categories:
 
 # The AI literacy development canvas: Assessing and building AI literacy in organizations
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** AI_Literacies
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 96 |
+| Category Validation | 94 |
+| **Overall Confidence** | **94** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
+- [[AI Literacy]]
 - [[Algorithmic Bias]]
+- [[Algorithmic Fairness]]
 
-## Full Text
-
----
-title: "The AI literacy development canvas: Assessing and building AI literacy in organizations"
-authors: ["Alexander Benlian", "Marc Pinski"]
-year: 2025
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Benlian_2025_The_AI_literacy_development_canvas_Assessing_and.md
-confidence: 94
----
+## Wissensdokument
 
 # The AI literacy development canvas: Assessing and building AI literacy in organizations
 

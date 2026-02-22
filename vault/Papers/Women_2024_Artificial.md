@@ -4,32 +4,31 @@ authors:
   - Unknown Author
 year: 2024
 type: research-paper
+doi: 
+url: 
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies: []
 ---
 
 # Women_2024_Artificial
 
-## Key Concepts
+## Transformation Trail
 
-## Full Text
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
----
-title: "Will we run out of data? Limits of LLM scaling based on human-generated data"
-authors: ["Pablo Villalobos", "Anson Ho", "Jaime Sevilla", "Tamay Besiroglu", "Lennart Heim", "Marius Hobbhahn"]
-year: 2024
-type: workingPaper
-language: en
-processed: 2026-02-05
-source_file: Women_2024_Artificial.md
-confidence: 95
----
+**Extrahierte Kategorien:** Generative_KI, KI_Sonstige, Bias_Ungleichheit, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+## Wissensdokument
 
 # Will we run out of data? Limits of LLM scaling based on human-generated data
 

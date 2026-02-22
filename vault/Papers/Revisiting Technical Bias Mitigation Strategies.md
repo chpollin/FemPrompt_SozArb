@@ -4,19 +4,10 @@ authors:
   - A. J. Djiberou Mahamadou
 year: 2024
 type: report
-url: https://arxiv.org/abs/2410.17433
+doi: 
+url: "https://arxiv.org/abs/2410.17433"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Intersectionality
-mitigation_strategies:
-  - Bias Mitigation
-  - Calibration
-  - Bias Evaluation
 llm_decision: Exclude
 llm_confidence: 0.85
 llm_categories:
@@ -27,37 +18,32 @@ llm_categories:
 
 # Revisiting Technical Bias Mitigation Strategies
 
-## Abstract
+## Transformation Trail
 
-Diese systematische Überprüfung identifiziert praktische Limitationen technischer Bias-Mitigation-Strategien im Gesundheitswesen entlang fünf Schlüsseldimensionen: wer Bias und Fairness definiert, welche Mitigation-Strategie zu verwenden und zu priorisieren ist, wann in den KI-Entwicklungsstadien die Lösungen am effektivsten sind, für welche Populationen und in welchem Kontext die Lösungen entworfen sind. Die Studie zeigt mathematische Inkonsistenzen und Inkompatibilitäten zwischen verschiedenen Fairness-Metriken auf und diskutiert, wie werteorientierte KI stakeholder-bezogene Ansätze zur Bias-Mitigation ermöglichen kann.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 4 extrahiert
 
-**LLM Decision:** Exclude (Confidence: 0.85)
-**LLM Categories:** KI_Sonstige, Bias_Ungleichheit, Fairness
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 92 |
+| Correctness | 98 |
+| Category Validation | 95 |
+| **Overall Confidence** | **95** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.85)
 
 ## Key Concepts
 
-### Bias Types
-- [[Intersectionality]]
+- [[Algorithmic Bias Mitigation]]
+- [[Algorithmic Fairness]]
 
-### Mitigation Strategies
-- [[Bias Evaluation]]
-- [[Bias Mitigation]]
-- [[Calibration]]
-
-## Full Text
-
----
-title: "Revisiting Technical Bias Mitigation Strategies"
-authors: ["Abdoul Jalil Djiberou Mahamadou", "Artem A. Trotsyuk"]
-year: 2024
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies.md
-confidence: 95
----
+## Wissensdokument
 
 # Revisiting Technical Bias Mitigation Strategies
 

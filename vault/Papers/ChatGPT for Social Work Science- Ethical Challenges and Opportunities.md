@@ -1,23 +1,15 @@
 ---
-title: ChatGPT for Social Work Science: Ethical Challenges and Opportunities
+title: "ChatGPT for Social Work Science: Ethical Challenges and Opportunities"
 authors:
   - D. U. Patton
   - A. Landau
   - S. Mathiyazhagan
 year: 2023
 type: journalArticle
-url: https://doi.org/10.1086/726042
 doi: 10.1086/726042
+url: "https://doi.org/10.1086/726042"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types: []
-mitigation_strategies:
-  - Prompt Engineering
-  - Equitable Application
 llm_decision: Include
 llm_confidence: 0.92
 llm_categories:
@@ -39,36 +31,24 @@ agreement: agree
 
 # ChatGPT for Social Work Science: Ethical Challenges and Opportunities
 
-## Abstract
+## Transformation Trail
 
-Ethical framework for using LLMs in social work research. Recommends transparency, verification, authorship integrity, anti-plagiarism, and inclusion/social justice to counter bias. Positions LLMs as assistive tools requiring critical human oversight.
+### Stufe 1: Extraktion & Klassifikation (LLM)
 
-## Assessment
+**Extrahierte Kategorien:** AI_Literacies, Generative_KI, Prompting, KI_Sonstige, Soziale_Arbeit, Bias_Ungleichheit, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
 
-**LLM Decision:** Include (Confidence: 0.92)
-**LLM Categories:** AI_Literacies, Generative_KI, Soziale_Arbeit, Bias_Ungleichheit, Fairness
-**Human Decision:** Include
-**Human Categories:** Generative_KI, Prompting, Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet
-**Agreement:** Agree
+### Stufe 4: Assessment
+
+**LLM:** Include (Confidence: 0.92)
+**Human:** Include
 
 ## Key Concepts
 
-### Mitigation Strategies
-- [[Equitable Application]]
-- [[Prompt Engineering]]
+- [[AI Literacy in Professional Practice]]
+- [[Algorithmic Bias in Large Language Models]]
 
-## Full Text
-
----
-title: "ChatGPT for Social Work Science: Ethical Challenges and Opportunities"
-authors: ["Desmond Upton Patton", "Aviv Y. Landau", "Siva Mathiyazhagan"]
-year: 2023
-type: journalArticle
-language: en
-processed: 2026-02-05
-source_file: Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md
-confidence: 75
----
+## Wissensdokument
 
 # ChatGPT for Social Work Science: Ethical Challenges and Opportunities
 

@@ -5,17 +5,10 @@ authors:
   - Brian Magerko
 year: 2020
 type: conferencePaper
-url: https://dl.acm.org/doi/10.1145/3313831.3376727
 doi: 10.1145/3313831.3376727
+url: "https://dl.acm.org/doi/10.1145/3313831.3376727"
 tags:
   - paper
-  - feminist-ai
-  - bias-research
-date_added: 2026-02-22
-date_modified: 2026-02-22
-bias_types:
-  - Algorithmic Bias
-mitigation_strategies: []
 llm_decision: Exclude
 llm_confidence: 0.7
 llm_categories:
@@ -29,31 +22,37 @@ agreement: agree
 
 # What is AI Literacy? Competencies and Design Considerations
 
-## Assessment
+## Transformation Trail
 
-**LLM Decision:** Exclude (Confidence: 0.7)
-**LLM Categories:** AI_Literacies
-**Human Decision:** Exclude
-**Human Categories:** AI_Literacies, KI_Sonstige
-**Agreement:** Agree
+### Stufe 1: Extraktion & Klassifikation (LLM)
+
+**Extrahierte Kategorien:** AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet, Fairness
+**Argumente:** 3 extrahiert
+
+### Stufe 3: Verifikation (LLM)
+
+| Metrik | Score |
+|--------|-------|
+| Completeness | 88 |
+| Correctness | 92 |
+| Category Validation | 85 |
+| **Overall Confidence** | **88** |
+
+### Stufe 4: Assessment
+
+**LLM:** Exclude (Confidence: 0.7)
+**Human:** Exclude
 
 ## Key Concepts
 
-### Bias Types
+- [[AI Literacy]]
 - [[Algorithmic Bias]]
+- [[Algorithmic Fairness]]
+- [[Digital Divide]]
+- [[Explainable AI]]
+- [[Inclusive AI Education Design]]
 
-## Full Text
-
----
-title: "What is AI Literacy? Competencies and Design Considerations"
-authors: ["Duri Long", "Brian S Magerko"]
-year: 2020
-type: conferencePaper
-language: en
-processed: 2026-02-05
-source_file: Long_2020_What_is_AI_Literacy_Competencies_and_Design.md
-confidence: 88
----
+## Wissensdokument
 
 # What is AI Literacy? Competencies and Design Considerations
 
