@@ -145,20 +145,23 @@ Human Exclude           78              34
   - 4 Vault-Dokumenttypen: Papers (248), Concepts (136), Pipeline (5), Divergenzen (111)
   - LLM-Caching in `.vault_cache/` (reproduzierbar ohne erneute API-Calls)
   - LLM-Kosten: ~$1 (Haiku 4.5)
-- [x] Phase 2: Datengenerator (`scripts/generate_promptotyping_data_v2.py`, ~500 Zeilen)
+- [x] Phase 2: Datengenerator (`scripts/generate_promptotyping_data_v2.py`, ~580 Zeilen)
   - Reine Datentransformation (kein LLM)
   - Output: `docs/data/promptotyping_v2.json` (1.0 MB)
   - 249 Paper-Journeys, 136 Konzept-Nodes, 79 Co-Occurrence-Edges, 111 Divergenzen
-- [x] Phase 3: Web-Interface (4 Views, Neubau)
-  - View 1: Pipeline-Durchlicht (D3 Sankey) -- 326 Papers durch 5 Stufen, Dropout-Baender, Stufen-Detail mit Prompts
-  - View 2: Paper Journey -- Suche, horizontale Timeline (5 Stufen), expandierbare Stage-Details
-  - View 3: Konzept-Explorer (D3 Force Graph) -- Frequency-Slider, Zoom/Pan/Drag, Co-Occurrence-Edges
-  - View 4: Divergenz-Navigator -- Summary-Karten, Pattern/Typ-Filter, Kategorie-Vergleichstabelle
-  - Cross-View-Navigation: Konzept-Klick -> Explorer, Paper-Klick -> Journey
+  - **v2.1:** Featured Papers (3 handverlesen), Konzept-Cluster (Technik/Sozial/Bridge), Pattern-Distribution in Meta
+- [x] Phase 3: Web-Interface (5 Views, Neubau)
+  - View 0: **Landing** -- Leitfrage, 3 Kennzahlen, 3 Featured Papers als Einstiegspunkte
+  - View 1: Pipeline-Durchlicht (D3 Sankey) -- 326 Papers durch 5 Stufen, Stufen-Detail mit Stance-Sektionen
+  - View 2: Paper Journey -- Featured-Picks + Suche, horizontale Timeline mit Stance-Indicators, 3-Sektionen-Detail
+  - View 3: Konzept-Explorer (D3 Force Graph) -- Cluster-Farben (Technik/Sozial/Bridge), Divergenz-Ring-Overlay, Legende
+  - View 4: Divergenz-Navigator -- Exemplarische Faelle, Narrative Cards mit Justification, enriched Detail mit Knowledge-Summary
+  - Cross-View-Navigation: Konzept-Klick -> Explorer, Paper-Klick -> Journey, Divergenz -> Journey
+- [x] **Epistemische Haltungen durchgehend:** Jede Detail-Ansicht hat Stance-Sektionen (blau=Ergebnis, gruen=Prozess, orange=Grenze)
 - [x] Design: CSS-Variablen aus `research.css`, `pt-*` Namespace, responsive (768px Breakpoint)
 - [x] CDN-Dependencies: D3 v7.9.0, d3-sankey v0.12.3, Chart.js 4.4.0, FontAwesome 6.5.1
 - [x] Vault ZIP: `docs/downloads/vault.zip` (1.1 MB, 505 Dateien)
-- Branch: `FemPrompt_SozArb_promptotyping-interface`, Commit: `3476437`
+- Branch: `FemPrompt_SozArb_promptotyping-interface`, Commits: `3476437` (v2), v2.1 in Arbeit
 - Offene Punkte: Browser-Test, Mobile-Verifikation, Merge zu main
 
 ---

@@ -4,6 +4,61 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-02-22 (Session 4): Promptotyping v2.1 -- Epistemische Tiefe
+
+**Branch:** `FemPrompt_SozArb_promptotyping-interface`
+**Dauer:** ~3h (2 Claude-Sessions, davon 1 Context-Kompression)
+
+### Was passiert ist
+
+1. **Kritische Evaluation von v2** -- 4 Screenshots im Browser betrachtet. Erkenntnis: Das Interface ist ein Daten-Explorer, kein epistemisches Werkzeug. 5 Probleme identifiziert: Haltungen nur dekorativ, Paper Journey startet leer, Konzept-Graph monochrom, Divergenzen zeigen Karten statt Geschichten, kein roter Faden.
+
+2. **Plan geschrieben und genehmigt** -- 4-Phasen-Plan (Datengenerator, HTML, JS, CSS) mit detaillierten Code-Snippets. Ziel: Interface soll die Frage beantworten "Was passiert mit Wissen, wenn es durch eine LLM-Pipeline fliesst?" -- nicht durch Zahlen, sondern durch navigierbare Erfahrung.
+
+3. **Phase A: Datengenerator erweitert** -- 3 Featured Papers handverlesen (Ahmed_2024: Semantische Expansion, Shafie_2025: Keyword-Inklusion, Kaneko_2024: Uebereinstimmung). Konzept-Cluster berechnet (1 Technik, 55 Sozial, 80 Bridge). Pattern-Distribution + Asymmetrie-Daten in Meta.
+
+4. **Phase B: HTML umgebaut** -- 5 Views statt 4 (Landing als Default). Stances-Legend kompakt. Container fuer Featured Papers in Journey + Concept Legend.
+
+5. **Phase C: JS komplett neu geschrieben** (~1090 Zeilen) -- Landing View mit Kennzahlen + Featured Cards. Paper Journey mit Pre-Populated Picks + Stance-basierte Timeline. Concept Explorer mit Cluster-Farben + Divergenz-Ring. Divergenz-Navigator mit Narrative Cards + Exemplarische Faelle + Knowledge Summary in Detail. Alle Detail-Panels mit 3 Stance-Sektionen (Ergebnis/Prozess/Grenze).
+
+6. **Phase D: CSS komplett neu geschrieben** (~650 Zeilen) -- Stance-Sektionen als Kern-Pattern (farbige linke Raender). Landing-Layout. Featured Cards mit Stance-Bars. Journey Picks als Pills. Narrative Divergenz-Cards mit Story-Bars. Konzept-Legende. Responsive Breakpoints.
+
+### Was wir gelernt haben
+
+**Epistemische Haltungen muessen strukturell sein, nicht dekorativ:**
+- v2 hatte 3 farbige Punkte als Banner. Sah nett aus, tat nichts.
+- v2.1 verwendet `.stance-section` Divs mit farbigen linken Raendern in JEDER Detail-Ansicht. Die Farbe IST die Information.
+- **Learning:** Wenn ein UI-Element weggelassen werden kann ohne Funktionsverlust, ist es Dekoration. Epistemische Haltungen muessen die Informationsarchitektur bestimmen, nicht die Farbgebung.
+
+**Konzept-Cluster spiegeln den Korpus:**
+- Erwartet: ~30% Technik, ~40% Sozial, ~30% Bridge
+- Tatsaechlich: 1 Technik (0.7%), 55 Sozial (40.4%), 80 Bridge (58.8%)
+- Interpretation: Fast alle Konzepte im Korpus "AI Literacy + Soziale Arbeit" haben per Definition Verbindungen zu beiden Seiten. Nur 1 reines Technik-Konzept ueberlebt den 65%-Threshold.
+- **Learning:** Die Cluster-Verteilung ist ein Ergebnis, kein Problem. Sie zeigt, dass der Korpus tatsaechlich interdisziplinaer ist.
+
+**Featured Papers als narrativer Anker:**
+- Statt leerer Views: 3 handverlesene Papers repraesentieren je ein Divergenz-Muster.
+- Der User sieht sofort "Hier ist ein konkretes Beispiel" statt "Bitte suche etwas".
+- **Learning:** Narrative brauchen Protagonisten. Zahlen und Suchfelder reichen nicht.
+
+### Was entstanden ist (Aenderungen an bestehenden Dateien)
+
+| Datei | Aenderung |
+|-------|-----------|
+| `scripts/generate_promptotyping_data_v2.py` | +Featured Papers, +Cluster, +Pattern-Distribution (~+80 Zeilen) |
+| `docs/promptotyping.html` | +Landing View, +Stances Legend, +5 Views statt 4 (~+40 Zeilen) |
+| `docs/js/promptotyping-app.js` | Komplett-Rewrite (~1090 Zeilen, vorher 778) |
+| `docs/css/promptotyping.css` | Komplett-Rewrite (~650 Zeilen, vorher 653) |
+| `docs/data/promptotyping_v2.json` | Regeneriert mit neuen Feldern |
+
+### Offene Punkte
+
+- [ ] Browser-Test (lokal via HTTP-Server)
+- [ ] Mobile-Ansicht pruefen (< 768px)
+- [ ] Merge zu main nach Browser-Test
+
+---
+
 ## 2026-02-22 (Session 3): Promptotyping v2 -- Vom Dashboard zum Forschungsartefakt
 
 **Branch:** `FemPrompt_SozArb_promptotyping-interface`

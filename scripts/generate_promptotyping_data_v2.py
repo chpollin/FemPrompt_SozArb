@@ -31,6 +31,25 @@ ASSESSMENT_CATEGORIES = [
     "Diversitaet", "Feministisch", "Fairness"
 ]
 
+TECHNIK_CATEGORIES = {"AI_Literacies", "Generative_KI", "Prompting", "KI_Sonstige"}
+SOZIAL_CATEGORIES = {"Soziale_Arbeit", "Bias_Ungleichheit", "Gender", "Diversitaet", "Feministisch", "Fairness"}
+
+# Featured papers for the landing page (hand-picked to illustrate three epistemic stances)
+FEATURED_PAPERS = {
+    "Ahmed_2024_Feminist_perspectives_on_AI_Ethical": {
+        "why": "Semantische Expansion: LLM liest nur 'AI Literacy', Human erkennt feministisch-ethischen Kern",
+        "stance_highlight": "limits",
+    },
+    "Shafie_2025_More_or_less_wrong_A_benchmark_for_directional": {
+        "why": "Keyword-Inklusion: LLM findet Bias-Keywords, aber nicht den klinischen Kontext ausserhalb Sozialer Arbeit",
+        "stance_highlight": "process",
+    },
+    "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large": {
+        "why": "Volle Uebereinstimmung: Pipeline und Mensch erkennen Gender-Bias-Forschung als relevant",
+        "stance_highlight": "result",
+    },
+}
+
 
 # ---------------------------------------------------------------------------
 # Reusable loaders (from generate_promptotyping_data.py)
@@ -351,6 +370,34 @@ def build_concept_graph(concept_cache: dict) -> dict:
     return {"nodes": nodes, "edges": edges}
 
 
+def assign_concept_clusters(concept_graph: dict, papers: list) -> None:
+    """Assign technik/sozial/bridge cluster to each concept node based on category affinity."""
+    # Build paper lookup by concept
+    paper_by_concept = defaultdict(list)
+    for p in papers:
+        for c in p.get("concepts", []):
+            paper_by_concept[c].append(p)
+
+    for node in concept_graph["nodes"]:
+        concept_papers = paper_by_concept.get(node["id"], [])
+        technik_score = 0
+        sozial_score = 0
+        for p in concept_papers:
+            cats = p.get("stages", {}).get("ske", {}).get("stage1_categories", {})
+            technik_score += sum(1 for c in TECHNIK_CATEGORIES if cats.get(c))
+            sozial_score += sum(1 for c in SOZIAL_CATEGORIES if cats.get(c))
+
+        total = technik_score + sozial_score
+        if total == 0:
+            node["cluster"] = "bridge"
+        elif technik_score / total > 0.65:
+            node["cluster"] = "technik"
+        elif sozial_score / total > 0.65:
+            node["cluster"] = "sozial"
+        else:
+            node["cluster"] = "bridge"
+
+
 # ---------------------------------------------------------------------------
 # Paper journey builder
 # ---------------------------------------------------------------------------
@@ -501,6 +548,11 @@ def build_paper_journeys(
             "concepts": list(set(concept_names)),
             "knowledge_summary": kernbefund,
         }
+
+        # Featured paper annotation
+        if stem in FEATURED_PAPERS:
+            paper["featured"] = FEATURED_PAPERS[stem]
+
         papers.append(paper)
 
     return papers
@@ -723,13 +775,31 @@ def main():
 
     print("  [6/7] Building concept graph + divergences + pipeline...")
     concept_graph = build_concept_graph(concept_cache)
+    assign_concept_clusters(concept_graph, papers)
     divergences_list = build_divergences_list(REPO_ROOT, divergence_cache)
     pipeline_stages = build_pipeline_stages(REPO_ROOT)
     pipeline_flow = build_pipeline_flow()
     categories = load_categories(REPO_ROOT / "benchmark" / "config" / "categories.yaml")
 
+    # Cluster distribution
+    cluster_counts = defaultdict(int)
+    for n in concept_graph["nodes"]:
+        cluster_counts[n.get("cluster", "bridge")] += 1
     print(f"    Concepts: {len(concept_graph['nodes'])} nodes, {len(concept_graph['edges'])} edges")
+    print(f"      Clusters: technik={cluster_counts['technik']}, sozial={cluster_counts['sozial']}, bridge={cluster_counts['bridge']}")
     print(f"    Divergences: {len(divergences_list)}")
+
+    # Pattern distribution
+    pattern_counts = defaultdict(int)
+    for d in divergences_list:
+        pat = d.get("pattern", "")
+        if pat:
+            pattern_counts[pat] += 1
+    print(f"    Patterns: {dict(pattern_counts)}")
+
+    # Featured papers check
+    featured_count = sum(1 for p in papers if p.get("featured"))
+    print(f"    Featured: {featured_count}/3")
 
     print("  [7/7] Loading agreement metrics...")
     agreement_path = REPO_ROOT / "benchmark" / "results" / "agreement_metrics.json"
@@ -759,6 +829,11 @@ def main():
             "overall_agreement": agreement_metrics.get("decision", {}).get("overall_agreement", 0),
             "llm_include_rate": 0.68,
             "human_include_rate": 0.42,
+            "pattern_distribution": dict(pattern_counts),
+            "asymmetry": {
+                "llm_overincludes": agreement_metrics.get("decision", {}).get("confusion_matrix", {}).get("Exclude_Include", 78),
+                "human_overincludes": agreement_metrics.get("decision", {}).get("confusion_matrix", {}).get("Include_Exclude", 23),
+            },
         },
     }
 

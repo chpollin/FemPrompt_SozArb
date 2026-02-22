@@ -11,7 +11,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Promptotyping Interface | FemPrompt SozArb">
-    <meta property="og:description" content="Der Forschungsprozess als epistemisches Artefakt: 4 Views, navigierbar und auditierbar.">
+    <meta property="og:description" content="Der Forschungsprozess als epistemisches Artefakt: 5 Views, navigierbar und auditierbar.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e40af'/><text x='50' y='68' font-size='60' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>P</text></svg>">
@@ -40,28 +40,21 @@
         </div>
     </header>
 
-    <!-- Stances Bar -->
-    <div class="stances-bar">
-        <div class="stances-container">
-            <div class="stance stance--result">
-                <span class="stance-dot"></span>
-                <span class="stance-label">Zeigen, was ist</span>
-            </div>
-            <div class="stance stance--process">
-                <span class="stance-dot"></span>
-                <span class="stance-label">Zeigen, wie es entstanden ist</span>
-            </div>
-            <div class="stance stance--limits">
-                <span class="stance-dot"></span>
-                <span class="stance-label">Zeigen, was nicht geht</span>
-            </div>
-        </div>
-    </div>
+    <!-- Stances Legend (compact, not decorative) -->
+    <aside class="stances-legend" aria-label="Epistemische Haltungen">
+        <div class="stance stance--result"><span class="stance-dot"></span> Ergebnis</div>
+        <div class="stance stance--process"><span class="stance-dot"></span> Prozess</div>
+        <div class="stance stance--limits"><span class="stance-dot"></span> Grenze</div>
+    </aside>
 
     <!-- View Navigation -->
     <nav class="view-nav">
         <div class="view-nav-inner">
-            <button class="view-btn active" data-view="pipeline">
+            <button class="view-btn active" data-view="landing">
+                <i class="fas fa-home"></i>
+                <span>Einstieg</span>
+            </button>
+            <button class="view-btn" data-view="pipeline">
                 <i class="fas fa-stream"></i>
                 <span>Pipeline</span>
             </button>
@@ -86,8 +79,27 @@
         <p>Lade Daten...</p>
     </div>
 
+    <!-- View 0: Landing -->
+    <section id="view-landing" class="view-content">
+        <div class="view-container">
+            <div class="landing-hero">
+                <h2 class="landing-question">Was passiert mit Wissen, wenn es durch eine LLM-Pipeline fliesst?</h2>
+                <p class="landing-subtitle">326 wissenschaftliche Papers. 5 Pipeline-Stufen. 111 Divergenzen zwischen Mensch und Maschine.</p>
+            </div>
+            <div id="landing-numbers" class="landing-numbers"></div>
+            <div class="landing-featured">
+                <h3>Drei Wege durch die Pipeline</h3>
+                <div id="featured-papers" class="featured-grid"></div>
+            </div>
+            <div class="landing-cta">
+                <button class="cta-btn" data-view="pipeline"><i class="fas fa-stream"></i> Pipeline erkunden</button>
+                <button class="cta-btn cta-btn--secondary" data-view="divergences"><i class="fas fa-code-branch"></i> Divergenzen entdecken</button>
+            </div>
+        </div>
+    </section>
+
     <!-- View 1: Pipeline -->
-    <section id="view-pipeline" class="view-content">
+    <section id="view-pipeline" class="view-content" style="display:none;">
         <div class="view-container">
             <div class="view-header">
                 <h2>Pipeline-Durchlicht</h2>
@@ -105,6 +117,7 @@
                 <h2>Paper Journey</h2>
                 <p class="view-description">Waehle ein Paper und verfolge seine Transformation durch die Pipeline.</p>
             </div>
+            <div id="journey-featured" class="journey-featured"></div>
             <div class="journey-search-container">
                 <input type="text" id="journey-search" class="journey-search" placeholder="Paper suchen (Titel oder Autor)..." autocomplete="off">
                 <div id="journey-results" class="journey-results"></div>
@@ -119,13 +132,14 @@
         <div class="view-container">
             <div class="view-header">
                 <h2>Konzept-Explorer</h2>
-                <p class="view-description">Konzepte als semantisches Netzwerk. Groesse = Haeufigkeit, Kanten = Co-Occurrence.</p>
+                <p class="view-description">Konzepte als semantisches Netzwerk. Farbe = Cluster (Technik/Sozial/Grenzgaenger), Groesse = Haeufigkeit.</p>
             </div>
             <div class="concept-controls">
                 <label>Min. Frequency: <input type="range" id="concept-freq-slider" min="2" max="20" value="3"><span id="concept-freq-value">3</span></label>
                 <input type="text" id="concept-search" class="concept-search" placeholder="Konzept suchen...">
             </div>
             <div id="concept-graph-container" class="concept-graph-container"></div>
+            <div id="concept-legend" class="concept-legend"></div>
             <div id="concept-detail" class="concept-detail-panel" style="display:none;"></div>
         </div>
     </section>
