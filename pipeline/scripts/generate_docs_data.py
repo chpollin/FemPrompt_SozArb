@@ -22,6 +22,7 @@ Usage:
 import csv
 import json
 import os
+import re
 import sys
 from datetime import date
 from collections import defaultdict
@@ -46,6 +47,13 @@ INPUT_METADATA = os.path.join(REPO_ROOT, "corpus", "papers_metadata.csv")
 
 OUTPUT_VAULT = os.path.join(REPO_ROOT, "docs", "data", "research_vault_v2.json")
 OUTPUT_GRAPH = os.path.join(REPO_ROOT, "docs", "data", "graph_data.json")
+
+VAULT_PAPERS_DIR = os.path.join(REPO_ROOT, "docs", "vault", "Papers")
+
+
+def safe_title(title):
+    """Convert title to safe filename, matching generate_vault.py logic."""
+    return re.sub(r'[<>:"/\\|?*\n\r]', '-', title).strip('. ')
 
 
 def read_csv(filepath):
@@ -94,9 +102,18 @@ def parse_llm_row(row, metadata_by_key):
     except (ValueError, TypeError):
         year = None
 
+    # Check if vault knowledge doc exists
+    title = meta.get("Title") or row.get("Title", "")
+    knowledge_doc = None
+    if title and os.path.isdir(VAULT_PAPERS_DIR):
+        vault_filename = safe_title(title) + ".md"
+        vault_path = os.path.join(VAULT_PAPERS_DIR, vault_filename)
+        if os.path.isfile(vault_path):
+            knowledge_doc = f"vault/Papers/{vault_filename}"
+
     return {
         "id": key,
-        "title": meta.get("Title") or row.get("Title", ""),
+        "title": title,
         "author_year": row.get("Author_Year", ""),
         "authors": meta.get("Authors", ""),
         "year": year,
@@ -105,6 +122,7 @@ def parse_llm_row(row, metadata_by_key):
         "abstract": (meta.get("Abstract", "") or "")[:500],
         "item_type": (meta.get("Item_Type", "") or "").lower(),
         "journal": meta.get("Journal", "") or "",
+        "knowledge_doc": knowledge_doc,
         "llm": {
             "decision": row.get("Decision", ""),
             "confidence": round(confidence, 3),

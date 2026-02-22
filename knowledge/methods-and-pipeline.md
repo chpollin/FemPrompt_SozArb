@@ -188,7 +188,7 @@ Das Benchmark vergleicht Human- und LLM-Assessment und adaptiert den Ansatz von 
 
 Detaillierte Dokumentation: `paper/Referenzliteratur-Benchmark-Design.md`
 
-**Metriken:** Cohen's Kappa, Agreement pro Kategorie, Disagreement-Analyse, Konfusionsmatrix
+**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet, ist aber durch den Prevalence-Bias-Paradox eingeschraenkt (Byrt et al. 1993): Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035, unabhaengig von der Bewertungsqualitaet. Details: `ANALYSIS_SESSION_2026-02-22.md`
 
 **Benchmark-Scripts:**
 
@@ -216,7 +216,7 @@ Ergebnisse: siehe `status.md`, Abschnitt M6
 | 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | `--input-dir`, `--output-dir` |
 | 5. Human Review | `markdown_reviewer.html` | Markdown + PDFs | JSON-Export | Via Live Server oeffnen |
 | 6. Knowledge Distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` | `--input`, `--output`, `--limit` |
-| 7. Vault-Building | `generate_vault.py` | Knowledge Docs | `vault/` | `--input`, `--output` |
+| 7. Vault-Building | `generate_vault.py` | Knowledge Docs + Assessment CSVs + Zotero | `vault/` + `docs/downloads/vault.zip` | `--path`, `--vault-name`, `--clean` |
 
 Alle Scripts befinden sich in `pipeline/scripts/`. Vollstaendige Parameter via `--help`.
 
@@ -397,7 +397,7 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 | `validate_knowledge_docs.py` | Knowledge-Dokument-Validierung | Getestet |
 | `verify_knowledge_quality.py` | Qualitaetspruefung Knowledge Docs | Abgeschlossen |
 | `validate_pipeline.py` | Pipeline-Validierung (End-to-End) | Getestet |
-| `generate_vault.py` | Obsidian Vault generieren | Ausstehend |
+| `generate_vault.py` | Obsidian Vault generieren (mit Assessment-Integration) | Abgeschlossen (249 Papers, 205 mit Assessment) |
 | `generate_docs_data.py` | SPA-Daten generieren (research_vault_v2.json) | Getestet |
 | `utils.py` | Zentrale Hilfsfunktionen (Logging, API, Config) | Aktiv |
 
@@ -485,17 +485,17 @@ Bei Rate-Limit-Fehlern den Delay zwischen API-Calls erhoehen (Standard: 2 Sekund
 
 ---
 
-## Konfabulations-Dokumentation
+## Dokumentierte LLM-Probleme
 
 Im bisherigen Durchlauf lieferte Deep Research ueberpruefbare Quellen. Dokumentierte Probleme:
 
 | Typ | Beschreibung | Quelle |
 |---|---|---|
 | Nicht verifizierbarer Eintrag | Ein Deep-Research-Eintrag konnte nicht verifiziert werden | Paper-Text, Abschnitt "LLM-gestuetzter Pfad" |
-| PDF-Upstream-Probleme | 5 Dokumente mit korrupten/falschen PDFs (nicht auf Konfabulation zurueckgehend) | `pipeline/knowledge/_verification/` |
+| PDF-Upstream-Probleme | 5 Dokumente mit korrupten/falschen PDFs (kein LLM-Problem) | `pipeline/knowledge/_verification/` |
 | Niedrige Uebereinstimmung | 2 Dokumente mit niedrigem Score bei kurzen Texten (inhaltlich korrekt) | Verifikations-Report |
 
-**Wichtig:** Die Pipeline-Fehler (PDF-Upstream) sind keine Konfabulationen des LLMs, sondern Probleme in der Datenbeschaffung. Der einzige dokumentierte Konfabulations-Fall betrifft die Deep-Research-Phase (Identifikation), nicht die Pipeline-Verarbeitung.
+**Wichtig:** Die Pipeline-Fehler (PDF-Upstream) sind Probleme in der Datenbeschaffung, keine LLM-Fehler. Der einzige nicht verifizierbare Eintrag betrifft die Deep-Research-Phase (Identifikation), nicht die Pipeline-Verarbeitung.
 
 ---
 
@@ -508,4 +508,4 @@ Im bisherigen Durchlauf lieferte Deep Research ueberpruefbare Quellen. Dokumenti
 
 ---
 
-*Aktualisiert: 2026-02-21*
+*Aktualisiert: 2026-02-22*

@@ -364,14 +364,16 @@ function buildModalContent(paper) {
         `;
     }
 
-    // Links
+    // Links + Knowledge Doc Download
     const doiLink = paper.doi && paper.doi !== 'nan'
         ? `<a href="https://doi.org/${paper.doi}" target="_blank">DOI: ${paper.doi}</a>` : '';
     const urlLink = paper.url && paper.url !== 'nan' && paper.url !== ''
         ? `<a href="${paper.url}" target="_blank">Link</a>` : '';
-    if (doiLink || urlLink) {
+    const kdLink = paper.knowledge_doc
+        ? `<a href="#" onclick="downloadKnowledgeDoc('${escapeHtml(paper.knowledge_doc)}', '${escapeHtml(paper.title)}'); return false;" class="knowledge-doc-link"><i class="fas fa-download"></i> Knowledge Document (.md)</a>` : '';
+    if (doiLink || urlLink || kdLink) {
         html += `<div class="detail-section" style="padding-bottom:0;">
-            <h3>Links</h3><p>${[doiLink, urlLink].filter(Boolean).join(' &bull; ')}</p>
+            <h3>Links</h3><p>${[doiLink, urlLink, kdLink].filter(Boolean).join(' &bull; ')}</p>
         </div>`;
     }
 
@@ -739,6 +741,35 @@ function exportFilteredPapers() {
     URL.revokeObjectURL(url);
 }
 
+// Download single knowledge document
+async function downloadKnowledgeDoc(docPath, title) {
+    try {
+        const response = await fetch(docPath);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const blob = await response.blob();
+        const safeName = title.replace(/[<>:"/\\|?*]/g, '-').substring(0, 100) + '.md';
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = safeName;
+        a.click();
+        URL.revokeObjectURL(url);
+    } catch (err) {
+        console.error('[Download] Failed:', err);
+        alert('Download failed: ' + err.message);
+    }
+}
+
+// Download full Obsidian vault as ZIP
+function downloadVaultZip() {
+    const a = document.createElement('a');
+    a.href = 'downloads/vault.zip';
+    a.download = 'FemPrompt_Research_Vault.zip';
+    a.click();
+}
+
 window.closePaperModal = closePaperModal;
 window.exportFilteredPapers = exportFilteredPapers;
 window.toggleCategoryChip = toggleCategoryChip;
+window.downloadKnowledgeDoc = downloadKnowledgeDoc;
+window.downloadVaultZip = downloadVaultZip;

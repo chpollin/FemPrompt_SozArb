@@ -1,6 +1,6 @@
-# Epistemische Asymmetrien in Deep-Research-gestuetzten Literature Reviews
+# Deep-Research-gestuetzte Literature Reviews
 
-Workflow-Design zwischen Large Language Models und Expert:innenwissen.
+Epistemische Infrastruktur als Praxis.
 
 Christopher Pollin, Susanne Sackl-Sharif, Sabine Klinger, Christian Steiner
 
@@ -10,39 +10,40 @@ Teil des [Elisabeth-List-Fellowship-Projekts "Diversitaetssensibler Umgang mit K
 
 ## Projektziel
 
-Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** im Kontext Sozialer Arbeit. Konzeptuelle Grundlage fuer eine Benchmark ("Fair Bench"). Methodische Innovation dokumentiert in einem Paper fuer Forum Wissenschaft (Deadline: 4. Mai 2026).
+Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** im Kontext Sozialer Arbeit. Aufbau einer epistemischen Infrastruktur fuer LLM-gestuetzte Literature Reviews. Dokumentiert in einem Paper fuer Forum Wissenschaft (Deadline: 4. Mai 2026).
 
 ## Korpus und Assessment
 
-**326 Papers** aus Zotero (254 Deep Research + 50 manuell), drei Assessment-Tracks:
+**326 Papers** aus Zotero, zwei Assessment-Tracks:
 
 | Track | Schema | Status |
 |-------|--------|--------|
 | **Human** | 10 binaere Kategorien | 210/326 mit Decision |
-| **LLM (5D)** | 5 Dimensionen (0-3) | Fertig (325/325, archiviert) |
-| **LLM (10K)** | 10 binaere Kategorien | Fertig (326/326, $1.44) |
+| **LLM (10K)** | 10 binaere Kategorien | 326/326 ($1.44) |
 
-**Benchmark-Ergebnis:** Decision Cohen's Kappa = 0,035 ("slight"), 111 Disagreements. Der niedrige Kappa-Wert quantifiziert die epistemische Asymmetrie zwischen keyword-basierter Musterkennung und disziplinaerer Urteilskraft. Details: `knowledge/status.md`, Abschnitt M6.
+Archiviert: LLM 5D-Assessment (325/325, 5 ordinale Dimensionen, $1.15).
+
+**Benchmark-Ergebnis:** Konfusionsmatrix (65 Include-Include, 78 LLM-Include/Human-Exclude, 23 umgekehrt, 34 Exclude-Exclude), Basisraten (LLM 68% vs. Human 42% Include), Cohen's Kappa = 0.035 (Prevalence-Bias-Artefakt nach Byrt et al. 1993). Details: `knowledge/status.md`, Abschnitt M6.
 
 ## Repository-Struktur
 
 ```
 corpus/                    # Korpus-Metadaten (326 Papers, Zotero-Export)
 assessment/                # Assessment-Systeme
-  human/                   # Human Assessment (Excel, Skripte)
-  llm-5d/                  # LLM Assessment 5D (abgeschlossen, archiviert)
-benchmark/                 # Human vs. LLM Benchmark (10K, abgeschlossen)
+  human/                   # Human Assessment (Google Sheets -> CSV)
+  llm-5d/                  # LLM Assessment 5D (archiviert)
+benchmark/                 # Human vs. LLM Benchmark (10K)
   config/                  # categories.yaml (10 Kategorien, Single Source of Truth)
-  data/                    # papers_full.csv, llm_assessment_10k.csv, human_assessment.csv
+  data/                    # llm_assessment_10k.csv, human_assessment.csv
   results/                 # agreement_metrics.json, disagreements.csv
-  scripts/                 # merge, calculate_agreement, analyze_disagreements
 pipeline/                  # PDF -> Markdown -> Knowledge
-  scripts/                 # Python-Scripts
-  knowledge/distilled/     # 249 destillierte Wissensdokumente
+  scripts/                 # Python-Scripts (inkl. generate_vault.py)
+  knowledge/distilled/     # 249 Knowledge-Dokumente
+vault/                     # Obsidian Vault (249 Papers, 205 mit Assessment-Daten)
 config/                    # Konfiguration (defaults.yaml)
 prompts/                   # Prompt-Changelog und Governance
 deep-research/restored/    # Deep-Research-Artefakte (RIS, Raw-Outputs)
-docs/                      # GitHub Pages SPA (Papers, Benchmark, Dashboard, Graph)
+docs/                      # GitHub Pages SPA
 knowledge/                 # Projektdokumentation (Single Source of Truth)
 ```
 
@@ -52,10 +53,12 @@ Die vollstaendige Projektdokumentation liegt in [`knowledge/`](knowledge/README.
 
 | Dokument | Inhalt |
 |----------|--------|
-| [project.md](knowledge/project.md) | Projektziel, theoretischer Rahmen (inkl. Mapping-Tabelle, Designprinzip), Glossar |
+| [project.md](knowledge/project.md) | Projektziel, theoretischer Rahmen, Glossar |
 | [methods-and-pipeline.md](knowledge/methods-and-pipeline.md) | PRISMA, Assessment-Design, Pipeline, Scripts, Kosten |
-| [status.md](knowledge/status.md) | Meilensteine, Benchmark-Ergebnisse, Selektions-Audit, offene Punkte |
+| [status.md](knowledge/status.md) | Meilensteine, Benchmark-Ergebnisse, offene Punkte |
 | [paper-integrity.md](knowledge/paper-integrity.md) | Paper vs. Repository Abgleich |
+
+**GitHub Pages:** https://chpollin.github.io/FemPrompt_SozArb/
 
 ## API-Kosten
 
@@ -71,4 +74,4 @@ Modell: Claude Haiku 4.5
 
 ---
 
-*Aktualisiert: 2026-02-21*
+*Aktualisiert: 2026-02-22*

@@ -47,7 +47,7 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 | Paper eingereicht | Deadline 4. Mai 2026 | Ausstehend |
 | Epistemische Infrastruktur dokumentiert | Repository auditierbar, Prompts versioniert | Umgesetzt |
 | Dualer Bewertungspfad ausgefuehrt | Human + LLM Assessment komplett | Abgeschlossen |
-| Benchmark-Metriken berechnet | Cohen's Kappa pro Kategorie | Abgeschlossen (Details: `status.md`) |
+| Benchmark-Metriken berechnet | Konfusionsmatrix, Basisraten, Disagreement-Analyse (Kappa als Vergleichsanker) | Abgeschlossen (Details: `status.md`) |
 
 ### Should-Have
 
@@ -55,13 +55,13 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 |-----------|---------|--------|
 | 249 Knowledge Documents | Strukturierte Volltext-Extraktion | Abgeschlossen (97.2% verifiziert) |
 | Disagreement-Analyse | 111 Faelle kategorisiert | Abgeschlossen |
-| Obsidian Vault | Vernetzte Wissensbasis | Ausstehend |
+| Obsidian Vault | Vernetzte Wissensbasis | Erledigt (249 Papers, 205 mit Assessment-Daten) |
 
 ### Nice-to-Have
 
 | Kriterium | Messbar | Status |
 |-----------|---------|--------|
-| GitHub Pages | Statische Dokumentationsseite | Ausstehend |
+| GitHub Pages | Statische Dokumentationsseite | Erledigt (https://chpollin.github.io/FemPrompt_SozArb/) |
 | OA-Analyse | Open-Access-Rate des Korpus | Ausstehend |
 
 ---
@@ -144,7 +144,7 @@ Die Asymmetrie ist wechselseitig und kontextabhaengig. Sie laesst sich mit gegen
 | Asymmetrie-Dimension | Risiko | Infrastruktur-Massnahme | Pruefbares Artefakt | Status |
 |---|---|---|---|---|
 | **Intransparenz** (justifikatorische Esoterik) | Unueberpruefbare Selektion durch Deep-Research-Modelle | Multi-Provider-Strategie (4 Modelle) + Selektions-Logging | `corpus/source_tool_mapping.json`, `deep-research/restored/` | Teilweise (Logging vorhanden, Audit ausstehend) |
-| **Konfabulation** | Erzeugung plausibler, aber falscher Aussagen | 3-Stage SKE mit deterministischer Stufe 2 + Verifikation Stufe 3 | `pipeline/knowledge/_verification/`, Confidence-Scores in Frontmatter | Umgesetzt |
+| **Ungesicherte LLM-Outputs** | LLMs koennen faktuell ungesicherte Aussagen erzeugen | 3-Stage SKE mit deterministischer Stufe 2 + Verifikation Stufe 3 | `pipeline/knowledge/_verification/`, Confidence-Scores in Frontmatter | Umgesetzt |
 | **Sycophancy** | Prompt-induzierte Ueberattribuierung von Kategorien | Negative Constraints in Prompts, Calibration Items, Prompt-Versionierung | `prompts/CHANGELOG.md`, negative Constraints in `benchmark/scripts/run_llm_assessment.py` | Umgesetzt (v2.1: 5 negative Constraints, neutrale Rolle, Restriktivitaetsregel) |
 | **Paywall-Bias** | Systematische Unterrepraesentation kostenpflichtiger Literatur | Hierarchische Beschaffungsstrategie + OA-Disclosure | PRISMA Flow-Diagramm, Beschaffungsrate (257/326 = 79%) | Teilweise (Rate dokumentiert, OA-Analyse ausstehend) |
 | **Prompt-Kompetenz** | Ergebnisabhaengigkeit von Prompt-Qualitaet | Prompt-Governance: Versionierung, Review, Dokumentation | `prompts/CHANGELOG.md`, `prompts/deep-research-template.md` | Umgesetzt (5 Prompts versioniert, Deep-Research-Template restauriert) |
@@ -183,14 +183,14 @@ Epistemische Infrastruktur bezeichnet die Gesamtheit derjenigen Verfahren, Dokum
 |---|---|---|---|
 | Include/Exclude (verbindlich) | Expert:innen (Sackl-Sharif, Klinger) | Feldkenntnis, interpretative Urteilskraft | Google Sheets, `human_assessment.csv` |
 | Include/Exclude (explorativ) | LLM (Haiku 4.5) | Skalierbarkeit, Muster-Erkennung | `assessment_llm.xlsx` (5D), 10K-Output |
-| Kategorie-Zuordnung | Beide (parallel, unabhaengig) | Vergleich ermoeglicht Divergenz-Analyse | Benchmark-Metriken (Cohen's Kappa) |
+| Kategorie-Zuordnung | Beide (parallel, unabhaengig) | Vergleich ermoeglicht Divergenz-Analyse | Konfusionsmatrix, Basisraten, Disagreement-Analyse |
 
 **Phase 3: Synthese (SKE)**
 
 | Entscheidung | Wer entscheidet | Warum | Artefakt |
 |---|---|---|---|
 | Extraktion (Stufe 1) | LLM (probabilistisch) | Skalierung ueber 249 Dokumente | `_stage1_json/` |
-| Formatierung (Stufe 2) | Deterministische Software | Reproduzierbarkeit, keine Konfabulation | `_stage2_draft/` |
+| Formatierung (Stufe 2) | Deterministische Software | Reproduzierbarkeit, keine LLM-Beteiligung | `_stage2_draft/` |
 | Verifikation (Stufe 3) | LLM (probabilistisch mit Pruefauftrag) | Pruefung gegen Original-Volltext | `_verification/`, Confidence-Score |
 | Eskalation bei niedrigem Confidence | Software-Regel (< 75) | Schwellenwert-basierte Weiterleitung | `needs_correction`-Markierung |
 
@@ -210,27 +210,6 @@ Drei Aspekte sind fuer das Projekt relevant:
 1. **Emergente Capabilities** ohne explizites Training (In-Context Learning, Domainuebertragung)
 2. **Alignment-Spannungen** zwischen Constitutional AI ("helpful, harmless, honest") und professionsspezifischen Werten der Sozialen Arbeit
 3. **Persona-Effekte** (Chen et al. 2025): Konsistente Charaktereigenschaften, die sich durch Finetuning verschieben und unvorhersehbare Cross-Trait-Effekte erzeugen
-
-### Konfabulation (nicht Halluzination)
-
-Konfabulation bezeichnet die Erzeugung kohaerenter, aber faktuell ungesicherter Aussagen durch ein LLM, ohne dass eine interne Instanz den Wahrheitsgehalt gegen eine externe Referenz prueft. Der Begriff ist der klinischen Psychologie entlehnt (Wiggins/Bunin 2023).
-
-**Begruendung der Terminologie:**
-- Halluzination setzt Wahrnehmungsstoerung bei vorhandenem Bewusstsein voraus (bei LLMs nicht gegeben)
-- Konfabulation beschreibt den Erzeugungsmechanismus praeziser (kohaerente Narrative ohne Taeuschungsabsicht)
-- Sui et al. (2024): Konfabulierte LLM-Outputs weisen hoehere Narrativitaet und semantische Kohaerenz auf als veridikale Outputs
-
-**Massnahme im Projekt:** Die 3-Stage SKE adressiert Konfabulationsrisiko durch deterministische Stufe 2 (kein LLM, keine Konfabulation moeglich) und Verifikation in Stufe 3 (Pruefauftrag gegen Original). Verifikation nutzt die Asymmetrie zwischen Erzeugung und Pruefung: Die Pruefung bereits erzeugter Ergebnisse ist systematisch einfacher als die Erzeugung neuer korrekter Ergebnisse.
-
-**Verifikations-Scoring:**
-
-| Aspekt | Gewicht | Pruefung | Schwellenwert |
-|---|---|---|---|
-| Completeness | 40% | Sind alle Pflichtfelder befuellt? Fehlen wesentliche Informationen? | Vollstaendig = 100%, Fehlendes Feld = Abzug |
-| Correctness | 40% | Stimmen extrahierte Aussagen mit dem Originaltext ueberein? | Zitat muss im Original auffindbar sein |
-| Category Validation | 20% | Sind Kategorien-Zuordnungen durch Evidenzzitate gestuetzt? | Evidenz-Zitat muss Kategorie stuetzen |
-
-Gesamt-Confidence: Gewichteter Score (0-100). Ergebnis: 242/249 (97.2%) erreichen Score >= 75. Confidence < 75 markiert Dokument als `needs_correction`.
 
 ### Sycophancy (Prompt-Konformitaet)
 
@@ -289,7 +268,7 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 
 - **Zirkularitaet:** LLMs werden eingesetzt, um Literatur ueber den Einsatz von LLMs zu untersuchen. Diese Zirkularitaet ist kein Defekt, sondern eine Bedingung des Feldes -- es gibt keinen externen Standpunkt, von dem aus feministische AI Literacies untersucht werden koennten, ohne selbst auf AI Literacies angewiesen zu sein
 - **Justifikatorische Esoterik (Hauswald):** Trainingsdaten, Modellarchitekturen und Selektionslogiken werden nicht offengelegt. Nicht der Inhalt, sondern die Begruendung bleibt unzugaenglich
-- **Konfabulationsrisiko:** Architekturbedingte Erzeugung plausibler, aber ungesicherter Aussagen (adressiert durch 3-Stage SKE)
+- **Ungesicherte LLM-Outputs:** LLMs koennen faktuell ungesicherte Aussagen erzeugen (adressiert durch 3-Stage SKE mit deterministischer Stufe 2 und Verifikation)
 - **Sycophancy-Risiko:** Prompt-induzierte Ueberattribuierung (adressiert durch Negative Constraints, Calibration Items)
 - **Paywall-Bias:** Systematische Unterrepraesentation kostenpflichtiger Literatur im Korpus (79% Beschaffungsrate, Rest hinter Paywalls)
 - **Ressourcenasymmetrie:** Gruppen, die Bias und Ungleichheit untersuchen, verfuegen haeufig ueber geringere Ressourcen fuer den Aufbau epistemischer Infrastruktur
@@ -303,7 +282,6 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 |---------|------------|
 | Epistemische Asymmetrie | Arbeitsteilung, in der beteiligte Instanzen auf grundsaetzlich verschiedene Weise Wissen verarbeiten |
 | Epistemische Infrastruktur | Verfahren, Dokumentationsstrukturen, Regelungen, die LLM-Beitraege ueberpruefbar machen |
-| Konfabulation | Erzeugung kohaerenter, aber faktuell ungesicherter Aussagen durch LLMs |
 | Sycophancy | Tendenz von LLMs, Prompt-Vorannahmen uebermaeessig zuzustimmen |
 | Jagged Frontier | Ungleichmaessige Kompetenzverteilung von KI-Systemen (Mollick) |
 | Structured Knowledge Extraction (SKE) | 3-stufige Verarbeitung von Volltexten zu Wissensdokumenten |

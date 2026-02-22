@@ -14,72 +14,83 @@
 
 ---
 
-## Pipeline-Schritte
+## Pipeline-Uebersicht
 
-### 1. LLM-basiertes PRISMA-Assessment
+Die Pipeline hat 7 Stufen. Alle Scripts befinden sich in `pipeline/scripts/`.
 
-Das Script `assessment/llm-5d/scripts/assess_papers.py` bewertet Papers automatisch (5D-Assessment, archiviert).
+| Stufe | Script | Input | Output | Kosten |
+|-------|--------|-------|--------|--------|
+| 1. PDF-Akquise | `download_zotero_pdfs.py` | Zotero API | `pipeline/pdfs/` | $0 |
+| 2. Markdown-Konversion | `convert_to_markdown.py` | PDFs | `pipeline/markdown/` | $0 |
+| 3. Validierung | `validate_markdown_enhanced.py` | Markdown + PDFs | Validation Reports | $0 |
+| 4. Post-Processing | `postprocess_markdown.py` | Markdown | `pipeline/markdown_clean/` | $0 |
+| 5. Knowledge Distillation | `distill_knowledge.py` | Markdown | `pipeline/knowledge/distilled/` | ~$7 |
+| 6. LLM-Assessment (10K) | `benchmark/scripts/run_llm_assessment.py` | Knowledge Docs | `benchmark/data/llm_assessment_10k.csv` | $1.44 |
+| 7. Vault-Generierung | `generate_vault.py` | Knowledge Docs + Assessment CSVs | `vault/` + `docs/downloads/vault.zip` | $0 |
 
-**Aufruf:** `python assessment/llm-5d/scripts/assess_papers.py -i input.xlsx -o output.xlsx`
-
-**Input:** Excel mit Paper-Metadaten (Titel, Abstract)
-**Output:** Excel mit Decision (Include/Exclude/Unclear) und Scores
-
-Performance: ~325 Papers in 24 min, $1.15, 100% Erfolgsrate
-
-Fuer das 10K-Assessment (Benchmark): `python benchmark/scripts/run_llm_assessment.py` (326 Papers, $1.44)
-
-### 2. PDF-Akquise
-
-Das Script `pipeline/scripts/download_zotero_pdfs.py` laedt PDFs von Zotero:
-
-**Aufruf:** `python pipeline/scripts/download_zotero_pdfs.py --output pipeline/pdfs/`
-
-**Ergebnis:** 257/326 PDFs heruntergeladen (78.8%)
-
-### 3. Einzelne Stages ausfuehren
-
-Alle Pipeline-Scripts befinden sich in `pipeline/scripts/`:
-
-| Stage | Script | Wichtige Parameter |
-|-------|--------|-------------------|
-| 1 | `download_zotero_pdfs.py` | `--output pipeline/pdfs/` |
-| 2 | `convert_to_markdown.py` | `--input pipeline/pdfs/ --output pipeline/markdown/` |
-| 2b | `validate_markdown_enhanced.py` | `--md-dir pipeline/markdown --pdf-dir pipeline/pdfs` |
-| 3 | `postprocess_markdown.py` | `--input-dir pipeline/markdown --output-dir pipeline/markdown_clean` |
-| 4 | `distill_knowledge.py` | `--input pipeline/markdown --output pipeline/knowledge/distilled` |
-| 5 | `generate_vault.py` | `--input pipeline/knowledge/distilled --output vault/` |
-
-Vollstaendige Parameter via `--help`.
+**Gesamtkosten:** ~$10.17 (Claude Haiku 4.5)
 
 ---
 
-## Pipeline-Optionen
+## Wichtige Befehle
 
-| Option | Beschreibung |
-|--------|--------------|
-| `--resume` | Nach Unterbrechung fortsetzen |
-| `--stages` | Nur bestimmte Stages ausfuehren |
-| `--skip` | Stages ueberspringen |
-| `--dry-run` | Vorschau ohne Ausfuehrung |
-| `-v` | Verbose Output |
+### Knowledge Distillation (3-Stage)
+
+```bash
+python pipeline/scripts/distill_knowledge.py --input pipeline/markdown --output pipeline/knowledge/distilled --limit 5
+```
+
+Drei Stufen: (1) LLM extrahiert JSON, (2) deterministisches Formatting, (3) LLM-as-a-Judge Verifikation. Ergebnis: 249 Knowledge-Dokumente, 97.2% mit Score >= 75.
+
+### LLM-Assessment (10K-Benchmark)
+
+```bash
+python benchmark/scripts/run_llm_assessment.py
+```
+
+10 binaere Kategorien (4 Technik + 6 Sozial), Include-Logik (min. 1 Technik UND min. 1 Sozial). 326/326 Papers, $1.44.
+
+### Vault-Generierung (mit Assessment-Integration)
+
+```bash
+python pipeline/scripts/generate_vault.py --clean
+```
+
+Liest Knowledge-Dokumente, Zotero-Metadaten und beide Assessment-CSVs (LLM + Human). Erzeugt Obsidian-Vault mit YAML-Frontmatter inkl. `llm_decision`, `human_decision`, `agreement`. 249 Papers, 205 mit Assessment-Daten, 79 Concept Notes.
+
+### SPA-Daten generieren
+
+```bash
+python pipeline/scripts/generate_docs_data.py
+```
+
+Erzeugt `docs/data/research_vault_v2.json` fuer die Single-Page Application.
+
+**GitHub Pages:** https://chpollin.github.io/FemPrompt_SozArb/
 
 ---
 
-## Performance-Schaetzung
+## Duales Assessment-System
 
-Fuer ~200 Include-Papers:
+| Track | Methode | Schema | Status |
+|-------|---------|--------|--------|
+| **Human** | Google Sheets -> CSV Export | 10 binaere Kategorien | 210/326 mit Decision |
+| **LLM** | Claude Haiku 4.5 | 10 binaere Kategorien | 326/326 (100%) |
 
-| Stage | Dauer | Kosten | Erfolgsrate |
-|-------|-------|--------|-------------|
-| LLM Assessment (5D) | 24 min | $1.15 | 100% |
-| PDF-Akquise | 1-2 h | $0 | 70-80% |
-| Markdown-Konversion | 2-3 h | $0 | ~100% |
-| AI-Summarisierung | 6-7 h | $8-9 | ~100% |
+Benchmark-Ergebnisse: Konfusionsmatrix (65/23/78/34), Basisraten (LLM 68% vs. Human 42% Include), Cohen's Kappa = 0.035 (Prevalence-Bias-Artefakt).
+
+---
+
+## Performance
+
+| Operation | Dauer | Kosten | Erfolgsrate |
+|-----------|-------|--------|-------------|
+| PDF-Akquise | 1-2 h | $0 | 78.8% (257/326) |
+| Markdown-Konversion | 2-3 h | $0 | 98% (252/257) |
+| Knowledge Distillation | 6-7 h | ~$7 | 100% (249/249) |
+| LLM-Assessment (10K) | ~30 min | $1.44 | 100% (326/326) |
 | Vault-Generierung | <1 min | $0 | 100% |
-| **Gesamt** | **~10 h** | **~$10** | **~75%** |
-
-**Modell:** Claude Haiku 4.5
+| **Gesamt** | **~10 h** | **~$10.17** | -- |
 
 ---
 
@@ -87,18 +98,20 @@ Fuer ~200 Include-Papers:
 
 | Problem | Loesung |
 |---------|---------|
-| HTTP 429 (Rate Limit) | Delay zwischen API-Calls erhoehen (5 statt 2 Sekunden) |
-| Fehlende PDFs | Logs pruefen: `acquisition_log.json`, `missing_pdfs.csv` |
-| Memory Error | Kleinere Batches verarbeiten (5 PDFs pro Durchlauf) |
+| HTTP 429 (Rate Limit) | Delay zwischen API-Calls erhoehen |
+| Fehlende PDFs | Logs pruefen: `acquisition_log.json` |
+| Memory Error | Kleinere Batches (`--limit 5`) |
+| NaN-Fehler | `isinstance(value, str)` pruefen vor Regex |
 
 ---
 
 ## Naechste Schritte
 
-1. **Mehr lernen:** [methods-and-pipeline.md](../methods-and-pipeline.md)
-2. **Status pruefen:** [status.md](../status.md)
-3. **Forschungskontext:** [project.md](../project.md)
+1. **Methodik:** [methods-and-pipeline.md](../methods-and-pipeline.md)
+2. **Status:** [status.md](../status.md)
+3. **Projektkontext:** [project.md](../project.md)
+4. **Paper-Abgleich:** [paper-integrity.md](../paper-integrity.md)
 
 ---
 
-*Aktualisiert: 2026-02-21*
+*Aktualisiert: 2026-02-22*

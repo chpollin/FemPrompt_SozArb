@@ -9,12 +9,13 @@
 
 Systematischer Literature Review zu **AI Literacy** und **LLM-Bias** im Kontext Sozialer Arbeit.
 
-**Ein Korpus (326 Papers), zwei Assessment-Tracks:**
+**Ein Korpus (326 Papers), drei Assessment-Tracks:**
 
 | Track | Methode | Schema | Status |
 |-------|---------|--------|--------|
-| **Human** | Google Sheets | 10 binaere Kategorien | In Arbeit |
-| **LLM** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig |
+| **Human** | Google Sheets | 10 binaere Kategorien | 210/326 mit Decision |
+| **LLM (5D)** | Claude Haiku 4.5 | 5 Dimensionen (0-3) | Fertig (archiviert) |
+| **LLM (10K)** | Claude Haiku 4.5 | 10 binaere Kategorien | Fertig (326/326, Benchmark) |
 
 ---
 
@@ -134,9 +135,11 @@ When starting a new session, read these files to understand current state:
 
 ### Vault Generation (pipeline/scripts/generate_vault.py)
 
-- **Concept extraction:** Frequency threshold ≥2 (configurable)
+- **Input:** Knowledge Docs + Zotero metadata + LLM/Human assessment CSVs
+- **Assessment integration:** llm_decision, human_decision, categories, confidence, agreement in YAML frontmatter
+- **Concept extraction:** Frequency threshold >=2 (configurable)
 - **Deduplication:** Use synonym mapping
-- **Quality target:** 85/100 or higher
+- **Output:** `vault/` (249 Papers, 205 with assessment data, 79 concepts) + `docs/downloads/vault.zip`
 
 ---
 
@@ -196,7 +199,7 @@ When starting a new session, read these files to understand current state:
 1. **LLM-based PRISMA assessment** - Fully automated, 100% success rate
 2. **5-dimensional relevance scoring** - Parametric, adaptable to other projects
 3. **Hierarchical PDF acquisition** - 4 fallback strategies
-4. **Human-LLM Benchmark** - Cohen's Kappa comparison
+4. **Human-LLM Benchmark** - Confusion matrix, base rates, Cohen's Kappa as comparison anchor
 
 ---
 

@@ -1,0 +1,126 @@
+---
+title: Feminism Confronts AI: The Gender Relations of Digitalisation
+authors:
+  - J. Wajcman
+  - E. Young
+year: 2023
+type: bookSection
+url: https://academic.oup.com/book/55103/chapter/423909956
+tags:
+  - paper
+  - feminist-ai
+  - bias-research
+date_added: 2026-02-22
+date_modified: 2026-02-22
+bias_types:
+  - Intersectional Technofeminist
+  - Algorithmic Bias
+  - Intersectional Accuracy
+mitigation_strategies:
+  - Intersectional Technofeminist
+  - Intersectional Accuracy
+---
+
+# Feminism Confronts AI: The Gender Relations of Digitalisation
+
+## Abstract
+
+Wajcman and Young provide a feminist critique of AI, arguing that the technology is not neutral but deeply embedded in existing gendered power structures. They highlight the severe underrepresentation of women in AI development as a key source of bias, leading to the creation of systems that reflect and amplify a masculine worldview. The authors contend that simply adding more women to the field is insufficient. Instead, they call for a fundamental shift in the culture of technology production, challenging the technical-social dualism and integrating feminist perspectives into the very design of AI. This requires addressing the structural power asymmetries that shape technological development and moving beyond individualistic solutions.
+
+## Key Concepts
+
+### Bias Types
+- [[Algorithmic Bias]]
+- [[Intersectional Accuracy]]
+- [[Intersectional Technofeminist]]
+
+### Mitigation Strategies
+- [[Intersectional Accuracy]]
+- [[Intersectional Technofeminist]]
+
+## Full Text
+
+---
+title: "Feminism Confronts AI: The Gender Relations of Digitalisation"
+authors: ["Judy Wajcman", "Erin Young"]
+year: 2023
+type: book
+language: en
+processed: 2026-02-05
+source_file: Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of.md
+confidence: 95
+---
+
+# Feminism Confronts AI: The Gender Relations of Digitalisation
+
+## Kernbefund
+
+Die Dominanz von Männern in AI- und Datenwissenschaftsteams führt zu einem Feedback-Loop, in dem geschlechtliche und rassistische Bias in algorithmische Systeme eingebettet und verstärkt werden. Dies ist nicht das Resultat unbewusster Diskriminierung, sondern das Ergebnis einer Technokultur, die Frauen und marginalisierte Gruppen systematisch aus Führungs- und Gestaltungspositionen ausgeschlossen hat.
+
+## Forschungsfrage
+
+Wie sind Geschlechterverhältnisse in die Entwicklung und Gestaltung von KI-Systemen eingebettet, und welche Konsequenzen hat die Unterrepräsentation von Frauen in KI-Feldern für die Verfestigung von Bias?
+
+## Methodik
+
+Theoretisch/Review: Intersektionale technofeministische Analyse mit empirischen Daten zu Geschlechterrepräsentation in Tech/AI-Feldern, Literaturanalyse der feministischen STS-Tradition, Dokumentenanalyse von Industrie- und Akademiedaten
+**Datenbasis:** Sekundäranalyse: Statistiken zur Geschlechterrepräsentation in Tech (OECD, UNESCO, Wired/Element AI, Kaggle, Stack Overflow, Google, Microsoft); akademische Publikationsdaten; Umfragedaten (McKinsey, Kapor Center, Atomico); Fallstudien algorithmischer Bias (z.B. Amazon-Recruiting-Tool, Gender Shades)
+
+## Hauptargumente
+
+- Frauen sind dramatisch unterrepräsentiert in KI und Datenwissenschaft (global 26%, UK 22%, nur 10-15% bei führenden Tech-Unternehmen), und diese Zahlen sind sogar niedriger als in früheren Computerberufen (1980er: ~40% → heute: 15-20%), was zeigt, dass die Bejahung technischer Expertise mit Männlichkeit kulturell historisch konstruiert wurde.
+- Die geschlechtliche Segregation in Tech ist nicht primär ein 'Pipeline-Problem' mangelnder Fähigkeiten, sondern resultat aus: (a) der historischen Neudefinition von Computerprogrammierung als männliche Profession seit den 1950ern, (b) einer durchdringenden 'Masculine Defaults'-Kultur in Unternehmen, und (c) hoher Abwanderungsraten von Frauen aus Tech-Jobs (2x höher als Männer) aufgrund von Diskriminierung, sexueller Belästigung und unwillkommener Arbeitsklimate.
+- Algorithmische Bias ist nicht ein Glitch oder Resultat schlechter Trainingsdaten allein, sondern eine strukturelle Konsequenz einer von Männern dominierten Technokultur: Bias wird in alle Phasen von ML-Systemen eingebettet (Datenerstellung, Datenauswahl, Modellierungsentscheidungen, Problem-Definition), verstärkt sich durch Feedback-Loops, und wird durch die Abwesenheit von Frauen und marginalisierten Perspektiven bei der Systemgestaltung perpetuiert.
+
+## Kategorie-Evidenz
+
+### Evidenz 1
+
+Diskussion der Digital Skills Gap und fehlender techno-sozialer Kompetenzen von Frauen: 'the gender 'digital skills gap' persists... divided not only remains large but, in some contexts, is growing wider.'
+
+### Evidenz 2
+
+Fokus auf Machine Learning, Algorithmen, automatisierte Entscheidungssysteme: 'AI, underpinned by algorithms and machine learning, has become a defining feature and driving force of this data-driven digitalisation.'
+
+### Evidenz 3
+
+Zentrale Analyse von Algorithmic Bias und struktureller Benachteiligung: 'Data created, processed, and interpreted within unequal power structures can reproduce the same exclusions and discriminations present in society.'
+
+### Evidenz 4
+
+Expliziter Gender-Fokus durchgehend: 'women are under-represented in this digital revolution... despite the possibilities for marshalling greater equality'; 'historical relationship between technical expertise and masculinity'
+
+### Evidenz 5
+
+Intersektionale Perspektive auf marginalisierte Gruppen: 'women of colour are particularly under-represented... Only 1.6 percent of Google's US workforce in 2020 were Black women'; 'a technoculture that has systematically excluded women and people from marginalised groups'
+
+### Evidenz 6
+
+Explizite Verwendung feministischer STS-Theorie (Harding, Haraway, D'Ignazio, Suchman): 'Adopting an intersectional technofeminist approach... feminist STS scholars have been researching the gendering of technology for decades'; Referenzen auf Crenshaw (1995), Collins (1998), Sandoval (2000) für intersektionale feministische Theorie
+
+### Evidenz 7
+
+Kritik an Fairness-Konzepten und deren Limitations: 'Notably, since 'fairness' cannot be mathematically defined, and is rather a deeply political issue, this task often falls to the developers themselves'; 'bias in, bias out'
+
+## Assessment-Relevanz
+
+**Domain Fit:** Das Paper ist hochrelevant für die Schnittstelle KI/Geschlechtergerechtigkeit und mit Einschränkungen auch für Soziale Arbeit: Es zeigt, wie KI-Systeme durch männlich-dominierte Techno-Kulturen geprägt sind und damit strukturelle Ungleichheiten reproduzieren—ein zentrales Anliegen kritischer Sozialer Arbeit. Allerdings behandelt es Soziale Arbeit nicht explizit als Anwendungsfeld oder Berufsgruppe.
+
+**Unique Contribution:** Das Paper verbindet historische Analyse der Technikentwicklung (Computing als ursprünglich weibliche Arbeit) mit zeitgenössischer intersektionaler feministischer Kritik an KI und bietet damit eine durchgängige Argumentation gegen die Mythenbildung um technische Objektivität.
+
+**Limitations:** Begrenzte Behandlung von Lösungsansätzen jenseits der Forderung nach mehr Frauen in Tech; keine detaillierten empirischen Fallstudien zu spezifischen AI-Systemen; fokussiert primär auf westliche/Global-North-Perspektive, obwohl Global-South-Dynamiken erwähnt werden; keine Diskussion von Intersektionalität jenseits Gender, Race und Class.
+
+**Target Group:** KI-Entwickler und Softwarearchitekten (Reflexion über technische Entscheidungsfindung), Tech-Unternehmen und HR-Leitung (Diversitätsstrategie), Policymaker und Regulatoren (Tech-Governance), feministische Theoretiker und Gender Studies, kritische Sozialarbeiter und Sozialwissenschaftler mit Interesse an technologischen Systemen und Ungleichheit, Anwälte im Bereich Antidiskriminierung
+
+## Schlüsselreferenzen
+
+- [[Hicks_2017]] - Programmed Inequality: How Britain Discarded Women Technologists
+- [[Buolamwini_Gebru_2018]] - Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification
+- [[DIgnazio_Klein_2020]] - Data Feminism
+- [[Criado_Perez_2019]] - Invisible Women: Exposing Data Bias in a World Designed for Men
+- [[Eubanks_2018]] - Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor
+- [[West_Whittaker_Crawford_2019]] - Discriminating Systems: Gender, Race and Power in AI
+- [[ONeil_2016]] - Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy
+- [[Noble_2018]] - Algorithms of Oppression: How Search Engines Reinforce Racism
+- [[Wajcman_2004]] - TechnoFeminism
+- [[Haraway_1988]] - Situated Knowledges: The Science Question in Feminism

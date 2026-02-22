@@ -1,0 +1,132 @@
+---
+title: Introducing Generative Artificial Intelligence into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards
+authors:
+  - M. Y. Rodriguez
+  - L. Goldkind
+  - B. G. Victor
+  - B. S. Hiltz
+  - B. E. Perron
+year: 2024
+type: journalArticle
+url: https://doi.org/10.1080/10437797.2024.2340931
+doi: 10.1080/10437797.2024.2340931
+tags:
+  - paper
+  - feminist-ai
+  - bias-research
+date_added: 2026-02-22
+date_modified: 2026-02-22
+bias_types:
+  - Stereotyping
+mitigation_strategies:
+  - Prompt Engineering
+---
+
+# Introducing Generative Artificial Intelligence into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards
+
+## Abstract
+
+Proposal to add an explicit AI competency to MSW accreditation. Outlines benefits and risks of generative AI, recommends curricular content on ethics, bias, transparency, and responsible use, and frames AI literacy as essential for safeguarding client dignity and equity while leveraging innovation.
+
+## Key Concepts
+
+### Bias Types
+- [[Stereotyping]]
+
+### Mitigation Strategies
+- [[Prompt Engineering]]
+
+## Full Text
+
+---
+title: "Introducing Generative Artificial Intelligence Into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards"
+authors: ["Maria Y. Rodriguez", "Lauri Goldkind", "Bryan G. Victor", "Barbara Hiltz", "Brian E. Perron"]
+year: 2024
+type: journalArticle
+language: en
+processed: 2026-02-05
+source_file: Rodriguez_2024_Introducing_Generative_Artificial_Intelligence.md
+confidence: 95
+---
+
+# Introducing Generative Artificial Intelligence Into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards
+
+## Kernbefund
+
+Die Autor:innen schlagen eine neue EPAS-Kompetenzindikator vor: Sozialarbeiter demonstrieren Wissen, Fähigkeiten und Verständnis für verantwortungsvolle Nutzung generativer KI-Tools. Vier Kernfähigkeiten werden identifiziert: konzeptionelles Verständnis von KI-Modellen, effektives Prompting, Output-Bewertung und kontinuierliches Lernen.
+
+## Forschungsfrage
+
+Wie sollten generative KI-Systeme in die Master of Social Work (MSW) Curricula integriert werden, um Studierende auf ethische und kompetente Nutzung dieser Technologien vorzubereiten?
+
+## Methodik
+
+Theoretisch/Proposal-basiert: Literaturanalyse und konzeptuelle Rahmenentwicklung für curriculare Integration von GenAI in der Sozialarbeit-Ausbildung
+**Datenbasis:** nicht empirisch; konzeptuelle Analyse und Policy-Empfehlung basierend auf Literaturgrundlagen
+
+## Hauptargumente
+
+- Sozialarbeiter:innen üben bereits in einer von GenAI transformierten Welt aus und müssen daher während ihrer Ausbildung gezielt auf ethische und kompetente Nutzung dieser Technologien vorbereitet werden, um CSWE-Kompetenzstandards zu erfüllen.
+- GenAI bietet erhebliches Potenzial zur Unterstützung von Sozialarbeit auf allen Ebenen (Mikro, Meso, Makro): von Dokumentation und Fallmanagement über Ressourcenentwicklung bis zu Policy-Analyse, besonders in ressourcenbeschränkten Organisationen.
+- GenAI-Systeme perpetuieren systematische Vorurteile aus ihren Trainingsdaten und können marginalisierte Gruppen (Frauen, People of Color, LGBTQ+ Menschen) überproportional schädigen; Sozialarbeiter:innen müssen diese Risiken kritisch evaluieren können.
+
+## Kategorie-Evidenz
+
+### Evidenz 1
+
+The article proposes four foundational skills: '(1) demonstrating conceptual understanding of the ways in which AI models are trained, and the types of tasks they can perform; (2) becoming knowledgeable users of GenAI by understanding how to write prompts effectively; (3) assessing output from GenAI models for ethical, socioemotional, and practice implications; and (4) cultivating intellectual curiosity by continuously engaging in active learning.'
+
+### Evidenz 2
+
+Focus on LLMs (ChatGPT, Claude, Bard) and image-creating models (Midjourney, DALL-E, Stable Diffusion): 'GenAI systems use vast amounts of training data to create images, texts, music, video, and other forms of design with results that are often similar or sometimes indistinguishable from human content creators.'
+
+### Evidenz 3
+
+Dedicated section on prompt engineering: 'Prompt engineering is the central skill for interacting with GenAI models and getting desired outputs for a given task... techniques like personas, game play, flipped interactions, and context managers... can be customized to address challenges in diverse areas.'
+
+### Evidenz 4
+
+Discussion of machine learning and narrow AI: 'Narrow AI systems have been deployed in social work practice for over a decade, including predictive analytics to assist in clinical decision making and simulation-based training.'
+
+### Evidenz 5
+
+Central focus on MSW curriculum integration and social work practice across three levels: 'Practice at the individual level often includes case management and therapeutic interventions... mezzolevel practitioners and organizations... macro social work is broadly focused on policy-level practice and systems change efforts.'
+
+### Evidenz 6
+
+Critical examination of bias in GenAI systems: 'bias in GenAI systems is often geared toward women, people of color, gender and sexually minortized individuals and communities, and those at the intersections of these identities... When prompted for the terms CEO or director, 97% of the returned images were White men.'
+
+### Evidenz 7
+
+Explicit mention of gender bias: 'a recent study of images generated by Stable Diffusion and DALL-E demonstrated gender bias. When prompted for the terms CEO or director, 97% of the returned images were White men.'
+
+### Evidenz 8
+
+Recognition of disproportionate harms to marginalized communities: 'bias in GenAI systems is often geared toward women, people of color, gender and sexually minortized individuals and communities, and those at the intersections of these identities.'
+
+### Evidenz 9
+
+Discussion of algorithmic fairness and mitigation: 'Social work courses should investigate how outputs generated by these systems could perpetuate this bias and what mitigation is possible... understanding how LLMs are trained and operated is crucial to mitigate the risks of hallucinations.'
+
+## Assessment-Relevanz
+
+**Domain Fit:** Das Paper ist hochgradig relevant für die Schnittstelle von KI, Sozialer Arbeit und Gerechtigkeitsfragen. Es verbindet technologische Kompetenzen mit sozialen Gerechtigkeitsanliegen und adressiert explizit, wie marginalisierte Gruppen durch biased GenAI-Systeme gefährdet sind.
+
+**Unique Contribution:** Der Hauptbeitrag ist ein konkreter, institutionalisierter Proposal für eine neue EPAS-Kompetenz in der MSW-Ausbildung mit vier definierten Kernfähigkeiten, die kritische Literalität und ethische Reflexion zu GenAI in der Sozialarbeit systematisieren.
+
+**Limitations:** Das Paper ist konzeptionell-theoretisch und bietet keine empirischen Daten zur Effektivität der vorgeschlagenen Curriculumintervention; es thematisiert auch die implementierungspraktischen Herausforderungen (Ressourcen, Fakultätsschulung) nur ansatzweise.
+
+**Target Group:** MSW-Programmdirektoren und Curricula-Entwickler, Sozialarbeit-Lehrende, Policy-Maker im CSWE-Kontext, Sozialarbeitspraktiker:innen, Hochschulleitung; sekundär: KI-Ethiker:innen mit Interesse an professioneller Ausbildung
+
+## Schlüsselreferenzen
+
+- [[Singer_et_al_2023]] - AI creates the message: Integrating AI language learning models into social work education and practice
+- [[Dhingra_et_al_2023]] - Queer people are people first: Deconstructing sexual identity stereotypes in large language models
+- [[Whittaker_et_al_2019]] - Disability, bias, and AI
+- [[Goldkind_Wolf_2020]] - Selling your soul on the information superhighway: Consenting to services in direct-to-consumer tele-mental health
+- [[Patton_et_al_2023]] - ChatGPT for social work science: Ethical challenges and opportunities
+- [[Omiye_et_al_2023]] - Large language models propagate race-based medicine
+- [[Wei_et_al_2022]] - Chain of thought prompting elicits reasoning in large language models
+- [[De_Jong_Naranjo_2019]] - General education teacher educators and English language learner teacher preparation: Infusion as curricular change
+- [[Wing_2006]] - Computational thinking
+- [[Gao_et_al_2023]] - Retrieval-augmented generation for large language models: A survey

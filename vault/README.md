@@ -1,41 +1,29 @@
-# FemPrompt Research Vault
+# FemPrompt Research Vault (Improved)
 
-Obsidian Knowledge Graph für den Human vs. Agent Assessment Benchmark.
+An Obsidian knowledge graph for feminist AI and bias research.
 
-## Zweck
+## Improvements in this version
 
-Dieses Vault enthält:
-- **Papers/** - Zusammenfassungen der Include-Papers mit Assessment-Metadaten
-- **Concepts/** - Extrahierte Konzepte (Bias Types, Mitigation Strategies)
-- **MOCs/** - Maps of Content für Navigation
+- **Concept deduplication**: Synonyms mapped to canonical forms
+- **Frequency filtering**: Only concepts mentioned 2+ times get notes
+- **Better normalization**: Consistent naming and capitalization
+- **Blacklist filtering**: Removed overly generic terms
+- **Frequency tracking**: See how often concepts appear
 
-## Assessment-Provenienz
+## Quick Start
 
-Jedes Paper im Vault hat Metadaten zu beiden Assessment-Tracks:
+1. Open Obsidian
+2. Select 'Open folder as vault'
+3. Choose: `C:\Users\Chrisi\Documents\GitHub\FemPrompt_SozArb\vault`
+4. Start with [[Index]] in the MOCs folder
 
-```yaml
-assessment:
-  human: Include|Exclude|Unclear
-  agent: Include|Exclude|Unclear
-  agreement: true|false
-```
+## Structure
 
-## Nutzung
+- **Papers/**: Individual research papers
+- **Concepts/**: Bias types and mitigation strategies
+- **MOCs/**: Maps of Content for navigation
+- **Synthesis/**: Your analysis and notes
 
-1. Öffne diesen Ordner als Vault in Obsidian
-2. Starte mit `MOCs/Index.md`
-3. Nutze die MOCs für thematische Navigation
+## Generated
 
-## Generierung
-
-```bash
-python pipeline/scripts/generate_vault.py \
-  --input pipeline/knowledge/distilled/ \
-  --assessment benchmark/data/merged_comparison.csv \
-  --output vault/
-```
-
----
-
-*Version: 2.0 (Human vs. Agent)*
-*Erstellt: 2026-02-02*
+2026-02-22 14:27

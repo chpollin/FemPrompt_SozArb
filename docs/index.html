@@ -116,9 +116,12 @@
                         </select>
                     </div>
 
-                    <div class="filter-group">
+                    <div class="filter-group" style="display:flex;gap:0.5rem;">
                         <button class="export-button" onclick="exportFilteredPapers()" title="Export filtered papers as CSV">
                             <i class="fas fa-download"></i> Export CSV
+                        </button>
+                        <button class="export-button" onclick="downloadVaultZip()" title="Download full Obsidian vault as ZIP">
+                            <i class="fas fa-box-archive"></i> Vault (.zip)
                         </button>
                     </div>
                 </div>

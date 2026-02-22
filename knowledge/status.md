@@ -56,34 +56,40 @@ M1-M7 abgeschlossen. Paper v0.4: 17.975 Zeichen (Limit: 18.000). Alle Abschnitte
 - [x] Ergebnisse in `benchmark/results/` dokumentiert
 - Commit: `07c4ac6`
 
-**Kernergebnisse:**
+**Kernergebnisse (primaere Metriken: Konfusionsmatrix + Basisraten):**
 
 | Metrik | Wert | Interpretation |
 |--------|------|----------------|
 | Papers mit beiden Assessments | 210 (mit Decision) | Benchmark-Basis |
-| Decision: Gesamtuebereinstimmung | 47,1 % | -- |
-| Decision: Cohen's Kappa | 0,035 | "slight" |
-| Mittlere Kategorie-Uebereinstimmung | 53,8 % | -- |
-| LLM Include-Rate | 71,2 % (232/326) | vs. Human 42 % |
-| Human Include-Rate | 42 % (88/210) | -- |
+| **LLM Include-Rate** | **68 % (143/210)** | vs. Human 42 % |
+| **Human Include-Rate** | **42 % (88/210)** | Differenz: 26 Prozentpunkte |
 | Disagreements gesamt | 111 | 78 LLM-Include/Human-Exclude |
+| Cohen's Kappa (Vergleichsanker) | 0,035 | Eingeschraenkte Aussagekraft (Prevalence-Bias-Paradox) |
 
-**Kategoriespezifische Kappa-Werte:**
+**Konfusionsmatrix:**
 
-| Kategorie | Uebereinstimmung | Kappa |
-|-----------|-----------------|-------|
-| Soziale_Arbeit | 68,9 % | -0,083 |
-| Feministisch | 64,2 % | +0,075 (beste) |
-| Bias_Ungleichheit | 62,6 % | -0,097 |
-| KI_Sonstige | 51,5 % | +0,048 |
-| Diversitaet | 50,6 % | +0,024 |
-| Prompting | 52,4 % | -0,066 |
-| AI_Literacies | 54,6 % | -0,018 |
-| Generative_KI | 49,4 % | -0,004 |
-| Gender | 41,1 % | -0,098 |
-| Fairness | 43,2 % | -0,163 (schlechteste) |
+```
+                    LLM Include    LLM Exclude
+Human Include           65              23
+Human Exclude           78              34
+```
 
-**Interpretation:** Der niedrige Kappa-Wert ist kein Messfehler, sondern der messbare Ausdruck epistemischer Asymmetrie. LLM und Expert:innen operieren auf verschiedenen Wissensbasen. Die Divergenz ist informationshaltig -- sie markiert, wo maschinelle Musterkennung und disziplinaeres Kontextwissen strukturell auseinanderfallen.
+**Kategoriespezifische Divergenz (Basisraten + Kappa als Vergleichswert):**
+
+| Kategorie | Human Ja | LLM Ja | Differenz | Richtung | Kappa |
+|-----------|----------|--------|-----------|----------|-------|
+| Gender | 63,2 % | 36,2 % | -27pp | LLM unterschaetzt | -0,098 |
+| Fairness | 52,5 % | 73,5 % | +21pp | LLM ueberschaetzt | -0,163 |
+| Soziale_Arbeit | 24,4 % | 7,3 % | -17pp | LLM unterschaetzt | -0,083 |
+| KI_Sonstige | 66,3 % | 47,2 % | -19pp | LLM unterschaetzt | +0,048 |
+| Feministisch | 22,2 % | 29,6 % | +7pp | Aehnlich | +0,075 |
+| Bias_Ungleichheit | 79,8 % | 76,7 % | -3pp | Aehnlich | -0,097 |
+| Diversitaet | -- | -- | -- | -- | +0,024 |
+| Prompting | -- | -- | -- | -- | -0,066 |
+| AI_Literacies | -- | -- | -- | -- | -0,018 |
+| Generative_KI | -- | -- | -- | -- | -0,004 |
+
+**Interpretation:** Die Konfusionsmatrix zeigt das asymmetrische Divergenzmuster: 78 Faelle LLM-Include/Human-Exclude gegenueber nur 23 in umgekehrter Richtung. Die Basisraten-Differenz (26 Prozentpunkte) verweist auf fundamental verschiedene Operationsweisen. Cohen's Kappa (0,035) ist primaer ein Artefakt des Prevalence-Bias-Paradoxes (Byrt et al. 1993): Bei stark unterschiedlichen Basisraten kollabiert Kappa, unabhaengig von der Bewertungsqualitaet. Die inhaltliche Analyse stuetzt sich daher auf Konfusionsmatrix, Basisraten und die qualitative Disagreement-Analyse. Details: `ANALYSIS_SESSION_2026-02-22.md`, Abschnitt 2.
 
 ### M7: Ergebnisse ins Paper einarbeiten -- ABGESCHLOSSEN
 
@@ -111,13 +117,16 @@ M1-M7 abgeschlossen. Paper v0.4: 17.975 Zeichen (Limit: 18.000). Alle Abschnitte
   - Bugfix: Observable Plot durch Chart.js ersetzt (Commit `d22a22f`)
   - Logging verbessert: kompaktes grouped init summary, Filter/Tab/Benchmark state (Commit `1f3092b`)
   - Commits: `5d8bd36`, `d22a22f`, `1f3092b`
-  - **Noch ausstehend:** GitHub Pages aktivieren: Settings -> Pages -> Source: docs/, Branch: main (manuell, 2 Min.)
+  - GitHub Pages aktiviert: https://chpollin.github.io/FemPrompt_SozArb/
 - [x] Visualisierungen umgebaut: epistemisches Framing (Commit `bb258f6`)
   - Divergenz-Scatter (Bug-Fix: Achsen 0-100%, Diagonale korrekt)
   - Slope Chart ersetzt Radar (10 Linien, Steigung = epistemische Divergenz)
   - Overlap-Treemap (additives Framing, Klick filtert Papers-Tab)
   - Coverage Map (LLM=326 vs. Human=210)
-- [ ] Vault-Building (Obsidian, lokal): `pipeline/scripts/generate_vault.py` existiert, noch nicht ausgefuehrt
+- [x] Vault-Building (Obsidian): `pipeline/scripts/generate_vault.py` mit Assessment-Integration
+  - 249 Papers, 205 mit Assessment-Daten (LLM + Human), 79 Concept Notes
+  - YAML-Frontmatter: llm_decision, human_decision, llm_categories, human_categories, agreement
+  - ZIP fuer Download: `docs/downloads/vault.zip`
 - Abhaengigkeit: M6 (Assessment-Daten) -- erledigt
 
 ---
@@ -284,7 +293,7 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - [x] Benchmark-Ergebnisse ins Paper eingearbeitet (Abschnitt 5 befuellt)
 - [x] Paper ausschreiben: v0.4, 17.975 Zeichen, alle Abschnitte fertig
 - [ ] Review-Runde mit Co-Autor:innen (Susi, Sabine, Christian Steiner)
-- [ ] Vault-Building (Obsidian) + GitHub Pages aktivieren (manuell: Settings -> Pages)
+- [x] Vault-Building (Obsidian) mit Assessment-Integration + GitHub Pages aktiviert
 - [ ] Paper einreichen (Deadline 4. Mai 2026)
 
 ---
@@ -357,4 +366,4 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 ---
 
-*Aktualisiert: 2026-02-21*
+*Aktualisiert: 2026-02-22*

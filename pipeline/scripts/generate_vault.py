@@ -8,12 +8,14 @@ import os
 import sys
 import json
 import re
+import csv
 import shutil
 from pathlib import Path
 from typing import Dict, List, Set, Tuple, Optional
 from datetime import datetime
 from collections import defaultdict, Counter
 import hashlib
+import zipfile
 
 # Fix encoding for Windows console
 if hasattr(sys.stdout, 'reconfigure'):
@@ -32,6 +34,19 @@ class ImprovedVaultGenerator:
         self.vault_path = self.base_path / vault_name
         self.papers_path = self.base_path / "pipeline" / "knowledge" / "distilled"
         self.metadata_path = self.base_path / "corpus" / "zotero_export.json"
+        self.llm_assessment_path = self.base_path / "benchmark" / "data" / "llm_assessment_10k.csv"
+        self.human_assessment_path = self.base_path / "benchmark" / "data" / "human_assessment.csv"
+
+        # Assessment data indexed by Zotero_Key
+        self.llm_assessments: Dict[str, Dict] = {}
+        self.human_assessments: Dict[str, Dict] = {}
+
+        # Assessment categories (10K binary)
+        self.assessment_categories = [
+            "AI_Literacies", "Generative_KI", "Prompting", "KI_Sonstige",
+            "Soziale_Arbeit", "Bias_Ungleichheit", "Gender",
+            "Diversitaet", "Feministisch", "Fairness"
+        ]
 
         # Improved concept extraction patterns - FIXED to avoid fragments
         self.bias_patterns = [
@@ -252,7 +267,8 @@ class ImprovedVaultGenerator:
         print(f"+ Vault structure created at {self.vault_path}")
 
     def load_metadata(self) -> Dict[str, Dict]:
-        """Load Zotero metadata"""
+        """Load Zotero metadata, indexed by simplified title.
+        Also builds self.title_to_zotero_key for assessment matching."""
         if not self.metadata_path.exists():
             print(f"Warning: Metadata file not found: {self.metadata_path}")
             return {}
@@ -261,14 +277,68 @@ class ImprovedVaultGenerator:
             metadata = json.load(f)
 
         indexed = {}
+        self.title_to_zotero_key = {}
         for item in metadata:
             title = item.get('title', '')
+            zotero_key = item.get('key', '')
             if title:
                 simple_title = self.simplify_title(title)
                 indexed[simple_title] = item
+                if zotero_key:
+                    self.title_to_zotero_key[simple_title] = zotero_key
 
         print(f"+ Loaded metadata for {len(indexed)} papers")
         return indexed
+
+    def load_assessments(self):
+        """Load LLM and human assessment CSVs, indexed by Zotero_Key."""
+        # Load LLM assessment
+        if self.llm_assessment_path.exists():
+            with open(self.llm_assessment_path, 'r', encoding='utf-8-sig', newline='') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    key = row.get('Zotero_Key', '').strip()
+                    if not key:
+                        continue
+                    cats = {}
+                    for cat in self.assessment_categories:
+                        val = row.get(cat, '').strip()
+                        cats[cat] = True if val == 'Ja' else False
+                    try:
+                        confidence = float(row.get('LLM_Confidence', 0) or 0)
+                    except (ValueError, TypeError):
+                        confidence = 0.0
+                    self.llm_assessments[key] = {
+                        'decision': row.get('Decision', '').strip(),
+                        'categories': cats,
+                        'confidence': round(confidence, 2),
+                    }
+            print(f"+ Loaded LLM assessments for {len(self.llm_assessments)} papers")
+        else:
+            print(f"Warning: LLM assessment not found: {self.llm_assessment_path}")
+
+        # Load human assessment
+        if self.human_assessment_path.exists():
+            with open(self.human_assessment_path, 'r', encoding='utf-8-sig', newline='') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    key = row.get('Zotero_Key', '').strip()
+                    if not key:
+                        continue
+                    decision = row.get('Decision', '').strip()
+                    if not decision:
+                        continue  # Skip papers without human decision
+                    cats = {}
+                    for cat in self.assessment_categories:
+                        val = row.get(cat, '').strip()
+                        cats[cat] = True if val == 'Ja' else False
+                    self.human_assessments[key] = {
+                        'decision': decision,
+                        'categories': cats,
+                    }
+            print(f"+ Loaded human assessments for {len(self.human_assessments)} papers")
+        else:
+            print(f"Warning: Human assessment not found: {self.human_assessment_path}")
 
     def simplify_title(self, title: str) -> str:
         """Simplify title for matching"""
@@ -348,8 +418,8 @@ class ImprovedVaultGenerator:
 
         return concepts
 
-    def create_paper_note(self, paper_file: Path, metadata: Dict) -> Tuple[str, Dict]:
-        """Create an Obsidian note for a paper"""
+    def create_paper_note(self, paper_file: Path, metadata: Dict, zotero_key: str = '') -> Tuple[str, Dict]:
+        """Create an Obsidian note for a paper, including assessment data."""
         with open(paper_file, 'r', encoding='utf-8') as f:
             content = f.read()
 
@@ -388,6 +458,28 @@ class ImprovedVaultGenerator:
             'mitigation_strategies': list(concepts['mitigations']) if concepts['mitigations'] else []
         }
 
+        # Look up assessment data via Zotero key
+        llm_data = self.llm_assessments.get(zotero_key, {})
+        human_data = self.human_assessments.get(zotero_key, {})
+
+        if llm_data:
+            frontmatter['llm_decision'] = llm_data['decision']
+            frontmatter['llm_confidence'] = llm_data['confidence']
+            positive_cats = [c for c, v in llm_data['categories'].items() if v]
+            frontmatter['llm_categories'] = positive_cats
+
+        if human_data:
+            frontmatter['human_decision'] = human_data['decision']
+            positive_cats = [c for c, v in human_data['categories'].items() if v]
+            frontmatter['human_categories'] = positive_cats
+
+        # Compute agreement status
+        if llm_data and human_data:
+            if llm_data['decision'] == human_data['decision']:
+                frontmatter['agreement'] = 'agree'
+            else:
+                frontmatter['agreement'] = 'disagree'
+
         # Create note content
         note = f"---\n"
         for key, value in frontmatter.items():
@@ -396,6 +488,10 @@ class ImprovedVaultGenerator:
                     note += f"{key}:\n"
                     for item in value:
                         note += f"  - {item}\n"
+                else:
+                    note += f"{key}: []\n"
+            elif isinstance(value, float):
+                note += f"{key}: {value}\n"
             elif value:
                 note += f"{key}: {value}\n"
         note += "---\n\n"
@@ -405,6 +501,25 @@ class ImprovedVaultGenerator:
         if metadata.get('abstractNote'):
             note += f"## Abstract\n\n{metadata['abstractNote']}\n\n"
 
+        # Add assessment summary section
+        if llm_data or human_data:
+            note += "## Assessment\n\n"
+            if llm_data:
+                note += f"**LLM Decision:** {llm_data['decision']}"
+                note += f" (Confidence: {llm_data['confidence']})\n"
+                pos = [c for c, v in llm_data['categories'].items() if v]
+                if pos:
+                    note += f"**LLM Categories:** {', '.join(pos)}\n"
+            if human_data:
+                note += f"**Human Decision:** {human_data['decision']}\n"
+                pos = [c for c, v in human_data['categories'].items() if v]
+                if pos:
+                    note += f"**Human Categories:** {', '.join(pos)}\n"
+            if llm_data and human_data:
+                status = "Agree" if llm_data['decision'] == human_data['decision'] else "Disagree"
+                note += f"**Agreement:** {status}\n"
+            note += "\n"
+
         # Add concept links section
         note += "## Key Concepts\n\n"
 
@@ -413,7 +528,6 @@ class ImprovedVaultGenerator:
             for concept in sorted(concepts['bias_types']):
                 note += f"- [[{concept}]]\n"
             note += "\n"
-
 
         if concepts['mitigations']:
             note += "### Mitigation Strategies\n"
@@ -653,9 +767,13 @@ class ImprovedVaultGenerator:
         # Load metadata
         metadata_index = self.load_metadata()
 
+        # Load assessment data
+        self.load_assessments()
+
         # Process papers
         paper_concepts_map = {}
         papers_data = []
+        assessment_matched = 0
 
         if self.papers_path.exists():
             paper_files = list(self.papers_path.glob("*.md"))
@@ -672,8 +790,15 @@ class ImprovedVaultGenerator:
                             metadata = value
                             break
 
+                # Look up Zotero key for assessment matching
+                zotero_key = self.title_to_zotero_key.get(simple_title, '')
+                if not zotero_key and metadata:
+                    zotero_key = metadata.get('key', '')
+                if zotero_key and (zotero_key in self.llm_assessments or zotero_key in self.human_assessments):
+                    assessment_matched += 1
+
                 # Create paper note
-                note_content, concepts = self.create_paper_note(paper_file, metadata)
+                note_content, concepts = self.create_paper_note(paper_file, metadata, zotero_key)
 
                 # Save paper note
                 paper_title = metadata.get('title', paper_file.stem)
@@ -760,10 +885,31 @@ class ImprovedVaultGenerator:
         print(f"\n>>> Vault generation complete!")
         print(f">>> Statistics:")
         print(f"    - Papers: {stats['papers']}")
+        print(f"    - Papers with assessment data: {assessment_matched}")
         print(f"    - Concepts created: {created_concepts}")
         print(f"    - Concepts skipped: {skipped_concepts}")
         print(f"    - Total unique concepts found: {stats['total_concepts']}")
         print(f">>> Open {self.vault_path} in Obsidian to explore your knowledge graph\n")
+
+        # Generate ZIP for web download
+        self.generate_vault_zip()
+
+    def generate_vault_zip(self):
+        """Package the vault as a ZIP file for web download"""
+        downloads_dir = self.base_path / "docs" / "downloads"
+        downloads_dir.mkdir(parents=True, exist_ok=True)
+        zip_path = downloads_dir / "vault.zip"
+
+        print(f"\n[ZIP] Packaging vault for download...")
+
+        with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
+            for file_path in self.vault_path.rglob('*'):
+                if file_path.is_file():
+                    arcname = file_path.relative_to(self.vault_path)
+                    zf.write(file_path, arcname)
+
+        size_mb = zip_path.stat().st_size / (1024 * 1024)
+        print(f"  + Created {zip_path} ({size_mb:.1f} MB)")
 
     def create_vault_readme(self):
         """Create a README for the vault"""

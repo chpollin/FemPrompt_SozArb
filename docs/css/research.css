@@ -1321,3 +1321,20 @@ main {
     border-radius: 3px;
     transition: width 0.3s;
 }
+
+/* Knowledge Document Download Link */
+.knowledge-doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.knowledge-doc-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
