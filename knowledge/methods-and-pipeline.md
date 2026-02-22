@@ -377,6 +377,11 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 | `benchmark/results/` | Ergebnisse | agreement_metrics.json, disagreements.csv |
 | `corpus/` | Korpus-Metadaten | zotero_export.json, papers_metadata.csv, source_tool_mapping.json |
 | `deep-research/restored/` | Deep-Research-Artefakte | 4 RIS-Dateien, 3 Raw-Outputs, ris-template.md |
+| `docs/` | GitHub Pages SPA + Promptotyping-Interface | index.html (Research Vault), promptotyping.html (Promptotyping) |
+| `docs/data/` | Generierte JSON-Daten fuer SPAs | research_vault_v2.json, promptotyping_data.json |
+| `docs/css/` | Stylesheets | research.css (Design-System), promptotyping.css (pt-* Namespace) |
+| `docs/js/` | JavaScript | app.js, features.js (SPA), promptotyping-app.js (Promptotyping) |
+| `scripts/` | Projekt-uebergreifende Scripts | generate_promptotyping_data.py |
 
 ---
 
@@ -400,6 +405,12 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 | `generate_vault.py` | Obsidian Vault generieren (mit Assessment-Integration) | Abgeschlossen (249 Papers, 205 mit Assessment) |
 | `generate_docs_data.py` | SPA-Daten generieren (research_vault_v2.json) | Getestet |
 | `utils.py` | Zentrale Hilfsfunktionen (Logging, API, Config) | Aktiv |
+
+### Dokumentations-Scripts (scripts/)
+
+| Script | Funktion | Status |
+|--------|----------|--------|
+| `generate_promptotyping_data.py` | Promptotyping-Interface-Daten generieren (promptotyping_data.json) | Getestet |
 
 ### Corpus Scripts (corpus/)
 

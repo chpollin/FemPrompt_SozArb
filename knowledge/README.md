@@ -32,7 +32,8 @@ Zentrale Dokumentation fuer den systematischen Literature Review zu AI Literacy 
 | Ressource | Link |
 |-----------|------|
 | Repository | [github.com/chpollin/FemPrompt_SozArb](https://github.com/chpollin/FemPrompt_SozArb) |
-| GitHub Pages (SPA) | [chpollin.github.io/FemPrompt_SozArb](https://chpollin.github.io/FemPrompt_SozArb/) |
+| GitHub Pages (Research Vault) | [chpollin.github.io/FemPrompt_SozArb](https://chpollin.github.io/FemPrompt_SozArb/) |
+| GitHub Pages (Promptotyping) | [chpollin.github.io/FemPrompt_SozArb/promptotyping.html](https://chpollin.github.io/FemPrompt_SozArb/promptotyping.html) |
 | Google Sheets (Human Assessment) | [Link](https://docs.google.com/spreadsheets/d/1z-HQSwVFg-TtdP0xo1UH4GKLMAXNvvXSdySPSA7KUdM/) |
 | Prompt-Governance | [prompts/CHANGELOG.md](../prompts/CHANGELOG.md) |
 | Kappa-Revision | Dokumentiert in [paper-integrity.md](paper-integrity.md) Abschnitt 3.6 |

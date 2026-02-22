@@ -1,0 +1,2124 @@
+{
+  "pipeline_stats": {
+    "zotero_total": 326,
+    "pdfs_acquired": 257,
+    "pdfs_missing": 69,
+    "markdown_converted": 252,
+    "knowledge_docs": 249,
+    "stage1_extracted": 249,
+    "verification_total": 219,
+    "cost_ske": 7.0,
+    "cost_10k": 1.44,
+    "cost_5d": 1.15,
+    "cost_total": 10.17,
+    "verification_pass": 217
+  },
+  "prompts": {
+    "stage1_extract": "Du bist ein Experte für wissenschaftliche Literaturanalyse im Bereich KI, Soziale Arbeit und Gender Studies.\n\n# PAPER (Markdown-Format)\n[PAPER-INHALT WIRD HIER EINGEFUEGT]\n\n# AUFGABE\nExtrahiere alle relevanten Informationen und klassifiziere das Paper nach 10 Kategorien.\nAntworte im JSON-Format (kein Markdown-Codeblock, nur reines JSON).\n\n{\n  \"metadata\": {\n    \"title\": \"Vollständiger Titel des Papers\",\n    \"authors\": [\"Autor1\", \"Autor2\"],\n    \"year\": 2024,\n    \"type\": \"journalArticle|conferencePaper|report|book|thesis|workingPaper\",\n    \"language\": \"en|de|other\"\n  },\n  \"core\": {\n    \"research_question\": \"Die zentrale Forschungsfrage (1 Satz)\",\n    \"methodology\": \"Ansatz und Methoden (kurz: Empirisch/Theoretisch/Mixed/Review + spezifische Methoden)\",\n    \"key_finding\": \"Wichtigster Befund oder Beitrag (1-2 Sätze)\",\n    \"data_basis\": \"Datenbasis falls empirisch (z.B. n=125 Surveys, 50 Interviews)\"\n  },\n  \"arguments\": [\n    \"Hauptargument 1 (1-2 Sätze)\",\n    \"Hauptargument 2 (1-2 Sätze)\",\n    \"Hauptargument 3 (1-2 Sätze)\"\n  ],\n  \"categories\": {\n    \"AI_Literacies\": true,\n    \"Generative_KI\": false,\n    \"Prompting\": false,\n    \"KI_Sonstige\": true,\n    \"Soziale_Arbeit\": true,\n    \"Bias_Ungleichheit\": true,\n    \"Gender\": false,\n    \"Diversitaet\": true,\n    \"Feministisch\": false,\n    \"Fairness\": true\n  },\n  \"category_evidence\": {\n    \"AI_Literacies\": \"Direktes Zitat oder Paraphrase als Evidenz\",\n    \"KI_Sonstige\": \"Evidenz...\",\n    \"Soziale_Arbeit\": \"Evidenz...\",\n    \"Bias_Ungleichheit\": \"Evidenz...\",\n    \"Diversitaet\": \"Evidenz...\",\n    \"Fairness\": \"Evidenz...\"\n  },\n  \"references\": [\n    {\"author\": \"Buolamwini\", \"year\": 2018, \"short_title\": \"Gender Shades\"},\n    {\"author\": \"D'Ignazio & Klein\", \"year\": 2020, \"short_title\": \"Data Feminism\"},\n    {\"author\": \"Eubanks\", \"year\": 2019, \"short_title\": \"Automating Inequality\"}\n  ],\n  \"assessment\": {\n    \"domain_fit\": \"Wie relevant ist das Paper für die Schnittstelle AI/Soziale Arbeit/Gender? (1-2 Sätze)\",\n    \"unique_contribution\": \"Was ist der besondere wissenschaftliche Beitrag? (1 Satz)\",\n    \"limitations\": \"Methodische oder thematische Einschränkungen (1 Satz oder 'nicht angegeben')\"\n  },\n  \"target_group\": \"Für wen ist das Paper relevant? (z.B. Sozialarbeiter, KI-Entwickler, Policymaker)\"\n}\n\n# KATEGORIE-DEFINITIONEN\n\n**AI_Literacies**: Kompetenzen, Fähigkeiten oder Wissen im Umgang mit KI-Systemen. Kritische Reflexion, technisches Verständnis, Anwendungskompetenz, Curricula, Bildung.\n\n**Generative_KI**: Fokus auf generative KI-Modelle wie LLMs (ChatGPT, Claude, GPT-4), Bildgeneratoren (DALL-E, Midjourney, Stable Diffusion), oder andere generative Systeme.\n\n**Prompting**: Prompt-Engineering, Prompt-Strategien, Gestaltung von Eingaben für KI-Systeme, Chain-of-Thought, Few-Shot, Zero-Shot, Jailbreaks.\n\n**KI_Sonstige**: Andere KI-Themen (klassisches ML, Robotik, Computer Vision, Predictive Analytics, algorithmische Entscheidungssysteme, NLP ohne generativen Fokus).\n\n**Soziale_Arbeit**: Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder Zielgruppen Sozialer Arbeit (Jugendhilfe, Beratung, Care-Arbeit, Soziale Dienste).\n\n**Bias_Ungleichheit**: Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit, strukturelle Benachteiligung im KI-Kontext, Digital Divide.\n\n**Gender**: Expliziter Gender-Fokus, Geschlechterperspektive, Gender-Bias in KI, Frauen in Tech/AI, geschlechtsspezifische Auswirkungen.\n\n**Diversitaet**: Thematisiert Diversität, Inklusion, Repräsentation verschiedener Gruppen, marginalisierte Communities, intersektionale Perspektiven.\n\n**Feministisch**: Verwendet EXPLIZIT feministische Theorie, Methodik oder Perspektive. Referenzen auf feministische Autor:innen (Crenshaw, Haraway, D'Ignazio, Harding, hooks). NICHT nur Gender erwähnt!\n\n**Fairness**: Algorithmische Fairness, faire ML-Systeme, Fairness-Metriken (Equalized Odds, Demographic Parity, Calibration), Fairness-aware ML.\n\n# WICHTIGE REGELN\n\n1. **categories**: NUR true/false Werte, kein Text\n2. **category_evidence**: NUR für Kategorien die true sind (direkte Evidenz aus dem Text)\n3. **Feministisch = true** NUR wenn explizit feministische Theorie/Methodik verwendet wird\n4. **references**: Extrahiere 3-10 der wichtigsten zitierten Werke (mit Autor, Jahr, Kurztitel)\n5. Bei fehlenden Informationen: \"nicht angegeben\" verwenden\n6. Antworte NUR mit dem JSON-Objekt, keine Erklärungen davor oder danach",
+    "stage2_format": "Konvertiere die extrahierten Daten in ein Obsidian-kompatibles Markdown-Dokument.\n\n# EXTRAHIERTE DATEN (JSON)\n[EXTRAHIERTES JSON AUS STUFE 1]\n\n# ZUSÄTZLICHE REFERENZ-LISTE AUS ORIGINAL\n[REFERENZEN AUS ORIGINALTEXT]\n\n# AUFGABE\nErstelle ein Markdown-Dokument für Obsidian mit:\n1. YAML-Frontmatter\n2. Strukturierte Sections\n3. Wikilinks für Referenzen (Format: [[Autor_Jahr]])\n4. Kurze, prägnante Inhalte\n\nAntworte NUR mit dem Markdown-Dokument (keine Erklärungen):\n\n---\ntitle: \"[TITLE]\"\nauthors: [AUTHORS_YAML]\nyear: [YEAR]\ntype: [TYPE]\nlanguage: [LANGUAGE]\ncategories:\n[CATEGORIES_YAML]\nprocessed: [DATE]\n---\n\n# [TITLE]\n\n## Kernbefund\n\n[KEY_FINDING]\n\n## Forschungsfrage\n\n[RESEARCH_QUESTION]\n\n## Methodik\n\n[METHODOLOGY]\n\n[DATA_BASIS_IF_PRESENT]\n\n## Hauptargumente\n\n- [ARGUMENT1]\n- [ARGUMENT2]\n- [ARGUMENT3]\n\n## Kategorie-Evidenz\n\n[CATEGORY_EVIDENCE_SECTIONS]\n\n## Assessment-Relevanz\n\n**Domain Fit:** [DOMAIN_FIT]\n\n**Unique Contribution:** [UNIQUE_CONTRIBUTION]\n\n**Limitations:** [LIMITATIONS]\n\n**Target Group:** [TARGET_GROUP]\n\n## Schlüsselreferenzen\n\n[REFERENCES_AS_WIKILINKS]\n\n---\n\nWICHTIG:\n- Wikilinks für Referenzen im Format: [[Autor_Jahr]] - Kurztitel\n- Kategorien im Frontmatter als Liste (nur die true-Kategorien)\n- Kompakt und informativ\n- Deutsche Überschriften, Inhalt kann Englisch sein wenn Original englisch",
+    "stage2_note": "Stufe 2 ist DETERMINISTISCH: Kein LLM, reine Template-basierte Formatierung. Der Prompt hier beschreibt das Format-Schema, wird aber von Python-Code (nicht LLM) ausgefuehrt.",
+    "stage3_verify": "Du bist ein wissenschaftlicher Qualitätsprüfer. Vergleiche das generierte Wissensdokument mit dem Originaltext.\n\n# ORIGINAL-MARKDOWN (Ausschnitt)\n[ORIGINALTEXT-AUSSCHNITT]\n\n# GENERIERTES WISSENSDOKUMENT\n[GENERIERTES WISSENSDOKUMENT]\n\n# AUFGABE\nPrüfe auf drei Dimensionen und gib einen Confidence-Score.\n\nAntworte im JSON-Format:\n\n{\n  \"verification\": {\n    \"completeness\": {\n      \"score\": 85,\n      \"missing_critical\": [],\n      \"missing_minor\": [\"Detail X nicht erwähnt\"]\n    },\n    \"correctness\": {\n      \"score\": 95,\n      \"errors\": [],\n      \"distortions\": []\n    },\n    \"category_validation\": {\n      \"score\": 90,\n      \"incorrect_categories\": [],\n      \"missing_categories\": []\n    }\n  },\n  \"overall_confidence\": 90,\n  \"needs_correction\": false,\n  \"corrections\": {\n    \"frontmatter\": null,\n    \"content_fixes\": []\n  }\n}\n\n# PRÜFKRITERIEN\n\n**Completeness (0-100)**:\n- Sind Forschungsfrage, Methodik und Hauptbefunde korrekt erfasst?\n- Fehlen kritische Informationen?\n\n**Correctness (0-100)**:\n- Gibt es faktische Fehler?\n- Wurden Aussagen verzerrt?\n\n**Category Validation (0-100)**:\n- Sind die Kategorien durch den Originaltext belegt?\n- Fehlen offensichtliche Kategorien?\n\n**Overall Confidence**: Gewichteter Durchschnitt (Completeness 40%, Correctness 40%, Categories 20%)\n\n**needs_correction**: true wenn overall_confidence < 75\n\nFalls needs_correction = true, füge spezifische Korrekturen hinzu.\n\nAntworte NUR mit dem JSON-Objekt.",
+    "assessment_10k": "Du bist ein wissenschaftlicher Reviewer. Deine Aufgabe ist die systematische Kategorisierung von Papers fuer ein Literature Review.\n\n## Aufgabe\nBewerte das Paper anhand der Kategorien. Die Decision MUSS logisch konsistent mit den Kategorie-Bewertungen sein!\n\n## Kategorien (binaer: Ja/Nein)\n\n- **AI_Literacies**: Das Paper behandelt Kompetenzen, Fähigkeiten oder Wissen im Umgang mit KI-Systemen. Umfasst kritische Reflexion, technisches Verständnis oder praktische Anwendungskompetenz.\n  Beispiele JA: Framework für KI-Kompetenzentwicklung, Curriculum für AI Literacy in Schulen\n  Beispiele NEIN: Rein technische KI-Implementierung ohne Bildungsbezug\n- **Generative_KI**: Fokus auf generative KI-Modelle wie Large Language Models, Bildgeneratoren oder andere generative Systeme.\n  Beispiele JA: ChatGPT in der Beratung, Midjourney für kreative Prozesse\n  Beispiele NEIN: Klassische ML-Klassifikation ohne generativen Aspekt\n- **Prompting**: Behandelt Prompt-Engineering, Prompt-Strategien oder die Gestaltung von Eingaben für KI-Systeme.\n  Beispiele JA: Chain-of-Thought Prompting für Bias-Reduktion, Prompt-Templates für Dokumentation\n  Beispiele NEIN: KI-Nutzung ohne Fokus auf Eingabegestaltung\n- **KI_Sonstige**: Andere KI/ML-Themen: klassisches Machine Learning, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik, Computer Vision. WICHTIG: Algorithmische Systeme im Sozialbereich (z.B. Risikobewertung in der Jugendhilfe) zählen hierzu und sind relevant!\n  Beispiele JA: Algorithmische Risikobewertung in der Jugendhilfe, Predictive Policing und soziale Auswirkungen\n  Beispiele NEIN: Reine Robotik ohne sozialen Bezug\n- **Soziale_Arbeit**: Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder den Zielgruppen Sozialer Arbeit.\n  Beispiele JA: KI in der Jugendhilfe, Algorithmische Entscheidungssysteme im Sozialamt\n  Beispiele NEIN: Allgemeine KI-Ethik ohne Sozialarbeitsbezug\n- **Bias_Ungleichheit**: Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit oder strukturelle Benachteiligung im KI-Kontext.\n  Beispiele JA: Analyse von Racial Bias in LLM-Outputs, Algorithmische Diskriminierung bei Kreditvergabe\n  Beispiele NEIN: Allgemeine KI-Performance-Studie ohne Bias-Fokus\n- **Gender**: Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias.\n  Beispiele JA: Gender-Bias in Sprachmodellen, Geschlechterstereotype in KI-generierten Bildern\n  Beispiele NEIN: Demografische Daten enthalten Geschlecht, aber kein Gender-Fokus\n- **Diversitaet**: Thematisiert Diversität, Inklusion oder Repräsentation verschiedener Gruppen.\n  Beispiele JA: Inklusive KI-Entwicklung mit marginalisierten Communities, Repraesentation verschiedener Ethnien in Trainingsdaten\n  Beispiele NEIN: Diverse Methoden verwendet (methodische Diversitaet, nicht sozial)\n- **Feministisch**: Verwendet feministische Theorie, Methodik oder Perspektive. Auch implizit feministische Ansätze zählen: intersektionale Analysen, kritische Betrachtung von Machtstrukturen, Fokus auf marginalisierte Gruppen aus Geschlechterperspektive.\n  Beispiele JA: Intersektionale Analyse nach Crenshaw, Kritik aus feministischer Technikforschung\n  Beispiele NEIN: Gender nur als Variable erwähnt ohne kritische Perspektive\n- **Fairness**: Thematisiert algorithmische Fairness, faire ML-Systeme oder Fairness-Metriken.\n  Beispiele JA: Fairness-Metriken fuer Klassifikationsmodelle, Fair ML Frameworks und Debiasing-Strategien\n  Beispiele NEIN: Allgemeine Ethik-Diskussion ohne spezifischen Fairness-Bezug\n\n## STRIKTE Entscheidungslogik\n\nPaper wird eingeschlossen wenn BEIDE Bedingungen erfüllt sind:\n1. TECHNIK: Mindestens eine dieser Kategorien ist Ja:\n   - AI_Literacies (KI-Kompetenzen)\n   - Generative_KI (LLMs, ChatGPT, etc.)\n   - Prompting (Prompt-Engineering)\n   - KI_Sonstige (klassisches ML, algorithmische Systeme)\n\n2. SOZIAL: Mindestens eine dieser Kategorien ist Ja:\n   - Soziale_Arbeit\n   - Bias_Ungleichheit\n   - Gender\n   - Diversitaet\n   - Feministisch\n   - Fairness\n\nWICHTIG: Die Decision MUSS konsistent mit den Kategorie-Bewertungen sein! Wenn Technik UND Sozial erfüllt → Include. Wenn nur Technik ODER nur Sozial → Exclude.\n\n\n## WICHTIG - Konsistenzregel\n\nDeine Decision MUSS mathematisch aus den Kategorien folgen:\n- Zaehle: Hat das Paper mindestens 1x Ja bei AI_Literacies, Generative_KI, Prompting oder KI_Sonstige? -> TECHNIK_OK\n- Zaehle: Hat das Paper mindestens 1x Ja bei Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch oder Fairness? -> SOZIAL_OK\n- Wenn TECHNIK_OK UND SOZIAL_OK -> Decision = \"Include\"\n- Sonst -> Decision = \"Exclude\"\n\nDu darfst die Logik NICHT mit eigenem Judgment ueberschreiben!\n\n## WICHTIG - Negative Constraints (Sycophancy-Mitigation)\n\nKlassifiziere restriktiv. Bei Unsicherheit: \"Nein\" statt \"Ja\".\n\n- **Feministisch = \"Ja\"** NUR wenn der Text EXPLIZIT feministische Theorie, Methoden oder Perspektiven verwendet ODER sich auf feministische Autor:innen bezieht (z.B. Crenshaw, Haraway, hooks, D'Ignazio, Harding, Butler). Implizite Naehe zu Gender-Themen reicht NICHT.\n- **Soziale_Arbeit = \"Ja\"** NUR wenn der Text einen direkten Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder Zielgruppen Sozialer Arbeit herstellt. Allgemeine \"social impact\"-Diskussionen reichen NICHT.\n- **Prompting = \"Ja\"** NUR wenn Prompt-Engineering, Prompt-Strategien oder Eingabegestaltung ein substantielles Thema des Papers sind. Beilaeufige Erwaehnung von Prompts reicht NICHT.\n- Vergib insgesamt nicht mehr als 4-5 Kategorien mit \"Ja\" pro Paper, es sei denn, der Text adressiert tatsaechlich mehr Bereiche mit Substanz.\n- Eine Kategorie ist \"Ja\" nur wenn der Text sie SUBSTANTIELL behandelt, nicht wenn sie am Rande erwaehnt wird.\n\n## Exclusion Reasons\nFalls Exclude: Duplicate, Not_relevant_topic, Wrong_publication_type, No_full_text, Language\n\n## Output-Format (JSON)\n\nAntworte NUR mit diesem JSON-Objekt:\n\n```json\n{\n  \"AI_Literacies\": \"Ja\" | \"Nein\",\n  \"Generative_KI\": \"Ja\" | \"Nein\",\n  \"Prompting\": \"Ja\" | \"Nein\",\n  \"KI_Sonstige\": \"Ja\" | \"Nein\",\n  \"Soziale_Arbeit\": \"Ja\" | \"Nein\",\n  \"Bias_Ungleichheit\": \"Ja\" | \"Nein\",\n  \"Gender\": \"Ja\" | \"Nein\",\n  \"Diversitaet\": \"Ja\" | \"Nein\",\n  \"Feministisch\": \"Ja\" | \"Nein\",\n  \"Fairness\": \"Ja\" | \"Nein\",\n  \"Decision\": \"Include\" | \"Exclude\" | \"Unclear\",\n  \"Exclusion_Reason\": \"...\" | null,\n  \"Studientyp\": \"Empirisch\" | \"Experimentell\" | \"Theoretisch\" | \"Konzept\" | \"Literaturreview\" | \"Unclear\",\n  \"Confidence\": 0.0-1.0,\n  \"Reasoning\": \"Kurze Begruendung (max 100 Woerter)\"\n}\n```"
+  },
+  "categories": [
+    {
+      "name": "AI_Literacies",
+      "group": "technik",
+      "definition": "Das Paper behandelt Kompetenzen, Fähigkeiten oder Wissen im Umgang mit KI-Systemen. Umfasst kritische Reflexion, technisches Verständnis oder praktische Anwendungskompetenz.",
+      "examples_positive": [
+        "Framework für KI-Kompetenzentwicklung",
+        "Curriculum für AI Literacy in Schulen"
+      ],
+      "examples_negative": [
+        "Rein technische KI-Implementierung ohne Bildungsbezug"
+      ]
+    },
+    {
+      "name": "Generative_KI",
+      "group": "technik",
+      "definition": "Fokus auf generative KI-Modelle wie Large Language Models, Bildgeneratoren oder andere generative Systeme.",
+      "examples_positive": [
+        "ChatGPT in der Beratung",
+        "Midjourney für kreative Prozesse"
+      ],
+      "examples_negative": [
+        "Klassische ML-Klassifikation ohne generativen Aspekt"
+      ]
+    },
+    {
+      "name": "Prompting",
+      "group": "technik",
+      "definition": "Behandelt Prompt-Engineering, Prompt-Strategien oder die Gestaltung von Eingaben für KI-Systeme.",
+      "examples_positive": [
+        "Chain-of-Thought Prompting für Bias-Reduktion",
+        "Prompt-Templates für Dokumentation"
+      ],
+      "examples_negative": [
+        "KI-Nutzung ohne Fokus auf Eingabegestaltung"
+      ]
+    },
+    {
+      "name": "KI_Sonstige",
+      "group": "technik",
+      "definition": "Andere KI/ML-Themen: klassisches Machine Learning, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik, Computer Vision. WICHTIG: Algorithmische Systeme im Sozialbereich (z.B. Risikobewertung in der Jugendhilfe) zählen hierzu und sind relevant!",
+      "examples_positive": [
+        "Algorithmische Risikobewertung in der Jugendhilfe",
+        "Predictive Policing und soziale Auswirkungen",
+        "Machine Learning für Fallprognosen"
+      ],
+      "examples_negative": [
+        "Reine Robotik ohne sozialen Bezug"
+      ]
+    },
+    {
+      "name": "Soziale_Arbeit",
+      "group": "sozial",
+      "definition": "Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder den Zielgruppen Sozialer Arbeit.",
+      "examples_positive": [
+        "KI in der Jugendhilfe",
+        "Algorithmische Entscheidungssysteme im Sozialamt"
+      ],
+      "examples_negative": [
+        "Allgemeine KI-Ethik ohne Sozialarbeitsbezug"
+      ]
+    },
+    {
+      "name": "Bias_Ungleichheit",
+      "group": "sozial",
+      "definition": "Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit oder strukturelle Benachteiligung im KI-Kontext.",
+      "examples_positive": [
+        "Analyse von Racial Bias in LLM-Outputs",
+        "Algorithmische Diskriminierung bei Kreditvergabe"
+      ],
+      "examples_negative": [
+        "Allgemeine KI-Performance-Studie ohne Bias-Fokus"
+      ]
+    },
+    {
+      "name": "Gender",
+      "group": "sozial",
+      "definition": "Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias.",
+      "examples_positive": [
+        "Gender-Bias in Sprachmodellen",
+        "Geschlechterstereotype in KI-generierten Bildern"
+      ],
+      "examples_negative": [
+        "Demografische Daten enthalten Geschlecht, aber kein Gender-Fokus"
+      ]
+    },
+    {
+      "name": "Diversitaet",
+      "group": "sozial",
+      "definition": "Thematisiert Diversität, Inklusion oder Repräsentation verschiedener Gruppen.",
+      "examples_positive": [
+        "Inklusive KI-Entwicklung mit marginalisierten Communities",
+        "Repraesentation verschiedener Ethnien in Trainingsdaten"
+      ],
+      "examples_negative": [
+        "Diverse Methoden verwendet (methodische Diversitaet, nicht sozial)"
+      ]
+    },
+    {
+      "name": "Feministisch",
+      "group": "sozial",
+      "definition": "Verwendet feministische Theorie, Methodik oder Perspektive. Auch implizit feministische Ansätze zählen: intersektionale Analysen, kritische Betrachtung von Machtstrukturen, Fokus auf marginalisierte Gruppen aus Geschlechterperspektive.",
+      "examples_positive": [
+        "Intersektionale Analyse nach Crenshaw",
+        "Kritik aus feministischer Technikforschung",
+        "Analyse von Gender-Bias mit Fokus auf strukturelle Ungleichheit",
+        "Bezug auf feminist HCI, feminist STS"
+      ],
+      "examples_negative": [
+        "Gender nur als Variable erwähnt ohne kritische Perspektive"
+      ]
+    },
+    {
+      "name": "Fairness",
+      "group": "sozial",
+      "definition": "Thematisiert algorithmische Fairness, faire ML-Systeme oder Fairness-Metriken.",
+      "examples_positive": [
+        "Fairness-Metriken fuer Klassifikationsmodelle",
+        "Fair ML Frameworks und Debiasing-Strategien"
+      ],
+      "examples_negative": [
+        "Allgemeine Ethik-Diskussion ohne spezifischen Fairness-Bezug"
+      ]
+    }
+  ],
+  "verification_scores": [
+    {
+      "paper_id": "A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ahmed_2024_Feminist_perspectives_on_AI_Ethical",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 85,
+      "needs_correction": true
+    },
+    {
+      "paper_id": "Ahrweiler_2025_AI_FORA_–_Artificial_Intelligence_for_Assessment",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Alam_2025_Social_work_in_the_age_of_artificial_intelligence",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Alliance_2024_Incubating",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Alvarez_2024_Policy_advice_and_best_practices_on_bias_and",
+      "completeness": 88,
+      "correctness": 94,
+      "categories": 92,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Amnesty International_2024_Coded_injustice_Surveillance_and_discrimination",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "An_2025_Measuring_gender_and_racial_biases_in_large",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Articulate_2025_How_to_Create_Inclusive_AI_Images_A_Guide_to",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Attard-Frost_2025_Countergovernance",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Bai_2025_Explicitly_unbiased_large_language_models_still",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Baker_2025_Artificial_intelligence_in_social_work_An_EPIC",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Barman_2024_Beyond",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Barman_2024_Beyond_transparency_and_explainability_On_the",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Benlian_2025_The_AI_literacy_development_canvas_Assessing_and",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Bisconti_2024_A_formal_account_of_AI_trustworthiness_Connecting",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Browne_2024_Engineers_on_responsibility_feminist_approaches",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Browne_2024_Tech_workers'_perspectives_on_ethical_issues_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review",
+      "completeness": 88,
+      "correctness": 97,
+      "categories": 92,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Charlesworth_2024_Flexible_intersectional_stereotype_extraction",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Chee_2025_A_Competency_Framework_for_AI_Literacy_Variations",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 78,
+      "overall": 86,
+      "needs_correction": true
+    },
+    {
+      "paper_id": "Chen_2023_Ideology_Prediction_from_Scarce_and_Biased",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Chen_2024_Exploring_complex_mental_health_symptoms_via",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Chen_2025_Social_work_and_artificial_intelligence",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Chiu_2024_What_are_artificial_intelligence_literacy_and",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Chiu_2025_AI_literacy_and_competency_definitions,",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Choudhury_2024_Large_Language_Models_and_User_Trust_Consequence",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 92,
+      "overall": 90,
+      "needs_correction": true
+    },
+    {
+      "paper_id": "Ciston_2024_Intersectional_Artificial_Intelligence_Is",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Clemmer_2024_PreciseDebias_An_automatic_prompt_engineering",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Colombatto_2025_The_influence_of_mental_state_attributions_on",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "D'Ignazio_2024_Data_Feminism_for_AI",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "De Duro_2025_Measuring_and_identifying_factors_of_individuals'",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 94,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Debnath_2024_LLMs",
+      "completeness": 25,
+      "correctness": 30,
+      "categories": 20,
+      "overall": 22,
+      "needs_correction": true
+    },
+    {
+      "paper_id": "Dencik_2024_Automated_government_benefits_and_welfare",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Deuze_2022_Imagination,_Algorithms_and_News_Developing_AI",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Dilek_2025_AI_literacy_in_teacher_education_Empowering",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Dixon_2018_Measuring_and_mitigating_unintended_bias_in_text",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Djeffal_2025_Reflexive_prompt_engineering_A_framework_for",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Djiberou Mahamadou_2024_Revisiting_Technical_Bias_Mitigation_Strategies",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Feist-Ortmanns_2025_KI-basiertes_Assistenzsystem_im",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Freinhofer_2025_Prompten",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Freinhofer_2025_Prompten_nach_Plan_Das_PCRR-Framework_als",
+      "completeness": 92,
+      "correctness": 97,
+      "categories": 88,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Friedrich-Ebert-Stiftung_2025_artificial",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Fujii_2024_Bildungsteilhabe_-_Flucht_-_Digitalisierung_Eine",
+      "completeness": 88,
+      "correctness": 93,
+      "categories": 92,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Gaba_2025_Bias,_accuracy,_and_trust_Gender-diverse",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 92,
+      "overall": 90,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Garg_2019_Counterfactual_fairness_in_text_classification",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Garkisch_2024_Considering_a_unified_model_of_artificial",
+      "completeness": 88,
+      "correctness": 97,
+      "categories": 92,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ghosal_2024_An_empirical_study_of_structural_social_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ghosal_2025_Unequal_voices_How_LLMs_construct_constrained",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Gohar_2023_A_Survey_on_Intersectional_Fairness_in_Machine",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 92,
+      "overall": 90,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Gohar_2023_Survey",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Goldkind_2024_The_end_of_the_world_as_we_know_it_ChatGPT_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Guerra_2023_Feminist_reflections_for_the_development_of",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Hall_2024_A_systematic_review_of_sophisticated_predictive",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Hall_2024_systematic",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Hauck_2025_A_framework_for_the_learning_and_teaching_of",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Hayati_2024_How_Far_Can_We_Extract_Diverse_Perspectives_from",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "He_2024_On_the_steerability_of_large_language_models",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "He_2024_steerability",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Hermann_2022_Artificial_intelligence_and_mass_personalization",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Himmelreich_2022_Artificial_Intelligence_and_Structural_Injustice",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid",
+      "completeness": 88,
+      "correctness": 94,
+      "categories": 92,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Jaakkola_2024_Operationalizing_positive-constructive_pedagogy",
+      "completeness": 88,
+      "correctness": 94,
+      "categories": 92,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "James_2023_Algorithmic_decision-making_in_social_work",
+      "completeness": 88,
+      "correctness": 93,
+      "categories": 92,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "James_2025_Responsible_prompting_recommendation_Fostering",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Jarke_2024_Who_cares_about_data_Data_care_arrangements_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Jarke_2025_Datafied_ageing_futures_Regimes_of_anticipation",
+      "completeness": 88,
+      "correctness": 93,
+      "categories": 92,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Jin_2025_GLAT_The_generative_AI_literacy_assessment_test",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 93,
+      "overall": 90,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kaneko_2024_Evaluating_gender_bias_in_large_language_models",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Karagianni_2025_Gender_in_a_stereo-(gender)typical_EU_AI_law_A",
+      "completeness": 92,
+      "correctness": 97,
+      "categories": 95,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Karagianni_2025_The_EU_artificial_intelligence_act_through_a",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 98,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kattnig_2024_Assessing_trustworthy_AI_Technical_and_legal",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kawakami_2022_Improving_human-AI_partnerships_in_child_welfare",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kim_2021_Why_and_What_to_Teach_AI_Curriculum_for",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Klein_2024_Data",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Klinge_2024_A_sociolinguistic_approach_to_stereotype",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kojima_2022_Large_language_models_are_zero-shot_reasoners",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kong_2021_Evaluation_of_an_artificial_intelligence_literacy",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kong_2022_Are_Intersectionally_Fair_AI_Algorithms_Really",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kong_2024_Developing_an_artificial_intelligence_literacy",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kong_2025_Artificial_Intelligence_(AI)_literacy_–_an",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kubes_2024_Feministische_KI_–_Künstliche_Intelligenz_für",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kutscher_2020_Handbuch",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Kutscher_2023_Positionings,_challenges,_and_ambivalences_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Lahoti_2023_Improving_diversity_of_demographic_representation",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Laine_2025_Avoiding_Catastrophe_Through_Intersectionality_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Lanzetta_2024_Artificial_Intelligence_Competence_Needs_for",
+      "completeness": 88,
+      "correctness": 98,
+      "categories": 92,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Latif_2023_AI_Gender_Bias,_Disparities,_and_Fairness_Does",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Laupichler_2023_Development_of_the_“Scale_for_the_assessment_of",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Lin_2022_Artificial_Intelligence_in_a_Structurally_Unjust",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Linnemann_2023_Bedeutung_von_Künstlicher_Intelligenz_in_der",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Long_2020_What_is_AI_Literacy_Competencies_and_Design",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Lund_2025_Algorithms,_artificial_intelligence_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Lütz_2024_The_AI_Act,_gender_equality_and",
+      "completeness": 92,
+      "correctness": 97,
+      "categories": 95,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ma_2023_Intersectional_Stereotypes_in_Large_Language",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Maeda_2025_Toward_Agency‐Centered_span",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "McCrory_2024_Avoiding_catastrophe_through_intersectionality_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Mei_2023_Assessing_GPT's_bias_towards_stigmatized_social",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Meilvang_2024_Decision_support_and_algorithmic_support_The",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Moreau_2024_Failing_our_youngest_On_the_biases,_pitfalls,_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Mosene_2023_Feministische_Netzpolitik_und_Künstliche",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ng_2021_Conceptualizing_AI_literacy_An_exploratory_review",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ng_2022_Using_digital_story_writing_as_a_pedagogy_to",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ng_2025_Opportunities,_challenges_and_school_strategies",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 93,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Nuwasiima_2024_The_role_of_artificial_intelligence_(AI)_and",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 94,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "OECD_2023_Advancing_Accountability_in_AI",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ovalle_2023_Factoring",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Pan_2025_AI_literacy_and_trust_A_multi-method_study_of",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Pan_2025_LIBRA_Measuring_bias_of_large_language_model_from",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 93,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Park_2025_AI_algorithm_transparency,_pipelines_for_trust",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Parrish_2022_BBQ_A_hand-built_bias_benchmark_for_question",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 94,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Parrish_2025_Self-debiasing_large_language_models_Zero-shot",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Peng_2022_A_Literature_Review_of_Digital_Literacy_over_Two",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Pinski_2023_AI_Literacy_-_Towards_Measuring_Human_Competency",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Pinski_2024_AI_Literacy_for_the_top_management_An_upper",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 78,
+      "overall": 86,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Pinski_2024_AI_literacy_for_users_–_A_comprehensive_review",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 78,
+      "overall": 86,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Project_2024_Intersectionality",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Qiu_2025_DR.GAP_Mitigating_bias_in_large_language_models",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Qiu_2025_Mitigating",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 94,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Reamer_2023_Artificial_Intelligence_in_Social_Work_Emerging",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ricaurte_2024_How_can_feminism_inform_AI_governance_in_practice",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Rodriguez_2024_Introducing_Generative_Artificial_Intelligence",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Rodríguez-Martínez_2024_Ethical_issues_related_to_the_use_of_technology",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 82,
+      "overall": 87,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ruiz_2024_AI_Literacy_A_Framework_to_Understand,_Evaluate,",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 94,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Salinas_2025_What’s_in_a_name_Auditing_large_language_models",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Sant_2024_The_power_of_prompts_Evaluating_and_mitigating",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Santos_2024_Explainability_through_systematicity_The_hard",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Santos_2025_How_large_language_models_judge_cooperation",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Schneider_2018_Der_Einfluss_der_Algorithmen_Neue_Qualitäten",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Schneider_2022_Exploring_opportunities_and_risks_in_decision",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Schneider_2024_AI_for_decision_support_What_are_possible",
+      "completeness": 78,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 86,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Schneider_2025_Indecision_on_the_use_of_artificial_intelligence",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Schönauer_2025_Akzeptanz_von_KI_und_organisationale",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Shafie_2025_More_or_less_wrong_A_benchmark_for_directional",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Shah_2025_Gender_Bias_in_Artificial_Intelligence_Empowering",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Shin_2024_Can_prompt_modifiers_control_bias_A_comparative",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 94,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Shukla_2025_Investigating_AI_systems_examining_data_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Siapka_2023_Towards_a_Feminist_Metaethics_of_AI",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Siddals_2024_It_happened_to_be_the_perfect_thing_Experiences",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Sinders_2017_Feminist_Data_Set",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 91,
+      "overall": 90,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Singer_2023_AI_Creates_the_Message_Integrating_AI_Language",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Singh_2025_A_reparative_turn_in_AI",
+      "completeness": 88,
+      "correctness": 93,
+      "categories": 92,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Singh_2025_reparative",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Skilton_2024_Inclusive_prompt_engineering_A_methodology_for",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Slesinger_2024_Training_in_Co-Creation_as_a_Methodological",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 92,
+      "overall": 90,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Small_2023_Generative_AI_and_opportunities_for_feminist",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Sperling_2024_In_search_of_artificial_intelligence_(AI)",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Srinivasan_2025_Mitigating_trust-induced_inappropriate_reliance",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Steiner_2022_Künstliche_Intelligenz_in_der_Sozialen_Arbeit",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Steyvers_2025_What_large_language_models_know_and_what_people",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Strauß_2024_CAIL_–_Critical_AI_Literacy_Kritische",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 91,
+      "needs_correction": true
+    },
+    {
+      "paper_id": "Studeny_2025_Digitale_Werkzeuge_und_Machtasymmetrien",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Takaoka_2022_AI_implementation_science_for_social_issues",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Tang_2024_GenderCARE_A_Comprehensive_Framework_for",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Tinmaz_2022_A_systematic_review_on_digital_literacy",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 82,
+      "overall": 87,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Tint_2025_Guardrails,_not_guidance_Understanding_responses",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 93,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Toupin_2024_Shaping_feminist_artificial_intelligence",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Tun_2025_Trust",
+      "completeness": 15,
+      "correctness": 100,
+      "categories": 0,
+      "overall": 22,
+      "needs_correction": true
+    },
+    {
+      "paper_id": "Tun_2025_Trust_in_artificial_intelligence–based_clinical",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 88,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Ulnicane_2024_Artificial_Intelligence_and_Intersectionality",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "UN Women_2024_Artificial_Intelligence_and_gender_equality",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "UNESCO_2021_Recommendation_on_the_Ethics_of_Artificial",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "UNESCO_2024_Bias_against_women_and_girls_in_large_language",
+      "completeness": 92,
+      "correctness": 94,
+      "categories": 96,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "UNESCO_2024_Women4Ethical_AI_Global_cooperation_for",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 93,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Unknown_2024_Research",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Unknown_AI_competency_framework_for_students",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Unknown_Artificial_Intelligence_in_Social_Sciences_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Unknown_Artificial_Intelligence_in_Social_Work_An_EPIC",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Unknown_RETHINKING_SOCIAL_SERVICES_WITH_ARTIFICIAL",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "van Toorn_2024_Introduction_to_the_digital_welfare_state",
+      "completeness": 88,
+      "correctness": 93,
+      "categories": 88,
+      "overall": 89,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Vethman_2025_Fairness_Beyond_the_Algorithmic_Frame_Actionable",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Victor_2023_Recommendations_for_social_work_researchers_and",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Voutyrakou_2025_Algorithmic_Governance_Gender_Bias_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Waag_2023_Rationalisierung_durch_Digitalisierung",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wajcman_2023_Feminism_Confronts_AI_The_Gender_Relations_of",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wang_2023_Measuring_user_competence_in_using_artificial",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 93,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wang_2024_A_survey_on_fairness_in_large_language_models",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 94,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wang_2024_Algorithmic_discrimination_examining_its_types",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 88,
+      "overall": 92,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wang_2025_Multilingual_Prompting_for_Improving_LLM",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Washington_2025_Fragile",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Weber_2023_Messung_von_AI_Literacy_–_Empirische_Evidenz_und",
+      "completeness": 92,
+      "correctness": 88,
+      "categories": 78,
+      "overall": 86,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wilson_2024_AI_tools_show_biases_in_ranking_job_applicants'",
+      "completeness": 92,
+      "correctness": 96,
+      "categories": 94,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Women_2024_Artificial",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 93,
+      "overall": 91,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wudel_2025_What",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 94,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Wudel_2025_What_is_Feminist_AI",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Yan_2024_Promises_and_challenges_of_generative_artificial",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Yu_2025_Algorithmic-Assisted_Decision-Making_Tools_in",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Yuan_2025_The_cultural_stereotype_and_cultural_bias_of",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Yunusov_2024_MirrorStories",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 75,
+      "overall": 84,
+      "needs_correction": true
+    },
+    {
+      "paper_id": "Yunusov_2024_MirrorStories_Reflecting_Diversity_through",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Zakharova_2024_Tensions_in_digital_welfare_states_Three",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 96,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Zannone_2023_Intersectional_Fairness_A_Fractal_Approach",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Zayed_2024_Scaling_implicit_bias_analysis_across",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Zeng_2025_Governing_discriminatory_content_in",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 85,
+      "overall": 88,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating",
+      "completeness": 92,
+      "correctness": 98,
+      "categories": 95,
+      "overall": 95,
+      "needs_correction": false
+    },
+    {
+      "paper_id": "Zhang_2025_Learning_About_AI_A_Systematic_Review_of_Reviews",
+      "completeness": 88,
+      "correctness": 92,
+      "categories": 87,
+      "overall": 89,
+      "needs_correction": false
+    }
+  ],
+  "deep_research_ris": {
+    "providers": [
+      {
+        "name": "Claude",
+        "entries": 15
+      },
+      {
+        "name": "Gemini",
+        "entries": 3
+      },
+      {
+        "name": "OpenAI (ChatGPT)",
+        "entries": 6
+      },
+      {
+        "name": "Perplexity",
+        "entries": 10
+      }
+    ]
+  },
+  "example_paper": {
+    "stage1_json": {
+      "metadata": {
+        "title": "Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making",
+        "authors": [
+          "Uzair Ahmed"
+        ],
+        "year": 2024,
+        "type": "journalArticle",
+        "language": "en"
+      },
+      "core": {
+        "research_question": "Wie können feministische ethische Rahmenwerke dazu beitragen, algorithmische Verzerrungen in KI-Entscheidungssystemen zu identifizieren und zu mindern?",
+        "methodology": "Mixed-Methods: Quantitative statistische Analyse (SPSS Regressionsanalyse, ANOVA, t-Tests) von AI-Hiring-Daten und Facial-Recognition-Systemen kombiniert mit qualitativen Surveys unter KI-Praktikern und Policymakers, sowie feministische partizipative Forschungsprinzipien (Fokusgruppen, Expert:inneninterviews)",
+        "key_finding": "Empirische Analyse zeigt signifikante geschlechtsspezifische und rassifizierte Verzerrungen in KI-Systemen: männliche Kandidaten erhalten höhere Hiring-Scores als gleich qualifizierte Frauen (p=0.001), und Black Women erleben 34,5% Fehlerrate in Facial-Recognition-Systemen gegenüber 1,2% bei White Men. Allerdings zeigt sich eine Lücke zwischen Awareness für Fairness-Probleme und deren praktischer Implementierung.",
+        "data_basis": "n=125 Surveys unter AI-Praktikern und Policymakers; Regressionsanalyse von AI-Hiring-Algorithmen; vergleichende Fehlerquoten-Analyse von Facial-Recognition-Systemen; qualitative Thematic Analysis von Surveys und Expert:inneninterviews"
+      },
+      "arguments": [
+        "KI-Systeme sind nicht objektiv oder neutral, sondern eingebettet in gesellschaftliche Machtstrukturen, die Frauen und marginalisierte Gruppen historisch benachteiligen. Algorithmische Verzerrungen entstehen durch historisch verzerrte Trainingsdaten, fehlende Repräsentation von Frauen in AI-Entwicklungsteams und kapitalistische Logiken, die Profit über soziale Gerechtigkeit priorisieren.",
+        "Feministische ethische Rahmenwerke betonen Transparenz, Fairness und Inklusion als zentrale Lösungsansätze. Dies erfordert über technische Fixes hinausgehende Maßnahmen: Explainable AI (XAI), partizipatives Design mit marginaliisierten Gemeinschaften, kontinuierliche Bias-Audits und interdisziplinäre Zusammenarbeit zwischen Gender Studies, Soziologie und kritischer Data Science.",
+        "Strukturelle Machtungleichgewichte im AI-Sektor müssen adressiert werden durch diversere Repräsentation in Entwicklungsteams, demokratischere Governance-Modelle und regulatorische Maßnahmen, die Transparenz und Rechenschaftspflicht erzwingen. Partizipatorisches Design mit von Algorithmen betroffenen Gemeinschaften ist essentiell für ethische AI-Entwicklung."
+      ],
+      "categories": {
+        "AI_Literacies": true,
+        "Generative_KI": false,
+        "Prompting": false,
+        "KI_Sonstige": true,
+        "Soziale_Arbeit": true,
+        "Bias_Ungleichheit": true,
+        "Gender": true,
+        "Diversitaet": true,
+        "Feministisch": true,
+        "Fairness": true
+      },
+      "category_evidence": {
+        "AI_Literacies": "Kritische Reflexion über KI-Systeme und deren Design: 'AI is not an objective or neutral technology; rather, it is embedded within societal power structures' und Forderung nach interdisziplinärer Zusammenarbeit in AI-Governance und Bildung.",
+        "KI_Sonstige": "Fokus auf AI-driven Entscheidungssysteme, speziell Hiring-Algorithmen, Facial-Recognition-Technologien und automatisierte Klassifizierungssysteme, sowie deren technische und ethische Aspekte wie 'black box' Problem.",
+        "Soziale_Arbeit": "Direkter Bezug zu sozialarbeiterischen Zielgruppen und Gerechtigkeitsprinzipien: 'Feminist ethics emphasizes transparency, fairness, and inclusivity, challenging the patriarchal and corporate-driven narratives' und Fokus auf marginalisierte Gemeinschaften, Menschen in Armut und betroffene Populationen.",
+        "Bias_Ungleichheit": "Zentrale Analyse von algorithmischem Bias und strukturellen Ungleichheiten: 'Algorithmic bias disproportionately affects marginalized groups, reinforcing societal inequalities in areas such as hiring, healthcare, and law enforcement' mit empirischer Evidenz (Regression p=0.001 für Gender-Bias, ANOVA für Facial-Recognition).",
+        "Gender": "Expliziter Gender-Fokus durchgehend: 'AI-driven hiring tools have been found to discriminate against female candidates' und 'facial recognition technologies have demonstrated racial and gender biases, leading to higher error rates for women' sowie spezifische Analyse von Gender-Representation in AI-Teams.",
+        "Diversitaet": "Starker Fokus auf Diversität und Inklusion: 'lack of diversity in AI training data' und 'underrepresentation of women and marginalized groups in AI development teams' mit Forderung nach partizipatorischem Design mit 'diverse stakeholders, including women, non-binary individuals, and marginalized communities'.",
+        "Feministisch": "Explizite Verwendung feministischer Theorie und Methodik: 'Feminist perspectives provide a critical lens' und Referenzen auf D'Ignazio & Klein (Data Feminism), Benjamin (Race After Technology), feministische partizipative Forschungsprinzipien und intersektionaler Feminismus. Der gesamte theoretische Rahmen basiert auf feministischer Ethik und Epistemologie.",
+        "Fairness": "Algorithmic Fairness zentral: Regressionsanalyse zeigt Gender-Bias in Hiring (Koeffizient 0.45, p=0.001), ANOVA-Test vergleicht Fehlerquoten in Facial-Recognition über demografische Gruppen (White Men 1,2%, Black Women 34,5%), und Surveys messen Fairness-Awareness. Forderungen nach Fairness-Metriken, Bias-Audits und XAI-Frameworks."
+      },
+      "references": [
+        {
+          "author": "Buolamwini & Gebru",
+          "year": 2018,
+          "short_title": "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification"
+        },
+        {
+          "author": "D'Ignazio & Klein",
+          "year": 2020,
+          "short_title": "Data Feminism"
+        },
+        {
+          "author": "Crawford",
+          "year": 2021,
+          "short_title": "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence"
+        },
+        {
+          "author": "Benjamin",
+          "year": 2019,
+          "short_title": "Race After Technology: Abolitionist Tools for the New Jim Code"
+        },
+        {
+          "author": "Noble",
+          "year": 2018,
+          "short_title": "Algorithms of Oppression: How Search Engines Reinforce Racism"
+        },
+        {
+          "author": "O'Neil",
+          "year": 2016,
+          "short_title": "Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy"
+        },
+        {
+          "author": "Criado-Perez",
+          "year": 2019,
+          "short_title": "Invisible Women: Data Bias in a World Designed for Men"
+        },
+        {
+          "author": "Eubanks",
+          "year": 2018,
+          "short_title": "Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor"
+        },
+        {
+          "author": "West, Whittaker & Crawford",
+          "year": 2019,
+          "short_title": "Discriminating Systems: Gender, Race, and Power in AI"
+        },
+        {
+          "author": "Pasquale",
+          "year": 2015,
+          "short_title": "The Black Box Society: The Secret Algorithms That Control Money and Information"
+        }
+      ],
+      "assessment": {
+        "domain_fit": "Das Paper ist hochgradig relevant für die Schnittstelle KI/Soziale Arbeit/Gender: Es verbindet algorithmische Gerechtigkeit mit feministischen Ethikprinzipien und betont die Auswirkungen auf marginalisierte Gemeinschaften, die zentrale Zielgruppen Sozialer Arbeit sind. Die Forderung nach partizipatorischem Design und Transparenz spricht direkt professionelle Standards der Sozialen Arbeit an.",
+        "unique_contribution": "Das Paper liefert eine seltene empirische Mixed-Methods-Kombination von SPSS-basierten Analysen algorithmischer Bias mit explizit feministischen theoretischen und methodischen Rahmenwerken, was über reine technische Fairness-Ansätze hinausgeht und strukturelle Machtverhältnisse in den Mittelpunkt stellt.",
+        "limitations": "Das Paper basiert auf selbstberichteten Survey-Daten (n=125) ohne Angabe der Stichprobenziehungsmethode oder Response-Rate; die Fallstudien zu Bias (Amazon Hiring, Facial Recognition) sind sekundäre Analyseergebnisse, nicht originäre Datenerhebung des Autors; regionale und kulturelle Kontextspezifität (Pakistan-basierte Institution) wird nicht reflektiert."
+      },
+      "target_group": "Multiprofessionelle Zielgruppe: KI-Entwickler:innen und -Ethiker:innen (für kritische Reflexion über Designprozesse), Sozialarbeiter:innen und Care-Professionelle (zur Sensibilisierung für algorithmische Diskriminierung ihrer Klient:innen), Policymakers und Governance-Verantwortliche (für Regulierungsempfehlungen), Gender Studies und Critical Data Science Forscher:innen, sowie Organisationen mit Zugang zu marginalisierter Populations (für partizipatives Mitdesign)."
+    },
+    "stage2_markdown": "---\ntitle: \"Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making\"\nauthors: [\"Uzair Ahmed\"]\nyear: 2024\ntype: journalArticle\nlanguage: en\ncategories:\n  - AI_Literacies\n  - KI_Sonstige\n  - Soziale_Arbeit\n  - Bias_Ungleichheit\n  - Gender\n  - Diversitaet\n  - Feministisch\n  - Fairness\nprocessed: 2026-02-04\nsource_file: Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md\n---\n\n# Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making\n\n## Kernbefund\n\nEmpirische Analyse zeigt signifikante geschlechtsspezifische und rassifizierte Verzerrungen in KI-Systemen: männliche Kandidaten erhalten höhere Hiring-Scores als gleich qualifizierte Frauen (p=0.001), und Black Women erleben 34,5% Fehlerrate in Facial-Recognition-Systemen gegenüber 1,2% bei White Men. Allerdings zeigt sich eine Lücke zwischen Awareness für Fairness-Probleme und deren praktischer Implementierung.\n\n## Forschungsfrage\n\nWie können feministische ethische Rahmenwerke dazu beitragen, algorithmische Verzerrungen in KI-Entscheidungssystemen zu identifizieren und zu mindern?\n\n## Methodik\n\nMixed-Methods: Quantitative statistische Analyse (SPSS Regressionsanalyse, ANOVA, t-Tests) von AI-Hiring-Daten und Facial-Recognition-Systemen kombiniert mit qualitativen Surveys unter KI-Praktikern und Policymakers, sowie feministische partizipative Forschungsprinzipien (Fokusgruppen, Expert:inneninterviews)\n**Datenbasis:** n=125 Surveys unter AI-Praktikern und Policymakers; Regressionsanalyse von AI-Hiring-Algorithmen; vergleichende Fehlerquoten-Analyse von Facial-Recognition-Systemen; qualitative Thematic Analysis von Surveys und Expert:inneninterviews\n\n## Hauptargumente\n\n- KI-Systeme sind nicht objektiv oder neutral, sondern eingebettet in gesellschaftliche Machtstrukturen, die Frauen und marginalisierte Gruppen historisch benachteiligen. Algorithmische Verzerrungen entstehen durch historisch verzerrte Trainingsdaten, fehlende Repräsentation von Frauen in AI-Entwicklungsteams und kapitalistische Logiken, die Profit über soziale Gerechtigkeit priorisieren.\n- Feministische ethische Rahmenwerke betonen Transparenz, Fairness und Inklusion als zentrale Lösungsansätze. Dies erfordert über technische Fixes hinausgehende Maßnahmen: Explainable AI (XAI), partizipatives Design mit marginaliisierten Gemeinschaften, kontinuierliche Bias-Audits und interdisziplinäre Zusammenarbeit zwischen Gender Studies, Soziologie und kritischer Data Science.\n- Strukturelle Machtungleichgewichte im AI-Sektor müssen adressiert werden durch diversere Repräsentation in Entwicklungsteams, demokratischere Governance-Modelle und regulatorische Maßnahmen, die Transparenz und Rechenschaftspflicht erzwingen. Partizipatorisches Design mit von Algorithmen betroffenen Gemeinschaften ist essentiell für ethische AI-Entwicklung.\n\n## Kategorie-Evidenz\n\n### AI_Literacies\n\nKritische Reflexion über KI-Systeme und deren Design: 'AI is not an objective or neutral technology; rather, it is embedded within societal power structures' und Forderung nach interdisziplinärer Zusammenarbeit in AI-Governance und Bildung.\n\n### KI_Sonstige\n\nFokus auf AI-driven Entscheidungssysteme, speziell Hiring-Algorithmen, Facial-Recognition-Technologien und automatisierte Klassifizierungssysteme, sowie deren technische und ethische Aspekte wie 'black box' Problem.\n\n### Soziale_Arbeit\n\nDirekter Bezug zu sozialarbeiterischen Zielgruppen und Gerechtigkeitsprinzipien: 'Feminist ethics emphasizes transparency, fairness, and inclusivity, challenging the patriarchal and corporate-driven narratives' und Fokus auf marginalisierte Gemeinschaften, Menschen in Armut und betroffene Populationen.\n\n### Bias_Ungleichheit\n\nZentrale Analyse von algorithmischem Bias und strukturellen Ungleichheiten: 'Algorithmic bias disproportionately affects marginalized groups, reinforcing societal inequalities in areas such as hiring, healthcare, and law enforcement' mit empirischer Evidenz (Regression p=0.001 für Gender-Bias, ANOVA für Facial-Recognition).\n\n### Gender\n\nExpliziter Gender-Fokus durchgehend: 'AI-driven hiring tools have been found to discriminate against female candidates' und 'facial recognition technologies have demonstrated racial and gender biases, leading to higher error rates for women' sowie spezifische Analyse von Gender-Representation in AI-Teams.\n\n### Diversitaet\n\nStarker Fokus auf Diversität und Inklusion: 'lack of diversity in AI training data' und 'underrepresentation of women and marginalized groups in AI development teams' mit Forderung nach partizipatorischem Design mit 'diverse stakeholders, including women, non-binary individuals, and marginalized communities'.\n\n### Feministisch\n\nExplizite Verwendung feministischer Theorie und Methodik: 'Feminist perspectives provide a critical lens' und Referenzen auf D'Ignazio & Klein (Data Feminism), Benjamin (Race After Technology), feministische partizipative Forschungsprinzipien und intersektionaler Feminismus. Der gesamte theoretische Rahmen basiert auf feministischer Ethik und Epistemologie.\n\n### Fairness\n\nAlgorithmic Fairness zentral: Regressionsanalyse zeigt Gender-Bias in Hiring (Koeffizient 0.45, p=0.001), ANOVA-Test vergleicht Fehlerquoten in Facial-Recognition über demografische Gruppen (White Men 1,2%, Black Women 34,5%), und Surveys messen Fairness-Awareness. Forderungen nach Fairness-Metriken, Bias-Audits und XAI-Frameworks.\n\n## Assessment-Relevanz\n\n**Domain Fit:** Das Paper ist hochgradig relevant für die Schnittstelle KI/Soziale Arbeit/Gender: Es verbindet algorithmische Gerechtigkeit mit feministischen Ethikprinzipien und betont die Auswirkungen auf marginalisierte Gemeinschaften, die zentrale Zielgruppen Sozialer Arbeit sind. Die Forderung nach partizipatorischem Design und Transparenz spricht direkt professionelle Standards der Sozialen Arbeit an.\n\n**Unique Contribution:** Das Paper liefert eine seltene empirische Mixed-Methods-Kombination von SPSS-basierten Analysen algorithmischer Bias mit explizit feministischen theoretischen und methodischen Rahmenwerken, was über reine technische Fairness-Ansätze hinausgeht und strukturelle Machtverhältnisse in den Mittelpunkt stellt.\n\n**Limitations:** Das Paper basiert auf selbstberichteten Survey-Daten (n=125) ohne Angabe der Stichprobenziehungsmethode oder Response-Rate; die Fallstudien zu Bias (Amazon Hiring, Facial Recognition) sind sekundäre Analyseergebnisse, nicht originäre Datenerhebung des Autors; regionale und kulturelle Kontextspezifität (Pakistan-basierte Institution) wird nicht reflektiert.\n\n**Target Group:** Multiprofessionelle Zielgruppe: KI-Entwickler:innen und -Ethiker:innen (für kritische Reflexion über Designprozesse), Sozialarbeiter:innen und Care-Professionelle (zur Sensibilisierung für algorithmische Diskriminierung ihrer Klient:innen), Policymakers und Governance-Verantwortliche (für Regulierungsempfehlungen), Gender Studies und Critical Data Science Forscher:innen, sowie Organisationen mit Zugang zu marginalisierter Populations (für partizipatives Mitdesign).\n\n## Schlüsselreferenzen\n\n- [[Buolamwini_Gebru_2018]] - Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification\n- [[DIgnazio_Klein_2020]] - Data Feminism\n- [[Crawford_2021]] - Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence\n- [[Benjamin_2019]] - Race After Technology: Abolitionist Tools for the New Jim Code\n- [[Noble_2018]] - Algorithms of Oppression: How Search Engines Reinforce Racism\n- [[ONeil_2016]] - Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy\n- [[CriadoPerez_2019]] - Invisible Women: Data Bias in a World Designed for Men\n- [[Eubanks_2018]] - Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor\n- [[West_Whittaker_Crawford_2019]] - Discriminating Systems: Gender, Race, and Power in AI\n- [[Pasquale_2015]] - The Black Box Society: The Secret Algorithms That Control Money and Information\n",
+    "final_document": "---\ntitle: \"Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making\"\nauthors: [\"Uzair Ahmed\"]\nyear: 2024\ntype: journalArticle\nlanguage: en\nprocessed: 2026-02-04\nsource_file: Ahmed_2024_Feminist_perspectives_on_AI_Ethical.md\nconfidence: 95\n---\n\n# Feminist Perspectives on AI: Ethical Considerations in Algorithmic Decision-Making\n\n## Kernbefund\n\nEmpirische Analyse zeigt signifikante geschlechtsspezifische und rassifizierte Verzerrungen in KI-Systemen: männliche Kandidaten erhalten höhere Hiring-Scores als gleich qualifizierte Frauen (p=0.001), und Black Women erleben 34,5% Fehlerrate in Facial-Recognition-Systemen gegenüber 1,2% bei White Men. Allerdings zeigt sich eine Lücke zwischen Awareness für Fairness-Probleme und deren praktischer Implementierung.\n\n## Forschungsfrage\n\nWie können feministische ethische Rahmenwerke dazu beitragen, algorithmische Verzerrungen in KI-Entscheidungssystemen zu identifizieren und zu mindern?\n\n## Methodik\n\nMixed-Methods: Quantitative statistische Analyse (SPSS Regressionsanalyse, ANOVA, t-Tests) von AI-Hiring-Daten und Facial-Recognition-Systemen kombiniert mit qualitativen Surveys unter KI-Praktikern und Policymakers, sowie feministische partizipative Forschungsprinzipien (Fokusgruppen, Expert:inneninterviews)\n**Datenbasis:** n=125 Surveys unter AI-Praktikern und Policymakers; Regressionsanalyse von AI-Hiring-Algorithmen; vergleichende Fehlerquoten-Analyse von Facial-Recognition-Systemen; qualitative Thematic Analysis von Surveys und Expert:inneninterviews\n\n## Hauptargumente\n\n- KI-Systeme sind nicht objektiv oder neutral, sondern eingebettet in gesellschaftliche Machtstrukturen, die Frauen und marginalisierte Gruppen historisch benachteiligen. Algorithmische Verzerrungen entstehen durch historisch verzerrte Trainingsdaten, fehlende Repräsentation von Frauen in AI-Entwicklungsteams und kapitalistische Logiken, die Profit über soziale Gerechtigkeit priorisieren.\n- Feministische ethische Rahmenwerke betonen Transparenz, Fairness und Inklusion als zentrale Lösungsansätze. Dies erfordert über technische Fixes hinausgehende Maßnahmen: Explainable AI (XAI), partizipatives Design mit marginaliisierten Gemeinschaften, kontinuierliche Bias-Audits und interdisziplinäre Zusammenarbeit zwischen Gender Studies, Soziologie und kritischer Data Science.\n- Strukturelle Machtungleichgewichte im AI-Sektor müssen adressiert werden durch diversere Repräsentation in Entwicklungsteams, demokratischere Governance-Modelle und regulatorische Maßnahmen, die Transparenz und Rechenschaftspflicht erzwingen. Partizipatorisches Design mit von Algorithmen betroffenen Gemeinschaften ist essentiell für ethische AI-Entwicklung.\n\n## Kategorie-Evidenz\n\n### Evidenz 1\n\nKritische Reflexion über KI-Systeme und deren Design: 'AI is not an objective or neutral technology; rather, it is embedded within societal power structures' und Forderung nach interdisziplinärer Zusammenarbeit in AI-Governance und Bildung.\n\n### Evidenz 2\n\nFokus auf AI-driven Entscheidungssysteme, speziell Hiring-Algorithmen, Facial-Recognition-Technologien und automatisierte Klassifizierungssysteme, sowie deren technische und ethische Aspekte wie 'black box' Problem.\n\n### Evidenz 3\n\nDirekter Bezug zu sozialarbeiterischen Zielgruppen und Gerechtigkeitsprinzipien: 'Feminist ethics emphasizes transparency, fairness, and inclusivity, challenging the patriarchal and corporate-driven narratives' und Fokus auf marginalisierte Gemeinschaften, Menschen in Armut und betroffene Populationen.\n\n### Evidenz 4\n\nZentrale Analyse von algorithmischem Bias und strukturellen Ungleichheiten: 'Algorithmic bias disproportionately affects marginalized groups, reinforcing societal inequalities in areas such as hiring, healthcare, and law enforcement' mit empirischer Evidenz (Regression p=0.001 für Gender-Bias, ANOVA für Facial-Recognition).\n\n### Evidenz 5\n\nExpliziter Gender-Fokus durchgehend: 'AI-driven hiring tools have been found to discriminate against female candidates' und 'facial recognition technologies have demonstrated racial and gender biases, leading to higher error rates for women' sowie spezifische Analyse von Gender-Representation in AI-Teams.\n\n### Evidenz 6\n\nStarker Fokus auf Diversität und Inklusion: 'lack of diversity in AI training data' und 'underrepresentation of women and marginalized groups in AI development teams' mit Forderung nach partizipatorischem Design mit 'diverse stakeholders, including women, non-binary individuals, and marginalized communities'.\n\n### Evidenz 7\n\nExplizite Verwendung feministischer Theorie und Methodik: 'Feminist perspectives provide a critical lens' und Referenzen auf D'Ignazio & Klein (Data Feminism), Benjamin (Race After Technology), feministische partizipative Forschungsprinzipien und intersektionaler Feminismus. Der gesamte theoretische Rahmen basiert auf feministischer Ethik und Epistemologie.\n\n### Evidenz 8\n\nAlgorithmic Fairness zentral: Regressionsanalyse zeigt Gender-Bias in Hiring (Koeffizient 0.45, p=0.001), ANOVA-Test vergleicht Fehlerquoten in Facial-Recognition über demografische Gruppen (White Men 1,2%, Black Women 34,5%), und Surveys messen Fairness-Awareness. Forderungen nach Fairness-Metriken, Bias-Audits und XAI-Frameworks.\n\n## Assessment-Relevanz\n\n**Domain Fit:** Das Paper ist hochgradig relevant für die Schnittstelle KI/Soziale Arbeit/Gender: Es verbindet algorithmische Gerechtigkeit mit feministischen Ethikprinzipien und betont die Auswirkungen auf marginalisierte Gemeinschaften, die zentrale Zielgruppen Sozialer Arbeit sind. Die Forderung nach partizipatorischem Design und Transparenz spricht direkt professionelle Standards der Sozialen Arbeit an.\n\n**Unique Contribution:** Das Paper liefert eine seltene empirische Mixed-Methods-Kombination von SPSS-basierten Analysen algorithmischer Bias mit explizit feministischen theoretischen und methodischen Rahmenwerken, was über reine technische Fairness-Ansätze hinausgeht und strukturelle Machtverhältnisse in den Mittelpunkt stellt.\n\n**Limitations:** Das Paper basiert auf selbstberichteten Survey-Daten (n=125) ohne Angabe der Stichprobenziehungsmethode oder Response-Rate; die Fallstudien zu Bias (Amazon Hiring, Facial Recognition) sind sekundäre Analyseergebnisse, nicht originäre Datenerhebung des Autors; regionale und kulturelle Kontextspezifität (Pakistan-basierte Institution) wird nicht reflektiert.\n\n**Target Group:** Multiprofessionelle Zielgruppe: KI-Entwickler:innen und -Ethiker:innen (für kritische Reflexion über Designprozesse), Sozialarbeiter:innen und Care-Professionelle (zur Sensibilisierung für algorithmische Diskriminierung ihrer Klient:innen), Policymakers und Governance-Verantwortliche (für Regulierungsempfehlungen), Gender Studies und Critical Data Science Forscher:innen, sowie Organisationen mit Zugang zu marginalisierter Populations (für partizipatives Mitdesign).\n\n## Schlüsselreferenzen\n\n- [[Buolamwini_Gebru_2018]] - Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification\n- [[DIgnazio_Klein_2020]] - Data Feminism\n- [[Crawford_2021]] - Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence\n- [[Benjamin_2019]] - Race After Technology: Abolitionist Tools for the New Jim Code\n- [[Noble_2018]] - Algorithms of Oppression: How Search Engines Reinforce Racism\n- [[ONeil_2016]] - Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy\n- [[CriadoPerez_2019]] - Invisible Women: Data Bias in a World Designed for Men\n- [[Eubanks_2018]] - Automating Inequality: How High-Tech Tools Profile, Police, and Punish the Poor\n- [[West_Whittaker_Crawford_2019]] - Discriminating Systems: Gender, Race, and Power in AI\n- [[Pasquale_2015]] - The Black Box Society: The Secret Algorithms That Control Money and Information\n",
+    "verification": {
+      "verification": {
+        "completeness": {
+          "score": 92,
+          "missing_critical": [],
+          "missing_minor": [
+            "Spezifische Angabe der Stichprobengröße für Hiring-Algorithmen-Analyse fehlt (nur n=125 für Surveys genannt)",
+            "Zeitrahmen der Datenerhebung nicht spezifiziert",
+            "Konkrete Policy-Empfehlungen könnten ausführlicher zusammengefasst sein"
+          ]
+        },
+        "correctness": {
+          "score": 98,
+          "errors": [],
+          "distortions": [
+            "Geringfügig: Die Regression-Koeffizient von 0.45 wird nicht als standardisiert/unstandardisiert gekennzeichnet - im Original ebenfalls unklar"
+          ]
+        },
+        "category_validation": {
+          "score": 96,
+          "incorrect_categories": [],
+          "missing_categories": [
+            "Technologie_Ethik könnte zusätzlich relevant sein (wird implizit abgedeckt durch AI_Literacies und KI_Sonstige, aber nicht explizit benannt)"
+          ]
+        }
+      },
+      "overall_confidence": 95,
+      "needs_correction": false,
+      "corrections": {
+        "frontmatter": null,
+        "content_fixes": [
+          {
+            "section": "Methodik",
+            "issue": "Präzisierung der Stichprobengröße für Hiring-Daten",
+            "suggestion": "Explizit angeben: 'n=? AI-Hiring-Decisions' (Original gibt diese Zahl nicht an, sollte aber in Generiertes Dokument als 'Datenbasis unvollständig dokumentiert' notiert werden"
+          },
+          {
+            "section": "Kernbefund",
+            "issue": "Technische Präzision",
+            "suggestion": "Koeffizient 0.45 mit Hinweis auf Standardisierung präzisieren oder als 'unstandardisiert' kennzeichnen (minor)"
+          }
+        ]
+      },
+      "quality_assessment": {
+        "strengths": [
+          "Ausgezeichnete Erfassung der feministischen Dimension und theoretischen Rahmenwerke",
+          "Korrekte Interpretation der SPSS-Tabellen und statistischen Signifikanz",
+          "Adäquate Zusammenfassung der Mixed-Methods-Methodologie",
+          "Präzise Kategorisierung mit textueller Evidenz hinterlegt",
+          "Kritische Reflexion der Limitations im Original wurde in Assessment-Relevanz korrekt abgebildet"
+        ],
+        "weaknesses": [
+          "Dokumentation der exakten Stichprobengrößen inkonsistent (Original selbst unvollständig)",
+          "Keine Reflexion darüber, dass Referenzliste sich ab Punkt 9 zu 100% wiederholt (Qualitätsmangel im Original, aber im generierten Dokument nicht flaggt)"
+        ]
+      },
+      "notes": "Das generierte Wissensdokument ist hochwertig und präzise. Die geringfügigen Ungenauigkeiten liegen primär in der Originalquelle selbst (wiederholte Referenzen, teilweise unklare statistische Notation). Das Assessment erfasst die forschungsethischen Implikationen korrekt und weist auf methodische Limitationen hin, die im Original nicht explizit adressiert werden."
+    }
+  },
+  "limitations": [
+    {
+      "id": "paywall",
+      "title": "Paywall-Luecke",
+      "description": "69 von 326 Papers fehlen (Paywall). Systematische Unterrepraesentation kostenpflichtiger Literatur.",
+      "affected_step": 1
+    },
+    {
+      "id": "source_tool",
+      "title": "Provider-Zuordnung unvollstaendig",
+      "description": "290 von 326 Papers ohne verifizierte Provider-Zuordnung. Die Aufteilung '254 Deep Research / 50 Manual' stammt aus Zotero-Collections, nur 34 Papers sind via RIS-Matching verifiziert.",
+      "affected_step": 1
+    },
+    {
+      "id": "prompts_lost",
+      "title": "Instanziierte Prompts verloren",
+      "description": "Das Deep-Research-Prompt-Template ist versioniert, aber die konkreten, instanziierten Prompts (mit eingesetzten Parametern) sind nicht erhalten.",
+      "affected_step": 1
+    },
+    {
+      "id": "sycophancy_no_ab",
+      "title": "Keine empirische Validierung der Anti-Sycophancy-Massnahmen",
+      "description": "Die negativen Constraints im Assessment-Prompt sind theoretisch begruendet (Malmqvist), aber nicht durch A/B-Tests gegen einen Prompt ohne Constraints validiert.",
+      "affected_step": 4
+    },
+    {
+      "id": "proprietary",
+      "title": "Proprietaere Modellabhaengigkeit",
+      "description": "Die gesamte Pipeline ist an ein proprietaeres Modell (Anthropic Claude Haiku 4.5) gebunden. Reproduzierbarkeit ist durch Modellversionierung eingeschraenkt.",
+      "affected_step": "all"
+    },
+    {
+      "id": "info_asymmetry",
+      "title": "Unterschiedliche Informationsbasen",
+      "description": "Human-Assessment basiert auf Titel und Abstract (Google Spreadsheet). LLM-Assessment basiert auf Knowledge-Dokumenten (extrahiert aus Volltexten). Die Divergenzen bilden teilweise Informationstiefe-Unterschiede ab, nicht nur Urteilsunterschiede.",
+      "affected_step": 4
+    }
+  ]
+}

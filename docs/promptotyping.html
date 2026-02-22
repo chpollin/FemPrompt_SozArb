@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research-Promptotyping-Interface | FemPrompt SozArb</title>
+
+    <meta name="description" content="Interaktive Darstellung des Forschungsprozesses: Von der Literaturidentifikation bis zur Synthese. Epistemische Infrastruktur als Praxis.">
+    <meta name="author" content="Christopher Pollin">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Research-Promptotyping-Interface | FemPrompt SozArb">
+    <meta property="og:description" content="Der Forschungsprozess als navigierbares Artefakt: 5 Workflow-Schritte, Prompt-Architekturen, Assessment Comparator.">
+
+    <!-- Favicon (shared with main SPA) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e40af'/><text x='50' y='68' font-size='60' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>P</text></svg>">
+
+    <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Shared + Promptotyping CSS -->
+    <link rel="stylesheet" href="css/research.css">
+    <link rel="stylesheet" href="css/promptotyping.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="header-nav">
+                <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Research Vault</a>
+            </div>
+            <h1>Research-Promptotyping-Interface</h1>
+            <p class="subtitle">Der Forschungsprozess als navigierbares Artefakt</p>
+        </div>
+    </header>
+
+    <!-- Three Stances Banner -->
+    <div class="stances-bar">
+        <div class="stances-container">
+            <div class="stance" data-stance="was-ist">
+                <i class="fas fa-eye"></i>
+                <span>Zeigen, was ist</span>
+            </div>
+            <div class="stance" data-stance="wie">
+                <i class="fas fa-cogs"></i>
+                <span>Zeigen, wie es entstanden ist</span>
+            </div>
+            <div class="stance" data-stance="was-nicht">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>Zeigen, was nicht geht</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step Navigation -->
+    <nav class="step-nav">
+        <div class="step-nav-container">
+            <button class="step-btn active" data-step="1">
+                <span class="step-number">1</span>
+                <span class="step-label">Identifikation</span>
+            </button>
+            <div class="step-connector"></div>
+            <button class="step-btn" data-step="2">
+                <span class="step-number">2</span>
+                <span class="step-label">Konversion</span>
+            </button>
+            <div class="step-connector"></div>
+            <button class="step-btn" data-step="3">
+                <span class="step-number">3</span>
+                <span class="step-label">Wissensextraktion</span>
+            </button>
+            <div class="step-connector"></div>
+            <button class="step-btn" data-step="4">
+                <span class="step-number">4</span>
+                <span class="step-label">Assessment</span>
+            </button>
+            <div class="step-connector"></div>
+            <button class="step-btn" data-step="5">
+                <span class="step-number">5</span>
+                <span class="step-label">Synthese</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-main" id="main-content">
+        <!-- Step 1: Identifikation -->
+        <section class="step-content active" id="step-1">
+            <div class="step-header">
+                <h2>Schritt 1: Identifikation und Korpusaufbau</h2>
+                <p class="step-description">Vier Deep-Research-Systeme erhalten ein gemeinsames Prompt-Template. Die heterogenen Outputs werden in RIS konvertiert und in Zotero zusammengefuehrt.</p>
+            </div>
+
+            <!-- Funnel -->
+            <div class="funnel-container" id="funnel-viz">
+                <div class="funnel-stage" data-count="326">
+                    <div class="funnel-bar" style="width: 100%">
+                        <span class="funnel-label">326 Papers (Zotero)</span>
+                    </div>
+                </div>
+                <div class="funnel-arrow"><i class="fas fa-chevron-down"></i></div>
+                <div class="funnel-stage" data-count="257">
+                    <div class="funnel-bar" style="width: 78.8%">
+                        <span class="funnel-label">257 PDFs akquiriert</span>
+                    </div>
+                </div>
+                <div class="funnel-arrow"><i class="fas fa-chevron-down"></i></div>
+                <div class="funnel-stage" data-count="252">
+                    <div class="funnel-bar" style="width: 77.3%">
+                        <span class="funnel-label">252 Markdown konvertiert</span>
+                    </div>
+                </div>
+                <div class="funnel-arrow"><i class="fas fa-chevron-down"></i></div>
+                <div class="funnel-stage" data-count="249">
+                    <div class="funnel-bar" style="width: 76.4%">
+                        <span class="funnel-label">249 Knowledge-Dokumente</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Provider Cards -->
+            <h3 class="pt-section-heading">Deep-Research-Provider</h3>
+            <div class="provider-cards" id="provider-cards"></div>
+
+            <!-- Limitation -->
+            <div id="step1-limitations"></div>
+        </section>
+
+        <!-- Step 2: PDF-zu-Markdown -->
+        <section class="step-content" id="step-2">
+            <div class="step-header">
+                <h2>Schritt 2: PDF-zu-Markdown-Konversion</h2>
+                <p class="step-description">PDFs werden mit Docling (Open-Source, lokal, intern ML-basiert) in Markdown konvertiert. Vierstufige Validierung.</p>
+            </div>
+
+            <!-- Process Diagram -->
+            <div class="process-pipeline">
+                <div class="process-stage">
+                    <div class="process-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="process-label">PDF</div>
+                    <div class="process-detail">257 Dateien</div>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-stage highlight">
+                    <div class="process-icon"><i class="fas fa-robot"></i></div>
+                    <div class="process-label">Docling</div>
+                    <div class="process-detail">Open-Source, lokal</div>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-stage">
+                    <div class="process-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="process-label">Markdown</div>
+                    <div class="process-detail">252 konvertiert</div>
+                </div>
+                <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="process-stage">
+                    <div class="process-icon"><i class="fas fa-check-double"></i></div>
+                    <div class="process-label">Validierung</div>
+                    <div class="process-detail">4 Stufen</div>
+                </div>
+            </div>
+
+            <!-- Validation Steps -->
+            <h3 class="pt-section-heading">Vierstufige Validierung</h3>
+            <div class="validation-steps">
+                <div class="validation-step">
+                    <div class="validation-number">1</div>
+                    <div class="validation-content">
+                        <h4>Syntaktisch</h4>
+                        <p>Markdown-Syntax korrekt? Header-Hierarchie, Listen, Links. Automatisiert pruefbar.</p>
+                    </div>
+                </div>
+                <div class="validation-step">
+                    <div class="validation-number">2</div>
+                    <div class="validation-content">
+                        <h4>Strukturell</h4>
+                        <p>Erwartete Abschnitte vorhanden? Mindestlaenge erreicht? Zeichenanzahl plausibel?</p>
+                    </div>
+                </div>
+                <div class="validation-step">
+                    <div class="validation-number">3</div>
+                    <div class="validation-content">
+                        <h4>Semantisch</h4>
+                        <p>Inhalt plausibel? Keywords aus dem Titel im Text vorhanden? Artefakte (OCR-Fehler, Seitenumbrueche) erkannt?</p>
+                    </div>
+                </div>
+                <div class="validation-step">
+                    <div class="validation-number">4</div>
+                    <div class="validation-content">
+                        <h4>Manuell (Stichprobe)</h4>
+                        <p>Visueller Vergleich PDF vs. Markdown fuer Stichprobe. ~10% der Konversionen manuell geprueft.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Limitation -->
+            <div class="limitation-banner">
+                <div class="limitation-icon"><i class="fas fa-exclamation-circle"></i></div>
+                <div class="limitation-text">
+                    <strong>Limitation:</strong> Kein Side-by-Side-Vergleich PDF/Markdown moeglich (PDFs zu gross fuer GitHub Pages). Die vierstufige Validierung wurde als Durchlaufkontrolle durchgefuehrt; nicht alle Stufen haben persistierte Artefakte.
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3: Wissensextraktion -->
+        <section class="step-content" id="step-3">
+            <div class="step-header">
+                <h2>Schritt 3: Structured Knowledge Extraction (SKE)</h2>
+                <p class="step-description">Dreistufige Pipeline: LLM-Extraktion, deterministische Formatierung, LLM-Verifikation. Designprinzip: Jeder probabilistische Schritt wird von einem Verifikations-Milestone gefolgt.</p>
+            </div>
+
+            <!-- 3-Stage Visual Pipeline -->
+            <div class="ske-pipeline">
+                <div class="ske-stage probabilistic">
+                    <div class="ske-badge">LLM</div>
+                    <h4>Stufe 1: Extraktion</h4>
+                    <p>Claude Haiku 4.5 extrahiert strukturierte Informationen: Metadaten, Kernbefund, Argumente, 10 Kategorien mit Evidenz.</p>
+                    <div class="ske-output">Output: JSON</div>
+                    <button class="prompt-toggle" data-prompt="stage1">Prompt anzeigen <i class="fas fa-chevron-down"></i></button>
+                    <div class="prompt-panel" id="prompt-stage1"></div>
+                </div>
+                <div class="ske-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="ske-stage deterministic">
+                    <div class="ske-badge">Deterministisch</div>
+                    <h4>Stufe 2: Formatierung</h4>
+                    <p>Rein algorithmisch, <strong>kein LLM</strong>. Template-basierte Formatierung in Obsidian-kompatibles Markdown. Keine Konfabulation moeglich.</p>
+                    <div class="ske-output">Output: Markdown</div>
+                    <button class="prompt-toggle" data-prompt="stage2">Schema anzeigen <i class="fas fa-chevron-down"></i></button>
+                    <div class="prompt-panel" id="prompt-stage2"></div>
+                </div>
+                <div class="ske-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="ske-stage probabilistic">
+                    <div class="ske-badge">LLM-as-Judge</div>
+                    <h4>Stufe 3: Verifikation</h4>
+                    <p>Claude Haiku 4.5 prueft Knowledge-Dokument gegen Originalausschnitt. Vergibt Confidence-Scores (0-100).</p>
+                    <div class="ske-output">Output: Verification JSON</div>
+                    <button class="prompt-toggle" data-prompt="stage3">Prompt anzeigen <i class="fas fa-chevron-down"></i></button>
+                    <div class="prompt-panel" id="prompt-stage3"></div>
+                </div>
+            </div>
+
+            <!-- Confidence Histogram -->
+            <h3 class="pt-section-heading">Verifikations-Scores</h3>
+            <div class="pt-chart-container">
+                <canvas id="confidence-histogram"></canvas>
+            </div>
+            <div class="pt-metric-tiles" id="ske-metrics"></div>
+
+            <!-- Example Walkthrough -->
+            <h3 class="pt-section-heading">Beispiel-Durchlauf</h3>
+            <div class="example-walkthrough">
+                <div class="example-tabs">
+                    <button class="example-tab active" data-example="stage1">Stufe 1: JSON</button>
+                    <button class="example-tab" data-example="stage2">Stufe 2: Markdown</button>
+                    <button class="example-tab" data-example="verification">Stufe 3: Verifikation</button>
+                </div>
+                <div class="example-panel" id="example-content"></div>
+            </div>
+
+            <!-- Cost -->
+            <div class="cost-info">
+                <i class="fas fa-dollar-sign"></i>
+                <span><strong>$7.00</strong> fuer 249 Knowledge-Dokumente (~$0.028 pro Paper). Modell: Claude Haiku 4.5.</span>
+            </div>
+        </section>
+
+        <!-- Step 4: Paralleles Assessment -->
+        <section class="step-content" id="step-4">
+            <div class="step-header">
+                <h2>Schritt 4: Paralleles Assessment</h2>
+                <p class="step-description">Zwei unabhaengige Bewertungspfade. Identisches 10-Kategorien-Schema. Die Divergenzen sind keine Fehler -- sie sind epistemische Marker.</p>
+            </div>
+
+            <!-- Dual Path Visualization -->
+            <div class="dual-path">
+                <div class="path-card human">
+                    <div class="path-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h4>Human Assessment</h4>
+                    <p>Expert:innen aus Sozialarbeitsforschung, Gender Studies, Technikforschung</p>
+                    <div class="path-detail">Basis: Titel + Abstract</div>
+                    <div class="path-detail">Werkzeug: Google Spreadsheet</div>
+                    <div class="path-detail">210 von 326 bewertet</div>
+                </div>
+                <div class="path-vs">vs.</div>
+                <div class="path-card llm">
+                    <div class="path-icon"><i class="fas fa-microchip"></i></div>
+                    <h4>LLM Assessment</h4>
+                    <p>Claude Haiku 4.5 mit Anti-Sycophancy-Constraints</p>
+                    <div class="path-detail">Basis: Knowledge-Dokument</div>
+                    <div class="path-detail">Werkzeug: Automatisierte Pipeline</div>
+                    <div class="path-detail">326 von 326 bewertet</div>
+                </div>
+            </div>
+
+            <!-- Assessment Prompt -->
+            <h3 class="pt-section-heading">Assessment-Prompt</h3>
+            <p class="prompt-intro">Der vollstaendige 10K-Assessment-Prompt mit negativen Constraints und Sycophancy-Mitigation:</p>
+            <button class="prompt-toggle" data-prompt="assessment">Prompt anzeigen <i class="fas fa-chevron-down"></i></button>
+            <div class="prompt-panel" id="prompt-assessment"></div>
+
+            <!-- Category Browser -->
+            <h3 class="pt-section-heading">10 Kategorien</h3>
+            <div class="category-grid" id="category-grid"></div>
+
+            <!-- Comparator -->
+            <h3 class="pt-section-heading">Assessment Comparator</h3>
+            <div class="comparator-controls">
+                <input type="text" class="pt-search-box" id="comparator-search" placeholder="Paper suchen (Titel oder Autor)...">
+                <div class="filter-toggles" id="category-filters">
+                    <span class="filter-toggles-label">Divergenz in mindestens einer Kategorie:</span>
+                </div>
+                <div class="comparator-filter-row">
+                    <select id="comparator-filter" class="filter-select">
+                        <option value="all">Alle Papers mit Human Assessment</option>
+                        <option value="agreement">Uebereinstimmung</option>
+                        <option value="divergence">Divergenz</option>
+                        <option value="llm-include-human-exclude">LLM Include / Human Exclude</option>
+                        <option value="human-include-llm-exclude">Human Include / LLM Exclude</option>
+                    </select>
+                    <span class="result-count" id="comparator-count"></span>
+                </div>
+            </div>
+            <div class="comparator-layout">
+                <div class="comparator-list" id="comparator-list"></div>
+                <div class="comparator-detail" id="comparator-detail">
+                    <p class="placeholder-text">Paper auswaehlen, um den Vergleich zu sehen.</p>
+                </div>
+            </div>
+
+            <!-- Confusion Matrix -->
+            <h3 class="pt-section-heading">Konfusionsmatrix</h3>
+            <div class="pt-confusion-matrix" id="confusion-matrix"></div>
+
+            <!-- Limitation -->
+            <div id="step4-limitations"></div>
+
+            <!-- Cost -->
+            <div class="cost-info">
+                <i class="fas fa-dollar-sign"></i>
+                <span><strong>$1.44</strong> fuer 326 Paper-Assessments (~$0.004 pro Paper). Modell: Claude Haiku 4.5.</span>
+            </div>
+        </section>
+
+        <!-- Step 5: Synthese -->
+        <section class="step-content" id="step-5">
+            <div class="step-header">
+                <h2>Schritt 5: Synthese und Vault</h2>
+                <p class="step-description">Deterministische Zusammenfuehrung: Knowledge-Dokumente + LLM-Assessment + Human-Assessment = Obsidian Vault. Kein LLM in dieser Phase.</p>
+            </div>
+
+            <!-- Vault Stats -->
+            <div class="pt-metric-tiles" id="vault-stats"></div>
+
+            <!-- Architecture Diagram -->
+            <h3 class="pt-section-heading">Architektur</h3>
+            <div class="vault-architecture">
+                <div class="vault-inputs">
+                    <div class="vault-input">
+                        <i class="fas fa-file-alt"></i>
+                        <span>249 Knowledge-Docs</span>
+                    </div>
+                    <div class="vault-input">
+                        <i class="fas fa-microchip"></i>
+                        <span>LLM Assessment (326)</span>
+                    </div>
+                    <div class="vault-input">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Human Assessment (210)</span>
+                    </div>
+                </div>
+                <div class="vault-process">
+                    <div class="vault-script">
+                        <i class="fas fa-code"></i>
+                        <span>generate_vault.py</span>
+                        <div class="ske-badge" style="background:rgba(16,185,129,0.15);color:#065f46;">Deterministisch</div>
+                    </div>
+                </div>
+                <div class="vault-outputs">
+                    <div class="vault-output">
+                        <i class="fas fa-folder"></i>
+                        <span>Papers/ (249)</span>
+                    </div>
+                    <div class="vault-output">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Concepts/ (79)</span>
+                    </div>
+                    <div class="vault-output">
+                        <i class="fas fa-list"></i>
+                        <span>MOCs/ (Indizes)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integration Explanation -->
+            <h3 class="pt-section-heading">Wie integriert generate_vault.py die drei Datenquellen?</h3>
+            <div class="validation-steps">
+                <div class="validation-step">
+                    <div class="validation-number">1</div>
+                    <div class="validation-content">
+                        <h4>Knowledge-Dokumente laden</h4>
+                        <p>249 Markdown-Dateien mit YAML-Frontmatter (title, authors, year, confidence) und strukturierten Sektionen (Kernbefund, Methodik, Hauptargumente, Kategorie-Evidenz).</p>
+                    </div>
+                </div>
+                <div class="validation-step">
+                    <div class="validation-number">2</div>
+                    <div class="validation-content">
+                        <h4>Assessment-Daten mergen</h4>
+                        <p>LLM-Assessment (10K CSV: 326 Decisions + Kategorien) und Human-Assessment (Google Sheets Export: 210 Decisions) werden via Zotero-Key zugeordnet. Ergebnis: llm_decision, human_decision, agreement, Konfidenz im YAML-Frontmatter.</p>
+                    </div>
+                </div>
+                <div class="validation-step">
+                    <div class="validation-number">3</div>
+                    <div class="validation-content">
+                        <h4>Concept-Netzwerk extrahieren</h4>
+                        <p>Automatische Extraktion von Konzepten aus Schluesselbegriffen. Frequency-Schwelle >= 2, Synonym-Mapping fuer Deduplizierung. Ergebnis: 79 Concept-Dateien mit Backlinks.</p>
+                    </div>
+                </div>
+                <div class="validation-step">
+                    <div class="validation-number">4</div>
+                    <div class="validation-content">
+                        <h4>MOCs und Indizes generieren</h4>
+                        <p>Map of Contents fuer Navigation: Concept_Frequency (Top-Konzepte), Assessment_Overview (Agreement/Divergence), Papers nach Jahr/Typ. Alles deterministisch, kein LLM.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vault-link-box">
+                <a href="index.html" class="vault-link">
+                    <i class="fas fa-external-link-alt"></i>
+                    Research Vault oeffnen
+                </a>
+                <a href="downloads/vault.zip" class="vault-link secondary">
+                    <i class="fas fa-download"></i>
+                    Vault als ZIP herunterladen
+                </a>
+            </div>
+        </section>
+
+        <!-- Limitations Section -->
+        <section class="limitations-section" id="limitations-section">
+            <h2>Grenzen dieses Forschungsprozesses</h2>
+            <p class="limitations-intro">Epistemische Infrastruktur bedeutet auch, die Grenzen des eigenen Verfahrens sichtbar zu machen.</p>
+            <div class="limitations-grid" id="limitations-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="pt-footer">
+        <div class="footer-content">
+            <p>Research-Promptotyping-Interface | <a href="https://github.com/chpollin/FemPrompt_SozArb">GitHub Repository</a></p>
+            <p>Elisabeth-List-Fellowship-Projekt "Diversitaetssensibler Umgang mit Kuenstlicher Intelligenz" | Universitaet Graz, 2025-2026</p>
+            <p>Pollin, Sackl-Sharif, Klinger, Steiner</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/promptotyping-app.js"></script>
+</body>
+</html>

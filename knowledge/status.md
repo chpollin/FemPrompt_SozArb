@@ -1,4 +1,4 @@
-# Status (2026-02-18)
+# Status (2026-02-22)
 
 ## Aktueller Fokus: Paper fertigstellen (M8)
 
@@ -128,6 +128,25 @@ Human Exclude           78              34
   - YAML-Frontmatter: llm_decision, human_decision, llm_categories, human_categories, agreement
   - ZIP fuer Download: `docs/downloads/vault.zip`
 - Abhaengigkeit: M6 (Assessment-Daten) -- erledigt
+
+### M10: Research-Promptotyping-Interface -- UMGESETZT
+
+- [x] Konzept: 5 Workflow-Schritte + 3 epistemische Haltungen (was ist / wie / was nicht geht)
+- [x] Datengenerator: `scripts/generate_promptotyping_data.py` -> `docs/data/promptotyping_data.json`
+  - Extrahiert Prompts aus Pipeline-Code (nicht aus separaten Dateien)
+  - Laedt Verifikations-Scores, RIS-Provider-Counts, Beispiel-Paper (Ahmed_2024)
+  - 6 dokumentierte Limitationen mit Schritt-Zuordnung
+- [x] Implementierung: `docs/promptotyping.html` + `docs/css/promptotyping.css` + `docs/js/promptotyping-app.js`
+  - Schritt 1: Identifikation -- Trichter-Visualisierung (326->257->252->249), 4 Provider-Karten
+  - Schritt 2: Konversion -- Prozess-Pipeline (PDF->Docling->MD->Validierung), 4-stufige Validierung
+  - Schritt 3: SKE -- 3-Stage-Pipeline mit Prompt-Toggles (inkl. Syntax-Highlighting), Confidence-Histogramm, Beispiel-Durchlauf
+  - Schritt 4: Assessment -- Dual-Path-Visualisierung, Assessment-Prompt mit Anti-Sycophancy-Constraints, 10-Kategorien-Browser, Comparator (190 Papers, Suche, Kategorie-Filter mit Divergenz-Counts), Konfusionsmatrix
+  - Schritt 5: Synthese -- Vault-Statistiken, Architektur-Diagramm, Erklaerpanel (4-stufige Integration)
+- [x] Design-System: CSS-Variablen aus `research.css` adoptiert, `pt-*` Namespace fuer kollisionsfreie Klassen
+- [x] Accessibility: Focus-visible States auf allen interaktiven Elementen, min. 44px Touch-Targets
+- [x] Responsive: 3 Breakpoints (Desktop/Tablet 1024px/Mobile 768px)
+- [x] Header-Link in `docs/index.html` (CSS-Klasse statt Inline-Style)
+- Branch: `FemPrompt_SozArb_promptotyping-interface`
 
 ---
 
