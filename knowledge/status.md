@@ -129,24 +129,37 @@ Human Exclude           78              34
   - ZIP fuer Download: `docs/downloads/vault.zip`
 - Abhaengigkeit: M6 (Assessment-Daten) -- erledigt
 
-### M10: Research-Promptotyping-Interface -- UMGESETZT
+### M10: Research-Promptotyping-Interface v1 -- ERSETZT DURCH M11
 
-- [x] Konzept: 5 Workflow-Schritte + 3 epistemische Haltungen (was ist / wie / was nicht geht)
-- [x] Datengenerator: `scripts/generate_promptotyping_data.py` -> `docs/data/promptotyping_data.json`
-  - Extrahiert Prompts aus Pipeline-Code (nicht aus separaten Dateien)
-  - Laedt Verifikations-Scores, RIS-Provider-Counts, Beispiel-Paper (Ahmed_2024)
-  - 6 dokumentierte Limitationen mit Schritt-Zuordnung
-- [x] Implementierung: `docs/promptotyping.html` + `docs/css/promptotyping.css` + `docs/js/promptotyping-app.js`
-  - Schritt 1: Identifikation -- Trichter-Visualisierung (326->257->252->249), 4 Provider-Karten
-  - Schritt 2: Konversion -- Prozess-Pipeline (PDF->Docling->MD->Validierung), 4-stufige Validierung
-  - Schritt 3: SKE -- 3-Stage-Pipeline mit Prompt-Toggles (inkl. Syntax-Highlighting), Confidence-Histogramm, Beispiel-Durchlauf
-  - Schritt 4: Assessment -- Dual-Path-Visualisierung, Assessment-Prompt mit Anti-Sycophancy-Constraints, 10-Kategorien-Browser, Comparator (190 Papers, Suche, Kategorie-Filter mit Divergenz-Counts), Konfusionsmatrix
-  - Schritt 5: Synthese -- Vault-Statistiken, Architektur-Diagramm, Erklaerpanel (4-stufige Integration)
-- [x] Design-System: CSS-Variablen aus `research.css` adoptiert, `pt-*` Namespace fuer kollisionsfreie Klassen
-- [x] Accessibility: Focus-visible States auf allen interaktiven Elementen, min. 44px Touch-Targets
-- [x] Responsive: 3 Breakpoints (Desktop/Tablet 1024px/Mobile 768px)
-- [x] Header-Link in `docs/index.html` (CSS-Klasse statt Inline-Style)
-- Branch: `FemPrompt_SozArb_promptotyping-interface`
+- [x] v1: 5-Schritte-Dashboard (Trichter, Prozess-Diagramme, Statistiken) -- `bb147c0`
+- Erkenntnis: Dashboard *beschreibt* den Prozess, macht ihn aber nicht *navigierbar*
+- Ersetzt durch M11 (Promptotyping v2)
+
+### M11: Promptotyping v2 -- UMGESETZT
+
+- [x] Konzeptdokument: `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` (Promptotyping als epistemische Praxis)
+- [x] Phase 1: Vault v2 Generator (`scripts/generate_vault_v2.py`, ~1660 Zeilen)
+  - LLM-basierte Konzept-Extraktion: 249 Papers -> 136 konsolidierte Konzepte (Freq >= 2)
+  - LLM-basierte Divergenz-Klassifikation: 111 Faelle -> 3 Muster (81% Semantisch, 11% Keyword, 8% Implizit)
+  - 5-Strategie-Titel-Matching: 237/249 (vs. 226/249 in v1)
+  - 4 Vault-Dokumenttypen: Papers (248), Concepts (136), Pipeline (5), Divergenzen (111)
+  - LLM-Caching in `.vault_cache/` (reproduzierbar ohne erneute API-Calls)
+  - LLM-Kosten: ~$1 (Haiku 4.5)
+- [x] Phase 2: Datengenerator (`scripts/generate_promptotyping_data_v2.py`, ~500 Zeilen)
+  - Reine Datentransformation (kein LLM)
+  - Output: `docs/data/promptotyping_v2.json` (1.0 MB)
+  - 249 Paper-Journeys, 136 Konzept-Nodes, 79 Co-Occurrence-Edges, 111 Divergenzen
+- [x] Phase 3: Web-Interface (4 Views, Neubau)
+  - View 1: Pipeline-Durchlicht (D3 Sankey) -- 326 Papers durch 5 Stufen, Dropout-Baender, Stufen-Detail mit Prompts
+  - View 2: Paper Journey -- Suche, horizontale Timeline (5 Stufen), expandierbare Stage-Details
+  - View 3: Konzept-Explorer (D3 Force Graph) -- Frequency-Slider, Zoom/Pan/Drag, Co-Occurrence-Edges
+  - View 4: Divergenz-Navigator -- Summary-Karten, Pattern/Typ-Filter, Kategorie-Vergleichstabelle
+  - Cross-View-Navigation: Konzept-Klick -> Explorer, Paper-Klick -> Journey
+- [x] Design: CSS-Variablen aus `research.css`, `pt-*` Namespace, responsive (768px Breakpoint)
+- [x] CDN-Dependencies: D3 v7.9.0, d3-sankey v0.12.3, Chart.js 4.4.0, FontAwesome 6.5.1
+- [x] Vault ZIP: `docs/downloads/vault.zip` (1.1 MB, 505 Dateien)
+- Branch: `FemPrompt_SozArb_promptotyping-interface`, Commit: `3476437`
+- Offene Punkte: Browser-Test, Mobile-Verifikation, Merge zu main
 
 ---
 
@@ -385,4 +398,4 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 ---
 
-*Aktualisiert: 2026-02-22*
+*Aktualisiert: 2026-02-23*

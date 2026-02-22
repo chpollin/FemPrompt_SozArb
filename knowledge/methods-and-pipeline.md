@@ -377,11 +377,12 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 | `benchmark/results/` | Ergebnisse | agreement_metrics.json, disagreements.csv |
 | `corpus/` | Korpus-Metadaten | zotero_export.json, papers_metadata.csv, source_tool_mapping.json |
 | `deep-research/restored/` | Deep-Research-Artefakte | 4 RIS-Dateien, 3 Raw-Outputs, ris-template.md |
-| `docs/` | GitHub Pages SPA + Promptotyping-Interface | index.html (Research Vault), promptotyping.html (Promptotyping) |
-| `docs/data/` | Generierte JSON-Daten fuer SPAs | research_vault_v2.json, promptotyping_data.json |
+| `docs/` | GitHub Pages SPA + Promptotyping-Interface | index.html (Research Vault), promptotyping.html (Promptotyping v2) |
+| `docs/data/` | Generierte JSON-Daten fuer SPAs | research_vault_v2.json, promptotyping_v2.json |
 | `docs/css/` | Stylesheets | research.css (Design-System), promptotyping.css (pt-* Namespace) |
-| `docs/js/` | JavaScript | app.js, features.js (SPA), promptotyping-app.js (Promptotyping) |
-| `scripts/` | Projekt-uebergreifende Scripts | generate_promptotyping_data.py |
+| `docs/js/` | JavaScript | app.js, features.js (SPA), promptotyping-app.js (Promptotyping v2) |
+| `scripts/` | Projekt-uebergreifende Scripts | generate_vault_v2.py, generate_promptotyping_data_v2.py |
+| `.vault_cache/` | LLM-API-Ergebnis-Cache (nicht committet) | concepts/ (249 JSON), divergences/ (111 JSON) |
 
 ---
 
@@ -402,7 +403,7 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 | `validate_knowledge_docs.py` | Knowledge-Dokument-Validierung | Getestet |
 | `verify_knowledge_quality.py` | Qualitaetspruefung Knowledge Docs | Abgeschlossen |
 | `validate_pipeline.py` | Pipeline-Validierung (End-to-End) | Getestet |
-| `generate_vault.py` | Obsidian Vault generieren (mit Assessment-Integration) | Abgeschlossen (249 Papers, 205 mit Assessment) |
+| `generate_vault.py` | Obsidian Vault v1 (flacher Index, Keyword-basiert) | Archiviert (ersetzt durch scripts/generate_vault_v2.py) |
 | `generate_docs_data.py` | SPA-Daten generieren (research_vault_v2.json) | Getestet |
 | `utils.py` | Zentrale Hilfsfunktionen (Logging, API, Config) | Aktiv |
 
@@ -410,7 +411,9 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 
 | Script | Funktion | Status |
 |--------|----------|--------|
-| `generate_promptotyping_data.py` | Promptotyping-Interface-Daten generieren (promptotyping_data.json) | Getestet |
+| `generate_vault_v2.py` | Vault v2 Generator: LLM-Konzept-Extraktion, Divergenz-Klassifikation, 4 Dokumenttypen | Abgeschlossen |
+| `generate_promptotyping_data_v2.py` | Promptotyping v2 JSON generieren (Paper-Journeys, Konzept-Graph, Divergenzen, Sankey-Flow) | Abgeschlossen |
+| `generate_promptotyping_data.py` | Promptotyping v1 Daten (veraltet, ersetzt durch v2) | Archiviert |
 
 ### Corpus Scripts (corpus/)
 
@@ -470,9 +473,65 @@ Diese Zirkularitaet ist nicht aufloesbar und wird nicht als methodischer Mangel,
 | 5D LLM-Assessment (325 Papers) | $1.15 | Abgeschlossen |
 | Knowledge Distillation (249 Papers) | ~$7.00 | Abgeschlossen |
 | 10K LLM-Assessment (326 Papers) | $1.44 | Abgeschlossen |
-| **Gesamt** | **~$10.17** | |
+| Vault v2 Konzept-Extraktion (249 Papers) | ~$0.75 | Abgeschlossen |
+| Vault v2 Divergenz-Klassifikation (111 Faelle) | ~$0.22 | Abgeschlossen |
+| **Gesamt** | **~$11.14** | |
 
 **Modell:** Claude Haiku 4.5 ($1.00/MTok Input, $5.00/MTok Output, Preise Stand Feb 2026)
+
+---
+
+## Vault v2 (Promptotyping)
+
+### Architektur
+
+Der Vault v2 (`scripts/generate_vault_v2.py`) ersetzt den flachen Paper-Index (v1) durch ein epistemisches Netzwerk mit 4 Dokumenttypen:
+
+| Typ | Anzahl | Inhalt |
+|-----|--------|--------|
+| **Paper Notes** | 248 | YAML-Frontmatter (Assessment-Daten), Transformation-Trail (Stage1 -> Stage3 -> Assessment), Konzept-Wikilinks, Wissensdokument-Volltext |
+| **Concept Notes** | 136 | LLM-extrahierte Definitionen, Frequency, Co-Occurrence-Tabelle, Paper-Backlinks, Assessment-Divergenz-Stats |
+| **Pipeline Notes** | 5 | Stufen-Beschreibung, Prompts (aus Code extrahiert), Konfiguration, Limitationen |
+| **Divergenz Notes** | 111 | Pattern-Klassifikation, Kategorie-Vergleichstabelle, LLM-Reasoning, betroffene Konzepte |
+
+### LLM-basierte Konzept-Extraktion
+
+- 249 API-Calls an Claude Haiku 4.5 (~$0.75)
+- 3-8 Fachkonzepte pro Paper (englische kanonische Form)
+- Post-Processing: Synonym-Merge (~35 manuelle Eintraege), Frequency-Filter (>= 2)
+- Ergebnis: 136 konsolidierte Konzepte mit Co-Occurrence-Matrix
+- Cache: `.vault_cache/concepts/` (JSON)
+
+### LLM-basierte Divergenz-Klassifikation
+
+- 111 API-Calls an Claude Haiku 4.5 (~$0.22)
+- 3 Muster: Semantische Expansion (81%), Keyword-Inklusion (11%), Implizite Feldzugehoerigkeit (8%)
+- Cache: `.vault_cache/divergences/` (JSON)
+
+### Titel-Matching (5 Strategien)
+
+| Strategie | Beschreibung | Treffer |
+|-----------|-------------|---------|
+| 1 | Stage1-JSON `metadata.title` -> Zotero-Title | Primaer |
+| 2 | KD-YAML-Frontmatter `title` -> Zotero-Title | Sekundaer |
+| 3 | Filename-Prefix-Matching | Tertiaer |
+| 4 | Autor+Jahr aus Filename vs. Zotero `creators[0]` + `date` | Quartaer |
+| 5 | `difflib.SequenceMatcher` (Schwelle 0.65) | Fallback |
+
+Ergebnis: 237/249 (vs. 226/249 in v1). 12 ungematchte = echte Datenqualitaetsprobleme (halluzinierte Titel, nicht-standardisierte Autorennamen).
+
+### Web-Interface (4 Views)
+
+**Datei:** `docs/promptotyping.html` + `docs/css/promptotyping.css` + `docs/js/promptotyping-app.js`
+**Daten:** `docs/data/promptotyping_v2.json` (1.0 MB)
+**CDN:** D3 v7.9.0, d3-sankey v0.12.3, Chart.js 4.4.0, FontAwesome 6.5.1
+
+| View | Technologie | Funktion |
+|------|-------------|----------|
+| Pipeline-Durchlicht | D3 Sankey | 326 Papers durch 5 Stufen, Dropout-Baender, Stufen-Detail mit Prompts |
+| Paper Journey | Vanilla JS | Suche, horizontale Timeline, expandierbare Stage-Details |
+| Konzept-Explorer | D3 Force Graph | Frequency-Slider, Zoom/Pan/Drag, Co-Occurrence-Edges |
+| Divergenz-Navigator | Vanilla JS | Summary-Karten, Pattern/Typ-Filter, Kategorie-Vergleichstabelle |
 
 ---
 
@@ -519,4 +578,4 @@ Im bisherigen Durchlauf lieferte Deep Research ueberpruefbare Quellen. Dokumenti
 
 ---
 
-*Aktualisiert: 2026-02-22*
+*Aktualisiert: 2026-02-23*
