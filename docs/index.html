@@ -21,6 +21,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
 
     <!-- Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 
@@ -59,6 +60,7 @@
     <nav class="view-nav">
         <div class="view-nav-inner">
             <button class="view-tab active" data-view="korpus">Korpus</button>
+            <button class="view-tab" data-view="wissensnetz">Wissensnetz</button>
             <button class="view-tab" data-view="vergleich">Bewertungsvergleich</button>
         </div>
     </nav>
@@ -143,6 +145,25 @@
             </div>
         </section>
 
+        <!-- View: Wissensnetz -->
+        <section class="content-section view-content" id="view-wissensnetz" style="display:none;">
+            <h2 class="section-heading">Wissensnetz</h2>
+            <p class="section-description">
+                136 Konzepte, extrahiert aus 249 Wissensdokumenten.
+                Groesse = Haeufigkeit, Verbindung = gemeinsame Papers.
+                Klick auf ein Konzept zeigt Definition und verbundene Papers.
+            </p>
+            <div class="graph-controls">
+                <input type="text" class="graph-search" id="graph-search" placeholder="Konzept suchen..." autocomplete="off">
+                <label class="freq-control">Min. Frequenz: <input type="range" id="freq-slider" min="2" max="20" value="2"><span id="freq-value">2</span></label>
+                <button class="graph-reset-btn" id="graph-reset">Alle anzeigen</button>
+            </div>
+            <div class="graph-wrapper">
+                <div class="graph-container" id="graph-container"></div>
+                <div class="graph-detail" id="graph-detail"></div>
+            </div>
+        </section>
+
         <!-- View: Bewertungsvergleich -->
         <section class="content-section view-content" id="view-vergleich" style="display:none;">
             <h2 class="section-heading">Bewertungsvergleich</h2>
@@ -215,5 +236,6 @@
     <!-- Scripts -->
     <script src="js/research-app.js"></script>
     <script src="js/features.js"></script>
+    <script src="js/wissensnetz.js"></script>
 </body>
 </html>

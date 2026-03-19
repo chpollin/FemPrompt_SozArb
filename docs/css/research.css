@@ -1669,3 +1669,236 @@ main {
     color: var(--primary-dark);
     text-decoration: underline;
 }
+
+/* ==========================================================================
+   WISSENSNETZ (Concept Graph)
+   ========================================================================== */
+
+.graph-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.graph-search {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-md);
+    font-family: var(--font-body);
+    flex: 1;
+    min-width: 200px;
+    transition: var(--transition-fast);
+}
+
+.graph-search:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.freq-control {
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.graph-reset-btn {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--gray-300);
+    background: white;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: var(--transition-fast);
+}
+
+.graph-reset-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+/* Graph + Detail side by side */
+.graph-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.graph-wrapper:has(.graph-detail[style*="display: block"]) {
+    grid-template-columns: 1fr 340px;
+}
+
+.graph-container {
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.graph-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Tooltip */
+.graph-tooltip {
+    position: absolute;
+    background: var(--gray-900);
+    color: white;
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
+    pointer-events: none;
+    z-index: 50;
+    max-width: 250px;
+    line-height: 1.4;
+}
+
+/* Detail panel (right side) */
+.graph-detail {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.graph-detail-inner {
+    padding: 1.25rem;
+    position: relative;
+}
+
+.graph-detail-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: var(--gray-100);
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--gray-500);
+    line-height: 1;
+}
+
+.graph-detail-close:hover {
+    background: var(--gray-200);
+    color: var(--gray-900);
+}
+
+.graph-detail h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 0.25rem;
+    padding-right: 2rem;
+}
+
+.graph-detail h4 {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-meta {
+    font-size: var(--text-sm);
+    color: var(--gray-500);
+    margin-bottom: 0.75rem;
+}
+
+.detail-def {
+    font-size: var(--text-sm);
+    color: var(--gray-700);
+    line-height: 1.6;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+/* Papers list in detail */
+.graph-papers-list {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.graph-paper-item {
+    padding: 0.3rem 0;
+    font-size: var(--text-xs);
+    color: var(--gray-600);
+    cursor: pointer;
+    border-bottom: 1px solid var(--gray-50);
+    transition: color 0.1s;
+}
+
+.graph-paper-item:hover {
+    color: var(--primary);
+}
+
+.graph-paper-item.paper-diverge {
+    color: var(--danger);
+}
+
+.graph-paper-item.paper-diverge:hover {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+.graph-paper-more {
+    font-size: var(--text-xs);
+    color: var(--gray-400);
+    padding: 0.3rem 0;
+}
+
+/* Neighbor list */
+.graph-neighbors-list {
+    list-style: none;
+    padding: 0;
+}
+
+.graph-neighbor-item {
+    padding: 0.3rem 0;
+    font-size: var(--text-sm);
+    color: var(--primary);
+    cursor: pointer;
+    border-bottom: 1px solid var(--gray-50);
+}
+
+.graph-neighbor-item:hover {
+    font-weight: 600;
+}
+
+.neighbor-weight {
+    font-size: var(--text-xs);
+    color: var(--gray-400);
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .graph-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+    .graph-container {
+        height: 400px;
+    }
+    .graph-detail {
+        max-height: 300px;
+    }
+}

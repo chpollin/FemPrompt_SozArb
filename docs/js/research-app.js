@@ -15,6 +15,8 @@ let kappas = {};
 let fuse = null;
 let activeCategories = new Set();
 let benchmarkInitialized = false;
+let wissensnetzInitialized = false;
+let conceptData = null; // from promptotyping_v2.json
 let currentPage = 1;
 let currentSort = 'relevance'; // default: Include first, then year
 const PAGE_SIZE = 50;
@@ -57,6 +59,21 @@ async function loadData() {
         threshold: 0.3,
         includeScore: true
     });
+
+    // Load concept data for Wissensnetz
+    try {
+        var ptRes = await fetch('data/promptotyping_v2.json');
+        if (ptRes.ok) {
+            var ptData = await ptRes.json();
+            conceptData = {
+                nodes: ptData.concepts.nodes,
+                edges: ptData.concepts.edges,
+                papers: ptData.papers
+            };
+        }
+    } catch (e) {
+        console.warn('[Evidence] Concept data not available:', e.message);
+    }
 }
 
 // Initialize UI
@@ -81,10 +98,16 @@ function initializeUI() {
                 v.classList.toggle('active', v.id === 'view-' + viewId);
                 v.style.display = v.id === 'view-' + viewId ? '' : 'none';
             });
-            // Lazy-init benchmark on first visit
+            // Lazy-init on first visit
             if (viewId === 'vergleich' && !benchmarkInitialized) {
                 initializeBenchmark();
                 benchmarkInitialized = true;
+            }
+            if (viewId === 'wissensnetz' && !wissensnetzInitialized && conceptData) {
+                wissensnetzInitialized = true;
+                if (window.initWissensnetz) {
+                    window.initWissensnetz(conceptData.nodes, conceptData.edges, conceptData.papers);
+                }
             }
         });
     });
@@ -619,6 +642,9 @@ function downloadVaultZip() {
 }
 
 window.closePaperModal = closePaperModal;
+window.showPaperDetail = showPaperDetail;
 window.exportFilteredPapers = exportFilteredPapers;
 window.downloadKnowledgeDoc = downloadKnowledgeDoc;
 window.downloadVaultZip = downloadVaultZip;
+// Expose for wissensnetz.js cross-view navigation
+Object.defineProperty(window, 'allPapers', { get: function() { return allPapers; } });
