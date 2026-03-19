@@ -358,36 +358,5 @@ function renderDisagreementsTable() {
     };
 }
 
-// =============================================
-// RELATED PAPERS (used in modal)
-// =============================================
-
-function addRelatedPapersSection(paper) {
-    if (!paper.llm.categories || paper.llm.categories.length === 0) return '';
-
-    const related = allPapers
-        .filter(p => p.id !== paper.id)
-        .map(p => ({
-            paper: p,
-            shared: paper.llm.categories.filter(cat => p.llm.categories.includes(cat)).length
-        }))
-        .filter(r => r.shared >= 2)
-        .sort((a, b) => b.shared - a.shared)
-        .slice(0, 3);
-
-    if (related.length === 0) return '';
-
-    const items = related.map(r => {
-        const safeId = r.paper.id.replace(/'/g, "\\'");
-        return `<li onclick="window._openPaper('${safeId}')" style="cursor:pointer;color:var(--primary);padding:2px 0;list-style:disc;">
-            ${escapeHtml(r.paper.author_year)} &mdash; ${escapeHtml(r.paper.title.substring(0, 60))}&hellip;
-            <span style="font-size:0.7rem;color:var(--gray-400);">(${r.shared} gemeinsame Kategorien)</span>
-        </li>`;
-    }).join('');
-
-    return `<div class="detail-section"><h3>Verwandte Papers</h3><ul style="padding-left:1.5rem;">${items}</ul></div>`;
-}
-
 window.filterByQuadrant = filterByQuadrant;
 window.initializeBenchmark = initializeBenchmark;
-window.addRelatedPapersSection = addRelatedPapersSection;
