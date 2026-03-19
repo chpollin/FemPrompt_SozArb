@@ -1,86 +1,111 @@
-// features.js - Benchmark Tab + Helper Features for Research Vault v2.0
-// Uses Chart.js (already loaded) for all charts -- no Observable Plot dependency
+// features.js - Bewertungsvergleich Tab for Evidence Companion
+// Uses Chart.js (already loaded) for all charts
+
+(function() {
+'use strict';
+
+var EC = window.EC;
+
+// Design system colors (mirroring CSS variables)
+var COLORS = {
+    success: '#5b8c5a',    // var(--success) sage green
+    info: '#4b7bab',       // var(--info) steel blue
+    warning: '#d4943a',    // var(--warning) amber
+    gray400: '#a8a29e',    // var(--gray-400)
+    gray500: '#78716c',    // var(--gray-500)
+};
 
 // =============================================
 // BENCHMARK TAB
 // =============================================
 
 function initializeBenchmark() {
-    if (!vaultMeta || !kappas) { console.warn('[Benchmark] no data -- skipping'); return; }
-    const ok = [], fail = [];
-    const run = (label, fn) => { try { fn(); ok.push(label); } catch(e) { fail.push(label); console.error(`[Benchmark] ${label}:`, e); } };
+    var meta = EC.getMeta();
+    var kappas = EC.getKappas();
+    if (!meta || !kappas) { console.warn('[Benchmark] no data -- skipping'); return; }
+
+    var ok = [], fail = [];
+    var run = function(label, fn) {
+        try { fn(); ok.push(label); }
+        catch(e) { fail.push(label); console.error('[Benchmark] ' + label + ':', e); }
+    };
     run('metrics', renderBenchmarkMetrics);
     run('slope', renderSlopeChart);
     run('overlap', renderOverlapTreemap);
     run('kappa-chart', renderKappaChart);
     run('disagreements', renderDisagreementsTable);
-    const cm = vaultMeta.confusion_matrix || {};
-    const dis = allPapers.filter(p => p.benchmark.has_human && p.benchmark.agreement === false).length;
-    console.log(`[Benchmark] ok=[${ok.join(',')}]${fail.length ? ' FAIL=['+fail.join(',')+']' : ''} | κ=${(vaultMeta.kappa_overall||0).toFixed(3)} dis=${dis} II=${cm.Include_Include} EI=${cm.Exclude_Include}`);
 
-    const sev = document.getElementById('filter-severity');
+    var cm = meta.confusion_matrix || {};
+    var dis = EC.getAllPapers().filter(function(p) {
+        return p.benchmark.has_human && p.benchmark.agreement === false;
+    }).length;
+    console.log('[Benchmark] ok=[' + ok.join(',') + ']' +
+        (fail.length ? ' FAIL=[' + fail.join(',') + ']' : '') +
+        ' | k=' + (meta.kappa_overall || 0).toFixed(3) + ' dis=' + dis +
+        ' II=' + (cm.Include_Include || 0) + ' EI=' + (cm.Exclude_Include || 0));
+
+    var sev = document.getElementById('filter-severity');
     if (sev) sev.addEventListener('change', renderDisagreementsTable);
 }
 
 // ---- Metric Tiles ----
 
 function renderBenchmarkMetrics() {
-    const container = document.getElementById('benchmark-metrics');
+    var container = document.getElementById('benchmark-metrics');
     if (!container) return;
 
-    const cm = vaultMeta.confusion_matrix || {};
-    const ii = cm.Include_Include || 0;
-    const ei = cm.Exclude_Include || 0; // nur LLM Include
-    const ie = cm.Include_Exclude || 0; // nur Human Include
-    const benchPapers = vaultMeta.benchmark_papers || 0;
-    const llmRate = vaultMeta.llm_include_rate || 0;
-    const humanRate = vaultMeta.human_include_rate || 0;
-    const kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
+    var meta = EC.getMeta();
+    var cm = meta.confusion_matrix || {};
+    var ii = cm.Include_Include || 0;
+    var ei = cm.Exclude_Include || 0;
+    var ie = cm.Include_Exclude || 0;
+    var kappa = (meta.kappa_overall || 0).toFixed(3);
+    var llmRate = meta.llm_include_rate || 0;
+    var humanRate = meta.human_include_rate || 0;
 
-    container.innerHTML = `
-        <div class="metric-tile">
-            <span class="metric-value" style="color:#10b981;">${ii}</span>
-            <span class="metric-label">Gemeinsamer Kern</span>
-            <span class="metric-sub">beide: Include</span>
-        </div>
-        <div class="metric-tile">
-            <span class="metric-value" style="color:#3b82f6;">${ei}</span>
-            <span class="metric-label">LLM-Kandidaten</span>
-            <span class="metric-sub">nur LLM: Include</span>
-        </div>
-        <div class="metric-tile">
-            <span class="metric-value" style="color:#f97316;">${ie}</span>
-            <span class="metric-label">Human-Signal</span>
-            <span class="metric-sub">nur Human: Include</span>
-        </div>
-        <div class="metric-tile">
-            <span class="metric-value kappa-value">${kappa}</span>
-            <span class="metric-label">Cohen's Kappa</span>
-            <span class="metric-sub">LLM ${llmRate}% vs. Human ${humanRate}%</span>
-        </div>
-    `;
+    container.innerHTML =
+        '<div class="metric-tile">' +
+            '<span class="metric-value" style="color:var(--success);">' + ii + '</span>' +
+            '<span class="metric-label">Gemeinsamer Kern</span>' +
+            '<span class="metric-sub">beide: Include</span>' +
+        '</div>' +
+        '<div class="metric-tile">' +
+            '<span class="metric-value" style="color:var(--info);">' + ei + '</span>' +
+            '<span class="metric-label">LLM-Kandidaten</span>' +
+            '<span class="metric-sub">nur LLM: Include</span>' +
+        '</div>' +
+        '<div class="metric-tile">' +
+            '<span class="metric-value" style="color:var(--warning);">' + ie + '</span>' +
+            '<span class="metric-label">Human-Signal</span>' +
+            '<span class="metric-sub">nur Human: Include</span>' +
+        '</div>' +
+        '<div class="metric-tile">' +
+            '<span class="metric-value kappa-value">' + kappa + '</span>' +
+            '<span class="metric-label">Cohen\'s Kappa</span>' +
+            '<span class="metric-sub">LLM ' + llmRate + '% vs. Human ' + humanRate + '%</span>' +
+        '</div>';
 }
 
-// ---- Kategorie-Divergenz: Slope Chart (ersetzt Radar) ----
-// human_yes_rate and agent_yes_rate are 0-100 scale (e.g. 32.7 means 32.7%)
+// ---- Kategorie-Divergenz: Slope Chart ----
 
-let radarChartInstance = null;
+var radarChartInstance = null;
 
 function renderSlopeChart() {
-    const canvas = document.getElementById('radar-chart');
+    var canvas = document.getElementById('radar-chart');
     if (!canvas) return;
 
-    const CATS = Object.keys(kappas);
+    var kappas = EC.getKappas();
+    var CATS = Object.keys(kappas);
 
-    const datasets = CATS.map(cat => {
-        const d = kappas[cat];
-        const diff = d.agent_yes_rate - d.human_yes_rate;  // in Prozentpunkten
-        const color = Math.abs(diff) < 5 ? '#94a3b8'
-                    : diff > 0 ? '#3b82f6'    // LLM sieht mehr: blau
-                    : '#f97316';              // Human sieht mehr: orange
+    var datasets = CATS.map(function(cat) {
+        var d = kappas[cat];
+        var diff = d.agent_yes_rate - d.human_yes_rate;
+        var color = Math.abs(diff) < 5 ? COLORS.gray400
+                  : diff > 0 ? COLORS.info
+                  : COLORS.warning;
         return {
             label: cat.replace(/_/g, ' '),
-            data: [d.human_yes_rate, d.agent_yes_rate],  // beide 0-100
+            data: [d.human_yes_rate, d.agent_yes_rate],
             borderColor: color,
             backgroundColor: 'transparent',
             borderWidth: Math.abs(diff) > 20 ? 2.5 : 1.5,
@@ -94,37 +119,37 @@ function renderSlopeChart() {
 
     radarChartInstance = new Chart(canvas, {
         type: 'line',
-        data: { labels: ['Human', 'LLM'], datasets },
+        data: { labels: ['Human', 'LLM'], datasets: datasets },
         options: {
             responsive: true, maintainAspectRatio: false,
             plugins: {
                 legend: { display: false },
                 tooltip: { callbacks: {
-                    label: (ctx) => {
-                        const cat = CATS[ctx.datasetIndex];
-                        const d = kappas[cat];
-                        const diff = (d.agent_yes_rate - d.human_yes_rate).toFixed(1);
-                        return `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}% (${diff > 0 ? '+' : ''}${diff}pp)`;
+                    label: function(ctx) {
+                        var cat = CATS[ctx.datasetIndex];
+                        var d = kappas[cat];
+                        var diff = (d.agent_yes_rate - d.human_yes_rate).toFixed(1);
+                        return ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(1) + '% (' + (diff > 0 ? '+' : '') + diff + 'pp)';
                     }
                 }}
             },
             scales: {
                 x: { grid: { display: false } },
                 y: { beginAtZero: false, min: 0, max: 100,
-                     ticks: { callback: v => v + '%' },
+                     ticks: { callback: function(v) { return v + '%'; } },
                      title: { display: true, text: 'Anteil Ja-Klassifikationen (%)' } }
             }
         },
         plugins: [{
             id: 'slope-labels',
-            afterDatasetsDraw(chart) {
-                const { ctx } = chart;
+            afterDatasetsDraw: function(chart) {
+                var ctx = chart.ctx;
                 ctx.save();
                 ctx.font = '9px Inter, sans-serif';
-                chart.data.datasets.forEach((ds, i) => {
-                    const meta = chart.getDatasetMeta(i);
+                chart.data.datasets.forEach(function(ds, i) {
+                    var meta = chart.getDatasetMeta(i);
                     if (!meta.data.length) return;
-                    const last = meta.data[meta.data.length - 1];
+                    var last = meta.data[meta.data.length - 1];
                     ctx.fillStyle = ds.borderColor;
                     ctx.textAlign = 'left';
                     ctx.fillText(ds.label, last.x + 4, last.y + 3);
@@ -135,94 +160,97 @@ function renderSlopeChart() {
     });
 }
 
-// ---- Overlap-Treemap (ersetzt Confusion Matrix) ----
+// ---- Overlap-Treemap (Confusion Matrix) ----
 
 function renderOverlapTreemap() {
-    const container = document.getElementById('confusion-matrix-container');
+    var container = document.getElementById('confusion-matrix-container');
     if (!container) return;
 
-    const cm = vaultMeta.confusion_matrix || {};
-    const ii = cm.Include_Include || 0;  // Gemeinsamer Kern
-    const ei = cm.Exclude_Include || 0;  // nur LLM Include
-    const ie = cm.Include_Exclude || 0;  // nur Human Include
-    const ee = cm.Exclude_Exclude || 0;  // beide Exclude
-    const total = ii + ei + ie + ee;
+    var meta = EC.getMeta();
+    var cm = meta.confusion_matrix || {};
+    var ii = cm.Include_Include || 0;
+    var ei = cm.Exclude_Include || 0;
+    var ie = cm.Include_Exclude || 0;
+    var ee = cm.Exclude_Exclude || 0;
+    var total = ii + ei + ie + ee;
 
     function pct(n) { return total ? Math.round(n / total * 100) : 0; }
 
-    // Proportionale Zellgroessen via fr-Einheiten
-    const colLeft = ii + ie;   // Human-Include-Seite
-    const colRight = ei + ee;  // Human-Exclude-Seite
+    var colLeft = ii + ie;
+    var colRight = ei + ee;
 
-    function cell(count, label, desc, color, light, quadrant) {
-        const safeQ = quadrant.replace(/,/g, "','");
-        return `
-        <div onclick="filterByQuadrant('${safeQ.split("','")[0]}','${safeQ.split("','")[1]}')"
-             title="${desc} -- Klick zum Filtern"
-             style="background:${light};border:2px solid ${color};border-radius:6px;padding:0.75rem 0.5rem;
-                    cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;
-                    min-height:90px;transition:opacity 0.15s;"
-             onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
-            <span style="font-size:1.6rem;font-weight:700;color:${color};">${count}</span>
-            <span style="font-size:0.75rem;font-weight:600;color:${color};text-align:center;margin-top:2px;">${label}</span>
-            <span style="font-size:0.65rem;color:#6b7280;text-align:center;margin-top:2px;">${pct(count)}% &bull; ${desc}</span>
-        </div>`;
+    function cell(count, label, desc, cssColor, lightBg, quadrant) {
+        var parts = quadrant.split(',');
+        return '<div onclick="filterByQuadrant(\'' + parts[0] + '\',\'' + parts[1] + '\')"' +
+            ' title="' + desc + ' -- Klick zum Filtern"' +
+            ' style="background:' + lightBg + ';border:2px solid ' + cssColor + ';border-radius:6px;padding:0.75rem 0.5rem;' +
+            'cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;' +
+            'min-height:90px;transition:opacity 0.15s;"' +
+            ' onmouseover="this.style.opacity=\'0.8\'" onmouseout="this.style.opacity=\'1\'">' +
+            '<span style="font-size:1.6rem;font-weight:700;color:' + cssColor + ';">' + count + '</span>' +
+            '<span style="font-size:0.75rem;font-weight:600;color:' + cssColor + ';text-align:center;margin-top:2px;">' + label + '</span>' +
+            '<span style="font-size:0.65rem;color:var(--gray-500);text-align:center;margin-top:2px;">' + pct(count) + '% &bull; ' + desc + '</span>' +
+        '</div>';
     }
 
-    container.innerHTML = `
-        <div style="display:grid;grid-template-columns:${colLeft}fr ${colRight}fr;gap:6px;margin-bottom:6px;">
-            <div style="text-align:center;font-size:0.65rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;padding:2px 0;">Human: Include</div>
-            <div style="text-align:center;font-size:0.65rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:0.04em;padding:2px 0;">Human: Exclude</div>
-        </div>
-        <div style="display:grid;grid-template-columns:${colLeft}fr ${colRight}fr;grid-template-rows:${Math.max(ii,ei)}fr ${Math.max(ie,ee)}fr;gap:6px;">
-            ${cell(ii, 'Gemeinsamer Kern', 'beide Include', '#10b981', '#d1fae5', 'Include,Include')}
-            ${cell(ei, 'LLM-Kandidaten', 'nur LLM Include', '#3b82f6', '#dbeafe', 'Exclude,Include')}
-            ${cell(ie, 'Human-Signal', 'nur Human Include', '#f97316', '#ffedd5', 'Include,Exclude')}
-            ${cell(ee, 'Beide Exclude', 'Konsens-Ausschluss', '#6b7280', '#f3f4f6', 'Exclude,Exclude')}
-        </div>
-        <p style="font-size:0.65rem;color:#9ca3af;margin-top:0.5rem;text-align:center;">
-            Zellgroesse proportional zur Anzahl &bull; n=${total} Papers &bull; Klick filtert Papers-Tab
-        </p>
-    `;
+    container.innerHTML =
+        '<div style="display:grid;grid-template-columns:auto ' + colLeft + 'fr ' + colRight + 'fr;gap:6px;margin-bottom:6px;">' +
+            '<div></div>' +
+            '<div style="text-align:center;font-size:0.65rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;padding:2px 0;">Human: Include</div>' +
+            '<div style="text-align:center;font-size:0.65rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;padding:2px 0;">Human: Exclude</div>' +
+        '</div>' +
+        '<div style="display:grid;grid-template-columns:auto ' + colLeft + 'fr ' + colRight + 'fr;grid-template-rows:' + Math.max(ii,ei) + 'fr ' + Math.max(ie,ee) + 'fr;gap:6px;">' +
+            '<div style="writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);text-align:center;font-size:0.65rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;padding:0 4px;display:flex;align-items:center;justify-content:center;">LLM: Include</div>' +
+            cell(ii, 'Gemeinsamer Kern', 'beide Include', 'var(--success)', '#d1fae5', 'Include,Include') +
+            cell(ei, 'LLM-Kandidaten', 'nur LLM Include', 'var(--info)', '#dbeafe', 'Exclude,Include') +
+            '<div style="writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);text-align:center;font-size:0.65rem;font-weight:700;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.04em;padding:0 4px;display:flex;align-items:center;justify-content:center;">LLM: Exclude</div>' +
+            cell(ie, 'Human-Signal', 'nur Human Include', 'var(--warning)', '#ffedd5', 'Include,Exclude') +
+            cell(ee, 'Beide Exclude', 'Konsens-Ausschluss', 'var(--gray-500)', 'var(--gray-100)', 'Exclude,Exclude') +
+        '</div>' +
+        '<p style="font-size:0.65rem;color:var(--gray-400);margin-top:0.5rem;text-align:center;">' +
+            'Zellgroesse proportional zur Anzahl &bull; n=' + total + ' Papers &bull; Klick filtert Papers-Tab' +
+        '</p>';
 }
 
-// ---- Kappa Chart (technisches Detail, Chart.js horizontal bar) ----
+// ---- Kappa Chart (horizontal bar) ----
 
-let kappaChartInstance = null;
+var kappaChartInstance = null;
 
 function renderKappaChart() {
-    const container = document.getElementById('kappa-chart-container');
+    var container = document.getElementById('kappa-chart-container');
     if (!container) return;
 
-    // human_yes_rate and agent_yes_rate are 0-100 scale (e.g. 32.7 means 32.7%)
-    const kappaData = Object.entries(kappas).map(([cat, data]) => ({
-        category: cat.replace(/_/g, ' '),
-        kappa: data.kappa,
-        agreement: data.agreement_pct,
-        humanRate: Math.round(data.human_yes_rate),
-        agentRate: Math.round(data.agent_yes_rate),
-        n: data.n
-    })).sort((a, b) => a.kappa - b.kappa);
+    var kappas = EC.getKappas();
+    var kappaData = Object.keys(kappas).map(function(cat) {
+        var data = kappas[cat];
+        return {
+            category: cat.replace(/_/g, ' '),
+            kappa: data.kappa,
+            agreement: data.agreement_pct,
+            humanRate: Math.round(data.human_yes_rate),
+            agentRate: Math.round(data.agent_yes_rate),
+            n: data.n
+        };
+    }).sort(function(a, b) { return a.kappa - b.kappa; });
 
     container.innerHTML = '<canvas id="kappa-canvas"></canvas>';
-    const canvas = document.getElementById('kappa-canvas');
+    var canvas = document.getElementById('kappa-canvas');
 
     if (kappaChartInstance) { kappaChartInstance.destroy(); kappaChartInstance = null; }
 
-    // Color by divergence direction (not by kappa sign alone)
-    const colors = kappaData.map(d => {
-        const diff = d.agentRate - d.humanRate;
-        if (Math.abs(diff) < 5) return '#94a3b8';      // grau: kein relevanter Unterschied
-        return diff > 0 ? '#3b82f6' : '#f97316';        // blau: LLM mehr / orange: Human mehr
+    var colors = kappaData.map(function(d) {
+        var diff = d.agentRate - d.humanRate;
+        if (Math.abs(diff) < 5) return COLORS.gray400;
+        return diff > 0 ? COLORS.info : COLORS.warning;
     });
 
     kappaChartInstance = new Chart(canvas, {
         type: 'bar',
         data: {
-            labels: kappaData.map(d => d.category),
+            labels: kappaData.map(function(d) { return d.category; }),
             datasets: [{
                 label: "Cohen's Kappa",
-                data: kappaData.map(d => d.kappa),
+                data: kappaData.map(function(d) { return d.kappa; }),
                 backgroundColor: colors,
                 borderWidth: 0
             }]
@@ -233,19 +261,19 @@ function renderKappaChart() {
             plugins: {
                 legend: { display: false },
                 tooltip: { callbacks: {
-                    label: (ctx) => {
-                        const d = kappaData[ctx.dataIndex];
-                        const diff = d.agentRate - d.humanRate;
+                    label: function(ctx) {
+                        var d = kappaData[ctx.dataIndex];
+                        var diff = d.agentRate - d.humanRate;
                         return [
-                            `Kappa: ${d.kappa.toFixed(3)}`,
-                            `Human: ${d.humanRate}% | LLM: ${d.agentRate}% (${diff > 0 ? '+' : ''}${diff}pp)`,
-                            `n = ${d.n}`
+                            'Kappa: ' + d.kappa.toFixed(3),
+                            'Human: ' + d.humanRate + '% | LLM: ' + d.agentRate + '% (' + (diff > 0 ? '+' : '') + diff + 'pp)',
+                            'n = ' + d.n
                         ];
                     }
                 }}
             },
             scales: {
-                x: { beginAtZero: false, ticks: { callback: v => v.toFixed(2) } },
+                x: { beginAtZero: false, ticks: { callback: function(v) { return v.toFixed(2); } } },
                 y: { grid: { display: false }, ticks: { font: { size: 11 } } }
             }
         }
@@ -258,7 +286,6 @@ function renderKappaChart() {
 // ---- Quadrant filter ----
 
 function filterByQuadrant(humanDec, llmDec) {
-    // Switch to Korpus view
     document.querySelectorAll('.view-tab').forEach(function(t) {
         t.classList.toggle('active', t.dataset.view === 'korpus');
     });
@@ -266,43 +293,43 @@ function filterByQuadrant(humanDec, llmDec) {
         v.classList.toggle('active', v.id === 'view-korpus');
         v.style.display = v.id === 'view-korpus' ? '' : 'none';
     });
-    const filtered = allPapers.filter(p => {
+    var filtered = EC.getAllPapers().filter(function(p) {
         if (!p.benchmark.has_human || !p.human || !p.human.decision) return false;
-        const hNorm = p.human.decision === 'Include' ? 'Include' : 'Exclude';
-        const lNorm = p.llm.decision === 'Include' ? 'Include' : 'Exclude';
+        var hNorm = p.human.decision === 'Include' ? 'Include' : 'Exclude';
+        var lNorm = p.llm.decision === 'Include' ? 'Include' : 'Exclude';
         return hNorm === humanDec && lNorm === llmDec;
     });
-    filteredPapers = filtered;
-    const decEl = document.getElementById('filter-decision');
+    EC.setFilteredPapers(filtered);
+    var decEl = document.getElementById('filter-decision');
     if (decEl) decEl.value = llmDec;
-    const humEl = document.getElementById('filter-human');
+    var humEl = document.getElementById('filter-human');
     if (humEl) humEl.value = 'has_human';
-    activeCategories.clear();
-    document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('active'));
-    renderPapers(filteredPapers);
+    EC.getActiveCategories().clear();
+    document.querySelectorAll('.category-chip').forEach(function(c) { c.classList.remove('active'); });
+    EC.renderPapers(filtered);
 }
 
 // ---- Divergenz-Faelle Tabelle ----
 
 function renderDisagreementsTable() {
-    const container = document.getElementById('disagreements-table-container');
+    var container = document.getElementById('disagreements-table-container');
     if (!container) return;
 
-    const severityFilter = document.getElementById('filter-severity');
-    const sevVal = severityFilter ? severityFilter.value : 'all';
+    var severityFilter = document.getElementById('filter-severity');
+    var sevVal = severityFilter ? severityFilter.value : 'all';
 
-    let disagreements = allPapers.filter(p =>
-        p.benchmark.has_human && p.benchmark.agreement === false
-    );
+    var disagreements = EC.getAllPapers().filter(function(p) {
+        return p.benchmark.has_human && p.benchmark.agreement === false;
+    });
 
     if (sevVal !== 'all') {
-        disagreements = disagreements.filter(p => p.benchmark.severity === sevVal);
+        disagreements = disagreements.filter(function(p) { return p.benchmark.severity === sevVal; });
     }
 
-    const sevOrder = { high: 0, medium: 1, low: 2 };
-    disagreements.sort((a, b) => {
-        const sa = sevOrder[a.benchmark.severity] ?? 3;
-        const sb = sevOrder[b.benchmark.severity] ?? 3;
+    var sevOrder = { high: 0, medium: 1, low: 2 };
+    disagreements.sort(function(a, b) {
+        var sa = sevOrder[a.benchmark.severity] !== undefined ? sevOrder[a.benchmark.severity] : 3;
+        var sb = sevOrder[b.benchmark.severity] !== undefined ? sevOrder[b.benchmark.severity] : 3;
         return sa !== sb ? sa - sb : a.title.localeCompare(b.title);
     });
 
@@ -311,52 +338,45 @@ function renderDisagreementsTable() {
         return;
     }
 
-    const rows = disagreements.map(p => {
-        const sev = p.benchmark.severity || '';
-        const sevClass = `severity-${sev}`;
-        const cats = (p.benchmark.affected_categories || []).slice(0, 3).join(', ');
-        const humanDec = p.human ? p.human.decision : '';
-        const llmDec = p.llm.decision;
-        const safeId = p.id.replace(/'/g, "\\'");
-        // Divergenztyp aus Daten: LLM Include / Human Exclude oder umgekehrt
-        const divType = llmDec === 'Include' ? 'LLM-Kandidat' : 'Human-Signal';
+    var rows = disagreements.map(function(p) {
+        var sev = p.benchmark.severity || '';
+        var sevClass = 'severity-' + sev;
+        var cats = (p.benchmark.affected_categories || []).slice(0, 3).join(', ');
+        var humanDec = p.human ? p.human.decision : '';
+        var llmDec = p.llm.decision;
+        var safeId = p.id.replace(/'/g, "\\'");
+        var divType = llmDec === 'Include' ? 'LLM-Kandidat' : 'Human-Signal';
 
-        return `<tr onclick="window._openPaper('${safeId}')" style="cursor:pointer;">
-            <td class="title-cell" title="${escapeHtml(p.title)}">${escapeHtml(p.title.substring(0, 55))}${p.title.length > 55 ? '...' : ''}</td>
-            <td style="font-size:0.75rem;">${escapeHtml((p.author_year || '').substring(0, 22))}</td>
-            <td><span class="decision-badge ${llmDec === 'Include' ? 'badge-llm-include' : 'badge-llm-exclude'}" style="font-size:0.65rem;">${llmDec}</span></td>
-            <td><span class="decision-badge ${humanDec === 'Include' ? 'badge-human-include' : 'badge-human-exclude'}" style="font-size:0.65rem;">${humanDec}</span></td>
-            <td style="font-size:0.7rem;color:var(--gray-500);">${divType}</td>
-            <td><span class="severity-badge ${sevClass}">${sev}</span></td>
-            <td style="font-size:0.7rem;color:var(--gray-400);">${escapeHtml(cats)}</td>
-        </tr>`;
+        return '<tr onclick="window._openPaper(\'' + safeId + '\')" style="cursor:pointer;">' +
+            '<td class="title-cell" title="' + EC.escapeHtml(p.title) + '">' + EC.escapeHtml(p.title.substring(0, 55)) + (p.title.length > 55 ? '...' : '') + '</td>' +
+            '<td style="font-size:0.75rem;">' + EC.escapeHtml((p.author_year || '').substring(0, 22)) + '</td>' +
+            '<td><span class="decision-badge ' + (llmDec === 'Include' ? 'badge-llm-include' : 'badge-llm-exclude') + '" style="font-size:0.65rem;">' + llmDec + '</span></td>' +
+            '<td><span class="decision-badge ' + (humanDec === 'Include' ? 'badge-human-include' : 'badge-human-exclude') + '" style="font-size:0.65rem;">' + humanDec + '</span></td>' +
+            '<td style="font-size:0.7rem;color:var(--gray-500);">' + divType + '</td>' +
+            '<td><span class="severity-badge ' + sevClass + '">' + sev + '</span></td>' +
+            '<td style="font-size:0.7rem;color:var(--gray-400);">' + EC.escapeHtml(cats) + '</td>' +
+        '</tr>';
     }).join('');
 
-    container.innerHTML = `
-        <table class="disagreements-table">
-            <thead>
-                <tr>
-                    <th>Titel</th>
-                    <th>Autor</th>
-                    <th>LLM</th>
-                    <th>Human</th>
-                    <th>Typ</th>
-                    <th>Severity</th>
-                    <th>Kategorien</th>
-                </tr>
-            </thead>
-            <tbody>${rows}</tbody>
-        </table>
-        <p style="font-size:0.7rem;color:var(--gray-400);margin-top:0.5rem;">
-            ${disagreements.length} Divergenz-Faelle &bull; Klick auf Zeile &rarr; Paper-Detail
-        </p>
-    `;
+    container.innerHTML =
+        '<table class="disagreements-table">' +
+            '<thead><tr>' +
+                '<th>Titel</th><th>Autor</th><th>LLM</th><th>Human</th><th>Typ</th><th>Severity</th><th>Kategorien</th>' +
+            '</tr></thead>' +
+            '<tbody>' + rows + '</tbody>' +
+        '</table>' +
+        '<p style="font-size:0.7rem;color:var(--gray-400);margin-top:0.5rem;">' +
+            disagreements.length + ' Divergenz-Faelle &bull; Klick auf Zeile &rarr; Paper-Detail' +
+        '</p>';
 
     window._openPaper = function(id) {
-        const paper = allPapers.find(x => x.id === id);
-        if (paper) showPaperDetail(paper);
+        var paper = EC.getAllPapers().find(function(x) { return x.id === id; });
+        if (paper) EC.showPaperDetail(paper);
     };
 }
 
+// Expose for HTML onclick and research-app.js lazy-init
 window.filterByQuadrant = filterByQuadrant;
 window.initializeBenchmark = initializeBenchmark;
+
+})();

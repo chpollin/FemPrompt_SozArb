@@ -4,11 +4,13 @@
 (function() {
 'use strict';
 
-var graph = null;       // { nodes: [], edges: [] }
-var papers = null;      // papers array for lookup
+var EC = window.EC;
+
+var graph = null;
+var papers = null;
 var simulation = null;
 var svg = null;
-var g = null;           // main group (zoom target)
+var g = null;
 var zoom = null;
 var nodeElements = null;
 var edgeElements = null;
@@ -16,23 +18,9 @@ var labelElements = null;
 var tooltip = null;
 var focusedNode = null;
 var initialized = false;
+var freqThreshold20 = 0;
 
-// Neighbor lookup (precomputed)
-var neighborMap = {};   // nodeId -> Set of neighbor nodeIds
-
-// Category colors (same as research-app.js)
-var CAT_COLORS = {
-    'AI_Literacies':    '#5b8c5a',
-    'Generative_KI':    '#3a7d7e',
-    'Prompting':        '#4b7bab',
-    'KI_Sonstige':      '#7c6fae',
-    'Soziale_Arbeit':   '#b0546e',
-    'Bias_Ungleichheit':'#c2694e',
-    'Gender':           '#d4943a',
-    'Diversitaet':      '#8a7542',
-    'Feministisch':     '#a24b7a',
-    'Fairness':         '#6a8e4e'
-};
+var neighborMap = {};
 
 var CLUSTER_COLORS = {
     'technik': '#3a7d7e',
@@ -54,7 +42,6 @@ window.initWissensnetz = function(conceptNodes, conceptEdges, allPapers) {
     };
     papers = allPapers;
 
-    // Build neighbor map
     neighborMap = {};
     graph.nodes.forEach(function(n) { neighborMap[n.id] = new Set(); });
     graph.edges.forEach(function(e) {
@@ -86,10 +73,8 @@ function renderGraph() {
 
     g = svg.append('g');
 
-    // Zoom
     zoom = d3.zoom().scaleExtent([0.3, 5]).on('zoom', function(event) {
         g.attr('transform', event.transform);
-        // Semantic zoom: show more labels at higher zoom
         if (labelElements) {
             var k = event.transform.k;
             labelElements.style('display', function(d) {
@@ -100,17 +85,14 @@ function renderGraph() {
     });
     svg.call(zoom);
 
-    // Scales
     var maxFreq = d3.max(graph.nodes, function(d) { return d.frequency; }) || 1;
     var sizeScale = d3.scaleSqrt().domain([2, maxFreq]).range([5, 22]);
     var maxWeight = d3.max(graph.edges, function(d) { return d.weight; }) || 1;
     var edgeScale = d3.scaleLinear().domain([2, maxWeight]).range([0.5, 3]);
 
-    // Top-20 frequency threshold
-    var sortedFreqs = graph.nodes.map(function(d) { return d.frequency; }).sort(function(a,b) { return b - a; });
+    var sortedFreqs = graph.nodes.map(function(d) { return d.frequency; }).sort(function(a, b) { return b - a; });
     freqThreshold20 = sortedFreqs.length > 20 ? sortedFreqs[19] : 0;
 
-    // Force simulation
     simulation = d3.forceSimulation(graph.nodes)
         .force('link', d3.forceLink(graph.edges).id(function(d) { return d.id; }).distance(80).strength(0.3))
         .force('charge', d3.forceManyBody().strength(-120).distanceMax(250))
@@ -118,11 +100,9 @@ function renderGraph() {
         .force('collision', d3.forceCollide().radius(function(d) { return sizeScale(d.frequency) + 3; }))
         .velocityDecay(0.4);
 
-    // Pre-compute layout (300 ticks for stability)
     simulation.stop();
     for (var i = 0; i < 300; i++) simulation.tick();
 
-    // Edges
     edgeElements = g.append('g').attr('class', 'edges')
         .selectAll('line').data(graph.edges).join('line')
         .attr('x1', function(d) { return d.source.x; })
@@ -133,7 +113,6 @@ function renderGraph() {
         .attr('stroke-opacity', 0.4)
         .attr('stroke-width', function(d) { return edgeScale(d.weight); });
 
-    // Nodes
     var nodeG = g.append('g').attr('class', 'nodes')
         .selectAll('g').data(graph.nodes).join('g')
         .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
@@ -145,7 +124,7 @@ function renderGraph() {
         .attr('stroke-width', 1.5)
         .attr('cursor', 'pointer');
 
-    // Divergence ring (concepts appearing in disagree papers)
+    // Divergence ring
     var divergeConceptIds = new Set();
     if (papers) {
         papers.forEach(function(p) {
@@ -165,7 +144,6 @@ function renderGraph() {
 
     nodeElements = nodeG;
 
-    // Labels (top-20 by default)
     labelElements = g.append('g').attr('class', 'labels')
         .selectAll('text').data(graph.nodes).join('text')
         .attr('x', function(d) { return d.x; })
@@ -177,7 +155,6 @@ function renderGraph() {
         .style('display', function(d) { return d.frequency >= freqThreshold20 ? 'block' : 'none'; })
         .text(function(d) { return d.label; });
 
-    // Interaction: hover
     nodeG.on('mouseover', function(event, d) {
         showTooltip(event, d);
     }).on('mousemove', function(event) {
@@ -186,24 +163,19 @@ function renderGraph() {
         hideTooltip();
     });
 
-    // Interaction: click -> ego-network + detail
     nodeG.on('click', function(event, d) {
         event.stopPropagation();
         focusOnNode(d);
         showConceptDetail(d);
     });
 
-    // Click on background -> reset
     svg.on('click', function() {
         resetFocus();
         hideDetail();
     });
 
-    // Store sizeScale for reuse
     graph._sizeScale = sizeScale;
 }
-
-var freqThreshold20 = 0;
 
 // ============================================================
 // Tooltip
@@ -218,7 +190,7 @@ function createTooltip() {
 
 function showTooltip(event, d) {
     var rect = document.getElementById('graph-container').getBoundingClientRect();
-    tooltip.innerHTML = '<strong>' + escapeHtml(d.label) + '</strong><br>' +
+    tooltip.innerHTML = '<strong>' + EC.escapeHtml(d.label) + '</strong><br>' +
         d.frequency + ' Papers &middot; ' + (d.cluster || '');
     tooltip.style.display = 'block';
     tooltip.style.left = (event.clientX - rect.left + 12) + 'px';
@@ -243,13 +215,11 @@ function focusOnNode(d) {
     focusedNode = d;
     var neighbors = neighborMap[d.id] || new Set();
 
-    // Dim non-connected nodes
     nodeElements.select('circle:first-child')
         .attr('opacity', function(n) {
             return n.id === d.id || neighbors.has(n.id) ? 1 : 0.08;
         });
 
-    // Dim non-connected edges
     edgeElements
         .attr('stroke-opacity', function(e) {
             var src = typeof e.source === 'string' ? e.source : e.source.id;
@@ -262,7 +232,6 @@ function focusOnNode(d) {
             return src === d.id || tgt === d.id ? '#78716c' : '#d1d5db';
         });
 
-    // Show labels for focused + neighbors
     labelElements
         .style('display', function(n) {
             return n.id === d.id || neighbors.has(n.id) ? 'block' : 'none';
@@ -291,7 +260,6 @@ function showConceptDetail(d) {
     var panel = document.getElementById('graph-detail');
     var neighbors = neighborMap[d.id] || new Set();
 
-    // Find papers containing this concept
     var conceptPapers = [];
     if (papers) {
         papers.forEach(function(p) {
@@ -301,7 +269,6 @@ function showConceptDetail(d) {
         });
     }
 
-    // Find neighbor concepts with co-occurrence counts
     var neighborList = [];
     graph.edges.forEach(function(e) {
         var src = typeof e.source === 'string' ? e.source : e.source.id;
@@ -311,14 +278,13 @@ function showConceptDetail(d) {
     });
     neighborList.sort(function(a, b) { return b.weight - a.weight; });
 
-    // Count divergence papers
     var divergeCount = conceptPapers.filter(function(p) {
         return p.stages && p.stages.assessment && p.stages.assessment.agreement === 'disagree';
     }).length;
 
     var html = '<div class="graph-detail-inner">';
     html += '<button class="graph-detail-close" id="graph-detail-close">&times;</button>';
-    html += '<h3>' + escapeHtml(d.label) + '</h3>';
+    html += '<h3>' + EC.escapeHtml(d.label) + '</h3>';
     html += '<p class="detail-meta">' + d.frequency + ' Papers &middot; ' +
         '<span style="color:' + (CLUSTER_COLORS[d.cluster] || '#999') + ';font-weight:600;">' + (d.cluster || '') + '</span>';
     if (divergeCount > 0) {
@@ -327,10 +293,9 @@ function showConceptDetail(d) {
     html += '</p>';
 
     if (d.definition) {
-        html += '<p class="detail-def">' + escapeHtml(d.definition) + '</p>';
+        html += '<p class="detail-def">' + EC.escapeHtml(d.definition) + '</p>';
     }
 
-    // Papers list
     if (conceptPapers.length > 0) {
         html += '<h4>Papers (' + conceptPapers.length + ')</h4>';
         html += '<ul class="graph-papers-list">';
@@ -340,8 +305,8 @@ function showConceptDetail(d) {
                 if (p.stages.assessment.agreement === 'disagree') statusClass = ' paper-diverge';
                 else if (p.stages.assessment.agreement === 'agree') statusClass = ' paper-agree';
             }
-            html += '<li class="graph-paper-item' + statusClass + '" data-paper-id="' + escapeHtml(p.id) + '">' +
-                escapeHtml((p.author_year || '') + ': ' + (p.title || '').substring(0, 60)) +
+            html += '<li class="graph-paper-item' + statusClass + '" data-paper-id="' + EC.escapeHtml(p.id) + '">' +
+                EC.escapeHtml((p.author_year || '') + ': ' + (p.title || '').substring(0, 60)) +
                 (p.title && p.title.length > 60 ? '...' : '') + '</li>';
         });
         if (conceptPapers.length > 30) {
@@ -350,13 +315,12 @@ function showConceptDetail(d) {
         html += '</ul>';
     }
 
-    // Neighbor concepts
     if (neighborList.length > 0) {
         html += '<h4>Verbundene Konzepte</h4>';
         html += '<ul class="graph-neighbors-list">';
         neighborList.slice(0, 12).forEach(function(n) {
-            html += '<li class="graph-neighbor-item" data-concept="' + escapeHtml(n.id) + '">' +
-                escapeHtml(n.id) + ' <span class="neighbor-weight">(' + n.weight + ')</span></li>';
+            html += '<li class="graph-neighbor-item" data-concept="' + EC.escapeHtml(n.id) + '">' +
+                EC.escapeHtml(n.id) + ' <span class="neighbor-weight">(' + n.weight + ')</span></li>';
         });
         html += '</ul>';
     }
@@ -365,23 +329,21 @@ function showConceptDetail(d) {
     panel.innerHTML = html;
     panel.style.display = 'block';
 
-    // Event: close button
     document.getElementById('graph-detail-close').addEventListener('click', function(e) {
         e.stopPropagation();
         hideDetail();
         resetFocus();
     });
 
-    // Event: click paper -> switch to Korpus + open detail
+    // Cross-view: click paper -> Korpus tab + detail
     panel.querySelectorAll('.graph-paper-item').forEach(function(li) {
         li.addEventListener('click', function(e) {
             e.stopPropagation();
             var paperId = li.dataset.paperId;
-            // Find paper in allPapers (research-app.js global)
-            if (window.allPapers) {
-                var paper = window.allPapers.find(function(p) { return p.id === paperId; });
+            var mainPapers = EC.getAllPapers();
+            if (mainPapers) {
+                var paper = mainPapers.find(function(p) { return p.id === paperId; });
                 if (paper) {
-                    // Switch to Korpus tab
                     document.querySelectorAll('.view-tab').forEach(function(t) {
                         t.classList.toggle('active', t.dataset.view === 'korpus');
                     });
@@ -389,13 +351,12 @@ function showConceptDetail(d) {
                         v.classList.toggle('active', v.id === 'view-korpus');
                         v.style.display = v.id === 'view-korpus' ? '' : 'none';
                     });
-                    if (window.showPaperDetail) window.showPaperDetail(paper);
+                    EC.showPaperDetail(paper);
                 }
             }
         });
     });
 
-    // Event: click neighbor -> focus that node
     panel.querySelectorAll('.graph-neighbor-item').forEach(function(li) {
         li.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -446,7 +407,6 @@ function searchConcept(query) {
         return;
     }
 
-    // If exactly one match, focus + zoom
     if (matches.length === 1) {
         focusOnNode(matches[0]);
         showConceptDetail(matches[0]);
@@ -454,7 +414,6 @@ function searchConcept(query) {
         return;
     }
 
-    // Multiple matches: highlight all, dim rest
     var matchIds = new Set(matches.map(function(m) { return m.id; }));
     nodeElements.select('circle:first-child')
         .attr('opacity', function(n) { return matchIds.has(n.id) ? 1 : 0.08; });
@@ -467,7 +426,6 @@ function searchConcept(query) {
 // ============================================================
 
 function setupControls() {
-    // Search
     var searchInput = document.getElementById('graph-search');
     if (searchInput) {
         var debounce = null;
@@ -479,14 +437,12 @@ function setupControls() {
         });
     }
 
-    // Frequency slider
     var slider = document.getElementById('freq-slider');
     var freqValue = document.getElementById('freq-value');
     if (slider) {
         slider.addEventListener('input', function() {
             freqValue.textContent = slider.value;
             var minFreq = parseInt(slider.value);
-            // Show/hide nodes based on frequency
             nodeElements.style('display', function(d) { return d.frequency >= minFreq ? '' : 'none'; });
             edgeElements.style('display', function(e) {
                 var src = typeof e.source === 'string' ? e.source : e.source;
@@ -499,7 +455,6 @@ function setupControls() {
         });
     }
 
-    // Reset button
     var resetBtn = document.getElementById('graph-reset');
     if (resetBtn) {
         resetBtn.addEventListener('click', function() {
@@ -509,21 +464,9 @@ function setupControls() {
             if (slider) { slider.value = 2; freqValue.textContent = '2'; }
             nodeElements.style('display', '');
             edgeElements.style('display', '');
-            // Reset zoom
             svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
         });
     }
-}
-
-// ============================================================
-// Utility
-// ============================================================
-
-function escapeHtml(text) {
-    if (!text) return '';
-    var div = document.createElement('div');
-    div.textContent = String(text);
-    return div.innerHTML;
 }
 
 })();

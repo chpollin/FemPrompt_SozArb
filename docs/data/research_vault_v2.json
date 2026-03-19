@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-02-22",
+    "generated": "2026-03-19",
     "total_papers": 326,
     "papers_with_human": 292,
-    "benchmark_papers": 199,
+    "benchmark_papers": 210,
     "kappa_overall": 0.035,
     "kappa_interpretation": "slight",
     "llm_include_rate": 71.2,
@@ -14,11 +14,10 @@
     "human_total_with_decision": 190,
     "disagreement_count": 102,
     "confusion_matrix": {
-      "Include_Include": 63,
-      "Include_Exclude": 19,
-      "Exclude_Include": 80,
-      "Exclude_Exclude": 37,
-      "Other": 0
+      "Include_Include": 65,
+      "Include_Exclude": 23,
+      "Exclude_Include": 78,
+      "Exclude_Exclude": 34
     }
   },
   "kappa_by_category": {
@@ -108,7 +107,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.3,
         "categories": [
           "AI_Literacies",
           "Generative_KI"
@@ -150,7 +148,6 @@
       "knowledge_doc": "vault/Papers/What are artificial intelligence literacy and competency- A comprehensive framework to support them.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.7,
         "categories": [
           "AI_Literacies"
         ],
@@ -206,7 +203,6 @@
       "knowledge_doc": "vault/Papers/The AI literacy development canvas- Assessing and building AI literacy in organizations.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -271,7 +267,6 @@
       "knowledge_doc": "vault/Papers/Artificial Intelligence Competence Needs for Youth Workers.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -334,7 +329,6 @@
       "knowledge_doc": "vault/Papers/AI literacy in K-12- a systematic literature review.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies"
         ],
@@ -390,7 +384,6 @@
       "knowledge_doc": "vault/Papers/Less knowledge, more trust- Exploring potentially uncritical attitudes towards AI in higher education.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies"
         ],
@@ -446,7 +439,6 @@
       "knowledge_doc": "vault/Papers/A Competency Framework for AI Literacy- Variations by Different Learner Groups and an Implied Learning Pathway.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies"
         ],
@@ -502,7 +494,6 @@
       "knowledge_doc": "vault/Papers/AI literacy and competency- definitions, frameworks, development and future research directions.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -558,7 +549,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [],
         "all_categories": {
           "AI_Literacies": 0,
@@ -612,7 +602,6 @@
       "knowledge_doc": "vault/Papers/Digital literacy as a new determinant of health- A scoping review.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Bias_Ungleichheit"
@@ -669,7 +658,6 @@
       "knowledge_doc": "vault/Papers/A systematic review on digital literacy.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [],
         "all_categories": {
           "AI_Literacies": 0,
@@ -725,7 +713,6 @@
       "knowledge_doc": "vault/Papers/A Literature Review of Digital Literacy over Two Decades.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "Gender"
         ],
@@ -781,7 +768,6 @@
       "knowledge_doc": "vault/Papers/AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies"
         ],
@@ -844,7 +830,6 @@
       "knowledge_doc": "vault/Papers/Conceptualizing AI literacy- An exploratory review.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.75,
         "categories": [
           "AI_Literacies"
         ],
@@ -907,7 +892,6 @@
       "knowledge_doc": "vault/Papers/Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -968,7 +952,6 @@
       "knowledge_doc": "vault/Papers/Measuring user competence in using artificial intelligence- validity and reliability of artificial intelligence literacy scale.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -1027,7 +1010,6 @@
       "knowledge_doc": "vault/Papers/Development of the “Scale for the assessment of non-experts’ AI literacy” – An exploratory factor analysis.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -1086,7 +1068,6 @@
       "knowledge_doc": "vault/Papers/Imagination, Algorithms and News- Developing AI Literacy for Journalism.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.75,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige"
@@ -1143,7 +1124,6 @@
       "knowledge_doc": "vault/Papers/Developing an artificial intelligence literacy framework- Evaluation of a literacy course for senior secondary students using a project-based learning approach.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -1204,7 +1184,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -1264,7 +1243,6 @@
       "knowledge_doc": "vault/Papers/GLAT- The generative AI literacy assessment test.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI"
@@ -1321,7 +1299,6 @@
       "knowledge_doc": "vault/Papers/In search of artificial intelligence (AI) literacy in teacher education- A scoping review.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies"
         ],
@@ -1382,7 +1359,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -1441,7 +1417,6 @@
       "knowledge_doc": "vault/Papers/Promises and challenges of generative artificial intelligence for human learning.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.3,
         "categories": [
           "AI_Literacies",
           "Generative_KI"
@@ -1502,7 +1477,6 @@
       "knowledge_doc": "vault/Papers/Conceptualizing AI literacy- An exploratory review.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies"
         ],
@@ -1565,7 +1539,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -1610,7 +1583,6 @@
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -1654,7 +1626,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Soziale_Arbeit",
@@ -1697,7 +1668,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit"
@@ -1739,7 +1709,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -1782,7 +1751,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -1826,7 +1794,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [],
         "all_categories": {
           "AI_Literacies": 0,
@@ -1865,7 +1832,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -1908,7 +1874,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -1953,7 +1918,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit"
@@ -1995,7 +1959,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2039,7 +2002,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2084,7 +2046,6 @@
       "knowledge_doc": "vault/Papers/ChatGPT for social work science- Ethical challenges and opportunities.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -2128,7 +2089,6 @@
       "knowledge_doc": "vault/Papers/Algorithmic decision-making in social work practice and pedagogy- Confronting the competency-critique dilemma.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -2172,7 +2132,6 @@
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -2218,7 +2177,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI"
         ],
@@ -2259,7 +2217,6 @@
       "knowledge_doc": "vault/Papers/Ethical issues related to the use of technology in social work practice- A systematic review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2319,7 +2276,6 @@
       "knowledge_doc": "vault/Papers/Automated government benefits and welfare surveillance.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2377,7 +2333,6 @@
       "knowledge_doc": "vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's automated welfare state.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2437,7 +2392,6 @@
       "knowledge_doc": "vault/Papers/Decision support and algorithmic support- The construction of algorithms and professional discretion in social work.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2500,7 +2454,6 @@
       "knowledge_doc": "vault/Papers/Introduction to the digital welfare state- Contestations, considerations and entanglements.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2560,7 +2513,6 @@
       "knowledge_doc": "vault/Papers/Exploring machine learning to support decision-making for placement stabilization and preservation in child welfare.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2618,7 +2570,6 @@
       "knowledge_doc": "vault/Papers/Clinical trial of an LLM-based conversational AI psychotherapy.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI"
         ],
@@ -2674,7 +2625,6 @@
       "knowledge_doc": "vault/Papers/AI implementation science for social issues- Pitfalls and tips.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -2735,7 +2685,6 @@
       "knowledge_doc": "vault/Papers/-It happened to be the perfect thing-- Experiences of generative AI chatbots for mental health.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Soziale_Arbeit"
@@ -2796,7 +2745,6 @@
       "knowledge_doc": "vault/Papers/AI for impact- The PRISM framework for responsible AI in social innovation.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -2860,7 +2808,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -2919,7 +2866,6 @@
       "knowledge_doc": "vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a decision support algorithm used for child protection.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -2985,7 +2931,6 @@
       "knowledge_doc": "vault/Papers/Improving human-AI partnerships in child welfare- Understanding worker practices, challenges, and desires for algorithmic decision support.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -3048,7 +2993,6 @@
       "knowledge_doc": "vault/Papers/ReflectAI- Design and evaluation of an AI coach to support public servants' self-reflection.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -3109,7 +3053,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -3169,7 +3112,6 @@
       "knowledge_doc": "vault/Papers/The end of the world as we know it- ChatGPT and social work.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -3229,7 +3171,6 @@
       "knowledge_doc": "vault/Papers/Responsible prompting recommendation- Fostering responsible AI practices in prompting-time.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.87,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -3290,7 +3231,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -3350,7 +3290,6 @@
       "knowledge_doc": "vault/Papers/Considering a unified model of artificial intelligence enhanced social work- A systematic review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -3408,7 +3347,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -3469,7 +3407,6 @@
       "knowledge_doc": "vault/Papers/Positionings, challenges, and ambivalences in children's and parents' perspectives in digitalized familial contexts.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Soziale_Arbeit"
         ],
@@ -3525,7 +3462,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Soziale_Arbeit",
           "Bias_Ungleichheit",
@@ -3583,7 +3519,6 @@
       "knowledge_doc": "vault/Papers/Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -3643,7 +3578,6 @@
       "knowledge_doc": "vault/Papers/Exploring opportunities and risks in decision support technologies for social workers- An empirical study in the field of disabled people's services.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -3705,7 +3639,6 @@
       "knowledge_doc": "vault/Papers/Indecision on the use of artificial intelligence in healthcare- A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -3766,7 +3699,6 @@
       "knowledge_doc": "vault/Papers/AI for decision support- What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -3824,7 +3756,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -3882,7 +3813,6 @@
       "knowledge_doc": "vault/Papers/Who cares about data- Data care arrangements in everyday organisational practice.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Soziale_Arbeit"
         ],
@@ -3938,7 +3868,6 @@
       "knowledge_doc": "vault/Papers/Tensions in digital welfare states- Three perspectives on care and control.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -3996,7 +3925,6 @@
       "knowledge_doc": "vault/Papers/Datafied ageing futures- Regimes of anticipation and participatory futuring.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.82,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -4056,7 +3984,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4126,7 +4053,6 @@
       "knowledge_doc": "vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4188,7 +4114,6 @@
       "knowledge_doc": "vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen, Entwicklungen, Herausforderungen.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -4251,7 +4176,6 @@
       "knowledge_doc": "vault/Papers/Rationalisierung durch Digitalisierung-.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "Soziale_Arbeit"
         ],
@@ -4311,7 +4235,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4373,7 +4296,6 @@
       "knowledge_doc": "vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE- OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIVES.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4439,7 +4361,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4499,7 +4420,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4566,7 +4486,6 @@
       "knowledge_doc": "vault/Papers/Algorithmic decision-making in social work practice and pedagogy- confronting the competency-critique dilemma.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4626,7 +4545,6 @@
       "knowledge_doc": "vault/Papers/The End of the World as We Know It- ChatGPT and Social Work.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -4685,7 +4603,6 @@
       "knowledge_doc": "vault/Papers/Introducing Generative Artificial Intelligence into the MSW Curriculum- A Proposal for the 2029 Educational Policy and Accreditation Standards.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -4755,7 +4672,6 @@
       "knowledge_doc": "vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in Practice- Resistance to Automation and Prospects for Integration.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -4813,7 +4729,6 @@
       "knowledge_doc": "vault/Papers/ChatGPT for Social Work Science- Ethical Challenges and Opportunities.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -4880,7 +4795,6 @@
       "knowledge_doc": "vault/Papers/Artificial Intelligence in Social Work- Emerging Ethical Issues.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -4949,7 +4863,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5011,7 +4924,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5071,7 +4983,6 @@
       "knowledge_doc": "vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice- A Systematic Review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5138,7 +5049,6 @@
       "knowledge_doc": "vault/Papers/AI Creates the Message- Integrating AI Language Learning Models into Social Work Education and Practice.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -5201,7 +5111,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5264,7 +5173,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5326,7 +5234,6 @@
       "knowledge_doc": "vault/Papers/Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5394,7 +5301,6 @@
       "knowledge_doc": "vault/Papers/KI-basiertes Assistenzsystem im Kinderschutzverfahren.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5454,7 +5360,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5509,10 +5414,9 @@
       "abstract": "Werkstattbericht zur curricularen Integration generativer KI. Positioniert Prompting als metakognitive Schlüsselkompetenz und diskutiert Rollenwandel von Lehr-/Lernakteuren; fordert reflektierte, ethisch eingebettete Nutzung mit Fokus auf kritische Validierung von KI-Ergebnissen.",
       "item_type": "booksection",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit – Curriculare Überlegungen und veränderte Akteurskonstellationen.md",
+      "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -5571,7 +5475,6 @@
       "knowledge_doc": "vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug für den Einsatz von Künstlicher Intelligenz.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -5629,7 +5532,6 @@
       "knowledge_doc": "vault/Papers/Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit"
@@ -5690,7 +5592,6 @@
       "knowledge_doc": "vault/Papers/Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5748,7 +5649,6 @@
       "knowledge_doc": "vault/Papers/Handbuch Soziale Arbeit und Digitalisierung.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "Soziale_Arbeit"
         ],
@@ -5804,7 +5704,6 @@
       "knowledge_doc": "vault/Papers/Social work and artificial intelligence- Collaboration and challenges.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5864,7 +5763,6 @@
       "knowledge_doc": "vault/Papers/The role of artificial intelligence (AI) and machine learning in social work practice.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -5933,7 +5831,6 @@
       "knowledge_doc": "vault/Papers/A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1).md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -5991,10 +5888,9 @@
       "abstract": "This study develops a comprehensive rights-based framework for navigating AI integration in social work practice while addressing ethical implications across micro, meso, and macro practice levels. The framework bridges social work theory with interdisciplinary insights, demonstrating that AI systems profoundly impact vulnerable populations by mediating interpersonal relationships and constructing meaning in AI-mediated environments. It provides evidence-based guidance for practitioners to harne",
       "item_type": "journalarticle",
       "journal": "",
-      "knowledge_doc": "vault/Papers/Social work in the age of artificial intelligence- A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis.md",
+      "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -6055,7 +5951,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -6114,7 +6009,6 @@
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -6183,7 +6077,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -6241,7 +6134,6 @@
       "knowledge_doc": "vault/Papers/Digitale Werkzeuge und Machtasymmetrien-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -6308,7 +6200,6 @@
       "knowledge_doc": "vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI in der Verwaltung, Version 1.0.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -6366,7 +6257,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -6426,7 +6316,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -6486,7 +6375,6 @@
       "knowledge_doc": "vault/Papers/What is AI Literacy- Competencies and Design Considerations.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.7,
         "categories": [
           "AI_Literacies"
         ],
@@ -6545,7 +6433,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Soziale_Arbeit"
@@ -6602,7 +6489,6 @@
       "knowledge_doc": "vault/Papers/Learning About AI- A Systematic Review of Reviews on AI Literacy.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies"
         ],
@@ -6661,7 +6547,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -6704,7 +6589,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -6747,7 +6631,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -6797,7 +6680,6 @@
       "knowledge_doc": "vault/Papers/Messung von AI Literacy – Empirische Evidenz und Implikationen.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.65,
         "categories": [
           "AI_Literacies"
         ],
@@ -6856,7 +6738,6 @@
       "knowledge_doc": "vault/Papers/AI competency framework for students.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.3,
         "categories": [
           "AI_Literacies"
         ],
@@ -6920,7 +6801,6 @@
       "knowledge_doc": "vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use Emerging Technology.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies"
         ],
@@ -6984,7 +6864,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -7052,7 +6931,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI"
         ],
@@ -7098,7 +6976,6 @@
       "knowledge_doc": "vault/Papers/Towards responsible AI for education- Hybrid human-AI to confront the Elephant in the room.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -7157,7 +7034,6 @@
       "knowledge_doc": "vault/Papers/Governing discriminatory content in conversational AI- A cross-system, cross-lingual, and cross-topic audit.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -7223,7 +7099,6 @@
       "knowledge_doc": "vault/Papers/LIBRA- Measuring bias of large language model from a local context.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -7290,7 +7165,6 @@
       "knowledge_doc": "vault/Papers/Explainability through systematicity- The hard systematicity challenge.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige"
         ],
@@ -7355,7 +7229,6 @@
       "knowledge_doc": "vault/Papers/A reparative turn in AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -7419,7 +7292,6 @@
       "knowledge_doc": "vault/Papers/Governance of generative AI- A comprehensive framework for navigating challenges and opportunities.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -7490,7 +7362,6 @@
       "knowledge_doc": "vault/Papers/How large language models judge cooperation.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.82,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -7563,7 +7434,6 @@
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -7628,7 +7498,6 @@
       "knowledge_doc": "vault/Papers/Beyond transparency and explainability- On the need for adequate and contextualized user guidelines for LLM use.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -7696,7 +7565,6 @@
       "knowledge_doc": "vault/Papers/Unequal voices- How LLMs construct constrained queer narratives.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -7760,7 +7628,6 @@
       "knowledge_doc": "vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+ language in large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -7835,7 +7702,6 @@
       "knowledge_doc": "vault/Papers/Explicitly unbiased large language models still form biased associations.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -7893,7 +7759,6 @@
       "knowledge_doc": "vault/Papers/Bias and fairness in large language models- A survey.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -7959,7 +7824,6 @@
       "knowledge_doc": "vault/Papers/Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -8030,7 +7894,6 @@
       "knowledge_doc": "vault/Papers/Measuring gender and racial biases in large language models- Intersectional evidence from automated resume evaluation.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -8094,7 +7957,6 @@
       "knowledge_doc": "vault/Papers/Biases in large language models- Origins, inventory and discussion.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -8165,7 +8027,6 @@
       "knowledge_doc": "vault/Papers/Advancing Accountability in AI.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -8229,7 +8090,6 @@
       "knowledge_doc": "vault/Papers/Dipper- Diversity in Prompts for Producing Large Language Model Outputs.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -8299,7 +8159,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -8366,7 +8225,6 @@
       "knowledge_doc": "vault/Papers/Improving diversity of demographic representation in people entities in Large Language Models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -8431,7 +8289,6 @@
       "knowledge_doc": "vault/Papers/How Far Can We Extract Diverse Perspectives from Large Language Models-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -8491,7 +8348,6 @@
       "knowledge_doc": "vault/Papers/Multilingual Prompting for Improving LLM Generation Diversity.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -8556,7 +8412,6 @@
       "knowledge_doc": "vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige"
         ],
@@ -8612,7 +8467,6 @@
       "knowledge_doc": "vault/Papers/Mitigating trust-induced inappropriate reliance on AI assistance.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -8677,7 +8531,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -8737,7 +8590,6 @@
       "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -8805,7 +8657,6 @@
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -8882,7 +8733,6 @@
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -8951,7 +8801,6 @@
       "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI"
         ],
@@ -9007,7 +8856,6 @@
       "knowledge_doc": "vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -9074,7 +8922,6 @@
       "knowledge_doc": "vault/Papers/The influence of mental state attributions on trust in large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -9139,7 +8986,6 @@
       "knowledge_doc": "vault/Papers/Trust in artificial intelligence–based clinical decision support systems among health care workers- Systematic review.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -9210,7 +9056,6 @@
       "knowledge_doc": "vault/Papers/Measuring and identifying factors of individuals' trust in large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI"
@@ -9267,7 +9112,6 @@
       "knowledge_doc": "vault/Papers/What large language models know and what people think they know.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -9332,7 +9176,6 @@
       "knowledge_doc": "vault/Papers/AI algorithm transparency, pipelines for trust not prisms- mitigating general negative attitudes and enhancing trust toward AI.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Prompting",
@@ -9403,7 +9246,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -9467,7 +9309,6 @@
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -9532,7 +9373,6 @@
       "knowledge_doc": "vault/Papers/Transparency enhances positive perceptions of social artificial intelligence.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -9595,7 +9435,6 @@
       "knowledge_doc": "vault/Papers/Large Language Models and User Trust- Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -9655,7 +9494,6 @@
       "knowledge_doc": "vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige"
         ],
@@ -9711,7 +9549,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -9777,7 +9614,6 @@
       "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI"
         ],
@@ -9839,7 +9675,6 @@
       "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -9899,7 +9734,6 @@
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -9974,7 +9808,6 @@
       "knowledge_doc": "vault/Papers/Mitigating trust-induced inappropriate reliance on AI assistance.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -10037,7 +9870,6 @@
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -10106,7 +9938,6 @@
       "knowledge_doc": "vault/Papers/Measuring and identifying factors of individuals' trust in large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI"
@@ -10166,7 +9997,6 @@
       "knowledge_doc": "vault/Papers/Trust in artificial intelligence–based clinical decision support systems among health care workers- Systematic review.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -10228,7 +10058,6 @@
       "knowledge_doc": "vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -10294,7 +10123,6 @@
       "knowledge_doc": "vault/Papers/The influence of mental state attributions on trust in large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -10359,7 +10187,6 @@
       "knowledge_doc": "vault/Papers/What large language models know and what people think they know.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -10426,7 +10253,6 @@
       "knowledge_doc": "vault/Papers/Large Language Models and User Trust- Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.75,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -10486,7 +10312,6 @@
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -10557,7 +10382,6 @@
       "knowledge_doc": "vault/Papers/AI algorithm transparency, pipelines for trust not prisms- mitigating general negative attitudes and enhancing trust toward AI.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Prompting",
@@ -10627,7 +10451,6 @@
       "knowledge_doc": "vault/Papers/Transparency enhances positive perceptions of social artificial intelligence.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -10691,7 +10514,6 @@
       "knowledge_doc": "vault/Papers/Mitigating trust-induced inappropriate reliance on AI assistance.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -10757,7 +10579,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -10817,7 +10638,6 @@
       "knowledge_doc": "vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige"
         ],
@@ -10873,7 +10693,6 @@
       "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI"
         ],
@@ -10936,7 +10755,6 @@
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -11001,7 +10819,6 @@
       "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -11061,7 +10878,6 @@
       "knowledge_doc": "vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -11132,7 +10948,6 @@
       "knowledge_doc": "vault/Papers/Artificial intelligence in social work- Emerging ethical issues.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -11201,7 +11016,6 @@
       "knowledge_doc": "vault/Papers/Scaling implicit bias analysis across transformer-based language models through embedding association test and prompt engineering.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -11267,7 +11081,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [],
         "all_categories": {
           "AI_Literacies": 0,
@@ -11306,7 +11119,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.65,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -11364,7 +11176,6 @@
       "knowledge_doc": "vault/Papers/Bias in decision-making for AI's ethical dilemmas- A comparative study of ChatGPT and Claude.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.3,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit"
@@ -11431,7 +11242,6 @@
       "knowledge_doc": "vault/Papers/A survey on fairness in large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -11501,7 +11311,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.4,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -11544,7 +11353,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.72,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -11607,7 +11415,6 @@
       "knowledge_doc": "vault/Papers/Model explanations for gender and ethnicity bias mitigation in AI-generated narratives.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.75,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -11674,7 +11481,6 @@
       "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -11741,7 +11547,6 @@
       "knowledge_doc": "vault/Papers/Self-debiasing large language models- Zero-shot recognition and reduction of stereotypes.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -11806,7 +11611,6 @@
       "knowledge_doc": "vault/Papers/Assessing GPT's bias towards stigmatized social groups- An intersectional case study on nationality prejudice and psychophobia.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -11878,7 +11682,6 @@
       "knowledge_doc": "vault/Papers/More or less wrong- A benchmark for directional bias in LLM comparative reasoning.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -11944,7 +11747,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.4,
         "categories": [
           "Generative_KI",
           "Prompting"
@@ -11986,7 +11788,6 @@
       "knowledge_doc": "vault/Papers/BBQ- A hand-built bias benchmark for question answering.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -12053,7 +11854,6 @@
       "knowledge_doc": "vault/Papers/Large language models are zero-shot reasoners.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting"
@@ -12124,7 +11924,6 @@
       "knowledge_doc": "vault/Papers/On the steerability of large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.6,
         "categories": [
           "Generative_KI",
           "Prompting"
@@ -12189,7 +11988,6 @@
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -12254,7 +12052,6 @@
       "knowledge_doc": "vault/Papers/Exploring complex mental health symptoms via classifying social media data with explainable LLMs.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.35,
         "categories": [
           "Generative_KI",
           "KI_Sonstige"
@@ -12317,7 +12114,6 @@
       "knowledge_doc": "vault/Papers/A sociolinguistic approach to stereotype assessment in large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.75,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -12375,7 +12171,6 @@
       "knowledge_doc": "vault/Papers/Debiasing prompts for gender bias in large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -12437,7 +12232,6 @@
       "knowledge_doc": "vault/Papers/Assessing GPT's bias towards stigmatized social groups- An intersectional case study on nationality prejudice and psychophobia.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -12497,7 +12291,6 @@
       "knowledge_doc": "vault/Papers/Counterfactual fairness in text classification through robustness.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.75,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -12555,7 +12348,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -12598,7 +12390,6 @@
       "knowledge_doc": "vault/Papers/Measuring and mitigating unintended bias in text data.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.75,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -12656,7 +12447,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.75,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -12722,7 +12512,6 @@
       "knowledge_doc": "vault/Papers/Evaluating gender bias in large language models via chain-of-thought prompting.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -12796,7 +12585,6 @@
       "knowledge_doc": "vault/Papers/Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models- A systematic review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -12856,7 +12644,6 @@
       "knowledge_doc": "vault/Papers/The cultural stereotype and cultural bias of ChatGPT.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -12923,7 +12710,6 @@
       "knowledge_doc": "vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -12995,7 +12781,6 @@
       "knowledge_doc": "vault/Papers/What’s in a name- Auditing large language models for race and gender bias.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -13063,7 +12848,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -13124,7 +12908,6 @@
       "knowledge_doc": "vault/Papers/Flexible intersectional stereotype extraction (FISE)- Analyzing intersectional biases in large language models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -13185,7 +12968,6 @@
       "knowledge_doc": "vault/Papers/Women4Ethical AI- Global cooperation for gender-inclusive AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -13246,7 +13028,6 @@
       "knowledge_doc": "vault/Papers/The EU artificial intelligence act through a gender lens.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.75,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -13305,7 +13086,6 @@
       "knowledge_doc": "vault/Papers/DR.GAP- Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -13374,7 +13154,6 @@
       "knowledge_doc": "vault/Papers/AI gender bias, disparities, and fairness- Does training data matter-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -13440,7 +13219,6 @@
       "knowledge_doc": "vault/Papers/How AI hype impacts the LGBTQ+ community.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -13508,7 +13286,6 @@
       "knowledge_doc": "vault/Papers/Feminist perspectives on AI- Ethical considerations in algorithmic decision-making.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -13577,7 +13354,6 @@
       "knowledge_doc": "vault/Papers/Bias against women and girls in large language models- A UNESCO study.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -13649,7 +13425,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -13717,7 +13492,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -13788,7 +13562,6 @@
       "knowledge_doc": "vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and Analysis.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -13856,7 +13629,6 @@
       "knowledge_doc": "vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -13916,7 +13688,6 @@
       "knowledge_doc": "vault/Papers/MirrorStories- Reflecting Diversity through Personalized Narrative Generation with Large Language Models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -13984,7 +13755,6 @@
       "knowledge_doc": "vault/Papers/Multilingual Prompting for Improving LLM Generation Diversity.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -14044,7 +13814,6 @@
       "knowledge_doc": "vault/Papers/Avoiding Catastrophe Through Intersectionality in Global AI Governance.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14119,7 +13888,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14186,7 +13954,6 @@
       "knowledge_doc": "vault/Papers/Algorithms, artificial intelligence and discrimination.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14247,7 +14014,6 @@
       "knowledge_doc": "vault/Papers/The AI Act, gender equality and non-discrimination- what role for the AI Office-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14306,7 +14072,6 @@
       "knowledge_doc": "vault/Papers/Discriminating Systems- Gender, Race, and Power in AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14375,7 +14140,6 @@
       "knowledge_doc": "vault/Papers/Revisiting Technical Bias Mitigation Strategies.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14433,7 +14197,6 @@
       "knowledge_doc": "vault/Papers/Towards Substantive Equality in Artificial Intelligence- Transformative AI Policy for Gender Equality and Diversity.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14503,7 +14266,6 @@
       "knowledge_doc": "vault/Papers/Intersectional Fairness- A Fractal Approach.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14570,7 +14332,6 @@
       "knowledge_doc": "vault/Papers/What is Feminist AI-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -14638,7 +14399,6 @@
       "knowledge_doc": "vault/Papers/Algorithmic discrimination- examining its types and regulatory measures with emphasis on US legal practices.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14696,7 +14456,6 @@
       "knowledge_doc": "vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14762,7 +14521,6 @@
       "knowledge_doc": "vault/Papers/How can feminism inform AI governance in practice-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14823,7 +14581,6 @@
       "knowledge_doc": "vault/Papers/Are -Intersectionally Fair- AI Algorithms Really Fair to Women of Color- A Philosophical Analysis.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -14891,7 +14648,6 @@
       "knowledge_doc": "vault/Papers/Towards substantive equality in artificial intelligence- Transformative AI policy for gender equality and diversity.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -14970,7 +14726,6 @@
       "knowledge_doc": "vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of fairness in AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -15035,7 +14790,6 @@
       "knowledge_doc": "vault/Papers/Policy advice and best practices on bias and fairness in AI.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -15093,7 +14847,6 @@
       "knowledge_doc": "vault/Papers/Avoiding catastrophe through intersectionality in global AI governance.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -15167,7 +14920,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -15234,7 +14986,6 @@
       "knowledge_doc": "vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading of the AI Act.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -15303,7 +15054,6 @@
       "knowledge_doc": "vault/Papers/Feministische Netzpolitik und Künstliche Intelligenz in der politischen Bildung [Feminist network politics and artificial intelligence in political education].md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -15371,7 +15121,6 @@
       "knowledge_doc": "vault/Papers/Feminist reflections for the development of artificial intelligence.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -15433,7 +15182,6 @@
       "knowledge_doc": "vault/Papers/Feminist Data Set.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -15497,7 +15245,6 @@
       "knowledge_doc": "vault/Papers/Data Feminism for AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -15558,7 +15305,6 @@
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Prompting",
@@ -15619,7 +15365,6 @@
       "knowledge_doc": "vault/Papers/Algorithmic Governance and the International Politics of Big Tech.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit"
@@ -15686,7 +15431,6 @@
       "knowledge_doc": "vault/Papers/Engineers on responsibility- feminist approaches to who's responsible for ethical AI.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Feministisch"
@@ -15743,7 +15487,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -15806,7 +15549,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -15876,7 +15618,6 @@
       "knowledge_doc": "vault/Papers/Thinking like a scientist- Can interactive simulations foster critical AI literacy-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -15949,7 +15690,6 @@
       "knowledge_doc": "vault/Papers/AI tools show biases in ranking job applicants' names according to perceived race and gender.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16018,7 +15758,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16084,7 +15823,6 @@
       "knowledge_doc": "vault/Papers/AI literacy in teacher education- Empowering educators through critical co-discovery.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Bias_Ungleichheit"
@@ -16141,7 +15879,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16206,7 +15943,6 @@
       "knowledge_doc": "vault/Papers/Feminism Confronts AI- The Gender Relations of Digitalisation.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16274,7 +16010,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16334,7 +16069,6 @@
       "knowledge_doc": "vault/Papers/Operationalizing positive-constructive pedagogy to artificial intelligence- the 3E model for scaffolding AI technology adoption.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Prompting",
@@ -16392,7 +16126,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16459,7 +16192,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -16537,7 +16269,6 @@
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16605,7 +16336,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16671,7 +16401,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.82,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -16733,7 +16462,6 @@
       "knowledge_doc": "vault/Papers/Trustworthy AI and the Logics of Intersectional Resistance.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16801,7 +16529,6 @@
       "knowledge_doc": "vault/Papers/Investigating AI systems- examining data and algorithmic bias through hermeneutic reverse engineering.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16865,7 +16592,6 @@
       "knowledge_doc": "vault/Papers/An empirical study of structural social and ethical challenges in AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16929,7 +16655,6 @@
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -16997,7 +16722,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -17062,7 +16786,6 @@
       "knowledge_doc": "vault/Papers/Training in Co-Creation as a Methodological Approach to Improve AI Fairness.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -17139,7 +16862,6 @@
       "knowledge_doc": "vault/Papers/Intersectional analysis of visual generative AI- the case of stable diffusion.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -17207,7 +16929,6 @@
       "knowledge_doc": "vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations for an Intersectional Approach.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -17281,7 +17002,6 @@
       "knowledge_doc": "vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -17347,7 +17067,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -17406,7 +17125,6 @@
       "knowledge_doc": "vault/Papers/Towards a Feminist Metaethics of AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -17472,7 +17190,6 @@
       "knowledge_doc": "vault/Papers/Data Feminism for AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -17542,7 +17259,6 @@
       "knowledge_doc": "vault/Papers/What is Feminist AI-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -17616,7 +17332,6 @@
       "knowledge_doc": "vault/Papers/PreciseDebias- An automatic prompt engineering approach for generative AI to mitigate image demographic biases.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -17682,7 +17397,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -17745,7 +17459,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -17809,7 +17522,6 @@
       "knowledge_doc": "vault/Papers/Can prompt modifiers control bias- A comparative analysis of text-to-image generative models.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -17883,7 +17595,6 @@
       "knowledge_doc": "vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI image generation.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -17951,7 +17662,6 @@
       "knowledge_doc": "vault/Papers/Intersectional analysis of visual generative AI- The case of Stable Diffusion.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -18011,7 +17721,6 @@
       "knowledge_doc": "vault/Papers/Reflexive prompt engineering- A framework for responsible prompt engineering and AI interaction design.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -18080,7 +17789,6 @@
       "knowledge_doc": "vault/Papers/Female perspectives on algorithmic bias- Implications for AI researchers and practitioners.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -18145,7 +17853,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.88,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -18217,7 +17924,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -18287,7 +17993,6 @@
       "knowledge_doc": "vault/Papers/AI Gender Bias, Disparities, and Fairness- Does Training Data Matter-.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -18351,7 +18056,6 @@
       "knowledge_doc": "vault/Papers/How to Create Inclusive AI Images- A Guide to Bias-Free Prompting.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -18413,7 +18117,6 @@
       "knowledge_doc": "vault/Papers/Feminist Perspectives on AI- Ethical Considerations in Algorithmic Decision-Making.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -18474,7 +18177,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -18541,7 +18243,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -18601,7 +18302,6 @@
       "knowledge_doc": "vault/Papers/Data Feminism for AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -18675,7 +18375,6 @@
       "knowledge_doc": "vault/Papers/What is Feminist AI-.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -18742,7 +18441,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -18803,7 +18501,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -18864,7 +18561,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -18930,7 +18626,6 @@
       "knowledge_doc": "vault/Papers/Tech workers' perspectives on ethical issues in AI development- Foregrounding feminist approaches.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -18992,7 +18687,6 @@
       "knowledge_doc": "vault/Papers/Data feminism for AI.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -19062,7 +18756,6 @@
       "knowledge_doc": "vault/Papers/Incubating Feminist AI- Executive Summary 2021-2024.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Soziale_Arbeit",
@@ -19132,7 +18825,6 @@
       "knowledge_doc": "vault/Papers/Recommendation on the Ethics of Artificial Intelligence.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -19200,7 +18892,6 @@
       "knowledge_doc": "vault/Papers/Measuring gender and racial biases in large language models- Intersectional evidence from automated resume evaluation.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -19261,7 +18952,6 @@
       "knowledge_doc": "vault/Papers/Factoring the matrix of domination- A critical review and reimagination of intersectionality in AI fairness.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -19328,7 +19018,6 @@
       "knowledge_doc": "vault/Papers/Gender, race, and intersectional bias in AI resume screening via language model retrieval.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "KI_Sonstige",
@@ -19395,7 +19084,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -19456,7 +19144,6 @@
       "knowledge_doc": "vault/Papers/Prompting fairness- Learning prompts for debiasing large language models.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.92,
         "categories": [
           "Prompting",
           "KI_Sonstige",
@@ -19515,7 +19202,6 @@
       "knowledge_doc": "vault/Papers/Bias and fairness in large language models- A survey.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -19573,7 +19259,6 @@
       "knowledge_doc": "vault/Papers/Generative AI and opportunities for feminist classroom assignments.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -19639,7 +19324,6 @@
       "knowledge_doc": "vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT with LLMs.md",
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.85,
         "categories": [
           "Generative_KI",
           "Prompting",
@@ -19704,7 +19388,6 @@
       "knowledge_doc": "vault/Papers/Feminist reflections for the development of Artificial Intelligence.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -19764,7 +19447,6 @@
       "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
       "llm": {
         "decision": "Include",
-        "confidence": 0.92,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -19824,7 +19506,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.75,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -19867,7 +19548,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "Generative_KI",
           "Bias_Ungleichheit",
@@ -19912,7 +19592,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Exclude",
-        "confidence": 0.95,
         "categories": [],
         "all_categories": {
           "AI_Literacies": 0,
@@ -19951,7 +19630,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "AI_Literacies",
           "KI_Sonstige",
@@ -19996,7 +19674,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.85,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",
@@ -20040,7 +19717,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.78,
         "categories": [
           "AI_Literacies",
           "Generative_KI",
@@ -20086,7 +19762,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.72,
         "categories": [
           "AI_Literacies",
           "Bias_Ungleichheit",
@@ -20130,7 +19805,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "AI_Literacies",
           "Prompting",
@@ -20178,7 +19852,6 @@
       "knowledge_doc": null,
       "llm": {
         "decision": "Include",
-        "confidence": 0.95,
         "categories": [
           "KI_Sonstige",
           "Bias_Ungleichheit",

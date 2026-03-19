@@ -91,11 +91,6 @@ def parse_llm_row(row, metadata_by_key):
         if val:
             positive_cats.append(cat)
 
-    try:
-        confidence = float(row.get("LLM_Confidence", 0) or 0)
-    except (ValueError, TypeError):
-        confidence = 0.0
-
     year_raw = meta.get("Year", "") or row.get("Year", "")
     try:
         year = int(float(year_raw)) if year_raw else None
@@ -125,7 +120,6 @@ def parse_llm_row(row, metadata_by_key):
         "knowledge_doc": knowledge_doc,
         "llm": {
             "decision": row.get("Decision", ""),
-            "confidence": round(confidence, 3),
             "categories": positive_cats,
             "all_categories": all_cats,
             "reasoning": (row.get("LLM_Reasoning", "") or "")[:300],
@@ -191,34 +185,6 @@ def load_disagreements(filepath):
             "affected_categories": affected,
         }
     return result
-
-
-def compute_confusion_matrix(papers):
-    """Compute 2x2 confusion matrix for papers with human assessment."""
-    matrix = {
-        "Include_Include": 0,
-        "Include_Exclude": 0,
-        "Exclude_Include": 0,
-        "Exclude_Exclude": 0,
-        "Other": 0,
-    }
-    for p in papers:
-        if not p["benchmark"]["has_human"]:
-            continue
-        h = p["human"]["decision"]
-        l = p["llm"]["decision"]
-        # Skip papers without actual decisions (empty string = not yet assessed)
-        if not h or not l:
-            continue
-        # Normalize: map Unclear -> Exclude for matrix
-        h_norm = "Include" if h == "Include" else "Exclude"
-        l_norm = "Include" if l == "Include" else "Exclude"
-        key = f"{h_norm}_{l_norm}"
-        if key in matrix:
-            matrix[key] += 1
-        else:
-            matrix["Other"] += 1
-    return matrix
 
 
 def compute_category_graph(papers):
@@ -365,9 +331,15 @@ def main():
     print(f"  Papers with both decisions: {papers_with_decision}")
     print(f"  Disagreements: {disagreement_count}")
 
-    # Compute confusion matrix
-    confusion = compute_confusion_matrix(papers)
-    print(f"  Confusion matrix: {confusion}")
+    # Use canonical confusion matrix from agreement_metrics.json
+    canonical_cm = metrics["decision"]["confusion_matrix"]
+    confusion = {
+        "Include_Include": canonical_cm["Include_Include"],
+        "Include_Exclude": canonical_cm["Include_Exclude"],
+        "Exclude_Include": canonical_cm["Exclude_Include"],
+        "Exclude_Exclude": canonical_cm["Exclude_Exclude"],
+    }
+    print(f"  Confusion matrix (canonical): {confusion}")
 
     # Compute category graph
     graph_data = compute_category_graph(papers)
@@ -399,7 +371,7 @@ def main():
             "generated": date.today().isoformat(),
             "total_papers": len(papers),
             "papers_with_human": papers_with_human,
-            "benchmark_papers": papers_with_decision,
+            "benchmark_papers": metrics["decision"]["n"],
             "kappa_overall": metrics["decision"]["cohens_kappa"],
             "kappa_interpretation": metrics["decision"]["kappa_interpretation"],
             "llm_include_rate": round(llm_include / len(papers) * 100, 1) if papers else 0,

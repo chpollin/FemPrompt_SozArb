@@ -1,98 +1,191 @@
 // Evidence Companion - Feministische AI Literacies
 // Systematischer Review -- Interaktive Evidenz
 
-const CATEGORIES = [
+(function() {
+'use strict';
+
+// ============================================================
+// Shared Constants & Utilities (exposed via window.EC)
+// ============================================================
+
+var CATEGORIES = [
     'AI_Literacies', 'Generative_KI', 'Prompting', 'KI_Sonstige',
     'Soziale_Arbeit', 'Bias_Ungleichheit', 'Gender',
     'Diversitaet', 'Feministisch', 'Fairness'
 ];
 
-// Global state
-let allPapers = [];
-let filteredPapers = [];
-let vaultMeta = {};
-let kappas = {};
-let fuse = null;
-let activeCategories = new Set();
-let benchmarkInitialized = false;
-let wissensnetzInitialized = false;
-let conceptData = null; // from promptotyping_v2.json
-let currentPage = 1;
-let currentSort = 'relevance'; // default: Include first, then year
-const PAGE_SIZE = 50;
+// Category colors: 10 distinct hues across a spectrum (Gegenstand -> Perspektive)
+// No gendered color coding. Perceptually distinct, works for colorblind users.
+var CAT_COLORS = {
+    'AI_Literacies':    '#5b8c5a', // sage green
+    'Generative_KI':    '#3a7d7e', // teal
+    'Prompting':        '#4b7bab', // steel blue
+    'KI_Sonstige':      '#7c6fae', // soft purple
+    'Soziale_Arbeit':   '#b0546e', // dusty rose
+    'Bias_Ungleichheit':'#c2694e', // terracotta
+    'Gender':           '#d4943a', // amber
+    'Diversitaet':      '#8a7542', // olive gold
+    'Feministisch':     '#a24b7a', // plum
+    'Fairness':         '#6a8e4e', // moss green
+};
 
+function escapeHtml(text) {
+    if (!text) return '';
+    var div = document.createElement('div');
+    div.textContent = String(text);
+    return div.innerHTML;
+}
+
+// ============================================================
+// Application State (private)
+// ============================================================
+
+var allPapers = [];
+var filteredPapers = [];
+var vaultMeta = {};
+var kappas = {};
+var fuse = null;
+var activeCategories = new Set();
+var benchmarkInitialized = false;
+var wissensnetzInitialized = false;
+var conceptData = null;
+var currentPage = 1;
+var currentSort = 'relevance';
+var PAGE_SIZE = 50;
+var currentDetailPaper = null;
+var currentDetailList = null;
+
+// ============================================================
+// Public API (window.EC)
+// ============================================================
+
+window.EC = {
+    // Shared utilities
+    escapeHtml: escapeHtml,
+    CAT_COLORS: CAT_COLORS,
+    CATEGORIES: CATEGORIES,
+    // State getters
+    getAllPapers: function() { return allPapers; },
+    getFilteredPapers: function() { return filteredPapers; },
+    getMeta: function() { return vaultMeta; },
+    getKappas: function() { return kappas; },
+    getActiveCategories: function() { return activeCategories; },
+    // Actions
+    setFilteredPapers: function(p) { filteredPapers = p; },
+    renderPapers: function(p) { renderPapers(p); },
+    showPaperDetail: function(p, list) { showPaperDetail(p, list); },
+    closePaperModal: function() { closePaperModal(); },
+    applyFilters: function() { applyFilters(); },
+};
+
+// HTML onclick aliases
+window.closePaperModal = function() { closePaperModal(); };
+window.exportFilteredPapers = function() { exportFilteredPapers(); };
+window.downloadKnowledgeDoc = function(p, t) { downloadKnowledgeDoc(p, t); };
+window.downloadVaultZip = function() { downloadVaultZip(); };
+window.showPaperDetail = function(p, l) { showPaperDetail(p, l); };
+
+// ============================================================
 // Initialize
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        await loadData();
+// ============================================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    loadData().then(function() {
         initializeUI();
         renderIntroNumbers();
         renderCategoryChips();
-        applyFilters(); // applies default sort + renders
-        _logInit();
-    } catch (error) {
+        applyFilters();
+        logInit();
+    }).catch(function(error) {
         console.error('[Evidence] init failed:', error);
         document.getElementById('papers-grid').innerHTML =
             '<p style="padding:2rem;color:var(--danger);">' + escapeHtml(error.message) + '</p>';
-    }
+    });
 });
 
-function _logInit() {
-    const withDecision = allPapers.filter(p => p.benchmark.has_human && p.human && p.human.decision).length;
-    const disagreements = allPapers.filter(p => p.benchmark.agreement === false).length;
-    const kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
-    console.log('[Evidence] ' + allPapers.length + ' papers | ' + withDecision + ' human decisions | ' + disagreements + ' divergences | kappa=' + kappa);
+function logInit() {
+    var withDecision = allPapers.filter(function(p) {
+        return p.benchmark.has_human && p.human && p.human.decision;
+    }).length;
+    var disagreements = allPapers.filter(function(p) {
+        return p.benchmark.agreement === false;
+    }).length;
+    var kappa = (vaultMeta.kappa_overall || 0).toFixed(3);
+    console.log('[Evidence] ' + allPapers.length + ' papers | ' + withDecision +
+        ' human decisions | ' + disagreements + ' divergences | kappa=' + kappa);
 }
 
-// Load data
-async function loadData() {
-    const res = await fetch('data/research_vault_v2.json');
-    if (!res.ok) throw new Error('Daten konnten nicht geladen werden');
-    const data = await res.json();
-    allPapers = data.papers;
-    vaultMeta = data.meta;
-    kappas = data.kappa_by_category;
-    filteredPapers = [...allPapers];
+// ============================================================
+// Data Loading
+// ============================================================
 
-    fuse = new Fuse(allPapers, {
-        keys: ['title', 'author_year', 'abstract'],
-        threshold: 0.3,
-        includeScore: true
+function loadData() {
+    return fetch('data/research_vault_v2.json').then(function(res) {
+        if (!res.ok) throw new Error('Daten konnten nicht geladen werden');
+        return res.json();
+    }).then(function(data) {
+        allPapers = data.papers;
+        vaultMeta = data.meta;
+        kappas = data.kappa_by_category;
+        filteredPapers = allPapers.slice();
+
+        fuse = new Fuse(allPapers, {
+            keys: ['title', 'author_year', 'abstract'],
+            threshold: 0.3,
+            includeScore: true
+        });
+
+        // Load concept data for Wissensnetz (lightweight extraction)
+        return fetch('data/concept_graph.json').then(function(cgRes) {
+            if (!cgRes.ok) return;
+            return cgRes.json().then(function(cgData) {
+                // Build paper-like objects with concept arrays for wissensnetz.js
+                var conceptPapers = allPapers.map(function(p) {
+                    var concepts = cgData.paper_concepts[p.id] || [];
+                    return {
+                        id: p.id,
+                        title: p.title,
+                        author_year: p.author_year,
+                        concepts: concepts,
+                        stages: cgData.paper_divergence[p.id]
+                            ? { assessment: { agreement: 'disagree' } }
+                            : { assessment: { agreement: 'agree' } }
+                    };
+                });
+                conceptData = {
+                    nodes: cgData.nodes,
+                    edges: cgData.edges,
+                    papers: conceptPapers
+                };
+            });
+        }).catch(function(e) {
+            console.warn('[Evidence] Concept data not available:', e.message);
+        });
     });
-
-    // Load concept data for Wissensnetz
-    try {
-        var ptRes = await fetch('data/promptotyping_v2.json');
-        if (ptRes.ok) {
-            var ptData = await ptRes.json();
-            conceptData = {
-                nodes: ptData.concepts.nodes,
-                edges: ptData.concepts.edges,
-                papers: ptData.papers
-            };
-        }
-    } catch (e) {
-        console.warn('[Evidence] Concept data not available:', e.message);
-    }
 }
 
-// Initialize UI
+// ============================================================
+// UI Initialization
+// ============================================================
+
 function initializeUI() {
     document.getElementById('search-box').addEventListener('input', handleSearch);
-    document.getElementById('filter-decision').addEventListener('change', applyFilters);
-    document.getElementById('filter-human').addEventListener('change', applyFilters);
-    document.getElementById('filter-year').addEventListener('change', applyFilters);
+    document.getElementById('filter-decision').addEventListener('change', function() { applyFilters(); });
+    document.getElementById('filter-human').addEventListener('change', function() { applyFilters(); });
+    document.getElementById('filter-year').addEventListener('change', function() { applyFilters(); });
     document.getElementById('sort-by').addEventListener('change', function() {
         currentSort = this.value;
         applyFilters();
     });
 
-    // View navigation (Korpus / Bewertungsvergleich)
+    // View navigation
     document.querySelectorAll('.view-tab').forEach(function(tab) {
         tab.addEventListener('click', function() {
             var viewId = tab.dataset.view;
             document.querySelectorAll('.view-tab').forEach(function(t) {
-                t.classList.toggle('active', t.dataset.view === viewId);
+                var isActive = t.dataset.view === viewId;
+                t.classList.toggle('active', isActive);
+                t.setAttribute('aria-selected', isActive ? 'true' : 'false');
             });
             document.querySelectorAll('.view-content').forEach(function(v) {
                 v.classList.toggle('active', v.id === 'view-' + viewId);
@@ -100,7 +193,9 @@ function initializeUI() {
             });
             // Lazy-init on first visit
             if (viewId === 'vergleich' && !benchmarkInitialized) {
-                initializeBenchmark();
+                if (window.initializeBenchmark) {
+                    window.initializeBenchmark();
+                }
                 benchmarkInitialized = true;
             }
             if (viewId === 'wissensnetz' && !wissensnetzInitialized && conceptData) {
@@ -118,12 +213,25 @@ function initializeUI() {
             e.preventDefault();
             document.getElementById('search-box').focus();
         }
+        // Arrow keys for detail panel navigation
+        if (document.getElementById('paper-modal').classList.contains('active')) {
+            if (e.key === 'ArrowLeft') {
+                var prev = document.getElementById('detail-prev');
+                if (prev) prev.click();
+            }
+            if (e.key === 'ArrowRight') {
+                var next = document.getElementById('detail-next');
+                if (next) next.click();
+            }
+        }
     });
 }
 
-// Intro numbers
+// ============================================================
+// Intro Numbers
+// ============================================================
+
 function renderIntroNumbers() {
-    // Count papers where human actually made a decision (Include/Exclude)
     var withDecision = allPapers.filter(function(p) {
         return p.human && p.human.decision && (p.human.decision === 'Include' || p.human.decision === 'Exclude');
     }).length;
@@ -131,9 +239,16 @@ function renderIntroNumbers() {
     if (el('total-count-intro')) el('total-count-intro').textContent = allPapers.length;
     if (el('human-count-intro')) el('human-count-intro').textContent = withDecision;
     if (el('llm-count-intro')) el('llm-count-intro').textContent = allPapers.length;
+    if (el('kd-count-intro')) {
+        var kdCount = allPapers.filter(function(p) { return p.knowledge_doc; }).length;
+        el('kd-count-intro').textContent = kdCount;
+    }
 }
 
-// Category chips
+// ============================================================
+// Category Chips
+// ============================================================
+
 function renderCategoryChips() {
     var container = document.getElementById('category-chips');
     var technik = CATEGORIES.slice(0, 4);
@@ -170,7 +285,10 @@ function renderCategoryChips() {
     });
 }
 
-// Search
+// ============================================================
+// Search & Filter
+// ============================================================
+
 function handleSearch(e) {
     var query = e.target.value.trim();
     if (query.length === 0) {
@@ -181,12 +299,10 @@ function handleSearch(e) {
     applyFilters();
 }
 
-// Sort helper
 function sortPapers(papers, sortBy) {
     var sorted = papers.slice();
     switch (sortBy) {
         case 'relevance':
-            // Include first, then by year descending
             sorted.sort(function(a, b) {
                 var aInc = a.llm.decision === 'Include' ? 0 : 1;
                 var bInc = b.llm.decision === 'Include' ? 0 : 1;
@@ -229,7 +345,6 @@ function sortPapers(papers, sortBy) {
     return sorted;
 }
 
-// Filters
 function applyFilters() {
     var decision = document.getElementById('filter-decision').value;
     var humanStatus = document.getElementById('filter-human').value;
@@ -265,9 +380,7 @@ function applyFilters() {
         });
     }
 
-    // Sort
     filtered = sortPapers(filtered, currentSort);
-
     currentPage = 1;
     renderPapers(filtered);
 }
@@ -289,7 +402,6 @@ function renderPapers(papers) {
         return;
     }
 
-    // Pagination
     var totalPages = Math.ceil(papers.length / PAGE_SIZE);
     if (currentPage > totalPages) currentPage = 1;
     var start = (currentPage - 1) * PAGE_SIZE;
@@ -312,7 +424,6 @@ function renderPapers(papers) {
         '</tr>';
     }).join('');
 
-    // Sort indicator
     function sortArrow(col) {
         return currentSort === col ? ' <span class="sort-arrow">&#9660;</span>' : '';
     }
@@ -329,7 +440,6 @@ function renderPapers(papers) {
         '</tr></thead>' +
         '<tbody>' + rows + '</tbody></table>';
 
-    // Pagination
     if (totalPages > 1) {
         html += '<div class="pagination">';
         if (currentPage > 1) html += '<button class="page-btn" data-page="' + (currentPage - 1) + '">&laquo;</button>';
@@ -346,28 +456,24 @@ function renderPapers(papers) {
 
     container.innerHTML = html;
 
-    // Event: row click
     container.querySelectorAll('tr[data-idx]').forEach(function(row) {
         row.addEventListener('click', function() {
             showPaperDetail(papers[parseInt(row.dataset.idx)], papers);
         });
     });
 
-    // Event: pagination
     container.querySelectorAll('.page-btn[data-page]').forEach(function(btn) {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
             currentPage = parseInt(btn.dataset.page);
             renderPapers(papers);
-            document.getElementById('papers-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            document.getElementById('view-korpus').scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
-    // Event: column sort
     container.querySelectorAll('.sortable').forEach(function(th) {
         th.addEventListener('click', function() {
             currentSort = th.dataset.sort;
-            // Update the select to match (if applicable)
             var sel = document.getElementById('sort-by');
             if (sel.querySelector('option[value="' + currentSort + '"]')) {
                 sel.value = currentSort;
@@ -394,27 +500,9 @@ function statusBadge(paper) {
     return '<span class="status-pill status-pill--diverge">Divergenz</span>';
 }
 
-// Category colors: 10 distinct hues across a spectrum (Gegenstand → Perspektive)
-// No gendered color coding. Perceptually distinct, works for colorblind users.
-var CAT_COLORS = {
-    // Gegenstand (4 categories)
-    'AI_Literacies':    '#5b8c5a', // sage green
-    'Generative_KI':    '#3a7d7e', // teal
-    'Prompting':        '#4b7bab', // steel blue
-    'KI_Sonstige':      '#7c6fae', // soft purple
-    // Perspektive (6 categories)
-    'Soziale_Arbeit':   '#b0546e', // dusty rose
-    'Bias_Ungleichheit':'#c2694e', // terracotta
-    'Gender':           '#d4943a', // amber
-    'Diversitaet':      '#8a7542', // olive gold
-    'Feministisch':     '#a24b7a', // plum
-    'Fairness':         '#6a8e4e', // moss green
-};
-
 function catLabels(paper) {
     var html = '';
     CATEGORIES.forEach(function(cat, i) {
-        // Visual separator between Technik (0-3) and Sozial (4-9)
         if (i === 4) html += '<span class="cat-dot-sep"></span>';
         var active = paper.llm.all_categories[cat] === 1;
         var color = active ? CAT_COLORS[cat] : '#e0ddd9';
@@ -427,9 +515,6 @@ function catLabels(paper) {
 // Paper Detail Panel
 // ============================================================
 
-var currentDetailPaper = null;
-var currentDetailList = null;
-
 function showPaperDetail(paper, paperList) {
     currentDetailPaper = paper;
     if (paperList) currentDetailList = paperList;
@@ -440,7 +525,6 @@ function showPaperDetail(paper, paperList) {
 
     var bodyHtml = buildDetailContent(paper);
 
-    // Prev/Next navigation
     if (currentDetailList && currentDetailList.length > 1) {
         var idx = currentDetailList.indexOf(paper);
         bodyHtml += '<div class="detail-nav">';
@@ -456,11 +540,8 @@ function showPaperDetail(paper, paperList) {
     document.getElementById('modal-body').innerHTML = bodyHtml;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    // Scroll panel to top
     modal.querySelector('.modal-content').scrollTop = 0;
 
-    // Nav button handlers
     var prevBtn = document.getElementById('detail-prev');
     var nextBtn = document.getElementById('detail-next');
     if (prevBtn) {
@@ -485,7 +566,6 @@ function closePaperModal() {
 function buildDetailContent(paper) {
     var html = '';
 
-    // Abstract
     if (paper.abstract && paper.abstract.trim()) {
         html += '<div class="detail-section">' +
             '<h3>Abstract</h3>' +
@@ -493,7 +573,6 @@ function buildDetailContent(paper) {
         '</div>';
     }
 
-    // Links
     var links = [];
     if (paper.doi && paper.doi !== 'nan') {
         links.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-external-link-alt"></i> DOI: ' + escapeHtml(paper.doi) + '</a>');
@@ -508,15 +587,12 @@ function buildDetailContent(paper) {
         html += '<div class="detail-links">' + links.join('') + '</div>';
     }
 
-    // Assessment comparison
     html += '<div class="detail-section"><h3>Bewertung</h3><div class="assessment-grid">';
 
-    // LLM panel
     var llmDecColor = paper.llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
     html += '<div class="assessment-panel">' +
         '<div class="panel-header">LLM (Claude Haiku 4.5)</div>' +
         '<div class="assessment-decision" style="color:' + llmDecColor + '">' + paper.llm.decision + '</div>' +
-        '
         catGridColored(paper.llm.all_categories);
     if (paper.llm.reasoning) {
         html += '<div class="reasoning-section"><span class="reasoning-label">Begruendung</span>' +
@@ -524,7 +600,6 @@ function buildDetailContent(paper) {
     }
     html += '</div>';
 
-    // Human panel
     if (paper.benchmark.has_human && paper.human && paper.human.decision) {
         var hDecColor = paper.human.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
         html += '<div class="assessment-panel">' +
@@ -541,7 +616,6 @@ function buildDetailContent(paper) {
 
     html += '</div>'; // close assessment-grid
 
-    // Status panel
     if (paper.benchmark.has_human && paper.human && paper.human.decision) {
         if (paper.benchmark.agreement === false) {
             var affectedCats = paper.benchmark.affected_categories || [];
@@ -566,14 +640,12 @@ function buildDetailContent(paper) {
     }
 
     html += '</div>'; // close detail-section
-
     return html;
 }
 
-// Category grid with spectrum colors (for detail panel)
 function catGridColored(allCategories) {
     var html = '<div class="category-grid-10">';
-    CATEGORIES.forEach(function(cat, i) {
+    CATEGORIES.forEach(function(cat) {
         var active = allCategories[cat] === 1;
         var color = active ? CAT_COLORS[cat] : 'var(--gray-300)';
         var textColor = active ? 'var(--gray-800)' : 'var(--gray-400)';
@@ -588,15 +660,8 @@ function catGridColored(allCategories) {
 }
 
 // ============================================================
-// Utilities
+// Export & Download
 // ============================================================
-
-function escapeHtml(text) {
-    if (!text) return '';
-    var div = document.createElement('div');
-    div.textContent = String(text);
-    return div.innerHTML;
-}
 
 function exportFilteredPapers() {
     var papers = filteredPapers.length > 0 ? filteredPapers : allPapers;
@@ -619,19 +684,19 @@ function exportFilteredPapers() {
     URL.revokeObjectURL(url);
 }
 
-async function downloadKnowledgeDoc(docPath, title) {
-    try {
-        var response = await fetch(docPath);
+function downloadKnowledgeDoc(docPath, title) {
+    fetch(docPath).then(function(response) {
         if (!response.ok) throw new Error('HTTP ' + response.status);
-        var blob = await response.blob();
+        return response.blob();
+    }).then(function(blob) {
         var safeName = title.replace(/[<>:"/\\|?*]/g, '-').substring(0, 100) + '.md';
         var url = URL.createObjectURL(blob);
         var a = document.createElement('a');
         a.href = url; a.download = safeName; a.click();
         URL.revokeObjectURL(url);
-    } catch (err) {
+    }).catch(function(err) {
         console.error('[Download]', err);
-    }
+    });
 }
 
 function downloadVaultZip() {
@@ -641,10 +706,4 @@ function downloadVaultZip() {
     a.click();
 }
 
-window.closePaperModal = closePaperModal;
-window.showPaperDetail = showPaperDetail;
-window.exportFilteredPapers = exportFilteredPapers;
-window.downloadKnowledgeDoc = downloadKnowledgeDoc;
-window.downloadVaultZip = downloadVaultZip;
-// Expose for wissensnetz.js cross-view navigation
-Object.defineProperty(window, 'allPapers', { get: function() { return allPapers; } });
+})();

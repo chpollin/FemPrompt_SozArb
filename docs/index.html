@@ -57,20 +57,20 @@
     </div>
 
     <!-- Minimal Navigation -->
-    <nav class="view-nav">
-        <div class="view-nav-inner">
-            <button class="view-tab active" data-view="korpus">Korpus</button>
-            <button class="view-tab" data-view="wissensnetz">Wissensnetz</button>
-            <button class="view-tab" data-view="vergleich">Bewertungsvergleich</button>
+    <nav class="view-nav" aria-label="Hauptnavigation">
+        <div class="view-nav-inner" role="tablist">
+            <button class="view-tab active" data-view="korpus" role="tab" aria-selected="true" aria-controls="view-korpus">Korpus</button>
+            <button class="view-tab" data-view="wissensnetz" role="tab" aria-selected="false" aria-controls="view-wissensnetz">Wissensnetz</button>
+            <button class="view-tab" data-view="vergleich" role="tab" aria-selected="false" aria-controls="view-vergleich">Bewertungsvergleich</button>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main>
         <!-- View: Korpus -->
-        <section class="content-section view-content active" id="view-korpus">
+        <section class="content-section view-content active" id="view-korpus" role="tabpanel" aria-labelledby="tab-korpus">
             <div class="search-filters">
-                <input type="text" class="search-box" id="search-box" placeholder="Paper suchen (Titel, Autor, Abstract)...">
+                <input type="text" class="search-box" id="search-box" placeholder="Paper suchen (Titel, Autor, Abstract)..." aria-label="Paper durchsuchen">
 
                 <div class="filters-grid">
                     <div class="filter-group">
@@ -146,7 +146,7 @@
         </section>
 
         <!-- View: Wissensnetz -->
-        <section class="content-section view-content" id="view-wissensnetz" style="display:none;">
+        <section class="content-section view-content" id="view-wissensnetz" role="tabpanel" aria-labelledby="tab-wissensnetz" style="display:none;">
             <h2 class="section-heading">Wissensnetz</h2>
             <p class="section-description">
                 136 Konzepte, extrahiert aus 249 Wissensdokumenten.
@@ -165,12 +165,15 @@
         </section>
 
         <!-- View: Bewertungsvergleich -->
-        <section class="content-section view-content" id="view-vergleich" style="display:none;">
+        <section class="content-section view-content" id="view-vergleich" role="tabpanel" aria-labelledby="tab-vergleich" style="display:none;">
             <h2 class="section-heading">Bewertungsvergleich</h2>
             <p class="section-description">
                 LLM und Expert:innen bewerten denselben Korpus nach identischem Schema.
                 Die Divergenz ist informationshaltig -- sie zeigt, wo maschinelle Musterkennung
                 und disziplinaeres Kontextwissen strukturell auseinanderfallen.
+                Der niedrige Cohen's Kappa (0.035) ist dabei kein Zeichen schlechter Qualitaet,
+                sondern ein bekanntes Prevalence-Bias-Artefakt bei ungleichen Basisraten
+                (LLM: 68% Include, Human: 42% Include).
             </p>
 
             <!-- Metric tiles -->
@@ -188,6 +191,16 @@
                     <p class="chart-subtitle">Was sieht jede Perspektive allein, was sehen beide gemeinsam?</p>
                     <div id="confusion-matrix-container"></div>
                 </div>
+            </div>
+
+            <!-- Kappa chart -->
+            <div class="benchmark-chart-card" style="margin-top: 1.5rem;">
+                <h3>Kappa pro Kategorie</h3>
+                <p class="chart-subtitle">Cohen's Kappa misst die Uebereinstimmung ueber den Zufall hinaus.
+                    Blau = LLM sieht mehr, Orange = Human sieht mehr, Grau = aehnliche Raten.
+                    Bei stark ungleichen Basisraten kann hohe Agreement mit niedrigem Kappa koexistieren
+                    (Prevalence-Bias, Byrt et al. 1993).</p>
+                <div id="kappa-chart-container"></div>
             </div>
 
             <!-- Disagreements table -->
@@ -219,7 +232,7 @@
     </footer>
 
     <!-- Paper Detail Panel -->
-    <div class="modal" id="paper-modal">
+    <div class="modal" id="paper-modal" role="dialog" aria-modal="true" aria-label="Paper-Detail">
         <div class="modal-overlay" onclick="closePaperModal()"></div>
         <div class="modal-content">
             <div class="modal-header">
@@ -227,7 +240,7 @@
                     <h2 id="modal-title">Paper Title</h2>
                     <p id="modal-author" style="color: var(--gray-500); margin-top: 0.25rem; font-size: var(--text-md);"></p>
                 </div>
-                <button class="modal-close" onclick="closePaperModal()">&times;</button>
+                <button class="modal-close" onclick="closePaperModal()" aria-label="Schliessen">&times;</button>
             </div>
             <div class="modal-body" id="modal-body"></div>
         </div>
