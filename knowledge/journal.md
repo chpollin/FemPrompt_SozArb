@@ -4,6 +4,74 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-03-19 (Session 5): Evidence Companion -- Richtungswechsel
+
+**Branch:** `FemPrompt_SozArb_promptotyping-interface`
+**Commits:** `1d54c46`, `895d791`, `a7703e4`
+
+### Was passiert ist
+
+1. **Gesamtanalyse:** Paper-Text vs. Repository vs. Web-Frontend abgeglichen. Identifiziert: Das Paper referenziert eine "publizierte Wissensumgebung" (Abb. 3) -- das ist das Research Dashboard, nicht Promptotyping.
+
+2. **Richtungswechsel:** Promptotyping-Interface wird nicht weiterentwickelt. Entscheidung: Ein einziges Frontend als akademische Begleitpublikation ("Evidence Companion").
+
+3. **Komplettes Redesign von `docs/index.html`:**
+   - Name: "Feministische AI Literacies -- Systematischer Review"
+   - IBM Plex Serif fuer Headings (akademische Seriositaet)
+   - Weisser Header, Spektrum-Farbsystem (10 Kategorien als Regenbogen)
+   - Tabelle statt Cards (sortierbar, 50/Seite, Pagination)
+   - Seitenpanel statt Modal (slide-in)
+   - Tabs entfernt, dann als 2-Tab-Navigation wiederhergestellt (Korpus / Bewertungsvergleich)
+
+4. **LLM-Confidence entfernt:** War Selbsteinschaetzung des LLMs, keine valide Metrik. Komplett raus aus Interface, Daten, Generator.
+
+5. **Datengenerator erweitert:** 300 Papers (249 full + 51 thin), DOI/URL/Abstract, Knowledge-Sektionen, Kategorie-Raten, deterministische Picks.
+
+6. **Farbsystem redesigned:** 10 Kategorien als genderneutrales Spektrum (Salbeigruen -> Teal -> Stahlblau -> Lila -> Altrosa -> Terrakotta -> Bernstein -> Olivgold -> Pflaume -> Moosgruen). Gruppierung als "Gegenstand" (KI-Dimension) und "Perspektive" (Gesellschaftliche Dimension) statt "Technik/Sozial".
+
+### Was wir gelernt haben
+
+**Promptotyping vs. Evidence Companion:**
+- Promptotyping ging ueber das Paper-Versprechen hinaus. Das Paper beschreibt eine Wissensumgebung zum Explorieren, Vergleichen, Identifizieren, Nachvollziehen. Das ist ein Evidence Browser, kein Pipeline-Explorer.
+- **Learning:** Das Interface muss das einloesen, was das Paper verspricht -- nicht mehr. Zusaetzliche Features (Pipeline-Sankey, Konzept-Force-Graph) sind interessant, aber nicht das, was Reviewer:innen oder Kolleg:innen brauchen.
+
+**Design-Professionalitaet:**
+- Das alte Dashboard wirkte wie ein Tech-Startup (dunkler Header, KPI-Tiles, bunte Zahlen). Akademische Interfaces brauchen: Serif-Headings, Whitespace, zurueckhaltende Farben, Journal-Style Tabellen.
+- **Learning:** Inspirationsquellen: Our World in Data (Klarheit), Distill.pub (Artikel als Interface), eLife (Progressive Enhancement). Nicht: SaaS-Dashboards, Admin-Panels.
+
+**LLM-Confidence ist keine Metrik:**
+- Der Wert 0.95 suggeriert Praezision, die nicht gegeben ist. Es ist eine Selbsteinschaetzung des LLMs, kein unabhaengiges Qualitaetsmass. Muss raus.
+- **Learning:** Jede Zahl im Interface muss pruefbar sein. Pseudoquantitative Werte (LLM-Confidence, Sycophancy-Scores) sind irrefuehrend.
+
+**Farbcodierung und Gender:**
+- Blau (Technik) / Warm (Sozial) reproduziert Gender-Stereotypen -- inakzeptabel fuer ein feministisches Forschungsprojekt.
+- **Learning:** Farbsysteme sind politisch. Ein Regenbogen-Spektrum ohne hierarchische Zuordnung ist die bessere Wahl.
+
+**"Gegenstand" und "Perspektive" statt "Technik" und "Sozial":**
+- Die interne Operationalisierung (TECHNIK_OK AND SOZIAL_OK) muss nicht die UI-Sprache sein. "Gegenstand" (was wird untersucht?) und "Perspektive" (aus welchem Blickwinkel?) ist praeziser und fachlicher.
+
+### Was entstanden ist
+
+| Datei | Aenderung |
+|-------|-----------|
+| `docs/index.html` | Komplett neu: Header, Intro, 2 Tabs, Tabelle, Detail-Panel, Footer |
+| `docs/css/research.css` | Redesign: Typographie, Farben, Layout (~1400 Zeilen) |
+| `docs/js/research-app.js` | Rewrite: Tabelle, Sortierung, Detail-Panel, Confidence entfernt (~600 Zeilen) |
+| `docs/js/features.js` | filterByQuadrant angepasst |
+| `scripts/generate_promptotyping_data_v2.py` | +200 Zeilen: thin papers, DOI/URL, KD-Sektionen, Kategorie-Raten |
+| `docs/data/promptotyping_v2.json` | Regeneriert: 300 Papers, 1.7 MB |
+
+### Offene Punkte
+
+- [ ] Wissensnetz-View (Konzept-Graph, Tab 3)
+- [ ] Bewertungsvergleich-Tab (Konfusionsmatrix, Slope Chart)
+- [ ] Promptotyping-Dateien physisch entfernen (werden nicht mehr geladen, aber existieren noch)
+- [ ] CLAUDE.md aktualisieren
+- [ ] Merge zu main nach Fertigstellung
+- [ ] Paper: Abb. 3 und Fazit-Beschreibung mit tatsaechlichem Interface abgleichen
+
+---
+
 ## 2026-02-22 (Session 4): Promptotyping v2.1 -- Epistemische Tiefe
 
 **Branch:** `FemPrompt_SozArb_promptotyping-interface`

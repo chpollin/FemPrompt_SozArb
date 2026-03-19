@@ -180,15 +180,17 @@ Das Benchmark vergleicht Human- und LLM-Assessment und adaptiert den Ansatz von 
 
 **Referenzliteratur:**
 
-| Studie | Befund | Relevanz |
-|--------|--------|----------|
-| Woelfle et al. (2024) | Human IRR: kappa = 0.29-0.84 (komplexitaetsabhaengig) | Methodische Vorlage |
-| Hanegraaf et al. (2024) | Human IRR in SLRs: kappa = 0.77-0.88 | Benchmark-Werte |
-| Sandner et al. (2025) | Human-LLM kappa ca. 0.52 ca. Human-Human kappa | Hypothese: LLM weicht nicht staerker ab als Menschen |
+| Studie | Design | Zentrale Kappa-Werte | Relevanz |
+|--------|--------|---------------------|----------|
+| Woelfle et al. (2024) | Paralleles Human-AI Assessment, 5 LLMs, 3 Instrumente (PRISMA/AMSTAR/PRECIS-2) | Human IRR: kappa 0.84 (PRISMA), 0.77 (AMSTAR), 0.29 (PRECIS-2). Bestes LLM (Claude-3-Opus): 70% (PRISMA), 74% (AMSTAR), 55% (PRECIS-2) | Methodische Vorlage, Komplexitaetsabhaengigkeit der LLM-Leistung |
+| Hanegraaf et al. (2024) | Systematischer Review (45 SLRs) + Survey (37 SLR-Autoren) | Human IRR: kappa 0.82 (Abstract), 0.77 (Full-Text). 91% der SLRs: AMSTAR 2 "critically low". Doppelstandard: ML-Akzeptanzschwelle hoeher als Human-Leistung | Menschliche Baseline, imperfekte menschliche Uebereinstimmung als Norm |
+| Sandner et al. (2025) | 54 Studierende, 10 Teams, 30 Papers pro Team (TU Graz) | Fleiss kappa 0.39 (Novizen). Cohen's kappa Human-LLM: 0.52. LLM-Sensitivity 80% vs. Human 84% | Hypothese: LLM weicht nicht staerker ab als Menschen voneinander |
 
-Detaillierte Dokumentation: `paper/Referenzliteratur-Benchmark-Design.md`
+**Konvergierende Befunde:** (1) Menschliche Uebereinstimmung variiert stark mit Aufgabenkomplexitaet (kappa 0.29-0.84). (2) LLMs allein liegen unter erfahrener menschlicher Leistung, aber auf Novizen-Niveau. (3) Human-AI-Kollaboration verbessert individuelle Leistung nur bei strukturierten Aufgaben.
 
-**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet, ist aber durch den Prevalence-Bias-Paradox eingeschraenkt (Byrt et al. 1993): Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035, unabhaengig von der Bewertungsqualitaet. Details: `knowledge/paper-integrity.md` Abschnitt 3.6, `knowledge/status.md` M6-Interpretation
+**Erwartungshorizont fuer dieses Projekt:** Die 10-Kategorien-Aufgabe liegt auf der Komplexitaetsskala zwischen AMSTAR und PRECIS-2 (kontextabhaengige Zuordnung, nicht Checklisten-Items). Erwartbare Kappa-Werte: Human-Human 0.5-0.8 (kategorienabhaengig), Human-LLM 0.3-0.7.
+
+**Primaere Metriken:** Konfusionsmatrix, Basisraten-Vergleich (Ja-Raten pro Kategorie und Pfad), Disagreement-Analyse. Cohen's Kappa wird als Vergleichsanker zur Referenzliteratur berichtet, ist aber durch den Prevalence-Bias-Paradox eingeschraenkt (Byrt et al. 1993): Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035, unabhaengig von der Bewertungsqualitaet. Details: `knowledge/status.md` M6-Interpretation (Prevalence-Bias-Analyse)
 
 **Benchmark-Scripts:**
 

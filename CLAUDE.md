@@ -86,33 +86,31 @@ Das Projekt hat drei Schichten (definiert in `knowledge/FORSCHUNGSPROJEKT-PROMPT
 
 ### Promptotyping-Interface (`docs/promptotyping.html`)
 
-5 Views, Vanilla JS + D3.js + Chart.js via CDN, IIFE-Pattern:
+**ARCHIVIERT (ersetzt durch Evidence Companion, M12)**
 
-| View | Inhalt | D3-Abhaengigkeit |
-|------|--------|-------------------|
-| **Landing** | Leitfrage, 3 Kennzahlen, 3 Featured Papers | Nein |
-| **Pipeline** | Sankey-Diagramm, 5 Stufen mit Dropout-Baendern | d3-sankey v0.12.3 |
-| **Paper Journey** | Featured Picks + Suche, Timeline mit Stance-Indicators | Nein |
-| **Konzept-Explorer** | Force Graph, Cluster-Farben, Divergenz-Ring | D3 Force |
-| **Divergenz-Navigator** | Exemplarische Faelle, Narrative Cards, Filter | Nein |
+Das Promptotyping-Interface (5 Views: Landing, Pipeline-Sankey, Paper Journey, Konzept-Explorer, Divergenz-Navigator) wird nicht mehr weiterentwickelt. Die Dateien existieren noch im Repo, werden aber nicht mehr von `index.html` geladen.
+
+### Evidence Companion (`docs/index.html`) -- AKTIV
+
+Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js via CDN.
+
+**Name:** "Feministische AI Literacies -- Systematischer Review"
+**Untertitel:** "Interaktive Evidenz zu Pollin, Sackl-Sharif, Klinger & Steiner (2026)"
+
+| Tab | Inhalt |
+|-----|--------|
+| **Korpus** | Sortierbare Tabelle (326 Papers), Suche, Filter, Kategorie-Chips, Detail-Panel |
+| **Bewertungsvergleich** | Konfusionsmatrix, Slope Chart, Divergenz-Tabelle (geplant) |
+| **Wissensnetz** | Konzept-Graph mit Ego-Netzwerk (geplant) |
 
 **Architektur-Regeln:**
-- Kein Build-Tool, kein Framework, kein npm. Nur CDN + IIFE.
-- CSS erbt aus `research.css` (:root-Variablen), eigener `pt-*` Namespace fuer Promptotyping
-- Daten: `docs/data/promptotyping_v2.json` (generiert durch `scripts/generate_promptotyping_data_v2.py`)
-- **Epistemische Haltungen sind strukturell:** `.stance-section--result` (blau), `.stance-section--process` (gruen), `.stance-section--limits` (orange) in JEDER Detail-Ansicht
-- **Featured Papers:** 3 handverlesen in `FEATURED_PAPERS` dict im Datengenerator (Ahmed_2024, Shafie_2025, Kaneko_2024)
-- **Konzept-Cluster:** Technik/Sozial/Bridge, berechnet aus Kategorie-Affinitaet (65%-Threshold)
-
-**D3-Sankey Besonderheiten:**
-- `d3.sankeyLinkHorizontal()` erzeugt Path mit `stroke-width` (NICHT `fill`)
-- Orphan-Nodes (ohne Links) koennen D3-Sankey crashen
-- Links muessen `fill: none` haben
-
-### Research Dashboard (`docs/index.html`)
-
-4-Tab Chart.js SPA (Papers, Benchmark, Dashboard, Graph). Fertig, keine Aenderungen geplant.
-Daten: `docs/data/research_vault_v2.json` (generiert durch `pipeline/scripts/generate_docs_data.py`)
+- Kein Build-Tool, kein Framework, kein npm. Nur CDN.
+- IBM Plex Serif (Headings) + Inter (Body)
+- 10 Kategorien als Spektrum-Farbsystem (genderneutral)
+- Kategorien gruppiert als "Gegenstand" (KI-Dimension) und "Perspektive" (Gesellschaftliche Dimension)
+- Detail-Panel als Seitenpanel (slide-in von rechts)
+- LLM-Confidence NICHT anzeigen (keine valide Metrik)
+- Daten: `docs/data/research_vault_v2.json` (generiert durch `pipeline/scripts/generate_docs_data.py`)
 
 ---
 
@@ -268,8 +266,9 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 | M7 | Ergebnisse ins Paper | Abgeschlossen |
 | M8 | Paper finalisieren | **Offen** (Review-Runde, Einreichung 4. Mai) |
 | M9 | Vault + GitHub Pages | Abgeschlossen |
-| M10 | Promptotyping v1 | Ersetzt durch M11 |
-| M11 | Promptotyping v2/v2.1 | **In Arbeit** (Browser-Test, Merge zu main) |
+| M10 | Promptotyping v1 | Archiviert (ersetzt durch M12) |
+| M11 | Promptotyping v2/v2.1 | Archiviert (ersetzt durch M12) |
+| M12 | Evidence Companion | **In Arbeit** (Wissensnetz, Bewertungsvergleich, Merge) |
 
 ---
 

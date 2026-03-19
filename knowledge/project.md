@@ -4,7 +4,7 @@
 
 Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bias** (Gender, Race, Intersektionalitaet) im Kontext Sozialer Arbeit. Teil des Elisabeth-List-Fellowship-Projekts "Diversitaetssensibler Umgang mit Kuenstlicher Intelligenz" (Universitaet Graz, 2025-2026).
 
-**Primaeres Ziel (Paper, Forum Wissenschaft):** Epistemische Infrastruktur fuer LLM-gestuetzte Literature Reviews beschreiben und operationalisieren -- am Beispiel eines systematischen Reviews zu feministischer AI Literacy und LLM-Bias in der Sozialen Arbeit. Kernfrage: Welche Verfahren, Dokumentationsstrukturen und Workflow-Entscheidungen sind noetig, damit LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben?
+**Primaeres Ziel:** Epistemische Infrastruktur fuer LLM-gestuetzte Literature Reviews beschreiben und operationalisieren -- am Beispiel eines systematischen Reviews zu feministischer AI Literacy und LLM-Bias in der Sozialen Arbeit. Kernfrage: Welche Verfahren, Dokumentationsstrukturen und Workflow-Entscheidungen sind noetig, damit LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben?
 
 **Sekundaeres Ziel (Grundlage):** Konzeptuelle Basis fuer eine Benchmark ("Fair Bench") fuer die Soziale Arbeit schaffen. Der Review identifiziert relevante Begriffe, Konzepte und Diskurspositionen, die in Testszenarien ueberfuehrt werden koennen.
 
@@ -14,7 +14,7 @@ Systematischer Literature Review zu **feministischer AI Literacy** und **LLM-Bia
 
 ## Forschungsfragen
 
-### Paper (Hauptfrage)
+### Hauptfrage
 
 Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review, um der Asymmetrie zwischen maschineller Musterkennung und fachlicher Urteilskraft methodisch gerecht zu werden?
 
@@ -34,7 +34,7 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 | Praktiker:innen (Soziale Arbeit) | Evidenzbasis fuer LLM-Nutzung in der Praxis |
 | Lehrende (AI Literacy) | Kursmaterial, Konzepte, Fallbeispiele |
 
-**Paper-Zielgruppe (Forum Wissenschaft):** Wissenschaftler:innen mit wenig KI-Vorwissen
+**Primaere Zielgruppe:** Wissenschaftler:innen mit wenig KI-Vorwissen
 
 ---
 
@@ -44,7 +44,7 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 
 | Kriterium | Messbar | Status |
 |-----------|---------|--------|
-| Paper eingereicht | Deadline 4. Mai 2026 | Ausstehend |
+| Workflow vollstaendig dokumentiert | Repository auditierbar | Umgesetzt |
 | Epistemische Infrastruktur dokumentiert | Repository auditierbar, Prompts versioniert | Umgesetzt |
 | Dualer Bewertungspfad ausgefuehrt | Human + LLM Assessment komplett | Abgeschlossen |
 | Benchmark-Metriken berechnet | Konfusionsmatrix, Basisraten, Disagreement-Analyse (Kappa als Vergleichsanker) | Abgeschlossen (Details: `status.md`) |
@@ -80,7 +80,7 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 
 ## Zwei Ebenen des Projekts
 
-### Ebene 2: Methodisch -- KERNBEITRAG DES PAPERS
+### Ebene 2: Methodisch -- KERNBEITRAG
 
 **Frage:** Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review, um der Asymmetrie zwischen maschineller Musterkennung und fachlicher Urteilskraft methodisch gerecht zu werden?
 
@@ -88,7 +88,6 @@ Welche epistemische Infrastruktur braucht ein LLM-gestuetzter Literature Review,
 - Konzept der epistemischen Infrastruktur (vier Ebenen: Workflow, Research Integrity, Institutionell, Community)
 - Dualer Bewertungspfad als Operationalisierung (Human + LLM, parallel, unabhaengig)
 - Benchmark-Ergebnisse als Illustration: Divergenz ist messbar und informationshaltig (Ergebnisse: siehe `status.md`)
-- Paper fuer Forum Wissenschaft (Deadline 4. Mai 2026)
 - Dokumentierter, reproduzierbarer Workflow im Repository (github.com/chpollin/FemPrompt_SozArb)
 
 ### Ebene 1: Inhaltlich (Literature Review -- Anwendungsfall)
@@ -156,14 +155,18 @@ Die Asymmetrie ist wechselseitig und kontextabhaengig. Sie laesst sich mit gegen
 
 Epistemische Infrastruktur bezeichnet die Gesamtheit derjenigen Verfahren, Dokumentationsstrukturen, institutionellen Regelungen und Community-Praktiken, die sicherstellen, dass LLM-Beitraege in der Forschung ueberpruefbar, nachvollziehbar und verantwortbar bleiben.
 
-**Arbeitsformel:** "Nicht das Modell wird verlaesslich, sondern der Forschungsprozess wird auditierbar: Epistemische Infrastruktur transformiert LLM-Einsatz von situativer Unterstuetzung zu nachvollziehbarer, verantwortbarer Wissensproduktion."
+**Kernprinzip:** Verlaesslichkeit kann nicht als Eigenschaft des Systems vorausgesetzt, sondern muss als Eigenschaft des Prozesses hergestellt werden. Die systematische Anordnung von Werkzeugen, Entscheidungsregeln, Verifikationspunkten und Verantwortungszuweisungen stellt diese Verlaesslichkeit her.
+
+**Operatives Designprinzip (Verifikationspunkte):** Nach jedem KI-gestuetzten Arbeitsschritt folgt ein Verifikationspunkt -- eine definierte Stelle im Prozess, an der menschliche oder regelbasierte Kontrolle die Ergebnisse prueft. Kein einzelnes Element gewaehrleistet fuer sich Verlaesslichkeit; diese entsteht aus dem systematischen Zusammenspiel.
+
+**Diagnostische Funktion von LLM-Begruendungen:** LLM-Bewertungen enthalten textuelle Begruendungen. Diese sind selbst konfabulationsanfaellige Outputs, deren Verhaeltnis zum tatsaechlichen Verarbeitungsprozess ungeklaert bleibt. Als Prompting-Strategie erfuellen sie eine diagnostische Funktion: Inkonsistenzen zwischen Klassifikation und Begruendung weisen auf instabile Zuordnungen hin und liefern den Expert:innen gezielt Ansatzpunkte fuer die Ueberpruefung.
 
 **Vier Ebenen:**
 
 | Ebene | Beschreibung | Projekt-Umsetzung |
 |-------|--------------|-------------------|
 | Workflow | Dualer Bewertungspfad, deterministische Verarbeitungsstufen | 3-Stage SKE, paralleles Assessment |
-| Research Integrity | Dokumentation, nachvollziehbare Designentscheidungen | Repository, Prompt-Changelog, paper-integrity.md |
+| Research Integrity | Dokumentation, nachvollziehbare Designentscheidungen | Repository, Prompt-Changelog, Verifikationspunkte |
 | Institutionell | KI-Richtlinien | Noch nicht vorhanden |
 | Community | Peer-Review-Praktiken, die Workflows einschliessen | Paper-Forderung |
 
@@ -201,6 +204,20 @@ Rico Hauswald argumentiert, dass epistemische Deferenz nicht an Ueberzeugungen o
 Hauswald beschreibt eine justifikatorische Esoterik: nicht der Inhalt, sondern die Begruendung bleibt unzugaenglich. Trainingsdaten, Modellarchitekturen und Selektionslogiken werden nicht offengelegt.
 
 **Ergaenzung (Ferrario/Facchini/Termine 2024):** Selbst empirisch nachweisbare Ueberlegenheit eines KI-Systems begruendet keine epistemische Autoritaet, weil Autoritaet epistemische Tugenden und normative Ansprechbarkeit voraussetzt, die Maschinen nicht besitzen.
+
+### Doppelte Unkontrollierbarkeit
+
+Vor dem Einsatz laesst sich nicht eingrenzen, bei welchen Aufgaben ein Modell verlaesslich arbeitet. Nach dem Einsatz laesst sich nicht erklaeren, warum ein bestimmter Output so und nicht anders ausgefallen ist. Diese doppelte Unkontrollierbarkeit wird durch AI Agents weiter verschaerft, bei denen Ketten von Verarbeitungsschritten ablaufen, deren Zwischenergebnisse und Entscheidungslogik zusaetzlich verborgen bleiben.
+
+### Kompetenzanforderungen fuer epistemische Infrastruktur
+
+| Kompetenz | Beschreibung |
+|-----------|--------------|
+| Technische Grundkompetenz | Code, Repositories und dokumentierte Prozesse nachvollziehen |
+| KI-spezifische Literacy | Phaenomene wie Konfabulation und Sycophancy im Prozessdesign adressieren |
+| Reflexive Literacy | Epistemische Konsequenzen der eingesetzten Technologien kritisch beurteilen |
+
+Diese Kompetenzen gehen weit ueber klassische Informationskompetenz hinaus und sind derzeit ungleich verteilt.
 
 ### LLMs als "Exotic Mind-Like Entities" (Shanahan 2024)
 
@@ -274,6 +291,12 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 - **Ressourcenasymmetrie:** Gruppen, die Bias und Ungleichheit untersuchen, verfuegen haeufig ueber geringere Ressourcen fuer den Aufbau epistemischer Infrastruktur
 - **Abhaengigkeit von proprietaeren Systemen**
 
+### Drei systematische Einschraenkungen des Benchmarks
+
+1. **Benchmark-Basis:** 210 von 326 Papers -- 116 ohne vollstaendiges Human Assessment bleiben aussen vor
+2. **Overlap-Analyse:** Nur fuer Stichprobe von 34 Papers belegbar (93.8% Unikate)
+3. **PDF-Beschaffungsrate:** 79% erzeugt systematische Unterrepraesentation paywall-gesicherter Literatur
+
 ---
 
 ## Glossar (Kernbegriffe)
@@ -289,6 +312,12 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 | Verantwortungsasymmetrie | Verantwortung bleibt bei Forscher:innen, obwohl LLMs epistemisch relevante Beitraege liefern |
 | Deep Research | Agentenbasierte LLM-Systeme fuer iterative Recherche und zitierte Synthese |
 | Wissensdokument | Strukturierte Zusammenfassung einer Studie mit Metadaten, Kernbefunden, Kategorien und Confidence-Score |
+| Konfabulation | Erzeugung kohaerenter, aber faktuell ungesicherter Aussagen ohne interne Verifikationsinstanz. Begriff aus klinischer Neuropsychologie (Fuellen von Gedaechtnisluecken). Praeziser als "Halluzination", da der Erzeugungsmechanismus beschrieben wird, nicht ein Sinneserleben. Konfabulierte Outputs weisen hoehere Narrativitaet auf als veridikale -- sie sind gerade dann ueberzeugend, wenn sie falsch sind. |
+| Doppelte Unkontrollierbarkeit | Vor dem Einsatz nicht eingrenzbar, bei welchen Aufgaben ein Modell verlaesslich arbeitet; nach dem Einsatz nicht erklaerbar, warum ein Output so ausgefallen ist. Verschaerft durch AI Agents. |
+| Verifikationspunkt | Definierte Stelle im Prozess, an der menschliche oder regelbasierte Kontrolle prueft, ob Ergebnisse die Anforderungen fuer den naechsten Arbeitsschritt erfuellen. Designprinzip des Workflows. |
+| Context Window | Begrenzte Textmenge, die ein LLM pro Anfrage verarbeiten kann. |
+| Context Rot | Abnahme der Verarbeitungsqualitaet mit zunehmender Eingabelaenge. |
+| Nachnutzbarkeit | Prinzip, dass Workflows so dokumentiert sein sollen, dass sie fuer andere Fragestellungen adaptiert werden koennen. |
 
 ---
 
@@ -301,4 +330,4 @@ Verantwortung bedeutet die Faehigkeit zu antworten und Beziehungen zu pflegen. I
 
 ---
 
-*Aktualisiert: 2026-02-21*
+*Aktualisiert: 2026-03-13*

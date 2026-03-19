@@ -1,8 +1,9 @@
-# Status (2026-02-22)
+# Status (2026-03-19)
 
-## Aktueller Fokus: Paper fertigstellen (M8)
+## Aktueller Fokus: Evidence Companion finalisieren (M12)
 
-M1-M7 abgeschlossen. Paper v0.4: 17.975 Zeichen (Limit: 18.000). Alle Abschnitte ausgeschrieben -- Jagged-Frontier-Konzept, qualitative Disagreement-Beispiele, didaktische Einschuebe fuer Nicht-KI-Zielgruppe. Naechster Schritt: Review-Runde mit Co-Autor:innen (Susi, Sabine, Christian).
+M1-M11 abgeschlossen. M11 (Promptotyping) archiviert -- Richtungswechsel zu Evidence Companion.
+Naechste Schritte: Wissensnetz-View, Bewertungsvergleich-Tab, Merge zu main.
 
 ---
 
@@ -16,18 +17,16 @@ M1-M7 abgeschlossen. Paper v0.4: 17.975 Zeichen (Limit: 18.000). Alle Abschnitte
 - [x] Alle Querverweise aktualisiert
 - Commit: `ff558e2`
 
-### M2: Paper im Repo -- ABGESCHLOSSEN
+### M2: Epistemische Infrastruktur als Leitkonzept -- ABGESCHLOSSEN
 
-- [x] `knowledge/paper/paper-draft.md` als Single Source of Truth
-- [x] Epistemische Infrastruktur als Leitkonzept
-- [x] 7 Abschnitte, 13 Fussnoten, Platzhalter fuer Ergebnisse
+- [x] Epistemische Infrastruktur als Leitkonzept etabliert
+- [x] Theoretischer Rahmen dokumentiert (project.md)
 - Commit: `d7d4557`
 
 ### M3: Deep-Research-Prompts restaurieren -- ABGESCHLOSSEN
 
 - [x] Prompt-Template aus Git-History (`knowledge/Operativ.md`) in `prompts/deep-research-template.md` wiederherstellen
 - [x] Rekonstruierte Parametrisierung dokumentieren (was bekannt, was verloren)
-- [x] Paper-Behauptung korrigieren ("im Repository dokumentiert" -> ehrliche Formulierung)
 - Commit: (siehe Git-Log)
 
 ### M4: Korpus-Bereinigung (326 vs 305) -- ABGESCHLOSSEN
@@ -89,25 +88,28 @@ Human Exclude           78              34
 | AI_Literacies | -- | -- | -- | -- | -0,018 |
 | Generative_KI | -- | -- | -- | -- | -0,004 |
 
-**Interpretation:** Die Konfusionsmatrix zeigt das asymmetrische Divergenzmuster: 78 Faelle LLM-Include/Human-Exclude gegenueber nur 23 in umgekehrter Richtung. Die Basisraten-Differenz (26 Prozentpunkte) verweist auf fundamental verschiedene Operationsweisen. Cohen's Kappa (0,035) ist primaer ein Artefakt des Prevalence-Bias-Paradoxes (Byrt et al. 1993): Bei stark unterschiedlichen Basisraten kollabiert Kappa, unabhaengig von der Bewertungsqualitaet. Die inhaltliche Analyse stuetzt sich daher auf Konfusionsmatrix, Basisraten und die qualitative Disagreement-Analyse. Details: `knowledge/paper-integrity.md` Abschnitt 3.6 (Prevalence-Bias-Analyse).
+**Interpretation:** Die Konfusionsmatrix zeigt das asymmetrische Divergenzmuster: 78 Faelle LLM-Include/Human-Exclude gegenueber nur 23 in umgekehrter Richtung. Die Basisraten-Differenz (26 Prozentpunkte) verweist auf fundamental verschiedene Operationsweisen. Cohen's Kappa (0,035) ist primaer ein Artefakt des Prevalence-Bias-Paradoxes (Byrt et al. 1993): Bei stark unterschiedlichen Basisraten kollabiert Kappa, unabhaengig von der Bewertungsqualitaet. Die inhaltliche Analyse stuetzt sich daher auf Konfusionsmatrix, Basisraten und die qualitative Disagreement-Analyse.
 
-### M7: Ergebnisse ins Paper einarbeiten -- ABGESCHLOSSEN
+**Prevalence-Bias-Analyse (Byrt et al. 1993, Feinstein & Cicchetti 1990):**
 
-- [x] Benchmark-Metriken in Abschnitt 5 einfuegen
-- [x] Divergenz-Analyse schreiben (3 Muster mit konkreten Paper-Beispielen)
-- [x] Epistemische Marker beschreiben
-- [x] Jagged-Frontier-Konzept (Mollick) in Abschnitt 2 integriert
-- [x] Didaktische Einschuebe fuer Nicht-KI-Zielgruppe
-- [x] Zeichenzaehlung: 17.975 Zeichen (Limit 18.000, Differenz +25)
-- Commit: (diese Session)
+Cohen's Kappa ist durch den Prevalence-Bias-Paradox eingeschraenkt: Bei 26 Prozentpunkten Basisraten-Differenz (LLM 68% vs. Human 42% Include) kollabiert Kappa auf 0,035. Der Wert reflektiert primaer die Schwellenwert-Differenz, nicht die inhaltliche Uebereinstimmung. Die Referenzliteratur (Woelfle, Hanegraaf, Sandner) verwendet Kappa fuer Human-Human-Vergleiche, wo Basisraten aehnlich sind. Fuer Human-LLM-Vergleiche mit systematischer Basisraten-Divergenz ist Kappa als primaerer Indikator irrefuehrend. Primaere Metriken sind daher Konfusionsmatrix und Basisraten.
 
-### M8: Paper finalisieren + einreichen
+**Divergenz-Muster (qualitative Analyse, 111 Disagreements):**
 
-- [ ] Review-Runde mit Co-Autor:innen
-- [ ] Auf 18.000 Zeichen bringen
-- [ ] Fussnoten finalisieren (max. 15)
-- [ ] Einreichung 4. Mai 2026
-- Abhaengigkeit: M7
+| Muster | Anteil | Beispiel |
+|--------|--------|----------|
+| Semantische Expansion | 81% (90 Faelle) | van Toorn et al. (2024): LLM weist "Fairness = Ja" zu, obwohl algorithmische Fairness-Metriken nicht thematisiert werden. LLM expandiert "Fairness" auf alle Gleichbehandlungsfragen. |
+| Keyword-Inklusion | 11% (12 Faelle) | Meilvang & Dahler (2024): LLM vergibt 5 positive Kategorien basierend auf thematischer Oberflaechenstruktur. Expert:innen schliessen aus: Kontext ist Verwaltungsinformatik, nicht sozialarbeiterische Praxis. |
+| Implizite Feldzugehoerigkeit | 8% (9 Faelle) | Pinski & Benlian (2024): Expert:innen klassifizieren "Gender = Ja", weil AI Literacy Frameworks historisch genderblind konstruiert sind. LLM liest "Gender" an expliziten Begriffsmarken fest. |
+
+**Epistemische Marker:** LLM-Unterstuetzung ist am hoechsten, wo Kategorien durch explizite Fachterminologie abgegrenzt sind ("Feministisch", kappa = +0,075); am niedrigsten, wo semantische Expansion verhindert werden muss ("Fairness", kappa = -0,163) oder implizites Feldwissen erforderlich ist ("Gender", kappa = -0,098).
+
+### M7: Benchmark-Ergebnisse dokumentieren -- ABGESCHLOSSEN
+
+- [x] Benchmark-Metriken dokumentiert (Konfusionsmatrix, Basisraten, Kategorie-Kappas)
+- [x] Divergenz-Analyse: 3 Muster mit konkreten Beispielen
+- [x] Jagged-Frontier-Konzept (Mollick) integriert
+- Commit: (siehe Git-Log)
 
 ### M9 (Nice-to-Have): Vault + GitHub Pages
 
@@ -162,7 +164,48 @@ Human Exclude           78              34
 - [x] CDN-Dependencies: D3 v7.9.0, d3-sankey v0.12.3, Chart.js 4.4.0, FontAwesome 6.5.1
 - [x] Vault ZIP: `docs/downloads/vault.zip` (1.1 MB, 505 Dateien)
 - Branch: `FemPrompt_SozArb_promptotyping-interface`, Commits: `3476437` (v2), `963c08d` (v2.1)
-- Offene Punkte: Browser-Test, Mobile-Verifikation, Merge zu main
+- **Status: ARCHIVIERT** -- Promptotyping-Interface wird nicht weiterentwickelt. Ersetzt durch M12 (Evidence Companion).
+- Erkenntnis: Promptotyping ging ueber das Paper-Versprechen hinaus. Das Paper referenziert eine "publizierte Wissensumgebung" -- das ist das Research Dashboard, nicht Promptotyping.
+
+### M12: Evidence Companion -- IN ARBEIT
+
+Komplettes Redesign des Research-Frontends (`docs/index.html`) als akademische Begleitpublikation zum Paper.
+
+**Entscheidung (2026-03-19):** Promptotyping-Interface entfernen. Ein einziges Frontend: Evidence Companion.
+
+- [x] Phase A: Redesign (Typographie, Farben, Layout)
+  - IBM Plex Serif fuer Headings, Inter fuer Body (16px)
+  - Weisser Header statt dunkler Block, Autoren-Zeile
+  - Einleitungstext statt KPI-Stats-Bar
+  - Spektrum-Farbsystem: 10 Kategorien als genderneutrale Farbskala
+  - Kategorien gruppiert als "Gegenstand" (4 KI-Kategorien) und "Perspektive" (6 Sozial-Kategorien)
+- [x] Phase B: Tabelle statt Cards
+  - Sortierbare Tabelle mit 7 Spalten (Titel, Autor, Jahr, LLM, Human, Status, Kategorien)
+  - Farbcodierte Kategorie-Punkte (Spektrum-Farben identisch in Chips und Tabelle)
+  - Pagination (50 pro Seite)
+  - Default-Sortierung: Include zuerst
+- [x] Phase C: Detail-Panel
+  - Seitenpanel (slide-in von rechts) statt Modal
+  - Assessment-Vergleich (LLM vs. Expert:innen) side-by-side mit Spektrum-Farben
+  - DOI-Link, Quell-URL, Knowledge-Doc-Download
+  - Prev/Next Navigation
+  - LLM-Begruendung sichtbar
+- [x] Phase D: Bereinigung
+  - LLM-Confidence komplett entfernt (keine valide Metrik)
+  - Dashboard-Tab (6 Charts) entfernt
+  - Network-Graph-Tab entfernt
+  - vis-network und D3 CDN-Imports entfernt
+  - Datengenerator erweitert: 300 Papers (249 full + 51 thin), DOI/URL, Knowledge-Sektionen
+- [ ] Phase E: Wissensnetz-View (geplant)
+  - Konzept-Graph (136 Nodes) als dritter Tab
+  - Ego-Netzwerk-Pattern: Klick auf Konzept zeigt Nachbarn + Papers
+  - Inspiriert von Cosma (cosma.arthurperret.fr)
+- [ ] Phase F: Bewertungsvergleich-Tab (geplant)
+  - Konfusionsmatrix, Slope Chart, Divergenz-Tabelle
+  - Aus bestehendem features.js Code
+- [ ] Merge zu main
+
+Commits: `1d54c46` (Redesign), `895d791` (Detail-Panel), `a7703e4` (Confidence entfernt)
 
 ---
 
@@ -196,7 +239,7 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - Einige Placeholder-Werte (Autorenliste, spezifische Kompetenzen, Region)
 - OpenAI/ChatGPT Raw-Output (war nur als binaere PDF committed)
 
-**Konsequenz fuer Paper:** Die Behauptung "im Repository dokumentiert" muss korrigiert werden. Ehrliche Formulierung: Template rekonstruiert, instanziierter Prompt nicht persistent gespeichert.
+**Status:** Template rekonstruiert (`prompts/deep-research-template.md`), instanziierter Prompt nicht persistent gespeichert.
 
 ### 10K Assessment-Prompt: Funktionsbereit
 
@@ -289,19 +332,6 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 
 ---
 
-## Paper: Forum Wissenschaft 2/2026
-
-| Aspekt | Stand |
-|--------|-------|
-| Deadline | 4. Mai 2026 |
-| Umfang | 18.000 Zeichen (inkl. Leerzeichen, inkl. Fussnoten) |
-| Fokus | Epistemische Infrastruktur fuer LLM-gestuetzte Literature Reviews |
-| **Paper-Datei** | **`knowledge/paper/paper-draft.md`** (Single Source of Truth) |
-| Leitkonzept | Epistemische Asymmetrie + Epistemische Infrastruktur |
-| Abgleich Paper vs. Repo | `knowledge/paper-integrity.md` |
-
-**Hinweis:** Das Paper wird ausschliesslich im Repo iteriert. Google Docs ist nicht mehr relevant.
-
 ---
 
 ## Offene Punkte
@@ -312,10 +342,7 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - [x] Knowledge Distillation (249 Dokumente)
 - [x] Knowledge-Doc Verifikation (97.2% perfekt)
 - [x] Repository-Bereinigung (analysis/, pipeline/summaries/, Redundanzen)
-- [x] Paper-Entwurf schreiben (Wissensdokument v12 + Text)
-- [x] Abgleich Paper vs. Repository (paper-integrity.md)
 - [x] Knowledge-Base konsolidieren (Dateien umbenannt, Redundanzen eliminiert)
-- [x] Paper im Repo einrichten (paper-draft.md als Single Source of Truth)
 - [x] 21 fehlende Papers untersucht (temporale Divergenz, 6 Duplikate identifiziert)
 - [x] Deep-Research-Prompts untersucht (Template in Git-History, instanziierter Prompt verloren)
 - [x] 10K Assessment-Prompt geprueft und synchronisiert (3 Inkonsistenzen behoben, v2.1)
@@ -325,11 +352,7 @@ Die HA-CSV wurde aus einem aelteren Zotero-Snapshot generiert. Seitdem hat sich 
 - [x] Assessment-Ordner restrukturiert (`assessment/human/`, `assessment/llm-5d/`, Altdateien in `benchmark/` bereinigt)
 - [x] **Google Sheets Export** (Human Assessment CSV, 304 Papers, 210 mit Decision)
 - [x] Teilmengen-Benchmark ausgefuehrt (merge + kappa + disagreements, κ = 0,035)
-- [x] Benchmark-Ergebnisse ins Paper eingearbeitet (Abschnitt 5 befuellt)
-- [x] Paper ausschreiben: v0.4, 17.975 Zeichen, alle Abschnitte fertig
-- [ ] Review-Runde mit Co-Autor:innen (Susi, Sabine, Christian Steiner)
 - [x] Vault-Building (Obsidian) mit Assessment-Integration + GitHub Pages aktiviert
-- [ ] Paper einreichen (Deadline 4. Mai 2026)
 
 ---
 
@@ -401,4 +424,4 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 ---
 
-*Aktualisiert: 2026-02-23*
+*Aktualisiert: 2026-03-19*
