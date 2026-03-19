@@ -99,20 +99,32 @@ function renderLandingNumbers() {
 
     var m = appData.meta;
     var patterns = m.pattern_distribution || {};
+    var cm = m.confusion_matrix || {};
+    var lost = m.total_papers - m.knowledge_docs;
 
     container.innerHTML =
-        '<div class="metric-card">' +
-            '<span class="metric-value">' + m.total_papers + '</span>' +
-            '<span class="metric-label">Papers analysiert</span>' +
+        '<div class="stance-section stance-section--result">' +
+            '<span class="stance-label">Was wir gefunden haben</span>' +
+            '<p><strong>' + m.total_papers + ' Papers</strong> durch 5 Pipeline-Stufen zu <strong>' + m.knowledge_docs + ' Wissensdokumenten</strong> verdichtet (' + (m.total_papers - m.knowledge_docs) + ' ohne Volltext). ' +
+            'Ein LLM (Claude Haiku 4.5) und ein Mensch bewerten unabhaengig nach 10 identischen Kategorien. ' +
+            'Ergebnis: <strong>' + m.disagreements + ' Divergenzen</strong> -- Faelle, in denen Mensch und Maschine zu verschiedenen Ergebnissen kommen.</p>' +
         '</div>' +
-        '<div class="metric-card metric--process">' +
-            '<span class="metric-value">5</span>' +
-            '<span class="metric-label">Pipeline-Stufen</span>' +
+        '<div class="stance-section stance-section--process">' +
+            '<span class="stance-label">Wie wir es gemacht haben</span>' +
+            '<p>Deep Research mit 4 LLMs parallel (Perplexity, Claude, ChatGPT, Gemini), ' +
+            'PDF-Akquise mit 4 Fallback-Strategien, ' +
+            'Wissensextraktion durch eine 3-stufige LLM-Pipeline (Extraktion, Formatierung, Verifikation), ' +
+            'duale Bewertung mit identischem Kategorienschema. ' +
+            'Gesamtkosten der LLM-Pipeline: ~$10.</p>' +
         '</div>' +
-        '<div class="metric-card metric--limits">' +
-            '<span class="metric-value">' + m.disagreements + '</span>' +
-            '<span class="metric-label">Divergenzen</span>' +
-            '<span class="metric-detail">' + (patterns['Semantische Expansion'] || 90) + ' davon Semantische Expansion</span>' +
+        '<div class="stance-section stance-section--limits">' +
+            '<span class="stance-label">Was wir nicht wissen</span>' +
+            '<p><strong>' + lost + ' von ' + m.total_papers + ' Papers</strong> ohne Wissensdokument (Paywalls, korrupte PDFs). ' +
+            'Human Assessment deckt nur ' + m.human_assessed + ' von ' + m.total_papers + ' Papers ab (64%). ' +
+            'Cohen\'s Kappa (' + m.kappa + ') ist ein Prevalence-Bias-Artefakt -- ' +
+            'die eigentliche Aussage steckt in der Konfusionsmatrix: ' +
+            (cm.Exclude_Include || 78) + ' mal inkludiert das LLM, was der Mensch ausschliesst, ' +
+            'nur ' + (cm.Include_Exclude || 23) + ' mal umgekehrt.</p>' +
         '</div>';
 }
 
@@ -278,6 +290,7 @@ function showStageDetail(stageId) {
 
     panel.innerHTML = html;
     panel.style.display = '';
+    scrollToElement(panel);
 }
 
 // ==========================================================================
@@ -383,22 +396,32 @@ function renderJourneyTimeline(paper) {
     var container = document.getElementById('journey-timeline');
     container.style.display = '';
 
+    var hasSke = paper.stages.ske !== null;
+    var hasAssessment = paper.stages.assessment && (paper.stages.assessment.llm || paper.stages.assessment.human);
+
     var stages = [
         { key: 'identification', name: 'Identifikation', stance: 'result',
-          summary: paper.stages.identification.in_zotero ? 'In Zotero erfasst' : 'Nicht in Zotero' },
-        { key: 'conversion', name: 'Konversion', stance: 'result',
-          summary: paper.stages.conversion.markdown_converted ? 'PDF &rarr; Markdown' : 'Fehlgeschlagen' },
-        { key: 'ske', name: 'Wissensextraktion', stance: 'process',
-          summary: paper.stages.ske.stage1_arguments_count + ' Argumente, Score ' + (paper.stages.ske.stage3_overall || '?') + '/100' },
-        { key: 'assessment', name: 'Assessment', stance: paper.stages.assessment.agreement === 'disagree' ? 'limits' : 'result',
-          summary: buildAssessmentSummary(paper) },
-        { key: 'concepts', name: 'Konzepte', stance: 'result',
-          summary: (paper.concepts || []).length + ' Konzepte extrahiert' }
+          summary: paper.stages.identification.in_zotero ? 'In Zotero erfasst' : 'Nicht in Zotero',
+          available: true },
+        { key: 'conversion', name: 'Konversion', stance: paper.stages.conversion.markdown_converted ? 'result' : 'limits',
+          summary: paper.stages.conversion.markdown_converted ? 'PDF &rarr; Markdown' : (paper.stages.conversion.pdf_acquired ? 'Konversion fehlgeschlagen' : 'Kein PDF verfuegbar'),
+          available: true },
+        { key: 'ske', name: 'Wissensextraktion', stance: hasSke ? 'process' : 'unavailable',
+          summary: hasSke ? (paper.stages.ske.stage1_arguments_count + ' Argumente' + (paper.stages.ske.stage3_overall ? ', Score ' + paper.stages.ske.stage3_overall + '/100' : ', nicht verifiziert')) : 'Nicht moeglich',
+          available: hasSke },
+        { key: 'assessment', name: 'Assessment', stance: !hasAssessment ? 'unavailable' : (paper.stages.assessment.agreement === 'disagree' ? 'limits' : 'result'),
+          summary: hasAssessment ? buildAssessmentSummary(paper) : 'Kein Assessment',
+          available: hasAssessment },
+        { key: 'concepts', name: 'Konzepte', stance: (paper.concepts && paper.concepts.length) ? 'result' : 'unavailable',
+          summary: (paper.concepts || []).length + ' Konzepte extrahiert',
+          available: (paper.concepts && paper.concepts.length > 0) }
     ];
 
     container.innerHTML = stages.map(function(s, i) {
         var arrow = i < stages.length - 1 ? '<div class="stage-arrow">&rarr;</div>' : '';
-        return '<div class="journey-stage journey-stage--' + s.stance + '" data-stage="' + s.key + '">' +
+        var stageClass = 'journey-stage journey-stage--' + s.stance;
+        if (!s.available) stageClass += ' journey-stage--unavailable';
+        return '<div class="' + stageClass + '" data-stage="' + s.key + '">' +
             '<div class="stage-stance-indicator" title="' + stanceLabel(s.stance) + '"></div>' +
             '<div class="stage-name">' + s.name + '</div>' +
             '<div class="stage-summary">' + s.summary + '</div>' +
@@ -430,7 +453,7 @@ function buildAssessmentSummary(paper) {
 }
 
 function stanceLabel(stance) {
-    var labels = { result: 'Zeigen was ist', process: 'Zeigen wie', limits: 'Zeigen was nicht geht' };
+    var labels = { result: 'Zeigen was ist', process: 'Zeigen wie', limits: 'Zeigen was nicht geht', unavailable: 'Nicht verfuegbar' };
     return labels[stance] || '';
 }
 
@@ -443,84 +466,196 @@ function renderJourneyStageDetail(paper, stageKey) {
         html += '<h3>Identifikation</h3>';
         html += '<div class="stance-section stance-section--result">';
         html += '<span class="stance-label">Ergebnis</span>';
-        html += '<p><strong>Titel:</strong> ' + escapeHtml(paper.title) + '</p>';
-        html += '<p><strong>Autor/Jahr:</strong> ' + escapeHtml(paper.author_year) + '</p>';
-        html += '<p><strong>In Zotero:</strong> ' + (paper.stages.identification.in_zotero ? 'Ja' : 'Nein') + '</p>';
+        html += '<p><strong>' + escapeHtml(paper.title) + '</strong></p>';
+        html += '<p>' + escapeHtml(paper.author_year) + '</p>';
+        html += '<p>Zotero-Status: ' + (paper.stages.identification.in_zotero ? '<span class="badge badge--include">Erfasst</span>' : '<span class="badge badge--exclude">Nicht erfasst</span>') + '</p>';
+        // Artifact links: DOI, URL, Abstract
+        var linkHtml = '';
+        if (paper.doi) {
+            linkHtml += '<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="artifact-link"><i class="fas fa-external-link-alt"></i> DOI: ' + escapeHtml(paper.doi) + '</a> ';
+        }
+        if (paper.url) {
+            linkHtml += '<a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener" class="artifact-link"><i class="fas fa-globe"></i> Originalquelle</a>';
+        }
+        if (linkHtml) {
+            html += '<div class="artifact-links">' + linkHtml + '</div>';
+        }
+        if (paper.abstract) {
+            html += '<details class="abstract-toggle"><summary>Abstract anzeigen</summary><div class="reasoning-block">' + escapeHtml(paper.abstract) + '</div></details>';
+        }
         html += '</div>';
         html += '<div class="stance-section stance-section--process">';
         html += '<span class="stance-label">Wie gefunden</span>';
-        html += '<p>Deep Research mit 4 Anbietern (Perplexity, Elicit, Semantic Scholar, Consensus) + manuelle Ergaenzung.</p>';
+        html += '<p>Deep Research mit 4 LLMs parallel (Perplexity, Claude, ChatGPT, Gemini). ' +
+                'Die Papers wurden aus den Ergebnissen aller vier Anbieter zusammengefuehrt und in Zotero konsolidiert. ' +
+                'Zusaetzlich manuelle Ergaenzung durch Snowball-Sampling.</p>';
+        html += '</div>';
+        html += '<div class="stance-section stance-section--limits">';
+        html += '<span class="stance-label">Was wir nicht wissen</span>';
+        html += '<p>Der genaue Akquise-Weg (welcher Deep-Research-Provider dieses Paper identifiziert hat) ist nicht dokumentiert ' +
+                '-- eine Luecke in der Prozessdokumentation. Wir wissen nicht, ob alle vier Anbieter dieses Paper gefunden haben oder nur einer.</p>';
         html += '</div>';
 
     } else if (stageKey === 'conversion') {
+        var conv = paper.stages.conversion;
         html += '<h3>Konversion (PDF &rarr; Markdown)</h3>';
         html += '<div class="stance-section stance-section--result">';
         html += '<span class="stance-label">Ergebnis</span>';
         html += '<p><span class="badge badge--deterministic">Deterministisch</span> Docling (IBM)</p>';
-        html += '<p>PDF akquiriert: Ja &middot; Markdown konvertiert: Ja</p>';
+        html += '<p>PDF akquiriert: ' + (conv.pdf_acquired ? '<strong>Ja</strong>' : '<strong class="text-danger">Nein</strong>') +
+                ' &middot; Markdown konvertiert: ' + (conv.markdown_converted ? '<strong>Ja</strong>' : '<strong class="text-danger">Nein</strong>') + '</p>';
+        if (!conv.pdf_acquired) {
+            html += '<p class="limitation-note">Ohne PDF kann keine Wissensextraktion stattfinden. Haeufigste Ursache: Paywall oder nicht frei zugaenglich.</p>';
+        }
+        html += '</div>';
+        html += '<div class="stance-section stance-section--process">';
+        html += '<span class="stance-label">Wie konvertiert</span>';
+        html += '<p>PDF-Akquise durch 4 Fallback-Strategien (DOI-Link, Unpaywall, Google Scholar, manuell). ' +
+                'Konversion durch Docling (IBM): deterministisch, reproduzierbar, kein LLM involviert.</p>';
         html += '</div>';
         html += '<div class="stance-section stance-section--limits">';
-        html += '<span class="stance-label">Verluste</span>';
-        html += '<p>Tabellen und Abbildungen gehen verloren. Layout-komplexe Papers produzieren Artefakte.</p>';
+        html += '<span class="stance-label">Was verloren geht</span>';
+        html += '<p>Tabellen werden zu Fliesstext linearisiert, Abbildungen gehen komplett verloren, ' +
+                'Fussnoten verlieren ihren Kontext. Layout-komplexe Papers (Mehrspaltensatz, eingebettete Formeln) produzieren Artefakte. ' +
+                'Ein Konversions-Qualitaetsscore fuer dieses spezifische Paper ist nicht verfuegbar.</p>';
         html += '</div>';
 
     } else if (stageKey === 'ske') {
         var ske = paper.stages.ske;
         html += '<h3>Wissensextraktion (SKE)</h3>';
 
-        html += '<div class="stance-section stance-section--result">';
-        html += '<span class="stance-label">Ergebnis</span>';
-        html += '<h4>Extrahierte Kategorien</h4>';
-        var cats = Object.entries(ske.stage1_categories || {}).filter(function(e) { return e[1]; }).map(function(e) { return e[0]; });
-        html += '<div class="category-chips">' + cats.map(function(c) { return '<span class="chip">' + c + '</span>'; }).join('') + '</div>';
-        if (ske.stage1_key_finding) {
-            html += '<h4>Kernbefund</h4><div class="reasoning-block">' + escapeHtml(ske.stage1_key_finding) + '</div>';
-        }
-        html += '</div>';
+        // Handle thin papers (no knowledge extraction)
+        if (!ske) {
+            html += '<div class="stance-section stance-section--limits">';
+            html += '<span class="stance-label">Nicht verfuegbar</span>';
+            html += '<p>Fuer dieses Paper liegt kein Wissensdokument vor. ';
+            if (!paper.stages.conversion.pdf_acquired) {
+                html += 'Das PDF konnte nicht beschafft werden (haeufigste Ursache: Paywall oder zugangsbeschraenkte Literatur).';
+            } else {
+                html += 'Die Markdown-Konversion ist fehlgeschlagen.';
+            }
+            html += '</p><p>Das LLM-Assessment (wenn vorhanden) basiert auf Titel und Metadaten, nicht auf dem Volltext.</p>';
+            html += '</div>';
+        } else {
+            // Key finding first -- most important paper-specific content
+            if (ske.stage1_key_finding) {
+                html += '<div class="stance-section stance-section--result">';
+                html += '<span class="stance-label">Kernbefund (LLM-extrahiert)</span>';
+                html += '<div class="reasoning-block">' + escapeHtml(ske.stage1_key_finding) + '</div>';
+                html += '</div>';
+            }
 
-        html += '<div class="stance-section stance-section--process">';
-        html += '<span class="stance-label">Wie extrahiert</span>';
-        html += '<p>3-Stufen-Pipeline: JSON-Extraktion (LLM) &rarr; Markdown-Formatierung (deterministisch) &rarr; Verifikation (LLM)</p>';
-        html += '</div>';
+            // Categories as decision matrix
+            html += '<div class="stance-section stance-section--result">';
+            html += '<span class="stance-label">Kategorie-Entscheidungen</span>';
+            var allCatKeys = Object.keys(ske.stage1_categories || {});
+            var yesCats = allCatKeys.filter(function(k) { return ske.stage1_categories[k]; });
+            var noCats = allCatKeys.filter(function(k) { return !ske.stage1_categories[k]; });
+            html += '<p>Das LLM hat <strong>' + yesCats.length + ' von ' + allCatKeys.length + ' Kategorien</strong> als zutreffend klassifiziert.</p>';
+            html += '<div class="category-chips">' + yesCats.map(function(c) { return '<span class="chip chip--yes">' + c + '</span>'; }).join('') + '</div>';
+            if (noCats.length > 0) {
+                html += '<p style="margin-top:0.5rem;color:#6b7280">Nicht zutreffend: ' + noCats.map(function(c) { return '<span class="chip chip--no">' + c + '</span>'; }).join(' ') + '</p>';
+            }
+            html += '<p class="ske-args">' + ske.stage1_arguments_count + ' Hauptargumente extrahiert.</p>';
+            html += '</div>';
 
-        html += '<div class="stance-section stance-section--limits">';
-        html += '<span class="stance-label">Qualitaetsgrenzen</span>';
-        html += '<table class="mini-table">';
-        html += '<tr><td>Vollstaendigkeit</td><td>' + (ske.stage3_completeness || '?') + '/100</td></tr>';
-        html += '<tr><td>Korrektheit</td><td>' + (ske.stage3_correctness || '?') + '/100</td></tr>';
-        html += '<tr><td>Gesamt</td><td><strong>' + (ske.stage3_overall || '?') + '/100</strong></td></tr>';
-        html += '</table>';
-        if (ske.stage3_overall && ske.stage3_overall < 80) {
-            html += '<p class="limitation-note">Score unter 80: moegliche Qualitaetsprobleme bei der Extraktion.</p>';
+            // Knowledge document viewer (expandable sections)
+            if (paper.knowledge_sections) {
+                html += '<div class="stance-section stance-section--result">';
+                html += '<span class="stance-label">Wissensdokument</span>';
+                var ks = paper.knowledge_sections;
+                if (ks.forschungsfrage) {
+                    html += '<details class="kd-section"><summary><strong>Forschungsfrage</strong></summary>';
+                    html += '<div class="reasoning-block">' + escapeHtml(ks.forschungsfrage) + '</div></details>';
+                }
+                if (ks.methodik) {
+                    html += '<details class="kd-section"><summary><strong>Methodik</strong></summary>';
+                    html += '<div class="reasoning-block">' + escapeHtml(ks.methodik) + '</div></details>';
+                }
+                if (ks.hauptargumente) {
+                    html += '<details class="kd-section"><summary><strong>Hauptargumente</strong></summary>';
+                    html += '<div class="reasoning-block">' + escapeHtml(ks.hauptargumente) + '</div></details>';
+                }
+                // Link to full document on GitHub
+                if (paper.stem && paper.stem.indexOf('_thin_') !== 0) {
+                    html += '<a href="https://github.com/chpollin/FemPrompt_SozArb/blob/main/pipeline/knowledge/distilled/' +
+                            encodeURIComponent(paper.stem) + '.md" target="_blank" rel="noopener" class="artifact-link">' +
+                            '<i class="fas fa-file-alt"></i> Vollstaendiges Wissensdokument auf GitHub</a>';
+                }
+                html += '</div>';
+            }
+
+            html += '<div class="stance-section stance-section--process">';
+            html += '<span class="stance-label">Wie extrahiert</span>';
+            html += '<p>3-stufige LLM-Pipeline: (1) JSON-Extraktion durch Claude Haiku 4.5 -- das LLM sieht nur den Markdown-Text, nicht das Original-PDF. ' +
+                    'Es klassifiziert 10 binaere Kategorien und extrahiert Kernbefund und Argumente. ' +
+                    '(2) Deterministisches Markdown-Formatting. ' +
+                    '(3) LLM-Verifikation: ein zweiter LLM-Call prueft Vollstaendigkeit und Korrektheit.</p>';
+            html += '</div>';
+
+            html += '<div class="stance-section stance-section--limits">';
+            html += '<span class="stance-label">Qualitaetsgrenzen</span>';
+            if (ske.stage3_overall) {
+                html += '<table class="mini-table">';
+                html += '<tr><td>Vollstaendigkeit</td><td>' + (ske.stage3_completeness || '?') + '/100</td></tr>';
+                html += '<tr><td>Korrektheit</td><td>' + (ske.stage3_correctness || '?') + '/100</td></tr>';
+                html += '<tr><td>Gesamt</td><td><strong>' + ske.stage3_overall + '/100</strong></td></tr>';
+                html += '</table>';
+                if (ske.stage3_overall < 80) {
+                    html += '<p class="limitation-note">Score unter 80: Die LLM-Verifikation hat moegliche Qualitaetsprobleme identifiziert. ' +
+                            'Haeufige Ursachen: Tabellen/Abbildungen im Original, die in der Markdown-Konversion verloren gingen, ' +
+                            'oder fachspezifische Terminologie, die das LLM nicht korrekt einordnen konnte.</p>';
+                }
+            } else {
+                html += '<p>Nicht verifiziert -- dieses Paper hat die Verifikationsstufe nicht durchlaufen ' +
+                        '(kein PDF oder Markdown-Konversion fehlgeschlagen). Die Kategorie-Entscheidungen oben basieren auf der ' +
+                        'unverifizierten Erstextraktion.</p>';
+            }
+            html += '<p>Grundsaetzliche Grenze: Das LLM hat keinen Zugang zum Original-PDF. ' +
+                    'Was die Markdown-Konversion nicht uebertraegt (Tabellen, Abbildungen, Seitenlayout), kann das LLM nicht sehen und nicht extrahieren.</p>';
+            html += '</div>';
         }
-        html += '</div>';
 
     } else if (stageKey === 'assessment') {
         var a = paper.stages.assessment;
         html += '<h3>Assessment</h3>';
 
+        // Handle papers without any assessment
+        if (!a || (!a.llm && !a.human)) {
+            html += '<div class="stance-section stance-section--limits">';
+            html += '<span class="stance-label">Nicht verfuegbar</span>';
+            html += '<p>Fuer dieses Paper liegt kein Assessment vor.</p>';
+            html += '</div>';
+        } else {
+
         // Ergebnis
         html += '<div class="stance-section stance-section--result">';
         html += '<span class="stance-label">Ergebnis</span>';
         html += '<div class="decision-row">';
+        if (a.llm) {
         html += '<span class="badge badge--' + a.llm.decision.toLowerCase() + '">LLM: ' + a.llm.decision + '</span>';
         if (a.human) {
             html += ' <span class="badge badge--' + a.human.decision.toLowerCase() + '">Human: ' + a.human.decision + '</span>';
         }
-        if (a.llm.confidence) {
+        if (a.llm && a.llm.confidence) {
             html += ' <span style="color:#9ca3af;font-size:0.85rem">(Confidence: ' + a.llm.confidence + ')</span>';
         }
+        }
         html += '</div>';
+        if (a.llm) {
         html += '<p><strong>LLM-Kategorien:</strong> ' + (a.llm.categories.join(', ') || 'keine') + '</p>';
+        }
         if (a.human) {
             html += '<p><strong>Human-Kategorien:</strong> ' + (a.human.categories.join(', ') || 'keine') + '</p>';
         }
         html += '</div>';
 
-        // Prozess
-        if (a.llm.reasoning) {
+        // Prozess -- reasoning prominent
+        if (a.llm && a.llm.reasoning) {
             html += '<div class="stance-section stance-section--process">';
-            html += '<span class="stance-label">Wie entschieden</span>';
+            html += '<span class="stance-label">So hat das LLM entschieden</span>';
+            html += '<p class="process-context">Das LLM bewertet dasselbe Wissensdokument (nicht das Original-Paper) nach 10 identischen Kategorien. ' +
+                    'Jede Kategorie mit Ja fuehrt zur Include-Entscheidung.</p>';
             html += '<div class="reasoning-block">' + escapeHtml(a.llm.reasoning) + '</div>';
             html += '</div>';
         }
@@ -528,7 +663,7 @@ function renderJourneyStageDetail(paper, stageKey) {
         // Grenzen (only if disagree)
         if (a.agreement === 'disagree') {
             html += '<div class="stance-section stance-section--limits">';
-            html += '<span class="stance-label">Wo es divergiert</span>';
+            html += '<span class="stance-label">Wo Mensch und Maschine divergieren</span>';
             if (a.divergence_pattern) {
                 html += '<span class="pattern-badge pattern-badge--' + patternClass(a.divergence_pattern) + '">' + escapeHtml(a.divergence_pattern) + '</span> ';
             }
@@ -541,39 +676,62 @@ function renderJourneyStageDetail(paper, stageKey) {
         } else if (a.agreement === 'agree') {
             html += '<div class="stance-section stance-section--result" style="border-left-color:#10b981">';
             html += '<span class="stance-label" style="color:#10b981">Uebereinstimmung</span>';
-            html += '<p><span class="badge badge--agree">Agreement</span> Mensch und Maschine kommen zum gleichen Ergebnis.</p>';
+            html += '<p><span class="badge badge--agree">Agreement</span> Mensch und Maschine kommen zum gleichen Ergebnis. ' +
+                    'Das bedeutet nicht, dass die Entscheidung "korrekt" ist -- es bedeutet, dass beide Bewertungswege zum selben Schluss kommen.</p>';
             html += '</div>';
         } else {
             html += '<div class="stance-section stance-section--limits">';
             html += '<span class="stance-label">Einschraenkung</span>';
-            html += '<p>Kein Human-Assessment vorhanden. Nur LLM-Bewertung verfuegbar.</p>';
+            html += '<p>Kein Human-Assessment vorhanden. Dieses Paper wurde nur vom LLM bewertet -- ein Vergleich ist nicht moeglich. ' +
+                    'Human Assessment deckt 210 von 326 Papers ab (64%).</p>';
             html += '</div>';
         }
 
+        } // end of: else (has assessment)
+
     } else if (stageKey === 'concepts') {
         html += '<h3>Konzepte</h3>';
+
+        // Knowledge summary first -- context before list
+        if (paper.knowledge_summary) {
+            html += '<div class="stance-section stance-section--result">';
+            html += '<span class="stance-label">Worum geht es in diesem Paper?</span>';
+            html += '<div class="reasoning-block">' + escapeHtml(paper.knowledge_summary) + '</div>';
+            html += '</div>';
+        }
+
         html += '<div class="stance-section stance-section--result">';
-        html += '<span class="stance-label">Ergebnis</span>';
+        html += '<span class="stance-label">Extrahierte Konzepte</span>';
         if (paper.concepts && paper.concepts.length) {
-            html += '<ul class="concept-list">';
+            html += '<p>' + paper.concepts.length + ' Konzepte wurden aus diesem Paper extrahiert:</p>';
+            html += '<div class="category-chips">';
             paper.concepts.forEach(function(c) {
-                html += '<li><a href="#" class="concept-link" data-concept="' + escapeHtml(c) + '">' + escapeHtml(c) + '</a></li>';
+                html += '<a href="#" class="chip concept-link" data-concept="' + escapeHtml(c) + '">' + escapeHtml(c) + '</a>';
             });
-            html += '</ul>';
+            html += '</div>';
         } else {
             html += '<p>Keine Konzepte extrahiert.</p>';
         }
         html += '</div>';
 
-        if (paper.knowledge_summary) {
-            html += '<div class="stance-section stance-section--process">';
-            html += '<span class="stance-label">Kernbefund</span>';
-            html += '<div class="reasoning-block">' + escapeHtml(paper.knowledge_summary) + '</div>';
-            html += '</div>';
-        }
+        html += '<div class="stance-section stance-section--process">';
+        html += '<span class="stance-label">Wie Konzepte entstehen</span>';
+        html += '<p>Konzepte werden durch LLM-basierte Extraktion (Claude Haiku 4.5) aus dem Wissensdokument gewonnen ' +
+                'und anschliessend ueber alle 249 Papers konsolidiert. Varianten wie "AI Literacy", "KI-Kompetenz" und ' +
+                '"Artificial Intelligence Literacy" werden zu einem Konzept zusammengefuehrt. ' +
+                'Insgesamt ergeben sich 136 konsolidierte Konzepte aus dem Korpus.</p>';
+        html += '</div>';
+
+        html += '<div class="stance-section stance-section--limits">';
+        html += '<span class="stance-label">Grenzen der Konzept-Extraktion</span>';
+        html += '<p>Das LLM extrahiert Konzepte aus dem Wissensdokument, nicht aus dem Original-Paper. ' +
+                'Konzepte, die nur in verlorenen Tabellen oder Abbildungen vorkommen, werden nicht erfasst. ' +
+                'Die Konsolidierung (Zusammenfuehrung von Varianten) ist LLM-basiert und kann Nuancen verlieren.</p>';
+        html += '</div>';
     }
 
     detail.innerHTML = html;
+    scrollToElement(detail);
 
     // Event delegation for concept links
     detail.querySelectorAll('.concept-link').forEach(function(link) {
@@ -848,6 +1006,7 @@ function renderConceptDetail(conceptId) {
 
     panel.innerHTML = html;
     panel.style.display = '';
+    scrollToElement(panel);
 
     panel.querySelectorAll('.concept-link').forEach(function(link) {
         link.addEventListener('click', function(e) {
@@ -893,31 +1052,33 @@ function renderDivergenceSummary() {
         '<div class="summary-card"><div class="summary-value">' + (patterns['Keyword-Inklusion'] || 0) + '</div><div class="summary-label">Keyword-Inklusion</div></div>';
 
     // Exemplarische Faelle
-    var exemplary = [
-        appData.divergences.find(function(d) { return d.pattern === 'Semantische Expansion' && d.severity >= 3; }),
-        appData.divergences.find(function(d) { return d.pattern === 'Keyword-Inklusion'; }),
-        appData.divergences.find(function(d) { return d.pattern === 'Implizite Feldzugehoerigkeit'; })
-    ].filter(Boolean);
+    var exContainer = document.getElementById('exemplary-cases');
+    if (exContainer && !exContainer.dataset.rendered) {
+        exContainer.dataset.rendered = 'true';
+        var exemplary = [
+            appData.divergences.find(function(d) { return d.pattern === 'Semantische Expansion' && d.severity >= 3; }),
+            appData.divergences.find(function(d) { return d.pattern === 'Keyword-Inklusion'; }),
+            appData.divergences.find(function(d) { return d.pattern === 'Implizite Feldzugehoerigkeit'; })
+        ].filter(Boolean);
 
-    if (exemplary.length > 0) {
-        var exDiv = document.createElement('div');
-        exDiv.className = 'exemplary-cases';
-        exDiv.innerHTML = '<h3>Exemplarische Faelle</h3><p class="exemplary-intro">Drei Muster epistemischer Divergenz:</p>' +
-            exemplary.map(function(d) {
-                return '<div class="exemplary-card" data-paper-id="' + escapeHtml(d.paper_id) + '">' +
-                    '<span class="pattern-badge pattern-badge--' + patternClass(d.pattern) + '">' + escapeHtml(d.pattern) + '</span> ' +
-                    '<strong>' + escapeHtml(truncate(d.title, 60)) + '</strong>' +
-                    '<p>' + escapeHtml(truncate(d.justification || '', 200)) + '</p>' +
-                '</div>';
-            }).join('');
-        div.parentNode.insertBefore(exDiv, div.nextSibling);
+        if (exemplary.length > 0) {
+            exContainer.className = 'exemplary-cases';
+            exContainer.innerHTML = '<h3>Exemplarische Faelle</h3><p class="exemplary-intro">Drei Muster epistemischer Divergenz:</p>' +
+                exemplary.map(function(d) {
+                    return '<div class="exemplary-card" data-paper-id="' + escapeHtml(d.paper_id) + '">' +
+                        '<span class="pattern-badge pattern-badge--' + patternClass(d.pattern) + '">' + escapeHtml(d.pattern) + '</span> ' +
+                        '<strong>' + escapeHtml(truncate(d.title, 60)) + '</strong>' +
+                        '<p>' + escapeHtml(truncate(d.justification || '', 200)) + '</p>' +
+                    '</div>';
+                }).join('');
 
-        exDiv.querySelectorAll('.exemplary-card').forEach(function(card) {
-            card.addEventListener('click', function() {
-                var d = appData.divergences.find(function(x) { return x.paper_id === card.dataset.paperId; });
-                if (d) renderDivergenceDetail(d);
+            exContainer.querySelectorAll('.exemplary-card').forEach(function(card) {
+                card.addEventListener('click', function() {
+                    var d = appData.divergences.find(function(x) { return x.paper_id === card.dataset.paperId; });
+                    if (d) renderDivergenceDetail(d);
+                });
             });
-        });
+        }
     }
 }
 
@@ -1009,11 +1170,11 @@ function renderDivergenceDetail(d) {
 
     // Kategorie-Vergleich
     html += '<h4>Kategorie-Vergleich</h4>';
-    html += '<table class="comparison-table"><tr><th>Kategorie</th><th>Human</th><th>LLM</th><th>Divergent</th></tr>';
+    html += '<table class="comparison-table"><tr><th>Kategorie</th><th>Human</th><th>LLM</th></tr>';
     Object.keys(d.category_comparison || {}).forEach(function(cat) {
         var vals = d.category_comparison[cat];
         var cls = vals.divergent ? ' class="divergent"' : '';
-        html += '<tr' + cls + '><td>' + cat + '</td><td>' + vals.human + '</td><td>' + vals.llm + '</td><td>' + (vals.divergent ? 'X' : '') + '</td></tr>';
+        html += '<tr' + cls + '><td>' + cat + '</td><td>' + vals.human + '</td><td>' + vals.llm + '</td></tr>';
     });
     html += '</table>';
 
@@ -1051,6 +1212,7 @@ function renderDivergenceDetail(d) {
 
     panel.innerHTML = html;
     panel.style.display = '';
+    scrollToElement(panel);
 
     // Journey link handler
     var journeyBtn = panel.querySelector('.journey-link-btn');
@@ -1064,6 +1226,10 @@ function renderDivergenceDetail(d) {
 // ==========================================================================
 // Helpers
 // ==========================================================================
+function scrollToElement(el) {
+    setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 50);
+}
+
 function escapeHtml(text) {
     if (!text) return '';
     var div = document.createElement('div');

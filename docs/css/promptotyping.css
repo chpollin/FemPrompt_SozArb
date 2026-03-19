@@ -1106,6 +1106,75 @@
 }
 
 /* ============================
+   ARTIFACT LINKS + KD VIEWER
+   ============================ */
+.artifact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.artifact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.7rem;
+    border: 1px solid var(--primary-light);
+    border-radius: var(--radius-sm);
+    color: var(--primary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: var(--transition-fast);
+}
+
+.artifact-link:hover {
+    background: rgba(30, 64, 175, 0.08);
+    border-color: var(--primary);
+}
+
+.abstract-toggle {
+    margin-top: 0.5rem;
+    font-size: var(--text-sm);
+}
+
+.abstract-toggle summary {
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: var(--text-sm);
+}
+
+.abstract-toggle summary:hover { text-decoration: underline; }
+
+/* KD section viewer */
+.kd-section {
+    margin: 0.4rem 0;
+}
+
+.kd-section summary {
+    cursor: pointer;
+    color: var(--gray-700);
+    font-size: var(--text-sm);
+    padding: 0.3rem 0;
+}
+
+.kd-section summary:hover { color: var(--primary); }
+
+.kd-section[open] summary { color: var(--primary); }
+
+/* Unavailable pipeline stages */
+.journey-stage--unavailable {
+    opacity: 0.5;
+    border-style: dashed;
+    border-top: 3px dashed var(--gray-300);
+}
+
+.journey-stage--unavailable .stage-stance-indicator {
+    background: var(--gray-300);
+}
+
+/* ============================
    CROSS-VIEW NAVIGATION
    ============================ */
 .journey-link-btn {
@@ -1178,12 +1247,5 @@
     .divergence-summary { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
     .exemplary-cases { padding: 0.75rem; }
 
-    /* Concept mobile fallback */
-    .concept-list-view { display: block; }
-    .concept-list-item {
-        padding: var(--space-sm);
-        border-bottom: 1px solid var(--gray-100);
-        cursor: pointer;
-    }
-    .concept-list-item:hover { background: var(--gray-50); }
+    /* Concept graph stays visible on mobile (350px height is usable) */
 }

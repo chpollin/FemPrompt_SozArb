@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-Generate promptotyping_v2.json for the Promptotyping Web Interface v2.
+Generate promptotyping_v2.json for the Promptotyping Web Interface v2/v3.
 
 Reads from vault cache + all source data. No LLM calls -- pure data transformation.
 
 Output structure:
-  - papers: 249 paper journeys (transformation through 5 pipeline stages)
+  - papers: 326 paper journeys (249 full + 77 thin without knowledge docs)
   - concepts: graph data (nodes + edges)
   - divergences: 111 classified disagreement cases
   - pipeline: stage definitions + Sankey flow data
   - categories: 10 category definitions
-  - meta: confusion matrix, kappa, rates, totals
+  - meta: confusion matrix, kappa, rates, totals, category_rates, category_definitions
 
 Outputs: docs/data/promptotyping_v2.json
 """
@@ -33,6 +33,15 @@ ASSESSMENT_CATEGORIES = [
 
 TECHNIK_CATEGORIES = {"AI_Literacies", "Generative_KI", "Prompting", "KI_Sonstige"}
 SOZIAL_CATEGORIES = {"Soziale_Arbeit", "Bias_Ungleichheit", "Gender", "Diversitaet", "Feministisch", "Fairness"}
+
+# Deterministic journey picks (3 featured + 2 agree papers, hand-picked)
+JOURNEY_PICKS = [
+    "Ahmed_2024_Feminist_perspectives_on_AI_Ethical",
+    "Shafie_2025_More_or_less_wrong_A_benchmark_for_directional",
+    "Kaneko_2024_Debiasing_prompts_for_gender_bias_in_large",
+    "Ahn_2025_Artificial_Intelligence_(AI)_literacy_for_social",
+    "Alam_2025_Social_work_in_the_age_of_artificial_intelligence",
+]
 
 # Featured papers for the landing page (hand-picked to illustrate three epistemic stances)
 FEATURED_PAPERS = {
@@ -399,6 +408,31 @@ def assign_concept_clusters(concept_graph: dict, papers: list) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Knowledge doc section parser
+# ---------------------------------------------------------------------------
+
+def parse_knowledge_sections(md_content: str) -> dict:
+    """Extract key sections from a knowledge document markdown file."""
+    sections = {}
+    section_patterns = {
+        "kernbefund": r'## Kernbefund\s*\n\n(.*?)(?=\n\n##|\Z)',
+        "forschungsfrage": r'## Forschungsfrage\s*\n\n(.*?)(?=\n\n##|\Z)',
+        "methodik": r'## Methodik\s*\n\n(.*?)(?=\n\n##|\Z)',
+        "hauptargumente": r'## Hauptargumente\s*\n\n(.*?)(?=\n\n##|\Z)',
+    }
+    for key, pattern in section_patterns.items():
+        match = re.search(pattern, md_content, re.DOTALL)
+        if match:
+            text = match.group(1).strip()
+            # Truncate to reasonable length
+            if key == "hauptargumente":
+                sections[key] = text[:1500]  # arguments can be longer
+            else:
+                sections[key] = text[:500]
+    return sections
+
+
+# ---------------------------------------------------------------------------
 # Paper journey builder
 # ---------------------------------------------------------------------------
 
@@ -514,12 +548,15 @@ def build_paper_journeys(
                 canonical = CONCEPT_SYNONYMS.get(lower, name)
                 concept_names.append(canonical)
 
-        # Knowledge doc summary (Kernbefund)
+        # Knowledge doc sections
         kd_content = stem_path.read_text(encoding="utf-8")
-        kernbefund = ""
-        kb_match = re.search(r'## Kernbefund\s*\n\n(.*?)(?=\n\n##|\Z)', kd_content, re.DOTALL)
-        if kb_match:
-            kernbefund = kb_match.group(1).strip()[:400]
+        kd_sections = parse_knowledge_sections(kd_content)
+        kernbefund = kd_sections.get("kernbefund", "")[:400]
+
+        # DOI, URL, Abstract from Zotero
+        doi = (zotero_item.get("DOI", "") or "").strip()
+        url = (zotero_item.get("url", "") or "").strip()
+        abstract = (zotero_item.get("abstractNote", "") or "").strip()[:500]
 
         paper = {
             "id": zotero_key or stem,
@@ -527,6 +564,9 @@ def build_paper_journeys(
             "title": title,
             "author_year": author_year,
             "year": int(year) if year.isdigit() else None,
+            "doi": doi,
+            "url": url,
+            "abstract": abstract,
             "stages": {
                 "identification": {
                     "in_zotero": bool(zotero_key),
@@ -547,6 +587,7 @@ def build_paper_journeys(
             },
             "concepts": list(set(concept_names)),
             "knowledge_summary": kernbefund,
+            "knowledge_sections": kd_sections if kd_sections else None,
         }
 
         # Featured paper annotation
@@ -555,6 +596,97 @@ def build_paper_journeys(
 
         papers.append(paper)
 
+    # -----------------------------------------------------------------------
+    # Add "thin" papers (no knowledge doc, but in Zotero + may have assessment)
+    # -----------------------------------------------------------------------
+    kd_zotero_keys = {p["id"] for p in papers if p["id"]}
+    # Also exclude by title (for 12 unmatched KDs that have id==stem, not zotero key)
+    kd_titles = {p["title"].lower().strip() for p in papers if p.get("title")}
+    thin_count = 0
+    for zkey, zitem in sorted(zotero_by_key.items()):
+        if zkey in kd_zotero_keys:
+            continue  # already have a full paper entry (matched by key)
+        ztitle = (zitem.get("title", "") or "").lower().strip()
+        if ztitle and ztitle in kd_titles:
+            continue  # already have a full paper entry (matched by title)
+
+        creators = zitem.get("creators", [])
+        first_author = creators[0].get("lastName", "") if creators else ""
+        year_str = (zitem.get("date", "") or "").split("-")[0] or ""
+        author_year_thin = f"{first_author} ({year_str})" if first_author and year_str else zkey
+        title_thin = zitem.get("title", zkey) or zkey
+
+        llm_data = llm_assessments.get(zkey, {})
+        human_data = human_assessments.get(zkey, {})
+
+        # Build assessment (same logic as full papers)
+        assessment = {}
+        if llm_data:
+            assessment["llm"] = {
+                "decision": llm_data["decision"],
+                "confidence": llm_data["confidence"],
+                "categories": [c for c, v in llm_data["categories"].items() if v],
+                "reasoning": llm_data.get("reasoning", "")[:300],
+            }
+        if human_data:
+            assessment["human"] = {
+                "decision": human_data["decision"],
+                "categories": [c for c, v in human_data["categories"].items() if v],
+            }
+        if llm_data and human_data:
+            assessment["agreement"] = "agree" if llm_data["decision"] == human_data["decision"] else "disagree"
+        elif llm_data:
+            assessment["agreement"] = "llm_only"
+
+        # Check if this paper has a divergence
+        if assessment.get("agreement") == "disagree":
+            title_lower = title_thin.lower().strip()
+            disagree_row = disagree_by_title.get(title_lower, {})
+            if disagree_row:
+                pid = disagree_row.get("paper_id", "")
+                div_cls = divergence_cache.get(pid, {})
+                assessment["divergence_pattern"] = div_cls.get("pattern", "")
+                assessment["divergence_justification"] = div_cls.get("justification", "")
+                assessment["disagreement_type"] = disagree_row.get("disagreement_type", "")
+                assessment["severity"] = int(disagree_row.get("severity", 0)) if disagree_row.get("severity", "").isdigit() else 0
+
+        # DOI, URL, Abstract
+        doi = (zitem.get("DOI", "") or "").strip()
+        url = (zitem.get("url", "") or "").strip()
+        abstract = (zitem.get("abstractNote", "") or "").strip()[:500]
+
+        # Determine conversion status -- we know these papers have no knowledge doc
+        # Some may have had PDFs but failed conversion, others had no PDF at all
+        # We cannot determine this precisely, so mark as not having knowledge doc
+        has_pdf = False  # conservative: if they had a KD, they'd be in the main loop
+
+        thin_paper = {
+            "id": zkey,
+            "stem": f"_thin_{zkey}",
+            "title": title_thin,
+            "author_year": author_year_thin,
+            "year": int(year_str) if year_str.isdigit() else None,
+            "doi": doi,
+            "url": url,
+            "abstract": abstract,
+            "stages": {
+                "identification": {"in_zotero": True},
+                "conversion": {
+                    "pdf_acquired": has_pdf,
+                    "markdown_converted": False,
+                },
+                "ske": None,  # No knowledge extraction possible
+                "assessment": assessment if assessment else {},
+            },
+            "concepts": [],
+            "knowledge_summary": None,
+            "knowledge_sections": None,
+        }
+
+        papers.append(thin_paper)
+        thin_count += 1
+
+    print(f"    Thin papers (no KD): {thin_count}")
     return papers
 
 
@@ -807,6 +939,31 @@ def main():
     if agreement_path.exists():
         agreement_metrics = json.loads(agreement_path.read_text(encoding="utf-8"))
 
+    # Count full vs thin papers
+    full_papers = [p for p in papers if p.get("knowledge_sections") is not None]
+    thin_papers = [p for p in papers if p.get("knowledge_sections") is None]
+    print(f"    Total papers: {len(papers)} (full: {len(full_papers)}, thin: {len(thin_papers)})")
+
+    # Build category rates from agreement metrics
+    category_rates = {}
+    for cat_name, cat_data in agreement_metrics.get("categories", {}).items():
+        category_rates[cat_name] = {
+            "human_yes_rate": round(cat_data.get("human_yes_rate", 0) * 100, 1),
+            "agent_yes_rate": round(cat_data.get("agent_yes_rate", 0) * 100, 1),
+            "kappa": round(cat_data.get("kappa", 0), 3),
+            "n": cat_data.get("n", 0),
+        }
+
+    # Build category definitions for frontend
+    category_definitions = {}
+    for cat in categories:
+        category_definitions[cat["name"]] = {
+            "definition": cat["definition"],
+            "group": cat["group"],
+            "examples_positive": cat.get("examples_positive", []),
+            "examples_negative": cat.get("examples_negative", []),
+        }
+
     # Assemble final JSON
     data = {
         "papers": papers,
@@ -818,8 +975,8 @@ def main():
         },
         "categories": categories,
         "meta": {
-            "total_papers": 326,
-            "knowledge_docs": len(papers),
+            "total_papers": 326,  # Zotero total (includes duplicates not in this export)
+            "knowledge_docs": len(full_papers),
             "human_assessed": len(human_assessments),
             "llm_assessed": len(llm_assessments),
             "disagreements": len(divergences_list),
@@ -834,6 +991,9 @@ def main():
                 "llm_overincludes": agreement_metrics.get("decision", {}).get("confusion_matrix", {}).get("Exclude_Include", 78),
                 "human_overincludes": agreement_metrics.get("decision", {}).get("confusion_matrix", {}).get("Include_Exclude", 23),
             },
+            "category_rates": category_rates,
+            "category_definitions": category_definitions,
+            "journey_picks": JOURNEY_PICKS,
         },
     }
 
@@ -846,7 +1006,10 @@ def main():
 
     size_mb = OUTPUT_PATH.stat().st_size / (1024 * 1024)
     print(f"\n  Output: {OUTPUT_PATH} ({size_mb:.1f} MB)")
-    print(f"  Papers: {len(papers)}, Concepts: {len(concept_graph['nodes'])}, Divergences: {len(divergences_list)}")
+    print(f"  Papers: {len(papers)} (full: {len(full_papers)}, thin: {len(thin_papers)})")
+    print(f"  Concepts: {len(concept_graph['nodes'])}, Divergences: {len(divergences_list)}")
+    print(f"  Category rates: {len(category_rates)} categories")
+    print(f"  Journey picks: {len(JOURNEY_PICKS)}")
     print("  Done.")
 
 

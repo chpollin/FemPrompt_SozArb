@@ -1,35 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SozArb Research Vault - AI Literacy in Social Work</title>
+    <title>Feministische AI Literacies -- Systematischer Review</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Interactive research vault with 264 papers on AI literacy in social work, featuring LLM-based PRISMA assessment and enhanced summaries. Systematic literature review covering vulnerable populations, algorithmic bias, and practical implementation.">
-    <meta name="keywords" content="AI literacy, social work, systematic review, PRISMA, vulnerable populations, algorithmic bias, feminist AI, digital equity">
-    <meta name="author" content="Christopher Pollin">
+    <meta name="description" content="Interaktive Evidenz zu 326 Publikationen: Systematischer Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit. Duale Bewertung durch Expert:innen und LLM.">
+    <meta name="keywords" content="AI literacy, social work, systematic review, feminist AI, LLM assessment, epistemische Infrastruktur">
+    <meta name="author" content="Christopher Pollin, Susanne Sackl-Sharif, Sabine Klinger, Christian Steiner">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://chpollin.github.io/FemPrompt_SozArb/">
-    <meta property="og:title" content="SozArb Research Vault - AI Literacy in Social Work">
-    <meta property="og:description" content="264 papers, 67 AI summaries, interactive network visualization. Systematic literature review on AI literacy for vulnerable populations.">
-    <meta property="og:image" content="https://chpollin.github.io/FemPrompt_SozArb/preview.png">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://chpollin.github.io/FemPrompt_SozArb/">
-    <meta name="twitter:title" content="SozArb Research Vault - AI Literacy in Social Work">
-    <meta name="twitter:description" content="Interactive systematic literature review: 264 papers, 67 AI summaries, network visualization">
-    <meta name="twitter:image" content="https://chpollin.github.io/FemPrompt_SozArb/preview.png">
+    <meta property="og:title" content="Feministische AI Literacies -- Systematischer Review">
+    <meta property="og:description" content="Interaktive Evidenz zu 326 Publikationen. Duale Bewertung durch Expert:innen und LLM mit 111 Divergenzfaellen.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e40af'/><text x='50' y='68' font-size='60' font-family='sans-serif' font-weight='bold' fill='white' text-anchor='middle'>S</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
 
-    <!-- External Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.6/dist/vis-network.min.js"></script>
+    <!-- Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
 
@@ -42,144 +33,134 @@
     <!-- Header -->
     <header>
         <div class="header-content">
-            <h1>SozArb Research Vault</h1>
-            <p class="subtitle">AI Literacy in Social Work - Systematic Literature Review</p>
-            <a href="promptotyping.html" class="header-promptotyping-link"><i class="fas fa-cogs"></i> Research-Promptotyping-Interface</a>
+            <h1>Feministische AI Literacies</h1>
+            <p class="subtitle">Systematischer Review -- Interaktive Evidenz</p>
+            <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
+            <div class="header-links">
+                <a href="https://github.com/chpollin/FemPrompt_SozArb" class="header-link" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i> Repository</a>
+                <a href="downloads/vault.zip" class="header-link"><i class="fas fa-download"></i> Vault (.zip)</a>
+            </div>
         </div>
     </header>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="stats-container" id="stats-container">
-            <div class="loading">
-                <div class="loading-spinner"></div>
-                <p>Loading statistics...</p>
-            </div>
-        </div>
+    <!-- Introduction -->
+    <div class="intro-section" id="intro-section">
+        <p class="intro-text">
+            Dieser Review umfasst <strong id="total-count-intro">326</strong> identifizierte Publikationen
+            zu feministischen AI Literacies im Feld der Sozialen Arbeit.
+            <strong id="kd-count-intro">249</strong> davon wurden durch eine LLM-Pipeline zu Wissensdokumenten verdichtet.
+            Zwei unabhaengige Bewertungspfade -- Expert:innen (<strong id="human-count-intro">210</strong> Papers)
+            und ein LLM (<strong id="llm-count-intro">326</strong> Papers) -- klassifizieren nach
+            10 identischen Kategorien. Die Ergebnisse sind hier explorierbar.
+        </p>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav-tabs">
-        <div class="nav-tabs-container">
-            <button class="nav-tab active" data-tab="papers">Papers Browser</button>
-            <button class="nav-tab" data-tab="benchmark">Benchmark</button>
-            <button class="nav-tab" data-tab="dashboard">Dashboard</button>
-            <button class="nav-tab" data-tab="graph">Network Graph</button>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
+    <!-- Main Content (vertical flow, no tabs) -->
     <main>
-        <!-- Papers Tab -->
-        <div class="tab-content active" id="papers-tab">
+        <!-- Section: Papers -->
+        <section class="content-section" id="papers-section">
             <div class="search-filters">
-                <input type="text" class="search-box" id="search-box" placeholder="Search papers by title, author, or abstract...">
+                <input type="text" class="search-box" id="search-box" placeholder="Paper suchen (Titel, Autor, Abstract)...">
 
                 <div class="filters-grid">
                     <div class="filter-group">
-                        <label class="filter-label">LLM Decision</label>
+                        <label class="filter-label">LLM-Entscheidung</label>
                         <select class="filter-select" id="filter-decision">
-                            <option value="all">All Papers</option>
-                            <option value="Include">LLM Include</option>
-                            <option value="Exclude">LLM Exclude</option>
+                            <option value="all">Alle Papers</option>
+                            <option value="Include">Include</option>
+                            <option value="Exclude">Exclude</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
                         <label class="filter-label">Human Assessment</label>
                         <select class="filter-select" id="filter-human">
-                            <option value="all">All Papers</option>
-                            <option value="has_human">Has Human Assessment</option>
-                            <option value="agreement">Agreement (LLM = Human)</option>
-                            <option value="disagreement">Disagreement (LLM ≠ Human)</option>
-                            <option value="no_human">No Human Assessment</option>
+                            <option value="all">Alle Papers</option>
+                            <option value="has_human">Mit Human Assessment</option>
+                            <option value="agreement">Uebereinstimmung</option>
+                            <option value="disagreement">Divergenz</option>
+                            <option value="no_human">Ohne Human Assessment</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
-                        <label class="filter-label">Sort By</label>
+                        <label class="filter-label">Sortierung</label>
                         <select class="filter-select" id="sort-by">
-                            <option value="year">Year (Newest First)</option>
-                            <option value="author">Author (A-Z)</option>
-                            <option value="title">Title (A-Z)</option>
+                            <option value="relevance">Include zuerst</option>
+                            <option value="year">Jahr (neueste zuerst)</option>
+                            <option value="author">Autor (A-Z)</option>
+                            <option value="title">Titel (A-Z)</option>
+                            <option value="status">Status (Divergenz zuerst)</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
-                        <label class="filter-label">Publication Year</label>
+                        <label class="filter-label">Jahr</label>
                         <select class="filter-select" id="filter-year">
-                            <option value="all">All Years</option>
+                            <option value="all">Alle Jahre</option>
                             <option value="2025">2025</option>
                             <option value="2024">2024</option>
                             <option value="2023">2023</option>
                             <option value="2022">2022</option>
-                            <option value="2021">2021 and older</option>
+                            <option value="2021">2021 und aelter</option>
                         </select>
-                    </div>
-
-                    <div class="filter-group" style="display:flex;gap:0.5rem;">
-                        <button class="export-button" onclick="exportFilteredPapers()" title="Export filtered papers as CSV">
-                            <i class="fas fa-download"></i> Export CSV
-                        </button>
-                        <button class="export-button" onclick="downloadVaultZip()" title="Download full Obsidian vault as ZIP">
-                            <i class="fas fa-box-archive"></i> Vault (.zip)
-                        </button>
                     </div>
                 </div>
 
                 <!-- Category chips -->
                 <div class="category-filter-row">
-                    <span class="filter-label">Categories (LLM):</span>
-                    <div class="category-chips" id="category-chips">
-                        <!-- Populated by JS -->
-                    </div>
+                    <div class="category-chips" id="category-chips"></div>
                 </div>
             </div>
 
             <!-- Results Counter -->
             <div class="results-counter" id="results-counter">
-                <i class="fas fa-filter"></i> Showing <strong id="results-count">0</strong> of <strong id="total-count">0</strong> papers
+                <strong id="results-count">0</strong> von <strong id="total-count">0</strong> Papers
             </div>
 
-            <div class="papers-grid" id="papers-grid">
+            <div id="papers-grid">
                 <div class="loading">
                     <div class="loading-spinner"></div>
-                    <p>Loading papers...</p>
+                    <p>Lade Papers...</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Benchmark Tab -->
-        <div class="tab-content" id="benchmark-tab">
-            <div class="benchmark-section">
-                <h2 class="benchmark-title">Zwei Perspektiven auf einen Korpus</h2>
-                <p class="benchmark-subtitle">LLM und Expert:innen vermessen verschiedene epistemische Terrains. Die Divergenz ist informationshaltig -- sie zeigt, wo maschinelle Musterkennung und disziplinares Kontextwissen strukturell auseinanderfallen.</p>
+            <div style="margin-top:1rem;display:flex;gap:0.5rem;">
+                <button class="export-button" onclick="exportFilteredPapers()" title="Gefilterte Papers als CSV exportieren">
+                    <i class="fas fa-download"></i> CSV
+                </button>
+                <button class="export-button" onclick="downloadVaultZip()" title="Obsidian Vault herunterladen">
+                    <i class="fas fa-box-archive"></i> Vault
+                </button>
             </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section: Benchmark -->
+        <section class="content-section" id="benchmark-section">
+            <h2 class="section-heading">Bewertungsvergleich</h2>
+            <p class="section-description">
+                LLM und Expert:innen bewerten denselben Korpus nach identischem Schema.
+                Die Divergenz ist informationshaltig -- sie zeigt, wo maschinelle Musterkennung
+                und disziplinaeres Kontextwissen strukturell auseinanderfallen.
+            </p>
 
             <!-- Metric tiles -->
-            <div class="benchmark-metrics-grid" id="benchmark-metrics">
-                <!-- Populated by JS -->
-            </div>
+            <div class="benchmark-metrics-grid" id="benchmark-metrics"></div>
 
-            <!-- Charts row: Radar + Overlap -->
+            <!-- Charts row -->
             <div class="benchmark-charts-row">
                 <div class="benchmark-chart-card">
                     <h3>Kategorie-Divergenz</h3>
-                    <p class="chart-subtitle">Jede Linie verbindet Human-Rate (links) mit LLM-Rate (rechts) fuer eine Kategorie. Steile Linien = grosse epistemische Divergenz. Blau = LLM sieht mehr, Orange = Human sieht mehr.</p>
+                    <p class="chart-subtitle">Jede Linie verbindet Human-Rate (links) mit LLM-Rate (rechts). Steile Linien = grosse Divergenz. Blau = LLM sieht mehr, Orange = Human sieht mehr.</p>
                     <div id="radar-chart-container" style="height:320px;position:relative;"><canvas id="radar-chart"></canvas></div>
                 </div>
                 <div class="benchmark-chart-card">
-                    <h3>Erkenntnisfluss</h3>
-                    <p class="chart-subtitle">Was sieht jede Perspektive allein, was sehen beide gemeinsam? Klick auf eine Zelle filtert den Papers-Tab.</p>
+                    <h3>Konfusionsmatrix</h3>
+                    <p class="chart-subtitle">Was sieht jede Perspektive allein, was sehen beide gemeinsam?</p>
                     <div id="confusion-matrix-container"></div>
                 </div>
-            </div>
-
-            <!-- Kappa as technical detail (collapsed) -->
-            <div class="benchmark-chart-card" style="margin-top: 1.5rem;">
-                <h3>Divergenz-Profil (Cohen's Kappa)</h3>
-                <p class="chart-subtitle">Kappa nahe 0 bedeutet: beide Perspektiven sind epistemisch unabhaengig -- nicht fehlerhaft. Negative Werte zeigen Kategorien, wo LLM und Mensch systematisch unterschiedliche Konzeptdefinitionen verwenden.</p>
-                <div id="kappa-chart-container"></div>
             </div>
 
             <!-- Disagreements table -->
@@ -188,112 +169,45 @@
                     <h3>Divergenz-Faelle</h3>
                     <div class="filter-group" style="width:auto;">
                         <select class="filter-select" id="filter-severity" style="font-size:0.8rem;">
-                            <option value="all">All Severities</option>
-                            <option value="high">High Only</option>
-                            <option value="medium">Medium Only</option>
-                            <option value="low">Low Only</option>
+                            <option value="all">Alle</option>
+                            <option value="high">Hoch</option>
+                            <option value="medium">Mittel</option>
+                            <option value="low">Niedrig</option>
                         </select>
                     </div>
                 </div>
                 <div id="disagreements-table-container"></div>
             </div>
-        </div>
-
-        <!-- Dashboard Tab -->
-        <div class="tab-content" id="dashboard-tab">
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Korpus-Abdeckung</h3>
-                    <div class="chart-container">
-                        <canvas id="coverage-chart"></canvas>
-                    </div>
-                </div>
-
-                <div class="dashboard-card">
-                    <h3>Kategorie-Divergenz</h3>
-                    <div class="chart-container">
-                        <canvas id="divergence-chart"></canvas>
-                    </div>
-                </div>
-
-                <div class="dashboard-card">
-                    <h3>Kategorie-Verteilung (LLM)</h3>
-                    <div class="chart-container">
-                        <canvas id="category-chart"></canvas>
-                    </div>
-                </div>
-
-                <div class="dashboard-card">
-                    <h3>Publikationen nach Jahr</h3>
-                    <div class="chart-container">
-                        <canvas id="year-chart"></canvas>
-                    </div>
-                </div>
-
-                <div class="dashboard-card">
-                    <h3>LLM Konfidenz-Verteilung</h3>
-                    <div class="chart-container">
-                        <canvas id="confidence-chart"></canvas>
-                    </div>
-                </div>
-
-                <div class="dashboard-card">
-                    <h3>Kategorie-Verteilung (Human)</h3>
-                    <div class="chart-container">
-                        <canvas id="human-category-chart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Graph Tab -->
-        <div class="tab-content" id="graph-tab">
-            <div class="graph-controls">
-                <div class="graph-controls-grid">
-                    <div class="filter-group">
-                        <label class="filter-label">Filter by Decision</label>
-                        <select class="filter-select" id="graph-filter-decision">
-                            <option value="all">All Papers</option>
-                            <option value="Include">Include Only</option>
-                            <option value="Exclude">Exclude Only</option>
-                            <option value="Unclear">Unclear Only</option>
-                        </select>
-                    </div>
-
-                    <div class="filter-group">
-                        <label class="filter-label">Min Relevance</label>
-                        <select class="filter-select" id="graph-filter-relevance">
-                            <option value="0">All Papers</option>
-                            <option value="5">≥ 5 (Medium+)</option>
-                            <option value="10">≥ 10 (High)</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div id="graph-container"></div>
-        </div>
+        </section>
     </main>
 
-    <!-- Paper Detail Modal -->
+    <!-- Footer -->
+    <footer style="max-width:1100px;margin:0 auto;padding:2rem;border-top:1px solid var(--gray-200);color:var(--gray-400);font-size:var(--text-sm);">
+        <p>Teil der epistemischen Infrastruktur zu: Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026).
+        Deep-Research-gestuetzte Literature-Reviews. Forum Wissenschaft 2/2026.</p>
+        <p style="margin-top:0.5rem;">
+            <a href="https://github.com/chpollin/FemPrompt_SozArb" style="color:var(--primary);">Repository</a> &middot;
+            <a href="downloads/vault.zip" style="color:var(--primary);">Obsidian Vault (.zip)</a>
+        </p>
+    </footer>
+
+    <!-- Paper Detail Panel -->
     <div class="modal" id="paper-modal">
+        <div class="modal-overlay" onclick="closePaperModal()"></div>
         <div class="modal-content">
             <div class="modal-header">
                 <div>
                     <h2 id="modal-title">Paper Title</h2>
-                    <p id="modal-author" style="color: var(--gray-600); margin-top: 0.5rem;"></p>
+                    <p id="modal-author" style="color: var(--gray-500); margin-top: 0.25rem; font-size: var(--text-md);"></p>
                 </div>
                 <button class="modal-close" onclick="closePaperModal()">&times;</button>
             </div>
-            <div class="modal-body" id="modal-body">
-                <!-- Content loaded dynamically -->
-            </div>
+            <div class="modal-body" id="modal-body"></div>
         </div>
     </div>
 
-    <!-- Main App Script -->
+    <!-- Scripts -->
     <script src="js/research-app.js"></script>
     <script src="js/features.js"></script>
-    <script src="js/advanced-features.js"></script>
 </body>
 </html>

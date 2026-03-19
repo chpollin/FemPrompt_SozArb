@@ -258,7 +258,9 @@ function renderKappaChart() {
 // ---- Quadrant filter ----
 
 function filterByQuadrant(humanDec, llmDec) {
-    switchTab('papers');
+    // Scroll to papers section (no more tabs)
+    var papersSection = document.getElementById('papers-section');
+    if (papersSection) papersSection.scrollIntoView({ behavior: 'smooth' });
     const filtered = allPapers.filter(p => {
         if (!p.benchmark.has_human || !p.human || !p.human.decision) return false;
         const hNorm = p.human.decision === 'Include' ? 'Include' : 'Exclude';
