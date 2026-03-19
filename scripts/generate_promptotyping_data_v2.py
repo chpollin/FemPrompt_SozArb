@@ -509,7 +509,6 @@ def build_paper_journeys(
         if llm_data:
             assessment["llm"] = {
                 "decision": llm_data["decision"],
-                "confidence": llm_data["confidence"],
                 "categories": [c for c, v in llm_data["categories"].items() if v],
                 "reasoning": llm_data.get("reasoning", "")[:300],
             }
@@ -624,7 +623,6 @@ def build_paper_journeys(
         if llm_data:
             assessment["llm"] = {
                 "decision": llm_data["decision"],
-                "confidence": llm_data["confidence"],
                 "categories": [c for c, v in llm_data["categories"].items() if v],
                 "reasoning": llm_data.get("reasoning", "")[:300],
             }
@@ -763,7 +761,6 @@ def build_divergences_list(repo_root: Path, divergence_cache: dict) -> list:
                 "severity": int(row.get("severity", 0)) if row.get("severity", "").isdigit() else 0,
                 "affected_categories": row.get("affected_categories", ""),
                 "n_affected": int(row.get("n_affected_categories", 0)) if row.get("n_affected_categories", "").isdigit() else 0,
-                "llm_confidence": float(row.get("agent_confidence", 0) or 0),
                 "llm_reasoning": row.get("agent_reasoning", "")[:500],
                 "pattern": cls.get("pattern", ""),
                 "justification": cls.get("justification", ""),

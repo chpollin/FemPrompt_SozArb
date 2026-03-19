@@ -493,8 +493,7 @@ function buildDetailContent(paper) {
     html += '<div class="assessment-panel">' +
         '<div class="panel-header">LLM (Claude Haiku 4.5)</div>' +
         '<div class="assessment-decision" style="color:' + llmDecColor + '">' + paper.llm.decision + '</div>' +
-        '<div class="confidence-row"><span class="confidence-label">Konfidenz: ' + Math.round(paper.llm.confidence * 100) + '%</span>' +
-        '<div class="confidence-bar"><div class="confidence-fill" style="width:' + (paper.llm.confidence * 100) + '%;background:var(--primary)"></div></div></div>' +
+        '
         catGridColored(paper.llm.all_categories);
     if (paper.llm.reasoning) {
         html += '<div class="reasoning-section"><span class="reasoning-label">Begruendung</span>' +
@@ -579,11 +578,11 @@ function escapeHtml(text) {
 function exportFilteredPapers() {
     var papers = filteredPapers.length > 0 ? filteredPapers : allPapers;
     var headers = ['ID', 'Title', 'Author_Year', 'Year', 'Item_Type', 'DOI',
-        'LLM_Decision', 'LLM_Confidence', 'LLM_Categories',
+        'LLM_Decision', 'LLM_Categories',
         'Human_Decision', 'Has_Human', 'Agreement'];
     var rows = papers.map(function(p) {
         return [p.id, p.title, p.author_year, p.year, p.item_type, p.doi,
-            p.llm.decision, p.llm.confidence, p.llm.categories.join(';'),
+            p.llm.decision, p.llm.categories.join(';'),
             p.human ? p.human.decision : '', p.benchmark.has_human,
             p.benchmark.agreement === null ? '' : p.benchmark.agreement];
     });
