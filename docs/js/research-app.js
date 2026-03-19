@@ -27,12 +27,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderIntroNumbers();
         renderCategoryChips();
         applyFilters(); // applies default sort + renders
-
-        setTimeout(function() {
-            initializeBenchmark();
-            benchmarkInitialized = true;
-        }, 200);
-
         _logInit();
     } catch (error) {
         console.error('[Evidence] init failed:', error);
@@ -76,6 +70,25 @@ function initializeUI() {
         applyFilters();
     });
 
+    // View navigation (Korpus / Bewertungsvergleich)
+    document.querySelectorAll('.view-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var viewId = tab.dataset.view;
+            document.querySelectorAll('.view-tab').forEach(function(t) {
+                t.classList.toggle('active', t.dataset.view === viewId);
+            });
+            document.querySelectorAll('.view-content').forEach(function(v) {
+                v.classList.toggle('active', v.id === 'view-' + viewId);
+                v.style.display = v.id === 'view-' + viewId ? '' : 'none';
+            });
+            // Lazy-init benchmark on first visit
+            if (viewId === 'vergleich' && !benchmarkInitialized) {
+                initializeBenchmark();
+                benchmarkInitialized = true;
+            }
+        });
+    });
+
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closePaperModal();
         if (e.key === '/' && !e.target.matches('input, textarea')) {
@@ -87,8 +100,9 @@ function initializeUI() {
 
 // Intro numbers
 function renderIntroNumbers() {
+    // Count papers where human actually made a decision (Include/Exclude)
     var withDecision = allPapers.filter(function(p) {
-        return p.benchmark.has_human && p.human && p.human.decision;
+        return p.human && p.human.decision && (p.human.decision === 'Include' || p.human.decision === 'Exclude');
     }).length;
     var el = function(id) { return document.getElementById(id); };
     if (el('total-count-intro')) el('total-count-intro').textContent = allPapers.length;
@@ -288,7 +302,7 @@ function renderPapers(papers) {
             '<th class="col-dec sortable" data-sort="llm">LLM' + sortArrow('llm') + '</th>' +
             '<th class="col-dec sortable" data-sort="human">Human' + sortArrow('human') + '</th>' +
             '<th class="col-status sortable" data-sort="status">Status' + sortArrow('status') + '</th>' +
-            '<th class="col-cats">Kategorien (LLM)</th>' +
+            '<th class="col-cats">Kategorien</th>' +
         '</tr></thead>' +
         '<tbody>' + rows + '</tbody></table>';
 
@@ -312,7 +326,7 @@ function renderPapers(papers) {
     // Event: row click
     container.querySelectorAll('tr[data-idx]').forEach(function(row) {
         row.addEventListener('click', function() {
-            showPaperDetail(papers[parseInt(row.dataset.idx)]);
+            showPaperDetail(papers[parseInt(row.dataset.idx)], papers);
         });
     });
 
@@ -390,14 +404,54 @@ function catLabels(paper) {
 // Paper Detail Panel
 // ============================================================
 
-function showPaperDetail(paper) {
+var currentDetailPaper = null;
+var currentDetailList = null;
+
+function showPaperDetail(paper, paperList) {
+    currentDetailPaper = paper;
+    if (paperList) currentDetailList = paperList;
     var modal = document.getElementById('paper-modal');
     document.getElementById('modal-title').textContent = paper.title;
     document.getElementById('modal-author').textContent =
         (paper.author_year || '') + (paper.year ? ' | ' + paper.year : '') + (paper.item_type ? ' | ' + paper.item_type : '');
-    document.getElementById('modal-body').innerHTML = buildDetailContent(paper);
+
+    var bodyHtml = buildDetailContent(paper);
+
+    // Prev/Next navigation
+    if (currentDetailList && currentDetailList.length > 1) {
+        var idx = currentDetailList.indexOf(paper);
+        bodyHtml += '<div class="detail-nav">';
+        if (idx > 0) {
+            bodyHtml += '<button class="detail-nav-btn" id="detail-prev"><i class="fas fa-arrow-left"></i> Vorheriges</button>';
+        }
+        if (idx < currentDetailList.length - 1) {
+            bodyHtml += '<button class="detail-nav-btn" id="detail-next" style="margin-left:auto;">Naechstes <i class="fas fa-arrow-right"></i></button>';
+        }
+        bodyHtml += '</div>';
+    }
+
+    document.getElementById('modal-body').innerHTML = bodyHtml;
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Scroll panel to top
+    modal.querySelector('.modal-content').scrollTop = 0;
+
+    // Nav button handlers
+    var prevBtn = document.getElementById('detail-prev');
+    var nextBtn = document.getElementById('detail-next');
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            var idx = currentDetailList.indexOf(currentDetailPaper);
+            if (idx > 0) showPaperDetail(currentDetailList[idx - 1]);
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            var idx = currentDetailList.indexOf(currentDetailPaper);
+            if (idx < currentDetailList.length - 1) showPaperDetail(currentDetailList[idx + 1]);
+        });
+    }
 }
 
 function closePaperModal() {
@@ -419,7 +473,7 @@ function buildDetailContent(paper) {
     // Links
     var links = [];
     if (paper.doi && paper.doi !== 'nan') {
-        links.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-external-link-alt"></i> DOI</a>');
+        links.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-external-link-alt"></i> DOI: ' + escapeHtml(paper.doi) + '</a>');
     }
     if (paper.url && paper.url !== 'nan' && paper.url !== '') {
         links.push('<a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-globe"></i> Quelle</a>');
@@ -435,52 +489,58 @@ function buildDetailContent(paper) {
     html += '<div class="detail-section"><h3>Bewertung</h3><div class="assessment-grid">';
 
     // LLM panel
-    var llmClass = paper.llm.decision === 'Include' ? 'decision-include' : 'decision-exclude';
+    var llmDecColor = paper.llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
     html += '<div class="assessment-panel">' +
         '<div class="panel-header">LLM (Claude Haiku 4.5)</div>' +
-        '<div class="assessment-decision ' + llmClass + '">' + paper.llm.decision + '</div>' +
+        '<div class="assessment-decision" style="color:' + llmDecColor + '">' + paper.llm.decision + '</div>' +
         '<div class="confidence-row"><span class="confidence-label">Konfidenz: ' + Math.round(paper.llm.confidence * 100) + '%</span>' +
-        '<div class="confidence-bar"><div class="confidence-fill" style="width:' + (paper.llm.confidence * 100) + '%"></div></div></div>' +
-        '<div class="category-grid-10">' + catGrid(paper.llm.all_categories) + '</div>';
+        '<div class="confidence-bar"><div class="confidence-fill" style="width:' + (paper.llm.confidence * 100) + '%;background:var(--primary)"></div></div></div>' +
+        catGridColored(paper.llm.all_categories);
     if (paper.llm.reasoning) {
-        html += '<p class="reasoning-text">' + escapeHtml(paper.llm.reasoning) + '</p>';
+        html += '<div class="reasoning-section"><span class="reasoning-label">Begruendung</span>' +
+            '<p class="reasoning-text">' + escapeHtml(paper.llm.reasoning) + '</p></div>';
     }
     html += '</div>';
 
     // Human panel
-    if (paper.benchmark.has_human && paper.human) {
-        var hClass = paper.human.decision === 'Include' ? 'decision-include' : (paper.human.decision === 'Exclude' ? 'decision-exclude' : '');
+    if (paper.benchmark.has_human && paper.human && paper.human.decision) {
+        var hDecColor = paper.human.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
         html += '<div class="assessment-panel">' +
             '<div class="panel-header">Expert:innen</div>' +
-            '<div class="assessment-decision ' + hClass + '">' + (paper.human.decision || 'Offen') + '</div>' +
-            '<div class="category-grid-10">' + catGrid(paper.human.all_categories) + '</div>' +
+            '<div class="assessment-decision" style="color:' + hDecColor + '">' + paper.human.decision + '</div>' +
+            catGridColored(paper.human.all_categories) +
         '</div>';
     } else {
         html += '<div class="assessment-panel assessment-panel--empty">' +
             '<div class="panel-header">Expert:innen</div>' +
-            '<p class="empty-note">Kein Human Assessment vorhanden.</p>' +
+            '<p class="empty-note">Nicht bewertet. Human Assessment deckt 210 von 326 Papers ab.</p>' +
         '</div>';
     }
 
     html += '</div>'; // close assessment-grid
 
-    // Divergence info (only for actual disagreements)
-    if (paper.benchmark.has_human && paper.human && paper.human.decision && paper.benchmark.agreement === false) {
-        var affectedCats = paper.benchmark.affected_categories || [];
-        html += '<div class="divergence-panel">' +
-            '<strong>Divergenz</strong>';
-        if (paper.benchmark.disagreement_type) {
-            html += ' <span class="divergence-type">' + paper.benchmark.disagreement_type.replace(/_/g, ' ') + '</span>';
+    // Status panel
+    if (paper.benchmark.has_human && paper.human && paper.human.decision) {
+        if (paper.benchmark.agreement === false) {
+            var affectedCats = paper.benchmark.affected_categories || [];
+            html += '<div class="divergence-panel">' +
+                '<strong>Divergenz</strong>';
+            if (paper.benchmark.disagreement_type) {
+                html += ' &mdash; ' + paper.benchmark.disagreement_type.replace(/_/g, ' ');
+            }
+            if (paper.benchmark.severity) {
+                html += ' <span class="severity-badge severity-' + paper.benchmark.severity + '">' + paper.benchmark.severity + '</span>';
+            }
+            if (affectedCats.length) {
+                html += '<p class="affected-cats">Betroffene Kategorien: ' + affectedCats.map(function(c) {
+                    var color = CAT_COLORS[c] || 'var(--gray-400)';
+                    return '<span style="color:' + color + ';font-weight:600;">' + c.replace(/_/g, ' ') + '</span>';
+                }).join(', ') + '</p>';
+            }
+            html += '</div>';
+        } else {
+            html += '<div class="agreement-panel"><strong>Konsens</strong> &mdash; Beide Bewertungspfade kommen zum selben Ergebnis.</div>';
         }
-        if (paper.benchmark.severity) {
-            html += ' <span class="severity-badge severity-' + paper.benchmark.severity + '">' + paper.benchmark.severity + '</span>';
-        }
-        if (affectedCats.length) {
-            html += '<p class="affected-cats">Betroffene Kategorien: ' + affectedCats.join(', ') + '</p>';
-        }
-        html += '</div>';
-    } else if (paper.benchmark.has_human && paper.human && paper.human.decision && paper.benchmark.agreement === true) {
-        html += '<div class="agreement-panel">Uebereinstimmung: Beide Bewertungspfade kommen zum selben Ergebnis.</div>';
     }
 
     html += '</div>'; // close detail-section
@@ -488,14 +548,21 @@ function buildDetailContent(paper) {
     return html;
 }
 
-function catGrid(allCategories) {
-    return CATEGORIES.map(function(cat) {
+// Category grid with spectrum colors (for detail panel)
+function catGridColored(allCategories) {
+    var html = '<div class="category-grid-10">';
+    CATEGORIES.forEach(function(cat, i) {
         var active = allCategories[cat] === 1;
-        return '<div class="cat-grid-item' + (active ? ' active' : '') + '">' +
-            '<span class="cat-dot"></span>' +
+        var color = active ? CAT_COLORS[cat] : 'var(--gray-300)';
+        var textColor = active ? 'var(--gray-800)' : 'var(--gray-400)';
+        var fontWeight = active ? '600' : '400';
+        html += '<div class="cat-grid-item" style="color:' + textColor + ';font-weight:' + fontWeight + '">' +
+            '<span class="cat-dot" style="background:' + color + '"></span>' +
             '<span>' + cat.replace(/_/g, ' ') + '</span>' +
         '</div>';
-    }).join('');
+    });
+    html += '</div>';
+    return html;
 }
 
 // ============================================================

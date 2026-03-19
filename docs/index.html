@@ -55,31 +55,39 @@
         </p>
     </div>
 
-    <!-- Main Content (vertical flow, no tabs) -->
+    <!-- Minimal Navigation -->
+    <nav class="view-nav">
+        <div class="view-nav-inner">
+            <button class="view-tab active" data-view="korpus">Korpus</button>
+            <button class="view-tab" data-view="vergleich">Bewertungsvergleich</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <!-- Section: Papers -->
-        <section class="content-section" id="papers-section">
+        <!-- View: Korpus -->
+        <section class="content-section view-content active" id="view-korpus">
             <div class="search-filters">
                 <input type="text" class="search-box" id="search-box" placeholder="Paper suchen (Titel, Autor, Abstract)...">
 
                 <div class="filters-grid">
                     <div class="filter-group">
-                        <label class="filter-label">LLM-Entscheidung</label>
+                        <label class="filter-label">LLM</label>
                         <select class="filter-select" id="filter-decision">
-                            <option value="all">Alle Papers</option>
+                            <option value="all">Alle</option>
                             <option value="Include">Include</option>
                             <option value="Exclude">Exclude</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
-                        <label class="filter-label">Human Assessment</label>
+                        <label class="filter-label">Expert:innen</label>
                         <select class="filter-select" id="filter-human">
-                            <option value="all">Alle Papers</option>
-                            <option value="has_human">Mit Human Assessment</option>
-                            <option value="agreement">Uebereinstimmung</option>
+                            <option value="all">Alle</option>
+                            <option value="has_human">Bewertet</option>
+                            <option value="agreement">Konsens</option>
                             <option value="disagreement">Divergenz</option>
-                            <option value="no_human">Ohne Human Assessment</option>
+                            <option value="no_human">Nicht bewertet</option>
                         </select>
                     </div>
 
@@ -87,22 +95,22 @@
                         <label class="filter-label">Sortierung</label>
                         <select class="filter-select" id="sort-by">
                             <option value="relevance">Include zuerst</option>
-                            <option value="year">Jahr (neueste zuerst)</option>
+                            <option value="year">Jahr (neueste)</option>
                             <option value="author">Autor (A-Z)</option>
                             <option value="title">Titel (A-Z)</option>
-                            <option value="status">Status (Divergenz zuerst)</option>
+                            <option value="status">Divergenz zuerst</option>
                         </select>
                     </div>
 
                     <div class="filter-group">
                         <label class="filter-label">Jahr</label>
                         <select class="filter-select" id="filter-year">
-                            <option value="all">Alle Jahre</option>
+                            <option value="all">Alle</option>
                             <option value="2025">2025</option>
                             <option value="2024">2024</option>
                             <option value="2023">2023</option>
                             <option value="2022">2022</option>
-                            <option value="2021">2021 und aelter</option>
+                            <option value="2021">&le; 2021</option>
                         </select>
                     </div>
                 </div>
@@ -135,10 +143,8 @@
             </div>
         </section>
 
-        <hr class="section-divider">
-
-        <!-- Section: Benchmark -->
-        <section class="content-section" id="benchmark-section">
+        <!-- View: Bewertungsvergleich -->
+        <section class="content-section view-content" id="view-vergleich" style="display:none;">
             <h2 class="section-heading">Bewertungsvergleich</h2>
             <p class="section-description">
                 LLM und Expert:innen bewerten denselben Korpus nach identischem Schema.

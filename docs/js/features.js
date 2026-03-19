@@ -258,9 +258,14 @@ function renderKappaChart() {
 // ---- Quadrant filter ----
 
 function filterByQuadrant(humanDec, llmDec) {
-    // Scroll to papers section (no more tabs)
-    var papersSection = document.getElementById('papers-section');
-    if (papersSection) papersSection.scrollIntoView({ behavior: 'smooth' });
+    // Switch to Korpus view
+    document.querySelectorAll('.view-tab').forEach(function(t) {
+        t.classList.toggle('active', t.dataset.view === 'korpus');
+    });
+    document.querySelectorAll('.view-content').forEach(function(v) {
+        v.classList.toggle('active', v.id === 'view-korpus');
+        v.style.display = v.id === 'view-korpus' ? '' : 'none';
+    });
     const filtered = allPapers.filter(p => {
         if (!p.benchmark.has_human || !p.human || !p.human.decision) return false;
         const hNorm = p.human.decision === 'Include' ? 'Include' : 'Exclude';
