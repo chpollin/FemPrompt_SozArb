@@ -100,6 +100,7 @@ window.closePaperModal = function() { closePaperModal(); };
 window.exportFilteredPapers = function() { exportFilteredPapers(); };
 window.downloadKnowledgeDoc = function(p, t) { downloadKnowledgeDoc(p, t); };
 window.downloadVaultZip = function() { downloadVaultZip(); };
+window.exportFilteredMarkdown = function() { exportFilteredMarkdown(); };
 window.showPaperDetail = function(p, l) { showPaperDetail(p, l); };
 
 // ============================================================
@@ -229,6 +230,25 @@ function loadData() {
                 });
                 console.log('[Evidence] Divergence patterns: ' + matched + '/' +
                     (ptData.divergences || []).length + ' matched');
+
+                // Enrich papers with knowledge sections
+                var kMatched = 0;
+                (ptData.papers || []).forEach(function(ptPaper) {
+                    if (!ptPaper.knowledge_sections && !ptPaper.knowledge_summary) return;
+                    var key = (ptPaper.title || '').toLowerCase().substring(0, 80).trim();
+                    var paper = titleMap[key];
+                    if (!paper && ptPaper.author_year) {
+                        paper = allPapers.find(function(p) { return p.author_year === ptPaper.author_year; });
+                    }
+                    if (paper) {
+                        paper.knowledge = {
+                            summary: ptPaper.knowledge_summary || '',
+                            sections: ptPaper.knowledge_sections || {}
+                        };
+                        kMatched++;
+                    }
+                });
+                console.log('[Evidence] Knowledge sections: ' + kMatched + ' papers enriched');
             });
         }).catch(function(e) {
             console.warn('[Evidence] Divergence patterns not available:', e.message);
@@ -591,6 +611,18 @@ function showPaperDetail(paper, paperList) {
     modal.querySelector('.modal-content').scrollTop = 0;
     highlightActiveRow(paper);
 
+    // Detail tab switching
+    document.querySelectorAll('.detail-tab').forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            var target = tab.dataset.detailTab;
+            document.querySelectorAll('.detail-tab').forEach(function(t) { t.classList.toggle('active', t === tab); });
+            document.querySelectorAll('.detail-tab-content').forEach(function(c) {
+                c.style.display = c.id === 'dtab-' + target ? '' : 'none';
+                c.classList.toggle('active', c.id === 'dtab-' + target);
+            });
+        });
+    });
+
     var prevBtn = document.getElementById('detail-prev');
     var nextBtn = document.getElementById('detail-next');
     if (prevBtn) {
@@ -839,7 +871,19 @@ function highlightActiveRow(paper) {
 }
 
 function buildDetailContent(paper) {
+    var hasKnowledge = paper.knowledge && paper.knowledge.sections &&
+        Object.keys(paper.knowledge.sections).length > 0;
+
     var html = '';
+
+    // Tabs
+    html += '<div class="detail-tabs">';
+    html += '<button class="detail-tab active" data-detail-tab="bewertung">Bewertung</button>';
+    html += '<button class="detail-tab" data-detail-tab="wissen">' + (hasKnowledge ? 'Wissensdokument' : 'Wissen') + '</button>';
+    html += '</div>';
+
+    // Tab: Bewertung
+    html += '<div class="detail-tab-content active" id="dtab-bewertung">';
 
     if (paper.abstract && paper.abstract.trim()) {
         html += '<div class="detail-section">' +
@@ -850,13 +894,13 @@ function buildDetailContent(paper) {
 
     var links = [];
     if (paper.doi && paper.doi !== 'nan') {
-        links.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-external-link-alt"></i> DOI: ' + escapeHtml(paper.doi) + '</a>');
+        links.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-external-link-alt"></i> DOI</a>');
     }
     if (paper.url && paper.url !== 'nan' && paper.url !== '') {
         links.push('<a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-globe"></i> Quelle</a>');
     }
     if (paper.knowledge_doc) {
-        links.push('<a href="#" onclick="downloadKnowledgeDoc(\'' + escapeHtml(paper.knowledge_doc) + '\', \'' + escapeHtml(paper.title).replace(/'/g, "\\'") + '\'); return false;" class="detail-link"><i class="fas fa-download"></i> Wissensdokument</a>');
+        links.push('<a href="#" onclick="downloadKnowledgeDoc(\'' + escapeHtml(paper.knowledge_doc) + '\', \'' + escapeHtml(paper.title).replace(/'/g, "\\'") + '\'); return false;" class="detail-link"><i class="fas fa-download"></i> .md</a>');
     }
     if (links.length) {
         html += '<div class="detail-links">' + links.join('') + '</div>';
@@ -915,6 +959,50 @@ function buildDetailContent(paper) {
     }
 
     html += '</div>'; // close detail-section
+    html += '</div>'; // close dtab-bewertung
+
+    // Tab: Wissensdokument
+    html += '<div class="detail-tab-content" id="dtab-wissen" style="display:none;">';
+    if (hasKnowledge) {
+        var ks = paper.knowledge.sections;
+        if (ks.kernbefund) {
+            html += '<div class="kd-section kd-kernbefund">';
+            html += '<h4>Kernbefund</h4>';
+            html += '<p>' + escapeHtml(ks.kernbefund) + '</p>';
+            html += '</div>';
+        }
+        if (ks.forschungsfrage) {
+            html += '<div class="kd-section">';
+            html += '<h4>Forschungsfrage</h4>';
+            html += '<p>' + escapeHtml(ks.forschungsfrage) + '</p>';
+            html += '</div>';
+        }
+        if (ks.methodik) {
+            html += '<div class="kd-section">';
+            html += '<h4>Methodik</h4>';
+            html += '<p>' + escapeHtml(ks.methodik) + '</p>';
+            html += '</div>';
+        }
+        if (ks.hauptargumente) {
+            html += '<div class="kd-section">';
+            html += '<h4>Hauptargumente</h4>';
+            html += '<p>' + escapeHtml(ks.hauptargumente).replace(/\n- /g, '<br>- ') + '</p>';
+            html += '</div>';
+        }
+        if (paper.knowledge_doc) {
+            html += '<div style="margin-top:1rem;">';
+            html += '<a href="#" onclick="downloadKnowledgeDoc(\'' + escapeHtml(paper.knowledge_doc) + '\', \'' + escapeHtml(paper.title).replace(/'/g, "\\'") + '\'); return false;" class="export-button"><i class="fas fa-download"></i> Vollstaendiges Wissensdokument (.md)</a>';
+            html += '</div>';
+        }
+    } else {
+        html += '<div class="kd-empty">';
+        html += '<p><i class="fas fa-file-alt" style="font-size:1.5rem;color:var(--gray-300);"></i></p>';
+        html += '<p>Kein Wissensdokument verfuegbar.</p>';
+        html += '<p style="font-size:var(--text-xs);color:var(--gray-400);">Fuer dieses Paper konnte kein PDF akquiriert werden (77 von 326 Papers betroffen).</p>';
+        html += '</div>';
+    }
+    html += '</div>'; // close dtab-wissen
+
     return html;
 }
 
@@ -979,6 +1067,79 @@ function downloadVaultZip() {
     a.href = 'downloads/vault.zip';
     a.download = 'FemPrompt_Research_Vault.zip';
     a.click();
+}
+
+function exportFilteredMarkdown() {
+    if (typeof JSZip === 'undefined') {
+        alert('JSZip wird geladen, bitte erneut versuchen.');
+        return;
+    }
+
+    var papers = filteredPapers.length ? filteredPapers : allPapers;
+    var withDocs = papers.filter(function(p) { return p.knowledge_doc; });
+
+    if (withDocs.length === 0) {
+        alert('Keine Wissensdokumente fuer die aktuelle Auswahl verfuegbar.');
+        return;
+    }
+
+    var zip = new JSZip();
+    var fetches = [];
+
+    withDocs.forEach(function(p) {
+        var promise = fetch(p.knowledge_doc)
+            .then(function(res) { return res.ok ? res.text() : null; })
+            .then(function(text) {
+                if (text) {
+                    var safeName = (p.author_year || p.id).replace(/[<>:"/\\|?*]/g, '-').substring(0, 80) + '.md';
+                    zip.file(safeName, text);
+                }
+            })
+            .catch(function() {});
+        fetches.push(promise);
+    });
+
+    Promise.all(fetches).then(function() {
+        // Generate README with system prompt
+        var readme = '# Forschungskorpus-Auswahl (' + withDocs.length + ' Wissensdokumente)\n\n';
+        readme += 'Exportiert aus: Feministische AI Literacies -- Evidence Companion\n';
+        readme += 'Datum: ' + new Date().toISOString().split('T')[0] + '\n';
+        readme += 'Quelle: https://chpollin.github.io/FemPrompt_SozArb/\n\n';
+
+        readme += '## Enthaltene Papers\n\n';
+        withDocs.forEach(function(p, i) {
+            readme += (i + 1) + '. ' + (p.author_year || '') + ': ' + p.title + '\n';
+        });
+
+        readme += '\n## Nachnutzung als LLM-Kontext\n\n';
+        readme += 'Laden Sie diesen Ordner als Kontext in ein LLM Ihrer Wahl.\n';
+        readme += 'Verwenden Sie folgenden System-Prompt:\n\n';
+        readme += '---\n\n';
+        readme += 'Du bist ein Forschungsassistent fuer einen systematischen Literature Review\n';
+        readme += 'zu feministischen AI Literacies in der Sozialen Arbeit. Dir liegen ' + withDocs.length + '\n';
+        readme += 'Wissensdokumente vor, die aus wissenschaftlichen Papers extrahiert wurden.\n';
+        readme += 'Jedes Dokument enthaelt: Kernbefund, Forschungsfrage, Methodik und\n';
+        readme += 'Hauptargumente. Beantworte Fragen auf Basis dieser Dokumente. Zitiere\n';
+        readme += 'immer die Quelle (Autor, Jahr). Wenn eine Information nicht in den\n';
+        readme += 'Dokumenten steht, sage das explizit.\n\n';
+        readme += '---\n\n';
+        readme += '### Wege zur Nachnutzung\n\n';
+        readme += '- **Claude Code:** `claude` im Exportordner starten, System-Prompt verwenden\n';
+        readme += '- **NotebookLM:** Dateien als Quellen hochladen\n';
+        readme += '- **ChatGPT/Gemini:** Dateien hochladen, System-Prompt in Custom Instructions\n';
+        readme += '- **Obsidian:** Ordner als Vault oeffnen (volles Vault: https://chpollin.github.io/FemPrompt_SozArb/downloads/vault.zip)\n';
+
+        zip.file('README.md', readme);
+
+        return zip.generateAsync({ type: 'blob' });
+    }).then(function(blob) {
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'fem_prompt_auswahl_' + withDocs.length + '_papers.zip';
+        a.click();
+        URL.revokeObjectURL(url);
+    });
 }
 
 })();

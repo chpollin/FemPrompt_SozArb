@@ -24,6 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -141,6 +142,9 @@
             <div style="margin-top:1rem;display:flex;gap:0.5rem;">
                 <button class="export-button" onclick="exportFilteredPapers()" title="Gefilterte Papers als CSV exportieren">
                     <i class="fas fa-download"></i> CSV
+                </button>
+                <button class="export-button" onclick="exportFilteredMarkdown()" title="Gefilterte Wissensdokumente als Markdown-ZIP mit System-Prompt">
+                    <i class="fas fa-file-export"></i> Markdown-Export
                 </button>
                 <button class="export-button" onclick="downloadVaultZip()" title="Obsidian Vault herunterladen">
                     <i class="fas fa-box-archive"></i> Vault

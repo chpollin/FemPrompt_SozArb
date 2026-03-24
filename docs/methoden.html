@@ -151,6 +151,31 @@
                 <li>Konzept-Extraktion ist LLM-abhaengig und nicht extern validiert</li>
                 <li>Divergenz-Muster-Klassifikation ist LLM-gestuetzt (Claude Sonnet)</li>
             </ul>
+            <h3>Nachnutzung</h3>
+            <p>Die 249 Wissensdokumente und der vollstaendige Obsidian Vault koennen als Kontext fuer eigene Forschung mit LLMs genutzt werden.</p>
+
+            <h4>Obsidian</h4>
+            <p><a href="downloads/vault.zip" style="color:var(--primary);">Vault-ZIP herunterladen</a> und entpacken. In Obsidian als Vault oeffnen. 505 verlinkte Dokumente (Papers, Konzepte, Divergenzen, Pipeline-Stufen). Graph View zeigt das Wissensnetz.</p>
+
+            <h4>Claude Code</h4>
+            <p>Im <a href="index.html#korpus" style="color:var(--primary);">Korpus</a> Papers filtern und per "Markdown-Export" herunterladen. Im Exportordner <code>claude</code> starten. Der Export enthaelt einen System-Prompt in der README.md.</p>
+            <p>Beispiel-Prompts:</p>
+            <ul>
+                <li>"Welche Papers behandeln Gender Bias in Large Language Models?"</li>
+                <li>"Vergleiche die Methodik von Paper X und Paper Y."</li>
+                <li>"Fasse die Hauptargumente zum Thema Algorithmic Fairness zusammen."</li>
+            </ul>
+
+            <h4>NotebookLM (Google)</h4>
+            <p>Markdown-Export herunterladen und die .md-Dateien als Quellen in NotebookLM hochladen. Automatische Zusammenfassung und Q&amp;A ueber den Korpus.</p>
+
+            <h4>ChatGPT, Gemini und andere Frontier-LLMs</h4>
+            <p>Markdown-Export herunterladen und Dateien als Kontext hochladen. System-Prompt aus der README.md in Custom Instructions oder System Prompt einfuegen.</p>
+
+            <div style="background:var(--gray-50);border-radius:var(--radius-md);padding:1rem 1.25rem;margin-top:1.5rem;">
+                <h4 style="margin-top:0;">System-Prompt (Vorlage)</h4>
+                <pre style="font-size:var(--text-sm);color:var(--gray-700);white-space:pre-wrap;margin:0;">Du bist ein Forschungsassistent fuer einen systematischen Literature Review zu feministischen AI Literacies in der Sozialen Arbeit. Dir liegen Wissensdokumente vor, die aus wissenschaftlichen Papers extrahiert wurden. Jedes Dokument enthaelt: Kernbefund, Forschungsfrage, Methodik und Hauptargumente. Beantworte Fragen auf Basis dieser Dokumente. Zitiere immer die Quelle (Autor, Jahr). Wenn eine Information nicht in den Dokumenten steht, sage das explizit.</pre>
+            </div>
         </article>
     </main>
 
