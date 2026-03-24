@@ -190,17 +190,7 @@ header::after {
     text-decoration: none;
 }
 
-.vault-hint {
-    font-size: var(--text-xs);
-    color: var(--gray-500);
-    margin-top: 0.5rem;
-    line-height: 1.4;
-}
-
-.vault-hint i {
-    color: var(--gray-400);
-    margin-right: 0.2rem;
-}
+/* (vault-hint removed -- info moved to About modal) */
 
 /* Header icon buttons (About, Help) */
 .header-links-sep {
@@ -365,15 +355,7 @@ header::after {
     }
 }
 
-.vault-hint a {
-    color: var(--gray-500);
-    text-decoration: underline;
-    text-decoration-style: dotted;
-}
-
-.vault-hint a:hover {
-    color: var(--primary);
-}
+/* (vault-hint link styles removed) */
 
 h1 {
     font-family: var(--font-display);
@@ -1845,8 +1827,8 @@ main {
 /* API key bar -- compact, top of window */
 .chat-setup {
     padding: 0.5rem 1rem;
-    border-bottom: 1px solid var(--gray-100);
-    background: var(--gray-50);
+    border-bottom: 1px solid var(--gray-200);
+    background: white;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -1934,31 +1916,31 @@ main {
 }
 
 .chat-suggestions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.625rem;
     margin-top: 1.5rem;
+    width: 100%;
+    max-width: 640px;
 }
 
 .chat-suggestion {
     background: white;
     border: 1px solid var(--gray-200);
-    border-radius: var(--radius-lg);
-    padding: 0.5rem 0.875rem;
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
     font-size: var(--text-sm);
     font-family: var(--font-body);
     color: var(--gray-600);
     cursor: pointer;
     transition: var(--transition-fast);
     text-align: left;
-    max-width: 280px;
     line-height: 1.4;
 }
 
 .chat-suggestion:hover {
     background: var(--gray-50);
-    border-color: var(--primary-light);
+    border-color: var(--gray-400);
     color: var(--gray-800);
 }
 
@@ -2088,10 +2070,10 @@ main {
 .chat-send-btn {
     width: 42px;
     height: 42px;
-    border: none;
+    border: 1px solid var(--gray-300);
     border-radius: var(--radius-md);
-    background: var(--primary);
-    color: white;
+    background: white;
+    color: var(--gray-500);
     cursor: pointer;
     font-size: 1rem;
     transition: var(--transition-fast);
@@ -2102,7 +2084,9 @@ main {
 }
 
 .chat-send-btn:hover:not(:disabled) {
-    background: var(--primary-dark);
+    background: var(--gray-800);
+    border-color: var(--gray-800);
+    color: white;
 }
 
 .chat-send-btn:disabled {
@@ -2131,8 +2115,8 @@ main {
     }
 
     .chat-suggestions {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
 }
 
@@ -2280,8 +2264,8 @@ main {
     }
 
     .chat-suggestions {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        max-width: 100%;
     }
 }
 
