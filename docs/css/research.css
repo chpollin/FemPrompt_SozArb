@@ -398,23 +398,31 @@ h1 {
     margin-top: var(--space-xs);
 }
 
-/* Introduction Section */
-.intro-section {
-    max-width: 1100px;
+/* Compact stats bar (replaces intro paragraph) */
+.stats-bar {
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 1.25rem 2rem 0.75rem;
+    padding: 0.625rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.intro-text {
-    max-width: 48rem;
-    font-size: var(--text-body);
-    line-height: 1.7;
+.stat-item {
+    font-size: var(--text-sm);
+    color: var(--gray-500);
+}
+
+.stat-item strong {
     color: var(--gray-700);
+    font-weight: 600;
 }
 
-.intro-text strong {
-    color: var(--gray-900);
-    font-weight: 600;
+.stat-sep {
+    width: 1px;
+    height: 0.875rem;
+    background: var(--gray-200);
 }
 
 /* Minimal View Navigation */
@@ -1790,6 +1798,13 @@ main {
    WISSENS-CHAT TAB
    ========================================================================== */
 
+/* Chat view gets more horizontal space */
+#view-chat {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Chat window container -- self-contained, visually distinct */
 .chat-window {
     background: white;
@@ -1798,9 +1813,9 @@ main {
     box-shadow: var(--shadow-md);
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 280px);
-    min-height: 480px;
-    max-height: 720px;
+    height: calc(100vh - 260px);
+    min-height: 500px;
+    max-height: 800px;
     overflow: hidden;
     position: relative;
 }
@@ -1962,8 +1977,8 @@ main {
 }
 
 .chat-msg-user .chat-msg-content {
-    background: var(--primary);
-    color: white;
+    background: var(--gray-800);
+    color: var(--gray-100);
     border-radius: var(--radius-lg) var(--radius-lg) var(--radius-sm) var(--radius-lg);
     padding: 0.625rem 1rem;
     max-width: 75%;
