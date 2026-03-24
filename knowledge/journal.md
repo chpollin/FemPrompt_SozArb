@@ -36,22 +36,22 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 |-------|-----------|
 | `docs/js/kategorien.js` | Neu: Kategorien-Explorer IIFE (~300 Zeilen) |
 | `docs/js/wissensnetz.js` | Komplett neu: Cluster-Layout, Divergenz-Modus, Glow, Sidebar |
-| `docs/js/features.js` | Pattern-Viz, interaktiver Slope Chart, Muster-Filter (legacy) |
-| `docs/js/research-app.js` | Divergenz-Daten laden, EC API erweitert, Hash-Nav |
+| `docs/js/research-app.js` | Divergenz-Daten laden, EC API, Modal-Tabs, Markdown-Export (~1100 Zeilen) |
+| `docs/js/kategorien.js` | Neu: Kategorien-Explorer IIFE (~300 Zeilen) |
+| `docs/js/wissensnetz.js` | Komplett neu: Cluster-Layout, Divergenz-Modus, Glow, Sidebar |
 | `docs/js/wissenschat.js` | Heading geaendert |
-| `docs/index.html` | Kategorien-Explorer View, Wissensnetz Toolbar, Stats in Header |
-| `docs/methoden.html` | Neu: Methoden-Unterseite |
+| `docs/js/features.js` | Entfernt (war nur noch No-Op Stubs) |
+| `docs/index.html` | Kategorien-Explorer, Wissensnetz Toolbar, Stats in Header, Modal-Tabs |
+| `docs/methoden.html` | Neu: Pipeline-Viz, Kategorie-Tabelle, Nachnutzungsanleitungen |
 | `docs/about.html` | Nav aktualisiert |
 | `docs/help.html` | Nav + Inhalt aktualisiert (Kategorien statt Bewertungsvergleich) |
-| `docs/css/research.css` | Kategorien-Styles, Wissensnetz full-width, Pipeline-Flow, Stats-in-Header |
+| `docs/css/research.css` | Refactored: -700 Zeilen toten Code, Kategorien + Wissensnetz + Detail-Tabs |
+| `scripts/generate_promptotyping_data_v2.py` | Cluster-Schwelle 0.55, leere Human-Werte als null |
+| `docs/data/*.json` | Regeneriert mit neuen Clustern (7/20/109) |
 
 ### Offene Punkte
 
 - [ ] M8: Paper finalisieren (Deadline 4. Mai)
-- [ ] Knowledge-Sections (Kernbefund, Methodik) in Korpus-Detail-Panel integrieren
-- [ ] Wissensnetz: Technik-Cluster hat nur 1 Knoten -- Cluster-Zuordnung pruefen
-- [ ] Kategorien-Explorer: Datenqualitaet der category_comparison pruefen (H:? Bug)
-- [ ] features.js aufraumen (alte Bewertungsvergleich-Funktionen entfernen)
 
 ---
 
