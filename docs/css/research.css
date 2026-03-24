@@ -209,6 +209,41 @@ header::after {
     color: var(--primary);
 }
 
+/* View buttons in header nav */
+.nav-view-btn {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--gray-500);
+    background: transparent;
+    border: none;
+    padding: 0.375rem 0.625rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.nav-view-btn:hover {
+    color: var(--gray-900);
+    background: var(--gray-50);
+}
+
+.nav-view-btn.active {
+    color: var(--gray-900);
+    font-weight: 600;
+    background: var(--gray-50);
+}
+
+.nav-view-korpus {
+    color: var(--gray-400);
+    font-size: var(--text-xs);
+    margin-left: 0.25rem;
+}
+
+.nav-view-korpus.active {
+    color: var(--gray-700);
+}
+
 .nav-sep {
     width: 1px;
     height: 1rem;
@@ -216,7 +251,7 @@ header::after {
     margin: 0 0.25rem;
 }
 
-/* Dropdown Navigation */
+/* Dropdown Navigation (kept for future use) */
 .nav-dropdown {
     position: relative;
 }
@@ -1980,21 +2015,17 @@ main {
     position: relative;
 }
 
-/* Spectrum gradient line at top of chat window */
+/* Subtle top accent (single pixel, primary color -- spectrum is in header) */
 .chat-window::before {
     content: '';
     display: block;
-    height: 3px;
+    height: 2px;
     flex-shrink: 0;
     background: linear-gradient(
         to right,
-        var(--cat-ai-lit),
-        var(--cat-gen-ki),
-        var(--cat-prompt),
-        var(--cat-ki-sonst),
-        var(--cat-soz-arb),
-        var(--cat-bias),
-        var(--cat-gender),
+        var(--gray-200),
+        var(--primary),
+        var(--gray-200)
         var(--cat-divers),
         var(--cat-femin),
         var(--cat-fairness)

@@ -542,28 +542,10 @@ function showPaperDetail(paper, paperList) {
 // ============================================================
 
 function setupDropdownNav() {
-    var dropdown = document.querySelector('.nav-dropdown');
-    var btn = document.getElementById('nav-erkunden');
-    if (!dropdown || !btn) return;
-
-    // Toggle dropdown
-    btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        dropdown.classList.toggle('open');
-    });
-
-    // Close on outside click
-    document.addEventListener('click', function() {
-        dropdown.classList.remove('open');
-    });
-
-    // View switching via dropdown items
-    document.querySelectorAll('.nav-dropdown-item').forEach(function(item) {
-        item.addEventListener('click', function(e) {
-            e.stopPropagation();
-            var viewId = item.dataset.view;
-            switchView(viewId);
-            dropdown.classList.remove('open');
+    // Direct view buttons in header nav
+    document.querySelectorAll('.nav-view-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            switchView(btn.dataset.view);
         });
     });
 }
@@ -572,9 +554,9 @@ function setupDropdownNav() {
 window.switchView = function(viewId) { switchView(viewId); };
 
 function switchView(viewId) {
-    // Update dropdown active state
-    document.querySelectorAll('.nav-dropdown-item').forEach(function(item) {
-        item.classList.toggle('active', item.dataset.view === viewId);
+    // Update nav button active state
+    document.querySelectorAll('.nav-view-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.dataset.view === viewId);
     });
 
     // Show/hide view sections
