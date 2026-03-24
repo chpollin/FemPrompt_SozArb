@@ -46,8 +46,9 @@ function buildChatUI(savedKey) {
     '<div class="chat-messages" id="chat-messages">' +
         '<div class="chat-welcome">' +
             '<p class="chat-welcome-title">Fragen Sie das Wissen</p>' +
-            '<p>Dieser Chat durchsucht 326 Papers und 136 Konzepte aus dem Review ' +
-                'und beantwortet Ihre Fragen mit Quellenangaben.</p>' +
+            '<p>Ein LLM (Gemini 3 Flash) antwortet auf Basis von LLM-synthetisiertem Wissen aus 326 Papers. ' +
+                'Die Antworten sind also zweifach LLM-vermittelt: einmal durch die Wissensextraktion, ' +
+                'einmal durch die Antwortgenerierung. Inline-Zitationen verlinken direkt zum Korpus zur Verifikation.</p>' +
             '<div class="chat-suggestions">' +
                 '<button class="chat-suggestion">Welche Papers behandeln AI Literacy in der Sozialen Arbeit?</button>' +
                 '<button class="chat-suggestion">Was sind die Hauptunterschiede zwischen LLM- und Expert:innen-Bewertung?</button>' +

@@ -1,9 +1,9 @@
 # Status (2026-03-24)
 
-## Aktueller Fokus: Evidence Companion finalisieren (M12)
+## Aktueller Fokus: M12 abgeschlossen, M13 geplant
 
-M1-M11 abgeschlossen. M12 fast fertig: 4-Tab-Interface (Korpus, Wissensnetz, Bewertungsvergleich, Wissens-Chat).
-Naechster Schritt: Browser-Test, dann Merge zu main.
+M1-M12 abgeschlossen. Evidence Companion mit 4 Tabs (Wissens-Chat, Wissensnetz, Bewertungsvergleich, Korpus) merged zu main.
+Naechster Meilenstein: M13 Wissenstaxonomie (Wissensnetz-Redesign).
 
 ---
 
@@ -167,54 +167,32 @@ Cohen's Kappa ist durch den Prevalence-Bias-Paradox eingeschraenkt: Bei 26 Proze
 - **Status: ARCHIVIERT** -- Promptotyping-Interface wird nicht weiterentwickelt. Ersetzt durch M12 (Evidence Companion).
 - Erkenntnis: Promptotyping ging ueber das Paper-Versprechen hinaus. Das Paper referenziert eine "publizierte Wissensumgebung" -- das ist das Research Dashboard, nicht Promptotyping.
 
-### M12: Evidence Companion -- IN ARBEIT
+### M12: Evidence Companion -- ABGESCHLOSSEN
 
-Komplettes Redesign des Research-Frontends (`docs/index.html`) als akademische Begleitpublikation zum Paper.
+Komplettes Redesign des Research-Frontends als akademische Begleitpublikation zum Paper.
 
-**Entscheidung (2026-03-19):** Promptotyping-Interface entfernen. Ein einziges Frontend: Evidence Companion.
+**4 Tabs:** Wissens-Chat (Default) > Wissensnetz > Bewertungsvergleich > Korpus (Referenzschicht)
 
-- [x] Phase A: Redesign (Typographie, Farben, Layout)
-  - IBM Plex Serif fuer Headings, Inter fuer Body (16px)
-  - Weisser Header statt dunkler Block, Autoren-Zeile
-  - Einleitungstext statt KPI-Stats-Bar
-  - Spektrum-Farbsystem: 10 Kategorien als genderneutrale Farbskala
-  - Kategorien gruppiert als "Gegenstand" (4 KI-Kategorien) und "Perspektive" (6 Sozial-Kategorien)
-- [x] Phase B: Tabelle statt Cards
-  - Sortierbare Tabelle mit 7 Spalten (Titel, Autor, Jahr, LLM, Human, Status, Kategorien)
-  - Farbcodierte Kategorie-Punkte (Spektrum-Farben identisch in Chips und Tabelle)
-  - Pagination (50 pro Seite)
-  - Default-Sortierung: Include zuerst
-- [x] Phase C: Detail-Panel
-  - Seitenpanel (slide-in von rechts) statt Modal
-  - Assessment-Vergleich (LLM vs. Expert:innen) side-by-side mit Spektrum-Farben
-  - DOI-Link, Quell-URL, Knowledge-Doc-Download
-  - Prev/Next Navigation
-  - LLM-Begruendung sichtbar
-- [x] Phase D: Bereinigung
-  - LLM-Confidence komplett entfernt (keine valide Metrik)
-  - Dashboard-Tab (6 Charts) entfernt
-  - Network-Graph-Tab entfernt
-  - vis-network und D3 CDN-Imports entfernt
-  - Datengenerator erweitert: 300 Papers (249 full + 51 thin), DOI/URL, Knowledge-Sektionen
-- [x] Phase E: Wissensnetz-View
-  - Konzept-Graph (136 Nodes) als dritter Tab
-  - Ego-Netzwerk-Pattern: Klick auf Konzept zeigt Nachbarn + Papers
-- [x] Phase F: Bewertungsvergleich-Tab
-  - Konfusionsmatrix, Slope Chart, Kappa-Chart, Divergenz-Tabelle
-- [x] Phase G: Panel-Optimierung
-  - Side Panel schmaler (480px statt 680px), Overlay transparent
-  - Tabellenspalten-Komprimierung bei offenem Panel (Jahr, Status, Kategorien ausblenden)
-  - Aktive Zeile hervorgehoben, kein Scroll-Lock
-- [x] Phase H: Wissens-Chat (4. Tab)
-  - Gemini 2.5 Flash via Google AI API (SSE-Streaming)
-  - RAG-lite: Keyword-Suche ueber 326 Papers + 136 Konzepte, Top 30 als Kontext
-  - API-Key lokal im Browser (localStorage + config.local.js, gitignored)
-  - Quellenleiste mit Cross-View-Navigation: Klick auf Quelle -> Korpus-Tab + Detail-Panel
-  - Verifizierbarkeit: Chat-Antwort -> Quelle -> LLM-Begruendung pruefen
-- [x] Vault-Download aufgewertet ("Wissensdokumente", Tooltip, Erklaertext)
-- [ ] Merge zu main
+- [x] Korpus-Tab: Sortierbare Tabelle, Filter, Suche, Detail-Panel (Side Panel mit Komprimierung)
+- [x] Wissensnetz-Tab: D3 Force-Graph, Ego-Netzwerk, Legende, Suche, Frequenz-Filter
+- [x] Bewertungsvergleich-Tab: Callout "78 vs. 23", Slope Chart, Konfusionsmatrix, Kappa, Divergenz-Tabelle
+- [x] Wissens-Chat: Gemini 3 Flash, SSE-Streaming, Inline-Zitationen, Referenzliste, Cross-View-Navigation
+- [x] About + Help Modals
+- [x] Spektrum-Farbsystem (10 Kategorien), akademische Typographie (IBM Plex Serif + Inter)
+- [x] Chat als eigenstaendiges Fenster mit Spektrum-Gradient
+- [x] Stats-Bar statt Intro-Absatz
+- [x] Merge zu main
 
-Commits: `1d54c46` (Redesign), `895d791` (Detail-Panel), `a7703e4` (Confidence entfernt)
+### M13: Wissenstaxonomie -- GEPLANT
+
+Wissensnetz-Redesign: Von flachem Konzept-Graph zu navigierbarer Wissenstaxonomie.
+
+- [ ] Konzepte in Hierarchie/Taxonomie organisieren (Ueber-/Unterkategorien)
+- [ ] Aufklappbare Navigation (abstrakt -> konkret)
+- [ ] Definitionen aus den Quell-Papers (nicht LLM-generiert), mit Quellenangabe
+- [ ] 10 Kategorien als Farbsystem (Regenbogen-Spektrum) statt 3 Cluster
+- [ ] Neuer Datengenerator fuer Hierarchie + Quell-Definitionen
+- [ ] Weniger Nodes (Top 30-40 statt 136), dichtere Verbindungen
 
 ---
 

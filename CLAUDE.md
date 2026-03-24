@@ -268,7 +268,8 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 | M9 | Vault + GitHub Pages | Abgeschlossen |
 | M10 | Promptotyping v1 | Archiviert (ersetzt durch M12) |
 | M11 | Promptotyping v2/v2.1 | Archiviert (ersetzt durch M12) |
-| M12 | Evidence Companion | **In Arbeit** (Wissensnetz, Bewertungsvergleich, Merge) |
+| M12 | Evidence Companion | **Abgeschlossen** (4 Tabs, Chat, Modals, merged) |
+| M13 | Wissenstaxonomie | **Geplant** (Wissensnetz-Redesign: Hierarchie, Quell-Definitionen) |
 
 ---
 
