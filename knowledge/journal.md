@@ -39,12 +39,30 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 | `.env` | Gemini API Key (gitignored) |
 | `docs/js/config.local.js` | Browser-Bridge fuer API Key (gitignored) |
 
+---
+
+## 2026-03-24 (Session 6b): About/Help, Chat-Redesign, Bewertungsvergleich, Wissensnetz
+
+**Branch:** `FemPrompt_SozArb_promptotyping-interface`
+
+### Was passiert ist
+
+1. **About + Help Modals:** Zwei Overlay-Modals (nicht Tabs) mit Projekt-Kontext, Methodik, Zitationsvorschlag (About) und Bedienungshilfe fuer alle 4 Tabs mit Tastaturkuerzeln (Help). Ausgeloest ueber Icons im Header.
+
+2. **Chat-Redesign:** Chat als eigenstaendiges Fenster mit weissem Hintergrund, Border, Shadow, Spektrum-Gradient oben (identisch mit Header). API-Key-Bar kompakt am oberen Rand. Messages-Bereich fuellt den Container. Input fixiert am Boden. Visuell klar abgegrenzt vom Rest des Interface.
+
+3. **Bewertungsvergleich:** Callout-Box fuer Kernergebnis ("78 vs. 23") prominent statt im Fliesstext. Slope-Label-Overlap gefixt (greedy placement mit Mindestabstand).
+
+4. **Wissensnetz:** Legende hinzugefuegt (3 Cluster-Farben + Divergenz-Ring). Beschreibung aktualisiert.
+
+5. **Gemini 3 Flash:** Model auf `gemini-3-flash-preview` aktualisiert. Inline-Zitationen, Benchmark-Zahlen im Prompt klargestellt.
+
 ### Offene Punkte
 
-- [ ] Browser-Test: Chat-Streaming, Quellenleiste, Cross-View-Navigation
-- [ ] Panel-Komprimierung visuell pruefen
+- [ ] Wissensnetz + Bewertungsvergleich: Spektrum-Akzent analog zum Chat
+- [ ] Bewertungsvergleich: Dashboard-Charakter reduzieren, staerker integriert
+- [ ] Browser-Test aller Aenderungen
 - [ ] Merge zu main
-- [ ] Paper: "publizierte Wissensumgebung" mit tatsaechlichem Interface abgleichen
 
 ---
 

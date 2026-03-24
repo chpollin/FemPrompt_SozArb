@@ -217,8 +217,11 @@ function initializeUI() {
         });
     });
 
+    // About / Help modals
+    setupInfoModals();
+
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closePaperModal();
+        if (e.key === 'Escape') { closeInfoModals(); closePaperModal(); }
         if (e.key === '/' && !e.target.matches('input, textarea')) {
             e.preventDefault();
             document.getElementById('search-box').focus();
@@ -567,6 +570,32 @@ function showPaperDetail(paper, paperList) {
             if (idx < currentDetailList.length - 1) showPaperDetail(currentDetailList[idx + 1]);
         });
     }
+}
+
+// ============================================================
+// Info Modals (About / Help)
+// ============================================================
+
+function setupInfoModals() {
+    var aboutBtn = document.getElementById('btn-about');
+    var helpBtn = document.getElementById('btn-help');
+    var aboutModal = document.getElementById('about-modal');
+    var helpModal = document.getElementById('help-modal');
+
+    if (aboutBtn && aboutModal) {
+        aboutBtn.addEventListener('click', function() { aboutModal.classList.add('active'); });
+        aboutModal.querySelector('.info-modal-overlay').addEventListener('click', function() { aboutModal.classList.remove('active'); });
+        aboutModal.querySelector('.info-modal-close').addEventListener('click', function() { aboutModal.classList.remove('active'); });
+    }
+    if (helpBtn && helpModal) {
+        helpBtn.addEventListener('click', function() { helpModal.classList.add('active'); });
+        helpModal.querySelector('.info-modal-overlay').addEventListener('click', function() { helpModal.classList.remove('active'); });
+        helpModal.querySelector('.info-modal-close').addEventListener('click', function() { helpModal.classList.remove('active'); });
+    }
+}
+
+function closeInfoModals() {
+    document.querySelectorAll('.info-modal.active').forEach(function(m) { m.classList.remove('active'); });
 }
 
 function closePaperModal() {

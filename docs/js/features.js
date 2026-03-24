@@ -146,13 +146,25 @@ function renderSlopeChart() {
                 var ctx = chart.ctx;
                 ctx.save();
                 ctx.font = '9px Inter, sans-serif';
+                ctx.textAlign = 'left';
+                // Collect label positions, then deconflict
+                var labels = [];
                 chart.data.datasets.forEach(function(ds, i) {
                     var meta = chart.getDatasetMeta(i);
                     if (!meta.data.length) return;
                     var last = meta.data[meta.data.length - 1];
-                    ctx.fillStyle = ds.borderColor;
-                    ctx.textAlign = 'left';
-                    ctx.fillText(ds.label, last.x + 4, last.y + 3);
+                    labels.push({ text: ds.label, x: last.x + 4, y: last.y + 3, color: ds.borderColor });
+                });
+                // Sort by y position, enforce minimum gap of 11px
+                labels.sort(function(a, b) { return a.y - b.y; });
+                for (var i = 1; i < labels.length; i++) {
+                    if (labels[i].y - labels[i - 1].y < 11) {
+                        labels[i].y = labels[i - 1].y + 11;
+                    }
+                }
+                labels.forEach(function(l) {
+                    ctx.fillStyle = l.color;
+                    ctx.fillText(l.text, l.x, l.y);
                 });
                 ctx.restore();
             }
