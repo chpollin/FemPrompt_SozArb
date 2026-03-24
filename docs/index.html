@@ -127,9 +127,22 @@
                 </div>
             </div>
 
-            <!-- Results Counter -->
-            <div class="results-counter" id="results-counter">
-                <strong id="results-count">0</strong> von <strong id="total-count">0</strong> Papers
+            <!-- Results Counter + Exports -->
+            <div class="results-row">
+                <div class="results-counter" id="results-counter">
+                    <strong id="results-count">0</strong> von <strong id="total-count">0</strong> Papers
+                </div>
+                <div class="export-buttons">
+                    <button class="export-button" onclick="exportFilteredPapers()" title="Gefilterte Papers als CSV">
+                        <i class="fas fa-download"></i> CSV
+                    </button>
+                    <button class="export-button" onclick="exportFilteredMarkdown()" title="Wissensdokumente als ZIP mit System-Prompt">
+                        <i class="fas fa-file-export"></i> Markdown
+                    </button>
+                    <button class="export-button" onclick="downloadVaultZip()" title="Vollstaendiger Obsidian Vault">
+                        <i class="fas fa-box-archive"></i> Vault
+                    </button>
+                </div>
             </div>
 
             <div id="papers-grid">
@@ -137,18 +150,6 @@
                     <div class="loading-spinner"></div>
                     <p>Lade Papers...</p>
                 </div>
-            </div>
-
-            <div style="margin-top:1rem;display:flex;gap:0.5rem;">
-                <button class="export-button" onclick="exportFilteredPapers()" title="Gefilterte Papers als CSV exportieren">
-                    <i class="fas fa-download"></i> CSV
-                </button>
-                <button class="export-button" onclick="exportFilteredMarkdown()" title="Gefilterte Wissensdokumente als Markdown-ZIP mit System-Prompt">
-                    <i class="fas fa-file-export"></i> Markdown-Export
-                </button>
-                <button class="export-button" onclick="downloadVaultZip()" title="Obsidian Vault herunterladen">
-                    <i class="fas fa-box-archive"></i> Vault
-                </button>
             </div>
         </section>
 
