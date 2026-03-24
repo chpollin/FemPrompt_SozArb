@@ -63,17 +63,17 @@
     <!-- Minimal Navigation -->
     <nav class="view-nav" aria-label="Hauptnavigation">
         <div class="view-nav-inner" role="tablist">
-            <button class="view-tab active" data-view="korpus" role="tab" aria-selected="true" aria-controls="view-korpus">Korpus</button>
+            <button class="view-tab active" data-view="chat" role="tab" aria-selected="true" aria-controls="view-chat">Wissens-Chat</button>
             <button class="view-tab" data-view="wissensnetz" role="tab" aria-selected="false" aria-controls="view-wissensnetz">Wissensnetz</button>
             <button class="view-tab" data-view="vergleich" role="tab" aria-selected="false" aria-controls="view-vergleich">Bewertungsvergleich</button>
-            <button class="view-tab" data-view="chat" role="tab" aria-selected="false" aria-controls="view-chat">Wissens-Chat</button>
+            <button class="view-tab tab-korpus" data-view="korpus" role="tab" aria-selected="false" aria-controls="view-korpus">Korpus</button>
         </div>
     </nav>
 
     <!-- Main Content -->
     <main>
-        <!-- View: Korpus -->
-        <section class="content-section view-content active" id="view-korpus" role="tabpanel" aria-labelledby="tab-korpus">
+        <!-- View: Korpus (Referenzschicht -- immer erreichbar ueber Zitationslinks) -->
+        <section class="content-section view-content" id="view-korpus" role="tabpanel" aria-labelledby="tab-korpus" style="display:none;">
             <div class="search-filters">
                 <input type="text" class="search-box" id="search-box" placeholder="Paper suchen (Titel, Autor, Abstract)..." aria-label="Paper durchsuchen">
 
@@ -169,8 +169,8 @@
             </div>
         </section>
 
-        <!-- View: Wissens-Chat -->
-        <section class="content-section view-content" id="view-chat" role="tabpanel" aria-labelledby="tab-chat" style="display:none;">
+        <!-- View: Wissens-Chat (Default-Einstieg) -->
+        <section class="content-section view-content active" id="view-chat" role="tabpanel" aria-labelledby="tab-chat">
             <h2 class="section-heading">Wissens-Chat</h2>
             <p class="section-description">
                 Stellen Sie Fragen an das synthetisierte Wissen aus 326 Papers und 136 Konzepten.

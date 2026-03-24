@@ -294,6 +294,22 @@ h1 {
     font-weight: 600;
 }
 
+/* Korpus tab: visually separated as reference layer */
+.view-tab.tab-korpus {
+    margin-left: auto;
+    color: var(--gray-400);
+    font-size: var(--text-sm);
+}
+
+.view-tab.tab-korpus:hover {
+    color: var(--gray-700);
+}
+
+.view-tab.tab-korpus.active {
+    color: var(--gray-700);
+    border-bottom-color: var(--gray-400);
+}
+
 /* Main Content */
 main {
     max-width: 1100px;

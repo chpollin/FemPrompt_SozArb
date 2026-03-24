@@ -5,14 +5,13 @@
 'use strict';
 
 var API_KEY_STORAGE = 'femPrompt_geminiApiKey';
-var MODEL = 'gemini-3.1-flash';
+var MODEL = 'gemini-3-flash-preview';
 var API_BASE = 'https://generativelanguage.googleapis.com/v1beta';
 var MAX_CONTEXT_PAPERS = 30;
 var MAX_HISTORY = 6; // last 3 exchanges
 
 var messages = [];
 var isStreaming = false;
-var lastContextPapers = [];
 
 // ============================================================
 // Public init (called by research-app.js on first tab visit)
@@ -32,10 +31,10 @@ window.initWissensChat = function() {
 // ============================================================
 
 function buildChatUI(savedKey) {
-    return '<div class="chat-setup">' +
+    return '<form class="chat-setup" autocomplete="off" onsubmit="return false;">' +
         '<div class="chat-key-row">' +
             '<label for="gemini-key">Gemini API Key</label>' +
-            '<input type="password" id="gemini-key" placeholder="AIza..." value="' + escapeAttr(savedKey) + '">' +
+            '<input type="password" id="gemini-key" placeholder="AIza..." value="' + escapeAttr(savedKey) + '" autocomplete="off">' +
             '<a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener" class="chat-key-help">' +
                 '<i class="fas fa-key"></i> Key erstellen' +
             '</a>' +
@@ -43,7 +42,7 @@ function buildChatUI(savedKey) {
         '<p class="chat-key-note">' +
             '<i class="fas fa-lock"></i> Der Key bleibt lokal im Browser und wird direkt an die Google API gesendet.' +
         '</p>' +
-    '</div>' +
+    '</form>' +
     '<div class="chat-messages" id="chat-messages">' +
         '<div class="chat-welcome">' +
             '<p class="chat-welcome-title">Fragen Sie das Wissen</p>' +
@@ -136,8 +135,6 @@ function sendMessage() {
     input.style.height = 'auto';
 
     var context = buildContext(question);
-    // Store context papers for source rendering after streaming
-    lastContextPapers = context.paperObjects;
     callGemini(apiKey, question, context);
 }
 
@@ -252,8 +249,8 @@ function callGemini(apiKey, question, context) {
     isStreaming = true;
     updateSendButton(true);
 
-    // Placeholder for streaming response (with context papers for source bar)
-    messages.push({ role: 'model', text: '', sources: lastContextPapers, complete: false });
+    // Placeholder for streaming response (with context papers for citation linking)
+    messages.push({ role: 'model', text: '', sources: context.paperObjects, complete: false });
     renderMessages();
 
     var systemPrompt = buildSystemPrompt(context);
@@ -310,10 +307,13 @@ function buildSystemPrompt(context) {
         'im Feld der Sozialen Arbeit. Die Publikationen wurden durch eine LLM-Pipeline verarbeitet ' +
         'und unabhaengig von Expert:innen (210 Papers) und einem LLM (Claude Haiku 4.5, 326 Papers) ' +
         'nach 10 identischen Kategorien bewertet.\n\n' +
-        'Kernergebnis: Epistemische Asymmetrie -- LLM Include-Rate 68% vs. Human 42%. ' +
+        'Kernergebnis: Epistemische Asymmetrie -- LLM Include-Rate 68% vs. Human 42% ' +
+        '(Benchmark-Basis: 210 Papers mit BEIDEN Bewertungen, NICHT der Gesamtkorpus von 326). ' +
         '78 Faelle LLM-Include/Human-Exclude vs. 23 umgekehrt. ' +
         "Cohen's Kappa 0.035 ist ein Prevalence-Bias-Artefakt (Byrt et al. 1993), " +
         'NICHT primaerer Indikator.\n\n' +
+        'WICHTIG: Verwende immer die Benchmark-Zahlen (68%/42% aus 210 Papers), ' +
+        'NICHT selbst berechnete Raten aus dem Gesamtkorpus.\n\n' +
         'Drei Divergenz-Muster:\n' +
         '1. Semantische Expansion (81%): LLM expandiert Begriffe ueber ihre Feldgrenzen hinaus\n' +
         '2. Keyword-Inklusion (11%): LLM vergibt Kategorien basierend auf Oberflaechenstruktur\n' +
@@ -432,25 +432,35 @@ function updateLastMessage() {
 function renderMarkdown(text) {
     if (!text) return '<span class="chat-typing">...</span>';
     var html = window.EC.escapeHtml(text);
-    // Bold, italic, inline code
+
+    // 1. Bold (must come first -- before italic and list processing)
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+    // 2. Inline code
     html = html.replace(/`(.+?)`/g, '<code>$1</code>');
-    // Headers
-    html = html.replace(/^### (.+)$/gm, '</p><h4>$1</h4><p>');
-    html = html.replace(/^## (.+)$/gm, '</p><h3>$1</h3><p>');
-    // Numbered lists
-    html = html.replace(/^\d+\.\s+(.+)$/gm, '</p><li>$1</li><p>');
-    // Unordered lists
+
+    // 3. Headers (#### before ### before ##)
+    html = html.replace(/^####\s+(.+)$/gm, '</p><h5>$1</h5><p>');
+    html = html.replace(/^###\s+(.+)$/gm, '</p><h4>$1</h4><p>');
+    html = html.replace(/^##\s+(.+)$/gm, '</p><h3>$1</h3><p>');
+
+    // 4. List items: *, -, or numbered (MUST come before italic)
+    html = html.replace(/^\* (.+)$/gm, '</p><li>$1</li><p>');
     html = html.replace(/^- (.+)$/gm, '</p><li>$1</li><p>');
-    // Wrap in paragraphs
+    html = html.replace(/^\d+\.\s+(.+)$/gm, '</p><li>$1</li><p>');
+
+    // 5. Italic: *text* where text doesn't start with space (avoids stray * bullets)
+    html = html.replace(/\*([^\s*][^*]*?)\*/g, '<em>$1</em>');
+
+    // 6. Paragraphs
     html = html.replace(/\n\n/g, '</p><p>');
     html = '<p>' + html + '</p>';
-    // Clean up empty paragraphs and merge adjacent list items
+
+    // 7. Clean up: merge list items into <ul>, remove empty paragraphs
     html = html.replace(/<p>\s*<\/p>/g, '');
-    html = html.replace(/<\/p><li>/g, '<li>');
-    html = html.replace(/<\/li><p>/g, '</li>');
-    html = html.replace(/(<li>[\s\S]*?<\/li>)/g, '<ul>$&</ul>');
+    html = html.replace(/<\/p>\s*<li>/g, '<li>');
+    html = html.replace(/<\/li>\s*<p>/g, '</li>');
+    html = html.replace(/((?:<li>[\s\S]*?<\/li>\s*)+)/g, '<ul>$1</ul>');
     html = html.replace(/<\/ul>\s*<ul>/g, '');
     return html;
 }

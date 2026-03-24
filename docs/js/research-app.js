@@ -48,7 +48,7 @@ var fuse = null;
 var activeCategories = new Set();
 var benchmarkInitialized = false;
 var wissensnetzInitialized = false;
-var chatInitialized = false;
+var chatInitialized = true; // chat is default tab, initialized on load
 var conceptData = null;
 var currentPage = 1;
 var currentSort = 'relevance';
@@ -98,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
         renderCategoryChips();
         applyFilters();
         logInit();
+        // Chat is the default tab -- initialize immediately
+        if (window.initWissensChat) window.initWissensChat();
     }).catch(function(error) {
         console.error('[Evidence] init failed:', error);
         document.getElementById('papers-grid').innerHTML =
