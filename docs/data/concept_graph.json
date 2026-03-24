@@ -6,7 +6,7 @@
       "frequency": 43,
       "papers_count": 43,
       "definition": "Die kognitiven und behavioralen Fähigkeiten, die es Individuen auf allen Organisationsebenen ermöglichen, AI-Systeme kritisch zu verstehen, zu evaluieren und damit zu interagieren. Umfasst eine tripartite Struktur (Kognition-Verhalten-Einstellung) über generische AI-Konzepte, domänenspezifische Anwe",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Fairness",
@@ -14,7 +14,7 @@
       "frequency": 42,
       "papers_count": 42,
       "definition": "Formal definierte mathematische und statistische Kriterien (z.B. Demographic Parity, Equalized Odds, Calibration) zur Messung und Sicherung gerechter Behandlung durch KI-Systeme. Das Paper problematisiert die Inkompatibilität und Nicht-Neutralität dieser Definitionen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Bias",
@@ -22,7 +22,7 @@
       "frequency": 29,
       "papers_count": 29,
       "definition": "Systematische Verzerrungen in Machine-Learning-Systemen, die durch männlich-dominierte Entwicklungsteams, geschlechtsspezifische Trainingsdaten und unbewusste Entscheidungen in allen Phasen der Modellentwicklung entstehen und bestehende gesellschaftliche Ungleichheiten reproduzieren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Bias in Social Services",
@@ -30,7 +30,7 @@
       "frequency": 12,
       "papers_count": 12,
       "definition": "Systematische Verzerrungen in KI-Modellen, die marginalisierte Bevölkerungsgruppen in Bereichen wie Kinderschutz, Kriminalprognose und Ressourcenallokation diskriminierend benachteiligen. Diese entstehen durch verzerrte Trainingsdaten und unzureichende Repräsentation unterrepräsentierter Gruppen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Gender Bias in AI Systems",
@@ -54,7 +54,7 @@
       "frequency": 9,
       "papers_count": 9,
       "definition": "Systematische Verzerrungen in LLM-Ausgaben, die geschlechtsspezifische Stereotypen reproduzieren und bestimmte Geschlechtsidentitäten (insbesondere non-binäre Personen) durch herablassende oder reduktionistische Darstellungen benachteiligen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Prompt Engineering",
@@ -62,7 +62,7 @@
       "frequency": 9,
       "papers_count": 9,
       "definition": "Die Fähigkeit, strukturierte und kontextreiche Eingaben (Prompts) für KI-Systeme zu formulieren, um optimale Outputs zu erzielen. Umfasst Techniken wie iterative Verfeinerung und Strukturierung nach Persona, Task, Context und Format.",
-      "cluster": "bridge"
+      "cluster": "technik"
     },
     {
       "id": "Digital Divide",
@@ -78,7 +78,7 @@
       "frequency": 8,
       "papers_count": 8,
       "definition": "Systematische Verzerrungen in KI-Systemen, die durch historische, nicht-repräsentative Datensätze entstehen und marginalisierte Gruppen, insbesondere First Nations Peoples und People of Color, diskriminieren (z.B. Fehlerquoten bis 34,7% bei Geschlechtserkennung für dunklere Hauttypen).",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Fairness Evaluation",
@@ -86,7 +86,7 @@
       "frequency": 7,
       "papers_count": 7,
       "definition": "Systematische Bewertung von KI-Systemen auf Diskriminierung und Bias über demografische Gruppen hinweg durch Benchmarking-Frameworks, die Fairness-Implikationen von Prompt-Designs und Modelltendenz zu verzerrten Outputs berücksichtigen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Critical AI Literacy",
@@ -94,7 +94,7 @@
       "frequency": 6,
       "papers_count": 6,
       "definition": "Ein umfassendes Framework zur Befähigung von Individuen, KI-Technologien kritisch zu evaluieren und produktiv mit ihnen zusammenzuarbeiten, bestehend aus vier Dimensionen: kognitiv, operativ, kritisch und ethisch. Es geht über technische Fähigkeiten hinaus und umfasst ethische, soziale und wirtschaf",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "AI Literacy in Social Work",
@@ -102,7 +102,7 @@
       "frequency": 6,
       "papers_count": 6,
       "definition": "Die notwendigen Kompetenzen und das kritische Verständnis von KI-Systemen, insbesondere Large Language Models, die Sozialarbeiter:innen und Praktiker:innen in sozialen Diensten benötigen, um informed und verantwortungsvoll mit diesen Technologien umzugehen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Gender Bias in AI",
@@ -126,7 +126,7 @@
       "frequency": 5,
       "papers_count": 5,
       "definition": "Ansatz zur Gestaltung von Machine-Learning-Modellen mit nachvollziehbarer Logik für Entscheidungsfindung, insbesondere relevant in sozialen und administrativen Kontexten wo Transparenz und Rechenschaftspflicht essentiell sind.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Intersectional Algorithmic Bias",
@@ -158,7 +158,7 @@
       "frequency": 4,
       "papers_count": 4,
       "definition": "Die Gewährleistung fairer und nicht-diskriminierender automatisierter Entscheidungsfindung bei der Verteilung öffentlicher sozialer Leistungen (Renten, Arbeitslosengeld, Asylbewilligung) unter Berücksichtigung kultureller und kontextabhängiger Gerechtigkeitskriterien.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Prompt Engineering for Bias Mitigation",
@@ -182,7 +182,7 @@
       "frequency": 4,
       "papers_count": 4,
       "definition": "Understanding of machine learning components including data-driven design, knowledge representation, and model training. A foundational technical component within broader AI literacy for K-12 students.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Bias in Language Models",
@@ -198,7 +198,7 @@
       "frequency": 4,
       "papers_count": 4,
       "definition": "Analytischer Ansatz, der die Überlagerung von Gender- und Ethnizitätsbias untersucht (z.B. gender-within-ethnicity-Analysen) statt diese separat zu betrachten, um komplexe Diskriminierungsmuster in KI-Systemen abzubilden.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Gender Bias",
@@ -238,7 +238,7 @@
       "frequency": 4,
       "papers_count": 4,
       "definition": "Overlapping Diskriminierungsmechanismen, die Frauen insbesondere aus marginalisierten Gruppen (Frauen of Color, Black women) in Tech-Feldern treffen und deren Perspektiven systematisch aus Systemgestaltung ausschließen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Design Justice",
@@ -270,7 +270,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Quantitative Messverfahren zur Evaluierung von Diskriminierungsfreiheit in KI-Systemen, etwa Equalized Odds oder Demographic Parity, zur Überprüfung geschlechterbezogener Fairness.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "EPIC Model for AI Integration",
@@ -278,7 +278,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Ein vierpeiliger Rahmen (Ethics and Justice, Policy Development and Advocacy, Intersectoral Collaboration, Community Engagement and Empowerment) zur ethischen und gerechten Integration von KI in der Sozialen Arbeit unter Wahrung beruflicher Werte.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Explainable Artificial Intelligence (XAI)",
@@ -294,7 +294,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Einsatz von algorithmischen Vorhersagesystemen (z.B. AFST) zur Einschätzung von Kindeswohlgefährdung, das ethische und Fairness-Fragen bezüglich Transparenz, Datenschutz und professioneller Kontrolle aufwirft.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Gender Bias in NLP",
@@ -302,7 +302,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Phänomen, bei dem Natural Language Processing-Modelle sexistische Stereotypen in Trainigsdaten reproduzieren und verstärken, z.B. durch problematische Word Embeddings oder Autocomplete-Systeme.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Automation Bias",
@@ -310,7 +310,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Risiko, dass Fachkräfte der Sozialen Arbeit KI-Systeme unkritisch überbewerten und ihre professionelle Urteilskraft schwächen, was insbesondere bei der Arbeit mit vulnerablen Personen zu Schädigungen führen kann.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Bias in Healthcare",
@@ -342,7 +342,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Eine Prompt-Engineering-Technik, die LLMs anleitet, Probleme schrittweise zu lösen (z.B. Entitätsidentifikation → Pronomenbestimmung → Coreference-Auflösung → Geschlechtsbestimmung), um transparentere und accuratere Ergebnisse zu erzielen.",
-      "cluster": "bridge"
+      "cluster": "technik"
     },
     {
       "id": "Intersectionality in AI",
@@ -358,7 +358,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Politische und pädagogische Massnahmen zur Sicherung gleicher Chancen beim Zugang zu digitalen Ressourcen und Kompetenzentwicklung für alle Schülergruppen, insbesondere benachteiligte und ländliche Gemeinden.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Fairness in Social Work",
@@ -366,7 +366,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Kritische Analyse von Algorithmen und automatisierten Entscheidungssystemen in sozialen Diensten hinsichtlich ihrer gerechten Anwendung gegenüber verschiedenen Klientelgruppen, insbesondere zur Vermeidung diskriminierender Kategorisierung vulnerabler Bevölkerungsgruppen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Fairness in Child Welfare",
@@ -398,7 +398,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Die Forderung nach Offenlegung von Entscheidungslogiken, Trainingsdaten und Funktionsweise von Algorithmen und KI-Systemen in der Sozialen Arbeit, um Nachvollziehbarkeit und Verantwortlichkeit zu ermöglichen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Intersectional AI Governance",
@@ -414,7 +414,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "The requirement that AI systems used in social services be interpretable, auditable, and demonstrably fair across different demographic groups, enabling social workers to scrutinize and evaluate the equity of algorithmic decisions.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Digital Literacy",
@@ -422,7 +422,7 @@
       "frequency": 3,
       "papers_count": 3,
       "definition": "Ein mehrdimensionales Konzept, das sowohl technische Grundfähigkeiten als auch kritisches Denken, intelligente Inhaltsnutzung und bewusste Handhabung digitaler Ressourcen umfasst, um Menschen vor Desinformation zu schützen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Bias Detection",
@@ -430,7 +430,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Technische und analytische Verfahren zur Identifikation von Verzerrungen und Stereotypen in Algorithmen und Natural Language Processing Systemen, besonders im Hinblick auf Gender und intersektionale Dimensionen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Ethical AI Literacy",
@@ -446,7 +446,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Technische Strategien zur Erkennung und Reduktion von Verzerrungen in Machine-Learning-Systemen durch Pre-, In- oder Post-Processing-Interventionen. Das Paper zeigt, dass diese Ansätze notwendig aber unzureichend für echte Fairness sind.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Intersectionality in AI Systems",
@@ -454,7 +454,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "The critical challenge that debiasing efforts targeting one protected group may simultaneously exacerbate discrimination against intersectional subgroups defined by multiple overlapping characteristics.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Digital Health Literacy",
@@ -478,7 +478,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Verzerrungen in KI-Systemen, die aus unrepräsentativen, homogenen oder vorselektierten Trainingsdatensätzen entstehen, die statistische Muster widerspiegeln, die diskriminatorische Outcomes perpetuieren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Cultural Bias in Large Language Models",
@@ -486,7 +486,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Systematische Verzerrungen in LLMs, die arabische und muslimische Gruppen durch Stereotypisierung, Assoziation mit Gewalt/Terrorismus und orientalistische Darstellungen marginalisieren und perpetuieren westlich-zentrische Perspektiven aus Trainingsdaten.",
-      "cluster": "bridge"
+      "cluster": "technik"
     },
     {
       "id": "Orientalism in AI Systems",
@@ -494,7 +494,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Die Reproduktion von Edward Said's Konzept des Orientalismus durch statistische Muster in LLM-Trainingsdaten, die historische Machtverhältnisse und koloniale Strukturen in der Darstellung von Arabern und Muslimen widerspiegeln.",
-      "cluster": "bridge"
+      "cluster": "technik"
     },
     {
       "id": "Algorithmic Fairness in Generative AI",
@@ -502,7 +502,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Systematische Ansätze zur Gewährleistung, dass LLMs in Entscheidungskontexten keine diskriminierenden Ergebnisse basierend auf geschützten Merkmalen (Rasse, Geschlecht, Religion) produzieren. Umfasst Design, Evaluation und Mitigation von Bias in KI-Systemen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "AI Governance Frameworks",
@@ -510,7 +510,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Umfassende organisatorische und rechtliche Strukturen zur Kontrolle, Überwachung und Regulierung des Einsatzes von generativen KI- und LLM-Tools in Behörden.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Responsible AI Use",
@@ -518,7 +518,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Ethische Prinzipien und praktische Richtlinien zur Sicherstellung, dass LLMs zum Gemeinwohl eingesetzt werden und Schäden durch Fehlerinformation, Diskriminierung oder Missbrauch minimiert werden.",
-      "cluster": "bridge"
+      "cluster": "technik"
     },
     {
       "id": "Algorithmic Fairness and Equity",
@@ -534,7 +534,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Systematische Vermittlung von ethischer Reflexion in KI-Kontexten, um Schüler:innen zur kritischen Bewertung von Auswirkungen KI-gestützter Lösungen zu befähigen und verantwortungsvolle Entscheidungsfindung zu fördern.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Digital Sovereignty",
@@ -558,7 +558,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Die Offenlegung der Funktionsweise und Mechanismen von KI-Systemen gegenüber Nutzern, um deren Verständnis von Fähigkeiten, Grenzen und Entscheidungsprozessen zu verbessern und Unsicherheit zu reduzieren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Human-in-the-Loop Decision Support",
@@ -566,7 +566,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Ein Dual-Ansatz, bei dem KI als Entscheidungsunterstützungssystem fungiert, nicht als autonomer Ersatz für professionelle menschliche Urteilskraft, um therapeutische Beziehungen und professionelle Verantwortung zu bewahren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "AI Literacy in Social Work Education",
@@ -574,7 +574,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Die notwendige Integration von KI-Inhalten in Akkreditierungsanforderungen und Lehrpläne der Sozialen Arbeit sowie die Entwicklung von Schulungsprogrammen für Fachkräfte und Communities zum kritischen Verständnis von KI-Risiken und -Chancen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Ethical AI Awareness",
@@ -582,7 +582,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Die kritische Reflexionsfähigkeit von Lernenden, Bias, Diskriminierung und gesellschaftliche Auswirkungen von AI-Lösungen zu erkennen und verantwortungsvolle Entscheidungen zu treffen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "AI Literacy in Professional Practice",
@@ -590,7 +590,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Erweiterte Kompetenzen von Sozialarbeitern im Umgang mit KI-Systemen, einschließlich kritischen Verständnisses von Funktionsweise, Limitationen und ethischen Implikationen. 92% der Studienteilnehmer fordern formalisierte Schulungsprogramme.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Fairness Auditing",
@@ -630,7 +630,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Strategie zur Gewährleistung von chancengleichem Zugang zu digitalen Technologien und Kompetenzen für alle Bürger, insbesondere zur Unterstützung von benachteiligten und unterrepräsentierten Gruppen in der digitalen Partizipation.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Bias in Child Welfare",
@@ -638,7 +638,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Systematische Verzerrungen in Machine-Learning-Modellen für Kinderschutzentscheidungen, die zu diskriminierenden Outcomes für bestimmte Bevölkerungsgruppen (z.B. Familien mit häufigem Kontakt zu öffentlichen Systemen, ethnische Minderheiten) führen und strukturelle Benachteiligung amplifizieren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Responsible AI Development",
@@ -662,7 +662,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Systematische Verzerrungen in generativen KI-Systemen, die bestehende gesellschaftliche Machtverhältnisse (Sexismus, Rassismus, Ableismus) durch trainierte Daten und westlich geprägte Designentscheidungen perpetuieren und in generierten Bildern manifestieren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Transparency and Accountability",
@@ -718,7 +718,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Erforderliche Schulungen und Kompetenzen für Sozialarbeitende zur kritischen Bewertung, ethischen Anwendung und Vermittlung von KI-Tools sowie zur Vermeidung unkritischer Automatisierung professioneller Urteile.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Fairness in Vulnerable Populations",
@@ -726,7 +726,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Die Forderung nach ethisch vertretbaren und gerechten KI-Systemen, die marginalisierte und vulnerable Gruppen nicht diskriminieren und deren Perspektiven in Trainigsdatensätzen adäquat repräsentiert sind.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Natural Language Processing (NLP)",
@@ -758,7 +758,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Die systematische Benachteiligung bestimmter Gruppen durch KI-Systeme bei der Wissensproduktion und -vermittlung, insbesondere wie Large Language Models zu epistemischen Ungerechtigheden beitragen.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Structural Injustice",
@@ -814,7 +814,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Ein Kompetenzensemble, das Individuen befähigt, effektiv mit generativen KI-Technologien zu interagieren, einschließlich Verständnis fundamentaler Konzepte, kritischer Evaluation von Outputs, Prompt-Engineering und ethischer Nutzung in diversen Kontexten.",
-      "cluster": "bridge"
+      "cluster": "technik"
     },
     {
       "id": "Algorithmic Bias in Hiring Systems",
@@ -822,7 +822,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Systematische Verzerrungen in automatisierten Resume-Screening-Systemen, die bestimmte demografische Gruppen (basierend auf Race und Gender) benachteiligen und reale Arbeitsmarktdiskriminierung durch KI-Modelle reproduzieren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Intersectionality",
@@ -854,7 +854,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Technologische Systeme, die auf Basis von Machine Learning und Algorithmen autonome oder halbautonome Entscheidungen treffen, insbesondere in kritischen Domänen wie Medizin, Justiz und Grenzpolizei.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Computational Thinking",
@@ -886,7 +886,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Ein strukturierter Kompetenzrahmen, der Schüler:innen befähigt, KI-Systeme zu verstehen, anzuwenden und zu gestalten, über drei Progressionsstufen (Understand, Apply, Create) verteilt auf vier Dimensionen (Human-centred mindset, Ethics of AI, AI techniques and applications, AI system design).",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Decision-Making in Social Services",
@@ -910,7 +910,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "The systematic incorporation of ethical considerations, algorithmic fairness, and social impact assessment into AI curricula and educational practices. Identified as a critical gap requiring further development across educational levels.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Explainable AI",
@@ -918,7 +918,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Ansätze zur Offenlegung und Verständlichmachung der inneren Funktionsweise von KI-Systemen, um Black-Box-Algorithmen transparenter zu machen und Missverständnisse über KI-Funktionalität zu reduzieren.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Transparency and Interpretability",
@@ -926,7 +926,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "The requirement for child welfare agencies and practitioners to understand the limitations, decision boundaries, and operational logic of algorithmic tools, supported by clear documentation, external ethical review, and feedback mechanisms for continuous improvement.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Inclusive AI Education Design",
@@ -934,7 +934,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Gestaltungsansätze für KI-Lerninterventionen, die kulturelle Relevanz, Identität, Werte und Hintergründe von Lernenden berücksichtigen, besonders für unterrepräsentierte Gruppen und nicht-technische Lernende.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Proxy Discrimination",
@@ -958,7 +958,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Technological systems designed to assist professional judgment in organizational decision-making, particularly in social work casework, by standardizing information processing and constraining subjective discretion through automated recommendations.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Gender Bias in Language Models",
@@ -974,7 +974,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Kritische Auseinandersetzung mit Fragen der Fairness, Transparenz und Verantwortlichkeit von AI-basierten Bildungstechnologien. Geht über technische Lösungen hinaus und erfordert professionelle ethische Urteilskraft von Lehrkräften.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Machine Learning Fundamentals for K-12",
@@ -982,7 +982,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Die Vermittlung grundlegender Machine-Learning-Konzepte (Neural Networks, Trainingsmechanismen, Datenbias) an Grundschüler durch praktische Tools wie Teachable Machine und Code.org.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Predictive Analytics in Social Work",
@@ -1070,7 +1070,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "The exercise of private authority by Big Tech companies through automated decision-making systems that regulate user behavior, content visibility, and access to information at scale, functioning as a form of non-state governance affecting billions of users.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     },
     {
       "id": "Algorithmic Opacity",
@@ -1086,7 +1086,7 @@
       "frequency": 2,
       "papers_count": 2,
       "definition": "Trainingsmethode zur Anpassung von LLM-Ausgaben basierend auf menschlichem Feedback, die nachweislich Gender Bias und sexistische Inhalte substanziell reduzieren kann.",
-      "cluster": "bridge"
+      "cluster": "sozial"
     }
   ],
   "edges": [

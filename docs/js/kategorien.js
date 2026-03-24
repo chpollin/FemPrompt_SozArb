@@ -186,8 +186,8 @@ function renderDetail(cat) {
         catDivergences.forEach(function(p, idx) {
             var cc = p.divergence.category_comparison || {};
             var catComp = cc[cat] || cc[cat.replace(/_/g, ' ')] || {};
-            var humanVal = catComp.human || '\u2013';
-            var llmVal = catComp.llm || '\u2013';
+            var humanVal = catComp.human === 'Ja' ? 'Ja' : catComp.human === 'Nein' ? 'Nein' : '\u2013';
+            var llmVal = catComp.llm === 'Ja' ? 'Ja' : catComp.llm === 'Nein' ? 'Nein' : '\u2013';
             var pattern = p.divergence.pattern || '';
             var patClass = pattern === 'Semantische Expansion' ? 'pattern-badge-semantic'
                          : pattern === 'Keyword-Inklusion' ? 'pattern-badge-keyword'

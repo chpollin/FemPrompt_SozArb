@@ -399,9 +399,9 @@ def assign_concept_clusters(concept_graph: dict, papers: list) -> None:
         total = technik_score + sozial_score
         if total == 0:
             node["cluster"] = "bridge"
-        elif technik_score / total > 0.65:
+        elif technik_score / total > 0.55:
             node["cluster"] = "technik"
-        elif sozial_score / total > 0.65:
+        elif sozial_score / total > 0.55:
             node["cluster"] = "sozial"
         else:
             node["cluster"] = "bridge"
@@ -745,10 +745,12 @@ def build_divergences_list(repo_root: Path, divergence_cache: dict) -> list:
             for cat in ASSESSMENT_CATEGORIES:
                 h = row.get(f"human_{cat}", "").strip()
                 a = row.get(f"agent_{cat}", "").strip()
+                h = h if h in ("Ja", "Nein") else None
+                a = a if a in ("Ja", "Nein") else None
                 category_comparison[cat] = {
                     "human": h,
                     "llm": a,
-                    "divergent": h != a,
+                    "divergent": h is not None and a is not None and h != a,
                 }
 
             divergences.append({
