@@ -4,6 +4,50 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-03-24 (Session 6): Wissens-Chat + Panel-Optimierung + Quellenleiste
+
+**Branch:** `FemPrompt_SozArb_promptotyping-interface`
+
+### Was passiert ist
+
+1. **Panel-Optimierung:** Side Panel von 680px auf `min(480px, 45vw)` verkleinert. Bei offenem Panel werden Tabellenspalten (Jahr, Status, Kategorien) ausgeblendet, Overlay transparent, Tabelle bleibt klickbar. Aktive Zeile wird hervorgehoben. Kein Scroll-Lock mehr.
+
+2. **Vault-Download aufgewertet:** "Vault (.zip)" umbenannt zu "Wissensdokumente (.zip)" mit Tooltip und Erklaertext ("505 Markdown-Dateien -- nutzbar in Obsidian oder als LLM-Kontext").
+
+3. **Wissens-Chat (neuer 4. Tab):** Gemini 2.5 Flash-basierter Q&A-Chat ueber den Forschungskorpus. RAG-lite: Keyword-Suche ueber 326 Papers + 136 Konzepte, Top 30 als Kontext. SSE-Streaming. API-Key lokal im Browser (localStorage). 3 Vorschlagsfragen als Einstieg.
+
+4. **Quellenleiste mit Cross-View-Navigation:** Nach jeder Chat-Antwort erscheint eine klickbare Quellenleiste. Papers werden per Autoren-/Titel-Matching als "zitiert" erkannt. Klick navigiert zum Korpus-Tab und oeffnet das Detail-Panel -- der epistemische Kreislauf: Chat-Antwort → Quelle → LLM-Begruendung pruefen → zurueck.
+
+5. **Bug-Fix:** Quellenleisten bleiben bei Re-Render erhalten (complete-Flag + Event Delegation statt direkter Listener).
+
+### Was wir gelernt haben
+
+**Side Panel vs. Accordion:** Side Panel ist das richtige Pattern fuer Explorations-Tools (vs. Accordion fuer Archive). Das Problem war nicht das Panel, sondern der Informationsverlust in der komprimierten Tabelle. Loesung: gezielte Spaltenreduktion statt pauschaler Komprimierung.
+
+**Chat als epistemisches Interface:** Ein Chat ueber die Wissensbasis wird erst dann sinnvoll, wenn die Antworten verifizierbar sind. Die Quellenleiste mit Navigation zum Korpus-Tab macht den Chatbot zu einem verifizierbaren epistemischen Werkzeug statt einer Black Box.
+
+**RAG-lite reicht:** Fuer 326 Papers braucht man kein Embedding-basiertes Retrieval. Einfaches Keyword-Matching + Padding mit Divergenz-Faellen liefert guten Kontext. Gemini 2.5 Flash mit 1M Kontext koennte sogar alles auf einmal verarbeiten.
+
+### Was entstanden ist
+
+| Datei | Aenderung |
+|-------|-----------|
+| `docs/js/wissenschat.js` | Neu: ~560 Zeilen, Chat + Streaming + Quellenleiste + Navigation |
+| `docs/js/research-app.js` | Panel-Logik, EC.getConceptData(), Chat-Lazy-Init, highlightActiveRow() |
+| `docs/css/research.css` | Panel-Optimierung, Chat-Styles, Quellenleiste (~300 Zeilen neu) |
+| `docs/index.html` | 4. Tab, Vault-Link, config.local.js Einbindung |
+| `.env` | Gemini API Key (gitignored) |
+| `docs/js/config.local.js` | Browser-Bridge fuer API Key (gitignored) |
+
+### Offene Punkte
+
+- [ ] Browser-Test: Chat-Streaming, Quellenleiste, Cross-View-Navigation
+- [ ] Panel-Komprimierung visuell pruefen
+- [ ] Merge zu main
+- [ ] Paper: "publizierte Wissensumgebung" mit tatsaechlichem Interface abgleichen
+
+---
+
 ## 2026-03-19 (Session 5): Evidence Companion -- Richtungswechsel
 
 **Branch:** `FemPrompt_SozArb_promptotyping-interface`

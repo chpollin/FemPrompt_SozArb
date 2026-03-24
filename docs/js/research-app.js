@@ -48,6 +48,7 @@ var fuse = null;
 var activeCategories = new Set();
 var benchmarkInitialized = false;
 var wissensnetzInitialized = false;
+var chatInitialized = false;
 var conceptData = null;
 var currentPage = 1;
 var currentSort = 'relevance';
@@ -70,6 +71,7 @@ window.EC = {
     getMeta: function() { return vaultMeta; },
     getKappas: function() { return kappas; },
     getActiveCategories: function() { return activeCategories; },
+    getConceptData: function() { return conceptData; },
     // Actions
     setFilteredPapers: function(p) { filteredPapers = p; },
     renderPapers: function(p) { renderPapers(p); },
@@ -202,6 +204,12 @@ function initializeUI() {
                 wissensnetzInitialized = true;
                 if (window.initWissensnetz) {
                     window.initWissensnetz(conceptData.nodes, conceptData.edges, conceptData.papers);
+                }
+            }
+            if (viewId === 'chat' && !chatInitialized) {
+                chatInitialized = true;
+                if (window.initWissensChat) {
+                    window.initWissensChat();
                 }
             }
         });
@@ -539,8 +547,9 @@ function showPaperDetail(paper, paperList) {
 
     document.getElementById('modal-body').innerHTML = bodyHtml;
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('panel-open');
     modal.querySelector('.modal-content').scrollTop = 0;
+    highlightActiveRow(paper);
 
     var prevBtn = document.getElementById('detail-prev');
     var nextBtn = document.getElementById('detail-next');
@@ -560,7 +569,20 @@ function showPaperDetail(paper, paperList) {
 
 function closePaperModal() {
     document.getElementById('paper-modal').classList.remove('active');
-    document.body.style.overflow = '';
+    document.body.classList.remove('panel-open');
+    highlightActiveRow(null);
+}
+
+function highlightActiveRow(paper) {
+    document.querySelectorAll('.papers-table tbody tr.row--active').forEach(function(r) {
+        r.classList.remove('row--active');
+    });
+    if (!paper || !currentDetailList) return;
+    var idx = currentDetailList.indexOf(paper);
+    if (idx >= 0) {
+        var row = document.querySelector('tr[data-idx="' + idx + '"]');
+        if (row) row.classList.add('row--active');
+    }
 }
 
 function buildDetailContent(paper) {

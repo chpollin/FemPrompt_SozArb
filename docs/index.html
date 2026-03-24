@@ -39,8 +39,12 @@
             <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
             <div class="header-links">
                 <a href="https://github.com/chpollin/FemPrompt_SozArb" class="header-link" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i> Repository</a>
-                <a href="downloads/vault.zip" class="header-link"><i class="fas fa-download"></i> Vault (.zip)</a>
+                <a href="downloads/vault.zip" class="header-link vault-link"
+                   title="505 vernetzte Markdown-Dateien: synthetisiertes Wissen aus 248 Papers, 136 Konzepte, 111 Divergenz-Analysen. Kompatibel mit Obsidian. Als Kontext fuer LLMs nutzbar.">
+                    <i class="fas fa-download"></i> Wissensdokumente (.zip)
+                </a>
             </div>
+            <p class="vault-hint"><i class="fas fa-info-circle"></i> 505 Markdown-Dateien mit synthetisiertem Wissen aus 248 Papers -- nutzbar in <a href="https://obsidian.md" target="_blank" rel="noopener">Obsidian</a> oder als LLM-Kontext.</p>
         </div>
     </header>
 
@@ -62,6 +66,7 @@
             <button class="view-tab active" data-view="korpus" role="tab" aria-selected="true" aria-controls="view-korpus">Korpus</button>
             <button class="view-tab" data-view="wissensnetz" role="tab" aria-selected="false" aria-controls="view-wissensnetz">Wissensnetz</button>
             <button class="view-tab" data-view="vergleich" role="tab" aria-selected="false" aria-controls="view-vergleich">Bewertungsvergleich</button>
+            <button class="view-tab" data-view="chat" role="tab" aria-selected="false" aria-controls="view-chat">Wissens-Chat</button>
         </div>
     </nav>
 
@@ -164,6 +169,16 @@
             </div>
         </section>
 
+        <!-- View: Wissens-Chat -->
+        <section class="content-section view-content" id="view-chat" role="tabpanel" aria-labelledby="tab-chat" style="display:none;">
+            <h2 class="section-heading">Wissens-Chat</h2>
+            <p class="section-description">
+                Stellen Sie Fragen an das synthetisierte Wissen aus 326 Papers und 136 Konzepten.
+                Die Antworten werden von Gemini 2.5 Flash generiert, mit relevantem Kontext aus dem Forschungskorpus.
+            </p>
+            <div id="chat-container"></div>
+        </section>
+
         <!-- View: Bewertungsvergleich -->
         <section class="content-section view-content" id="view-vergleich" role="tabpanel" aria-labelledby="tab-vergleich" style="display:none;">
             <h2 class="section-heading">Bewertungsvergleich</h2>
@@ -247,8 +262,10 @@
     </div>
 
     <!-- Scripts -->
+    <script src="js/config.local.js" onerror=""></script>
     <script src="js/research-app.js"></script>
     <script src="js/features.js"></script>
     <script src="js/wissensnetz.js"></script>
+    <script src="js/wissenschat.js"></script>
 </body>
 </html>

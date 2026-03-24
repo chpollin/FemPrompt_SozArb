@@ -4,6 +4,7 @@
 # Environment variables (contains API keys!)
 .env
 .env.local
+docs/js/config.local.js
 
 # Claude configuration
 .claude/

@@ -1,9 +1,9 @@
-# Status (2026-03-19)
+# Status (2026-03-24)
 
 ## Aktueller Fokus: Evidence Companion finalisieren (M12)
 
-M1-M11 abgeschlossen. M11 (Promptotyping) archiviert -- Richtungswechsel zu Evidence Companion.
-Naechste Schritte: Wissensnetz-View, Bewertungsvergleich-Tab, Merge zu main.
+M1-M11 abgeschlossen. M12 fast fertig: 4-Tab-Interface (Korpus, Wissensnetz, Bewertungsvergleich, Wissens-Chat).
+Naechster Schritt: Browser-Test, dann Merge zu main.
 
 ---
 
@@ -196,13 +196,22 @@ Komplettes Redesign des Research-Frontends (`docs/index.html`) als akademische B
   - Network-Graph-Tab entfernt
   - vis-network und D3 CDN-Imports entfernt
   - Datengenerator erweitert: 300 Papers (249 full + 51 thin), DOI/URL, Knowledge-Sektionen
-- [ ] Phase E: Wissensnetz-View (geplant)
+- [x] Phase E: Wissensnetz-View
   - Konzept-Graph (136 Nodes) als dritter Tab
   - Ego-Netzwerk-Pattern: Klick auf Konzept zeigt Nachbarn + Papers
-  - Inspiriert von Cosma (cosma.arthurperret.fr)
-- [ ] Phase F: Bewertungsvergleich-Tab (geplant)
-  - Konfusionsmatrix, Slope Chart, Divergenz-Tabelle
-  - Aus bestehendem features.js Code
+- [x] Phase F: Bewertungsvergleich-Tab
+  - Konfusionsmatrix, Slope Chart, Kappa-Chart, Divergenz-Tabelle
+- [x] Phase G: Panel-Optimierung
+  - Side Panel schmaler (480px statt 680px), Overlay transparent
+  - Tabellenspalten-Komprimierung bei offenem Panel (Jahr, Status, Kategorien ausblenden)
+  - Aktive Zeile hervorgehoben, kein Scroll-Lock
+- [x] Phase H: Wissens-Chat (4. Tab)
+  - Gemini 2.5 Flash via Google AI API (SSE-Streaming)
+  - RAG-lite: Keyword-Suche ueber 326 Papers + 136 Konzepte, Top 30 als Kontext
+  - API-Key lokal im Browser (localStorage + config.local.js, gitignored)
+  - Quellenleiste mit Cross-View-Navigation: Klick auf Quelle -> Korpus-Tab + Detail-Panel
+  - Verifizierbarkeit: Chat-Antwort -> Quelle -> LLM-Begruendung pruefen
+- [x] Vault-Download aufgewertet ("Wissensdokumente", Tooltip, Erklaertext)
 - [ ] Merge zu main
 
 Commits: `1d54c46` (Redesign), `895d791` (Detail-Panel), `a7703e4` (Confidence entfernt)
@@ -424,4 +433,4 @@ Die RIS-Dateien in `deep-research/restored/` decken 34 von 254 Deep-Research-Pap
 
 ---
 
-*Aktualisiert: 2026-03-19*
+*Aktualisiert: 2026-03-24*
