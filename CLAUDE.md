@@ -1,7 +1,7 @@
 # Working Rules for Claude AI Assistant
 
 **Project:** FemPrompt SozArb -- Systematischer Literature Review zu AI Literacy & LLM-Bias im Kontext Sozialer Arbeit
-**Last Updated:** 2026-02-22
+**Last Updated:** 2026-03-24
 
 ---
 
@@ -9,9 +9,9 @@
 
 326 wissenschaftliche Papers werden durch eine 5-stufige LLM-Pipeline verarbeitet (Identifikation -> PDF-Akquise -> Markdown-Konversion -> Wissensextraktion -> Assessment). Kernfrage: **Was passiert mit Wissen, wenn es durch eine LLM-Pipeline fliesst?**
 
-Das Projekt hat drei Schichten (definiert in `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md`):
+Das Projekt hat drei Schichten:
 1. **Obsidian Vault** -- 505 Markdown-Dateien (248 Papers, 136 Konzepte, 111 Divergenzen, 5 Pipeline-Stufen, MOCs)
-2. **Web-Interface** -- Promptotyping-Interface (`docs/promptotyping.html`) + Research Dashboard (`docs/index.html`)
+2. **Evidence Companion** -- `docs/index.html` + Unterseiten (`about.html`, `help.html`). 4 Views: Wissens-Chat, Wissensnetz, Bewertungsvergleich, Korpus. Live: https://chpollin.github.io/FemPrompt_SozArb/
 3. **Paper** -- Forum Wissenschaft 2/2026, 18.000 Zeichen, Deadline 4. Mai 2026
 
 ### Leitkonzepte
@@ -64,12 +64,15 @@ Das Projekt hat drei Schichten (definiert in `knowledge/FORSCHUNGSPROJEKT-PROMPT
 | `knowledge/paper/paper-draft.md` | **DAS PAPER** (Single Source of Truth, 17.975 Zeichen) | Nur auf Anfrage |
 | `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` | Konzeptdokument Promptotyping | Selten |
 | `knowledge/paper-integrity.md` | Paper vs. Repo Abgleich | Selten |
-| `docs/promptotyping.html` | Promptotyping-Interface (5 Views) | Aktiv |
-| `docs/js/promptotyping-app.js` | Promptotyping JS (~1090 Zeilen, IIFE) | Aktiv |
-| `docs/css/promptotyping.css` | Promptotyping CSS (~650 Zeilen) | Aktiv |
-| `docs/index.html` | Research Dashboard (4-Tab SPA) | Fertig |
+| `docs/index.html` | **Evidence Companion** (4-View SPA, Default: Wissens-Chat) | **Aktiv** |
+| `docs/about.html` | Unterseite: Projekt, Methodik, Zitationsvorschlag | Aktiv |
+| `docs/help.html` | Unterseite: Bedienungshilfe fuer alle Views | Aktiv |
+| `docs/js/research-app.js` | Haupt-IIFE: Daten, Tabelle, Panel, Navigation, Tooltips (~800 Zeilen) | **Aktiv** |
+| `docs/js/wissenschat.js` | Wissens-Chat: Gemini 3 Flash, Streaming, Zitationen (~620 Zeilen) | **Aktiv** |
+| `docs/js/wissensnetz.js` | Wissensnetz: D3 Force-Graph, Ego-Netzwerk (~470 Zeilen) | Aktiv |
+| `docs/js/features.js` | Bewertungsvergleich: Charts, Konfusionsmatrix, Kappa (~380 Zeilen) | Aktiv |
+| `docs/css/research.css` | Alle Styles (~2200 Zeilen) | **Aktiv** |
 | `scripts/generate_vault_v2.py` | Vault v2 Generator (~1660 Zeilen, LLM-Calls) | Selten |
-| `scripts/generate_promptotyping_data_v2.py` | Datengenerator (~580 Zeilen, deterministisch) | Aktiv |
 | `benchmark/results/agreement_metrics.json` | Kanonische Benchmark-Metriken | Read-only |
 | `benchmark/config/categories.yaml` | Kanonische Kategorie-Definitionen | Read-only |
 
@@ -77,8 +80,8 @@ Das Projekt hat drei Schichten (definiert in `knowledge/FORSCHUNGSPROJEKT-PROMPT
 
 | Branch | Zweck | Status |
 |--------|-------|--------|
-| `main` | Stabil, alle M1-M9 abgeschlossen | Stabil |
-| `FemPrompt_SozArb_promptotyping-interface` | Promptotyping v2/v2.1 Entwicklung | **Aktiv** |
+| `main` | **Aktiv**, M1-M12 abgeschlossen, Evidence Companion live | **Aktiv** |
+| `FemPrompt_SozArb_promptotyping-interface` | Feature-Branch (gemerged) | Archiviert |
 
 ---
 
@@ -92,25 +95,30 @@ Das Promptotyping-Interface (5 Views: Landing, Pipeline-Sankey, Paper Journey, K
 
 ### Evidence Companion (`docs/index.html`) -- AKTIV
 
-Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js via CDN.
+Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js + D3 via CDN.
 
-**Name:** "Feministische AI Literacies -- Systematischer Review"
-**Untertitel:** "Interaktive Evidenz zu Pollin, Sackl-Sharif, Klinger & Steiner (2026)"
+**Live:** https://chpollin.github.io/FemPrompt_SozArb/
 
-| Tab | Inhalt |
-|-----|--------|
-| **Korpus** | Sortierbare Tabelle (326 Papers), Suche, Filter, Kategorie-Chips, Detail-Panel |
-| **Bewertungsvergleich** | Konfusionsmatrix, Slope Chart, Divergenz-Tabelle (geplant) |
-| **Wissensnetz** | Konzept-Graph mit Ego-Netzwerk (geplant) |
+| View | Inhalt | JS-Datei |
+|------|--------|----------|
+| **Wissens-Chat** (Default) | Gemini 3 Flash Q&A, Inline-Zitationen → Korpus, Referenzliste | `wissenschat.js` |
+| **Wissensnetz** | D3 Force-Graph, 136 Konzepte, Ego-Netzwerk, Legende | `wissensnetz.js` |
+| **Bewertungsvergleich** | Callout "78 vs 23", Slope Chart, Konfusionsmatrix, Kappa, Divergenz-Tabelle | `features.js` |
+| **Korpus** (Referenzschicht) | Sortierbare Tabelle, Filter, Suche, Detail-Panel mit Assessment-Vergleich | `research-app.js` |
+
+**Unterseiten:** `about.html` (Projekt, Methodik, Zitation), `help.html` (Bedienungshilfe)
+
+**Navigation:** Header mit direkten View-Buttons + About/Hilfe Links. `switchView()` global.
 
 **Architektur-Regeln:**
-- Kein Build-Tool, kein Framework, kein npm. Nur CDN.
+- Kein Build-Tool, kein Framework, kein npm. Nur CDN (D3, Chart.js, Fuse.js, FontAwesome).
+- IIFE-Pattern fuer alle JS-Dateien, Kommunikation ueber `window.EC` API
 - IBM Plex Serif (Headings) + Inter (Body)
-- 10 Kategorien als Spektrum-Farbsystem (genderneutral)
-- Kategorien gruppiert als "Gegenstand" (KI-Dimension) und "Perspektive" (Gesellschaftliche Dimension)
-- Detail-Panel als Seitenpanel (slide-in von rechts)
-- LLM-Confidence NICHT anzeigen (keine valide Metrik)
-- Daten: `docs/data/research_vault_v2.json` (generiert durch `pipeline/scripts/generate_docs_data.py`)
+- 10 Kategorien als Spektrum-Farbsystem (genderneutral, Regenbogen-Gradient im Header)
+- Detail-Panel als Seitenpanel (slide-in, 480px, Tabellenkomprimierung)
+- Rich Data Tooltips (JS-basiert, Mini-Barcharts aus JSON-Daten)
+- Chat: API-Key lokal (localStorage + `config.local.js`, gitignored). Modell: `gemini-3-flash-preview`
+- Daten: `docs/data/research_vault_v2.json` + `docs/data/concept_graph.json`
 
 ---
 
@@ -211,7 +219,7 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 - **Commit haeufig** nach jeder logischen Aenderung
 - **Push:** `git push -u origin <branch-name>`
 - **NEVER** force push to main
-- **Aktueller Branch:** `FemPrompt_SozArb_promptotyping-interface`
+- **Aktueller Branch:** `main`
 
 **Nicht committen:** `.env`, generierte Daten (PDFs, Knowledge Docs), Test-Artefakte, `.vault_cache/`
 
@@ -280,8 +288,9 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 3. **Hierarchische PDF-Akquise** -- 4 Fallback-Strategien, 79% Erfolgsrate
 4. **Human-LLM Benchmark** -- Konfusionsmatrix + Basisraten als primaere Metriken
 5. **Epistemische Divergenz-Analyse** -- 111 Disagreements in 3 Muster klassifiziert (LLM-basiert)
-6. **Promptotyping-Interface** -- Forschungsprozess als navigierbares epistemisches Artefakt
-7. **Obsidian Vault v2** -- 505 interlinked Markdown-Dateien mit LLM-extrahierten Konzepten
+6. **Wissens-Chat** -- Gemini 3 Flash ueber LLM-synthetisiertem Wissen, Inline-Zitationen mit Cross-View-Navigation
+7. **Rich Data Tooltips** -- Interaktive Datenvisualisierung (Mini-Barcharts, Pipeline-Viz) direkt im Interface
+8. **Obsidian Vault v2** -- 505 interlinked Markdown-Dateien mit LLM-extrahierten Konzepten
 
 ---
 

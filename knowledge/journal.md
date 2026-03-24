@@ -41,28 +41,41 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
-## 2026-03-24 (Session 6b): About/Help, Chat-Redesign, Bewertungsvergleich, Wissensnetz
+## 2026-03-24 (Session 6b-7): UI Polish, Navigation, Tooltips, Merge
 
-**Branch:** `FemPrompt_SozArb_promptotyping-interface`
+**Branch:** `FemPrompt_SozArb_promptotyping-interface` → gemerged zu `main`
 
 ### Was passiert ist
 
-1. **About + Help Modals:** Zwei Overlay-Modals (nicht Tabs) mit Projekt-Kontext, Methodik, Zitationsvorschlag (About) und Bedienungshilfe fuer alle 4 Tabs mit Tastaturkuerzeln (Help). Ausgeloest ueber Icons im Header.
+1. **Inline-Zitationen:** Gemini-Antworten werden post-processed -- Autor (Jahr) Muster werden erkannt und als klickbare Links zum Korpus-Tab gerendert. Referenzliste unter jeder Antwort zeigt nur tatsaechlich zitierte Papers.
 
-2. **Chat-Redesign:** Chat als eigenstaendiges Fenster mit weissem Hintergrund, Border, Shadow, Spektrum-Gradient oben (identisch mit Header). API-Key-Bar kompakt am oberen Rand. Messages-Bereich fuellt den Container. Input fixiert am Boden. Visuell klar abgegrenzt vom Rest des Interface.
+2. **Chat-Redesign:** Chat als eigenstaendiges Fenster (weiss, Border, Shadow). Subtiler Primary-Akzent oben statt doppeltem Regenbogen. API-Key-Bar kompakt. User-Bubble dunkelgrau statt teal.
 
-3. **Bewertungsvergleich:** Callout-Box fuer Kernergebnis ("78 vs. 23") prominent statt im Fliesstext. Slope-Label-Overlap gefixt (greedy placement mit Mindestabstand).
+3. **Tab-Reihenfolge:** Wissens-Chat (Default) > Wissensnetz > Bewertungsvergleich > Korpus (Referenzschicht). Chat wird sofort initialisiert.
 
-4. **Wissensnetz:** Legende hinzugefuegt (3 Cluster-Farben + Divergenz-Ring). Beschreibung aktualisiert.
+4. **Header-Navigation:** Dropdown durch direkte View-Buttons ersetzt. About/Hilfe als echte Unterseiten (`about.html`, `help.html`) statt Modals. `switchView()` als globale Funktion.
 
-5. **Gemini 3 Flash:** Model auf `gemini-3-flash-preview` aktualisiert. Inline-Zitationen, Benchmark-Zahlen im Prompt klargestellt.
+5. **Rich Data Tooltips:** JS-basierte Tooltips mit echten Daten aus dem JSON: Jahresverteilung (Barcharts), Pipeline-Verlust (Step-Chain), Include/Exclude/Divergenz (Stat-Grid), Kategorie-Haeufigkeit (farbige Balken), Top-Konzepte.
+
+6. **Bewertungsvergleich:** Callout-Box "78 vs. 23" fuer Kernergebnis. Slope-Label-Overlap gefixt.
+
+7. **Wissensnetz:** Legende (Technik/Sozial/Bruecke + Divergenz-Ring).
+
+8. **Merge zu main** und GitHub Pages Deployment.
+
+### Was wir gelernt haben
+
+**Verifiable Chat > Black-Box Chat:** Der Wissens-Chat wird erst wertvoll, wenn jede Aussage verifizierbar ist. Inline-Zitationen + Cross-View-Navigation zum Korpus schliessen den epistemischen Kreislauf.
+
+**Tooltips als Datenschicht:** Statt Beschreibungstext zeigen die Tooltips echte Statistiken (Barcharts, Pipeline-Viz). Das macht die Stats-Bar zu einer interaktiven Datenebene statt nur einer Zahlenleiste.
+
+**Navigation flach halten:** Dropdown war ein Schritt zu viel. Direkte Buttons sind besser fuer 4 Views -- man sieht sofort alle Optionen.
 
 ### Offene Punkte
 
-- [ ] Wissensnetz + Bewertungsvergleich: Spektrum-Akzent analog zum Chat
-- [ ] Bewertungsvergleich: Dashboard-Charakter reduzieren, staerker integriert
-- [ ] Browser-Test aller Aenderungen
-- [ ] Merge zu main
+- [ ] M13: Wissenstaxonomie (Wissensnetz-Redesign: Hierarchie, Quell-Definitionen, Kategoriefarben)
+- [ ] M8: Paper finalisieren (Abb. 3 abgleichen, Deadline 4. Mai)
+- [ ] Bewertungsvergleich: Dashboard-Charakter weiter reduzieren
 
 ---
 
