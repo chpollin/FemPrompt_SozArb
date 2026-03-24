@@ -65,14 +65,14 @@ Das Projekt hat drei Schichten:
 | `knowledge/FORSCHUNGSPROJEKT-PROMPTOTYPING.md` | Konzeptdokument Promptotyping | Selten |
 | `knowledge/paper-integrity.md` | Paper vs. Repo Abgleich | Selten |
 | `docs/index.html` | **Evidence Companion** (4-View SPA, Default: Wissens-Chat) | **Aktiv** |
-| `docs/about.html` | Unterseite: Projekt, Methodik, Zitationsvorschlag | Aktiv |
+| `docs/about.html` | Unterseite: Projekt, Zitationsvorschlag | Aktiv |
+| `docs/methoden.html` | Unterseite: Pipeline, Kategorie-System, Nachnutzung | **Aktiv** |
 | `docs/help.html` | Unterseite: Bedienungshilfe fuer alle Views | Aktiv |
-| `docs/js/research-app.js` | Haupt-IIFE: Daten, Tabelle, Panel, Navigation, Tooltips (~800 Zeilen) | **Aktiv** |
+| `docs/js/research-app.js` | Haupt-IIFE: Daten, Tabelle, Modal-Tabs, Navigation, Export (~1100 Zeilen) | **Aktiv** |
 | `docs/js/wissenschat.js` | Wissens-Chat: Gemini 3 Flash, Streaming, Zitationen (~620 Zeilen) | **Aktiv** |
 | `docs/js/wissensnetz.js` | Wissensnetz: D3 Force-Graph, Cluster-Layout, Divergenz-Modus (~780 Zeilen) | **Aktiv** |
 | `docs/js/kategorien.js` | Kategorien-Explorer: Spektrum, Detail, Cross-View (~300 Zeilen) | **Aktiv** |
-| `docs/js/features.js` | Legacy-Stubs (Bewertungsvergleich archiviert) | Archiviert |
-| `docs/css/research.css` | Alle Styles (~2200 Zeilen) | **Aktiv** |
+| `docs/css/research.css` | Alle Styles (~1600 Zeilen, refactored) | **Aktiv** |
 | `scripts/generate_vault_v2.py` | Vault v2 Generator (~1660 Zeilen, LLM-Calls) | Selten |
 | `benchmark/results/agreement_metrics.json` | Kanonische Benchmark-Metriken | Read-only |
 | `benchmark/config/categories.yaml` | Kanonische Kategorie-Definitionen | Read-only |
@@ -103,11 +103,16 @@ Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js + D3 via CDN.
 | View | Inhalt | JS-Datei |
 |------|--------|----------|
 | **Wissens-Chat** (Default) | Gemini 3 Flash Q&A, Inline-Zitationen → Korpus, Referenzliste | `wissenschat.js` |
-| **Wissensnetz** | D3 Force-Graph, Cluster-Layout, Divergenz-Modus, Hover-Glow, Full-width | `wissensnetz.js` |
-| **Kategorien** | 10-Kategorien-Spektrum, Rate-Vergleich, Divergenz-Papers, Cross-View | `kategorien.js` |
-| **Korpus** (Referenzschicht) | Sortierbare Tabelle, Filter, Suche, Detail-Panel mit Assessment-Vergleich | `research-app.js` |
+| **Wissensnetz** | D3 Force-Graph, Cluster-Layout (Bridge/Sozial), Divergenz-Modus, Hover-Glow, Full-width, Always-visible Sidebar | `wissensnetz.js` |
+| **Kategorien** | 10-Kategorien-Spektrum (Gegenstand→Perspektive), Rate-Vergleich, Divergenz-Papers mit LLM-Reasoning, Konzept-Links | `kategorien.js` |
+| **Korpus** (Referenzschicht) | Sortierbare Tabelle, Filter, Detail-Modal mit Tabs (Bewertung + Wissensdokument), CSV/Markdown/Vault-Export | `research-app.js` |
 
-**Unterseiten:** `about.html` (Projekt, Zitation), `methoden.html` (Pipeline, Kategorie-System, Bewertung), `help.html` (Bedienungshilfe)
+**Unterseiten:** `about.html` (Projekt, Zitation), `methoden.html` (Pipeline, Kategorie-System, Nachnutzung mit LLMs), `help.html` (Bedienungshilfe)
+
+**Exports:**
+- CSV: Gefilterte Papers als Tabelle
+- Markdown-ZIP: Wissensdokumente der Auswahl + README mit System-Prompt fuer Claude Code, NotebookLM, ChatGPT
+- Vault-ZIP: Vollstaendiger Obsidian Vault (505 Dateien)
 
 **Navigation:** Header mit direkten View-Buttons + About/Hilfe Links. `switchView()` global.
 
@@ -119,7 +124,9 @@ Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js + D3 via CDN.
 - Detail-Panel als Seitenpanel (slide-in, 480px, Tabellenkomprimierung)
 - Rich Data Tooltips (JS-basiert, Mini-Barcharts aus JSON-Daten)
 - Chat: API-Key lokal (localStorage + `config.local.js`, gitignored). Modell: `gemini-3-flash-preview`
-- Daten: `docs/data/research_vault_v2.json` + `docs/data/concept_graph.json` + `docs/data/promptotyping_v2.json` (Divergenz-Patterns)
+- Daten: `docs/data/research_vault_v2.json` + `docs/data/concept_graph.json` + `docs/data/promptotyping_v2.json` (Divergenz-Patterns, Knowledge-Sections)
+- Exports: JSZip via CDN fuer Markdown-ZIP-Export mit System-Prompt
+- Detail-Modal: Zwei Tabs (Bewertung, Wissensdokument) -- Knowledge-Sections aus promptotyping_v2.json
 
 ---
 
@@ -290,8 +297,11 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 4. **Human-LLM Benchmark** -- Konfusionsmatrix + Basisraten als primaere Metriken
 5. **Epistemische Divergenz-Analyse** -- 111 Disagreements in 3 Muster klassifiziert (LLM-basiert)
 6. **Wissens-Chat** -- Gemini 3 Flash ueber LLM-synthetisiertem Wissen, Inline-Zitationen mit Cross-View-Navigation
-7. **Rich Data Tooltips** -- Interaktive Datenvisualisierung (Mini-Barcharts, Pipeline-Viz) direkt im Interface
-8. **Obsidian Vault v2** -- 505 interlinked Markdown-Dateien mit LLM-extrahierten Konzepten
+7. **Kategorien-Explorer** -- 10 Kategorien als interaktives Spektrum, Rate-Vergleich Human/LLM, Divergenz-Papers mit Reasoning
+8. **Wissensnetz** -- D3 Cluster-Layout (Bridge/Sozial), Divergenz-Modus mit Pattern-Faerbung, Hover-Glow
+9. **Wissensdokument-Tab** -- LLM-extrahierte Sektionen (Kernbefund, Methodik, Argumente) direkt im Paper-Detail browsebar
+10. **Kuratierter Markdown-Export** -- Gefilterte Wissensdokumente als ZIP mit System-Prompt fuer LLM-Nachnutzung
+11. **Obsidian Vault v2** -- 505 interlinked Markdown-Dateien mit LLM-extrahierten Konzepten
 
 ---
 

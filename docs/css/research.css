@@ -1089,6 +1089,12 @@ main {
     font-size: var(--text-2xl);
 }
 
+.modal-author {
+    color: var(--gray-500);
+    margin-top: 0.25rem;
+    font-size: var(--text-md);
+}
+
 .modal-close {
     background: var(--gray-100);
     border: none;
