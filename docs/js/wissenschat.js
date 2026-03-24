@@ -5,7 +5,7 @@
 'use strict';
 
 var API_KEY_STORAGE = 'femPrompt_geminiApiKey';
-var MODEL = 'gemini-2.5-flash';
+var MODEL = 'gemini-3.1-flash';
 var API_BASE = 'https://generativelanguage.googleapis.com/v1beta';
 var MAX_CONTEXT_PAPERS = 30;
 var MAX_HISTORY = 6; // last 3 exchanges
@@ -102,11 +102,12 @@ function bindChatEvents() {
         });
     });
 
-    // Event delegation for source chip clicks (survives re-renders)
+    // Event delegation for citation links and reference items (survives re-renders)
     document.getElementById('chat-messages').addEventListener('click', function(e) {
-        var chip = e.target.closest('.chat-source-chip');
-        if (chip && chip.dataset.paperId) {
-            navigateToPaper(chip.dataset.paperId);
+        var link = e.target.closest('.cite-link, .chat-ref-item');
+        if (link && link.dataset.paperId) {
+            e.preventDefault();
+            navigateToPaper(link.dataset.paperId);
         }
     });
 }
@@ -323,7 +324,8 @@ function buildSystemPrompt(context) {
         'Perspektive: Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness\n\n' +
         'Regeln:\n' +
         '- Antworte auf Deutsch\n' +
-        '- Beziehe dich auf konkrete Papers wenn moeglich (Titel und Autor:innen nennen)\n' +
+        '- ZITIERE IMMER im Format "Autor et al. (Jahr)" oder "Autor (Jahr)" wenn du dich auf Papers beziehst\n' +
+        '- Nenne den vollen Titel beim ersten Erwaehnen eines Papers\n' +
         '- Unterscheide klar zwischen LLM-Bewertung und Expert:innen-Bewertung\n' +
         '- Wenn du etwas nicht aus dem Korpus beantworten kannst, sage das ehrlich\n' +
         '- Halte Antworten praezise und fokussiert\n\n' +
@@ -344,7 +346,7 @@ function handleStream(response) {
                 if (messages.length > 0) messages[messages.length - 1].complete = true;
                 isStreaming = false;
                 updateSendButton(false);
-                renderSourceBar();
+                finalizeLastMessage();
                 return;
             }
 
@@ -391,15 +393,19 @@ function renderMessages() {
 
     var html = messages.map(function(msg) {
         var cls = msg.role === 'user' ? 'chat-msg-user' : 'chat-msg-model';
-        var content = msg.role === 'model'
-            ? renderMarkdown(msg.text || '')
-            : window.EC.escapeHtml(msg.text);
+        var content;
+        if (msg.role === 'model') {
+            // Use finalized HTML (with citation links) if available
+            content = (msg.complete && msg.finalHtml) ? msg.finalHtml : renderMarkdown(msg.text || '');
+        } else {
+            content = window.EC.escapeHtml(msg.text);
+        }
         var msgHtml = '<div class="chat-msg ' + cls + '">' +
             '<div class="chat-msg-content">' + content + '</div>';
 
-        // Include source bar for completed model messages (persists across re-renders)
-        if (msg.complete && msg.sources && msg.sources.length > 0) {
-            msgHtml += buildSourceBarHtml(msg);
+        // Include reference list for completed model messages
+        if (msg.complete && msg.citedPapers && msg.citedPapers.length > 0) {
+            msgHtml += buildReferenceListHtml(msg.citedPapers);
         }
 
         msgHtml += '</div>';
@@ -433,7 +439,9 @@ function renderMarkdown(text) {
     // Headers
     html = html.replace(/^### (.+)$/gm, '</p><h4>$1</h4><p>');
     html = html.replace(/^## (.+)$/gm, '</p><h3>$1</h3><p>');
-    // Lists
+    // Numbered lists
+    html = html.replace(/^\d+\.\s+(.+)$/gm, '</p><li>$1</li><p>');
+    // Unordered lists
     html = html.replace(/^- (.+)$/gm, '</p><li>$1</li><p>');
     // Wrap in paragraphs
     html = html.replace(/\n\n/g, '</p><p>');
@@ -448,75 +456,106 @@ function renderMarkdown(text) {
 }
 
 // ============================================================
-// Source Bar (papers used as context, clickable -> Korpus tab)
+// Citation Linking & Reference List
 // ============================================================
 
-function buildSourceBarHtml(msg) {
-    var cited = matchCitedPapers(msg.text, msg.sources);
-    var displayed = cited.length > 0 ? cited : msg.sources.slice(0, 5);
+function finalizeLastMessage() {
+    var lastMsg = messages[messages.length - 1];
+    if (!lastMsg || lastMsg.role !== 'model' || !lastMsg.text) return;
 
-    var html = '<div class="chat-sources">' +
-        '<div class="chat-sources-label"><i class="fas fa-book-open"></i> Quellen aus dem Korpus</div>' +
-        '<div class="chat-sources-list">';
-
-    displayed.forEach(function(paper) {
-        var shortTitle = paper.title.length > 60 ? paper.title.substring(0, 57) + '...' : paper.title;
-        var authorShort = (paper.author_year || '').split('(')[0].trim();
-        var statusClass = paper.benchmark.agreement === false ? 'source-diverge' :
-                          paper.benchmark.agreement === true ? 'source-agree' : 'source-llmonly';
-        html += '<button class="chat-source-chip ' + statusClass + '" data-paper-id="' +
-            window.EC.escapeHtml(paper.id) + '" title="' + window.EC.escapeHtml(paper.title) + '">' +
-            '<span class="source-author">' + window.EC.escapeHtml(authorShort) + '</span>' +
-            '<span class="source-title">' + window.EC.escapeHtml(shortTitle) + '</span>' +
-            '<span class="source-badge">' + (paper.llm.decision === 'Include' ? 'Incl' : 'Excl') + '</span>' +
-        '</button>';
-    });
-
-    html += '</div></div>';
-    return html;
-}
-
-function renderSourceBar() {
     var container = document.getElementById('chat-messages');
     if (!container) return;
-    var lastMsg = messages[messages.length - 1];
-    if (!lastMsg || lastMsg.role !== 'model' || !lastMsg.sources || lastMsg.sources.length === 0) return;
-
-    // Append source bar to last message element (live, after streaming)
     var msgEls = container.querySelectorAll('.chat-msg');
-    if (msgEls.length > 0) {
-        msgEls[msgEls.length - 1].insertAdjacentHTML('beforeend', buildSourceBarHtml(lastMsg));
+    if (msgEls.length === 0) return;
+    var lastEl = msgEls[msgEls.length - 1];
+    var contentEl = lastEl.querySelector('.chat-msg-content');
+
+    // Render markdown, then link citations
+    var rendered = renderMarkdown(lastMsg.text);
+    var result = linkifyCitations(rendered, lastMsg.sources || []);
+
+    // Store for re-rendering
+    lastMsg.finalHtml = result.html;
+    lastMsg.citedPapers = result.cited;
+    contentEl.innerHTML = result.html;
+
+    // Append reference list
+    if (result.cited.length > 0) {
+        lastEl.insertAdjacentHTML('beforeend', buildReferenceListHtml(result.cited));
     }
+
     container.scrollTop = container.scrollHeight;
 }
 
-function matchCitedPapers(responseText, contextPapers) {
-    if (!responseText) return [];
-    var textLower = responseText.toLowerCase();
+function linkifyCitations(html, contextPapers) {
+    var allPapers = window.EC.getAllPapers();
+    var cited = [];
 
-    return contextPapers.filter(function(p) {
-        // Match by author surname (first author before comma or "et al")
-        var authorMatch = false;
-        if (p.author_year) {
-            var surname = p.author_year.split(/[,(]/)[0].trim().split(' ').pop();
-            if (surname && surname.length > 3) {
-                authorMatch = textLower.indexOf(surname.toLowerCase()) >= 0;
-            }
-        }
-        // Match by significant title words (3+ consecutive words)
-        var titleMatch = false;
-        if (p.title) {
-            var titleWords = p.title.split(/\s+/).filter(function(w) { return w.length > 3; });
-            for (var i = 0; i < titleWords.length - 2; i++) {
-                var phrase = titleWords.slice(i, i + 3).join(' ').toLowerCase();
-                if (textLower.indexOf(phrase) >= 0) {
-                    titleMatch = true;
-                    break;
+    // Match patterns: "Author (Year)", "Author et al. (Year)", "Author &amp; Author (Year)"
+    var result = html.replace(/([\w\u00C0-\u024F][\w\u00C0-\u024F\u2019'-]+)(\s+et\s+al\.|\s+&amp;\s+[\w\u00C0-\u024F\u2019'-]+)?\s*\((\d{4})\)/g,
+        function(match, surname, suffix, year) {
+            var paper = findPaperByAuthorYear(surname, year, contextPapers, allPapers);
+            if (paper) {
+                if (!cited.some(function(c) { return c.id === paper.id; })) {
+                    cited.push(paper);
                 }
+                return '<a class="cite-link" data-paper-id="' +
+                    window.EC.escapeHtml(paper.id) + '" title="' +
+                    window.EC.escapeHtml(paper.title) + '">' + match + '</a>';
+            }
+            return match;
+        });
+
+    return { html: result, cited: cited };
+}
+
+function findPaperByAuthorYear(surname, year, contextPapers, allPapers) {
+    var sLower = surname.toLowerCase();
+    // Search context papers first (more likely matches), then all papers
+    var pools = [contextPapers || [], allPapers];
+    for (var p = 0; p < pools.length; p++) {
+        for (var i = 0; i < pools[p].length; i++) {
+            var paper = pools[p][i];
+            if (paper.year == year && paper.author_year &&
+                paper.author_year.toLowerCase().indexOf(sLower) >= 0) {
+                return paper;
             }
         }
-        return authorMatch || titleMatch;
+    }
+    return null;
+}
+
+function buildReferenceListHtml(citedPapers) {
+    if (!citedPapers || citedPapers.length === 0) return '';
+
+    var html = '<div class="chat-references">' +
+        '<div class="chat-ref-label"><i class="fas fa-book-open"></i> Referenzen</div>';
+
+    citedPapers.forEach(function(paper, i) {
+        var shortTitle = paper.title.length > 70 ? paper.title.substring(0, 67) + '...' : paper.title;
+        var authorShort = (paper.author_year || '').split('(')[0].trim();
+        var statusClass = paper.benchmark.agreement === false ? 'ref-diverge' :
+                          paper.benchmark.agreement === true ? 'ref-agree' : 'ref-llmonly';
+        var statusLabel = paper.benchmark.agreement === false ? 'Divergenz' :
+                          paper.benchmark.agreement === true ? 'Konsens' : 'nur LLM';
+
+        html += '<a class="chat-ref-item ' + statusClass + '" data-paper-id="' +
+            window.EC.escapeHtml(paper.id) + '" title="Im Korpus ansehen">' +
+            '<span class="ref-num">' + (i + 1) + '</span>' +
+            '<span class="ref-body">' +
+                '<span class="ref-author">' + window.EC.escapeHtml(authorShort) + '</span> ' +
+                '<span class="ref-title">' + window.EC.escapeHtml(shortTitle) + '</span>' +
+            '</span>' +
+            '<span class="ref-meta">' +
+                '<span class="ref-decision">' + paper.llm.decision + '</span>' +
+                '<span class="ref-status ref-status--' + statusClass + '">' + statusLabel + '</span>' +
+            '</span>' +
+            '<i class="fas fa-arrow-right ref-arrow"></i>' +
+        '</a>';
     });
+
+    html += '</div>';
+    return html;
 }
 
 function navigateToPaper(paperId) {
