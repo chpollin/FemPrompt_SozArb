@@ -651,11 +651,12 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    width: min(680px, 90vw);
+    width: min(480px, 45vw);
     height: 100%;
     background: white;
     overflow-y: auto;
     border-left: 1px solid var(--gray-200);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.08);
     animation: slideIn 0.25s ease;
 }
 
@@ -707,6 +708,43 @@ main {
 
 .modal-body {
     padding: 1.5rem 2rem 2rem;
+}
+
+/* Panel-open state (desktop): table adapts, no blocking overlay */
+@media (min-width: 769px) {
+    body.panel-open .modal-overlay {
+        background: transparent;
+        pointer-events: none;
+    }
+
+    body.panel-open .papers-table .col-year,
+    body.panel-open .papers-table .col-status,
+    body.panel-open .papers-table .col-cats {
+        display: none;
+    }
+
+    body.panel-open .papers-table .col-title {
+        max-width: 260px;
+    }
+
+    body.panel-open .papers-table .col-author {
+        max-width: 120px;
+    }
+
+    body.panel-open .search-filters,
+    body.panel-open .results-counter,
+    body.panel-open .category-filter-row {
+        margin-right: 0;
+    }
+}
+
+/* Active row highlight */
+.papers-table tbody tr.row--active {
+    background: var(--gray-100);
+}
+
+.papers-table tbody tr.row--active:hover {
+    background: var(--gray-100);
 }
 
 .detail-section {
