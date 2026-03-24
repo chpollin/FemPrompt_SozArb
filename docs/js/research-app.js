@@ -98,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderCategoryChips();
         applyFilters();
         logInit();
+        initRichTooltips();
         // Chat is the default tab -- initialize immediately
         if (window.initWissensChat) window.initWissensChat();
     }).catch(function(error) {
@@ -551,6 +552,175 @@ function setupDropdownNav() {
 }
 
 // Exposed globally for cross-view navigation (from chat, wissensnetz, etc.)
+// ============================================================
+// Rich Tooltips (data-driven, HTML content)
+// ============================================================
+
+function initRichTooltips() {
+    // Create tooltip container
+    var tip = document.createElement('div');
+    tip.className = 'rich-tooltip';
+    tip.style.display = 'none';
+    document.body.appendChild(tip);
+
+    // Build tooltip content from real data
+    var tipContent = buildTooltipContent();
+
+    // Attach to all .has-tip elements
+    document.querySelectorAll('.has-tip').forEach(function(el) {
+        var key = el.dataset.tipKey;
+        if (!key) return;
+
+        el.addEventListener('mouseenter', function(e) {
+            var html = tipContent[key];
+            if (!html) return;
+            tip.innerHTML = html;
+            tip.style.display = 'block';
+            positionTooltip(tip, el);
+        });
+
+        el.addEventListener('mouseleave', function() {
+            tip.style.display = 'none';
+        });
+    });
+}
+
+function positionTooltip(tip, anchor) {
+    var rect = anchor.getBoundingClientRect();
+    var tipRect = tip.getBoundingClientRect();
+    var left = rect.left + rect.width / 2 - tipRect.width / 2;
+    var top = rect.bottom + 10;
+
+    // Keep within viewport
+    if (left < 8) left = 8;
+    if (left + tipRect.width > window.innerWidth - 8) left = window.innerWidth - tipRect.width - 8;
+    if (top + tipRect.height > window.innerHeight - 8) top = rect.top - tipRect.height - 10;
+
+    tip.style.left = left + 'px';
+    tip.style.top = top + window.scrollY + 'px';
+}
+
+function buildTooltipContent() {
+    var papers = allPapers;
+    var meta = vaultMeta;
+    var cats = kappas;
+
+    // --- Papers ---
+    var yearCounts = {};
+    papers.forEach(function(p) { if (p.year) yearCounts[p.year] = (yearCounts[p.year] || 0) + 1; });
+    var topYears = Object.keys(yearCounts).sort(function(a, b) { return yearCounts[b] - yearCounts[a]; }).slice(0, 5);
+    var yearBars = topYears.map(function(y) {
+        var pct = Math.round(yearCounts[y] / papers.length * 100);
+        return '<div class="tip-bar-row"><span class="tip-bar-label">' + y + '</span>' +
+            '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%"></div></div>' +
+            '<span class="tip-bar-val">' + yearCounts[y] + '</span></div>';
+    }).join('');
+
+    var tipPapers = '<div class="tip-title">Korpus-Zusammensetzung</div>' +
+        '<div class="tip-text">Identifiziert via Deep Research (4 KI-Provider) + manuelle Ergaenzung.</div>' +
+        '<div class="tip-section">Jahrgaenge</div>' + yearBars;
+
+    // --- Wissensdokumente ---
+    var kdCount = papers.filter(function(p) { return p.knowledge_doc; }).length;
+    var pdfRate = Math.round(257 / 326 * 100);
+    var kdRate = Math.round(kdCount / 326 * 100);
+
+    var tipWD = '<div class="tip-title">LLM-Pipeline</div>' +
+        '<div class="tip-pipeline">' +
+            '<span class="tip-step">326 Papers</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
+            '<span class="tip-step">257 PDFs <small>(' + pdfRate + '%)</small></span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
+            '<span class="tip-step">252 Markdown</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
+            '<span class="tip-step tip-step-hl">' + kdCount + ' Wissensdok.</span>' +
+        '</div>' +
+        '<div class="tip-text">Jedes Wissensdokument: Kernbefund, Forschungsfrage, Methodik, Kategorie-Evidenz. Qualitaet: 97.2% verifiziert.</div>';
+
+    // --- Expert:innen-Bewertungen ---
+    var withDecision = papers.filter(function(p) {
+        return p.human && p.human.decision;
+    }).length;
+    var humanInclude = papers.filter(function(p) {
+        return p.human && p.human.decision === 'Include';
+    }).length;
+    var humanExclude = withDecision - humanInclude;
+    var divergences = papers.filter(function(p) {
+        return p.benchmark.agreement === false;
+    }).length;
+    var inclPct = withDecision ? Math.round(humanInclude / withDecision * 100) : 0;
+
+    var tipHuman = '<div class="tip-title">Duale Bewertung</div>' +
+        '<div class="tip-grid">' +
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--success)">' + humanInclude + '</span><span class="tip-stat-lbl">Include (' + inclPct + '%)</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--gray-500)">' + humanExclude + '</span><span class="tip-stat-lbl">Exclude</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--danger)">' + divergences + '</span><span class="tip-stat-lbl">Divergenzen</span></div>' +
+        '</div>' +
+        '<div class="tip-text">Fachwissenschaftler:innen (Sackl-Sharif, Klinger) bewerten nach identischem 10-Kategorien-Schema wie das LLM.</div>';
+
+    // --- 10 Kategorien ---
+    var catNames = CATEGORIES;
+    var catBars = catNames.map(function(cat, i) {
+        var count = papers.filter(function(p) { return p.llm.all_categories[cat] === 1; }).length;
+        var pct = Math.round(count / papers.length * 100);
+        var color = CAT_COLORS[cat];
+        var groupLabel = i < 4 ? '' : (i === 4 ? '<div class="tip-section" style="margin-top:0.375rem;">Perspektive</div>' : '');
+        return groupLabel + '<div class="tip-bar-row"><span class="tip-bar-label">' + cat.replace(/_/g, ' ') + '</span>' +
+            '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>' +
+            '<span class="tip-bar-val">' + pct + '%</span></div>';
+    }).join('');
+
+    var tipCats = '<div class="tip-title">10 Bewertungskategorien</div>' +
+        '<div class="tip-section">Gegenstand</div>' + catBars;
+
+    // --- Nav buttons ---
+    var llmInclude = papers.filter(function(p) { return p.llm.decision === 'Include'; }).length;
+    var conceptCount = (conceptData && conceptData.nodes) ? conceptData.nodes.length : 136;
+    var topConcepts = (conceptData && conceptData.nodes)
+        ? conceptData.nodes.slice().sort(function(a, b) { return b.frequency - a.frequency; }).slice(0, 5)
+        : [];
+
+    var tipChat = '<div class="tip-title">Wissens-Chat</div>' +
+        '<div class="tip-text">Fragen Sie das synthetisierte Wissen. Ein LLM (Gemini 3 Flash) antwortet mit Inline-Zitationen, die direkt zum Korpus verlinken.</div>' +
+        '<div class="tip-text tip-muted">Zweifach LLM-vermittelt: Wissensextraktion + Antwortgenerierung.</div>';
+
+    var tipNetz = '<div class="tip-title">Wissensnetz</div>' +
+        '<div class="tip-text">' + conceptCount + ' Konzepte aus ' + kdCount + ' Wissensdokumenten.</div>';
+    if (topConcepts.length > 0) {
+        tipNetz += '<div class="tip-section">Haeufigste Konzepte</div>';
+        topConcepts.forEach(function(c) {
+            var pct = Math.round(c.frequency / papers.length * 100);
+            tipNetz += '<div class="tip-bar-row"><span class="tip-bar-label">' + escapeHtml(c.label) + '</span>' +
+                '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%;background:var(--primary)"></div></div>' +
+                '<span class="tip-bar-val">' + c.frequency + '</span></div>';
+        });
+    }
+
+    var tipVergleich = '<div class="tip-title">Bewertungsvergleich</div>' +
+        '<div class="tip-grid">' +
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--info)">68%</span><span class="tip-stat-lbl">LLM Include</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--warning)">42%</span><span class="tip-stat-lbl">Human Include</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val">0.035</span><span class="tip-stat-lbl">Kappa</span></div>' +
+        '</div>' +
+        '<div class="tip-text">78 Faelle LLM-Include/Human-Exclude vs. 23 umgekehrt.</div>';
+
+    var tipKorpus = '<div class="tip-title">Korpus</div>' +
+        '<div class="tip-grid">' +
+            '<div class="tip-stat"><span class="tip-stat-val">' + papers.length + '</span><span class="tip-stat-lbl">Papers</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--success)">' + llmInclude + '</span><span class="tip-stat-lbl">LLM Include</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val">' + withDecision + '</span><span class="tip-stat-lbl">Human bewertet</span></div>' +
+        '</div>' +
+        '<div class="tip-text">Durchsuchbar, filterbar, sortierbar. Detail-Panel mit Assessment-Vergleich.</div>';
+
+    return {
+        papers: tipPapers,
+        wissensdok: tipWD,
+        human: tipHuman,
+        kategorien: tipCats,
+        chat: tipChat,
+        wissensnetz: tipNetz,
+        vergleich: tipVergleich,
+        korpus: tipKorpus
+    };
+}
+
 window.switchView = function(viewId) { switchView(viewId); };
 
 function switchView(viewId) {

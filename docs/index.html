@@ -43,10 +43,10 @@
                     <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
                 </div>
                 <nav class="header-nav" aria-label="Hauptnavigation">
-                    <button class="nav-view-btn active has-tip" data-view="chat" data-tip="Fragen Sie das synthetisierte Wissen aus dem Korpus. Ein LLM (Gemini 3 Flash) antwortet mit verifizierbaren Inline-Zitationen.">Wissens-Chat</button>
-                    <button class="nav-view-btn has-tip" data-view="wissensnetz" data-tip="136 Konzepte als interaktiver Graph. Extrahiert aus 249 Wissensdokumenten per LLM. Klick zeigt Ego-Netzwerk + Definition.">Wissensnetz</button>
-                    <button class="nav-view-btn has-tip" data-view="vergleich" data-tip="LLM vs. Expert:innen: Wo stimmen sie ueberein, wo nicht? Slope Chart, Konfusionsmatrix, Kappa pro Kategorie.">Bewertungsvergleich</button>
-                    <button class="nav-view-btn nav-view-korpus has-tip" data-view="korpus" data-tip="Alle 326 Papers durchsuchen, filtern, sortieren. Detail-Panel mit Assessment-Vergleich und LLM-Begruendung.">Korpus</button>
+                    <button class="nav-view-btn active has-tip" data-view="chat" data-tip-key="chat">Wissens-Chat</button>
+                    <button class="nav-view-btn has-tip" data-view="wissensnetz" data-tip-key="wissensnetz">Wissensnetz</button>
+                    <button class="nav-view-btn has-tip" data-view="vergleich" data-tip-key="vergleich">Bewertungsvergleich</button>
+                    <button class="nav-view-btn nav-view-korpus has-tip" data-view="korpus" data-tip-key="korpus">Korpus</button>
                     <span class="nav-sep"></span>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="help.html" class="nav-link">Hilfe</a>
@@ -60,13 +60,13 @@
 
     <!-- Compact stats bar with tooltips -->
     <div class="stats-bar" id="intro-section">
-        <span class="stat-item has-tip" data-tip="Identifiziert via Deep Research (4 KI-Provider: Claude, Gemini, ChatGPT, Perplexity) + manuelle Ergaenzung. Zotero-Bibliothek als Quelle."><strong id="total-count-intro">326</strong> Papers</span>
+        <span class="stat-item has-tip" data-tip-key="papers"><strong id="total-count-intro">326</strong> Papers</span>
         <span class="stat-sep"></span>
-        <span class="stat-item has-tip" data-tip="PDFs automatisch beschafft (4 Fallback-Strategien), zu Markdown konvertiert (Docling), dann per LLM (Claude Haiku 4.5) zu strukturierten Wissensdokumenten verdichtet: Kernbefund, Methodik, Kategorie-Evidenz."><strong id="kd-count-intro">249</strong> Wissensdokumente</span>
+        <span class="stat-item has-tip" data-tip-key="wissensdok"><strong id="kd-count-intro">249</strong> Wissensdokumente</span>
         <span class="stat-sep"></span>
-        <span class="stat-item has-tip" data-tip="Manuelle Klassifikation durch Fachwissenschaftler:innen (Sackl-Sharif, Klinger) nach demselben 10-Kategorien-Schema wie das LLM. 210 von 326 Papers bewertet."><strong id="human-count-intro">210</strong> Expert:innen-Bewertungen</span>
+        <span class="stat-item has-tip" data-tip-key="human"><strong id="human-count-intro">210</strong> Expert:innen-Bewertungen</span>
         <span class="stat-sep"></span>
-        <span class="stat-item has-tip" data-tip="Gegenstand: AI Literacies, Generative KI, Prompting, KI Sonstige. Perspektive: Soziale Arbeit, Bias/Ungleichheit, Gender, Diversitaet, Feministisch, Fairness."><strong>10</strong> Kategorien</span>
+        <span class="stat-item has-tip" data-tip-key="kategorien"><strong>10</strong> Kategorien</span>
     </div>
 
     <!-- Main Content -->
