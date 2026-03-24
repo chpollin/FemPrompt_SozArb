@@ -50,6 +50,8 @@ var benchmarkInitialized = false;
 var wissensnetzInitialized = false;
 var chatInitialized = true; // chat is default tab, initialized on load
 var conceptData = null;
+var divergencePatterns = null;
+var divergencesList = [];
 var currentPage = 1;
 var currentSort = 'relevance';
 var PAGE_SIZE = 50;
@@ -72,12 +74,25 @@ window.EC = {
     getKappas: function() { return kappas; },
     getActiveCategories: function() { return activeCategories; },
     getConceptData: function() { return conceptData; },
+    getDivergencePatterns: function() { return divergencePatterns; },
+    getDivergences: function() { return divergencesList; },
     // Actions
     setFilteredPapers: function(p) { filteredPapers = p; },
     renderPapers: function(p) { renderPapers(p); },
     showPaperDetail: function(p, list) { showPaperDetail(p, list); },
     closePaperModal: function() { closePaperModal(); },
     applyFilters: function() { applyFilters(); },
+    // Category divergences: papers where a specific category is divergent
+    getCategoryDivergences: function(cat) {
+        return divergencesList.filter(function(p) {
+            return p.divergence && p.divergence.category_comparison &&
+                p.divergence.category_comparison[cat] &&
+                p.divergence.category_comparison[cat].divergent;
+        });
+    },
+    // Cross-view navigation
+    focusConcept: function(id) { if (window.focusWissensnetzConcept) window.focusWissensnetzConcept(id); },
+    filterDivergencePattern: function(pat) { if (window.filterDivergencePattern) window.filterDivergencePattern(pat); },
 };
 
 // HTML onclick aliases
@@ -99,8 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
         applyFilters();
         logInit();
         initRichTooltips();
-        // Chat is the default tab -- initialize immediately
-        if (window.initWissensChat) window.initWissensChat();
+        // Handle hash-based navigation (from about/help links)
+        var hash = window.location.hash.replace('#', '');
+        if (hash && ['chat', 'wissensnetz', 'vergleich', 'korpus'].indexOf(hash) >= 0) {
+            switchView(hash);
+        } else {
+            // Chat is the default tab -- initialize immediately
+            if (window.initWissensChat) window.initWissensChat();
+        }
     }).catch(function(error) {
         console.error('[Evidence] init failed:', error);
         document.getElementById('papers-grid').innerHTML =
@@ -140,11 +161,10 @@ function loadData() {
             includeScore: true
         });
 
-        // Load concept data for Wissensnetz (lightweight extraction)
-        return fetch('data/concept_graph.json').then(function(cgRes) {
+        // Load concept data + divergence patterns in parallel
+        var cgFetch = fetch('data/concept_graph.json').then(function(cgRes) {
             if (!cgRes.ok) return;
             return cgRes.json().then(function(cgData) {
-                // Build paper-like objects with concept arrays for wissensnetz.js
                 var conceptPapers = allPapers.map(function(p) {
                     var concepts = cgData.paper_concepts[p.id] || [];
                     return {
@@ -166,6 +186,55 @@ function loadData() {
         }).catch(function(e) {
             console.warn('[Evidence] Concept data not available:', e.message);
         });
+
+        var divFetch = fetch('data/promptotyping_v2.json').then(function(ptRes) {
+            if (!ptRes.ok) return;
+            return ptRes.json().then(function(ptData) {
+                var ptMeta = ptData.meta || {};
+                divergencePatterns = {
+                    pattern_distribution: ptMeta.pattern_distribution || {},
+                    asymmetry: ptMeta.asymmetry || {}
+                };
+
+                // Match divergences to allPapers by normalized title
+                var titleMap = {};
+                allPapers.forEach(function(p) {
+                    var key = (p.title || '').toLowerCase().substring(0, 80).trim();
+                    if (key) titleMap[key] = p;
+                });
+
+                var matched = 0;
+                (ptData.divergences || []).forEach(function(div) {
+                    var key = (div.title || '').toLowerCase().substring(0, 80).trim();
+                    var paper = titleMap[key];
+                    if (!paper && div.author_year) {
+                        paper = allPapers.find(function(p) {
+                            return p.author_year === div.author_year;
+                        });
+                    }
+                    if (paper) {
+                        paper.divergence = {
+                            pattern: div.pattern,
+                            justification: div.justification,
+                            severity: div.severity,
+                            category_comparison: div.category_comparison,
+                            llm_reasoning: div.llm_reasoning,
+                            disagreement_type: div.disagreement_type,
+                            affected_categories: div.affected_categories,
+                            n_affected: div.n_affected
+                        };
+                        divergencesList.push(paper);
+                        matched++;
+                    }
+                });
+                console.log('[Evidence] Divergence patterns: ' + matched + '/' +
+                    (ptData.divergences || []).length + ' matched');
+            });
+        }).catch(function(e) {
+            console.warn('[Evidence] Divergence patterns not available:', e.message);
+        });
+
+        return Promise.all([cgFetch, divFetch]);
     });
 }
 
@@ -738,7 +807,7 @@ function switchView(viewId) {
 
     // Lazy-init on first visit
     if (viewId === 'vergleich' && !benchmarkInitialized) {
-        if (window.initializeBenchmark) window.initializeBenchmark();
+        if (window.initializeKategorien) window.initializeKategorien();
         benchmarkInitialized = true;
     }
     if (viewId === 'wissensnetz' && !wissensnetzInitialized && conceptData) {

@@ -30,6 +30,7 @@ function initializeBenchmark() {
         catch(e) { fail.push(label); console.error('[Benchmark] ' + label + ':', e); }
     };
     run('metrics', renderBenchmarkMetrics);
+    run('patterns', renderDivergencePatterns);
     run('slope', renderSlopeChart);
     run('overlap', renderOverlapTreemap);
     run('kappa-chart', renderKappaChart);
@@ -46,6 +47,17 @@ function initializeBenchmark() {
 
     var sev = document.getElementById('filter-severity');
     if (sev) sev.addEventListener('change', renderDisagreementsTable);
+
+    var patFilter = document.getElementById('filter-pattern');
+    if (patFilter) patFilter.addEventListener('change', renderDisagreementsTable);
+
+    // Lazy-render kappa chart on details open
+    var kappaDetails = document.getElementById('kappa-details');
+    if (kappaDetails) {
+        kappaDetails.addEventListener('toggle', function() {
+            if (kappaDetails.open && !kappaChartInstance) renderKappaChart();
+        });
+    }
 }
 
 // ---- Metric Tiles ----
@@ -86,9 +98,95 @@ function renderBenchmarkMetrics() {
         '</div>';
 }
 
+// ---- Divergenz-Muster Visualization ----
+
+var PATTERN_COLORS = {
+    'Semantische Expansion': { bg: '#4b7bab', badge: 'pattern-badge-semantic' },
+    'Keyword-Inklusion':     { bg: '#d4943a', badge: 'pattern-badge-keyword' },
+    'Implizite Feldzugehoerigkeit': { bg: '#78716c', badge: 'pattern-badge-implicit' }
+};
+
+var PATTERN_DESCRIPTIONS = {
+    'Semantische Expansion': 'Das LLM interpretiert Kategorien breiter -- es erkennt Relevanz, wo disziplinaeres Fachwissen engere Grenzen zieht.',
+    'Keyword-Inklusion': 'Das LLM schliesst von Schluesselwoertern auf Relevanz, ohne den inhaltlichen Kontext zu pruefen.',
+    'Implizite Feldzugehoerigkeit': 'Das LLM ordnet Papers einem Feld zu, das implizit mitschwingt, aber nicht explizit adressiert wird.'
+};
+
+var activePattern = null;
+
+function renderDivergencePatterns() {
+    var container = document.getElementById('pattern-viz-container');
+    if (!container) return;
+
+    var patterns = EC.getDivergencePatterns();
+    if (!patterns || !patterns.pattern_distribution) {
+        document.getElementById('pattern-viz-card').style.display = 'none';
+        return;
+    }
+
+    var dist = patterns.pattern_distribution;
+    var total = 0;
+    var order = ['Semantische Expansion', 'Keyword-Inklusion', 'Implizite Feldzugehoerigkeit'];
+    order.forEach(function(k) { total += (dist[k] || 0); });
+    if (total === 0) return;
+
+    // Proportional bar
+    var barHtml = '<div class="pattern-bar">';
+    order.forEach(function(name) {
+        var count = dist[name] || 0;
+        var pct = (count / total * 100).toFixed(1);
+        var col = PATTERN_COLORS[name] || { bg: '#999' };
+        barHtml += '<div class="pattern-segment" data-pattern="' + EC.escapeHtml(name) + '" ' +
+            'style="width:' + pct + '%;background:' + col.bg + ';">' +
+            '<span>' + count + ' (' + Math.round(pct) + '%)</span></div>';
+    });
+    barHtml += '</div>';
+
+    // Cards
+    var cardsHtml = '<div class="pattern-cards">';
+    order.forEach(function(name) {
+        var count = dist[name] || 0;
+        var pct = Math.round(count / total * 100);
+        var col = PATTERN_COLORS[name] || { bg: '#999' };
+        cardsHtml += '<div class="pattern-card" data-pattern="' + EC.escapeHtml(name) + '">' +
+            '<div class="pattern-card-header">' +
+                '<span class="pattern-card-dot" style="background:' + col.bg + ';"></span>' +
+                '<span class="pattern-card-name">' + EC.escapeHtml(name) + '</span>' +
+                '<span class="pattern-card-count">' + count + ' (' + pct + '%)</span>' +
+            '</div>' +
+            '<p class="pattern-card-desc">' + (PATTERN_DESCRIPTIONS[name] || '') + '</p>' +
+        '</div>';
+    });
+    cardsHtml += '</div>';
+
+    container.innerHTML = barHtml + cardsHtml;
+
+    // Click handlers: filter disagreements table by pattern
+    container.querySelectorAll('[data-pattern]').forEach(function(el) {
+        el.addEventListener('click', function() {
+            var pat = el.dataset.pattern;
+            if (activePattern === pat) {
+                activePattern = null;
+            } else {
+                activePattern = pat;
+            }
+            // Update active state on cards
+            container.querySelectorAll('.pattern-card').forEach(function(c) {
+                c.classList.toggle('active', c.dataset.pattern === activePattern);
+            });
+            // Update pattern filter dropdown if present
+            var patFilter = document.getElementById('filter-pattern');
+            if (patFilter) patFilter.value = activePattern || 'all';
+            renderDisagreementsTable();
+        });
+    });
+}
+
 // ---- Kategorie-Divergenz: Slope Chart ----
 
 var radarChartInstance = null;
+
+var highlightedCategory = null;
 
 function renderSlopeChart() {
     var canvas = document.getElementById('radar-chart');
@@ -109,9 +207,12 @@ function renderSlopeChart() {
             borderColor: color,
             backgroundColor: 'transparent',
             borderWidth: Math.abs(diff) > 20 ? 2.5 : 1.5,
-            pointRadius: 4,
+            pointRadius: 5,
+            pointHoverRadius: 7,
             pointBackgroundColor: color,
-            tension: 0
+            tension: 0,
+            _catKey: cat,
+            _diff: diff
         };
     });
 
@@ -122,6 +223,7 @@ function renderSlopeChart() {
         data: { labels: ['Human', 'LLM'], datasets: datasets },
         options: {
             responsive: true, maintainAspectRatio: false,
+            interaction: { mode: 'nearest', intersect: false },
             plugins: {
                 legend: { display: false },
                 tooltip: { callbacks: {
@@ -138,6 +240,32 @@ function renderSlopeChart() {
                 y: { beginAtZero: false, min: 0, max: 100,
                      ticks: { callback: function(v) { return v + '%'; } },
                      title: { display: true, text: 'Anteil Ja-Klassifikationen (%)' } }
+            },
+            onHover: function(evt, elements) {
+                if (highlightedCategory) return; // don't override click highlight
+                if (elements.length > 0) {
+                    var idx = elements[0].datasetIndex;
+                    slopeHighlight(idx);
+                } else {
+                    slopeReset();
+                }
+            },
+            onClick: function(evt, elements) {
+                if (elements.length > 0) {
+                    var idx = elements[0].datasetIndex;
+                    var cat = CATS[idx];
+                    if (highlightedCategory === cat) {
+                        highlightedCategory = null;
+                        slopeReset();
+                    } else {
+                        highlightedCategory = cat;
+                        slopeHighlight(idx);
+                        filterDisagreementsByCategory(cat);
+                    }
+                } else {
+                    highlightedCategory = null;
+                    slopeReset();
+                }
             }
         },
         plugins: [{
@@ -145,21 +273,21 @@ function renderSlopeChart() {
             afterDatasetsDraw: function(chart) {
                 var ctx = chart.ctx;
                 ctx.save();
-                ctx.font = '9px Inter, sans-serif';
+                ctx.font = '11px Inter, sans-serif';
                 ctx.textAlign = 'left';
-                // Collect label positions, then deconflict
                 var labels = [];
                 chart.data.datasets.forEach(function(ds, i) {
                     var meta = chart.getDatasetMeta(i);
                     if (!meta.data.length) return;
                     var last = meta.data[meta.data.length - 1];
-                    labels.push({ text: ds.label, x: last.x + 4, y: last.y + 3, color: ds.borderColor });
+                    var diff = ds._diff;
+                    var diffLabel = Math.abs(diff) > 15 ? ' ' + (diff > 0 ? '+' : '') + Math.round(diff) + 'pp' : '';
+                    labels.push({ text: ds.label + diffLabel, x: last.x + 6, y: last.y + 3, color: ds.borderColor, idx: i });
                 });
-                // Sort by y position, enforce minimum gap of 11px
                 labels.sort(function(a, b) { return a.y - b.y; });
                 for (var i = 1; i < labels.length; i++) {
-                    if (labels[i].y - labels[i - 1].y < 11) {
-                        labels[i].y = labels[i - 1].y + 11;
+                    if (labels[i].y - labels[i - 1].y < 13) {
+                        labels[i].y = labels[i - 1].y + 13;
                     }
                 }
                 labels.forEach(function(l) {
@@ -170,6 +298,40 @@ function renderSlopeChart() {
             }
         }]
     });
+}
+
+function slopeHighlight(idx) {
+    if (!radarChartInstance) return;
+    radarChartInstance.data.datasets.forEach(function(ds, i) {
+        var meta = radarChartInstance.getDatasetMeta(i);
+        if (i === idx) {
+            meta.dataset.options.borderWidth = 3;
+            meta.dataset.options.borderColor = ds.borderColor;
+        } else {
+            meta.dataset.options.borderWidth = 1;
+            meta.dataset.options.borderColor = ds.borderColor + '26'; // ~15% opacity
+        }
+    });
+    radarChartInstance.update('none');
+}
+
+function slopeReset() {
+    if (!radarChartInstance) return;
+    radarChartInstance.data.datasets.forEach(function(ds, i) {
+        var meta = radarChartInstance.getDatasetMeta(i);
+        var diff = ds._diff || 0;
+        meta.dataset.options.borderWidth = Math.abs(diff) > 20 ? 2.5 : 1.5;
+        meta.dataset.options.borderColor = ds.borderColor;
+    });
+    radarChartInstance.update('none');
+}
+
+function filterDisagreementsByCategory(cat) {
+    // Scroll to disagreements table and set visual hint
+    var tableCard = document.getElementById('disagreements-table-container');
+    if (tableCard) {
+        tableCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
 }
 
 // ---- Overlap-Treemap (Confusion Matrix) ----
@@ -298,13 +460,7 @@ function renderKappaChart() {
 // ---- Quadrant filter ----
 
 function filterByQuadrant(humanDec, llmDec) {
-    document.querySelectorAll('.view-tab').forEach(function(t) {
-        t.classList.toggle('active', t.dataset.view === 'korpus');
-    });
-    document.querySelectorAll('.view-content').forEach(function(v) {
-        v.classList.toggle('active', v.id === 'view-korpus');
-        v.style.display = v.id === 'view-korpus' ? '' : 'none';
-    });
+    if (window.switchView) window.switchView('korpus');
     var filtered = EC.getAllPapers().filter(function(p) {
         if (!p.benchmark.has_human || !p.human || !p.human.decision) return false;
         var hNorm = p.human.decision === 'Include' ? 'Include' : 'Exclude';
@@ -329,19 +485,36 @@ function renderDisagreementsTable() {
 
     var severityFilter = document.getElementById('filter-severity');
     var sevVal = severityFilter ? severityFilter.value : 'all';
+    var patternFilter = document.getElementById('filter-pattern');
+    var patVal = activePattern || (patternFilter ? patternFilter.value : 'all');
 
     var disagreements = EC.getAllPapers().filter(function(p) {
         return p.benchmark.has_human && p.benchmark.agreement === false;
     });
 
     if (sevVal !== 'all') {
-        disagreements = disagreements.filter(function(p) { return p.benchmark.severity === sevVal; });
+        disagreements = disagreements.filter(function(p) {
+            // Use enriched severity (numeric) or benchmark severity
+            var sev = p.divergence ? p.divergence.severity : null;
+            var sevLabel = sev === 3 ? 'high' : sev === 2 ? 'medium' : sev === 1 ? 'low' : (p.benchmark.severity || '');
+            return sevLabel === sevVal;
+        });
     }
 
-    var sevOrder = { high: 0, medium: 1, low: 2 };
+    if (patVal !== 'all') {
+        disagreements = disagreements.filter(function(p) {
+            return p.divergence && p.divergence.pattern === patVal;
+        });
+    }
+
+    // Sort by pattern group, then severity
+    var patOrder = { 'Semantische Expansion': 0, 'Keyword-Inklusion': 1, 'Implizite Feldzugehoerigkeit': 2 };
     disagreements.sort(function(a, b) {
-        var sa = sevOrder[a.benchmark.severity] !== undefined ? sevOrder[a.benchmark.severity] : 3;
-        var sb = sevOrder[b.benchmark.severity] !== undefined ? sevOrder[b.benchmark.severity] : 3;
+        var pa = a.divergence ? (patOrder[a.divergence.pattern] !== undefined ? patOrder[a.divergence.pattern] : 3) : 3;
+        var pb = b.divergence ? (patOrder[b.divergence.pattern] !== undefined ? patOrder[b.divergence.pattern] : 3) : 3;
+        if (pa !== pb) return pa - pb;
+        var sa = a.divergence ? (4 - (a.divergence.severity || 0)) : 3;
+        var sb = b.divergence ? (4 - (b.divergence.severity || 0)) : 3;
         return sa !== sb ? sa - sb : a.title.localeCompare(b.title);
     });
 
@@ -350,35 +523,51 @@ function renderDisagreementsTable() {
         return;
     }
 
-    var rows = disagreements.map(function(p) {
-        var sev = p.benchmark.severity || '';
-        var sevClass = 'severity-' + sev;
-        var cats = (p.benchmark.affected_categories || []).slice(0, 3).join(', ');
+    var rows = [];
+    var lastPattern = null;
+    disagreements.forEach(function(p) {
+        var pattern = p.divergence ? p.divergence.pattern : null;
+        var patBadge = '';
+        if (pattern) {
+            var cls = PATTERN_COLORS[pattern] ? PATTERN_COLORS[pattern].badge : '';
+            patBadge = '<span class="pattern-badge ' + cls + '">' + EC.escapeHtml(pattern) + '</span>';
+        }
+
+        var sev = p.divergence ? p.divergence.severity : null;
+        var sevLabel = sev === 3 ? 'high' : sev === 2 ? 'medium' : sev === 1 ? 'low' : (p.benchmark.severity || '');
+        var sevClass = 'severity-' + sevLabel;
         var humanDec = p.human ? p.human.decision : '';
         var llmDec = p.llm.decision;
         var safeId = p.id.replace(/'/g, "\\'");
         var divType = llmDec === 'Include' ? 'LLM-Kandidat' : 'Human-Signal';
+        var cats = p.divergence && p.divergence.affected_categories
+            ? (typeof p.divergence.affected_categories === 'string'
+                ? p.divergence.affected_categories.split(',').slice(0, 3).map(function(s) { return s.trim(); }).join(', ')
+                : p.divergence.affected_categories.slice(0, 3).join(', '))
+            : (p.benchmark.affected_categories || []).slice(0, 3).join(', ');
 
-        return '<tr onclick="window._openPaper(\'' + safeId + '\')" style="cursor:pointer;">' +
-            '<td class="title-cell" title="' + EC.escapeHtml(p.title) + '">' + EC.escapeHtml(p.title.substring(0, 55)) + (p.title.length > 55 ? '...' : '') + '</td>' +
+        rows.push('<tr onclick="window._openPaper(\'' + safeId + '\')" style="cursor:pointer;">' +
+            '<td class="title-cell" title="' + EC.escapeHtml(p.title) + '">' + EC.escapeHtml(p.title.substring(0, 50)) + (p.title.length > 50 ? '...' : '') + '</td>' +
             '<td style="font-size:0.75rem;">' + EC.escapeHtml((p.author_year || '').substring(0, 22)) + '</td>' +
             '<td><span class="decision-badge ' + (llmDec === 'Include' ? 'badge-llm-include' : 'badge-llm-exclude') + '" style="font-size:0.65rem;">' + llmDec + '</span></td>' +
             '<td><span class="decision-badge ' + (humanDec === 'Include' ? 'badge-human-include' : 'badge-human-exclude') + '" style="font-size:0.65rem;">' + humanDec + '</span></td>' +
-            '<td style="font-size:0.7rem;color:var(--gray-500);">' + divType + '</td>' +
-            '<td><span class="severity-badge ' + sevClass + '">' + sev + '</span></td>' +
+            '<td>' + patBadge + '</td>' +
+            '<td><span class="severity-badge ' + sevClass + '">' + sevLabel + '</span></td>' +
             '<td style="font-size:0.7rem;color:var(--gray-400);">' + EC.escapeHtml(cats) + '</td>' +
-        '</tr>';
-    }).join('');
+        '</tr>');
+    });
 
     container.innerHTML =
         '<table class="disagreements-table">' +
             '<thead><tr>' +
-                '<th>Titel</th><th>Autor</th><th>LLM</th><th>Human</th><th>Typ</th><th>Severity</th><th>Kategorien</th>' +
+                '<th>Titel</th><th>Autor</th><th>LLM</th><th>Human</th><th>Muster</th><th>Severity</th><th>Kategorien</th>' +
             '</tr></thead>' +
-            '<tbody>' + rows + '</tbody>' +
+            '<tbody>' + rows.join('') + '</tbody>' +
         '</table>' +
         '<p style="font-size:0.7rem;color:var(--gray-400);margin-top:0.5rem;">' +
-            disagreements.length + ' Divergenz-Faelle &bull; Klick auf Zeile &rarr; Paper-Detail' +
+            disagreements.length + ' Divergenz-Faelle' +
+            (patVal !== 'all' ? ' (' + EC.escapeHtml(patVal) + ')' : '') +
+            ' &bull; Klick auf Zeile &rarr; Paper-Detail' +
         '</p>';
 
     window._openPaper = function(id) {
@@ -386,6 +575,20 @@ function renderDisagreementsTable() {
         if (paper) EC.showPaperDetail(paper);
     };
 }
+
+// Cross-view: filter divergences by pattern (called from wissensnetz)
+window.filterDivergencePattern = function(pattern) {
+    activePattern = pattern || null;
+    var patFilter = document.getElementById('filter-pattern');
+    if (patFilter) patFilter.value = activePattern || 'all';
+    var container = document.getElementById('pattern-viz-container');
+    if (container) {
+        container.querySelectorAll('.pattern-card').forEach(function(c) {
+            c.classList.toggle('active', c.dataset.pattern === activePattern);
+        });
+    }
+    renderDisagreementsTable();
+};
 
 // Expose for HTML onclick and research-app.js lazy-init
 window.filterByQuadrant = filterByQuadrant;

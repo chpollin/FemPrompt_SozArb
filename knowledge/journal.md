@@ -4,6 +4,57 @@ Chronologisches Protokoll der Arbeitssitzungen mit Entscheidungen, Ergebnissen u
 
 ---
 
+## 2026-03-24 (Session 8): Kategorien-Explorer, Wissensnetz-Redesign, Methoden-Seite
+
+**Branch:** `main`
+
+### Was passiert ist
+
+1. **Bewertungsvergleich ersetzt durch Kategorien-Explorer:** Der statische Dashboard-View (Callout, Slope Chart, Kappa) wurde durch einen interaktiven Kategorien-Explorer ersetzt. 10 Kategorien als Spektrum (Gegenstand bis Perspektive), Klick auf eine Kategorie zeigt: Rate-Vergleich (Human vs LLM), konkrete Divergenz-Papers mit LLM-Reasoning, haeufige Konzepte. Cross-View-Navigation zu Korpus und Wissensnetz.
+
+2. **Wissensnetz-Redesign:** Cluster-separierendes Layout (Technik links, Sozial rechts, Bruecke oben). Divergenz-Modus-Toggle (hebt Divergenz-Konzepte hervor, faerbt nach dominantem Muster). Hover-Glow-Effekt (SVG feGaussianBlur Filter). Always-visible Detail-Sidebar mit Placeholder. Kompakte Toolbar (Suche + Legende + Buttons). Full-width Layout (bricht aus main max-width aus).
+
+3. **Divergenz-Daten-Anreicherung:** `promptotyping_v2.json` wird geladen. 111 Divergenzen werden per Title-Matching auf Paper-Objekte gemappt (pattern, justification, category_comparison, llm_reasoning). Neue EC API: getDivergencePatterns(), getDivergences(), getCategoryDivergences().
+
+4. **Stats-Bar in Header:** Die separate Stats-Zeile (326 Papers, 249 WD, 210 Bewertungen, 10 Kategorien) wurde als kompakte Zeile in den Header integriert.
+
+5. **Methoden-Unterseite (methoden.html):** Neue statische Seite mit Pipeline-Visualisierung, Kategorie-System-Tabelle, Bewertungsmethodik, Kernergebnissen, Kosten, Limitationen.
+
+6. **Navigation vereinheitlicht:** Alle Seiten (index, about, methoden, help) haben identische Navigation: Chat | Wissensnetz | Kategorien | Korpus | About | Methoden | Hilfe. Hash-basierte Navigation von Unterseiten zurueck zu Views. "Fragen Sie das Wissen" durch "Recherche im Forschungskorpus" ersetzt.
+
+### Was wir gelernt haben
+
+**Kein Dashboard, sondern Exploration:** Der Bewertungsvergleich war ein Bericht -- man scrollt und schaut. Der Kategorien-Explorer ist ein Werkzeug -- man waehlt eine Dimension und sieht die konkrete Evidenz. Das ist der Unterschied zwischen "Zeigen was ist" und "Explorierbar machen".
+
+**Force Layout + Cluster:** Cluster-separierendes Layout funktioniert nur, wenn die Cluster-Force dominant ist (0.4) und die Link-Force schwach (0.06). Sonst zieht die Link-Force alles in einen Blob zurueck.
+
+**Fehlende Dimension:** 27 ungenutzte Datenfelder identifiziert. Kein fuenfter View noetig -- stattdessen Knowledge-Sections und Verification-Scores in bestehende Views integrieren.
+
+### Was entstanden ist
+
+| Datei | Aenderung |
+|-------|-----------|
+| `docs/js/kategorien.js` | Neu: Kategorien-Explorer IIFE (~300 Zeilen) |
+| `docs/js/wissensnetz.js` | Komplett neu: Cluster-Layout, Divergenz-Modus, Glow, Sidebar |
+| `docs/js/features.js` | Pattern-Viz, interaktiver Slope Chart, Muster-Filter (legacy) |
+| `docs/js/research-app.js` | Divergenz-Daten laden, EC API erweitert, Hash-Nav |
+| `docs/js/wissenschat.js` | Heading geaendert |
+| `docs/index.html` | Kategorien-Explorer View, Wissensnetz Toolbar, Stats in Header |
+| `docs/methoden.html` | Neu: Methoden-Unterseite |
+| `docs/about.html` | Nav aktualisiert |
+| `docs/help.html` | Nav + Inhalt aktualisiert (Kategorien statt Bewertungsvergleich) |
+| `docs/css/research.css` | Kategorien-Styles, Wissensnetz full-width, Pipeline-Flow, Stats-in-Header |
+
+### Offene Punkte
+
+- [ ] M8: Paper finalisieren (Deadline 4. Mai)
+- [ ] Knowledge-Sections (Kernbefund, Methodik) in Korpus-Detail-Panel integrieren
+- [ ] Wissensnetz: Technik-Cluster hat nur 1 Knoten -- Cluster-Zuordnung pruefen
+- [ ] Kategorien-Explorer: Datenqualitaet der category_comparison pruefen (H:? Bug)
+- [ ] features.js aufraumen (alte Bewertungsvergleich-Funktionen entfernen)
+
+---
+
 ## 2026-03-24 (Session 6): Wissens-Chat + Panel-Optimierung + Quellenleiste
 
 **Branch:** `FemPrompt_SozArb_promptotyping-interface`

@@ -45,7 +45,7 @@ function buildChatUI(savedKey) {
     '</form>' +
     '<div class="chat-messages" id="chat-messages">' +
         '<div class="chat-welcome">' +
-            '<p class="chat-welcome-title">Fragen Sie das Wissen</p>' +
+            '<p class="chat-welcome-title">Recherche im Forschungskorpus</p>' +
             '<p>Ein LLM (Gemini 3 Flash) antwortet auf Basis von LLM-synthetisiertem Wissen aus 326 Papers. ' +
                 'Die Antworten sind also zweifach LLM-vermittelt: einmal durch die Wissensextraktion, ' +
                 'einmal durch die Antwortgenerierung. Inline-Zitationen verlinken direkt zum Korpus zur Verifikation.</p>' +

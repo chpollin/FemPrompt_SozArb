@@ -45,33 +45,32 @@
                 <nav class="header-nav" aria-label="Hauptnavigation">
                     <button class="nav-view-btn active has-tip" data-view="chat" data-tip-key="chat">Wissens-Chat</button>
                     <button class="nav-view-btn has-tip" data-view="wissensnetz" data-tip-key="wissensnetz">Wissensnetz</button>
-                    <button class="nav-view-btn has-tip" data-view="vergleich" data-tip-key="vergleich">Bewertungsvergleich</button>
-                    <button class="nav-view-btn nav-view-korpus has-tip" data-view="korpus" data-tip-key="korpus">Korpus</button>
+                    <button class="nav-view-btn has-tip" data-view="vergleich" data-tip-key="vergleich">Kategorien</button>
+                    <button class="nav-view-btn has-tip" data-view="korpus" data-tip-key="korpus">Korpus</button>
                     <span class="nav-sep"></span>
                     <a href="about.html" class="nav-link">About</a>
+                    <a href="methoden.html" class="nav-link">Methoden</a>
                     <a href="help.html" class="nav-link">Hilfe</a>
                     <span class="nav-sep"></span>
                     <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
                     <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="505 Wissensdokumente (.zip)"><i class="fas fa-download"></i></a>
                 </nav>
             </div>
+            <div class="header-stats" id="intro-section">
+                <span class="stat-item has-tip" data-tip-key="papers"><strong id="total-count-intro">326</strong> Papers</span>
+                <span class="stat-sep"></span>
+                <span class="stat-item has-tip" data-tip-key="wissensdok"><strong id="kd-count-intro">249</strong> Wissensdokumente</span>
+                <span class="stat-sep"></span>
+                <span class="stat-item has-tip" data-tip-key="human"><strong id="human-count-intro">210</strong> Expert:innen-Bewertungen</span>
+                <span class="stat-sep"></span>
+                <span class="stat-item has-tip" data-tip-key="kategorien"><strong>10</strong> Kategorien</span>
+            </div>
         </div>
     </header>
 
-    <!-- Compact stats bar with tooltips -->
-    <div class="stats-bar" id="intro-section">
-        <span class="stat-item has-tip" data-tip-key="papers"><strong id="total-count-intro">326</strong> Papers</span>
-        <span class="stat-sep"></span>
-        <span class="stat-item has-tip" data-tip-key="wissensdok"><strong id="kd-count-intro">249</strong> Wissensdokumente</span>
-        <span class="stat-sep"></span>
-        <span class="stat-item has-tip" data-tip-key="human"><strong id="human-count-intro">210</strong> Expert:innen-Bewertungen</span>
-        <span class="stat-sep"></span>
-        <span class="stat-item has-tip" data-tip-key="kategorien"><strong>10</strong> Kategorien</span>
-    </div>
-
     <!-- Main Content -->
     <main>
-        <!-- View: Korpus (Referenzschicht -- immer erreichbar ueber Zitationslinks) -->
+        <!-- View: Korpus -->
         <section class="content-section view-content" id="view-korpus" role="tabpanel" aria-labelledby="tab-korpus" style="display:none;">
             <div class="search-filters">
                 <input type="text" class="search-box" id="search-box" placeholder="Paper suchen (Titel, Autor, Abstract)..." aria-label="Paper durchsuchen">
@@ -151,27 +150,28 @@
 
         <!-- View: Wissensnetz -->
         <section class="content-section view-content" id="view-wissensnetz" role="tabpanel" aria-labelledby="tab-wissensnetz" style="display:none;">
-            <h2 class="section-heading">Wissensnetz</h2>
-            <p class="section-description">
-                136 Konzepte, extrahiert aus 249 Wissensdokumenten.
-                Groesse = Haeufigkeit, Verbindung = gemeinsame Papers.
-                Klick auf ein Konzept zeigt das Ego-Netzwerk mit Definition und verbundenen Papers.
-            </p>
-            <div class="graph-legend">
-                <span class="legend-item"><span class="legend-dot" style="background:#3a7d7e;"></span> Technik</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#b0546e;"></span> Sozial</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#7c6fae;"></span> Bruecke</span>
-                <span class="legend-sep"></span>
-                <span class="legend-item"><span class="legend-ring"></span> Divergenz-Konzept</span>
-            </div>
-            <div class="graph-controls">
-                <input type="text" class="graph-search" id="graph-search" placeholder="Konzept suchen..." autocomplete="off">
-                <label class="freq-control">Min. Frequenz: <input type="range" id="freq-slider" min="2" max="20" value="2"><span id="freq-value">2</span></label>
-                <button class="graph-reset-btn" id="graph-reset">Alle anzeigen</button>
-            </div>
             <div class="graph-wrapper">
-                <div class="graph-container" id="graph-container"></div>
-                <div class="graph-detail" id="graph-detail"></div>
+                <div class="graph-main">
+                    <div class="graph-toolbar">
+                        <input type="text" class="graph-search-compact" id="graph-search" placeholder="Konzept suchen..." autocomplete="off">
+                        <span class="toolbar-sep"></span>
+                        <span class="toolbar-legend"><span class="legend-dot" style="background:#3a7d7e;"></span> Technik</span>
+                        <span class="toolbar-legend"><span class="legend-dot" style="background:#b0546e;"></span> Sozial</span>
+                        <span class="toolbar-legend"><span class="legend-dot" style="background:#7c6fae;"></span> Bruecke</span>
+                        <span class="toolbar-legend"><span class="legend-ring"></span> Divergenz</span>
+                        <span class="toolbar-spacer"></span>
+                        <button class="graph-toggle-btn" id="divergence-toggle" title="Divergenz-Konzepte hervorheben">Divergenz-Modus</button>
+                        <button class="graph-reset-btn" id="graph-reset" title="Ansicht zuruecksetzen"><i class="fas fa-undo"></i></button>
+                    </div>
+                    <div class="graph-container" id="graph-container"></div>
+                </div>
+                <div class="graph-detail" id="graph-detail">
+                    <div class="graph-detail-placeholder">
+                        <p class="placeholder-icon"><i class="fas fa-project-diagram"></i></p>
+                        <p class="placeholder-text">Konzept anklicken</p>
+                        <p class="placeholder-hint">136 Konzepte aus 249 Wissensdokumenten. Groesse = Haeufigkeit, Verbindung = gemeinsame Papers.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -180,70 +180,10 @@
             <div class="chat-window" id="chat-container"></div>
         </section>
 
-        <!-- View: Bewertungsvergleich -->
+        <!-- View: Kategorien-Explorer -->
         <section class="content-section view-content" id="view-vergleich" role="tabpanel" aria-labelledby="tab-vergleich" style="display:none;">
-            <h2 class="section-heading">Bewertungsvergleich</h2>
-            <p class="section-description">
-                LLM und Expert:innen bewerten denselben Korpus nach identischem 10-Kategorien-Schema.
-                Die Divergenz ist informationshaltig -- sie zeigt, wo maschinelle Musterkennung
-                und disziplinaeres Kontextwissen strukturell auseinanderfallen.
-            </p>
-
-            <div class="benchmark-callout">
-                <div class="callout-numbers">
-                    <span class="callout-big">78</span>
-                    <span class="callout-vs">vs.</span>
-                    <span class="callout-big">23</span>
-                </div>
-                <p><strong>Epistemische Asymmetrie:</strong> In 78 Faellen inkludierte das LLM ein Paper,
-                das Expert:innen ausschlossen -- nur 23 Mal umgekehrt.
-                Der LLM sieht <em>breiter</em>, die Expert:innen sehen <em>tiefer</em>.</p>
-                <p class="callout-note">Cohen's Kappa (0.035) ist ein Prevalence-Bias-Artefakt bei ungleichen
-                Basisraten (LLM: 68%, Human: 42%). Primaere Metriken: Konfusionsmatrix + Basisraten.</p>
-            </div>
-
-            <!-- Metric tiles -->
-            <div class="benchmark-metrics-grid" id="benchmark-metrics"></div>
-
-            <!-- Charts row -->
-            <div class="benchmark-charts-row">
-                <div class="benchmark-chart-card">
-                    <h3>Kategorie-Divergenz</h3>
-                    <p class="chart-subtitle">Jede Linie verbindet Human-Rate (links) mit LLM-Rate (rechts). Steile Linien = grosse Divergenz. Blau = LLM sieht mehr, Orange = Human sieht mehr.</p>
-                    <div id="radar-chart-container" style="height:320px;position:relative;"><canvas id="radar-chart"></canvas></div>
-                </div>
-                <div class="benchmark-chart-card">
-                    <h3>Konfusionsmatrix</h3>
-                    <p class="chart-subtitle">Was sieht jede Perspektive allein, was sehen beide gemeinsam?</p>
-                    <div id="confusion-matrix-container"></div>
-                </div>
-            </div>
-
-            <!-- Kappa chart -->
-            <div class="benchmark-chart-card" style="margin-top: 1.5rem;">
-                <h3>Kappa pro Kategorie</h3>
-                <p class="chart-subtitle">Cohen's Kappa misst die Uebereinstimmung ueber den Zufall hinaus.
-                    Blau = LLM sieht mehr, Orange = Human sieht mehr, Grau = aehnliche Raten.
-                    Bei stark ungleichen Basisraten kann hohe Agreement mit niedrigem Kappa koexistieren
-                    (Prevalence-Bias, Byrt et al. 1993).</p>
-                <div id="kappa-chart-container"></div>
-            </div>
-
-            <!-- Disagreements table -->
-            <div class="benchmark-chart-card" style="margin-top: 1.5rem;">
-                <div class="disagreements-header">
-                    <h3>Divergenz-Faelle</h3>
-                    <div class="filter-group" style="width:auto;">
-                        <select class="filter-select" id="filter-severity" style="font-size:0.8rem;">
-                            <option value="all">Alle</option>
-                            <option value="high">Hoch</option>
-                            <option value="medium">Mittel</option>
-                            <option value="low">Niedrig</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="disagreements-table-container"></div>
-            </div>
+            <div class="kategorie-spektrum" id="kategorie-spektrum"></div>
+            <div class="kategorie-detail" id="kategorie-detail"></div>
         </section>
     </main>
 
@@ -276,6 +216,7 @@
     <script src="js/config.local.js" onerror=""></script>
     <script src="js/research-app.js"></script>
     <script src="js/features.js"></script>
+    <script src="js/kategorien.js"></script>
     <script src="js/wissensnetz.js"></script>
     <script src="js/wissenschat.js"></script>
 </body>

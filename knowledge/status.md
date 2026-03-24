@@ -1,9 +1,10 @@
 # Status (2026-03-24)
 
-## Aktueller Fokus: M12 abgeschlossen, M13 geplant
+## Aktueller Fokus: M13 (Wissensnetz-Redesign) + Kategorien-Explorer abgeschlossen
 
-M1-M12 abgeschlossen. Evidence Companion mit 4 Tabs (Wissens-Chat, Wissensnetz, Bewertungsvergleich, Korpus) merged zu main.
-Naechster Meilenstein: M13 Wissenstaxonomie (Wissensnetz-Redesign).
+M1-M13 abgeschlossen. Evidence Companion mit 4 Views (Wissens-Chat, Wissensnetz, Kategorien, Korpus) + 3 Unterseiten (About, Methoden, Hilfe).
+Bewertungsvergleich wurde durch Kategorien-Explorer ersetzt. Wissensnetz hat Cluster-Layout + Divergenz-Modus.
+Naechster Fokus: M8 Paper finalisieren (Deadline 4. Mai).
 
 ---
 
