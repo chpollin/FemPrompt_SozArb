@@ -794,13 +794,12 @@ function buildTooltipContent() {
         });
     }
 
-    var tipVergleich = '<div class="tip-title">Bewertungsvergleich</div>' +
+    var tipVergleich = '<div class="tip-title">Kategorien-Explorer</div>' +
+        '<div class="tip-text">10 Kategorien als interaktives Spektrum. Waehlen Sie eine Kategorie, um Human- und LLM-Raten, Divergenz-Papers und Konzepte zu explorieren.</div>' +
         '<div class="tip-grid">' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--info)">68%</span><span class="tip-stat-lbl">LLM Include</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--warning)">42%</span><span class="tip-stat-lbl">Human Include</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val">0.035</span><span class="tip-stat-lbl">Kappa</span></div>' +
-        '</div>' +
-        '<div class="tip-text">78 Faelle LLM-Include/Human-Exclude vs. 23 umgekehrt.</div>';
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--warning)">Gender</span><span class="tip-stat-lbl">-27pp</span></div>' +
+            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--info)">Fairness</span><span class="tip-stat-lbl">+21pp</span></div>' +
+        '</div>';
 
     var tipKorpus = '<div class="tip-title">Korpus</div>' +
         '<div class="tip-grid">' +

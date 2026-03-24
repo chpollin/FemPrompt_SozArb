@@ -568,11 +568,6 @@ header::after {
 /* (info-modal removed -- about/help are now separate pages) */
 
 /* Cite styles (used by about.html) */
-
-.info-modal-content a {
-    color: var(--primary);
-}
-
 .info-cite {
     border-left: 3px solid var(--primary);
     padding: 0.75rem 1rem;
@@ -587,24 +582,23 @@ header::after {
     font-style: normal;
 }
 
-.info-cite-suggestion {
-    background: var(--gray-50);
-    padding: 0.625rem 0.875rem;
-    border-radius: var(--radius-sm);
+/* Footer */
+.site-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid var(--gray-200);
+    color: var(--gray-400);
     font-size: var(--text-sm);
-    font-family: 'Courier New', monospace;
-    word-break: break-all;
 }
 
-@media (max-width: 768px) {
-    .info-modal-content {
-        width: 95vw;
-        max-height: 90vh;
-        padding: 1.25rem;
-    }
+.footer-links {
+    margin-top: 0.5rem;
 }
 
-/* (vault-hint link styles removed) */
+.footer-links a {
+    color: var(--primary);
+}
 
 h1 {
     font-family: var(--font-display);
@@ -2323,9 +2317,6 @@ main {
         var(--gray-200),
         var(--primary),
         var(--gray-200)
-        var(--cat-divers),
-        var(--cat-femin),
-        var(--cat-fairness)
     );
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
