@@ -344,13 +344,7 @@ function showConceptDetail(d) {
             if (mainPapers) {
                 var paper = mainPapers.find(function(p) { return p.id === paperId; });
                 if (paper) {
-                    document.querySelectorAll('.view-tab').forEach(function(t) {
-                        t.classList.toggle('active', t.dataset.view === 'korpus');
-                    });
-                    document.querySelectorAll('.view-content').forEach(function(v) {
-                        v.classList.toggle('active', v.id === 'view-korpus');
-                        v.style.display = v.id === 'view-korpus' ? '' : 'none';
-                    });
+                    if (window.switchView) window.switchView('korpus');
                     EC.showPaperDetail(paper);
                 }
             }

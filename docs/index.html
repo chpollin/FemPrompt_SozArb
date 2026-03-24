@@ -31,21 +31,34 @@
     <link rel="stylesheet" href="css/research.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header with Navigation -->
     <header>
         <div class="header-content">
-            <h1>Feministische AI Literacies</h1>
-            <p class="subtitle">Systematischer Review -- Interaktive Evidenz</p>
-            <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
-            <div class="header-links">
-                <a href="https://github.com/chpollin/FemPrompt_SozArb" class="header-link" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i> Repository</a>
-                <a href="downloads/vault.zip" class="header-link vault-link"
-                   title="505 vernetzte Markdown-Dateien: synthetisiertes Wissen aus 248 Papers, 136 Konzepte, 111 Divergenz-Analysen. Kompatibel mit Obsidian. Als Kontext fuer LLMs nutzbar.">
-                    <i class="fas fa-download"></i> Wissensdokumente (.zip)
-                </a>
-                <span class="header-links-sep"></span>
-                <button class="header-icon-btn" id="btn-about" title="Ueber das Projekt"><i class="fas fa-info-circle"></i></button>
-                <button class="header-icon-btn" id="btn-help" title="Hilfe"><i class="fas fa-question-circle"></i></button>
+            <div class="header-top">
+                <div class="header-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1>Feministische AI Literacies</h1>
+                        <p class="subtitle">Systematischer Review -- Interaktive Evidenz</p>
+                    </a>
+                    <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
+                </div>
+                <nav class="header-nav" aria-label="Hauptnavigation">
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn" id="nav-erkunden"><i class="fas fa-compass"></i> Erkunden <i class="fas fa-chevron-down nav-chevron"></i></button>
+                        <div class="nav-dropdown-menu" id="nav-dropdown-menu">
+                            <button class="nav-dropdown-item active" data-view="chat"><i class="fas fa-comments"></i> Wissens-Chat</button>
+                            <button class="nav-dropdown-item" data-view="wissensnetz"><i class="fas fa-project-diagram"></i> Wissensnetz</button>
+                            <button class="nav-dropdown-item" data-view="vergleich"><i class="fas fa-balance-scale"></i> Bewertungsvergleich</button>
+                            <div class="nav-dropdown-sep"></div>
+                            <button class="nav-dropdown-item nav-item-korpus" data-view="korpus"><i class="fas fa-table"></i> Korpus</button>
+                        </div>
+                    </div>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="help.html" class="nav-link">Hilfe</a>
+                    <span class="nav-sep"></span>
+                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="505 Wissensdokumente (.zip)"><i class="fas fa-download"></i></a>
+                </nav>
             </div>
         </div>
     </header>
@@ -60,16 +73,6 @@
         <span class="stat-sep"></span>
         <span class="stat-item"><strong>10</strong> Kategorien</span>
     </div>
-
-    <!-- Minimal Navigation -->
-    <nav class="view-nav" aria-label="Hauptnavigation">
-        <div class="view-nav-inner" role="tablist">
-            <button class="view-tab active" data-view="chat" role="tab" aria-selected="true" aria-controls="view-chat">Wissens-Chat</button>
-            <button class="view-tab" data-view="wissensnetz" role="tab" aria-selected="false" aria-controls="view-wissensnetz">Wissensnetz</button>
-            <button class="view-tab" data-view="vergleich" role="tab" aria-selected="false" aria-controls="view-vergleich">Bewertungsvergleich</button>
-            <button class="view-tab tab-korpus" data-view="korpus" role="tab" aria-selected="false" aria-controls="view-korpus">Korpus</button>
-        </div>
-    </nav>
 
     <!-- Main Content -->
     <main>
@@ -258,92 +261,6 @@
             <a href="downloads/vault.zip" style="color:var(--primary);">Obsidian Vault (.zip)</a>
         </p>
     </footer>
-
-    <!-- About Modal -->
-    <div class="info-modal" id="about-modal" role="dialog" aria-modal="true" aria-label="Ueber das Projekt">
-        <div class="info-modal-overlay"></div>
-        <div class="info-modal-content">
-            <button class="info-modal-close" aria-label="Schliessen">&times;</button>
-            <h2>Ueber das Projekt</h2>
-            <p>Diese Seite ist die interaktive Begleitpublikation zu:</p>
-            <blockquote class="info-cite">
-                Pollin, C., Sackl-Sharif, S., Klinger, S. &amp; Steiner, C. (2026).
-                Deep-Research-gestuetzte Literature-Reviews: Feministische AI Literacies in der Sozialen Arbeit.
-                <em>Forum Wissenschaft</em>, 2/2026.
-            </blockquote>
-
-            <h3>Methodik</h3>
-            <p>326 wissenschaftliche Publikationen zu feministischen AI Literacies im Feld der Sozialen Arbeit
-            wurden durch eine fuenfstufige LLM-Pipeline verarbeitet: Identifikation (Deep Research mit 4 Providern),
-            PDF-Akquise (257/326, 4 Fallback-Strategien), Markdown-Konversion (Docling), Wissensextraktion
-            (Claude Haiku 4.5) und Assessment nach 10 Kategorien.</p>
-
-            <h3>Duale Bewertung</h3>
-            <p>Zwei unabhaengige Bewertungspfade klassifizieren nach identischem 10-Kategorien-Schema:</p>
-            <ul>
-                <li><strong>Expert:innen</strong> (210 Papers) -- Manuelle Bewertung durch Fachwissenschaftler:innen</li>
-                <li><strong>LLM</strong> (326 Papers) -- Automatisierte Bewertung durch Claude Haiku 4.5</li>
-            </ul>
-
-            <h3>Kernergebnis: Epistemische Asymmetrie</h3>
-            <p>LLM-Include-Rate 68% vs. Human 42% (Benchmark: 210 Papers mit beiden Bewertungen).
-            78 Faelle LLM-Include/Human-Exclude vs. 23 umgekehrt. Drei Divergenz-Muster:
-            Semantische Expansion (81%), Keyword-Inklusion (11%), Implizite Feldzugehoerigkeit (8%).
-            Cohen's Kappa (0.035) ist ein Prevalence-Bias-Artefakt, nicht primaerer Indikator.</p>
-
-            <h3>Zitationsvorschlag</h3>
-            <p class="info-cite-suggestion">Pollin, C., Sackl-Sharif, S., Klinger, S. &amp; Steiner, C. (2026).
-            Feministische AI Literacies -- Interaktive Evidenz [Web-Anwendung].
-            <a href="https://chpollin.github.io/FemPrompt_SozArb/" target="_blank">https://chpollin.github.io/FemPrompt_SozArb/</a></p>
-
-            <h3>Technologie</h3>
-            <p>Vanilla JavaScript, Chart.js, D3.js, Gemini 3 Flash. Kein Framework, kein Build-Tool.
-            Quellcode: <a href="https://github.com/chpollin/FemPrompt_SozArb" target="_blank" rel="noopener">GitHub</a>.</p>
-        </div>
-    </div>
-
-    <!-- Help Modal -->
-    <div class="info-modal" id="help-modal" role="dialog" aria-modal="true" aria-label="Hilfe">
-        <div class="info-modal-overlay"></div>
-        <div class="info-modal-content">
-            <button class="info-modal-close" aria-label="Schliessen">&times;</button>
-            <h2>Hilfe</h2>
-
-            <h3><i class="fas fa-comments"></i> Wissens-Chat</h3>
-            <p>Stellen Sie Fragen an das synthetisierte Wissen aus 326 Papers. Die Antworten werden von
-            Gemini 3 Flash generiert, mit Kontext aus dem Forschungskorpus. Zitationen im Text
-            (z.B. <em>Zakharova et al. (2024)</em>) sind klickbar und fuehren direkt zum Paper im Korpus-Tab.</p>
-            <p>Sie benoetigen einen kostenlosen <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI API Key</a>.</p>
-
-            <h3><i class="fas fa-project-diagram"></i> Wissensnetz</h3>
-            <p>136 Konzepte, extrahiert aus 249 Wissensdokumenten. Groesse = Haeufigkeit im Korpus.
-            Verbindungslinien = gemeinsame Papers. Klick auf ein Konzept zeigt das Ego-Netzwerk
-            (Nachbarn hervorgehoben, Rest abgeblendet) mit Definition und Paper-Liste.</p>
-            <ul>
-                <li>Farben: <strong style="color:#3a7d7e;">Technik</strong>,
-                    <strong style="color:#b0546e;">Sozial</strong>,
-                    <strong style="color:#7c6fae;">Bruecke</strong></li>
-                <li>Gestrichelte Ringe = Konzepte in Divergenz-Faellen</li>
-                <li>Frequenz-Slider filtert nach Mindesthaeufigkeit</li>
-            </ul>
-
-            <h3><i class="fas fa-balance-scale"></i> Bewertungsvergleich</h3>
-            <p>Vergleich der LLM- und Expert:innen-Bewertungen. Slope Chart zeigt die Kategorie-Divergenz,
-            Konfusionsmatrix die Uebereinstimmung. Kappa-Werte pro Kategorie.
-            Klick auf eine Konfusionsmatrix-Zelle filtert den Korpus-Tab.</p>
-
-            <h3><i class="fas fa-table"></i> Korpus</h3>
-            <p>Alle 326 Papers als durchsuchbare Tabelle. Filter nach LLM/Human-Entscheidung, Jahr, Kategorien.
-            Klick auf eine Zeile oeffnet das Detail-Panel mit Assessment-Vergleich, Abstract und LLM-Begruendung.</p>
-
-            <h3>Tastaturkuerzel</h3>
-            <ul>
-                <li><kbd>/</kbd> -- Suche fokussieren</li>
-                <li><kbd>Esc</kbd> -- Panel/Modal schliessen</li>
-                <li><kbd>&larr;</kbd> <kbd>&rarr;</kbd> -- Vorheriges/Naechstes Paper (bei offenem Detail-Panel)</li>
-            </ul>
-        </div>
-    </div>
 
     <!-- Paper Detail Panel -->
     <div class="modal" id="paper-modal" role="dialog" aria-modal="true" aria-label="Paper-Detail">

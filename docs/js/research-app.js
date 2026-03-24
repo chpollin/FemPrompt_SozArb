@@ -182,46 +182,11 @@ function initializeUI() {
         applyFilters();
     });
 
-    // View navigation
-    document.querySelectorAll('.view-tab').forEach(function(tab) {
-        tab.addEventListener('click', function() {
-            var viewId = tab.dataset.view;
-            document.querySelectorAll('.view-tab').forEach(function(t) {
-                var isActive = t.dataset.view === viewId;
-                t.classList.toggle('active', isActive);
-                t.setAttribute('aria-selected', isActive ? 'true' : 'false');
-            });
-            document.querySelectorAll('.view-content').forEach(function(v) {
-                v.classList.toggle('active', v.id === 'view-' + viewId);
-                v.style.display = v.id === 'view-' + viewId ? '' : 'none';
-            });
-            // Lazy-init on first visit
-            if (viewId === 'vergleich' && !benchmarkInitialized) {
-                if (window.initializeBenchmark) {
-                    window.initializeBenchmark();
-                }
-                benchmarkInitialized = true;
-            }
-            if (viewId === 'wissensnetz' && !wissensnetzInitialized && conceptData) {
-                wissensnetzInitialized = true;
-                if (window.initWissensnetz) {
-                    window.initWissensnetz(conceptData.nodes, conceptData.edges, conceptData.papers);
-                }
-            }
-            if (viewId === 'chat' && !chatInitialized) {
-                chatInitialized = true;
-                if (window.initWissensChat) {
-                    window.initWissensChat();
-                }
-            }
-        });
-    });
-
-    // About / Help modals
-    setupInfoModals();
+    // Dropdown navigation
+    setupDropdownNav();
 
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') { closeInfoModals(); closePaperModal(); }
+        if (e.key === 'Escape') closePaperModal();
         if (e.key === '/' && !e.target.matches('input, textarea')) {
             e.preventDefault();
             document.getElementById('search-box').focus();
@@ -573,29 +538,65 @@ function showPaperDetail(paper, paperList) {
 }
 
 // ============================================================
-// Info Modals (About / Help)
+// Dropdown Navigation
 // ============================================================
 
-function setupInfoModals() {
-    var aboutBtn = document.getElementById('btn-about');
-    var helpBtn = document.getElementById('btn-help');
-    var aboutModal = document.getElementById('about-modal');
-    var helpModal = document.getElementById('help-modal');
+function setupDropdownNav() {
+    var dropdown = document.querySelector('.nav-dropdown');
+    var btn = document.getElementById('nav-erkunden');
+    if (!dropdown || !btn) return;
 
-    if (aboutBtn && aboutModal) {
-        aboutBtn.addEventListener('click', function() { aboutModal.classList.add('active'); });
-        aboutModal.querySelector('.info-modal-overlay').addEventListener('click', function() { aboutModal.classList.remove('active'); });
-        aboutModal.querySelector('.info-modal-close').addEventListener('click', function() { aboutModal.classList.remove('active'); });
-    }
-    if (helpBtn && helpModal) {
-        helpBtn.addEventListener('click', function() { helpModal.classList.add('active'); });
-        helpModal.querySelector('.info-modal-overlay').addEventListener('click', function() { helpModal.classList.remove('active'); });
-        helpModal.querySelector('.info-modal-close').addEventListener('click', function() { helpModal.classList.remove('active'); });
-    }
+    // Toggle dropdown
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+    });
+
+    // View switching via dropdown items
+    document.querySelectorAll('.nav-dropdown-item').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.stopPropagation();
+            var viewId = item.dataset.view;
+            switchView(viewId);
+            dropdown.classList.remove('open');
+        });
+    });
 }
 
-function closeInfoModals() {
-    document.querySelectorAll('.info-modal.active').forEach(function(m) { m.classList.remove('active'); });
+// Exposed globally for cross-view navigation (from chat, wissensnetz, etc.)
+window.switchView = function(viewId) { switchView(viewId); };
+
+function switchView(viewId) {
+    // Update dropdown active state
+    document.querySelectorAll('.nav-dropdown-item').forEach(function(item) {
+        item.classList.toggle('active', item.dataset.view === viewId);
+    });
+
+    // Show/hide view sections
+    document.querySelectorAll('.view-content').forEach(function(v) {
+        var isActive = v.id === 'view-' + viewId;
+        v.classList.toggle('active', isActive);
+        v.style.display = isActive ? '' : 'none';
+    });
+
+    // Lazy-init on first visit
+    if (viewId === 'vergleich' && !benchmarkInitialized) {
+        if (window.initializeBenchmark) window.initializeBenchmark();
+        benchmarkInitialized = true;
+    }
+    if (viewId === 'wissensnetz' && !wissensnetzInitialized && conceptData) {
+        wissensnetzInitialized = true;
+        if (window.initWissensnetz) window.initWissensnetz(conceptData.nodes, conceptData.edges, conceptData.papers);
+    }
+    if (viewId === 'chat' && !chatInitialized) {
+        chatInitialized = true;
+        if (window.initWissensChat) window.initWissensChat();
+    }
 }
 
 function closePaperModal() {

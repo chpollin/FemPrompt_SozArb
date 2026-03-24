@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About -- Feministische AI Literacies</title>
+    <meta name="description" content="Ueber das Projekt: Systematischer Review zu feministischen AI Literacies im Feld der Sozialen Arbeit.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/research.css">
+</head>
+<body>
+    <!-- Header with Navigation (same as index.html) -->
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <div class="header-brand">
+                    <a href="index.html" class="brand-link">
+                        <h1>Feministische AI Literacies</h1>
+                        <p class="subtitle">Systematischer Review -- Interaktive Evidenz</p>
+                    </a>
+                    <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
+                </div>
+                <nav class="header-nav" aria-label="Hauptnavigation">
+                    <a href="index.html" class="nav-link"><i class="fas fa-compass"></i> Erkunden</a>
+                    <a href="about.html" class="nav-link nav-link-active">About</a>
+                    <a href="help.html" class="nav-link">Hilfe</a>
+                    <span class="nav-sep"></span>
+                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="505 Wissensdokumente (.zip)"><i class="fas fa-download"></i></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <article class="prose">
+            <h2>Ueber das Projekt</h2>
+            <p>Diese Seite ist die interaktive Begleitpublikation zu:</p>
+            <blockquote class="info-cite">
+                Pollin, C., Sackl-Sharif, S., Klinger, S. &amp; Steiner, C. (2026).
+                Deep-Research-gestuetzte Literature-Reviews: Feministische AI Literacies in der Sozialen Arbeit.
+                <em>Forum Wissenschaft</em>, 2/2026.
+            </blockquote>
+
+            <h3>Methodik</h3>
+            <p>326 wissenschaftliche Publikationen zu feministischen AI Literacies im Feld der Sozialen Arbeit
+            wurden durch eine fuenfstufige LLM-Pipeline verarbeitet: Identifikation (Deep Research mit 4 Providern),
+            PDF-Akquise (257/326, 4 Fallback-Strategien), Markdown-Konversion (Docling), Wissensextraktion
+            (Claude Haiku 4.5) und Assessment nach 10 Kategorien.</p>
+
+            <h3>Duale Bewertung</h3>
+            <p>Zwei unabhaengige Bewertungspfade klassifizieren nach identischem 10-Kategorien-Schema:</p>
+            <ul>
+                <li><strong>Expert:innen</strong> (210 Papers) -- Manuelle Bewertung durch Fachwissenschaftler:innen</li>
+                <li><strong>LLM</strong> (326 Papers) -- Automatisierte Bewertung durch Claude Haiku 4.5</li>
+            </ul>
+
+            <h3>Kernergebnis: Epistemische Asymmetrie</h3>
+            <p>LLM-Include-Rate 68% vs. Human 42% (Benchmark: 210 Papers mit beiden Bewertungen).
+            78 Faelle LLM-Include/Human-Exclude vs. 23 umgekehrt. Drei Divergenz-Muster:
+            Semantische Expansion (81%), Keyword-Inklusion (11%), Implizite Feldzugehoerigkeit (8%).
+            Cohen's Kappa (0.035) ist ein Prevalence-Bias-Artefakt, nicht primaerer Indikator.</p>
+
+            <h3>Zitationsvorschlag</h3>
+            <p class="info-cite-suggestion">Pollin, C., Sackl-Sharif, S., Klinger, S. &amp; Steiner, C. (2026).
+            Feministische AI Literacies -- Interaktive Evidenz [Web-Anwendung].
+            <a href="https://chpollin.github.io/FemPrompt_SozArb/">https://chpollin.github.io/FemPrompt_SozArb/</a></p>
+
+            <h3>Technologie</h3>
+            <p>Vanilla JavaScript, Chart.js, D3.js, Gemini 3 Flash. Kein Framework, kein Build-Tool.
+            Quellcode: <a href="https://github.com/chpollin/FemPrompt_SozArb" target="_blank" rel="noopener">GitHub</a>.</p>
+        </article>
+    </main>
+
+    <footer style="max-width:1100px;margin:0 auto;padding:2rem;border-top:1px solid var(--gray-200);color:var(--gray-400);font-size:var(--text-sm);">
+        <p>Teil der epistemischen Infrastruktur zu: Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026).
+        Deep-Research-gestuetzte Literature-Reviews. Forum Wissenschaft 2/2026.</p>
+        <p style="margin-top:0.5rem;">
+            <a href="https://github.com/chpollin/FemPrompt_SozArb" style="color:var(--primary);">Repository</a> &middot;
+            <a href="downloads/vault.zip" style="color:var(--primary);">Obsidian Vault (.zip)</a>
+        </p>
+    </footer>
+</body>
+</html>

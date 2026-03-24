@@ -122,11 +122,11 @@ body {
    Layout & Structure
    ======================================== */
 
-/* Header - Clean Academic */
+/* Header - Clean Academic with Navigation */
 header {
     background: white;
     color: var(--gray-900);
-    padding: 2.5rem 0 2rem;
+    padding: 1.25rem 0 0;
     border-bottom: none;
 }
 
@@ -134,8 +134,8 @@ header {
 header::after {
     content: '';
     display: block;
-    height: 6px;
-    margin-top: 1.5rem;
+    height: 4px;
+    margin-top: 1rem;
     background: linear-gradient(
         to right,
         var(--cat-ai-lit),
@@ -152,67 +152,245 @@ header::after {
 }
 
 .header-content {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-.header-links {
+.header-top {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 0.75rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
-.header-link {
+.brand-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand-link:hover h1 {
     color: var(--primary);
-    font-size: var(--text-sm);
-    text-decoration: none;
-    display: inline-flex;
+}
+
+/* Header Navigation */
+.header-nav {
+    display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.25rem;
+    margin-top: 0.375rem;
 }
 
-.header-link:hover {
-    text-decoration: underline;
-}
-
-.vault-link {
-    background: var(--gray-50);
-    padding: 0.25rem 0.625rem;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--gray-200);
-    font-weight: 500;
-}
-
-.vault-link:hover {
-    background: var(--gray-100);
-    border-color: var(--gray-300);
+.nav-link {
+    font-size: var(--text-sm);
+    color: var(--gray-500);
     text-decoration: none;
+    padding: 0.375rem 0.625rem;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
 }
 
-/* (vault-hint removed -- info moved to About modal) */
+.nav-link:hover {
+    color: var(--gray-900);
+    background: var(--gray-50);
+}
 
-/* Header icon buttons (About, Help) */
-.header-links-sep {
+.nav-link-active {
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+.nav-link-ext {
+    color: var(--gray-400);
+    padding: 0.375rem 0.5rem;
+}
+
+.nav-link-ext:hover {
+    color: var(--primary);
+}
+
+.nav-sep {
     width: 1px;
     height: 1rem;
     background: var(--gray-200);
-    align-self: center;
+    margin: 0 0.25rem;
 }
 
-.header-icon-btn {
-    background: none;
-    border: none;
-    color: var(--gray-400);
-    font-size: var(--text-body);
+/* Dropdown Navigation */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-btn {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--gray-700);
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    padding: 0.375rem 0.75rem;
     cursor: pointer;
-    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
     transition: var(--transition-fast);
-    line-height: 1;
 }
 
-.header-icon-btn:hover {
+.nav-dropdown-btn:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-300);
+}
+
+.nav-chevron {
+    font-size: 0.6rem;
+    transition: transform 0.15s;
+}
+
+.nav-dropdown.open .nav-chevron {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    min-width: 220px;
+    z-index: 200;
+    padding: 0.375rem;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+    display: block;
+}
+
+.nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+    text-align: left;
+}
+
+.nav-dropdown-item:hover {
+    background: var(--gray-50);
+    color: var(--gray-900);
+}
+
+.nav-dropdown-item.active {
     color: var(--primary);
+    font-weight: 600;
+}
+
+.nav-dropdown-item i {
+    width: 1rem;
+    text-align: center;
+    color: var(--gray-400);
+    font-size: var(--text-xs);
+}
+
+.nav-dropdown-item.active i {
+    color: var(--primary);
+}
+
+.nav-dropdown-sep {
+    height: 1px;
+    background: var(--gray-100);
+    margin: 0.25rem 0.5rem;
+}
+
+.nav-item-korpus {
+    color: var(--gray-500);
+    font-size: var(--text-xs);
+}
+
+/* Subpage content (About, Help) */
+.page-content {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem;
+}
+
+.prose h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    margin-bottom: 1rem;
+}
+
+.prose h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    margin-top: 2rem;
+    margin-bottom: 0.625rem;
+    color: var(--gray-800);
+}
+
+.prose h3 i {
+    color: var(--primary);
+    margin-right: 0.4rem;
+}
+
+.prose p {
+    margin-bottom: 0.875rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+}
+
+.prose ul {
+    padding-left: 1.25rem;
+    margin-bottom: 0.875rem;
+    color: var(--gray-700);
+}
+
+.prose li {
+    margin-bottom: 0.375rem;
+    line-height: 1.7;
+}
+
+.prose kbd {
+    background: var(--gray-100);
+    border: 1px solid var(--gray-200);
+    border-radius: 3px;
+    padding: 1px 6px;
+    font-size: var(--text-sm);
+    font-family: 'Courier New', monospace;
+}
+
+.prose a {
+    color: var(--primary);
+}
+
+.help-shortcuts {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5rem 0;
+}
+
+.help-shortcuts td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: var(--text-md);
+    color: var(--gray-700);
+}
+
+.help-shortcuts td:first-child {
+    width: 120px;
+    text-align: center;
 }
 
 /* Info Modals (About / Help) -- centered overlay */

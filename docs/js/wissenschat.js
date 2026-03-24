@@ -574,23 +574,15 @@ function navigateToPaper(paperId) {
     var paper = papers.find(function(p) { return p.id === paperId; });
     if (!paper) return;
 
-    // Switch to Korpus tab
-    document.querySelectorAll('.view-tab').forEach(function(t) {
-        var isKorpus = t.dataset.view === 'korpus';
-        t.classList.toggle('active', isKorpus);
-        t.setAttribute('aria-selected', isKorpus ? 'true' : 'false');
-    });
-    document.querySelectorAll('.view-content').forEach(function(v) {
-        var isKorpus = v.id === 'view-korpus';
-        v.classList.toggle('active', isKorpus);
-        v.style.display = isKorpus ? '' : 'none';
-    });
+    // Switch to Korpus view via global switchView
+    if (window.switchView) window.switchView('korpus');
 
     // Open detail panel
     window.EC.showPaperDetail(paper, papers);
 
-    // Scroll to top of Korpus view
-    document.getElementById('view-korpus').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Scroll to top
+    var korpus = document.getElementById('view-korpus');
+    if (korpus) korpus.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // ============================================================
