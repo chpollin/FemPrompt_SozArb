@@ -114,13 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
         applyFilters();
         logInit();
         initRichTooltips();
+        // Always initialize chat (default tab)
+        if (window.initWissensChat) window.initWissensChat();
+
         // Handle hash-based navigation (from about/help links)
         var hash = window.location.hash.replace('#', '');
         if (hash && ['chat', 'wissensnetz', 'vergleich', 'korpus'].indexOf(hash) >= 0) {
             switchView(hash);
-        } else {
-            // Chat is the default tab -- initialize immediately
-            if (window.initWissensChat) window.initWissensChat();
         }
     }).catch(function(error) {
         console.error('[Evidence] init failed:', error);

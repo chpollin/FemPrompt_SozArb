@@ -184,8 +184,8 @@ function renderDetail(cat) {
         html += '<h4>Divergenz in dieser Kategorie <span class="kdetail-count">' + catDivergences.length + '</span></h4>';
         html += '<div class="kdetail-papers" id="kdetail-papers-list">';
         catDivergences.forEach(function(p, idx) {
-            var catComp = p.divergence.category_comparison[cat] || {};
-            // Bug 1 fix: Fallback for missing values
+            var cc = p.divergence.category_comparison || {};
+            var catComp = cc[cat] || cc[cat.replace(/_/g, ' ')] || {};
             var humanVal = catComp.human || '\u2013';
             var llmVal = catComp.llm || '\u2013';
             var pattern = p.divergence.pattern || '';

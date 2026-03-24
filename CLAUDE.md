@@ -69,8 +69,9 @@ Das Projekt hat drei Schichten:
 | `docs/help.html` | Unterseite: Bedienungshilfe fuer alle Views | Aktiv |
 | `docs/js/research-app.js` | Haupt-IIFE: Daten, Tabelle, Panel, Navigation, Tooltips (~800 Zeilen) | **Aktiv** |
 | `docs/js/wissenschat.js` | Wissens-Chat: Gemini 3 Flash, Streaming, Zitationen (~620 Zeilen) | **Aktiv** |
-| `docs/js/wissensnetz.js` | Wissensnetz: D3 Force-Graph, Ego-Netzwerk (~470 Zeilen) | Aktiv |
-| `docs/js/features.js` | Bewertungsvergleich: Charts, Konfusionsmatrix, Kappa (~380 Zeilen) | Aktiv |
+| `docs/js/wissensnetz.js` | Wissensnetz: D3 Force-Graph, Cluster-Layout, Divergenz-Modus (~780 Zeilen) | **Aktiv** |
+| `docs/js/kategorien.js` | Kategorien-Explorer: Spektrum, Detail, Cross-View (~300 Zeilen) | **Aktiv** |
+| `docs/js/features.js` | Legacy-Stubs (Bewertungsvergleich archiviert) | Archiviert |
 | `docs/css/research.css` | Alle Styles (~2200 Zeilen) | **Aktiv** |
 | `scripts/generate_vault_v2.py` | Vault v2 Generator (~1660 Zeilen, LLM-Calls) | Selten |
 | `benchmark/results/agreement_metrics.json` | Kanonische Benchmark-Metriken | Read-only |
@@ -80,7 +81,7 @@ Das Projekt hat drei Schichten:
 
 | Branch | Zweck | Status |
 |--------|-------|--------|
-| `main` | **Aktiv**, M1-M12 abgeschlossen, Evidence Companion live | **Aktiv** |
+| `main` | **Aktiv**, M1-M13 abgeschlossen, Evidence Companion live | **Aktiv** |
 | `FemPrompt_SozArb_promptotyping-interface` | Feature-Branch (gemerged) | Archiviert |
 
 ---
@@ -102,11 +103,11 @@ Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js + D3 via CDN.
 | View | Inhalt | JS-Datei |
 |------|--------|----------|
 | **Wissens-Chat** (Default) | Gemini 3 Flash Q&A, Inline-Zitationen → Korpus, Referenzliste | `wissenschat.js` |
-| **Wissensnetz** | D3 Force-Graph, 136 Konzepte, Ego-Netzwerk, Legende | `wissensnetz.js` |
-| **Bewertungsvergleich** | Callout "78 vs 23", Slope Chart, Konfusionsmatrix, Kappa, Divergenz-Tabelle | `features.js` |
+| **Wissensnetz** | D3 Force-Graph, Cluster-Layout, Divergenz-Modus, Hover-Glow, Full-width | `wissensnetz.js` |
+| **Kategorien** | 10-Kategorien-Spektrum, Rate-Vergleich, Divergenz-Papers, Cross-View | `kategorien.js` |
 | **Korpus** (Referenzschicht) | Sortierbare Tabelle, Filter, Suche, Detail-Panel mit Assessment-Vergleich | `research-app.js` |
 
-**Unterseiten:** `about.html` (Projekt, Methodik, Zitation), `help.html` (Bedienungshilfe)
+**Unterseiten:** `about.html` (Projekt, Zitation), `methoden.html` (Pipeline, Kategorie-System, Bewertung), `help.html` (Bedienungshilfe)
 
 **Navigation:** Header mit direkten View-Buttons + About/Hilfe Links. `switchView()` global.
 
@@ -118,7 +119,7 @@ Akademische Begleitpublikation zum Paper. Vanilla JS + Chart.js + D3 via CDN.
 - Detail-Panel als Seitenpanel (slide-in, 480px, Tabellenkomprimierung)
 - Rich Data Tooltips (JS-basiert, Mini-Barcharts aus JSON-Daten)
 - Chat: API-Key lokal (localStorage + `config.local.js`, gitignored). Modell: `gemini-3-flash-preview`
-- Daten: `docs/data/research_vault_v2.json` + `docs/data/concept_graph.json`
+- Daten: `docs/data/research_vault_v2.json` + `docs/data/concept_graph.json` + `docs/data/promptotyping_v2.json` (Divergenz-Patterns)
 
 ---
 
@@ -276,8 +277,8 @@ Jede Information hat genau EINEN kanonischen Ort. Andere Dateien referenzieren, 
 | M9 | Vault + GitHub Pages | Abgeschlossen |
 | M10 | Promptotyping v1 | Archiviert (ersetzt durch M12) |
 | M11 | Promptotyping v2/v2.1 | Archiviert (ersetzt durch M12) |
-| M12 | Evidence Companion | **Abgeschlossen** (4 Tabs, Chat, Modals, merged) |
-| M13 | Wissenstaxonomie | **Geplant** (Wissensnetz-Redesign: Hierarchie, Quell-Definitionen) |
+| M12 | Evidence Companion | **Abgeschlossen** (4 Views, Chat, Modals, merged) |
+| M13 | Wissensnetz + Kategorien | **Abgeschlossen** (Cluster-Layout, Divergenz-Modus, Kategorien-Explorer, Methoden-Seite) |
 
 ---
 

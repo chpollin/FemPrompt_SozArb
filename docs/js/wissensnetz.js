@@ -37,9 +37,9 @@ var CLUSTER_COLORS = {
 };
 
 var CLUSTER_LABELS = {
-    'technik': 'Technik',
+    'bridge':  'Technik & Bruecke',
     'sozial':  'Sozial',
-    'bridge':  'Bruecke'
+    'technik': 'Technik'
 };
 
 var PATTERN_COLORS = {
@@ -173,11 +173,11 @@ function renderGraph() {
     var maxWeight = d3.max(graph.edges, function(d) { return d.weight; }) || 1;
     var edgeScale = d3.scaleLinear().domain([2, maxWeight]).range([0.5, 3]);
 
-    // Cluster centers -- use full canvas width, triangle layout
+    // Cluster centers -- bridge (80) left-center, sozial (55) right, technik (1) far left
     var clusterCenters = {
-        'technik': { x: width * 0.2, y: height * 0.55 },
-        'sozial':  { x: width * 0.8, y: height * 0.55 },
-        'bridge':  { x: width * 0.5, y: height * 0.3 }
+        'bridge':  { x: width * 0.35, y: height * 0.5 },
+        'sozial':  { x: width * 0.75, y: height * 0.5 },
+        'technik': { x: width * 0.1,  y: height * 0.5 }
     };
 
     // Simulation: cluster force dominant, link force weakened, strong repulsion
